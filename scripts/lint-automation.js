@@ -8,12 +8,11 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-class BuildMonitor {
+class LintAutomation {
   constructor() {
-    this.logFile = path.join(process.cwd(), 'logs', 'build-monitor.log');
-    this.buildCount = 0;
+    this.logFile = path.join(process.cwd(), 'logs', 'lint-automation.log');
+    this.fixedCount = 0;
     this.errorCount = 0;
-    this.lastBuildTime = null;
   }
 
   log(message, level = 'INFO') {
@@ -29,35 +28,28 @@ class BuildMonitor {
     }
   }
 
-  async runBuild() {
+  async runLintFix() {
     try {
-      this.log('Starting build process...');
+      this.log('Starting lint fix automation...');
       
-      const startTime = Date.now();
-      
-      // Run build command
-      const result = execSync('npm run build', { 
+      // Run ESLint with auto-fix
+      const result = execSync('npm run lint:fix', { 
         encoding: 'utf8', 
         cwd: process.cwd(),
         stdio: 'pipe'
       });
       
-      const endTime = Date.now();
-      const buildTime = endTime - startTime;
-      
-      this.buildCount++;
-      this.lastBuildTime = new Date();
-      
-      this.log(`Build completed successfully in ${buildTime}ms. Build count: ${this.buildCount}`);
+      this.fixedCount++;
+      this.log(`Lint fix completed successfully. Fixed ${this.fixedCount} issues.`);
       
     } catch (error) {
       this.errorCount++;
-      this.log(`Build failed: ${error.message}`, 'ERROR');
+      this.log(`Lint fix failed: ${error.message}`, 'ERROR');
     }
   }
 
   async run() {
-    this.log('Starting Build Monitor...');
+    this.log('Starting Lint Automation...');
     
     // Create logs directory if it doesn't exist
     const logsDir = path.join(process.cwd(), 'logs');
@@ -65,16 +57,16 @@ class BuildMonitor {
       fs.mkdirSync(logsDir, { recursive: true });
     }
     
-    // Run initial build
-    await this.runBuild();
+    // Run initial lint fix
+    await this.runLintFix();
     
-    // Set up interval for continuous building
+    // Set up interval for continuous lint fixing
     setInterval(async () => {
-      await this.runBuild();
-    }, 1800000); // Run every 30 minutes
+      await this.runLintFix();
+    }, 600000); // Run every 10 minutes
   }
 }
 
-// Run the monitor
-const monitor = new BuildMonitor();
-monitor.run().catch(console.error);
+// Run the automation
+const automation = new LintAutomation();
+automation.run().catch(console.error);

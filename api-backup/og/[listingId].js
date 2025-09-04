@@ -1,1 +1,0 @@
-import React from';react' export: default function handler(req,res) { const { listingId } = req.query

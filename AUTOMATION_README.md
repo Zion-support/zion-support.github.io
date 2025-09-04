@@ -1,395 +1,154 @@
-# Zion Tech Group - Automation System
+# PM2 Automation System
 
-This document describes the comprehensive automation system that automatically detects and fixes errors in the Zion Tech Group application.
+This project includes a comprehensive PM2 automation system for error prevention and monitoring.
 
-## 🚀 Overview
+## Features
 
-The automation system consists of multiple specialized scripts that work together to:
+- **Error Monitoring**: Continuous monitoring of linting, build, and TypeScript errors
+- **Lint Automation**: Automatic fixing of linting issues
+- **Build Monitoring**: Regular build verification
+- **Comprehensive Error Prevention**: Automated cleanup of corrupted files and comprehensive error checking
 
-- Automatically detect and fix TypeScript errors
-- Resolve merge conflicts
-- Fix ESLint issues
-- Monitor build health
-- Manage dependencies
-- Optimize performance
+## Scripts
 
-## 📋 Available Automation Scripts
+### 1. Error Monitor (`scripts/error-monitor.js`)
+- Monitors linting errors every 5 minutes
+- Monitors build errors every 5 minutes
+- Monitors TypeScript errors every 5 minutes
+- Logs all findings to `logs/error-monitor.log`
 
-### 1. Auto Error Fixer (`auto-error-fixer.cjs`)
+### 2. Lint Automation (`scripts/lint-automation.js`)
+- Automatically fixes linting issues every 10 minutes
+- Logs all fixes to `logs/lint-automation.log`
 
-- **Purpose**: Continuously monitors and fixes common errors
-- **Frequency**: Runs every 5 minutes
-- **Features**:
-  - Fixes missing type annotations
-  - Resolves import/export issues
-  - Fixes JSX syntax errors
-  - Auto-fixes ESLint issues
-  - Monitors build errors
+### 3. Build Monitor (`scripts/build-monitor.js`)
+- Runs build verification every 30 minutes
+- Logs build results to `logs/build-monitor.log`
 
-### 2. Merge Conflict Resolver (`merge-conflict-resolver.cjs`)
+### 4. Comprehensive Error Prevention (`scripts/comprehensive-error-prevention.js`)
+- Cleans corrupted files and directories
+- Runs comprehensive error checking every 15 minutes
+- Logs all activities to `logs/error-prevention.log`
 
-- **Purpose**: Automatically detects and resolves merge conflicts
-- **Frequency**: Runs every 2 minutes
-- **Features**:
-  - Detects merge conflict markers
-  - Auto-resolves conflicts based on file type
-  - Prefers HEAD version for TypeScript/JavaScript
-  - Merges JSON objects intelligently
-  - Stages resolved files automatically
+## Usage
 
-### 3. Comprehensive Error Fixer (`comprehensive-error-fixer.cjs`)
-
-- **Purpose**: Runs comprehensive error fixes on schedule
-- **Frequency**: Runs every 2 hours
-- **Features**:
-  - Deep error analysis
-  - Syntax error correction
-  - Code quality improvements
-  - Performance optimizations
-
-### 4. TypeScript Error Fixer (`typescript-error-fixer.cjs`)
-
-- **Purpose**: Specialized for TypeScript issues
-- **Frequency**: Runs every 3 hours
-- **Features**:
-  - Type annotation fixes
-  - Interface improvements
-  - Import/export optimization
-  - JSX syntax correction
-
-### 5. Console Error Fixer (`console-error-fixer.cjs`)
-
-- **Purpose**: Fixes console and runtime errors
-- **Frequency**: Runs every 4 hours
-- **Features**:
-  - Console error detection
-  - Runtime error fixing
-  - Error boundary improvements
-
-### 6. Master Automation Controller (`master-automation-controller.cjs`)
-
-- **Purpose**: Coordinates and monitors all automation scripts
-- **Frequency**: Monitors every minute
-- **Features**:
-  - Centralized control
-  - Health monitoring
-  - Performance analysis
-  - Emergency stop functionality
-
-## 🛠️ Installation & Setup
-
-### Prerequisites
-
-- Node.js 18+
-- PM2 (Process Manager)
-- Git
-
-### 1. Install PM2
-
+### Start the Automation System
 ```bash
-npm install -g pm2
+./start-automation.sh
 ```
 
-### 2. Install Dependencies
-
+### Manual PM2 Commands
 ```bash
-npm install
-```
+# Start all processes
+pm2 start ecosystem.config.cjs
 
-### 3. Create Logs Directory
-
-```bash
-mkdir -p logs
-```
-
-## 🚀 Usage
-
-### Start All Automations
-
-```bash
-npm run automation:start-all
-```
-
-### Start Individual Automation
-
-```bash
-# Start auto error fixer
-npm run automation:auto-fix
-
-# Start merge conflict resolver
-npm run automation:resolve-conflicts
-
-# Start comprehensive error fixer
-npm run automation:comprehensive-fix
-```
-
-### Monitor Automations
-
-```bash
-# View status
-npm run automation:status
+# Check status
+pm2 status
 
 # View logs
-npm run automation:logs
-
-# Monitor in real-time
-npm run automation:monit
-
-# Check health
-npm run automation:health
-```
-
-### Control Automations
-
-```bash
-# Stop all
-npm run automation:stop-all
-
-# Restart all
-npm run automation:restart-all
-
-# Emergency stop
-npm run automation:emergency
-```
-
-### Master Controller Commands
-
-```bash
-# Start master controller
-npm run automation:master
-
-# Check health
-npm run automation:master health
-
-# Emergency stop
-npm run automation:master emergency-stop
-```
-
-## 📊 PM2 Management
-
-### Start Ecosystem
-
-```bash
-pm2 start ecosystem.config.cjs
-```
-
-### View Status
-
-```bash
-pm2 status
-```
-
-### View Logs
-
-```bash
 pm2 logs
-```
 
-### Monitor Resources
-
-```bash
-pm2 monit
-```
-
-### Stop All
-
-```bash
+# Stop all processes
 pm2 stop all
-```
 
-### Restart All
-
-```bash
+# Restart all processes
 pm2 restart all
+
+# Delete all processes
+pm2 delete all
 ```
 
-## 🔧 Configuration
+### Individual Process Management
+```bash
+# Start specific process
+pm2 start ecosystem.config.cjs --only error-monitor
 
-### Ecosystem Configuration
+# Stop specific process
+pm2 stop error-monitor
 
-The `ecosystem.config.cjs` file contains:
+# Restart specific process
+pm2 restart error-monitor
 
-- App configurations for each automation
-- Memory limits and restart policies
-- Log file locations
-- Cron schedules for periodic tasks
+# View logs for specific process
+pm2 logs error-monitor
+```
 
-### Customization
+## Configuration
 
-You can modify:
+The PM2 configuration is defined in `ecosystem.config.cjs` with the following settings:
 
-- Check intervals in each automation script
-- Memory limits in ecosystem config
-- Log file paths
-- Cron schedules
+- **Instances**: 1 per process
+- **Auto-restart**: Enabled
+- **Memory limit**: 1GB per process
+- **Logging**: Comprehensive logging with timestamps
+- **Environment**: Production mode
 
-## 📈 Monitoring & Health
+## Log Files
 
-### Health Checks
+All logs are stored in the `logs/` directory:
 
-- **Automation Status**: Running/stopped/errored
-- **Memory Usage**: Track memory consumption
-- **CPU Usage**: Monitor CPU utilization
-- **Error Rates**: Count and analyze errors
-- **Performance Trends**: Memory and CPU trends
+- `error-monitor.log` - Error monitoring logs
+- `lint-automation.log` - Lint automation logs
+- `build-monitor.log` - Build monitoring logs
+- `error-prevention.log` - Comprehensive error prevention logs
 
-### Reports
+## Monitoring
 
-- **Health Reports**: Generated every minute
-- **Error Logs**: Stored in `logs/` directory
-- **Performance Metrics**: Memory and CPU usage
-- **Recommendations**: Automated suggestions
+The system provides real-time monitoring through:
 
-### Log Files
+1. **Console Output**: Real-time status updates
+2. **Log Files**: Detailed logging for each process
+3. **PM2 Dashboard**: Use `pm2 monit` for real-time monitoring
 
-- `logs/auto-error-fixer-*.log`
-- `logs/merge-conflict-resolver-*.log`
-- `logs/comprehensive-error-fixer-*.log`
-- `logs/master-automation-controller-*.log`
-
-## 🚨 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
-#### 1. PM2 Not Found
+1. **Permission Errors**: Ensure scripts are executable
+   ```bash
+   chmod +x scripts/*.js
+   chmod +x start-automation.sh
+   ```
 
+2. **Memory Issues**: Check PM2 memory usage
+   ```bash
+   pm2 monit
+   ```
+
+3. **Process Not Starting**: Check logs for errors
+   ```bash
+   pm2 logs error-monitor
+   ```
+
+### Reset System
 ```bash
-npm install -g pm2
+# Stop all processes
+pm2 stop all
+
+# Delete all processes
+pm2 delete all
+
+# Restart system
+./start-automation.sh
 ```
 
-#### 2. Permission Denied
+## Benefits
 
-```bash
-sudo npm install -g pm2
-```
+- **Automated Error Prevention**: Proactively fixes issues before they become problems
+- **Continuous Monitoring**: 24/7 monitoring of project health
+- **Automated Cleanup**: Removes corrupted files automatically
+- **Comprehensive Logging**: Detailed logs for debugging and monitoring
+- **Scalable**: Easy to add new automation scripts
+- **Reliable**: PM2 ensures processes restart on failure
 
-#### 3. Memory Issues
+## Maintenance
 
-- Check memory limits in ecosystem config
-- Restart automations: `pm2 restart all`
+The system is designed to be self-maintaining, but regular checks are recommended:
 
-#### 4. High CPU Usage
+1. **Weekly**: Check PM2 status and logs
+2. **Monthly**: Review log files for patterns
+3. **As Needed**: Update automation scripts based on project requirements
 
-- Monitor with: `pm2 monit`
-- Check for infinite loops in automation scripts
+## Support
 
-#### 5. Log File Issues
-
-- Ensure `logs/` directory exists
-- Check file permissions
-
-### Debug Mode
-
-```bash
-# Enable debug logging
-DEBUG=* npm run automation:master
-
-# View detailed logs
-pm2 logs --lines 100
-```
-
-## 🔄 Maintenance
-
-### Regular Tasks
-
-- **Daily**: Check automation health
-- **Weekly**: Review error logs
-- **Monthly**: Update dependencies
-- **Quarterly**: Review and optimize automation logic
-
-### Updates
-
-```bash
-# Update PM2
-pm2 update
-
-# Update dependencies
-npm update
-
-# Restart automations
-pm2 restart all
-```
-
-### Backup
-
-```bash
-# Save PM2 configuration
-pm2 save
-
-# Backup automation scripts
-cp -r scripts/automation/ backup/
-```
-
-## 📚 API Reference
-
-### Master Controller Methods
-
-#### `start()`
-
-Starts the master controller and all automations.
-
-#### `stop()`
-
-Stops the master controller and all automations.
-
-#### `getStatus()`
-
-Returns the current status of all automations.
-
-#### `runCommand(command, args)`
-
-Executes automation commands:
-
-- `start [name]`: Start specific automation
-- `stop [name]`: Stop specific automation
-- `restart [name]`: Restart specific automation
-- `health`: Generate health report
-- `emergency-stop`: Emergency stop all
-
-### Automation Script Methods
-
-Each automation script provides:
-
-- `start()`: Start the automation
-- `stop()`: Stop the automation
-- `getStatus()`: Get current status
-- `log(message)`: Log messages with timestamps
-
-## 🤝 Contributing
-
-### Adding New Automations
-
-1. Create new automation script in `scripts/automation/`
-2. Extend base automation class
-3. Add to ecosystem config
-4. Update master controller
-5. Add npm scripts
-
-### Testing
-
-```bash
-# Test individual automation
-npm run automation:test
-
-# Test all automations
-pm2 restart all && sleep 30 && pm2 status
-```
-
-## 📞 Support
-
-For issues or questions:
-
-1. Check the logs in `logs/` directory
-2. Review this documentation
-3. Check PM2 status: `pm2 status`
-4. Review automation health: `npm run automation:health`
-
-## 📄 License
-
-This automation system is part of the Zion Tech Group application and follows the same licensing terms.
-
----
-
-**Last Updated**: 2025-08-30
-**Version**: 1.0.0
-**Maintainer**: Zion Tech Group Development Team
+For issues or questions about the automation system, check the log files first, then review the PM2 documentation at https://pm2.keymetrics.io/docs/.

@@ -1,1 +1,0 @@
-#!/usr/bin/env node console.log('scripts/syntax-fixer: noop'); module.exports = {};
