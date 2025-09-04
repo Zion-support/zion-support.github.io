@@ -15,8 +15,28 @@ const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
     }
   };
 
-// Organized Services Categories
-  const servicesCategories = [{
+  const navigation = [
+    { name: 'Home', href: '/', current: true },
+    { name: 'Services', href: '/services', current: false, hasDropdown: true },
+    { name: 'Solutions', href: '/solutions', current: false, hasDropdown: true },
+    { name: 'Resources', href: '/resources', current: false, hasDropdown: true },
+    { name: 'About', href: '/about', current: false },
+    { name: 'Contact', href: '/contact', current: false },
+  ];
+
+  // Featured Services Showcase
+  const featuredServicesShowcase = {
+    title: 'Innovative Services 2032',
+    href: '/innovative-services-showcase-2032',
+    icon: Rocket,
+    color: 'from-indigo-500 to-purple-600',
+    description: 'Cutting-edge AI & Micro SAAS Solutions',
+    featured: true
+  };
+
+  // Organized Services Categories
+  const servicesCategories = [
+    {
       title: 'AI & Machine Learning',
 icon: Brain,
       color: 'from-zion-cyan to-zion-purple',

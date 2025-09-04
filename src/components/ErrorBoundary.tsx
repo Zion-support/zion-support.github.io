@@ -26,7 +26,89 @@ export class ErrorBoundary extends Component<Props, State> {
     }
   }
 
-  public render() {
+  private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
+    try {
+      // Example: Send to error logging service
+      const errorData = {
+        id: this.state.errorId,
+        message: error.message,
+        stack: error.stack,
+        componentStack: errorInfo.componentStack,
+        timestamp: new Date().toISOString(),
+        userAgent: navigator.userAgent,
+        url: window.location.href,
+        // Add any other relevant information
+      };
+
+      // You can send this to your error logging service
+      console.log('Error logged:', errorData);
+      
+      // Example: Send to external service
+      // fetch('/api/errors', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify(errorData)
+      // });
+  } catch (logError) {
+      console.error('Failed to log error:', logError);
+    }
+  };
+
+  private handleRetry = () => {
+    this.setState({
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      showStack: false
+    });
+  };
+
+  private handleGoHome = () => {
+    window.location.href = '/';
+  };
+
+  private handleCopyError = () => {
+    if (this.state.error && this.state.errorInfo) {
+      const errorText = `
+Error Details:
+Message: ${this.state.error.message}
+Stack: ${this.state.error.stack}
+Component Stack: ${this.state.errorInfo.componentStack}
+Error ID: ${this.state.errorId}
+Timestamp: ${new Date().toISOString()}
+URL: ${window.location.href}
+User Agent: ${navigator.userAgent}
+      `.trim();
+
+      navigator.clipboard.writeText(errorText).then(() => {
+        // Show success feedback
+        const button = document.querySelector('[data-copy-button]') as HTMLButtonElement;
+        if (button) {
+          const originalText = button.innerHTML;
+          button.innerHTML = '<CheckCircle className="w-4 h-4" /> Copied!';
+          button.classList.add('text-green-600');
+          setTimeout(() => {
+            button.innerHTML = originalText;
+            button.classList.remove('text-green-600');
+          }, 2000);
+        }
+      }).catch(() => {
+        // Fallback for older browsers
+        const textArea = document.createElement('textarea');
+        textArea.value = errorText;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+      });
+    }
+  };
+
+  private toggleStack = () => {
+    this.setState(prev => ({ showStack: !prev.showStack }));
+  };
+
+  render() {
     if (this.state.hasError) {
       return this.props.fallback || (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -75,3 +157,32 @@ export class ErrorBoundary extends Component<Props, State> {
     return this.props.children;
   }
 }
+
+// Higher-order component for functional components
+export function withErrorBoundary<P extends object>(
+  Component: React.ComponentType<P>,
+  errorBoundaryProps?: Omit<Props, 'children'>
+) {
+  return function WrappedComponent(props: P) {
+    return (
+      <ErrorBoundary {...errorBoundaryProps}>
+        <Component {...props} />
+      </ErrorBoundary>
+    );
+  };
+}
+
+// Hook for functional components to catch errors
+export function useErrorHandler() {
+  return React.useCallback((error: Error, errorInfo?: ErrorInfo) => {
+    console.error('Error caught by useErrorHandler:', error, errorInfo);
+    
+    // You can add custom error handling logic here
+    // For example, sending to an error reporting service
+    
+    // Re-throw the error to trigger error boundaries
+    throw error;
+  });
+}
+
+export default withErrorBoundary;
