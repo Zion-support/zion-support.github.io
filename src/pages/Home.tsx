@@ -1,4 +1,5 @@
-import React from 'react';
+import React from 'react',;',';';
+    ';';';';
 import { SEO } from '../components/SEO';
 
 from 'lucide - react';
@@ -248,11 +249,11 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
               {heroSlides[currentSlide].title}
 </h1>
             <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Leading technology solutions provider specializing in AI, cybersecurity, 
+              Leading technology solutions provider specializing in AI, cybersecurity,
               cloud infrastructure, and digital transformation services.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="/services" 
+              <a
+                href="/services"
                 className="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
               >
                 Our Services

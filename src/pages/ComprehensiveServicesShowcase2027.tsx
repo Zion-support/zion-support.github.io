@@ -258,7 +258,6 @@ case: "newest":",",
       const matchesCategory = selectedCategory === "All" || service.category === selectedCategory,
   const categories = useMemo(() => {const cats = []
   const filteredServices = useMemo(() => {const filtered = allServices.filter(service => {
-
   const categories = useMemo(() => {}
 
     const;const;const cats = []

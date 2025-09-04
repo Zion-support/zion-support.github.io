@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react',;',';';
+    ';';';';
 import { SEO } from '../components/SEO';
-
 const Terms: React.FC = () => {
   return(<>
       <SEO title="Terms - Zion Tech Group" />

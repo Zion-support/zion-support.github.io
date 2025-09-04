@@ -88,9 +88,17 @@ const Navigation = () => {}
                           <div className="space-y-1">""""
                             {category.services.map((service) => (<Link key={service.name} to={service.href} className="block px-3 py-2 text-sm text-zion-slate-light hover:text-white hover:bg-white/10 rounded-lg transition-colors" onClick={() => setIsServicesOpen(false)}>
                                 {service.name}
-                              </Link>) ) }
+                              </Link>) )
+      )}
+    </div>
+  );
+}
                           </div>
-                        </div>) ) }
+                        </div>) )
+      )}
+    </div>
+  );
+}
                     </div>
                   </div>
                 </div>) }
@@ -134,7 +142,11 @@ const Navigation = () => {}
                     <div className="space-y-1">""""
                       {category.services.map((service) => (<Link key={service.name} to={service.href} className="block px-3 py-1 text-sm text-zion-slate-light hover:text-white rounded transition-colors" onClick={() => setIsOpen(false)}>
                           {service.name}
-                        </Link>) ) }
+                        </Link>) )
+      )}
+    </div>
+  );
+}
                     </div>
                   </div>) ) }
               </div>
@@ -148,7 +160,11 @@ const Navigation = () => {}
               </a>
             </div>
           </div>
-        </div>)}
+        </div>)
+      )}
+    </div>
+  );
+}
     </nav>)};
 export default Navigation;
 

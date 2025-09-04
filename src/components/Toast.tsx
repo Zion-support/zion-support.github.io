@@ -20,7 +20,6 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
   const addToast = useCallback((toast: Omit<Toast, 'id'>) => {
     const id = Math.random().toString(36).substr(2, 9);
     const newToast = { ...toast, id }
-    
     setToasts(prev => [...prev, newToast]);
     
     // Auto remove after duration
@@ -49,7 +48,8 @@ function ToastContainer({ toasts, removeToast }: { toasts: Toast[]; removeToast:
     <div className="fixed top-4 right-4 z-50 space-y-2">
       {toasts.map(toast => (
         <Toast key={toast.id} toast={toast} onRemove={removeToast} />
-      ))}
+      ))
+      )}
     </div>
   )}
 

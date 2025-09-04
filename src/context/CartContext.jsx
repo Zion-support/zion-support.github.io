@@ -35,7 +35,6 @@ export function useCart() {
         throw new Error("useCart must be used within a CartProvider")}
 
     return ctx}
-
 export function CartProvider({ children }) {
 const { user } = useAuth();
   const [state, dispatch] = useReducer(cartReducer, initialState);

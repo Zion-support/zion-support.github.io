@@ -241,6 +241,8 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
                   </h4>"";"
                   <div className="space-y-1 text-xs text-gray-300">
                     <div>Monthly: {service.pricing.monthly}</div>
+  );
+}
                     <div>Yearly: {service.pricing.yearly}</div>
                     <div>Setup: {service.pricing.setup}</div>
 ""{/* comment */}"";"
