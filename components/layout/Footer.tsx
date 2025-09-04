@@ -10,6 +10,7 @@ import {
   Github,
   Youtube,
   Instagram,
+  Facebook,
   ArrowRight,
   Heart,
   Cloud,
@@ -88,7 +89,7 @@ const Footer: React.FC = () => {
       </div>
       <div className="border-t border-slate-800 py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between text-gray-400 text-sm">
-          <div>© {year} Zion Tech Group. All rights reserved.</div>
+          <div>© {currentYear} Zion Tech Group. All rights reserved.</div>
           <div className="flex gap-4">
             <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white">kleber@ziontechgroup.com</a>
             <a href="tel:+13024640950" className="hover:text-white">+1 302 464 0950</a>

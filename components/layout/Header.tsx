@@ -30,6 +30,7 @@ import {
 import { Button } from '../ui/Button';
 import { Badge } from '../ui/Badge';
 
+const Header = () => {
   const navigation = [
     { name: 'Home', href: '/' },
     { name: 'Solutions', href: '/solutions' },
