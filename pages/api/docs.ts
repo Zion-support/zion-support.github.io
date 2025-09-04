@@ -1,39 +1,65 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 
-interface ApiEndpoint {
-  method: string;
+interface Endpoint {
   path: string;
+  method: string;
   description: string;
-  parameters?: ApiParameter[];
-  responses?: ApiResponse[];
-  examples?: ApiExample[]}
-
-interface ApiParameter {
-  name: string;
-  type: string;
-  required: boolean;
-  description: string;
-  location: 'query' | 'body' | 'header' | 'path'}
-
-interface ApiResponse {
-  status: number;
-  description: string;
-  schema?: Record<string, unknown>;
+  parameters?: Array<{
+    name: string;
+    location: 'query' | 'path' | 'header';
+    required: boolean;
+    type: string;
+    description: string;
+  }>;
+  responses?: Array<{
+    status: string;
+    description: string;
+    schema?: any;
+  }>;
 }
 
-interface ApiExample {
-  name: string;
-  request: Record<string, unknown>;
-  response: Record<string, unknown>;
-}
+class OpenAPIGenerator {
+  private endpoints: Endpoint[] = [
+    {
+      path: '/api/health',
+      method: 'GET',
+      description: 'Get system health status',
+      responses: [
+        { status: '200', description: 'Health status retrieved successfully' },
+        { status: '500', description: 'Health check failed' }
+      ]
+    },
+    {
+      path: '/api/services',
+      method: 'GET',
+      description: 'Get available services',
+      responses: [
+        { status: '200', description: 'Services retrieved successfully' },
+        { status: '401', description: 'Unauthorized' }
+      ]
+    },
+    {
+      path: '/api/quotes',
+      method: 'POST',
+      description: 'Request a service quote',
+      parameters: [
+        {
+          name: 'serviceType',
+          location: 'query',
+          required: true,
+          type: 'string',
+          description: 'Type of service requested'
+        }
+      ],
+      responses: [
+        { status: '200', description: 'Quote generated successfully' },
+        { status: '400', description: 'Invalid request data' },
+        { status: '401', description: 'Unauthorized' }
+      ]
+    }
+  ];
 
-class ApiDocumentationGenerator {
-  private endpoints: ApiEndpoint[] = [];
-
-  addEndpoint(endpoint: ApiEndpoint) {
-    this.endpoints.push(endpoint)}
-
-  generateOpenAPISpec() {
+  generateSpec() {
     const spec = {
       openapi: '3.0.0',
       info: {
@@ -42,41 +68,23 @@ class ApiDocumentationGenerator {
         description: 'API documentation for Zion Tech Group services'
       },
       servers: [{
-          url: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000/api',
-          description: 'Development server'
+        url: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000/api',
+        description: 'Development server'
       }],
       paths: this.generatePaths(),
       components: {
         schemas: this.generateSchemas()
       }
-   ; ;};
-    return spec;}
+    };
+    return spec;
+  }
 
   private generatePaths() {
-    const paths: Record<string, unknown> = {};
+    const paths: Record<string, any> = {};
     this.endpoints.forEach(endpoint => {
-      if ( {
-        paths[endpoint.path] = {}}
-      paths[endpoint.path][endpoint.method.toLowerCase()] = {
-        summary: endpoint.description,
-        parameters: endpoint.parameters?.map(param => ({
-          name: param.name,
-          in: param.location,
-          required: param.required,
-          schema: { type: param.type },
-          description: param.description
-        })),
-        responses: endpoint.responses?.reduce((acc, response) => {
-          acc[response.status] = {
-            description: response.description,
-            content: response.schema ? {
-              'application/json': {
-                schema: response.schema
-              }
-            } : undefined
-          }) {
-     {
-        paths[endpoint.path] = {}}
+      if (!paths[endpoint.path]) {
+        paths[endpoint.path] = {};
+      }
       paths[endpoint.path][endpoint.method.toLowerCase()] = {
         summary: endpoint.description,
         parameters: endpoint.parameters?.map(param => ({
@@ -95,14 +103,15 @@ class ApiDocumentationGenerator {
               }
             } : undefined
           };
+          return acc;
+        }, {})
+      };
+    });
+    return paths;
   }
-          return acc;}, {} as any)
-      }});
-
-    return paths;}
 
   private generateSchemas() {
-    return {;
+    return {
       Error: {
         type: 'object',
         properties: {
@@ -116,80 +125,45 @@ class ApiDocumentationGenerator {
           }
         }
       },
-      Success: {
+      HealthStatus: {
         type: 'object',
         properties: {
-          success: { type: 'boolean' },
-          data: { type: 'object' },
-          message: { type: 'string' }
+          status: { type: 'string', enum: ['healthy', 'degraded', 'unhealthy'] },
+          timestamp: { type: 'string', format: 'date-time' },
+          services: { type: 'object' },
+          metrics: { type: 'object' }
+        }
+      },
+      Service: {
+        type: 'object',
+        properties: {
+          id: { type: 'string' },
+          name: { type: 'string' },
+          description: { type: 'string' },
+          category: { type: 'string' },
+          pricing: { type: 'object' }
         }
       }
-    }}
-
-  generateMarkdown() {
-    let markdown = '# API Documentation\n\;n;';
-
-    this.endpoints.forEach(endpoint => {
-      markdown += `## ${endpoint.method.toUpperCase()} ${endpoint.path}\n\n`;
-      markdown += `${endpoint.description}\n\n`;
-
-      if ( {
-        markdown += '### Parameters\n\n') {
-     {
-        markdown += '### Parameters\n\n';
+    };
   }
-        markdown += '| Name | Type | Required | Location | Description |\n';
-        markdown += '|------|------|----------|----------|-------------|\n';
-        
-        endpoint.parameters.forEach(param => {
-          markdown += `| ${param.name} | ${param.type} | ${param.required ? 'Yes' : 'No'} | ${param.location} | ${param.description} |\n`});
-        markdown += '\n'}
-
-      if ( {
-        markdown += '### Responses\n\n') {
-     {
-        markdown += '### Responses\n\n';
-  }
-        endpoint.responses.forEach(response => {
-          markdown += `- **${response.status}**: ${response.description}\n`});
-        markdown += '\n'}
-
-      if ( {
-        markdown += '### Examples\n\n') {
-     {
-        markdown += '### Examples\n\n';
-  }
-        endpoint.examples.forEach(example => {
-          markdown += `#### ${example.name}\n\n`;
-          markdown += `**Request: **\n`;
-          markdown += `\`\`\`json\n${JSON.stringify(example.request, null, 2)}\n\`\`\`\n\n`;
-          markdown += `**Response: **\n`;
-          markdown += `\`\`\`json\n${JSON.stringify(example.response, null, 2)}\n\`\`\`\n\n`})}
-
-      markdown += '---\n\n'});
-
-    return markdown;}
 }
 
-export const apiDocGenerator = new ApiDocumentationGenerator;(;);
-
-// API Documentation endpoint
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if ( {
-    const format = req.query.format as string || 'jso) {
-     {
-    const format = req.query.format as string || 'jso;
-  }n;';
-    
-    if ( {
-      res.setHeader('Content-Type', 'text/markdown')) {
-     {
-      res.setHeader('Content-Type', 'text/markdown');
+  if (req.method !== 'GET') {
+    return res.status(405).json({ error: 'Method not allowed' });
   }
-      res.status(200).send(apiDocGenerator.generateMarkdown())} else {
-      res.setHeader('Content-Type', 'application/json');
-      res.status(200).json(apiDocGenerator.generateOpenAPISpec())}
-  } else {
-    res.setHeader('Allow', ['GET']);
-    res.status(405).json({ error: 'Method not allowed' })}
+
+  try {
+    const generator = new OpenAPIGenerator();
+    const spec = generator.generateSpec();
+    
+    res.setHeader('Content-Type', 'application/json');
+    res.status(200).json(spec);
+  } catch (error) {
+    console.error('Error generating API docs:', error);
+    res.status(500).json({ 
+      error: 'Failed to generate API documentation',
+      message: error instanceof Error ? error.message : 'Unknown error'
+    });
+  }
 }

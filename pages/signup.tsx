@@ -7,13 +7,13 @@ export default function Signup() {
 const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', site: 'https://ziontechgroup.com'
   };
   const [formData, setFormData] = useState({
-    firstName: ''
-    lastName: ''
-    email: ''
-    company: ''
-    phone: ''
-    password: ''
-    confirmPassword: ''
+    firstName: '',
+    lastName: '',
+    email: '',
+    company: '',
+    phone: '',
+    password: '',
+    confirmPassword: '',
     agreeToTerms: false,
     subscribeNewsletter: false
   });
@@ -39,7 +39,7 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
     }
     
     // Handle signup logic here
-    console.log('Signup attempt:' formData);
+    console.log('Signup attempt:', formData);
     alert('Account creation functionality will be implemented with authentication system.');
   }
   return (
@@ -55,7 +55,7 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
         <meta property="og:type" content="website" />
       </Head>
 
-      <div style={{ minHeight: '100vh', background: 'color', 'white' padding: '40px 20px' }}>
+      <div style={{ minHeight: '100vh', background: 'white', padding: '40px 20px' }}>
         <div style={{ maxWidth: 500, margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: 40 }}>
             <h1 style={{ 

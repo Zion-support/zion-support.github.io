@@ -20,7 +20,7 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
   const [incidents, setIncidents] = useState([
     {
       id: 1,
-      title: "Scheduled Maintenance - Cloud Infrastructure"
+      title: "Scheduled Maintenance - Cloud Infrastructure",
       status: "resolved",
       severity: "minor",
       startTime: "2025-01-25T02:00:00Z",

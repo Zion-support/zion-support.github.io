@@ -6,73 +6,73 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
   };
   const marketplaceCategories = [
     {
-      title: "Products"
-      description: "Discover innovative technology products and solutions"
-      icon: "🛍️"
+      title: "Products",
+      description: "Discover innovative technology products and solutions",
+      icon: "🛍️",
       items: [
-        { name: "AI-Powered Analytics Platform" price: "Starting at $299/month" category: "AI & Analytics" },
-        { name: "Cloud Infrastructure Suite" price: "Starting at $199/month" category: "Cloud Computing" },
-        { name: "Cybersecurity Monitoring Tool" price: "Starting at $149/month" category: "Security" },
-        { name: "Quantum Computing Simulator" price: "Starting at $499/month" category: "Quantum Computing" }
+        { name: "AI-Powered Analytics Platform", price: "Starting at $299/month", category: "AI & Analytics" },
+        { name: "Cloud Infrastructure Suite", price: "Starting at $199/month", category: "Cloud Computing" },
+        { name: "Cybersecurity Monitoring Tool", price: "Starting at $149/month", category: "Security" },
+        { name: "Quantum Computing Simulator", price: "Starting at $499/month", category: "Quantum Computing" }
       ]
     },
     {
-      title: "Talent"
-      description: "Connect with skilled technology professionals"
-      icon: "👥"
+      title: "Talent",
+      description: "Connect with skilled technology professionals",
+      icon: "👥",
       items: [
-        { name: "Senior AI/ML Engineers" price: "$120-180/hour" category: "AI & Machine Learning" },
-        { name: "Cloud DevOps Specialists" price: "$100-150/hour" category: "Cloud & DevOps" },
-        { name: "Cybersecurity Experts" price: "$110-170/hour" category: "Cybersecurity" },
-        { name: "Quantum Computing Researchers" price: "$150-250/hour" category: "Quantum Computing" }
+        { name: "Senior AI/ML Engineers", price: "$120-180/hour", category: "AI & Machine Learning" },
+        { name: "Cloud DevOps Specialists", price: "$100-150/hour", category: "Cloud & DevOps" },
+        { name: "Cybersecurity Experts", price: "$110-170/hour", category: "Cybersecurity" },
+        { name: "Quantum Computing Researchers", price: "$150-250/hour", category: "Quantum Computing" }
       ]
     },
     {
-      title: "Equipment"
-      description: "Access cutting-edge technology equipment and hardware"
-      icon: "🔧"
+      title: "Equipment",
+      description: "Access cutting-edge technology equipment and hardware",
+      icon: "🔧",
       items: [
-        { name: "High-Performance Servers" price: "Starting at $2,999" category: "Hardware" },
-        { name: "Quantum Computing Hardware" price: "Starting at $50,000" category: "Quantum Hardware" },
-        { name: "Network Security Appliances" price: "Starting at $1,999" category: "Security Hardware" },
-        { name: "Edge Computing Devices" price: "Starting at $499" category: "IoT & Edge" }
+        { name: "High-Performance Servers", price: "Starting at $2,999", category: "Hardware" },
+        { name: "Quantum Computing Hardware", price: "Starting at $50,000", category: "Quantum Hardware" },
+        { name: "Network Security Appliances", price: "Starting at $1,999", category: "Security Hardware" },
+        { name: "Edge Computing Devices", price: "Starting at $499", category: "IoT & Edge" }
       ]
     },
     {
-      title: "Services"
-      description: "Professional technology services and consulting"
-      icon: "⚙️"
+      title: "Services",
+      description: "Professional technology services and consulting",
+      icon: "⚙️",
       items: [
-        { name: "Digital Transformation Consulting" price: "$200-300/hour" category: "Consulting" },
-        { name: "Cloud Migration Services" price: "$150-250/hour" category: "Cloud Services" },
-        { name: "Security Assessment & Auditing" price: "$180-280/hour" category: "Security Services" },
-        { name: "Custom Software Development" price: "$120-200/hour" category: "Development" }
+        { name: "Digital Transformation Consulting", price: "$200-300/hour", category: "Consulting" },
+        { name: "Cloud Migration Services", price: "$150-250/hour", category: "Cloud Services" },
+        { name: "Security Assessment & Auditing", price: "$180-280/hour", category: "Security Services" },
+        { name: "Custom Software Development", price: "$120-200/hour", category: "Development" }
       ]
     }
   ];
 
   const featuredItems = [
     {
-      name: "AI Business Intelligence Suite"
-      description: "Comprehensive AI-powered analytics platform for enterprise decision making"
-      price: "$299/month"
-      category: "AI & Analytics"
+      name: "AI Business Intelligence Suite",
+      description: "Comprehensive AI-powered analytics platform for enterprise decision making",
+      price: "$299/month",
+      category: "AI & Analytics",
       rating: 4.9,
       reviews: 127
     },
     {
-      name: "Quantum Algorithm Development"
-      description: "Expert quantum computing research and algorithm development services"
-      price: "$200/hour"
-      category: "Quantum Computing"
+      name: "Quantum Algorithm Development",
+      description: "Expert quantum computing research and algorithm development services",
+      price: "$200/hour",
+      category: "Quantum Computing",
       rating: 4.8,
       reviews: 89
     },
     {
-      name: "Enterprise Security Platform"
-      description: "Advanced cybersecurity monitoring and threat detection system"
-      price: "$199/month"
-      category: "Cybersecurity"
+      name: "Enterprise Security Platform",
+      description: "Advanced cybersecurity monitoring and threat detection system",
+      price: "$199/month",
+      category: "Cybersecurity",
       rating: 4.9,
       reviews: 156
     }
@@ -91,19 +91,21 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
         <meta property="og:type" content="website" />
       </Head>
 
-      <div style={{ minHeight: '100vh', background: 'color', 'white' }}>
+      <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #0b1220 0%, #1a1f3a 100%)', color: 'white' }}>
         <div style={{ maxWidth: 1200, margin: '40px 20px', padding: '0 20px' }}>
           <div style={{ textAlign: 'center', marginBottom: 60 }}>
             <h1 style={{ 
-              fontSize: 'fontWeight', 800, 
+              fontSize: '3rem', 
+              fontWeight: 800, 
               marginBottom: 20,
-              background: 'WebkitBackgroundClip', 'text',>
-              WebkitTextFillColor: 'transparent',>
-              backgroundClip: 'text'>
-            },,}>
+              background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text'
+            }}>
               Technology Marketplace
             </h1>
-            <p style={{ fontSize: '1.2rem', color: 'maxWidth', 600, margin: '0 auto' }}>
+            <p style={{ fontSize: '1.2rem', color: '#94a3b8', maxWidth: 600, margin: '0 auto' }}>
               Discover innovative products, connect with skilled professionals, and access cutting-edge technology solutions all in one place.
             </p>
           </div>
@@ -112,38 +114,47 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
             <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 40, textAlign: 'center'  }}>
               Featured Items
             </h2>
-            <div style={{ display: 'gridTemplateColumns', 'repeat(auto-fit, minmax(350px, 1fr))' gap: 30 }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: 30 }}>
               {featuredItems.map((item, index) => (
-<div key={index} style={{ background: 'rgba(255, 255, 255, 0.05)',>
-                  borderRadius: 12, padding: 30, border: '1px solid rgba(255, 255, 255, 0.1)', transition: 'transform 0.3s ease, box-shadow 0.3s ease', cursor: 'pointer'>
-                }}>
+                <div key={index} style={{ 
+                  background: 'rgba(255, 255, 255, 0.05)',
+                  borderRadius: 12, 
+                  padding: 30, 
+                  border: '1px solid rgba(255, 255, 255, 0.1)', 
+                  transition: 'transform 0.3s ease, box-shadow 0.3s ease', 
+                  cursor: 'pointer'
+                }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-5px)';
                   e.currentTarget.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.3)';
-                }
+                }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = 'translateY(0)';
                   e.currentTarget.style.boxShadow = 'none';
-                }}>
+                }}
+              >
                   <div style={{ marginBottom: 15 }}>
                     <span style={{
-                      background: 'color', 'white'>
-                      padding: 'borderRadius', 20,>
-                      fontSize: 'fontWeight', 600>
+                      background: 'white',
+                      color: '#3b82f6',
+                      padding: '8px 16px',
+                      borderRadius: 20,
+                      fontSize: '0.9rem',
+                      fontWeight: 600
                     }}>
                       {item.category}
                     </span>
                   </div>
                   
-                  <h3 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 15,>
-                    lineHeight: '1.3>'}}>
+                  <h3 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 15, lineHeight: '1.3' }}>
                     {item.name}
                   </h3>
                   
                   <p style={{ 
-                    color: 'marginBottom', 20, >
-                    lineHeight: '1.6',>
-                    fontSize: '1rem'>
+                    color: '#94a3b8',
+                    marginBottom: 20,
+                    lineHeight: '1.6',
+                    fontSize: '1rem'
                   }}>
                     {item.description}
                   </p>

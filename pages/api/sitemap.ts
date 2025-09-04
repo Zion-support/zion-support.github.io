@@ -15,7 +15,7 @@ const staticPages = [
   '/privacy',
   '/terms',
   '/faq'
-;];
+];
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>

@@ -41,9 +41,9 @@ class ZionTechClient {
 
   async getServices() {
     try {
-      const response = await axios.get(`${this.baseURL}/services`, {
+      const response = await axios.get(\`\${this.baseURL}/services\`, {
         headers: {
-          'Authorization': `Bearer ${this.apiKey}`,
+          'Authorization': \`Bearer \${this.apiKey}\`,
           'Content-Type': 'application/json'
         }
       });
@@ -56,9 +56,9 @@ class ZionTechClient {
 
   async requestQuote(serviceData) {
     try {
-      const response = await axios.post(`${this.baseURL}/quotes`, serviceData, {
+      const response = await axios.post(\`\${this.baseURL}/quotes\`, serviceData, {
         headers: {
-          'Authorization': `Bearer ${this.apiKey}`,
+          'Authorization': \`Bearer \${this.apiKey}\`,
           'Content-Type': 'application/json'
         }
       });
@@ -168,7 +168,7 @@ const ServiceCatalog = () => {
       try {
         const response = await fetch('/api/ziontech/services', {
           headers: {
-            'Authorization': `Bearer ${process.env.NEXT_PUBLIC_ZIONTECH_API_KEY}`,
+            'Authorization': \`Bearer \${process.env.NEXT_PUBLIC_ZIONTECH_API_KEY}\`,
             'Content-Type': 'application/json'
           }
         });
@@ -329,19 +329,28 @@ if ($services && $services['success']) {
           <section style={{ background: '#1e293b', padding: 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)'  }}>
             <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 16  }}>🤝 Need Help?</h2>
             <p style={{ opacity: '0.8', marginBottom: 20 }}>Our team is here to help you integrate our services successfully.</p>
-            <div style={{ display: 'gap', 16, flexWrap: 'wrap' }}>
+            <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
               <Link href="/contact" style={{ 
-                display: 'padding', '12px 24px' 
-                background: 'color', 'white' >
-                textDecoration: 'borderRadius', 8, >
-                fontWeight: '600 >'}}>
+                display: 'inline-block',
+                padding: '12px 24px',
+                background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+                color: 'white',
+                textDecoration: 'none',
+                borderRadius: 8,
+                fontWeight: 600
+              }}>
                 Contact Support
               </Link>
               <Link href="/docs/api-reference" style={{ 
-                display: 'padding', '12px 24px' 
-                background: 'color', 'white' >
-                textDecoration: 'borderRadius', 8, >
-                fontWeight: '600 >'}}>
+                display: 'inline-block',
+                padding: '12px 24px',
+                background: 'transparent',
+                color: 'white',
+                textDecoration: 'none',
+                borderRadius: 8,
+                border: '2px solid rgba(255, 255, 255, 0.3)',
+                fontWeight: 600
+              }}>
                 API Reference
               </Link>
             </div>
@@ -350,4 +359,4 @@ if ($services && $services['success']) {
       </div>
     </>
   );
-}`
+}
