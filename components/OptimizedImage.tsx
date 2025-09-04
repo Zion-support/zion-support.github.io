@@ -1,0 +1,24 @@
+
+}
+  const [hasError, setHasError] = useState(false)
+}
+  const [isInView, setIsInView] = useState(priority)
+}
+  const imageRef = useRef<HTMLDivElement>(null)
+}
+  const [isLoading, setIsLoading] = useState(true)
+}
+  const [hasError, setHasError] = useState(false)
+}
+  const [isInView, setIsInView] = useState(priority)
+}
+  const imageRef = useRef<HTMLDivElement>(null)
+}
+  // comment
+useEffect(() => {
+    if (priority) return
+    const observer = new IntersectionObserver()
+}
+      ([entry]) => {
+        if (entry.isIntersecting) {;
+

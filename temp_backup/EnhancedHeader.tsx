@@ -10,5 +10,3 @@ import React { useState, useEffect } from "react" const EnhancedHeader: React.FC
 ""
 "
 
-export default Component
->>>>>>> main

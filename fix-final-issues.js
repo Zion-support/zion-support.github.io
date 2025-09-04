@@ -203,7 +203,7 @@ const remainingCorruptedFiles = [
 // Template for a basic React component;
 const basicComponentTemplate = (componentName, isPage = false) => `import React from "react";
 ${isPage ? `import Link from "next/link";
-import { ArrowRight, Phone, Mail  } from "lucide-react";` : ""}
+import { ArrowRight, Phone } from "lucide-react";
 ;
 export default function ${componentName}() {
   return (;

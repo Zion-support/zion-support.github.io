@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CheckCircle, X, Star, TrendingUp, DollarSign, Users, Zap, Shield } from 'lucide-react';
+import { CheckCircle, Star, TrendingUp, DollarSign, Users, Zap, Shield } from "lucide-react";
 import { motion } from 'framer-motion';
 
 interface PricingTier {
