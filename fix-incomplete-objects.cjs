@@ -1,14 +1,14 @@
-const fs = require('fs');
+const fs = require('fs';);
 
 // Function to fix incomplete objects in a file
 function fixIncompleteObjects(filePath) {
-  let content = fs.readFileSync(filePath, 'utf8');
+  let content = fs.readFileSync(filePath, 'utf8';);
   
-  // Find patterns like: { icon: SomeIcon, ] }
-  const incompletePattern = /\{\s*icon:\s*(\w+),\s*\]\s*\}/g;
+  // Find patterns like: { icon: SomeIcon] }
+  const incompletePattern = /\{\s*icon:\s*(\w+),\s*\]\s*\}/;g;
   
   content = content.replace(incompletePattern, (match, iconName) => {
-    return `{
+    return `{;
       icon: ${iconName},
       name: 'Service Name',
       description: 'Service description placeholder.',
@@ -25,14 +25,13 @@ function fixIncompleteObjects(filePath) {
         'Benefit 3'
       ],
       category: 'General'
-    }`;
-  });
+    }`});
   
-  // Find patterns like: { icon: SomeIcon, ], category: 'SomeCategory' }
-  const incompleteWithCategoryPattern = /\{\s*icon:\s*(\w+),\s*\],\s*category:\s*'([^']+)'\s*\}/g;
+  // Find patterns like: { icon: SomeIcon], category: 'SomeCategory' }
+  const incompleteWithCategoryPattern = /\{\s*icon:\s*(\w+),\s*\],\s*category:\s*'([^']+)'\s*\}/;g;
   
   content = content.replace(incompleteWithCategoryPattern, (match, iconName, category) => {
-    return `{
+    return `{;
       icon: ${iconName},
       name: 'Service Name',
       description: 'Service description placeholder.',
@@ -49,22 +48,22 @@ function fixIncompleteObjects(filePath) {
         'Benefit 3'
       ],
       category: '${category}'
-    }`;
-  });
+    }`});
   
   fs.writeFileSync(filePath, content);
-  console.log(`Fixed incomplete objects in ${filePath}`);
-}
+  console.log(`Fixed incomplete objects in ${filePath}`);}
 
 // Fix all three files
-const files = ['pages/ai-services.tsx', 'pages/it-services.tsx', 'pages/micro-saas.tsx'];
+const files = ['pages/ai-services.tsx', 'pages/it-services.tsx', 'pages/micro-saas.tsx';];
 
 files.forEach(file => {
-  if (fs.existsSync(file)) {
-    fixIncompleteObjects(file);
-  } else {
+  if () {
+    fixIncompleteObjects(file)} else {
+    console.log(`File ${file} not found`)) {
+    ) {
+    fixIncompleteObjects(file)} else {
     console.log(`File ${file} not found`);
-  }
+  }}
 });
 
 console.log('All incomplete objects fixed!');

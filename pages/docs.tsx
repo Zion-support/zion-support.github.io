@@ -5,10 +5,11 @@ import { Book, FileText, Video, Download, Search, ExternalLink } from 'lucide-re
 
 export default function Documentation() {
   const contact = {
-    email: 'kleber@ziontechgroup.com',
     phone: '+1 302 464 0950',
-    website: 'https://ziontechgroup.com'
-  };
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    site: 'https://ziontechgroup.com'
+  }
   const documentationSections = [
     {
       icon: Book,
@@ -62,17 +63,17 @@ export default function Documentation() {
         <title>Documentation - Zion Tech Group</title>
         <meta name="description" content="Comprehensive documentation for Zion Tech Group services including API guides, tutorials, and resources. Get started with our services today." />
         <meta name="keywords" content="documentation, API guide, tutorials, getting started, Zion Tech Group" />
-        <link rel="canonical" href={`${contact.website}/docs`} />
+        <link rel="canonical" href={`${contact.site}/docs`} />
         <meta property="og:title" content="Documentation - Zion Tech Group" />
         <meta property="og:description" content="Comprehensive documentation for Zion Tech Group services including API guides and tutorials." />
-        <meta property="og:url" content={`${contact.website}/docs`} />
+        <meta property="og:url" content={`${contact.site}/docs`} />
         <meta property="og:type" content="website" />
       </Head>
 
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-green-600 to-teal-600 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Documentation
@@ -80,7 +81,7 @@ export default function Documentation() {
               <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
                 Everything you need to get started with Zion Tech Group services, from quick start guides to comprehensive API documentation.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   href="/docs/getting-started"
                   className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
@@ -100,7 +101,7 @@ export default function Documentation() {
 
         {/* Search Section */}
         <section className="py-12 bg-gray-50">
-          <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
@@ -114,7 +115,7 @@ export default function Documentation() {
 
         {/* Documentation Sections */}
         <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 gap-8">
               {documentationSections.map((section, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
@@ -128,7 +129,7 @@ export default function Documentation() {
                       <li key={itemIndex}>
                         <Link 
                           href={item.link}
-                          className="flex items-center text-green-600 hover: text-green-700 transition-colors"
+                          className="flex items-center text-green-600 hover:text-green-700 transition-colors"
                         >
                           <ExternalLink className="w-4 h-4 mr-2" />
                           {item.name}
@@ -144,7 +145,7 @@ export default function Documentation() {
 
         {/* Quick Links */}
         <section className="bg-gray-50 py-20">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Popular Resources
@@ -183,4 +184,5 @@ export default function Documentation() {
         </section>
       </div>
     </>
-  )}
+  );
+}

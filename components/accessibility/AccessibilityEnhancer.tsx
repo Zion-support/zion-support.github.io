@@ -12,10 +12,12 @@ export const useKeyboardNavigation = () => {
         }
       }
     };
+
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
 };
+
 // Component for skip links
 export const SkipLinks: React.FC = () => (
   <div className="sr-only focus-within:not-sr-only">
@@ -57,12 +59,14 @@ export const AccessibleButton: React.FC<AccessibleButtonProps> = ({
     primary: 'bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-500',
     secondary: 'bg-gray-600 hover:bg-gray-700 text-white focus:ring-gray-500',
     danger: 'bg-red-600 hover:bg-red-700 text-white focus:ring-red-500'
-  }
+  };
+  
   const sizeClasses = {
     sm: 'px-3 py-1.5 text-sm',
     md: 'px-4 py-2 text-base',
     lg: 'px-6 py-3 text-lg'
-  }
+  };
+
   return (
     <button
       className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`}
@@ -80,7 +84,8 @@ export const AccessibleButton: React.FC<AccessibleButtonProps> = ({
       )}
     </button>
   );
-}
+};
+
 // Focus trap component
 interface FocusTrapProps {
   children: React.ReactNode;
@@ -111,6 +116,7 @@ export const FocusTrap: React.FC<FocusTrapProps> = ({ children, active }) => {
         }
       }
     };
+
     document.addEventListener('keydown', handleTabKey);
     firstFocusableElement?.focus();
 
@@ -118,4 +124,4 @@ export const FocusTrap: React.FC<FocusTrapProps> = ({ children, active }) => {
   }, [active]);
 
   return <>{children}</>;
-}
+};

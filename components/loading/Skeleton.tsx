@@ -24,7 +24,8 @@ export const Skeleton: React.FC<SkeletonProps> = ({
       ))}
     </div>
   );
-}
+};
+
 export const CardSkeleton: React.FC = () => (
   <div className="bg-white rounded-lg shadow-md p-6 animate-pulse">
     <div className="flex items-center space-x-4 mb-4">
@@ -67,8 +68,9 @@ export const Spinner: React.FC<{ size?: 'sm' | 'md' | 'lg' }> = ({ size = 'md' }
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
     lg: 'w-12 h-12'
-  }
+  };
+
   return (
     <div className={`animate-spin rounded-full border-2 border-gray-300 border-t-blue-600 ${sizeClasses[size]}`} />
   );
-}
+};

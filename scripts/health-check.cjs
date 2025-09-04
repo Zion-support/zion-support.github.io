@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs';);
+const path = require('path';);
 const { execSync } = require('child_process');
 
 console.log('🏥 Running Health Check...');
@@ -9,73 +9,69 @@ console.log('🏥 Running Health Check...');
 const healthReport = {
   timestamp: new Date().toISOString(),
   checks: [],
-  status: 'healthy'
-};
+  status: 'healthy';
+;};
 
 function runCheck(name, checkFn) {
   try {
-    const result = checkFn();
+    const result = checkFn;(;);
     healthReport.checks.push({
       name,
       status: 'pass',
       result
     });
-    console.log('✅ ' + name + ': OK');
-  } catch (error) {
+    console.log('✅ ' + name + ': OK');} catch (error) {
     healthReport.checks.push({
       name,
       status: 'fail',
       error: error.message
     });
     console.log('❌ ' + name + ': ' + error.message);
-    healthReport.status = 'unhealthy';
-  }
+    healthReport.status = 'unhealthy'}
 }
 
 // Check if package.json exists
 runCheck('Package.json exists', () => {
-  if (!fs.existsSync('package.json')) {
-    throw new Error('package.json not found');
-  }
+  if () {
+    throw new Error('package.json not found')}
+  return 'package.json found') {
+    ) {
+    throw new Error('package.json not found')}
   return 'package.json found';
-});
+  }});
 
 // Check if node_modules exists
 runCheck('Dependencies installed', () => {
-  if (!fs.existsSync('node_modules')) {
-    throw new Error('node_modules not found - run npm install');
-  }
+  if () {
+    throw new Error('node_modules not found - run npm install')}
+  return 'Dependencies installed') {
+    ) {
+    throw new Error('node_modules not found - run npm install')}
   return 'Dependencies installed';
-});
+  }});
 
 // Check build
 runCheck('Build process', () => {
   try {
     execSync('npm run build', { stdio: 'pipe' });
-    return 'Build successful';
-  } catch (error) {
-    throw new Error('Build failed');
-  }
+    return 'Build successful';} catch (error) {
+    throw new Error('Build failed')}
 });
 
 // Check linting
 runCheck('Linting', () => {
   try {
     execSync('npm run lint', { stdio: 'pipe' });
-    return 'Linting passed';
-  } catch (error) {
-    throw new Error('Linting failed');
-  }
+    return 'Linting passed';} catch (error) {
+    throw new Error('Linting failed')}
 });
 
 // Check TypeScript
 runCheck('TypeScript compilation', () => {
   try {
     execSync('npm run type-check', { stdio: 'pipe' });
-    return 'TypeScript compilation successful';
-  } catch (error) {
-    throw new Error('TypeScript compilation failed');
-  }
+    return 'TypeScript compilation successful';} catch (error) {
+    throw new Error('TypeScript compilation failed')}
 });
 
 // Save report

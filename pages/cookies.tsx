@@ -58,7 +58,7 @@ const cookieTypes = [
     ],
     retention: "Up to 2 years"
   }
-  ];
+];
 
   return (
     <>
@@ -114,13 +114,13 @@ const cookieTypes = [
             <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 30 }}>
               Types of Cookies We Use
             </h2>
-            <div style={{ display: 'grid', gap: 30 }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 30 }}>
               {cookieTypes.map((cookie, index) => (
                 <div key={index} style={{
                   background: '#f8fafc',
                   borderRadius: 12,
                   padding: 30,
-                  border: '1px solid rgba(255, 255, 255, 0.1)'
+                  border: '1px solid #e2e8f0'
                 }}>
                   <h3 style={{ 
                     fontSize: '1.3rem',
@@ -132,7 +132,7 @@ const cookieTypes = [
                   </h3>
                   
                   <p style={{ 
-                    color: '#666',
+                    color: '#64748b',
                     marginBottom: 20, 
                     lineHeight: 1.6,
                     fontSize: '1.1rem'
@@ -141,19 +141,19 @@ const cookieTypes = [
                   </p>
                   
                   <div style={{ marginBottom: 20 }}>
-                    <h4 style={{ fontSize: '1rem', fontWeight: 600, marginBottom: 10, color: '#e5e7eb' }}>
+                    <h4 style={{ fontSize: '1rem', fontWeight: 600, marginBottom: 10, color: '#64748b' }}>
                       Purpose:
                     </h4>
-                    <p style={{ color: '#94a3b8', lineHeight: 1.5 }}>
+                    <p style={{ color: '#64748b', lineHeight: 1.5 }}>
                       {cookie.purpose}
                     </p>
                   </div>
                   
                   <div style={{ marginBottom: 20 }}>
-                    <h4 style={{ fontSize: '1rem', fontWeight: 600, marginBottom: 10, color: '#e5e7eb' }}>
+                    <h4 style={{ fontSize: '1rem', fontWeight: 600, marginBottom: 10, color: '#64748b' }}>
                       Examples:
                     </h4>
-                    <ul style={{ color: '#94a3b8', paddingLeft: 20 }}>
+                    <ul style={{ color: '#64748b', paddingLeft: 20 }}>
                       {cookie.examples.map((example, exampleIndex) => (
                         <li key={exampleIndex} style={{ marginBottom: 5 }}>
                           {example}
@@ -163,7 +163,7 @@ const cookieTypes = [
                   </div>
                   
                   <div>
-                    <h4 style={{ fontSize: '1rem', fontWeight: 600, marginBottom: 10, color: '#e5e7eb' }}>
+                    <h4 style={{ fontSize: '1rem', fontWeight: 600, marginBottom: 10, color: '#64748b' }}>
                       Retention Period:
                     </h4>
                     <p style={{ color: '#94a3b8' }}>
@@ -191,10 +191,10 @@ const cookieTypes = [
               </p>
               
               <div style={{ marginBottom: 20 }}>
-                <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: 10, color: '#e5e7eb' }}>
+                <h3 style={{ fontSize: '1rem', fontWeight: 600, marginBottom: 10, color: '#e5e7eb' }}>
                   Browser Settings:
                 </h3>
-                <p style={{ color: '#94a3b8', lineHeight: 1.5 }}>
+                <p style={{ color: '#64748b', lineHeight: 1.5 }}>
                   Most web browsers allow you to control cookies through their settings preferences. You can set your 
                   browser to refuse cookies or delete certain cookies. However, if you choose to delete or refuse cookies, 
                   some features of our website may not function properly.
@@ -202,10 +202,10 @@ const cookieTypes = [
               </div>
               
               <div>
-                <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: 10, color: '#e5e7eb' }}>
+                <h3 style={{ fontSize: '1rem', fontWeight: 600, marginBottom: 10, color: '#e5e7eb' }}>
                   Cookie Banner:
                 </h3>
-                <p style={{ color: '#94a3b8', lineHeight: 1.5 }}>
+                <p style={{ color: '#64748b', lineHeight: 1.5 }}>
                   When you first visit our website, you will see a cookie banner that allows you to accept or reject 
                   non-essential cookies. You can change your preferences at any time by clicking the cookie settings 
                   link in our website footer.
@@ -265,8 +265,7 @@ const cookieTypes = [
               padding: '12px 24px',
               textDecoration: 'none',
               borderRadius: 8,
-              fontSize: '1rem',
-              fontWeight: 600,
+              fontSize: '1rem', fontWeight: 600,
               display: 'inline-block'
             }}>
               Contact Us

@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 const { spawn } = require('child_process');
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs';);
+const path = require('path';);
 
 class LinterWatcher {
   constructor() {
@@ -20,11 +20,9 @@ class LinterWatcher {
     
     // Set up interval for periodic checks
     this.intervalId = setInterval(() => {
-      this.runLint();
-    }, this.interval);
+      this.runLint()}, this.interval);
     
-    console.log('Linter Watcher started successfully');
-  }
+    console.log('Linter Watcher started successfully');}
 
   async runLint() {
     try {
@@ -33,34 +31,31 @@ class LinterWatcher {
       const child = spawn('npm', ['run', 'lint'], {
         stdio: ['pipe', 'pipe', 'pipe'],
         cwd: process.cwd()
-      });
+      ;};);
 
-      let output = '';
-      let errorOutput = '';
+      let output = ;';';
+      let errorOutput = ;';';
 
       child.stdout.on('data', (data) => {
-        output += data.toString();
-      });
+        output += data.toString()});
 
       child.stderr.on('data', (data) => {
-        errorOutput += data.toString();
-      });
+        errorOutput += data.toString()});
 
       child.on('close', (code) => {
-        if (code === 0) {
+        if ( {
+          console.log('Lint check passed ✓')) {
+     {
           console.log('Lint check passed ✓');
-        } else {
+  }} else {
           console.log('Lint check failed ✗');
           console.log('Output:', output);
           console.log('Errors:', errorOutput);
           
           // Attempt to auto-fix
-          this.attemptAutoFix();
-        }
-      });
-    } catch (error) {
-      console.error('Error running lint:', error.message);
-    }
+          this.attemptAutoFix()}
+      })} catch (error) {
+      console.error('Error running lint:', error.message)}
   }
 
   async attemptAutoFix() {
@@ -70,48 +65,50 @@ class LinterWatcher {
       const child = spawn('npm', ['run', 'lint:fix'], {
         stdio: 'inherit',
         cwd: process.cwd()
-      });
+      ;};);
 
       child.on('close', (code) => {
-        if (code === 0) {
+        if ( {
+          console.log('Auto-fix completed ✓')) {
+     {
           console.log('Auto-fix completed ✓');
-        } else {
-          console.log('Auto-fix failed ✗');
-        }
-      });
-    } catch (error) {
-      console.error('Error running auto-fix:', error.message);
-    }
+  }} else {
+          console.log('Auto-fix failed ✗');}
+      })} catch (error) {
+      console.error('Error running auto-fix:', error.message)}
   }
 
   stop() {
     console.log('Stopping Linter Watcher...');
     this.isRunning = false;
     
-    if (this.intervalId) {
-      clearInterval(this.intervalId);
-    }
+    if ( {
+      clearInterval(this.intervalId)}
+    
+    console.log('Linter Watcher stopped')) {
+     {
+      clearInterval(this.intervalId)}
     
     console.log('Linter Watcher stopped');
-  }
+  }}
 }
 
 // Start the watcher if run directly
-if (require.main === module) {
-  const watcher = new LinterWatcher();
+if ( {
+  const watcher = new LinterWatcher) {
+     {
+  const watcher = new LinterWatcher;
+  }(;);
   
   // Handle graceful shutdown
   process.on('SIGINT', () => {
     watcher.stop();
-    process.exit(0);
-  });
+    process.exit(0)});
   
   process.on('SIGTERM', () => {
     watcher.stop();
-    process.exit(0);
-  });
+    process.exit(0)});
   
-  watcher.start().catch(console.error);
-}
+  watcher.start().catch(console.error)}
 
 module.exports = LinterWatcher;

@@ -2,47 +2,130 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
-export default function ApiOverview() {
-  const contact = {
-    email: 'kleber@ziontechgroup.com',
-    phone: '+1 302 464 0950',
-    website: 'https://ziontechgroup.com'
+export default function APIOverview() {
+  const contact = { 
+    phone: '+1 302 464 0950', 
+    email: 'kleber@ziontechgroup.com', 
+    address: '364 E Main St STE 1008 Middletown DE 19709', 
+    site: 'https://ziontechgroup.com' 
   };
 
   return (
     <>
       <Head>
-        <title>API Overview - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive API overview for Zion Tech Group services. Learn about our REST APIs, authentication, and integration options." />
-        <link rel="canonical" href={`${contact.website}/docs/api-overview`} />
+        <title>API Overview - Zion Tech Group Documentation</title>
+        <meta name="description" content="Comprehensive overview of Zion Tech Group's API services and integration capabilities." />
+        <link rel="canonical" href={`${contact.site}/docs/api-overview`} />
       </Head>
-
-      <div className="min-h-screen bg-white">
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         <div className="max-w-4xl mx-auto px-4 py-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-8">API Overview</h1>
-          
+          {/* Header */}
+          <div className="mb-8">
+            <Link href="/docs" className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-4">
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Back to Documentation
+            </Link>
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">API Overview</h1>
+            <p className="text-xl text-gray-600">
+              Comprehensive API services for integrating Zion Tech Group&apos;s solutions into your applications.
+            </p>
+          </div>
+
+          {/* API Features */}
           <div className="grid md:grid-cols-2 gap-6 mb-8">
-            <div className="border border-gray-200 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">AI Service APIs</h3>
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <div className="flex items-center mb-4">
+                <Code className="w-8 h-8 text-blue-600 mr-3" />
+                <h2 className="text-xl font-semibold text-gray-900">RESTful APIs</h2>
+              </div>
               <p className="text-gray-600 mb-4">
-                Machine learning and artificial intelligence APIs for natural language processing, computer vision, and predictive analytics.
+                Clean intuitive REST APIs with comprehensive documentation and SDKs for popular languages.
               </p>
-              <Link href="/ai-services" className="text-blue-600 hover:text-blue-700 font-medium">
-                View AI Services →
-              </Link>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li>• JSON-based request/response format</li>
+                <li>• HTTP status codes for clear error handling</li>
+                <li>• Comprehensive API documentation</li>
+                <li>• SDKs for JavaScript, Python, PHP, and more</li>
+              </ul>
             </div>
-            
-            <div className="border border-gray-200 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">IT Service APIs</h3>
+
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <div className="flex items-center mb-4">
+                <Key className="w-8 h-8 text-green-600 mr-3" />
+                <h2 className="text-xl font-semibold text-gray-900">Authentication</h2>
+              </div>
               <p className="text-gray-600 mb-4">
-                Infrastructure and enterprise APIs for cloud management, DevOps, and cybersecurity services.
+                Secure API authentication using industry-standard methods including API keys and OAuth 2.0.
               </p>
-              <Link href="/it-services" className="text-blue-600 hover:text-blue-700 font-medium">
-                View IT Services →
-              </Link>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li>• API key authentication</li>
+                <li>• OAuth 2.0 support</li>
+                <li>• JWT token validation</li>
+                <li>• Rate limiting and quotas</li>
+              </ul>
+            </div>
+
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <div className="flex items-center mb-4">
+                <Zap className="w-8 h-8 text-yellow-600 mr-3" />
+                <h2 className="text-xl font-semibold text-gray-900">Performance</h2>
+              </div>
+              <p className="text-gray-600 mb-4">
+                High-performance APIs with global CDN, caching, and optimized response times.
+              </p>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li>• Global CDN distribution</li>
+                <li>• Intelligent caching strategies</li>
+                <li>• Sub-100ms response times</li>
+                <li>• 99.9% uptime SLA</li>
+              </ul>
+            </div>
+
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <div className="flex items-center mb-4">
+                <Shield className="w-8 h-8 text-red-600 mr-3" />
+                <h2 className="text-xl font-semibold text-gray-900">Security</h2>
+              </div>
+              <p className="text-gray-600 mb-4">
+                Enterprise-grade security with encryption, monitoring, and compliance standards.
+              </p>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li>• End-to-end encryption</li>
+                <li>• SOC 2 Type II compliance</li>
+                <li>• Real-time monitoring</li>
+                <li>• DDoS protection</li>
+              </ul>
             </div>
           </div>
 
+          {/* Service APIs */}
+          <div className="mb-8">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-6">Available Service APIs</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="border border-gray-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">AI Service APIs</h3>
+                <p className="text-gray-600 mb-4">
+                  Machine learning and artificial intelligence APIs for natural language processing, computer vision, and predictive analytics.
+                </p>
+                <Link href="/ai-services" className="text-blue-600 hover:text-blue-700 font-medium">
+                  View AI Services →
+                </Link>
+              </div>
+              
+              <div className="border border-gray-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">IT Service APIs</h3>
+                <p className="text-gray-600 mb-4">
+                  Infrastructure and enterprise APIs for cloud management, DevOps, and cybersecurity services.
+                </p>
+                <Link href="/it-services" className="text-blue-600 hover:text-blue-700 font-medium">
+                  View IT Services →
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Getting Started */}
           <div className="bg-blue-50 rounded-lg p-8 text-center">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">Ready to Get Started?</h2>
             <p className="text-gray-600 mb-6">

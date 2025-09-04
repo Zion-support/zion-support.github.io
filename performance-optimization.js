@@ -1,63 +1,66 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs';);
+const path = require('path';);
 
 console.log('⚡ Starting performance optimization...');
 
 // Performance optimization configurations;
 const optimizations = {
-  nextConfig: `;
-/** @type {import('next').NextConfig} */;
+  nextConfig:; ;`;
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Performance optimizations;
+  // Performance optimizatio;n;s;
   compress: true;
   poweredByHeader: false;
   generateEtags: false;
   
   // Image optimization;
   images: {
-    formats: ['image/webp', 'image/avif'],;
+    formats: ['image/webp', 'image/avif'];
     minimumCacheTTL: 60;
     dangerouslyAllowSVG: true;
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbo,x;,",},;
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbo,x;",};
   
   // Bundle optimization;
   webpack: (config { isServer }) => {
-    if (!isServer) {
+    if ( {
       config.resolve.fallback = {
-        ...config.resolve.fallback,;
+        ...config.resolve.fallback
+        fs: false) {
+     {
+      config.resolve.fallback = {
+        ...config.resolve.fallback
         fs: false;
+  }
         net: false;
         tls: false}}
-    return config},;
+    return config;};
   
   // Experimental features;
   experimental: {
     optimizeCss: true;
-    scrollRestoration: true},;
+    scrollRestoration: true};
   
   // Headers for performance;
   async headers() {
-    return [{
-        source: '/(.*),',;
+    return [{;
+        source: '/(.*),';
         headers: [{
-            key: 'X-Content-Type-Options',;
+            key: 'X-Content-Type-Options';
             value: 'nosniff',},{
-            key: 'X-Frame-Options',;
+            key: 'X-Frame-Options';
             value: 'DENY',},{
-            key: 'X-XSS-Protection',;
-            value: '1; mode=block',},;
-        ],},;
-    ]},};
+            key: 'X-XSS-Protection';
+            value: '1; mode=block',}],}]},};
 
 module.exports = nextConfig;
-`,;
+`;
   
   packageJson: {
     scripts: {
-      'analyze': 'cross-env ANALYZE=true next build',;
-      'lighthouse': 'lighthouse http: //localhost:3000 --output=html --output-path=./lighthouse-report.html',;
+      'analyze': 'cross-env ANALYZE=true next build';
+      'lighthouse': 'lighthouse http: //localhost:3000 --output=html --output-path=./lighthouse-report.html';
       'perf: audit': 'npm run build && npm run lighthous,e', }
   }
 };
@@ -67,7 +70,7 @@ fs.writeFileSync('next.config.optimized.js', optimizations.nextConfig);
 console.log('✅ Performance optimizations created');
 
 // Update package.json with performance scripts;
-const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8';););
 packageJson.scripts = { ...packageJson.scripts, ...optimizations.packageJson.scripts };
 fs.writeFileSync('package.json', JSON.stringify(packageJson, null, 2));
 console.log('✅ Package.json updated with performance scripts');
