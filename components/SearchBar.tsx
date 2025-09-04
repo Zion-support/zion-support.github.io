@@ -86,21 +86,24 @@ const SearchBar: React.FC = () => {
     setIsOpen(false);
     setQuery('');
   }
+  
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Escape') {
       setIsOpen(false);
       inputRef.current?.blur();
     }
+  };
+  
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
         setIsOpen(false);
       }
     };
+    
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
-
   return (
     <div className="relative" ref={searchRef}>
       <div className="relative">

@@ -1,84 +1,29 @@
 {
-  "timestamp": "2025-09-04T02:05:19.421Z",
-  "checks": [
-    {
-      "name": "Node.js Version",
-      "status": "passed",
-      "message": "Node.js version v22.16.0 is supported",
-      "duration": 1,
-      "details": {
-        "version": "v22.16.0",
-        "majorVersion": 22
-      }
+  "timestamp": "2025-09-04T02:10:00.461Z",
+  "checks": {
+    "packageJson": {
+      "status": "ok",
+      "message": "Package.json found",
+      "version": "0.1.0"
     },
-    {
-      "name": "Package Configuration",
-      "status": "passed",
-      "message": "package.json is valid",
-      "duration": 0,
-      "details": {
-        "name": "ziontechgroup.com",
-        "version": "0.1.0",
-        "scriptsCount": 159
-      }
+    "dependencies": {
+      "status": "ok",
+      "message": "Dependencies installed"
     },
-    {
-      "name": "Dependencies",
-      "status": "passed",
-      "message": "All dependencies are installed correctly",
-      "duration": 738,
-      "details": {}
+    "diskSpace": {
+      "status": "ok",
+      "message": "Disk space available",
+      "details": "overlay         126G   14G  106G  12% /"
     },
-    {
-      "name": "Build System",
-      "status": "passed",
-      "message": "Build system configuration is complete",
-      "duration": 0,
-      "details": {
-        "hasNextConfig": true,
-        "hasTsConfig": true
-      }
+    "memory": {
+      "status": "ok",
+      "message": "Memory check completed",
+      "details": "Mem:            15Gi       2.3Gi       752Mi        10Mi        12Gi        13Gi"
     },
-    {
-      "name": "Source Files",
-      "status": "passed",
-      "message": "Source files found: 18 pages, 9 components",
-      "duration": 0,
-      "details": {
-        "pageCount": 18,
-        "componentCount": 9,
-        "hasPagesDir": true,
-        "hasComponentsDir": true
-      }
-    },
-    {
-      "name": "Git Repository",
-      "status": "passed",
-      "message": "Git repository on branch 'cursor/automate-test-fix-improve-and-merge-code-eb74' with uncommitted changes",
-      "duration": 85,
-      "details": {
-        "branch": "cursor/automate-test-fix-improve-and-merge-code-eb74",
-        "hasChanges": true,
-        "changesCount": 13
-      }
-    },
-    {
-      "name": "Security",
-      "status": "passed",
-      "message": "Basic security files are present",
-      "duration": 0,
-      "details": {
-        "foundFiles": [
-          ".gitignore",
-          ".env.example"
-        ]
-      }
+    "build": {
+      "status": "ok",
+      "message": "Build directory found"
     }
-  ],
-  "summary": {
-    "total": 7,
-    "passed": 7,
-    "failed": 0,
-    "warnings": 0
-  }
+  },
+  "status": "healthy"
 }

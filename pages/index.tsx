@@ -8,7 +8,7 @@ export default function Home() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  };
+  }
   return (
     <>
       <Head>
@@ -77,9 +77,6 @@ export default function Home() {
               <Link href="/services-catalog" className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors">
                 Services Catalog
               </Link>
-              <Link href="/contact" className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
-                Get Quote
-              </Link>
             </div>
 
             <div className="grid md:grid-cols-3 gap-6 text-center">
@@ -99,97 +96,73 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Services Overview */}
-        <section className="py-16 px-4">
+        {/* Services Preview */}
+        <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-              Our Service Categories
-            </h2>
-            
+            <h2 className="text-4xl font-bold text-center mb-16">Our Services</h2>
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-blue-500/40 transition-colors">
-                <h3 className="text-2xl font-bold mb-4 text-blue-400">Micro SaaS Products</h3>
-                <p className="text-slate-300 mb-6">
-                  Innovative, focused software solutions including AI-Powered Video Clip Maker, 
-                  Smart Contract Analyzer, Cybersecurity Threat Intelligence, and 50+ more specialized tools.
+              <div className="p-8 bg-slate-900/40 rounded-xl border border-slate-700 hover:border-blue-500/50 transition-colors">
+                <div className="w-16 h-16 bg-blue-600 rounded-lg flex items-center justify-center mb-6">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold mb-4">Micro SaaS Solutions</h3>
+                <p className="text-slate-400 mb-6">
+                  Innovative, focused software solutions that solve specific business problems with minimal overhead and maximum impact.
                 </p>
-                <ul className="text-slate-400 space-y-2 mb-6">
-                  <li>• AI-Powered Video Clip Maker</li>
-                  <li>• Smart Contract Analyzer</li>
-                  <li>• Cybersecurity Threat Intelligence</li>
-                  <li>• Multi-Language Website Translator</li>
-                  <li>• Predictive Inventory Optimizer</li>
-                </ul>
                 <Link href="/micro-saas" className="text-blue-400 hover:text-blue-300 font-semibold">
-                  View All Micro SaaS →
+                  Explore Micro SaaS →
                 </Link>
               </div>
 
-              <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-purple-500/40 transition-colors">
-                <h3 className="text-2xl font-bold mb-4 text-purple-400">AI Services</h3>
-                <p className="text-slate-300 mb-6">
-                  Advanced artificial intelligence solutions including autonomous AI agents, 
-                  financial trading systems, legal document analysis, and 40+ more AI-powered services.
+              <div className="p-8 bg-slate-900/40 rounded-xl border border-slate-700 hover:border-purple-500/50 transition-colors">
+                <div className="w-16 h-16 bg-purple-600 rounded-lg flex items-center justify-center mb-6">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold mb-4">AI Services</h3>
+                <p className="text-slate-400 mb-6">
+                  Advanced artificial intelligence solutions including machine learning, natural language processing, and automation.
                 </p>
-                <ul className="text-slate-400 space-y-2 mb-6">
-                  <li>• Autonomous AI Agents</li>
-                  <li>• AI-Powered Financial Trading</li>
-                  <li>• AI Legal Document Analysis</li>
-                  <li>• AI-Powered Voice Analytics</li>
-                  <li>• AI-Powered Search & Discovery</li>
-                </ul>
                 <Link href="/ai-services" className="text-purple-400 hover:text-purple-300 font-semibold">
-                  View All AI Services →
+                  Explore AI Services →
                 </Link>
               </div>
 
-              <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-green-500/40 transition-colors">
-                <h3 className="text-2xl font-bold mb-4 text-green-400">IT & Cloud Services</h3>
-                <p className="text-slate-300 mb-6">
-                  Comprehensive IT solutions including quantum computing consulting, blockchain & Web3 solutions, 
-                  DevSecOps automation, and 40+ more enterprise-grade services.
+              <div className="p-8 bg-slate-900/40 rounded-xl border border-slate-700 hover:border-green-500/50 transition-colors">
+                <div className="w-16 h-16 bg-green-600 rounded-lg flex items-center justify-center mb-6">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold mb-4">IT Solutions</h3>
+                <p className="text-slate-400 mb-6">
+                  Comprehensive IT services including cloud infrastructure, cybersecurity, DevOps, and enterprise solutions.
                 </p>
-                <ul className="text-slate-400 space-y-2 mb-6">
-                  <li>• Quantum Computing Consulting</li>
-                  <li>• Blockchain & Web3 Solutions</li>
-                  <li>• DevSecOps & Security Automation</li>
-                  <li>• Enterprise Data Platform</li>
-                  <li>• High-Performance Computing Solutions</li>
-                </ul>
                 <Link href="/it-services" className="text-green-400 hover:text-green-300 font-semibold">
-                  View All IT Services →
+                  Explore IT Solutions →
                 </Link>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Contact Section */}
-        <section className="py-16 px-4 bg-slate-900/40">
+        {/* CTA Section */}
+        <section className="py-20 px-4 bg-slate-900/50">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-lg text-slate-300 mb-8">
-              Get in touch with our experts to discuss your project requirements and discover 
-              how our innovative solutions can drive your business forward.
+            <h2 className="text-4xl font-bold mb-8">Ready to Transform Your Business?</h2>
+            <p className="text-xl text-slate-300 mb-12">
+              Let&apos;s discuss how our innovative solutions can help you achieve your goals.
             </p>
-            
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-              <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
-                Call {contact.phone}
-              </a>
-              <a href={`mailto:${contact.email}`} className="px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors">
-                Email {contact.email}
-              </a>
-              <Link href="/contact" className="px-6 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
-                Contact Form
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link href="/contact" className="px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
+                Get Started
               </Link>
-            </div>
-            
-            <div className="text-slate-400">
-              <p>{contact.address}</p>
-              <p className="mt-2">Visit us at <a href={contact.site} className="text-blue-400 hover:text-blue-300">{contact.site}</a></p>
+              <Link href="/about" className="px-8 py-4 bg-slate-700 hover:bg-slate-600 rounded-lg font-semibold transition-colors">
+                Learn More
+              </Link>
             </div>
           </div>
         </section>

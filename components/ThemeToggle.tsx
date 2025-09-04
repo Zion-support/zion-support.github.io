@@ -26,7 +26,7 @@ export default function ThemeToggle() {
 
   const toggleTheme = () => {
     setIsDark(!isDark);
-  }
+  };
   return (
     <button
       onClick={toggleTheme}
