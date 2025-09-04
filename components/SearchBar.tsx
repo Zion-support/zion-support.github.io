@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import Link from 'next/link';
 
 interface SearchResult {
@@ -69,27 +69,62 @@ export default function SearchBar() {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<SearchResult[]>([]);
   const [isOpen, setIsOpen] = useState(false);
+  const [selectedIndex, setSelectedIndex] = useState(-1);
+
+  const filteredResults = useMemo(() => {
+    if (query.length <= 2) return [];
+    
+    return searchData.filter(item =>
+      item.title.toLowerCase().includes(query.toLowerCase()) ||
+      item.description.toLowerCase().includes(query.toLowerCase()) ||
+      item.category.toLowerCase().includes(query.toLowerCase())
+    );
+  }, [query]);
 
   useEffect(() => {
-    if (query.length > 2) {
-      const filtered = searchData.filter(item =>
-        item.title.toLowerCase().includes(query.toLowerCase()) ||
-        item.description.toLowerCase().includes(query.toLowerCase()) ||
-        item.category.toLowerCase().includes(query.toLowerCase())
-      );
-      setResults(filtered);
+    if (filteredResults.length > 0) {
+      setResults(filteredResults);
       setIsOpen(true);
+      setSelectedIndex(-1);
     } else {
       setResults([]);
       setIsOpen(false);
+      setSelectedIndex(-1);
     }
-  }, [query]);
+  }, [filteredResults]);
 
-  const handleResultClick = () => {
+  const handleResultClick = useCallback(() => {
     setQuery('');
     setResults([]);
     setIsOpen(false);
-  };
+    setSelectedIndex(-1);
+  }, []);
+
+  const handleKeyDown = useCallback((e: React.KeyboardEvent) => {
+    if (!isOpen || results.length === 0) return;
+
+    switch (e.key) {
+      case 'ArrowDown':
+        e.preventDefault();
+        setSelectedIndex(prev => (prev + 1) % results.length);
+        break;
+      case 'ArrowUp':
+        e.preventDefault();
+        setSelectedIndex(prev => prev <= 0 ? results.length - 1 : prev - 1);
+        break;
+      case 'Enter':
+        e.preventDefault();
+        if (selectedIndex >= 0 && selectedIndex < results.length) {
+          window.location.href = results[selectedIndex].url;
+          handleResultClick();
+        }
+        break;
+      case 'Escape':
+        setIsOpen(false);
+        setSelectedIndex(-1);
+        break;
+    }
+  }, [isOpen, results, selectedIndex, handleResultClick]);
 
   return (
     <div className="relative w-full max-w-md">
@@ -99,7 +134,13 @@ export default function SearchBar() {
           placeholder="Search services..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
+          onKeyDown={handleKeyDown}
           className="w-full px-4 py-2 pl-10 bg-slate-800/50 border border-white/20 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          aria-label="Search for services and solutions"
+          aria-expanded={isOpen}
+          aria-haspopup="listbox"
+          role="combobox"
+          autoComplete="off"
         />
         <svg
           className="absolute left-3 top-2.5 h-5 w-5 text-slate-400"
@@ -117,13 +158,24 @@ export default function SearchBar() {
       </div>
 
       {isOpen && results.length > 0 && (
-        <div className="absolute top-full left-0 right-0 mt-2 bg-slate-800 border border-white/20 rounded-lg shadow-xl z-50 max-h-96 overflow-y-auto">
+        <div 
+          className="absolute top-full left-0 right-0 mt-2 bg-slate-800 border border-white/20 rounded-lg shadow-xl z-50 max-h-96 overflow-y-auto"
+          role="listbox"
+          aria-label="Search results"
+        >
           {results.map((result, index) => (
             <Link
               key={index}
               href={result.url}
               onClick={handleResultClick}
-              className="block px-4 py-3 hover:bg-slate-700/50 transition-colors border-b border-white/10 last:border-b-0"
+              className={`block px-4 py-3 transition-colors border-b border-white/10 last:border-b-0 ${
+                index === selectedIndex 
+                  ? 'bg-blue-600/30 ring-2 ring-blue-500' 
+                  : 'hover:bg-slate-700/50'
+              }`}
+              role="option"
+              aria-selected={index === selectedIndex}
+              tabIndex={-1}
             >
               <div className="flex items-start justify-between">
                 <div className="flex-1">
