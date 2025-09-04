@@ -64,6 +64,8 @@ const API: NextPage = () => {
                   <p><strong>Description:</strong> {endpoint.description}</p>
                   <p><strong>Response:</strong> {endpoint.response}</p>
                 </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
+                <p className="text-gray-600">{feature.description}</p>
               </div>
             ))}
           </div>
