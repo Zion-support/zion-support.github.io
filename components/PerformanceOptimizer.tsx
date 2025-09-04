@@ -24,10 +24,10 @@ export default function PerformanceOptimizer({ children }: PerformanceOptimizerP
     // Optimize images with lazy loading
     const optimizeImages = () => {
       const images = document.querySelectorAll('img[data-src]');
-      const imageObserver = new IntersectionObserver((entries) => {
+      const imageObserver = new (window as any).IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
+            const img = entry.target as any;
             img.src = img.dataset.src || '';
             img.classList.remove('lazy');
             imageObserver.unobserve(img);

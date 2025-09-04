@@ -8,7 +8,7 @@ interface FormData {
   phone: string;
   service: string;
   message: string;
-
+}
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({

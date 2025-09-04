@@ -34,7 +34,6 @@ export default function SDK() {
 {`npm install @ziontechgroup/sdk
 
 # or
-`
 yarn add @ziontechgroup/sdk`}
               </pre>
             </div>
@@ -55,14 +54,14 @@ const services = await client.services.list();
 // Request a quote
 const quote = await client.quotes.create({
   serviceId: 'micro-saas',
-    requirements: {
+  requirements: {
     users: 100,
-    features: ['analytics' 'api-access']
+    features: ['analytics', 'api-access']
   },
   contact: {
     name: 'John Doe',
     email: 'john@example.com'
-  }`
+  }
 });`}
               </pre>
             </div>
@@ -78,7 +77,6 @@ const quote = await client.quotes.create({
 {`pip install ziontechgroup-sdk
 
 # or
-`
 pipenv install ziontechgroup-sdk`}
               </pre>
             </div>
@@ -98,15 +96,15 @@ services = client.services.list()
 
 # Request a quote
 quote = client.quotes.create({
-    'service_id': 'micro-saas'
+    'service_id': 'micro-saas',
     'requirements': {
         'users': 100,
-        'features': ['analytics' 'api-access']
+        'features': ['analytics', 'api-access']
     },
     'contact': {
-        'name': 'John Doe'
+        'name': 'John Doe',
         'email': 'john@example.com'
-    }`
+    }
 })`}
               </pre>
             </div>
@@ -150,7 +148,7 @@ $quote = $client->quotes()->create([
         'name' => 'John Doe'
         'email' => 'john@example.com'
     ]
-]);`
+]);
 ?>`}
               </pre>
             </div>
