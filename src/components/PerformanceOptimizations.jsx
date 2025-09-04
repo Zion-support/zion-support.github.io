@@ -93,8 +93,8 @@ export function PerformanceOptimizations(props: any) {
     {id: 4, title: 'Service 4', description: 'Description 4', value: 400},
     {id: 5, title: 'Service 5', description: 'Description 5', value: 500},
   ]);
-  const handleItemClick = useCallback(item => {// // // // // // // // console.log('Item clicked:', item);}, []);
-  // console.log('Item clicked:', item)}, []);
+  const handleItemClick = useCallback(item => {// // // // // // // // }, []);
+  // }, []);
   const addItem = useCallback(() => {
     setData(prev => [...prev,
       {

@@ -951,7 +951,7 @@ export function Footer() {
       window.open(link.path, '_blank', 'noopener,noreferrer');
     } else {
       // Handle internal navigation
-      console.log('Navigate to:', link.path);
+      
     }
   };
 

@@ -54,7 +54,7 @@ class ErrorBoundary extends Component<Props, State> {
       };
 
       // You can send this to your error logging service
-      console.log('Error logged:', errorData);
+      
       
       // Example: Send to external service
       // fetch('/api/errors', {
