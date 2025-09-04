@@ -9,7 +9,7 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
-    "allowJs": true,
+    "allowJs": false,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
@@ -22,11 +22,10 @@
     "lib/**/*",
     "hooks/**/*",
     "styles/**/*",
-    "automation/**/*",
-    "scripts/**/*",
+    "automation/**/*.ts",
+    "scripts/**/*.ts",
     "**/*.ts",
     "**/*.tsx",
-    "**/*.js",
     "**/*.d.ts",
     "types/**/*.ts"
   ],
@@ -50,6 +49,12 @@
     "temp_backup",
     "temp_backup/**",
     "temp_broken_components",
-    "temp_broken_components/**"
+    "temp_broken_components/**",
+    "src.corrupted/**",
+    "scripts/**",
+    "automation/**",
+    "tests/**",
+    "**/*.js",
+    "**/*.cjs"
   ]
 }
