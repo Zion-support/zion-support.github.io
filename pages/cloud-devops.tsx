@@ -4,46 +4,47 @@ import Link from 'next/link';
 import { Cloud, Server, Database, Shield, Zap, Users } from 'lucide-react';
 
 export default function CloudDevOps() {
-  const contact ={
-    phone: email, 'kleber@ziontechgroup.com'
-    address: site, 'https://ziontechgroup.com'
-  }
+  const contact = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: 'https://ziontechgroup.com'
+  };
   const services = [
     {
       icon: Cloud,
-      title: 'Cloud Migration & Strategy'
-      description: 'Seamless migration to AWS, Azure, or GCP with zero downtime and optimized cost structures.'
-      features: ['Multi-cloud strategy' 'Cost optimization' 'Security compliance' 'Performance monitoring']
+      title: 'Cloud Migration & Strategy',
+      description: 'Seamless migration to AWS, Azure, or GCP with zero downtime and optimized cost structures.',
+      features: ['Multi-cloud strategy', 'Cost optimization', 'Security compliance', 'Performance monitoring']
     },
     {
       icon: Server,
-      title: 'Infrastructure as Code'
-      description: 'Automated infrastructure provisioning and management using Terraform, Ansible, and CloudFormation.'
-      features: ['Terraform automation' 'Ansible playbooks' 'CloudFormation templates' 'GitOps workflows']
+      title: 'Infrastructure as Code',
+      description: 'Automated infrastructure provisioning and management using Terraform, Ansible, and CloudFormation.',
+      features: ['Terraform automation', 'Ansible playbooks', 'CloudFormation templates', 'GitOps workflows']
     },
     {
       icon: Database,
-      title: 'Database Management'
-      description: 'High-performance database solutions with automated backups, scaling, and optimization.'
-      features: ['Database migration' 'Performance tuning' 'Automated backups' 'High availability']
+      title: 'Database Management',
+      description: 'High-performance database solutions with automated backups, scaling, and optimization.',
+      features: ['Database migration', 'Performance tuning', 'Automated backups', 'High availability']
     },
     {
       icon: Shield,
-      title: 'DevSecOps & Security'
-      description: 'Integrated security practices throughout the development lifecycle with automated compliance.'
-      features: ['Security scanning' 'Compliance automation' 'Vulnerability management' 'Access controls']
+      title: 'DevSecOps & Security',
+      description: 'Integrated security practices throughout the development lifecycle with automated compliance.',
+      features: ['Security scanning', 'Compliance automation', 'Vulnerability management', 'Access controls']
     },
     {
       icon: Zap,
-      title: 'CI/CD Pipeline Automation'
-      description: 'Streamlined deployment pipelines with automated testing, quality gates, and rollback capabilities.'
-      features: ['Automated testing' 'Quality gates' 'Blue-green deployments' 'Rollback automation']
+      title: 'CI/CD Pipeline Automation',
+      description: 'Streamlined deployment pipelines with automated testing, quality gates, and rollback capabilities.',
+      features: ['Automated testing', 'Quality gates', 'Blue-green deployments', 'Rollback automation']
     },
     {
       icon: Users,
-      title: 'Team Training & Support'
-      description: 'Comprehensive training programs to upskill your team in modern DevOps practices and tools.'
-      features: ['Hands-on training' 'Best practices' 'Tool certification' 'Ongoing support']
+      title: 'Team Training & Support',
+      description: 'Comprehensive training programs to upskill your team in modern DevOps practices and tools.',
+      features: ['Hands-on training', 'Best practices', 'Tool certification', 'Ongoing support']
     }
   ];
 
@@ -53,10 +54,10 @@ export default function CloudDevOps() {
         <title>Cloud DevOps Services - Zion Tech Group</title>
         <meta name="description" content="Expert cloud DevOps services including migration, infrastructure automation, CI/CD pipelines, and security. Transform your development workflow with Zion Tech Group." />
         <meta name="keywords" content="cloud migration, DevOps, infrastructure as code, CI/CD, cloud security, AWS, Azure, GCP" />
-        <link rel="canonical" href={`${contact.site}/cloud-devops`} />
+        <link rel="canonical" href={`${contact.address}/cloud-devops`} />
         <meta property="og: title" content="Cloud DevOps Services - Zion Tech Group" />
         <meta property="og:description" content="Expert cloud DevOps services including migration, infrastructure automation, CI/CD pipelines, and security." />
-        <meta property="og: url" content={`${contact.site}/cloud-devops`} />
+        <meta property="og: url" content={`${contact.address}/cloud-devops`} />
         <meta property="og: type" content="website" />
       </Head>
 
