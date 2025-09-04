@@ -10,40 +10,40 @@ export default function ApiQuickStart() {
         <link rel="canonical" href="https://ziontechgroup.com/docs/api-quick-start" />
       </Head>
       
-      <div style={{ maxWidth: 1200, margin: padding, '40px 20px' }}>
-        <div style={{ marginBottom: 40 }}>
-          <Link href="/docs" style={{ color: textDecoration, 'none' marginBottom: 20, display: 'inline-block' }}>
+      <div className="max-w-4xl mx-auto px-4 py-8">
+        <div className="mb-8">
+          <Link href="/docs" className="text-blue-600 hover:text-blue-700 mb-4 inline-block">
             ← Back to Documentation
           </Link>
-          <h1 style={{ fontSize: fontWeight, 800, marginBottom: 16, background: WebkitBackgroundClip, 'text' WebkitTextFillColor: 'transparent' }}>
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
             API Quick Start
           </h1>
-          <p style={{ fontSize: opacity, 0.8, lineHeight: 1.6 }}>
+          <p className="text-lg text-gray-600">
             Get up and running with Zion Tech Group APIs in minutes. This guide covers authentication, making your first request, and common use cases.
           </p>
         </div>
 
-        <div style={{ display: gap, 32 }}>
+        <div className="space-y-8">
           {/* Authentication */}
-          <section style={{ background: padding, 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)' }}>
-            <h2 style={{ fontSize: fontWeight, 700, marginBottom: 16 }}>🔐 Authentication</h2>
-            <p style={{ opacity: 0.8, marginBottom: 20 }}>All API requests require authentication using your API key.</p>
+          <section className="bg-white rounded-lg shadow-lg p-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">🔐 Authentication</h2>
+            <p className="text-gray-600 mb-6">All API requests require authentication using your API key.</p>
             
-            <div style={{ background: padding, 20, borderRadius: 8, marginBottom: 20 }}>
-              <h3 style={{ fontWeight: 600, marginBottom: 12, color: '#93c5fd' }}>Header Authentication</h3>
-              <pre style={{ background: padding, 16, borderRadius: 6, overflow: fontSize, '0.9rem' }}>
+            <div className="bg-gray-50 rounded-lg p-6 mb-6">
+              <h3 className="font-semibold text-lg mb-3 text-blue-600">Header Authentication</h3>
+              <pre className="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto text-sm">
 {`curl -X GET "https://api.ziontechgroup.com/v1/services" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`}
               </pre>
             </div>
             
-            <div style={{ background: padding, 20, borderRadius: 8 }}>
-              <h3 style={{ fontWeight: 600, marginBottom: 12, color: '#93c5fd' }}>JavaScript Example</h3>
-              <pre style={{ background: padding, 16, borderRadius: 6, overflow: fontSize, '0.9rem' }}>
-{`const response = await fetch('https://api.ziontechgroup.com/v1/services' {
+            <div className="bg-gray-50 rounded-lg p-6">
+              <h3 className="font-semibold text-lg mb-3 text-blue-600">JavaScript Example</h3>
+              <pre className="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto text-sm">
+{`const response = await fetch('https://api.ziontechgroup.com/v1/services', {
   headers: {
-    'Authorization': 'Bearer YOUR_API_KEY'
+    'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json'
   }
 });
@@ -55,36 +55,36 @@ console.log(data);`}
           </section>
 
           {/* First API Call */}
-          <section style={{ background: padding, 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)' }}>
-            <h2 style={{ fontSize: fontWeight, 700, marginBottom: 16 }}>🚀 Your First API Call</h2>
-            <p style={{ opacity: 0.8, marginBottom: 20 }}>Let's start with a simple request to list available services.</p>
+          <section className="bg-white rounded-lg shadow-lg p-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">🚀 Your First API Call</h2>
+            <p className="text-gray-600 mb-6">Let's start with a simple request to list available services.</p>
             
-            <div style={{ background: padding, 20, borderRadius: 8, marginBottom: 20 }}>
-              <h3 style={{ fontWeight: 600, marginBottom: 12, color: '#86efac' }}>Request</h3>
-              <pre style={{ background: padding, 16, borderRadius: 6, overflow: fontSize, '0.9rem' }}>
+            <div className="bg-gray-50 rounded-lg p-6 mb-6">
+              <h3 className="font-semibold text-lg mb-3 text-green-600">Request</h3>
+              <pre className="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto text-sm">
 {`GET /v1/services
 Authorization: Bearer YOUR_API_KEY`}
               </pre>
             </div>
             
-            <div style={{ background: padding, 20, borderRadius: 8 }}>
-              <h3 style={{ fontWeight: 600, marginBottom: 12, color: '#86efac' }}>Response</h3>
-              <pre style={{ background: padding, 16, borderRadius: 6, overflow: fontSize, '0.9rem' }}>
+            <div className="bg-gray-50 rounded-lg p-6">
+              <h3 className="font-semibold text-lg mb-3 text-green-600">Response</h3>
+              <pre className="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto text-sm">
 {`{
   "success": true,
   "data": [
     {
-      "id": "micro-saas"
-      "name": "Micro SaaS Products"
-      "description": "Ready-to-use software solutions"
-      "category": "software"
+      "id": "micro-saas",
+      "name": "Micro SaaS Products",
+      "description": "Ready-to-use software solutions",
+      "category": "software",
       "endpoints": ["/v1/micro-saas"]
     },
     {
-      "id": "ai-services"
-      "name": "AI Services"
-      "description": "AI and machine learning solutions"
-      "category": "ai"
+      "id": "ai-services",
+      "name": "AI Services",
+      "description": "AI and machine learning solutions",
+      "category": "ai",
       "endpoints": ["/v1/ai"]
     }
   ],
@@ -99,42 +99,42 @@ Authorization: Bearer YOUR_API_KEY`}
           </section>
 
           {/* Common Use Cases */}
-          <section style={{ background: padding, 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)' }}>
-            <h2 style={{ fontSize: fontWeight, 700, marginBottom: 24 }}>💡 Common Use Cases</h2>
-            <div style={{ display: 'grid', gap: 20 }}>
-              <div style={{ padding: 20, background: borderRadius, 8, border: '1px solid rgba(59, 130, 246, 0.2)' }}>
-                <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#93c5fd' }}>1. List Available Services</h3>
-                <p style={{ opacity: 0.8, marginBottom: 12, fontSize: '0.9rem' }}>Get a comprehensive list of all available services and their details.</p>
-                <code style={{ background: padding, '4px 8px' borderRadius: 4, fontSize: '0.8rem' }}>GET /v1/services</code>
+          <section className="bg-white rounded-lg shadow-lg p-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">💡 Common Use Cases</h2>
+            <div className="grid gap-6">
+              <div className="p-6 bg-blue-50 rounded-lg border border-blue-200">
+                <h3 className="font-semibold text-lg mb-2 text-blue-600">1. List Available Services</h3>
+                <p className="text-gray-600 mb-3 text-sm">Get a comprehensive list of all available services and their details.</p>
+                <code className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">GET /v1/services</code>
               </div>
               
-              <div style={{ padding: 20, background: borderRadius, 8, border: '1px solid rgba(139, 92, 246, 0.2)' }}>
-                <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#c4b5fd' }}>2. Request Service Quote</h3>
-                <p style={{ opacity: 0.8, marginBottom: 12, fontSize: '0.9rem' }}>Submit a request for a custom service quote or consultation.</p>
-                <code style={{ background: padding, '4px 8px' borderRadius: 4, fontSize: '0.8rem' }}>POST /v1/quotes</code>
+              <div className="p-6 bg-purple-50 rounded-lg border border-purple-200">
+                <h3 className="font-semibold text-lg mb-2 text-purple-600">2. Request Service Quote</h3>
+                <p className="text-gray-600 mb-3 text-sm">Submit a request for a custom service quote or consultation.</p>
+                <code className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm">POST /v1/quotes</code>
               </div>
               
-              <div style={{ padding: 20, background: borderRadius, 8, border: '1px solid rgba(34, 197, 94, 0.2)' }}>
-                <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#86efac' }}>3. Get Service Details</h3>
-                <p style={{ opacity: 0.8, marginBottom: 12, fontSize: '0.9rem' }}>Retrieve detailed information about a specific service.</p>
-                <code style={{ background: padding, '4px 8px' borderRadius: 4, fontSize: '0.8rem' }}>GET /v1/services/&#123;service_id&#125;</code>
+              <div className="p-6 bg-green-50 rounded-lg border border-green-200">
+                <h3 className="font-semibold text-lg mb-2 text-green-600">3. Get Service Details</h3>
+                <p className="text-gray-600 mb-3 text-sm">Retrieve detailed information about a specific service.</p>
+                <code className="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">GET /v1/services/&#123;service_id&#125;</code>
               </div>
             </div>
           </section>
 
           {/* Error Handling */}
-          <section style={{ background: padding, 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)' }}>
-            <h2 style={{ fontSize: fontWeight, 700, marginBottom: 16 }}>⚠️ Error Handling</h2>
-            <p style={{ opacity: 0.8, marginBottom: 20 }}>Our API uses standard HTTP status codes and returns detailed error information.</p>
+          <section className="bg-white rounded-lg shadow-lg p-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">⚠️ Error Handling</h2>
+            <p className="text-gray-600 mb-6">Our API uses standard HTTP status codes and returns detailed error information.</p>
             
-            <div style={{ background: padding, 20, borderRadius: 8, border: '1px solid rgba(239, 68, 68, 0.2)' }}>
-              <h3 style={{ fontWeight: 600, marginBottom: 12, color: '#fca5a5' }}>Error Response Example</h3>
-              <pre style={{ background: padding, 16, borderRadius: 6, overflow: fontSize, '0.9rem' }}>
+            <div className="bg-red-50 rounded-lg p-6 border border-red-200">
+              <h3 className="font-semibold text-lg mb-3 text-red-600">Error Response Example</h3>
+              <pre className="bg-gray-900 text-red-400 p-4 rounded-lg overflow-x-auto text-sm">
 {`{
   "success": false,
   "error": {
-    "code": "INVALID_API_KEY"
-    "message": "The provided API key is invalid or expired"
+    "code": "INVALID_API_KEY",
+    "message": "The provided API key is invalid or expired",
     "details": "Please check your API key and try again"
   },
   "timestamp": "2025-01-26T10:30:00Z"
@@ -144,30 +144,30 @@ Authorization: Bearer YOUR_API_KEY`}
           </section>
 
           {/* Next Steps */}
-          <section style={{ background: padding, 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)' }}>
-            <h2 style={{ fontSize: fontWeight, 700, marginBottom: 16 }}>🎯 Next Steps</h2>
-            <div style={{ display: gap, 16 }}>
-              <div style={{ display: alignItems, 'center' gap: 12, padding: 16, background: borderRadius, 8 }}>
-                <div style={{ fontSize: '1.5rem' }}>📖</div>
+          <section className="bg-white rounded-lg shadow-lg p-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">🎯 Next Steps</h2>
+            <div className="space-y-4">
+              <div className="flex items-center gap-4 p-4 bg-gray-50 rounded-lg">
+                <div className="text-2xl">📖</div>
                 <div>
-                  <h3 style={{ fontWeight: 600, marginBottom: 4 }}>Read the Full API Reference</h3>
-                  <p style={{ opacity: 0.8, fontSize: '0.9rem' }}>Explore all available endpoints and parameters.</p>
+                  <h3 className="font-semibold text-lg mb-1">Read the Full API Reference</h3>
+                  <p className="text-gray-600 text-sm">Explore all available endpoints and parameters.</p>
                 </div>
               </div>
               
-              <div style={{ display: alignItems, 'center' gap: 12, padding: 16, background: borderRadius, 8 }}>
-                <div style={{ fontSize: '1.5rem' }}>💻</div>
+              <div className="flex items-center gap-4 p-4 bg-gray-50 rounded-lg">
+                <div className="text-2xl">💻</div>
                 <div>
-                  <h3 style={{ fontWeight: 600, marginBottom: 4 }}>Try Integration Examples</h3>
-                  <p style={{ opacity: 0.8, fontSize: '0.9rem' }}>See real-world examples of API integration.</p>
+                  <h3 className="font-semibold text-lg mb-1">Try Integration Examples</h3>
+                  <p className="text-gray-600 text-sm">See real-world examples of API integration.</p>
                 </div>
               </div>
               
-              <div style={{ display: alignItems, 'center' gap: 12, padding: 16, background: borderRadius, 8 }}>
-                <div style={{ fontSize: '1.5rem' }}>🤝</div>
+              <div className="flex items-center gap-4 p-4 bg-gray-50 rounded-lg">
+                <div className="text-2xl">🤝</div>
                 <div>
-                  <h3 style={{ fontWeight: 600, marginBottom: 4 }}>Get API Access</h3>
-                  <p style={{ opacity: 0.8, fontSize: '0.9rem' }}>Contact us to get your API credentials and start building.</p>
+                  <h3 className="font-semibold text-lg mb-1">Get API Access</h3>
+                  <p className="text-gray-600 text-sm">Contact us to get your API credentials and start building.</p>
                 </div>
               </div>
             </div>
