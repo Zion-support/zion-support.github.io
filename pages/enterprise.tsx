@@ -125,73 +125,15 @@ export default function Enterprise() {
             </div>
           </div>
 
-          {/* Enterprise Features */}
-          <div className="grid md:grid-cols-2 gap-12 mb-16">
-            <div>
-              <h2 className="text-3xl font-bold text-white mb-6">Why Choose Zion for Enterprise?</h2>
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <Lock className="w-4 h-4 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">Enterprise-Grade Security</h3>
-                    <p className="text-gray-300">SOC 2 Type II compliant with advanced security protocols and data protection measures.</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <Globe className="w-4 h-4 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">Global Scale</h3>
-                    <p className="text-gray-300">Worldwide presence with local support teams and 24/7 operations centers.</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <Zap className="w-4 h-4 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">Proven Expertise</h3>
-                    <p className="text-gray-300">Deep industry knowledge and successful implementations across Fortune 500 companies.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-              <h3 className="text-2xl font-bold text-white mb-6">Enterprise Capabilities</h3>
-              <div className="space-y-4">
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-300">Project Scale</span>
-                  <span className="text-white font-semibold">$1M - $50M+</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-300">Team Size</span>
-                  <span className="text-white font-semibold">5 - 200+ Engineers</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-300">Timeline</span>
-                  <span className="text-white font-semibold">3 - 24 Months</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-300">Support Level</span>
-                  <span className="text-white font-semibold">Dedicated Team</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-300">Compliance</span>
-                  <span className="text-white font-semibold">SOC2, ISO 27001</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* CTA Section */}
-          <div className="text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Enterprise?</h2>
-            <p className="text-gray-300 mb-8 max-w-3xl mx-auto">
-              Let's discuss how our enterprise solutions can help you achieve your digital transformation goals 
-              and drive sustainable growth for your organization.
+          {/* Enterprise CTA */}
+          <div className="text-center bg-slate-800/30 backdrop-blur-sm rounded-xl p-12 border border-white/10">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Ready to Transform Your Enterprise?
+            </h2>
+            <p className="text-slate-300 mb-8 max-w-3xl mx-auto">
+              Our enterprise team is ready to discuss your specific requirements and create 
+              a customized solution that meets your organization&apos;s unique needs. 
+              Contact us today for a consultation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 inline-flex items-center">

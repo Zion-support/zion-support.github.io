@@ -1,5 +1,15 @@
 import React, { useEffect } from 'react';
 
+// Extend PerformanceEntry for CLS
+interface LayoutShiftEntry {
+  entryType: string;
+  name: string;
+  startTime: number;
+  duration: number;
+  hadRecentInput?: boolean;
+  value?: number;
+}
+
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     // Monitor Core Web Vitals
@@ -9,10 +19,6 @@ const PerformanceMonitor: React.FC = () => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
             console.log('LCP:', entry.startTime);
-            // Send to analytics
-            if (entry.startTime > 2500) {
-              console.warn('LCP is slow:', entry.startTime);
-            }
           }
         }
       });
@@ -27,13 +33,7 @@ const PerformanceMonitor: React.FC = () => {
       const fidObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'first-input') {
-            const fidEntry = entry as PerformanceEventTiming;
-            const fid = fidEntry.processingStart - fidEntry.startTime;
-            console.log('FID:', fid);
-            // Send to analytics
-            if (fid > 100) {
-              console.warn('FID is slow:', fid);
-            }
+            console.log('FID:', entry.processingStart - entry.startTime);
           }
         }
       });
@@ -45,17 +45,13 @@ const PerformanceMonitor: React.FC = () => {
       }
 
       // Monitor Cumulative Layout Shift (CLS)
-      let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          if (!(entry as any).hadRecentInput) {
-            clsValue += (entry as any).value;
+          const layoutEntry = entry as LayoutShiftEntry;
+          if (!layoutEntry.hadRecentInput) {
+            const value = layoutEntry.value || 0;
+            console.log('CLS:', value);
           }
-        }
-        console.log('CLS:', clsValue);
-        // Send to analytics
-        if (clsValue > 0.1) {
-          console.warn('CLS is poor:', clsValue);
         }
       });
 
