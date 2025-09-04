@@ -19,10 +19,25 @@ class ErrorBoundary extends Component<Props, State> {
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error:', error, errorInfo);
     
-    // In production, you might want to send this to an error reporting service
+    // Send error to monitoring service in production
     if (process.env.NODE_ENV === 'production') {
-      // Example: Send to error reporting service
-      // errorReportingService.captureException(error, { extra: errorInfo });
+      // You can integrate with services like Sentry, LogRocket, etc.
+      try {
+        fetch('/api/error-reporting', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            error: error.message,
+            stack: error.stack,
+            componentStack: errorInfo.componentStack,
+            timestamp: new Date().toISOString(),
+            userAgent: navigator.userAgent,
+            url: window.location.href
+          })
+        }).catch(() => {}); // Silent fail for error reporting
+      } catch (e) {
+        // Silent fail
+      }
     }
   }
 

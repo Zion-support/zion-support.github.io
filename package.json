@@ -158,7 +158,9 @@
     "test:coverage": "jest --coverage --config jest.config.ts",
     "analyze": "ANALYZE=true npm run build",
     "dev:fast": "npm run dev -- --turbo",
-    "lint:check": "eslint . --max-warnings 0",
+    "build:analyze": "ANALYZE=true npm run build",
+    "build:clean": "npm run clean && npm run build",
+    "lint:check": "eslint . --ext .ts,.tsx,.js,.jsx --max-warnings 0",
     "automation:master": "node automation/master-orchestrator.cjs",
     "automation:performance": "node automation/performance-optimizer.cjs",
     "automation:seo": "node automation/seo-optimizer.cjs",
@@ -297,8 +299,8 @@
     "terser": "^5.43.1",
     "ts-jest": "^29.4.1",
     "ts-node": "^10.9.2",
-    "typescript": "5.9.2",
-    "vite": "^5.4.19"
+    "typescript": "^5.9.2",
+    "vite": "^7.1.4"
   },
   "engines": {
     "node": ">=18.0.0",

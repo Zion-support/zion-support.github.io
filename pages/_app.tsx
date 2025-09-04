@@ -1,6 +1,6 @@
 import type { AppProps } from 'next/app';
-import Head from 'next/head';
-import { useEffect } from 'react';
+import Link from 'next/link';
+import { useState, useEffect } from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 import Header from '../components/Header';
@@ -35,25 +35,41 @@ function Header(): any {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
 
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+  };
+
+  // Close mobile menu on escape key
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && mobileMenuOpen) {
+        closeMobileMenu();
+      }
+    };
+
+    if (mobileMenuOpen) {
+      document.addEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'hidden'; // Prevent background scroll
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'unset';
+    };
+  }, [mobileMenuOpen]);
+
   return (
-    <>
-      <style dangerouslySetInnerHTML={{ __html: dropdownStyles }} />
-      <header style={{
-        position: 'sticky', top: 0, zIndex: 50, background: 'rgba(11, 18, 32, 0.95)', 
-        backdropFilter: 'blur(10px)', color: 'white',
-        borderBottom: '1px solid rgba(255,255,255,0.1)',
-      }}>
-      <nav style={{
-        maxWidth: 1400, margin: '0 auto', padding: '12px 20px', display: 'flex',
-        alignItems: 'center', justifyContent: 'space-between', gap: 16}}>
-        <Link href="/" style={{ 
-          fontWeight: 800, letterSpacing: 0.3, fontSize: '1.25rem',
-          background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          backgroundClip: 'text',
-          textDecoration: 'none'
-        }}>Zion Tech Group</Link>
+    <header className="header">
+      <nav className="header-nav">
+        <Link href="/" className="header-logo" onClick={closeMobileMenu}>
+          Zion Tech Group
+        </Link>
         
         <div className="header-nav-links">
           <Link href="/" className="header-nav-link">Home</Link>
@@ -85,41 +101,34 @@ function Header(): any {
           <Link href="/contact" className="header-nav-cta">Contact</Link>
         </div>
 
-        {/* Mobile Navigation */}
-        <div style={{
-          display: 'flex', gap: 4, alignItems: 'center'
-        }} className="md:hidden">
-          <Link href="/contact" style={{ 
-            fontWeight: 600, background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', 
-            color: 'white', padding: '6px 12px', borderRadius: 6,
-            transition: 'all 0.2s ease', textDecoration: 'none', fontSize: '0.9rem'
-          }}>Contact</Link>
-          <button 
-            style={{
-              background: 'none', border: 'none', color: 'white', fontSize: '1.2rem',
-              cursor: 'pointer', padding: '6px', borderRadius: 4
-            }}
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle mobile menu"
-            aria-expanded={mobileMenuOpen}
-          >
-            ☰
-          </button>
-        </div>
+        <button 
+          className="mobile-menu-button"
+          onClick={toggleMobileMenu}
+          aria-label="Toggle mobile menu"
+          aria-expanded={mobileMenuOpen}
+          aria-controls="mobile-menu"
+        >
+          <span className={`hamburger ${mobileMenuOpen ? 'open' : ''}`}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
       </nav>
       
-      <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
-        <Link href="/" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Home</Link>
-        <Link href="/services" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>All Services</Link>
-        <Link href="/services-catalog" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Services Catalog</Link>
-        <Link href="/micro-saas" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Micro SaaS</Link>
-        <Link href="/ai-services" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>AI Services</Link>
-        <Link href="/it-services" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>IT Services</Link>
-        <Link href="/about" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>About</Link>
-        <Link href="/blog" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
-        <Link href="/pricing" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
-        <Link href="/faq" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>FAQ</Link>
-        <Link href="/contact" className="header-nav-cta" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
+      <div 
+        id="mobile-menu"
+        className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}
+        role="navigation"
+        aria-label="Mobile navigation"
+      >
+        <div className="mobile-menu-content">
+          <Link href="/" className="header-nav-link" onClick={closeMobileMenu}>Home</Link>
+          <Link href="/services" className="header-nav-link" onClick={closeMobileMenu}>All Services</Link>
+          <Link href="/services-catalog" className="header-nav-link" onClick={closeMobileMenu}>Catalog</Link>
+          <Link href="/pricing" className="header-nav-link" onClick={closeMobileMenu}>Pricing</Link>
+          <Link href="/contact" className="header-nav-cta" onClick={closeMobileMenu}>Contact</Link>
+        </div>
       </div>
     </header>
     </>
@@ -235,6 +244,21 @@ function Footer(): any {
 }
 
 export default function App({ Component, pageProps }: AppProps) {
+  useEffect(() => {
+    // Register service worker
+    if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then((registration) => {
+            console.log('SW registered: ', registration);
+          })
+          .catch((registrationError) => {
+            console.log('SW registration failed: ', registrationError);
+          });
+      });
+    }
+  }, []);
+
   return (
     <>
       <Head>

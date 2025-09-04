@@ -1,55 +1,101 @@
 import React from 'react';
 
-interface LoadingSkeletonProps {
+interface SkeletonProps {
   className?: string;
-  height?: string;
-  width?: string;
+  width?: string | number;
+  height?: string | number;
   rounded?: boolean;
 }
 
-export default function LoadingSkeleton({ 
+const Skeleton: React.FC<SkeletonProps> = ({ 
   className = '', 
-  height = 'h-4', 
-  width = 'w-full',
-  rounded = true 
-}: LoadingSkeletonProps) {
-  return (
-    <div 
-      className={`
-        ${height} ${width} 
-        ${rounded ? 'rounded' : ''} 
-        bg-gradient-to-r from-slate-700 via-slate-600 to-slate-700 
-        animate-pulse 
-        ${className}
-      `}
-      role="status"
-      aria-label="Loading..."
-    >
-      <span className="sr-only">Loading...</span>
-    </div>
-  );
-}
+  width, 
+  height, 
+  rounded = false 
+}) => {
+  const style: React.CSSProperties = {};
+  
+  if (width) style.width = typeof width === 'number' ? `${width}px` : width;
+  if (height) style.height = typeof height === 'number' ? `${height}px` : height;
 
-export function CardSkeleton() {
   return (
-    <div className="p-6 bg-slate-900/60 rounded-xl border border-white/10">
-      <LoadingSkeleton height="h-6" width="w-3/4" className="mb-4" />
-      <LoadingSkeleton height="h-4" className="mb-2" />
-      <LoadingSkeleton height="h-4" width="w-5/6" className="mb-2" />
-      <LoadingSkeleton height="h-4" width="w-4/6" />
-    </div>
+    <div
+      className={`skeleton ${rounded ? 'rounded-full' : 'rounded'} ${className}`}
+      style={style}
+    />
   );
-}
+};
 
-export function HeroSkeleton() {
-  return (
-    <div className="py-20 px-4 text-center">
-      <div className="max-w-4xl mx-auto">
-        <LoadingSkeleton height="h-16" width="w-96" className="mx-auto mb-6" />
-        <LoadingSkeleton height="h-8" width="w-80" className="mx-auto mb-8" />
-        <LoadingSkeleton height="h-6" width="w-full" className="mb-4" />
-        <LoadingSkeleton height="h-6" width="w-5/6" className="mx-auto mb-12" />
+export const TextSkeleton: React.FC<{ lines?: number; className?: string }> = ({ 
+  lines = 1, 
+  className = '' 
+}) => (
+  <div className={`space-y-2 ${className}`}>
+    {Array.from({ length: lines }).map((_, i) => (
+      <Skeleton 
+        key={i} 
+        height="1rem" 
+        width={i === lines - 1 ? '75%' : '100%'} 
+        className="rounded"
+      />
+    ))}
+  </div>
+);
+
+export const CardSkeleton: React.FC<{ className?: string }> = ({ className = '' }) => (
+  <div className={`p-6 border border-gray-200 rounded-lg ${className}`}>
+    <Skeleton height="1.5rem" width="60%" className="mb-4 rounded" />
+    <TextSkeleton lines={3} className="mb-4" />
+    <Skeleton height="2.5rem" width="120px" className="rounded" />
+  </div>
+);
+
+export const ImageSkeleton: React.FC<{ 
+  width?: string | number; 
+  height?: string | number; 
+  className?: string;
+  rounded?: boolean;
+}> = ({ width = '100%', height = '200px', className = '', rounded = false }) => (
+  <Skeleton 
+    width={width} 
+    height={height} 
+    className={`${rounded ? 'rounded-lg' : 'rounded'} ${className}`}
+  />
+);
+
+export const ButtonSkeleton: React.FC<{ 
+  width?: string | number; 
+  height?: string | number; 
+  className?: string;
+}> = ({ width = '120px', height = '40px', className = '' }) => (
+  <Skeleton 
+    width={width} 
+    height={height} 
+    className={`rounded ${className}`}
+  />
+);
+
+export const TableSkeleton: React.FC<{ 
+  rows?: number; 
+  columns?: number; 
+  className?: string;
+}> = ({ rows = 5, columns = 4, className = '' }) => (
+  <div className={`space-y-3 ${className}`}>
+    {/* Header */}
+    <div className="flex space-x-4">
+      {Array.from({ length: columns }).map((_, i) => (
+        <Skeleton key={i} height="1.5rem" width="100%" className="rounded" />
+      ))}
+    </div>
+    {/* Rows */}
+    {Array.from({ length: rows }).map((_, rowIndex) => (
+      <div key={rowIndex} className="flex space-x-4">
+        {Array.from({ length: columns }).map((_, colIndex) => (
+          <Skeleton key={colIndex} height="1rem" width="100%" className="rounded" />
+        ))}
       </div>
-    </div>
-  );
-}
+    ))}
+  </div>
+);
+
+export default Skeleton;
