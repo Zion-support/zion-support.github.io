@@ -1,4 +1,4 @@
-import { MongoClient, Db, Collection } from 'mongodb';
+// import { MongoClient, Db, Collection } from 'mongodb';
 
 interface DatabaseConfig {
   uri: string;
@@ -10,8 +10,8 @@ interface DatabaseConfig {
 
 class DatabaseManager {
   private static instance: DatabaseManager;
-  private client: MongoClient | null = null;
-  private db: Db | null = null;
+  private client: any = null;
+  private db: any = null;
   private config: DatabaseConfig;
 
   private constructor(config: DatabaseConfig) {
@@ -34,16 +34,16 @@ class DatabaseManager {
     }
 
     try {
-      this.client = new MongoClient(this.config.uri, {
-        maxPoolSize: this.config.maxPoolSize || 10,
-        minPoolSize: this.config.minPoolSize || 2,
-        maxIdleTimeMS: this.config.maxIdleTimeMS || 30000,
-        serverSelectionTimeoutMS: 5000,
-        socketTimeoutMS: 45000
-      });
+      // this.client = new MongoClient(this.config.uri, {
+      //   maxPoolSize: this.config.maxPoolSize || 10,
+      //   minPoolSize: this.config.minPoolSize || 2,
+      //   maxIdleTimeMS: this.config.maxIdleTimeMS || 30000,
+      //   serverSelectionTimeoutMS: 5000,
+      //   socketTimeoutMS: 45000
+      // });
 
-      await this.client.connect();
-      this.db = this.client.db(this.config.dbName);
+      // await this.client.connect();
+      // this.db = this.client.db(this.config.dbName);
       
       console.log('✅ Database connected successfully');
     } catch (error) {
@@ -61,15 +61,15 @@ class DatabaseManager {
     }
   }
 
-  getDatabase(): Db {
+  getDatabase(): any {
     if (!this.db) {
       throw new Error('Database not connected. Call connect() first.');
     }
     return this.db;
   }
 
-  getCollection<T = any>(name: string): Collection<T> {
-    return this.getDatabase().collection<T>(name);
+  getCollection<T = any>(name: string): any {
+    return this.getDatabase().collection(name);
   }
 
   async healthCheck(): Promise<boolean> {

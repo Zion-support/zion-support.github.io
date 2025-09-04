@@ -2,11 +2,11 @@ import Link from 'next/link';
 import Head from 'next/head';
 
 export default function ServicesOverview() {
-  const contact = { 
-    phone: '+1 302 464 0950', 
-    email: 'kleber@ziontechgroup.com', 
-    address: '364 E Main St STE 1008 Middletown DE 19709', 
-    site: 'https://ziontechgroup.com' 
+  const contact = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown, DE 19709',
+    site: 'https://ziontechgroup.com'
   };
 
   return (
@@ -60,8 +60,8 @@ export default function ServicesOverview() {
                   <li>• Multi-Language Website Translator</li>
                   <li>• Predictive Inventory Optimizer</li>
                 </ul>
-                <Link 
-                  href="/micro-saas" 
+                <Link
+                  href="/micro-saas"
                   className="text-blue-400 hover:text-blue-300 font-semibold focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-900 rounded"
                   aria-label="View all Micro SaaS products"
                 >
@@ -81,8 +81,8 @@ export default function ServicesOverview() {
                   <li>• AI-Powered Voice Analytics</li>
                   <li>• AI-Powered Search & Discovery</li>
                 </ul>
-                <Link 
-                  href="/ai-services" 
+                <Link
+                  href="/ai-services"
                   className="text-purple-400 hover:text-purple-300 font-semibold focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-slate-900 rounded"
                   aria-label="View all AI services"
                 >
@@ -102,8 +102,8 @@ export default function ServicesOverview() {
                   <li>• Data Analytics & BI</li>
                   <li>• Enterprise Integration</li>
                 </ul>
-                <Link 
-                  href="/it-services" 
+                <Link
+                  href="/it-services"
                   className="text-green-400 hover:text-green-300 font-semibold focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:ring-offset-slate-900 rounded"
                   aria-label="View all IT solutions"
                 >
@@ -145,15 +145,15 @@ export default function ServicesOverview() {
                 Let our experts help you choose the right solutions for your specific needs and industry requirements.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Link 
-                  href="/contact" 
+                <Link
+                  href="/contact"
                   className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-900"
                   aria-label="Contact us for a consultation"
                 >
                   Get Free Consultation
                 </Link>
-                <Link 
-                  href="/services-catalog" 
+                <Link
+                  href="/services-catalog"
                   className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-900"
                   aria-label="Browse our services catalog"
                 >

@@ -33,13 +33,17 @@ class PerformanceMonitor {
   }
 
   getAverageResponseTime(): number {
-    if (this.metrics.length === 0) return 0;
+    if (this.metrics.length === 0) {
+      return 0;
+    }
     const total = this.metrics.reduce((sum, metric) => sum + metric.responseTime, 0);
     return total / this.metrics.length;
   }
 
   getMemoryUsage(): number {
-    if (this.metrics.length === 0) return 0;
+    if (this.metrics.length === 0) {
+      return 0;
+    }
     const latest = this.metrics[this.metrics.length - 1];
     return latest ? latest.memoryUsage : 0;
   }

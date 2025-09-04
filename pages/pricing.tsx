@@ -1,30 +1,21 @@
 import React from 'react';
-import Link from 'next/link';
+
 import Head from 'next/head';
 
 const PricingPage: React.FC = () => {
-  const contact = { 
-    phone: '+1 302 464 0950', 
-    email: 'kleber@ziontechgroup.com', 
-    address: '364 E Main St STE 1008 Middletown DE 19709', 
-    site: 'https://ziontechgroup.com' 
-  };
-
   return (
     <>
       <Head>
         <title>Pricing - Zion Tech Group</title>
         <meta name="description" content="Transparent, flexible pricing for AI, IT, and Micro SaaS services." />
-        <link rel="canonical" href={`${contact.site}/pricing`} />
       </Head>
-      
       <section className="bg-white">
         <div className="container mx-auto px-4 py-12">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Pricing</h1>
           <p className="text-gray-600 mb-10 max-w-3xl">
             We tailor solutions to your needs. Below are typical starting ranges observed in the market. Get a custom quote at any time.
           </p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="border rounded-xl p-6 shadow-sm">
               <h3 className="text-xl font-semibold mb-2">AI Development</h3>
@@ -35,7 +26,7 @@ const PricingPage: React.FC = () => {
                 <li>Enterprise: $75,000+</li>
               </ul>
             </div>
-            
+
             <div className="border rounded-xl p-6 shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Micro SaaS</h3>
               <p className="text-gray-600 mb-4">Idea validation, build, payments, analytics, hosting.</p>
@@ -45,62 +36,51 @@ const PricingPage: React.FC = () => {
                 <li>Scale: $100,000+</li>
               </ul>
             </div>
-            
+
             <div className="border rounded-xl p-6 shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Cloud & DevOps</h3>
-              <p className="text-gray-600 mb-4">Infrastructure, CI/CD, monitoring, and automation.</p>
+              <p className="text-gray-600 mb-4">AWS/GCP/Azure architecture, IaC, observability.</p>
               <ul className="text-gray-700 space-y-2 mb-4 list-disc list-inside">
-                <li>Setup: $3,000–$15,000</li>
-                <li>Migration: $10,000–$50,000</li>
-                <li>Ongoing: $2,000–$10,000/month</li>
+                <li>Audit & Setup: $3,000–$12,000</li>
+                <li>Migration: $10,000–$40,000</li>
+                <li>Managed: from $2,000/mo</li>
               </ul>
             </div>
-            
+
             <div className="border rounded-xl p-6 shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Cybersecurity</h3>
-              <p className="text-gray-600 mb-4">Security audits, hardening, and compliance.</p>
+              <p className="text-gray-600 mb-4">Pen-testing, hardening, SOC, compliance.</p>
               <ul className="text-gray-700 space-y-2 mb-4 list-disc list-inside">
-                <li>Assessment: $5,000–$20,000</li>
-                <li>Implementation: $15,000–$75,000</li>
-                <li>Ongoing: $3,000–$15,000/month</li>
+                <li>Security Audit: $4,000–$15,000</li>
+                <li>Remediation: $8,000–$50,000</li>
+                <li>Managed SOC: from $3,000/mo</li>
               </ul>
             </div>
-            
-            <div className="border rounded-xl p-6 shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">Web & Mobile</h3>
-              <p className="text-gray-600 mb-4">Custom applications and e-commerce platforms.</p>
-              <ul className="text-gray-700 space-y-2 mb-4 list-disc list-inside">
-                <li>Web App: $5,000–$30,000</li>
-                <li>Mobile App: $10,000–$50,000</li>
-                <li>E-commerce: $15,000–$100,000</li>
-              </ul>
-            </div>
-            
+
             <div className="border rounded-xl p-6 shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Data & Analytics</h3>
-              <p className="text-gray-600 mb-4">Data pipelines, warehousing, and business intelligence.</p>
+              <p className="text-gray-600 mb-4">Warehouses, pipelines, BI, ML ops.</p>
               <ul className="text-gray-700 space-y-2 mb-4 list-disc list-inside">
-                <li>Setup: $8,000–$25,000</li>
-                <li>Migration: $15,000–$60,000</li>
-                <li>Ongoing: $2,000–$8,000/month</li>
+                <li>Strategy & Setup: $5,000–$20,000</li>
+                <li>Dashboards: $6,000–$25,000</li>
+                <li>ML Ops: $25,000+</li>
               </ul>
             </div>
-          </div>
-          
-          <div className="mt-12 text-center">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Ready to Get Started?</h2>
-            <p className="text-gray-600 mb-6">Contact us for a custom quote tailored to your specific needs.</p>
-            <Link 
-              href="/contact" 
-              className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-            >
-              Get Custom Quote
-            </Link>
+
+            <div className="border rounded-xl p-6 shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Web & Mobile</h3>
+              <p className="text-gray-600 mb-4">React/Next.js, React Native, APIs.</p>
+              <ul className="text-gray-700 space-y-2 mb-4 list-disc list-inside">
+                <li>Website: $3,000–$15,000</li>
+                <li>MVP App: $20,000–$70,000</li>
+                <li>Enterprise: $80,000+</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
     </>
   );
-};
-
+}
 export default PricingPage;
+

@@ -1,28 +1,27 @@
 import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
-  testDir: './tests/e2e',;
+  testDir: './tests/e2e';
   fullyParallel: true;
-  forbidOnly: !!process.env.CI,;
-  retries: process.env.C,I ? 2 :,0,;
+  forbidOnly: !!process.env.CI
+  retries: process.env.C,I ? 2 :,0;
   workers: process.env.CI ? 1 : undefined;
-  reporter: 'html',;
+  reporter: 'html';
   use: {
-    baseURL: 'http://localhos,t:3000,',;
-    trace: 'on-first-retry',},;
+    baseURL: 'http://localhos,t:3000,';
+    trace: 'on-first-retry',};
   projects: [{
-      name: 'chromium',;
+      name: 'chromium';
       use: { ...devices['Desktop Chrom,e'], },},{
-      name: 'firefox',;
+      name: 'firefox';
       use: { ...devices['Desktop Firefo,x'], },},{
-      name: 'webkit',;
+      name: 'webkit';
       use: { ...devices['Desktop Safar,i'], },},{
-      name: 'Mobile Chrome',;
+      name: 'Mobile Chrome';
       use: { ...devices['Pixe,l 5'], },},{
-      name: 'Mobile Safari',;
-      use: { ...devices['iPhon,e 12'], },},;
-  ],;
+      name: 'Mobile Safari';
+      use: { ...devices['iPhon,e 12'], },}];
   webServer: {
-    command: 'npm run dev',;
-    url: 'http://localhos,t:3000,',;
+    command: 'npm run dev';
+    url: 'http://localhos,t:3000,';
     reuseExistingServer: !process.env.CI,},});

@@ -2,11 +2,11 @@ import Link from 'next/link';
 import Head from 'next/head';
 
 export default function Marketplace() {
-  const contact = { 
-    phone: '+1 302 464 0950', 
-    email: 'kleber@ziontechgroup.com', 
-    address: '364 E Main St STE 1008 Middletown DE 19709', 
-    site: 'https://ziontechgroup.com' 
+  const contact = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown, DE 19709',
+    site: 'https://ziontechgroup.com'
   };
 
   const marketplaceCategories = [
@@ -56,6 +56,33 @@ export default function Marketplace() {
     }
   ];
 
+  const featuredItems = [
+    {
+      name: "AI Business Intelligence Suite",
+      description: "Comprehensive AI-powered analytics platform for enterprise decision making",
+      price: "$299/month",
+      category: "AI & Analytics",
+      rating: 4.9,
+      reviews: 127
+    },
+    {
+      name: "Quantum Algorithm Development",
+      description: "Expert quantum computing research and algorithm development services",
+      price: "$200/hour",
+      category: "Quantum Computing",
+      rating: 4.8,
+      reviews: 89
+    },
+    {
+      name: "Enterprise Security Platform",
+      description: "Advanced cybersecurity monitoring and threat detection system",
+      price: "$199/month",
+      category: "Cybersecurity",
+      rating: 4.9,
+      reviews: 156
+    }
+  ];
+
   return (
     <>
       <Head>
@@ -69,36 +96,186 @@ export default function Marketplace() {
         <meta property="og:type" content="website" />
       </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        <div className="max-w-7xl mx-auto px-4 py-16">
-          {/* Header */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+      <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #0b1220 0%, #1a1f3a 100%)', color: 'white' }}>
+        <div style={{ maxWidth: 1200, margin: '0 auto', padding: '40px 20px' }}>
+          <div style={{ textAlign: 'center', marginBottom: 60 }}>
+            <h1 style={{ 
+              fontSize: '3rem',
+              fontWeight: 800, 
+              marginBottom: 20,
+              background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text'
+            }}>
               Technology Marketplace
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover innovative products, connect with top talent, access cutting-edge equipment, and find professional services all in one place.
+            <p style={{ fontSize: '1.2rem', color: '#94a3b8', maxWidth: 600, margin: '0 auto' }}>
+              Discover innovative products, connect with skilled professionals, and access cutting-edge technology solutions all in one place.
             </p>
           </div>
 
-          {/* Categories Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            {marketplaceCategories.map((category, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
-                <div className="text-center mb-6">
-                  <div className="text-4xl mb-4">{category.icon}</div>
-                  <h2 className="text-2xl font-bold text-gray-900 mb-2">{category.title}</h2>
-                  <p className="text-gray-600">{category.description}</p>
-                </div>
-
-                <div className="space-y-4">
-                  {category.items.map((item, itemIndex) => (
-                    <div key={itemIndex} className="border border-gray-200 rounded-lg p-4 hover:border-blue-300 transition-colors">
-                      <h3 className="font-semibold text-gray-900 mb-2">{item.name}</h3>
-                      <p className="text-blue-600 font-medium mb-1">{item.price}</p>
-                      <span className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded-full">
-                        {item.category}
+          <div style={{ marginBottom: 80 }}>
+            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 40, textAlign: 'center' }}>
+              Featured Items
+            </h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: 30 }}>
+              {featuredItems.map((item, index) => (
+                <div key={index} style={{ 
+                  background: 'rgba(255, 255, 255, 0.05)',
+                  borderRadius: 12, 
+                  padding: 30, 
+                  border: '1px solid rgba(255, 255, 255, 0.1)', 
+                  transition: 'transform 0.3s ease, box-shadow 0.3s ease', 
+                  cursor: 'pointer'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-5px)';
+                  e.currentTarget.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.3)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = 'none';
+                }}>
+                  <div style={{ marginBottom: 15 }}>
+                    <span style={{
+                      background: 'rgba(255, 255, 255, 0.1)',
+                      color: 'white',
+                      padding: '6px 12px',
+                      borderRadius: 20,
+                      fontSize: '0.9rem',
+                      fontWeight: 600
+                    }}>
+                      {item.category}
+                    </span>
+                  </div>
+                  
+                  <h3 style={{ 
+                    fontSize: '1.5rem', 
+                    fontWeight: 700, 
+                    marginBottom: 15,
+                    lineHeight: '1.3'
+                  }}>
+                    {item.name}
+                  </h3>
+                  
+                  <p style={{ 
+                    color: '#94a3b8',
+                    marginBottom: 20, 
+                    lineHeight: '1.6',
+                    fontSize: '1rem'
+                  }}>
+                    {item.description}
+                  </p>
+                  
+                  <div style={{ 
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                    marginBottom: 20
+                  }}>
+                    <div style={{ 
+                      fontSize: '1.5rem', 
+                      fontWeight: 700, 
+                      background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      backgroundClip: 'text'
+                    }}>
+                      {item.price}
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
+                      <span style={{ color: '#fbbf24' }}>⭐</span>
+                      <span style={{ fontSize: '0.9rem', color: '#94a3b8' }}>
+                        {item.rating} ({item.reviews} reviews)
                       </span>
+                    </div>
+                  </div>
+                  
+                  <Link href="/contact" style={{
+                    background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+                    color: 'white',
+                    padding: '12px 24px',
+                    textDecoration: 'none',
+                    borderRadius: 6,
+                    fontSize: '1rem',
+                    fontWeight: 600,
+                    display: 'block',
+                    width: '100%',
+                    textAlign: 'center'
+                  }}>
+                    Learn More
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div style={{ display: 'grid', gap: 60 }}>
+            {marketplaceCategories.map((category, categoryIndex) => (
+              <div key={categoryIndex}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 20, marginBottom: 30 }}>
+                  <div style={{ fontSize: '3rem' }}>{category.icon}</div>
+                  <div>
+                    <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 10 }}>
+                      {category.title}
+                    </h2>
+                    <p style={{ color: '#94a3b8', fontSize: '1.1rem' }}>
+                      {category.description}
+                    </p>
+                  </div>
+                </div>
+                
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 20 }}>
+                  {category.items.map((item, itemIndex) => (
+                    <div key={itemIndex} style={{ 
+                      background: 'rgba(255, 255, 255, 0.05)',
+                      borderRadius: 12, 
+                      padding: 25, 
+                      border: '1px solid rgba(255, 255, 255, 0.1)', 
+                      transition: 'transform 0.3s ease, box-shadow 0.3s ease', 
+                      cursor: 'pointer'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = 'translateY(-3px)';
+                      e.currentTarget.style.boxShadow = '0 15px 30px rgba(0, 0, 0, 0.2)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = 'translateY(0)';
+                      e.currentTarget.style.boxShadow = 'none';
+                    }}>
+                      <div style={{ marginBottom: 15 }}>
+                        <span style={{
+                          background: 'rgba(59, 130, 246, 0.2)',
+                          color: '#3b82f6',
+                          padding: '6px 12px',
+                          borderRadius: 20,
+                          fontSize: '0.9rem',
+                          fontWeight: 600
+                        }}>
+                          {item.category}
+                        </span>
+                      </div>
+                      
+                      <h3 style={{ 
+                        fontSize: '1.3rem', 
+                        fontWeight: 700, 
+                        marginBottom: 10,
+                        lineHeight: '1.3'
+                      }}>
+                        {item.name}
+                      </h3>
+                      
+                      <div style={{ 
+                        fontSize: '1.2rem', 
+                        fontWeight: 600, 
+                        background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent',
+                        backgroundClip: 'text'
+                      }}>
+                        {item.price}
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -115,55 +292,58 @@ export default function Marketplace() {
             ))}
           </div>
 
-          {/* Featured Section */}
-          <div className="bg-white rounded-2xl shadow-lg p-8 mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">
-              Featured This Month
-            </h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🚀</span>
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">AI-Powered Analytics Platform</h3>
-                <p className="text-gray-600 mb-4">Advanced machine learning algorithms for business intelligence and predictive analytics.</p>
-                <div className="text-blue-600 font-medium">Starting at $299/month</div>
-              </div>
-
-              <div className="text-center">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">☁️</span>
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Cloud Migration Services</h3>
-                <p className="text-gray-600 mb-4">Expert assistance with seamless cloud migration and optimization strategies.</p>
-                <div className="text-blue-600 font-medium">$150-250/hour</div>
-              </div>
-
-              <div className="text-center">
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🔒</span>
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Cybersecurity Assessment</h3>
-                <p className="text-gray-600 mb-4">Comprehensive security evaluation and hardening for your infrastructure.</p>
-                <div className="text-blue-600 font-medium">$180-280/hour</div>
-              </div>
-            </div>
-          </div>
-
-          {/* CTA Section */}
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white text-center">
-            <h2 className="text-3xl font-bold mb-4">
+          <div style={{ 
+            background: 'rgba(255, 255, 255, 0.05)',
+            borderRadius: 12,
+            padding: 40,
+            border: '1px solid rgba(255, 255, 255, 0.1)',
+            textAlign: 'center',
+            marginTop: 80
+          }}>
+            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 20 }}>
               Ready to Explore Our Marketplace?
             </h2>
-            <p className="text-xl mb-8 opacity-90">
-              Browse our comprehensive selection of technology products, services, and talent to find exactly what you need.
+            <p style={{ 
+              fontSize: '1.1rem', 
+              color: '#94a3b8', 
+              marginBottom: 30, 
+              maxWidth: 600, 
+              margin: '0 auto 30px' 
+            }}>
+              Browse our comprehensive marketplace to find the perfect technology solutions, services, and talent for your business needs.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact"
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
-                Get Started
+            <div style={{ display: 'flex', gap: 20, justifyContent: 'center', flexWrap: 'wrap' }}>
+              <Link href="/contact" style={{
+                background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+                color: 'white',
+                padding: '15px 30px',
+                textDecoration: 'none',
+                borderRadius: 8,
+                fontSize: '1.1rem',
+                fontWeight: 600,
+                display: 'inline-block'
+              }}>
+                Browse Marketplace
+              </Link>
+              <Link href="/request-quote" style={{
+                background: 'transparent',
+                color: 'white',
+                padding: '15px 30px',
+                textDecoration: 'none',
+                borderRadius: 8,
+                fontSize: '1.1rem',
+                fontWeight: 600, 
+                display: 'inline-block', 
+                border: '2px solid rgba(255, 255, 255, 0.3)', 
+                transition: 'border-color 0.3s ease'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = '#3b82f6';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.3)';
+              }}>
+                Get Custom Quote
               </Link>
               <a 
                 href={`tel:${contact.phone}`}

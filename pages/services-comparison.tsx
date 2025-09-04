@@ -2,11 +2,11 @@ import Link from 'next/link';
 import Head from 'next/head';
 
 export default function ServicesComparison() {
-  const contact = { 
-    phone: '+1 302 464 0950', 
-    email: 'kleber@ziontechgroup.com', 
-    address: '364 E Main St STE 1008 Middletown DE 19709', 
-    site: 'https://ziontechgroup.com' 
+  const contact = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown, DE 19709',
+    site: 'https://ziontechgroup.com'
   };
 
   const serviceCategories = [
@@ -129,6 +129,7 @@ export default function ServicesComparison() {
                         <Link
                           href={service.href}
                           className={`inline-block px-6 py-2 bg-${service.color}-600 hover:bg-${service.color}-700 rounded-lg font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-${service.color}-500 focus:ring-offset-2 focus:ring-offset-slate-900`}
+                          aria-label={`Learn more about ${service.name}`}
                         >
                           Learn More
                         </Link>
@@ -141,26 +142,88 @@ export default function ServicesComparison() {
           </div>
         </section>
 
+        {/* Use Cases */}
+        <section className="py-16 px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-center mb-12">When to Choose Each Service</h2>
+            
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10">
+                <h3 className="text-2xl font-bold mb-4 text-blue-400">Micro SaaS Products</h3>
+                <p className="text-slate-300 mb-6">
+                  Perfect for businesses looking for:
+                </p>
+                <ul className="text-slate-400 space-y-2 mb-6">
+                  <li>• Quick solutions to specific problems</li>
+                  <li>• Cost-effective software tools</li>
+                  <li>• Easy-to-use applications</li>
+                  <li>• Rapid deployment and setup</li>
+                  <li>• Minimal maintenance requirements</li>
+                </ul>
+                <div className="text-sm text-slate-500">
+                  <strong>Best for:</strong> Small to medium businesses, startups, individual professionals
+                </div>
+              </div>
+
+              <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10">
+                <h3 className="text-2xl font-bold mb-4 text-purple-400">AI Services</h3>
+                <p className="text-slate-300 mb-6">
+                  Ideal for organizations needing:
+                </p>
+                <ul className="text-slate-400 space-y-2 mb-6">
+                  <li>• Intelligent automation</li>
+                  <li>• Data-driven insights</li>
+                  <li>• Advanced analytics</li>
+                  <li>• Machine learning capabilities</li>
+                  <li>• Competitive advantage through AI</li>
+                </ul>
+                <div className="text-sm text-slate-500">
+                  <strong>Best for:</strong> Data-driven companies, enterprises, tech-forward organizations
+                </div>
+              </div>
+
+              <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10">
+                <h3 className="text-2xl font-bold mb-4 text-green-400">IT Solutions</h3>
+                <p className="text-slate-300 mb-6">
+                  Essential for businesses requiring:
+                </p>
+                <ul className="text-slate-400 space-y-2 mb-6">
+                  <li>• Robust infrastructure</li>
+                  <li>• Enterprise-grade security</li>
+                  <li>• Scalable systems</li>
+                  <li>• 24/7 support and monitoring</li>
+                  <li>• Compliance and governance</li>
+                </ul>
+                <div className="text-sm text-slate-500">
+                  <strong>Best for:</strong> Large enterprises, regulated industries, mission-critical operations
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
-        <section className="py-16 px-4 bg-slate-900/60">
+        <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6">Need Help Choosing?</h2>
+            <h2 className="text-3xl font-bold mb-6">Still Not Sure Which Service is Right for You?</h2>
             <p className="text-xl text-slate-300 mb-8">
-              Our experts can help you determine which services are best suited for your business needs.
+              Our experts can help you choose the perfect combination of services for your specific needs.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
                 href="/contact"
-                className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-900"
+                aria-label="Get a free consultation"
               >
-                Get Consultation
+                Get Free Consultation
               </Link>
-              <a 
-                href={`tel:${contact.phone}`}
-                className="border-2 border-blue-600 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+              <Link
+                href="/services-overview"
+                className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-900"
+                aria-label="View services overview"
               >
-                Call {contact.phone}
-              </a>
+                View Services Overview
+              </Link>
             </div>
           </div>
         </section>

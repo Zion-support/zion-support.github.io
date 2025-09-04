@@ -3,10 +3,16 @@ import Head from 'next/head';
 import { useState, useEffect } from 'react';
 
 export default function Status() {
-const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', site: 'https://ziontechgroup.com'
+  const contact = { 
+    phone: '+1 302 464 0950', 
+    email: 'kleber@ziontechgroup.com', 
+    address: '364 E Main St STE 1008 Middletown DE 19709', 
+    site: 'https://ziontechgroup.com'
   };
 
-  const [systemStatus, setSystemStatus] = useState({ overall: 'operational', services: [
+  const [systemStatus, setSystemStatus] = useState({ 
+    overall: 'operational', 
+    services: [
       { name: 'Website', status: 'operational', uptime: '99.9%' },
       { name: 'API Services', status: 'operational', uptime: '99.8%' },
       { name: 'Cloud Infrastructure', status: 'operational', uptime: '99.9%' },
@@ -20,20 +26,20 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
   const [incidents, setIncidents] = useState([
     {
       id: 1,
-      title: "Scheduled Maintenance - Cloud Infrastructure"
+      title: "Scheduled Maintenance - Cloud Infrastructure",
       status: "resolved",
       severity: "minor",
       startTime: "2025-01-25T02:00:00Z",
       endTime: "2025-01-25T04:00:00Z",
       description: "Routine maintenance completed successfully. All services restored."
-    },,,
+    },
     {
       id: 2,
-      title: "API Response Time Degradation"
+      title: "API Response Time Degradation",
       status: "resolved",
       severity: "minor",
-      startTime: "2025-01-24T14:30:00Z"
-      endTime: "2025-01-24T15:45:00Z"
+      startTime: "2025-01-24T14:30:00Z",
+      endTime: "2025-01-24T15:45:00Z",
       description: "Temporary increase in API response times. Issue resolved with infrastructure scaling."
     }
   ]);
@@ -46,6 +52,8 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
       case 'maintenance': return '#3b82f6';
       default: return '#6b7280';
     }
+  };
+
   const getStatusIcon = (status: string) => {
     switch (status) {
       case 'operational': return '✅';
@@ -54,6 +62,8 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
       case 'maintenance': return '🔧';
       default: return '❓';
     }
+  };
+
   const getSeverityColor = (severity: string) => {
     switch (severity) {
       case 'critical': return '#ef4444';
@@ -62,6 +72,8 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
       case 'maintenance': return '#3b82f6';
       default: return '#6b7280';
     }
+  };
+
   return (
     <>
       <Head>
@@ -75,36 +87,39 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
         <meta property="og:type" content="website" />
       </Head>
 
-      <div style={{ minHeight: '100vh', background: color, 'white' }}>
+      <div style={{ minHeight: '100vh', background: 'white' }}>
         <div style={{ maxWidth: 1000, margin: '0 auto', padding: '40px 20px' }}>
           <div style={{ textAlign: 'center', marginBottom: 60 }}>
             <h1 style={{ 
-              fontSize: fontWeight, 800, 
+              fontSize: '3rem', 
+              fontWeight: 800, 
               marginBottom: 20,
-              background: WebkitBackgroundClip, 'text',
+              background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+              WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text'
-            },,}>
+            }}>
               System Status
             </h1>
-            <p style={{ fontSize: '1.2rem', color: maxWidth, 600, margin: '0 auto' }}>
+            <p style={{ fontSize: '1.2rem', color: '#64748b', maxWidth: 600, margin: '0 auto' }}>
               Real-time status of all Zion Tech Group services and systems.
             </p>
           </div>
 
           <div style={{ marginBottom: 60 }}>
             <div style={{
-              background: borderRadius, 12,
+              background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+              borderRadius: 12,
               padding: 30,
-              border: textAlign, 'center'
-            },,}>
+              textAlign: 'center'
+            }}>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 15, marginBottom: 20 }}>
                 <div style={{ fontSize: '2rem' }}>{getStatusIcon(systemStatus.overall)}</div>
-                <h2 style={{ fontSize: '2rem', fontWeight: 700 }}>
+                <h2 style={{ fontSize: '2rem', fontWeight: 700, color: 'white' }}>
                   All Systems Operational
                 </h2>
               </div>
-              <p style={{ color: '#94a3b8', fontSize: '1.1rem' }}>
+              <p style={{ color: 'rgba(255, 255, 255, 0.8)', fontSize: '1.1rem' }}>
                 All services are running normally. Last updated: {new Date(systemStatus.lastUpdated).toLocaleString()}
               </p>
             </div>
@@ -117,12 +132,14 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
             <div style={{ display: 'grid', gap: 15 }}>
               {systemStatus.services.map((service, index) => (
                 <div key={index} style={{
-                  background: borderRadius, 8,
+                  background: 'white',
+                  borderRadius: 8,
                   padding: 20,
-                  border: display, 'flex',
+                  border: '1px solid #e2e8f0',
+                  display: 'flex',
                   justifyContent: 'space-between',
                   alignItems: 'center'
-                },,}>
+                }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 15 }}>
                     <div style={{ fontSize: '1.5rem' }}>{getStatusIcon(service.status)}</div>
                     <div>
@@ -131,7 +148,8 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
                       </h3>
                       <p style={{ 
                         color: getStatusColor(service.status), 
-                        fontSize: fontWeight, 600,
+                        fontSize: '0.9rem',
+                        fontWeight: 600,
                         textTransform: 'capitalize'
                       }}>
                         {service.status}
@@ -159,9 +177,10 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
               <div style={{ display: 'grid', gap: 20 }}>
                 {incidents.map((incident) => (
                   <div key={incident.id} style={{
-                    background: borderRadius, 12,
+                    background: 'white',
+                    borderRadius: 12,
                     padding: 25,
-                    border: '1px solid rgba(255, 255, 255, 0.1)'
+                    border: '1px solid #e2e8f0'
                   }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 15 }}>
                       <div>
@@ -171,18 +190,22 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
                         <div style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
                           <span style={{
                             background: getSeverityColor(incident.severity),
-                            color: padding, '4px 12px',
+                            color: 'white',
+                            padding: '4px 12px',
                             borderRadius: 20,
-                            fontSize: fontWeight, 600,
+                            fontSize: '0.8rem',
+                            fontWeight: 600,
                             textTransform: 'capitalize'
                           }}>
                             {incident.severity}
                           </span>
                           <span style={{
                             background: getStatusColor(incident.status),
-                            color: padding, '4px 12px',
+                            color: 'white',
+                            padding: '4px 12px',
                             borderRadius: 20,
-                            fontSize: fontWeight, 600,
+                            fontSize: '0.8rem',
+                            fontWeight: 600,
                             textTransform: 'capitalize'
                           }}>
                             {incident.status}
@@ -191,11 +214,11 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
                       </div>
                     </div>
                     
-                    <p style={{ color: marginBottom, 15, lineHeight: 1.6 }}>
+                    <p style={{ color: '#64748b', marginBottom: 15, lineHeight: '1.6'}}>
                       {incident.description}
                     </p>
                     
-                    <div style={{ display: gap, 20, fontSize: color, '#64748b' }}>
+                    <div style={{ display: 'flex', gap: 20, fontSize: '0.9rem', color: '#64748b' }}>
                       <span>
                         <strong>Started:</strong> {new Date(incident.startTime).toLocaleString()}
                       </span>
@@ -208,9 +231,11 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
               </div>
             ) : (
               <div style={{
-                background: borderRadius, 12,
+                background: 'white',
+                borderRadius: 12,
                 padding: 40,
-                border: textAlign, 'center'
+                border: '1px solid #e2e8f0',
+                textAlign: 'center'
               }}>
                 <div style={{ fontSize: '3rem', marginBottom: 20 }}>✅</div>
                 <h3 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: 10 }}>
@@ -224,22 +249,25 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
           </div>
 
           <div style={{ 
-            background: borderRadius, 12,
+            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+            borderRadius: 12,
             padding: 30,
-            border: textAlign, 'center'
-          },,}>
-            <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: 15 }}>
+            textAlign: 'center'
+          }}>
+            <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: 15, color: 'white' }}>
               Subscribe to Status Updates
             </h2>
-            <p style={{ color: '#94a3b8', marginBottom: 20 }}>
+            <p style={{ color: 'rgba(255, 255, 255, 0.8)', marginBottom: 20 }}>
               Get notified about service status changes and incidents via email or SMS.
             </p>
             <Link href="/contact" style={{
-              background: color, 'white',
+              background: 'white',
+              color: '#667eea',
               padding: '12px 24px',
               textDecoration: 'none',
               borderRadius: 8,
-              fontSize: fontWeight, 600,
+              fontSize: '1rem',
+              fontWeight: 600,
               display: 'inline-block'
             }}>
               Subscribe to Updates

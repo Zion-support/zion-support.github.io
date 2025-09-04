@@ -9,8 +9,7 @@ export default function QuantumComputing() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  };
-
+  }
   const services = [
     {
       icon: Atom,
@@ -58,7 +57,7 @@ export default function QuantumComputing() {
         <meta name="keywords" content="quantum computing, quantum algorithms, quantum optimization, quantum cryptography, quantum machine learning, quantum consulting" />
         <link rel="canonical" href={`${contact.site}/quantum-computing`} />
         <meta property="og:title" content="Quantum Computing Services - Zion Tech Group" />
-        <meta property="og:description" content="Cutting-edge quantum computing solutions including algorithm development, optimization, and cryptography." />
+        <meta property="og:description" content="Cutting-edge quantum computing services including algorithm development and optimization solutions." />
         <meta property="og:url" content={`${contact.site}/quantum-computing`} />
         <meta property="og:type" content="website" />
       </Head>

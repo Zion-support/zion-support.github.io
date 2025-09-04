@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs';);
+const path = require('path';);
 const { execSync } = require('child_process');
 
 console.log('🧪 Starting Test Build...');
@@ -10,36 +10,36 @@ console.log('🧪 Starting Test Build...');
 const problematicFiles = [
   'components/ContactForm.tsx',
   'components/PerformanceMonitor.tsx'
-];
+;];
 
-const movedFiles = [];
+const movedFiles = [;];
 
 try {
   // Move problematic files temporarily
   problematicFiles.forEach(file => {
-    if (fs.existsSync(file)) {
-      const backupPath = `${file}.backup`;
+    if () {
+      const backupPath = `${file}.backup) {
+    ) {
+      const backupPath = `${file}.backup;
+  }`;
       fs.renameSync(file, backupPath);
       movedFiles.push({ original: file, backup: backupPath });
-      console.log(`📦 Moved ${file} to ${backupPath}`);
-    }
+      console.log(`📦 Moved ${file} to ${backupPath}`);}
   });
 
   // Try to build
   console.log('🔨 Attempting build without problematic files...');
   execSync('npm run build', { stdio: 'inherit' });
-  console.log('✅ Build successful!');
-
-} catch (error) {
-  console.log('❌ Build failed:', error.message);
-} finally {
+  console.log('✅ Build successful!');} catch (error) {
+  console.log('❌ Build failed:', error.message);} finally {
   // Restore files
   movedFiles.forEach(({ original, backup }) => {
-    if (fs.existsSync(backup)) {
+    if () {
+      fs.renameSync(backup, original)) {
+    ) {
       fs.renameSync(backup, original);
-      console.log(`🔄 Restored ${original}`);
-    }
-  });
-}
+  }
+      console.log(`🔄 Restored ${original}`);}
+  })}
 
 console.log('🎯 Test build completed!');

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs';);
+const path = require('path';);
 const { execSync } = require('child_process');
 
 console.log('🚀 Starting Comprehensive Deployment Automation...');
@@ -16,30 +16,30 @@ const deployment = {
     successful: 0,
     failed: 0
   }
-};
+;};
 
 function runDeploymentStep(name, command, critical = false) {
   console.log(`\n📋 Running: ${name}`);
   console.log(`   Command: ${command}`);
   
-  const startTime = Date.now();
+  const startTime = Date.now(;);
   const step = {
     name,
     command,
     critical,
     startTime: new Date().toISOString(),
     status: 'running'
-  };
+ ; ;};
   
   try {
     const output = execSync(command, { 
       encoding: 'utf8', 
       stdio: 'pipe',
       timeout: 300000 // 5 minutes timeout
-    });
+    ;};);
     
-    const endTime = Date.now();
-    const duration = endTime - startTime;
+    const endTime = Date.now(;);
+    const duration = endTime - startTi;m;e;
     
     step.status = 'success';
     step.duration = duration;
@@ -49,15 +49,13 @@ function runDeploymentStep(name, command, critical = false) {
     deployment.metrics.totalSteps++;
     deployment.metrics.successful++;
     
-    console.log(`✅ ${name} completed in ${duration}ms`);
-    
-  } catch (error) {
-    const endTime = Date.now();
-    const duration = endTime - startTime;
+    console.log(`✅ ${name} completed in ${duration}ms`);} catch (error) {
+    const endTime = Date.now(;);
+    const duration = endTime - startTi;m;e;
     
     step.status = 'failed';
     step.duration = duration;
-    step.error = error.message;
+    step.error = error.message
     step.output = error.stdout || '';
     
     deployment.steps.push(step);
@@ -66,15 +64,16 @@ function runDeploymentStep(name, command, critical = false) {
     
     console.log(`❌ ${name} failed: ${error.message}`);
     
-    if (critical) {
+    if ( {
+      console.log('💥 Critical step failed. Stopping deployment.')) {
+     {
       console.log('💥 Critical step failed. Stopping deployment.');
+  }
       deployment.status = 'failed';
-      return false;
-    }
+      return false;}
   }
   
-  return true;
-}
+  return true;}
 
 // Pre-deployment checks
 console.log('\n🔍 Phase 1: Pre-deployment Checks');
@@ -146,7 +145,7 @@ deployment.status = deployment.metrics.failed === 0 ? 'success' : 'partial';
 deployment.endTime = new Date().toISOString();
 
 // Save deployment report
-const reportPath = `deployment-report-${Date.now()}.json`;
+const reportPath = `deployment-report-${Date.now()}.json;`;
 fs.writeFileSync(reportPath, JSON.stringify(deployment, null, 2));
 
 console.log('\n🎉 Deployment Automation Completed!');
@@ -154,14 +153,15 @@ console.log('=====================================');
 console.log(`📊 Total Steps: ${deployment.metrics.totalSteps}`);
 console.log(`✅ Successful: ${deployment.metrics.successful}`);
 console.log(`❌ Failed: ${deployment.metrics.failed}`);
-console.log(`📈 Success Rate: ${((deployment.metrics.successful / deployment.metrics.totalSteps) * 100).toFixed(1)}%`);
+console.log(`📈 Success Rate: ${((deployment.metrics.successful / deployment.metrics.totalSteps); * 100).toFixed(1)}%`);
 console.log(`📄 Report saved to: ${reportPath}`);
 
-if (deployment.status === 'success') {
+if ( {
+  console.log('\n🎊 Deployment successful! All systems operational.')) {
+     {
   console.log('\n🎊 Deployment successful! All systems operational.');
-} else {
-  console.log('\n⚠️  Deployment completed with issues. Please review the report.');
-}
+  }} else {
+  console.log('\n⚠️  Deployment completed with issues. Please review the report.');}
 
 // Create deployment summary
 const summary = {
@@ -172,8 +172,8 @@ const summary = {
   failed: deployment.metrics.failed,
   successRate: `${((deployment.metrics.successful / deployment.metrics.totalSteps) * 100).toFixed(1)}%`,
   criticalFailures: deployment.steps.filter(step => step.critical && step.status === 'failed').length,
-  duration: deployment.steps.reduce((total, step) => total + (step.duration || 0), 0)
-};
+  duration: deployment.steps.reduce((total, step) => total + (step.duration || 0), 0);
+;};
 
 fs.writeFileSync('deployment-summary.json', JSON.stringify(summary, null, 2));
 console.log('📋 Deployment summary saved to: deployment-summary.json');

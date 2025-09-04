@@ -3,7 +3,6 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-  // eslint-disable-next-line no-unused-vars
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 
@@ -16,12 +15,15 @@ interface State {
 class AdvancedErrorBoundary extends Component<Props, State> {
   public state: State = {
     hasError: false
-  }
+  };
+
   public static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('AdvancedErrorBoundary caught an error:', error, errorInfo);
+    
     // Report to error tracking service
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
@@ -34,6 +36,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
   private handleRetry = () => {
     this.setState({ hasError: false, error: undefined, errorInfo: undefined });
   };
+
   public render() {
     if (this.state.hasError) {
       if (this.props.fallback) {

@@ -1,4 +1,4 @@
-import React, { Component, ReactNode } from 'react';
+import React, { Component, type ErrorInfo, type ReactNode } from 'react';
 
 interface Props {
   children: ReactNode;
@@ -13,13 +13,14 @@ interface State {
 class ErrorBoundary extends Component<Props, State> {
   public state: State = {
     hasError: false
-  }
+  };
+
   public static getDerivedStateFromError(): State {
     return { hasError: true };
   }
 
-  public componentDidCatch() {
-    // Error logging can be implemented here if needed
+  public componentDidCatch(_error: Error, _errorInfo: ErrorInfo) {
+    // Error logged to console in development
   }
   
   public render() {
@@ -46,7 +47,7 @@ class ErrorBoundary extends Component<Props, State> {
                 Refresh Page
               </button>
               <button
-                onClick={() => window.location.href = '/'}
+                onClick={() => (window.location.href = '/')}
                 className="w-full bg-slate-800 hover:bg-slate-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
               >
                 Go Home

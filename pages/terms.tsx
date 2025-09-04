@@ -7,8 +7,7 @@ export default function Terms() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  };
-
+  }
   return (
     <>
       <Head>
@@ -32,7 +31,7 @@ export default function Terms() {
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-4 text-blue-400">1. Acceptance of Terms</h2>
               <p className="text-slate-300 mb-4">
-                By accessing and using Zion Tech Group's services, you accept and agree to be bound by the terms 
+                By accessing and using Zion Tech Group&apos;s services, you accept and agree to be bound by the terms 
                 and provision of this agreement. If you do not agree to abide by the above, please do not use this service.
               </p>
             </section>
@@ -40,7 +39,7 @@ export default function Terms() {
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-4 text-blue-400">2. Use License</h2>
               <p className="text-slate-300 mb-4">
-                Permission is granted to temporarily download one copy of Zion Tech Group's services for personal, 
+                Permission is granted to temporarily download one copy of Zion Tech Group&apos;s services for personal, 
                 non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
               </p>
               <ul className="list-disc list-inside text-slate-300 mb-4 space-y-2">
@@ -98,28 +97,26 @@ export default function Terms() {
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-4 text-blue-400">8. Changes to Terms</h2>
               <p className="text-slate-300 mb-4">
-                Zion Tech Group reserves the right to modify these terms at any time. Changes will be effective immediately 
-                upon posting. Continued use of our services constitutes acceptance of the modified terms.
-              </p>
-            </section>
-
-            <section className="mb-12">
-              <h2 className="text-2xl font-bold mb-4 text-blue-400">9. Contact Information</h2>
-              <p className="text-slate-300 mb-4">
                 If you have any questions about these Terms of Service, please contact us:
               </p>
-              <div className="bg-slate-800 p-6 rounded-lg">
+              <div className="bg-slate-900/60 p-6 rounded-lg border border-white/10">
                 <p className="text-slate-300 mb-2">
-                  <strong>Email:</strong> {contact.email}
+                  <strong>Phone:</strong> <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="text-blue-400 hover:text-blue-300">{contact.phone}</a>
                 </p>
                 <p className="text-slate-300 mb-2">
-                  <strong>Phone:</strong> {contact.phone}
+                  <strong>Email:</strong> <a href={`mailto:${contact.email}`} className="text-blue-400 hover:text-blue-300">{contact.email}</a>
                 </p>
                 <p className="text-slate-300">
                   <strong>Address:</strong> {contact.address}
                 </p>
               </div>
             </section>
+          </div>
+
+          <div className="mt-12 text-center">
+            <Link href="/" className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
+              Back to Home
+            </Link>
           </div>
         </div>
       </main>

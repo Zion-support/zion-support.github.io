@@ -35,7 +35,7 @@ class CacheManager<T = any> {
     const keysToDelete: string[] = [];
 
     this.cache.forEach((item, key) => {
-      if (item.expiresAt < now) {
+      if (item.expiresAt <= now) {
         keysToDelete.push(key);
       }
     });
@@ -47,7 +47,9 @@ class CacheManager<T = any> {
     // Remove oldest items if cache is full
     if (this.cache.size >= this.config.maxSize) {
       const firstKey = this.cache.keys().next().value;
-      this.cache.delete(firstKey);
+      if (firstKey) {
+        this.cache.delete(firstKey);
+      }
     }
 
     const now = Date.now();
@@ -67,7 +69,7 @@ class CacheManager<T = any> {
       return null;
     }
 
-    if (item.expiresAt < Date.now()) {
+    if (item.expiresAt <= Date.now()) {
       this.cache.delete(key);
       return null;
     }
@@ -102,7 +104,7 @@ class CacheManager<T = any> {
     let active = 0;
 
     this.cache.forEach(item => {
-      if (item.expiresAt < now) {
+      if (item.expiresAt <= now) {
         expired++;
       } else {
         active++;

@@ -7,8 +7,7 @@ export default function FAQ() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  };
-
+  }
   const faqs = [
     {
       question: "What services does Zion Tech Group offer?",
@@ -48,15 +47,7 @@ export default function FAQ() {
     },
     {
       question: "Do you work with small businesses?",
-      answer: "Yes, we work with businesses of all sizes, from startups to enterprise organizations. Our micro SaaS products are particularly well-suited for small and medium businesses looking for cost-effective solutions."
-    },
-    {
-      question: "What is your response time for support?",
-      answer: "We provide 24/7 support for critical issues and typically respond within 2-4 hours during business hours. Emergency support is available 24/7 for enterprise clients."
-    },
-    {
-      question: "Do you offer training for your solutions?",
-      answer: "Yes, we provide comprehensive training and documentation for all our solutions. This includes user guides, video tutorials, and hands-on training sessions to ensure your team can effectively use the tools."
+      answer: "Yes, we work with businesses of all sizes, from startups to enterprises. Our micro SaaS products are particularly well-suited for small and medium businesses looking for cost-effective solutions."
     }
   ];
 
@@ -77,7 +68,11 @@ export default function FAQ() {
               Frequently Asked Questions
             </h1>
             <p className="text-xl text-slate-300 mb-8">
-              Find answers to common questions about our services and solutions
+              Get Answers to Common Questions
+            </p>
+            <p className="text-lg text-slate-400 mb-12 max-w-3xl mx-auto">
+              Find answers to the most common questions about our services, pricing, 
+              implementation, and support. Can&apos;t find what you&apos;re looking for? Contact us directly.
             </p>
           </div>
         </section>
@@ -103,23 +98,24 @@ export default function FAQ() {
         {/* Contact CTA */}
         <section className="py-16 px-4 bg-slate-900/60">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6">Still Have Questions?</h2>
-            <p className="text-xl text-slate-300 mb-8">
-              Can't find the answer you're looking for? Contact our team for personalized assistance.
+            <h2 className="text-3xl md:text-4xl font-bold mb-8">
+              Still Have Questions?
+            </h2>
+            <p className="text-lg text-slate-300 mb-8">
+              Our team is here to help. Contact us for personalized answers to your specific questions 
+              and to discuss how we can help your business.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact"
-                className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-              >
-                Contact Us
-              </Link>
-              <a 
-                href={`tel:${contact.phone}`}
-                className="border-2 border-blue-600 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-              >
+            
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
                 Call {contact.phone}
               </a>
+              <a href={`mailto:${contact.email}`} className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors">
+                Email {contact.email}
+              </a>
+              <Link href="/contact" className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
+                Contact Form
+              </Link>
             </div>
           </div>
         </section>

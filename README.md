@@ -1,168 +1,147 @@
-# Zion Tech Group - AI-Powered Technology Solutions
+# Zion Tech Group Website
 
-A modern, responsive website built with Next.js, TypeScript, and Tailwind CSS, showcasing cutting-edge technology solutions and services.
+A modern, high-performance website built with Next.js, featuring AI services, micro SaaS products, and enterprise IT solutions.
 
 ## 🚀 Features
 
-- **Modern Design**: Futuristic UI with glassmorphism effects and neon accents
-- **Responsive**: Mobile-first design that works on all devices
-- **Performance Optimized**: Fast loading with Next.js 14 and optimized images
-- **SEO Ready**: Comprehensive meta tags, structured data, and sitemap
-- **Accessibility**: WCAG compliant with proper focus states and contrast
-- **Security**: Content Security Policy and security headers
-- **Error Handling**: Comprehensive error boundaries and loading states
+- **Modern Tech Stack**: Next.js 15, React 18, TypeScript, Tailwind CSS
+- **Performance Optimized**: Web Vitals monitoring, bundle optimization, image optimization
+- **SEO Ready**: Comprehensive meta tags, structured data, sitemap generation
+- **Accessibility**: ARIA labels, keyboard navigation, screen reader support
+- **PWA Support**: Service worker, manifest, offline functionality
+- **Security**: Content Security Policy, security headers, dependency auditing
 
 ## 🛠️ Tech Stack
 
-- **Framework**: Next.js 14.2.0
+- **Framework**: Next.js 15.5.2
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
+- **UI Components**: Radix UI
 - **Icons**: Lucide React
-- **Animations**: Framer Motion
-- **Deployment**: Netlify (configured)
+- **Analytics**: Web Vitals
+- **Deployment**: Netlify
 
 ## 📦 Installation
 
-1. Clone the repository:
 ```bash
-git clone https://github.com/Zion-Technologies/Website.git
-cd Website
-```
+# Clone the repository
+git clone https://github.com/Zion-Holdings/zion.app.git
+cd zion.app
 
-2. Install dependencies:
-```bash
+# Install dependencies
 npm install
-```
 
-3. Run the development server:
-```bash
+# Start development server
 npm run dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-## 🏗️ Build & Deployment
+## 🚀 Available Scripts
 
 ### Development
 ```bash
-npm run dev
+npm run dev          # Start development server
+npm run dev:fast     # Start with Turbo mode
 ```
 
-### Production Build
+### Building
 ```bash
-npm run build
-npm start
+npm run build        # Build for production
+npm run build:prod   # Build with production environment
+npm run analyze:bundle # Analyze bundle size
 ```
 
-### Static Export
+### Testing & Quality
 ```bash
-npm run export
+npm run lint         # Run ESLint
+npm run lint:fix     # Fix ESLint issues
+npm run type-check   # TypeScript type checking
+npm run test         # Run tests
+npm run lighthouse   # Run Lighthouse audit
 ```
 
-## 📁 Project Structure
+### Security
+```bash
+npm run security:audit # Security audit
+npm run security:fix   # Fix security issues
+```
+
+## 🏗️ Project Structure
 
 ```
 ├── components/          # Reusable React components
-│   ├── ui/             # UI components
-│   ├── Navigation.tsx  # Main navigation
-│   ├── HeroSection.tsx # Hero section
-│   ├── ServicesSection.tsx # Services showcase
-│   ├── Footer.tsx      # Footer component
-│   ├── ErrorBoundary.tsx # Error handling
-│   └── Loading.tsx     # Loading component
 ├── pages/              # Next.js pages
-│   ├── api/           # API routes
-│   ├── services/      # Service pages
-│   ├── solutions/     # Solution pages
-│   └── index.tsx      # Home page
-├── styles/            # Global styles
-├── public/            # Static assets
-├── scripts/           # Build and utility scripts
-└── automation/        # Automation systems
+├── public/             # Static assets
+├── styles/             # Global styles
+├── automation/         # Automation scripts
+└── scripts/            # Build and utility scripts
 ```
-
-## 🎨 Design System
-
-The project uses a comprehensive design system with:
-
-- **Color Palette**: Neon blue, purple, and pink gradients
-- **Typography**: Modern, readable fonts with proper hierarchy
-- **Spacing**: Consistent spacing scale
-- **Components**: Reusable UI components with variants
-- **Animations**: Smooth transitions and micro-interactions
 
 ## 🔧 Configuration
 
 ### Environment Variables
 Create a `.env.local` file:
 ```env
+NODE_ENV=production
 NEXT_PUBLIC_SITE_URL=https://ziontechgroup.com
-NEXT_PUBLIC_GA_ID=your-google-analytics-id
 ```
 
-### Tailwind Configuration
-The project includes custom Tailwind configuration with:
-- Extended color palette
-- Custom animations
-- Responsive breakpoints
-- Component utilities
+### Next.js Configuration
+The `next.config.js` includes:
+- Security headers
+- Image optimization
+- Bundle optimization
+- Console log removal in production
 
 ## 📊 Performance
 
-- **Lighthouse Score**: 95+ across all metrics
-- **Core Web Vitals**: Optimized for LCP, FID, and CLS
-- **Bundle Size**: Optimized with tree shaking and code splitting
-- **Images**: WebP/AVIF format support with responsive sizing
+The website is optimized for:
+- **Core Web Vitals**: LCP, FID, CLS monitoring
+- **Bundle Size**: Tree shaking, code splitting
+- **Images**: WebP/AVIF formats, responsive images
+- **Caching**: Service worker, static generation
 
 ## 🔒 Security
 
-- Content Security Policy (CSP) headers
-- X-Frame-Options protection
-- X-Content-Type-Options security
-- Referrer Policy configuration
-- Secure cookie settings
+- Content Security Policy (CSP)
+- Security headers (HSTS, X-Frame-Options, etc.)
+- Dependency auditing
+- Input sanitization
 
-## 📱 Browser Support
+## 📱 PWA Features
 
-- Chrome 90+
-- Firefox 88+
-- Safari 14+
-- Edge 90+
+- Service worker for offline functionality
+- Web app manifest
+- Installable on mobile devices
+- App shortcuts
+
+## 🚀 Deployment
+
+The site is deployed on Netlify with:
+- Automatic builds on git push
+- Preview deployments for PRs
+- Edge functions for dynamic content
+
+## 📈 Analytics
+
+- Web Vitals monitoring
+- Google Analytics integration
+- Performance metrics tracking
 
 ## 🤝 Contributing
 
 1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/amazing-feature`
-3. Commit your changes: `git commit -m 'Add amazing feature'`
-4. Push to the branch: `git push origin feature/amazing-feature`
-5. Open a Pull Request
+2. Create a feature branch
+3. Make your changes
+4. Run tests and linting
+5. Submit a pull request
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+MIT License - see LICENSE file for details
 
-## 📞 Support
+## 📞 Contact
 
-For support and questions:
-- Email: info@ziontechgroup.com
-- Website: https://ziontechgroup.com
-- LinkedIn: [Zion Tech Group](https://linkedin.com/company/ziontechgroup)
-
-## 🚀 Deployment
-
-The project is configured for deployment on Netlify with:
-- Automatic builds on push to main
-- Environment variable configuration
-- Custom domain setup
-- SSL certificate management
-
-### Manual Deployment
-```bash
-npm run build
-npm run export
-# Upload the 'out' directory to your hosting provider
-```
-
----
-
-Built with ❤️ by the Zion Tech Group team
+- **Phone**: +1 302 464 0950
+- **Email**: kleber@ziontechgroup.com
+- **Address**: 364 E Main St STE 1008, Middletown DE 19709
+- **Website**: https://ziontechgroup.com

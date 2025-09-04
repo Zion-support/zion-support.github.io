@@ -2,13 +2,12 @@ import Link from 'next/link';
 import Head from 'next/head';
 
 export default function Home() {
-  const contact = { 
-    phone: '+1 302 464 0950', 
-    email: 'kleber@ziontechgroup.com', 
-    address: '364 E Main St STE 1008 Middletown DE 19709', 
-    site: 'https://ziontechgroup.com' 
+  const contact = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    site: 'https://ziontechgroup.com'
   };
-
   return (
     <>
       <Head>
@@ -52,7 +51,7 @@ export default function Home() {
           }}
         />
       </Head>
-
+      
       <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
         {/* Hero Section */}
         <section className="py-20 px-4 text-center">
@@ -64,7 +63,9 @@ export default function Home() {
               Innovative Micro SaaS, AI Services & IT Solutions
             </p>
             <p className="text-lg text-slate-400 mb-12 max-w-3xl mx-auto">
-              Leading provider of 340+ innovative technology services across micro SaaS, AI, and IT solutions.
+              We deliver cutting-edge technology solutions with 150+ innovative micro SaaS products, 
+              90+ advanced AI services, and 100+ comprehensive IT solutions. From quantum computing 
+              to AI automation, we help businesses scale efficiently and securely with next-generation technology.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
@@ -85,7 +86,7 @@ export default function Home() {
                 <p className="text-slate-300">Micro SaaS Products</p>
               </div>
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
-                <h3 className="text-2xl font-bold text-purple-400 mb-2">100+</h3>
+                <h3 className="text-2xl font-bold text-purple-400 mb-2">90+</h3>
                 <p className="text-slate-300">AI Services</p>
               </div>
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
@@ -141,42 +142,54 @@ export default function Home() {
               </div>
 
               <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-green-500/40 transition-colors">
-                <h3 className="text-2xl font-bold mb-4 text-green-400">IT Solutions</h3>
+                <h3 className="text-2xl font-bold mb-4 text-green-400">IT & Cloud Services</h3>
                 <p className="text-slate-300 mb-6">
-                  Comprehensive IT services including cloud migration, cybersecurity, 
-                  DevOps automation, and 40+ more enterprise technology solutions.
+                  Comprehensive IT solutions including quantum computing consulting, blockchain & Web3 solutions, 
+                  DevSecOps automation, and 40+ more enterprise-grade services.
                 </p>
                 <ul className="text-slate-400 space-y-2 mb-6">
-                  <li>• Cloud Migration & Strategy</li>
-                  <li>• Cybersecurity & Compliance</li>
-                  <li>• DevOps & CI/CD Automation</li>
-                  <li>• Data Engineering & Analytics</li>
-                  <li>• Infrastructure as Code</li>
+                  <li>• Quantum Computing Consulting</li>
+                  <li>• Blockchain & Web3 Solutions</li>
+                  <li>• DevSecOps & Security Automation</li>
+                  <li>• Enterprise Data Platform</li>
+                  <li>• High-Performance Computing Solutions</li>
                 </ul>
                 <Link href="/it-services" className="text-green-400 hover:text-green-300 font-semibold">
-                  View All IT Solutions →
+                  View All IT Services →
                 </Link>
               </div>
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-16 px-4">
+        {/* Contact Section */}
+        <section className="py-16 px-4 bg-slate-900/40">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8">
               Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-slate-300 mb-8">
-              Let's discuss how our innovative solutions can help you achieve your goals.
+            <p className="text-lg text-slate-300 mb-8">
+              Get in touch with our experts to discuss your project requirements and discover 
+              how our innovative solutions can drive your business forward.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link href="/contact" className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
-                Get Started Today
+            
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+              <a href={`tel:${contact.phone.replace(/[^\d+]/g, '')}`} className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
+                Call {contact.phone}
+              </a>
+              <a href={`mailto:${contact.email}`} className="px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors">
+                Email {contact.email}
+              </a>
+              <Link href="/contact" className="px-6 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
+                Contact Form
               </Link>
-              <Link href="/pricing" className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
-                View Pricing
-              </Link>
+            </div>
+            
+            <div className="text-slate-400">
+              <p>{contact.address}</p>
+              <p className="mt-2">
+                Visit us at <a href={contact.site} className="text-blue-400 hover:text-blue-300">{contact.site}</a>
+              </p>
             </div>
           </div>
         </section>

@@ -7,13 +7,12 @@ const PrivacyPage: React.FC = () => {
       <Head>
         <title>Privacy Policy - Zion Tech Group</title>
         <meta name="description" content="How Zion Tech Group collects, uses, and protects your data." />
-        <link rel="canonical" href="https://ziontechgroup.com/privacy" />
       </Head>
       
       <section className="bg-white">
         <div className="container mx-auto px-4 py-12">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Privacy Policy</h1>
-          <p className="text-gray-700 mb-6">Last updated: 2025-09-03</p>
+          <p className="text-gray-700 mb-6">Last updated: 2025-01-03</p>
           
           <div className="prose max-w-none">
             <p>We respect your privacy. This policy explains what information we collect and how we use it.</p>
@@ -42,7 +41,7 @@ const PrivacyPage: React.FC = () => {
             <p>You may request access, correction, or deletion of your data. Contact us at <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>.</p>
             
             <h2>Contact</h2>
-            <p>Zion Tech Group, 364 E Main St STE 1008, Middletown DE 19709. Phone: +1 302 464 0950</p>
+            <p>Zion Tech Group, 364 E Main St STE 1008, Middletown, DE 19709. Phone: +1 302 464 0950</p>
           </div>
         </div>
       </section>

@@ -12,7 +12,7 @@ export default function ScheduleDemo() {
     company: '',
     phone: '',
     message: '',
-    service: ''
+    service: '',
   });
 
   const timeSlots = [
@@ -47,7 +47,7 @@ export default function ScheduleDemo() {
         <meta property="og:url" content="https://ziontechgroup.com/schedule-demo" />
         <meta property="og:type" content="website" />
       </Head>
-
+      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         <div className="container mx-auto px-4 py-20">
           {/* Header */}
@@ -152,9 +152,10 @@ export default function ScheduleDemo() {
 
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-white font-medium mb-2">Company</label>
+                    <label className="block text-white font-medium mb-2">Company *</label>
                     <input
                       type="text"
+                      required
                       value={formData.company}
                       onChange={(e) => setFormData({...formData, company: e.target.value})}
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400"
@@ -162,7 +163,7 @@ export default function ScheduleDemo() {
                     />
                   </div>
                   <div>
-                    <label className="block text-white font-medium mb-2">Phone</label>
+                    <label className="block text-white font-medium mb-2">Phone Number</label>
                     <input
                       type="tel"
                       value={formData.phone}
@@ -174,40 +175,83 @@ export default function ScheduleDemo() {
                 </div>
 
                 <div>
-                  <label className="block text-white font-medium mb-2">Service Interest</label>
+                  <label className="block text-white font-medium mb-2">Service Interest *</label>
                   <select
+                    required
                     value={formData.service}
                     onChange={(e) => setFormData({...formData, service: e.target.value})}
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-blue-400"
                   >
-                    <option value="">Select a service</option>
-                    {services.map((service, index) => (
-                      <option key={index} value={service} className="bg-gray-800 text-white">
-                        {service}
-                      </option>
+                    <option value="" className="bg-slate-800">Select a service</option>
+                    {services.map((service) => (
+                      <option key={service} value={service} className="bg-slate-800">{service}</option>
                     ))}
                   </select>
                 </div>
 
                 <div>
-                  <label className="block text-white font-medium mb-2">Message</label>
+                  <label className="block text-white font-medium mb-2">Preferred Date *</label>
+                  <input
+                    type="date"
+                    required
+                    value={selectedDate}
+                    onChange={(e) => setSelectedDate(e.target.value)}
+                    min={new Date().toISOString().split('T')[0]}
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-blue-400"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-white font-medium mb-2">Preferred Time *</label>
+                  <select
+                    required
+                    value={selectedTime}
+                    onChange={(e) => setSelectedTime(e.target.value)}
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-blue-400"
+                  >
+                    <option value="" className="bg-slate-800">Select a time</option>
+                    {timeSlots.map((time) => (
+                      <option key={time} value={time} className="bg-slate-800">{time}</option>
+                    ))}
+                  </select>
+                </div>
+
+                <div>
+                  <label className="block text-white font-medium mb-2">Additional Message</label>
                   <textarea
                     value={formData.message}
                     onChange={(e) => setFormData({...formData, message: e.target.value})}
                     rows={4}
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400"
-                    placeholder="Tell us about your specific needs and what you'd like to see in the demo..."
+                    placeholder="Tell us about your specific needs or questions..."
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center gap-2"
+                  className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center"
                 >
                   Schedule Demo
-                  <ArrowRight className="w-5 h-5" />
+                  <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
               </form>
+            </div>
+          </div>
+
+          {/* Contact Info */}
+          <div className="text-center mt-16">
+            <h3 className="text-xl font-semibold text-white mb-4">Need Immediate Assistance?</h3>
+            <p className="text-gray-300 mb-6">
+              Contact us directly for urgent inquiries or technical support.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="mailto:kleber@ziontechgroup.com" className="text-blue-400 hover:text-blue-300 transition-colors">
+                kleber@ziontechgroup.com
+              </a>
+              <span className="text-gray-500 hidden sm:block">•</span>
+              <a href="tel:+13024640950" className="text-blue-400 hover:text-blue-300 transition-colors">
+                +1 (302) 464-0950
+              </a>
             </div>
           </div>
         </div>

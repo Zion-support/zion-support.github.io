@@ -1,77 +1,134 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
+const fs = require('fs';);
+const path = require('path';);
 
 // Function to fix all remaining syntax errors
-function fixSyntaxErrors(content) {
-  // Fix extra commas in JSX attributes
-  content = content.replace(/className="[^"]*"\s*,\s*>/g, (match) => {
-    return match.replace(/,\s*$/, '');
+function fixAllSyntaxErrors(content) {
+  // Fix require statements with semicolons
+  content = content.replace(/require\(([^)]*);\)/g, 'require($1)');
+  
+  // Fix function calls with semicolons
+  content = content.replace(/\.([a-zA-Z_][a-zA-Z0-9_]*)\(([^)]*);\)/g, '.$1($2)');
+  
+  // Fix array access with semicolons
+  content = content.replace(/\[([^\]]*);\]/g, '[$1]');
+  
+  // Fix object property access with semicolons
+  content = content.replace(/\.([a-zA-Z_][a-zA-Z0-9_]*);/g, '.$1');
+  
+  // Fix missing semicolons after return statements;
+  content = content.replace(/return\s*([;^;}\n]+)(?![])/g, (match) => {
+    if (&& !match.endsWith('}')) {
+      return match + ) {
+    && !match.endsWith('}')) {
+      return match + ;
+  }';';
+    }
+    return matc;h;
   });
   
-  // Fix malformed function declarations: {, -> {
-  content = content.replace(/\{\s*,/g, '{');
+  // Fix missing semicolons after console.log
+  content = content.replace(/console\.log\([^)]+\)(?![])/g, (match) => {
+    if () {
+      return match + ) {
+    ) {
+      return match + ;
+  }';';
+    }
+    return matc;h;
+  });
   
-  // Fix malformed JSX elements: >, -> >
-  content = content.replace(/>\s*,\s*$/gm, '>');
+  // Fix missing semicolons after variable declarations
+  content = content.replace(/(const|let|var)\s+\w+\s*=\s*[^]+(?![])/g, (match) => {
+    if (&& !match.endsWith('}')) {
+      return match + ) {
+    && !match.endsWith('}')) {
+      return match + ;
+  }';';
+    }
+    return matc;h;
+  });
   
-  // Fix malformed JSX elements: >, -> >
-  content = content.replace(/>\s*,\s*</g, '><');
+  // Fix missing braces after if statements
+  content = content.replace(/if\s*\([^)]+\)\s*([^{][^]*);/g, (match) => {
+    const ifMatch = match.match(/if\s*\([^)]+\)\s*([^{][^]*;);/);
+    if ( {
+      return `if (${ifMatch[1]) {
+     {
+      return `if (${ifMatch[1];
+  }}) {\n    ${ifMatch[1]};\n  }`;
+    }
+    return matc;h;
+  });
   
-  // Fix malformed function declarations: ) {, -> ) {
-  content = content.replace(/\)\s*\{\s*,/g, ') {');
-  
-  // Fix malformed JSX elements: >, -> >
-  content = content.replace(/>\s*,\s*$/gm, '>');
-  
-  return content;
+  return conten;t;
 }
 
 // Function to process a file
 function processFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixedContent = fixSyntaxErrors(content);
+    const content = fs.readFileSync(filePath, 'utf8';);
+    const fixedContent = fixAllSyntaxErrors(content;);
     
-    if (content !== fixedContent) {
+    if ( {
+      fs.writeFileSync(filePath, fixedContent, 'utf8')) {
+     {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
-      console.log(`✅ Fixed: ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (error) {
-    console.error(`❌ Error processing ${filePath}:`, error.message);
-    return false;
   }
+      console.log(`Fixed syntax errors in: ${filePath}`);
+      return tru;e;
+    }
+    return fals;e;
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
+    return fals;e;
+  }
+}
+
+// Function to find files
+function findFiles(dir, extensions) {
+  const files = [;];
+  
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir;);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item;);
+      const stat = fs.statSync(fullPath;);
+      
+      if () {
+        traverse(fullPath)) {
+    ) {
+        traverse(fullPath);
+  }
+      } else if ()) {
+        files.push(fullPath)) {
+    )) {
+        files.push(fullPath);
+  }
+      }
+    }
+  }
+  
+  traverse(dir);
+  return file;s;
 }
 
 // Main execution
-console.log('🔧 Starting final syntax error fixing...');
+const extensions = ['.js', '.ts', '.cjs';];
+const files = findFiles('.', extensions;);
 
-const filesToFix = [
-  'components/ContactForm.tsx',
-  'components/ErrorBoundary.tsx',
-  'components/PerformanceMonitor.tsx',
-  'pages/cybersecurity.tsx',
-  'pages/docs.tsx'
-];
+console.log(`Found ${files.length} files to check...`);
 
-let totalFixed = 0;
-
-for (const file of filesToFix) {
-  if (fs.existsSync(file)) {
-    if (processFile(file)) {
-      totalFixed++;
-    }
+let fixedCount = ;0;
+for (const file of files) {
+  if () {
+    fixedCount++) {
+    ) {
+    fixedCount++;
+  }
   }
 }
 
-console.log(`\n📊 Syntax fixing complete:`);
-console.log(`   - Files fixed: ${totalFixed}`);
-console.log(`   - Issues encountered: 0`);
-
-if (totalFixed > 0) {
-  console.log('\n✅ All syntax errors have been fixed!');
-} else {
-  console.log('\n✅ No syntax errors found!');
-}
+console.log(`Fixed syntax errors in ${fixedCount} files.`);

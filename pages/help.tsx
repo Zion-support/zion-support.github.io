@@ -3,70 +3,62 @@ import Head from 'next/head';
 import { useState } from 'react';
 
 export default function Help() {
-  const contact = { 
-    phone: '+1 302 464 0950', 
-    email: 'kleber@ziontechgroup.com', 
-    address: '364 E Main St STE 1008 Middletown DE 19709', 
-    site: 'https://ziontechgroup.com' 
-  };
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
 
-  const helpCategories = [
+  const categories = ['All', 'Getting Started', 'Account & Billing', 'Technical Support', 'API Documentation', 'Troubleshooting'];
+
+  const helpArticles = [
     {
-      title: "Getting Started",
-      icon: "🚀",
-      articles: [
-        { title: "How to Get Started with Our Services", description: "Step-by-step guide to begin your technology journey" },
-        { title: "Account Setup and Configuration", description: "Learn how to set up your account and configure settings" },
-        { title: "Understanding Our Service Portfolio", description: "Overview of all available services and solutions" },
-        { title: "Initial Consultation Process", description: "What to expect during your first consultation" }
-      ]
+      id: 1,
+      title: "Getting Started with Zion Tech Group Services",
+      category: "Getting Started",
+      description: "Learn how to set up your account and start using our services effectively.",
+      readTime: "5 min read"
     },
     {
-      title: "Technical Support",
-      icon: "🔧",
-      articles: [
-        { title: "Troubleshooting Common Issues", description: "Solutions to frequently encountered problems" },
-        { title: "System Requirements and Compatibility", description: "Technical specifications and compatibility information" },
-        { title: "Performance Optimization", description: "Tips for improving system performance" },
-        { title: "Integration and API Documentation", description: "Technical documentation for integrations" }
-      ]
+      id: 2,
+      title: "Understanding Your Billing and Subscription",
+      category: "Account & Billing",
+      description: "Everything you need to know about billing, subscriptions, and payment methods.",
+      readTime: "3 min read"
     },
     {
-      title: "Billing & Account",
-      icon: "💳",
-      articles: [
-        { title: "Understanding Your Bill", description: "How to read and understand your service charges" },
-        { title: "Payment Methods and Billing Cycles", description: "Available payment options and billing schedules" },
-        { title: "Upgrading or Downgrading Services", description: "How to modify your service plan" },
-        { title: "Cancellation and Refund Policy", description: "Information about service cancellation and refunds" }
-      ]
+      id: 3,
+      title: "API Integration Guide",
+      category: "API Documentation",
+      description: "Step-by-step guide to integrating our APIs into your applications.",
+      readTime: "10 min read"
     },
     {
-      title: "Security & Privacy",
-      icon: "🛡️",
-      articles: [
-        { title: "Security Best Practices", description: "Guidelines for maintaining security" },
-        { title: "Data Privacy and Protection", description: "How we protect your data and privacy" },
-        { title: "Two-Factor Authentication Setup", description: "How to enable 2FA for your account" },
-        { title: "Reporting Security Issues", description: "How to report security concerns" }
-      ]
+      id: 4,
+      title: "Troubleshooting Common Issues",
+      category: "Troubleshooting",
+      description: "Solutions to the most common problems users encounter.",
+      readTime: "7 min read"
+    },
+    {
+      id: 5,
+      title: "Security Best Practices",
+      category: "Technical Support",
+      description: "Essential security practices to keep your data and systems secure.",
+      readTime: "8 min read"
+    },
+    {
+      id: 6,
+      title: "Performance Optimization Tips",
+      category: "Technical Support",
+      description: "How to optimize your applications for better performance.",
+      readTime: "6 min read"
     }
   ];
 
-  const faqItems = [
-    { question: "How quickly can you start working on my project?", answer: "We typically begin new projects within 1-2 weeks of contract signing depending on project complexity and current workload." },
-    { question: "Do you provide ongoing support after project completion?", answer: "Yes, we offer comprehensive support packages including maintenance, updates, and technical assistance." },
-    { question: "What technologies do you specialize in?", answer: "We specialize in AI/ML, cloud computing, cybersecurity, quantum computing, micro SaaS development, and digital transformation." },
-    { question: "Can you work with our existing systems?", answer: "Absolutely. We have extensive experience integrating with existing systems and can work with most technology stacks." },
-    { question: "Do you offer remote services?", answer: "Yes, we provide both remote and on-site services, depending on your needs and project requirements." }
-  ];
-
-  const contactMethods = [
-    { method: "Phone Support", details: "+1 302 464 0950", availability: "Mon-Fri 9AM-6PM EST", icon: "📞" },
-    { method: "Email Support", details: "kleber@ziontechgroup.com", availability: "24/7 Response within 24 hours", icon: "✉️" },
-    { method: "Live Chat", details: "Available on website", availability: "Mon-Fri 9AM-6PM EST", icon: "💬" },
-    { method: "Emergency Support", details: "Critical issues only", availability: "24/7 for urgent matters", icon: "🚨" }
-  ];
+  const filteredArticles = helpArticles.filter(article => {
+    const matchesSearch = article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         article.description.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory = selectedCategory === 'All' || article.category === selectedCategory;
+    return matchesSearch && matchesCategory;
+  });
 
   return (
     <>
@@ -74,80 +66,188 @@ export default function Help() {
         <title>Help Center - Zion Tech Group | Support & Documentation</title>
         <meta name="description" content="Get help and support for Zion Tech Group services. Find documentation, troubleshooting guides, and contact our support team." />
         <meta name="keywords" content="help, support, documentation, troubleshooting, FAQ, customer service, Zion Tech Group" />
-        <link rel="canonical" href={`${contact.site}/help`} />
+        <link rel="canonical" href="https://ziontechgroup.com/help" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="robots" content="index, follow" />
+        
+        {/* Open Graph */}
         <meta property="og:title" content="Help Center - Zion Tech Group | Support & Documentation" />
         <meta property="og:description" content="Get help and support for Zion Tech Group services." />
-        <meta property="og:url" content={`${contact.site}/help`} />
+        <meta property="og:url" content="https://ziontechgroup.com/help" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content={`${contact.site}/og-image.svg`} />
+        <meta property="og:image" content="https://ziontechgroup.com/og-image.svg" />
+        
+        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Help Center - Zion Tech Group | Support & Documentation" />
         <meta name="twitter:description" content="Get help and support for Zion Tech Group services." />
-        <meta name="twitter:image" content={`${contact.site}/og-image.svg`} />
+        <meta name="twitter:image" content="https://ziontechgroup.com/og-image.svg" />
       </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        <div className="max-w-7xl mx-auto px-4 py-16">
-          {/* Header */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Help & Support
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Find answers to your questions, access technical documentation, and get the support you need for our services.
-            </p>
+      <div className="min-h-screen bg-gray-50">
+        {/* Header */}
+        <header className="bg-white shadow-sm">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-between items-center py-6">
+              <div className="flex items-center">
+                <Link href="/" className="text-2xl font-bold text-blue-600">
+                  Zion Tech Group
+                </Link>
+              </div>
+              <nav className="hidden md:flex space-x-8">
+                <Link href="/" className="text-gray-700 hover:text-blue-600">Home</Link>
+                <Link href="/services" className="text-gray-700 hover:text-blue-600">Services</Link>
+                <Link href="/about" className="text-gray-700 hover:text-blue-600">About</Link>
+                <Link href="/help" className="text-blue-600 font-medium">Help</Link>
+                <Link href="/contact" className="text-gray-700 hover:text-blue-600">Contact</Link>
+              </nav>
+            </div>
           </div>
+        </header>
 
-          {/* Help Categories */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            {helpCategories.map((category, categoryIndex) => (
-              <div key={categoryIndex} className="bg-white rounded-lg shadow-lg p-8 border border-gray-100">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="text-4xl">{category.icon}</div>
-                  <h3 className="text-xl font-semibold text-gray-900">{category.title}</h3>
-                </div>
-                <div className="space-y-4">
-                  {category.articles.map((article, articleIndex) => (
-                    <div key={articleIndex} className="border-l-4 border-blue-500 pl-4 py-2 hover:bg-gray-50 rounded-r-lg transition-colors">
-                      <h4 className="text-sm font-medium text-gray-900 mb-1">{article.title}</h4>
-                      <p className="text-xs text-gray-600">{article.description}</p>
-                    </div>
-                  ))}
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">Help Center</h1>
+            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+              Find answers, get support, and learn how to make the most of our services.
+            </p>
+            
+            {/* Search Bar */}
+            <div className="max-w-2xl mx-auto">
+              <div className="relative">
+                <input
+                  type="text"
+                  placeholder="Search for help articles..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full px-6 py-4 text-gray-900 rounded-lg focus:ring-2 focus:ring-blue-300 focus:border-transparent"
+                />
+                <div className="absolute right-4 top-1/2 transform -translate-y-1/2">
+                  <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
                 </div>
               </div>
-            ))}
+            </div>
           </div>
+        </section>
 
-          {/* FAQ Section */}
-          <div className="bg-white rounded-lg shadow-lg p-8 mb-16">
-            <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Frequently Asked Questions</h2>
-            <div className="space-y-6">
-              {faqItems.map((faq, index) => (
-                <div key={index} className="border-b border-gray-200 pb-6 last:border-b-0">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{faq.question}</h3>
-                  <p className="text-gray-600">{faq.answer}</p>
-                </div>
+        {/* Category Filter */}
+        <section className="py-8 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-wrap gap-2 justify-center">
+              {categories.map((category) => (
+                <button
+                  key={category}
+                  onClick={() => setSelectedCategory(category)}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                    selectedCategory === category
+                      ? 'bg-blue-600 text-white'
+                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  }`}
+                >
+                  {category}
+                </button>
               ))}
             </div>
           </div>
+        </section>
 
-          {/* Contact Methods */}
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-8 text-white">
-            <h2 className="text-2xl font-bold mb-8 text-center">Contact Our Support Team</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {contactMethods.map((method, index) => (
-                <div key={index} className="bg-white/10 rounded-lg p-6 text-center">
-                  <div className="text-3xl mb-4">{method.icon}</div>
-                  <h3 className="text-lg font-semibold mb-2">{method.method}</h3>
-                  <p className="text-sm mb-2">{method.details}</p>
-                  <p className="text-xs opacity-80">{method.availability}</p>
+        {/* Help Articles */}
+        <section className="py-12">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredArticles.map((article) => (
+                <div key={article.id} className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-sm font-medium text-blue-600">{article.category}</span>
+                    <span className="text-sm text-gray-500">{article.readTime}</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{article.title}</h3>
+                  <p className="text-gray-600 mb-4">{article.description}</p>
+                  <Link
+                    href={`/help/${article.id}`}
+                    className="text-blue-600 hover:text-blue-800 font-medium text-sm"
+                  >
+                    Read Article →
+                  </Link>
                 </div>
               ))}
             </div>
+
+            {filteredArticles.length === 0 && (
+              <div className="text-center py-12">
+                <p className="text-gray-500 text-lg">No articles found matching your search criteria.</p>
+              </div>
+            )}
           </div>
-        </div>
+        </section>
+
+        {/* Contact Support */}
+        <section className="py-16 bg-blue-600">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl font-bold text-white mb-4">Still Need Help?</h2>
+            <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
+              Can&apos;t find what you&apos;re looking for? Our support team is here to help you with any questions or issues.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors inline-block"
+              >
+                Contact Support
+              </Link>
+              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-600 transition-colors">
+                Live Chat
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Footer */}
+        <footer className="bg-gray-900 text-white py-12">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              <div>
+                <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
+                <p className="text-gray-400">
+                  Leading provider of innovative technology solutions and services.
+                </p>
+              </div>
+              <div>
+                <h4 className="font-semibold mb-4">Services</h4>
+                <ul className="space-y-2 text-gray-400">
+                  <li><Link href="/services" className="hover:text-white">All Services</Link></li>
+                  <li><Link href="/ai-services" className="hover:text-white">AI Services</Link></li>
+                  <li><Link href="/micro-saas" className="hover:text-white">Micro SaaS</Link></li>
+                  <li><Link href="/it-services" className="hover:text-white">IT Services</Link></li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-semibold mb-4">Company</h4>
+                <ul className="space-y-2 text-gray-400">
+                  <li><Link href="/about" className="hover:text-white">About Us</Link></li>
+                  <li><Link href="/team" className="hover:text-white">Team</Link></li>
+                  <li><Link href="/careers" className="hover:text-white">Careers</Link></li>
+                  <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-semibold mb-4">Resources</h4>
+                <ul className="space-y-2 text-gray-400">
+                  <li><Link href="/blog" className="hover:text-white">Blog</Link></li>
+                  <li><Link href="/docs" className="hover:text-white">Documentation</Link></li>
+                  <li><Link href="/help" className="hover:text-white">Help Center</Link></li>
+                  <li><Link href="/faq" className="hover:text-white">FAQ</Link></li>
+                </ul>
+              </div>
+            </div>
+            <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+              <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
+            </div>
+          </div>
+        </footer>
       </div>
     </>
   );
