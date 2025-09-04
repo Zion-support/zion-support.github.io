@@ -1,6 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
-import Head from 'next/head';
+import { Link } from 'react-router-dom';
 
 export default function ITServices() {
   const itServices = [
@@ -141,6 +140,443 @@ export default function ITServices() {
       ],
       marketPrice: "$3,000-5,000/month",
       savings: "Save up to $3,000/month"
+    },
+    {
+      name: "API Development and Integration",
+      description: "Comprehensive API development services including RESTful APIs, microservices architecture, and third-party integrations for seamless data flow.",
+      price: "$1,199/month",
+      features: [
+        "RESTful API design and development",
+        "GraphQL API implementation",
+        "Microservices architecture",
+        "API gateway setup",
+        "Third-party integrations",
+        "API documentation and testing",
+        "Rate limiting and security",
+        "Performance monitoring"
+      ],
+      benefits: [
+        "Improve system integration by 80%",
+        "Reduce development time by 60%",
+        "Enable faster third-party connections",
+        "Enhance system scalability"
+      ],
+      marketPrice: "$2,000-3,500/month",
+      savings: "Save up to $2,300/month"
+    },
+    {
+      name: "Mobile App Development",
+      description: "Full-stack mobile application development for iOS and Android with modern frameworks, cloud integration, and enterprise features.",
+      price: "$2,499/month",
+      features: [
+        "Cross-platform development",
+        "Native iOS and Android apps",
+        "Cloud backend integration",
+        "Push notifications",
+        "Offline functionality",
+        "App store optimization",
+        "User analytics and tracking",
+        "Maintenance and updates"
+      ],
+      benefits: [
+        "Reach customers on all devices",
+        "Improve user engagement by 70%",
+        "Enable mobile commerce",
+        "Enhance brand presence"
+      ],
+      marketPrice: "$4,000-7,000/month",
+      savings: "Save up to $4,500/month"
+    },
+    {
+      name: "E-commerce Platform Development",
+      description: "Complete e-commerce solution with modern design, payment processing, inventory management, and marketing automation.",
+      price: "$1,899/month",
+      features: [
+        "Custom e-commerce platform",
+        "Payment gateway integration",
+        "Inventory management system",
+        "Order processing automation",
+        "Customer management",
+        "Marketing tools integration",
+        "Analytics and reporting",
+        "Mobile-responsive design"
+      ],
+      benefits: [
+        "Increase online sales by 150%",
+        "Reduce operational costs by 40%",
+        "Improve customer experience",
+        "Enable 24/7 sales operations"
+      ],
+      marketPrice: "$3,000-5,000/month",
+      savings: "Save up to $3,100/month"
+    },
+    {
+      name: "Database Design and Optimization",
+      description: "Advanced database services including design, optimization, migration, and performance tuning for maximum efficiency and reliability.",
+      price: "$999/month",
+      features: [
+        "Database design and architecture",
+        "Performance optimization",
+        "Data migration services",
+        "Backup and recovery solutions",
+        "Security hardening",
+        "Query optimization",
+        "Indexing strategies",
+        "Monitoring and maintenance"
+      ],
+      benefits: [
+        "Improve database performance by 90%",
+        "Reduce query response time by 80%",
+        "Ensure data integrity and security",
+        "Lower database operational costs"
+      ],
+      marketPrice: "$1,500-2,500/month",
+      savings: "Save up to $1,500/month"
+    },
+    {
+      name: "Network Security and Monitoring",
+      description: "Comprehensive network security services with advanced threat detection, firewall management, and 24/7 network monitoring.",
+      price: "$1,399/month",
+      features: [
+        "Firewall configuration and management",
+        "Intrusion detection systems",
+        "Network segmentation",
+        "VPN setup and management",
+        "Traffic analysis and monitoring",
+        "Security policy implementation",
+        "Incident response",
+        "Regular security assessments"
+      ],
+      benefits: [
+        "Protect against network attacks",
+        "Improve network performance by 50%",
+        "Ensure compliance requirements",
+        "Reduce security vulnerabilities"
+      ],
+      marketPrice: "$2,200-3,500/month",
+      savings: "Save up to $2,100/month"
+    },
+    {
+      name: "Cloud Infrastructure Management",
+      description: "Complete cloud infrastructure management including AWS, Azure, and Google Cloud with optimization, monitoring, and cost management.",
+      price: "$1,699/month",
+      features: [
+        "Multi-cloud management",
+        "Cost optimization and monitoring",
+        "Auto-scaling configuration",
+        "Security and compliance",
+        "Backup and disaster recovery",
+        "Performance monitoring",
+        "Resource optimization",
+        "24/7 cloud support"
+      ],
+      benefits: [
+        "Reduce cloud costs by 35%",
+        "Improve system reliability by 99.9%",
+        "Enable automatic scaling",
+        "Ensure cloud security compliance"
+      ],
+      marketPrice: "$2,500-4,000/month",
+      savings: "Save up to $2,300/month"
+    },
+    {
+      name: "Software Testing and Quality Assurance",
+      description: "Comprehensive software testing services including automated testing, performance testing, and quality assurance for reliable applications.",
+      price: "$1,099/month",
+      features: [
+        "Automated testing implementation",
+        "Performance and load testing",
+        "Security testing",
+        "User acceptance testing",
+        "Regression testing",
+        "Test case development",
+        "Bug tracking and reporting",
+        "Quality metrics and reporting"
+      ],
+      benefits: [
+        "Reduce bugs by 85%",
+        "Improve application performance",
+        "Ensure user satisfaction",
+        "Lower maintenance costs"
+      ],
+      marketPrice: "$1,800-2,800/month",
+      savings: "Save up to $1,700/month"
+    },
+    {
+      name: "IT Consulting and Strategy",
+      description: "Strategic IT consulting services to help businesses plan, implement, and optimize their technology infrastructure and digital transformation initiatives.",
+      price: "$299/hour",
+      features: [
+        "IT strategy development",
+        "Technology assessment",
+        "Digital transformation planning",
+        "Vendor evaluation and selection",
+        "ROI analysis and planning",
+        "Change management consulting",
+        "Training and development",
+        "Ongoing advisory services"
+      ],
+      benefits: [
+        "Align IT with business goals",
+        "Reduce technology risks",
+        "Optimize IT investments",
+        "Improve decision making"
+      ],
+      marketPrice: "$500-800/hour",
+      savings: "Save up to $500/hour"
+    },
+    {
+      name: "Backup and Disaster Recovery",
+      description: "Comprehensive backup and disaster recovery solutions ensuring business continuity and data protection with automated backup systems.",
+      price: "$799/month",
+      features: [
+        "Automated backup systems",
+        "Disaster recovery planning",
+        "Data replication and sync",
+        "Recovery time optimization",
+        "Testing and validation",
+        "Compliance monitoring",
+        "24/7 monitoring and alerts",
+        "Recovery documentation"
+      ],
+      benefits: [
+        "Minimize data loss risks",
+        "Reduce recovery time by 90%",
+        "Ensure business continuity",
+        "Meet compliance requirements"
+      ],
+      marketPrice: "$1,200-2,000/month",
+      savings: "Save up to $1,200/month"
+    },
+    {
+      name: "IT Support and Helpdesk",
+      description: "Comprehensive IT support services with 24/7 helpdesk, remote assistance, and proactive monitoring for optimal system performance.",
+      price: "$599/month",
+      features: [
+        "24/7 technical support",
+        "Remote assistance and troubleshooting",
+        "Proactive system monitoring",
+        "User training and support",
+        "Hardware and software support",
+        "Incident management",
+        "Knowledge base maintenance",
+        "Performance reporting"
+      ],
+      benefits: [
+        "Reduce IT downtime by 95%",
+        "Improve user productivity",
+        "Lower IT support costs",
+        "Ensure system reliability"
+      ],
+      marketPrice: "$1,000-1,500/month",
+      savings: "Save up to $900/month"
+    },
+    {
+      name: "AI-Powered IT Operations",
+      description: "Intelligent IT operations management with AI-driven automation, predictive maintenance, and self-healing infrastructure capabilities.",
+      price: "$1,999/month",
+      features: [
+        "AI-driven automation",
+        "Predictive maintenance",
+        "Self-healing infrastructure",
+        "Intelligent incident response",
+        "Automated root cause analysis",
+        "Performance optimization",
+        "Capacity planning",
+        "Cost optimization"
+      ],
+      benefits: [
+        "Reduce operational costs by 50%",
+        "Improve system reliability by 99.9%",
+        "Minimize manual interventions",
+        "Accelerate problem resolution"
+      ],
+      marketPrice: "$3,500-5,000/month",
+      savings: "Save up to $3,000/month"
+    },
+    {
+      name: "Blockchain Integration Services",
+      description: "Complete blockchain integration and development services including smart contracts, DeFi solutions, and enterprise blockchain implementation.",
+      price: "$2,999/month",
+      features: [
+        "Smart contract development",
+        "DeFi solution implementation",
+        "Enterprise blockchain setup",
+        "Cryptocurrency integration",
+        "NFT marketplace development",
+        "Security auditing",
+        "Compliance consulting",
+        "Training and support"
+      ],
+      benefits: [
+        "Enable secure transactions",
+        "Reduce transaction costs by 80%",
+        "Improve transparency",
+        "Future-proof technology stack"
+      ],
+      marketPrice: "$5,000-8,000/month",
+      savings: "Save up to $5,000/month"
+    },
+    {
+      name: "IoT Infrastructure Management",
+      description: "Comprehensive Internet of Things infrastructure management with device monitoring, data analytics, and automated maintenance.",
+      price: "$1,799/month",
+      features: [
+        "IoT device management",
+        "Real-time monitoring",
+        "Data analytics and insights",
+        "Automated maintenance",
+        "Security management",
+        "Integration with existing systems",
+        "Scalability planning",
+        "Performance optimization"
+      ],
+      benefits: [
+        "Improve operational efficiency by 70%",
+        "Reduce maintenance costs by 60%",
+        "Enable predictive maintenance",
+        "Enhance data-driven decisions"
+      ],
+      marketPrice: "$3,000-4,500/month",
+      savings: "Save up to $2,700/month"
+    },
+    {
+      name: "Quantum Computing Readiness",
+      description: "Quantum computing preparation and integration services including algorithm development, security enhancement, and future-proofing strategies.",
+      price: "$4,999/month",
+      features: [
+        "Quantum algorithm development",
+        "Security enhancement",
+        "Future-proofing strategies",
+        "Quantum simulation",
+        "Hybrid classical-quantum systems",
+        "Research and development",
+        "Training and education",
+        "Strategic consulting"
+      ],
+      benefits: [
+        "Prepare for quantum future",
+        "Enhance security posture",
+        "Gain competitive advantage",
+        "Future-proof investments"
+      ],
+      marketPrice: "$8,000-12,000/month",
+      savings: "Save up to $7,000/month"
+    },
+    {
+      name: "Edge Computing Solutions",
+      description: "Edge computing infrastructure and management services for low-latency applications, real-time processing, and distributed computing needs.",
+      price: "$1,499/month",
+      features: [
+        "Edge infrastructure setup",
+        "Low-latency optimization",
+        "Real-time processing",
+        "Distributed computing",
+        "Data synchronization",
+        "Security management",
+        "Performance monitoring",
+        "Scalability planning"
+      ],
+      benefits: [
+        "Reduce latency by 90%",
+        "Improve application performance",
+        "Enable real-time processing",
+        "Reduce bandwidth costs"
+      ],
+      marketPrice: "$2,500-4,000/month",
+      savings: "Save up to $2,500/month"
+    },
+    {
+      name: "5G Network Implementation",
+      description: "5G network design, implementation, and optimization services for high-speed connectivity, IoT integration, and advanced applications.",
+      price: "$3,499/month",
+      features: [
+        "5G network design",
+        "Infrastructure implementation",
+        "Performance optimization",
+        "IoT integration",
+        "Security implementation",
+        "Testing and validation",
+        "Training and support",
+        "Ongoing maintenance"
+      ],
+      benefits: [
+        "Enable ultra-fast connectivity",
+        "Support massive IoT deployments",
+        "Reduce latency significantly",
+        "Future-proof network infrastructure"
+      ],
+      marketPrice: "$6,000-10,000/month",
+      savings: "Save up to $6,500/month"
+    },
+    {
+      name: "Zero Trust Security Architecture",
+      description: "Comprehensive zero trust security implementation with identity verification, micro-segmentation, and continuous monitoring.",
+      price: "$2,199/month",
+      features: [
+        "Zero trust architecture design",
+        "Identity and access management",
+        "Micro-segmentation",
+        "Continuous monitoring",
+        "Threat detection",
+        "Compliance implementation",
+        "Security training",
+        "Incident response"
+      ],
+      benefits: [
+        "Enhance security posture by 95%",
+        "Reduce breach risk by 90%",
+        "Ensure compliance requirements",
+        "Protect sensitive data"
+      ],
+      marketPrice: "$4,000-6,000/month",
+      savings: "Save up to $3,800/month"
+    },
+    {
+      name: "Green IT Solutions",
+      description: "Sustainable IT infrastructure and practices including energy optimization, carbon footprint reduction, and eco-friendly technology implementation.",
+      price: "$1,299/month",
+      features: [
+        "Energy optimization",
+        "Carbon footprint analysis",
+        "Eco-friendly hardware",
+        "Sustainable practices",
+        "Waste reduction",
+        "Renewable energy integration",
+        "Compliance reporting",
+        "Sustainability metrics"
+      ],
+      benefits: [
+        "Reduce energy costs by 40%",
+        "Improve sustainability metrics",
+        "Meet environmental regulations",
+        "Enhance brand reputation"
+      ],
+      marketPrice: "$2,200-3,500/month",
+      savings: "Save up to $2,200/month"
+    },
+    {
+      name: "AI Infrastructure Management",
+      description: "Specialized AI infrastructure management including GPU clusters, machine learning pipelines, and AI model deployment and monitoring.",
+      price: "$2,799/month",
+      features: [
+        "GPU cluster management",
+        "ML pipeline automation",
+        "Model deployment",
+        "Performance monitoring",
+        "Resource optimization",
+        "Security management",
+        "Scaling and load balancing",
+        "Cost optimization"
+      ],
+      benefits: [
+        "Optimize AI performance by 80%",
+        "Reduce AI infrastructure costs by 50%",
+        "Accelerate model deployment",
+        "Ensure AI system reliability"
+      ],
+      marketPrice: "$4,500-7,000/month",
+      savings: "Save up to $4,200/month"
     }
   ];
 

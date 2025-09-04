@@ -1,2 +1,6 @@
+<<<<<<< HEAD
  export const SEOEnhancer = ({ title = 'Zion Tech Group - Leading AI & Technology Solutions', description = 'Leading provider of innovative technology solutions, AI - powered services, and digital transformation expertise. We help businesses thrive in the digital age.', keywords = ['AI solutions', technology consulting',digital transformation', cloud computing',cybersecurity', machine learning'], image = '/images / zion - tech - group - og.jpg', url = 'https:''";"';
 ';';
+=======
+export const SEOEnhancer = ({ title = 'Zion Tech Group - Leading AI & Technology Solutions',description = 'Leading provider of innovative technology solutions,AI - powered services,and digital transformation expertise. We help businesses thrive in the digital age.',keywords = ['AI solutions',technology consulting',digital transformation',cloud computing',cybersecurity',machine learning'],image = '/images / zion - tech - group - og.jpg',url = 'https:''";"
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b

@@ -1,12 +1,12 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
-
-export default function Page(props: any) {
-> {
-
+;
+export default function Page(props: any) {;
+> {;
   data: SearchResul t[];
   onResultsChange?: (results: SearchResul t[]) => void;
   placeholder?: string;
   showFilters?: boolean}
+<<<<<<< HEAD
 
 export const SearchAndFilterSystem: Reac t.FC<SearchAndFilterSystemProps> = ({
 
@@ -15,50 +15,53 @@ export const SearchAndFilterSystem: Reac t.FC<SearchAndFilterSystemProps> = ({
   placeholder = "Search services, articles, team members...",
   showFilters = true}) => {';
 ';';
+=======
+;
+export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({;
+  data,;
+  onResultsChange,;
+  placeholder = "Search services, articles, team members...",;
+  showFilters = true}) => {;
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
   const [searchQuery, setSearchQuery] = useState<any>('');
   const [isSearchFocused, setIsSearchFocused] = useState<any>(false);
   const [activeFilters, setActiveFilters] = useState<Set<string>>(new Set());';
   const [showFilterPanel, setShowFilterPanel] = useState<any>(false);';';
   const [selectedCategory, setSelectedCategory] = useState<any>('all');';';
   const [sortBy, setSortBy] = useState<any>('relevance');
-
-  // Filter options
-  
+;
+  // Filter options;
       return acc}, {} as Record < string, any>) ;
-
+;
       return acc}, {} as Record < string, any>) ;
-        results = results.sort((a, b) => {
-
+        results = results.sort((a, b) => {;
           if(!a.rating || !b.rating) return 0;
           return b.rating - a.rating});';
         break;';';
       case 'name':        results = results.sort((a, b) => a.title.localeCompare(b.title) ) ;
         break;
-      default: // relevance
-        // Keep original order for relevance
+      default: // relevance;
+        // Keep original order for relevance;
         break;
-
+;
     return results}, [data, searchQuery, selectedCategory, activeFilters, sortBy]) ;
-
-  // Update parent component with results
-  useEffect(() => {
-  // TODO: Add dependencies if needed
-
-  return () => {
-    // Cleanup function
+;
+  // Update parent component with results;
+  useEffect(() => {;
+  // TODO: Add dependencies if needed;
+  return () => {;
+    // Cleanup function;
   };
 }, []);, []);
     onResultsChange?.(filteredResults) }, [filteredResults, onResultsChange]) ;
-
-  // Toggle filter
-  
-    if(newFilters.has(filterId)) {
-
-      newFilters.delete(filterId)} else {
-
+;
+  // Toggle filter;
+    if(newFilters.has(filterId)) {;
+      newFilters.delete(filterId)} else {;
       newFilters.add(filterId);
-
+;
     setActiveFilters(newFilters) };
+<<<<<<< HEAD
 
   // Clear all filters';
   ';';
@@ -78,18 +81,37 @@ export const SearchAndFilterSystem: Reac t.FC<SearchAndFilterSystemProps> = ({
 
   // Get category color';
   ';';
+=======
+;
+  // Clear all filters;
+    setSelectedCategory('all');
+    setSortBy('relevance')};
+;
+  // Get icon for type;
+  const getTypeIcon = (props: any) => {;
+    switch(type) {;
+'";
+      case 'service': return <Zap className="w-4 h-4"   />;'";
+      case 'article': return <Tag className="w-4 h-4"   />;'";
+      case 'team': return <Users className="w-4 h-4"   />;'";
+      case 'technology': return <Brain className="w-4 h-4"   />;";
+      default: retur n <Globe className="w-4 h-4"   />};
+;
+  // Get category color;
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
     return colors[category as keyof typeof colors] || 'text-zinc-400'};
-  return ("
-    <div className="w-full max-w-6xl mx-auto">
-      {/* Search Bar */}"
-      <div className="relative mb-6">"
-        <div className="relative">"
-          <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zinc-400 w-5 h-5"   />
-          <input"            type="text"
+  return (";
+    <div className="w-full max-w-6xl mx-auto">;
+      {/* Search Bar */}";
+      <div className="relative mb-6">";
+        <div className="relative">";
+          <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zinc-400 w-5 h-5"   />;
+          <input"            type="text";
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             onFocus={() => setIsSearchFocused(true)}
             onBlur={() => setTimeout(() => setIsSearchFocused(false), 200)}
+<<<<<<< HEAD
             placeholder={placeholder}"
             className="w-full pl-12 pr-4 py-4 bg-zinc-900/50 border border-zinc-700/50 rounded-xl text-white placeholder-zinc-400 focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan focus: borde r-transparent transition-all duration-300 backdrop-blur-md"
           />';
@@ -98,120 +120,139 @@ export const SearchAndFilterSystem: Reac t.FC<SearchAndFilterSystemProps> = ({
               onClick={() => setSearchQuery('')}"
               className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zinc-400 hover: tex t-white transition-colors"
 "
+=======
+            placeholder={placeholder}";
+            className="w-full pl-12 pr-4 py-4 bg-zinc-900/50 border border-zinc-700/50 rounded-xl text-white placeholder-zinc-400 focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan focus: borde r-transparent transition-all duration-300 backdrop-blur-md";
+          />;
+          {searchQuery && (;
+            <button';
+              onClick={() => setSearchQuery('')}";
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zinc-400 hover: tex t-white transition-colors";
+";
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
               <X className="w-5 h-5"   />            </button>;
           )}
-        </div>
-
+        </div>;
         {/* Search Suggestions */}
-        <AnimatePresence>
-          {isSearchFocused && searchQuery && (<motion.div
+        <AnimatePresence>;
+          {isSearchFocused && searchQuery && (<motion.div;
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}"
-              className="absolute top-full left-0 right-0 mt-2 bg-zinc-900/95 backdrop-blur-md border border-zinc-700/50 rounded-xl shadow-2xl z-50 max-h-64 overflow-y-auto"
-
+              exit={{ opacity: 0, y: -10 }}";
+              className="absolute top-full left-0 right-0 mt-2 bg-zinc-900/95 backdrop-blur-md border border-zinc-700/50 rounded-xl shadow-2xl z-50 max-h-64 overflow-y-auto";
               {filteredResults.slice(0, 5).map((result) => (;
-                <div
-                  key={result.id}"
-                  className="p-3 hover: b g-zinc-800/50 transition-colors cursor-pointer border-b border-zinc-700/30 last: borde r-b-0"
-"
-                  <div className="flex items-center gap-3">"
-                    <span className="text-zion-cyan">
+                <div;
+                  key={result.id}";
+                  className="p-3 hover: b g-zinc-800/50 transition-colors cursor-pointer border-b border-zinc-700/30 last: borde r-b-0";
+";
+                  <div className="flex items-center gap-3">";
+                    <span className="text-zion-cyan">;
                       {getTypeIcon(result.type)}
-                    </span>"
-                    <div className="flex-1 min-w-0">"
-                      <div className="text-sm font-medium text-white">{result.title}</div>"
-                      <div className="text-xs text-zinc-400 truncate">{result.description}</div>
-                    </div>
-                    <span className={`text-xs px-2 py-1 rounded-full bg-zinc - 800 / 50 ${getCategoryColor(result.category) }`}>
+                    </span>";
+                    <div className="flex-1 min-w-0">";
+                      <div className="text-sm font-medium text-white">{result.title}</div>";
+                      <div className="text-xs text-zinc-400 truncate">{result.description}</div>;
+                    </div>;
+                    <span className={`text-xs px-2 py-1 rounded-full bg-zinc - 800 / 50 ${getCategoryColor(result.category) }`}>;
                       {result.category}
-                    </span>
-                  </div>
+                    </span>;
+                  </div>;
                 </div>;) ) }
             </motion.div>) }
-        </AnimatePresence>
-      </div>
-
+        </AnimatePresence>;
+      </div>;
       {/* Filters and Sort */}
-      {showFilters && ("
-        <div className="flex flex-wrap items-center gap-4 mb-6">
-          {/* Category Filter */}"
-          <div className="relative">
-            <select
+      {showFilters && (";
+        <div className="flex flex-wrap items-center gap-4 mb-6">;
+          {/* Category Filter */}";
+          <div className="relative">;
+            <select;
               value={selectedCategory}
-              onChange={(e) => setSelectedCategory(e.target.value)}"
-              className="appearance-none pl-4 pr-10 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white text-sm focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan focus: borde r-transparent transition-all duration-300"
-"
-              <option value="all">All Categories</option>
-              {filterOptions.categories.map((category) => (
-                <option key={category.id} value={category.value}>
-                  {category.label} ({category.count})
-                </option>
+              onChange={(e) => setSelectedCategory(e.target.value)}";
+              className="appearance-none pl-4 pr-10 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white text-sm focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan focus: borde r-transparent transition-all duration-300";
+";
+              <option value="all">All Categories</option>;
+              {filterOptions.categories.map((category) => (;
+                <option key={category.id} value={category.value}>;
+                  {category.label} ({category.count});
+                </option>;
               ))}
-            </select>"
-            <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zinc-400 w-4 h-4 pointer-events-none"   />          </div>
-
-          {/* Sort Options */}"
-          <div className="relative">
-            <select
+            </select>";
+            <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zinc-400 w-4 h-4 pointer-events-none"   />          </div>;
+          {/* Sort Options */}";
+          <div className="relative">;
+            <select;
               value={sortBy}
-              onChange={(e) => setSortBy(e.target.value)}"
-              className="appearance-none pl-4 pr-10 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white text-sm focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan focus: borde r-transparent transition-all duration-300"
-"
-              <option value="relevance">Relevance</option>"
-              <option value="date">Date</option>"
-              <option value="rating">Rating</option>"
-              <option value="name">Name</option>
-            </select>"
-            <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zinc-400 w-4 h-4 pointer-events-none"   />          </div>
-
+              onChange={(e) => setSortBy(e.target.value)}";
+              className="appearance-none pl-4 pr-10 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white text-sm focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan focus: borde r-transparent transition-all duration-300";
+";
+              <option value="relevance">Relevance</option>";
+              <option value="date">Date</option>";
+              <option value="rating">Rating</option>";
+              <option value="name">Name</option>;
+            </select>";
+            <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zinc-400 w-4 h-4 pointer-events-none"   />          </div>;
           {/* Filter Toggle */}
+<<<<<<< HEAD
           <button';
             onClick={() => setShowFilterPanel(!showFilterPanel)}`';';
 className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${showFilterPanel'';';
                 ? 'bg-zion-cyan text-white''';';
                 : 'bg-zinc-900/50 text-zinc-300 hover: tex t-white border border-zinc-700/50'`
+=======
+          <button;
+            onClick={() => setShowFilterPanel(!showFilterPanel)}`;
+className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${showFilterPanel';
+                ? 'bg-zion-cyan text-white'';
+                : 'bg-zinc-900/50 text-zinc-300 hover: tex t-white border border-zinc-700/50'`;
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
             }`}
-"
-            <Filter className="w-4 h-4"   />            Filters
-            {activeFilters.size > 0 && ("
-              <span className="ml-1 px-2 py-0.5 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full">
+";
+            <Filter className="w-4 h-4"   />            Filters;
+            {activeFilters.size > 0 && (";
+              <span className="ml-1 px-2 py-0.5 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full">;
                 {activeFilters.size}
               </span>) }
-          </button>
-
+          </button>;
           {/* Clear Filters */}
-          {activeFilters.size > 0 && (
-            <button
-              onClick={clearAllFilters}"
-              className="px-3 py-2 text-sm text-zinc-400 hover: tex t-white transition-colors"
-
-              Clear all
+          {activeFilters.size > 0 && (;
+            <button;
+              onClick={clearAllFilters}";
+              className="px-3 py-2 text-sm text-zinc-400 hover: tex t-white transition-colors";
+              Clear all;
             </button>) }
+<<<<<<< HEAD
             </div>
   );
 }
+=======
+        </div>) }
+;
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
       {/* Filter Panel */}
-      <AnimatePresence>
-        {showFilterPanel && (<motion.div
-            initial = {
-
-  { height: 0,
-  opacity: 0
-
+      <AnimatePresence>;
+        {showFilterPanel && (<motion.div;
+            initial = {;
+  { height: 0,;
+  opacity: 0;
 }}
+<<<<<<< HEAD
             animate = {';
 ';';
   { height: 'auto',
   opacity: 1
 
+=======
+            animate = {;
+  { height: 'auto',;
+  opacity: 1;
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 }}
-            exit = {
-
-  { height: 0,
-  opacity: 0
-
+            exit = {;
+  { height: 0,;
+  opacity: 0;
 }}
+<<<<<<< HEAD
             transition = {
 ';
   { duration: 0.3,';';
@@ -224,26 +265,38 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
               <h3 className="text-sm font-medium text-white mb-4">Advanced Filters</h3>
 "
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-4">
+=======
+            transition = {;
+  { duration: 0.3,;
+  ease: 'easeOut';
+}}";
+            className="mb-6 overflow-hidden";
+";
+            <div className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl">";
+              <h3 className="text-sm font-medium text-white mb-4">Advanced Filters;
+";
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-4">;
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
                 {/* Type Filters */}
-                <div>"
-                  <h4 className="text-xs font-medium text-zinc-400 mb-2 uppercase tracking-wide">Type</h4>"
-                  <div className="space-y-2">
-                    {filterOptions.types.map((type) => ("
-                      <label key={type.id} className="flex items-center gap-2 cursor-pointer">
-                        <input"
-                          type="checkbox"
+                <div>";
+                  <h4 className="text-xs font-medium text-zinc-400 mb-2 uppercase tracking-wide">Type</h4>";
+                  <div className="space-y-2">;
+                    {filterOptions.types.map((type) => (";
+                      <label key={type.id} className="flex items-center gap-2 cursor-pointer">;
+                        <input";
+                          type="checkbox";
                           checked={activeFilters.has(type.value)}
-                          onChange={() => toggleFilter(type.value)}"
-                          className="w-4 h-4 text-zion-cyan bg-zinc-800 border-zinc-600 rounded focus: rin g-zion-cyan focus: rin g-2"
-                        />"
-                        <span className="text-sm text-zinc-300">{type.label}</span>"
-                        <span className="text-xs text-zinc-500">({type.count})</span>
-                      </label>
+                          onChange={() => toggleFilter(type.value)}";
+                          className="w-4 h-4 text-zion-cyan bg-zinc-800 border-zinc-600 rounded focus: rin g-zion-cyan focus: rin g-2";
+                        />";
+                        <span className="text-sm text-zinc-300">{type.label}</span>";
+                        <span className="text-xs text-zinc-500">({type.count})</span>;
+                      </label>;
                     ))}
-                  </div>
-                </div>
-
+                  </div>;
+                </div>;
                 {/* Tag Filters */}
+<<<<<<< HEAD
                 <div>"
                   <h4 className="text-xs font-medium text-zinc-400 mb-2 uppercase tracking-wide">Popular Tags</h4>"';
                   <div className="flex flex-wrap gap-2">';';
@@ -254,14 +307,26 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
                         className={`px-3 py-1 text-xs rounded-full transition-all duration-300 ${activeFilters.has(tag.toLowerCase())';';
                             ? 'bg-zion-cyan text-white''';';
                             : 'bg-zinc-800/50 text-zinc-300 hover: b g-zinc-700/50'`
+=======
+                <div>";
+                  <h4 className="text-xs font-medium text-zinc-400 mb-2 uppercase tracking-wide">Popular Tags</h4>";
+                  <div className="flex flex-wrap gap-2">;
+                    {['AI',Cloud',Security',DevOps',Digital Transformation',Machine Learning'].map((tag) => (;
+                      <button;
+                        key={tag}
+                        onClick={() => toggleFilter(tag.toLowerCase())}`;
+                        className={`px-3 py-1 text-xs rounded-full transition-all duration-300 ${activeFilters.has(tag.toLowerCase());
+                            ? 'bg-zion-cyan text-white'';
+                            : 'bg-zinc-800/50 text-zinc-300 hover: b g-zinc-700/50'`;
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
                         }`}
-
+;
                         {tag}
                       </button>) ) }
-                  </div>
-                </div>
-
+                  </div>;
+                </div>;
                 {/* Location Filters */}
+<<<<<<< HEAD
                 <div>"
                   <h4 className="text-xs font-medium text-zinc-400 mb-2 uppercase tracking-wide">Location</h4>"';
                   <div className="space-y-2">';';
@@ -269,73 +334,77 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
                       <label key={location} className="flex items-center gap-2 cursor-pointer">
                         <input"
                           type="checkbox"
+=======
+                <div>";
+                  <h4 className="text-xs font-medium text-zinc-400 mb-2 uppercase tracking-wide">Location</h4>";
+                  <div className="space-y-2">;
+                    {['Global',North America',Europe',Asia Pacific'].map((location) => (";
+                      <label key={location} className="flex items-center gap-2 cursor-pointer">;
+                        <input";
+                          type="checkbox";
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
                           checked={activeFilters.has(location.toLowerCase())}
-                          onChange={() => toggleFilter(location.toLowerCase())}"
-                          className="w-4 h-4 text-zion-cyan bg-zinc-800 border-zinc-600 rounded focus: rin g-zion-cyan focus: rin g-2"
-                        />"
-                        <span className="text-sm text-zinc-300">{location}</span>
-                      </label>
+                          onChange={() => toggleFilter(location.toLowerCase())}";
+                          className="w-4 h-4 text-zion-cyan bg-zinc-800 border-zinc-600 rounded focus: rin g-zion-cyan focus: rin g-2";
+                        />";
+                        <span className="text-sm text-zinc-300">{location}</span>;
+                      </label>;
                     ))}
-                  </div>
-                </div>
-              </div>
+                  </div>;
+                </div>;
+              </div>;
             </div>;
           </motion.div>) }
-      </AnimatePresence>
-
-      {/* Results Count */}"
+      </AnimatePresence>;
+      {/* Results Count */}";
       <div className="mb-4 text-sm text-zinc-400">;
-        Showing {filteredResults.length} of {data.length} results;"`
+        Showing {filteredResults.length} of {data.length} results;"`;
         {searchQuery && ` for "${searchQuery}"`}
-      </div>
-
-      {/* Search Results */}"
+      </div>;
+      {/* Search Results */}";
       <div className="space-y-4"> {filteredResults.map((result) => (;
-          <motion.div
+          <motion.div;
             key={result.id}
-            initial = {
-
-  { opacity: 0,
-  y: 2 0
-
+            initial = {;
+  { opacity: 0,;
+  y: 2 0;
 }}
-            animate = {
-
-  { opacity: 1,
-  y: 0
-
-}}"
-            className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover: b g-zinc-900/50 transition-all duration-300 cursor-pointer group"
-"
-            <div className="flex items-start gap-4">"
-              <div className="flex-shrink-0 p-3 bg-zinc-800/50 rounded-lg text-zion-cyan group-hover: b g-zion-cyan/20 transition-colors">
+            animate = {;
+  { opacity: 1,;
+  y: 0;
+}}";
+            className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover: b g-zinc-900/50 transition-all duration-300 cursor-pointer group";
+";
+            <div className="flex items-start gap-4">";
+              <div className="flex-shrink-0 p-3 bg-zinc-800/50 rounded-lg text-zion-cyan group-hover: b g-zion-cyan/20 transition-colors">;
                 {getTypeIcon(result.type)}
-              </div>
-"
-              <div className="flex-1 min-w-0">"
-                <div className="flex items-start justify-between mb-2">"
-                  <h3 className="text-lg font-semibold text-white group-hover: tex t-zion-cyan transition-colors">
+              </div>;
+";
+              <div className="flex-1 min-w-0">";
+                <div className="flex items-start justify-between mb-2">";
+                  <h3 className="text-lg font-semibold text-white group-hover: tex t-zion-cyan transition-colors">;
                     {result.title}
-                  </h3>"
-                  <div className="flex items-center gap-2">
-                    {result.rating && ("
-                      <div className="flex items-center gap-1 text-yellow-400">"
-                        <Star className="w-4 h-4 fill-current"   />"                        <span className="text-sm">{result.rating}</span>
-                      </div>
-                    )}`
-                    <span className={`text-xs px-2 py-1 rounded-full bg-zinc-800/50 ${getCategoryColor(result.category)}`}>
+                  ";
+                  <div className="flex items-center gap-2">;
+                    {result.rating && (";
+                      <div className="flex items-center gap-1 text-yellow-400">";
+                        <Star className="w-4 h-4 fill-current"   />"                        <span className="text-sm">{result.rating}</span>;
+                      </div>;
+                    )}`;
+                    <span className={`text-xs px-2 py-1 rounded-full bg-zinc-800/50 ${getCategoryColor(result.category)}`}>;
                       {result.category}
-                    </span>
-                  </div>
-                </div>
-"
-                <p className="text-zinc-300 mb-3 line-clamp-2">{result.description}</p>
-"
-                <div className="flex items-center gap-4 text-sm text-zinc-400">
-                  {result.location && ("
-                    <div className="flex items-center gap-1">"
-                      <MapPin className="w-4 h-4"   />
+                    </span>;
+                  </div>;
+                </div>;
+";
+                <p className="text-zinc-300 mb-3 line-clamp-2">{result.description}</p>;
+";
+                <div className="flex items-center gap-4 text-sm text-zinc-400">;
+                  {result.location && (";
+                    <div className="flex items-center gap-1">";
+                      <MapPin className="w-4 h-4"   />;
                       {result.location}
+<<<<<<< HEAD
                         </div>
   );
 }
@@ -352,26 +421,42 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
                 </div>
               </div>
             </div>
+=======
+                    </div>;
+                  )}
+                  {result.date && (";
+                    <div className="flex items-center gap-1">";
+                      <Calendar className="w-4 h-4"   />;
+                      {result.date}
+                    </div>;
+                  )}";
+                  <div className="flex items-center gap-1">";
+                    <Tag className="w-4 h-4"   />;
+                    {result.tags.slice(0, 3).join(',)}`;
+                    {result.tags.length > 3 && ` +${result.tags.length-3} more`}                  </div>;
+                </div>;
+              </div>;
+            </div>;
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
           </motion.div>;) ) }
-      </div>
-
+      </div>;
       {/* No Results */}
-      {filteredResults.length === 0 && (<motion.div
+      {filteredResults.length === 0 && (<motion.div;
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}"
-          className="text-center py-12"
-"
-          <Search className="w-16 h-16 text-zinc-600 mx-auto mb-4"   />"
-          <h3 className="text-xl font-medium text-zinc-300 mb-2">No results found</h3>"          <p className="text-zinc-400 mb-4">
-            Try adjusting your search terms or filters
-          </p>
-          <button
-            onClick={clearAllFilters}"
-            className="px-4 py-2 bg-zion-cyan text-white rounded-lg hover: b g-zion-cyan/80 transition-colors"
-
-            Clear all filters
-          </button>
+          animate={{ opacity: 1 }}";
+          className="text-center py-12";
+";
+          <Search className="w-16 h-16 text-zinc-600 mx-auto mb-4"   />";
+          <h3 className="text-xl font-medium text-zinc-300 mb-2">No results found"          <p className="text-zinc-400 mb-4">;
+            Try adjusting your search terms or filters;
+          </p>;
+          <button;
+            onClick={clearAllFilters}";
+            className="px-4 py-2 bg-zion-cyan text-white rounded-lg hover: b g-zion-cyan/80 transition-colors";
+            Clear all filters;
+          </button>;
         </motion.div>) }
+<<<<<<< HEAD
         </div>
   );
 }
@@ -385,3 +470,23 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
 </Set>
 </any>';
 </SearchAndFilterSystemProps>;';;';
+=======
+    </div>) }
+;
+}
+;
+}
+'"`;
+</motion>;
+</motion>;
+</motion>;
+</motion>;
+</any>;
+</any>;
+</any>;
+</string>;
+</Set>;
+</any>;
+</any>;
+</SearchAndFilterSystemProps>;
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b

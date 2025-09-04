@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 export interface ComprehensivePricingService { id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; marketPrice: string; roi: string; estimatedDelivery: string; supportLevel: string; contactInfo: { phone: string; email: string; website: string}; competitors?: string[]; marketSize?: string; demoUrl?: string; documentationUrl?: string}; export const COMPREHENSIVE_PRICING_2025: ComprehensivePricingServic e[] = [;
+=======
+export interface ComprehensivePricingService { id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; marketPrice: string; roi: string; estimatedDelivery: string; supportLevel: string; contactInfo: { phone: string; email: string; website: string}; competitors?: string[]; marketSize?: string; demoUrl?: string; documentationUrl?: string}; export const COMPREHENSIVE_PRICING_2025: ComprehensivePricingServic e[] = [;
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b

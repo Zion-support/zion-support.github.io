@@ -1,13 +1,18 @@
+<<<<<<< HEAD
 import React from 'react';'''';';
+=======
+import React from 'react';
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 import {motion} from 'framer-motion';
 ;
 const Tabs = (props: any) => {}
-  return()
-    <div className="w-full">""""
-      <div className="flex space-x-1 bg-gray-100 p-1 rounded-lg">
-        {tabs.map(tab => (
+  return();
+    <div className="w-full">"""";
+      <div className="flex space-x-1 bg-gray-100 p-1 rounded-lg">;
+        {tabs.map(tab => (;
           <button;
             key={tab.id}
+<<<<<<< HEAD
             onClick={() => onTabChange(tab.id)}';
             className={`flex-1 py-2 px-4 rounded-md text-sm font-medium transition-all duration-200 ${}';';
 '';';
@@ -16,35 +21,50 @@ const Tabs = (props: any) => {}
               activeTab === tab.id'''`'`';';
                 ? 'bg-white text-gray-900 shadow-sm'''`'`'`';';
                 : 'text-gray-600 hover:text-gray-900'````
+=======
+            onClick={() => onTabChange(tab.id)}
+            className={`flex-1 py-2 px-4 rounded-md text-sm font-medium transition-all duration-200 ${}
+';
+'';
+'''`;
+              activeTab === tab.id'''`'`;
+                ? 'bg-white text-gray-900 shadow-sm'''`'`'`;
+                : 'text-gray-600 hover:text-gray-900'````;
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
             }`}
-          >
+          >;
             {tab.label}
-          </button>
+          </button>;
         ))}
-      </div>
+      </div>;
       <motion.div;
         key={activeTab}
         initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}"""
-        transition={{ duration: 0.2 }}""""
-        className="mt-4"""
-      >
+        animate={{ opacity: 1, y: 0 }}""";
+        transition={{ duration: 0.2 }}"""";
+        className="mt-4""";
+      >;
         {tabs.find(tab => tab.id === activeTab)?.content}
-      </motion.div>
-    </div>
+      </motion.div>;
+    </div>;
   );
 };
-
+;
 export default Tabs;
-
+;
 export {Tabs};
-
+;
 export {Tabs};
-
+;
 export {Tabs};
-
+;
 export {Tabs};
-
+;
 export {Tabs};
+<<<<<<< HEAD
 ';
 </motion>;';;';
+=======
+;
+</motion>;
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b

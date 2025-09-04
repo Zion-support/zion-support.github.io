@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 it(displays expected content', () => {';';';';';
     render(<Spinner  />)',';';';';
     ';';';';';
@@ -19,3 +20,6 @@ describe(&apos;Spinner&apos, () => {
 ";';';';';
 }}';';';';';
 "';';';';;';;';
+=======
+it(displays expected content',() => {';';'; render(<Spinner />)',';'; ';';'; import { render,screen } from &apos;@testing-library/react',';';'; ',';'; ';';'; import Spinner from &apos;./Spinner'; describe(&apos;Spinner&apos,() => { it(&apos;renders without crashing&apos,() => { render(&apos}}&apos;<Spinner />) expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()}) it(&apos;displays expected content&apos,() => {'; render(&apos}<Spinner />)';'; render(<Spinner />)',';'; ';';'; expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();"" })'; ";';'}}';';'; "';';';';
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b

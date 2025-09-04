@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-
-interface ConnectWalletButtonProps {
-
+;
+interface ConnectWalletButtonProps {;
   onConnect?: (walletType: string) => void;
   onDisconnect?: () => void;
   isConnected?: boolean;
   walletAddress?: string;
   className?: string;
-
+;
 }
+<<<<<<< HEAD
 
 const ConnectWalletButton: Reac t.FC<ConnectWalletButtonProps> = ({
   onConnect,
@@ -17,34 +17,53 @@ const ConnectWalletButton: Reac t.FC<ConnectWalletButtonProps> = ({
   walletAddress,';';
   className = ''
 }) => {
+=======
+;
+const ConnectWalletButton: React.FC<ConnectWalletButtonProps> = ({;
+  onConnect,;
+  onDisconnect,;
+  isConnected = false,;
+  walletAddress,;
+  className = '';
+}) => {;
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
   const [isConnecting, setIsConnecting] = useState<any>(false);
-
-  const handleConnect = async () => {
+;
+  const handleConnect = async () => {;
     setIsConnecting(true);
-    try {
-      // Simulate wallet connection
+    try {;
+      // Simulate wallet connection;
       await new Promise(resolve => setTimeout(resolve, 1000));
+<<<<<<< HEAD
       ';
       if (onConnect) {';';
         onConnect('metamask'); // Default to MetaMask for demo
       }';
     } catch (error) {';';
+=======
+;
+      if (onConnect) {;
+        onConnect('metamask'); // Default to MetaMask for demo;
+      }
+    } catch (error) {;
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
       console.error('Failed to connect wallet:', error);
-    } finally {
+    } finally {;
       setIsConnecting(false);
     }
   };
-
-  const handleDisconnect = (props: any) => {
-    if (onDisconnect) {
+;
+  const handleDisconnect = (props: any) => {;
+    if (onDisconnect) {;
       onDisconnect();
     }
   };
-
-  const formatAddress = (props: any) => {
+;
+  const formatAddress = (props: any) => {;
     if (address.length <= 10) return address;
     return `${address.slice(0, 6)}...${address.slice(-4)}`;
   };
+<<<<<<< HEAD
 
   if (isConnected && walletAddress) {
     return (
@@ -54,41 +73,57 @@ const ConnectWalletButton: Reac t.FC<ConnectWalletButtonProps> = ({
           <span className="text-sm font-medium">Connected</span>
         </div>
         <span className="text-sm text-gray-600 font-mono">
+=======
+;
+  if (isConnected && walletAddress) {;
+    return (;
+      <div className={`flex items-center space-x-3 ${className}`}>;
+        <div className="flex items-center space-x-2 px-3 py-2 bg-green-100 text-green-800 rounded-lg">;
+          <div className="w-2 h-2 bg-green-500 rounded-full"></div>;
+          <span className="text-sm font-medium">Connected</span>;
+        </div>;
+        <span className="text-sm text-gray-600 font-mono">;
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
           {formatAddress(walletAddress)}
-        </span>
-        <button
+        </span>;
+        <button;
           onClick={handleDisconnect}
-          className="px-3 py-2 text-sm text-red-600 hover: tex t-red-800 hover: b g-red-50 rounded-lg transition-colors"
-        >
-          Disconnect
-        </button>
-      </div>
+          className="px-3 py-2 text-sm text-red-600 hover: tex t-red-800 hover: b g-red-50 rounded-lg transition-colors";
+        >;
+          Disconnect;
+        </button>;
+      </div>;
     );
   }
-
-  return (
-    <button
+;
+  return (;
+    <button;
       onClick={handleConnect}
       disabled={isConnecting}
       className={`px-6 py-3 bg-blue-600 text-white rounded-lg hover: b g-blue-700 disabled: opacit y-50 disabled: curso r-not-allowed transition-colors flex items-center space-x-2 ${className}`}
-    >
-      {isConnecting ? (
-        <>
-          <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-          <span>Connecting...</span>
-        </>
-      ) : (
-        <>
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"  />
-          </svg>
-          <span>Connect Wallet</span>
-        </>
+    >;
+      {isConnecting ? (;
+        <>;
+          <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>;
+          <span>Connecting...</span>;
+        </>;
+      ) : (;
+        <>;
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"  />;
+          </svg>;
+          <span>Connect Wallet</span>;
+        </>;
       )}
-    </button>
+    </button>;
   );
 };
-
+;
 export default ConnectWalletButton;
+<<<<<<< HEAD
 </any>';
 </ConnectWalletButtonProps>;';;';
+=======
+</any>;
+</ConnectWalletButtonProps>;
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b

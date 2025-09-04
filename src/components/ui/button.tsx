@@ -1,12 +1,19 @@
 import React from 'react';
 
+<<<<<<< HEAD
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {';
   children: Reac t.ReactNode;';';
   variant?: 'default' | 'outline' | 'ghost' | 'link';';';
+=======
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  children: React.ReactNode;
+  variant?: 'default' | 'outline' | 'ghost' | 'link';
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
   size?: 'sm' | 'md' | 'lg' | 'icon';
   asChild?: boolean;
   className?: string;
 }
+<<<<<<< HEAD
 ';
 export function Button(props: any) {';';
   const baseClasses = 'inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible: outlin e-none focus-visible: rin g-2 focus-visible: rin g-ring focus-visible: rin g-offset-2 disabled: opacit y-50 disabled: pointe r-events-none';
@@ -16,6 +23,23 @@ export function Button(props: any) {';';
     outline: 'border border-input bg-background hover: b g-accent hover: tex t-accent-foreground',';';
     ghost: 'hover: b g-accent hover: tex t-accent-foreground',';';
     link: 'text-primary underline-offset-4 hover: underlin e'
+=======
+
+export function Button({ 
+  variant = 'default', 
+  size = 'md', 
+  asChild = false, 
+  className = '', 
+  ...props 
+}: ButtonProps) {
+  const baseClasses = 'inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none';
+  
+  const variantClasses = {
+    default: 'bg-primary text-primary-foreground hover:bg-primary/90',
+    outline: 'border border-input bg-background hover:bg-accent hover:text-accent-foreground',
+    ghost: 'hover:bg-accent hover:text-accent-foreground',
+    link: 'text-primary underline-offset-4 hover:underline'
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
   };
   ';
   const sizeClasses = {';';
@@ -28,7 +52,7 @@ export function Button(props: any) {';';
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
 
   if (asChild) {
-    return <span className={classes}>{children}</span>;
+    return <span className={classes}>{props.children}</span>;
   }
 
   return (
@@ -36,8 +60,12 @@ export function Button(props: any) {';';
       className={classes}
       {...props}
     >
-      {children}
+      {props.children}
     </button>
   );
+<<<<<<< HEAD
 }';
 </HTMLButtonElement>;';;';
+=======
+}
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b

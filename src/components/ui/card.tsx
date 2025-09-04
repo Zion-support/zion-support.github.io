@@ -2,25 +2,35 @@ import React from 'react';
 
 interface CardProps extends React.HTMLAttributes<HTMLDivElement> {}
 
-export function Card(props: any) {
+export function Card({ className, ...props }: CardProps) {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-white">
+=======
+    <div className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className || ''}`}
+      {...props}
+     />
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
   );
 }
 
 interface CardHeaderProps extends React.HTMLAttributes<HTMLDivElement> {}
 
-export function CardHeader(props: any) {
+export function CardHeader({ className, ...props }: CardHeaderProps) {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-white">
+=======
+    <div className={`flex flex-col space-y-1.5 p-6 ${className || ''}`} {...props}  />
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
   );
 }
 
 interface CardTitleProps extends React.HTMLAttributes<HTMLHeadingElement> {}
 
-export function CardTitle(props: any) {
+export function CardTitle({ className, ...props }: CardTitleProps) {
   return (
-    <h3 className={`text-2xl font-semibold leading-none tracking-tight ${className}`}
+    <h3 className={`text-2xl font-semibold leading-none tracking-tight ${className || ''}`}
       {...props}
      />
   );
@@ -28,24 +38,29 @@ export function CardTitle(props: any) {
 
 interface CardDescriptionProps extends React.HTMLAttributes<HTMLParagraphElement> {}
 
-export function CardDescription(props: any) {
+export function CardDescription({ className, ...props }: CardDescriptionProps) {
   return (
-    <p className={`text-sm text-muted-foreground ${className}`} {...props}  />
+    <p className={`text-sm text-muted-foreground ${className || ''}`} {...props}  />
   );
 }
 
 interface CardContentProps extends React.HTMLAttributes<HTMLDivElement> {}
 
-export function CardContent(props: any) {
+export function CardContent({ className, ...props }: CardContentProps) {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-white">
+=======
+    <div className={`p-6 pt-0 ${className || ''}`} {...props}  />
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
   );
 }
 
 interface CardFooterProps extends React.HTMLAttributes<HTMLDivElement> {}
 
-export function CardFooter(props: any) {
+export function CardFooter({ className, ...props }: CardFooterProps) {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-white">
   );
 }
@@ -56,3 +71,8 @@ export function CardFooter(props: any) {
 </HTMLDivElement>
 </div>';
 </HTMLDivElement>;';;';
+=======
+    <div className={`flex items-center p-6 pt-0 ${className}`} {...props} />
+  );
+}
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b

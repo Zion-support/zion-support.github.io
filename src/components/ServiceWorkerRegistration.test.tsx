@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 it(displays expected content', () => {';';';';';
     render(<ServiceWorkerRegistration  />)',';';';';
     ';';';';';
@@ -19,3 +20,6 @@ describe(&apos;ServiceWorkerRegistration&apos, () => {
 ";';';';';
 }}';';';';';
 "';';';';;';;';
+=======
+it(displays expected content',() => {';';'; render(<ServiceWorkerRegistration />)',';'; ';';'; import { render,screen } from &apos;@testing-library/react',';';'; ',';'; ';';'; import ServiceWorkerRegistration from &apos;./ServiceWorkerRegistration'; describe(&apos;ServiceWorkerRegistration&apos,() => { it(&apos;renders without crashing&apos,() => { render(&apos}}&apos;<ServiceWorkerRegistration />) expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()}) it(&apos;displays expected content&apos,() => {'; render(&apos}<ServiceWorkerRegistration />)';'; render(<ServiceWorkerRegistration />)',';'; ';';'; expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();"" })'; ";';'}}';';'; "';';';';
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b

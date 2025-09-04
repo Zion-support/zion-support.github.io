@@ -5,16 +5,18 @@ import { MainNavigation } from './header/MainNavigation';';';
 =======
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-<<<<<<< HEAD
-import { MainNavigation } from './header/MainNavigation';
 import { Zap, Search, Sun, Moon, User, Menu, X, Phone, Mail } from 'lucide-react';
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/test-and-fix-pm2-automations-and-merge-2088
 import { Zap, Search, Sun, Moon, User, Menu, X } from 'lucide-react';
 >>>>>>> origin/main
+=======
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 
 interface HeaderProps {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   className?: string;
 
@@ -40,6 +42,8 @@ export function Header(props: HeaderProps) {
   const [theme, setTheme] = useState<'light' | 'dark'>('dark');
   const [searchQuery, setSearchQuery] = useState<string>('');
 =======
+=======
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 export function Header({ className = '' }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -47,8 +51,11 @@ export function Header({ className = '' }: HeaderProps) {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [theme, setTheme] = useState<'light' | 'dark'>('dark');
   const [searchQuery, setSearchQuery] = useState('');
+<<<<<<< HEAD
 >>>>>>> origin/main
 >>>>>>> cursor/test-and-fix-pm2-automations-and-merge-2088
+=======
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
   const location = useLocation();
 
   useEffect(() => {
@@ -79,13 +86,34 @@ const handleScroll = (props: any) => {
     }
   };
 
+<<<<<<< HEAD
+=======
+  const navigationItems = [
+    { name: 'Home', href: '/' },
+    { 
+      name: 'Services', 
+      href: '/services',
+      submenu: [
+        { name: 'All Services', href: '/services' },
+        { name: 'New Services 2025', href: '/new-services-2025' },
+        { name: 'AI Services', href: '/ai-services' },
+        { name: 'IT Services', href: '/it-services' },
+        { name: 'Micro SaaS', href: '/micro-saas' }
+      ]
+    },
+    { name: 'Solutions', href: '/solutions' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' }
+  ];
+
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
           ? "bg-black/95 backdrop-blur-md border-b border-gray-800/50 shadow-lg"
           : "bg-transparent"
-      } ${props.className || ''}`}
+      } ${className}`}
     >
       <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
@@ -104,17 +132,21 @@ const handleScroll = (props: any) => {
 
           {/* Desktop Navigation */}
 <<<<<<< HEAD
+<<<<<<< HEAD
           <MainNavigation className="hidden md: fle x"  />
 =======
 <<<<<<< HEAD
           <MainNavigation className="hidden md:flex" />
 =======
           <nav className="hidden md:flex items-center space-x-8">
+=======
+          <nav className="hidden lg:flex items-center space-x-8">
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
             {navigationItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
-                className={`text-gray-300 hover:text-cyan-400 transition-colors duration-200 ${
+                className={`text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium ${
                   location.pathname === item.href ? 'text-cyan-400' : ''
                 }`}
               >
@@ -122,15 +154,35 @@ const handleScroll = (props: any) => {
               </Link>
             ))}
           </nav>
+<<<<<<< HEAD
 >>>>>>> origin/main
 >>>>>>> cursor/test-and-fix-pm2-automations-and-merge-2088
+=======
+
+          {/* Contact Info - Hidden on small screens */}
+          <div className="hidden xl:flex items-center space-x-4 text-sm text-gray-400">
+            <div className="flex items-center space-x-2">
+              <Phone className="w-4 h-4" />
+              <span>+1 302 464 0950</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <Mail className="w-4 h-4" />
+              <span>kleber@ziontechgroup.com</span>
+            </div>
+          </div>
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 
           {/* Right side actions */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-2 lg:space-x-4">
             {/* Search */}
             <button
               onClick={() => setIsSearchOpen(!isSearchOpen)}
+<<<<<<< HEAD
               className="p-2 text-gray-300 hover: tex t-blue-400 transition-colors"
+=======
+              className="p-2 text-gray-300 hover:text-blue-400 transition-colors"
+              aria-label="Search"
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
             >
               <Search className="w-5 h-5"  />
             </button>
@@ -138,16 +190,28 @@ const handleScroll = (props: any) => {
             {/* Theme toggle */}
             <button
               onClick={toggleTheme}
+<<<<<<< HEAD
               className="p-2 text-gray-300 hover: tex t-blue-400 transition-colors"';
             >';';
               {theme === 'dark' ? <Sun className="w-5 h-5"  /> : <Moon className="w-5 h-5"  />}
+=======
+              className="p-2 text-gray-300 hover:text-blue-400 transition-colors"
+              aria-label="Toggle theme"
+            >
+              {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
             </button>
 
             {/* User menu */}
             <div className="relative">
               <button
                 onClick={() => setIsUserMenuOpen(!isUserMenuOpen)}
+<<<<<<< HEAD
                 className="flex items-center space-x-2 p-2 text-gray-400 hover: tex t-cyan-400 hover: b g-gray-800/50 rounded-md transition-colors duration-200"
+=======
+                className="flex items-center space-x-2 p-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-md transition-colors duration-200"
+                aria-label="User menu"
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
               >
                 <User className="w-5 h-5"  />
                 <span className="hidden sm: bloc k">Account</span>
@@ -157,6 +221,7 @@ const handleScroll = (props: any) => {
                 <div className="absolute right-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg py-1 z-50">
                   <Link
 <<<<<<< HEAD
+<<<<<<< HEAD
                     to="/login"
                     className="block px-4 py-2 text-sm text-gray-300 hover: b g-gray-700 hover: tex t-white"
                     onClick={() => setIsUserMenuOpen(false)}
@@ -166,28 +231,34 @@ const handleScroll = (props: any) => {
                     className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
                     onClick={() => setIsUserMenuOpen(false)}
 =======
+=======
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
                     to="/dashboard"
                     className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
->>>>>>> origin/main
+                    onClick={() => setIsUserMenuOpen(false)}
                   >
                     Dashboard
                   </Link>
                   <Link
-<<<<<<< HEAD
-                    to="/register"
-                    className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
-                    onClick={() => setIsUserMenuOpen(false)}
-=======
                     to="/login"
                     className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
+<<<<<<< HEAD
 >>>>>>> origin/main
 >>>>>>> cursor/test-and-fix-pm2-automations-and-merge-2088
+=======
+                    onClick={() => setIsUserMenuOpen(false)}
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
                   >
                     Sign In
                   </Link>
                   <Link
+<<<<<<< HEAD
                     to="/register"
                     className="block px-4 py-2 text-sm text-gray-300 hover: b g-gray-700 hover: tex t-white"
+=======
+                    to="/contact"
+                    className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
                     onClick={() => setIsUserMenuOpen(false)}
                   >
                     Sign Up
@@ -200,13 +271,19 @@ const handleScroll = (props: any) => {
             {/* Mobile menu button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+<<<<<<< HEAD
               className="md: hidden p-2 text-gray-300 hover: tex t-blue-400 transition-colors"
+=======
+              className="lg:hidden p-2 text-gray-300 hover:text-blue-400 transition-colors"
+              aria-label="Toggle mobile menu"
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
             >
               {isMobileMenuOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
             </button>
           </div>
         </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Search Bar */}
         {isSearchOpen && (
@@ -245,9 +322,11 @@ const handleScroll = (props: any) => {
                 <Search className="w-5 h-5" />
               </button>
 =======
+=======
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-900/95 backdrop-blur-md rounded-lg mt-2">
               {navigationItems.map((item) => (
                 <Link
@@ -261,6 +340,20 @@ const handleScroll = (props: any) => {
                   {item.name}
                 </Link>
               ))}
+              
+              {/* Mobile Contact Info */}
+              <div className="border-t border-gray-800 pt-3 mt-3 px-3">
+                <div className="text-sm text-gray-400 space-y-2">
+                  <div className="flex items-center space-x-2">
+                    <Phone className="w-4 h-4" />
+                    <a href="tel:+13024640950" className="hover:text-cyan-400">+1 302 464 0950</a>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Mail className="w-4 h-4" />
+                    <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400">kleber@ziontechgroup.com</a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         )}
@@ -285,8 +378,11 @@ const handleScroll = (props: any) => {
                   Search
                 </button>
               </div>
+<<<<<<< HEAD
 >>>>>>> origin/main
 >>>>>>> cursor/test-and-fix-pm2-automations-and-merge-2088
+=======
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
             </form>
           </div>
         )
@@ -295,6 +391,7 @@ const handleScroll = (props: any) => {
   );
 }
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       {/* Mobile Navigation Overlay */}
@@ -320,6 +417,8 @@ const handleScroll = (props: any) => {
 =======
 >>>>>>> origin/main
 >>>>>>> cursor/test-and-fix-pm2-automations-and-merge-2088
+=======
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
     </header>
   );
 }

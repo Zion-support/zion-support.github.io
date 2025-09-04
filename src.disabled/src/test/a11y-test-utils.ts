@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 // Accessibility test utilities
 import { injectAxe, checkA11y } from '@axe-core/playwright';
@@ -32,3 +33,6 @@ export const a11yTestUtils = {
     
     return contrastIssues}
 };
+=======
+import { injectAxe,checkA11y } from '@axe-core/playwright'; export const a11yTestUtils = { runA11yTests: async (page) => { await injectAxe(page); await checkA11y(page,null,{ detailedReport: 'true',detailedReportOptions: { html: true } })},checkColorContrast: async (page) => { const contrastIssues = await page.evaluate(() => { const elements = document.querySelectorAll('*'); const issues = []; elements.forEach(element => { const styles = window.getComputedStyle(element); const color = styles.color; const backgroundColor = styles.backgroundColor; if (color && backgroundColor) { } }); return issues}); return contrastIssues} };
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b

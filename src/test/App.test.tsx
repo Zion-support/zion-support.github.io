@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { describe, it, expect  } from 'vitest';';';
 import { render, screen   } from '@testing-library/react';';';
 import { BrowserRouter   } from 'react-router-dom';';';
@@ -36,3 +37,6 @@ describe('App', () => {';';
   })
 })';
 ;';;';
+=======
+import { describe,it,expect } from 'vitest' import { render,screen } from '@testing-library/react' import { BrowserRouter } from 'react-router-dom' import App from '../App' vi.mock('../components/ChatAssistant',() => ({ ChatAssistant: () => <div data-testid="chat-assistant">Chat Assistant</div> })) vi.mock('../layout/AppHeader',() => ({ AppHeader: () => <div data-testid="app-header">App Header</div> })) vi.mock('../components/Footer',() => ({ Footer: () => <div data-testid="footer">Footer</div> })) describe('App',() => { it('renders without crashing',() => { render(<BrowserRouter> <App /> </BrowserRouter> ) expect(document.body).toBeInTheDocument() }) it('renders main navigation elements',() => { render(<BrowserRouter> <App /> </BrowserRouter> ) expect(screen.getByTestId('app-header')).toBeInTheDocument() expect(screen.getByTestId('footer')).toBeInTheDocument() }) })
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface EmergingTechService2027 {
   id: string;
   title: string;
@@ -30,3 +31,6 @@ export interface EmergingTechService2027 {
   support: string[]}
 
 export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [];
+=======
+export interface EmergingTechService2027 { id: 'string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; targetAudience: string[]; marketPrice: string; website: string; contactEmail: string; tags: string[]; aiScore: number; rating: number; reviewCount: number; featured: boolean; location: string; availability: string;' } author: { name: string; id: string; avatarUrl?: string; verified: boolean }; images: 'string[]; createdAt: string; technologyStack: string[]; useCases: string[]; integrations: string[]; compliance: string[]; support: string[];' } export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [];
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b

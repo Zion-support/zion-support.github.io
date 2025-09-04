@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { render, screen  } from '@testing-library/reactimport ComprehensivePricingGuide2026 from ./ComprehensivePricingGuide2026describe(ComprehensivePricingGuide2026, () => {';';';
   it(renders without crashing', () => {'';
     render(<ComprehensivePricingGuide2026  />)';';
@@ -5,3 +6,6 @@ import { render, screen  } from '@testing-library/reactimport ComprehensivePrici
   it('displays expected content', () => {
     render(<ComprehensivePricingGuide2026  />)';
     // Add specific test assertions based on component content})});';;';
+=======
+import { render,screen } from '@testing-library/reactimport ComprehensivePricingGuide2026 from ./ComprehensivePricingGuide2026describe(ComprehensivePricingGuide2026,() => {' it(renders without crashing',() => {' render(<ComprehensivePricingGuide2026 />) expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()}) it('displays expected content',() => { render(<ComprehensivePricingGuide2026 />)
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b

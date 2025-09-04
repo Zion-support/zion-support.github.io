@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import AIChatbot from './AIChatbot;
 ;
 describe('AIChatbot', () => {;
@@ -16,3 +17,6 @@ describe('AIChatbot', () => {;
 // Add interaction tests based on component functionality,
 }),
 });
+=======
+import AIChatbot from './AIChatbot; ; describe('AIChatbot',() => {; it('renders without crashing',() => {; render(<AIChatbot />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbot />); }); ; it('handles user interactions',() => {; render(<AIChatbot />)});,});
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b

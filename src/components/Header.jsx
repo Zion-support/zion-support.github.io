@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 import {Link} from 'react-router-dom';';';
 import {MainNavigation} from './header/MainNavigation';
+=======
+import {Link} from 'react-router-dom';
+import MainNavigation from './header/MainNavigation';
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 
-export function Header(props: any) {return (
+export function Header(props) {return (
       <header className="bg-white shadow-sm border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // jest-dom adds custom jest matchers for asserting on DOM nodes.
 // allows you to do things like:
 // expect(element).toHaveTextContent(/react/i)
@@ -26,3 +27,6 @@ global.IntersectionObserver = class IntersectionObserver {
   observe() { /* empty */ }
   unobserve() { /* empty */ }';
 };;';;';
+=======
+import '@testing-library/jest-dom'; Object.defineProperty(window,'matchMedia',{ writable: 'true',value: global.global.global.jest.fn().mockImplementation(query => ({ matches: false,media: 'query',onchange: 'null',addListener: global.global.global.jest.fn(),removeListener: global.global.global.jest.fn(),addEventListener: global.global.global.jest.fn(),removeEventListener: global.global.global.jest.fn(),dispatchEvent: global.global.global.jest.fn(),})),}); global.IntersectionObserver = class IntersectionObserver { constructor() { } disconnect() { } observe() { } unobserve() { } };
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b

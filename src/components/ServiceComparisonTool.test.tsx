@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 it(displays expected content', () => {';';';';';
     render(<ServiceComparisonTool  />)',';';';';
     ';';';';';
@@ -19,3 +20,6 @@ describe(&apos;ServiceComparisonTool&apos, () => {
 ";';';';';
 }}';';';';';
 "';';';';;';;';
+=======
+it(displays expected content',() => {';';'; render(<ServiceComparisonTool />)',';'; ';';'; import { render,screen } from &apos;@testing-library/react',';';'; ',';'; ';';'; import ServiceComparisonTool from &apos;./ServiceComparisonTool'; describe(&apos;ServiceComparisonTool&apos,() => { it(&apos;renders without crashing&apos,() => { render(&apos}}&apos;<ServiceComparisonTool />) expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()}) it(&apos;displays expected content&apos,() => {'; render(&apos}<ServiceComparisonTool />)';'; render(<ServiceComparisonTool />)',';'; ';';'; expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();"" })'; ";';'}}';';'; "';';';';
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b

@@ -4,6 +4,7 @@ import Head from 'next/head';
 interface SEOProps {
   title?: string;
   description?: string;
+<<<<<<< HEAD
 }
 
 // Lightweight SEO helper compatible with Next.js pages';
@@ -30,18 +31,17 @@ interface SEOProps {
 
   title?: string;
   description?: string;
+=======
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
   keywords?: string;
   image?: string;
   url?: string;
   type?: string;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
   section?: string;
   tags?: string[];
   noindex?: boolean;
-
 }
+<<<<<<< HEAD
 ';
 export const SEO: Reac t.FC<SEOProps> = ({';';
   title = 'Zion Tech Group - Leading Technology Solutions',';';
@@ -145,17 +145,69 @@ export const SEO: Reac t.FC<SEOProps> = ({';';
       <meta property="og: descriptio n" content={description}   />
       <meta property="og: imag e" content={image}   />
       <meta property="og: site_nam e" content="Zion Tech Group"   />
-      {/* Twitter */}
-      <meta property="twitter: car d" content="summary_large_image"   />
-      <meta property="twitter: ur l" content={url}   />
-      <meta property="twitter: titl e" content={title}   />
-      <meta property="twitter: descriptio n" content={description}   />
-      <meta property="twitter: imag e" content={image}   />
+=======
 
-      {/* Additional SEO */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"   />
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge"   />
+export const SEO: React.FC<SEOProps> = ({
+  title = 'Zion Tech Group - Leading Technology Solutions',
+  description = 'Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.',
+  keywords = 'AI, cybersecurity, cloud infrastructure, digital transformation, technology solutions, Zion Tech Group',
+  image = '/og-image.svg',
+  url = 'https://ziontechgroup.com',
+  type = 'website',
+  section,
+  tags,
+  noindex = false
+}) => {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Zion Tech Group',
+    url: 'https://ziontechgroup.com',
+    logo: 'https://ziontechgroup.com/logo.svg',
+    description: 'Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: '123 Technology Drive',
+      addressLocality: 'Wilmington',
+      addressRegion: 'DE',
+      postalCode: '19709',
+      addressCountry: 'US'
+    }
+  };
+
+  return (
+    <Head>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="theme-color" content="#0ea5e9" />
+      
+      {/* Open Graph */}
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={image} />
+      <meta property="og:url" content={url} />
+      <meta property="og:type" content={type} />
+      
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={image} />
+      
+      {/* Additional meta tags */}
+      {section && <meta name="article:section" content={section} />}
+      {tags && <meta name="article:tag" content={tags.join(', ')} />}
+      {noindex && <meta name="robots" content="noindex, nofollow" />}
+      
+      {/* Favicon */}
+      <link rel="icon" href="/favicon.svg" />
+      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+      
       {/* Structured Data */}
+<<<<<<< HEAD
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
@@ -535,9 +587,17 @@ ursor/automate-test-fix-improve-and-merge-code-48f3}
       <link rel="canonical" href="{url}" /" >""
       <meta name="robots" content="index, follow" /" >""
       <meta name="author" content="Zion Tech Group" /" >"
+=======
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
     </Head>
-  )}
+  );
+};
 
+<<<<<<< HEAD
 "
 export default SEO;"
 ""
@@ -555,3 +615,6 @@ export default SEO;"
 </SEOProps>
 </script>';
 </SEOProps>;';;';
+=======
+export default SEO;
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b

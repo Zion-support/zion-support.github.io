@@ -1,80 +1,95 @@
 import React from 'react';
-
-interface FormProps extends React.FormHTMLAttributes<HTMLFormElement> {
-  children: Reac t.ReactNode;
+;
+interface FormProps extends React.FormHTMLAttributes<HTMLFormElement> {;
+  children: React.ReactNode;
 }
-
-export function Form(props: any) {
-  return (
-    <form {...props}>
+;
+export function Form(props: any) {;
+  return (;
+    <form {...props}>;
       {children}
-    </form>
+    </form>;
   );
 }
-
-interface FormItemProps {
-
-  children: Reac t.ReactNode;
+;
+interface FormItemProps {;
+  children: React.ReactNode;
   className?: string;
-
+;
 }
+<<<<<<< HEAD
 
 export function FormItem(props: any) {
   return (
     <div className="min-h-screen bg-white">
+=======
+;
+export function FormItem(props: any) {;
+  return (;
+    <div className={`space-y-2 ${className}`}>;
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
       {children}
-    </div>
+    </div>;
   );
 }
-
-interface FormLabelProps {
-
-  children: Reac t.ReactNode;
+;
+interface FormLabelProps {;
+  children: React.ReactNode;
   className?: string;
   htmlFor?: string;
-
+;
 }
-
-export function FormLabel(props: any) {
-  return (
-    <label 
+;
+export function FormLabel(props: any) {;
+  return (;
+    <label;
       htmlFor={htmlFor}
       className={`block text-sm font-medium ${className}`}
-    >
+    >;
       {children}
-    </label>
+    </label>;
   );
 }
-
-interface FormFieldProps {
-
-  children: Reac t.ReactNode;
+;
+interface FormFieldProps {;
+  children: React.ReactNode;
   className?: string;
-
+;
 }
+<<<<<<< HEAD
 
 export function FormField(props: any) {
   return (
     <div className="min-h-screen bg-white">
+=======
+;
+export function FormField(props: any) {;
+  return (;
+    <div className={`space-y-1 ${className}`}>;
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
       {children}
-    </div>
+    </div>;
   );
 }
-
-interface FormMessageProps {
-
+;
+interface FormMessageProps {;
   children?: React.ReactNode;
   className?: string;
-
+;
 }
-
-export function FormMessage(props: any) {
+;
+export function FormMessage(props: any) {;
   if (!children) return null;
-  
-  return (
-    <p className={`text-sm text-red-600 ${className}`}>
+;
+  return (;
+    <p className={`text-sm text-red-600 ${className}`}>;
       {children}
-    </p>
+    </p>;
   );
+<<<<<<< HEAD
 }';
 </HTMLFormElement>;';;';
+=======
+}
+</HTMLFormElement>;
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b

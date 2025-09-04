@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 export const isLintSetupWorking = (): boolean => {
   const twoPlusTwoEqualsFour = 2 + 2 === 4;
   return twoPlusTwoEqualsFour};
 
 export default isLintSetupWorking;
 
+=======
+export const isLintSetupWorking = (): boolean => { const twoPlusTwoEqualsFour = 2 + 2 === 4; return twoPlusTwoEqualsFour}; export default isLintSetupWorking;
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b

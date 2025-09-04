@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
  * Convert a string to a URL-friendly slug
  * @param text - The text to convert to a slug
@@ -40,3 +41,6 @@ export function generateUniqueSlug(text: string, existingSlugs: string[]): strin
   return uniqueSlug}
 ';
 export default slugify;';';
+=======
+export function slugify(text: unknownstring): string { return text .toLowerCase() .trim() .replace(/[^\w\s-]/g,'') .replace(/[\s_-]+/g,'-') .replace(/^-+|-+$/g,'')} export function deslugify(slug: string): string { return slug .replace(/-/g,' ') .replace(/\b\w/g,(char) => char.toUpperCase())} export function generateUniqueSlug(text: 'string',existingSlugs: string[]): string { let slug = slugify(text); let counter = 1; let uniqueSlug = slug; while (existingSlugs.includes(uniqueSlug)) { uniqueSlug = `${slug}-${counter}`; counter++} return uniqueSlug} export default slugify;
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
