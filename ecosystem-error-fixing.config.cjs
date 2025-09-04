@@ -146,8 +146,74 @@ module.exports = {
 
     // Build Error Detector - Monitors build errors
     {
-      name: 'build-error-detector',
-      script: './scripts/automation/build-error-detector.cjs',
+      name: 'syntax-error-fixer',
+      script: './scripts/automation/syntax-error-fixer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '1800000' // 30 minutes
+      },
+      log_file: './logs/syntax-error-fixer.log',
+      error_file: './logs/syntax-error-fixer-error.log',
+      out_file: './logs/syntax-error-fixer-out.log'
+    },
+
+    {
+      name: 'dependency-fixer',
+      script: './scripts/automation/dependency-fixer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '1800000' // 30 minutes
+      },
+      log_file: './logs/dependency-fixer.log',
+      error_file: './logs/dependency-fixer-error.log',
+      out_file: './logs/dependency-fixer-out.log'
+    },
+
+    // MEDIUM PRIORITY FIXERS - Run every hour
+    {
+      name: 'file-extension-fixer',
+      script: './scripts/automation/file-extension-fixer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '3600000' // 1 hour
+      },
+      log_file: './logs/file-extension-fixer.log',
+      error_file: './logs/file-extension-fixer-error.log',
+      out_file: './logs/file-extension-fixer-out.log'
+    },
+
+    {
+      name: 'component-error-fixer',
+      script: './scripts/automation/component-error-fixer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '3600000' // 1 hour
+      },
+      log_file: './logs/component-error-fixer.log',
+      error_file: './logs/component-error-fixer-error.log',
+      out_file: './logs/component-error-fixer-out.log'
+    },
+
+    // MASTER ERROR COORDINATOR - Runs every 2 hours
+    {
+      name: 'master-error-coordinator',
+      script: './scripts/automation/master-error-coordinator.cjs',
       instances: 1,
       autorestart: true,
       watch: false,

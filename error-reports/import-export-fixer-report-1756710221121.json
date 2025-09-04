@@ -1,0 +1,1643 @@
+{
+  "timestamp": "2025-09-01T07:03:42.179Z",
+  "duration": "1058ms",
+  "summary": {
+    "totalFilesChecked": 2583,
+    "filesFixed": 271,
+    "successRate": "10.49%"
+  },
+  "fixesApplied": [
+    {
+      "type": "import_export_fix",
+      "file": "fix-variable-names.js",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.484Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "fix_corrupted_files.js",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.499Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "fix_empty_pages.js",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.499Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "fix_utils_files.js",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.500Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "fix_variable_names.js",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.500Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "pages/advanced-cybersecurity.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.506Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "pages/emerging-tech-services.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.519Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "pages/expanded-services-2027.page.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.525Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "pages/expanded-services-pricing-2027.page.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.525Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "pages/innovative-services-showcase-2031.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.527Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "pages/products.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.534Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "pages.disabled/api/devportal/keys.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.542Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "pages.disabled/api/pricing/client.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.543Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "pages.disabled/api/pricing/talent.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.543Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "server/src/index.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.562Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/App.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.565Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/Accessibility.js.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.575Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/AdvancedAIServicesHub.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.577Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/AdvancedAnalyticsDashboard.js.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.589Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/AdvancedServiceComparison.js.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.597Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/AdvancedServiceComparison.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.597Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/AdvancedServiceInnovationHub.js.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.598Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/AdvancedServiceInnovationHub.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.599Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/AdvancedServicePortfolioDashboard.js.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.600Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/AdvancedServicePortfolioDashboard.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.601Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/AdvancedServiceRecommendation.js.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.601Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/AdvancedServiceRecommendation.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.602Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/ApiDemo.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.603Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/BenefitsSection.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.603Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/CategoriesSection.js.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.605Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/CategoriesSection.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.606Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/ChatAssistant/ChatAssistant.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.607Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/ComprehensiveServicesShowcase2025.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.611Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/ContactForm.js.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.612Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/ContactForm.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.612Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/EnhancedLayout.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.627Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/FuturisticNavigation.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.638Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/Header.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.639Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/Header.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.641Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/HeroSection.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.642Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/InteractiveUserExperience.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.647Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/LazyLoader.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.648Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/LazyWrapper.js.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.648Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/LazyWrapper.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.649Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/LoadingSkeleton.js.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.650Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/LoadingSkeleton.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.651Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/MainNavigation.js.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.652Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/MainNavigation.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.653Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/NewsletterSection.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.655Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/OptimizedImage.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.656Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/PerformanceAnalytics.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.656Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/PerformanceOptimizations.js.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.657Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/PerformanceOptimizations.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.658Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/PerformanceOptimizedHero.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.659Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/ProductCard.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.663Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/QuoteRequestForm.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.670Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/ServiceShowcase.js.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.685Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/ServiceShowcase.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.685Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/ServicesBenefitsShowcase.js.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.686Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/ServicesBenefitsShowcase.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.686Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/ServicesComparisonTable.js.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.687Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/ServicesComparisonTable.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.687Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/SitemapPage.js.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.689Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/SitemapPage.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.689Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/auth/login/LoginForm.js.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.695Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/auth/login/LoginForm.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.695Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/auth/login/index.js",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.695Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/auth/login/index.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.695Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/auth/login/index.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.696Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/developers/ApiDocumentation.js.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.698Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/developers/ApiDocumentation.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.698Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/developers/ApiKeysManager.js.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.699Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/developers/ApiKeysManager.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.699Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/developers/ApiPlayground.js.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.699Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/developers/ApiPlayground.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.700Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/header/Header.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.702Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/header/MainNavigation.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.703Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/header/MainNavigation.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.705Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/hiring-tracker/KanbanBoard.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.705Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/hiring-tracker/KanbanColumn.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.706Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/home/CTASection.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.706Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/home/HeroFeatures.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.709Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/home/ServicesOverview.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.710Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/home/StatsSection.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.726Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/home/Testimonials.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.727Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/services/InnovativeServicesOverview.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.736Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/team-builder/RoleCard.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.744Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/team-builder/TeamRecommendationDisplay.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.744Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/ui/3d-card-gallery.js.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.745Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/ui/3d-card-gallery.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.745Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/ui/EnhancedMarketplaceCard.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.750Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/ui/EnhancedSkeleton.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.751Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/ui/InteractiveSearch.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.752Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/ui/InteractiveStats.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.752Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/ui/LoadingSkeleton.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.753Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/ui/Textarea.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.753Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/ui/accessibility-menu.js.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.754Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/ui/accessibility-menu.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.754Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/ui/accessibility.js.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.754Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/ui/accessibility.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.762Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/ui/ai-chat-assistant.js.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.763Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/ui/ai-chat-assistant.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.763Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/ui/ai-search.js.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.763Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/ui/ai-search.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.764Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/ui/analytics-dashboard.js.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.764Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/ui/analytics-dashboard.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.765Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/ui/interactive-timeline.js.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.766Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/ui/interactive-timeline.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.766Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/ui/loading-spinner.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.767Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/ui/notification.js.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.767Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/ui/notification.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.767Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/ui/performance-monitor.js.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.768Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/components/ui/performance-monitor.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.777Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/context/auth/AuthProvider.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.780Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/context/auth/useAuthEventHandlers.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.781Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/ComprehensivePricingGuide2030.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.781Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/ComprehensiveServicesShowcase2030.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.782Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/additionalInnovativeServices2025.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.782Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/advancedAIServices2025.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.782Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/advancedAIServices2030.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.782Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/advancedEnterpriseSolutions2025.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.783Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/advancedITServices2025.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.783Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/advancedInnovativeMicroSaasServices2025.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.783Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/advancedInnovativeServices2026.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.783Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/advancedMicroSaasServices2025.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.784Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/advancedMicroServices.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.784Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/comprehensiveAIServices2030.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.784Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/comprehensiveITServices2030.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.785Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/comprehensivePricingGuide2025.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.785Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/comprehensivePricingGuide2026.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.785Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/comprehensivePricingGuide2027.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.786Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/comprehensivePricingGuide2030.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.786Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/comprehensivePricingGuide2031.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.786Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/comprehensiveServices.js",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.787Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/comprehensiveServices2026.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.787Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/comprehensiveServicesCatalog2025.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.787Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/comprehensiveServicesIndex.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.787Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/comprehensiveServicesIndex2030.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.788Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/cuttingEdgeITInfrastructure2030.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.788Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/emergingTechServices2025.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.789Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/emergingTechServices2027.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.789Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/emergingTechServices2030.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.789Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/emergingTechnologyServices2030.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.790Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/enhanced-2025-cutting-edge-services.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.790Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/enhanced-services-2025.js",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.791Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/enhanced-services-2025.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.791Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/enhancedInnovativeServices2025.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.792Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/enhancedInnovativeServices2027.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.792Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/enhancedMicroSaasServices2025.js",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.793Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/enhancedServices.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.794Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/enhancedZionTechServices2025.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.794Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/equipmentDetails.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.794Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/expandedInnovativeServices.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.795Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/expandedInnovativeServices2025.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.796Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/expandedInnovativeServices2027.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.797Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/expandedServices.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.797Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/expandedServicesPricing2027.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.798Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/innovativeAIServices2030.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.798Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/innovativeBlockchainWeb3Services2025.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.799Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/innovativeCloudDevOpsServices2030.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.799Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/innovativeCybersecurityServices2030.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.799Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/innovativeITInfrastructure2025.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.800Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/innovativeMicroSaas2025.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.800Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/innovativeMicroSaasServices2025.js",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.800Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/innovativeMicroSaasServices2025.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.801Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/innovativeMicroSaasServices2026.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.802Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/innovativeMicroSaasServices2027.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.803Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/innovativeMicroSaasServices2028.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.803Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/innovativeMicroSaasServices2030.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.803Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/innovativeServices2025.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.804Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/innovativeServices2026.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.804Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/innovativeServices2027.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.805Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/innovativeServices2028.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.805Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/innovativeServices2031.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.805Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/iotEdgeComputingServices2025.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.806Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/marketplaceData.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.806Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/microSaasServices.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.806Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/nextGenAIServices2025.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.807Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/nextGenInnovativeServices2025.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.807Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/revolutionaryPricingGuide2030.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.808Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/revolutionaryServices2030.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.808Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/servicesCatalog.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.809Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/servicesData.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.809Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/specialized-industry-solutions-2025.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.810Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/specializedFinancialAIServices2025.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.810Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/specializedFinancialAIServices2028.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.810Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/specializedHealthcareAIServices2025.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.810Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/specializedHealthcareAIServices2028.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.811Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/specializedITInfrastructureServices2026.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.811Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/specializedITServices2025.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.811Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/specializedIndustrySolutions2025.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.812Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/specializedMicroSaasServices2025.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.812Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/ultimateInnovativeServices2025.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.812Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/ultimateInnovativeServices2026.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.813Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/ultimateInnovativeServices2027.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.813Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/data/ultimateZionServices2025.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.814Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/main.js.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.819Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/main.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.819Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/main.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.820Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/AIServices.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.849Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/AIServicesPage.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.850Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/AdvancedInnovativeServicesShowcase2026.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.853Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/Analytics.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.859Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/CategoryDetail.js.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.865Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/CategoryDetail.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.865Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/ComprehensivePricingGuide2026.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.878Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/ComprehensivePricingGuide2030.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.882Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/ComprehensiveServicesLanding2025.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.886Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/ComprehensiveServicesShowcase2030.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.894Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/ComprehensiveZionTechPricing2025.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.895Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/Consulting.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.896Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/CybersecurityServicesPage.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.909Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/DigitalTransformation.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.919Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/DigitalTransformation.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.919Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/EmergingTechShowcase2025.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.921Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/EnhancedComprehensiveServices2026.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.922Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/EnhancedInnovativeServicesShowcase2027.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.922Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/EnhancedZionTechServices2025.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.939Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/EnterpriseDemo.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.940Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/ExpandedServicesPricingGuide2027.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.946Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/ExpandedServicesShowcase2027.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.947Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/ForgotPassword.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.949Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/ForumCategoryPage.js.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.949Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/ForumCategoryPage.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.950Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/ITServices2028.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.956Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/InnovativeServices.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.960Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/InnovativeServicesHub.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.962Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/InnovativeServicesShowcase.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.964Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/InnovativeServicesShowcase2030.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.967Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/Match.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.972Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/MicroSAAS.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.972Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/MicroSAASServices2028.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.975Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/MicroSAASServicesPage.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.978Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/MicroSaaS.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.979Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/MicroSaasServicesPage.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.982Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/MobileLaunch.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.983Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/OnsiteSupport.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.993Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/OpenAppRedirect.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.993Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/PrivacyPolicy.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.998Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/Profile.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:41.999Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/Revolutionary2025ServicesShowcase.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:42.007Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/ScheduleDemo.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:42.010Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/TalentDashboard.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:42.029Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/TermsOfService.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:42.030Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/UltimateServicesShowcase2025.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:42.033Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/admin/SupportRequests.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:42.040Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/ai-services/AIAutonomousCodeReview.jsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:42.043Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/dashboard/RequestsPanel.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:42.044Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/services/AIAutonomousBusinessOperations.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:42.062Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/services/AIAutonomousCodeReviewer.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:42.063Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/services/AICustomerChurnPrediction.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:42.082Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/services/AICybersecurityThreatIntelligence.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:42.085Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/services/AIDataGovernance.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:42.086Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/services/AIFinancialFraudDetection.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:42.095Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/services/AIHealthcareAnalyticsPlatform.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:42.097Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/services/AISupplyChainOptimization.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:42.117Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/services/Cloud.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:42.120Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/services/EdgeComputingPlatform.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:42.123Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/services/Infrastructure.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:42.133Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/services/MicroSAAS.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:42.135Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/services/QuantumComputingAsAService.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:42.137Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/services/QuantumTechnology.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:42.142Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/services/Transformation.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:42.143Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/services/ai-content-optimizer-pro.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:42.150Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/services/ai-cybersecurity.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:42.152Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/services/ai-hr-platform.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:42.153Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/pages/services/ai-predictive-maintenance.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:42.166Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/routes/AuthRoutes.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:42.174Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/routes/ErrorRoutes.tsx",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:42.174Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/store/authSlice.js",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:42.175Z"
+    },
+    {
+      "type": "import_export_fix",
+      "file": "src/store/index.ts",
+      "description": "Fixed import/export issues",
+      "timestamp": "2025-09-01T07:03:42.175Z"
+    }
+  ],
+  "metadata": {
+    "script": "import-export-fixer",
+    "version": "1.0.0",
+    "nodeVersion": "v22.16.0",
+    "platform": "linux"
+  }
+}
