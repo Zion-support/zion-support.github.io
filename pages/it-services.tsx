@@ -26,7 +26,9 @@ import {
   Smartphone,
   Laptop,
   Building,
-  BarChart3
+  BarChart3,
+  Code,
+  BookOpen
 } from 'lucide-react';
 
 const itServices = [
@@ -77,6 +79,102 @@ const itServices = [
     features: ['Technology Assessment', 'Strategic Planning', 'Vendor Selection', 'Implementation Support'],
     pricing: '$150 - $300/hour',
     category: 'Consulting'
+  },
+  {
+    title: 'DevOps & CI/CD Implementation',
+    description: 'Complete DevOps transformation with automated deployment pipelines and infrastructure as code.',
+    icon: Server,
+    features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Container Orchestration', 'Monitoring & Logging'],
+    pricing: '$8,000 - $50,000/project',
+    category: 'DevOps'
+  },
+  {
+    title: 'Data Center Migration',
+    description: 'Seamless migration of on-premises infrastructure to cloud or hybrid environments.',
+    icon: Building,
+    features: ['Migration Planning', 'Zero Downtime', 'Data Integrity', 'Performance Optimization'],
+    pricing: '$15,000 - $100,000/project',
+    category: 'Migration'
+  },
+  {
+    title: 'IT Service Management (ITSM)',
+    description: 'Implementation of ITIL-based service management processes and tools.',
+    icon: Settings,
+    features: ['ITIL Implementation', 'Service Desk Setup', 'Change Management', 'Incident Management'],
+    pricing: '$5,000 - $25,000/project',
+    category: 'ITSM'
+  },
+  {
+    title: 'Backup & Disaster Recovery',
+    description: 'Comprehensive backup solutions and disaster recovery planning for business continuity.',
+    icon: Shield,
+    features: ['Automated Backups', 'Disaster Recovery Planning', 'RTO/RPO Optimization', 'Testing & Validation'],
+    pricing: '$3,000 - $20,000/project',
+    category: 'Backup'
+  },
+  {
+    title: 'IT Asset Management',
+    description: 'Complete lifecycle management of IT assets including procurement, tracking, and disposal.',
+    icon: Monitor,
+    features: ['Asset Discovery', 'License Management', 'Lifecycle Tracking', 'Cost Optimization'],
+    pricing: '$2,000 - $12,000/project',
+    category: 'Asset Management'
+  },
+  {
+    title: 'Network Security & Firewall',
+    description: 'Advanced network security implementation including next-generation firewalls and intrusion detection.',
+    icon: Lock,
+    features: ['Next-gen Firewalls', 'Intrusion Detection', 'VPN Solutions', 'Security Monitoring'],
+    pricing: '$4,000 - $30,000/project',
+    category: 'Network Security'
+  },
+  {
+    title: 'Cloud Security & Compliance',
+    description: 'Cloud security implementation and compliance management for regulatory requirements.',
+    icon: Shield,
+    features: ['Security Architecture', 'Compliance Auditing', 'Identity Management', 'Data Protection'],
+    pricing: '$6,000 - $40,000/project',
+    category: 'Cloud Security'
+  },
+  {
+    title: 'IT Support & Help Desk',
+    description: '24/7 technical support and help desk services for end users and IT systems.',
+    icon: Users,
+    features: ['24/7 Support', 'Remote Assistance', 'Ticket Management', 'Knowledge Base'],
+    pricing: '$1,500 - $6,000/month',
+    category: 'Support'
+  },
+  {
+    title: 'Software Development & Integration',
+    description: 'Custom software development and integration services for business applications.',
+    icon: Code,
+    features: ['Custom Development', 'API Integration', 'Legacy Modernization', 'Mobile Apps'],
+    pricing: '$100 - $200/hour',
+    category: 'Development'
+  },
+  {
+    title: 'IT Training & Documentation',
+    description: 'Comprehensive IT training programs and technical documentation for teams.',
+    icon: BookOpen,
+    features: ['Technical Training', 'Documentation', 'Best Practices', 'Certification Support'],
+    pricing: '$150 - $300/hour',
+    category: 'Training'
+  },
+  {
+    title: 'Performance Monitoring & Optimization',
+    description: 'Advanced monitoring solutions and performance optimization for IT infrastructure.',
+    icon: BarChart3,
+    features: ['Real-time Monitoring', 'Performance Analytics', 'Capacity Planning', 'Optimization'],
+    pricing: '$3,000 - $18,000/project',
+    category: 'Monitoring'
+  },
+  {
+    title: 'IT Governance & Risk Management',
+    description: 'IT governance framework implementation and risk management strategies.',
+    icon: Shield,
+    features: ['Governance Framework', 'Risk Assessment', 'Policy Development', 'Compliance Management'],
+    pricing: '$5,000 - $35,000/project',
+    category: 'Governance'
   }
 ];
 
@@ -434,7 +532,20 @@ export default function ITServicesPage() {
             </h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               Let our expert team help you build a robust, secure, and scalable IT environment.
+              <br className="hidden md:block" />
+              <span className="text-green-200 font-semibold">Get a free IT assessment today!</span>
             </p>
+            <div className="mb-8">
+              <p className="text-lg text-green-100 mb-2">
+                📞 <strong>Call us:</strong> +1 302 464 0950
+              </p>
+              <p className="text-lg text-green-100 mb-2">
+                📧 <strong>Email us:</strong> kleber@ziontechgroup.com
+              </p>
+              <p className="text-lg text-green-100">
+                📍 <strong>Visit us:</strong> 364 E Main St STE 1008, Middletown DE 19709
+              </p>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
                 Get IT Assessment

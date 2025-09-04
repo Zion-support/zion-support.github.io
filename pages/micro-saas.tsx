@@ -90,6 +90,119 @@ const microSaaSProducts = [
     features: ['Visual Builder', '100+ Integrations', 'Conditional Logic', 'Scheduled Tasks'],
     pricing: '$99 - $599/month',
     category: 'Automation'
+  },
+  {
+    title: 'Smart Document Processor',
+    description: 'AI-powered document extraction, classification, and data validation for business documents.',
+    icon: FileText,
+    features: ['OCR & Data Extraction', 'Document Classification', 'Smart Validation', 'API Integration'],
+    pricing: '$199 - $1,299/month',
+    category: 'Document AI',
+    popular: true
+  },
+  {
+    title: 'Real-time Analytics Dashboard',
+    description: 'Custom business intelligence dashboards with real-time data visualization and alerts.',
+    icon: Monitor,
+    features: ['Real-time Data', 'Custom Dashboards', 'Alert System', 'Mobile Responsive'],
+    pricing: '$149 - $899/month',
+    category: 'Analytics'
+  },
+  {
+    title: 'AI-Powered Email Marketing',
+    description: 'Intelligent email campaigns with personalization, A/B testing, and predictive analytics.',
+    icon: Mail,
+    features: ['AI Personalization', 'Predictive Analytics', 'A/B Testing', 'Automated Campaigns'],
+    pricing: '$99 - $699/month',
+    category: 'Marketing'
+  },
+  {
+    title: 'Smart Inventory Manager',
+    description: 'AI-driven inventory optimization with demand forecasting and automated reordering.',
+    icon: Building,
+    features: ['Demand Forecasting', 'Auto Reordering', 'Cost Optimization', 'Multi-location Support'],
+    pricing: '$249 - $1,499/month',
+    category: 'Inventory'
+  },
+  {
+    title: 'Voice-to-Text Transcription',
+    description: 'High-accuracy speech-to-text conversion with speaker identification and language support.',
+    icon: Mic,
+    features: ['Multi-language Support', 'Speaker Identification', 'Real-time Processing', 'API Integration'],
+    pricing: '$0.02 - $0.10/minute',
+    category: 'Voice AI'
+  },
+  {
+    title: 'Social Media Scheduler',
+    description: 'Intelligent social media management with optimal posting times and content suggestions.',
+    icon: MessageSquare,
+    features: ['Optimal Timing', 'Content Suggestions', 'Multi-platform', 'Analytics'],
+    pricing: '$29 - $199/month',
+    category: 'Social Media'
+  },
+  {
+    title: 'AI Code Review Assistant',
+    description: 'Automated code review with security scanning, performance analysis, and best practices.',
+    icon: Code,
+    features: ['Security Scanning', 'Performance Analysis', 'Best Practices', 'Git Integration'],
+    pricing: '$199 - $999/month',
+    category: 'Development'
+  },
+  {
+    title: 'Smart Meeting Scheduler',
+    description: 'AI-powered meeting scheduling with calendar optimization and conflict resolution.',
+    icon: Clock,
+    features: ['Calendar Integration', 'Conflict Resolution', 'Time Zone Handling', 'Meeting Analytics'],
+    pricing: '$49 - $299/month',
+    category: 'Productivity'
+  },
+  {
+    title: 'Predictive Maintenance System',
+    description: 'IoT-based equipment monitoring with predictive failure analysis and maintenance scheduling.',
+    icon: Settings,
+    features: ['IoT Integration', 'Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization'],
+    pricing: '$399 - $2,499/month',
+    category: 'IoT'
+  },
+  {
+    title: 'AI-Powered Search Engine',
+    description: 'Custom search solution with natural language processing and intelligent ranking.',
+    icon: Search,
+    features: ['Natural Language', 'Intelligent Ranking', 'Custom Indexing', 'Analytics'],
+    pricing: '$199 - $1,299/month',
+    category: 'Search'
+  },
+  {
+    title: 'Smart Contract Analyzer',
+    description: 'Blockchain smart contract security analysis and vulnerability detection.',
+    icon: Shield,
+    features: ['Security Analysis', 'Vulnerability Detection', 'Gas Optimization', 'Multi-chain Support'],
+    pricing: '$99 - $599/analysis',
+    category: 'Blockchain'
+  },
+  {
+    title: 'AI Content Translator',
+    description: 'Real-time content translation with context awareness and cultural adaptation.',
+    icon: Globe,
+    features: ['100+ Languages', 'Context Awareness', 'Cultural Adaptation', 'API Integration'],
+    pricing: '$0.01 - $0.05/word',
+    category: 'Translation'
+  },
+  {
+    title: 'Smart Form Builder',
+    description: 'AI-powered form creation with conditional logic, validation, and analytics.',
+    icon: FileText,
+    features: ['Drag & Drop Builder', 'Conditional Logic', 'Smart Validation', 'Analytics'],
+    pricing: '$29 - $199/month',
+    category: 'Forms'
+  },
+  {
+    title: 'AI-Powered Lead Scoring',
+    description: 'Intelligent lead qualification and scoring using machine learning algorithms.',
+    icon: Target,
+    features: ['ML Scoring', 'Behavioral Analysis', 'CRM Integration', 'Custom Models'],
+    pricing: '$149 - $899/month',
+    category: 'Sales'
   }
 ];
 
@@ -516,7 +629,20 @@ export default function MicroSaaSPage() {
             </h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               Let&apos;s build the perfect SaaS solution for your business needs. Fast, secure, and scalable.
+              <br className="hidden md:block" />
+              <span className="text-purple-200 font-semibold">Get started with a free consultation!</span>
             </p>
+            <div className="mb-8">
+              <p className="text-lg text-purple-100 mb-2">
+                📞 <strong>Call us:</strong> +1 302 464 0950
+              </p>
+              <p className="text-lg text-purple-100 mb-2">
+                📧 <strong>Email us:</strong> kleber@ziontechgroup.com
+              </p>
+              <p className="text-lg text-purple-100">
+                📍 <strong>Visit us:</strong> 364 E Main St STE 1008, Middletown DE 19709
+              </p>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
                 Start Building

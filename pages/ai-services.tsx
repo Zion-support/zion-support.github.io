@@ -92,6 +92,119 @@ const aiServices = [
     features: ['Speech-to-Text', 'Text-to-Speech', 'Voice Commands', 'Multi-language Support'],
     pricing: '$2,500 - $12,000 project',
     category: 'Voice'
+  },
+  {
+    title: 'AI-Powered Fraud Detection',
+    description: 'Advanced machine learning models for real-time fraud detection and prevention.',
+    icon: Shield,
+    features: ['Real-time Detection', 'Pattern Recognition', 'Risk Scoring', 'Adaptive Learning'],
+    pricing: '$5,000 - $25,000 setup',
+    category: 'Security',
+    popular: true
+  },
+  {
+    title: 'Natural Language Processing API',
+    description: 'Comprehensive NLP services including sentiment analysis, entity recognition, and text classification.',
+    icon: Brain,
+    features: ['Sentiment Analysis', 'Entity Recognition', 'Text Classification', 'Language Translation'],
+    pricing: '$0.01 - $0.05 per API call',
+    category: 'NLP'
+  },
+  {
+    title: 'AI-Powered Recommendation Engine',
+    description: 'Intelligent recommendation systems for e-commerce, content, and personalized experiences.',
+    icon: Target,
+    features: ['Collaborative Filtering', 'Content-based Filtering', 'Real-time Recommendations', 'A/B Testing'],
+    pricing: '$3,000 - $18,000 project',
+    category: 'Recommendations'
+  },
+  {
+    title: 'Machine Learning Model Training',
+    description: 'Custom ML model development and training for specific business use cases.',
+    icon: Cpu,
+    features: ['Custom Model Development', 'Data Preprocessing', 'Model Training', 'Performance Optimization'],
+    pricing: '$8,000 - $50,000 project',
+    category: 'ML Development'
+  },
+  {
+    title: 'AI-Powered Document Analysis',
+    description: 'Intelligent document processing with OCR, data extraction, and classification.',
+    icon: FileText,
+    features: ['OCR Technology', 'Data Extraction', 'Document Classification', 'Form Processing'],
+    pricing: '$0.10 - $0.50 per document',
+    category: 'Document AI'
+  },
+  {
+    title: 'Conversational AI Platform',
+    description: 'Enterprise-grade conversational AI platform with multi-channel support.',
+    icon: MessageSquare,
+    features: ['Multi-channel Support', 'Context Management', 'Integration APIs', 'Analytics Dashboard'],
+    pricing: '$2,000 - $12,000/month',
+    category: 'Conversational AI'
+  },
+  {
+    title: 'AI-Powered Image Generation',
+    description: 'Advanced image generation and manipulation using generative AI models.',
+    icon: Image,
+    features: ['Text-to-Image', 'Image Enhancement', 'Style Transfer', 'Custom Models'],
+    pricing: '$0.05 - $0.25 per image',
+    category: 'Generative AI'
+  },
+  {
+    title: 'Predictive Maintenance AI',
+    description: 'AI-driven predictive maintenance for industrial equipment and machinery.',
+    icon: Settings,
+    features: ['Equipment Monitoring', 'Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization'],
+    pricing: '$10,000 - $60,000 project',
+    category: 'Industrial AI'
+  },
+  {
+    title: 'AI-Powered Supply Chain Optimization',
+    description: 'Intelligent supply chain management with demand forecasting and logistics optimization.',
+    icon: Network,
+    features: ['Demand Forecasting', 'Inventory Optimization', 'Route Planning', 'Risk Assessment'],
+    pricing: '$15,000 - $80,000 project',
+    category: 'Supply Chain'
+  },
+  {
+    title: 'AI-Powered Medical Diagnosis',
+    description: 'Advanced AI systems for medical image analysis and diagnostic assistance.',
+    icon: Heart,
+    features: ['Medical Imaging', 'Diagnostic Assistance', 'Risk Assessment', 'Clinical Decision Support'],
+    pricing: '$20,000 - $100,000 project',
+    category: 'Healthcare AI'
+  },
+  {
+    title: 'AI-Powered Financial Trading',
+    description: 'Algorithmic trading systems with machine learning for market analysis and trading.',
+    icon: TrendingUp,
+    features: ['Market Analysis', 'Algorithmic Trading', 'Risk Management', 'Portfolio Optimization'],
+    pricing: '$25,000 - $150,000 project',
+    category: 'FinTech AI'
+  },
+  {
+    title: 'AI-Powered Quality Control',
+    description: 'Computer vision-based quality control systems for manufacturing and production.',
+    icon: Eye,
+    features: ['Defect Detection', 'Quality Metrics', 'Real-time Monitoring', 'Automated Sorting'],
+    pricing: '$12,000 - $70,000 project',
+    category: 'Manufacturing AI'
+  },
+  {
+    title: 'AI-Powered Customer Insights',
+    description: 'Advanced customer analytics and insights using machine learning and behavioral analysis.',
+    icon: Users,
+    features: ['Behavioral Analysis', 'Customer Segmentation', 'Churn Prediction', 'Personalization'],
+    pricing: '$5,000 - $30,000 project',
+    category: 'Customer Analytics'
+  },
+  {
+    title: 'AI-Powered Legal Document Analysis',
+    description: 'Intelligent legal document processing and contract analysis using NLP and ML.',
+    icon: BookOpen,
+    features: ['Contract Analysis', 'Legal Research', 'Risk Assessment', 'Compliance Checking'],
+    pricing: '$8,000 - $40,000 project',
+    category: 'Legal AI'
   }
 ];
 
@@ -364,7 +477,20 @@ export default function AIServicesPage() {
             </h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               Let&apos;s discuss how our AI solutions can drive innovation and growth for your organization.
+              <br className="hidden md:block" />
+              <span className="text-blue-200 font-semibold">Get a free AI consultation today!</span>
             </p>
+            <div className="mb-8">
+              <p className="text-lg text-blue-100 mb-2">
+                📞 <strong>Call us:</strong> +1 302 464 0950
+              </p>
+              <p className="text-lg text-blue-100 mb-2">
+                📧 <strong>Email us:</strong> kleber@ziontechgroup.com
+              </p>
+              <p className="text-lg text-blue-100">
+                📍 <strong>Visit us:</strong> 364 E Main St STE 1008, Middletown DE 19709
+              </p>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
                 Start Your AI Journey
