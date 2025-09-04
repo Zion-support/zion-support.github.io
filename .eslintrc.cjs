@@ -1,8 +1,5 @@
 module.exports = {
-  extends: [
-    'next/core-web-vitals',
-    'plugin:@typescript-eslint/recommended'
-  ],
+  extends: ['next/core-web-vitals', 'plugin:@typescript-eslint/recommended'],
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint'],
   rules: {
@@ -10,7 +7,7 @@ module.exports = {
     '@typescript-eslint/no-explicit-any': 'warn',
     'react-hooks/exhaustive-deps': 'warn',
     'react/react-in-jsx-scope': 'off',
-    'no-undef': 'off'
+    'no-undef': 'off',
   },
   ignorePatterns: [
     'node_modules/',
@@ -85,6 +82,6 @@ module.exports = {
     'security-reports/',
     'pages.__backup/',
     'pages-disabled/',
-    'pages.disabled_auto/'
-  ]
+    'pages.disabled_auto/',
+  ],
 };

@@ -8,7 +8,8 @@ describe('ContactFormEnhanceddynamic', () => {
     render(<ContactFormEnhanceddynamic />);
     expect(
       screen.getByTestId('contactformenhanced.dynamic')
-    ).toBeInTheDocument()});
+    ).toBeInTheDocument();
+  });
 
   test('displays correct content', () => {
     render(<ContactFormEnhanceddynamic />);
@@ -23,4 +24,5 @@ describe('ContactFormEnhanceddynamic', () => {
   test('applies correct styling', () => {
     render(<ContactFormEnhanceddynamic />);
     // Add styling tests if needed
-  })});
+  });
+});

@@ -6,7 +6,8 @@ import ContactFormdynamic from '../components/ContactForm.dynamic';
 describe('ContactFormdynamic', () => {
   test('renders without crashing', () => {
     render(<ContactFormdynamic />);
-    expect(screen.getByTestId('contactform.dynamic')).toBeInTheDocument()});
+    expect(screen.getByTestId('contactform.dynamic')).toBeInTheDocument();
+  });
 
   test('displays correct content', () => {
     render(<ContactFormdynamic />);
@@ -21,4 +22,5 @@ describe('ContactFormdynamic', () => {
   test('applies correct styling', () => {
     render(<ContactFormdynamic />);
     // Add styling tests if needed
-  })});
+  });
+});

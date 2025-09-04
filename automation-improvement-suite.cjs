@@ -8,33 +8,38 @@ class AutomationImprovementSuite {
   constructor() {
     this.projectRoot = process.cwd();
     this.reportsDir = path.join(this.projectRoot, 'automation-reports');
-    this.ensureDirectories()}
+    this.ensureDirectories();
+  }
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true })}
+      fs.mkdirSync(this.reportsDir, { recursive: true });
+    }
   }
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`)}
+    console.log(`[${new Date().toISOString()}] ${message}`);
+  }
 
   async runCommand(command, description) {
     this.log(`🚀 Starting: ${description}`);
     try {
-      const result = execSync(command, { 
-        cwd: this.projectRoot, 
+      const result = execSync(command, {
+        cwd: this.projectRoot,
         encoding: 'utf8',
-        timeout: 60000 // 1 minute timeout
+        timeout: 60000, // 1 minute timeout
       });
       this.log(`✅ Completed: ${description}`);
-      return { success: true, output: result }} catch (error) {
+      return { success: true, output: result };
+    } catch (error) {
       this.log(`❌ Failed: ${description} - ${error.message}`);
-      return { success: false, error: error.message }}
+      return { success: false, error: error.message };
+    }
   }
 
   createEnhancedAutomationScripts() {
     this.log('🔧 Creating Enhanced Automation Scripts');
-    
+
     // 1. Create a comprehensive error fixer
     const errorFixerScript = `#!/usr/bin/env node
 
@@ -106,7 +111,10 @@ const fixer = new ComprehensiveErrorFixer();
 fixer.fixFiles().catch(console.error);
 `;
 
-    fs.writeFileSync(path.join(this.projectRoot, 'enhanced-error-fixer.cjs'), errorFixerScript);
+    fs.writeFileSync(
+      path.join(this.projectRoot, 'enhanced-error-fixer.cjs'),
+      errorFixerScript
+    );
     this.log('✅ Created enhanced-error-fixer.cjs');
 
     // 2. Create a performance monitor
@@ -183,7 +191,10 @@ const monitor = new PerformanceMonitor();
 monitor.analyzePerformance().catch(console.error);
 `;
 
-    fs.writeFileSync(path.join(this.projectRoot, 'performance-monitor-enhanced.cjs'), performanceMonitorScript);
+    fs.writeFileSync(
+      path.join(this.projectRoot, 'performance-monitor-enhanced.cjs'),
+      performanceMonitorScript
+    );
     this.log('✅ Created performance-monitor-enhanced.cjs');
 
     // 3. Create a security audit script
@@ -288,7 +299,10 @@ const auditor = new SecurityAuditor();
 auditor.auditSecurity().catch(console.error);
 `;
 
-    fs.writeFileSync(path.join(this.projectRoot, 'security-audit-enhanced.cjs'), securityAuditScript);
+    fs.writeFileSync(
+      path.join(this.projectRoot, 'security-audit-enhanced.cjs'),
+      securityAuditScript
+    );
     this.log('✅ Created security-audit-enhanced.cjs');
 
     // 4. Create a comprehensive test runner
@@ -389,48 +403,54 @@ const runner = new ComprehensiveTestRunner();
 runner.runTests().catch(console.error);
 `;
 
-    fs.writeFileSync(path.join(this.projectRoot, 'comprehensive-test-runner.cjs'), testRunnerScript);
-    this.log('✅ Created comprehensive-test-runner.cjs')}
+    fs.writeFileSync(
+      path.join(this.projectRoot, 'comprehensive-test-runner.cjs'),
+      testRunnerScript
+    );
+    this.log('✅ Created comprehensive-test-runner.cjs');
+  }
 
   async runEnhancedAutomations() {
     this.log('🚀 Running Enhanced Automation Scripts');
-    
+
     const scripts = [
       {
         script: 'node enhanced-error-fixer.cjs',
-        description: 'Enhanced Error Fixer'
+        description: 'Enhanced Error Fixer',
       },
       {
         script: 'node performance-monitor-enhanced.cjs',
-        description: 'Performance Monitor'
+        description: 'Performance Monitor',
       },
       {
         script: 'node security-audit-enhanced.cjs',
-        description: 'Security Audit'
+        description: 'Security Audit',
       },
       {
         script: 'node comprehensive-test-runner.cjs',
-        description: 'Comprehensive Test Runner'
-      }
+        description: 'Comprehensive Test Runner',
+      },
     ];
-    
+
     const results = [];
-    
+
     for (const script of scripts) {
       const result = await this.runCommand(script.script, script.description);
-      results.push({ ...script, ...result })}
-    
-    return results}
+      results.push({ ...script, ...result });
+    }
+
+    return results;
+  }
 
   async run() {
     this.log('🎯 Starting Automation Improvement Suite');
-    
+
     // Create enhanced automation scripts
     this.createEnhancedAutomationScripts();
-    
+
     // Run the enhanced automations
     const results = await this.runEnhancedAutomations();
-    
+
     // Generate final report
     const finalReport = {
       timestamp: new Date().toISOString(),
@@ -439,17 +459,20 @@ runner.runTests().catch(console.error);
       summary: {
         totalScripts: results.length,
         successful: results.filter(r => r.success).length,
-        failed: results.filter(r => !r.success).length
-      }
+        failed: results.filter(r => !r.success).length,
+      },
     };
-    
+
     fs.writeFileSync(
       path.join(this.reportsDir, 'automation-improvement-report.json'),
       JSON.stringify(finalReport, null, 2)
     );
-    
+
     this.log('🎉 Automation Improvement Suite Completed');
-    this.log(`📊 Summary: ${finalReport.summary.successful}/${finalReport.summary.total} scripts successful`)}
+    this.log(
+      `📊 Summary: ${finalReport.summary.successful}/${finalReport.summary.total} scripts successful`
+    );
+  }
 }
 
 // Run the suite
