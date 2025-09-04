@@ -65,7 +65,7 @@ describe('/api/products API Endpoint', () => {
           id: 'product-gpt-high-score',
           name: 'Super GPT Model',
           description: 'Latest generation AI',
-          images: []
+          images: [],
           price: null,
           currency: 'USD',
           tags: []
@@ -74,7 +74,7 @@ describe('/api/products API Endpoint', () => {
           id: 'product-gpt-medium-score',
           name: 'Advanced GPT Assistant',
           description: 'Your personal AI helper powered by GPT',
-          images: []
+          images: [],
           price: null,
           currency: 'USD',
           tags: []

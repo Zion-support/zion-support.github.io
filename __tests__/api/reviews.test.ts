@@ -90,7 +90,7 @@ describe('/api/reviews API Endpoint', () => {
         companyId: null,
         headline: null,
         lastLoginAt: null,
-        notifications: {}
+        notifications: {},
         profileComplete: false,
         resetToken: null,
         resetTokenExpiry: null,
@@ -202,8 +202,8 @@ describe('/api/reviews API Endpoint', () => {
       const { req, res } = createMocks({
         method: 'POST' as RequestMethod,
         body: {
-          productId: 'prod1'
-          rating: 'five-stars'
+          productId: 'prod1',
+          rating: 'five-stars',
           comment: 'Text rating!'
         }
       })
@@ -218,14 +218,14 @@ describe('/api/reviews API Endpoint', () => {
     })
     it('should fail if not authenticated (401)', async () => {
       (supabase.auth.getSession as jest.Mock).mockResolvedValue({
-        data: { session: null }
+        data: { session: null },
         error: null
       })
       const { req, res } = createMocks({
         method: 'POST' as RequestMethod,
         body: {
-          productId: 'prod1'
-          rating: 5
+          productId: 'prod1',
+          rating: 5,
           comment: 'Trying to review without login'
         }
       })
@@ -240,7 +240,7 @@ describe('/api/reviews API Endpoint', () => {
     })
     it('should fail if Supabase user email is missing (401)', async () => {
       const mockSupabaseSessionNoEmail: Session = {
-        user: { id: 'supaUserId', email: undefined } as SupabaseUser
+        user: { id: 'supaUserId', email: undefined } as SupabaseUser,
         access_token: 'token',
         refresh_token: 'ref',
         expires_in: 3600,
@@ -248,14 +248,14 @@ describe('/api/reviews API Endpoint', () => {
         expires_at: Date.now() + 3600000
       }
       (supabase.auth.getSession as jest.Mock).mockResolvedValue({
-        data: { session: mockSupabaseSessionNoEmail }
+        data: { session: mockSupabaseSessionNoEmail },
         error: null
       })
       const { req, res } = createMocks({
         method: 'POST' as RequestMethod,
         body: {
-          productId: 'prod1'
-          rating: 5
+          productId: 'prod1',
+          rating: 5,
           comment: 'Review with no email in session'
         }
       })
@@ -271,9 +271,9 @@ describe('/api/reviews API Endpoint', () => {
     it('should fail if user not found in Prisma database (404)', async () => {
       const mockSupabaseSession: Session = {
         user: {
-          id: 'supaUserId'
+          id: 'supaUserId',
           email: 'unknown@example.com'
-        } as SupabaseUser
+        } as SupabaseUser,
         access_token: 'token',
         refresh_token: 'ref',
         expires_in: 3600,
@@ -288,8 +288,8 @@ describe('/api/reviews API Endpoint', () => {
       const { req, res } = createMocks({
         method: 'POST' as RequestMethod,
         body: {
-          productId: 'prod1'
-          rating: 5
+          productId: 'prod1',
+          rating: 5,
           comment: 'User exists in Supa, not Prisma'
         }
       })
@@ -307,27 +307,27 @@ describe('/api/reviews API Endpoint', () => {
     it('should successfully fetch reviews for a product (200)', async () => {
       const mockReviewsList: ProductReview[] = [
         {
-          id: 'rev1'
-          productId: 'prod123'
-          userId: 1
-          rating: 5
-          comment: 'Excellent!'
-          createdAt: new Date()
+          id: 'rev1',
+          productId: 'prod123',
+          userId: 1,
+          rating: 5,
+          comment: 'Excellent!',
+          createdAt: new Date(),
           updatedAt: new Date()
-        }
+        },
         {
-          id: 'rev2'
-          productId: 'prod123'
-          userId: 2
-          rating: 4
-          comment: 'Very good.'
-          createdAt: new Date()
+          id: 'rev2',
+          productId: 'prod123',
+          userId: 2,
+          rating: 4,
+          comment: 'Very good.',
+          createdAt: new Date(),
           updatedAt: new Date()
         }
       ]
       (prismaMock.productReview.findMany as jest.Mock).mockResolvedValue(mockReviewsList)
       const { req, res } = createMocks({
-        method: 'GET' as RequestMethod
+        method: 'GET' as RequestMethod,
         query: { productId: 'prod123' }
       })
       await productReviewsHandler(
@@ -345,7 +345,7 @@ describe('/api/reviews API Endpoint', () => {
     it('should return an empty array if no reviews found (200)', async () => {
       (prismaMock.productReview.findMany as jest.Mock).mockResolvedValue([])
       const { req, res } = createMocks({
-        method: 'GET' as RequestMethod
+        method: 'GET' as RequestMethod,
         query: { productId: 'prodNonExistent' }
       })
       await productReviewsHandler(
@@ -357,7 +357,7 @@ describe('/api/reviews API Endpoint', () => {
     })
     it('should fail if productId is missing (400)', async () => {
       const { req, res } = createMocks({
-        method: 'GET' as RequestMethod
+        method: 'GET' as RequestMethod,
         query: {} // No productId
       })
       await productReviewsHandler(
