@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import Head from 'next/head';
-import Image from 'next/image';
 import { useState, useEffect } from 'react';
 
 export default function Home() {
@@ -15,7 +14,7 @@ export default function Home() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  }
+  };
   return (
     <>
       <Head>
@@ -38,7 +37,7 @@ export default function Home() {
               "@type": "Organization",
               "name": "Zion Tech Group",
               "url": contact.site,
-              "logo": `${contact.site}/favicon.svg`,
+              "logo": contact.site + "/favicon.svg",
               "description": "Leading provider of micro SaaS products, AI services, and IT solutions",
               "address": {
                 "@type": "PostalAddress",
@@ -55,8 +54,8 @@ export default function Home() {
                 "email": contact.email
               },
               "sameAs": [contact.site]
-            })
-          }
+            }, null, 2)
+          }}
         />
       </Head>
       
