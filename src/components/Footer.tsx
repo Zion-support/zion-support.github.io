@@ -97,8 +97,6 @@ export default function Footer() {
       title: 'Company',
       links: [
         { name: 'About Us', href: '/about' },
-        { name: 'Our Mission', href: '/about#mission' },
-        { name: 'Leadership Team', href: '/about#team' },
         { name: 'Careers', href: '/careers' },
         { name: 'Press & News', href: '/newsroom' },
         { name: 'Partners', href: '/partners' }
@@ -130,12 +128,9 @@ export default function Footer() {
       title: 'Resources',
       links: [
         { name: 'Blog', href: '/blog' },
-        { name: 'Case Studies', href: '/case-studies' },
-        { name: 'White Papers', href: '/white-papers' },
-        { name: 'Webinars', href: '/webinars' },
-        { name: 'Documentation', href: '/docs' },
-        { name: 'API Reference', href: '/api' }
-      ]
+        { name: 'Docs', href: '/docs' },
+        { name: 'Status', href: '/status' },
+      ],
     },
     {
       title: 'Support',
