@@ -150,11 +150,7 @@ export default function Contact() {
               Ready to Get Started?
             </h2>
             <p className="text-lg text-slate-300 mb-8">
-<<<<<<< HEAD
-              Choose your preferred way to contact us and let's discuss how we can help 
-=======
-              Choose your preferred way to contact us and let&aposs discuss how we can help 
->>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
+Choose your preferred way to contact us and let's discuss how we can help
               transform your business with cutting-edge technology solutions.
             </p>
             

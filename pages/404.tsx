@@ -17,11 +17,7 @@ export default function Custom404() { return (
             <h1 className="text-9xl font-bold text-blue-600 mb-4">404</h1>
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">Page Not Found</h2>
             <p className="text-gray-600 mb-8">
-<<<<<<< HEAD
-              Sorry, we couldn't find the page you're looking for. It might have been moved, deleted, or you entered the wrong URL.
-=======
-              Sorry, we couldn&apos;t find the page you&aposre looking for. It might have been moved, deleted, or you entered the wrong URL.
->>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
+Sorry, we couldn't find the page you're looking for. It might have been moved, deleted, or you entered the wrong URL.
             </p>
           </div>
           

@@ -35,14 +35,9 @@ export default function Terms() {
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-4 text-blue-400">2. Use License</h2>
               <p className="text-slate-300 mb-4">
-<<<<<<< HEAD
-                Permission is granted to temporarily download one copy of Zion Tech Group's services for personal, 
+Permission is granted to temporarily download one copy of Zion Tech Group's services for personal, 
                 non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
               </p>
-=======
-                Permission is granted to temporarily download one copy of Zion Tech Group&aposs services for personal, 
-                non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not: </p>
->>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
               <ul className="list-disc list-inside text-slate-300 mb-4 space-y-2">
                 <li>modify or copy the materials</li>
                 <li>use the materials for any commercial purpose or for any public display</li>

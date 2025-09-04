@@ -79,7 +79,7 @@ const Layout: React.FC<LayoutProps> = ({
                 "https://ziontechgroup.com"
               ]
             })
-          }
+          }}
         />
       </Head>
       

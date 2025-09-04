@@ -104,11 +104,7 @@ export default function Cybersecurity() {
               Secure Your Business Today
             </h2>
             <p className="text-xl text-gray-600 mb-8">
-<<<<<<< HEAD
-              Don't wait for a security breach. Let our experts help you build a robust security posture.
-=======
-              Don&apost wait for a security breach. Let our experts help you build a robust security posture.
->>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
+Don't wait for a security breach. Let our experts help you build a robust security posture.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 

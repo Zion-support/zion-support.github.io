@@ -6,11 +6,7 @@ import PerformanceMonitor from '../components/PerformanceMonitor';
 import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import '../styles/globals.css';
 
-<<<<<<< HEAD
 function Header() {
-=======
-function Header(): any {
->>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -26,8 +22,7 @@ function Header(): any {
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent',
           backgroundClip: 'text',
-<<<<<<< HEAD
-          textDecoration: 'none',
+textDecoration: 'none',
         }}>Zion Tech Group</Link>
         
         {/* Desktop Navigation */}
@@ -41,24 +36,6 @@ function Header(): any {
           <Link href="/docs" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Docs</Link>
           <Link href="/pricing" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Pricing</Link>
           <Link href="/contact" style={{ background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', color: 'white', padding: '8px 16px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem', fontWeight: 600,
-=======
-          textDecoration: 'none'
-        }}>Zion Tech Group        </Link>
-        
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex gap-1 flex-wrap items-center">
-          <Link href="/" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Home</Link>
-          <Link href="/services" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Services</Link>
-          <Link href="/solutions" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Solutions</Link>
-          <Link href="/about" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>About</Link>
-          <Link href="/team" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Team</Link>
-          <Link href="/blog" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Blog</Link>
-          <Link href="/news" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>News</Link>
-          <Link href="/careers" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Careers</Link>
-          <Link href="/contact" style={{ 
-            background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
-            color: 'white', padding: '8px 16px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem', fontWeight: 600
->>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
           }}>Contact</Link>
         </div>
 
@@ -83,8 +60,7 @@ function Header(): any {
         }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 12, maxWidth: 1400, margin: '0 auto' }}>
             <Link href="/" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)' }} onClick={() => setMobileMenuOpen(false)}>Home</Link>
-<<<<<<< HEAD
-            <Link href="/services" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)' }} onClick={() => setMobileMenuOpen(false)}>All Services</Link>
+<Link href="/services" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)' }} onClick={() => setMobileMenuOpen(false)}>All Services</Link>
             <Link href="/services-catalog" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)' }} onClick={() => setMobileMenuOpen(false)}>Catalog</Link>
             <Link href="/cloud-devops" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)' }} onClick={() => setMobileMenuOpen(false)}>Cloud DevOps</Link>
             <Link href="/cybersecurity" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)' }} onClick={() => setMobileMenuOpen(false)}>Cybersecurity</Link>
@@ -92,18 +68,6 @@ function Header(): any {
             <Link href="/docs" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)' }} onClick={() => setMobileMenuOpen(false)}>Docs</Link>
             <Link href="/pricing" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)' }} onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
             <Link href="/contact" style={{ background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', color: 'white', padding: '12px 16px', textDecoration: 'none', borderRadius: 6, textAlign: 'center', fontWeight: 600, marginTop: 8,
-=======
-            <Link href="/services" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)' }} onClick={() => setMobileMenuOpen(false)}>Services</Link>
-            <Link href="/solutions" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)' }} onClick={() => setMobileMenuOpen(false)}>Solutions</Link>
-            <Link href="/about" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)' }} onClick={() => setMobileMenuOpen(false)}>About</Link>
-            <Link href="/team" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)' }} onClick={() => setMobileMenuOpen(false)}>Team</Link>
-            <Link href="/blog" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)' }} onClick={() => setMobileMenuOpen(false)}>Blog</Link>
-            <Link href="/news" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)' }} onClick={() => setMobileMenuOpen(false)}>News</Link>
-            <Link href="/careers" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)' }} onClick={() => setMobileMenuOpen(false)}>Careers</Link>
-            <Link href="/contact" style={{ 
-              background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
-              color: 'white', padding: '12px 16px', textDecoration: 'none', borderRadius: 6, textAlign: 'center', fontWeight: 600, marginTop: 8
->>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
             }} onClick={() => setMobileMenuOpen(false)}>Contact</Link>
           </div>
         </div>
@@ -112,11 +76,7 @@ function Header(): any {
   );
 }
 
-<<<<<<< HEAD
 function Footer() {
-=======
-function Footer(): any {
->>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
   return (
     <footer style={{ background: 'linear-gradient(135deg, #0b1220, #1e293b)', color: 'white', 
       marginTop: 60, 
@@ -243,12 +203,10 @@ function Footer(): any {
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <ErrorBoundary>
-      <PerformanceOptimizer>
-        <PerformanceMonitor />
-        <Header />
-        <Component {...pageProps} />
-        <Footer />
-      </PerformanceOptimizer>
+      <PerformanceMonitor />
+      <Header />
+      <Component {...pageProps} />
+      <Footer />
     </ErrorBoundary>
   );
 }

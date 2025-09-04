@@ -160,13 +160,8 @@ export default function ServicesCatalog() {
                 onClick={() => {
                   setSearchTerm('');
                   setSelectedCategory('all');
-<<<<<<< HEAD
-                }}
+}}
                 className="text-blue-400 hover: text-blue-300 transition-colors"
-=======
-                }
-                className="text-blue-400 hover:text-blue-300 transition-colors"
->>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
               >
                 Clear filters
               </button>

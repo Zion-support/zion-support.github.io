@@ -3,22 +3,10 @@ import Head from 'next/head';
 import { useState, useEffect } from 'react';
 
 export default function Status() {
-<<<<<<< HEAD
-  const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', site: 'https://ziontechgroup.com'
+const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', site: 'https://ziontechgroup.com'
   };
 
   const [systemStatus, setSystemStatus] = useState({ overall: 'operational', services: [
-=======
-  const contact = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    site: 'https://ziontechgroup.com'
-  }
-  const [systemStatus, setSystemStatus] = useState({
-    overall: 'operational',
-    services: [
->>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
       { name: 'Website', status: 'operational', uptime: '99.9%' },
       { name: 'API Services', status: 'operational', uptime: '99.8%' },
       { name: 'Cloud Infrastructure', status: 'operational', uptime: '99.9%' },

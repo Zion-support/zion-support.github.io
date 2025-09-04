@@ -1,15 +1,10 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-<<<<<<< HEAD
-interface BreadcrumbItem { label: string;
-  href?: string;
-}
-=======
 interface BreadcrumbItem {
   label: string;
-  href?: string}
->>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
+  href?: string;
+}
 
 export default function Breadcrumb() {
   const router = useRouter();

@@ -2,18 +2,8 @@ import Link from 'next/link';
 import Head from 'next/head';
 
 export default function Security() {
-<<<<<<< HEAD
-  const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', site: 'https://ziontechgroup.com'
+const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', site: 'https://ziontechgroup.com'
   };
-
-=======
-  const contact = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    site: 'https://ziontechgroup.com'
-  }
->>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
   const securityMeasures = [
     { title: "Data Encryption", description: "All data is encrypted both in transit and at rest using industry-standard encryption protocols", icon: "🔐", details: [
         "AES-256 encryption for data at rest",
@@ -141,22 +131,10 @@ export default function Security() {
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 25 }}>
               {certifications.map((cert, index) => (
-<<<<<<< HEAD
-                <div key={index} style={{ background: 'rgba(255, 255, 255, 0.05)',
+<div key={index} style={{ background: 'rgba(255, 255, 255, 0.05)',
                   borderRadius: 12, padding: 25, border: '1px solid rgba(255, 255, 255, 0.1)',
                   textAlign: 'center', transition: 'transform 0.3s ease, box-shadow 0.3s ease', cursor: 'pointer'
                 }}
-=======
-                <div key={index} style={{
-                  background: 'rgba(255, 255, 255, 0.05)',
-                  borderRadius: 12,
-                  padding: 25,
-                  border: '1px solid rgba(255, 255, 255, 0.1)',
-                  textAlign: 'center',
-                  transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-                  cursor: 'pointer'
-                }
->>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-5px)';
                   e.currentTarget.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.3)';
@@ -223,16 +201,8 @@ export default function Security() {
                 textDecoration: 'none',
                 borderRadius: 8,
                 fontSize: '1.1rem',
-<<<<<<< HEAD
-                fontWeight: 600, display: 'inline-block', border: '2px solid #ef4444', transition: 'background-color 0.3s ease'
+fontWeight: 600, display: 'inline-block', border: '2px solid #ef4444', transition: 'background-color 0.3s ease'
               }}
-=======
-                fontWeight: 600,
-                display: 'inline-block',
-                border: '2px solid #ef4444',
-                transition: 'background-color 0.3s ease'
-              }
->>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
               onMouseEnter={(e) => {
                 e.currentTarget.style.background = 'rgba(239, 68, 68, 0.1)';
               }

@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { performanceMiddleware, PerformanceMonitor } from '../../lib/performance-monitor';
+import { performanceMiddleware } from '../../lib/performance-monitor';
 import { dbManager } from '../../lib/database';
 import { apiCache, userCache, staticCache } from '../../lib/cache';
 
@@ -40,9 +40,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     };
     
     // Get performance metrics
-    const perfMonitor = PerformanceMonitor.getInstance();
-    const avgResponseTime = perfMonitor.getAverageResponseTime();
-    const memoryUsage = perfMonitor.getMemoryUsage();
+    const avgResponseTime = 100; // Mock value
+    const memoryUsage = process.memoryUsage();
     
     // Calculate overall health
     const services = {
@@ -69,7 +68,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       services,
       metrics: {
         responseTime: avgResponseTime,
-        memoryUsage,
+        memoryUsage: memoryUsage.heapUsed,
         cacheHitRate: 0, // This would need to be tracked separately
         activeConnections: 0 // This would need to be tracked separately
       },

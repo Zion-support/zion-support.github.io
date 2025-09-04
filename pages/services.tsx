@@ -457,17 +457,8 @@ export default function Services() {
           <Link href="/contact" style={{ display: 'inline-block', background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', color: 'white', padding: '16px 32px', borderRadius: 12, 
             fontWeight: 700, textDecoration: 'none', fontSize: 16, transition: 'all 0.3s ease',
           }}>Request a Quote</Link>
-<<<<<<< HEAD
-          <a href="tel:+13024640950" style={{ display: 'inline-block', background: 'rgba(34, 197, 94, 0.1)', color: '#22c55e', padding: '16px 32px', borderRadius: 12, 
+<a href="tel:+13024640950" style={{ display: 'inline-block', background: 'rgba(34, 197, 94, 0.1)', color: '#22c55e', padding: '16px 32px', borderRadius: 12, 
             fontWeight: 700, textDecoration: 'none', fontSize: 16, border: '2px solid #22c55e', transition: 'all 0.3s ease',
-=======
-          <a href="tel: +13024640950" style={{
-            display: 'inline-block', 
-            background: 'rgba(34, 197, 94, 0.1)', 
-            color: '#22c55e', padding: '16px 32px', borderRadius: 12, 
-            fontWeight: 700, textDecoration: 'none', fontSize: 16,
-            border: '2px solid #22c55e', transition: 'all 0.3s ease'
->>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
           }}>Call +1 302 464 0950</a>
         </div>
       </section>

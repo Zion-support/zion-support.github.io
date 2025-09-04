@@ -4,22 +4,10 @@ import Head from 'next/head';
 import { useState } from 'react';
 
 export default function Login() {
-<<<<<<< HEAD
-  const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', site: 'https://ziontechgroup.com'
+const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', site: 'https://ziontechgroup.com'
   };
 
   const [formData, setFormData] = useState({ email: '', password: '',
-=======
-  const contact = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    site: 'https://ziontechgroup.com'
-  }
-  const [formData, setFormData] = useState({
-    email: '',
-    password: '',
->>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
     rememberMe: false
   });
 

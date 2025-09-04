@@ -48,11 +48,7 @@ export default function FAQ() {
             </p>
             <p className="text-lg text-slate-400 mb-12 max-w-3xl mx-auto">
               Find answers to the most common questions about our services, pricing, 
-<<<<<<< HEAD
-              implementation, and support. Can't find what you're looking for? Contact us directly.
-=======
-              implementation, and support. Can&apos;t find what you&aposre looking for? Contact us directly.
->>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
+implementation, and support. Can't find what you're looking for? Contact us directly.
             </p>
           </div>
         </section>

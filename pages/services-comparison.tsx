@@ -2,18 +2,8 @@ import Link from 'next/link';
 import Head from 'next/head';
 
 export default function ServicesComparison() {
-<<<<<<< HEAD
-  const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', site: 'https://ziontechgroup.com'
+const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', site: 'https://ziontechgroup.com'
   };
-
-=======
-  const contact = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    site: 'https://ziontechgroup.com'
-  }
->>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
   const serviceCategories = [
     { name: 'Micro SaaS Products', count: '150+', description: 'Focused software solutions for specific business needs', features: ['Quick deployment', 'Scalable architecture', 'API integrations', 'Custom branding'], pricing: 'Starting at $29/month', href: '/micro-saas', color: 'blue'
     },

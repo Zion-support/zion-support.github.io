@@ -16,15 +16,8 @@ const Footer: React.FC = () => {
       { name: 'FAQ', href: '/faq' }], legal: [
       { name: 'Privacy Policy', href: '/privacy' },
       { name: 'Terms of Service', href: '/terms' },
-<<<<<<< HEAD
-      { name: 'Documentation', href: '/docs' }],
+{ name: 'Documentation', href: '/docs' }],
   };
-
-=======
-      { name: 'Documentation', href: '/docs' },
-    ],
-  }
->>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
   return (
     <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
