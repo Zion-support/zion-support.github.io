@@ -80,19 +80,19 @@ NC='\033[0m' # No Color
 
 # Function to print colored output
 print_status() {
-    echo -e "${BLUE}[INFO]${NC} $1"
+    echo -e "${BLUE}[$(date '+%Y-%m-%d %H:%M:%S')]${NC} $1"
 }
 
 print_success() {
-    echo -e "${GREEN}[SUCCESS]${NC} $1"
+    echo -e "${GREEN}✅ $1${NC}"
 }
 
 print_warning() {
-    echo -e "${YELLOW}[WARNING]${NC} $1"
+    echo -e "${YELLOW}⚠️  $1${NC}"
 }
 
 print_error() {
-    echo -e "${RED}[ERROR]${NC} $1"
+    echo -e "${RED}❌ $1${NC}"
 }
 
 # Check if we're in the right directory
@@ -322,6 +322,7 @@ echo "===="
 echo "Running quick error check..."
 node scripts/automation/quick-error-checker.cjs
 
+print_success "Error Automation System started successfully!"
 echo ""
 echo "Running TypeScript error fix..."
 node scripts/automation/typescript-error-fixer.cjs
