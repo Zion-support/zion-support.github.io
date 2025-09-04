@@ -38,7 +38,14 @@ import {
   Search,
   Eye,
   Target,
-  TrendingUp
+  TrendingUp,
+  Share2,
+  Receipt,
+  Package,
+  Calendar,
+  Headphones,
+  Kanban,
+  HardDrive
 } from 'lucide-react';
 
 const microSaaSProducts = [
@@ -49,7 +56,8 @@ const microSaaSProducts = [
     features: ['Cost Anomaly Detection', 'Auto Rightsizing', 'Budget Forecasting', 'Multi-cloud Support'],
     pricing: '$299 - $1,499/month',
     category: 'FinOps',
-    popular: true
+    popular: true,
+    link: 'https://cloudcostguard.ziontechgroup.com'
   },
   {
     title: 'LLM Evaluation & Safety Suite',
@@ -57,7 +65,8 @@ const microSaaSProducts = [
     icon: Shield,
     features: ['Prompt Testing', 'Bias Detection', 'Safety Checks', 'Guardrail Policies'],
     pricing: '$799 - $3,500/month',
-    category: 'AI Safety'
+    category: 'AI Safety',
+    link: 'https://llmsafety.ziontechgroup.com'
   },
   {
     title: 'Customer Feedback & NPS Micro-App',
@@ -65,7 +74,8 @@ const microSaaSProducts = [
     icon: MessageSquare,
     features: ['Survey Builder', 'Sentiment Analysis', 'Auto Routing', 'NPS Tracking'],
     pricing: '$149 - $799/month',
-    category: 'Customer Success'
+    category: 'Customer Success',
+    link: 'https://feedbackpro.ziontechgroup.com'
   },
   {
     title: 'API Rate Limiting & Analytics',
@@ -73,7 +83,8 @@ const microSaaSProducts = [
     icon: BarChart3,
     features: ['Smart Rate Limiting', 'Usage Analytics', 'Real-time Monitoring', 'Custom Rules'],
     pricing: '$199 - $999/month',
-    category: 'API Management'
+    category: 'API Management',
+    link: 'https://apiguard.ziontechgroup.com'
   },
   {
     title: 'Content Moderation AI',
@@ -81,7 +92,8 @@ const microSaaSProducts = [
     icon: Eye,
     features: ['Multi-modal Detection', 'Custom Rules', 'Real-time Processing', 'API Integration'],
     pricing: '$399 - $1,999/month',
-    category: 'Content Safety'
+    category: 'Content Safety',
+    link: 'https://contentmod.ziontechgroup.com'
   },
   {
     title: 'Workflow Automation Engine',
@@ -89,7 +101,135 @@ const microSaaSProducts = [
     icon: Settings,
     features: ['Visual Builder', '100+ Integrations', 'Conditional Logic', 'Scheduled Tasks'],
     pricing: '$99 - $599/month',
-    category: 'Automation'
+    category: 'Automation',
+    link: 'https://workflowpro.ziontechgroup.com'
+  },
+  {
+    title: 'Social Media Scheduler Pro',
+    description: 'AI-powered social media management with optimal posting times and content suggestions.',
+    icon: Share2,
+    features: ['Multi-platform Posting', 'AI Content Suggestions', 'Analytics Dashboard', 'Team Collaboration'],
+    pricing: '$49 - $299/month',
+    category: 'Social Media',
+    popular: true,
+    link: 'https://socialscheduler.ziontechgroup.com'
+  },
+  {
+    title: 'Invoice & Payment Tracker',
+    description: 'Automated invoicing, payment tracking, and financial reporting for small businesses.',
+    icon: Receipt,
+    features: ['Auto Invoice Generation', 'Payment Tracking', 'Tax Calculations', 'Financial Reports'],
+    pricing: '$29 - $149/month',
+    category: 'Finance',
+    link: 'https://invoicetracker.ziontechgroup.com'
+  },
+  {
+    title: 'Employee Time Tracking Hub',
+    description: 'Comprehensive time tracking with project management and productivity analytics.',
+    icon: Clock,
+    features: ['Time Tracking', 'Project Management', 'Productivity Analytics', 'Team Reports'],
+    pricing: '$19 - $99/month',
+    category: 'Productivity',
+    link: 'https://timetracker.ziontechgroup.com'
+  },
+  {
+    title: 'Email Marketing Automation',
+    description: 'Advanced email marketing with AI-driven personalization and campaign optimization.',
+    icon: Mail,
+    features: ['AI Personalization', 'A/B Testing', 'Behavioral Triggers', 'Advanced Analytics'],
+    pricing: '$79 - $399/month',
+    category: 'Marketing',
+    link: 'https://emailpro.ziontechgroup.com'
+  },
+  {
+    title: 'Inventory Management System',
+    description: 'Real-time inventory tracking with predictive analytics and automated reordering.',
+    icon: Package,
+    features: ['Real-time Tracking', 'Predictive Analytics', 'Auto Reordering', 'Multi-location Support'],
+    pricing: '$99 - $499/month',
+    category: 'E-commerce',
+    link: 'https://inventorypro.ziontechgroup.com'
+  },
+  {
+    title: 'Lead Generation Engine',
+    description: 'AI-powered lead generation with automated outreach and qualification scoring.',
+    icon: Target,
+    features: ['AI Lead Scoring', 'Automated Outreach', 'CRM Integration', 'Conversion Tracking'],
+    pricing: '$199 - $999/month',
+    category: 'Sales',
+    link: 'https://leadgen.ziontechgroup.com'
+  },
+  {
+    title: 'Document Management Pro',
+    description: 'Secure document storage with AI-powered search, OCR, and collaboration features.',
+    icon: FileText,
+    features: ['AI Search', 'OCR Processing', 'Version Control', 'Team Collaboration'],
+    pricing: '$39 - $199/month',
+    category: 'Document Management',
+    link: 'https://docmanager.ziontechgroup.com'
+  },
+  {
+    title: 'Website Performance Monitor',
+    description: 'Real-time website monitoring with performance optimization recommendations.',
+    icon: Monitor,
+    features: ['Real-time Monitoring', 'Performance Optimization', 'Uptime Tracking', 'Alert System'],
+    pricing: '$29 - $149/month',
+    category: 'Web Performance',
+    link: 'https://webmonitor.ziontechgroup.com'
+  },
+  {
+    title: 'Password Manager for Teams',
+    description: 'Secure password management with team sharing and enterprise security features.',
+    icon: Lock,
+    features: ['Team Sharing', 'Enterprise Security', 'Password Generator', 'Breach Monitoring'],
+    pricing: '$49 - $199/month',
+    category: 'Security',
+    link: 'https://passwordmanager.ziontechgroup.com'
+  },
+  {
+    title: 'Meeting Scheduler AI',
+    description: 'Intelligent meeting scheduling with calendar integration and conflict resolution.',
+    icon: Calendar,
+    features: ['Smart Scheduling', 'Calendar Integration', 'Conflict Resolution', 'Time Zone Handling'],
+    pricing: '$19 - $99/month',
+    category: 'Scheduling',
+    link: 'https://meetingscheduler.ziontechgroup.com'
+  },
+  {
+    title: 'Code Review Assistant',
+    description: 'AI-powered code review with automated suggestions and security vulnerability detection.',
+    icon: Code,
+    features: ['AI Code Review', 'Security Scanning', 'Performance Analysis', 'Team Collaboration'],
+    pricing: '$99 - $499/month',
+    category: 'Development',
+    link: 'https://codereview.ziontechgroup.com'
+  },
+  {
+    title: 'Customer Support Ticketing',
+    description: 'AI-enhanced customer support with automated ticket routing and response suggestions.',
+    icon: Headphones,
+    features: ['AI Ticket Routing', 'Response Suggestions', 'Knowledge Base', 'Multi-channel Support'],
+    pricing: '$79 - $399/month',
+    category: 'Customer Support',
+    link: 'https://supporttickets.ziontechgroup.com'
+  },
+  {
+    title: 'Project Management Hub',
+    description: 'Comprehensive project management with AI-powered resource allocation and timeline optimization.',
+    icon: Kanban,
+    features: ['AI Resource Allocation', 'Timeline Optimization', 'Team Collaboration', 'Progress Tracking'],
+    pricing: '$59 - $299/month',
+    category: 'Project Management',
+    link: 'https://projecthub.ziontechgroup.com'
+  },
+  {
+    title: 'Data Backup & Recovery',
+    description: 'Automated data backup with instant recovery and cross-platform synchronization.',
+    icon: HardDrive,
+    features: ['Automated Backups', 'Instant Recovery', 'Cross-platform Sync', 'Version History'],
+    pricing: '$39 - $199/month',
+    category: 'Data Management',
+    link: 'https://databackup.ziontechgroup.com'
   }
 ];
 
@@ -320,13 +460,23 @@ export default function MicroSaaSPage() {
                     <span className="text-sm font-semibold text-purple-600">{product.pricing}</span>
                   </div>
 
-                  <Link
-                    href="/contact"
-                    className="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
-                  >
-                    <span>Get Started</span>
-                    <ArrowRight className="w-3 h-3 ml-1" />
-                  </Link>
+                  <div className="space-y-2">
+                    <Link
+                      href={product.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
+                    >
+                      <span>Try Now</span>
+                      <ArrowRight className="w-3 h-3 ml-1" />
+                    </Link>
+                    <Link
+                      href="/contact"
+                      className="w-full border border-purple-600 text-purple-600 hover:bg-purple-50 py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
+                    >
+                      <span>Get Quote</span>
+                    </Link>
+                  </div>
                 </motion.div>
               );
             })}

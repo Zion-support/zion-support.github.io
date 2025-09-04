@@ -41,7 +41,8 @@ import {
   Sprout,
   Mail,
   ShoppingCart,
-  BookOpen
+  BookOpen,
+  Package
 } from 'lucide-react';
 
 const aiServices = [
@@ -51,7 +52,8 @@ const aiServices = [
     icon: Mail,
     features: ['Natural Language Processing', 'Sentiment Analysis', 'Auto-categorization', 'Smart Routing'],
     pricing: '$2,000 - $8,000 setup',
-    category: 'Automation'
+    category: 'Automation',
+    link: 'https://aiemail.ziontechgroup.com'
   },
   {
     title: 'Predictive Analytics Platform',
@@ -59,7 +61,8 @@ const aiServices = [
     icon: BarChart3,
     features: ['Time Series Analysis', 'Machine Learning Models', 'Real-time Predictions', 'Custom Dashboards'],
     pricing: '$4,000 - $20,000 project',
-    category: 'Analytics'
+    category: 'Analytics',
+    link: 'https://predictiveai.ziontechgroup.com'
   },
   {
     title: 'Intelligent Chatbot System',
@@ -67,7 +70,8 @@ const aiServices = [
     icon: MessageSquare,
     features: ['Natural Language Understanding', 'Context Awareness', 'Multi-language Support', 'Integration APIs'],
     pricing: '$1,000 - $6,000/month',
-    category: 'Customer Service'
+    category: 'Customer Service',
+    link: 'https://aichatbot.ziontechgroup.com'
   },
   {
     title: 'Computer Vision Solutions',
@@ -75,7 +79,8 @@ const aiServices = [
     icon: Eye,
     features: ['Object Detection', 'Image Classification', 'Facial Recognition', 'Video Analytics'],
     pricing: '$3,000 - $15,000 project',
-    category: 'Computer Vision'
+    category: 'Computer Vision',
+    link: 'https://computervision.ziontechgroup.com'
   },
   {
     title: 'AI Content Generation',
@@ -83,7 +88,8 @@ const aiServices = [
     icon: FileText,
     features: ['Text Generation', 'Content Optimization', 'SEO Integration', 'Multi-format Output'],
     pricing: '$1,500 - $8,000/month',
-    category: 'Content'
+    category: 'Content',
+    link: 'https://aicontent.ziontechgroup.com'
   },
   {
     title: 'Voice AI Assistant',
@@ -91,7 +97,135 @@ const aiServices = [
     icon: Mic,
     features: ['Speech-to-Text', 'Text-to-Speech', 'Voice Commands', 'Multi-language Support'],
     pricing: '$2,500 - $12,000 project',
-    category: 'Voice'
+    category: 'Voice',
+    link: 'https://voiceai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Fraud Detection System',
+    description: 'Real-time fraud detection using machine learning and behavioral analysis.',
+    icon: Shield,
+    features: ['Real-time Detection', 'Behavioral Analysis', 'Risk Scoring', 'API Integration'],
+    pricing: '$5,000 - $25,000 setup',
+    category: 'Security',
+    popular: true,
+    link: 'https://aifraud.ziontechgroup.com'
+  },
+  {
+    title: 'AI Document Processing',
+    description: 'Intelligent document extraction and processing using OCR and NLP.',
+    icon: FileText,
+    features: ['OCR Processing', 'Data Extraction', 'Form Recognition', 'Automated Workflows'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Document AI',
+    link: 'https://aidocuments.ziontechgroup.com'
+  },
+  {
+    title: 'AI Recommendation Engine',
+    description: 'Personalized recommendation system using collaborative filtering and deep learning.',
+    icon: Target,
+    features: ['Collaborative Filtering', 'Deep Learning', 'Real-time Updates', 'A/B Testing'],
+    pricing: '$3,000 - $15,000/month',
+    category: 'Recommendations',
+    link: 'https://airecommendations.ziontechgroup.com'
+  },
+  {
+    title: 'AI Translation Service',
+    description: 'Advanced neural machine translation with context awareness and domain adaptation.',
+    icon: Globe,
+    features: ['Neural Translation', 'Context Awareness', 'Domain Adaptation', 'API Integration'],
+    pricing: '$1,000 - $5,000/month',
+    category: 'Translation',
+    link: 'https://aitranslation.ziontechgroup.com'
+  },
+  {
+    title: 'AI Code Generation',
+    description: 'Automated code generation and assistance using large language models.',
+    icon: Code,
+    features: ['Code Generation', 'Bug Detection', 'Code Review', 'Documentation'],
+    pricing: '$2,500 - $12,000/month',
+    category: 'Development',
+    link: 'https://aicode.ziontechgroup.com'
+  },
+  {
+    title: 'AI Medical Diagnosis',
+    description: 'AI-powered medical image analysis and diagnostic assistance.',
+    icon: Heart,
+    features: ['Medical Imaging', 'Diagnostic Assistance', 'Risk Assessment', 'Clinical Integration'],
+    pricing: '$10,000 - $50,000 project',
+    category: 'Healthcare',
+    link: 'https://aimedical.ziontechgroup.com'
+  },
+  {
+    title: 'AI Supply Chain Optimization',
+    description: 'Intelligent supply chain management with demand forecasting and optimization.',
+    icon: Package,
+    features: ['Demand Forecasting', 'Inventory Optimization', 'Route Planning', 'Risk Management'],
+    pricing: '$5,000 - $30,000 project',
+    category: 'Supply Chain',
+    link: 'https://aisupplychain.ziontechgroup.com'
+  },
+  {
+    title: 'AI Financial Analysis',
+    description: 'Automated financial analysis and investment recommendations using AI.',
+    icon: TrendingUp,
+    features: ['Market Analysis', 'Risk Assessment', 'Portfolio Optimization', 'Real-time Alerts'],
+    pricing: '$3,000 - $20,000/month',
+    category: 'Finance',
+    link: 'https://aifinance.ziontechgroup.com'
+  },
+  {
+    title: 'AI Quality Control',
+    description: 'Automated quality inspection using computer vision and machine learning.',
+    icon: CheckCircle,
+    features: ['Visual Inspection', 'Defect Detection', 'Quality Scoring', 'Process Optimization'],
+    pricing: '$4,000 - $25,000 project',
+    category: 'Manufacturing',
+    link: 'https://aiquality.ziontechgroup.com'
+  },
+  {
+    title: 'AI Legal Document Analysis',
+    description: 'Intelligent legal document review and contract analysis using NLP.',
+    icon: BookOpen,
+    features: ['Contract Analysis', 'Risk Assessment', 'Compliance Checking', 'Document Review'],
+    pricing: '$5,000 - $30,000/month',
+    category: 'Legal',
+    link: 'https://ailegal.ziontechgroup.com'
+  },
+  {
+    title: 'AI Energy Optimization',
+    description: 'Smart energy management and optimization using IoT and machine learning.',
+    icon: Zap,
+    features: ['Energy Forecasting', 'Load Optimization', 'Predictive Maintenance', 'Cost Reduction'],
+    pricing: '$3,000 - $20,000 project',
+    category: 'Energy',
+    link: 'https://aienergy.ziontechgroup.com'
+  },
+  {
+    title: 'AI Customer Insights',
+    description: 'Advanced customer behavior analysis and insights generation.',
+    icon: Users,
+    features: ['Behavior Analysis', 'Segmentation', 'Churn Prediction', 'Personalization'],
+    pricing: '$2,000 - $12,000/month',
+    category: 'Customer Analytics',
+    link: 'https://aicustomerinsights.ziontechgroup.com'
+  },
+  {
+    title: 'AI Process Automation',
+    description: 'Intelligent process automation using RPA and machine learning.',
+    icon: Settings,
+    features: ['RPA Integration', 'Process Mining', 'Workflow Optimization', 'Exception Handling'],
+    pricing: '$4,000 - $25,000 project',
+    category: 'Process Automation',
+    link: 'https://aiprocess.ziontechgroup.com'
+  },
+  {
+    title: 'AI Research Assistant',
+    description: 'AI-powered research and data analysis for academic and business research.',
+    icon: Search,
+    features: ['Literature Review', 'Data Analysis', 'Hypothesis Generation', 'Report Generation'],
+    pricing: '$1,500 - $8,000/month',
+    category: 'Research',
+    link: 'https://airesearch.ziontechgroup.com'
   }
 ];
 
@@ -241,13 +375,23 @@ export default function AIServicesPage() {
                     <span className="text-sm font-semibold text-blue-600">{service.pricing}</span>
                   </div>
 
-                  <Link
-                    href="/contact"
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
-                  >
-                    <span>Get Quote</span>
-                    <ArrowRight className="w-3 h-3 ml-1" />
-                  </Link>
+                  <div className="space-y-2">
+                    <Link
+                      href={service.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
+                    >
+                      <span>Try Now</span>
+                      <ArrowRight className="w-3 h-3 ml-1" />
+                    </Link>
+                    <Link
+                      href="/contact"
+                      className="w-full border border-blue-600 text-blue-600 hover:bg-blue-50 py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
+                    >
+                      <span>Get Quote</span>
+                    </Link>
+                  </div>
                 </motion.div>
               );
             })}
