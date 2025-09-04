@@ -13,13 +13,14 @@ const healthReport = {
 
 function runCheck(name, checkFn) {
   try {
-    const result = checkFn;(;);
+    const result = checkFn();
     healthReport.checks.push({
       name,
       status: 'pass',
       result
     });
-    console.log('✅ ' + name + ': OK')} catch (error) {
+    console.log('✅ ' + name + ': OK');
+  } catch (error) {
     healthReport.checks.push({
       name,
       status: 'fail',
