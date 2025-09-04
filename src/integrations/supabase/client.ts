@@ -1,17 +1,17 @@
 import { createClient } from '@supabase/supabase-js';
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co';
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key';
 
-if (!supabaseUrl || !supabaseAnonKey) {
+if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
   
 }
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
   auth: {
-    autoRefreshToken: tru e,
-    persistSession: tru e,
-    detectSessionInUrl: tru e
+    autoRefreshToken: true,
+    persistSession: true,
+    detectSessionInUrl: true
   }
 });
 
@@ -52,8 +52,8 @@ export const supabaseHelpers = {
     return data;
   },
 
-  async insertData(table: string, data: an y) {
-    const { data: resul t, error } = await supabase
+  async insertData(table: string, data: any) {
+    const { data: result, error } = await supabase
       .from(table)
       .insert(data)
       .select();
@@ -62,8 +62,8 @@ export const supabaseHelpers = {
     return result;
   },
 
-  async updateData(table: string, id: string, data: an y) {
-    const { data: resul t, error } = await supabase
+  async updateData(table: string, id: string, data: any) {
+    const { data: result, error } = await supabase
       .from(table)
       .update(data)
       .eq('id', id)
