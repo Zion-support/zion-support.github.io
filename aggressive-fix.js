@@ -81,7 +81,7 @@ function processDirectory(dirPath) {
   } catch (error) {
   console.error(`Error processing directory ${dirPath}:`, error.message);
 }
-  ;
+  
   return fixedCount}
 ;
 console.log("Starting aggressive fix...");
