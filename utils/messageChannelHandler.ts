@@ -5,9 +5,9 @@ type MessageHandler = {
 
 export const messageChannelHandler: MessageHandler = {
   sendMessage: (_message) => {
-    // no-op placeholder; wire to real transport as needed
+    // No-op: placeholder for message channel integration
   },
   receiveMessage: (_callback) => {
-    // no-op placeholder; wire to real transport as needed
+    // No-op: placeholder for message listener registration
   },
 };
