@@ -151,7 +151,7 @@ const About: Reac t.FC = () => {
             and digital transformation services.</p>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
