@@ -2,14 +2,12 @@
 // Performance optimizations
 const nextConfig = {
   reactStrictMode: false,
-  swcMinify: true,
   compress: true,
   poweredByHeader: false,
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
-  // Only treat *.route.tsx/ts as pages to avoid compiling corrupted files
-  // Compile only whitelisted page files to avoid corrupted files
-  pageExtensions: ['route.tsx', 'route.ts'],
+  // Compile only known-good page files to avoid corrupted sources
+  pageExtensions: ['route.tsx', 'page.tsx', 'route.ts', 'page.ts'],
   images: {
     domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
     formats: ['image/webp', 'image/avif'],
@@ -41,4 +39,4 @@ const nextConfig = {
   }
 };
 
-module.exports = nextConfig;
+export default nextConfig;
