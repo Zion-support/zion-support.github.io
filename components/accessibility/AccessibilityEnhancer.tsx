@@ -10,12 +10,12 @@ export const useKeyboardNavigation = () => {
         if (main) {
           (main as HTMLElement).focus();
         }
-      };
-    }
+      }
+    };
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
-}
+};
 // Component for skip links
 export const SkipLinks: React.FC = () => (
   <div className="sr-only focus-within:not-sr-only">
@@ -109,7 +109,8 @@ export const FocusTrap: React.FC<FocusTrapProps> = ({ children, active }) => {
           firstFocusableElement.focus();
           e.preventDefault();
         }
-    }
+      }
+    };
     document.addEventListener('keydown', handleTabKey);
     firstFocusableElement?.focus();
 

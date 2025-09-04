@@ -1,10 +1,16 @@
-import React, {  useState, useCallback  } from "react";
+import React, { useState } from 'react';
 import LoadingSpinner from './LoadingSpinner';
 
-interface FormData { name: string; email: string; company: string; phone: string; service: string; message: string;
+interface FormData {
+  name: string;
+  email: string;
+  company: string;
+  phone: string;
+  service: string;
+  message: string;
 }
 
-const ContactForm: React.FC = (): JSX.Element => {
+const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -23,7 +29,7 @@ const ContactForm: React.FC = (): JSX.Element => {
       ...prev,
       [name]: value
     }));
-  }
+  };
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -41,14 +47,16 @@ const ContactForm: React.FC = (): JSX.Element => {
         service: '',
         message: ''
       });
-    } catch (error) {
+    } catch {
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
     }
+  };
+
   return (
-<form onSubmit={handleSubmit} className="space-y-6" aria-label="Contact form">
-      <div className="grid md:grid-cols-2 gap-6">
+    <form onSubmit={handleSubmit} className="space-y-6" aria-label="Contact form">
+      <div className="grid md: grid-cols-2 gap-6">
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-slate-300 mb-2">
             Full Name *
@@ -60,7 +68,7 @@ const ContactForm: React.FC = (): JSX.Element => {
             value={formData.name}
             onChange={handleInputChange}
             required
-            className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             placeholder="Your full name"
             aria-describedby="name-error"
           />
@@ -77,7 +85,7 @@ const ContactForm: React.FC = (): JSX.Element => {
             value={formData.email}
             onChange={handleInputChange}
             required
-            className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             placeholder="your.email@company.com"
             aria-describedby="email-error"
           />
@@ -95,7 +103,7 @@ const ContactForm: React.FC = (): JSX.Element => {
             name="company"
             value={formData.company}
             onChange={handleInputChange}
-            className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             placeholder="Your company name"
           />
         </div>
@@ -110,7 +118,7 @@ const ContactForm: React.FC = (): JSX.Element => {
             name="phone"
             value={formData.phone}
             onChange={handleInputChange}
-            className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             placeholder="+1 (555) 123-4567"
           />
         </div>
@@ -125,7 +133,7 @@ const ContactForm: React.FC = (): JSX.Element => {
           name="service"
           value={formData.service}
           onChange={handleInputChange}
-          className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
         >
           <option value="">Select a service</option>
           <option value="micro-saas">Micro SaaS Products</option>
@@ -155,7 +163,7 @@ const ContactForm: React.FC = (): JSX.Element => {
 
       {submitStatus === 'success' && (
         <div className="p-4 bg-green-900/50 border border-green-500 rounded-lg text-green-300" role="alert">
-          Thank you for your message! We'll get back to you within 24 hours.
+          Thank you for your message! We&apos;ll get back to you within 24 hours.
         </div>
       )}
 
@@ -183,4 +191,5 @@ const ContactForm: React.FC = (): JSX.Element => {
     </form>
   );
 }
+
 export default ContactForm;

@@ -1,6 +1,7 @@
-import React, {  Component, ErrorInfo, ReactNode  } from "react";
+import React, { Component, ReactNode } from 'react';
 
-interface Props { children: ReactNode;
+interface Props {
+  children: ReactNode;
   fallback?: ReactNode;
 }
 
@@ -16,7 +17,7 @@ class ErrorBoundary extends Component<Props, State> {
   public static getDerivedStateFromError(): State {
     return { hasError: true };
   }
-  
+
   public componentDidCatch() {
     // Error logging can be implemented here if needed
   }
@@ -66,4 +67,6 @@ class ErrorBoundary extends Component<Props, State> {
 
     return this.props.children;
   }
+}
+
 export default ErrorBoundary;

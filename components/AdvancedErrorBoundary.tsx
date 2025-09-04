@@ -3,6 +3,7 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
+  // eslint-disable-next-line no-unused-vars
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 
@@ -32,7 +33,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
 
   private handleRetry = () => {
     this.setState({ hasError: false, error: undefined, errorInfo: undefined });
-  }
+  };
   public render() {
     if (this.state.hasError) {
       if (this.props.fallback) {

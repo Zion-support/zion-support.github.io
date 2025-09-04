@@ -16,7 +16,8 @@ const Footer: React.FC = () => {
       { name: 'FAQ', href: '/faq' }], legal: [
       { name: 'Privacy Policy', href: '/privacy' },
       { name: 'Terms of Service', href: '/terms' },
-{ name: 'Documentation', href: '/docs' }],
+      { name: 'Documentation', href: '/docs' }
+    ],
   };
   return (
     <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
