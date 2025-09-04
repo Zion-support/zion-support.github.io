@@ -8,9 +8,32 @@ export default function Home() {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-    site: 'https://ziontechgroup.com',
+    site: 'https://ziontechgroup.com'
   };
 
+  const structuredData = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "url": contact.site,
+    "logo": `${contact.site}/favicon.svg`,
+    "description": "Leading provider of micro SaaS products, AI services, and IT solutions",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "364 E Main St STE 1008",
+      "addressLocality": "Middletown",
+      "addressRegion": "DE",
+      "postalCode": "19709",
+      "addressCountry": "US"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": contact.phone,
+      "contactType": "customer service",
+      "email": contact.email
+    },
+    "sameAs": [contact.site]
+  });
   return (
     <>
       <Head>
@@ -28,29 +51,7 @@ export default function Home() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Zion Tech Group",
-              "url": contact.site,
-              "logo": `${contact.site}/favicon.svg`,
-              "description": "Leading provider of micro SaaS products, AI services, and IT solutions",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "364 E Main St STE 1008",
-                "addressLocality": "Middletown",
-                "addressRegion": "DE",
-                "postalCode": "19709",
-                "addressCountry": "US"
-              },
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": contact.phone,
-                "contactType": "customer service",
-                "email": contact.email
-              },
-              "sameAs": [contact.site]
-            })
+            __html: structuredData
           }}
         />
       </Head>

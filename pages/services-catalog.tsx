@@ -311,15 +311,21 @@ export default function ServicesCatalog() {
           </div>
 
           {filteredServices.length === 0 && (
-            <div style={{ 
-              textAlign: 'center', 
-              padding: '60px 20px',
-              color: '#94a3b8'
-            }}>
-              <h3 style={{ fontSize: '1.5rem', marginBottom: 10 }}>
-                No services found
-              </h3>
-              <p>Try adjusting your search terms or category filter.</p>
+            <div className="text-center py-12">
+              <div className="w-16 h-16 bg-gray-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Search className="w-8 h-8 text-gray-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">No services found</h3>
+              <p className="text-gray-300 mb-6">Try adjusting your search terms or filters</p>
+              <button
+                onClick={() => {
+                  setSearchTerm('');
+                  setSelectedCategory('all');
+                }}
+                className="text-blue-400 hover:text-blue-300 transition-colors"
+              >
+                Clear filters
+              </button>
             </div>
           )}
         </div>

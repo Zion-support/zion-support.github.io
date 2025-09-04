@@ -29,7 +29,7 @@ export default function Authentication() {
             </Link>
             <h1 className="text-4xl font-bold text-gray-900 mb-4">Authentication</h1>
             <p className="text-xl text-gray-600">
-              Secure authentication methods for accessing Zion Tech Group's APIs and services.
+              Secure authentication methods for accessing Zion Tech Group&apos;s APIs and services.
             </p>
           </div>
 

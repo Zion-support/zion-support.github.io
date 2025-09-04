@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 
 interface SearchResult {
@@ -69,9 +69,8 @@ function SearchBar() {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<SearchResult[]>([]);
   const [isOpen, setIsOpen] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const searchRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const searchRef = useRef<HTMLDivElement>(null);
 
   // Mock search data - in a real app, this would come from an API
   const searchData: SearchResult[] = [
@@ -137,8 +136,7 @@ function SearchBar() {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setQuery(value);
-    handleSearch(value);
-  }
+  };
   const handleResultClick = () => {
     setIsOpen(false);
     setQuery('');
@@ -150,7 +148,7 @@ function SearchBar() {
       inputRef.current?.blur();
     }
   };
-  
+
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
@@ -161,7 +159,7 @@ function SearchBar() {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
   return (
-    <div className="relative" ref={searchRef}>
+    <div ref={searchRef} className="relative w-full max-w-md">
       <div className="relative">
         <input
           ref={inputRef}
@@ -169,13 +167,7 @@ function SearchBar() {
           value={query}
           onChange={handleInputChange}
           onKeyDown={handleKeyDown}
-          onFocus={() => query && setIsOpen(true)}
-          placeholder="Search services, products, or pages..."
-          className="w-full md:w-80 px-4 py-2 pl-10 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-          aria-label="Search"
-          aria-expanded={isOpen}
-          aria-haspopup="listbox"
-          role="combobox"
+          className="w-full px-4 py-2 pl-10 bg-slate-800/50 border border-white/20 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
         />
         <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
           <svg

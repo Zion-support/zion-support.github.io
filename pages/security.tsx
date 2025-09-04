@@ -155,12 +155,13 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
               {certifications.map((cert, index) => (
                 <div key={index} style={{ 
                   background: 'rgba(255, 255, 255, 0.05)',
-                  borderRadius: 12, 
-                  padding: 25, 
-                  border: '1px solid rgba(255, 255, 255, 0.1)'
-                }}>
-                  textAlign: 'center', transition: 'transform 0.3s ease, box-shadow 0.3s ease', cursor: 'pointer'>
-                }}>
+                  borderRadius: 12,
+                  padding: 25,
+                  border: '1px solid rgba(255, 255, 255, 0.1)',
+                  textAlign: 'center',
+                  transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                  cursor: 'pointer'
+                }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-5px)';
                   e.currentTarget.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.3)';
