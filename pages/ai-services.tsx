@@ -208,6 +208,127 @@ const aiServices = [
     features: ['Multi-channel Analysis', 'Emotion Detection', 'Trend Analysis', 'Alert System'],
     pricing: '$1,000 - $5,000/month',
     category: 'Customer Analytics'
+  },
+  {
+    title: 'AI-Powered Cybersecurity Platform',
+    description: 'Advanced AI-driven cybersecurity with threat detection and automated response.',
+    icon: Shield,
+    features: ['Threat Detection', 'Automated Response', 'Behavioral Analysis', 'Zero-day Protection'],
+    pricing: '$5,000 - $30,000/month',
+    category: 'Cybersecurity',
+    popular: true
+  },
+  {
+    title: 'AI Medical Imaging Analysis',
+    description: 'Advanced medical image analysis for diagnostics and treatment planning.',
+    icon: Eye,
+    features: ['Radiology Analysis', 'Pathology Detection', 'Treatment Planning', 'Clinical Decision Support'],
+    pricing: '$15,000 - $100,000/setup',
+    category: 'Healthcare'
+  },
+  {
+    title: 'AI-Powered Autonomous Vehicles',
+    description: 'Complete autonomous vehicle systems with perception, planning, and control.',
+    icon: Car,
+    features: ['Computer Vision', 'Path Planning', 'Obstacle Avoidance', 'Fleet Management'],
+    pricing: '$100,000 - $500,000/project',
+    category: 'Autonomous Systems'
+  },
+  {
+    title: 'AI Language Translation Platform',
+    description: 'Real-time multi-language translation with context understanding.',
+    icon: Globe,
+    features: ['Real-time Translation', 'Context Understanding', 'Voice Translation', 'Document Translation'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Language Processing'
+  },
+  {
+    title: 'AI-Powered Trading Algorithm',
+    description: 'Advanced algorithmic trading with machine learning and market prediction.',
+    icon: TrendingUp,
+    features: ['Market Analysis', 'Risk Management', 'Portfolio Optimization', 'Real-time Trading'],
+    pricing: '$10,000 - $50,000/setup',
+    category: 'Financial AI'
+  },
+  {
+    title: 'AI Content Moderation System',
+    description: 'Automated content moderation for social media and online platforms.',
+    icon: Eye,
+    features: ['Text Analysis', 'Image Recognition', 'Video Analysis', 'Real-time Moderation'],
+    pricing: '$3,000 - $15,000/month',
+    category: 'Content Safety'
+  },
+  {
+    title: 'AI-Powered Supply Chain Optimization',
+    description: 'Intelligent supply chain management with demand forecasting and logistics optimization.',
+    icon: Network,
+    features: ['Demand Forecasting', 'Route Optimization', 'Inventory Management', 'Risk Assessment'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'Supply Chain'
+  },
+  {
+    title: 'AI Voice Cloning & Synthesis',
+    description: 'Advanced voice synthesis and cloning technology for various applications.',
+    icon: Mic,
+    features: ['Voice Cloning', 'Text-to-Speech', 'Emotion Control', 'Multi-language Support'],
+    pricing: '$5,000 - $25,000/setup',
+    category: 'Voice AI'
+  },
+  {
+    title: 'AI-Powered Drug Discovery',
+    description: 'Accelerated drug discovery using AI for molecular design and testing.',
+    icon: Heart,
+    features: ['Molecular Design', 'Drug-Target Interaction', 'Toxicity Prediction', 'Clinical Trial Design'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Pharmaceutical'
+  },
+  {
+    title: 'AI Weather Prediction System',
+    description: 'Advanced weather forecasting using machine learning and satellite data.',
+    icon: Globe,
+    features: ['Weather Forecasting', 'Climate Analysis', 'Disaster Prediction', 'Agricultural Insights'],
+    pricing: '$10,000 - $50,000/setup',
+    category: 'Environmental AI'
+  },
+  {
+    title: 'AI-Powered Personal Assistant',
+    description: 'Intelligent personal assistant with natural language understanding and task automation.',
+    icon: Bot,
+    features: ['Natural Language Processing', 'Task Automation', 'Calendar Management', 'Smart Reminders'],
+    pricing: '$1,000 - $5,000/month',
+    category: 'Personal AI'
+  },
+  {
+    title: 'AI Fraud Detection & Prevention',
+    description: 'Advanced fraud detection system using machine learning and behavioral analysis.',
+    icon: Shield,
+    features: ['Real-time Detection', 'Behavioral Analysis', 'Risk Scoring', 'Automated Alerts'],
+    pricing: '$5,000 - $30,000/setup',
+    category: 'Financial Security'
+  },
+  {
+    title: 'AI-Powered Recommendation Engine',
+    description: 'Advanced recommendation system for e-commerce, content, and services.',
+    icon: Target,
+    features: ['Collaborative Filtering', 'Content-based Filtering', 'Real-time Updates', 'A/B Testing'],
+    pricing: '$3,000 - $15,000/setup',
+    category: 'Recommendation Systems'
+  },
+  {
+    title: 'AI Code Generation Platform',
+    description: 'Automated code generation and software development assistance.',
+    icon: Code,
+    features: ['Code Generation', 'Bug Fixing', 'Code Optimization', 'Documentation Generation'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Development AI'
+  },
+  {
+    title: 'AI-Powered Customer Service',
+    description: 'Intelligent customer service with natural language understanding and problem resolution.',
+    icon: MessageSquare,
+    features: ['Natural Language Understanding', 'Problem Resolution', 'Escalation Management', 'Performance Analytics'],
+    pricing: '$1,500 - $8,000/month',
+    category: 'Customer Service'
   }
 ];
 

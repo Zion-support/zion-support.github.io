@@ -18,7 +18,13 @@ import {
   Globe,
   FileText,
   MessageSquare,
-  Rocket
+  Rocket,
+  Building,
+  Heart,
+  DollarSign,
+  ShoppingCart,
+  BookOpen,
+  Video
 } from 'lucide-react';
 
 const navigation = [
@@ -27,10 +33,10 @@ const navigation = [
     href: '/services',
     icon: Settings,
     children: [
-      { name: 'AI Solutions', href: '/ai-services', icon: Brain, count: '20+' },
-      { name: 'IT Services', href: '/it-services', icon: Network, count: '20+' },
-      { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, count: '25+' },
-      { name: 'All Services', href: '/services', icon: Globe, count: '65+' }
+      { name: 'AI Solutions', href: '/ai-services', icon: Brain, count: '35+' },
+      { name: 'IT Services', href: '/it-services', icon: Network, count: '30+' },
+      { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, count: '40+' },
+      { name: 'All Services', href: '/services', icon: Globe, count: '105+' }
     ]
   },
   {
@@ -41,7 +47,22 @@ const navigation = [
       { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Shield },
       { name: 'Startup Solutions', href: '/solutions/startup', icon: Rocket },
       { name: 'Industry Solutions', href: '/solutions/industry', icon: BarChart3 },
-      { name: 'Custom Development', href: '/solutions/custom', icon: Settings }
+      { name: 'Custom Development', href: '/solutions/custom', icon: Settings },
+      { name: 'Digital Transformation', href: '/solutions/digital-transformation', icon: Globe },
+      { name: 'Cloud Migration', href: '/solutions/cloud-migration', icon: Cloud }
+    ]
+  },
+  {
+    name: 'Industries',
+    href: '/industries',
+    icon: Building,
+    children: [
+      { name: 'Healthcare', href: '/industries/healthcare', icon: Heart },
+      { name: 'Finance', href: '/industries/finance', icon: DollarSign },
+      { name: 'E-commerce', href: '/industries/ecommerce', icon: ShoppingCart },
+      { name: 'Manufacturing', href: '/industries/manufacturing', icon: Settings },
+      { name: 'Education', href: '/industries/education', icon: BookOpen },
+      { name: 'Government', href: '/industries/government', icon: Shield }
     ]
   },
   {
@@ -52,7 +73,9 @@ const navigation = [
       { name: 'Documentation', href: '/docs', icon: FileText },
       { name: 'Case Studies', href: '/case-studies', icon: BarChart3 },
       { name: 'Blog', href: '/blog', icon: MessageSquare },
-      { name: 'API Reference', href: '/api-docs', icon: Settings }
+      { name: 'API Reference', href: '/api-docs', icon: Settings },
+      { name: 'White Papers', href: '/whitepapers', icon: FileText },
+      { name: 'Webinars', href: '/webinars', icon: Video }
     ]
   },
   {

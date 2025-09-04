@@ -7,8 +7,10 @@ import MainLayout from '../components/layout/MainLayout';
 const stats = [
   { number: '99.9%', label: 'Uptime Guarantee' },
   { number: '24/7', label: 'Support Available' },
-  { number: '500+', label: 'Projects Completed' },
-  { number: '50+', label: 'Expert Team Members' }
+  { number: '750+', label: 'Projects Completed' },
+  { number: '75+', label: 'Expert Team Members' },
+  { number: '105+', label: 'Services & Products' },
+  { number: '50+', label: 'Countries Served' }
 ];
 
 const services = [
@@ -131,7 +133,7 @@ export default function HomePage() {
       {/* Stats Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             {stats.map((stat, index) => (
               <motion.div
                 key={index}
@@ -144,7 +146,7 @@ export default function HomePage() {
                 <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
                   {stat.number}
                 </div>
-                <div className="text-gray-600 font-medium">{stat.label}</div>
+                <div className="text-gray-600 font-medium text-sm">{stat.label}</div>
               </motion.div>
             ))}
           </div>

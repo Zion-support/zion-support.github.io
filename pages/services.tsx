@@ -7,32 +7,32 @@ import { Brain, Network, Cloud, ArrowRight, CheckCircle, Star, Zap, Shield } fro
 const services = [
   {
     title: "AI Services",
-    description: "Cutting-edge artificial intelligence solutions including machine learning, natural language processing, and intelligent automation.",
+    description: "Cutting-edge artificial intelligence solutions including machine learning, natural language processing, computer vision, and intelligent automation for modern businesses.",
     icon: Brain,
     href: "/ai-services",
-    features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics", "AI Fraud Detection", "Voice AI", "Content Generation"],
+    features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics", "AI Fraud Detection", "Voice AI", "Content Generation", "Cybersecurity AI", "Medical AI", "Autonomous Systems"],
     pricing: "Starting at $1,000/month",
-    count: "20+ Services",
+    count: "35+ Services",
     popular: true
   },
   {
     title: "IT Services", 
-    description: "Comprehensive information technology services including cloud infrastructure, cybersecurity, and system administration.",
+    description: "Comprehensive information technology services including cloud infrastructure, cybersecurity, AI-powered operations, and digital transformation solutions.",
     icon: Network,
     href: "/it-services",
-    features: ["Cloud Infrastructure", "Cybersecurity", "System Administration", "Network Management", "DevOps & CI/CD", "Data Center Migration"],
+    features: ["Cloud Infrastructure", "Cybersecurity", "System Administration", "Network Management", "DevOps & CI/CD", "Data Center Migration", "AI-Powered IT Ops", "Zero Trust Security", "Edge Computing", "Quantum Security"],
     pricing: "Starting at $120/hour",
-    count: "20+ Services",
+    count: "30+ Services",
     popular: true
   },
   {
     title: "Micro SaaS",
-    description: "Scalable software as a service solutions designed for specific business needs and rapid deployment.",
+    description: "Scalable software as a service solutions designed for specific business needs, rapid deployment, and innovative technology integration.",
     icon: Cloud,
     href: "/micro-saas",
-    features: ["Custom Applications", "API Development", "Database Solutions", "Integration Services", "Workflow Automation", "Lead Management"],
+    features: ["Custom Applications", "API Development", "Database Solutions", "Integration Services", "Workflow Automation", "Lead Management", "AI Content Creation", "Blockchain Solutions", "IoT Management", "Analytics Platforms"],
     pricing: "Starting at $29/month",
-    count: "25+ Products",
+    count: "40+ Products",
     popular: true
   }
 ];
