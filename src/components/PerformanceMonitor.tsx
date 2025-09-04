@@ -6,7 +6,7 @@ interface PerformanceMetrics {
   renderTime: number;
 }
 
-const PerformanceMonitor: React.FC = (props: any) => {
+const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
     memoryUsage: 0,
@@ -58,5 +58,3 @@ const PerformanceMonitor: React.FC = (props: any) => {
 };
 
 export default PerformanceMonitor;
-
-</PerformanceMetrics>
