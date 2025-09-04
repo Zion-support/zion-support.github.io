@@ -48,20 +48,30 @@ const About: NextPage = () => {};
         </section>
 
         {/* Mission & Vision */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-16 md:py-20 bg-gray-50">
           <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
               <div>
-                <h2 className="text-3xl font-bold mb-6 text-gray-800">Our Mission</h2>
-                <p className="text-lg text-gray-600 mb-6">
+                <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-gray-800">Our Mission</h2>
+                <p className="text-base md:text-lg text-gray-600 mb-4 md:mb-6">
                   To empower businesses with innovative technology solutions that drive growth, 
                   efficiency, and competitive advantage in the digital age.
                 </p>
-                <p className="text-lg text-gray-600">
+                <p className="text-base md:text-lg text-gray-600 mb-4 md:mb-6">
                   We believe that technology should be an enabler, not a barrier. Our team of 
                   experts works tirelessly to create solutions that are not only powerful but 
                   also intuitive and accessible.
                 </p>
+                <div className="bg-blue-50 p-4 md:p-6 rounded-lg">
+                  <h3 className="text-lg md:text-xl font-semibold text-blue-900 mb-2">Why Choose Zion Tech Group?</h3>
+                  <ul className="text-sm md:text-base text-blue-800 space-y-1">
+                    <li>• 10+ years of proven expertise in AI and cloud technologies</li>
+                    <li>• 500+ successful projects delivered across industries</li>
+                    <li>• 98% client satisfaction rate with ongoing support</li>
+                    <li>• Competitive pricing with transparent, no-hidden-fee structure</li>
+                    <li>• 24/7 technical support and maintenance services</li>
+                  </ul>
+                </div>
               </div>
               <div>
                 <h2 className="text-3xl font-bold mb-6 text-gray-800">Our Vision</h2>
@@ -152,11 +162,150 @@ const About: NextPage = () => {};
           </div>
         </section>
 
+        {/* Capabilities & Pricing Section */}
+        <section className="py-16 md:py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12 md:mb-16">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-gray-800">Our Capabilities & Market Pricing</h2>
+              <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto">
+                We offer comprehensive technology solutions with transparent, competitive pricing that delivers exceptional value.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+              {/* AI Services */}
+              <div className="bg-gradient-to-br from-purple-50 to-blue-50 p-6 md:p-8 rounded-lg border border-purple-100">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
+                    <Zap className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-800">AI Services</h3>
+                </div>
+                <p className="text-gray-600 mb-4 text-sm md:text-base">
+                  Cutting-edge artificial intelligence solutions including machine learning, natural language processing, and computer vision.
+                </p>
+                <div className="space-y-2 mb-4">
+                  <div className="flex justify-between text-sm">
+                    <span className="text-gray-600">AI Chatbots & Virtual Assistants</span>
+                    <span className="font-semibold text-purple-600">$2,000 - $10,000/month</span>
+                  </div>
+                  <div className="flex justify-between text-sm">
+                    <span className="text-gray-600">Predictive Analytics Platform</span>
+                    <span className="font-semibold text-purple-600">$6,000 - $25,000/month</span>
+                  </div>
+                  <div className="flex justify-between text-sm">
+                    <span className="text-gray-600">Computer Vision Solutions</span>
+                    <span className="font-semibold text-purple-600">$5,000 - $20,000/month</span>
+                  </div>
+                </div>
+                <a href="/ai-services" className="text-purple-600 font-semibold text-sm hover:text-purple-700">
+                  View All AI Services →
+                </a>
+              </div>
+
+              {/* IT Services */}
+              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 md:p-8 rounded-lg border border-blue-100">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4">
+                    <Shield className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-800">IT Services</h3>
+                </div>
+                <p className="text-gray-600 mb-4 text-sm md:text-base">
+                  Comprehensive IT infrastructure, cloud solutions, cybersecurity, and digital transformation services.
+                </p>
+                <div className="space-y-2 mb-4">
+                  <div className="flex justify-between text-sm">
+                    <span className="text-gray-600">Cloud Infrastructure & Migration</span>
+                    <span className="font-semibold text-blue-600">$5,000 - $50,000/month</span>
+                  </div>
+                  <div className="flex justify-between text-sm">
+                    <span className="text-gray-600">Cybersecurity & Compliance</span>
+                    <span className="font-semibold text-blue-600">$3,000 - $25,000/month</span>
+                  </div>
+                  <div className="flex justify-between text-sm">
+                    <span className="text-gray-600">IT Support & Helpdesk</span>
+                    <span className="font-semibold text-blue-600">$1,500 - $8,000/month</span>
+                  </div>
+                </div>
+                <a href="/it-services" className="text-blue-600 font-semibold text-sm hover:text-blue-700">
+                  View All IT Services →
+                </a>
+              </div>
+
+              {/* Micro SaaS */}
+              <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 md:p-8 rounded-lg border border-green-100">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mr-4">
+                    <Globe className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-800">Micro SaaS</h3>
+                </div>
+                <p className="text-gray-600 mb-4 text-sm md:text-base">
+                  Custom micro SaaS applications designed for niche markets with rapid deployment and scalability.
+                </p>
+                <div className="space-y-2 mb-4">
+                  <div className="flex justify-between text-sm">
+                    <span className="text-gray-600">AI-Powered Email Responder</span>
+                    <span className="font-semibold text-green-600">$2,500 - $8,000/month</span>
+                  </div>
+                  <div className="flex justify-between text-sm">
+                    <span className="text-gray-600">Customer Support Platform</span>
+                    <span className="font-semibold text-green-600">$2,000 - $7,000/month</span>
+                  </div>
+                  <div className="flex justify-between text-sm">
+                    <span className="text-gray-600">Analytics Dashboard Platform</span>
+                    <span className="font-semibold text-green-600">$5,000 - $20,000/month</span>
+                  </div>
+                </div>
+                <a href="/micro-saas" className="text-green-600 font-semibold text-sm hover:text-green-700">
+                  View All Micro SaaS →
+                </a>
+              </div>
+            </div>
+
+            {/* Benefits Section */}
+            <div className="mt-12 md:mt-16 bg-gray-50 p-6 md:p-8 rounded-lg">
+              <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-6 text-center">Why Our Pricing Delivers Value</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <Award className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <h4 className="font-semibold text-gray-800 mb-2">No Hidden Fees</h4>
+                  <p className="text-sm text-gray-600">Transparent pricing with no surprise charges or hidden costs</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <Zap className="w-6 h-6 text-green-600" />
+                  </div>
+                  <h4 className="font-semibold text-gray-800 mb-2">Fast Delivery</h4>
+                  <p className="text-sm text-gray-600">Rapid development cycles with 2-16 week delivery times</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <Shield className="w-6 h-6 text-purple-600" />
+                  </div>
+                  <h4 className="font-semibold text-gray-800 mb-2">24/7 Support</h4>
+                  <p className="text-sm text-gray-600">Round-the-clock technical support and maintenance</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <Users className="w-6 h-6 text-orange-600" />
+                  </div>
+                  <h4 className="font-semibold text-gray-800 mb-2">Expert Team</h4>
+                  <p className="text-sm text-gray-600">50+ experienced professionals with proven track records</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
-        <section className="py-20 bg-blue-600 text-white">
+        <section className="py-16 md:py-20 bg-blue-600 text-white">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Business?</h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">Ready to Transform Your Business?</h2>
+            <p className="text-base md:text-lg lg:text-xl mb-6 md:mb-8 max-w-2xl mx-auto">
               Let's discuss how our technology solutions can help you achieve your goals 
               and stay ahead of the competition.
             </p>
