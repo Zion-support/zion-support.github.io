@@ -1,243 +1,242 @@
 import Link from 'next/link';
 import Head from 'next/head';
-import { useState, useEffect } from 'react';
 
 export default function Careers() {
-  const [isLoaded, setIsLoaded] = useState(false);
-  
-  useEffect(() => {
-    setIsLoaded(true);
-  }, []);
-
   const contact = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  }
+  };
 
-  const openPositions = [
+  const jobOpenings = [
     {
-      title: "Senior Full Stack Developer",
-      department: "Engineering",
-      location: "Remote / Delaware",
-      type: "Full-time",
-      description: "Lead development of micro SaaS products and enterprise solutions",
-      requirements: ["5+ years experience", "React/Next.js", "Node.js", "Cloud platforms"]
-    },
-    {
-      title: "AI/ML Engineer",
+      id: 1,
+      title: "Senior AI/ML Engineer",
       department: "AI Services",
-      location: "Remote / Delaware",
+      location: "Remote / Middletown, DE",
       type: "Full-time",
-      description: "Develop and implement AI solutions and machine learning models",
-      requirements: ["3+ years ML experience", "Python", "TensorFlow/PyTorch", "Cloud AI services"]
+      experience: "5+ years",
+      description: "Lead development of AI and machine learning solutions for enterprise clients."
     },
     {
-      title: "DevOps Engineer",
+      id: 2,
+      title: "Cloud DevOps Specialist",
       department: "Cloud & DevOps",
-      location: "Remote / Delaware",
+      location: "Remote / Middletown, DE",
       type: "Full-time",
-      description: "Manage cloud infrastructure and CI/CD pipelines",
-      requirements: ["3+ years DevOps", "AWS/Azure/GCP", "Docker/Kubernetes", "Infrastructure as Code"]
+      experience: "3+ years",
+      description: "Design and implement cloud infrastructure solutions using modern DevOps practices."
     },
     {
-      title: "Cybersecurity Specialist",
-      department: "Security",
-      location: "Remote / Delaware",
+      id: 3,
+      title: "Cybersecurity Analyst",
+      department: "Cybersecurity",
+      location: "Remote / Middletown, DE",
       type: "Full-time",
-      description: "Protect systems and data with advanced security solutions",
-      requirements: ["3+ years security", "Security certifications", "Threat analysis", "Compliance"]
+      experience: "4+ years",
+      description: "Protect client systems and data through advanced security monitoring and analysis."
     },
     {
+      id: 4,
+      title: "Micro SaaS Developer",
+      department: "Product Development",
+      location: "Remote / Middletown, DE",
+      type: "Full-time",
+      experience: "3+ years",
+      description: "Build innovative micro SaaS products that solve real business problems."
+    },
+    {
+      id: 5,
       title: "Quantum Computing Researcher",
       department: "Research & Development",
-      location: "Remote / Delaware",
+      location: "Remote / Middletown, DE",
       type: "Full-time",
-      description: "Research and develop quantum computing solutions",
-      requirements: ["PhD in Physics/CS", "Quantum algorithms", "Research experience", "Publication record"]
-    },
-    {
-      title: "Business Development Manager",
-      department: "Sales & Marketing",
-      location: "Remote / Delaware",
-      type: "Full-time",
-      description: "Drive business growth and client relationships",
-      requirements: ["3+ years B2B sales", "Tech industry", "Client management", "Growth mindset"]
+      experience: "PhD or 5+ years",
+      description: "Research and develop quantum computing applications for business use cases."
     }
   ];
 
   const benefits = [
-    {
-      title: "Competitive Compensation",
-      description: "Industry-leading salary and equity packages",
-      icon: "💰"
-    },
-    {
-      title: "Remote-First Culture",
-      description: "Work from anywhere with flexible schedules",
-      icon: "🏠"
-    },
-    {
-      title: "Professional Development",
-      description: "Learning budget and conference attendance",
-      icon: "📚"
-    },
-    {
-      title: "Health & Wellness",
-      description: "Comprehensive health insurance and wellness programs",
-      icon: "🏥"
-    },
-    {
-      title: "Cutting-Edge Technology",
-      description: "Work with the latest technologies and tools",
-      icon: "⚡"
-    },
-    {
-      title: "Innovation Time",
-      description: "Dedicated time for personal projects and innovation",
-      icon: "🚀"
-    }
+    "Competitive salary and equity options",
+    "Comprehensive health, dental, and vision insurance",
+    "Flexible remote work arrangements",
+    "Professional development budget",
+    "Cutting-edge technology and tools",
+    "Collaborative and innovative work environment",
+    "Unlimited PTO policy",
+    "401(k) with company matching"
   ];
 
   return (
     <>
       <Head>
-        <title>Careers - Zion Tech Group | Join Our Team</title>
-        <meta name="description" content="Join Zion Tech Group and work on cutting-edge technology solutions. We're hiring developers, engineers, researchers, and business professionals." />
-        <meta name="keywords" content="careers, jobs, employment, tech jobs, remote work, software development, AI engineering, DevOps, cybersecurity" />
+        <title>Careers - Zion Tech Group | Join Our Innovative Team</title>
+        <meta name="description" content="Join Zion Tech Group's innovative team. Explore career opportunities in AI, cloud computing, cybersecurity, and quantum computing." />
+        <meta name="keywords" content="careers, jobs, AI engineer, cloud developer, cybersecurity analyst, quantum computing, remote work" />
         <link rel="canonical" href={`${contact.site}/careers`} />
-        <meta property="og:title" content="Careers - Zion Tech Group" />
-        <meta property="og:description" content="Join our team and work on cutting-edge technology solutions" />
+        <meta property="og:title" content="Careers - Zion Tech Group | Join Our Innovative Team" />
+        <meta property="og:description" content="Join Zion Tech Group's innovative team. Explore career opportunities in AI, cloud computing, cybersecurity, and quantum computing." />
         <meta property="og:url" content={`${contact.site}/careers`} />
         <meta property="og:type" content="website" />
       </Head>
 
-      <div className={`min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
-        {/* Hero Section */}
-        <section className="relative py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+      <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #0b1220 0%, #1a1f3a 100%)', color: 'white' }}>
+        <div style={{ maxWidth: 1200, margin: '0 auto', padding: '40px 20px' }}>
+          <div style={{ textAlign: 'center', marginBottom: 60 }}>
+            <h1 style={{ 
+              fontSize: '3rem', 
+              fontWeight: 800, 
+              marginBottom: 20,
+              background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text'
+            }}>
               Join Our Team
             </h1>
-            <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Be part of the future of technology. Work on cutting-edge solutions in AI, quantum computing, and enterprise technology.
+            <p style={{ fontSize: '1.2rem', color: '#94a3b8', maxWidth: 600, margin: '0 auto' }}>
+              Be part of the future of technology. Join our innovative team and help shape the next generation of AI, cloud, and quantum computing solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href={`mailto:${contact.email}?subject=Career Inquiry`} className="px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
-                Apply Now
-              </a>
-              <Link href="/about" className="px-8 py-4 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
-                Learn About Us
-              </Link>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 60, marginBottom: 80 }}>
+            <div>
+              <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 30 }}>
+                Why Work With Us?
+              </h2>
+              <div style={{ display: 'grid', gap: 20 }}>
+                {benefits.map((benefit, index) => (
+                  <div key={index} style={{ 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    gap: 15,
+                    padding: 15,
+                    background: 'rgba(255, 255, 255, 0.05)',
+                    borderRadius: 8,
+                    border: '1px solid rgba(255, 255, 255, 0.1)'
+                  }}>
+                    <div style={{
+                      width: 8,
+                      height: 8,
+                      background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+                      borderRadius: '50%'
+                    }} />
+                    <span style={{ fontSize: '1rem' }}>{benefit}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 30 }}>
+                Our Culture
+              </h2>
+              <div style={{ 
+                background: 'rgba(255, 255, 255, 0.05)',
+                padding: 30,
+                borderRadius: 12,
+                border: '1px solid rgba(255, 255, 255, 0.1)'
+              }}>
+                <p style={{ fontSize: '1.1rem', lineHeight: 1.6, marginBottom: 20 }}>
+                  At Zion Tech Group, we foster a culture of innovation, collaboration, and continuous learning. 
+                  Our team members are passionate about pushing the boundaries of technology and creating solutions 
+                  that make a real difference in the world.
+                </p>
+                <p style={{ fontSize: '1.1rem', lineHeight: 1.6 }}>
+                  We believe in empowering our employees to take ownership of their work, pursue their passions, 
+                  and grow both personally and professionally. Join us in building the future of technology.
+                </p>
+              </div>
             </div>
           </div>
-        </section>
 
-        {/* Open Positions */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-16">Open Positions</h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              {openPositions.map((position, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-blue-400/50 transition-all duration-300">
-                  <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-2xl font-bold text-blue-400">{position.title}</h3>
-                    <span className="px-3 py-1 bg-green-600/20 text-green-400 rounded-full text-sm">
-                      {position.type}
-                    </span>
+          <div>
+            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 40, textAlign: 'center' }}>
+              Open Positions
+            </h2>
+            <div style={{ display: 'grid', gap: 25 }}>
+              {jobOpenings.map((job) => (
+                <div key={job.id} style={{
+                  background: 'rgba(255, 255, 255, 0.05)',
+                  borderRadius: 12,
+                  padding: 30,
+                  border: '1px solid rgba(255, 255, 255, 0.1)',
+                  transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                  cursor: 'pointer'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-3px)';
+                  e.currentTarget.style.boxShadow = '0 15px 30px rgba(0, 0, 0, 0.2)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = 'none';
+                }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 15 }}>
+                    <div>
+                      <h3 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: 8 }}>
+                        {job.title}
+                      </h3>
+                      <p style={{ color: '#94a3b8', fontSize: '1rem' }}>
+                        {job.department} • {job.location}
+                      </p>
+                    </div>
+                    <div style={{ textAlign: 'right' }}>
+                      <div style={{
+                        background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+                        color: 'white',
+                        padding: '6px 12px',
+                        borderRadius: 20,
+                        fontSize: '0.8rem',
+                        fontWeight: 600,
+                        marginBottom: 8
+                      }}>
+                        {job.type}
+                      </div>
+                      <p style={{ color: '#64748b', fontSize: '0.9rem' }}>
+                        {job.experience}
+                      </p>
+                    </div>
                   </div>
-                  <div className="flex flex-wrap gap-4 mb-4 text-sm text-slate-400">
-                    <span>📍 {position.location}</span>
-                    <span>🏢 {position.department}</span>
-                  </div>
-                  <p className="text-slate-300 mb-6">{position.description}</p>
-                  <div className="mb-6">
-                    <h4 className="font-semibold mb-2 text-white">Requirements:</h4>
-                    <ul className="space-y-1">
-                      {position.requirements.map((req, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-slate-400">
-                          <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
-                          {req}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <a 
-                    href={`mailto:${contact.email}?subject=Application for ${position.title}`}
-                    className="inline-block w-full text-center px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors"
-                  >
-                    Apply for this Position
-                  </a>
+                  <p style={{ color: '#94a3b8', lineHeight: 1.6, marginBottom: 20 }}>
+                    {job.description}
+                  </p>
+                  <Link href="/contact" style={{
+                    background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+                    color: 'white',
+                    padding: '10px 20px',
+                    textDecoration: 'none',
+                    borderRadius: 6,
+                    fontSize: '0.9rem',
+                    fontWeight: 600,
+                    display: 'inline-block'
+                  }}>
+                    Apply Now
+                  </Link>
                 </div>
               ))}
             </div>
           </div>
-        </section>
 
-        {/* Benefits */}
-        <section className="py-20 px-4 bg-slate-800/30">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-16">Why Work With Us?</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl">{benefit.icon}</span>
-                  </div>
-                  <h3 className="text-xl font-bold mb-2">{benefit.title}</h3>
-                  <p className="text-slate-300">{benefit.description}</p>
-                </div>
-              ))}
-            </div>
+          <div style={{ textAlign: 'center', marginTop: 60 }}>
+            <p style={{ fontSize: '1.1rem', color: '#94a3b8', marginBottom: 20 }}>
+              Don't see a position that matches your skills? We're always looking for talented individuals.
+            </p>
+            <Link href="/contact" style={{
+              background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+              color: 'white',
+              padding: '15px 30px',
+              textDecoration: 'none',
+              borderRadius: 8,
+              fontSize: '1.1rem',
+              fontWeight: 600,
+              display: 'inline-block'
+            }}>
+              Send Us Your Resume
+            </Link>
           </div>
-        </section>
-
-        {/* Company Culture */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-16">Our Culture</h2>
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <h3 className="text-2xl font-bold mb-6 text-blue-400">Innovation First</h3>
-                <p className="text-slate-300 mb-6">
-                  We believe in pushing the boundaries of what&apos;s possible. Our team works on cutting-edge technologies 
-                  including AI, quantum computing, and next-generation enterprise solutions.
-                </p>
-                <h3 className="text-2xl font-bold mb-6 text-purple-400">Collaborative Environment</h3>
-                <p className="text-slate-300 mb-6">
-                  We foster a culture of collaboration and knowledge sharing. Every team member&apos;s voice is valued, 
-                  and we encourage creative problem-solving and continuous learning.
-                </p>
-                <h3 className="text-2xl font-bold mb-6 text-green-400">Work-Life Balance</h3>
-                <p className="text-slate-300">
-                  We understand that great work comes from well-rested, happy people. Our remote-first approach 
-                  and flexible schedules help you maintain a healthy work-life balance.
-                </p>
-              </div>
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-white/10">
-                <h3 className="text-2xl font-bold mb-6 text-center">Ready to Join Us?</h3>
-                <p className="text-slate-300 mb-6 text-center">
-                  Don&apos;t see a position that fits? We&apos;re always looking for talented individuals who share our passion for innovation.
-                </p>
-                <div className="space-y-4">
-                  <a 
-                    href={`mailto:${contact.email}?subject=General Career Inquiry`}
-                    className="block w-full text-center px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors"
-                  >
-                    Send Us Your Resume
-                  </a>
-                  <a 
-                    href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`}
-                    className="block w-full text-center px-6 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors"
-                  >
-                    Call {contact.phone}
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        </div>
       </div>
     </>
   );

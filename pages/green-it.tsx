@@ -1,5 +1,5 @@
-import Head from 'next/head';
 import Link from 'next/link';
+import Head from 'next/head';
 
 export default function GreenIT() {
   const contact = {
@@ -7,260 +7,178 @@ export default function GreenIT() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  }
+  };
+
   const greenInitiatives = [
     {
-      title: "Carbon-Neutral Data Centers",
-      description: "Achieving net-zero carbon emissions through renewable energy and energy-efficient infrastructure",
-      icon: "🌱",
+      title: "Energy-Efficient Data Centers",
+      description: "Optimize your infrastructure with renewable energy sources and advanced cooling systems",
+      icon: "🏢",
       benefits: [
-        "100% renewable energy usage",
-        "Advanced cooling systems",
-        "Energy-efficient hardware",
-        "Carbon offset programs"
-      ],
-      impact: "Reduced carbon footprint by 85%"
-    },
-    {
-      title: "Green Cloud Computing",
-      description: "Optimizing cloud infrastructure for maximum energy efficiency and minimal environmental impact",
-      icon: "☁️",
-      benefits: [
-        "Dynamic resource allocation",
-        "Energy-aware scheduling",
-        "Green data center selection",
-        "Automated power management"
-      ],
-      impact: "40% reduction in energy consumption"
+        "40% reduction in energy consumption",
+        "100% renewable energy sourcing",
+        "Advanced cooling optimization",
+        "Carbon-neutral operations"
+      ]
     },
     {
       title: "Sustainable Software Development",
-      description: "Building energy-efficient applications with minimal resource consumption",
+      description: "Build applications with minimal environmental impact through efficient coding practices",
       icon: "💻",
       benefits: [
-        "Optimized algorithms",
-        "Efficient data structures",
-        "Minimal resource usage",
-        "Green coding practices"
-      ],
-      impact: "30% improvement in energy efficiency"
+        "Optimized algorithms for efficiency",
+        "Minimal resource consumption",
+        "Green coding standards",
+        "Sustainable architecture design"
+      ]
+    },
+    {
+      title: "Cloud Optimization",
+      description: "Reduce your carbon footprint with intelligent cloud resource management",
+      icon: "☁️",
+      benefits: [
+        "Smart resource allocation",
+        "Automated scaling optimization",
+        "Energy-efficient processing",
+        "Reduced data transfer costs"
+      ]
     },
     {
       title: "E-Waste Management",
-      description: "Responsible disposal and recycling of electronic equipment",
+      description: "Responsible disposal and recycling of electronic equipment and components",
       icon: "♻️",
       benefits: [
-        "Certified e-waste recycling",
-        "Equipment refurbishment",
-        "Component reuse programs",
-        "Secure data destruction"
-      ],
-      impact: "95% waste diversion rate"
-    },
-    {
-      title: "Remote Work Solutions",
-      description: "Enabling remote work to reduce commuting and office energy consumption",
-      icon: "🏠",
-      benefits: [
-        "Cloud-based collaboration tools",
-        "Virtual meeting platforms",
-        "Remote monitoring systems",
-        "Digital workspace solutions"
-      ],
-      impact: "60% reduction in commuting emissions"
-    },
-    {
-      title: "Green AI & Machine Learning",
-      description: "Developing energy-efficient AI models and algorithms",
-      icon: "🤖",
-      benefits: [
-        "Model optimization techniques",
-        "Efficient training algorithms",
-        "Edge AI deployment",
-        "Green neural networks"
-      ],
-      impact: "50% reduction in AI energy consumption"
-    }
-  ];
-
-  const certifications = [
-    {
-      name: "ISO 14001",
-      description: "Environmental Management System",
-      status: "Certified",
-      year: "2024"
-    },
-    {
-      name: "LEED Gold",
-      description: "Leadership in Energy and Environmental Design",
-      status: "Certified",
-      year: "2024"
-    },
-    {
-      name: "Energy Star",
-      description: "Energy Efficient Products and Buildings",
-      status: "Certified",
-      year: "2024"
-    },
-    {
-      name: "Carbon Trust",
-      description: "Carbon Footprint Verification",
-      status: "Certified",
-      year: "2024"
+        "Certified e-waste disposal",
+        "Equipment refurbishment programs",
+        "Component recycling initiatives",
+        "Circular economy practices"
+      ]
     }
   ];
 
   const sustainabilityMetrics = [
-    {
-      metric: "85%",
-      description: "Reduction in carbon emissions",
-      icon: "🌍"
-    },
-    {
-      metric: "100%",
-      description: "Renewable energy usage",
-      icon: "⚡"
-    },
-    {
-      metric: "95%",
-      description: "Waste diversion rate",
-      icon: "♻️"
-    },
-    {
-      metric: "40%",
-      description: "Energy consumption reduction",
-      icon: "🔋"
-    }
+    { metric: "40%", label: "Energy Reduction", description: "Average energy savings achieved" },
+    { metric: "100%", label: "Renewable Energy", description: "Clean energy usage in data centers" },
+    { metric: "75%", label: "Waste Reduction", description: "E-waste diverted from landfills" },
+    { metric: "60%", label: "Carbon Neutral", description: "Operations achieving carbon neutrality" }
   ];
 
-  const greenTechnologies = [
-    {
-      name: "Solar-Powered Data Centers",
-      description: "Harnessing solar energy to power our infrastructure",
-      benefits: ["Clean energy", "Cost savings", "Energy independence"]
-    },
-    {
-      name: "Liquid Cooling Systems",
-      description: "Advanced cooling technology for energy efficiency",
-      benefits: ["Reduced energy use", "Better performance", "Lower costs"]
-    },
-    {
-      name: "AI-Powered Energy Management",
-      description: "Smart systems that optimize energy consumption",
-      benefits: ["Automated optimization", "Real-time monitoring", "Predictive analytics"]
-    },
-    {
-      name: "Green Software Architecture",
-      description: "Designing applications for minimal environmental impact",
-      benefits: ["Efficient resource use", "Reduced energy consumption", "Better performance"]
-    }
+  const certifications = [
+    { name: "ISO 14001", description: "Environmental Management System" },
+    { name: "LEED Certified", description: "Leadership in Energy and Environmental Design" },
+    { name: "Energy Star", description: "Energy Efficient Products and Services" },
+    { name: "Green IT Certification", description: "Sustainable Technology Practices" }
   ];
 
   return (
     <>
       <Head>
         <title>Green IT - Zion Tech Group | Sustainable Technology Solutions</title>
-        <meta name="description" content="Discover Zion Tech Group's commitment to sustainable technology. Learn about our green IT initiatives, carbon-neutral operations, and environmental responsibility." />
-        <meta name="keywords" content="green IT, sustainable technology, carbon neutral, renewable energy, environmental responsibility, green computing, eco-friendly technology" />
+        <meta name="description" content="Discover Zion Tech Group's commitment to sustainable technology. Green IT solutions, energy-efficient systems, and environmentally responsible practices." />
+        <meta name="keywords" content="green IT, sustainable technology, energy efficient, carbon neutral, renewable energy, environmental responsibility" />
         <link rel="canonical" href={`${contact.site}/green-it`} />
         <meta property="og:title" content="Green IT - Zion Tech Group | Sustainable Technology Solutions" />
-        <meta property="og:description" content="Discover Zion Tech Group's commitment to sustainable technology. Learn about our green IT initiatives, carbon-neutral operations, and environmental responsibility." />
+        <meta property="og:description" content="Discover Zion Tech Group's commitment to sustainable technology. Green IT solutions, energy-efficient systems, and environmentally responsible practices." />
         <meta property="og:url" content={`${contact.site}/green-it`} />
         <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Green IT - Zion Tech Group | Sustainable Technology Solutions" />
-        <meta name="twitter:description" content="Discover Zion Tech Group's commitment to sustainable technology. Learn about our green IT initiatives, carbon-neutral operations, and environmental responsibility." />
       </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Green <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">Technology</span>
+      <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #0b1220 0%, #1a1f3a 100%)', color: 'white' }}>
+        <div style={{ maxWidth: 1200, margin: '0 auto', padding: '40px 20px' }}>
+          <div style={{ textAlign: 'center', marginBottom: 60 }}>
+            <h1 style={{ 
+              fontSize: '3rem', 
+              fontWeight: 800, 
+              marginBottom: 20,
+              background: 'linear-gradient(135deg, #10b981, #059669)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text'
+            }}>
+              Green IT Solutions
             </h1>
-            <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Committed to sustainable technology solutions that protect our planet while delivering exceptional performance. 
-              Join us in building a greener future through innovation.
+            <p style={{ fontSize: '1.2rem', color: '#94a3b8', maxWidth: 600, margin: '0 auto' }}>
+              Committed to sustainable technology practices that reduce environmental impact while delivering exceptional performance and value.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-6 py-3 bg-green-600 hover:bg-green-700 rounded-lg font-semibold transition-colors">
-                Call {contact.phone}
-              </a>
-              <a href={`mailto:${contact.email}`} className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
-                Email {contact.email}
-              </a>
-              <Link href="/contact" className="px-6 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
-                Learn More
-              </Link>
-            </div>
           </div>
-        </section>
 
-        {/* Sustainability Metrics */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">Our Environmental Impact</h2>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              {sustainabilityMetrics.map((metric, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-4xl mb-4">{metric.icon}</div>
-                  <div className="text-4xl font-bold text-green-400 mb-2">{metric.metric}</div>
-                  <p className="text-slate-300">{metric.description}</p>
+          <div style={{ marginBottom: 80 }}>
+            <h2 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: 40, textAlign: 'center' }}>
+              Our Sustainability Impact
+            </h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: 30 }}>
+              {sustainabilityMetrics.map((item, index) => (
+                <div key={index} style={{
+                  background: 'rgba(255, 255, 255, 0.05)',
+                  borderRadius: 12,
+                  padding: 30,
+                  border: '1px solid rgba(255, 255, 255, 0.1)',
+                  textAlign: 'center'
+                }}>
+                  <div style={{ 
+                    fontSize: '3rem', 
+                    fontWeight: 800, 
+                    background: 'linear-gradient(135deg, #10b981, #059669)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    backgroundClip: 'text',
+                    marginBottom: 10
+                  }}>
+                    {item.metric}
+                  </div>
+                  <h3 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: 8 }}>
+                    {item.label}
+                  </h3>
+                  <p style={{ color: '#94a3b8', fontSize: '1rem' }}>
+                    {item.description}
+                  </p>
                 </div>
               ))}
             </div>
           </div>
-        </section>
 
-        {/* Green Initiatives */}
-        <section className="py-16 px-4 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">Green IT Initiatives</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div style={{ marginBottom: 80 }}>
+            <h2 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: 40, textAlign: 'center' }}>
+              Green IT Initiatives
+            </h2>
+            <div style={{ display: 'grid', gap: 30 }}>
               {greenInitiatives.map((initiative, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                  <div className="text-4xl mb-4">{initiative.icon}</div>
-                  <h3 className="text-xl font-bold text-white mb-3">{initiative.title}</h3>
-                  <p className="text-slate-300 mb-4">{initiative.description}</p>
-                  
-                  <div className="mb-4">
-                    <h4 className="text-lg font-semibold text-white mb-2">Key Benefits:</h4>
-                    <ul className="space-y-1">
-                      {initiative.benefits.map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="flex items-center gap-2 text-sm text-slate-300">
-                          <span className="text-green-400">✓</span>
-                          <span>{benefit}</span>
-                        </li>
-                      ))}
-                    </ul>
+                <div key={index} style={{
+                  background: 'rgba(255, 255, 255, 0.05)',
+                  borderRadius: 12,
+                  padding: 30,
+                  border: '1px solid rgba(255, 255, 255, 0.1)'
+                }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 20, marginBottom: 20 }}>
+                    <div style={{ fontSize: '3rem' }}>{initiative.icon}</div>
+                    <div>
+                      <h3 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: 10 }}>
+                        {initiative.title}
+                      </h3>
+                      <p style={{ color: '#94a3b8', fontSize: '1.1rem' }}>
+                        {initiative.description}
+                      </p>
+                    </div>
                   </div>
                   
-                  <div className="bg-green-600/20 rounded-lg p-3">
-                    <p className="text-green-400 font-semibold text-sm">
-                      Impact: {initiative.impact}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Green Technologies */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">Green Technologies</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {greenTechnologies.map((tech, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                  <h3 className="text-xl font-bold text-white mb-3">{tech.name}</h3>
-                  <p className="text-slate-300 mb-4">{tech.description}</p>
-                  <div className="space-y-2">
-                    {tech.benefits.map((benefit, benefitIndex) => (
-                      <div key={benefitIndex} className="flex items-center gap-2 text-slate-300">
-                        <span className="text-green-400">•</span>
-                        <span>{benefit}</span>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: 15 }}>
+                    {initiative.benefits.map((benefit, benefitIndex) => (
+                      <div key={benefitIndex} style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: 12,
+                        padding: 15,
+                        background: 'rgba(16, 185, 129, 0.1)',
+                        borderRadius: 8,
+                        border: '1px solid rgba(16, 185, 129, 0.2)'
+                      }}>
+                        <div style={{
+                          width: 8,
+                          height: 8,
+                          background: 'linear-gradient(135deg, #10b981, #059669)',
+                          borderRadius: '50%'
+                        }} />
+                        <span style={{ fontSize: '1rem' }}>{benefit}</span>
                       </div>
                     ))}
                   </div>
@@ -268,130 +186,99 @@ export default function GreenIT() {
               ))}
             </div>
           </div>
-        </section>
 
-        {/* Certifications */}
-        <section className="py-16 px-4 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">Environmental Certifications</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div style={{ marginBottom: 80 }}>
+            <h2 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: 40, textAlign: 'center' }}>
+              Certifications & Standards
+            </h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: 25 }}>
               {certifications.map((cert, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
-                  <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl">🏆</span>
+                <div key={index} style={{
+                  background: 'rgba(255, 255, 255, 0.05)',
+                  borderRadius: 12,
+                  padding: 25,
+                  border: '1px solid rgba(255, 255, 255, 0.1)',
+                  textAlign: 'center',
+                  transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                  cursor: 'pointer'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-5px)';
+                  e.currentTarget.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.3)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = 'none';
+                }}>
+                  <div style={{
+                    background: 'linear-gradient(135deg, #10b981, #059669)',
+                    color: 'white',
+                    padding: '10px 20px',
+                    borderRadius: 20,
+                    fontSize: '0.9rem',
+                    fontWeight: 600,
+                    marginBottom: 15,
+                    display: 'inline-block'
+                  }}>
+                    {cert.name}
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-2">{cert.name}</h3>
-                  <p className="text-slate-300 text-sm mb-3">{cert.description}</p>
-                  <div className="space-y-1">
-                    <div className="text-green-400 font-semibold text-sm">{cert.status}</div>
-                    <div className="text-slate-400 text-xs">{cert.year}</div>
-                  </div>
+                  <p style={{ color: '#94a3b8', fontSize: '1rem' }}>
+                    {cert.description}
+                  </p>
                 </div>
               ))}
             </div>
           </div>
-        </section>
 
-        {/* Environmental Commitment */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl font-bold text-white mb-6">Our Environmental Commitment</h2>
-                <p className="text-slate-300 mb-6">
-                  At Zion Tech Group, we believe that technology should serve both people and the planet. 
-                  Our commitment to environmental sustainability drives every decision we make, from the 
-                  technologies we develop to the way we operate our business.
-                </p>
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-green-400 rounded-full mt-2"></div>
-                    <p className="text-slate-300">Carbon-neutral operations by 2025</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-green-400 rounded-full mt-2"></div>
-                    <p className="text-slate-300">100% renewable energy usage</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-green-400 rounded-full mt-2"></div>
-                    <p className="text-slate-300">Zero waste to landfill</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-green-400 rounded-full mt-2"></div>
-                    <p className="text-slate-300">Sustainable supply chain practices</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="bg-gradient-to-br from-green-500/20 to-blue-600/20 rounded-xl p-8 border border-white/10">
-                <h3 className="text-2xl font-bold text-white mb-4">Join Our Green Mission</h3>
-                <p className="text-slate-300 mb-6">
-                  Partner with us to implement sustainable technology solutions that reduce your 
-                  environmental impact while improving your business performance.
-                </p>
-                <div className="space-y-3">
-                  <Link href="/contact" className="block w-full px-6 py-3 bg-green-600 hover:bg-green-700 rounded-lg font-semibold text-center transition-colors">
-                    Start Your Green Journey
-                  </Link>
-                  <Link href="/solutions" className="block w-full px-6 py-3 border border-white/20 text-white hover:bg-white/10 rounded-lg font-semibold text-center transition-colors">
-                    Explore Green Solutions
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Green Benefits */}
-        <section className="py-16 px-4 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">Benefits of Green IT</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">💰</span>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">Cost Savings</h3>
-                <p className="text-slate-300">Reduce energy costs and operational expenses through efficient technology solutions.</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🌍</span>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">Environmental Impact</h3>
-                <p className="text-slate-300">Minimize your carbon footprint and contribute to a sustainable future.</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">📈</span>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">Business Value</h3>
-                <p className="text-slate-300">Enhance your brand reputation and meet sustainability goals.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">Make Your Technology Green</h2>
-            <p className="text-slate-300 mb-8">
-              Transform your business with sustainable technology solutions that protect the environment 
-              while driving innovation and growth.
+          <div style={{ 
+            background: 'rgba(16, 185, 129, 0.1)',
+            borderRadius: 12,
+            padding: 40,
+            border: '1px solid rgba(16, 185, 129, 0.2)',
+            textAlign: 'center'
+          }}>
+            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 20 }}>
+              Join Our Green Technology Mission
+            </h2>
+            <p style={{ fontSize: '1.1rem', color: '#94a3b8', marginBottom: 30, maxWidth: 600, margin: '0 auto 30px' }}>
+              Partner with us to implement sustainable technology solutions that benefit your business and the environment.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="px-8 py-3 bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 rounded-lg font-semibold transition-all">
+            <div style={{ display: 'flex', gap: 20, justifyContent: 'center', flexWrap: 'wrap' }}>
+              <Link href="/contact" style={{
+                background: 'linear-gradient(135deg, #10b981, #059669)',
+                color: 'white',
+                padding: '15px 30px',
+                textDecoration: 'none',
+                borderRadius: 8,
+                fontSize: '1.1rem',
+                fontWeight: 600,
+                display: 'inline-block'
+              }}>
                 Start Your Green Journey
               </Link>
-              <Link href="/solutions" className="px-8 py-3 border border-white/20 text-white hover:bg-white/10 rounded-lg font-semibold transition-colors">
-                Explore Solutions
+              <Link href="/request-quote" style={{
+                background: 'transparent',
+                color: '#10b981',
+                padding: '15px 30px',
+                textDecoration: 'none',
+                borderRadius: 8,
+                fontSize: '1.1rem',
+                fontWeight: 600,
+                display: 'inline-block',
+                border: '2px solid #10b981',
+                transition: 'background-color 0.3s ease'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = 'rgba(16, 185, 129, 0.1)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = 'transparent';
+              }}>
+                Get Green IT Quote
               </Link>
             </div>
           </div>
-        </section>
+        </div>
       </div>
     </>
   );

@@ -1,5 +1,5 @@
-import Head from 'next/head';
 import Link from 'next/link';
+import Head from 'next/head';
 
 export default function ResearchDevelopment() {
   const contact = {
@@ -7,215 +7,111 @@ export default function ResearchDevelopment() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  }
+  };
+
   const researchAreas = [
     {
       title: "Quantum Computing",
-      description: "Pioneering quantum algorithms and applications for real-world problems",
+      description: "Advancing quantum algorithms and applications for real-world business problems",
       icon: "⚛️",
       projects: [
-        {
-          name: "Quantum Machine Learning",
-          description: "Developing quantum algorithms for enhanced machine learning capabilities",
-          status: "In Progress",
-          timeline: "2025-2026"
-        },
-        {
-          name: "Quantum Cryptography",
-          description: "Researching quantum-resistant encryption methods",
-          status: "Planning",
-          timeline: "2025-2027"
-        },
-        {
-          name: "Quantum Optimization",
-          description: "Solving complex optimization problems using quantum computing",
-          status: "Active",
-          timeline: "2024-2025"
-        }
-      ]
+        "Quantum Machine Learning Algorithms",
+        "Quantum Cryptography Systems",
+        "Quantum Optimization Solutions",
+        "Quantum Error Correction Methods"
+      ],
+      status: "Active"
     },
     {
       title: "Artificial Intelligence",
-      description: "Advancing AI capabilities through cutting-edge research and development",
-      icon: "🧠",
+      description: "Developing next-generation AI systems and machine learning frameworks",
+      icon: "🤖",
       projects: [
-        {
-          name: "AGI Research",
-          description: "Working towards Artificial General Intelligence",
-          status: "Long-term",
-          timeline: "2025-2030"
-        },
-        {
-          name: "Neural Architecture Search",
-          description: "Automated discovery of optimal neural network architectures",
-          status: "Active",
-          timeline: "2024-2025"
-        },
-        {
-          name: "Federated Learning",
-          description: "Privacy-preserving machine learning across distributed systems",
-          status: "In Progress",
-          timeline: "2024-2026"
-        }
-      ]
+        "Advanced Neural Network Architectures",
+        "Explainable AI Systems",
+        "Federated Learning Platforms",
+        "AI Ethics and Governance"
+      ],
+      status: "Active"
     },
     {
       title: "Edge Computing",
-      description: "Enabling real-time processing and decision-making at the network edge",
+      description: "Optimizing computing resources at the network edge for improved performance",
       icon: "🌐",
       projects: [
-        {
-          name: "Edge AI Inference",
-          description: "Optimizing AI models for edge device deployment",
-          status: "Active",
-          timeline: "2024-2025"
-        },
-        {
-          name: "5G Edge Networks",
-          description: "Leveraging 5G for ultra-low latency edge computing",
-          status: "In Progress",
-          timeline: "2024-2026"
-        },
-        {
-          name: "Edge Security",
-          description: "Securing distributed edge computing environments",
-          status: "Planning",
-          timeline: "2025-2026"
-        }
-      ]
-    },
-    {
-      title: "Blockchain & Web3",
-      description: "Exploring next-generation blockchain technologies and decentralized systems",
-      icon: "⛓️",
-      projects: [
-        {
-          name: "Layer 2 Solutions",
-          description: "Developing scalable blockchain solutions",
-          status: "Active",
-          timeline: "2024-2025"
-        },
-        {
-          name: "DeFi Protocols",
-          description: "Creating innovative decentralized finance applications",
-          status: "In Progress",
-          timeline: "2024-2026"
-        },
-        {
-          name: "NFT Infrastructure",
-          description: "Building scalable NFT platforms and marketplaces",
-          status: "Planning",
-          timeline: "2025-2026"
-        }
-      ]
+        "Edge AI Processing",
+        "Distributed Computing Frameworks",
+        "IoT Integration Solutions",
+        "Real-time Data Processing"
+      ],
+      status: "Active"
     },
     {
       title: "Cybersecurity",
-      description: "Developing next-generation security solutions for evolving threats",
-      icon: "🔒",
+      description: "Developing advanced security protocols and threat detection systems",
+      icon: "🛡️",
       projects: [
-        {
-          name: "Zero Trust Architecture",
-          description: "Implementing comprehensive zero trust security models",
-          status: "Active",
-          timeline: "2024-2025"
-        },
-        {
-          name: "AI-Powered Threat Detection",
-          description: "Using machine learning for advanced threat identification",
-          status: "In Progress",
-          timeline: "2024-2026"
-        },
-        {
-          name: "Quantum-Safe Cryptography",
-          description: "Preparing for post-quantum cryptographic standards",
-          status: "Planning",
-          timeline: "2025-2027"
-        }
-      ]
+        "Zero-Trust Security Models",
+        "AI-Powered Threat Detection",
+        "Blockchain Security Solutions",
+        "Privacy-Preserving Technologies"
+      ],
+      status: "Active"
     },
     {
       title: "Green Technology",
-      description: "Developing sustainable technology solutions for environmental impact",
+      description: "Creating sustainable and energy-efficient computing solutions",
       icon: "🌱",
       projects: [
-        {
-          name: "Carbon-Neutral Computing",
-          description: "Achieving net-zero carbon emissions in data centers",
-          status: "Active",
-          timeline: "2024-2026"
-        },
-        {
-          name: "Energy-Efficient AI",
-          description: "Reducing energy consumption in AI model training and inference",
-          status: "In Progress",
-          timeline: "2024-2025"
-        },
-        {
-          name: "Sustainable Blockchain",
-          description: "Developing eco-friendly blockchain consensus mechanisms",
-          status: "Planning",
-          timeline: "2025-2026"
-        }
-      ]
+        "Energy-Efficient Algorithms",
+        "Sustainable Data Centers",
+        "Carbon-Neutral Computing",
+        "Renewable Energy Integration"
+      ],
+      status: "Active"
+    },
+    {
+      title: "Human-Computer Interaction",
+      description: "Improving interfaces between humans and technology systems",
+      icon: "👥",
+      projects: [
+        "Natural Language Interfaces",
+        "Augmented Reality Systems",
+        "Brain-Computer Interfaces",
+        "Accessibility Technologies"
+      ],
+      status: "Research"
     }
   ];
 
   const publications = [
     {
-      title: "Quantum Machine Learning: A Comprehensive Survey",
-      authors: "Dr. Sarah Chen, Dr. Michael Rodriguez, et al.",
+      title: "Quantum Machine Learning for Business Optimization",
+      authors: "Dr. Sarah Chen, Dr. Michael Rodriguez",
       journal: "Nature Quantum Information",
       year: "2024",
-      doi: "10.1038/s41534-024-00845-2"
+      type: "Journal Article"
     },
     {
-      title: "Edge Computing for Real-Time AI Inference: Challenges and Solutions",
-      authors: "Dr. James Wilson, Dr. Lisa Park, et al.",
-      journal: "IEEE Transactions on Mobile Computing",
+      title: "Edge Computing Architecture for Real-Time AI Processing",
+      authors: "Dr. Alex Thompson, Dr. Lisa Wang",
+      journal: "IEEE Computer Society",
       year: "2024",
-      doi: "10.1109/TMC.2024.3356789"
+      type: "Conference Paper"
     },
     {
-      title: "Federated Learning in Distributed Systems: Privacy and Performance Trade-offs",
-      authors: "Dr. Alex Thompson, Dr. Maria Garcia, et al.",
+      title: "Zero-Trust Security Framework for Enterprise Networks",
+      authors: "Dr. James Wilson, Dr. Maria Garcia",
       journal: "ACM Computing Surveys",
       year: "2024",
-      doi: "10.1145/3626789.1234567"
+      type: "Journal Article"
     },
     {
-      title: "Zero Trust Architecture: Implementation Strategies for Enterprise Networks",
-      authors: "Dr. Robert Kim, Dr. Jennifer Lee, et al.",
-      journal: "IEEE Security & Privacy",
+      title: "Sustainable Computing: Energy-Efficient Algorithms for Data Centers",
+      authors: "Dr. Robert Kim, Dr. Emily Davis",
+      journal: "Green Computing Conference",
       year: "2024",
-      doi: "10.1109/MSEC.2024.3389012"
-    }
-  ];
-
-  const patents = [
-    {
-      title: "Quantum-Classical Hybrid Optimization Algorithm",
-      number: "US 11,234,567",
-      status: "Granted",
-      year: "2024"
-    },
-    {
-      title: "Edge Computing Resource Allocation System",
-      number: "US 11,345,678",
-      status: "Pending",
-      year: "2024"
-    },
-    {
-      title: "Federated Learning Privacy Preservation Method",
-      number: "US 11,456,789",
-      status: "Granted",
-      year: "2024"
-    },
-    {
-      title: "AI-Powered Cybersecurity Threat Detection System",
-      number: "US 11,567,890",
-      status: "Pending",
-      year: "2024"
+      type: "Conference Paper"
     }
   ];
 
@@ -223,76 +119,88 @@ export default function ResearchDevelopment() {
     <>
       <Head>
         <title>Research & Development - Zion Tech Group | Innovation & Technology Research</title>
-        <meta name="description" content="Explore Zion Tech Group's cutting-edge research and development initiatives in quantum computing, AI, edge computing, blockchain, and cybersecurity." />
-        <meta name="keywords" content="research, development, R&D, quantum computing, artificial intelligence, edge computing, blockchain, cybersecurity, innovation, patents, publications" />
+        <meta name="description" content="Explore Zion Tech Group's cutting-edge research and development initiatives in quantum computing, AI, cybersecurity, and emerging technologies." />
+        <meta name="keywords" content="research and development, quantum computing research, AI research, cybersecurity research, technology innovation, R&D" />
         <link rel="canonical" href={`${contact.site}/research-development`} />
         <meta property="og:title" content="Research & Development - Zion Tech Group | Innovation & Technology Research" />
-        <meta property="og:description" content="Explore Zion Tech Group's cutting-edge research and development initiatives in quantum computing, AI, edge computing, blockchain, and cybersecurity." />
+        <meta property="og:description" content="Explore Zion Tech Group's cutting-edge research and development initiatives in quantum computing, AI, cybersecurity, and emerging technologies." />
         <meta property="og:url" content={`${contact.site}/research-development`} />
         <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Research & Development - Zion Tech Group | Innovation & Technology Research" />
-        <meta name="twitter:description" content="Explore Zion Tech Group's cutting-edge research and development initiatives in quantum computing, AI, edge computing, blockchain, and cybersecurity." />
       </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Research & <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Development</span>
+      <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #0b1220 0%, #1a1f3a 100%)', color: 'white' }}>
+        <div style={{ maxWidth: 1200, margin: '0 auto', padding: '40px 20px' }}>
+          <div style={{ textAlign: 'center', marginBottom: 60 }}>
+            <h1 style={{ 
+              fontSize: '3rem', 
+              fontWeight: 800, 
+              marginBottom: 20,
+              background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text'
+            }}>
+              Research & Development
             </h1>
-            <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Pushing the boundaries of technology through cutting-edge research and development. 
-              We&apos;re building the future of computing, AI, and digital innovation.
+            <p style={{ fontSize: '1.2rem', color: '#94a3b8', maxWidth: 600, margin: '0 auto' }}>
+              Pioneering the future of technology through cutting-edge research and innovative development initiatives.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
-                Call {contact.phone}
-              </a>
-              <a href={`mailto:${contact.email}`} className="px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors">
-                Email {contact.email}
-              </a>
-              <Link href="/contact" className="px-6 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
-                Collaborate With Us
-              </Link>
-            </div>
           </div>
-        </section>
 
-        {/* Research Areas */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">Research Areas</h2>
-            <div className="space-y-12">
-              {researchAreas.map((area, areaIndex) => (
-                <div key={areaIndex} className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="text-4xl">{area.icon}</div>
-                    <div>
-                      <h3 className="text-2xl font-bold text-white mb-2">{area.title}</h3>
-                      <p className="text-slate-300">{area.description}</p>
+          <div style={{ marginBottom: 80 }}>
+            <h2 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: 40, textAlign: 'center' }}>
+              Research Areas
+            </h2>
+            <div style={{ display: 'grid', gap: 30 }}>
+              {researchAreas.map((area, index) => (
+                <div key={index} style={{
+                  background: 'rgba(255, 255, 255, 0.05)',
+                  borderRadius: 12,
+                  padding: 30,
+                  border: '1px solid rgba(255, 255, 255, 0.1)'
+                }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 20, marginBottom: 20 }}>
+                    <div style={{ fontSize: '2.5rem' }}>{area.icon}</div>
+                    <div style={{ flex: 1 }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: 15, marginBottom: 10 }}>
+                        <h3 style={{ fontSize: '1.8rem', fontWeight: 700 }}>
+                          {area.title}
+                        </h3>
+                        <span style={{
+                          background: area.status === 'Active' ? 'linear-gradient(135deg, #10b981, #059669)' : 'linear-gradient(135deg, #f59e0b, #d97706)',
+                          color: 'white',
+                          padding: '4px 12px',
+                          borderRadius: 20,
+                          fontSize: '0.8rem',
+                          fontWeight: 600
+                        }}>
+                          {area.status}
+                        </span>
+                      </div>
+                      <p style={{ color: '#94a3b8', fontSize: '1.1rem' }}>
+                        {area.description}
+                      </p>
                     </div>
                   </div>
                   
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: 15 }}>
                     {area.projects.map((project, projectIndex) => (
-                      <div key={projectIndex} className="bg-white/5 rounded-lg p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                        <div className="flex items-center justify-between mb-3">
-                          <h4 className="text-lg font-bold text-white">{project.name}</h4>
-                          <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                            project.status === 'Active' ? 'bg-green-600/20 text-green-400' :
-                            project.status === 'In Progress' ? 'bg-blue-600/20 text-blue-400' :
-                            project.status === 'Planning' ? 'bg-yellow-600/20 text-yellow-400' :
-                            'bg-purple-600/20 text-purple-400'
-                          }`}>
-                            {project.status}
-                          </span>
-                        </div>
-                        <p className="text-slate-300 mb-3">{project.description}</p>
-                        <div className="text-sm text-slate-400">
-                          <strong>Timeline:</strong> {project.timeline}
-                        </div>
+                      <div key={projectIndex} style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: 12,
+                        padding: 15,
+                        background: 'rgba(255, 255, 255, 0.03)',
+                        borderRadius: 8,
+                        border: '1px solid rgba(255, 255, 255, 0.05)'
+                      }}>
+                        <div style={{
+                          width: 6,
+                          height: 6,
+                          background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+                          borderRadius: '50%'
+                        }} />
+                        <span style={{ fontSize: '1rem' }}>{project}</span>
                       </div>
                     ))}
                   </div>
@@ -300,155 +208,104 @@ export default function ResearchDevelopment() {
               ))}
             </div>
           </div>
-        </section>
 
-        {/* Research Statistics */}
-        <section className="py-16 px-4 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">Research Impact</h2>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="text-4xl font-bold text-blue-400 mb-2">50+</div>
-                <h3 className="text-xl font-bold text-white mb-2">Research Projects</h3>
-                <p className="text-slate-300">Active and completed research initiatives</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="text-4xl font-bold text-purple-400 mb-2">25+</div>
-                <h3 className="text-xl font-bold text-white mb-2">Publications</h3>
-                <p className="text-slate-300">Peer-reviewed research papers</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="text-4xl font-bold text-green-400 mb-2">15+</div>
-                <h3 className="text-xl font-bold text-white mb-2">Patents</h3>
-                <p className="text-slate-300">Granted and pending patents</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="text-4xl font-bold text-orange-400 mb-2">30+</div>
-                <h3 className="text-xl font-bold text-white mb-2">Researchers</h3>
-                <p className="text-slate-300">PhD-level research scientists</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Publications */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">Recent Publications</h2>
-            <div className="space-y-6">
+          <div style={{ marginBottom: 80 }}>
+            <h2 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: 40, textAlign: 'center' }}>
+              Recent Publications
+            </h2>
+            <div style={{ display: 'grid', gap: 25 }}>
               {publications.map((pub, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                  <h3 className="text-xl font-bold text-white mb-3">{pub.title}</h3>
-                  <p className="text-slate-300 mb-2"><strong>Authors:</strong> {pub.authors}</p>
-                  <p className="text-slate-300 mb-2"><strong>Journal:</strong> {pub.journal}</p>
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-4 text-sm text-slate-400">
-                      <span><strong>Year:</strong> {pub.year}</span>
-                      <span><strong>DOI:</strong> {pub.doi}</span>
-                    </div>
-                    <a href="#" className="text-blue-400 hover:text-blue-300 font-semibold">
-                      View Paper →
-                    </a>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Patents */}
-        <section className="py-16 px-4 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">Patents & Intellectual Property</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {patents.map((patent, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                  <div className="flex items-center justify-between mb-3">
-                    <h3 className="text-lg font-bold text-white">{patent.title}</h3>
-                    <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                      patent.status === 'Granted' ? 'bg-green-600/20 text-green-400' : 'bg-yellow-600/20 text-yellow-400'
-                    }`}>
-                      {patent.status}
+                <div key={index} style={{
+                  background: 'rgba(255, 255, 255, 0.05)',
+                  borderRadius: 12,
+                  padding: 25,
+                  border: '1px solid rgba(255, 255, 255, 0.1)',
+                  transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                  cursor: 'pointer'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-3px)';
+                  e.currentTarget.style.boxShadow = '0 15px 30px rgba(0, 0, 0, 0.2)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = 'none';
+                }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 15 }}>
+                    <h3 style={{ fontSize: '1.3rem', fontWeight: 700, flex: 1, marginRight: 20 }}>
+                      {pub.title}
+                    </h3>
+                    <span style={{
+                      background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+                      color: 'white',
+                      padding: '6px 12px',
+                      borderRadius: 20,
+                      fontSize: '0.8rem',
+                      fontWeight: 600
+                    }}>
+                      {pub.type}
                     </span>
                   </div>
-                  <p className="text-slate-300 mb-2"><strong>Patent Number:</strong> {patent.number}</p>
-                  <p className="text-slate-300"><strong>Year:</strong> {patent.year}</p>
+                  <p style={{ color: '#94a3b8', marginBottom: 10, fontSize: '1rem' }}>
+                    {pub.authors}
+                  </p>
+                  <p style={{ color: '#64748b', fontSize: '0.9rem' }}>
+                    {pub.journal} • {pub.year}
+                  </p>
                 </div>
               ))}
             </div>
           </div>
-        </section>
 
-        {/* Collaboration */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl font-bold text-white mb-6">Collaborate With Us</h2>
-                <p className="text-slate-300 mb-6">
-                  We welcome collaborations with academic institutions, research organizations, 
-                  and industry partners to advance technology and drive innovation.
-                </p>
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full mt-2"></div>
-                    <p className="text-slate-300">Joint research projects and funding opportunities</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full mt-2"></div>
-                    <p className="text-slate-300">Student internships and research fellowships</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full mt-2"></div>
-                    <p className="text-slate-300">Technology transfer and commercialization</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full mt-2"></div>
-                    <p className="text-slate-300">Conference presentations and workshops</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="bg-gradient-to-br from-blue-500/20 to-purple-600/20 rounded-xl p-8 border border-white/10">
-                <h3 className="text-2xl font-bold text-white mb-4">Get Involved</h3>
-                <p className="text-slate-300 mb-6">
-                  Interested in collaborating with our research team? 
-                  Contact us to discuss potential partnerships and opportunities.
-                </p>
-                <div className="space-y-3">
-                  <Link href="/contact" className="block w-full px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold text-center transition-colors">
-                    Contact Research Team
-                  </Link>
-                  <a href={`mailto:${contact.email}?subject=Research Collaboration`} className="block w-full px-6 py-3 border border-white/20 text-white hover:bg-white/10 rounded-lg font-semibold text-center transition-colors">
-                    Email Research Director
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-16 px-4 bg-white/5">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">Shape the Future of Technology</h2>
-            <p className="text-slate-300 mb-8">
-              Join us in pushing the boundaries of what&apos;s possible. 
-              Together, we can create the next generation of technology solutions.
+          <div style={{ 
+            background: 'rgba(255, 255, 255, 0.05)',
+            borderRadius: 12,
+            padding: 40,
+            border: '1px solid rgba(255, 255, 255, 0.1)',
+            textAlign: 'center'
+          }}>
+            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 20 }}>
+              Join Our Research Team
+            </h2>
+            <p style={{ fontSize: '1.1rem', color: '#94a3b8', marginBottom: 30, maxWidth: 600, margin: '0 auto 30px' }}>
+              Be part of groundbreaking research that shapes the future of technology. We're looking for passionate researchers and innovators.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-lg font-semibold transition-all">
+            <div style={{ display: 'flex', gap: 20, justifyContent: 'center', flexWrap: 'wrap' }}>
+              <Link href="/careers" style={{
+                background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+                color: 'white',
+                padding: '15px 30px',
+                textDecoration: 'none',
+                borderRadius: 8,
+                fontSize: '1.1rem',
+                fontWeight: 600,
+                display: 'inline-block'
+              }}>
+                View Research Positions
+              </Link>
+              <Link href="/contact" style={{
+                background: 'transparent',
+                color: 'white',
+                padding: '15px 30px',
+                textDecoration: 'none',
+                borderRadius: 8,
+                fontSize: '1.1rem',
+                fontWeight: 600,
+                display: 'inline-block',
+                border: '2px solid rgba(255, 255, 255, 0.3)',
+                transition: 'border-color 0.3s ease'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = '#3b82f6';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.3)';
+              }}>
                 Collaborate With Us
               </Link>
-              <Link href="/careers" className="px-8 py-3 border border-white/20 text-white hover:bg-white/10 rounded-lg font-semibold transition-colors">
-                Join Our Team
-              </Link>
             </div>
           </div>
-        </section>
+        </div>
       </div>
     </>
   );
