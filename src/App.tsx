@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { Sidebar } from './components/Sidebar';
@@ -86,14 +86,13 @@ const MicroSaaS = createLazyComponent(() => import('./pages/MicroSaaS'));
 export default function App() {
   return (
     <ErrorBoundary>
-      <Router>
-        <div className="min-h-screen bg-gray-50">
-          <Header />
-          <Sidebar />
-          
-          <main className="flex-1 lg:ml-80">
-            <Suspense fallback={<LoadingSpinner />}>
-              <Routes>
+      <div className="min-h-screen bg-gray-50">
+        <Header />
+        <Sidebar />
+        
+        <main className="flex-1 lg:ml-80">
+          <Suspense fallback={<LoadingSpinner />}>
+            <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
@@ -204,19 +203,18 @@ export default function App() {
                 
                 {/* Catch-all route */}
                 <Route path="*" element={<NotFoundPage />} />
-              </Routes>
-            </Suspense>
-          </main>
-          
-          <Footer />
-          
-          {/* Enhanced Components */}
-          <PerformanceOptimizer />
-          <EnhancedAccessibilityEnhancer />
-          <MobileExperienceEnhancer />
-          <ChatAssistant />
-        </div>
-      </Router>
+            </Routes>
+          </Suspense>
+        </main>
+        
+        <Footer />
+        
+        {/* Enhanced Components */}
+        <PerformanceOptimizer />
+        <EnhancedAccessibilityEnhancer />
+        <MobileExperienceEnhancer />
+        <ChatAssistant />
+      </div>
     </ErrorBoundary>
   );
 }

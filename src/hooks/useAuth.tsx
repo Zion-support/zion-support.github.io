@@ -1,140 +1,64 @@
+import { useState, useEffect, createContext, useContext } from 'react';
+
 interface User {
   id: string;
   email: string;
   name: string;
-  role: 'user' | 'admin' | 'moderator';
-  userType?: string;
-  displayName?: string;
-  avatarUrl?: string;
+  avatar?: string;
 }
 
 interface AuthState {
-  user: Use r | null;
+  user: User | null;
   isAuthenticated: boolean;
   isLoading: boolean;
 }
 
-export function useAuth(props: any) {
-  const [authState, setAuthState] = useState<AuthState>({
-    user: nul l,
-    isAuthenticated: fals e,
-    isLoading: tru e
-  });
+const AuthContext = createContext<AuthState>({
+  user: null,
+  isAuthenticated: false,
+  isLoading: true
+});
 
-  useEffect(: unknown {
-    // Check if user is logged in (e.g., check localStorage, cookies, etc.)
-:src/hooks/useAuth.tsx
+export function AuthProvider({ children }: { children: React.ReactNode }) {
+  const [user, setUser] = useState<User | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
 
-      if(storedUser && token) {
-
-        try {
-          
-          setAuthState({
-            user,
-            isAuthenticated: tru e,
-:src/hooks/useAuth.tsx
-            isLoading: fals e})} catch(error) {
-
-          // console.error('Error parsing stored user:', error);
-            isLoading: fals e,
-          })} catch(error) {
-          console.error('Error parsing stored user:', error);
-          setAuthState({
-            user: nul l,
-            isAuthenticated: fals e,
-            isLoading: fals e
-          });
+  useEffect(() => {
+    // Simulate auth check
+    const checkAuth = async () => {
+      try {
+        // Check if user is logged in
+        const savedUser = localStorage.getItem('user');
+        if (savedUser) {
+          setUser(JSON.parse(savedUser));
         }
       } catch (error) {
-        console.error('Error parsing stored user:', error);
-        setAuthState({
-          user: nul l,
-          isAuthenticated: fals e,
-          isLoading: fals e
-        });
+        console.error('Auth check failed:', error);
+      } finally {
+        setIsLoading(false);
       }
     };
 
     checkAuth();
   }, []);
 
-          isLoading: fals e,
-        })}
-    };
-
-    checkAuth()}, []);
-
-    setAuthState({
-      user: mockUse r,
-      isAuthenticated: tru e,
-      isLoading: fals e
-    });
-
-    // Store user data in localStorage
-    localStorage.setItem('zion_user', JSON.stringify(mockUser));
-    localStorage.setItem('authToken', 'mock-jwt-token');
-
-    return { success: tru e, user: mockUse r };
+  const value = {
+    user,
+    isAuthenticated: !!user,
+    isLoading
   };
 
-    // Clear localStorage'
-    localStorage.removeItem('zion_user');
-    localStorage.removeItem('authToken')};
+  return (
+    <AuthContext.Provider value={value}>
+      {children}
+    </AuthContext.Provider>
+  );
+}
 
-    return { success: tru e, user: mockUse r }};
-
-    // Clear localStorage
-    localStorage.removeItem('zion_user');
-    localStorage.removeItem('authToken');
-  };
-
-  const register = async (email: string, password: string, name: string) => {
-    // Mock registration - in real app this would call an API
-    const mockUser: Use r = {
-      id: '1',
-      email,
-      name,
-      role: 'user',
-      userType: 'individual',
-      displayName: nam e,
-      avatarUrl: '/default-avatar.png'
-    };
-
-    setAuthState({
-      user: mockUse r,
-      isAuthenticated: tru e,
-      isLoading: fals e
-    });
-
-    // Store user data in localStorage
-    localStorage.setItem('zion_user', JSON.stringify(mockUser));
-    localStorage.setItem('authToken', 'mock-jwt-token');
-
-    return { success: tru e, user: mockUse r };
-  };
-
-  const updateProfile = (props: any) => {
-    if (authState.user) {
-      const updatedUser = { ...authState.user, ...updates };
-      setAuthState(prev => ({
-        ...prev,
-        user: updatedUse r
-      }));
-
-      // Update localStorage
-      localStorage.setItem('zion_user', JSON.stringify(updatedUser));
-    }
-  };
-
-  return {
-    ...authState,
-    login,
-    logout,
-    register,
-:src/hooks/useAuth.tsx
-    updateProfile}}
-'
-    updateProfile,
-  }}
-
-</AuthState>
+export function useAuth() {
+  const context = useContext(AuthContext);
+  if (context === undefined) {
+    throw new Error('useAuth must be used within an AuthProvider');
+  }
+  return context;
+}
