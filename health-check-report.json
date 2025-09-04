@@ -1,31 +1,48 @@
 {
-  "timestamp": "2025-09-04T02:50:46.794Z",
+  "timestamp": "2025-09-04T02:58:25.517Z",
+  "duration": "1ms",
+  "overallStatus": "warning",
+  "summary": {
+    "total": 7,
+    "healthy": 5,
+    "warnings": 2,
+    "unhealthy": 0
+  },
   "checks": [
     {
-      "name": "Package.json exists",
-      "status": "pass",
-      "result": "package.json found"
+      "name": "File System",
+      "status": "healthy",
+      "details": "File system accessible"
     },
     {
-      "name": "Dependencies installed",
-      "status": "pass",
-      "result": "Dependencies installed"
+      "name": "Node.js Version",
+      "status": "healthy",
+      "details": "Node.js v22.16.0 (compatible)"
     },
     {
-      "name": "Build process",
-      "status": "fail",
-      "error": "Build failed"
+      "name": "Package.json",
+      "status": "healthy",
+      "details": "Package: ziontechgroup.com v0.1.0"
     },
     {
-      "name": "Linting",
-      "status": "pass",
-      "result": "Linting passed"
+      "name": "Dependencies",
+      "status": "warning",
+      "details": "node_modules not found, run npm install"
     },
     {
-      "name": "TypeScript compilation",
-      "status": "fail",
-      "error": "TypeScript compilation failed"
+      "name": "Build System",
+      "status": "healthy",
+      "details": "Next.js configuration found"
+    },
+    {
+      "name": "Source Files",
+      "status": "healthy",
+      "details": "Required directories present"
+    },
+    {
+      "name": "Environment",
+      "status": "warning",
+      "details": "Missing environment variables: NODE_ENV"
     }
-  ],
-  "status": "unhealthy"
+  ]
 }

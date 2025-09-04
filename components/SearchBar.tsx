@@ -140,7 +140,6 @@ function SearchBar() {
   }
   const handleResultClick = () => {
     setIsOpen(false);
-    setQuery('');
   }
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Escape') {

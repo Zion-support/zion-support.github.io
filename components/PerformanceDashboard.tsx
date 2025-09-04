@@ -17,8 +17,7 @@ const PerformanceDashboard: React.FC = () => {
     // Listen for performance metrics
     const handleMetric = (metric: PerformanceMetrics) => {
       setMetrics(prev => [...prev.slice(-9), metric]);
-    };
-    
+    }
     // Simulate receiving metrics
     const interval = setInterval(() => {
       const mockMetric: PerformanceMetrics = {
@@ -27,8 +26,8 @@ const PerformanceDashboard: React.FC = () => {
         fid: Math.random() * 100,
         cls: Math.random() * 0.1,
         ttfb: Math.random() * 500 + 100,
-        timestamp: Date.now(),
-      };
+        timestamp: Date.now()
+      }
       handleMetric(mockMetric);
     }, 5000);
 
@@ -39,8 +38,7 @@ const PerformanceDashboard: React.FC = () => {
     if (value <= thresholds[0]) return 'text-green-400';
     if (value <= thresholds[1]) return 'text-yellow-400';
     return 'text-red-400';
-  };
-
+  }
   if (!isVisible) {
     return (
       <button
@@ -99,6 +97,5 @@ const PerformanceDashboard: React.FC = () => {
       )}
     </div>
   );
-};
-
+}
 export default PerformanceDashboard;
