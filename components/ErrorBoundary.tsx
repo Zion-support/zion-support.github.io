@@ -16,10 +16,11 @@ class ErrorBoundary extends Component<Props, State> {
   }
   public static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error }
-  }
-  
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
+    // Log error in development only
+    if (process.env.NODE_ENV === 'development') {
+      console.error('ErrorBoundary caught an error:', error, errorInfo);
+    }
   }
 
   public render() {
@@ -67,6 +68,4 @@ class ErrorBoundary extends Component<Props, State> {
 
     return this.props.children;
   }
-}
-
 export default ErrorBoundary;

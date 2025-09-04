@@ -69,6 +69,102 @@ module.exports = {
       log_file: './logs/performance-monitor.log',
       out_file: './logs/performance-monitor-out.log',
       error_file: './logs/performance-monitor-error.log'
+    },
+    {
+      name: 'automation-ci-cd',
+      script: 'node',
+      args: 'scripts/automation-orchestrator.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '0 */1 * * *', // Restart every hour
+      env: {
+        NODE_ENV: 'production'
+      },
+      log_file: './logs/ci-cd.log',
+      out_file: './logs/ci-cd-out.log',
+      error_file: './logs/ci-cd-error.log'
+    },
+    {
+      name: 'automation-continuous',
+      script: 'node',
+      args: 'scripts/master-automation-orchestrator.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '0 */6 * * *', // Restart every 6 hours
+      env: {
+        NODE_ENV: 'production'
+      },
+      log_file: './logs/continuous.log',
+      out_file: './logs/continuous-out.log',
+      error_file: './logs/continuous-error.log'
+    },
+    {
+      name: 'automation-dependency-updater',
+      script: 'node',
+      args: 'scripts/dependency-updater.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '0 */12 * * *', // Restart every 12 hours
+      env: {
+        NODE_ENV: 'production'
+      },
+      log_file: './logs/dependency-updater.log',
+      out_file: './logs/dependency-updater-out.log',
+      error_file: './logs/dependency-updater-error.log'
+    },
+    {
+      name: 'automation-code-quality',
+      script: 'node',
+      args: 'scripts/code-quality-monitor.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '0 */3 * * *', // Restart every 3 hours
+      env: {
+        NODE_ENV: 'production'
+      },
+      log_file: './logs/code-quality.log',
+      out_file: './logs/code-quality-out.log',
+      error_file: './logs/code-quality-error.log'
+    },
+    {
+      name: 'automation-build-test',
+      script: 'node',
+      args: 'scripts/comprehensive-test-runner.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '0 */2 * * *', // Restart every 2 hours
+      env: {
+        NODE_ENV: 'production'
+      },
+      log_file: './logs/build-test.log',
+      out_file: './logs/build-test-out.log',
+      error_file: './logs/build-test-error.log'
+    },
+    {
+      name: 'automation-sitemap',
+      script: 'node',
+      args: 'scripts/generate-sitemap.mjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '0 */6 * * *', // Restart every 6 hours
+      env: {
+        NODE_ENV: 'production'
+      },
+      log_file: './logs/sitemap.log',
+      out_file: './logs/sitemap-out.log',
+      error_file: './logs/sitemap-error.log'
     }
   ]
 };
