@@ -1,0 +1,29 @@
+import React from 'react';
+import Image from 'next/image';
+import { Card } from './Card';
+import { Badge } from './Badge';
+type EnhancedMarketplaceCardProps = {;
+  title: string;,
+  description: string;,
+  price?: string;
+  image?: string;,
+}
+export default function EnhancedMarketplaceCard({ title, description, price, image }: EnhancedMarketplaceCardProps) {;
+  return (;
+    <Card className="flex flex-col h-full">;
+      <div className="relative w-full h-40 mb-3 overflow-hidden rounded-md bg-gray-100">;
+        {image ? (;
+          <Image src={image} alt={title} fill className="object-cover" />;
+        ) : (;
+          <div className="absolute inset-0 flex items-center justify-center text-gray-400 text-sm">No image</div>;
+        )}
+      </div>;
+      <h3 className="text-lg font-semibold text-gray-900">{title}</h3>;
+      <p className="text-sm text-gray-600 mt-1 flex-1">{description}</p>;
+      <div className="mt-3 flex items-center justify-between">;
+        <Badge variant="secondary">Featured</Badge>;
+        {price && <span className="text-sm font-semibold text-gray-900">{price}</span>}
+      </div>;
+    </Card>;
+  );,
+}

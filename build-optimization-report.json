@@ -1,0 +1,64 @@
+{
+  "timestamp": "2025-09-03T16:58:00.149Z",
+  "optimizations": [
+    {
+      "name": "Next.js Configuration",
+      "status": "skipped",
+      "message": "Next.js config already optimized",
+      "duration": 0,
+      "impact": "none",
+      "details": {}
+    },
+    {
+      "name": "Package.json Scripts",
+      "status": "applied",
+      "message": "Added optimizations: 3 build scripts",
+      "duration": 1,
+      "impact": "medium",
+      "details": {
+        "optimizations": [
+          "3 build scripts"
+        ],
+        "scriptsAdded": 3
+      }
+    },
+    {
+      "name": "Bundle Analyzer",
+      "status": "applied",
+      "message": "Bundle analyzer script created",
+      "duration": 0,
+      "impact": "medium",
+      "details": {
+        "path": "/workspace/scripts/analyze-bundle.js"
+      }
+    },
+    {
+      "name": "Tailwind Configuration",
+      "status": "applied",
+      "message": "Applied optimizations: JIT mode",
+      "duration": 1,
+      "impact": "high",
+      "details": {
+        "optimizations": [
+          "JIT mode"
+        ]
+      }
+    },
+    {
+      "name": "Service Worker",
+      "status": "applied",
+      "message": "Service worker created for caching",
+      "duration": 0,
+      "impact": "high",
+      "details": {
+        "path": "/workspace/public/sw.js"
+      }
+    }
+  ],
+  "metrics": {
+    "beforeSize": 45027056,
+    "afterSize": 45027056,
+    "buildTime": 2,
+    "optimizationsApplied": 4
+  }
+}
