@@ -1,3 +1,6 @@
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { MessageCircle, X, Send, Bot, User } from 'lucide-react';
 
 export default function Page() {;
 interface ChatAssistantProps {;
@@ -23,12 +26,13 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({;
   enableSuggestions = true;,
 }) => {;
   const [isOpen, setIsOpen] = useState(false);
-  const [messages, setMessages] = useState<Message[]>([{;
-      id: '1',;
-      text: 'Hello! I\'m your AI assistant.How can I help you today?',;
-      sender: 'assistant',;
-      timestamp: new Date();,
-}
+  const [messages, setMessages] = useState([
+    {
+      id: 1,
+      text: "Hello! I'm here to help you with any questions about Zion Tech Group's services. How can I assist you today?",
+      sender: 'bot',
+      timestamp: new Date()
+    }
   ]);
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
@@ -115,129 +119,86 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({;
 
   return (<div className={`fixed ${positionClasses[position]} z-50`}>;
       {/* Chat Window */}
-      <AnimatePresence>;
-        {isOpen && (;
-          <motion.div;
-            initial={{ opacity: 0, scale: 0.8, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.8, y: 20 }}
-            transition={{ duration: 0.2 }}
-            className="mb-4 w-80 h-96 bg-slate-900/95 backdrop-blur-lg border border-white/20 rounded-xl shadow-2xl flex flex-col">;
-            {/* Header */}
-            <div className="flex items-center justify-between p-4 border-b border-white/10">;
-              <div className="flex items-center gap-3">;
-                <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center">;
-                  <Bot className="w-5 h-5 text-white" />;
-                </div>;
-                <div>;
-                  <h3 className="text-white font-semibold text-sm">AI Assistant</h3>;
-                  <p className="text-gray-400 text-xs">Online</p>;
-                </div>;
-              </div>;
-              <div className="flex items-center gap-2">;
-                <button ;
-                  className="text-gray-400 hover:text-white transition-colors p-1";
-                  onClick={() => setIsOpen(false)}
-                >;
-                  <Settings className="w-4 h-4" />;
-                </button>;
-                <button ;
-                  className="text-gray-400 hover:text-white transition-colors p-1";
-                  onClick={() => setIsOpen(false)}
-                >;
-                  <X className="w-4 h-4" />;
-                </button>;
-              </div>;
-            </div>;
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: 20, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 20, scale: 0.9 }}
+            className="fixed bottom-24 left-6 w-80 h-96 bg-white rounded-2xl shadow-2xl border border-gray-200 z-50 flex flex-col overflow-hidden"
+          >
+            {/* Chat Header */}
+            <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 flex items-center justify-between">
+              <div className="flex items-center space-x-3">
+                <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                  <Bot className="w-5 h-5" />
+                </div>
+                <div>
+                  <h3 className="font-semibold">Zion Assistant</h3>
+                  <p className="text-xs text-blue-100">Online now</p>
+                </div>
+              </div>
+              <button
+                onClick={() => setIsOpen(false)}
+                className="text-white/80 hover:text-white transition-colors"
+                aria-label="Close chat"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
 
             {/* Messages */}
-            <div className="flex-1 overflow-y-auto p-4 space-y-3">;
-              {messages.map((message) => (;
-                <div ;
+            <div className="flex-1 overflow-y-auto p-4 space-y-4">
+              {messages.map((message) => (
+                <motion.div
                   key={message.id}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
                   className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
-                >;
-                  <div className={`max-w-[80%] ${message.sender === 'user' ;
-                      ? 'bg-cyan-500 text-white' ;
-                      : 'bg-white/10 text-gray-100';,
-} rounded-lg p-3`}>;
-                    <p className="text-sm">{message.text}</p>;
-                    <p className={`text-xs mt-1 ${message.sender === 'user' ? 'text-cyan-100' : 'text-gray-400';,
-}`}>;
+                >
+                  <div
+                    className={`max-w-xs px-4 py-2 rounded-2xl ${
+                      message.sender === 'user'
+                        ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white'
+                        : 'bg-gray-100 text-gray-800'
+                    }`}
+                  >
+                    <p className="text-sm">{message.text}</p>
+                    <p className="text-xs opacity-70 mt-1">
                       {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
-                    </p>;
-                  </div>;
-                </div>;
+                    </p>
+                  </div>
+                </motion.div>
               ))}
-              ;
-              {isTyping && (;
-                <div className="flex justify-start">;
-                  <div className="bg-white/10 text-gray-100 rounded-lg p-3">;
-                    <div className="flex space-x-1">;
-                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>;
-                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>;
-                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>;
-                    </div>;
-                  </div>;
-                </div>;
-              )}
-              <div ref={messagesEndRef} />;
-            </div>;
+            </div>
 
             {/* Input */}
-            <div className="p-4 border-t border-white/10">;
-              <div className="flex items-center gap-2">;
-                <div className="flex-1 relative">;
-                  <input;
-                    ref={inputRef}
-                    type="text";
-                    value={inputValue}
-                    onChange={(e) => setInputValue(e.target.value)}
-                    onKeyPress={handleKeyPress}
-                    placeholder="Type your message...";
-                    className="w-full bg-white/10 border border-white/20 rounded-lg px-3 py-2 text-white text-sm placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400";
-                  />;
-                </div>;
-                ;
-                {enableFileUpload && (;
-                  <button className="text-gray-400 hover:text-white transition-colors p-2">;
-                    <Paperclip className="w-4 h-4" />;
-                  </button>;
-                )}
-                ;
-                {enableVoice && (;
-                  <button ;
-                    onClick={toggleVoice}
-                    className={`transition-colors p-2 ${isListening ? 'text-red-400' : 'text-gray-400 hover:text-white';,
-}`}
-                  >;
-                    {isListening ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />}
-                  </button>;
-                )}
-                ;
-                <button ;
+            <div className="p-4 border-t border-gray-200">
+              <div className="flex space-x-2">
+                <input
+                  type="text"
+                  value={inputValue}
+                  onChange={(e) => setInputValue(e.target.value)}
+                  onKeyPress={handleKeyPress}
+                  placeholder="Type your message..."
+                  className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                />
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                   onClick={handleSendMessage}
                   disabled={!inputValue.trim()}
-                  className="bg-cyan-500 hover:bg-cyan-600 disabled:opacity-50 disabled:cursor-not-allowed text-white p-2 rounded-lg transition-colors">;
-                  <Send className="w-4 h-4" />;
-                </button>;
-              </div>;
-            </div>;
-          </motion.div>;
+                  className="p-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  <Send className="w-5 h-5" />
+                </motion.button>
+              </div>
+            </div>
+          </motion.div>
         )}
-      </AnimatePresence>;
-
-      {/* Toggle Button */}
-      <motion.button;
-        onClick={() => setIsOpen(!isOpen)}
-        className="w-14 h-14 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full shadow-lg flex items-center justify-center text-white hover:shadow-xl transition-shadow";
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-      >;
-        {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
-      </motion.button>;
-    </div>;
-  );,
+      </AnimatePresence>
+    </>
+  );
 };
 
 export default ChatAssistant;
