@@ -9,6 +9,5 @@ export function Logo(props: any) {
       </span>
     </motion.div>)}
 
-
-export default Logo;
-</motion>
+export default Logo;';
+</motion>;';;';

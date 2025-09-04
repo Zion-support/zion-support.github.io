@@ -1,5 +1,5 @@
-import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react';';';
+import { motion, AnimatePresence } from 'framer-motion';';';
 import { SkipForward, Volume2, VolumeX, Accessibility, Sun, Moon } from 'lucide-react';
 ;
 interface AccessibilityContextType {;
@@ -18,10 +18,10 @@ interface AccessibilityContextType {;
 }
 ;
 const AccessibilityContext = createContext<AccessibilityContextType | null>(null);
-;
-export const useAccessibility = (props: any) => {;
-  const context = useContext(AccessibilityContext);
-  if (!context) {;
+
+export const useAccessibility = (props: any) => {
+  const context = useContext(AccessibilityContext);';
+  if (!context) {';';
     throw new Error('useAccessibility must be used within an AccessibilityProvider');
   }
   return context;
@@ -38,12 +38,12 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
   const [fontSize, setFontSize] = useState<any>(16);
   const [showSkipLinks, setShowSkipLinks] = useState<any>(false);
   const [voiceNavigation, setVoiceNavigation] = useState<any>(false);
-;
-  // Load accessibility preferences from localStorage;
-  useEffect(() => {;
-    const savedHighContrast = localStorage.getItem('zion-high-contrast') === 'true';
-    const savedReducedMotion = localStorage.getItem('zion-reduced-motion') === 'true';
-    const savedFontSize = localStorage.getItem('zion-font-size');
+
+  // Load accessibility preferences from localStorage';
+  useEffect(() => {';';
+    const savedHighContrast = localStorage.getItem('zion-high-contrast') === 'true';';';
+    const savedReducedMotion = localStorage.getItem('zion-reduced-motion') === 'true';';';
+    const savedFontSize = localStorage.getItem('zion-font-size');';';
     const savedVoiceNavigation = localStorage.getItem('zion-voice-navigation') === 'true';
 ;
     setHighContrast(savedHighContrast);
@@ -55,87 +55,87 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
   // Apply accessibility settings to document;
   useEffect(() => {;
     const root = document.documentElement;
-;
-    // Apply high contrast;
-    if (highContrast) {;
-      root.classList.add('high-contrast');
-    } else {;
+
+    // Apply high contrast';
+    if (highContrast) {';';
+      root.classList.add('high-contrast');';
+    } else {';';
       root.classList.remove('high-contrast');
     }
-;
-    // Apply reduced motion;
-    if (reducedMotion) {;
-      root.classList.add('reduce-motion');
-    } else {;
+
+    // Apply reduced motion';
+    if (reducedMotion) {';';
+      root.classList.add('reduce-motion');';
+    } else {';';
       root.classList.remove('reduce-motion');
     }
 ;
     // Apply font size;
     root.style.fontSize = `${fontSize}px`;
   }, [highContrast, reducedMotion, fontSize]);
-;
-  // Keyboard navigation support;
-  useEffect(() => {;
-    const handleKeyDown = (props: any) => {;
-      // Show skip links on Tab press;
-      if (event.key === 'Tab') {;
+
+  // Keyboard navigation support
+  useEffect(() => {
+    const handleKeyDown = (props: any) => {';
+      // Show skip links on Tab press';';
+      if (event.key === 'Tab') {
         setShowSkipLinks(true);
         setTimeout(() => setShowSkipLinks(false), 5000);
       }
-;
-      // High contrast toggle (Alt + H);
-      if (event.altKey && event.key === 'h') {;
+';
+      // High contrast toggle (Alt + H)';';
+      if (event.altKey && event.key === 'h') {
         event.preventDefault();
         toggleHighContrast();
       }
-;
-      // Font size controls (Alt + Plus/Minus);
-      if (event.altKey && event.key === '+') {;
+';
+      // Font size controls (Alt + Plus/Minus)';';
+      if (event.altKey && event.key === '+') {
         event.preventDefault();
-        increaseFontSize();
-      }
-      if (event.altKey && event.key === '-') {;
+        increaseFontSize();';
+      }';';
+      if (event.altKey && event.key === '-') {
         event.preventDefault();
         decreaseFontSize();
       }
-    };
-;
-    document.addEventListener('keydown', handleKeyDown);
+    };';
+';';
+    document.addEventListener('keydown', handleKeyDown);';';
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
-;
-  const toggleHighContrast = (props: any) => {;
-    const newValue = !highContrast;
-    setHighContrast(newValue);
+
+  const toggleHighContrast = (props: any) => {
+    const newValue = !highContrast;';
+    setHighContrast(newValue);';';
     localStorage.setItem('zion-high-contrast', newValue.toString());
   };
-;
-  const toggleReducedMotion = (props: any) => {;
-    const newValue = !reducedMotion;
-    setReducedMotion(newValue);
+
+  const toggleReducedMotion = (props: any) => {
+    const newValue = !reducedMotion;';
+    setReducedMotion(newValue);';';
     localStorage.setItem('zion-reduced-motion', newValue.toString());
   };
-;
-  const increaseFontSize = (props: any) => {;
-    const newSize = Math.min(fontSize + 2, 24);
-    setFontSize(newSize);
+
+  const increaseFontSize = (props: any) => {
+    const newSize = Math.min(fontSize + 2, 24);';
+    setFontSize(newSize);';';
     localStorage.setItem('zion-font-size', newSize.toString());
   };
-;
-  const decreaseFontSize = (props: any) => {;
-    const newSize = Math.max(fontSize - 2, 12);
-    setFontSize(newSize);
+
+  const decreaseFontSize = (props: any) => {
+    const newSize = Math.max(fontSize - 2, 12);';
+    setFontSize(newSize);';';
     localStorage.setItem('zion-font-size', newSize.toString());
   };
-;
-  const resetFontSize = (props: any) => {;
-    setFontSize(16);
+
+  const resetFontSize = (props: any) => {';
+    setFontSize(16);';';
     localStorage.setItem('zion-font-size', '16');
   };
-;
-  const toggleVoiceNavigation = (props: any) => {;
-    const newValue = !voiceNavigation;
-    setVoiceNavigation(newValue);
+
+  const toggleVoiceNavigation = (props: any) => {
+    const newValue = !voiceNavigation;';
+    setVoiceNavigation(newValue);';';
     localStorage.setItem('zion-voice-navigation', newValue.toString());
   };
 ;
@@ -198,10 +198,10 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
           <div className="flex flex-col gap-2">;
             <button;
               onClick={toggleHighContrast}
-              className={`p-2 rounded-lg transition-colors ${;
-                highContrast;
-                  ? 'bg-blue-500 text-white';
-                  : 'bg-gray-700 text-gray-300 hover: b g-gray-600';
+              className={`p-2 rounded-lg transition-colors ${';
+                highContrast';';
+                  ? 'bg-blue-500 text-white'';';
+                  : 'bg-gray-700 text-gray-300 hover: b g-gray-600'
               }`}
               title="Toggle high contrast";
             >;
@@ -209,10 +209,10 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
             </button>;
             <button;
               onClick={toggleReducedMotion}
-              className={`p-2 rounded-lg transition-colors ${;
-                reducedMotion;
-                  ? 'bg-blue-500 text-white';
-                  : 'bg-gray-700 text-gray-300 hover: b g-gray-600';
+              className={`p-2 rounded-lg transition-colors ${';
+                reducedMotion';';
+                  ? 'bg-blue-500 text-white'';';
+                  : 'bg-gray-700 text-gray-300 hover: b g-gray-600'
               }`}
               title="Toggle reduced motion";
             >;
@@ -234,10 +234,10 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
             </button>;
                           <button;
                 onClick={toggleVoiceNavigation}
-                className={`p-2 rounded-lg transition-colors ${;
-                  voiceNavigation;
-                    ? 'bg-blue-500 text-white';
-                    : 'bg-gray-700 text-gray-300 hover: b g-gray-600';
+                className={`p-2 rounded-lg transition-colors ${';
+                  voiceNavigation';';
+                    ? 'bg-blue-500 text-white'';';
+                    : 'bg-gray-700 text-gray-300 hover: b g-gray-600'
                 }`}
                 title="Toggle voice navigation";
               >;
@@ -258,12 +258,12 @@ export const FocusTrap: React.FC<{ children: ReactNod e; isActive?: boolean }> =
 }) => {;
   useEffect(() => {;
     if (!isActive) return;
-;
-    const handleKeyDown = (props: any) => {;
+';
+    const handleKeyDown = (props: any) => {';';
       if (event.key !== 'Tab') return;
-;
-      const focusableElements = document.querySelectorAll(;
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+';
+      const focusableElements = document.querySelectorAll(';';
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
       );
 ;
       const firstElement = focusableElements[0] as HTMLElement;
@@ -276,22 +276,18 @@ export const FocusTrap: React.FC<{ children: ReactNod e; isActive?: boolean }> =
         event.preventDefault();
         firstElement.focus();
       }
-    };
-;
-    document.addEventListener('keydown', handleKeyDown);
+    };';
+';';
+    document.addEventListener('keydown', handleKeyDown);';';
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [isActive]);
 ;
   return <>{children}</>;
 };
-;
-</motion>;
-</motion>;
-</AccessibilityContext>;
-</any>;
-</any>;
-</any>;
-</any>;
-</any>;
-</AccessibilityProviderProps>;
-</AccessibilityContextType>;
+
+</motion>
+</AccessibilityContext>
+</any>
+</any>
+</AccessibilityProviderProps>';
+</AccessibilityContextType>;';;';

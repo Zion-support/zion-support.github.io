@@ -5,27 +5,25 @@ const path = require("path");
 class $1 {;
   constructor() {;
   this.projectRoot = process.cwd();
-    this.$1 = [];
-}
+    this.$1 = []}
 ;
   log(message, type = "INFO") {;
   const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${type}] ${message}`);,;,
+    console.log(`[${timestamp}] [${type}] ${message}`),,
 }
 ;
   async fixCorruptedImports() {;
   this.log("🔧 Fixing corrupted import statements...");
     const filesToFix = [;
-  "pages",;
-      "components",;
-      "utils",;
-      "hooks";
-    ];
+  "pages",
+      "components",
+      "utils",
+      "hooks"];
     ;
     for (const dir of filesToFix) {;
   const dirPath = path.join(this.projectRoot, dir);
       if (fs.existsSync(dirPath)) {;
-  this.fixFilesInDirectory(dirPath);,;,
+  this.fixFilesInDirectory(dirPath),,
 }
     }
   }
@@ -36,9 +34,9 @@ class $1 {;
   const fullPath = path.join(dirPath, item);
       const stat = fs.statSync(fullPath);
       if (stat.isDirectory()) {;
-  this.fixFilesInDirectory(fullPath);,;,
+  this.fixFilesInDirectory(fullPath),,
 } else if (item.endsWith(".ts") || item.endsWith(".tsx")) {;
-  this.fixCorruptedFile(fullPath);,;,
+  this.fixCorruptedFile(fullPath),,
 }
     }
   }
@@ -50,16 +48,16 @@ class $1 {;
       // Fix corrupted import statements with \\n;
       if (content.includes("import React from \"react\";\\nimport type { NextPage }")) {;
   content = content.replace(;
-          /import React from "react";\\nimport type { NextPage }/g,;
+          /import React from "react";\\nimport type { NextPage }/g,
           "import React from \"react\";\nimport type { NextPage }";
         );
-        modified = true;,;,
+        modified = true,,
 }
       ;
       // Fix other corrupted patterns;
       if (content.includes("\\n")) {;
   content = content.replace(/\\n/g, "\n");
-        modified = true;,;,
+        modified = true,,
 }
       ;
       // Fix specific corrupted files;
@@ -67,31 +65,31 @@ class $1 {;
   content = `// Message channel handler utility;
 export const messageChannelHandler = {;
   receiveMessage: (callback: (message: any) => void) => {;
-  // Implementation for receiving messages;,;,
-},;
+  // Implementation for receiving messages,,
+},
   sendMessage: (message: any) => {;
-  // Implementation for sending messages;,;,
+  // Implementation for sending messages,,
 }
 };`;
-        modified = true;,;,
+        modified = true,,
 }
       ;
       if (filePath.includes("sanitizeHtml.ts")) {;
   content = `// HTML sanitization utility to prevent CSP violations;
 import DOMPurify from "isomorphic-dompurify";
 export const sanitizeHtml = (html: string): string => {;
-  return DOMPurify.sanitize(html);,;,
+  return DOMPurify.sanitize(html),,
 };`;
-        modified = true;,;,
+        modified = true,,
 }
       ;
       if (modified) {;
   fs.writeFileSync(filePath, content);
-        this.fixes.push(`Fixed corrupted file: ${path.relative(this.projectRoot, filePath)}`);,;,
+        this.fixes.push(`Fixed corrupted file: ${path.relative(this.projectRoot, filePath)}`),,
 }
-      ;,;,
+      ,,
 } catch (error) {;
-  this.log(`⚠️  Could not fix file ${filePath}: ${error.message}`, "WARN");,;,
+  this.log(`⚠️  Could not fix file ${filePath}: ${error.message}`, "WARN"),,
 }
   }
 ;
@@ -106,15 +104,14 @@ export const sanitizeHtml = (html: string): string => {;
       if (this.fixes.length > 0) {;
   this.log("\\n✅ Fixes Applied:");
         this.fixes.forEach((fix, index) => {;
-  this.log(`  ${index + 1}. ${fix}`);,;,
-});,;,
+  this.log(`  ${index + 1}. ${fix}`),,
+}),,
 }
       ;
-      this.log("\\n🎉 Final TypeScript fixing completed!");
-      ;,;,
+      this.log("\\n🎉 Final TypeScript fixing completed!"),,
 } catch (error) {;
   this.log(`💥 Fatal error: ${error.message}`, "ERROR");
-      process.exit(1);,;,
+      process.exit(1),,
 }
   }
 }

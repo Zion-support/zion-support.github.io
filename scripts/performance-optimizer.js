@@ -9,19 +9,16 @@ class PerformanceOptimizer {
     this.projectRoot = process.cwd();
     this.srcDir = path.join(this.projectRoot, 'src');
     this.reportsDir = path.join(this.projectRoot, 'automation-reports');
-    this.ensureDirectories();
-  }
+    this.ensureDirectories()}
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-    }
+      fs.mkdirSync(this.reportsDir, { recursive: true })}
   }
 
   log(message) {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`);
-  }
+    console.log(`[${timestamp}] ${message}`)}
 
   async optimizePerformance() {
     this.log('⚡ Starting performance optimization');
@@ -56,20 +53,17 @@ class PerformanceOptimizer {
               /export default function (\w+)/g,
               'export default React.memo(function $1'
             );
-            fileOptimizations++;
-          }
+            fileOptimizations++}
 
           // Add useCallback to event handlers
           if (content.includes('onClick') && !content.includes('useCallback')) {
             // This is a complex optimization that would need more context
             // For now, we'll just log it as a potential optimization
-            fileOptimizations++;
-          }
+            fileOptimizations++}
 
           // Add useMemo to expensive calculations
           if (content.includes('useState') && content.includes('map(') && !content.includes('useMemo')) {
-            fileOptimizations++;
-          }
+            fileOptimizations++}
         }
 
         // Optimize imports - remove unused imports
@@ -83,10 +77,8 @@ class PerformanceOptimizer {
             const imports = matches[1].split(',').map(imp => imp.trim());
             imports.forEach(imp => {
               if (newContent.includes(imp) && !importLine.includes(imp)) {
-                usedImports.add(imp);
-              }
-            });
-          }
+                usedImports.add(imp)}
+            })}
         });
 
         // Add performance optimizations for React components
@@ -97,21 +89,17 @@ class PerformanceOptimizer {
               /import React from 'react';/g,
               "import React, { memo, useCallback, useMemo } from 'react';"
             );
-            fileOptimizations++;
-          }
+            fileOptimizations++}
         }
 
         if (newContent !== content) {
           fs.writeFileSync(filePath, newContent, 'utf8');
-          this.log(`✅ Optimized: ${file} (${fileOptimizations} optimizations)`);
-        }
+          this.log(`✅ Optimized: ${file} (${fileOptimizations} optimizations)`)}
 
         results.processed++;
-        results.optimizations += fileOptimizations;
-      } catch (error) {
+        results.optimizations += fileOptimizations} catch (error) {
         results.errors.push({ file, error: error.message });
-        this.log(`❌ Error optimizing ${file}: ${error.message}`);
-      }
+        this.log(`❌ Error optimizing ${file}: ${error.message}`)}
     }
 
     // Generate report
@@ -131,8 +119,7 @@ class PerformanceOptimizer {
     this.log(`📊 Report generated: ${reportPath}`);
     this.log(`✅ Performance optimization completed: ${results.optimizations} optimizations applied to ${results.processed} files`);
     
-    return report;
-  }
+    return report}
 
   async createPerformanceMonitoringScript() {
     this.log('📊 Creating performance monitoring script');
@@ -150,16 +137,14 @@ class PerformanceMonitor {
       largestContentfulPaint: 0,
       cumulativeLayoutShift: 0,
       firstInputDelay: 0
-    };
-  }
+    }}
 
   startMonitoring() {
     if (typeof window !== 'undefined') {
       // Monitor page load time
       window.addEventListener('load', () => {
         this.metrics.pageLoadTime = performance.now();
-        this.reportMetrics();
-      });
+        this.reportMetrics()});
 
       // Monitor Web Vitals
       if ('PerformanceObserver' in window) {
@@ -168,8 +153,7 @@ class PerformanceMonitor {
             switch (entry.entryType) {
               case 'paint':
                 if (entry.name === 'first-contentful-paint') {
-                  this.metrics.firstContentfulPaint = entry.startTime;
-                }
+                  this.metrics.firstContentfulPaint = entry.startTime}
                 break;
               case 'largest-contentful-paint':
                 this.metrics.largestContentfulPaint = entry.startTime;
@@ -179,20 +163,17 @@ class PerformanceMonitor {
                 break;
               case 'first-input':
                 this.metrics.firstInputDelay = entry.processingStart - entry.startTime;
-                break;
-            }
+                break}
           }
         });
 
-        observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'layout-shift', 'first-input'] });
-      }
+        observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'layout-shift', 'first-input'] })}
     }
   }
 
   reportMetrics() {
     if (process.env.NODE_ENV === 'development') {
-      console.log('Performance Metrics:', this.metrics);
-    }
+      console.log('Performance Metrics:', this.metrics)}
     
     // Send to analytics in production
     if (typeof gtag !== 'undefined') {
@@ -201,9 +182,7 @@ class PerformanceMonitor {
           event_category: 'Performance',
           value: Math.round(value),
           non_interaction: true
-        });
-      });
-    }
+        })})}
   }
 }
 
@@ -213,12 +192,10 @@ export default PerformanceMonitor;`;
     const utilsDir = path.dirname(scriptPath);
     
     if (!fs.existsSync(utilsDir)) {
-      fs.mkdirSync(utilsDir, { recursive: true });
-    }
+      fs.mkdirSync(utilsDir, { recursive: true })}
     
     fs.writeFileSync(scriptPath, monitoringScript);
-    this.log(`✅ Performance monitoring script created: ${scriptPath}`);
-  }
+    this.log(`✅ Performance monitoring script created: ${scriptPath}`)}
 }
 
 // Run the script
@@ -228,12 +205,9 @@ if (require.main === module) {
     .then(() => optimizer.createPerformanceMonitoringScript())
     .then(() => {
       console.log('🎉 Performance optimization completed successfully');
-      process.exit(0);
-    })
+      process.exit(0)})
     .catch((error) => {
       console.error('❌ Performance optimization failed:', error);
-      process.exit(1);
-    });
-}
+      process.exit(1)})}
 
 module.exports = PerformanceOptimizer;

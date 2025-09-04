@@ -27,13 +27,11 @@ const nextConfig = {
           { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' }
         ]
       }
-    ];
-  },
+    ]},
   async redirects() {
     return [
       { source: '/home', destination: '/', permanent: true }
-    ];
-  }
+    ]}
 };
 
 export default nextConfig;

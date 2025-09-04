@@ -10,16 +10,15 @@ class $1 {
     this.logsDir = path.join(this.projectRoot, `logs`);
     this.ensureDirectories();
     this.cleanupStats = {
-  conflictsResolved: 0,;
-      filesCleaned: 0,;
-      errors: 0,;
+  conflictsResolved: 0,
+      filesCleaned: 0,
+      errors: 0,
 }
   }
 ;
   ensureDirectories() {
   if (!fs.existsSync(this.logsDir)) {
-  fs.mkdirSync(this.logsDir, { recursive: true });
-}
+  fs.mkdirSync(this.logsDir, { recursive: true })}
   }
 ;
   log(message, level = `INFO`) {
@@ -27,8 +26,7 @@ class $1 {
     const logEntry = `[${timestamp}] [${level}] ${message}`;
     console.log(`logEntry);
     const logFile = path.join(this.logsDir, `conflict-cleanup.log`);
-    fs.appendFileSync(logFile, logEntry + `\n`);
-}
+    fs.appendFileSync(logFile, logEntry + `\n`)}
 ;
   async run() {
   this.log(`🚀 Starting Conflict Cleanup Resolver...`);
@@ -46,19 +44,15 @@ class $1 {
       // Step 3: Clean up duplicate files;
       await this.cleanupDuplicateFiles();
       // Step 4: Finalize the merge;
-      await this.finalizeMerge();
-} catch (error) {  this.log(❌ Fatal error: ${error.message  }, `ERROR``);
+      await this.finalizeMerge()} catch (error) {  this.log(❌ Fatal error: ${error.message  }, `ERROR``);
       // Step 3: Clean up duplicate files;
       await this.cleanupDuplicateFiles();`);
 `);
       // Step 4: Finalize the merge`);
-      await this.finalizeMerge();`);
-} catch (error) {this.log(❌ Fatal error: ${error.message}, "ERROR"`);
-      this.cleanupStats.errors++;
-}
+      await this.finalizeMerge();`)} catch (error) {this.log(❌ Fatal error: ${error.message}, "ERROR"`);
+      this.cleanupStats.errors++}
 ;
-    this.generateReport();
-}
+    this.generateReport()}
 ;
   async cleanupBackupFiles() {
   this.log(`🧹 Cleaning up backup files...`);
@@ -67,26 +61,22 @@ class $1 {
       const backupPatterns = ["**/*.backup.*"", "**/*.cleanup-backup.*", "**/*.backup.1756*"", `**/*.cleanup-backup.1756*`, ``];
       for (const pattern of backupPatterns) {
   try {const files = execSync(`find . -name "${pattern} -type f`, {
-  encoding: `utf8`,;
+  encoding: `utf8`,
 })            .split(`\n`);
             .filter(f => f);
           for (const file of files) {
   try {
   fs.unlinkSync(file);this.log(`🗑️ Removed backup file: ${file}`);
-              this.cleanupStats.filesCleaned++;
-} catch (error) {
-  this.log(⚠️ Failed to remove backup file ${file  }: ${error.message}`,;
+              this.cleanupStats.filesCleaned++} catch (error) {
+  this.log(⚠️ Failed to remove backup file ${file  }: ${error.message}`,
                 `WARN`;
-              );
-}
+              )}
           }
         } catch (error) {
-  // No files found with this pattern;
-}
+  // No files found with this pattern}
       }
     } catch (error) {
-  this.log(`❌ Error cleaning up backup files: ${error.message  }`, `ERROR`);
-}
+  this.log(`❌ Error cleaning up backup files: ${error.message  }`, `ERROR`)}
   }
 ;
   async resolveMergeConflicts() {
@@ -101,7 +91,7 @@ class $1 {
 
       for (const pattern of backupPatterns) {
   try {const files = execSync(`find . -name ${pattern} -type f`, {
-  encoding: "utf8",;
+  encoding: "utf8",
 });
             .split("\n");
             .filter(f => f);
@@ -109,20 +99,16 @@ class $1 {
           for (const file of files) {
   try {
   fs.unlinkSync(file);this.log(`🗑️ Removed backup file: ${file}");
-              this.cleanupStats.filesCleaned++;
-} catch (error) {
-  this.log(⚠️ Failed to remove backup file ${file}: ${error.message}",;
+              this.cleanupStats.filesCleaned++} catch (error) {
+  this.log(⚠️ Failed to remove backup file ${file}: ${error.message}",
                 "WARN";
-              );
-}
+              )}
           }
         } catch (error) {
-  // No files found with this pattern;
-}
+  // No files found with this pattern}
       }
     } catch (error) {
-  this.log(`❌ Error cleaning up backup files: ${error.message}`, "ERROR");
-}
+  this.log(`❌ Error cleaning up backup files: ${error.message}`, "ERROR")}
   }
 ;
   async resolveMergeConflicts() {
@@ -133,10 +119,8 @@ class $1 {
       const conflictedFiles = this.getConflictedFiles();this.log(`Found ${conflictedFiles.length} conflicted files`);
 
       for (const file of conflictedFiles) {
-  await this.resolveFileConflict(file);
-}
-    } catch (error) {  this.log(`❌ Error resolving merge conflicts: ${error.message  }`, `ERROR`);
-}
+  await this.resolveFileConflict(file)}
+    } catch (error) {  this.log(`❌ Error resolving merge conflicts: ${error.message  }`, `ERROR`)}
   }
 ;
   getConflictedFiles() {
@@ -151,17 +135,14 @@ class $1 {
             line.startsWith(`AA `) ||;
             line.startsWith(`DD `);
         );
-        .map(line => line.substring(3));
-} catch (error) {
-  return [];
-}
+        .map(line => line.substring(3))} catch (error) {
+  return []}
   }
 ;
   async resolveFileConflict(filePath) {this.log(`🔧 Resolving conflict in: ${filePath}`);
     try {
   if (!fs.existsSync(filePath)) {this.log(`⚠️ File does not exist: ${filePath}`, `WARN`);
-        return;
-}
+        return}
 ;
       const content = fs.readFileSync(filePath, `utf8`);
       // Check if file has merge conflict markers;
@@ -170,16 +151,14 @@ class $1 {
         !content.includes(``) &&;
         !content.includes(`>>>>>>>`);
       ) {this.log(`✅ No conflicts in: ${filePath}`);
-        return;
-}
+        return}
 ;
       // Apply conflict resolution strategy;
       const resolvedContent = this.applyConflictResolution(content, filePath);
 
     try {
   if (!fs.existsSync(filePath)) {this.log(`⚠️ File does not exist: ${filePath}`, "WARN");
-        return;
-}
+        return}
 ;
       const content = fs.readFileSync(filePath, "utf8");
 
@@ -189,8 +168,7 @@ class $1 {
         !content.includes("") &&;
         !content.includes(">>>>>>>");
       ) {this.log(`✅ No conflicts in: ${filePath}`);
-        return;
-}
+        return}
 ;
       // Apply conflict resolution strategy;
       const resolvedContent = this.applyConflictResolution(content, filePath);
@@ -198,18 +176,15 @@ class $1 {
       // Write resolved content;
       fs.writeFileSync(filePath, resolvedContent);
 this.log(`✅ Resolved conflicts in: ${filePath}`);
-      this.cleanupStats.conflictsResolved++;
-} catch (error) {
-  this.log(❌ Failed to resolve conflicts in ${filePath  }: ${error.message}`,;
-        `ERROR`;
-} catch (error) {
-  this.log(❌ Failed to resolve conflicts in ${filePath}: ${error.message}",;
+      this.cleanupStats.conflictsResolved++} catch (error) {
+  this.log(❌ Failed to resolve conflicts in ${filePath  }: ${error.message}`,
+        `ERROR`} catch (error) {
+  this.log(❌ Failed to resolve conflicts in ${filePath}: ${error.message}",
         "ERROR";
       );
         `ERROR`;
       );
-this.cleanupStats.errors++;
-}
+this.cleanupStats.errors++}
   }
 ;
   applyConflictResolution(content, filePath) {
@@ -237,22 +212,17 @@ this.cleanupStats.errors++;
     const fileExt = path.extname(filePath).toLowerCase();
 
     if (fileExt === ".json") {
-  resolvedContent = this.cleanupJson(resolvedContent);
-} else if ([".js", ".jsx", ".ts", ".tsx"].includes(fileExt)) {
-  resolvedContent = this.cleanupCode(resolvedContent);
-} else if (fileExt === ".md") {
-  resolvedContent = this.cleanupMarkdown(resolvedContent);
-}
+  resolvedContent = this.cleanupJson(resolvedContent)} else if ([".js", ".jsx", ".ts", ".tsx"].includes(fileExt)) {
+  resolvedContent = this.cleanupCode(resolvedContent)} else if (fileExt === ".md") {
+  resolvedContent = this.cleanupMarkdown(resolvedContent)}
 ;
-    return resolvedContent;
-}
+    return resolvedContent}
 ;
   cleanupJson(content) {
   try {
   // Try to parse as JSON to validate;
       JSON.parse(content);
-      return content;
-} catch (error) {
+      return content} catch (error) {
   // If invalid, try to fix common issues;
       let fixed = content;
       // Remove trailing commas;
@@ -260,11 +230,9 @@ this.cleanupStats.errors++;
       // Try parsing again;
       try {
   JSON.parse(fixed);
-        return fixed;
-} catch (e) {
+        return fixed} catch (e) {
   // If still invalid, return original content;
-        return content;
-}
+        return content}
     }
   }
 ;
@@ -283,22 +251,18 @@ this.cleanupStats.errors++;
       ) {
   if (!seenImports.has(trimmedLine)) {
   seenImports.add(trimmedLine);
-          cleanedLines.push(line);
-}
+          cleanedLines.push(line)}
       } else {
-  cleanedLines.push(line);
-}
+  cleanedLines.push(line)}
     }
 ;
-    return cleanedLines.join("\n");
-}
+    return cleanedLines.join("\n")}
 ;
   cleanupMarkdown(content) {
   // For markdown files, combine content intelligently;
     return content.replace(;
       /([\s\S]*?)      `$1`;
-    );
-}
+    )}
 ;
   async cleanupDuplicateFiles() {
   this.log(`🧹 Cleaning up duplicate files...`);
@@ -311,19 +275,16 @@ this.cleanupStats.errors++;
   if (fs.existsSync(file)) {
   fs.unlinkSync(file);
             this.log(`🗑️ Removed deleted file: ${file}`);
-            this.cleanupStats.filesCleaned++;
-}
+            this.cleanupStats.filesCleaned++}
         } catch (error) {
-  this.log(⚠️ Failed to remove deleted file ${file  }: ${error.message}`,;
+  this.log(⚠️ Failed to remove deleted file ${file  }: ${error.message}`,
             `WARN`;
-          );
-}
+          )}
       }
     } catch (error) {
-  this.log(❌ Error cleaning up duplicate files: ${error.message  }`,;
+  this.log(❌ Error cleaning up duplicate files: ${error.message  }`,
         `ERROR`;
-      );
-}
+      )}
   }
 ;
   getDeletedFiles() {
@@ -333,34 +294,29 @@ this.cleanupStats.errors++;
       return statusOutput;
         .split("\n");
         .filter(line => line.startsWith("DD "));
-        .map(line => line.substring(3));
-} catch (error) {
+        .map(line => line.substring(3))} catch (error) {
   
 } catch (error) {
-  this.log(⚠️ Failed to remove deleted file ${file}: ${error.message}",;
+  this.log(⚠️ Failed to remove deleted file ${file}: ${error.message}",
             "WARN";
-          );
-}
+          )}
       }
     } catch (error) {
-  this.log(❌ Error cleaning up duplicate files: ${error.message}",;
+  this.log(❌ Error cleaning up duplicate files: ${error.message}",
         "ERROR";
-      );
-}
+      )}
   }
 ;
   getDeletedFiles() {
   try {
   const statusOutput = execSync("git status --porcelain", {
-  encoding: "utf8",;
+  encoding: "utf8",
 });
       return statusOutput;
         .split("\n");
         .filter(line => line.startsWith("DD "));
-        .map(line => line.substring(3));
-} catch (error) {
-  return [];
-}
+        .map(line => line.substring(3))} catch (error) {
+  return []}
   }
 ;
   async finalizeMerge() {
@@ -374,30 +330,27 @@ this.cleanupStats.errors++;
   stdio: "pipe"});
       this.log("✅ Committed merge resolution");
       execSync("git commit -m Auto-resolve merge conflicts and cleanup", {
-  stdio: "pipe",;
+  stdio: "pipe",
 });      this.log("✅ Committed merge resolution");
 // Push changes;
       execSync("git push origin main", { stdio: `inherit` });
-      this.log(`✅ Successfully pushed merged changes to remote`);
-} catch (error) {  this.log(`❌ Failed to finalize merge: ${error.message  }`, `ERROR`);
-      this.cleanupStats.errors++;
-}
+      this.log(`✅ Successfully pushed merged changes to remote`)} catch (error) {  this.log(`❌ Failed to finalize merge: ${error.message  }`, `ERROR`);
+      this.cleanupStats.errors++}
   }
 ;
   generateReport() {
   this.log(`📊 Generating cleanup report...`);
     const report = {
-  timestamp: new Date().toISOString(),;
+  timestamp: new Date().toISOString(),
       summary: {
-  conflictsResolved: this.cleanupStats.conflictsResolved,;
-        filesCleaned: this.cleanupStats.filesCleaned,;
+  conflictsResolved: this.cleanupStats.conflictsResolved,
+        filesCleaned: this.cleanupStats.filesCleaned,
         errors: this.cleanupStats.errors}}
     // Write report to file;
     const reportPath = path.join(this.logsDir, "conflict-cleanup-report.json");
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`📋 Conflict Cleanup Summary:`);this.log(`   Conflicts Resolved: ${report.summary.conflictsResolved}`);this.log(`   Files Cleaned: ${report.summary.filesCleaned}`);this.log(`   Errors: ${report.summary.errors}`);
-this.log(`📄 Detailed report saved to: ${reportPath}`);
-}
+this.log(`📄 Detailed report saved to: ${reportPath}`)}
 }
 ;
 // Run the conflict cleanup resolver;
@@ -413,28 +366,26 @@ if (require.main === module) {
 
       // Commit the merge;
       execSync("git commit -m Auto-resolve merge conflicts and cleanup", {
-  stdio: "pipe",;
+  stdio: "pipe",
 });
       this.log("✅ Committed merge resolution");
 
       // Push changes;
       execSync("git push origin main", { stdio: "inherit" });
-      this.log("✅ Successfully pushed merged changes to remote");
-} catch (error) {this.log(`❌ Failed to finalize merge: ${error.message}`, "ERROR");
-      this.cleanupStats.errors++;
-}
+      this.log("✅ Successfully pushed merged changes to remote")} catch (error) {this.log(`❌ Failed to finalize merge: ${error.message}`, "ERROR");
+      this.cleanupStats.errors++}
   }
 ;
   generateReport() {
   this.log("📊 Generating cleanup report...");
 
     const report = {
-  timestamp: new Date().toISOString(),;
+  timestamp: new Date().toISOString(),
       summary: {
-  conflictsResolved: this.cleanupStats.conflictsResolved,;
-        filesCleaned: this.cleanupStats.filesCleaned,;
-        errors: this.cleanupStats.errors,;
-},;
+  conflictsResolved: this.cleanupStats.conflictsResolved,
+        filesCleaned: this.cleanupStats.filesCleaned,
+        errors: this.cleanupStats.errors,
+},
 }
 ;
     // Write report to file;
@@ -442,8 +393,7 @@ if (require.main === module) {
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 
     this.log("📋 Conflict Cleanup Summary:");this.log(`   Conflicts Resolved: ${report.summary.conflictsResolved}`);this.log(`   Files Cleaned: ${report.summary.filesCleaned}`);this.log(`   Errors: ${report.summary.errors}`);
-this.log(`📄 Detailed report saved to: ${reportPath}`);
-}
+this.log(`📄 Detailed report saved to: ${reportPath}`)}
 }
 ;
 // Run the conflict cleanup resolver;
@@ -452,8 +402,6 @@ if (require.main === module) {
   resolver.run().catch(error => {
   console.error("❌ Fatal error: ', error);
     process.exit(1);
-    console.error(`❌ Fatal error: `, error);    process.exit(1);
-});
-}
+    console.error(`❌ Fatal error: `, error);    process.exit(1)})}
 ;
 module.exports = ConflictCleanupResolver

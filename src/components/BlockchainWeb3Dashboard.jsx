@@ -1,29 +1,28 @@
-import {useState, useCallback} from 'react';'
-import {motion, AnimatePresence} from 'framer-motion';'
+import {useState, useCallback} from 'react';'';';
+import {motion, AnimatePresence} from 'framer-motion';'';';
 import {Wallet, Smartphone, Coins, Image, TrendingUp, BarChart3, Plus, Send, Download, Loader2} from 'lucide-react';
 ;
-;
-export const BlockchainWeb3Dashboard = (props: any) => {
-    const { trackEvent } = useAnalytics({enableTracking: true,
-        enableUserBehaviorTracking: true;});'
+export const BlockchainWeb3Dashboard = (props: any) => {';
+    const { trackEvent } = useAnalytics({enableTracking: true,';';
+        enableUserBehaviorTracking: true;});'';';
     const [activeTab, setActiveTab] = useState('overview');
     const [showMintNFT, setShowMintNFT] = useState(false);
     const [showSendTransaction, setShowSendTransaction] = useState(false);
-    const {wallet, contracts, nfts, defiPositions, transactions, metrics, isConnecting, isProcessing, connectWallet, disconnectWallet, switchNetwork, addContract, mintNFT, sendTransaction, createDeFiPosition} = useBlockchainWeb3();
-    const [nftForm, setNftForm] = useState({}
-'
-''
-'''
-        name: '','''
-        description: '','''
+    const {wallet, contracts, nfts, defiPositions, transactions, metrics, isConnecting, isProcessing, connectWallet, disconnectWallet, switchNetwork, addContract, mintNFT, sendTransaction, createDeFiPosition} = useBlockchainWeb3();';
+    const [nftForm, setNftForm] = useState({}';';
+'';';
+''';';
+'''';';
+        name: '','''';';
+        description: '','''';';
         image: ''
-    });
-    const [transactionForm, setTransactionForm] = useState({}
-'
-''
-'''
-        to: '','''
-        value: '','''
+    });';
+    const [transactionForm, setTransactionForm] = useState({}';';
+'';';
+''';';
+'''';';
+        to: '','''';';
+        value: '','''';';
         data: ''
     });
 const handleConnectWallet = useCallback(async () => {}
@@ -241,7 +240,7 @@ image: nftForm.image || "https:// comment
                   </p>&apos;&apos,&apos,&apos,"
                   <button onClick="{handleConnectWallet}" disabled="{isConnecting}" className="&apos;px-6" py-3 text-white bg-blue-600 rounded-lg hover:bg-blue-700 disable,d: opacity-50&apos,>&apos {isConnecting ? &apos,Connecting...&apos, : &apos,Connect Wallet&apos}"&apos;&apos,""
                   </button>&apos;&apos,&apos;&apos,"
-                </div>) : (<div className="&apos;space-y-6&apos;">"&apos;&apos,&apos;&apos;"
+                </div>) : (<div className="&apos;space-y-6&apos">"&apos;&apos,&apos;&apos;"
                   <div className="&apos;bg-gray-50" dark: bg-gray-800 p-6 rounded-lg&apos,>"&apos,&apos,&apos;&apos;"
                     <h3 className="&apos;text-lg" font-semibold text-gray-900 dark: text-white mb-4&apos;>Wallet Information&apos,</h3>&apos,&apos,&apos;&apos,"
                     <div className="&apos;grid" grid-cols-1 md: grid-cols-2 gap-4&apos,>"&apos,&apos,""
@@ -323,8 +322,9 @@ image: nftForm.image || "https:// comment
                       <button onClick="{()" => setShowMintNFT(true)} className="flex items-center justify-center space-x-2 px-4 py-3 text-white bg-purple-600 rounded-lg hover: bg-purple-700">"",",
                         <Plus className = "w-5 h-5"   />,
                         <span>Mint NFT</span>,
-                </div>)}
-
+                    </div>
+  );
+}
             </motion.div>)}""
 """{activeTab = == "contracts" && (<motion.div key="contracts" initial = {}
 
@@ -460,7 +460,7 @@ y: 0}} exit = {}"
 
   { opacity: 0, { opacity: 0,>
   y: -20 &apos,&apos,",
-&apos,&apos,"&apos}} className="&apos;space-y-4&apos;">"&apos;&apos,&apos;&apos;"
+&apos,&apos,"&apos}} className="&apos;space-y-4&apos">"&apos;&apos,&apos;&apos;"
               <div className="&apos;flex" items-center justify-between&apos;>"&apos;&apos,&apos;&apos;"
                 <h3 className="&apos;text - lg" font-semibold text-gray-900 dark: text-white&apos,>Smart Contracts&apos,</h3>"
                 name: &apos,New Contract&apos,",
@@ -567,7 +567,7 @@ name: "New Contract", ";""
                   Mint NFT&apos,"
               <div className="&apos,grid" grid-cols-1 md:grid-cols-2 l,g: grid-cols-3 gap-4&apos,>"&apos,&apos,"{nfts.map((nft) => (&apos}&apos;<div key="{nft.id}" className="&apos;bg-gray-50" dark: bg-gray-800 rounded-lg overflow-hidden&apos,>"&apos,&apos,"&apos,&apos,"
                     <img src="{nft.image}" alt="{nft.name}" className="&apos;w-full" h-48 object-cover&apos;         />&apos;&apos,&apos;&apos,"
-                    <div className="&apos;p-4&apos;">"&apos;&apos,&apos;&apos;"
+                    <div className="&apos;p-4&apos">"&apos;&apos,&apos;&apos;"
                       <h4 className="&apos;font-medium" text-gray-900 dark: text-white mb-2&apos,>{nft.name}&apos;</h4>&apos;&apos,&apos;&apos,"
                       <p className="&apos;text-sm" text-gray-600 dark: text-gray-400 mb-3&apos,>{nft.description}&apos;</p>&apos;&apos;"
                           <span className="&apos;text-gray-500" dark: text-gray-400&apos;>Token ID:&apos,</span>&apos,&apos,&apos,&apos,"
@@ -647,7 +647,7 @@ name: "New Contract", ";""
                       <span className="{"px-2" py-1 text-xs font-medium rounded-full ${position.type === &apos;staking&apos; ? &apos;bg-green-100 text-green-800&apos; :&apos;&apos;"
                     position.type === &apos;liquidity&apos; ? &apos;bg-blue-100 text-blue-800&apos; :&apos;"&apos;">
                         &apos;bg-purple-100 text-purple-800&apos}"}>{position.type}&apos;&apos;"
-                    <div className="&apos;space-y-3&apos;">"&apos;&apos,&apos;&apos;"
+                    <div className="&apos;space-y-3&apos">"&apos;&apos,&apos;&apos;"
                         <span className="&apos;text-gray-500" dark: text-gray-400&apos;>Asset:&apos,</span>&apos,&apos,&apos,&apos,"
                         <span className="&apos,font-medium" text-gray-900 dar,k: text-white&apos,>{position.asset}&apos;</span>"
                         <span className="&apos;text-gray-500" dark: text-gray-400&apos;>Amount:&apos,</span>&apos,&apos,&apos,&apos,""
@@ -753,7 +753,7 @@ name: "New Contract", ";""
                 <button onClick="{()" => setShowSendTransaction(true)} className="&apos;px-3" py-2 text-sm font-medium text-white bg-green-600 rounded-lg hover: bg-green-700&apos,>"&apos,&apos,&apos;&apos;"
                   <Send className="&apos;w-4" h-4 inline mr-2&apos;        />
                   Send Transaction&apos,",
-              <div className="&apos;space-y-3&apos;">"&apos,&apos,"{transactions.map((tx) => (&apos}&apos;<div key="{tx.id}" className="&apos;bg-gray-50" dark: bg-gray-800 p-4 rounded-lg&apos,>"&apos,&apos,&apos;&apos;"
+              <div className="&apos;space-y-3&apos">"&apos,&apos,"{transactions.map((tx) => (&apos}&apos;<div key="{tx.id}" className="&apos;bg-gray-50" dark: bg-gray-800 p-4 rounded-lg&apos,>"&apos,&apos,&apos;&apos;"
                     <div className="&apos;flex" items-center justify-between mb-3&apos;>"&apos;"&apos,",
                       <div className="&apos;flex" items-center space-x-3&apos;>"&apos,"&apos,""
                         <div className="{"p-2" rounded-lg ${getStatusColor(tx.status)}"}>&apos;&apos,&apos;&apos,"
@@ -962,8 +962,8 @@ opacity: 0
                 </div>
               </div>
 "
-              <div className="flex space-x-3 mt-6">"
-                <button onClick={handleMintNFT} disabled={!nftForm.name.trim() || isProcessing} className="flex-1 px-4 py-2 text-white bg-purple-600 rounded-lg hover:bg-purple-700 disabled:opacity-50">
+              <div className="flex space-x-3 mt-6">"';
+                <button onClick={handleMintNFT} disabled={!nftForm.name.trim() || isProcessing} className="flex-1 px-4 py-2 text-white bg-purple-600 rounded-lg hover:bg-purple-700 disabled:opacity-50">';';
                   {isProcessing ? 'Minting...' : 'Mint NFT'}
                 </button>
 "
@@ -1030,8 +1030,8 @@ opacity: 0
                 </div>
               </div>
 "
-              <div className="flex space-x-3 mt-6">"
-                <button onClick={handleSendTransaction} disabled={!transactionForm.to.trim() || !transactionForm.value || isProcessing} className="flex-1 px-4 py-2 text-white bg-green-600 rounded-lg hover:bg-green-700 disabled:opacity-50">
+              <div className="flex space-x-3 mt-6">"';
+                <button onClick={handleSendTransaction} disabled={!transactionForm.to.trim() || !transactionForm.value || isProcessing} className="flex-1 px-4 py-2 text-white bg-green-600 rounded-lg hover:bg-green-700 disabled:opacity-50">';';
                   {isProcessing ? 'Sending...' : 'Send Transaction'}
                 </button>
 "
@@ -1041,32 +1041,26 @@ opacity: 0
               </div>
             </motion.div>
           </motion.div>) }
-      </AnimatePresence>
-    </div>)};
+      </AnimatePresence>';
+    </div>)};';';
 '"`
 
 </textarea>
 </motion>
-</motion>
 </textarea>
-</motion>
 </motion>
 </AnimatePresence>
 </button>
 </div>
 </motion>
-</motion>
 </AnimatePresence>
 </button>
-</button>
 </textarea>
 </motion>
-</button>
 </button>
 </textarea>
 </div>
 </motion>
-</motion>
 </p>
 </div>
 </code>
@@ -1077,38 +1071,24 @@ opacity: 0
 </p>
 </div>
 </code>
-</code>
 </div>
 </span>
 </p>
 </div>
-</div>
-</div>
 </button>
 </motion>
 </p>
-</p>
-</div>
-</div>
-</div>
 </div>
 </button>
 </p>
 </code>
-</code>
 </div>
 </span>
 </p>
 </div>
-</div>
-</div>
 </button>
 </motion>
 </p>
-</p>
-</div>
-</div>
-</div>
 </div>
 </div>
 </button>
@@ -1116,51 +1096,34 @@ opacity: 0
 </div>
 </span>
 </div>
-</div>
-</div>
 </motion>
 </span>
 </div>
 </span>
 </div>
+</motion>
 </div>
+</span>
 </div>
 </motion>
 </div>
 </span>
 </div>
-</div>
-</div>
 </motion>
-</div>
-</span>
-</div>
-</div>
-</div>
-</motion>
-</motion>
-</div>
-</div>
-</div>
 </div>
 </button>
 </motion>
-</div>
-</div>
 </div>
 </button>
 </div>
 </span>
 </code>
 </div>
-</div>
-</div>
 </button>
 </motion>
 </div>
 </span>
 </code>
-</div>
 </div>
 </button>
 </motion>
@@ -1169,51 +1132,31 @@ opacity: 0
 </div>
 </span>
 </div>
-</div>
-</div>
-</div>
 </motion>
 </span>
 </code>
 </div>
 </span>
 </div>
-</div>
-</div>
 </motion>
 </span>
-</div>
-</div>
 </div>
 </button>
 </div>
 </motion>
 </span>
 </div>
-</div>
-</div>
-</div>
 </button>
 </div>
 </motion>
-</button>
 </button>
 </div>
 </p>
 </button>
 </div>
 </div>
-</div>
-</div>
-</div>
-</div>
-</div>
 </motion>
 </button>
-</button>
-</div>
-</div>
-</div>
 </div>
 </div>
 </button>
@@ -1221,16 +1164,7 @@ opacity: 0
 </button>
 </div>
 </div>
-</div>
-</div>
-</div>
-</div>
-</div>
 </button>
 </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+</div>';
+</div>;';;';

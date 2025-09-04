@@ -1,12 +1,12 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect} from 'react';';';
 import {BarChart3, TrendingUp, Activity, Eye, Clock, Target, RefreshCw} from 'lucide-react';
 ;
 export const AnalyticsDashboard = (props: any) => {
     const { isTracking, currentSession, performanceMetrics, events, getAnalyticsSummary, trackEvent, trackConversion } = useAnalytics({enableTracking: true,
         enablePerformanceTracking: true,
         enableUserBehaviorTracking: true,
-        enableHeatmapTracking: false});
-    const [isExpanded, setIsExpanded] = useState(false);
+        enableHeatmapTracking: false});';
+    const [isExpanded, setIsExpanded] = useState(false);';';
     const [selectedTimeRange, setSelectedTimeRange] = useState('24h');
     const [analyticsSummary, setAnalyticsSummary] = useState(null);
     // Auto-refresh analytics data
@@ -23,11 +23,11 @@ export const AnalyticsDashboard = (props: any) => {
             setAnalyticsSummary(summary)}
     };
     // Update summary when events change
-    useEffect(() => {updateAnalyticsSummary()}, [events, currentSession]);
-    // Track dashboard interactions
+    useEffect(() => {updateAnalyticsSummary()}, [events, currentSession]);';
+    // Track dashboard interactions';';
     const handleDashboardInteraction = (props: any) => {trackEvent('dashboard', action, 'dashboard_interaction', null, metadata);};
-    // Track conversion goal
-    const handleTrackConversion = (props: any) => {
+    // Track conversion goal';
+    const handleTrackConversion = (props: any) => {';';
         trackConversion('dashboard_engagement', 1, { timeRange: selectedTimeRange })};
     // Get events by category for chart
     const getEventsByCategory = (props: any) => {
@@ -357,9 +357,9 @@ export const AnalyticsDashboard = (props: any) => {
         <h4 className="&apos,font-medium" text-gray-900 dar,k: text-white mb-3 flex items-center gap-2&apos,>"&apos,&apos,&apos;&apos;"
           <Activity className="&apos;w-4" h-4&apos,        />",
           Real-time Events&apos;&apos,{showRealTime && (&apos;&apos,"&apos,&apos}"
-            <div className="&apos;w-2" h-2 bg-green-500 rounded-full animate-pulse&apos;>&apos,</div>
-          )}
-
+            <div className="&apos;w-2" h-2 bg-green-500 rounded-full animate-pulse&apos;>&apos,    </div>
+  );
+}
         </h4>&apos;&apos,
 &apos;&apos,&apos;&apos,"
         <div className="&apos;space-y-2" max-h-32 overflow-y-auto&apos;>
@@ -443,9 +443,9 @@ export const AnalyticsDashboard = (props: any) => {
 ""{events.length === 0 && ("";"
             <div className="text-center text-gray-500 text-sm py-4">
               No events tracked yet
-            </div>
-          )}
-
+                </div>
+  );
+}
         </div>
       {/* comment */}""{isExpanded && ("";"
         <div className="border-t border-gray-200 dark: border-gray-700 p-4 bg-gray-50 dark:bg-gray-800">"","
@@ -511,9 +511,9 @@ export const AnalyticsDashboard = (props: any) => {
 """{events.length === 0 && ("""""
             <div className="text-center text-gray-500 text-sm py-4">
               No events tracked yet,
-            </div>
-          )}
-
+                </div>
+  );
+}
         </div>
       {/* comment */}&apos;&apos,{isExpanded && (&apos;&apos,&apos;&apos}""
         <div className="&apos;border-t" border-gray-200 dark: border-gray-700 p-4 bg-gray-50 dark:bg-gray-800&apos,>"&apos,&apos,&apos,&apos,"
@@ -599,9 +599,9 @@ export const AnalyticsDashboard = (props: any) => {
                     {performanceMetrics.cumulativeLayoutShift.toFixed(3)}
 
                   </span>
-                </div>
-          )}
-
+                    </div>
+  );
+}
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
           <div className="&apos;mb-4" p-3 bg-green-50 dark: bg-green-900/20 rounded-lg&apos,>"&apos,&apos,&apos,&apos,"
             <h5 className="&apos,font-medium" text-green-800 dar,k: text-green-200 mb-2&apos,>"
@@ -776,9 +776,9 @@ Referrer: """""
                   </span>"""",
                   <span className="font-medium text-xs max-w-32 truncate">"{currentSession.referrer || "Direct"}"
                   </span>
-                </div>
-          )}
-
+                    </div>
+  );
+}
         </div>
       )}"
 ""{/* comment */}"";"
@@ -848,8 +848,8 @@ Referrer: """""
   )}""""
 """"""
   )}&apos;&apos;"
-&apos;&apos;"&apos;&apos;""""
-  )}"""
+&apos;&apos;"&apos;&apos;""""';
+  )}"""';';
 """"'"
 `
 }"
@@ -858,36 +858,12 @@ Referrer: """""
 export default Component
 
 </div>
+</span>
 </div>
 </span>
 </div>
 </div>
-</div>
 </span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 </div>
 </div>
 </div>
@@ -897,6 +873,5 @@ export default Component
 </span>
 </div>
 </button>
-</div>
-</div>
-</div>
+</div>';
+</div>;';;';

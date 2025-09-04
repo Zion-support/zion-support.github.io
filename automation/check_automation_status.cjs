@@ -23,11 +23,9 @@ async function checkAutomationStatus() {
             statusReport.pm2Processes = pm2Data;
             
             const runningProcesses = pm2Data.filter(proc => proc.pm2_env && proc.pm2_env.status === 'online');
-            console.log(`✅ Found ${runningProcesses.length} running PM2 processes`);
-        } catch(error) { 
+            console.log(`✅ Found ${runningProcesses.length} running PM2 processes`)} catch(error) { 
             console.log('⚠️  PM2 not available or no processes running');
-            statusReport.pm2Processes = [];
-        }
+            statusReport.pm2Processes = []}
 
         // Check automation scripts
         console.log('📋 Checking automation scripts...');
@@ -47,8 +45,7 @@ async function checkAutomationStatus() {
                 exists,
                 isExecutable,
                 status: exists ? (isExecutable ? 'ready' : 'not_executable') : 'missing'
-            });
-        }
+            })}
 
         // Check system health
         console.log('📋 Checking system health...');
@@ -65,12 +62,9 @@ async function checkAutomationStatus() {
         const availableScripts = statusReport.automationScripts.filter(script => script.exists && script.isExecutable);
         
         if (runningProcesses.length > 0 && availableScripts.length > 0) {
-            statusReport.overallStatus = 'healthy';
-        } else if (availableScripts.length > 0) {
-            statusReport.overallStatus = 'ready';
-        } else {
-            statusReport.overallStatus = 'needs_attention';
-        }
+            statusReport.overallStatus = 'healthy'} else if (availableScripts.length > 0) {
+            statusReport.overallStatus = 'ready'} else {
+            statusReport.overallStatus = 'needs_attention'}
 
         // Save report
         const reportPath = path.join(process.cwd(), 'automation-status-report.json');
@@ -82,24 +76,18 @@ async function checkAutomationStatus() {
         console.log(`   Available Scripts: ${availableScripts.length}/${automationScripts.length}`);
         console.log(`   Report saved to: ${reportPath}`);
 
-        return statusReport;
-
-    } catch (error) {
+        return statusReport} catch (error) {
         console.error('❌ Error checking automation status:', error.message);
         statusReport.overallStatus = 'error';
         statusReport.error = error.message;
-        return statusReport;
-    }
+        return statusReport}
 }
 
 // Run if called directly
 if (require.main === module) {
     checkAutomationStatus().then(() => {
-        process.exit(0);
-    }).catch(error => {
+        process.exit(0)}).catch(error => {
         console.error('Fatal error:', error);
-        process.exit(1);
-    });
-}
+        process.exit(1)})}
 
 module.exports = { checkAutomationStatus };

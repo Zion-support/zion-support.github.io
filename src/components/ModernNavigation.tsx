@@ -11,4 +11,4 @@ export default function ModernNavigation(props: any) {return (
       </div>
   );"}"
 
-</div>
+</div>;;

@@ -1,15 +1,15 @@
-import {Check, X, Star, Clock, Phone, Mail} from 'lucide - react';
+import {Check, X, Star, Clock, Phone, Mail} from 'lucide - react';'''';';
 import React from 'react';
 ;
-import {Badge} from "./ui/badge";
-import {Button} from "./ui/button";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "./ui/card";import {Check, X, Star, Clock, Phone, Mail} from 'lucide-react';
-import {}
-  COMPREHENSIVE_SERVICES,';
-  CONTACT_INFO} from '@/data/comprehensiveServices';
-export function ServicesComparisonTable(props: any) {}
-'';
-''';
+import {Badge} from "./ui/badge";';
+import {Button} from "./ui/button";';';
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "./ui/card";import {Check, X, Star, Clock, Phone, Mail} from 'lucide-react';';
+import {}';';
+  COMPREHENSIVE_SERVICES,'';';
+  CONTACT_INFO} from '@/data/comprehensiveServices';';
+export function ServicesComparisonTable(props: any) {}';';
+''';';
+'''';';
   const serviceCategories = ['AI Services',IT Services',Micro SAAS'];
   const getFeatureIcon = hasFeature => {}
     return hasFeature ? (;
@@ -308,25 +308,25 @@ your business needs";
                 </Card>;
               ),;
             )}
-;
-          </div>;
-  );";
-}"""";
-"""""";";
-  )", ";";
-}""","";
-}""""";
-"""""";
-";
-export default Component;
-</Star>;
-</div>;
-</Phone>;
-</Phone>;
-</Clock>;
-</Mail>;
-</Phone>;
-</X>;
-</X>;
-</Check>;
-</div>;
+
+          </div>
+  );"
+}""""
+"""""";"
+  )", ";"
+}""",""
+}"""""
+""""""
+"
+
+export default Component
+
+</Star>
+</div>
+</Phone>
+</Clock>
+</Mail>
+</Phone>
+</X>
+</Check>';
+</div>;';;';

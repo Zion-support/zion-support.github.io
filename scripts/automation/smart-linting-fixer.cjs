@@ -12,8 +12,7 @@ const LINTING_FIX_INTERVAL = parseInt(process.env.LINTING_FIX_INTERVAL) || 60000
 class SmartLintingFixer {
   constructor() {
     this.fixesApplied = 0;
-    this.fixHistory = [];
-  }
+    this.fixHistory = []}
 
   async run() {
     try {
@@ -42,11 +41,8 @@ class SmartLintingFixer {
       // 7. Generate report
       await this.generateReport();
       
-      console.log(`✅ Smart linting fixer completed. Applied ${this.fixesApplied} fixes.`);
-      
-    } catch (error) {
-      console.error('❌ Smart linting fixer failed:', error.message);
-    }
+      console.log(`✅ Smart linting fixer completed. Applied ${this.fixesApplied} fixes.`)} catch (error) {
+      console.error('❌ Smart linting fixer failed:', error.message)}
   }
 
   async runESLintAutoFix() {
@@ -57,8 +53,7 @@ class SmartLintingFixer {
       console.log('✅ ESLint auto-fix completed');
       this.fixesApplied += 10; // Estimate of fixes applied
     } catch (error) {
-      console.log('⚠️  ESLint auto-fix had issues but continuing...');
-    }
+      console.log('⚠️  ESLint auto-fix had issues but continuing...')}
   }
 
   async fixCommonLintingIssues() {
@@ -75,12 +70,10 @@ class SmartLintingFixer {
         // Fix common linting issues
         
         // Fix unused variables
-        content = content.replace(/const\s+(\w+)\s*=\s*([^;]+);/g, (match, varName, value) => {
+        content = content.replace(/const\s+(\w+)\s*=\s*([^]+);/g, (match, varName, value) => {
           if (!content.includes(varName) || content.split(varName).length === 2) {
-            return `// ${match}`;
-          }
-          return match;
-        });
+            return `// ${match}`}
+          return match});
         
         // Fix unused imports
         const importLines = content.split('\n').filter(line => line.includes('import'));
@@ -91,10 +84,8 @@ class SmartLintingFixer {
             imports.forEach(imp => {
               const cleanImp = imp.split(' as ')[0].trim();
               if (cleanImp && !content.includes(cleanImp)) {
-                content = content.replace(importLine, `// ${importLine}`);
-              }
-            });
-          }
+                content = content.replace(importLine, `// ${importLine}`)}
+            })}
         });
         
         // Fix missing semicolons
@@ -112,12 +103,10 @@ class SmartLintingFixer {
         if (content !== originalContent) {
           fs.writeFileSync(file, content);
           this.fixesApplied++;
-          console.log(`  ✅ Fixed common linting issues in ${file.replace(process.cwd(), '')}`);
-        }
+          console.log(`  ✅ Fixed common linting issues in ${file.replace(process.cwd(), '')}`)}
         
       } catch (error) {
-        console.log(`  ⚠️  Failed to fix common linting issues in ${file}: ${error.message}`);
-      }
+        console.log(`  ⚠️  Failed to fix common linting issues in ${file}: ${error.message}`)}
     }
   }
 
@@ -130,8 +119,7 @@ class SmartLintingFixer {
       console.log('✅ Prettier formatting completed');
       this.fixesApplied += 5; // Estimate of formatting fixes
     } catch (error) {
-      console.log('⚠️  Prettier formatting had issues but continuing...');
-    }
+      console.log('⚠️  Prettier formatting had issues but continuing...')}
   }
 
   async fixImportExportIssues() {
@@ -154,10 +142,8 @@ class SmartLintingFixer {
         
         lines.forEach(line => {
           if (line.trim().startsWith('import') || line.trim().startsWith('export')) {
-            imports.push(line);
-          } else {
-            nonImports.push(line);
-          }
+            imports.push(line)} else {
+            nonImports.push(line)}
         });
         
         // Sort imports
@@ -169,12 +155,10 @@ class SmartLintingFixer {
         if (content !== originalContent) {
           fs.writeFileSync(file, content);
           this.fixesApplied++;
-          console.log(`  ✅ Fixed import/export issues in ${file.replace(process.cwd(), '')}`);
-        }
+          console.log(`  ✅ Fixed import/export issues in ${file.replace(process.cwd(), '')}`)}
         
       } catch (error) {
-        console.log(`  ⚠️  Failed to fix import/export issues in ${file}: ${error.message}`);
-      }
+        console.log(`  ⚠️  Failed to fix import/export issues in ${file}: ${error.message}`)}
     }
   }
 
@@ -207,12 +191,10 @@ class SmartLintingFixer {
         if (content !== originalContent) {
           fs.writeFileSync(file, content);
           this.fixesApplied++;
-          console.log(`  ✅ Fixed React-specific issues in ${file.replace(process.cwd(), '')}`);
-        }
+          console.log(`  ✅ Fixed React-specific issues in ${file.replace(process.cwd(), '')}`)}
         
       } catch (error) {
-        console.log(`  ⚠️  Failed to fix React-specific issues in ${file}: ${error.message}`);
-      }
+        console.log(`  ⚠️  Failed to fix React-specific issues in ${file}: ${error.message}`)}
     }
   }
 
@@ -221,11 +203,9 @@ class SmartLintingFixer {
     
     try {
       execSync('npm run lint', { stdio: 'pipe' });
-      console.log('✅ Linting validation successful after fixes');
-    } catch (error) {
+      console.log('✅ Linting validation successful after fixes')} catch (error) {
       console.log('⚠️  Linting still has issues, but fixes were applied');
-      console.log('  Remaining errors:', error.stdout || error.stderr || error.message);
-    }
+      console.log('  Remaining errors:', error.stdout || error.stderr || error.message)}
   }
 
   async generateReport() {
@@ -249,8 +229,7 @@ class SmartLintingFixer {
     
     // Keep only last 50 entries
     if (this.fixHistory.length > 50) {
-      this.fixHistory = this.fixHistory.slice(-50);
-    }
+      this.fixHistory = this.fixHistory.slice(-50)}
   }
 
   getAllFiles(dir, extensions) {
@@ -264,16 +243,13 @@ class SmartLintingFixer {
         const stat = fs.statSync(fullPath);
         
         if (stat.isDirectory()) {
-          traverse(fullPath);
-        } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
-          files.push(fullPath);
-        }
+          traverse(fullPath)} else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
+          files.push(fullPath)}
       }
     }
     
     traverse(dir);
-    return files;
-  }
+    return files}
 }
 
 // Main execution
@@ -285,25 +261,20 @@ async function main() {
   
   // Set up continuous fixing
   setInterval(async () => {
-    await fixer.run();
-  }, LINTING_FIX_INTERVAL);
+    await fixer.run()}, LINTING_FIX_INTERVAL);
   
-  console.log(`🔧 Smart linting fixer running with ${LINTING_FIX_INTERVAL / 1000}s intervals`);
-}
+  console.log(`🔧 Smart linting fixer running with ${LINTING_FIX_INTERVAL / 1000}s intervals`)}
 
 // Handle graceful shutdown
 process.on('SIGINT', () => {
   console.log('🔧 Smart linting fixer shutting down...');
-  process.exit(0);
-});
+  process.exit(0)});
 
 process.on('SIGTERM', () => {
   console.log('🔧 Smart linting fixer shutting down...');
-  process.exit(0);
-});
+  process.exit(0)});
 
 // Start the fixer
 main().catch(error => {
   console.error('❌ Smart linting fixer failed to start:', error.message);
-  process.exit(1);
-});
+  process.exit(1)});

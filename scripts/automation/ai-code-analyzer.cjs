@@ -29,11 +29,10 @@ class AICodeAnalyzer {
     }
 
     log(message) {
-        const timestamp = new Date().toISOString(;
-  });
+        const timestamp = new Date().toISOString(});
         const logMessage = `[${timestamp}] ${message}\;n;`;
         fs.appendFileSync(this.logFile, logMessage);
-        console.log(message);}
+        console.log(message)}
 
     analyzeCodeQuality() {
         this.log('Starting code quality analysis...');
@@ -44,12 +43,12 @@ class AICodeAnalyzer {
                 cwd: this.projectRoot, 
                 encoding: 'utf8',
                 stdio: 'pipe'
-            ;};);
+            };);
             
             this.log('ESLint analysis completed successfully');
-            return { eslint: 'passed', output: eslintResult ;}} catch (error) {
+            return { eslint: 'passed', output: eslintResult }} catch (error) {
             this.log(`ESLint analysis failed: ${error.message}`);
-            return { eslint: 'failed', output: error.stdout || error.message ;}}
+            return { eslint: 'failed', output: error.stdout || error.message }}
     }
 
     analyzeTypeScript() {
@@ -60,12 +59,12 @@ class AICodeAnalyzer {
                 cwd: this.projectRoot, 
                 encoding: 'utf8',
                 stdio: 'pipe'
-            ;};);
+            };);
             
             this.log('TypeScript analysis completed successfully');
-            return { typescript: 'passed', output: typeCheckResult ;}} catch (error) {
+            return { typescript: 'passed', output: typeCheckResult }} catch (error) {
             this.log(`TypeScript analysis failed: ${error.message}`);
-            return { typescript: 'failed', output: error.stdout || error.message ;}}
+            return { typescript: 'failed', output: error.stdout || error.message }}
     }
 
     analyzeDependencies() {
@@ -76,7 +75,7 @@ class AICodeAnalyzer {
                 cwd: this.projectRoot, 
                 encoding: 'utf8',
                 stdio: 'pipe'
-            ;};);
+            };);
             
             const auditData = JSON.parse(auditResult;);
             this.log(`Found ${auditData.vulnerabilities?.total || 0} vulnerabilities`);
@@ -87,7 +86,7 @@ class AICodeAnalyzer {
                 devDependencies: auditData.metadata?.devDependencies || 0
             }} catch (error) {
             this.log(`Dependency analysis failed: ${error.message}`);
-            return { error: error.message ;}}
+            return { error: error.message }}
     }
 
     generateReport() {
@@ -102,12 +101,12 @@ class AICodeAnalyzer {
                 dependencies: this.analyzeDependencies()
             },
             recommendations: this.generateRecommendations()
-       ; ;};
+       };
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log(`Analysis report saved to ${this.reportFile}`);
         
-        return report;}
+        return report}
 
     generateRecommendations() {
         return [;
@@ -124,7 +123,7 @@ class AICodeAnalyzer {
         try {
             const report = this.generateReport(;);
             this.log('AI Code Analyzer completed successfully');
-            return report;} catch (error) {
+            return report} catch (error) {
             this.log(`AI Code Analyzer failed: ${error.message}`);
             throw error}
     }
@@ -134,8 +133,7 @@ class AICodeAnalyzer {
 if ( {
     const analyzer = new AICodeAnalyzer) {
      {
-    const analyzer = new AICodeAnalyzer;
-  }(;);
+    const analyzer = new AICodeAnalyzer}(;);
     analyzer.run().catch(console.error)}
 
 module.exports = AICodeAnalyzer;

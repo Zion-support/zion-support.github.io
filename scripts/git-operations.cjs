@@ -6,12 +6,10 @@ const path = require('path');
 
 class GitOperations {
   constructor() {
-    this.projectRoot = process.cwd();
-  }
+    this.projectRoot = process.cwd()}
 
   log(message) {
-    console.log(`[Git Operations] ${message}`);
-  }
+    console.log(`[Git Operations] ${message}`)}
 
   async executeGitOperations() {
     this.log('🚀 Starting Git Operations');
@@ -60,12 +58,9 @@ class GitOperations {
       this.log('📤 Pushing merged changes to main');
       execSync('git push origin main', { cwd: this.projectRoot });
 
-      this.log('✅ All git operations completed successfully');
-      
-    } catch (error) {
+      this.log('✅ All git operations completed successfully')} catch (error) {
       this.log(`❌ Git operations failed: ${error.message}`);
-      throw error;
-    }
+      throw error}
   }
 }
 

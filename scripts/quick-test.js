@@ -20,10 +20,8 @@ console.log('\n📁 Checking for new automation scripts:');
 scripts.forEach(script => {
   const scriptPath = path.join(__dirname, script);
   if (fs.existsSync(scriptPath)) {
-    console.log(`✅ ${script} - exists`);
-  } else {
-    console.log(`❌ ${script} - missing`);
-  }
+    console.log(`✅ ${script} - exists`)} else {
+    console.log(`❌ ${script} - missing`)}
 });
 
 console.log('\n🎉 Quick test completed successfully!');

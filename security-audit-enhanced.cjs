@@ -7,12 +7,10 @@ class SecurityAuditor {
   constructor() {
     this.projectRoot = process.cwd();
     this.vulnerabilities = [];
-    this.recommendations = [];
-  }
+    this.recommendations = []}
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
+    console.log(`[${new Date().toISOString()}] ${message}`)}
 
   async auditSecurity() {
     this.log('🔒 Running Security Audit');
@@ -52,8 +50,7 @@ class SecurityAuditor {
                 type: check.name,
                 severity: check.severity,
                 count: matches.length
-              });
-            }
+              })}
           }
         } catch (error) {
           // Skip files that can't be read
@@ -66,8 +63,7 @@ class SecurityAuditor {
       this.recommendations.push('Review and remove hardcoded secrets');
       this.recommendations.push('Implement proper input validation');
       this.recommendations.push('Use parameterized queries for database operations');
-      this.recommendations.push('Sanitize user input to prevent XSS');
-    }
+      this.recommendations.push('Sanitize user input to prevent XSS')}
     
     const report = {
       timestamp: new Date().toISOString(),
@@ -82,8 +78,7 @@ class SecurityAuditor {
     );
     
     this.log(`🔒 Security Score: ${report.securityScore}/100`);
-    this.log(`⚠️  Vulnerabilities Found: ${this.vulnerabilities.length}`);
-  }
+    this.log(`⚠️  Vulnerabilities Found: ${this.vulnerabilities.length}`)}
 
   getAllFiles(dir, extensions) {
     let files = [];
@@ -93,14 +88,11 @@ class SecurityAuditor {
         const fullPath = path.join(dir, item);
         const stat = fs.statSync(fullPath);
         if (stat.isDirectory()) {
-          files = files.concat(this.getAllFiles(fullPath, extensions));
-        } else if (extensions.some(ext => item.endsWith(ext))) {
-          files.push(fullPath);
-        }
+          files = files.concat(this.getAllFiles(fullPath, extensions))} else if (extensions.some(ext => item.endsWith(ext))) {
+          files.push(fullPath)}
       }
     } catch (error) {}
-    return files;
-  }
+    return files}
 }
 
 const auditor = new SecurityAuditor();

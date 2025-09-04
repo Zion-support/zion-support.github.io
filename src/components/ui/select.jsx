@@ -2,7 +2,7 @@ import React from 'react';
 
 export function Select({ className, children, ...props }) {
   return (
-    <div className={`relative ${className || ''}`} {...props}>
+    <div className="min-h-screen bg-white">
       {children}
     </div>
   );
@@ -29,10 +29,7 @@ export function SelectValue({ placeholder, className, ...props }) {
 
 export function SelectContent({ className, children, ...props }) {
   return (
-    <div className={`
-      absolute top-full left-0 right-0 z-50 mt-1 rounded-md border
-      border-gray-300 bg-white shadow-lg ${className || ''}
-    `} {...props}>
+    <div className="min-h-screen bg-white">
       {children}
     </div>
   );
@@ -40,14 +37,10 @@ export function SelectContent({ className, children, ...props }) {
 
 export function SelectItem({ className, children, value, ...props }) {
   return (
-    <div className={`
-      relative flex w-full cursor-pointer select-none items-center
-      rounded-sm px-3 py-2 text-sm text-gray-900 outline-none
-      hover:bg-gray-100 focus:bg-gray-100
-      focus:text-gray-900 transition-colors
-      ${className || ''}
-    `} data-value={value} {...props}>
+    <div className="min-h-screen bg-white">
       {children}
     </div>
   );
 }
+';
+export default select;';';

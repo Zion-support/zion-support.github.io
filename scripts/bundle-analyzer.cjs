@@ -25,10 +25,10 @@ function analyzeBundle() {
           'Use tree shaking'
         ]
       }
-   ; ;};
+   };
     
     fs.writeFileSync('bundle-analysis-report.json', JSON.stringify(report, null, 2));
-    console.log('📄 Bundle analysis report saved to bundle-analysis-report.json');} catch (error) {
+    console.log('📄 Bundle analysis report saved to bundle-analysis-report.json')} catch (error) {
     console.error('❌ Bundle analysis failed:', error.message)}
 }
 

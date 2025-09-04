@@ -14,20 +14,17 @@ class ErrorPreventionMonitor {
   constructor() {
     this.projectRoot = process.cwd();
 <<<<<<< HEAD
-    this.logFile = path.join(this.projectRoot, 'logs', 'error-prevention-monitor.log');
-  }
+    this.logFile = path.join(this.projectRoot, 'logs', 'error-prevention-monitor.log')}
 
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
     
     try {
-      fs.appendFileSync(this.logFile, logMessage);
-    } catch (error) {
+      fs.appendFileSync(this.logFile, logMessage)} catch (error) {
       // Ignore logging errors
     }
-    console.log(logMessage.trim());
-  }
+    console.log(logMessage.trim())}
 
   checkProjectHealth() {
     try {
@@ -37,16 +34,13 @@ class ErrorPreventionMonitor {
       const corruptedFiles = this.findCorruptedFiles();
       if (corruptedFiles.length > 0) {
         this.log(`Found ${corruptedFiles.length} corrupted files`);
-        this.triggerAutoFix();
-      }
+        this.triggerAutoFix()}
       
       // Check build status
       this.checkBuildStatus();
       
-      this.log('Health check completed');
-    } catch (error) {
-      this.log(`Error during health check: ${error.message}`);
-    }
+      this.log('Health check completed')} catch (error) {
+      this.log(`Error during health check: ${error.message}`)}
   }
 
   findCorruptedFiles() {
@@ -56,12 +50,10 @@ class ErrorPreventionMonitor {
     sourceDirs.forEach(dir => {
       const dirPath = path.join(this.projectRoot, dir);
       if (fs.existsSync(dirPath)) {
-        this.scanDirectory(dirPath, corruptedFiles);
-      }
+        this.scanDirectory(dirPath, corruptedFiles)}
     });
     
-    return corruptedFiles;
-  }
+    return corruptedFiles}
 
   scanDirectory(dirPath, corruptedFiles) {
     try {
@@ -72,23 +64,19 @@ class ErrorPreventionMonitor {
         const stat = fs.statSync(filePath);
         
         if (stat.isDirectory()) {
-          this.scanDirectory(filePath, corruptedFiles);
-        } else if (file.match(/\.(tsx?|jsx?)$/)) {
+          this.scanDirectory(filePath, corruptedFiles)} else if (file.match(/\.(tsx?|jsx?)$/)) {
           try {
             const content = fs.readFileSync(filePath, 'utf8');
             if (content.includes('import') && content.includes('export') && content.includes('{')) {
               if (content.split('{').length !== content.split('}').length) {
-                corruptedFiles.push(filePath);
-              }
+                corruptedFiles.push(filePath)}
             }
           } catch (error) {
-            corruptedFiles.push(filePath);
-          }
+            corruptedFiles.push(filePath)}
         }
-      });
-    } catch (error) {
+      })} catch (error) {
       // Directory access error
-    }      return false;,
+    }      return false,
 }
   }
 ;
@@ -96,8 +84,7 @@ class ErrorPreventionMonitor {
   let fixedLine = line;
     // Replace eval with safer alternatives;
     if (line.includes("eval(")) {
-  fixedLine = line.replace(/eval\s*\(([^)]+)\)/g, "JSON.parse($1)");
-}
+  fixedLine = line.replace(/eval\s*\(([^)]+)\)/g, "JSON.parse($1)")}
 ;
     // Replace innerHTML with textContent where possible;
     if (line.includes(".innerHTML =")) {
@@ -106,18 +93,15 @@ class ErrorPreventionMonitor {
 
     // Replace eval with safer alternatives;
     if (line.includes("eval(")) {
-  fixedLine = line.replace(/eval\s*\(([^)]+)\)/g, "JSON.parse($1)");
-}
+  fixedLine = line.replace(/eval\s*\(([^)]+)\)/g, "JSON.parse($1)")}
 ;
     // Replace innerHTML with textContent where possible;
     if (line.includes(".innerHTML =")) {
   fixedLine = line.replace(;
         /\.innerHTML\s*=\s*([^]+)/g,.textContent = $1";
-      );
-}
+      )}
 ;
-    return fixedLine;
-}
+    return fixedLine}
 ;
   async fixMemoryLeak(line) {
   let fixedLine = line;
@@ -125,11 +109,9 @@ class ErrorPreventionMonitor {
     if (line.includes("addEventListener")) {
   fixedLine = line.replace(;
         /addEventListener\s*\((["^", ""]+),\s*(["^", ""]+),\s*false\)/g,addEventListener($1, $2, { once: true })";
-      );
-}
+      )}
 ;
-    return fixedLine;
-}
+    return fixedLine}
 ;
   async fixAsyncError(line) {
   let fixedLine = line;
@@ -137,8 +119,7 @@ class ErrorPreventionMonitor {
     if (line.includes(".then(") && !line.includes(".catch(")) {
   fixedLine = line + "\n  .catch(error => console.error("Error: ", error))"}
 ;
-    return fixedLine;
-}
+    return fixedLine}
 ;
   async fixTypeIssue(line) {
   let fixedLine = line;
@@ -148,29 +129,26 @@ class ErrorPreventionMonitor {
 
     // Replace any with more specific types;
     if (line.includes(": any")) {
-  fixedLine = line.replace(/: "any/g", ": unknown");
-}
+  fixedLine = line.replace(/: "any/g", ": unknown")}
 ;
     if (line.includes("as any")) {
-  fixedLine = line.replace(/as "any/g", "as unknown");
-}
+  fixedLine = line.replace(/as "any/g", "as unknown")}
 ;
-    return fixedLine;
-}
+    return fixedLine}
 ;
   async generateReport(fixResults) {
   this.log("📊 Generating error prevention monitoring report...");
     const report = {
-  timestamp: new Date().toISOString(),;
+  timestamp: new Date().toISOString(),
       summary: {
-  totalIssues: fixResults.totalIssues,;
-        fixedIssues: fixResults.fixedCount,;
+  totalIssues: fixResults.totalIssues,
+        fixedIssues: fixResults.fixedCount,
         preventionRate: fixResults.totalIssues > 0;
             ? ((fixResults.fixedCount / fixResults.totalIssues) * 100).toFixed(;
                 2;
               );
-            : 100},;
-      fixResults: fixResults.results,;
+            : 100},
+      fixResults: fixResults.results,
       recommendations: ["Review applied fixes to ensure they meet your requirements"", "Consider adding more specific type annotations", "Implement proper error handling for async operations"", "Regularly review code for potential security issues`, ``]}
     const reportFile = path.join(;
       this.reportsPath,error-prevention-monitor-report.json`;
@@ -178,8 +156,7 @@ class ErrorPreventionMonitor {
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
     this.log(`📄 Report generated: ${reportFile}`);
-    return report;
-}
+    return report}
 ;
   async run() {
   this.log(`🚀 Starting Error Prevention Monitor...`);
@@ -197,10 +174,10 @@ class ErrorPreventionMonitor {
       const report = await this.generateReport(fixResults);
       this.log(`🎉 Error Prevention Monitor completed!`);this.log(`📊 Applied ${fixResults.fixedCount} preventive fixes`);
       return {
-  success: fixResults.fixedCount > 0,;
-        issues: potentialErrors,;
-        fixed: fixResults.fixedCount,;
-        report,;
+  success: fixResults.fixedCount > 0,
+        issues: potentialErrors,
+        fixed: fixResults.fixedCount,
+        report,
 
   async run() {
   this.log("🚀 Starting Error Prevention Monitor...");
@@ -223,14 +200,13 @@ class ErrorPreventionMonitor {
       this.log("🎉 Error Prevention Monitor completed!');this.log(`📊 Applied ${fixResults.fixedCount} preventive fixes`);
 
       return {
-  success: fixResults.fixedCount > 0,;
-        issues: potentialErrors,;
-        fixed: fixResults.fixedCount,;
-        report,;
+  success: fixResults.fixedCount > 0,
+        issues: potentialErrors,
+        fixed: fixResults.fixedCount,
+        report,
 }
     } catch (error) {  this.log(`💥 Error Prevention Monitor failed: ${error.message  }`, `ERROR`);
-      throw error;
-}
+      throw error}
 }
 
   triggerAutoFix() {
@@ -240,10 +216,8 @@ class ErrorPreventionMonitor {
         cwd: this.projectRoot, 
         stdio: 'pipe' 
       });
-      this.log('Auto-fix process completed');
-    } catch (error) {
-      this.log(`Auto-fix process failed: ${error.message}`);
-    }
+      this.log('Auto-fix process completed')} catch (error) {
+      this.log(`Auto-fix process failed: ${error.message}`)}
   }
 
   checkBuildStatus() {
@@ -253,11 +227,9 @@ class ErrorPreventionMonitor {
         cwd: this.projectRoot, 
         stdio: 'pipe' 
       });
-      this.log('Build check passed');
-    } catch (error) {
+      this.log('Build check passed')} catch (error) {
       this.log(`Build check failed: ${error.message}`);
-      this.triggerAutoFix();
-    }
+      this.triggerAutoFix()}
   }
 =======
     this.reportsDir = path.join(this.projectRoot, 'error-reports');
@@ -268,18 +240,15 @@ class ErrorPreventionMonitor {
     // Ensure directories exist
     [this.reportsDir, this.logsDir].forEach(dir => {
       if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { recursive: true });
-      }
+        fs.mkdirSync(dir, { recursive: true })}
     });
     
     this.preventionHistory = [];
-    this.riskFactors = new Map();
-  }
+    this.riskFactors = new Map()}
 
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${level}] ${message}`);
-  }
+    console.log(`[${timestamp}] [${level}] ${message}`)}
 
   async checkFileSizeIssues() {
     this.log('Checking for file size issues...', 'INFO');
@@ -297,15 +266,12 @@ class ErrorPreventionMonitor {
             file,
             size: stats.size,
             sizeMB: (stats.size / (1024 * 1024)).toFixed(2)
-          });
-        }
+          })}
       }
       
-      return largeFiles;
-    } catch (error) {
+      return largeFiles} catch (error) {
       this.log(`Error checking file sizes: ${error.message}`, 'ERROR');
-      return [];
-    }
+      return []}
   }
 
   async checkCircularDependencies() {
@@ -323,12 +289,10 @@ class ErrorPreventionMonitor {
           circularDeps.push({
             cycle: line.trim(),
             severity: 'high'
-          });
-        }
+          })}
       }
       
-      return circularDeps;
-    } catch (error) {
+      return circularDeps} catch (error) {
       // madge returns non-zero exit code when circular dependencies are found
       if (error.stdout) {
         const output = error.stdout.toString();
@@ -337,11 +301,9 @@ class ErrorPreventionMonitor {
           circularDeps.push({
             cycle: line.trim(),
             severity: 'high'
-          });
-        }
+          })}
       }
-      return circularDeps;
-    }
+      return circularDeps}
   }
 
   async checkUnusedDependencies() {
@@ -359,15 +321,12 @@ class ErrorPreventionMonitor {
             dependency: dep,
             type: 'unused',
             severity: 'medium'
-          });
-        }
+          })}
       }
       
-      return unusedDeps;
-    } catch (error) {
+      return unusedDeps} catch (error) {
       this.log(`Error checking unused dependencies: ${error.message}`, 'WARN');
-      return [];
-    }
+      return []}
   }
 
   async checkSecurityVulnerabilities() {
@@ -387,12 +346,10 @@ class ErrorPreventionMonitor {
             title: vuln.title,
             description: vuln.description,
             recommendation: vuln.recommendation
-          });
-        }
+          })}
       }
       
-      return vulnerabilities;
-    } catch (error) {
+      return vulnerabilities} catch (error) {
       // npm audit returns non-zero exit code when vulnerabilities are found
       if (error.stdout) {
         try {
@@ -407,15 +364,12 @@ class ErrorPreventionMonitor {
                 title: vuln.title,
                 description: vuln.description,
                 recommendation: vuln.recommendation
-              });
-            }
+              })}
           }
         } catch (parseError) {
-          this.log(`Error parsing audit output: ${parseError.message}`, 'WARN');
-        }
+          this.log(`Error parsing audit output: ${parseError.message}`, 'WARN')}
       }
-      return vulnerabilities;
-    }
+      return vulnerabilities}
   }
 
   async checkPerformanceIssues() {
@@ -436,8 +390,7 @@ class ErrorPreventionMonitor {
             dependency: dep,
             severity: 'medium',
             recommendation: `Consider using lighter alternatives for ${dep}`
-          });
-        }
+          })}
       }
       
       // Check for multiple CSS frameworks
@@ -452,14 +405,11 @@ class ErrorPreventionMonitor {
           frameworks: foundFrameworks,
           severity: 'medium',
           recommendation: 'Consider using only one CSS framework to reduce bundle size'
-        });
-      }
+        })}
       
-      return performanceIssues;
-    } catch (error) {
+      return performanceIssues} catch (error) {
       this.log(`Error checking performance issues: ${error.message}`, 'ERROR');
-      return [];
-    }
+      return []}
   }
 
   async checkCodeQualityIssues() {
@@ -476,8 +426,7 @@ class ErrorPreventionMonitor {
           count: todoComments.length,
           severity: 'medium',
           recommendation: 'Review and address TODO comments'
-        });
-      }
+        })}
       
       // Check for console statements in production code
       const consoleStatements = this.findConsoleStatements();
@@ -487,8 +436,7 @@ class ErrorPreventionMonitor {
           count: consoleStatements.length,
           severity: 'low',
           recommendation: 'Remove console statements from production code'
-        });
-      }
+        })}
       
       // Check for hardcoded values
       const hardcodedValues = this.findHardcodedValues();
@@ -498,14 +446,11 @@ class ErrorPreventionMonitor {
           count: hardcodedValues.length,
           severity: 'medium',
           recommendation: 'Extract hardcoded values to configuration files'
-        });
-      }
+        })}
       
-      return qualityIssues;
-    } catch (error) {
+      return qualityIssues} catch (error) {
       this.log(`Error checking code quality issues: ${error.message}`, 'ERROR');
-      return [];
-    }
+      return []}
   }
 
   getAllSourceFiles() {
@@ -513,8 +458,7 @@ class ErrorPreventionMonitor {
     const srcDir = path.join(this.projectRoot, 'src');
     
     if (!fs.existsSync(srcDir)) {
-      return sourceFiles;
-    }
+      return sourceFiles}
     
     const walkDir = (dir) => {
       const files = fs.readdirSync(dir);
@@ -524,16 +468,13 @@ class ErrorPreventionMonitor {
         const stat = fs.statSync(filePath);
         
         if (stat.isDirectory()) {
-          walkDir(filePath);
-        } else if (file.match(/\.(js|jsx|ts|tsx)$/)) {
-          sourceFiles.push(filePath);
-        }
+          walkDir(filePath)} else if (file.match(/\.(js|jsx|ts|tsx)$/)) {
+          sourceFiles.push(filePath)}
       }
     };
     
     walkDir(srcDir);
-    return sourceFiles;
-  }
+    return sourceFiles}
 
   findTodoComments() {
     const todos = [];
@@ -549,13 +490,11 @@ class ErrorPreventionMonitor {
             file,
             line: i + 1,
             comment: lines[i].trim()
-          });
-        }
+          })}
       }
     }
     
-    return todos;
-  }
+    return todos}
 
   findConsoleStatements() {
     const consoleStatements = [];
@@ -571,13 +510,11 @@ class ErrorPreventionMonitor {
             file,
             line: i + 1,
             statement: lines[i].trim()
-          });
-        }
+          })}
       }
     }
     
-    return consoleStatements;
-  }
+    return consoleStatements}
 
   findHardcodedValues() {
     const hardcodedValues = [];
@@ -604,20 +541,17 @@ class ErrorPreventionMonitor {
               line: i + 1,
               value: matches[0],
               type: 'hardcoded'
-            });
-          }
+            })}
         }
       }
     }
     
-    return hardcodedValues;
-  }
+    return hardcodedValues}
 
   async takePreventiveActions(issues) {
     if (!this.preventiveActionsEnabled) {
       this.log('Preventive actions are disabled', 'INFO');
-      return [];
-    }
+      return []}
 
     const actionsTaken = [];
     
@@ -625,15 +559,12 @@ class ErrorPreventionMonitor {
       try {
         const action = await this.takeActionForIssue(issue);
         if (action) {
-          actionsTaken.push(action);
-        }
+          actionsTaken.push(action)}
       } catch (error) {
-        this.log(`Failed to take action for issue: ${error.message}`, 'ERROR');
-      }
+        this.log(`Failed to take action for issue: ${error.message}`, 'ERROR')}
     }
     
-    return actionsTaken;
-  }
+    return actionsTaken}
 
   async takeActionForIssue(issue) {
     switch (issue.type) {
@@ -646,8 +577,7 @@ class ErrorPreventionMonitor {
       case 'excessive-todos':
         return await this.flagTodosForReview(issue);
       default:
-        return null;
-    }
+        return null}
   }
 
   async removeUnusedDependency(issue) {
@@ -657,11 +587,9 @@ class ErrorPreventionMonitor {
         type: 'dependency-removed',
         dependency: issue.dependency,
         action: 'uninstalled'
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`Failed to remove unused dependency ${issue.dependency}: ${error.message}`, 'WARN');
-      return null;
-    }
+      return null}
   }
 
   async fixSecurityVulnerability(issue) {
@@ -671,11 +599,9 @@ class ErrorPreventionMonitor {
         type: 'security-fix',
         package: issue.package,
         action: 'audit-fix-applied'
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`Failed to fix security vulnerability: ${error.message}`, 'WARN');
-      return null;
-    }
+      return null}
   }
 
   async removeConsoleStatements(issue) {
@@ -693,14 +619,11 @@ class ErrorPreventionMonitor {
           file: issue.file,
           line: issue.line,
           action: 'commented-out'
-        };
-      }
+        }}
       
-      return null;
-    } catch (error) {
+      return null} catch (error) {
       this.log(`Failed to remove console statement: ${error.message}`, 'WARN');
-      return null;
-    }
+      return null}
   }
 
   async flagTodosForReview(issue) {
@@ -714,8 +637,7 @@ class ErrorPreventionMonitor {
     
     for (const todo of todos) {
       content += `## ${todo.file}:${todo.line}\n`;
-      content += `${todo.comment}\n\n`;
-    }
+      content += `${todo.comment}\n\n`}
     
     fs.writeFileSync(reviewFile, content);
     
@@ -724,8 +646,7 @@ class ErrorPreventionMonitor {
       file: reviewFile,
       count: todos.length,
       action: 'review-file-created'
-    };
-  }
+    }}
 
   async runPreventionCheck() {
     this.log('Starting error prevention check...');
@@ -759,8 +680,7 @@ class ErrorPreventionMonitor {
       
       if (allIssues.length === 0) {
         this.log('No prevention issues found', 'INFO');
-        return;
-      }
+        return}
       
       this.log(`Found ${allIssues.length} prevention issues`, 'INFO');
       
@@ -790,14 +710,10 @@ class ErrorPreventionMonitor {
       // Update prevention history
       this.preventionHistory.push(report);
       if (this.preventionHistory.length > 50) {
-        this.preventionHistory = this.preventionHistory.slice(-50);
-      }
+        this.preventionHistory = this.preventionHistory.slice(-50)}
       
-      this.log(`Prevention check completed. Report saved to ${reportPath}`, 'INFO');
-      
-    } catch (error) {
-      this.log(`Prevention check failed: ${error.message}`, 'ERROR');
-    }
+      this.log(`Prevention check completed. Report saved to ${reportPath}`, 'INFO')} catch (error) {
+      this.log(`Prevention check failed: ${error.message}`, 'ERROR')}
   }
 
   async startMonitor() {
@@ -809,14 +725,11 @@ class ErrorPreventionMonitor {
     // Set up periodic checking
     setInterval(async () => {
       try {
-        await this.runPreventionCheck();
-      } catch (error) {
-        this.log(`Error in periodic prevention check: ${error.message}`, 'ERROR');
-      }
+        await this.runPreventionCheck()} catch (error) {
+        this.log(`Error in periodic prevention check: ${error.message}`, 'ERROR')}
     }, this.checkInterval);
 
-    this.log(`Error prevention monitor started. Checking every ${this.checkInterval / 1000} seconds.`);
-  }
+    this.log(`Error prevention monitor started. Checking every ${this.checkInterval / 1000} seconds.`)}
 
   getStatus() {
     return {
@@ -824,8 +737,7 @@ class ErrorPreventionMonitor {
       preventionHistory: this.preventionHistory.length,
       checkInterval: this.checkInterval,
       preventiveActionsEnabled: this.preventiveActionsEnabled
-    };
-  }
+    }}
 }
 
 // Main execution
@@ -835,20 +747,16 @@ if (require.main === module) {
   // Handle graceful shutdown
   process.on('SIGINT', () => {
     monitor.log('Shutting down error prevention monitor...');
-    process.exit(0);
-  });
+    process.exit(0)});
 
   process.on('SIGTERM', () => {
     monitor.log('Shutting down error prevention monitor...');
-    process.exit(0);
-  });
+    process.exit(0)});
 
   // Start monitor
   monitor.startMonitor().catch(error => {
     monitor.log(`Failed to start monitor: ${error.message}`, 'ERROR');
-    process.exit(1);
-  });
-}
+    process.exit(1)})}
 >>>>>>> origin/merge-pr-10644
 
   run() {
@@ -859,11 +767,9 @@ if (require.main === module) {
     
     // Schedule periodic health checks
     setInterval(() => {
-      this.checkProjectHealth();
-    }, 15 * 60 * 1000); // Every 15 minutes
+      this.checkProjectHealth()}, 15 * 60 * 1000); // Every 15 minutes
     
-    this.log('Monitoring active - health checks every 15 minutes');
-  }
+    this.log('Monitoring active - health checks every 15 minutes')}
 }
 // Start the monitor
 const monitor = new ErrorPreventionMonitor();

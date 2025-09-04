@@ -6,12 +6,10 @@ const path = require('path');
 class QuickMergeFix {
   constructor() {
     this.projectRoot = process.cwd();
-    this.fixedCount = 0;
-  }
+    this.fixedCount = 0}
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
+    console.log(`[${new Date().toISOString()}] ${message}`)}
 
   fixMergeConflicts(content) {
     // Remove merge conflict markers and keep HEAD version
@@ -22,8 +20,7 @@ class QuickMergeFix {
     content = content.replace(/=======\n/g, '');
     content = content.replace(/>>>>>>> [^\n]+\n/g, '');
     
-    return content;
-  }
+    return content}
 
   async fixCriticalFiles() {
     this.log('🔧 Fixing Critical Files');
@@ -50,23 +47,19 @@ class QuickMergeFix {
             if (content !== originalContent) {
               fs.writeFileSync(filePath, content, 'utf8');
               this.fixedCount++;
-              this.log(`✅ Fixed merge conflicts in: ${file}`);
-            }
+              this.log(`✅ Fixed merge conflicts in: ${file}`)}
           }
         } catch (error) {
-          this.log(`❌ Error fixing ${file}: ${error.message}`);
-        }
+          this.log(`❌ Error fixing ${file}: ${error.message}`)}
       }
     }
     
-    this.log(`🎉 Fixed ${this.fixedCount} critical files`);
-  }
+    this.log(`🎉 Fixed ${this.fixedCount} critical files`)}
 
   async run() {
     this.log('🚀 Starting Quick Merge Fix');
     await this.fixCriticalFiles();
-    this.log('✅ Quick merge fix completed');
-  }
+    this.log('✅ Quick merge fix completed')}
 }
 
 // Run the fix

@@ -29,11 +29,10 @@ class AdvancedAppOptimizer {
     }
 
     log(message) {
-        const timestamp = new Date().toISOString(;
-  });
+        const timestamp = new Date().toISOString(});
         const logMessage = `[${timestamp}] ${message}\;n;`;
         fs.appendFileSync(this.logFile, logMessage);
-        console.log(message);}
+        console.log(message)}
 
     optimizeNextConfig() {
         this.log('Optimizing Next.js configuration...');
@@ -74,8 +73,7 @@ const nextConfig = {
     formats: ['image/webp', 'image/avif'],
     minimumCacheTTL: 60,
     dangerouslyAllowSVG: true,
-    contentSecurityPolicy: "default-src 'sel;
-  }f;'; script-src 'none'; sandbox;",
+    contentSecurityPolicy: "default-src 'sel}f;'; script-src 'none'; sandbox;",
   },
   
   // Bundle optimization
@@ -118,8 +116,7 @@ const nextConfig = {
         },
       }}
     
-    return config;
-  }},
+    return config}},
   
   // Experimental features for performance
   experimental: {
@@ -163,7 +160,7 @@ module.exports = nextConfig;
         fs.writeFileSync(nextConfigPath, optimizedConfig);
         this.log('Next.js configuration optimized');
         
-        return { status: 'success', message: 'Next.js config optimized' ;}}
+        return { status: 'success', message: 'Next.js config optimized' }}
 
     optimizeTailwindConfig() {
         this.log('Optimizing Tailwind CSS configuration...');
@@ -312,15 +309,15 @@ module.exports = {
         'animate-slide-up',
         'animate-bounce-subtle'],
     },
-  },;
+  },
   }
-;};
+};
 `;
 
         fs.writeFileSync(tailwindConfigPath, optimizedConfig);
         this.log('Tailwind CSS configuration optimized');
         
-        return { status: 'success', message: 'Tailwind config optimized' ;}}
+        return { status: 'success', message: 'Tailwind config optimized' }}
 
     createPerformanceMonitoring() {
         this.log('Creating performance monitoring utilities...');
@@ -349,8 +346,7 @@ export class PerformanceMonitor {
 
 export class PerformanceMonitor {
   constructor() {
-    this.metrics = new Map;
-  }(;);
+    this.metrics = new Map}(;);
     this.isClient = typeof window !== 'undefined'}
 
   startTiming(name) {
@@ -367,11 +363,10 @@ export class PerformanceMonitor {
 
   endTiming(name) {
     if (this.isClient) {
-      performance.mark(\`\${name}-end\`);
-  }
+      performance.mark(\`\${name}-end\`)}
       performance.measure(name, \`\${name}-start\`, \`\${name}-end\`);
       
-      const measure = performance.getEntriesByName(name)[0;];
+      const measure = performance.getEntriesByName(name)[0];
       this.metrics.set(name, measure.duration);
       
       // Log slow operations
@@ -388,16 +383,14 @@ export class PerformanceMonitor {
   }
 
   getMetrics() {
-    return Object.fromEntries(this.metrics);
-  }}
+    return Object.fromEntries(this.metrics)}}
 
   clearMetrics() {
     this.metrics.clear();
     if ( {
       performance.clearMarks()) {
      {
-      performance.clearMarks();
-  }
+      performance.clearMarks()}
       performance.clearMeasures()}
   }
 }
@@ -436,16 +429,14 @@ export function reportWebVitals(metric) {
   
   // Log to console in development
   if (process.env.NODE_ENV === 'development') {
-    console.log(metric);
-  }}
+    console.log(metric)}}
 }
 
 export function initWebVitals() {
   if ( {
     getCLS(reportWebVitals)) {
      {
-    getCLS(reportWebVitals);
-  }
+    getCLS(reportWebVitals)}
     getFID(reportWebVitals);
     getFCP(reportWebVitals);
     getLCP(reportWebVitals);
@@ -456,7 +447,7 @@ export function initWebVitals() {
         fs.writeFileSync(path.join(utilsDir, 'web-vitals.js'), webVitals);
         
         this.log('Performance monitoring utilities created');
-        return { status: 'success', message: 'Performance monitoring created' ;}}
+        return { status: 'success', message: 'Performance monitoring created' }}
 
     optimizeImages() {
         this.log('Optimizing images...');
@@ -465,7 +456,7 @@ export function initWebVitals() {
         const imageFiles = this.findImageFiles(publicDir;);
         
         let optimizedCount = ;0;
-        const optimizations = [;];
+        const optimizations = [];
         
         for (const file of imageFiles) {
             try {
@@ -505,17 +496,15 @@ export function initWebVitals() {
                 this.log(`Error processing image ${file}: ${error.message}`)}
         }
         
-        this.log(`Processed ${optimizedCount} images`);
-  }
-        return { optimizedCount, optimizations ;}}
+        this.log(`Processed ${optimizedCount} images`)}
+        return { optimizedCount, optimizations }}
 
     findImageFiles(dir) {
-        const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg';];
-        const files = [;];
+        const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg'];
+        const files = [];
         
         if () return file) {
-    ) return file;
-  }s;
+    ) return file}s;
         
         const items = fs.readdirSync(dir;);
         for (const item of items) {
@@ -533,8 +522,7 @@ export function initWebVitals() {
                 files.push(fullPath)}
         }
         
-        return files;
-  }}
+        return files}}
 
     generateOptimizationReport() {
         this.log('Generating advanced app optimization report...');
@@ -549,12 +537,12 @@ export function initWebVitals() {
                 images: this.optimizeImages()
             },
             recommendations: this.generateOptimizationRecommendations()
-       ; ;};
+       };
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log(`Advanced app optimization report saved to ${this.reportFile}`);
         
-        return report;}
+        return report}
 
     generateOptimizationRecommendations() {
         return [;
@@ -576,7 +564,7 @@ export function initWebVitals() {
         try {
             const report = this.generateOptimizationReport(;);
             this.log('Advanced App Optimizer completed successfully');
-            return report;} catch (error) {
+            return report} catch (error) {
             this.log(`Advanced App Optimizer failed: ${error.message}`);
             throw error}
     }
@@ -586,8 +574,7 @@ export function initWebVitals() {
 if ( {
     const optimizer = new AdvancedAppOptimizer) {
      {
-    const optimizer = new AdvancedAppOptimizer;
-  }(;);
+    const optimizer = new AdvancedAppOptimizer}(;);
     optimizer.run().catch(console.error)}
 
 module.exports = AdvancedAppOptimizer;

@@ -6,12 +6,10 @@ const path = require('path');
 class ComprehensiveErrorFixer {
   constructor() {
     this.projectRoot = process.cwd();
-    this.fixedCount = 0;
-  }
+    this.fixedCount = 0}
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
+    console.log(`[${new Date().toISOString()}] ${message}`)}
 
   fixSyntaxErrors(content) {
     // Fix common syntax issues
@@ -26,8 +24,7 @@ class ComprehensiveErrorFixer {
     content = content.replace(/className\s*=\s*['"]\s*;\s*([^'"]*)\s*['"]/g, 'className=\'$1\'');
     content = content.replace(/\s*;\s*;\s*/g, ';');
     
-    return content;
-  }
+    return content}
 
   async fixFiles() {
     const srcDir = path.join(this.projectRoot, 'src');
@@ -45,15 +42,12 @@ class ComprehensiveErrorFixer {
         if (content !== originalContent) {
           fs.writeFileSync(file, content, 'utf8');
           this.fixedCount++;
-          this.log(`✅ Fixed: ${path.relative(this.projectRoot, file)}`);
-        }
+          this.log(`✅ Fixed: ${path.relative(this.projectRoot, file)}`)}
       } catch (error) {
-        this.log(`❌ Error fixing ${file}: ${error.message}`);
-      }
+        this.log(`❌ Error fixing ${file}: ${error.message}`)}
     }
     
-    this.log(`🎉 Fixed ${this.fixedCount} files`);
-  }
+    this.log(`🎉 Fixed ${this.fixedCount} files`)}
 
   getAllFiles(dir, extensions) {
     let files = [];
@@ -63,14 +57,11 @@ class ComprehensiveErrorFixer {
         const fullPath = path.join(dir, item);
         const stat = fs.statSync(fullPath);
         if (stat.isDirectory()) {
-          files = files.concat(this.getAllFiles(fullPath, extensions));
-        } else if (extensions.some(ext => item.endsWith(ext))) {
-          files.push(fullPath);
-        }
+          files = files.concat(this.getAllFiles(fullPath, extensions))} else if (extensions.some(ext => item.endsWith(ext))) {
+          files.push(fullPath)}
       }
     } catch (error) {}
-    return files;
-  }
+    return files}
 }
 
 const fixer = new ComprehensiveErrorFixer();

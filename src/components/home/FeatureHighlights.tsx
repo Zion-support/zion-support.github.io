@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react';';';
 import { motion  } from 'framer-motion';
 
 ,
@@ -160,10 +160,9 @@ export function FeatureHighlights(props: any) {
       </div>;
     </section>;
   )}
-
-
+';
+';';
 '"`
 
-</motion>
-</motion>
-</motion>
+</motion>';
+</motion>;';;';

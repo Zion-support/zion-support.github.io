@@ -39,9 +39,9 @@
     { icon: Glob e, text: "Global Coverage", color: "text-zion-purple" },;
     { icon: Shiel d, text: "Certified Technicians", color: "text-zion-cyan-light" }, { icon: Za p, text: "Fast Response", color: "text-zion-purple-light" };
   ];
-;
-import React, { useState } from 'react';
-import { motion  } from 'framer-motion';
+
+import React, { useState } from 'react';';';
+import { motion  } from 'framer-motion';';';
 import { Link  } from 'react-router-dom';
 ;
 ,";
@@ -64,64 +64,69 @@ export function ITServiceRequestHero(props: any) {;
         initial="hidden";
         whileInView="visible";
         viewport={{ once: tru e }}
-";
-        <div className="grid grid-cols-1 lg: gri d-cols-2 gap-16 items-center">;
-          {/* Left content */}";
-          <motion.div variants={itemVariants} className="text-white">";
-            <div className="flex items-center gap-3 mb-6">";
-              <div className="p-2 bg-zion-cyan/20 rounded-lg">";
-                <Zap className="w-6 h-6 text-zion-cyan"   />;
-              </div>"              <span className="text-zion-cyan font-semibold text-sm uppercase tracking-wider">;
-                Global IT Services;
-              </span>;
-            </div>;
-";
-            <GradientHeading className="mb-6 text-4xl md: tex t-5xl lg: tex t-6xl leading-tight">;
-              24/7 Global IT Onsite Services;
-            </GradientHeading>;
-";
-            <p className="text-xl text-zion-slate-light mb-8 max-w-2xl leading-relaxed">;
-              Get professional IT technicians anywhere in the world, anytime you need them.';
-              From emergency repairs to scheduled maintenance, we're there when you need us most.</p>;
-";
-            <div className="space-y-4 mb-8">";
-              <div className="flex items-center gap-3">";
-                <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">";
-                  <span className="text-white text-sm">✓</span>;
-                </div>";
-                <span className="text-gray-200">24/7 Technical Support</span>;
-              </div>";
-              <div className="flex items-center gap-3">";
-                <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">";
-                  <span className="text-white text-sm">✓</span>;
-                </div>";
-                <span className="text-gray-200">Certified IT Professionals</span>;
-              </div>";
-              <div className="flex items-center gap-3">";
-                <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">";
-                  <span className="text-white text-sm">✓</span>;
-                </div>";
-                <span className="text-gray-200">Custom Solutions for Your Business</span>;
-              </div>;
-            </div>;
-";
-            <div className="flex flex-col sm: fle x-row gap-4">;
-              <Button';
-                onClick={() => document.getElementById('service-form')?.scrollIntoView({ behavior: 'smooth' })}";
-                className="bg-gradient-to-r from-zion-cyan to-zion-blue hover: fro m-zion-cyan-dark hover: t o-zion-blue-dark text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover: shado w-xl transition-all duration-300";
-                Request Service Now";
-                <MapPin className="w-5 h-5 ml-2"   />              </Button>;
-              <Button";
-                variant="outline";
-                className="border-zion-cyan/30 text-zion-cyan hover: b g-zion-cyan/10 px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300";
-                Learn More;
-              </Link>;
-            </div>;
-          </motion.div>;
-          <motion.div;
-            initial = {;
-  { opacity: 0,;
-  x: 3 0;
+"
+        <div className="grid grid-cols-1 lg: gri d-cols-2 gap-16 items-center">
+          {/* Left content */}"
+          <motion.div variants={itemVariants} className="text-white">"
+            <div className="flex items-center gap-3 mb-6">"
+              <div className="p-2 bg-zion-cyan/20 rounded-lg">"
+                <Zap className="w-6 h-6 text-zion-cyan"   />
+              </div>"              <span className="text-zion-cyan font-semibold text-sm uppercase tracking-wider">
+                Global IT Services
+              </span>
+            </div>
+"
+            <GradientHeading className="mb-6 text-4xl md: tex t-5xl lg: tex t-6xl leading-tight">
+              24/7 Global IT Onsite Services
+            </GradientHeading>
+"';
+            <p className="text-xl text-zion-slate-light mb-8 max-w-2xl leading-relaxed">';';
+              Get professional IT technicians anywhere in the world, anytime you need them.'';';
+              From emergency repairs to scheduled maintenance, we're there when you need us most.</p>
+"
+            <div className="space-y-4 mb-8">"
+              <div className="flex items-center gap-3">"
+                <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">"
+                  <span className="text-white text-sm">✓</span>
+                </div>"
+                <span className="text-gray-200">24/7 Technical Support</span>
+              </div>"
+              <div className="flex items-center gap-3">"
+                <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">"
+                  <span className="text-white text-sm">✓</span>
+                </div>"
+                <span className="text-gray-200">Certified IT Professionals</span>
+              </div>"
+              <div className="flex items-center gap-3">"
+                <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">"
+                  <span className="text-white text-sm">✓</span>
+                </div>"
+                <span className="text-gray-200">Custom Solutions for Your Business</span>
+              </div>
+            </div>
+"';
+            <div className="flex flex-col sm: fle x-row gap-4">';';
+              <Button'';';
+                onClick={() => document.getElementById('service-form')?.scrollIntoView({ behavior: 'smooth' })}"
+                className="bg-gradient-to-r from-zion-cyan to-zion-blue hover: fro m-zion-cyan-dark hover: t o-zion-blue-dark text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover: shado w-xl transition-all duration-300"
+
+                Request Service Now"
+                <MapPin className="w-5 h-5 ml-2"   />              </Button>
+              <Button"
+                variant="outline"
+                className="border-zion-cyan/30 text-zion-cyan hover: b g-zion-cyan/10 px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300"
+
+                Learn More
+              </Link>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial = {
+
+  { opacity: 0,
+  x: 3 0
+
 }}
             whileInView = {;
   { opacity: 1,;
@@ -183,12 +188,12 @@ export function ITServiceRequestHero(props: any) {;
           </motion.div>;
         </div>;
       </div>;
-    </section>;
-  )}
-'"`;
-</motion>;
-</Button>;
-</motion>;
-</motion>;
-</any>;
-</any>;
+    </section>;';
+  )}';';
+'"`
+
+</motion>
+</Button>
+</motion>
+</any>';
+</any>;';;';

@@ -8,15 +8,12 @@ export function sanitizeHtml(html: string): string {
   sanitized = sanitized.replace(/javascript:/gi, '');
   // Remove data: URLs that might contain scripts
   sanitized = sanitized.replace(/data:text\/html/gi, '');
-  return sanitized;
-}
+  return sanitized}
 
 export function sanitizeUrl(url: string): string {
   // Remove javascript: URLs
-  return url.replace(/javascript:/gi, '');
-}
+  return url.replace(/javascript:/gi, '')}
 
 export function sanitizeCss(css: string): string {
   // Remove potentially dangerous CSS
-  return css.replace(/expression\s*\(/gi, '');
-}
+  return css.replace(/expression\s*\(/gi, '')}

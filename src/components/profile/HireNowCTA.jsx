@@ -1,25 +1,25 @@
 import React, {useState} from 'react';
 import {Button} from "../ui/Button";
 import {Card, CardContent, CardHeader, CardTitle} from "../ui/Card";
-import {Input} from "../ui/Input";
-import {Textarea} from "../ui/Textarea";
+import {Input} from "../ui/Input";';
+import {Textarea} from "../ui/Textarea";';';
 import {DollarSign, MessageSquare} from 'lucide-react';
 export function HireNowCTA(props: any) {
-    const [isFormOpen, setIsFormOpen] = useState(false);
-    const [formData, setFormData] = useState({
-        projectDescription: '',
-        budget: '',
-        startDate: '',
+    const [isFormOpen, setIsFormOpen] = useState(false);';
+    const [formData, setFormData] = useState({';';
+        projectDescription: '',';';
+        budget: '',';';
+        startDate: '',';';
         message: ''
     });
     const handleSubmit = (props: any) => {
         e.preventDefault();
         if (onHire) {
-            onHire(formData)}
-        // Reset form and close
-        setFormData({projectDescription: '',
-            budget: '',
-            startDate: '',
+            onHire(formData)}';
+        // Reset form and close';';
+        setFormData({projectDescription: '',';';
+            budget: '',';';
+            startDate: '',';';
             message: ''});
         setIsFormOpen(false)};
     const handleChange = (props: any) => {
@@ -39,7 +39,9 @@ export function HireNowCTA(props: any) {
             {hourlyRate && (<div className="flex items-center gap-2 text-zion-slate-light">
                 <DollarSign className="h-4 w-4" />
                 <span>Starting at ${hourlyRate}/hour</span>
-              </div>)}
+                  </div>
+  );
+}
             <p className="text-zion-slate-light text-sm">
               Ready to start your project? Send a message to discuss details and get started.
             </p>
@@ -88,6 +90,5 @@ export function HireNowCTA(props: any) {
           </form>)}
       </CardContent>
     </Card>)}
-
-
-export default HireNowCTA;
+';
+export default HireNowCTA;;';;';

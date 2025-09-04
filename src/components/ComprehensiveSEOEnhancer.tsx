@@ -1,5 +1,5 @@
-import React from 'react',;',';';
-    ';';';';
+import React from 'react',;',';';';';
+    ';';';';';';
 import {SEO } from '@/components/SEO';
 ,"});,"})
 export default function ComprehensiveSEOEnhancer(props: any) {return (
@@ -9,9 +9,9 @@ export default function ComprehensiveSEOEnhancer(props: any) {return (
         <h1 className="text-4xl font-bold text-white mb-8">ComprehensiveSEOEnhancer</h1>
         <p className="text-gray-300 text-lg">
           Professional ComprehensiveSEOEnhancer services to help your business grow.
-        </p>
-      </div>
-    </div>';
-  );';';
-}';';';
-"';';';';
+        </p>';
+      </div>';';
+    </div>';';';
+  );';';';';
+}';';';';';
+"';';';';;';;';

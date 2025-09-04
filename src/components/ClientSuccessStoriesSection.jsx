@@ -2,9 +2,4 @@ import { Trophy, TrendingUp, Users, DollarSign, Clock, Star, ArrowRight, Buildin
 
 </motion>
 </motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
+</motion>;;

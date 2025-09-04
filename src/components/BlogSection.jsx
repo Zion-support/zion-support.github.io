@@ -1,14 +1,14 @@
 import React from 'react';
-export function BlogSection(props: any) {
-
+export function BlogSection(props: any) {';
+';';
 import { Link  } from 'react-router-dom';
 ,
-        {
-
-            id: '2',
-            title: 'Building Scalable Web Applications',
-            excerpt: 'Best practices and architectural patterns for creating scalable web apps...',
-            date: '2024-01-10',
+        {';
+';';
+            id: '2',';';
+            title: 'Building Scalable Web Applications',';';
+            excerpt: 'Best practices and architectural patterns for creating scalable web apps...',';';
+            date: '2024-01-10',';';
             readTime: '12 min read'
 
     ];
@@ -34,6 +34,7 @@ import { Link  } from 'react-router-dom';
               </div>
             </article>) ) }
         </div>
-      </div>
-    </section>)}
-'"`
+      </div>';
+    </section>)}';';
+'"`';
+;';;';

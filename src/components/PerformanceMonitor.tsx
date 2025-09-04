@@ -3,8 +3,7 @@ import React, { useEffect, useState } from 'react';
 interface PerformanceMetrics {
   loadTime: number;
   memoryUsage: number;
-  renderTime: number;
-}
+  renderTime: number}
 
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
@@ -19,8 +18,7 @@ const PerformanceMonitor: React.FC = () => {
     // Measure page load time
     if (window.performance.timing) {
       const loadTime = window.performance.timing.loadEventEnd - window.performance.timing.navigationStart;
-      setMetrics(prev => ({ ...prev, loadTime }));
-    }
+      setMetrics(prev => ({ ...prev, loadTime }))}
 
     // Measure memory usage (if available)
     if ('memory' in performance) {
@@ -28,13 +26,11 @@ const PerformanceMonitor: React.FC = () => {
       setMetrics(prev => ({ 
         ...prev, 
         memoryUsage: Math.round(memory.usedJSHeapSize / 1024 / 1024) 
-      }));
-    }
+      }))}
 
     // Measure render time
     const endTime = performance.now();
-    setMetrics(prev => ({ ...prev, renderTime: Math.round(endTime - startTime) }));
-  }, []);
+    setMetrics(prev => ({ ...prev, renderTime: Math.round(endTime - startTime) }))}, []);
 
   return (
     <div className="bg-gray-100 p-4 rounded-lg">
@@ -54,7 +50,6 @@ const PerformanceMonitor: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default PerformanceMonitor;

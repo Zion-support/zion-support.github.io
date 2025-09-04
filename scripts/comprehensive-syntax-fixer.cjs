@@ -27,10 +27,8 @@ const syntaxFixes = [
     pattern: /interface\s+\w+\s*\{[^}]*$/gm,
     replacement: (match) => {
       if (!match.includes('}')) {
-        return match + '\n}';
-      }
-      return match;
-    },
+        return match + '\n}'}
+      return match},
     description: 'Fix missing closing braces in interfaces'
   },
   
@@ -74,10 +72,8 @@ const syntaxFixes = [
     pattern: /(\w+):\s*([^,}]+?)(?=\s*[,}])/g,
     replacement: (match, key, value) => {
       if (!value.includes("'") && !value.includes('"') && !value.includes('{') && !value.includes('(')) {
-        return `${key}: '${value.trim()}'`;
-      }
-      return match;
-    },
+        return `${key}: '${value.trim()}'`}
+      return match},
     description: 'Fix missing quotes in object keys'
   },
   
@@ -117,16 +113,13 @@ function fixFile(filePath) {
       const beforeLength = content.length;
       
       if (typeof fix.replacement === 'function') {
-        content = content.replace(fix.pattern, fix.replacement);
-      } else {
-        content = content.replace(fix.pattern, fix.replacement);
-      }
+        content = content.replace(fix.pattern, fix.replacement)} else {
+        content = content.replace(fix.pattern, fix.replacement)}
       
       const afterLength = content.length;
       if (beforeLength !== afterLength) {
         fixesApplied++;
-        console.log(`   ✅ Applied fix ${index + 1}: ${fix.description}`);
-      }
+        console.log(`   ✅ Applied fix ${index + 1}: ${fix.description}`)}
     });
     
     // Additional specific fixes for common issues
@@ -153,8 +146,7 @@ function fixFile(filePath) {
       content = content.replace(fix.pattern, fix.replacement);
       const afterLength = content.length;
       if (beforeLength !== afterLength) {
-        fixesApplied++;
-      }
+        fixesApplied++}
     });
     
     // Write the fixed content back
@@ -169,23 +161,18 @@ function fixFile(filePath) {
       });
       
       report.summary.fixedFiles++;
-      report.summary.totalFixes += fixesApplied;
-    } else {
-      console.log(`   ℹ️  No fixes needed for ${filePath}`);
-    }
+      report.summary.totalFixes += fixesApplied} else {
+      console.log(`   ℹ️  No fixes needed for ${filePath}`)}
     
     report.summary.totalFiles++;
-    return true;
-    
-  } catch (error) {
+    return true} catch (error) {
     console.log(`   ❌ Error processing ${filePath}: ${error.message}`);
     report.errors.push({
       file: filePath,
       error: error.message
     });
     report.summary.errorFiles++;
-    return false;
-  }
+    return false}
 }
 
 // Function to find all TypeScript/JavaScript files
@@ -202,20 +189,17 @@ function findSourceFiles(dir) {
       if (stat.isDirectory()) {
         // Skip node_modules and .next directories
         if (!['node_modules', '.next', 'out', 'dist', '.git'].includes(item)) {
-          traverse(fullPath);
-        }
+          traverse(fullPath)}
       } else if (stat.isFile()) {
         // Include TypeScript and JavaScript files
         if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js')) {
-          files.push(fullPath);
-        }
+          files.push(fullPath)}
       }
     }
   }
   
   traverse(dir);
-  return files;
-}
+  return files}
 
 // Main execution
 console.log('\n📁 Finding source files...');
@@ -227,13 +211,11 @@ let processedFiles = 0;
 
 for (const file of sourceFiles) {
   if (fixFile(file)) {
-    processedFiles++;
-  }
+    processedFiles++}
   
   // Progress indicator
   if (processedFiles % 10 === 0) {
-    console.log(`\n📊 Progress: ${processedFiles}/${sourceFiles.length} files processed`);
-  }
+    console.log(`\n📊 Progress: ${processedFiles}/${sourceFiles.length} files processed`)}
 }
 
 // Final summary
@@ -247,9 +229,7 @@ console.log(`   - Total fixes applied: ${report.summary.totalFixes}`);
 if (report.errors.length > 0) {
   console.log('\n❌ Errors encountered:');
   report.errors.forEach(error => {
-    console.log(`   - ${error.file}: ${error.error}`);
-  });
-}
+    console.log(`   - ${error.file}: ${error.error}`)})}
 
 // Save report
 const reportPath = path.join(process.cwd(), `comprehensive-syntax-fix-report-${report.sessionId}.json`);
@@ -262,17 +242,13 @@ console.log('\n🧪 Testing fixes...');
 try {
   console.log('Running TypeScript check...');
   execSync('npx tsc --noEmit', { stdio: 'pipe' });
-  console.log('✅ TypeScript check passed');
-} catch (error) {
-  console.log('⚠️  TypeScript check still has issues, but some fixes were applied');
-}
+  console.log('✅ TypeScript check passed')} catch (error) {
+  console.log('⚠️  TypeScript check still has issues, but some fixes were applied')}
 
 try {
   console.log('Running ESLint...');
   execSync('npm run lint', { stdio: 'pipe' });
-  console.log('✅ ESLint check passed');
-} catch (error) {
-  console.log('⚠️  ESLint check still has issues, but some fixes were applied');
-}
+  console.log('✅ ESLint check passed')} catch (error) {
+  console.log('⚠️  ESLint check still has issues, but some fixes were applied')}
 
 console.log('\n🎉 Comprehensive syntax fixing completed!');

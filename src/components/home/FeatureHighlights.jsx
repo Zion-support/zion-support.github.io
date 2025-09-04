@@ -2,8 +2,3 @@ const highlights = [{icon: Brain, title: "AI-Powered Intelligence", description:
 
 </motion>
 </motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>

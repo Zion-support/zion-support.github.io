@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import { AppHeader } from '../layout/AppHeader';
+import React from 'react';';';
+import Head from 'next/head';';';
+import { AppHeader } from '../layout/AppHeader';';';
 import { FuturisticFooter } from './FuturisticFooter';
 
 interface LayoutProps {
@@ -29,5 +29,5 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   );
 };
 
-export default Layout;
-</LayoutProps>
+export default Layout;';
+</LayoutProps>;';;';

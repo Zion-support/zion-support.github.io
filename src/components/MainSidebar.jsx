@@ -1,48 +1,48 @@
-import {Link, useLocation} from 'react-router-dom';
+import {Link, useLocation} from 'react-router-dom';';';
 import {cn} from '@/lib/utils';
 import { Home, ShoppingCart, Users, Settings, FileText, HelpCircle, Code, BarChart3, Briefcase, Leaf, Building, Mail, Calendar, Globe, Zap export function MainSidebar(props: any) {
     const location = useLocation();
-    const sidebarSections = [
-        {
-            title: 'Main',
-            items[;
-                { key: 'home', href: '/', icon: <Home className="w-4 h-4" />, label: 'Home' },
-                {key: 'marketplace', href: '/marketplace', icon: <ShoppingCart className="w-4 h-4" />, label: 'Marketplace'},
-                {key: 'services', href: '/services', icon: <Settings className="w-4 h-4" />, label: 'Services'},
-                {key: 'talent', href: '/talent', icon: <Users className="w-4 h-4" />, label: 'Talent'},
+    const sidebarSections = [';
+        {';';
+            title: 'Main',';
+            items[;';';
+                { key: 'home', href: '/', icon: <Home className="w-4 h-4" />, label: 'Home' },';';
+                {key: 'marketplace', href: '/marketplace', icon: <ShoppingCart className="w-4 h-4" />, label: 'Marketplace'},';';
+                {key: 'services', href: '/services', icon: <Settings className="w-4 h-4" />, label: 'Services'},';';
+                {key: 'talent', href: '/talent', icon: <Users className="w-4 h-4" />, label: 'Talent'},';';
                 {key: 'equipment', href: '/equipment', icon: <BarChart3 className="w-4 h-4" />, label: 'Equipment'},
             ]
-        },;
-        {
-            title: 'Comp',
-            items[;
-                { key: 'about', href: '/about', icon: <Building className="w-4 h-4" />, label: 'About Us' },
-                {key: 'careers', href: '/careers', icon: <Briefcase className="w-4 h-4" />, label: 'Careers'},
-                {key: 'partners', href: '/partners', icon: <Users className="w-4 h-4" />, label: 'Partners'},
+        },;';
+        {';';
+            title: 'Comp',';
+            items[;';';
+                { key: 'about', href: '/about', icon: <Building className="w-4 h-4" />, label: 'About Us' },';';
+                {key: 'careers', href: '/careers', icon: <Briefcase className="w-4 h-4" />, label: 'Careers'},';';
+                {key: 'partners', href: '/partners', icon: <Users className="w-4 h-4" />, label: 'Partners'},';';
                 {key: 'contact', href: '/contact', icon: <Mail className="w-4 h-4" />, label: 'Contact'},
             ]
-        },;
-        {
-            title: 'Resources',
-            items[;
-                { key: 'blog', href: '/blog', icon: <FileText className="w-4 h-4" />, label: 'Blog' },
-                {key: 'community', href: '/community', icon: <Globe className="w-4 h-4" />, label: 'Community'},
-                {key: 'green-it', href: '/green-it', icon: <Leaf className="w-4 h-4" />, label: 'Green IT'},
+        },;';
+        {';';
+            title: 'Resources',';
+            items[;';';
+                { key: 'blog', href: '/blog', icon: <FileText className="w-4 h-4" />, label: 'Blog' },';';
+                {key: 'community', href: '/community', icon: <Globe className="w-4 h-4" />, label: 'Community'},';';
+                {key: 'green-it', href: '/green-it', icon: <Leaf className="w-4 h-4" />, label: 'Green IT'},';';
                 {key: 'zion-hire-ai', href: '/zion-hire-ai', icon: <Zap className="w-4 h-4" />, label: 'AI Hiring'},
             ]
-        },;
-        {
-            title: 'Support',
-            items[;
-                { key: 'help', href: '/help', icon: <HelpCircle className="w-4 h-4" />, label: 'Help Center' },
-                {key: 'developers', href: '/developers', icon: <Code className="w-4 h-4" />, label: 'Developer Portal'},
-                {key: 'api-docs', href: '/api-docs', icon: <Code className="w-4 h-4" />, label: 'API Docs'},
+        },;';
+        {';';
+            title: 'Support',';
+            items[;';';
+                { key: 'help', href: '/help', icon: <HelpCircle className="w-4 h-4" />, label: 'Help Center' },';';
+                {key: 'developers', href: '/developers', icon: <Code className="w-4 h-4" />, label: 'Developer Portal'},';';
+                {key: 'api-docs', href: '/api-docs', icon: <Code className="w-4 h-4" />, label: 'API Docs'},';';
                 {key: 'sitemap', href: '/sitemap', icon: <Calendar className="w-4 h-4" />, label: 'Sitemap'},
             ]
 
-    ];
-    const isActive = (props: any) => {
-        if (href === '/') {
+    ];';
+    const isActive = (props: any) => {';';
+        if (href === '/') {';';
             return location.pathname === '/'}
         return location.pathname.startsWith(href)};
     return (<aside className="w-64 bg-zion-blue-dark border-r border-zion-blue-light min-h-screen p-4">
@@ -85,6 +85,5 @@ import { Home, ShoppingCart, Users, Settings, FileText, HelpCircle, Code, BarCha
         </div>
       </div>
     </aside>)}
-
-
-export default MainSidebar;
+';
+export default MainSidebar;;';;';

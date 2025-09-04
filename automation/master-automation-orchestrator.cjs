@@ -20,8 +20,7 @@ class MasterAutomationOrchestrator {
 
   log(message, type = "INFO") {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${type}] ${message}`);
-  }
+    console.log(`[${timestamp}] [${type}] ${message}`)}
 
   async runScript(scriptName, scriptPath) {
     const startTime = Date.now();
@@ -56,8 +55,7 @@ class MasterAutomationOrchestrator {
     this.results.dependencyFix = await this.runScript(
       "Dependency Fixer",
       "automation/dependency-fixer.cjs"
-    );
-  }
+    )}
 
   async runTypeScriptFix() {
     this.log("\n📝 PHASE 2: TYPESCRIPT FIXING");
@@ -65,8 +63,7 @@ class MasterAutomationOrchestrator {
     this.results.typescriptFix = await this.runScript(
       "TypeScript Fixer",
       "automation/typescript-fixer.cjs"
-    );
-  }
+    )}
 
   async runHealthCheck() {
     this.log("\n🔍 PHASE 3: HEALTH CHECK");
@@ -74,8 +71,7 @@ class MasterAutomationOrchestrator {
     this.results.healthCheck = await this.runScript(
       "Health Check",
       "automation/health-check.cjs"
-    );
-  }
+    )}
 
   async runSecurityScan() {
     this.log("\n🛡️  PHASE 4: SECURITY SCAN");
@@ -83,8 +79,7 @@ class MasterAutomationOrchestrator {
     this.results.securityScan = await this.runScript(
       "Security Scanner",
       "automation/security-scanner.cjs"
-    );
-  }
+    )}
 
   async runPerformanceOptimize() {
     this.log("\n⚡ PHASE 5: PERFORMANCE OPTIMIZATION");
@@ -92,8 +87,7 @@ class MasterAutomationOrchestrator {
     this.results.performanceOptimize = await this.runScript(
       "Performance Optimizer",
       "automation/performance-optimizer.cjs"
-    );
-  }
+    )}
 
   async runBuildTest() {
     this.log("\n🏗️  PHASE 6: BUILD TEST");
@@ -154,12 +148,10 @@ class MasterAutomationOrchestrator {
       const duration = `${result.duration}ms`;
       this.log(`  ${status} ${phase}: ${duration}`);
       if (result.errors.length > 0) {
-        this.log(`    Errors: ${result.errors.join(", ")}`);
-      }
+        this.log(`    Errors: ${result.errors.join(", ")}`)}
     });
     this.log(`\n📄 Full report saved to: ${reportPath}`);
-    return report;
-  }
+    return report}
 
   async run() {
     this.log("🎯 MASTER AUTOMATION ORCHESTRATOR");
@@ -178,16 +170,13 @@ class MasterAutomationOrchestrator {
       const report = await this.generateFinalReport();
       if (report.summary.overallSuccess) {
         this.log("\n🎉 ALL AUTOMATION PHASES COMPLETED SUCCESSFULLY!");
-        this.log("Your app is now optimized and ready for deployment.");
-      } else {
+        this.log("Your app is now optimized and ready for deployment.")} else {
         this.log("\n⚠️  SOME AUTOMATION PHASES HAD ISSUES");
-        this.log("Please review the report and fix any remaining issues.");
-      }
+        this.log("Please review the report and fix any remaining issues.")}
     } catch (error) {
       this.log(`💥 Fatal error in orchestrator: ${error.message}`, "ERROR");
       await this.generateFinalReport();
-      process.exit(1);
-    }
+      process.exit(1)}
   }
 }
 

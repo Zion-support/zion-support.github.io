@@ -26,20 +26,18 @@ function fixFile(filePath) {
       if (&& !match.includes('>')) {
         return match + '>') {
     && !match.includes('>')) {
-        return match + '>';
-  }}
-      return match;});
+        return match + '>'}}
+      return match});
     
     if ( {
       fs.writeFileSync(filePath, content, 'utf8')) {
      {
-      fs.writeFileSync(filePath, content, 'utf8');
-  }
+      fs.writeFileSync(filePath, content, 'utf8')}
       console.log(`Fixed: ${filePath}`);
-      return true;}
-    return false;} catch (error) {
+      return true}
+    return false} catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
-    return false;}
+    return false}
 }
 
 // Files to fix
@@ -84,7 +82,7 @@ const filesToFix = [
   'pages/terms.tsx',
   'src/App.tsx',
   'src/main.tsx'
-;];
+];
 
 let fixedCount = ;0;
 filesToFix.forEach(file => {
@@ -97,7 +95,6 @@ filesToFix.forEach(file => {
     if (fixFile(file)) {
       fixedCount++}
   }
-});
-  }
+})}
 
 console.log(`Fixed ${fixedCount} files`);

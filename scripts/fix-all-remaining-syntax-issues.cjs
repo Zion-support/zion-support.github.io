@@ -73,8 +73,7 @@ export default function IntegrationExamples() {
 {\`class ZionTechAPI {
   constructor(apiKey, baseURL = 'https://api.ziontechgroup.com/v1') {
     this.apiKey = apiKey;
-    this.baseURL = baseURL;
-  }
+    this.baseURL = baseURL}
 
   async getServices() {
     try {
@@ -86,14 +85,11 @@ export default function IntegrationExamples() {
       });
       
       if (!response.ok) {
-        throw new Error(\`HTTP error! status: \${response.status}\`);
-      }
+        throw new Error(\`HTTP error! status: \${response.status}\`)}
       
-      return await response.json();
-    } catch (error) {
+      return await response.json()} catch (error) {
       console.error('Error fetching services:', error);
-      throw error;
-    }
+      throw error}
   }
 }
 
@@ -125,9 +121,7 @@ console.log(services);\`}
         </div>
       </div>
     </>
-  );
-}`;
-    } else if (filePath === 'pages/security.tsx') {
+  )}`} else if (filePath === 'pages/security.tsx') {
       content = `import React from 'react';
 import Head from 'next/head';
 import { Shield, Lock, Eye, CheckCircle } from 'lucide-react';
@@ -269,9 +263,7 @@ export default function Security() {
         </div>
       </div>
     </>
-  );
-}`;
-    } else if (filePath === 'pages/services-catalog.tsx') {
+  )}`} else if (filePath === 'pages/services-catalog.tsx') {
       content = `import React, { useState } from 'react';
 import Head from 'next/head';
 import { Search, Filter, Star } from 'lucide-react';
@@ -321,8 +313,7 @@ export default function ServicesCatalog() {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+    return matchesCategory && matchesSearch});
 
   return (
     <>
@@ -433,9 +424,7 @@ export default function ServicesCatalog() {
         </div>
       </div>
     </>
-  );
-}`;
-    } else if (filePath === 'pages/services-comparison.tsx') {
+  )}`} else if (filePath === 'pages/services-comparison.tsx') {
       content = `import React from 'react';
 import Head from 'next/head';
 import { CheckCircle, XCircle, Star } from 'lucide-react';
@@ -619,9 +608,7 @@ export default function ServicesComparison() {
         </div>
       </div>
     </>
-  );
-}`;
-    } else if (filePath === 'pages/services-overview.tsx') {
+  )}`} else if (filePath === 'pages/services-overview.tsx') {
       content = `import React from 'react';
 import Head from 'next/head';
 import { Zap, Users, Shield, ArrowRight } from 'lucide-react';
@@ -749,20 +736,15 @@ export default function ServicesOverview() {
         </section>
       </main>
     </>
-  );
-}`;
-    }
+  )}`}
 
     if (content) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`   ✅ Fixed ${filePath}`);
-    } else {
-      console.log(`   ⚠️  No content defined for ${filePath}`);
-    }
+      console.log(`   ✅ Fixed ${filePath}`)} else {
+      console.log(`   ⚠️  No content defined for ${filePath}`)}
 
   } catch (error) {
-    console.log(`   ❌ Error fixing ${filePath}: ${error.message}`);
-  }
+    console.log(`   ❌ Error fixing ${filePath}: ${error.message}`)}
 }
 
 // Fix all problematic files

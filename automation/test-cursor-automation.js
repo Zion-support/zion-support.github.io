@@ -36,18 +36,14 @@ async function runTests() {
         // Test focus (this will actually try to focus Cursor)
         try {
             await automation.focusCursor();
-            console.log('✅ Focus test passed');
-        } catch (error) {
-            console.log('⚠️  Focus test failed (this is normal if Cursor is not running):', error.message);
-        }
+            console.log('✅ Focus test passed')} catch (error) {
+            console.log('⚠️  Focus test failed (this is normal if Cursor is not running):', error.message)}
         
         // Test text input (this will actually try to send text)
         try {
             await automation.sendText('test');
-            console.log('✅ Text input test passed');
-        } catch (error) {
-            console.log('⚠️  Text input test failed (this is normal if Cursor is not focused):', error.message);
-        }
+            console.log('✅ Text input test passed')} catch (error) {
+            console.log('⚠️  Text input test failed (this is normal if Cursor is not focused):', error.message)}
         
         // Test session management
         console.log('\n🔍 Testing session management...');
@@ -75,18 +71,14 @@ async function runTests() {
         console.log('\n💡 To start the full automation system:');
         console.log('   ./launch-cursor-automation.sh');
         console.log('\n💡 To stop the automation system:');
-        console.log('   ./stop-cursor-automation.sh');
-        
-    } catch (error) {
+        console.log('   ./stop-cursor-automation.sh')} catch (error) {
         console.error('\n❌ Test failed:', error.message);
         console.error(error.stack);
-        process.exit(1);
-    }
+        process.exit(1)}
 }
 
 // Run tests if this script is executed directly
 if (require.main === module) {
-    runTests();
-}
+    runTests()}
 
 module.exports = { runTests };

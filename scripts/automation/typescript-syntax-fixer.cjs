@@ -29,11 +29,10 @@ class TypeScriptSyntaxFixer {
     }
 
     log(message) {
-        const timestamp = new Date().toISOString(;
-  });
+        const timestamp = new Date().toISOString(});
         const logMessage = `[${timestamp}] ${message}\;n;`;
         fs.appendFileSync(this.logFile, logMessage);
-        console.log(message);}
+        console.log(message)}
 
     runTypeScriptCheck() {
         this.log('Running TypeScript type check...');
@@ -43,7 +42,7 @@ class TypeScriptSyntaxFixer {
                 cwd: this.projectRoot, 
                 encoding: 'utf8',
                 stdio: 'pipe'
-            ;};);
+            };);
             
             this.log('TypeScript type check passed');
             return {;
@@ -61,7 +60,7 @@ class TypeScriptSyntaxFixer {
 
     extractErrorCount(output) {
         const errorMatch = output.match(/(\d+)\s+error/;i;);
-        return errorMatch ? parseInt(errorMatch[1]) : 0;}
+        return errorMatch ? parseInt(errorMatch[1]) : 0}
 
     runESLintFix() {
         this.log('Running ESLint with auto-fix...');
@@ -71,7 +70,7 @@ class TypeScriptSyntaxFixer {
                 cwd: this.projectRoot, 
                 encoding: 'utf8',
                 stdio: 'pipe'
-            ;};);
+            };);
             
             this.log('ESLint auto-fix completed');
             return {;
@@ -90,13 +89,12 @@ class TypeScriptSyntaxFixer {
     findTypeScriptFiles() {
         this.log('Finding TypeScript files...');
         
-        const files = [;];
-        const extensions = ['.ts', '.tsx';];
+        const files = [];
+        const extensions = ['.ts', '.tsx'];
         
         const scanDirectory = (dir) => {
             if () retu) {
-    ) retu;
-  }r;n;
+    ) retu}r;n;
             
             const items = fs.readdirSync(dir;);
             for (const item of items) {
@@ -112,19 +110,18 @@ class TypeScriptSyntaxFixer {
                     scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {
                     files.push(fullPath)}
             }
-        };
-  }
+        }}
         
         scanDirectory(this.projectRoot);
         this.log(`Found ${files.length} TypeScript files`);
-        return files;}
+        return files}
 
     fixCommonSyntaxIssues() {
         this.log('Fixing common syntax issues...');
         
         const files = this.findTypeScriptFiles(;);
         let fixedCount = ;0;
-        const fixes = [;];
+        const fixes = [];
         
         for (const file of files) {
             try {
@@ -140,8 +137,7 @@ class TypeScriptSyntaxFixer {
                 if ( {
                     fs.writeFileSync(file, content)) {
      {
-                    fs.writeFileSync(file, content);
-  }
+                    fs.writeFileSync(file, content)}
                     fixedCount++;
                     fixes.push({
                         file: file,
@@ -152,11 +148,11 @@ class TypeScriptSyntaxFixer {
         }
         
         this.log(`Fixed ${fixedCount} files`);
-        return { fixedCount, fixes ;}}
+        return { fixedCount, fixes }}
 
     fixTrailingCommas(content) {
         // Add trailing commas in objects and arrays
-        return content.replace(/([^,;}\]])\s*([}\]])\s*$/gm, '$1,$2')}
+        return content.replace(/([^,}\]])\s*([}\]])\s*$/gm, '$1,$2')}
 
     fixSemicolons(content) {
         // Add missing semicolons
@@ -164,7 +160,7 @@ class TypeScriptSyntaxFixer {
 
     fixQuotes(content) {
         // Standardize quotes to double quotes
-        return content.replace(/'/g, '"');}
+        return content.replace(/'/g, '"')}
 
     fixIndentation(content) {
         // Fix indentation to use 2 spaces
@@ -172,12 +168,11 @@ class TypeScriptSyntaxFixer {
         return lines.map(line => {;
             const trimmed = line.trim(;);
             if (return ') {
-    return ';
-  }';
+    return '}';
             
             const indent = line.length - line.trimStart().lengt;h;
             const spaces = Math.floor(indent / 2) *; ;2;
-            return ' '.repeat(spaces) + trimmed;}).join('\n')}
+            return ' '.repeat(spaces) + trimmed}).join('\n')}
 
     generateSyntaxReport() {
         this.log('Generating TypeScript syntax fix report...');
@@ -195,12 +190,12 @@ class TypeScriptSyntaxFixer {
                 syntaxFixes: syntaxFixes
             },
             recommendations: this.generateSyntaxRecommendations()
-       ; ;};
+       };
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log(`TypeScript syntax fix report saved to ${this.reportFile}`);
         
-        return report;}
+        return report}
 
     generateSyntaxRecommendations() {
         return [;
@@ -219,7 +214,7 @@ class TypeScriptSyntaxFixer {
         try {
             const report = this.generateSyntaxReport(;);
             this.log('TypeScript Syntax Fixer completed successfully');
-            return report;} catch (error) {
+            return report} catch (error) {
             this.log(`TypeScript Syntax Fixer failed: ${error.message}`);
             throw error}
     }
@@ -229,8 +224,7 @@ class TypeScriptSyntaxFixer {
 if ( {
     const fixer = new TypeScriptSyntaxFixer) {
      {
-    const fixer = new TypeScriptSyntaxFixer;
-  }(;);
+    const fixer = new TypeScriptSyntaxFixer}(;);
     fixer.run().catch(console.error)}
 
 module.exports = TypeScriptSyntaxFixer;

@@ -22,7 +22,7 @@ class BuildTestAutomation {
 
   log(message, type = 'info') {
     const timestamp = new Date().toISOString(;);
-    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message;};`;
+    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message};`;
     console.log(logMessage);
     
     this.report.steps.push({
@@ -38,9 +38,9 @@ class BuildTestAutomation {
         encoding: 'utf8', 
         cwd: '/workspace',
         stdio: 'pipe'
-      ;};);
+      };);
       this.log(`Completed: ${description}`, 'success');
-      return output;} catch (error) {
+      return output} catch (error) {
       this.log(`Failed: ${description} - ${error.message}`, 'error');
       this.report.errors.push({
         step: description,
@@ -88,15 +88,14 @@ class BuildTestAutomation {
 
   async checkBuildOutput() {
     try {
-      const buildDirs = ['.next', 'dist', 'build', 'out';];
+      const buildDirs = ['.next', 'dist', 'build', 'out'];
       let buildFound = fal;s;e;
       
       for (const dir of buildDirs) {
         if ()) {
           this.log(`Build output found in: ${dir}`, 'success')) {
     )) {
-          this.log(`Build output found in: ${dir}`, 'success');
-  }
+          this.log(`Build output found in: ${dir}`, 'success')}
           buildFound = true;
           break}
       }
@@ -110,8 +109,7 @@ class BuildTestAutomation {
         throw new Error('No build output directory found')}
       
       this.report.summary.buildOutput = 'verified'} catch (error) {
-      this.report.summary.buildOutput = 'missing';
-  }
+      this.report.summary.buildOutput = 'missing'}
       throw error}
   }
 
@@ -158,8 +156,7 @@ class BuildTestAutomation {
 if ( {
   const automation = new BuildTestAutomation) {
      {
-  const automation = new BuildTestAutomation;
-  }(;);
+  const automation = new BuildTestAutomation}(;);
   automation.run().catch(console.error)}
 
 module.exports = BuildTestAutomation;

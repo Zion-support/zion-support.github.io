@@ -9,8 +9,7 @@ class FileExtensionFixer {
     this.logFile = path.join(this.projectRoot, 'logs', 'file-extension-fixer.log');
     this.reportFile = path.join(this.projectRoot, 'error-reports', `file-extension-fixer-report-${Date.now()}.json`);
     this.fixesApplied = [];
-    this.startTime = Date.now();
-  }
+    this.startTime = Date.now()}
 
   log(message) {
     const timestamp = new Date().toISOString();
@@ -19,11 +18,9 @@ class FileExtensionFixer {
     
     const logsDir = path.dirname(this.logFile);
     if (!fs.existsSync(logsDir)) {
-      fs.mkdirSync(logsDir, { recursive: true });
-    }
+      fs.mkdirSync(logsDir, { recursive: true })}
     
-    fs.appendFileSync(this.logFile, logMessage + '\n');
-  }
+    fs.appendFileSync(this.logFile, logMessage + '\n')}
 
   async run() {
     this.log('🚀 Starting File Extension Fixer...');
@@ -33,11 +30,8 @@ class FileExtensionFixer {
       this.log('🔧 File extension fixing logic to be implemented');
       
       // Generate report
-      this.generateReport(0, 0);
-      
-    } catch (error) {
-      this.log(`❌ Error in file extension fixer: ${error.message}`);
-    }
+      this.generateReport(0, 0)} catch (error) {
+      this.log(`❌ Error in file extension fixer: ${error.message}`)}
   }
 
   generateReport(fixedCount, totalCount) {
@@ -62,28 +56,23 @@ class FileExtensionFixer {
 
     const reportsDir = path.dirname(this.reportFile);
     if (!fs.existsSync(reportsDir)) {
-      fs.mkdirSync(reportsDir, { recursive: true });
-    }
+      fs.mkdirSync(reportsDir, { recursive: true })}
 
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-    this.log(`📊 Report generated: ${this.reportFile}`);
-  }
+    this.log(`📊 Report generated: ${this.reportFile}`)}
 }
 
 // Run the fixer
 const fixer = new FileExtensionFixer();
 fixer.run().catch(error => {
   console.error('Fatal error:', error);
-  process.exit(1);
-});
+  process.exit(1)});
 
 // Handle graceful shutdown
 process.on('SIGINT', () => {
   console.log('\n🛑 File Extension Fixer stopped by user');
-  process.exit(0);
-});
+  process.exit(0)});
 
 process.on('SIGTERM', () => {
   console.log('\n🛑 File Extension Fixer stopped by system');
-  process.exit(0);
-});
+  process.exit(0)});

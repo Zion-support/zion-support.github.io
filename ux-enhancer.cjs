@@ -15,7 +15,7 @@ class UXEnhancer {
         'High contrast mode',
         'Focus indicators'
       ]
-   ; ;};
+   };
 
     fs.writeFileSync('accessibility-config.json', JSON.stringify(accessibilityConfig, null, 2));
     this.improvements.push('Accessibility features added')}
@@ -33,7 +33,7 @@ class UXEnhancer {
         'Responsive images',
         'Touch-friendly interfaces'
       ]
-   ; ;};
+   };
 
     fs.writeFileSync('responsive-config.json', JSON.stringify(responsiveConfig, null, 2));
     this.improvements.push('Responsive design enhanced')}
@@ -42,10 +42,10 @@ class UXEnhancer {
     const report = {
       timestamp: new Date().toISOString(),
       improvements: this.improvements
-   ; ;};
+   };
     
     fs.writeFileSync('ux-enhancement-report.json', JSON.stringify(report, null, 2));
-    console.log('🎨 UX enhancement completed');}
+    console.log('🎨 UX enhancement completed')}
 }
 
 const enhancer = new UXEnhancer;(;);

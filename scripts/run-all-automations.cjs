@@ -8,19 +8,16 @@ class AllAutomationsRunner {
   constructor() {
     this.projectRoot = process.cwd();
     this.reportsDir = path.join(this.projectRoot, 'all-automations-reports');
-    this.ensureDirectories();
-  }
+    this.ensureDirectories()}
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-    }
+      fs.mkdirSync(this.reportsDir, { recursive: true })}
   }
 
   log(message) {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`);
-  }
+    console.log(`[${timestamp}] ${message}`)}
 
   async runAutomation(scriptName, scriptPath) {
     this.log(`🚀 Running ${scriptName}...`);
@@ -36,15 +33,13 @@ class AllAutomationsRunner {
         name: scriptName,
         success: true,
         output: result
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`❌ ${scriptName} failed: ${error.message}`);
       return {
         name: scriptName,
         success: false,
         error: error.message
-      };
-    }
+      }}
   }
 
   async runAllAutomations() {
@@ -97,11 +92,9 @@ class AllAutomationsRunner {
 
     for (const automation of automations) {
       const result = await this.runAutomation(automation.name, automation.script);
-      results.push(result);
-    }
+      results.push(result)}
 
-    return results;
-  }
+    return results}
 
   async generateOverallReport(automationResults) {
     this.log('📊 Generating overall report...');
@@ -122,8 +115,7 @@ class AllAutomationsRunner {
     
     this.log(`📄 Overall report generated: ${reportFile}`);
     
-    return report;
-  }
+    return report}
 
   generateOverallRecommendations(automationResults) {
     const recommendations = [];
@@ -136,8 +128,7 @@ class AllAutomationsRunner {
         message: `${failedAutomations.length} automations failed. Review and fix the issues.`,
         impact: 'Ensures all automations work properly',
         failedAutomations: failedAutomations.map(a => a.name)
-      });
-    }
+      })}
 
     const successfulAutomations = automationResults.filter(r => r.success);
     if (successfulAutomations.length === automationResults.length) {
@@ -146,11 +137,9 @@ class AllAutomationsRunner {
         priority: 'low',
         message: 'All automations completed successfully. Great job!',
         impact: 'Indicates a healthy project state'
-      });
-    }
+      })}
 
-    return recommendations;
-  }
+    return recommendations}
 
   async run() {
     this.log('🚀 Starting All Automations Runner');
@@ -167,22 +156,18 @@ class AllAutomationsRunner {
 
       if (overallReport.summary.failed > 0) {
         this.log('❌ Some automations failed. Check the report for details.');
-        process.exit(1);
-      } else {
+        process.exit(1)} else {
         this.log('🎉 All automations completed successfully!');
-        process.exit(0);
-      }
+        process.exit(0)}
     } catch (error) {
       this.log(`💥 All Automations Runner failed: ${error.message}`);
-      process.exit(1);
-    }
+      process.exit(1)}
   }
 }
 
 // Run the runner if this file is executed directly
 if (require.main === module) {
   const runner = new AllAutomationsRunner();
-  runner.run();
-}
+  runner.run()}
 
 module.exports = AllAutomationsRunner;

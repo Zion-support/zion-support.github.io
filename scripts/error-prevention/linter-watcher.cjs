@@ -22,7 +22,7 @@ class LinterWatcher {
     this.intervalId = setInterval(() => {
       this.runLint()}, this.interval);
     
-    console.log('Linter Watcher started successfully');}
+    console.log('Linter Watcher started successfully')}
 
   async runLint() {
     try {
@@ -31,7 +31,7 @@ class LinterWatcher {
       const child = spawn('npm', ['run', 'lint'], {
         stdio: ['pipe', 'pipe', 'pipe'],
         cwd: process.cwd()
-      ;};);
+      };);
 
       let output = ;';';
       let errorOutput = ;';';
@@ -46,8 +46,7 @@ class LinterWatcher {
         if ( {
           console.log('Lint check passed ✓')) {
      {
-          console.log('Lint check passed ✓');
-  }} else {
+          console.log('Lint check passed ✓')}} else {
           console.log('Lint check failed ✗');
           console.log('Output:', output);
           console.log('Errors:', errorOutput);
@@ -65,15 +64,14 @@ class LinterWatcher {
       const child = spawn('npm', ['run', 'lint:fix'], {
         stdio: 'inherit',
         cwd: process.cwd()
-      ;};);
+      };);
 
       child.on('close', (code) => {
         if ( {
           console.log('Auto-fix completed ✓')) {
      {
-          console.log('Auto-fix completed ✓');
-  }} else {
-          console.log('Auto-fix failed ✗');}
+          console.log('Auto-fix completed ✓')}} else {
+          console.log('Auto-fix failed ✗')}
       })} catch (error) {
       console.error('Error running auto-fix:', error.message)}
   }
@@ -89,16 +87,14 @@ class LinterWatcher {
      {
       clearInterval(this.intervalId)}
     
-    console.log('Linter Watcher stopped');
-  }}
+    console.log('Linter Watcher stopped')}}
 }
 
 // Start the watcher if run directly
 if ( {
   const watcher = new LinterWatcher) {
      {
-  const watcher = new LinterWatcher;
-  }(;);
+  const watcher = new LinterWatcher}(;);
   
   // Handle graceful shutdown
   process.on('SIGINT', () => {

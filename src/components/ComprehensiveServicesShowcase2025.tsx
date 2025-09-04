@@ -1,7 +1,7 @@
-import React from 'react';
-import {  import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
-export default function Page(props: any) {
-, { id: 'Metaverse', name: 'Metaverse', count: allService s.filter(s => s.category === 'Metaverse').length, icon: '🌍' }, { id: 'Edge Computing', name: 'Edge Computing', count: allService s.filter(s => s.category === 'Edge Computing').length, icon: '🌐' }, { id: 'Cybersecurity', name: 'Cybersecurity', count: allService s.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️' };
+import React from 'react';';';
+import {  import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';';
+export default function Page(props: any) {';';
+, { id: 'Metaverse', name: 'Metaverse', count: allService s.filter(s => s.category === 'Metaverse').length, icon: '🌍' }, { id: 'Edge Computing', name: 'Edge Computing', count: allService s.filter(s => s.category === 'Edge Computing').length, icon: '🌐' }, { id: 'Cybersecurity', name: 'Cybersecurity', count: allService s.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️' };';';
   ] { id: 'all', name: 'All Levels', icon: '🌟' }, { id: 'Advanced', name: 'Advanced', icon: '🚀' }, { id: 'Cutting-edge', name: 'Cutting-edge', icon: '⚡' }, { id: 'Revolutionary', name: 'Revolutionary', icon: '💫' };
   ];
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
@@ -9,24 +9,23 @@ export default function Page(props: any) {
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     
     return matchesCategory && matchesSearch && matchesPrice && matchesInnovation}) ;
-
-    switch(sortBy) {;
-      case 'price':;
-        return a.price - b.price;      case 'name':;
-        return a.title.localeCompare(b.title);
+';
+    switch(sortBy) {;';';
+      case 'price':;';';
+        return a.price - b.price;      case 'name':;';
+        return a.title.localeCompare(b.title);';';
       case 'innovation':;
         
-  ;
-  ;
-'
+  ;';
+  ;';';
+'';';
   'Advanced': 1, 'Cutting-edge': 2,;  ;
-  ;
-  ;
-  ;
+  ;';
+  ;';';
   'Revolutionary': 3 ;
 
-};
-        return (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0) - ;
+};';
+        return (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0) - ;';';
                (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0);      case 'category':;
         return a.category.localeCompare(b.category) ;
       default:;
@@ -97,20 +96,20 @@ export default function Page(props: any) {
                 </select>"
                 <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zion-slate-400 w-4 h-4 pointer-events-none"   />              </div>
 
-              {/* View Mode Toggle */}"
-              <div className="flex bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl p-1">;
-                <button'
-                  onClick={() => setViewMode('grid')}
-                  className={`flex-1 px-3 py-2 rounded-lg transition-all ${viewMode === 'grid''
-                      ? 'bg-zion-cyan text-white''
+              {/* View Mode Toggle */}"';
+              <div className="flex bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl p-1">;';';
+                <button'';';
+                  onClick={() => setViewMode('grid')}';';
+                  className={`flex-1 px-3 py-2 rounded-lg transition-all ${viewMode === 'grid''';';
+                      ? 'bg-zion-cyan text-white''';';
                       : 'text-zion-slate-400 hover: tex t-white'`
                   }`}
-"
-                  <Grid className="w-4 h-4 mx-auto"   />                </button>
-                <button'
-                  onClick={() => setViewMode('list')}`
-                  className={`flex-1 px-3 py-2 rounded-lg transition-all ${viewMode === 'list''
-                      ? 'bg-zion-cyan text-white''
+"';
+                  <Grid className="w-4 h-4 mx-auto"   />                </button>';';
+                <button'';';
+                  onClick={() => setViewMode('list')}`';';
+                  className={`flex-1 px-3 py-2 rounded-lg transition-all ${viewMode === 'list''';';
+                      ? 'bg-zion-cyan text-white''';';
                       : 'text-zion-slate-400 hover: tex t-white'`
                   }`}
 "
@@ -168,21 +167,21 @@ export default function Page(props: any) {
 
           {/* Services Grid / List */}
           <motion.div
-            variants={containerVariants}"
-            initial="hidden"
-            animate="visible"'
-            className={viewMode === 'grid''
-              ? 'grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-6''
+            variants={containerVariants}"';
+            initial="hidden"';';
+            animate="visible"'';';
+            className={viewMode === 'grid''';';
+              ? 'grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-6''';';
               : 'space-y-4'
 
             {sortedServices.map((service) => (;
               <motion.div
-                key={service.id}
-                variants={itemVariants}`
+                key={service.id}';
+                variants={itemVariants}`';';
                 className={`bg-zion-slate-800/50 backdrop-blur-sm border border-zion-slate-700 rounded-2xl p-6 hover: borde r-zion-cyan/50 hover: shado w-lg hover: shado w-zion-cyan/20 transition-all duration-300 cursor-pointer group ${viewMode === 'list' ? 'flex items-center gap-6' : ''`
                 }`}
-                onClick={() => handleServiceClick(service)}
-
+                onClick={() => handleServiceClick(service)}';
+';';
                 {viewMode === 'grid' ? (;
                   // Grid View
                   <>
@@ -297,14 +296,12 @@ export default function Page(props: any) {
               </p>
               <button      onClick={;
   ;
-  ;
-  ;
-  ;
-  () => {;
-                  setSearchTerm('');
+  ;';
+  () => {;';';
+                  setSearchTerm('');';';
                   setActiveCategory('all');
-                  setPriceRange([0,
-  10000]);
+                  setPriceRange([0,';
+  10000]);';';
                   setInnovationLevel('all')}}"                className="bg-zion-cyan text-white px-6 py-3 rounded-xl font-medium hover: b g-zion-cyan/90 transition-colors"
               >
                 Clear All Filters;
@@ -469,8 +466,9 @@ export default function Page(props: any) {
                         </div>
                       </div>
                     </div>
-                  </div>) }
-
+                      </div>
+  );
+}
                 {/* Contact and CTA */}"
                 <div className="border-t border-zion-slate-700 pt-6">"
                   <div className="flex flex-col md: fle x-row items-center justify-between gap-4">"
@@ -496,12 +494,10 @@ export default function Page(props: any) {
           </motion.div>;) };
       </AnimatePresence>;
     </div>;) ;
-</div></div></div></div></div></div></div>};
-
+</div></div></div></div></div></div></div>};';
+';';
 export default ComprehensiveServicesShowcase2025}}}}}}}}}}'"`
 
 </motion>
-</motion>
-</motion>
-</motion>
-</motion>
+</motion>';
+</motion>;';;';

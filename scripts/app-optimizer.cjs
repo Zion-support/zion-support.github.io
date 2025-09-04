@@ -12,14 +12,14 @@ const optimizationReport = {
   improvements: [],
   recommendations: [],
   metrics: {}
-;};
+};
 
 // Function to get file size
 function getFileSize(filePath) {
   try {
     const stats = fs.statSync(filePath;);
-    return stats.size;} catch (error) {
-    return 0;}
+    return stats.size} catch (error) {
+    return 0}
 }
 
 // Function to get directory size
@@ -45,8 +45,7 @@ function getDirectorySize(dirPath) {
   } catch (error) {
     // Directory doesn't exist or can't be read
   }
-  return totalSize;
-  }}
+  return totalSize}}
 
 // 1. Bundle Analysis
 console.log('📊 Analyzing bundle size...');
@@ -55,8 +54,7 @@ try {
   if () {
     const bundleSize = getDirectorySize(nextDi) {
     ) {
-    const bundleSize = getDirectorySize(nextDi;
-  }r;);
+    const bundleSize = getDirectorySize(nextDi}r;);
     optimizationReport.metrics.bundleSize = bundleSize;
     optimizationReport.metrics.bundleSizeMB = (bundleSize / 1024 / 1024).toFixed(2);
     
@@ -77,9 +75,8 @@ console.log('🖼️  Checking image optimization...')) {
   console.warn('Could not analyze bundle size:', error.message)}
 
 // 2. Image Optimization Check
-console.log('🖼️  Checking image optimization...');
-  }
-const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg';];
+console.log('🖼️  Checking image optimization...')}
+const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg'];
 const publicDir = path.join(process.cwd(), 'public;';);
 let totalImageSize = ;0;
 let imageCount = ;0;
@@ -91,8 +88,7 @@ if () {
     ) {
   function scanForImages(dir) {
     try {
-      const items = fs.readdirSync(dir;
-  });
+      const items = fs.readdirSync(dir});
       for (const item of items) {
         const fullPath = path.join(dir, item;);
         const stat = fs.statSync(fullPath;);
@@ -103,8 +99,7 @@ if () {
     ) {
           scanForImages(fullPath)} else if (imageExtensions.includes(path.extname(item).toLowerCase())) {
           totalImageSize += stat.size
-          imageCount++;
-  }
+          imageCount++}
           
           if ( { // 500KB
             optimizationReport.recommendations.push(`Large image found: ${path.relative(process.cwd(), fullPath)} (${(stat.size / 1024 / 1024).toFixed(2)}MB)`)}
@@ -129,8 +124,7 @@ optimizationReport.metrics.totalImageSize = totalImageSize) {
   
   scanForImages(publicDir)}
 
-optimizationReport.metrics.totalImageSize = totalImageSize;
-  }
+optimizationReport.metrics.totalImageSize = totalImageSize}
 optimizationReport.metrics.totalImageSizeMB = (totalImageSize / 1024 / 1024).toFixed(2);
 optimizationReport.metrics.imageCount = imageCount;
 
@@ -145,12 +139,11 @@ console.log('📝 Analyzing code quality...')) {
   optimizationReport.improvements.push('Image sizes are optimized')}
 
 // 3. Code Quality Analysis
-console.log('📝 Analyzing code quality...');
-  }
-const srcDirs = ['src', 'pages', 'components';];
+console.log('📝 Analyzing code quality...')}
+const srcDirs = ['src', 'pages', 'components'];
 let totalLines = ;0;
 let totalFiles = ;0;
-let largeFiles = [;];
+let largeFiles = [];
 
 for (const dir of srcDirs) {
   const dirPath = path.join(process.cwd(), di;r;);
@@ -161,8 +154,7 @@ for (const dir of srcDirs) {
     ) {
     function analyzeDirectory(currentDir) {
       try {
-        const items = fs.readdirSync(currentDir;
-  });
+        const items = fs.readdirSync(currentDir});
         for (const item of items) {
           const fullPath = path.join(currentDir, item;);
           const stat = fs.statSync(fullPath;);
@@ -171,8 +163,7 @@ for (const dir of srcDirs) {
             const content = fs.readFileSync(fullPath, 'utf8') {
     ) {
             analyzeDirectory(fullPath)} else if (['.js', '.jsx', '.ts', '.tsx'].includes(path.extname(item))) {
-            const content = fs.readFileSync(fullPath, 'utf8';
-  });
+            const content = fs.readFileSync(fullPath, 'utf8'});
             const lines = content.split('\n').lengt;h;
             totalLines += lines;
             totalFiles++;
@@ -208,16 +199,14 @@ optimizationReport.metrics.totalLines = totalLines) {
     analyzeDirectory(dirPath)}
 }
 
-optimizationReport.metrics.totalLines = totalLines;
-  }
+optimizationReport.metrics.totalLines = totalLines}
 optimizationReport.metrics.totalFiles = totalFiles;
 optimizationReport.metrics.averageLinesPerFile = totalFiles > 0 ? Math.round(totalLines / totalFiles) : 0;
 
 if ( {
   optimizationReport.recommendations.push(`Found ${largeFiles.length} large files (>500 lines). Consider breaking them into smaller components.`)) {
      {
-  optimizationReport.recommendations.push(`Found ${largeFiles.length} large files (>500 lines). Consider breaking them into smaller components.`);
-  }
+  optimizationReport.recommendations.push(`Found ${largeFiles.length} large files (>500 lines). Consider breaking them into smaller components.`)}
   optimizationReport.optimizations.push(...largeFiles.map(f => `Large file: ${f.file} (${f.lines} lines)`))} else {
   optimizationReport.improvements.push('No excessively large files found')}
 
@@ -228,8 +217,7 @@ try {
   if () {
     const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8') {
     ) {
-    const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8';
-  }););
+    const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'}););
     const dependencies = Object.keys(packageJson.dependencies || {});
     const devDependencies = Object.keys(packageJson.devDependencies || {});
     
@@ -253,16 +241,14 @@ console.log('⚡ Generating performance recommendations...')) {
   console.warn('Could not analyze dependencies:', error.message)}
 
 // 5. Performance Recommendations
-console.log('⚡ Generating performance recommendations...');
-  }
+console.log('⚡ Generating performance recommendations...')}
 
 // Check for Next.js optimizations
 const nextConfigPath = path.join(process.cwd(), 'next.config.js;';);
 if () {
   const nextConfig = fs.readFileSync(nextConfigPath, 'utf8') {
     ) {
-  const nextConfig = fs.readFileSync(nextConfigPath, 'utf8';
-  });
+  const nextConfig = fs.readFileSync(nextConfigPath, 'utf8'});
   
   if () {
     optimizationReport.recommendations.push('Enable gzip compression in Next.js config')}
@@ -289,8 +275,7 @@ const tsConfigPath = path.join(process.cwd(), 'tsconfig.json) {
   optimizationReport.recommendations.push('Create next.config.js with performance optimizations')}
 
 // Check for TypeScript configuration
-const tsConfigPath = path.join(process.cwd(), 'tsconfig.json;
-  }';);
+const tsConfigPath = path.join(process.cwd(), 'tsconfig.json}';);
 if () {
   optimizationReport.improvements.push('TypeScript configuration found')} else {
   optimizationReport.recommendations.push('Add TypeScript configuration for better development experience')}
@@ -302,18 +287,16 @@ console.log('🔒 Checking security configurations...')) {
   optimizationReport.recommendations.push('Add TypeScript configuration for better development experience')}
 
 // 6. Security Recommendations
-console.log('🔒 Checking security configurations...');
-  }
+console.log('🔒 Checking security configurations...')}
 
 // Check for environment variables
-const envFiles = ['.env.local', '.env', '.env.example';];
+const envFiles = ['.env.local', '.env', '.env.example'];
 let envFileFound = fal;s;e;
 for (const envFile of envFiles) {
   if (, envFile))) {
     envFileFound = true) {
     , envFile))) {
-    envFileFound = true;
-  }
+    envFileFound = true}
     break}
 }
 
@@ -328,8 +311,7 @@ console.log('\n📊 App Optimization Summary:')) {
   optimizationReport.improvements.push('Environment configuration found')}
 
 // Generate summary
-console.log('\n📊 App Optimization Summary:');
-  }
+console.log('\n📊 App Optimization Summary:')}
 console.log(`   - Bundle size: ${optimizationReport.metrics.bundleSizeMB || 'N/A'} MB`);
 console.log(`   - Total images: ${optimizationReport.metrics.imageCount || 0} (${optimizationReport.metrics.totalImageSizeMB || '0'} MB);`);
 console.log(`   - Code files: ${optimizationReport.metrics.totalFiles || 0} (${optimizationReport.metrics.totalLines || 0} lines);`);
@@ -340,18 +322,16 @@ console.log(`   - Recommendations: ${optimizationReport.recommendations.length}`
 if ( {
   console.log('\n✅ Improvements:')) {
      {
-  console.log('\n✅ Improvements:');
-  }
+  console.log('\n✅ Improvements:')}
   optimizationReport.improvements.forEach(improvement => {
-    console.log(`   - ${improvement}`);})}
+    console.log(`   - ${improvement}`)})}
 
 if ( {
   console.log('\n💡 Recommendations:')) {
      {
-  console.log('\n💡 Recommendations:');
-  }
+  console.log('\n💡 Recommendations:')}
   optimizationReport.recommendations.forEach(rec => {
-    console.log(`   - ${rec}`);})}
+    console.log(`   - ${rec}`)})}
 
 // Save report
 const reportPath = path.join(process.cwd(), 'app-optimization-report.json;';);
@@ -362,8 +342,7 @@ console.log(`\n📄 App optimization report saved to: app-optimization-report.js
 if ( {
   console.log('\n🎉 App is well optimized!')) {
      {
-  console.log('\n🎉 App is well optimized!');
-  }
+  console.log('\n🎉 App is well optimized!')}
   process.exit(0)} else {
   console.log('\n⚠️  App optimization completed with recommendations');
   process.exit(0)}

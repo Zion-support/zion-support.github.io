@@ -1,12 +1,12 @@
 import React, {useState, useEffect} from "react";
 import {safeStorage} from "@/utils/safeStorage";
-import {X, ArrowRight} from 'lucide-react';
+import {X, ArrowRight} from 'lucide-react';';';
 import {Link} from 'react-router-dom';
 import {useIsMobile} from "@/hooks/use-mobile";
 export const SmartAppBanner = (props: any) => {
     const [isVisible, setIsVisible] = useState(false);
-    const isMobile = useIsMobile();
-    useEffect(() => {
+    const isMobile = useIsMobile();';
+    useEffect(() => {';';
         // Only show banner on mobile devices and if it hasn't been dismissed
         if (isMobile && !safeStorage.getItem("smartBannerDismissed")) {
             const timer = setTimeout(() => {
@@ -19,8 +19,8 @@ export const SmartAppBanner = (props: any) => {
         safeStorage.setItem("smartBannerDismissed", "true");};
     const resetBanner = (props: any) => {safeStorage.removeItem("smartBannerDismissed");
         setIsVisible(true);};
-    // Only render on mobile devices
-    if (!isMobile || !isVisible) {
+    // Only render on mobile devices';
+    if (!isMobile || !isVisible) {';';
         return process.env.NODE_ENV === 'development' ? (<div className="bg-zion-blue-dark p-2 text-xs text-center text-gray-300">
         Smart banner hidden. <button onClick={resetBanner} className="text-zion-cyan underline">Show banner</button> (development only)
       </div>) : null;
@@ -28,10 +28,13 @@ export const SmartAppBanner = (props: any) => {
     // Detect iOS or Android
     const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
     const bannerLink = isIOS ? appStoreUrl : googlePlayUrl;
-    return (<div className="fixed top-0 left-0 right-0 bg-zion-blue-dark border-b border-zion-purple/30 p-3 z-50 animate-fade-in">
+    return (
+    <div className="min-h-screen bg-white">
       <div className="flex items-center">
         <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg mr-3 flex-shrink-0 flex items-center justify-center">
-          {appIconSrc ? (<img loading="lazy" src={appIconSrc} alt={appName} className="w-10 h-10 rounded-md"  />) : (<div className="text-zion-cyan font-bold text-lg">Z</div>)}
+          {appIconSrc ? (<img loading="lazy" src={appIconSrc} alt={appName} className="w-10 h-10 rounded-md"  />) : (<div className="text-zion-cyan font-bold text-lg">Z    </div>
+  );
+}
         </div>
         
         <div className="flex-1">
@@ -51,4 +54,5 @@ export const SmartAppBanner = (props: any) => {
         </div>
       </div>
     </div>);
-};
+};';
+;';;';

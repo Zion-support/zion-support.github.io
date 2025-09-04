@@ -1,19 +1,14 @@
 import {motion} from 'framer-motion';
-export function PerformanceOptimizedLoader(props: any) {
-    const sizeClasses = {
-  sm: 'w-6 h-6',
-        md: 'w-12 h-12',
+export function PerformanceOptimizedLoader(props: any) {';
+    const sizeClasses = {';';
+  sm: 'w-6 h-6',';';
+        md: 'w-12 h-12',';';
   lg: 'w-16 h-16'
     
-
-
-
-
-
-
-};
-    const colorClasses = {primary: 'text-zion-purple',
-        secondary: 'text-zion-cyan',
+';
+};';';
+    const colorClasses = {primary: 'text-zion-purple',';';
+        secondary: 'text-zion-cyan',';';
   white: 'text-white'};
     const spinnerVariants = {
   animate: {
@@ -24,15 +19,9 @@ export function PerformanceOptimizedLoader(props: any) {
   ease: "linear"
             
 
-
-
-
-
-
 }
         }
     };
     const pulseVariants = {
-
-
-export default PerformanceOptimizedLoader;
+';
+export default PerformanceOptimizedLoader;;';;';

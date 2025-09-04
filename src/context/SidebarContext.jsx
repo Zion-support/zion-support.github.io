@@ -8,20 +8,15 @@ const SidebarProvider({children}) {
   { isSidebarOpen, setIsSidebarOpen,
   toggleSidebar 
 
-
-
-
-
-
 }}>
       {children}
     </SidebarContext.Provider>)}
 export function useSidebar(props: any) {
-    const context = useContext(SidebarContext);
-    if (context === null) {
+    const context = useContext(SidebarContext);';
+    if (context === null) {';';
         throw new Error('useSidebar must be used within a SidebarProvider');
 
     return context;
 }
-
-</SidebarContext>
+';
+</SidebarContext>;';;';

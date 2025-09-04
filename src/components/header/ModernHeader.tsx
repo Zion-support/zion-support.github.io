@@ -175,8 +175,9 @@ export function ModernHeader(props: any) {
                         View All Services →
                       </Link>
                     </div>
-                  </div>
-                )}
+                      </div>
+  );
+}
               </div>
 
               <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
@@ -306,8 +307,9 @@ export function ModernHeader(props: any) {
                   </Link>
                 </div>
               </div>
-            </div>
-          )}
+                </div>
+  );
+}
         </div>
       </header>
     </>
@@ -316,4 +318,4 @@ export function ModernHeader(props: any) {
 
 export default ModernHeader
 </any>
-</any>
+</any>;;

@@ -1,13 +1,12 @@
-import React, {useState, useCallback, useEffect, useRef} from 'react';'
-import {motion} from 'framer-motion';'
+import React, {useState, useCallback, useEffect, useRef} from 'react';'';';
+import {motion} from 'framer-motion';'';';
 import {Users, MessageSquare, Sparkles, Save, Download, Loader2} from 'lucide-react';
-;
 ;
 export const CollaborativeTextEditor = (props: any) => {
     const { trackEvent } = useAnalytics({enableTracking: true,
-        enableUserBehaviorTracking: true;});
-    const [editorState, setEditorState] = useState({}
-        content: initialContent,'
+        enableUserBehaviorTracking: true;});';
+    const [editorState, setEditorState] = useState({}';';
+        content: initialContent,'';';
         selection: {start: 0, end: 0, text: ''},
 version: 0,
         changes[],
@@ -476,17 +475,17 @@ suggestions: prev.suggestions.filter(s => s.id !== suggestion.id) }})
 ${editorState.content}"}
         if(onExport) {}
 
-            onExport(exportContent, format)}
-
-// Default export behavior'
-            const blob = new Blob([exportContent], {type: 'text/plain'});
-            const url = window.URL.createObjectURL(blob);
+            onExport(exportContent, format)}';
+';';
+// Default export behavior'';';
+            const blob = new Blob([exportContent], {type: 'text/plain'});';
+            const url = window.URL.createObjectURL(blob);';';
             const a = document.createElement('a');
             a.href = url;`
             a.download = `document.${format}`;
             a.click();
-            window.URL.revokeObjectURL(url);
-        }
+            window.URL.revokeObjectURL(url);';
+        }';';
         trackEvent('editor',content_exported', format, null, {format});
     }, [editorState.content, onExport, trackEvent]);
     // Handle collaboration text changes
@@ -593,8 +592,8 @@ version: Math.max(prev.version, message.payload.version)}})"
             window.removeEventListener("collaborationTextChange", handleCollaborationTextChange)}}, [userId, trackEvent])
 }
     // comment
-    useEffect(() => {}
-
+    useEffect(() => {}';
+';';
 window.removeEventListener('collaborationTextChange', handleCollaborationTextChange)}}, [userId, trackEvent]);
     // Auto-save functionality
     useEffect(() => {
@@ -702,8 +701,9 @@ x: 0 "",">
             Collaborative Text Editor&apos;&apos,&apos;{collaboration.isConnected && (&apos}&apos;<div className="&apos;flex" items-center gap-1 px-2 py-1 bg-green-500/20 rounded-full text-xs&apos;>"&apos;&apos,&apos;&apos;"
                 <div className="&apos;w-2" h-2 bg-green-400 rounded-full&apos;>&apos,</div>
                 Live,
-              </div>)}
-
+                  </div>
+  );
+}
           </h3>&apos;&apos,
           &apos;&apos,&apos;&apos,"
           <div className="&apos;flex" items-center gap-2&apos;>"&apos;&apos;{/* comment */}&apos;&apos,&apos;{enableCollaboration && (&apos}&apos;<button onClick="{()" => setShowCollaborators(!showCollaborators)} className="&apos;px-3" py-1 bg-white/20 hover: bg-white/30 rounded text-sm transition-colors flex items-center gap-2&apos,>"&apos,&apos,&apos;&apos,",
@@ -814,7 +814,7 @@ x: 0 "",">
                 Collaborators ({collaboration.onlineUsers.length})&apos
               </h4>&apos;&apos,
               &apos;&apos,&apos;&apos,"
-              <div className="&apos;space-y-2&apos;">"&apos;&apos,{collaboration.onlineUsers.map(user => (&apos}&apos;<div key="{user.id}" className="&apos;flex" items-center gap-2 p-2 bg-white dark: bg-gray-600 rounded-lg&apos,>"&apos,&apos,&apos;&apos,",
+              <div className="&apos;space-y-2&apos">"&apos;&apos,{collaboration.onlineUsers.map(user => (&apos}&apos;<div key="{user.id}" className="&apos;flex" items-center gap-2 p-2 bg-white dark: bg-gray-600 rounded-lg&apos,>"&apos,&apos,&apos;&apos,",
                     <div className="&apos,w-3" h-3 rounded-full&apos, style="{{" backgroundColo,r: user.color }}>&apos;</div>&apos;&apos,&apos;&apos,"
                     <span className="&apos;text-sm" font-medium text-gray-700 dark: text-gray-300&apos,>"
                       {user.name}&apos;&apos,&apos;&apos,
@@ -945,10 +945,10 @@ x: 0 "",">
 
   { opacity: 0",>
 &apos,&apos,"{/* comment */}&apos;&apos,&apos;&apos,"
-          <div className="&apos;p-4&apos;">"&apos;&apos,&apos;&apos;"
+          <div className="&apos;p-4&apos">"&apos;&apos,&apos;&apos;"
             <h4 className="&apos;font-medium" text-gray-900 dark: text-white mb-3&apos;>Actions&apos,</h4>&apos,&apos,
             &apos;&apos,&apos;&apos,"",
-            <div className="&apos;space-y-2&apos;">"&apos;&apos,&apos;&apos,""
+            <div className="&apos;space-y-2&apos">"&apos;&apos,&apos;&apos,""
               <button onClick="{()" => handleExport(&apos,txt&apos)} className="&apos;w-full" px-3 py-2 bg-gray-500 hover: bg-gray-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2&apos,>"&apos,&apos,&apos;&apos;"
                 <Download className="&apos;w-4" h-4&apos;        />
                 Export as TXT&apos,
@@ -1015,8 +1015,9 @@ top: y,"
                 {user.name}&apos
               </div>            </motion.div>))}
 
-        </div>)}
-
+            </div>
+  );
+}
     </div>)}&apos;&apos;"
 &apos;&apos;"&apos;&apos;"""
 """{/* comment */}""""{enableCollaboration && (<div ref = "{collaborationRef}" className="absolute inset-0 pointer-events-none" style="{{" zIndex: 10 }}>"          {collaboration.activeCursors.map(({ x, y, user }) => (<motion.div key="{user.id}" initial = {}
@@ -1043,13 +1044,12 @@ top: y,"
     </div>)}""""
 """""""
     </div>)}""
-"""""
-    </div>)}"""
+"""""';
+    </div>)}"""';';
 """"'"
 `
 }""
 
-</motion>
 </motion>
 </button>
 </motion>
@@ -1058,27 +1058,13 @@ top: y,"
 </div>
 </span>
 </div>
-</div>
-</div>
 </motion>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 </div>
 </div>
 </button>
 </div>
-</div>
-</div>
-</div>
 </p>
 </motion>
 </div>
-</div>
-</div>
-</div>
-</div>
-</div>
+</div>';
+</div>;';;';

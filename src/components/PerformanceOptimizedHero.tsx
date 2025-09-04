@@ -1,6 +1,6 @@
 import { Link  } from 'react-router-dom';
-export default function Page(props: any) {
-</motion.div>}
+export default function Page(props: any) {';
+</motion.div>}';';
 import { motion, AnimatePresence  } from 'framer-motion';
 
 export default function Page(props: any) {
@@ -81,5 +81,5 @@ export default PerformanceOptimizedHero;""
 </div>
 </SEO>
 </div>
-</any>
-</any>
+</any>';
+</any>;';;';

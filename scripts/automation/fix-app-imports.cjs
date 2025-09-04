@@ -6,18 +6,15 @@ const path = require('path');
 class AppImportsFixer {
   constructor() {
     this.projectRoot = process.cwd();
-    this.appPath = path.join(this.projectRoot, 'src/App.tsx');
-  }
+    this.appPath = path.join(this.projectRoot, 'src/App.tsx')}
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
+    console.log(`[${new Date().toISOString()}] ${message}`)}
 
   checkFileExports(filePath) {
     try {
       if (!fs.existsSync(filePath)) {
-        return { exists: false, hasDefault: false, hasNamed: [] };
-      }
+        return { exists: false, hasDefault: false, hasNamed: [] }}
 
       const content = fs.readFileSync(filePath, 'utf8');
       const hasDefault = content.includes('export default');
@@ -29,15 +26,11 @@ class AppImportsFixer {
         exportMatches.forEach(match => {
           const nameMatch = match.match(/export\s+(?:function|const|class)\s+(\w+)/);
           if (nameMatch) {
-            namedExports.push(nameMatch[1]);
-          }
-        });
-      }
+            namedExports.push(nameMatch[1])}
+        })}
 
-      return { exists: true, hasDefault, hasNamed: namedExports };
-    } catch (error) {
-      return { exists: false, hasDefault: false, hasNamed: [] };
-    }
+      return { exists: true, hasDefault, hasNamed: namedExports }} catch (error) {
+      return { exists: false, hasDefault: false, hasNamed: [] }}
   }
 
   fixAppImports() {
@@ -77,43 +70,33 @@ class AppImportsFixer {
       if (exports.exists) {
         let importStatement;
         if (exports.hasDefault) {
-          importStatement = `const ${page.name} = lazy(() => import('${page.path}').then(module => ({ default: module.default })));`;
-        } else if (exports.hasNamed.includes(page.name)) {
-          importStatement = `const ${page.name} = lazy(() => import('${page.path}').then(module => ({ default: module.${page.name} })));`;
-        } else if (exports.hasNamed.length > 0) {
+          importStatement = `const ${page.name} = lazy(() => import('${page.path}').then(module => ({ default: module.default })));`} else if (exports.hasNamed.includes(page.name)) {
+          importStatement = `const ${page.name} = lazy(() => import('${page.path}').then(module => ({ default: module.${page.name} })));`} else if (exports.hasNamed.length > 0) {
           // Use the first named export
-          importStatement = `const ${page.name} = lazy(() => import('${page.path}').then(module => ({ default: module.${exports.hasNamed[0]} })));`;
-        } else {
+          importStatement = `const ${page.name} = lazy(() => import('${page.path}').then(module => ({ default: module.${exports.hasNamed[0]} })));`} else {
           // Fallback to default
-          importStatement = `const ${page.name} = lazy(() => import('${page.path}').then(module => ({ default: module.default || module.${page.name} })));`;
-        }
+          importStatement = `const ${page.name} = lazy(() => import('${page.path}').then(module => ({ default: module.default || module.${page.name} })));`}
         
         // Replace the import statement
         const regex = new RegExp(`const ${page.name} = lazy\\(.*?\\);`, 'g');
         content = content.replace(regex, importStatement);
         
-        this.log(`Fixed import for ${page.name}: ${exports.hasDefault ? 'default' : 'named'} export`);
-      } else {
-        this.log(`Warning: ${page.path}.tsx does not exist`);
-      }
+        this.log(`Fixed import for ${page.name}: ${exports.hasDefault ? 'default' : 'named'} export`)} else {
+        this.log(`Warning: ${page.path}.tsx does not exist`)}
     });
 
     // Write the fixed content back
     fs.writeFileSync(this.appPath, content);
-    this.log('App.tsx imports fixed successfully!');
-  }
+    this.log('App.tsx imports fixed successfully!')}
 
   async run() {
     this.log('Starting App Imports Fixer...');
     
     try {
       this.fixAppImports();
-      this.log('App Imports Fixer completed successfully!');
-      
-    } catch (error) {
+      this.log('App Imports Fixer completed successfully!')} catch (error) {
       this.log(`Error in App Imports Fixer: ${error.message}`);
-      throw error;
-    }
+      throw error}
   }
 }
 
@@ -123,12 +106,9 @@ if (require.main === module) {
   automation.run()
     .then(() => {
       console.log('App Imports Fixer completed successfully!');
-      process.exit(0);
-    })
+      process.exit(0)})
     .catch(error => {
       console.error('App Imports Fixer failed:', error);
-      process.exit(1);
-    });
-}
+      process.exit(1)})}
 
 module.exports = AppImportsFixer;

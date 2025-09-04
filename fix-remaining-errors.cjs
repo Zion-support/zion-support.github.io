@@ -23,8 +23,7 @@ function fixRemainingErrors(content) {
   // Fix missing commas in function parameters
   content = content.replace(/(\w+)\s*\n\s*(\w+):/g, '$1,\n    $2:');
   
-  return content;
-}
+  return content}
 
 // Function to process a file
 function processFile(filePath) {
@@ -34,11 +33,9 @@ function processFile(filePath) {
     
     if (content !== fixedContent) {
       fs.writeFileSync(filePath, fixedContent);
-      console.log(`Fixed: ${filePath}`);
-    }
+      console.log(`Fixed: ${filePath}`)}
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-  }
+    console.error(`Error processing ${filePath}:`, error.message)}
 }
 
 // Function to recursively find and process files
@@ -50,10 +47,8 @@ function processDirectory(dirPath) {
     const stat = fs.statSync(filePath);
     
     if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-      processDirectory(filePath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
-      processFile(filePath);
-    }
+      processDirectory(filePath)} else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
+      processFile(filePath)}
   }
 }
 

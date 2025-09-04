@@ -12,8 +12,7 @@ class GitWorkflow {
   constructor() {
     this.branch = 'main';
     this.changes = [];
-    this.reports = [];
-  }
+    this.reports = []}
 
   log(message, type = 'INFO') {
     const icons = {
@@ -23,18 +22,15 @@ class GitWorkflow {
       WARNING: '⚠️',
       PROGRESS: '🔄'
     };
-    console.log(`${icons[type] || ''} ${message}`);
-  }
+    console.log(`${icons[type] || ''} ${message}`)}
 
   checkGitRepository() {
     const isRepo = fs.existsSync(path.join(process.cwd(), '.git'));
     if (!isRepo) {
       this.log('Not in a git repository', 'WARNING');
-      return false;
-    }
+      return false}
     this.log('Git repository found', 'SUCCESS');
-    return true;
-  }
+    return true}
 
   generateCommitMessage() {
     const timestamp = new Date().toISOString();
@@ -45,8 +41,7 @@ class GitWorkflow {
       'Improved security configurations',
       'Performance optimizations'
     ];
-    return `${changes.join(', ')} - ${timestamp}`;
-  }
+    return `${changes.join(', ')} - ${timestamp}`}
 
   createGitIgnore() {
     const gitignorePath = path.join(process.cwd(), '.gitignore');
@@ -114,10 +109,8 @@ security-reports/`;
 
     if (!fs.existsSync(gitignorePath)) {
       fs.writeFileSync(gitignorePath, gitignoreContent);
-      this.log('Created .gitignore file', 'SUCCESS');
-    } else {
-      this.log('.gitignore already exists', 'INFO');
-    }
+      this.log('Created .gitignore file', 'SUCCESS')} else {
+      this.log('.gitignore already exists', 'INFO')}
   }
 
   createReadme() {
@@ -217,10 +210,8 @@ MIT License - see LICENSE file for details`;
 
     if (!fs.existsSync(readmePath)) {
       fs.writeFileSync(readmePath, readmeContent);
-      this.log('Created README-AUTOMATION.md', 'SUCCESS');
-    } else {
-      this.log('README-AUTOMATION.md already exists', 'INFO');
-    }
+      this.log('Created README-AUTOMATION.md', 'SUCCESS')} else {
+      this.log('README-AUTOMATION.md already exists', 'INFO')}
   }
 
   createPackageJsonScripts() {
@@ -228,8 +219,7 @@ MIT License - see LICENSE file for details`;
       const packageJsonPath = path.join(process.cwd(), 'package.json');
       if (!fs.existsSync(packageJsonPath)) {
         this.log('No package.json found, skipping script updates', 'WARNING');
-        return;
-      }
+        return}
       const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
       packageJson.scripts = packageJson.scripts || {};
 
@@ -247,19 +237,15 @@ MIT License - see LICENSE file for details`;
       Object.keys(newScripts).forEach(script => {
         if (!packageJson.scripts[script]) {
           packageJson.scripts[script] = newScripts[script];
-          updated = true;
-        }
+          updated = true}
       });
 
       if (updated) {
         fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
-        this.log('Updated package.json with automation scripts', 'SUCCESS');
-      } else {
-        this.log('Package.json already has automation scripts', 'INFO');
-      }
+        this.log('Updated package.json with automation scripts', 'SUCCESS')} else {
+        this.log('Package.json already has automation scripts', 'INFO')}
     } catch (error) {
-      this.log(`Error updating package.json: ${error.message}`, 'ERROR');
-    }
+      this.log(`Error updating package.json: ${error.message}`, 'ERROR')}
   }
 
   generateGitCommands() {
@@ -286,8 +272,7 @@ echo "✅ Git workflow completed successfully"`;
 
     fs.writeFileSync('git-workflow.sh', scriptContent);
     fs.chmodSync('git-workflow.sh', '755');
-    this.log('Created git-workflow.sh script', 'SUCCESS');
-  }
+    this.log('Created git-workflow.sh script', 'SUCCESS')}
 
   generateReport() {
     const report = {
@@ -307,8 +292,7 @@ echo "✅ Git workflow completed successfully"`;
     fs.writeFileSync('git-workflow-report.json', JSON.stringify(report, null, 2));
     this.log('📊 Git Workflow Report Generated', 'SUCCESS');
     this.log('📝 Files created and updated', 'SUCCESS');
-    this.log('🚀 Ready for git operations', 'SUCCESS');
-  }
+    this.log('🚀 Ready for git operations', 'SUCCESS')}
 
   async run() {
     this.log('🔄 Starting Git Workflow Automation...', 'PROGRESS');
@@ -317,8 +301,7 @@ echo "✅ Git workflow completed successfully"`;
     this.createPackageJsonScripts();
     this.generateGitCommands();
     this.generateReport();
-    this.log('✅ Git Workflow Automation Completed', 'SUCCESS');
-  }
+    this.log('✅ Git Workflow Automation Completed', 'SUCCESS')}
 }
 
 // Run the git workflow
@@ -326,9 +309,7 @@ if (require.main === module) {
   const workflow = new GitWorkflow();
   workflow.run().catch(error => {
     console.error('Git workflow failed:', error);
-    process.exit(1);
-  });
-}
+    process.exit(1)})}
 
 module.exports = GitWorkflow;
 

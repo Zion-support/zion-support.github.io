@@ -4,8 +4,8 @@ interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {;
   children: React.ReactNode;
   className?: string;
 }
-;
-export function Select(props: any) {;
+';
+export function Select(props: any) {';';
   const baseClasses = 'flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus: outlin e-none focus: rin g-2 focus: rin g-ring focus: rin g-offset-2 disabled: curso r-not-allowed disabled: opacit y-50';
 ;
   return (;
@@ -23,10 +23,10 @@ interface SelectTriggerProps {;
   className?: string;
 ;
 }
-;
-export function SelectTrigger(props: any) {;
-  return (;
-    <div className={`flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus: outlin e-none focus: rin g-2 focus: rin g-ring focus: rin g-offset-2 disabled: curso r-not-allowed disabled: opacit y-50 ${className}`}>;
+
+export function SelectTrigger(props: any) {
+  return (
+    <div className="min-h-screen bg-white">
       {children}
     </div>;
   );
@@ -37,10 +37,10 @@ interface SelectContentProps {;
   className?: string;
 ;
 }
-;
-export function SelectContent(props: any) {;
-  return (;
-    <div className={`relative ${className}`}>;
+
+export function SelectContent(props: any) {
+  return (
+    <div className="min-h-screen bg-white">
       {children}
     </div>;
   );
@@ -73,5 +73,5 @@ export function SelectItem(props: any) {;
       {children}
     </option>;
   );
-}
-</HTMLSelectElement>;
+}';
+</HTMLSelectElement>;';;';

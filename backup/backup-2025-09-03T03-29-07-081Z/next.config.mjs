@@ -55,8 +55,7 @@ const nextConfig = {
       tls: false,
     };
     
-    return config;
-  },
+    return config},
   pageExtensions: ["tsx", "ts", "jsx", "js"],
   onDemandEntries: {
     maxInactiveAge: 25 * 1000,

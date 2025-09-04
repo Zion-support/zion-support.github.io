@@ -15,69 +15,58 @@ class ErrorDetectionMonitor {
     // Ensure directories exist
     [this.reportsDir, this.logsDir].forEach(dir => {
       if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { recursive: true });
-      }
+        fs.mkdirSync(dir, { recursive: true })}
     });
     
     this.errorHistory = [];
-    this.lastCheck = null;
-  }
+    this.lastCheck = null}
 
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${level}] ${message}`);
-  }
+    console.log(`[${timestamp}] [${level}] ${message}`)}
 
   async runTypeScriptCheck() {
     try {
       this.log('Running TypeScript type check...');
       execSync('npm run type-check', { stdio: 'pipe' });
-      return { success: true, errors: [], count: 0 };
-    } catch (error) {
+      return { success: true, errors: [], count: 0 }} catch (error) {
       const output = error.stdout?.toString() || error.stderr?.toString() || '';
       const errors = this.parseTypeScriptErrors(output);
       this.log(`TypeScript check failed with ${errors.length} errors`, 'ERROR');
-      return { success: false, errors, count: errors.length };
-    }
+      return { success: false, errors, count: errors.length }}
   }
 
   async runLintCheck() {
     try {
       this.log('Running ESLint check...');
       execSync('npm run lint', { stdio: 'pipe' });
-      return { success: true, errors: [], count: 0 };
-    } catch (error) {
+      return { success: true, errors: [], count: 0 }} catch (error) {
       const output = error.stdout?.toString() || error.stderr?.toString() || '';
       const errors = this.parseLintErrors(output);
       this.log(`ESLint check failed with ${errors.length} errors`, 'ERROR');
-      return { success: false, errors, count: errors.length };
-    }
+      return { success: false, errors, count: errors.length }}
   }
 
   async runBuildCheck() {
     try {
       this.log('Running build check...');
       execSync('npm run build', { stdio: 'pipe' });
-      return { success: true, errors: [], count: 0 };
-    } catch (error) {
+      return { success: true, errors: [], count: 0 }} catch (error) {
       const output = error.stdout?.toString() || error.stderr?.toString() || '';
       const errors = this.parseBuildErrors(output);
       this.log(`Build check failed with ${errors.length} errors`, 'ERROR');
-      return { success: false, errors, count: errors.length };
-    }
+      return { success: false, errors, count: errors.length }}
   }
 
   async runDependencyCheck() {
     try {
       this.log('Running dependency check...');
       execSync('npm audit --audit-level=moderate', { stdio: 'pipe' });
-      return { success: true, errors: [], count: 0 };
-    } catch (error) {
+      return { success: true, errors: [], count: 0 }} catch (error) {
       const output = error.stdout?.toString() || error.stderr?.toString() || '';
       const errors = this.parseDependencyErrors(output);
       this.log(`Dependency check failed with ${errors.length} errors`, 'ERROR');
-      return { success: false, errors, count: errors.length };
-    }
+      return { success: false, errors, count: errors.length }}
   }
 
   parseTypeScriptErrors(output) {
@@ -89,8 +78,7 @@ class ErrorDetectionMonitor {
       type: 'typescript',
       message: line.trim(),
       severity: 'error'
-    }));
-  }
+    }))}
 
   parseLintErrors(output) {
     const errorLines = output.split('\n').filter(line => 
@@ -101,8 +89,7 @@ class ErrorDetectionMonitor {
       type: 'eslint',
       message: line.trim(),
       severity: 'error'
-    }));
-  }
+    }))}
 
   parseBuildErrors(output) {
     const errorLines = output.split('\n').filter(line => 
@@ -113,8 +100,7 @@ class ErrorDetectionMonitor {
       type: 'build',
       message: line.trim(),
       severity: 'error'
-    }));
-  }
+    }))}
 
   parseDependencyErrors(output) {
     const errorLines = output.split('\n').filter(line => 
@@ -125,8 +111,7 @@ class ErrorDetectionMonitor {
       type: 'dependency',
       message: line.trim(),
       severity: 'warning'
-    }));
-  }
+    }))}
 
   async checkForErrors() {
     this.log('Starting comprehensive error detection...');
@@ -145,11 +130,9 @@ class ErrorDetectionMonitor {
       try {
         const result = await check.check();
         results[check.name] = result;
-        totalErrors += result.count;
-      } catch (error) {
+        totalErrors += result.count} catch (error) {
         this.log(`Error running ${check.name} check: ${error.message}`, 'ERROR');
-        results[check.name] = { success: false, errors: [], count: 0 };
-      }
+        results[check.name] = { success: false, errors: [], count: 0 }}
     }
 
     const errorReport = {
@@ -167,8 +150,7 @@ class ErrorDetectionMonitor {
     // Update error history
     this.errorHistory.push(errorReport);
     if (this.errorHistory.length > 100) {
-      this.errorHistory = this.errorHistory.slice(-100);
-    }
+      this.errorHistory = this.errorHistory.slice(-100)}
 
     // Save error history
     const historyPath = path.join(this.reportsDir, 'error-history.json');
@@ -178,13 +160,10 @@ class ErrorDetectionMonitor {
 
     if (totalErrors > this.errorThreshold) {
       this.log(`ERROR THRESHOLD EXCEEDED: ${totalErrors} errors found (threshold: ${this.errorThreshold})`, 'CRITICAL');
-      this.triggerErrorAlert(errorReport);
-    } else {
-      this.log(`Error check completed: ${totalErrors} errors found (threshold: ${this.errorThreshold})`, 'INFO');
-    }
+      this.triggerErrorAlert(errorReport)} else {
+      this.log(`Error check completed: ${totalErrors} errors found (threshold: ${this.errorThreshold})`, 'INFO')}
 
-    return errorReport;
-  }
+    return errorReport}
 
   triggerErrorAlert(errorReport) {
     this.log('Triggering error alert...', 'WARN');
@@ -200,8 +179,7 @@ class ErrorDetectionMonitor {
     // Log critical error
     const criticalLogPath = path.join(this.logsDir, 'critical-errors.log');
     const logEntry = `[${new Date().toISOString()}] CRITICAL: ${errorReport.totalErrors} errors detected\n`;
-    fs.appendFileSync(criticalLogPath, logEntry);
-  }
+    fs.appendFileSync(criticalLogPath, logEntry)}
 
   async startMonitoring() {
     this.log('Starting error detection monitor...');
@@ -212,14 +190,11 @@ class ErrorDetectionMonitor {
     // Set up periodic checking
     setInterval(async () => {
       try {
-        await this.checkForErrors();
-      } catch (error) {
-        this.log(`Error in periodic check: ${error.message}`, 'ERROR');
-      }
+        await this.checkForErrors()} catch (error) {
+        this.log(`Error in periodic check: ${error.message}`, 'ERROR')}
     }, this.checkInterval);
 
-    this.log(`Error detection monitor started. Checking every ${this.checkInterval / 1000} seconds.`);
-  }
+    this.log(`Error detection monitor started. Checking every ${this.checkInterval / 1000} seconds.`)}
 
   getStatus() {
     return {
@@ -228,8 +203,7 @@ class ErrorDetectionMonitor {
       errorHistory: this.errorHistory.length,
       threshold: this.errorThreshold,
       checkInterval: this.checkInterval
-    };
-  }
+    }}
 }
 
 // Main execution
@@ -239,19 +213,15 @@ if (require.main === module) {
   // Handle graceful shutdown
   process.on('SIGINT', () => {
     monitor.log('Shutting down error detection monitor...');
-    process.exit(0);
-  });
+    process.exit(0)});
 
   process.on('SIGTERM', () => {
     monitor.log('Shutting down error detection monitor...');
-    process.exit(0);
-  });
+    process.exit(0)});
 
   // Start monitoring
   monitor.startMonitoring().catch(error => {
     monitor.log(`Failed to start monitoring: ${error.message}`, 'ERROR');
-    process.exit(1);
-  });
-}
+    process.exit(1)})}
 
 module.exports = ErrorDetectionMonitor;

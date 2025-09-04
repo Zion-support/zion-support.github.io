@@ -3,15 +3,79 @@
 const fs = require('fs');
 const path = require('path');
 
-console.log('🔧 Fixing remaining syntax errors...');
-
-// Fix specific files with known issues
-const filesToFix = [
-    'src/components/SEO.tsx',
-    'src/components/ui/button.tsx',
-    'src/components/ui/card.tsx',
-    'src/components/ui/input.tsx',
-    'src/components/talent/TalentCard.jsx'
+// Final targeted fixes for remaining syntax errors
+const fixes = [
+  // Fix missing semicolons in import statements
+  {
+    pattern: /import\s*{\s*([^}]+)\s*}\s*from\s*'([^']+)'\s*$/gm,
+    replacement: 'import { $1 } from \'$2\';'
+  },
+  
+  // Fix malformed import statements
+  {
+    pattern: /import\s*{\s*([^}]+)\s*}\s*from\s*'([^']+)'\s*export\s*default\s*function/g,
+    replacement: 'import { $1 } from \'$2\';\n\nexport default function'
+  },
+  
+  // Fix missing semicolons after import statements
+  {
+    pattern: /import\s+([^]+)\s*$/gm,
+    replacement: 'import $1;'
+  },
+  
+  // Fix unterminated string literals
+  {
+    pattern: /'([^']*)\s*$/gm,
+    replacement: '\'$1\';'
+  },
+  
+  // Fix malformed function declarations
+  {
+    pattern: /export\s*default\s*function\s*(\w+)\s*\(\s*\)\s*{\s*$/gm,
+    replacement: 'export default function $1() {\n  return ('
+  },
+  
+  // Fix missing closing brackets and parentheses
+  {
+    pattern: /return\s*\(\s*<div[^>]*>\s*$/gm,
+    replacement: 'return (\n    <div className="min-h-screen bg-white">'
+  },
+  
+  // Fix malformed JSX attributes
+  {
+    pattern: /className="([^"]*);\s*"/g,
+    replacement: 'className="$1"'
+  },
+  
+  // Fix missing semicolons in object properties
+  {
+    pattern: /(\w+):\s*'([^']*)',\s*;/g,
+    replacement: '$1: \'$2\','
+  },
+  
+  // Fix malformed return statements
+  {
+    pattern: /return\s*\(\s*<div";"/g,
+    replacement: 'return (\n    <div className="min-h-screen bg-white">'
+  },
+  
+  // Fix duplicated content (remove duplicate lines)
+  {
+    pattern: /^(.*)\n\1$/gm,
+    replacement: '$1'
+  },
+  
+  // Fix missing closing brackets in arrays
+  {
+    pattern: /(\[.*?);\s*\]\s*},/g,
+    replacement: '$1\n  ]\n},'
+  },
+  
+  // Fix malformed JSX closing tags
+  {
+    pattern: /<\/div>\s*\)\s*}\s*$/gm,
+    replacement: '    </div>\n  );\n}'
+  }
 ];
 
 function fixFile(filePath) {
@@ -28,132 +92,41 @@ function fixFile(filePath) {
     content = content.replace(/;\s*$/gm, '');
     content = content.replace(/^\s*;\s*$/gm, '');
     
-    // Fix malformed interface declarations
-    content = content.replace(/interface\s+(\w+)\s*\{;/g, 'interface $1 {');
-    
-    // Fix malformed function declarations
-    content = content.replace(/export\s+function\s+(\w+)\(props:\s*any\)\s*\{;/g, 'export function $1(props) {');
-    content = content.replace(/export\s+default\s+function\s+(\w+)\(props:\s*any\)\s*\{\}/g, 'export default function $1(props) {');
-    
-    // Fix malformed return statements
-    content = content.replace(/return\s*\(;/g, 'return (');
-    content = content.replace(/return\s*\(\s*<div[^>]*>\s*;\s*$/gm, 'return (\n    <div>');
-    
-    // Fix malformed JSX
-    content = content.replace(/<\/HTMLDivElement>/g, '');
-    content = content.replace(/<\/HTMLInputElement>/g, '');
-    content = content.replace(/<\/HTMLParagraphElement>/g, '');
-    content = content.replace(/<\/h3>/g, '');
-    
-    // Fix malformed object destructuring
-    content = content.replace(/const\s+\{\s*([^}]+)\s*\}\s*=\s*useAuth\(\);\s*const\s+\[([^\]]+)\]\s*=\s*useState\(\[\]\);\s*const\s+\[([^\]]+)\]\s*=\s*useState\(true\);\s*const\s+navigate\s*=\s*useNavigate\(\);\s*useEffect\(\(\)\s*=>\s*\{[^}]*\},\s*\[user\]\);\s*const\s+handleRequestHire\s*=\s*\([^)]*\)\s*=>\s*\{[^}]*\};\s*return\s*\(<div[^>]*>([^<]*)<\/div>\);\s*}/g, (match, user, savedTalents, isLoading, content) => {
-        return `const { ${user} } = useAuth();
-    const [${savedTalents}] = useState([]);
-    const [${isLoading}] = useState(true);
-    const navigate = useNavigate();
-    
-    useEffect(() => {
-        const fetchSavedTalents = async () => {
-            if (!user) return;
-            try {
-                setIsLoading(true);
-                // Fetch saved talents logic here
-            } catch (error) {
-                console.error('Error fetching saved talents:', error);
-            } finally {
-                setIsLoading(false);
-            }
-        };
-        fetchSavedTalents();
-    }, [user]);
-    
-    const handleRequestHire = (talentId) => {
-        // Handle hire request logic here
-    };
-    
-    return (
-        <div className="min-h-screen bg-gray-50">
-            ${content}
-        </div>
-    );`;
+    fixes.forEach(fix => {
+      const newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true}
     });
+    
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true}
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message)}
+  return false}
 
-    // Fix malformed CSS classes
-    content = content.replace(/focus-visible:\s*outlin\s*e-none/g, 'focus-visible:outline-none');
-    content = content.replace(/focus-visible:\s*rin\s*g-2/g, 'focus-visible:ring-2');
-    content = content.replace(/focus-visible:\s*rin\s*g-ring/g, 'focus-visible:ring-ring');
-    content = content.replace(/focus-visible:\s*rin\s*g-offset-2/g, 'focus-visible:ring-offset-2');
-    content = content.replace(/disabled:\s*opacit\s*y-50/g, 'disabled:opacity-50');
-    content = content.replace(/disabled:\s*pointe\s*r-events-none/g, 'disabled:pointer-events-none');
-    content = content.replace(/hover:\s*b\s*g-primary\/90/g, 'hover:bg-primary/90');
-
-    // Fix malformed function calls
-    content = content.replace(/const\s+handleBook\s*=\s*e\s*=>\s*\{\}/g, 'const handleBook = (e) => {');
-    content = content.replace(/e\.preventDefault\(\);\s*$/gm, 'e.preventDefault();\n  }');
-
-    // Fix malformed JSX attributes
-    content = content.replace(/className=\{\`([^`]+)\`\}/g, (match, className) => {
-        return `className={\`${className.replace(/\s+/g, ' ').trim()}\`}`;
-    });
-
-    // Fix malformed object properties
-    content = content.replace(/const\s+variantClasses\s*=\s*\{;/g, 'const variantClasses = {');
-    content = content.replace(/default:\s*'([^']+)',;/g, "default: '$1',");
-
-    // Fix malformed return statements in functions
-    content = content.replace(/return\s*\(\s*<div[^>]*>\s*;\s*<div[^>]*>\s*<div[^>]*><\/div>\s*<div[^>]*>\s*<div[^>]*>\s*<h1[^>]*>([^<]*)<\/h1>\s*<\/div>\s*<p[^>]*>([^<]*)<\/p>\s*<p[^>]*>([^<]*)<\/p>\s*<div[^>]*>\s*<Link[^>]*>([^<]*)<\/Link>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*\)/g, (match, title, desc1, desc2, linkText) => {
-        return `return (
-        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
-            <div className="relative overflow-hidden">
-                <div className="absolute inset-0 bg-black/20"></div>
-                <div className="relative z-10 container mx-auto px-4 py-20 text-center text-white">
-                    <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-                        ${title}
-                    </h1>
-                    <p className="text-xl md:text-2xl mb-8 text-zion-cyan-light max-w-4xl mx-auto">
-                        ${desc1}
-                    </p>
-                    <p className="text-lg text-zion-cyan-light mb-12 max-w-3xl mx-auto">
-                        ${desc2}
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Link href="/contact" className="bg-zion-cyan text-zion-blue-dark px-8 py-4 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">
-                            ${linkText}
-                        </Link>
-                    </div>
-                </div>
-            </div>
-        </div>
-    );`;
-    });
-
-    // Count fixes
-    const originalContent = fs.readFileSync(filePath, 'utf8');
-    if (content !== originalContent) {
-        fixes = (originalContent.match(/;\s*;/g) || []).length + 
-                (originalContent.match(/interface\s+\w+\s*\{;/g) || []).length +
-                (originalContent.match(/export\s+function\s+\w+\(props:\s*any\)\s*\{;/g) || []).length +
-                (originalContent.match(/<\/HTMLDivElement>/g) || []).length +
-                (originalContent.match(/<\/HTMLInputElement>/g) || []).length +
-                (originalContent.match(/<\/HTMLParagraphElement>/g) || []).length +
-                (originalContent.match(/<\/h3>/g) || []).length;
+function walkDirectory(dir) {
+  let fixedCount = 0;
+  
+  try {
+    const files = fs.readdirSync(dir);
+    
+    for (const file of files) {
+      const filePath = path.join(dir, file);
+      const stat = fs.statSync(filePath);
+      
+      if (stat.isDirectory()) {
+        fixedCount += walkDirectory(filePath)} else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
+        if (fixFile(filePath)) {
+          fixedCount++}
+      }
     }
-
-    if (fixes > 0) {
-        fs.writeFileSync(filePath, content, 'utf8');
-        console.log(`✅ Fixed ${fixes} issues in ${filePath}`);
-    } else {
-        console.log(`✨ No issues found in ${filePath}`);
-    }
-
-    return fixes;
-}
-
-// Process all files
-let totalFixes = 0;
-filesToFix.forEach(file => {
-    totalFixes += fixFile(file);
-});
+  } catch (error) {
+    console.error(`Error reading directory ${dir}:`, error.message)}
+  
+  return fixedCount}
 
 console.log(`\n📊 Summary:`);
 console.log(`   Files processed: ${filesToFix.length}`);

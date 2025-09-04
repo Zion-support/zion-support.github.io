@@ -12,8 +12,8 @@ export const ScreenshotManager = (props: any) => {
             addScreenshots(Array.from(e.target.files));
         }
     };
-    const addScreenshots = (props: any) => {
-        // Filter for image files only
+    const addScreenshots = (props: any) => {';
+        // Filter for image files only';';
         const imageFiles = files.filter(file => file.type.startsWith('image/'));
         if (imageFiles.length === 0) {
             toast.error("Please select valid image files");
@@ -89,4 +89,5 @@ export const ScreenshotManager = (props: any) => {
         </div>
       </CardContent>
     </Card>);
-};
+};';
+;';;';

@@ -8,12 +8,10 @@ class SecurityFixer {
   constructor() {
     this.projectRoot = process.cwd();
     this.reportFile = path.join(this.projectRoot, 'security-fix-report.json');
-    this.fixes = [];
-  }
+    this.fixes = []}
 
   log(message) {
-    console.log(`[Security Fixer] ${message}`);
-  }
+    console.log(`[Security Fixer] ${message}`)}
 
   async runSecurityFixes() {
     this.log('🔒 Starting Security Fixes');
@@ -31,10 +29,8 @@ class SecurityFixer {
       // Generate security report
       await this.generateReport();
       
-      this.log('✅ Security fixes completed');
-    } catch (error) {
-      this.log(`❌ Security fixes failed: ${error.message}`);
-    }
+      this.log('✅ Security fixes completed')} catch (error) {
+      this.log(`❌ Security fixes failed: ${error.message}`)}
   }
 
   async fixDependencyVulnerabilities() {
@@ -45,15 +41,13 @@ class SecurityFixer {
         type: 'dependency',
         action: 'npm audit fix',
         status: 'success'
-      });
-    } catch (error) {
+      })} catch (error) {
       this.fixes.push({
         type: 'dependency',
         action: 'npm audit fix',
         status: 'failed',
         error: error.message
-      });
-    }
+      })}
   }
 
   async fixXSSRisks() {
@@ -70,8 +64,7 @@ class SecurityFixer {
             /import React from 'react';/,
             `import React from 'react';
 import DOMPurify from 'dompurify';`
-          );
-        }
+          )}
         
         // Sanitize HTML content
         content = content.replace(
@@ -86,16 +79,14 @@ import DOMPurify from 'dompurify';`
           file: 'SEOEnhancer.tsx',
           action: 'Added DOMPurify sanitization',
           status: 'success'
-        });
-      } catch (error) {
+        })} catch (error) {
         this.fixes.push({
           type: 'xss',
           file: 'SEOEnhancer.tsx',
           action: 'Added DOMPurify sanitization',
           status: 'failed',
           error: error.message
-        });
-      }
+        })}
     }
   }
 
@@ -109,13 +100,11 @@ import DOMPurify from 'dompurify';`
         
         // Remove eval usage
         if (content.includes('eval(')) {
-          content = content.replace(/eval\([^)]+\)/g, '/* eval removed for security */');
-        }
+          content = content.replace(/eval\([^)]+\)/g, '/* eval removed for security */')}
         
         // Remove Function constructor usage
         if (content.includes('new Function(')) {
-          content = content.replace(/new Function\([^)]+\)/g, '/* Function constructor removed for security */');
-        }
+          content = content.replace(/new Function\([^)]+\)/g, '/* Function constructor removed for security */')}
         
         fs.writeFileSync(helpersPath, content);
         
@@ -124,16 +113,14 @@ import DOMPurify from 'dompurify';`
           file: 'helpers.js',
           action: 'Removed eval and Function constructor',
           status: 'success'
-        });
-      } catch (error) {
+        })} catch (error) {
         this.fixes.push({
           type: 'code-injection',
           file: 'helpers.js',
           action: 'Removed eval and Function constructor',
           status: 'failed',
           error: error.message
-        });
-      }
+        })}
     }
   }
 
@@ -149,8 +136,7 @@ import DOMPurify from 'dompurify';`
     };
     
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-    this.log(`📊 Security fix report generated: ${this.reportFile}`);
-  }
+    this.log(`📊 Security fix report generated: ${this.reportFile}`)}
 }
 
 // Run the security fixer

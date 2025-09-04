@@ -39,7 +39,3 @@ threshold = 0.1} = options; const metricsRef: useRe f<PerformanceMetrics>({; loa
 }
 </PerformanceMetrics>
 </PerformanceMetrics>
-</PerformanceMetrics>
-</PerformanceMetrics>
-</PerformanceMetrics>
-</PerformanceMetrics>

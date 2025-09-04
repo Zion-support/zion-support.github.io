@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react';';';
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 ;
 export default function Page(props: any) {;
@@ -27,63 +27,72 @@ autoAnalyze: tru e,;
   onAnalysisComplete}) => {;
   const [analysis, setAnalysis] = useState<SEOAnalysis | null>(null);
   const [isAnalyzing, setIsAnalyzing] = useState<any>(false);
-  const [currentUrl, setCurrentUrl] = useState<any>(url || window.location.href);
-  const [showAdvanced, setShowAdvanced] = useState<any>(false);
+  const [currentUrl, setCurrentUrl] = useState<any>(url || window.location.href);';
+  const [showAdvanced, setShowAdvanced] = useState<any>(false);';';
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
-;
-  // Mock SEO analysis data(in real app, this would come from actual analysis);
-  const mockAnalysis: SEOAnalysi s = useMemo(() => ({;
-    score: 8 7,;
-    issues[ {;
-        id: '1',;
-        type: 'warning',;
-        title: 'Missing Meta Description',;
-        description: 'The page is missing a meta description tag, which is important for search engine snippets.',;
-        impact: 'medium',;
-        fixable: tru e,;
-        category: 'content';
-      },;
-      {;
-        id: '2',;
-        type: 'error',;
-        title: 'Slow Page Load Time',;
-        description: 'Page load time is above the recommended 3-second threshold.',;
-        impact: 'high',;
-        fixable: tru e,;
-        category: 'performance';
-      },;
-      {;
-        id: '3',;
-        type: 'info',;
-        title: 'Missing Alt Text',;
-        description: 'Some images are missing alt text, which affects accessibility.',;
-        impact: 'low',;
-        fixable: tru e,;
-        category: 'accessibility';
+
+  // Mock SEO analysis data(in real app, this would come from actual analysis)
+  const mockAnalysis: SEOAnalysi s = useMemo(() => ({
+
+    score: 8 7,
+    issues[ {';
+';';
+        id: '1',';';
+        type: 'warning',';';
+        title: 'Missing Meta Description',';';
+        description: 'The page is missing a meta description tag, which is important for search engine snippets.',';';
+        impact: 'medium',';
+        fixable: tru e,';';
+        category: 'content'
+      },
+      {';
+';';
+        id: '2',';';
+        type: 'error',';';
+        title: 'Slow Page Load Time',';';
+        description: 'Page load time is above the recommended 3-second threshold.',';';
+        impact: 'high',';
+        fixable: tru e,';';
+        category: 'performance'
+      },
+      {';
+';';
+        id: '3',';';
+        type: 'info',';';
+        title: 'Missing Alt Text',';';
+        description: 'Some images are missing alt text, which affects accessibility.',';';
+        impact: 'low',';
+        fixable: tru e,';';
+        category: 'accessibility'
+
     ],;
-    suggestions[ {;
-        id: '1',;
-        title: 'Optimize Images',;
-        description: 'Compress and optimize images to improve page load speed.',;
-        priority: 'high',;
-        effort: 'medium',;
-        estimatedImpact: 1 5;
-      },;
-      {;
-        id: '2',;
-        title: 'Add Schema Markup',;
-        description: 'Implement structured data to improve search engine understanding.',;
-        priority: 'medium',;
-        effort: 'low',;
-        estimatedImpact: 8;
-      },;
-      {;
-        id: '3',;
-        title: 'Improve Internal Linking',;
-        description: 'Add more internal links to improve page authority distribution.',;
-        priority: 'low',;
-        effort: 'low',;
-        estimatedImpact: 5;
+    suggestions[ {';
+';';
+        id: '1',';';
+        title: 'Optimize Images',';';
+        description: 'Compress and optimize images to improve page load speed.',';';
+        priority: 'high',';';
+        effort: 'medium',
+        estimatedImpact: 1 5
+      },
+      {';
+';';
+        id: '2',';';
+        title: 'Add Schema Markup',';';
+        description: 'Implement structured data to improve search engine understanding.',';';
+        priority: 'medium',';';
+        effort: 'low',
+        estimatedImpact: 8
+      },
+      {';
+';';
+        id: '3',';';
+        title: 'Improve Internal Linking',';';
+        description: 'Add more internal links to improve page authority distribution.',';';
+        priority: 'low',';';
+        effort: 'low',
+        estimatedImpact: 5
+
     ],;
     metrics: {;
       pageSpeed: 7 8,;
@@ -106,9 +115,6 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
     return analysis?.suggestions.sort((a, b) => {;
       const priorityOrder = {;
   high: 3, medium: 2,;  ;
-  ;
-  ;
-  ;
   ;
   low: 1 };
       return priorityOrder[b.priority] - priorityOrder[a.priority]}) || []}, [analysis]) ;
@@ -180,81 +186,83 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
               <div className={`w-24 h-24 rounded-full ${getScoreBackground(analysis.score)} flex items-center justify-center`}>`;
                 <span className={`text-3xl font-bold ${getScoreColor(analysis.score)}`}>;
                   {analysis.score}
-                </span>;
-              </div>;
-";
-              <div className="flex-1">";
-                <div className="grid grid-cols-2 gap-4">";
-                  <div className="text-center p-3 bg-zion-slate/5 rounded-lg">";
-                    <div className="text-2xl font-bold text-zion-cyan">{analysis.metrics.pageSpeed}</div>";
-                    <div className="text-xs text-zion-slate/60">Page Speed</div>;
-                  </div>;
-";
-                  <div className="text-center p-3 bg-zion-slate/5 rounded-lg">";
-                    <div className="text-2xl font-bold text-zion-cyan">{analysis.metrics.mobileFriendliness}</div>";
-                    <div className="text-xs text-zion-slate/60">Mobile</div>;
-                  </div>;
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-          {/* Core Web Vitals */}";
-          <div className="mb-8">";
-            <h4 className="text-lg font-semibold text-zion-slate-dark mb-4">Core Web Vitals</h4>";
-            <div className="grid grid-cols-3 gap-4">`;
-              <div className={`p-4 rounded-lg border ${analysis.metrics.coreWebVitals.lcp <= 2.5 ? 'border-green-200 bg-green-50' : 'border-yellow-200 bg-yellow-50'`;
-              }`}>";
-                <div className="text-center">";
-                  <div className="text-2xl font-bold text-zion-slate-dark">;
-                    {analysis.metrics.coreWebVitals.lcp}s;
-                  </div>";
-                  <div className="text-sm text-zion-slate/60">LCP</div>";
-                  <div className="text-xs text-zion-slate/40">;
+                </span>
+              </div>
+"
+              <div className="flex-1">"
+                <div className="grid grid-cols-2 gap-4">"
+                  <div className="text-center p-3 bg-zion-slate/5 rounded-lg">"
+                    <div className="text-2xl font-bold text-zion-cyan">{analysis.metrics.pageSpeed}</div>"
+                    <div className="text-xs text-zion-slate/60">Page Speed</div>
+                  </div>
+"
+                  <div className="text-center p-3 bg-zion-slate/5 rounded-lg">"
+                    <div className="text-2xl font-bold text-zion-cyan">{analysis.metrics.mobileFriendliness}</div>"
+                    <div className="text-xs text-zion-slate/60">Mobile</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Core Web Vitals */}"
+          <div className="mb-8">"
+            <h4 className="text-lg font-semibold text-zion-slate-dark mb-4">Core Web Vitals</h4>"';
+            <div className="grid grid-cols-3 gap-4">`';';
+              <div className={`p-4 rounded-lg border ${analysis.metrics.coreWebVitals.lcp <= 2.5 ? 'border-green-200 bg-green-50' : 'border-yellow-200 bg-yellow-50'`
+              }`}>"
+                <div className="text-center">"
+                  <div className="text-2xl font-bold text-zion-slate-dark">
+                    {analysis.metrics.coreWebVitals.lcp}s
+                  </div>"
+                  <div className="text-sm text-zion-slate/60">LCP</div>"';
+                  <div className="text-xs text-zion-slate/40">';';
                     {analysis.metrics.coreWebVitals.lcp <= 2.5 ? 'Good' : 'Needs improvement'}
-                  </div>;
-                </div>;
-              </div>;
-`;
-              <div className={`p-4 rounded-lg border ${analysis.metrics.coreWebVitals.fid <= 100 ? 'border-green-200 bg-green-50' : 'border-yellow-200 bg-yellow-50'`;
-              }`}>";
-                <div className="text-center">";
-                  <div className="text-2xl font-bold text-zion-slate-dark">;
-                    {analysis.metrics.coreWebVitals.fid}ms;
-                  </div>";
-                  <div className="text-sm text-zion-slate/60">FID</div>";
-                  <div className="text-xs text-zion-slate/40">;
+                  </div>
+                </div>
+              </div>';
+`';';
+              <div className={`p-4 rounded-lg border ${analysis.metrics.coreWebVitals.fid <= 100 ? 'border-green-200 bg-green-50' : 'border-yellow-200 bg-yellow-50'`
+              }`}>"
+                <div className="text-center">"
+                  <div className="text-2xl font-bold text-zion-slate-dark">
+                    {analysis.metrics.coreWebVitals.fid}ms
+                  </div>"
+                  <div className="text-sm text-zion-slate/60">FID</div>"';
+                  <div className="text-xs text-zion-slate/40">';';
                     {analysis.metrics.coreWebVitals.fid <= 100 ? 'Good' : 'Needs improvement'}
-                  </div>;
-                </div>;
-              </div>;
-`;
-              <div className={`p-4 rounded-lg border ${analysis.metrics.coreWebVitals.cls <= 0.1 ? 'border-green-200 bg-green-50' : 'border-yellow-200 bg-yellow-50'`;
-              }`}>";
-                <div className="text-center">";
-                  <div className="text-2xl font-bold text-zion-slate-dark">;
+                  </div>
+                </div>
+              </div>';
+`';';
+              <div className={`p-4 rounded-lg border ${analysis.metrics.coreWebVitals.cls <= 0.1 ? 'border-green-200 bg-green-50' : 'border-yellow-200 bg-yellow-50'`
+              }`}>"
+                <div className="text-center">"
+                  <div className="text-2xl font-bold text-zion-slate-dark">
                     {analysis.metrics.coreWebVitals.cls}
-                  </div>";
-                  <div className="text-sm text-zion-slate/60">CLS</div>";
-                  <div className="text-xs text-zion-slate/40">;
+                  </div>"
+                  <div className="text-sm text-zion-slate/60">CLS</div>"';
+                  <div className="text-xs text-zion-slate/40">';';
                     {analysis.metrics.coreWebVitals.cls <= 0.1 ? 'Good' : 'Needs improvement'}
-                  </div>;
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-          {/* Issues */}";
-          <div className="mb-8">";
-            <div className="flex items-center justify-between mb-4">";
-              <h4 className="text-lg font-semibold text-zion-slate-dark">Issues Found</h4>;
-";
-              <div className="flex space-x-1">;
-                {['all',content',technical',performance',accessibility'].map((category) => (;
-                  <button;
-                    key={category}
-                    onClick={() => setSelectedCategory(category)}`;
-                    className={`px-3 py-1 text-xs rounded-lg transition-colors ${selectedCategory === category';
-                        ? 'bg-zion-cyan text-white'';
-                        : 'bg-zion-slate/10 text-zion-slate hover: b g-zion-slate/20'`;
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Issues */}"
+          <div className="mb-8">"
+            <div className="flex items-center justify-between mb-4">"
+              <h4 className="text-lg font-semibold text-zion-slate-dark">Issues Found</h4>
+"';
+              <div className="flex space-x-1">';';
+                {['all',content',technical',performance',accessibility'].map((category) => (
+                  <button
+                    key={category}';
+                    onClick={() => setSelectedCategory(category)}`';';
+                    className={`px-3 py-1 text-xs rounded-lg transition-colors ${selectedCategory === category'';';
+                        ? 'bg-zion-cyan text-white''';';
+                        : 'bg-zion-slate/10 text-zion-slate hover: b g-zion-slate/20'`
                     }`}
 ;
                     {category.charAt(0) .toUpperCase () + category.slice(1) }
@@ -274,21 +282,23 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
   { opacity: 1,;
   y: 0;
 }}
-                    exit = {;
-  { opacity: 0,;
-  y: -20;
-}}`;
-                    className={`p-4 rounded-lg border-l-4 ${issue.type === 'error' ? 'border-red-500 bg-red-50' :';
-                      issue.type === 'warning' ? 'border-yellow-500 bg-yellow-50' :';
-                      'border-blue-500 bg-blue-50'`;
+                    exit = {
+
+  { opacity: 0,
+  y: -20
+';
+}}`';';
+                    className={`p-4 rounded-lg border-l-4 ${issue.type === 'error' ? 'border-red-500 bg-red-50' :'';';
+                      issue.type === 'warning' ? 'border-yellow-500 bg-yellow-50' :'';';
+                      'border-blue-500 bg-blue-50'`
                     }`}
-";
-                    <div className="flex items-start space-x-3">;
-                      {issue.type === 'error' ? (";
-                        <AlertTriangle className="w-5 h-5 text-red-500 mt-0.5"   />;
-                      ) : issue.type === 'warning' ? (";
-                        <AlertTriangle className="w-5 h-5 text-yellow-500 mt-0.5"   />;
-                      ) : (";
+"';
+                    <div className="flex items-start space-x-3">';';
+                      {issue.type === 'error' ? ("';
+                        <AlertTriangle className="w-5 h-5 text-red-500 mt-0.5"   />';';
+                      ) : issue.type === 'warning' ? ("
+                        <AlertTriangle className="w-5 h-5 text-yellow-500 mt-0.5"   />
+                      ) : ("
                         <Info className="w-5 h-5 text-blue-500 mt-0.5"   />                      )}
 ";
                       <div className="flex-1">";
@@ -350,9 +360,11 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
   { opacity: 0,;
   height: 0;
 }}
-                animate = {;
-  { opacity: 1,;
-  height: 'auto';
+                animate = {
+';
+  { opacity: 1,';';
+  height: 'auto'
+
 }}
                 exit = {;
   { opacity: 0,;
@@ -394,22 +406,18 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
     setIsOptimizing(true) ;    // Implement actual optimization logic here;
     await new Promise(resolve => setTimeout (resolve, 3000) ) ;
     setIsOptimizing(false) }, []) ;
-;
-  return {;
-    analysis,;
-    isOptimizing,;
-    optimizePage;
-  }};
-'"`;
+
+  return {
+
+    analysis,
+    isOptimizing,
+    optimizePage';
+  }};';';
+'"`
 ;,"});,})";
-;
-</any>;
-</motion>;
-</motion>;
-</motion>;
-</any>;
-</any>;
-</any>;
-</any>;
-</SEOAnalysis>;
-</SEOOptimizerProps>;
+
+</any>
+</motion>
+</any>
+</SEOAnalysis>';
+</SEOOptimizerProps>;';;';
