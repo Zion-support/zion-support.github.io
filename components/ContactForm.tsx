@@ -19,24 +19,24 @@ const ContactForm: React.FC = () => {
     service: '',
     message: ''
   });
-  
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
     }));
-  }
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
     try {
-      // Simulate form submission
+      // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
       setSubmitStatus('success');
       setFormData({
@@ -52,40 +52,52 @@ const ContactForm: React.FC = () => {
     } finally {
       setIsSubmitting(false);
     }
+  };
+
   return (
-    <form onSubmit={handleSubmit} className="space-y-6" aria-label="Contact form">
+    <form onSubmit={handleSubmit} className="space-y-6">
+      {submitStatus === 'success' && (
+        <div className="p-4 bg-green-900/20 border border-green-500/30 rounded-lg text-green-400">
+          Thank you for your message! We'll get back to you soon.
+        </div>
+      )}
+      
+      {submitStatus === 'error' && (
+        <div className="p-4 bg-red-900/20 border border-red-500/30 rounded-lg text-red-400">
+          There was an error sending your message. Please try again.
+        </div>
+      )}
+
       <div className="grid md:grid-cols-2 gap-6">
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-slate-300 mb-2">
-            Full Name *
+            Name *
           </label>
           <input
             type="text"
             id="name"
             name="name"
             value={formData.name}
-            onChange={handleInputChange}
+            onChange={handleChange}
             required
-            className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             placeholder="Your full name"
-            aria-describedby="name-error"
           />
         </div>
 
         <div>
           <label htmlFor="email" className="block text-sm font-medium text-slate-300 mb-2">
-            Email Address *
+            Email *
           </label>
           <input
             type="email"
             id="email"
             name="email"
             value={formData.email}
-            onChange={handleInputChange}
+            onChange={handleChange}
             required
-            className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            placeholder="your.email@company.com"
-            aria-describedby="email-error"
+            className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            placeholder="your.email@example.com"
           />
         </div>
       </div>
@@ -100,23 +112,23 @@ const ContactForm: React.FC = () => {
             id="company"
             name="company"
             value={formData.company}
-            onChange={handleInputChange}
-            className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            onChange={handleChange}
+            className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             placeholder="Your company name"
           />
         </div>
 
         <div>
           <label htmlFor="phone" className="block text-sm font-medium text-slate-300 mb-2">
-            Phone Number
+            Phone
           </label>
           <input
             type="tel"
             id="phone"
             name="phone"
             value={formData.phone}
-            onChange={handleInputChange}
-            className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            onChange={handleChange}
+            className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             placeholder="+1 (555) 123-4567"
           />
         </div>
@@ -130,13 +142,16 @@ const ContactForm: React.FC = () => {
           id="service"
           name="service"
           value={formData.service}
-          onChange={handleInputChange}
-          className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          onChange={handleChange}
+          className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
         >
           <option value="">Select a service</option>
-          <option value="micro-saas">Micro SaaS Products</option>
+          <option value="micro-saas">Micro SaaS Solutions</option>
           <option value="ai-services">AI Services</option>
-          <option value="it-services">IT & Cloud Services</option>
+          <option value="it-solutions">IT Solutions</option>
+          <option value="cloud-devops">Cloud & DevOps</option>
+          <option value="cybersecurity">Cybersecurity</option>
+          <option value="quantum-computing">Quantum Computing</option>
           <option value="consulting">Consulting</option>
           <option value="other">Other</option>
         </select>
@@ -150,32 +165,18 @@ const ContactForm: React.FC = () => {
           id="message"
           name="message"
           value={formData.message}
-          onChange={handleInputChange}
+          onChange={handleChange}
           required
-          rows={5}
-          className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-vertical"
-          placeholder="Tell us about your project requirements..."
-          aria-describedby="message-error"
+          rows={6}
+          className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-vertical"
+          placeholder="Tell us about your project or requirements..."
         />
       </div>
-
-      {submitStatus === 'success' && (
-        <div className="p-4 bg-green-900/50 border border-green-500 rounded-lg text-green-300" role="alert">
-          Thank you for your message! We'll get back to you within 24 hours.
-        </div>
-      )}
-
-      {submitStatus === 'error' && (
-        <div className="p-4 bg-red-900/50 border border-red-500 rounded-lg text-red-300" role="alert">
-          There was an error sending your message. Please try again or contact us directly.
-        </div>
-      )}
 
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full px-8 py-3 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-800 disabled:cursor-not-allowed rounded-lg font-semibold text-white transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-900"
-        aria-describedby="submit-status"
+        className="w-full px-8 py-4 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-800 disabled:cursor-not-allowed rounded-lg font-semibold text-white transition-colors duration-200 flex items-center justify-center gap-2"
       >
         {isSubmitting ? (
           <div className="flex items-center justify-center gap-2">
@@ -188,5 +189,6 @@ const ContactForm: React.FC = () => {
       </button>
     </form>
   );
-}
+};
+
 export default ContactForm;

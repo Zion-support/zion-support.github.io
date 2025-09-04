@@ -16,6 +16,7 @@ class ErrorBoundary extends Component<Props, State> {
   }
   public static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error }
+  }
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     // Log error in development only
     if (process.env.NODE_ENV === 'development') {
@@ -68,4 +69,6 @@ class ErrorBoundary extends Component<Props, State> {
 
     return this.props.children;
   }
+}
+
 export default ErrorBoundary;
