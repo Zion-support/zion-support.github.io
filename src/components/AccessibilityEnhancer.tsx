@@ -631,7 +631,7 @@ document.addEventListener('keydown', handleKeyDown);
         <Settings className="w-6 h-6" />
       </button>
 
-      {/* Accessibility Panel */}
+      {/* Settings Panel */}
       <AnimatePresence>
         {isOpen && (<motion.div
             className="fixed inset - 0 z - 40 bg-black / 50 backdrop - blur -sm"
@@ -663,6 +663,7 @@ document.addEventListener('keydown', handleKeyDown);
                   <X className="w-5 h-5 text-gray -500" />
                 </button>
               </div>
+            </div>
 
               {/* Tabs */}
               <div className="flex border-b border-gray - 200 dark:border-gray -700">
@@ -885,6 +886,116 @@ document.addEventListener('keydown', handleKeyDown);
                     <ZoomIn className="w-4 h-4" />
                   </button>
                 </div>
+                <input
+                  type="checkbox"
+                  checked={settings.highContrast}
+                  onChange={(e) => updateSetting('highContrast', e.target.checked)}
+                  className="sr-only"
+                />
+                <div className={`w-12 h-6 rounded-full transition-colors duration-300 ${
+                  settings.highContrast ? 'bg-purple-500' : 'bg-gray-300 dark:bg-gray-600'
+                }`}>
+                  <div className={`w-5 h-5 bg-white rounded-full shadow transform transition-transform duration-300 ${
+                    settings.highContrast ? 'translate-x-6' : 'translate-x-0.5'
+                  }`} />
+                </div>
+              </label>
+            </div>
+
+            {/* Large Text */}
+            <div className="mb-6">
+              <label className="flex items-center justify-between cursor-pointer">
+                <div className="flex items-center gap-3">
+                  <Type className="w-5 h-5 text-gray-600 dark:text-gray-400" />
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                    Large Text
+                  </span>
+                </div>
+                <input
+                  type="checkbox"
+                  checked={settings.largeText}
+                  onChange={(e) => updateSetting('largeText', e.target.checked)}
+                  className="sr-only"
+                />
+                <div className={`w-12 h-6 rounded-full transition-colors duration-300 ${
+                  settings.largeText ? 'bg-purple-500' : 'bg-gray-300 dark:bg-gray-600'
+                }`}>
+                  <div className={`w-5 h-5 bg-white rounded-full shadow transform transition-transform duration-300 ${
+                    settings.largeText ? 'translate-x-6' : 'translate-x-0.5'
+                  }`} />
+                </div>
+              </label>
+            </div>
+
+            {/* Reduced Motion */}
+            <div className="mb-6">
+              <label className="flex items-center justify-between cursor-pointer">
+                <div className="flex items-center gap-3">
+                  <Eye className="w-5 h-5 text-gray-600 dark:text-gray-400" />
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                    Reduced Motion
+                  </span>
+                </div>
+                <input
+                  type="checkbox"
+                  checked={settings.reducedMotion}
+                  onChange={(e) => updateSetting('reducedMotion', e.target.checked)}
+                  className="sr-only"
+                />
+                <div className={`w-12 h-6 rounded-full transition-colors duration-300 ${
+                  settings.reducedMotion ? 'bg-purple-500' : 'bg-gray-300 dark:bg-gray-600'
+                }`}>
+                  <div className={`w-5 h-5 bg-white rounded-full shadow transform transition-transform duration-300 ${
+                    settings.reducedMotion ? 'translate-x-6' : 'translate-x-0.5'
+                  }`} />
+                </div>
+              </label>
+            </div>
+
+            {/* Keyboard Navigation */}
+            <div className="mb-6">
+              <label className="flex items-center justify-between cursor-pointer">
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-gray-600 dark:text-gray-400" />
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                    Keyboard Navigation
+                  </span>
+                </div>
+                <input
+                  type="checkbox"
+                  checked={settings.keyboardNavigation}
+                  onChange={(e) => updateSetting('keyboardNavigation', e.target.checked)}
+                  className="sr-only"
+                />
+                <div className={`w-12 h-6 rounded-full transition-colors duration-300 ${
+                  settings.keyboardNavigation ? 'bg-purple-500' : 'bg-gray-300 dark:bg-gray-600'
+                }`}>
+                  <div className={`w-5 h-5 bg-white rounded-full shadow transform transition-transform duration-300 ${
+                    settings.keyboardNavigation ? 'translate-x-6' : 'translate-x-0.5'
+                  }`} />
+                </div>
+              </label>
+            </div>
+
+            {/* Reset Button */}
+            <button
+              onClick={resetSettings}
+              className="w-full py-2 px-4 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors duration-300 text-sm font-medium flex items-center justify-center gap-2"
+            >
+              <RotateCcw className="w-4 h-4" />
+              Reset to Default
+            </button>
+
+            {/* Keyboard Shortcuts Info */}
+            <div className="mt-4 p-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
+              <h4 className="text-xs font-semibold text-gray-600 dark:text-gray-400 mb-2">
+                Keyboard Shortcuts
+              </h4>
+              <div className="space-y-1 text-xs text-gray-500 dark:text-gray-400">
+                <div>Ctrl + = : Increase font size</div>
+                <div>Ctrl + - : Decrease font size</div>
+                <div>Tab : Navigate elements</div>
+                <div>Arrow keys : Navigate in groups</div>
               </div>
             </motion.div>
           </motion.div>) }      </AnimatePresence>

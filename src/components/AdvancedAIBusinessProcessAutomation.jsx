@@ -212,6 +212,17 @@ export function AdvancedAIBusinessProcessAutomation() {
               </select>
             </div>
           </div>
+          <select
+            value={filterCategory}
+            onChange={(e) => setFilterCategory(e.target.value)}
+            className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            {categories.map(category => (
+              <option key={category} value={category} className="bg-gray-800">
+                {category.charAt(0).toUpperCase() + category.slice(1)}
+              </option>
+            ))}
+          </select>
         </div>
 
         {/* Process Grid */}
