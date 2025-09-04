@@ -1,26 +1,21 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const navLinkClass = ({ isActive }: { isActive: boolean }) =>
   `px-3 py-2 rounded-md text-sm font-medium ${isActive ? 'bg-blue-600 text-white' : 'text-blue-700 hover:bg-blue-50'}`;
 
 export default function Header() {
   return (
-    <header className="w-full border-b border-gray-200 bg-white sticky top-0 z-40">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2">
-          <img src="/logo192.png" alt="Zion Tech Group" className="h-8 w-8" />
-          <span className="text-lg font-semibold text-gray-900">Zion Tech Group</span>
-        </Link>
-        <nav className="hidden md:flex items-center gap-1">
-          <NavLink to="/" className={navLinkClass} end>
-            Home
-          </NavLink>
-          <NavLink to="/about" className={navLinkClass}>About</NavLink>
-          <NavLink to="/services" className={navLinkClass}>Services</NavLink>
-          <NavLink to="/solutions" className={navLinkClass}>Solutions</NavLink>
-          <NavLink to="/pricing" className={navLinkClass}>Pricing</NavLink>
-          <NavLink to="/contact" className={navLinkClass}>Contact</NavLink>
+    <header style={{ padding: '16px', background: '#0b132b', color: '#fff' }}>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16 }}>
+        <Link to="/" style={{ color: '#fff', textDecoration: 'none', fontWeight: 700 }}>Zion Tech Group</Link>
+        <nav style={{ display: 'flex', gap: 16 }}>
+          <Link to="/about">About</Link>
+          <Link to="/services">Services</Link>
+          <Link to="/micro-saas">Micro SAAS</Link>
+          <Link to="/marketplace">Marketplace</Link>
+          <Link to="/blog">Blog</Link>
+          <Link to="/contact">Contact</Link>
         </nav>
         <a
           href="tel:+13024640950"

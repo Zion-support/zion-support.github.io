@@ -1,40 +1,41 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
     <footer className="w-full border-t border-gray-200 bg-white mt-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid gap-6 md:grid-cols-4 text-sm">
         <div>
-          <h4 className="font-semibold text-gray-900 mb-2">Zion Tech Group</h4>
-          <p className="text-gray-600">364 E Main St STE 1008 Middletown DE 19709</p>
-          <p className="text-gray-600 mt-2">
-            <a className="text-blue-700 hover:underline" href="tel:+13024640950">+1 302 464 0950</a>
-          </p>
-          <p className="text-gray-600">
-            <a className="text-blue-700 hover:underline" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>
-          </p>
-        </div>
-        <div>
-          <h4 className="font-semibold text-gray-900 mb-2">Services</h4>
-          <ul className="space-y-1 text-gray-600">
-            <li><a className="hover:underline" href="/services">Micro SaaS</a></li>
-            <li><a className="hover:underline" href="/solutions">IT Solutions</a></li>
-            <li><a className="hover:underline" href="/services#ai">AI Services</a></li>
+          <h4 style={{ marginTop: 0, color: '#fff' }}>Company</h4>
+          <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+            <li><Link to="/about">About</Link></li>
+            <li><Link to="/team">Team</Link></li>
+            <li><Link to="/careers">Careers</Link></li>
+            <li><Link to="/partners">Partners</Link></li>
           </ul>
         </div>
         <div>
-          <h4 className="font-semibold text-gray-900 mb-2">Company</h4>
-          <ul className="space-y-1 text-gray-600">
-            <li><a className="hover:underline" href="/about">About</a></li>
-            <li><a className="hover:underline" href="/pricing">Pricing</a></li>
-            <li><a className="hover:underline" href="/contact">Contact</a></li>
+          <h4 style={{ marginTop: 0, color: '#fff' }}>Resources</h4>
+          <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+            <li><Link to="/help">Help Center</Link></li>
+            <li><Link to="/faq">FAQ</Link></li>
+            <li><Link to="/status">Status</Link></li>
+            <li><Link to="/security">Security</Link></li>
           </ul>
         </div>
         <div>
-          <h4 className="font-semibold text-gray-900 mb-2">Legal</h4>
-          <ul className="space-y-1 text-gray-600">
-            <li><a className="hover:underline" href="https://ziontechgroup.com/privacy">Privacy Policy</a></li>
-            <li><a className="hover:underline" href="https://ziontechgroup.com/terms">Terms of Service</a></li>
+          <h4 style={{ marginTop: 0, color: '#fff' }}>Legal</h4>
+          <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+            <li><Link to="/privacy">Privacy</Link></li>
+            <li><Link to="/terms">Terms</Link></li>
+            <li><Link to="/cookies">Cookies</Link></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style={{ marginTop: 0, color: '#fff' }}>Get in touch</h4>
+          <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+            <li><Link to="/contact">Contact</Link></li>
+            <li><Link to="/request-quote">Request a Quote</Link></li>
           </ul>
         </div>
       </div>
