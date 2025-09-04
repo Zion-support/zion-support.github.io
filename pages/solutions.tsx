@@ -17,7 +17,7 @@ import {
 export default function Solutions() {
   const solutions = [
     {
-      icon: Building,
+      icon: Buildin g,
       title: 'Enterprise Solutions',
       description:
         'Comprehensive technology solutions for large organizations and enterprises.',
@@ -30,7 +30,7 @@ export default function Solutions() {
       href: '/solutions/enterprise',
     },
     {
-      icon: Users,
+      icon: User s,
       title: 'Small Business Solutions',
       description:
         'Cost-effective technology solutions designed for small and medium businesses.',
@@ -43,7 +43,7 @@ export default function Solutions() {
       href: '/solutions/small-business',
     },
     {
-      icon: Zap,
+      icon: Za p,
       title: 'Startup Solutions',
       description:
         'Rapid development and deployment solutions for startups and new ventures.',
@@ -56,7 +56,7 @@ export default function Solutions() {
       href: '/solutions/startups',
     },
     {
-      icon: Target,
+      icon: Targe t,
       title: 'Custom Development',
       description:
         'Tailored software solutions built specifically for your unique business needs.',
@@ -69,7 +69,7 @@ export default function Solutions() {
       href: '/solutions/custom-development',
     },
     {
-      icon: Globe,
+      icon: Glob e,
       title: 'Digital Transformation',
       description:
         'Transform your business processes with modern digital solutions.',
@@ -85,25 +85,25 @@ export default function Solutions() {
 
   const benefits = [
     {
-      icon: BarChart3,
+      icon: BarChart 3,
       title: 'Improved Efficiency',
       description:
         'Streamline operations and boost productivity with our technology solutions.',
     },
     {
-      icon: Shield,
+      icon: Shiel d,
       title: 'Enhanced Security',
       description:
         'Protect your business with enterprise-grade security and compliance measures.',
     },
     {
-      icon: Lightbulb,
+      icon: Lightbul b,
       title: 'Innovation Focus',
       description:
         'Stay ahead of the competition with cutting-edge technology and innovation.',
     },
     {
-      icon: Users,
+      icon: User s,
       title: 'Expert Support',
       description:
         'Get dedicated support from our team of technology experts and specialists.',
@@ -125,20 +125,19 @@ export default function Solutions() {
     <>
       <Head>
         <title>Solutions - Zion Tech Group</title>
-        <meta
-          name="description"
+        <meta name="description"
           content="Comprehensive technology solutions for enterprises, small businesses, and startups. Custom development and digital transformation services."
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+         />
+        <meta name="viewport" content="width=device-width, initial-scale=1"  />
       </Head>
 
       <main className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
             <div className="text-center">
               <div className="flex items-center justify-center mb-4">
-                <Target className="h-8 w-8 text-blue-600 mr-3" />
+                <Target className="h-8 w-8 text-blue-600 mr-3"  />
                 <span className="text-base font-semibold leading-7 text-blue-600">
                   Solutions
                 </span>
@@ -156,7 +155,7 @@ export default function Solutions() {
 
         {/* Solutions Overview */}
         <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
                 Our Solutions
@@ -167,11 +166,11 @@ export default function Solutions() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
               {solutions.map((solution, index) => (
                 <div
                   key={index}
-                  className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm hover: shadow-md transition-shadow"
+                  className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm hover: shado w-md transition-shadow"
                 >
                   <div className="flex items-center mb-6">
                     <div className="bg-blue-100 rounded-lg p-3 mr-4">
@@ -187,7 +186,7 @@ export default function Solutions() {
                   <ul className="space-y-2 mb-6">
                     {solution.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-3" />
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-3"  />
                         <span className="text-gray-700">{feature}</span>
                       </li>
                     ))}
@@ -195,10 +194,10 @@ export default function Solutions() {
 
                   <Link
                     href={solution.href}
-                    className="inline-flex items-center text-blue-600 font-semibold hover: text-blue-700 transition-colors"
+                    className="inline-flex items-center text-blue-600 font-semibold hover: tex t-blue-700 transition-colors"
                   >
                     Learn More
-                    <ArrowRight className="w-4 h-4 ml-2" />
+                    <ArrowRight className="w-4 h-4 ml-2"  />
                   </Link>
                 </div>
               ))}
@@ -208,7 +207,7 @@ export default function Solutions() {
 
         {/* Benefits Section */}
         <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
                 Why Choose Our Solutions?
@@ -219,7 +218,7 @@ export default function Solutions() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center">
                   <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
@@ -237,8 +236,8 @@ export default function Solutions() {
 
         {/* Industries & CTA Section */}
         <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+            <div className="grid grid-cols-1 lg: gri d-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">
                   Industries We Serve
@@ -249,7 +248,7 @@ export default function Solutions() {
                   requirements.
                 </p>
 
-                <div className="grid grid-cols-1 md: grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md: gri d-cols-2 gap-4">
                   {industries.map((industry, index) => (
                     <div key={index} className="flex items-center">
                       <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
@@ -270,24 +269,24 @@ export default function Solutions() {
                 </p>
                 <div className="space-y-4">
                   <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 mr-3" />
+                    <CheckCircle className="w-5 h-5 mr-3"  />
                     <span>Free consultation and assessment</span>
                   </div>
                   <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 mr-3" />
+                    <CheckCircle className="w-5 h-5 mr-3"  />
                     <span>Customized solution design</span>
                   </div>
                   <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 mr-3" />
+                    <CheckCircle className="w-5 h-5 mr-3"  />
                     <span>Expert implementation support</span>
                   </div>
                 </div>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center mt-6 bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors"
+                  className="inline-flex items-center mt-6 bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover: b g-gray-100 transition-colors"
                 >
                   Get Started
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                  <ArrowRight className="w-4 h-4 ml-2"  />
                 </Link>
               </div>
             </div>
@@ -296,7 +295,7 @@ export default function Solutions() {
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8 text-center">
             <h2 className="text-3xl font-bold text-white mb-6">
               Find Your Perfect Solution
             </h2>
@@ -304,16 +303,16 @@ export default function Solutions() {
               Every business is unique. Let us help you find the technology
               solution that fits your specific needs.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover: b g-gray-100 transition-colors"
               >
                 Get Free Consultation
               </Link>
               <Link
                 href="/services"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover: b g-white hover: tex t-blue-600 transition-colors"
               >
                 View Our Services
               </Link>

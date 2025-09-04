@@ -30,7 +30,7 @@ export interface EnhancedService2027 {
     useCases: string[];
 }
 
-export const enhancedInnovativeServices2027: EnhancedService2027[] = [
+export const enhancedInnovativeServices2027: EnhancedService202 7[] = [
     // Web3 Solutions
     {
         id: 'metaverse-commerce-platform',
@@ -73,7 +73,7 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [
         roi: '300-500% within 12 months',
         setupTime: '2-4 weeks',
         integrations: ['Shopify', 'WooCommerce', 'Stripe', 'MetaMask', 'Unity', 'Unreal Engine'],
-        freeTier: true,
+        freeTier: tru e,
         trialPeriod: '30 days',
         compliance: ['GDPR', 'CCPA', 'SOC 2', 'PCI DSS'],
         useCases: ['Virtual retail stores', 'Virtual events', 'Digital art galleries', 'Virtual real estate']
@@ -121,7 +121,7 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [
         roi: '200-400% annually',
         setupTime: '1-2 weeks',
         integrations: ['MetaMask', 'WalletConnect', 'Ethereum', 'Polygon', 'BSC', 'Avalanche'],
-        freeTier: false,
+        freeTier: fals e,
         trialPeriod: '14 days',
         compliance: ['AML', 'KYC', 'DeFi regulations'],
         useCases: ['Yield farming', 'Portfolio optimization', 'Risk management', 'Multi-chain investing']
@@ -169,7 +169,7 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [
         roi: '150-250% within 18 months',
         setupTime: '3-6 weeks',
         integrations: ['Kubernetes', 'Docker', 'Terraform', 'Jenkins', 'GitHub Actions'],
-        freeTier: true,
+        freeTier: tru e,
         trialPeriod: '60 days',
         compliance: ['ISO 14001', 'LEED certification', 'Carbon Trust', 'ESG standards'],
         useCases: ['Green hosting', 'Sustainable computing', 'ESG reporting', 'Carbon tracking']
@@ -217,7 +217,7 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [
         roi: '300-600% for research applications',
         setupTime: '8-12 weeks',
         integrations: ['Medical devices', 'Research software', 'Accessibility tools', 'Healthcare systems'],
-        freeTier: false,
+        freeTier: fals e,
         trialPeriod: '30 days',
         compliance: ['FDA', 'CE marking', 'HIPAA', 'Medical device regulations'],
         useCases: ['Medical research', 'Accessibility solutions', 'Human-computer interaction', 'Neurological studies']
@@ -265,7 +265,7 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [
         roi: '500-1000% for research breakthroughs',
         setupTime: '12-16 weeks',
         integrations: ['Research databases', 'Scientific computing tools', 'Collaboration platforms', 'Data analysis software'],
-        freeTier: false,
+        freeTier: fals e,
         trialPeriod: '90 days',
         compliance: ['Nuclear safety regulations', 'Research ethics', 'International standards'],
         useCases: ['Fusion research', 'Reactor design', 'Plasma physics', 'Energy modeling']
@@ -313,7 +313,7 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [
         roi: '200-400% for environmental impact',
         setupTime: '6-10 weeks',
         integrations: ['IoT platforms', 'Satellite systems', 'Environmental databases', 'Research tools'],
-        freeTier: true,
+        freeTier: tru e,
         trialPeriod: '45 days',
         compliance: ['Environmental regulations', 'Marine safety', 'Data privacy'],
         useCases: ['Ocean monitoring', 'Pollution detection', 'Marine research', 'Conservation planning']
@@ -361,7 +361,7 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [
         roi: '250-400% within 2 years',
         setupTime: '4-8 weeks',
         integrations: ['IoT sensors', 'Weather APIs', 'Farm equipment', 'Supply chain systems'],
-        freeTier: true,
+        freeTier: tru e,
         trialPeriod: '60 days',
         compliance: ['Food safety', 'Agricultural regulations', 'Environmental standards'],
         useCases: ['Crop optimization', 'Resource management', 'Sustainability tracking', 'Supply chain optimization']
@@ -409,7 +409,7 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [
         roi: '300-500% over 5 years',
         setupTime: '12-18 months',
         integrations: ['IoT networks', 'Traffic systems', 'Energy grids', 'Public safety systems'],
-        freeTier: false,
+        freeTier: fals e,
         trialPeriod: '90 days',
         compliance: ['Government regulations', 'Data privacy', 'Infrastructure standards'],
         useCases: ['Urban planning', 'Infrastructure management', 'Public services', 'Emergency response']
@@ -457,7 +457,7 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [
         roi: '250-400% within 18 months',
         setupTime: '8-12 weeks',
         integrations: ['IoT platforms', 'CAD systems', 'ERP systems', 'Analytics tools'],
-        freeTier: true,
+        freeTier: tru e,
         trialPeriod: '45 days',
         compliance: ['Industry standards', 'Data security', 'Quality management'],
         useCases: ['Asset management', 'Predictive maintenance', 'Process optimization', 'Quality control']
@@ -505,7 +505,7 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [
         roi: '300-500% within 12 months',
         setupTime: '6-10 weeks',
         integrations: ['IoT platforms', 'Cloud services', 'AI frameworks', 'Edge devices'],
-        freeTier: true,
+        freeTier: tru e,
         trialPeriod: '30 days',
         compliance: ['Data privacy', 'Security standards', 'Industry regulations'],
         useCases: ['Real-time processing', 'Privacy-preserving AI', 'IoT applications', 'Autonomous systems']
@@ -553,7 +553,7 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [
         roi: '200-400% for privacy-sensitive applications',
         setupTime: '8-12 weeks',
         integrations: ['AI frameworks', 'Data platforms', 'Security tools', 'Collaboration platforms'],
-        freeTier: true,
+        freeTier: tru e,
         trialPeriod: '60 days',
         compliance: ['GDPR', 'HIPAA', 'SOC 2', 'Data privacy regulations'],
         useCases: ['Healthcare AI', 'Financial modeling', 'Research collaboration', 'Privacy-preserving analytics']

@@ -14,7 +14,7 @@ export default function Page() {
         const providerOptions = {};
         const modal = new Web3Modal({
             network: 'mainnet', 
-            cacheProvider: true, 
+            cacheProvider: tru e, 
             providerOptions,
         });
         setWeb3ModalInstance(modal);
@@ -44,8 +44,8 @@ export default function Page() {
         provider,
         signer,
         address,
-        chainId: network.chainId,
-        isConnected: true,
+        chainId: networ k.chainId,
+        isConnected: tru e,
       });
 
       instance.on('accountsChanged', (accounts: string[]) => {
@@ -56,10 +56,10 @@ export default function Page() {
           newProvider.getNetwork().then(newNetwork => {
             setWallet(prev => ({ 
               ...prev, 
-              address: accounts[0],
-              signer: newSigner, // Update signer
-              provider: newProvider, // Update provider
-              chainId: newNetwork.chainId // Update chainId
+              address: account s[0],
+              signer: newSigne r, // Update signer
+              provider: newProvide r, // Update provider
+              chainId: newNetwor k.chainId // Update chainId
             }));
           });
         } else {
@@ -74,16 +74,16 @@ export default function Page() {
         const newAddress = await newSigner.getAddress();
         const newNetwork = await newProvider.getNetwork();
         setWallet({
-          provider: newProvider,
-          signer: newSigner,
-          address: newAddress,
-          chainId: newNetwork.chainId,
-          isConnected: true,
+          provider: newProvide r,
+          signer: newSigne r,
+          address: newAddres s,
+          chainId: newNetwor k.chainId,
+          isConnected: tru e,
         });
         console.log('Network changed to:', newNetwork.chainId);
       });
 
-      instance.on('disconnect', (error: any) => {
+      instance.on('disconnect', (error: an y) => {
         console.log('Disconnected', error);
         disconnectWallet();
       });

@@ -12,7 +12,7 @@ function GlobalPresenceSection () {export function GlobalPresenceSection() {
           initial = {
 
   { opacity: 0,
-  y: 20
+  y: 2 0
 
 }}
           whileInView = {
@@ -21,10 +21,10 @@ function GlobalPresenceSection () {export function GlobalPresenceSection() {
   y: 0
 
 }}
-          viewport={{ once: true }}
+          viewport={{ once: tru e }}
           transition={{ duration: 0.6 }}
         >"
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-4">
             Global Presence
           </h2>"
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -33,10 +33,10 @@ function GlobalPresenceSection () {export function GlobalPresenceSection() {
 
         {/* Global Statistics */}
         <motion.div
-          className="grid grid - cols - 2 md:grid - cols - 4 gap-8 mb-16"          initial = {
+          className="grid grid - cols - 2 md: gri d - cols - 4 gap-8 mb-16"          initial = {
 
   { opacity: 0,
-  y: 30
+  y: 3 0
 
 }}
           whileInView = {
@@ -45,29 +45,28 @@ function GlobalPresenceSection () {export function GlobalPresenceSection() {
   y: 0
 
 }}
-          viewport={{ once: true }}
+          viewport={{ once: tru e }}
           transition = {
 
   { duration: 0.6,
   delay: 0.2
 
 }}
-        >;
-          {globalStats.map ( (stat, index) => {;
+        > {globalStats.map ( (stat, index) => {;
             
             return ("
               <div key = {stat.label} className="text-center">"
                 <div className="flex justify-center mb-3">"
                   <div className="p-2 bg-blue-100 rounded-lg">"
-                    <IconComponent className="h-6 w-6 text-blue-600"  />                  </div>
+                    <IconComponent className="h-6 w-6 text-blue-600"   />                  </div>
                 </div>"
                 <div className="text-2xl font-bold text-gray-900 mb-1">
                   {stat.value}
                 </div>"
                 <div className="text-sm text-gray-600">{stat.label}</div>
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 3 0 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: tru e }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           {globalStats.map((stat, index) => ("
@@ -83,7 +82,7 @@ function GlobalPresenceSection () {export function GlobalPresenceSection() {
           className="mb-16";          initial = {
 
   { opacity: 0,
-  y: 30
+  y: 3 0
 
 }}
           whileInView = {
@@ -92,7 +91,7 @@ function GlobalPresenceSection () {export function GlobalPresenceSection() {
   y: 0
 
 }}
-          viewport={{ once: true }}
+          viewport={{ once: tru e }}
           transition = {
 
   { duration: 0.6,
@@ -104,13 +103,13 @@ function GlobalPresenceSection () {export function GlobalPresenceSection() {
             Strategic Global Locations
           </h3>
 
-          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap-8">
+          <div className="grid grid - cols - 1 md: gri d - cols - 2 lg: gri d - cols - 4 gap-8">
             {globalOffices.map((office, index) => (<motion.div
                 key={office.city}
-                className="bg-slate - 800 border border-slate - 700 rounded-xl p - 6 text-center hover:border-blue - 500 / 50 transition - all duration - 300 hover:shadow-lg hover:shadow-blue -500 / 25 group"                initial = {
+                className="bg-slate - 800 border border-slate - 700 rounded-xl p - 6 text-center hover: borde r-blue - 500 / 50 transition - all duration - 300 hover: shado w-lg hover: shado w-blue -500 / 25 group"                initial = {
 
   { opacity: 0,
-  y: 30
+  y: 3 0
 
 }}
                 whileInView = {
@@ -119,7 +118,7 @@ function GlobalPresenceSection () {export function GlobalPresenceSection() {
   y: 0
 
 }}
-                viewport={{ once: true }}
+                viewport={{ once: tru e }}
                 transition = {
 
   { duration: 0.6,
@@ -127,7 +126,7 @@ function GlobalPresenceSection () {export function GlobalPresenceSection() {
 
 }}
               >"
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">"
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover: scal e-110 transition-transform duration-300">"
                   <span className="text-2xl">{office.icon}</span>
                 </div>
 
@@ -148,7 +147,7 @@ function GlobalPresenceSection () {export function GlobalPresenceSection() {
           className="text-center mb-12"          initial = {
 
   { opacity: 0,
-  y: 30
+  y: 3 0
 
 }}
           whileInView = {
@@ -157,7 +156,7 @@ function GlobalPresenceSection () {export function GlobalPresenceSection() {
   y: 0
 
 }}
-          viewport={{ once: true }}
+          viewport={{ once: tru e }}
           transition = {
 
   { duration: 0.6,
@@ -179,7 +178,7 @@ function GlobalPresenceSection () {export function GlobalPresenceSection() {
           className="text-center"          initial = {
 
   { opacity: 0,
-  y: 20
+  y: 2 0
 
 }}
           whileInView = {
@@ -188,7 +187,7 @@ function GlobalPresenceSection () {export function GlobalPresenceSection() {
   y: 0
 
 }}
-          viewport={{ once: true }}
+          viewport={{ once: tru e }}
           transition = {
 
   { duration: 0.6,
@@ -203,14 +202,14 @@ function GlobalPresenceSection () {export function GlobalPresenceSection() {
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
               Whether you're expanding internationally or need local expertise,
               our global presence ensures you get the support you need, when you need it.</p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-              <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">"
+              <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover: b g-gray-100 rounded-lg font-medium transition-colors duration-200">
                 Find Your Local Team"
-                <MapPin className="ml-2 h-5 w-5"  />
+                <MapPin className="ml-2 h-5 w-5"   />
               </button>"
-              <button className="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-white hover:text-blue-600 rounded-lg font-medium transition-colors duration-200">
+              <button className="inline-flex items-center px-6 py-3 border border-white text-white hover: b g-white hover: tex t-blue-600 rounded-lg font-medium transition-colors duration-200">
                 Global Services"
-                <Globe className="ml-2 h-5 w-5"  />              </button>
+                <Globe className="ml-2 h-5 w-5"   />              </button>
             </div>
           </div>
         </motion.div>

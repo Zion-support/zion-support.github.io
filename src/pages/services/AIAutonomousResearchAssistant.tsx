@@ -27,7 +27,7 @@ import {
   MapPin'
 } from 'lucide-react';
 ;
-export default function AIAutonomousResearchAssistant(...args: unknown[]): unknown {
+export default function AIAutonomousResearchAssistant(...args: unknow n[]): unknown {
   const [activeTab, setActiveTab] = useState<typeof 'overview'>('overview');
   const [isVisible, setIsVisible] = useState<typeof false>(false);
 
@@ -40,7 +40,7 @@ export default function AIAutonomousResearchAssistant() {
     setIsVisible(true)}, []);
 
   
-      icon: Globe}
+      icon: Glob e}
   ];
 
   
@@ -54,31 +54,31 @@ export default function AIAutonomousResearchAssistant() {
       <SEO "
         title="AI Autonomous Research Assistant - Zion Tech Group""
         description="Revolutionary AI-powered research automation platform that discovers, analyzes, and synthesizes research autonomously.""        keywords="AI research assistant, research automation, literature review, academic research, research AI, autonomous research"
-       />
+        />
       
       {/* Hero Section */}"
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"
+      <section className="relative overflow-hidden py-20 px-4 sm: p x-6 lg: p x-8">"
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
+            animate={{ opacity: isVisibl e ? 1 : 0, y: isVisibl e ? 0 : 20 }}
             transition={{ duration: 0.8 }}
           >"
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 text-cyan-400 text-sm font-medium mb-6">"
-              <Brain className="w-4 h-4 mr-2"  />              Revolutionary AI Research Platform
+              <Brain className="w-4 h-4 mr-2"   />              Revolutionary AI Research Platform
             </div>"
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6">
+            <h1 className="text-5xl md: tex t-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6">
               AI Autonomous Research Assistant
             </h1>"
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md: tex t-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               The world's first fully autonomous AI research platform that conducts comprehensive research, 
               analyzes data, and generates insights across multiple domains without human intervention.
             </p>
           >"
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/20 text-blue-300 text-sm font-medium mb-6">"
-              <Brain className="w-4 h-4 mr-2"  />              Revolutionary Research AI Technology
+              <Brain className="w-4 h-4 mr-2"   />              Revolutionary Research AI Technology
             </div>"
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md: tex t-6xl font-bold text-white mb-6">
               AI Autonomous Research Assistant
             </h1>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -88,33 +88,33 @@ export default function AIAutonomousResearchAssistant() {
           </motion.div>
           
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}"
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            className="flex flex-col sm: fle x-row gap-4 justify-center"
           >
             <a"
               href="/contact"
-              className="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors"
+              className="inline-flex items-center px-8 py-4 bg-blue-600 hover: b g-blue-700 text-white font-semibold rounded-lg transition-colors"
             >
               Start Researching"
-              <ArrowRight className="ml-2 w-5 h-5"  />            </a>
+              <ArrowRight className="ml-2 w-5 h-5"   />            </a>
             <a"
               href="#demo"
-              className="inline-flex items-center px-8 py-4 border border-blue-500 text-blue-300 hover:bg-blue-500/20 font-semibold rounded-lg transition-colors"
+              className="inline-flex items-center px-8 py-4 border border-blue-500 text-blue-300 hover: b g-blue-500/20 font-semibold rounded-lg transition-colors"
             >
               Request Demo
             </a>
           </motion.div>
 
       {/* Features Section */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8">"
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8">"
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
+            animate={{ opacity: isVisibl e ? 1 : 0, y: isVisibl e ? 0 : 20 }}
             transition={{ duration: 0.8, delay: 0.2 }}"
-            className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12"
+            className="grid grid-cols-1 md: gri d-cols-4 gap-6 mb-12"
           >"
             <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-2xl p-6 backdrop-blur-sm">"
               <div className="text-3xl font-bold text-cyan-400 mb-2">90%</div>"
@@ -136,9 +136,9 @@ export default function AIAutonomousResearchAssistant() {
 
           {/* CTA Buttons */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
           >"
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-6">
               Revolutionary Research AI Features
             </h2>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -147,15 +147,15 @@ export default function AIAutonomousResearchAssistant() {
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
             {features.map((feature, index (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}"
-                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-blue-500/50 transition-all"
+                transition={{ duration: 0.8, delay: inde x * 0.1 }}
+                viewport={{ once: tru e }}"
+                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: borde r-blue-500/50 transition-all"
               >"
                 <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4">"
                   <feature.icon className="w-6 h-6 text-blue-400" />
@@ -165,26 +165,26 @@ export default function AIAutonomousResearchAssistant() {
               </motion.div>
             ))}
           </div>
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+            animate={{ opacity: isVisibl e ? 1 : 0, y: isVisibl e ? 0 : 20 }}
             transition={{ duration: 0.8, delay: 0.4 }}"
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            className="flex flex-col sm: fle x-row gap-4 justify-center items-center"
           >"
-            <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 rounded-2xl font-semibold text-white transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 flex items-center">"
-              <Rocket className="w-5 h-5 mr-2"  />
+            <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover: fro m-cyan-600 hover: t o-blue-600 rounded-2xl font-semibold text-white transition-all duration-300 transform hover: scal e-105 hover: shado w-2xl hover: shado w-cyan-500/25 flex items-center">"
+              <Rocket className="w-5 h-5 mr-2"   />
               Get Started Today
             </button>"
-            <button className="px-8 py-4 border-2 border-cyan-400/50 hover:border-cyan-400 rounded-2xl font-semibold text-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center">"
-              <Eye className="w-5 h-5 mr-2"  />              Watch Demo
+            <button className="px-8 py-4 border-2 border-cyan-400/50 hover: borde r-cyan-400 rounded-2xl font-semibold text-cyan-400 hover: b g-cyan-400/10 transition-all duration-300 flex items-center">"
+              <Eye className="w-5 h-5 mr-2"   />              Watch Demo
             </button>
           </motion.div>
         </div>
       </div>
 
       {/* Research Capabilities Section */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">"
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-black/20">"
         <div className="max-w-7xl mx-auto">
           >"
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-6">
               Advanced Research Capabilities
             </h2>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -192,15 +192,15 @@ export default function AIAutonomousResearchAssistant() {
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {researchCapabilities.map(capability: unknown, index: unknown (
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
+            {researchCapabilities.map(capability: unknow n, index: unknow n (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}"
-                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-blue-500/50 transition-all"
+                transition={{ duration: 0.8, delay: inde x * 0.1 }}
+                viewport={{ once: tru e }}"
+                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: borde r-blue-500/50 transition-all"
               >"
                 <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4">"
                   <capability.icon className="w-6 h-6 text-blue-400" />
@@ -214,16 +214,16 @@ export default function AIAutonomousResearchAssistant() {
       </section>
 
       {/* Pricing Section */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;"
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8">;"
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}"
+            viewport={{ once: tru e }}"
             className="text-center mb-16"
           >"
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-6">
               Transparent Research AI Pricing
             </h2>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -232,22 +232,22 @@ export default function AIAutonomousResearchAssistant() {
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {pricingTiers.map(tier: unknown, index: unknown (
+          <div className="grid grid-cols-1 lg: gri d-cols-3 gap-8">
+            {pricingTiers.map(tier: unknow n, index: unknow n (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: inde x * 0.1 }}
+                viewport={{ once: tru e }}
                 className={`bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
 
                   index === 1 ? 'border-blue-500/50 bg-blue-500/10' : 'border-white/10'`
-                } hover:border-blue-500/50 transition-all`}
+                } hover: borde r-blue-500/50 transition-all`}
               >
                 {index === 1 && ("
                   <div className="inline-flex items-center px-3 py-1 bg-blue-500 text-white text-sm font-medium rounded-full mb-4">"
-                    <Star className="w-4 h-4 mr-1"  />                    Most Popular
+                    <Star className="w-4 h-4 mr-1"   />                    Most Popular
                   </div>
                 )}
                 "
@@ -261,7 +261,7 @@ export default function AIAutonomousResearchAssistant() {
                 <ul className="space-y-3 mb-8">
                   {tier.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-start">"
-                      <CheckCircle className="w-5 h-5 text-blue-400 mr-3 mt-0.5 flex-shrink-0"  />"                      <span className="text-gray-300">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-blue-400 mr-3 mt-0.5 flex-shrink-0"   />"                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -275,8 +275,8 @@ export default function AIAutonomousResearchAssistant() {
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-colors ${
 
                     index === 1'
-                      ? 'bg-blue-600 hover:bg-blue-700 text-white''
-                      : 'bg-white/10 hover:bg-white/20 text-white border border-white/20'`
+                      ? 'bg-blue-600 hover: b g-blue-700 text-white''
+                      : 'bg-white/10 hover: b g-white/20 text-white border border-white/20'`
                   }`}
 
                   Get Started
@@ -288,16 +288,16 @@ export default function AIAutonomousResearchAssistant() {
       </section>
 
       {/* Use Cases Section */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">;"
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-black/20">;"
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}"
+            viewport={{ once: tru e }}"
             className="text-center mb-16"
           >"
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-6">
               Revolutionary Research Use Cases
             </h2>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -306,15 +306,15 @@ export default function AIAutonomousResearchAssistant() {
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {useCases.map(useCase: unknown, index: unknown (
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
+            {useCases.map(useCase: unknow n, index: unknow n (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}"
-                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-blue-500/50 transition-all"
+                transition={{ duration: 0.8, delay: inde x * 0.1 }}
+                viewport={{ once: tru e }}"
+                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: borde r-blue-500/50 transition-all"
               >"
                 <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4">"
                   <useCase.icon className="w-6 h-6 text-blue-400" />
@@ -328,16 +328,16 @@ export default function AIAutonomousResearchAssistant() {
       </section>
 
       {/* Benefits Section */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;"
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8">;"
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}"
+            viewport={{ once: tru e }}"
             className="text-center mb-16"
           >"
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-6">
               Why Choose Our AI Research Assistant?
             </h2>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -346,18 +346,18 @@ export default function AIAutonomousResearchAssistant() {
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {benefits.map(benefit: unknown, index: unknown 
+          <div className="grid grid-cols-1 md: gri d-cols-2 gap-8">
+            {benefits.map(benefit: unknow n, index: unknow n 
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                initial={{ opacity: 0, x: inde x % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}"
+                transition={{ duration: 0.8, delay: inde x * 0.1 }}
+                viewport={{ once: tru e }}"
                 className="flex items-start space-x-4"
               >"
                 <div className="w-8 h-8 bg-blue-500/20 rounded-full flex items-center justify-center flex-shrink-0">"
-                  <CheckCircle className="w-5 h-5 text-blue-400"  />
+                  <CheckCircle className="w-5 h-5 text-blue-400"   />
                 </div>"                <p className="text-lg text-gray-300">{benefit}</p>
               </motion.div>"
           <div className="flex flex-wrap justify-center gap-2 mb-8">
@@ -369,7 +369,7 @@ export default function AIAutonomousResearchAssistant() {
 
                   activeTab === tab'
                     ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg shadow-cyan-500/25''
-                    : 'bg-zion-slate/50 text-gray-300 hover:bg-zion-slate/70 hover:text-white'`
+                    : 'bg-zion-slate/50 text-gray-300 hover: b g-zion-slate/70 hover: tex t-white'`
                 }`}
               >
                 {tab.charAt(0).toUpperCase() + tab.slice(1)}
@@ -380,17 +380,17 @@ export default function AIAutonomousResearchAssistant() {
       </div>
 
       {/* Content Sections */}"
-      <section className="relative py-12 px-4 sm:px-6 lg:px-8">"
+      <section className="relative py-12 px-4 sm: p x-6 lg: p x-8">"
         <div className="max-w-7xl mx-auto">"
           <AnimatePresence mode="wait">
             {activeTab === 'overview' && (
               <motion.div"
                 key="overview"
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.5 }}"
-                className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+                className="grid grid-cols-1 lg: gri d-cols-2 gap-12 items-center"
               >
                 <div>"
                   <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
@@ -403,21 +403,21 @@ export default function AIAutonomousResearchAssistant() {
                   </p>"
                   <div className="space-y-4">"
                     <div className="flex items-start">"
-                      <CheckCircle className="w-6 h-6 text-green-400 mr-3 mt-1 flex-shrink-0"  />
+                      <CheckCircle className="w-6 h-6 text-green-400 mr-3 mt-1 flex-shrink-0"   />
                       <div>"
                         <h3 className="font-semibold text-white mb-1">Multi-Domain Expertise</h3>"
                         <p className="text-gray-400">Covers scientific, business, academic, and market research domains</p>
                       </div>
                     </div>"
                     <div className="flex items-start">"
-                      <CheckCircle className="w-6 h-6 text-green-400 mr-3 mt-1 flex-shrink-0"  />
+                      <CheckCircle className="w-6 h-6 text-green-400 mr-3 mt-1 flex-shrink-0"   />
                       <div>"
                         <h3 className="font-semibold text-white mb-1">Continuous Learning</h3>"
                         <p className="text-gray-400">Adapts and improves based on new data and research patterns</p>
                       </div>
                     </div>"
                     <div className="flex items-start">"
-                      <CheckCircle className="w-6 h-6 text-green-400 mr-3 mt-1 flex-shrink-0"  />
+                      <CheckCircle className="w-6 h-6 text-green-400 mr-3 mt-1 flex-shrink-0"   />
                       <div>"
                         <h3 className="font-semibold text-white mb-1">Unbiased Analysis</h3>"                        <p className="text-gray-400">Eliminates human bias for objective research outcomes</p>
                       </div>
@@ -427,7 +427,7 @@ export default function AIAutonomousResearchAssistant() {
                 <div className="relative">"
                   <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-3xl p-8 backdrop-blur-sm">"
                     <div className="text-center">"
-                      <Brain className="w-24 h-24 text-cyan-400 mx-auto mb-6"  />"
+                      <Brain className="w-24 h-24 text-cyan-400 mx-auto mb-6"   />"
                       <h3 className="text-2xl font-bold text-white mb-4">AI Research Revolution</h3>"                      <p className="text-gray-300 mb-6">
                         Experience the future of research with our autonomous AI platform
                       </p>"
@@ -450,7 +450,7 @@ export default function AIAutonomousResearchAssistant() {
             {activeTab === 'features' && (
               <motion.div"
                 key="features"
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.5 }}"
@@ -465,17 +465,17 @@ export default function AIAutonomousResearchAssistant() {
                   </p>
                 </div>
 "
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-6">
                   {features.map((feature, index (
                     <motion.div
                       key={index}
-                      initial={{ opacity: 0, y: 20 }}
+                      initial={{ opacity: 0, y: 2 0 }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}"
-                      className="bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-cyan-400/20 rounded-2xl p-6 backdrop-blur-sm hover:border-cyan-400/40 transition-all duration-300 group"
+                      transition={{ duration: 0.5, delay: inde x * 0.1 }}"
+                      className="bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-cyan-400/20 rounded-2xl p-6 backdrop-blur-sm hover: borde r-cyan-400/40 transition-all duration-300 group"
                     >"
-                      <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">"
-                        <Sparkles className="w-6 h-6 text-white"  />
+                      <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-4 group-hover: scal e-110 transition-transform duration-300">"
+                        <Sparkles className="w-6 h-6 text-white"   />
                       </div>"
                       <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>"                      <p className="text-gray-400 text-sm">
                         Advanced AI-powered capability that revolutionizes research methodology
@@ -489,7 +489,7 @@ export default function AIAutonomousResearchAssistant() {
             {activeTab === 'pricing' && (
               <motion.div"
                 key="pricing"
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.5 }}"
@@ -504,7 +504,7 @@ export default function AIAutonomousResearchAssistant() {
                   </p>
                 </div>
 "
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md: gri d-cols-3 gap-8">
                   {/* Monthly Plan */}"
                   <div className="bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-cyan-400/30 rounded-3xl p-8 backdrop-blur-sm relative">"
                     <div className="text-center">"
@@ -514,11 +514,11 @@ export default function AIAutonomousResearchAssistant() {
                       <ul className="space-y-3 mb-8 text-left">
                         {pricing.features.slice(0, 3).map((feature, index) => ("
                           <li key={index} className="flex items-center text-gray-300">"
-                            <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />                            {feature}
+                            <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"   />                            {feature}
                           </li>
                         ))}
                       </ul>"
-                      <button className="w-full py-3 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 rounded-xl font-semibold text-white transition-all duration-300">
+                      <button className="w-full py-3 bg-gradient-to-r from-cyan-500 to-blue-500 hover: fro m-cyan-600 hover: t o-blue-600 rounded-xl font-semibold text-white transition-all duration-300">
                         Get Started
                       </button>
                     </div>
@@ -538,11 +538,11 @@ export default function AIAutonomousResearchAssistant() {
                       <ul className="space-y-3 mb-8 text-left">
                         {pricing.features.map((feature, index) => ("
                           <li key={index} className="flex items-center text-gray-300">"
-                            <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />                            {feature}
+                            <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"   />                            {feature}
                           </li>
                         ))}
                       </ul>"
-                      <button className="w-full py-3 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 rounded-xl font-semibold text-white transition-all duration-300">
+                      <button className="w-full py-3 bg-gradient-to-r from-cyan-500 to-blue-500 hover: fro m-cyan-600 hover: t o-blue-600 rounded-xl font-semibold text-white transition-all duration-300">
                         Get Started
                       </button>
                     </div>
@@ -556,22 +556,22 @@ export default function AIAutonomousResearchAssistant() {
                       <div className="text-gray-400 mb-6">custom pricing</div>"
                       <ul className="space-y-3 mb-8 text-left">"
                         <li className="flex items-center text-gray-300">"
-                          <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />
+                          <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"   />
                           All features included
                         </li>"
                         <li className="flex items-center text-gray-300">"
-                          <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />
+                          <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"   />
                           Custom integrations
                         </li>"
                         <li className="flex items-center text-gray-300">"
-                          <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />
+                          <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"   />
                           Dedicated support
                         </li>"
                         <li className="flex items-center text-gray-300">"
-                          <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />                          SLA guarantees
+                          <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"   />                          SLA guarantees
                         </li>
                       </ul>"
-                      <button className="w-full py-3 border-2 border-purple-400 hover:bg-purple-400/10 rounded-xl font-semibold text-purple-400 transition-all duration-300">
+                      <button className="w-full py-3 border-2 border-purple-400 hover: b g-purple-400/10 rounded-xl font-semibold text-purple-400 transition-all duration-300">
                         Contact Sales
                       </button>
                     </div>
@@ -583,7 +583,7 @@ export default function AIAutonomousResearchAssistant() {
             {activeTab === 'technical' && (
               <motion.div"
                 key="technical"
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.5 }}"
@@ -598,11 +598,11 @@ export default function AIAutonomousResearchAssistant() {
                   </p>
                 </div>
 "
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">"
+                <div className="grid grid-cols-1 lg: gri d-cols-2 gap-8">"
                   <div className="space-y-6">"
                     <div className="bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-cyan-400/20 rounded-2xl p-6 backdrop-blur-sm">"
                       <h3 className="text-xl font-semibold text-white mb-4 flex items-center">"
-                        <Cpu className="w-6 h-6 text-cyan-400 mr-3"  />                        Technology Stack
+                        <Cpu className="w-6 h-6 text-cyan-400 mr-3"   />                        Technology Stack
                       </h3>"
                       <div className="grid grid-cols-2 gap-3">
                         {technicalSpecs.technology.map((tech, index) => ("
@@ -615,12 +615,12 @@ export default function AIAutonomousResearchAssistant() {
 "
                     <div className="bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-cyan-400/20 rounded-2xl p-6 backdrop-blur-sm">"
                       <h3 className="text-xl font-semibold text-white mb-4 flex items-center">"
-                        <Network className="w-6 h-6 text-cyan-400 mr-3"  />                        Integrations
+                        <Network className="w-6 h-6 text-cyan-400 mr-3"   />                        Integrations
                       </h3>"
                       <div className="space-y-2">
                         {technicalSpecs.integrations.map((integration, index) => ("
                           <div key={index} className="flex items-center text-gray-300">"
-                            <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0"  />                            {integration}
+                            <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0"   />                            {integration}
                           </div>
                         ))}
                       </div>
@@ -630,7 +630,7 @@ export default function AIAutonomousResearchAssistant() {
                   <div className="space-y-6">"
                     <div className="bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-cyan-400/20 rounded-2xl p-6 backdrop-blur-sm">"
                       <h3 className="text-xl font-semibold text-white mb-4 flex items-center">"
-                        <Shield className="w-6 h-6 text-cyan-400 mr-3"  />                        Security & Performance
+                        <Shield className="w-6 h-6 text-cyan-400 mr-3"   />                        Security & Performance
                       </h3>"
                       <div className="space-y-4">"
                         <div className="flex justify-between items-center">"
@@ -650,12 +650,12 @@ export default function AIAutonomousResearchAssistant() {
 "
                     <div className="bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-cyan-400/20 rounded-2xl p-6 backdrop-blur-sm">"
                       <h3 className="text-xl font-semibold text-white mb-4 flex items-center">"
-                        <Lock className="w-6 h-6 text-cyan-400 mr-3"  />                        Security Standards
+                        <Lock className="w-6 h-6 text-cyan-400 mr-3"   />                        Security Standards
                       </h3>"
                       <div className="space-y-2">
                         {technicalSpecs.security.map((standard, index) => ("
                           <div key={index} className="flex items-center text-gray-300">"
-                            <ShieldCheck className="w-4 h-4 text-green-400 mr-2 flex-shrink-0"  />                            {standard}
+                            <ShieldCheck className="w-4 h-4 text-green-400 mr-2 flex-shrink-0"   />                            {standard}
                           </div>
                         ))}
                       </div>
@@ -668,7 +668,7 @@ export default function AIAutonomousResearchAssistant() {
             {activeTab === 'contact' && (
               <motion.div"
                 key="contact"
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.5 }}"
@@ -684,24 +684,24 @@ export default function AIAutonomousResearchAssistant() {
                   </p>
                 </div>
 "
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">"
+                <div className="grid grid-cols-1 md: gri d-cols-2 gap-8">"
                   <div className="bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-cyan-400/20 rounded-2xl p-8 backdrop-blur-sm">"
                     <h3 className="text-2xl font-semibold text-white mb-6">Contact Information</h3>"
                     <div className="space-y-4">"
                       <div className="flex items-center text-gray-300">"
-                        <Phone className="w-5 h-5 text-cyan-400 mr-3"  />
+                        <Phone className="w-5 h-5 text-cyan-400 mr-3"   />
                         <span>+1 302 464 0950</span>
                       </div>"
                       <div className="flex items-center text-gray-300">"
-                        <Mail className="w-5 h-5 text-cyan-400 mr-3"  />
+                        <Mail className="w-5 h-5 text-cyan-400 mr-3"   />
                         <span>kleber@ziontechgroup.com</span>
                       </div>"
                       <div className="flex items-center text-gray-300">"
-                        <Globe className="w-5 h-5 text-cyan-400 mr-3"  />
+                        <Globe className="w-5 h-5 text-cyan-400 mr-3"   />
                         <span>https://ziontechgroup.com</span>
                       </div>"
                       <div className="flex items-start text-gray-300">"
-                        <MapPin className="w-5 h-5 text-cyan-400 mr-3 mt-1"  />                        <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
+                        <MapPin className="w-5 h-5 text-cyan-400 mr-3 mt-1"   />                        <span>364 E Main St STE 1008<br  />Middletown DE 19709</span>
                       </div>
                     </div>
                   </div>
@@ -709,13 +709,13 @@ export default function AIAutonomousResearchAssistant() {
                   <div className="bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-cyan-400/20 rounded-2xl p-8 backdrop-blur-sm">"
                     <h3 className="text-2xl font-semibold text-white mb-6">Quick Start</h3>"
                     <div className="space-y-4">"
-                      <button className="w-full py-3 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 rounded-xl font-semibold text-white transition-all duration-300">
+                      <button className="w-full py-3 bg-gradient-to-r from-cyan-500 to-blue-500 hover: fro m-cyan-600 hover: t o-blue-600 rounded-xl font-semibold text-white transition-all duration-300">
                         Schedule Demo
                       </button>"
-                      <button className="w-full py-3 border-2 border-cyan-400 hover:bg-cyan-400/10 rounded-xl font-semibold text-cyan-400 transition-all duration-300">
+                      <button className="w-full py-3 border-2 border-cyan-400 hover: b g-cyan-400/10 rounded-xl font-semibold text-cyan-400 transition-all duration-300">
                         Download Brochure
                       </button>"
-                      <button className="w-full py-3 border-2 border-purple-400 hover:bg-purple-400/10 rounded-xl font-semibold text-purple-400 transition-all duration-300">
+                      <button className="w-full py-3 border-2 border-purple-400 hover: b g-purple-400/10 rounded-xl font-semibold text-purple-400 transition-all duration-300">
                         Request Quote
                       </button>
                     </div>
@@ -728,44 +728,44 @@ export default function AIAutonomousResearchAssistant() {
       </section>
 
       {/* CTA Section */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">"
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-black/20">"
         <div className="max-w-4xl mx-auto text-center">
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
           >"
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-6">
               Ready to Revolutionize Your Research?
             </h2>"
             <p className="text-xl text-gray-300 mb-8">
               Join the AI research revolution and accelerate your discoveries 
               with our autonomous research assistant.
             </p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-          <div className="grid md:grid-cols-3 gap-8">"
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">"
+          <div className="grid md: gri d-cols-3 gap-8">"
             <div className="flex flex-col items-center">"
-              <Phone className="h-8 w-8 text-blue-400 mb-4"  />"
+              <Phone className="h-8 w-8 text-blue-400 mb-4"   />"
               <h3 className="text-lg font-semibold mb-2">Phone</h3>"              <p className="text-gray-300">+1 302 464 0950</p>
               <a"
                 href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors"
+                className="inline-flex items-center px-8 py-4 bg-blue-600 hover: b g-blue-700 text-white font-semibold rounded-lg transition-colors"
               >
                 Start Researching with AI"
-                <ArrowRight className="ml-2 w-5 h-5"  />              </a>
+                <ArrowRight className="ml-2 w-5 h-5"   />              </a>
               <a"
                 href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-4 border border-blue-500 text-blue-300 hover:bg-blue-500/20 font-semibold rounded-lg transition-colors"
+                className="inline-flex items-center px-8 py-4 border border-blue-500 text-blue-300 hover: b g-blue-500/20 font-semibold rounded-lg transition-colors"
               >"
-                <Phone className="mr-2 w-5 h-5"  />
+                <Phone className="mr-2 w-5 h-5"   />
                 Call +1 302 464 0950
               </a>
             </div>"
             <div className="flex flex-col items-center">"
-              <Mail className="h-8 w-8 text-blue-400 mb-4"  />"
+              <Mail className="h-8 w-8 text-blue-400 mb-4"   />"
               <h3 className="text-lg font-semibold mb-2">Email</h3>"
               <p className="text-gray-300">kleber@ziontechgroup.com</p>
             </div>"
             <div className="flex flex-col items-center">"
-              <MapPin className="h-8 w-8 text-blue-400 mb-4"  />"
-              <h3 className="text-lg font-semibold mb-2">Address</h3>"              <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
+              <MapPin className="h-8 w-8 text-blue-400 mb-4"   />"
+              <h3 className="text-lg font-semibold mb-2">Address</h3>"              <p className="text-gray-300">364 E Main St STE 1008<br  />Middletown DE 19709</p>
             </div>
           </div>
         </div>

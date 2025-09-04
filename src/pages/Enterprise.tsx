@@ -1,5 +1,5 @@
 import React from 'react';
-const Enterprise: React.FC = () => {
+const Enterprise: Reac t.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       <h1 className="text-3xl font-bold text-gray-900">Enterprise Solutions</h1>
@@ -12,7 +12,7 @@ const Enterprise: React.FC = () => {
         <li>Zero Trust cybersecurity and compliance</li>
         <li>Scalable infrastructure and observability</li>
       </ul>
-      <a href="/contact" className="mt-8 inline-block rounded-md bg-blue-600 px-5 py-2.5 text-white hover: bg-blue-700">
+      <a href="/contact" className="mt-8 inline-block rounded-md bg-blue-600 px-5 py-2.5 text-white hover: b g-blue-700">
         Talk to an expert
       </a>
     </div>';

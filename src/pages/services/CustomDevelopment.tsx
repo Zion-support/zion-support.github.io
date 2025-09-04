@@ -2,61 +2,56 @@
 
       title: 'Mobile Applications',
       description: 'Native and cross-platform mobile applications for iOS and Android that deliver exceptional user experiences.',
-      icon: Smartphone,'
-      features['iOS Development', 'Android Development', 'Cross-platform Apps', 'App Store Optimization']},;    {
+      icon: Smartphon e,'
+      features['iOS Development', 'Android Development', 'Cross-platform Apps', 'App Store Optimization']}, {
 '
       title: 'API Development','
       description: 'Robust and scalable APIs that enable seamless integration between systems and services.',
-      icon: Network,
-      features['RESTful APIs',GraphQL APIs',API Documentation',Integration Support']},;
-    {
+      icon: Networ k,
+      features['RESTful APIs',GraphQL APIs',API Documentation',Integration Support']}, {
 
       features['Legacy System Integration',Third-party APIs',Data Synchronization',Workflow Automation']};
       title: 'System Integration',;
       description: 'Seamlessly connect your existing systems and third-party services for improved efficiency.',;
-              icon: GitFork,;
+              icon: GitFor k,;
       features: ['Legacy System Integration',Third-party APIs',Data Synchronization',Workflow Automation']};
-  ]},;
-    {
+  ]}, {
 
       title: 'Backend',
       description: 'Robust backend technologies for scalable and secure applications.',
-      icon: Cpu, // Changed from Server to Cpu'
-      stack['Node.js',Python',Java',C#',Go']},;
-    {
+      icon: Cp u, // Changed from Server to Cpu'
+      stack['Node.js',Python',Java',C#',Go']}, {
 
       title: 'Mobile',
 =======
-      icon: Monitor,'
-      stack['React', 'Vue.js', 'Angular', 'TypeScript', 'Tailwind CSS']},;    {
+      icon: Monito r,'
+      stack['React', 'Vue.js', 'Angular', 'TypeScript', 'Tailwind CSS']}, {
 '
       title: 'Backend','
       description: 'Robust backend technologies for scalable and secure applications.',
-      icon: Cpu, // Changed from Server to Cpu'
-      stack['Node.js', 'Python', 'Java', 'C#', 'Go']},;    {
+      icon: Cp u, // Changed from Server to Cpu'
+      stack['Node.js', 'Python', 'Java', 'C#', 'Go']}, {
 '
       title: 'Mobile','
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       description: 'Cross-platform and native mobile development technologies.',
-      icon: Smartphone,
-      stack['React Native',Flutter',Swift',Kotlin',Xamarin']},;
-    {
+      icon: Smartphon e,
+      stack['React Native',Flutter',Swift',Kotlin',Xamarin']}, {
 
       stack['PostgreSQL',MongoDB',MySQL',Redis',Elasticsearch']};
       title: 'Database',;
       description: 'Modern database solutions for data storage and management.',;
-      icon: Database,;
+      icon: Databas e,;
       stack: ['PostgreSQL',MongoDB',MySQL',Redis',Elasticsearch']};
-  ]},;
-    {;'
+  ]}, {;'
       title: 'Support & Maintenance',;'      description: 'Ongoing support and maintenance to ensure your applications run smoothly.',;
-      icon: Settings};
+      icon: Setting s};
   ];
 
   const industries = [;'    'Healthcare', 'Finance', 'Manufacturing', 'Retail', 'Government', 'Education', 'Transportation', 'Energy';
   ];
 
-  return()
+  return ()
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-20">
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20">"
@@ -67,7 +62,7 @@
             initial = {
 
   { opacity: 0,
-  y: 30 
+  y: 3 0 
 
 
 
@@ -88,23 +83,23 @@
 }}
             transition={{ duration: 0.8 }}
 "
-            <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent mb-6">
+            <h1 className="text-5xl lg: tex t-7xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent mb-6">
               Custom Development
             </h1>"
-            <p className="text-xl lg:text-2xl text-zion-slate-light mb-8 leading-relaxed">
+            <p className="text-xl lg: tex t-2xl text-zion-slate-light mb-8 leading-relaxed">
               Tailored software solutions designed specifically for your business needs.
               From web applications to mobile apps, we build custom software that drives results.
             </p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
               <Link"
                 to="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold"
+                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover: shado w-lg hover: shado w-zion-cyan/25 transition-all duration-300 transform hover: scal e-105 font-semibold"
 
                 Start Your Project
               </Link>
               <Link"
                 to="/services"
-                className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-semibold"
+                className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hover: b g-zion-cyan hover: tex t-white transition-all duration-300 font-semibold"
 
                 View All Services
               </Link>
@@ -121,7 +116,7 @@
             initial = {
 
   { opacity: 0,
-  y: 30 
+  y: 3 0 
 
 
 
@@ -142,7 +137,7 @@
 }}
             transition={{ duration: 0.8 }}
 "
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl lg: tex t-5xl font-bold text-white mb-6">
               Our Custom Development Services
             </h2>"
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
@@ -151,15 +146,15 @@
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg: gri d-cols-2 gap-8">
             {services.map((service, index 
               <motion.div
                 key={index}"
-                className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/10"
+                className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-8 hover: borde r-zion-cyan/40 transition-all duration-300 hover: shado w-lg hover: shado w-zion-cyan/10"
                 initial = {
 
   { opacity: 0,
-  y: 30 
+  y: 3 0 
 
 
 
@@ -181,7 +176,7 @@
                 transition = {
 
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -205,7 +200,7 @@
                   <ul className="space-y-2">
                     {service.features.map((feature, featureIndex) => ("
                       <li key={featureIndex} className="flex items-center gap-2 text-zion-slate-light">"
-                        <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0"  />                        {feature}
+                        <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0"   />                        {feature}
                       </li>
                     ))}
                   </ul>
@@ -224,7 +219,7 @@
             initial = {
 
   { opacity: 0,
-  y: 30 
+  y: 3 0 
 
 
 
@@ -245,7 +240,7 @@
 }}
             transition={{ duration: 0.8 }}
 "
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl lg: tex t-5xl font-bold text-white mb-6">
               Our Technology Stack
             </h2>"
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
@@ -254,15 +249,15 @@
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {technologies.map(tech: unknown, index: unknown 
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
+            {technologies.map(tech: unknow n, index: unknow n 
               <motion.div
                 key={index}"
-                className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/10 group"
+                className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover: borde r-zion-cyan/40 transition-all duration-300 hover: shado w-lg hover: shado w-zion-cyan/10 group"
                 initial = {
 
   { opacity: 0,
-  y: 30 
+  y: 3 0 
 
 
 
@@ -284,7 +279,7 @@
                 transition = {
 
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -293,7 +288,7 @@
 
 }}
               >"
-                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">"
+                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center mb-6 group-hover: scal e-110 transition-transform duration-300">"
                   <tech.icon className="w-8 h-8 text-white" />
                 </div>
 "
@@ -319,7 +314,7 @@
             initial = {
 
   { opacity: 0,
-  y: 30 
+  y: 3 0 
 
 
 
@@ -340,7 +335,7 @@
 }}
             transition={{ duration: 0.8 }}
 "
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl lg: tex t-5xl font-bold text-white mb-6">
               Why Choose Custom Development?
             </h2>"
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
@@ -348,15 +343,15 @@
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {benefits.map(benefit: unknown, index: unknown (
+          <div className="grid grid-cols-1 lg: gri d-cols-2 gap-8">
+            {benefits.map(benefit: unknow n, index: unknow n (
               <motion.div
                 key={index}"
-                className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
+                className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover: borde r-zion-cyan/40 transition-all duration-300"
                 initial = {
 
   { opacity: 0,
-  y: 30 
+  y: 3 0 
 
 
 
@@ -378,7 +373,7 @@
                 transition = {
 
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -406,7 +401,7 @@
             initial = {
 
   { opacity: 0,
-  y: 30 
+  y: 3 0 
 
 
 
@@ -427,7 +422,7 @@
 }}
             transition={{ duration: 0.8 }}
 "
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl lg: tex t-5xl font-bold text-white mb-6">
               Industries We Serve
             </h2>"
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
@@ -436,15 +431,15 @@
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {industries.map(industry: unknown, index: unknown (
+          <div className="grid grid-cols-2 md: gri d-cols-4 gap-6">
+            {industries.map(industry: unknow n, index: unknow n (
               <motion.div
                 key={index}"
-                className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg p-6 text-center hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/10"
+                className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg p-6 text-center hover: borde r-zion-cyan/40 transition-all duration-300 hover: shado w-lg hover: shado w-zion-cyan/10"
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -466,7 +461,7 @@
                 transition = {
 
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -490,7 +485,7 @@
             initial = {
 
   { opacity: 0,
-  y: 30 
+  y: 3 0 
 
 
 
@@ -511,7 +506,7 @@
 }}
             transition={{ duration: 0.8 }}
 "
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl lg: tex t-5xl font-bold text-white mb-6">
               Our Development Process
             </h2>"
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
@@ -519,20 +514,20 @@
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 md: grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-4 gap-8">
             {['
               { step: '01', title: 'Discovery', description: 'Understand requirements and plan the solution architecture' },
               { step: '02', title: 'Design', description: 'Create detailed designs and user experience mockups' },
               { step: '03', title: 'Development', description: 'Build the application using agile development practices' },
               { step: '04', title: 'Deployment', description: 'Deploy and launch with ongoing support and maintenance' }
-            ].map(phase: unknown, index: unknown (
+            ].map(phase: unknow n, index: unknow n (
               <motion.div
                 key={index}"
                 className="text-center"
                 initial = {
 
   { opacity: 0,
-  y: 30 
+  y: 3 0 
 
 
 
@@ -554,7 +549,7 @@
                 transition = {
 
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -582,7 +577,7 @@
             initial = {
 
   { opacity: 0,
-  y: 30 
+  y: 3 0 
 
 
 
@@ -603,23 +598,23 @@
 }}
             transition={{ duration: 0.8 }}
 "
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl lg: tex t-5xl font-bold text-white mb-6">
               Ready to Build Your Custom Solution?
             </h2>"
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
               Let our development experts create the perfect software solution for your business.
               Get started with a free consultation today.
             </p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
               <Link"
                 to="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold"
+                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover: shado w-lg hover: shado w-zion-cyan/25 transition-all duration-300 transform hover: scal e-105 font-semibold"
 
                 Start Your Project
               </Link>
               <Link"
                 to="/services"
-                className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-semibold"
+                className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hover: b g-zion-cyan hover: tex t-white transition-all duration-300 font-semibold"
 
                 Explore Services
               </Link>

@@ -25,7 +25,7 @@ export interface AdditionalEnhancedService {
   popular?: boolean;
 }
 
-export const additionalEnhancedServices: AdditionalEnhancedService[] = [
+export const additionalEnhancedServices: AdditionalEnhancedServic e[] = [
   {
     id: 'ai-powered-code-review-assistant',
     name: 'AI-Powered Code Review Assistant',
@@ -58,15 +58,15 @@ export const additionalEnhancedServices: AdditionalEnhancedService[] = [
     marketPosition: 'Leading AI-powered code review solution',
     competitors: ['SonarQube', 'CodeClimate', 'Snyk'],
     roi: '300% within 6 months',
-    trialDays: 14,
+    trialDays: 1 4,
     setupTime: '5 minutes',
     icon: '🔍',
     color: 'blue',
     link: '/services/ai-code-review',
     rating: 4.8,
-    reviewCount: 234,
+    reviewCount: 23 4,
     launchDate: '2024-01-15',
-    popular: true
+    popular: tru e
   },
   {
     id: 'quantum-computing-simulation-platform',
@@ -100,15 +100,15 @@ export const additionalEnhancedServices: AdditionalEnhancedService[] = [
     marketPosition: 'Premier quantum simulation platform',
     competitors: ['IBM Quantum Experience', 'Google Quantum AI', 'Amazon Braket'],
     roi: '500% for research institutions',
-    trialDays: 30,
+    trialDays: 3 0,
     setupTime: '1 hour',
     icon: '⚛️',
     color: 'purple',
     link: '/services/quantum-simulation',
     rating: 4.9,
-    reviewCount: 89,
+    reviewCount: 8 9,
     launchDate: '2024-02-01',
-    popular: true
+    popular: tru e
   },
   {
     id: 'autonomous-vehicle-testing-suite',
@@ -142,13 +142,13 @@ export const additionalEnhancedServices: AdditionalEnhancedService[] = [
     marketPosition: 'Leading AV testing platform',
     competitors: ['CARLA', 'LGSVL', 'AWS RoboMaker'],
     roi: '400% for automotive companies',
-    trialDays: 30,
+    trialDays: 3 0,
     setupTime: '1 day',
     icon: '🚗',
     color: 'green',
     link: '/services/av-testing',
     rating: 4.7,
-    reviewCount: 156,
+    reviewCount: 15 6,
     launchDate: '2024-01-20'
   },
   {
@@ -183,13 +183,13 @@ export const additionalEnhancedServices: AdditionalEnhancedService[] = [
     marketPosition: 'Leading DAO governance platform',
     competitors: ['Snapshot', 'Aragon', 'Compound Governance'],
     roi: '200% for DeFi protocols',
-    trialDays: 14,
+    trialDays: 1 4,
     setupTime: '2 hours',
     icon: '🏛️',
     color: 'orange',
     link: '/services/blockchain-governance',
     rating: 4.6,
-    reviewCount: 178,
+    reviewCount: 17 8,
     launchDate: '2024-02-15'
   }
 ];

@@ -4,7 +4,7 @@ interface ResourceError {
   error: string;
   timestamp: number}
 class ResourceMonitor {
-  private errors: ResourceError[] = [];
+  private errors: ResourceErro r[] = [];
   private isMonitoring = false;
   private retryAttempts = new Map<string, number>();
   private maxRetries = 3;
@@ -63,11 +63,11 @@ class ResourceMonitor {
 
               this.monitorElement(element)}
           })})});
-      observer.observe(document.head, { childList: true, subtree: true });
-      observer.observe(document.body, { childList: true, subtree: true })}
+      observer.observe(document.head, { childList: tru e, subtree: tru e });
+      observer.observe(document.body, { childList: tru e, subtree: tru e })}
   }
 
-  private monitorElement(element: HTMLElement) {
+  private monitorElement(element: HTMLElemen t) {
 
     // Monitor scripts'
     if(element.tagName === 'SCRIPT' && element.src) {
@@ -80,13 +80,13 @@ class ResourceMonitor {
       this.monitorStylesheet(element as HTMLLinkElement)}
   }
 
-  private monitorScript(script: anyHTMLScriptElement) {
+  private monitorScript(script: anyHTMLScriptElemen t) {
 
     script.addEventListener('error', () => {
 
       this.handleResourceError(script.src,script',Script loading failed')})}
 
-  private monitorStylesheet(link: anyHTMLLinkElement) {
+  private monitorStylesheet(link: anyHTMLLinkElemen t) {
 
     link.addEventListener('error', () => {
       this.handleResourceError()
@@ -135,16 +135,16 @@ class ResourceMonitor {
   }
   private handleResourceError()
     url: string,
-    type: ResourceError['type'],
+    type: ResourceErro r['type'],
     error: string
   ) {
 
-    const resourceError: ResourceError = {
+    const resourceError: ResourceErro r = {
 
       url,
       type,
       error,
-      timestamp: Date.now()};
+      timestamp: Dat e.now()};
 
     this.errors.push(resourceError);
     // console.error('🚨 Resource Error:', resourceError);
@@ -155,7 +155,7 @@ class ResourceMonitor {
     // Report to analytics/monitoring service
     this.reportError(resourceError)}
 
-  private attemptRetry(url: string, type: ResourceError['type']) {
+  private attemptRetry(url: string, type: ResourceErro r['type']) {
 
     if(attempts >= this.maxRetries) {
 `
@@ -170,7 +170,7 @@ class ResourceMonitor {
       Math.pow(2, attempts) * 1000
     ); // Exponential backoff
   }
-  private retryResource(url: string, type: ResourceError['type']) {
+  private retryResource(url: string, type: ResourceErro r['type']) {
 `
     // console.log(`🔄 Retrying resource: ${url} (attempt ${this.retryAttempts.get(url)})`);
 
@@ -206,16 +206,16 @@ class ResourceMonitor {
 `
       // console.error(`❌ Stylesheet retry failed: ${href}`)};
     document.head.appendChild(link)}
-  private reportError(error: ResourceError) {
+  private reportError(error: ResourceErro r) {
 
     // In production, send to monitoring service'
     if(process.env.NODE_ENV === 'production') {
 
-      // Example: Sentry, LogRocket, etc.'
+      // Example: Sentr y, LogRocket, etc.'
       // console.log('📊 Reporting error to monitoring service:', error);
     }
   }
-  private getResourceType(element: HTMLElement): ResourceError['type'] {
+  private getResourceType(element: HTMLElemen t): ResourceError['type'] {
 
     if(element.tagName === 'SCRIPT') return 'script';
     if('

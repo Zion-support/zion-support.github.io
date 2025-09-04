@@ -6,7 +6,7 @@ export const measurePerformance = (name: string, fn: () => void) => {
   console.log(`${name} took ${end - start} milliseconds`);
 };
 
-export const reportWebVitals = (metric: any) => {
+export const reportWebVitals = (metric: an y) => {
   // Send to analytics service
   console.log(metric);
   
@@ -14,14 +14,14 @@ export const reportWebVitals = (metric: any) => {
   if (typeof window !== 'undefined' && (window as any).gtag) {
     (window as any).gtag('event', metric.name, {
       event_category: 'Web Vitals',
-      event_label: metric.id,
-      value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
-      non_interaction: true,
+      event_label: metri c.id,
+      value: Mat h.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
+      non_interaction: tru e,
     });
   }
 };
 
-export const lazyLoadImage = (img: HTMLImageElement) => {
+export const lazyLoadImage = (img: HTMLImageElemen t) => {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {

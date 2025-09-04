@@ -11,7 +11,7 @@ interface ChatAssistantProps {
   enableSuggestions?: boolean;
 }
 
-export const ChatAssistant: React.FC<ChatAssistantProps> = ({
+export const ChatAssistant: Reac t.FC<ChatAssistantProps> = ({
   enabled = true,
   position = 'bottom-right',
   theme = 'dark',
@@ -52,9 +52,9 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   const handleSendMessage = async () => {
     if(!inputValue.trim()) return;
 
-    const userMessage: Message = {
-      id: Date.now().toString(),
-      text: inputValue,
+    const userMessage: Messag e = {
+      id: Dat e.now().toString(),
+      text: inputValu e,
       sender: 'user',
       timestamp: new Date()
     };
@@ -65,9 +65,9 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
 
     // Simulate AI response
     setTimeout(() => {
-      const aiResponse: Message = {
+      const aiResponse: Messag e = {
         id: (Date.now() + 1).toString(),
-        text: getAIResponse(inputValue),
+        text: getAIRespons e(inputValue),
         sender: 'assistant',
         timestamp: new Date(),
         metadata: {
@@ -91,7 +91,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
     return responses[Math.floor(Math.random() * responses.length)];
   };
 
-  const handleKeyPress = (e: React.KeyboardEvent) => {
+  const handleKeyPress = (e: Reac t.KeyboardEvent) => {
     if(e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
       handleSendMessage();
@@ -117,9 +117,9 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, scale: 0.8, y: 20 }}
+            initial={{ opacity: 0, scale: 0.8, y: 2 0 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.8, y: 20 }}
+            exit={{ opacity: 0, scale: 0.8, y: 2 0 }}
             transition={{ duration: 0.2 }}
             className="mb-4 w-80 h-96 bg-slate-900/95 backdrop-blur-lg border border-white/20 rounded-xl shadow-2xl flex flex-col"
           >
@@ -127,7 +127,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
             <div className="flex items-center justify-between p-4 border-b border-white/10">
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center">
-                  <Bot className="w-5 h-5 text-white" />
+                  <Bot className="w-5 h-5 text-white"  />
                 </div>
                 <div>
                   <h3 className="text-white font-semibold text-sm">AI Assistant</h3>
@@ -136,16 +136,16 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
               </div>
               <div className="flex items-center gap-2">
                 <button 
-                  className="text-gray-400 hover:text-white transition-colors p-1"
+                  className="text-gray-400 hover: tex t-white transition-colors p-1"
                   onClick={() => setIsOpen(false)}
                 >
-                  <Settings className="w-4 h-4" />
+                  <Settings className="w-4 h-4"  />
                 </button>
                 <button 
-                  className="text-gray-400 hover:text-white transition-colors p-1"
+                  className="text-gray-400 hover: tex t-white transition-colors p-1"
                   onClick={() => setIsOpen(false)}
                 >
-                  <X className="w-4 h-4" />
+                  <X className="w-4 h-4"  />
                 </button>
               </div>
             </div>
@@ -181,7 +181,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
                   </div>
                 </div>
               )}
-              <div ref={messagesEndRef} />
+              <div ref={messagesEndRef}  />
             </div>
 
             {/* Input */}
@@ -195,32 +195,32 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
                     onChange={(e) => setInputValue(e.target.value)}
                     onKeyPress={handleKeyPress}
                     placeholder="Type your message..."
-                    className="w-full bg-white/10 border border-white/20 rounded-lg px-3 py-2 text-white text-sm placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400"
+                    className="w-full bg-white/10 border border-white/20 rounded-lg px-3 py-2 text-white text-sm placeholder-gray-400 focus: outlin e-none focus: borde r-cyan-400 focus: rin g-1 focus: rin g-cyan-400"
                   />
                 </div>
                 
                 {enableFileUpload && (
-                  <button className="text-gray-400 hover:text-white transition-colors p-2">
-                    <Paperclip className="w-4 h-4" />
+                  <button className="text-gray-400 hover: tex t-white transition-colors p-2">
+                    <Paperclip className="w-4 h-4"  />
                   </button>
                 )}
                 
                 {enableVoice && (
                   <button 
                     onClick={toggleVoice}
-                    className={`transition-colors p-2 ${isListening ? 'text-red-400' : 'text-gray-400 hover:text-white'
+                    className={`transition-colors p-2 ${isListening ? 'text-red-400' : 'text-gray-400 hover: tex t-white'
                     }`}
                   >
-                    {isListening ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />}
+                    {isListening ? <MicOff className="w-4 h-4"  /> : <Mic className="w-4 h-4"  />}
                   </button>
                 )}
                 
                 <button 
                   onClick={handleSendMessage}
                   disabled={!inputValue.trim()}
-                  className="bg-cyan-500 hover:bg-cyan-600 disabled:opacity-50 disabled:cursor-not-allowed text-white p-2 rounded-lg transition-colors"
+                  className="bg-cyan-500 hover: b g-cyan-600 disabled: opacit y-50 disabled: curso r-not-allowed text-white p-2 rounded-lg transition-colors"
                 >
-                  <Send className="w-4 h-4" />
+                  <Send className="w-4 h-4"  />
                 </button>
               </div>
             </div>
@@ -231,11 +231,11 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
       {/* Toggle Button */}
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-14 h-14 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full shadow-lg flex items-center justify-center text-white hover:shadow-xl transition-shadow"
+        className="w-14 h-14 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full shadow-lg flex items-center justify-center text-white hover: shado w-xl transition-shadow"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
-        {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
+        {isOpen ? <X className="w-6 h-6"  /> : <MessageCircle className="w-6 h-6"  />}
       </motion.button>
     </div>
   );

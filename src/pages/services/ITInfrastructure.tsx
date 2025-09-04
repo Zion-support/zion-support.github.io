@@ -2,14 +2,14 @@
       <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark">"
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}"
             className="max-w-4xl mx-auto"
           >"
             <div className="w-24 h-24 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-8">"
-              <Server className="w-12 h-12 text-white"  />
-            </div>"            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <Server className="w-12 h-12 text-white"   />
+            </div>"            <h1 className="text-4xl md: tex t-6xl font-bold text-white mb-6">
               IT Infrastructure"
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">
                 Solutions
@@ -28,13 +28,13 @@
       <section className="py-20 bg-zion-slate-dark">"
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
             transition={{ duration: 0.6 }}"
             className="text-center mb-16"
           >"
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-6">
               Comprehensive Infrastructure Services
             </h2>"
             <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
@@ -44,15 +44,15 @@
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8 max-w-7xl mx-auto">
             {services.map((service, index 
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}"
-                className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 hover:scale-105"
+                viewport={{ once: tru e }}
+                transition={{ duration: 0.6, delay: inde x * 0.1 }}"
+                className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover: borde r-zion-cyan/40 transition-all duration-300 hover: scal e-105"
               >"
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mb-6">
                   {service.icon}
@@ -85,13 +85,13 @@
         <div className="container mx-auto px-4">"
           <div className="max-w-6xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 2 0 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: tru e }}
               transition={{ duration: 0.6 }}"
               className="text-center mb-16"
             >"
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-6">
                 Why Choose Our Infrastructure Solutions?
               </h2>"
               <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
@@ -100,18 +100,18 @@
               </p>
             </motion.div>
 "
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {benefits.map(benefit: unknown, index: unknown (
+            <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-6">
+              {benefits.map(benefit: unknow n, index: unknow n (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}"
+                  viewport={{ once: tru e }}
+                  transition={{ duration: 0.6, delay: inde x * 0.1 }}"
                   className="flex items-center gap-4 p-4 bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-lg"
                 >"
                   <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center flex-shrink-0">"
-                    <Check className="w-4 h-4 text-white"  />
+                    <Check className="w-4 h-4 text-white"   />
                   </div>"                  <span className="text-white font-medium">{benefit}</span>
                 </motion.div>
               ))}
@@ -124,24 +124,24 @@
       <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark">"
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
             transition={{ duration: 0.6 }}"
             className="max-w-4xl mx-auto"
           >"
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-6">
               Ready to Transform Your IT Infrastructure?
             </h2>"
             <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
               Let our experts help you build a robust, scalable, and secure
               infrastructure that drives your business forward.
             </p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-              <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">"
+              <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover: scal e-105 transition-all duration-300 shadow-2xl hover: shado w-zion-cyan/25">
                 Get Started Today
               </button>"
-              <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300">
+              <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover: b g-zion-cyan hover: tex t-white transition-all duration-300">
                 Schedule Consultation
               </button>
             </div>

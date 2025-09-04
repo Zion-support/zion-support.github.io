@@ -3,12 +3,12 @@ import {  import { motion, AnimatePresence  } from 'framer-motion';
 export default function Page() {
 > {
 
-  data: SearchResult[];
-  onResultsChange?: (results: SearchResult[]) => void;
+  data: SearchResul t[];
+  onResultsChange?: (results: SearchResul t[]) => void;
   placeholder?: string;
   showFilters?: boolean}
 
-export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
+export const SearchAndFilterSystem: Reac t.FC<SearchAndFilterSystemProps> = ({
 
   data,
   onResultsChange,
@@ -70,11 +70,11 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
 
     switch(type) {
 '"
-      case 'service': return <Zap className="w-4 h-4"  />;'"
-      case 'article': return <Tag className="w-4 h-4"  />;'"
-      case 'team': return <Users className="w-4 h-4"  />;'"
-      case 'technology': return <Brain className="w-4 h-4"  />;"
-      default: return <Globe className="w-4 h-4"  />};
+      case 'service': return <Zap className="w-4 h-4"   />;'"
+      case 'article': return <Tag className="w-4 h-4"   />;'"
+      case 'team': return <Users className="w-4 h-4"   />;'"
+      case 'technology': return <Brain className="w-4 h-4"   />;"
+      default: retur n <Globe className="w-4 h-4"   />};
 
   // Get category color
   
@@ -84,21 +84,21 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
       {/* Search Bar */}"
       <div className="relative mb-6">"
         <div className="relative">"
-          <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zinc-400 w-5 h-5"  />
+          <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zinc-400 w-5 h-5"   />
           <input"            type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             onFocus={() => setIsSearchFocused(true)}
             onBlur={() => setTimeout(() => setIsSearchFocused(false), 200)}
             placeholder={placeholder}"
-            className="w-full pl-12 pr-4 py-4 bg-zinc-900/50 border border-zinc-700/50 rounded-xl text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300 backdrop-blur-md"
+            className="w-full pl-12 pr-4 py-4 bg-zinc-900/50 border border-zinc-700/50 rounded-xl text-white placeholder-zinc-400 focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan focus: borde r-transparent transition-all duration-300 backdrop-blur-md"
           />
           {searchQuery && (
             <button'
               onClick={() => setSearchQuery('')}"
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zinc-400 hover:text-white transition-colors"
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zinc-400 hover: tex t-white transition-colors"
 "
-              <X className="w-5 h-5"  />            </button>;
+              <X className="w-5 h-5"   />            </button>;
           )}
         </div>
 
@@ -113,7 +113,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
               {filteredResults.slice(0, 5).map((result) => (;
                 <div
                   key={result.id}"
-                  className="p-3 hover:bg-zinc-800/50 transition-colors cursor-pointer border-b border-zinc-700/30 last:border-b-0"
+                  className="p-3 hover: b g-zinc-800/50 transition-colors cursor-pointer border-b border-zinc-700/30 last: borde r-b-0"
 "
                   <div className="flex items-center gap-3">"
                     <span className="text-zion-cyan">
@@ -140,7 +140,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}"
-              className="appearance-none pl-4 pr-10 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
+              className="appearance-none pl-4 pr-10 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white text-sm focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan focus: borde r-transparent transition-all duration-300"
 "
               <option value="all">All Categories</option>
               {filterOptions.categories.map((category) => (
@@ -149,31 +149,31 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
                 </option>
               ))}
             </select>"
-            <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zinc-400 w-4 h-4 pointer-events-none"  />          </div>
+            <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zinc-400 w-4 h-4 pointer-events-none"   />          </div>
 
           {/* Sort Options */}"
           <div className="relative">
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}"
-              className="appearance-none pl-4 pr-10 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
+              className="appearance-none pl-4 pr-10 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white text-sm focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan focus: borde r-transparent transition-all duration-300"
 "
               <option value="relevance">Relevance</option>"
               <option value="date">Date</option>"
               <option value="rating">Rating</option>"
               <option value="name">Name</option>
             </select>"
-            <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zinc-400 w-4 h-4 pointer-events-none"  />          </div>
+            <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zinc-400 w-4 h-4 pointer-events-none"   />          </div>
 
           {/* Filter Toggle */}
           <button
             onClick={() => setShowFilterPanel(!showFilterPanel)}`
 className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${showFilterPanel'
                 ? 'bg-zion-cyan text-white''
-                : 'bg-zinc-900/50 text-zinc-300 hover:text-white border border-zinc-700/50'`
+                : 'bg-zinc-900/50 text-zinc-300 hover: tex t-white border border-zinc-700/50'`
             }`}
 "
-            <Filter className="w-4 h-4"  />            Filters
+            <Filter className="w-4 h-4"   />            Filters
             {activeFilters.size > 0 && ("
               <span className="ml-1 px-2 py-0.5 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full">
                 {activeFilters.size}
@@ -184,7 +184,7 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
           {activeFilters.size > 0 && (
             <button
               onClick={clearAllFilters}"
-              className="px-3 py-2 text-sm text-zinc-400 hover:text-white transition-colors"
+              className="px-3 py-2 text-sm text-zinc-400 hover: tex t-white transition-colors"
 
               Clear all
             </button>) }
@@ -222,7 +222,7 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
             <div className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl">"
               <h3 className="text-sm font-medium text-white mb-4">Advanced Filters</h3>
 "
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-4">
                 {/* Type Filters */}
                 <div>"
                   <h4 className="text-xs font-medium text-zinc-400 mb-2 uppercase tracking-wide">Type</h4>"
@@ -233,7 +233,7 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
                           type="checkbox"
                           checked={activeFilters.has(type.value)}
                           onChange={() => toggleFilter(type.value)}"
-                          className="w-4 h-4 text-zion-cyan bg-zinc-800 border-zinc-600 rounded focus:ring-zion-cyan focus:ring-2"
+                          className="w-4 h-4 text-zion-cyan bg-zinc-800 border-zinc-600 rounded focus: rin g-zion-cyan focus: rin g-2"
                         />"
                         <span className="text-sm text-zinc-300">{type.label}</span>"
                         <span className="text-xs text-zinc-500">({type.count})</span>
@@ -252,7 +252,7 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
                         onClick={() => toggleFilter(tag.toLowerCase())}`
                         className={`px-3 py-1 text-xs rounded-full transition-all duration-300 ${activeFilters.has(tag.toLowerCase())
                             ? 'bg-zion-cyan text-white''
-                            : 'bg-zinc-800/50 text-zinc-300 hover:bg-zinc-700/50'`
+                            : 'bg-zinc-800/50 text-zinc-300 hover: b g-zinc-700/50'`
                         }`}
 
                         {tag}
@@ -270,7 +270,7 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
                           type="checkbox"
                           checked={activeFilters.has(location.toLowerCase())}
                           onChange={() => toggleFilter(location.toLowerCase())}"
-                          className="w-4 h-4 text-zion-cyan bg-zinc-800 border-zinc-600 rounded focus:ring-zion-cyan focus:ring-2"
+                          className="w-4 h-4 text-zion-cyan bg-zinc-800 border-zinc-600 rounded focus: rin g-zion-cyan focus: rin g-2"
                         />"
                         <span className="text-sm text-zinc-300">{location}</span>
                       </label>
@@ -289,14 +289,13 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
       </div>
 
       {/* Search Results */}"
-      <div className="space-y-4">;
-        {filteredResults.map((result) => (;
+      <div className="space-y-4"> {filteredResults.map((result) => (;
           <motion.div
             key={result.id}
             initial = {
 
   { opacity: 0,
-  y: 20
+  y: 2 0
 
 }}
             animate = {
@@ -305,22 +304,22 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
   y: 0
 
 }}"
-            className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300 cursor-pointer group"
+            className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover: b g-zinc-900/50 transition-all duration-300 cursor-pointer group"
 "
             <div className="flex items-start gap-4">"
-              <div className="flex-shrink-0 p-3 bg-zinc-800/50 rounded-lg text-zion-cyan group-hover:bg-zion-cyan/20 transition-colors">
+              <div className="flex-shrink-0 p-3 bg-zinc-800/50 rounded-lg text-zion-cyan group-hover: b g-zion-cyan/20 transition-colors">
                 {getTypeIcon(result.type)}
               </div>
 "
               <div className="flex-1 min-w-0">"
                 <div className="flex items-start justify-between mb-2">"
-                  <h3 className="text-lg font-semibold text-white group-hover:text-zion-cyan transition-colors">
+                  <h3 className="text-lg font-semibold text-white group-hover: tex t-zion-cyan transition-colors">
                     {result.title}
                   </h3>"
                   <div className="flex items-center gap-2">
                     {result.rating && ("
                       <div className="flex items-center gap-1 text-yellow-400">"
-                        <Star className="w-4 h-4 fill-current"  />"                        <span className="text-sm">{result.rating}</span>
+                        <Star className="w-4 h-4 fill-current"   />"                        <span className="text-sm">{result.rating}</span>
                       </div>
                     )}`
                     <span className={`text-xs px-2 py-1 rounded-full bg-zinc-800/50 ${getCategoryColor(result.category)}`}>
@@ -334,18 +333,18 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
                 <div className="flex items-center gap-4 text-sm text-zinc-400">
                   {result.location && ("
                     <div className="flex items-center gap-1">"
-                      <MapPin className="w-4 h-4"  />
+                      <MapPin className="w-4 h-4"   />
                       {result.location}
                     </div>
                   )}
                   {result.date && ("
                     <div className="flex items-center gap-1">"
-                      <Calendar className="w-4 h-4"  />
+                      <Calendar className="w-4 h-4"   />
                       {result.date}
                     </div>
                   )}"
                   <div className="flex items-center gap-1">"
-                    <Tag className="w-4 h-4"  />
+                    <Tag className="w-4 h-4"   />
                     {result.tags.slice(0, 3).join(',)}`
                     {result.tags.length > 3 && ` +${result.tags.length-3} more`}                  </div>
                 </div>
@@ -360,13 +359,13 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
           animate={{ opacity: 1 }}"
           className="text-center py-12"
 "
-          <Search className="w-16 h-16 text-zinc-600 mx-auto mb-4"  />"
+          <Search className="w-16 h-16 text-zinc-600 mx-auto mb-4"   />"
           <h3 className="text-xl font-medium text-zinc-300 mb-2">No results found</h3>"          <p className="text-zinc-400 mb-4">
             Try adjusting your search terms or filters
           </p>
           <button
             onClick={clearAllFilters}"
-            className="px-4 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors"
+            className="px-4 py-2 bg-zion-cyan text-white rounded-lg hover: b g-zion-cyan/80 transition-colors"
 
             Clear all filters
           </button>

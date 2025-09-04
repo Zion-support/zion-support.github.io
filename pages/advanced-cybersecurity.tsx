@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { useState } from 'react';
 import { ADVANCED_CYBERSECURITY_SERVICES_2027 } from "../src/data/advancedCybersecurityServices2027";
 
-const AdvancedCybersecurityServices: NextPage = () => {
+const AdvancedCybersecurityServices: NextPag e = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState<any>('innovation');
@@ -32,8 +32,7 @@ const AdvancedCybersecurityServices: NextPage = () => {
         return (b.rating || 0) - (a.rating || 0);
       case 'popularity':
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
-      default:
-        return 0;
+      default: return 0;
     }
   });
 
@@ -54,7 +53,7 @@ const AdvancedCybersecurityServices: NextPage = () => {
       case 'Network Security': return '🌐';
       case 'Endpoint Security': return '💻';
       case 'Cloud Security': return '☁️';
-      default: return '🛡️';
+      default: retur n '🛡️';
     }
   };
 
@@ -70,7 +69,7 @@ const AdvancedCybersecurityServices: NextPage = () => {
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0" style = {
   {
-            backgroundImage: `url("data:image/svg+xml,
+            backgroundImage: `url("data: imag e/svg+xml,
   %3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
           
 
@@ -85,10 +84,10 @@ const AdvancedCybersecurityServices: NextPage = () => {
 
       <Helmet>
         <title>Advanced Cybersecurity Services 2027 - Zion Tech Group | Military-Grade Security Solutions</title>
-        <meta name="description" content="Protect your digital assets with Zion Tech Group's cutting-edge cybersecurity solutions. From AI-powered threat detection to quantum cryptography, we deliver military-grade security for the modern world." />
-        <meta name="keywords" content="cybersecurity, AI security, quantum cryptography, zero trust, autonomous SOC, Zion Tech Group" />
-        <meta name="author" content="Zion Tech Group" />
-        <link rel="canonical" href="https://ziontechgroup.com/advanced-cybersecurity" />
+        <meta name="description" content="Protect your digital assets with Zion Tech Group's cutting-edge cybersecurity solutions. From AI-powered threat detection to quantum cryptography, we deliver military-grade security for the modern world."  />
+        <meta name="keywords" content="cybersecurity, AI security, quantum cryptography, zero trust, autonomous SOC, Zion Tech Group"  />
+        <meta name="author" content="Zion Tech Group"  />
+        <link rel="canonical" href="https://ziontechgroup.com/advanced-cybersecurity"  />
       </Helmet>
 
       <div className="relative z-10 container mx-auto px-4 py-8">
@@ -105,10 +104,10 @@ const AdvancedCybersecurityServices: NextPage = () => {
             </div>
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+          <h1 className="text-5xl md: tex t-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             Advanced Cybersecurity Services 2027
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+          <p className="text-xl md: tex t-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Protect your digital assets with cutting-edge cybersecurity solutions.
             From AI-powered threat detection to quantum cryptography, we deliver military-grade security for the modern world.
           </p>
@@ -129,7 +128,7 @@ const AdvancedCybersecurityServices: NextPage = () => {
         </div>
 
         {/* Security Stats */}
-        <div className="grid grid-cols-1 md: grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 md: gri d-cols-4 gap-6 mb-12">
           {[
             { icon: '🛡️', label: 'Threats Blocked', value: '99.9%', color: 'from-green-500 to-emerald-600' },
             { icon: '👁️', label: '24/7 Monitoring', value: 'Always On', color: 'from-blue-500 to-cyan-600' },
@@ -138,7 +137,7 @@ const AdvancedCybersecurityServices: NextPage = () => {
           ].map((stat, index)  => (
             <div
               key={index}
-              className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/20 text-center hover:border-blue-400/50 transition-all duration-300"
+              className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/20 text-center hover: borde r-blue-400/50 transition-all duration-300"
             >
               <div className={`w-16 h-16 bg-gradient-to-r ${stat.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
                 <span className="text-3xl">{stat.icon}</span>
@@ -151,7 +150,7 @@ const AdvancedCybersecurityServices: NextPage = () => {
 
         {/* Search and Filter Section */}
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-12 border border-blue-400/20">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md: gri d-cols-3 gap-6">
             {/* Search */}
             <div className="relative">
               <input
@@ -159,10 +158,10 @@ const AdvancedCybersecurityServices: NextPage = () => {
                 placeholder="Search cybersecurity services..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50"
+                className="w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 placeholder-gray-400 focus: outlin e-none focus: rin g-2 focus: rin g-blue-400/50 focus: borde r-blue-400/50"
               />
               <svg className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"  />
               </svg>
             </div>
 
@@ -171,7 +170,7 @@ const AdvancedCybersecurityServices: NextPage = () => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50 appearance-none"
+                className="w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 focus: outlin e-none focus: rin g-2 focus: rin g-blue-400/50 focus: borde r-blue-400/50 appearance-none"
               >
                 {categories.map((category)  => (
                   <option key={category.id} value={category.id}>
@@ -180,7 +179,7 @@ const AdvancedCybersecurityServices: NextPage = () => {
                 ))}
               </select>
               <svg className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"  />
               </svg>
             </div>
 
@@ -189,14 +188,14 @@ const AdvancedCybersecurityServices: NextPage = () => {
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50 appearance-none"
+                className="w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 focus: outlin e-none focus: rin g-2 focus: rin g-blue-400/50 focus: borde r-blue-400/50 appearance-none"
               >
                 <option value="innovation">Sort by Innovation Level</option>
                 <option value="price">Sort by Price</option>
                 <option value="popularity">Sort by Popularity</option>
               </select>
               <svg className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"  />
               </svg>
             </div>
           </div>
@@ -211,7 +210,7 @@ const AdvancedCybersecurityServices: NextPage = () => {
               className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                 selectedCategory === category.id
                   ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
-                  : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20'
+                  : 'bg-white/10 text-gray-300 hover: b g-white/20 border border-white/20'
               }`}
             >
               <span className="mr-2">{getCategoryIcon(category.id)}</span>
@@ -221,11 +220,11 @@ const AdvancedCybersecurityServices: NextPage = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8 mb-16">
           {sortedServices.map((service, index) => (
             <div
               key={service.id}
-              className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/20 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105"
+              className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/20 hover: borde r-blue-400/50 transition-all duration-300 hover: transform hover:scale-105"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               {/* Service Header */}
@@ -286,7 +285,7 @@ const AdvancedCybersecurityServices: NextPage = () => {
               {/* CTA Button */}
               <a
                 href={`/services/${service.id}`}
-                className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white text-center py-3 rounded-xl font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 block"
+                className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white text-center py-3 rounded-xl font-semibold hover: fro m-blue-600 hover: t o-purple-700 transition-all duration-300 block"
               >
                 Learn More
               </a>
@@ -302,16 +301,16 @@ const AdvancedCybersecurityServices: NextPage = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Don't wait for a security breach. Contact us today to discuss how our advanced cybersecurity solutions can protect your organization from evolving threats.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: fle x-row gap-4 justify-center">
             <a
               href="/contact"
-              className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
+              className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover: fro m-blue-600 hover: t o-purple-700 transition-all duration-300"
             >
               Get Security Assessment
             </a>
             <a
               href="tel:+13024640950"
-              className="bg-white/10 text-white px-8 py-4 rounded-xl font-semibold text-lg border border-white/20 hover:bg-white/20 transition-all duration-300"
+              className="bg-white/10 text-white px-8 py-4 rounded-xl font-semibold text-lg border border-white/20 hover: b g-white/20 transition-all duration-300"
             >
               📞 Call +1 (302) 464-0950
             </a>

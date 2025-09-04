@@ -4,31 +4,31 @@ import Head from 'next/head'
 import { motion } from 'framer-motion'
 import { Shield, Cookie, Settings, Eye } from 'lucide-react'
 
-const SEO = dynamic(() => import('../src/components/SEO'), { ssr: false })
-const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false })
+const SEO = dynamic(() => import('../src/components/SEO'), { ssr: fals e })
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: fals e })
 
-const CookiePolicyPage: React.FC = () => {
+const CookiePolicyPage: Reac t.FC = () => {
   const cookieTypes = [
     {
-      icon: <Shield className="w-6 h-6" />,
+      icon: <Shield className="w-6 h-6"  />,
       title: "Essential Cookies",
       description: "These cookies are necessary for the website to function properly and cannot be disabled.",
       examples: ["Session management", "Security features", "Load balancing"]
     },
     {
-      icon: <Settings className="w-6 h-6" />,
+      icon: <Settings className="w-6 h-6"  />,
       title: "Functional Cookies",
       description: "These cookies enable enhanced functionality and personalization.",
       examples: ["User preferences", "Language settings", "Customization options"]
     },
     {
-      icon: <Eye className="w-6 h-6" />,
+      icon: <Eye className="w-6 h-6"  />,
       title: "Analytics Cookies",
       description: "These cookies help us understand how visitors interact with our website.",
       examples: ["Page views", "User behavior", "Performance metrics"]
     },
     {
-      icon: <Cookie className="w-6 h-6" />,
+      icon: <Cookie className="w-6 h-6"  />,
       title: "Marketing Cookies",
       description: "These cookies are used to deliver relevant advertisements and track campaign performance.",
       examples: ["Ad targeting", "Campaign tracking", "Conversion measurement"]
@@ -37,25 +37,24 @@ const CookiePolicyPage: React.FC = () => {
 
   return (
     <>
-      <SEO
-        title="Cookie Policy - Zion Tech Group"
+      <SEO title="Cookie Policy - Zion Tech Group"
         description="Cookie Policy for Zion Tech Group. Learn about how we use cookies and similar technologies."
         keywords="cookie policy, privacy, cookies, Zion Tech Group"
         canonical="https://ziontechgroup.com/cookies"
-      />
+       />
       
       <PageTransition>
         <main className="min-h-screen bg-white">
           {/* Hero Section */}
           <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="text-center"
               >
-                <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                <h1 className="text-4xl md: tex t-6xl font-bold text-gray-900 mb-6">
                   Cookie <span className="text-blue-600">Policy</span>
                 </h1>
                 <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
@@ -67,10 +66,10 @@ const CookiePolicyPage: React.FC = () => {
 
           {/* Content Section */}
           <section className="py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
               <div className="max-w-4xl mx-auto">
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 2 0 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
                   className="bg-white rounded-xl shadow-lg p-8 md:p-12"
@@ -96,13 +95,13 @@ const CookiePolicyPage: React.FC = () => {
                     </ul>
 
                     <h2 className="text-2xl font-bold text-gray-900 mb-6">Types of Cookies We Use</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-8">
                       {cookieTypes.map((type, index) => (
                         <motion.div
                           key={index}
-                          initial={{ opacity: 0, y: 20 }}
+                          initial={{ opacity: 0, y: 2 0 }}
                           animate={{ opacity: 1, y: 0 }}
-                          transition={{ duration: 0.6, delay: index * 0.1 }}
+                          transition={{ duration: 0.6, delay: inde x * 0.1 }}
                           className="bg-gray-50 rounded-lg p-6"
                         >
                           <div className="flex items-center gap-3 mb-3">

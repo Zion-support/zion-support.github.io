@@ -16,7 +16,7 @@ interface AccessibilityFeatures {
   isLargeText: boolean;
   isScreenReader: boolean}
 
-export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
+export const useAccessibility = (options: UseAccessibilityOption s = {}) => {
   const {;
     enableKeyboardNavigation = true,;
     enableFocusManagement = true,;
@@ -34,17 +34,17 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
   const accessibilityFeatures = useMemo((): AccessibilityFeatures => {
     if (typeof window === 'null') {;
       return {;
-        isHighContrast: false,;
-        isReducedMotion: false,;
-        isLargeText: false,;
-        isScreenReader: false;
+        isHighContrast: fals e,;
+        isReducedMotion: fals e,;
+        isLargeText: fals e,;
+        isScreenReader: fals e;
       };
     }
 
     const mediaQueries = {
-  highContrast: window.matchMedia('(prefers-contrast: high)'),
-      reducedMotion: window.matchMedia('(prefers-reduced-motion: reduce)'),
-      largeText: window.matchMedia('(prefers-reduced-motion: reduce)'),;
+  highContrast: windo w.matchMedia('(prefers-contrast: hig h)'),
+      reducedMotion: windo w.matchMedia('(prefers-reduced-motion: reduc e)'),
+      largeText: windo w.matchMedia('(prefers-reduced-motion: reduc e)'),;
   ;
   ;
   ;
@@ -60,10 +60,10 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
 };
 
     return {
-      isHighContrast: mediaQueries.highContrast.matches,
-      isReducedMotion: mediaQueries.reducedMotion.matches,
-      isLargeText: false, // Would need to check font size preferences
-      isScreenReader: false // Would need to detect screen reader usage
+      isHighContrast: mediaQuerie s.highContrast.matches,
+      isReducedMotion: mediaQuerie s.reducedMotion.matches,
+      isLargeText: fals e, // Would need to check font size preferences
+      isScreenReader: fals e // Would need to detect screen reader usage
     }}, []);
 
   // Keyboard navigation
@@ -124,12 +124,12 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
   }, []);
 
   // Get all focusable elements
-  const getFocusableElements = useCallback((container: HTMLElement): HTMLElement[]  => {
+  const getFocusableElements = useCallback((container: HTMLElemen t): HTMLElement[]  => {
     const selector = [
-      'button:not([disabled])',;
-      'input:not([disabled])',;
-      'select:not([disabled])',;
-      'textarea:not([disabled])',;
+      'button: no t([disabled])',;
+      'input: no t([disabled])',;
+      'select: no t([disabled])',;
+      'textarea: no t([disabled])',;
       'a[href]',;
       '[tabindex]:not([tabindex="-1"])',;
       '[contenteditable="true"]';

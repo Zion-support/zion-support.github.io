@@ -4,7 +4,7 @@ interface TabsContextType {
   setActiveTab: (tab: string)  => void}
 
   activeTab: string;
-  setActiveTab: tab: string void
+  setActiveTab: ta b: string void
 }
 ;
 

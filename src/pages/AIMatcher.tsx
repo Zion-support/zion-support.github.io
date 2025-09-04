@@ -4,11 +4,11 @@ import { toast } from 'react-hot-toast';
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@/components/ui/select';
 
 // Mock AI Matchmaker component - in real app this would be a separate component
-function AIMatchmaker({ serviceType, onMatchSelect }: { serviceType: string; onMatchSelect: (match: any) => void }) {
+function AIMatchmaker({ serviceType, onMatchSelect }: { serviceType: string; onMatchSelect: (match: an y) => void }) {
   const [query, setQuery] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: Reac t.FormEvent) => {
     e.preventDefault();
     if (!query.trim()) return;
 
@@ -23,7 +23,7 @@ function AIMatchmaker({ serviceType, onMatchSelect }: { serviceType: string; onM
         id: '1',
         title: 'AI Development Service',
         description: 'Custom AI solution development',
-        category: serviceType || 'service',
+        category: serviceTyp e || 'service',
         price: '$5000+'
       }
     };
@@ -43,7 +43,7 @@ function AIMatchmaker({ serviceType, onMatchSelect }: { serviceType: string; onM
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="e.g., I need a web developer for an e-commerce site..."
-            className="w-full p-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full p-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent"
             rows={4}
           />
         </div>
@@ -51,7 +51,7 @@ function AIMatchmaker({ serviceType, onMatchSelect }: { serviceType: string; onM
         <button
           type="submit"
           disabled={isLoading || !query.trim()}
-          className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 disabled:opacity-50 transition-colors"
+          className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover: b g-blue-700 disabled: opacit y-50 transition-colors"
         >
           {isLoading ? 'AI is thinking...' : 'Find Matches'}
         </button>
@@ -64,7 +64,7 @@ export default function AIMatcherPage() {
   const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
 
-  const handleMatchSelect = (match: any) => {
+  const handleMatchSelect = (match: an y) => {
     let itemType = "service";
     const category = match.item.category.toLowerCase();
     
@@ -83,8 +83,8 @@ export default function AIMatcherPage() {
     // Navigate to the quote request page with the selected item
     navigate("/request-quote", {
       state: { 
-        serviceType: itemType,
-        specificItem: match.item
+        serviceType: itemTyp e,
+        specificItem: matc h.item
       }
     });
   };
@@ -107,7 +107,7 @@ export default function AIMatcherPage() {
               </label>
               <Select value={selectedCategory} onValueChange={setSelectedCategory}>
                 <SelectTrigger className="bg-blue-800 border border-blue-600 text-white">
-                  <SelectValue placeholder="All Categories" />
+                  <SelectValue placeholder="All Categories"  />
                 </SelectTrigger>
                 <SelectContent className="bg-blue-800 border border-blue-600">
                   <SelectItem value="all" className="text-white">All Categories</SelectItem>
@@ -118,10 +118,9 @@ export default function AIMatcherPage() {
               </Select>
             </div>
             
-            <AIMatchmaker 
-              serviceType={selectedCategory === "all" ? "" : selectedCategory}
+            <AIMatchmaker serviceType={selectedCategory === "all" ? "" : selectedCategory}
               onMatchSelect={handleMatchSelect}
-            />
+             />
           </div>
         </div>
       </div>

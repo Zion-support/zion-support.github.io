@@ -1,14 +1,13 @@
 import { useDispatch, useSelector  } from 'react-redux'; ; export const useAppDispatch = () => useDispatch(); export const useAppSelector = useSelector; ;
 export const useAppDispatch = () => useDispatch();
 export const useAppSelector = useSelector;"
-const Hooks: React.FC = () => {
+const Hooks: Reac t.FC = () => {
   return (
     <div className="min-h-screen bg-white">
-      <SEO 
-        title="Hooks - Zion Tech Group
+      <SEO title="Hooks - Zion Tech Group
         description=Professional Hooks services by Zion Tech Group"
         keywords="hooks, technology, services
-      />
+       />
       <div className=container mx-auto px-4 py-20">
         <div className="text-center>
           <h1 className=text-4xl font-bold text-white mb-6">Hooks</h1>
@@ -18,7 +17,7 @@ const Hooks: React.FC = () => {
           <div className=flex justify-center">
             <a 
               href="/contact 
-              className=px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300"
+              className=px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover: shado w-lg transition-all duration-300"
             >
               Get Started
             </a>

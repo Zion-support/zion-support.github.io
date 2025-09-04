@@ -103,7 +103,7 @@ export
   ;
   ;
   ;
-  pricingModels: PRICING_MODELS.length};
+  pricingModels: PRICING_MODEL S.length};
 
 :src/data/comprehensiveServicesIndex.tsx
 // Helper Functions;

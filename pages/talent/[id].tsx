@@ -15,7 +15,7 @@ import NotFound from '@/components/NotFound';
 import { ErrorBoundary } from '@/components/ErrorBoundary';
 
 l3xoyh-codex/load-talent-profile-data
-const TalentPage: React.FC = () => {
+const TalentPage: Reac t.FC = () => {
   const router = useRouter();
   const { id } = router.query;
   const [profile, setProfile] = useState<(TalentProfile & { social?: Record<string, string> }) | null>(null);
@@ -44,9 +44,9 @@ const TalentPage: React.FC = () => {
   if (loading) {
     return (
       <div className="p-4 space-y-2" data-testid="talent-loading">
-        <Skeleton className="h-8 w-1/3" />
-        <Skeleton className="h-4 w-full" />
-        <Skeleton className="h-4 w-2/3" />
+        <Skeleton className="h-8 w-1/3"  />
+        <Skeleton className="h-4 w-full"  />
+        <Skeleton className="h-4 w-2/3"  />
       </div>
     );
   }
@@ -74,7 +74,7 @@ main
   }
 
   if (!profile) {
-    return <NotFound />;
+    return <NotFound  />;
   }
 
   // This part should only be reached if talentData is successfully fetched.
@@ -84,19 +84,19 @@ main
      // This could happen if id was invalid, fetchTalent ran, set loading false, but didn't set error (e.g. 404 redirect logic)
      // and then the component re-renders before redirect completes.
      // The skeleton loader for !id also helps prevent premature NotFound.
-    return <NotFound />; // Fallback, though the above conditions should catch most scenarios
+    return <NotFound  />; // Fallback, though the above conditions should catch most scenarios
   }
 
   return (
     <>
       <Head>
         <title>{profile.full_name}</title>
-        <meta property="og:title" content={profile.full_name} />
+        <meta property="og: titl e" content={profile.full_name}  />
         {profile.profile_picture_url && (
-          <meta property="og:image" content={profile.profile_picture_url} />
+          <meta property="og: imag e" content={profile.profile_picture_url}  />
         )}
       </Head>
-      <TalentDetails talent={profile} />
+      <TalentDetails talent={profile}  />
     </>
   );
 }

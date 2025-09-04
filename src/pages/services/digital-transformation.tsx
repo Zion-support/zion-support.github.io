@@ -1,6 +1,6 @@
 import React from 'react';
 
-const DigitalTransformationServices: React.FC = () => {
+const DigitalTransformationServices: Reac t.FC = () => {
   return (
     <div className="min-h-screen bg-white py-20">
       <div className="max-w-5xl mx-auto px-4">

@@ -1,12 +1,12 @@
       {/* Hero Section */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8">"
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8">"
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >"
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-4xl md: tex t-6xl font-bold mb-6">
               Case"
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
                 {' '}
@@ -22,7 +22,7 @@
       </section>
 
       {/* Industry Filter */}"
-      <section className="py-12 px-4 sm:px-6 lg:px-8">"
+      <section className="py-12 px-4 sm: p x-6 lg: p x-8">"
         <div className="max-w-7xl mx-auto">"
           <div className="flex flex-wrap justify-center gap-4">
             {industries.map(industry => (
@@ -33,7 +33,7 @@
 
                   selectedIndustry === industry'
                     ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg shadow-blue-500/25''
-                    : 'bg-white/10 text-gray-300 border border-white/20 hover:border-blue-400/40'`
+                    : 'bg-white/10 text-gray-300 border border-white/20 hover: borde r-blue-400/40'`
                 }`}
               >
                 {industry}
@@ -43,21 +43,21 @@
       </section>
 
       {/* Case Studies Grid */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8">"
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8">"
         <div className="max-w-7xl mx-auto">"
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg: gri d-cols-2 gap-8">
             {filteredCaseStudies.map((study, index) => (
               <motion.div
                 key={study.id}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 3 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}"
-                className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-blue-400/40 transition-all duration-300 cursor-pointer"
+                transition={{ duration: 0.6, delay: inde x * 0.1 }}"
+                className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover: borde r-blue-400/40 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedCaseStudy(study)}
               >"
                 <div className="flex items-center gap-4 mb-6">"
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center text-white">"
-                    <Award className="w-8 h-8"  />                  </div>
+                    <Award className="w-8 h-8"   />                  </div>
                   <div>"
                     <h3 className="text-2xl font-bold text-white">
                       {study.title}
@@ -104,9 +104,9 @@
                   <span className="text-sm text-gray-400">
                     {study.duration}
                   </span>"
-                  <button className="inline-flex items-center gap-2 text-blue-400 hover:text-white transition-colors duration-300">"
+                  <button className="inline-flex items-center gap-2 text-blue-400 hover: tex t-white transition-colors duration-300">"
                     <span className="text-sm font-medium">View Details</span>"
-                    <ArrowRight className="w-4 h-4"  />                  </button>
+                    <ArrowRight className="w-4 h-4"   />                  </button>
                 </div>
               </motion.div>) ) }
           </div>
@@ -115,9 +115,9 @@
 
       {/* CTA Section */}"
       <section className="py-20 bg-gradient-to-r from-blue-500/10 via-cyan-500/10 to-blue-500/10">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}"
             className="text-center max-w-4xl mx-auto"
@@ -130,16 +130,16 @@
               business and create measurable results like these case studies.
             </p>
 "
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
               <Link"
                 to="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105"
+                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl hover: shado w-lg hover: shado w-blue-500/25 transition-all duration-300 transform hover: scal e-105"
               >
                 Start Your Project
               </Link>
               <Link"
                 to="/contact"
-                className="px-8 py-4 border border-blue-500 text-blue-400 font-semibold rounded-xl hover:bg-blue-500 hover:text-white transition-all duration-300"
+                className="px-8 py-4 border border-blue-500 text-blue-400 font-semibold rounded-xl hover: b g-blue-500 hover: tex t-white transition-all duration-300"
               >
                 Schedule Consultation
               </Link>

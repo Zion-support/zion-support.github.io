@@ -2,7 +2,7 @@ import type { NextPage } from 'next';
 import Layout from '../components/Layout';
 import { FileText, Scale, Shield, AlertTriangle, CheckCircle, XCircle } from 'lucide-react';
 
-const Terms: NextPage = () => {
+const Terms: NextPag e = () => {
   return (
     <Layout
       title="Terms of Service - Zion Tech Group"
@@ -11,11 +11,11 @@ const Terms: NextPage = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+          <h1 className="text-5xl md: tex t-6xl font-bold mb-6">
             Terms of
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Service</span>
           </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
+          <p className="text-xl md: tex t-2xl mb-8 max-w-4xl mx-auto text-gray-200">
             Please read these terms carefully before using our website and services.
           </p>
           <p className="text-sm text-gray-300">
@@ -31,7 +31,7 @@ const Terms: NextPage = () => {
             {/* Introduction */}
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
-                <FileText className="w-8 h-8 mr-3 text-blue-600" />
+                <FileText className="w-8 h-8 mr-3 text-blue-600"  />
                 Agreement to Terms
               </h2>
               <p className="text-gray-600 mb-4">
@@ -62,7 +62,7 @@ const Terms: NextPage = () => {
             {/* User Responsibilities */}
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
-                <Shield className="w-8 h-8 mr-3 text-blue-600" />
+                <Shield className="w-8 h-8 mr-3 text-blue-600"  />
                 User Responsibilities
               </h2>
               <p className="text-gray-600 mb-4">
@@ -81,7 +81,7 @@ const Terms: NextPage = () => {
             {/* Prohibited Uses */}
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
-                <XCircle className="w-8 h-8 mr-3 text-red-600" />
+                <XCircle className="w-8 h-8 mr-3 text-red-600"  />
                 Prohibited Uses
               </h2>
               <p className="text-gray-600 mb-4">
@@ -144,7 +144,7 @@ const Terms: NextPage = () => {
             {/* Limitation of Liability */}
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
-                <AlertTriangle className="w-8 h-8 mr-3 text-yellow-600" />
+                <AlertTriangle className="w-8 h-8 mr-3 text-yellow-600"  />
                 Limitation of Liability
               </h2>
               <p className="text-gray-600 mb-4">
@@ -190,7 +190,7 @@ const Terms: NextPage = () => {
             {/* Governing Law */}
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
-                <Scale className="w-8 h-8 mr-3 text-blue-600" />
+                <Scale className="w-8 h-8 mr-3 text-blue-600"  />
                 Governing Law
               </h2>
               <p className="text-gray-600 mb-4">
@@ -230,7 +230,7 @@ const Terms: NextPage = () => {
             {/* Acknowledgment */}
             <div className="mb-12 bg-blue-50 border-l-4 border-blue-400 p-6">
               <div className="flex items-center mb-4">
-                <CheckCircle className="w-6 h-6 text-blue-600 mr-2" />
+                <CheckCircle className="w-6 h-6 text-blue-600 mr-2"  />
                 <h3 className="text-lg font-semibold text-blue-800">Acknowledgment</h3>
               </div>
               <p className="text-blue-700">
@@ -248,11 +248,11 @@ const Terms: NextPage = () => {
           <p className="text-xl mb-8 max-w-3xl mx-auto">
             We're here to help clarify any questions you may have about our Terms of Service.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="mailto:kleber@ziontechgroup.com" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
+          <div className="flex flex-col sm: fle x-row justify-center gap-4">
+            <a href="mailto: klebe r@ziontechgroup.com" className="bg-white text-blue-600 hover: b g-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
               Contact Us
             </a>
-            <a href="/contact" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
+            <a href="/contact" className="bg-transparent border-2 border-white text-white hover: b g-white hover: tex t-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
               Get in Touch
             </a>
           </div>

@@ -23,7 +23,7 @@ export function ReferralMiddleware({ children }: Props) {
       if(!code || !user?.id || !user?.email) return; // Guard against missing email as well
       try {
         await supabase.functions.invoke('track-referral', {
-          body: { refCode: code, userId: user.id, email: user.email },
+          body: { refCode: cod e, userId: use r.id, email: use r.email },
         });
         localStorage.removeItem('referralCode');
       } catch(err) {

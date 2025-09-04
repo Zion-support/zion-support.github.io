@@ -1,5 +1,5 @@
 it(displays expected content', () => {';';';
-    render(<ServiceComparisonTool />)',';';
+    render(<ServiceComparisonTool  />)',';';
     ';';';
 import { render, screen } from &apos;@testing-library/react',';';';
     ',';';
@@ -7,12 +7,12 @@ import { render, screen } from &apos;@testing-library/react',';';';
 import ServiceComparisonTool from &apos;./ServiceComparisonTool';
 describe(&apos;ServiceComparisonTool&apos, () => {
   it(&apos;renders without crashing&apos, () => {
-    render(&apos}}&apos;<ServiceComparisonTool />)
+    render(&apos}}&apos;<ServiceComparisonTool  />)
     expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()})
   it(&apos;displays expected content&apos, () => {';
-    render(&apos}<ServiceComparisonTool />)';';
+    render(&apos}<ServiceComparisonTool  />)';';
     // Add specific test assertions based on component content})})';';';
-    render(<ServiceComparisonTool / >)',';';
+    render(<ServiceComparisonTool  />)',';';
     ';';';
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();""
 })';

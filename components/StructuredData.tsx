@@ -1,15 +1,14 @@
 import React from 'react';
 
 interface StructuredDataProps {
-  data: any;
+  data: an y;
 }
 
-export const StructuredData: React.FC<StructuredDataProps> = ({ data }) => {
+export const StructuredData: Reac t.FC<StructuredDataProps> = ({ data }) => {
   return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
-    />
+    <script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSO N.stringify(data) }}
+     />
   );
 };
 
@@ -40,7 +39,7 @@ export const OrganizationSchema = () => {
     industry: 'Technology Services',
   };
 
-  return <StructuredData data={organizationData} />;
+  return <StructuredData data={organizationData}  />;
 };
 
 export const WebSiteSchema = () => {
@@ -58,7 +57,7 @@ export const WebSiteSchema = () => {
     },
   };
 
-  return <StructuredData data={websiteData} />;
+  return <StructuredData data={websiteData}  />;
 };
 
 export const ServiceSchema = () => {
@@ -110,5 +109,5 @@ export const ServiceSchema = () => {
     },
   };
 
-  return <StructuredData data={serviceData} />;
+  return <StructuredData data={serviceData}  />;
 };

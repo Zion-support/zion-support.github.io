@@ -24,28 +24,28 @@ import { Shield,
  } from 'lucide-react';
 
 export default function IncidentResponsePlatform
-export { IncidentResponsePlatform }(...args: any[]): any {
+export { IncidentResponsePlatform }(...args: an y[]): any {
   const features = [
     {
-      icon: AlertTriangle,
+      icon: AlertTriangl e,
       title: 'Real-Time Threat Detection',
       description: 'Advanced monitoring systems that detect and alert on security incidents as they occur.',
       benefits: ['24/7 monitoring', 'Instant alerts', 'Threat intelligence', 'Behavioral analysis']
     },
     {
-      icon: Clock,
+      icon: Cloc k,
       title: 'Rapid Response',
       description: 'Automated incident response workflows that minimize response time and impact.',
       benefits: ['Automated containment', 'Quick isolation', 'Response playbooks', 'Time tracking']
     },
     {
-      icon: Users,
+      icon: User s,
       title: 'Expert Team',
       description: 'Certified cybersecurity professionals with extensive incident response experience.',
       benefits: ['Certified analysts', 'Industry expertise', 'Continuous training', 'Team coordination']
     },
     {
-      icon: Target,
+      icon: Targe t,
       title: 'Forensic Analysis',
       description: 'Comprehensive digital forensics to understand attack vectors and prevent future incidents.',
       benefits: ['Evidence preservation', 'Root cause analysis', 'Attack reconstruction', 'Legal compliance']
@@ -99,22 +99,22 @@ export { IncidentResponsePlatform }(...args: any[]): any {
     {
       name: 'AI-Powered Threat Detection',
       description: 'Machine learning algorithms that identify patterns and anomalies in real-time.',
-      icon: Brain
+      icon: Brai n
     },
     {
       name: 'Automated Response Orchestration',
       description: 'Intelligent workflows that automatically contain and mitigate threats.',
-      icon: Zap
+      icon: Za p
     },
     {
       name: 'Cloud-Native Architecture',
       description: 'Scalable platform that integrates with modern cloud environments.',
-      icon: Cloud
+      icon: Clou d
     },
     {
       name: 'Advanced Analytics',
       description: 'Comprehensive reporting and analytics for incident insights.',
-      icon: BarChart3
+      icon: BarChart 3
     }
   ];
 
@@ -127,34 +127,33 @@ export { IncidentResponsePlatform }(...args: any[]): any {
 
   return (
     <div className="min-h-screen bg-slate-950 text-white">
-      <SEO 
-        title="Incident Response Platform | Zion Tech Group" 
+      <SEO title="Incident Response Platform | Zion Tech Group" 
         description="Advanced cybersecurity incident response platform with AI-powered detection, automated response workflows, and expert incident management." 
-      />
+       />
       
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-red-900/20 to-orange-900/20"></div>
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30"></div>
+        <div className="absolute inset-0 bg-[url('data: imag e/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30"></div>
         
         <div className="container-responsive relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 bg-gradient-to-br from-red-400 via-orange-500 to-yellow-400 rounded-2xl flex items-center justify-center">
-                <Shield className="w-10 h-10 text-white" />
+                <Shield className="w-10 h-10 text-white"  />
               </div>
             </div>
             
-            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-red-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent mb-6">
+            <h1 className="text-5xl md: tex t-6xl font-bold bg-gradient-to-r from-red-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent mb-6">
               Incident Response Platform
             </h1>
             
-            <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl md: tex t-2xl text-slate-300 mb-8 max-w-3xl mx-auto">
               Advanced cybersecurity incident response platform with AI-powered detection, 
               automated response workflows, and expert incident management to protect your organization.
             </p>
@@ -163,14 +162,14 @@ export { IncidentResponsePlatform }(...args: any[]): any {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-xl hover:from-red-600 hover:to-orange-700 transition-all duration-300"
+                className="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-xl hover: fro m-red-600 hover: t o-orange-700 transition-all duration-300"
               >
                 Get Started
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border-2 border-red-400/30 text-red-400 font-semibold rounded-xl hover:bg-red-400/10 transition-all duration-300"
+                className="px-8 py-4 border-2 border-red-400/30 text-red-400 font-semibold rounded-xl hover: b g-red-400/10 transition-all duration-300"
               >
                 Schedule Demo
               </motion.button>
@@ -183,7 +182,7 @@ export { IncidentResponsePlatform }(...args: any[]): any {
       <section className="py-20 bg-slate-900/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -195,14 +194,14 @@ export { IncidentResponsePlatform }(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md: anygri d-cols-2 lg: gri d-cols-4 gap-8">
             {features.map((feature, index)  => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-red-400/30 transition-all duration-300"
+                transition={{ duration: 0.8, delay: inde x * 0.1 }}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover: borde r-red-400/30 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-xl flex items-center justify-center mb-4">
                   <feature.icon className="w-8 h-8 text-red-400" />
@@ -212,7 +211,7 @@ export { IncidentResponsePlatform }(...args: any[]): any {
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, idx) => (
                     <li key={idx} className="flex items-center text-sm text-slate-400">
-                      <Star className="w-4 h-4 text-red-400 mr-2" />
+                      <Star className="w-4 h-4 text-red-400 mr-2"  />
                       {benefit}
                     </li>
                   ))}
@@ -227,7 +226,7 @@ export { IncidentResponsePlatform }(...args: any[]): any {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -239,17 +238,17 @@ export { IncidentResponsePlatform }(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anygrid-cols-2 gap-8">
+          <div className="grid md: anygri d-cols-2 gap-8">
             {capabilities.map((capability, index)  => (
               <motion.div
                 key={capability.category}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                initial={{ opacity: 0, x: inde x % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                transition={{ duration: 0.8, delay: inde x * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8"
               >
                 <h3 className="text-2xl font-semibold text-white mb-6 flex items-center">
-                  <Target className="w-6 h-6 text-red-400 mr-3" />
+                  <Target className="w-6 h-6 text-red-400 mr-3"  />
                   {capability.category}
                 </h3>
                 <ul className="space-y-3">
@@ -270,7 +269,7 @@ export { IncidentResponsePlatform }(...args: any[]): any {
       <section className="py-20 bg-slate-900/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -282,14 +281,14 @@ export { IncidentResponsePlatform }(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anygrid-cols-2 gap-8">
+          <div className="grid md: anygri d-cols-2 gap-8">
             {technologies.map((tech, index)  => (
               <motion.div
                 key={tech.name}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-red-400/30 transition-all duration-300"
+                transition={{ duration: 0.8, delay: inde x * 0.1 }}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover: borde r-red-400/30 transition-all duration-300"
               >
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-xl flex items-center justify-center mr-4">
@@ -308,7 +307,7 @@ export { IncidentResponsePlatform }(...args: any[]): any {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -320,13 +319,13 @@ export { IncidentResponsePlatform }(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md: anygri d-cols-2 lg: gri d-cols-4 gap-8">
             {responseMetrics.map((metric, index)  => (
               <motion.div
                 key={metric.metric}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                transition={{ duration: 0.8, delay: inde x * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 text-center"
               >
                 <h3 className="text-lg font-semibold text-white mb-3">{metric.metric}</h3>
@@ -342,7 +341,7 @@ export { IncidentResponsePlatform }(...args: any[]): any {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
@@ -357,14 +356,14 @@ export { IncidentResponsePlatform }(...args: any[]): any {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-xl hover:from-red-600 hover:to-orange-700 transition-all duration-300"
+                  className="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-xl hover: fro m-red-600 hover: t o-orange-700 transition-all duration-300"
                 >
                   Get Started
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 border-2 border-red-400/30 text-red-400 font-semibold rounded-xl hover:bg-red-400/10 transition-all duration-300"
+                  className="px-8 py-4 border-2 border-red-400/30 text-red-400 font-semibold rounded-xl hover: b g-red-400/10 transition-all duration-300"
                 >
                   Schedule Demo
                 </motion.button>
@@ -384,15 +383,15 @@ export { IncidentResponsePlatform }(...args: any[]): any {
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-slate-300">
               <div className="flex items-center">
-                <Phone className="w-5 h-5 text-red-400 mr-2" />
+                <Phone className="w-5 h-5 text-red-400 mr-2"  />
                 <span>+1 302 464 0950</span>
               </div>
               <div className="flex items-center">
-                <Mail className="w-5 h-5 text-red-400 mr-2" />
+                <Mail className="w-5 h-5 text-red-400 mr-2"  />
                 <span>kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center">
-                <MapPin className="w-5 h-5 text-red-400 mr-2" />
+                <MapPin className="w-5 h-5 text-red-400 mr-2"  />
                 <span>Middletown, DE 19709</span>
               </div>
             </div>

@@ -5,28 +5,28 @@ export default function Page() {
     try {
       setIsLoading(true);
       
-      const { data: milestonesData, error: milestonesError } = await supabase
+      const { data: milestonesDat a, error: milestonesErro r } = await supabase
         .from('project_milestones')
         .select('*')
         .eq('project_id', projectId)
-        .order('due_date', { ascending: true });
+        .order('due_date', { ascending: tru e });
       
       if(milestonesError) throw milestonesError;
       
       setMilestones(milestonesData || []); // Ensure milestonesData is not null
       
-      const activitiesMap: Record<string, MilestoneActivity[]> = {};
+      const activitiesMap: Recor d<string, MilestoneActivity[]> = {};
       
       if(milestonesData) { // Check if milestonesData is not null
         for(const milestone of milestonesData) {
-          const { data: activitiesData, error: activitiesError } = await supabase
+          const { data: activitiesDat a, error: activitiesErro r } = await supabase
             .from('milestone_activities')
             .select(`
               *,
-              created_by_profile:profiles!user_id(display_name, avatar_url)
+              created_by_profile: profile s!user_id(display_name, avatar_url)
             `)
             .eq('milestone_id', milestone.id)
-            .order('created_at', { ascending: false });
+            .order('created_at', { ascending: fals e });
             
           if(activitiesError) throw activitiesError;
           
@@ -36,7 +36,7 @@ export default function Page() {
       
       setActivities(activitiesMap);
       setError(null);
-    } catch(err: any) {
+    } catch(err: an y) {
       console.error("Error fetching milestones:", err);
       setError("Failed to fetch milestones: " + err.message);
       toast.error("Failed to fetch milestones");
@@ -58,6 +58,6 @@ export default function Page() {
     activities,
     isLoading,
     error,
-    refetch: fetchMilestones
+    refetch: fetchMilestone s
   };
 };

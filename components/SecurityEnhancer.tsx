@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 
-const SecurityEnhancer: React.FC = () => {
+const SecurityEnhancer: Reac t.FC = () => {
   useEffect(() => {;
     // Content Security Policy;
     const csp = `;
@@ -9,7 +9,7 @@ const SecurityEnhancer: React.FC = () => {
       script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com;
       style-src 'self' 'unsafe-inline' https: //fonts.googleapis.com;
       font-src 'self' https: //fonts.gstatic.com;
-      img-src 'self' data: https: blob:;
+      img-src 'self' data: http s: blob:;
       connect-src 'self' https: //www.google-analytics.com https://analytics.google.com;
       frame-src 'none';
       object-src 'none';
@@ -106,21 +106,20 @@ const SecurityEnhancer: React.FC = () => {
   return (
     <Head>
       {/* Security Headers */}
-      <meta httpEquiv='X-Content-Type-Options' content='nosniff' />
-      <meta httpEquiv='X-Frame-Options' content='DENY' />
-      <meta httpEquiv='X-XSS-Protection' content='1 mode=block' />
-      <meta httpEquiv='Referrer-Policy' content='strict-origin-when-cross-origin' />
-      <meta httpEquiv='Permissions-Policy' content='camera=(), microphone=(), geolocation=()' />
+      <meta httpEquiv='X-Content-Type-Options' content='nosniff'  />
+      <meta httpEquiv='X-Frame-Options' content='DENY'  />
+      <meta httpEquiv='X-XSS-Protection' content='1 mode=block'  />
+      <meta httpEquiv='Referrer-Policy' content='strict-origin-when-cross-origin'  />
+      <meta httpEquiv='Permissions-Policy' content='camera=(), microphone=(), geolocation=()'  />
       {/* Content Security Policy */}
-      <meta
-        httpEquiv='Content-Security-Policy'
-        content="default-src 'self' script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com style-src 'self' 'unsafe-inline' https://fonts.googleapis.com font-src 'self' https://fonts.gstatic.com img-src 'self' data: https: blob: connect-src 'self' https://www.google-analytics.com https://analytics.google.com frame-src 'none' object-src 'none' base-uri 'self' form-action 'self'"
-      />
+      <meta httpEquiv='Content-Security-Policy'
+        content="default-src 'self' script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com style-src 'self' 'unsafe-inline' https://fonts.googleapis.com font-src 'self' https://fonts.gstatic.com img-src 'self' data: http s: blob: connec t-src 'self' https://www.google-analytics.com https://analytics.google.com frame-src 'none' object-src 'none' base-uri 'self' form-action 'self'"
+       />
       {/* Additional Security Meta Tags */}
-      <meta name='robots' content='index, follow, noarchive, nosnippet' />
-      <meta name='googlebot' content='index, follow, noarchive, nosnippet' />
+      <meta name='robots' content='index, follow, noarchive, nosnippet'  />
+      <meta name='googlebot' content='index, follow, noarchive, nosnippet'  />
       {/* HSTS (HTTP Strict Transport Security) - This should be set at server level */}
-      <meta httpEquiv='Strict-Transport-Security' content='max-age=31536000 includeSubDomains preload' />
+      <meta httpEquiv='Strict-Transport-Security' content='max-age=31536000 includeSubDomains preload'  />
     </Head>
   );
 };

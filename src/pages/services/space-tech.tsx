@@ -27,28 +27,28 @@ import { Rocket,
  } from 'lucide-react';
 
 export default function SpaceTechnology
-export { SpaceTechnology }(...args: any[]): any {
+export { SpaceTechnology }(...args: an y[]): any {
   const features = [
     {
-      icon: Satellite,
+      icon: Satellit e,
       title: 'Satellite Technology',
       description: 'Advanced satellite systems for communication, navigation, and Earth observation.',
       benefits: ['Global connectivity', 'Real-time data collection', 'Navigation systems', 'Environmental monitoring']
     },
     {
-      icon: Rocket,
+      icon: Rocke t,
       title: 'Launch Systems',
       description: 'Innovative launch vehicle technology and space transportation solutions.',
       benefits: ['Cost-effective launches', 'Reusable systems', 'Payload optimization', 'Mission planning']
     },
     {
-      icon: Brain,
+      icon: Brai n,
       title: 'AI Space Operations',
       description: 'Artificial intelligence for autonomous space missions and operations.',
       benefits: ['Autonomous navigation', 'Predictive maintenance', 'Mission optimization', 'Risk assessment']
     },
     {
-      icon: Network,
+      icon: Networ k,
       title: 'Space Communications',
       description: 'Advanced communication networks for space missions and ground control.',
       benefits: ['High-bandwidth links', 'Low-latency communication', 'Global coverage', 'Secure transmission']
@@ -98,55 +98,54 @@ export { SpaceTechnology }(...args: any[]): any {
     {
       name: 'Quantum Computing in Space',
       description: 'Leveraging quantum computing for complex space calculations and simulations.',
-      icon: Atom
+      icon: Ato m
     },
     {
       name: 'AI-Powered Mission Control',
       description: 'Intelligent systems for autonomous space mission management.',
-      icon: Brain
+      icon: Brai n
     },
     {
       name: 'Advanced Propulsion',
       description: 'Next-generation propulsion systems for efficient space travel.',
-      icon: Rocket
+      icon: Rocke t
     },
     {
       name: 'Space Cybersecurity',
       description: 'Protecting space assets from cyber threats and attacks.',
-      icon: Shield
+      icon: Shiel d
     }
   ];
 
   return (
     <div className="min-h-screen bg-slate-950 text-white">
-      <SEO 
-        title="Space Technology Services | Zion Tech Group" 
+      <SEO title="Space Technology Services | Zion Tech Group" 
         description="Revolutionary space technology solutions including satellite systems, launch vehicles, AI-powered operations, and advanced space communications." 
-      />
+       />
       
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900/20 to-purple-900/20"></div>
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30"></div>
+        <div className="absolute inset-0 bg-[url('data: imag e/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30"></div>
         
         <div className="container-responsive relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 bg-gradient-to-br from-blue-400 via-purple-500 to-cyan-400 rounded-2xl flex items-center justify-center">
-                <Rocket className="w-10 h-10 text-white" />
+                <Rocket className="w-10 h-10 text-white"  />
               </div>
             </div>
             
-            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent mb-6">
+            <h1 className="text-5xl md: tex t-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent mb-6">
               Space Technology
             </h1>
             
-            <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl md: tex t-2xl text-slate-300 mb-8 max-w-3xl mx-auto">
               Pioneering the future of space exploration with cutting-edge technology, AI-powered operations, 
               and revolutionary space infrastructure solutions.
             </p>
@@ -155,14 +154,14 @@ export { SpaceTechnology }(...args: any[]): any {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
+                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover: fro m-blue-600 hover: t o-purple-700 transition-all duration-300"
               >
                 Explore Services
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border-2 border-blue-400/30 text-blue-400 font-semibold rounded-xl hover:bg-blue-400/10 transition-all duration-300"
+                className="px-8 py-4 border-2 border-blue-400/30 text-blue-400 font-semibold rounded-xl hover: b g-blue-400/10 transition-all duration-300"
               >
                 Contact Us
               </motion.button>
@@ -175,7 +174,7 @@ export { SpaceTechnology }(...args: any[]): any {
       <section className="py-20 bg-slate-900/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -187,14 +186,14 @@ export { SpaceTechnology }(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md: anygri d-cols-2 lg: gri d-cols-4 gap-8">
             {features.map((feature, index)  => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-blue-400/30 transition-all duration-300"
+                transition={{ duration: 0.8, delay: inde x * 0.1 }}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover: borde r-blue-400/30 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl flex items-center justify-center mb-4">
                   <feature.icon className="w-8 h-8 text-blue-400" />
@@ -204,7 +203,7 @@ export { SpaceTechnology }(...args: any[]): any {
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, idx) => (
                     <li key={idx} className="flex items-center text-sm text-slate-400">
-                      <Star className="w-4 h-4 text-blue-400 mr-2" />
+                      <Star className="w-4 h-4 text-blue-400 mr-2"  />
                       {benefit}
                     </li>
                   ))}
@@ -219,7 +218,7 @@ export { SpaceTechnology }(...args: any[]): any {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -231,17 +230,17 @@ export { SpaceTechnology }(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anygrid-cols-2 gap-8">
+          <div className="grid md: anygri d-cols-2 gap-8">
             {applications.map((app, index)  => (
               <motion.div
                 key={app.category}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                initial={{ opacity: 0, x: inde x % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                transition={{ duration: 0.8, delay: inde x * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8"
               >
                 <h3 className="text-2xl font-semibold text-white mb-6 flex items-center">
-                  <Target className="w-6 h-6 text-blue-400 mr-3" />
+                  <Target className="w-6 h-6 text-blue-400 mr-3"  />
                   {app.category}
                 </h3>
                 <ul className="space-y-3">
@@ -262,7 +261,7 @@ export { SpaceTechnology }(...args: any[]): any {
       <section className="py-20 bg-slate-900/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -274,14 +273,14 @@ export { SpaceTechnology }(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anygrid-cols-2 gap-8">
+          <div className="grid md: anygri d-cols-2 gap-8">
             {technologies.map((tech, index)  => (
               <motion.div
                 key={tech.name}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-blue-400/30 transition-all duration-300"
+                transition={{ duration: 0.8, delay: inde x * 0.1 }}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover: borde r-blue-400/30 transition-all duration-300"
               >
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl flex items-center justify-center mr-4">
@@ -300,7 +299,7 @@ export { SpaceTechnology }(...args: any[]): any {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
@@ -315,14 +314,14 @@ export { SpaceTechnology }(...args: any[]): any {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
+                  className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover: fro m-blue-600 hover: t o-purple-700 transition-all duration-300"
                 >
                   Get Started
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 border-2 border-blue-400/30 text-blue-400 font-semibold rounded-xl hover:bg-blue-400/10 transition-all duration-300"
+                  className="px-8 py-4 border-2 border-blue-400/30 text-blue-400 font-semibold rounded-xl hover: b g-blue-400/10 transition-all duration-300"
                 >
                   Learn More
                 </motion.button>
@@ -342,15 +341,15 @@ export { SpaceTechnology }(...args: any[]): any {
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-slate-300">
               <div className="flex items-center">
-                <Phone className="w-5 h-5 text-blue-400 mr-2" />
+                <Phone className="w-5 h-5 text-blue-400 mr-2"  />
                 <span>+1 302 464 0950</span>
               </div>
               <div className="flex items-center">
-                <Mail className="w-5 h-5 text-blue-400 mr-2" />
+                <Mail className="w-5 h-5 text-blue-400 mr-2"  />
                 <span>kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center">
-                <MapPin className="w-5 h-5 text-blue-400 mr-2" />
+                <MapPin className="w-5 h-5 text-blue-400 mr-2"  />
                 <span>Middletown, DE 19709</span>
               </div>
             </div>

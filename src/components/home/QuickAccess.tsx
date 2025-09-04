@@ -3,8 +3,8 @@ import { motion  } from 'framer-motion';
 export default function Page() {
 ,"
     { name: "Consulting", count: 6, color: "from-yellow-500 to-orange-500" },"
-    { name: "Innovation", count: 10, color: "from-green-500 to-teal-500" },;"
-    { name: "Business", count: 14, color: "from-indigo-500 to-purple-500" };      scale: 1,;
+    { name: "Innovation", count: 1 0, color: "from-green-500 to-teal-500" },;"
+    { name: "Business", count: 1 4, color: "from-indigo-500 to-purple-500" };      scale: 1,;
       transition: {
         duration: 0.5,;"
         ease: "easeOut"}}};
@@ -36,7 +36,7 @@ export default function Page() {
           initial = {
 
   { opacity: 0,
-  y: 30
+  y: 3 0
 
 }}
           whileInView = {
@@ -46,7 +46,7 @@ export default function Page() {
 
 }}
           transition={{ duration: 0.8 }}
-          viewport={{ once: true }}"
+          viewport={{ once: tru e }}"
           className="text-center mb-16"
         >
           <motion.div
@@ -58,7 +58,7 @@ export default function Page() {
   delay: 0.2
 
 }}
-            viewport={{ once: true }}"
+            viewport={{ once: tru e }}"
             className="inline-flex items-center gap-2 px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full text-zion-cyan mb-6"
           >
             Quick Access to Our Services
@@ -67,7 +67,7 @@ export default function Page() {
             initial = {
 
   { opacity: 0,
-  y: 20
+  y: 2 0
 
 }}
             whileInView = {
@@ -89,7 +89,7 @@ export default function Page() {
         </div>
 
         {/* Quick Links Grid */}"
-        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-6 mb-12">
           {quickLinks.map((link, index <motion.div
               key={link.title}
               variants={hoverVariants}"
@@ -97,28 +97,28 @@ export default function Page() {
               onHoverStart={(: unknown setHoveredCategory(link.title)}
               onHoverEnd={: unknown setHoveredCategory(null)}
               onClick={: unknown setSelectedCategory(selectedCategory === link.title ? null : link.title)}
-              className={`group cursor-pointer ${link.bgColor} ${link.borderColor} border rounded-2xl p-6 backdrop-blur-sm transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/25`}
+              className={`group cursor-pointer ${link.bgColor} ${link.borderColor} border rounded-2xl p-6 backdrop-blur-sm transition-all duration-300 hover: shado w-2xl hover: shado w-zion-cyan/25`}
             >
               {/* Icon and Header */}"
               <div className="flex items-start justify-between mb-4">
                 <motion.div`
                   className={`p-3 rounded-xl bg-gradient-to-r ${link.color} bg-opacity-20`}
-                  whileHover={{ rotate: 360 }}
+                  whileHover={{ rotate: 36 0 }}
                   transition={{ duration: 0.6 }}
                 >"
                   <link.icon className="w-6 h-6 text-white" />
                 </motion.div>
 
                 <motion.div
-                  animate={{ rotate: hoveredCategory === link.title ? 90 : 0 }}
+                  animate={{ rotate: hoveredCategor y === link.title ? 90 : 0 }}
                   transition={{ duration: 0.3 }}
                 >"
-                  <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-zion-cyan transition-colors"  />                </motion.div>
+                  <ChevronRight className="w-5 h-5 text-gray-400 group-hover: tex t-zion-cyan transition-colors"   />                </motion.div>
               </div>
 
               {/* Content */}"
               <div className="mb-4">"
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors">
+                <h3 className="text-xl font-bold text-white mb-2 group-hover: tex t-zion-cyan transition-colors">
                   {link.title}
                 </h3>"
                 <p className="text-gray-300 text-sm leading-relaxed">
@@ -129,7 +129,7 @@ export default function Page() {
               {/* Features Preview */}"
               <div className="mb-4">"
                 <div className="grid grid-cols-2 gap-2">
-                  {link.features.slice(0, 2).map(feature: unknown, idx: unknown (
+                  {link.features.slice(0, 2).map(feature: unknow n, idx: unknow n (
                     <motion.div
                       key={feature}
                       initial = {
@@ -150,7 +150,7 @@ export default function Page() {
   delay: 0.1 + idx * 0.1
 
 }}
-                      viewport={{ once: true }}"
+                      viewport={{ once: tru e }}"
                       className="flex items-center gap-2 text-xs text-gray-400"
                     >"
                       <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full"></div>"
@@ -163,7 +163,7 @@ export default function Page() {
               {/* Stats */}"
               <div className="mb-4">"
                 <div className="flex items-center justify-between text-sm">
-                  {Object.entries(link.stats).slice(0, 2).map([key: unknown, value]: unknown, idx: unknown (
+                  {Object.entries(link.stats).slice(0, 2).map([key: unknow n, value]: unknown, idx: unknow n (
                     <motion.div
                       key={key}
                       initial = {
@@ -184,7 +184,7 @@ export default function Page() {
   delay: 0.2 + idx * 0.1
 
 }}
-                      viewport={{ once: true }}"
+                      viewport={{ once: tru e }}"
                       className="text-center"
                     >"
                       <div className="text-lg font-bold text-zion-cyan">{value}</div>"
@@ -202,10 +202,10 @@ export default function Page() {
               >
                 <Link
                   to={link.path}`
-                  className={`inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r ${link.color} text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25`}
+                  className={`inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r ${link.color} text-white font-semibold rounded-lg transition-all duration-300 hover: shado w-lg hover: shado w-zion-cyan/25`}
                 >
                   Explore {link.title}"
-                  <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"  />                </Link>
+                  <ChevronRight className="w-4 h-4 ml-2 group-hover: translat e-x-1 transition-transform"   />                </Link>
               </motion.div>
             </motion.div>
           ))}
@@ -213,9 +213,9 @@ export default function Page() {
 
         {/* Service Categories Overview */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 2 0 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: tru e }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >"
           <div className="text-center mb-8">"
@@ -223,29 +223,27 @@ export default function Page() {
             <p className="text-gray-300">Explore our comprehensive range of technology solutions</p>
           </div>
 "
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {categories.map(category: unknown, index: unknown (
+          <div className="grid grid-cols-2 md: gri d-cols-3 lg: gri d-cols-6 gap-4">
+            {categories.map(category: unknow n, index: unknow n (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}"
+                transition={{ duration: 0.4, delay: inde x * 0.1 }}"
                 className="text-center group cursor-pointer"
 `
-                <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300`}>"
+                <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-full flex items-center justify-center mx-auto mb-3 group-hover: scal e-110 transition-transform duration-300`}>"
                   <span className="text-white font-bold text-lg">{category.count}</span>
                 </div>"
-                <div className="text-sm font-medium text-white group-hover:text-cyan-400 transition-colors duration-300">
+                <div className="text-sm font-medium text-white group-hover: tex t-cyan-400 transition-colors duration-300">
                   {category.name}
                 </div>
               </motion.div>;
             ))}
           </div>
-        </motion.div>;
-
-        {/* CTA Section */}
+        </motion.div> {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 2 0 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}"
           className="text-center mt-12"
@@ -255,16 +253,16 @@ export default function Page() {
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Our team of experts is ready to help you find the perfect solution or create a custom one for your specific needs
             </p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
               <Link"
                 to="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover: fro m-cyan-600 hover: t o-blue-700 transition-all duration-300 transform hover: scal e-105 hover: shado w-lg hover: shado w-cyan-500/25"
               >
                 Contact Our Team
               </Link>
               <Link"
                 to="/services"
-                className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-white transition-all duration-300"
+                className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover: b g-cyan-500 hover: tex t-white transition-all duration-300"
               >
                 Browse All Services
               </Link>
@@ -277,7 +275,7 @@ export default function Page() {
           initial = {
 
   { opacity: 0,
-  y: 30 ;
+  y: 3 0 ;
 
 }}          whileInView = {
 
@@ -290,22 +288,22 @@ export default function Page() {
   delay: 0.4 ;
 
 }}
-          viewport={{ once: true }}
+          viewport={{ once: tru e }}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-2xl p-8 border border-cyan-500/20">
             <h3 className="text-2xl font-bold text-white mb-4">Can't Find What You're Looking For?</h3>            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Our team of experts is ready to help you find the perfect solution or create a custom one for your specific needs
             </p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
               <Link                to="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover: fro m-cyan-600 hover: t o-blue-700 transition-all duration-300 transform hover: scal e-105 hover: shado w-lg hover: shado w-cyan-500/25"
 
                 Contact Our Team
               </Link>
               <Link"
                 to="/services"
-                className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-white transition-all duration-300"
+                className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover: b g-cyan-500 hover: tex t-white transition-all duration-300"
 
                 Browse All Services
               </Link>

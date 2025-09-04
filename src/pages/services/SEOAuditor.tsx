@@ -38,7 +38,7 @@ import {
       </section>
 "
       <section className="py-10">"
-        <div className="container-responsive grid grid-cols-1 md: anygrid-cols-3 gap-6">
+        <div className="container-responsive grid grid-cols-1 md: anygri d-cols-3 gap-6">
           {pricing.map(p => ("
             <div key={p.tier} className="card-futuristic">"
               <div className="text-sm text-zion-blue-light/70">{p.tier}</div>"
@@ -51,7 +51,7 @@ import {
                     key={i}"
                     className="flex items-center gap-2 text-zion-blue-light/80"
                   >"
-                    <CheckCircle2 className="w-4 h-4 text-zion-cyan" /> {i}
+                    <CheckCircle2 className="w-4 h-4 text-zion-cyan"  /> {i}
                   </li>
                 ))}
               </ul>

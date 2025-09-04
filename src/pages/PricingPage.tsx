@@ -26,9 +26,9 @@ export default function PricingPage() {
     {
       name: 'Starter',
       description: 'Perfect for small businesses and startups',
-      monthlyPrice: 999,
-      yearlyPrice: 9999,
-      icon: Zap,
+      monthlyPrice: 99 9,
+      yearlyPrice: 999 9,
+      icon: Za p,
       color: 'from-blue-500 to-cyan-500',
       features: [
         'AI Business Intelligence Dashboard',
@@ -40,14 +40,14 @@ export default function PricingPage() {
         'Monthly Reports',
         'Standard SLA'
       ],
-      popular: false
+      popular: fals e
     },
     {
       name: 'Professional',
       description: 'Ideal for growing businesses and mid-size companies',
-      monthlyPrice: 2499,
-      yearlyPrice: 24999,
-      icon: Shield,
+      monthlyPrice: 249 9,
+      yearlyPrice: 2499 9,
+      icon: Shiel d,
       color: 'from-purple-500 to-pink-500',
       features: [
         'Everything in Starter, plus:',
@@ -62,14 +62,14 @@ export default function PricingPage() {
         'Custom Integrations',
         'Training & Onboarding'
       ],
-      popular: true
+      popular: tru e
     },
     {
       name: 'Enterprise',
       description: 'For large organizations requiring enterprise-grade solutions',
-      monthlyPrice: 4999,
-      yearlyPrice: 49999,
-      icon: Building2,
+      monthlyPrice: 499 9,
+      yearlyPrice: 4999 9,
+      icon: Building 2,
       color: 'from-indigo-500 to-purple-500',
       features: [
         'Everything in Professional, plus:',
@@ -86,16 +86,16 @@ export default function PricingPage() {
         'On-site Implementation',
         'Compliance & Audit Support'
       ],
-      popular: false
+      popular: fals e
     }
   ];
 
   const servicePackages = [
     {
       name: 'AI & Machine Learning',
-      icon: Brain,
+      icon: Brai n,
       description: 'Cutting-edge artificial intelligence solutions',
-      startingPrice: 2500,
+      startingPrice: 250 0,
       features: [
         'Predictive Analytics',
         'Natural Language Processing',
@@ -107,9 +107,9 @@ export default function PricingPage() {
     },
     {
       name: 'Cybersecurity',
-      icon: Shield,
+      icon: Shiel d,
       description: 'Comprehensive security and compliance solutions',
-      startingPrice: 3000,
+      startingPrice: 300 0,
       features: [
         'Security Assessment',
         'Penetration Testing',
@@ -121,9 +121,9 @@ export default function PricingPage() {
     },
     {
       name: 'Cloud & DevOps',
-      icon: Cloud,
+      icon: Clou d,
       description: 'Scalable cloud infrastructure and automation',
-      startingPrice: 2000,
+      startingPrice: 200 0,
       features: [
         'Cloud Migration',
         'Infrastructure as Code',
@@ -135,9 +135,9 @@ export default function PricingPage() {
     },
     {
       name: 'Digital Transformation',
-      icon: TrendingUp,
+      icon: TrendingU p,
       description: 'End-to-end business transformation services',
-      startingPrice: 5000,
+      startingPrice: 500 0,
       features: [
         'Strategy Development',
         'Process Optimization',
@@ -153,26 +153,26 @@ export default function PricingPage() {
     {
       name: '24/7 Support',
       description: 'Round-the-clock technical support and monitoring',
-      price: 500,
-      icon: Clock
+      price: 50 0,
+      icon: Cloc k
     },
     {
       name: 'Custom Development',
       description: 'Tailored solutions for your specific needs',
-      price: 150,
-      icon: Users
+      price: 15 0,
+      icon: User s
     },
     {
       name: 'Training & Certification',
       description: 'Comprehensive training for your team',
-      price: 200,
-      icon: Award
+      price: 20 0,
+      icon: Awar d
     },
     {
       name: 'Compliance & Audit',
       description: 'Industry-specific compliance support',
-      price: 300,
-      icon: Shield
+      price: 30 0,
+      icon: Shiel d
     }
   ];
 
@@ -184,23 +184,23 @@ export default function PricingPage() {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 via-purple-900 to-blue-900 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8 text-center">
+          <h1 className="text-5xl md: tex t-6xl font-bold mb-6">
             Transparent Pricing
           </h1>
-          <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto mb-8">
+          <p className="text-xl md: tex t-2xl text-blue-100 max-w-4xl mx-auto mb-8">
             Choose the perfect plan for your business. All plans include our core features with flexible scaling options.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: fle x-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
+              className="bg-gradient-to-r from-blue-500 to-purple-600 hover: fro m-blue-600 hover: t o-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover: scal e-105"
             >
               Get Custom Quote
             </Link>
             <Link
               to="/services"
-              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
+              className="bg-transparent border-2 border-white text-white hover: b g-white hover: tex t-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
             >
               View Services
             </Link>
@@ -210,7 +210,7 @@ export default function PricingPage() {
 
       {/* Billing Toggle */}
       <section className="py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
           <div className="flex justify-center mb-8">
             <div className="bg-white rounded-lg p-1 shadow-lg">
               <div className="flex">
@@ -219,7 +219,7 @@ export default function PricingPage() {
                   className={`px-6 py-3 rounded-md font-medium transition-all duration-300 ${
                     billingCycle === 'monthly'
                       ? 'bg-blue-600 text-white shadow-lg'
-                      : 'text-gray-600 hover:text-gray-900'
+                      : 'text-gray-600 hover: tex t-gray-900'
                   }`}
                 >
                   Monthly
@@ -245,12 +245,12 @@ export default function PricingPage() {
 
       {/* Pricing Plans */}
       <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+          <div className="grid grid-cols-1 md: gri d-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div
                 key={index}
-                className={`relative bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 ${
+                className={`relative bg-white rounded-2xl shadow-lg hover: shado w-xl transition-all duration-300 ${
                   plan.popular ? 'ring-2 ring-purple-500 scale-105' : ''
                 }`}
               >
@@ -282,7 +282,7 @@ export default function PricingPage() {
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start space-x-3">
-                        <Check className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                        <Check className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0"  />
                         <span className="text-gray-700">{feature}</span>
                       </li>
                     ))}
@@ -292,8 +292,8 @@ export default function PricingPage() {
                     onClick={() => setSelectedPlan(plan.name)}
                     className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white hover:scale-105'
-                        : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
+                        ? 'bg-gradient-to-r from-purple-500 to-pink-500 hover: fro m-purple-600 hover: t o-pink-600 text-white hover: scal e-105'
+                        : 'bg-gray-100 hover: b g-gray-200 text-gray-900'
                     }`}
                   >
                     {plan.popular ? 'Get Started' : 'Choose Plan'}
@@ -307,7 +307,7 @@ export default function PricingPage() {
 
       {/* Service Packages */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Service Packages
@@ -316,9 +316,9 @@ export default function PricingPage() {
               Custom solutions tailored to your specific business needs and requirements.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
             {servicePackages.map((service, index) => (
-              <div key={index} className="bg-gray-50 rounded-xl p-6 hover:bg-white hover:shadow-lg transition-all duration-300">
+              <div key={index} className="bg-gray-50 rounded-xl p-6 hover: b g-white hover: shado w-lg transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
@@ -331,14 +331,14 @@ export default function PricingPage() {
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center space-x-2 text-sm">
-                      <Check className="w-4 h-4 text-green-500" />
+                      <Check className="w-4 h-4 text-green-500"  />
                       <span className="text-gray-700">{feature}</span>
                     </li>
                   ))}
                 </ul>
                 <Link
                   to="/contact"
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-3 px-4 rounded-lg font-semibold text-center block transition-all duration-300 hover:scale-105"
+                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover: fro m-blue-700 hover: t o-purple-700 text-white py-3 px-4 rounded-lg font-semibold text-center block transition-all duration-300 hover: scal e-105"
                 >
                   Get Quote
                 </Link>
@@ -350,7 +350,7 @@ export default function PricingPage() {
 
       {/* Add-ons */}
       <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Additional Services
@@ -359,9 +359,9 @@ export default function PricingPage() {
               Enhance your plan with these additional services and support options.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
             {addOns.map((addon, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover: shado w-xl transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <addon.icon className="w-8 h-8 text-white" />
                 </div>
@@ -373,7 +373,7 @@ export default function PricingPage() {
                 </div>
                 <Link
                   to="/contact"
-                  className="w-full bg-green-600 hover:bg-green-700 text-white py-3 px-4 rounded-lg font-semibold text-center block transition-all duration-300"
+                  className="w-full bg-green-600 hover: b g-green-700 text-white py-3 px-4 rounded-lg font-semibold text-center block transition-all duration-300"
                 >
                   Add Service
                 </Link>
@@ -385,7 +385,7 @@ export default function PricingPage() {
 
       {/* FAQ Section */}
       <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto px-4 sm: p x-6 lg: p x-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Frequently Asked Questions
@@ -417,23 +417,23 @@ export default function PricingPage() {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-900 to-purple-900 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-4xl mx-auto px-4 sm: p x-6 lg: p x-8 text-center">
           <h2 className="text-4xl font-bold mb-6">
             Ready to Get Started?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
             Contact our team to discuss your specific needs and get a custom quote tailored to your business.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: fle x-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="bg-white text-blue-900 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
+              className="bg-white text-blue-900 hover: b g-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover: scal e-105"
             >
               Get Custom Quote
             </Link>
             <Link
               to="/services"
-              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
+              className="bg-transparent border-2 border-white text-white hover: b g-white hover: tex t-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
             >
               View All Services
             </Link>

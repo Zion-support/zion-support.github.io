@@ -1,5 +1,5 @@
 it(displays expected content', () => {';';';
-    render(<SimpleNavigation />)',';';
+    render(<SimpleNavigation  />)',';';
     ';';';
 import { render, screen } from &apos;@testing-library/react',';';';
     ',';';
@@ -7,12 +7,12 @@ import { render, screen } from &apos;@testing-library/react',';';';
 import SimpleNavigation from &apos;./SimpleNavigation';
 describe(&apos;SimpleNavigation&apos, () => {
   it(&apos;renders without crashing&apos, () => {
-    render(&apos}}&apos;<SimpleNavigation />)
+    render(&apos}}&apos;<SimpleNavigation  />)
     expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()})
   it(&apos;displays expected content&apos, () => {';
-    render(&apos}<SimpleNavigation />)';';
+    render(&apos}<SimpleNavigation  />)';';
     // Add specific test assertions based on component content})})';';';
-    render(<SimpleNavigation / >)',';';
+    render(<SimpleNavigation  />)',';';
     ';';';
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();""
 })';

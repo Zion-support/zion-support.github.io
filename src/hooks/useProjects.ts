@@ -6,22 +6,22 @@ export default function Page() {
       }
       // Consider if a case where userType is none of these should fetch all or none
       
-      const { data, error: fetchError } = await query;
+      const { data, error: fetchErro r } = await query;
       
       if(fetchError) throw fetchError;
       
-      const transformedData = data.map((project: any) => ({
+      const transformedData = data.map((project: an y) => ({
         ...project,
-        talent_profile: project.talent_profile ? {
+        talent_profile: projec t.talent_profile ? {
           ...project.talent_profile,
-          full_name: project.talent_profile.display_name 
+          full_name: projec t.talent_profile.display_name 
         } : undefined,
         // client_profile is already in the correct shape from select
       }));
       
       setProjects(transformedData as Project[]);
       setError(null);
-    } catch(err: any) {
+    } catch(err: an y) {
       console.error("Error fetching projects:", err);
       setError("Failed to fetch projects: " + err.message);
       toast.error("Failed to fetch projects");
@@ -37,9 +37,9 @@ export default function Page() {
         .from("projects")
         .select(`
           *,
-          job:jobs(title, description),
-          talent_profile:profiles!talent_id(display_name:display_name, professional_title:bio, profile_picture_url:avatar_url),
-          client_profile:profiles!client_id(display_name, avatar_url)
+          job: job s(title, description),
+          talent_profile: profile s!talent_id(display_name: display_nam e, professional_title: bi o, profile_picture_url: avatar_ur l),
+          client_profile: profile s!client_id(display_name, avatar_url)
         `)
         .eq("id", projectId)
         .single();
@@ -48,21 +48,21 @@ export default function Page() {
       
       const transformedProject = {
         ...data,
-        talent_profile: data.talent_profile ? {
+        talent_profile: dat a.talent_profile ? {
           ...data.talent_profile,
-          full_name: data.talent_profile.display_name
+          full_name: dat a.talent_profile.display_name
         } : undefined
       };
       
       return transformedProject as Project;
-    } catch(err: any) {
+    } catch(err: an y) {
       console.error("Error fetching project:", err);
       toast.error("Failed to fetch project details");
       return null;
     }
   };
 
-  const updateProjectStatus = async(projectId: string, status: ProjectStatus): Promise<boolean> => {
+  const updateProjectStatus = async(projectId: string, status: ProjectStatu s): Promise<boolean> => {
     try {
       const { error } = await supabase
         .from("projects")
@@ -77,7 +77,7 @@ export default function Page() {
       
       toast.success(`Project status updated to ${status}`);
       return true;
-    } catch(err: any) {
+    } catch(err: an y) {
       console.error("Error updating project status:", err);
       toast.error("Failed to update project status");
       return false;
@@ -99,7 +99,7 @@ export default function Page() {
     projects,
     isLoading,
     error,
-    refetch: fetchProjects,
+    refetch: fetchProject s,
     getProjectById,
     updateProjectStatus
   };

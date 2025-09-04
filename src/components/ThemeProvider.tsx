@@ -1,12 +1,12 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
-export const ThemeProvider: React.FC < ThemeProviderProps> = ({ children }) => {
+export const ThemeProvider: Reac t.FC < ThemeProviderProps> = ({ children }) => {
 export const useTheme = () => {;
 type Theme = 'light' | 'dark' | 'system';
 'type Theme = 'light' | 'dark' | 'system';
 
 interface ThemeContextType {
-  theme: Theme;
-  setTheme: (theme: Theme) => void;
+  theme: Them e;
+  setTheme: (theme: Them e) => void;
   isDark: boolean}
 
 export 
@@ -17,9 +17,9 @@ export
 
 interface ThemeProviderProps extends React.PropsWithChildren<{}> {
 
-  children: React.ReactNode}
+  children: Reac t.ReactNode}
 
-export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
+export const ThemeProvider: Reac t.FC<ThemeProviderProps> = ({ children }) => {
 
   const [theme, setTheme] = useState<Theme>(() => {
 

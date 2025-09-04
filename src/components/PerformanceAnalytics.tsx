@@ -4,20 +4,20 @@ export default function Page() {
       {
 
         name: 'Error Rate',
-        value: Math.random() * 2,
+        value: Mat h.random() * 2,
         unit: '%',
-        trend: Math.random() > 0.5 ? 'up' : 'down',
-        status: Math.random() > 0.8 ? 'good' : Math.random() > 0.5 ? 'warning' : 'critical',
-        icon: AlertTriangle
+        trend: Mat h.random() > 0.5 ? 'up' : 'down',
+        status: Mat h.random() > 0.8 ? 'good' : Math.random() > 0.5 ? 'warning' : 'critical',
+        icon: AlertTriangl e
       },
       {
 
         name: 'Response Time',
-        value: Math.random() * 500 + 100,
+        value: Mat h.random() * 500 + 100,
         unit: 'ms',
-        trend: Math.random() > 0.5 ? 'up' : 'down',
-        status: Math.random() > 0.7 ? 'good' : 'warning',
-        icon: Zap
+        trend: Mat h.random() > 0.5 ? 'up' : 'down',
+        status: Mat h.random() > 0.7 ? 'good' : 'warning',
+        icon: Za p
 
     ];
 
@@ -32,7 +32,7 @@ export default function Page() {
 
     return {
 
-      timestamp: now,
+      timestamp: no w,
       metrics,
       alerts,
       recommendations
@@ -51,18 +51,18 @@ export default function Page() {
       case 'good': return 'text-green-400';
       case 'warning': return 'text-yellow-400';
       case 'critical': return 'text-red-400';
-      default: return 'text-gray-400'};
+      default: retur n 'text-gray-400'};
 
     switch(status) {;
       case 'good': return 'bg-green-500/20';
       case 'warning': return 'bg-yellow-500/20';
       case 'critical': return 'bg-red-500/20';
-      default: return 'bg-gray-500/20'};
+      default: retur n 'bg-gray-500/20'};
 
     switch(trend) {;
-      case 'up': return <TrendingUp className="w-4 h-4 text-red-400"  />;'"
-      case 'down': return <TrendingDown className="w-4 h-4 text-green-400"  />;"
-      default: return <Activity className="w-4 h-4 text-blue-400"  />};
+      case 'up': return <TrendingUp className="w-4 h-4 text-red-400"   />;'"
+      case 'down': return <TrendingDown className="w-4 h-4 text-green-400"   />;"
+      default: retur n <Activity className="w-4 h-4 text-blue-400"   />};
 
     setIsMonitoring(true) ;
     setPerformanceData(generateMockData () ) };
@@ -76,7 +76,7 @@ export default function Page() {
           initial = {
 
   { opacity: 0,
-  y: 20
+  y: 2 0
 
 }}
           animate = {
@@ -87,7 +87,7 @@ export default function Page() {
 }}"
           className="text-center mb-12"
         >"
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
+          <h1 className="text-4xl md: tex t-6xl font-bold text-white mb-4">
             Performance Analytics
           </h1>"
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -100,7 +100,7 @@ export default function Page() {
           initial = {
 
   { opacity: 0,
-  y: 20
+  y: 2 0
 
 }}
           animate = {
@@ -110,7 +110,7 @@ export default function Page() {
 
 }}
           transition={{ delay: 0.2 }}"
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8"
+          className="flex flex-col sm: fle x-row gap-4 justify-center items-center mb-8"
         >"
           <div className="flex gap-2">
             <button
@@ -118,27 +118,27 @@ export default function Page() {
               disabled={isMonitoring}
               className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2 ${isMonitoring'
                   ? 'bg-gray-600 text-gray-400 cursor-not-allowed''
-                  : 'bg-green-600 hover:bg-green-700 text-white'`
+                  : 'bg-green-600 hover: b g-green-700 text-white'`
               }`}
             >"
-              <Activity className="w-5 h-5"  />              Start Monitoring
+              <Activity className="w-5 h-5"   />              Start Monitoring
             </button>
             <button
               onClick={stopMonitoring}
               disabled={!isMonitoring}`
               className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2 ${!isMonitoring'
                   ? 'bg-gray-600 text-gray-400 cursor-not-allowed''
-                  : 'bg-red-600 hover:bg-red-700 text-white'`
+                  : 'bg-red-600 hover: b g-red-700 text-white'`
               }`}
             >"
-              <Monitor className="w-5 h-5"  />              Stop Monitoring
+              <Monitor className="w-5 h-5"   />              Stop Monitoring
             </button>
           </div>
 
           <select
             value={selectedTimeframe}
             onChange={(e) => setSelectedTimeframe(e.target.value as '1h' | '24h' | '7d' | '30d')}"
-            className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus: outlin e-none focus: rin g-2 focus: rin g-blue-500"
           >"
             <option value="1h">Last Hour</option>"
             <option value="24h">Last 24 Hours</option>"
@@ -152,7 +152,7 @@ export default function Page() {
             initial = {
 
   { opacity: 0,
-  y: 20
+  y: 2 0
 
 }}
             animate = {
@@ -162,14 +162,14 @@ export default function Page() {
 
 }}
             transition={{ delay: 0.3 }}"
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12"
+            className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-6 mb-12"
           >
             {performanceData.metrics.map((metric, index) => (<motion.div
                 key={metric.name}
                 initial = {
 
   { opacity: 0,
-  y: 20
+  y: 2 0
 
 }}
                 animate = {
@@ -179,7 +179,7 @@ export default function Page() {
 
 }}
                 transition={{ delay: 0.4 + index * 0.1 }}"
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300"
+                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover: borde r-blue-500/50 transition-all duration-300"
               >"
                 <div className="flex items-center justify-between mb-4">"
                   <div className="flex items-center gap-3">`
@@ -208,7 +208,7 @@ export default function Page() {
             initial = {
 
   { opacity: 0,
-  y: 20
+  y: 2 0
 
 }}
             animate = {
@@ -218,12 +218,12 @@ export default function Page() {
 
 }}
             transition={{ delay: 0.5 }}"
-            className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12"
+            className="grid grid-cols-1 lg: gri d-cols-2 gap-8 mb-12"
           >
             {/* Alerts */}"
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">"
               <div className="flex items-center gap-3 mb-4">"
-                <AlertTriangle className="w-6 h-6 text-yellow-400"  />"                <h3 className="text-xl font-semibold text-white">Active Alerts</h3>
+                <AlertTriangle className="w-6 h-6 text-yellow-400"   />"                <h3 className="text-xl font-semibold text-white">Active Alerts</h3>
               </div>"
               <div className="space-y-3">
                 {performanceData.alerts.map((alert, index) => ("
@@ -238,7 +238,7 @@ export default function Page() {
             {/* Recommendations */}"
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">"
               <div className="flex items-center gap-3 mb-4">"
-                <CheckCircle className="w-6 h-6 text-green-400"  />"                <h3 className="text-xl font-semibold text-white">Recommendations</h3>
+                <CheckCircle className="w-6 h-6 text-green-400"   />"                <h3 className="text-xl font-semibold text-white">Recommendations</h3>
               </div>"
               <div className="space-y-3">
                 {performanceData.recommendations.map((recommendation, index) => ("
@@ -256,7 +256,7 @@ export default function Page() {
           initial = {
 
   { opacity: 0,
-  y: 20
+  y: 2 0
 
 }}
           animate = {
@@ -268,7 +268,7 @@ export default function Page() {
           transition={{ delay: 0.6 }}
           className="bg-white / 5 backdrop - blur - sm border border-white / 10 rounded-xl p - 8 text-center"
         >
-          <BarChart3 className="w-16 h-16 text-gray - 400 mx - auto mb-4" />
+          <BarChart3 className="w-16 h-16 text-gray - 400 mx - auto mb-4"  />
           <h3 className="text-xl font - semibold text-white mb-2">Performance Trends</h3>
           <p className="text-gray -400">
             {isMonitoring
@@ -277,7 +277,7 @@ export default function Page() {
           </p>
           {isMonitoring && ("
             <div className="mt-4 text-sm text-green-400">"
-              <Activity className="w-4 h-4 inline mr-2 animate-pulse"  />              Monitoring Active
+              <Activity className="w-4 h-4 inline mr-2 animate-pulse"   />              Monitoring Active
             </div>) }
         </motion.div>
 
@@ -286,7 +286,7 @@ export default function Page() {
             initial = {
 
   { opacity: 0,
-  y: 20
+  y: 2 0
 
 }}
             animate = {

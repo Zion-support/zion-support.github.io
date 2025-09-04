@@ -9,22 +9,22 @@ export { FinOpsAdvisor }(...args: []):  {
     <>
       <Helmet>
         <title>FinOps Advisor - Zion Tech Group</title>
-        <meta name = "description" content="Optimize your cloud costs with AI-powered FinOps advisory services. Reduce cloud spending, improve resource utilization, and maximize ROI." />
-        <meta name="keywords" content="FinOps, cloud cost optimization, cloud financial management, cost reduction, cloud ROI, financial operations" />
+        <meta name = "description" content="Optimize your cloud costs with AI-powered FinOps advisory services. Reduce cloud spending, improve resource utilization, and maximize ROI."  />
+        <meta name="keywords" content="FinOps, cloud cost optimization, cloud financial management, cost reduction, cloud ROI, financial operations"  />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-teal-600/10"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="relative max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
             <div className="text-center">
               <div className="inline-flex items-center px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-emerald-400 text-sm font-medium mb-8">
-                <DollarSign className="w-4 h-4 mr-2" />
+                <DollarSign className="w-4 h-4 mr-2"  />
                 Cloud Financial Operations
               </div>
 
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <h1 className="text-4xl md: tex t-6xl font-bold text-white mb-6">
                 FinOps
                 <span className="bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent"> Advisor</span>
               </h1>
@@ -34,16 +34,15 @@ export { FinOpsAdvisor }(...args: []):  {
                 improve resource utilization, and maximize your cloud investment ROI.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-teal-700 transition-all duration-200 shadow-lg hover:shadow-xl"
+              <div className="flex flex-col sm: fle x-row gap-4 justify-center">
+                <Link to="/contact"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold rounded-lg hover: fro m-emerald-600 hover: t o-teal-700 transition-all duration-200 shadow-lg hover: shado w-xl"
 
                   Get Started
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                  <ArrowRight className="ml-2 w-5 h-5"  />
                 </Link>
-                <button className="inline-flex items-center px-8 py-4 border border-emerald-500/30 text-emerald-400 font-semibold rounded-lg hover:bg-emerald-500/10 transition-all duration-200">
-                  <Play className="mr-2 w-5 h-5" />
+                <button className="inline-flex items-center px-8 py-4 border border-emerald-500/30 text-emerald-400 font-semibold rounded-lg hover: b g-emerald-500/10 transition-all duration-200">
+                  <Play className="mr-2 w-5 h-5"  />
                   Watch Demo
                 </button>
               </div>
@@ -53,9 +52,9 @@ export { FinOpsAdvisor }(...args: []):  {
 
         {/* Features Section */}
         <section className="py-20">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
                 Cloud Financial Optimization
               </h2>
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
@@ -64,40 +63,40 @@ export { FinOpsAdvisor }(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
               {[
                 {
-                  icon: Calculator,
+                  icon: Calculato r,
                   title: "Cost Analysis",
                   description: "Comprehensive cloud cost analysis and spending insights across all services."
                 },
                 {
-                  icon: TrendingUp,
+                  icon: TrendingU p,
                   title: "Optimization Recommendations",
                   description: "AI-powered recommendations for cost reduction and resource optimization."
                 },
                 {
-                  icon: BarChart3,
+                  icon: BarChart 3,
                   title: "Budget Management",
                   description: "Set budgets, track spending, and manage cloud financial planning."
                 },
                 {
-                  icon: Users,
+                  icon: User s,
                   title: "Team Accountability",
                   description: "Track costs by team, project, and application for better accountability."
                 },
                 {
-                  icon: Shield,
+                  icon: Shiel d,
                   title: "Compliance & Governance",
                   description: "Ensure cloud spending compliance with organizational policies and standards."
                 },
                 {
-                  icon: Database,
+                  icon: Databas e,
                   title: "Multi-cloud Support",
                   description: "Manage costs across AWS, Azure, Google Cloud, and other providers."
                 }
               ].map((feature, index)  => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover: b g-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
@@ -111,9 +110,9 @@ export { FinOpsAdvisor }(...args: []):  {
 
         {/* Cost Optimization Areas Section */}
         <section className="py-20 bg-slate-800/30">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
                 Cost Optimization Areas
               </h2>
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
@@ -121,46 +120,46 @@ export { FinOpsAdvisor }(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
               {[
                 {
                   title: "Compute Resources",
                   description: "Optimize EC2 instances, auto-scaling, and resource allocation.",
-                  icon: Calculator,
+                  icon: Calculato r,
                   benefits: ["Right-sizing", "Auto-scaling", "Reserved instances"]
                 },
                 {
                   title: "Storage Optimization",
                   description: "Optimize storage costs, lifecycle policies, and data tiering.",
-                  icon: Database,
+                  icon: Databas e,
                   benefits: ["Lifecycle policies", "Data tiering", "Storage classes"]
                 },
                 {
                   title: "Network Costs",
                   description: "Optimize data transfer, CDN usage, and network architecture.",
-                  icon: Activity,
+                  icon: Activit y,
                   benefits: ["Data transfer", "CDN optimization", "Network design"]
                 },
                 {
                   title: "Database Costs",
                   description: "Optimize database instances, storage, and backup strategies.",
-                  icon: BarChart3,
+                  icon: BarChart 3,
                   benefits: ["Instance optimization", "Storage optimization", "Backup strategies"]
                 },
                 {
                   title: "Development Tools",
                   description: "Optimize CI/CD, monitoring, and development tool costs.",
-                  icon: Settings,
+                  icon: Setting s,
                   benefits: ["CI/CD optimization", "Monitoring costs", "Tool consolidation"]
                 },
                 {
                   title: "Support & Licensing",
                   description: "Optimize support plans, licensing, and service agreements.",
-                  icon: Shield,
+                  icon: Shiel d,
                   benefits: ["Support plans", "Licensing", "Service agreements"]
                 }
               ].map((area, index)  => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover: b g-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-4">
                     <area.icon className="w-6 h-6 text-white" />
                   </div>
@@ -169,7 +168,7 @@ export { FinOpsAdvisor }(...args: []):  {
                   <ul className="space-y-1">
                     {area.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="text-sm text-emerald-400 flex items-center">
-                        <CheckCircle className="w-3 h-3 mr-2" />
+                        <CheckCircle className="w-3 h-3 mr-2"  />
                         {benefit}
                       </li>
                     ))}
@@ -182,9 +181,9 @@ export { FinOpsAdvisor }(...args: []):  {
 
         {/* FinOps Framework Section */}
         <section className="py-20">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
                 FinOps Framework Implementation
               </h2>
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
@@ -192,7 +191,7 @@ export { FinOpsAdvisor }(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
               {[
                 {
                   step: "01",
@@ -224,9 +223,9 @@ export { FinOpsAdvisor }(...args: []):  {
 
         {/* Cost Savings Section */}
         <section className="py-20 bg-slate-800/30">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
                 Proven Cost Savings
               </h2>
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
@@ -234,7 +233,7 @@ export { FinOpsAdvisor }(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-1 lg: gri d-cols-2 gap-12 items-center">
               <div>
                 <div className="space-y-6">
                   {[
@@ -246,7 +245,7 @@ export { FinOpsAdvisor }(...args: []):  {
                     "Reduced cloud waste and unused resources"
                   ].map((saving, index) => (
                     <div key={index} className="flex items-start space-x-3">
-                      <CheckCircle className="w-6 h-6 text-emerald-400 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-6 h-6 text-emerald-400 mt-0.5 flex-shrink-0"  />
                       <span className="text-slate-300">{saving}</span>
                     </div>
                   ))}
@@ -276,9 +275,9 @@ export { FinOpsAdvisor }(...args: []):  {
 
         {/* Tools & Integrations Section */}
         <section className="py-20">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
                 FinOps Tools & Integrations
               </h2>
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
@@ -286,46 +285,46 @@ export { FinOpsAdvisor }(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
               {[
                 {
                   title: "Cost Management Tools",
                   description: "AWS Cost Explorer, Azure Cost Management, and Google Cloud Billing.",
-                  icon: Calculator,
+                  icon: Calculato r,
                   features: ["Cost Explorer", "Cost Management", "Cloud Billing"]
                 },
                 {
                   title: "Resource Optimization",
                   description: "Automated resource optimization and cost-saving recommendations.",
-                  icon: TrendingUp,
+                  icon: TrendingU p,
                   features: ["Auto-optimization", "Recommendations", "Resource management"]
                 },
                 {
                   title: "Budget Controls",
                   description: "Budget alerts, spending limits, and cost governance controls.",
-                  icon: Shield,
+                  icon: Shiel d,
                   features: ["Budget alerts", "Spending limits", "Governance controls"]
                 },
                 {
                   title: "Reporting & Analytics",
                   description: "Comprehensive cost reporting and financial analytics dashboards.",
-                  icon: BarChart3,
+                  icon: BarChart 3,
                   features: ["Cost reporting", "Financial analytics", "Custom dashboards"]
                 },
                 {
                   title: "Team Collaboration",
                   description: "Cost allocation, team budgets, and collaborative cost management.",
-                  icon: Users,
+                  icon: User s,
                   features: ["Cost allocation", "Team budgets", "Collaboration tools"]
                 },
                 {
                   title: "API Integration",
                   description: "REST APIs for custom integrations and automated workflows.",
-                  icon: Settings,
+                  icon: Setting s,
                   features: ["REST APIs", "Custom integrations", "Automated workflows"]
                 }
               ].map((tool, index)  => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover: b g-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-4">
                     <tool.icon className="w-6 h-6 text-white" />
                   </div>
@@ -334,7 +333,7 @@ export { FinOpsAdvisor }(...args: []):  {
                   <ul className="space-y-1">
                     {tool.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="text-sm text-emerald-400 flex items-center">
-                        <CheckCircle className="w-3 h-3 mr-2" />
+                        <CheckCircle className="w-3 h-3 mr-2"  />
                         {feature}
                       </li>
                     ))}
@@ -347,9 +346,9 @@ export { FinOpsAdvisor }(...args: []):  {
 
         {/* Implementation Process Section */}
         <section className="py-20 bg-slate-800/30">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
                 Implementation Process
               </h2>
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
@@ -357,7 +356,7 @@ export { FinOpsAdvisor }(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
               {[
                 {
                   step: "01",
@@ -394,24 +393,23 @@ export { FinOpsAdvisor }(...args: []):  {
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-emerald-500/10 to-teal-600/10">;
-          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <div className="max-w-4xl mx-auto text-center px-4 sm: p x-6 lg: p x-8">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
               Ready to Optimize Your Cloud Costs?
             </h2>
             <p className="text-xl text-slate-300 mb-8">
               Transform your cloud financial operations with AI-powered FinOps advisory services.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-teal-700 transition-all duration-200"
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
+              <Link to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold rounded-lg hover: fro m-emerald-600 hover: t o-teal-700 transition-all duration-200"
 
                 Schedule a Consultation
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5"  />
               </Link>
               <Link
                 to="/services"
-                className="inline-flex items-center px-8 py-4 border border-emerald-500/30 text-emerald-400 font-semibold rounded-lg hover:bg-emerald-500/10 transition-all duration-200"
+                className="inline-flex items-center px-8 py-4 border border-emerald-500/30 text-emerald-400 font-semibold rounded-lg hover: b g-emerald-500/10 transition-all duration-200"
               >
                 Explore All Services;
               </Link>;

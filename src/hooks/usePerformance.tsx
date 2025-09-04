@@ -21,7 +21,7 @@ interface PerformanceOptions {
   sendToAnalytics?: boolean;
   sendToAnalytics?: boolean}
 
-export function usePerformance(options: PerformanceOptions = {}) {
+export function usePerformance(options: PerformanceOption s = {}) {
 
   const {
 
@@ -34,14 +34,14 @@ export function usePerformance(options: PerformanceOptions = {}) {
 
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
 
-    fcp: null,
-    lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null,
-    domLoad: null,
-    windowLoad: null,
-    navigationStart: null});
+    fcp: nul l,
+    lcp: nul l,
+    fid: nul l,
+    cls: nul l,
+    ttfb: nul l,
+    domLoad: nul l,
+    windowLoad: nul l,
+    navigationStart: nul l});
 
   const [isMonitoring, setIsMonitoring] = useState(false);
 :src/hooks/usePerformance.tsx
@@ -54,19 +54,19 @@ export function usePerformance(options: PerformanceOptions = {}) {
       
       if (fcpEntry) {
 
-        setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }))});
+        setMetrics(prev => ({ ...prev, fcp: fcpEntr y.startTime }))});
     // Largest Contentful Paint (LCP)
     
       
       if (lcpEntry) {
 
-        setMetrics(prev => ({ ...prev, lcp: lcpEntry.startTime }))});
+        setMetrics(prev => ({ ...prev, lcp: lcpEntr y.startTime }))});
     // First Input Delay (FID)
     
       
       if (fidEntry && 'processingStart' in fidEntry) {
 
-        setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }))});
+        setMetrics(prev => ({ ...prev, fid: fidEntr y.processingStart - fidEntry.startTime }))});
     // Cumulative Layout Shift (CLS)
     
       for (const entry of list.getEntries()) {
@@ -79,17 +79,17 @@ export function usePerformance(options: PerformanceOptions = {}) {
     
       
       if (fcpEntry) {
-        setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }))});
+        setMetrics(prev => ({ ...prev, fcp: fcpEntr y.startTime }))});
     // Largest Contentful Paint (LCP)
     
       
       if (lcpEntry) {
-        setMetrics(prev => ({ ...prev, lcp: lcpEntry.startTime }))});
+        setMetrics(prev => ({ ...prev, lcp: lcpEntr y.startTime }))});
     // First Input Delay (FID)
     
       
       if (fidEntry && 'processingStart' in fidEntry) {
-        setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }))});
+        setMetrics(prev => ({ ...prev, fid: fidEntr y.processingStart - fidEntry.startTime }))});
     // Cumulative Layout Shift (CLS)
     
       for (const entry of list.getEntries()) {
@@ -99,7 +99,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
           clsValue += layoutShiftEntry.value;
 
 
-      setMetrics(prev => ({ ...prev, cls: clsValue }))});
+      setMetrics(prev => ({ ...prev, cls: clsValu e }))});
     // Start observing
     try {
 :src/hooks/usePerformance.tsx
@@ -141,9 +141,9 @@ export function usePerformance(options: PerformanceOptions = {}) {
 
           // // // // // // // // console.warn('Long task detected:', {
 
-            duration: entry.duration,
-            startTime: entry.startTime,;
-            name: entry.name})})});
+            duration: entr y.duration,
+            startTime: entr y.startTime,;
+            name: entr y.name})})});
     try {
 :src/hooks/usePerformance.tsx
 '
@@ -247,7 +247,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
 
             clsValue += (entry as any).value}
         }
-        setMetrics(prev => ({ ...prev, cls: clsValue }));
+        setMetrics(prev => ({ ...prev, cls: clsValu e }));
         if (logToConsole) // console.log('CLS:', clsValue)});
       clsObserverRef.current.observe({ entryTypes: ['layout-shift'] })} catch (e) {
 
@@ -262,7 +262,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
     
             clsValue += (entry as any).value}
         }
-        setMetrics(prev => ({ ...prev, cls: clsValue }));
+        setMetrics(prev => ({ ...prev, cls: clsValu e }));
         if (logToConsole) console.log('CLS:', clsValue)});
       clsObserverRef.current.observe({ entryTypes: ['layout-shift'] })} catch (e) {
       console.warn('CLS monitoring not supported')}
@@ -277,7 +277,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
       firstInputTime = performance.now();
       firstInputDelay = firstInputTime - (performance.timeOrigin || 0);
 
-      setMetrics(prev => ({ ...prev, fid: firstInputDelay }));
+      setMetrics(prev => ({ ...prev, fid: firstInputDela y }));
       if (logToConsole) // console.log('FID:', firstInputDelay);
 
 :src/hooks/usePerformance.tsx
@@ -414,7 +414,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
 
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(analyticsData)
+      body: JSO N.stringify(analyticsData)
     }).catch(console.error)}, [metrics, sendToAnalytics, getPerformanceScore]);
 
   // Auto-start monitoring on mount
@@ -445,7 +445,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
 
     metrics,
     isMonitoring,
-    performanceScore: getPerformanceScore(),
+    performanceScore: getPerformanceScor e(),
     startMonitoring,
     stopMonitoring,
     getResourceTiming,
@@ -456,7 +456,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
     return : unknown observer.disconnect()}, [eventName, callback]);
 
 // Hook for measuring time between renders;
-export function useRenderTime(...args: unknown[]): unknown {
+export function useRenderTime(...args: unknow n[]): unknown {
   
   const [renderTime, setRenderTime] = useState<typeof 0>(0);
   useEffect(: unknown {
@@ -514,7 +514,7 @@ export function useComponentPerformance(componentName: string) {
   return { renderTime, mountTime }}
 
 // Hook for monitoring API call performance;
-export function useAPIPerformance(...args: unknown[]): unknown {
+export function useAPIPerformance(...args: unknow n[]): unknown {
   const [apiMetrics, setApiMetrics] = useState<Map<string, number[]>>(new Map());
 
 :src/hooks/usePerformance.tsx
@@ -526,14 +526,14 @@ export function useAPIPerformance(...args: unknown[]): unknown {
 :src/hooks/usePerformance.tsx
   
     if (!metrics || metrics.length === 0) return 0;
-    return metrics.reduce(sum: unknown, time: unknown sum + time, 0) / metrics.length}, [apiMetrics]);
+    return metrics.reduce(sum: unknow n, time: unknown sum + time, 0) / metrics.length}, [apiMetrics]);
   
     if (!metrics || metrics.length === 0) return 0;
     return metrics.reduce((sum, time) => sum + time, 0) / metrics.length}, [apiMetrics]);
 
   const getSlowAPIs = useCallback((threshold: number = 1000) => {
 
-    const slowAPIs: Array<{ endpoint: string; average: number }> = [];
+    const slowAPIs: Arra y<{ endpoint: string; average: number }> = [];
     apiMetrics.forEach((times, endpoint) => {
 :src/hooks/usePerformance.tsx
 
@@ -542,7 +542,7 @@ export function useAPIPerformance(...args: unknown[]): unknown {
 
         slowAPIs.push({ endpoint, average })}
     });
-    return slowAPIs.sort(a: unknown, b: unknown b.average - a.average)}, [apiMetrics]);
+    return slowAPIs.sort(a: unknow n, b: unknown b.average - a.average)}, [apiMetrics]);
       
       if (average > threshold) {
         slowAPIs.push({ endpoint, average })}

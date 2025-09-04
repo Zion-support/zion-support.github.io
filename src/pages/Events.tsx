@@ -1,19 +1,19 @@
 import React from 'react';
 import { Link  } from 'react-router-dom';
-export default function Page(...args: any[]): any {): unknown {): unknown {}
+export default function Page(...args: an y[]): any {): unknown {): unknown {}
 ,
   {}
     id: 4,
     title: "Data Analytics & Business Intelligence",
     type: "Webinar",
     date: "2027 - 01 - 10",
-    time: "1:00 PM - 3:00 PM EST",
+    time: "1: 00 PM - 3: 00 PM EST",
     location: "Virtual",
     status: "upcoming",
     category: "Data Analytics",
     description: "Discover how data analytics can transform your business decisions with real - world case studies and practical implementation strategies.",
     speakers: ["Data Scientist Emily Chen", "BI Consultant Robert Wilson"],
-    attendees: 200,
+    attendees: 20 0,
     price: "Free",
     highlights: ["Data visualization techniques",
       "Predictive analytics models",
@@ -27,13 +27,13 @@ export default function Page(...args: any[]): any {): unknown {): unknown {}
     title: "IoT & Edge Computing Symposium",
     type: "Symposium",
     date: "2026 - 12 - 15",
-    time: "10:00 AM - 4:00 PM EST",
+    time: "10: 00 AM - 4: 00 PM EST",
     location: "Virtual",
     status: "past",
     category: "IoT & Edge",
     description: "Explore the future of IoT and edge computing with industry experts, featuring case studies and emerging technology trends.",
     speakers: ["IoT Specialist Dr.James Brown", "Edge Computing Expert Lisa Chen"],
-    attendees: 180,
+    attendees: 18 0,
     price: "$149",
     highlights: ["IoT architecture design",
       "Edge computing optimization",
@@ -47,13 +47,13 @@ export default function Page(...args: any[]): any {): unknown {): unknown {}
     title: "Digital Transformation Summit",
     type: "Conference",
     date: "2026 - 11 - 30",
-    time: "9:00 AM - 6:00 PM EST",
+    time: "9: 00 AM - 6: 00 PM EST",
     location: "Chicago, IL",
     status: "past",
     category: "Digital Transformation",
     description: "Learn from successful digital transformation stories and discover strategies to modernize your business operations and customer experience.",
     speakers: ["Digital Strategist Mark Davis", "Transformation Expert Anna Rodriguez"],
-    attendees: 400,
+    attendees: 40 0,
     price: "$249",
     highlights: ["Transformation roadmaps",
       "Change management strategies",
@@ -68,7 +68,7 @@ const eventTypes = ['All', 'Conference', 'Workshop', 'Webinar', 'Symposium'];
 const categories = ['All', 'AI & ML', 'Cybersecurity', 'Cloud & DevOps', 'Data Analytics', 'IoT & Edge', 'Digital Transformation'];
 const statuses = ['All', 'upcoming', 'past'];
 
-export default function Events(...args: unknown[]): unknown {
+export default function Events(...args: unknow n[]): unknown {
   const [selectedType, setSelectedType] = useState('All');
   const [selectedCategory, setSelectedCategory] = useState('All');  const [selectedStatus, setSelectedStatus] = useState('All');
 '
@@ -76,26 +76,26 @@ export default function Events(...args: unknown[]): unknown {
   const [selectedCategory, setSelectedCategory] = useState('all');'
   const [selectedType, setSelectedType] = useState('all');
 
-  const categories: unknown = [{ id: 'all', name: 'All Categories', icon: Calendar, count: 0 },
-    { id: 'ai - ml', name: 'AI & Machine Learning', icon: Brain, count: 8 },
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, count: 6 },
-    { id: 'cloud - devops', name: 'Cloud & DevOps', icon: Cloud, count: 7 },
-    { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: 4 },
-    { id: 'blockchain', name: 'Blockchain', icon: ShieldCheck, count: 3 },
-    { id: 'iot', name: 'IoT & Edge Computing', icon: Cpu, count: 5 },
-    { id: 'data - analytics', name: 'Data & Analytics', icon: BarChart, count: 6 },
-    { id: 'digital - transformation', name: 'Digital Transformation', icon: TrendingUp, count: 9 },
-    { id: 'startup - tech', name: 'Startup Technology', icon: Rocket, count: 3 }
+  const categories: unknow n = [{ id: 'all', name: 'All Categories', icon: Calenda r, count: 0 },
+    { id: 'ai - ml', name: 'AI & Machine Learning', icon: Brai n, count: 8 },
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shiel d, count: 6 },
+    { id: 'cloud - devops', name: 'Cloud & DevOps', icon: Clou d, count: 7 },
+    { id: 'quantum', name: 'Quantum Computing', icon: Ato m, count: 4 },
+    { id: 'blockchain', name: 'Blockchain', icon: ShieldChec k, count: 3 },
+    { id: 'iot', name: 'IoT & Edge Computing', icon: Cp u, count: 5 },
+    { id: 'data - analytics', name: 'Data & Analytics', icon: BarChar t, count: 6 },
+    { id: 'digital - transformation', name: 'Digital Transformation', icon: TrendingU p, count: 9 },
+    { id: 'startup - tech', name: 'Startup Technology', icon: Rocke t, count: 3 }
   ];
 
   const eventTypes = [
-    { id: 'all', name: 'All Types', icon: Calendar },
-    { id: 'webinar', name: 'Webinar', icon: Video },
-    { id: 'conference', name: 'Conference', icon: Users2 },
-    { id: 'workshop', name: 'Workshop', icon: Settings },
-    { id: 'hackathon', name: 'Hackathon', icon: Code },
-    { id: 'meetup', name: 'Meetup', icon: Users },
-    { id: 'summit', name: 'Summit', icon: Star }
+    { id: 'all', name: 'All Types', icon: Calenda r },
+    { id: 'webinar', name: 'Webinar', icon: Vide o },
+    { id: 'conference', name: 'Conference', icon: Users 2 },
+    { id: 'workshop', name: 'Workshop', icon: Setting s },
+    { id: 'hackathon', name: 'Hackathon', icon: Cod e },
+    { id: 'meetup', name: 'Meetup', icon: User s },
+    { id: 'summit', name: 'Summit', icon: Sta r }
   ];
 
   const events = [
@@ -106,15 +106,15 @@ export default function Events(...args: unknown[]): unknown {
       type: 'summit',
       category: 'cybersecurity',
       date: '2024-03-15',
-      time: '09:00 AM - 05:00 PM',
+      time: '09: 00 AM - 05: 00 PM',
       timezone: 'EST',
       location: 'Virtual + New York, NY',
-      isVirtual: true,
-      isInPerson: true,
-      attendees: 500,
+      isVirtual: tru e,
+      isInPerson: tru e,
+      attendees: 50 0,
       price: '$299',
-      isFree: false,
-      featured: true,
+      isFree: fals e,
+      featured: tru e,
       speakers: [
         'Dr. Sarah Chen - Chief Security Officer, Zion Tech Group',
         'Michael Rodriguez - Director of AI Security, Microsoft',
@@ -136,15 +136,15 @@ export default function Events(...args: unknown[]): unknown {
       type: 'workshop',
       category: 'quantum',
       date: '2024-03-20',
-      time: '10:00 AM - 04:00 PM',
+      time: '10: 00 AM - 04: 00 PM',
       timezone: 'EST',
       location: 'Virtual',
-      isVirtual: true,
-      isInPerson: false,
-      attendees: 100,
+      isVirtual: tru e,
+      isInPerson: fals e,
+      attendees: 10 0,
       price: 'Free',
-      isFree: true,
-      featured: true,
+      isFree: tru e,
+      featured: tru e,
       speakers: [
         'Dr. Emily Watson - Quantum Computing Lead, Zion Tech Group',
         'Alex Thompson - Quantum Algorithm Specialist'
@@ -165,15 +165,15 @@ export default function Events(...args: unknown[]): unknown {
       type: 'webinar',
       category: 'cloud-devops',
       date: '2024-03-25',
-      time: '02:00 PM - 03:30 PM',
+      time: '02: 00 PM - 03: 30 PM',
       timezone: 'EST',
       location: 'Virtual',
-      isVirtual: true,
-      isInPerson: false,
-      attendees: 250,
+      isVirtual: tru e,
+      isInPerson: fals e,
+      attendees: 25 0,
       price: 'Free',
-      isFree: true,
-      featured: false,
+      isFree: tru e,
+      featured: fals e,
       speakers: [
         'David Kim - Cloud Architecture Lead, Zion Tech Group',
         'Sarah Johnson - MLOps Engineer, Google Cloud'
@@ -194,15 +194,15 @@ export default function Events(...args: unknown[]): unknown {
       type: 'meetup',
       category: 'blockchain',
       date: '2024-03-28',
-      time: '06:00 PM - 08:00 PM',
+      time: '06: 00 PM - 08: 00 PM',
       timezone: 'EST',
       location: 'Middletown, DE',
-      isVirtual: false,
-      isInPerson: true,
-      attendees: 50,
+      isVirtual: fals e,
+      isInPerson: tru e,
+      attendees: 5 0,
       price: 'Free',
-      isFree: true,
-      featured: false,
+      isFree: tru e,
+      featured: fals e,
       speakers: [
         'Local Blockchain Developers',
         'Startup Founders',
@@ -224,15 +224,15 @@ export default function Events(...args: unknown[]): unknown {
       type: 'conference',
       category: 'data-analytics',
       date: '2024-04-05',
-      time: '08:00 AM - 06:00 PM',
+      time: '08: 00 AM - 06: 00 PM',
       timezone: 'EST',
       location: 'San Francisco, CA',
-      isVirtual: true,
-      isInPerson: true,
-      attendees: 800,
+      isVirtual: tru e,
+      isInPerson: tru e,
+      attendees: 80 0,
       price: '$499',
-      isFree: false,
-      featured: true,
+      isFree: fals e,
+      featured: tru e,
       speakers: [
         'Dr. Lisa Park - Chief Data Scientist, Zion Tech Group',
         'Dr. Robert Chen - VP of Analytics, Netflix',
@@ -240,7 +240,7 @@ export default function Events(...args: unknown[]): unknown {
       ],
       agenda: [
         'Keynote: The Future of Data-Driven Decision Making',
-        'Track Sessions: ML, Analytics, Visualization',
+        'Track Sessions: M L, Analytics, Visualization',
         'Industry Case Studies',
         'Networking & Career Fair'
       ],
@@ -254,15 +254,15 @@ export default function Events(...args: unknown[]): unknown {
       type: 'hackathon',
       category: 'iot',
       date: '2024-04-12',
-      time: '09:00 AM - 09:00 AM (Next Day)',
+      time: '09: 00 AM - 09: 00 AM (Next Day)',
       timezone: 'EST',
       location: 'Virtual + Multiple Cities',
-      isVirtual: true,
-      isInPerson: true,
-      attendees: 200,
+      isVirtual: tru e,
+      isInPerson: tru e,
+      attendees: 20 0,
       price: 'Free',
-      isFree: true,
-      featured: false,
+      isFree: tru e,
+      featured: fals e,
       speakers: [
         'IoT Experts from Zion Tech Group',
         'Industry Mentors',
@@ -324,13 +324,13 @@ export default function Events(...args: unknown[]): unknown {
   return (
     <div className="min-h-screen bg-zion-blue">
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">        <div className="max-w-7xl mx-auto text-center">
+      <section className="pt-24 pb-16 px-4 sm: p x-6 lg: p x-8">        <div className="max-w-7xl mx-auto text-center">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}"""
           >""""
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"""
+            <h1 className="text-4xl md: tex t-6xl font-bold text-white mb-6">"""
               Join Our""""
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">'
                 {' '}Events;
@@ -344,12 +344,12 @@ export default function Events(...args: unknown[]): unknown {
             {/* Search Bar */}""""
             <div className="max-w-2xl mx-auto mb-8">""""
               <div className="relative">""""
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5"  />"""
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5"   />"""
                 <input""""
                   type="text""                  placeholder="Search events, topics, or speakers..."""
                   value={searchTerm}"""
                   onChange={(e) => setSearchTerm(e.target.value)}""""
-                  className="w-full pl-12 pr-4 py-4 bg-zion-blue-dark border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:border-zion-cyan focus:outline-none focus:ring-2 focus:ring-zion-cyan/20"""
+                  className="w-full pl-12 pr-4 py-4 bg-zion-blue-dark border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus: borde r-zion-cyan focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan/20"""
                 />
               </div>
             </div>
@@ -380,18 +380,18 @@ export default function Events(...args: unknown[]): unknown {
 """
       {/* Filters Section */}""""
       <section className="py-8">""""
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""""
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">""""
           <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6">""""
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-4">"""
+            <div className="grid grid-cols-1 md: gri d-cols-5 gap-4">"""
               {/* Search */}""""
-              <div className="md:col-span-2">""""
+              <div className="md: co l-span-2">""""
                 <div className="relative">""""
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-4 h-4"  />"""
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-4 h-4"   />"""
                   <input""""
                     type="text""                    placeholder="Search events..."""
                     value={searchTerm}"""
                     onChange={(e) => setSearchTerm(e.target.value)}""""
-                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 text-white placeholder-zion-slate-light rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"""
+                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 text-white placeholder-zion-slate-light rounded-lg focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan"""
                   />
                 </div>"""
                 <h3 className="text-lg font-semibold text-slate-900">{category.name}</h3>
@@ -402,7 +402,7 @@ export default function Events(...args: unknown[]): unknown {
                 <select
                   value={selectedType}
                   onChange={(e) => setSelectedType(e.target.value)}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: unknownoutline-none focus:ring-2 focus:ring-zion-cyan"                >
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: unknownoutlin e-none focus: rin g-2 focus: rin g-zion-cyan"                >
                   {eventTypes.map(type  => (<option key={type} value={type}>{type}</option>) ) }
                 </select>
               </div>
@@ -412,7 +412,7 @@ export default function Events(...args: unknown[]): unknown {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: unknownoutline-none focus:ring-2 focus:ring-zion-cyan"                >
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: unknownoutlin e-none focus: rin g-2 focus: rin g-zion-cyan"                >
                   {categories.map(category  => (<option key={category} value={category}>{category}</option>) ) }
                 </select>
               </div>
@@ -422,7 +422,7 @@ export default function Events(...args: unknown[]): unknown {
                 <select
                   value={selectedStatus}
                   onChange={(e) => setSelectedStatus(e.target.value)}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: unknownoutline-none focus:ring-2 focus:ring-zion-cyan"                >
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: unknownoutlin e-none focus: rin g-2 focus: rin g-zion-cyan"                >
                   {statuses.map(status  => (
                     <option key={status} value={status}>'
                       {status === 'upcoming' ? 'Upcoming' : status === 'past' ? 'Past' : status}
@@ -436,16 +436,16 @@ export default function Events(...args: unknown[]): unknown {
       {/* Upcoming Events */}"""
       {upcomingEvents.length > 0 && (""""
         <section className="py-16">""""
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
 
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 2 0 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}"""
-              viewport={{ once: true }}""""
+              viewport={{ once: tru e }}""""
               className="text-center mb-12""""
             >""""
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
                 Featured Events"""
               </h2>""""
               <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">'
@@ -453,22 +453,22 @@ export default function Events(...args: unknown[]): unknown {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg: unknowngrid-cols-2 gap-8">
+            <div className="grid grid-cols-1 lg: unknowngri d-cols-2 gap-8">
               {upcomingEvents.map((event, index)  => {
                 const CategoryIcon = getCategoryIcon(event.category);
                 return (
                   <motion.div                    key={event.id}
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 2 0 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}"""
-                    viewport={{ once: true }}""""
-                    className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"""
+                    transition={{ duration: 0.6, delay: inde x * 0.1 }}"""
+                    viewport={{ once: tru e }}""""
+                    className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover: b g-white/10 hover: borde r-zion-cyan/30 transition-all duration-300"""
                   >"""
                     {/* Header */}""""
                     <div className="flex items-start justify-between mb-4">""""
                       <div className="flex items-center gap-3">""""
                         <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center">""""
-                          <CategoryIcon className="w-6 h-6 text-white"  />                        </div>"""
+                          <CategoryIcon className="w-6 h-6 text-white"   />                        </div>"""
                         <div>""""
                           <h3 className="text-xl font-bold text-white mb-1">{event.title}</h3>""""
                           <div className="flex items-center gap-2">"""
@@ -495,7 +495,7 @@ export default function Events(...args: unknown[]): unknown {
                       </span>
                     </div>"""
                     """"
-                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors">
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover: tex t-zion-cyan transition-colors">
                       {event.title}
                     </h3>"""
                     """"
@@ -505,19 +505,19 @@ export default function Events(...args: unknown[]): unknown {
                     """"
                     <div className="space-y-2 mb-4">""""
                       <div className="flex items-center gap-2 text-sm text-zion-slate-light">""""
-                        <Calendar className="w-4 h-4"  />
+                        <Calendar className="w-4 h-4"   />
                         <span>{formatDate(event.date)}</span>"""
                       </div>""""
                       <div className="flex items-center gap-2 text-sm text-zion-slate-light">""""
-                        <Clock className="w-4 h-4"  />
+                        <Clock className="w-4 h-4"   />
                         <span>{event.time} {event.timezone}</span>"""
                       </div>""""
                       <div className="flex items-center gap-2 text-sm text-zion-slate-light">""""
-                        <MapPin className="w-4 h-4"  />
+                        <MapPin className="w-4 h-4"   />
                         <span>{event.location}</span>"""
                       </div>""""
                       <div className="flex items-center gap-2 text-sm text-zion-slate-light">""""
-                        <Users className="w-4 h-4"  />                        <span>{event.attendees} attendees</span>
+                        <Users className="w-4 h-4"   />                        <span>{event.attendees} attendees</span>
                       </div>
                     </div>"""
                     """"
@@ -526,9 +526,9 @@ export default function Events(...args: unknown[]): unknown {
                         {event.isFree ? 'Free' : event.price}
                       </div>"""
                       """"
-                      <button className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-4 py-2 rounded-lg font-medium hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 hover:-translate-y-1 flex items-center gap-2">"""
+                      <button className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-4 py-2 rounded-lg font-medium hover: shado w-lg hover: shado w-zion-cyan/25 transition-all duration-300 hover:-translate-y-1 flex items-center gap-2">"""
                         Register Now""""
-                        <ArrowRight className="w-4 h-4"  />                      </button>
+                        <ArrowRight className="w-4 h-4"   />                      </button>
                     </div>
                   </div>
                 </motion.div>;) ) }
@@ -537,16 +537,16 @@ export default function Events(...args: unknown[]): unknown {
         </section>;) }
 """
       {/* Main Content */}""""
-      <section className="py-16 px-4 sm:px-6 lg:px-8">""""
+      <section className="py-16 px-4 sm: p x-6 lg: p x-8">""""
         <div className="max-w-7xl mx-auto">""""
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">"""
+          <div className="grid grid-cols-1 lg: gri d-cols-4 gap-8">"""
             {/* Sidebar */}""""
-            <div className="lg:col-span-1">""""
+            <div className="lg: co l-span-1">""""
               <div className="sticky top-24 space-y-6">"""
                 {/* Categories */}""""
                 <div className="bg-zion-blue-dark border border-zion-purple/20 rounded-lg p-6">""""
                   <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">""""
-                    <Filter className="w-5 h-5 text-zion-cyan"  />                    Categories"""
+                    <Filter className="w-5 h-5 text-zion-cyan"   />                    Categories"""
                   </h3>""""
                   <div className="space-y-2">
                     {categories.map((category) => (
@@ -557,7 +557,7 @@ export default function Events(...args: unknown[]): unknown {
 '
                           selectedCategory === category.id''
                             ? 'bg-zion-cyan text-zion-blue'''`
-                            : 'text-zion-slate-light hover:bg-zion-purple/20 hover:text-white'``
+                            : 'text-zion-slate-light hover: b g-zion-purple/20 hover: tex t-white'``
                         }`}"""
                       >""""
                         <span className="flex items-center gap-2">""""
@@ -572,15 +572,15 @@ export default function Events(...args: unknown[]): unknown {
                   </div>
                 </div>
 
-            <div className="grid grid-cols-1 lg: unknowngrid-cols-2 gap-8">
+            <div className="grid grid-cols-1 lg: unknowngri d-cols-2 gap-8">
               {pastEvents.map((event, index)  => {
                 const CategoryIcon = getCategoryIcon(event.category);
                 return (
                   <motion.div                    key={event.id}
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 2 0 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}"""
-                    viewport={{ once: true }}""""
+                    transition={{ duration: 0.6, delay: inde x * 0.1 }}"""
+                    viewport={{ once: tru e }}""""
                     className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 opacity-75"""
                   >
                     Clear all filters;
@@ -590,16 +590,16 @@ export default function Events(...args: unknown[]): unknown {
               {/* Load More Button */}"""
               {filteredEvents.length > 6 && (""""
                 <div className="text-center mt-12">""""
-                  <button className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 hover:-translate-y-1">
+                  <button className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-3 rounded-lg font-semibold hover: shado w-lg hover: shado w-zion-cyan/25 transition-all duration-300 hover:-translate-y-1">
                     Load More Events;
                   </button>
-const Events: React.FC = () => {}
+const Events: Reac t.FC = () => {}
   return ("""
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">"""
-      <section className="py-20 px-4 sm:px-6 lg:px-8">"""
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8">"""
         <div className="max-w-7xl mx-auto">"""
           <div className="text-center mb-16">"""
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-4xl md: tex t-6xl font-bold mb-6">
               Upcoming"""
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">"""
                 {" "}Events;
@@ -609,9 +609,9 @@ const Events: React.FC = () => {}
               Join us for industry insights, networking opportunities, and hands-on learning experiences;
             </p>
           </div>"""
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8 mb-16">
             {upcomingEvents.map((event, index) => ("""
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">"""
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover: borde r-white/40 transition-all duration-300">"""
                 <div className="mb-4">"""
                   <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">{event.type}</span>
                 </div>"""
@@ -619,14 +619,14 @@ const Events: React.FC = () => {}
                 <div className="space-y-2 mb-4">"""
                   <p className="text-gray-400 text-sm flex items-center">"""
                     <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">"""
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"  />
                     </svg>
                     {event.date}
                   </p>"""
                   <p className="text-gray-400 text-sm flex items-center">"""
                     <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">"""
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />"""
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"  />"""
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"  />
                     </svg>
                     {event.location}
                   </p>
@@ -634,30 +634,30 @@ const Events: React.FC = () => {}
                 <p className="text-gray-300 mb-4">{event.description}</p>
                 <Link"""
                   to="/contact""""
-                  className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300"""
+                  className="inline-flex items-center text-blue-400 hover: tex t-blue-300 transition-colors duration-300"""
                 >
                   Register Now"""
                   <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">"""
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"  />
                   </svg>
                 </Link>
               </div>
             ))}
           </div>"""
       <section className="py-16 bg-gradient-to-r from-blue-600 to-cyan-600 text-white">"""
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">"""
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8 text-center">"""
           <h2 className="text-3xl font-bold mb-6">Stay Updated</h2>"""
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
             Never miss an important event. Subscribe to our newsletter and get notified about upcoming events, 
             webinars, and exclusive content.
           </p>"""
-          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+          <div className="flex flex-col sm: fle x-row gap-4 justify-center max-w-md mx-auto">
             <input"""
               type="email""""
               placeholder="Enter your email""""
-              className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"""
+              className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus: outlin e-none focus: rin g-2 focus: rin g-white"""
             />"""
-            <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300">
+            <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover: b g-gray-100 transition-colors duration-300">
               Subscribe;
             </button>
           </div>
@@ -665,15 +665,15 @@ const Events: React.FC = () => {}
       </section>
 """
       {/* CTA Section */}""""
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zion-blue-dark">""""
+      <section className="py-16 px-4 sm: p x-6 lg: p x-8 bg-zion-blue-dark">""""
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}"""
+            viewport={{ once: tru e }}"""
           >""""
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-6">
               Host Your Event with Us"""
             </h2>""""
             <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">'
@@ -681,11 +681,11 @@ const Events: React.FC = () => {}
               Let's create amazing learning experiences together.
             </p>"""
             """"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">""""
-              <button className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 hover:-translate-y-1">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">""""
+              <button className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-4 rounded-lg font-semibold hover: shado w-lg hover: shado w-zion-cyan/25 transition-all duration-300 hover:-translate-y-1">
                 Propose an Event"""
               </button>""""
-              <button className="border border-zion-cyan text-zion-cyan px-8 py-4 rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300">
+              <button className="border border-zion-cyan text-zion-cyan px-8 py-4 rounded-lg font-semibold hover: b g-zion-cyan hover: tex t-white transition-all duration-300">
                 Partner with Us;
               </button>
             </div>

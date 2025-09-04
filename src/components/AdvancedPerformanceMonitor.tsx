@@ -72,7 +72,7 @@ export default function Page() {
       color = 'text-red-500'}
   }, []) ;
 
-      return { score: averageScore, rating, color }},
+      return { score: averageScor e, rating, color }},
     []
   );
   // Measure Core Web Vitals
@@ -86,7 +86,7 @@ export default function Page() {
 
         if(fcpEntry) {
 
-          setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }))}
+          setMetrics(prev => ({ ...prev, fcp: fcpEntr y.startTime }))}
       });
       fcpObserver.observe({ entryTypes: ['paint'] });
 
@@ -94,7 +94,7 @@ export default function Page() {
 
         if(lastEntry) {
 
-          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }))}
+          setMetrics(prev => ({ ...prev, lcp: lastEntr y.startTime }))}
       });
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
@@ -112,13 +112,13 @@ export default function Page() {
       // Layout Shift
       const clsObserver = new PerformanceObserver(list => {
 
-        let clsValue = 0;        list.getEntries().forEach((entry: any) => {
+        let clsValue = 0;        list.getEntries().forEach((entry: an y) => {
 
           if(!entry.hadRecentInput) {
 
             clsValue += entry.value}
         });
-        setMetrics(prev => ({ ...prev, cls: clsValue }));
+        setMetrics(prev => ({ ...prev, cls: clsValu e }));
       });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
       return () => {
@@ -180,21 +180,21 @@ export default function Page() {
     return ()
       <button
         onClick={() => setIsVisible(true)}
-        className="fixed bottom-4 right-4 bg-zion-cyan text-white p-3 rounded-full shadow-lg hover:bg-zion-cyan/90 transition-all duration-300 z-50"
+        className="fixed bottom-4 right-4 bg-zion-cyan text-white p-3 rounded-full shadow-lg hover: b g-zion-cyan/90 transition-all duration-300 z-50"
         
       >"
-        <Activity className="w-6 h-6"  />      </button>
+        <Activity className="w-6 h-6"   />      </button>
     )}
 
   return ("
     <div className="fixed bottom-4 right-4 bg-zion-slate-dark/95 backdrop-blur-xl border border-zion-cyan/30 rounded-2xl p-6 shadow-2xl z-50 max-w-sm">"
       <div className="flex items-center justify-between mb-4">"
         <h3 className="text-lg font-bold text-white flex items-center">"
-          <Zap className="w-5 h-5 mr-2 text-zion-cyan"  />          Performance Monitor
+          <Zap className="w-5 h-5 mr-2 text-zion-cyan"   />          Performance Monitor
         </h3>
         <button
           onClick={() => setIsVisible(false)}"
-          className="text-zion-slate-light hover:text-white transition-colors"
+          className="text-zion-slate-light hover: tex t-white transition-colors"
         >
           ×
         </button>

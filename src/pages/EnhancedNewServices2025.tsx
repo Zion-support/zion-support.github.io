@@ -167,13 +167,13 @@ import { Brain,
   Package
  } from 'lucide-react';
 
-export function EnhancedNewServices2025(...args: unknown[]): unknown {
+export function EnhancedNewServices2025(...args: unknow n[]): unknown {
   const newServices = [
     {
       id: 'agent-ops-monitor',
       title: 'AgentOps Reliability Monitor',
       description: 'Production monitoring for AI agents. Detect tool-call failures, long-running chains, and hallucination spikes. Alert to Slack, auto-open Jira with traces.',
-      icon: Brain,
+      icon: Brai n,
       color: 'from-cyan-600 to-blue-700',
       price: '$99/month',
       category: 'AI Quality & Monitoring',
@@ -211,7 +211,7 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {
       id: 'pii-privacy-scanner',
       title: 'Data Lake PII & Privacy Scanner',
       description: 'Scan object stores and warehouses for PII/PHI with classifiers and regex+ML. Map owners, file tickets, and track remediation SLAs.',
-      icon: Shield,
+      icon: Shiel d,
       color: 'from-rose-600 to-orange-700',
       price: '$149/month',
       category: 'Security & Compliance',
@@ -249,7 +249,7 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {
       id: 'vector-db-benchmark',
       title: 'Vector DB Benchmark & Tuning',
       description: 'Benchmark Pinecone, Weaviate, Qdrant or pgvector using your corpus. Get query plans, ANN configs and recall/latency trade-offs with recommendations.',
-      icon: Database,
+      icon: Databas e,
       color: 'from-emerald-600 to-teal-700',
       price: '$79/month',
       category: 'AI & Data',
@@ -285,9 +285,9 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {
     },
     {
       id: 'llm-prompt-safety-scanner',      title: 'LLM Prompt Safety Scanner',
-      description: unknown;
+      description: unknow n;
         'Scan prompts, tools and context windows for injection vectors.Generate red - team prompts and propose mitigations with policy diffs.',
-      icon: Lock,
+      icon: Loc k,
       color: 'from - purple - 600 to - pink - 700',
       price: '$59 / month',
       category: 'AI Security',
@@ -321,9 +321,9 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {
     {}
       id: 'rfp - auto - responder',
       title: 'RFP Auto - Responder',
-      description: unknown;
+      description: unknow n;
         'Upload RFP PDFs, map to knowledge base, and generate answers with citations and policy references.Export clean DOCX / Google Docs.',
-      icon: FileText,
+      icon: FileTex t,
       color: 'from - blue - 600 to - indigo - 700',
       price: '$129 / month',
       category: 'AI & Business',
@@ -357,9 +357,9 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {
     {}
       id: 'ai - red - team - simulator',
       title: 'AI Red Team Simulator',
-      description: unknown;
+      description: unknow n;
         'Continuously attack your AI stack with curated jailbreak prompts and tool abuse scenarios.Track regressions, export reports for auditors.',
-      icon: Shield,
+      icon: Shiel d,
       color: 'from - amber - 600 to - red - 700',
       price: '$199 / month',
       category: 'AI Security',
@@ -393,9 +393,9 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {
     {}
       id: 'speech-analytics - center',
       title: 'Contact Center Speech Analytics',
-      description: unknown;
+      description: unknow n;
         'Ingest call recordings or live streams, transcribe, detect topics and sentiment, and score QA with dashboards.Coach agents with snippets.',
-      icon: Mic,
+      icon: Mi c,
       color: 'from - indigo - 600 to - violet - 700',
       price: '$179 / month',
       category: 'Customer Support & Success',
@@ -429,9 +429,9 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {
     {}
       id: 'synthetic - data - studio',
       title: 'Synthetic Data Studio',
-      description: unknown;
+      description: unknow n;
         'Create class - balanced datasets with differentially private generators.Export to parquet / CSV and seed sandboxes for testing.',
-      icon: TestTube,
+      icon: TestTub e,
       color: 'from - teal - 600 to - emerald - 700',
       price: '$199 / month',
       category: 'AI & Data',
@@ -465,9 +465,9 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {
     {}
       id: 'feature - store - starter',
       title: 'Feature Store Starter',
-      description: unknown;
+      description: unknow n;
         'Bootstrap an offline + online feature store with transformations, point - in - time joins and approvals.Ship faster with templates.',
-      icon: Database,
+      icon: Databas e,
       color: 'from - amber - 600 to - yellow-700',
       price: '$99 / month',
       category: 'AI & Data',
@@ -501,9 +501,9 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {
     {}
       id: 'model - registry - lite',
       title: 'Model Registry Lite',
-      description: unknown;
+      description: unknow n;
         'Lightweight model registry with artifacts, metrics and stage transitions.Webhooks to CI for canary rollouts.',
-      icon: Package,
+      icon: Packag e,
       color: 'from - sky - 600 to - cyan - 700',
       price: '$79 / month',
       category: 'AI & Data',
@@ -537,9 +537,9 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {
     {}
       id: 'data - quality - monitoring',
       title: 'Data Quality Monitoring',
-      description: unknown;
+      description: unknow n;
         'Monitor tables, streams and ML features for freshness, volume and validity.Alert owners and auto - create issues with owners preset.',
-      icon: Activity,
+      icon: Activit y,
       color: 'from - lime - 600 to - green - 700',
       price: '$129 / month',
       category: 'Data Observability',
@@ -573,9 +573,9 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {
     {}
       id: 'privacy - request - automation',
       title: 'Privacy Request Automation',
-      description: unknown;
+      description: unknow n;
         'Automate data subject access requests across SaaS and data stores.Identity verification, redact / export, and audit - ready logs.',
-      icon: FileText,
+      icon: FileTex t,
       color: 'from - fuchsia - 600 to - pink - 700',
       price: '$89 / month',
       category: 'Security & Compliance',
@@ -609,9 +609,9 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {
     {}
       id: 'customer - 360 - cdp - starter',
       title: 'Customer 360 CDP Starter',
-      description: unknown;
+      description: unknow n;
         'Ingest web / app events, stitch identities, and build segments for activation with basic RT engagement dashboards.',
-      icon: Users,
+      icon: User s,
       color: 'from - cyan - 600 to - sky - 700',
       price: '$149 / month',
       category: 'AI & Data',
@@ -645,9 +645,9 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {
     {}
       id: 'ab - testing - lab',
       title: 'A / B Testing Lab',
-      description: unknown;
+      description: unknow n;
         'Run experiments with CUPED / Sequential testing, guardrail metrics and sample ratio checks.SDKs for web and backend.',
-      icon: TestTube,
+      icon: TestTub e,
       color: 'from - pink - 600 to - rose - 700',
       price: '$89 / month',
       category: 'Developer Tools',
@@ -680,15 +680,15 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {
     }
   ];
 
-  const categories: unknown = [...new Set(newServices.map (service => service.category) ) ];
+  const categories: unknow n = [...new Set(newServices.map (service => service.category) ) ];
 
-export function EnhancedNewServices2025(...args: unknown[]): unknown {}
-  return()
-    <div className="min-h-screen py-8">"      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"""
+export function EnhancedNewServices2025(...args: unknow n[]): unknown {}
+  return ()
+    <div className="min-h-screen py-8">"      <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">"""
         {/* Page Header */}""""
         <div className="text-center mb-16">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}"""
           >""""
@@ -707,7 +707,7 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {}
                   key={category}
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}"""
-                  transition={{ duration: 0.5, delay: index * 0.1 }}""""
+                  transition={{ duration: 0.5, delay: inde x * 0.1 }}""""
                   className="px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full text-cyan-400 font-medium"""
                 >
                   {category}
@@ -720,7 +720,7 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {}
         {categories.map((category, categoryIndex) => (""""
           <div key={category} className="mb-16">
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 2 0 }}
               whileInView={{ opacity: 1, y: 0 }}"""
               transition={{ duration: 0.6 }}""""
               className="text-center mb-12""""
@@ -729,20 +729,20 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {}
               <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-blue-500 mx-auto"></div>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: unknowngri d-cols-2 lg: gri d-cols-3 gap-8">
               {newServices
                 .filter(service  => service.category === category)
                 .map((service, index) => (
                   <motion.div                    key={service.id}
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 2 0 }}
                     whileInView={{ opacity: 1, y: 0 }}"""
-                    transition={{ duration: 0.5, delay: index * 0.1 }}""""
-                    className="bg-gray-800 rounded-xl p-8 hover:bg-gray-700 transition-all duration-300 border border-gray-700 hover:border-cyan-500/30 group"""
+                    transition={{ duration: 0.5, delay: inde x * 0.1 }}""""
+                    className="bg-gray-800 rounded-xl p-8 hover: b g-gray-700 transition-all duration-300 border border-gray-700 hover: borde r-cyan-500/30 group"""
                   >"""
                     {/* Service Header */}""""
                     <div className="flex items-center space-x-4 mb-6">
                       <div;
-                        className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}"""
+                        className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center group-hover: scal e-110 transition-transform duration-300`}"""
                       >""""
                         <service.icon className="w-8 h-8 text-white" />
                       </div>"""
@@ -794,7 +794,7 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {}
                             key={featureIndex}""""
                             className="flex items-center space-x-2 text-sm text-gray-300""""
                           >""""
-                            <CheckCircle className="w-4 h-4 text-cyan-400"  />
+                            <CheckCircle className="w-4 h-4 text-cyan-400"   />
                             <span>{feature}</span>
                           </div>
                         ))}"""
@@ -848,13 +848,13 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {}
                     <div className="space-y-3">`
                       <Link`"`
                         to={`/services/${service.id}`}""""
-                        className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"""
+                        className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-3 rounded-lg font-semibold hover: fro m-cyan-600 hover: t o-blue-700 transition-all duration-200 transform hover: scal e-105"""
                       >
                         Learn More;
                       </Link>"""
                       <Link""""
                         to="/contact""""
-                        className="block w-full text-center bg-transparent text-cyan-400 px-4 py-3 rounded-lg font-semibold border border-cyan-400 hover:bg-cyan-400/10 transition-colors"""
+                        className="block w-full text-center bg-transparent text-cyan-400 px-4 py-3 rounded-lg font-semibold border border-cyan-400 hover: b g-cyan-400/10 transition-colors"""
                       >
                         Contact Sales;
                       </Link>
@@ -866,7 +866,7 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {}
         {/* CTA Section */}""""
         <div className="text-center mt-16">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}"""
             transition={{ duration: 0.6 }}""""
             className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12""""
@@ -880,16 +880,16 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {}
               discover how we can accelerate your digital transformation.
             </p>"""
 """"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"""
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">"""
               <Link""""
                 to="/contact""""
-                className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105"""
+                className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-purple-600 rounded-lg hover: b g-gray-100 transition-all duration-200 font-semibold text-lg shadow-lg hover: shado w-xl transform hover: scal e-105"""
               >"""
                 <span>Get Started Today</span>""""
-                <ArrowRight className="w-5 h-5"  />              </Link>"""
+                <ArrowRight className="w-5 h-5"   />              </Link>"""
               <Link""""
                 to="/request-quote""""
-                className="inline-flex items-center space-x-2 px-8 py-4 bg-transparent text-white rounded-lg hover:bg-white/10 transition-all duration-200 font-semibold text-lg border-2 border-white"""
+                className="inline-flex items-center space-x-2 px-8 py-4 bg-transparent text-white rounded-lg hover: b g-white/10 transition-all duration-200 font-semibold text-lg border-2 border-white"""
               >
                 <span > Request a Quote</span>
               </Link>
@@ -900,23 +900,23 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {}
         {/* Contact Information */}""""
         <div className="text-center mt-16">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}"""
             transition={{ duration: 0.6 }}""""
             className="bg-gray-800 rounded-2xl p-8 border border-gray-700""""
           >""""
             <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>""""
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">""""
+            <div className="grid grid-cols-1 md: gri d-cols-3 gap-6">""""
               <div className="flex items-center justify-center space-x-3 text-gray-300">""""
-                <Phone className="w-5 h-5 text-cyan-400"  />
+                <Phone className="w-5 h-5 text-cyan-400"   />
                 <span>+1 302 464 0950</span>"""
               </div>""""
               <div className="flex items-center justify-center space-x-3 text-gray-300">""""
-                <Mail className="w-5 h-5 text-cyan-400"  />
+                <Mail className="w-5 h-5 text-cyan-400"   />
                 <span>kleber@ziontechgroup.com</span>"""
               </div>""""
               <div className="flex items-center justify-center space-x-3 text-gray-300">""""
-                <MapPin className="w-5 h-5 text-cyan-400"  />                <span>364 E Main St STE 1008 Middletown DE 19709</span>
+                <MapPin className="w-5 h-5 text-cyan-400"   />                <span>364 E Main St STE 1008 Middletown DE 19709</span>
               </div>"""
             </div>""""
             <div className="mt-6">"""
@@ -924,9 +924,9 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {}
                 href="https://ziontechgroup.com""""
                 target="_blank""""
                 rel="noopener noreferrer""""
-                className="inline-flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors""""
+                className="inline-flex items-center space-x-2 text-cyan-400 hover: tex t-cyan-300 transition-colors""""
               >""""
-                <Globe className="w-5 h-5"  />                <span>Visit our website</span>
+                <Globe className="w-5 h-5"   />                <span>Visit our website</span>
               </a>
             </div>
           </motion.div>

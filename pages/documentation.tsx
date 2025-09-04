@@ -18,34 +18,34 @@ import {
   Zap
 } from 'lucide-react'
 
-const SEO = dynamic(() => import('../src/components/SEO'), { ssr: false })
-const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false })
+const SEO = dynamic(() => import('../src/components/SEO'), { ssr: fals e })
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: fals e })
 
-const DocumentationPage: React.FC = () => {
+const DocumentationPage: Reac t.FC = () => {
   const quickStart = [
     {
       step: 1,
       title: 'Get Your API Key',
       description: 'Sign up for a free account and get your API key',
-      icon: <Shield className="w-6 h-6" />
+      icon: <Shield className="w-6 h-6"  />
     },
     {
       step: 2,
       title: 'Install SDK',
       description: 'Install our SDK for your preferred programming language',
-      icon: <Download className="w-6 h-6" />
+      icon: <Download className="w-6 h-6"  />
     },
     {
       step: 3,
       title: 'Make Your First API Call',
       description: 'Start building with our comprehensive API documentation',
-      icon: <Code className="w-6 h-6" />
+      icon: <Code className="w-6 h-6"  />
     },
     {
       step: 4,
       title: 'Deploy Your Application',
       description: 'Deploy your application using our cloud infrastructure',
-      icon: <Globe className="w-6 h-6" />
+      icon: <Globe className="w-6 h-6"  />
     }
   ]
 
@@ -53,67 +53,66 @@ const DocumentationPage: React.FC = () => {
     {
       title: 'AI Services API',
       description: 'Access our AI and machine learning capabilities',
-      endpoints: 15,
-      icon: <Zap className="w-6 h-6" />,
+      endpoints: 1 5,
+      icon: <Zap className="w-6 h-6"  />,
       color: 'blue'
     },
     {
       title: 'Micro SaaS API',
       description: 'Manage and deploy micro SaaS applications',
-      endpoints: 25,
-      icon: <Globe className="w-6 h-6" />,
+      endpoints: 2 5,
+      icon: <Globe className="w-6 h-6"  />,
       color: 'green'
     },
     {
       title: 'IT Infrastructure API',
       description: 'Monitor and manage IT infrastructure',
-      endpoints: 20,
-      icon: <Database className="w-6 h-6" />,
+      endpoints: 2 0,
+      icon: <Database className="w-6 h-6"  />,
       color: 'purple'
     },
     {
       title: 'Cybersecurity API',
       description: 'Security monitoring and threat detection',
-      endpoints: 12,
-      icon: <Shield className="w-6 h-6" />,
+      endpoints: 1 2,
+      icon: <Shield className="w-6 h-6"  />,
       color: 'red'
     }
   ]
 
   return (
     <>
-      <SEO
-        title="Documentation - Zion Tech Group"
+      <SEO title="Documentation - Zion Tech Group"
         description="Comprehensive documentation for Zion Tech Group APIs, SDKs, and integration guides."
         keywords="documentation, API, SDK, integration, Zion Tech Group"
         canonical="https://ziontechgroup.com/documentation"
-      />
+       />
       
       <PageTransition>
         <main className="min-h-screen bg-white">
           {/* Hero Section */}
           <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="text-center"
               >
-                <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                <h1 className="text-4xl md: tex t-6xl font-bold text-gray-900 mb-6">
                   Documentation
                 </h1>
                 <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
                   Comprehensive guides, API references, and integration examples to help you build with our platform.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm: fle x-row gap-4 justify-center">
                   <motion.a
                     href="#quick-start"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
                   >
-                    <ArrowRight className="w-5 h-5" />
+                    <ArrowRight className="w-5 h-5"  />
                     Get Started
                   </motion.a>
                   <motion.a
@@ -122,7 +121,7 @@ const DocumentationPage: React.FC = () => {
                     whileTap={{ scale: 0.95 }}
                     className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
                   >
-                    <ArrowRight className="w-5 h-5" />
+                    <ArrowRight className="w-5 h-5"  />
                     Get API Key
                   </motion.a>
                 </div>
@@ -132,14 +131,14 @@ const DocumentationPage: React.FC = () => {
 
           {/* Quick Start */}
           <section id="quick-start" className="py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-center mb-16"
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4">
                   Quick Start Guide
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -147,13 +146,13 @@ const DocumentationPage: React.FC = () => {
                 </p>
               </motion.div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
                 {quickStart.map((step, index) => (
                   <motion.div
                     key={step.step}
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 2 0 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    transition={{ duration: 0.6, delay: inde x * 0.1 }}
                     className="bg-white rounded-xl shadow-lg p-8 text-center"
                   >
                     <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -178,14 +177,14 @@ const DocumentationPage: React.FC = () => {
 
           {/* API Sections */}
           <section className="bg-gray-50 py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="text-center mb-16"
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4">
                   API Documentation
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -193,13 +192,13 @@ const DocumentationPage: React.FC = () => {
                 </p>
               </motion.div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md: gri d-cols-2 gap-8">
                 {apiSections.map((section, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 2 0 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    transition={{ duration: 0.6, delay: inde x * 0.1 }}
                     className="bg-white rounded-xl shadow-lg p-8"
                   >
                     <div className="flex items-center gap-4 mb-4">
@@ -222,7 +221,7 @@ const DocumentationPage: React.FC = () => {
                       <motion.button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-700 transition-colors"
+                        className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover: b g-blue-700 transition-colors"
                       >
                         View Docs
                       </motion.button>
@@ -235,27 +234,27 @@ const DocumentationPage: React.FC = () => {
 
           {/* CTA Section */}
           <section className="py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="text-center"
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-6">
                   Need Help Getting Started?
                 </h2>
                 <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
                   Our team is here to help you integrate with our platform and get the most out of our services.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm: fle x-row gap-4 justify-center">
                   <motion.a
                     href="/contact"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
                   >
-                    <ArrowRight className="w-5 h-5" />
+                    <ArrowRight className="w-5 h-5"  />
                     Contact Support
                   </motion.a>
                   <motion.a
@@ -264,7 +263,7 @@ const DocumentationPage: React.FC = () => {
                     whileTap={{ scale: 0.95 }}
                     className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
                   >
-                    <ArrowRight className="w-5 h-5" />
+                    <ArrowRight className="w-5 h-5"  />
                     Call Us: +1 302 464 0950
                   </motion.a>
                 </div>

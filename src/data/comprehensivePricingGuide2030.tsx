@@ -14,7 +14,7 @@ export interface ServicePricing {
   serviceName: string;
   category: string;
   description: string;
-  pricing: PricingTier[];
+  pricing: PricingTie r[];
   marketComparison: string;
   roi: string;
   setupTime: string;
@@ -26,18 +26,17 @@ export interface ServicePricing {
 
 // Zion Tech Group Contact Information
 
-export const comprehensivePricingGuide2030: ServicePricing[] = [// Micro SaaS Services
+export const comprehensivePricingGuide2030: ServicePricin g[] = [// Micro SaaS Services
   {
 "
     serviceId: "ai-autonomous-research-assistant","
     serviceName: "AI Autonomous Research Assistant","
     category: "AI & Research",
-    basePrice: 8999,
-    pricingTiers[;
-      {
+    basePrice: 899 9,
+    pricingTiers[ {
 "
         name: "Starter",
-        price: 8999,
+        price: 899 9,
         features[;"
           "Basic research automation","
           "Data analysis tools","
@@ -52,7 +51,7 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [// Micro SaaS Se
       {
 "
         name: "Professional",
-        price: 15999,
+        price: 1599 9,
         features[;"
           "Advanced research automation","
           "AI-powered insights","
@@ -68,7 +67,7 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [// Micro SaaS Se
       {
 "
         name: "Enterprise",
-        price: 29999,
+        price: 2999 9,
         features[;"
           "Full research automation","
           "Custom AI models","
@@ -96,12 +95,11 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [// Micro SaaS Se
     serviceId: "ai-metaverse-development-platform","
     serviceName: "AI Metaverse Development Platform","
     category: "AI & Metaverse",
-    basePrice: 12999,
-    pricingTiers[;
-      {
+    basePrice: 1299 9,
+    pricingTiers[ {
 "
         name: "Creator",
-        price: 12999,
+        price: 1299 9,
         features[;"
           "Basic metaverse creation tools","
           "3D environment builder","
@@ -116,7 +114,7 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [// Micro SaaS Se
       {
 "
         name: "Studio",
-        price: 24999,
+        price: 2499 9,
         features[;"
           "Advanced metaverse tools","
           "AI-powered content generation","
@@ -131,7 +129,7 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [// Micro SaaS Se
       {
 "
         name: "Enterprise",
-        price: 49999,
+        price: 4999 9,
         features[;"
           "Full metaverse platform","
           "Custom AI models","
@@ -158,12 +156,11 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [// Micro SaaS Se
     serviceId: "zero-trust-network-access-platform","
     serviceName: "Zero-Trust Network Access Platform","
     category: "IT Infrastructure",
-    basePrice: 12999,
-    pricingTiers[;
-      {
+    basePrice: 1299 9,
+    pricingTiers[ {
 "
         name: "Basic",
-        price: 12999,
+        price: 1299 9,
         features[;"
           "Basic zero-trust access","
           "Identity verification","
@@ -178,7 +175,7 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [// Micro SaaS Se
       {
 "
         name: "Professional",
-        price: 21999,
+        price: 2199 9,
         features[;"
           "Advanced zero-trust","
           "Multi-factor authentication","
@@ -193,7 +190,7 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [// Micro SaaS Se
       {
 "
         name: "Enterprise",
-        price: 39999,
+        price: 3999 9,
         features[;"
           "Full zero-trust platform","
           "Custom integrations","
@@ -220,12 +217,11 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [// Micro SaaS Se
     serviceId: "ai-medical-imaging-analysis","
     serviceName: "AI Medical Imaging Analysis Platform","
     category: "AI & Healthcare",
-    basePrice: 24999,
-    pricingTiers[;
-      {
+    basePrice: 2499 9,
+    pricingTiers[ {
 "
         name: "Clinic",
-        price: 24999,
+        price: 2499 9,
         features[;"
           "Basic image analysis","
           "Common diagnostic tools","
@@ -240,7 +236,7 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [// Micro SaaS Se
       {
 "
         name: "Hospital",
-        price: 44999,
+        price: 4499 9,
         features[;"
           "Advanced image analysis","
           "Full diagnostic suite","
@@ -256,7 +252,7 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [// Micro SaaS Se
       {
 "
         name: "Medical Center",
-        price: 79999,
+        price: 7999 9,
         features[;"
           "Full medical imaging platform","
           "Custom AI models","
@@ -283,12 +279,11 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [// Micro SaaS Se
     serviceId: "ai-risk-assessment-platform","
     serviceName: "AI Risk Assessment Platform","
     category: "AI & FinTech",
-    basePrice: 18999,
-    pricingTiers[;
-      {
+    basePrice: 1899 9,
+    pricingTiers[ {
 "
         name: "Basic",
-        price: 18999,
+        price: 1899 9,
         features[;"
           "Basic risk assessment","
           "Portfolio analysis","
@@ -303,7 +298,7 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [// Micro SaaS Se
       {
 "
         name: "Professional",
-        price: 32999,
+        price: 3299 9,
         features[;"
           "Advanced risk assessment","
           "Real-time monitoring","
@@ -319,7 +314,7 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [// Micro SaaS Se
       {
 "
         name: "Enterprise",
-        price: 59999,
+        price: 5999 9,
         features[;"
           "Full risk management platform","
           "Custom risk models","
@@ -343,25 +338,25 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [// Micro SaaS Se
 
 // Pricing Analysis and Insights
 export const PRICING_ANALYSIS_2030 = {
-  averagePrice: Math.round(COMPREHENSIVE_PRICING_GUIDE_2030.reduce((sum, service)  => sum + service.basePrice, 0) /
+  averagePrice: Mat h.round(COMPREHENSIVE_PRICING_GUIDE_2030.reduce((sum, service)  => sum + service.basePrice, 0) /
     COMPREHENSIVE_PRICING_GUIDE_2030.length
   ),
   priceRange: {
-    min: Math.min(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice)),
-  max: Math.max(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice))
+    min: Mat h.min(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice)),
+  max: Mat h.max(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice))
   ;;
 ;
 },;
-  categoryPricing: COMPREHENSIVE_PRICING_GUIDE_2030.reduce(acc: unknown, service: unknown {;
+  categoryPricing: COMPREHENSIVE_PRICING_GUIDE_203 0.reduce(acc: unknow n, service: unknow n {;
     if (!acc[service.category]) {;
       acc[service.category] = []}
     acc[service.category].push(service.basePrice);
     return acc}, {} as Record<string, number[]>),
-  roiAnalysis: COMPREHENSIVE_PRICING_GUIDE_2030.map(service = > ({;
-    serviceName: service.serviceName,;
-    roi: service.roi,;
-    setupTime: service.setupTime,;
-    price: service.basePrice}))};
+  roiAnalysis: COMPREHENSIVE_PRICING_GUIDE_203 0.map(service = > ({;
+    serviceName: servic e.serviceName,;
+    roi: servic e.roi,;
+    setupTime: servic e.setupTime,;
+    price: servic e.basePrice}))};
 
 // Payment and Discount Information;
 export const PAYMENT_OPTIONS_2030 = {
@@ -369,9 +364,9 @@ export const PAYMENT_OPTIONS_2030 = {
   paymentMethods["Credit Card", "Bank Transfer", "Wire Transfer", "Cryptocurrency"],;"
   installmentPlans["3-month plan", "6-month plan", "12-month plan"],;
   volumeDiscounts[;"
-    "5-10 licenses: 15% discount","
-    "11-25 licenses: 25% discount","
-    "26-50 licenses: 35% discount","
+    "5-10 licenses: 1 5% discount","
+    "11-25 licenses: 2 5% discount","
+    "26-50 licenses: 3 5% discount","
     "51+ licenses: Custom pricing"
   ],;
   enterpriseFeatures[;"

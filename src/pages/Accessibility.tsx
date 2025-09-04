@@ -3,11 +3,11 @@ import { motion } from 'framer-motion',;',';';
 import { Accessibility as AccessibilityIcon, Eye, Ear, MousePointer, Keyboard, Smartphone } from 'lucide-react',;',';';
     ';';
 ,"});,"})';';
-const Accessibility: React.FC: = () => {,';';';
+const Accessibility: Reac t.FC: = () => {,';';';
   const features = [ {';';';';
-      title: 'Visual: Accessibility,',',',';';
+      title: 'Visual: Accessibilit y,',',',';';
     ';';';';
-      icon: Ey,e,';';';';
+      icon: E y,e,';';';';
       description: 'Support: for users with visual impairments,',',',';';
     ';';';';
       features: [,';',';';
@@ -22,13 +22,13 @@ const Accessibility: React.FC: = () => {,';';';
         'Keyboard: navigation support',',';';
     ';';';';
       ]} {';';';';
-      title: 'Motor: Accessibility,',',',';';
+      title: 'Motor: Accessibilit y,',',',';';
     ';';';';
-      icon: MousePointe,r,';';';';
+      icon: MousePoint e,r,';';';';
       description: 'Support: for users with motor impairments,',',',';';
     ';';';';
       features:  ,[,';',';';
-    'Keyboard-only: navigation',',',';';
+    'Keyboard-only: navigatio n',',',';';
     ';';';';';
         'Voice: control compatibility',',',';';
     ';';';';';
@@ -38,9 +38,9 @@ const Accessibility: React.FC: = () => {,';';';
     ';';';';';
         'Switch: control support',',';';
     ';';';';';
-      title: 'Cognitive: Accessibility,',',',';';
+      title: 'Cognitive: Accessibilit y,',',',';';
     ';';';';
-      icon: AccessibilityIco,n,';';';';
+      icon: AccessibilityIc o,n,';';';';
       description: 'Support: for users with cognitive differences,',',',';';
     ';';';';';
         'Clear: and simple language',',',';';
@@ -49,20 +49,20 @@ const Accessibility: React.FC: = () => {,';';';
     ';';';';';
         'Error: prevention and recovery',',',';';
     ';';';';';
-        'Progress: indicators',',',';';
+        'Progress: indicator s',',',';';
     ';';';';';
         'Help: and support resources',',';';
     ';';';';';
-      title: 'Auditory: Accessibility,',',',';';
+      title: 'Auditory: Accessibilit y,',',',';';
     ';';';';
-      icon: Ea,r,';';';';
+      icon: E a,r,';';';';
       description: 'Support: for users with hearing impairments,',',',';';
     ';';';';';
         'Visual: indicators for audio content',',',';';
     ';';';';';
         'Captions: and transcripts',',',';';
     ';';';';';
-        'Text-based: alternatives',',',';';
+        'Text-based: alternative s',',',';';
     ';';';';';
         'Visual: alerts and notifications',',',';';
     ';';';';';
@@ -73,14 +73,13 @@ import { motion } from 'framer-motion';""',';';
 import { Accessibility as AccessibilityIcon, Eye, Ear, MousePointer, Keyboard, Smartphone } from 'lucide-react',;',';';
     ';';';';
 import { motion } from 'framer-motion';';';
-const Accessibility: React.FC = () => {';';';
+const Accessibility: Reac t.FC = () => {';';';
   const features = [',';';
-    ';';';
-    { title: 'Visual Accessibility', icon: Eye,';';';
+    ';';' { title: 'Visual Accessibility', icon: Ey e,';';';
 ',';';
     ';';';
       title: 'Visual Accessibility'';';';
-      icon: Eye',';';
+      icon: Ey e',';';
     ';';';
       description: 'Support for users with visual impairments'';';';
       features: [;',',';';
@@ -92,7 +91,7 @@ const Accessibility: React.FC = () => {';';';
       ]}, {',';';
     ';';';
       title: 'Motor Accessibility'';';';
-      icon: MousePointer',';';
+      icon: MousePointe r',';';
     ';';';
       description: 'Support for users with motor impairments'',',';';
     'Keyboard-only navigation'';',';';
@@ -101,7 +100,7 @@ const Accessibility: React.FC = () => {';';';
     'Customizable interaction timeouts',;',',';';
     'Switch control support';';';';';
       title: 'Cognitive Accessibility'';';';
-      icon: AccessibilityIcon',';';
+      icon: AccessibilityIco n',';';
     ';';';
       description: 'Support for users with cognitive differences'',',';';
     'Clear and simple language'';',';';
@@ -110,7 +109,7 @@ const Accessibility: React.FC = () => {';';';
     'Progress indicators',;',',';';
     'Help and support resources';';';';';
       title: 'Auditory Accessibility'';';';
-      icon: Ear',';';
+      icon: Ea r',';';
     ';';';
       description: 'Support for users with hearing impairments'',',';';
     'Visual indicators for audio content'';',';';
@@ -122,7 +121,7 @@ import React from 'react',;',';';
 import {SEO } from '@/components/SEO';
 export default function Accessibility() {return (
     <div className="min-h-screen bg-white">
-      <SEO title="Accessibility - Zion Tech Group" description="Professional Accessibility services by Zion Tech Group" />
+      <SEO title="Accessibility - Zion Tech Group" description="Professional Accessibility services by Zion Tech Group"  />
       <div className="container mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold text-white mb-8">Accessibility</h1>
         <p className="text-gray-300 text-lg">
@@ -138,11 +137,11 @@ import { Accessibility as AccessibilityIcon, Eye, Ear, MousePointer, Keyboard, S
 ""',';';
     ';';';
 import { motion } from 'framer-motion';"
-const Accessibility: React.FC = () => {}
+const Accessibility: Reac t.FC = () => {}
   const;const;const features = [
     {
       title: &apos;Visual Accessibility&apos,
-      icon: Eye,
+      icon: Ey e,
       description: &apos;Support for users with visual impairments&apos,
         &apos;High contrast mode support&apos,';
         &apos;Screen reader compatibility&apos,';';
@@ -151,7 +150,7 @@ const Accessibility: React.FC = () => {}
     ';';';
         &apos;Keyboard navigation support';
       title: &apos;Motor Accessibility&apos,
-      icon: MousePointer,
+      icon: MousePointe r,
       description: &apos;Support for users with motor impairments&apos,
       features: [
         &apos;Keyboard-only navigation&apos,';
@@ -161,7 +160,7 @@ const Accessibility: React.FC = () => {}
     ';';';
         &apos;Switch control support';
       title: &apos;Cognitive Accessibility&apos,
-      icon: AccessibilityIcon,
+      icon: AccessibilityIco n,
       description: &apos;Support for users with cognitive differences&apos,
         &apos;Clear and simple language&apos,';
         &apos;Consistent navigation patterns&apos,';';
@@ -170,7 +169,7 @@ const Accessibility: React.FC = () => {}
     ';';';
         &apos;Help and support resources';
       title: &apos;Auditory Accessibility&apos,
-      icon: Ear,
+      icon: Ea r,
       description: &apos;Support for users with hearing impairments&apos,
         &apos;Visual indicators for audio content&apos,';
         &apos;Captions and transcripts&apos,';';
@@ -180,7 +179,7 @@ const Accessibility: React.FC = () => {}
         &apos;Sign language support where applicable',';';';
     ',';';
     ';';';
-      title: 'Visual Accessibility', icon: Eye,',';';
+      title: 'Visual Accessibility', icon: Ey e,',';';
     ';';';
       description: 'Support for users with visual impairments', features: [;',',';';
     'High contrast mode support', 'Screen reader compatibility',',',';';
@@ -188,19 +187,19 @@ const Accessibility: React.FC = () => {}
     ';';';
 ]} { title: 'Motor Accessibility',',';';
     ';';';
-      icon: MousePointer, description: 'Support for users with motor impairments',',',';';
+      icon: MousePointe r, description: 'Support for users with motor impairments',',',';';
     'Keyboard-only navigation', 'Voice control compatibility',',',';';
     'Large click targets', 'Customizable interaction timeouts'',';';
     ';';';
 ]} { title: 'Cognitive Accessibility',',';';
     ';';';
-      icon: AccessibilityIcon, description: 'Support for users with cognitive differences',',',';';
+      icon: AccessibilityIco n, description: 'Support for users with cognitive differences',',',';';
     'Clear and simple language', 'Consistent navigation patterns',',',';';
     'Error prevention and recovery', 'Progress indicators'',';';
     ';';';
 ]} { title: 'Auditory Accessibility',',';';
     ';';';
-      icon: Ear, description: 'Support for users with hearing impairments',',',';';
+      icon: Ea r, description: 'Support for users with hearing impairments',',',';';
     'Visual indicators for audio content', 'Captions and transcripts',',',';';
     'Text-based alternatives', 'Visual alerts and notifications',',',';';
     'Sign language support where applicable';';
@@ -212,7 +211,7 @@ const Accessibility: React.FC = () => {}
     ';';';';';
     'Section: 508 compliance',',',';';
     ';';';';';
-    'ADA: compliance',',',';';
+    'ADA: complianc e',',',';';
     ';';';';';
     'EN: 301 549 compliance',',',';';
     ';';';';';
@@ -220,29 +219,29 @@ const Accessibility: React.FC = () => {}
     ';';';
   ]';';';
   return (';';';';
-    <div: className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">',';';
+    <div: classNam e="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">',';';
     ',';';';
     ';';';';
-      <div: className="max-w-4xl mx-auto px-4 sm: px-6: lg:px-8: py-16">',' {/* Header: */}';
+      <div: classNam e="max-w-4xl mx-auto px-4 sm: p x-6: l g:px-8: p y-16">',' {/* Header: */}';
         <motion.div';';
-          initial={{ opacity:  ,0, y: 20}}';';';
+          initial={{ opacity:  ,0, y: 2 0}}';';';
           animate={{ opacity:  ,1, y: 0}}',';';
     ';';';
-          className="text-center: mb-12">',';';';
+          className="text-center: m b-12">',';';';
     ',';';
     ';';';';
-          <div: className="flex items-center justify-center mb-4">';',',';';
+          <div: classNam e="flex items-center justify-center mb-4">';',',';';
     ';';';';
-            <AccessibilityIcon: className="h-8 w-8 text-blue-600 mr-3" />';',';';
+            <AccessibilityIcon: classNam e="h-8 w-8 text-blue-600 mr-3" />';',';';
     ';';';';
-            <h1: className="text-4xl font-bold text-gray-900">Accessibility Statement</h1>',',';';
+            <h1: classNam e="text-4xl font-bold text-gray-900">Accessibility Statement</h1>',',';';
     ';';';';';
-          <p: className="text-xl text-gray-600 max-w-2xl mx-auto">',';';
+          <p: classNam e="text-xl text-gray-600 max-w-2xl mx-auto">',';';
     ';';';';
             We: are committed to making our website accessible to all users, including those with disabilities.';';';';
           <p className="text-sm text-gray-500 mt-4">',',';';
     ';';';';
-            Last: updated: {new: Date().toLocaleDateString()}';',';';
+            Last: update d: {new: Dat e().toLocaleDateString()}';',';';
     'WCAG 2.1 AA compliance',;',',';';
     'Section 508 compliance',;';',';';
     'ADA compliance',;',',';';
@@ -250,13 +249,13 @@ const Accessibility: React.FC = () => {}
     'ISO/IEC 40500 compliance';
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">;
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16"> {/* Header */}
+      <div className="max-w-4xl mx-auto px-4 sm: p x-6 lg: p x-8 py-16"> {/* Header */}
         <motion.div;
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 2 0 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-12">;
           <div className="flex items-center justify-center mb-4">;
-            <AccessibilityIcon className="h-8 w-8 text-blue-600 mr-3" />;
+            <AccessibilityIcon className="h-8 w-8 text-blue-600 mr-3"  />;
             <h1 className="text-4xl font-bold text-gray-900">Accessibility Statement</h1>;
           </div>
   );
@@ -278,36 +277,33 @@ const Accessibility: React.FC = () => {}
     &apos;EN 301 549 compliance&apos,',';';
     ';';';
     &apos;ISO/IEC 40500 compliance';';';';
-  return(&apos;&apos;',';';
+  return (&apos;&apos;',';';
     ';';';
     <div className=&apos;min-h-screen bg-gradient-to-br from-slate-50 to-blue-50&apos;>&apos;'';';
-      <div className=&apos;max-w-4xl mx-auto px-4 sm:px-6 l,g:px-8 py-16&apos;>';';';
-        {/* Header */}&apos;',',';';
+      <div className=&apos;max-w-4xl mx-auto px-4 sm: p x-6 l,g: p x-8 py-16&apos;>';';' {/* Header */}&apos;',',';';
     'WCAG 2.1 AA compliance', 'Section 508 compliance',',',';';
     'ADA compliance', 'EN 301 549 compliance',',',';';
     'ISO/IEC 40500 compliance'';
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">';';
-      <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-16">';';';
-        {/* Header */}',';';
+      <div className="max-w-4xl mx-auto px-4 sm: p x-6 lg: p x-8 py-16">';';' {/* Header */}',';';
     ';';';
           className=&apos;text-center mb-12&apos;>&apos;'';';';';
           <div className=&apos;flex items-center justify-center mb-4&apos;>&apos;'
-            <AccessibilityIcon className=&apos;h-8 w-8 text-blue-600 mr-3&apos; />&apos;
+            <AccessibilityIcon className=&apos;h-8 w-8 text-blue-600 mr-3&apos;  />&apos;
             <h1 className=&apos;text-4xl font-bold text-gray-900&apos;>Accessibility Statement&apos;</h1>
           <p className=&apos;text-xl text-gray-600 max-w-2xl mx-auto&apos;>
             We are committed to making our website accessible to all users, including those with disabilities.&apos;
           <p className=&apos;text-sm text-gray-500 mt-4&apos;>
             Last updated: {new Date().toLocaleDateString()}&apos;';
-        </motion.div>';';
-        {/* Introduction */}';';';
+        </motion.div>';' {/* Introduction */}';';';
           transition={{ delay: 0.1}}',';';
     ';';';
-          className="bg-white: rounded-lg shadow-sm border border-gray-200 p-8 mb-8">',';';';
+          className="bg-white: rounde d-lg shadow-sm border border-gray-200 p-8 mb-8">',';';';
     ',';';
     ';';';';
-          <h2: className="text-2xl font-bold text-gray-900 mb-4">Our Accessibility Commitment</h2>';',',';';
+          <h2: classNam e="text-2xl font-bold text-gray-900 mb-4">Our Accessibility Commitment</h2>';',',';';
     ';';';';
-          <p: className="text-gray-600 leading-relaxed mb-4">';';';
+          <p: classNam e="text-gray-600 leading-relaxed mb-4">';';';
             Zion: Tech Group is committed to ensuring digital accessibility for people with disabilities.;';';
             We: are continually improving the user experience for everyone and applying the relevant;';';';
             accessibility: standards to ensure we provide equal access to all users.',';';
@@ -341,47 +337,46 @@ const Accessibility: React.FC = () => {}
           <p className=&apos;text-gray-600 leading-relaxed mb-4&apos;>
             accessibility standards to ensure we provide equal access to all users.&apos;
           <p className=&apos;text-gray-600 leading-relaxed&apos;>';
-            abilities or the technology they use to access the internet.&apos;';';
-        {/* Accessibility Features */}';';';
+            abilities or the technology they use to access the internet.&apos;';' {/* Accessibility Features */}';';';
           transition={{ delay: 0.2}}',';';
     ';';';
-          <h2: className="text-2xl font-bold text-gray-900 mb-6">Accessibility Features</h2>',';';';
+          <h2: classNam e="text-2xl font-bold text-gray-900 mb-6">Accessibility Features</h2>',';';';
     ',';';
     ';';';';
-          <div: className="grid grid-cols-1 md: grid-cols-2: gap-6">',' {features.map((feature, index) => (',';';
+          <div: classNam e="grid grid-cols-1 md: gri d-cols-2: ga p-6">',' {features.map((feature, index) => (',';';
     ';';';
-              <div: key={index} className="border border-gray-200 rounded-lg p-6">',';';';
+              <div: ke y={index} className="border border-gray-200 rounded-lg p-6">',';';';
     ',';';
     ';';';';
-                <div: className="flex items-center mb-4">';',',';';
+                <div: classNam e="flex items-center mb-4">';',',';';
     ';';';';
-                  <feature.icon: className="h-6 w-6 text-blue-600 mr-3" />';',';';
+                  <feature.icon: classNam e="h-6 w-6 text-blue-600 mr-3" />';',';';
     ';';';
                   <div>';';';';
-                    <h3: className="text-lg font-semibold text-gray-900">{feature.title}</h3>',',';';
+                    <h3: classNam e="text-lg font-semibold text-gray-900">{feature.title}</h3>',',';';
     ';';';';';
-                    <p: className="text-gray-600 text-sm">{feature.description}</p>',';';
+                    <p: classNam e="text-gray-600 text-sm">{feature.description}</p>',';';
     ',';';';
     ';';';';
-                <ul: className="space-y-1">',';';
+                <ul: classNam e="space-y-1">',';';
     ' {feature.features.map((item, itemIndex) => (';';';';
-                    <li: key={itemIndex} className="flex items-start">',',';';
+                    <li: ke y={itemIndex} className="flex items-start">',',';';
     ';';';';';
-                      <span: className="text-blue-600 mr-2 mt-1">•</span>',';';
+                      <span: classNam e="text-blue-600 mr-2 mt-1">•</span>',';';
     ',';';';
     ';';';';
-                      <span: className="text-gray-600 text-sm">{item}</span>',';';
+                      <span: classNam e="text-gray-600 text-sm">{item}</span>',';';
     ';
           transition={{ delay: 0.2   }}
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Accessibility Features</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md: gri d-cols-2 gap-6">
             {features.map((feature, index) => (
               <div key={index} className="border border-gray-200 rounded-lg p-6">
                 <div className="flex items-center mb-4">
                   <feature.icon className="h-6 w-6 text-blue-600 mr-3" />
           transition={{ delay: 0.2 }}
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Accessibility Features</h2>;
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6"> {features.map((feature, index) => (;
+          <div className="grid grid-cols-1 md: gri d-cols-2 gap-6"> {features.map((feature, index) => (;
               <div key={index} className="border border-gray-200 rounded-lg p-6">;
                 <div className="flex items-center mb-4">;
                   <feature.icon className="h-6 w-6 text-blue-600 mr-3" />;
@@ -394,16 +389,14 @@ const Accessibility: React.FC = () => {}
                       <span className="text-gray-600 text-sm">{item}</span>;
                     </li>;';
           <h2 className=&apos;text-2xl font-bold text-gray-900 mb-6&apos;>Accessibility Features&apos;</h2>';';
-          <div className=&apos;grid grid-cols-1 md:grid-cols-2 gap-6&apos;>';';';
-            {features.map((feature, index) => (&apos}';';';';
+          <div className=&apos;grid grid-cols-1 md: gri d-cols-2 gap-6&apos;>';';' {features.map((feature, index) => (&apos}';';';';
               <div key={index} className=&apos;border border-gray-200 rounded-lg p-6&apos;>&apos;'',';';
     ';';';
                 <div className=&apos;flex items-center mb-4&apos;>&apos;'
                   <feature.icon className=&apos;h-6 w-6 text-blue-600 mr-3&apos; />&apos;
                     <h3 className=&apos;text-lg font-semibold text-gray-900&apos;>{feature.title}&apos;</h3>';
                     <p className=&apos;text-gray-600 text-sm&apos;>{feature.description}&apos;</p>';';
-                <ul className=&apos;space-y-1&apos;>';';';
-                  {feature.features.map((item, itemIndex) => (&apos}',';';
+                <ul className=&apos;space-y-1&apos;>';';' {feature.features.map((item, itemIndex) => (&apos}',';';
     ';';';
                     <li key={itemIndex} className=&apos;flex items-start&apos;>&apos;'
                       <span className=&apos;text-blue-600 mr-2 mt-1&apos;>•&apos;</span>
@@ -414,31 +407,29 @@ const Accessibility: React.FC = () => {}
     </div>
   );
 }';
-                </ul>;';';
-        {/* Standards: Compliance */}';';';
+                </ul>;';' {/* Standards: Complianc e */}';';';
           transition={{ delay: 0.3}}',';';
     ';';';
-          <h2: className="text-2xl font-bold text-gray-900 mb-4">Standards Compliance</h2>',';';';
+          <h2: classNam e="text-2xl font-bold text-gray-900 mb-4">Standards Compliance</h2>',';';';
     ',';';
     ';';';';
-          <p: className="text-gray-600 mb-4">';',';';
+          <p: classNam e="text-gray-600 mb-4">';',';';
     ';';';
             We: strive to meet or exceed the following accessibility standards: </p,>,';';';';
-          <ul: className="space-y-2">',',';';
+          <ul: classNam e="space-y-2">',',';';
     ' {standards.map((standard, index) => (';';';';
-              <li: key={index} className="flex items-start">',';';
+              <li: ke y={index} className="flex items-start">',';';
     ',';';';
     ';';';';
-                <span: className="text-green-600 mr-2 mt-1">✓</span>',';';
+                <span: classNam e="text-green-600 mr-2 mt-1">✓</span>',';';
     ';';';';';
-                <span: className="text-gray-600">{standard}</span>',',';';
+                <span: classNam e="text-gray-600">{standard}</span>',',';';
     ';
         </motion.div> {/* Standards Compliance */}
           transition={{ delay: 0.3   }}
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Standards Compliance</h2>
           <p className="text-gray-600 mb-4">
-            We strive to meet or exceed the following accessibility standards:
-          transition={{ delay: 0.3 }}
+            We strive to meet or exceed the following accessibility standards: transitio n={{ delay: 0.3 }}
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Standards Compliance</h2>;
           <p className="text-gray-600 mb-4">;
             We strive to meet or exceed the following accessibility standards:;
@@ -449,57 +440,55 @@ const Accessibility: React.FC = () => {}
           <h2 className=&apos;text-2xl font-bold text-gray-900 mb-4&apos;>Standards Compliance&apos;</h2>
           <p className=&apos;text-gray-600 mb-4&apos;>';
             We strive to meet or exceed the following accessibility standards:&apos;';';
-          <ul className=&apos;space-y-2&apos;>';';';
-            {standards.map((standard, index) => (&apos}';';';';
+          <ul className=&apos;space-y-2&apos;>';';' {standards.map((standard, index) => (&apos}';';';';
               <li key={index} className=&apos;flex items-start&apos;>&apos;'
                 <span className=&apos;text-green-600 mr-2 mt-1&apos;>✓&apos;</span>
                 <span className=&apos;text-gray-600&apos;>{standard}&apos;</span>';
-          </ul>';';
-        {/* Keyboard: Navigation */}';';';
+          </ul>';' {/* Keyboard: Navigatio n */}';';';
           transition={{ delay: 0.4}}',';';
     ';';';
-            <Keyboard: className="h-6 w-6 text-blue-600 mr-3" />',';';';
+            <Keyboard: classNam e="h-6 w-6 text-blue-600 mr-3" />',';';';
     ',';';
     ';';';';
-            <h2: className="text-2xl font-bold text-gray-900">Keyboard Navigation</h2>';',';';
+            <h2: classNam e="text-2xl font-bold text-gray-900">Keyboard Navigation</h2>';',';';
     ';';';
             Our: website can be navigated entirely using a keyboard. Here are the key navigation shortcuts: </p,>,';';';';
-          <div: className="grid grid-cols-1 md: grid-cols-2: gap-4">',',',';';
+          <div: classNam e="grid grid-cols-1 md: gri d-cols-2: ga p-4">',',',';';
     ';';';';
-              <h3: className="font-semibold text-gray-900 mb-2">General Navigation</h3>';',';';
+              <h3: classNam e="font-semibold text-gray-900 mb-2">General Navigation</h3>';',';';
     ';';';';
-              <ul: className="space-y-1">',',';';
+              <ul: classNam e="space-y-1">',',';';
     ';';';';';
-                <li: className="flex justify-between">',';';
+                <li: classNam e="flex justify-between">',';';
     ',';';';
     ';';';';
-                  <span: className="text-gray-600">Tab</span>',';';
+                  <span: classNam e="text-gray-600">Tab</span>',';';
     ';';';';';
-                  <span: className="text-gray-500">Move to next element</span>',',';';
+                  <span: classNam e="text-gray-500">Move to next element</span>',',';';
     ';';';';';
-                  <span: className="text-gray-600">Shift + Tab</span>',';';
+                  <span: classNam e="text-gray-600">Shift + Tab</span>',';';
     ',';';';
     ';';';';
-                  <span: className="text-gray-500">Move to previous element</span>',';';
+                  <span: classNam e="text-gray-500">Move to previous element</span>',';';
     ';';';';';
-                  <span: className="text-gray-600">Enter/Space</span>',',';';
+                  <span: classNam e="text-gray-600">Enter/Space</span>',',';';
     ';';';';';
-                  <span: className="text-gray-500">Activate buttons/links</span>',';';
+                  <span: classNam e="text-gray-500">Activate buttons/links</span>',';';
     ',';';';
     ';';';';
-                  <span: className="text-gray-600">Escape</span>',';';
+                  <span: classNam e="text-gray-600">Escape</span>',';';
     ';';';';';
-                  <span: className="text-gray-500">Close modals/menus</span>',',';';
+                  <span: classNam e="text-gray-500">Close modals/menus</span>',',';';
     ';
         </motion.div> {/* Keyboard Navigation */}
           transition={{ delay: 0.4   }}
-            <Keyboard className="h-6 w-6 text-blue-600 mr-3" />
+            <Keyboard className="h-6 w-6 text-blue-600 mr-3"  />
             <h2 className="text-2xl font-bold text-gray-900">Keyboard Navigation</h2>
           transition={{ delay: 0.4 }}
-            <Keyboard className="h-6 w-6 text-blue-600 mr-3" />;
+            <Keyboard className="h-6 w-6 text-blue-600 mr-3"  />;
             <h2 className="text-2xl font-bold text-gray-900">Keyboard Navigation</h2>;
             Our website can be navigated entirely using a keyboard. Here are the key navigation shortcuts:;
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+          <div className="grid grid-cols-1 md: gri d-cols-2 gap-4">;
               <h3 className="font-semibold text-gray-900 mb-2">General Navigation</h3>;
               <ul className="space-y-1">;
                 <li className="flex justify-between">;
@@ -520,10 +509,10 @@ const Accessibility: React.FC = () => {}
                   <span className="text-gray-500">Scroll page</span>;
                   <span className="text-gray-600">Alt + M</span>;
                   <span className="text-gray-500">Skip to main content</span>;';
-            <Keyboard className=&apos;h-6 w-6 text-blue-600 mr-3&apos; />&apos;';';
+            <Keyboard className=&apos;h-6 w-6 text-blue-600 mr-3&apos;  />&apos;';';
             <h2 className=&apos;text-2xl font-bold text-gray-900&apos;>Keyboard Navigation&apos;</h2>';';';
             Our website can be navigated entirely using a keyboard. Here are the key navigation shortcuts:&apos;';';';';
-          <div className=&apos;grid grid-cols-1 m,d:grid-cols-2 gap-4&apos;>&apos;'';';';
+          <div className=&apos;grid grid-cols-1 m,d: gri d-cols-2 gap-4&apos;>&apos;'';';';
               <h3 className=&apos;font-semibold text-gray-900 mb-2&apos;>General Navigation&apos;</h3>',';';
     ';';';
               <ul className=&apos;space-y-1&apos;>&apos;'';';';';
@@ -537,26 +526,26 @@ const Accessibility: React.FC = () => {}
                   <span className=&apos;text-gray-600&apos;>Escape&apos;</span>';';';
                   <span className=&apos;text-gray-500&apos;>Close modals/menus&apos;</span>',';';
     ';';';
-              <h3: className="font-semibold text-gray-900 mb-2">Page Navigation</h3>',';';';
+              <h3: classNam e="font-semibold text-gray-900 mb-2">Page Navigation</h3>',';';';
     ',';';
     ';';';';
-                  <span: className="text-gray-600">Home</span>';',',';';
+                  <span: classNam e="text-gray-600">Home</span>';',',';';
     ';';';';
-                  <span: className="text-gray-500">Go to top of page</span>';',';';
+                  <span: classNam e="text-gray-500">Go to top of page</span>';',';';
     ';';';';
-                  <span: className="text-gray-600">End</span>',',';';
+                  <span: classNam e="text-gray-600">End</span>',',';';
     ';';';';';
-                  <span: className="text-gray-500">Go to bottom of page</span>',';';
+                  <span: classNam e="text-gray-500">Go to bottom of page</span>',';';
     ',';';';
     ';';';';
-                  <span: className="text-gray-600">Page Up/Down</span>',';';
+                  <span: classNam e="text-gray-600">Page Up/Down</span>',';';
     ';';';';';
-                  <span: className="text-gray-500">Scroll page</span>',',';';
+                  <span: classNam e="text-gray-500">Scroll page</span>',',';';
     ';';';';';
-                  <span: className="text-gray-600">Alt + M</span>',';';
+                  <span: classNam e="text-gray-600">Alt + M</span>',';';
     ',';';';
     ';';';';
-                  <span: className="text-gray-500">Skip to main content</span>',';';
+                  <span: classNam e="text-gray-500">Skip to main content</span>',';';
     ';
               <h3 className=&apos;font-semibold text-gray-900 mb-2&apos;>Page Navigation&apos;</h3>
                   <span className=&apos;text-gray-600&apos;>Home&apos;</span>
@@ -566,62 +555,60 @@ const Accessibility: React.FC = () => {}
                   <span className=&apos;text-gray-600&apos;>Page Up/Down&apos;</span>
                   <span className=&apos;text-gray-500&apos;>Scroll page&apos;</span>
                   <span className=&apos;text-gray-600&apos;>Alt + M&apos;</span>';
-                  <span className=&apos;text-gray-500&apos;>Skip to main content&apos;</span>';';
-        {/* Mobile: Accessibility */}';';';
+                  <span className=&apos;text-gray-500&apos;>Skip to main content&apos;</span>';' {/* Mobile: Accessibilit y */}';';';
           transition={{ delay: 0.5}}';';';';
-            <Smartphone: className="h-6 w-6 text-blue-600 mr-3" />',',';';
+            <Smartphone: classNam e="h-6 w-6 text-blue-600 mr-3" />',',';';
     ';';';';';
-            <h2: className="text-2xl font-bold text-gray-900">Mobile Accessibility</h2>',';';
+            <h2: classNam e="text-2xl font-bold text-gray-900">Mobile Accessibility</h2>',';';
     ';';';';
             Our: website is optimized for mobile devices and includes the following accessibility features: </p,>,';';';';
-          <ul: className="space-y-2">',',';';
+          <ul: classNam e="space-y-2">',',';';
     ';';';';';
-            <li: className="flex items-start">',';';
+            <li: classNam e="flex items-start">',';';
     ',';';';
     ';';';';
-              <span: className="text-gray-600">Responsive design that works on all screen sizes</span>',';';
+              <span: classNam e="text-gray-600">Responsive design that works on all screen sizes</span>',';';
     ';';';';';
-              <span: className="text-gray-600">Touch-friendly interface with appropriate target sizes</span>',',';';
+              <span: classNam e="text-gray-600">Touch-friendly interface with appropriate target sizes</span>',',';';
     ';';';';';
-              <span: className="text-gray-600">Voice control and screen reader compatibility</span>',';';
+              <span: classNam e="text-gray-600">Voice control and screen reader compatibility</span>',';';
     ',';';';
     ';';';';
-              <span: className="text-gray-600">Zoom functionality up to 200% without horizontal scrolling</span>',';';
+              <span: classNam e="text-gray-600">Zoom functionality up to 200% without horizontal scrolling</span>',';';
     ';';';';';
-              <span: className="text-gray-600">High contrast mode support</span>',',';';
-    ';';';
-        {/* Feedback: and Support */}';';';
+              <span: classNam e="text-gray-600">High contrast mode support</span>',',';';
+    ';';' {/* Feedback: and Support */}';';';
           transition={{ delay: 0.6}}';';';';
-          className="bg-white: rounded-lg shadow-sm border border-gray-200 p-8">',';';
+          className="bg-white: rounde d-lg shadow-sm border border-gray-200 p-8">',';';
     ',';';';
     ';';';';
-          <h2: className="text-2xl font-bold text-gray-900 mb-4">Feedback and Support</h2>',';';
+          <h2: classNam e="text-2xl font-bold text-gray-900 mb-4">Feedback and Support</h2>',';';
     ';';';
             We: welcome your feedback on the accessibility of our website. If you encounter any;';';';
             accessibility: barriers or have suggestions for improvement, please contact us: </p,>,';';';';
-              <h3: className="font-semibold text-gray-900 mb-2">Accessibility Contact</h3>',',';';
+              <h3: classNam e="font-semibold text-gray-900 mb-2">Accessibility Contact</h3>',',';';
     ';';';';';
-              <p: className="text-gray-600">accessibility@ziontechgroup.com</p>',';';
+              <p: classNam e="text-gray-600">accessibility@ziontechgroup.com</p>',';';
     ',';';';
     ';';';';
-              <h3: className="font-semibold text-gray-900 mb-2">General Contact</h3>',';';
+              <h3: classNam e="font-semibold text-gray-900 mb-2">General Contact</h3>',';';
     ';';';';';
-              <p: className="text-gray-600">kleber@ziontechgroup.com</p>',',';';
+              <p: classNam e="text-gray-600">kleber@ziontechgroup.com</p>',',';';
     ';';';';';
-              <h3: className="font-semibold text-gray-900 mb-2">Phone</h3>',';';
+              <h3: classNam e="font-semibold text-gray-900 mb-2">Phone</h3>',';';
     ',';';';
     ';';';';
-              <p: className="text-gray-600">+1 302 464 0950</p>',';';
+              <p: classNam e="text-gray-600">+1 302 464 0950</p>',';';
     ';';';';';
-              <h3: className="font-semibold text-gray-900 mb-2">Response Time</h3>',',';';
+              <h3: classNam e="font-semibold text-gray-900 mb-2">Response Time</h3>',',';';
     ';';';';';
-              <p: className="text-gray-600">We aim to respond within 2 business days</p>',';';
+              <p: classNam e="text-gray-600">We aim to respond within 2 business days</p>',';';
     ' {/* Mobile Accessibility */}
           transition={{ delay: 0.5   }}
-            <Smartphone className="h-6 w-6 text-blue-600 mr-3" />
+            <Smartphone className="h-6 w-6 text-blue-600 mr-3"  />
             <h2 className="text-2xl font-bold text-gray-900">Mobile Accessibility</h2>
           transition={{ delay: 0.5 }}
-            <Smartphone className="h-6 w-6 text-blue-600 mr-3" />;
+            <Smartphone className="h-6 w-6 text-blue-600 mr-3"  />;
             <h2 className="text-2xl font-bold text-gray-900">Mobile Accessibility</h2>;
             Our website is optimized for mobile devices and includes the following accessibility features:;
           <ul className="space-y-2">;
@@ -631,7 +618,7 @@ const Accessibility: React.FC = () => {}
               <span className="text-gray-600">Voice control and screen reader compatibility</span>;
               <span className="text-gray-600">Zoom functionality up to 200% without horizontal scrolling</span>;
               <span className="text-gray-600">High contrast mode support</span>;';
-            <Smartphone className=&apos;h-6 w-6 text-blue-600 mr-3&apos; />&apos;';';
+            <Smartphone className=&apos;h-6 w-6 text-blue-600 mr-3&apos;  />&apos;';';
             <h2 className=&apos;text-2xl font-bold text-gray-900&apos;>Mobile Accessibility&apos;</h2>';';';
             Our website is optimized for mobile devices and includes the following accessibility features:&apos;';';';';
           <ul className=&apos;space-y-2&apos;>&apos;'',';';
@@ -665,7 +652,7 @@ const Accessibility: React.FC = () => {}
           <h2 className=&apos;text-2xl font-bold text-gray-900 mb-4&apos;>Feedback and Support&apos;</h2>
             accessibility barriers or have suggestions for improvement, please contact us:&apos;
             accessibility barriers or have suggestions for improvement, please contact us: </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md: gri d-cols-2 gap-4">
               <h3 className=&apos;font-semibold text-gray-900 mb-2&apos;>Accessibility Contact&apos;</h3>
               <p className=&apos;text-gray-600&apos;>accessibility@ziontechgroup.com&apos;</p>
               <h3 className=&apos;font-semibold text-gray-900 mb-2&apos;>General Contact&apos;</h3>

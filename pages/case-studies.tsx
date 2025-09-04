@@ -16,10 +16,10 @@ import {
   Zap
 } from 'lucide-react'
 
-const SEO = dynamic(() => import('../src/components/SEO'), { ssr: false })
-const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false })
+const SEO = dynamic(() => import('../src/components/SEO'), { ssr: fals e })
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: fals e })
 
-const CaseStudiesPage: React.FC = () => {
+const CaseStudiesPage: Reac t.FC = () => {
   const caseStudies = [
     {
       id: 1,
@@ -140,54 +140,52 @@ const CaseStudiesPage: React.FC = () => {
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case "AI Services":
-        return <Brain className="w-6 h-6" />
+        return <Brain className="w-6 h-6"  />
       case "Micro SaaS":
-        return <Zap className="w-6 h-6" />
+        return <Zap className="w-6 h-6"  />
       case "IT Services":
-        return <Globe className="w-6 h-6" />
+        return <Globe className="w-6 h-6"  />
       case "Blockchain":
-        return <Shield className="w-6 h-6" />
+        return <Shield className="w-6 h-6"  />
       case "Cybersecurity":
-        return <Lock className="w-6 h-6" />
-      default:
-        return <Star className="w-6 h-6" />
+        return <Lock className="w-6 h-6"  />
+      default: retur n <Star className="w-6 h-6"  />
     }
   }
 
   return (
     <>
-      <SEO
-        title="Case Studies - Zion Tech Group"
+      <SEO title="Case Studies - Zion Tech Group"
         description="Explore our successful projects and see how we've helped clients achieve their goals with innovative AI, IT, and micro SaaS solutions."
         keywords="case studies, projects, success stories, AI solutions, IT services, micro SaaS, Zion Tech Group"
         canonical="https://ziontechgroup.com/case-studies"
-      />
+       />
       
       <PageTransition>
         <main className="min-h-screen bg-white">
           {/* Hero Section */}
           <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="text-center"
               >
-                <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                <h1 className="text-4xl md: tex t-6xl font-bold text-gray-900 mb-6">
                   Success <span className="text-blue-600">Stories</span>
                 </h1>
                 <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
                   Discover how we've helped clients achieve their goals with innovative AI, IT, and micro SaaS solutions.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm: fle x-row gap-4 justify-center">
                   <motion.a
                     href="#case-studies"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
                   >
-                    <ArrowRight className="w-5 h-5" />
+                    <ArrowRight className="w-5 h-5"  />
                     View Case Studies
                   </motion.a>
                   <motion.a
@@ -196,7 +194,7 @@ const CaseStudiesPage: React.FC = () => {
                     whileTap={{ scale: 0.95 }}
                     className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
                   >
-                    <ArrowRight className="w-5 h-5" />
+                    <ArrowRight className="w-5 h-5"  />
                     Start Your Project
                   </motion.a>
                 </div>
@@ -206,14 +204,14 @@ const CaseStudiesPage: React.FC = () => {
 
           {/* Case Studies Grid */}
           <section id="case-studies" className="py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-center mb-16"
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4">
                   Our Case Studies
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -221,14 +219,14 @@ const CaseStudiesPage: React.FC = () => {
                 </p>
               </motion.div>
 
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 lg: gri d-cols-2 gap-8">
                 {caseStudies.map((study, index) => (
                   <motion.div
                     key={study.id}
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 2 0 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+                    transition={{ duration: 0.6, delay: inde x * 0.1 }}
+                    className="bg-white rounded-xl shadow-lg hover: shado w-xl transition-shadow duration-300 overflow-hidden"
                   >
                     <div className="p-8">
                       <div className="flex items-center justify-between mb-4">
@@ -251,15 +249,15 @@ const CaseStudiesPage: React.FC = () => {
                       
                       <div className="flex flex-wrap gap-4 text-sm text-gray-600 mb-6">
                         <div className="flex items-center gap-1">
-                          <Users className="w-4 h-4" />
+                          <Users className="w-4 h-4"  />
                           {study.client}
                         </div>
                         <div className="flex items-center gap-1">
-                          <Clock className="w-4 h-4" />
+                          <Clock className="w-4 h-4"  />
                           {study.duration}
                         </div>
                         <div className="flex items-center gap-1">
-                          <DollarSign className="w-4 h-4" />
+                          <DollarSign className="w-4 h-4"  />
                           {study.budget}
                         </div>
                       </div>
@@ -280,7 +278,7 @@ const CaseStudiesPage: React.FC = () => {
                         <ul className="space-y-2">
                           {study.results.map((result, idx) => (
                             <li key={idx} className="flex items-center gap-2 text-sm text-gray-600">
-                              <CheckCircle className="w-4 h-4 text-green-500" />
+                              <CheckCircle className="w-4 h-4 text-green-500"  />
                               {result}
                             </li>
                           ))}
@@ -301,9 +299,9 @@ const CaseStudiesPage: React.FC = () => {
                       <motion.button
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
-                        className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-blue-700 transition-colors"
+                        className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover: b g-blue-700 transition-colors"
                       >
-                        <ExternalLink className="w-5 h-5" />
+                        <ExternalLink className="w-5 h-5"  />
                         View Full Case Study
                       </motion.button>
                     </div>
@@ -315,27 +313,27 @@ const CaseStudiesPage: React.FC = () => {
 
           {/* CTA Section */}
           <section className="bg-gray-50 py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="text-center"
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-6">
                   Ready to Start Your Success Story?
                 </h2>
                 <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
                   Let us help you achieve similar results with our innovative AI, IT, and micro SaaS solutions.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm: fle x-row gap-4 justify-center">
                   <motion.a
                     href="/contact"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
                   >
-                    <ArrowRight className="w-5 h-5" />
+                    <ArrowRight className="w-5 h-5"  />
                     Get Started Today
                   </motion.a>
                   <motion.a
@@ -344,7 +342,7 @@ const CaseStudiesPage: React.FC = () => {
                     whileTap={{ scale: 0.95 }}
                     className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
                   >
-                    <ArrowRight className="w-5 h-5" />
+                    <ArrowRight className="w-5 h-5"  />
                     Call Us: +1 302 464 0950
                   </motion.a>
                 </div>

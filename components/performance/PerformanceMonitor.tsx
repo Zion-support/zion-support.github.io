@@ -7,11 +7,11 @@ interface PerformanceMetrics {
    cls?: number;
    ttfb?: number;
    fmp?: number}
-const PerformanceMonitor: React.FC = () => {
+const PerformanceMonitor: Reac t.FC = () => {
   useEffect(() => {
     // Only run in browser environment;
     if (typeof window === 'undefined') return;
-    const metrics: PerformanceMetrics = {}
+    const metrics: PerformanceMetric s = {}
 ;
     // First Contentful Paint (FCP);
     const fcpObserver = new PerformanceObserver((list) => {
@@ -69,15 +69,15 @@ const PerformanceMonitor: React.FC = () => {
           custom_map: {
             metric_1: 'fcp', metric_2: 'lcp',
             metric_3: 'fid', metric_4: 'cls',
-            metric_5: 'ttfb'}, value: Math.round(metrics.fcp || 0), non_interaction: true})}
+            metric_5: 'ttfb'}, value: Mat h.round(metrics.fcp || 0), non_interaction: tru e})}
       // Send to custom analytics endpoint;
       if (process.env.NODE_ENV === 'production') {
         fetch('/api/analytics/performance', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'},
-          body: JSON.stringify({
-            url: window.location.href, timestamp: Date.now(), metrics})}).catch(console.error)}
+          body: JSO N.stringify({
+            url: windo w.location.href, timestamp: Dat e.now(), metrics})}).catch(console.error)}
     }
 ;
     // Send metrics when page is about to unload;

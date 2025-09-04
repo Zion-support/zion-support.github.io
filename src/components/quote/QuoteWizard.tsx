@@ -8,9 +8,9 @@ import { useRequestQuoteWizard } from '@/hooks/useQuoteWizard';
 
 type WizardStep = 'Services' | 'Details' | 'Success';
 
-const WIZARD_STEPS: WizardStep[] = ['Services', 'Details', 'Success'];
+const WIZARD_STEPS: WizardSte p[] = ['Services', 'Details', 'Success'];
 
-function StepIndicator({ step }: { step: WizardStep }) {
+function StepIndicator({ step }: { step: WizardSte p }) {
   const index = WIZARD_STEPS.indexOf(step);
   
   return (
@@ -39,10 +39,10 @@ export function QuoteWizard() {
   if (step === 'Services') {
     return (
       <div className="space-y-6">
-        <StepIndicator step={step} />
+        <StepIndicator step={step}  />
         {loading && (
           <div className="flex justify-center py-12">
-            <Loader2 className="h-6 w-6 animate-spin" />
+            <Loader2 className="h-6 w-6 animate-spin"  />
           </div>
         )}
 
@@ -56,12 +56,12 @@ export function QuoteWizard() {
         )}
 
         {services.length > 0 && (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md: gri d-cols-2 gap-4">
             {services.map((item) => (
               <Card
                 data-testid={`service-card-${item.id}`}
                 key={item.id}
-                className={`p-4 cursor-pointer border-2 transition-colors ${selectedItem === item.id ? 'border-purple-500' : 'hover:border-purple-500/50'}`}
+                className={`p-4 cursor-pointer border-2 transition-colors ${selectedItem === item.id ? 'border-purple-500' : 'hover: borde r-purple-500/50'}`}
                 onClick={() => setSelectedItem(item.id)}
               >
                 {item.title}
@@ -83,7 +83,7 @@ export function QuoteWizard() {
   if (step === 'Details') {
     return (
       <div data-testid="details-step" className="space-y-4">
-        <StepIndicator step={step} />
+        <StepIndicator step={step}  />
         <Textarea
           value={message}
           onChange={(e) => setMessage(e.target.value)}
@@ -98,7 +98,7 @@ export function QuoteWizard() {
   if (step === 'Success') {
     return (
       <div data-testid="success-step" className="space-y-4">
-        <StepIndicator step={step} />
+        <StepIndicator step={step}  />
         <div>Quote Submitted</div>
       </div>
     );

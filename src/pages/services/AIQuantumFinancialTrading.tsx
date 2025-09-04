@@ -10,25 +10,25 @@ import {
 const AIQuantumFinancialTrading = () => {
   const features = [
     {
-      icon: Atom,
+      icon: Ato m,
       title: 'Quantum Algorithm Trading',
       description: 'Leverage quantum computing for portfolio optimization and risk analysis at unprecedented speeds.',
       benefits: ['1000x faster calculations', 'Optimal portfolio allocation', 'Real-time risk assessment']
     },
     {
-      icon: Brain,
+      icon: Brai n,
       title: 'AI Market Prediction',
       description: 'Advanced machine learning models predict market movements with 94% accuracy.',
       benefits: ['Real-time market analysis', 'Sentiment analysis', 'News impact prediction']
     },
     {
-      icon: Shield,
+      icon: Shiel d,
       title: 'Risk Management AI',
       description: 'Intelligent risk management with automatic stop-loss and profit optimization.',
       benefits: ['Automated risk controls', 'Dynamic position sizing', 'Stress testing']
     },
     {
-      icon: Zap,
+      icon: Za p,
       title: 'High-Frequency Execution',
       description: 'Microsecond execution with quantum-enhanced order routing.',
       benefits: ['Sub-millisecond execution', 'Slippage minimization', 'Market impact reduction']
@@ -49,7 +49,7 @@ const AIQuantumFinancialTrading = () => {
         'Email support',
         '99.9% uptime SLA'
       ],
-      popular: false
+      popular: fals e
     },
     {
       name: 'Professional AI',
@@ -66,7 +66,7 @@ const AIQuantumFinancialTrading = () => {
         'Risk management tools',
         'Performance analytics'
       ],
-      popular: true
+      popular: tru e
     },
     {
       name: 'Enterprise Quantum',
@@ -84,7 +84,7 @@ const AIQuantumFinancialTrading = () => {
         'On-premise deployment',
         'Custom integrations'
       ],
-      popular: false
+      popular: fals e
     }
   ];
 
@@ -104,10 +104,10 @@ const AIQuantumFinancialTrading = () => {
   ];
 
   const stats = [
-    { label: 'Average ROI Increase', value: '340%', icon: TrendingUp },
-    { label: 'Prediction Accuracy', value: '94.7%', icon: Target },
-    { label: 'Processing Speed', value: '1000x', icon: Zap },
-    { label: 'Uptime SLA', value: '99.999%', icon: Shield }
+    { label: 'Average ROI Increase', value: '340%', icon: TrendingU p },
+    { label: 'Prediction Accuracy', value: '94.7%', icon: Targe t },
+    { label: 'Processing Speed', value: '1000x', icon: Za p },
+    { label: 'Uptime SLA', value: '99.999%', icon: Shiel d }
   ];
 
   return (
@@ -116,51 +116,51 @@ const AIQuantumFinancialTrading = () => {
       <section className="pt-24 pb-20 px-4">
         <div className="container mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             <div className="flex justify-center mb-8">
               <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-3xl flex items-center justify-center">
-                <Atom className="w-10 h-10 text-white" />
+                <Atom className="w-10 h-10 text-white"  />
               </div>
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+            <h1 className="text-5xl md: tex t-7xl font-bold text-white mb-6">
               AI Quantum
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
                 {' '}Financial Trading
               </span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
+            <p className="text-xl md: tex t-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
               Revolutionary trading platform combining quantum computing and artificial intelligence 
               to deliver unprecedented market insights and trading performance.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center mb-16">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 transform hover:-translate-y-1 shadow-lg hover:shadow-xl"
+                className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: fro m-purple-600 hover: t o-pink-600 transition-all duration-200 transform hover:-translate-y-1 shadow-lg hover: shado w-xl"
               >
                 Start Trading with Quantum AI
               </Link>
               <a
                 href="tel:+13024640950"
-                className="border-2 border-purple-500 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-500 hover:text-white transition-all duration-200"
+                className="border-2 border-purple-500 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg hover: b g-purple-500 hover: tex t-white transition-all duration-200"
               >
                 Schedule Demo
               </a>
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-2 md: gri d-cols-4 gap-8">
               {stats.map((stat, index) => (
                 <motion.div
                   key={stat.label}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 2 0 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  transition={{ duration: 0.5, delay: inde x * 0.1 }}
                   className="text-center"
                 >
                   <div className="flex justify-center mb-3">
@@ -181,13 +181,13 @@ const AIQuantumFinancialTrading = () => {
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
               Revolutionary Trading Technology
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -195,15 +195,15 @@ const AIQuantumFinancialTrading = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid md: gri d-cols-2 gap-12">
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-purple-500/50 transition-all duration-300"
+                viewport={{ once: tru e }}
+                transition={{ duration: 0.5, delay: inde x * 0.1 }}
+                className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover: borde r-purple-500/50 transition-all duration-300"
               >
                 <div className="flex items-start mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-2xl flex items-center justify-center mr-4">
@@ -218,7 +218,7 @@ const AIQuantumFinancialTrading = () => {
                 <div className="space-y-2">
                   {feature.benefits.map((benefit, idx) => (
                     <div key={idx} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0"  />
                       {benefit}
                     </div>
                   ))}
@@ -233,13 +233,13 @@ const AIQuantumFinancialTrading = () => {
       <section className="py-20 px-4 bg-gradient-to-r from-purple-900/50 to-pink-900/50">
         <div className="container mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
               Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -247,18 +247,18 @@ const AIQuantumFinancialTrading = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md: gri d-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <motion.div
                 key={plan.name}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: tru e }}
+                transition={{ duration: 0.5, delay: inde x * 0.1 }}
                 className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border transition-all duration-300 ${
                   plan.popular 
                     ? 'border-purple-500 scale-105' 
-                    : 'border-white/20 hover:border-purple-500/50'
+                    : 'border-white/20 hover: borde r-purple-500/50'
                 }`}
               >
                 {plan.popular && (
@@ -281,7 +281,7 @@ const AIQuantumFinancialTrading = () => {
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />
                       {feature}
                     </li>
                   ))}
@@ -291,8 +291,8 @@ const AIQuantumFinancialTrading = () => {
                   to="/contact"
                   className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600'
-                      : 'border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white'
+                      ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover: fro m-purple-600 hover: t o-pink-600'
+                      : 'border-2 border-purple-500 text-purple-400 hover: b g-purple-500 hover: tex t-white'
                   }`}
                 >
                   Get Started
@@ -307,30 +307,30 @@ const AIQuantumFinancialTrading = () => {
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
               Trusted by Industry Leaders
             </h2>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md: gri d-cols-2 gap-8">
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={testimonial.name}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: tru e }}
+                transition={{ duration: 0.5, delay: inde x * 0.1 }}
                 className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20"
               >
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current"  />
                   ))}
                 </div>
                 <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
@@ -348,45 +348,45 @@ const AIQuantumFinancialTrading = () => {
       <section className="py-20 px-4 bg-gradient-to-r from-purple-900 to-pink-900">
         <div className="container mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
               Ready to Transform Your Trading?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Join the quantum revolution in financial trading. Experience the power of AI and quantum computing.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center mb-12">
               <Link
                 to="/contact"
-                className="px-8 py-4 bg-white text-purple-900 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-200 transform hover:-translate-y-1"
+                className="px-8 py-4 bg-white text-purple-900 font-semibold rounded-lg hover: b g-gray-100 transition-all duration-200 transform hover:-translate-y-1"
               >
                 Start Free Trial
               </Link>
               <a
                 href="tel:+13024640950"
-                className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-200"
+                className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover: b g-white hover: tex t-purple-900 transition-all duration-200"
               >
                 Schedule Consultation
               </a>
             </div>
 
             {/* Contact Info */}
-            <div className="grid md:grid-cols-3 gap-8 max-w-2xl mx-auto">
+            <div className="grid md: gri d-cols-3 gap-8 max-w-2xl mx-auto">
               <div className="flex items-center justify-center space-x-2">
-                <Phone className="w-5 h-5" />
+                <Phone className="w-5 h-5"  />
                 <span>+1 302 464 0950</span>
               </div>
               <div className="flex items-center justify-center space-x-2">
-                <Mail className="w-5 h-5" />
+                <Mail className="w-5 h-5"  />
                 <span>kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center justify-center space-x-2">
-                <MapPin className="w-5 h-5" />
+                <MapPin className="w-5 h-5"  />
                 <span>Middletown, DE</span>
               </div>
             </div>

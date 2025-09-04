@@ -6,30 +6,30 @@
         ? 'bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50' 
         : 'bg-transparent'
     }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-              <Brain className="w-5 h-5 text-white" />
+              <Brain className="w-5 h-5 text-white"  />
 
             </div>
             <span className="text-xl font-bold text-white">Zion Tech Group</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden lg: flex items-center space-x-8">
             {navigation.map((item) => (
               <div key={item.name} className="relative">
                 {item.dropdown ? (
                   <div
-                    className="flex items-center space-x-1 text-gray-300 hover:text-white transition-colors cursor-pointer"
+                    className="flex items-center space-x-1 text-gray-300 hover: tex t-white transition-colors cursor-pointer"
                     onMouseEnter={() => setActiveDropdown(item.name)}
                     onMouseLeave={() => setActiveDropdown(null)}
                   >
                     <item.icon className="w-4 h-4" />
                     <span>{item.name}</span>
-                    <ChevronDown className="w-4 h-4" />
+                    <ChevronDown className="w-4 h-4"  />
                   </div>
                 ) : (
                   <Link
@@ -37,7 +37,7 @@
                     className={`flex items-center space-x-1 transition-colors ${
                       isActive(item.href)
                         ? 'text-blue-400'
-                        : 'text-gray-300 hover:text-white'
+                        : 'text-gray-300 hover: tex t-white'
                     }`}
                   >
                     <item.icon className="w-4 h-4" />
@@ -49,9 +49,9 @@
                 <AnimatePresence>
                   {activeDropdown === item.name && item.dropdown && (
                     <motion.div
-                      initial={{ opacity: 0, y: 10 }}
+                      initial={{ opacity: 0, y: 1 0 }}
                       animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
+                      exit={{ opacity: 0, y: 1 0 }}
                       transition={{ duration: 0.2 }}
                       className="absolute top-full left-0 mt-2 w-80 bg-slate-800 rounded-lg shadow-xl border border-slate-700 overflow-hidden"
                       onMouseEnter={() => setActiveDropdown(item.name)}
@@ -62,18 +62,18 @@
                           <Link
                             key={dropdownItem.name}
                             to={dropdownItem.href}
-                            className="flex items-start space-x-3 p-3 rounded-lg hover:bg-slate-700 transition-colors group"
+                            className="flex items-start space-x-3 p-3 rounded-lg hover: b g-slate-700 transition-colors group"
                           >
-                            <dropdownItem.icon className="w-5 h-5 text-blue-400 mt-0.5 group-hover:text-blue-300" />
+                            <dropdownItem.icon className="w-5 h-5 text-blue-400 mt-0.5 group-hover: tex t-blue-300" />
                             <div>
-                              <div className="text-white font-medium group-hover:text-blue-300">
+                              <div className="text-white font-medium group-hover: tex t-blue-300">
                                 {dropdownItem.name}
                               </div>
                               <div className="text-gray-400 text-sm">
                                 {dropdownItem.description}
                               </div>
                             </div>
-                            <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-white ml-auto mt-0.5" />
+                            <ArrowRight className="w-4 h-4 text-gray-400 group-hover: tex t-white ml-auto mt-0.5"  />
                           </Link>
                         ))}
                       </div>
@@ -96,7 +96,7 @@
         ? 'bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50' 
         : 'bg-transparent'
     }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
@@ -107,18 +107,18 @@
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md: flex items-center space-x-8">
             {navigationItems.map((item) => (
               <div key={item.name} className="relative">
                 <Link
                   href={item.href}
-                  className="flex items-center space-x-1 text-gray-300 hover:text-white transition-colors duration-200"
+                  className="flex items-center space-x-1 text-gray-300 hover: tex t-white transition-colors duration-200"
                   onMouseEnter={() => item.hasDropdown && setIsServicesOpen(true)}
                   onMouseLeave={() => item.hasDropdown && setIsServicesOpen(false)}
                 >
                   <item.icon className="w-4 h-4" />
                   <span>{item.name}</span>
-                  {item.hasDropdown && <ChevronDown className="w-4 h-4" />}
+                  {item.hasDropdown && <ChevronDown className="w-4 h-4"  />}
                 </Link>
 
                 {/* Services Dropdown */}
@@ -137,7 +137,7 @@
                           <Link
                             key={category.name}
                             href={category.href}
-                            className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-white hover:bg-slate-700 transition-colors duration-200"
+                            className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover: tex t-white hover: b g-slate-700 transition-colors duration-200"
                           >
                             <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
                             <span>{category.name}</span>
@@ -153,13 +153,13 @@
           </nav>
 
           {/* Contact Info */}
-          <div className="hidden lg:flex items-center space-x-6">
+          <div className="hidden lg: flex items-center space-x-6">
             <div className="flex items-center space-x-2 text-gray-300">
-              <Phone className="w-4 h-4" />
+              <Phone className="w-4 h-4"  />
               <span className="text-sm">+1 302 464 0950</span>
             </div>
             <div className="flex items-center space-x-2 text-gray-300">
-              <Mail className="w-4 h-4" />
+              <Mail className="w-4 h-4"  />
               <span className="text-sm">kleber@ziontechgroup.com</span>
             </div>
           </div>
@@ -176,22 +176,22 @@
 }
   const navigation = []
     },"
-    { name: "About", href: "/about", icon: Users },
+    { name: "About", href: "/about", icon: User s },
     { "
       name: "Resources", "
       href: "#",
-      icon: BookOpen,
+      icon: BookOpe n,
       dropdown: [",
-        { name: "Blog", href: "/blog", icon: BookOpen, description: "Latest insights and trends" },"
-        { name: "Case Studies", href: "/case-studies", icon: Target, description: "Success stories" },"
-        { name: "White Papers", href: "/white-papers", icon: FileText, description: "Research and insights" },"
-        { name: "Webinars", href: "/webinars", icon: Calendar, description: "Expert-led sessions" },"
-        { name: "Pricing Guide", href: "/pricing-guide", icon: DollarSign, description: "Comprehensive pricing info" }
+        { name: "Blog", href: "/blog", icon: BookOpe n, description: "Latest insights and trends" },"
+        { name: "Case Studies", href: "/case-studies", icon: Targe t, description: "Success stories" },"
+        { name: "White Papers", href: "/white-papers", icon: FileTex t, description: "Research and insights" },"
+        { name: "Webinars", href: "/webinars", icon: Calenda r, description: "Expert-led sessions" },"
+        { name: "Pricing Guide", href: "/pricing-guide", icon: DollarSig n, description: "Comprehensive pricing info" }
 
       ]
     },"
-    { name: "Team", href: "/team", icon: Award },"
-    { name: "Contact", href: "/contact", icon: Phone }
+    { name: "Team", href: "/team", icon: Awar d },"
+    { name: "Contact", href: "/contact", icon: Phon e }
 
   ]
   const quickLinks = []
@@ -209,7 +209,7 @@
           {/* comment */}"
           <div className="hidden lg: flex items-center space-x-4">"
             <Button variant="outline" size="sm">"
-              <Search className="w-4 h-4 mr-2"  />
+              <Search className="w-4 h-4 mr-2"   />
               Search,
             </Button>"
             <Button size="sm" className="bg-gradient-to-r from-blue-500 to-purple-600 text-white">
@@ -219,9 +219,9 @@
 ,
           {/* comment */}"
           <button onClick="{()" => setIsMenuOpen(!isMenuOpen)}"
-            className="lg: hidden p-2 rounded-lg text-gray-300 hover:text-white hover:bg-slate-700 transition-colors"
+            className="lg: hidden p-2 rounded-lg text-gray-300 hover: tex t-white hover: b g-slate-700 transition-colors"
           >",
-            {isMenuOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
+            {isMenuOpen ? <X className="w-6 h-6"   /> : <Menu className="w-6 h-6"   />}
 
       {/* Main navigation */}
       <nav className="bg-white">
@@ -236,10 +236,10 @@
 
               {/* Services Dropdown */}
               <div className="relative group">
-                <button className="text-gray-700 hover:text-blue-600 font-medium transition-colors flex items-center">
+                <button className="text-gray-700 hover: tex t-blue-600 font-medium transition-colors flex items-center">
                   Services
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"  />
                   </svg>
                 </button>
 
@@ -251,7 +251,7 @@
 
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-slate-900 border-t border-slate-700"
+            className="md: hidden bg-slate-900 border-t border-slate-700"
           >
             <div className="px-4 py-6 space-y-4">
               {navigationItems.map((item) => (
@@ -267,7 +267,7 @@
                           <Link
                             key={dropdownItem.name}
                             to={dropdownItem.href}
-                            className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors"
+                            className="flex items-center space-x-2 text-gray-400 hover: tex t-white transition-colors"
                             onClick={() => setIsMenuOpen(false)}
                           >
                             <dropdownItem.icon className="w-4 h-4" />
@@ -282,7 +282,7 @@
 
                       key={category.name}
                       href={category.href}
-                      className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                      className="block px-4 py-2 text-gray-700 hover: b g-blue-50 hover: tex t-blue-600 transition-colors"
                     >
                       {category.name}
                     </Link>
@@ -295,10 +295,10 @@
 
               {/* Solutions Dropdown */}
               <div className="relative group">
-                <button className="text-gray-700 hover:text-blue-600 font-medium transition-colors flex items-center">
+                <button className="text-gray-700 hover: tex t-blue-600 font-medium transition-colors flex items-center">
                   Solutions
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"  />
                   </svg>
                 </button>
 
@@ -316,14 +316,14 @@
 
               <Link
                 href="/case-studies"
-                className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                className="text-gray-700 hover: tex t-blue-600 font-medium transition-colors"
               >
                 Case Studies
               </Link>
 
               <Link
                 href="/contact"
-                className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                className="text-gray-700 hover: tex t-blue-600 font-medium transition-colors"
               >
                 Contact
               </Link>
@@ -331,7 +331,7 @@
               {/* CTA Button */}
               <Link
                 href="/contact"
-                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
+                className="bg-blue-600 hover: b g-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
               >
                 Get Quote
               </Link>
@@ -339,19 +339,19 @@
 
             {/* Mobile menu button */}
             <button
-              className="lg:hidden p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
+              className="lg: hidden p-2 focus: outlin e-none focus: rin g-2 focus: rin g-blue-500 rounded"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={isMenuOpen}
             >
               <motion.div
-                animate={{ rotate: isMenuOpen ? 180 : 0 }}
+                animate={{ rotate: isMenuOpe n ? 180 : 0 }}
                 transition={{ duration: 0.3 }}
               >
                 {isMenuOpen ? (
-                  <X className="w-6 h-6 text-gray-700" />
+                  <X className="w-6 h-6 text-gray-700"  />
                 ) : (
-                  <Menu className="w-6 h-6 text-gray-700" />
+                  <Menu className="w-6 h-6 text-gray-700"  />
                 )}
               </motion.div>
             </button>
@@ -361,7 +361,7 @@
           <AnimatePresence>
             {isMenuOpen && (
               <motion.div 
-                className="lg:hidden border-t border-gray-200 py-4"
+                className="lg: hidden border-t border-gray-200 py-4"
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: 'auto' }}
                 exit={{ opacity: 0, height: 0 }}
@@ -372,7 +372,7 @@
                 {navigation.map((item) => (
                   <Link
                     href={item.href}
-                    className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-2"
+                    className="flex items-center space-x-3 text-gray-300 hover: tex t-white transition-colors duration-200 py-2"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     <item.icon className="w-5 h-5" />
@@ -385,7 +385,7 @@
 
                 <Link
                   href="/"
-                  className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                  className="text-gray-700 hover: tex t-blue-600 font-medium transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Home
@@ -396,7 +396,7 @@
                       key={category.name}
                       href={category.href}
 
-                      className="block py-2 text-gray-600 hover:text-blue-600 transition-colors"
+                      className="block py-2 text-gray-600 hover: tex t-blue-600 transition-colors"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       <item.icon className="w-5 h-5" />
@@ -412,7 +412,7 @@
                     <Link
                       key={category.name}
                       href={category.href}
-                      className="block py-2 text-gray-600 hover:text-blue-600 transition-colors"
+                      className="block py-2 text-gray-600 hover: tex t-blue-600 transition-colors"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {category.name}
@@ -425,12 +425,12 @@
                 {/* Mobile CTA */}
                 <Link
                   href="/contact"
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors text-center"
+                  className="bg-blue-600 hover: b g-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors text-center"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Get Quote
 
-                      className="block py-2 pl-4 text-gray-600 hover:text-blue-600 transition-colors"
+                      className="block py-2 pl-4 text-gray-600 hover: tex t-blue-600 transition-colors"
 
                       onClick={() => setIsMenuOpen(false)}
                     >
@@ -444,7 +444,7 @@
                 {/* Mobile CTA */}
                 <Link
                   href="/contact"
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors text-center"
+                  className="bg-blue-600 hover: b g-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors text-center"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Get Quote
@@ -452,28 +452,28 @@
                 </Link>
                 <Link
                   href="/case-studies"
-                  className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                  className="text-gray-700 hover: tex t-blue-600 font-medium transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Case Studies
                 </Link>
                 <Link
                   href="/about"
-                  className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                  className="text-gray-700 hover: tex t-blue-600 font-medium transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   About
                 </Link>
                 <Link
                   href="/careers"
-                  className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                  className="text-gray-700 hover: tex t-blue-600 font-medium transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Careers
                 </Link>
                 <Link
                   href="/contact"
-                  className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                  className="text-gray-700 hover: tex t-blue-600 font-medium transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Contact
@@ -481,13 +481,13 @@
 to={item.href}
                       className={`flex items-center space-x-2 transition-colors ${                        isActive(item.href);
                           ? 'text-blue-400
-                          : 'text-gray-300 hover:text-white
+                          : 'text-gray-300 hover: tex t-white
                       }}'                      onClick={() => setIsMenuOpen(false)}`                    >
                       <item.icon className="w-5 h-5 />                      <span>{item.name}</span>"                    </Link>)}
                 </div>
               ))}
               
-              <div className="pt-4 border-t border-slate-700 space-y-3>                <Button variant="outline" size="sm" className="w-full>                  <Search className="w-4 h-4 mr-2" />"                  Search"                </Button>
+              <div className="pt-4 border-t border-slate-700 space-y-3>                <Button variant="outline" size="sm" className="w-full>                  <Search className="w-4 h-4 mr-2"  />"                  Search"                </Button>
                 <Button size="sm" className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white>                  Get Started"                </Button></div>
             </div>
 
@@ -517,7 +517,7 @@ initial="{{" opacity: 0, height: 0 }}""
                         {item.dropdown.map((dropdownItem) => ("
                           <Link key="{dropdownItem.name}""
                             to="{dropdownItem.href}""
-                            className="flex items-center space-x-2 text-gray-400 hover: text-white transition-colors"">
+                            className="flex items-center space-x-2 text-gray-400 hover: tex t-white transition-colors"">
                             onClick="{()" => setIsMenuOpen(false)}
 
                           >"
@@ -530,7 +530,7 @@ initial="{{" opacity: 0, height: 0 }}""
                   ) : ("
                     <Link key="{category.name}""
                       href="{category.href}""
-                      className="block px-4 py-2 text-gray-700 hover: bg-blue-50 hover:text-blue-600 transition-colors"
+                      className="block px-4 py-2 text-gray-700 hover: b g-blue-50 hover: tex t-blue-600 transition-colors"
                     >,
                       {category.name}
 
@@ -541,12 +541,12 @@ initial="{{" opacity: 0, height: 0 }}""
               {/* comment */}"
               <div className="flex items-center space-x-3">"
                 <Link href="/contact""
-                  className="bg-blue-600 hover: bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors hover:scale-105"
+                  className="bg-blue-600 hover: b g-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors hover: scal e-105"
                 >
                   Get Quote,
                 </Link>"
                 <Link href="/contact?type=consultation""
-                  className="bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-4 py-2 rounded-lg font-medium transition-colors hover:scale-105"
+                  className="bg-transparent border-2 border-blue-600 text-blue-600 hover: b g-blue-600 hover: tex t-white px-4 py-2 rounded-lg font-medium transition-colors hover: scal e-105"
                 >
                   Free Consultation,
 
@@ -556,7 +556,7 @@ initial="{{" opacity: 0, height: 0 }}""
                 <div className="border-t border-gray-200 pt-4">
                   <Link
                     href="/contact"
-                    className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors text-center block"
+                    className="bg-blue-600 hover: b g-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors text-center block"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Get Quote
@@ -575,20 +575,20 @@ initial="{{" opacity: 0, height: 0 }}""
 
 ,
             {/* comment */}"
-            <button className="lg: hidden p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"">
+            <button className="lg: hidden p-2 focus: outlin e-none focus: rin g-2 focus: rin g-blue-500 rounded"">
               onClick="{()" => setIsMenuOpen(!isMenuOpen)}""
               aria-label="{isMenuOpen" ? "Close menu" : "Open menu"}"
               aria-expanded="{isMenuOpen}"
             >
               <motion.div,"
-animate="{{" rotate: isMenuOpen ? 180 : 0 }}"
+animate="{{" rotate: isMenuOpe n ? 180 : 0 }}"
                 transition="{{" duration: 0.3 }}
 
               >
                 {isMenuOpen ? ("
-                  <X className="w-6 h-6 text-gray-700"  />
+                  <X className="w-6 h-6 text-gray-700"   />
                 ) : ("
-                  <Menu className="w-6 h-6 text-gray-700"  />
+                  <Menu className="w-6 h-6 text-gray-700"   />
                 )}
 
               </motion.div>
@@ -610,7 +610,7 @@ className="lg: hidden border-t border-gray-200 py-4"">
                 {navigation.map((item) => ("
                   <Link key="{item.name}""
                     href="{item.href}""
-                    className="text-gray-700 hover: text-blue-600 font-medium transition-colors"">
+                    className="text-gray-700 hover: tex t-blue-600 font-medium transition-colors"">
                     onClick="{()" => setIsMenuOpen(false)}
 
                   >
@@ -625,7 +625,7 @@ className="lg: hidden border-t border-gray-200 py-4"">
                   {serviceCategories.map((category) => ("
                     <Link key="{category.name}""
                       href="{category.href}""
-                      className="block py-2 text-gray-600 hover: text-blue-600 transition-colors"">
+                      className="block py-2 text-gray-600 hover: tex t-blue-600 transition-colors"">
                       onClick="{()" => setIsMenuOpen(false)}
 
                     >"
@@ -640,7 +640,7 @@ className="lg: hidden border-t border-gray-200 py-4"">
               "
               <div className="pt-4 border-t border-slate-700 space-y-3">"
                 <Button variant="outline" size="sm" className="w-full">"
-                  <Search className="w-4 h-4 mr-2"  />
+                  <Search className="w-4 h-4 mr-2"   />
                   Search,
                 </Button>"
                 <Button size="sm" className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white">

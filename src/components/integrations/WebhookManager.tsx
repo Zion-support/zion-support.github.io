@@ -28,10 +28,10 @@ export default function Page() {
     });
   };
   
-  const handleRemoveEvent = (event: WebhookEventType) => {
+  const handleRemoveEvent = (event: WebhookEventTyp e) => {
     setNewWebhook({
       ...newWebhook,
-      eventTypes: newWebhook.eventTypes.filter(e => e !== event)
+      eventTypes: newWebhoo k.eventTypes.filter(e => e !== event)
     });
   };
   
@@ -57,7 +57,7 @@ export default function Page() {
     });
   };
   
-  const handleTestWebhook = async(webhookId: string, eventType: WebhookEventType) => {
+  const handleTestWebhook = async(webhookId: string, eventType: WebhookEventTyp e) => {
     await testWebhook(webhookId, eventType);
   };
   
@@ -69,7 +69,7 @@ export default function Page() {
             Define webhooks to notify external systems when events occur in Zion.</CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md: gri d-cols-2 gap-4">
             <div className="space-y-2">
               <Label htmlFor="webhook-name">Webhook Name</Label>
               <Input 
@@ -109,7 +109,7 @@ export default function Page() {
                 onValueChange={(value) => setNewWebhook({...newWebhook, selectedEvent: value as WebhookEventType})}
               >
                 <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Select event" />
+                  <SelectValue placeholder="Select event"  />
                 </SelectTrigger>
                 <SelectContent>
                   {eventOptions.map(option => (
@@ -120,7 +120,7 @@ export default function Page() {
                 </SelectContent>
               </Select>
               <Button type="button" onClick={handleAddEvent} variant="outline">
-                <PlusCircle className="h-4 w-4 mr-2" /> Add
+                <PlusCircle className="h-4 w-4 mr-2"  /> Add
               </Button>
             </div>
           </div>
@@ -139,7 +139,7 @@ export default function Page() {
         </CardContent>
         <CardFooter>
           <Button onClick={handleCreateWebhook}>
-            <Save className="h-4 w-4 mr-2" /> Create Webhook
+            <Save className="h-4 w-4 mr-2"  /> Create Webhook
           </Button>
         </CardFooter>
       </Card>
@@ -207,14 +207,14 @@ export default function Page() {
                     size="sm"
                     onClick={() => deleteWebhook(webhook.id)}
                   >
-                    <Trash className="h-4 w-4 mr-2" /> Delete
+                    <Trash className="h-4 w-4 mr-2"  /> Delete
                   </Button>
                   
                   <Select
                     onValueChange={(value) => handleTestWebhook(webhook.id, value as WebhookEventType)}
                   >
                     <SelectTrigger className="w-[180px]">
-                      <SelectValue placeholder="Test webhook" />
+                      <SelectValue placeholder="Test webhook"  />
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="test_event">Test(generic)</SelectItem>

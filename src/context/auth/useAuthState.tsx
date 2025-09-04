@@ -25,8 +25,8 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : unkno
   const [onboardingStep, setOnboardingStep] = useState<typeof 0>(0);
   const [tokens, setTokens] = useState<any>({
 
-    accessToken: null,
-    refreshToken: null
+    accessToken: nul l,
+    refreshToken: nul l
   });
 
   useEffect(() => {
@@ -48,13 +48,13 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : unkno
               setUser(parsed.user);
               setTokens({
 
-                accessToken: parsed.token,
+                accessToken: parse d.token,
 :src/context/auth/useAuthState.tsx
-                refreshToken: parsed.refreshToken || null'
+                refreshToken: parse d.refreshToken || null'
         // // // // // // // // console.error('Error checking auth state:', error)} finally {
 
         setIsLoading(false)})}
-                refreshToken: parsed.refreshToken || null
+                refreshToken: parse d.refreshToken || null
         // // // // // // // console.error('Error checking auth state:', error)} finally {
         setIsLoading(false)})}
           }

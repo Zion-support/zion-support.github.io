@@ -21,16 +21,16 @@ import {
   Users
 } from 'lucide-react'
 
-const SEO = dynamic(() => import('../src/components/SEO'), { ssr: false })
-const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false })
+const SEO = dynamic(() => import('../src/components/SEO'), { ssr: fals e })
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: fals e })
 
-const ComprehensiveServicesPage: React.FC = () => {
+const ComprehensiveServicesPage: Reac t.FC = () => {
   const serviceCategories = [
     {
       id: 1,
       title: "AI & Machine Learning",
       description: "Cutting-edge artificial intelligence solutions to transform your business",
-      icon: <Brain className="w-8 h-8" />,
+      icon: <Brain className="w-8 h-8"  />,
       services: [
         "Machine Learning Models",
         "Natural Language Processing",
@@ -45,7 +45,7 @@ const ComprehensiveServicesPage: React.FC = () => {
       id: 2,
       title: "IT Infrastructure",
       description: "Robust and scalable IT infrastructure solutions for modern businesses",
-      icon: <Server className="w-8 h-8" />,
+      icon: <Server className="w-8 h-8"  />,
       services: [
         "Cloud Migration",
         "Network Setup",
@@ -60,7 +60,7 @@ const ComprehensiveServicesPage: React.FC = () => {
       id: 3,
       title: "Micro SaaS Development",
       description: "Innovative micro SaaS solutions to streamline your business processes",
-      icon: <Zap className="w-8 h-8" />,
+      icon: <Zap className="w-8 h-8"  />,
       services: [
         "Custom SaaS Development",
         "API Integration",
@@ -75,7 +75,7 @@ const ComprehensiveServicesPage: React.FC = () => {
       id: 4,
       title: "Cybersecurity",
       description: "Comprehensive security solutions to protect your digital assets",
-      icon: <Shield className="w-8 h-8" />,
+      icon: <Shield className="w-8 h-8"  />,
       services: [
         "Security Assessment",
         "Threat Detection",
@@ -90,7 +90,7 @@ const ComprehensiveServicesPage: React.FC = () => {
       id: 5,
       title: "Cloud & DevOps",
       description: "Modern cloud solutions and DevOps practices for scalable applications",
-      icon: <Cloud className="w-8 h-8" />,
+      icon: <Cloud className="w-8 h-8"  />,
       services: [
         "Cloud Migration",
         "DevOps Automation",
@@ -105,7 +105,7 @@ const ComprehensiveServicesPage: React.FC = () => {
       id: 6,
       title: "Blockchain Solutions",
       description: "Innovative blockchain technology for secure and transparent operations",
-      icon: <Lock className="w-8 h-8" />,
+      icon: <Lock className="w-8 h-8"  />,
       services: [
         "Smart Contract Development",
         "DeFi Solutions",
@@ -120,22 +120,22 @@ const ComprehensiveServicesPage: React.FC = () => {
 
   const benefits = [
     {
-      icon: <Star className="w-6 h-6" />,
+      icon: <Star className="w-6 h-6"  />,
       title: "Expert Team",
       description: "Experienced professionals with deep expertise in cutting-edge technologies"
     },
     {
-      icon: <Globe className="w-6 h-6" />,
+      icon: <Globe className="w-6 h-6"  />,
       title: "Global Reach",
       description: "Serving clients worldwide with remote and on-site support options"
     },
     {
-      icon: <Settings className="w-6 h-6" />,
+      icon: <Settings className="w-6 h-6"  />,
       title: "Custom Solutions",
       description: "Tailored solutions designed to meet your specific business requirements"
     },
     {
-      icon: <Users className="w-6 h-6" />,
+      icon: <Users className="w-6 h-6"  />,
       title: "24/7 Support",
       description: "Round-the-clock support to ensure your systems run smoothly"
     }
@@ -143,38 +143,37 @@ const ComprehensiveServicesPage: React.FC = () => {
 
   return (
     <>
-      <SEO
-        title="Comprehensive Services - Zion Tech Group"
+      <SEO title="Comprehensive Services - Zion Tech Group"
         description="Complete technology solutions including AI services, IT infrastructure, micro SaaS development, and innovative digital transformation services."
         keywords="comprehensive services, AI, IT, micro SaaS, cybersecurity, cloud, DevOps, blockchain, Zion Tech Group"
         canonical="https://ziontechgroup.com/comprehensive-services"
-      />
+       />
       
       <PageTransition>
         <main className="min-h-screen bg-white">
           {/* Hero Section */}
           <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="text-center"
               >
-                <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                <h1 className="text-4xl md: tex t-6xl font-bold text-gray-900 mb-6">
                   Comprehensive <span className="text-blue-600">Services</span>
                 </h1>
                 <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
                   Complete technology solutions to transform your business with AI, IT infrastructure, micro SaaS development, and innovative digital transformation services.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm: fle x-row gap-4 justify-center">
                   <motion.a
                     href="#services"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
                   >
-                    <ArrowRight className="w-5 h-5" />
+                    <ArrowRight className="w-5 h-5"  />
                     Explore Services
                   </motion.a>
                   <motion.a
@@ -183,7 +182,7 @@ const ComprehensiveServicesPage: React.FC = () => {
                     whileTap={{ scale: 0.95 }}
                     className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
                   >
-                    <ArrowRight className="w-5 h-5" />
+                    <ArrowRight className="w-5 h-5"  />
                     Get Started
                   </motion.a>
                 </div>
@@ -193,14 +192,14 @@ const ComprehensiveServicesPage: React.FC = () => {
 
           {/* Services Grid */}
           <section id="services" className="py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-center mb-16"
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4">
                   Our Service Categories
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -208,14 +207,14 @@ const ComprehensiveServicesPage: React.FC = () => {
                 </p>
               </motion.div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
                 {serviceCategories.map((category, index) => (
                   <motion.div
                     key={category.id}
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 2 0 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+                    transition={{ duration: 0.6, delay: inde x * 0.1 }}
+                    className="bg-white rounded-xl shadow-lg hover: shado w-xl transition-shadow duration-300 overflow-hidden"
                   >
                     <div className="p-8">
                       <div className="text-blue-600 mb-4">
@@ -235,7 +234,7 @@ const ComprehensiveServicesPage: React.FC = () => {
                         <ul className="space-y-2">
                           {category.services.map((service, idx) => (
                             <li key={idx} className="flex items-center gap-2 text-sm text-gray-600">
-                              <CheckCircle className="w-4 h-4 text-green-500" />
+                              <CheckCircle className="w-4 h-4 text-green-500"  />
                               {service}
                             </li>
                           ))}
@@ -250,9 +249,9 @@ const ComprehensiveServicesPage: React.FC = () => {
                       <motion.button
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
-                        className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-blue-700 transition-colors"
+                        className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover: b g-blue-700 transition-colors"
                       >
-                        <ArrowRight className="w-5 h-5" />
+                        <ArrowRight className="w-5 h-5"  />
                         Learn More
                       </motion.button>
                     </div>
@@ -264,14 +263,14 @@ const ComprehensiveServicesPage: React.FC = () => {
 
           {/* Benefits Section */}
           <section className="bg-gray-50 py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="text-center mb-16"
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4">
                   Why Choose Our Services?
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -279,14 +278,14 @@ const ComprehensiveServicesPage: React.FC = () => {
                 </p>
               </motion.div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
                 {benefits.map((benefit, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 2 0 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center"
+                    transition={{ duration: 0.6, delay: inde x * 0.1 }}
+                    className="bg-white rounded-xl p-8 shadow-lg hover: shado w-xl transition-shadow duration-300 text-center"
                   >
                     <div className="text-blue-600 mb-4 flex justify-center">
                       {benefit.icon}
@@ -305,27 +304,27 @@ const ComprehensiveServicesPage: React.FC = () => {
 
           {/* CTA Section */}
           <section className="py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="text-center"
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-6">
                   Ready to Transform Your Business?
                 </h2>
                 <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
                   Let us help you achieve your goals with our comprehensive technology solutions.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm: fle x-row gap-4 justify-center">
                   <motion.a
                     href="/contact"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
                   >
-                    <ArrowRight className="w-5 h-5" />
+                    <ArrowRight className="w-5 h-5"  />
                     Get Started Today
                   </motion.a>
                   <motion.a
@@ -334,7 +333,7 @@ const ComprehensiveServicesPage: React.FC = () => {
                     whileTap={{ scale: 0.95 }}
                     className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
                   >
-                    <ArrowRight className="w-5 h-5" />
+                    <ArrowRight className="w-5 h-5"  />
                     Call Us: +1 302 464 0950
                   </motion.a>
                 </div>

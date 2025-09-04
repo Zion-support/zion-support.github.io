@@ -1,6 +1,6 @@
 interface RoleCardProps extends React.PropsWithChildren<{}> {
 
-  role: RecommendedRole;
+  role: RecommendedRol e;
   onInviteTalent: (talentId: string, roleTitle: string)  => void}
 
 export 

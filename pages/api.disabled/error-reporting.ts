@@ -18,18 +18,18 @@ interface ErrorReport {
 
 // In-memory storage for demo purposes
 // In production, you would use a proper database
-const errorReports: ErrorReport[] = [];
+const errorReports: ErrorRepor t[] = [];
 
 export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
+  req: NextApiReques t,
+  res: NextApiRespons e
 ) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
   try {
-    const errorReport: ErrorReport = req.body;
+    const errorReport: ErrorRepor t = req.body;
 
     // Validate required fields
     if (!errorReport.error || !errorReport.error.message) {
@@ -46,10 +46,10 @@ export default async function handler(
 
     // Log for debugging
     console.error('Error Report: ', {
-      message: errorReport.error.message,
-      stack: errorReport.error.stack,
-      url: errorReport.url,
-      timestamp: errorReport.timestamp,
+      message: errorRepor t.error.message,
+      stack: errorRepor t.error.stack,
+      url: errorRepor t.url,
+      timestamp: errorRepor t.timestamp,
     });
 
     // Send to external error monitoring services
@@ -60,14 +60,14 @@ export default async function handler(
       await sendCriticalErrorAlert(errorReport);
     }
 
-    res.status(200).json({ success: true });
+    res.status(200).json({ success: tru e });
   } catch (error) {
     console.error('Error Reporting API Error: ', error);
     res.status(500).json({ error: 'Internal server error' });
   }
 }
 
-async function sendToErrorMonitoringServices(errorReport: ErrorReport) {
+async function sendToErrorMonitoringServices(errorReport: ErrorRepor t) {
   try {
     // Sentry
     if (process.env.SENTRY_DSN) {
@@ -77,22 +77,22 @@ async function sendToErrorMonitoringServices(errorReport: ErrorReport) {
           'Content-Type': 'application/json',
           'X-Sentry-Auth': `Sentry sentry_version=7, sentry_key=${process.env.SENTRY_KEY}`,
         },
-        body: JSON.stringify({
-          message: errorReport.error.message,
+        body: JSO N.stringify({
+          message: errorRepor t.error.message,
           stacktrace: {
-            frames: parseStackTrace(errorReport.error.stack),
+            frames: parseStackTrac e(errorReport.error.stack),
           },
           tags: {
             component: 'frontend',
-            url: errorReport.url,
+            url: errorRepor t.url,
           },
           user: {
-            id: errorReport.userId,
+            id: errorRepor t.userId,
           },
           extra: {
-            userAgent: errorReport.userAgent,
-            sessionId: errorReport.sessionId,
-            componentStack: errorReport.errorInfo.componentStack,
+            userAgent: errorRepor t.userAgent,
+            sessionId: errorRepor t.sessionId,
+            componentStack: errorRepor t.errorInfo.componentStack,
           },
         }),
       });
@@ -108,12 +108,12 @@ async function sendToErrorMonitoringServices(errorReport: ErrorReport) {
             'Content-Type': 'application/json',
             Authorization: `Bearer ${process.env.LOGROCKET_API_KEY}`,
           },
-          body: JSON.stringify({
-            message: errorReport.error.message,
-            stack: errorReport.error.stack,
-            url: errorReport.url,
-            userAgent: errorReport.userAgent,
-            timestamp: errorReport.timestamp,
+          body: JSO N.stringify({
+            message: errorRepor t.error.message,
+            stack: errorRepor t.error.stack,
+            url: errorRepor t.url,
+            userAgent: errorRepor t.userAgent,
+            timestamp: errorRepor t.timestamp,
           }),
         }
       );
@@ -126,7 +126,7 @@ async function sendToErrorMonitoringServices(errorReport: ErrorReport) {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(errorReport),
+        body: JSO N.stringify(errorReport),
       });
     }
   } catch (error) {
@@ -141,14 +141,14 @@ function parseStackTrace(stack?: string) {
     const match = line.match(/at\s+(.+?)\s+\((.+?): (\d+): (\d+)\)/);
     if (match) {
       return {
-        function: match[1],
-        filename: match[2],
-        lineno: parseInt(match[3]),
-        colno: parseInt(match[4]),
+        function: matc h[1],
+        filename: matc h[2],
+        lineno: parseIn t(match[3]),
+        colno: parseIn t(match[4]),
       };
     }
     return {
-      function: line.trim(),
+      function: lin e.trim(),
       filename: 'unknown',
       lineno: 0,
       colno: 0,
@@ -156,7 +156,7 @@ function parseStackTrace(stack?: string) {
   });
 }
 
-function isCriticalError(errorReport: ErrorReport): boolean {
+function isCriticalError(errorReport: ErrorRepor t): boolean {
   const criticalPatterns = [
     /chunk load failed/i,
     /loading chunk/i,
@@ -170,7 +170,7 @@ function isCriticalError(errorReport: ErrorReport): boolean {
   );
 }
 
-async function sendCriticalErrorAlert(errorReport: ErrorReport) {
+async function sendCriticalErrorAlert(errorReport: ErrorRepor t) {
   try {
     // Send email alert
     if (process.env.ALERT_EMAIL) {
@@ -179,13 +179,11 @@ async function sendCriticalErrorAlert(errorReport: ErrorReport) {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          to: process.env.ALERT_EMAIL,
+        body: JSO N.stringify({
+          to: proces s.env.ALERT_EMAIL,
           subject: 'Critical Error Alert - Zion Tech Group',
           body: `
-            A critical error has occurred on the website:
-            
-            Error: ${errorReport.error.message}
+            A critical error has occurred on the website: Erro r: ${errorReport.error.message}
             URL: ${errorReport.url}
             Time: ${errorReport.timestamp}
             User Agent: ${errorReport.userAgent}
@@ -204,7 +202,7 @@ async function sendCriticalErrorAlert(errorReport: ErrorReport) {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
+        body: JSO N.stringify({
           text: `🚨 Critical Error Alert`,
           attachments: [
             {
@@ -212,18 +210,18 @@ async function sendCriticalErrorAlert(errorReport: ErrorReport) {
               fields: [
                 {
                   title: 'Error Message',
-                  value: errorReport.error.message,
-                  short: false,
+                  value: errorRepor t.error.message,
+                  short: fals e,
                 },
                 {
                   title: 'URL',
-                  value: errorReport.url,
-                  short: true,
+                  value: errorRepor t.url,
+                  short: tru e,
                 },
                 {
                   title: 'Timestamp',
-                  value: errorReport.timestamp,
-                  short: true,
+                  value: errorRepor t.timestamp,
+                  short: tru e,
                 },
               ],
             },

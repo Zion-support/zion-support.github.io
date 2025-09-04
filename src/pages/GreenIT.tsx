@@ -174,22 +174,22 @@ import {
   BatteryEmpty as BatteryEmpty10
 } from 'lucide-react';
 
-export default function GreenIT(...args: unknown[]): unknown {
+export default function GreenIT(...args: unknow n[]): unknown {
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const categories = [
-    { id: 'all', name: 'All Solutions', count: 12 },
+    { id: 'all', name: 'All Solutions', count: 1 2 },
     { id: 'energy', name: 'Energy Efficiency', count: 4 },
     { id: 'hardware', name: 'Green Hardware', count: 3 },    { id: 'software', name: 'Sustainable Software', count: 3 },
     { id: 'data', name: 'Data Centers', count: 2 }
   ];
 
-  const greenSolutions: unknown = [{}
+  const greenSolutions: unknow n = [{}
       id: 'energy - monitoring',
       name: 'Smart Energy Monitoring',
       category: 'energy',
-      icon: Activity,
+      icon: Activit y,
       description: 'Real - time energy consumption tracking and optimization',
       features: []
         'Real - time energy consumption monitoring',
@@ -213,7 +213,7 @@ export default function GreenIT(...args: unknown[]): unknown {
       id: 'virtualization',
       name: 'Server Virtualization',
       category: 'hardware',
-      icon: Server,
+      icon: Serve r,
       description: 'Consolidate physical servers to reduce power consumption',
       features: ['Server consolidation and virtualization',
         'Dynamic resource allocation',
@@ -236,7 +236,7 @@ export default function GreenIT(...args: unknown[]): unknown {
       id: 'cloud - optimization',
       name: 'Cloud Infrastructure Optimization',
       category: 'software',
-      icon: Cloud,
+      icon: Clou d,
       description: 'Optimize cloud resources for maximum efficiency',
       features: ['Cloud resource optimization',
         'Auto - scaling and load balancing',
@@ -259,7 +259,7 @@ export default function GreenIT(...args: unknown[]): unknown {
       id: 'data - center - efficiency',
       name: 'Data Center Efficiency',
       category: 'data',
-      icon: Database,
+      icon: Databas e,
       description: 'Optimize data center operations for sustainability',
       features: ['Cooling system optimization',
         'Power distribution efficiency',
@@ -282,7 +282,7 @@ export default function GreenIT(...args: unknown[]): unknown {
       id: 'smart - lighting',
       name: 'Smart Lighting Systems',
       category: 'energy',
-      icon: Lightbulb,
+      icon: Lightbul b,
       description: 'Intelligent lighting control for energy savings',
       features: ['Motion - sensing controls',
         'Daylight harvesting',
@@ -305,7 +305,7 @@ export default function GreenIT(...args: unknown[]): unknown {
       id: 'green - software',
       name: 'Sustainable Software Development',
       category: 'software',
-      icon: Code,
+      icon: Cod e,
       description: 'Eco - friendly software development practices',
       features: ['Energy - efficient algorithms',
         'Code optimization techniques',
@@ -328,7 +328,7 @@ export default function GreenIT(...args: unknown[]): unknown {
       id: 'renewable - energy',
       name: 'Renewable Energy Integration',
       category: 'energy',
-      icon: Sun,
+      icon: Su n,
       description: 'Integrate solar, wind, and other renewable sources',
       features: ['Solar panel installation',
         'Wind turbine integration',
@@ -351,7 +351,7 @@ export default function GreenIT(...args: unknown[]): unknown {
       id: 'green - hardware',
       name: 'Energy - Efficient Hardware',
       category: 'hardware',
-      icon: Cpu,
+      icon: Cp u,
       description: 'Select and deploy energy - efficient computing equipment',
       features: ['Energy Star certified equipment',
         'Low-power processors',
@@ -374,7 +374,7 @@ export default function GreenIT(...args: unknown[]): unknown {
       id: 'waste - reduction',
       name: 'Electronic Waste Reduction',
       category: 'hardware',
-      icon: Recycle,
+      icon: Recycl e,
       description: 'Comprehensive e - waste management and recycling',
       features: ['E - waste assessment and audit',
         'Secure data destruction',
@@ -397,7 +397,7 @@ export default function GreenIT(...args: unknown[]): unknown {
       id: 'carbon - tracking',
       name: 'Carbon Footprint Tracking',
       category: 'software',
-      icon: BarChart3,
+      icon: BarChart 3,
       description: 'Monitor and reduce carbon emissions',
       features: ['Carbon emission calculation',
         'Real - time monitoring',
@@ -420,7 +420,7 @@ export default function GreenIT(...args: unknown[]): unknown {
       id: 'green - networking',
       name: 'Energy - Efficient Networking',
       category: 'data',
-      icon: Network,
+      icon: Networ k,
       description: 'Optimize network infrastructure for energy efficiency',
       features: ['Network equipment optimization',
         'Traffic management',
@@ -443,7 +443,7 @@ export default function GreenIT(...args: unknown[]): unknown {
       id: 'sustainability - reporting',
       name: 'Sustainability Reporting Platform',
       category: 'software',
-      icon: FileText,
+      icon: FileTex t,
       description: 'Comprehensive sustainability reporting and analytics',
       features: ['Environmental data collection',
         'Sustainability metrics tracking',
@@ -464,11 +464,11 @@ export default function GreenIT(...args: unknown[]): unknown {
     }
   ];
 
-export default function GreenIT(...args: any[]): any {): unknown {): unknown {}
+export default function GreenIT(...args: an y[]): any {): unknown {): unknown {}
   const [expandedSection, setExpandedSection] = useState<string | null>(null);'
   const [selectedCategory, setSelectedCategory] = useState('all')};
 
-  return()
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"""
       <SEO""""
         title="Green IT Solutions - Zion Tech Group""""
@@ -479,15 +479,15 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {}
       <section className="relative py-20 overflow-hidden">""""
         <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-blue-500/10 to-purple-500/10"></div>"        <div className="container mx-auto px-6 relative z-10">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             animate={{ opacity: 1, y: 0 }}"""
             transition={{ duration: 0.8 }}""""
             className="text-center""""
           >""""
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-2xl mb-6">""""
-              <Leaf className="w-10 h-10 text-green-400"  />"""
+              <Leaf className="w-10 h-10 text-green-400"   />"""
             </div>""""
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">""""
+            <h1 className="text-5xl md: tex t-6xl font-bold text-white mb-6">""""
               <span className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">'
                 Green IT''
               </span>{' '}
@@ -497,11 +497,11 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {}
               solutions that reduce energy consumption, lower costs, and;
               minimize environmental impact."""
             </p>""""
-            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">""""
-              <button className="px-8 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105">
+            <div className="mt-8 flex flex-col sm: fle x-row gap-4 justify-center">""""
+              <button className="px-8 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover: fro m-green-500 hover: t o-blue-600 transition-all duration-200 hover: scal e-105">
                 Get Green IT Assessment"""
               </button>""""
-              <button className="px-8 py-3 border border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-white transition-all duration-200">
+              <button className="px-8 py-3 border border-green-400 text-green-400 font-semibold rounded-lg hover: b g-green-400 hover: tex t-white transition-all duration-200">
                 View Case Studies;
               </button>
             </div>
@@ -513,7 +513,7 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {}
       <section className="py-20">""""
         <div className="container mx-auto px-6">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}"""
             transition={{ duration: 0.8 }}""""
             className="text-center mb-16""""
@@ -526,13 +526,13 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {}
             </p>
           </motion.div>"""
 """"
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
             {environmentalImpact.map((impact, index) => (
               <motion.div;
                 key={impact.label}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 whileInView={{ opacity: 1, y: 0 }}"""
-                transition={{ duration: 0.8, delay: index * 0.1 }}""""
+                transition={{ duration: 0.8, delay: inde x * 0.1 }}""""
                 className="text-center""""
               >""""
                 <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-2xl mb-6">""""
@@ -555,7 +555,7 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {}
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">""""
         <div className="container mx-auto px-6">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}"""
             transition={{ duration: 0.8 }}""""
             className="text-center mb-16""""
@@ -581,22 +581,22 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {}
 '''`
                   selectedCategory === category.id'''`'`
                     ? 'bg-gradient-to-r from-green-400 to-blue-500 text-white'''`'`'`
-                    : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50'````
+                    : 'bg-slate-800/50 text-gray-300 hover: b g-slate-700/50'````
                 }`}
               >
                 {category.name} ({category.count}) </button>) ) }
           </div>"""
 """"
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
             {filteredSolutions.map((solution, index) => (
               <motion.div;
                 key={solution.id}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 whileInView={{ opacity: 1, y: 0 }}"""
-                transition={{ duration: 0.8, delay: index * 0.1 }}""""
+                transition={{ duration: 0.8, delay: inde x * 0.1 }}""""
                 className="group""""
               >""""
-                <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-2xl border border-slate-600/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105 overflow-hidden">""""
+                <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-2xl border border-slate-600/50 hover: borde r-green-400/50 transition-all duration-300 hover: scal e-105 overflow-hidden">""""
                   <div className="p-6">""""
                     <div className="flex items-center gap-3 mb-4">`
                       <span``
@@ -621,7 +621,7 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {}
                       <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-xl">""""
                         <solution.icon className="w-6 h-6 text-green-400" />"""
                       </div>""""
-                      <h3 className="text-xl font-bold text-white group-hover:text-green-400 transition-colors duration-200">
+                      <h3 className="text-xl font-bold text-white group-hover: tex t-green-400 transition-colors duration-200">
                         {solution.name}
                       </h3>
                     </div>"""
@@ -653,7 +653,7 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {}
 
                     <button"""
                       onClick={() => toggleSection(solution.id)}""""
-                      className="w-full px-4 py-2 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105"""
+                      className="w-full px-4 py-2 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover: fro m-green-500 hover: t o-blue-600 transition-all duration-200 hover: scal e-105"""
                     >'
                       {expandedSection === solution.id''
                         ? 'Show Less'''
@@ -678,7 +678,7 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {}
                                 key={featureIndex}""""
                                 className="flex items-center text-gray-300 text-sm""""
                               >""""
-                                <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0"  />                                {feature}
+                                <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0"   />                                {feature}
                               </li>) ) }
                           </ul>
                         </div>"""
@@ -693,7 +693,7 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {}
                                 key={benefitIndex}""""
                                 className="flex items-center text-gray-300 text-sm""""
                               >""""
-                                <Star className="w-3 h-3 text-blue-400 mr-2 flex-shrink-0"  />                                {benefit}
+                                <Star className="w-3 h-3 text-blue-400 mr-2 flex-shrink-0"   />                                {benefit}
                               </li>) ) }
                           </ul>
                         </div>
@@ -709,7 +709,7 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {}
       <section className="py-20">""""
         <div className="container mx-auto px-6">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}"""
             transition={{ duration: 0.8 }}""""
             className="text-center mb-16""""
@@ -722,13 +722,13 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {}
             </p>
           </motion.div>"""
 """"
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
             {certifications.map((cert, index) => (
               <motion.div;
                 key={cert.name}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 whileInView={{ opacity: 1, y: 0 }}"""
-                transition={{ duration: 0.8, delay: index * 0.1 }}""""
+                transition={{ duration: 0.8, delay: inde x * 0.1 }}""""
                 className="text-center"""
               >`
                 <div``
@@ -750,7 +750,7 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {}
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">""""
         <div className="container mx-auto px-6">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}"""
             transition={{ duration: 0.8 }}""""
             className="text-center mb-16""""
@@ -764,23 +764,23 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {}
             </p>
           </motion.div>"""
 """"
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg: gri d-cols-3 gap-8">
             {caseStudies.map((study, index) => (
               <motion.div;
                 key={study.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 whileInView={{ opacity: 1, y: 0 }}"""
-                transition={{ duration: 0.8, delay: index * 0.1 }}""""
+                transition={{ duration: 0.8, delay: inde x * 0.1 }}""""
                 className="group""""
               >""""
-                <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-2xl border border-slate-600/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105 p-6">""""
+                <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-2xl border border-slate-600/50 hover: borde r-green-400/50 transition-all duration-300 hover: scal e-105 p-6">""""
                   <div className="flex items-center gap-3 mb-4">""""
                     <span className="px-3 py-1 rounded-full text-xs font-medium bg-blue-500/20 text-blue-400">
                       {study.industry}
                     </span>
                   </div>"""
 """"
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors duration-200">
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover: tex t-green-400 transition-colors duration-200">
                     {study.title}
                   </h3>"""
 """"
@@ -808,7 +808,7 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {}
                           key={resultIndex}""""
                           className="flex items-center text-gray-300 text-sm""""
                         >""""
-                          <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0"  />                          {result}
+                          <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0"   />                          {result}
                         </li>) ) }
                     </ul>
                   </div>"""
@@ -837,7 +837,7 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {}
       <section className="py-20">""""
         <div className="container mx-auto px-6 text-center">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}"""
           >""""
@@ -850,13 +850,13 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {}
               to reduce costs and environmental impact.
             </p>"""
 """"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">""""
-              <button className="px-8 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">""""
+              <button className="px-8 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover: fro m-green-500 hover: t o-blue-600 transition-all duration-200 hover: scal e-105">
                 Schedule Green IT Assessment;
               </button>"""
               <a""""
-                href="mailto:greenit@ziontechgroup.com""""
-                className="px-8 py-3 border border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-white transition-all duration-200"""
+                href="mailto: greeni t@ziontechgroup.com""""
+                className="px-8 py-3 border border-green-400 text-green-400 font-semibold rounded-lg hover: b g-green-400 hover: tex t-white transition-all duration-200"""
               >
                 Contact Green IT Team;
               </a>

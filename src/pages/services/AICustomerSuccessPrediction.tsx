@@ -1,6 +1,6 @@
       ],;'
       cta: 'Start Free Trial',
-      popular: false
+      popular: fals e
     },
     {
 
@@ -12,7 +12,7 @@
         'Up to 10,000 customers',Advanced AI models',Real-time dashboards',Custom integrations',Priority support',Advanced analytics'
       ],;
       cta: 'Start Free Trial',
-      popular: true
+      popular: tru e
     },
     {
 
@@ -26,14 +26,12 @@
         'Advanced security';
       ],;
       cta: 'Contact Sales',;
-      popular: false};
-  ]},;
-    {
+      popular: fals e};
+  ]}, {
 
       title: 'E-commerce',
       description: 'Customer lifetime value prediction, personalized recommendations, and retention strategies',
-      metrics['Increase CLV by 35%',Reduce cart abandonment by 20%',Boost repeat purchases']},;
-    {
+      metrics['Increase CLV by 35%',Reduce cart abandonment by 20%',Boost repeat purchases']}, {
 
       title: 'Financial Services',
       description: 'Risk assessment, product adoption prediction, and customer satisfaction monitoring',
@@ -52,17 +50,17 @@
       <SEO "
         title="AI Customer Success Prediction Platform | Zion Tech Group""
         description="Predict customer churn, identify upsell opportunities, and optimize customer success with our AI-powered prediction platform. 95%+ accuracy in customer behavior forecasting.""        keywords="AI customer success, churn prediction, customer analytics, predictive analytics, customer retention, upsell optimization"
-       />
+        />
 
       {/* Hero Section */}"
       <section className="relative pt-32 pb-20 overflow-hidden">"
         <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-red-500/10"></div>"
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8 text-center">
           <motion.div
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -83,32 +81,30 @@
 }}
             transition={{ duration: 0.8 }}
 "
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent mb-6">
+            <h1 className="text-5xl md: tex t-7xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent mb-6">
               AI Customer Success Prediction
             </h1>"
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            <p className="text-xl md: tex t-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Predict customer churn, identify upsell opportunities, and optimize customer success with 95%+ accuracy using advanced AI and machine learning
             </p>"
             <div className="flex flex-wrap justify-center gap-4">"
-              <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 hover:scale-105">
+              <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-semibold hover: fro m-purple-600 hover: t o-pink-600 transition-all duration-300 hover: scal e-105">
                 Start Free Trial
               </button>"
-              <button className="px-8 py-4 border border-purple-400 text-purple-400 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300">
+              <button className="px-8 py-4 border border-purple-400 text-purple-400 rounded-lg font-semibold hover: b g-purple-400 hover: tex t-white transition-all duration-300">
                 Schedule Demo
               </button>
             </div>
           </motion.div>
         </div>
-      </section>;
-
-      {/* Features */}"
+      </section> {/* Features */}"
       <section className="py-20">;"
         <div className="container mx-auto px-6">
           <motion.div
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -139,41 +135,41 @@
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md: gri d-cols-3 gap-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 2 0 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               className="text-center p-6"
             >
               <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="w-8 h-8 text-white"  />
+                <TrendingUp className="w-8 h-8 text-white"   />
               </div>
               <h3 className="text-2xl font-bold text-white mb-2">25% Churn Reduction</h3>
               <p className="text-slate-300">Identify at-risk customers before they leave and take proactive action</p>
             </motion.div>
             
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 2 0 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-center p-6"
             >
               <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Target className="w-8 h-8 text-white"  />
+                <Target className="w-8 h-8 text-white"   />
               </div>
               <h3 className="text-2xl font-bold text-white mb-2">40% Revenue Growth</h3>
               <p className="text-slate-300">Uncover expansion opportunities and increase customer lifetime value</p>
             </motion.div>
             
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 2 0 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               className="text-center p-6"
             >
               <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-white"  />
+                <Users className="w-8 h-8 text-white"   />
               </div>
               <h3 className="text-2xl font-bold text-white mb-2">95% Prediction Accuracy</h3>
               <p className="text-slate-300">Advanced AI algorithms provide reliable insights for better decision-making</p>
@@ -186,7 +182,7 @@
       <section className="py-16">"
         <div className="container mx-auto px-4">"
           <div className="text-center mb-16">"
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
               Powerful Features for Modern Customer Success
             </h2>"
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
@@ -194,14 +190,14 @@
             </p>
           </div>
           "
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md: gri d-cols-2 lg: gri d-cols-3 gap-8">
             {features.map((feature, index (
               <motion.div
                 key={index}
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -223,7 +219,7 @@
                 transition = {
 
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -231,7 +227,7 @@
 
 
 }}"
-                className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300 hover:scale-105"
+                className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover: borde r-purple-400/50 transition-all duration-300 hover: scal e-105"
 "
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-6">"
                   <feature.icon className="w-8 h-8 text-purple-400" />
@@ -251,7 +247,7 @@
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -282,14 +278,14 @@
             </p>
           </div>
           "
-          <div className="grid md: grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map(plan: unknown, index: unknown 
+          <div className="grid md: gri d-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricingPlans.map(plan: unknow n, index: unknow n 
               <motion.div
                 key={index}
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -311,7 +307,7 @@
                 transition = {
 
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -319,7 +315,7 @@
 
 
 }}"
-                className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300 hover:scale-105"
+                className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover: borde r-purple-400/50 transition-all duration-300 hover: scal e-105"
 "
                 <div className="flex items-center space-x-4 mb-6">"
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center">"
@@ -331,7 +327,7 @@
                 <div className="space-y-2">
                   {capability.benefits.map((benefit, benefitIndex) => ("
                     <div key={benefitIndex} className="flex items-center text-sm text-gray-400">"
-                      <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0"  />                      {benefit}
+                      <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0"   />                      {benefit}
                     </div>
                   ))}
                 </ul>
@@ -340,8 +336,8 @@
                   href="/contact" 
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white hover:from-green-600 hover:to-emerald-600'
-                      : 'bg-slate-700 text-white hover:bg-slate-600'
+                      ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white hover: fro m-green-600 hover: t o-emerald-600'
+                      : 'bg-slate-700 text-white hover: b g-slate-600'
                   }`}
                 >
                   {plan.cta}
@@ -359,7 +355,7 @@
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -390,14 +386,14 @@
             </p>
           </div>
           "
-          <div className="grid md: grid-cols-3 gap-8">
-            {useCases.map(useCase: unknown, index: unknown 
+          <div className="grid md: gri d-cols-3 gap-8">
+            {useCases.map(useCase: unknow n, index: unknow n 
               <motion.div
                 key={index}
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -419,7 +415,7 @@
                 transition = {
 
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -427,7 +423,7 @@
 
 
 }}"
-                className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300 hover:scale-105"
+                className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover: borde r-purple-400/50 transition-all duration-300 hover: scal e-105"
 "
                 <div className="flex items-center space-x-4 mb-6">"
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center">"
@@ -439,7 +435,7 @@
                 <div className="space-y-2">
                   {useCase.metrics.map((metric, metricIndex) => ("
                     <div key={metricIndex} className="flex items-center text-sm text-gray-400">"
-                      <Target className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0"  />                      {metric}
+                      <Target className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0"   />                      {metric}
                     </div>
                   ))}
                 </div>
@@ -456,7 +452,7 @@
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -487,14 +483,14 @@
             </p>
           </div>
           "
-          <div className="grid grid-cols-2 md: grid-cols-4 lg:grid-cols-6 gap-6">
-            {integrations.map(integration: unknown, index: unknown (
+          <div className="grid grid-cols-2 md: gri d-cols-4 lg: gri d-cols-6 gap-6">
+            {integrations.map(integration: unknow n, index: unknow n (
               <motion.div
                 key={index}
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -516,7 +512,7 @@
                 transition = {
 
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -524,7 +520,7 @@
 
 
 }}"
-                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300 hover:scale-105 text-center"
+                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover: borde r-purple-400/50 transition-all duration-300 hover: scal e-105 text-center"
 "
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center mx-auto mb-6">"
                   <benefit.icon className="w-8 h-8 text-purple-400" />
@@ -544,7 +540,7 @@
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -575,14 +571,14 @@
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map(plan: unknown, index: unknown (
+          <div className="grid grid-cols-1 md: gri d-cols-3 gap-8">
+            {pricing.map(plan: unknow n, index: unknow n (
               <motion.div
                 key={index}
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -604,7 +600,7 @@
                 transition = {
 
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -612,11 +608,11 @@
 
 
 }}
-                className={`relative bg-slate-800/50 p-8 rounded-xl border transition-all duration-300 hover:scale-105 ${
+                className={`relative bg-slate-800/50 p-8 rounded-xl border transition-all duration-300 hover: scal e-105 ${
 
                   plan.popular'
                     ? 'border-purple-400/50 bg-gradient-to-br from-purple-500/10 to-pink-500/10''
-                    : 'border-slate-700/50 hover:border-purple-400/50'`
+                    : 'border-slate-700/50 hover: borde r-purple-400/50'`
                 }`}
 
                 {plan.popular && (;"
@@ -639,7 +635,7 @@
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center text-gray-300">"
-                      <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0"  />                      {feature}
+                      <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0"   />                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -647,8 +643,8 @@
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
 
                   plan.popular'
-                    ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600''
-                    : 'border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white'`
+                    ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover: fro m-purple-600 hover: t o-pink-600''
+                    : 'border border-purple-400 text-purple-400 hover: b g-purple-400 hover: tex t-white'`
                 }`}>
                   {plan.cta}
                 </button>
@@ -665,7 +661,7 @@
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -696,7 +692,7 @@
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-4 gap-8">
             {[
               {
 
@@ -722,13 +718,13 @@
                 title: 'Launch',
                 description: 'Go live with monitoring and ongoing optimization support'
 
-            ].map(phase: unknown, index: unknown (;
+            ].map(phase: unknow n, index: unknow n (;
               <motion.div
                 key={index}
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -750,7 +746,7 @@
                 transition = {
 
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -778,7 +774,7 @@
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -807,29 +803,29 @@
               management and drive unprecedented business growth.
             </p>"
             <div className="flex flex-wrap justify-center gap-4">"
-              <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 hover:scale-105">
+              <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-semibold hover: fro m-purple-600 hover: t o-pink-600 transition-all duration-300 hover: scal e-105">
                 Start Free Trial"
-                <ArrowRight className="ml-2 w-5 h-5"  />              </a>
+                <ArrowRight className="ml-2 w-5 h-5"   />              </a>
               <a "
                 href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700 transition-all duration-200 border border-slate-600"
+                className="inline-flex items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover: b g-slate-700 transition-all duration-200 border border-slate-600"
               >"
-                <Phone className="w-5 h-5 mr-2"  />
+                <Phone className="w-5 h-5 mr-2"   />
                 Call Us
               </a>
             </div>
             "
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-slate-400">"
+            <div className="flex flex-col sm: fle x-row items-center justify-center gap-6 text-slate-400">"
               <div className="flex items-center">"
-                <CheckCircle className="w-5 h-5 text-green-500 mr-2"  />
+                <CheckCircle className="w-5 h-5 text-green-500 mr-2"   />
                 <span>14-day free trial</span>
               </div>"
               <div className="flex items-center">"
-                <CheckCircle className="w-5 h-5 text-green-500 mr-2"  />
+                <CheckCircle className="w-5 h-5 text-green-500 mr-2"   />
                 <span>No credit card required</span>
               </div>"
               <div className="flex items-center">"
-                <CheckCircle className="w-5 h-5 text-green-500 mr-2"  />
+                <CheckCircle className="w-5 h-5 text-green-500 mr-2"   />
                 <span>Cancel anytime</span>              </div>
             </div>
           </motion.div>
@@ -837,33 +833,33 @@
       </section>
 
       {/* Contact Information */}"
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">;"
+      <section className="py-16 px-4 sm: p x-6 lg: p x-8 bg-slate-800/30">;"
         <div className="max-w-7xl mx-auto">"
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div className="grid grid-cols-1 md: gri d-cols-3 gap-8 text-center">
             <div>"
               <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4">"
-                <Phone className="w-6 h-6 text-white"  />
+                <Phone className="w-6 h-6 text-white"   />
               </div>"
-              <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>"              <a href="tel:+13024640950" className="text-purple-400 hover:text-purple-300 transition-colors">
+              <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>"              <a href="tel:+13024640950" className="text-purple-400 hover: tex t-purple-300 transition-colors">
                 +1 302 464 0950
               </a>"
               <p className="text-sm text-slate-400 mt-2">Available 24/7 for urgent support</p>
             </div>
             <div>"
               <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4">"
-                <Mail className="w-6 h-6 text-white"  />
+                <Mail className="w-6 h-6 text-white"   />
               </div>"
-              <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>"              <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 transition-colors">
+              <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>"              <a href="mailto: klebe r@ziontechgroup.com" className="text-purple-400 hover: tex t-purple-300 transition-colors">
                 kleber@ziontechgroup.com
               </a>"
               <p className="text-sm text-slate-400 mt-2">Response within 2 hours</p>
             </div>
             <div>"
               <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mx-auto mb-4">"
-                <MapPin className="w-6 h-6 text-white"  />
+                <MapPin className="w-6 h-6 text-white"   />
               </div>"
               <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>"              <p className="text-slate-300">
-                364 E Main St STE 1008<br />
+                364 E Main St STE 1008<br  />
                 Middletown DE 19709
               </p>"
               <p className="text-sm text-slate-400 mt-2">Global remote support available</p>

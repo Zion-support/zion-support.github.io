@@ -1,6 +1,5 @@
       ]
-    },;
-    {
+    }, {
 "
       name: "Risk Management Suite","
       price: "From $2,999/month",
@@ -12,8 +11,7 @@
         "Compliance reporting","
         "Custom risk models"
       ]
-    },;
-    {
+    }, {
 "
       name: "Market Analysis Engine","
       price: "From $3,999/month",
@@ -25,8 +23,7 @@
         "Custom research tools","
         "Real-time insights"
       ]
-    },;
-    {
+    }, {
 "
       name: "Quantitative Research","
       price: "From $5,999/month",
@@ -68,14 +65,14 @@
     "Real-time Data Processing",;"    "Blockchain Integration";
   ];
 
-  return()
+  return ()
     <>
       <SEO "
         title = "AI Financial Trading & Risk Management - Zion Tech Group"
         description="Transform your trading operations with AI-powered algorithms, comprehensive risk management, and real-time market analysis. Maximize returns while minimizing risks."
         canonical="/services/ai-financial-trading-risk-management"
         url="https://ziontechgroup.com/services/ai-financial-trading-risk-management"
-       />
+        />
 "      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900">
         {/* Hero Section */}"
         <section className="relative py-20 px-6 overflow-hidden">'"
@@ -85,7 +82,7 @@
               initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -106,25 +103,25 @@
 }}
               transition={{ duration: 0.6 }}
 "
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+              <h1 className="text-5xl md: tex t-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 AI Financial Trading & Risk Management
               </h1>"
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              <p className="text-xl md: tex t-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Revolutionize your trading operations with AI-powered algorithms,
                 comprehensive risk management, and real-time market analysis
               </p>"
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: fle x-row gap-4 justify-center">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}"
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover: fro m-cyan-600 hover: t o-blue-700 transition-all duration-300"
 
                   Get Started Today
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}"
-                  className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
+                  className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover: b g-cyan-500 hover: tex t-white transition-all duration-300"
 
                   View Demo
                 </motion.button>
@@ -140,7 +137,7 @@
               initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -162,7 +159,7 @@
               transition={{ duration: 0.6 }}"
               className="text-center mb-16"
 "
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+              <h2 className="text-4xl md: tex t-5xl font-bold mb-6 text-white">
                 Advanced Trading & Risk Management Features
               </h2>"
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -171,14 +168,14 @@
               </p>
             </motion.div>
 "
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map(feature: unknown, index: unknown (
+            <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
+              {features.map(feature: unknow n, index: unknow n (
                 <motion.div
                   key={index}
                   initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -200,7 +197,7 @@
                   transition = {
 
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -208,7 +205,7 @@
 
 
 }}"
-                  className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-cyan-500/50 transition-all duration-300"
+                  className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: borde r-cyan-500/50 transition-all duration-300"
 "
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">"
                     <feature.icon className="w-6 h-6 text-white" />
@@ -228,7 +225,7 @@
               initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -250,7 +247,7 @@
               transition={{ duration: 0.6 }}"
               className="text-center mb-16"
 "
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+              <h2 className="text-4xl md: tex t-5xl font-bold mb-6 text-white">
                 Comprehensive Trading Solutions
               </h2>"
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -259,14 +256,14 @@
               </p>
             </motion.div>
 "
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-              {servicePackages.map(pkg: unknown, index: unknown 
+            <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
+              {servicePackages.map(pkg: unknow n, index: unknow n 
                 <motion.div
                   key={index}
                   initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -288,7 +285,7 @@
                   transition = {
 
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -296,21 +293,21 @@
 
 
 }}"
-                  className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-cyan-500/50 transition-all duration-300"
+                  className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: borde r-cyan-500/50 transition-all duration-300"
 "
                   <h3 className="text-xl font-semibold mb-3 text-white">{pkg.name}</h3>"
                   <div className="text-3xl font-bold mb-6 text-cyan-400">{pkg.price}</div>"
                   <ul className="space-y-3 mb-6">
                     {pkg.features.map((feature, featureIndex) => ("
                       <li key={featureIndex} className="flex items-center text-gray-300">"
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />                        {feature}
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"   />                        {feature}
                       </li>
                     ))}
                   </ul>
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}"
-                    className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+                    className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover: fro m-cyan-600 hover: t o-blue-700 transition-all duration-300"
 
                     Get Started
                   </motion.button>;
@@ -327,7 +324,7 @@
               initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -349,7 +346,7 @@
               transition={{ duration: 0.6 }}"
               className="text-center mb-16"
 "
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+              <h2 className="text-4xl md: tex t-5xl font-bold mb-6 text-white">
                 Multi-Asset Trading Support
               </h2>"
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -358,14 +355,14 @@
               </p>
             </motion.div>
 "
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-              {supportedAssets.map(asset: unknown, index: unknown (
+            <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-6">
+              {supportedAssets.map(asset: unknow n, index: unknow n (
                 <motion.div
                   key={index}
                   initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -387,7 +384,7 @@
                   transition = {
 
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -397,7 +394,7 @@
 }}"
                   className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 text-center"
 "
-                  <DollarSign className="w-8 h-8 text-cyan-400 mx-auto mb-3"  />"                  <p className="text-white font-medium">{asset}</p>
+                  <DollarSign className="w-8 h-8 text-cyan-400 mx-auto mb-3"   />"                  <p className="text-white font-medium">{asset}</p>
                 </motion.div>;
               ))}
             </div>
@@ -411,7 +408,7 @@
               initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -433,7 +430,7 @@
               transition={{ duration: 0.6 }}"
               className="text-center mb-16"
 "
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+              <h2 className="text-4xl md: tex t-5xl font-bold mb-6 text-white">
                 Transform Your Trading Operations
               </h2>"
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -442,14 +439,14 @@
               </p>
             </motion.div>
 "
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map(benefit: unknown, index: unknown (
+            <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
+              {benefits.map(benefit: unknow n, index: unknow n (
                 <motion.div
                   key={index}
                   initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -471,7 +468,7 @@
                   transition = {
 
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -482,7 +479,7 @@
                   className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10"
 "
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-4">"
-                    <CheckCircle className="w-6 h-6 text-white"  />
+                    <CheckCircle className="w-6 h-6 text-white"   />
                   </div>"                  <p className="text-white text-lg font-medium">{benefit}</p>
                 </motion.div>;
               ))}
@@ -497,7 +494,7 @@
               initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -519,7 +516,7 @@
               transition={{ duration: 0.6 }}"
               className="text-center mb-16"
 "
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+              <h2 className="text-4xl md: tex t-5xl font-bold mb-6 text-white">
                 Cutting-Edge Trading Technology
               </h2>"
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -528,14 +525,14 @@
               </p>
             </motion.div>
 "
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
-              {technologies.map(tech: unknown, index: unknown (
+            <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-6">
+              {technologies.map(tech: unknow n, index: unknow n (
                 <motion.div
                   key={index}
                   initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -557,7 +554,7 @@
                   transition = {
 
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -567,7 +564,7 @@
 }}"
                   className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 text-center"
 "
-                  <Zap className="w-8 h-8 text-blue-400 mx-auto mb-3"  />"                  <p className="text-white font-medium">{tech}</p>
+                  <Zap className="w-8 h-8 text-blue-400 mx-auto mb-3"   />"                  <p className="text-white font-medium">{tech}</p>
                 </motion.div>;
               ))}
             </div>
@@ -581,7 +578,7 @@
               initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -601,7 +598,7 @@
 
 }}
               transition={{ duration: 0.6 }}"
-              className="text-4xl md:text-5xl font-bold mb-6 text-white"
+              className="text-4xl md: tex t-5xl font-bold mb-6 text-white"
 
               Ready to Transform Your Trading?
             </motion.h2>
@@ -609,7 +606,7 @@
               initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -648,7 +645,7 @@
               initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -678,19 +675,19 @@
 
 
 }}"
-              className="flex flex-col sm:flex-row gap-4 justify-center"
+              className="flex flex-col sm: fle x-row gap-4 justify-center"
 
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
-                className="px-8 py-4 bg-white text-cyan-600 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
+                className="px-8 py-4 bg-white text-cyan-600 rounded-lg font-semibold hover: b g-gray-100 transition-all duration-300"
 
                 Start Free Trial
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
-                className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300"
+                className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover: b g-white hover: tex t-cyan-600 transition-all duration-300"
 
                 Schedule Demo
               </motion.button>
@@ -705,7 +702,7 @@
               initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -727,7 +724,7 @@
               transition={{ duration: 0.6 }}"
               className="text-center mb-16"
 "
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+              <h2 className="text-4xl md: tex t-5xl font-bold mb-6 text-white">
                 Get in Touch
               </h2>"
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -736,12 +733,12 @@
               </p>
             </motion.div>
 "
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: gri d-cols-3 gap-8">
               <motion.div
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -763,7 +760,7 @@
                 transition={{ duration: 0.6 }}"
                 className="text-center"
 "
-                <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4"  />"
+                <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4"   />"
                 <h3 className="text-xl font-semibold mb-2 text-white">Phone</h3>"                <p className="text-gray-300">+1 302 464 0950</p>
               </motion.div>
 
@@ -771,7 +768,7 @@
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -803,7 +800,7 @@
 }}"
                 className="text-center"
 "
-                <Mail className="w-12 h-12 text-cyan-400 mx-auto mb-4"  />"
+                <Mail className="w-12 h-12 text-cyan-400 mx-auto mb-4"   />"
                 <h3 className="text-xl font-semibold mb-2 text-white">Email</h3>"                <p className="text-gray-300">kleber@ziontechgroup.com</p>
               </motion.div>
 
@@ -811,7 +808,7 @@
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -843,7 +840,7 @@
 }}"
                 className="text-center"
 "
-                <Globe className="w-12 h-12 text-cyan-400 mx-auto mb-4"  />"
+                <Globe className="w-12 h-12 text-cyan-400 mx-auto mb-4"   />"
                 <h3 className="text-xl font-semibold mb-2 text-white">Website</h3>"                <p className="text-gray-300">https://ziontechgroup.com</p>
               </motion.div>
             </div>
@@ -852,7 +849,7 @@
               initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -886,7 +883,7 @@
 "
               <h3 className="text-2xl font-semibold mb-4 text-white">Address</h3>"
               <p className="text-gray-300">
-                364 E Main St STE 1008<br />
+                364 E Main St STE 1008<br  />
                 Middletown DE 19709
               </p>
             </motion.div>;

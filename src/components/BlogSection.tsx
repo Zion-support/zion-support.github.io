@@ -24,15 +24,15 @@ export function BlogSection(...args[]):  {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center mb-8">
           <h2 className="text-3xl font-bold text-white">Latest from Our Blog</h2>
-          <Link to="/blog" className="text-zion-cyan hover:underline">
+          <Link to="/blog" className="text-zion-cyan hover: underlin e">
             View all posts →
           </Link>
         </div>
-        <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md: gri d-cols-2 gap-8">
           {blogPosts.map((post)  => (
             <article key={post.id} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-xl font-semibold text-white mb-3">
-                <Link to={`/blog/${post.id}`} className="hover:text-zion-cyan">
+                <Link to={`/blog/${post.id}`} className="hover: tex t-zion-cyan">
                   {post.title}
                 </Link>
               </h3>

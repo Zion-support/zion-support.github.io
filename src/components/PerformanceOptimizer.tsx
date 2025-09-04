@@ -10,7 +10,7 @@ export default function Page() {
       description: 'Split JavaScript bundles to reduce initial load time',
       impact: 'high',
       category: 'javascript',
-      implemented: false},
+      implemented: fals e},
     {
 
       id: 'css-optimization',
@@ -18,7 +18,7 @@ export default function Page() {
       description: 'Inline critical CSS and defer non-critical styles',
       impact: 'medium',
       category: 'css',
-      implemented: false},
+      implemented: fals e},
     {
 
       id: 'font-optimization',
@@ -26,7 +26,7 @@ export default function Page() {
       description: 'Use font-display: swap and preload critical fonts',
       impact: 'medium',
       category: 'fonts',
-      implemented: false},
+      implemented: fals e},
     {
 
       id: 'caching',
@@ -34,7 +34,7 @@ export default function Page() {
       description: 'Set up proper cache headers for static assets',
       impact: 'high',
       category: 'caching',
-      implemented: false},
+      implemented: fals e},
     {
 
       id: 'server-optimization',
@@ -42,7 +42,7 @@ export default function Page() {
       description: 'Optimize server response time and enable compression',
       impact: 'medium',
       category: 'server',
-      implemented: false},
+      implemented: fals e},
   ]);
 
   const [isMonitoring, setIsMonitoring] = useState(false);
@@ -57,13 +57,13 @@ export default function Page() {
     intervalRef.current = setInterval(() => {
       updateResourceMetrics()}, 5000)}, [])}, []);
 
-    const newResourceMetrics: ResourceMetrics = {
-      totalResources: resources.length,
-      totalSize: resources.reduce((acc, resource) => acc + (resource as any).transferSize || 0, 0),
-      images: resources.filter(r => r.initiatorType === 'img').length,
-      scripts: resources.filter(r => r.initiatorType === 'script').length,
-      stylesheets: resources.filter(r => r.initiatorType === 'link').length,
-      fonts: resources.filter(r => r.initiatorType === 'font').length
+    const newResourceMetrics: ResourceMetric s = {
+      totalResources: resource s.length,
+      totalSize: resource s.reduce((acc, resource) => acc + (resource as any).transferSize || 0, 0),
+      images: resource s.filter(r => r.initiatorType === 'img').length,
+      scripts: resource s.filter(r => r.initiatorType === 'script').length,
+      stylesheets: resource s.filter(r => r.initiatorType === 'link').length,
+      fonts: resource s.filter(r => r.initiatorType === 'font').length
     };
     setResourceMetrics(newResourceMetrics)}, []);
 
@@ -76,7 +76,7 @@ export default function Page() {
     newMetrics.score = Math.max(0, score) ;
     setMetrics(newMetrics) ;
     setHistory(prev => [...prev.slice (-9) , newMetrics]) }, []) ;
-export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
+export const PerformanceOptimizer: Reac t.FC<PerformanceOptimizerProps> = ({ children }) => {
   useEffect(() => {
 // TODO: Add dependencies if needed
 
@@ -131,7 +131,7 @@ return ("
     <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">"
       <div className="flex items-center justify-between mb-6">"
         <div className="flex items-center gap-3">"
-          <Activity className="w-6 h-6 text-zion-cyan"  />"
+          <Activity className="w-6 h-6 text-zion-cyan"   />"
           <h2 className="text-xl font-bold text-white">
             Performance Optimizer
           </h2>
@@ -139,8 +139,8 @@ return ("
         <button
           onClick={() => setIsMonitoring(!isMonitoring)}
           className={`px-4 py-2 rounded-lg font-medium transition-colors ${isMonitoring'
-              ? 'bg-red-500 hover:bg-red-600 text-white''
-              : 'bg-zion-cyan hover:bg-zion-cyan-dark text-white'`
+              ? 'bg-red-500 hover: b g-red-600 text-white''
+              : 'bg-zion-cyan hover: b g-zion-cyan-dark text-white'`
           }`}
         >
           {isMonitoring ? 'Stop Monitoring' : 'Start Monitoring'}
@@ -148,7 +148,7 @@ return ("
       </div>
 
       {/* Performance Score */}"
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">"
+      <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-8">"
         <div className="bg-white/5 rounded-lg p-4">"
           <div className="flex items-center justify-between mb-4">"
             <h3 className="text-lg font-semibold text-white">
@@ -168,7 +168,7 @@ return ("
 "
         <div className="bg-white/5 rounded-lg p-4">"
           <div className="flex items-center gap-2 mb-4">"
-            <TrendingUp className="w-5 h-5 text-zion-cyan"  />"
+            <TrendingUp className="w-5 h-5 text-zion-cyan"   />"
             <h3 className="text-lg font-semibold text-white">
               Real-time Metrics
             </h3>
@@ -205,7 +205,7 @@ return ("
       {/* Optimization Suggestions */}"
       <div className="mb-6">"
         <div className="flex items-center gap-2 mb-4">"
-          <Zap className="w-5 h-5 text-zion-cyan"  />"
+          <Zap className="w-5 h-5 text-zion-cyan"   />"
           <h3 className="text-lg font-semibold text-white">
             Optimization Suggestions
           </h3>
@@ -242,14 +242,14 @@ return ("
                   <div className="flex items-center gap-4 text-xs text-gray-400">"
                     <span className="capitalize">{suggestion.category}</span>
                     <span>•</span>
-                    <span > Estimated improvement: 15 - 25%</span>
+                    <span > Estimated improvement: 1 5 - 25%</span>
                   </div>
                 </div>
                 <button
                   onClick={() => toggleSuggestion(suggestion.id)}`
                   className={`px-3 py-1 rounded text-sm font-medium transition-colors ${suggestion.implemented'
-                      ? 'bg-green-500 hover:bg-green-600 text-white''
-                      : 'bg-zion-cyan hover:bg-zion-cyan-dark text-white'`
+                      ? 'bg-green-500 hover: b g-green-600 text-white''
+                      : 'bg-zion-cyan hover: b g-zion-cyan-dark text-white'`
                   }`}
                 >
                   {suggestion.implemented ? 'Implemented' : 'Implement'}
@@ -263,7 +263,7 @@ return ("
       {history.length > 0 && (
         <div>"
           <div className="flex items-center gap-2 mb-4">"
-            <BarChart3 className="w-5 h-5 text-zion-cyan" />"
+            <BarChart3 className="w-5 h-5 text-zion-cyan"  />"
             <h3 className="text-lg font-semibold text-white">
               Performance History
             </h3>
@@ -275,20 +275,19 @@ return ("
             </div>"
             <div className="flex items-end gap-1 h-20">
               {history.map((metric, index) => (
-                <div
-                  key={index}"
+                <div key={index}"
                   className="flex-1 bg-gradient-to-t from-zion-cyan to-zion-cyan-light rounded-t"`
                   style={{ height: `${metric.score}%` }}`
                   title={`Score: ${Math.round(metric.score)}`}
-                />
+                 />
               ))}
             </div>
           </div>
         </div>) }
     </div>) ;};
-interface PerformanceOptimizerProps { children: React.ReactNode}
+interface PerformanceOptimizerProps { children: Reac t.ReactNode}
 
-export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
+export const PerformanceOptimizer: Reac t.FC<PerformanceOptimizerProps> = ({ children }) => {
   useEffect(() => {
     // comment
 const preloadCriticalResources = () => {
@@ -333,8 +332,8 @@ const observer = new IntersectionObserver((entries) => {
         })} { rootMargin: "50px" }
 
 ;,"});,"})" PerformanceOptimizerProps {,"});,"})"
-  children: React.ReactNode,"});,"});"
-}export const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({ children }) => {,"});,"})"
+  children: Reac t.ReactNode,"});,"});"
+}export const PerformanceOptimizer: Reac t.FC < PerformanceOptimizerProps> = ({ children }) => {,"});,"})"
   useEffect ( () => {,"});,"})"
     // comment
 const preloadCriticalResources = () => {,"});,"})"
@@ -361,9 +360,9 @@ target.style.backgroundImage = "url (${target.dataset.src}) ";"              tar
       observer.disconnect () ;,"});,"});"
 }, []) ;,"});,"})","});,"})"
 export default function Page() {,"});,"})"
-interface PerformanceOptimizerProps { children: React.ReactNode,"});,"});"
+interface PerformanceOptimizerProps { children: Reac t.ReactNode,"});,"});"
 }"});,"})"
-export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {,"});,"})"
+export const PerformanceOptimizer: Reac t.FC<PerformanceOptimizerProps> = ({ children }) => {,"});,"})"
   useEffect(() => {,"});,"})"
     // comment
       const criticalFonts = [],"});,"})"
@@ -402,11 +401,11 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
 }, []);,"});,"})"
   return <>{children}</>"});,"})"interface PerformanceOptimizerProps {
 
-   children: React.ReactNode}export const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({ children }) => {
+   children: Reac t.ReactNode}export const PerformanceOptimizer: Reac t.FC < PerformanceOptimizerProps> = ({ children }) => {
   useEffect ( () => {
     // comment
       const criticalFonts = []",criticalFonts.forEach (font => {;interface PerformanceOptimizerProps {"
-   children: React.ReactNode}export const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({children }) => {useEffect ( () => {
+   children: Reac t.ReactNode}export const PerformanceOptimizer: Reac t.FC < PerformanceOptimizerProps> = ({children }) => {useEffect ( () => {
     // comment
 const preloadCriticalResources = () => {""
       const criticalFonts = []criticalFonts.forEach (font => {""
@@ -419,7 +418,7 @@ const optimizeImages = () => {"
           img.decoding = "async"        }      })}// comment
 const optimizeImages = () => {const images = document.querySelectorAll ("img") "      images.forEach (img => {"        if (!img.loading) {;react&apos;interface PerformanceOptimizerProps {
 
-   children: React.ReactNode}&apos;&apos;export const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({ children }) => {
+   children: Reac t.ReactNode}&apos;&apos;export const PerformanceOptimizer: Reac t.FC < PerformanceOptimizerProps> = ({ children }) => {
     // comment
 
 const preloadCriticalResources = () => {}

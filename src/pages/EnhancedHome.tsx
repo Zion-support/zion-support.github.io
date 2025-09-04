@@ -55,10 +55,10 @@ import {
 
 // Optimized futuristic animated background component
 
-  return()
+  return ()
     <div className="fixed inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
       {/* Animated grid with neon effect */}"
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.15)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.15)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.15)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.15)_1px,transparent_1px)] bg-[size: 50px_50p x] animate-pulse"></div>
       
       {/* Optimized floating particles */}
       {particles.map((particle) => (
@@ -73,15 +73,15 @@ import {
             scale: [0.5, 1.2, 0.5]}}
           transition={{
 
-            duration: particle.duration,
-            repeat: Infinity,
-            delay: particle.delay,"
+            duration: particl e.duration,
+            repeat: Infinit y,
+            delay: particl e.delay,"
             ease: "easeInOut"
           }}
           style={{
 
-            left: particle.left,
-            top: particle.top}}
+            left: particl e.left,
+            top: particl e.top}}
         />
       ))}
     </div>
@@ -99,49 +99,49 @@ FuturisticBackground.displayName = 'FuturisticBackground';
     
     return () => clearInterval (interval) }, [nextSlide]) ;
   return ("
-    <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20">"
+    <section className="relative min-h-screen flex items-center justify-center px-4 sm: p x-6 lg: p x-8 pt-20">"
       <div className="max-w-7xl mx-auto text-center">
         {/* Hero Content */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 3 0 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}"
           className="mb-12"
         >"
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 mb-6">"
-            <Sparkles className="w-5 h-5 text-cyan-400 mr-2"  />"            <span className="text-cyan-400 font-medium">2025 Innovation Hub</span>
+            <Sparkles className="w-5 h-5 text-cyan-400 mr-2"   />"            <span className="text-cyan-400 font-medium">2025 Innovation Hub</span>
           </div>
           "
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+          <h1 className="text-5xl md: tex t-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
             Zion Tech Group
           </h1>"
-          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
+          <p className="text-xl md: tex t-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
             Leading the future of technology with cutting-edge AI solutions, quantum computing, 
             and innovative micro SAAS services that transform businesses worldwide.
           </p>
 
           {/* CTA Buttons */}"
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm: fle x-row gap-4 justify-center items-center">
             <Link"
               to="/services"
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-zion-slate-dark"
+              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover: fro m-cyan-600 hover: t o-blue-600 text-white font-bold rounded-xl transition-all duration-300 transform hover: scal e-105 shadow-lg hover: shado w-cyan-500/25 flex items-center space-x-2 focus: outlin e-none focus: rin g-2 focus: rin g-cyan-400 focus: rin g-offset-2 focus: rin g-offset-zion-slate-dark"
               aria-label="Explore our services"
             >
               <span>Explore Services</span>"
-              <ArrowRight className="w-5 h-5"  />            </Link>
+              <ArrowRight className="w-5 h-5"   />            </Link>
             <button
               onClick={onGetStarted}"
-              className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-cyan-400/30 hover:bg-white/20 text-white font-bold rounded-xl transition-all duration-300 hover:border-cyan-400/50 flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-zion-slate-dark"
+              className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-cyan-400/30 hover: b g-white/20 text-white font-bold rounded-xl transition-all duration-300 hover: borde r-cyan-400/50 flex items-center space-x-2 focus: outlin e-none focus: rin g-2 focus: rin g-cyan-400 focus: rin g-offset-2 focus: rin g-offset-zion-slate-dark"
               aria-label="Get started with Zion Tech"
             >
               <span>Get Started</span>"
-              <ArrowRight className="w-5 h-5"  />            </button>
+              <ArrowRight className="w-5 h-5"   />            </button>
           </div>
         </motion.div>
 
         {/* Hero Slides */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 2 0 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}"
           className="max-w-6xl mx-auto"
@@ -150,7 +150,7 @@ FuturisticBackground.displayName = 'FuturisticBackground';
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentSlide}
-                initial={{ opacity: 0, x: 100 }}
+                initial={{ opacity: 0, x: 10 0 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -100 }}
                 transition={{ duration: 0.5 }}"
@@ -159,7 +159,7 @@ FuturisticBackground.displayName = 'FuturisticBackground';
                 <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full mb-6">"
                   <heroSlides[currentSlide].icon className="w-10 h-10 text-cyan-400" />
                 </div>"
-                <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                <h3 className="text-2xl md: tex t-3xl font-bold text-white mb-4">
                   {heroSlides[currentSlide].title}
                 </h3>"
                 <p className="text-lg text-gray-300 mb-6 max-w-2xl mx-auto">
@@ -180,16 +180,16 @@ FuturisticBackground.displayName = 'FuturisticBackground';
             {/* Navigation Arrows */}
             <button
               onClick={prevSlide}"
-              className="absolute left-0 top-1/2 -translate-y-1/2 p-2 bg-white/10 backdrop-blur-sm rounded-full text-white hover:bg-white/20 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400"
+              className="absolute left-0 top-1/2 -translate-y-1/2 p-2 bg-white/10 backdrop-blur-sm rounded-full text-white hover: b g-white/20 transition-colors focus: outlin e-none focus: rin g-2 focus: rin g-cyan-400"
               aria-label="Previous slide"
             >"
-              <ChevronLeft className="w-6 h-6"  />            </button>
+              <ChevronLeft className="w-6 h-6"   />            </button>
             <button
               onClick={nextSlide}"
-              className="absolute right-0 top-1/2 -translate-y-1/2 p-2 bg-white/10 backdrop-blur-sm rounded-full text-white hover:bg-white/20 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400"
+              className="absolute right-0 top-1/2 -translate-y-1/2 p-2 bg-white/10 backdrop-blur-sm rounded-full text-white hover: b g-white/20 transition-colors focus: outlin e-none focus: rin g-2 focus: rin g-cyan-400"
               aria-label="Next slide"
             >"
-              <ChevronRight className="w-6 h-6"  />            </button>
+              <ChevronRight className="w-6 h-6"   />            </button>
 
             {/* Dots Indicator */}"
             <div className="flex justify-center mt-6 space-x-2">
@@ -216,16 +216,16 @@ HeroSection.displayName = 'HeroSection';
 // Enhanced features section
 
   return ("
-    <section className="py-20 px-4 sm:px-6 lg:px-8">"
+    <section className="py-20 px-4 sm: p x-6 lg: p x-8">"
       <div className="max-w-7xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 2 0 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: tru e }}
           transition={{ duration: 0.6 }}"
           className="text-center mb-16"
         >"
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
             Why Choose Zion Tech Group?
           </h2>"
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -233,18 +233,18 @@ HeroSection.displayName = 'HeroSection';
           </p>
         </motion.div>
 "
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 2 0 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}"
+              viewport={{ once: tru e }}
+              transition={{ duration: 0.6, delay: inde x * 0.1 }}"
               className="group"
             >"
-              <div className="relative p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-cyan-400/50 transition-all duration-300 hover:bg-white/10">`
-                <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300`}>"
+              <div className="relative p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover: borde r-cyan-400/50 transition-all duration-300 hover: b g-white/10">`
+                <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl mb-6 group-hover: scal e-110 transition-transform duration-300`}>"
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>"
                 <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>"
@@ -261,22 +261,22 @@ FeaturesSection.displayName = 'FeaturesSection';
 // Enhanced stats section
 
   return ("
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-zion-slate-dark to-zion-slate">"
+    <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-gradient-to-r from-zion-slate-dark to-zion-slate">"
       <div className="max-w-7xl mx-auto">"
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md: gri d-cols-4 gap-8">
           {stats.map((stat, index) => (
             <motion.div
               key={stat.label}
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}"
+              viewport={{ once: tru e }}
+              transition={{ duration: 0.6, delay: inde x * 0.1 }}"
               className="text-center"
             >"
               <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full mb-4">"
                 <stat.icon className="w-8 h-8 text-cyan-400" />
               </div>"
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>"
+              <div className="text-3xl md: tex t-4xl font-bold text-white mb-2">{stat.number}</div>"
               <div className="text-gray-300">{stat.label}</div>
             </motion.div>
           ))}
@@ -296,7 +296,7 @@ StatsSection.displayName = 'StatsSection';
 CTASection.displayName = 'CTASection';
 
 // Main EnhancedHome component
-const EnhancedHome: React.FC = () => {
+const EnhancedHome: Reac t.FC = () => {
   const [isLoaded, setIsLoaded] = useState (false) ;
 
   useEffect ( () => {
@@ -315,17 +315,17 @@ const EnhancedHome: React.FC = () => {
       </div>
     )}
 
-  return()
+  return ()
     <>
       <EnhancedSEO "
         title="Zion Tech Group - Leading AI Solutions & Technology Services""
         description="Transform your business with cutting-edge AI solutions, quantum computing, and innovative micro SAAS services. Expert technology consulting and digital transformation.""
         keywords="AI solutions, quantum computing, micro SAAS, digital transformation, technology consulting, machine learning, cybersecurity, cloud services""        type="website"
-       />
+        />
       
       <FuturisticBackground  />
       "      <div className="relative z-10">
-        <HeroSection onGetStarted={handleGetStarted}   />
+        <HeroSection onGetStarted={handleGetStarted}    />
         
         <LazyLoadWrapper>
           <FeaturesSection  />

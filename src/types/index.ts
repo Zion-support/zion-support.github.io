@@ -6,8 +6,8 @@ export interface User {
   name: string;
   email: string;
   avatar?: string;
-  createdAt: Date;
-  updatedAt: Date;
+  createdAt: Dat e;
+  updatedAt: Dat e;
 }
 
 export interface ApiResponse<T> {

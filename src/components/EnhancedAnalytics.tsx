@@ -17,7 +17,7 @@ interface EnhancedAnalyticsProps {
   enabled?: boolean;
   showDashboard?: boolean;
   trackingId?: string;
-export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
+export const EnhancedAnalytics: Reac t.FC<EnhancedAnalyticsProps> = ({
 
   enabled = true,
   showDashboard = false,
@@ -52,14 +52,14 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       document.head.appendChild(script) ;
 
       window.dataLayer = window.dataLayer || [];
-      function gtag(...args: any[]) {
+      function gtag(...args: an y[]) {
 
         window.dataLayer.push(args);
       }
       gtag('js', new Date());
       gtag('config', trackingId, {
-        page_title: document.title,
-        page_location: window.location.href,
+        page_title: documen t.title,
+        page_location: windo w.location.href,
         custom_map: {
 
           custom_parameter_1: 'user_type',
@@ -68,19 +68,19 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       // Track page view'
       gtag('event',page_view', {
 
-        page_title: document.title,
-        page_location: window.location.href,
-        page_referrer: document.referrer})}
+        page_title: documen t.title,
+        page_location: windo w.location.href,
+        page_referrer: documen t.referrer})}
     // Initialize session tracking
     setSessionStart(Date.now());
 
     // Track session start'
     trackEvent('session_start', {
 
-      timestamp: Date.now(),
-      user_agent: navigator.userAgent,
-      language: navigator.language,
-      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone});
+      timestamp: Dat e.now(),
+      user_agent: navigato r.userAgent,
+      language: navigato r.language,
+      timezone: Int l.DateTimeFormat().resolvedOptions().timeZone});
 
     return : unknown {
       if(script) {
@@ -97,16 +97,16 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 }, []);, []);
     if(!enabled) return;
 
-    const handleRouteChange = (...args: unknown[]): unknown => {
+    const handleRouteChange = (...args: unknow n[]): unknown => {
       const newPage = window.location.pathname;      if(newPage !== currentPage) {
 
         // Track page view'
         trackEvent('page_view', {
 
-          page_path: newPage,
-          page_title: document.title,
-          previous_page: currentPage,
-          time_on_previous_page: timeOnPage});
+          page_path: newPag e,
+          page_title: documen t.title,
+          previous_page: currentPag e,
+          time_on_previous_page: timeOnPag e});
 
         setCurrentPage(newPage) ;
         setTimeOnPage(0) ;
@@ -119,9 +119,9 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     // Track initial page'
     trackEvent('page_view', {
 
-      page_path: currentPage,
-      page_title: document.title,
-      is_initial_page: true});
+      page_path: currentPag e,
+      page_title: documen t.title,
+      is_initial_page: tru e});
 
     return () => {
 
@@ -141,8 +141,8 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       setUserInteractions(prev => prev + 1);'      trackEvent('user_interaction', {
 '
         interaction_type: 'click',
-        page_path: currentPage,
-        timestamp: Date.now()})};
+        page_path: currentPag e,
+        timestamp: Dat e.now()})};
 
       if(scrollPercent > scrollDepth) {
 
@@ -153,23 +153,23 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 
           trackEvent('scroll_milestone', {
 
-            milestone: 25,
-            page_path: currentPage})} else if(scrollPercent >= 50 && scrollDepth < 50) {
+            milestone: 2 5,
+            page_path: currentPag e})} else if(scrollPercent >= 50 && scrollDepth < 50) {
 
           trackEvent('scroll_milestone', {
 
-            milestone: 50,
-            page_path: currentPage})} else if(scrollPercent >= 75 && scrollDepth < 75) {
+            milestone: 5 0,
+            page_path: currentPag e})} else if(scrollPercent >= 75 && scrollDepth < 75) {
 
           trackEvent('scroll_milestone', {
 
-            milestone: 75,
-            page_path: currentPage})} else if(scrollPercent >= 90 && scrollDepth < 90) {
+            milestone: 7 5,
+            page_path: currentPag e})} else if(scrollPercent >= 90 && scrollDepth < 90) {
 
           trackEvent('scroll_milestone', {
 
-            milestone: 90,
-            page_path: currentPage})}
+            milestone: 9 0,
+            page_path: currentPag e})}
       }
     }};
     // Set up event listeners'
@@ -198,10 +198,10 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     if(!enabled) return;
 
         trackEvent('performance_metrics', {
-          load_time: loadTime,
-          fcp: fcp,
-          lcp: lcp,
-          page_path: currentPage})}    };
+          load_time: loadTim e,
+          fcp: fc p,
+          lcp: lc p,
+          page_path: currentPag e})}    };
 
     // Track performance after page load'
     if(document.readyState === 'complete') {
@@ -222,10 +222,10 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     if(!enabled) return;
 
       trackEvent('session_end', {
-        session_duration: sessionDuration,
+        session_duration: sessionDuratio n,
         pages_viewed: 1, // Simplified
-        total_interactions: userInteractions,
-        average_time_on_page: timeOnPage})};
+        total_interactions: userInteraction s,
+        average_time_on_page: timeOnPag e})};
 
     window.addEventListener('beforeunload', handleBeforeUnload);
     return () => window.removeEventListener('beforeunload', handleBeforeUnload)}, [enabled, sessionStart, userInteractions, timeOnPage]);
@@ -246,7 +246,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(eventData)}).catch(console.error)}
+          body: JSO N.stringify(eventData)}).catch(console.error)}
 
       // Store locally for dashboard
       setAnalyticsData(prev => {
@@ -256,13 +256,13 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
         return {
 
           ...prev,
-          pageViews: prev.pageViews + (eventName === 'page_view' ? 1 : 0),
+          pageViews: pre v.pageViews + (eventName === 'page_view' ? 1 : 0),
           userEngagement: {
 
             ...prev.userEngagement,
-            scrollDepth: Math.max(prev.userEngagement.scrollDepth, scrollDepth),
-            timeOnPage: Math.max(prev.userEngagement.timeOnPage, timeOnPage),
-            interactions: userInteractions}}});
+            scrollDepth: Mat h.max(prev.userEngagement.scrollDepth, scrollDepth),
+            timeOnPage: Mat h.max(prev.userEngagement.timeOnPage, timeOnPage),
+            interactions: userInteraction s}}});
 
       // console.log('Analytics Event:', eventData)},
     [enabled, currentPage, scrollDepth, timeOnPage, userInteractions]
@@ -279,34 +279,34 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 
       setAnalyticsData({
 
-        pageViews: 1247,
-        uniqueVisitors: 892,
-        sessionDuration: 180,
-        bounceRate: 23.4,
+        pageViews: 124 7,
+        uniqueVisitors: 89 2,
+        sessionDuration: 18 0,
+        bounceRate: 2 3.4,
         deviceTypes: {
 
-          desktop: 65,
-          mobile: 28,
+          desktop: 6 5,
+          mobile: 2 8,
           tablet: 7},
         topPages: ['
-          { path: '/', views: 456, title: 'Home' },
-          { path: '/services', views: 234, title: 'Services' },
-          { path: '/about', views: 189, title: 'About' },
-          { path: '/contact', views: 156, title: 'Contact' },
+          { path: '/', views: 45 6, title: 'Home' },
+          { path: '/services', views: 23 4, title: 'Services' },
+          { path: '/about', views: 18 9, title: 'About' },
+          { path: '/contact', views: 15 6, title: 'Contact' },
         ],
         userEngagement: {
 
-          scrollDepth: scrollDepth,
-          timeOnPage: timeOnPage,
-          interactions: userInteractions},
+          scrollDepth: scrollDept h,
+          timeOnPage: timeOnPag e,
+          interactions: userInteraction s},
         performance: {
 
-          loadTime: 1200,
+          loadTime: 120 0,
           coreWebVitals: {
 
-            fcp: 800,
-            lcp: 1500,
-            fid: 50,
+            fcp: 80 0,
+            lcp: 150 0,
+            fid: 5 0,
             cls: 0.05}}})}
   }, [showDashboard, scrollDepth, timeOnPage, userInteractions]) ;
   if(!enabled) return null;
@@ -320,67 +320,67 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           onClick={() => setIsVisible(!isVisible)}
-          className="fixed top-4 right-32 z-50 p-3 bg-green-600 text-white rounded-full shadow-lg hover:bg-green-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2"
+          className="fixed top-4 right-32 z-50 p-3 bg-green-600 text-white rounded-full shadow-lg hover: b g-green-700 transition-all duration-200 focus: outlin e-none focus: rin g-2 focus: rin g-green-400 focus: rin g-offset-2"
           
           title="Analytics Dashboard"
         >"
-          <BarChart3 className="w-5 h-5" />
+          <BarChart3 className="w-5 h-5"  />
         </motion.button>
       )}
 
       {/* Analytics Dashboard */}
       <AnimatePresence>
         {isVisible && showDashboard && analyticsData && (<motion.div
-            initial={{ opacity: 0, x: 300 }}
+            initial={{ opacity: 0, x: 30 0 }}
             animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 300 }}"
-            className="fixed top-4 right-48 z-50 w-96 bg-white dark:bg-slate-800 rounded-lg shadow-xl border border-slate-200 dark:border-slate-700 overflow-hidden max-h-[80vh]"
+            exit={{ opacity: 0, x: 30 0 }}"
+            className="fixed top-4 right-48 z-50 w-96 bg-white dark: b g-slate-800 rounded-lg shadow-xl border border-slate-200 dark: borde r-slate-700 overflow-hidden max-h-[80vh]"
           >
             {/* Header */}"
             <div className="flex items-center justify-between p-4 bg-gradient-to-r from-green-600 to-blue-600 text-white">"
               <div className="flex items-center space-x-2">"
-                <BarChart3 className="w-5 h-5" />"
+                <BarChart3 className="w-5 h-5"  />"
                 <h3 className="font-semibold">Analytics</h3>
               </div>
               <button
                 onClick={() => setIsVisible(false)}"
-                className="p-1 hover:bg-white/20 rounded transition-colors"
+                className="p-1 hover: b g-white/20 rounded transition-colors"
                 
               >"
-                <Eye className="w-4 h-4"  />              </button>
+                <Eye className="w-4 h-4"   />              </button>
             </div>
 
             {/* Content */}"
             <div className="p-4 space-y-4 max-h-96 overflow-y-auto">
               {/* Overview Metrics */}"
               <div className="grid grid-cols-2 gap-4">"
-                <div className="text-center p-3 bg-slate-50 dark:bg-slate-700 rounded-lg">"
+                <div className="text-center p-3 bg-slate-50 dark: b g-slate-700 rounded-lg">"
                   <div className="text-2xl font-bold text-green-600">
                     {analyticsData.pageViews}
                   </div>"
-                  <div className="text-xs text-slate-600 dark:text-slate-400">
+                  <div className="text-xs text-slate-600 dark: tex t-slate-400">
                     Page Views
                   </div>
                 </div>"
-                <div className="text-center p-3 bg-slate-50 dark:bg-slate-700 rounded-lg">"
+                <div className="text-center p-3 bg-slate-50 dark: b g-slate-700 rounded-lg">"
                   <div className="text-2xl font-bold text-blue-600">
                     {analyticsData.uniqueVisitors}
                   </div>"
-                  <div className="text-xs text-slate-600 dark:text-slate-400">
+                  <div className="text-xs text-slate-600 dark: tex t-slate-400">
                     Unique Visitors                  </div>
                 </div>
               </div>
 
               {/* Device Types */}"
               <div className="space-y-3">"
-                <h4 className="text-sm font-semibold text-slate-700 dark:text-slate-300">
+                <h4 className="text-sm font-semibold text-slate-700 dark: tex t-slate-300">
                   Device Types
                 </h4>"
                 <div className="space-y-2">"
                   <div className="flex items-center justify-between">"
                     <div className="flex items-center space-x-2">"
-                      <Monitor className="w-4 h-4 text-blue-500"  />"
-                      <span className="text-sm text-slate-600 dark:text-slate-400">
+                      <Monitor className="w-4 h-4 text-blue-500"   />"
+                      <span className="text-sm text-slate-600 dark: tex t-slate-400">
                         Desktop
                       </span>
                     </div>"
@@ -390,8 +390,8 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
                   </div>"
                   <div className="flex items-center justify-between">"
                     <div className="flex items-center space-x-2">"
-                      <Smartphone className="w-4 h-4 text-green-500"  />"
-                      <span className="text-sm text-slate-600 dark:text-slate-400">
+                      <Smartphone className="w-4 h-4 text-green-500"   />"
+                      <span className="text-sm text-slate-600 dark: tex t-slate-400">
                         Mobile
                       </span>
                     </div>"
@@ -401,8 +401,8 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
                   </div>"
                   <div className="flex items-center justify-between">"
                     <div className="flex items-center space-x-2">"
-                      <Tablet className="w-4 h-4 text-purple-500"  />"
-                      <span className="text-sm text-slate-600 dark:text-slate-400">
+                      <Tablet className="w-4 h-4 text-purple-500"   />"
+                      <span className="text-sm text-slate-600 dark: tex t-slate-400">
                         Tablet
                       </span>
                     </div>"
@@ -415,12 +415,12 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 
               {/* User Engagement */}"
               <div className="space-y-3">"
-                <h4 className="text-sm font-semibold text-slate-700 dark:text-slate-300">
+                <h4 className="text-sm font-semibold text-slate-700 dark: tex t-slate-300">
                   User Engagement
                 </h4>"
                 <div className="space-y-2">"
                   <div className="flex items-center justify-between">"
-                    <span className="text-sm text-slate-600 dark:text-slate-400">
+                    <span className="text-sm text-slate-600 dark: tex t-slate-400">
                       Scroll Depth
                     </span>"
                     <span className="text-sm font-medium">
@@ -428,7 +428,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
                     </span>
                   </div>"
                   <div className="flex items-center justify-between">"
-                    <span className="text-sm text-slate-600 dark:text-slate-400">
+                    <span className="text-sm text-slate-600 dark: tex t-slate-400">
                       Time on Page
                     </span>"
                     <span className="text-sm font-medium">
@@ -436,7 +436,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
                     </span>
                   </div>"
                   <div className="flex items-center justify-between">"
-                    <span className="text-sm text-slate-600 dark:text-slate-400">
+                    <span className="text-sm text-slate-600 dark: tex t-slate-400">
                       Interactions
                     </span>"
                     <span className="text-sm font-medium">
@@ -448,12 +448,12 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 
               {/* Performance */}"
               <div className="space-y-3">"
-                <h4 className="text-sm font-semibold text-slate-700 dark:text-slate-300">
+                <h4 className="text-sm font-semibold text-slate-700 dark: tex t-slate-300">
                   Performance
                 </h4>"
                 <div className="space-y-2">"
                   <div className="flex items-center justify-between">"
-                    <span className="text-sm text-slate-600 dark:text-slate-400">
+                    <span className="text-sm text-slate-600 dark: tex t-slate-400">
                       Load Time
                     </span>"
                     <span className="text-sm font-medium">
@@ -461,7 +461,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
                     </span>
                   </div>"
                   <div className="flex items-center justify-between">"
-                    <span className="text-sm text-slate-600 dark:text-slate-400">
+                    <span className="text-sm text-slate-600 dark: tex t-slate-400">
                       FCP
                     </span>
                     <span`
@@ -474,7 +474,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
                     </span>
                   </div>"
                   <div className="flex items-center justify-between">"
-                    <span className="text-sm text-slate-600 dark:text-slate-400">
+                    <span className="text-sm text-slate-600 dark: tex t-slate-400">
                       LCP
                     </span>
                     <span`
@@ -491,24 +491,24 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 
               {/* Top Pages */}"
               <div className="space-y-3">"
-                <h4 className="text-sm font-semibold text-slate-700 dark:text-slate-300">
+                <h4 className="text-sm font-semibold text-slate-700 dark: tex t-slate-300">
                   Top Pages
                 </h4>"
                 <div className="space-y-2">
                   {analyticsData.topPages.map((page, index) => (
                     <div
                       key={page.path}"
-                      className="flex items-center justify-between p-2 bg-slate-50 dark:bg-slate-700 rounded"
+                      className="flex items-center justify-between p-2 bg-slate-50 dark: b g-slate-700 rounded"
                     >"
                       <div className="flex items-center space-x-2">"
                         <span className="text-xs font-medium text-slate-500">
                           {index + 1}
                         </span>"
-                        <span className="text-sm text-slate-700 dark:text-slate-300">
+                        <span className="text-sm text-slate-700 dark: tex t-slate-300">
                           {page.title}
                         </span>
                       </div>"
-                      <span className="text-sm font-medium text-slate-600 dark:text-slate-400">
+                      <span className="text-sm font-medium text-slate-600 dark: tex t-slate-400">
                         {page.views}
                       </span>
                     </div>

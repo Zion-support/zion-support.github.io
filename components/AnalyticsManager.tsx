@@ -25,7 +25,7 @@ interface AnalyticsManagerProps {
   enableErrorTracking?: boolean;
 }
 
-const AnalyticsManager: React.FC<AnalyticsManagerProps> = ({
+const AnalyticsManager: Reac t.FC<AnalyticsManagerProps> = ({
   trackingId = process.env.NEXT_PUBLIC_GA_TRACKING_ID,
   enablePerformanceTracking = true,
   enableErrorTracking = true,
@@ -47,8 +47,8 @@ const AnalyticsManager: React.FC<AnalyticsManagerProps> = ({
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', '${trackingId}', {
-        page_title: document.title,
-        page_location: window.location.href,
+        page_title: documen t.title,
+        page_location: windo w.location.href,
         send_page_view: "true"      "});
     `;
     document.head.appendChild(script2);
@@ -64,12 +64,12 @@ const AnalyticsManager: React.FC<AnalyticsManagerProps> = ({
       if (typeof window.gtag !== 'undefined' && 'performance' in window) {
         const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         if (perfData) {
-          const metrics: PerformanceMetrics = {
-            fcp: perfData.domContentLoadedEventEnd - perfData.fetchStart,
-            lcp: perfData.loadEventEnd - perfData.fetchStart,
+          const metrics: PerformanceMetric s = {
+            fcp: perfDat a.domContentLoadedEventEnd - perfData.fetchStart,
+            lcp: perfDat a.loadEventEnd - perfData.fetchStart,
             fid: 0, // First Input Delay - would need additional measurement
             cls: 0, // Cumulative Layout Shift - would need additional measurement
-            ttfb: perfData.responseStart - perfData.fetchStart,
+            ttfb: perfDat a.responseStart - perfData.fetchStart,
           };
 
           window.gtag('event', 'performance_metrics', {
@@ -87,20 +87,20 @@ const AnalyticsManager: React.FC<AnalyticsManagerProps> = ({
   useEffect(() => {
     if (!enableErrorTracking || !isLoaded) return;
 
-    const handleError = (event: ErrorEvent) => {
+    const handleError = (event: ErrorEven t) => {
       if (typeof window.gtag !== 'undefined') {
         window.gtag('event', 'exception', {
-          description: event.message,"          fatal: "false",
-          error_file: event.filename,
-          error_line: event.lineno,
+          description: even t.message,"          fatal: "false",
+          error_file: even t.filename,
+          error_line: even t.lineno,
         });
       }
     };
 
-    const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
+    const handleUnhandledRejection = (event: PromiseRejectionEven t) => {
       if (typeof window.gtag !== 'undefined') {
         window.gtag('event', 'exception', {
-          description: event.reason?.toString() || 'Unhandled Promise Rejection',"          fatal: "false",
+          description: even t.reason?.toString() || 'Unhandled Promise Rejection',"          fatal: "false",
         });
       }
     };
@@ -118,13 +118,13 @@ const AnalyticsManager: React.FC<AnalyticsManagerProps> = ({
 };
 
 // Export tracking functions
-export const trackEvent = (event: AnalyticsEvent) => {
+export const trackEvent = (event: AnalyticsEven t) => {
   if (typeof window.gtag !== 'undefined') {
     window.gtag('event', event.name, {
-      event_category: event.category,
-      event_action: event.action,
-      event_label: event.label,
-      value: event.value,
+      event_category: even t.category,
+      event_action: even t.action,
+      event_label: even t.label,
+      value: even t.value,
       ...event.custom_parameters,
     });
   }

@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default function Demo
-export { Demo }(...args: any[]): any {
+export { Demo }(...args: an y[]): any {
   return (
     <div className="min-h-screen flex items-center justify-center bg-slate-900 text-white p-8">
       <div className="max-w-2xl text-center">

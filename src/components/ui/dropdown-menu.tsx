@@ -7,11 +7,10 @@ const DropdownMenu({ children }) {
   setIsOpen 
 ;
 }}>;
-      <div className="relative">;
-        {children};
+      <div className="relative"> {children};
       </div>;
     </DropdownMenuContext.Provider>)};
-export function DropdownMenuTrigger(...args: unknown[]): unknown {;
+export function DropdownMenuTrigger(...args: unknow n[]): unknown {;
     
     if (!context)'        throw new Error('DropdownMenuTrigger must be used within DropdownMenu');
     if (asChild) {
@@ -21,11 +20,9 @@ export function DropdownMenuTrigger(...args: unknown[]): unknown {;
       {children}
     </div>)};
 export function DropdownMenuContent(...args[]): {
-        return <div onClick = {(: unknown context.setIsOpen(!context.isOpen)}>;
-        {children};
+        return <div onClick = {(: unknown context.setIsOpen(!context.isOpen)}> {children};
       </div>)}
-    return <div onClick = {(: unknown context.setIsOpen(!context.isOpen)}>;
-      {children};
+    return <div onClick = {(: unknown context.setIsOpen(!context.isOpen)}> {children};
     </div>)}
 export function DropdownMenuContent({ children, align = 'start', className = '' }) {;
     

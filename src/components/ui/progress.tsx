@@ -11,10 +11,9 @@ export function Progress({ value, max = 100, className = '' }: ProgressProps) {
   
   return (
     <div className={`w-full bg-gray-200 rounded-full h-2 ${className}`}>
-      <div
-        className="h-2 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full transition-all duration-300"
+      <div className="h-2 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full transition-all duration-300"
         style={{ width: `${percentage}%` }}
-      />
+       />
     </div>
   );
 }

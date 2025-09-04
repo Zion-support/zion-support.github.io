@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from
   'next';
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function handler(req: NextApiReques t, res: NextApiRespons e) {
   const baseUrl =, https: //ziontechgroup.com';'
   
   const staticPages = [

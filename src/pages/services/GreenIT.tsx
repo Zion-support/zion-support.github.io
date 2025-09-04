@@ -1,5 +1,5 @@
 
-  return()
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
         title="Green IT Services - Zion Tech Group""        description="Transform your IT infrastructure with sustainable, energy-efficient solutions. Reduce carbon footprint, lower costs, and meet environmental compliance standards."
@@ -13,7 +13,7 @@
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -36,9 +36,9 @@
             className="text-center"
 "
             <div className="inline-flex items-center px-4 py-2 bg-green-400/20 text-green-400 rounded-full text-sm font-medium mb-6">"
-              <Leaf className="w-4 h-4 mr-2"  />              Sustainable Technology
+              <Leaf className="w-4 h-4 mr-2"   />              Sustainable Technology
             </div>"
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md: tex t-6xl font-bold text-white mb-6">
               Green IT"
               <span className="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent"> Solutions</span>
             </h1>"
@@ -47,22 +47,20 @@
               Reduce carbon footprint, lower costs, and meet environmental compliance standards.
             </p>"
             <div className="flex flex-wrap justify-center gap-4">"
-              <button className="px-8 py-3 bg-gradient-to-r from-green-400 to-emerald-500 text-white rounded-lg font-semibold hover:from-green-500 hover:to-emerald-600 transition-all duration-300 hover:scale-105">
+              <button className="px-8 py-3 bg-gradient-to-r from-green-400 to-emerald-500 text-white rounded-lg font-semibold hover: fro m-green-500 hover: t o-emerald-600 transition-all duration-300 hover: scal e-105">
                 Get Started
               </button>"
-              <button className="px-8 py-3 border border-green-400 text-green-400 rounded-lg font-semibold hover:bg-green-400 hover:text-white transition-all duration-300">
+              <button className="px-8 py-3 border border-green-400 text-green-400 rounded-lg font-semibold hover: b g-green-400 hover: tex t-white transition-all duration-300">
                 Learn More
               </button>
             </div>
           </motion.div>
         </div>
-      </section>;
-
-      {/* Green IT Services */}"
-      <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">;"
+      </section> {/* Green IT Services */}"
+      <section id="services" className="py-16 px-4 sm: p x-6 lg: p x-8">;"
         <div className="max-w-7xl mx-auto">"
           <div className="text-center mb-16">"
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
               Our Green IT Services
             </h2>"
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
@@ -71,9 +69,9 @@
             </p>
           </div>
           "
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
             {greenServices.map((service, index)  => ("
-              <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-green-500/50 transition-all duration-300">"
+              <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover: borde r-green-500/50 transition-all duration-300">"
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">"
                   <service.icon className="w-8 h-8 text-white"/>
                 </div>"
@@ -95,10 +93,10 @@
       </section>
 
       {/* Green Technologies */}"
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">;"
+      <section className="py-16 px-4 sm: p x-6 lg: p x-8 bg-slate-800/30">;"
         <div className="max-w-7xl mx-auto">"
           <div className="text-center mb-16">"
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
               Green Technologies We Use
             </h2>"
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
@@ -107,9 +105,9 @@
             </p>
           </div>
           "
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-3 gap-8">
             {greenTechnologies.map((tech, index)  => ("
-              <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-green-500/50 transition-all duration-300">"
+              <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover: borde r-green-500/50 transition-all duration-300">"
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">"
                   <tech.icon className="w-8 h-8 text-white"/>
                 </div>"
@@ -129,9 +127,9 @@
       </section>
 
       {/* Benefits Section */}"
-      <section className="py-16 px-4 sm:px-6 lg:px-8">;"
+      <section className="py-16 px-4 sm: p x-6 lg: p x-8">;"
         <div className="max-w-7xl mx-auto">"
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg: gri d-cols-2 gap-12 items-center">
             <motion.div
               initial = {
 
@@ -167,21 +165,21 @@
               </p>"
               <div className="space-y-4">"
                 <div className="flex items-start space-x-3">"
-                  <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"  />
+                  <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"   />
                   <div>"
                     <h3 className="text-white font-semibold">Energy Efficiency</h3>"
                     <p className="text-gray-300 text-sm">Optimize power consumption and reduce energy waste</p>
                   </div>
                 </div>"
                 <div className="flex items-start space-x-3">"
-                  <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"  />
+                  <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"   />
                   <div>"
                     <h3 className="text-white font-semibold">Sustainable Materials</h3>"
                     <p className="text-gray-300 text-sm">Use eco-friendly materials and reduce toxic substances</p>
                   </div>
                 </div>"
                 <div className="flex items-start space-x-3">"
-                  <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"  />
+                  <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"   />
                   <div>"
                     <h3 className="text-white font-semibold">Waste Reduction</h3>"                    <p className="text-gray-300 text-sm">Minimize electronic waste through proper lifecycle management</p>
                   </div>
@@ -193,7 +191,7 @@
               initial = {
 
   { opacity: 0,
-  x: 20 
+  x: 2 0 
 
 
 
@@ -220,13 +218,13 @@
                   <h3 className="text-xl font-semibold text-white">Sustainability Dashboard</h3>"
                   <div className="flex space-x-2">"
                     <button className="p-2 bg-green-500/20 text-green-400 rounded-lg">"
-                      <Leaf className="w-4 h-4"  />
+                      <Leaf className="w-4 h-4"   />
                     </button>"
                     <button className="p-2 bg-blue-500/20 text-blue-400 rounded-lg">"
-                      <Gauge className="w-4 h-4"  />
+                      <Gauge className="w-4 h-4"   />
                     </button>"
                     <button className="p-2 bg-yellow-500/20 text-yellow-400 rounded-lg">"
-                      <Sun className="w-4 h-4"  />                    </button>
+                      <Sun className="w-4 h-4"   />                    </button>
                   </div>
                 </div>"
                 <div className="space-y-4">"
@@ -256,7 +254,7 @@
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -287,14 +285,14 @@
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map(feature: unknown, index: unknown (
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
+            {features.map(feature: unknow n, index: unknow n (
               <motion.div
                 key={index}
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -316,7 +314,7 @@
                 transition = {
 
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -324,7 +322,7 @@
 
 
 }}"
-                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105"
+                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover: borde r-green-400/50 transition-all duration-300 hover: scal e-105"
 "
                 <div className="w-16 h-16 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-xl flex items-center justify-center mb-6">"
                   <feature.icon className="w-8 h-8 text-green-400" />
@@ -344,7 +342,7 @@
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -375,14 +373,14 @@
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {solutions.map(solution: unknown, index: unknown 
+          <div className="grid grid-cols-1 md: gri d-cols-2 gap-8">
+            {solutions.map(solution: unknow n, index: unknow n 
               <motion.div
                 key={index}
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -404,7 +402,7 @@
                 transition = {
 
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -412,7 +410,7 @@
 
 
 }}"
-                className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105"
+                className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover: borde r-green-400/50 transition-all duration-300 hover: scal e-105"
 "
                 <div className="flex items-center space-x-4 mb-6">"
                   <div className="w-16 h-16 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-xl flex items-center justify-center">"
@@ -424,7 +422,7 @@
                 <div className="space-y-2">
                   {solution.benefits.map((benefit, benefitIndex) => ("
                     <div key={benefitIndex} className="flex items-center text-sm text-gray-400">"
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0"  />                      {benefit}
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0"   />                      {benefit}
                     </div>
                   ))}
                 </div>
@@ -441,7 +439,7 @@
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -472,14 +470,14 @@
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map(useCase: unknown, index: unknown 
+          <div className="grid grid-cols-1 md: gri d-cols-2 gap-8">
+            {useCases.map(useCase: unknow n, index: unknow n 
               <motion.div
                 key={index}
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -501,7 +499,7 @@
                 transition = {
 
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -509,7 +507,7 @@
 
 
 }}"
-                className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105"
+                className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover: borde r-green-400/50 transition-all duration-300 hover: scal e-105"
 "
                 <div className="flex items-center space-x-4 mb-6">"
                   <div className="w-16 h-16 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-xl flex items-center justify-center">"
@@ -521,7 +519,7 @@
                 <div className="space-y-2">
                   {useCase.metrics.map((metric, metricIndex) => ("
                     <div key={metricIndex} className="flex items-center text-sm text-gray-400">"
-                      <Target className="w-4 h-4 text-green-400 mr-2 flex-shrink-0"  />                      {metric}
+                      <Target className="w-4 h-4 text-green-400 mr-2 flex-shrink-0"   />                      {metric}
                     </div>
                   ))}
                 </div>
@@ -538,7 +536,7 @@
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -569,14 +567,14 @@
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map(benefit: unknown, index: unknown (
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
+            {benefits.map(benefit: unknow n, index: unknow n (
               <motion.div
                 key={index}
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -598,7 +596,7 @@
                 transition = {
 
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -606,7 +604,7 @@
 
 
 }}"
-                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105 text-center"
+                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover: borde r-green-400/50 transition-all duration-300 hover: scal e-105 text-center"
 "
                 <div className="w-16 h-16 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-xl flex items-center justify-center mx-auto mb-6">"
                   <benefit.icon className="w-8 h-8 text-green-400" />
@@ -626,7 +624,7 @@
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -656,7 +654,7 @@
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-4 gap-8">
             {[
               {
 
@@ -682,13 +680,13 @@
                 title: 'Optimization',
                 description: 'Monitor performance and continuously improve sustainability metrics'
 
-            ].map(phase: unknown, index: unknown (;
+            ].map(phase: unknow n, index: unknow n (;
               <motion.div
                 key={index}
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -710,7 +708,7 @@
                 transition = {
 
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -738,7 +736,7 @@
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -767,10 +765,10 @@
               reduce environmental impact, and drive cost savings.
             </p>"
             <div className="flex flex-wrap justify-center gap-4">"
-              <button className="px-8 py-4 bg-gradient-to-r from-green-400 to-emerald-500 text-white rounded-lg font-semibold hover:from-green-500 hover:to-emerald-600 transition-all duration-300 hover:scale-105">
+              <button className="px-8 py-4 bg-gradient-to-r from-green-400 to-emerald-500 text-white rounded-lg font-semibold hover: fro m-green-500 hover: t o-emerald-600 transition-all duration-300 hover: scal e-105">
                 Start Your Green IT Journey
               </button>"
-              <button className="px-8 py-4 border border-green-400 text-green-400 rounded-lg font-semibold hover:bg-green-400 hover:text-white transition-all duration-300">
+              <button className="px-8 py-4 border border-green-400 text-green-400 rounded-lg font-semibold hover: b g-green-400 hover: tex t-white transition-all duration-300">
                 Schedule Consultation;
               </button>;
             </div>;

@@ -49,37 +49,36 @@ const ComprehensiveServicesShowcase2025 = () => {
 
   const getCategoryIcon = (category: string) => {
     switch (category) {
-      case 'Micro SAAS': return <Smartphone className="w-6 h-6" />;
-      case 'IT Services': return <Server className="w-6 h-6" />;
-      case 'AI Services': return <Brain className="w-6 h-6" />;
-      case 'Cloud Solutions': return <Cloud className="w-6 h-6" />;
-      case 'Cybersecurity': return <Shield className="w-6 h-6" />;
-      case 'Digital Transformation': return <Zap className="w-6 h-6" />;
-      default: return <Settings className="w-6 h-6" />;
+      case 'Micro SAAS': return <Smartphone className="w-6 h-6"  />;
+      case 'IT Services': return <Server className="w-6 h-6"  />;
+      case 'AI Services': return <Brain className="w-6 h-6"  />;
+      case 'Cloud Solutions': return <Cloud className="w-6 h-6"  />;
+      case 'Cybersecurity': return <Shield className="w-6 h-6"  />;
+      case 'Digital Transformation': return <Zap className="w-6 h-6"  />;
+      default: retur n <Settings className="w-6 h-6"  />;
     }
   };
 
   return (
     <>
-      <SEOHead 
-        title="Comprehensive Technology Services - Zion Tech Group 2025"
+      <SEOHead title="Comprehensive Technology Services - Zion Tech Group 2025"
         description="Discover our complete range of innovative micro SAAS, IT services, and AI solutions. Transform your business with cutting-edge technology from Zion Tech Group."
         keywords={['micro SAAS', 'IT services', 'AI solutions', 'cloud computing', 'cybersecurity', 'digital transformation']}
         canonicalUrl="https://ziontechgroup.com/comprehensive-services-2025"
-      />
+       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
         {/* Hero Section */}
         <div className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="relative max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8 py-24">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 2 0 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center"
             >
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              <h1 className="text-5xl md: tex t-6xl font-bold text-white mb-6">
                 Comprehensive Technology
                 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> Services 2025</span>
               </h1>
@@ -87,17 +86,17 @@ const ComprehensiveServicesShowcase2025 = () => {
                 Transform your business with our complete suite of innovative micro SAAS, IT services, and AI solutions. 
                 From cutting-edge AI platforms to comprehensive IT management, we deliver results that drive growth.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: fle x-row gap-4 justify-center">
                 <Link 
                   to="/contact" 
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg hover: fro m-blue-700 hover: t o-purple-700 transition-all duration-300 flex items-center justify-center"
                 >
                   Get Started Today
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                  <ArrowRight className="ml-2 w-5 h-5"  />
                 </Link>
                 <Link 
                   to="/request-quote" 
-                  className="border border-gray-600 text-white px-8 py-4 rounded-lg hover:bg-gray-800 transition-all duration-300 flex items-center justify-center"
+                  className="border border-gray-600 text-white px-8 py-4 rounded-lg hover: b g-gray-800 transition-all duration-300 flex items-center justify-center"
                 >
                   Request Quote
                 </Link>
@@ -107,8 +106,8 @@ const ComprehensiveServicesShowcase2025 = () => {
         </div>
 
         {/* Stats Section */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8 py-16">
+          <div className="grid grid-cols-2 md: gri d-cols-4 gap-8">
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -149,15 +148,15 @@ const ComprehensiveServicesShowcase2025 = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8 py-8">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
             {filteredServices.map((service, index) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 hover:bg-slate-800/70 transition-all duration-300 border border-slate-700 hover:border-blue-500/50"
+                transition={{ duration: 0.5, delay: inde x * 0.1 }}
+                className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 hover: b g-slate-800/70 transition-all duration-300 border border-slate-700 hover: borde r-blue-500/50"
               >
                 {/* Service Header */}
                 <div className="flex items-start justify-between mb-4">
@@ -183,7 +182,7 @@ const ComprehensiveServicesShowcase2025 = () => {
                   <div className="flex flex-wrap gap-1">
                     {service.features.slice(0, 3).map((feature, idx) => (
                       <span key={idx} className="inline-flex items-center px-2 py-1 rounded-md text-xs bg-slate-700 text-gray-300">
-                        <CheckCircle className="w-3 h-3 mr-1 text-green-400" />
+                        <CheckCircle className="w-3 h-3 mr-1 text-green-400"  />
                         {feature}
                       </span>
                     ))}
@@ -207,7 +206,7 @@ const ComprehensiveServicesShowcase2025 = () => {
                 {/* ROI */}
                 <div className="mb-4 p-3 bg-green-600/10 rounded-lg border border-green-600/20">
                   <div className="flex items-center">
-                    <TrendingUp className="w-4 h-4 text-green-400 mr-2" />
+                    <TrendingUp className="w-4 h-4 text-green-400 mr-2"  />
                     <span className="text-sm text-green-400 font-medium">ROI: {service.roi}</span>
                   </div>
                 </div>
@@ -216,13 +215,13 @@ const ComprehensiveServicesShowcase2025 = () => {
                 <div className="flex space-x-2">
                   <Link
                     to={`/services/${service.id}`}
-                    className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-center text-sm font-medium"
+                    className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg hover: fro m-blue-700 hover: t o-purple-700 transition-all duration-300 text-center text-sm font-medium"
                   >
                     Learn More
                   </Link>
                   <Link
                     to="/contact"
-                    className="flex-1 border border-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-all duration-300 text-center text-sm font-medium"
+                    className="flex-1 border border-gray-600 text-white px-4 py-2 rounded-lg hover: b g-gray-700 transition-all duration-300 text-center text-sm font-medium"
                   >
                     Contact Us
                   </Link>
@@ -232,11 +231,11 @@ const ComprehensiveServicesShowcase2025 = () => {
                 <div className="mt-4 pt-4 border-t border-gray-700">
                   <div className="text-xs text-gray-400">
                     <div className="flex items-center mb-1">
-                      <MessageSquare className="w-3 h-3 mr-1" />
+                      <MessageSquare className="w-3 h-3 mr-1"  />
                       {service.contactInfo.phone}
                     </div>
                     <div className="flex items-center">
-                      <Mail className="w-3 h-3 mr-1" />
+                      <Mail className="w-3 h-3 mr-1"  />
                       {service.contactInfo.email}
                     </div>
                   </div>
@@ -247,27 +246,27 @@ const ComprehensiveServicesShowcase2025 = () => {
         </div>
 
         {/* Contact Information */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8 py-16">
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8">
             <h2 className="text-3xl font-bold text-white text-center mb-8">Get in Touch</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: gri d-cols-3 gap-8">
               <div className="text-center">
                 <div className="p-4 bg-blue-600/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <MessageSquare className="w-8 h-8 text-blue-400" />
+                  <MessageSquare className="w-8 h-8 text-blue-400"  />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
                 <p className="text-gray-300">+1 302 464 0950</p>
               </div>
               <div className="text-center">
                 <div className="p-4 bg-purple-600/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <Mail className="w-8 h-8 text-purple-400" />
+                  <Mail className="w-8 h-8 text-purple-400"  />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
                 <p className="text-gray-300">kleber@ziontechgroup.com</p>
               </div>
               <div className="text-center">
                 <div className="p-4 bg-green-600/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <Globe className="w-8 h-8 text-green-400" />
+                  <Globe className="w-8 h-8 text-green-400"  />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Website</h3>
                 <p className="text-gray-300">ziontechgroup.com</p>

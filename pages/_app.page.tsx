@@ -6,10 +6,10 @@ function ZionApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1"  />
         <title>Zion Tech Group</title>
       </Head>
-      <Component {...pageProps} />
+      <Component {...pageProps}  />
     </>
   );
 }

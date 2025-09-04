@@ -46,7 +46,7 @@ import {
 import type { NextPage } from 'next';
 import Layout from '../components/Layout';
 
-const Blog: NextPage = () => {
+const Blog: NextPag e = () => {
   const blogPosts = [
     {
       id: 1,
@@ -69,7 +69,7 @@ const Blog: NextPage = () => {
       category: "AI Trends",
       image: "/api/placeholder/600/400",
       tags: ["AI", "Business", "Trends", "2025"],
-      featured: true
+      featured: tru e
     },
     {
       id: 3,
@@ -81,7 +81,7 @@ const Blog: NextPage = () => {
       category: "Technical",
       image: "/api/placeholder/600/400",
       tags: ["AI Architecture", "Scalability", "Best Practices"],
-      featured: false
+      featured: fals e
     },
     {
       id: 4,
@@ -93,7 +93,7 @@ const Blog: NextPage = () => {
       category: "Security",
       image: "/api/placeholder/600/400",
       tags: ["Cybersecurity", "AI Security", "Threat Protection"],
-      featured: false
+      featured: fals e
     },
     {
       id: 5,
@@ -105,7 +105,7 @@ const Blog: NextPage = () => {
       category: "Cloud",
       image: "/api/placeholder/600/400",
       tags: ["Cloud Migration", "Strategy", "Best Practices"],
-      featured: false
+      featured: fals e
     },
     {
       id: 6,
@@ -117,7 +117,7 @@ const Blog: NextPage = () => {
       category: "Customer Experience",
       image: "/api/placeholder/600/400",
       tags: ["Customer Experience", "AI", "Automation"],
-      featured: false
+      featured: fals e
     },
     {
       id: 7,
@@ -129,7 +129,7 @@ const Blog: NextPage = () => {
       category: "Analytics",
       image: "/api/placeholder/600/400",
       tags: ["Data Analytics", "Machine Learning", "Business Intelligence"],
-      featured: false
+      featured: fals e
     }
   ];
 
@@ -153,10 +153,10 @@ const Blog: NextPage = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+          <h1 className="text-5xl md: tex t-6xl font-bold mb-6">
             Tech <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Blog</span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8">
+          <p className="text-xl md: tex t-2xl text-gray-300 max-w-3xl mx-auto mb-8">
             Stay ahead of the curve with insights, trends, and best practices from our expert team.
           </p>
         </div>
@@ -165,18 +165,18 @@ const Blog: NextPage = () => {
       {/* Blog Posts */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md: gri d-cols-2 lg: gri d-cols-3 gap-8">
             {blogPosts.map((post) => (
-              <article key={post.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+              <article key={post.id} className="bg-white rounded-lg shadow-md overflow-hidden hover: shado w-lg transition-shadow">
                 <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-                  <FileText className="h-16 w-16 text-white" />
+                  <FileText className="h-16 w-16 text-white"  />
                 </div>
                 <div className="p-6">
                   <div className="flex items-center gap-2 text-sm text-gray-500 mb-2">
-                    <Calendar className="h-4 w-4" />
+                    <Calendar className="h-4 w-4"  />
                     <span>{post.date}</span>
                     <span>•</span>
-                    <Clock className="h-4 w-4" />
+                    <Clock className="h-4 w-4"  />
                     <span>{post.readTime}</span>
                   </div>
                   <h2 className="text-xl font-semibold text-gray-900 mb-2 line-clamp-2">
@@ -187,15 +187,15 @@ const Blog: NextPage = () => {
                   </p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
-                      <User className="h-4 w-4 text-gray-400" />
+                      <User className="h-4 w-4 text-gray-400"  />
                       <span className="text-sm text-gray-500">{post.author}</span>
                     </div>
                     <Link
                       href={`/blog/${post.slug}`}
-                      className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
+                      className="inline-flex items-center text-blue-600 hover: tex t-blue-700 font-medium"
                     >
                       Read More
-                      <ArrowRight className="ml-1 h-4 w-4" />
+                      <ArrowRight className="ml-1 h-4 w-4"  />
                     </Link>
                   </div>
                 </div>
@@ -208,7 +208,7 @@ const Blog: NextPage = () => {
       {/* Contact Section */}
       <section className="bg-gradient-to-r from-gray-900 to-gray-800 py-20">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -216,34 +216,34 @@ const Blog: NextPage = () => {
           </p>
           
           {/* Contact Details */}
-          <div className="grid gap-8 md:grid-cols-3 text-center mb-8">
+          <div className="grid gap-8 md: gri d-cols-3 text-center mb-8">
             <div>
               <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 mx-auto mb-4">
-                <Phone className="h-6 w-6 text-white" />
+                <Phone className="h-6 w-6 text-white"  />
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
               <p className="text-gray-300">+1 302 464 0950</p>
             </div>
             <div>
               <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-green-600 mx-auto mb-4">
-                <Mail className="h-6 w-6 text-white" />
+                <Mail className="h-6 w-6 text-white"  />
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
               <p className="text-gray-300">kleber@ziontechgroup.com</p>
             </div>
             <div>
               <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-purple-600 mx-auto mb-4">
-                <MapPin className="h-6 w-6 text-white" />
+                <MapPin className="h-6 w-6 text-white"  />
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
-              <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
+              <p className="text-gray-300">364 E Main St STE 1008<br  />Middletown DE 19709</p>
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: fle x-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-50 transition-colors"
+              className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-gray-900 shadow-sm hover: b g-gray-50 transition-colors"
             >
               Get in touch
             </Link>
@@ -251,7 +251,7 @@ const Blog: NextPage = () => {
               href="https://ziontechgroup.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-semibold leading-6 text-white hover:text-blue-300 transition-colors"
+              className="text-sm font-semibold leading-6 text-white hover: tex t-blue-300 transition-colors"
             >
               Visit our website <span aria-hidden="true">→</span>
             </Link>

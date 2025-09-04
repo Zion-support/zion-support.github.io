@@ -1,34 +1,31 @@
       ]
-    },;
-    {
+    }, {
 "
       title: "Multi-Agent Coordination","
       description: "Advanced AI agents working together to solve complex business problems",
-      icon: Brain,
+      icon: Brai n,
       benefits[;"
         "Coordinated decision making","
         "Intelligent resource allocation","
         "Cross-functional collaboration","
         "Scalable problem solving"
       ]
-    },;
-    {
+    }, {
 "
       title: "Predictive Analytics Engine","
       description: "Machine learning models that forecast trends and optimize business outcomes",
-      icon: TrendingUp,
+      icon: TrendingU p,
       benefits[;"
         "95% prediction accuracy","
         "Real-time trend analysis","
         "Automated optimization","
         "Risk assessment and mitigation"
       ]
-    },;
-    {
+    }, {
 "
       title: "Enterprise Security Suite","
       description: "AI-powered threat detection and response with zero-trust architecture",
-      icon: Shield,
+      icon: Shiel d,
       benefits[;"
         "99.9% threat detection rate",;"
         "Zero-day attack prevention",;"
@@ -51,7 +48,7 @@
         "Email support","        "Basic analytics dashboard"
       ],;"
       cta: "Get Started",
-      popular: false
+      popular: fals e
     },
     {
 "
@@ -69,7 +66,7 @@
         "Performance optimization"
       ],;"
       cta: "Start Free Trial",
-      popular: true
+      popular: tru e
     },
     {
 "
@@ -88,7 +85,7 @@
         "SLA guarantees";
       ],;"
       cta: "Contact Sales",;
-      popular: false};
+      popular: fals e};
   ];
 
   const useCases = [
@@ -100,8 +97,7 @@
         "Risk assessment automation","
         "Regulatory compliance","        "Trading optimization"
       ]
-    },;
-    {
+    }, {
 "
       industry: "Healthcare",
       applications[;"
@@ -110,8 +106,7 @@
         "Resource optimization","
         "Compliance monitoring"
       ]
-    },;
-    {
+    }, {
 "
       industry: "Manufacturing",
       applications[;"
@@ -120,8 +115,7 @@
         "Quality control","
         "Production planning"
       ]
-    },;
-    {
+    }, {
 "
       industry: "Retail",
       applications[;"
@@ -136,16 +130,16 @@
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
         title="AI Enterprise Orchestrator - Zion Tech Group""        description="Transform your enterprise with AI-powered orchestration, multi-agent coordination, and predictive analytics. Streamline operations and drive innovation."
-       />
+        />
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
           <motion.div
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -168,10 +162,10 @@
             className="text-center"
 "
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium mb-6">"
-              <Sparkles className="w-4 h-4 mr-2"  />              Revolutionary AI Technology
+              <Sparkles className="w-4 h-4 mr-2"   />              Revolutionary AI Technology
             </div>
 "
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md: tex t-6xl font-bold text-white mb-6">
               AI Enterprise Orchestrator
             </h1>
 "
@@ -180,18 +174,18 @@
               Coordinate multiple AI agents, automate complex workflows, and drive unprecedented efficiency.
             </p>
 "
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
-                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
+                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover: fro m-purple-700 hover: t o-pink-700 transition-all duration-300"
 
                 Start Free Trial
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
-                className="px-8 py-4 border-2 border-purple-600 text-purple-400 font-semibold rounded-lg hover:bg-purple-600 hover:text-white transition-all duration-300"
+                className="px-8 py-4 border-2 border-purple-600 text-purple-400 font-semibold rounded-lg hover: b g-purple-600 hover: tex t-white transition-all duration-300"
 
                 Schedule Demo
               </motion.button>
@@ -206,12 +200,12 @@
 
       {/* Features Section */}"
       <section className="py-20">;"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
           <motion.div
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -242,14 +236,14 @@
             </p>
           </motion.div>
 "
-          <div className="grid md: grid-cols-2 gap-8">
+          <div className="grid md: gri d-cols-2 gap-8">
             {features.map((feature, index 
               <motion.div
                 key={index}
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -271,7 +265,7 @@
                 transition = {
 
   { duration: 0.8,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -279,7 +273,7 @@
 
 
 }}"
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-purple-500 transition-all duration-300"
+                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover: borde r-purple-500 transition-all duration-300"
 "
                 <div className="flex items-center mb-4">"
                   <div className="p-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg mr-4">"
@@ -293,7 +287,7 @@
                 <ul className="space-y-3">
                   {feature.benefits.map((benefit, benefitIndex) => ("
                     <li key={benefitIndex} className="flex items-center text-gray-300">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />                      {benefit}
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"   />                      {benefit}
                     </li>
                   ))}
                 </ul>
@@ -305,12 +299,12 @@
 
       {/* Pricing Section */}"
       <section className="py-20 bg-slate-800/30">;"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
           <motion.div
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -341,14 +335,14 @@
             </p>
           </motion.div>
 "
-          <div className="grid md: grid-cols-3 gap-8">
-            {pricingPlans.map(plan: unknown, index: unknown (
+          <div className="grid md: gri d-cols-3 gap-8">
+            {pricingPlans.map(plan: unknow n, index: unknow n (
               <motion.div
                 key={index}
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -370,7 +364,7 @@
                 transition = {
 
   { duration: 0.8,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -405,7 +399,7 @@
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center text-gray-300">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />                      {feature}
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"   />                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -416,8 +410,8 @@
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
 
                     plan.popular'
-                      ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700''
-                      : 'bg-slate-700 text-white hover:bg-slate-600'`
+                      ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover: fro m-purple-700 hover: t o-pink-700''
+                      : 'bg-slate-700 text-white hover: b g-slate-600'`
                   }`}
 
                   {plan.cta}
@@ -430,12 +424,12 @@
 
       {/* Use Cases Section */}"
       <section className="py-20">;"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
           <motion.div
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -466,14 +460,14 @@
             </p>
           </motion.div>
 "
-          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map(useCase: unknown, index: unknown 
+          <div className="grid md: gri d-cols-2 lg: gri d-cols-4 gap-8">
+            {useCases.map(useCase: unknow n, index: unknow n 
               <motion.div
                 key={index}
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -495,7 +489,7 @@
                 transition = {
 
   { duration: 0.8,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -503,13 +497,13 @@
 
 
 }}"
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300"
+                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover: borde r-purple-500 transition-all duration-300"
 "
                 <h3 className="text-xl font-semibold text-white mb-4">{useCase.industry}</h3>"
                 <ul className="space-y-2">
                   {useCase.applications.map((application, appIndex) => ("
                     <li key={appIndex} className="text-gray-300 text-sm flex items-center">"
-                      <ArrowRight className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0"  />                      {application}
+                      <ArrowRight className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0"   />                      {application}
                     </li>
                   ))}
                 </ul>
@@ -521,12 +515,12 @@
 
       {/* CTA Section */}"
       <section className="py-20 bg-gradient-to-r from-purple-900/50 to-pink-900/50">;"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8 text-center">
           <motion.div
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -555,18 +549,18 @@
               with our Enterprise Orchestrator platform.
             </p>
 "
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
-                className="px-8 py-4 bg-white text-purple-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300"
+                className="px-8 py-4 bg-white text-purple-600 font-semibold rounded-lg hover: b g-gray-100 transition-all duration-300"
 
                 Start Free Trial
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
-                className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300"
+                className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover: b g-white hover: tex t-purple-600 transition-all duration-300"
 
                 Contact Sales Team
               </motion.button>

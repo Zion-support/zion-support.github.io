@@ -1,6 +1,6 @@
 
 
-  children: React.ReactNode}
+  children: Reac t.ReactNode}
 
 export: default function Layout() {
 
@@ -8,4 +8,4 @@ export: default function Layout() {
 React from""  "react""import Footer from "react""  "./Footer"import Footer  from "react./Footer,
 export default function Layout({ children }: LayoutProps) {
 
-    </div>"  )"; type: LayoutProps = { children: React.ReactNode, }; export default function Layout({ children }: LayoutProps) { return <div>{children}</div>; type LayoutProps = { children: React.ReactNode, }; export default function Layout({ children }: LayoutProps) { return <div>{children}</div> } " "
+    </div>"  )"; type: LayoutProp s = { children: Reac t.ReactNode, }; export default function Layout({ children }: LayoutProps) { return <div>{children}</div>; type LayoutProps = { children: Reac t.ReactNode, }; export default function Layout({ children }: LayoutProps) { return <div>{children}</div> } " "

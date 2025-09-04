@@ -6,5 +6,5 @@ variant: 'destructive',
 '
     variant: 'destructive','
     title: 'Error',
-    description: message});
+    description: messag e});
   // Log error for debugging

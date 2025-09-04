@@ -35,8 +35,7 @@
         <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-5 animate-pulse"></div>"
         <div className="absolute top-0 left-0 w-full h-full">
           {[...Array(20)].map((_, i) => (
-            <div
-              key={i}"
+            <div key={i}"
               className="absolute w-2 h-2 bg-cyan-400 rounded-full opacity-20 animate-float"
               style={{
 
@@ -45,7 +44,7 @@
                 animationDelay: `${Math.random() * 3}s`,`
                 animationDuration: `${3 + Math.random() * 2}s`
               }}
-            />) ) }
+             />) ) }
         </div>
       </div>
       {/* Header Section */}
@@ -67,7 +66,7 @@
 "
         <div className="max-w-7xl mx-auto text-center">
           <motion.h1"
-            className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
+            className="text-5xl md: tex t-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
             initial = {
 
   { opacity: 0,
@@ -90,11 +89,11 @@
             Innovative Services 2027
           </motion.h1>
           <motion.p"
-            className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
+            className="text-xl md: tex t-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 }}
             animate = {
@@ -115,11 +114,11 @@
           </motion.p>
           {/* Stats */}
           <motion.div"
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16"
+            className="grid grid-cols-2 md: gri d-cols-4 gap-8 mt-16"
             initial = {
 
   { opacity: 0,
-  y: 30 
+  y: 3 0 
 
 }}
             animate = {
@@ -136,16 +135,16 @@
 }}
           >
             {['
-              { label: 'Total Services', value: allServices.length, icon: Rocket, color: 'from-cyan-500 to-blue-600' },`
-              { label: 'AI Score Avg', value: `${Math.round(allServices.reduce((acc, s)  => acc + s.aiScore, 0) / allServices.length)}%`, icon: Brain, color: 'from-purple-500 to-pink-600' },`
-              { label: 'Rating Avg', value: `${(allServices.reduce((acc, s)  => acc + s.rating, 0) / allServices.length).toFixed(1)}`, icon: Star, color: 'from-yellow-500 to-orange-600' },
-              { label: 'Categories', value: categories.length - 1, icon: Grid, color: 'from-green-500 to-teal-600' }
+              { label: 'Total Services', value: allService s.length, icon: Rocke t, color: 'from-cyan-500 to-blue-600' },`
+              { label: 'AI Score Avg', value: `${Math.round(allServices.reduce((acc, s)  => acc + s.aiScore, 0) / allServices.length)}%`, icon: Brai n, color: 'from-purple-500 to-pink-600' },`
+              { label: 'Rating Avg', value: `${(allServices.reduce((acc, s)  => acc + s.rating, 0) / allServices.length).toFixed(1)}`, icon: Sta r, color: 'from-yellow-500 to-orange-600' },
+              { label: 'Categories', value: categorie s.length - 1, icon: Gri d, color: 'from-green-500 to-teal-600' }
             ].map((stat, index)  => ("
               <div key={index} className="text-center group">`
-                <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br ${stat.color} rounded-full mb-4 group-hover:scale-110 transition-transform duration-300`}>"
+                <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br ${stat.color} rounded-full mb-4 group-hover: scal e-110 transition-transform duration-300`}>"
                   <stat.icon className="w-8 h-8 text-white" />
                 </div>"
-                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">{stat.value}</div>"
+                <div className="text-3xl md: tex t-4xl font-bold text-cyan-400 mb-2">{stat.value}</div>"
                 <div className="text-lg font-semibold text-gray-300">{stat.label}</div>
               </div>
             ))}
@@ -158,7 +157,7 @@
         initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 }}
         animate = {
@@ -176,16 +175,16 @@
       >"
         <div className="max-w-7xl mx-auto">"
           <div className="bg-zion-blue-dark/30 backdrop-blur-md rounded-2xl p-6 border border-zion-purple/20">"
-            <div className="flex flex-col lg:flex-row gap-6 items-center">
+            <div className="flex flex-col lg: fle x-row gap-6 items-center">
               {/* Search */}"
               <div className="flex-1 w-full">"
                 <div className="relative">"
-                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5"  />
+                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5"   />
                   <input"
                     type="text""                    placeholder="Search services, features, or technologies..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}"
-                    className="w-full bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg pl-12 pr-4 py-3 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                    className="w-full bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg pl-12 pr-4 py-3 text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan focus: borde r-transparent"
                   />
                 </div>
               </div>
@@ -194,37 +193,37 @@
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}"
-                  className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10"
+                  className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan focus: borde r-transparent pr-10"
                 >
                   {categories.map(category  => (
                     <option key={category} value={category}>{category}</option>
                   ))}
                 </select>"
-                <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5 pointer-events-none"  />              </div>
+                <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5 pointer-events-none"   />              </div>
               {/* Sort By */}"
               <div className="relative">
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value as 'aiScore' | 'rating' | 'price')}"
-                  className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10"
+                  className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan focus: borde r-transparent pr-10"
 "
                   <option value="aiScore">Sort by AI Score</option>"
                   <option value="rating">Sort by Rating</option>"
                   <option value="price">Sort by Price</option>
                 </select>"
-                <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5 pointer-events-none"  />              </div>
+                <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5 pointer-events-none"   />              </div>
               {/* View Mode Toggle */}"
               <div className="flex bg-zion-blue-light/20 rounded-lg p-1 border border-zion-purple/20">
                 <button'
                   onClick={() => setViewMode('grid')}'`
-                  className={`p-2 rounded-md transition-colors ${viewMode === 'grid' ? 'bg-zion-cyan text-white' : 'text-zion-slate-light hover:text-white'}`}
+                  className={`p-2 rounded-md transition-colors ${viewMode === 'grid' ? 'bg-zion-cyan text-white' : 'text-zion-slate-light hover: tex t-white'}`}
 "
-                  <Grid className="w-5 h-5"  />                </button>
+                  <Grid className="w-5 h-5"   />                </button>
                 <button'
                   onClick={() => setViewMode('list')}'`
-                  className={`p-2 rounded-md transition-colors ${viewMode === 'list' ? 'bg-zion-cyan text-white' : 'text-zion-slate-light hover:text-white'}`}
+                  className={`p-2 rounded-md transition-colors ${viewMode === 'list' ? 'bg-zion-cyan text-white' : 'text-zion-slate-light hover: tex t-white'}`}
 "
-                  <List className="w-5 h-5"  />                </button>
+                  <List className="w-5 h-5"   />                </button>
               </div>
             </div>
           </div>
@@ -241,12 +240,12 @@
           <AnimatePresence mode="wait">
             {filteredServices.length > 0 ? (
               <motion.div'
-                className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
+                className={viewMode === 'grid' ? 'grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8' : 'space-y-6'}
                 key={viewMode}
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 }}
                 animate = {
@@ -287,22 +286,21 @@
                       >
                         {/* Service Image */}"
                         <div className="relative mb-6 overflow-hidden rounded-lg">
-                          <img
-                            src={service.images[0]}
+                          <img src={service.images[0]}
                             alt={service.title}"
-                            className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
-                          />"
+                            className="w-full h-48 object-cover group-hover: scal e-110 transition-transform duration-300"
+                           />"
                           <div className="absolute top-4 right-4 bg-zion-cyan text-black px-3 py-1 rounded-full text-sm font-semibold">
                             {service.category}
                           </div>
                           {service.featured && ("
                             <div className="absolute top-4 left-4 bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center gap-1">"
-                              <Star className="w-4 h-4"  />                              Featured
+                              <Star className="w-4 h-4"   />                              Featured
                             </div>) }
                         </div>
                         {/* Service Content */}"
                         <div className="space-y-4">"
-                          <h3 className="text-xl font-bold text-white group-hover:text-zion-cyan transition-colors">
+                          <h3 className="text-xl font-bold text-white group-hover: tex t-zion-cyan transition-colors">
                             {service.title}
                           </h3>"
                           <p className="text-gray-300 text-sm line-clamp-3">
@@ -322,11 +320,11 @@
                           <div className="flex items-center justify-between pt-4 border-t border-zion-purple/20">"
                             <div className="flex items-center gap-4">"
                               <div className="flex items-center gap-1">"
-                                <Brain className="w-4 h-4 text-zion-cyan"  />"
+                                <Brain className="w-4 h-4 text-zion-cyan"   />"
                                 <span className="text-sm text-gray-300">{service.aiScore}%</span>
                               </div>"
                               <div className="flex items-center gap-1">"
-                                <Star className="w-4 h-4 text-yellow-500"  />"                                <span className="text-sm text-gray-300">{service.rating}</span>
+                                <Star className="w-4 h-4 text-yellow-500"   />"                                <span className="text-sm text-gray-300">{service.rating}</span>
                               </div>
                             </div>"
                             <div className="text-right">"
@@ -335,20 +333,19 @@
                             </div>
                           </div>
                           {/* CTA Button */}"
-                          <button className="w-full mt-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-black font-semibold py-3 px-6 rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
+                          <button className="w-full mt-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-black font-semibold py-3 px-6 rounded-lg hover: fro m-zion-blue hover: t o-zion-cyan transition-all duration-300 transform hover: scal e-105 flex items-center justify-center gap-2">
                             Learn More"
-                            <ArrowRight className="w-4 h-4"  />                          </button>
+                            <ArrowRight className="w-4 h-4"   />                          </button>
                         </div>
                       </motion.div>;
                     ) : ("
                       <div className="flex gap-6">
                         {/* Service Image */}"
                         <div className="relative w-48 h-32 overflow-hidden rounded-lg flex-shrink-0">
-                          <img
-                            src={service.images[0]}
+                          <img src={service.images[0]}
                             alt={service.title}"
                             className="w-full h-full object-cover"
-                          />"
+                           />"
                           <div className="absolute top-2 right-2 bg-zion-cyan text-black px-2 py-1 rounded-full text-xs font-semibold">
                             {service.category}
                           </div>
@@ -365,15 +362,15 @@
                           <p className="text-gray-300 text-sm">{service.description}</p>"
                           <div className="flex items-center gap-4 text-sm text-gray-400">"
                             <div className="flex items-center gap-1">"
-                              <Brain className="w-4 h-4 text-zion-cyan"  />
+                              <Brain className="w-4 h-4 text-zion-cyan"   />
                               AI Score: {service.aiScore}%
                             </div>"
                             <div className="flex items-center gap-1">"
-                              <Star className="w-4 h-4 text-yellow-500"  />
+                              <Star className="w-4 h-4 text-yellow-500"   />
                               Rating: {service.rating}
                             </div>"
                             <div className="flex items-center gap-1">"
-                              <CheckCircle className="w-4 h-4 text-green-500"  />                              {service.availability}
+                              <CheckCircle className="w-4 h-4 text-green-500"   />                              {service.availability}
                             </div>
                           </div>"
                           <div className="flex items-center justify-between">"
@@ -388,10 +385,10 @@
                             </div>
                             <button'
                               onClick={() => window.open(service.website,_blank')}"
-                              className="bg-gradient-to-r from-zion-cyan to-zion-blue text-black font-semibold py-2 px-4 rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 flex items-center gap-2"
+                              className="bg-gradient-to-r from-zion-cyan to-zion-blue text-black font-semibold py-2 px-4 rounded-lg hover: fro m-zion-blue hover: t o-zion-cyan transition-all duration-300 flex items-center gap-2"
 
                               View Details"
-                              <ArrowRight className="w-4 h-4"  />                            </button>
+                              <ArrowRight className="w-4 h-4"   />                            </button>
                           </div>
                         </div>;
                       </div>
@@ -420,7 +417,7 @@
         initial = {
 
   { opacity: 0,
-  y: 30 }}        animate = {
+  y: 3 0 }}        animate = {
 
   { opacity: 1,
   y: 0 }}        transition = {
@@ -429,22 +426,22 @@
   delay: 1.2 }}
       >"
         <div className="max-w-4xl mx-auto text-center">"
-          <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 backdrop-blur-md rounded-2xl p-12 border border-zion-cyan/30">"            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 backdrop-blur-md rounded-2xl p-12 border border-zion-cyan/30">"            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>"
             <p className="text-xl text-gray-300 mb-8">
               Get in touch with our experts to discuss how these innovative services can drive your success
             </p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
               <Link"
                 to="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-black font-semibold rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 transform hover:scale-105"
+                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-black font-semibold rounded-lg hover: fro m-zion-blue hover: t o-zion-cyan transition-all duration-300 transform hover: scal e-105"
 
                 Contact Our Team
               </Link>
               <a"
                 href="tel:+13024640950"
-                className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-black transition-all duration-300"
+                className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover: b g-zion-cyan hover: tex t-black transition-all duration-300"
 
                 Call + 1 302 464 0950
               </a>

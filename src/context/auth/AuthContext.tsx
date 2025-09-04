@@ -18,16 +18,16 @@ interface AuthTokens {
 
 interface AuthContextType {
 
-  user: User | null;
+  user: Use r | null;
   isLoading: boolean;
   onboardingStep: number;
-  tokens: AuthTokens;
+  tokens: AuthToken s;
 login: (email: string, password: string)  => Promise<any>;
   register: (name: string, email: string, password: string)  => Promise<any>;
   signup: (email: string, password: string, userData)  => Promise<any>;
   logout: ()  => Promise<any>;
   resetPassword: (email: string)  => Promise<any>;
-  updateProfile: (updates: Partial<User>)  => Promise<any>;
+  updateProfile: (updates: Partia l<User>)  => Promise<any>;
   loginWithGoogle: ()  => Promise<any>;
   loginWithFacebook: ()  => Promise<any>;
   loginWithTwitter: ()  => Promise<any>;

@@ -40,37 +40,37 @@ export function QuantumComputing() {
     {
       title: 'Quantum Algorithm Development',
       description: 'Custom quantum algorithms for complex computational problems',
-      icon: Code,
+      icon: Cod e,
       features: ['Optimization Algorithms', 'Cryptography', 'Machine Learning', 'Simulation']
     },
     {
       title: 'Quantum Computing Infrastructure',
       description: 'Build and manage quantum computing environments',
-      icon: Server,
+      icon: Serve r,
       features: ['Quantum Hardware Setup', 'Cloud Integration', 'Performance Monitoring', 'Scalability']
     },
     {
       title: 'Quantum Machine Learning',
       description: 'Combine quantum computing with AI for enhanced performance',
-      icon: Brain,
+      icon: Brai n,
       features: ['Quantum Neural Networks', 'Quantum Feature Selection', 'Quantum Clustering', 'Quantum Optimization']
     },
     {
       title: 'Quantum Cryptography',
       description: 'Unbreakable encryption using quantum principles',
-      icon: Lock,
+      icon: Loc k,
       features: ['Quantum Key Distribution', 'Post-Quantum Cryptography', 'Secure Communication', 'Quantum Random Number Generation']
     },
     {
       title: 'Quantum Simulation',
       description: 'Simulate complex quantum systems for research and development',
-      icon: Activity,
+      icon: Activit y,
       features: ['Molecular Dynamics', 'Material Science', 'Chemical Reactions', 'Quantum Chemistry']
     },
     {
       title: 'Quantum Consulting',
       description: 'Strategic guidance for quantum computing implementation',
-      icon: Lightbulb,
+      icon: Lightbul b,
       features: ['Technology Assessment', 'Use Case Analysis', 'Implementation Strategy', 'Training & Education']
     }
   ];
@@ -79,44 +79,44 @@ export function QuantumComputing() {
     {
       title: 'Exponential Speedup',
       description: 'Solve complex problems exponentially faster than classical computers',
-      icon: Zap
+      icon: Za p
     },
     {
       title: 'Quantum Advantage',
       description: 'Achieve computational advantages impossible with classical systems',
-      icon: Target
+      icon: Targe t
     },
     {
       title: 'Future-Proof Technology',
       description: 'Stay ahead with next-generation computing capabilities',
-      icon: Rocket
+      icon: Rocke t
     },
     {
       title: 'Research Leadership',
       description: 'Lead innovation in quantum computing applications',
-      icon: Star
+      icon: Sta r
     }
   ];
 
   const applications = [
     {
       industry: 'Finance',
-      icon: TrendingUp,
+      icon: TrendingU p,
       useCases: ['Portfolio Optimization', 'Risk Assessment', 'Cryptocurrency Mining', 'Trading Algorithms']
     },
     {
       industry: 'Healthcare',
-      icon: Users,
+      icon: User s,
       useCases: ['Drug Discovery', 'Protein Folding', 'Medical Imaging', 'Personalized Medicine']
     },
     {
       industry: 'Logistics',
-      icon: Network,
+      icon: Networ k,
       useCases: ['Route Optimization', 'Supply Chain Management', 'Inventory Optimization', 'Transportation Planning']
     },
     {
       industry: 'Cybersecurity',
-      icon: Shield,
+      icon: Shiel d,
       useCases: ['Quantum Cryptography', 'Threat Detection', 'Secure Communication', 'Post-Quantum Security']
     }
   ];
@@ -124,15 +124,15 @@ export function QuantumComputing() {
   return (
     <div className="min-h-screen bg-futuristic">
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden py-20 px-4 sm: p x-6 lg: p x-8">
         <div className="max-w-7xl mx-auto">
           <motion.div 
             className="text-center"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md: tex t-6xl font-bold text-white mb-6">
               Quantum Computing
               <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 Solutions
@@ -142,16 +142,16 @@ export function QuantumComputing() {
               Harness the power of quantum mechanics to solve the most complex computational problems. 
               From cryptography to optimization, quantum computing is the future of computation.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
+                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover: fro m-cyan-600 hover: t o-blue-700 transition-all duration-200"
               >
                 Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5"  />
               </Link>
-              <button className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200">
-                <Play className="mr-2 h-5 w-5" />
+              <button className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover: b g-cyan-500 hover: tex t-white transition-all duration-200">
+                <Play className="mr-2 h-5 w-5"  />
                 Watch Demo
               </button>
             </div>
@@ -167,24 +167,24 @@ export function QuantumComputing() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
               Our Quantum Computing Services
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
               Comprehensive quantum computing solutions for the next generation of computational problems
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
             {quantumServices.map((service, index) => (
               <motion.div
                 key={index}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
-                initial={{ opacity: 0, y: 20 }}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover: borde r-cyan-500/50 transition-all duration-300 hover: transform hover:scale-105"
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.5, delay: inde x * 0.1 }}
               >
                 <div className="flex items-center mb-6">
                   <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg">
@@ -198,7 +198,7 @@ export function QuantumComputing() {
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-slate-300">
-                      <CheckCircle className="h-4 w-4 text-cyan-400 mr-2" />
+                      <CheckCircle className="h-4 w-4 text-cyan-400 mr-2"  />
                       {feature}
                     </li>
                   ))}
@@ -210,24 +210,24 @@ export function QuantumComputing() {
       </section>
 
       {/* Applications Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900/50">
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-slate-900/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
               Industry Applications
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
               Discover how quantum computing is transforming industries across the globe
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-2 gap-8">
             {applications.map((app, index) => (
               <motion.div
                 key={index}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8"
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                initial={{ opacity: 0, x: inde x % 2 === 0 ? -20 : 20 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.6, delay: inde x * 0.1 }}
               >
                 <div className="flex items-center gap-4 mb-6">
                   <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg">
@@ -238,7 +238,7 @@ export function QuantumComputing() {
                 <ul className="space-y-3">
                   {app.useCases.map((useCase, idx) => (
                     <li key={idx} className="flex items-center gap-3 text-slate-300">
-                      <ArrowRight className="w-4 h-4 text-cyan-400" />
+                      <ArrowRight className="w-4 h-4 text-cyan-400"  />
                       {useCase}
                     </li>
                   ))}
@@ -250,24 +250,24 @@ export function QuantumComputing() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
               Why Choose Quantum Computing?
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
               Experience the revolutionary power of quantum computation
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
                 className="text-center"
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.5, delay: inde x * 0.1 }}
               >
                 <div className="p-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                   <benefit.icon className="h-8 w-8 text-white" />
@@ -281,30 +281,30 @@ export function QuantumComputing() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-6">
               Ready to Explore Quantum Computing?
             </h2>
             <p className="text-xl text-slate-300 mb-8">
               Let's discuss how quantum computing can solve your most complex challenges
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
+                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover: fro m-cyan-600 hover: t o-blue-700 transition-all duration-200"
               >
                 Get Free Consultation
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5"  />
               </Link>
               <Link
                 to="/services"
-                className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
+                className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover: b g-cyan-500 hover: tex t-white transition-all duration-200"
               >
                 View All Services
               </Link>

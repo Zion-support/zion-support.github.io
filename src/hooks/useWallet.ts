@@ -19,7 +19,7 @@ export function useWallet() {
 
     // setLoading(true); // setLoading will be handled by the useEffect calling this
     try {
-      const { data, error: supabaseError } = await supabase
+      const { data, error: supabaseErro r } = await supabase
         .from('wallets')
         .select('*')
         .eq('user_id', user.id)
@@ -30,7 +30,7 @@ export function useWallet() {
       }
       setWallet(data); // data will be null if not found, which is fine
       // setError(null); // setError will be handled by the useEffect calling this
-    } catch(err: any) {
+    } catch(err: an y) {
       console.error('Error fetching wallet:', err);
       setError(err.message);
       setWallet(null); // Ensure wallet is null on error
@@ -44,15 +44,15 @@ export function useWallet() {
       return;
     }
     try {
-      const { data, error: supabaseError } = await supabase
+      const { data, error: supabaseErro r } = await supabase
         .from('token_transactions')
         .select('*')
         .eq('user_id', user.id)
-        .order('created_at', { ascending: false });
+        .order('created_at', { ascending: fals e });
 
       if(supabaseError) throw supabaseError;
       setTransactions((data || []) as TokenTransaction[]);
-    } catch(err: any) {
+    } catch(err: an y) {
       console.error('Error fetching transactions:', err);
       // setError(err.message); // Decide if this should set a general error
       setTransactions([]); // Ensure transactions are empty on error
@@ -62,13 +62,13 @@ export function useWallet() {
   async function earnTokens(amount: number, reason?: string) {
     if(!user?.id) return;
     // This is an optimistic update, actual logic might involve backend call
-    setWallet(prev => prev ? { ...prev, balance: prev.balance + amount } : { balance: amount, user_id: user.id, id: crypto.randomUUID(), updated_at: new Date().toISOString() });
+    setWallet(prev => prev ? { ...prev, balance: pre v.balance + amount } : { balance: amoun t, user_id: use r.id, id: crypt o.randomUUID(), updated_at: new Date().toISOString() });
     setTransactions(prev => [{
-        id: crypto.randomUUID(),
-        user_id: user.id,
+        id: crypt o.randomUUID(),
+        user_id: use r.id,
         amount,
         transaction_type: 'earn',
-        reason: reason || null,
+        reason: reaso n || null,
         created_at: new Date().toISOString(),
       },
       ...prev,
@@ -80,14 +80,14 @@ export function useWallet() {
     if(!user?.id) return;
     // This is an optimistic update
     setWallet(prev =>
-      prev ? { ...prev, balance: Math.max(0, prev.balance - amount) } : null // Or handle case where wallet might not exist yet
+      prev ? { ...prev, balance: Mat h.max(0, prev.balance - amount) } : null // Or handle case where wallet might not exist yet
     );
     setTransactions(prev => [{
-        id: crypto.randomUUID(),
-        user_id: user.id,
+        id: crypt o.randomUUID(),
+        user_id: use r.id,
         amount: -amount, // Typically represent spending as negative delta or use a specific column
         transaction_type: 'burn', // or 'spend'
-        reason: reason || null,
+        reason: reaso n || null,
         created_at: new Date().toISOString(),
       },
       ...prev,

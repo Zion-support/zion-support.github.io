@@ -22,11 +22,11 @@ export default function Page() {
       type: 'services',
       price: '$5,000 / month',
       rating: 4.8,
-      reviews: 127,
+      reviews: 12 7,
       location: 'Remote',
       company: 'Zion Tech Group',
       tags: ['AI', 'Analytics', 'Business Intelligence', 'Machine Learning'],
-      featured: true,
+      featured: tru e,
       date: '2024 - 12 - 01',
     },
     {
@@ -37,11 +37,11 @@ export default function Page() {
       type: 'talent',
       price: '$120 / hour',
       rating: 4.9,
-      reviews: 89,
+      reviews: 8 9,
       location: 'Remote',
       company: 'Zion Tech Group',
       tags: ['React', 'Node.js', 'Full - Stack', 'Cloud'],
-      featured: false,
+      featured: fals e,
       date: '2024 - 11 - 28',
     },
     {
@@ -52,11 +52,11 @@ export default function Page() {
       type: 'services',
       price: '$15,000',
       rating: 4.7,
-      reviews: 203,
+      reviews: 20 3,
       location: 'On - site',
       company: 'Zion Tech Group',
       tags: ['Cloud', 'Infrastructure', 'AWS', 'Azure'],
-      featured: true,
+      featured: tru e,
       date: '2024 - 11 - 25',
     },
     {
@@ -67,11 +67,11 @@ export default function Page() {
       type: 'equipment',
       price: '$50,000',
       rating: 4.6,
-      reviews: 45,
+      reviews: 4 5,
       location: 'On - site',
       company: 'Zion Tech Group',
       tags: ['HPC', 'Computing', 'Data Processing', 'ML'],
-      featured: false,
+      featured: fals e,
       date: '2024 - 11 - 20',
     },
   ];
@@ -114,8 +114,7 @@ export default function Page() {
         case 'price - high':
           return (parseFloat (b.price.replace (/[^0 - 9.]/g, '') ) -
             parseFloat(a.price.replace (/[^0 - 9.]/g, '') ) ) ;
-        default:
-          return 0;
+        default: return 0;
       }
     }) ;
 
@@ -123,7 +122,7 @@ export default function Page() {
     setLoading(false) ;
   };
 
-  const handleSearch = useCallback((e: React.FormEvent) => {
+  const handleSearch = useCallback((e: Reac t.FormEvent) => {
     e.preventDefault () ;
     if(searchQuery.trim () ) {
       performSearch () ;
@@ -138,8 +137,7 @@ export default function Page() {
         return < Users className="w-5 h-5 text-purple -400" />;
       case 'equipment':
         return < Building className="w-5 h-5 text-orange -400" />;
-      default:
-        return < SearchIcon className="w-5 h-5 text-gray -400" />;
+      default: retur n < SearchIcon className="w-5 h-5 text-gray -400" />;
     }
   };
 
@@ -151,29 +149,27 @@ export default function Page() {
         return 'Talent';
       case 'equipment':
         return 'Equipment';
-      default:
-        return 'Unknown';
+      default: retur n 'Unknown';
     }
   };
 
   return (<>
-      <SEO
-        title="Search-Zion Tech Group"
+      <SEO title="Search-Zion Tech Group"
         description="Search for services, talent, equipment, and companies across Zion Tech Group's comprehensive technology marketplace."
         keywords="search, services, talent, equipment, companies, technology marketplace, Zion Tech Group"
-      />
+       />
 
       <div  className="min - h-screen bg-gradient - to - br from - blue - 900 via - purple - 900 to - indigo -900">
         {/* Search Header */}
         <section className="pt - 32 pb - 16 px-4">
           <div  className="max - w-7xl mx -auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 2 0 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               className="text-center mb-8"
             >
-              <h1 className="text-4xl md:text-6xl font - bold bg-gradient - to - r from - cyan - 400 to - blue - 400 bg-clip - text text-transparent mb-6">
+              <h1 className="text-4xl md: tex t-6xl font - bold bg-gradient - to - r from - cyan - 400 to - blue - 400 bg-clip - text text-transparent mb-6">
                 Search Zion Tech Group
               </h1>
               <p className="text-xl text-gray - 300 max - w-3xl mx -auto">
@@ -183,16 +179,16 @@ export default function Page() {
             {/* Search Form */}
             <form onSubmit={handleSearch} className="max - w-4xl mx -auto">
               <div  className="relative">
-                <SearchIcon className="absolute left - 4 top - 1/2 transform - translate - y-1 / 2 text-gray - 400 w-6 h-6" />
+                <SearchIcon className="absolute left - 4 top - 1/2 transform - translate - y-1 / 2 text-gray - 400 w-6 h-6"  />
                 <input
                   type="text"
                   value={searchQuery}
                   onChange={e => setSearchQuery (e.target.value) }
                   placeholder="Search for services, talent, equipment, companies..."
-                  className="w-full pl - 12 pr - 4 py-4 bg-slate - 800 / 50 border border-slate - 700 / 50 rounded-lg text-white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border-transparent text-lg"
+                  className="w-full pl - 12 pr - 4 py-4 bg-slate - 800 / 50 border border-slate - 700 / 50 rounded-lg text-white placeholder - gray - 400 focus: outlin e - none focus: rin g - 2 focus: rin g - blue - 500 focus: borde r-transparent text-lg"
                 />
                 <button     type="submit"
-                  className="absolute right - 2 top - 1/2 transform - translate - y-1 / 2 bg-gradient - to - r from - blue - 500 to - purple - 500 text-white px-6 py-2 rounded-md font - semibold hover:from - blue - 600 hover:to - purple - 600 transition - all duration -300"
+                  className="absolute right - 2 top - 1/2 transform - translate - y-1 / 2 bg-gradient - to - r from - blue - 500 to - purple - 500 text-white px-6 py-2 rounded-md font - semibold hover: fro m - blue - 600 hover: t o - purple - 600 transition - all duration -300"
                 >
                   Search
                 </button>
@@ -206,11 +202,11 @@ export default function Page() {
                   <li>• Competitive Pricing</li>
                 </ul>
               </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
+              <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover: b g-blue-700 transition-colors">
                 View Pricing
               </Link>
-              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
+              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover: b g-gray-700 transition-colors">
                 Contact Us
               </Link>
             </div>

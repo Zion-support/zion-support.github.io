@@ -9,12 +9,12 @@ function InnovationResearchSection () {export function InnovationResearchSection
       <div className="max-w-7xl mx-auto px-6">
         <motion.div "
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 2 0 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: tru e }}
           transition={{ duration: 0.6 }}
         >"
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-4">
             Innovation & Research
           </h2>"
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -24,9 +24,9 @@ function InnovationResearchSection () {export function InnovationResearchSection
 
         {/* Innovation Metrics */}
         <motion.div
-          className="grid grid - cols - 2 md:grid - cols - 4 gap-8 mb-16"          initial={{ opacity: 0, y: 30 }}
+          className="grid grid - cols - 2 md: gri d - cols - 4 gap-8 mb-16"          initial={{ opacity: 0, y: 3 0 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: tru e }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           {innovationMetrics.map((metric, index) => ("
@@ -43,9 +43,9 @@ function InnovationResearchSection () {export function InnovationResearchSection
         {/* Research Areas */}
         <motion.div "
           className="mb-16"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 3 0 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: tru e }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           {innovationMetrics.map((metric, index) => ("
@@ -59,9 +59,9 @@ function InnovationResearchSection () {export function InnovationResearchSection
         {/* Research Areas */}
         <motion.div
           className="mb-16"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 3 0 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: tru e }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           {innovationMetrics.map((metric, index) => (<div key={metric.label} className="text-center">
@@ -75,7 +75,7 @@ function InnovationResearchSection () {export function InnovationResearchSection
           className="mb-16";          initial = {
 
   { opacity: 0,
-  y: 30
+  y: 3 0
 
 }}
           whileInView = {
@@ -84,7 +84,7 @@ function InnovationResearchSection () {export function InnovationResearchSection
   y: 0
 
 }}
-          viewport={{ once: true }}
+          viewport={{ once: tru e }}
           transition = {
 
   { duration: 0.6,
@@ -96,13 +96,13 @@ function InnovationResearchSection () {export function InnovationResearchSection
             Active Research Areas
           </h3>
 
-          <div className="grid grid - cols - 1 md:grid - cols - 2 gap-8">
+          <div className="grid grid - cols - 1 md: gri d - cols - 2 gap-8">
             {researchAreas.map((area, index) => (<motion.div
                 key={area.title}
-                className="bg-slate - 800 border border-slate - 700 rounded-xl p - 6 hover:border-blue - 500 / 50 transition - all duration - 300 hover:shadow-lg hover:shadow-blue -500 / 25"                initial = {
+                className="bg-slate - 800 border border-slate - 700 rounded-xl p - 6 hover: borde r-blue - 500 / 50 transition - all duration - 300 hover: shado w-lg hover: shado w-blue -500 / 25"                initial = {
 
   { opacity: 0,
-  y: 30
+  y: 3 0
 
 }}
                 whileInView = {
@@ -111,7 +111,7 @@ function InnovationResearchSection () {export function InnovationResearchSection
   y: 0
 
 }}
-                viewport={{ once: true }}
+                viewport={{ once: tru e }}
                 transition = {
 
   { duration: 0.6,
@@ -137,7 +137,7 @@ function InnovationResearchSection () {export function InnovationResearchSection
                           className={`h-2 bg-gradient-to-r ${area.color} rounded-full`}
                           initial={{ width: 0 }}`
                           whileInView={{ width: `${area.progress}%` }}
-                          viewport={{ once: true }}
+                          viewport={{ once: tru e }}
                           transition = {
 
   { duration: 1,
@@ -157,7 +157,7 @@ function InnovationResearchSection () {export function InnovationResearchSection
           className="mb-12"          initial = {
 
   { opacity: 0,
-  y: 30
+  y: 3 0
 
 }}
           whileInView = {
@@ -166,7 +166,7 @@ function InnovationResearchSection () {export function InnovationResearchSection
   y: 0
 
 }}
-          viewport={{ once: true }}
+          viewport={{ once: tru e }}
           transition = {
 
   { duration: 0.6,
@@ -179,7 +179,7 @@ function InnovationResearchSection () {export function InnovationResearchSection
               Latest Research Breakthroughs
             </h3>
 
-            <div className="grid grid - cols - 1 md:grid - cols - 3 gap-6">
+            <div className="grid grid - cols - 1 md: gri d - cols - 3 gap-6">
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient - to - br from - purple - 500 to - pink - 500 rounded-2xl flex items - center justify - center mx - auto mb-4">
                   <span className="text-2xl">🔬</span>
@@ -210,7 +210,7 @@ function InnovationResearchSection () {export function InnovationResearchSection
           className="text-center"          initial = {
 
   { opacity: 0,
-  y: 20
+  y: 2 0
 
 }}
           whileInView = {
@@ -219,7 +219,7 @@ function InnovationResearchSection () {export function InnovationResearchSection
   y: 0
 
 }}
-          viewport={{ once: true }}
+          viewport={{ once: tru e }}
           transition = {
 
   { duration: 0.6,
@@ -234,14 +234,14 @@ function InnovationResearchSection () {export function InnovationResearchSection
             <p className="text-indigo-100 mb-6 max-w-2xl mx-auto">
               Partner with us to explore the frontiers of technology and create
               solutions that will shape the future of humanity.</p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-              <button className="inline-flex items-center px-6 py-3 bg-white text-indigo-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">"
+              <button className="inline-flex items-center px-6 py-3 bg-white text-indigo-600 hover: b g-gray-100 rounded-lg font-medium transition-colors duration-200">
                 Research Partnership"
-                <Flask className="ml-2 h-5 w-5"  />
+                <Flask className="ml-2 h-5 w-5"   />
               </button>"
-              <button className="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-white hover:text-indigo-600 rounded-lg font-medium transition-colors duration-200">
+              <button className="inline-flex items-center px-6 py-3 border border-white text-white hover: b g-white hover: tex t-indigo-600 rounded-lg font-medium transition-colors duration-200">
                 View Publications"
-                <BookOpen className="ml-2 h-5 w-5"  />              </button>
+                <BookOpen className="ml-2 h-5 w-5"   />              </button>
             </div>
           </div>
         </motion.div>

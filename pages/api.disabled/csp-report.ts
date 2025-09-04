@@ -17,13 +17,13 @@ interface CSPReport {
   };
 }
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function handler(req: NextApiReques t, res: NextApiRespons e) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
   try {
-    const report: CSPReport = req.body;
+    const report: CSPRepor t = req.body;
 
     // Validate the CSP report
     if (!report['csp-report']) {
@@ -34,12 +34,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     // Log the CSP violation (in production, you might want to send to a monitoring service)
     console.warn('CSP Violation: ', {
-      documentUri: cspData['document-uri'],
-      violatedDirective: cspData['violated-directive'],
-      blockedUri: cspData['blocked-uri'],
-      sourceFile: cspData['source-file'],
-      lineNumber: cspData['line-number'],
-      columnNumber: cspData['column-number'],
+      documentUri: cspDat a['document-uri'],
+      violatedDirective: cspDat a['violated-directive'],
+      blockedUri: cspDat a['blocked-uri'],
+      sourceFile: cspDat a['source-file'],
+      lineNumber: cspDat a['line-number'],
+      columnNumber: cspDat a['column-number'],
       timestamp: new Date().toISOString(),
     });
 

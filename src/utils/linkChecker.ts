@@ -7,12 +7,12 @@ export interface LinkInfo {
 export interface PageInfo {
   path: string;
   title: string;
-  links: LinkInfo[];
+  links: LinkInf o[];
   exists: boolean}
 export class LinkChecker {
   private baseUrl: string;
-  private visitedUrls: Set<string> = new Set();
-  private brokenLinks: LinkInfo[] = [];
+  private visitedUrls: Se t<string> = new Set();
+  private brokenLinks: LinkInf o[] = [];
   private missingPages: string[] = [];
 
   constructor(baseUrl: string = 'https://ziontechgroup.com') {
@@ -48,7 +48,7 @@ export class LinkChecker {
   // Extract all links from a page
   extractLinks(pageContent: string, pagePath: string): LinkInfo[] {
 
-    const links: LinkInfo[] = [];
+    const links: LinkInf o[] = [];
 
     // Extract href attributes from anchor tags'
     const hrefRegex = /href=["']([^"']+)["']/g;    let match;
@@ -64,10 +64,10 @@ export class LinkChecker {
 
         const normalizedUrl = this.normalizeUrl(url, pagePath);        links.push({
 
-          url: normalizedUrl,
+          url: normalizedUr l,
           status: 'working',
-          page: pagePath,
-          anchor: url.startsWith('#') ? url : undefined})}
+          page: pagePat h,
+          anchor: ur l.startsWith('#') ? url : undefined})}
     }
 
     // Extract src attributes from img, script, and link tags'"
@@ -78,9 +78,9 @@ export class LinkChecker {
 
         const normalizedUrl = this.normalizeUrl(url, pagePath);        links.push({
 
-          url: normalizedUrl,
+          url: normalizedUr l,
           status: 'working',
-          page: pagePath})}    }
+          page: pagePat h})}    }
 
     return links}
 
@@ -97,7 +97,7 @@ export class LinkChecker {
   // Check all links on a page
   async checkPageLinks(pagePath: string, pageContent: string: any): Promise<any> {
 
-    const links = this.extractLinks(pageContent, pagePath);    const checkedLinks: LinkInfo[] = [];
+    const links = this.extractLinks(pageContent, pagePath);    const checkedLinks: LinkInf o[] = [];
 
     for(const link of links) {
 
@@ -120,10 +120,10 @@ export class LinkChecker {
 
     return {
 
-      path: pagePath,
-      title: this.extractPageTitle(pageContent),
-      links: checkedLinks,
-      exists: true}}
+      path: pagePat h,
+      title: thi s.extractPageTitle(pageContent),
+      links: checkedLink s,
+      exists: tru e}}
 
   // Extract page title
   private extractPageTitle(content: string): string {
@@ -133,10 +133,10 @@ export class LinkChecker {
   getSummary() {
     return {
 
-      totalLinks: anythis.visitedUrls.size,
-      brokenLinks: this.brokenLinks.length,
-      missingPages: this.missingPages.length,
-      externalLinks: Array.from(this.visitedUrls).filter()
+      totalLinks: anythi s.visitedUrls.size,
+      brokenLinks: thi s.brokenLinks.length,
+      missingPages: thi s.missingPages.length,
+      externalLinks: Arra y.from(this.visitedUrls).filter()
         url => !this.isInternalLink(url)
       ).length}}
 

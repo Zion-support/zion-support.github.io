@@ -18,13 +18,13 @@ import {
   Zap
 } from 'lucide-react'
 
-const SEO = dynamic(() => import('../src/components/SEO'), { ssr: false })
-const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false })
+const SEO = dynamic(() => import('../src/components/SEO'), { ssr: fals e })
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: fals e })
 
-const HelpPage: React.FC = () => {
+const HelpPage: Reac t.FC = () => {
   const supportOptions = [
     {
-      icon: <MessageCircle className="w-8 h-8" />,
+      icon: <MessageCircle className="w-8 h-8"  />,
       title: "Live Chat Support",
       description: "Get instant help from our support team",
       action: "Start Chat",
@@ -32,7 +32,7 @@ const HelpPage: React.FC = () => {
       responseTime: "Immediate"
     },
     {
-      icon: <Phone className="w-8 h-8" />,
+      icon: <Phone className="w-8 h-8"  />,
       title: "Phone Support",
       description: "Speak directly with our technical experts",
       action: "Call Now",
@@ -40,7 +40,7 @@ const HelpPage: React.FC = () => {
       responseTime: "Immediate"
     },
     {
-      icon: <Mail className="w-8 h-8" />,
+      icon: <Mail className="w-8 h-8"  />,
       title: "Email Support",
       description: "Send us your questions and get detailed responses",
       action: "Send Email",
@@ -48,7 +48,7 @@ const HelpPage: React.FC = () => {
       responseTime: "Within 4 hours"
     },
     {
-      icon: <BookOpen className="w-8 h-8" />,
+      icon: <BookOpen className="w-8 h-8"  />,
       title: "Documentation",
       description: "Comprehensive guides and API references",
       action: "View Docs",
@@ -86,19 +86,19 @@ const HelpPage: React.FC = () => {
 
   const contactInfo = [
     {
-      icon: <Phone className="w-6 h-6" />,
+      icon: <Phone className="w-6 h-6"  />,
       title: "Phone",
       details: "+1 302 464 0950",
       link: "tel:+13024640950"
     },
     {
-      icon: <Mail className="w-6 h-6" />,
+      icon: <Mail className="w-6 h-6"  />,
       title: "Email",
       details: "kleber@ziontechgroup.com",
-      link: "mailto:kleber@ziontechgroup.com"
+      link: "mailto: klebe r@ziontechgroup.com"
     },
     {
-      icon: <Globe className="w-6 h-6" />,
+      icon: <Globe className="w-6 h-6"  />,
       title: "Address",
       details: "364 E Main St STE 1008\nMiddletown, DE 19709",
       link: "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"
@@ -107,47 +107,46 @@ const HelpPage: React.FC = () => {
 
   return (
     <>
-      <SEO
-        title="Help & Support - Zion Tech Group"
+      <SEO title="Help & Support - Zion Tech Group"
         description="Get help and support for Zion Tech Group services. Contact our team for assistance with AI services, IT solutions, and micro SaaS development."
         keywords="help, support, contact, Zion Tech Group, AI services, IT solutions"
         canonical="https://ziontechgroup.com/help"
-      />
+       />
       
       <PageTransition>
         <main className="min-h-screen bg-white">
           {/* Hero Section */}
           <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="text-center"
               >
-                <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                <h1 className="text-4xl md: tex t-6xl font-bold text-gray-900 mb-6">
                   Help & <span className="text-blue-600">Support</span>
                 </h1>
                 <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
                   We're here to help! Get support for our AI services, IT solutions, and micro SaaS development.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm: fle x-row gap-4 justify-center">
                   <motion.a
                     href="tel:+13024640950"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
                   >
-                    <Phone className="w-5 h-5" />
+                    <Phone className="w-5 h-5"  />
                     Call Now: +1 302 464 0950
                   </motion.a>
                   <motion.a
-                    href="mailto:kleber@ziontechgroup.com"
+                    href="mailto: klebe r@ziontechgroup.com"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
                   >
-                    <Mail className="w-5 h-5" />
+                    <Mail className="w-5 h-5"  />
                     Send Email
                   </motion.a>
                 </div>
@@ -157,14 +156,14 @@ const HelpPage: React.FC = () => {
 
           {/* Support Options */}
           <section className="py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-center mb-16"
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4">
                   Support Options
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -172,14 +171,14 @@ const HelpPage: React.FC = () => {
                 </p>
               </motion.div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
                 {supportOptions.map((option, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 2 0 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow duration-300"
+                    transition={{ duration: 0.6, delay: inde x * 0.1 }}
+                    className="bg-white rounded-xl shadow-lg p-8 text-center hover: shado w-xl transition-shadow duration-300"
                   >
                     <div className="text-blue-600 mb-4 flex justify-center">
                       {option.icon}
@@ -201,7 +200,7 @@ const HelpPage: React.FC = () => {
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                      className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover: b g-blue-700 transition-colors"
                     >
                       {option.action}
                     </motion.button>
@@ -213,14 +212,14 @@ const HelpPage: React.FC = () => {
 
           {/* FAQ Section */}
           <section className="bg-gray-50 py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="text-center mb-16"
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4">
                   Frequently Asked Questions
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -233,9 +232,9 @@ const HelpPage: React.FC = () => {
                   {faqs.map((faq, index) => (
                     <motion.div
                       key={index}
-                      initial={{ opacity: 0, y: 20 }}
+                      initial={{ opacity: 0, y: 2 0 }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      transition={{ duration: 0.6, delay: inde x * 0.1 }}
                       className="bg-white rounded-xl shadow-lg p-8"
                     >
                       <h3 className="text-lg font-semibold text-gray-900 mb-3">
@@ -253,14 +252,14 @@ const HelpPage: React.FC = () => {
 
           {/* Contact Information */}
           <section className="py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="text-center mb-16"
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4">
                   Contact Information
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -268,13 +267,13 @@ const HelpPage: React.FC = () => {
                 </p>
               </motion.div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md: gri d-cols-3 gap-8">
                 {contactInfo.map((info, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 2 0 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    transition={{ duration: 0.6, delay: inde x * 0.1 }}
                     className="bg-white rounded-xl shadow-lg p-8 text-center"
                   >
                     <div className="text-blue-600 mb-4 flex justify-center">
@@ -286,7 +285,7 @@ const HelpPage: React.FC = () => {
                     {info.link ? (
                       <a
                         href={info.link}
-                        className="text-gray-600 hover:text-blue-600 transition-colors whitespace-pre-line"
+                        className="text-gray-600 hover: tex t-blue-600 transition-colors whitespace-pre-line"
                       >
                         {info.details}
                       </a>

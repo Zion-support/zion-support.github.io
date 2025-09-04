@@ -1,5 +1,5 @@
 import React from 'react';
-const AutomatedFollowUps: React.FC = () => {
+const AutomatedFollowUps: Reac t.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       <h1 className="text-4xl font-bold mb-4">Automated Email Follow-Ups</h1>
@@ -9,7 +9,7 @@ const AutomatedFollowUps: React.FC = () => {
       <ul className="list-disc pl-6 space-y-2 text-gray-300">
         <li>Multi-channel sequences and A/B testing</li>
         <li>Lead scoring and intent-based branching</li>
-        <li>CRM integrations: HubSpot, Salesforce, Pipedrive</li>
+        <li>CRM integrations: HubSpo t, Salesforce, Pipedrive</li>
         <li>Compliance-friendly opt-out and throttling</li>
       </ul>
       <div className="mt-8">

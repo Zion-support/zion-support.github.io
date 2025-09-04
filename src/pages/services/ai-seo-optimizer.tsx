@@ -1,5 +1,5 @@
 import React from 'react';
-const AISeoOptimizer: React.FC = () => {
+const AISeoOptimizer: Reac t.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       <h1 className="text-4xl font-bold mb-4">AI SEO Content Optimizer</h1>

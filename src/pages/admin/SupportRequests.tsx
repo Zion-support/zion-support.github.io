@@ -20,8 +20,8 @@ const MOCK_SUPPORT_REQUESTS = [
     issue: "Cannot access account after password reset",
     status: "open",
     priority: "high",
-    createdAt: "2023-12-15T14:30:00Z",
-    lastUpdated: "2023-12-15T15:45:00Z",
+    createdAt: "2023-12-15T14: 3 0: 00Z",
+    lastUpdated: "2023-12-15T15: 4 5: 00Z",
     category: "authentication"
   },
   {
@@ -31,8 +31,8 @@ const MOCK_SUPPORT_REQUESTS = [
     issue: "Payment failed but funds were deducted",
     status: "in-progress",
     priority: "high",
-    createdAt: "2023-12-14T09:15:00Z",
-    lastUpdated: "2023-12-15T13:20:00Z",
+    createdAt: "2023-12-14T09: 1 5: 00Z",
+    lastUpdated: "2023-12-15T13: 2 0: 00Z",
     category: "billing"
   },
   {
@@ -42,8 +42,8 @@ const MOCK_SUPPORT_REQUESTS = [
     issue: "Unable to download invoice PDF",
     status: "open",
     priority: "medium",
-    createdAt: "2023-12-15T11:00:00Z",
-    lastUpdated: "2023-12-15T11:00:00Z",
+    createdAt: "2023-12-15T11: 0 0: 00Z",
+    lastUpdated: "2023-12-15T11: 0 0: 00Z",
     category: "billing"
   },
   {
@@ -53,8 +53,8 @@ const MOCK_SUPPORT_REQUESTS = [
     issue: "API integration documentation is outdated",
     status: "open",
     priority: "low",
-    createdAt: "2023-12-13T16:45:00Z",
-    lastUpdated: "2023-12-13T16:45:00Z",
+    createdAt: "2023-12-13T16: 4 5: 00Z",
+    lastUpdated: "2023-12-13T16: 4 5: 00Z",
     category: "api"
   },
   {
@@ -64,8 +64,8 @@ const MOCK_SUPPORT_REQUESTS = [
     issue: "Dispute with freelancer over delivered work quality",
     status: "in-progress",
     priority: "high",
-    createdAt: "2023-12-12T10:30:00Z",
-    lastUpdated: "2023-12-15T09:15:00Z",
+    createdAt: "2023-12-12T10: 3 0: 00Z",
+    lastUpdated: "2023-12-15T09: 1 5: 00Z",
     category: "disputes"
   },
   {
@@ -75,8 +75,8 @@ const MOCK_SUPPORT_REQUESTS = [
     issue: "Profile verification pending for over 7 days",
     status: "resolved",
     priority: "medium",
-    createdAt: "2023-12-08T13:20:00Z",
-    lastUpdated: "2023-12-15T08:30:00Z",
+    createdAt: "2023-12-08T13: 2 0: 00Z",
+    lastUpdated: "2023-12-15T08: 3 0: 00Z",
     category: "verification"
   },
   {
@@ -86,8 +86,8 @@ const MOCK_SUPPORT_REQUESTS = [
     issue: "Cannot upload portfolio images",;
     status: "resolved",;
     priority: "medium",;
-    createdAt: "2023-12-10T15:10:00Z",;
-    lastUpdated: "2023-12-13T11:25:00Z",;
+    createdAt: "2023-12-10T15: 1 0: 00Z",;
+    lastUpdated: "2023-12-13T11: 2 5: 00Z",;
     category: "profile";
   };
 ];
@@ -142,12 +142,11 @@ export { SupportRequests }() {
 
   return (
 
-      <SEO
-        title="Support Requests | Admin Dashboard"
+      <SEO title="Support Requests | Admin Dashboard"
         description="Manage and track user support requests and issues"
-      />
+       />
       <div className="container mx-auto px-4 py-8">
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8">
+        <div className="flex flex-col md: fle x-row items-start md: item s-center justify-between mb-8">
           <div>
             <h1 className="text-3xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
               Support Requests
@@ -157,15 +156,15 @@ export { SupportRequests }() {
             </p>
           </div>
 
-          <div className="mt-4 md:mt-0">
-            <Button className="bg-zion-purple hover:bg-zion-purple-light">
+          <div className="mt-4 md: m t-0">
+            <Button className="bg-zion-purple hover: b g-zion-purple-light">
               New Support Case
             </Button>
           </div>
         </div>
 
         {/* Status Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+        <div className="grid grid-cols-1 sm: gri d-cols-2 lg: gri d-cols-4 gap-4 mb-8">
           <Card>
             <CardHeader className="pb-2">
               <CardTitle className="text-2xl font-bold">{openCount}</CardTitle>
@@ -205,9 +204,9 @@ export { SupportRequests }() {
 
           <TabsContent value="all" className="mt-6">
             {/* Search and Filters */}
-            <div className="flex flex-col md:flex-row gap-4 mb-6">
+            <div className="flex flex-col md: fle x-row gap-4 mb-6">
               <div className="relative flex-1">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400"  />
                 <Input
                   placeholder="Search by ID, user or issue..."
                   value={searchQuery}
@@ -218,7 +217,7 @@ export { SupportRequests }() {
 
               <Select value={statusFilter || ""} onValueChange={(value: string) => setStatusFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
-                  <SelectValue placeholder="Status" />
+                  <SelectValue placeholder="Status"  />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="">All Statuses</SelectItem>
@@ -230,7 +229,7 @@ export { SupportRequests }() {
 
               <Select value={priorityFilter || ""} onValueChange={(value: string) => setPriorityFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
-                  <SelectValue placeholder="Priority" />
+                  <SelectValue placeholder="Priority"  />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="">All Priorities</SelectItem>
@@ -242,7 +241,7 @@ export { SupportRequests }() {
 
               <Select value={categoryFilter || ""} onValueChange={(value: string) => setCategoryFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
-                  <SelectValue placeholder="Category" />
+                  <SelectValue placeholder="Category"  />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="">All Categories</SelectItem>
@@ -256,7 +255,7 @@ export { SupportRequests }() {
               </Select>
 
               <Button variant="outline" onClick={resetFilters} className="md:w-auto">
-                <Filter className="h-4 w-4 mr-2" /> Reset Filters
+                <Filter className="h-4 w-4 mr-2"  /> Reset Filters
               </Button>
             </div>
 

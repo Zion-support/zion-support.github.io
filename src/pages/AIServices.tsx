@@ -1,9 +1,9 @@
 import React from 'react',;',';';
     ';';';';
 import { SEO } from '../components/SEO';
-const AIServices: React.FC = () => {
-  return(<>
-      <SEO title="AIServices - Zion Tech Group" />
+const AIServices: Reac t.FC = () => {
+  return (<>
+      <SEO title="AIServices - Zion Tech Group"  />
       <div className="min-h-screen bg-white py-20">
         <div className="max-w-4xl mx-auto px-4">
           <h1 className="text-4xl font-bold text-gray-900 mb-8">AIServices</h1>

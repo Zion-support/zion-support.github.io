@@ -18,10 +18,10 @@ import {
   Shield
 } from 'lucide-react'
 
-const SEO = dynamic(() => import('../src/components/SEO'), { ssr: false })
-const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false })
+const SEO = dynamic(() => import('../src/components/SEO'), { ssr: fals e })
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: fals e })
 
-const LoginPage: React.FC = () => {
+const LoginPage: Reac t.FC = () => {
   const [formData, setFormData] = useState({
     email: '',
     password: ''
@@ -29,7 +29,7 @@ const LoginPage: React.FC = () => {
   const [showPassword, setShowPassword] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (e: Reac t.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target
     setFormData(prev => ({
       ...prev,
@@ -37,7 +37,7 @@ const LoginPage: React.FC = () => {
     }))
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: Reac t.FormEvent) => {
     e.preventDefault()
     setIsLoading(true)
     
@@ -50,17 +50,17 @@ const LoginPage: React.FC = () => {
 
   const features = [
     {
-      icon: <Shield className="w-6 h-6" />,
+      icon: <Shield className="w-6 h-6"  />,
       title: 'Secure Access',
       description: 'Enterprise-grade security for your account'
     },
     {
-      icon: <Zap className="w-6 h-6" />,
+      icon: <Zap className="w-6 h-6"  />,
       title: 'Fast Performance',
       description: 'Lightning-fast access to all services'
     },
     {
-      icon: <Globe className="w-6 h-6" />,
+      icon: <Globe className="w-6 h-6"  />,
       title: 'Global Access',
       description: 'Access your account from anywhere in the world'
     }
@@ -68,17 +68,16 @@ const LoginPage: React.FC = () => {
 
   return (
     <>
-      <SEO
-        title="Login - Zion Tech Group"
+      <SEO title="Login - Zion Tech Group"
         description="Secure login to access your Zion Tech Group account and services."
         keywords="login, account, access, Zion Tech Group"
         canonical="https://ziontechgroup.com/login"
-      />
+       />
       
       <PageTransition>
-        <main className="min-h-screen bg-gray-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+        <main className="min-h-screen bg-gray-50 flex items-center justify-center py-12 px-4 sm: p x-6 lg: p x-8">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-1 lg: gri d-cols-2 gap-12 items-center">
               {/* Left Side - Login Form */}
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -102,18 +101,17 @@ const LoginPage: React.FC = () => {
                     </label>
                     <div className="relative">
                       <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                        <Mail className="h-5 w-5 text-gray-400" />
+                        <Mail className="h-5 w-5 text-gray-400"  />
                       </div>
-                      <input
-                        id="email"
+                      <input id="email"
                         name="email"
                         type="email"
                         required
                         value={formData.email}
                         onChange={handleInputChange}
-                        className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent"
                         placeholder="Enter your email"
-                      />
+                       />
                     </div>
                   </div>
 
@@ -123,27 +121,26 @@ const LoginPage: React.FC = () => {
                     </label>
                     <div className="relative">
                       <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                        <Lock className="h-5 w-5 text-gray-400" />
+                        <Lock className="h-5 w-5 text-gray-400"  />
                       </div>
-                      <input
-                        id="password"
+                      <input id="password"
                         name="password"
                         type={showPassword ? 'text' : 'password'}
                         required
                         value={formData.password}
                         onChange={handleInputChange}
-                        className="block w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="block w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent"
                         placeholder="Enter your password"
-                      />
+                       />
                       <button
                         type="button"
                         className="absolute inset-y-0 right-0 pr-3 flex items-center"
                         onClick={() => setShowPassword(!showPassword)}
                       >
                         {showPassword ? (
-                          <EyeOff className="h-5 w-5 text-gray-400" />
+                          <EyeOff className="h-5 w-5 text-gray-400"  />
                         ) : (
-                          <Eye className="h-5 w-5 text-gray-400" />
+                          <Eye className="h-5 w-5 text-gray-400"  />
                         )}
                       </button>
                     </div>
@@ -151,18 +148,17 @@ const LoginPage: React.FC = () => {
 
                   <div className="flex items-center justify-between">
                     <div className="flex items-center">
-                      <input
-                        id="remember-me"
+                      <input id="remember-me"
                         name="remember-me"
                         type="checkbox"
-                        className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
-                      />
+                        className="h-4 w-4 text-blue-600 focus: rin g-blue-500 border-gray-300 rounded"
+                       />
                       <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-700">
                         Remember me
                       </label>
                     </div>
                     <div className="text-sm">
-                      <a href="#" className="font-medium text-blue-600 hover:text-blue-500">
+                      <a href="#" className="font-medium text-blue-600 hover: tex t-blue-500">
                         Forgot your password?
                       </a>
                     </div>
@@ -173,7 +169,7 @@ const LoginPage: React.FC = () => {
                     disabled={isLoading}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-semibold flex items-center justify-center gap-2 hover: b g-blue-700 focus: outlin e-none focus: rin g-2 focus: rin g-blue-500 focus: rin g-offset-2 disabled: opacit y-50 disabled: curso r-not-allowed"
                   >
                     {isLoading ? (
                       <>
@@ -182,7 +178,7 @@ const LoginPage: React.FC = () => {
                       </>
                     ) : (
                       <>
-                        <ArrowRight className="w-5 h-5" />
+                        <ArrowRight className="w-5 h-5"  />
                         Sign In
                       </>
                     )}
@@ -192,7 +188,7 @@ const LoginPage: React.FC = () => {
                 <div className="mt-6 text-center">
                   <p className="text-sm text-gray-600">
                     Don't have an account?{' '}
-                    <a href="/register" className="font-medium text-blue-600 hover:text-blue-500">
+                    <a href="/register" className="font-medium text-blue-600 hover: tex t-blue-500">
                       Sign up here
                     </a>
                   </p>
@@ -201,7 +197,7 @@ const LoginPage: React.FC = () => {
 
               {/* Right Side - Features */}
               <motion.div
-                initial={{ opacity: 0, x: 20 }}
+                initial={{ opacity: 0, x: 2 0 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="space-y-8"
@@ -219,9 +215,9 @@ const LoginPage: React.FC = () => {
                   {features.map((feature, index) => (
                     <motion.div
                       key={index}
-                      initial={{ opacity: 0, y: 20 }}
+                      initial={{ opacity: 0, y: 2 0 }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      transition={{ duration: 0.6, delay: inde x * 0.1 }}
                       className="flex items-start gap-4"
                     >
                       <div className="text-blue-600 mt-1">
@@ -246,16 +242,16 @@ const LoginPage: React.FC = () => {
                   <p className="text-gray-600 mb-4">
                     Contact our support team for assistance with your account.
                   </p>
-                  <div className="flex flex-col sm:flex-row gap-3">
+                  <div className="flex flex-col sm: fle x-row gap-3">
                     <a
                       href="tel:+13024640950"
-                      className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-700 transition-colors text-center"
+                      className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover: b g-blue-700 transition-colors text-center"
                     >
                       Call: +1 302 464 0950
                     </a>
                     <a
-                      href="mailto:kleber@ziontechgroup.com"
-                      className="border border-blue-600 text-blue-600 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-50 transition-colors text-center"
+                      href="mailto: klebe r@ziontechgroup.com"
+                      className="border border-blue-600 text-blue-600 px-4 py-2 rounded-lg text-sm font-semibold hover: b g-blue-50 transition-colors text-center"
                     >
                       Email Support
                     </a>

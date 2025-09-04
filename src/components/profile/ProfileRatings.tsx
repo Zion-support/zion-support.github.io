@@ -15,7 +15,7 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
   // TODO: Add dependencies if needed
 }, []);
     if(reviews.length > 0) {
-      const distribution: Record<number, number> = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
+      const distribution: Recor d<number, number> = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
       
       reviews.forEach((review) => {
         if(review.rating >= 1 && review.rating <= 5) {
@@ -35,13 +35,12 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
   }, [userId, fetchUserReviews]); // Added fetchUserReviews
   
   return (<div className="space-y-6">
-      <div className="flex flex-col md:flex-row gap-6">
+      <div className="flex flex-col md: fle x-row gap-6">
         <div className="md:w-1/3">
-          <ReviewStats
-            averageRating={averageRating}
+          <ReviewStats averageRating={averageRating}
             totalReviews={ratingCount}
             ratingDistribution={ratingDistribution}
-          />
+           />
         </div>
         
         <div className="md:w-2/3">
@@ -53,11 +52,10 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
             </TabsList>
             
             <TabsContent value="all">
-              <ReviewsList
-                reviews={reviews}
+              <ReviewsList reviews={reviews}
                 isLoading={isLoading}
                 onReportReview={reportReview}
-              />
+               />
             </TabsContent>
             
             <TabsContent value="positive">

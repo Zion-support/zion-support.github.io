@@ -16,11 +16,11 @@ import {
   Satellite} from 'lucide-react';
 ;
 export { function };
-export default function IoTEdgeComputing(...args: unknown[]): unknown {
+export default function IoTEdgeComputing(...args: unknow n[]): unknown {
   
   
   
-  return()
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
       <SEO"
         title="IoT Edge Computing Services - Zion Tech Group""        description="Revolutionary IoT and edge computing solutions for real-time processing, low-latency applications, and connected ecosystems."
@@ -36,16 +36,16 @@ export default function IoTEdgeComputing(...args: unknown[]): unknown {
 "
         <div className="relative z-10 container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}"
             className="text-center max-w-4xl mx-auto"
           >"
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-400/30 rounded-full text-green-300 text-sm font-medium mb-6">"
-              <Cpu className="w-4 h-4 mr-2"  />              IoT Edge Computing
+              <Cpu className="w-4 h-4 mr-2"   />              IoT Edge Computing
             </div>
 "
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md: tex t-6xl font-bold text-white mb-6">
               IoT Edge Computing"
               <span className="block bg-gradient-to-r from-green-400 via-blue-500 to-cyan-600 bg-clip-text text-transparent">
                 Solutions
@@ -58,16 +58,16 @@ export default function IoTEdgeComputing(...args: unknown[]): unknown {
               insights, reduce latency, and create connected ecosystems.
             </p>
 "
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
               <Link"
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/20"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold rounded-lg hover: fro m-green-400 hover: t o-blue-500 transition-all duration-200 hover: scal e-105 shadow-lg shadow-green-500/20"
               >
                 Get Started"
-                <ArrowRight className="w-5 h-5 ml-2"  />              </Link>
+                <ArrowRight className="w-5 h-5 ml-2"   />              </Link>
               <Link"
                 to="/services"
-                className="inline-flex items-center px-8 py-4 border border-green-400/30 text-green-400 font-semibold rounded-lg hover:bg-green-400/10 transition-all duration-200"
+                className="inline-flex items-center px-8 py-4 border border-green-400/30 text-green-400 font-semibold rounded-lg hover: b g-green-400/10 transition-all duration-200"
               >
                 Schedule Demo
               </Link>
@@ -80,7 +80,7 @@ export default function IoTEdgeComputing(...args: unknown[]): unknown {
       <section className="py-20">"
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}"
             className="text-center mb-16"
@@ -95,16 +95,16 @@ export default function IoTEdgeComputing(...args: unknown[]): unknown {
             </p>
           </motion.div>
 "
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md: gri d-cols-2 lg: gri d-cols-4 gap-8">
             {features.map((feature, index (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}"
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200 group"
+                transition={{ duration: 0.6, delay: inde x * 0.1 }}"
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover: borde r-green-400/30 transition-all duration-200 group"
               >"
-                <div className="w-12 h-12 bg-gradient-to-br from-green-400/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-green-400/40 group-hover:to-blue-500/40 transition-all duration-200">"
+                <div className="w-12 h-12 bg-gradient-to-br from-green-400/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4 group-hover: fro m-green-400/40 group-hover: t o-blue-500/40 transition-all duration-200">"
                   <feature.icon className="w-6 h-6 text-green-400" />
                 </div>"
                 <h3 className="text-xl font-semibold text-white mb-2">
@@ -121,7 +121,7 @@ export default function IoTEdgeComputing(...args: unknown[]): unknown {
       <section className="py-20 bg-slate-900/50">"
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}"
             className="text-center mb-16"
@@ -135,14 +135,14 @@ export default function IoTEdgeComputing(...args: unknown[]): unknown {
             </p>
           </motion.div>
 "
-          <div className="grid md:grid-cols-2 gap-8">
-            {services.map(service: unknown, index: unknown 
+          <div className="grid md: gri d-cols-2 gap-8">
+            {services.map(service: unknow n, index: unknow n 
               <motion.div
                 key={service.title}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                initial={{ opacity: 0, x: inde x % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}"
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-green-400/30 transition-all duration-200"
+                transition={{ duration: 0.6, delay: inde x * 0.1 }}"
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover: borde r-green-400/30 transition-all duration-200"
               >"
                 <div className="w-16 h-16 bg-gradient-to-br from-green-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mb-6">"
                   <service.icon className="w-8 h-8 text-green-400" />
@@ -159,7 +159,7 @@ export default function IoTEdgeComputing(...args: unknown[]): unknown {
                       key={featureIndex}"
                       className="flex items-center text-slate-300"
                     >"
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0"  />                      {feature}
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0"   />                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -173,7 +173,7 @@ export default function IoTEdgeComputing(...args: unknown[]): unknown {
       <section className="py-20">"
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}"
             className="text-center mb-16"
@@ -187,16 +187,16 @@ export default function IoTEdgeComputing(...args: unknown[]): unknown {
             </p>
           </motion.div>
 "
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {technologies.map(tech: unknown, index: unknown (
+          <div className="grid md: gri d-cols-2 lg: gri d-cols-4 gap-6">
+            {technologies.map(tech: unknow n, index: unknow n (
               <motion.div
                 key={tech}
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}"
-                className="flex items-center p-4 bg-slate-800/50 border border-slate-700/50 rounded-lg hover:border-green-400/30 transition-all duration-200"
+                transition={{ duration: 0.6, delay: inde x * 0.1 }}"
+                className="flex items-center p-4 bg-slate-800/50 border border-slate-700/50 rounded-lg hover: borde r-green-400/30 transition-all duration-200"
               >"
-                <Cpu className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />"                <span className="text-white text-sm">{tech}</span>
+                <Cpu className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"   />"                <span className="text-white text-sm">{tech}</span>
               </motion.div>
             ))}
           </div>
@@ -207,7 +207,7 @@ export default function IoTEdgeComputing(...args: unknown[]): unknown {
       <section className="py-20 bg-gradient-to-r from-green-500/10 to-blue-500/10">"
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >"
@@ -219,16 +219,16 @@ export default function IoTEdgeComputing(...args: unknown[]): unknown {
               connected ecosystems for your business.
             </p>
 "
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
               <Link"
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/20"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold rounded-lg hover: fro m-green-400 hover: t o-blue-500 transition-all duration-200 hover: scal e-105 shadow-lg shadow-green-500/20"
               >
                 Start Your IoT Journey"
-                <ArrowRight className="w-5 h-5 ml-2"  />              </Link>
+                <ArrowRight className="w-5 h-5 ml-2"   />              </Link>
               <Link"
                 to="/services"
-                className="inline-flex items-center px-8 py-4 border border-green-400/30 text-green-400 font-semibold rounded-lg hover:bg-green-400/10 transition-all duration-200"
+                className="inline-flex items-center px-8 py-4 border border-green-400/30 text-green-400 font-semibold rounded-lg hover: b g-green-400/10 transition-all duration-200"
               >
                 Contact Our Team
               </Link>

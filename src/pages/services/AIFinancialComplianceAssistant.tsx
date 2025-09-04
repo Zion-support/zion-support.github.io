@@ -1,9 +1,8 @@
   ;
   ;
   website: 'https://ziontechgroup.com';
-  }},;
-    {;
-      icon: BarChart3,;
+  }}, {;
+      icon: BarChart 3,;
       title: 'Advanced Analytics & Reporting',;
       description: 'Comprehensive dashboards and automated reporting for regulatory submissions'};
   ];
@@ -31,7 +30,7 @@
       ],;'
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       cta: 'Start Free Trial',
-      popular: false
+      popular: fals e
     },
     {
 
@@ -43,7 +42,7 @@
         'Up to 10,000 transactions/month',Advanced AI compliance monitoring',Real-time regulatory updates',Priority support',Custom reporting',Up to 25 user licenses',Advanced compliance frameworks',API integrations',Custom workflows',Advanced analytics'
       ],;
       cta: 'Start Free Trial',
-      popular: true
+      popular: tru e
     },
     {
 
@@ -57,16 +56,14 @@
         'White-label solutions';
       ],;
       cta: 'Contact Sales',;
-      popular: false};
-  ]},;
-    {;
+      popular: fals e};
+  ]}, {;
       title: 'IFRS/GAAP',;
       description: 'Accounting standards compliance with automated financial reporting',;
-      icon: BookOpen};
-  ]},;
-    {;'
+      icon: BookOpe n};
+  ]}, {;'
       title: 'Fintech Startups',;'      description: 'Rapid compliance scaling for growing financial technology companies',;
-      icon: Zap};
+      icon: Za p};
   ];
 
   return ("
@@ -74,16 +71,16 @@
       <SEO "
         title="AI Financial Compliance Assistant | Zion Tech Group""
         description="Revolutionize your financial compliance with AI-powered automation. Monitor regulations, detect risks, and ensure 99.9% compliance accuracy.""        keywords="AI financial compliance, regulatory compliance, SOX compliance, GDPR compliance, PCI DSS, AML KYC, financial regulations"
-       />
+        />
 
       {/* Hero Section */}"
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
+      <section className="relative py-20 px-4 sm: p x-6 lg: p x-8">"
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -105,10 +102,10 @@
             transition={{ duration: 0.8 }}
 "
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100/10 border border-blue-200/20 text-blue-200 text-sm font-medium mb-6">"
-              <Shield className="w-4 h-4 mr-2"  />              AI-Powered Financial Compliance
+              <Shield className="w-4 h-4 mr-2"   />              AI-Powered Financial Compliance
             </div>
 "
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md: tex t-6xl font-bold text-white mb-6">
               AI Financial Compliance"
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
                 Assistant
@@ -120,26 +117,24 @@
               detect risks proactively, and ensure 99.9% compliance accuracy across all frameworks.
             </p>
 "
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-              <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">"
+              <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover: fro m-blue-700 hover: t o-cyan-700 transition-all duration-300 transform hover: scal e-105">
                 Start Free Trial
               </button>"
-              <button className="px-8 py-4 border border-blue-200/20 text-blue-200 font-semibold rounded-lg hover:bg-blue-200/10 transition-all duration-300">
+              <button className="px-8 py-4 border border-blue-200/20 text-blue-200 font-semibold rounded-lg hover: b g-blue-200/10 transition-all duration-300">
                 Schedule Demo
               </button>
             </div>
           </motion.div>
         </div>
-      </section>;
-
-      {/* Features Section */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;"
+      </section> {/* Features Section */}"
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8">;"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -159,10 +154,10 @@
 
 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}"
+            viewport={{ once: tru e }}"
             className="text-center mb-16"
 "
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
               Comprehensive Compliance Automation
             </h2>"
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
@@ -170,14 +165,14 @@
             </p>
           </motion.div>
           "
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
             {features.map((feature, index (
               <motion.div
                 key={index}
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -199,7 +194,7 @@
                 transition = {
 
   { duration: 0.8,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -207,8 +202,8 @@
 
 
 }}
-                viewport={{ once: true }}"
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300"
+                viewport={{ once: tru e }}"
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover: borde r-blue-500/50 transition-all duration-300"
 "
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">"
                   <feature.icon className="w-6 h-6 text-white" />
@@ -222,13 +217,13 @@
       </section>
 
       {/* Compliance Frameworks Section */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">;"
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-slate-800/30">;"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -248,10 +243,10 @@
 
 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}"
+            viewport={{ once: tru e }}"
             className="text-center mb-16"
 "
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
               Supported Compliance Frameworks
             </h2>"
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
@@ -259,14 +254,14 @@
             </p>
           </motion.div>
           "
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {complianceFrameworks.map(framework: unknown, index: unknown (
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
+            {complianceFrameworks.map(framework: unknow n, index: unknow n (
               <motion.div
                 key={index}
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -288,7 +283,7 @@
                 transition = {
 
   { duration: 0.8,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -296,8 +291,8 @@
 
 
 }}
-                viewport={{ once: true }}"
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300"
+                viewport={{ once: tru e }}"
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover: borde r-blue-500/50 transition-all duration-300"
 "
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">"
                   <framework.icon className="w-6 h-6 text-white" />
@@ -311,13 +306,13 @@
       </section>
 
       {/* Benefits Section */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;"
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8">;"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -337,10 +332,10 @@
 
 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}"
+            viewport={{ once: tru e }}"
             className="text-center mb-16"
 "
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
               Why Choose AI Financial Compliance?
             </h2>"
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
@@ -348,8 +343,8 @@
             </p>
           </motion.div>
           "
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map(benefit: unknown, index: unknown (
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-6">
+            {benefits.map(benefit: unknow n, index: unknow n (
               <motion.div
                 key={index}
                 initial = {
@@ -377,7 +372,7 @@
                 transition = {
 
   { duration: 0.8,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -385,10 +380,10 @@
 
 
 }}
-                viewport={{ once: true }}"
+                viewport={{ once: tru e }}"
                 className="flex items-start space-x-3"
 "
-                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"  />"                <span className="text-slate-300 text-lg">{benefit}</span>
+                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"   />"                <span className="text-slate-300 text-lg">{benefit}</span>
               </motion.div>;
             ))}
           </div>
@@ -396,13 +391,13 @@
       </section>
 
       {/* Use Cases Section */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">;"
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-slate-800/30">;"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -422,10 +417,10 @@
 
 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}"
+            viewport={{ once: tru e }}"
             className="text-center mb-16"
 "
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
               Perfect for Every Financial Organization
             </h2>"
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
@@ -433,14 +428,14 @@
             </p>
           </motion.div>
           "
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map(useCase: unknown, index: unknown (
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
+            {useCases.map(useCase: unknow n, index: unknow n (
               <motion.div
                 key={index}
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -462,7 +457,7 @@
                 transition = {
 
   { duration: 0.8,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -470,7 +465,7 @@
 
 
 }}
-                viewport={{ once: true }}"
+                viewport={{ once: tru e }}"
                 className="text-center"
 "
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">"
@@ -485,13 +480,13 @@
       </section>
 
       {/* Pricing Section */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;"
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8">;"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -511,10 +506,10 @@
 
 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}"
+            viewport={{ once: tru e }}"
             className="text-center mb-16"
 "
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
               Simple, Transparent Pricing
             </h2>"
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
@@ -522,14 +517,14 @@
             </p>
           </motion.div>
           "
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
-            {pricingPlans.map(plan: unknown, index: unknown (
+          <div className="grid grid-cols-1 md: gri d-cols-3 gap-8">
+            {pricingPlans.map(plan: unknow n, index: unknow n (
               <motion.div
                 key={index}
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -551,7 +546,7 @@
                 transition = {
 
   { duration: 0.8,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -559,7 +554,7 @@
 
 
 }}
-                viewport={{ once: true }}
+                viewport={{ once: tru e }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
 
                   plan.popular'
@@ -587,7 +582,7 @@
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-start space-x-3">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0"  />"                      <span className="text-slate-300">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0"   />"                      <span className="text-slate-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -595,8 +590,8 @@
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
 
                   plan.popular'
-                    ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-700 hover:to-cyan-700''
-                    : 'bg-slate-700 text-white hover:bg-slate-600'`
+                    ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover: fro m-blue-700 hover: t o-cyan-700''
+                    : 'bg-slate-700 text-white hover: b g-slate-600'`
                 }`}>
                   {plan.cta}
                 </button>
@@ -607,13 +602,13 @@
       </section>
 
       {/* CTA Section */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;"
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8">;"
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -633,20 +628,20 @@
 
 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
 "
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-6">
               Ready to Transform Your Compliance?
             </h2>"
             <p className="text-xl text-slate-300 mb-8">
               Join hundreds of financial institutions who have already improved their compliance with AI
             </p>
 "
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-              <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">"
+              <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover: fro m-blue-700 hover: t o-cyan-700 transition-all duration-300 transform hover: scal e-105">
                 Start Free Trial
               </button>"
-              <button className="px-8 py-4 border border-blue-200/20 text-blue-200 font-semibold rounded-lg hover:bg-blue-200/10 transition-all duration-300">
+              <button className="px-8 py-4 border border-blue-200/20 text-blue-200 font-semibold rounded-lg hover: b g-blue-200/10 transition-all duration-300">
                 Schedule Demo
               </button>
             </div>
@@ -659,13 +654,13 @@
       </section>
 
       {/* Contact Section */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">;"
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-slate-800/30">;"
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -685,38 +680,38 @@
 
 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
 "
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-6">
               Have Questions?
             </h2>"
             <p className="text-xl text-slate-300 mb-8">
               Our compliance experts are here to help you get started and answer  questions
             </p>
 "
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">"
+            <div className="grid grid-cols-1 md: gri d-cols-3 gap-8 mb-8">"
               <div className="flex flex-col items-center">"
-                <Phone className="w-8 h-8 text-blue-400 mb-3"  />"
+                <Phone className="w-8 h-8 text-blue-400 mb-3"   />"
                 <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>"
                 <p className="text-slate-300">{contactInfo.phone}</p>
               </div>"
               <div className="flex flex-col items-center">"
-                <Mail className="w-8 h-8 text-blue-400 mb-3"  />"
+                <Mail className="w-8 h-8 text-blue-400 mb-3"   />"
                 <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>"
                 <p className="text-slate-300">{contactInfo.email}</p>
               </div>"
               <div className="flex flex-col items-center">"
-                <MapPin className="w-8 h-8 text-blue-400 mb-3"  />"
+                <MapPin className="w-8 h-8 text-blue-400 mb-3"   />"
                 <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>"                <p className="text-slate-300">{contactInfo.address}</p>
               </div>
             </div>
 
             <a`
               href={`mailto:${contactInfo.email}`}"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover: fro m-blue-700 hover: t o-cyan-700 transition-all duration-300"
 
               Get in Touch"
-              <ArrowRight className="w-5 h-5 ml-2"  />            </a>;
+              <ArrowRight className="w-5 h-5 ml-2"   />            </a>;
           </motion.div>;
         </div>;
       </section>;

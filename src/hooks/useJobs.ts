@@ -8,13 +8,13 @@ export default function Page() {
         query = query.eq("status", status);
       }
       
-      const { data, error: fetchError } = await query;
+      const { data, error: fetchErro r } = await query;
       
       if(fetchError) throw fetchError;
       
       setJobs(data as Job[] || []); // Ensure data is not null
       setError(null);
-    } catch(err: any) {
+    } catch(err: an y) {
       console.error("Error fetching jobs:", err);
       setError("Failed to fetch jobs.Please try again.");
       toast.error("Failed to fetch jobs");
@@ -24,21 +24,21 @@ export default function Page() {
     }
   }, [clientId, status]); // Dependencies for fetchJobs
 
-  const updateJobStatus = async(jobId: string, newStatus: JobStatus) => {
+  const updateJobStatus = async(jobId: string, newStatus: JobStatu s) => {
     if(!clientId) return false;
     try {
-      const { error: updateError } = await supabase
+      const { error: updateErro r } = await supabase
         .from("jobs")
-        .update({ status: newStatus })
+        .update({ status: newStatu s })
         .eq("id", jobId)
         .eq("client_id", clientId); 
       
       if(updateError) throw updateError;
       
-      setJobs(prevJobs => prevJobs.map(job => job.id === jobId ? {...job, status: newStatus} : job));
+      setJobs(prevJobs => prevJobs.map(job => job.id === jobId ? {...job, status: newStatu s} : job));
       toast.success("Job status updated successfully");
       return true;
-    } catch(err: any) {
+    } catch(err: an y) {
       console.error("Error updating job status:", err);
       toast.error("Failed to update job status");
       return false;
@@ -48,7 +48,7 @@ export default function Page() {
   const deleteJob = async(jobId: string) => {
     if(!clientId) return false;
     try {
-      const { error: deleteError } = await supabase
+      const { error: deleteErro r } = await supabase
         .from("jobs")
         .delete()
         .eq("id", jobId)
@@ -59,7 +59,7 @@ export default function Page() {
       setJobs(prevJobs => prevJobs.filter(job => job.id !== jobId));
       toast.success("Job deleted successfully");
       return true;
-    } catch(err: any) {
+    } catch(err: an y) {
       console.error("Error deleting job:", err);
       toast.error("Failed to delete job");
       return false;
@@ -76,11 +76,11 @@ export default function Page() {
     jobs,
     isLoading,
     error,
-    refetch: fetchJobs,
+    refetch: fetchJob s,
     updateJobStatus,
     deleteJob,
-    createJob: createJobService, // Use aliased service functions
-    updateJob: updateJobService, // Use aliased service functions
+    createJob: createJobServic e, // Use aliased service functions
+    updateJob: updateJobServic e, // Use aliased service functions
     getJobById
   };
 };

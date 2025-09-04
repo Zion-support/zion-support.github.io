@@ -83,10 +83,9 @@ export default function MarketplaceProducts() {
         return b.rating - a.rating;
       case 'popular':
         return b.reviewCount - a.reviewCount;
-      default:
-        return b.featured ? 1 : -1}
+      default: return b.featured ? 1 : -1}
   })}};
-  return()
+  return ()
     <div className="min-h-screen bg-futuristic">
       <SEO"
         title="Marketplace Products - Zion Tech Group"
@@ -96,15 +95,15 @@ export default function MarketplaceProducts() {
       {/* Hero Section */}"
       <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue to-zion-slate-dark">"        <div className="container mx-auto px-4 text-center">
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}"
-            className="text-5xl md:text-7xl font-bold text-white mb-6"
+            className="text-5xl md: tex t-7xl font-bold text-white mb-6"
           >"
             Marketplace <span className="text-zion-cyan">Products</span>
           </motion.h1>
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}"
             className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto"
@@ -118,15 +117,15 @@ export default function MarketplaceProducts() {
       {/* Search and Filters */}"
       <section className="py-8 bg-zion-slate-dark border-b border-zion-slate-light/20">"
         <div className="container mx-auto px-4">"
-          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
+          <div className="flex flex-col lg: fle x-row gap-6 items-center justify-between">
             {/* Search */}"
             <div className="relative w-full lg:w-96">"
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"  />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"   />
               <input"
                 type="text""                placeholder="Search products..."
                 value={searchQuery}
                 onChange={e => setSearchQuery(e.target.value)}"
-                className="w-full pl-10 pr-4 py-3 bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-200"
+                className="w-full pl-10 pr-4 py-3 bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: borde r-zion-cyan focus: rin g-2 focus: rin g-zion-cyan/20 transition-all duration-200"
               />
             </div>
 
@@ -140,27 +139,27 @@ export default function MarketplaceProducts() {
 
                     viewMode === 'grid''
                       ? 'bg-zion-cyan text-white''
-                      : 'text-zion-slate-light hover:text-white'`
+                      : 'text-zion-slate-light hover: tex t-white'`
                   }`}
                 >"
-                  <Grid className="w-5 h-5"  />                </button>
+                  <Grid className="w-5 h-5"   />                </button>
                 <button'
                   onClick={() => setViewMode('list')}`
                   className={`p-2 rounded-md transition-all duration-200 ${
 
                     viewMode === 'list''
                       ? 'bg-zion-cyan text-white''
-                      : 'text-zion-slate-light hover:text-white'`
+                      : 'text-zion-slate-light hover: tex t-white'`
                   }`}
                 >"
-                  <List className="w-5 h-5"  />                </button>
+                  <List className="w-5 h-5"   />                </button>
               </div>
 
               {/* Sort */}
               <select
                 value={sortBy}
                 onChange={e => setSortBy(e.target.value)}"
-                className="bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-zion-cyan"
+                className="bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-lg px-3 py-2 text-white focus: outlin e-none focus: borde r-zion-cyan"
               >
                 {sortOptions.map(option => (
                   <option key={option.id} value={option.id}>
@@ -172,14 +171,14 @@ export default function MarketplaceProducts() {
               {/* Filters Toggle */}
               <button
                 onClick={() => setShowFilters(!showFilters)}"
-                className="flex items-center gap-2 px-4 py-2 bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/30 rounded-lg hover:bg-zion-cyan/30 transition-all duration-200"
+                className="flex items-center gap-2 px-4 py-2 bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/30 rounded-lg hover: b g-zion-cyan/30 transition-all duration-200"
               >"
-                <Filter className="w-4 h-4"  />
+                <Filter className="w-4 h-4"   />
                 Filters
                 {showFilters ? ("
-                  <ChevronUp className="w-4 h-4"  />
+                  <ChevronUp className="w-4 h-4"   />
                 ) : ("
-                  <ChevronDown className="w-4 h-4"  />
+                  <ChevronDown className="w-4 h-4"   />
                 )}              </button>
             </div>
           </div>
@@ -193,7 +192,7 @@ export default function MarketplaceProducts() {
               transition={{ duration: 0.3 }}"
               className="mt-6 pt-6 border-t border-zion-slate-light/20"
             >"
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-6">
                 {/* Category Filter */}
                 <div>"
                   <label className="block text-white font-medium mb-2">
@@ -202,7 +201,7 @@ export default function MarketplaceProducts() {
                   <select
                     value={selectedCategory}
                     onChange={e => setSelectedCategory(e.target.value)}"
-                    className="w-full bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-zion-cyan"
+                    className="w-full bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-lg px-3 py-2 text-white focus: outlin e-none focus: borde r-zion-cyan"
                   >
                     {categories.map(category => (
                       <option key={category.id} value={category.id}>
@@ -220,7 +219,7 @@ export default function MarketplaceProducts() {
                   <select
                     value={selectedPriceRange}
                     onChange={e => setSelectedPriceRange(e.target.value)}"
-                    className="w-full bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-zion-cyan"
+                    className="w-full bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-lg px-3 py-2 text-white focus: outlin e-none focus: borde r-zion-cyan"
                   >
                     {priceRanges.map(range => (
                       <option key={range.id} value={range.id}>
@@ -237,7 +236,7 @@ export default function MarketplaceProducts() {
 
                       setSelectedCategory('all');
                       setSelectedPriceRange('all');
-                      setSearchQuery('')}}"                    className="w-full px-4 py-2 bg-zion-slate-light/20 text-zion-slate-light border border-zion-slate-light/30 rounded-lg hover:bg-zion-slate-light/30 hover:text-white transition-all duration-200"
+                      setSearchQuery('')}}"                    className="w-full px-4 py-2 bg-zion-slate-light/20 text-zion-slate-light border border-zion-slate-light/30 rounded-lg hover: b g-zion-slate-light/30 hover: tex t-white transition-all duration-200"
                   >
                     Clear All Filters
                   </button>
@@ -267,7 +266,7 @@ export default function MarketplaceProducts() {
         <div className="container mx-auto px-4">
           {sortedProducts.length === 0 ? ("
             <div className="text-center py-16">"
-              <Package className="w-16 h-16 text-zion-slate-light mx-auto mb-4"  />"
+              <Package className="w-16 h-16 text-zion-slate-light mx-auto mb-4"   />"
               <h3 className="text-xl font-semibold text-white mb-2">
                 No products found
               </h3>"
@@ -279,17 +278,17 @@ export default function MarketplaceProducts() {
               className={
 
                 viewMode === 'grid''
-                  ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8''
+                  ? 'grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8''
                   : 'space-y-6'
               }
             >
               {sortedProducts.map((product, index) => (
                 <motion.article
                   key={product.id}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 2 0 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}`
-                  className={`bg-gradient-to-br from-zion-slate-dark/50 to-zion-blue/10 backdrop-blur-sm rounded-xl overflow-hidden border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 hover:scale-105 group ${
+                  transition={{ duration: 0.6, delay: inde x * 0.1 }}`
+                  className={`bg-gradient-to-br from-zion-slate-dark/50 to-zion-blue/10 backdrop-blur-sm rounded-xl overflow-hidden border border-zion-cyan/20 hover: borde r-zion-cyan/40 transition-all duration-300 hover: scal e-105 group ${
 
                     viewMode === 'list' ? 'flex' : ''`
                   }`}
@@ -298,25 +297,24 @@ export default function MarketplaceProducts() {
                   <div'`
                     className={`relative ${viewMode === 'list' ? 'w-48 flex-shrink-0' : ''}`}
                   >
-                    <img
-                      src={product.image}
+                    <img src={product.image}
                       alt={product.name}`
-                      className={`w-full object-cover group-hover:scale-105 transition-transform duration-300 ${
+                      className={`w-full object-cover group-hover: scal e-105 transition-transform duration-300 ${
 
                         viewMode === 'list' ? 'h-full' : 'h-48'`
                       }`}
-                    />
+                     />
                     {product.featured && ("
                       <div className="absolute top-4 left-4">"
                         <span className="inline-flex items-center px-3 py-1 bg-yellow-500 text-white text-xs font-medium rounded-full">"
-                          <Star className="w-3 h-3 mr-1"  />                          Featured
+                          <Star className="w-3 h-3 mr-1"   />                          Featured
                         </span>
                       </div>
                     )}
                     {product.new && ("
                       <div className="absolute top-4 right-4">"
                         <span className="inline-flex items-center px-3 py-1 bg-green-500 text-white text-xs font-medium rounded-full">"
-                          <Sparkles className="w-3 h-3 mr-1"  />                          New
+                          <Sparkles className="w-3 h-3 mr-1"   />                          New
                         </span>
                       </div>
                     )}
@@ -345,12 +343,12 @@ export default function MarketplaceProducts() {
                           {product.vendor}
                         </span>
                         {product.vendorVerified && ("
-                          <CheckCircle className="w-4 h-4 text-zion-cyan"  />                        )}
+                          <CheckCircle className="w-4 h-4 text-zion-cyan"   />                        )}
                       </div>
                     </div>
 
                     {/* Product Name */}"
-                    <h3 className="text-xl font-bold text-white mb-3 leading-tight group-hover:text-zion-cyan transition-colors duration-200">
+                    <h3 className="text-xl font-bold text-white mb-3 leading-tight group-hover: tex t-zion-cyan transition-colors duration-200">
                       {product.name}
                     </h3>
 
@@ -407,10 +405,10 @@ export default function MarketplaceProducts() {
                       </div>
 "
                       <div className="flex items-center gap-2">"
-                        <button className="p-2 text-zion-slate-light hover:text-zion-cyan transition-colors duration-200">"
-                          <Heart className="w-5 h-5"  />
+                        <button className="p-2 text-zion-slate-light hover: tex t-zion-cyan transition-colors duration-200">"
+                          <Heart className="w-5 h-5"   />
                         </button>"
-                        <button className="p-2 text-zion-slate-light hover:text-zion-cyan transition-colors duration-200">"                          <Share2 className="w-5 h-5" />
+                        <button className="p-2 text-zion-slate-light hover: tex t-zion-cyan transition-colors duration-200">"                          <Share2 className="w-5 h-5"  />
                         </button>
                       </div>
                     </div>
@@ -429,12 +427,12 @@ export default function MarketplaceProducts() {
 
                     {/* Action Buttons */}"
                     <div className="flex gap-3">"
-                      <button className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-medium rounded-lg hover:from-zion-cyan/80 hover:to-zion-purple/80 transition-all duration-300 group-hover:scale-105">"
-                        <ShoppingCart className="w-5 h-5 mr-2"  />
+                      <button className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-medium rounded-lg hover: fro m-zion-cyan/80 hover: t o-zion-purple/80 transition-all duration-300 group-hover: scal e-105">"
+                        <ShoppingCart className="w-5 h-5 mr-2"   />
                         Add to Cart
                       </button>"
-                      <button className="inline-flex items-center justify-center px-4 py-3 border border-zion-cyan text-zion-cyan font-medium rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300">"
-                        <Eye className="w-5 h-5"  />                      </button>
+                      <button className="inline-flex items-center justify-center px-4 py-3 border border-zion-cyan text-zion-cyan font-medium rounded-lg hover: b g-zion-cyan hover: tex t-white transition-all duration-300">"
+                        <Eye className="w-5 h-5"   />                      </button>
                     </div>
                   </div>
                 </motion.article>
@@ -448,7 +446,7 @@ export default function MarketplaceProducts() {
       <section className="py-16 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10">"
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}"
             className="max-w-2xl mx-auto"
@@ -461,18 +459,18 @@ export default function MarketplaceProducts() {
               discuss custom solutions or request specific products for your
               business needs.
             </p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
               <a"
                 href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg hover:from-zion-cyan/80 hover:to-zion-purple/80 transition-all duration-300 hover:scale-105"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg hover: fro m-zion-cyan/80 hover: t o-zion-purple/80 transition-all duration-300 hover: scal e-105"
               >"
-                <MessageCircle className="w-5 h-5 mr-2"  />                Contact Us
+                <MessageCircle className="w-5 h-5 mr-2"   />                Contact Us
               </a>
               <a"
                 href="/services"
-                className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300"
+                className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover: b g-zion-cyan hover: tex t-white transition-all duration-300"
               >"
-                <Settings className="w-5 h-5 mr-2"  />                Custom Solutions
+                <Settings className="w-5 h-5 mr-2"   />                Custom Solutions
               </a>
             </div>
           </motion.div>

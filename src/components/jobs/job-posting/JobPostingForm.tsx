@@ -79,7 +79,7 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
     setValue('description', value);
   }, [setValue]);
 
-  const onSubmit = async(values: JobSchemaType) => {
+  const onSubmit = async(values: JobSchemaTyp e) => {
     setIsFormLoading(true);
 
     try {
@@ -98,7 +98,7 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
       if(onSuccess) {
         onSuccess();
       }
-    } catch(error: any) {
+    } catch(error: an y) {
       console.error("Error creating/updating job:", error);
       toast.error(error.message || "Failed to post job");
     } finally {
@@ -118,14 +118,13 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
             Fill in the details below to create a job posting.</p>
         </div>
 
-        <BasicInfoFields control={form.control} />
+        <BasicInfoFields control={form.control}  />
         
-        <DateFields 
-          startDate={startDate} 
+        <DateFields startDate={startDate} 
           setStartDate={setStartDate}
           endDate={endDate}
           setEndDate={setEndDate}
-        />
+         />
 
         <div>
           <Label htmlFor="isRemote">
@@ -140,11 +139,10 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
           </Label>
         </div>
 
-        <DescriptionFields 
-          control={form.control} 
+        <DescriptionFields control={form.control} 
           handleEditorChange={handleEditorChange}
           editorContent={editorContent}
-        />
+         />
 
         <Button type="submit" disabled={isSubmitting || isFormLoading}>
           {isSubmitting || isFormLoading ? "Submitting..." : jobId ? "Update Job" : "Post Job"}
