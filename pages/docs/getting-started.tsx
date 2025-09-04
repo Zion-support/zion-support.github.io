@@ -8,11 +8,11 @@ const contact = {
 };
 
 export default function GettingStarted() {
-  const contact = { 
-    phone: '+1 302 464 0950', 
-    email: 'kleber@ziontechgroup.com', 
-    address: '364 E Main St STE 1008 Middletown DE 19709', 
-    site: 'https://ziontechgroup.com' 
+  const contact = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    site: 'https://ziontechgroup.com',
   };
 
   return (
@@ -43,7 +43,6 @@ export default function GettingStarted() {
               <Book className="w-6 h-6 mr-3 text-blue-600" />
               Quick Start Guide
             </h2>
-            
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
                 <div className="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
@@ -59,7 +58,6 @@ export default function GettingStarted() {
                   </Link>
                 </div>
               </div>
-              
               <div className="flex items-start space-x-4">
                 <div className="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
                   <span className="text-blue-600 font-semibold">2</span>
@@ -74,7 +72,6 @@ export default function GettingStarted() {
                   </Link>
                 </div>
               </div>
-              
               <div className="flex items-start space-x-4">
                 <div className="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
                   <span className="text-blue-600 font-semibold">3</span>
@@ -104,7 +101,6 @@ export default function GettingStarted() {
                 Explore Micro SaaS →
               </Link>
             </div>
-            
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-xl font-semibold text-gray-900 mb-3">AI Services</h3>
               <p className="text-gray-600 mb-4">
@@ -114,7 +110,6 @@ export default function GettingStarted() {
                 Explore AI Services →
               </Link>
             </div>
-            
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-xl font-semibold text-gray-900 mb-3">IT Services</h3>
               <p className="text-gray-600 mb-4">

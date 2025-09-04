@@ -36,7 +36,10 @@ export default function LazyImage({
           observer.disconnect();
         }
       },
-      { threshold: 0.1, rootMargin: '50px' }
+      { 
+        threshold: 0.1,
+        rootMargin: '50px'
+      }
     );
 
     if (imgRef.current) {

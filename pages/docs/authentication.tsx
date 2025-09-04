@@ -8,11 +8,11 @@ const contact = {
 };
 
 export default function Authentication() {
-  const contact = { 
-    phone: '+1 302 464 0950', 
-    email: 'kleber@ziontechgroup.com', 
-    address: '364 E Main St STE 1008 Middletown DE 19709', 
-    site: 'https://ziontechgroup.com' 
+  const contact = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    site: 'https://ziontechgroup.com',
   };
 
   return (
@@ -47,15 +47,13 @@ export default function Authentication() {
               <p className="text-gray-600 mb-6">
                 The simplest way to authenticate with our APIs. Include your API key in the request headers.
               </p>
-              
               <div className="bg-gray-900 rounded-lg p-4 mb-6">
                 <pre className="text-green-400 text-sm overflow-x-auto">
-{`curl -X GET "https://api.ziontechgroup.com/v1/services" \\
+                  {`curl -X GET "https://api.ziontechgroup.com/v1/services" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`}
                 </pre>
               </div>
-              
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">Getting Your API Key</h3>
@@ -86,10 +84,9 @@ export default function Authentication() {
               <p className="text-gray-600 mb-6">
                 For applications that need to access user data or perform actions on behalf of users.
               </p>
-              
               <div className="bg-gray-900 rounded-lg p-4 mb-6">
                 <pre className="text-green-400 text-sm overflow-x-auto">
-{`// Authorization URL
+                  {`// Authorization URL
 https://auth.ziontechgroup.com/oauth/authorize?
   client_id=YOUR_CLIENT_ID&
   redirect_uri=YOUR_REDIRECT_URI&
@@ -107,7 +104,6 @@ client_secret=YOUR_CLIENT_SECRET&
 redirect_uri=YOUR_REDIRECT_URI`}
                 </pre>
               </div>
-              
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">OAuth Flow</h3>
@@ -139,10 +135,9 @@ redirect_uri=YOUR_REDIRECT_URI`}
               <p className="text-gray-600 mb-6">
                 JSON Web Tokens for stateless authentication with built-in expiration and claims.
               </p>
-              
               <div className="bg-gray-900 rounded-lg p-4 mb-6">
                 <pre className="text-green-400 text-sm overflow-x-auto">
-{`// JWT Token Structure
+                  {`// JWT Token Structure
 {
   "header": {
     "alg": "HS256",
@@ -157,7 +152,6 @@ redirect_uri=YOUR_REDIRECT_URI`}
 }`}
                 </pre>
               </div>
-              
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">Token Features</h3>

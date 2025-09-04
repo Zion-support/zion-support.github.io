@@ -171,15 +171,15 @@ export default function GreenIT() {
         <meta name="twitter:title" content="Green IT - Zion Tech Group | Sustainable Technology Solutions" />
         <meta name="twitter:description" content="Discover Zion Tech Group's commitment to sustainable technology. Learn about our green IT initiatives, carbon-neutral operations, and environmental responsibility." />
       </Head>
-      <main style={{ padding: '20px', maxWidth: 1200, margin: '0 auto' }}>
+      <main style={{ maxWidth: 1200, margin: '0 auto', padding: '40px 20px' }}>
         <h1 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: '1rem', textAlign: 'center' }}>Green IT Solutions</h1>
-        <p style={{ fontSize: '1.1rem', lineHeight: 1.6, textAlign: 'center', color: '#ccc' }}>
+        <p style={{ fontSize: '1.125rem', lineHeight: 1.6, textAlign: 'center', color: '#ccc' }}>
           Sustainable IT solutions and green technology services to help reduce your environmental impact while improving efficiency.
         </p>
         <div style={{ marginTop: '2rem', textAlign: 'center' }}>
           <Link href="/" style={{
-            background: 'white',
-            color: '#333',
+            background: '#3b82f6',
+            color: 'white',
             padding: '12px 24px',
             textDecoration: 'none',
             borderRadius: 8,

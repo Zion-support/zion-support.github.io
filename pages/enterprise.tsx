@@ -3,26 +3,30 @@ import Link from 'next/link';
 import { Shield, Users, Zap, CheckCircle, ArrowRight, Building, Globe, Lock } from 'lucide-react';
 
 export default function Enterprise() {
-  const solutions = [{
+  const solutions = [
+    {
       icon: <Shield className="w-8 h-8" />,
       title: 'Enterprise Security',
       description: 'Comprehensive cybersecurity solutions including threat detection, compliance management, and data protection.',
-      features: ['Advanced Threat Detection', 'Compliance Automation', 'Data Encryption', 'Security Monitoring']
-    }, {
+      features: ['Advanced Threat Detection', 'Compliance Automation', 'Data Encryption', 'Security Monitoring'],
+    },
+    {
       icon: <Users className="w-8 h-8" />,
       title: 'Digital Transformation',
       description: 'End-to-end digital transformation services to modernize your enterprise infrastructure and processes.',
-      features: ['Cloud Migration', 'Process Automation', 'Legacy Modernization', 'Change Management']
-    }, {
+      features: ['Cloud Migration', 'Process Automation', 'Legacy Modernization', 'Change Management'],
+    },
+    {
       icon: <Zap className="w-8 h-8" />,
       title: 'AI & Automation',
       description: 'Enterprise-grade AI solutions and automation platforms to optimize operations and drive innovation.',
-      features: ['Machine Learning', 'Process Automation', 'Predictive Analytics', 'Intelligent Workflows']
-    }, {
+      features: ['Machine Learning', 'Process Automation', 'Predictive Analytics', 'Intelligent Workflows'],
+    },
+    {
       icon: <Globe className="w-8 h-8" />,
       title: 'Cloud Solutions',
       description: 'Scalable cloud infrastructure and services designed for enterprise workloads and global operations.',
-      features: ['Multi-Cloud Strategy', 'Infrastructure as Code', 'Disaster Recovery', 'Global Deployment']
+      features: ['Multi-Cloud Strategy', 'Infrastructure as Code', 'Disaster Recovery', 'Global Deployment'],
     }
   ];
 
@@ -155,7 +159,6 @@ export default function Enterprise() {
                 </div>
               </div>
             </div>
-            
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
               <h3 className="text-2xl font-bold text-white mb-6">Enterprise Capabilities</h3>
               <div className="space-y-4">
