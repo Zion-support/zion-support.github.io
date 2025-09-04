@@ -7,6 +7,7 @@ module.exports = {
       autorestart: true,
       watch: false,
       max_memory_restart: '512M',
+      cron_restart: '*/15 * * * *', // Restart every 15 minutes
       env: {
         NODE_ENV: 'production',
         LOG_LEVEL: 'info'
@@ -57,7 +58,7 @@ module.exports = {
       instances: 1,
       autorestart: true,
       watch: false,
-      cron_restart: '0 */4 * * *', // Restart every 4 hours
+      cron_restart: '0 */1 * * *', // Restart every hour
       env: {
         NODE_ENV: 'production'
       },
@@ -73,7 +74,7 @@ module.exports = {
       instances: 1,
       autorestart: true,
       watch: false,
-      cron_restart: '0 */3 * * *', // Restart every 3 hours
+      cron_restart: '0 */2 * * *', // Restart every 2 hours
       env: {
         NODE_ENV: 'production'
       },
