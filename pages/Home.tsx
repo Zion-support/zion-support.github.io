@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -16,13 +16,13 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/services"
+                href="/services"
                 className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
               >
                 Explore Services
               </Link>
               <Link
-                to="/contact"
+                href="/contact"
                 className="bg-transparent border-2 border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
               >
                 Get Started
@@ -45,7 +45,7 @@ export default function Home() {
                 Advanced artificial intelligence solutions including machine learning, 
                 predictive analytics, and AI-powered automation.
               </p>
-              <Link to="/ai-services" className="text-cyan-400 hover:text-cyan-300">
+              <Link href="/ai-services" className="text-cyan-400 hover:text-cyan-300">
                 Learn More →
               </Link>
             </div>
@@ -55,7 +55,7 @@ export default function Home() {
                 Comprehensive IT solutions including cloud migration, cybersecurity, 
                 and digital transformation services.
               </p>
-              <Link to="/it-services" className="text-cyan-400 hover:text-cyan-300">
+              <Link href="/it-services" className="text-cyan-400 hover:text-cyan-300">
                 Learn More →
               </Link>
             </div>
@@ -65,7 +65,7 @@ export default function Home() {
                 Innovative micro software-as-a-service solutions designed for 
                 specific business needs and workflows.
               </p>
-              <Link to="/micro-saas" className="text-cyan-400 hover:text-cyan-300">
+              <Link href="/micro-saas" className="text-cyan-400 hover:text-cyan-300">
                 Learn More →
               </Link>
             </div>

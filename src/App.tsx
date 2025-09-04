@@ -41,6 +41,7 @@ const NewServicesShowcase2025 = lazy(() => import('./pages/NewServicesShowcase20
 const EnhancedNewServices2025 = lazy(() => import('./pages/EnhancedNewServices2025').then(module => ({ default: module.EnhancedNewServices2025 })));
 const PricingPage = lazy(() => import('./pages/PricingPage').then(module => ({ default: module.PricingPage })));
 const ComprehensiveServicesShowcase = lazy(() => import('./pages/ComprehensiveServicesShowcase').then(module => ({ default: module.default })));
+const UltimateServicesShowcase2025 = lazy(() => import('./pages/UltimateServicesShowcase2025').then(module => ({ default: module.default })));
 
 // Service Pages
 const AISolutions = lazy(() => import('./pages/services/AISolutions').then(module => ({ default: module.AISolutions })));
@@ -107,6 +108,7 @@ export default function App() {
                 <Route path="/search" element={<Services />} />
                 <Route path="/services" element={<Services />} />
                 <Route path="/comprehensive-services" element={<ComprehensiveServicesShowcase />} />
+                <Route path="/ultimate-services-2025" element={<UltimateServicesShowcase2025 />} />
                 <Route path="/solutions" element={<Solutions />} />
                 <Route path="/resources" element={<Services />} />
                 <Route path="/case-studies" element={<Services />} />

@@ -3,7 +3,7 @@ import React, { memo } from 'react';
 import Link from 'next/link';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import SEOHead from '../components/seo/SEOHead';
+// import SEOHead from '../components/seo/SEOHead';
 import { ArrowRight, CheckCircle, Star, Phone, Mail, MapPin, Brain, Server, Smartphone, Globe, Zap, Shield, Users } from 'lucide-react';
 
 const Home = memo(() => {
@@ -89,12 +89,7 @@ const Home = memo(() => {
 
   return (
     <>
-      <SEOHead
-        title="Zion Tech Group - Leading Technology Solutions Provider"
-        description="Transform your business with cutting-edge AI services, IT solutions, and micro SaaS development. Expert technology consulting and implementation."
-        keywords="AI services, IT solutions, micro SaaS, technology consulting, digital transformation, cloud services, cybersecurity"
-        structuredData={structuredData as unknown as Record<string, unknown>}
-      />
+      {/* SEO Head removed for build compatibility */}
 
       <Navigation />
 
@@ -225,6 +220,6 @@ const Home = memo(() => {
       <Footer />
     </>
   );
-}
+});
 
 export default Home;
