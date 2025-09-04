@@ -12,56 +12,24 @@ export default function API() {};
     {};
 }
   ];
-;
-  return (;
-    <>;
-      <Head>;
-        <title>API Documentation - Zion Tech Group</title>;
-        <meta name="description" content="Comprehensive API documentation for Zion Tech Group services and integrations." />;
-        <meta name="viewport" content="width=device-width, initial-scale=1" />;
-      </Head>;
-      ;
-      <div className="min-h-screen bg-gray-50">;
-        {/* Header */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">;
-          <div className="container mx-auto px-4 text-center">;
-            <h1 className=text-4xl md:text-5xl font-bold mb-4">;
-              API <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400>Documentation</span>;
-            </h1>;
-            <p className=text-xl text-gray-200 max-w-2xl mx-auto">;
-              Comprehensive API documentation for integrating with Zion Tech Group services;
-            </p>;
-          </div>;
-        </div>;
 
-        {/* API Overview */}
-        <div className="py-16 bg-white>;
-          <div className=container mx-auto px-4">;
-            <div className="grid md: grid-cols-3 gap-8>;
-              <div className=text-center">;
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4>;
-                  <Code className=w-8 h-8 text-blue-600" />;
-                </div>;
-                <h3 className="text-xl font-semibold text-gray-900 mb-2>RESTful APIs</h3>;
-                <p className=text-gray-600">Clean, intuitive REST endpoints for easy integration</p>;
-              </div>;
-              <div className="text-center>;
-                <div className=w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">;
-                  <Shield className="w-8 h-8 text-green-600 />;
-                </div>;
-                <h3 className=text-xl font-semibold text-gray-900 mb-2">Secure</h3>;
-                <p className="text-gray-600>Enterprise-grade security with JWT authentication</p>;
-              </div>;
-              <div className=text-center">;
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4>;
-                  <Zap className=w-8 h-8 text-purple-600" />;
-                </div>;
-                <h3 className="text-xl font-semibold text-gray-900 mb-2>Fast</h3>;
-                <p className=text-gray-600">High-performance APIs with sub-100ms response times</p>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
+  return (
+    <>
+      <Head>
+        <title>API - Zion Tech Group</title>
+        <meta name="description" content="API documentation and endpoints for Zion Tech Group services" />
+      </Head>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+        <main className="container mx-auto px-6 py-12">
+          <section className="text-center mb-16">
+            <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+              API Documentation
+            </h1>
+            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+              Comprehensive API documentation for integrating with Zion Tech Group services.
+            </p>
+          </section>
 
         {/* API Endpoints */}
         <div className="py-16 bg-gray-50>;
