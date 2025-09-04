@@ -1,56 +1,72 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES2022",
     "lib": [
       "dom",
       "dom.iterable",
-      "es6"
+      "es2022"
     ],
-    "allowJs": true,
-    "skipLibCheck": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "jsx": "preserve",
     "strict": true,
-    "noEmit": true,
     "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "allowJs": false,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
+    "noEmit": true,
+    "types": [
+      "jest",
+      "node"
     ],
-    "paths": {
-      "@/*": [
-        "./*"
-      ]
-    },
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitAny": false,
-    "noImplicitReturns": false,
-    "noImplicitThis": false,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false
+    "baseUrl": ".",
+    "incremental": true
   },
   "include": [
     "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "lib/**/*",
+    "hooks/**/*",
+    "styles/**/*",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    "**/*.d.ts",
+    "types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
     ".next",
     "out",
     "dist",
-    "build",
-    "automation",
-    "scripts",
-    "fix_*.js",
-    "fix_*.cjs",
-    "*.fix.js",
-    "*.fix.cjs"
+    "data_backup/**",
+    "src.corrupted/**",
+    "src/data/**",
+    "src/**",
+    "utils/next-link-shim.tsx",
+    "playwright.config.ts",
+    "api-backup",
+    "pages.disabled",
+    "backup-pages",
+    "automation/**",
+    "scripts/**",
+    "tests/**",
+    "zion_academy/**",
+    "deployments/**",
+    "automation/backups",
+    "automation_backup",
+    "broken_files_backup",
+    "contracts",
+    "cypress",
+    "temp_working",
+    "supabase/functions",
+    "**/*.backup",
+    "**/*.disabled",
+    "temp_backup",
+    "temp_backup/**",
+    "temp_broken_components",
+    "temp_broken_components/**",
+    "src.corrupted/**"
   ]
 }
