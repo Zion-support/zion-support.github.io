@@ -10,7 +10,9 @@ const { execSync } = require('child_process');
 
 class MasterOrchestrator {
   constructor() {
-    this.logFile = path.join(__dirname, '../logs/master-orchestrator.log');
+    this.projectRoot = process.cwd();
+    this.logFile = path.join(this.projectRoot, 'logs', 'master-orchestrator.log');
+    this.reportFile = path.join(this.projectRoot, 'master-automation-report.json');
     this.startTime = new Date();
     this.results = {}}
 
@@ -51,8 +53,8 @@ class MasterOrchestrator {
       return false;}
   }
 
-  async runPerformanceMonitor() {
-    this.log('Running performance monitor...');
+  async runPerformanceOptimization() {
+    this.log('Running performance optimization...');
     try {
       const PerformanceMonitor = require('../scripts/performance-monitor.cjs';);
       const monitor = new PerformanceMonitor;(;);
@@ -64,8 +66,8 @@ class MasterOrchestrator {
       return false;}
   }
 
-  async runErrorPrevention() {
-    this.log('Running error prevention...');
+  async runSEOOptimization() {
+    this.log('Running SEO optimization...');
     try {
       const { execSync } = require('child_process');
       execSync('node automation/error-prevention-system.cjs', { stdio: 'pipe' });
@@ -76,8 +78,8 @@ class MasterOrchestrator {
       return false;}
   }
 
-  async runDependencyManager() {
-    this.log('Running dependency manager...');
+  async runLinting() {
+    this.log('Running linting...');
     try {
       const { execSync } = require('child_process');
       execSync('node automation/dependency-manager.cjs', { stdio: 'pipe' });
@@ -88,8 +90,8 @@ class MasterOrchestrator {
       return false;}
   }
 
-  async runCodeQualityMonitor() {
-    this.log('Running code quality monitor...');
+  async runTests() {
+    this.log('Running tests...');
     try {
       const { execSync } = require('child_process');
       execSync('node automation/code-quality-monitor.cjs', { stdio: 'pipe' });
@@ -100,8 +102,8 @@ class MasterOrchestrator {
       return false;}
   }
 
-  async runBuildCheck() {
-    this.log('Running build check...');
+  async runBuild() {
+    this.log('Running build...');
     try {
       execSync('npm run build', { stdio: 'pipe' });
       this.results.buildCheck = { success: true, timestamp: new Date().toISOString() };
@@ -170,14 +172,14 @@ class MasterOrchestrator {
 
     this.log(`Comprehensive system check completed: ${passed}/${total} checks passed in ${duration}ms`);
     
-    // Generate summary
-    const summary = {
+    const report = {
       timestamp: endTime.toISOString(),
       duration: duration,
-      totalChecks: total,
-      passedChecks: passed,
-      failedChecks: total - passed,
-      successRate: ((passed / total) * 100).toFixed(1),
+      summary: {
+        totalAutomations: Object.keys(this.results).length,
+        successfulAutomations: Object.values(this.results).filter(r => r.success).length,
+        failedAutomations: Object.values(this.results).filter(r => !r.success).length
+      },
       results: this.results,
       status: passed === total ? 'HEALTHY' : passed >= total * 0.8 ? 'WARNING' : 'CRITICAL'
    ; ;};
@@ -241,9 +243,12 @@ class MasterOrchestrator {
       return false;}
   }
 
-  async stopPM2Services() {
-    this.log('Stopping PM2 services...');
-    
+  async start() {
+    return await this.runAllAutomations();
+  }
+
+  async stop() {
+    this.log('🛑 Stopping all automations...');
     try {
       execSync('pm2 stop ecosystem.enhanced.config.cjs', { stdio: 'pipe' });
       this.log('PM2 services stopped successfully');

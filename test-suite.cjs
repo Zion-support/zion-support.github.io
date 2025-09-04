@@ -110,10 +110,10 @@ class TestSuite {
     const report = {
       timestamp: new Date().toISOString(),
       summary: {
-        total: this.results.passed + this.results.failed,
+        total: totalTests,
         passed: this.results.passed,
         failed: this.results.failed,
-        successRate: Math.round((this.results.passed / (this.results.passed + this.results.failed)) * 100)
+        successRate: parseFloat(successRate)
       },
       tests: this.results.tests
    ; ;};
