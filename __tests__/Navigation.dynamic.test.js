@@ -6,7 +6,8 @@ import Navigationdynamic from '../components/Navigation.dynamic';
 describe('Navigationdynamic', () => {
   test('renders without crashing', () => {
     render(<Navigationdynamic />);
-    expect(screen.getByTestId('navigation.dynamic')).toBeInTheDocument()});
+    expect(screen.getByTestId('navigation.dynamic')).toBeInTheDocument();
+  });
 
   test('displays correct content', () => {
     render(<Navigationdynamic />);
@@ -21,4 +22,5 @@ describe('Navigationdynamic', () => {
   test('applies correct styling', () => {
     render(<Navigationdynamic />);
     // Add styling tests if needed
-  })});
+  });
+});

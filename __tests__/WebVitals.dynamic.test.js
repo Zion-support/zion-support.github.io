@@ -6,7 +6,8 @@ import WebVitalsdynamic from '../components/WebVitals.dynamic';
 describe('WebVitalsdynamic', () => {
   test('renders without crashing', () => {
     render(<WebVitalsdynamic />);
-    expect(screen.getByTestId('webvitals.dynamic')).toBeInTheDocument()});
+    expect(screen.getByTestId('webvitals.dynamic')).toBeInTheDocument();
+  });
 
   test('displays correct content', () => {
     render(<WebVitalsdynamic />);
@@ -21,4 +22,5 @@ describe('WebVitalsdynamic', () => {
   test('applies correct styling', () => {
     render(<WebVitalsdynamic />);
     // Add styling tests if needed
-  })});
+  });
+});

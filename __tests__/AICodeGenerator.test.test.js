@@ -6,7 +6,8 @@ import AICodeGeneratortest from '../components/AICodeGenerator.test';
 describe('AICodeGeneratortest', () => {
   test('renders without crashing', () => {
     render(<AICodeGeneratortest />);
-    expect(screen.getByTestId('aicodegenerator.test')).toBeInTheDocument()});
+    expect(screen.getByTestId('aicodegenerator.test')).toBeInTheDocument();
+  });
 
   test('displays correct content', () => {
     render(<AICodeGeneratortest />);
@@ -21,4 +22,5 @@ describe('AICodeGeneratortest', () => {
   test('applies correct styling', () => {
     render(<AICodeGeneratortest />);
     // Add styling tests if needed
-  })});
+  });
+});

@@ -6,7 +6,8 @@ import MainLayoutdynamic from '../components/MainLayout.dynamic';
 describe('MainLayoutdynamic', () => {
   test('renders without crashing', () => {
     render(<MainLayoutdynamic />);
-    expect(screen.getByTestId('mainlayout.dynamic')).toBeInTheDocument()});
+    expect(screen.getByTestId('mainlayout.dynamic')).toBeInTheDocument();
+  });
 
   test('displays correct content', () => {
     render(<MainLayoutdynamic />);
@@ -21,4 +22,5 @@ describe('MainLayoutdynamic', () => {
   test('applies correct styling', () => {
     render(<MainLayoutdynamic />);
     // Add styling tests if needed
-  })});
+  });
+});

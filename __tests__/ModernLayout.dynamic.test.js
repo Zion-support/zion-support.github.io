@@ -6,7 +6,8 @@ import ModernLayoutdynamic from '../components/ModernLayout.dynamic';
 describe('ModernLayoutdynamic', () => {
   test('renders without crashing', () => {
     render(<ModernLayoutdynamic />);
-    expect(screen.getByTestId('modernlayout.dynamic')).toBeInTheDocument()});
+    expect(screen.getByTestId('modernlayout.dynamic')).toBeInTheDocument();
+  });
 
   test('displays correct content', () => {
     render(<ModernLayoutdynamic />);
@@ -21,4 +22,5 @@ describe('ModernLayoutdynamic', () => {
   test('applies correct styling', () => {
     render(<ModernLayoutdynamic />);
     // Add styling tests if needed
-  })});
+  });
+});
