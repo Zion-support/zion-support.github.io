@@ -5,8 +5,7 @@
     "dependencies": {
       "status": "warning",
       "issues": ["Security vulnerabilities detected"],
-      "totalDependencies": 92;
-},
+      "totalDependencies": 92},
     "build": {
       "status": "error",
       "buildExists": false,
@@ -22,14 +21,12 @@
         "94 console statements found"
       ],
       "consoleLogCount": 94,
-      "totalSourceFiles": 2217;
-},
+      "totalSourceFiles": 2217},
     "performance": {
       "status": "healthy",
       "issues": [],
       "bundleSize": 0,
-      "imageSize": 3447;
-},
+      "imageSize": 3447},
     "security": {
       "status": "warning",
       "issues": [
@@ -40,7 +37,6 @@
     "accessibility": {
       "status": "warning",
       "issues": ["242 accessibility issues found"],
-      "accessibilityIssues": 242;
-}
+      "accessibilityIssues": 242}
   }
 }

@@ -1,0 +1,43 @@
+{
+  "timestamp": "2025-09-03T19:11:27.180Z",
+  "status": "unhealthy",
+  "checks": [
+    {
+      "name": "Application Build",
+      "status": "failed",
+      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nFailed to compile.\n\n./components/ContactForm.tsx\nError:   \u001b[31mx\u001b[0m 'import', and 'export' cannot be used outside of module code\n     ,-[\u001b[36;1;4m/workspace/components/ContactForm.tsx\u001b[0m:192:1]\n \u001b[2m189\u001b[0m |     </form>\n \u001b[2m190\u001b[0m |   );\n \u001b[2m191\u001b[0m | }\n \u001b[2m192\u001b[0m | export default ContactForm;\n     : \u001b[35;1m^^^^^^\u001b[0m\n     `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./components/ContactForm.tsx\n./pages/contact.tsx\n\n./pages/_app.tsx\nError:   \u001b[31mx\u001b[0m Expected '</', got 'jsx text (\n  \u001b[31m|\u001b[0m\n  \u001b[31m|\u001b[0m         )'\n    ,-[\u001b[36;1;4m/workspace/pages/_app.tsx\u001b[0m:31:1]\n \u001b[2m28\u001b[0m |             }}>Zion Tech Group</Link>\n \u001b[2m29\u001b[0m |             \n \u001b[2m30\u001b[0m |     \n \u001b[2m31\u001b[0m | \u001b[35;1m,\u001b[0m\u001b[35;1m-\u001b[0m\u001b[35;1m>\u001b[0m         </div>\n \u001b[2m32\u001b[0m | \u001b[35;1m|\u001b[0m   \n \u001b[2m33\u001b[0m | \u001b[35;1m`\u001b[0m\u001b[35;1m-\u001b[0m\u001b[35;1m>\u001b[0m         {/* Mobile Navigation */}\n \u001b[2m34\u001b[0m |             <div style={{\n \u001b[2m35\u001b[0m |               display: 'flex', gap: 4, alignItems: 'center'\n \u001b[2m36\u001b[0m |             }} className=\"md:hidden\">\n    `----\n\nCaused by:\n    Syntax Error\n\n./pages/index.tsx\nError:   \u001b[31mx\u001b[0m Expression expected\n    ,-[\u001b[36;1;4m/workspace/pages/index.tsx\u001b[0m:60:1]\n \u001b[2m57\u001b[0m |               \"sameAs\": [contact.site]\n \u001b[2m58\u001b[0m |             })\n \u001b[2m59\u001b[0m |           }\n \u001b[2m60\u001b[0m |         />\n    : \u001b[35;1m         ^\u001b[0m\n \u001b[2m61\u001b[0m |       </Head>\n \u001b[2m62\u001b[0m |       \n \u001b[2m63\u001b[0m |       <main className=\"min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white\">\n    `----\n  \u001b[31mx\u001b[0m Expression expected\n    ,-[\u001b[36;1;4m/workspace/pages/index.tsx\u001b[0m:61:1]\n \u001b[2m58\u001b[0m |             })\n \u001b[2m59\u001b[0m |           }\n \u001b[2m60\u001b[0m |         />\n \u001b[2m61\u001b[0m |       </Head>\n    : \u001b[35;1m      ^\u001b[0m\n \u001b[2m62\u001b[0m |       \n \u001b[2m63\u001b[0m |       <main className=\"min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white\">\n \u001b[2m64\u001b[0m |         {/* Hero Section */}\n    `----\n  \u001b[31mx\u001b[0m Unterminated regexp literal\n    ,-[\u001b[36;1;4m/workspace/pages/index.tsx\u001b[0m:61:1]\n \u001b[2m58\u001b[0m |             })\n \u001b[2m59\u001b[0m |           }\n \u001b[2m60\u001b[0m |         />\n \u001b[2m61\u001b[0m |       </Head>\n    : \u001b[35;1m       ^^^^^^\u001b[0m\n \u001b[2m62\u001b[0m |       \n \u001b[2m63\u001b[0m |       <main className=\"min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white\">\n \u001b[2m64\u001b[0m |         {/* Hero Section */}\n    `----\n  \u001b[31mx\u001b[0m Expression expected\n    ,-[\u001b[36;1;4m/workspace/pages/index.tsx\u001b[0m:61:1]\n \u001b[2m58\u001b[0m |             })\n \u001b[2m59\u001b[0m |           }\n \u001b[2m60\u001b[0m |         />\n \u001b[2m61\u001b[0m |       </Head>\n    : \u001b[35;1m        ^^^^^\u001b[0m\n \u001b[2m62\u001b[0m |       \n \u001b[2m63\u001b[0m |       <main className=\"min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white\">\n \u001b[2m64\u001b[0m |         {/* Hero Section */}\n    `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/index.tsx\n\n\n> Build failed because of webpack errors\n",
+      "timestamp": "2025-09-03T19:11:33.449Z"
+    },
+    {
+      "name": "Dependencies Check",
+      "status": "passed",
+      "result": "Dependencies: 79",
+      "timestamp": "2025-09-03T19:11:33.450Z"
+    },
+    {
+      "name": "File System Check",
+      "status": "passed",
+      "result": "All required directories present",
+      "timestamp": "2025-09-03T19:11:33.450Z"
+    },
+    {
+      "name": "Configuration Check",
+      "status": "passed",
+      "result": "All configuration files present",
+      "timestamp": "2025-09-03T19:11:33.450Z"
+    },
+    {
+      "name": "Log Directory Check",
+      "status": "passed",
+      "result": "Log directory ready",
+      "timestamp": "2025-09-03T19:11:33.450Z"
+    }
+  ],
+  "summary": {
+    "total": 5,
+    "passed": 4,
+    "failed": 1,
+    "warnings": 0,
+    "healthScore": 80
+  }
+}

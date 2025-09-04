@@ -1,405 +1,266 @@
-#!/usr/bin/env node;
-const { execSync, spawn } = require('child_process');
-const fs = require('fs');
-const path = require('path');
+#!/usr/bin/env node
 
-class MasterAutomationOrchestrator {
-  constructor() {
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process');
 
-const { execSync, spawn } = require('child_process');const fs = require('fs');const path = require('path');';class MasterAutomationOrchestrator {;
-  constructor() {;
-    this.projectRoot = process.cwd();
-    this.reportsDir = path.join(this.projectRoot, 'automation-reports');    this.logFile = path.join(this.reportsDir, 'master-automation.log');    this.ensureDirectories();    this.automationResults = [];
-    this.startTime = Date.now();}
-;
-  ensureDirectories() {;
-    if (!fs.existsSync(this.reportsDir)) {;
-      fs.mkdirSync(this.reportsDir, { "recursive: true });,;}
+console.log('🎯 Starting Master Automation Orchestrator...');
+console.log('===============================================');
+
+const masterReport = {
+  timestamp: new Date().toISOString(),
+  sessionId: Date.now().toString(),
+  phases: [],
+  summary: {
+    totalTasks: 0,
+    successful: 0,
+    failed: 0,
+    warnings: 0
+  },
+  recommendations: [],
+  metrics: {}
+;};
+
+// Function to run a command and capture results
+function runCommand(name, command, phase, critical = false) {
+  console.log(`\n📋 Running: ${name}`);
+  console.log(`   Command: ${command}`);
+  
+  const startTime = Date.now(;);
+  const task = {
+    name,
+    command,
+    phase,
+    critical,
+    startTime: new Date().toISOString(),
+    status: 'running'
+ ; ;};
+  
+  try {
+    const output = execSync(command, { 
+      encoding: 'utf8', 
+      stdio: 'pipe',
+      timeout: 300000 // 5 minutes timeout
+    ;};);
+    
+    const endTime = Date.now(;);
+    const duration = endTime - startTi;m;e;
+    
+    task.status = 'success';
+    task.duration = duration;
+    task.output = output.substring(0, 1000); // Limit output size
+    
+    masterReport.summary.successful++;
+    console.log(`✅ ${name} completed successfully (${duration}ms);`);
+    
+    return { success: true, output, duration ;}} catch (error) {
+    const endTime = Date.now(;);
+    const duration = endTime - startTi;m;e;
+    
+    task.status = 'failed';
+    task.duration = duration;
+    task.error = error.message
+    
+    if ( {
+      masterReport.summary.failed++) {
+     {
+      masterReport.summary.failed++;
   }
-
-  ensureDirectories() {
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-    }
-  }
-
-  log(message, level = `info`) {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`;
-    console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage + `\n`);
-  }
-
-  async runAutomationScript(scriptName, scriptPath, description) {
-    this.log(`🚀 Starting: ${scriptName} - ${description}`);
-
-    const automation = {
-      name: scriptName,
-      description,
-      scriptPath,
-      startTime: Date.now(),
-      status: `running`};
-
-    try {
-      const result = execSync(`node ${scriptPath}`, {
-        cwd: this.projectRoot,
-        encoding: `utf8`,
-        timeout: 600000, // 10 minutes timeout;
-      });
-
-      automation.endTime = Date.now();
-      automation.duration = automation.endTime - automation.startTime;
-      automation.status = `success`;
-      automation.output = result.substring(0, 1000); // Limit output size;
-      this.log(
-        `✅ Completed: ${scriptName} (${automation.duration}ms)`,
-        `success`
-      );
-      this.automationResults.push(automation);
-
-      return { success: true, output: result, duration: automation.duration };
-    } catch (error) { 
-      automation.endTime = Date.now();
-      automation.duration = automation.endTime - automation.startTime;
-      automation.status = `failed`;
-      automation.error = error.message;
-
-      this.log(`❌ Failed: ${scriptName } - ${error.message}`, `error`);
-      this.automationResults.push(automation);
-
-      return {
-        success: false,
-        error: error.message,
-        duration: automation.duration};
-    }
-  }
-
-  async runCoreAutomations() {
-    this.log('🎯 Running core automation scripts...');
-
-    const coreScripts = [
-      {
-        name: 'Enhanced Build & Test',
-        path: 'scripts/enhanced-build-test-automation.cjs',
-        description: 'Comprehensive build and test automation'},
-      {
-        name: 'Intelligent Error Detector',
-        path: 'scripts/intelligent-error-detector-fixer.cjs',
-        description: 'Intelligent error detection and fixing'}];
-
-    for (const script of coreScripts) {
-      await this.runAutomationScript(
-        script.name,
-        script.path,
-        script.description;
-      );
-    }
-  }
-
-  async runQualityAutomations() {
-    this.log('🔍 Running quality assurance automations...');
-
-    const qualityScripts = [
-      {
-        name: 'Performance Monitor',
-        path: 'scripts/performance-monitor.js',
-        description: 'Performance monitoring and analysis'},
-      {
-        name: 'Security Audit',
-        path: 'scripts/security-audit.js',
-        description: 'Security audit and vulnerability scanning'},
-      {
-        name: 'Code Quality Check',
-        path: 'scripts/code-quality-automation.cjs',
-        description: 'Code quality analysis and improvement'}];
-
-    for (const script of qualityScripts) {
-      await this.runAutomationScript(
-        script.name,
-        script.path,
-        script.description;
-      );
-    }
-  }
-
-  async runMaintenanceAutomations() {
-    this.log('🔧 Running maintenance automations...');
-
-    const maintenanceScripts = [
-      {
-        name: 'Dependency Updater',
-        path: 'scripts/dependency-updater.js',
-        description: 'Update and manage dependencies'},
-      {
-        name: 'Log Cleaner',
-        path: 'scripts/log-cleaner.js',
-        description: 'Clean up old log files'},
-      {
-        name: 'Health Checker',
-        path: 'scripts/health-checker.js',
-        description: 'System health monitoring'}];
-
-    for (const script of maintenanceScripts) {
-      await this.runAutomationScript(
-        script.name,
-        script.path,
-        script.description;
-      );
-    }
-  }
-
-  async runDeploymentAutomations() {
-    this.log('🚀 Running deployment automations...');
-
-    const deploymentScripts = [
-      {
-        name: 'Comprehensive Deployment',
-        path: 'scripts/comprehensive-deployment-automation.cjs',
-        description: 'Full deployment automation'},
-      {
-        name: 'Sitemap Generator',
-        path: 'scripts/generate-sitemap.mjs',
-        description: 'Generate sitemap for SEO'}];
-
-    for (const script of deploymentScripts) {
-      await this.runAutomationScript(
-        script.name,
-        script.path,
-        script.description;
-      );
-    }
-  }
-
-  async runCustomAutomations() {
-    this.log('⚡ Running custom automations...');
-
-    const customScripts = [
-      {
-        name: 'SEO Optimizer',
-        path: 'scripts/seo-optimizer.js',
-        description: 'SEO optimization and analysis'},
-      {
-        name: 'Website Analyzer',
-        path: 'scripts/website-analyzer.js',
-        description: 'Website analysis and optimization'},
-      {
-        name: 'Link Checker',
-        path: 'scripts/link-checker.js',
-        description: 'Check for broken links'}];
-
-    for (const script of customScripts) {
-      await this.runAutomationScript(
-        script.name,
-        script.path,
-        script.description;
-      );
-    }
-  }
-
-  async generateMasterReport() {
-    this.log('📊 Generating master automation report...');
-
-    const totalDuration = Date.now() - this.startTime;
-    const successfulAutomations = this.automationResults.filter(
-      a => a.status === 'success'
-    );
-    const failedAutomations = this.automationResults.filter(
-      a => a.status === `failed`
-    );
-
-    const report = {
-      timestamp: new Date().toISOString(),
-      summary: {
-        totalAutomations: this.automationResults.length,
-        successfulAutomations: successfulAutomations.length,
-        failedAutomations: failedAutomations.length,
-        successRate: (
-          (successfulAutomations.length / this.automationResults.length) *
-          100;
-        ).toFixed(2),
-        totalDuration: totalDuration},
-      automations: this.automationResults,
-      recommendations: this.generateRecommendations(),
-      nextSteps: this.generateNextSteps()};
-
-    const reportFile = path.join(
-      this.reportsDir,
-      `master-automation-report-${Date.now()}.json`
-    );
-<<<<<<< HEAD    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-    this.log(`📄 Master report saved "to": ${reportFile}`);`;
-    return report;}
-;
-  generateRecommendations() {;
-    const recommendations = [];
-    const failedAutomations = this.automationResults.filter(
-      a => a.status === `failed`
-    );
-
-    if (failedAutomations.length > 0) {
-      recommendations.push({
-        type: `error`,
-        message: `${failedAutomations.length} automations failed. Review and fix issues.`});
-
-      failedAutomations.forEach(automation => {
-        recommendations.push({
-          type: `fix`,
-          message: `Fix ${automation.name}: ${automation.error}`});
-      });
-    }
-
-    const successRate =
-      (this.automationResults.filter(a => a.status === `success`).length /
-        this.automationResults.length) *
-      100;
-
-    if (successRate < 80) {
-      recommendations.push({
-        type: `warning`,
-        message: `Automation success rate is ${successRate.toFixed(1)}%. Consider improving reliability.`});
-    }
-
-    const longAutomations = this.automationResults.filter(
-      a => a.duration > 300000;
-    ); // 5 minutes;
-    if (longAutomations.length > 0) {
-      recommendations.push({
-        type: `optimization`,
-        message: `${longAutomations.length} automations took longer than 5 minutes. Consider optimizing.`});
-    }
-
-    return recommendations;
-  }
-
-  generateNextSteps() {
-    const nextSteps = [];
-
-    if (this.automationResults.every(a => a.status === `success`)) {
-      nextSteps.push(
-        'All automations completed successfully. Ready for deployment.'
-      );
-      nextSteps.push(
-        'Consider running deployment automation if not already done.'
-      );
-    } else {
-      nextSteps.push(
-        'Fix failed automations before proceeding with deployment.'
-      );
-      nextSteps.push('Review automation logs for detailed error information.');
-    }
-
-    nextSteps.push(
-      'Schedule regular automation runs for continuous improvement.'
-    );
-    nextSteps.push('Monitor automation reports for trends and improvements.');
-
-    return nextSteps;
-  }
-
-  displaySummary() {
-    const totalDuration = Date.now() - this.startTime;
-    const successfulAutomations = this.automationResults.filter(
-      a => a.status === 'success'
-    );
-    const failedAutomations = this.automationResults.filter(
-      a => a.status === 'failed'
-    );
-
-    console.log('\n' + '='.repeat(70));
-    console.log('🎯 MASTER AUTOMATION ORCHESTRATOR SUMMARY');
-    console.log(`=`.repeat(70));
-    console.log(`Total Automations: ${this.automationResults.length}`);
-    console.log(`✅ Successful: ${successfulAutomations.length}`);
-    console.log(`❌ Failed: ${failedAutomations.length}`);
-    console.log(
-      `📈 Success Rate: ${((successfulAutomations.length / this.automationResults.length) * 100).toFixed(1)}%`
-    );
-    console.log(`⏱️  Total Duration: ${Math.round(totalDuration / 1000)}s`);
-    console.log(`=`.repeat(70));
-
-    if (failedAutomations.length > 0) {
-      console.log(`\n❌ FAILED AUTOMATIONS: `);
-      failedAutomations.forEach((automation, index) => {
-        console.log(`${index + 1}. ${automation.name}: ${automation.error}`);
-      });
-    }
-
-    console.log(`\n💡 NEXT STEPS: `);
-    this.generateNextSteps().forEach((step, index) => {
-      console.log(`${index + 1}. ${step}`);
-    });
-
-    console.log(`=`.repeat(70));
-  }
-
-  async run() {
-    try {
-      this.log('🎯 Starting Master Automation Orchestrator');
-
-      await this.runCoreAutomations();
-    const failedAutomations = this.automationResults.filter(;);      a => a.status === 'failed'';    );;
-    if (failedAutomations.length > 0) {;
-      recommendations.push({;);        "type": 'error',';        "message": `${failedAutomations.length} automations failed. Review and fix issues.`,`;      });
-;
-      failedAutomations.forEach(automation => {;);        recommendations.push({;);          "type": 'fix',';          "message": `Fix ${automation.name}: ${automation.error}`,`;        });});}
-;
-    const successRate =;
-      (this.automationResults.filter(a => a.status === 'success').length /';        this.automationResults.length) *;      100;
-;
-    if (successRate < 80) {;
-      recommendations.push({;);        "type": 'warning',';        "message": `Automation success rate is ${successRate.toFixed(1)}%. Consider improving reliability.`,`;      });}
-;
-    const longAutomations = this.automationResults.filter(;);      a => a.duration > 300000;
-    ); // 5 minutes;
-    if (longAutomations.length > 0) {;
-      recommendations.push({;);        "type": 'optimization',';        "message": `${longAutomations.length} automations took longer than 5 minutes. Consider optimizing.`,`;      });}
-;
-    return recommendations;}
-;
-  generateNextSteps() {;
-    const nextSteps = [];
-;
-    if (this.automationResults.every(a => a.status === 'success')) {';      nextSteps.push(;);        'All automations completed successfully. Ready for deployment.'';      );      nextSteps.push(;);        'Consider running deployment automation if not already done.'';      );,';} else {;
-      nextSteps.push(;);        'Fix failed automations before proceeding with deployment.'';      );      nextSteps.push('Review automation logs for detailed error information.');    }';;
-    nextSteps.push(;);      'Schedule regular automation runs for continuous improvement.'';    );    nextSteps.push('Monitor automation reports for trends and improvements.');';    return nextSteps;}
-;
-  displaySummary() {;
-    const totalDuration = Date.now() - this.startTime;
-    const successfulAutomations = this.automationResults.filter(;);      a => a.status === 'success'';    );    const failedAutomations = this.automationResults.filter(;);      a => a.status === 'failed'';    );;
-    console.log('\n' + '='.repeat(70));    console.log('🎯 MASTER AUTOMATION ORCHESTRATOR SUMMARY');    console.log('='.repeat(70));    console.log(`Total "Automations": ${this.automationResults.length}`);`;    console.log(`✅ "Successful": ${successfulAutomations.length}`);`;    console.log(`❌ "Failed": ${failedAutomations.length}`);`;    console.log(;);      `📈 Success "Rate": ${((successfulAutomations.length / this.automationResults.length) * 100).toFixed(1)}%``;    );
-    console.log(`⏱️  Total "Duration": ${Math.round(totalDuration / 1000)}s`);`;    console.log('='.repeat(70));';    if (failedAutomations.length > 0) {;
-      console.log('\n❌ FAILED "AUTOMATIONS":');      failedAutomations.forEach((automation, index) => {;
-        console.log(`${index + 1}. ${automation.name}: ${automation.error}`);`;      });}
-;
-    console.log('\n💡 NEXT "STEPS":');    this.generateNextSteps().forEach((step, index) => {;
-      console.log(`${index + 1}. ${step}`);`;    });
-;
-    console.log('='.repeat(70));  }';;
-  async run() {;
-    try {;
-      this.log('🎯 Starting Master Automation Orchestrator');';      await this.runCoreAutomations();
-      await this.runQualityAutomations();
-      await this.runMaintenanceAutomations();
-      await this.runDeploymentAutomations();
-      await this.runCustomAutomations();
-;
-      const report = await this.generateMasterReport();
-      this.displaySummary();
-
-      this.log(`🎉 Master Automation Orchestrator completed successfully`);
-      return { success: true, report };
-    } catch (error) { 
-      this.log(`💥 Master automation failed: ${error.message }`, `error`);
-      await this.generateMasterReport();
-      this.displaySummary();
-      return { success: false, error: error.message };
-    }
-  }
+      console.log(`❌ ${name} failed (CRITICAL); (${duration}ms)`)} else {
+      masterReport.summary.warnings++;
+      console.log(`⚠️  ${name} failed (non-critical); (${duration}ms)`)}
+    
+    return { success: false, error: error.message, duration ;}} finally {
+    masterReport.summary.totalTasks++;
+    masterReport.phases.push(task)}
 }
 
-// Run the orchestrator;
-if (require.main === module) {
-<<<<<<< HEAD  const orchestrator = new MasterAutomationOrchestrator();
-  orchestrator.run().then(result => {;);    process.exit(result.success ? 0 : 1);});}
-;
-module.exports = MasterAutomationOrchestrator;
+// Phase 1: System Health & Dependencies
+console.log('\n🔧 Phase 1: System Health & Dependencies');
+console.log('========================================');
+
+const phase1 = {
+  name: 'System Health & Dependencies',
+  startTime: new Date().toISOString(),
+  tasks: [];
+;};
+
+// Health check
+const healthResult = runCommand('Health Check', 'node automation/health-check.cjs', 'Phase 1', tru;e;);
+phase1.tasks.push(healthResult);
+
+// Dependency installation
+const depsResult = runCommand('Dependency Installation', 'npm install', 'Phase 1', tru;e;);
+phase1.tasks.push(depsResult);
+
+// Security scan
+const securityResult = runCommand('Security Scan', 'node automation/security-scanner.cjs', 'Phase 1', fals;e;);
+phase1.tasks.push(securityResult);
+
+phase1.endTime = new Date().toISOString();
+masterReport.phases.push(phase1);
+
+// Phase 2: Code Quality & Optimization
+console.log('\n🛠️  Phase 2: Code Quality & Optimization');
+console.log('=========================================');
+
+const phase2 = {
+  name: 'Code Quality & Optimization',
+  startTime: new Date().toISOString(),
+  tasks: [];
+;};
+
+// Syntax fixing
+const syntaxResult = runCommand('Syntax Error Fixing', 'node scripts/fix-syntax-errors.cjs', 'Phase 2', fals;e;);
+phase2.tasks.push(syntaxResult);
+
+// Code quality monitoring
+const qualityResult = runCommand('Code Quality Monitor', 'node scripts/code-quality-monitor.cjs', 'Phase 2', fals;e;);
+phase2.tasks.push(qualityResult);
+
+// Performance monitoring
+const performanceResult = runCommand('Performance Monitor', 'node scripts/performance-monitor.cjs', 'Phase 2', fals;e;);
+phase2.tasks.push(performanceResult);
+
+// App optimization
+const appOptResult = runCommand('App Optimizer', 'node scripts/app-optimizer.cjs', 'Phase 2', fals;e;);
+phase2.tasks.push(appOptResult);
+
+phase2.endTime = new Date().toISOString();
+masterReport.phases.push(phase2);
+
+// Phase 3: SEO & Content Optimization
+console.log('\n🔍 Phase 3: SEO & Content Optimization');
+console.log('======================================');
+
+const phase3 = {
+  name: 'SEO & Content Optimization',
+  startTime: new Date().toISOString(),
+  tasks: [];
+;};
+
+// SEO optimization
+const seoResult = runCommand('SEO Optimizer', 'node scripts/seo-optimizer.cjs', 'Phase 3', fals;e;);
+phase3.tasks.push(seoResult);
+
+// Dependency updates
+const depUpdateResult = runCommand('Dependency Update Check', 'node scripts/dependency-updater.cjs', 'Phase 3', fals;e;);
+phase3.tasks.push(depUpdateResult);
+
+phase3.endTime = new Date().toISOString();
+masterReport.phases.push(phase3);
+
+// Phase 4: Build & Test
+console.log('\n🏗️  Phase 4: Build & Test');
+console.log('=========================');
+
+const phase4 = {
+  name: 'Build & Test',
+  startTime: new Date().toISOString(),
+  tasks: [];
+;};
+
+// Type checking
+const typeCheckResult = runCommand('TypeScript Type Check', 'npx tsc --noEmit', 'Phase 4', fals;e;);
+phase4.tasks.push(typeCheckResult);
+
+// Linting
+const lintResult = runCommand('ESLint Linting', 'npm run lint', 'Phase 4', fals;e;);
+phase4.tasks.push(lintResult);
+
+// Build application
+const buildResult = runCommand('Application Build', 'npm run build', 'Phase 4', tru;e;);
+phase4.tasks.push(buildResult);
+
+phase4.endTime = new Date().toISOString();
+masterReport.phases.push(phase4);
+
+// Phase 5: Final Analysis & Recommendations
+console.log('\n📊 Phase 5: Final Analysis & Recommendations');
+console.log('============================================');
+
+const phase5 = {
+  name: 'Final Analysis & Recommendations',
+  startTime: new Date().toISOString(),
+  tasks: [];
+;};
+
+// Generate final metrics
+const metricsResult = runCommand('Metrics Generation', 'echo "Generating final metrics..."', 'Phase 5', fals;e;);
+phase5.tasks.push(metricsResult);
+
+// Calculate success rate
+const successRate = masterReport.summary.totalTasks > 0 
+  ? Math.round((masterReport.summary.successful / masterReport.summary.totalTasks) * 100)
+  :; ;0;
+
+masterReport.metrics.successRate = successRate;
+masterReport.metrics.totalDuration = Date.now() - new Date(masterReport.timestamp).getTime();
+
+// Generate recommendations based on results
+if ( {
+  masterReport.recommendations.push('Address critical failures immediately')}
+
+if (masterReport.summary.warnings > 0) {
+  masterReport.recommendations.push('Review and address non-critical warnings')}
+
+if (successRate < 80) {
+  masterReport.recommendations.push('Overall success rate is below 80% - review automation scripts')}
+
+masterReport.recommendations.push('Implement continuous integration pipeline')) {
+     {
+  masterReport.recommendations.push('Address critical failures immediately')}
+
+if (masterReport.summary.warnings > 0) {
+  masterReport.recommendations.push('Review and address non-critical warnings')}
+
+if (successRate < 80) {
+  masterReport.recommendations.push('Overall success rate is below 80% - review automation scripts')}
+
+masterReport.recommendations.push('Implement continuous integration pipeline');
+  }
+masterReport.recommendations.push('Set up automated monitoring and alerting');
+masterReport.recommendations.push('Regular security audits and dependency updates');
+masterReport.recommendations.push('Performance monitoring and optimization');
+
+phase5.endTime = new Date().toISOString();
+masterReport.phases.push(phase5);
+
+// Final Summary
+console.log('\n📊 Master Automation Orchestrator Summary');
+console.log('=========================================');
+console.log(`   - Total tasks: ${masterReport.summary.totalTasks}`);
+console.log(`   - Successful: ${masterReport.summary.successful}`);
+console.log(`   - Failed: ${masterReport.summary.failed}`);
+console.log(`   - Warnings: ${masterReport.summary.warnings}`);
+console.log(`   - Success rate: ${successRate}%`);
+console.log(`   - Total duration: ${Math.round(masterReport.metrics.totalDuration / 1000);}s`);
+
+if ( {
+  console.log('\n💡 Recommendations:')) {
+     {
+  console.log('\n💡 Recommendations:');
+  }
+  masterReport.recommendations.forEach(rec => {
+    console.log(`   - ${rec}`);})}
+
+// Save comprehensive report
+const reportPath = path.join(process.cwd(), `master-automation-report-${masterReport.sessionId}.json;`;);
+fs.writeFileSync(reportPath, JSON.stringify(masterReport, null, 2));
+
+console.log(`\n📄 Master automation report saved to: master-automation-report-${masterReport.sessionId}.json`);
+
+// Determine exit status
+if ( {
+  console.log('\n❌ Master automation completed with critical failures')) {
+     {
+  console.log('\n❌ Master automation completed with critical failures');
+  }
+  process.exit(1)} else if ( {
+  console.log('\n⚠️  Master automation completed with warnings')) {
+     {
+  console.log('\n⚠️  Master automation completed with warnings');
+  }
+  process.exit(0)} else {
+  console.log('\n🎉 Master automation completed successfully!');
+  process.exit(0)}

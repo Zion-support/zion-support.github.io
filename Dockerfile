@@ -1,4 +1,3 @@
-# Use the official Node.js runtime as the base image
 FROM node:18-alpine AS base
 
 # Install dependencies only when needed
@@ -43,6 +42,5 @@ USER nextjs
 EXPOSE 3000
 
 ENV PORT 3000
-ENV HOSTNAME "0.0.0.0"
 
 CMD ["node", "server.js"]

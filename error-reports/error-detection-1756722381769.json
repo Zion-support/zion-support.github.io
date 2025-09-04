@@ -34,7 +34,6 @@
     "eslint": 0,
     "syntax": 0,
     "dependency": 0,
-    "build": 5;
-},
+    "build": 5},
   "status": "completed";
 }

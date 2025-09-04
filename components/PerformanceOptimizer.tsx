@@ -1,29 +1,60 @@
-import React, { useEffect } from 'react';
+import { useEffect, ReactNode } from 'react';
 
-const PerformanceOptimizer: React.FC = () => {
+interface PerformanceOptimizerProps {
+  children: ReactNode;
+}
+
+export default function PerformanceOptimizer({ children }: PerformanceOptimizerProps) {
   useEffect(() => {
-    // Performance optimization scripts
-    if (typeof window !== 'undefined') {
-      // Preload critical resources
-      const preloadLink = document.createElement('link');
-      preloadLink.rel = 'preload';
-      preloadLink.href = '/fonts/inter.woff2';
-      preloadLink.as = 'font';
-      preloadLink.type = 'font/woff2';
-      preloadLink.crossOrigin = 'anonymous';
-      document.head.appendChild(preloadLink);
+    // Preload critical resources
+    const preloadCriticalResources = () => {
+      const criticalImages = [
+        '/og-image.jpg',
+        '/favicon.svg'
+      ];
 
-      // Optimize images
-      const images = document.querySelectorAll('img');
-      images.forEach((img) => {
-        if (!img.loading) {
-          img.loading = 'lazy';
-        }
+      criticalImages.forEach((src) => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.as = 'image';
+        link.href = src;
+        document.head.appendChild(link);
       });
+    }
+    // Optimize images with lazy loading
+    const optimizeImages = () => {
+      const images = document.querySelectorAll('img[data-src]');
+      const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const img = entry.target as HTMLImageElement;
+            img.src = img.dataset.src || '';
+            img.classList.remove('lazy');
+            imageObserver.unobserve(img);
+          }
+        });
+      });
+
+      images.forEach((img) => imageObserver.observe(img));
+    }
+    // Initialize optimizations
+    preloadCriticalResources();
+    optimizeImages();
+
+    // Cleanup
+    return () => {
+      // Cleanup if needed
     }
   }, []);
 
-  return null;
-};
+  return <>{children}</>; // Render children
+}
 
-export default PerformanceOptimizer;
+// Web Vitals monitoring
+export const reportWebVitals = (metric: { name: string; value: number; delta: number }) => {
+  if (process.env.NODE_ENV === 'production') {
+    // Send to analytics service
+    // eslint-disable-next-line no-console
+    console.log('Web Vital:', metric);
+  }
+};

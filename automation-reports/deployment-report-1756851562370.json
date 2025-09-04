@@ -5,8 +5,7 @@
     "totalSteps": 2,
     "successfulSteps": 1,
     "failedSteps": 1,
-    "totalDuration": 7310;
-},
+    "totalDuration": 7310},
   "steps": [
     {
       "name": "Dependency Check",
@@ -26,8 +25,7 @@
       "status": "failed",
       "endTime": 1756851562369,
       "duration": 213,
-      "error": "Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\nOops! Something went wrong! :(\n\nESLint: 8.57.1\n\nReferenceError: module is not defined in ES module scope\nThis file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at file:///workspace/eslint.config.js?mtime=1756851537118:1:1\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)\n    at async loadFlatConfigFile (/workspace/node_modules/eslint/lib/eslint/flat-eslint.js:303:21)\n    at async calculateConfigArray (/workspace/node_modules/eslint/lib/eslint/flat-eslint.js:382:28)\n    at async FlatESLint.lintFiles (/workspace/node_modules/eslint/lib/eslint/flat-eslint.js:762:25)\n    at async Object.execute (/workspace/node_modules/eslint/lib/cli.js:421:23)\n    at async main (/workspace/node_modules/eslint/bin/eslint.js:152:22)\n";
-}
+      "error": "Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\nOops! Something went wrong! :(\n\nESLint: 8.57.1\n\nReferenceError: module is not defined in ES module scope\nThis file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at file: ///workspace/eslint.config.js?mtime=1756851537118:1:1\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)\n    at async loadFlatConfigFile (/workspace/node_modules/eslint/lib/eslint/flat-eslint.js:303:21)\n    at async calculateConfigArray (/workspace/node_modules/eslint/lib/eslint/flat-eslint.js:382:28)\n    at async FlatESLint.lintFiles (/workspace/node_modules/eslint/lib/eslint/flat-eslint.js:762:25)\n    at async Object.execute (/workspace/node_modules/eslint/lib/cli.js:421:23)\n    at async main (/workspace/node_modules/eslint/bin/eslint.js:152:22)\n"}
   ],
   "recommendations": [
     {
@@ -36,8 +34,7 @@
 },
     {
       "type": "fix",
-      "message": "Fix Linting Check: Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\nOops! Something went wrong! :(\n\nESLint: 8.57.1\n\nReferenceError: module is not defined in ES module scope\nThis file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at file:///workspace/eslint.config.js?mtime=1756851537118:1:1\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)\n    at async loadFlatConfigFile (/workspace/node_modules/eslint/lib/eslint/flat-eslint.js:303:21)\n    at async calculateConfigArray (/workspace/node_modules/eslint/lib/eslint/flat-eslint.js:382:28)\n    at async FlatESLint.lintFiles (/workspace/node_modules/eslint/lib/eslint/flat-eslint.js:762:25)\n    at async Object.execute (/workspace/node_modules/eslint/lib/cli.js:421:23)\n    at async main (/workspace/node_modules/eslint/bin/eslint.js:152:22)\n";
-},
+      "message": "Fix Linting Check: Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\nOops! Something went wrong! :(\n\nESLint: 8.57.1\n\nReferenceError: module is not defined in ES module scope\nThis file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at file: ///workspace/eslint.config.js?mtime=1756851537118:1:1\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)\n    at async loadFlatConfigFile (/workspace/node_modules/eslint/lib/eslint/flat-eslint.js:303:21)\n    at async calculateConfigArray (/workspace/node_modules/eslint/lib/eslint/flat-eslint.js:382:28)\n    at async FlatESLint.lintFiles (/workspace/node_modules/eslint/lib/eslint/flat-eslint.js:762:25)\n    at async Object.execute (/workspace/node_modules/eslint/lib/cli.js:421:23)\n    at async main (/workspace/node_modules/eslint/bin/eslint.js:152:22)\n"},
     {
       "type": "warning",
       "message": "Deployment success rate is 50.0%. Consider improving reliability.";

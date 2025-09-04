@@ -1,397 +1,265 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
+/**
+ * Deployment Automation
+ * Automates deployment processes
+ */
+
+const fs = require('fs')
 const { execSync } = require('child_process');
 
 class DeploymentAutomation {
   constructor() {
-    this.projectRoot = process.cwd();
-    this.logDir = path.join(this.projectRoot, 'logs');
-    this.deploymentResults = {
+    this.deployments = [];
+    this.startTime = Date.now()}
+
+  log(message, type = 'INFO') {
+    const icons = {
+      'INFO': 'ℹ️',
+      'SUCCESS': '✅',
+      'ERROR': '❌',
+      'WARNING': '⚠️',
+      'PROGRESS': '🔄'
+   ; ;};
+    console.log(`${icons[type]} ${message}`);}
+
+  createDockerfile() {
+    const dockerfile = `FROM node:18-alpine AS base
+
+# Install dependencies only when needed
+FROM base AS deps
+RUN apk add --no-cache libc6-compat
+WORKDIR /app
+
+# Install dependencies based on the preferred package manager
+COPY package.json package-lock.json* ./
+RUN npm ci --only=production
+
+# Rebuild the source code only when needed
+FROM base AS builder
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
+COPY . .
+
+# Build the application
+RUN npm run build
+
+# Production image, copy all the files and run next
+FROM base AS runner
+WORKDIR /app
+
+ENV NODE_ENV production
+
+RUN addgroup --system --gid 1001 nodejs
+RUN adduser --system --uid 1001 nextjs
+
+COPY --from=builder /app/public ./public
+
+# Set the correct permission for prerender cache
+RUN mkdir .next
+RUN chown nextjs:nodejs .next
+
+# Automatically leverage output traces to reduce image size
+COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
+COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+
+USER nextjs
+
+EXPOSE 3000
+
+ENV PORT 3000
+
+CMD ["node", "server.js";];`;
+
+    fs.writeFileSync('Dockerfile', dockerfile);
+    this.deployments.push('Created Dockerfile');
+    this.log('Created Dockerfile', 'SUCCESS')}
+
+  createDockerCompose() {
+    const dockerCompose = `version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+    
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./ssl:/etc/nginx/ssl
+    depends_on:
+      - app
+    restart: unless-stoppe;d;`;
+
+    fs.writeFileSync('docker-compose.yml', dockerCompose);
+    this.deployments.push('Created docker-compose.yml');
+    this.log('Created docker-compose.yml', 'SUCCESS')}
+
+  createKubernetesManifests() {
+    this.ensureDirectory('k8s');
+    
+    const deployment = `apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: zion-tech-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: zion-tech-app
+  template:
+    metadata:
+      labels:
+        app: zion-tech-app
+    spec:
+      containers:
+      - name: app
+        image: zion-tech-app:latest
+        ports:
+        - containerPort: 3000
+        env:
+        - name: NODE_ENV
+          value: "production"
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m;";`;
+
+    const service = `apiVersion: v1
+kind: Service
+metadata:
+  name: zion-tech-service
+spec:
+  selector:
+    app: zion-tech-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 3000
+  type: LoadBalance;r;`;
+
+    fs.writeFileSync('k8s/deployment.yaml', deployment);
+    fs.writeFileSync('k8s/service.yaml', service);
+    this.deployments.push('Created Kubernetes manifests');
+    this.log('Created Kubernetes manifests', 'SUCCESS')}
+
+  createGitHubActions() {
+    this.ensureDirectory('.github/workflows');
+    
+    const workflow = `name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        cache: 'npm'
+    - name: Install dependencies
+      run: npm ci
+    - name: Run tests
+      run: npm test
+    - name: Run linting
+      run: npm run lint
+
+  build:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        cache: 'npm'
+    - name: Install dependencies
+      run: npm ci
+    - name: Build application
+      run: npm run build
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: build-files
+        path: .next/
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+    - name: Deploy to production
+      run: echo "Deploying to production...;";`;
+
+    fs.writeFileSync('.github/workflows/ci-cd.yml', workflow);
+    this.deployments.push('Created GitHub Actions workflow');
+    this.log('Created GitHub Actions workflow', 'SUCCESS')}
+
+  ensureDirectory(dirPath) {
+    if () {
+      fs.mkdirSync(dirPath, { recursive: true })}
+  }
+
+  generateReport() {
+    const duration = Date.now() - this.startTim) {
+    ) {
+      fs.mkdirSync(dirPath, { recursive: true })}
+  }
+
+  generateReport() {
+    const duration = Date.now() - this.startTim;
+  }e;
+    const report = {
       timestamp: new Date().toISOString(),
-      steps: [],
-      environment: process.env.NODE_ENV || 'development',
-      branch: this.getCurrentBranch(),
-      commit: this.getCurrentCommit(),
-      status: 'pending';
-};
-    
-    // Ensure logs directory exists
-    if (!fs.existsSync(this.logDir)) {
-      fs.mkdirSync(this.logDir, { recursive: true });
-    }
-  }
-
-  log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}`;
-    console.log(logMessage);
-    
-    // Write to log file
-    const logFile = path.join(this.logDir, 'deployment.log');
-    fs.appendFileSync(logFile, logMessage + '\n');
-  }
-
-  getCurrentBranch() {
-    try {
-      return execSync('git rev-parse --abbrev-ref HEAD', { encoding: 'utf8' }).trim();
-    } catch (error) {
-      return 'unknown';
-    }
-  }
-
-  getCurrentCommit() {
-    try {
-      return execSync('git rev-parse HEAD', { encoding: 'utf8' }).trim();
-    } catch (error) {
-      return 'unknown';
-    }
-  }
-
-  async runStep(name, command, options = {}) {
-    this.log(`Starting: ${name}`);
-    const startTime = Date.now();
-    
-    try {
-      const result = execSync(command, {
-        cwd: this.projectRoot,
-        encoding: 'utf8',
-        stdio: options.silent ? 'pipe' : 'inherit',
-        ...options;
-});
-      
-      const duration = Date.now() - startTime;
-      this.deploymentResults.steps.push({
-        name,
-        status: 'success',
-        duration,
-        command;
-});
-      
-      this.log(`Completed: ${name} (${duration}ms)`);
-      return result;
-    } catch (error) {
-      const duration = Date.now() - startTime;
-      this.deploymentResults.steps.push({
-        name,
-        status: 'failed',
-        duration,
-        command,
-        error: error.message;
-});
-      
-      this.log(`Failed: ${name} - ${error.message}`, 'ERROR');
-      throw error;
-    }
-  }
-
-  async preDeploymentChecks() {
-    this.log('Running pre-deployment checks...');
-    
-    // Check if we're on the main branch
-    if (this.deploymentResults.branch !== 'main' && this.deploymentResults.branch !== 'master') {
-      this.log(`Warning: Deploying from branch '${this.deploymentResults.branch}' instead of main/master`, 'WARN');
-    }
-    
-    // Check for uncommitted changes
-    try {
-      const gitStatus = execSync('git status --porcelain', { encoding: 'utf8' });
-      if (gitStatus.trim()) {
-        this.log('Warning: There are uncommitted changes', 'WARN');
-        this.log('Uncommitted files: ', 'WARN');
-        this.log(gitStatus, 'WARN');
+      duration: `${Math.round(duration / 1000)}s`,
+      deployments: this.deployments,
+      summary: {
+        totalDeployments: this.deployments.length
       }
-    } catch (error) {
-      this.log('Could not check git status', 'WARN');
-    }
-    
-    // Check if build directory exists
-    const buildDir = path.join(this.projectRoot, '.next');
-    if (!fs.existsSync(buildDir)) {
-      this.log('Build directory not found, running build...', 'WARN');
-      await this.runStep('Build application', 'npm run build');
-    }
-  }
+   ; ;};
 
-  async createBackup() {
-    this.log('Creating deployment backup...');
-    
-    const backupDir = path.join(this.projectRoot, 'backups');
-    if (!fs.existsSync(backupDir)) {
-      fs.mkdirSync(backupDir, { recursive: true });
-    }
-    
-    const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
-    const backupPath = path.join(backupDir, `backup-${timestamp}.tar.gz`);
-    
-    try {
-      await this.runStep(
-        'Create backup',
-        `tar -czf ${backupPath} --exclude=node_modules --exclude=.git --exclude=.next --exclude=backups .`,
-        { silent: true }
-      );
-      
-      this.deploymentResults.backupPath = backupPath;
-      this.log(`Backup created: ${backupPath}`);
-    } catch (error) {
-      this.log(`Backup creation failed: ${error.message}`, 'WARN');
-    }
-  }
+    fs.writeFileSync('deployment-automation-report.json', JSON.stringify(report, null, 2));
+    this.log('📊 Deployment Automation Report Generated', 'SUCCESS')}
 
-  async deployToProduction() {
-    this.log('Deploying to production...');
+  async run() {
+    this.log('🚀 Starting Deployment Automation...', 'PROGRESS');
     
-    try {
-      // Stop existing PM2 processes
-      await this.runStep(
-        'Stop PM2 processes',
-        'pm2 stop all',
-        { continueOnError: true }
-      );
-      
-      // Update dependencies
-      await this.runStep('Update dependencies', 'npm ci --production');
-      
-      // Run database migrations if needed
-      try {
-        await this.runStep(
-          'Run migrations',
-          'npm run migrate',
-          { continueOnError: true }
-        );
-      } catch (error) {
-        this.log('No migrations to run or migration failed', 'WARN');
-      }
-      
-      // Start PM2 processes
-      await this.runStep('Start PM2 processes', 'pm2 start ecosystem.config.cjs');
-      
-      // Save PM2 configuration
-      await this.runStep('Save PM2 configuration', 'pm2 save');
-      
-      this.log('Production deployment completed successfully');
-      ;
-} catch (error) {
-      this.log(`Production deployment failed: ${error.message}`, 'ERROR');
-      throw error;
-    }
-  }
-
-  async deployToStaging() {
-    this.log('Deploying to staging...');
+    this.createDockerfile();
+    this.createDockerCompose();
+    this.createKubernetesManifests();
+    this.createGitHubActions();
     
-    try {
-      // Build application
-      await this.runStep('Build for staging', 'npm run build');
-      
-      // Start staging server
-      await this.runStep(
-        'Start staging server',
-        'pm2 start npm --name "staging-app" -- start',
-        { continueOnError: true }
-      );
-      
-      this.log('Staging deployment completed successfully');
-      ;
-} catch (error) {
-      this.log(`Staging deployment failed: ${error.message}`, 'ERROR');
-      throw error;
-    }
-  }
-
-  async postDeploymentTests() {
-    this.log('Running post-deployment tests...');
+    this.generateReport();
     
-    try {
-      // Health check
-      await this.runStep(
-        'Health check',
-        'node scripts/health-checker.cjs',
-        { continueOnError: true }
-      );
-      
-      // Smoke tests
-      try {
-        await this.runStep(
-          'Smoke tests',
-          'npm run test: smoke',
-          { continueOnError: true }
-        );
-      } catch (error) {
-        this.log('Smoke tests not available or failed', 'WARN');
-      }
-      
-      this.log('Post-deployment tests completed');
-      ;
-} catch (error) {
-      this.log(`Post-deployment tests failed: ${error.message}`, 'WARN');
-    }
-  }
-
-  async rollback() {
-    this.log('Initiating rollback...');
-    
-    try {
-      if (this.deploymentResults.backupPath && fs.existsSync(this.deploymentResults.backupPath)) {
-        await this.runStep(
-          'Restore from backup',
-          `tar -xzf ${this.deploymentResults.backupPath}`
-        );
-        
-        await this.runStep('Restart services', 'pm2 restart all');
-        
-        this.log('Rollback completed successfully');
-      } else {
-        this.log('No backup available for rollback', 'ERROR');
-        throw new Error('No backup available');
-      }
-    } catch (error) {
-      this.log(`Rollback failed: ${error.message}`, 'ERROR');
-      throw error;
-    }
-  }
-
-  async notifyDeployment(status) {
-    this.log(`Sending deployment notification (${status})...`);
-    
-    const notification = {
-      timestamp: new Date().toISOString(),
-      status,
-      branch: this.deploymentResults.branch,
-      commit: this.deploymentResults.commit,
-      environment: this.deploymentResults.environment,
-      duration: this.deploymentResults.steps.reduce((sum, step) => sum + step.duration, 0);
-};
-    
-    // Save notification (in real app, you'd send to Slack, email, etc.)
-    const notificationFile = path.join(this.logDir, 'deployment-notifications.json');
-    let notifications = [];
-    
-    if (fs.existsSync(notificationFile)) {
-      try {
-        notifications = JSON.parse(fs.readFileSync(notificationFile, 'utf8'));
-      } catch (error) {
-        notifications = [];
-      }
-    }
-    
-    notifications.push(notification);
-    fs.writeFileSync(notificationFile, JSON.stringify(notifications, null, 2));
-    
-    this.log('Notification sent');
-  }
-
-  async deploy(environment = 'production') {
-    this.log(`🚀 Starting deployment to ${environment}...`);
-    this.deploymentResults.environment = environment;
-    
-    try {
-      // Pre-deployment checks
-      await this.preDeploymentChecks();
-      
-      // Create backup
-      await this.createBackup();
-      
-      // Deploy based on environment
-      if (environment === 'production') {
-        await this.deployToProduction();
-      } else if (environment === 'staging') {
-        await this.deployToStaging();
-      } else {
-        throw new Error(`Unknown environment: ${environment}`);
-      }
-      
-      // Post-deployment tests
-      await this.postDeploymentTests();
-      
-      // Mark as successful
-      this.deploymentResults.status = 'success';
-      
-      // Send success notification
-      await this.notifyDeployment('success');
-      
-      this.log(`✅ Deployment to ${environment} completed successfully`);
-      
-      return this.deploymentResults;
-      ;
-} catch (error) {
-      this.deploymentResults.status = 'failed';
-      this.log(`❌ Deployment failed: ${error.message}`, 'ERROR');
-      
-      // Send failure notification
-      await this.notifyDeployment('failed');
-      
-      // Ask if rollback is needed (in automated scenarios, you might auto-rollback)
-      if (environment === 'production') {
-        this.log('Consider running rollback if needed', 'WARN');
-      }
-      
-      throw error;
-    }
-  }
+    this.log('✅ Deployment Automation Completed', 'SUCCESS')}
 }
 
-// Run if this script is executed directly
-if (require.main === module) {
-  const environment = process.argv[2] || 'production';
-  const automation = new DeploymentAutomation();
-  
-  automation.deploy(environment)
-    .then(results => {
-      console.log('\n✅ Deployment automation completed successfully');
-      process.exit(0);
-    })
-    .catch(error => {
-      console.error('\n❌ Deployment automation failed: ', error.message);
-      process.exit(1);
-    });
-}
+if ( {
+  const automation = new DeploymentAutomation) {
+     {
+  const automation = new DeploymentAutomation;
+  }(;);
+  automation.run().catch(error => {
+    console.error('Deployment automation failed:', error);
+    process.exit(1)})}
 
-module.exports = DeploymentAutomation;
-#!/usr/bin/env node;
-
-const { execSync } = require('child_process');const fs = require('fs');';class DeploymentAutomation {;
-  constructor() {;
-    this.projectRoot = process.cwd();}
-;
-  async deploy() {;
-    console.log('🚀 Starting deployment automation...');';    try {;
-      // Run tests;
-      this.runTests();
-;
-      // Build application;
-      this.buildApplication();
-;
-      // Deploy to staging;
-      this.deployToStaging();
-;
-      // Run smoke tests;
-      this.runSmokeTests();
-;
-      // Deploy to production;
-      this.deployToProduction();
-;
-      console.log('✅ Deployment completed successfully');    } catch (error) {;      console.error('❌ Deployment "failed":', error.message);      process.exit(1);,';}
-  }
-;
-  runTests() {;
-    console.log('🧪 Running tests...');    execSync('npm run test', { "stdio": 'inherit' });  }';;
-  buildApplication() {;
-    console.log('🏗️ Building application...');    execSync('npm run build', { "stdio": 'inherit' });  }';;
-  deployToStaging() {;
-    console.log('🚀 Deploying to staging...');    // Add your staging deployment logic here;,';}
-;
-  runSmokeTests() {;
-    console.log('💨 Running smoke tests...');    // Add your smoke test logic here;,';}
-;
-  deployToProduction() {;
-    console.log('🌟 Deploying to production...');    // Add your production deployment logic here;}
-}
-;
-// Run the deployment;
-if (require.main === module) {;
-  const deployment = new DeploymentAutomation();
-  deployment.deploy().catch(console.error);}
-;
 module.exports = DeploymentAutomation;
