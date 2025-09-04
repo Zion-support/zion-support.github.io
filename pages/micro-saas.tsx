@@ -298,6 +298,141 @@ const microSaaSProducts = [
     popular: true
   },
   {
+    title: 'AI-Powered Legal Document Analyzer',
+    description: 'Automated legal document analysis, contract review, and compliance checking using advanced NLP.',
+    icon: FileText,
+    features: ['Contract Analysis', 'Risk Assessment', 'Compliance Checking', 'Clause Extraction'],
+    pricing: '$399 - $2,499/month',
+    category: 'Legal Tech',
+    popular: true
+  },
+  {
+    title: 'Smart Energy Management System',
+    description: 'IoT-based energy monitoring and optimization for buildings and industrial facilities.',
+    icon: Zap,
+    features: ['Real-time Monitoring', 'Energy Optimization', 'Cost Analysis', 'Predictive Maintenance'],
+    pricing: '$299 - $1,999/month',
+    category: 'Energy Management',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Medical Diagnosis Assistant',
+    description: 'Advanced medical imaging analysis and diagnostic support for healthcare professionals.',
+    icon: Heart,
+    features: ['Medical Imaging Analysis', 'Symptom Analysis', 'Diagnostic Support', 'Treatment Recommendations'],
+    pricing: '$999 - $4,999/month',
+    category: 'Healthcare AI',
+    popular: true
+  },
+  {
+    title: 'Intelligent Recruitment Platform',
+    description: 'AI-powered candidate screening, matching, and interview scheduling for HR teams.',
+    icon: Users,
+    features: ['Resume Screening', 'Skill Matching', 'Interview Scheduling', 'Candidate Scoring'],
+    pricing: '$199 - $1,299/month',
+    category: 'HR Tech',
+    popular: true
+  },
+  {
+    title: 'Blockchain Identity Verification',
+    description: 'Decentralized identity verification and KYC compliance for financial services.',
+    icon: Shield,
+    features: ['Identity Verification', 'KYC Compliance', 'Document Validation', 'Fraud Prevention'],
+    pricing: '$299 - $1,999/month',
+    category: 'Blockchain',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Investment Portfolio Manager',
+    description: 'Automated investment portfolio management with risk assessment and rebalancing.',
+    icon: TrendingUp,
+    features: ['Portfolio Optimization', 'Risk Assessment', 'Auto Rebalancing', 'Performance Analytics'],
+    pricing: '$199 - $1,499/month',
+    category: 'FinTech',
+    popular: true
+  },
+  {
+    title: 'Smart Home Automation Hub',
+    description: 'Centralized smart home control with AI-powered automation and energy optimization.',
+    icon: Home,
+    features: ['Device Control', 'Automation Rules', 'Energy Optimization', 'Voice Commands'],
+    pricing: '$49 - $299/month',
+    category: 'Smart Home',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Language Learning Platform',
+    description: 'Personalized language learning with speech recognition and adaptive curriculum.',
+    icon: BookOpen,
+    features: ['Adaptive Learning', 'Speech Recognition', 'Progress Tracking', 'Native Speaker Practice'],
+    pricing: '$19 - $99/month',
+    category: 'EdTech',
+    popular: true
+  },
+  {
+    title: 'Intelligent Waste Management System',
+    description: 'IoT-based waste monitoring and optimization for cities and businesses.',
+    icon: Package,
+    features: ['Waste Monitoring', 'Route Optimization', 'Collection Scheduling', 'Environmental Impact'],
+    pricing: '$199 - $1,299/month',
+    category: 'Environmental Tech',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Mental Health Assistant',
+    description: '24/7 mental health support with mood tracking and crisis intervention capabilities.',
+    icon: Heart,
+    features: ['Mood Tracking', 'Crisis Detection', 'Therapy Recommendations', 'Progress Monitoring'],
+    pricing: '$29 - $199/month',
+    category: 'HealthTech',
+    popular: true
+  },
+  {
+    title: 'Smart Agriculture Monitoring System',
+    description: 'IoT sensors and AI for crop monitoring, irrigation optimization, and yield prediction.',
+    icon: Sprout,
+    features: ['Crop Monitoring', 'Irrigation Control', 'Yield Prediction', 'Weather Integration'],
+    pricing: '$199 - $1,499/month',
+    category: 'AgriTech',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Cybersecurity Threat Hunter',
+    description: 'Advanced threat detection and response system with behavioral analysis and automated remediation.',
+    icon: Shield,
+    features: ['Threat Detection', 'Behavioral Analysis', 'Automated Response', 'Incident Investigation'],
+    pricing: '$599 - $3,999/month',
+    category: 'Cybersecurity',
+    popular: true
+  },
+  {
+    title: 'Intelligent Document Processing Platform',
+    description: 'Automated document extraction, classification, and data entry for business processes.',
+    icon: FileText,
+    features: ['Document Extraction', 'Data Classification', 'Automated Entry', 'Quality Validation'],
+    pricing: '$299 - $1,999/month',
+    category: 'Document Processing',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Personal Finance Coach',
+    description: 'Personalized financial planning and budgeting with spending analysis and goal tracking.',
+    icon: DollarSign,
+    features: ['Spending Analysis', 'Budget Planning', 'Goal Tracking', 'Investment Advice'],
+    pricing: '$9 - $49/month',
+    category: 'Personal Finance',
+    popular: true
+  },
+  {
+    title: 'Smart Manufacturing Quality Control',
+    description: 'AI-powered quality inspection and defect detection for manufacturing processes.',
+    icon: Settings,
+    features: ['Defect Detection', 'Quality Metrics', 'Process Optimization', 'Predictive Maintenance'],
+    pricing: '$499 - $2,999/month',
+    category: 'Manufacturing',
+    popular: true
+  },
+  {
     title: 'Real-Time Language Translation API',
     description: 'Advanced translation service with context awareness and industry-specific terminology.',
     icon: Globe,
