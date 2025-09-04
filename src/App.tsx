@@ -4,7 +4,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import Layout from './components/layout/Layout';
 import HomePage from './pages/HomePage';
 import ErrorBoundary from './utils/errorBoundary';
-import './App.css';
+import './index.css';
 import ServicesPage from './components/ServicesPage';
 
 function App() {

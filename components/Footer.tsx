@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import {
   Mail,
   Phone,
@@ -11,7 +11,7 @@ import {
   ArrowUp,
 } from 'lucide-react';
 
-const Footer: Reac t.FC = () => {
+const Footer: React.FC = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -22,9 +22,9 @@ const Footer: Reac t.FC = () => {
     <footer className="bg-black border-t border-white/10">
       <div className="container mx-auto px-4">
         {/* Main Footer Content */}
-        <div className="py-16 grid md: gri d-cols-2 lg: gri d-cols-4 gap-8">
+        <div className="py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div className="lg: co l-span-1">
+          <div className="lg:col-span-1">
             <Link href="/" className="flex items-center space-x-2 mb-6">
               <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">Z</span>
@@ -40,7 +40,7 @@ const Footer: Reac t.FC = () => {
                 href="https://linkedin.com/company/ziontechgroup"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-gray-400 hover: tex t-white hover: b g-blue-600 transition-all duration-300"
+                className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-blue-600 transition-all duration-300"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-5 h-5"  />
@@ -49,7 +49,7 @@ const Footer: Reac t.FC = () => {
                 href="https://twitter.com/ziontechgroup"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-gray-400 hover: tex t-white hover: b g-blue-400 transition-all duration-300"
+                className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-blue-400 transition-all duration-300"
                 aria-label="Twitter"
               >
                 <Twitter className="w-5 h-5"  />
@@ -58,7 +58,7 @@ const Footer: Reac t.FC = () => {
                 href="https://github.com/ziontechgroup"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-gray-400 hover: tex t-white hover: b g-gray-600 transition-all duration-300"
+                className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-gray-600 transition-all duration-300"
                 aria-label="GitHub"
               >
                 <Github className="w-5 h-5"  />
@@ -67,7 +67,7 @@ const Footer: Reac t.FC = () => {
                 href="https://facebook.com/ziontechgroup"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-gray-400 hover: tex t-white hover: b g-blue-600 transition-all duration-300"
+                className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-blue-600 transition-all duration-300"
                 aria-label="Facebook"
               >
                 <Facebook className="w-5 h-5"  />
@@ -80,27 +80,27 @@ const Footer: Reac t.FC = () => {
             <h3 className="text-white font-bold text-lg mb-6">Services</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/ai-services" className="text-gray-400 hover: tex t-white transition-colors duration-200">
+                <Link to="/ai-services" className="text-gray-400 hover:text-white transition-colors duration-200">
                   AI Services
                 </Link>
               </li>
               <li>
-                <Link href="/it-services" className="text-gray-400 hover: tex t-white transition-colors duration-200">
+                <Link to="/it-services" className="text-gray-400 hover:text-white transition-colors duration-200">
                   IT Services
                 </Link>
               </li>
               <li>
-                <Link href="/micro-saas" className="text-gray-400 hover: tex t-white transition-colors duration-200">
+                <Link to="/micro-saas" className="text-gray-400 hover:text-white transition-colors duration-200">
                   Micro SaaS
                 </Link>
               </li>
               <li>
-                <Link href="/services/cloud-services" className="text-gray-400 hover: tex t-white transition-colors duration-200">
+                <Link to="/services/cloud-services" className="text-gray-400 hover:text-white transition-colors duration-200">
                   Cloud Services
                 </Link>
               </li>
               <li>
-                <Link href="/services/cybersecurity" className="text-gray-400 hover: tex t-white transition-colors duration-200">
+                <Link to="/services/cybersecurity" className="text-gray-400 hover:text-white transition-colors duration-200">
                   Cybersecurity
                 </Link>
               </li>
@@ -112,27 +112,27 @@ const Footer: Reac t.FC = () => {
             <h3 className="text-white font-bold text-lg mb-6">Company</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/about" className="text-gray-400 hover: tex t-white transition-colors duration-200">
+                <Link to="/about" className="text-gray-400 hover:text-white transition-colors duration-200">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/careers" className="text-gray-400 hover: tex t-white transition-colors duration-200">
+                <Link to="/careers" className="text-gray-400 hover:text-white transition-colors duration-200">
                   Careers
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-gray-400 hover: tex t-white transition-colors duration-200">
+                <Link to="/blog" className="text-gray-400 hover:text-white transition-colors duration-200">
                   Blog
                 </Link>
               </li>
               <li>
-                <Link href="/pricing" className="text-gray-400 hover: tex t-white transition-colors duration-200">
+                <Link to="/pricing" className="text-gray-400 hover:text-white transition-colors duration-200">
                   Pricing
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-gray-400 hover: tex t-white transition-colors duration-200">
+                <Link to="/contact" className="text-gray-400 hover:text-white transition-colors duration-200">
                   Contact
                 </Link>
               </li>
@@ -144,27 +144,27 @@ const Footer: Reac t.FC = () => {
             <h3 className="text-white font-bold text-lg mb-6">Resources</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/docs" className="text-gray-400 hover: tex t-white transition-colors duration-200">
+                <Link to="/docs" className="text-gray-400 hover:text-white transition-colors duration-200">
                   Documentation
                 </Link>
               </li>
               <li>
-                <Link href="/support" className="text-gray-400 hover: tex t-white transition-colors duration-200">
+                <Link to="/support" className="text-gray-400 hover:text-white transition-colors duration-200">
                   Support
                 </Link>
               </li>
               <li>
-                <Link href="/solutions" className="text-gray-400 hover: tex t-white transition-colors duration-200">
+                <Link to="/solutions" className="text-gray-400 hover:text-white transition-colors duration-200">
                   Solutions
                 </Link>
               </li>
               <li>
-                <Link href="/privacy" className="text-gray-400 hover: tex t-white transition-colors duration-200">
+                <Link to="/privacy" className="text-gray-400 hover:text-white transition-colors duration-200">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="/terms" className="text-gray-400 hover: tex t-white transition-colors duration-200">
+                <Link to="/terms" className="text-gray-400 hover:text-white transition-colors duration-200">
                   Terms of Service
                 </Link>
               </li>
@@ -176,25 +176,25 @@ const Footer: Reac t.FC = () => {
             <h3 className="text-white font-bold text-lg mb-6">Contact</h3>
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
-                <Mail className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0"  />
+                <Mail className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-gray-400">Email</p>
-                  <a href="mailto: klebe r@ziontechgroup.com" className="text-white hover: tex t-blue-400 transition-colors duration-200">
+                  <a href="mailto:kleber@ziontechgroup.com" className="text-white hover:text-blue-400 transition-colors duration-200">
                     kleber@ziontechgroup.com
                   </a>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
-                <Phone className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0"  />
+                <Phone className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-gray-400">Phone</p>
-                  <a href="tel:+13024640950" className="text-white hover: tex t-blue-400 transition-colors duration-200">
+                  <a href="tel:+13024640950" className="text-white hover:text-blue-400 transition-colors duration-200">
                     +1 302 464 0950
                   </a>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0"  />
+                <MapPin className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-gray-400">Address</p>
                   <p className="text-white">
@@ -209,16 +209,16 @@ const Footer: Reac t.FC = () => {
         </div>
 
         {/* Bottom Footer */}
-        <div className="py-6 border-t border-white/10 flex flex-col md: fle x-row justify-between items-center">
-          <div className="text-gray-400 text-sm mb-4 md: m b-0">© {currentYear} Zion Tech Group. All rights reserved.</div>
+        <div className="py-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center">
+          <div className="text-gray-400 text-sm mb-4 md:mb-0">© {currentYear} Zion Tech Group. All rights reserved.</div>
           <div className="flex space-x-6 text-sm">
-            <Link href="/privacy" className="text-gray-400 hover: tex t-white transition-colors duration-200">
+            <Link to="/privacy" className="text-gray-400 hover:text-white transition-colors duration-200">
               Privacy Policy
             </Link>
-            <Link href="/terms" className="text-gray-400 hover: tex t-white transition-colors duration-200">
+            <Link to="/terms" className="text-gray-400 hover:text-white transition-colors duration-200">
               Terms of Service
             </Link>
-            <Link href="/cookies" className="text-gray-400 hover: tex t-white transition-colors duration-200">
+            <Link to="/cookies" className="text-gray-400 hover:text-white transition-colors duration-200">
               Cookie Policy
             </Link>
           </div>
@@ -228,10 +228,10 @@ const Footer: Reac t.FC = () => {
       {/* Scroll to Top Button */}
       <button
         onClick={scrollToTop}
-        className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full shadow-lg hover: shado w-xl transition-all duration-300 hover: scal e-110 flex items-center justify-center z-50"
+        className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 flex items-center justify-center z-50"
         aria-label="Scroll to top"
       >
-        <ArrowUp className="w-6 h-6"  />
+        <ArrowUp className="w-6 h-6" />
       </button>
     </footer>
   );

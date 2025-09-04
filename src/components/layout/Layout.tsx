@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 interface LayoutProps {
-  children: Reac t.ReactNode;
+  children: React.ReactNode;
 }
 
-const Layout: Reac t.FC<LayoutProps> = ({ children }) => {
+const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -38,7 +38,7 @@ const Layout: Reac t.FC<LayoutProps> = ({ children }) => {
           </a>
           
           {/* Desktop Navigation */}
-          <nav className="hidden md: flex header-nav-links" role="navigation" aria-label="Main navigation">
+          <nav className="hidden md:flex header-nav-links" role="navigation" aria-label="Main navigation">
             <a href="/services" className="header-nav-link" aria-label="Our Services">
               Services
             </a>
@@ -55,7 +55,7 @@ const Layout: Reac t.FC<LayoutProps> = ({ children }) => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md: hidden sidebar-toggle-button"
+            className="md:hidden sidebar-toggle-button"
             onClick={toggleMenu}
             aria-label="Toggle navigation menu"
             aria-expanded={isMenuOpen}
@@ -67,7 +67,7 @@ const Layout: Reac t.FC<LayoutProps> = ({ children }) => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <nav 
-            className="md: hidden bg-slate-800 border-t border-slate-700 px-4 py-4"
+            className="md:hidden bg-slate-800 border-t border-slate-700 px-4 py-4"
             role="navigation"
             aria-label="Mobile navigation"
           >
@@ -111,7 +111,7 @@ const Layout: Reac t.FC<LayoutProps> = ({ children }) => {
 
       <footer className="bg-slate-900 text-white py-12" role="contentinfo">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="grid md: gri d-cols-4 gap-8 mb-8">
+          <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
               <p className="text-gray-300 text-sm">
@@ -121,25 +121,25 @@ const Layout: Reac t.FC<LayoutProps> = ({ children }) => {
             <div>
               <h4 className="font-semibold mb-4">Services</h4>
               <ul className="space-y-2 text-sm text-gray-300">
-                <li><a href="/ai-services" className="hover: tex t-white transition-colors">AI Services</a></li>
-                <li><a href="/it-services" className="hover: tex t-white transition-colors">IT Services</a></li>
-                <li><a href="/cloud-services" className="hover: tex t-white transition-colors">Cloud Services</a></li>
+                <li><a href="/ai-services" className="hover:text-white transition-colors">AI Services</a></li>
+                <li><a href="/it-services" className="hover:text-white transition-colors">IT Services</a></li>
+                <li><a href="/services/cloud-services" className="hover:text-white transition-colors">Cloud Services</a></li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Company</h4>
               <ul className="space-y-2 text-sm text-gray-300">
-                <li><a href="/about" className="hover: tex t-white transition-colors">About Us</a></li>
-                <li><a href="/careers" className="hover: tex t-white transition-colors">Careers</a></li>
-                <li><a href="/contact" className="hover: tex t-white transition-colors">Contact</a></li>
+                <li><a href="/about" className="hover:text-white transition-colors">About Us</a></li>
+                <li><a href="/careers" className="hover:text-white transition-colors">Careers</a></li>
+                <li><a href="/contact" className="hover:text-white transition-colors">Contact</a></li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Connect</h4>
               <ul className="space-y-2 text-sm text-gray-300">
-                <li><a href="https://linkedin.com/company/zion-tech-group" className="hover: tex t-white transition-colors">LinkedIn</a></li>
-                <li><a href="https://twitter.com/ziontechgroup" className="hover: tex t-white transition-colors">Twitter</a></li>
-                <li><a href="mailto: inf o@ziontechgroup.com" className="hover: tex t-white transition-colors">Email</a></li>
+                <li><a href="https://linkedin.com/company/ziontechgroup" className="hover:text-white transition-colors">LinkedIn</a></li>
+                <li><a href="https://twitter.com/ziontechgroup" className="hover:text-white transition-colors">Twitter</a></li>
+                <li><a href="mailto:kleber@ziontechgroup.com" className="hover:text-white transition-colors">Email</a></li>
               </ul>
             </div>
           </div>

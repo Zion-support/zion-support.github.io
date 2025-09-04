@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Shield, 
-Zap, 
+import {
+  Brain,
+  Shield,
+  Zap,
   BarChart3,
   Rocket,
   Lock,
   Cpu,
   Users,
   Server,
-  Globe
+  Globe,
+  Cloud
 } from 'lucide-react';
 
-export default function ServicesPage
-export { ServicesPage }() {
+export default function ServicesPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -22,7 +22,7 @@ export { ServicesPage }() {
     {
       id: 'ai-services',
       title: 'AI & Machine Learning',
-      icon: Brai n,
+      icon: Brain,
       description: 'Cutting-edge artificial intelligence solutions for modern businesses',
       color: 'from-purple-500 to-pink-500',
       services: [
@@ -49,7 +49,7 @@ export { ServicesPage }() {
     {
       id: 'cybersecurity',
       title: 'Cybersecurity',
-      icon: Shiel d,
+      icon: Shield,
       description: 'Comprehensive security solutions to protect your digital assets',
       color: 'from-red-500 to-orange-500',
       services: [
@@ -76,7 +76,7 @@ export { ServicesPage }() {
     {
       id: 'cloud-services',
       title: 'Cloud Infrastructure',
-      icon: Clou d,
+      icon: Cloud,
       description: 'Scalable cloud solutions for growing businesses',
       color: 'from-blue-500 to-cyan-500',
       services: [
@@ -103,7 +103,7 @@ export { ServicesPage }() {
     {
       id: 'data-analytics',
       title: 'Data Analytics',
-      icon: BarChart 3,
+      icon: BarChart3,
       description: 'Transform raw data into actionable business intelligence',
       color: 'from-green-500 to-emerald-500',
       services: [
