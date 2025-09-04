@@ -68,12 +68,12 @@ function Header(): any {
             <Link href="/careers" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)'}} onClick={() => setMobileMenuOpen(false)}>Careers</Link>
             <Link href="/contact" style={{ 
               background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
-              color: 'white', 
-              padding: '12px 16px', 
-              textDecoration: 'none', 
-              borderRadius: 6, 
-              textAlign: 'center', 
-              fontWeight: 600, 
+              color: 'white',
+              padding: '12px 16px',
+              textDecoration: 'none',
+              borderRadius: 6,
+              textAlign: 'center',
+              fontWeight: 600,
               marginTop: 8
             }} onClick={() => setMobileMenuOpen(false)}>Contact</Link>
           </div>
@@ -156,7 +156,7 @@ function Footer(): any {
 
         {/* Company */}
         <div style={{ display: 'grid', gap: 12 }}>
-          <h3 style={{ fontWeight: 700, fontSize: '1.1rem'}}>Company</h3>
+          <h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>Company</h3>
           <div style={{ display: 'grid', gap: 8 }}>
             <Link href="/" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Home</Link>
             <Link href="/about" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>About Us</Link>
@@ -173,8 +173,8 @@ function Footer(): any {
 
         {/* Contact CTA */}
         <div style={{ display: 'grid', gap: 12 }}>
-          <h3 style={{ fontWeight: 700, fontSize: '1.1rem'}}>Get Started</h3>
-          <p style={{ opacity: 0.8, fontSize: '0.9rem'}}>
+          <h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>Get Started</h3>
+          <p style={{ opacity: 0.8, fontSize: '0.9rem' }}>
             Ready to transform your business with our innovative solutions?
           </p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
