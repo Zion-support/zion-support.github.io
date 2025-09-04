@@ -378,6 +378,13 @@ export default function BlogPage() {
                     <Calendar className="w-4 h-4" />
                     <span>{formatDate(post.date)}</span>
                   </div>
+                  <Link
+                    to={`/blog/${post.id}`}
+                    className="text-cyan-400 hover:text-white transition-colors flex items-center gap-1 text-sm"
+                  >
+                    Read
+                    <ArrowRight className="w-3 h-3" />
+                  </Link>
                 </div>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-4 text-sm text-gray-500">
@@ -422,6 +429,7 @@ export default function BlogPage() {
               />
               <button className="px-6 py-3 bg-white text-blue-900 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                 Subscribe
+                <ArrowRight className="w-4 h-4" />
               </button>
             </div>
           </div>

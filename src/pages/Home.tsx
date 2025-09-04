@@ -37,7 +37,8 @@ const FuturisticBackground = React.memo(() => {
             repeat: Infinity,
             ease: "easeInOut"
           }}
-        />) ) }
+        />
+      ))}
 
       {/* Subtle gradient overlays */}
       <div  className="absolute inset - 0 bg-gradient - to - br from - transparent via - transparent to - cyan -900 / 10"></div>
@@ -86,13 +87,17 @@ const FloatingActionButton = React.memo(() => {
           <div  className="relative">
             {/* Expanded menu */}
             <AnimatePresence>
-              {isExpanded && (<motion.div
+              {isExpanded && (
+                <motion.div
+                  className="absolute bottom-16 right-0 space-y-3"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 20 }}
                   className="absolute bottom - 16 right - 0 space - y-2"
                 >
-                  <motion.button
+                  <motion.a
+                    href={`tel:${contactInfo.mobile}`}
+                    className="block w-12 h-12 bg-green-500 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     className="flex items - center justify - center w-12 h-12 bg-gradient - to - r from - blue - 600 to - purple - 600 text-white rounded-full shadow-lg hover:shadow-xl transition - all duration -200"
@@ -124,6 +129,8 @@ const FloatingActionButton = React.memo(() => {
 
             {/* Main FAB */}
             <motion.button
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="w-14 h-14 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               className="flex items - center justify - center w-14 h-14 bg-gradient - to - r from - purple - 600 to - pink - 600 text-white rounded-full shadow-lg hover:shadow-xl transition - all duration -200"
