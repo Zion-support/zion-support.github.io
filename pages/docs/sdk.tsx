@@ -15,10 +15,10 @@ export default function SDK() {
           <Link href="/docs" style={{ color: '#3b82f6', textDecoration: 'none', marginBottom: 20, display: 'inline-block' }}>
             ← Back to Documentation
           </Link>
-          <h1 style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: 16, background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+          <h1 style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: 16, background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
             SDK Documentation
           </h1>
-          <p style={{ fontSize: '1.1rem', opacity: 0.8, lineHeight: 1.6 }}>
+          <p style={{ fontSize: '1.125rem', opacity: 0.8, lineHeight: 1.6 }}>
             Official SDKs for integrating Zion Tech Group services into your applications. Choose your preferred language and get started quickly.
           </p>
         </div>
@@ -30,7 +30,7 @@ export default function SDK() {
             
             <div style={{ background: '#0f172a', padding: 20, borderRadius: 8, marginBottom: 20 }}>
               <h3 style={{ fontWeight: 600, marginBottom: 12, color: '#fbbf24' }}>Installation</h3>
-              <pre style={{ background: '#0f172a', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem' }}>
+              <pre style={{ background: '#000', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem' }}>
 {`npm install @ziontechgroup/sdk
 
 # or
@@ -40,7 +40,7 @@ yarn add @ziontechgroup/sdk`}
             
             <div style={{ background: '#0f172a', padding: 20, borderRadius: 8, marginBottom: 20 }}>
               <h3 style={{ fontWeight: 600, marginBottom: 12, color: '#fbbf24' }}>Basic Usage</h3>
-              <pre style={{ background: '#0f172a', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem' }}>
+              <pre style={{ background: '#000', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem' }}>
 {`import { ZionTechClient } from '@ziontechgroup/sdk';
 
 const client = new ZionTechClient({
@@ -107,7 +107,7 @@ try {
             
             <div style={{ background: '#0f172a', padding: 20, borderRadius: 8, marginBottom: 20 }}>
               <h3 style={{ fontWeight: 600, marginBottom: 12, color: '#10b981' }}>Installation</h3>
-              <pre style={{ background: '#0f172a', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem' }}>
+              <pre style={{ background: '#000', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem' }}>
 {`pip install ziontechgroup-sdk
 
 # or
@@ -117,7 +117,7 @@ pipenv install ziontechgroup-sdk`}
             
             <div style={{ background: '#0f172a', padding: 20, borderRadius: 8, marginBottom: 20 }}>
               <h3 style={{ fontWeight: 600, marginBottom: 12, color: '#10b981' }}>Basic Usage</h3>
-              <pre style={{ background: '#0f172a', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem' }}>
+              <pre style={{ background: '#000', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem' }}>
 {`from ziontechgroup import ZionTechClient
 
 client = ZionTechClient(
@@ -179,14 +179,14 @@ asyncio.run(main())`}
             
             <div style={{ background: '#0f172a', padding: 20, borderRadius: 8, marginBottom: 20 }}>
               <h3 style={{ fontWeight: 600, marginBottom: 12, color: '#8b5cf6' }}>Installation</h3>
-              <pre style={{ background: '#0f172a', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem' }}>
+              <pre style={{ background: '#000', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem' }}>
 {`composer require ziontechgroup/sdk`}
               </pre>
             </div>
             
             <div style={{ background: '#0f172a', padding: 20, borderRadius: 8, marginBottom: 20 }}>
               <h3 style={{ fontWeight: 600, marginBottom: 12, color: '#8b5cf6' }}>Basic Usage</h3>
-              <pre style={{ background: '#0f172a', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem' }}>
+              <pre style={{ background: '#000', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem' }}>
 {`<?php
 
 require_once 'vendor/autoload.php';
@@ -425,24 +425,24 @@ func main() {
             <p style={{ opacity: 0.8, marginBottom: 20 }}>Our team is here to help you get the most out of our SDKs.</p>
             <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
               <Link href="/contact" style={{ 
-                display: 'inline-block',
-                padding: '12px 24px',
-                background: '#3b82f6',
-                color: 'white',
-                textDecoration: 'none',
-                borderRadius: 8,
-                fontWeight: 600
+                display: 'inline-block', 
+                padding: '12px 24px', 
+                background: '#3b82f6', 
+                color: 'white', 
+                textDecoration: 'none', 
+                borderRadius: 8, 
+                fontWeight: 600 
               }}>
                 Contact Support
               </Link>
               <Link href="/docs/integration-examples" style={{ 
-                display: 'inline-block',
-                padding: '12px 24px',
-                background: '#6b7280',
-                color: 'white',
-                textDecoration: 'none',
-                borderRadius: 8,
-                fontWeight: 600
+                display: 'inline-block', 
+                padding: '12px 24px', 
+                background: '#6b7280', 
+                color: 'white', 
+                textDecoration: 'none', 
+                borderRadius: 8, 
+                fontWeight: 600 
               }}>
                 View Examples
               </Link>

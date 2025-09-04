@@ -123,7 +123,6 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                             key={child.name}
                             href={child.href}
                             className="block px-3 py-2 text-sm text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors"
-                            onClick={onClose}
                           >
                             {child.name}
                           </Link>
@@ -135,7 +134,6 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                   <Link
                     href={item.href}
                     className="flex items-center space-x-3 px-3 py-2 text-slate-300 hover:text-white hover:bg-slate-800 rounded-lg transition-colors"
-                    onClick={onClose}
                   >
                     <item.icon className="w-5 h-5" />
                     <span>{item.name}</span>
@@ -147,39 +145,18 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
 
           {/* Quick Links */}
           <div className="border-t border-slate-700 pt-6">
-            <h3 className="text-slate-400 text-sm font-semibold uppercase tracking-wider mb-4">
-              Quick Links
-            </h3>
-            <div className="grid grid-cols-2 gap-2">
+            <h3 className="text-slate-400 text-sm font-semibold mb-4">Quick Links</h3>
+            <div className="space-y-2">
               {quickLinks.map((link) => (
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="flex flex-col items-center p-3 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors"
-                  onClick={onClose}
+                  className="flex items-center space-x-3 px-3 py-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors"
                 >
-                  <link.icon className="w-5 h-5 mb-1" />
-                  <span className="text-xs text-center">{link.name}</span>
+                  <link.icon className="w-4 h-4" />
+                  <span className="text-sm">{link.name}</span>
                 </Link>
               ))}
-            </div>
-          </div>
-
-          {/* Contact Info */}
-          <div className="border-t border-slate-700 pt-6 mt-6">
-            <h3 className="text-slate-400 text-sm font-semibold uppercase tracking-wider mb-4">
-              Contact
-            </h3>
-            <div className="space-y-2 text-sm">
-              <div className="text-slate-300">
-                📞 <a href="tel:+13024640950" className="text-blue-400 hover:text-blue-300">+1 302 464 0950</a>
-              </div>
-              <div className="text-slate-300">
-                ✉️ <a href="mailto:kleber@ziontechgroup.com" className="text-blue-400 hover:text-blue-300">kleber@ziontechgroup.com</a>
-              </div>
-              <div className="text-slate-300">
-                📍 Middletown DE 19709
-              </div>
             </div>
           </div>
         </div>

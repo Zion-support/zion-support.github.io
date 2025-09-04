@@ -9,7 +9,7 @@ export default function CloudDevOps() {
     email: 'kleber@ziontechgroup.com',
     site: 'https://ziontechgroup.com'
   };
-
+  
   const services = [
     {
       icon: Cloud,

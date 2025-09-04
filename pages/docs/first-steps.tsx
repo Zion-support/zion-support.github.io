@@ -8,11 +8,11 @@ const contact = {
 };
 
 export default function FirstSteps() {
-  const contact = { 
-    phone: '+1 302 464 0950', 
-    email: 'kleber@ziontechgroup.com', 
-    address: '364 E Main St STE 1008 Middletown DE 19709', 
-    site: 'https://ziontechgroup.com' 
+  const contact = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    site: 'https://ziontechgroup.com',
   };
 
   return (
@@ -62,7 +62,6 @@ export default function FirstSteps() {
               <p className="text-gray-600 mb-6">
                 Before diving in, let's understand what you're looking to achieve. Our services span three main categories:
               </p>
-              
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="border border-gray-200 rounded-lg p-6">
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">Micro SaaS Solutions</h3>
@@ -87,7 +86,6 @@ export default function FirstSteps() {
                     Explore Micro SaaS <ArrowRight className="w-4 h-4 ml-1" />
                   </Link>
                 </div>
-                
                 <div className="border border-gray-200 rounded-lg p-6">
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">AI Services</h3>
                   <p className="text-gray-600 mb-4">
@@ -111,7 +109,6 @@ export default function FirstSteps() {
                     Explore AI Services <ArrowRight className="w-4 h-4 ml-1" />
                   </Link>
                 </div>
-                
                 <div className="border border-gray-200 rounded-lg p-6">
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">IT Services</h3>
                   <p className="text-gray-600 mb-4">
@@ -148,7 +145,6 @@ export default function FirstSteps() {
               <p className="text-gray-600 mb-6">
                 Browse our comprehensive services catalog to find the perfect solutions for your business needs.
               </p>
-              
               <div className="bg-gray-50 rounded-lg p-6 mb-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Popular Starting Points</h3>
                 <div className="grid md:grid-cols-2 gap-4">
@@ -190,7 +186,6 @@ export default function FirstSteps() {
                   </div>
                 </div>
               </div>
-              
               <Link href="/services-catalog" className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
                 <Book className="w-5 h-5 mr-2" />
                 Browse Full Catalog
@@ -207,7 +202,6 @@ export default function FirstSteps() {
               <p className="text-gray-600 mb-6">
                 Once you've identified the services you need, contact our team for a personalized quote and implementation plan.
               </p>
-              
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">What to Include in Your Request</h3>
@@ -252,7 +246,6 @@ export default function FirstSteps() {
                   </ul>
                 </div>
               </div>
-              
               <div className="mt-6 flex flex-col sm:flex-row gap-4">
                 <Link href="/contact" className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-center">
                   Request Quote
