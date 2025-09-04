@@ -8,6 +8,7 @@ const nextConfig = {
   typescript: { ignoreBuildErrors: true },
   trailingSlash: true,
   output: 'export',
+  trailingSlash: false,
   generateBuildId: async () => 'build-' + Date.now(),
   
   // Include all page types
