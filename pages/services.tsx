@@ -48,6 +48,31 @@ const microSaaS: Service[] = [,
     pricing: 'Typical: $199–$899/month',
     link: 'https://ziontechgroup.com/micro-saas'},
   {
+    name: 'E-Commerce Return Management SaaS',
+    summary: 'Automated return request processing, label generation, and status tracking for online retailers.',
+    pricing: 'Typical: $149–$999/month',
+    link: 'https://ziontechgroup.com/micro-saas'},
+  {
+    name: 'AI-Powered Email Marketing Automation',
+    summary: 'Intelligent email marketing with personalized content, optimal send times, and automated A/B testing.',
+    pricing: 'Typical: $1,500–$8,000/month',
+    link: 'https://ziontechgroup.com/ai-services'},
+  {
+    name: 'Edge Computing & IoT Solutions',
+    summary: 'Edge computing infrastructure and IoT device management for real-time data processing and analytics.',
+    pricing: 'Typical: $8,000–$50,000/project',
+    link: 'https://ziontechgroup.com/it-services'},
+  {
+    name: 'AI-Powered Healthcare Diagnostics',
+    summary: 'Medical image analysis and diagnostic assistance using advanced computer vision and machine learning.',
+    pricing: 'Typical: $10,000–$50,000/setup',
+    link: 'https://ziontechgroup.com/ai-services'},
+  {
+    name: 'High-Performance Computing (HPC)',
+    summary: 'High-performance computing solutions for scientific computing, simulations, and data processing.',
+    pricing: 'Typical: $20,000–$200,000/project',
+    link: 'https://ziontechgroup.com/it-services'},
+  {
     name: 'Lead Scoring & Qualification',
     summary: 'AI-powered lead scoring, qualification workflows, and CRM integration.',
     pricing: 'Typical: $299–$1,299/month',
