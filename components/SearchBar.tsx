@@ -89,8 +89,7 @@ export default function SearchBar() {
     setQuery('');
     setResults([]);
     setIsOpen(false);
-  };
-
+  }
   return (
     <div className="relative w-full max-w-md">
       <div className="relative">
