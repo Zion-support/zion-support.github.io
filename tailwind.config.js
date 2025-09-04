@@ -36,5 +36,9 @@ export default {
       },
     },
   },
-  plugins: [forms, typography, aspectRatio],
+  plugins: [
+    forms,
+    typography,
+    aspectRatio,
+  ],
 }
