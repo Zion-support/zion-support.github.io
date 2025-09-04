@@ -24,7 +24,6 @@
     "noEmit": true
   },
   "include": [
-<<<<<<< HEAD
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "src/**/*.ts",
@@ -43,22 +42,6 @@
     "src/**",
     "utils/next-link-shim.tsx",
     "playwright.config.ts",
-=======
-    "src/**/*",
-    "pages/**/*",
-    "components/**/*.ts",
-    "components/**/*.tsx",
-    "data/services.ts",
-    "styles/**/*",
-    "types/**/*",
-    "utils/**/*",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules",
->>>>>>> origin/merge-pr-11195
     "api-backup",
     "api-disabled",
     "api.disabled.temp",
@@ -77,7 +60,6 @@
     "data",
     "data/**",
     "cypress",
-<<<<<<< HEAD
     "temp_working",
     "supabase/functions",
     "**/*.backup",
@@ -101,19 +83,12 @@
     "src/routes/**",
     "src/services/**",
     "src/test/**",
-    "src/types/**"
-=======
-    "**/*.backup",
-    "**/*.disabled",
-    "temp_working",
-    "supabase/functions",
+    "src/types/**",
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
     "**/*.spec.tsx",
     ".next",
-    "out",
-    "dist"
->>>>>>> origin/merge-pr-11195
+    "out"
   ]
 }

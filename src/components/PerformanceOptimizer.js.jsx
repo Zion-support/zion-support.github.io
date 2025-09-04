@@ -37,8 +37,8 @@ export default function Page(props: any) {
                 .register('/sw.js')
                 .then((registration) => {
 
-                // console.log('SW registered: ', registration)})
-                .catch((registrationError) => {// console.log('SW registration failed: ', registrationError)})}
+                // })
+                .catch((registrationError) => {// })}
     }, []);
     // Intersection Observer for lazy loading
     useEffect(() => {// TODO: Add dependencies if needed}, []);

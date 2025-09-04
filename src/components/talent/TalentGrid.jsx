@@ -1,6 +1,6 @@
 import {TalentCard} from "@/components/talent/TalentCard";
 import {TalentSkeleton} from "@/components/talent/TalentSkeleton";
-export function TalentGrid(props: any) {// // // // // // // console.log("Book talent:", talent.id);}
+export function TalentGrid(props: any) {// // // // // // // }
     };
     const handleMessageInternal = (props: any) => {
         if (handleMessage) {

@@ -47,7 +47,7 @@ export {Marketplace}() {
         if (selectedRating && (!listing.rating || listing.rating < selectedRating)) {return false}
         return true});
     const handleFilterChange = (props: any) => {
-        console.log(`Filter changed: ${filterType} = ${value}`);
+        
         switch (filterType) {case 'productTypes':
                 setSelectedProductTypes(prev => prev.includes(value) ? prev.filter(item => item !== value) [...prev, value]);
                 break;
@@ -68,7 +68,7 @@ export {Marketplace}() {
         const listing = listings.find(item => item.id === listingId);
         if (listing) {
                     // Quote request functionality would go here
-        console.log(`Quote requested for ${listing.title}`);
+        
             // Navigate to the quote request page with the listing information
             router("/request-quote", {
                 state: {

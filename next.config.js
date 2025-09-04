@@ -1,56 +1,24 @@
 
 // Performance optimizations
 const nextConfig = {
-<<<<<<< HEAD
   reactStrictMode: true,
-=======
-<<<<<<< HEAD
-  reactStrictMode: false,
-=======
-  reactStrictMode: true,
-  swcMinify: true,
->>>>>>> origin/main
->>>>>>> origin/pr-11573
   compress: true,
   poweredByHeader: false,
-<<<<<<< HEAD
-  
-  // Enable proper error checking
   eslint: { 
     ignoreDuringBuilds: false,
     dirs: ['pages', 'src/components', 'src/lib', 'src/hooks']
-=======
-  eslint: { ignoreDuringBuilds: true },
-  typescript: { ignoreBuildErrors: true },
-  // Only treat *.route.tsx/ts as pages to avoid compiling corrupted files
-  // Compile only whitelisted page files to avoid corrupted files
-  pageExtensions: ['route.tsx', 'route.ts'],
-  images: {
-    domains: ["localhost", "ziontechgroup.com"],
->>>>>>> origin/merge-pr-10614
   },
   typescript: { 
     ignoreBuildErrors: true 
   },
-  
   trailingSlash: true,
   output: 'export',
   generateBuildId: async () => 'build-' + Date.now(),
-<<<<<<< HEAD
-
+  
   // Include all page types
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   
   // Image optimization
-=======
-<<<<<<< HEAD
-  // Ensure standard Next.js page extensions are recognized alongside any custom route files
-  pageExtensions: ['page.tsx', 'page.jsx'],
-=======
-  // Temporarily exclude default pages to allow build while we quarantine corrupted pages
-  pageExtensions: ['page.tsx'],
->>>>>>> origin/main
->>>>>>> origin/pr-11573
   images: {
     domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
     formats: ['image/webp', 'image/avif'],
@@ -117,53 +85,7 @@ const nextConfig = {
         permanent: true,
       },
     ];
-  },
-<<<<<<< HEAD
-=======
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin',
-          },
-        ],
-      },
-    ];
-  },
-  experimental: {
-    scrollRestoration: true
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          { key: 'X-Content-Type-Options', value: 'nosniff' },
-          { key: 'X-Frame-Options', value: 'DENY' },
-          { key: 'X-XSS-Protection', value: '1; mode=block' },
-          { key: 'Referrer-Policy', value: 'origin-when-cross-origin' }
-        ]
-      }
-    ];
   }
->>>>>>> origin/merge-pr-10614
 };
 
 export default nextConfig;

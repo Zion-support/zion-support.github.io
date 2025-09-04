@@ -1,58 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {
-  Brain,
-  Zap,
-  Shield,
-  Database,
-  BarChart3,
-  Users,
-  MessageSquare,
-  Search,
-  Eye,
-  Target,
-  TrendingUp,
-  CheckCircle,
-  ArrowRight,
-  Clock,
-  Award,
-  Star,
-  Globe,
-  Lock,
-  Cpu,
-  Bot,
-  FileText,
-  Image,
-  Video,
-  Mic,
-  Code,
-  Settings,
-  Monitor,
-  Smartphone,
-  Cloud,
-  Server,
-  Network,
-  Car,
-  Rocket,
-  Heart,
-  Building,
-  Sprout
-} from 'lucide-react';
-import PageTransition from '../src/components/PageTransition';
-
-=======
-import { ArrowRight, Award, BarChart3, Bot, Brain, Bug, CheckCircle, Clock, Code, Cpu, Cross, Deep, Eye, FileText, From, Globe, Grid, Image, Lightbulb, Mail, MessageSquare, Mic, Minimize, Monitor, Network, Phone, Search, Server, Settings, Shield, Star, Target, TrendingUp, Users, Video, Zap, Heart, Satellite, Car, TreePine } from 'lucide-react';
+import { ArrowRight, Award, BarChart3, Bot, Brain, Bug, CheckCircle, Clock, Code, Cpu, Cross, Deep, Eye, FileText, From, Globe, Grid, Image, Lightbulb, Mail, MessageSquare, Mic, Minimize, Monitor, Network, Phone, Search, Server, Settings, Shield, Star, Target, TrendingUp, Users, Video, Zap, Heart, Satellite, Car, TreePine, Atom, Building2, FlaskConical, Sprout } from 'lucide-react';
 import Navigation from '../src/components/Navigation';
 import Footer from '../src/components/Footer';
->>>>>>> origin/merge-pr-11140
-=======
-import { ArrowRight, Award, BarChart3, Bot, Brain, Bug, CheckCircle, Clock, Code, Cpu, Cross, Deep, Eye, FileText, From, Globe, Grid, Image, Mail, MessageSquare, Mic, Minimize, Monitor, Network, Phone, Search, Server, Settings, Shield, Star, Target, TrendingUp, Users, Video, Zap, Heart, Satellite, Car, TreePine, Atom, Building2, FlaskConical, Sprout } from 'lucide-react';
-import Navigation from '../src/components/Navigation';
-import Footer from '../src/components/Footer';
->>>>>>> origin/merge-pr-11190
 export default function AIServices() {
   const title = 'AI Services — Zion Tech Group';
   const description = 'Cutting-edge AI solutions including autonomous systems, machine learning, natural language processing, and intelligent automation.';
@@ -123,16 +74,13 @@ export default function AIServices() {
       description: 'Image and video analysis for quality control, security, and automation',
       icon: Eye,
       features: [
-<<<<<<< HEAD
         'Real-time object detection and recognition',
         'Quality control and defect detection',
         'Facial recognition and access control',
         'Video analytics and monitoring',
         'Custom model training and deployment'
-=======
-        'Real-time object detection and recognition,Quality control and defect detection,Facial recognition and access control,Video analytics and monitoring,Custom model training and deployment',
       ],
-      pricing: '$5,000 - $20, 000/month',
+      pricing: '$5,000 - $20,000/month',
       delivery: '6-8 weeks',
       category: 'Vision AI',
     },
@@ -914,7 +862,6 @@ export default function AIServices() {
       icon: Settings,
       features: [
         'Automated model training and deployment pipelines,Real-time model performance monitoring,A/B testing and model versioning,Automated retraining and drift detection,Model governance and compliance tracking,Integration with cloud platforms and data sources'
->>>>>>> origin/merge-pr-11141
       ],
       pricing: '$5,000 - $20,000/month',
       delivery: '6-8 weeks',
@@ -925,19 +872,16 @@ export default function AIServices() {
       description: 'Intelligent conversational AI for customer support and business automation',
       icon: Bot,
       features: [
-<<<<<<< HEAD
         'Natural language understanding',
         'Multi-channel deployment (web, mobile, voice)',
         'Integration with business systems',
         'Sentiment analysis and escalation',
         'Continuous learning and improvement'
-=======
-        'Natural language understanding,Multi-channel deployment (web, mobile, voice),Integration with business systems,Sentiment analysis and escalation,Continuous learning and improvement',
       ],
-      pricing: '$2,000 - $10, 000/month',
+      pricing: '$2,000 - $10,000/month',
       delivery: '2-4 weeks',
-      category: 'Conversational AI',;
-},
+      category: 'Conversational AI',
+    },
     {
       title: 'Predictive Analytics Platform',
       description:
@@ -948,7 +892,7 @@ export default function AIServices() {
       ],
       pricing: '$6,000 - $25, 000/month',
       delivery: '8-12 weeks',
-      category: 'Analytics AI',;
+      category: 'Analytics AI'
 },
     {
       title: 'AI-Powered Search Engine',
@@ -960,7 +904,7 @@ export default function AIServices() {
       ],
       pricing: '$3,500 - $12, 000/month',
       delivery: '4-6 weeks',
-      category: 'Search AI',;
+      category: 'Search AI'
 },
     {
       title: 'AI Voice & Speech Processing',
@@ -1836,7 +1780,6 @@ export default function AIServices() {
       icon: MessageSquare,
       features: [
         'Multi-language text analysis and sentiment detection,Automated document summarization and extraction,Real-time translation and language detection,Named entity recognition and relationship extraction,Custom model training for domain-specific applications,API integration for seamless deployment'
->>>>>>> origin/merge-pr-11140
       ],
       pricing: '$2,000 - $10,000/month',
       delivery: '2-4 weeks',
@@ -2015,15 +1958,18 @@ export default function AIServices() {
       pricing: '$5,000 - $18,000/month',
       delivery: '6-12 weeks',
       category: 'Market AI'
-<<<<<<< HEAD
-=======
-},
+    },
     {
       title: 'AI-Powered Autonomous Vehicles',
       description: 'Advanced AI systems for autonomous vehicle navigation and safety',
       icon: Car,
       features: [
-        'Real-time object detection and avoidance,Path planning and navigation algorithms,Traffic pattern recognition,Weather condition adaptation,Vehicle-to-vehicle communication,Autonomous parking and valet services',
+        'Real-time object detection and avoidance',
+        'Path planning and navigation algorithms',
+        'Traffic pattern recognition',
+        'Weather condition adaptation',
+        'Vehicle-to-vehicle communication',
+        'Autonomous parking and valet services'
       ],
       pricing: '$15,000 - $50,000/month',
       delivery: '16-24 weeks',
@@ -2193,7 +2139,6 @@ export default function AIServices() {
       pricing: '$18,000 - $60,000/month',
       delivery: '16-28 weeks',
       category: 'Synthetic Biology AI'
->>>>>>> origin/merge-pr-11190
     },
     {
       title: 'AI-Powered Autonomous Trading System',
@@ -2239,145 +2184,11 @@ export default function AIServices() {
         'Sustainability planning and recommendations',
         'Real-time environmental monitoring'
       ],
-<<<<<<< HEAD
       pricing: '$10,000 - $40,000/month',
       delivery: '12-18 weeks',
       category: 'Climate AI'
-    },
-    {
-      title: 'AI-Powered Autonomous Vehicle Systems',
-      description: 'Intelligent autonomous vehicle control and navigation systems',
-      icon: Car,
-      features: [
-        'Real-time object detection and avoidance',
-        'Path planning and navigation optimization',
-        'Traffic pattern analysis and prediction',
-        'Vehicle-to-vehicle communication',
-        'Safety monitoring and emergency response',
-        'Fleet management and optimization'
-      ],
-      pricing: '$50,000 - $200,000/month',
-      delivery: '20-32 weeks',
-      category: 'Autonomous Vehicle AI'
-    },
-    {
-      title: 'AI-Powered Quantum Computing Optimization',
-      description: 'Machine learning algorithms optimized for quantum computing environments',
-      icon: Cpu,
-      features: [
-        'Quantum algorithm optimization',
-        'Quantum error correction and mitigation',
-        'Quantum machine learning models',
-        'Hybrid classical-quantum computing',
-        'Quantum advantage analysis',
-        'Quantum circuit optimization'
-      ],
-      pricing: '$30,000 - $120,000/month',
-      delivery: '16-24 weeks',
-      category: 'Quantum AI'
-    },
-    {
-      title: 'AI-Powered Space Mission Planning',
-      description: 'Intelligent mission planning and optimization for space exploration',
-      icon: Rocket,
-      features: [
-        'Trajectory optimization and fuel efficiency',
-        'Mission risk assessment and mitigation',
-        'Resource allocation and scheduling',
-        'Satellite constellation management',
-        'Space debris tracking and avoidance',
-        'Mission success probability modeling'
-      ],
-      pricing: '$40,000 - $150,000/month',
-      delivery: '18-28 weeks',
-      category: 'Space AI'
-    },
-    {
-      title: 'AI-Powered Personalized Medicine',
-      description: 'Precision medicine platform with AI-driven treatment recommendations',
-      icon: Heart,
-      features: [
-        'Genomic analysis and interpretation',
-        'Personalized treatment recommendations',
-        'Drug interaction and side effect prediction',
-        'Clinical trial matching',
-        'Health outcome prediction',
-        'Integration with electronic health records'
-      ],
-      pricing: '$20,000 - $80,000/month',
-      delivery: '14-22 weeks',
-      category: 'Precision Medicine AI'
-    },
-    {
-      title: 'AI-Powered Cybersecurity Threat Hunting',
-      description: 'Advanced threat detection and response using machine learning and behavioral analysis',
-      icon: Shield,
-      features: [
-        'Real-time threat detection and analysis',
-        'Behavioral anomaly detection',
-        'Automated incident response',
-        'Threat intelligence integration',
-        'Zero-day vulnerability detection',
-        'Security orchestration and automation'
-      ],
-      pricing: '$12,000 - $45,000/month',
-      delivery: '10-16 weeks',
-      category: 'Cybersecurity AI'
-    },
-    {
-      title: 'AI-Powered Smart City Management',
-      description: 'Intelligent urban planning and management system for smart cities',
-      icon: Building,
-      features: [
-        'Traffic flow optimization and management',
-        'Energy consumption monitoring and optimization',
-        'Public safety and emergency response',
-        'Waste management optimization',
-        'Citizen service automation',
-        'Urban planning and development insights'
-      ],
-      pricing: '$25,000 - $100,000/month',
-      delivery: '16-24 weeks',
-      category: 'Smart City AI'
-    },
-    {
-      title: 'AI-Powered Agricultural Optimization',
-      description: 'Precision agriculture platform with crop monitoring and yield optimization',
-      icon: Sprout,
-      features: [
-        'Crop health monitoring and disease detection',
-        'Soil analysis and nutrient optimization',
-        'Weather prediction and irrigation management',
-        'Yield prediction and optimization',
-        'Pest and disease prevention',
-        'Supply chain and logistics optimization'
-      ],
-      pricing: '$8,000 - $30,000/month',
-      delivery: '12-18 weeks',
-      category: 'AgTech AI'
-    },
-    {
-      title: 'AI-Powered Mental Health Assistant',
-      description: 'Intelligent mental health monitoring and support platform',
-      icon: Heart,
-      features: [
-        'Emotional state monitoring and analysis',
-        'Personalized therapy recommendations',
-        'Crisis detection and intervention',
-        'Medication adherence tracking',
-        'Therapist matching and scheduling',
-        'Privacy-preserving data analysis'
-      ],
-      pricing: '$5,000 - $20,000/month',
-      delivery: '8-14 weeks',
-      category: 'Mental Health AI'
-    },
-    {
-      title: 'AI-Powered Autonomous Robotics',
-      description: 'Intelligent robotic systems with advanced AI capabilities for industrial and service applications',
-      icon: Settings,
-      features: [
-        'Autonomous navigation and path planning',
+    }
+  ];
         'Object recognition and manipulation',
         'Human-robot collaboration',
         'Predictive maintenance and self-diagnosis',
@@ -2758,15 +2569,6 @@ export default function AIServices() {
     }
   ];
 
-=======
-      pricing: '$8,000 - $35,000/month',
-      delivery: '8-16 weeks',
-      category: 'Environmental AI'}
-      category: 'Environmental AI'
-}
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
-  ]
->>>>>>> origin/merge-pr-11190
   const aiTechnologies = [
     { name: 'Machine Learning', icon: Brain, description: 'Custom ML models and algorithms' },
     { name: 'Natural Language Processing', icon: MessageSquare, description: 'Text analysis and generation' },

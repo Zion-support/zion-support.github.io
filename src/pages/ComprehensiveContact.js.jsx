@@ -18,7 +18,7 @@ export {ComprehensiveContact}() {
     });
     const handleSubmit = (props: any) => {e.preventDefault();
         // Handle form submission
-        console.log('Form submitted:', formData)};
+        };
     const handleChange = (props: any) => {
         setFormData({
             ...formData,

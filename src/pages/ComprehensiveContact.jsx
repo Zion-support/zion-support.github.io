@@ -20,9 +20,9 @@ export default function ComprehensiveContact(props: any) {}
     const handleSubmit = (props: any) => {}
         e.preventDefault();'
         // Handle form submission''
-        // // // // // // // // console.log('Form submitted:', formData);
+        // // // // // // // // 
     };'
-        // console.log('Form submitted:', formData)};
+        // };
     const handleChange = (props: any) => {}
         setFormData({}
             ...formData,
