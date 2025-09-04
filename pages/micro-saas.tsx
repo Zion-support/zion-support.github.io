@@ -1562,8 +1562,6 @@ export default function MicroSaaS() {
   ];
 
   const categories = [...new Set(microSaaSServices.map(service => service.category))];
-
-export default function MicroSaaS() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Head>
@@ -1646,7 +1644,10 @@ export default function MicroSaaS() {
                   </div>
                 </div>
               </div>
-=======
+            </div>
+          ))}
+        </div>
+
         <div className="grid md:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-lg p-8">
             <div className="flex items-center mb-6">
