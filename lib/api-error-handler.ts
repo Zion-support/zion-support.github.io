@@ -16,8 +16,7 @@ class ApiErrorHandler {
     maxRetries: 3,
     baseDelay: 1000,
     maxDelay: 10000
-  };
-
+  }
   static getInstance(): ApiErrorHandler {
     if (!ApiErrorHandler.instance) {
       ApiErrorHandler.instance = new ApiErrorHandler();
@@ -29,7 +28,7 @@ class ApiErrorHandler {
     requestFn: () => Promise<T>,
     retryConfig?: Partial<RetryConfig>
   ): Promise<T> {
-    const config = { ...this.retryConfig, ...retryConfig };
+    const config = { ...this.retryConfig, ...retryConfig }
     let lastError: ApiError;
 
     for (let attempt = 0; attempt <= config.maxRetries; attempt++) {
@@ -51,7 +50,6 @@ class ApiErrorHandler {
         } else {
           break;
         }
-      }
     }
 
     throw this.formatError(lastError!);
@@ -73,8 +71,7 @@ class ApiErrorHandler {
       status: error.status,
       code: error.code,
       details: error.details
-    };
-
+    }
     // Log error for monitoring
     console.error('API Error:', formattedError);
 
@@ -99,11 +96,7 @@ class ApiErrorHandler {
         default:
           return `Request failed with status ${error.status}`;
       }
-    }
-
     return error.message || 'An unexpected error occurred';
   }
-}
-
 export const apiErrorHandler = ApiErrorHandler.getInstance();
-export type { ApiError, RetryConfig };
+export type { ApiError, RetryConfig }

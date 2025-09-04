@@ -50,8 +50,6 @@ class DatabaseManager {
       console.error('❌ Database connection failed:', error);
       throw error;
     }
-  }
-
   async disconnect(): Promise<void> {
     if (this.client) {
       await this.client.close();
@@ -59,8 +57,6 @@ class DatabaseManager {
       this.db = null;
       console.log('✅ Database disconnected');
     }
-  }
-
   getDatabase(): Db {
     if (!this.db) {
       throw new Error('Database not connected. Call connect() first.');
@@ -82,7 +78,6 @@ class DatabaseManager {
     } catch {
       return false;
     }
-  }
 }
 
 // Initialize database with environment variables
@@ -92,7 +87,6 @@ const dbConfig: DatabaseConfig = {
   maxPoolSize: parseInt(process.env.MONGODB_MAX_POOL_SIZE || '10'),
   minPoolSize: parseInt(process.env.MONGODB_MIN_POOL_SIZE || '2'),
   maxIdleTimeMS: parseInt(process.env.MONGODB_MAX_IDLE_TIME_MS || '30000')
-};
-
+}
 export const dbManager = DatabaseManager.getInstance(dbConfig);
 export default DatabaseManager;

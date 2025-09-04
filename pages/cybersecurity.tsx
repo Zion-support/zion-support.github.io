@@ -4,20 +4,48 @@ import Link from 'next/link';
 import { Shield, Lock, Eye, AlertTriangle, Users, Database } from 'lucide-react';
 
 export default function Cybersecurity() {
-  const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', site: 'https://ziontechgroup.com'
+  const contact = {
+    phone: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+    site: 'https://ziontechgroup.com'
   }
   const services = [
-    { icon: Shield, title: 'Security Assessment & Auditing', description: 'Comprehensive security evaluations to identify vulnerabilities and compliance gaps.', features: ['Penetration testing', 'Vulnerability scanning', 'Compliance audits', 'Risk assessments']
+    {
+      icon: Shield,
+      title: 'Security Assessment & Auditing'
+      description: 'Comprehensive security evaluations to identify vulnerabilities and compliance gaps.'
+      features: ['Penetration testing' 'Vulnerability scanning' 'Compliance audits' 'Risk assessments']
     },
-    { icon: Lock, title: 'Identity & Access Management', description: 'Robust IAM solutions to control user access and protect sensitive data.', features: ['Multi-factor authentication', 'Single sign-on', 'Role-based access', 'Privileged access management']
+    {
+      icon: Lock,
+      title: 'Identity & Access Management'
+      description: 'Robust IAM solutions to control user access and protect sensitive data.'
+      features: ['Multi-factor authentication' 'Single sign-on' 'Role-based access' 'Privileged access management']
     },
-    { icon: Eye, title: 'Security Monitoring & SIEM', description: '24/7 security monitoring with advanced threat detection and incident response.', features: ['Real-time monitoring', 'Threat intelligence', 'Incident response', 'Forensic analysis']
+    {
+      icon: Eye,
+      title: 'Security Monitoring & SIEM'
+      description: '24/7 security monitoring with advanced threat detection and incident response.'
+      features: ['Real-time monitoring' 'Threat intelligence' 'Incident response' 'Forensic analysis']
     },
-    { icon: AlertTriangle, title: 'Threat Detection & Response', description: 'Advanced threat hunting and automated response to security incidents.', features: ['Behavioral analytics', 'AI-powered detection', 'Automated response', 'Threat hunting']
+    {
+      icon: AlertTriangle,
+      title: 'Threat Detection & Response'
+      description: 'Advanced threat hunting and automated response to security incidents.'
+      features: ['Behavioral analytics' 'AI-powered detection' 'Automated response' 'Threat hunting']
     },
-    { icon: Users, title: 'Security Training & Awareness', description: 'Comprehensive security education programs to build a security-conscious culture.', features: ['Phishing simulations', 'Security workshops', 'Compliance training', 'Awareness campaigns']
+    {
+      icon: Users,
+      title: 'Security Training & Awareness'
+      description: 'Comprehensive security education programs to build a security-conscious culture.'
+      features: ['Phishing simulations' 'Security workshops' 'Compliance training' 'Awareness campaigns']
     },
-    { icon: Database, title: 'Data Protection & Encryption', description: 'End-to-end data protection with advanced encryption and backup solutions.', features: ['Data encryption', 'Backup solutions', 'Data loss prevention', 'Privacy compliance']
+    {
+      icon: Database,
+      title: 'Data Protection & Encryption'
+      description: 'End-to-end data protection with advanced encryption and backup solutions.'
+      features: ['Data encryption' 'Backup solutions' 'Data loss prevention' 'Privacy compliance']
     }
   ];
 

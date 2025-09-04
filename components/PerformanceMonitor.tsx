@@ -1,4 +1,11 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
+
+// Declare PerformanceObserver for TypeScript
+declare global {
+  interface Window {
+    PerformanceObserver: typeof PerformanceObserver;
+  }
+}
 
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
@@ -8,7 +15,7 @@ const PerformanceMonitor: React.FC = () => {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
-            console.log('LCP:', entry.startTime);
+console.log('LCP:', entry.startTime);
           }
         }
       });
@@ -42,8 +49,7 @@ const PerformanceMonitor: React.FC = () => {
             clsValue += (entry as any).value;
           }
         }
-        console.log('CLS:', clsValue);
-      });
+        });
 
       try {
         clsObserver.observe({ entryTypes: ['layout-shift'] });

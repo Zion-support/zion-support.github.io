@@ -3,8 +3,12 @@ import Link from 'next/link';
 import ContactForm from '../components/ContactForm';
 import type { JSX } from 'react';
 
-export default function Contact() {
-  const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', site: 'https://ziontechgroup.com'
+export default function Contact(): JSX.Element {
+  const contact = {
+    phone: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+    site: 'https://ziontechgroup.com'
   }
   return (
     <>

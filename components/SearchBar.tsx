@@ -65,7 +65,7 @@ export default function SearchBar() {
   const inputRef = useRef<HTMLInputElement>(null);
   const searchRef = useRef<HTMLDivElement>(null);
 
-  const handleSearch = useCallback((searchQuery: string) => {
+const handleSearch = useCallback((searchQuery: string) => {
     if (searchQuery.length < 2) {
       setResults([]);
       return;
@@ -82,14 +82,12 @@ export default function SearchBar() {
     const value = e.target.value;
     setQuery(value);
     handleSearch(value);
-  };
-
+};
   const handleResultClick = () => {
     setQuery('');
     setResults([]);
     setIsOpen(false);
-  };
-
+  }
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Escape') {
       setIsOpen(false);
@@ -102,7 +100,6 @@ export default function SearchBar() {
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
         setIsOpen(false);
       }
-    };
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);

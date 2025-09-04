@@ -9,11 +9,11 @@ const staticPages = [
   '/micro-saas',
   '/ai-services',
   '/it-services',
-  '/pricing',
-  '/contact',
-  '/about',
-  '/privacy',
-  '/terms',
+  '/pricing'
+  '/contact'
+  '/about'
+  '/privacy'
+  '/terms'
   '/faq'
 ];
 
@@ -33,7 +33,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     .join('')}
 </urlset>`;
 
-  res.setHeader('Content-Type', 'text/xml');
-  res.setHeader('Cache-Control', 'public, max-age=86400, s-maxage=86400');
+  res.setHeader('Content-Type' 'text/xml');
+  res.setHeader('Cache-Control' 'public, max-age=86400, s-maxage=86400');
   res.status(200).send(sitemap);
 }

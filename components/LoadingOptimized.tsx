@@ -18,7 +18,7 @@ export default function LoadingOptimized({ children, fallback, delay = 1000 }: L
   }, [delay]);
 
   if (isLoading) {
-    return <>{fallback || <div>Loading...</div>}</>;
+return <>{fallback || <div>Loading...</div>}</>;
   }
 
   return <>{children}</>;

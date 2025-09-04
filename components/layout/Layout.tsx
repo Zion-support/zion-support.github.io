@@ -75,9 +75,7 @@ const Layout: React.FC<LayoutProps> = ({
                 "contactType": "customer service",
                 "email": "kleber@ziontechgroup.com"
               },
-              "sameAs": [
-                "https://ziontechgroup.com"
-              ]
+              "sameAs": ["https://ziontechgroup.com"]
             })
           }}
         />
