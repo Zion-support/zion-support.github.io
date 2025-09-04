@@ -283,6 +283,28 @@ export function Footer() {
               Leading technology solutions provider specializing in AI, cybersecurity, 
               cloud infrastructure, and digital transformation services.
             </p>
+            
+            {/* Contact Information */}
+            <div className="space-y-3 mb-6">
+              <div className="flex items-center text-gray-300">
+                <Phone className="w-4 h-4 mr-3 text-zion-cyan" />
+                <a href={`tel:${contactInfo.phone}`} className="hover:text-white transition-colors">
+                  {contactInfo.phone}
+                </a>
+              </div>
+              <div className="flex items-center text-gray-300">
+                <Mail className="w-4 h-4 mr-3 text-zion-cyan" />
+                <a href={`mailto:${contactInfo.email}`} className="hover:text-white transition-colors">
+                  {contactInfo.email}
+                </a>
+              </div>
+              <div className="flex items-start text-gray-300">
+                <MapPin className="w-4 h-4 mr-3 mt-0.5 text-zion-cyan flex-shrink-0" />
+                <span>{contactInfo.address}</span>
+              </div>
+            </div>
+
+            {/* Social Links */}
             <div className="flex space-x-4">
               <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-400 hover: tex t-blue-400 transition-colors">
                 <Linkedin className="w-5 h-5"  />
