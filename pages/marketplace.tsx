@@ -10,10 +10,10 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
       description: "Discover innovative technology products and solutions"
       icon: "🛍️"
       items: [
-        { name: "AI-Powered Analytics Platform" price: "Starting at $299/month" category: "AI & Analytics" },
-        { name: "Cloud Infrastructure Suite" price: "Starting at $199/month" category: "Cloud Computing" },
-        { name: "Cybersecurity Monitoring Tool" price: "Starting at $149/month" category: "Security" },
-        { name: "Quantum Computing Simulator" price: "Starting at $499/month" category: "Quantum Computing" }
+        { name: "AI-Powered Analytics Platform" price: "Starting at $299/month" category: "AI & Analytics"  },
+        { name: "Cloud Infrastructure Suite" price: "Starting at $199/month" category: "Cloud Computing"  },
+        { name: "Cybersecurity Monitoring Tool" price: "Starting at $149/month" category: "Security"  },
+        { name: "Quantum Computing Simulator" price: "Starting at $499/month" category: "Quantum Computing"  }
       ]
     },
     {
@@ -21,10 +21,10 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
       description: "Connect with skilled technology professionals"
       icon: "👥"
       items: [
-        { name: "Senior AI/ML Engineers" price: "$120-180/hour" category: "AI & Machine Learning" },
-        { name: "Cloud DevOps Specialists" price: "$100-150/hour" category: "Cloud & DevOps" },
-        { name: "Cybersecurity Experts" price: "$110-170/hour" category: "Cybersecurity" },
-        { name: "Quantum Computing Researchers" price: "$150-250/hour" category: "Quantum Computing" }
+        { name: "Senior AI/ML Engineers" price: "$120-180/hour" category: "AI & Machine Learning"  },
+        { name: "Cloud DevOps Specialists" price: "$100-150/hour" category: "Cloud & DevOps"  },
+        { name: "Cybersecurity Experts" price: "$110-170/hour" category: "Cybersecurity"  },
+        { name: "Quantum Computing Researchers" price: "$150-250/hour" category: "Quantum Computing"  }
       ]
     },
     {
@@ -32,10 +32,10 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
       description: "Access cutting-edge technology equipment and hardware"
       icon: "🔧"
       items: [
-        { name: "High-Performance Servers" price: "Starting at $2,999" category: "Hardware" },
-        { name: "Quantum Computing Hardware" price: "Starting at $50,000" category: "Quantum Hardware" },
-        { name: "Network Security Appliances" price: "Starting at $1,999" category: "Security Hardware" },
-        { name: "Edge Computing Devices" price: "Starting at $499" category: "IoT & Edge" }
+        { name: "High-Performance Servers" price: "Starting at $2,999" category: "Hardware"  },
+        { name: "Quantum Computing Hardware" price: "Starting at $50,000" category: "Quantum Hardware"  },
+        { name: "Network Security Appliances" price: "Starting at $1,999" category: "Security Hardware"  },
+        { name: "Edge Computing Devices" price: "Starting at $499" category: "IoT & Edge"  }
       ]
     },
     {
@@ -43,10 +43,10 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
       description: "Professional technology services and consulting"
       icon: "⚙️"
       items: [
-        { name: "Digital Transformation Consulting" price: "$200-300/hour" category: "Consulting" },
-        { name: "Cloud Migration Services" price: "$150-250/hour" category: "Cloud Services" },
-        { name: "Security Assessment & Auditing" price: "$180-280/hour" category: "Security Services" },
-        { name: "Custom Software Development" price: "$120-200/hour" category: "Development" }
+        { name: "Digital Transformation Consulting" price: "$200-300/hour" category: "Consulting"  },
+        { name: "Cloud Migration Services" price: "$150-250/hour" category: "Cloud Services"  },
+        { name: "Security Assessment & Auditing" price: "$180-280/hour" category: "Security Services"  },
+        { name: "Custom Software Development" price: "$120-200/hour" category: "Development"  }
       ]
     }
   ];
@@ -140,16 +140,17 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
                   <div style={{ marginBottom: 15
 }}>
                     <span style={{
-                      background: color, 'white'
+            background: color, 'white'
                       padding: borderRadius, 20,
                       fontSize: fontWeight, 600
-                    }}>
+                    
+          }}>
                       {item.category}
                     </span>
                   </div>
                   
-                  <h3 style={{ 
-                    fontSize: fontWeight, 700, 
+                  <h3 style={{
+            fontSize: fontWeight, 700, 
                     marginBottom: 15,
                     lineHeight: '1.3'
 }}>
@@ -164,15 +165,17 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
                     {item.description}
                   </p>
                   
-                  <div style={{ 
-                    display: justifyContent, 'space-between' 
+                  <div style={{
+            display: justifyContent, 'space-between' 
                     alignItems: marginBottom, 20
-                  }}>
-                    <div style={{ 
-                      fontSize: fontWeight, 700,
+                  
+          }}>
+                    <div style={{
+            fontSize: fontWeight, 700,
                       background: WebkitBackgroundClip, 'text'
                       WebkitTextFillColor: backgroundClip, 'text'
-                    }}>
+                    
+          }}>
                       {item.price}
                     </div>
                     <div style={{ display: alignItems, 'center' gap: 5
@@ -201,7 +204,9 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
             </div>
           </div>
 
-          <div style={{ display: gap, 60 }}>
+          <div style={{
+            display: gap, 60 
+          }}>
             {marketplaceCategories.map((category, categoryIndex) => (
               <div key={categoryIndex}>
                 <div style={{ display: alignItems, 'center' gap: 20, marginBottom: 30
@@ -237,27 +242,29 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
                       <div style={{ marginBottom: 15
 }}>
                         <span style={{
-                          background: color, '#3b82f6'
+            background: color, '#3b82f6'
                           padding: borderRadius, 20,
                           fontSize: fontWeight, 600
-                        }}>
+                        
+          }}>
                           {item.category}
                         </span>
                       </div>
                       
-                      <h3 style={{ 
-                        fontSize: fontWeight, 700, 
+                      <h3 style={{
+            fontSize: fontWeight, 700, 
                         marginBottom: 10,
                         lineHeight: '1.3'
 }}>
                         {item.name}
                       </h3>
                       
-                      <div style={{ 
-                        fontSize: fontWeight, 600,
+                      <div style={{
+            fontSize: fontWeight, 600,
                         background: WebkitBackgroundClip, 'text'
                         WebkitTextFillColor: backgroundClip, 'text'
-                      }}>
+                      
+          }}>
                         {item.price}
                       </div>
                     </div>
@@ -267,7 +274,7 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
             ))}
           </div>
 
-          <div style={{ 
+          <div style={{
             background: borderRadius, 12,
             padding: 40,
             border: textAlign, 'center'

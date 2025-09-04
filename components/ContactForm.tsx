@@ -8,7 +8,7 @@ interface FormData {
   phone: string;
   service: string;
   message: string;
-}
+ }
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
@@ -206,7 +206,7 @@ const ContactForm: React.FC = () => {
   role="alert">
           Thank you for your message! We&apos;ll get back to you within 24 hours.
         </div>
-      )}
+      ) }
 
       {submitStatus === 'error' && (
         <div className="p-4 bg-red-900/20 border border-red-500/30 rounded-lg">
@@ -229,7 +229,7 @@ const ContactForm: React.FC = () => {
           </div>
         ) : (
           'Send Message'
-        )}
+        ) }
       </button>
     </form>
   );

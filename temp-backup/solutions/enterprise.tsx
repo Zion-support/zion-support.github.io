@@ -75,7 +75,7 @@ export default function EnterpriseSolutions() {
         {/* Hero Section */}
         <section className="relative py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <h1 className="text-5xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Enterprise Solutions
             </h1>
             <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto">
@@ -94,7 +94,7 @@ export default function EnterpriseSolutions() {
           </div>
         </section>
 
-        {/* Enterprise Services Grid */}
+        {/* Enterprise Services Grid */ }
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-4xl font-bold text-center mb-16">Enterprise Service Categories</h2>
@@ -117,7 +117,7 @@ export default function EnterpriseSolutions() {
                     Get Started
                   </Link>
                 </div>
-              ))}
+              )) }
             </div>
           </div>
         </section>
@@ -170,8 +170,8 @@ export default function EnterpriseSolutions() {
               <a href={`tel:${contact.phone}`} className="px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
                 Call {contact.phone}
               </a>
-              <a href={`mailto:${contact.email}`} className="px-8 py-4 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors">
-                Email {contact.email}
+              <a href={`mailto: ${contact.email }`} className="px-8 py-4 bg-purple-600 hover: bg-purple-700 rounded-lg font-semibold transition-colors">
+                Email {contact.email }
               </a>
               <Link href="/contact"
   className="px-8 py-4 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
@@ -183,4 +183,4 @@ export default function EnterpriseSolutions() {
       </div>
     </>
   );
-}
+ }

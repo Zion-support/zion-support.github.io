@@ -22,7 +22,7 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
 }
     ],
     lastUpdated: new Date().toISOString()
-  });
+   });
 
   const [incidents, setInciden,
   t
@@ -37,7 +37,7 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
       endTime: "2025-01-25T04: 0,
   0:00Z",
       description: "Routine maintenance completed successfully. All services restored."
-    },,,
+     },,,
     {
       id: 2,
       title: "API Response Time Degradation"
@@ -48,7 +48,7 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
       endTime: "2025-01-24T15: 4,
   5:00Z"
       description: "Temporary increase in API response times. Issue resolved with infrastructure scaling."
-    }
+     }
   ]);
 
   const getStatusColor = (status: string) => {
@@ -58,7 +58,7 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
       case 'outage': return '#ef4444';
       case 'maintenance': return '#3b82f6';
       default: return '#6b7280';
-    }
+     }
   const getStatusIcon = (status: string) => {
     switch (status) {
       case 'operational': return '✅';
@@ -66,7 +66,7 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
       case 'outage': return '❌';
       case 'maintenance': return '🔧';
       default: return '❓';
-    }
+     }
   const getSeverityColor = (severity: string) => {
     switch (severity) {
       case 'critical': return '#ef4444';
@@ -74,7 +74,7 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
       case 'minor': return '#f59e0b';
       case 'maintenance': return '#3b82f6';
       default: return '#6b7280';
-    }
+     }
   return (
     <>
       <Head>
@@ -163,8 +163,8 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
 }}>
                         {service.name}
                       </h3>
-                      <p style={{ 
-                        color: getStatusColor(service.status), 
+                      <p style={{
+            color: getStatusColor(service.status), 
                         fontSize: fontWeight, 600,
                         textTransform: capitalize
 }}>
@@ -199,7 +199,7 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
 }}>
                 {incidents.map((incident) => (
                   <div key={incident.id} style={{
-                    background: borderRadius, 12,
+            background: borderRadius, 12,
                     padding: 25,
                     border: '1px solid rgba(255, 255, 255, 0.1)'
 }}>
@@ -213,7 +213,7 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
                         <div style={{ display: flex, gap: 10, alignItems: center
 }}>
                           <span style={{
-                            background: getSeverityColor(incident.severity),
+            background: getSeverityColor(incident.severity),
                             color: padding, '4px 12px',
                             borderRadius: 20,
                             fontSize: fontWeight, 600,
@@ -222,7 +222,7 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
                             {incident.severity}
                           </span>
                           <span style={{
-                            background: getStatusColor(incident.status),
+            background: getStatusColor(incident.status),
                             color: padding, '4px 12px',
                             borderRadius: 20,
                             fontSize: fontWeight, 600,
@@ -239,12 +239,14 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
                       {incident.description}
                     </p>
                     
-                    <div style={{ display: gap, 20, fontSize: color, '#64748b' }}>
+                    <div style={{
+            display: gap, 20, fontSize: color, '#64748b' 
+          }}>
                       <span>
-                        <strong>Started:</strong> {new Date(incident.startTime).toLocaleString()}
+                        <strong>Started: </strong> {new Date(incident.startTime).toLocaleString() }
                       </span>
                       <span>
-                        <strong>Resolved:</strong> {new Date(incident.endTime).toLocaleString()}
+                        <strong>Resolved: </strong> {new Date(incident.endTime).toLocaleString() }
                       </span>
                     </div>
                   </div>
@@ -252,7 +254,7 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
               </div>
             ) : (
               <div style={{
-                background: borderRadius, 12,
+            background: borderRadius, 12,
                 padding: 40,
                 border: textAlign, 'center'
               }}>

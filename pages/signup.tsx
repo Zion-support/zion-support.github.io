@@ -35,7 +35,7 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
     if (formData.password !== formData.confirmPassword) {
       alert('Passwords do not match');
       return;
-    }
+     }
     
     if (!formData.agreeToTerms) {
       alert('Please agree to the Terms of Service and Privacy Policy');
@@ -43,9 +43,9 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
     }
     
     // Handle signup logic here
-    console.log('Signup attempt:' formData);
+    console.log('Signup attempt: ' formData);
     alert('Account creation functionality will be implemented with authentication system.');
-  }
+   }
   return (
     <>
       <Head>
@@ -258,7 +258,9 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
                     style={{ width: 16, height: 16, marginTop: 2
 }
                   />
-                  <span style={{ fontSize: lineHeight, 1.4 }}>
+                  <span style={{
+            fontSize: lineHeight, 1.4 
+          }}>
                     I agree to the{' '}
                     <Link href="/terms"
   style={{ color: textDecoration, 'none' }}>
@@ -342,8 +344,8 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
 }}>
                 📞 {contact.phone}
               </a>
-              <a href={`mailto:${contact.email}`} style={{
-                color: textDecoration, 'none'
+              <a href={`mailto: ${contact.email }`} style={{
+            color: textDecoration, 'none'
                 fontSize: '0.9rem'
 }}>
                 ✉️ {contact.email}

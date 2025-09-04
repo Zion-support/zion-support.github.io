@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 interface BreadcrumbItem {
   label: string;,
   href?: string;
-}
+ }
 
 export default function Breadcrumb(): any {
   const router = useRouter();
@@ -59,7 +59,7 @@ export default function Breadcrumb(): any {
                   href={item.href}
                   className="text-slate-300 hover: text-white transition-colors",
                 >
-                  {item.label}
+                  {item.label }
                 </Link>
               ) : (
                 <span className="text-white font-medium" aria-current="page">

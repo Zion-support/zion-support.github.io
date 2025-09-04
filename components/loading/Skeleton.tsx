@@ -43,7 +43,7 @@ export const CardSkeleton: React.FC = () => (
   </div>
 );
 
-export const TableSkeleton: React.FC<{ rows?: number; columns?: number }> = ({ 
+export const TableSkeleton: React.FC<{ rows?: number; columns?: number  }> = ({ 
   rows = 5, 
   columns = 4 
 }) => (

@@ -15,7 +15,7 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
         "End-to-end encryption for sensitive communications"
         "Regular encryption key rotation"
       ]
-    },
+     },
     {
       title: "Access Control"
       description: "Multi-layered access control systems ensure only authorized personnel can access sensitive information"
@@ -26,7 +26,7 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
         "Principle of least privilege"
         "Regular access reviews and audits"
       ]
-    },
+     },
     {
       title: "Network Security"
       description: "Advanced network security measures protect against external threats and unauthorized access"
@@ -37,7 +37,7 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
         "Network segmentation and isolation"
         "Continuous network monitoring"
       ]
-    },
+     },
     {
       title: "Compliance & Auditing"
       description: "Regular compliance audits and security assessments ensure adherence to industry standards"
@@ -48,16 +48,16 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
         "Regular penetration testing"
         "Third-party security audits"
       ]
-    }
+     }
   ];
 
   const certifications = [
     { name: "SOC 2 Type II" description: "Security, availability, and confidentiality controls" },
-    { name: "ISO 27001" description: "Information security management system" },
-    { name: "HIPAA Compliant" description: "Healthcare data protection standards" },
-    { name: "GDPR Compliant" description: "European data protection regulations" },
-    { name: "PCI DSS" description: "Payment card industry security standards" },
-    { name: "NIST Framework" description: "Cybersecurity framework compliance" }
+    { name: "ISO 27001" description: "Information security management system"  },
+    { name: "HIPAA Compliant" description: "Healthcare data protection standards"  },
+    { name: "GDPR Compliant" description: "European data protection regulations"  },
+    { name: "PCI DSS" description: "Payment card industry security standards"  },
+    { name: "NIST Framework" description: "Cybersecurity framework compliance"  }
   ];
 
   const securityFeatures = [
@@ -116,10 +116,12 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
 }}>
               Security Measures
             </h2>
-            <div style={{ display: gap, 30 }}>
+            <div style={{
+            display: gap, 30 
+          }}>
               {securityMeasures.map((measure, index) => (
                 <div key={index} style={{
-                  background: borderRadius, 12,
+            background: borderRadius, 12,
                   padding: 30,
                   border: '1px solid rgba(255, 255, 255, 0.1)'
 }}>
@@ -143,14 +145,14 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
 }}>
                     {measure.details.map((detail, detailIndex) => (
                       <div key={detailIndex} style={{
-                        display: alignItems, 'center'
+            display: alignItems, 'center'
                         gap: 12,
                         padding: 15,
                         background: borderRadius, 8,
                         border: '1px solid rgba(239, 68, 68, 0.2)'
 }}>
                         <div style={{
-                          width: 8,
+            width: 8,
                           height: 8,
                           background: borderRadius, '50%'
                         }} />
@@ -173,7 +175,8 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
             <div style={{ display: gridTemplateColumns, 'repeat(auto-fit, minmax(300px, 1fr))' gap: 25
 }}>
               {certifications.map((cert, index) => (
-<div key={index} style={{ background: 'rgba(255, 255, 255, 0.05)',
+<div key={index} style={{
+            background: 'rgba(255, 255, 255, 0.05)',
                   borderRadius: 12, padding: 25, border: '1px solid rgba(255, 255, 255, 0.1)',
                   textAlign: center, transition: 'transform 0.3s ease, box-shadow 0.3s ease', cursor: pointer
 }
@@ -186,7 +189,7 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
                   e.currentTarget.style.boxShadow = 'none';
                 }}>
                   <div style={{
-                    background: color, 'white'
+            background: color, 'white'
                     padding: borderRadius, 20,
                     fontSize: fontWeight, 600,
                     marginBottom: 15,
@@ -194,7 +197,9 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
 }}>
                     {cert.name}
                   </div>
-                  <p style={{ color: fontSize, '1rem' }}>
+                  <p style={{
+            color: fontSize, '1rem' 
+          }}>
                     {cert.description}
                   </p>
                 </div>
@@ -211,15 +216,15 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
             <div style={{ display: gridTemplateColumns, 'repeat(auto-fit, minmax(250px, 1fr))' gap: 20
 }}>
               {securityFeatures.map((feature, index) => (
-                <div key={index} style={{ 
-                  display: alignItems, 'center' 
+                <div key={index} style={{
+            display: alignItems, 'center' 
                   gap: 15,
                   padding: 20,
                   background: borderRadius, 8,
                   border: '1px solid rgba(255, 255, 255, 0.1)'
 }}>
                   <div style={{
-                    width: 8,
+            width: 8,
                     height: 8,
                     background: borderRadius, '50%'
                   }} />

@@ -71,7 +71,7 @@ export default function Documentation(): any {
       </Head>
 
       <div className="min-h-screen bg-white">
-        {/* Hero Section */}
+        {/* Hero Section */ }
         <section className="bg-gradient-to-r from-green-600 to-teal-600 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
@@ -99,7 +99,7 @@ export default function Documentation(): any {
           </div>
         </section>
 
-        {/* Search Section */}
+        {/* Search Section */ }
         <section className="py-12 bg-gray-50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="relative">
@@ -113,7 +113,7 @@ export default function Documentation(): any {
           </div>
         </section>
 
-        {/* Documentation Sections */}
+        {/* Documentation Sections */ }
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 gap-8">
@@ -132,7 +132,7 @@ export default function Documentation(): any {
                           className="flex items-center text-green-600 hover:text-green-700 transition-colors"
                         >
                           <ExternalLink className="w-4 h-4 mr-2" />
-                          {item.name}
+                          {item.name }
                         </Link>
                       </li>
                     ))}
