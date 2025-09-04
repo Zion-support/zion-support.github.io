@@ -172,33 +172,25 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"});,"})"
   Github,
   Zap,
   Brain,
+  Code,
+  Server,
   Shield,
+  Cloud,
+  Zap,
   Users,
-  HardDrive,
-  TrendingUp,
-  Building2,
+  BarChart3,
+  Settings,
   FileText,
   HelpCircle,
-  BarChart3,
-  ArrowUp,
-  Heart,
-  Star,
-  CheckCircle,
   Award,
+  CheckCircle,
+  Star,
   Lock,
   Eye,
-  Atom,
-  Code,
-  Database,
   Network,
-  Server
-  Rocket,
-  Target,
-  Handshake,
-  Lightbulb,
+  Database,
   Cpu,
   Smartphone,
-  Server,
   Chip,
   Wifi,
   ShieldCheck,
@@ -277,7 +269,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-slate-900 text-white">
+    <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8 py-12">
         <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-5 gap-8">
