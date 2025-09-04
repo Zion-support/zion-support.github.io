@@ -56,7 +56,7 @@ const ExpandedServicesShowcase2027: NextPage = () => {;
           </h1>
           <p className="text-xl mb-8 max-w-4xl mx-auto">
             Discover our cutting-edge portfolio of advanced technology services designed to transform your business
-            with next-generation cybersecurity, data analytics, cloud infrastructure, IoT solutions, fintech innovations,
+            with next-generation cybersecurity, data analytics, cloud infrastructure, IoT solutions, fintech innovations
             and healthcare technology breakthroughs.
           </p>
 

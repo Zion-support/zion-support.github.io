@@ -275,7 +275,7 @@ export function EnhancedSearchInput({value,;';';
               { recentSearches.map((search) => (
                   key={search}
                   onClick={() => handleSuggestionSelect(search)}"
-                  className="w-full flex items-center px-3 py-2 text-sm text-zion-slate-light hover:text-white hove,
+                  className="w-full flex items-center px-3 py-2 text-sm text-zion-slate-light hover:text-white hove
     r:bg-zion-purple/10 transition-colors"
                 <button key={search} onClick={() => handleSuggestionSelect(search)
       )}

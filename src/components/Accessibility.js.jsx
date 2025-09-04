@@ -8,7 +8,7 @@ export const useAccessibility = () => {}
 ''
 ''
 ''''
-    throw new Error(''''
+    throw new Error('''',
       'useAccessibility must be used within an AccessibilityProvider'
     );
   }

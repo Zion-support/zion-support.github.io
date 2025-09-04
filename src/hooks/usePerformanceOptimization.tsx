@@ -11,7 +11,7 @@ threshold = 0.1} = options; const metricsRef: useRe f<PerformanceMetrics>({; loa
    renderTime: number;
    memoryUsag,
     e: number;
-   fp,
+   fp
     s: number} interface UsePerformanceOptimizationOptions {
    memoryUsage: number;
    fps: number  } interface UsePerformanceOptimizationOptions {

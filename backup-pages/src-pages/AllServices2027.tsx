@@ -147,7 +147,7 @@
   ' : `${selectedCategory} Services`}
             </h2>'
             <div className='text-gray-400'>
-              {filteredServices.length} service{filteredServices.length !== 1 ?,
+              {filteredServices.length} service{filteredServices.length !== 1 ?
   s
   ': '} available
             </div>
@@ -173,7 +173,7 @@
               Why Choose Our Services?
             </h2>'
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Each service category is designed with specific business needs in mind,
+              Each service category is designed with specific business needs in mind
               providing targeted solutions that deliver measurable results.
             </p>
           </div>

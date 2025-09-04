@@ -46,21 +46,21 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     name: 'AI Video Generation Platform,
     tagline:,
   Create professional videos with AI in minutes',
-    price: '$499,
-    period:,
+    price: '$499
+    period:
   /month',
-    description: Advanced AI-powered video generation platform that creates professional-quality videos from text, images, and audio inputs. Perfect for marketers, content creators, and businesses.,
-  ,
+    description: Advanced AI-powered video generation platform that creates professional-quality videos from text, images, and audio inputs. Perfect for marketers, content creators, and businesses.
+  
     features: [
-  'Text-to-video generation,
+  'Text-to-video generation
   'Image-to-video conversion',
-  'AI voice synthesis',
+      'AI voice synthesis'
   'Automatic scene generation',
-  'Professional templates library',
+      'Professional templates library'
   'Multi-language support',
-  '4K video export',
+      '4K video export'
   'Brand customization',
-  'Social media optimization',
+      'Social media optimization'
   'API access for developers'
     ],
     popular: true,
@@ -174,9 +174,9 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
   Advanced quantum ML platform with hybrid classical-quantum algorithms, real-time quantum simulation, and comprehensive research tools. Includes educational resources and collaboration features.',
     launchDate: '2024-01-15,
     customers: 450,
-    rating: 4.9,
+    rating: 4.9
     reviews: 280
-  },
+  }
   // AI-Powered Cybersecurity Platform
   {
     id:,
@@ -312,9 +312,9 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
   Advanced robotics platform with AI-powered navigation, computer vision, and comprehensive fleet management. Includes development tools, safety monitoring, and cloud-based control.',
     launchDate: '2024-01-10,
     customers: 320,
-    rating: 4.8,
+    rating: 4.8
     reviews: 180
-  },
+  }
   // Blockchain AI Platform
   {
     id:,
@@ -450,9 +450,9 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
   Advanced edge AI platform with optimized models, real-time processing, and comprehensive device management. Includes security features, cloud synchronization, and multi-device coordination.',
     launchDate: '2024-01-25,
     customers: 950,
-    rating: 4.6,
+    rating: 4.6
     reviews: 580
-  },
+  }
   // AI-Powered Drug Discovery Platform
   {
     id:,

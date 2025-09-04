@@ -1,0 +1,88 @@
+{
+  "timestamp": "2025-09-03T01:29:41.970Z",
+  "summary": {
+    "totalScripts": 8,
+    "successful": 4,
+    "failed": 4
+  },
+  "results": [
+    {
+      "command": "npm run lint:fix",
+      "description": "ESLint Fix",
+      "success": false,
+      "error": "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: eslint: not found\n"
+    },
+    {
+      "command": "npm run type-check",
+      "description": "TypeScript Type Check",
+      "success": false,
+      "error": "Command failed: npm run type-check\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: tsc: not found\n"
+    },
+    {
+      "command": "npm run test",
+      "description": "Test Suite",
+      "success": false,
+      "error": "Command failed: npm run test\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: jest: not found\n"
+    },
+    {
+      "command": "npm run build",
+      "description": "Build Application",
+      "success": false,
+      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: next: not found\n"
+    },
+    {
+      "name": "Error Detection",
+      "success": true,
+      "result": {
+        "typescript": {
+          "errors": "Command failed: npx tsc --noEmit\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
+        }
+      }
+    },
+    {
+      "name": "Performance Analysis",
+      "success": true,
+      "result": {
+        "buildTime": 172,
+        "status": "good"
+      }
+    },
+    {
+      "name": "Security Audit",
+      "success": true,
+      "result": {
+        "status": "issues_found",
+        "output": "Command failed: npm audit --audit-level=moderate\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error code ENOLOCK\nnpm error audit This command requires an existing lockfile.\nnpm error audit Try creating one first with: npm i --package-lock-only\nnpm error audit Original error: loadVirtual requires existing shrinkwrap file\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-03T01_29_41_585Z-debug-0.log\n"
+      }
+    },
+    {
+      "name": "Code Quality Check",
+      "success": true,
+      "result": {
+        "qualityChecks": [
+          {
+            "type": "console_logs",
+            "count": 62
+          },
+          {
+            "type": "todos",
+            "count": 2
+          }
+        ],
+        "status": "good"
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "type": "error",
+      "message": "Fix 4 failed automation scripts",
+      "scripts": [
+        "ESLint Fix",
+        "TypeScript Type Check",
+        "Test Suite",
+        "Build Application"
+      ]
+    }
+  ]
+}

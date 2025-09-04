@@ -54,10 +54,10 @@ const Home = memo(() => {
     ]
   };
   const stats = [
-  { number: '500+', label: 'Projects Completed' },
-    { number: '50+', label: 'Happy Clients' },
-    { number: '99.9%', label: 'Uptime Guarantee' },
-    { number: '24/7', label: 'Support Available' },
+  { number: '500+', label: 'Projects Completed' }
+    { number: '50+', label: 'Happy Clients' }
+    { number: '99.9%', label: 'Uptime Guarantee' }
+    { number: '24/7', label: 'Support Available' }
   ];
 
   const services = [
@@ -517,6 +517,5 @@ const Home = memo(() => {
   );
 });
 
-Home.displayName = 'Home';
 
 export default Home;

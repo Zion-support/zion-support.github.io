@@ -49,7 +49,7 @@ jest.mock(''
       data: null})
     const { req, res } = createMocks<NextApiRequest NextApiResponse>({
       method:
-  'POST' as RequestMethod,'
+  'POST' as RequestMethod, '
       body: mockBrief})
     await generateHandler(req, res)
     expect(res._getStatusCode()).toBe(500)
@@ -70,7 +70,7 @@ jest.mock(''
     mockSupabaseInvoke.mockResolvedValueOnce({ error: null, data: null })
     const { req, res } = createMocks<NextApiRequest NextApiResponse>({
       method:
-  'POST' as RequestMethod,'
+  'POST' as RequestMethod, '
       body: mockBrief})
     await generateHandler(req, res)
     expect(res._getStatusCode()).toBe(500)

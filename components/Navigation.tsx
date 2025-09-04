@@ -50,6 +50,7 @@ const Navigation: Reac t.FC = () => {
               Zion Tech Group
             </Link>
           </div>
+
           {/* Desktop Navigation */}
           <div className='hidden md: bloc k'>
             <div className='ml-10 flex items-baseline space-x-4'>

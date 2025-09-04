@@ -51,12 +51,12 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
       'Advanced AI-powered business intelligence platform that automatically analyzes your business data, identifies trends, and provides actionable recommendations for growth and optimization.',
     features: [
       'AI-powered data analysis and insights',
-      'Real-time dashboard with 50+ customizable widgets',
+      'Real-time dashboard with 50+ customizable widgets'
       'Predictive analytics and forecasting',
       'Automated report generation and scheduling',
       'Multi-source data integration (CRM, ERP, Analytics)',
       'Natural language query interface',
-      'Mobile-responsive design',
+      'Mobile-responsive design'
       'White-label solution for agencies',
       'API access for custom integrations',
       'Advanced security and compliance (SOC 2, GDPR)',
@@ -112,11 +112,11 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
       'Intelligent customer success automation platform that helps businesses reduce churn, increase customer lifetime value, and scale customer success operations efficiently.',
     features: [
       'AI-powered churn prediction and prevention',
-      'Automated onboarding workflows',
+      'Automated onboarding workflows'
       'Intelligent customer health scoring',
-      'Automated check-in sequences',
+      'Automated check-in sequences'
       'Success milestone tracking',
-      'Integration with popular CRM systems',
+      'Integration with popular CRM systems'
       'Custom automation rules and triggers',
       'Performance analytics and reporting',
       'Multi-channel communication (email, SMS, in-app)',

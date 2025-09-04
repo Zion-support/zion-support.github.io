@@ -410,8 +410,7 @@ describe('WhitepaperGeneratorPage'', () => {
       // create-shared-whitepaper was called once, then notify-legal-team;
       expect(
         mockSupabaseInvoke.mock.calls.filter(
-          call => call[0] ===;
-  'create-shared-whitepaper').length).toBe(1)
+          call => call[0] ===';create-shared-whitepaper').length).toBe(1)
       expect(
         mockSupabaseInvoke.mock.calls.filter(
           call => call[0] ===

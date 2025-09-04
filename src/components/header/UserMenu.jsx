@@ -271,7 +271,7 @@ export function UserMenu({user }) {const [isOpen, setIsOpen] = useState(false);
           {/* Logout */}"
           <div className="p-4 border-t border-zion-purple/20">
               onClick={handleLogout}"
-              className="flex items-center w-full px-4 py-2 text-red-400 hover:text-red-300 hove,
+              className="flex items-center w-full px-4 py-2 text-red-400 hover:text-red-300 hove
     r:bg-red-500/10 rounded-lg transition-colors"
           {/* Logout */}""
             <button onClick={handleLogout} className="flex items-center w-full px-4 py-2 text-red-400 hover: text-red-300 hover:bg-red-500/10 rounded-lg transition-colors" >
