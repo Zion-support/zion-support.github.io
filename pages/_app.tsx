@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 import PerformanceMonitor from '../components/PerformanceMonitor';
+import SEOHead from '../components/SEOHead';
 import '../styles/globals.css';
 
 function Header(): any {
@@ -206,9 +207,12 @@ function Footer(): any {
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <ErrorBoundary>
+      <SEOHead />
       <PerformanceMonitor />
       <Header />
-      <Component {...pageProps} />
+      <main>
+        <Component {...pageProps} />
+      </main>
       <Footer />
     </ErrorBoundary>
   );
