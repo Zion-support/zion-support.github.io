@@ -22,7 +22,12 @@
       "node"
     ],
     "baseUrl": ".",
-    "incremental": true
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "include": [
     "next-env.d.ts",

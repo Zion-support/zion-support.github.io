@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import { Code, Key, Zap, Shield } from 'lucide-react';
 
 export default function APIOverview() {
   const contact = { 
@@ -23,7 +24,7 @@ export default function APIOverview() {
           {/* Header */}
           <div className="mb-8">
             <Link href="/docs" className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-4">
-              <ArrowLeft className="w-4 h-4 mr-2" />
+              <span className="mr-2">←</span>
               Back to Documentation
             </Link>
             <h1 className="text-4xl font-bold text-gray-900 mb-4">API Overview</h1>
