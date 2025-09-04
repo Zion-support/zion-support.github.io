@@ -1150,12 +1150,48 @@ export default function MicroSaaS() {
       benefits: [
         '50% reduction in event planning time',
         'Automated attendee management',
+        'Increased event attendance and engagement',
+        'Streamlined event operations',
         'Improved event ROI tracking',
         'Enhanced attendee experience'
       ],
       category: 'Event Management'
     },
     {
+      icon: Video,
+      name: 'AI Video Content Generator',
+      description: 'Automated video creation platform that transforms text, images, and data into engaging video content for marketing, training, and social media.',
+      features: [
+        'AI-powered script generation and voice synthesis',
+        'Automated video editing and scene transitions',
+        'Multi-format output (MP4, GIF, social media optimized)',
+        'Brand template library and customization',
+        'Bulk video generation and batch processing',
+        'Analytics and performance tracking'
+      ],
+      pricing: '$399 – $2,499/month',
+      timeline: '4–6 weeks',
+      benefits: [
+        '90% faster video content production',
+        'Consistent brand messaging across videos',
+        'Reduced video production costs',
+        'Scalable content creation for marketing campaigns'
+      ],
+      category: 'Content Creation'
+    },
+    {
+      icon: Package,
+      name: 'E-Commerce Return Automation',
+      description: 'Intelligent return management system that automates return requests, generates labels, tracks status, and provides analytics for e-commerce businesses.',
+      features: [
+        'Automated return request processing',
+        'Dynamic return label generation',
+        'Real-time return status tracking',
+        'Return analytics and fraud detection',
+        'Integration with major e-commerce platforms',
+        'Customer self-service return portal'
+      ],
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-5ee1
       icon: FileText,
       name: 'AI-Powered Content Creation Suite',
       description: 'Comprehensive content generation platform with AI writing, editing, and optimization tools.',
@@ -1214,6 +1250,10 @@ export default function MicroSaaS() {
       pricing: '$199 – $1,299/month',
       timeline: '2–3 weeks',
       benefits: [
+        '70% reduction in return processing time',
+        'Automated fraud detection and prevention',
+        'Improved customer satisfaction with returns',
+        'Better inventory management and restocking',
         '60% faster return processing',
         'Automated return workflows',
         'Improved customer experience',
