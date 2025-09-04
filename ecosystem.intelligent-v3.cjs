@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 /**
  * Zion Tech Group - Intelligent PM2 Ecosystem v3.0
  * Advanced process management with AI-powered optimization
@@ -42,9 +41,9 @@ module.exports = {
         DEBUG: 'true',
         ENABLE_HOT_RELOAD: 'true'
       },
-      log_file: './logs/main-app.log',
-      out_file: './logs/main-app-out.log',
-      error_file: './logs/main-app-error.log',
+      log_file: './logs/pm2/pm2/main-app.log',
+      out_file: './logs/pm2/pm2/main-app-out.log',
+      error_file: './logs/pm2/pm2/main-app-error.log',
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
       merge_logs: true,
       time: true,
@@ -73,9 +72,9 @@ module.exports = {
         LEARNING_ENABLED: 'true',
         PREDICTIVE_ANALYSIS: 'true'
       },
-      log_file: './logs/ai-process-manager.log',
-      out_file: './logs/ai-process-manager-out.log',
-      error_file: './logs/ai-process-manager-error.log',
+      log_file: './logs/pm2/pm2/ai-process-manager.log',
+      out_file: './logs/pm2/pm2/ai-process-manager-out.log',
+      error_file: './logs/pm2/pm2/ai-process-manager-error.log',
       merge_logs: true,
       time: true
     },
@@ -98,9 +97,9 @@ module.exports = {
         ALERT_THRESHOLD: 'high',
         PREDICTIVE_MODE: 'true'
       },
-      log_file: './logs/intelligent-monitor.log',
-      out_file: './logs/intelligent-monitor-out.log',
-      error_file: './logs/intelligent-monitor-error.log',
+      log_file: './logs/pm2/intelligent-monitor.log',
+      out_file: './logs/pm2/intelligent-monitor-out.log',
+      error_file: './logs/pm2/intelligent-monitor-error.log',
       merge_logs: true,
       time: true
     },
@@ -125,9 +124,9 @@ module.exports = {
         CPU_THRESHOLD: '70',
         MEMORY_THRESHOLD: '80'
       },
-      log_file: './logs/smart-auto-scaler.log',
-      out_file: './logs/smart-auto-scaler-out.log',
-      error_file: './logs/smart-auto-scaler-error.log',
+      log_file: './logs/pm2/smart-auto-scaler.log',
+      out_file: './logs/pm2/smart-auto-scaler-out.log',
+      error_file: './logs/pm2/smart-auto-scaler-error.log',
       merge_logs: true,
       time: true
     },
@@ -150,9 +149,9 @@ module.exports = {
         AUTO_HEAL: 'true',
         ROLLBACK_ENABLED: 'true'
       },
-      log_file: './logs/error-recovery-system.log',
-      out_file: './logs/error-recovery-system-out.log',
-      error_file: './logs/error-recovery-system-error.log',
+      log_file: './logs/pm2/error-recovery-system.log',
+      out_file: './logs/pm2/error-recovery-system-out.log',
+      error_file: './logs/pm2/error-recovery-system-error.log',
       merge_logs: true,
       time: true
     },
@@ -175,9 +174,9 @@ module.exports = {
         VULNERABILITY_SCANNING: 'true',
         COMPLIANCE_CHECK: 'true'
       },
-      log_file: './logs/intelligent-security-scanner.log',
-      out_file: './logs/intelligent-security-scanner-out.log',
-      error_file: './logs/intelligent-security-scanner-error.log',
+      log_file: './logs/pm2/intelligent-security-scanner.log',
+      out_file: './logs/pm2/intelligent-security-scanner-out.log',
+      error_file: './logs/pm2/intelligent-security-scanner-error.log',
       merge_logs: true,
       time: true
     },
@@ -200,9 +199,9 @@ module.exports = {
         BUNDLE_OPTIMIZATION: 'true',
         CACHE_OPTIMIZATION: 'true'
       },
-      log_file: './logs/performance-optimizer.log',
-      out_file: './logs/performance-optimizer-out.log',
-      error_file: './logs/performance-optimizer-error.log',
+      log_file: './logs/pm2/performance-optimizer.log',
+      out_file: './logs/pm2/performance-optimizer-out.log',
+      error_file: './logs/pm2/performance-optimizer-error.log',
       merge_logs: true,
       time: true
     },
@@ -225,9 +224,9 @@ module.exports = {
         AUTO_ROLLBACK: 'true',
         HEALTH_CHECK_ENABLED: 'true'
       },
-      log_file: './logs/smart-deployment-manager.log',
-      out_file: './logs/smart-deployment-manager-out.log',
-      error_file: './logs/smart-deployment-manager-error.log',
+      log_file: './logs/pm2/smart-deployment-manager.log',
+      out_file: './logs/pm2/smart-deployment-manager-out.log',
+      error_file: './logs/pm2/smart-deployment-manager-error.log',
       merge_logs: true,
       time: true
     },
@@ -250,9 +249,9 @@ module.exports = {
         AUTO_FIX: 'true',
         COVERAGE_THRESHOLD: '85'
       },
-      log_file: './logs/code-quality-manager.log',
-      out_file: './logs/code-quality-manager-out.log',
-      error_file: './logs/code-quality-manager-error.log',
+      log_file: './logs/pm2/code-quality-manager.log',
+      out_file: './logs/pm2/code-quality-manager-out.log',
+      error_file: './logs/pm2/code-quality-manager-error.log',
       merge_logs: true,
       time: true
     },
@@ -275,9 +274,9 @@ module.exports = {
         MEMORY_MANAGEMENT: 'intelligent',
         CPU_OPTIMIZATION: 'true'
       },
-      log_file: './logs/smart-resource-manager.log',
-      out_file: './logs/smart-resource-manager-out.log',
-      error_file: './logs/smart-resource-manager-error.log',
+      log_file: './logs/pm2/smart-resource-manager.log',
+      out_file: './logs/pm2/smart-resource-manager-out.log',
+      error_file: './logs/pm2/smart-resource-manager-error.log',
       merge_logs: true,
       time: true
     },
@@ -300,9 +299,9 @@ module.exports = {
         CONFLICT_RESOLUTION: 'intelligent',
         BRANCH_CLEANUP: 'true'
       },
-      log_file: './logs/git-workflow-manager.log',
-      out_file: './logs/git-workflow-manager-out.log',
-      error_file: './logs/git-workflow-manager-error.log',
+      log_file: './logs/pm2/git-workflow-manager.log',
+      out_file: './logs/pm2/git-workflow-manager-out.log',
+      error_file: './logs/pm2/git-workflow-manager-error.log',
       merge_logs: true,
       time: true
     },
@@ -325,9 +324,9 @@ module.exports = {
         REPORTING_ENABLED: 'true',
         INSIGHTS_GENERATION: 'true'
       },
-      log_file: './logs/analytics-engine.log',
-      out_file: './logs/analytics-engine-out.log',
-      error_file: './logs/analytics-engine-error.log',
+      log_file: './logs/pm2/analytics-engine.log',
+      out_file: './logs/pm2/analytics-engine-out.log',
+      error_file: './logs/pm2/analytics-engine-error.log',
       merge_logs: true,
       time: true
     },
@@ -350,9 +349,9 @@ module.exports = {
         RETENTION_DAYS: '30',
         COMPRESSION_ENABLED: 'true'
       },
-      log_file: './logs/backup-manager.log',
-      out_file: './logs/backup-manager-out.log',
-      error_file: './logs/backup-manager-error.log',
+      log_file: './logs/pm2/backup-manager.log',
+      out_file: './logs/pm2/backup-manager-out.log',
+      error_file: './logs/pm2/backup-manager-error.log',
       merge_logs: true,
       time: true
     },
@@ -375,9 +374,9 @@ module.exports = {
         ALERT_THRESHOLD: 'medium',
         NOTIFICATION_ENABLED: 'true'
       },
-      log_file: './logs/smart-health-checker.log',
-      out_file: './logs/smart-health-checker-out.log',
-      error_file: './logs/smart-health-checker-error.log',
+      log_file: './logs/pm2/smart-health-checker.log',
+      out_file: './logs/pm2/smart-health-checker-out.log',
+      error_file: './logs/pm2/smart-health-checker-error.log',
       merge_logs: true,
       time: true
     },
@@ -398,9 +397,9 @@ module.exports = {
         DASHBOARD_PORT: '3001',
         REFRESH_INTERVAL: '5000'
       },
-      log_file: './logs/intelligent-dashboard.log',
-      out_file: './logs/intelligent-dashboard-out.log',
-      error_file: './logs/intelligent-dashboard-error.log',
+      log_file: './logs/pm2/intelligent-dashboard.log',
+      out_file: './logs/pm2/intelligent-dashboard-out.log',
+      error_file: './logs/pm2/intelligent-dashboard-error.log',
       merge_logs: true,
       time: true
     }
