@@ -1264,6 +1264,160 @@ export default function MicroSaaS() {
         'Better customer satisfaction and retention'
       ],
       category: 'Customer Engagement'
+    },
+    {
+      icon: Brain,
+      name: 'AI-Powered Email Responder',
+      description: 'Intelligent email automation that reads, categorizes, and responds to emails with human-like accuracy.',
+      features: [
+        'Natural language email understanding',
+        'Automated response generation',
+        'Priority email flagging and routing',
+        'Sentiment analysis and tone matching',
+        'Calendar integration and scheduling',
+        'Multi-language support'
+      ],
+      pricing: '$199 – $899/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '80% reduction in email response time',
+        '24/7 email management',
+        'Improved customer satisfaction',
+        'Reduced administrative workload'
+      ],
+      category: 'Communication Automation'
+    },
+    {
+      icon: Calendar,
+      name: 'Smart Event Management Platform',
+      description: 'Comprehensive event planning and management solution with AI-powered optimization.',
+      features: [
+        'Automated event planning workflows',
+        'Guest management and RSVP tracking',
+        'Venue and vendor recommendations',
+        'Budget optimization and cost tracking',
+        'Real-time event analytics',
+        'Integration with popular calendar systems'
+      ],
+      pricing: '$149 – $699/month',
+      timeline: '2–4 weeks',
+      benefits: [
+        '50% reduction in event planning time',
+        'Automated guest communication',
+        'Cost optimization recommendations',
+        'Enhanced attendee experience'
+      ],
+      category: 'Event Management'
+    },
+    {
+      icon: Video,
+      name: 'AI Video Content Generator',
+      description: 'Automated video creation platform that generates professional marketing videos from text and images.',
+      features: [
+        'Text-to-video generation',
+        'AI voice synthesis and narration',
+        'Automatic scene transitions and effects',
+        'Brand template customization',
+        'Multi-platform optimization',
+        'Analytics and performance tracking'
+      ],
+      pricing: '$299 – $1,499/month',
+      timeline: '3–5 weeks',
+      benefits: [
+        '90% faster video production',
+        'Consistent brand messaging',
+        'Reduced video production costs',
+        'Scalable content creation'
+      ],
+      category: 'Content Creation'
+    },
+    {
+      icon: Package,
+      name: 'Smart Inventory Optimization',
+      description: 'AI-driven inventory management with predictive analytics and automated reordering.',
+      features: [
+        'Demand forecasting algorithms',
+        'Automated reorder point calculations',
+        'Supplier performance analytics',
+        'Dead stock identification and liquidation',
+        'Multi-location inventory tracking',
+        'Integration with e-commerce platforms'
+      ],
+      pricing: '$399 – $1,999/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '35% reduction in inventory costs',
+        'Elimination of stockouts',
+        'Automated procurement processes',
+        'Improved cash flow management'
+      ],
+      category: 'Supply Chain'
+    },
+    {
+      icon: Globe,
+      name: 'Multi-Language Content Localizer',
+      description: 'AI-powered content translation and localization for global market expansion.',
+      features: [
+        'Real-time content translation',
+        'Cultural adaptation and localization',
+        'SEO optimization for target markets',
+        'Brand voice consistency across languages',
+        'Quality assurance and human review workflows',
+        'Analytics and performance tracking'
+      ],
+      pricing: '$199 – $999/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '10x faster content localization',
+        'Consistent brand messaging globally',
+        'Reduced translation costs',
+        'Faster market entry'
+      ],
+      category: 'Globalization'
+    },
+    {
+      icon: Code,
+      name: 'No-Code App Builder Platform',
+      description: 'Drag-and-drop application builder with AI assistance for rapid business app development.',
+      features: [
+        'Visual drag-and-drop interface',
+        'AI-powered component suggestions',
+        'Database integration and management',
+        'User authentication and permissions',
+        'Mobile app generation',
+        'API integration and webhooks'
+      ],
+      pricing: '$99 – $499/month',
+      timeline: '4–6 weeks',
+      benefits: [
+        '80% faster app development',
+        'No coding skills required',
+        'Reduced development costs',
+        'Rapid prototyping and iteration'
+      ],
+      category: 'Development Tools'
+    },
+    {
+      icon: Users,
+      name: 'AI Employee Onboarding Assistant',
+      description: 'Intelligent onboarding platform that personalizes the new hire experience and tracks progress.',
+      features: [
+        'Personalized onboarding workflows',
+        'Progress tracking and analytics',
+        'Automated task assignments',
+        'Mentor matching and scheduling',
+        'Compliance training automation',
+        'Feedback collection and analysis'
+      ],
+      pricing: '$149 – $699/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '60% faster onboarding completion',
+        'Improved new hire satisfaction',
+        'Reduced HR administrative workload',
+        'Better retention rates'
+      ],
+      category: 'HR Technology'
     }
   ];
 

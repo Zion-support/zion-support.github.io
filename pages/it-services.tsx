@@ -1229,6 +1229,190 @@ export default function ITServices() {
         'Increased confidence in system stability'
       ],
       category: 'Reliability Engineering'
+    },
+    {
+      icon: LinkIcon,
+      name: 'Blockchain & Web3 Development',
+      description: 'Comprehensive blockchain solutions including smart contracts, DeFi protocols, NFT platforms, and Web3 applications.',
+      features: [
+        'Smart contract development and auditing',
+        'DeFi protocol design and implementation',
+        'NFT marketplace and tokenization',
+        'Web3 application development',
+        'Blockchain integration and APIs',
+        'Cryptocurrency wallet development'
+      ],
+      pricing: '$150 – $400/hour',
+      projectPricing: '$25,000 – $200,000/project',
+      timeline: '6–20 weeks',
+      benefits: [
+        'Future-proof technology implementation',
+        'Enhanced security and transparency',
+        'Decentralized application architecture',
+        'Token economy and monetization'
+      ],
+      category: 'Blockchain & Web3'
+    },
+    {
+      icon: Cpu,
+      name: 'IoT & Edge Computing Solutions',
+      description: 'Internet of Things device development, edge computing infrastructure, and real-time data processing systems.',
+      features: [
+        'IoT device design and development',
+        'Edge computing infrastructure setup',
+        'Real-time data processing and analytics',
+        'Device connectivity and communication protocols',
+        'IoT security and device management',
+        'Integration with cloud platforms'
+      ],
+      pricing: '$120 – $300/hour',
+      projectPricing: '$15,000 – $150,000/project',
+      timeline: '4–16 weeks',
+      benefits: [
+        'Real-time data processing capabilities',
+        'Reduced latency and improved performance',
+        'Scalable IoT infrastructure',
+        'Enhanced operational efficiency'
+      ],
+      category: 'IoT & Edge Computing'
+    },
+    {
+      icon: Globe,
+      name: '5G & Network Infrastructure',
+      description: '5G network implementation, network optimization, and advanced telecommunications infrastructure solutions.',
+      features: [
+        '5G network planning and implementation',
+        'Network performance optimization',
+        'Telecommunications infrastructure design',
+        'Network security and monitoring',
+        'SD-WAN and network virtualization',
+        'Network automation and orchestration'
+      ],
+      pricing: '$200 – $500/hour',
+      projectPricing: '$50,000 – $500,000/project',
+      timeline: '8–24 weeks',
+      benefits: [
+        'Ultra-fast network connectivity',
+        'Improved network reliability and performance',
+        'Advanced network security',
+        'Future-ready infrastructure'
+      ],
+      category: 'Network Infrastructure'
+    },
+    {
+      icon: Brain,
+      name: 'Quantum Computing Integration',
+      description: 'Quantum computing solutions, quantum algorithm development, and hybrid classical-quantum systems.',
+      features: [
+        'Quantum algorithm development and optimization',
+        'Hybrid classical-quantum system design',
+        'Quantum machine learning implementation',
+        'Quantum cryptography and security',
+        'Quantum simulation and modeling',
+        'Integration with existing IT infrastructure'
+      ],
+      pricing: '$300 – $800/hour',
+      projectPricing: '$100,000 – $1,000,000/project',
+      timeline: '12–36 weeks',
+      benefits: [
+        'Exponential computational power',
+        'Advanced problem-solving capabilities',
+        'Future-proof technology adoption',
+        'Competitive advantage in complex computations'
+      ],
+      category: 'Quantum Computing'
+    },
+    {
+      icon: Shield,
+      name: 'Zero Trust Security Architecture',
+      description: 'Comprehensive zero trust security implementation with identity verification, micro-segmentation, and continuous monitoring.',
+      features: [
+        'Identity and access management (IAM)',
+        'Micro-segmentation and network isolation',
+        'Continuous security monitoring and analytics',
+        'Privileged access management (PAM)',
+        'Security orchestration and automation',
+        'Compliance and audit frameworks'
+      ],
+      pricing: '$180 – $400/hour',
+      projectPricing: '$30,000 – $300,000/project',
+      timeline: '6–20 weeks',
+      benefits: [
+        'Enhanced security posture',
+        'Reduced attack surface',
+        'Continuous security monitoring',
+        'Compliance with security standards'
+      ],
+      category: 'Security Architecture'
+    },
+    {
+      icon: Database,
+      name: 'Data Lake & Analytics Platform',
+      description: 'Enterprise data lake implementation with advanced analytics, machine learning pipelines, and real-time data processing.',
+      features: [
+        'Data lake architecture and implementation',
+        'ETL/ELT pipeline development',
+        'Real-time data streaming and processing',
+        'Advanced analytics and machine learning',
+        'Data governance and quality management',
+        'Business intelligence and reporting'
+      ],
+      pricing: '$150 – $350/hour',
+      projectPricing: '$40,000 – $400,000/project',
+      timeline: '8–24 weeks',
+      benefits: [
+        'Unified data platform',
+        'Advanced analytics capabilities',
+        'Real-time data insights',
+        'Improved decision-making'
+      ],
+      category: 'Data & Analytics'
+    },
+    {
+      icon: Smartphone,
+      name: 'Mobile App Development & DevOps',
+      description: 'Native and cross-platform mobile application development with CI/CD pipelines and app store optimization.',
+      features: [
+        'Native iOS and Android development',
+        'Cross-platform development (React Native, Flutter)',
+        'Mobile CI/CD pipeline setup',
+        'App store optimization and deployment',
+        'Mobile security and compliance',
+        'Performance optimization and monitoring'
+      ],
+      pricing: '$100 – $250/hour',
+      projectPricing: '$20,000 – $200,000/project',
+      timeline: '4–16 weeks',
+      benefits: [
+        'High-performance mobile applications',
+        'Faster time to market',
+        'Automated deployment processes',
+        'Optimized user experience'
+      ],
+      category: 'Mobile Development'
+    },
+    {
+      icon: Server,
+      name: 'Hybrid Cloud & Multi-Cloud Strategy',
+      description: 'Hybrid and multi-cloud architecture design, implementation, and management for optimal performance and cost efficiency.',
+      features: [
+        'Multi-cloud architecture design',
+        'Hybrid cloud integration and management',
+        'Cloud cost optimization and governance',
+        'Disaster recovery and backup strategies',
+        'Cloud security and compliance',
+        'Cloud migration and modernization'
+      ],
+      pricing: '$120 – $300/hour',
+      projectPricing: '$25,000 – $250,000/project',
+      timeline: '6–20 weeks',
+      benefits: [
+        'Optimized cloud costs',
+        'Enhanced reliability and performance',
+        'Flexible and scalable infrastructure',
+        'Reduced vendor lock-in'
+      ],
+      category: 'Cloud Strategy'
     }
   ];
 
