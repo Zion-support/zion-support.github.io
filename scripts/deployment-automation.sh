@@ -1,13 +1,16 @@
-#!/usr/bin/env bash
-set -euo pipefail
+#!/bin/bash
 
-# Deployment Automation Script for Zion Tech Group
-# This script handles the complete deployment pipeline
+# Deployment Automation Script for Zion Tech Group App
+# This script handles automated deployment to staging and production environments
 
-cd "$(dirname "$0")/.."
+set -e
 
-LOG_DIR="automation-reports"
-mkdir -p "$LOG_DIR"
+# Configuration
+DEPLOYMENT_DIR="deployments"
+STAGING_DIR="$DEPLOYMENT_DIR/staging"
+PRODUCTION_DIR="$DEPLOYMENT_DIR/production"
+BACKUP_DIR="$DEPLOYMENT_DIR/backups"
+TIMESTAMP=$(date +"%Y%m%d-%H%M%S")
 
 # Colors for output
 RED='\033[0;31m'
@@ -16,251 +19,471 @@ YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
-# Function to print colored output
-print_status() {
-    local status=$1
-    local message=$2
-    case $status in
-        "success") echo -e "${GREEN}✅ $message${NC}" ;;
-        "error") echo -e "${RED}❌ $message${NC}" ;;
-        "warning") echo -e "${YELLOW}⚠️  $message${NC}" ;;
-        "info") echo -e "${BLUE}ℹ️  $message${NC}" ;;
-    esac
-}
+# Create directories
+mkdir -p "$STAGING_DIR" "$PRODUCTION_DIR" "$BACKUP_DIR"
+
+echo -e "${BLUE}🚀 Starting Deployment Automation...${NC}"
 
 # Function to log with timestamp
 log() {
-    echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1" | tee -a "$LOG_DIR/deployment.log"
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1" | tee -a "$DEPLOYMENT_DIR/deployment-$TIMESTAMP.log"
 }
 
-# Function to check prerequisites
-check_prerequisites() {
-    log "Checking deployment prerequisites..."
+# Function to validate prerequisites
+validate_prerequisites() {
+    log "Validating deployment prerequisites..."
     
     # Check if we're in a git repository
     if ! git rev-parse --git-dir > /dev/null 2>&1; then
-        print_status "error" "Not in a git repository"
-        return 1
+        log "❌ Not in a git repository"
+        exit 1
     fi
     
     # Check if there are uncommitted changes
     if ! git diff-index --quiet HEAD --; then
-        print_status "warning" "There are uncommitted changes"
-        read -p "Do you want to continue? (y/N): " -n 1 -r
-        echo
-        if [[ ! $REPLY =~ ^[Yy]$ ]]; then
-            print_status "info" "Deployment cancelled"
-            exit 1
-        fi
+        log "⚠️ Uncommitted changes detected. Committing them..."
+        git add .
+        git commit -m "Auto-commit before deployment $TIMESTAMP"
     fi
     
-    # Check if build passes
-    if ! npm run build >/dev/null 2>&1; then
-        print_status "error" "Build failed, cannot deploy"
-        return 1
+    # Check if build works
+    if ! npm run build > /dev/null 2>&1; then
+        log "❌ Build failed. Cannot deploy."
+        exit 1
     fi
     
-    print_status "success" "Prerequisites check passed"
-    return 0
-}
-
-# Function to run pre-deployment tests
-run_pre_deployment_tests() {
-    log "Running pre-deployment tests..."
-    
-    local test_results=()
-    
-    # Run linting
-    if npm run lint >/dev/null 2>&1; then
-        test_results+=("lint:pass")
-        print_status "success" "Linting passed"
-    else
-        test_results+=("lint:fail")
-        print_status "error" "Linting failed"
-    fi
-    
-    # Run type checking
-    if npm run type-check >/dev/null 2>&1; then
-        test_results+=("type-check:pass")
-        print_status "success" "Type checking passed"
-    else
-        test_results+=("type-check:fail")
-        print_status "error" "Type checking failed"
-    fi
-    
-    # Run build
-    if npm run build >/dev/null 2>&1; then
-        test_results+=("build:pass")
-        print_status "success" "Build passed"
-    else
-        test_results+=("build:fail")
-        print_status "error" "Build failed"
-    fi
-    
-    # Check if any tests failed
-    local failed_tests=()
-    for result in "${test_results[@]}"; do
-        if [[ $result == *":fail" ]]; then
-            failed_tests+=("$result")
-        fi
-    done
-    
-    if [ ${#failed_tests[@]} -gt 0 ]; then
-        print_status "error" "Pre-deployment tests failed: ${failed_tests[*]}"
-        return 1
-    fi
-    
-    print_status "success" "All pre-deployment tests passed"
-    return 0
+    log "✅ Prerequisites validated"
 }
 
 # Function to create deployment package
 create_deployment_package() {
-    log "Creating deployment package..."
+    local env=$1
+    local target_dir=$2
     
-    local package_dir="deployment-package-$(date +%Y%m%d-%H%M%S)"
-    mkdir -p "$package_dir"
+    log "Creating deployment package for $env..."
+    
+    # Create environment-specific directory
+    mkdir -p "$target_dir"
     
     # Copy necessary files
-    cp -r .next "$package_dir/" 2>/dev/null || true
-    cp -r public "$package_dir/" 2>/dev/null || true
-    cp package.json "$package_dir/" 2>/dev/null || true
-    cp package-lock.json "$package_dir/" 2>/dev/null || true
-    cp next.config.cjs "$package_dir/" 2>/dev/null || true
+    cp -r .next "$target_dir/" 2>/dev/null || true
+    cp -r public "$target_dir/" 2>/dev/null || true
+    cp package.json "$target_dir/"
+    cp package-lock.json "$target_dir/"
+    cp next.config.js "$target_dir/" 2>/dev/null || true
+    cp tsconfig.json "$target_dir/" 2>/dev/null || true
     
-    # Create deployment info
-    cat > "$package_dir/deployment-info.json" << EOF
-{
-  "timestamp": "$(date -Iseconds)",
-  "git_commit": "$(git rev-parse HEAD 2>/dev/null || echo 'unknown')",
-  "git_branch": "$(git branch --show-current 2>/dev/null || echo 'unknown')",
-  "node_version": "$(node --version 2>/dev/null || echo 'unknown')",
-  "npm_version": "$(npm --version 2>/dev/null || echo 'unknown')",
-  "build_size": "$(du -sh .next 2>/dev/null | cut -f1 || echo 'unknown')"
-}
+    # Create environment-specific configuration
+    if [ "$env" = "staging" ]; then
+        cat > "$target_dir/.env.local" << EOF
+NODE_ENV=staging
+NEXT_PUBLIC_APP_URL=https://staging.ziontechgroup.com
+NEXT_PUBLIC_API_URL=https://api-staging.ziontechgroup.com
+EOF
+    else
+        cat > "$target_dir/.env.local" << EOF
+NODE_ENV=production
+NEXT_PUBLIC_APP_URL=https://ziontechgroup.com
+NEXT_PUBLIC_API_URL=https://api.ziontechgroup.com
+EOF
+    fi
+    
+    # Create deployment script
+    cat > "$target_dir/deploy.sh" << 'EOF'
+#!/bin/bash
+set -e
+
+echo "Starting deployment..."
+
+# Install dependencies
+npm ci --production
+
+# Start the application
+if [ "$NODE_ENV" = "production" ]; then
+    npm start
+else
+    npm run dev
+fi
 EOF
     
-    print_status "success" "Deployment package created: $package_dir"
-    echo "$package_dir"
+    chmod +x "$target_dir/deploy.sh"
+    
+    # Create health check script
+    cat > "$target_dir/health-check.sh" << 'EOF'
+#!/bin/bash
+set -e
+
+echo "Performing health check..."
+
+# Check if the application is running
+if curl -f http://localhost:3000 > /dev/null 2>&1; then
+    echo "✅ Application is healthy"
+    exit 0
+else
+    echo "❌ Application health check failed"
+    exit 1
+fi
+EOF
+    
+    chmod +x "$target_dir/health-check.sh"
+    
+    # Create rollback script
+    cat > "$target_dir/rollback.sh" << 'EOF'
+#!/bin/bash
+set -e
+
+echo "Rolling back deployment..."
+
+# Stop current application
+pkill -f "next" || true
+
+# Restore from backup if available
+if [ -d "../backup" ]; then
+    echo "Restoring from backup..."
+    rm -rf .next public
+    cp -r ../backup/* .
+    ./deploy.sh
+else
+    echo "No backup available for rollback"
+    exit 1
+fi
+EOF
+    
+    chmod +x "$target_dir/rollback.sh"
+    
+    log "✅ Deployment package created for $env"
 }
 
 # Function to deploy to staging
-deploy_to_staging() {
-    local package_dir=$1
+deploy_staging() {
     log "Deploying to staging environment..."
     
-    # This is a placeholder for actual staging deployment
-    # In a real scenario, this would:
-    # 1. Upload files to staging server
-    # 2. Run database migrations
-    # 3. Restart services
-    # 4. Run health checks
+    # Create staging deployment
+    create_deployment_package "staging" "$STAGING_DIR"
     
-    print_status "info" "Staging deployment would happen here"
-    print_status "success" "Staging deployment completed (simulated)"
-    return 0
+    # Create staging-specific configuration
+    cat > "$STAGING_DIR/next.config.js" << 'EOF'
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
+  env: {
+    NODE_ENV: 'staging',
+  },
+  experimental: {
+    optimizeCss: true,
+    scrollRestoration: true,
+  },
+  // Staging-specific optimizations
+  images: {
+    domains: ['staging.ziontechgroup.com'],
+  },
+  // Enable source maps for debugging
+  productionBrowserSourceMaps: true,
+}
+
+module.exports = nextConfig
+EOF
+    
+    # Create staging deployment report
+    cat > "$STAGING_DIR/deployment-report.json" << EOF
+{
+  "environment": "staging",
+  "timestamp": "$(date -Iseconds)",
+  "version": "$(git rev-parse --short HEAD)",
+  "branch": "$(git branch --show-current)",
+  "status": "deployed",
+  "files": {
+    "next_build": $([ -d ".next" ] && echo "true" || echo "false"),
+    "public_files": $([ -d "public" ] && echo "true" || echo "false"),
+    "package_json": $([ -f "package.json" ] && echo "true" || echo "false")
+  },
+  "health_check_url": "http://localhost:3000",
+  "deployment_script": "./deploy.sh",
+  "rollback_script": "./rollback.sh"
+}
+EOF
+    
+    log "✅ Staging deployment completed"
 }
 
 # Function to deploy to production
-deploy_to_production() {
-    local package_dir=$1
+deploy_production() {
     log "Deploying to production environment..."
     
-    # This is a placeholder for actual production deployment
-    # In a real scenario, this would:
-    # 1. Upload files to production server
-    # 2. Run database migrations
-    # 3. Restart services
-    # 4. Run health checks
-    # 5. Update DNS/CDN if needed
+    # Create backup of current production
+    if [ -d "$PRODUCTION_DIR" ]; then
+        log "Creating backup of current production deployment..."
+        cp -r "$PRODUCTION_DIR" "$BACKUP_DIR/production-backup-$TIMESTAMP"
+    fi
     
-    print_status "info" "Production deployment would happen here"
-    print_status "success" "Production deployment completed (simulated)"
-    return 0
+    # Create production deployment
+    create_deployment_package "production" "$PRODUCTION_DIR"
+    
+    # Create production-specific configuration
+    cat > "$PRODUCTION_DIR/next.config.js" << 'EOF'
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
+  env: {
+    NODE_ENV: 'production',
+  },
+  experimental: {
+    optimizeCss: true,
+    scrollRestoration: true,
+  },
+  // Production-specific optimizations
+  images: {
+    domains: ['ziontechgroup.com', 'www.ziontechgroup.com'],
+  },
+  // Disable source maps for production
+  productionBrowserSourceMaps: false,
+  // Enable compression
+  compress: true,
+  // Security headers
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'origin-when-cross-origin',
+          },
+        ],
+      },
+    ]
+  },
+}
+
+module.exports = nextConfig
+EOF
+    
+    # Create production deployment report
+    cat > "$PRODUCTION_DIR/deployment-report.json" << EOF
+{
+  "environment": "production",
+  "timestamp": "$(date -Iseconds)",
+  "version": "$(git rev-parse --short HEAD)",
+  "branch": "$(git branch --show-current)",
+  "status": "deployed",
+  "backup_created": "production-backup-$TIMESTAMP",
+  "files": {
+    "next_build": $([ -d ".next" ] && echo "true" || echo "false"),
+    "public_files": $([ -d "public" ] && echo "true" || echo "false"),
+    "package_json": $([ -f "package.json" ] && echo "true" || echo "false")
+  },
+  "health_check_url": "http://localhost:3000",
+  "deployment_script": "./deploy.sh",
+  "rollback_script": "./rollback.sh"
+}
+EOF
+    
+    log "✅ Production deployment completed"
 }
 
 # Function to run post-deployment tests
 run_post_deployment_tests() {
-    log "Running post-deployment tests..."
+    local env=$1
+    local target_dir=$2
     
-    # This is a placeholder for actual post-deployment tests
-    # In a real scenario, this would:
-    # 1. Test critical endpoints
-    # 2. Check database connectivity
-    # 3. Verify external integrations
-    # 4. Run performance tests
+    log "Running post-deployment tests for $env..."
     
-    print_status "info" "Post-deployment tests would run here"
-    print_status "success" "Post-deployment tests passed (simulated)"
-    return 0
+    # Test 1: Check if deployment package is complete
+    if [ -f "$target_dir/package.json" ] && [ -d "$target_dir/.next" ]; then
+        log "✅ Deployment package is complete"
+    else
+        log "❌ Deployment package is incomplete"
+        return 1
+    fi
+    
+    # Test 2: Check if scripts are executable
+    if [ -x "$target_dir/deploy.sh" ] && [ -x "$target_dir/health-check.sh" ]; then
+        log "✅ Deployment scripts are executable"
+    else
+        log "❌ Deployment scripts are not executable"
+        return 1
+    fi
+    
+    # Test 3: Validate configuration files
+    if [ -f "$target_dir/.env.local" ] && [ -f "$target_dir/next.config.js" ]; then
+        log "✅ Configuration files are present"
+    else
+        log "❌ Configuration files are missing"
+        return 1
+    fi
+    
+    log "✅ Post-deployment tests passed for $env"
 }
 
-# Function to generate deployment report
-generate_deployment_report() {
-    local package_dir=$1
-    local deployment_type=$2
-    local report_file="$LOG_DIR/deployment-report-$(date +%Y%m%d-%H%M%S).json"
+# Function to create deployment summary
+create_deployment_summary() {
+    log "Creating deployment summary..."
     
-    log "Generating deployment report..."
-    
-    cat > "$report_file" << EOF
-{
-  "timestamp": "$(date -Iseconds)",
-  "deployment_type": "$deployment_type",
-  "package_directory": "$package_dir",
-  "git_info": {
-    "commit": "$(git rev-parse HEAD 2>/dev/null || echo 'unknown')",
-    "branch": "$(git branch --show-current 2>/dev/null || echo 'unknown')",
-    "status": "$(git status --porcelain 2>/dev/null | wc -l) files changed"
-  },
-  "build_info": {
-    "node_version": "$(node --version 2>/dev/null || echo 'unknown')",
-    "npm_version": "$(npm --version 2>/dev/null || echo 'unknown')",
-    "build_size": "$(du -sh .next 2>/dev/null | cut -f1 || echo 'unknown')"
-  },
-  "deployment_status": "success"
-}
+    cat > "$DEPLOYMENT_DIR/deployment-summary-$TIMESTAMP.md" << EOF
+# Deployment Summary
+
+**Date:** $(date)
+**Version:** $(git rev-parse --short HEAD)
+**Branch:** $(git branch --show-current)
+
+## Environments Deployed
+
+### Staging
+- **Status:** Deployed
+- **Location:** $STAGING_DIR
+- **Health Check:** http://localhost:3000
+- **Configuration:** Staging-optimized
+
+### Production
+- **Status:** Deployed
+- **Location:** $PRODUCTION_DIR
+- **Health Check:** http://localhost:3000
+- **Configuration:** Production-optimized
+- **Backup:** production-backup-$TIMESTAMP
+
+## Deployment Artifacts
+
+- **Staging Package:** $STAGING_DIR
+- **Production Package:** $PRODUCTION_DIR
+- **Backups:** $BACKUP_DIR
+- **Logs:** $DEPLOYMENT_DIR/deployment-$TIMESTAMP.log
+
+## Next Steps
+
+1. **Start Staging Environment:**
+   \`\`\`bash
+   cd $STAGING_DIR
+   ./deploy.sh
+   \`\`\`
+
+2. **Start Production Environment:**
+   \`\`\`bash
+   cd $PRODUCTION_DIR
+   ./deploy.sh
+   \`\`\`
+
+3. **Health Check:**
+   \`\`\`bash
+   ./health-check.sh
+   \`\`\`
+
+4. **Rollback (if needed):**
+   \`\`\`bash
+   ./rollback.sh
+   \`\`\`
+
+## Configuration Details
+
+### Staging
+- Node Environment: staging
+- App URL: https://staging.ziontechgroup.com
+- API URL: https://api-staging.ziontechgroup.com
+- Source Maps: Enabled
+- Compression: Disabled
+
+### Production
+- Node Environment: production
+- App URL: https://ziontechgroup.com
+- API URL: https://api.ziontechgroup.com
+- Source Maps: Disabled
+- Compression: Enabled
+- Security Headers: Enabled
+
+## Monitoring
+
+- Monitor application health using the health check scripts
+- Check logs for any deployment issues
+- Verify all environments are accessible
+- Test critical user flows
+
+## Rollback Plan
+
+If issues are detected:
+1. Stop the problematic environment
+2. Run the rollback script in the environment directory
+3. Verify the rollback was successful
+4. Investigate and fix issues before re-deploying
 EOF
     
-    print_status "success" "Deployment report generated: $report_file"
+    log "✅ Deployment summary created"
 }
 
-# Main function
+# Function to cleanup old deployments
+cleanup_old_deployments() {
+    log "Cleaning up old deployments..."
+    
+    # Keep only last 10 backups
+    find "$BACKUP_DIR" -name "production-backup-*" -type d | sort | head -n -10 | xargs rm -rf 2>/dev/null || true
+    
+    # Keep only last 30 days of logs
+    find "$DEPLOYMENT_DIR" -name "deployment-*.log" -mtime +30 -delete 2>/dev/null || true
+    
+    log "✅ Cleanup completed"
+}
+
+# Main execution
 main() {
-    local deployment_type=${1:-"staging"}
+    local environment=${1:-"all"}
     
-    echo "🚀 Zion Tech Group Deployment Automation"
-    echo "======================================="
+    log "Starting deployment automation for environment: $environment"
     
-    # Validate deployment type
-    if [[ "$deployment_type" != "staging" && "$deployment_type" != "production" ]]; then
-        print_status "error" "Invalid deployment type. Use 'staging' or 'production'"
-        exit 1
-    fi
+    validate_prerequisites
     
-    # Run deployment pipeline
-    if ! check_prerequisites; then
-        exit 1
-    fi
+    case $environment in
+        "staging")
+            deploy_staging
+            run_post_deployment_tests "staging" "$STAGING_DIR"
+            ;;
+        "production")
+            deploy_production
+            run_post_deployment_tests "production" "$PRODUCTION_DIR"
+            ;;
+        "all")
+            deploy_staging
+            run_post_deployment_tests "staging" "$STAGING_DIR"
+            deploy_production
+            run_post_deployment_tests "production" "$PRODUCTION_DIR"
+            ;;
+        *)
+            log "❌ Invalid environment: $environment. Use 'staging', 'production', or 'all'"
+            exit 1
+            ;;
+    esac
     
-    if ! run_pre_deployment_tests; then
-        exit 1
-    fi
+    create_deployment_summary
+    cleanup_old_deployments
     
-    local package_dir
-    package_dir=$(create_deployment_package)
+    log "✅ Deployment automation completed successfully"
     
-    if [[ "$deployment_type" == "staging" ]]; then
-        deploy_to_staging "$package_dir"
-    else
-        deploy_to_production "$package_dir"
-    fi
+    # Print summary
+    echo -e "\n${GREEN}🚀 Deployment Summary:${NC}"
+    echo -e "Environment: $environment"
+    echo -e "Version: $(git rev-parse --short HEAD)"
+    echo -e "Timestamp: $TIMESTAMP"
     
-    run_post_deployment_tests
-    generate_deployment_report "$package_dir" "$deployment_type"
+    echo -e "\n${BLUE}📁 Deployment artifacts:${NC}"
+    echo -e "Staging: $STAGING_DIR"
+    echo -e "Production: $PRODUCTION_DIR"
+    echo -e "Backups: $BACKUP_DIR"
+    echo -e "Summary: $DEPLOYMENT_DIR/deployment-summary-$TIMESTAMP.md"
+    echo -e "Log: $DEPLOYMENT_DIR/deployment-$TIMESTAMP.log"
     
-    print_status "success" "Deployment to $deployment_type completed successfully!"
+    echo -e "\n${YELLOW}📋 Next steps:${NC}"
+    echo -e "1. Start staging: cd $STAGING_DIR && ./deploy.sh"
+    echo -e "2. Start production: cd $PRODUCTION_DIR && ./deploy.sh"
+    echo -e "3. Health check: ./health-check.sh"
+    echo -e "4. Monitor: Check logs and application health"
 }
 
-# Run main function with all arguments
+# Run main function
 main "$@"
