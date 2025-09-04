@@ -1025,25 +1025,108 @@ export default function ITServices() {
     },
     {
       icon: Cpu,
+      name: 'Quantum Computing Infrastructure',
+      description: 'Quantum computing infrastructure setup, algorithm development, and quantum-classical hybrid systems.',
+      features: [
+        'Quantum algorithm development',
+        'Quantum hardware integration',
+        'Hybrid quantum-classical systems',
+        'Quantum error correction',
+        'Quantum simulation platforms'
+      ],
+      pricing: '$4,999 – $15,999/month',
+      timeline: '8–12 weeks',
+      benefits: [
+        'Exponential computational power',
+        'Advanced problem solving capabilities',
+        'Future-proof technology investment',
+        'Competitive advantage in research'
+      ],
+      category: 'Quantum Computing'
     },
     {
       icon: Shield,
       name: 'Zero Trust Security Architecture',
+      description: 'Comprehensive zero trust security framework implementation for enterprise networks and applications.',
+      features: [
+        'Identity and access management',
+        'Network segmentation',
+        'Continuous monitoring and validation',
+        'Multi-factor authentication',
+        'Security policy automation'
+      ],
+      pricing: '$2,999 – $8,999/month',
+      timeline: '6–10 weeks',
+      benefits: [
+        'Enhanced security posture',
+        'Reduced attack surface',
+        'Improved compliance',
+        'Better threat detection'
       ],
       category: 'Security'
     },
     {
       icon: Database,
+      name: 'Advanced Database Management',
+      description: 'Comprehensive database management solutions including optimization, migration, and performance tuning.',
+      features: [
+        'Database performance optimization',
+        'Data migration and consolidation',
+        'Backup and disaster recovery',
+        'Security and compliance',
+        'Real-time monitoring and alerting'
       ],
-      category: 'Network Infrastructure'
+      pricing: '$1,999 – $5,999/month',
+      timeline: '4–8 weeks',
+      benefits: [
+        'Improved database performance',
+        'Reduced downtime',
+        'Enhanced data security',
+        'Better scalability'
+      ],
+      category: 'Database Management'
     },
     {
       icon: Brain,
+      name: 'AI Infrastructure Platform',
+      description: 'Comprehensive AI infrastructure setup and management for enterprise machine learning and AI applications.',
+      features: [
+        'ML model deployment and management',
+        'GPU cluster management',
+        'Data pipeline automation',
+        'Model versioning and monitoring',
+        'AI workflow orchestration'
+      ],
+      pricing: '$3,999 – $12,999/month',
+      timeline: '6–10 weeks',
+      benefits: [
+        'Scalable AI infrastructure',
+        'Faster model deployment',
+        'Improved AI performance',
+        'Reduced operational complexity'
       ],
       category: 'AI Infrastructure'
     },
     {
       icon: Server,
+      name: 'Cloud Infrastructure Management',
+      description: 'Comprehensive cloud infrastructure management and optimization for AWS, Azure, and Google Cloud platforms.',
+      features: [
+        'Multi-cloud infrastructure setup',
+        'Cost optimization and monitoring',
+        'Security and compliance management',
+        'Automated scaling and load balancing',
+        'Disaster recovery and backup'
+      ],
+      pricing: '$2,499 – $7,999/month',
+      timeline: '4–8 weeks',
+      benefits: [
+        'Optimized cloud costs',
+        'Improved reliability',
+        'Enhanced security',
+        'Better performance'
+      ],
+      category: 'Cloud Infrastructure'
     }
   ];
 

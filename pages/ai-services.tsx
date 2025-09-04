@@ -827,23 +827,108 @@ export default function AIServices() {
     },
     {
       icon: Brain,
-      ]
+      name: 'AI-Powered Drug Discovery Platform',
+      description: 'Advanced AI platform for pharmaceutical research, drug discovery, and molecular analysis using deep learning.',
+      features: [
+        'Molecular structure analysis and prediction',
+        'Drug-target interaction modeling',
+        'Clinical trial optimization',
+        'Side effect prediction and mitigation',
+        'Personalized medicine recommendations'
+      ],
+      pricing: '$2,999 – $9,999/month',
+      timeline: '6–8 weeks',
+      benefits: [
+        'Faster drug development cycles',
+        'Reduced research and development costs',
+        'Improved success rates in clinical trials',
+        'Enhanced drug safety profiles'
+      ],
+      category: 'Healthcare'
     },
     {
       icon: Eye,
-      ]
+      name: 'Computer Vision Analytics Platform',
+      description: 'Advanced computer vision solutions for image recognition, object detection, and visual analytics across industries.',
+      features: [
+        'Real-time image and video analysis',
+        'Object detection and tracking',
+        'Facial recognition and analysis',
+        'Quality control automation',
+        'Visual search capabilities'
+      ],
+      pricing: '$1,499 – $4,999/month',
+      timeline: '4–6 weeks',
+      benefits: [
+        'Automated visual inspection',
+        'Improved accuracy in image analysis',
+        'Reduced manual review time',
+        'Enhanced security and surveillance'
+      ],
+      category: 'Computer Vision'
     },
     {
       icon: TrendingUp,
-      ]
+      name: 'Predictive Analytics Engine',
+      description: 'Advanced predictive analytics platform that uses machine learning to forecast trends, behaviors, and outcomes.',
+      features: [
+        'Time series forecasting',
+        'Customer behavior prediction',
+        'Market trend analysis',
+        'Risk assessment and modeling',
+        'Automated reporting and insights'
+      ],
+      pricing: '$1,999 – $5,999/month',
+      timeline: '5–7 weeks',
+      benefits: [
+        'Improved decision making',
+        'Reduced business risks',
+        'Enhanced operational efficiency',
+        'Better resource allocation'
+      ],
+      category: 'Analytics'
     },
     {
       icon: Mic,
-      ]
+      name: 'Voice AI Assistant Platform',
+      description: 'Intelligent voice recognition and natural language processing platform for conversational AI applications.',
+      features: [
+        'Speech-to-text conversion',
+        'Natural language understanding',
+        'Voice command processing',
+        'Multi-language support',
+        'Real-time conversation management'
+      ],
+      pricing: '$1,299 – $3,999/month',
+      timeline: '4–6 weeks',
+      benefits: [
+        'Enhanced customer experience',
+        'Automated voice interactions',
+        'Improved accessibility',
+        'Reduced support costs'
+      ],
+      category: 'Voice AI'
     },
     {
       icon: Database,
-      ]
+      name: 'AI Data Processing Platform',
+      description: 'Comprehensive data processing and analysis platform powered by artificial intelligence for enterprise data management.',
+      features: [
+        'Automated data cleaning and validation',
+        'Real-time data processing',
+        'Advanced data visualization',
+        'Machine learning model deployment',
+        'Data pipeline automation'
+      ],
+      pricing: '$2,499 – $7,999/month',
+      timeline: '6–8 weeks',
+      benefits: [
+        'Improved data quality',
+        'Faster data processing',
+        'Enhanced data insights',
+        'Reduced manual data work'
+      ],
+      category: 'Data Processing'
     }
   ];
 

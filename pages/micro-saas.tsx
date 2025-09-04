@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import { Layers, Cloud, FileText, Users, BarChart3, Mail, Clock, Shield, Zap, TrendingUp, Settings, Globe, Code, Brain, Calendar, Headphones, RefreshCw, Video, Stethoscope, Cpu } from 'lucide-react';
 
 export default function MicroSaaS() {
   const contact = {
@@ -1077,22 +1078,67 @@ export default function MicroSaaS() {
       category: 'Event Management'
     },
     {
+      icon: Brain,
+      name: 'AI-Powered Email Responder',
+      description: 'Intelligent email automation that reads, analyzes, and responds to emails with human-like accuracy and context awareness.',
+      features: [
+        'Natural language processing for email understanding',
+        'Context-aware response generation',
+        'Priority classification and routing',
+        'Multi-language support',
+        'Integration with CRM systems'
       ],
       pricing: '$199 – $1,299/month',
       timeline: '2–3 weeks',
       benefits: [
+        'Reduced email response time',
+        'Improved customer satisfaction',
+        'Automated email management',
+        'Better email organization'
       ],
-      category: 'E-Commerce'
+      category: 'Email Automation'
     },
     {
+      icon: Calendar,
+      name: 'Event Management Platform',
+      description: 'Comprehensive event management solution for planning, organizing, and executing events of all sizes.',
+      features: [
+        'Event registration and ticketing',
+        'Attendee management and communication',
+        'Venue and resource booking',
+        'Real-time analytics and reporting',
+        'Mobile app for attendees and organizers'
       ],
       pricing: '$299 – $1,999/month',
       timeline: '3–4 weeks',
       benefits: [
+        'Streamlined event planning',
+        'Improved attendee experience',
+        'Better event ROI tracking',
+        'Enhanced event operations'
+      ],
+      category: 'Event Management'
     },
     {
       icon: Shield,
       name: 'Cybersecurity Compliance Manager',
+      description: 'Automated cybersecurity compliance management platform for regulatory adherence and security monitoring.',
+      features: [
+        'Compliance framework management',
+        'Automated security assessments',
+        'Risk monitoring and reporting',
+        'Policy management and enforcement',
+        'Audit trail and documentation'
+      ],
+      pricing: '$1,999 – $4,999/month',
+      timeline: '4–6 weeks',
+      benefits: [
+        'Simplified compliance management',
+        'Reduced audit preparation time',
+        'Better security posture',
+        'Automated compliance reporting'
+      ],
+      category: 'Cybersecurity'
     }
   ];
 
