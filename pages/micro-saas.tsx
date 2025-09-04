@@ -348,7 +348,33 @@ export default function MicroSaaS() {
         'Integration with Git and CI/CD',
         'Team collaboration and feedback tools'
       ],
+<<<<<<< HEAD
       pricing: '$199 - $799/month',
+=======
+      pricing: '$299 - $1,200/month',
+      delivery: '3-5 weeks',
+      category: 'Development SaaS';
+},
+    {
+      title: 'Affiliate Marketing Tracking Platform',
+      description: 'Comprehensive affiliate program management with fraud detection and automated payouts',
+      icon: TrendingUp,
+      features: [
+        'Custom referral link generation and tracking,Cross-device attribution and fraud detection,Automated commission calculations and payouts,Real-time performance analytics and reporting,Multi-tier affiliate program support,Integration with e-commerce platforms and payment systems'
+      ],
+      pricing: '$199 - $999/month',
+      delivery: '3-4 weeks',
+      category: 'Marketing SaaS';
+},
+    {
+      title: 'AI-Powered Email Follow-up Automation',
+      description: 'Intelligent email sequence automation with personalization and engagement tracking',
+      icon: Mail,
+      features: [
+        'Smart follow-up sequence creation and management,AI-powered personalization and timing optimization,Engagement tracking and response analysis,A/B testing for email campaigns,CRM integration and lead scoring,Compliance with email regulations (CAN-SPAM, GDPR)'
+      ],
+      pricing: '$99 - $499/month',
+>>>>>>> origin/merge-pr-11140
       delivery: '2-3 weeks',
       category: 'Analytics SaaS'
     },
@@ -684,9 +710,48 @@ export default function MicroSaaS() {
       ],
       pricing: '$399 - $1,800/month',
       delivery: '3-5 weeks',
+<<<<<<< HEAD
       category: 'Translation SaaS'
     }
   ];
+=======
+      category: 'Education SaaS';
+},
+    {
+      title: 'Smart Fitness & Wellness Coach',
+      description: 'AI-powered fitness platform with personalized workout plans, nutrition tracking, and health monitoring',
+      icon: Heart,
+      features: [
+        'AI-powered personalized workout plan generation,Nutrition tracking and meal planning with AI recommendations,Real-time form analysis and injury prevention,Integration with fitness trackers and health devices,Progress tracking and goal achievement analytics,Social features and community challenges,Integration with personal trainers and nutritionists,Wellness coaching and lifestyle optimization'
+      ],
+      pricing: '$19.99 - $99.99/month',
+      delivery: '3-5 weeks',
+      category: 'Fitness SaaS';
+},
+    {
+      title: 'AI-Powered Travel Planning Assistant',
+      description: 'Intelligent travel planning with personalized recommendations, real-time updates, and cost optimization',
+      icon: Globe,
+      features: [
+        'AI-powered personalized travel recommendations,Real-time flight and hotel price monitoring,Itinerary optimization based on preferences and constraints,Weather and event integration for trip planning,Travel document and visa assistance,Local experience and activity recommendations,Cost tracking and budget optimization,Integration with booking platforms and travel services'
+      ],
+      pricing: '$9.99 - $49.99/month',
+      delivery: '2-4 weeks',
+      category: 'Travel SaaS';
+},
+    {
+      title: 'Smart Pet Care Management',
+      description: 'AI-powered pet health monitoring with veterinary integration and care recommendations',
+      icon: Heart,
+      features: [
+        'AI-powered pet health monitoring and analysis,Veterinary appointment scheduling and reminders,Pet behavior analysis and training recommendations,Nutrition tracking and feeding schedule optimization,Integration with pet wearables and health devices,Emergency alert system and vet contact,Pet insurance integration and claims processing,Social features for pet owners and community'
+      ],
+      pricing: '$14.99 - $79.99/month',
+      delivery: '3-5 weeks',
+      category: 'Pet Care SaaS';
+}
+  ]
+>>>>>>> origin/merge-pr-11140
 
   const technologies = [
     { name: 'Frontend', icon: Monito r, description: 'React, Next.js, Vue.js, Angular' },
