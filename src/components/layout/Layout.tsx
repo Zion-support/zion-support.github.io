@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 
 interface LayoutProps {
-  children: Reac t.ReactNode;
+  children: React.ReactNode;
 }
 
-const Layout: Reac t.FC<LayoutProps> = ({ children }) => {
+const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 

@@ -2,10 +2,8 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { motion  } from 'framer-motion';
 
 interface Props extends React.PropsWithChildren<{}> {
-
-  children: ReactNod e;
+  children: ReactNode;
   fallback?: ReactNode;
-
 }
 
 interface State {
@@ -18,23 +16,23 @@ interface State {
 }
 
 class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Prop s) {
+  constructor(props: Props) {
     super(props);
     this.state = {
-      hasError: fals e,
+      hasError: false,
       retryCount: 0
     };
   }
 
-  static getDerivedStateFromError(error: Erro r): State {
+  static getDerivedStateFromError(error: Error): State {
     return {
-      hasError: tru e,
+      hasError: true,
       error,
       retryCount: 0
     };
   }
 
-  componentDidCatch(error: Erro r, errorInfo: ErrorInf o) {
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error:', error, errorInfo);
     this.setState({
       error,
@@ -45,7 +43,7 @@ class ErrorBoundary extends Component<Props, State> {
     this.logError(error, errorInfo);
   }
 
-  logError = (error: anyErro r, errorInfo: ErrorInf o)  => {
+  logError = (error: any, errorInfo: ErrorInfo) => {
     // Log to console for development
     if (process.env.NODE_ENV === 'development') {
       console.group('Error Boundary Error');
@@ -55,15 +53,15 @@ class ErrorBoundary extends Component<Props, State> {
     }
 
     // In production, you could send to error reporting service
-    // Example: Sentr y, LogRocket, etc.
+    // Example: Sentry, LogRocket, etc.
   };
 
   handleRetry = () => {
     this.setState(prevState => ({
-      hasError: fals e,
-      error: undefine d,
-      errorInfo: undefine d,
-      retryCount: prevStat e.retryCount + 1
+      hasError: false,
+      error: undefined,
+      errorInfo: undefined,
+      retryCount: prevState.retryCount + 1
     }));
   };
 
@@ -79,7 +77,7 @@ class ErrorBoundary extends Component<Props, State> {
 
       return (
         <motion.div
-          initial={{ opacity: 0, y: 2 0 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"
         >

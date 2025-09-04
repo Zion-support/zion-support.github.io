@@ -4,6 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "ci:preflight": "node -e \"try{require('fs').accessSync('dist');console.log('dist exists')}catch(e){process.exit(0)}\" && echo prebuilt || echo building",
+    "ci:build-test": "npm run build && npm run test:smoke",
     "dev": "vite",
     "build": "vite build",
     "prebuild": "echo \"Starting build...\"",
