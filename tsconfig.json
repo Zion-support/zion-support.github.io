@@ -17,6 +17,7 @@
     "baseUrl": "."
   },
   "include": [
+<<<<<<< HEAD
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "lib/**/*",
@@ -34,6 +35,22 @@
     ".next",
     "out",
     "dist",
+=======
+    "src/**/*",
+    "pages/**/*",
+    "components/**/*.ts",
+    "components/**/*.tsx",
+    "data/services.ts",
+    "styles/**/*",
+    "types/**/*",
+    "utils/**/*",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+>>>>>>> origin/cursor/website-audit-content-update-and-deployment-f8ab
     "api-backup",
     "pages.disabled",
     "backup-pages",
@@ -42,6 +59,7 @@
     "broken_files_backup",
     "contracts",
     "cypress",
+<<<<<<< HEAD
     "temp_working",
     "supabase/functions",
     "**/*.backup",
@@ -56,5 +74,18 @@
     "tests/**",
     "**/*.js",
     "**/*.cjs"
+=======
+    "**/*.backup",
+    "**/*.disabled",
+    "temp_working",
+    "supabase/functions",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    ".next",
+    "out",
+    "dist"
+>>>>>>> origin/cursor/website-audit-content-update-and-deployment-f8ab
   ]
 }

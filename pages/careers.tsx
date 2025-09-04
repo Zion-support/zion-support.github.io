@@ -1,173 +1,217 @@
-import Link from 'next/link';
-import Head from 'next/head';
-import { useState, useEffect } from 'react';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Users, MapPin, Clock, Briefcase, Heart, Zap, Brain, Shield, Cloud, Rocket } from 'lucide-react';
 
-export default function Careers() {
-  const [isLoaded, setIsLoaded] = useState(false);
-  
-  useEffect(() => {
-    setIsLoaded(true);
-  }, []);
-
-  const contact = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    site: 'https://ziontechgroup.com'
-  }
-
-  const openPositions = [
+export default function CareersPage() {
+  const benefits = [
     {
-      title: "Senior Full Stack Developer",
-      department: "Engineering",
-      location: "Remote / Delaware",
-      type: "Full-time",
-      description: "Lead development of micro SaaS products and enterprise solutions",
-      requirements: ["5+ years experience", "React/Next.js", "Node.js", "Cloud platforms"]
+      icon: Heart,
+      title: "Health & Wellness",
+      description: "Comprehensive health insurance, dental, vision, and wellness programs"
     },
     {
-      title: "AI/ML Engineer",
-      department: "AI Services",
-      location: "Remote / Delaware",
-      type: "Full-time",
-      description: "Develop and implement AI solutions and machine learning models",
-      requirements: ["3+ years ML experience", "Python", "TensorFlow/PyTorch", "Cloud AI services"]
+      icon: Briefcase,
+      title: "Professional Development",
+      description: "Learning budget, conference attendance, and career advancement opportunities"
     },
     {
-      title: "DevOps Engineer",
-      department: "Cloud & DevOps",
-      location: "Remote / Delaware",
-      type: "Full-time",
-      description: "Manage cloud infrastructure and CI/CD pipelines",
-      requirements: ["3+ years DevOps", "AWS/Azure/GCP", "Docker/Kubernetes", "Infrastructure as Code"]
+      icon: Clock,
+      title: "Work-Life Balance",
+      description: "Flexible hours, remote work options, and generous PTO"
     },
     {
-      title: "Cybersecurity Specialist",
-      department: "Security",
-      location: "Remote / Delaware",
-      type: "Full-time",
-      description: "Protect systems and data with advanced security solutions",
-      requirements: ["3+ years security", "Security certifications", "Threat analysis", "Compliance"]
-    },
-    {
-      title: "Quantum Computing Researcher",
-      department: "Research & Development",
-      location: "Remote / Delaware",
-      type: "Full-time",
-      description: "Research and develop quantum computing solutions",
-      requirements: ["PhD in Physics/CS", "Quantum algorithms", "Research experience", "Publication record"]
-    },
-    {
-      title: "Business Development Manager",
-      department: "Sales & Marketing",
-      location: "Remote / Delaware",
-      type: "Full-time",
-      description: "Drive business growth and client relationships",
-      requirements: ["3+ years B2B sales", "Tech industry", "Client management", "Growth mindset"]
+      icon: Zap,
+      title: "Innovation Time",
+      description: "Dedicated time to explore new technologies and personal projects"
     }
   ];
 
-  const benefits = [
+  const openPositions = [
     {
-      title: "Competitive Compensation",
-      description: "Industry-leading salary and equity packages",
-      icon: "💰"
+      title: "Senior AI/ML Engineer",
+      location: "Remote / Middletown, DE",
+      type: "Full-time",
+      department: "Engineering",
+      description: "Lead the development of cutting-edge AI and machine learning solutions for enterprise clients."
     },
     {
-      title: "Remote-First Culture",
-      description: "Work from anywhere with flexible schedules",
-      icon: "🏠"
+      title: "Cybersecurity Specialist",
+      location: "Remote / Middletown, DE",
+      type: "Full-time",
+      department: "Security",
+      description: "Design and implement comprehensive cybersecurity solutions to protect client infrastructure."
     },
     {
-      title: "Professional Development",
-      description: "Learning budget and conference attendance",
-      icon: "📚"
+      title: "Cloud Solutions Architect",
+      location: "Remote / Middletown, DE",
+      type: "Full-time",
+      department: "Engineering",
+      description: "Architect scalable cloud solutions using AWS, Azure, and Google Cloud platforms."
     },
     {
-      title: "Health & Wellness",
-      description: "Comprehensive health insurance and wellness programs",
-      icon: "🏥"
+      title: "DevOps Engineer",
+      location: "Remote / Middletown, DE",
+      type: "Full-time",
+      department: "Engineering",
+      description: "Build and maintain CI/CD pipelines and infrastructure automation systems."
     },
     {
-      title: "Cutting-Edge Technology",
-      description: "Work with the latest technologies and tools",
-      icon: "⚡"
+      title: "Business Development Manager",
+      location: "Remote / Middletown, DE",
+      type: "Full-time",
+      department: "Sales",
+      description: "Drive business growth by identifying and pursuing new client opportunities."
     },
     {
-      title: "Innovation Time",
-      description: "Dedicated time for personal projects and innovation",
-      icon: "🚀"
+      title: "UX/UI Designer",
+      location: "Remote / Middletown, DE",
+      type: "Full-time",
+      department: "Design",
+      description: "Create intuitive and engaging user experiences for our technology solutions."
+    }
+  ];
+
+  const values = [
+    {
+      icon: Brain,
+      title: "Innovation",
+      description: "We encourage creative thinking and embrace new technologies"
+    },
+    {
+      icon: Users,
+      title: "Collaboration",
+      description: "We work together as a team to achieve common goals"
+    },
+    {
+      icon: Shield,
+      title: "Integrity",
+      description: "We maintain the highest ethical standards in everything we do"
+    },
+    {
+      icon: Rocket,
+      title: "Excellence",
+      description: "We strive for excellence in every project and interaction"
     }
   ];
 
   return (
     <>
-      <Head>
+      <Helmet>
         <title>Careers - Zion Tech Group | Join Our Team</title>
-        <meta name="description" content="Join Zion Tech Group and work on cutting-edge technology solutions. We're hiring developers, engineers, researchers, and business professionals." />
-        <meta name="keywords" content="careers, jobs, employment, tech jobs, remote work, software development, AI engineering, DevOps, cybersecurity" />
-        <link rel="canonical" href={`${contact.site}/careers`} />
-        <meta property="og:title" content="Careers - Zion Tech Group" />
-        <meta property="og:description" content="Join our team and work on cutting-edge technology solutions" />
-        <meta property="og:url" content={`${contact.site}/careers`} />
-        <meta property="og:type" content="website" />
-      </Head>
+        <meta name="description" content="Join Zion Tech Group and be part of a team that's shaping the future of technology. Explore career opportunities in AI, cybersecurity, cloud, and more." />
+        <meta name="keywords" content="careers zion tech group, technology jobs, AI engineer jobs, cybersecurity careers, cloud jobs" />
+        <link rel="canonical" href="https://ziontechgroup.com/careers" />
+      </Helmet>
 
-      <div className={`min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Join Our Team
-            </h1>
-            <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Be part of the future of technology. Work on cutting-edge solutions in AI, quantum computing, and enterprise technology.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href={`mailto:${contact.email}?subject=Career Inquiry`} className="px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
-                Apply Now
-              </a>
-              <Link href="/about" className="px-8 py-4 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
-                Learn About Us
-              </Link>
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+                Join Our <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Team</span>
+              </h1>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+                Be part of a team that's revolutionizing technology and building the future. We're looking for passionate individuals who want to make a difference.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="#open-positions"
+                  className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
+                >
+                  View Open Positions
+                </a>
+                <a
+                  href="/contact"
+                  className="inline-flex items-center px-8 py-3 border border-cyan-500 text-base font-medium rounded-md text-cyan-400 bg-transparent hover:bg-cyan-500/10 transition-all duration-300"
+                >
+                  Get in Touch
+                </a>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Open Positions */}
-        <section className="py-20 px-4">
+        {/* Why Work With Us Section */}
+        <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-16">Open Positions</h2>
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Why Work With Us?</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                We offer more than just a job - we provide an environment where you can grow, innovate, and make a real impact.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/50 transition-all duration-300">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-4">
+                    <benefit.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
+                  <p className="text-gray-300">{benefit.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Our Values Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Our Values</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                These core values guide everything we do and shape our company culture.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {values.map((value, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <value.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{value.title}</h3>
+                  <p className="text-gray-300">{value.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Open Positions Section */}
+        <section id="open-positions" className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Open Positions</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Explore our current openings and find the perfect role for your skills and interests.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {openPositions.map((position, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-blue-400/50 transition-all duration-300">
-                  <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-2xl font-bold text-blue-400">{position.title}</h3>
-                    <span className="px-3 py-1 bg-green-600/20 text-green-400 rounded-full text-sm">
+                <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/50 transition-all duration-300">
+                  <div className="flex items-start justify-between mb-4">
+                    <h3 className="text-xl font-semibold text-white">{position.title}</h3>
+                    <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full">
                       {position.type}
                     </span>
                   </div>
-                  <div className="flex flex-wrap gap-4 mb-4 text-sm text-slate-400">
-                    <span>📍 {position.location}</span>
-                    <span>🏢 {position.department}</span>
+                  <div className="flex items-center space-x-4 mb-4 text-gray-400">
+                    <div className="flex items-center space-x-1">
+                      <MapPin className="w-4 h-4" />
+                      <span className="text-sm">{position.location}</span>
+                    </div>
+                    <div className="flex items-center space-x-1">
+                      <Briefcase className="w-4 h-4" />
+                      <span className="text-sm">{position.department}</span>
+                    </div>
                   </div>
-                  <p className="text-slate-300 mb-6">{position.description}</p>
-                  <div className="mb-6">
-                    <h4 className="font-semibold mb-2 text-white">Requirements:</h4>
-                    <ul className="space-y-1">
-                      {position.requirements.map((req, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-slate-400">
-                          <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
-                          {req}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <a 
-                    href={`mailto:${contact.email}?subject=Application for ${position.title}`}
-                    className="inline-block w-full text-center px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors"
+                  <p className="text-gray-300 mb-6">{position.description}</p>
+                  <a
+                    href="/contact"
+                    className="inline-flex items-center px-4 py-2 border border-cyan-500 text-sm font-medium rounded-md text-cyan-400 bg-transparent hover:bg-cyan-500/10 transition-all duration-300"
                   >
-                    Apply for this Position
+                    Apply Now
                   </a>
                 </div>
               ))}
@@ -175,66 +219,89 @@ export default function Careers() {
           </div>
         </section>
 
-        {/* Benefits */}
-        <section className="py-20 px-4 bg-slate-800/30">
+        {/* Culture Section */}
+        <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-16">Why Work With Us?</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl">{benefit.icon}</span>
-                  </div>
-                  <h3 className="text-xl font-bold mb-2">{benefit.title}</h3>
-                  <p className="text-slate-300">{benefit.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Company Culture */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-16">Our Culture</h2>
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h3 className="text-2xl font-bold mb-6 text-blue-400">Innovation First</h3>
-                <p className="text-slate-300 mb-6">
-                  We believe in pushing the boundaries of what's possible. Our team works on cutting-edge technologies 
-                  including AI, quantum computing, and next-generation enterprise solutions.
+                <h2 className="text-4xl font-bold text-white mb-6">Our Culture</h2>
+                <p className="text-lg text-gray-300 mb-6">
+                  At Zion Tech Group, we foster a culture of innovation, collaboration, and continuous learning. 
+                  We believe that great technology comes from great people working together.
                 </p>
-                <h3 className="text-2xl font-bold mb-6 text-purple-400">Collaborative Environment</h3>
-                <p className="text-slate-300 mb-6">
-                  We foster a culture of collaboration and knowledge sharing. Every team member's voice is valued, 
-                  and we encourage creative problem-solving and continuous learning.
-                </p>
-                <h3 className="text-2xl font-bold mb-6 text-green-400">Work-Life Balance</h3>
-                <p className="text-slate-300">
-                  We understand that great work comes from well-rested, happy people. Our remote-first approach 
-                  and flexible schedules help you maintain a healthy work-life balance.
-                </p>
-              </div>
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-white/10">
-                <h3 className="text-2xl font-bold mb-6 text-center">Ready to Join Us?</h3>
-                <p className="text-slate-300 mb-6 text-center">
-                  Don't see a position that fits? We're always looking for talented individuals who share our passion for innovation.
+                <p className="text-lg text-gray-300 mb-8">
+                  Our team is diverse, inclusive, and passionate about making a difference. We encourage 
+                  creativity, support professional growth, and celebrate both individual and team achievements.
                 </p>
                 <div className="space-y-4">
-                  <a 
-                    href={`mailto:${contact.email}?subject=General Career Inquiry`}
-                    className="block w-full text-center px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors"
-                  >
-                    Send Us Your Resume
-                  </a>
-                  <a 
-                    href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`}
-                    className="block w-full text-center px-6 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors"
-                  >
-                    Call {contact.phone}
-                  </a>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-cyan-500 rounded-full"></div>
+                    <span className="text-gray-300">Remote-first work environment</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-cyan-500 rounded-full"></div>
+                    <span className="text-gray-300">Flexible working hours</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-cyan-500 rounded-full"></div>
+                    <span className="text-gray-300">Learning and development budget</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-cyan-500 rounded-full"></div>
+                    <span className="text-gray-300">Regular team events and retreats</span>
+                  </div>
                 </div>
               </div>
+              <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl p-8 border border-cyan-500/30">
+                <h3 className="text-2xl font-bold text-white mb-6">Join Our Mission</h3>
+                <p className="text-gray-300 mb-6">
+                  We're not just building software - we're building the future. Join us in creating 
+                  technology solutions that transform businesses and improve lives.
+                </p>
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-3">
+                    <Cloud className="w-5 h-5 text-cyan-400" />
+                    <span className="text-white">Cutting-edge technology stack</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <Brain className="w-5 h-5 text-cyan-400" />
+                    <span className="text-white">AI and machine learning projects</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <Shield className="w-5 h-5 text-cyan-400" />
+                    <span className="text-white">Cybersecurity and compliance</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <Rocket className="w-5 h-5 text-cyan-400" />
+                    <span className="text-white">Innovation and experimentation</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Join Us?</h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Don't see a position that matches your skills? We're always looking for talented individuals. 
+              Send us your resume and let us know how you'd like to contribute.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
+              >
+                Send Your Resume
+              </a>
+              <a
+                href="mailto:careers@ziontechgroup.com"
+                className="inline-flex items-center px-8 py-3 border border-cyan-500 text-base font-medium rounded-md text-cyan-400 bg-transparent hover:bg-cyan-500/10 transition-all duration-300"
+              >
+                Email Us
+              </a>
             </div>
           </div>
         </section>
