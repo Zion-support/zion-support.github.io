@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import MainSidebardynamic from '../components/MainSidebar.dynamic';
+import MainSidebardynamic from '../components/MainSidebardynamic';
 
 describe('MainSidebardynamic', () => {
   test('renders without crashing', () => {

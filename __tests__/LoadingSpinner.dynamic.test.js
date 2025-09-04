@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import LoadingSpinnerdynamic from '../components/LoadingSpinner.dynamic';
+import LoadingSpinnerdynamic from '../components/LoadingSpinnerdynamic';
 
 describe('LoadingSpinnerdynamic', () => {
   test('renders without crashing', () => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import AIChatbotSystemtest from '../components/AIChatbotSystem.test';
+import AIChatbotSystemtest from '../components/AIChatbotSystemtest';
 
 describe('AIChatbotSystemtest', () => {
   test('renders without crashing', () => {

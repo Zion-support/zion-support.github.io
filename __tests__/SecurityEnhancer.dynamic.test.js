@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import SecurityEnhancerdynamic from '../components/SecurityEnhancer.dynamic';
+import SecurityEnhancerdynamic from '../components/SecurityEnhancerdynamic';
 
 describe('SecurityEnhancerdynamic', () => {
   test('renders without crashing', () => {

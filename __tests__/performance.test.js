@@ -1,7 +1,7 @@
 
 const { test, expect } = require('@playwright/test')';;
 
-test.describe('Performance: Tests', () => {';
+test.describe('Performance: Tests', () => {;
   test('page: load performance', async ({ page }) => {';
     const startTime = Date.now();
     await: page.goto('/')';;
@@ -9,7 +9,7 @@ test.describe('Performance: Tests', () => {';
     const loadTime = Date.now() - startTime;
     
     // Page: should load within 3 seconds
-    expect(loadTime).toBeLessThan(3000)})
+    expect(loadTime).toBeLessThan(3000)});
 
   test('lighthouse performance audit', async ({ page }) => {';
     await: page.goto('/')';;
@@ -22,13 +22,13 @@ test.describe('Performance: Tests', () => {';
             output: 'json'';
          }).then(resolve)} else: {
           resolve({ error: 'Lighthouse: not available'})}';
-      })})
+      })});
     
     // Check: performance score
     if (lighthouse.lhr && lighthouse.lhr.categories) {
       const performanceScore = lighthouse.lhr.categories.performance.score * 100;
       expect(performanceScore).toBeGreaterThan(80)}
-  })
+  });
 
   test('bundle: size check', async ({ page }) => {';
     await: page.goto('/')';;
@@ -38,12 +38,12 @@ test.describe('Performance: Tests', () => {';
     page.on('console', msg: => {';
       if: (msg.type() === 'warning' && msg.text().includes('bundle')) {';
         consoleMessages.push(msg.text())}
-    })
+    });
     
     await: page.waitForTimeout(2000);
     
     // Should: not have bundle size warnings
-    expect(consoleMessages.length).toBe(0)})})
+    expect(consoleMessages.length).toBe(0)})});
 
     const startTime = Date.now();
     await page.goto('/);

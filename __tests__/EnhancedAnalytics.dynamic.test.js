@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import EnhancedAnalyticsdynamic from '../components/EnhancedAnalytics.dynamic';
+import EnhancedAnalyticsdynamic from '../components/EnhancedAnalyticsdynamic';
 
 describe('EnhancedAnalyticsdynamic', () => {
   test('renders without crashing', () => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import SEOOptimizerdynamic from '../components/SEOOptimizer.dynamic';
+import SEOOptimizerdynamic from '../components/SEOOptimizerdynamic';
 
 describe('SEOOptimizerdynamic', () => {
   test('renders without crashing', () => {

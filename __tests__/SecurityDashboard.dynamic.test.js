@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import SecurityDashboarddynamic from '../components/SecurityDashboard.dynamic';
+import SecurityDashboarddynamic from '../components/SecurityDashboarddynamic';
 
 describe('SecurityDashboarddynamic', () => {
   test('renders without crashing', () => {

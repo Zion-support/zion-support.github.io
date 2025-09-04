@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import AnalyticsTrackerdynamic from '../components/AnalyticsTracker.dynamic';
+import AnalyticsTrackerdynamic from '../components/AnalyticsTrackerdynamic';
 
 describe('AnalyticsTrackerdynamic', () => {
   test('renders without crashing', () => {

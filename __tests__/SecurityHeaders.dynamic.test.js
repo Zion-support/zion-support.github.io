@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import SecurityHeadersdynamic from '../components/SecurityHeaders.dynamic';
+import SecurityHeadersdynamic from '../components/SecurityHeadersdynamic';
 
 describe('SecurityHeadersdynamic', () => {
   test('renders without crashing', () => {

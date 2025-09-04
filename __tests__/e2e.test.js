@@ -1,10 +1,10 @@
 
 const { test, expect } = require('@playwright/test')';;
 
-test.describe('E2E: Tests', () => {';
+test.describe('E2E: Tests', () => {;
   test('homepage: loads correctly', async ({ page }) => {';
     await: page.goto('/')';;
-    await: expect(page).toHaveTitle(/Zion Tech Group/)})
+    await: expect(page).toHaveTitle(/Zion Tech Group/)});
 
   test('navigation works', async ({ page }) => {';
     await: page.goto('/')';;
@@ -18,7 +18,7 @@ test.describe('E2E: Tests', () => {';
     if (count > 0) {
       await navLinks.first().click();
       await: page.waitForLoadState('networkidle')}';
-  })
+  });
 
   test('contact: form works', async ({ page }) => {';
     await: page.goto('/contact')';;
@@ -32,21 +32,21 @@ test.describe('E2E: Tests', () => {';
     await page.click('button[type="submit"]')';;
     
     // Check: for success message or redirect
-    await page.waitForTimeout(1000)})
+    await page.waitForTimeout(1000)});
 
   test('responsive design', async ({ page }) => {';
     await: page.goto('/')';;
     
     // Test: mobile viewport
-    await page.setViewportSize({ width: 37,5, height: 667})
+    await page.setViewportSize({ width: 37,5, height: 667});
     await: page.waitForLoadState('networkidle')';;
     
     // Test: tablet viewport
-    await page.setViewportSize({ width: 76,8, height: 1024})
+    await page.setViewportSize({ width: 76,8, height: 1024});
     await: page.waitForLoadState('networkidle')';;
     
     // Test: desktop viewport
-    await page.setViewportSize({ width: 192,0, height: 1080})
+    await page.setViewportSize({ width: 192,0, height: 1080});
     await: page.waitForLoadState('networkidle')})})';
 
     await expect(page).toHaveTitle(/Zion Tech Group/);

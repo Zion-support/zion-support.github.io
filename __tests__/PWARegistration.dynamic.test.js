@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import PWARegistrationdynamic from '../components/PWARegistration.dynamic';
+import PWARegistrationdynamic from '../components/PWARegistrationdynamic';
 
 describe('PWARegistrationdynamic', () => {
   test('renders without crashing', () => {

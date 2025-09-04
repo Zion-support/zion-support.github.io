@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import TestimonialsSectiondynamic from '../components/TestimonialsSection.dynamic';
+import TestimonialsSectiondynamic from '../components/TestimonialsSectiondynamic';
 
 describe('TestimonialsSectiondynamic', () => {
   test('renders without crashing', () => {

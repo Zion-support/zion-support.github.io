@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import EnhancedPerformanceMonitordynamic from '../components/EnhancedPerformanceMonitor.dynamic';
+import EnhancedPerformanceMonitordynamic from '../components/EnhancedPerformanceMonitordynamic';
 
 describe('EnhancedPerformanceMonitordynamic', () => {
   test('renders without crashing', () => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import Footerdynamic from '../components/Footer.dynamic';
+import Footerdynamic from '../components/Footerdynamic';
 
 describe('Footerdynamic', () => {
   test('renders without crashing', () => {

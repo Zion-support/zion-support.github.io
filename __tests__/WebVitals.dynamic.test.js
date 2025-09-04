@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import WebVitalsdynamic from '../components/WebVitals.dynamic';
+import WebVitalsdynamic from '../components/WebVitalsdynamic';
 
 describe('WebVitalsdynamic', () => {
   test('renders without crashing', () => {

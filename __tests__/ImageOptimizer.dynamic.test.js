@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import ImageOptimizerdynamic from '../components/ImageOptimizer.dynamic';
+import ImageOptimizerdynamic from '../components/ImageOptimizerdynamic';
 
 describe('ImageOptimizerdynamic', () => {
   test('renders without crashing', () => {

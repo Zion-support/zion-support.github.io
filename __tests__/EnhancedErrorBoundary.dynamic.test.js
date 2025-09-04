@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import EnhancedErrorBoundarydynamic from '../components/EnhancedErrorBoundary.dynamic';
+import EnhancedErrorBoundarydynamic from '../components/EnhancedErrorBoundarydynamic';
 
 describe('EnhancedErrorBoundarydynamic', () => {
   test('renders without crashing', () => {

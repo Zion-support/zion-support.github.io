@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import SEOEnhancerdynamic from '../components/SEOEnhancer.dynamic';
+import SEOEnhancerdynamic from '../components/SEOEnhancerdynamic';
 
 describe('SEOEnhancerdynamic', () => {
   test('renders without crashing', () => {

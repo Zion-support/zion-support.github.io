@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import Analyticsdynamic from '../components/Analytics.dynamic';
+import Analyticsdynamic from '../components/Analyticsdynamic';
 
 describe('Analyticsdynamic', () => {
   test('renders without crashing', () => {

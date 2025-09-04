@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import Navigationdynamic from '../components/Navigation.dynamic';
+import Navigationdynamic from '../components/Navigationdynamic';
 
 describe('Navigationdynamic', () => {
   test('renders without crashing', () => {

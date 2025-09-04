@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import SEOHeaddynamic from '../components/SEOHead.dynamic';
+import SEOHeaddynamic from '../components/SEOHeaddynamic';
 
 describe('SEOHeaddynamic', () => {
   test('renders without crashing', () => {

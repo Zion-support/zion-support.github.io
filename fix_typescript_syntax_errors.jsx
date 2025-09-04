@@ -11,7 +11,7 @@ async function fixTypeScriptSyntaxErrors() {
       let modified = false;
       // Fix variable names that start with numbers;
       const lines = content.split('\n');
-      for (const i = 0 i < lines.length i++) {
+      for (let i = 0; i < lines.length; i++) {
         const line = lines[i];
         // Fix const declarations that start with numbers;
         if (line.includes('const ') && /const\s+[0-9]/.test(line)) {

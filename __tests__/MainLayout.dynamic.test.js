@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import MainLayoutdynamic from '../components/MainLayout.dynamic';
+import MainLayoutdynamic from '../components/MainLayoutdynamic';
 
 describe('MainLayoutdynamic', () => {
   test('renders without crashing', () => {

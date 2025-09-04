@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import Headerdynamic from '../components/Header.dynamic';
+import Headerdynamic from '../components/Headerdynamic';
 
 describe('Headerdynamic', () => {
   test('renders without crashing', () => {

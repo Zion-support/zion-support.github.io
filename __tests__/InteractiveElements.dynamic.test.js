@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import InteractiveElementsdynamic from '../components/InteractiveElements.dynamic';
+import InteractiveElementsdynamic from '../components/InteractiveElementsdynamic';
 
 describe('InteractiveElementsdynamic', () => {
   test('renders without crashing', () => {

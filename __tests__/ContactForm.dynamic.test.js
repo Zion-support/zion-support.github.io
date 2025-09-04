@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import ContactFormdynamic from '../components/ContactForm.dynamic';
+import ContactFormdynamic from '../components/ContactFormdynamic';
 
 describe('ContactFormdynamic', () => {
   test('renders without crashing', () => {

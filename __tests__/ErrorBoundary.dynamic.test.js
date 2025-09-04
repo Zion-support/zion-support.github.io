@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import ErrorBoundarydynamic from '../components/ErrorBoundary.dynamic';
+import ErrorBoundarydynamic from '../components/ErrorBoundarydynamic';
 
 describe('ErrorBoundarydynamic', () => {
   test('renders without crashing', () => {

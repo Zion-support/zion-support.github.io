@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import AccessibilityEnhancerdynamic from '../components/AccessibilityEnhancer.dynamic';
+import AccessibilityEnhancerdynamic from '../components/AccessibilityEnhancerdynamic';
 
 describe('AccessibilityEnhancerdynamic', () => {
   test('renders without crashing', () => {

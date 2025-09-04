@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import ModernLayoutdynamic from '../components/ModernLayout.dynamic';
+import ModernLayoutdynamic from '../components/ModernLayoutdynamic';
 
 describe('ModernLayoutdynamic', () => {
   test('renders without crashing', () => {
