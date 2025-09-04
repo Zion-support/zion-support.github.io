@@ -3,20 +3,20 @@ import React, { useEffect } from 'react';
 // Type definitions for browser APIs
 declare global {
   interface Window {
-    "KeyboardEvent": typeof KeyboardEvent;
+    KeyboardEvent: typeof KeyboardEvent;
     HTMLElement: typeof HTMLElement;
     MutationObserver: typeof MutationObserver;
   }
 }
 
 interface AccessibilityEnhancerProps {
-  "children": React.ReactNode;
+  children: React.ReactNode;
   skipToContent?: boolean;
   focusManagement?: boolean;
   keyboardNavigation?: boolean;
 }
 
-const "AccessibilityEnhancer": React.FC<AccessibilityEnhancerProps> = ({
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   children,
   skipToContent = true,
   focusManagement = true,
@@ -24,7 +24,7 @@ const "AccessibilityEnhancer": React.FC<AccessibilityEnhancerProps> = ({
 }) => {
   useEffect(() => {
     if (skipToContent) {
-      const handleSkipToContent = ("e": KeyboardEvent) => {
+      const handleSkipToContent = (e: KeyboardEvent) => {
         if (e.key === 'Tab' && !e.shiftKey) {
           const skipLink = document.getElementById('skip-to-content');
           if (skipLink && document.activeElement === document.body) {
@@ -50,7 +50,7 @@ const "AccessibilityEnhancer": React.FC<AccessibilityEnhancerProps> = ({
             const firstElement = focusableElements[0] as HTMLElement;
             const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 
-            const handleTabKey = ("e": KeyboardEvent) => {
+            const handleTabKey = (e: KeyboardEvent) => {
               if (e.key === 'Tab') {
                 if (e.shiftKey) {
                   if (document.activeElement === firstElement) {
@@ -73,14 +73,14 @@ const "AccessibilityEnhancer": React.FC<AccessibilityEnhancerProps> = ({
 
       handleFocusManagement();
       const observer = new MutationObserver(handleFocusManagement);
-      observer.observe(document.body, { "childList": true, "subtree": true });
+      observer.observe(document.body, { childList: true, subtree: true });
       return () => observer.disconnect();
     }
   }, [focusManagement]);
 
   useEffect(() => {
     if (keyboardNavigation) {
-      const handleKeyboardNavigation = ("e": KeyboardEvent) => {
+      const handleKeyboardNavigation = (e: KeyboardEvent) => {
         if (e.key === 'Escape') {
           const openModal = document.querySelector('[role="dialog"][aria-hidden="false"]');
           const openDropdown = document.querySelector('[aria-expanded="true"]');
@@ -121,9 +121,9 @@ const "AccessibilityEnhancer": React.FC<AccessibilityEnhancerProps> = ({
         <a
           id="skip-to-content"
           href="#main-content"
-          className="sr-only "focus": not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-md z-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-md z-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
           onFocus={(e) => {
-            e.currentTarget.scrollIntoView({ behavior: 'smooth', "block": 'start' });
+            e.currentTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
           }}
         >
           Skip to main content
@@ -134,11 +134,11 @@ const "AccessibilityEnhancer": React.FC<AccessibilityEnhancerProps> = ({
   );
 };
 
-export const generateAccessibleId = ("prefix": string, "text": string): string => {
+export const generateAccessibleId = (prefix: string, text: string): string => {
   return `${prefix}-${text.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '')}`;
 };
 
-export const announceToScreenReader = ("message": string, "priority": 'polite' | 'assertive' = 'polite') => {
+export const announceToScreenReader = (message: string, priority: 'polite' | 'assertive' = 'polite') => {
   const announcement = document.createElement('div');
   announcement.setAttribute('aria-live', priority);
   announcement.setAttribute('aria-atomic', 'true');
