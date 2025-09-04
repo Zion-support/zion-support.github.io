@@ -243,6 +243,34 @@ const Home = memo(() => {
                   364 E Main St STE 1008<br />
                   Middletown, DE 19709
                 </p>
+                
+                <ul className="space-y-2 mb-6">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center gap-x-2">
+                      <CheckCircle className="h-4 w-4 text-blue-600" />
+                      <span className="text-sm text-gray-700">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center space-x-2 text-sm text-gray-500">
+                    <Clock className="h-4 w-4" />
+                    <span>{service.delivery}</span>
+                  </div>
+                  <div className="flex items-center space-x-2 text-sm text-gray-500">
+                    <DollarSign className="h-4 w-4" />
+                    <span>{service.pricing}</span>
+                  </div>
+                </div>
+                
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-500"
+                >
+                  Learn More
+                  <ArrowRight className="ml-1 h-4 w-4" />
+                </Link>
               </div>
             </div>
           </div>
