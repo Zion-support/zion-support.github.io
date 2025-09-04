@@ -1,5 +1,4 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
@@ -25,101 +24,34 @@ class ErrorBoundary extends Component<Props, State> {
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
-      errorInfo,
+      errorInfo
     });
-
-    // Log error to monitoring service
-    if (process.env.NODE_ENV === 'production') {
-      // In production, send to error monitoring service
-      console.error('Error caught by boundary:', error, errorInfo);
-    }
+    
+    // Log error to service
+    this.logErrorToService(error, errorInfo);
   }
 
-<<<<<<< HEAD
-  handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
-=======
   private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
     try {
       // Example: Send to error logging service
       const errorData = {
-        id: this.state.errorId,
         message: error.message,
         stack: error.stack,
         componentStack: errorInfo.componentStack,
         timestamp: new Date().toISOString(),
         userAgent: navigator.userAgent,
-        url: window.location.href,
-        // Add any other relevant information
+        url: window.location.href
       };
-
-      // You can send this to your error logging service
-      console.log('Error logged:', errorData);
       
-      // Example: Send to external service
-      // fetch('/api/errors', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(errorData)
-      // });
-  } catch (logError) {
-      console.error('Failed to log error:', logError);
+      // In a real app, you would send this to your error logging service
+      console.error('Error caught by boundary:', errorData);
+    } catch (loggingError) {
+      console.error('Failed to log error:', loggingError);
     }
   };
 
-  private handleRetry = () => {
-    this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      showStack: false
-    });
-  };
-
-  private handleGoHome = () => {
-    window.location.href = '/';
-  };
-
-  private handleCopyError = () => {
-    if (this.state.error && this.state.errorInfo) {
-      const errorText = `
-Error Details:
-Message: ${this.state.error.message}
-Stack: ${this.state.error.stack}
-Component Stack: ${this.state.errorInfo.componentStack}
-Error ID: ${this.state.errorId}
-Timestamp: ${new Date().toISOString()}
-URL: ${window.location.href}
-User Agent: ${navigator.userAgent}
-      `.trim();
-
-      navigator.clipboard.writeText(errorText).then(() => {
-        // Show success feedback
-        const button = document.querySelector('[data-copy-button]') as HTMLButtonElement;
-        if (button) {
-          const originalText = button.innerHTML;
-          button.innerHTML = '<CheckCircle className="w-4 h-4" /> Copied!';
-          button.classList.add('text-green-600');
-          setTimeout(() => {
-            button.innerHTML = originalText;
-            button.classList.remove('text-green-600');
-          }, 2000);
-        }
-      }).catch(() => {
-        // Fallback for older browsers
-        const textArea = document.createElement('textarea');
-        textArea.value = errorText;
-        document.body.appendChild(textArea);
-        textArea.select();
-        document.execCommand('copy');
-        document.body.removeChild(textArea);
-      });
-    }
-  };
-
-  private toggleStack = () => {
-    this.setState(prev => ({ showStack: !prev.showStack }));
->>>>>>> origin/merge-pr-10615
+  handleRetry = () => {
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
   };
 
   render() {
@@ -132,43 +64,37 @@ User Agent: ${navigator.userAgent}
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
             <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full mb-4">
-              <AlertTriangle className="w-6 h-6 text-red-600" />
+              <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+              </svg>
             </div>
-            
-            <div className="text-center">
-              <h1 className="text-xl font-semibold text-gray-900 mb-2">
-                Something went wrong
-              </h1>
-              <p className="text-gray-600 mb-6">
-                We're sorry, but something unexpected happened. Please try refreshing the page.
-              </p>
-              
-              <div className="space-y-3">
-                <button
-                  onClick={this.handleRetry}
-                  className="w-full flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-                >
-                  <RefreshCw className="w-4 h-4 mr-2" />
-                  Try Again
-                </button>
-                
-                <button
-                  onClick={() => window.location.reload()}
-                  className="w-full flex items-center justify-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-                >
-                  Refresh Page
-                </button>
-              </div>
+            <h2 className="text-lg font-medium text-gray-900 text-center mb-2">
+              Something went wrong
+            </h2>
+            <p className="text-sm text-gray-600 text-center mb-6">
+              We're sorry, but something unexpected happened. Please try refreshing the page.
+            </p>
+            <div className="flex space-x-3">
+              <button
+                onClick={this.handleRetry}
+                className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors"
+              >
+                Try Again
+              </button>
+              <button
+                onClick={() => window.location.reload()}
+                className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-300 transition-colors"
+              >
+                Refresh Page
+              </button>
             </div>
-            
             {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mt-6 p-4 bg-gray-100 rounded-md">
-                <summary className="cursor-pointer text-sm font-medium text-gray-700">
-                  Error Details (Development Only)
+              <details className="mt-4 p-3 bg-gray-100 rounded-md">
+                <summary className="text-sm font-medium text-gray-700 cursor-pointer">
+                  Error Details (Development)
                 </summary>
                 <pre className="mt-2 text-xs text-gray-600 overflow-auto">
-                  {this.state.error.toString()}
-                  {this.state.errorInfo?.componentStack}
+                  {this.state.error.stack}
                 </pre>
               </details>
             )}
@@ -181,42 +107,4 @@ User Agent: ${navigator.userAgent}
   }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default ErrorBoundary;
-</svg>
-</div>
-</Props>
-=======
-// Higher-order component for functional components
-export function withErrorBoundary<P extends object>(
-  Component: React.ComponentType<P>,
-  errorBoundaryProps?: Omit<Props, 'children'>
-) {
-  return function WrappedComponent(props: P) {
-    return (
-      <ErrorBoundary {...errorBoundaryProps}>
-        <Component {...props} />
-      </ErrorBoundary>
-    );
-  };
-}
-
-// Hook for functional components to catch errors
-export function useErrorHandler() {
-  return React.useCallback((error: Error, errorInfo?: ErrorInfo) => {
-    console.error('Error caught by useErrorHandler:', error, errorInfo);
-    
-    // You can add custom error handling logic here
-    // For example, sending to an error reporting service
-    
-    // Re-throw the error to trigger error boundaries
-    throw error;
-  });
-}
-
-export default withErrorBoundary;
->>>>>>> origin/merge-pr-10615
-=======
-export default ErrorBoundary;
->>>>>>> origin/merge-pr-11195

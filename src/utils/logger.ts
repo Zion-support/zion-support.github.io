@@ -36,19 +36,19 @@ class Logger {
 
   debug(message: string, ...args: any[]): void {
     if (this.shouldLog('debug') && this.config.enableConsole) {
-      , ...args);
+      
     }
   }
 
   info(message: string, ...args: any[]): void {
     if (this.shouldLog('info') && this.config.enableConsole) {
-      , ...args);
+      
     }
   }
 
   warn(message: string, ...args: any[]): void {
     if (this.shouldLog('warn') && this.config.enableConsole) {
-      , ...args);
+      
     }
   }
 

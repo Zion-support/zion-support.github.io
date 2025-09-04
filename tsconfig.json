@@ -24,41 +24,23 @@
     "noEmit": true
   },
   "include": [
-<<<<<<< HEAD
     "next-env.d.ts",
     ".next/types/**/*.ts",
+    "pages/**/*.ts",
+    "pages/**/*.tsx",
+    "components/**/*.ts",
+    "components/**/*.tsx",
     "src/**/*.ts",
     "src/**/*.tsx",
-    "scripts/**/*.ts",
-    "automation/**/*.ts",
-    "types/**/*.ts"
+    "types/**/*.ts",
+    "utils/**/*.ts",
+    "utils/**/*.tsx"
   ],
   "exclude": [
     "node_modules",
     "dist",
-    "data_backup/**",
-    "src.corrupted/**",
-    "pages/**",
-    "components/**",
-    "src/**",
-    "utils/next-link-shim.tsx",
-    "playwright.config.ts",
-=======
-    "src/**/*",
-    "pages/**/*",
-    "components/**/*.ts",
-    "components/**/*.tsx",
-    "data/services.ts",
-    "styles/**/*",
-    "types/**/*",
-    "utils/**/*",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules",
->>>>>>> origin/merge-pr-11195
+    ".next",
+    "out",
     "api-backup",
     "api-disabled",
     "api.disabled.temp",
@@ -77,32 +59,6 @@
     "data",
     "data/**",
     "cypress",
-<<<<<<< HEAD
-    "temp_working",
-    "supabase/functions",
-    "**/*.backup",
-    "**/*.disabled",
-    "src/store/authSlice.tsx",
-    "src/store/cartSlice.ts",
-    "src/store/hooks.ts",
-    "src/store/index.ts",
-    "src/store/wishlistSlice.ts",
-    "src/store/wishlistSlice.tsx",
-    "src/utils/safeStorage.tsx",
-    "src/utils/linkChecker.ts",
-    "src/utils/performance.ts",
-    "src/utils/performanceOptimizer.ts",
-    "src/utils/resourceMonitor.ts",
-    "src/utils/serviceMapper.ts",
-    "src/utils/sitemapGenerator.ts",
-    "src/utils/tokenRewards.ts",
-    "src/types/**/*.ts",
-    "src/pages/**",
-    "src/routes/**",
-    "src/services/**",
-    "src/test/**",
-    "src/types/**"
-=======
     "**/*.backup",
     "**/*.disabled",
     "temp_working",
@@ -110,10 +66,6 @@
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
-    "**/*.spec.tsx",
-    ".next",
-    "out",
-    "dist"
->>>>>>> origin/merge-pr-11195
+    "**/*.spec.tsx"
   ]
 }
