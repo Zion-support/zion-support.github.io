@@ -6,9 +6,8 @@ import { Book, FileText, Video, Download, Search, ExternalLink } from 'lucide-re
 export default function Documentation() {
   const contact = {
     phone: 'kleber@ziontechgroup.com',
-    site: 'https://ziontechgroup.com'
+    address: 'https://ziontechgroup.com'
   };
-  
   const documentationSections = [
     {
       icon: Book,
@@ -62,11 +61,11 @@ export default function Documentation() {
         <title>Documentation - Zion Tech Group</title>
         <meta name="description" content="Comprehensive documentation for Zion Tech Group services including API guides, tutorials, and resources. Get started with our services today." />
         <meta name="keywords" content="documentation, API guide, tutorials, getting started, Zion Tech Group" />
-        <link rel="canonical" href={`${contact.site}/docs`} />
-        <meta property="og:title" content="Documentation - Zion Tech Group" />
+        <link rel="canonical" href={`${contact.address}/docs`} />
+        <meta property="og: title" content="Documentation - Zion Tech Group" />
         <meta property="og:description" content="Comprehensive documentation for Zion Tech Group services including API guides and tutorials." />
-        <meta property="og:url" content={`${contact.site}/docs`} />
-        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`${contact.address}/docs`} />
+        <meta property="og: type" content="website" />
       </Head>
 
       <div className="min-h-screen bg-white">

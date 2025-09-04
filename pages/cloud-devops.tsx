@@ -6,9 +6,8 @@ import { Cloud, Server, Database, Shield, Zap, Users } from 'lucide-react';
 export default function CloudDevOps() {
   const contact = {
     phone: 'kleber@ziontechgroup.com',
-    site: 'https://ziontechgroup.com'
+    address: 'https://ziontechgroup.com'
   };
-  
   const services = [
     {
       icon: Cloud,
@@ -54,11 +53,11 @@ export default function CloudDevOps() {
         <title>Cloud DevOps Services - Zion Tech Group</title>
         <meta name="description" content="Expert cloud DevOps services including migration, infrastructure automation, CI/CD pipelines, and security. Transform your development workflow with Zion Tech Group." />
         <meta name="keywords" content="cloud migration, DevOps, infrastructure as code, CI/CD, cloud security, AWS, Azure, GCP" />
-        <link rel="canonical" href={`${contact.site}/cloud-devops`} />
-        <meta property="og:title" content="Cloud DevOps Services - Zion Tech Group" />
+        <link rel="canonical" href={`${contact.address}/cloud-devops`} />
+        <meta property="og: title" content="Cloud DevOps Services - Zion Tech Group" />
         <meta property="og:description" content="Expert cloud DevOps services including migration, infrastructure automation, CI/CD pipelines, and security." />
-        <meta property="og:url" content={`${contact.site}/cloud-devops`} />
-        <meta property="og:type" content="website" />
+        <meta property="og: url" content={`${contact.address}/cloud-devops`} />
+        <meta property="og: type" content="website" />
       </Head>
 
       <div className="min-h-screen bg-white">
