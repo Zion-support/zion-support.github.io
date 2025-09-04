@@ -5,51 +5,11 @@ import { useState } from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 import '../styles/globals.css';
-import EnhancedNavigation from '../components/layout/EnhancedNavigation';
-import EnhancedFooter from '../components/layout/EnhancedFooter';
 
 function Header(): any {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-<<<<<<< HEAD
-    <header className="sticky top-0 z-50 bg-gray-900 text-white border-b border-gray-800">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <Link href="/" className="text-xl font-bold text-white hover:text-blue-400 transition-colors">
-            Zion Tech Group
-          </Link>
-          
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-gray-300 hover:text-white transition-colors">
-              Home
-            </Link>
-            <Link href="/services" className="text-gray-300 hover:text-white transition-colors">
-              Services
-            </Link>
-            <Link href="/pricing" className="text-gray-300 hover:text-white transition-colors">
-              Pricing
-            </Link>
-            <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors">
-              Contact
-            </Link>
-          </div>
-
-          {/* Mobile menu button */}
-          <button
-            className="md:hidden text-gray-300 hover:text-white"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              {isMobileMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
-          </button>
-=======
     <header style={{
       position: 'sticky', top: 0, zIndex: 50, background: 'rgba(11, 18, 32, 0.95)', 
       backdropFilter: 'blur(10px)', color: 'white',
@@ -131,26 +91,6 @@ function Header(): any {
             ☰
           </button>
         </div>
-
-        {/* Mobile Navigation */}
-        {isMobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-800">
-            <div className="flex flex-col space-y-4">
-              <Link href="/" className="text-gray-300 hover:text-white transition-colors">
-                Home
-              </Link>
-              <Link href="/services" className="text-gray-300 hover:text-white transition-colors">
-                Services
-              </Link>
-              <Link href="/pricing" className="text-gray-300 hover:text-white transition-colors">
-                Pricing
-              </Link>
-              <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors text-center">
-                Contact
-              </Link>
-            </div>
-          </div>
-        )}
       </nav>
       
       {/* Mobile Menu */}
@@ -322,10 +262,18 @@ function Footer(): any {
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <ErrorBoundary>
-      <PerformanceMonitor />
-      <Header />
-      <Component {...pageProps} />
-      <Footer />
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Zion Tech Group — AI, IT & Micro SaaS</title>
+      </Head>
+      <div className="min-h-screen flex flex-col">
+        <PerformanceMonitor />
+        <Header />
+        <main className="flex-grow">
+          <Component {...pageProps} />
+        </main>
+        <Footer />
+      </div>
     </ErrorBoundary>
   );
 }
