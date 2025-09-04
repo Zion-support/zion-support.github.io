@@ -312,5 +312,16 @@
     "zion-tech-group"
   ],
   "author": "Zion Tech Group",
-  "license": "MIT"
+  "license": "MIT",
+  "description": "- **dev**: Start Next.js dev server. - **build**: Build the app. - **start**: Start the production server. - **lint**: Run ESLint. - **lint:fix**: Auto-fix lint issues. - **test**: Run Jest tests. - **check**: Lint and run tests (fast sanity check).",
+  "main": "automation-runner.js",
+  "directories": {
+    "doc": "docs",
+    "lib": "lib",
+    "test": "tests"
+  },
+  "bugs": {
+    "url": "https://github.com/Zion-Holdings/zion.app/issues"
+  },
+  "homepage": "https://github.com/Zion-Holdings/zion.app#readme"
 }
