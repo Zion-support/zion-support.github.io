@@ -1,0 +1,25 @@
+{
+  "timestamp": "2025-09-04T08:57:54.864Z",
+  "checks": {
+    "packageJson": {
+      "status": "ok",
+      "version": "0.1.0"
+    },
+    "dependencies": {
+      "status": "ok",
+      "message": "Dependencies installed"
+    },
+    "disk": {
+      "status": "ok",
+      "details": "overlay         126G   14G  107G  12% /"
+    },
+    "memory": {
+      "status": "ok",
+      "details": "Mem:            15Gi       1.4Gi       893Mi        10Mi        13Gi        14Gi"
+    },
+    "build": {
+      "status": "info"
+    }
+  },
+  "status": "healthy"
+}

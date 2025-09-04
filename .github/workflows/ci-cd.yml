@@ -1,4 +1,3 @@
-
 name: CI/CD Pipeline
 
 on:
@@ -38,3 +37,16 @@ jobs:
       run: npm ci
     - name: Build application
       run: npm run build
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: build-files
+        path: .next/
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+    - name: Deploy to production
+      run: echo "Deploying to production..."

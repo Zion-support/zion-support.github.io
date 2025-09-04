@@ -1,1 +1,31 @@
 {
+  "timestamp": "2025-09-04T06:30:45.510Z",
+  "checks": [
+    {
+      "name": "Package.json exists",
+      "status": "pass",
+      "result": "package.json found"
+    },
+    {
+      "name": "Dependencies installed",
+      "status": "pass",
+      "result": "Dependencies installed"
+    },
+    {
+      "name": "Build process",
+      "status": "fail",
+      "error": "Build failed"
+    },
+    {
+      "name": "Linting",
+      "status": "fail",
+      "error": "Linting failed"
+    },
+    {
+      "name": "TypeScript compilation",
+      "status": "fail",
+      "error": "TypeScript compilation failed"
+    }
+  ],
+  "status": "unhealthy"
+}

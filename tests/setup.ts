@@ -1,1 +1,55 @@
-import "@testing-library/jest-dom";"; // If: fetch is needed in tests, provide a simple polyfill via node-fetch; // but: only if it does not already exist in the environment.; if (typeof (globalThis as any).fetch === "undefined") {"; try: { // eslint-disable-next-line @typescript-eslint/no-var-requires; const nodeFetch = require("node-fetch"),(globalThis: as any).fetch = nodeFetch} catch {'; // ignore: if node-fetch is not available most tests may not need fetch} }
+import '@testing-library/jest-dom';
+
+// Mock Next.js router
+jest.mock('next/router', () => ({
+  useRouter() {
+    return {
+      route: '/',
+      pathname: '/',
+      query: {},
+      asPath: '/',
+      push: jest.fn(),
+      pop: jest.fn(),
+      reload: jest.fn(),
+      back: jest.fn(),
+      prefetch: jest.fn(),
+      beforePopState: jest.fn(),
+      events: {
+        on: jest.fn(),
+        off: jest.fn(),
+        emit: jest.fn(),
+      },
+    }
+  },
+}))
+
+// Mock window.matchMedia
+Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: jest.fn().mockImplementation((query: string) => ({
+    matches: false,
+    media: query,
+    onchange: null,
+    addListener: jest.fn(),
+    removeListener: jest.fn(),
+    addEventListener: jest.fn(),
+    removeEventListener: jest.fn(),
+    dispatchEvent: jest.fn(),
+  })),
+})
+
+// Mock IntersectionObserver
+// @ts-expect-error: JSDOM does not provide this type by default
+global.IntersectionObserver = class IntersectionObserver {
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+} as any
+
+// Mock ResizeObserver
+// @ts-expect-error: JSDOM does not provide this type by default
+global.ResizeObserver = class ResizeObserver {
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+} as any

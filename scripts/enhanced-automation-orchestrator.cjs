@@ -1,196 +1,206 @@
-#!/usr/bin/env node;
-const { execSync, spawn } = require("$1");
-const fs = require("$1");
-const path = require("path");
-class EnhancedAutomationOrchestrator {;
-  constructor() {;
-    this.projectRoot = process.cwd();
-    this.reportsDir = path.join(this.projectRoot, "automation-reports");
-    this.logFile = path.join(this.reportsDir, "enhanced-automation.log");
-    this.ensureDirectories();
-    this.results = {;
-      linting: { success: false, output: ", errors: [] },;
-      testing: { success: false, output: ", errors: [] },;
-      building: { success: false, output: ", errors: [] },;
-      performance: { success: false, output: ", errors: [] },;
-      security: { success: false, output: ", errors: [] }
+#!/usr/bin/env node
+
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process');
+
+console.log('🎯 Starting Enhanced Automation Orchestrator...');
+console.log('================================================');
+
+const orchestratorReport = {
+  timestamp: new Date().toISOString(),
+  phases: [],
+  overall: 'success',
+  summary: {
+    totalPhases: 0,
+    successfulPhases: 0,
+    failedPhases: 0,
+    totalDuration: 0
+  }
+;};
+
+function runPhase(phaseName, commands, isCritical = false) {
+  const phaseStartTime = Date.now(;);
+  const phase = {
+    name: phaseName,
+    startTime: new Date().toISOString(),
+    commands: [],
+    status: 'success',
+    duration: 0,
+    isCritical
+ ; ;};
+  
+  console.log(`\n🚀 Phase: ${phaseName}`);
+  console.log('='.repeat(50););
+  
+  commands.forEach(command => {
+    const commandStartTime = Date.now(;);
+    const commandInfo = {
+      name: command.name,
+      command: command.cmd,
+      status: 'success',
+      duration: 0,
+      output: '',
+      error: null
+   ; ;};
+    
+    console.log(`📋 Running: ${command.name}`);
+    
+    try {
+      const output = execSync(command.cmd, { 
+        encoding: 'utf8', 
+        timeout: command.timeout || 30000,
+        cwd: process.cwd()
+      ;};);
+      commandInfo.duration = Date.now() - commandStartTime;
+      commandInfo.output = output.substring(0, 1000); // Limit output size
+      commandInfo.status = 'success';
+      console.log(`✅ ${command.name} completed in ${commandInfo.duration}ms`);} catch (error) {
+      commandInfo.duration = Date.now() - commandStartTime;
+      commandInfo.status = 'failed';
+      commandInfo.error = error.message
+      commandInfo.output = error.stdout ? error.stdout.substring(0, 1000) : '';
+      
+      if ( {
+        phase.status = 'failed') {
+     {
+        phase.status = 'failed';
+  }
+        console.log(`❌ ${command.name} failed (CRITICAL);: ${error.message}`)} else {
+        console.log(`⚠️  ${command.name} failed (non-critical);: ${error.message}`)}
     }
+    
+    phase.commands.push(commandInfo)});
+  
+  phase.duration = Date.now() - phaseStartTime;
+  phase.endTime = new Date().toISOString();
+  
+  orchestratorReport.phases.push(phase);
+  orchestratorReport.summary.totalPhases++;
+  
+  if ( {
+    orchestratorReport.summary.successfulPhases++} else {
+    orchestratorReport.summary.failedPhases++) {
+     {
+    orchestratorReport.summary.successfulPhases++} else {
+    orchestratorReport.summary.failedPhases++;
   }
-;
-  ensureDirectories() {;
-    if (!fs.existsSync(this.reportsDir)) {;
-      fs.mkdirSync(this.reportsDir, { recursive: true }),;,
-}
+    if ( {
+      orchestratorReport.overall = 'failed'}
   }
-;
-  log(message, level = "INFO") {;
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}`;
-    console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage + "\n"),;,
-}
-;
-  async runCommand(command, description, category = "general") {;
-    this.log(`🚀 Starting: ${description}`, "INFO");
-    try {;
-      const result = execSync(command, {;
-        cwd: this.projectRoot,;
-        encoding: "utf8",;
-        timeout: 300000, // 5 minutes timeout;
-        stdio: "pipe",;,
-});
-      this.log(`✅ Completed: ${description}`, "SUCCESS");
-      this.results[category] = { success: true, output: result, errors: [] }
-      return { success: true, output: result }
-    } catch (error) {;
-      this.log(`❌ Failed: ${description} - ${error.message}`, "ERROR");
-      this.results[category] = { success: false, output: ", errors: [error.message] }
-      return { success: false, error: error.message }
-    }
+  
+  orchestratorReport.summary.totalDuration += phase.duration
+  
+  console.log(`\n📊 Phase ${phaseName} Summary:`)) {
+     {
+      orchestratorReport.overall = 'failed'}
   }
-;
-  async runLinting() {;
-    this.log("🔍 Running linting checks...", "INFO");
-    const lintCommands = [;
-      { cmd: "npm run lint", desc: "ESLint Check" },;
-      { cmd: "npm run lint:fix", desc: "ESLint Auto-fix" },;
-      { cmd: "npm run type-check", desc: "TypeScript Type Check" }
-    ];
-    for (const { cmd, desc } of lintCommands) {;
-      await this.runCommand(cmd, desc, "linting"),;,
-}
+  
+  orchestratorReport.summary.totalDuration += phase.duration
+  
+  console.log(`\n📊 Phase ${phaseName} Summary:`);
   }
-;
-  async runTesting() {;
-    this.log("🧪 Running test suite...", "INFO");
-    const testCommands = [;
-      { cmd: "npm run test", desc: "Unit Tests" },;
-      { cmd: "npm run test:coverage", desc: "Test Coverage" }
-    ];
-    for (const { cmd, desc } of testCommands) {;
-      await this.runCommand(cmd, desc, "testing"),;,
-}
+  console.log(`   Status: ${phase.status.toUpperCase();}`);
+  console.log(`   Duration: ${phase.duration}ms`);
+  console.log(`   Commands: ${phase.commands.length}`);
+  console.log(`   Successful: ${phase.commands.filter(c => c.status === 'success');.length}`);
+  console.log(`   Failed: ${phase.commands.filter(c => c.status === 'failed');.length}`)}
+
+try {
+  // Phase 1: System Health & Dependencies
+  runPhase('System Health & Dependencies', [
+    { name: 'Dependency Installation', cmd: 'npm install', timeout: 60000 },
+    { name: 'Health Check', cmd: 'node automation/health-check.cjs' },
+    { name: 'Node Version Check', cmd: 'node --version' },
+    { name: 'NPM Version Check', cmd: 'npm --version' }
+  ], true);
+  
+  // Phase 2: Code Quality & Syntax
+  runPhase('Code Quality & Syntax', [
+    { name: 'TypeScript Type Check', cmd: 'npx tsc --noEmit' },
+    { name: 'ESLint Linting', cmd: 'npm run lint' },
+    { name: 'Syntax Error Fixing', cmd: 'node scripts/fix-syntax-errors.cjs' },
+    { name: 'Code Quality Monitor', cmd: 'node scripts/code-quality-monitor.cjs' }
+  ], true);
+  
+  // Phase 3: Security & Performance
+  runPhase('Security & Performance', [
+    { name: 'Security Scanner', cmd: 'node automation/security-scanner.cjs' },
+    { name: 'Security Audit', cmd: 'node scripts/security-audit.cjs' },
+    { name: 'Performance Optimizer', cmd: 'node scripts/performance-optimizer.cjs' },
+    { name: 'Performance Monitor', cmd: 'node scripts/performance-monitor.cjs' }
+  ], true);
+  
+  // Phase 4: Build & Test
+  runPhase('Build & Test', [
+    { name: 'Production Build', cmd: 'npm run build', timeout: 120000 },
+    { name: 'Comprehensive Test Runner', cmd: 'node scripts/comprehensive-test-runner.cjs', timeout: 180000 },
+    { name: 'Dependency Update Check', cmd: 'node scripts/dependency-updater.cjs' }
+  ], true);
+  
+  // Phase 5: Advanced Automation
+  runPhase('Advanced Automation', [
+    { name: 'Automation Orchestrator', cmd: 'node scripts/automation-orchestrator.cjs' },
+    { name: 'Master Automation Orchestrator', cmd: 'node scripts/master-automation-orchestrator.cjs' },
+    { name: 'CI/CD Automation', cmd: 'node scripts/ci-cd-automation.cjs' }
+  ], false);
+  
+  // Phase 6: Monitoring & Reporting
+  runPhase('Monitoring & Reporting', [
+    { name: 'Generate Sitemap', cmd: 'node scripts/generate-sitemap.mjs' },
+    { name: 'SEO Optimization', cmd: 'node scripts/improve-seo.cjs' },
+    { name: 'Image Optimization', cmd: 'node scripts/optimize-images.cjs' }
+  ], false);
+  
+  // Phase 7: Deployment Preparation
+  runPhase('Deployment Preparation', [
+    { name: 'Build Optimization', cmd: 'node scripts/advanced-build-optimizer.cjs' },
+    { name: 'Bundle Analysis', cmd: 'node scripts/analyze-bundle.cjs' },
+    { name: 'Final Health Check', cmd: 'node automation/health-check.cjs' }
+  ], false)} catch (error) {
+  console.error('❌ Orchestrator failed:', error.message);
+  orchestratorReport.overall = 'failed'}
+
+// Generate comprehensive report
+const reportPath = 'automation-reports/enhanced-automation-orchestrator-report.json;';
+fs.mkdirSync('automation-reports', { recursive: true });
+fs.writeFileSync(reportPath, JSON.stringify(orchestratorReport, null, 2));
+
+// Print final summary
+console.log('\n🎉 Enhanced Automation Orchestrator Complete!');
+console.log('==============================================');
+console.log(`📊 Overall Status: ${orchestratorReport.overall.toUpperCase();}`);
+console.log(`📈 Total Phases: ${orchestratorReport.summary.totalPhases}`);
+console.log(`✅ Successful: ${orchestratorReport.summary.successfulPhases}`);
+console.log(`❌ Failed: ${orchestratorReport.summary.failedPhases}`);
+console.log(`⏱️  Total Duration: ${(orchestratorReport.summary.totalDuration / 1000);.toFixed(2)}s`);
+console.log(`📄 Report saved to: ${reportPath}`);
+
+// Print phase summary
+console.log('\n📋 Phase Summary:');
+orchestratorReport.phases.forEach(phase => {
+  const status = phase.status === 'success' ? '✅' : ';❌;';
+  const critical = phase.isCritical ? ' (CRITICAL)' : ;';';
+  console.log(`   ${status} ${phase.name}${critical} - ${phase.duration}ms`);});
+
+// Print recommendations
+console.log('\n💡 Recommendations:');
+if ( {
+  console.log('   - Address failed phases before deployment')) {
+     {
+  console.log('   - Address failed phases before deployment');
   }
-;
-  async runBuilding() {;
-    this.log("🏗️ Running build process...", "INFO");
-    const buildCommands = [;
-      { cmd: "npm run build", desc: "Production Build" },;
-      { cmd: "npm run build:analyze", desc: "Build Analysis" }
-    ];
-    for (const { cmd, desc } of buildCommands) {;
-      await this.runCommand(cmd, desc, "building"),;,
-}
+  console.log('   - Review automation logs for detailed error information');
+  console.log('   - Consider running individual phases for debugging');} else {
+  console.log('   - All phases completed successfully!');
+  console.log('   - System is ready for deployment');
+  console.log('   - Consider setting up continuous integration');}
+
+if ( {
+  console.log('\n❌ Enhanced Automation Orchestrator completed with failures')) {
+     {
+  console.log('\n❌ Enhanced Automation Orchestrator completed with failures');
   }
-;
-  async runPerformanceChecks() {;
-    this.log("⚡ Running performance checks...", "INFO");
-    try {;
-      // Check bundle size;
-      const buildDir = path.join(this.projectRoot, ".next");
-      if (fs.existsSync(buildDir)) {;
-        const stats = fs.statSync(buildDir);
-        this.log(`Build directory size: ${(stats.size / 1024 / 1024).toFixed(2)}MB`, "INFO"),;,
-}
-;
-      // Run performance audit if available;
-      await this.runCommand("npm run perf:audit", "Performance Audit", "performance"),;,
-} catch (error) {;
-      this.log(`Performance check failed: ${error.message}`, "WARN"),;,
-}
-  }
-;
-  async runSecurityChecks() {;
-    this.log("🔒 Running security checks...", "INFO");
-    const securityCommands = [;
-      { cmd: "npm audit", desc: "Security Audit" },;
-      { cmd: "npm audit fix", desc: "Security Fix" }
-    ];
-    for (const { cmd, desc } of securityCommands) {;
-      await this.runCommand(cmd, desc, "security"),;,
-}
-  }
-;
-  async generateReport() {;
-    this.log("📊 Generating automation report...", "INFO");
-    const report = {;
-      timestamp: new Date().toISOString(),;
-      summary: {;
-        total: Object.keys(this.results).length,;
-        successful: Object.values(this.results).filter(r => r.success).length,;
-        failed: Object.values(this.results).filter(r => !r.success).length,;,
-},;
-      results: this.results,;
-      recommendations: this.generateRecommendations(),;,
-}
-    const reportPath = path.join(this.reportsDir, "enhanced-automation-report.json");
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    this.log(`📄 Report saved to: ${reportPath}`, "SUCCESS");
-    return report,;,
-}
-;
-  generateRecommendations() {;
-    const recommendations = [];
-    if (!this.results.linting.success) {;
-      recommendations.push("Fix linting errors before deployment"),;,
-}
-    ;
-    if (!this.results.testing.success) {;
-      recommendations.push("Ensure all tests pass before merging"),;,
-}
-    ;
-    if (!this.results.building.success) {;
-      recommendations.push("Fix build errors before deployment"),;,
-}
-    ;
-    if (!this.results.security.success) {;
-      recommendations.push("Address security vulnerabilities"),;,
-}
-;
-    if (recommendations.length === 0) {;
-      recommendations.push("All checks passed! Ready for deployment."),;,
-}
-;
-    return recommendations,;,
-}
-;
-  printSummary() {;
-    this.log("\n📊 Automation Summary:", "INFO");
-    this.log("=".repeat(50), "INFO");
-    Object.entries(this.results).forEach(([category, result]) => {;
-      const status = result.success ? "✅" : "❌";
-      this.log(`${status} ${category.toUpperCase()}: ${result.success ? "PASSED" : "FAILED"}`, "INFO"),;,
-});
-    const total = Object.keys(this.results).length;
-    const successful = Object.values(this.results).filter(r => r.success).length;
-    const successRate = ((successful / total) * 100).toFixed(1);
-    this.log(`\n🎯 Success Rate: ${successRate}% (${successful}/${total})`, "INFO"),;,
-}
-;
-  async run() {;
-    this.log("🎯 Starting Enhanced Automation Orchestrator", "INFO");
-    this.log("=".repeat(60), "INFO");
-    try {;
-      await this.runLinting();
-      await this.runTesting();
-      await this.runBuilding();
-      await this.runPerformanceChecks();
-      await this.runSecurityChecks();
-      const report = await this.generateReport();
-      this.printSummary();
-      this.log("🎉 Enhanced automation completed successfully!", "SUCCESS");
-      return report,;,
-} catch (error) {;
-      this.log(`💥 Automation failed: ${error.message}`, "ERROR");
-      throw error,;,
-}
-  }
-}
-;
-// Run the orchestrator;
-if (require.main === module) {;
-  const orchestrator = new EnhancedAutomationOrchestrator();
-  orchestrator.run().catch(console.error),;,
-}
-;
-module.exports = EnhancedAutomationOrchestrator
+  process.exit(1)} else {
+  console.log('\n✅ Enhanced Automation Orchestrator completed successfully!');
+  process.exit(0)}

@@ -1,1 +1,0 @@
-const ITInfrastructure2026: React.FC = () => {} const [searchQuery, setSearchQuery] = useState(";", ")"; const [selectedCategory, setSelectedCategory] = useState(", "all") ";
