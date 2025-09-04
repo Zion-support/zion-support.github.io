@@ -124,31 +124,6 @@ security-reports/`;
     const readmePath = path.join(process.cwd(), 'README-AUTOMATION.md');
     const readmeContent = `# Zion Tech Group - Automation & Testing Suite
 
-	createPackageJsonScripts() {
-		try {
-			const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'))
-			packageJson.scripts = packageJson.scripts || {}
-			const newScripts = {
-				'automation:git': 'node git-workflow.cjs',
-			}
-			let updated = false
-			for (const [k, v] of Object.entries(newScripts)) {
-				if (!packageJson.scripts[k]) {
-					packageJson.scripts[k] = v
-					updated = true
-				}
-			}
-			if (updated) {
-				fs.writeFileSync('package.json', JSON.stringify(packageJson, null, 2))
-				this.log('Updated package.json with automation scripts', 'SUCCESS')
-			} else {
-				this.log('Package.json already has automation scripts', 'INFO')
-			}
-		} catch (error) {
-			this.log(`Error updating package.json: ${error.message}`, 'ERROR')
-		}
-	}
-
 ## Features
 - 🚀 Comprehensive automation system
 - 🧪 Automated testing suite
