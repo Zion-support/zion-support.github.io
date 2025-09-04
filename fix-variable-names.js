@@ -15,10 +15,6 @@ function toCamelCase(str) {
 };
       return numberWords[match] || match})
   '0': 'Zero'
-      
-
-
-
 
 };
       return numberWords[match] || match;
@@ -72,7 +68,6 @@ export default ${camelCaseName};`;
   } catch (error) {
     // // // // // // // console.error(`Error fixing ${filePath}:`, error.message);
     return false;
-
 
 function findAndFixFiles(dir) {
   const files = fs.readdirSync(dir);

@@ -1,0 +1,11 @@
+{
+  "timestamp": "2025-09-01T05:28:44.819Z",
+  "duration": "4813ms",
+  "fixesApplied": [],
+  "errorsFound": [],
+  "summary": {
+    "totalFixes": 0,
+    "totalErrors": 0,
+    "success": false
+  }
+}
