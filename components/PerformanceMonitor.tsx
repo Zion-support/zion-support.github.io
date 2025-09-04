@@ -52,13 +52,13 @@ const PerformanceMonitor: React.FC = () => {
       const fidObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'first-input') {
-            const fid = entry.processingStart - entry.startTime;
-            sendToAnalytics({
-              name: 'FID',
-              value: fid,
-              delta: fid,
-              id: entry.startTime.toString()
-            });
+            // Cast to any to access processingStart property for FID calculation
+            const fidEntry = entry as any;
+            // Log FID in development only
+            if (process.env.NODE_ENV === 'development') {
+              console.log('FID:', fidEntry.processingStart - fidEntry.startTime);
+            }
+            sendToAnalytics('FID', fidEntry.processingStart - fidEntry.startTime);
           }
         }
       });
