@@ -14,12 +14,10 @@ import {
   Heart,
   Cloud,
   Database,
-  Code,
-  Shield,
-  Users,
-  BarChart3,
-  Settings,
-  Zap
+  Network,
+  Target,
+  CheckCircle,
+  ExternalLink
 } from 'lucide-react';
 import { Button } from '../ui/Button';
 

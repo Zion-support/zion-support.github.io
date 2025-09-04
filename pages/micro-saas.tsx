@@ -282,6 +282,138 @@ export default function MicroSaaS() {
       category: 'Social Media SaaS'
     },
     {
+      title: 'AI-Powered Personal Finance Manager',
+      description: 'Intelligent personal finance tracking and investment optimization platform',
+      icon: TrendingUp,
+      features: [
+        'Automated expense categorization and tracking,Investment portfolio optimization,Financial goal setting and tracking,Bill payment reminders and automation,Credit score monitoring and improvement tips,Tax optimization and preparation assistance'
+      ],
+      pricing: '$99 - $399/month',
+      delivery: '2-3 weeks',
+      category: 'Finance SaaS'
+    },
+    {
+      title: 'Smart Home Energy Management',
+      description: 'AI-powered home energy optimization and cost reduction platform',
+      icon: Home,
+      features: [
+        'Real-time energy consumption monitoring,Smart device integration and control,Energy cost optimization algorithms,Peak usage time recommendations,Renewable energy integration,Cost savings analytics and reporting'
+      ],
+      pricing: '$199 - $699/month',
+      delivery: '3-4 weeks',
+      category: 'Smart Home SaaS'
+    },
+    {
+      title: 'AI-Powered Fitness Coach',
+      description: 'Personalized fitness training and nutrition planning platform',
+      icon: Heart,
+      features: [
+        'Personalized workout plan generation,Nutrition tracking and meal planning,Progress monitoring and analytics,Injury prevention and recovery guidance,Social features and community support,Integration with fitness wearables'
+      ],
+      pricing: '$149 - $499/month',
+      delivery: '2-4 weeks',
+      category: 'Health SaaS'
+    },
+    {
+      title: 'Intelligent Learning Management System',
+      description: 'AI-driven educational platform with personalized learning paths',
+      icon: Brain,
+      features: [
+        'Adaptive learning algorithms,Personalized curriculum generation,Progress tracking and analytics,Automated assessment and grading,Multi-language support,Integration with educational tools'
+      ],
+      pricing: '$299 - $1,199/month',
+      delivery: '4-6 weeks',
+      category: 'Education SaaS'
+    },
+    {
+      title: 'AI-Powered Real Estate Assistant',
+      description: 'Intelligent property management and real estate investment platform',
+      icon: Home,
+      features: [
+        'Property valuation and market analysis,Investment opportunity identification,Tenant screening and management,Maintenance scheduling and tracking,Financial performance analytics,Market trend predictions'
+      ],
+      pricing: '$399 - $1,499/month',
+      delivery: '4-7 weeks',
+      category: 'Real Estate SaaS'
+    },
+    {
+      title: 'Smart Fleet Management Platform',
+      description: 'AI-powered vehicle fleet optimization and maintenance management',
+      icon: Car,
+      features: [
+        'Route optimization and fuel efficiency,Vehicle maintenance scheduling,Predictive maintenance alerts,Driver behavior monitoring,Fleet performance analytics,Cost optimization recommendations'
+      ],
+      pricing: '$499 - $1,999/month',
+      delivery: '5-8 weeks',
+      category: 'Fleet SaaS'
+    },
+    {
+      title: 'AI-Powered Legal Document Assistant',
+      description: 'Intelligent legal document creation and contract analysis platform',
+      icon: FileText,
+      features: [
+        'Automated contract generation,Legal document analysis and review,Compliance checking and alerts,Document template library,Legal research assistance,Client communication management'
+      ],
+      pricing: '$599 - $2,499/month',
+      delivery: '6-10 weeks',
+      category: 'Legal SaaS'
+    },
+    {
+      title: 'Intelligent Restaurant Management',
+      description: 'AI-powered restaurant operations and customer experience optimization',
+      icon: Users,
+      features: [
+        'Menu optimization and pricing,Inventory management and waste reduction,Customer preference analysis,Staff scheduling optimization,Revenue forecasting,Customer feedback analysis'
+      ],
+      pricing: '$299 - $1,199/month',
+      delivery: '4-6 weeks',
+      category: 'Restaurant SaaS'
+    },
+    {
+      title: 'AI-Powered Pet Care Platform',
+      description: 'Comprehensive pet health monitoring and care management system',
+      icon: Heart,
+      features: [
+        'Health monitoring and tracking,Vaccination and medication reminders,Veterinary appointment scheduling,Pet behavior analysis,Nutrition and diet planning,Pet community and social features'
+      ],
+      pricing: '$99 - $399/month',
+      delivery: '2-4 weeks',
+      category: 'Pet Care SaaS'
+    },
+    {
+      title: 'Smart Waste Management System',
+      description: 'AI-powered waste reduction and recycling optimization platform',
+      icon: TreePine,
+      features: [
+        'Waste tracking and categorization,Recycling optimization recommendations,Cost reduction analytics,Sustainability reporting,Compliance monitoring,Community engagement tools'
+      ],
+      pricing: '$199 - $799/month',
+      delivery: '3-5 weeks',
+      category: 'Sustainability SaaS'
+    },
+    {
+      title: 'AI-Powered Travel Planner',
+      description: 'Intelligent travel planning and booking optimization platform',
+      icon: Globe,
+      features: [
+        'Personalized travel recommendations,Price optimization and alerts,Itinerary generation and optimization,Travel document management,Real-time travel updates,Expense tracking and budgeting'
+      ],
+      pricing: '$149 - $599/month',
+      delivery: '3-4 weeks',
+      category: 'Travel SaaS'
+    },
+    {
+      title: 'Intelligent Voice Assistant Platform',
+      description: 'Custom voice assistant development and management platform',
+      icon: Mic,
+      features: [
+        'Custom voice command creation,Multi-language voice recognition,Integration with IoT devices,Conversation flow management,Analytics and usage tracking,White-label customization'
+      ],
+      pricing: '$399 - $1,599/month',
+      delivery: '5-8 weeks',
+      category: 'Voice SaaS'
+    },
+    {
       title: 'Smart Expense Management System',
       description: 'AI-powered expense tracking and approval workflow with receipt processing',
       icon: FileText,
