@@ -1,6 +1,6 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import './App.css';
+import React from 'react'
+import { Routes, Route } from 'react-router-dom'
+import './App.css'
 
 function App() {
   return (
@@ -17,7 +17,8 @@ function App() {
               <div>
                 <h2>Welcome to Zion Tech Group</h2>
                 <p>
-                  Specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.
+                  Specializing in AI, cybersecurity, cloud infrastructure, and digital
+                  transformation services.
                 </p>
               </div>
             }
@@ -25,7 +26,7 @@ function App() {
         </Routes>
       </main>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
