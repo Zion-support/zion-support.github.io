@@ -21,19 +21,9 @@ export default [
       globals: {
         window: 'readonly',
         document: 'readonly',
+        localStorage: 'readonly',
         console: 'readonly',
         process: 'readonly',
-        localStorage: 'readonly',
-        setTimeout: 'readonly',
-        clearTimeout: 'readonly',
-        setInterval: 'readonly',
-        clearInterval: 'readonly',
-        HTMLInputElement: 'readonly',
-        HTMLTextAreaElement: 'readonly',
-        HTMLSelectElement: 'readonly',
-        HTMLDivElement: 'readonly',
-        MouseEvent: 'readonly',
-        Node: 'readonly',
         PerformanceObserver: 'readonly',
         React: 'readonly',
       },
@@ -79,7 +69,6 @@ export default [
       'coverage/**',
 
       // Large/legacy sources and disabled dirs
-      'src/**',
       'src.corrupted/**',
       'src.disabled/**',
       'src.broken/**',
@@ -161,11 +150,6 @@ export default [
 
       // Root-level noisy files
       'api/**',
-      '*.js',
-      '.*.js',
-      '*.ts',
-      '*.tsx',
-      '*.jsx',
       'jest.config.*',
       'fix-*.js',
       'fix-*.jsx',

@@ -15,10 +15,12 @@ export default function Custom404(): any {
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center px-4">
         <div className="max-w-md w-full text-center">
           <div className="mb-8">
-            <h1 className="text-9xl font-bold text-blue-600 mb-4">404</h1>
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">Page Not Found</h2>
-            <p className="text-gray-600 mb-8">
-              Sorry, we couldn&apos;t find the page you&apos;re looking for. It might have been moved, deleted, or you entered the wrong URL.
+            <h1 className="text-9xl font-bold text-transparent bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text">
+              404
+            </h1>
+            <h2 className="text-3xl font-bold mb-4">Page Not Found</h2>
+            <p className="text-xl text-slate-300 mb-8">
+              Sorry, the page you&apos;re looking for doesn&apos;t exist or has been moved.
             </p>
           </div>
           
