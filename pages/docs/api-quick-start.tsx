@@ -33,7 +33,7 @@ export default function ApiQuickStart() {
               <h3 style={{ fontWeight: 600, marginBottom: 12, color: '#93c5fd' }}>Header Authentication</h3>
               <pre style={{ background: '#0f172a', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem' }}>
 {`curl -X GET "https://api.ziontechgroup.com/v1/services" \\
-  -H "Authorization: Bearer YOUR_API_KEY" \\`
+  -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`}
               </pre>
             </div>

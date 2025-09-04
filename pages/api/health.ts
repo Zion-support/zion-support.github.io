@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { performanceMiddleware } from '../../lib/performance-monitor';
+// import { performanceMiddleware } from '../../lib/performance-monitor';
 import { dbManager } from '../../lib/database';
 import { apiCache, userCache, staticCache } from '../../lib/cache';
 
@@ -18,29 +18,27 @@ interface SystemHealth {
   uptime: number}
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if ( {
-    res.setHeader('Allow', ['GET'])) {
-     {
+  if (req.method !== 'GET') {
     res.setHeader('Allow', ['GET']);
+    return res.status(405).json({ error: 'Method not allowed' });
   }
-    return res.status(405).json({ error: 'Method not allowed' ;})}
 
   try {
-    const startTime = Date.now(;);
+    const startTime = Date.now();
     
     // Check database health
-    const dbHealth = await dbManager.healthCheck(;);
+    const dbHealth = await dbManager.healthCheck();
     
     // Check cache health
     const cacheStats = {
       api: apiCache.getStats(),
       user: userCache.getStats(),
       static: staticCache.getStats()
-   ; ;};
+    };
     
     // Get performance metrics
-    const avgResponseTime = 1;0;0; // Mock value
-    const memoryUsage = process.memoryUsage(;);
+    const avgResponseTime = 100; // Mock value
+    const memoryUsage = process.memoryUsage();
     
     // Calculate overall health
     const services = {
@@ -93,8 +91,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.status(200).json({
       ...health,
       responseTime
+<<<<<<< HEAD
     })} catch (error) {
     console.error('Health check failed:', error);
+=======
+    });
+  } catch {
+    // Health check failed
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-db2a
     
     res.status(500).json({
       status: 'unhealthy',

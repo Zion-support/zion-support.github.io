@@ -18,12 +18,14 @@ interface ApiParameter {
 interface ApiResponse {
   status: number;
   description: string;
-  schema?: any}
+  schema?: Record<string, unknown>;
+}
 
 interface ApiExample {
   name: string;
-  request: any;
-  response: any}
+  request: Record<string, unknown>;
+  response: Record<string, unknown>;
+}
 
 class ApiDocumentationGenerator {
   private endpoints: ApiEndpoint[] = [];
@@ -51,7 +53,7 @@ class ApiDocumentationGenerator {
     return spec;}
 
   private generatePaths() {
-    const paths: any = {};
+    const paths: Record<string, unknown> = {};
     this.endpoints.forEach(endpoint => {
       if ( {
         paths[endpoint.path] = {}}

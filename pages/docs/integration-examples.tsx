@@ -40,23 +40,24 @@ class ZionTechClient {
   }
 
   async getServices() {
-    try {`
-      const response = await axios.get(\`\${this.baseURL}/services\` {
-        headers: {`
-          'Authorization': \`Bearer \${this.apiKey}\`
+    try {
+      const response = await axios.get(`${this.baseURL}/services`, {
+        headers: {
+          'Authorization': `Bearer ${this.apiKey}`,
           'Content-Type': 'application/json'
         }
       });
       return response.data;
     } catch (error) {
-      console.error('Error fetching services:' error.response?.data || error.message);
+      console.error('Error fetching services:', error.response?.data || error.message);
       throw error;
     }
+  }
   async requestQuote(serviceData) {
-    try {`
-      const response = await axios.post(\`\${this.baseURL}/quotes\` serviceData, {
-        headers: {`
-          'Authorization': \`Bearer \${this.apiKey}\`
+    try {
+      const response = await axios.post(`${this.baseURL}/quotes`, serviceData, {
+        headers: {
+          'Authorization': `Bearer ${this.apiKey}`,
           'Content-Type': 'application/json'
         }
       });
@@ -343,4 +344,4 @@ if ($services && $services['success']) {
       </div>
     </>
   );
-}`
+}

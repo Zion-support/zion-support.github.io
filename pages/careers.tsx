@@ -201,12 +201,12 @@ export default function Careers() {
               <div>
                 <h3 className="text-2xl font-bold mb-6 text-blue-400">Innovation First</h3>
                 <p className="text-slate-300 mb-6">
-                  We believe in pushing the boundaries of what's possible. Our team works on cutting-edge technologies 
+                  We believe in pushing the boundaries of what&apos;s possible. Our team works on cutting-edge technologies 
                   including AI, quantum computing, and next-generation enterprise solutions.
                 </p>
                 <h3 className="text-2xl font-bold mb-6 text-purple-400">Collaborative Environment</h3>
                 <p className="text-slate-300 mb-6">
-                  We foster a culture of collaboration and knowledge sharing. Every team member's voice is valued, 
+                  We foster a culture of collaboration and knowledge sharing. Every team member&apos;s voice is valued, 
                   and we encourage creative problem-solving and continuous learning.
                 </p>
                 <h3 className="text-2xl font-bold mb-6 text-green-400">Work-Life Balance</h3>
@@ -218,7 +218,7 @@ export default function Careers() {
               <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-white/10">
                 <h3 className="text-2xl font-bold mb-6 text-center">Ready to Join Us?</h3>
                 <p className="text-slate-300 mb-6 text-center">
-                  Don't see a position that fits? We're always looking for talented individuals who share our passion for innovation.
+                  Don&apos;t see a position that fits? We&apos;re always looking for talented individuals who share our passion for innovation.
                 </p>
                 <div className="space-y-4">
                   <a 

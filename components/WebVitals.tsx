@@ -7,7 +7,7 @@ interface WebVitalsProps {
 
 export default function WebVitals({ analyticsId }: WebVitalsProps) {
   useEffect(() => {
-    function sendToAnalytics(metric: any) {
+    function sendToAnalytics(metric: { name: string; id: string; value: number }) {
       // Send to Google Analytics if available
       if (typeof window !== 'undefined' && (window as any).gtag) {
         (window as any).gtag('event', metric.name, {
@@ -18,10 +18,7 @@ export default function WebVitals({ analyticsId }: WebVitalsProps) {
         });
       }
 
-      // Log to console in development
-      if (process.env.NODE_ENV === 'development') {
-        console.log('Web Vital:', metric);
-      }
+      // Web vital tracked
     }
 
     onCLS(sendToAnalytics);
