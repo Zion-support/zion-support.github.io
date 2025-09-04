@@ -1,410 +1,363 @@
 module.exports = {
   apps: [
-    // Main Application
+    // Main Application with Enhanced Configuration
     {
-      name: 'ziontechgroup-web',
+      name: 'ziontechgroup-web-enhanced',
       script: 'npm',
       args: 'start',
+      cwd: '/workspace',
+      instances: 'max',
+      exec_mode: 'cluster',
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '2G',
+      min_uptime: '10s',
+      max_restarts: 15,
+      restart_delay: 4000,
+      env: {
+        NODE_ENV: 'production',
+        PORT: 3000,
+        PM2_SERVE_PATH: '/workspace',
+        PM2_SERVE_PORT: 3000,
+        PM2_SERVE_SPA: 'true',
+        ENABLE_METRICS: 'true',
+        LOG_LEVEL: 'info'
+      },
+      env_development: {
+        NODE_ENV: 'development',
+        PORT: 3000,
+        LOG_LEVEL: 'debug'
+      },
+      log_file: './logs/web-enhanced.log',
+      out_file: './logs/web-enhanced-out.log',
+      error_file: './logs/web-enhanced-error.log',
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+      merge_logs: true,
+      time: true,
+      source_map_support: true,
+      instance_var: 'INSTANCE_ID'
+    },
+
+    // Enhanced AI Health Monitor
+    {
+      name: 'ai-health-monitor-enhanced',
+      script: 'scripts/intelligent/ai-health-monitor-enhanced.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '*/2 * * * *', // Every 2 minutes
+      max_memory_restart: '1G',
+      min_uptime: '30s',
+      max_restarts: 5,
+      env: {
+        NODE_ENV: 'production',
+        MONITOR_INTERVAL: 30000,
+        ALERT_THRESHOLD: 0.8,
+        ENABLE_AI_ANALYSIS: 'true',
+        HEALTH_REPORT_INTERVAL: 300000
+      },
+      log_file: './logs/ai-health-monitor-enhanced.log',
+      out_file: './logs/ai-health-monitor-enhanced-out.log',
+      error_file: './logs/ai-health-monitor-enhanced-error.log',
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+      merge_logs: true
+    },
+
+    // Enhanced Git Automation
+    {
+      name: 'git-automation-enhanced',
+      script: 'scripts/intelligent/git-automation-enhanced.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '*/5 * * * *', // Every 5 minutes
+      max_memory_restart: '512M',
+      min_uptime: '30s',
+      max_restarts: 3,
+      env: {
+        NODE_ENV: 'production',
+        AUTO_MERGE_ENABLED: 'true',
+        CONFLICT_RESOLUTION: 'intelligent',
+        BRANCH_PROTECTION: 'main',
+        QUALITY_GATES_ENABLED: 'true',
+        AUTO_COMMIT_ENABLED: 'true'
+      },
+      log_file: './logs/git-automation-enhanced.log',
+      out_file: './logs/git-automation-enhanced-out.log',
+      error_file: './logs/git-automation-enhanced-error.log',
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+    },
+
+    // Enhanced Deployment Automation
+    {
+      name: 'deployment-automation-enhanced',
+      script: 'scripts/intelligent/deployment-automation-enhanced.cjs',
       cwd: '/workspace',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
+      min_uptime: '30s',
+      max_restarts: 3,
       env: {
         NODE_ENV: 'production',
-        PORT: 3000
+        AUTO_DEPLOY_ENABLED: 'true',
+        ROLLBACK_ENABLED: 'true',
+        HEALTH_CHECK_TIMEOUT: 300000,
+        QUALITY_GATES_ENABLED: 'true',
+        NOTIFICATIONS_ENABLED: 'true'
       },
-      env_development: {
-        NODE_ENV: 'development',
-        PORT: 3000
-      },
-      log_file: './logs/web.log',
-      out_file: './logs/web-out.log',
-      error_file: './logs/web-error.log',
+      log_file: './logs/deployment-automation-enhanced.log',
+      out_file: './logs/deployment-automation-enhanced-out.log',
+      error_file: './logs/deployment-automation-enhanced-error.log',
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
     },
 
-    // AI-Powered Code Analysis & Auto-Fixing
+    // Intelligent Performance Optimizer
     {
-      name: 'ai-code-analyzer',
-      script: 'node',
-      args: 'scripts/automation/ai-code-analyzer.cjs',
+      name: 'performance-optimizer-enhanced',
+      script: 'scripts/intelligent/performance-optimizer.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '0 */1 * * *', // Every hour
+      max_memory_restart: '800M',
+      min_uptime: '30s',
+      max_restarts: 3,
+      env: {
+        NODE_ENV: 'production',
+        OPTIMIZATION_INTERVAL: 3600000,
+        METRICS_THRESHOLD: 0.7,
+        AUTO_OPTIMIZE: 'true',
+        BUNDLE_ANALYSIS: 'true'
+      },
+      log_file: './logs/performance-optimizer-enhanced.log',
+      out_file: './logs/performance-optimizer-enhanced-out.log',
+      error_file: './logs/performance-optimizer-enhanced-error.log',
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+    },
+
+    // Enhanced Security Automation
+    {
+      name: 'security-automation-enhanced',
+      script: 'scripts/intelligent/security-automation.cjs',
       cwd: '/workspace',
       instances: 1,
       autorestart: true,
       watch: false,
       cron_restart: '0 */2 * * *', // Every 2 hours
-      max_memory_restart: '512M',
+      max_memory_restart: '600M',
+      min_uptime: '30s',
+      max_restarts: 3,
       env: {
         NODE_ENV: 'production',
-        AI_ANALYSIS_MODE: 'comprehensive'
+        SCAN_INTERVAL: 7200000,
+        AUTO_PATCH: 'true',
+        VULNERABILITY_THRESHOLD: 'medium',
+        SECURITY_ALERTS: 'true',
+        DEPENDENCY_SCAN: 'true'
       },
-      log_file: './logs/ai-code-analyzer.log',
-      out_file: './logs/ai-code-analyzer-out.log',
-      error_file: './logs/ai-code-analyzer-error.log'
+      log_file: './logs/security-automation-enhanced.log',
+      out_file: './logs/security-automation-enhanced-out.log',
+      error_file: './logs/security-automation-enhanced-error.log',
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
     },
 
-    // Smart Performance Optimizer
+    // Enhanced Code Quality Monitor
     {
-      name: 'smart-performance-optimizer',
-      script: 'node',
-      args: 'scripts/automation/smart-performance-optimizer.cjs',
+      name: 'code-quality-monitor-enhanced',
+      script: 'scripts/intelligent/code-quality-monitor.cjs',
       cwd: '/workspace',
       instances: 1,
       autorestart: true,
       watch: false,
-      cron_restart: '0 */4 * * *', // Every 4 hours
-      max_memory_restart: '1G',
+      cron_restart: '0 */1 * * *', // Every hour
+      max_memory_restart: '600M',
+      min_uptime: '30s',
+      max_restarts: 3,
       env: {
         NODE_ENV: 'production',
-        OPTIMIZATION_LEVEL: 'aggressive'
+        QUALITY_CHECK_INTERVAL: 3600000,
+        AUTO_FIX_ENABLED: 'true',
+        QUALITY_THRESHOLD: 0.8,
+        LINT_AUTO_FIX: 'true',
+        TEST_COVERAGE_THRESHOLD: 80
       },
-      log_file: './logs/smart-performance-optimizer.log',
-      out_file: './logs/smart-performance-optimizer-out.log',
-      error_file: './logs/smart-performance-optimizer-error.log'
+      log_file: './logs/code-quality-monitor-enhanced.log',
+      out_file: './logs/code-quality-monitor-enhanced-out.log',
+      error_file: './logs/code-quality-monitor-enhanced-error.log',
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
     },
 
-    // Intelligent Dependency Manager
+    // Enhanced Resource Monitor
     {
-      name: 'intelligent-dependency-manager',
-      script: 'node',
-      args: 'scripts/automation/intelligent-dependency-manager.cjs',
+      name: 'resource-monitor-enhanced',
+      script: 'scripts/intelligent/resource-monitor.cjs',
       cwd: '/workspace',
       instances: 1,
       autorestart: true,
       watch: false,
-      cron_restart: '0 0 * * 0', // Weekly on Sunday
-      max_memory_restart: '512M',
+      cron_restart: '*/3 * * * *', // Every 3 minutes
+      max_memory_restart: '300M',
+      min_uptime: '30s',
+      max_restarts: 5,
       env: {
         NODE_ENV: 'production',
-        AUTO_UPDATE: 'true',
-        SECURITY_FIRST: 'true'
+        MONITOR_INTERVAL: 180000,
+        ALERT_THRESHOLD: 0.85,
+        AUTO_SCALE: 'true',
+        RESOURCE_OPTIMIZATION: 'true'
       },
-      log_file: './logs/intelligent-dependency-manager.log',
-      out_file: './logs/intelligent-dependency-manager-out.log',
-      error_file: './logs/intelligent-dependency-manager-error.log'
+      log_file: './logs/resource-monitor-enhanced.log',
+      out_file: './logs/resource-monitor-enhanced-out.log',
+      error_file: './logs/resource-monitor-enhanced-error.log',
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
     },
 
-    // Smart Deployment Automation
+    // Enhanced Error Recovery System
     {
-      name: 'smart-deployment-automation',
-      script: 'node',
-      args: 'scripts/automation/smart-deployment-automation.cjs',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      cron_restart: '0 */6 * * *', // Every 6 hours
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTO_DEPLOY: 'true',
-        ROLLBACK_ENABLED: 'true'
-      },
-      log_file: './logs/smart-deployment-automation.log',
-      out_file: './logs/smart-deployment-automation-out.log',
-      error_file: './logs/smart-deployment-automation-error.log'
-    },
-
-    // Intelligent Repository Manager
-    {
-      name: 'intelligent-repository-manager',
-      script: 'node',
-      args: 'scripts/automation/intelligent-repository-manager.cjs',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      cron_restart: '*/30 * * * *', // Every 30 minutes
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTO_MERGE: 'true',
-        CONFLICT_RESOLUTION: 'intelligent'
-      },
-      log_file: './logs/intelligent-repository-manager.log',
-      out_file: './logs/intelligent-repository-manager-out.log',
-      error_file: './logs/intelligent-repository-manager-error.log'
-    },
-
-    // Advanced Development Workflow
-    {
-      name: 'advanced-development-workflow',
-      script: 'node',
-      args: 'scripts/automation/advanced-development-workflow.cjs',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      cron_restart: '*/15 * * * *', // Every 15 minutes
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        WORKFLOW_MODE: 'continuous'
-      },
-      log_file: './logs/advanced-development-workflow.log',
-      out_file: './logs/advanced-development-workflow-out.log',
-      error_file: './logs/advanced-development-workflow-error.log'
-    },
-
-    // Intelligent CI/CD Orchestrator
-    {
-      name: 'intelligent-cicd-orchestrator',
-      script: 'node',
-      args: 'scripts/automation/intelligent-cicd-orchestrator.cjs',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      cron_restart: '*/10 * * * *', // Every 10 minutes
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        PIPELINE_MODE: 'intelligent'
-      },
-      log_file: './logs/intelligent-cicd-orchestrator.log',
-      out_file: './logs/intelligent-cicd-orchestrator-out.log',
-      error_file: './logs/intelligent-cicd-orchestrator-error.log'
-    },
-
-    // Enhanced CI/CD Automation
-    {
-      name: 'enhanced-ci-cd-automation',
-      script: 'node',
-      args: 'scripts/automation/enhanced-ci-cd-automation.cjs',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      cron_restart: '*/5 * * * *', // Every 5 minutes
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        QUALITY_GATES: 'strict'
-      },
-      log_file: './logs/enhanced-ci-cd-automation.log',
-      out_file: './logs/enhanced-ci-cd-automation-out.log',
-      error_file: './logs/enhanced-ci-cd-automation-error.log'
-    },
-
-    // Enhanced Testing Automation
-    {
-      name: 'enhanced-testing-automation',
-      script: 'node',
-      args: 'scripts/automation/enhanced-testing-automation.cjs',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      cron_restart: '*/20 * * * *', // Every 20 minutes
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        TEST_STRATEGY: 'comprehensive'
-      },
-      log_file: './logs/enhanced-testing-automation.log',
-      out_file: './logs/enhanced-testing-automation-out.log',
-      error_file: './logs/enhanced-testing-automation-error.log'
-    },
-
-    // Enhanced Security Automation
-    {
-      name: 'enhanced-security-automation',
-      script: 'node',
-      args: 'scripts/automation/enhanced-security-automation.cjs',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      cron_restart: '0 */3 * * *', // Every 3 hours
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        SECURITY_LEVEL: 'maximum'
-      },
-      log_file: './logs/enhanced-security-automation.log',
-      out_file: './logs/enhanced-security-automation-out.log',
-      error_file: './logs/enhanced-security-automation-error.log'
-    },
-
-    // Project Health Monitor
-    {
-      name: 'project-health-monitor',
-      script: 'node',
-      args: 'scripts/automation/project-health-monitor.cjs',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      cron_restart: '*/5 * * * *', // Every 5 minutes
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        HEALTH_CHECKS: 'comprehensive'
-      },
-      log_file: './logs/project-health-monitor.log',
-      out_file: './logs/project-health-monitor-out.log',
-      error_file: './logs/project-health-monitor-error.log'
-    },
-
-    // PM2 Sync Automation
-    {
-      name: 'pm2-sync-automation',
-      script: 'node',
-      args: 'scripts/automation/pm2-sync-automation.cjs',
+      name: 'error-recovery-enhanced',
+      script: 'scripts/intelligent/error-recovery.cjs',
       cwd: '/workspace',
       instances: 1,
       autorestart: true,
       watch: false,
       cron_restart: '*/1 * * * *', // Every minute
-      max_memory_restart: '1G',
+      max_memory_restart: '400M',
+      min_uptime: '30s',
+      max_restarts: 5,
       env: {
         NODE_ENV: 'production',
-        SYNC_MODE: 'continuous'
+        RECOVERY_INTERVAL: 60000,
+        AUTO_FIX_ENABLED: 'true',
+        MAX_RETRY_ATTEMPTS: 3,
+        INTELLIGENT_RECOVERY: 'true'
       },
-      log_file: './logs/pm2-sync-automation.log',
-      out_file: './logs/pm2-sync-automation-out.log',
-      error_file: './logs/pm2-sync-automation-error.log'
+      log_file: './logs/error-recovery-enhanced.log',
+      out_file: './logs/error-recovery-enhanced-out.log',
+      error_file: './logs/error-recovery-enhanced-error.log',
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
     },
 
-    // Link Checker Automation
+    // Enhanced Backup Automation
     {
-      name: 'link-checker-automation',
-      script: 'node',
-      args: 'scripts/automation/link-checker-automation.cjs',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      cron_restart: '0 */8 * * *', // Every 8 hours
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        CHECK_DEPTH: 'deep'
-      },
-      log_file: './logs/link-checker-automation.log',
-      out_file: './logs/link-checker-automation-out.log',
-      error_file: './logs/link-checker-automation-error.log'
-    },
-
-    // TypeScript Syntax Fixer
-    {
-      name: 'typescript-syntax-fixer',
-      script: 'node',
-      args: 'scripts/automation/typescript-syntax-fixer.cjs',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      cron_restart: '*/10 * * * *', // Every 10 minutes
-      max_memory_restart: '256M',
-      env: {
-        NODE_ENV: 'production',
-        AUTO_FIX: 'true'
-      },
-      log_file: './logs/typescript-syntax-fixer.log',
-      out_file: './logs/typescript-syntax-fixer-out.log',
-      error_file: './logs/typescript-syntax-fixer-error.log'
-    },
-
-    // Console Error Fixer
-    {
-      name: 'console-error-fixer',
-      script: 'node',
-      args: 'scripts/automation/console-error-fixer.cjs',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      cron_restart: '*/5 * * * *', // Every 5 minutes
-      max_memory_restart: '256M',
-      env: {
-        NODE_ENV: 'production',
-        ERROR_DETECTION: 'real-time'
-      },
-      log_file: './logs/console-error-fixer.log',
-      out_file: './logs/console-error-fixer-out.log',
-      error_file: './logs/console-error-fixer-error.log'
-    },
-
-    // Quality Checks
-    {
-      name: 'quality-checks',
-      script: 'node',
-      args: 'scripts/automation/quality-checks.cjs',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      cron_restart: '*/15 * * * *', // Every 15 minutes
-      max_memory_restart: '256M',
-      env: {
-        NODE_ENV: 'production',
-        QUALITY_STANDARDS: 'high'
-      },
-      log_file: './logs/quality-checks.log',
-      out_file: './logs/quality-checks-out.log',
-      error_file: './logs/quality-checks-error.log'
-    },
-
-    // Security Audit
-    {
-      name: 'security-audit',
-      script: 'node',
-      args: 'scripts/automation/security-audit.cjs',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      cron_restart: '0 */6 * * *', // Every 6 hours
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUDIT_LEVEL: 'comprehensive'
-      },
-      log_file: './logs/security-audit.log',
-      out_file: './logs/security-audit-out.log',
-      error_file: './logs/security-audit-error.log'
-    },
-
-    // Continuous Improvement
-    {
-      name: 'continuous-improvement',
-      script: 'node',
-      args: 'scripts/automation/continuous-improvement.cjs',
+      name: 'backup-automation-enhanced',
+      script: 'scripts/intelligent/backup-automation.cjs',
       cwd: '/workspace',
       instances: 1,
       autorestart: true,
       watch: false,
       cron_restart: '0 2 * * *', // Daily at 2 AM
-      max_memory_restart: '256M',
+      max_memory_restart: '500M',
+      min_uptime: '30s',
+      max_restarts: 3,
       env: {
         NODE_ENV: 'production',
-        IMPROVEMENT_MODE: 'automatic'
+        BACKUP_INTERVAL: 86400000,
+        RETENTION_DAYS: 30,
+        COMPRESSION_ENABLED: 'true',
+        INCREMENTAL_BACKUP: 'true',
+        CLOUD_BACKUP: 'false'
       },
-      log_file: './logs/continuous-improvement.log',
-      out_file: './logs/continuous-improvement-out.log',
-      error_file: './logs/continuous-improvement-error.log'
+      log_file: './logs/backup-automation-enhanced.log',
+      out_file: './logs/backup-automation-enhanced-out.log',
+      error_file: './logs/backup-automation-enhanced-error.log',
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
     },
 
-    // Daily Build Test
+    // Intelligent Monitoring Dashboard
     {
-      name: 'daily-build-test',
-      script: 'node',
-      args: 'scripts/automation/daily-build-test.cjs',
+      name: 'monitoring-dashboard',
+      script: 'scripts/intelligent/monitoring-dashboard.cjs',
       cwd: '/workspace',
       instances: 1,
       autorestart: true,
       watch: false,
-      cron_restart: '0 1 * * *', // Daily at 1 AM
-      max_memory_restart: '512M',
+      max_memory_restart: '400M',
+      min_uptime: '30s',
+      max_restarts: 3,
       env: {
         NODE_ENV: 'production',
-        BUILD_STRATEGY: 'comprehensive'
+        DASHBOARD_PORT: 3001,
+        REAL_TIME_UPDATES: 'true',
+        ALERT_NOTIFICATIONS: 'true'
       },
-      log_file: './logs/daily-build-test.log',
-      out_file: './logs/daily-build-test-out.log',
-      error_file: './logs/daily-build-test-error.log'
+      log_file: './logs/monitoring-dashboard.log',
+      out_file: './logs/monitoring-dashboard-out.log',
+      error_file: './logs/monitoring-dashboard-error.log',
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+    },
+
+    // Intelligent CI/CD Pipeline
+    {
+      name: 'cicd-pipeline-enhanced',
+      script: 'scripts/intelligent/cicd-pipeline.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '*/10 * * * *', // Every 10 minutes
+      max_memory_restart: '600M',
+      min_uptime: '30s',
+      max_restarts: 3,
+      env: {
+        NODE_ENV: 'production',
+        PIPELINE_INTERVAL: 600000,
+        AUTO_TRIGGER: 'true',
+        QUALITY_GATES: 'true',
+        PARALLEL_EXECUTION: 'true'
+      },
+      log_file: './logs/cicd-pipeline-enhanced.log',
+      out_file: './logs/cicd-pipeline-enhanced-out.log',
+      error_file: './logs/cicd-pipeline-enhanced-error.log',
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
     }
-  ]
+  ],
+
+  // Enhanced deployment configurations
+  deploy: {
+    production: {
+      user: 'deploy',
+      host: ['production-server-1', 'production-server-2'],
+      ref: 'origin/main',
+      repo: 'git@github.com:your-org/ziontechgroup.com.git',
+      path: '/var/www/ziontechgroup.com',
+      'pre-deploy-local': 'npm run build && npm run test:smoke',
+      'post-deploy': 'npm install --production && pm2 reload ecosystem.enhanced-intelligent.cjs --env production && pm2 save',
+      'pre-setup': 'apt-get update && apt-get install -y nodejs npm',
+      'post-setup': 'npm install -g pm2',
+      env: {
+        NODE_ENV: 'production',
+        PORT: 3000
+      }
+    },
+    staging: {
+      user: 'deploy',
+      host: ['staging-server'],
+      ref: 'origin/develop',
+      repo: 'git@github.com:your-org/ziontechgroup.com.git',
+      path: '/var/www/ziontechgroup-staging.com',
+      'pre-deploy-local': 'npm run build && npm run test:unit',
+      'post-deploy': 'npm install && pm2 reload ecosystem.enhanced-intelligent.cjs --env staging',
+      env: {
+        NODE_ENV: 'staging',
+        PORT: 3001
+      }
+    },
+    development: {
+      user: 'dev',
+      host: ['dev-server'],
+      ref: 'origin/develop',
+      repo: 'git@github.com:your-org/ziontechgroup.com.git',
+      path: '/var/www/ziontechgroup-dev.com',
+      'post-deploy': 'npm install && pm2 reload ecosystem.enhanced-intelligent.cjs --env development',
+      env: {
+        NODE_ENV: 'development',
+        PORT: 3002
+      }
+    }
+  }
 };

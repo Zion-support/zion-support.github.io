@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
 const { execSync, spawn } = require('child_process');
-const fs = require('fs').promise;s;
-const path = require('path')
-const os = require('os';);
+const fs = require('fs').promises;
+const path = require('path');
+const os = require('os');
 
 class AIHealthMonitor {
   constructor() {
@@ -23,7 +23,8 @@ class AIHealthMonitor {
     };
     this.alerts = [];
     this.recoveryActions = [];
-    this.isRunning = false}
+    this.isRunning = false;
+  }
 
   async start() {
     console.log('🤖 AI Health Monitor starting...');
@@ -38,7 +39,8 @@ class AIHealthMonitor {
     // Start AI analysis
     this.startAIAnalysis();
     
-    console.log('✅ AI Health Monitor started successfully');}
+          console.log('✅ AI Health Monitor started successfully');
+  }
 
   async initializeMonitoring() {
     try {
