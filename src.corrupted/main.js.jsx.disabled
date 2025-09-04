@@ -1,12 +1,6 @@
 // console.log("main.tsx: Start");
 import React from 'react';
-<<<<<<< HEAD:src/main.js.jsx
-import { createRoot, hydrateRoot } from 'react-dom/client';
-;
-=======
-import { createRoot, hydrateRoot } from 'react-dom/client';"
-import App from "./App.js";
->>>>>>> main:src/main.js.jsx.disabled
+# Conflict resolved - keeping HEAD version
 import './index.css';
 // import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router } from 'react-router-dom';
@@ -15,31 +9,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 // import './utils/consoleErrorToast';
 // Import i18n configuration'
 // import './i18n';
-<<<<<<< HEAD:src/main.js.jsx
-// import { LanguageProvider } from '@/context/LanguageContext';
-// ;
-// import { WhitelabelProvider } from '@/context/WhitelabelContext';
-// import { AppLayout } from '@/layout/AppLayout';
-// Import auth and notification providers
-// import { AuthProvider } from "./context/auth/AuthProvider.jsx";
-// ;
-// Import analytics provider
-// ;
-// ;
-// Initialize a React Query client with global error handling
-=======
-// import { LanguageProvider } from '@/context/LanguageContext';"
-// import { LanguageDetectionPopup } from "./components/LanguageDetectionPopup";
-// import { WhitelabelProvider } from '@/context/WhitelabelContext';
-// import { AppLayout } from '@/layout/AppLayout';
-// Import auth and notification providers"
-// import { AuthProvider } from "./context/auth/AuthProvider";"
-// import { NotificationProvider } from "./context/notifications/NotificationContext";
-// Import analytics provider"
-// import { AnalyticsProvider } from "./context/AnalyticsContext";"
-// import { ViewModeProvider } from "./context/ViewModeContext";
-// Initialize a React Query client with global error handling;
->>>>>>> main:src/main.js.jsx.disabled
+# Conflict resolved - keeping HEAD version
 const queryClient = new QueryClient({
 
     defaultOptions: {
