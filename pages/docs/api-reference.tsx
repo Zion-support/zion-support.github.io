@@ -50,7 +50,7 @@ export default function ApiReference() {
             <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 24  }}>📋 Services Endpoints</h2>
             
             <div style={{ display: 'grid', gap: 20 }}>
-              <div style={{ padding: 20, background: 'borderRadius', 8 }}>
+              <div style={{ padding: 20, background: '#1e293b', borderRadius: 8 }}>
                 <h3 style={{ fontWeight: 600, marginBottom: 12, color: '#86efac' }}>GET /services</h3>
                 <p style={{ opacity: '0.8', marginBottom: 12 }}>Retrieve a list of all available services.</p>
                 
@@ -90,7 +90,7 @@ export default function ApiReference() {
                 </div>
               </div>
 
-              <div style={{ padding: 20, background: 'borderRadius', 8 }}>
+              <div style={{ padding: 20, background: '#1e293b', borderRadius: 8 }}>
                 <h3 style={{ fontWeight: 600, marginBottom: 12, color: '#86efac' }}>GET /services/&#123;id&#125;</h3>
                 <p style={{ opacity: '0.8', marginBottom: 12 }}>Retrieve detailed information about a specific service.</p>
                 
@@ -130,7 +130,7 @@ export default function ApiReference() {
           <section style={{ background: '#1e293b', padding: 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)'  }}>
             <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 24  }}>💰 Quotes Endpoints</h2>
             
-            <div style={{ padding: 20, background: 'borderRadius', 8 }}>
+            <div style={{ padding: 20, background: '#1e293b', borderRadius: 8 }}>
               <h3 style={{ fontWeight: 600, marginBottom: 12, color: '#86efac' }}>POST /quotes</h3>
               <p style={{ opacity: '0.8', marginBottom: 12 }}>Submit a request for a custom service quote.</p>
               
@@ -182,27 +182,27 @@ export default function ApiReference() {
             <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 24  }}>⚠️ Error Codes</h2>
             
             <div style={{ display: 'grid', gap: 16 }}>
-              <div style={{ padding: 16, background: 'borderRadius', 8, border: '1px solid rgba(239, 68, 68, 0.2)' }}>
+              <div style={{ padding: 16, background: '#1e293b', borderRadius: 8, border: '1px solid rgba(239, 68, 68, 0.2)' }}>
                 <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#fca5a5' }}>400 - Bad Request</h3>
                 <p style={{ opacity: '0.8', fontSize: '0.9rem' }}>Invalid request parameters or malformed JSON.</p>
               </div>
               
-              <div style={{ padding: 16, background: 'borderRadius', 8, border: '1px solid rgba(239, 68, 68, 0.2)' }}>
+              <div style={{ padding: 16, background: '#1e293b', borderRadius: 8, border: '1px solid rgba(239, 68, 68, 0.2)' }}>
                 <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#fca5a5' }}>401 - Unauthorized</h3>
                 <p style={{ opacity: '0.8', fontSize: '0.9rem' }}>Invalid or missing API key.</p>
               </div>
               
-              <div style={{ padding: 16, background: 'borderRadius', 8, border: '1px solid rgba(239, 68, 68, 0.2)' }}>
+              <div style={{ padding: 16, background: '#1e293b', borderRadius: 8, border: '1px solid rgba(239, 68, 68, 0.2)' }}>
                 <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#fca5a5' }}>404 - Not Found</h3>
                 <p style={{ opacity: '0.8', fontSize: '0.9rem' }}>Requested resource does not exist.</p>
               </div>
               
-              <div style={{ padding: 16, background: 'borderRadius', 8, border: '1px solid rgba(239, 68, 68, 0.2)' }}>
+              <div style={{ padding: 16, background: '#1e293b', borderRadius: 8, border: '1px solid rgba(239, 68, 68, 0.2)' }}>
                 <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#fca5a5' }}>429 - Too Many Requests</h3>
                 <p style={{ opacity: '0.8', fontSize: '0.9rem' }}>Rate limit exceeded. Please wait before making more requests.</p>
               </div>
               
-              <div style={{ padding: 16, background: 'borderRadius', 8, border: '1px solid rgba(239, 68, 68, 0.2)' }}>
+              <div style={{ padding: 16, background: '#1e293b', borderRadius: 8, border: '1px solid rgba(239, 68, 68, 0.2)' }}>
                 <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#fca5a5' }}>500 - Internal Server Error</h3>
                 <p style={{ opacity: '0.8', fontSize: '0.9rem' }}>Unexpected server error. Please try again later.</p>
               </div>
