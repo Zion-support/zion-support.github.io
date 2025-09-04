@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { Brain, Zap, Shield, Eye, Mic, TrendingUp, Database, FileText, Code, Cog, Search, Users } from 'lucide-react';
 
-export default function AIServices() {
+function AIServices() {
   const contact = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -890,6 +890,43 @@ export default function AIServices() {
         'Real-time quality monitoring and alerts',
         'Improved product consistency and customer satisfaction'
       ]
-    },
-    {
-      icon: TrendingUp,
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+      <Head>
+        <title>AI Services - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive AI services and solutions for modern businesses" />
+      </Head>
+      
+      <main className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold mb-8">AI Services</h1>
+        <p className="text-xl text-slate-300 mb-12">
+          Discover our comprehensive suite of AI-powered services designed to transform your business.
+        </p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <div key={index} className="bg-slate-900 rounded-lg p-6 border border-white/10">
+              <div className="flex items-center mb-4">
+                <service.icon className="w-8 h-8 text-blue-400 mr-3" />
+                <h3 className="text-xl font-semibold">{service.title}</h3>
+              </div>
+              <p className="text-slate-300 mb-4">{service.description}</p>
+              <ul className="space-y-2">
+                {service.features.map((feature, featureIndex) => (
+                  <li key={featureIndex} className="flex items-center text-sm text-slate-400">
+                    <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </main>
+    </div>
+  );
+}
+export default AIServices;

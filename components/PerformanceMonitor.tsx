@@ -15,8 +15,6 @@ const PerformanceMonitor: React.FC = () => {
               metric_rating: value < 2.5 ? 'good' : value < 4 ? 'needs-improvement' : 'poor'
             });
           }
-        }
-      };
       // Monitor Largest Contentful Paint (LCP)
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
@@ -27,7 +25,6 @@ const PerformanceMonitor: React.FC = () => {
             }
             sendToAnalytics('LCP', entry.startTime);
           }
-        }
       });
       
       try {
@@ -46,7 +43,6 @@ const PerformanceMonitor: React.FC = () => {
             }
             sendToAnalytics('FID', entry.processingStart - entry.startTime);
           }
-        }
       });
 
       try {
@@ -62,7 +58,6 @@ const PerformanceMonitor: React.FC = () => {
           if (!(entry as any).hadRecentInput) {
             clsValue += (entry as any).value;
           }
-        }
         // Log CLS in development only
         if (process.env.NODE_ENV === 'development') {
           console.log('CLS:', clsValue);
@@ -80,8 +75,7 @@ const PerformanceMonitor: React.FC = () => {
         observer.disconnect();
         fidObserver.disconnect();
         clsObserver.disconnect();
-      };
-    }
+      }
   }, []);
 
   return null; // This component doesn't render anything

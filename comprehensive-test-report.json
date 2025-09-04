@@ -1,110 +1,143 @@
 {
-  "timestamp": "2025-09-03T16:58:04.929Z",
+  "timestamp": "2025-09-04T01:31:37.924Z",
   "tests": [
     {
       "name": "Build Test",
-      "status": "passed",
-      "message": "Application builds successfully",
-      "duration": 10940,
+      "status": "failed",
+      "message": "Build failed: Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nFailed to compile.\n\n./components/ContactForm.tsx\nError:   \u001b[31mx\u001b[0m 'import', and 'export' cannot be used outside of module code\n     ,-[\u001b[36;1;4m/workspace/components/ContactForm.tsx\u001b[0m:218:1]\n \u001b[2m215\u001b[0m |     </form>\n \u001b[2m216\u001b[0m |   );\n \u001b[2m217\u001b[0m | }\n \u001b[2m218\u001b[0m | export default ContactForm;\n     : \u001b[35;1m^^^^^^\u001b[0m\n     `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./components/ContactForm.tsx\n./pages/contact.tsx\n\n./components/ErrorBoundary.tsx\nError:   \u001b[31mx\u001b[0m Expression expected\n    ,-[\u001b[36;1;4m/workspace/components/ErrorBoundary.tsx\u001b[0m:26:1]\n \u001b[2m23\u001b[0m |     if (process.env.NODE_ENV === 'development') {\n \u001b[2m24\u001b[0m |       console.error('ErrorBoundary caught an error:', error, errorInfo);\n \u001b[2m25\u001b[0m |     }\n \u001b[2m26\u001b[0m |   public render() {\n    : \u001b[35;1m  ^^^^^^\u001b[0m\n \u001b[2m27\u001b[0m |     if (this.state.hasError) {\n \u001b[2m28\u001b[0m |       if (this.props.fallback) {\n \u001b[2m29\u001b[0m |         return this.props.fallback;\n    `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./components/ErrorBoundary.tsx\n\n./components/PerformanceMonitor.tsx\nError:   \u001b[31mx\u001b[0m Expression expected\n    ,-[\u001b[36;1;4m/workspace/components/PerformanceMonitor.tsx\u001b[0m:47:1]\n \u001b[2m44\u001b[0m |             }\n \u001b[2m45\u001b[0m |             sendToAnalytics('FID', entry.processingStart - entry.startTime);\n \u001b[2m46\u001b[0m |           }\n \u001b[2m47\u001b[0m |       });\n    : \u001b[35;1m       ^\u001b[0m\n \u001b[2m48\u001b[0m | \n \u001b[2m49\u001b[0m |       try {\n \u001b[2m50\u001b[0m |         fidObserver.observe({ entryTypes: ['first-input'] });\n    `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./components/PerformanceMonitor.tsx\n\n./pages/ai-services.tsx\nModule parse failed: Duplicate export 'default' (960:7)\nFile was processed with these loaders:\n * ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js\nYou may need an additional loader to handle the result of these loaders.\n|     });\n| }\n> export default AIServices;\n| \n\nImport trace for requested module:\n./pages/ai-services.tsx\n\n./pages/index.tsx\nError:   \u001b[31mx\u001b[0m Expression expected\n    ,-[\u001b[36;1;4m/workspace/pages/index.tsx\u001b[0m:52:1]\n \u001b[2m49\u001b[0m |               \"sameAs\": [contact.site]\n \u001b[2m50\u001b[0m |             })\n \u001b[2m51\u001b[0m |           }\n \u001b[2m52\u001b[0m |         />\n    : \u001b[35;1m         ^\u001b[0m\n \u001b[2m53\u001b[0m |       </Head>\n \u001b[2m54\u001b[0m |       \n \u001b[2m55\u001b[0m |       <main className=\"min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white\">\n    `----\n  \u001b[31mx\u001b[0m Expression expected\n    ,-[\u001b[36;1;4m/workspace/pages/index.tsx\u001b[0m:53:1]\n \u001b[2m50\u001b[0m |             })\n \u001b[2m51\u001b[0m |           }\n \u001b[2m52\u001b[0m |         />\n \u001b[2m53\u001b[0m |       </Head>\n    : \u001b[35;1m      ^\u001b[0m\n \u001b[2m54\u001b[0m |       \n \u001b[2m55\u001b[0m |       <main className=\"min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white\">\n \u001b[2m56\u001b[0m |         {/* Hero Section */}\n    `----\n  \u001b[31mx\u001b[0m Unterminated regexp literal\n    ,-[\u001b[36;1;4m/workspace/pages/index.tsx\u001b[0m:53:1]\n \u001b[2m50\u001b[0m |             })\n \u001b[2m51\u001b[0m |           }\n \u001b[2m52\u001b[0m |         />\n \u001b[2m53\u001b[0m |       </Head>\n    : \u001b[35;1m       ^^^^^^\u001b[0m\n \u001b[2m54\u001b[0m |       \n \u001b[2m55\u001b[0m |       <main className=\"min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white\">\n \u001b[2m56\u001b[0m |         {/* Hero Section */}\n    `----\n  \u001b[31mx\u001b[0m Expression expected\n    ,-[\u001b[36;1;4m/workspace/pages/index.tsx\u001b[0m:53:1]\n \u001b[2m50\u001b[0m |             })\n \u001b[2m51\u001b[0m |           }\n \u001b[2m52\u001b[0m |         />\n \u001b[2m53\u001b[0m |       </Head>\n    : \u001b[35;1m        ^^^^^\u001b[0m\n \u001b[2m54\u001b[0m |       \n \u001b[2m55\u001b[0m |       <main className=\"min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white\">\n \u001b[2m56\u001b[0m |         {/* Hero Section */}\n    `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/index.tsx\n\n\n> Build failed because of webpack errors\n",
+      "duration": 7046,
       "details": {
-        "buildOutput": [
-          "  └ other shared chunks (total)           12.1 kB",
-          "",
-          "○  (Static)  prerendered as static content",
-          "",
-          "",
-          "> ziontechgroup.com@0.1.0 postbuild",
-          "> echo \"Build completed\"",
-          "",
-          "Build completed",
-          ""
-        ]
+        "error": "\n> ziontechgroup.com@0.1.0 prebuild\n> echo \"Starting build...\"\n\nStarting build...\n\n> ziontechgroup.com@0.1.0 build\n> next build\n\n   ▲ Next.js 15.5.2\n   - Experiments (use with caution):\n     ✓ optimizeCss\n     ✓ scrollRestoration\n     · optimizePackageImports\n\n   Skipping validation of types\n   Skipping linting\n   Creating an optimized production build ...\n"
       }
     },
     {
       "name": "TypeScript Check",
-      "status": "passed",
-      "message": "TypeScript type checking passed",
-      "duration": 759,
+      "status": "failed",
+      "message": "TypeScript errors found: 52 errors",
+      "duration": 2171,
       "details": {
-        "output": "\n> ziontechgroup.com@0.1.0 type-check\n> tsc --noEmit\n\n"
+        "errors": [
+          "error TS1005:",
+          "error TS1128:",
+          "error TS1128:",
+          "error TS1434:",
+          "error TS1434:"
+        ],
+        "output": "\n> ziontechgroup.com@0.1.0 type-check\n> tsc --noEmit\n\ncomponents/ContactForm.tsx(218,28): error TS1005: '}' expected.\ncomponents/ErrorBoundary.tsx(19,3): error TS1128: Declaration or statement expected.\ncomponents/ErrorBoundary.tsx(24,3): error TS1128: Declaration or statement expected.\ncomponents/ErrorBoundary.tsx(69,1): error TS1434: Unexpected keyword or identifier.\ncomponents/ErrorBoundary.tsx(69,8): error TS1434: Unexpected keyword or identifier.\ncomponents/ErrorBoundary.tsx(69,30): error TS1005: '}' expected.\ncomponents/PerformanceMonitor.tsx(28,8): error TS1128: Declaration or statement expected.\ncomponents/PerformanceMonitor.tsx(46,8): error TS1128: Declaration or statement expected.\ncomponents/PerformanceMonitor.tsx(66,8): error TS1128: Declaration or statement expected.\ncomponents/PerformanceMonitor.tsx(79,4): error TS1128: Declaration or statement expected.\ncomponents/PerformanceMonitor.tsx(79,8): error TS1005: ';' expected.\ncomponents/SearchBar.tsx(102,8): error TS1005: ',' expected.\ncomponents/SearchBar.tsx(182,26): error TS1005: '}' expected.\npages/index.tsx(52,10): error TS1109: Expression expected.\npages/index.tsx(53,7): error TS1109: Expression expected.\npages/it-services.tsx(1028,6): error TS1005: ',' expected.\npages/it-services.tsx(1029,5): error TS1005: ',' expected.\npages/it-services.tsx(1029,6): error TS1128: Declaration or statement expected.\npages/it-services.tsx(1032,11): error TS1005: ';' expected.\npages/it-services.tsx(1034,7): error TS1128: Declaration or statement expected.\npages/it-services.tsx(1034,8): error TS1128: Declaration or statement expected.\npages/it-services.tsx(1036,6): error TS1128: Declaration or statement expected.\npages/it-services.tsx(1040,7): error TS1128: Declaration or statement expected.\npages/it-services.tsx(1040,8): error TS1128: Declaration or statement expected.\npages/it-services.tsx(1042,6): error TS1128: Declaration or statement expected.\npages/it-services.tsx(1046,7): error TS1128: Declaration or statement expected.\npages/it-services.tsx(1046,8): error TS1128: Declaration or statement expected.\npages/it-services.tsx(1048,6): error TS1128: Declaration or statement expected.\npages/it-services.tsx(1053,3): error TS1128: Declaration or statement expected.\npages/it-services.tsx(1190,1): error TS1128: Declaration or statement expected.\npages/micro-saas.tsx(1073,6): error TS1005: ',' expected.\npages/micro-saas.tsx(1074,7): error TS1005: ',' expected.\npages/micro-saas.tsx(1074,15): error TS1005: ',' expected.\npages/micro-saas.tsx(1075,15): error TS1005: ',' expected.\npages/micro-saas.tsx(1080,15): error TS1005: ',' expected.\npages/micro-saas.tsx(1081,5): error TS1005: ',' expected.\npages/micro-saas.tsx(1081,6): error TS1128: Declaration or statement expected.\npages/micro-saas.tsx(1084,7): error TS1128: Declaration or statement expected.\npages/micro-saas.tsx(1084,8): error TS1128: Declaration or statement expected.\npages/micro-saas.tsx(1086,15): error TS1005: ';' expected.\npages/micro-saas.tsx(1087,15): error TS1005: ';' expected.\npages/micro-saas.tsx(1090,15): error TS1005: ';' expected.\npages/micro-saas.tsx(1091,6): error TS1128: Declaration or statement expected.\npages/micro-saas.tsx(1094,7): error TS1128: Declaration or statement expected.\npages/micro-saas.tsx(1094,8): error TS1128: Declaration or statement expected.\npages/micro-saas.tsx(1096,15): error TS1005: ';' expected.\npages/micro-saas.tsx(1097,15): error TS1005: ';' expected.\npages/micro-saas.tsx(1099,5): error TS1005: ',' expected.\npages/micro-saas.tsx(1099,6): error TS1128: Declaration or statement expected.\npages/micro-saas.tsx(1102,11): error TS1005: ';' expected.\npages/micro-saas.tsx(1105,3): error TS1128: Declaration or statement expected.\npages/micro-saas.tsx(1238,1): error TS1128: Declaration or statement expected.\n"
       }
     },
     {
       "name": "ESLint Check",
-      "status": "passed",
-      "message": "ESLint completed (check output for warnings)",
-      "duration": 194,
+      "status": "failed",
+      "message": "ESLint found 9 issues",
+      "duration": 3252,
       "details": {
-        "output": "\n> ziontechgroup.com@0.1.0 lint\n> eslint components pages --ext .ts,.tsx,.js,.jsx\n\n"
+        "errors": [
+          "  218:27  error  Parsing error: '}' expected",
+          "  19:2  error  Parsing error: Declaration or statement expected",
+          "  28:7  error  Parsing error: Declaration or statement expected",
+          "  102:7  error  Parsing error: ',' expected",
+          "  910:12  error    'services' is not defined                        no-undef"
+        ],
+        "output": "\n> ziontechgroup.com@0.1.0 lint\n> eslint components pages --no-ignore\n\n\n/workspace/components/ContactForm.tsx\n  218:27  error  Parsing error: '}' expected\n\n/workspace/components/ErrorBoundary.tsx\n  19:2  error  Parsing error: Declaration or statement expected\n\n/workspace/components/PerformanceMonitor.tsx\n  28:7  error  Parsing error: Declaration or statement expected\n\n/workspace/components/SearchBar.tsx\n  102:7  error  Parsing error: ',' expected\n\n/workspace/pages/_app.tsx\n   8:20  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any\n  90:20  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any\n\n/workspace/pages/ai-services.tsx\n    3:8   warning  'Link' is defined but never used                 no-unused-vars\n    3:8   warning  'Link' is defined but never used                 @typescript-eslint/no-unused-vars\n    4:72  warning  'Code' is defined but never used                 no-unused-vars\n    4:72  warning  'Code' is defined but never used                 @typescript-eslint/no-unused-vars\n    4:91  warning  'Users' is defined but never used                no-unused-vars\n    4:91  warning  'Users' is defined but never used                @typescript-eslint/no-unused-vars\n    7:9   warning  'contact' is assigned a value but never used     no-unused-vars\n    7:9   warning  'contact' is assigned a value but never used     @typescript-eslint/no-unused-vars\n   13:9   warning  'aiServices' is assigned a value but never used  no-unused-vars\n   13:9   warning  'aiServices' is assigned a value but never used  @typescript-eslint/no-unused-vars\n  910:12  error    'services' is not defined                        no-undef\n\n/workspace/pages/contact.tsx\n  5:36  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any\n\n/workspace/pages/index.tsx\n  52:9  error  Parsing error: Expression expected\n\n/workspace/pages/it-services.tsx\n  1028:5  error  Parsing error: ',' expected\n\n/workspace/pages/micro-saas.tsx\n  1073:5  error  Parsing error: ',' expected\n\n/workspace/pages/services.tsx\n  1483:37  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any\n\n✖ 22 problems (8 errors, 14 warnings)\n\n"
       }
     },
     {
       "name": "Pages Validation",
       "status": "passed",
-      "message": "13/13 pages have valid exports",
-      "duration": 1,
+      "message": "18/18 pages have valid exports",
+      "duration": 3,
       "details": {
         "pages": [
+          {
+            "page": "404.tsx",
+            "hasExport": true,
+            "hasImports": true,
+            "size": 2412
+          },
           {
             "page": "_app.tsx",
             "hasExport": true,
             "hasImports": true,
-            "size": 4539
+            "size": 11642
           },
           {
             "page": "about.tsx",
             "hasExport": true,
             "hasImports": true,
-            "size": 7663
+            "size": 7668
           },
           {
             "page": "ai-services.tsx",
             "hasExport": true,
             "hasImports": true,
-            "size": 28282
+            "size": 33690
+          },
+          {
+            "page": "cloud-devops.tsx",
+            "hasExport": true,
+            "hasImports": true,
+            "size": 7242
           },
           {
             "page": "contact.tsx",
             "hasExport": true,
             "hasImports": true,
-            "size": 8556
+            "size": 9142
+          },
+          {
+            "page": "cybersecurity.tsx",
+            "hasExport": true,
+            "hasImports": true,
+            "size": 7234
+          },
+          {
+            "page": "docs.tsx",
+            "hasExport": true,
+            "hasImports": true,
+            "size": 8172
           },
           {
             "page": "faq.tsx",
             "hasExport": true,
             "hasImports": true,
-            "size": 6274
+            "size": 6284
           },
           {
             "page": "index.tsx",
             "hasExport": true,
             "hasImports": true,
-            "size": 10650
+            "size": 10658
           },
           {
             "page": "it-services.tsx",
             "hasExport": true,
             "hasImports": true,
-            "size": 36863
+            "size": 45101
           },
           {
             "page": "micro-saas.tsx",
             "hasExport": true,
             "hasImports": true,
-            "size": 37262
+            "size": 45117
           },
           {
             "page": "pricing.tsx",
             "hasExport": true,
             "hasImports": true,
-            "size": 3929
+            "size": 3900
           },
           {
             "page": "privacy.tsx",
             "hasExport": true,
             "hasImports": true,
             "size": 2110
+          },
+          {
+            "page": "quantum-computing.tsx",
+            "hasExport": true,
+            "hasImports": true,
+            "size": 7390
           },
           {
             "page": "services-catalog.tsx",
@@ -116,59 +149,94 @@
             "page": "services.tsx",
             "hasExport": true,
             "hasImports": true,
-            "size": 77368
+            "size": 77391
           },
           {
             "page": "terms.tsx",
             "hasExport": true,
             "hasImports": true,
-            "size": 6561
+            "size": 6571
           }
         ],
-        "totalPages": 13,
-        "validPages": 13
+        "totalPages": 18,
+        "validPages": 18
       }
     },
     {
       "name": "Components Validation",
-      "status": "failed",
-      "message": "2/3 components are valid React components",
-      "duration": 0,
+      "status": "passed",
+      "message": "8/8 components are valid React components",
+      "duration": 1,
       "details": {
         "components": [
+          {
+            "component": "Breadcrumb.tsx",
+            "hasReactImport": true,
+            "hasExport": true,
+            "hasJSX": true,
+            "size": 2136
+          },
+          {
+            "component": "ContactForm.tsx",
+            "hasReactImport": true,
+            "hasExport": true,
+            "hasJSX": true,
+            "size": 7641
+          },
           {
             "component": "ErrorBoundary.tsx",
             "hasReactImport": true,
             "hasExport": true,
             "hasJSX": true,
-            "size": 2378
+            "size": 2463
           },
           {
             "component": "Loading.tsx",
             "hasReactImport": true,
             "hasExport": true,
             "hasJSX": true,
-            "size": 595
+            "size": 694
+          },
+          {
+            "component": "LoadingSpinner.tsx",
+            "hasReactImport": true,
+            "hasExport": true,
+            "hasJSX": true,
+            "size": 680
           },
           {
             "component": "PerformanceMonitor.tsx",
             "hasReactImport": true,
             "hasExport": true,
-            "hasJSX": false,
-            "size": 1894
+            "hasJSX": true,
+            "size": 2933
+          },
+          {
+            "component": "SearchBar.tsx",
+            "hasReactImport": true,
+            "hasExport": true,
+            "hasJSX": true,
+            "size": 6347
+          },
+          {
+            "component": "ThemeToggle.tsx",
+            "hasReactImport": true,
+            "hasExport": true,
+            "hasJSX": true,
+            "size": 1636
           }
         ],
-        "totalComponents": 3,
-        "validComponents": 2
+        "totalComponents": 8,
+        "validComponents": 8
       }
     },
     {
       "name": "Dependencies Check",
       "status": "passed",
-      "message": "Dependencies check passed (79 deps, 37 dev deps)",
-      "duration": 605,
+      "message": "Dependencies check passed (78 deps, 37 dev deps)",
+      "duration": 1552,
       "details": {
-        "dependencies": 79,
+        "dependencies": 78,
         "devDependencies": 37,
         "vulnerabilities": []
       }
@@ -176,19 +244,19 @@
     {
       "name": "Performance Check",
       "status": "passed",
-      "message": "Build size: 42.94MB (Good)",
+      "message": "Build size: 25.54MB (Good)",
       "duration": 2,
       "details": {
-        "buildSizeBytes": 45030112,
-        "buildSizeMB": 42.944061279296875,
+        "buildSizeBytes": 26776057,
+        "buildSizeMB": 25.535637855529785,
         "threshold": 50
       }
     }
   ],
   "summary": {
     "total": 7,
-    "passed": 6,
-    "failed": 1,
+    "passed": 4,
+    "failed": 3,
     "skipped": 0,
     "coverage": 0
   }
