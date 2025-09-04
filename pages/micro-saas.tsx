@@ -1126,7 +1126,11 @@ export default function MicroSaaS() {
         'Mobile app for attendees and organizers'
       ],
       pricing: '$299 – $1,999/month',
-
+      category: 'Event Management'
+    },
+    {
+      icon: Mail,
+      name: 'AI Email Automation',
       description: 'Intelligent email automation that reads, analyzes, and responds to emails with human-like accuracy and context awareness.',
       features: [
         'Natural language processing for email understanding',
@@ -1569,7 +1573,6 @@ export default function MicroSaaS() {
         <title>Micro SaaS - Zion Tech Group</title>
         <meta name="description" content="Scalable micro SaaS solutions for your business" />
       </Head>
-
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
@@ -1579,113 +1582,17 @@ export default function MicroSaaS() {
             Scalable software-as-a-service solutions designed for rapid growth
           </p>
         </div>
-
-        {/* Services Grid */}
         <div className="grid gap-8">
-          {microSaaSServices.map((service, index) => (
-            <div key={index} className="rounded-xl border border-white/10 bg-slate-900/60 p-8 hover:border-blue-500/40 transition-colors">
-              <div className="flex items-start gap-4 mb-6">
-                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <service.icon className="w-6 h-6" />
-                </div>
-                <div className="flex-1">
-                  <div className="flex items-center gap-3 mb-2">
-                    <h2 className="text-2xl font-bold">{service.name}</h2>
-                    <span className="px-2 py-1 rounded bg-slate-800/70 border border-white/10 text-xs font-medium">
-                      {service.category}
-                    </span>
-                  </div>
-                  <p className="text-slate-300 text-lg">{service.description}</p>
-                </div>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-lg font-semibold mb-3 text-blue-400">Key Features</h3>
-                  <ul className="space-y-2 text-slate-300">
-                    {(service.features || []).map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-2">
-                        <span className="text-blue-400 mt-1">•</span>
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div>
-                  <h3 className="text-lg font-semibold mb-3 text-green-400">Business Benefits</h3>
-                  <ul className="space-y-2 text-slate-300">
-                    {(service.benefits || []).map((benefit, idx) => (
-                      <li key={idx} className="flex items-start gap-2">
-                        <span className="text-green-400 mt-1">✓</span>
-                        <span>{benefit}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-
-              <div className="mt-6 pt-6 border-t border-white/10">
-                <div className="flex flex-wrap items-center gap-6">
-                  <div className="flex items-center gap-2">
-                    <span className="text-slate-400">Pricing:</span>
-                    <span className="font-semibold text-blue-400">{service.pricing}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-slate-400">Setup Time:</span>
-                    <span className="font-semibold text-green-400">{service.timeline}</span>
-                  </div>
-                  <div className="ml-auto flex gap-3">
-                    <Link href="/contact" className="px-4 py-2 rounded bg-blue-600 hover:bg-blue-700 text-sm font-semibold">
-                      Get Started
-                    </Link>
-                    <Link href="/contact" className="px-4 py-2 rounded bg-slate-800 hover:bg-slate-700 border border-white/10 text-sm font-semibold">
-                      Learn More
-                    </Link>
-                  </div>
-                </div>
-              </div>
-=======
-        <div className="grid md:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-lg p-8">
-            <div className="flex items-center mb-6">
-              <Zap className="h-8 w-8 text-blue-600 mr-4" />
-              <h3 className="text-2xl font-semibold text-gray-900">
-                Rapid Development
-              </h3>
-            </div>
-            <p className="text-gray-600 mb-6">
-              Fast-track your SaaS product development with our proven methodologies.
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+              AI-Powered Analytics
+            </h3>
+            <p className="text-gray-600">
+              Advanced analytics and insights for your SaaS business.
             </p>
           </div>
-
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <div className="flex items-center mb-6">
-              <Brain className="h-8 w-8 text-blue-600 mr-4" />
-              <h3 className="text-2xl font-semibold text-gray-900">
-                AI Integration
-              </h3>
-            </div>
-            <p className="text-gray-600 mb-6">
-              Enhance your SaaS with intelligent features and automation.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <div className="flex items-center mb-6">
-              <TrendingUp className="h-8 w-8 text-blue-600 mr-4" />
-              <h3 className="text-2xl font-semibold text-gray-900">
-                Growth Analytics
-              </h3>
-            </div>
-            <p className="text-gray-600 mb-6">
-              Data-driven insights to scale your SaaS business effectively.
-            </p>
-          </div>
-        </div>
         </div>
       </div>
-    </div>
     </div>
   );
 }
