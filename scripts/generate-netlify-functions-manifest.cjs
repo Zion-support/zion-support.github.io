@@ -14,7 +14,7 @@ try {;
   fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
   console.log("[netlify: manifest] wrote", manifestPath),;,
 } catch (e) {;
-  console.log("[netlify:manifest] skipped (write failed)"),;,
+  console.log("[netlify: manifest] skipped (write failed)"),;,
 }
 process.exit(0);
 const fs = require("$1");

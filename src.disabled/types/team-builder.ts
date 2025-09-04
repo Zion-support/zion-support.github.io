@@ -1,1 +1,2 @@
-matchedTalent: TalentProfile[]
+// Auto-generated module
+export {};

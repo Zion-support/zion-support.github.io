@@ -63,7 +63,7 @@ export default function PerformanceMonitor() {;
 }, []);
 
   return (;
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
+    <div className="grid grid-cols-1 md: grid-cols-3 gap-6">;
       <div className="bg-white p-4 rounded-lg shadow">;
         <h3 className="font-semibold">Load Time</h3>;
         <p className="text-2xl font-bold text-blue-600">{metrics.loadTime.toFixed(2)}ms</p>;
@@ -242,7 +242,7 @@ export default function SystemHealthMonitor() {;
   return (;
     <div className="space-y-6">;
       <h2 className="text-2xl font-bold">System Health Monitor</h2>;
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">;
+      <div className="grid grid-cols-1 md: grid-cols-2 lg: grid-cols-4 gap-4">;
         <div className="bg-white p-4 rounded-lg shadow">;
           <h3 className="font-semibold">Status</h3>;
           <p className="text-2xl font-bold text-green-600">{health.status}</p>;

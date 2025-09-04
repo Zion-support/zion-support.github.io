@@ -1,12 +1,4 @@
 #!/bin/bash
-# Vercel deployment script for Zion Tech Group
-
-echo "🚀 Starting Vercel deployment..."
-
-# Install dependencies
-npm install
-
-# Deploy to Vercel
+echo "🚀 Deploying to Vercel..."
 vercel --prod
-
-echo "✅ Vercel deployment completed"
+echo "✅ Deployment to Vercel completed"

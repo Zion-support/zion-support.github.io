@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1756917075702,
+    "type": "application",
+    "severity": "error",
+    "message": "build check failed",
+    "timestamp": "2025-09-03T16:31:15.702Z",
+    "data": {
+      "success": false,
+      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nNext.js build worker exited with code: null and signal: SIGBUS\n"
+    }
+  },
+  {
+    "id": 1756917078004,
+    "type": "application",
+    "severity": "error",
+    "message": "lint check failed",
+    "timestamp": "2025-09-03T16:31:18.004Z",
+    "data": {
+      "success": false,
+      "error": "Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\nOops! Something went wrong! :(\n\nESLint: 8.57.1\n\nYou are linting \".\", but all of the files matching the glob pattern \".\" are ignored.\n\nIf you don't want to lint these files, remove the pattern \".\" from the list of arguments passed to ESLint.\n\nIf you do want to lint these files, try the following solutions:\n\n* Check your .eslintignore file, or the eslintIgnore property in package.json, to ensure that the files are not configured to be ignored.\n* Explicitly list the files from this glob that you'd like to lint on the command-line, rather than providing a glob as an argument.\n\n"
+    }
+  },
+  {
+    "id": 1756917083299,
+    "type": "application",
+    "severity": "error",
+    "message": "test check failed",
+    "timestamp": "2025-09-03T16:31:23.299Z",
+    "data": {
+      "success": false,
+      "error": "spawnSync /bin/sh ENOBUFS"
+    }
+  },
+  {
+    "id": 1756917135622,
+    "type": "application",
+    "severity": "error",
+    "message": "build check failed",
+    "timestamp": "2025-09-03T16:32:15.622Z",
+    "data": {
+      "success": false,
+      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nNext.js build worker exited with code: null and signal: SIGBUS\n"
+    }
+  },
+  {
+    "id": 1756917137811,
+    "type": "application",
+    "severity": "error",
+    "message": "lint check failed",
+    "timestamp": "2025-09-03T16:32:17.811Z",
+    "data": {
+      "success": false,
+      "error": "Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\nOops! Something went wrong! :(\n\nESLint: 8.57.1\n\nYou are linting \".\", but all of the files matching the glob pattern \".\" are ignored.\n\nIf you don't want to lint these files, remove the pattern \".\" from the list of arguments passed to ESLint.\n\nIf you do want to lint these files, try the following solutions:\n\n* Check your .eslintignore file, or the eslintIgnore property in package.json, to ensure that the files are not configured to be ignored.\n* Explicitly list the files from this glob that you'd like to lint on the command-line, rather than providing a glob as an argument.\n\n"
+    }
+  },
+  {
+    "id": 1756917142050,
+    "type": "application",
+    "severity": "error",
+    "message": "test check failed",
+    "timestamp": "2025-09-03T16:32:22.050Z",
+    "data": {
+      "success": false,
+      "error": "spawnSync /bin/sh ENOBUFS"
+    }
+  }
+]

@@ -1,10 +1,11 @@
 
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs')
+const path = require('path')
 
 function improvePerformance() {
-  // Create next.config.js optimizations
-  const nextConfigContent = `/** @type {import('next').NextConfig} */
+  try {
+    // Create next.config.js optimizations
+    const nextConfigContent = `/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
@@ -21,7 +22,7 @@ const nextConfig = {
   
   // Bundle optimization
   webpack: (config, { dev, isServer }) => {
-    if (!dev && !isServer) {
+    if ( {
       config.optimization.splitChunks = {
         chunks: 'all',
         cacheGroups: {
@@ -31,14 +32,25 @@ const nextConfig = {
             chunks: 'all',
           },
         },
-      };
-    }
-    return config;
-  },
+      }}
+    return confi) {
+     {
+      config.optimization.splitChunks = {
+        chunks: 'all',
+        cacheGroups: {
+          vendor: {
+            test: /[\\/]node_modules[\\/]/,
+            name: 'vendors',
+            chunks: 'all',
+          },
+        },
+      }}
+    return confi;
+  }g;},
   
   // Headers for performance
   async headers() {
-    return [
+    return [;
       {
         source: '/(.*)',
         headers: [
@@ -52,26 +64,22 @@ const nextConfig = {
           },
           {
             key: 'X-XSS-Protection',
-            value: '1; mode=block',
+            value: ';1; mode=block',
           },
           {
             key: 'Referrer-Policy',
             value: 'origin-when-cross-origin',
-          },
-        ],
-      },
-    ];
-  },
+          }],
+      }]},
 };
 
 module.exports = nextConfig;`;
       
       fs.writeFileSync(path.join(process.cwd(), 'next.config.js'), nextConfigContent);
       
-      console.log('Performance improvements completed');
-    } catch (error) {
-      console.error('Performance improvement failed:', error.message);
-    }
+      console.log('Performance improvements completed');} catch (error) {
+      console.error('Performance improvement failed:', error.message)}
+  }
 }
 
 improvePerformance();

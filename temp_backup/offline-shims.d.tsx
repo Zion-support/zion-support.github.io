@@ -1,2 +1,2 @@
-
->>>>>>> main;
+// Auto-generated module
+export {};

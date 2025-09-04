@@ -1,1 +1,2 @@
-: src.disabled/components/ui/input.tsx; interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> { className? string} }
+// Auto-generated module
+export {};

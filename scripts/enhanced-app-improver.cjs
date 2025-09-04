@@ -51,9 +51,9 @@ const fs = require("fs")";const path = require("path")";const { execSync } = req
   async improveCodeQuality() {;
     console.log("📝 Improving code quality...");"";    // Create TypeScript configuration improvements;
     const tsConfig = {;
-      "compilerOptions": {""target": "ES2020",""lib": ["DOM", "DOM.Iterable", "ES6"],""allowJs": true,""skipLibCheck": true,""strict": true,""forceConsistentCasingInFileNames": true,""noEmit": true,""esModuleInterop": true,""module": "esnext",""moduleResolution": "node",""resolveJsonModule": true,""isolatedModules": true,""jsx": "preserve",""incremental": true,""plugins": [";          {;
-            "name": "next","},,"],;
-        "baseUrl": ".",""paths": {""@/*": ["./src/*"],""@/components/*": ["./src/components/*"],""@/pages/*": ["./src/pages/*"],""@/utils/*": ["./src/utils/*"],""@/hooks/*": ["./src/hooks/*"],""@/types/*": ["./src/types/*"],"},,"},;
+      "compilerOptions": {""target": "ES2020", ""lib": ["DOM", "DOM.Iterable", "ES6"],""allowJs": true,""skipLibCheck": true,""strict": true,""forceConsistentCasingInFileNames": true,""noEmit": true,""esModuleInterop": true,""module": "esnext", ""moduleResolution": "node", ""resolveJsonModule": true,""isolatedModules": true,""jsx": "preserve", ""incremental": true,""plugins": [";          {;
+            "name": "next", "},,"],;
+        "baseUrl": ".", ""paths": {""@/*": ["./src/*"],""@/components/*": ["./src/components/*"],""@/pages/*": ["./src/pages/*"],""@/utils/*": ["./src/utils/*"],""@/hooks/*": ["./src/hooks/*"],""@/types/*": ["./src/types/*"],"},,"},;
       "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],""exclude": ["node_modules"],"};";
     this.writeFile("tsconfig.json", JSON.stringify(tsConfig, null, 2));";    this.improvements.push("Enhanced TypeScript configuration");"}";
   async enhanceSecurity() {;
@@ -63,11 +63,11 @@ const fs = require("fs")";const path = require("path")";const { execSync } = req
   // Security headers;
   response.headers.set("X-Frame-Options", "DENY");";  response.headers.set("X-Content-Type-Options", "nosniff");";  response.headers.set("Referrer-Policy", "origin-when-cross-origin");";  response.headers.set("Permissions-Policy", "camera=(), microphone=(), geolocation=()");";  ;";  // Content Security Policy;
   const csp = [;
-    "default-src "self",""script-src "self" "unsafe-eval" "unsafe-inline",""style-src "self" "unsafe-inline",""img-src "self" "data": "https":",""font-src "self",""connect-src "self",""frame-ancestors "none"""].join("");";  ;";  response.headers.set("Content-Security-Policy", csp);";  ;";  return response,,;,
+    "default-src "self", ""script-src "self" "unsafe-eval" "unsafe-inline", ""style-src "self" "unsafe-inline", ""img-src "self" "data": "https":", ""font-src "self", ""connect-src "self", ""frame-ancestors "none"""].join("");";  ;";  response.headers.set("Content-Security-Policy", csp);";  ;";  return response,,;,
 }
 ;
 export const config = {;
-  "matcher": [""/((?!api|_next/static|_next/image|favicon.ico).*)","],,"};`;`;
+  "matcher": [""/((?!api|_next/static|_next/image|favicon.ico).*)", "],,"};`;`;
     this.writeFile("middleware.ts", securityMiddleware);";    this.improvements.push("Created security middleware with CSP headers");"}";
   async optimizeSEO() {;
     console.log("🔍 Optimizing SEO...");"";    // Create SEO component;
@@ -79,7 +79,7 @@ export const config = {;
   type?: string,,;,
 }
 ;
-export const "SEO": React.FC<SEOProps> = ({";  title = "Zion Tech Group - Advanced AI Solutions",";  description = "Leading provider of AI-powered solutions, cloud infrastructure, and digital transformation services.",";  keywords = "AI, artificial intelligence, cloud computing, digital transformation, automation",";  image = "/og-image.jpg",";  url = ""https"://ziontechgroup.com",";  type = "website""}) => {";  return();    <Head>;
+export const "SEO": React.FC<SEOProps> = ({";  title = "Zion Tech Group - Advanced AI Solutions", ";  description = "Leading provider of AI-powered solutions, cloud infrastructure, and digital transformation services.", ";  keywords = "AI, artificial intelligence, cloud computing, digital transformation, automation", ";  image = "/og-image.jpg", ";  url = ""https"://ziontechgroup.com", ";  type = "website""}) => {";  return();    <Head>;
       <title>{title}</title>;
       <meta name="description" content={description} />";      <meta name="keywords" content={keywords} />";      <meta name="viewport" content="width=device-width, initial-scale=1" />";      ;";      {/* Open Graph */}
       <meta property=""og":title" content={title} />";      <meta property=""og":description" content={description} />";      <meta property=""og":image" content={image} />";      <meta property=""og":url" content={url} />";      <meta property=""og":type" content={type} />";      ;";      {/* Twitter */}
@@ -141,8 +141,8 @@ export const "SEO": React.FC<SEOProps> = ({";  title = "Zion Tech Group - Advanc
     const loadingSpinner = `import React from "react"";`;interface LoadingSpinnerProps {";  size?: "sm" | "md" | "lg"";  color?: string;";  className?: string,,;,
 }
 ;
-export const "LoadingSpinner": React.FC<LoadingSpinnerProps> = ({";  size = "md",";  color = "currentColor",";  className = """}) => {";  const sizeClasses = {;
-    "sm": "w-4 h-4",""md": "w-8 h-8",""lg": "w-12 h-12""};";
+export const "LoadingSpinner": React.FC<LoadingSpinnerProps> = ({";  size = "md", ";  color = "currentColor", ";  className = """}) => {";  const sizeClasses = {;
+    "sm": "w-4 h-4", ""md": "w-8 h-8", ""lg": "w-12 h-12""};";
   return();    <div className={\`animate-spin \${sizeClasses[size]} \${className}\`}>`;      <svg;
         className="w-full h-full"";        fill="none"";        viewBox="0 0 24 24"";        style={{ color }}";      >;
         <circle;

@@ -1,0 +1,85 @@
+{
+  "timestamp": "2025-09-03T19:22:37.185Z",
+  "status": "failed",
+  "steps": [
+    {
+      "timestamp": "2025-09-03T19:22:37.185Z",
+      "type": "info",
+      "message": "Starting Build and Test Automation"
+    },
+    {
+      "timestamp": "2025-09-03T19:22:37.187Z",
+      "type": "info",
+      "message": "Starting: Clean previous builds"
+    },
+    {
+      "timestamp": "2025-09-03T19:22:37.199Z",
+      "type": "success",
+      "message": "Completed: Clean previous builds"
+    },
+    {
+      "timestamp": "2025-09-03T19:22:37.200Z",
+      "type": "info",
+      "message": "Starting: Install dependencies"
+    },
+    {
+      "timestamp": "2025-09-03T19:22:49.370Z",
+      "type": "success",
+      "message": "Completed: Install dependencies"
+    },
+    {
+      "timestamp": "2025-09-03T19:22:49.370Z",
+      "type": "info",
+      "message": "Starting: Run tests"
+    },
+    {
+      "timestamp": "2025-09-03T19:22:53.741Z",
+      "type": "error",
+      "message": "Failed: Run tests - spawnSync /bin/sh ENOBUFS"
+    },
+    {
+      "timestamp": "2025-09-03T19:22:53.741Z",
+      "type": "info",
+      "message": "Starting: Run linting"
+    },
+    {
+      "timestamp": "2025-09-03T19:22:56.420Z",
+      "type": "success",
+      "message": "Completed: Run linting"
+    },
+    {
+      "timestamp": "2025-09-03T19:22:56.420Z",
+      "type": "info",
+      "message": "Starting: Build application"
+    },
+    {
+      "timestamp": "2025-09-03T19:23:02.227Z",
+      "type": "error",
+      "message": "Failed: Build application - Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nFailed to compile.\n\n./pages/_app.tsx\nError:   \u001b[31mx\u001b[0m Expected '</', got 'onClick'\n    ,-[\u001b[36;1;4m/workspace/pages/_app.tsx\u001b[0m:86:1]\n \u001b[2m83\u001b[0m |               background: 'none', border: 'none', color: 'white', fontSize: '1.2rem',\n \u001b[2m84\u001b[0m |               cursor: 'pointer', padding: '6px', borderRadius: 4\n \u001b[2m85\u001b[0m |             }\n \u001b[2m86\u001b[0m |             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}\n    : \u001b[35;1m            ^^^^^^^\u001b[0m\n \u001b[2m87\u001b[0m |             aria-label=\"Toggle mobile menu\"\n \u001b[2m88\u001b[0m |             aria-expanded={mobileMenuOpen}\n \u001b[2m89\u001b[0m |           >\n    `----\n\nCaused by:\n    Syntax Error\n\n./pages/index.tsx\nError:   \u001b[31mx\u001b[0m Expression expected\n    ,-[\u001b[36;1;4m/workspace/pages/index.tsx\u001b[0m:53:1]\n \u001b[2m50\u001b[0m |               \"sameAs\": [contact.site]\n \u001b[2m51\u001b[0m |             })\n \u001b[2m52\u001b[0m |           }\n \u001b[2m53\u001b[0m |         />\n    : \u001b[35;1m         ^\u001b[0m\n \u001b[2m54\u001b[0m |       </Head>\n \u001b[2m55\u001b[0m |       \n \u001b[2m56\u001b[0m |       <main className=\"min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white\">\n    `----\n  \u001b[31mx\u001b[0m Expression expected\n    ,-[\u001b[36;1;4m/workspace/pages/index.tsx\u001b[0m:54:1]\n \u001b[2m51\u001b[0m |             })\n \u001b[2m52\u001b[0m |           }\n \u001b[2m53\u001b[0m |         />\n \u001b[2m54\u001b[0m |       </Head>\n    : \u001b[35;1m      ^\u001b[0m\n \u001b[2m55\u001b[0m |       \n \u001b[2m56\u001b[0m |       <main className=\"min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white\">\n \u001b[2m57\u001b[0m |         {/* Hero Section */}\n    `----\n  \u001b[31mx\u001b[0m Unterminated regexp literal\n    ,-[\u001b[36;1;4m/workspace/pages/index.tsx\u001b[0m:54:1]\n \u001b[2m51\u001b[0m |             })\n \u001b[2m52\u001b[0m |           }\n \u001b[2m53\u001b[0m |         />\n \u001b[2m54\u001b[0m |       </Head>\n    : \u001b[35;1m       ^^^^^^\u001b[0m\n \u001b[2m55\u001b[0m |       \n \u001b[2m56\u001b[0m |       <main className=\"min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white\">\n \u001b[2m57\u001b[0m |         {/* Hero Section */}\n    `----\n  \u001b[31mx\u001b[0m Expression expected\n    ,-[\u001b[36;1;4m/workspace/pages/index.tsx\u001b[0m:54:1]\n \u001b[2m51\u001b[0m |             })\n \u001b[2m52\u001b[0m |           }\n \u001b[2m53\u001b[0m |         />\n \u001b[2m54\u001b[0m |       </Head>\n    : \u001b[35;1m        ^^^^^\u001b[0m\n \u001b[2m55\u001b[0m |       \n \u001b[2m56\u001b[0m |       <main className=\"min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white\">\n \u001b[2m57\u001b[0m |         {/* Hero Section */}\n    `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/index.tsx\n\n\n> Build failed because of webpack errors\n"
+    },
+    {
+      "timestamp": "2025-09-03T19:23:02.227Z",
+      "type": "error",
+      "message": "Build and Test Automation failed: Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nFailed to compile.\n\n./pages/_app.tsx\nError:   \u001b[31mx\u001b[0m Expected '</', got 'onClick'\n    ,-[\u001b[36;1;4m/workspace/pages/_app.tsx\u001b[0m:86:1]\n \u001b[2m83\u001b[0m |               background: 'none', border: 'none', color: 'white', fontSize: '1.2rem',\n \u001b[2m84\u001b[0m |               cursor: 'pointer', padding: '6px', borderRadius: 4\n \u001b[2m85\u001b[0m |             }\n \u001b[2m86\u001b[0m |             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}\n    : \u001b[35;1m            ^^^^^^^\u001b[0m\n \u001b[2m87\u001b[0m |             aria-label=\"Toggle mobile menu\"\n \u001b[2m88\u001b[0m |             aria-expanded={mobileMenuOpen}\n \u001b[2m89\u001b[0m |           >\n    `----\n\nCaused by:\n    Syntax Error\n\n./pages/index.tsx\nError:   \u001b[31mx\u001b[0m Expression expected\n    ,-[\u001b[36;1;4m/workspace/pages/index.tsx\u001b[0m:53:1]\n \u001b[2m50\u001b[0m |               \"sameAs\": [contact.site]\n \u001b[2m51\u001b[0m |             })\n \u001b[2m52\u001b[0m |           }\n \u001b[2m53\u001b[0m |         />\n    : \u001b[35;1m         ^\u001b[0m\n \u001b[2m54\u001b[0m |       </Head>\n \u001b[2m55\u001b[0m |       \n \u001b[2m56\u001b[0m |       <main className=\"min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white\">\n    `----\n  \u001b[31mx\u001b[0m Expression expected\n    ,-[\u001b[36;1;4m/workspace/pages/index.tsx\u001b[0m:54:1]\n \u001b[2m51\u001b[0m |             })\n \u001b[2m52\u001b[0m |           }\n \u001b[2m53\u001b[0m |         />\n \u001b[2m54\u001b[0m |       </Head>\n    : \u001b[35;1m      ^\u001b[0m\n \u001b[2m55\u001b[0m |       \n \u001b[2m56\u001b[0m |       <main className=\"min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white\">\n \u001b[2m57\u001b[0m |         {/* Hero Section */}\n    `----\n  \u001b[31mx\u001b[0m Unterminated regexp literal\n    ,-[\u001b[36;1;4m/workspace/pages/index.tsx\u001b[0m:54:1]\n \u001b[2m51\u001b[0m |             })\n \u001b[2m52\u001b[0m |           }\n \u001b[2m53\u001b[0m |         />\n \u001b[2m54\u001b[0m |       </Head>\n    : \u001b[35;1m       ^^^^^^\u001b[0m\n \u001b[2m55\u001b[0m |       \n \u001b[2m56\u001b[0m |       <main className=\"min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white\">\n \u001b[2m57\u001b[0m |         {/* Hero Section */}\n    `----\n  \u001b[31mx\u001b[0m Expression expected\n    ,-[\u001b[36;1;4m/workspace/pages/index.tsx\u001b[0m:54:1]\n \u001b[2m51\u001b[0m |             })\n \u001b[2m52\u001b[0m |           }\n \u001b[2m53\u001b[0m |         />\n \u001b[2m54\u001b[0m |       </Head>\n    : \u001b[35;1m        ^^^^^\u001b[0m\n \u001b[2m55\u001b[0m |       \n \u001b[2m56\u001b[0m |       <main className=\"min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white\">\n \u001b[2m57\u001b[0m |         {/* Hero Section */}\n    `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/index.tsx\n\n\n> Build failed because of webpack errors\n"
+    }
+  ],
+  "errors": [
+    {
+      "step": "Run tests",
+      "error": "spawnSync /bin/sh ENOBUFS",
+      "timestamp": "2025-09-03T19:22:53.741Z"
+    },
+    {
+      "step": "Build application",
+      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nFailed to compile.\n\n./pages/_app.tsx\nError:   \u001b[31mx\u001b[0m Expected '</', got 'onClick'\n    ,-[\u001b[36;1;4m/workspace/pages/_app.tsx\u001b[0m:86:1]\n \u001b[2m83\u001b[0m |               background: 'none', border: 'none', color: 'white', fontSize: '1.2rem',\n \u001b[2m84\u001b[0m |               cursor: 'pointer', padding: '6px', borderRadius: 4\n \u001b[2m85\u001b[0m |             }\n \u001b[2m86\u001b[0m |             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}\n    : \u001b[35;1m            ^^^^^^^\u001b[0m\n \u001b[2m87\u001b[0m |             aria-label=\"Toggle mobile menu\"\n \u001b[2m88\u001b[0m |             aria-expanded={mobileMenuOpen}\n \u001b[2m89\u001b[0m |           >\n    `----\n\nCaused by:\n    Syntax Error\n\n./pages/index.tsx\nError:   \u001b[31mx\u001b[0m Expression expected\n    ,-[\u001b[36;1;4m/workspace/pages/index.tsx\u001b[0m:53:1]\n \u001b[2m50\u001b[0m |               \"sameAs\": [contact.site]\n \u001b[2m51\u001b[0m |             })\n \u001b[2m52\u001b[0m |           }\n \u001b[2m53\u001b[0m |         />\n    : \u001b[35;1m         ^\u001b[0m\n \u001b[2m54\u001b[0m |       </Head>\n \u001b[2m55\u001b[0m |       \n \u001b[2m56\u001b[0m |       <main className=\"min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white\">\n    `----\n  \u001b[31mx\u001b[0m Expression expected\n    ,-[\u001b[36;1;4m/workspace/pages/index.tsx\u001b[0m:54:1]\n \u001b[2m51\u001b[0m |             })\n \u001b[2m52\u001b[0m |           }\n \u001b[2m53\u001b[0m |         />\n \u001b[2m54\u001b[0m |       </Head>\n    : \u001b[35;1m      ^\u001b[0m\n \u001b[2m55\u001b[0m |       \n \u001b[2m56\u001b[0m |       <main className=\"min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white\">\n \u001b[2m57\u001b[0m |         {/* Hero Section */}\n    `----\n  \u001b[31mx\u001b[0m Unterminated regexp literal\n    ,-[\u001b[36;1;4m/workspace/pages/index.tsx\u001b[0m:54:1]\n \u001b[2m51\u001b[0m |             })\n \u001b[2m52\u001b[0m |           }\n \u001b[2m53\u001b[0m |         />\n \u001b[2m54\u001b[0m |       </Head>\n    : \u001b[35;1m       ^^^^^^\u001b[0m\n \u001b[2m55\u001b[0m |       \n \u001b[2m56\u001b[0m |       <main className=\"min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white\">\n \u001b[2m57\u001b[0m |         {/* Hero Section */}\n    `----\n  \u001b[31mx\u001b[0m Expression expected\n    ,-[\u001b[36;1;4m/workspace/pages/index.tsx\u001b[0m:54:1]\n \u001b[2m51\u001b[0m |             })\n \u001b[2m52\u001b[0m |           }\n \u001b[2m53\u001b[0m |         />\n \u001b[2m54\u001b[0m |       </Head>\n    : \u001b[35;1m        ^^^^^\u001b[0m\n \u001b[2m55\u001b[0m |       \n \u001b[2m56\u001b[0m |       <main className=\"min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white\">\n \u001b[2m57\u001b[0m |         {/* Hero Section */}\n    `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/index.tsx\n\n\n> Build failed because of webpack errors\n",
+      "timestamp": "2025-09-03T19:23:02.227Z"
+    }
+  ],
+  "summary": {
+    "tests": "failed",
+    "linting": "passed",
+    "build": "failed"
+  },
+  "duration": 25042,
+  "endTime": "2025-09-03T19:23:02.227Z"
+}

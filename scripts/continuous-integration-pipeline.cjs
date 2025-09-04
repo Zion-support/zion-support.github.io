@@ -46,7 +46,7 @@ class ContinuousIntegrationPipeline {;
 ;
   async runLinting() {;
     this.log("🔍 Running linting...");
-    return await this.runCommand("npm run lint:fix", "Linting"),;,
+    return await this.runCommand("npm run lint: fix", "Linting"),;,
 }
 ;
   async runTypeChecking() {;
