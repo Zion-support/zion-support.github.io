@@ -1,4 +1,4 @@
-import React from 'react';
+// Testing system utilities
 
 export class TestingSystem {
   static async testUserInteraction(element: HTMLElement, action: 'click' | 'type' | 'hover') {

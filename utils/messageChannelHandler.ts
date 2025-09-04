@@ -1,4 +1,4 @@
 export const messageChannelHandler = {
-  sendMessage: (message$1 => {},
-  receiveMessage: (callback$1 => {},
+  sendMessage: (_message: string) => {},
+  receiveMessage: (_callback: (message: string) => void) => {},
 };
