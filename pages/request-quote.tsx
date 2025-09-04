@@ -7,8 +7,7 @@ export default function RequestQuote() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  };
-
+  }
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -33,8 +32,7 @@ export default function RequestQuote() {
       ...prev,
       [name]: value
     }));
-  };
-
+  }
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -44,8 +42,7 @@ export default function RequestQuote() {
     
     setIsSubmitting(false);
     setIsSubmitted(true);
-  };
-
+  }
   const serviceTypes = [
     'Micro SaaS Development',
     'AI Services & Machine Learning',
@@ -100,7 +97,7 @@ export default function RequestQuote() {
       <>
         <Head>
           <title>Quote Request Submitted - Zion Tech Group</title>
-          <meta name="description" content="Thank you for your quote request. We&apos;ll get back to you within 24 hours with a detailed proposal." />
+          <meta name="description" content="Thank you for your quote request. We'll get back to you within 24 hours with a detailed proposal." />
         </Head>
         
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 flex items-center justify-center px-4">
@@ -111,16 +108,16 @@ export default function RequestQuote() {
               </div>
               <h1 className="text-3xl font-bold text-white mb-4">Quote Request Submitted!</h1>
               <p className="text-slate-300 mb-6">
-                Thank you for your interest in our services. We&apos;ve received your quote request and will get back to you within 24 hours with a detailed proposal tailored to your needs.
+                Thank you for your interest in our services. We've received your quote request and will get back to you within 24 hours with a detailed proposal tailored to your needs.
               </p>
               <div className="space-y-4">
                 <div className="bg-white/5 rounded-lg p-4">
                   <h3 className="text-lg font-semibold text-white mb-2">What happens next?</h3>
                   <ul className="text-slate-300 space-y-1 text-left">
                     <li>• Our team will review your requirements</li>
-                    <li>• We&apos;ll prepare a customized proposal</li>
-                    <li>• You&apos;ll receive a detailed quote within 24 hours</li>
-                    <li>• We&apos;ll schedule a consultation call if needed</li>
+                    <li>• We'll prepare a customized proposal</li>
+                    <li>• You'll receive a detailed quote within 24 hours</li>
+                    <li>• We'll schedule a consultation call if needed</li>
                   </ul>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">

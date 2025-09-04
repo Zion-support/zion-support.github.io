@@ -7,8 +7,7 @@ export default function Careers() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  };
-
+  }
   const jobOpenings = [
     {
       id: 1,
@@ -165,7 +164,7 @@ export default function Careers() {
               Join Our <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Innovative Team</span>
             </h1>
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Be part of a forward-thinking company that&apos;s shaping the future of technology. Work on cutting-edge projects and make a real impact.
+              Be part of a forward-thinking company that's shaping the future of technology. Work on cutting-edge projects and make a real impact.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
@@ -272,7 +271,7 @@ export default function Careers() {
               <div className="bg-gradient-to-br from-blue-500/20 to-purple-600/20 rounded-xl p-8 border border-white/10">
                 <h3 className="text-2xl font-bold text-white mb-4">Ready to Join Us?</h3>
                 <p className="text-slate-300 mb-6">
-                  Don&apos;t see a position that matches your skills? We&apos;re always looking for talented individuals 
+                  Don't see a position that matches your skills? We're always looking for talented individuals 
                   who share our passion for innovation.
                 </p>
                 <div className="space-y-3">
@@ -293,7 +292,7 @@ export default function Careers() {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-4">Start Your Journey With Us</h2>
             <p className="text-slate-300 mb-8">
-              Join a team that&apos;s building the future of technology. Apply today and be part of something extraordinary.
+              Join a team that's building the future of technology. Apply today and be part of something extraordinary.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-lg font-semibold transition-all">

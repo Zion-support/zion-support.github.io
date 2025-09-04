@@ -7,8 +7,7 @@ export default function Partners() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  };
-
+  }
   const partnerCategories = [
     {
       title: "Technology Partners",
@@ -319,7 +318,7 @@ export default function Partners() {
                 <h3 className="text-2xl font-bold text-white mb-4">Ready to Partner With Us?</h3>
                 <p className="text-slate-300 mb-6">
                   Join our partner ecosystem and unlock new opportunities for growth and innovation. 
-                  Let&apos;s build the future together.
+                  Let's build the future together.
                 </p>
                 <div className="space-y-3">
                   <Link href="/contact" className="block w-full px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold text-center transition-colors">
@@ -339,7 +338,7 @@ export default function Partners() {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-4">Start Your Partnership Journey</h2>
             <p className="text-slate-300 mb-8">
-              Join our ecosystem of innovative partners and together, let&apos;s transform the technology landscape.
+              Join our ecosystem of innovative partners and together, let's transform the technology landscape.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-lg font-semibold transition-all">
