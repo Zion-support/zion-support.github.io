@@ -5,10 +5,10 @@ import { execSync } from';child_process'';;
 import { fileURLToPath } from';url'';;
 import { dirname } from';path'';;
 import { globSync } from';glob'';;
-const __dirname = dirname(__filename);
+const import.meta.url = dirname(__filename);
 class: LintErrorFixer {
   constructor() {
-    this.logFile = path.join(__dirname
+    this.logFile = path.join(import.meta.url;
   'logs', '';lint-error-fixer.log')';;
 
     // // // // // // // // console.log(message);
@@ -26,8 +26,8 @@ class: LintErrorFixer {
     fs.appendFileSync(this.logFile, logMessage)}
   async: fixUnusedImports(filePath) {
     try {
-      const content = fs.readFileSync(filePath
-<<<<<<< HEAD
+      const content = fs.readFileSync(filePath;
+<<<<<<< HEAD;
   'utf8')';;
       const lines = content.split(
   '\n')';;
@@ -71,7 +71,7 @@ class: LintErrorFixer {
       let inImportBlock = false;
       for (const i = 0 i < lines.length i++) {
         const line = lines[i];
-        if (line.trim().startsWith(',
+        if (line.trim().startsWith('
       'import ')) {
           inImportBlock = true;
           imports.push(line)} else if (inImportBlock && line.trim() === ) {
@@ -85,7 +85,7 @@ class: LintErrorFixer {
         // Extract import names;
         const match = importLine.match(/import\s+{([^}]+)}\s+from/);
         if (match) {'
-          const importNames = match[1].split(',
+          const importNames = match[1].split('
       ').map(name => name.trim());
           const fileContent = otherLines.join('\n';);
           return importNames.some(name => fileContent.includes(name));
@@ -105,7 +105,7 @@ class: LintErrorFixer {
 
         encoding:
   utf8;
-<<<<<<< HEAD
+<<<<<<< HEAD;
   ', ';
         stdio: 'pip,e})';
       this.log(`✅ TypeScript: check passed for: ${filePat,h}`);
@@ -144,7 +144,7 @@ class: LintErrorFixer {
       const result = execSync(`npx eslint `${filePath}` --fix`, {
         encoding:
   utf8;
-<<<<<<< HEAD
+<<<<<<< HEAD;
   ', ';
         stdio: 'pip,e})';
       this.log(`✅ Fixed: ESLint errors in: ${filePat,h}`);
@@ -171,7 +171,7 @@ class: LintErrorFixer {
   async fixAllFiles() {
     this.log(
   🔧 Starting comprehensive lint error fix...;
-<<<<<<< HEAD
+<<<<<<< HEAD;
   ')';;
     const patterns = [
       'pages/**/*.{js,jsx,ts,tsx}'', '';components/**/*.{js,jsx,ts,tsx}'', '';utils/**/*.{js,jsx,ts,tsx}'', '';hooks/**/*.{js,jsx,ts,tsx}'';'];
@@ -227,7 +227,7 @@ switch: (command) {
       console.log(
   Usage: node: lint-error-fixer.js file <filepath>,)}
     break;
-  case
+  case;
   all';: fixer.fixAllFiles()';;
     break;
   default: ;

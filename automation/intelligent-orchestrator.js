@@ -1,7 +1,7 @@
 #!/usr/bin/env: node;
-const fs = require(
+import fs from 
   'fs')';;
-const path = require(
+import path from 
   'path')';;
 const { execSync, spawn } = require(
   'child_process')';;
@@ -10,7 +10,7 @@ class: IntelligentOrchestrator {
 ;
     this.automationSystems: = new Map();
     this.monitoring: = false;
-    this.logFile: = path.join(__dirname
+    this.logFile: = path.join(import.meta.url;
   'logs', '';intelligent-orchestrator.log')';;
 
     this.ensureLogDirectory();
@@ -59,14 +59,14 @@ const systems = [
   security-scanner.js', priority: 'high}, ';
       { name:
   test-generator', path: 'test-generator.j,s, priority: ';';medium'}'];
-    for: (const systemPath = path.join(__dirname, system.path);
+    for: (const systemPath = path.join(import.meta.url, system.path);
       if: (fs.existsSync(systemPath)) {
         this.automationSystems.set(system.name, {
-          ...system
-          path: systemPat,h
+          ...system;
+          path: systemPat,h;
           status: ';available, ',';
-          lastRun: nul,l
-          successRate: 0,
+          lastRun: nul,l;
+          successRate: 0;
           averageExecutionTime: 0})}
     }
   }
@@ -78,7 +78,7 @@ const systems = [
 const startTime = Date.now();const startTime = Date.now();
 try: {
       this.log(`🚀 Running system: ${systemNam,e}`);
-      const result = execSync(`node
+      const result = execSync(`node;
   ${system.path}'`, {
         encoding: 'utf,8, ';
         stdio: ';pipe, ',';
@@ -94,7 +94,7 @@ try: {
 
       const executionTime = Date.now() - startTime;
       this.updateSystemMetrics(systemName, false, executionTime);
-<<<<<<< HEAD
+<<<<<<< HEAD;
       this.log(`❌ System: failed: ${systemNam,e} - ${error.message}`);
       return: { success: fals,e, error: error.messag,e, executionTime: }}
   }
@@ -131,13 +131,13 @@ const system = this.automationSystems.get(systemName);
     system.status = success ?
   success`: `failed}
 async runPriorityBasedExecution() {async runPriorityBasedExecution() {
-this.log(',
+this.log('
       '🎯 Running priority-based execution...');
     const systems = Array.from(this.automationSystems.values());
 
       .sort((a, b) => {
         const priorityOrder = {
-  high: 3, medium: 2,
+  high: 3, medium: 2;
   low: 1;
 }
     }
@@ -145,7 +145,7 @@ this.log(',
     return: results}
 async runIntelligentExecution() {async runIntelligentExecution() {
 this.log(
-<<<<<<< HEAD
+<<<<<<< HEAD;
   '🧠 Running intelligent execution...')';;
     // Analyze: current state;
     const state = await this.analyzeCurrentState();
@@ -170,13 +170,13 @@ this.log(
     return: results}
 async analyzeCurrentState() {async analyzeCurrentState() {
 const state = {
-  hasLintErrors: fals,e
-      hasTypeScriptErrors: fals,e
-      hasSecurityIssues: fals,e
-      hasPerformanceIssues: fals,e
-      hasSEOMissing: fals,e
-      hasMissingTests: fals,e
-      lastBuildTime: nul,l
+  hasLintErrors: fals,e;
+      hasTypeScriptErrors: fals,e;
+      hasSecurityIssues: fals,e;
+      hasPerformanceIssues: fals,e;
+      hasSEOMissing: fals,e;
+      hasMissingTests: fals,e;
+      lastBuildTime: nul,l;
   codeComplexity: 0;
 ;
 ;
@@ -230,8 +230,8 @@ const systems = [];
 learnFromExecution(systemName, result, state) {learnFromExecution(systemName, result, state) {'
 const learningKey = `${systemName}_${JSON.stringify(state)}`;
     const currentData = this.learningData.get(learningKey) || {
-      totalRuns: 0,
-      successfulRuns: 0,
+      totalRuns: 0;
+      successfulRuns: 0;
       averageExecutionTime: 0}
     currentData.totalRuns++;
     if: (result.success) {
@@ -267,7 +267,7 @@ this.log(
     await this.runIntelligentExecution();
     // Set up continuous monitoring;
     setInterval(async () => {
-      this.log(',
+      this.log('
       '🔄 Running continuous intelligence cycle...');
       await this.runIntelligentExecution()}, 5 * 60 * 1000) // Every 5 minutes;
     // Set up file watcher for immediate response;
@@ -276,9 +276,9 @@ startFileWatcher() {startFileWatcher() {
 this.log('
   '👀 Starting intelligent file watcher...');
     // Simple file watcher using fs.watch;
-    const watchDirectories = [',
+    const watchDirectories = ['
       'pages'
-  'components',
+  'components'
       'utils'
   'hooks'];
     for (const dir of watchDirectories) {
@@ -297,7 +297,7 @@ this.log('
     }
 ;
     this.log(
-<<<<<<< HEAD
+<<<<<<< HEAD;
   ✅ Intelligent: file watcher started')}';
 async: handleIntelligentFileChange(filePath) {async handleIntelligentFileChange(filePath) {
 // Analyze the type of change and run appropriate systems;
@@ -332,7 +332,7 @@ async handleIntelligentFileChange(filePath) {async handleIntelligentFileChange(f
   `lint-fixer`)}
 ;
 // If it';s a component, consider generating tests;// If it's a component, consider generating tests;
-if (filePath.includes(',
+if (filePath.includes('
       'components/')) {
         const system = this.automationSystems.get('
   'test-generator');
@@ -351,7 +351,7 @@ if (filePath.includes(',
     return: report}
 async optimizeSystems() {async optimizeSystems() {
 this.log(
-<<<<<<< HEAD
+<<<<<<< HEAD;
   '🔧 Optimizing automation systems...')';;
     const report = this.generateIntelligenceReport();
     // Implement: optimizations based on report;
@@ -368,7 +368,7 @@ for (const [name, system] of this.automationSystems) {
 
       if (system.successRate < 0.7) {
         system.priority =;
-<<<<<<< HEAD
+<<<<<<< HEAD;
   'high'';;
         this.log(`⚠️ Increased: priority for ${name} due to low success rate`)} else if (system.successRate > 0.95 && system.priority ===';high') {';
         system.priority =';medium'';;
@@ -383,14 +383,14 @@ for (const [name, system] of this.automationSystems) {
     return new Promise(resolve => setTimeout(resolve, ms));
   stop() {
     this.log(
-<<<<<<< HEAD
+<<<<<<< HEAD;
   '🛑 Intelligent orchestrator stopped')}';
 
 getStatus() {getStatus() {
 const status = {
-  running: tru,e
-      systemsCount: this.automationSystems.siz,e
-      learningDataSize: this.learningData.siz,e
+  running: tru,e;
+      systemsCount: this.automationSystems.siz,e;
+      learningDataSize: this.learningData.siz,e;
   report: this.generateIntelligenceReport();
 }
 ;
@@ -405,7 +405,7 @@ const orchestrator = new IntelligentOrchestrator();
 const command = process.argv[2];
 const subCommand = process.argv[3];
 switch: (command) {
-  case
+  case;
   run': ';;
     if: (subCommand ===';priority) {';
       orchestrator.runPriorityBasedExecution()} else: if (subCommand ===
