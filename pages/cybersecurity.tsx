@@ -30,21 +30,21 @@ export default function Cybersecurity() {
     },
     {
       icon: AlertTriangle,
-      title: 'Threat Detection & Response'
-      description: 'Advanced threat hunting and automated response to security incidents.'
-      features: ['Behavioral analytics' 'AI-powered detection' 'Automated response' 'Threat hunting']
+      title: 'Threat Detection & Response',
+      description: 'Advanced threat hunting and automated response to security incidents.',
+      features: ['Behavioral analytics', 'AI-powered detection', 'Automated response', 'Threat hunting']
     },
     {
       icon: Users,
-      title: 'Security Training & Awareness'
-      description: 'Comprehensive security education programs to build a security-conscious culture.'
-      features: ['Phishing simulations' 'Security workshops' 'Compliance training' 'Awareness campaigns']
+      title: 'Security Training & Awareness',
+      description: 'Comprehensive security education programs to build a security-conscious culture.',
+      features: ['Phishing simulations', 'Security workshops', 'Compliance training', 'Awareness campaigns']
     },
     {
       icon: Database,
-      title: 'Data Protection & Encryption'
-      description: 'End-to-end data protection with advanced encryption and backup solutions.'
-      features: ['Data encryption' 'Backup solutions' 'Data loss prevention' 'Privacy compliance']
+      title: 'Data Protection & Encryption',
+      description: 'End-to-end data protection with advanced encryption and backup solutions.',
+      features: ['Data encryption', 'Backup solutions', 'Data loss prevention', 'Privacy compliance']
     }
   ];
 

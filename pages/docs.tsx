@@ -4,31 +4,32 @@ import Link from 'next/link';
 import { Book, FileText, Video, Download, Search, ExternalLink } from 'lucide-react';
 
 export default function Documentation() {
-  const contact ={
-    phone: email, 'kleber@ziontechgroup.com'
-    address: site, 'https://ziontechgroup.com'
-  }
+  const contact = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    site: 'https://ziontechgroup.com'
+  };
   const documentationSections = [
     {
       icon: Book,
-      title: 'Getting Started'
-      description: 'Quick start guides and tutorials to help you begin using our services.'
+      title: 'Getting Started',
+      description: 'Quick start guides and tutorials to help you begin using our services.',
       items: [
-        { name: 'Quick Start Guide' link: '/docs/getting-started' },
-        { name: 'API Overview' link: '/docs/api-overview' },
-        { name: 'Authentication' link: '/docs/authentication' },
-        { name: 'First Steps' link: '/docs/first-steps' }
+        { name: 'Quick Start Guide', link: '/docs/getting-started' },
+        { name: 'API Overview', link: '/docs/api-overview' },
+        { name: 'Authentication', link: '/docs/authentication' },
+        { name: 'First Steps', link: '/docs/first-steps' }
       ]
     },
     {
       icon: FileText,
-      title: 'API Documentation'
-      description: 'Comprehensive API reference and integration guides.'
+      title: 'API Documentation',
+      description: 'Comprehensive API reference and integration guides.',
       items: [
-        { name: 'REST API Reference' link: '/docs/api-reference' },
-        { name: 'Webhook Integration' link: '/docs/webhooks' },
-        { name: 'SDK Documentation' link: '/docs/sdk' },
-        { name: 'Rate Limits' link: '/docs/rate-limits' }
+        { name: 'REST API Reference', link: '/docs/api-reference' },
+        { name: 'Webhook Integration', link: '/docs/webhooks' },
+        { name: 'SDK Documentation', link: '/docs/sdk' },
+        { name: 'Rate Limits', link: '/docs/rate-limits' }
       ]
     },
     {
