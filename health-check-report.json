@@ -1,15 +1,9 @@
 {
-  "timestamp": "2025-09-03T21:22:52.907Z",
-  "status": "healthy",
-  "checks": {
-    "packageJson": true,
-    "buildDir": false,
-    "dependencies": true,
-    "criticalFiles": true
-  }
-=======
   "timestamp": "2025-09-04T02:10:00.397Z",
   "duration": "2ms",
+=======
+  "timestamp": "2025-09-04T02:31:34.193Z",
+  "duration": "1ms",
   "overallStatus": "healthy",
   "summary": {
     "total": 7,
