@@ -379,6 +379,177 @@ const aiServices = [
     pricing: '$15,000 - $100,000/setup',
     category: 'Industrial AI',
     popular: true
+  },
+  {
+    title: 'Quantum AI Optimization Engine',
+    description: 'Quantum-enhanced AI algorithms for solving complex optimization problems in logistics, finance, and research.',
+    icon: Cpu,
+    features: ['Quantum Algorithms', 'Complex Optimization', 'Hybrid Classical-Quantum', 'Research Applications'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Quantum AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Synthetic Data Generation',
+    description: 'Generate high-quality synthetic datasets for training AI models while preserving privacy and statistical properties.',
+    icon: Database,
+    features: ['Privacy-Preserving', 'Statistical Accuracy', 'Multi-modal Generation', 'Custom Datasets'],
+    pricing: '$5,000 - $50,000/project',
+    category: 'Data Generation',
+    popular: true
+  },
+  {
+    title: 'Neural Architecture Search (NAS) Platform',
+    description: 'Automated neural network architecture design and optimization using advanced search algorithms.',
+    icon: Brain,
+    features: ['Auto Architecture Design', 'Performance Optimization', 'Hardware-Aware Design', 'Multi-task Learning'],
+    pricing: '$25,000 - $200,000/setup',
+    category: 'AutoML',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Drug Repurposing',
+    description: 'Use AI to identify new therapeutic applications for existing drugs, accelerating drug development.',
+    icon: Heart,
+    features: ['Drug-Disease Mapping', 'Side Effect Analysis', 'Clinical Trial Optimization', 'Market Analysis'],
+    pricing: '$30,000 - $250,000/project',
+    category: 'Pharmaceutical AI',
+    popular: true
+  },
+  {
+    title: 'Federated Learning Platform',
+    description: 'Distributed machine learning platform that trains models across decentralized data sources while preserving privacy.',
+    icon: Network,
+    features: ['Privacy-Preserving', 'Distributed Training', 'Model Aggregation', 'Secure Communication'],
+    pricing: '$20,000 - $150,000/setup',
+    category: 'Federated Learning',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Climate Adaptation',
+    description: 'AI systems for climate change adaptation strategies and resilience planning for cities and organizations.',
+    icon: Sprout,
+    features: ['Climate Risk Assessment', 'Adaptation Strategies', 'Resilience Planning', 'Impact Modeling'],
+    pricing: '$40,000 - $300,000/project',
+    category: 'Climate AI',
+    popular: true
+  },
+  {
+    title: 'Explainable AI (XAI) Platform',
+    description: 'Comprehensive platform for building and deploying explainable AI models with interpretability and transparency.',
+    icon: Eye,
+    features: ['Model Interpretability', 'Feature Importance', 'Decision Explanations', 'Bias Detection'],
+    pricing: '$15,000 - $100,000/setup',
+    category: 'Explainable AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Materials Discovery',
+    description: 'Accelerate materials science research using AI for discovering new materials with desired properties.',
+    icon: Cpu,
+    features: ['Property Prediction', 'Composition Optimization', 'Synthesis Planning', 'Performance Analysis'],
+    pricing: '$35,000 - $300,000/project',
+    category: 'Materials AI',
+    popular: true
+  },
+  {
+    title: 'Multi-Modal AI Fusion Platform',
+    description: 'Advanced AI platform that combines text, image, audio, and video data for comprehensive understanding.',
+    icon: Monitor,
+    features: ['Multi-modal Fusion', 'Cross-modal Learning', 'Unified Representations', 'Real-time Processing'],
+    pricing: '$25,000 - $200,000/setup',
+    category: 'Multi-modal AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Cybersecurity Threat Hunting',
+    description: 'Advanced AI systems for proactive threat hunting and zero-day vulnerability detection.',
+    icon: Shield,
+    features: ['Threat Hunting', 'Zero-day Detection', 'Behavioral Analysis', 'Automated Response'],
+    pricing: '$30,000 - $250,000/setup',
+    category: 'Cybersecurity AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Space Weather Prediction',
+    description: 'Predict space weather events and their impact on satellite operations and Earth systems.',
+    icon: Rocket,
+    features: ['Solar Activity Prediction', 'Geomagnetic Forecasting', 'Satellite Impact Analysis', 'Early Warning Systems'],
+    pricing: '$40,000 - $400,000/project',
+    category: 'Space AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Personalized Education',
+    description: 'Adaptive learning systems that personalize education content and pace for individual students.',
+    icon: BookOpen,
+    features: ['Adaptive Learning', 'Content Personalization', 'Progress Tracking', 'Learning Analytics'],
+    pricing: '$10,000 - $100,000/setup',
+    category: 'Educational AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Mental Health Companion',
+    description: 'AI-powered mental health support system with emotion recognition and therapeutic conversation capabilities.',
+    icon: Heart,
+    features: ['Emotion Recognition', 'Therapeutic Conversations', 'Crisis Detection', 'Progress Monitoring'],
+    pricing: '$20,000 - $150,000/setup',
+    category: 'Mental Health AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Autonomous Drone Swarms',
+    description: 'Coordinated autonomous drone systems for surveillance, delivery, and emergency response.',
+    icon: Rocket,
+    features: ['Swarm Coordination', 'Autonomous Navigation', 'Mission Planning', 'Real-time Adaptation'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Autonomous Systems',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Protein Folding Prediction',
+    description: 'Advanced AI systems for predicting protein structures and understanding biological processes.',
+    icon: Heart,
+    features: ['Structure Prediction', 'Folding Dynamics', 'Drug-Target Analysis', 'Disease Research'],
+    pricing: '$40,000 - $400,000/project',
+    category: 'Bioinformatics AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Smart Grid Management',
+    description: 'Intelligent grid management system for optimizing energy distribution and renewable integration.',
+    icon: Zap,
+    features: ['Load Balancing', 'Renewable Integration', 'Demand Response', 'Fault Detection'],
+    pricing: '$30,000 - $300,000/setup',
+    category: 'Energy AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Augmented Reality Assistant',
+    description: 'Intelligent AR assistant that provides contextual information and guidance in real-world environments.',
+    icon: Monitor,
+    features: ['Contextual Information', 'Object Recognition', 'Spatial Understanding', 'Voice Interaction'],
+    pricing: '$25,000 - $200,000/setup',
+    category: 'AR AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Digital Human Creation',
+    description: 'Create realistic digital humans with natural conversation, emotion, and behavior capabilities.',
+    icon: Users,
+    features: ['Realistic Avatars', 'Natural Conversation', 'Emotion Expression', 'Behavioral Modeling'],
+    pricing: '$35,000 - $350,000/project',
+    category: 'Digital Humans',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Ocean Intelligence',
+    description: 'Comprehensive AI platform for ocean monitoring, marine life protection, and climate research.',
+    icon: Globe,
+    features: ['Marine Monitoring', 'Species Detection', 'Pollution Analysis', 'Climate Research'],
+    pricing: '$45,000 - $450,000/project',
+    category: 'Marine AI',
+    popular: true
   }
 ];
 

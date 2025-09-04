@@ -34,7 +34,10 @@ import {
   Brain,
   Sprout,
   Eye,
-  Bot
+  Bot,
+  Car,
+  Rocket,
+  DollarSign
 } from 'lucide-react';
 
 const itServices = [
@@ -378,6 +381,177 @@ const itServices = [
     features: ['Threat Detection', 'Intelligence Feeds', 'Incident Response', 'Threat Hunting'],
     pricing: '$30,000 - $150,000/setup',
     category: 'Threat Intelligence',
+    popular: true
+  },
+  {
+    title: 'Quantum Computing Infrastructure',
+    description: 'Quantum computing infrastructure setup and integration for research and enterprise applications.',
+    icon: Cpu,
+    features: ['Quantum Hardware Setup', 'Quantum Software Stack', 'Hybrid Classical-Quantum', 'Research Support'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Quantum Computing',
+    popular: true
+  },
+  {
+    title: 'Neuromorphic Computing Systems',
+    description: 'Brain-inspired computing systems for AI and machine learning applications.',
+    icon: Brain,
+    features: ['Neuromorphic Hardware', 'Spiking Neural Networks', 'Low Power Computing', 'AI Acceleration'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Neuromorphic Computing',
+    popular: true
+  },
+  {
+    title: 'Satellite Internet Infrastructure',
+    description: 'Low Earth Orbit (LEO) satellite internet infrastructure and ground station setup.',
+    icon: Globe,
+    features: ['Ground Station Setup', 'Satellite Integration', 'Global Coverage', 'Low Latency Networks'],
+    pricing: '$200,000 - $2,000,000/project',
+    category: 'Satellite Internet',
+    popular: true
+  },
+  {
+    title: 'Autonomous Vehicle IT Infrastructure',
+    description: 'Complete IT infrastructure for autonomous vehicle testing and deployment.',
+    icon: Car,
+    features: ['Vehicle-to-Cloud Communication', 'Real-time Data Processing', 'Simulation Environment', 'Safety Systems'],
+    pricing: '$75,000 - $750,000/project',
+    category: 'Autonomous Vehicles',
+    popular: true
+  },
+  {
+    title: 'Space-Based Computing Platform',
+    description: 'Edge computing infrastructure deployed in space for satellite and space mission support.',
+    icon: Rocket,
+    features: ['Space-grade Hardware', 'Radiation Hardening', 'Remote Management', 'Mission Support'],
+    pricing: '$500,000 - $5,000,000/project',
+    category: 'Space Computing',
+    popular: true
+  },
+  {
+    title: 'Biometric Security Infrastructure',
+    description: 'Advanced biometric authentication systems with multi-modal recognition capabilities.',
+    icon: Users,
+    features: ['Multi-modal Biometrics', 'Liveness Detection', 'Privacy Protection', 'Integration APIs'],
+    pricing: '$25,000 - $150,000/setup',
+    category: 'Biometric Security',
+    popular: true
+  },
+  {
+    title: 'Smart City IT Infrastructure',
+    description: 'Comprehensive IT infrastructure for smart city initiatives and IoT integration.',
+    icon: Building,
+    features: ['IoT Platform', 'Data Analytics', 'Citizen Services', 'Infrastructure Monitoring'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Smart Cities',
+    popular: true
+  },
+  {
+    title: 'Holographic Display Systems',
+    description: 'Holographic display infrastructure for immersive visualization and communication.',
+    icon: Monitor,
+    features: ['3D Holographic Displays', 'Real-time Rendering', 'Gesture Control', 'Collaborative Spaces'],
+    pricing: '$40,000 - $400,000/project',
+    category: 'Holographic Technology',
+    popular: true
+  },
+  {
+    title: 'Brain-Computer Interface Infrastructure',
+    description: 'IT infrastructure for brain-computer interface systems and neural data processing.',
+    icon: Brain,
+    features: ['Neural Data Processing', 'Real-time Analysis', 'Privacy Protection', 'Medical Integration'],
+    pricing: '$60,000 - $600,000/project',
+    category: 'BCI Infrastructure',
+    popular: true
+  },
+  {
+    title: 'Digital Currency Infrastructure',
+    description: 'Complete infrastructure for digital currencies, CBDCs, and blockchain-based financial systems.',
+    icon: DollarSign,
+    features: ['CBDC Infrastructure', 'Digital Wallet Systems', 'Blockchain Integration', 'Regulatory Compliance'],
+    pricing: '$80,000 - $800,000/project',
+    category: 'Digital Currency',
+    popular: true
+  },
+  {
+    title: 'Metaverse Infrastructure Platform',
+    description: 'Complete IT infrastructure for metaverse applications and virtual world hosting.',
+    icon: Globe,
+    features: ['Virtual World Hosting', 'Avatar Systems', 'Spatial Computing', 'Social Features'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Metaverse Infrastructure',
+    popular: true
+  },
+  {
+    title: 'AI Chip Infrastructure',
+    description: 'Specialized AI chip infrastructure and optimization for machine learning workloads.',
+    icon: Cpu,
+    features: ['AI Chip Integration', 'Performance Optimization', 'Model Deployment', 'Energy Efficiency'],
+    pricing: '$30,000 - $300,000/setup',
+    category: 'AI Hardware',
+    popular: true
+  },
+  {
+    title: 'Underwater Data Centers',
+    description: 'Submerged data center infrastructure for improved cooling and energy efficiency.',
+    icon: Server,
+    features: ['Underwater Deployment', 'Natural Cooling', 'Renewable Energy', 'Remote Management'],
+    pricing: '$200,000 - $2,000,000/project',
+    category: 'Underwater Computing',
+    popular: true
+  },
+  {
+    title: 'Flying Data Centers (Airborne)',
+    description: 'Aerial data center infrastructure using drones and high-altitude platforms.',
+    icon: Rocket,
+    features: ['Aerial Deployment', 'Edge Computing', 'Disaster Recovery', 'Global Coverage'],
+    pricing: '$150,000 - $1,500,000/project',
+    category: 'Aerial Computing',
+    popular: true
+  },
+  {
+    title: 'Molecular Computing Infrastructure',
+    description: 'Molecular and DNA-based computing systems for ultra-dense data storage and processing.',
+    icon: Cpu,
+    features: ['Molecular Storage', 'DNA Computing', 'Ultra-dense Storage', 'Research Applications'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Molecular Computing',
+    popular: true
+  },
+  {
+    title: 'Optical Computing Systems',
+    description: 'Photonic computing infrastructure for ultra-fast data processing and communication.',
+    icon: Zap,
+    features: ['Optical Processors', 'Photonic Networks', 'Ultra-fast Processing', 'Low Latency'],
+    pricing: '$75,000 - $750,000/project',
+    category: 'Optical Computing',
+    popular: true
+  },
+  {
+    title: 'Swarm Computing Infrastructure',
+    description: 'Distributed computing infrastructure using swarm intelligence and collective behavior.',
+    icon: Network,
+    features: ['Swarm Algorithms', 'Distributed Processing', 'Self-organization', 'Fault Tolerance'],
+    pricing: '$40,000 - $400,000/project',
+    category: 'Swarm Computing',
+    popular: true
+  },
+  {
+    title: 'Time Crystal Computing',
+    description: 'Revolutionary time crystal-based computing systems for quantum advantage.',
+    icon: Cpu,
+    features: ['Time Crystal Hardware', 'Quantum Advantage', 'Research Platform', 'Future Computing'],
+    pricing: '$500,000 - $5,000,000/project',
+    category: 'Time Crystal Computing',
+    popular: true
+  },
+  {
+    title: 'Consciousness Computing Platform',
+    description: 'Advanced computing systems inspired by consciousness and cognitive processes.',
+    icon: Brain,
+    features: ['Consciousness Modeling', 'Cognitive Computing', 'Self-awareness Systems', 'Research Platform'],
+    pricing: '$200,000 - $2,000,000/project',
+    category: 'Consciousness Computing',
     popular: true
   }
 ];
