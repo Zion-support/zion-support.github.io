@@ -7,7 +7,7 @@ export default function Custom404() { return (
     <>
       <Head>
         <title>Page Not Found - Zion Tech Group</title>
-        <meta name="description" content="The page you're looking for doesn't exist. Return to Zion Tech Group's homepage to explore our services." />
+        <meta name="description" content="The page you&apos;re looking for doesn&apos;t exist. Return to Zion Tech Group&apos;s homepage to explore our services." />
         <meta name="robots" content="noindex, nofollow" />
       </Head>
       
