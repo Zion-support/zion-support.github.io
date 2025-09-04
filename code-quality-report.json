@@ -25,6 +25,12 @@
       "issues": [],
       "complexity": 1
     },
+    "components/LoadingSpinner.tsx": {
+      "path": "components/LoadingSpinner.tsx",
+      "lines": 12,
+      "issues": [],
+      "complexity": 1
+    },
     "components/PerformanceMonitor.tsx": {
       "path": "components/PerformanceMonitor.tsx",
       "lines": 60,
@@ -250,6 +256,18 @@
     "pages/faq.tsx": {
       "path": "pages/faq.tsx",
       "lines": 118,
+      "issues": [],
+      "complexity": 0
+    },
+    "pages/cybersecurity.tsx": {
+      "path": "pages/cybersecurity.tsx",
+      "lines": 156,
+      "issues": [],
+      "complexity": 0
+    },
+    "pages/docs.tsx": {
+      "path": "pages/docs.tsx",
+      "lines": 188,
       "issues": [],
       "complexity": 0
     },
