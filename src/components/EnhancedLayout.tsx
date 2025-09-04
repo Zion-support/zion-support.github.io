@@ -33,58 +33,58 @@ export const EnhancedLayout: Reac t.FC<EnhancedLayoutProps> = ({ children,"
           {/* comment */}
 
           <title>{fullTitle}</title>"
-          <meta name="description" content="{description}"   />
-          <meta name="keywords" content="{keywords}"   />"
-          <meta name="viewport" content="width=device-width, initial-scale=1"   />"
-          <meta name="robots" content="{noindex" ? "noindex,nofollow" : "index,follow"}        />
+          <meta name="description" content="{description}"    />
+          <meta name="keywords" content="{keywords}"    />"
+          <meta name="viewport" content="width=device-width, initial-scale=1"    />"
+          <meta name="robots" content="{noindex" ? "noindex,nofollow" : "index,follow"}         />
           
           {/* comment */}"
-          {canonicalUrl && <link rel="canonical" href="{canonicalUrl}"   />}
+          {canonicalUrl && <link rel="canonical" href="{canonicalUrl}"    />}
 
           {/* comment */}"
-          <meta property="og: titl e" content="{fullTitle}"   />"
-          <meta property="og: descriptio n" content="{description}"   />"
-          <meta property="og: imag e" content="{ogImage}"   />"
-          <meta property="og: ur l" content="{canonicalUrl}"   />"
-          <meta property="og: typ e" content="website"   />"
-          <meta property="og: site_nam e" content="Zion Tech Group"   />"
-          <meta property="og: local e" content="en_US"   />
+          <meta property="og: titl e" content="{fullTitle}"    />"
+          <meta property="og: descriptio n" content="{description}"    />"
+          <meta property="og: imag e" content="{ogImage}"    />"
+          <meta property="og: ur l" content="{canonicalUrl}"    />"
+          <meta property="og: typ e" content="website"    />"
+          <meta property="og: site_nam e" content="Zion Tech Group"    />"
+          <meta property="og: local e" content="en_US"    />
           ,
           {/* comment */}"
-          <meta name="twitter: car d" content="summary_large_image"   />",
-          <meta name="twitter: titl e" content="{fullTitle}"   />"
-          <meta name="twitter: descriptio n" content="{description}"   />"
-          <meta name="twitter: imag e" content="{ogImage}"   />"
-          <meta name="twitter: sit e" content="@ziontechgroup"   />"
-          <meta name="twitter: creato r" content="@ziontechgroup"   />
+          <meta name="twitter: car d" content="summary_large_image"    />",
+          <meta name="twitter: titl e" content="{fullTitle}"    />"
+          <meta name="twitter: descriptio n" content="{description}"    />"
+          <meta name="twitter: imag e" content="{ogImage}"    />"
+          <meta name="twitter: sit e" content="@ziontechgroup"    />"
+          <meta name="twitter: creato r" content="@ziontechgroup"    />
           ,
           {/* comment */}"
-          <meta name="author" content="Zion Tech Group"   />"
-          <meta name="publisher" content="Zion Tech Group"   />"
-          <meta name="copyright" content="Zion Tech Group"   />"
-          <meta name="language" content="en"   />"
-          <meta name="revisit-after" content="7 days"   />"
-          <meta name="rating" content="general"   />
+          <meta name="author" content="Zion Tech Group"    />"
+          <meta name="publisher" content="Zion Tech Group"    />"
+          <meta name="copyright" content="Zion Tech Group"    />"
+          <meta name="language" content="en"    />"
+          <meta name="revisit-after" content="7 days"    />"
+          <meta name="rating" content="general"    />
           
           {/* comment */}"
-          <meta name="geo.region" content="US-DE"   />"
-          <meta name="geo.placename" content="Middletown"   />"
-          <meta name="geo.position" content="39.4496;-75.7163"   />"
-          <meta name = "ICBM" content="39.4496, -75.7163"   />
+          <meta name="geo.region" content="US-DE"    />"
+          <meta name="geo.placename" content="Middletown"    />"
+          <meta name="geo.position" content="39.4496;-75.7163"    />"
+          <meta name = "ICBM" content="39.4496, -75.7163"    />
           
           {/* comment */}"
-          <meta name="contact" content="kleber@ziontechgroup.com"   />"
-          <meta name="phone" content="+1-302-464-0950"   />"
-          <meta name="address" content="364 E Main St STE 1008, Middletown, DE 19709"   />
+          <meta name="contact" content="kleber@ziontechgroup.com"    />"
+          <meta name="phone" content="+1-302-464-0950"    />"
+          <meta name="address" content="364 E Main St STE 1008, Middletown, DE 19709"    />
           
           {/* comment */}"
-          <meta httpEquiv="X-UA-Compatible" content="IE=edge"   />"
-          <meta name="format-detection" content="telephone=no"   />"
-          <meta name="theme-color" content="#0ea5e9"   />"
-          <meta name="msapplication-TileColor" content="#0ea5e9"   />"
-          <meta name="apple-mobile-web-app-capable" content="yes"   />"
-          <meta name="apple-mobile-web-app-status-bar-style" content="default"   />"
-          <meta name="apple-mobile-web-app-title" content="Zion Tech Group"   />
+          <meta httpEquiv="X-UA-Compatible" content="IE=edge"    />"
+          <meta name="format-detection" content="telephone=no"    />"
+          <meta name="theme-color" content="#0ea5e9"    />"
+          <meta name="msapplication-TileColor" content="#0ea5e9"    />"
+          <meta name="apple-mobile-web-app-capable" content="yes"    />"
+          <meta name="apple-mobile-web-app-status-bar-style" content="default"    />"
+          <meta name="apple-mobile-web-app-title" content="Zion Tech Group"    />
           
           {/* comment */}"
           <link rel="preconnect" href="https: // comment
@@ -98,17 +98,17 @@ export const EnhancedLayout: Reac t.FC<EnhancedLayoutProps> = ({ children,"
             href="/fonts/inter-var.woff2" "
             as="font" "
             type="font/woff2" "
-            crossOrigin="anonymous"   />"
+            crossOrigin="anonymous"    />"
           <link rel="preload" "
             href="/images/hero-bg.jpg" "
-            as="image"   />
+            as="image"    />
           
           {/* comment */}"
-          <link rel="icon" href="/favicon.ico"   />"
-          <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"   />"
-          <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"   />"
-          <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"   />"
-          <link rel="manifest" href="/site.webmanifest"   />
+          <link rel="icon" href="/favicon.ico"    />"
+          <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"    />"
+          <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"    />"
+          <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"    />"
+          <link rel="manifest" href="/site.webmanifest"    />
           
           {/* comment */}"
           <script type="application/ld+json""
@@ -169,3 +169,8 @@ export const EnhancedLayout: Reac t.FC<EnhancedLayoutProps> = ({ children,"
       <FuturisticFooter  />;
     </div>;) };
 '"`
+
+</script>
+</SEOOptimizer>
+</PerformanceOptimizer>
+</EnhancedLayoutProps>

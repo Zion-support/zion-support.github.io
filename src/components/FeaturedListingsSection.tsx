@@ -9,7 +9,7 @@ import { motion, AnimatePresence  } from 'framer-motion';
  params - Function parameters
  * @returns {*} Function return value
  */
-function FeaturedListingsSection () {          initial = {
+function FeaturedListingsSection(props: any) {          initial = {
 
   { opacity: 0,
   y: 2 0
@@ -46,7 +46,7 @@ function FeaturedListingsSection () {          initial = {
                 <img src={listing.image}
                   alt={listing.title}
                   className="w-full h-48 object -cover"
-                 />
+                  />
                 <div className="absolute top - 3 left -3">
                   <span className="px-3 py-1 bg-blue - 600 text-white text-xs font - semibold rounded-full">                    {listing.category}
                   </span>
@@ -128,3 +128,6 @@ function FeaturedListingsSection () {          initial = {
       </div>;
     </section>;) }
 '"
+
+</motion>
+</motion>

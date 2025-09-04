@@ -1,4 +1,4 @@
-import React, { useState } from "react";""";,"});,"})","});,"})","})"
+import React, {useState} from "react";""";,"});,"})","});,"})","})"
   Brain,,"});,"})"
   Shield,,"});,"})"
   Rocket,,"});,"})"
@@ -22,7 +22,7 @@ const serviceCategories = [];,"});,"})"
 ";,"});,"})"
     id: "micro-saas",""";,"});,"})"
     name: "Micro SAAS Solutions","""";,"});,"})"
-    icon: <Rocket className="w-6 h-6"  />,";,"});,"})"
+    icon: <Rocket className="w-6 h-6"   />,";,"});,"})"
     color: "from-purple-600 to-pink-600","});,"})"
     services: revolutionary2027AdvancedMicroSaasServices,"});,"});"
 },,"});,"})"
@@ -30,7 +30,7 @@ const serviceCategories = [];,"});,"})"
 ";,"});,"})"
     id: "it-infrastructure",""";,"});,"})"
     name: "IT Infrastructure & Cybersecurity","""";,"});,"})"
-    icon: <Shield className="w-6 h-6"  />,";,"});,"})"
+    icon: <Shield className="w-6 h-6"   />,";,"});,"})"
     color: "from-red-600 to-orange-600","});,"})"
     services: revolutionary2027ITInfrastructureCybersecurityServices,"});,"});"
 },,"});,"})"
@@ -38,13 +38,13 @@ const serviceCategories = [];,"});,"})"
 ";,"});,"})"
     id: "ai-innovation",""";,"});,"})"
     name: "AI Innovation Services","""";,"});,"})"
-    icon: <Brain className="w-6 h-6"  />,";,"});,"})"
+    icon: <Brain className="w-6 h-6"   />,";,"});,"})"
     color: "from-blue-600 to-cyan-600","});,"})"
     services: revolutionary2027AIInnovationServices,"});,"});"
 }"});,"})"
 ];,"});,"})"
 ;,"});,"})"
-export function ComprehensiveServicesShowcase() {}"});,"})"
+export function ComprehensiveServicesShowcase(props: any) {}"});,"})"
 ";,"});,"})"
 "";,"});,"})"
 """;,"});,"})"
@@ -52,7 +52,7 @@ export function ComprehensiveServicesShowcase() {}"});,"})"
   const [selectedService, setSelectedService] = useState(null);,"});,"})"
 ;,"});,"})"
   const containerVariants = {}"});,"})"
-    hidden: { opacity: 0 },,"});,"})"
+    hidden: {opacity: 0},,"});,"})"
     visible: {}"});,"})"
       opacity: 1,"});,"})"
       transition: {}"});,"})"
@@ -62,7 +62,7 @@ export function ComprehensiveServicesShowcase() {}"});,"})"
 };,"});,"})"
 ;,"});,"})"
   const itemVariants = {}"});,"})"
-  hidden: { y: 20,"});,"})"
+  hidden: {y: 20,"});,"})"
   opacity: 0,"});,"});"
 },,"});,"})"
     visible: {}"});,"})"
@@ -76,7 +76,7 @@ export function ComprehensiveServicesShowcase() {}"});,"})"
 };,"});,"})"
 ;,"});,"})"
   const cardVariants = {}"});,"})"
-  hidden: { scale: 0.95,"});,"})"
+  hidden: {scale: 0.95,"});,"})"
   opacity: 0,"});,"});"
 },,"});,"})"
     visible: {}"});,"})"
@@ -96,11 +96,11 @@ export function ComprehensiveServicesShowcase() {}"});,"})"
         <motion.div """";,"});,"})"
           className="text-center mb-16""";,"});,"})"
           initial = {}"});,"})"
-  { opacity: 0,"});,"})"
+  {opacity: 0,"});,"})"
   y: 30,"});,"});"
 }}"});,"})"
           animate = {}"});,"})"
-  { opacity: 1,"});,"})"
+  {opacity: 1,"});,"})"
   y: 0,"});,"});"
 }}"});,"})"
           transition="{{" duration: 0.6 }}""";,"});,"})"
@@ -118,15 +118,15 @@ export function ComprehensiveServicesShowcase() {}"});,"})"
             <h3 className="text-2xl font-semibold text-zion-cyan mb-4">Ready to Transform Your Business?</h3>"""";,"});,"})"
             <div className="grid md: grid-cols-3 gap-6 text-sm">"""","});,"})"
               <div className="flex items-center justify-center space-x-2">"""";,"});,"})"
-                <Clock className="w-5 h-5 text-zion-cyan"  />"""";,"});,"})"
+                <Clock className="w-5 h-5 text-zion-cyan"   />"""";,"});,"})"
                 <span className="text-white">24/7 Support Available</span>""";,"});,"})"
               </div>"""";,"});,"})"
               <div className="flex items-center justify-center space-x-2">"""";,"});,"})"
-                <Target className="w-5 h-5 text-zion-cyan"  />"""";,"});,"})"
+                <Target className="w-5 h-5 text-zion-cyan"   />"""";,"});,"})"
                 <span className="text-white">Custom Solutions</span>""";,"});,"})"
               </div>"""";,"});,"})"
               <div className="flex items-center justify-center space-x-2">"""";,"});,"})"
-                <Award className="w-5 h-5 text-zion-cyan"  />"""";,"});,"})"
+                <Award className="w-5 h-5 text-zion-cyan"   />"""";,"});,"})"
                 <span className="text-white">Proven Results</span>;,"});,"})"
               </div>""";,"});,"})"
             </div>"""";,"});,"})"
@@ -143,15 +143,15 @@ export function ComprehensiveServicesShowcase() {}"});,"})"
         <motion.div """";,"});,"})"
           className="flex flex-wrap justify-center gap-4 mb-12""";,"});,"})"
           initial = {}"});,"})"
-  { opacity: 0,"});,"})"
+  {opacity: 0,"});,"})"
   y: 20,"});,"});"
 }}"});,"})"
           animate = {}"});,"})"
-  { opacity: 1,"});,"})"
+  {opacity: 1,"});,"})"
   y: 0,"});,"});"
 }}"});,"})"
           transition = {}"});,"})"
-  { duration: 0.6,"});,"})"
+  {duration: 0.6,"});,"})"
   delay: 0.2,"});,"});"
 }}"});,"})"
         >;,"});,"})"
@@ -183,7 +183,7 @@ export function ComprehensiveServicesShowcase() {}"});,"})"
               key={service.id}"""";,"});,"})"
               className="group cursor-pointer""";,"});,"})"
               variants={itemVariants}"});,"})"
-              onClick="{" () => setSelectedService (service) }"});,"})"
+              onClick="{" () => setSelectedService (service)}"});,"})"
             >""";,"});,"})"
               <motion.div"""";,"});,"})"
                 className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-2xl p-6 border border-zion-cyan/20 hover: border-zion-cyan/40 transition-all duration-300 h-full""","});,"})"
@@ -217,12 +217,12 @@ export function ComprehensiveServicesShowcase() {}"});,"})"
                 {/* comment */}"""";,"});,"})"
                 <div className="flex items-center justify-between mb-4">"""";,"});,"})"
                   <div className="flex items-center space-x-2">"""";,"});,"})"
-                    <DollarSign className="w-5 h-5 text-zion-cyan"  />"""";,"});,"})"
+                    <DollarSign className="w-5 h-5 text-zion-cyan"   />"""";,"});,"})"
                     <span className="text-2xl font-bold text-white">{service.price}</span>"""";,"});,"})"
                     <span className="text-zion-cyan-light">{service.period}</span>""";,"});,"})"
                   </div>"""";,"});,"})"
                   <div className="flex items-center space-x-1">"""";,"});,"})"
-                    <Star className="w-4 h-4 text-yellow-400 fill-current"  />"""";,"});,"})"
+                    <Star className="w-4 h-4 text-yellow-400 fill-current"   />"""";,"});,"})"
                     <span className="text-white text-sm">{service.rating}</span>"""";,"});,"})"
                     <span className="text-zion-cyan-light text-sm">({service.reviews})</span>;,"});,"})"
                   </div>;,"});,"})"
@@ -262,7 +262,7 @@ export function ComprehensiveServicesShowcase() {}"});,"})"
                     className="flex items-center space-x-2 bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-4 py-2 rounded-lg font-medium hover: shadow-lg transition-all duration-300 group-hover:scale-105""","});,"})"
                   >""";,"});,"})"
                     <span>Learn More</span>"""";,"});,"})"
-                    <ArrowRight className="w-4 h-4 group-hover: translate-x-1 transition-transform"  />""","});,"})"
+                    <ArrowRight className="w-4 h-4 group-hover: translate-x-1 transition-transform"   />""","});,"})"
                   </Link>"""";,"});,"})"
                   <div className="text-xs text-zion-cyan-light">;,"});,"})"
                     {service.trialDays} day trial,"});,"})"
@@ -274,15 +274,15 @@ export function ComprehensiveServicesShowcase() {}"});,"})"
         <motion.div """";,"});,"})"
           className="text-center mt-16""";,"});,"})"
           initial = {}"});,"})"
-  { opacity: 0,"});,"})"
+  {opacity: 0,"});,"})"
   y: 30,"});,"});"
 }}"});,"})"
           animate = {}"});,"})"
-  { opacity: 1,"});,"})"
+  {opacity: 1,"});,"})"
   y: 0,"});,"});"
 }}"});,"})"
           transition = {}"});,"})"
-  { duration: 0.6,"});,"})"
+  {duration: 0.6,"});,"})"
   delay: 0.4,"});,"});"
 }}""";,"});,"})"
         >"""";,"});,"})"
@@ -318,20 +318,20 @@ export function ComprehensiveServicesShowcase() {}"});,"})"
             initial="{{" opacity: 0 }}"});,"})"
             animate="{{" opacity: 1 }}"});,"})"
             exit="{{" opacity: 0 }}"});,"})"
-            onClick="{" () => setSelectedService (null) }"});,"})"
+            onClick="{" () => setSelectedService (null)}"});,"})"
           >""";,"});,"})"
             <motion.div"""";,"});,"})"
               className="bg-zion-slate-dark rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto""";,"});,"})"
               initial = {}"});,"})"
-  { scale: 0.9,"});,"})"
+  {scale: 0.9,"});,"})"
   opacity: 0,"});,"});"
 }}"});,"})"
               animate = {}"});,"})"
-  { scale: 1,"});,"})"
+  {scale: 1,"});,"})"
   opacity: 1,"});,"});"
 }}"});,"})"
               exit = {}"});,"})"
-  { scale: 0.9,"});,"})"
+  {scale: 0.9,"});,"})"
   opacity: 0,"});,"});"
 }}"});,"})"
               onClick="{(e)" => e.stopPropagation()}""";,"});,"})"
@@ -355,7 +355,7 @@ export function ComprehensiveServicesShowcase() {}"});,"})"
                   <ul className="space-y-2">""";,"});,"})"
                     {selectedService.features.map((feature, index) => ("""";,"});,"})"
                       <li key="{index}" className="flex items-center space-x-2">"""";,"});,"})"
-                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0"  />"""";,"});,"})"
+                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0"   />"""";,"});,"})"
                         <span className="text-zion-cyan-light">{feature}</span>;,"});,"})"
                       </li>;,"});,"})"
                     ))}"});,"})"
@@ -429,7 +429,7 @@ const serviceCategories = []
 '
     id: 'micro-saas','"""
     name: 'Micro SAAS Solutions',""""
-    icon: <Rocket className="w-6 h-6" />,'
+    icon: <Rocket className="w-6 h-6"  />,'
     color: 'from-purple-600 to-pink-600',
     services: revolutionary2027AdvancedMicroSaasServices;
   },
@@ -437,7 +437,7 @@ const serviceCategories = []
 '
     id: 'it-infrastructure','"""
     name: 'IT Infrastructure & Cybersecurity',""""
-    icon: <Shield className="w-6 h-6" />,'
+    icon: <Shield className="w-6 h-6"  />,'
     color: 'from-red-600 to-orange-600',
     services: revolutionary2027ITInfrastructureCybersecurityServices;
   },
@@ -445,14 +445,14 @@ const serviceCategories = []
 '
     id: 'ai-innovation','"""
     name: 'AI Innovation Services',""""
-    icon: <Brain className="w-6 h-6" />,'
+    icon: <Brain className="w-6 h-6"  />,'
     color: 'from-blue-600 to-cyan-600',
     services: revolutionary2027AIInnovationServices;
 }
 ;
   const itemVariants = {}
 
-  hidden: { y: 20, opacity: 0}, visible: {}"
+  hidden: {y: 20, opacity: 0}, visible: {}"
       y: 0, opacity: 1, transition: {}""
 """""
         duration: 0.5,"""""
@@ -463,7 +463,7 @@ const serviceCategories = []
 ;
   const cardVariants = {}
 
-  hidden: { scale: 0.95, opacity: 0}, visible: {}"
+  hidden: {scale: 0.95, opacity: 0}, visible: {}"
       scale: 1, opacity: 1, transition: {}""
 """"
         duration: 0.4, """"
@@ -478,10 +478,10 @@ const serviceCategories = []
         <motion .div """"
           className="text-center mb-16"          initial = {}
 
-  { opacity: 0, y: 30}}
+  {opacity: 0, y: 30}}
 
           animate = {}"
-  { opacity: 1, y: 0}}"""
+  {opacity: 1, y: 0}}"""
           transition="{{" duration: 0.6 }}""" >""""""
           <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">""
             Revolutionary 2027 Services"""""
@@ -521,14 +521,14 @@ designed to transform your business and drive exponential growth."
         <motion .div """"
           className="flex flex-wrap justify-center gap-4 mb-12"          initial = {}
 
-  { opacity: 0, y: 20}}
+  {opacity: 0, y: 20}}
 
           animate = {}
 
-  { opacity: 1, y: 0}}
+  {opacity: 1, y: 0}}
 
           transition = {}"
-  { duration: 0.6, delay: 0.2}}" >""
+  {duration: 0.6, delay: 0.2}}" >""
           {serviceCategories.map ( (category) => (<button key="{category.id}""
               onClick="{()" =" > setSelectedCategory(category.id)}""
               className="{"flex" items-center space-x-2 px-6 py-3 rounded-full font-medium transition-all duration-300 ${}""
@@ -558,7 +558,7 @@ designed to transform your business and drive exponential growth."
               key={service.id}""""
               className="group cursor-pointer""
               variants="{itemVariants}""
-              onClick="{" () =" > setSelectedService (service) }"
+              onClick="{" () =" > setSelectedService (service)}"
             >"""""
               <motion .div"""""
                 className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-2xl p-6 border border-zion-cyan/20 hover: border-zion-cyan/40 transition-all duration-300 h-full""
@@ -577,7 +577,7 @@ designed to transform your business and drive exponential growth."
                   {service.popular && (""""
                     <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-medium">
                       Popular,
-                    </div>) }"
+                    </div>)}"
                 </div>""
 """""
                 {/* comment */}""""
@@ -650,15 +650,14 @@ designed to transform your business and drive exponential growth."
         <motion .div """"
           className="text-center mt-16"          initial = {}
 
-  { opacity: 0, y: 30}}
+  {opacity: 0, y: 30}}
 
           animate = {}
 
-  { opacity: 1, y: 0}}
+  {opacity: 1, y: 0}}
 
           transition = {}">
-  { duration: 0.6, delay: 0.4",";"
-}}""" >""""""
+  {duration: 0.6, delay: 0.4",";"}}""" >""""""
           <div className = "bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 p-8 rounded-2xl border border-zion-cyan/30">""""
             <h3 className="text-2xl font-bold text-white mb-4">""
               Ready to Get Started?"""""
@@ -689,19 +688,19 @@ designed to transform your business and drive exponential growth."
             initial="{{" opacity: 0 }}"
             animate="{{" opacity: 1 }}"
             exit="{{" opacity: 0 }}"
-            onClick="{" () =" > setSelectedService (null) }"
+            onClick="{" () =" > setSelectedService (null)}"
           >"""""
             <motion .div""""
               className="bg-zion-slate-dark rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto"              initial = {}
 
-  { scale: 0.9, opacity: 0}}
+  {scale: 0.9, opacity: 0}}
 
               animate = {}
 
-  { scale: 1, opacity: 1}}
+  {scale: 1, opacity: 1}}
 
               exit = {}"
-  { scale: 0.9, opacity: 0}}"""
+  {scale: 0.9, opacity: 0}}"""
               onClick="{(e)" =" > e.stopPropagation()}""""
             >"""""
               <div className="flex items-start justify-between mb-6">""""
@@ -785,3 +784,39 @@ designed to transform your business and drive exponential growth."
 "
 
 export default Component
+
+</div>
+</CheckCircle>
+</motion>
+</motion>
+</motion>
+</ArrowRight>
+</div>
+</Star>
+</DollarSign>
+</motion>
+</motion>
+</motion>
+</motion>
+</Award>
+</Target>
+</Clock>
+</div>
+</motion>
+</div>
+</div>
+</div>
+</motion>
+</motion>
+</motion>
+</div>
+</div>
+</div>
+</div>
+</motion>
+</motion>
+</motion>
+</motion>
+</div>
+</motion>
+</div>

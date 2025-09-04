@@ -1,5 +1,5 @@
-import { cn } from '@/lib/utils';
-export function EnhancedCard({ children, className, variant = 'default', hover = true, onClick, as: Component = 'div', href }) {
+import {cn} from '@/lib/utils';
+export function EnhancedCard(props: any) {
     const baseClasses = 'rounded-xl transition-all duration-300';
     const variantClasses = {
   default: 'bg-zion-blue-dark border border-zion-blue-light',
@@ -25,7 +25,7 @@ export function EnhancedCard({ children, className, variant = 'default', hover =
       {children}
     </Component>)}
 // Enhanced Card Header component
-export function EnhancedCardFooter({ children, className }) {
+export function EnhancedCardFooter(props: any) {
     return (<div className = {
   cn('p-6 pt-0',
   className)

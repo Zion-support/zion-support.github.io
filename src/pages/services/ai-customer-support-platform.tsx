@@ -125,8 +125,8 @@ const AICustomerSupportPlatform: Reac t.FC = () => {
     <>
       <Helmet>
         <title>AI Customer Support Platform | Zion Tech Group</title>
-        <meta name="description" content="Transform customer support with AI-powered chatbots, multi-channel support, and intelligent ticket routing. Reduce response time by 70% and improve satisfaction."  />
-        <meta name="keywords" content="AI customer support, helpdesk software, chatbot, customer service, support platform"  />
+        <meta name="description" content="Transform customer support with AI-powered chatbots, multi-channel support, and intelligent ticket routing. Reduce response time by 70% and improve satisfaction."   />
+        <meta name="keywords" content="AI customer support, helpdesk software, chatbot, customer service, support platform"   />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-cyan-100">
         {/* Hero Section */}

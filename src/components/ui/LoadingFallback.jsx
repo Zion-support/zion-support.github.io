@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
-import { Loader2 export function LoadingFallback({ message = "Loading...", size = "md", className = "" }) {
+import {motion} from "framer-motion";
+import { Loader2 export function LoadingFallback(props: any) {
     const sizeClasses = {
   sm: "w-6 h-6",
         md: "w-8 h-8",
@@ -12,18 +12,9 @@ import { Loader2 export function LoadingFallback({ message = "Loading...", size 
 
 
 };
-    const textSizes = {
-  sm: "text-sm",
+    const textSizes = {sm: "text-sm",
         md: "text-base",
-  lg: "text-lg"
-    
-
-
-
-
-
-
-};
+  lg: "text-lg"};
     return (<div className={`flex flex-col items-center justify-center p-8 space-y-4 ${className}`}>
       <motion.div animate={{ rotate: 360 }} transition = {
   { duration: 1, repeat: Infinity,
@@ -35,7 +26,7 @@ import { Loader2 export function LoadingFallback({ message = "Loading...", size 
 
 
 }}>
-        <Loader2 className={`${sizeClasses[size]} text-zion-cyan`}/>
+        <Loader2 className={`${sizeClasses[size]} text-zion-cyan`} />
       </motion.div>
 
       <motion.p className={`${textSizes[size]} text-zion-slate-light font-medium`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }}>
@@ -45,7 +36,7 @@ import { Loader2 export function LoadingFallback({ message = "Loading...", size 
       {/* Animated dots */}
       <motion.div className="flex space-x-1">
         {[0, 1,
-  2].map((index) => (<motion.div key={index
+  2].map((index) => (<motion .div key={index
 
 } className="w-2 h-2 bg-zion-cyan rounded-full" animate = {
   {
@@ -71,13 +62,13 @@ import { Loader2 export function LoadingFallback({ message = "Loading...", size 
 
 
 
-}}/>))}
+}} />))}
       </motion.div>
     </div>)}
-export function PageLoadingFallback() {
+export function PageLoadingFallback(props: any) {
     return (<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple flex items-center justify-center">
       <div className="text-center">
-        <LoadingFallback message="Loading Zion Tech Group..." size="lg"/>
+        <LoadingFallback message="Loading Zion Tech Group..." size="lg" />
         <motion.div className="mt-8 text-zion-slate-light text-sm" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1 }}>
           Connecting to the future of tech...
         </motion.div>
@@ -86,3 +77,8 @@ export function PageLoadingFallback() {
 
 
 export default LoadingFallback;
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

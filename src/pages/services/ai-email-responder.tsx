@@ -104,8 +104,8 @@ const AIEmailResponder: Reac t.FC = () => {
     <>
       <Helmet>
         <title>AI-Powered Email Responder | Zion Tech Group</title>
-        <meta name="description" content="Automate email responses with AI-powered intelligence. Reduce response time by 80% and improve customer satisfaction with our smart email responder."  />
-        <meta name="keywords" content="AI email responder, email automation, customer support, AI assistant, email management"  />
+        <meta name="description" content="Automate email responses with AI-powered intelligence. Reduce response time by 80% and improve customer satisfaction with our smart email responder."   />
+        <meta name="keywords" content="AI email responder, email automation, customer support, AI assistant, email management"   />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
         {/* Hero Section */}

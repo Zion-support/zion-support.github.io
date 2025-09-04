@@ -1,19 +1,20 @@
-import { useState } from "react";""""
-import { useNavigate } from "react-router-dom";""""
-import { useAuth } from "@/hooks/useAuth";""""
-import { Button } from "@/components/ui/button";""""
-import { UserTypeSelection } from "@/components/onboarding/UserTypeSelection";""""
-import { ProfileSetup } from "@/components/onboarding/ProfileSetup";""""
-import { Steps, Step } from "@/components/ui/steps";""""
-import { supabase } from "@/integrations/supabase/client";""""
-import { toast } from "@/hooks/use-toast";
-export default function Onboarding() {}
-    const { user, updateProfile, isLoading } = useAuth();
+import React from 'react';
+import {useState} from "react";""""
+import {useNavigate} from "react-router-dom";""""
+import {useAuth} from "@/hooks/useAuth";""""
+import {Button} from "@/components/ui/button";""""
+import {UserTypeSelection} from "@/components/onboarding/UserTypeSelection";""""
+import {ProfileSetup} from "@/components/onboarding/ProfileSetup";""""
+import {Steps, Step} from "@/components/ui/steps";""""
+import {supabase} from "@/integrations/supabase/client";""""
+import {toast} from "@/hooks/use-toast";
+export default function Onboarding(props: any) {}
+    const {user, updateProfile, isLoading} = useAuth();
     const [currentStep, setCurrentStep] = useState(0);
     const [userType, setUserType] = useState(null);
     const navigate = useNavigate();
     // Convert our user types to match what's expected in the database;
-    const mapUserTypeToDatabase = (type) => {}
+    const mapUserTypeToDatabase = (props: any) => {}
         switch (type) {}
 """
 """"
@@ -26,7 +27,7 @@ export default function Onboarding() {}
             default:""""
                 return "buyer"}
     };
-    const handleUserTypeSelect = (type) => {}
+    const handleUserTypeSelect = (props: any) => {}
         setUserType(type);"""
         // Direct to specific registration page based on user type""""
         if (type === "serviceProvider") {}
@@ -93,8 +94,8 @@ export default function Onboarding() {}
                 variant: 'destructive'})}
     };'"""
     const steps = ['"'"""
-        { label: "Select Role", description: "Choose how you'll use the platform" },""""
-        { label: "Create Profile", description: "Tell us about yourself" }
+        {label: "Select Role", description: "Choose how you'll use the platform"},""""
+        {label: "Create Profile", description: "Tell us about yourself"}
     ];
     if (!user) {}
 '
@@ -127,7 +128,7 @@ export default function Onboarding() {}
           </div>"""
 """"
           <div className="bg-zion-blue-dark rounded-xl p-8 shadow-lg border border-zion-blue-light">
-            {currentStep === 0 ? (<UserTypeSelection onSelect={handleUserTypeSelect} selectedType={userType}/>) : (<ProfileSetup onComplete={handleProfileComplete} userType={userType}/>)}"""
+            {currentStep === 0 ? (<UserTypeSelection onSelect={handleUserTypeSelect} selectedType={userType} />) : (<ProfileSetup onComplete={handleProfileComplete} userType={userType} />)}"""
 """"
             {currentStep === 1 && (<div className="mt-6">""""
                 <Button variant="outline" className="w-full border-zion-blue-light text-white hover:bg-zion-blue-light" onClick={() => setCurrentStep(0)}>
@@ -140,12 +141,14 @@ export default function Onboarding() {}
       
     </>)}
 
-export { Onboarding };
+export {Onboarding};
 
-export { Onboarding };
+export {Onboarding};
 
-export { Onboarding };
+export {Onboarding};
 
-export { Onboarding };
+export {Onboarding};
 
-export { Onboarding };
+export {Onboarding};
+
+</Step>

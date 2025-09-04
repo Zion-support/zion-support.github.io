@@ -117,3 +117,8 @@ const TrustIndicators: Reac t.FC = () => {
     </section>';';
   );};';';';
 export default TrustIndicators;"`""';';';';
+</CheckCircle>
+</CheckCircle>
+</CheckCircle>
+</CheckCircle>
+</indicator>

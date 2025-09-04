@@ -1,5 +1,5 @@
-import React, { useState, useMemo } from "react";""";,"});,"})","});,"})","});,"})""""";,"});,"})""""";,"});,"})""""";,"});,"})","});,"})"
-const AdvancedServiceInnovationHub = () => {}"});,"})"
+import React, {useState, useMemo} from "react";""";,"});,"})","});,"})","});,"})""""";,"});,"})""""";,"});,"})""""";,"});,"})","});,"})"
+const AdvancedServiceInnovationHub = (props: any) => {}"});,"})"
 ";,"});,"})"
 "";,"});,"})"
 """;,"});,"})"
@@ -112,7 +112,7 @@ const AdvancedServiceInnovationHub = () => {}"});,"})"
             const matchesSearch = trend.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;,"});,"})"
                 trend.description.toLowerCase().includes(searchTerm.toLowerCase());,"});,"})"
             return matchesCategory && matchesImpact && matchesStatus && matchesSearch})}, [selectedCategory, selectedImpact, selectedStatus, searchTerm]);,"});,"})"
-    const getImpactColor = (impact) => {}"});,"})"
+    const getImpactColor = (props: any) => {}"});,"})"
         switch (impact) {}"});,"})"
 ";,"});,"})"
 "";,"});,"})"
@@ -122,7 +122,7 @@ const AdvancedServiceInnovationHub = () => {}"});,"})"
             case "Low": return "bg - green-100 text-green-800",";,"});,"})"
             default: return "bg-gray-100 text-gray-800"}"});,"});"
 };,"});,"})"
-    const getStatusColor = (status) => {}"});,"})"
+    const getStatusColor = (props: any) => {}"});,"})"
         switch (status) {}"});,"})"
 ";,"});,"})"
 "";,"});,"})"
@@ -133,16 +133,16 @@ const AdvancedServiceInnovationHub = () => {}"});,"})"
             case "Disruptive": return "bg - purple-100 text-purple-800",";,"});,"})"
             default: return "bg-gray-100 text-gray-800"}"});,"});"
 };,"});,"})"
-    const getCategoryIcon = (category) => {}"});,"})"
+    const getCategoryIcon = (props: any) => {}"});,"})"
         switch(category) {}"});,"})"
 """;,"});,"})"
 """"";,"});,"})"
-            case "quantum": return <Atom className="w-5 h-5"  />;"""";,"});,"})"
-            case "ai": return <Brain className="w-5 h-5"  />;"""";,"});,"})"
-            case "space-tech": return <Satellite className="w-5 h-5"  />;"""";,"});,"})"
-            case "green-tech": return <Leaf className="w-5 h-5"  />;"""";,"});,"})"
-            case "biotech-ai": return <Dna className="w-5 h-5"  />;"""";,"});,"})"
-            default: return <Cpu className="w-5 h-5"  />}"});,"});"
+            case "quantum": return <Atom className="w-5 h-5"   />;"""";,"});,"})"
+            case "ai": return <Brain className="w-5 h-5"   />;"""";,"});,"})"
+            case "space-tech": return <Satellite className="w-5 h-5"   />;"""";,"});,"})"
+            case "green-tech": return <Leaf className="w-5 h-5"   />;"""";,"});,"})"
+            case "biotech-ai": return <Dna className="w-5 h-5"   />;"""";,"});,"})"
+            default: return <Cpu className="w-5 h-5"   />}"});,"});"
 };""";,"});,"})"
     const categories = []"""";,"});,"})
 }
@@ -150,10 +150,10 @@ const AdvancedServiceInnovationHub = () => {}"});,"})"
     <div className="max-w-7xl mx-auto p-6">;,"});,"})"
       {/* comment */}"});,"})"
       <motion.div initial = {}"});,"})"
-  { opacity: 0,"});,"})"
+  {opacity: 0,"});,"})"
   y: 20,"});,"});"
 }} animate = {}"});,"})"
-  { opacity: 1,"});,"})"
+  {opacity: 1,"});,"})"
   y: 0 ""","});,"})"
 """";,"});,"});"
 }} className="mb-8">"""";,"});,"})"
@@ -169,9 +169,9 @@ const AdvancedServiceInnovationHub = () => {}"});,"})"
           """";,"});,"})"
           <div className="flex gap-2">""""";,"});,"})"
             {["trends",roadmap",insights"].map((mode) => (<Button key="{mode}" variant="{viewMode" === mode ? "default" : "outline"} size="sm" onClick="{()" => setViewMode(mode)}>"""";,"});,"})"
-                {mode === "trends" && <TrendingUp className="w-4 h-4 mr-2"  />}"""";,"});,"})"
-                {mode === "roadmap" && <Rocket className="w-4 h-4 mr-2"  />}"""";,"});,"})"
-                {mode === "insights" && <Lightbulb className="w-4 h-4 mr-2"  />}"});,"})"
+                {mode === "trends" && <TrendingUp className="w-4 h-4 mr-2"   />}"""";,"});,"})"
+                {mode === "roadmap" && <Rocket className="w-4 h-4 mr-2"   />}"""";,"});,"})"
+                {mode === "insights" && <Lightbulb className="w-4 h-4 mr-2"   />}"});,"})"
                 {mode.charAt(0).toUpperCase() + mode.slice(1)}"});,"})"
               </Button>))}"});,"})"
           </div>;,"});,"})"
@@ -181,10 +181,10 @@ const AdvancedServiceInnovationHub = () => {}"});,"})"
       {viewMode === "trends" && (<>;,"});,"})"
           {/* comment */}"});,"})"
           <motion.div initial = {}"});,"})"
-  { opacity: 0,"});,"})"
+  {opacity: 0,"});,"})"
   y: 20,"});,"});"
 }} animate = {}"});,"})"
-  { opacity: 1,"});,"})"
+  {opacity: 1,"});,"})"
   y: 0 ""","});,"})"
 """";,"});,"});"
 }} transition="{{" delay: 0.1 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">"""";,"});,"})"
@@ -226,18 +226,18 @@ const AdvancedServiceInnovationHub = () => {}"});,"})"
           </motion.div>;,"});,"})"
           {/* comment */}"});,"})"
           <motion.div initial = {}"});,"})"
-  { opacity: 0,"});,"})"
+  {opacity: 0,"});,"})"
   y: 20,"});,"});"
 }} animate = {}"});,"})"
-  { opacity: 1,"});,"})"
+  {opacity: 1,"});,"})"
   y: 0 ""","});,"})"
 """";,"});,"});"
 }} transition="{{" delay: 0.2 }} className="grid grid-cols-1 lg: grid-cols-2 gap-6 mb-8">,"});,"})"
             {filteredTrends.map((trend, index) => (<motion.div key="{trend.id}" initial = {}"});,"})"
-  { opacity: 0,"});,"})"
+  {opacity: 0,"});,"})"
   x: index % 2 === 0 ? -20 : 20,"});,"});"
 }} animate = {}"});,"})"
-  { opacity: 1,"});,"})"
+  {opacity: 1,"});,"})"
   x: 0,"});,"})"
 """;,"});,"});"
 }} transition="{{" delay: 0.1 * index }}>"""";,"});,"})"
@@ -256,7 +256,7 @@ const AdvancedServiceInnovationHub = () => {}"});,"})"
                             <Badge className="{getImpactColor(trend.impact)}">;,"});,"})"
                               {trend.impact} Impact,"});,"})"
                             </Badge>;,"});,"})"
-                            <Badge className="{getStatusColor(trend.status)" }>;,"});,"})"
+                            <Badge className="{getStatusColor(trend.status)"}>;,"});,"})"
                               {trend.status}"});,"})"
                             </Badge>;,"});,"})"
                           </div>;,"});,"})"
@@ -311,18 +311,18 @@ const AdvancedServiceInnovationHub = () => {}"});,"})"
 ;,"});,"})"
       {/* comment */}";,"});,"})"
       {viewMode === "roadmap" && (<motion.div initial = {}"});,"})"
-  { opacity: 0,"});,"})"
+  {opacity: 0,"});,"})"
   y: 20,"});,"});"
 }} animate = {}"});,"})"
-  { opacity: 1,"});,"})"
+  {opacity: 1,"});,"})"
   y: 0 ""","});,"})"
 """";,"});,"});"
 }} transition="{{" delay: 0.1 }} className="space-y-6">;,"});,"})"
           {futureRoadmap.map((roadmap, index) => (<motion.div key="{roadmap.id}" initial = {}"});,"})"
-  { opacity: 0,"});,"})"
+  {opacity: 0,"});,"})"
   x: -20,"});,"});"
 }} animate = {}"});,"})"
-  { opacity: 1,"});,"})"
+  {opacity: 1,"});,"})"
   x: 0,"});,"})"
 """;,"});,"});"
 }} transition="{{" delay: 0.1 * index }}>"""";,"});,"})"
@@ -359,7 +359,7 @@ const AdvancedServiceInnovationHub = () => {}"});,"})"
                   <div className="grid grid-cols-1 lg: grid-cols-3 gap-6">""","});,"})"
                     <div>"""";,"});,"})"
                       <h4 className="font-semibold text-zion-slate-dark mb-3 flex items-center gap-2">"""";,"});,"})"
-                        <CheckCircle className="w-4 h-4 text-green-500"  />;,"});,"})"
+                        <CheckCircle className="w-4 h-4 text-green-500"   />;,"});,"})"
                         Key Milestones""";,"});,"})"
                       </h4>"""";,"});,"})"
                       <ul className="space-y-2">"""";,"});,"})"
@@ -372,7 +372,7 @@ const AdvancedServiceInnovationHub = () => {}"});,"})"
                     """;,"});,"})"
                     <div>"""";,"});,"})"
                       <h4 className="font-semibold text-zion-slate-dark mb-3 flex items-center gap-2">"""";,"});,"})"
-                        <Shield className="w-4 h-4 text-orange-500"  />;,"});,"})"
+                        <Shield className="w-4 h-4 text-orange-500"   />;,"});,"})"
                         Challenges""";,"});,"})"
                       </h4>"""";,"});,"})"
                       <ul className="space-y-2">"""";,"});,"})"
@@ -385,7 +385,7 @@ const AdvancedServiceInnovationHub = () => {}"});,"})"
                     """;,"});,"})"
                     <div>"""";,"});,"})"
                       <h4 className="font-semibold text-zion-slate-dark mb-3 flex items-center gap-2">"""";,"});,"})"
-                        <Star className="w-4 h-4 text-yellow-500"  />;,"});,"})"
+                        <Star className="w-4 h-4 text-yellow-500"   />;,"});,"})"
                         Opportunities""";,"});,"})"
                       </h4>"""";,"});,"})"
                       <ul className="space-y-2">"""";,"});,"})"
@@ -402,10 +402,10 @@ const AdvancedServiceInnovationHub = () => {}"});,"})"
 ;,"});,"})"
       {/* comment */}";,"});,"})"
       {viewMode === "insights" && (<motion.div initial = {}"});,"})"
-  { opacity: 0,"});,"})"
+  {opacity: 0,"});,"})"
   y: 20,"});,"});"
 }} animate = {}"});,"})"
-  { opacity: 1,"});,"})"
+  {opacity: 1,"});,"})"
   y: 0 ""","});,"})"
 """";,"});,"});"
 }} transition="{{" delay: 0.1 }} className="space-y-6">"""";,"});,"})"
@@ -413,7 +413,7 @@ const AdvancedServiceInnovationHub = () => {}"});,"})"
             <Card>""";,"});,"})"
               <CardHeader>"""";,"});,"})"
                 <CardTitle className="flex items-center gap-2">"""";,"});,"})"
-                  <TrendingUp className="w-5 h-5 text-zion-green"  />;,"});,"})"
+                  <TrendingUp className="w-5 h-5 text-zion-green"   />;,"});,"})"
                   Investment Trends,"});,"})"
                 </CardTitle>;,"});,"})"
               </CardHeader>""";,"});,"})"
@@ -455,7 +455,7 @@ const AdvancedServiceInnovationHub = () => {}"});,"})"
             <Card>""";,"});,"})"
               <CardHeader>"""";,"});,"})"
                 <CardTitle className="flex items-center gap-2">"""";,"});,"})"
-                  <Users className="w-5 h-5 text-zion-blue"  />;,"});,"})"
+                  <Users className="w-5 h-5 text-zion-blue"   />;,"});,"})"
                   Market Adoption,"});,"})"
                 </CardTitle>;,"});,"})"
               </CardHeader>""";,"});,"})"
@@ -498,7 +498,7 @@ const AdvancedServiceInnovationHub = () => {}"});,"})"
           <Card>""";,"});,"})"
             <CardHeader>"""";,"});,"})"
               <CardTitle className="flex items-center gap-2">"""";,"});,"})"
-                <Lightbulb className="w-5 h-5 text-zion-yellow"  />;,"});,"})"
+                <Lightbulb className="w-5 h-5 text-zion-yellow"   />;,"});,"})"
                 Strategic Recommendations,"});,"})"
               </CardTitle>;,"});,"})"
             </CardHeader>""";,"});,"})"
@@ -508,15 +508,15 @@ const AdvancedServiceInnovationHub = () => {}"});,"})"
                   <h4 className="font-semibold text-zion-slate-dark mb-3">Immediate Actions (0-2 years)</h4>"""";,"});,"})"
                   <ul className="space-y-2">"""";,"});,"})"
                     <li className="text-sm text-zion-slate-light flex items-start gap-2">"""";,"});,"})"
-                      <CheckCircle className="w-4 h-4 text-green-500 mt-1 flex-shrink-0"  />;,"});,"})"
+                      <CheckCircle className="w-4 h-4 text-green-500 mt-1 flex-shrink-0"   />;,"});,"})"
                       Invest in quantum computing research and development""";,"});,"})"
                     </li>"""";,"});,"})"
                     <li className="text-sm text-zion-slate-light flex items-start gap-2">"""";,"});,"})"
-                      <CheckCircle className="w-4 h-4 text-green-500 mt-1 flex-shrink-0"  />;,"});,"})"
+                      <CheckCircle className="w-4 h-4 text-green-500 mt-1 flex-shrink-0"   />;,"});,"})"
                       Develop AI ethics and governance frameworks""";,"});,"})"
                     </li>"""";,"});,"})"
                     <li className="text-sm text-zion-slate-light flex items-start gap-2">"""";,"});,"})"
-                      <CheckCircle className="w-4 h-4 text-green-500 mt-1 flex-shrink-0"  />;,"});,"})"
+                      <CheckCircle className="w-4 h-4 text-green-500 mt-1 flex-shrink-0"   />;,"});,"})"
                       Establish partnerships with space technology companies,"});,"})"
                     </li>;,"});,"})"
                   </ul>;,"});,"})"
@@ -526,15 +526,15 @@ const AdvancedServiceInnovationHub = () => {}"});,"})"
                   <h4 className="font-semibold text-zion-slate-dark mb-3">Strategic Planning (2-5 years)</h4>"""";,"});,"})"
                   <ul className="space-y-2">"""";,"});,"})"
                     <li className="text-sm text-zion-slate-light flex items-start gap-2">"""";,"});,"})"
-                      <CheckCircle className="w-4 h-4 text-blue-500 mt-1 flex-shrink-0"  />;,"});,"})"
+                      <CheckCircle className="w-4 h-4 text-blue-500 mt-1 flex-shrink-0"   />;,"});,"})"
                       Build quantum internet infrastructure""";,"});,"})"
                     </li>"""";,"});,"})"
                     <li className="text-sm text-zion-slate-light flex items-start gap-2">"""";,"});,"})"
-                      <CheckCircle className="w-4 h-4 text-blue-500 mt-1 flex-shrink-0"  />;,"});,"})"
+                      <CheckCircle className="w-4 h-4 text-blue-500 mt-1 flex-shrink-0"   />;,"});,"})"
                       Develop synthetic biology capabilities""";,"});,"})"
                     </li>"""";,"});,"})"
                     <li className="text-sm text-zion-slate-light flex items-start gap-2">"""";,"});,"})"
-                      <CheckCircle className="w-4 h-4 text-blue-500 mt-1 flex-shrink-0"  />;,"});,"})"
+                      <CheckCircle className="w-4 h-4 text-blue-500 mt-1 flex-shrink-0"   />;,"});,"})"
                       Invest in fusion energy research,"});,"})"
                     </li>;,"});,"})"
                   </ul>;,"});,"})"
@@ -545,10 +545,10 @@ const AdvancedServiceInnovationHub = () => {}"});,"})"
 ;,"});,"})"
       {/* comment */}"});,"})"
       <motion.div initial = {}"});,"})"
-  { opacity: 0,"});,"})"
+  {opacity: 0,"});,"})"
   y: 20,"});,"});"
 }} animate = {}"});,"})"
-  { opacity: 1,"});,"})"
+  {opacity: 1,"});,"})"
   y: 0 ""","});,"})"
 """";,"});,"});"
 }} transition="{{" delay: 0.4 }} className="mt-12 text-center">"""";,"});,"})"
@@ -564,7 +564,7 @@ const AdvancedServiceInnovationHub = () => {}"});,"})"
   () => window.open("mailto:kleber@ziontechgroup.com?subject="Innovation" Strategy Consultation",_blank");,"});,"})"
 """;,"});,"});"
 }>"""";,"});,"})"
-              <Users className="w-5 h-5 mr-2"  />;,"});,"})"
+              <Users className="w-5 h-5 mr-2"   />;,"});,"})"
               Get Innovation Strategy""";,"});,"})"
             </Button>"""";,"});,"})"
             <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick = {}"});,"})"
@@ -572,7 +572,7 @@ const AdvancedServiceInnovationHub = () => {}"});,"})"
   () => window.open("tel:+13024640950",_blank");,"});,"})"
 """;,"});,"});"
 }>"""";,"});,"})"
-              <Zap className="w-5 h-5 mr-2"  />;,"});,"})"
+              <Zap className="w-5 h-5 mr-2"   />;,"});,"})"
               Speak with an Expert,"});,"})"
             </Button>;,"});,"})"
           </div>;,"});,"})"
@@ -580,16 +580,16 @@ const AdvancedServiceInnovationHub = () => {}"});,"})"
     </div>)};,"});,"})"
 export default AdvancedServiceInnovationHub,"});,"})"
 ;,"});,"})"
-export { AdvancedServiceInnovationHub };,"});,"})"
+export {AdvancedServiceInnovationHub};,"});,"})"
 ;,"});,"})"
-export { AdvancedServiceInnovationHub };,"});,"})"
+export {AdvancedServiceInnovationHub};,"});,"})"
 ;,"});,"})"
-export { AdvancedServiceInnovationHub };,"});,"})"
+export {AdvancedServiceInnovationHub};,"});,"})"
 ;,"});,"})"
-export { AdvancedServiceInnovationHub };,"});,"})"
+export {AdvancedServiceInnovationHub};,"});,"})"
 ;,"});,"})"
-export { AdvancedServiceInnovationHub };,"});,"})""""";"
-const AdvancedServiceInnovationHub = () => {}""
+export {AdvancedServiceInnovationHub};,"});,"})""""";"
+const AdvancedServiceInnovationHub = (props: any) => {}""
 ""
 """;"""
     const [selectedCategory, setSelectedCategory] = useState("all")";""
@@ -775,7 +775,7 @@ const innovationTrends = []"
 }
             return matchesCategory && matchesImpact && matchesStatus && matchesSearch})}, [selectedCategory, selectedImpact, selectedStatus, searchTerm])
 }
-    const getImpactColor = (impact) => {}"
+    const getImpactColor = (props: any) => {}"
         switch (impact) {}""
 """
 """""
@@ -786,7 +786,7 @@ const innovationTrends = []"
 
     }
 
-    const getStatusColor = (status) => {}"
+    const getStatusColor = (props: any) => {}"
         switch (status) {}""
 """
 """""
@@ -798,7 +798,7 @@ const innovationTrends = []"
 
     }
 
-    const getCategoryIcon = (category) => {}"
+    const getCategoryIcon = (props: any) => {}"
         switch(category) {}""
 """"
 """"""
@@ -823,8 +823,8 @@ const innovationTrends = []"
       {/* comment */}
 
       <motion.div initial = {}"
-  { opacity: 0, y: 20}} animate = {}""
-  { opacity: 1, y: 0 """"">
+  {opacity: 0, y: 20}} animate = {}""
+  {opacity: 1, y: 0 """"">
 """"}} className="mb-8">""""
         <div className="flex flex-col lg: flex-row lg:items-center lg:justify-between gap-4">"""""
           <div>""""
@@ -853,8 +853,8 @@ const innovationTrends = []"
           {/* comment */}
 
           <motion.div initial = {}"
-  { opacity: 0, y: 20}} animate = {}""
-  { opacity: 1, y: 0 """"">
+  {opacity: 0, y: 20}} animate = {}""
+  {opacity: 1, y: 0 """"">
 """"}} transition="{{" delay: 0.1 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">""""
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-4">"""""
               <div>""""
@@ -896,14 +896,14 @@ const innovationTrends = []"
           {/* comment */}
 
           <motion.div initial = {}"
-  { opacity: 0, y: 20}} animate = {}""
-  { opacity: 1, y: 0 """"">
+  {opacity: 0, y: 20}} animate = {}""
+  {opacity: 1, y: 0 """"">
 """"}} transition="{{" delay: 0.2 }} className="grid grid-cols-1 lg: grid-cols-2 gap-6 mb-8">",
             {filteredTrends.map((trend, index) => (<motion .div key="{trend.id}" initial = {}"
-  { opacity: 0, x: index % 2 === 0 ? -20 : 20}} animate = {}"""
-  { opacity: 1, x: 0","}} transition="{{" delay: 0.1 * index }}" >"""""
+  {opacity: 0, x: index % 2 === 0 ? -20 : 20}} animate = {}"""
+  {opacity: 1, x: 0","}} transition="{{" delay: 0.1 * index }}" >"""""
                 <Card className="h-full hover: shadow-lg transition-shadow">""""}} animate = {}""
-  { opacity: 1, x: 0}} transition="{{" delay: 0.1 * index }}" >""""
+  {opacity: 1, x: 0}} transition="{{" delay: 0.1 * index }}" >""""
                 <Card className="h-full hover: shadow-lg transition-shadow">""""
                   <CardHeader>""""
                     <div className="flex items-start justify-between mb-4">""""
@@ -919,7 +919,7 @@ const innovationTrends = []"
                             <Badge className={getImpactColor(trend.impact)}" >"
                               {trend.impact} Impact,
                             </Badge>"
-                            <Badge className="{getStatusColor(trend.status)" }" >"
+                            <Badge className="{getStatusColor(trend.status)"}" >"
                               {trend.status}
 
                             </Badge>
@@ -980,14 +980,14 @@ const innovationTrends = []"
 ""
       {/* comment */}"""
       {viewMode === "roadmap" && (<motion.div initial = {}"
-  { opacity: 0, y: 20}} animate = {}""
-  { opacity: 1, y: 0 """"">
+  {opacity: 0, y: 20}} animate = {}""
+  {opacity: 1, y: 0 """"">
 """"}} transition="{{" delay: 0.1 }} className="space-y-6">"
           {futureRoadmap.map((roadmap, index) => (<motion .div key="{roadmap.id}" initial = {}"
-  { opacity: 0, x: -20}} animate = {}"""
-  { opacity: 1, x: 0","}} transition="{{" delay: 0.1 * index }}" >"""""
+  {opacity: 0, x: -20}} animate = {}"""
+  {opacity: 1, x: 0","}} transition="{{" delay: 0.1 * index }}" >"""""
               <Card className="hover: shadow-lg transition-shadow">""""}} animate = {}""
-  { opacity: 1, x: 0}} transition="{{" delay: 0.1 * index }}" >""""
+  {opacity: 1, x: 0}} transition="{{" delay: 0.1 * index }}" >""""
               <Card className="hover: shadow-lg transition-shadow">""""
                 <CardHeader>""""
                   <div className="flex items-start justify-between">""""
@@ -1070,8 +1070,8 @@ const innovationTrends = []"
 ""
       {/* comment */}"""
       {viewMode === "insights" && (<motion.div initial = {}"
-  { opacity: 0, y: 20}} animate = {}""
-  { opacity: 1, y: 0 """"">
+  {opacity: 0, y: 20}} animate = {}""
+  {opacity: 1, y: 0 """"">
 """"}} transition="{{" delay: 0.1 }} className="space-y-6">""""
           <div className="grid grid-cols-1 lg: grid-cols-2 gap-6">""
             <Card>"""""
@@ -1210,8 +1210,8 @@ const innovationTrends = []"
       {/* comment */}
 
       <motion.div initial = {}"
-  { opacity: 0, y: 20}} animate = {}""
-  { opacity: 1, y: 0 """"">
+  {opacity: 0, y: 20}} animate = {}""
+  {opacity: 1, y: 0 """"">
 """"}} transition="{{" delay: 0.4 }} className="mt-12 text-center">""""
         <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">""""
           <h3 className="text-3xl font-bold mb-4">Ready to Shape the Future?</h3>""""
@@ -1241,12 +1241,86 @@ const innovationTrends = []"
 </div>)};
 export default AdvancedServiceInnovationHub;
 
-export { AdvancedServiceInnovationHub };
+export {AdvancedServiceInnovationHub};
 
-export { AdvancedServiceInnovationHub };
+export {AdvancedServiceInnovationHub};
 
-export { AdvancedServiceInnovationHub };
+export {AdvancedServiceInnovationHub};
 
-export { AdvancedServiceInnovationHub };
+export {AdvancedServiceInnovationHub};
 
-export { AdvancedServiceInnovationHub };
+export {AdvancedServiceInnovationHub};
+
+</Zap>
+</Users>
+</motion>
+</CheckCircle>
+</CheckCircle>
+</CheckCircle>
+</CheckCircle>
+</CheckCircle>
+</CheckCircle>
+</div>
+</Lightbulb>
+</Users>
+</div>
+</TrendingUp>
+</div>
+</motion>
+</Star>
+</Shield>
+</CheckCircle>
+</div>
+</div>
+</Card>
+</motion>
+</motion>
+</div>
+</div>
+</div>
+</div>
+</Card>
+</motion>
+</motion>
+</div>
+</motion>
+</Lightbulb>
+</Rocket>
+</TrendingUp>
+</motion>
+</div>
+</Cpu>
+</Dna>
+</Leaf>
+</Satellite>
+</Brain>
+</Atom>
+</Cpu>
+</Dna>
+</Leaf>
+</Satellite>
+</Brain>
+</Atom>
+</motion>
+</div>
+</div>
+</div>
+</motion>
+</div>
+</div>
+</div>
+</motion>
+</motion>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</motion>
+</motion>
+</div>
+</motion>
+</div>
+</motion>
+</div>

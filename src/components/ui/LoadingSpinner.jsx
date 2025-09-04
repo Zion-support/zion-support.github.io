@@ -1,15 +1,8 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { cn } from '@/lib/utils';
+import {motion} from 'framer-motion';
+import {cn} from '@/lib/utils';
 
-export function LoadingSpinner({ 
-  size = 'md', 
-  color = 'primary', 
-  showText = false, 
-  text = 'Loading...', 
-  className = '',
-  customColor = ''
-}) {
+export function LoadingSpinner(props: any) {
   const sizeClasses = {
     xs: 'w-4 h-4',
     sm: 'w-6 h-6',
@@ -18,18 +11,16 @@ export function LoadingSpinner({
     xl: 'w-16 h-16'
   };
 
-  const colorClasses = {
-    primary: 'border-zion-purple',
+  const colorClasses = {primary: 'border-zion-purple',
     secondary: 'border-zion-cyan',
     white: 'border-white',
-    custom: ''
-  };
+    custom: ''};
 
   const borderColor = customColor || colorClasses[color];
 
   return (
     <div className={cn('flex flex-col items-center justify-center', className)}>
-      <motion.div 
+      <motion .div 
         className={cn(
           'border-2 border-t-transparent rounded-full animate-spin',
           sizeClasses[size],
@@ -43,7 +34,7 @@ export function LoadingSpinner({
         }}
         role="status"
         aria-label="Loading"
-      />
+       />
 
       {showText && (
         <motion.p 
@@ -60,38 +51,38 @@ export function LoadingSpinner({
 }
 
 // Skeleton loading component for content
-export function SkeletonLoader({ className, lines = 3, height = 'h-4' }) {
+export function SkeletonLoader(props: any) {
   return (
     <div className={cn('space-y-3', className)}>
       {Array.from({ length: lines }).map((_, index) => (
-        <motion.div
+        <motion .div
           key={index}
           className={cn('bg-zion-slate-light/20 rounded animate-pulse', height)}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: index * 0.1 }}
-        />
+         />
       ))}
     </div>
   );
 }
 
 // Page loading component
-export function PageLoader({ text = 'Loading page...', className }) {
+export function PageLoader(props: any) {
   return (
     <div className={cn('min-h-screen flex items-center justify-center', className)}>
       <div className="text-center">
-        <LoadingSpinner size="xl" color="primary" showText text={text} />
+        <LoadingSpinner size="xl" color="primary" showText text={text}  />
       </div>
     </div>
   );
 }
 
 // Button loading state
-export function ButtonLoader({ size = 'sm', className }) {
+export function ButtonLoader(props: any) {
   return (
     <div className={cn('inline-flex items-center', className)}>
-      <LoadingSpinner size={size} color="white" />
+      <LoadingSpinner size={size} color="white"  />
       <span className="ml-2">Loading...</span>
     </div>
   );
@@ -99,3 +90,6 @@ export function ButtonLoader({ size = 'sm', className }) {
 
 
 export default LoadingSpinner;
+</motion>
+</motion>
+</motion>

@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 ;
 ;
-const ServicesMarketingPage = () => {
+const ServicesMarketingPage = (props: any) => {
     const allServices = [
         ...REVOLUTIONARY_2025_ADVANCED_SERVICES,
         ...EMERGING_TECH_2025_SPECIALIZED_SERVICES
@@ -417,12 +417,12 @@ const ServicesMarketingPage = () => {
     </div>)};
 export default ServicesMarketingPage;
 
-export { ServicesMarketingPage };
+export {ServicesMarketingPage};
 
-export { ServicesMarketingPage };
+export {ServicesMarketingPage};
 
-export { ServicesMarketingPage };
+export {ServicesMarketingPage};
 
-export { ServicesMarketingPage };
+export {ServicesMarketingPage};
 
-export { ServicesMarketingPage };
+export {ServicesMarketingPage};

@@ -1,12 +1,12 @@
 import React from "react"
 import Head from "next/head"
 import Link from "next/link"
-const WhitePapers = () => {
+const WhitePapers = (props: any) => {
   return (
     <>
       <Head>
         <title>White Papers - Zion Tech Group</title>
-        <meta name="description" content="Professional White Papers services"   />
+        <meta name="description" content="Professional White Papers services"    />
       </Head>
       <div className="min-h-screen bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8 py-12">
@@ -48,3 +48,8 @@ const WhitePapers = () => {
   );
 }
 export default WhitePapers
+
+</div>
+</div>
+</div>
+</div>

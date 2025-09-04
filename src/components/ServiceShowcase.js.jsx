@@ -1,17 +1,17 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "ui/card.tsx";
-import { Badge } from "ui/badge.tsx";
-import { Button } from "ui/button.tsx";
-import { Star, Zap, Shield, TrendingUp, Users } from 'lucide-react';
-export function ServiceShowcase({ services }) {
-    const getCategoryIcon = (category) => {
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "ui/card.tsx";
+import {Badge} from "ui/badge.tsx";
+import {Button} from "ui/button.tsx";
+import {Star, Zap, Shield, TrendingUp, Users} from 'lucide-react';
+export function ServiceShowcase(props: any) {
+    const getCategoryIcon = (props: any) => {
         switch (category) {
-            case 'AI Services': return <Zap className="h-5 w-5"/>;
-            case 'Security': return <Shield className="h-5 w-5"/>;
-            case 'Analytics': return <TrendingUp className="h-5 w-5"/>;
-            case 'Development': return <Users className="h-5 w-5"/>;
-            default: return <Star className="h-5 w-5"/>}
+            case 'AI Services': return <Zap className="h-5 w-5" />;
+            case 'Security': return <Shield className="h-5 w-5" />;
+            case 'Analytics': return <TrendingUp className="h-5 w-5" />;
+            case 'Development': return <Users className="h-5 w-5" />;
+            default: return <Star className="h-5 w-5" />}
     };
-    const getCategoryColor = (category) => {
+    const getCategoryColor = (props: any) => {
         switch (category) {
             case 'AI Services': return 'from-purple-500 to-pink-500';
             case 'Security': return 'from-red-500 to-orange-500';
@@ -58,11 +58,11 @@ export function ServiceShowcase({ services }) {
               <CardContent className="space-y-4">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <Star className="h-4 w-4 text-yellow-400 fill-current"/>
+                    <Star className="h-4 w-4 text-yellow-400 fill-current" />
                     <span className="text-zinc-300">{service.rating}</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Zap className="h-4 w-4 text-zion-cyan"/>
+                    <Zap className="h-4 w-4 text-zion-cyan" />
                     <span className="text-zion-cyan font-semibold">AI Score: {service.aiScore}</span>
                   </div>
                 </div>
@@ -91,7 +91,7 @@ export function ServiceShowcase({ services }) {
               </CardContent>
 
               {/* Hover Effect Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/5 to-zion-purple/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"/>
+              <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/5 to-zion-purple/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
             </Card>))}
         </div>
 

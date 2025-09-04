@@ -1,5 +1,5 @@
-import React, { useState, useMemo } from 'react';'''
-import { motion } from 'framer-motion';
+import React, {useState, useMemo} from 'react';'''
+import {motion} from 'framer-motion';
 import {}
   BarChart3,
   PieChart,
@@ -17,11 +17,11 @@ import {}
   Award,''
   ArrowUpRight,'''
   ArrowDownRight} from 'lucide-react';'''
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card';'''
-import { Button } from './ui/button';'''
-import { Badge } from './ui/badge';'''
-import { Input } from './ui/input';
-const AdvancedServicePortfolioDashboard = () => {}
+import {Card, CardContent, CardHeader, CardTitle} from './ui/card';'''
+import {Button} from './ui/button';'''
+import {Badge} from './ui/badge';'''
+import {Input} from './ui/input';
+const AdvancedServicePortfolioDashboard = (props: any) => {}
 '
 ''
 '''
@@ -242,7 +242,7 @@ const AdvancedServicePortfolioDashboard = () => {}
     }''
   };'''
   const categories = [''''
-    { id: 'all', name: 'All Categories', count: portfolioData.length },
+    {id: 'all', name: 'All Categories', count: portfolioData.length},
     {}
 '
 ''
@@ -304,9 +304,9 @@ const AdvancedServicePortfolioDashboard = () => {}
                 size="sm"""
                 onClick={() => setViewMode(mode)}'"""
               >'"'"""
-                {mode === 'overview' && <Eye className="w-4 h-4 mr-2" />}'"'"""
-                {mode === 'detailed' && <BarChart3 className="w-4 h-4 mr-2" />}'"'"""
-                {mode === 'analytics' && <PieChart className="w-4 h-4 mr-2" />}
+                {mode === 'overview' && <Eye className="w-4 h-4 mr-2"  />}'"'"""
+                {mode === 'detailed' && <BarChart3 className="w-4 h-4 mr-2"  />}'"'"""
+                {mode === 'analytics' && <PieChart className="w-4 h-4 mr-2"  />}
                 {mode.charAt(0).toUpperCase() + mode.slice(1)}
               </Button>
             ))}
@@ -325,10 +325,10 @@ const AdvancedServicePortfolioDashboard = () => {}
           <CardHeader className="pb-3">""""
             <div className="flex items-center justify-between">""""
               <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center text-white">""""
-                <Rocket className="w-6 h-6" />"""
+                <Rocket className="w-6 h-6"  />"""
               </div>""""
               <div className="flex items-center gap-1">""""
-                <ArrowUpRight className="w-4 h-4 text-green-500" />""""
+                <ArrowUpRight className="w-4 h-4 text-green-500"  />""""
                 <span className="text-sm font-medium text-green-600">
                   +{portfolioMetrics.portfolioGrowth}%
                 </span>
@@ -347,10 +347,10 @@ const AdvancedServicePortfolioDashboard = () => {}
           <CardHeader className="pb-3">""""
             <div className="flex items-center justify-between">""""
               <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center text-white">""""
-                <DollarSign className="w-6 h-6" />"""
+                <DollarSign className="w-6 h-6"  />"""
               </div>""""
               <div className="flex items-center gap-1">""""
-                <ArrowUpRight className="w-4 h-4 text-green-500" />""""
+                <ArrowUpRight className="w-4 h-4 text-green-500"  />""""
                 <span className="text-sm font-medium text-green-600">
                   +{Math.round(portfolioMetrics.portfolioGrowth)}%
                 </span>
@@ -369,10 +369,10 @@ const AdvancedServicePortfolioDashboard = () => {}
           <CardHeader className="pb-3">""""
             <div className="flex items-center justify-between">""""
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center text-white">""""
-                <Users className="w-6 h-6" />"""
+                <Users className="w-6 h-6"  />"""
               </div>""""
               <div className="flex items-center gap-1">""""
-                <ArrowUpRight className="w-4 h-4 text-green-500" />""""
+                <ArrowUpRight className="w-4 h-4 text-green-500"  />""""
                 <span className="text-sm font-medium text-green-600">
                   +{Math.round(portfolioMetrics.portfolioGrowth)}%
                 </span>
@@ -391,10 +391,10 @@ const AdvancedServicePortfolioDashboard = () => {}
           <CardHeader className="pb-3">""""
             <div className="flex items-center justify-between">""""
               <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-yellow-600 rounded-lg flex items-center justify-center text-white">""""
-                <Target className="w-6 h-6" />"""
+                <Target className="w-6 h-6"  />"""
               </div>""""
               <div className="flex items-center gap-1">""""
-                <ArrowUpRight className="w-4 h-4 text-green-500" />""""
+                <ArrowUpRight className="w-4 h-4 text-green-500"  />""""
                 <span className="text-sm font-medium text-green-600">
                   +{Math.round(portfolioMetrics.portfolioGrowth)}%
                 </span>
@@ -493,7 +493,7 @@ const AdvancedServicePortfolioDashboard = () => {}
                 setSearchTerm('');
               }}"""
             >""""
-              <Filter className="w-4 h-4 mr-2" />
+              <Filter className="w-4 h-4 mr-2"  />
               Clear Filters;
             </Button>
           </div>
@@ -511,11 +511,11 @@ const AdvancedServicePortfolioDashboard = () => {}
           <CardHeader>""""
             <div className="flex items-center justify-between">""""
               <CardTitle className="flex items-center gap-2">""""
-                <BarChart3 className="w-5 h-5 text-zion-cyan" />
+                <BarChart3 className="w-5 h-5 text-zion-cyan"  />
                 Service Portfolio Overview"""
               </CardTitle>""""
               <Button variant="outline" size="sm">""""
-                <Download className="w-4 h-4 mr-2" />
+                <Download className="w-4 h-4 mr-2"  />
                 Export Data;
               </Button>
             </div>
@@ -578,7 +578,7 @@ const AdvancedServicePortfolioDashboard = () => {}
                           <div className="w-16 bg-zion-slate-light/20 rounded-full h-2">"""
                             <div""""
                               className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full"""
-                              style={{ width: `${service.performance}%` }}
+                              style="{{{ width: `${service.performance}}"%` }}
                             ></div>"""
                           </div>""""
                           <span className="text-sm font-medium">
@@ -599,9 +599,9 @@ const AdvancedServicePortfolioDashboard = () => {}
                       <td className="py-3 px-4">""""
                         <div className="flex items-center gap-1">"""
                           {service.growth > 0 ? (""""
-                            <ArrowUpRight className="w-4 h-4 text-green-500" />"""
+                            <ArrowUpRight className="w-4 h-4 text-green-500"  />"""
                           ) : (""""
-                            <ArrowDownRight className="w-4 h-4 text-red-500" />
+                            <ArrowDownRight className="w-4 h-4 text-red-500"  />
                           )}'`
                           <span'`'`
                             className={`text-sm font-medium ${service.growth > 0 ? 'text-green-600' : 'text-red-600'}`}
@@ -645,7 +645,7 @@ const AdvancedServicePortfolioDashboard = () => {}
         <Card>"""
           <CardHeader>""""
             <CardTitle className="flex items-center gap-2">""""
-              <PieChart className="w-5 h-5 text-zion-purple" />
+              <PieChart className="w-5 h-5 text-zion-purple"  />
               Service Category Distribution;
             </CardTitle>
           </CardHeader>"""
@@ -721,14 +721,14 @@ const AdvancedServicePortfolioDashboard = () => {}
         <Card>"""
           <CardHeader>""""
             <CardTitle className="flex items-center gap-2">""""
-              <Brain className="w-5 h-5 text-zion-cyan" />
+              <Brain className="w-5 h-5 text-zion-cyan"  />
               Portfolio Insights;
             </CardTitle>
           </CardHeader>"""
           <CardContent>""""
             <div className="space-y-4">""""
               <div className="flex items-start gap-3 p-3 bg-zion-green/10 rounded-lg">""""
-                <TrendingUp className="w-5 h-5 text-zion-green mt-1" />"""
+                <TrendingUp className="w-5 h-5 text-zion-green mt-1"  />"""
                 <div>""""
                   <h4 className="font-semibold text-zion-slate-dark">
                     High Growth Services"""
@@ -741,7 +741,7 @@ const AdvancedServicePortfolioDashboard = () => {}
               </div>"""
 """"
               <div className="flex items-start gap-3 p-3 bg-zion-blue/10 rounded-lg">""""
-                <Star className="w-5 h-5 text-zion-blue mt-1" />"""
+                <Star className="w-5 h-5 text-zion-blue mt-1"  />"""
                 <div>""""
                   <h4 className="font-semibold text-zion-slate-dark">
                     Top Performers"""
@@ -754,7 +754,7 @@ const AdvancedServicePortfolioDashboard = () => {}
               </div>"""
 """"
               <div className="flex items-start gap-3 p-3 bg-zion-purple/10 rounded-lg">""""
-                <Award className="w-5 h-5 text-zion-purple mt-1" />"""
+                <Award className="w-5 h-5 text-zion-purple mt-1"  />"""
                 <div>""""
                   <h4 className="font-semibold text-zion-slate-dark">
                     Market Leaders"""
@@ -799,10 +799,9 @@ const AdvancedServicePortfolioDashboard = () => {}
               onClick={() =>'
                 window.open(''
                   'mailto:kleber@ziontechgroup.com?subject=Portfolio Expansion Consultation',_blank'
-                )
-              }"""
+                )}"""
             >""""
-              <Users className="w-5 h-5 mr-2" />
+              <Users className="w-5 h-5 mr-2"  />
               Get Portfolio Consultation;
             </Button>"""
             <Button""""
@@ -810,7 +809,7 @@ const AdvancedServicePortfolioDashboard = () => {}
               className="border-white text-white hover:bg-white hover:text-zion-purple"''
               onClick={() => window.open('tel:+13024640950',_blank')}"""
             >""""
-              <Zap className="w-5 h-5 mr-2" />
+              <Zap className="w-5 h-5 mr-2"  />
               Call Now;
             </Button>
           </div>
@@ -819,12 +818,21 @@ const AdvancedServicePortfolioDashboard = () => {}
     </div>)};
 export default AdvancedServicePortfolioDashboard;
 
-export { AdvancedServicePortfolioDashboard };
+export {AdvancedServicePortfolioDashboard};
 
-export { AdvancedServicePortfolioDashboard };
+export {AdvancedServicePortfolioDashboard};
 
-export { AdvancedServicePortfolioDashboard };
+export {AdvancedServicePortfolioDashboard};
 
-export { AdvancedServicePortfolioDashboard };
+export {AdvancedServicePortfolioDashboard};
 
-export { AdvancedServicePortfolioDashboard };
+export {AdvancedServicePortfolioDashboard};
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

@@ -26,7 +26,7 @@ import {
   TrendingUp
 } from 'lucide-react';
 
-export default function CybersecurityServicesPage() {
+export default function CybersecurityServicesPage(props: any) {
   const services = [
     {
       title: "Zero Trust Security Framework",
@@ -97,8 +97,8 @@ export default function CybersecurityServicesPage() {
           {/* Background Elements */}
           <div className="absolute inset-0">
             <div className="absolute top-20 left-10 w-32 h-32 bg-red-500/10 rounded-full blur-xl animate-pulse"  />
-            <div className="absolute top-40 right-20 w-24 h-24 bg-orange-500/10 rounded-full blur-xl animate-pulse" style={{ animationDelay: '2s' }}  />
-            <div className="absolute bottom-40 left-20 w-20 h-20 bg-red-600/10 rounded-full blur-xl animate-pulse" style={{ animationDelay: '4s' }}  />
+            <div className="absolute top-40 right-20 w-24 h-24 bg-orange-500/10 rounded-full blur-xl animate-pulse" style="{{{ animationDelay: '2s'}}"}  />
+            <div className="absolute bottom-40 left-20 w-20 h-20 bg-red-600/10 rounded-full blur-xl animate-pulse" style="{{{ animationDelay: '4s'}}"}  />
           </div>
 
           <div className="relative z-10 max-w-6xl mx-auto text-center">
@@ -244,7 +244,7 @@ import React from "react"
 import { SEO } from "@/components/SEO"
 ;,"});,"})
 }
-export default function CybersecurityServicesPage() {return ("
+export default function CybersecurityServicesPage(props: any) {return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
       <SEO title="CybersecurityServicesPage - Zion Tech Group" description="Professional CybersecurityServicesPage services by Zion Tech Group"   />"
       <div className="container mx-auto px-4 py-20">"
@@ -256,3 +256,6 @@ export default function CybersecurityServicesPage() {return ("
   )
 }
 }""
+
+</div>
+</SEOHead>

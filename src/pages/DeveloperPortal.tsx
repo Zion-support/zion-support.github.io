@@ -2,7 +2,7 @@ import React from "react"
 import { SEO } from "@/components/SEO"
 ;,"});,"})
 }
-export default function DeveloperPortal() {return ("
+export default function DeveloperPortal(props: any) {return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
       <SEO title="DeveloperPortal - Zion Tech Group" description="Professional DeveloperPortal services by Zion Tech Group"   />"
       <div className="container mx-auto px-4 py-20">"
@@ -14,3 +14,5 @@ export default function DeveloperPortal() {return ("
   )
 }
 }""
+
+</div>

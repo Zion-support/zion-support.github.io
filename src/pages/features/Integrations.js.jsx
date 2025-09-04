@@ -1,13 +1,13 @@
-import React, { useEffect } from "react";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
+import React, {useEffect} from "react";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {SEO} from "@/components/SEO";
+import {GradientHeading} from "@/components/GradientHeading";
+import {Button} from "@/components/ui/button";
 import Link from 'next/link';
-import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus";
+import {useAdvancedOnboardingStatus} from "@/hooks/useAdvancedOnboardingStatus";
 export default function IntegrationsFeature
-export { IntegrationsFeature }() {
+export {IntegrationsFeature}() {
     const schema = {
   "@context": "https://schema.org",
         "@type": "WebPage",
@@ -17,21 +17,21 @@ export { IntegrationsFeature }() {
     
 
 };
-    const { markSlackConnected } = useAdvancedOnboardingStatus();
-    useEffect(() => {
-        markSlackConnected()}, [markSlackConnected]);
+    const {markSlackConnected} = useAdvancedOnboardingStatus();
+    useEffect(() => {markSlackConnected()}, [markSlackConnected]);
     return (<>
+
       <SEO title="API & Integrations" description="Extend Zion by embedding widgets or using our REST API for custom workflows." keywords="Zion API, Slack integration, embed widget" canonical="https://ziontechgroup.com/features/integrations"/>
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}></script>
-      <Header />
+      <Header  />
       <main className="bg-background text-white py-12">
         <div className="container mx-auto px-4 md:px-6">
           <GradientHeading className="mb-4 text-center">API & Integrations</GradientHeading>
           <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
             Automate your workflows by connecting Zion with the tools you already use.
           </p>
-          <img loading="lazy" src="https://placehold.co/800x400" alt="Screenshot showing integrations" className="rounded-lg shadow-xl mx-auto mb-12"/>
+          <img loading="lazy" src="https://placehold.co/800x400" alt="Screenshot showing integrations" className="rounded-lg shadow-xl mx-auto mb-12"  />
           <h2 className="text-2xl font-bold mb-4">Benefits &amp; Use Cases</h2>
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
             <li>Trigger Slack notifications for new orders or messages.</li>
@@ -56,5 +56,5 @@ export { IntegrationsFeature }() {
           </div>
         </div>
       </main>
-      <Footer />
+      <Footer  />
     </>)}

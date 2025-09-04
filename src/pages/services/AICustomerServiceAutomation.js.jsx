@@ -1,43 +1,32 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { MessageCircle, Brain, Shield, Users, BarChart3, Clock, DollarSign, Smartphone, Globe, Zap, CheckCircle, TrendingUp, Phone, Mail, MessageSquare, Bot } from 'lucide-react';
+import {Link} from 'react-router-dom';
+import {MessageCircle, Brain, Shield, Users, BarChart3, Clock, DollarSign, Smartphone, Globe, Zap, CheckCircle, TrendingUp, Phone, Mail, MessageSquare, Bot} from 'lucide-react';
 export default function AICustomerServiceAutomation
-export { AICustomerServiceAutomation }() {
+export {AICustomerServiceAutomation}() {
     const features = [
         {
             icon: Brain,
             title: "AI Chatbots",
             description: "Intelligent chatbots that understand context and provide accurate responses 24/7"
         },
-        {
-            icon: MessageCircle,
+        {icon: MessageCircle,
             title: "Multi-Channel Support",
-            description: "Seamless support across email, chat, phone, social media, and messaging platforms"
-        },
-        {
-            icon: Users,
+            description: "Seamless support across email, chat, phone, social media, and messaging platforms"},
+        {icon: Users,
             title: "Smart Routing",
-            description: "AI-powered ticket routing to the most qualified agents for faster resolution"
-        },
-        {
-            icon: BarChart3,
+            description: "AI-powered ticket routing to the most qualified agents for faster resolution"},
+        {icon: BarChart3,
             title: "Sentiment Analysis",
-            description: "Real-time emotion detection to prioritize urgent cases and improve customer satisfaction"
-        },
-        {
-            icon: Zap,
+            description: "Real-time emotion detection to prioritize urgent cases and improve customer satisfaction"},
+        {icon: Zap,
             title: "Automated Responses",
-            description: "Instant responses to common queries with human-like conversation flow"
-        },
-        {
-            icon: Shield,
+            description: "Instant responses to common queries with human-like conversation flow"},
+        {icon: Shield,
             title: "Data Security",
-            description: "Enterprise-grade security with GDPR and SOC2 compliance for customer data protection"
-        }
+            description: "Enterprise-grade security with GDPR and SOC2 compliance for customer data protection"}
     ];
     const pricingPlans = [
-        {
-            name: "Starter",
+        {name: "Starter",
             price: "$199",
             period: "/month",
             description: "Perfect for small businesses and startups",
@@ -50,10 +39,8 @@ export { AICustomerServiceAutomation }() {
                 "Mobile app access"
             ],;
             cta: "Start Free Trial",
-            popular: false
-        },
-        {
-            name: "Professional",
+            popular: false},
+        {name: "Professional",
             price: "$599",
             period: "/month",
             description: "Ideal for growing businesses and mid-size companies",
@@ -68,10 +55,8 @@ export { AICustomerServiceAutomation }() {
                 "Sentiment analysis"
             ],;
             cta: "Start Free Trial",
-            popular: true
-        },
-        {
-            name: "Enterprise",
+            popular: true},
+        {name: "Enterprise",
             price: "$1,999",
             period: "/month",
             description: "For large corporations and global customer service teams",
@@ -86,79 +71,54 @@ export { AICustomerServiceAutomation }() {
                 "Advanced compliance"
             ],;
             cta: "Contact Sales",
-            popular: false
-        }
+            popular: false}
     ];
     const benefits = [
-        {
-            icon: DollarSign,
+        {icon: DollarSign,
             title: "Cost Reduction",
-            description: "Reduce customer service costs by 40-60% while improving response times and quality"
-        },
-        {
-            icon: Clock,
+            description: "Reduce customer service costs by 40-60% while improving response times and quality"},
+        {icon: Clock,
             title: "24/7 Availability",
-            description: "Provide instant support around the clock without increasing staff costs"
-        },
-        {
-            icon: Users,
+            description: "Provide instant support around the clock without increasing staff costs"},
+        {icon: Users,
             title: "Improved Satisfaction",
-            description: "Faster response times and accurate answers lead to higher customer satisfaction scores"
-        },
-        {
-            icon: Brain,
+            description: "Faster response times and accurate answers lead to higher customer satisfaction scores"},
+        {icon: Brain,
             title: "Intelligent Automation",
-            description: "AI handles routine queries while human agents focus on complex customer needs"
-        },
-        {
-            icon: TrendingUp,
+            description: "AI handles routine queries while human agents focus on complex customer needs"},
+        {icon: TrendingUp,
             title: "Scalability",
-            description: "Handle customer volume spikes without proportional cost increases"
-        },
-        {
-            icon: BarChart3,
+            description: "Handle customer volume spikes without proportional cost increases"},
+        {icon: BarChart3,
             title: "Data Insights",
-            description: "Gain valuable insights into customer behavior and service optimization opportunities"
-        }
+            description: "Gain valuable insights into customer behavior and service optimization opportunities"}
     ];
     const channels = [
-        {
-            icon: MessageSquare,
+        {icon: MessageSquare,
             title: "Live Chat",
-            description: "Real-time chat support with instant AI responses and seamless human handoff"
-        },
-        {
-            icon: Mail,
+            description: "Real-time chat support with instant AI responses and seamless human handoff"},
+        {icon: Mail,
             title: "Email Support",
-            description: "Automated email categorization, routing, and intelligent response suggestions"
-        },
-        {
-            icon: Phone,
+            description: "Automated email categorization, routing, and intelligent response suggestions"},
+        {icon: Phone,
             title: "Voice Support",
-            description: "AI-powered call routing, transcription, and intelligent voice response systems"
-        },
-        {
-            icon: Smartphone,
+            description: "AI-powered call routing, transcription, and intelligent voice response systems"},
+        {icon: Smartphone,
             title: "Mobile Apps",
-            description: "In-app support with push notifications and seamless mobile experience"
-        },
-        {
-            icon: Globe,
+            description: "In-app support with push notifications and seamless mobile experience"},
+        {icon: Globe,
             title: "Social Media",
-            description: "Monitor and respond to customer inquiries across all social platforms"
-        },
-        {
-            icon: Bot,
+            description: "Monitor and respond to customer inquiries across all social platforms"},
+        {icon: Bot,
             title: "Messaging Apps",
-            description: "Support for WhatsApp, Facebook Messenger, Slack, and other messaging platforms"
-        }
+            description: "Support for WhatsApp, Facebook Messenger, Slack, and other messaging platforms"}
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-indigo-900 pt-20">
       {/* Hero Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-4 py-2 bg-indigo-500/10 border border-indigo-500/20 rounded-full text-indigo-400 text-sm font-medium mb-6">
-            <MessageCircle className="w-4 h-4 mr-2"/>
+            <MessageCircle className="w-4 h-4 mr-2" />
             AI-Powered Customer Service Technology
           </div>
           
@@ -209,7 +169,7 @@ export { AICustomerServiceAutomation }() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, idx) => (<div key={idx} className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-indigo-500/50 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-white"/>
+                  <feature .icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                 <p className="text-gray-400">{feature.description}</p>
@@ -226,7 +186,7 @@ export { AICustomerServiceAutomation }() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {channels.map((channel, idx) => (<div key={idx} className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-indigo-500/50 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
-                  <channel.icon className="w-6 h-6 text-white"/>
+                  <channel .icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{channel.title}</h3>
                 <p className="text-gray-400">{channel.description}</p>
@@ -261,7 +221,7 @@ export { AICustomerServiceAutomation }() {
                 
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIdx) => (<li key={featureIdx} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-indigo-400 flex-shrink-0"/>
+                      <CheckCircle className="w-5 h-5 text-indigo-400 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
                     </li>))}
                 </ul>
@@ -286,7 +246,7 @@ export { AICustomerServiceAutomation }() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, idx) => (<div key={idx} className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-indigo-500/50 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
-                  <benefit.icon className="w-6 h-6 text-white"/>
+                  <benefit .icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
                 <p className="text-gray-400">{benefit.description}</p>
@@ -316,12 +276,12 @@ export { AICustomerServiceAutomation }() {
       </div>
     </div>)}
 
-export { AICustomerServiceAutomation };
+export {AICustomerServiceAutomation};
 
-export { AICustomerServiceAutomation };
+export {AICustomerServiceAutomation};
 
-export { AICustomerServiceAutomation };
+export {AICustomerServiceAutomation};
 
-export { AICustomerServiceAutomation };
+export {AICustomerServiceAutomation};
 
-export { AICustomerServiceAutomation };
+export {AICustomerServiceAutomation};

@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Star, Quote, ArrowRight  } from 'lucide-react';
+import React, {useState, useEffect} from 'react';
+import {motion, AnimatePresence} from 'framer-motion';
+import {ChevronLeft, ChevronRight, Star, Quote, ArrowRight} from 'lucide-react';
 ,
-  {
-
-    id: 2,
+  {id: 2,
     name: 'Michael Chen',
     role: 'AI Engineer',
     comp: 'Freelance',
@@ -14,9 +12,7 @@ import { ChevronLeft, ChevronRight, Star, Quote, ArrowRight  } from 'lucide-reac
     rating: 5,
     category: 'Freelancer',
     project: 'Machine Learning Solutions'},
-  {
-
-    id: 3,
+  {id: 3,
     name: 'Dr.Emily Rodriguez',
     role: 'Research Director',
     comp: 'InnovateLab',
@@ -26,9 +22,7 @@ import { ChevronLeft, ChevronRight, Star, Quote, ArrowRight  } from 'lucide-reac
     rating: 5,
     category: 'Research',
     project: 'AI Research Platform'},
-  {
-
-    id: 4,
+  {id: 4,
     name: 'David Kim',
     role: 'Startup Founder',
     comp: 'DataFlow',
@@ -38,9 +32,7 @@ import { ChevronLeft, ChevronRight, Star, Quote, ArrowRight  } from 'lucide-reac
     rating: 5,
     category: 'Startup',
     project: 'SaaS Platform'},
-  {
-
-    id: 5,
+  {id: 5,
     name: 'Lisa Thompson',
     role: 'IT Manager',
     comp: 'Global Retail Co.',
@@ -50,9 +42,7 @@ import { ChevronLeft, ChevronRight, Star, Quote, ArrowRight  } from 'lucide-reac
     rating: 5,
     category: 'Enterprise',
     project: 'Digital Transformation'},
-  {
-
-    id: 6,
+  {id: 6,
     name: 'Alex Patel',
     role: 'DevOps Engineer',
     comp: 'CloudScale',
@@ -63,7 +53,7 @@ import { ChevronLeft, ChevronRight, Star, Quote, ArrowRight  } from 'lucide-reac
     category: 'Infrastructure',
     project: 'Cloud Infrastructure'},
 ];
-export function TestimonialCarousel() {
+export function TestimonialCarousel(props: any) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
   useEffect(() => {
@@ -73,28 +63,17 @@ export function TestimonialCarousel() {
     // Cleanup function
   };
 }, []);, []);
-    const timer = setInterval(() => {
-      setDirection(1);
-      setCurrentIndex(prev => (prev + 1) % testimonials.length);
-    }, 5000);
+    const timer = setInterval(() => {setDirection(1);
+      setCurrentIndex(prev => (prev + 1) % testimonials.length);}, 5000);
     return () => clearInterval(timer);
   }, []);
-  const swipePower = (offset, velocity) => {
-
-    return Math.abs(offset) * velocity;
-  };
-  const paginate = newDirection => {
-
-    setDirection(newDirection);
+  const swipePower = (props: any) => {return Math.abs(offset) * velocity;};
+  const paginate = newDirection => {setDirection(newDirection);
     setCurrentIndex()
       prev => (prev + newDirection + testimonials.length) % testimonials.length
-    );
-  };
-  const goToSlide = index => {
-
-    setDirection(index > currentIndex ? 1 : -1);
-    setCurrentIndex(index);
-  };
+    );};
+  const goToSlide = index => {setDirection(index > currentIndex ? 1 : -1);
+    setCurrentIndex(index);};
   return ("
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">
       {/* Background decorative elements */}"
@@ -105,3 +84,5 @@ export function TestimonialCarousel() {
       </div>"
 
 export default Component
+
+</section>

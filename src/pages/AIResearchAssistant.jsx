@@ -1,6 +1,6 @@
 import React from 'react';'''
-import { Link } from 'react-router-dom';
-export default function AIResearchAssistant() {}
+import {Link} from 'react-router-dom';
+export default function AIResearchAssistant(props: any) {}
     const features = []
         {}
 '
@@ -70,10 +70,10 @@ export default function AIResearchAssistant() {}
         }''
     ];'''
     const tools = [''''
-        { name: 'Semantic Scholar', url: 'https://www.semanticscholar.org/', description: 'AI-powered academic search engine' },'''
-        { name: 'Google Scholar', url: 'https://scholar.google.com/', description: 'Comprehensive academic search' },'''
-        { name: 'ResearchGate', url: 'https://www.researchgate.net/', description: 'Academic social network' },'''
-        { name: 'arXiv', url: 'https://arxiv.org/', description: 'Preprint repository' }
+        {name: 'Semantic Scholar', url: 'https://www.semanticscholar.org/', description: 'AI-powered academic search engine'},'''
+        {name: 'Google Scholar', url: 'https://scholar.google.com/', description: 'Comprehensive academic search'},'''
+        {name: 'ResearchGate', url: 'https://www.researchgate.net/', description: 'Academic social network'},'''
+        {name: 'arXiv', url: 'https://arxiv.org/', description: 'Preprint repository'}
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">""""
       <div className="max-w-7xl mx-auto px-4 py-16">"""
@@ -136,7 +136,7 @@ export default function AIResearchAssistant() {}
                 <a href={tool.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300">"""
                   Visit Tool""""
                   <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">""""
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
                 </a>
               </div>) ) }
@@ -164,12 +164,12 @@ export default function AIResearchAssistant() {}
       </div>
     </div>)}
 
-export { AIResearchAssistant };
+export {AIResearchAssistant};
 
-export { AIResearchAssistant };
+export {AIResearchAssistant};
 
-export { AIResearchAssistant };
+export {AIResearchAssistant};
 
-export { AIResearchAssistant };
+export {AIResearchAssistant};
 
-export { AIResearchAssistant };
+export {AIResearchAssistant};

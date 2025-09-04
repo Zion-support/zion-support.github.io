@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 import React, { ReactNode } from "react";
+=======
+import { ReactNode } from "react";
+import EnhancedNavigation from "./EnhancedNavigation";
+import EnhancedFooter from "./EnhancedFooter";
+>>>>>>> origin/merge-pr-11208
 
 interface EnhancedLayoutProps {
   children: ReactNode;

@@ -1,22 +1,28 @@
 import React from 'react';
 
 interface AlertProps {
+
   children: React.ReactNode;
   className?: string;
   variant?: 'default' | 'destructive';
+
 }
 
 interface AlertTitleProps {
+
   children: React.ReactNode;
   className?: string;
+
 }
 
 interface AlertDescriptionProps {
+
   children: React.ReactNode;
   className?: string;
+
 }
 
-export function Alert({ children, className = '', variant = 'default' }: AlertProps) {
+export function Alert(props: any) {
   const baseClasses = 'relative w-full rounded-lg border p-4';
   const variantClasses = variant === 'destructive'
     ? 'border-red-200 bg-red-50 text-red-800'
@@ -25,11 +31,11 @@ export function Alert({ children, className = '', variant = 'default' }: AlertPr
   return <div className={`${baseClasses} ${variantClasses} ${className}`}>{children}</div>;
 }
 
-export function AlertTitle({ children, className = '' }: AlertTitleProps) {
+export function AlertTitle(props: any) {
   return <h5 className={`mb-1 font-medium leading-none tracking-tight ${className}`}>{children}</h5>;
 }
 
-export function AlertDescription({ children, className = '' }: AlertDescriptionProps) {
+export function AlertDescription(props: any) {
   return <div className={`text-sm ${className}`}>{children}</div>;
 }
 

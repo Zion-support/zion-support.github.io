@@ -1,10 +1,10 @@
-import React, {useState } from 'react',;',';';
+import React, {useState} from 'react',;',';';
     ';';';';
-import {Check, Star, Zap, Shield, Cloud, Brain, Rocket, Users, Building, Globe } from 'lucide-react',;';';
+import {Check, Star, Zap, Shield, Cloud, Brain, Rocket, Users, Building, Globe} from 'lucide-react',;';';
     ';';';';
-import {Link } from 'react-router-dom',;',';';
+import {Link} from 'react-router-dom',;',';';
     ';';';';
-export default function ComprehensivePricing2025() {'',';';
+export default function ComprehensivePricing2025(props: any) {'',';';
     ';';';
   const [billingCycle, setBillingCycle] = useState('monthly');',';';
     ';';';
@@ -12,7 +12,7 @@ export default function ComprehensivePricing2025() {'',';';
   const plans = [',';';
     ';';';
     {'';';';';
-export default function ComprehensivePricing2025()   {const [billingCycle, setBillingCycle] = useState('monthly');',';';
+export default function ComprehensivePricing2025(props: any) {const [billingCycle, setBillingCycle] = useState('monthly');',';';
     ';';';
   const [selectedPlan, setSelectedPlan] = useState('professional');';';';
   const plans = [{',';';
@@ -166,15 +166,15 @@ export default function ComprehensivePricing2025()   {const [billingCycle, setBi
     ';';';
 import React, { useState } from 'react',;',';';
     ';';';';
-import React, { useState } from 'react';""',';';
+import React, {useState} from 'react';""',';';
     ';';';
-import { Check, Star, Zap, Shield, Cloud, Brain, Rocket, Users, Building, Globe } from 'lucide-react';""',';';
+import {Check, Star, Zap, Shield, Cloud, Brain, Rocket, Users, Building, Globe} from 'lucide-react';""',';';
     ';';';
-import React, { useState } from 'react;';';';';
-import { Check, Star, Zap, Shield, Cloud, Brain, Rocket, Users, Building, Globe } from 'lucide-react;',';';
+import React, {useState} from 'react;';';';';
+import {Check, Star, Zap, Shield, Cloud, Brain, Rocket, Users, Building, Globe} from 'lucide-react;',';';
     ';';';
-import { Link } from 'react-router-dom';';';';
-export default function ComprehensivePricing2025() {""',';';
+import {Link} from 'react-router-dom';';';';
+export default function ComprehensivePricing2025(props: any) {""',';';
     ';';';
   const [billingCycle, setBillingCycle] = useState('monthly');""',';';
     ';';';
@@ -384,7 +384,7 @@ export default function ComprehensivePricing2025() {""',';';
                 <div className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 ${`',';';
     ';';';
                   billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-1'';';';
-}`} />';';';
+}`}  />';';';
               </button>`',';';
     ';';';
               <span className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-zion-slate-light'}`}>';';';
@@ -409,7 +409,7 @@ export default function ComprehensivePricing2025() {""',';';
 }`}';';';
               >',';';
     ';';';
-                <div className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 ${ billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-1' }`} />';';';
+                <div className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 ${ billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-1' }`}  />';';';
               </button>',';';
     ';';';
               <span className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-zion-slate-light'}`}>';';';
@@ -498,7 +498,7 @@ export default function ComprehensivePricing2025() {""',';';
 "
                 <div className="text-center mb-8">`
                   <div className={`w-16 h-16 mx-auto mb-4 rounded-xl bg-gradient-to-br ${plan.color} flex items-center justify-center`}>`
-                    <plan.icon className=`h-8 w-8 text-white" />
+                    <plan .icon className=`h-8 w-8 text-white"  />
                   </div>"
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>"
                   <p className="text-zion-slate-light mb-6">{plan.description}</p>
@@ -554,13 +554,13 @@ export default function ComprehensivePricing2025() {""',';';
     ';';';
                   {plan.features.map((feature, index) => ('';
                     <div key={index} className="flex items-start space-x-3">"';';
-                      <Check className="h-5 w-5 text-zion-cyan mt-0.5 flex-shrink-0" />"';';';
+                      <Check className="h-5 w-5 text-zion-cyan mt-0.5 flex-shrink-0"  />"';';';
                 <div className="space-y-4">',';';
     ';';';
                   <h4 className="font-semibold text-white mb-4">What's included: </h4>
                   {plan.features.map((feature, index) => (
                     <div key={index} className="flex items-start space-x-3">
-                      <Check className="h-5 w-5 text-zion-cyan mt-0.5 flex-shrink-0" />';
+                      <Check className="h-5 w-5 text-zion-cyan mt-0.5 flex-shrink-0"  />';
                   <button onClick={() =" > setSelectedPlan(plan.id)}``';';
                     className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${';';';
                       plan.popular""',';';
@@ -622,7 +622,7 @@ export default function ComprehensivePricing2025() {""',';';
             {addOns.map((addon, index) => ("
               <div key={index} className="bg-zion-blue-dark/50 border border-zion-purple/20 rounded-xl p-6 hover:border-zion-purple/40 transition-all duration-300">"
                 <div className="w-12 h-12 rounded-lg bg-zion-purple/20 flex items-center justify-center mb-4">"
-                  <addon.icon className="h-6 w-6 text-zion-cyan" />
+                  <addon .icon className="h-6 w-6 text-zion-cyan"  />
                 </div>"
                 <h3 className="text-lg font-semibold text-white mb-2">{addon.name}</h3>"
                 <p className="text-zion-slate-light text-sm mb-4">{addon.description}</p>"
@@ -635,7 +635,7 @@ export default function ComprehensivePricing2025() {""',';';
             {addOns.map((addon, index) => (
               <div key={index} className="bg-zion-blue-dark/50 border border-zion-purple/20 rounded-xl p-6 hover: border-zion-purple/40 transition-all duration-300">
                 <div className="w-12 h-12 rounded-lg bg-zion-purple/20 flex items-center justify-center mb-4">
-                  <addon.icon className="h-6 w-6 text-zion-cyan" />
+                  <addon .icon className="h-6 w-6 text-zion-cyan"  />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{addon.name}</h3>
                 <p className="text-zion-slate-light text-sm mb-4">{addon.description}</p>
@@ -703,8 +703,7 @@ export default function ComprehensivePricing2025() {""',';';
               {'';';';';
                 question: 'What payment methods do you accept?',',';';
     ';';';
-                answer: 'We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise clients can also arrange for invoicing.';';';';
-},',';';
+                answer: 'We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise clients can also arrange for invoicing.';';';';},',';';
     ';';';
               {'';';';';
                 question: 'Is there a setup fee?',',';';
@@ -734,8 +733,7 @@ export default function ComprehensivePricing2025() {""',';';
     ';';';
               {question: 'What payment methods do you accept?',',';';
     ';';';
-                answer: 'We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise clients can also arrange for invoicing.';';';';
-},',';';
+                answer: 'We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise clients can also arrange for invoicing.';';';';},',';';
     ';';';
               {question: 'Is there a setup fee?',',';';
     ';';';
@@ -862,3 +860,46 @@ export default function ComprehensivePricing2025() {""',';';
   )}"';';
   );}"`"';';';
 "';';';';
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</section>
+</addon>
+</div>
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</Check>
+</plan>
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</section>
+</span>
+</span>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</section>
+</div>

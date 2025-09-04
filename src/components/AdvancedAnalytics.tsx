@@ -118,7 +118,7 @@ if(enableHeatmap) {
 
     // Setup scroll tracking
     let scrollTimeout: NodeJ S.Timeout;
-    const handleScroll = () => {
+    const handleScroll = (props: any) => {
       clearTimeout(scrollTimeout) ;
       scrollTimeout = setTimeout(() => {
         trackInteraction('scroll', {
@@ -129,7 +129,7 @@ if(enableHeatmap) {
     };
 
     // Setup form submission tracking
-    const handleFormSubmit = (e: Even t) => {
+    const handleFormSubmit = (props: any) => {
       const form = e.target as HTMLFormElement;
       trackInteraction('form', {        formId: for m.id || form.className,
         formAction: for m.action,
@@ -141,7 +141,7 @@ if(enableHeatmap) {
     };
 
     // Setup unhandled promise rejection tracking
-    const handleUnhandledRejection = (e: PromiseRejectionEven t) => {
+    const handleUnhandledRejection = (props: any) => {
 
       trackInteraction('error', {
 
@@ -213,7 +213,7 @@ if(enableHeatmap) {
 
       return () => lcpObserver.disconnect () } catch(error) {
 
-      // console.warn('PerformanceObserver not supported:', error)}
+      // }
   }, [enabled]) ;
 
   // Send analytics data to service
@@ -228,7 +228,7 @@ if(enableHeatmap) {
           'Content-Type': 'application/json'},
         body: JSO N.stringify(analyticsPayload)})} catch(error) {
 
-      // console.warn('Failed to send analytics data:', error)}
+      // }
   }, [trackingId, userSession]) ;
   // Generate mock data for demonstration
   useEffect(() => {
@@ -429,3 +429,6 @@ if(enableHeatmap) {
     </>
   )}}}}}}}}}}}}}'"`
 ;,"});,})";
+
+</motion>
+</motion>

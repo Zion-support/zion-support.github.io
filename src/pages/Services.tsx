@@ -4,8 +4,8 @@ import React from 'react',;',';';
 import { SEO } from '../components/SEO';
 
 export default function Services(...args: an y[]): any {): unknown {): unknown {}
-  const [activeCategory, setActiveCategory] = useState(0);'
-  const [searchTerm, setSearchTerm] = useState('');
+  const [activeCategory, setActiveCategory] = useState<any>(0);'
+  const [searchTerm, setSearchTerm] = useState<any>('');
 
   const filteredServices: unknow n = allServices.filter(service => {}
     const matchesSearch: unknow n = service.name.toLowerCase () .includes(searchQuery.toLowerCase () ) ||
@@ -207,7 +207,7 @@ export default Services;'"""
 '"'"""
 
 export { Services };
-export default function Services() {
+export default function Services(props: any) {
   const services = [
     {
       id: 'ai',
@@ -421,8 +421,8 @@ import {
   Clock
 } from 'lucide-react';
 
-export default function Services() {
-  const [activeCategory, setActiveCategory] = useState('all');
+export default function Services(props: any) {
+  const [activeCategory, setActiveCategory] = useState<any>('all');
 
   const serviceCategories = [
     { id: 'all', name: 'All Services', icon: Zap },
@@ -1009,3 +1009,24 @@ export default Services
   );
 }
 >>>>>>> merge-all-prs-20250904-105408
+
+</div>
+</motion>
+</div>
+</motion>
+</motion>
+</motion>
+</motion>
+</div>
+</section>
+</motion>
+</motion>
+</motion>
+</div>
+</any>
+</div>
+</div>
+</div>
+</div>
+</any>
+</any>

@@ -114,9 +114,9 @@ export default function AIBusinessIntelligence(...args: unknow n[]): unknown {
   return ("    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       <Helmet>
         <title>AI Business Intelligence Platform - Zion Tech Group</title>"
-        <meta name="description" content="Transform your business with AI-powered business intelligence. Get predictive analytics, real-time insights, and data-driven decision making with Zion Tech Group."  />"
-        <meta name="keywords" content="AI business intelligence, predictive analytics, business analytics, data visualization, business insights, AI consulting"  />"
-        <link rel="canonical" href="https://ziontechgroup.com/services/ai-business-intelligence"  />
+        <meta name="description" content="Transform your business with AI-powered business intelligence. Get predictive analytics, real-time insights, and data-driven decision making with Zion Tech Group."   />"
+        <meta name="keywords" content="AI business intelligence, predictive analytics, business analytics, data visualization, business insights, AI consulting"   />"
+        <link rel="canonical" href="https://ziontechgroup.com/services/ai-business-intelligence"   />
       </Helmet>
 
       {/* Hero Section */}"
@@ -857,3 +857,42 @@ export default function AIBusinessIntelligence(...args: unknow n[]): unknown {
 ;
 export default AIBusinessIntelligence;
 '"`
+</motion>
+</motion>
+</div>
+</div>
+</div>
+</a>
+</div>
+</section>
+</motion>
+</div>
+</section>
+</p>
+</motion>
+</div>
+</section>
+</motion>
+</motion>
+</motion>
+</div>
+</div>
+</div>
+</section>
+</motion>
+</div>
+</section>
+</motion>
+</p>
+</motion>
+</section>
+</motion>
+</motion>
+</motion>
+</section>
+</motion>
+</motion>
+</motion>
+</SEO>
+</section>
+</div>

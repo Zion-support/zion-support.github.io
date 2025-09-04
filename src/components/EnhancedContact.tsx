@@ -1,3 +1,4 @@
+import React from 'react';
 import {  import { motion, AnimatePresence  } from 'framer-motion';
  from 'lucide-react';
 
@@ -26,8 +27,8 @@ export function EnhancedContact(...args[]):  {
   }) ;
 
   const [errors, setErrors] = useState<any> ({}) ;
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false) { value: 'cloud-infrastructure', label: 'Cloud Infrastructure' }, { value: 'cybersecurity', label: 'Cybersecurity' }, { value: 'digital-transformation', label: 'Digital Transformation' }, { value: 'consulting', label: 'IT Consulting' }, { value: 'quantum-computing', label: 'Quantum Computing' }, { value: 'green-it', label: 'Green IT Solutions' };
+  const [isSubmitting, setIsSubmitting] = useState<any>(false);
+  const [isSubmitted, setIsSubmitted] = useState<any>(false) { value: 'cloud-infrastructure', label: 'Cloud Infrastructure' }, { value: 'cybersecurity', label: 'Cybersecurity' }, { value: 'digital-transformation', label: 'Digital Transformation' }, { value: 'consulting', label: 'IT Consulting' }, { value: 'quantum-computing', label: 'Quantum Computing' }, { value: 'green-it', label: 'Green IT Solutions' };
   ];
 
     const newErrors: ContactFormError s = {};      // console.error('Error submitting form:', error)} finally {
@@ -271,7 +272,7 @@ export function EnhancedContact(...args[]):  {
                   type="text"
                   id="name"
                   value={formData.name}
-                  onChange = {
+                  onChange={
 
   (e) => handleInputChange('name',
   e.target.value)
@@ -320,7 +321,7 @@ export function EnhancedContact(...args[]):  {
                   type="email"
                   id="email"
                   value={formData.email}
-                  onChange = {
+                  onChange={
 
   (e) => handleInputChange('email',
   e.target.value)
@@ -370,7 +371,7 @@ export function EnhancedContact(...args[]):  {
                     type="tel"
                     id="phone"
                     value={formData.phone}
-                    onChange = {
+                    onChange={
 
   (e) => handleInputChange('phone',
   e.target.value)
@@ -387,7 +388,7 @@ export function EnhancedContact(...args[]):  {
                     type="text"
                     id="company"
                     value={formData.company}
-                    onChange = {
+                    onChange={
 
   (e) => handleInputChange('company',
   e.target.value)
@@ -407,7 +408,7 @@ export function EnhancedContact(...args[]):  {
                 <select"
                   id="service"
                   value={formData.service}
-                  onChange = {
+                  onChange={
 
   (e) => handleInputChange('service',
   e.target.value)
@@ -430,7 +431,7 @@ export function EnhancedContact(...args[]):  {
                   id="message"
                   rows={4}
                   value={formData.message}
-                  onChange = {
+                  onChange={
 
   (e) => handleInputChange('message',
   e.target.value)
@@ -495,3 +496,23 @@ export function EnhancedContact(...args[]):  {
       </div>;
     </div>;) }
 '"`
+
+</motion>
+</motion>
+</textarea>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</any>
+</any>
+</any>
+</any>

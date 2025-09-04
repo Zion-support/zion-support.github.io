@@ -1,7 +1,7 @@
 import React from 'react',;',';';
     ';';';';
 import {SEO } from '@/components/SEO';
-export default function SmartContractBuilder() {return (
+export default function SmartContractBuilder(props: any) {return (
     <div className="min-h-screen bg-white">
       <SEO title="SmartContractBuilder - Zion Tech Group" description="Professional SmartContractBuilder services by Zion Tech Group"  />
       <div className="container mx-auto px-4 py-20">

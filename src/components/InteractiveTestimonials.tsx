@@ -1,12 +1,13 @@
+import React from 'react';
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 
  params - Function parameters
  * @returns {*} Function return value
  */
-function InteractiveTestimonials () {export function InteractiveTestimonials() {
+function InteractiveTestimonials(props: any) {export function InteractiveTestimonials(props: any) {
 "
-  const [selectedCategory, setSelectedCategory] = useState("All");
-  const [selectedTestimonial, setSelectedTestimonial] = useState(0);
+  const [selectedCategory, setSelectedCategory] = useState<any>("All");
+  const [selectedTestimonial, setSelectedTestimonial] = useState<any>(0);
 "
   const filteredTestimonials = selectedCategory === "All" ;    ? testimonials ;
     : testimonials.filter(t => t.category === selectedCategory) ;
@@ -209,3 +210,11 @@ export default InteractiveTestimonials;"
 export default InteractiveTestimonials;
 export default InteractiveTestimonials;
 '"`
+
+</motion>
+</motion>
+</button>
+</motion>
+</motion>
+</any>
+</any>

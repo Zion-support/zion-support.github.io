@@ -1,12 +1,11 @@
 import React from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
-const AICustomerServiceAutomation = () => {
-  return (
+const AICustomerServiceAutomation = (props: any) => {return (
     <>
       <Head>
         <title>Customer Service Automation - AI Services</title>
-        <meta name="description" content="Professional Customer Service Automation services powered by AI" />
+        <meta name="description" content="Professional Customer Service Automation services powered by AI"   />
       </Head>
       
       <div className="min-h-screen bg-gray-50">
@@ -53,6 +52,5 @@ const AICustomerServiceAutomation = () => {
         </div>
       </div>
     </>
-  )
-};
+  )};
 export default AICustomerServiceAutomation;

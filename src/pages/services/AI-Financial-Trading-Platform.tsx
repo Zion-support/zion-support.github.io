@@ -1,12 +1,12 @@
 import React from "react"
 import Head from "next/head"
 import Link from "next/link"
-const AIFinancialTradingPlatform = () => {
+const AIFinancialTradingPlatform = (props: any) => {
   return (
     <>
       <Head>
         <title>A I- Financial- Trading- Platform - Zion Tech Group</title>
-        <meta name="description" content="Professional A I- Financial- Trading- Platform services"   />
+        <meta name="description" content="Professional A I- Financial- Trading- Platform services"    />
       </Head>
       <div className="min-h-screen bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8 py-12">
@@ -49,3 +49,7 @@ const AIFinancialTradingPlatform = () => {
 }
 
 export default AIFinancialTradingPlatform
+</div>
+</div>
+</div>
+</div>

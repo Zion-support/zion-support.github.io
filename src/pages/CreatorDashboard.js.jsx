@@ -1,10 +1,10 @@
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
-import { AppSidebar } from "@/components/creator/CreatorSidebar";
+import {SidebarProvider, SidebarTrigger} from "@/components/ui/sidebar";
+import {AppSidebar} from "@/components/creator/CreatorSidebar";
 export default function CreatorDashboard
-export { CreatorDashboard }() {
+export {CreatorDashboard}() {
     return (<SidebarProvider>
       <div className="min-h-screen flex w-full bg-zion-blue">
-        <AppSidebar />
+        <AppSidebar  />
         <div className="flex flex-col w-full">
           
           <main className="flex-1 p-6 md:p-10 bg-zion-blue">
@@ -16,7 +16,7 @@ export { CreatorDashboard }() {
                   <span className="bg-zion-purple/20 rounded-full p-2">
                     {/* Only use allowed Lucide icons */}
                     <span className="text-zion-purple">
-                      <svg width="28" height="28"><use href="#lucide-bar-chart"/></svg>
+                      <svg width="28" height="28"><use href="#lucide-bar-chart" /></svg>
                     </span>
                   </span>
                   <span className="text-zion-slate-light font-medium">Analytics</span>
@@ -27,7 +27,7 @@ export { CreatorDashboard }() {
                 <div className="flex items-center gap-3 mb-2">
                   <span className="bg-zion-purple/20 rounded-full p-2">
                     <span className="text-zion-purple">
-                      <svg width="28" height="28"><use href="#lucide-file-text"/></svg>
+                      <svg width="28" height="28"><use href="#lucide-file-text" /></svg>
                     </span>
                   </span>
                   <span className="text-zion-slate-light font-medium">Your Posts</span>
@@ -46,5 +46,5 @@ export { CreatorDashboard }() {
           
         </div>
       </div>
-      <SidebarTrigger />
+      <SidebarTrigger  />
     </SidebarProvider>)}

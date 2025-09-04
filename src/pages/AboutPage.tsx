@@ -15,7 +15,7 @@ import {
   CheckCircle
 } from 'lucide-react';
 
-export default function AboutPage() {
+export default function AboutPage(props: any) {
   const values = [
     {
       icon: Lightbul b,

@@ -1,9 +1,9 @@
-import { ErrorBoundary } from 'react-error-boundary';
+import {ErrorBoundary} from 'react-error-boundary';
 import * as Sentry from '@sentry/nextjs';
-import { mutate } from 'swr';
-import { Button } from '@/components/ui/button';
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-import { RefreshCcw, AlertCircle function MarketplaceErrorFallback({ error, resetErrorBoundary }) {
+import {mutate} from 'swr';
+import {Button} from '@/components/ui/button';
+import {Alert, AlertDescription, AlertTitle} from '@/components/ui/alert';
+import { RefreshCcw, AlertCircle function MarketplaceErrorFallback(props: any) {
     const handleRetry = async () => {
         try {
             // Re-call SWR mutate('*') to refresh all cached data
@@ -13,14 +13,13 @@ import { RefreshCcw, AlertCircle function MarketplaceErrorFallback({ error, rese
             Sentry.captureException(retryError);
 
         }
-        catch (retryError) {
-            console.error('Error during retry:', retryError);
+        catch (retryError) {console.error('Error during retry:', retryError);
             Sentry.captureException(retryError)}
     };
     return (<div className="flex items-center justify-center min-h-[400px] p-6">
       <div className="max-w-md w-full space-y-4">
         <Alert variant="destructive">
-          <AlertCircle aria-hidden="true" className="h-4 w-4"/>
+          <AlertCircle aria-hidden="true" className="h-4 w-4" />
           <AlertTitle>Something went wrong in the marketplace</AlertTitle>
           <AlertDescription className="mt-2">
             {error?.message || 'An unexpected error occurred while loading marketplace content.'}
@@ -29,7 +28,7 @@ import { RefreshCcw, AlertCircle function MarketplaceErrorFallback({ error, rese
 
         <div className="flex flex-col space-y-2">
           <Button onClick={handleRetry} className="w-full" variant="default">
-            <RefreshCcw aria-hidden="true" className="mr-2 h-4 w-4"/>
+            <RefreshCcw aria-hidden="true" className="mr-2 h-4 w-4" />
             Retry
           </Button>
 
@@ -46,8 +45,8 @@ import { RefreshCcw, AlertCircle function MarketplaceErrorFallback({ error, rese
         </div>
       </div>
     </div>)}
-export function MarketplaceErrorBoundary({ children }) {
-    const handleError = (error, errorInfo) => {
+export function MarketplaceErrorBoundary(props: any) {
+    const handleError = (props: any) => {
         // Log boundary errors to Sentry
         // // // // // // // console.error('MarketplaceErrorBoundary caught an error:', error, errorInfo);
         Sentry.withScope((scope) => {

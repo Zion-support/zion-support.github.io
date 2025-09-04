@@ -1,13 +1,13 @@
 import React from 'react';'''
-import { SEO } from '@/components/SEO';
+import {SEO} from '@/components/SEO';
 import {}
   Card,
   CardContent,'
   CardDescription,''
   CardHeader,'''
   CardTitle} from '@/components/ui/card';'''
-import { Button } from '@/components/ui/button';'''
-import { Badge } from '@/components/ui/badge';
+import {Button} from '@/components/ui/button';'''
+import {Badge} from '@/components/ui/badge';
 import {}
   Cloud,
   Shield,
@@ -50,7 +50,7 @@ import {}
   Lock as LockIcon,'''
   Wifi as WifiIcon} from 'lucide-react';
 
-const ITServicesPage = () => {}
+const ITServicesPage = (props: any) => {}
   const itServices = []
     {}
 '
@@ -61,7 +61,7 @@ const ITServicesPage = () => {}
       features: [''
         '24/7 monitoring',Cost optimization',Security compliance',Auto-scaling',Disaster recovery',Performance tuning'
       ],
-      icon: <Cloud className="h-8 w-8 text-blue-500" />,'
+      icon: <Cloud className="h-8 w-8 text-blue-500"  />,'
       category: 'Cloud','
       badge: 'Popular','
       link: 'https://ziontechgroup.com/cloud-infrastructure','
@@ -76,7 +76,7 @@ const ITServicesPage = () => {}
       features: [''
         'Security audits',Penetration testing',Incident response',Compliance',Threat intelligence',Security training',"""
       ],""""
-      icon: <Shield className="h-8 w-8 text-red-500" />,'
+      icon: <Shield className="h-8 w-8 text-red-500"  />,'
       category: 'Security','
       badge: 'Premium','
       link: 'https://ziontechgroup.com/cybersecurity','
@@ -91,7 +91,7 @@ const ITServicesPage = () => {}
       features: [''
         'Pipeline automation',Infrastructure as code',Monitoring',Performance optimization',Container orchestration',GitOps',"""
       ],""""
-      icon: <Zap className="h-8 w-8 text-yellow-500" />,'
+      icon: <Zap className="h-8 w-8 text-yellow-500"  />,'
       category: 'DevOps','
       link: 'https://ziontechgroup.com/devops','
       details:''
@@ -105,7 +105,7 @@ const ITServicesPage = () => {}
       features: [''
         'Performance tuning',Backup & recovery',Security hardening',Migration support',High availability',Monitoring',"""
       ],""""
-      icon: <Database className="h-8 w-8 text-green-500" />,'
+      icon: <Database className="h-8 w-8 text-green-500"  />,'
       category: 'Database','
       link: 'https://ziontechgroup.com/database-management','
       details:''
@@ -119,7 +119,7 @@ const ITServicesPage = () => {}
       features: [''
         'Network design',Security implementation',Monitoring',24/7 support',SD-WAN',Network automation',"""
       ],""""
-      icon: <Globe className="h-8 w-8 text-purple-500" />,'
+      icon: <Globe className="h-8 w-8 text-purple-500"  />,'
       category: 'Networking','
       link: 'https://ziontechgroup.com/network-infrastructure','
       details:''
@@ -133,7 +133,7 @@ const ITServicesPage = () => {}
       features: [''
         'Technology assessment',Roadmap planning',Vendor selection',ROI analysis',Digital transformation',IT governance',"""
       ],""""
-      icon: <CheckCircle className="h-8 w-8 text-cyan-500" />,'
+      icon: <CheckCircle className="h-8 w-8 text-cyan-500"  />,'
       category: 'Consulting','
       link: 'https://ziontechgroup.com/it-consulting','
       details:''
@@ -147,7 +147,7 @@ const ITServicesPage = () => {}
       features: [''
         'Help desk support',System administration',Security management',Backup services',Proactive monitoring',Vendor management',"""
       ],""""
-      icon: <Settings className="h-8 w-8 text-indigo-500" />,'
+      icon: <Settings className="h-8 w-8 text-indigo-500"  />,'
       category: 'Managed Services','
       badge: 'New','
       link: 'https://ziontechgroup.com/managed-it','
@@ -162,7 +162,7 @@ const ITServicesPage = () => {}
       features: [''
         'Hardware provisioning',Environmental monitoring',Power management',Security',Backup power',Climate control',"""
       ],""""
-      icon: <Server className="h-8 w-8 text-gray-500" />,'
+      icon: <Server className="h-8 w-8 text-gray-500"  />,'
       category: 'Data Center','
       link: 'https://ziontechgroup.com/data-center','
       details:''
@@ -176,7 +176,7 @@ const ITServicesPage = () => {}
       features: [''
         'UI/UX design',Native development',Testing',App store deployment',Maintenance',Performance optimization',"""
       ],""""
-      icon: <Smartphone className="h-8 w-8 text-orange-500" />,'
+      icon: <Smartphone className="h-8 w-8 text-orange-500"  />,'
       category: 'Development','
       link: 'https://ziontechgroup.com/mobile-development','
       details:''
@@ -190,7 +190,7 @@ const ITServicesPage = () => {}
       features: [''
         'Responsive design',SEO optimization',Performance tuning',Maintenance',Security',Analytics integration',"""
       ],""""
-      icon: <Globe className="h-8 w-8 text-teal-500" />,'
+      icon: <Globe className="h-8 w-8 text-teal-500"  />,'
       category: 'Development','
       link: 'https://ziontechgroup.com/web-development','
       details:''
@@ -204,7 +204,7 @@ const ITServicesPage = () => {}
       features: [''
         'Custom AI models',Data preprocessing',Model training',API integration',Performance monitoring',Continuous learning',"""
       ],""""
-      icon: <Brain className="h-8 w-8 text-pink-500" />,'
+      icon: <Brain className="h-8 w-8 text-pink-500"  />,'
       category: 'AI/ML','
       badge: 'Innovative','
       link: 'https://ziontechgroup.com/ai-ml','
@@ -219,7 +219,7 @@ const ITServicesPage = () => {}
       features: [''
         'Smart contracts',DApp development',Blockchain integration',Security auditing',DeFi solutions',NFT platforms',"""
       ],""""
-      icon: <Lock className="h-8 w-8 text-emerald-500" />,'
+      icon: <Lock className="h-8 w-8 text-emerald-500"  />,'
       category: 'Blockchain','
       badge: 'Emerging','
       link: 'https://ziontechgroup.com/blockchain','
@@ -234,7 +234,7 @@ const ITServicesPage = () => {}
       features: [''
         'IoT platform development',Device integration',Data analytics',Real-time monitoring',Automation',Security',"""
       ],""""
-      icon: <Wifi className="h-8 w-8 text-blue-500" />,'
+      icon: <Wifi className="h-8 w-8 text-blue-500"  />,'
       category: 'IoT','
       link: 'https://ziontechgroup.com/iot-solutions','
       details:''
@@ -248,7 +248,7 @@ const ITServicesPage = () => {}
       features: [''
         'Data warehousing',ETL processes',Advanced analytics',Interactive dashboards',Predictive modeling',Real-time reporting',"""
       ],""""
-      icon: <BarChart3 className="h-8 w-8 text-purple-500" />,'
+      icon: <BarChart3 className="h-8 w-8 text-purple-500"  />,'
       category: 'Analytics','
       link: 'https://ziontechgroup.com/data-analytics','
       details:''
@@ -262,7 +262,7 @@ const ITServicesPage = () => {}
       features: [''
         'Backup strategies',Recovery planning',Testing',Documentation',Training',24/7 support',"""
       ],""""
-      icon: <HardDrive className="h-8 w-8 text-red-500" />,'
+      icon: <HardDrive className="h-8 w-8 text-red-500"  />,'
       category: 'Recovery','
       link: 'https://ziontechgroup.com/disaster-recovery','
       details:''
@@ -275,11 +275,11 @@ const ITServicesPage = () => {}
 
   return()
     <>"""
-      <SEO""""
+      <SEO """"
         title="IT Services - Zion Tech Group""""
         description="Comprehensive IT services including infrastructure, support, and technology consulting solutions.""""
         keywords="IT services, infrastructure, support, technology consulting, IT solutions"""
-      />"""
+       />"""
 """"
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-800 text-white">""""
         <div className="max-w-7xl mx-auto px-6 py-20">""""
@@ -331,7 +331,7 @@ const ITServicesPage = () => {}
                           key={idx}""""
                           className="flex items-center text-xs text-teal-300""""
                         >""""
-                          <CheckCircle className="w-3 h-3 mr-2" />
+                          <CheckCircle className="w-3 h-3 mr-2"  />
                           {feature}
                         </div>
                       ))}"""
@@ -366,12 +366,14 @@ const ITServicesPage = () => {}
 
 export default ITServicesPage;
 
-export { ITServicesPage };
+export {ITServicesPage};
 
-export { ITServicesPage };
+export {ITServicesPage};
 
-export { ITServicesPage };
+export {ITServicesPage};
 
-export { ITServicesPage };
+export {ITServicesPage};
 
-export { ITServicesPage };
+export {ITServicesPage};
+
+</SEO>

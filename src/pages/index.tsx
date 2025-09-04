@@ -52,7 +52,7 @@ import {
   ShoppingBag 
 } from "lucide-react";
 
-const HomePage = () => {
+const HomePage = (props: any) => {
   const featuredServices = [
     {
       name: "AI Content Creation Suite",

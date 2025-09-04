@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import { ENHANCED_SERVICES, ENHANCED_SERVICE_CATEGORIES, SERVICE_PRICING_TIERS, CONTACT_INFO } from '@/data/enhancedServices';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Input } from '@/components/ui/input';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Search, Star, Globe, Phone, Mail, MapPin, ExternalLink, TrendingUp, Shield, Cloud, Brain, Database, Code, Zap, Heart, DollarSign, Link, Users, CheckCircle } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import React, {useState} from 'react';
+import {ENHANCED_SERVICES, ENHANCED_SERVICE_CATEGORIES, SERVICE_PRICING_TIERS, CONTACT_INFO} from '@/data/enhancedServices';
+import {Button} from '@/components/ui/button';
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';
+import {Badge} from '@/components/ui/badge';
+import {Input} from '@/components/ui/input';
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from '@/components/ui/select';
+import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs';
+import {Search, Star, Globe, Phone, Mail, MapPin, ExternalLink, TrendingUp, Shield, Cloud, Brain, Database, Code, Zap, Heart, DollarSign, Link, Users, CheckCircle} from 'lucide-react';
+import {SEO} from '@/components/SEO';
 export default function EnhancedServicesPage
-export { EnhancedServicesPage }() {
+export {EnhancedServicesPage}() {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedPriceRange, setSelectedPriceRange] = useState('all');
@@ -19,46 +19,45 @@ export { EnhancedServicesPage }() {
             (selectedPriceRange === 'professional' && service.price > 2000 && service.price <= 8000) ||
             (selectedPriceRange === 'enterprise' && service.price > 8000);
         return matchesSearch && matchesCategory && matchesPrice});
-    const getCategoryIcon = (category) => {
+    const getCategoryIcon = (props: any) => {
         switch (category.toLowerCase()) {
             case 'ai automation':
             case 'ai & machine learning':
-                return <Brain className="w-5 h-5"/>;
+                return <Brain className="w-5 h-5" />;
             case 'cloud management':
             case 'cloud & infrastructure':
-                return <Cloud className="w-5 h-5"/>;
+                return <Cloud className="w-5 h-5" />;
             case 'cybersecurity':
             case 'security framework':
-                return <Shield className="w-5 h-5"/>;
+                return <Shield className="w-5 h-5" />;
             case 'data engineering':
             case 'data & analytics':
-                return <Database className="w-5 h-5"/>;
+                return <Database className="w-5 h-5" />;
             case 'business intelligence':
-                return <TrendingUp className="w-5 h-5"/>;
+                return <TrendingUp className="w-5 h-5" />;
             case 'developer tools':
             case 'development & devops':
-                return <Code className="w-5 h-5"/>;
+                return <Code className="w-5 h-5" />;
             case 'digital transformation':
-                return <Zap className="w-5 h-5"/>;
+                return <Zap className="w-5 h-5" />;
             case 'healthcare technology':
-                return <Heart className="w-5 h-5"/>;
+                return <Heart className="w-5 h-5" />;
             case 'financial technology':
-                return <DollarSign className="w-5 h-5"/>;
+                return <DollarSign className="w-5 h-5" />;
             case 'blockchain':
-                return <Link className="w-5 h-5"/>;
+                return <Link className="w-5 h-5"  />;
             case 'quantum computing':
-                return <Zap className="w-5 h-5"/>;
+                return <Zap className="w-5 h-5" />;
             default:
-                return <Code className="w-5 h-5"/>}
+                return <Code className="w-5 h-5" />}
     };
-    const getPriceRange = (price) => {
-        if (price <= 2000)
+    const getPriceRange = (props: any) => {if (price <= 2000)
             return 'basic';
         if (price <= 8000)
             return 'professional';
         return 'enterprise'};
     return (<div className="min-h-screen bg-background">
-      <SEO title="Enhanced IT & AI Services - Zion Tech Group" description="Discover our comprehensive suite of AI services, IT solutions, and micro SAAS offerings. From AI automation to quantum computing readiness." keywords="AI services, IT solutions, micro SAAS, cybersecurity, cloud computing, data analytics, Zion Tech Group" canonical="https://ziontechgroup.com/enhanced-services"/>
+      <SEO title="Enhanced IT & AI Services - Zion Tech Group" description="Discover our comprehensive suite of AI services, IT solutions, and micro SAAS offerings. From AI automation to quantum computing readiness." keywords="AI services, IT solutions, micro SAAS, cybersecurity, cloud computing, data analytics, Zion Tech Group" canonical="https://ziontechgroup.com/enhanced-services" />
 
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-zion-blue to-zion-purple text-white py-20">
@@ -107,12 +106,12 @@ export { EnhancedServicesPage }() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row gap-4">
             <div className="flex-1 relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5"/>
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
               <Input placeholder="Search services, technologies, or keywords..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="pl-10 bg-zion-blue-dark border-zion-blue-light text-white placeholder:text-zion-slate-light"/>
             </div>
             <Select value={selectedCategory} onValueChange={setSelectedCategory}>
               <SelectTrigger className="w-full md:w-48 bg-zion-blue-dark border-zion-blue-light text-white">
-                <SelectValue placeholder="All Categories"/>
+                <SelectValue placeholder="All Categories" />
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="all">All Categories</SelectItem>
@@ -123,7 +122,7 @@ export { EnhancedServicesPage }() {
             </Select>
             <Select value={selectedPriceRange} onValueChange={setSelectedPriceRange}>
               <SelectTrigger className="w-full md:w-48 bg-zion-blue-dark border-zion-blue-light text-white">
-                <SelectValue placeholder="All Prices"/>
+                <SelectValue placeholder="All Prices" />
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="all">All Prices</SelectItem>
@@ -170,7 +169,7 @@ export { EnhancedServicesPage }() {
                 <CardContent className="space-y-4">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
-                      <Star className="w-4 h-4 text-yellow-500 fill-current"/>
+                      <Star className="w-4 h-4 text-yellow-500 fill-current" />
                       <span className="text-sm font-medium">{service.rating}</span>
                       <span className="text-sm text-zion-slate">({service.reviewCount} reviews)</span>
                     </div>
@@ -192,11 +191,11 @@ export { EnhancedServicesPage }() {
 
                   <div className="flex items-center justify-between text-sm text-zion-slate">
                     <div className="flex items-center gap-1">
-                      <Globe className="w-4 h-4"/>
+                      <Globe className="w-4 h-4" />
                       {service.location}
                     </div>
                     <div className="flex items-center gap-1">
-                      <TrendingUp className="w-4 h-4"/>
+                      <TrendingUp className="w-4 h-4" />
                       AI Score: {service.aiScore}
                     </div>
                   </div>
@@ -266,7 +265,7 @@ export { EnhancedServicesPage }() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
-                <CheckCircle className="w-8 h-8 text-white"/>
+                <CheckCircle className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-white mb-2">Proven Expertise</h3>
               <p className="text-zion-slate-light">
@@ -275,7 +274,7 @@ export { EnhancedServicesPage }() {
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
-                <Zap className="w-8 h-8 text-white"/>
+                <Zap className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-white mb-2">Innovation First</h3>
               <p className="text-zion-slate-light">
@@ -284,7 +283,7 @@ export { EnhancedServicesPage }() {
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-white"/>
+                <Users className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-white mb-2">Dedicated Support</h3>
               <p className="text-zion-slate-light">
@@ -293,7 +292,7 @@ export { EnhancedServicesPage }() {
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="w-8 h-8 text-white"/>
+                <TrendingUp className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-white mb-2">ROI Focused</h3>
               <p className="text-zion-slate-light">
@@ -317,21 +316,21 @@ export { EnhancedServicesPage }() {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <div className="flex items-center justify-center gap-3 text-zion-cyan">
-                <Phone className="w-6 h-6"/>
+                <Phone className="w-6 h-6" />
                 <div className="text-left">
                   <div className="font-semibold">Phone</div>
                   <div className="text-sm">{CONTACT_INFO.mobile}</div>
                 </div>
               </div>
               <div className="flex items-center justify-center gap-3 text-zion-cyan">
-                <Mail className="w-6 h-6"/>
+                <Mail className="w-6 h-6" />
                 <div className="text-left">
                   <div className="font-semibold">Email</div>
                   <div className="text-sm">{CONTACT_INFO.email}</div>
                 </div>
               </div>
               <div className="flex items-center justify-center gap-3 text-zion-cyan">
-                <MapPin className="w-6 h-6"/>
+                <MapPin className="w-6 h-6" />
                 <div className="text-left">
                   <div className="font-semibold">Address</div>
                   <div className="text-sm">{CONTACT_INFO.address}</div>
@@ -341,19 +340,16 @@ export { EnhancedServicesPage }() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light" onClick={() => window.open(`tel:${CONTACT_INFO.mobile}`, '_self')}>
-                <Phone className="w-5 h-5 mr-2"/>
+                <Phone className="w-5 h-5 mr-2" />
                 Call Now
               </Button>
               <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10" onClick={() => window.open(`mailto:${CONTACT_INFO.email}`, '_self')}>
-                <Mail className="w-5 h-5 mr-2"/>
+                <Mail className="w-5 h-5 mr-2" />
                 Send Email
               </Button>
-              <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10" onClick = {
-  () => window.open(CONTACT_INFO.website,
-  '_blank')
-
-}>
-                <ExternalLink className="w-5 h-5 mr-2"/>
+              <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10" onClick={() => window.open(CONTACT_INFO.website,
+  '_blank')}>
+                <ExternalLink className="w-5 h-5 mr-2" />
                 Visit Website
               </Button>
             </div>

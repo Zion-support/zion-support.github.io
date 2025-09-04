@@ -1,5 +1,5 @@
-import React, { useState, useRef, useEffect } from 'react';
-export function AdvancedBusinessIntelligence () {
+import React, {useState, useRef, useEffect} from 'react';
+export function AdvancedBusinessIntelligence(props: any) {
 
         actions['Conduct market research', 'Develop localization strategy', 'Establish partnerships']
 import { BarChart3, TrendingUp, Brain, Zap, Target, AlertTriangle, Download, RefreshCw, X, Maximize2, Minimize2, Calendar, Activity  } from 'lucide-react';
@@ -11,16 +11,13 @@ import { BarChart3, TrendingUp, Brain, Zap, Target, AlertTriangle, Download, Ref
         predictions: 15420,
         category: 'Customer Analytics'
     },
-    {
-
-        id: 'model-2',
+    {id: 'model-2',
         name: 'Revenue Forecasting Model',
         accuracy: 89.7,
         lastTrained: '2024-01-08T00:00:00.000Z',
         status: 'active',
         predictions: 2847500,
-        category: 'Financial Analytics'
-    },
+        category: 'Financial Analytics'},
     {
 
         id: 'model-3',
@@ -32,7 +29,7 @@ import { BarChart3, TrendingUp, Brain, Zap, Target, AlertTriangle, Download, Ref
         category: 'Customer Analytics'
 
 ];
-export function AdvancedBusinessIntelligence() {
+export function AdvancedBusinessIntelligence(props: any) {
     const [isOpen, setIsOpen] = useState(false);
     const [isMinimized, setIsMinimized] = useState(false);
     const [isFullscreen, setIsFullscreen] = useState(false);
@@ -48,18 +45,17 @@ export function AdvancedBusinessIntelligence() {
     const categories = ['all',Financial',Customer',Operations',Growth'];
     const timeRanges = ['
         { value: '7d', label: '7 Days' },
-        { value: '30d', label: '30 Days' },
-        { value: '90d', label: '90 Days' },
-        { value: '1y', label: '1 Year' }
+        {value: '30d', label: '30 Days'},
+        {value: '90d', label: '90 Days'},
+        {value: '1y', label: '1 Year'}
     ];
     const filteredMetrics = selectedCategory === 'all'
         ? data
         : data.filter(metric => metric.category === selectedCategory) ;
-    const refreshData = async () => {
-        setIsRefreshing(true) ;
+    const refreshData = async () => {setIsRefreshing(true) ;
         // Simulate API call
         await new Promise(resolve => setTimeout (resolve, 1500) ) ;
-        setIsRefreshing(false) };
+        setIsRefreshing(false)};
     useEffect(() => {
   // TODO: Add dependencies if needed
 
@@ -67,23 +63,21 @@ export function AdvancedBusinessIntelligence() {
     // Cleanup function
   };
 }, []);, []);
-        if(autoRefresh) {
-
-            const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds
+        if(autoRefresh) {const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds
             return () => clearInterval(interval)}
     }, [autoRefresh]);
-    const getTrendIcon = (trend) => {
+    const getTrendIcon = (props: any) => {
 
         switch(trend) {
 
             case 'up':
-                return <TrendingUp className="w-4 h-4 text-green-500"/>;
+                return <TrendingUp className="w-4 h-4 text-green-500" />;
             case 'down':"
-                return <TrendingUp className="w-4 h-4 text-red-500 rotate-180"/>;
+                return <TrendingUp className="w-4 h-4 text-red-500 rotate-180" />;
             default:"
-                return <Activity className="w-4 h-4 text-gray-500"/>}
+                return <Activity className="w-4 h-4 text-gray-500" />}
     };
-    const getPriorityColor = (priority) => {
+    const getPriorityColor = (props: any) => {
 
         switch(priority) {
 
@@ -94,22 +88,22 @@ export function AdvancedBusinessIntelligence() {
             default:'
                 return 'border-green-500 bg-green-50 dark:bg-green-900/20'}
     };
-    const getInsightIcon = (type) => {
+    const getInsightIcon = (props: any) => {
 
         switch(type) {
 
             case 'prediction':"
-                return <Brain className="w-5 h-5 text-blue-500"/>;
+                return <Brain className="w-5 h-5 text-blue-500" />;
             case 'anomaly':"
-                return <AlertTriangle className="w-5 h-5 text-red-500"/>;
+                return <AlertTriangle className="w-5 h-5 text-red-500" />;
             case 'opportunity':"
-                return <Target className="w-5 h-5 text-green-500"/>;
+                return <Target className="w-5 h-5 text-green-500" />;
             case 'risk':"
-                return <AlertTriangle className="w-5 h-5 text-orange-500"/>;
+                return <AlertTriangle className="w-5 h-5 text-orange-500" />;
             default:"
-                return <Zap className="w-5 h-5 text-purple-500"/>}
+                return <Zap className="w-5 h-5 text-purple-500" />}
     };
-    const formatValue = (value, unit) => {
+    const formatValue = (props: any) => {
 
         if(unit === 'USD') {
 
@@ -127,16 +121,16 @@ export function AdvancedBusinessIntelligence() {
     if(!isOpen) {
 "
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 z-40" title="Open Business Intelligence Dashboard">"
-        <Brain className="w-6 h-6"/>
+        <Brain className="w-6 h-6" />
       </button>)}
     if(isMinimized) {
 "
         return (<div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50">"
         <div className="flex items-center gap-2 p-3">"
-          <Brain className="w-5 h-5 text-zion-purple"/>"
+          <Brain className="w-5 h-5 text-zion-purple" />"
           <span className="text-sm font-medium text-zion-slate">BI Dashboard</span>"
           <button onClick={() => setIsMinimized(false)} className="ml-auto p-1 hover:bg-zion-slate-light rounded">"
-            <Maximize2 className="w-4 h-4"/>
+            <Maximize2 className="w-4 h-4" />
           </button>
         </div>
       </div>)}'`
@@ -144,7 +138,7 @@ export function AdvancedBusinessIntelligence() {
       {/* Header */}"
       <div className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-4 flex items-center justify-between">"
         <div className="flex items-center gap-3">"
-          <Brain className="w-6 h-6"/>
+          <Brain className="w-6 h-6" />
           <div>"
             <h2 className="text-lg font-bold">Advanced Business Intelligence</h2>"
             <p className="text-sm opacity-90">AI-Powered Insights & Analytics</p>
@@ -152,16 +146,16 @@ export function AdvancedBusinessIntelligence() {
         </div>"
         <div className="flex items-center gap-2">'`
           <button onClick={() => setAutoRefresh(!autoRefresh)} className={`p-2 rounded-lg transition-colors ${autoRefresh ? 'bg-white/20' : 'hover:bg-white/10'}`} title={autoRefresh ? 'Auto-refresh enabled' : 'Auto-refresh disabled'}>'`
-            <RefreshCw className={`w-4 h-4 ${autoRefresh ? 'animate-spin' : ''}`}/>
+            <RefreshCw className={`w-4 h-4 ${autoRefresh ? 'animate-spin' : ''}`} />
           </button>"
           <button onClick={() => setIsMinimized(true)} className="p-2 hover:bg-white/10 rounded-lg transition-colors">"
-            <Minimize2 className="w-4 h-4"/>
+            <Minimize2 className="w-4 h-4" />
           </button>"
           <button onClick={() => setIsFullscreen(!isFullscreen)} className="p-2 hover:bg-white/10 rounded-lg transition-colors">"
-            {isFullscreen ? <Minimize2 className="w-4 h-4"/> : <Maximize2 className="w-4 h-4"/>}
+            {isFullscreen ? <Minimize2 className="w-4 h-4" /> : <Maximize2 className="w-4 h-4" />}
           </button>"
           <button onClick={() => setIsOpen(false)} className="p-2 hover:bg-white/10 rounded-lg transition-colors">"
-            <X className="w-4 h-4"/>
+            <X className="w-4 h-4" />
           </button>
         </div>
       </div>
@@ -181,7 +175,7 @@ export function AdvancedBusinessIntelligence() {
                 </option>))}
             </select>"
             <button onClick={refreshData} disabled={isRefreshing} className="px-4 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/90 transition-colors disabled:opacity-50 flex items-center gap-2">'`
-              <RefreshCw className={`w-4 h-4 ${isRefreshing ? 'animate-spin' : ''}`}/>
+              <RefreshCw className={`w-4 h-4 ${isRefreshing ? 'animate-spin' : ''}`} />
               Refresh
             </button>
           </div>"
@@ -191,7 +185,7 @@ export function AdvancedBusinessIntelligence() {
               Show Predictions
             </label>"
             <button className="px-4 py-2 bg-zion-purple text-white rounded-lg hover:bg-zion-purple/90 transition-colors flex items-center gap-2">"
-              <Download className="w-4 h-4"/>
+              <Download className="w-4 h-4" />
               Export Report
             </button>
           </div>
@@ -202,16 +196,16 @@ export function AdvancedBusinessIntelligence() {
       <div className="flex border-b border-zion-slate-light">
         {['
             { id: 'overview', label: 'Overview', icon: BarChart3 },
-            { id: 'insights', label: 'AI Insights', icon: Brain },
-            { id: 'models', label: 'ML Models', icon: Zap },
-            { id: 'analytics', label: 'Analytics', icon: TrendingUp }
+            {id: 'insights', label: 'AI Insights', icon: Brain},
+            {id: 'models', label: 'ML Models', icon: Zap},
+            {id: 'analytics', label: 'Analytics', icon: TrendingUp}
         ].map(tab => {
 
             const Icon = tab.icon;`
             return (<button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`flex items-center gap-2 px-6 py-3 border-b-2 transition-colors ${activeTab === tab.id'
                     ? 'border-zion-purple text-zion-purple bg-zion-purple/5''`
                     : 'border-transparent text-zion-slate-light hover:text-zion-slate hover:bg-zion-slate-light/20'}`}>"
-              <Icon className="w-4 h-4"/>
+              <Icon className="w-4 h-4" />
               {tab.label}
             </button>) }) }
       </div>
@@ -249,7 +243,7 @@ export function AdvancedBusinessIntelligence() {
             {/* Quick Actions */}"
             <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 p-4 rounded-xl border border-zion-cyan/20">"
               <h3 className="font-semibold text-zion-slate mb-3 flex items-center gap-2">"
-                <Zap className="w-5 h-5 text-zion-cyan"/>
+                <Zap className="w-5 h-5 text-zion-cyan" />
                 Quick Actions
               </h3>"
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
@@ -262,7 +256,7 @@ export function AdvancedBusinessIntelligence() {
 
                 const Icon = item.icon;"
                 return (<button key={index} onClick={item.action} className="p-3 bg-white dark:bg-zion-slate rounded-lg border border-zion-slate-light hover:border-zion-cyan transition-colors text-sm font-medium text-zion-slate hover:text-zion-cyan">"
-                      <Icon className="w-4 h-4 mx-auto mb-2"/>
+                      <Icon className="w-4 h-4 mx-auto mb-2" />
                       {item.label}
                     </button>) }) }
               </div>
@@ -336,11 +330,11 @@ export function AdvancedBusinessIntelligence() {
 '"
         {activeTab === 'analytics' && (<div className="space-y-6">"
             <div className="text-center text-zion-slate-light">"
-              <TrendingUp className="w-16 h-16 mx-auto mb-4 opacity-50"/>"
+              <TrendingUp className="w-16 h-16 mx-auto mb-4 opacity-50" />"
               <h3 className="text-lg font-semibold mb-2">Advanced Analytics</h3>
               <p>Detailed analytics and custom reports coming soon...</p>
             </div>
-          </div>) }
+          </div>)}
       </div>
     </div>)}
 '"`

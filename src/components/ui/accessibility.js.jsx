@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Eye, Volume2, VolumeX, Type, Contrast, ZoomIn, ZoomOut, Settings, Accessibility, X } from 'lucide-react';
-import { Button } from "button.tsx";
-export function AccessibilityPanel({ enabled = true, className = "", onSettingsChange }) {
+import React, {useState, useEffect, useCallback} from 'react';
+import {motion, AnimatePresence} from 'framer-motion';
+import {Eye, Volume2, VolumeX, Type, Contrast, ZoomIn, ZoomOut, Settings, Accessibility, X} from 'lucide-react';
+import {Button} from "button.tsx";
+export function AccessibilityPanel(props: any) {
     const [isOpen, setIsOpen] = useState(false);
     const [settings, setSettings] = useState({
         highContrast: false,
@@ -20,18 +20,13 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
         // High contrast
         if (settings.highContrast) {
             root.classList.add('high-contrast')}
-        else {
-            root.classList.remove('high-contrast')}
+        else {root.classList.remove('high-contrast')}
         // Large text
-        if (settings.largeText) {
-            root.style.fontSize = '18px'}
-        else {
-            root.style.fontSize = '16px'}
+        if (settings.largeText) {root.style.fontSize = '18px'}
+        else {root.style.fontSize = '16px'}
         // Reduced motion
-        if (settings.reducedMotion) {
-            root.style.setProperty('--reduced-motion', 'reduce')}
-        else {
-            root.style.setProperty('--reduced-motion', 'no-preference')}
+        if (settings.reducedMotion) {root.style.setProperty('--reduced-motion', 'reduce')}
+        else {root.style.setProperty('--reduced-motion', 'no-preference')}
         // Font size
         root.style.setProperty('--font-size', `${settings.fontSize}px`);
         // Color blind mode
@@ -45,14 +40,11 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
             try {
                 const parsed = JSON.parse(saved);
                 setSettings(prev => ({ ...prev, ...parsed }))}
-            catch {
-                // Silently handle parsing errors
-            }
+            catch {// Silently handle parsing errors}
         }
     }, []);
     // Save settings to localStorage
-    const saveSettings = useCallback((newSettings) => {
-        setSettings(newSettings);
+    const saveSettings = useCallback((newSettings) => {setSettings(newSettings);
         localStorage.setItem('accessibility-settings', JSON.stringify(newSettings))}, []);
     // Toggle settings
     const toggleSetting = useCallback((key, value) => {
@@ -77,10 +69,8 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
 };
         saveSettings(defaults)}, [saveSettings]);
     // Font size controls
-    const increaseFontSize = useCallback(() => {
-        toggleSetting('fontSize', Math.min(settings.fontSize + 2, 24))}, [settings.fontSize, toggleSetting]);
-    const decreaseFontSize = useCallback(() => {
-        toggleSetting('fontSize', Math.max(settings.fontSize - 2, 12))}, [settings.fontSize, toggleSetting]);
+    const increaseFontSize = useCallback(() => {toggleSetting('fontSize', Math.min(settings.fontSize + 2, 24))}, [settings.fontSize, toggleSetting]);
+    const decreaseFontSize = useCallback(() => {toggleSetting('fontSize', Math.max(settings.fontSize - 2, 12))}, [settings.fontSize, toggleSetting]);
     // Screen reader announcement
     const announcement = document.createElement('div');
             announcement.setAttribute('aria-live', 'polite');
@@ -88,15 +78,14 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
             announcement.className = 'sr-only';
             announcement.textContent = message;
             document.body.appendChild(announcement);
-            setTimeout(() => {
-                document.body.removeChild(announcement)}, 1000)}
+            setTimeout(() => {document.body.removeChild(announcement)}, 1000)}
     }, [settings.screenReader]);
     if (!enabled)
         return null;
     return (<>
       {/* Accessibility Toggle Button */}
       <motion.button onClick={() => setIsOpen(!isOpen)} className={`fixed top-4 right-4 z-50 p-3 bg-zion-purple hover:bg-zion-purple-dark text-white rounded-full shadow-lg transition-all duration-300 ${className}`} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} aria-label="Accessibility settings">
-        <Accessibility className="w-6 h-6"/>
+        <Accessibility className="w-6 h-6" />
       </motion.button>
 
       {/* Accessibility Panel */}
@@ -127,7 +116,7 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
               <div className="flex items-center justify-between mb-6">
                 <h2 className="text-xl font-bold text-white">Accessibility</h2>
                 <button onClick={() => setIsOpen(false)} className="p-2 rounded-lg hover:bg-zion-blue-light/20 transition-colors duration-200" aria-label="Close accessibility panel">
-                  <X className="w-5 h-5 text-zinc-400"/>
+                  <X className="w-5 h-5 text-zinc-400" />
                 </button>
               </div>
 
@@ -138,7 +127,7 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
                 {/* High Contrast */}
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <Contrast className="w-5 h-5 text-zion-cyan"/>
+                    <Contrast className="w-5 h-5 text-zion-cyan" />
                     <span className="text-zinc-300">High Contrast</span>
                   </div>
                   <Button size="sm" variant={settings.highContrast ? "default" : "outline"} onClick={() => toggleSetting('highContrast')} className={settings.highContrast ? 'bg-zion-cyan text-zion-blue-dark' : ''}>
@@ -149,7 +138,7 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
                 {/* Large Text */}
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <Type className="w-5 h-5 text-zion-cyan"/>
+                    <Type className="w-5 h-5 text-zion-cyan" />
                     <span className="text-zinc-300">Large Text</span>
                   </div>
                   <Button size="sm" variant={settings.largeText ? "default" : "outline"} onClick={() => toggleSetting('largeText')} className={settings.largeText ? 'bg-zion-cyan text-zion-blue-dark' : ''}>
@@ -160,15 +149,15 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
                 {/* Font Size Control */}
                 <div className="space-y-2">
                   <div className="flex items-center gap-3">
-                    <Type className="w-5 h-5 text-zion-cyan"/>
+                    <Type className="w-5 h-5 text-zion-cyan" />
                     <span className="text-zinc-300">Font Size: {settings.fontSize}px</span>
                   </div>
                   <div className="flex items-center gap-2 ml-8">
                     <Button size="sm" variant="outline" onClick={decreaseFontSize} disabled={settings.fontSize <= 12} className="p-1">
-                      <ZoomOut className="w-4 h-4"/>
+                      <ZoomOut className="w-4 h-4" />
                     </Button>
                     <Button size="sm" variant="outline" onClick={increaseFontSize} disabled={settings.fontSize >= 24} className="p-1">
-                      <ZoomIn className="w-4 h-4"/>
+                      <ZoomIn className="w-4 h-4" />
                     </Button>
                   </div>
                 </div>
@@ -176,14 +165,11 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
                 {/* Color Blind Mode */}
                 <div className="space-y-2">
                   <div className="flex items-center gap-3">
-                    <Eye className="w-5 h-5 text-zion-cyan"/>
+                    <Eye className="w-5 h-5 text-zion-cyan" />
                     <span className="text-zinc-300">Color Blind Mode</span>
                   </div>
-                  <select value={settings.colorBlindMode} onChange = {
-  (e) => toggleSetting('colorBlindMode',
-  e.target.value)
-
-} className="ml-8 px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
+                  <select value={settings.colorBlindMode} onChange={(e) => toggleSetting('colorBlindMode',
+  e.target.value)} className="ml-8 px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
                     <option value="normal">Normal</option>
                     <option value="protanopia">Protanopia (Red-Blind)</option>
                     <option value="deuteranopia">Deuteranopia (Green-Blind)</option>
@@ -198,7 +184,7 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
                 
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <Settings className="w-5 h-5 text-zion-cyan"/>
+                    <Settings className="w-5 h-5 text-zion-cyan" />
                     <span className="text-zinc-300">Reduced Motion</span>
                   </div>
                   <Button size="sm" variant={settings.reducedMotion ? "default" : "outline"} onClick={() => toggleSetting('reducedMotion')} className={settings.reducedMotion ? 'bg-zion-cyan text-zion-blue-dark' : ''}>
@@ -213,7 +199,7 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
                 
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    {settings.screenReader ? (<Volume2 className="w-5 h-5 text-zion-cyan"/>) : (<VolumeX className="w-5 h-5 text-zinc-400"/>)}
+                    {settings.screenReader ? (<Volume2 className="w-5 h-5 text-zion-cyan" />) : (<VolumeX className="w-5 h-5 text-zinc-400" />)}
                     <span className="text-zinc-300">Screen Reader</span>
                   </div>
                   <Button size="sm" variant={settings.screenReader ? "default" : "outline"} onClick={() => toggleSetting('screenReader')} className={settings.screenReader ? 'bg-zion-cyan text-zion-blue-dark' : ''}>
@@ -264,8 +250,7 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
 
 }
 
-          .high-contrast {
-            --zion-cyan: #00ffff;
+          .high-contrast {--zion-cyan: #00ffff;
             --zion-blue: #0066ff;
             --zion-purple: #9900ff;
             --zion-blue-dark: #000033;
@@ -274,21 +259,16 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
             --zion-purple-dark: #6600cc;
             --zion-purple-light: #cc33ff}
 
-          [data-color-blind="protanopia"] {
-            filter: url('#protanopia-filter')}
+          [data-color-blind="protanopia"] {filter: url('#protanopia-filter')}
 
-          [data-color-blind="deuteranopia"] {
-            filter: url('#deuteranopia-filter')}
+          [data-color-blind="deuteranopia"] {filter: url('#deuteranopia-filter')}
 
-          [data-color-blind="tritanopia"] {
-            filter: url('#tritanopia-filter')}
+          [data-color-blind="tritanopia"] {filter: url('#tritanopia-filter')}
 
-          :root {
-            --font-size: 16px;
+          :root {--font-size: 16px;
             --reduced-motion: no-preference}
 
-          * {
-            font-size: var(--font-size)}
+          * {font-size: var(--font-size)}
 
           @media (prefers-reduced-motion: reduce) {
             * {
@@ -297,29 +277,30 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
               transition-duration: 0.01ms !important}
           }
 
-          [style*="--reduced-motion: reduce"] * {
-            animation-duration: 0.01ms !important;
+          [style*="--reduced-motion: reduce"] * {animation-duration: 0.01ms !important;
             animation-iteration-count: 1 !important;
             transition-duration: 0.01ms !important}
         `
-        }}/>
+        }} />
 
       {/* SVG Filters for Color Blind Modes */}
-      <svg style = {
-  { position: 'absolute', width: 0,
-  height: 0 
-
-}}>
+      <svg style="{{{ position: 'absolute'; width: 0; height: 0}}"}>
         <defs>
           <filter id="protanopia-filter">
-            <feColorMatrix type="matrix" values="0.567,0.433,0,0,0 0.558,0.442,0,0,0 0,0.242,0.758,0,0 0,0,0,1,0"/>
+            <feColorMatrix type="matrix" values="0.567,0.433,0,0,0 0.558,0.442,0,0,0 0,0.242,0.758,0,0 0,0,0,1,0" />
           </filter>
           <filter id="deuteranopia-filter">
-            <feColorMatrix type="matrix" values="0.625,0.375,0,0,0 0.7,0.3,0,0,0 0,0.3,0.7,0,0 0,0,0,1,0"/>
+            <feColorMatrix type="matrix" values="0.625,0.375,0,0,0 0.7,0.3,0,0,0 0,0.3,0.7,0,0 0,0,0,1,0" />
           </filter>
           <filter id="tritanopia-filter">
-            <feColorMatrix type="matrix" values="0.95,0.05,0,0,0 0,0.433,0.567,0,0 0,0.475,0.525,0,0 0,0,0,1,0"/>
+            <feColorMatrix type="matrix" values="0.95,0.05,0,0,0 0,0.433,0.567,0,0 0,0.475,0.525,0,0 0,0,0,1,0" />
           </filter>
         </defs>
       </svg>
     </>)}
+
+</style>
+</motion>
+</div>
+</motion>
+</motion>

@@ -1,10 +1,10 @@
-import { Droppable } from "@hello-pangea/dnd";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { CandidateCard } from "CandidateCard.jsx";
-export function KanbanColumn({ id, title, description, applications, count }) {
+import {Droppable} from "@hello-pangea/dnd";
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+import {CandidateCard} from "CandidateCard.jsx";
+export function KanbanColumn(props: any) {
     // Add color based on column type
-    const getBadgeVariant = (columnId) => {
+    const getBadgeVariant = (props: any) => {
         switch (columnId) {
             case "new":
                 return "secondary";
@@ -19,7 +19,7 @@ export function KanbanColumn({ id, title, description, applications, count }) {
             default:
                 return "outline"}
     };
-    const getColumnBgColor = (columnId) => {
+    const getColumnBgColor = (props: any) => {
         switch (columnId) {
             case "hired":
                 return "bg-green-50";
@@ -39,7 +39,7 @@ export function KanbanColumn({ id, title, description, applications, count }) {
       <CardContent className="flex-grow p-3 overflow-y-auto">
         <Droppable droppableId={id}>
           {(provided) => (<div ref={provided.innerRef} {...provided.droppableProps} className="min-h-full space-y-2">
-              {applications.map((application, index) => (<CandidateCard key={application.id} application={application} index={index}/>))}
+              {applications.map((application, index) => (<CandidateCard key={application.id} application={application} index={index} />))}
               {provided.placeholder}
 
               {applications.length === 0 && (<div className="h-full flex items-center justify-center border-2 border-dashed border-muted rounded-md p-4">

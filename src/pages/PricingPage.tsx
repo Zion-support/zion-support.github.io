@@ -18,7 +18,7 @@ import {
   Globe
 } from 'lucide-react';
 
-export default function PricingPage() {
+export default function PricingPage(props: any) {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
 
@@ -176,7 +176,7 @@ export default function PricingPage() {
     }
   ];
 
-  const getYearlyDiscount = (monthlyPrice: number) => {
+  const getYearlyDiscount = (props: any) => {
     return Math.round((monthlyPrice * 12 - monthlyPrice * 10) / (monthlyPrice * 12) * 100);
   };
 
@@ -443,3 +443,5 @@ export default function PricingPage() {
     </div>
   );
 }
+
+</string>

@@ -3,8 +3,8 @@ import {  import { motion  } from 'framer-motion';
  params - Function parameters
  * @returns {*} Function return value
  */
-function TechSolutionsSection () {
-export function TechSolutionsSection() {
+function TechSolutionsSection(props: any) {
+export function TechSolutionsSection(props: any) {
   return ("
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <div className="max-w-7xl mx-auto px-6">
@@ -93,12 +93,12 @@ export function TechSolutionsSection() {
                     </li>) ) }
                 </ul>
 
-                <Link"
+                <Link "
                   to="/services"
                   className="inline-flex items-center text-blue-600 hover: tex t-blue-700 font-medium transition-colors duration-200 group-hover: translat e-x-1"
 
                   Learn More"
-                  <Rocket className="ml-2 h-4 w-4 transition-transform duration-200 group-hover: translat e-x-1"   />                </Link>
+                  <Rocket className="ml-2 h-4 w-4 transition-transform duration-200 group-hover: translat e-x-1"    />                </Link>
               </motion.div>) }) }
         </div>
 
@@ -131,19 +131,19 @@ export function TechSolutionsSection() {
               Let's discuss how our technology solutions can help you achieve
               your business goals and stay ahead of the competition.</p>"
             <div className="flex flex-col sm: fle x-row gap-4 justify-center">
-              <Link"
+              <Link "
                 to="/contact"
                 className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-blue-600 hover: b g-blue-700 transition-colors duration-200"
 
                 Get Started"
-                <Rocket className="ml-2 h-5 w-5"   />
+                <Rocket className="ml-2 h-5 w-5"    />
               </Link>
-              <Link"
+              <Link "
                 to="/services"
                 className="inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-lg text-gray-700 bg-white hover: b g-gray-50 transition-colors duration-200"
 
                 View All Services"
-                <Code className="ml-2 h-5 w-5"   />              </Link>
+                <Code className="ml-2 h-5 w-5"    />              </Link>
             </div>
           </div>
         </motion.div>;
@@ -159,3 +159,7 @@ export default TechSolutionsSection;"
 export default TechSolutionsSection;
 export default TechSolutionsSection;
 '"`
+
+</motion>
+</motion>
+</motion>

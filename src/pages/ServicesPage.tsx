@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function ServicesPage() {
+export default function ServicesPage(props: any) {
   const [category, setCategory] = useState<string>('all');
   const services = [
     { id: 'ai', title: 'AI Services', description: 'Custom LLMs and AI integrations' },
@@ -35,3 +35,5 @@ export default function ServicesPage() {
     </div>
   );
 }
+
+</string>

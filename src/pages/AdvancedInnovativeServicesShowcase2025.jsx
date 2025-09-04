@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { advancedInnovativeServices2025V3, advancedITServices2025, advancedAIServices2025 } from "../../data/2025-advanced-innovative-services-expansion-v3";
-const AdvancedInnovativeServicesShowcase2025 = () => {
+import React, {useState} from 'react';
+import {Link} from 'react-router-dom';
+import {advancedInnovativeServices2025V3, advancedITServices2025, advancedAIServices2025} from "../../data/2025-advanced-innovative-services-expansion-v3";
+const AdvancedInnovativeServicesShowcase2025 = (props: any) => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
     const [sortBy, setSortBy] = useState('name');
@@ -24,8 +24,8 @@ const AdvancedInnovativeServicesShowcase2025 = () => {
     ];
     const allServices = [
         ...advancedInnovativeServices2025V3.map(service => ({ ...service, type: 'Micro SAAS' })),
-        ...advancedITServices2025.map(service => ({ ...service, type: 'IT Service' })),
-        ...advancedAIServices2025.map(service => ({ ...service, type: 'AI Service' }))
+        ...advancedITServices2025.map(service => ({...service, type: 'IT Service'})),
+        ...advancedAIServices2025.map(service => ({...service, type: 'AI Service'}))
     ];
     const filteredServices = allServices
         .filter(service => selectedCategory === 'all' || service.category === selectedCategory)
@@ -42,7 +42,7 @@ const AdvancedInnovativeServicesShowcase2025 = () => {
             default:
                 return a.name.localeCompare(b.name)}
     });
-    const getCategoryIcon = (category) => {
+    const getCategoryIcon = (props: any) => {
         const icons = {
   'Legal Tech & Compliance': '⚖️',
             'Quantum Computing & Security': '🔐',

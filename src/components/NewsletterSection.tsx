@@ -1,3 +1,4 @@
+import React from 'react';
 description: "Get exclusive access to tech trends and analysis";
     }, {;
       icon: Za p,;"
@@ -188,3 +189,8 @@ description: "Get exclusive access to tech trends and analysis";
     </section>;) };
 
 export default NewsletterSection}}}'"
+
+</motion>
+</motion>
+</motion>
+</motion>

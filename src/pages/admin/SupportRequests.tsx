@@ -94,7 +94,7 @@ const MOCK_SUPPORT_REQUESTS = [
 
 export default function SupportRequests
 export { SupportRequests }() {
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState<any>("");
   const [statusFilter, setStatusFilter] = useState<string | null>(null);
   const [priorityFilter, setPriorityFilter] = useState<string | null>(null);
   const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
@@ -133,7 +133,7 @@ export { SupportRequests }() {
   const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length;
   const totalCount = MOCK_SUPPORT_REQUESTS.length;
 
-  const resetFilters = () => {
+  const resetFilters = (props: any) => {
     setSearchQuery("");
     setStatusFilter(null);
     setPriorityFilter(null);
@@ -350,3 +350,8 @@ export { SupportRequests }() {
 
   );
 </Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}}}}}
+</SEO>
+</string>
+</string>
+</string>
+</any>

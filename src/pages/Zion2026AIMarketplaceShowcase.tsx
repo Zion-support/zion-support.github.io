@@ -1,12 +1,12 @@
 import React from "react"
 import Head from "next/head"
 import Link from "next/link"
-const Zion2026AIMarketplaceShowcase = () => {
+const Zion2026AIMarketplaceShowcase = (props: any) => {
   return (
     <>
       <Head>
         <title>Zion2026 A I Marketplace Showcase - Zion Tech Group</title>
-        <meta name="description" content="Professional Zion2026 A I Marketplace Showcase services"   />
+        <meta name="description" content="Professional Zion2026 A I Marketplace Showcase services"    />
       </Head>
       <div className="min-h-screen bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8 py-12">
@@ -48,3 +48,8 @@ const Zion2026AIMarketplaceShowcase = () => {
   );
 }
 export default Zion2026AIMarketplaceShowcase
+
+</div>
+</div>
+</div>
+</div>

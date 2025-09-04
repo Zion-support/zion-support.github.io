@@ -1,13 +1,12 @@
-import { useState, useEffect } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
-import { SEO } from "@/components/SEO";
-import { Button } from "@/components/ui/button";
+import {useState, useEffect} from "react";
+import {Link, useNavigate, useParams} from "react-router-dom";
+import {SEO} from "@/components/SEO";
+import {Button} from "@/components/ui/button";
 import PostForm from "@/components/community/PostForm";
-import { useToast } from "@/hooks/use-toast";
-import { useAuth } from "@/hooks/useAuth";
+import {useToast} from "@/hooks/use-toast";
+import {useAuth} from "@/hooks/useAuth";
 // Mock post data
-const mockPost = {
-  id: "1",
+const mockPost = {id: "1",
     title: "Best practices for AI model fine-tuning",
     content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me...",
     authorId: "user1",
@@ -22,30 +21,24 @@ const mockPost = {
     downvotes: 2,
     replyCount: 12,
     isAnswered: true,
-  isFeatured: true
-
-
-};
+  isFeatured: true};
 export default function EditPostPage
-export { EditPostPage }() {
+export {EditPostPage}() {
     const { postId } = useParams();
     const navigate = useNavigate();
-    const { toast } = useToast();
-    const { user } = useAuth();
+    const {toast} = useToast();
+    const {user} = useAuth();
     const [post, setPost] = useState(mockPost);
     const [isLoading, setIsLoading] = useState(true);
-    useEffect(() => {
-        // In a real app, we would fetch the post data here
+    useEffect(() => {// In a real app, we would fetch the post data here
         // For now, we'll just use the mock data
         setIsLoading(false)}, [postId]);
-    if (isLoading) {
-        return (<div className="container py-8">
+    if (isLoading) {return (<div className="container py-8">
           <div className="flex justify-center items-center h-64">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>
           </div>
         </div>)}
-    if (!post) {
-        return (<div className="container py-8">
+    if (!post) {return (<div className="container py-8">
           <h1>Post not found</h1>
           <Button asChild className="mt-4">
             <Link to="/community">Back to Community</Link>
@@ -61,15 +54,11 @@ export { EditPostPage }() {
             <Link to={`/community/post/${postId}`}>Back to Post</Link>
           </Button>
         </div>)}
-    const initialValues = {
-  title: post.title,
+    const initialValues = {title: post.title,
         content: post.content,
         categoryId: post.categoryId,
         tags: post.tags.join(",
-  ");
-    
-
-};
+  ");};
     const handleSubmit = async (values) => {
         try {
             // Here we would normally update the post in the database
@@ -87,7 +76,7 @@ export { EditPostPage }() {
                 variant: "destructive"
             })}
     };
-    return (<SEO title="Edit Post | Community Forum | Zion AI Marketplace" description="Edit your discussion post in the Zion AI Marketplace community forum." keywords="community, forum, discussion, edit post"/>
+    return (<SEO title="Edit Post | Community Forum | Zion AI Marketplace" description="Edit your discussion post in the Zion AI Marketplace community forum." keywords="community, forum, discussion, edit post" />
         ,
             <div className="container py-8">
         <div className="flex items-center gap-3 mb-6">
@@ -104,5 +93,5 @@ export { EditPostPage }() {
         
         <h1 className="text-3xl font-bold mb-8">Edit Post</h1>
         
-        <PostForm initialValues={initialValues} onSubmit={handleSubmit} isEditing={true}/>
+        <PostForm initialValues={initialValues} onSubmit={handleSubmit} isEditing={true} />
       </div>)}

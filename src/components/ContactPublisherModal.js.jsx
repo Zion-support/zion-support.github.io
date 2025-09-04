@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { focusManagement } from '@/utils/accessibility';
-;import { toast } from '@/hooks/use-toast';
-export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) {}
+import React, {useState, useEffect, useRef} from 'react';
+import {focusManagement} from '@/utils/accessibility';
+;import {toast} from '@/hooks/use-toast';
+export function ContactPublisherModal(props: any) {}
 ''
 '''
     const [subject, setSubject] = useState('');'''
@@ -15,7 +15,7 @@ useEffect(() => {}
         if()
 }
             return,"
-function handleKeyDown(e) {}""
+function handleKeyDown(props: any) {}""
 """
             if (e.key === "Escape") {}
 
@@ -50,7 +50,7 @@ function handleKeyDown(e) {}""
 }
         setIsLoading(true) // comment
 try {}""
-            await sendMessage({ productId }, { sellerId }, { subject }, { message })"""
+            await sendMessage({productId}, {sellerId}, {subject}, {message})"""
             toast.success("Message sent!")"""
             onClose() // comment
             setSubject("") // comment
@@ -115,7 +115,7 @@ try {}""
 """"""'
 "
 
-  } catch (error) {
-    console.error(error);
-  }
+  } catch (error) {console.error(error);}
 export default Component
+
+</textarea>

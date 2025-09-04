@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import { Bell, X, CheckCircle, AlertTriangle, Info, XCircle, Search, Trash2, Eye, EyeOff const mockNotifications = [;
     {
         id: '1',
@@ -11,10 +11,10 @@ import { Bell, X, CheckCircle, AlertTriangle, Info, XCircle, Search, Trash2, Eye
         isRead: false,
         isArchived: false,
             { label: 'View Details', action: () => // // // // // // // console.log('View project'), variant: 'primary' },
-            { label: 'Archive', action: () => // // // // // // // console.log('Archive'), variant: 'secondary' }
+            {label: 'Archive', action: () => // // // // // // // console.log('Archive'), variant: 'secondary'}
         actions[
-            { label: 'View Details', action: () => console.log('View project'), variant: 'primary' },
-            { label: 'Archive', action: () => console.log('Archive'), variant: 'secondary' }
+            {label: 'View Details', action: () => console.log('View project'), variant: 'primary'},
+            {label: 'Archive', action: () => console.log('Archive'), variant: 'secondary'}
         ]
     },
     {
@@ -28,10 +28,10 @@ import { Bell, X, CheckCircle, AlertTriangle, Info, XCircle, Search, Trash2, Eye
         isRead: false,
         isArchived: false,
             { label: 'Review Activity', action: () => // // // // // // // console.log('Review security'), variant: 'primary' },
-            { label: 'Dismiss', action: () => // // // // // // // console.log('Dismiss'), variant: 'secondary' }
+            {label: 'Dismiss', action: () => // // // // // // // console.log('Dismiss'), variant: 'secondary'}
         actions[
-            { label: 'Review Activity', action: () => console.log('Review security'), variant: 'primary' },
-            { label: 'Dismiss', action: () => console.log('Dismiss'), variant: 'secondary' }
+            {label: 'Review Activity', action: () => console.log('Review security'), variant: 'primary'},
+            {label: 'Dismiss', action: () => console.log('Dismiss'), variant: 'secondary'}
         ]
     },
     {
@@ -45,10 +45,10 @@ import { Bell, X, CheckCircle, AlertTriangle, Info, XCircle, Search, Trash2, Eye
         isRead: false,
         isArchived: false,
             { label: 'Investigate', action: () => // // // // // // // console.log('Investigate'), variant: 'primary' },
-            { label: 'Acknowledge', action: () => // // // // // // // console.log('Acknowledge'), variant: 'secondary' }
+            {label: 'Acknowledge', action: () => // // // // // // // console.log('Acknowledge'), variant: 'secondary'}
         actions[
-            { label: 'Investigate', action: () => console.log('Investigate'), variant: 'primary' },
-            { label: 'Acknowledge', action: () => console.log('Acknowledge'), variant: 'secondary' }
+            {label: 'Investigate', action: () => console.log('Investigate'), variant: 'primary'},
+            {label: 'Acknowledge', action: () => console.log('Acknowledge'), variant: 'secondary'}
         ]
     },
     {
@@ -62,14 +62,14 @@ import { Bell, X, CheckCircle, AlertTriangle, Info, XCircle, Search, Trash2, Eye
         isRead: true,
         isArchived: false,
             { label: 'Deploy Now', action: () => // // // // // // // console.log('Deploy'), variant: 'primary' },
-            { label: 'Schedule', action: () => // // // // // // // console.log('Schedule'), variant: 'secondary' }
+            {label: 'Schedule', action: () => // // // // // // // console.log('Schedule'), variant: 'secondary'}
         actions[
-            { label: 'Deploy Now', action: () => console.log('Deploy'), variant: 'primary' },
-            { label: 'Schedule', action: () => console.log('Schedule'), variant: 'secondary' }
+            {label: 'Deploy Now', action: () => console.log('Deploy'), variant: 'primary'},
+            {label: 'Schedule', action: () => console.log('Schedule'), variant: 'secondary'}
         ]
 
 ];
-export function AdvancedNotificationSystem() {
+export function AdvancedNotificationSystem(props: any) {
     const [notifications, setNotifications] = useState(mockNotifications);
     const [isOpen, setIsOpen] = useState(false);
     const [isMinimized, setIsMinimized] = useState(false);
@@ -83,29 +83,27 @@ export function AdvancedNotificationSystem() {
     const containerRef = useRef(null);
     useEffect(() => {
         setUnreadCount(notifications.filter(n => !n.isRead).length)}, [notifications]);
-    const filteredNotifications = notifications.filter(notification => {
-        const typeMatch = filterType === 'all' || notification.type === filterType;
+    const filteredNotifications = notifications.filter(notification => {const typeMatch = filterType === 'all' || notification.type === filterType;
         const priorityMatch = filterPriority === 'all' || notification.priority === filterPriority;
         const categoryMatch = filterCategory === 'all' || notification.category === filterCategory;
         const searchMatch = notification.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
             notification.message.toLowerCase().includes(searchQuery.toLowerCase());
         const readMatch = showRead || !notification.isRead;
         return typeMatch && priorityMatch && categoryMatch && searchMatch && readMatch});
-    const markAllAsRead = () => {
+    const markAllAsRead = (props: any) => {
         setNotifications(prev => prev.map(n => ({ ...n, isRead: true })))};
-    const archiveNotification = (id) => {
+    const archiveNotification = (props: any) => {
         setNotifications(prev => prev.map(n => n.id === id ? { ...n, isArchived: true } : n))};
-    const deleteNotification = (id) => {
-        setNotifications(prev => prev.filter(n => n.id !== id))};
-    const getTypeIcon = (type) => {
+    const deleteNotification = (props: any) => {setNotifications(prev => prev.filter(n => n.id !== id))};
+    const getTypeIcon = (props: any) => {
         switch (type) {
-            case 'success': return <CheckCircle className="w-5 h-5 text-zion-emerald"/>;
-            case 'warning': return <AlertTriangle className="w-5 h-5 text-zion-gold"/>;
-            case 'error': return <XCircle className="w-5 h-5 text-red-500"/>;
-            case 'info': return <Info className="w-5 h-5 text-zion-cyan"/>;
-            default: return <Info className="w-5 h-5 text-zion-slate"/>}
+            case 'success': return <CheckCircle className="w-5 h-5 text-zion-emerald" />;
+            case 'warning': return <AlertTriangle className="w-5 h-5 text-zion-gold" />;
+            case 'error': return <XCircle className="w-5 h-5 text-red-500" />;
+            case 'info': return <Info className="w-5 h-5 text-zion-cyan" />;
+            default: return <Info className="w-5 h-5 text-zion-slate" />}
     };
-    const getPriorityColor = (priority) => {
+    const getPriorityColor = (props: any) => {
         switch (priority) {
             case 'low': return 'border-l-zion-emerald';
             case 'medium': return 'border-l-zion-cyan';
@@ -113,7 +111,7 @@ export function AdvancedNotificationSystem() {
             case 'critical': return 'border-l-red-500';
             default: return 'border-l-zion-slate'}
     };
-    const getTimeAgo = (timestamp) => {
+    const getTimeAgo = (props: any) => {
         const now = new Date();
         const diff = now.getTime() - timestamp.getTime();
         const minutes = Math.floor(diff / (1000 * 60));
@@ -127,16 +125,15 @@ export function AdvancedNotificationSystem() {
             return `${hours}h ago`;
         return `${days}d ago`};
     const groupedNotifications = groupByCategory
-        ? filteredNotifications.reduce((groups, notification) => {
-            const category = notification.category;
+        ? filteredNotifications.reduce((groups, notification) => {const category = notification.category;
             if (!groups[category])
                 groups[category] = [];
             groups[category].push(notification);
             return groups}, {})
-        : { 'All': filteredNotifications };
+        : {'All': filteredNotifications};
     if (!isOpen) {
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-36 p-3 bg-zion-emerald hover:bg-zion-emerald-light text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50 relative" title="Notifications">
-        <Bell className="w-5 h-5"/>
+        <Bell className="w-5 h-5" />
         {unreadCount > 0 && (<span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center animate-pulse">
             {unreadCount > 9 ? '9+' : unreadCount}
           </span>)}
@@ -150,7 +147,7 @@ export function AdvancedNotificationSystem() {
               {unreadCount > 0 ? `${unreadCount} unread notifications` : 'No new notifications'}
             </span>
             <button onClick={() => setIsMinimized(false)} className="text-zion-slate-light hover:text-zion-slate transition-colors">
-              <Eye className="w-4 h-4"/>
+              <Eye className="w-4 h-4" />
             </button>
           </div>
         </div>
@@ -159,7 +156,7 @@ export function AdvancedNotificationSystem() {
       {/* Header */}
       <div className="flex items-center justify-between p-4 border-b border-zion-slate-light bg-gradient-to-r from-zion-emerald/10 to-zion-cyan/10">
         <div className="flex items-center gap-3">
-          <Bell className="w-5 h-5 text-zion-emerald"/>
+          <Bell className="w-5 h-5 text-zion-emerald" />
           <span className="font-semibold text-zion-slate">Notifications</span>
           {unreadCount > 0 && (<span className="bg-red-500 text-white text-xs rounded-full px-2 py-1">
               {unreadCount}
@@ -170,10 +167,10 @@ export function AdvancedNotificationSystem() {
             Mark all read
           </button>
           <button onClick={() => setIsMinimized(true)} className="text-zion-slate-light hover:text-zion-slate transition-colors">
-            <EyeOff className="w-4 h-4"/>
+            <EyeOff className="w-4 h-4" />
           </button>
           <button onClick={() => setIsOpen(false)} className="text-zion-slate-light hover:text-zion-slate transition-colors">
-            <X className="w-4 h-4"/>
+            <X className="w-4 h-4" />
           </button>
         </div>
       </div>
@@ -182,7 +179,7 @@ export function AdvancedNotificationSystem() {
       <div className="p-4 border-b border-zion-slate-light bg-zion-slate-light/5">
         <div className="space-y-3">
           <div className="relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light"/>
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light" />
             <input type="text" placeholder="Search notifications..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="w-full pl-10 pr-4 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-zion-slate focus:ring-2 focus:ring-zion-emerald focus:border-transparent text-sm"/>
           </div>
 
@@ -275,7 +272,7 @@ export function AdvancedNotificationSystem() {
                     </div>
 
                     <button onClick={() => deleteNotification(notification.id)} className="text-xs text-red-500 hover:text-red-600 transition-colors">
-                      <Trash2 className="w-3 h-3"/>
+                      <Trash2 className="w-3 h-3" />
                     </button>
                   </div>
                 </div>
@@ -283,7 +280,7 @@ export function AdvancedNotificationSystem() {
           </div>))}
 
         {filteredNotifications.length === 0 && (<div className="p-8 text-center">
-            <Bell className="w-12 h-12 text-zion-slate-light mx-auto mb-4"/>
+            <Bell className="w-12 h-12 text-zion-slate-light mx-auto mb-4" />
             <p className="text-zion-slate-light">No notifications found</p>
           </div>)}
       </div>

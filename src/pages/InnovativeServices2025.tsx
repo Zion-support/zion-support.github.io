@@ -141,9 +141,9 @@ import { Brain,
  } from 'lucide-react';
 
 export default function InnovativeServices2025(...args: unknow n[]): unknown {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [sortBy, setSortBy] = useState('popularity');
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+  const [searchQuery, setSearchQuery] = useState<any>('');
+  const [sortBy, setSortBy] = useState<any>('popularity');
 
   // Enhanced Services Catalog 2025
   const services = [
@@ -696,3 +696,17 @@ export { InnovativeServices2025 };
 export { InnovativeServices2025 };
 
 export { InnovativeServices2025 };
+
+</motion>
+</motion>
+</motion>
+</motion>
+</Star>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</any>
+</any>
+</any>

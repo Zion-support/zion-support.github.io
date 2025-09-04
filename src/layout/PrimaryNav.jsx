@@ -1,49 +1,48 @@
-import React, { useState } from 'react';
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
-import { Logo } from '@/components/header/Logo';
-import { PointsBadge } from '@/components/loyalty/PointsBadge';
-import { UserMenu } from '@/components/header/UserMenu';
-import { LanguageSelector } from '@/components/header/LanguageSelector';
-import { ModeToggle } from '@/components/ModeToggle';
-import { useAuth } from '@/hooks/useAuth';
-import { useIsMobile } from '@/hooks/use-mobile';
-import { useMessaging } from '@/context/MessagingContext';
-import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput';
-import { generateSearchSuggestions } from '@/data/marketplaceData';
-import { slugify } from '@/lib/slugify';
-import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation';
-import { MobileMenu } from '@/components/header/MobileMenu';
-import { MobileBottomNav } from '@/components/header/MobileBottomNav';
+import React, {useState} from 'react';
+import {useState} from 'react';
+import {Link} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
+import {Logo} from '@/components/header/Logo';
+import {PointsBadge} from '@/components/loyalty/PointsBadge';
+import {UserMenu} from '@/components/header/UserMenu';
+import {LanguageSelector} from '@/components/header/LanguageSelector';
+import {ModeToggle} from '@/components/ModeToggle';
+import {useAuth} from '@/hooks/useAuth';
+import {useIsMobile} from '@/hooks/use-mobile';
+import {useMessaging} from '@/context/MessagingContext';
+import {EnhancedSearchInput} from '@/components/search/EnhancedSearchInput';
+import {generateSearchSuggestions} from '@/data/marketplaceData';
+import {slugify} from '@/lib/slugify';
+import {ResponsiveNavigation} from '@/components/navigation/ResponsiveNavigation';
+import {MobileMenu} from '@/components/header/MobileMenu';
+import {MobileBottomNav} from '@/components/header/MobileBottomNav';
 import { Menu, X, ShoppingCart import { useTranslation } from 'react-i18next';
-import { useSelector } from 'react-redux';
-export function PrimaryNav() {
+import {useSelector} from 'react-redux';
+export function PrimaryNav(props: any) {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const { user } = useAuth();
     const isMobile = useIsMobile();
-    const { t } = useTranslation();
+    const {t} = useTranslation();
     const router = useNavigate();
     const [query, setQuery] = useState('');
     const suggestions = generateSearchSuggestions();
     let unreadCount = 0;
-    try {
-        const messaging = useMessaging();
+    try {const messaging = useMessaging();
         unreadCount = messaging.unreadCount}
     catch {
         // context not available
 
     const cartCount = useSelector((s) => s.cart.items.reduce((sum, i) => sum + i.quantity, 0));
-    const handleSubmit = (e) => {
+    const handleSubmit = (props: any) => {
         e.preventDefault();
         if (query.trim()) {
-            // // // // // // // console.log('PrimaryNav search submit:', query);
+            // // // // // // // 
             navigate(`/search/${slugify(query)}`);
             setQuery('');
 
-            console.log('PrimaryNav search submit:', query);
+            
             router(`/search/${slugify(query)}`);
-            console.log('PrimaryNav search submit:', query);
+            
             navigate(`/search/${slugify(query)}`);
             setQuery('');
         }
@@ -51,17 +50,17 @@ export function PrimaryNav() {
     return (<>
       <header className="sticky top-0 z-50 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md" role="navigation" aria-label="Primary" data-testid="header">
         <div className="container flex flex-wrap items-center justify-between gap-2 min-h-16 px-4 sm:px-6">
-          <Logo />
+          <Logo  />
 
           {/* Navigation - hidden on mobile, shown on desktop */}
           <div className="hidden md:block order-1 flex-shrink-0">
-            <ResponsiveNavigation />
+            <ResponsiveNavigation  />
           </div>
 
           {/* Actions container with responsive layout */}
           <div className="hidden md:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
             {/* Search form with clamped width */}
-            // // // // // // // console.log('PrimaryNav search suggestion selected:', sugg);
+            // // // // // // // 
             // Handle different suggestion types with proper navigation
             if (sugg.id) {
                 // Product listings with IDs go to product detail page
@@ -78,20 +77,10 @@ export function PrimaryNav() {
             else {
                 // Default: search results page with slug
                 navigate(`/search/${sugg.slug || slugify(sugg.text)}`);
-            <form onSubmit={handleSubmit} className="flex-shrink-0" style = {
-  { width: 'clamp(12rem, 20vw,
-  16rem)' 
-
-
-
-
-
-
-}}>
+            <form onSubmit={handleSubmit} className="flex-shrink-0" style="{{{ width: 'clamp(12rem}}"}>
               <EnhancedSearchInput value={query} onChange={setQuery} onSelectSuggestion = {
   (sugg) => {
-            console.log('PrimaryNav search suggestion selected:',
-  sugg);
+            
             // Handle different suggestion types with proper navigation
             if (sugg.id) {
                 // Product listings with IDs go to product detail page
@@ -102,10 +91,8 @@ export function PrimaryNav() {
 
 }`);
             }
-            else if (sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {
-                // Documentation suggestions navigate directly to their path
-                router(sugg.slug);
-            }
+            else if (sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {// Documentation suggestions navigate directly to their path
+                router(sugg.slug);}
             else if (sugg.type === 'blog' && sugg.slug) {
                 // Blog posts navigate to blog detail page
                 router(`/blog/${sugg.slug}`);
@@ -127,35 +114,27 @@ export function PrimaryNav() {
 
             {/* Compact actions group */}
             <div className="flex items-center gap-1">
-              <PointsBadge />
+              <PointsBadge  />
               <HoverCard openDelay={100}>
                 <HoverCardTrigger asChild>
-                  <Link href="/cart" className="relative p-1" aria-label = {
-  t('nav.cart',
-  'Cart')
-
-
-
-
-
-
-}>
-                    <ShoppingCart aria-hidden="true" className="h-5 w-5 text-foreground hover:text-primary"/>
+                  <Link href="/cart" className="relative p-1" aria-label = {t('nav.cart',
+  'Cart')}>
+                    <ShoppingCart aria-hidden="true" className="h-5 w-5 text-foreground hover:text-primary" />
                     {cartCount > 0 && (<span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center">
                         {cartCount}
                       </span>)}
                   </Link>
                 </HoverCardTrigger>
                 <HoverCardContent>
-                  <MiniCartPreview />
+                  <MiniCartPreview  />
                 </HoverCardContent>
               </HoverCard>
             </div>
 
             {/* Compact controls group */}
             <div className="flex items-center gap-1 border-l border-primary/20 pl-1 ml-1">
-              <ModeToggle />
-              <LanguageSelector />
+              <ModeToggle  />
+              <LanguageSelector  />
             </div>
 
             {/* Auth links - flex wrap for very small screens */}
@@ -168,12 +147,12 @@ export function PrimaryNav() {
                     {t('auth.signup')}
                   </Link>
                 </>)}
-              {isLoggedIn && <UserMenu />}
+              {isLoggedIn && <UserMenu  />}
             </div>
           
           {/* Mobile menu button */}
           <button className="md:hidden p-2 rounded focus:outline-none flex-shrink-0" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-expanded={mobileMenuOpen} aria-label={t('general.toggle_mobile_menu')}>
-            {mobileMenuOpen ? (<X className="h-6 w-6"/>) : (<Menu className="h-6 w-6"/>)}
+            {mobileMenuOpen ? (<X className="h-6 w-6" />) : (<Menu className="h-6 w-6" />)}
           </button>
         </div>
       </header>
@@ -183,8 +162,12 @@ export function PrimaryNav() {
             <MobileMenu unreadCount={unreadCount} onClose={() => setMobileMenuOpen(false)}/>
           </div>
         </div>)}
-      {isMobile && <MobileBottomNav unreadCount={unreadCount}/>}
+      {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
     </>)}
 
 
 export default PrimaryNav;
+</MobileMenu>
+</div>
+</EnhancedSearchInput>
+</div>

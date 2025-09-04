@@ -1,10 +1,10 @@
-import { BillingDashboard } from "@/components/enterprise/billing/BillingDashboard";
-import { useAuth } from "@/hooks/useAuth";
-import { useNavigate } from 'react-router-dom';
-import { SEO } from "@/components/SEO";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
+import {BillingDashboard} from "@/components/enterprise/billing/BillingDashboard";
+import {useAuth} from "@/hooks/useAuth";
+import {useNavigate} from 'react-router-dom';
+import {SEO} from "@/components/SEO";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
 export default function EnterpriseBilling
-export { EnterpriseBilling }() {
+export {EnterpriseBilling}() {
     const { user } = useAuth();
     const router = useNavigate();
     // Check if user has billing permissions
@@ -17,10 +17,10 @@ export { EnterpriseBilling }() {
         return null;
     }
     return (<ProtectedRoute>
-      <SEO title="Enterprise Billing - Zion AI Marketplace" description="Manage your subscription, view invoice history, and download billing statements."/>
+      <SEO title="Enterprise Billing - Zion AI Marketplace" description="Manage your subscription, view invoice history, and download billing statements." />
 
       <main className="min-h-screen bg-background">
-        <BillingDashboard />
+        <BillingDashboard  />
       </main>
       
     </ProtectedRoute>)}

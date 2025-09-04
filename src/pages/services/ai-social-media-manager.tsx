@@ -174,9 +174,9 @@ const AISocialMediaManager: Reac t.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <Helmet>
         <title>AI Social Media Manager - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered social media management platform that automates content creation, scheduling, and engagement across all major platforms. Increase your social media ROI by 300%."  />
-        <meta name="keywords" content="AI social media manager, social media automation, content generation, social media analytics, social media scheduling"  />
-        <link rel="canonical" href="https://ziontechgroup.com/services/ai-social-media-manager"  />
+        <meta name="description" content="Revolutionary AI-powered social media management platform that automates content creation, scheduling, and engagement across all major platforms. Increase your social media ROI by 300%."   />
+        <meta name="keywords" content="AI social media manager, social media automation, content generation, social media analytics, social media scheduling"   />
+        <link rel="canonical" href="https://ziontechgroup.com/services/ai-social-media-manager"   />
       </Helmet>
 
       {/* Hero Section */}

@@ -94,12 +94,12 @@
               we deliver AI solutions that drive real results.
             </p>"
             <div className="flex flex-col sm: fle x-row gap-4 justify-center">
-              <Link"
+              <Link "
                 to="/contact"
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover: fro m-cyan-600 hover: t o-blue-700 transition-all duration-200"
 
                 Get Started"
-                <ArrowRight className="ml-2 h-5 w-5"   />
+                <ArrowRight className="ml-2 h-5 w-5"    />
               </Link>"
               <button className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover: b g-cyan-500 hover: tex t-white transition-all duration-200">"
                 <Play className="mr-2 h-5 w-5"   />                Watch Demo
@@ -246,12 +246,12 @@
               Let's discuss how AI can transform your business operations and drive growth
             </p>"
             <div className="flex flex-col sm: fle x-row gap-4 justify-center">
-              <Link"
+              <Link "
                 to="/contact"
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover: fro m-cyan-600 hover: t o-blue-700 transition-all duration-200"
 
                 Schedule Consultation"
-                <ArrowRight className="ml-2 h-5 w-5"   />              </Link>
+                <ArrowRight className="ml-2 h-5 w-5"    />              </Link>
               <Link"
                 to="/services"
                 className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover: b g-cyan-500 hover: tex t-white transition-all duration-200"

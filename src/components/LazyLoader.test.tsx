@@ -10,3 +10,5 @@ export default function LazyLoader.test() {return (
         </p>
       </div>
   );"}"
+
+</div>

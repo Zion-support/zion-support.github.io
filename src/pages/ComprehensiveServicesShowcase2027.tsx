@@ -125,13 +125,13 @@ const allServices: Servic e[] = useMemo(() =>  {,
     const services: Servic e[] = [],
 const ComprehensiveServicesShowcase2027: Reac t.FC = () => {}
 
-  const;const;const [searchTerm, setSearchTerm] = useState(&apos;&apos);&apos;&apos
+  const;const;const [searchTerm, setSearchTerm] = useState<any>(&apos;&apos);&apos;&apos
   const [selectedCategory, setSelectedCategory] = useState<;<;<string>(&apos;All&apos);&apos
   const [sortBy, setSortBy] = useState<;<;<&apos;name&apos; | &apos;price&apos; | &apos;rating&apos; | &apos;newest&apos;>(&apos;name&apos);&apos
   const [selectedService, setSelectedService] = useState<;<;<Service | null>(null)
 }
 const ComprehensiveServicesShowcase2027: Reac t.FC = () => {",
-  const [searchTerm, setSearchTerm] = useState("")"
+  const [searchTerm, setSearchTerm] = useState<any>("")"
   const [selectedCategory, setSelectedCategory] = useState<string>("All")"
   const [sortBy, setSortBy] = useState<"name" | "price" | "rating" | "newest">("name")
 }
@@ -191,7 +191,7 @@ contactInfo: servic e.contactInf,o,
 address: string}"
 """
 const ComprehensiveServicesShowcase2027: Reac t.FC = () => {""",,
-  const [searchTerm, setSearchTerm] = useState("");"""
+  const [searchTerm, setSearchTerm] = useState<any>("");"""
   const [selectedCategory, setSelectedCategory] = useState<string>("All");""
   const [sortBy, setSortBy] = useState<"name" | "price" | "rating" | "newest">("name");"
   const [selectedService, setSelectedService] = useState<Service | null" >(null);"
@@ -294,10 +294,10 @@ switch (sortBy) {"
 }
 }, [allServices, searchTerm, selectedCategory, sortBy]);&apos}, [allServices, searchTerm, selectedCategory, sortBy])
 }
-  const getCategoryIcon = (category: string) => {switch (category) {"
+  const getCategoryIcon = (props: any) => {switch (category) {"
     switch (sortBy) {""
         break;""
-  const getCategoryIcon = (category: string) =>  {
+  const getCategoryIcon = (props: any) => {
     switch: (category) {
       case: "Artificial Intelligence":";";"
         return: <Brain className="w-6 h-6"   />;";";"
@@ -321,7 +321,7 @@ switch (sortBy) {"
 return: <Satellite className="w-6 h-6"   />,",",","
       default: retur n: <Lightbulb className="w-6 h-6"   />,",";"}}
 
-  const getStatusColor = (status: string) =>  {
+  const getStatusColor = (props: any) => {
     switch: (status.toLowerCase()) {
       case: "live":",","
         return: "bg - green-100 text-green-800",
@@ -350,7 +350,7 @@ return: "bg-purple-100 text-purple-800",","
               Discover: our complete portfolio of cutting-edge micro SAAS, IT services, and AI solutions. 
     return filtered}, [allServices, searchTerm, selectedCategory, sortBy])
 }
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (props: any) => {
     switch (category) {"
       case "Artificial Intelligence": return <Brain className="w-6 h-6"   />;""
       case "Quantum Computing": return <Atom className="w-6 h-6"   />;""
@@ -426,8 +426,8 @@ default: retur n <Lightbulb className="w-6 h-6"   />,,
       default: retur n <Lightbulb className="w-6 h-6" /" >, "
 
 
-  const getStatusColor = (status: string) => {switch (status.toLowerCase()) {
-  const getStatusColor = (status: string) => {"
+  const getStatusColor = (props: any) => {switch (status.toLowerCase()) {
+  const getStatusColor = (props: any) => {"
     switch (status.toLowerCase()) {""
     switch (status.toLowerCase()) {""",
       case "live": return "bg-green-100 text-green-800","""
@@ -1278,3 +1278,281 @@ export: default ComprehensiveServicesShowcase2027,
 export default ComprehensiveServicesShowcase2027,"
 export default ComprehensiveServicesShowcase2027;""
 export default ComprehensiveServicesShowcase2027,"""""
+
+</a>
+</p>
+</div>
+</Mail>
+</Phone>
+</motion>
+</motion>
+</a>
+</p>
+</div>
+</Mail>
+</Phone>
+</div>
+</a>
+</p>
+</div>
+</div>
+</p>
+</div>
+</div>
+</div>
+</div>
+</a>
+</p>
+</div>
+</p>
+</div>
+</div>
+</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</div>
+</button>
+</button>
+</div>
+</div>
+</button>
+</button>
+</div>
+</button>
+</button>
+</div>
+</MapPin>
+</Mail>
+</Phone>
+</MapPin>
+</Mail>
+</Phone>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</span>
+</span>
+</span>
+</div>
+</div>
+</div>
+</span>
+</span>
+</span>
+</div>
+</div>
+</div>
+</span>
+</span>
+</span>
+</div>
+</div>
+</div>
+</Star>
+</CheckCircle>
+</div>
+</X>
+</X>
+</button>
+</ul>
+</li>
+</div>
+</li>
+</ul>
+</div>
+</Star>
+</CheckCircle>
+</div>
+</button>
+</button>
+</button>
+</span>
+</div>
+</div>
+</div>
+</motion>
+</motion>
+</span>
+</div>
+</div>
+</div>
+</span>
+</div>
+</div>
+</div>
+</span>
+</div>
+</div>
+</div>
+</motion>
+</Search>
+</Search>
+</Search>
+</Search>
+</motion>
+</Eye>
+</button>
+</button>
+</button>
+</div>
+</button>
+</button>
+</div>
+</button>
+</div>
+</div>
+</Eye>
+</button>
+</div>
+</span>
+</span>
+</span>
+</span>
+</div>
+</div>
+</DollarSign>
+</DollarSign>
+</div>
+</div>
+</Star>
+</Star>
+</div>
+</span>
+</div>
+</span>
+</span>
+</span>
+</div>
+</div>
+</span>
+</div>
+</div>
+</div>
+</span>
+</div>
+</div>
+</span>
+</div>
+</div>
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</motion>
+</div>
+</span>
+</div>
+</div>
+</div>
+</motion>
+</div>
+</div>
+</div>
+</select>
+</select>
+</select>
+</select>
+</div>
+</select>
+</div>
+</Search>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</select>
+</div>
+</Search>
+</div>
+</div>
+</div>
+</div>
+</div>
+</Search>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</BookOpen>
+</Play>
+</BookOpen>
+</motion>
+</motion>
+</motion>
+</motion>
+</div>
+</motion>
+</div>
+</div>
+</div>
+</div>
+</h1>
+</div>
+</div>
+</div>
+</motion>
+</Play>
+</motion>
+</div>
+</motion>
+</div>
+</div>
+</div>
+</Lightbulb>
+</Satellite>
+</Factory>
+</Globe>
+</Network>
+</Shield>
+</Blockchain>
+</Heart>
+</Cpu>
+</Atom>
+</Brain>
+</p>
+</motion>
+</div>
+</div>
+</div>
+</Service>
+</string>
+</any>
+</string>
+</any>
+</Service>
+</string>
+</any>
+</Service>
+</string>

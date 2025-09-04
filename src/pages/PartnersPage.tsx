@@ -28,7 +28,7 @@ import {
   Briefcase
 } from 'lucide-react';
 
-export function PartnersPage() {
+export function PartnersPage(props: any) {
   const partnerTypes = [
     {
       title: 'Technology Partners',
@@ -506,16 +506,14 @@ export function PartnersPage() {
               </p>
               
               <div className="space-y-4">
-                <input
-                  type="text"
+                <input type="text"
                   placeholder="Company Name"
                   className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-                />
-                <input
-                  type="email"
+                 />
+                <input type="email"
                   placeholder="Email Address"
                   className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-                />
+                 />
                 <select className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-purple/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent">
                   <option>Select Partnership Type</option>
                   <option>Technology Partner</option>

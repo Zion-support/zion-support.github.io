@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
-export function PerformanceOptimizedLoader({ size = 'md', color = 'primary', text, fullScreen = false }) {
+import {motion} from 'framer-motion';
+export function PerformanceOptimizedLoader(props: any) {
     const sizeClasses = {
   sm: 'w-6 h-6',
         md: 'w-12 h-12',
@@ -12,18 +12,9 @@ export function PerformanceOptimizedLoader({ size = 'md', color = 'primary', tex
 
 
 };
-    const colorClasses = {
-  primary: 'text-zion-purple',
+    const colorClasses = {primary: 'text-zion-purple',
         secondary: 'text-zion-cyan',
-  white: 'text-white'
-    
-
-
-
-
-
-
-};
+  white: 'text-white'};
     const spinnerVariants = {
   animate: {
             rotate: 360,

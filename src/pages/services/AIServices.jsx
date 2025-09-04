@@ -1,27 +1,21 @@
-import { SEO } from "@/components/SEO";
-import { Brain, Shield, Database, TrendingUp } from 'lucide-react';
-const AIServices = () => {
+import {SEO} from "@/components/SEO";
+import {Brain, Shield, Database, TrendingUp} from 'lucide-react';
+const AIServices = (props: any) => {
     const features = [
         {
             icon: Brain,
             title: "AI Strategy",
             description: "Comprehensive AI strategy development and implementation"
         },
-        {
-            icon: Cpu,
+        {icon: Cpu,
             title: "Machine Learning",
-            description: "Custom ML models and algorithms for your business"
-        },
-        {
-            icon: Database,
+            description: "Custom ML models and algorithms for your business"},
+        {icon: Database,
             title: "Data Analytics",
-            description: "Advanced analytics powered by artificial intelligence"
-        },
-        {
-            icon: Shield,
+            description: "Advanced analytics powered by artificial intelligence"},
+        {icon: Shield,
             title: "AI Ethics",
-            description: "Responsible AI development and governance"
-        }
+            description: "Responsible AI development and governance"}
     ];
     const benefits = [
         "Increased operational efficiency by 60%",
@@ -31,7 +25,7 @@ const AIServices = () => {
         "Scalable AI solutions that grow with your business"
     ];
     return (<div className="min-h-screen bg-background">
-      <SEO title="AI Services - Zion Tech Group" description="Transform your business with cutting-edge AI services including machine learning, data analytics, and AI strategy." keywords="AI services, machine learning, artificial intelligence, data analytics, AI strategy, AI ethics" canonical="https://ziontechgroup.com/services/ai-services"/>
+      <SEO title="AI Services - Zion Tech Group" description="Transform your business with cutting-edge AI services including machine learning, data analytics, and AI strategy." keywords="AI services, machine learning, artificial intelligence, data analytics, AI strategy, AI ethics" canonical="https://ziontechgroup.com/services/ai-services" />
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-pink-900 via-pink-800 to-rose-900 text-white py-20">
@@ -68,7 +62,7 @@ const AIServices = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (<motion.div key={feature.title} className="text-center p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-all duration-300" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }}>
                 <div className="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="w-8 h-8 text-pink-600"/>
+                  <feature .icon className="w-8 h-8 text-pink-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
@@ -91,7 +85,7 @@ const AIServices = () => {
             <div className="space-y-6">
               {benefits.map((benefit, index) => (<motion.div key={index} className="flex items-center p-4 bg-white rounded-lg shadow-sm" initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }}>
                   <div className="w-8 h-8 bg-pink-100 rounded-full flex items-center justify-center mr-4">
-                    <TrendingUp className="w-4 h-4 text-pink-600"/>
+                    <TrendingUp className="w-4 h-4 text-pink-600" />
                   </div>
                   <span className="text-lg text-gray-700">{benefit}</span>
                 </motion.div>))}
@@ -115,3 +109,9 @@ const AIServices = () => {
     </div>);
 };
 export default AIServices;
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

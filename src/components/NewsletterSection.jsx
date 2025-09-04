@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { motion  } from 'framer-motion';
+import React, {useState} from 'react';
+import {motion} from 'framer-motion';
 import {  import { motion  } from 'framer-motion';
  from 'lucide-react';
 
-export function NewsletterSection() {
+export function NewsletterSection(props: any) {
 
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
@@ -22,33 +22,28 @@ export function NewsletterSection() {
     setEmail('');
   };
 
-  const benefits = [{
-
-      icon: <Star className="w-6 h-6" />,
+  const benefits = [{icon: <Star className="w-6 h-6"  />,
       title: 'Exclusive Content',
       description: 'Access to premium tech insights and industry reports'},
-    {
-"
-      icon: <Zap className="w-6 h-6" />,
+    {"
+      icon: <Zap className="w-6 h-6"  />,
       title: 'Early Access',
       description: 'Be the first to know about new services and features'},
-    {
-"
-      icon: <Shield className="w-6 h-6" />,
+    {"
+      icon: <Shield className="w-6 h-6"  />,
       title: 'Expert Tips',
       description: 'Weekly tips from our technology experts'},
-    {
-"
-      icon: <Users className="w-6 h-6" />,
+    {"
+      icon: <Users className="w-6 h-6"  />,
       title: 'Community Access',
       description: 'Join our exclusive tech community'},
   ];
 
   const stats = ['
-    { value: '50K+', label: 'Subscribers' },
-    { value: '95%', label: 'Satisfaction' },
-    { value: '24/7', label: 'Support' },
-    { value: '100%', label: 'Free' },
+    {value: '50K+', label: 'Subscribers'},
+    {value: '95%', label: 'Satisfaction'},
+    {value: '24/7', label: 'Support'},
+    {value: '100%', label: 'Free'},
   ];
 
   const containerVariants = {
@@ -65,7 +60,7 @@ export function NewsletterSection() {
   const itemVariants = {
 
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 }};
+    visible: {opacity: 1, y: 0}};
 
   if(isSubscribed) {
 
@@ -84,7 +79,7 @@ export function NewsletterSection() {
         >"
           <motion.div variants={itemVariants} className="mb-8">"
             <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-green-500/20 mb-6">"
-              <CheckCircle className="w-10 h-10 text-green-400" />
+              <CheckCircle className="w-10 h-10 text-green-400"  />
             </div>"
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Welcome to the Family!
@@ -137,7 +132,7 @@ export function NewsletterSection() {
           <motion.div variants={itemVariants} className="text-white">"
             <div className="flex items-center gap-3 mb-6">"
               <div className="p-2 bg-zion-cyan/20 rounded-lg">"
-                <Mail className="w-6 h-6 text-zion-cyan" />
+                <Mail className="w-6 h-6 text-zion-cyan"  />
               </div>"
               <span className="text-zion-cyan font-semibold text-sm uppercase tracking-wider">
                 Newsletter
@@ -188,7 +183,7 @@ export function NewsletterSection() {
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 p-8 shadow-2xl">"
               <div className="text-center mb-6">"
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r from-zion-cyan to-zion-blue mb-4">"
-                  <Mail className="w-8 h-8 text-white" />
+                  <Mail className="w-8 h-8 text-white"  />
                 </div>"
                 <h3 className="text-2xl font-bold text-white mb-2">
                   Join Our Newsletter
@@ -230,7 +225,7 @@ export function NewsletterSection() {
                   ) : (
                     <>
                       Subscribe Now"
-                      <Send className="w-5 h-5" />
+                      <Send className="w-5 h-5"  />
                     </>
                   )}
                 </button>
@@ -250,4 +245,11 @@ export function NewsletterSection() {
       </motion.div>
     </section>) ;
 }
-const benefits = [] const stats = [] export function NewsletterSection() { const [email, setEmail] = useState(') const [isSubscribed, setIsSubscribed] = useState(false) const [isLoading, setIsLoading] = useState(false) const [showBenefits, setShowBenefits] = useState(false) const handleSubmit = (e) => { e.preventDefault()"""
+const benefits = [] const stats = [] export function NewsletterSection(props: any) { const [email, setEmail] = useState(') const [isSubscribed, setIsSubscribed] = useState(false) const [isLoading, setIsLoading] = useState(false) const [showBenefits, setShowBenefits] = useState(false) const handleSubmit = (props: any) => { e.preventDefault()"""
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

@@ -26,7 +26,7 @@ import {
   Workflow
 } from 'lucide-react';
 
-const AIAutonomousBusinessOperations: React.FC = () => {
+const AIAutonomousBusinessOperations: React.FC = (props: any) => {
   const features = [
     {
       icon: Brain,
@@ -231,3 +231,10 @@ const AIAutonomousBusinessOperations: React.FC = () => {
 };
 
 export default AIAutonomousBusinessOperations;}}}}};
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

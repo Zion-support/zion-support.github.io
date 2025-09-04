@@ -19,15 +19,15 @@ import {
   Settings
 } from "lucide-react"
 
-export function ModernHeader() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const [isServicesOpen, setIsServicesOpen] = useState(false)
+export function ModernHeader(props: any) {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<any>(false)
+  const [isServicesOpen, setIsServicesOpen] = useState<any>(false)
 
-  const toggleMobileMenu = () => {
+  const toggleMobileMenu = (props: any) => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
   }
 
-  const closeMobileMenu = () => {
+  const closeMobileMenu = (props: any) => {
     setIsMobileMenuOpen(false)
     setIsServicesOpen(false)
   }
@@ -35,7 +35,7 @@ export function ModernHeader() {
   const services = [
     {
       name: "AI Services",
-      href: "/ai-services",
+      href: "/services",
       description: "Machine learning, NLP, computer vision",
       icon: Brain
     },
@@ -53,19 +53,19 @@ export function ModernHeader() {
     },
     {
       name: "Cybersecurity",
-      href: "/cybersecurity",
+      href: "/services/cybersecurity",
       description: "Security solutions & compliance",
       icon: Shield
     },
     {
       name: "Cloud DevOps",
-      href: "/cloud-devops",
+      href: "/services/cloud-devops",
       description: "Cloud infrastructure & deployment",
       icon: Cloud
     },
     {
       name: "IoT Solutions",
-      href: "/iot-solutions",
+      href: "/services",
       description: "Internet of Things platforms",
       icon: Zap
     },
@@ -77,7 +77,7 @@ export function ModernHeader() {
     },
     {
       name: "Analytics",
-      href: "/analytics",
+      href: "/services/website-analytics",
       description: "Business intelligence & data",
       icon: BarChart3
     }
@@ -122,7 +122,7 @@ export function ModernHeader() {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <Link to="/" className="flex items-center">
+              <Link href="/" className="flex items-center">
                 <div className="h-8 w-8 bg-blue-600 rounded-lg flex items-center justify-center mr-3">
                   <span className="text-white font-bold text-lg">Z</span>
                 </div>
@@ -132,7 +132,7 @@ export function ModernHeader() {
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8">
-              <Link to="/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+              <Link href="/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                 Home
               </Link>
               
@@ -179,7 +179,7 @@ export function ModernHeader() {
                 )}
               </div>
 
-              <Link to="/about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+              <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                 About
               </Link>
               <Link href="/solutions" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
@@ -188,7 +188,7 @@ export function ModernHeader() {
               <Link href="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                 Case Studies
               </Link>
-              <Link to="/blog" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+              <Link href="/blog" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                 Blog
               </Link>
               <Link href="/pricing" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
@@ -315,3 +315,5 @@ export function ModernHeader() {
 }
 
 export default ModernHeader
+</any>
+</any>

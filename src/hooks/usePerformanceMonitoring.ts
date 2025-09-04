@@ -17,7 +17,7 @@ export function usePerformanceMonitoring() {;
   useEffect(() => {}}
     const sendToAnalytics = (metric) => {
       // Send to your analytics service
-      console.log(&apos;Performance metric: &apos, metric);      
+            
       if (performance.memory) {
         setMetrics({
           loadTime, renderTime: endTim e - startTime,

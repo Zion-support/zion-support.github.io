@@ -1,9 +1,10 @@
+import React from 'react';
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 
  params - Function parameters
  * @returns {*} Function return value
  */
-function SecurityEnhancer () {
+function SecurityEnhancer(props: any) {
 
   Shield,
   Lock,
@@ -62,18 +63,18 @@ interface SecurityMetrics {
   lastScan: Dat e;
   vulnerabilities: number;
   complianceScore: number;
-export function SecurityEnhancer() {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isExpanded, setIsExpanded] = useState(false);
+export function SecurityEnhancer(props: any) {
+  const [isVisible, setIsVisible] = useState<any>(false);
+  const [isExpanded, setIsExpanded] = useState<any>(false);
   const [securityStatus, setSecurityStatus] = useState<SecurityStatus | null>(
     null
   );
   const [securityEvents, setSecurityEvents] = useState<SecurityEvent[]>([]);
   const [securityMetrics, setSecurityMetrics] =
     useState<SecurityMetrics | null>(null);
-  const [isScanning, setIsScanning] = useState(false);
+  const [isScanning, setIsScanning] = useState<any>(false);
   const [activeFilters, setActiveFilters] = useState<string[]>([]);
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState<any>('');
 
   // Initialize security monitoring
   useEffect(() => {
@@ -518,3 +519,15 @@ export function SecurityEnhancer() {
     </>
   )}
 '"`
+
+</motion>
+</motion>
+</script>
+</any>
+</string>
+</any>
+</SecurityMetrics>
+</SecurityEvent>
+</SecurityStatus>
+</any>
+</any>

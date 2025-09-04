@@ -13,7 +13,7 @@ import {
   Brain,
   Zap
 } from 'lucide-react';
-export default function TeamPage() {
+export default function TeamPage(props: any) {
   return (
   return (
   const leadership = [

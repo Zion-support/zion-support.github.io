@@ -1,49 +1,42 @@
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
-import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target, ArrowRight, Activity const IncidentResponsePlatform = () => {
+import React from 'react';
+import {Link} from 'react-router-dom';
+import {Helmet} from 'react-helmet-async';
+import {motion} from 'framer-motion';
+import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target, ArrowRight, Activity const IncidentResponsePlatform = (props: any) => {
     const features = [
         {
             title: "AI-Powered Threat Detection",
             description: "Advanced machine learning algorithms detect threats in real-time with high accuracy and low false positives",
-            icon: <Eye className="w-6 h-6"/>
+            icon: <Eye className="w-6 h-6" />
         },
-        {
-            title: "Automated Response Workflows",
+        {title: "Automated Response Workflows",
             description: "Intelligent automation handles routine incidents while escalating critical threats to human analysts",
-            icon: <Zap className="w-6 h-6"/>
-        },
-        {
-            title: "Real-time Alerting & Notifications",
+            icon: <Zap className="w-6 h-6" />},
+        {title: "Real-time Alerting & Notifications",
             description: "Instant notifications across multiple channels with customizable escalation paths and response teams",
-            icon: <AlertTriangle className="w-6 h-6"/>
-        },
+            icon: <AlertTriangle className="w-6 h-6" />},
         {
             title: "Incident Timeline Tracking",
             description: "Comprehensive tracking of all incident activities, communications, and resolution steps for audit compliance",
-            icon: <Clock className="w-6 h-6"/>
+            icon: <Clock className="w-6 h-6" />
 
     ];
     const benefits = [
         {
             metric: "70%",
             description: "Reduction in response time",
-            icon: <Clock className="w-5 h-5"/>
+            icon: <Clock className="w-5 h-5" />
         },
-        {
-            metric: "45%",
+        {metric: "45%",
             description: "Improvement in resolution quality",
-            icon: <TrendingUp className="w-5 h-5"/>
-        },
-        {
-            metric: "24/7",
+            icon: <TrendingUp className="w-5 h-5" />},
+        {metric: "24/7",
             description: "Automated monitoring",
-            icon: <Activity className="w-5 h-5"/>
-        },
+            icon: <Activity className="w-5 h-5" />},
         {
             metric: "90%",
             description: "Compliance assurance",
-            icon: <Shield className="w-5 h-5"/>
+            icon: <Shield className="w-5 h-5" />
 
     ];
     const pricingPlans = [
@@ -62,8 +55,7 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
             ],
             popular: false
         },
-        {
-            name: "Enterprise",
+        {name: "Enterprise",
             price: "$599",
             period: "/month",
             description: "Ideal for large organizations",
@@ -76,8 +68,7 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
                 "Priority support",
                 "Compliance reporting"
             ],
-            popular: true
-        },
+            popular: true},
         {
             name: "Custom",
             price: "Custom",
@@ -108,11 +99,11 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
     return (<>
       <Helmet>
         <title>Intelligent Incident Response Platform — Zion Tech Group | AI-Driven Security</title>
-        <meta name="description" content="Transform your security operations with our AI-driven incident response platform. Automated threat detection, response workflows, and compliance reporting."/>
-        <meta property="og:title" content="Intelligent Incident Response Platform — Zion Tech Group"/>
-        <meta property="og:description" content="AI-powered incident response platform with automated workflows and real-time threat detection."/>
-        <meta property="og:url" content="https://ziontechgroup.com/services/incident-response-platform"/>
-        <link rel="canonical" href="https://ziontechgroup.com/services/incident-response-platform"/>
+        <meta name="description" content="Transform your security operations with our AI-driven incident response platform. Automated threat detection, response workflows, and compliance reporting."  />
+        <meta property="og:title" content="Intelligent Incident Response Platform — Zion Tech Group"  />
+        <meta property="og:description" content="AI-powered incident response platform with automated workflows and real-time threat detection."  />
+        <meta property="og:url" content="https://ziontechgroup.com/services/incident-response-platform"  />
+        <link rel="canonical" href="https://ziontechgroup.com/services/incident-response-platform"  />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 text-white pt-20">
@@ -303,7 +294,7 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
 
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, idx) => (<li key={idx} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"/>
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         {feature}
                       </li>))}
                   </ul>
@@ -335,7 +326,7 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
                 <h3 className="text-2xl font-bold text-white mb-6">Security Integrations</h3>
                 <div className="grid grid-cols-2 gap-4">
                   {integrations.map((integration, index) => (<div key={index} className="flex items-center bg-white/10 rounded-lg p-3">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3"/>
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
                       <span className="text-gray-300">{integration}</span>
                     </div>))}
                 </div>
@@ -354,7 +345,7 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
                 <h3 className="text-2xl font-bold text-white mb-6">Perfect For</h3>
                 <div className="space-y-3">
                   {useCases.map((useCase, index) => (<div key={index} className="flex items-center bg-white/10 rounded-lg p-3">
-                      <Target className="w-5 h-5 text-yellow-400 mr-3"/>
+                      <Target className="w-5 h-5 text-yellow-400 mr-3" />
                       <span className="text-gray-300">{useCase}</span>
                     </div>))}
                 </div>
@@ -408,7 +399,7 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
 }}>
               <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-red-600 to-pink-600 text-white font-semibold rounded-lg hover:from-red-700 hover:to-pink-700 transition-all duration-300">
                 Start Free Trial
-                <ArrowRight className="ml-2 w-5 h-5"/>
+                <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <a href="tel:+13024640950" className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">
                 Call: +1 302 464 0950
@@ -466,12 +457,29 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
 export default IncidentResponsePlatform;
 }}}}
 
-export { IncidentResponsePlatform };
+export {IncidentResponsePlatform};
 
-export { IncidentResponsePlatform };
+export {IncidentResponsePlatform};
 
-export { IncidentResponsePlatform };
+export {IncidentResponsePlatform};
 
-export { IncidentResponsePlatform };
+export {IncidentResponsePlatform};
 
-export { IncidentResponsePlatform };
+export {IncidentResponsePlatform};
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

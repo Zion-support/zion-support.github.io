@@ -1,12 +1,12 @@
-import { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
-import { SEO } from "@/components/SEO";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { formatDistanceToNow } from "date-fns";
+import {useState, useEffect} from "react";
+import {useParams, Link} from "react-router-dom";
+import {SEO} from "@/components/SEO";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Button} from "@/components/ui/button";
+import {Badge} from "@/components/ui/badge";
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {formatDistanceToNow} from "date-fns";
 import PostCard from "@/components/community/PostCard";
 import UserBadges from "@/components/community/UserBadges";
 import ReputationDisplay from "@/components/community/ReputationDisplay";
@@ -29,28 +29,23 @@ const mockUser = {
         
 
 },
-        {
-            id: "badge2",
+        {id: "badge2",
             name: "Top Contributor",
             description: "Among the top 5% of contributors",
             icon: "Trophy",
-            color: "#3b82f6"
-        },
-        {
-            id: "badge3",
+            color: "#3b82f6"},
+        {id: "badge3",
             name: "First Post",
             description: "Created your first forum post",
             icon: "Star",
-            color: "#6366F1"
-        }
+            color: "#6366F1"}
     ],;
     isVerified: true,
     isModerator: false
 };
 // Mock posts by this user
 const userPosts = [
-    {
-        id: "1",
+    {id: "1",
         title: "Best practices for AI model fine-tuning",
         content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me...",
         authorId: "user1",
@@ -65,10 +60,8 @@ const userPosts = [
         downvotes: 2,
         replyCount: 12,
         isAnswered: true,
-        isFeatured: true
-    },
-    {
-        id: "11",
+        isFeatured: true},
+    {id: "11",
         title: "How to structure an AI prompt for best results",
         content: "After experimenting with different prompt formats, I've found these patterns to work consistently better...",
         authorId: "user1",
@@ -81,10 +74,8 @@ const userPosts = [
         updatedAt: "2025-03-20T14:25:00Z",
         upvotes: 36,
         downvotes: 1,
-        replyCount: 8
-    },
-    {
-        id: "12",
+        replyCount: 8},
+    {id: "12",
         title: "Setting up effective monitoring for AI systems",
         content: "Here's my approach to monitoring AI systems in production environments...",
         authorId: "user1",
@@ -97,29 +88,25 @@ const userPosts = [
         updatedAt: "2025-03-12T09:30:00Z",
         upvotes: 24,
         downvotes: 0,
-        replyCount: 6
-    }
+        replyCount: 6}
 ];
 export default function CommunityProfilePage
-export { CommunityProfilePage }() {
+export {CommunityProfilePage}() {
     const { userId } = useParams();
     const [user, setUser] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
     const [posts, setPosts] = useState([]);
-    useEffect(() => {
-        // In a real app, we would fetch the user data here
+    useEffect(() => {// In a real app, we would fetch the user data here
         // For now, we'll just use the mock data
         setUser(mockUser);
         setPosts(userPosts);
         setIsLoading(false)}, [userId]);
-    if (isLoading) {
-        return (<div className="container py-8">
+    if (isLoading) {return (<div className="container py-8">
           <div className="flex justify-center items-center h-64">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>
           </div>
         </div>)}
-    if (!user) {
-        return (<div className="container py-8">
+    if (!user) {return (<div className="container py-8">
           <h1>User not found</h1>
           <Button asChild className="mt-4">
             <Link to="/community">Back to Community</Link>
@@ -129,7 +116,7 @@ export { CommunityProfilePage }() {
   `community, forum, profile, user profile,
   ${user.name
 
-}`}/>
+}`} />
         ,
             <div className="container py-8">
         <div className="flex items-center gap-3 mb-6">
@@ -148,7 +135,7 @@ export { CommunityProfilePage }() {
               <CardHeader className="text-center">
                 <div className="flex justify-center mb-4">
                   <Avatar className="h-24 w-24">
-                    <AvatarImage src={user.avatar}/>
+                    <AvatarImage src={user.avatar} />
                     <AvatarFallback>{user.name.charAt(0)}</AvatarFallback>
                   </Avatar>
                 </div>
@@ -156,7 +143,7 @@ export { CommunityProfilePage }() {
                   {user.name}
                   {user.isVerified && (<span className="text-blue-500">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
-                        <path fillRule="evenodd" d="M8.603 3.799A4.49 4.49 0 0112 2.25c1.357 0 2.573.6 3.397 1.549a4.49 4.49 0 013.498 1.307 4.491 4.491 0 011.307 3.497A4.49 4.49 0 0121.75 12a4.49 4.49 0 01-1.549 3.397 4.491 4.491 0 01-1.307 3.497 4.491 4.491 0 01-3.497 1.307A4.49 4.49 0 0112 21.75a4.49 4.49 0 01-3.397-1.549 4.49 4.49 0 01-3.498-1.306 4.491 4.491 0 01-1.307-3.498A4.49 4.49 0 012.25 12c0-1.357.6-2.573 1.549-3.397a4.49 4.49 0 011.307-3.497 4.49 4.49 0 013.497-1.307zm7.007 6.387a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clipRule="evenodd"/>
+                        <path fillRule="evenodd" d="M8.603 3.799A4.49 4.49 0 0112 2.25c1.357 0 2.573.6 3.397 1.549a4.49 4.49 0 013.498 1.307 4.491 4.491 0 011.307 3.497A4.49 4.49 0 0121.75 12a4.49 4.49 0 01-1.549 3.397 4.491 4.491 0 01-1.307 3.497 4.491 4.491 0 01-3.497 1.307A4.49 4.49 0 0112 21.75a4.49 4.49 0 01-3.397-1.549 4.49 4.49 0 01-3.498-1.306 4.491 4.491 0 01-1.307-3.498A4.49 4.49 0 012.25 12c0-1.357.6-2.573 1.549-3.397a4.49 4.49 0 011.307-3.497 4.49 4.49 0 013.497-1.307zm7.007 6.387a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clipRule="evenodd" />
                       </svg>
                     </span>)}
                 </CardTitle>
@@ -169,12 +156,12 @@ export { CommunityProfilePage }() {
               <CardContent className="space-y-6">
                 <div>
                   <h3 className="text-sm font-medium text-muted-foreground mb-2">Reputation</h3>
-                  <ReputationDisplay reputation={user.reputation} size="lg"/>
+                  <ReputationDisplay reputation={user.reputation} size="lg" />
                 </div>
                 
                 <div>
                   <h3 className="text-sm font-medium text-muted-foreground mb-2">Badges</h3>
-                  <UserBadges badges={user.badges}/>
+                  <UserBadges badges={user.badges} />
                 </div>
                 
                 <div className="grid grid-cols-2 gap-4">
@@ -210,7 +197,7 @@ export { CommunityProfilePage }() {
                 <h2 className="text-xl font-bold mb-4">Posts by {user.name}</h2>
                 
                 {posts.length > 0 ? (<div className="space-y-4">
-                    {posts.map((post) => (<PostCard key={post.id} post={post}/>))}
+                    {posts.map((post) => (<PostCard key={post.id} post={post} />))}
                   </div>) : (<Card>
                     <CardContent className="p-6 text-center">
                       <p className="text-muted-foreground">This user hasn't created  posts yet.</p>
@@ -272,3 +259,5 @@ export { CommunityProfilePage }() {
           </div>
         </div>
       </div>)}
+
+</SEO>

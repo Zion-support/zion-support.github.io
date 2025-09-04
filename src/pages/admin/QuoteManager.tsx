@@ -27,3 +27,5 @@ export default function QuoteManager(...args[]):  {
   // Count quotes by status
   const statusCounts = {
 '"
+</typeof>
+</QuoteRequest>

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 export const TestimonialsSection: Reac t.FC = () => {
 import { motion, AnimatePresence  } from 'framer-motion';
 
-export default function Page() {
+export default function Page(props: any) {
 ,
   {
 
@@ -42,8 +42,8 @@ export const TestimonialsSection: Reac t.FC = props {
   const [currentTestimonial, setCurrentTestimonial] = useState<typeof 0>(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState<typeof true>(true);
 
-  const [currentTestimonial, setCurrentTestimonial] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true) }}};
+  const [currentTestimonial, setCurrentTestimonial] = useState<any>(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState<any>(true) }}};
 
   // Auto - play functionality
   React.useEffect(() => {
@@ -286,3 +286,13 @@ export const TestimonialsSection: Reac t.FC = props {
       </div>;
     </section>;) };
 '"`
+
+</motion>
+</button>
+</motion>
+</motion>
+</motion>
+</any>
+</any>
+</typeof>
+</typeof>

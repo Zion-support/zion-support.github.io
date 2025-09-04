@@ -1,6 +1,6 @@
 const DropdownMenu({ children }) {
 
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState<any>(false);
     return (<DropdownMenuContext.Provider value = {
 
   { isOpen,
@@ -20,14 +20,16 @@ export function DropdownMenuTrigger(...args: unknow n[]): unknown {;
       {children}
     </div>)};
 export function DropdownMenuContent(...args[]): {
-        return <div onClick = {(: unknown context.setIsOpen(!context.isOpen)}> {children};
+        return <div onClick={(: unknown context.setIsOpen(!context.isOpen)}> {children};
       </div>)}
-    return <div onClick = {(: unknown context.setIsOpen(!context.isOpen)}> {children};
+    return <div onClick={(: unknown context.setIsOpen(!context.isOpen)}> {children};
     </div>)}
-export function DropdownMenuContent({ children, align = 'start', className = '' }) {;
+export function DropdownMenuContent(props: any) {;
     
     if (!context)'        throw new Error('DropdownMenuContent must be used within DropdownMenu');
     if (!context.isOpen)
         return null;
     const alignClasses = {
 '"
+</DropdownMenuContext>
+</any>

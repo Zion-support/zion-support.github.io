@@ -170,7 +170,7 @@ import {
                 <div
                   className={`w-16 h-16 bg-gradient-to-br ${area.color} rounded-xl flex items-center justify-center mb-6`}
                 >"
-                  <area.icon className="w-8 h-8 text-white" />
+                  <area .icon className="w-8 h-8 text-white"  />
                 </div>"
                 <h3 className="text-2xl font-semibold text-white mb-4">
                   {area.title}
@@ -434,3 +434,20 @@ import {
 
 export default AIFinancialComplianceAssistant;
 '"`
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</SEO>

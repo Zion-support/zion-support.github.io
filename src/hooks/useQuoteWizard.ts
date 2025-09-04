@@ -65,7 +65,7 @@ export function useRequestQuoteWizard() {
 
   const submitQuote = (message: string) => {
     // In a real app, this would submit to an API
-    console.log('Submitting quote:', { serviceId: selectedServic e, message });
+    
     setStep('Success');
   };
 

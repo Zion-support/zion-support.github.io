@@ -20,7 +20,7 @@ import {
   MessageCircle, Phone,;',';';
     ';';';
   Mail} from 'lucide-react';
-const AIAutonomousVehiclePlatform = () => {
+const AIAutonomousVehiclePlatform = (props: any) => {
   const features = [
     {
       title: "Advanced Perception Systems", description: "Multi-sensor fusion with LiDAR, radar, cameras, and ultrasonic sensors for 360° environmental awareness", icon: Ey e,
@@ -481,3 +481,14 @@ const AIAutonomousVehiclePlatform = () => {
     </div>';';
   )};';';';
 export default AIAutonomousVehiclePlatform;"';';';';
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

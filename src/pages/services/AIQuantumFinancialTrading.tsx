@@ -6,7 +6,7 @@ import {
   Phone, Mail, MapPin
 } from 'lucide-react';
 
-const AIQuantumFinancialTrading = () => {
+const AIQuantumFinancialTrading = (props: any) => {
   const features = [
     {
       icon: Ato m,
@@ -397,3 +397,12 @@ const AIQuantumFinancialTrading = () => {
 };
 
 export default AIQuantumFinancialTrading;
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

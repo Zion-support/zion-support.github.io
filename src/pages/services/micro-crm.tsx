@@ -28,7 +28,7 @@ import {
   Award
 } from 'lucide-react';
 
-const MicroCRM = () => {
+const MicroCRM = (props: any) => {
   const contactInfo = {
     phone: "+1 302 464 0950",
     email: "kleber@ziontechgroup.com",
@@ -404,3 +404,14 @@ const MicroCRM = () => {
 };
 
 export default MicroCRM;
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

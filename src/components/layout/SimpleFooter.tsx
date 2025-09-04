@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 
-export function SimpleFooter() {
+export function SimpleFooter(props: any) {
   const currentYear = new Date().getFullYear();
 
   return (

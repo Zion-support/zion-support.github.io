@@ -1,11 +1,10 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';'''
-import { motion, AnimatePresence } from 'framer-motion';'''
-import { Activity, Server, Shield, Users, TrendingUp, BarChart3, PieChart, LineChart, TrendingDown, Clock3, RefreshCw, Loader2 } from 'lucide-react';
+import React, {useState, useEffect, useCallback, useMemo} from 'react';'''
+import {motion, AnimatePresence} from 'framer-motion';'''
+import {Activity, Server, Shield, Users, TrendingUp, BarChart3, PieChart, LineChart, TrendingDown, Clock3, RefreshCw, Loader2} from 'lucide-react';
 ;
-export const EnterpriseDashboard = () => {
-    const { trackEvent } = useAnalytics({        enableTracking: true,
-        enableUserBehaviorTracking: true;
-    });'
+export const EnterpriseDashboard = (props: any) => {
+    const { trackEvent } = useAnalytics({enableTracking: true,
+        enableUserBehaviorTracking: true;});'
     const [activeTab, setActiveTab] = useState('overview');
     const [refreshInterval, setRefreshInterval] = useState(30000); // 30 seconds;
     const [isRefreshing, setIsRefreshing] = useState(false);'
@@ -25,7 +24,7 @@ export const EnterpriseDashboard = () => {
             status: 'healthy','''
             trend: 'stable',
             change: 2,
-            threshold: { warning: 70, critical: 90 },
+            threshold: {warning: 70, critical: 90},
             lastUpdated: new Date () },
         {}
 '
@@ -38,7 +37,7 @@ export const EnterpriseDashboard = () => {
             status: 'warning','''
             trend: 'up',
             change: 8,
-            threshold: { warning: 75, critical: 90 },
+            threshold: {warning: 75, critical: 90},
             lastUpdated: new Date () },
         {}
 '
@@ -51,7 +50,7 @@ export const EnterpriseDashboard = () => {
             status: 'healthy','''
             trend: 'stable',
             change: 1,
-            threshold: { warning: 80, critical: 95 },
+            threshold: {warning: 80, critical: 95},
             lastUpdated: new Date () },
         {}
 '
@@ -64,7 +63,7 @@ export const EnterpriseDashboard = () => {
             status: 'healthy','''
             trend: 'down',
             change: -5,
-            threshold: { warning: 100, critical: 150 },
+            threshold: {warning: 100, critical: 150},
             lastUpdated: new Date () }
     ]) ;
     const [serviceStatuses] = useState ([]
@@ -241,7 +240,7 @@ if(searchQuery) {}
         return filtered}, [userActivities, searchQuery])
 }
     // comment
-const getStatusColor = (status) => {}"
+const getStatusColor = (props: any) => {}"
         switch (status) {}""
 """
 """""
@@ -265,7 +264,7 @@ default: """"",
     }
 
     // comment
-const getSeverityColor = (severity) => {}"
+const getSeverityColor = (props: any) => {}"
         switch (severity) {}""
 """
             case "critical": """
@@ -318,12 +317,12 @@ default: """,,
         <nav className="flex space-x-8 px-6">"""
           {[""",
             { id: "overview", label: "Overview", icon: BarChart3 }, """
-            { id: "performance", label: "Performance", icon: TrendingUp },"""
-            { id: "security", label: "Security", icon: Shield }, """
-            { id: "users", label: "Users", icon: Users },"""
-            { id: "services", label: "Services", icon: Server }, """
-            { id: "analytics", label: "Analytics", icon: PieChart }","
-].map(({ id, label, icon: Icon }) => (<button key="{id}" onClick="{()" =" > setActiveTab(id)} className="{"flex" items-center gap-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${activeTab === id""""""
+            {id: "performance", label: "Performance", icon: TrendingUp},"""
+            {id: "security", label: "Security", icon: Shield}, """
+            {id: "users", label: "Users", icon: Users},"""
+            {id: "services", label: "Services", icon: Server}, """
+            {id: "analytics", label: "Analytics", icon: PieChart}","
+].map(({id, label, icon: Icon}) => (<button key="{id}" onClick="{()" =" > setActiveTab(id)} className="{"flex" items-center gap-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${activeTab === id""""""
                 ? "border-indigo-500 text-indigo-600 dark: text-indigo-400""""""""",
                 : "border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"}"}>""""
               <Icon className="w-4 h-4"/" >"              {label}
@@ -338,15 +337,15 @@ default: """,,
         <AnimatePresence mode="wait">"""""""
           {activeTab === "overview" && (<motion.div key="overview" initial = {}
 
-  { opacity: 0, y: 20}} animate = {}"
-  { opacity: 1, y: 0}} exit = {}""
-  { opacity: 0, y: -20 """"">
+  {opacity: 0, y: 20}} animate = {}"
+  {opacity: 1, y: 0}} exit = {}""
+  {opacity: 0, y: -20 """"">
 """"}} className="space-y-6">"""""
               {/* comment */}""""
               <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">",
                 {systemMetrics.map((metric) => (<motion.div key="{metric.id}" initial = {}"
-  { opacity: 0, scale: 0.9}} animate = {}"""
-  { opacity: 1, scale: 1 """">
+  {opacity: 0, scale: 0.9}} animate = {}"""
+  {opacity: 1, scale: 1 """">
 """"}} className="bg-gray-50 dark: bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">""""
                     <div className="flex items-center justify-between mb-4">""""
                       <h3 className="font-medium text-gray-900 dark:text-white">",
@@ -451,9 +450,9 @@ default: """,,
 """""""
           {activeTab === "performance" && (<motion.div key="performance" initial = {}
 
-  { opacity: 0, y: 20}} animate = {}"
-  { opacity: 1, y: 0}} exit = {}""
-  { opacity: 0, y: -20 """"">
+  {opacity: 0, y: 20}} animate = {}"
+  {opacity: 1, y: 0}} exit = {}""
+  {opacity: 0, y: -20 """"">
 """"}} className="space-y-6">""""
               <div className="text-center py-8">""""
                 <TrendingUp className="w-16 h-16 text-blue-500 mx-auto mb-4"/" >"""""
@@ -490,9 +489,9 @@ default: """,,
 """""""
           {activeTab === "security" && (<motion.div key="security" initial = {}
 
-  { opacity: 0, y: 20}} animate = {}"
-  { opacity: 1, y: 0}} exit = {}""
-  { opacity: 0, y: -20 """"">
+  {opacity: 0, y: 20}} animate = {}"
+  {opacity: 1, y: 0}} exit = {}""
+  {opacity: 0, y: -20 """"">
 """"}} className="space-y-6">"""""
               {/* comment */}""""
               <div className="flex items-center gap-4 mb-6">""""
@@ -511,8 +510,8 @@ default: """,,
               {/* comment */}""""
               <div className="space-y-4">"
                 {filteredSecurityAlerts.map((alert) => (<motion.div key="{alert.id}" initial = {}"
-  { opacity: 0, x: 20}} animate = {}""
-  { opacity: 1, x: 0 """"">
+  {opacity: 0, x: 20}} animate = {}""
+  {opacity: 1, x: 0 """"">
 """"}} className="bg-white dark: bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">""""""
                     <div className="flex items-start justify-between mb-4">"""""""
                       <div className="flex items-center gap-3">""",
@@ -559,9 +558,9 @@ default: """,,
 """""""
           {activeTab === "users" && (<motion.div key="users" initial = {}
 
-  { opacity: 0, y: 20}} animate = {}"
-  { opacity: 1, y: 0}} exit = {}""
-  { opacity: 0, y: -20 """"">
+  {opacity: 0, y: 20}} animate = {}"
+  {opacity: 1, y: 0}} exit = {}""
+  {opacity: 0, y: -20 """"">
 """"}} className="space-y-6">"""""
               {/* comment */}""""
               <div className="flex items-center gap-4 mb-6">""""
@@ -579,8 +578,8 @@ default: """,,
               {/* comment */}""""
               <div className="space-y-4">"
                 {filteredUserActivities.map((activity) => (<motion.div key="{activity.id}" initial = {}"
-  { opacity: 0, x: 20}} animate = {}""
-  { opacity: 1, x: 0 """"">
+  {opacity: 0, x: 20}} animate = {}""
+  {opacity: 1, x: 0 """"">
 """"}} className="bg-white dark: bg-gray-700 rounded-lg p-4 border border-gray-200 dark:border-gray-600">""""
                     <div className="flex items-center justify-between mb-3">""""
                       <div className="flex items-center gap-3">""""
@@ -624,9 +623,9 @@ default: """,,
 """""""
           {activeTab === "services" && (<motion.div key="services" initial = {}
 
-  { opacity: 0, y: 20}} animate = {}"
-  { opacity: 1, y: 0}} exit = {}""
-  { opacity: 0, y: -20 """"">
+  {opacity: 0, y: 20}} animate = {}"
+  {opacity: 1, y: 0}} exit = {}""
+  {opacity: 0, y: -20 """"">
 """"}} className="space-y-6">""""
               <div className="text-center py-8">""""
                 <Server className="w-16 h-16 text-green-500 mx-auto mb-4"/" >"""""
@@ -641,8 +640,8 @@ default: """,,
               {/* comment */}""""
               <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">",
                 {serviceStatuses.map((service) => (<motion.div key="{service.id}" initial = {}"
-  { opacity: 0, scale: 0.9}} animate = {}"""
-  { opacity: 1, scale: 1 """">
+  {opacity: 0, scale: 0.9}} animate = {}"""
+  {opacity: 1, scale: 1 """">
 """"}} className="bg-white dark: bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">""""
                     <div className="flex items-center justify-between mb-4">""""
                       <h4 className="text-lg font-semibold text-gray-900 dark:text-white">",
@@ -690,9 +689,9 @@ default: """,,
 """""""
           {activeTab === "analytics" && (<motion.div key="analytics" initial = {}
 
-  { opacity: 0, y: 20}} animate = {}"
-  { opacity: 1, y: 0}} exit = {}""
-  { opacity: 0, y: -20 """"">
+  {opacity: 0, y: 20}} animate = {}"
+  {opacity: 1, y: 0}} exit = {}""
+  {opacity: 0, y: -20 """"">
 """"}} className="space-y-6">""""
               <div className="text-center py-8">""""
                 <PieChart className="w-16 h-16 text-purple-500 mx-auto mb-4"/" >"""""
@@ -732,7 +731,41 @@ default: """,,
 """"'"""""
 "
 
-  } catch (error) {
-    console.error(error);
-  }
+  } catch (error) {console.error(error);}
 export default Component
+
+</LineChart>
+</PieChart>
+</PieChart>
+</motion>
+</motion>
+</Server>
+</motion>
+</Users>
+</motion>
+</div>
+</motion>
+</motion>
+</div>
+</motion>
+</BarChart3>
+</LineChart>
+</div>
+</TrendingUp>
+</motion>
+</div>
+</div>
+</div>
+</Clock3>
+</TrendingDown>
+</TrendingUp>
+</motion>
+</motion>
+</div>
+</Icon>
+</RefreshCw>
+</Loader2>
+</Server>
+</Activity>
+</div>
+</div>

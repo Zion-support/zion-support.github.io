@@ -1,18 +1,19 @@
-import { useState, useEffect } from "react";
-import { JobsList } from "@/components/jobs/JobsList";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Link } from "react-router-dom";
-import { SEO } from "@/components/SEO";
-import { BriefcaseIcon, PlusCircle, Kanban } from "lucide-react";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { SuggestedTalents } from "@/components/jobs/SuggestedTalents";
-import { useJobs } from "@/hooks/useJobs";
-import { ClientOnboardingSteps } from "@/components/onboarding/ClientOnboardingSteps";
-import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard";
-import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard";
-import { useIsMobile } from "@/hooks/use-mobile";
-function ClientDashboardContent() {
+import React from 'react';
+import {useState, useEffect} from "react";
+import {JobsList} from "@/components/jobs/JobsList";
+import {Button} from "@/components/ui/button";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {Link} from "react-router-dom";
+import {SEO} from "@/components/SEO";
+import {BriefcaseIcon, PlusCircle, Kanban} from "lucide-react";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
+import {SuggestedTalents} from "@/components/jobs/SuggestedTalents";
+import {useJobs} from "@/hooks/useJobs";
+import {ClientOnboardingSteps} from "@/components/onboarding/ClientOnboardingSteps";
+import {ActiveProjectsCard} from "@/components/projects/ActiveProjectsCard";
+import {UpcomingInterviewsCard} from "@/components/interviews/UpcomingInterviewsCard";
+import {useIsMobile} from "@/hooks/use-mobile";
+function ClientDashboardContent(props: any) {
     const [activeTab, setActiveTab] = useState("all");
     const { jobs, isLoading } = useJobs();
     const [selectedJobId, setSelectedJobId] = useState(null);
@@ -24,11 +25,10 @@ function ClientDashboardContent() {
             setSelectedJobId(jobs[0].id);
             setSelectedJobTitle(jobs[0].title)}
     }, [jobs, selectedJobId]);
-    const handleJobSelect = (jobId, jobTitle) => {
-        setSelectedJobId(jobId);
+    const handleJobSelect = (props: any) => {setSelectedJobId(jobId);
         setSelectedJobTitle(jobTitle)};
     return (<>
-      <SEO title="Client Dashboard | Zion AI Marketplace" description="Manage your jobs and talent requests in the Zion AI Marketplace."/>
+      <SEO title="Client Dashboard | Zion AI Marketplace" description="Manage your jobs and talent requests in the Zion AI Marketplace." />
       
       <main className="container mx-auto px-4 py-8">
         <div className={`flex flex-col ${!isMobile ? 'md:flex-row md:justify-between md:items-center' : ''} mb-8 gap-4`}>
@@ -39,12 +39,12 @@ function ClientDashboardContent() {
           <div className={`flex gap-2 ${isMobile ? 'flex-col' : ''}`}>
             <Button variant="outline" asChild className={isMobile ? 'w-full justify-center' : ''}>
               <Link to="/hiring-tracker">
-                <Kanban className="h-4 w-4 mr-2"/> Hiring Pipeline
+                <Kanban className="h-4 w-4 mr-2" /> Hiring Pipeline
               </Link>
             </Button>
             <Button asChild className={isMobile ? 'w-full justify-center' : ''}>
               <Link to="/post-job">
-                <PlusCircle className="h-4 w-4 mr-2"/> Post New Job
+                <PlusCircle className="h-4 w-4 mr-2" /> Post New Job
               </Link>
             </Button>
           </div>
@@ -52,7 +52,7 @@ function ClientDashboardContent() {
 
         {/* New Onboarding Steps */}
         <div className="mb-8">
-          <ClientOnboardingSteps />
+          <ClientOnboardingSteps  />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -67,19 +67,19 @@ function ClientDashboardContent() {
               </TabsList>
               
               <TabsContent value="all" className="mt-0">
-                <JobsList onSelectJob={handleJobSelect}/>
+                <JobsList onSelectJob={handleJobSelect} />
               </TabsContent>
               <TabsContent value="new" className="mt-0">
-                <JobsList filter="new" onSelectJob={handleJobSelect}/>
+                <JobsList filter="new" onSelectJob={handleJobSelect} />
               </TabsContent>
               <TabsContent value="in_progress" className="mt-0">
-                <JobsList filter="in_progress" onSelectJob={handleJobSelect}/>
+                <JobsList filter="in_progress" onSelectJob={handleJobSelect} />
               </TabsContent>
               <TabsContent value="filled" className="mt-0">
-                <JobsList filter="filled" onSelectJob={handleJobSelect}/>
+                <JobsList filter="filled" onSelectJob={handleJobSelect} />
               </TabsContent>
               <TabsContent value="closed" className="mt-0">
-                <JobsList filter="closed" onSelectJob={handleJobSelect}/>
+                <JobsList filter="closed" onSelectJob={handleJobSelect} />
               </TabsContent>
             </Tabs>
           </div>
@@ -87,19 +87,19 @@ function ClientDashboardContent() {
           <div>
             <div className="sticky top-4 space-y-6">
               {/* Active Projects Card */}
-              <ActiveProjectsCard />
+              <ActiveProjectsCard  />
               
               {/* Upcoming Interviews Card */}
-              <UpcomingInterviewsCard />
+              <UpcomingInterviewsCard  />
               
               {/* AI Talent Suggestions */}
               <div>
                 <h2 className="text-xl font-semibold mb-4 flex items-center">
-                  <BriefcaseIcon className="mr-2 h-5 w-5 text-primary"/>
+                  <BriefcaseIcon className="mr-2 h-5 w-5 text-primary" />
                   AI Talent Suggestions
                 </h2>
                 
-                {selectedJobId ? (<SuggestedTalents jobId={selectedJobId}/>) : (<div className="bg-muted/30 border rounded-lg p-6 text-center">
+                {selectedJobId ? (<SuggestedTalents jobId={selectedJobId} />) : (<div className="bg-muted/30 border rounded-lg p-6 text-center">
                     <p className="text-muted-foreground">
                       Select a job to see AI-matched talent suggestions
                     </p>
@@ -112,7 +112,6 @@ function ClientDashboardContent() {
       
     </>)}
 export default function ClientDashboard
-export { ClientDashboard }() {
-    return (<ProtectedRoute>
-      <ClientDashboardContent />
+export {ClientDashboard}() {return (<ProtectedRoute>
+      <ClientDashboardContent  />
     </ProtectedRoute>)}

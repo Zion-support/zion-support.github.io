@@ -1,5 +1,5 @@
-import { Package, Zap, Users, Globe, Cpu, Database, Shield, Target, TrendingUp, Rocket, Settings } from 'lucide-react';
-const MicroSAAS = () => {
+import {Package, Zap, Users, Globe, Cpu, Database, Shield, Target, TrendingUp, Rocket, Settings} from 'lucide-react';
+const MicroSAAS = (props: any) => {
     const microsaasServices = [
         {
             icon: Package,
@@ -7,36 +7,26 @@ const MicroSAAS = () => {
             description: "End-to-end development of scalable software-as-a-service applications",
             features: ["Custom SAAS platforms", "Multi-tenant architecture", "Subscription management", "API development"]
         },
-        {
-            icon: Zap,
+        {icon: Zap,
             title: "Rapid Prototyping",
             description: "Quick development of MVPs and prototypes to validate business ideas",
-            features: ["MVP development", "Proof of concept", "User testing", "Iterative design"]
-        },
-        {
-            icon: Users,
+            features: ["MVP development", "Proof of concept", "User testing", "Iterative design"]},
+        {icon: Users,
             title: "User Management",
             description: "Comprehensive user authentication, authorization, and management systems",
-            features: ["User registration", "Role-based access", "Single sign-on", "User analytics"]
-        },
-        {
-            icon: Database,
+            features: ["User registration", "Role-based access", "Single sign-on", "User analytics"]},
+        {icon: Database,
             title: "Data Management",
             description: "Scalable database design and data processing solutions",
-            features: ["Database architecture", "Data migration", "Backup strategies", "Performance optimization"]
-        },
-        {
-            icon: Shield,
+            features: ["Database architecture", "Data migration", "Backup strategies", "Performance optimization"]},
+        {icon: Shield,
             title: "Security & Compliance",
             description: "Enterprise-grade security and compliance for SAAS applications",
-            features: ["Data encryption", "GDPR compliance", "SOC 2 certification", "Security auditing"]
-        },
-        {
-            icon: Globe,
+            features: ["Data encryption", "GDPR compliance", "SOC 2 certification", "Security auditing"]},
+        {icon: Globe,
             title: "Cloud Deployment",
             description: "Scalable cloud infrastructure and deployment solutions",
-            features: ["AWS/Azure deployment", "Container orchestration", "Auto-scaling", "Monitoring"]
-        }
+            features: ["AWS/Azure deployment", "Container orchestration", "Auto-scaling", "Monitoring"]}
     ];
     const benefits = [
         "Lower development costs and faster time to market",
@@ -47,68 +37,44 @@ const MicroSAAS = () => {
         "Continuous updates and feature improvements"
     ];
     const technologies = [
-        {
-            name: "Frontend",
+        {name: "Frontend",
             description: "React, Vue.js, Angular with modern UI frameworks",
-            icon: Cpu
-        },
-        {
-            name: "Backend",
+            icon: Cpu},
+        {name: "Backend",
             description: "Node.js, Python, Java with microservices architecture",
-            icon: Database
-        },
-        {
-            name: "Cloud",
+            icon: Database},
+        {name: "Cloud",
             description: "AWS, Azure, GCP with containerization and orchestration",
-            icon: Globe
-        },
-        {
-            name: "Database",
+            icon: Globe},
+        {name: "Database",
             description: "PostgreSQL, MongoDB, Redis with data optimization",
-            icon: Target
-        },
-        {
-            name: "Security",
+            icon: Target},
+        {name: "Security",
             description: "OAuth, JWT, encryption with compliance frameworks",
-            icon: Shield
-        },
-        {
-            name: "Monitoring",
+            icon: Shield},
+        {name: "Monitoring",
             description: "Real-time analytics, logging, and performance monitoring",
-            icon: TrendingUp
-        }
+            icon: TrendingUp}
     ];
     const industries = [
-        {
-            title: "Healthcare",
+        {title: "Healthcare",
             description: "HIPAA-compliant patient management and telemedicine platforms",
-            icon: Shield
-        },
-        {
-            title: "Finance",
+            icon: Shield},
+        {title: "Finance",
             description: "Secure financial planning and investment management tools",
-            icon: TrendingUp
-        },
-        {
-            title: "Education",
+            icon: TrendingUp},
+        {title: "Education",
             description: "Learning management systems and educational technology platforms",
-            icon: Users
-        },
-        {
-            title: "E-commerce",
+            icon: Users},
+        {title: "E-commerce",
             description: "Online marketplace and retail management solutions",
-            icon: Package
-        },
-        {
-            title: "Real Estate",
+            icon: Package},
+        {title: "Real Estate",
             description: "Property management and real estate investment platforms",
-            icon: Target
-        },
-        {
-            title: "Manufacturing",
+            icon: Target},
+        {title: "Manufacturing",
             description: "Supply chain management and production optimization tools",
-            icon: Settings
-        }
+            icon: Settings}
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -116,7 +82,7 @@ const MicroSAAS = () => {
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
             <div className="inline-flex items-center px-4 py-2 bg-indigo-500/10 text-indigo-400 rounded-full text-sm font-medium mb-6">
-              <Package className="w-4 h-4 mr-2"/>
+              <Package className="w-4 h-4 mr-2" />
               MicroSAAS
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -155,7 +121,7 @@ const MicroSAAS = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {microsaasServices.map((service, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-indigo-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <service.icon className="w-8 h-8 text-white"/>
+                  <service .icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300 mb-4">{service.description}</p>
@@ -191,7 +157,7 @@ const MicroSAAS = () => {
             </div>
             <div className="bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-2xl p-8 border border-indigo-500/30">
               <div className="text-center">
-                <Rocket className="w-24 h-24 text-indigo-400 mx-auto mb-4"/>
+                <Rocket className="w-24 h-24 text-indigo-400 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-white mb-2">SAAS Success</h3>
                 <p className="text-gray-300 mb-6">
                   We've helped numerous entrepreneurs build successful SAAS businesses 
@@ -224,7 +190,7 @@ const MicroSAAS = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {technologies.map((tech, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-indigo-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <tech.icon className="w-8 h-8 text-white"/>
+                  <tech .icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{tech.name}</h3>
                 <p className="text-gray-300">{tech.description}</p>
@@ -249,7 +215,7 @@ const MicroSAAS = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {industries.map((industry, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-indigo-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <industry.icon className="w-8 h-8 text-white"/>
+                  <industry .icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{industry.title}</h3>
                 <p className="text-gray-300">{industry.description}</p>

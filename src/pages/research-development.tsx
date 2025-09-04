@@ -40,9 +40,9 @@ import {
   Telescope
 } from 'lucide-react';
 
-export default function ResearchDevelopment() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedArea, setSelectedArea] = useState('all');
+export default function ResearchDevelopment(props: any) {
+  const [searchTerm, setSearchTerm] = useState<any>('');
+  const [selectedArea, setSelectedArea] = useState<any>('all');
 
   const researchAreas = [
     'all',
@@ -401,3 +401,8 @@ export default function ResearchDevelopment() {
     </div>
   );
 }
+
+</motion>
+</motion>
+</any>
+</any>

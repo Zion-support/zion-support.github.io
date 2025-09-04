@@ -1,13 +1,12 @@
 import React from "react";
-import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm";
-import { useAuth } from "@/hooks/useAuth";
-import { Navigate } from "react-router-dom";
+import {ServiceProviderRegistrationForm} from "@/components/profile/ServiceProviderRegistrationForm";
+import {useAuth} from "@/hooks/useAuth";
+import {Navigate} from "react-router-dom";
 export default function ServiceOnboarding
-export { ServiceOnboarding }() {
+export {ServiceOnboarding}() {
     const { user, isLoading } = useAuth();
     // If not authenticated, redirect to login
-    if (!isLoading && !user) {
-        return <Navigate to="/login" replace/>}
+    if (!isLoading && !user) {return <Navigate to="/login" replace />}
     return (<>
       
       <div className="bg-zion-blue min-h-screen py-8 md:py-12">
@@ -20,7 +19,7 @@ export { ServiceOnboarding }() {
             </p>
           </div>
           
-          <ServiceProviderRegistrationForm />
+          <ServiceProviderRegistrationForm  />
         </div>
       </div>
       

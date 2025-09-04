@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { useState } from 'react';
-export default function Page() {
+import React, {useState} from 'react';
+import {useState} from 'react';
+export default function Page(props: any) {
 );
 
   const onSubmit = async data => {
@@ -25,10 +25,7 @@ export default function Page() {
       form.setError('root', {
 
         message: 'An error occurred.Please try again.'});
-    } finally {
-
-      setIsSubmitting(false);
-    }
+    } finally {setIsSubmitting(false);}
   };
 
   return ()
@@ -54,16 +51,16 @@ export default function Page() {
               </FormLabel>
               <FormControl>"
                 <div className="relative">
-                  <Input"
+                  <Input "
                     placeholder="you@example.com"
                     className="bg-zion-blue pl-10 placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
                     {...field}"
                     autoComplete="off"
-                  />"
-                  <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
+                    />"
+                  <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"  />
                 </div>
               </FormControl>"
-              <FormMessage className="text-red-400" />
+              <FormMessage className="text-red-400"  />
             </FormItem>
           )}
         />
@@ -76,14 +73,14 @@ export default function Page() {
               <FormLabel className="text-zion-slate-light">Password</FormLabel>
               <FormControl>"
                 <div className="relative">
-                  <Input'
+                  <Input '
                     type={showPassword ? 'text' : 'password'}"
                     placeholder="••••••••"
                     className="bg-zion-blue pl-10 border-zion-blue-light focus:border-zion-purple"
                     {...field}"
                     autoComplete="off"
-                  />"
-                  <LogIn className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
+                    />"
+                  <LogIn className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"  />
                   <Button"
                     type="button"
                     variant="ghost"
@@ -92,9 +89,9 @@ export default function Page() {
                     onClick={() => setShowPassword(!showPassword)}
                   >
                     {showPassword ? ("
-                      <EyeOff className="h-4 w-4" />
+                      <EyeOff className="h-4 w-4"  />
                     ) : ("
-                      <Eye className="h-4 w-4" />
+                      <Eye className="h-4 w-4"  />
                     )}"
                     <span className="sr-only">
                       {showPassword ? 'Hide password' : 'Show password'}
@@ -102,7 +99,7 @@ export default function Page() {
                   </Button>
                 </div>
               </FormControl>"
-              <FormMessage className="text-red-400" />
+              <FormMessage className="text-red-400"  />
             </FormItem>
           )}
         />
@@ -130,7 +127,7 @@ export default function Page() {
             </>
           ) : (
             <>"
-              <LogIn className="h-4 w-4 mr-2" />
+              <LogIn className="h-4 w-4 mr-2"  />
               Sign in
             </>
           )}
@@ -151,12 +148,15 @@ export default function Page() {
 
 export default LoginForm;
 
-export { LoginForm };
+export {LoginForm};
 
-export { LoginForm };
+export {LoginForm};
 
-export { LoginForm };
+export {LoginForm};
 
-export { LoginForm };
+export {LoginForm};
 
-export { Page, LoginForm };
+export {Page, LoginForm};
+
+</FormField>
+</FormField>

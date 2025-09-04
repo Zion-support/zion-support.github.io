@@ -54,13 +54,11 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [;
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology["Python", "OpenAI GPT-4", "React", "Node.js", "PostgreSQL"],;
+    technicalSpecs: {technology["Python", "OpenAI GPT-4", "React", "Node.js", "PostgreSQL"],;
       integrations["GitHub", "GitLab", "Bitbucket", "Slack", "Jira"],;
       apiEndpoints: 75,
       uptime: "99.9%",
-      security["SOC 2", "GDPR", "End-to-end encryption", "OAuth 2.0"];
-    },;
+      security["SOC 2", "GDPR", "End-to-end encryption", "OAuth 2.0"];},;
     competitors["SonarQube", "CodeClimate", "DeepCode", "Snyk"],;
     marketSize: "$2.1 billion by 2025"
   },
@@ -118,13 +116,11 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [;
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology["Python", "TensorFlow", "React", "Node.js", "MongoDB"],;
+    technicalSpecs: {technology["Python", "TensorFlow", "React", "Node.js", "MongoDB"],;
       integrations["Shopify", "WooCommerce", "Mailchimp", "HubSpot", "Salesforce"],;
       apiEndpoints: 200,
       uptime: "99.9%",
-      security["SOC 2", "GDPR", "CCPA", "End-to-end encryption"];
-    },;
+      security["SOC 2", "GDPR", "CCPA", "End-to-end encryption"];},;
     competitors["HubSpot", "Marketo", "Pardot", "ActiveCampaign"],;
     marketSize: "$8.2 billion by 2025"
   },
@@ -182,13 +178,11 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [;
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology["Python", "OpenAI GPT-4", "React", "Node.js", "Redis"],;
+    technicalSpecs: {technology["Python", "OpenAI GPT-4", "React", "Node.js", "Redis"],;
       integrations["Zendesk", "Intercom", "Salesforce", "Shopify", "Slack"],;
       apiEndpoints: 100,
       uptime: "99.9%",
-      security["SOC 2", "GDPR", "End-to-end encryption", "Data anonymization"];
-    },;
+      security["SOC 2", "GDPR", "End-to-end encryption", "Data anonymization"];},;
     competitors["Intercom", "Zendesk", "Drift", "MobileMonkey"],;
     marketSize: "$1.8 billion by 2025"
   },
@@ -246,13 +240,11 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [;
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],;
+    technicalSpecs: {technology["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],;
       integrations["Bloomberg", "Yahoo Finance", "Alpha Vantage", "Plaid", "Stripe"],;
       apiEndpoints: 150,
       uptime: "99.9%",
-      security["SOC 2", "GDPR", "FINRA", "End-to-end encryption"];
-    },;
+      security["SOC 2", "GDPR", "FINRA", "End-to-end encryption"];},;
     competitors["Bloomberg Terminal", "Morningstar", "YCharts", "FactSet"],;
     marketSize: "$4.7 billion by 2025"
   },
@@ -310,13 +302,11 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [;
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology["Python", "TensorFlow", "PyTorch", "React", "Node.js"],;
+    technicalSpecs: {technology["Python", "TensorFlow", "PyTorch", "React", "Node.js"],;
       integrations["Epic", "Cerner", "Allscripts", "DICOM", "HL7"],;
       apiEndpoints: 100,
       uptime: "99.9%",
-      security["HIPAA", "SOC 2", "GDPR", "End-to-end encryption"];
-    },;
+      security["HIPAA", "SOC 2", "GDPR", "End-to-end encryption"];},;
     competitors["IBM Watson Health", "Google Health", "Microsoft Healthcare", "Amazon Health"],;
     marketSize: "$6.7 billion by 2025"
   },
@@ -374,13 +364,11 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [;
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology["Python", "OpenAI GPT-4", "React", "Node.js", "PostgreSQL"],;
+    technicalSpecs: {technology["Python", "OpenAI GPT-4", "React", "Node.js", "PostgreSQL"],;
       integrations["Clio", "MyCase", "PracticePanther", "DocuSign", "Adobe Sign"],;
       apiEndpoints: 125,
       uptime: "99.9%",
-      security["SOC 2", "GDPR", "End-to-end encryption", "Audit logging"];
-    },;
+      security["SOC 2", "GDPR", "End-to-end encryption", "Audit logging"];},;
     competitors["Kira Systems", "Evisort", "ContractPodAi", "Luminance"],;
     marketSize: "$3.2 billion by 2025"
   },
@@ -438,13 +426,11 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [;
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology["Python", "TensorFlow", "React", "Node.js", "MongoDB"],;
+    technicalSpecs: {technology["Python", "TensorFlow", "React", "Node.js", "MongoDB"],;
       integrations["Canvas", "Blackboard", "Moodle", "Google Classroom", "Microsoft Teams"],;
       apiEndpoints: 100,
       uptime: "99.9%",
-      security["FERPA", "COPPA", "GDPR", "End-to-end encryption"];
-    },;
+      security["FERPA", "COPPA", "GDPR", "End-to-end encryption"];},;
     competitors["Kira Systems", "Evisort", "ContractPodAi", "Luminance"],;
     marketSize: "$5.3 billion by 2025"
   },
@@ -502,13 +488,11 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [;
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],;
+    technicalSpecs: {technology["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],;
       integrations["SAP", "Oracle", "NetSuite", "Shopify", "WMS systems"],;
       apiEndpoints: 200,
       uptime: "99.9%",
-      security["SOC 2", "GDPR", "End-to-end encryption", "API security"];
-    },;
+      security["SOC 2", "GDPR", "End-to-end encryption", "API security"];},;
     competitors["Blue Yonder", "Manhattan Associates", "Oracle SCM", "SAP SCM"],;
     marketSize: "$7.8 billion by 2025"
   },
@@ -566,13 +550,11 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [;
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology["Python", "TensorFlow", "React", "Node.js", "Elasticsearch"],;
+    technicalSpecs: {technology["Python", "TensorFlow", "React", "Node.js", "Elasticsearch"],;
       integrations["Splunk", "QRadar", "LogRhythm", "CrowdStrike", "SentinelOne"],;
       apiEndpoints: 150,
       uptime: "99.9%",
-      security["SOC 2", "ISO 27001", "GDPR", "End-to-end encryption"];
-    },;
+      security["SOC 2", "ISO 27001", "GDPR", "End-to-end encryption"];},;
     competitors["CrowdStrike", "SentinelOne", "Darktrace", "Cylance"],;
     marketSize: "$9.8 billion by 2025"
   },
@@ -630,13 +612,11 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [;
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],;
+    technicalSpecs: {technology["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],;
       integrations["MLS systems", "Zillow", "Redfin", "Realtor.com", "Property databases"],;
       apiEndpoints: 100,
       uptime: "99.9%",
-      security["SOC 2", "GDPR", "End-to-end encryption", "Data privacy"];
-    },;
+      security["SOC 2", "GDPR", "End-to-end encryption", "Data privacy"];},;
     competitors["Zillow", "Redfin", "Realtor.com", "CoreLogic"],;
     marketSize: "$4.2 billion by 2025"
 
@@ -653,17 +633,12 @@ export const SERVICE_PRICING_TIERS = {
 
 
 },
-  professional: {
-    name: "Professional",
+  professional: {name: "Professional",
     features["Advanced features", "Priority support", "Custom integrations", "API access", "Analytics dashboard"],;
-    priceRange: "$99 - $399/month"
-  },
-  enterprise: {
-    name: "Enterprise",
+    priceRange: "$99 - $399/month"},
+  enterprise: {name: "Enterprise",
     features["Full feature set", "24/7 dedicated support", "Custom development", "White-label options", "SLA guarantees", "On-premise deployment"],;
-    priceRange: "$399 - $1,999/month"
-
-};
+    priceRange: "$399 - $1,999/month"};
 // Service categories for easy filtering
 export const SERVICE_CATEGORIES = [;
   "AI & Development",
@@ -678,18 +653,9 @@ export const SERVICE_CATEGORIES = [;
   "AI & Real Estate"
 ];
 // Contact information for all services
-export const ZION_TECH_GROUP_CONTACT = {
-  phone: "+1 302 464 0950",
+export const ZION_TECH_GROUP_CONTACT = {phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
   website: "https://ziontechgroup.com",
   address: "364 E Main St STE 1008,
-  Middletown DE 19709";
-
-
-
-
-
-
-
-};
+  Middletown DE 19709";};
 }}

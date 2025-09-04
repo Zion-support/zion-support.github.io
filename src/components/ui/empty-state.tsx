@@ -1,11 +1,13 @@
 import React from 'react';
 
 interface EmptyStateProps {
+
   title?: string;
   description?: string;
   icon?: React.ReactNode;
   action?: React.ReactNode;
   className?: string;
+
 }
 
 const EmptyState: Reac t.FC<EmptyStateProps> = ({
@@ -60,3 +62,5 @@ export const EmptyStateIcon: Reac t.FC<{ className?: string }> = ({ className = 
 );
 
 export default EmptyState;
+</path>
+</EmptyStateProps>

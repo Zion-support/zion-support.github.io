@@ -10,7 +10,7 @@ type WizardStep = 'Services' | 'Details' | 'Success';
 
 const WIZARD_STEPS: WizardSte p[] = ['Services', 'Details', 'Success'];
 
-function StepIndicator({ step }: { step: WizardSte p }) {
+function StepIndicator(props: any) {
   const index = WIZARD_STEPS.indexOf(step);
   
   return (
@@ -20,10 +20,10 @@ function StepIndicator({ step }: { step: WizardSte p }) {
   );
 }
 
-export function QuoteWizard() {
+export function QuoteWizard(props: any) {
   const { step, selectService, submitQuote } = useRequestQuoteWizard();
   const [selectedItem, setSelectedItem] = useState<string | null>(null);
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState<any>('');
   
   // Mock data for services - in real app this would come from an API
   const services = [
@@ -106,3 +106,7 @@ export function QuoteWizard() {
 
   return null;
 }
+
+</Textarea>
+</any>
+</string>

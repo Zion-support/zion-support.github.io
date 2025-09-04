@@ -1,8 +1,8 @@
-import { SEO } from "@/components/SEO";
-import { Link } from 'react-router-dom';
-import { Check, Cloud, Zap, Shield, Database, Users, Target, Server } from 'lucide-react';
+import {SEO} from "@/components/SEO";
+import {Link} from 'react-router-dom';
+import {Check, Cloud, Zap, Shield, Database, Users, Target, Server} from 'lucide-react';
 export default function DevOpsCloudServices
-export { DevOpsCloudServices }() {
+export {DevOpsCloudServices}() {
     const devopsServices = [
         {
             icon: Cloud,
@@ -25,8 +25,7 @@ export { DevOpsCloudServices }() {
                 'Better resource utilization'
             ]
         },
-        {
-            icon: Zap,
+        {icon: Zap,
             title: 'CI/CD Pipeline Development',
             description: 'Automated continuous integration and deployment pipelines for faster, reliable software delivery.',
             price: 'From $6,500/project',
@@ -44,10 +43,8 @@ export { DevOpsCloudServices }() {
                 'Reduced deployment errors',
                 'Improved code quality',
                 'Enhanced team productivity'
-            ]
-        },
-        {
-            icon: Shield,
+            ]},
+        {icon: Shield,
             title: 'Infrastructure as Code (IaC)',
             description: 'Automated infrastructure provisioning and management using modern IaC tools and practices.',
             price: 'From $5,500/project',
@@ -65,10 +62,8 @@ export { DevOpsCloudServices }() {
                 'Reduced manual configuration errors',
                 'Faster environment provisioning',
                 'Better cost control and visibility'
-            ]
-        },
-        {
-            icon: Database,
+            ]},
+        {icon: Database,
             title: 'Container Orchestration & Kubernetes',
             description: 'Enterprise-grade container management and orchestration with Kubernetes and Docker.',
             price: 'From $7,500/project',
@@ -86,10 +81,8 @@ export { DevOpsCloudServices }() {
                 'Better resource utilization',
                 'Enhanced deployment flexibility',
                 'Reduced operational overhead'
-            ]
-        },
-        {
-            icon: Users,
+            ]},
+        {icon: Users,
             title: 'DevOps Consulting & Training',
             description: 'Strategic DevOps consulting and comprehensive team training for organizational transformation.',
             price: 'From $4,500/month',
@@ -107,8 +100,7 @@ export { DevOpsCloudServices }() {
                 'Better team collaboration',
                 'Reduced operational costs',
                 'Enhanced software quality'
-            ]
-        },
+            ]},
         {
             icon: Server,
             title: 'Monitoring & Observability',
@@ -138,18 +130,14 @@ export { DevOpsCloudServices }() {
             strengths: 'Market leader, extensive services',
             pricing: 'Competitive, pay-as-you-use'
         },
-        {
-            name: 'Microsoft Azure',
+        {name: 'Microsoft Azure',
             services: 'Virtual Machines, Blob Storage, Functions, AKS',
             strengths: 'Enterprise integration, hybrid cloud',
-            pricing: 'Enterprise discounts, reserved instances'
-        },
-        {
-            name: 'Google Cloud Platform (GCP)',
+            pricing: 'Enterprise discounts, reserved instances'},
+        {name: 'Google Cloud Platform (GCP)',
             services: 'Compute Engine, Cloud Storage, Cloud Functions, GKE',
             strengths: 'AI/ML capabilities, global network',
-            pricing: 'Sustained use discounts, committed use'
-        },
+            pricing: 'Sustained use discounts, committed use'},
         {
             name: 'Multi-Cloud Strategy',
             services: 'Cross-platform orchestration, hybrid solutions',
@@ -192,18 +180,14 @@ export { DevOpsCloudServices }() {
             roi: '40-60% cost reduction',
             implementation: '20-32 weeks'
         },
-        {
-            title: 'Multi-Cloud Strategy',
+        {title: 'Multi-Cloud Strategy',
             description: 'Implementation of multi-cloud architecture for improved resilience and cost optimization.',
             roi: '25-45% cost savings',
-            implementation: '16-24 weeks'
-        },
-        {
-            title: 'DevOps Transformation',
+            implementation: '16-24 weeks'},
+        {title: 'DevOps Transformation',
             description: 'Complete organizational DevOps transformation with process optimization and tool implementation.',
             roi: '30-50% efficiency improvement',
-            implementation: '24-36 weeks'
-        },
+            implementation: '24-36 weeks'},
         {
             title: 'Cloud-Native Development',
             description: 'Modern cloud-native application development with CI/CD and infrastructure automation.',
@@ -212,7 +196,7 @@ export { DevOpsCloudServices }() {
 
     ];
     return (<div className="min-h-screen bg-background">
-      <SEO title="DevOps & Cloud Services - Zion Tech Group" description="Comprehensive DevOps consulting, cloud migration, CI/CD pipelines, and infrastructure automation services for modern software delivery." keywords="DevOps services, cloud migration, CI/CD, Kubernetes, infrastructure as code, cloud consulting, automation" canonical="https://ziontechgroup.com/services/devops-cloud"/>
+      <SEO title="DevOps & Cloud Services - Zion Tech Group" description="Comprehensive DevOps consulting, cloud migration, CI/CD pipelines, and infrastructure automation services for modern software delivery." keywords="DevOps services, cloud migration, CI/CD, Kubernetes, infrastructure as code, cloud consulting, automation" canonical="https://ziontechgroup.com/services/devops-cloud" />
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-orange-900 via-red-900 to-pink-900 text-white py-20">
@@ -242,7 +226,7 @@ export { DevOpsCloudServices }() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {devopsServices.map((service, index) => (<div key={service.title} className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow border border-gray-200">
                 <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
-                  <service.icon className="w-8 h-8 text-orange-600"/>
+                  <service .icon className="w-8 h-8 text-orange-600" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
                 <p className="text-gray-600 mb-4">{service.description}</p>
@@ -252,7 +236,7 @@ export { DevOpsCloudServices }() {
                 </div>
                 <ul className="space-y-2 mb-4">
                   {service.features.slice(0, 4).map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-gray-700">
-                      <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"/>
+                      <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                       {feature}
                     </li>))}
                 </ul>
@@ -342,7 +326,7 @@ export { DevOpsCloudServices }() {
 
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (<div key={index} className="flex items-start">
-                    <Check className="w-6 h-6 text-orange-500 mr-3 mt-0.5 flex-shrink-0"/>
+                    <Check className="w-6 h-6 text-orange-500 mr-3 mt-0.5 flex-shrink-0" />
                     <span className="text-gray-700">{benefit}</span>
                   </div>))}
               </div>
@@ -386,7 +370,7 @@ export { DevOpsCloudServices }() {
           <div className="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {industries.map((industry, index) => (<div key={industry} className="bg-gray-50 rounded-xl p-6 text-center hover:bg-orange-50 transition-colors border border-gray-200">
                 <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Target className="w-8 h-8 text-orange-600"/>
+                  <Target className="w-8 h-8 text-orange-600" />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900">{industry}</h3>
               </div>))}

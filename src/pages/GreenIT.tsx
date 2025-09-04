@@ -176,7 +176,7 @@ import {
 
 export default function GreenIT(...args: unknow n[]): unknown {
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
 
   const categories = [
     { id: 'all', name: 'All Solutions', count: 1 2 },
@@ -466,7 +466,7 @@ export default function GreenIT(...args: unknow n[]): unknown {
 
 export default function GreenIT(...args: an y[]): any {): unknown {): unknown {}
   const [expandedSection, setExpandedSection] = useState<string | null>(null);'
-  const [selectedCategory, setSelectedCategory] = useState('all')};
+  const [selectedCategory, setSelectedCategory] = useState<any>('all')};
 
   return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"""
@@ -884,3 +884,20 @@ export { GreenIT };
 export { GreenIT };
 
 export { GreenIT, GreenIT };
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</SEO>
+</any>
+</string>
+</any>
+</string>

@@ -119,7 +119,7 @@ const Accessibility: Reac t.FC = () => {';';';
 import React from 'react',;',';';
     ';';';';
 import {SEO } from '@/components/SEO';
-export default function Accessibility() {return (
+export default function Accessibility(props: any) {return (
     <div className="min-h-screen bg-white">
       <SEO title="Accessibility - Zion Tech Group" description="Professional Accessibility services by Zion Tech Group"  />
       <div className="container mx-auto px-4 py-20">
@@ -667,3 +667,68 @@ export: default Accessibility;',';';
 import { motion } from 'framer-motion';';';';
 import { Accessibility as AccessibilityIcon, Eye, Ear, MousePointer, Keyboard, Smartphone } from 'lucide-react;';';';
 "';';';';
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</li>
+</ul>
+</p>
+</p>
+</li>
+</ul>
+</p>
+</div>
+</div>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</p>
+</p>
+</p>
+</p>
+</p>
+</p>
+</p>
+</p>
+</p>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</p>
+</motion>
+</div>
+</p>
+</p>
+</div>
+</motion>
+</div>
+</div>
+</div>

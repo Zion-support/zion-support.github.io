@@ -1,3 +1,4 @@
+import React from 'react';
 import { motion } from 'framer-motion';
 import SEO from '@/components/SEO';
 import { 
@@ -659,3 +660,15 @@ export { AIContentGenerator }(...args[]):  {
     </>;
   );
 }
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</SEO>

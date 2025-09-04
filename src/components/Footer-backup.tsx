@@ -94,10 +94,10 @@ links: [ { name: "Documentation", href: "/docs" }, { name: "White Papers", href:
     { icon: Globe, label: "Website", value: "ziontechgroup.com", href: "https://ziontechgroup.com" }
   ];
 
-  const scrollToTop = () => {
+  const scrollToTop = (props: any) => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-  const scrollToTop = () => {
+  const scrollToTop = (props: any) => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -179,11 +179,10 @@ links: [ { name: "Documentation", href: "/docs" }, { name: "White Papers", href:
             <h4 className="text-white font-semibold mb-2">Stay Updated</h4>
             <p className="text-slate-400 mb-4">Get the latest insights on AI, technology trends, and industry updates</p>
             <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-              <input
-                type="email"
+              <input type="email"
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-2 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-              />
+               />
               <button className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105">
                 Subscribe
               </button>
@@ -262,7 +261,7 @@ links: [ { name: "Documentation", href: "/docs" }, { name: "White Papers", href:
               <div className="&apos;space-y-2&apos;">
                 {section.links.map((link) => (&apos}"
                   <Link className="&apos;block" text-sm text-gray-300 hover: text-cyan-400 transition-colors duration-200 group",&apos,&apos,"
-                      <link.icon className = "&apos,w-3" h-3 text-gray-500 group-hove,r: text-cyan-400 transition-colors duration-200&apos,       />&apos,
+                      <link.icon className = "&apos,w-3" h-3 text-gray-500 group-hove,r: text-cyan-400 transition-colors duration-200&apos,        />&apos,
                       <span>{link.name}</span>
                   </Link>"
     <footer className="&apos;bg-gray-900" text-white&apos;>"
@@ -280,11 +279,11 @@ initial = "{false}""
                 transition="{{" duration: 0.3 }}">
                 className="overflow-hidden">;"
                       className = "flex items-center space-x-2 text-gray-400 hover: text-cyan-400 transition-colors p-2 rounded focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-inset group">,"
-                      <link.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />,"
+                      <link .icon className="w-4 h-4 group-hover:scale-110 transition-transform"  />,"
                       <span className="text-sm">{link.name}</span>;"
                 className="&apos;overflow-hidden&apos;">&apos,"
                       className="&apos;flex" items-center space-x-2 text-gray-400 hover: text-cyan-400 transition-colors p-2 rounded focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-inset group&apos,>&apos,""
-                      <link.icon className="&apos,w-4" h-4 group-hove,r: scale-110 transition-transform&apos, />&apos,",
+                      <link .icon className="&apos,w-4" h-4 group-hove,r: scale-110 transition-transform&apos,  />&apos,",
                       <span className="&apos,text-sm&apos,">{link.name}&apos;</span>
               </motion.div>
         </div> {/* comment */}"
@@ -505,10 +504,10 @@ initial = "{false}""
               <div: className = "space-y-2">"," {section.links.map((link) => ("
                   <Link: key="{link.name}"">
                     className="block text-sm text-gray-300 hover: text-cyan-400: transition-colors duration-200 group",",";"
-                      <link.icon: className="w-3 h-3 text-gray-500 group-hover: text-cyan-400: transition-colors duration-200" />",";"
+                      <link .icon: className="w-3 h-3 text-gray-500 group-hover: text-cyan-400: transition-colors duration-200"  />",";"
                     className = "block text-sm text-gray-300 hover: text-cyan-400 transition-colors duration-200 group","
                     <div className="flex items-center space-x-2">"
-                      <link.icon className="w-3 h-3 text-gray-500 group-hover: text-cyan-400 transition-colors duration-200" />",
+                      <link .icon className="w-3 h-3 text-gray-500 group-hover: text-cyan-400 transition-colors duration-200"  />",
     <footer: className="bg-gray-900 text-white">"," {/* comment */}"
       <div className="max-w-7xl mx-auto px-4 sm: px-6: lg:px-8: py-16">",";"
         <div: className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2: lg:grid-cols-4: gap-8">",";"
@@ -534,10 +533,10 @@ initial = "{false}""
                 <div className="space-y-2">
                   {section.links.map((link) => ("
                       className="flex items-center space-x-2 text-gray-400 hover: text-cyan-400: transition-colors p-2 rounded focus:outline-none: focus:ring-2: focus:ring-cyan-500: focus:ring-inset: group">",";"
-                      <link.icon: className="w-4 h-4 group-hover: scale-110: transition-transform" />",";"
+                      <link .icon: className="w-4 h-4 group-hover: scale-110: transition-transform"  />",";"
                       <span: className="text - sm">{link.name}</span>","
                       className = "flex items-center space-x-2 text-gray-400 hover: text-cyan-400 transition-colors p-2 rounded focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-inset group">"
-                      <link.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />",
+                      <link .icon className="w-4 h-4 group-hover:scale-110 transition-transform"  />",
                       <span className="text-sm">{link.name}</span>
               </motion.div>
         {/* comment */}"
@@ -910,3 +909,141 @@ Services: </h3>",
         <ArrowUp className="&apos;w-5" h-5&apos,       />&apos,"
         className = "fixed bottom-8 right-8 bg-gradient-to-r from-cyan-500 to-blue-600 text-white p-3 rounded-full shadow-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-110""
         aria-label="Scroll to top""",,
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</p>
+</div>
+</div>
+</div>
+</ul>
+</a>
+</div>
+</div>
+</ul>
+</div>
+</div>
+</span>
+</div>
+</div>
+</div>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</a>
+</a>
+</a>
+</div>
+</a>
+</div>
+</a>
+</a>
+</p>
+</div>
+</a>
+</a>
+</p>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</ul>
+</a>
+</a>
+</a>
+</a>
+</a>
+</a>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</motion>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</h3>
+</a>
+</a>
+</a>
+</a>
+</a>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</h3>
+</a>
+</a>
+</a>
+</a>
+</a>
+</a>
+</motion>
+</div>
+</footer>
+</div>
+</div>
+</a>
+</a>
+</div>
+</div>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</any>

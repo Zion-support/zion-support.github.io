@@ -14,9 +14,11 @@ interface Proposal {
 }
 
 interface ProposalCardProps {
+
   proposal: Proposa l;
   onVote?: (proposalId: string, vote: 'for' | 'against') => void;
   canVote?: boolean;
+
 }
 
 const ProposalCard: Reac t.FC<ProposalCardProps> = ({ 
@@ -24,7 +26,7 @@ const ProposalCard: Reac t.FC<ProposalCardProps> = ({
   onVote, 
   canVote = false 
 }) => {
-  const getStatusColor = (status: string) => {
+  const getStatusColor = (props: any) => {
     switch (status) {
       case 'active':
         return 'bg-green-100 text-green-800';
@@ -38,12 +40,12 @@ const ProposalCard: Reac t.FC<ProposalCardProps> = ({
     }
   };
 
-  const getVotePercentage = (votes: number) => {
+  const getVotePercentage = (props: any) => {
     if (proposal.totalVotes === 0) return 0;
     return Math.round((votes / proposal.totalVotes) * 100);
   };
 
-  const handleVote = (vote: 'for' | 'against') => {
+  const handleVote = (props: any) => {
     if (onVote && canVote) {
       onVote(proposal.id, vote);
     }
@@ -83,7 +85,7 @@ const ProposalCard: Reac t.FC<ProposalCardProps> = ({
         </div>
         <div className="w-full bg-gray-200 rounded-full h-2">
           <div className="bg-green-600 h-2 rounded-full transition-all duration-300"
-            style={{ width: `${getVotePercentage(proposal.votesFor)}%` }}
+            style="{{{ width: `${getVotePercentage(proposal.votesFor)}}"%` }}
            />
         </div>
         <div className="text-xs text-gray-500 mt-1">
@@ -118,3 +120,5 @@ const ProposalCard: Reac t.FC<ProposalCardProps> = ({
 };
 
 export default ProposalCard;
+</div>
+</ProposalCardProps>

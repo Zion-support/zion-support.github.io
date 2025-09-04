@@ -62,3 +62,12 @@ const DashboardRoutes: Reac t.FC = () => {
 };
 
 export default DashboardRoutes;
+
+</Route>
+</Route>
+</Route>
+</Route>
+</Route>
+</Route>
+</Route>
+</Route>

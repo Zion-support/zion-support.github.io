@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import {
-  Brain,
+import React, {useState} from 'react';
+import {motion} from 'framer-motion';
+import {Brain,
   Zap,
   Shield,
   CheckCircle,
@@ -575,28 +574,23 @@ import {
   CheckCircle,
   Shield,
   Zap,
-  Brain
-} from 'lucide-react';
+  Brain} from 'lucide-react';
 
 const successStories = [
-  {
-    id: 1,
+  {id: 1,
     comp: "Financial Services Corp",
     industry: "Finance",
     challenge: "Needed automated SOC2 compliance monitoring for regulatory requirements",
     solution: "Built comprehensive SOC2 compliance automation platform with monitoring and reporting",
     results: "80% faster compliance checks, 90% reduced manual effort, 100% audit success, better security",
-    logo: "FSC"
-  },
-  {
-    id: 2,
+    logo: "FSC"},
+  {id: 2,
     comp: "Healthcare Technology Ltd",
     industry: "Healthcare",
     challenge: "Required automated SOC2 policy management and enforcement",
     solution: "Implemented AI-driven SOC2 policy automation system",
     results: "70% faster policy updates, 85% improved compliance, better risk management, reduced violations",
-    logo: "HTL"
-  },
+    logo: "HTL"},
   {
     id: 3,
     comp: "Cloud Services Provider",
@@ -616,20 +610,16 @@ const processSteps = [
     icon: FileText,
     duration: "2-4 weeks"
   },
-  {
-    step: 2,
+  {step: 2,
     title: "Automation Strategy",
     description: "Develop SOC2 automation strategy and implementation roadmap",
     icon: Code,
-    duration: "4-8 weeks"
-  },
-  {
-    step: 3,
+    duration: "4-8 weeks"},
+  {step: 3,
     title: "System Implementation",
     description: "Build and deploy SOC2 compliance automation systems",
     icon: Wrench,
-    duration: "18-40 weeks"
-  },
+    duration: "18-40 weeks"},
   {
     step: 4,
     title: "Testing & Validation",
@@ -646,28 +636,22 @@ const soc2Benefits = [
     icon: Zap,
     examples["Automated monitoring", "Policy enforcement", "Compliance checking", "Audit preparation"];
   },;
-  {
-    title: "Improved Security",
+  {title: "Improved Security",
     description: "Automated security controls enhance overall security posture",
     icon: Shield,
-    examples["Security automation", "Control monitoring", "Threat detection", "Incident response"];
-  },;
-  {
-    title: "Cost Reduction",
+    examples["Security automation", "Control monitoring", "Threat detection", "Incident response"];},;
+  {title: "Cost Reduction",
     description: "Automation reduces compliance costs and resource requirements",
     icon: TrendingUp,
-    examples["Reduced manual effort", "Faster compliance", "Better efficiency", "Lower costs"];
-  },;
-  {
-    title: "Audit Success",
+    examples["Reduced manual effort", "Faster compliance", "Better efficiency", "Lower costs"];},;
+  {title: "Audit Success",
     description: "Automated systems improve audit preparation and success rates",
     icon: CheckCircle,
-    examples["Better preparation", "Automated evidence", "Compliance reporting", "Audit success"];
-  }
+    examples["Better preparation", "Automated evidence", "Compliance reporting", "Audit success"];}
 ];
 
 export default function SOC2ComplianceAutomation
-export { SOC2ComplianceAutomation }() {
+export {SOC2ComplianceAutomation}() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
 
@@ -688,7 +672,7 @@ export { SOC2ComplianceAutomation }() {
         </div>
 
         <div className="container-responsive relative z-10">
-          <motion.div
+          <motion .div
             initial = {
   { opacity: 0,
   y: 30 
@@ -745,7 +729,7 @@ export { SOC2ComplianceAutomation }() {
 }}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
 
-              <Shield className="w-10 h-10 text-white" />
+              <Shield className="w-10 h-10 text-white"  />
             </motion.div>
 
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -760,15 +744,15 @@ export { SOC2ComplianceAutomation }() {
 
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <div className="flex items-center gap-2 text-zion-cyan">
-                <Shield className="w-4 h-4" />
+                <Shield className="w-4 h-4"  />
                 <span>Compliance Monitoring</span>
               </div>
               <div className="flex items-center gap-2 text-zion-purple">
-                <FileText className="w-4 h-4" />
+                <FileText className="w-4 h-4"  />
                 <span>Policy Automation</span>
               </div>
               <div className="flex items-center gap-2 text-zion-blue">
-                <CheckCircle className="w-4 h-4" />
+                <CheckCircle className="w-4 h-4"  />
                 <span>Audit Preparation</span>
               </div>
             </div>
@@ -846,7 +830,7 @@ export { SOC2ComplianceAutomation }() {
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
 
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <benefit.icon className="w-8 h-8 text-white" />
+                  <benefit .icon className="w-8 h-8 text-white"  />
                 </div>
 
                 <h3 className="text-2xl font-bold text-white mb-4 text-center">{benefit.title}</h3>
@@ -856,7 +840,7 @@ export { SOC2ComplianceAutomation }() {
                   <h4 className="text-zion-cyan font-semibold mb-3">Examples:</h4>
                   {benefit.examples.map((example, exampleIndex) => (
                     <div key={exampleIndex} className="flex items-center gap-3">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0"  />
                       <span className="text-zion-slate-light text-sm">{example}</span>
                     </div>
                   ))}
@@ -937,7 +921,7 @@ export { SOC2ComplianceAutomation }() {
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
 
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <technology.icon className="w-8 h-8 text-white" />
+                  <technology .icon className="w-8 h-8 text-white"  />
                 </div>
 
                 <h3 className="text-xl font-bold text-white mb-3">{technology.name}</h3>
@@ -1030,7 +1014,7 @@ export { SOC2ComplianceAutomation }() {
 
                 <div className="relative mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto">
-                    <step.icon className="w-8 h-8 text-white" />
+                    <step .icon className="w-8 h-8 text-white"  />
                   </div>
                   <div className="absolute -top-2 -right-2 w-8 h-8 bg-zion-blue rounded-full flex items-center justify-center text-white text-sm font-bold">
                     {step.step}
@@ -1136,7 +1120,7 @@ export { SOC2ComplianceAutomation }() {
                 onClick={() => setSelectedSolution(solution)}
 
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
-                  <solution.icon className="w-8 h-8 text-white" />
+                  <solution .icon className="w-8 h-8 text-white"  />
                 </div>
 
                 <h3 className="text-2xl font-bold text-white mb-3">{solution.title}</h3>
@@ -1145,7 +1129,7 @@ export { SOC2ComplianceAutomation }() {
                 <div className="space-y-3 mb-6">
                   {solution.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0"  />
                       <span className="text-zion-slate-light text-sm">{feature}</span>
                     </div>
                   ))}
@@ -1173,7 +1157,7 @@ export { SOC2ComplianceAutomation }() {
                   </span>
                   <button className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors duration-300">
                     <span className="text-sm font-medium">Learn More</span>
-                    <ArrowRight className="w-4 h-4" />
+                    <ArrowRight className="w-4 h-4"  />
                   </button>
                 </div>
               </motion.div>
@@ -1278,7 +1262,7 @@ export { SOC2ComplianceAutomation }() {
 
                 <div className="flex items-center gap-2">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current"  />
                   ))}
                   <span className="text-zion-slate-light text-sm ml-2">5.0 Rating</span>
                 </div>
@@ -1340,3 +1324,17 @@ export { SOC2ComplianceAutomation }() {
       </section>
     </div>
   )}
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

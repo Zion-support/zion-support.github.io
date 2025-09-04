@@ -1,7 +1,8 @@
-import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
-import { GradientHeading } from "@/components/GradientHeading";
+import React from 'react';
+import {FeaturedListingsSection} from "@/components/FeaturedListingsSection";
+import {GradientHeading} from "@/components/GradientHeading";
 export default function Featured
-export { Featured }() {
+export {Featured}() {
     return (<>
       
       <div className="min-h-screen bg-zion-blue">
@@ -17,7 +18,7 @@ export { Featured }() {
           </div>
           
           {/* Reuse the FeaturedListings component */}
-          <FeaturedListingsSection showTitle={false}/>
+          <FeaturedListingsSection showTitle={false} />
         </div>
       </div>
       

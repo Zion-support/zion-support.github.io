@@ -1,20 +1,22 @@
 import React from 'react';
 
 interface InputFieldsProps {
+
   inputData: an y;
   setInputData: (data: an y) => void;
   onNext: () => void;
+
 }
 
 const InputFields: Reac t.FC<InputFieldsProps> = ({ inputData, setInputData, onNext }) => {
-  const handleInputChange = (field: string, value: an y) => {
+  const handleInputChange = (props: any) => {
     setInputData({
       ...inputData,
       [field]: value
     });
   };
 
-  const handleSubmit = (e: Reac t.FormEvent) => {
+  const handleSubmit = (props: any) => {
     e.preventDefault();
     if (inputData?.companyName && inputData?.industry) {
       onNext();
@@ -90,3 +92,5 @@ const InputFields: Reac t.FC<InputFieldsProps> = ({ inputData, setInputData, onN
 };
 
 export default InputFields;
+</textarea>
+</InputFieldsProps>

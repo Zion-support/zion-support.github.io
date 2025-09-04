@@ -5,10 +5,10 @@ import { SEO } from '@/components/SEO';
 import { zionCuttingEdgeServices2029 } from '../../data/zion-2029-cutting-edge-services';
 import { zionEmergingTechServices2029 } from '../../data/zion-2029-emerging-tech-services';
 
-export default function ZionCuttingEdgeServices2029() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [priceRange, setPriceRange] = useState('all');
+export default function ZionCuttingEdgeServices2029(props: any) {
+  const [searchTerm, setSearchTerm] = useState<any>('');
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+  const [priceRange, setPriceRange] = useState<any>('all');
 
   const allServices = [...zionCuttingEdgeServices2029, ...zionEmergingTechServices2029];
   
@@ -34,7 +34,7 @@ export default function ZionCuttingEdgeServices2029() {
     return matchesSearch && matchesCategory && matchesPrice;
   });
 
-  const getPriceRangeLabel = (range: string) => {
+  const getPriceRangeLabel = (props: any) => {
     switch (range) {
       case '0-1000': return '$0 - $1,000/month';
       case '1000-3000': return '$1,000 - $3,000/month';
@@ -64,7 +64,7 @@ export default function ZionCuttingEdgeServices2029() {
               <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Zion Tech Group 2029
               </span>
-              <br />
+              <br  />
               <span className="text-white">Cutting-Edge Services</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
@@ -105,7 +105,7 @@ export default function ZionCuttingEdgeServices2029() {
             </div>
             <div className="flex flex-col items-center">
               <MapPin className="w-6 h-6 text-white mb-2" />
-              <p className="text-white font-semibold">364 E Main St STE 1008<br />Middletown DE 19709</p>
+              <p className="text-white font-semibold">364 E Main St STE 1008<br  />Middletown DE 19709</p>
             </div>
           </div>
         </div>
@@ -474,3 +474,15 @@ export default function ZionCuttingEdgeServices2029() {
     </div>
   );
 }
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</Star>
+</motion>
+</motion>
+</SEO>
+</any>
+</any>
+</any>

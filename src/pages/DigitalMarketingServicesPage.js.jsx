@@ -1,178 +1,146 @@
 import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Link } from 'react-router-dom';
-import { Search, TrendingUp, Share2, FileText, Mail, BarChart3, CheckCircle, Users, Globe, Eye, Video, MessageSquare, Zap, Monitor, ShoppingCart } from 'lucide-react';
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';
+import {Button} from '@/components/ui/button';
+import {Badge} from '@/components/ui/badge';
+import {Link} from 'react-router-dom';
+import {Search, TrendingUp, Share2, FileText, Mail, BarChart3, CheckCircle, Users, Globe, Eye, Video, MessageSquare, Zap, Monitor, ShoppingCart} from 'lucide-react';
 const MarketingServices = [
-    {
-        title: "Search Engine Optimization (SEO)",
+    {title: "Search Engine Optimization (SEO)",
         description: "Improve your website's visibility and rank higher in search results",
         price: "$1,500 - $8,000/month",
         features["Keyword research", "On-page optimization", "Technical SEO", "Link building"],;
-        icon: <Search className="h-8 w-8 text-zion-cyan"/>,
+        icon: <Search className="h-8 w-8 text-zion-cyan" />,
         category: "SEO",
         badge: "Popular",
-        link: "/request-quote?service=seo"
-    },
-    {
-        title: "Pay-Per-Click (PPC) Management",
+        link: "/request-quote?service=seo"},
+    {title: "Pay-Per-Click (PPC) Management",
         description: "Strategic PPC campaigns across Google, Facebook, and other platforms",
         price: "$1,000 - $5,000/month + 10-15% ad spend",
         features["Campaign strategy", "Ad creation", "Bid management", "Performance tracking"],;
-        icon: <TrendingUp className="h-8 w-8 text-zion-purple"/>,
+        icon: <TrendingUp className="h-8 w-8 text-zion-purple" />,
         category: "PPC",
         badge: "Premium",
-        link: "/request-quote?service=ppc"
-    },
-    {
-        title: "Social Media Marketing",
+        link: "/request-quote?service=ppc"},
+    {title: "Social Media Marketing",
         description: "Engage your audience across all major social platforms",
         price: "$800 - $4,000/month",
         features["Content creation", "Community management", "Paid social ads", "Analytics reporting"],;
-        icon: <Share2 className="h-8 w-8 text-zion-blue"/>,
+        icon: <Share2 className="h-8 w-8 text-zion-blue" />,
         category: "Social Media",
-        link: "/request-quote?service=social-media"
-    },
-    {
-        title: "Content Marketing Strategy",
+        link: "/request-quote?service=social-media"},
+    {title: "Content Marketing Strategy",
         description: "Create valuable content that attracts and converts your audience",
         price: "$2,000 - $10,000/month",
         features["Content planning", "Blog writing", "Infographics", "Content distribution"],;
-        icon: <FileText className="h-8 w-8 text-zion-cyan"/>,
+        icon: <FileText className="h-8 w-8 text-zion-cyan" />,
         category: "Content",
-        link: "/request-quote?service=content-marketing"
-    },
-    {
-        title: "Email Marketing Campaigns",
+        link: "/request-quote?service=content-marketing"},
+    {title: "Email Marketing Campaigns",
         description: "Build relationships and drive sales through targeted email campaigns",
         price: "$500 - $3,000/month",
         features["List building", "Template design", "Automation", "A/B testing"],;
-        icon: <Mail className="h-8 w-8 text-zion-purple"/>,
+        icon: <Mail className="h-8 w-8 text-zion-purple" />,
         category: "Email",
-        link: "/request-quote?service=email-marketing"
-    },
-    {
-        title: "Marketing Analytics & Reporting",
+        link: "/request-quote?service=email-marketing"},
+    {title: "Marketing Analytics & Reporting",
         description: "Data-driven insights to optimize your marketing performance",
         price: "$800 - $3,000/month",
         features["Performance tracking", "ROI analysis", "Custom dashboards", "Monthly reports"],;
-        icon: <BarChart3 className="h-8 w-8 text-zion-blue"/>,
+        icon: <BarChart3 className="h-8 w-8 text-zion-blue" />,
         category: "Analytics",
-        link: "/request-quote?service=marketing-analytics"
-    },
-    {
-        title: "Conversion Rate Optimization",
+        link: "/request-quote?service=marketing-analytics"},
+    {title: "Conversion Rate Optimization",
         description: "Improve your website's ability to convert visitors into customers",
         price: "$1,500 - $6,000/month",
         features["A/B testing", "User experience", "Landing page optimization", "Funnel analysis"],;
-        icon: <CheckCircle className="h-8 w-8 text-zion-cyan"/>,
+        icon: <CheckCircle className="h-8 w-8 text-zion-cyan" />,
         category: "CRO",
-        link: "/request-quote?service=conversion-optimization"
-    },
-    {
-        title: "Influencer Marketing",
+        link: "/request-quote?service=conversion-optimization"},
+    {title: "Influencer Marketing",
         description: "Partner with influencers to reach new audiences and build trust",
         price: "$2,000 - $15,000 per campaign",
         features["Influencer research", "Campaign management", "Content coordination", "Performance tracking"],;
-        icon: <Users className="h-8 w-8 text-zion-purple"/>,
+        icon: <Users className="h-8 w-8 text-zion-purple" />,
         category: "Influencer",
-        link: "/request-quote?service=influencer-marketing"
-    },
-    {
-        title: "Video Marketing & Production",
+        link: "/request-quote?service=influencer-marketing"},
+    {title: "Video Marketing & Production",
         description: "Create engaging video content for multiple platforms",
         price: "$1,000 - $8,000 per video",
         features["Script writing", "Video production", "Editing", "Distribution strategy"],;
-        icon: <Video className="h-8 w-8 text-zion-blue"/>,
+        icon: <Video className="h-8 w-8 text-zion-blue" />,
         category: "Video",
-        link: "/request-quote?service=video-marketing"
-    },
-    {
-        title: "Graphic Design Services",
+        link: "/request-quote?service=video-marketing"},
+    {title: "Graphic Design Services",
         description: "Professional design for marketing materials and branding",
         price: "$50 - $300 per design",
         features["Logo design", "Marketing materials", "Social media graphics", "Brand guidelines"],;
-        icon: <FileText className="h-8 w-8 text-zion-cyan"/>,
+        icon: <FileText className="h-8 w-8 text-zion-cyan" />,
         category: "Design",
-        link: "/request-quote?service=graphic-design"
-    },
-    {
-        title: "Marketing Automation",
+        link: "/request-quote?service=graphic-design"},
+    {title: "Marketing Automation",
         description: "Streamline your marketing processes with automation tools",
         price: "$1,000 - $5,000/month",
         features["Workflow setup", "Lead nurturing", "CRM integration", "Performance monitoring"],;
-        icon: <Zap className="h-8 w-8 text-zion-purple"/>,
+        icon: <Zap className="h-8 w-8 text-zion-purple" />,
         category: "Automation",
-        link: "/request-quote?service=marketing-automation"
-    },
-    {
-        title: "Local SEO & Google My Business",
+        link: "/request-quote?service=marketing-automation"},
+    {title: "Local SEO & Google My Business",
         description: "Optimize your business for local search results",
         price: "$500 - $2,500/month",
         features["Local keyword optimization", "Review management", "Citation building", "Local content"],;
-        icon: <Globe className="h-8 w-8 text-zion-blue"/>,
+        icon: <Globe className="h-8 w-8 text-zion-blue" />,
         category: "Local SEO",
-        link: "/request-quote?service=local-seo"
-    },
-    {
-        title: "E-commerce Marketing",
+        link: "/request-quote?service=local-seo"},
+    {title: "E-commerce Marketing",
         description: "Specialized marketing strategies for online stores",
         price: "$1,500 - $8,000/month",
         features["Product optimization", "Shopping campaigns", "Retargeting", "Customer retention"],;
-        icon: <ShoppingCart className="h-8 w-8 text-zion-cyan"/>,
+        icon: <ShoppingCart className="h-8 w-8 text-zion-cyan" />,
         category: "E-commerce",
-        link: "/request-quote?service=ecommerce-marketing"
-    },
-    {
-        title: "Marketing Strategy Consulting",
+        link: "/request-quote?service=ecommerce-marketing"},
+    {title: "Marketing Strategy Consulting",
         description: "Strategic guidance for your overall marketing approach",
         price: "$150 - $300/hour",
         features["Market analysis", "Competitive research", "Strategy development", "Implementation planning"],;
-        icon: <CheckCircle className="h-8 w-8 text-zion-purple"/>,
+        icon: <CheckCircle className="h-8 w-8 text-zion-purple" />,
         category: "Consulting",
-        link: "/request-quote?service=marketing-consulting"
-    },
-    {
-        title: "Brand Development & Positioning",
+        link: "/request-quote?service=marketing-consulting"},
+    {title: "Brand Development & Positioning",
         description: "Develop a strong brand identity and market position",
         price: "$5,000 - $25,000",
         features["Brand strategy", "Visual identity", "Messaging framework", "Brand guidelines"],;
-        icon: <Eye className="h-8 w-8 text-zion-blue"/>,
+        icon: <Eye className="h-8 w-8 text-zion-blue" />,
         category: "Branding",
-        link: "/request-quote?service=brand-development"
-    },
-    {
-        title: "Marketing Technology Stack",
+        link: "/request-quote?service=brand-development"},
+    {title: "Marketing Technology Stack",
         description: "Audit and optimize your marketing technology infrastructure",
         price: "$2,000 - $10,000",
         features["Tool assessment", "Integration planning", "Implementation", "Training"],;
-        icon: <Monitor className="h-8 w-8 text-zion-cyan"/>,
+        icon: <Monitor className="h-8 w-8 text-zion-cyan" />,
         category: "MarTech",
-        link: "/request-quote?service=marketing-technology"
-    }
+        link: "/request-quote?service=marketing-technology"}
 ];
 const categories = [
-    { name: "All", value: "all", icon: <Globe className="h-4 w-4"/> },
-    { name: "SEO", value: "seo", icon: <Search className="h-4 w-4"/> },
-    { name: "PPC", value: "ppc", icon: <TrendingUp className="h-4 w-4"/> },
-    { name: "Social Media", value: "social media", icon: <Share2 className="h-4 w-4"/> },
-    { name: "Content", value: "content", icon: <FileText className="h-4 w-4"/> },
-    { name: "Email", value: "email", icon: <Mail className="h-4 w-4"/> },
-    { name: "Analytics", value: "analytics", icon: <BarChart3 className="h-4 w-4"/> },
-    { name: "CRO", value: "cro", icon: <CheckCircle className="h-4 w-4"/> },
-    { name: "Influencer", value: "influencer", icon: <Users className="h-4 w-4"/> },
-    { name: "Video", value: "video", icon: <Video className="h-4 w-4"/> },
-    { name: "Design", value: "design", icon: <FileText className="h-4 w-4"/> },
-    { name: "Automation", value: "automation", icon: <Zap className="h-4 w-4"/> },
-    { name: "Local SEO", value: "local seo", icon: <Globe className="h-4 w-4"/> },
-    { name: "E-commerce", value: "ecommerce", icon: <ShoppingCart className="h-4 w-4"/> },
-    { name: "Consulting", value: "consulting", icon: <CheckCircle className="h-4 w-4"/> },
-    { name: "Branding", value: "branding", icon: <Eye className="h-4 w-4"/> },
-    { name: "MarTech", value: "martech", icon: <Monitor className="h-4 w-4"/> }
+    {name: "All", value: "all", icon: <Globe className="h-4 w-4" />},
+    {name: "SEO", value: "seo", icon: <Search className="h-4 w-4" />},
+    {name: "PPC", value: "ppc", icon: <TrendingUp className="h-4 w-4" />},
+    {name: "Social Media", value: "social media", icon: <Share2 className="h-4 w-4" />},
+    {name: "Content", value: "content", icon: <FileText className="h-4 w-4" />},
+    {name: "Email", value: "email", icon: <Mail className="h-4 w-4" />},
+    {name: "Analytics", value: "analytics", icon: <BarChart3 className="h-4 w-4" />},
+    {name: "CRO", value: "cro", icon: <CheckCircle className="h-4 w-4" />},
+    {name: "Influencer", value: "influencer", icon: <Users className="h-4 w-4" />},
+    {name: "Video", value: "video", icon: <Video className="h-4 w-4" />},
+    {name: "Design", value: "design", icon: <FileText className="h-4 w-4" />},
+    {name: "Automation", value: "automation", icon: <Zap className="h-4 w-4" />},
+    {name: "Local SEO", value: "local seo", icon: <Globe className="h-4 w-4" />},
+    {name: "E-commerce", value: "ecommerce", icon: <ShoppingCart className="h-4 w-4" />},
+    {name: "Consulting", value: "consulting", icon: <CheckCircle className="h-4 w-4" />},
+    {name: "Branding", value: "branding", icon: <Eye className="h-4 w-4" />},
+    {name: "MarTech", value: "martech", icon: <Monitor className="h-4 w-4" />}
 ];
 export default function DigitalMarketingServicesPage
-export { DigitalMarketingServicesPage }() {
+export {DigitalMarketingServicesPage}() {
     const [selectedCategory, setSelectedCategory] = React.useState("all");
     const filteredServices = selectedCategory === "all"
         ? MarketingServices
@@ -191,11 +159,11 @@ export { DigitalMarketingServicesPage }() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" className="bg-zion-cyan hover:bg-zion-cyan-light text-zion-slate font-semibold">
-              <Search className="h-5 w-5 mr-2"/>
+              <Search className="h-5 w-5 mr-2" />
               Explore Services
             </Button>
             <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
-              <MessageSquare className="h-5 w-5 mr-2"/>
+              <MessageSquare className="h-5 w-5 mr-2" />
               Get Free Audit
             </Button>
           </div>
@@ -264,11 +232,11 @@ export { DigitalMarketingServicesPage }() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-zion-purple hover:bg-zion-purple-light text-white">
-              <MessageSquare className="h-5 w-5 mr-2"/>
+              <MessageSquare className="h-5 w-5 mr-2" />
               Schedule Consultation
             </Button>
             <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
-              <BarChart3 className="h-5 w-5 mr-2"/>
+              <BarChart3 className="h-5 w-5 mr-2" />
               Get Free Marketing Audit
             </Button>
           </div>

@@ -25,7 +25,7 @@ import { Cookie, Settings, Shield, Eye, BarChart3 } from 'lucide-react',;',';';
 import React from 'react',;';';
     ';';';';
 import {SEO } from '@/components/SEO';
-export default function Cookies() {return (
+export default function Cookies(props: any) {return (
     <div className="min-h-screen bg-white">
       <SEO title="Cookies - Zion Tech Group" description="Professional Cookies services by Zion Tech Group"  />
       <div className="container mx-auto px-4 py-20">
@@ -589,3 +589,75 @@ import { motion } from 'framer-motion',;';';
     ';';';
 import { Cookie, Settings, Shield, Eye, BarChart3 } from 'lucide-react;';';';
 "';';';';
+</div>
+</ul>
+</div>
+</ul>
+</div>
+</p>
+</p>
+</ul>
+</div>
+</p>
+</p>
+</p>
+</p>
+</li>
+</p>
+</div>
+</p>
+</li>
+</ul>
+</p>
+</div>
+</div>
+</li>
+</ul>
+</p>
+</li>
+</ul>
+</div>
+</div>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</motion>
+</div>
+</p>
+</p>
+</p>
+</p>
+</p>
+</p>
+</p>
+</p>
+</p>
+</p>
+</div>
+</div>
+</div>
+</p>
+</p>
+</motion>
+</div>
+</div>
+</p>
+</motion>
+</div>
+</div>
+</div>
+</div>

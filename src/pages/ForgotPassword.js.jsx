@@ -1,16 +1,15 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import { z } from "zod";
-import { Mail } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage, } from "@/components/ui/form";
+import React from 'react';
+import {useState} from "react";
+import {Link} from "react-router-dom";
+import {z} from "zod";
+import {Mail} from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage,} from "@/components/ui/form";
 // Form validation schema
-const forgotPasswordSchema = z.object({
-    email: z.string().email("Please enter a valid email"),
-});
+const forgotPasswordSchema = z.object({email: z.string().email("Please enter a valid email"),});
 export default function ForgotPassword
-export { ForgotPassword }() {
+export {ForgotPassword}() {
     const [email, setEmail] = useState('');
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
@@ -25,12 +24,12 @@ export { ForgotPassword }() {
             setIsLoading(false)}, 2000)};
     if (isSubmitted) {
         return (<>
-        <SEO title="Password Reset Sent - Zion Tech Group" description="Check your email for password reset instructions." canonical="https://ziontechgroup.com/forgot-password"/>
+        <SEO title="Password Reset Sent - Zion Tech Group" description="Check your email for password reset instructions." canonical="https://ziontechgroup.com/forgot-password" />
         <div className="min-h-screen bg-zion-blue flex items-center justify-center">
           <div className="max-w-md w-full mx-auto p-6">
             <div className="text-center">
               <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100 mb-4">
-                <CheckCircle className="h-6 w-6 text-green-600"/>
+                <CheckCircle className="h-6 w-6 text-green-600" />
               </div>
               <h1 className="text-2xl font-bold text-white mb-4">Check Your Email</h1>
               <p className="text-zion-slate-light mb-6">
@@ -66,7 +65,7 @@ export { ForgotPassword }() {
             <div className="bg-zion-blue-dark rounded-lg p-6">
               {submitted ? (<div className="text-center py-8">
                   <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-zion-purple/20 mb-4">
-                    <Mail className="h-6 w-6 text-zion-purple"/>
+                    <Mail className="h-6 w-6 text-zion-purple" />
                   </div>
                   <h3 className="text-lg font-medium text-white">Check your email</h3>
                   <p className="mt-2 text-sm text-zion-slate-light">
@@ -83,11 +82,11 @@ export { ForgotPassword }() {
                           <FormLabel className="text-zion-slate-light">Email address</FormLabel>
                           <FormControl>
                             <div className="relative">
-                              <Input placeholder="you@example.com" className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple" {...field}/>
-                              <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"/>
+                              <Input placeholder="you@example.com" className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple" {...field}  />
+                              <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
                             </div>
                           </FormControl>
-                          <FormMessage className="text-red-400"/>
+                          <FormMessage className="text-red-400" />
                         </FormItem>)}/>
 
                     <Button type="submit" className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white" disabled={isLoading}>
@@ -110,7 +109,7 @@ export { ForgotPassword }() {
                 Email Address
               </label>
               <div className="relative">
-                <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light"/>
+                <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />
                 <Input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter your email" className="pl-10 bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan" required/>
               </div>
             </div>
@@ -132,3 +131,5 @@ export { ForgotPassword }() {
       </div>
       
     </>)}
+
+</FormField>

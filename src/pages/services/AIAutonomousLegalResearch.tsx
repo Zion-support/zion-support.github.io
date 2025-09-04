@@ -231,3 +231,10 @@ const AIAutonomousLegalResearch: Reac t.FC = (): JSX.Element => {
 };
 
 export default AIAutonomousLegalResearch;
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

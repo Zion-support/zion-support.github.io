@@ -1,12 +1,12 @@
 import React from "react"
 import Head from "next/head"
 import Link from "next/link"
-const Revolutionary2025ServicesShowcase = () => {
+const Revolutionary2025ServicesShowcase = (props: any) => {
   return (
     <>
       <Head>
         <title>Revolutionary2025 Services Showcase - Zion Tech Group</title>
-        <meta name="description" content="Professional Revolutionary2025 Services Showcase services"   />
+        <meta name="description" content="Professional Revolutionary2025 Services Showcase services"    />
       </Head>
       <div className="min-h-screen bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8 py-12">
@@ -48,3 +48,8 @@ const Revolutionary2025ServicesShowcase = () => {
   );
 }
 export default Revolutionary2025ServicesShowcase
+
+</div>
+</div>
+</div>
+</div>

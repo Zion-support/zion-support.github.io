@@ -1,12 +1,12 @@
 import React from "react"
 import Link from "next/link"
 import Head from "next/head"
-const AIContentMarketingSuite = () => {
+const AIContentMarketingSuite = (props: any) => {
   return (
     <>
       <Head>
         <title>Content Marketing Suite - AI Services</title>
-        <meta name="description" content="Professional Content Marketing Suite services powered by AI"   />
+        <meta name="description" content="Professional Content Marketing Suite services powered by AI"    />
       </Head>
       <div className="min-h-screen bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8 py-12">
@@ -49,3 +49,7 @@ const AIContentMarketingSuite = () => {
 }
 
 export default AIContentMarketingSuite
+</div>
+</div>
+</div>
+</div>

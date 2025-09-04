@@ -1,6 +1,6 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 
-export default function Page() {
+export default function Page(props: any) {
 > {
 
   data: SearchResul t[];
@@ -15,10 +15,10 @@ export const SearchAndFilterSystem: Reac t.FC<SearchAndFilterSystemProps> = ({
   placeholder = "Search services, articles, team members...",
   showFilters = true}) => {
 
-  const [searchQuery, setSearchQuery] = useState('');
-  const [isSearchFocused, setIsSearchFocused] = useState(false);
+  const [searchQuery, setSearchQuery] = useState<any>('');
+  const [isSearchFocused, setIsSearchFocused] = useState<any>(false);
   const [activeFilters, setActiveFilters] = useState<Set<string>>(new Set());
-  const [showFilterPanel, setShowFilterPanel] = useState(false);
+  const [showFilterPanel, setShowFilterPanel] = useState<any>(false);
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [sortBy, setSortBy] = useState<any>('relevance');
 
@@ -66,7 +66,7 @@ export const SearchAndFilterSystem: Reac t.FC<SearchAndFilterSystemProps> = ({
     setSortBy('relevance')};
 
   // Get icon for type
-  const getTypeIcon = (type: string) => {
+  const getTypeIcon = (props: any) => {
 
     switch(type) {
 '"
@@ -376,3 +376,16 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
 
 }
 '"`
+
+</motion>
+</motion>
+</motion>
+</motion>
+</any>
+</any>
+</any>
+</string>
+</Set>
+</any>
+</any>
+</SearchAndFilterSystemProps>

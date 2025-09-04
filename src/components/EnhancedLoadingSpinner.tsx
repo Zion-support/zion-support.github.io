@@ -14,7 +14,7 @@ setTimeout(() => {
 
   if(!enabled || !isVisible) return null;
 
-  const renderSpinner = () => {
+  const renderSpinner = (props: any) => {
     switch(variant) {
       case 'futuristic':
         return (<div className="relative">
@@ -43,12 +43,8 @@ setTimeout(() => {
             {[...Array (3) ].map((_, i) => (<motion.div
                 key={i}
                 className="absolute w-2 h-2 bg-zion - yellow rounded-full"
-                style={{
-                  top: '50%',
-                  left: '50%',
-                  marginTop: -4,
-                  marginLeft: -4
-                }}
+                style="{{{
+                  top: '50%'; left: '50%'; marginTop: -4; marginLeft: -4}}"}
                 animate={{
                   x: [0, 30, 0],
                   y: [0, -30, 0],
@@ -105,16 +101,14 @@ import React from 'react'
 import { motion  } from 'framer-motion'
 
 interface EnhancedLoadingSpinnerProps {
+
   size?: 'sm' | 'md' | 'lg'
   text?: string
   className?: string
+
 }
 
-export default function EnhancedLoadingSpinner({ 
-  size = 'md'
-  text = 'Loading...'
-  className = ''
-}: EnhancedLoadingSpinnerProps) {
+export default function EnhancedLoadingSpinner(props: any) {
   const sizeClasses = { sm: 'w-8 h-8',
     md: 'w-12 h-12',
     lg: 'w-16 h-16'
@@ -152,7 +146,7 @@ export default function EnhancedLoadingSpinner({
 
     if(!config) return null}}};
 
-export default function EnhancedLoadingSpinner() {
+export default function EnhancedLoadingSpinner(props: any) {
 
   ;
 '
@@ -226,7 +220,9 @@ className="{"${sizeClasses[size]}" relative"}"
       
 "
 ,"});,"})","});,"})"
-interface EnhancedLoadingSpinnerProps {,"});,"})"
+interface EnhancedLoadingSpinnerProps {
+  ,": any;
+});,"})"
   size?: "sm" | "md" | "lg";,"});,"})"
   text?: string,"});,"})"
   className?: string,"});,"});"
@@ -282,8 +278,10 @@ export default function EnhancedLoadingSpinner({,"});,"})"
               ease: "easeInOut","});,"})"
         ))}"});,"})"
       </div>;,"});,"})"
-  );,"});,"})"interface EnhancedLoadingSpinnerProps {"
-  size?: "sm" | "md" | "lg" text?: string className?: string}
+  );,"});,"})"interface EnhancedLoadingSpinnerProps {
+  ": any;
+  size?: "sm" | "md" | "lg" text?: string className?: string
+}
 
   size = "md",,
   text = "Loading...",,
@@ -330,20 +328,18 @@ export default function EnhancedLoadingSpinner({,"});,"})"
               repeat: Infini t,y>
               delay: i: * 0.,2,
               ease: "easeInOut,"}}";";"
-interface EnhancedLoadingSpinnerProps {""
-  )};framer-motion";;framer-motion
+interface EnhancedLoadingSpinnerProps {
+  "": any;
+  ): any;
+};framer-motion";;framer-motion
   size?: &apos;sm&apos; | &apos;md&apos; | &apos;lg&apos; text?: string className?: string}&apos;&apos
-export default function EnhancedLoadingSpinner( {
-  size = &apos;md&apos,
-  text = &apos;Loading...&apos,
-  className = &apos;&apos}: EnhancedLoadingSpinnerProps) {&apos}&apos
+export default function EnhancedLoadingSpinner(props: any) {&apos}&apos
   const sizeClasses = {}&apos,
   const textSizes = {}"
   return (&apos;<div className = "{"flex" flex-col items-center justify-center space-y-4 ${className}"}>
       <motion.div>
 
-export default function EnhancedLoadingSpinner({""}"
-  size = "md", text = "Loading...", className = ""}: EnhancedLoadingSpinnerProps) {""
+export default function EnhancedLoadingSpinner(props: any) {""
   const sizeClasses = {}"
 """
   const textSizes = {}: EnhancedLoadingSpinnerProps) {"
@@ -433,3 +429,35 @@ key={i}"""
 "
 ;"">
 }"""
+
+</motion>
+</div>
+</div>
+</div>
+</motion>
+</motion>
+</div>
+</motion>
+</div>
+</motion>
+</div>
+</motion>
+</div>
+</motion>
+</div>
+</div>
+</motion>
+</div>
+</motion>
+</motion>
+</motion>
+</motion>
+</div>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

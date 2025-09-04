@@ -1,38 +1,32 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Rocket, Zap, Shield, Users, TrendingUp, CheckCircle, Star, ArrowRight, Cpu, Database } from 'lucide-react';
-import { SEO } from "../components/SEO";
+import {motion} from 'framer-motion';
+import {Link} from 'react-router-dom';
+import {Rocket, Zap, Shield, Users, TrendingUp, CheckCircle, Star, ArrowRight, Cpu, Database} from 'lucide-react';
+import {SEO} from "../components/SEO";
 const testimonials = [
-    {
-        content: "Zion's digital transformation approach was game-changing. They didn't just implement technology - they transformed our entire business model.",
+    {content: "Zion's digital transformation approach was game-changing. They didn't just implement technology - they transformed our entire business model.",
         name: "Carlos Rodriguez",
         role: "CEO, InnovateCorp",
-        rating: 5
-    },
-    {
-        content: "The process automation they implemented saved us 40 hours per week and improved our customer satisfaction scores significantly.",
+        rating: 5},
+    {content: "The process automation they implemented saved us 40 hours per week and improved our customer satisfaction scores significantly.",
         name: "Lisa Chang",
         role: "COO, TechFlow Solutions",
-        rating: 5
-    },
-    {
-        content: "Working with Zion transformed our comp culture. We're now more agile, data-driven, and customer-focused than ever before.",
+        rating: 5},
+    {content: "Working with Zion transformed our comp culture. We're now more agile, data-driven, and customer-focused than ever before.",
         name: "Marcus Johnson",
         role: "CTO, DigitalFirst Inc",
-        rating: 5
-    }
+        rating: 5}
 ];
 const stats = [
-    { label: "Transformations Completed", value: "75+", icon: Rocket },
-    { label: "Average ROI", value: "300%", icon: TrendingUp },
-    { label: "Process Efficiency Gain", value: "60%", icon: Zap },
-    { label: "Customer Satisfaction", value: "95%", icon: Users }
+    {label: "Transformations Completed", value: "75+", icon: Rocket},
+    {label: "Average ROI", value: "300%", icon: TrendingUp},
+    {label: "Process Efficiency Gain", value: "60%", icon: Zap},
+    {label: "Customer Satisfaction", value: "95%", icon: Users}
 ];
 export default function DigitalTransformation
-export { DigitalTransformation }() {
+export {DigitalTransformation}() {
     return (<div className="min-h-screen bg-background relative overflow-hidden">
-      <SEO title="Digital Transformation Services - Zion Tech Group" description="End-to-end business modernization strategies and implementation services that drive innovation and competitive advantage." keywords="digital transformation, business modernization, process automation, technology modernization, change management" canonical="https://ziontechgroup.com/digital-transformation"/>
+      <SEO title="Digital Transformation Services - Zion Tech Group" description="End-to-end business modernization strategies and implementation services that drive innovation and competitive advantage." keywords="digital transformation, business modernization, process automation, technology modernization, change management" canonical="https://ziontechgroup.com/digital-transformation" />
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -89,7 +83,7 @@ export { DigitalTransformation }() {
 
 }} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mx-auto mb-4 flex items-center justify-center">
-                    <IconComponent className="w-8 h-8 text-white"/>
+                    <IconComponent className="w-8 h-8 text-white" />
                   </div>
                   <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                   <div className="text-zion-slate-light">{stat.label}</div>
@@ -133,7 +127,7 @@ export { DigitalTransformation }() {
 
 }} className="group bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-6 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20">
                   <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl mb-6 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300`}>
-                    <IconComponent className="w-8 h-8"/>
+                    <IconComponent className="w-8 h-8" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-zion-cyan transition-colors">
                     {service.title}
@@ -144,13 +138,13 @@ export { DigitalTransformation }() {
                   {/* Features List */}
                   <ul className="mb-6 space-y-2">
                     {service.features.map((feature, idx) => (<li key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">
-                        <CheckCircle className="w-4 h-4 text-zion-cyan"/>
+                        <CheckCircle className="w-4 h-4 text-zion-cyan" />
                         {feature}
                       </li>))}
                   </ul>
                   <Link to="/contact" className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors group-hover:translate-x-1 transition-transform duration-300">
                     Learn More
-                    <ArrowRight className="w-4 h-4"/>
+                    <ArrowRight className="w-4 h-4" />
                   </Link>
                 </motion.div>)})}
           </div>
@@ -225,21 +219,15 @@ export { DigitalTransformation }() {
                 description: "Streamlined processes and automation reduce costs and improve productivity by up to 60%.",
                 icon: Zap
             },
-            {
-                title: "Customer Experience",
+            {title: "Customer Experience",
                 description: "Enhanced digital touchpoints and personalized experiences increase customer satisfaction and loyalty.",
-                icon: Users
-            },
-            {
-                title: "Data-Driven Insights",
+                icon: Users},
+            {title: "Data-Driven Insights",
                 description: "Real-time analytics and business intelligence enable informed decision-making and strategic planning.",
-                icon: TrendingUp
-            },
-            {
-                title: "Competitive Advantage",
+                icon: TrendingUp},
+            {title: "Competitive Advantage",
                 description: "Innovation and agility position your business ahead of competitors in the digital marketplace.",
-                icon: Rocket
-            }
+                icon: Rocket}
         ].map((benefit, index) => {
             const IconComponent = benefit.icon;
             return (<motion.div key={benefit.title} initial = {
@@ -257,7 +245,7 @@ export { DigitalTransformation }() {
 }} className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300">
                   <div className="flex items-start gap-4">
                     <div className="p-3 bg-zion-purple/20 rounded-lg text-zion-cyan">
-                      <IconComponent className="w-8 h-8"/>
+                      <IconComponent className="w-8 h-8" />
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
@@ -302,7 +290,7 @@ export { DigitalTransformation }() {
 
 }} className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300">
                 <div className="flex gap-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (<Star key={i} className="w-5 h-5 text-zion-cyan fill-current"/>))}
+                  {[...Array(testimonial.rating)].map((_, i) => (<Star key={i} className="w-5 h-5 text-zion-cyan fill-current" />))}
                 </div>
                 <p className="text-zion-slate-light mb-6 leading-relaxed italic">
                   "{testimonial.content}"
@@ -347,3 +335,17 @@ export { DigitalTransformation }() {
         </div>
       </section>
     </div>)}
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

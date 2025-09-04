@@ -13,7 +13,7 @@ import {
   Shield
 } from 'lucide-react';
 
-export default function PartnersPage() {
+export default function PartnersPage(props: any) {
   const strategicPartners = [
     {
       name: "Microsoft Azure",

@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
-import { Quote, Star, ChevronLeft, ChevronRight, Play, Pause, MessageCircle, ThumbsUp, Share2  } from 'lucide-react';
+import React, {useState, useEffect} from 'react';
+import {motion, AnimatePresence} from 'framer-motion';
+import {Quote, Star, ChevronLeft, ChevronRight, Play, Pause, MessageCircle, ThumbsUp, Share2} from 'lucide-react';
 ,
-  {
-
-    id: '2',
+  {id: '2',
     name: 'Marcus Rodriguez',
     role: 'Head of Engineering',
     comp: 'InnovateCorp',
@@ -16,9 +14,7 @@ import { Quote, Star, ChevronLeft, ChevronRight, Play, Pause, MessageCircle, Thu
     date: '1 month ago',
     likes: 89,
     verified: true},
-  {
-
-    id: '3',
+  {id: '3',
     name: 'Dr.Emily Watson',
     role: 'Research Director',
     comp: 'Quantum Labs',
@@ -30,9 +26,7 @@ import { Quote, Star, ChevronLeft, ChevronRight, Play, Pause, MessageCircle, Thu
     date: '3 weeks ago',
     likes: 156,
     verified: true},
-  {
-
-    id: '4',
+  {id: '4',
     name: 'Alex Thompson',
     role: 'Product Manager',
     comp: 'StartupXYZ',
@@ -44,9 +38,7 @@ import { Quote, Star, ChevronLeft, ChevronRight, Play, Pause, MessageCircle, Thu
     date: '1 week ago',
     likes: 73,
     verified: true},
-  {
-
-    id: '5',
+  {id: '5',
     name: 'Lisa Park',
     role: 'VP of Operations',
     comp: 'GlobalTech Inc',
@@ -62,7 +54,7 @@ import { Quote, Star, ChevronLeft, ChevronRight, Play, Pause, MessageCircle, Thu
 const categories = ['
   'All',AI Infrastructure',Talent Matching',Research & Development',Startup Solutions',Global Operations',
 ];
-export function InteractiveTestimonials() {
+export function InteractiveTestimonials(props: any) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
@@ -81,20 +73,14 @@ export function InteractiveTestimonials() {
   };
 }, []);, []);
     if(!isAutoPlaying) return;
-    const interval = setInterval(() => {
-      setCurrentIndex(prev => (prev + 1) % filteredTestimonials.length);
-    }, 5000);
+    const interval = setInterval(() => {setCurrentIndex(prev => (prev + 1) % filteredTestimonials.length);}, 5000);
     return () => clearInterval(interval);
   }, [isAutoPlaying, filteredTestimonials.length]);
-  const nextTestimonial = () => {
-    setCurrentIndex(prev => (prev + 1) % filteredTestimonials.length);
-  };
-  const prevTestimonial = () => {
-    setCurrentIndex()
+  const nextTestimonial = (props: any) => {setCurrentIndex(prev => (prev + 1) % filteredTestimonials.length);};
+  const prevTestimonial = (props: any) => {setCurrentIndex()
       prev =>
         (prev - 1 + filteredTestimonials.length) % filteredTestimonials.length
-    );
-  };
+    );};
   const toggleLike = testimonialId => {
 
     setLikedTestimonials(prev => {
@@ -103,20 +89,16 @@ export function InteractiveTestimonials() {
       if(newSet.has(testimonialId)) {
 
         newSet.delete(testimonialId);
-      } else {
-
-        newSet.add(testimonialId);
-      }
+      } else {newSet.add(testimonialId);}
       return newSet;
     });
   };
   const renderStars = rating => {
 
     return Array.from({ length: 5 }, (_, i) => (
-      <Star
-        key={i}
+      <Star key={i}
         className={`w-5 h-5 ${i < rating ? 'text-yellow-400 fill-current' : 'text-gray-400'}`}
-      />
+       />
     ));
   };
   const containerVariants = {
@@ -151,3 +133,6 @@ export function InteractiveTestimonials() {
       </div>"
 
 export default Component
+
+</section>
+</Star>

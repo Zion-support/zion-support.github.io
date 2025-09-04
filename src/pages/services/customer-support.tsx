@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Headphones, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3, Users, Clock, DollarSign, MessageSquare } from 'lucide-react';
 
-export default function CustomerSupport() {
+export default function CustomerSupport(props: any) {
   const features = [
     'AI-powered chatbot with natural language processing',
     'Multi-channel support (email, chat, phone, social media)',

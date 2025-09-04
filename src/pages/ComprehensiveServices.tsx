@@ -1,9 +1,10 @@
+import React from 'react';
 />
 
 export default function ComprehensiveServices(...args: unknow n[]): unknown {
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [priceRange, setPriceRange] = useState('all');
+  const [activeCategory, setActiveCategory] = useState<any>('all');
+  const [searchQuery, setSearchQuery] = useState<any>('');
+  const [priceRange, setPriceRange] = useState<any>('all');
 
   // Comprehensive service categories with real market prices
   const serviceCategories = [
@@ -729,3 +730,21 @@ export { ComprehensiveServices };
 export { ComprehensiveServices };
 
 export { ComprehensiveServices };
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</SEO>
+</any>
+</any>
+</any>

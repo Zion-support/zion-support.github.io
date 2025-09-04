@@ -1,13 +1,13 @@
 import React from 'react';'''
-import { Link } from 'react-router-dom';'''
-import { Button } from '../ui/button';
+import {Link} from 'react-router-dom';'''
+import {Button} from '../ui/button';
 import {}
   Card,
   CardContent,'
   CardDescription,''
   CardHeader,'''
   CardTitle} from '../ui/card';'''
-import { Badge } from '../ui/badge';
+import {Badge} from '../ui/badge';
 import {}
   Brain,
   Shield,
@@ -22,34 +22,34 @@ import {}
   Clock,'''
   Globe} from 'lucide-react';
 // Mock data for enhanced services;
-const EnhancedServicesOverview = () => {}
+const EnhancedServicesOverview = (props: any) => {}
   // Get featured services (first 6)
   const featuredServices = ENHANCED_SERVICES.slice(0, 6);
   const getCategoryIcon = category => {}
     switch (category) {}
 '
       case 'AI & Machine Learning': any;
-        return <Brain className="w-6 h-6" />;'"""
+        return <Brain className="w-6 h-6"  />;'"""
       case 'Cybersecurity':""""
-        return <Shield className="w-6 h-6" />;'"""
+        return <Shield className="w-6 h-6"  />;'"""
       case 'Cloud & DevOps':""""
-        return <Cloud className="w-6 h-6" />;'"""
+        return <Cloud className="w-6 h-6"  />;'"""
       case 'Data & Analytics':""""
-        return <Database className="w-6 h-6" />;'"""
+        return <Database className="w-6 h-6"  />;'"""
       case 'Blockchain & Web3':""""
-        return <Zap className="w-6 h-6" />;'"""
+        return <Zap className="w-6 h-6"  />;'"""
       case 'IoT & Edge Computing':""""
-        return <Eye className="w-6 h-6" />;'"""
+        return <Eye className="w-6 h-6"  />;'"""
       case 'Quantum Computing':""""
-        return <Brain className="w-6 h-6" />;'"""
+        return <Brain className="w-6 h-6"  />;'"""
       case 'AR/VR & Metaverse':""""
-        return <Eye className="w-6 h-6" />;'"""
+        return <Eye className="w-6 h-6"  />;'"""
       case 'Green Tech & Sustainability':""""
-        return <Leaf className="w-6 h-6" />;'"""
+        return <Leaf className="w-6 h-6"  />;'"""
       case 'FinTech & Digital Banking':""""
-        return <DollarSign className="w-6 h-6" />;"""
+        return <DollarSign className="w-6 h-6"  />;"""
       default:""""
-        return <Zap className="w-6 h-6" />;
+        return <Zap className="w-6 h-6"  />;
     }
   };
   const getAvailabilityColor = availability => {}
@@ -89,7 +89,7 @@ const EnhancedServicesOverview = () => {}
                 className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"""
               >"""
                 Explore All Services""""
-                <ArrowRight className="ml-2 w-4 h-4" />
+                <ArrowRight className="ml-2 w-4 h-4"  />
               </Button>
             </Link>"""
             <Button""""
@@ -147,7 +147,7 @@ const EnhancedServicesOverview = () => {}
                     </span>"""
                   </div>""""
                   <div className="flex items-center gap-1">""""
-                    <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />""""
+                    <Star className="w-4 h-4 fill-yellow-400 text-yellow-400"  />""""
                     <span className="text-white font-medium">
                       {service.rating}
                     </span>
@@ -185,7 +185,7 @@ const EnhancedServicesOverview = () => {}
                   <div;
                     className={`flex items-center gap-2 ${getAvailabilityColor(service.availability)}`}"""
                   >""""
-                    <Clock className="w-4 h-4" />""""
+                    <Clock className="w-4 h-4"  />""""
                     <span className="font-medium">'
                       {service.availability === 'immediate'''
                         ? 'Available Now'''
@@ -197,7 +197,7 @@ const EnhancedServicesOverview = () => {}
                     </span>"""
                   </div>""""
                   <div className="flex items-center gap-1 text-zion-slate-light">""""
-                    <Globe className="w-4 h-4" />
+                    <Globe className="w-4 h-4"  />
                     {service.location}
                   </div>
                 </div>
@@ -281,15 +281,15 @@ const EnhancedServicesOverview = () => {}
             <div className="mt-6 text-zion-slate-light text-sm">""""
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">""""
                 <div className="flex items-center gap-2">""""
-                  <Globe className="w-4 h-4 text-zion-cyan" />
+                  <Globe className="w-4 h-4 text-zion-cyan"  />
                   <span>+1 302 464 0950</span>"""
                 </div>""""
                 <div className="flex items-center gap-2">""""
-                  <Globe className="w-4 h-4 text-zion-cyan" />
+                  <Globe className="w-4 h-4 text-zion-cyan"  />
                   <span>kleber@ziontechgroup.com</span>"""
                 </div>""""
                 <div className="flex items-center gap-2">""""
-                  <Globe className="w-4 h-4 text-zion-cyan" />
+                  <Globe className="w-4 h-4 text-zion-cyan"  />
                   <span>https://ziontechgroup.com</span>
                 </div>
               </div>
@@ -300,12 +300,12 @@ const EnhancedServicesOverview = () => {}
     </section>)};
 export default EnhancedServicesOverview;
 
-export { EnhancedServicesOverview };
+export {EnhancedServicesOverview};
 
-export { EnhancedServicesOverview };
+export {EnhancedServicesOverview};
 
-export { EnhancedServicesOverview };
+export {EnhancedServicesOverview};
 
-export { EnhancedServicesOverview };
+export {EnhancedServicesOverview};
 
-export { EnhancedServicesOverview };
+export {EnhancedServicesOverview};

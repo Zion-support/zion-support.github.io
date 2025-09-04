@@ -10,3 +10,5 @@ export default function TechSolutionsSection.test() {return (
         </p>
       </div>
   );"}"
+
+</div>

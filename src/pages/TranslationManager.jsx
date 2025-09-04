@@ -1,5 +1,6 @@
-import { useTranslation } from 'react -i18next';
-export default function Page() {
+import React from 'react';
+import {useTranslation} from 'react -i18next';
+export default function Page(props: any) {
 );
     const [filteredKeys, setFilteredKeys] = useState([]);
     const [editingKey, setEditingKey] = useState(null);
@@ -14,12 +15,12 @@ export default function Page() {
   };
 }, []);, []);
         // For demo purposes, we're using the loaded translations from i18next
-        const currentTranslations = { /* empty */ };
+        const currentTranslations = {/* empty */};
         supportedLanguages.forEach(lang => {
             const res = i18n.getResourceBundle (lang.code, selectedNamespace) ;
             if(res) {
                 // Flatten nested objects for easier management
-                const flattenObject = (obj, prefix = '') => {
+                const flattenObject = (props: any) => {
                     return Object.keys(obj) .reduce((acc, key) => {
                         const pre = prefix.length ? `${prefix}.` : '';
                         if(typeof obj[key] === 'object' && obj[key] !== null) {
@@ -32,8 +33,7 @@ export default function Page() {
         setTranslations(currentTranslations) ;
         // Get all unique keys across all languages
         const allKeys = new Set () ;
-        Object.values(currentTranslations) .forEach(langTranslations => {
-            Object.keys (langTranslations) .forEach(key => allKeys.add (key) ) }) ;
+        Object.values(currentTranslations) .forEach(langTranslations => {Object.keys (langTranslations) .forEach(key => allKeys.add (key) )}) ;
         setFilteredKeys(Array.from (allKeys) ) }, [selectedNamespace, i18n]) ;
     // Filter keys based on search query
     useEffect(() => {
@@ -59,17 +59,14 @@ export default function Page() {
                     filtered.push(key) }
             }) }) ;
         setFilteredKeys([...new Set (filtered) ]) }, [searchQuery, translations]) ;
-    const handleEdit = (key) => {
+    const handleEdit = (props: any) => {
         setEditingKey(key) ;
         // Initialize edited translations for this key
         const initialEdits = { /* empty */ };
-        supportedLanguages.forEach(lang => {
-            initialEdits[lang.code] = translations[lang.code]?.[key] || ''}) ;
-        setEditedTranslations({
-            ...editedTranslations,
-            [key]: initialEdits
-        }) };
-    const handleSave = (key) => {
+        supportedLanguages.forEach(lang => {initialEdits[lang.code] = translations[lang.code]?.[key] || ''}) ;
+        setEditedTranslations({...editedTranslations,
+            [key]: initialEdits}) };
+    const handleSave = (props: any) => {
         setIsSaving(true) ;
         // In a real application, you would save these to your backend
         setTimeout(() => {
@@ -82,10 +79,8 @@ export default function Page() {
             setTranslations(updatedTranslations) ;
             setEditingKey(null) ;
             setIsSaving(false) ;
-            toast({
-                title: t ("translation.saved") ,
-                description: t("translation.changes_saved") ,
-            }) }, 1000) };
+            toast({title: t ("translation.saved") ,
+                description: t("translation.changes_saved") ,}) }, 1000) };
     const handleTranslateKey = async(key) => {
         // Find first non - empty translation to use as source
         let sourceText = '';
@@ -112,23 +107,17 @@ export default function Page() {
                 }) ;
                 return}
             // Update edited translations with auto - translated content
-            setEditedTranslations({
-                ...editedTranslations,
-                [key]: translatedText
-            }) ;
-            toast({
-                title: t ('translation.translation_success') ,
-                description: t('translation.content_translated') ,
-            }) }
+            setEditedTranslations({...editedTranslations,
+                [key]: translatedText}) ;
+            toast({title: t ('translation.translation_success') ,
+                description: t('translation.content_translated') ,}) }
         catch(error) {
             // // // // // // // console.error(`Error translating key ${key}:`, error) ;
-            toast({
-                title: t ('translation.translation_failed') ,
+            toast({title: t ('translation.translation_failed') ,
                 description: error instanceof Error ? error.message : t('translation.unknown_error') ,
-                variant: "destructive",
-            }) }
+                variant: "destructive",}) }
     };
-    const handleChange = (lang, key, value) => {
+    const handleChange = (props: any) => {
         setEditedTranslations({
             ...editedTranslations,
             [key]: {
@@ -136,26 +125,25 @@ export default function Page() {
                 [lang]: value
             }
         }) };
-    const getMissingLanguages = (key) => {
-        return supportedLanguages
-            .map(lang => lang.code) .filter(lang => !translations[lang]?.[key]) };
+    const getMissingLanguages = (props: any) => {return supportedLanguages
+            .map(lang => lang.code) .filter(lang => !translations[lang]?.[key])};
     return (<>
-      <SEO title={t ('translation.manager_title') } description={t('translation.manager_description') }/>
+      <SEO title={t ('translation.manager_title')} description={t('translation.manager_description')} />
 
       <main className={`container mx - auto px-${isMobile ? '4' : '6'} py-8`}>
         <Card>
           <CardHeader>
-            <CardTitle className="text-2xl">{t('translation.manager_title') }</CardTitle>
+            <CardTitle className="text-2xl">{t('translation.manager_title')}</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="space - y-6">
               {/* Search and filter */}
               <div className="flex flex - col sm:flex - row gap-4">
                 <div className="relative flex -1">
-                  <Search className="absolute left - 2.5 top - 2.5 h-4 w-4 text-muted -foreground"/>
-                  <Input type="search" placeholder={t('translation.search_placeholder') } className="pl -8" value={searchQuery} onChange={ (e) => setSearchQuery(e.target.value) }/>
+                  <Search className="absolute left - 2.5 top - 2.5 h-4 w-4 text-muted -foreground" />
+                  <Input type="search" placeholder={t('translation.search_placeholder')} className="pl -8" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)}/>
                 </div>
-                <Tabs defaultValue="translation" value={selectedNamespace} onValueChange={ (value) => setSelectedNamespace(value) } className="w-full sm:w-auto">
+                <Tabs defaultValue="translation" value={selectedNamespace} onValueChange={(value) => setSelectedNamespace(value)} className="w-full sm:w-auto">
                   <TabsList>
                     <TabsTrigger value="translation">General</TabsTrigger>
                     <TabsTrigger value="admin">Admin</TabsTrigger>
@@ -166,9 +154,9 @@ export default function Page() {
               {/* Translations table */}
               <div className="border rounded-md">
                 <div className="grid grid - cols-[1fr_2fr] sm:grid - cols-[1fr_2fr_auto] border-b">
-                  <div className="p - 3 font -medium">{t('translation.key') }</div>
-                  <div className="p - 3 font -medium">{t('translation.translations') }</div>
-                  <div className="hidden sm:block p - 3 font -medium">{t('translation.actions') }</div>
+                  <div className="p - 3 font -medium">{t('translation.key')}</div>
+                  <div className="p - 3 font -medium">{t('translation.translations')}</div>
+                  <div className="hidden sm:block p - 3 font -medium">{t('translation.actions')}</div>
                 </div>
 
                 {filteredKeys.length === 0 ? (<div className="p - 6 text-center text-muted -foreground">
@@ -184,27 +172,27 @@ export default function Page() {
                                     <span>{lang.name}</span>
                                   </div>
                                   {editedTranslations[key][lang.code]?.includes('\n') ||
-                            editedTranslations[key][lang.code]?.length > 100 ? (<Textarea value={editedTranslations[key][lang.code] || ''} onChange = { (e) => handleChange(lang.code, key,
-  e.target.value) } dir={lang.code === 'ar' ? 'rtl' : 'ltr'} className="min - h-20"/>) : (<Input value={editedTranslations[key][lang.code] || ''} onChange = { (e) => handleChange(lang.code, key,
-  e.target.value) } dir={lang.code === 'ar' ? 'rtl' : 'ltr'}/>) }
+                            editedTranslations[key][lang.code]?.length > 100 ? (<Textarea value={editedTranslations[key][lang.code] || ''} onChange={(e) => handleChange(lang.code, key,
+  e.target.value)} dir={lang.code === 'ar' ? 'rtl' : 'ltr'} className="min - h-20"/>) : (<Input value={editedTranslations[key][lang.code] || ''} onChange={(e) => handleChange(lang.code, key,
+  e.target.value)} dir={lang.code === 'ar' ? 'rtl' : 'ltr'}/>) }
                                 </div>) ) }
                             </div>
                             <div className="flex gap-2 mt-4">
-                              <Button size="sm" onClick={ () => handleSave(key) } disabled={isSaving}>
+                              <Button size="sm" onClick={() => handleSave(key)} disabled={isSaving}>
                                 {isSaving ? (<>
-                                    <Loader2 className="mr-2 h-4 w-4 animate -spin"/>
+                                    <Loader2 className="mr-2 h-4 w-4 animate -spin" />
                                     {t('general.saving') }
                                   </>) : (<>
-                                    <Check className="mr-2 h-4 w-4"/>
-                                    {t('general.save') }
+                                    <Check className="mr-2 h-4 w-4" />
+                                    {t('general.save')}
                                   </>) }
                               </Button>
                               <Button size="sm" variant="outline" onClick={handleCancel}>
-                                {t('general.cancel') }
+                                {t('general.cancel')}
                               </Button>
-                              <Button size="sm" variant="secondary" onClick={ () => handleTranslateKey(key) } disabled={isTranslating}>
-                                {isTranslating ? (<Loader2 className="mr-2 h-4 w-4 animate -spin"/>) : (<Globe className="mr-2 h-4 w-4"/>) }
-                                {t('translation.auto_translate') }
+                              <Button size="sm" variant="secondary" onClick={() => handleTranslateKey(key)} disabled={isTranslating}>
+                                {isTranslating ? (<Loader2 className="mr-2 h-4 w-4 animate -spin" />) : (<Globe className="mr-2 h-4 w-4" />)}
+                                {t('translation.auto_translate')}
                               </Button>
                             </div>
                           </div>) : (<div className="p -3">
@@ -212,18 +200,18 @@ export default function Page() {
                               {supportedLanguages.slice(0, 2) .map((lang) => (<div key={lang.code} className="flex items - start gap-2">
                                   <span className="mt-0.5 flex - shrink -0">{lang.flag}</span>
                                   <span className={`${!translations[lang.code]?.[key] ? 'text-zion - purple italic' : ''}`} dir={lang.code === 'ar' ? 'rtl' : 'ltr'}>
-                                    {translations[lang.code]?.[key] || t('translation.missing') }
+                                    {translations[lang.code]?.[key] || t('translation.missing')}
                                   </span>
                                 </div>) ) }
                               {getMissingLanguages(key) .length > 0 && (<div className="flex items - center gap-2 text-sm text-zion -purple">
-                                  <AlertTriangle className="h-4 w-4"/>
+                                  <AlertTriangle className="h-4 w-4" />
                                   {t('translation.missing_languages', { count: getMissingLanguages (key) .length }) }
                                 </div>) }
                             </div>
                           </div>) }
                         <div className="p - 3 flex items - center justify -end">
                           {editingKey === key ? null : (<Button size="sm" variant="outline" onClick={ () => handleEdit(key) }>
-                              {t('translation.edit') }
+                              {t('translation.edit')}
                             </Button>) }
                         </div>
                       </div>) ) }
@@ -236,12 +224,14 @@ export default function Page() {
       
     </>)}
 
-export { TranslationManager };
+export {TranslationManager};
 
-export { TranslationManager };
+export {TranslationManager};
 
-export { TranslationManager };
+export {TranslationManager};
 
-export { TranslationManager };
+export {TranslationManager};
 
-export { TranslationManager };
+export {TranslationManager};
+
+</Textarea>

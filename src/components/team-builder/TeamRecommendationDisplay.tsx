@@ -74,3 +74,6 @@ const InfoCard = ({ title, value, icon }: { title: string; value: string; icon: 
   </Card>;
 );
 '"`
+
+</BudgetStatusDisplay>
+</InfoCard>

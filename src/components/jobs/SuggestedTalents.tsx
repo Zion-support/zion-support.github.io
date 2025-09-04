@@ -5,10 +5,10 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { EmptyMatchesCard } from './EmptyMatchesCard';
 import { JobMatchCard } from './JobMatchCard';
 
-export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
+export function SuggestedTalents(props: any) {
   const [talents, setTalents] = useState<any[]>([]); // Added type for talents
-  const [isLoading, setIsLoading] = useState(true);
-  const [isProcessing, setIsProcessing] = useState(false);
+  const [isLoading, setIsLoading] = useState<any>(true);
+  const [isProcessing, setIsProcessing] = useState<any>(false);
 
   const fetchSuggestedTalents = useCallback(async () => { // Wrapped in useCallback
     setIsLoading(true);
@@ -49,7 +49,7 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
     }
   }, [jobId]); // jobId is a dependency of fetchSuggestedTalents
 
-  const handleViewProfile = (talentId: string) => {
+  const handleViewProfile = (props: any) => {
     console.log("View talent profile:", talentId);
     toast({
       title: "View Profile",
@@ -57,7 +57,7 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
     });
   };
 
-  const handleInvite = (talentId: string) => {
+  const handleInvite = (props: any) => {
     console.log("Invite talent:", talentId);
     toast({
       title: "Invite Talent",
@@ -65,7 +65,7 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
     });
   };
 
-  const handleRefresh = () => {
+  const handleRefresh = (props: any) => {
     setIsProcessing(true);
     fetchSuggestedTalents().finally(() => {
       setIsProcessing(false);
@@ -135,3 +135,8 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
     </Card>
   );
 }
+
+</JobMatchCard>
+</any>
+</any>
+</any>

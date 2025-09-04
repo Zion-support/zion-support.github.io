@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { TrendingUp, Users, Download, RefreshCw, BarChart3, Eye, EyeOff, Target } from 'lucide-react';
-import { Button } from "button.tsx";
-export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetricClick, className = '' }) {
+import React, {useState, useEffect, useCallback} from 'react';
+import {motion, AnimatePresence} from 'framer-motion';
+import {TrendingUp, Users, Download, RefreshCw, BarChart3, Eye, EyeOff, Target} from 'lucide-react';
+import {Button} from "button.tsx";
+export function AnalyticsDashboard(props: any) {
     const [showTargets, setShowTargets] = useState(true);
     const [isLoading, setIsLoading] = useState(false);
     const [selectedMetric, setSelectedMetric] = useState(null);
@@ -25,12 +25,10 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
             }))}, 5000);
         return () => clearInterval(interval)}, [enabled, isExpanded]);
     // Handle metric click
-    const handleMetricClick = useCallback((metricId) => {
-        setSelectedMetric(metricId);
+    const handleMetricClick = useCallback((metricId) => {setSelectedMetric(metricId);
         onMetricClick?.(metricId)}, [onMetricClick]);
     // Calculate progress percentage
-    const calculateProgress = (current, target) => {
-        return Math.min((current / target) * 100, 100)};
+    const calculateProgress = (props: any) => {return Math.min((current / target) * 100, 100)};
     // Refresh data
     const refreshData = useCallback(async () => {
         setIsLoading(true);
@@ -65,13 +63,13 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
         
         <div className="flex items-center gap-2">
           <Button size="sm" variant="ghost" onClick={() => setShowTargets(!showTargets)} className="text-zinc-400 hover:text-white p-2">
-            {showTargets ? <EyeOff className="w-4 h-4"/> : <Eye className="w-4 h-4"/>}
+            {showTargets ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
           </Button>
           <Button size="sm" variant="outline" onClick={refreshData} disabled={isLoading} className="border-zion-blue-light/30 text-zinc-300 hover:text-white">
-            <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin' : ''}`}/>
+            <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin' : ''}`} />
           </Button>
           <Button size="sm" variant="outline" className="border-zion-blue-light/30 text-zinc-300 hover:text-white">
-            <Download className="w-4 h-4"/>
+            <Download className="w-4 h-4" />
           </Button>
         </div>
       </div>
@@ -82,7 +80,7 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
         <motion.div className="bg-zion-blue/20 border border-zion-blue-light/30 rounded-lg p-4 cursor-pointer hover:border-zion-cyan/50 transition-all duration-300" whileHover={{ scale: 1.02 }} onClick={() => handleMetricClick('totalUsers')}>
           <div className="flex items-center justify-between mb-3">
             <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
-              <Users className="w-5 h-5 text-white"/>
+              <Users className="w-5 h-5 text-white" />
             </div>
             <div className="text-right">
               <div className="text-2xl font-bold text-white">{metrics.totalUsers.toLocaleString()}</div>
@@ -97,11 +95,7 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
                 </span>
               </div>
               <div className="w-full bg-zinc-700 rounded-full h-2">
-                <div className="bg-gradient-to-r from-blue-500 to-cyan-500 h-2 rounded-full transition-all duration-500" style = {
-  { width: `${calculateProgress(metrics.totalUsers,
-  15000)
-
-}%` }}/>
+                <div className="bg-gradient-to-r from-blue-500 to-cyan-500 h-2 rounded-full transition-all duration-500" style="{{{ width: `${calculateProgress(metrics.totalUsers}}"%` }} />
               </div>
             </div>)}
         </motion.div>
@@ -110,7 +104,7 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
         <motion.div className="bg-zion-blue/20 border border-zion-blue-light/30 rounded-lg p-4 cursor-pointer hover:border-zion-cyan/50 transition-all duration-300" whileHover={{ scale: 1.02 }} onClick={() => handleMetricClick('activeUsers')}>
           <div className="flex items-center justify-between mb-3">
             <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center">
-              <TrendingUp className="w-5 h-5 text-white"/>
+              <TrendingUp className="w-5 h-5 text-white" />
             </div>
             <div className="text-right">
               <div className="text-2xl font-bold text-white">{metrics.activeUsers.toLocaleString()}</div>
@@ -125,11 +119,7 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
                 </span>
               </div>
               <div className="w-full bg-zinc-700 rounded-full h-2">
-                <div className="bg-gradient-to-r from-green-500 to-emerald-500 h-2 rounded-full transition-all duration-500" style = {
-  { width: `${calculateProgress(metrics.activeUsers,
-  12000)
-
-}%` }}/>
+                <div className="bg-gradient-to-r from-green-500 to-emerald-500 h-2 rounded-full transition-all duration-500" style="{{{ width: `${calculateProgress(metrics.activeUsers}}"%` }} />
               </div>
             </div>)}
         </motion.div>
@@ -138,7 +128,7 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
         <motion.div className="bg-zion-blue/20 border border-zion-blue-light/30 rounded-lg p-4 cursor-pointer hover:border-zion-cyan/50 transition-all duration-300" whileHover={{ scale: 1.02 }} onClick={() => handleMetricClick('revenue')}>
           <div className="flex items-center justify-between mb-3">
             <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
-              <BarChart3 className="w-5 h-5 text-white"/>
+              <BarChart3 className="w-5 h-5 text-white" />
             </div>
             <div className="text-right">
               <div className="text-2xl font-bold text-white">${metrics.revenue.toLocaleString()}</div>
@@ -153,11 +143,7 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
                 </span>
               </div>
               <div className="w-full bg-zinc-700 rounded-full h-2">
-                <div className="bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full transition-all duration-500" style = {
-  { width: `${calculateProgress(metrics.revenue,
-  500000)
-
-}%` }}/>
+                <div className="bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full transition-all duration-500" style="{{{ width: `${calculateProgress(metrics.revenue}}"%` }} />
               </div>
             </div>)}
         </motion.div>
@@ -166,7 +152,7 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
         <motion.div className="bg-zion-blue/20 border border-zion-blue-light/30 rounded-lg p-4 cursor-pointer hover:border-zion-cyan/50 transition-all duration-300" whileHover={{ scale: 1.02 }} onClick={() => handleMetricClick('growth')}>
           <div className="flex items-center justify-between mb-3">
             <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center">
-              <Target className="w-5 h-5 text-white"/>
+              <Target className="w-5 h-5 text-white" />
             </div>
             <div className="text-right">
               <div className="text-2xl font-bold text-white">{metrics.growth.toFixed(1)}%</div>
@@ -181,11 +167,7 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
                 </span>
               </div>
               <div className="w-full bg-zinc-700 rounded-full h-2">
-                <div className="bg-gradient-to-r from-orange-500 to-red-500 h-2 rounded-full transition-all duration-500" style = {
-  { width: `${calculateProgress(metrics.growth,
-  25)
-
-}%` }}/>
+                <div className="bg-gradient-to-r from-orange-500 to-red-500 h-2 rounded-full transition-all duration-500" style="{{{ width: `${calculateProgress(metrics.growth}}"%` }} />
               </div>
             </div>)}
         </motion.div>
@@ -213,3 +195,10 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
           </motion.div>)}
       </AnimatePresence>
     </motion.div>)}
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
