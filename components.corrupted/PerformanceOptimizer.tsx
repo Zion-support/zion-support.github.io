@@ -12,13 +12,13 @@ preloadImages = [], preloadFonts = [;
     // Performance monitoring;
     if (typeof window !== 'undefined' && 'performance' in window) {'      // Monitor Core Web Vitals'      const observer = new PerformanceObserver((list) => {;
         for (const entry of list.getEntries()) {;
-if (entry.entryType === 'largest-contentful-paint') {'            console.log('LCP: ', entry.startTime);
-'          }'          if (entry.entryType === 'first-input') {'            console.log('FID: ', entry.processingStart - entry.startTime);'          }'          if (entry.entryType === 'layout-shift') {'            if (!(entry as any).hadRecentInput) {'              console.log('CLS: ', (entry as any).value);'            }'          }
+if (entry.entryType === 'largest-contentful-paint') {'            
+'          }'          if (entry.entryType === 'first-input') {'            '          }'          if (entry.entryType === 'layout-shift') {'            if (!(entry as any).hadRecentInput) {'              '            }'          }
       });
       try {;
         observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
 '      } catch (e) {'        // Fallback for browsers that don&apos;t support all entry types;
-        console.log('Performance monitoring not fully supported');
+        
 '      }';
       // Resource hints for better performance;
       const addResourceHint = (href: string, as: string, type?: string) => {;
@@ -56,9 +56,9 @@ key={`preload-font-${index}`}          rel="preload""          as="style""      
       <meta httpEquiv="x-dns-prefetch-control" content="on" />"      "      {/* Service Worker registration */}
       <script;>
         dangerouslySetInnerHTML={{;
-          __html:             if ('serviceWorker' in navigator) {'              window.addEventListener('load', function() {'                navigator.serviceWorker.register('/sw.js')'                  .then(function(registration) {'                    console.log('SW registered: ', registration);
+          __html:             if ('serviceWorker' in navigator) {'              window.addEventListener('load', function() {'                navigator.serviceWorker.register('/sw.js')'                  .then(function(registration) {'                    
 '                  })'                  .catch(function(registrationError) {;
-                    console.log('SW registration failed: ', registrationError);'                  });'              });,
+                    '                  });'              });,
 }
           ``        }}/>;
     </Head>;
