@@ -192,6 +192,293 @@ export const addedServices: ServiceItem[] = [
 		benefits: ['Reduce risk', 'Meet compliance needs', 'Actionable fixes'],
 		pricing: { model: 'Fixed price', from: '$8,000+', notes: 'Scope-dependent' },
 		links: { landing: 'https://ziontechgroup.com/services/security-assessments-and-pentest' }
+	},
+	// Enhanced AI-Powered Micro SaaS Services
+	{
+		slug: 'ai-content-studio-pro',
+		title: 'AI Content Studio Pro',
+		category: 'Micro SaaS',
+		tagline: 'Generate, optimize, and distribute content across all channels with AI.',
+		description: [
+			"Advanced AI-powered content creation platform that generates blog posts, social media content, email campaigns, and marketing materials.",
+			"Includes SEO optimization, brand voice consistency, and multi-platform distribution automation."
+		],
+		features: [
+			'Multi-format content generation (blogs, social, email, ads)',
+			'SEO optimization and keyword research',
+			'Brand voice training and consistency',
+			'Multi-platform publishing automation',
+			'Content performance analytics',
+			'A/B testing and optimization',
+			'Plagiarism detection and originality scoring',
+			'Multi-language support (50+ languages)'
+		],
+		benefits: [
+			'Reduce content creation time by 80%',
+			'Increase engagement rates by 45%',
+			'Improve SEO rankings significantly',
+			'Maintain consistent brand voice across all channels'
+		],
+		pricing: [
+			{ name: 'Starter', price: '$199/mo', includes: ['10k words/month', '5 social platforms', 'Basic analytics'] },
+			{ name: 'Professional', price: '$499/mo', includes: ['50k words/month', 'Unlimited platforms', 'Advanced analytics'] },
+			{ name: 'Enterprise', price: '$1,299/mo', includes: ['Unlimited words', 'Custom integrations', 'Dedicated support'] }
+		],
+		links: {
+			landing: 'https://ziontechgroup.com/services/ai-content-studio-pro',
+			docs: 'https://ziontechgroup.com/services/ai-content-studio-pro#docs',
+			contact: 'mailto:kleber@ziontechgroup.com'
+		}
+	},
+	{
+		slug: 'ai-email-orchestrator',
+		title: 'AI Email Orchestrator',
+		category: 'Micro SaaS',
+		tagline: 'Intelligent email sequences that adapt to recipient behavior in real-time.',
+		description: [
+			"Advanced AI system that creates personalized email sequences, optimizes send times, and adapts content based on recipient engagement.",
+			"Uses machine learning to predict optimal email timing, subject lines, and content for maximum open and conversion rates."
+		],
+		features: [
+			'Behavioral trigger automation',
+			'AI-powered subject line optimization',
+			'Send time optimization',
+			'Dynamic content personalization',
+			'A/B testing with AI insights',
+			'Deliverability optimization',
+			'Unsubscribe prediction and prevention',
+			'Cross-channel campaign coordination'
+		],
+		benefits: [
+			'Increase open rates by 60%',
+			'Boost conversion rates by 40%',
+			'Reduce unsubscribe rates by 50%',
+			'Save 20+ hours per week on email management'
+		],
+		pricing: [
+			{ name: 'Starter', price: '$149/mo', includes: ['10k contacts', '5 campaigns', 'Basic analytics'] },
+			{ name: 'Growth', price: '$399/mo', includes: ['50k contacts', 'Unlimited campaigns', 'Advanced analytics'] },
+			{ name: 'Enterprise', price: '$999/mo', includes: ['Unlimited contacts', 'Custom integrations', 'Dedicated support'] }
+		],
+		links: {
+			landing: 'https://ziontechgroup.com/services/ai-email-orchestrator',
+			contact: 'mailto:kleber@ziontechgroup.com'
+		}
+	},
+	{
+		slug: 'ai-project-orchestrator',
+		title: 'AI Project Orchestrator',
+		category: 'Micro SaaS',
+		tagline: 'Intelligent project management that predicts risks and optimizes team performance.',
+		description: [
+			"AI-powered project management platform that uses machine learning to predict project risks, optimize resource allocation, and automate task assignments.",
+			"Provides real-time insights, automated reporting, and intelligent recommendations for project success."
+		],
+		features: [
+			'AI-powered risk prediction',
+			'Automated task assignment',
+			'Resource optimization algorithms',
+			'Real-time project health monitoring',
+			'Predictive timeline adjustments',
+			'Team performance analytics',
+			'Automated status reporting',
+			'Integration with 50+ tools'
+		],
+		benefits: [
+			'Reduce project delays by 35%',
+			'Improve team productivity by 45%',
+			'Increase project success rate by 60%',
+			'Save 15+ hours per week on project management'
+		],
+		pricing: [
+			{ name: 'Team', price: '$299/mo', includes: ['10 team members', '5 projects', 'Basic AI features'] },
+			{ name: 'Business', price: '$699/mo', includes: ['50 team members', 'Unlimited projects', 'Advanced AI features'] },
+			{ name: 'Enterprise', price: '$1,499/mo', includes: ['Unlimited members', 'Custom integrations', 'Dedicated support'] }
+		],
+		links: {
+			landing: 'https://ziontechgroup.com/services/ai-project-orchestrator',
+			contact: 'mailto:kleber@ziontechgroup.com'
+		}
+	},
+	// Advanced AI Services
+	{
+		slug: 'ai-financial-analytics-pro',
+		title: 'AI Financial Analytics Pro',
+		category: 'AI Services',
+		tagline: 'Advanced AI-driven financial analysis and forecasting for businesses.',
+		description: [
+			"Comprehensive AI platform that analyzes financial data, predicts market trends, and provides actionable insights for business decisions.",
+			"Uses advanced machine learning algorithms to identify patterns, detect anomalies, and forecast financial performance."
+		],
+		features: [
+			'Real-time financial data analysis',
+			'Predictive financial modeling',
+			'Anomaly detection and fraud prevention',
+			'Market trend analysis',
+			'Cash flow forecasting',
+			'Investment opportunity identification',
+			'Risk assessment and mitigation',
+			'Automated financial reporting'
+		],
+		benefits: [
+			'Improve financial decision accuracy by 70%',
+			'Reduce financial risks by 50%',
+			'Increase profit margins by 25%',
+			'Save 20+ hours per week on financial analysis'
+		],
+		pricing: [
+			{ name: 'Professional', price: '$799/mo', includes: ['Basic analytics', 'Monthly reports', 'Email support'] },
+			{ name: 'Business', price: '$1,999/mo', includes: ['Advanced analytics', 'Weekly reports', 'Priority support'] },
+			{ name: 'Enterprise', price: '$4,999/mo', includes: ['Full analytics suite', 'Real-time reports', 'Dedicated support'] }
+		],
+		links: {
+			landing: 'https://ziontechgroup.com/services/ai-financial-analytics-pro',
+			contact: 'mailto:kleber@ziontechgroup.com'
+		}
+	},
+	// Quantum Computing Services
+	{
+		slug: 'quantum-optimization-suite',
+		title: 'Quantum Optimization Suite',
+		category: 'AI Services',
+		tagline: 'Leverage quantum computing for complex optimization problems.',
+		description: [
+			"Advanced quantum computing platform that solves complex optimization problems in logistics, finance, and manufacturing.",
+			"Uses quantum algorithms to find optimal solutions for NP-hard problems that are intractable for classical computers."
+		],
+		features: [
+			'Quantum annealing optimization',
+			'Quantum machine learning algorithms',
+			'Hybrid quantum-classical workflows',
+			'Real-time quantum circuit optimization',
+			'Quantum error correction',
+			'Multi-objective optimization',
+			'Quantum simulation capabilities',
+			'Classical fallback algorithms'
+		],
+		benefits: [
+			'Solve problems 1000x faster than classical computers',
+			'Find optimal solutions for complex logistics',
+			'Reduce operational costs by 30-50%',
+			'Enable breakthrough discoveries in research'
+		],
+		pricing: [
+			{ name: 'Research', price: '$2,999/mo', includes: ['10 quantum hours/month', 'Basic algorithms', 'Email support'] },
+			{ name: 'Business', price: '$7,999/mo', includes: ['50 quantum hours/month', 'Advanced algorithms', 'Priority support'] },
+			{ name: 'Enterprise', price: 'Custom', includes: ['Unlimited quantum hours', 'Custom solutions', 'Dedicated team'] }
+		],
+		links: {
+			landing: 'https://ziontechgroup.com/services/quantum-optimization-suite',
+			contact: 'mailto:kleber@ziontechgroup.com'
+		}
+	},
+	// Blockchain & DeFi Services
+	{
+		slug: 'enterprise-blockchain-platform',
+		title: 'Enterprise Blockchain Platform',
+		category: 'IT Services',
+		tagline: 'Secure, scalable blockchain solutions for enterprise applications.',
+		description: [
+			"Comprehensive blockchain platform that enables enterprises to build, deploy, and manage blockchain applications.",
+			"Supports multiple consensus mechanisms, smart contracts, and provides enterprise-grade security and compliance."
+		],
+		features: [
+			'Multi-blockchain support (Ethereum, Hyperledger, Corda)',
+			'Smart contract development and deployment',
+			'Enterprise-grade security and compliance',
+			'Scalable consensus mechanisms',
+			'Interoperability solutions',
+			'Tokenization platform',
+			'DeFi protocol integration',
+			'Regulatory compliance tools'
+		],
+		benefits: [
+			'Reduce transaction costs by 60%',
+			'Increase transparency and trust',
+			'Enable new business models',
+			'Improve supply chain traceability'
+		],
+		pricing: [
+			{ name: 'Starter', price: '$1,999/mo', includes: ['Basic blockchain setup', 'Standard support', 'Email support'] },
+			{ name: 'Professional', price: '$4,999/mo', includes: ['Advanced features', 'Priority support', 'Custom development'] },
+			{ name: 'Enterprise', price: '$12,999/mo', includes: ['Full platform access', 'Dedicated support', 'Custom solutions'] }
+		],
+		links: {
+			landing: 'https://ziontechgroup.com/services/enterprise-blockchain-platform',
+			contact: 'mailto:kleber@ziontechgroup.com'
+		}
+	},
+	// IoT & Edge Computing
+	{
+		slug: 'ai-edge-computing-platform',
+		title: 'AI Edge Computing Platform',
+		category: 'IT Services',
+		tagline: 'Deploy AI models at the edge for real-time processing and decision making.',
+		description: [
+			"Comprehensive edge computing platform that enables deployment of AI models on edge devices for real-time processing.",
+			"Provides low-latency inference, offline capabilities, and seamless cloud synchronization."
+		],
+		features: [
+			'Edge AI model deployment',
+			'Real-time inference processing',
+			'Offline operation capabilities',
+			'Cloud-edge synchronization',
+			'Device management and monitoring',
+			'Model versioning and updates',
+			'Data preprocessing pipelines',
+			'Security and encryption'
+		],
+		benefits: [
+			'Reduce latency by 90%',
+			'Enable offline AI processing',
+			'Reduce bandwidth costs by 70%',
+			'Improve data privacy and security'
+		],
+		pricing: [
+			{ name: 'Edge Starter', price: '$499/mo', includes: ['5 edge devices', 'Basic AI models', 'Email support'] },
+			{ name: 'Edge Professional', price: '$1,299/mo', includes: ['25 edge devices', 'Advanced AI models', 'Priority support'] },
+			{ name: 'Edge Enterprise', price: '$2,999/mo', includes: ['Unlimited devices', 'Custom solutions', 'Dedicated support'] }
+		],
+		links: {
+			landing: 'https://ziontechgroup.com/services/ai-edge-computing-platform',
+			contact: 'mailto:kleber@ziontechgroup.com'
+		}
+	},
+	// Advanced Cybersecurity
+	{
+		slug: 'ai-cybersecurity-suite',
+		title: 'AI Cybersecurity Suite',
+		category: 'IT Services',
+		tagline: 'Advanced AI-powered cybersecurity protection for modern threats.',
+		description: [
+			"Comprehensive AI-driven cybersecurity platform that provides real-time threat detection, automated response, and predictive security analytics.",
+			"Uses machine learning to identify and prevent advanced persistent threats, zero-day attacks, and insider threats."
+		],
+		features: [
+			'AI-powered threat detection',
+			'Real-time security monitoring',
+			'Automated incident response',
+			'Behavioral analytics',
+			'Vulnerability assessment',
+			'Compliance reporting',
+			'Security orchestration',
+			'Threat intelligence integration'
+		],
+		benefits: [
+			'Detect threats 10x faster than traditional methods',
+			'Reduce false positives by 80%',
+			'Prevent 95% of cyber attacks',
+			'Ensure compliance with security standards'
+		],
+		pricing: [
+			{ name: 'Essential', price: '$999/mo', includes: ['Basic threat detection', 'Email support', 'Standard monitoring'] },
+			{ name: 'Professional', price: '$2,499/mo', includes: ['Advanced threat detection', 'Priority support', 'Custom rules'] },
+			{ name: 'Enterprise', price: '$5,999/mo', includes: ['Full security suite', 'Dedicated support', 'Custom solutions'] }
+		],
+		links: {
+			landing: 'https://ziontechgroup.com/services/ai-cybersecurity-suite',
+			contact: 'mailto:kleber@ziontechgroup.com'
+		}
 	}
 ];
 

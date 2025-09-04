@@ -30,6 +30,7 @@ import {
 import { Button } from '../ui/Button';
 import { Badge } from '../ui/Badge';
 
+export default function Header() {
   const navigation = [
     { name: 'Home', href: '/' },
     { name: 'Solutions', href: '/solutions' },
@@ -53,6 +54,4 @@ import { Badge } from '../ui/Badge';
       </div>
     </header>
   );
-};
-
-export default Header;
+}
