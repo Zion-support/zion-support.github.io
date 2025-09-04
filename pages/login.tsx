@@ -95,11 +95,9 @@ export default function Login() {
                     border: '1px solid rgba(255, 255, 255, 0.2)',
                     borderRadius: 8,
                     color: 'white',
-                    outline: 'none',
-                    transition: 'border-color 0.3s ease'
+                    fontSize: '1rem'
                   }}
-                  onFocus={(e) => e.target.style.borderColor = '#3b82f6'}
-                  onBlur={(e) => e.target.style.borderColor = 'rgba(255, 255, 255, 0.2)'}
+                  placeholder="Enter your email"
                 />
               </div>
 
@@ -127,26 +125,27 @@ export default function Login() {
                     border: '1px solid rgba(255, 255, 255, 0.2)',
                     borderRadius: 8,
                     color: 'white',
-                    outline: 'none',
-                    transition: 'border-color 0.3s ease'
+                    fontSize: '1rem'
                   }}
-                  onFocus={(e) => e.target.style.borderColor = '#3b82f6'}
-                  onBlur={(e) => e.target.style.borderColor = 'rgba(255, 255, 255, 0.2)'}
+                  placeholder="Enter your password"
                 />
               </div>
 
-              <div style={{ 
-                display: 'flex', 
-                justifyContent: 'space-between', 
-                alignItems: 'center', 
-                marginBottom: 30 
-              }}>
-                <label style={{ 
-                  display: 'flex', 
-                  alignItems: 'center', 
-                  fontSize: '0.9rem',
-                  color: '#94a3b8',
-                  cursor: 'pointer'
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 30 }}>
+                <label style={{ display: 'flex', alignItems: 'center', gap: 8, cursor: 'pointer' }}>
+                  <input
+                    type="checkbox"
+                    name="rememberMe"
+                    checked={formData.rememberMe}
+                    onChange={handleInputChange}
+                    style={{ width: 16, height: 16 }}
+                  />
+                  <span style={{ fontSize: '0.9rem' }}>Remember me</span>
+                </label>
+                <Link href="/help" style={{ 
+                  color: '#3b82f6', 
+                  textDecoration: 'none', 
+                  fontSize: '0.9rem' 
                 }}>
                   <input 
                     type="checkbox" 
@@ -178,15 +177,14 @@ export default function Login() {
                   border: 'none',
                   borderRadius: 8,
                   cursor: 'pointer',
-                  transition: 'transform 0.2s ease, box-shadow 0.2s ease'
+                  transition: 'transform 0.3s ease',
+                  marginBottom: 20
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-2px)';
-                  e.currentTarget.style.boxShadow = '0 10px 20px rgba(59, 130, 246, 0.3)';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = 'none';
                 }}
               >
                 Sign In

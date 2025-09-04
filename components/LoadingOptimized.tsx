@@ -6,7 +6,7 @@ interface LoadingOptimizedProps {
   delay?: number;
 }
 
-export default function LoadingOptimized({ children, fallback, delay = 1000 }: LoadingOptimizedProps) {
+export default function LoadingOptimized({ children, fallback, delay = 0 }: LoadingOptimizedProps) {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -18,7 +18,7 @@ export default function LoadingOptimized({ children, fallback, delay = 1000 }: L
   }, [delay]);
 
   if (isLoading) {
-    return <>{fallback || <div>Loading...</div>}</>;
+    return <>{fallback}</>;
   }
 
   return <>{children}</>;

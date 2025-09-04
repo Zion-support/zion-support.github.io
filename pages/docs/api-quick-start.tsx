@@ -62,9 +62,9 @@ console.log(data);`}
           </section>
 
           {/* First API Call */}
-          <section style={{ background: '#f8fafc', padding: 32, borderRadius: 12, border: '1px solid #e2e8f0' }}>
-            <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: 16 }}>🚀 Your First API Call</h2>
-            <p style={{ opacity: 0.8, marginBottom: 20 }}>Let's start with a simple request to list available services.</p>
+          <section style={{ background: 'rgba(255,255,255,0.05)', padding: 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)' }}>
+            <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: 16 }}>🚀 Your First API Call</h2>
+            <p style={{ opacity: 0.8, marginBottom: 20 }}>Let&apos;s start with a simple request to list available services.</p>
             
             <div style={{ background: '#1e293b', padding: 20, borderRadius: 8, marginBottom: 20 }}>
               <h3 style={{ fontWeight: 600, marginBottom: 12, color: '#86efac' }}>Request</h3>

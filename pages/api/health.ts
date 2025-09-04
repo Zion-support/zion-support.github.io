@@ -1,4 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next';
+import PerformanceMonitor, { performanceMiddleware } from '../../lib/performance-monitor';
+import { dbManager } from '../../lib/database';
+import { apiCache, userCache, staticCache } from '../../lib/cache';
 
 interface SystemHealth {
   status: 'healthy' | 'degraded' | 'unhealthy';

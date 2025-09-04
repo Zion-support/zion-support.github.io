@@ -18,7 +18,7 @@ class ErrorBoundary extends Component<Props, State> {
   public static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
-
+  
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     // eslint-disable-next-line no-console
     console.error('ErrorBoundary caught an error:', error, errorInfo);
