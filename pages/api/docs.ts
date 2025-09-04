@@ -54,19 +54,14 @@ class ApiDocumentationGenerator {
       components: {
         schemas: this.generateSchemas()
       }
-    };
-
     return spec;
   }
 
   private generatePaths() {
-    const paths: any = {};
-
+    const paths: any = {}
     this.endpoints.forEach(endpoint => {
       if (!paths[endpoint.path]) {
-        paths[endpoint.path] = {};
-      }
-
+        paths[endpoint.path] = {}
       paths[endpoint.path][endpoint.method.toLowerCase()] = {
         summary: endpoint.description,
         parameters: endpoint.parameters?.map(param => ({
@@ -84,10 +79,10 @@ class ApiDocumentationGenerator {
                 schema: response.schema
               }
             } : undefined
-          };
+          }
           return acc;
         }, {} as any)
-      };
+      }
     });
 
     return paths;
@@ -104,9 +99,6 @@ class ApiDocumentationGenerator {
               message: { type: 'string' },
               statusCode: { type: 'number' },
               timestamp: { type: 'string', format: 'date-time' }
-            }
-          }
-        }
       },
       Success: {
         type: 'object',
@@ -114,9 +106,6 @@ class ApiDocumentationGenerator {
           success: { type: 'boolean' },
           data: { type: 'object' },
           message: { type: 'string' }
-        }
-      }
-    };
   }
 
   generateMarkdown() {
@@ -161,8 +150,6 @@ class ApiDocumentationGenerator {
 
     return markdown;
   }
-}
-
 export const apiDocGenerator = new ApiDocumentationGenerator();
 
 // API Documentation endpoint
@@ -181,4 +168,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.setHeader('Allow', ['GET']);
     res.status(405).json({ error: 'Method not allowed' });
   }
-}

@@ -38,4 +38,3 @@ export function throttle<T extends (...args: any[]) => any>(
       inThrottle = true;
       setTimeout(() => (inThrottle = false), limit);
     }
-}

@@ -16,8 +16,6 @@ export class AppError extends Error implements ApiError {
 
     Error.captureStackTrace(this, this.constructor);
   }
-}
-
 export const errorHandler = (err: ApiError, req: NextApiRequest, res: NextApiResponse) => {
   const { statusCode = 500, message } = err;
 
@@ -37,8 +35,7 @@ export const errorHandler = (err: ApiError, req: NextApiRequest, res: NextApiRes
       timestamp: new Date().toISOString()
     }
   });
-};
-
+}
 export const asyncHandler = (fn: Function) => (req: NextApiRequest, res: NextApiResponse, next: Function) => {
   Promise.resolve(fn(req, res, next)).catch(next);
-};
+}

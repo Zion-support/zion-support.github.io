@@ -22,8 +22,7 @@ class AdvancedCache<T = any> {
       maxSize: 100,
       cleanupInterval: 60 * 1000, // 1 minute
       ...config
-    };
-
+    }
     // Start cleanup interval
     setInterval(() => this.cleanup(), this.config.cleanupInterval);
   }
@@ -33,8 +32,7 @@ class AdvancedCache<T = any> {
       data,
       timestamp: Date.now(),
       ttl: ttl || this.config.defaultTTL
-    };
-
+    }
     // Remove oldest items if cache is full
     if (this.cache.size >= this.config.maxSize) {
       const firstKey = this.cache.keys().next().value;
@@ -80,9 +78,6 @@ class AdvancedCache<T = any> {
       if (now - item.timestamp > item.ttl) {
         this.cache.delete(key);
       }
-    }
-  }
-
   // Get cache statistics
   getStats() {
     const now = Date.now();
@@ -95,17 +90,12 @@ class AdvancedCache<T = any> {
       } else {
         active++;
       }
-    }
-
     return {
       total: this.cache.size,
       active,
       expired,
       hitRate: 0 // Would need to track hits/misses for accurate rate
-    };
-  }
-}
-
+    }
 // Global cache instance
 export const globalCache = new AdvancedCache();
 
@@ -136,5 +126,4 @@ export const useCache = <T>(key: string, fetcher: () => Promise<T>, ttl?: number
     }
   }, [data, loading, fetchData]);
 
-  return { data, loading, error, refetch: fetchData };
-};
+  return { data, loading, error, refetch: fetchData }

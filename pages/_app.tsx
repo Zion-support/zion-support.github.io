@@ -48,7 +48,7 @@ function Header(): any {
           className="md:hidden bg-none border-none text-white text-2xl cursor-pointer"
           style={{ 
             background: 'none', border: 'none', color: 'white', fontSize: '1.5rem', cursor: 'pointer'
-          }}
+          }
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle mobile menu"
           aria-expanded={mobileMenuOpen}

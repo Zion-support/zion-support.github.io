@@ -10,13 +10,13 @@ interface SystemHealth {
     database: boolean;
     cache: boolean;
     api: boolean;
-  };
+  }
   metrics: {
     responseTime: number;
     memoryUsage: number;
     cacheHitRate: number;
     activeConnections: number;
-  };
+  }
   uptime: number;
 }
 
@@ -37,8 +37,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       api: apiCache.getStats(),
       user: userCache.getStats(),
       static: staticCache.getStats()
-    };
-    
+    }
     // Get performance metrics
     const perfMonitor = PerformanceMonitor.getInstance();
     const avgResponseTime = perfMonitor.getAverageResponseTime();
@@ -49,8 +48,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       database: dbHealth,
       cache: cacheStats.api.active > 0,
       api: avgResponseTime < 1000 // Less than 1 second average response time
-    };
-    
+    }
     const healthyServices = Object.values(services).filter(Boolean).length;
     const totalServices = Object.keys(services).length;
     
@@ -74,8 +72,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         activeConnections: 0 // This would need to be tracked separately
       },
       uptime: process.uptime()
-    };
-    
+    }
     const responseTime = Date.now() - startTime;
     
     res.status(200).json({
@@ -104,4 +101,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       uptime: process.uptime()
     });
   }
-}

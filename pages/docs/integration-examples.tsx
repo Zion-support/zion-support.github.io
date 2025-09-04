@@ -52,8 +52,6 @@ class ZionTechClient {
       console.error('Error fetching services:', error.response?.data || error.message);
       throw error;
     }
-  }
-
   async requestQuote(serviceData) {
     try {
       const response = await axios.post(\`\${this.baseURL}/quotes\`, serviceData, {
@@ -67,9 +65,6 @@ class ZionTechClient {
       console.error('Error requesting quote:', error.response?.data || error.message);
       throw error;
     }
-  }
-}
-
 // Usage
 const client = new ZionTechClient('YOUR_API_KEY');
 client.getServices().then(services => {
@@ -107,8 +102,6 @@ class ZionTechAI:
                 'language': 'en',
                 'format': 'json'
             }
-        }
-        
         try:
             response = requests.post(
                 f'{self.base_url}/ai/process',
@@ -185,8 +178,6 @@ const ServiceCatalog = () => {
       } finally {
         setLoading(false);
       }
-    };
-
     fetchServices();
   }, []);
 
@@ -211,8 +202,7 @@ const ServiceCatalog = () => {
       ))}
     </div>
   );
-};
-
+}
 export default ServiceCatalog;`}
               </pre>
             </div>
@@ -274,8 +264,6 @@ class ZionTechWordPress {
         $body = wp_remote_retrieve_body($response);
         return json_decode($body, true);
     }
-}
-
 // Usage in WordPress
 $ziontech = new ZionTechWordPress(get_option('ziontech_api_key'));
 $services = $ziontech->get_services();
@@ -287,7 +275,6 @@ if ($services && $services['success']) {
         echo '<p>' . esc_html($service['description']) . '</p>';
         echo '</div>';
     }
-}
 ?>`}
               </pre>
             </div>
