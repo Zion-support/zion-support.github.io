@@ -47,7 +47,7 @@ const ContactForm: React.FC = () => {
         service: '',
         message: ''
       });
-    } catch (error) {
+    } catch {
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -190,5 +190,6 @@ const ContactForm: React.FC = () => {
       </button>
     </form>
   );
-}
+};
+
 export default ContactForm;
