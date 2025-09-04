@@ -12,8 +12,8 @@
     "export": "vite build",
     "start": "vite preview --port 4173",
     "postbuild": "echo \"Build completed\"",
-    "lint": "eslint automation --ext .ts,.tsx,.js,.jsx --max-warnings 0 --no-error-on-unmatched-pattern",
-    "lint:fix": "eslint automation --ext .ts,.tsx,.js,.jsx --fix --no-error-on-unmatched-pattern",
+    "lint": "eslint automation --max-warnings 0 --no-error-on-unmatched-pattern",
+    "lint:fix": "eslint automation --fix --no-error-on-unmatched-pattern",
     "type-check": "tsc --noEmit",
     "clean": "rm -rf .next out dist",
     "check": "npm run lint && npm run type-check && npm run test:smoke",
@@ -165,7 +165,7 @@
     "dev:fast": "npm run dev -- --turbo",
     "build:analyze": "ANALYZE=true npm run build",
     "build:clean": "npm run clean && npm run build",
-    "lint:check": "eslint . --ext .ts,.tsx,.js,.jsx --max-warnings 0",
+    "lint:check": "eslint . --max-warnings 0",
     "automation:master": "node automation/master-orchestrator.cjs",
     "automation:performance": "node automation/performance-optimizer.cjs",
     "automation:seo": "node automation/seo-optimizer.cjs",
@@ -175,7 +175,8 @@
     "monitor:health": "node scripts/health-monitor-enhanced.cjs",
     "audit:security": "node scripts/security-audit-enhanced.cjs",
     "optimize:ux": "node scripts/ux-optimizer.cjs",
-    "improve:all": "npm run optimize:performance && npm run monitor:health && npm run audit:security && npm run optimize:ux"
+    "improve:all": "npm run optimize:performance && npm run monitor:health && npm run audit:security && npm run optimize:ux",
+    "automation:safe": "bash scripts/run-safe-automations.sh"
   },
   "pm2": {
     "ecosystem": "ecosystem.maintenance.cjs"
