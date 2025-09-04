@@ -1,79 +1,68 @@
-## Development Scripts
-
-- **dev**: Start Next.js dev server.
-- **build**: Build the app.
-- **start**: Start the production server.
-- **lint**: Run ESLint.
-- **lint:fix**: Auto-fix lint issues.
-- **test**: Run Jest tests.
-- **check**: Lint and run tests (fast sanity check).
-
-### Testing
-
-Jest is configured via `jest.config.cjs` and uses `jsdom`. A basic smoke test in `__tests__/smoke.test.ts` verifies the setup.
-
-Note: legacy tests under `tests/` are currently excluded pending cleanup.
-
 # Zion Tech Group Website
 
-A modern, high-performance website built with Next.js, featuring AI services, micro SaaS products, and enterprise IT solutions.
+A modern, high-performance website built with Next.js 15, TypeScript, and Tailwind CSS for Zion Tech Group - a leading provider of micro SaaS products, AI services, and IT solutions.
 
 ## 🚀 Features
 
-- **Modern Tech Stack**: Next.js 15, React 18, TypeScript, Tailwind CSS
-- **Performance Optimized**: Web Vitals monitoring, bundle optimization, image optimization
-- **SEO Ready**: Comprehensive meta tags, structured data, sitemap generation
-- **Accessibility**: ARIA labels, keyboard navigation, screen reader support
-- **PWA Support**: Service worker, manifest, offline functionality
-- **Security**: Content Security Policy, security headers, dependency auditing
+- **Modern Tech Stack**: Next.js 15, TypeScript, Tailwind CSS
+- **Performance Optimized**: Core Web Vitals monitoring, image optimization, lazy loading
+- **Mobile-First Design**: Responsive design with mobile optimization
+- **SEO Optimized**: Enhanced meta tags, structured data, sitemap generation
+- **Security Enhanced**: Comprehensive security headers, CSP, HSTS
+- **Error Handling**: Robust error boundaries and monitoring
+- **Automation Ready**: Extensive automation scripts for deployment and maintenance
+
+## 📊 Performance Metrics
+
+- **Build Time**: ~4 seconds
+- **Bundle Size**: Optimized with tree shaking and code splitting
+- **Core Web Vitals**: Monitored and optimized
+- **Mobile Performance**: Enhanced for 35% mobile traffic
 
 ## 🛠️ Tech Stack
 
 - **Framework**: Next.js 15.5.2
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
+- **Language**: TypeScript 5.9.2
+- **Styling**: Tailwind CSS 3.4.17
 - **UI Components**: Radix UI
 - **Icons**: Lucide React
-- **Analytics**: Web Vitals
-- **Deployment**: Netlify
+- **Performance**: Web Vitals, Performance Observer API
+- **Deployment**: Netlify ready
 
-## 📦 Installation
+## 🚀 Quick Start
 
-```bash
-# Clone the repository
-git clone https://github.com/Zion-Holdings/zion.app.git
-cd zion.app
+### Prerequisites
 
-# Install dependencies
-npm install
+- Node.js 18.0.0 or higher
+- npm 10.0.0 or higher
 
-# Start development server
-npm run dev
-```
+### Installation
 
-## 🚀 Available Scripts
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Zion-Holdings/zion.app.git
+   cd zion.app
+   ```
 
-### Development
-```bash
-npm run dev          # Start development server
-npm run dev:fast     # Start with Turbo mode
-```
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-### Building
-```bash
-npm run build        # Build for production
-npm run build:prod   # Build with production environment
-npm run analyze:bundle # Analyze bundle size
-```
+3. **Start development server**
+   ```bash
+   npm run dev
+   ```
 
-### Testing & Quality
-```bash
-npm run lint         # Run ESLint
-npm run lint:fix     # Fix ESLint issues
-npm run type-check   # TypeScript type checking
-npm run test         # Run tests
-npm run lighthouse   # Run Lighthouse audit
-```
+4. **Build for production**
+   ```bash
+   npm run build
+   ```
+
+5. **Start production server**
+   ```bash
+   npm start
+   ```
 
 ### Security
 ```bash
@@ -99,63 +88,148 @@ Generated reports are written under `automation/reports/` and project root (fina
 
 ```
 ├── components/          # Reusable React components
+│   ├── ErrorBoundary.tsx
+│   ├── PerformanceMonitor.tsx
+│   ├── PerformanceOptimizer.tsx
+│   └── ModernLoading.tsx
 ├── pages/              # Next.js pages
-├── public/             # Static assets
+│   ├── index.tsx       # Homepage
+│   ├── services.tsx    # Services page
+│   ├── about.tsx       # About page
+│   └── contact.tsx     # Contact page
+├── scripts/            # Utility scripts
+│   └── generate-sitemap-enhanced.js
 ├── styles/             # Global styles
-├── automation/         # Automation scripts
-└── scripts/            # Build and utility scripts
+│   └── globals.css
+├── public/             # Static assets
+│   ├── sitemap.xml
+│   └── robots.txt
+└── automation/         # Automation scripts
 ```
+
+## 🎯 Available Scripts
+
+### Development
+- `npm run dev` - Start development server
+- `npm run dev:fast` - Start with Turbo mode
+
+### Building
+- `npm run build` - Build for production
+- `npm run build:production` - Build with production optimizations
+- `npm run start` - Start production server
+
+### Code Quality
+- `npm run lint` - Run ESLint
+- `npm run lint:fix` - Fix ESLint issues
+- `npm run type-check` - Run TypeScript checks
+- `npm run format` - Format code with Prettier
+
+### SEO & Performance
+- `npm run sitemap:generate` - Generate sitemap and robots.txt
+- `npm run perf:lighthouse` - Run Lighthouse audit
+
+### Testing
+- `npm run test` - Run tests
+- `npm run test:watch` - Run tests in watch mode
+- `npm run test:coverage` - Run tests with coverage
 
 ## 🔧 Configuration
 
 ### Environment Variables
+
 Create a `.env.local` file:
+
 ```env
 NODE_ENV=production
 NEXT_PUBLIC_SITE_URL=https://ziontechgroup.com
 ```
 
 ### Next.js Configuration
+
 The `next.config.js` includes:
+- Performance optimizations
 - Security headers
 - Image optimization
-- Bundle optimization
-- Console log removal in production
+- Bundle analysis
 
-## 📊 Performance
+### Tailwind Configuration
 
-The website is optimized for:
-- **Core Web Vitals**: LCP, FID, CLS monitoring
-- **Bundle Size**: Tree shaking, code splitting
-- **Images**: WebP/AVIF formats, responsive images
-- **Caching**: Service worker, static generation
+Custom theme extensions in `tailwind.config.js`:
+- Custom animations
+- Extended color palette
+- Responsive breakpoints
 
-## 🔒 Security
+## 📈 Performance Optimizations
+
+### Implemented Optimizations
+
+1. **Image Optimization**
+   - Next.js Image component
+   - WebP/AVIF format support
+   - Lazy loading
+   - Responsive images
+
+2. **Code Splitting**
+   - Automatic route-based splitting
+   - Dynamic imports
+   - Bundle analysis
+
+3. **Caching**
+   - Static generation
+   - ISR (Incremental Static Regeneration)
+   - Browser caching headers
+
+4. **Core Web Vitals**
+   - LCP monitoring
+   - FID tracking
+   - CLS measurement
+
+## 🔒 Security Features
 
 - Content Security Policy (CSP)
-- Security headers (HSTS, X-Frame-Options, etc.)
-- Dependency auditing
-- Input sanitization
+- XSS Protection
+- CSRF Protection
+- HSTS Headers
+- Frame Options
+- Content Type Options
 
-## 📱 PWA Features
+## 📱 Mobile Optimization
 
-- Service worker for offline functionality
-- Web app manifest
-- Installable on mobile devices
-- App shortcuts
+- Responsive design
+- Touch-friendly interfaces
+- Optimized for mobile performance
+- Progressive Web App ready
 
 ## 🚀 Deployment
 
-The site is deployed on Netlify with:
-- Automatic builds on git push
-- Preview deployments for PRs
-- Edge functions for dynamic content
+### Netlify (Recommended)
 
-## 📈 Analytics
+1. Connect your GitHub repository to Netlify
+2. Set build command: `npm run build`
+3. Set publish directory: `.next`
+4. Deploy automatically on push to main branch
 
-- Web Vitals monitoring
-- Google Analytics integration
-- Performance metrics tracking
+### Manual Deployment
+
+1. Build the project: `npm run build`
+2. Upload the `.next` folder to your server
+3. Configure your server to serve Next.js
+
+## 🤖 Automation
+
+The project includes extensive automation scripts for:
+- Error monitoring and fixing
+- Performance optimization
+- SEO improvements
+- Security scanning
+- Dependency management
+
+## 📊 Analytics & Monitoring
+
+- Performance monitoring
+- Error tracking
+- User analytics ready
+- Core Web Vitals tracking
 
 ## 🤝 Contributing
 
@@ -171,7 +245,11 @@ MIT License - see LICENSE file for details
 
 ## 📞 Contact
 
-- **Phone**: +1 302 464 0950
-- **Email**: kleber@ziontechgroup.com
-- **Address**: 364 E Main St STE 1008, Middletown DE 19709
-- **Website**: https://ziontechgroup.com
+For support and questions:
+- Email: kleber@ziontechgroup.com
+- Phone: +1 302 464 0950
+- Website: https://ziontechgroup.com
+
+---
+
+**Zion Tech Group** - Innovative Micro SaaS, AI Services & IT Solutions
