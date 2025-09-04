@@ -10,6 +10,16 @@ export default function AIServices() {
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
   }
+  const categories = [
+    'All',
+    'Customer Support',
+    'Predictive Analytics',
+    'Computer Vision',
+    'Speech & Voice',
+    'Recommendation',
+    'Agents',
+    'Data & Pipelines'
+  ];
   const aiServices = [
     {
       icon: Brain,
@@ -665,7 +675,7 @@ export default function AIServices() {
                   <div className="mb-6">
                     <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
                     <ul className="space-y-1">
-                      {service.features.slice(0, 3).map((feature, featureIndex) => (
+                      {(service.features ?? []).slice(0, 3).map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-sm text-gray-700">
                           <span className="w-2 h-2 bg-purple-600 rounded-full mr-3"></span>
                           {feature}
@@ -677,7 +687,7 @@ export default function AIServices() {
                   <div className="mb-6">
                     <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>
                     <ul className="space-y-1">
-                      {service.benefits.map((benefit, benefitIndex) => (
+                      {(service.benefits ?? []).map((benefit, benefitIndex) => (
                         <li key={benefitIndex} className="flex items-center text-sm text-gray-700">
                           <span className="w-2 h-2 bg-green-600 rounded-full mr-3"></span>
                           {benefit}

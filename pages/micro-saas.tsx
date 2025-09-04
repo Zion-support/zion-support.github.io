@@ -1069,6 +1069,18 @@ export default function MicroSaaS() {
     }
   ];
 
+  const categories = [
+    'All',
+    'Cloud Management',
+    'Document Management',
+    'API Management',
+    'Sales Automation',
+    'Email Marketing',
+    'Monitoring',
+    'Productivity',
+    'SEO & Marketing'
+  ];
+
   return (
     <>
       <Head>
@@ -1082,8 +1094,7 @@ export default function MicroSaaS() {
         <meta property="og:type" content="website" />
       </Head>
 
-  return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+      <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
         <title>Micro SaaS Products — Zion Tech Group</title>
         <meta name="description" content="Ready-to-deploy micro SaaS products including cloud cost optimization, document processing, API management, and more. Transform your business with innovative solutions." />
@@ -1209,6 +1220,7 @@ export default function MicroSaaS() {
           </div>
         </section>
       </main>
-    </div>
+      </div>
+    </>
   );
 }

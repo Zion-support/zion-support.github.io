@@ -1324,6 +1324,18 @@ export default function ITServices() {
     }
   ];
 
+  const categories = [
+    'All',
+    'Cloud & Infrastructure',
+    'Security',
+    'Consulting',
+    'Data Management',
+    'Development',
+    'High-Performance Computing',
+    'IoT & Edge Computing',
+    'Digital Transformation'
+  ];
+
   return (
     <>
       <Head>
@@ -1337,8 +1349,7 @@ export default function ITServices() {
         <meta property="og:type" content="website" />
       </Head>
 
-  return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+      <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
         <title>IT & Cloud Services — Zion Tech Group</title>
         <meta name="description" content="Comprehensive IT services including cloud migration, cybersecurity, enterprise architecture, and development solutions. Expert IT consulting and implementation." />
@@ -1468,6 +1479,7 @@ export default function ITServices() {
           </div>
         </section>
       </main>
-    </div>
+      </div>
+    </>
   );
 }

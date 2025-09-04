@@ -46,26 +46,24 @@ export default function Contact() {
                   <div className="space-y-6">
                     <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
                       <h3 className="text-xl font-semibold mb-2 text-blue-400">Phone</h3>
-                      <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="text-lg text-slate-300 hover:text-white transition-colors">
+                      <a href={`tel:${contact.phone.replace(/[^\\d+]/g,'')}`} className="text-lg text-slate-300 hover:text-white transition-colors">
                         {contact.phone}
                       </a>
                     </div>
-                    
+
                     <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
                       <h3 className="text-xl font-semibold mb-2 text-purple-400">Email</h3>
                       <a href={`mailto:${contact.email}`} className="text-lg text-slate-300 hover:text-white transition-colors">
                         {contact.email}
                       </a>
                     </div>
-                    
+
                     <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
                       <h3 className="text-xl font-semibold mb-2 text-blue-400">Address</h3>
                       <p className="text-lg text-slate-300">
                         {contact.address}
                       </p>
                     </div>
-                  </div>
-                </div>
 
                     <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
                       <h3 className="text-xl font-semibold mb-2 text-yellow-400">Website</h3>
@@ -78,7 +76,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* Contact Form */}
+              {/* Our Services Summary */}
               <div>
                 <h2 className="text-3xl font-bold mb-8">Our Services</h2>
                 <div className="space-y-6">
