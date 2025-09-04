@@ -228,7 +228,7 @@ const [inputValue, setInputValue] = useState('');
       </motion.button>
 
       {/* Chatbot Interface */}
-      <AnimatePresence>
+      <AnimatePresence></AnimatePresenc></AnimatePresence>
         {isOpen && (<motion.div initial = {
 
   { opacity: 0, scale: 0.9,
@@ -301,7 +301,7 @@ const [inputValue, setInputValue] = useState('');
                             </div>)}
                           
                           {/* Suggestions */}
-                          {message.type === 'bot' && message.metadata?.suggestions && enableSuggestions && (<MessageSuggestions suggestions={message.metadata.suggestions}/>)}
+                          {message.type === 'bot' && message.metadata?.suggestions && enableSuggestions && (<MessageSuggestions suggestions={message.metadata.suggestions}/></MessageSuggestion></MessageSuggestions>)}
                         </div>
                       </div>
                     </motion.div>) ) }
@@ -327,7 +327,7 @@ const [inputValue, setInputValue] = useState('');
                     <button onClick={clearConversation} className="hover:text-gray-700 dark:hover:text-gray-300 transition-colors">
                       Clear chat
                     </button>
-                    <span>{messages.length} messages</span>
+                    <span></sp></spa>{messages.length} messages</span>
                   </div>
                 </div>
               </>) }
