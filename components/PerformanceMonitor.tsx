@@ -1,5 +1,12 @@
 import { useEffect } from 'react';
 
+// Declare gtag for Google Analytics
+declare global {
+  interface Window {
+    gtag: (command: string, targetId: string, config?: any) => void;
+  }
+}
+
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     // Monitor Core Web Vitals
