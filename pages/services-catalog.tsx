@@ -1,80 +1,200 @@
 import { useState } from 'react';
 import Head from 'next/head';
 
-export default function ServicesCatalog() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
-  const services = [
+export default function ServicesCatalog(): any {
+  const contact = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    site: 'https://ziontechgroup.com',
+  }
+  const sections = [
     {
-      id: 1,
-      name: 'Cloud Cost Guard (FinOps Assistant)',
-      category: 'micro-saas',
-      description: 'Anomaly detection rightsizing, forecasting and budget guardrails across AWS/Azure/GCP.',
-      pricing: '$299–$1499/month',
-      rating: 4.9,
-      delivery: '2-4 weeks',
-      features: ['Anomaly Detection', 'Cost Optimization', 'Budget Alerts', 'Multi-Cloud Support']
+      id: 'micro-saas',
+      title: 'Micro SaaS Products',
+      icon: Layers,
+      items: [,
+        {
+          name: 'Cloud Cost Guard (FinOps Assistant)',
+          blurb: 'Automated cloud cost anomaly detection, budget guardrails, and rightsizing recommendations across AWS/Azure/GCP.',
+          price: '$299 – $1,499/month',
+          eta: '1–2 weeks',
+          bullets: [,
+            'Anomaly detection on daily spend and resources',
+            'Idle/overprovisioned resource cleanup suggestions',
+            'Forecasting, budgets, and team alerts (Slack/Email)',
+            'Executive savings dashboards and benchmarks'
+          ],
+          link: '/micro-saas',
+        },
+        {
+          name: 'API Rate Limiter & Analytics',
+          blurb: 'Intelligent rate limiting, usage analytics, and API monetization for SaaS platforms with real-time monitoring.',
+          price: '$199 – $999/month',
+          eta: '1–2 weeks',
+          bullets: [,
+            'Dynamic rate limiting based on user tiers',
+            'Real-time API usage analytics and reporting',
+            'Revenue tracking and billing integration',
+            'DDoS protection and abuse prevention'
+          ],
+          link: '/micro-saas',
+        },
+        {
+          name: 'Smart Document Processing',
+          blurb: 'AI-powered OCR, data extraction, and document workflow automation for businesses of all sizes.',
+          price: '$399 – $1,999/month',
+          eta: '2–3 weeks',
+          bullets: [,
+            'Advanced OCR with 99%+ accuracy',
+            'Intelligent data extraction and validation',
+            'Workflow automation and approval processes',
+            'Integration with existing business systems'
+          ],
+          link: '/micro-saas',
+        },
+        {
+          name: 'Customer Churn Predictor',
+          blurb: 'Machine learning models to predict and prevent customer churn with actionable insights and automated interventions.',
+          price: '$399 – $1,599/month',
+          eta: '2–4 weeks',
+          bullets: [,
+            'Real-time churn risk scoring',
+            'Automated retention campaign triggers',
+            'Customer health dashboards',
+            'ROI tracking and success metrics'
+          ],
+          link: '/micro-saas',
+        }
+      ]
     },
     {
-      id: 2,
-      name: 'LLM Evaluation & Safety Suite',
-      category: 'ai-services',
-      description: 'Prompt evaluation bias/toxicity checks, jailbreak tests and guardrail policies.',
-      pricing: '$799–$3500/month',
-      rating: 4.8,
-      delivery: '3-6 weeks',
-      features: ['Bias Detection', 'Safety Testing', 'Prompt Optimization', 'Compliance Monitoring']
+      id: 'ai',
+      title: 'AI Services & Platforms',
+      icon: Brain,
+      items: [,
+        {
+          name: 'RAG Platform‑in‑a‑Box',
+          blurb: 'End‑to‑end retrieval augmented generation with connectors, governance, analytics, and feedback loops.',
+          price: '$4,000 – $18,000/month',
+          eta: '4–8 weeks',
+          bullets: [,
+            'Connectors for docs, tickets, CRM, and data lakes',
+            'Embedding strategy and vector stores (FAISS/PGVector)',
+            'Citations, human feedback loops, analytics',
+            'PII scrubbers and policy guardrails'
+          ],
+          link: '/ai-services',
+        },
+        {
+          name: 'Computer Vision & Image Analysis',
+          blurb: 'Advanced object detection, facial recognition, quality control, and medical imaging analysis with custom model training.',
+          price: '$5,000 – $25,000 setup',
+          eta: '6–12 weeks',
+          bullets: [,
+            'Custom object detection and classification models',
+            'Real-time image processing and analysis',
+            'Quality control and defect detection systems',
+            'Medical imaging and diagnostic assistance'
+          ],
+          link: '/ai-services',
+        },
+        {
+          name: 'AI-Powered Fraud Detection',
+          blurb: 'Real-time fraud scoring, anomaly detection, and risk assessment for financial transactions with machine learning models.',
+          price: '$8,000 – $40,000 setup',
+          eta: '8–16 weeks',
+          bullets: [,
+            'Real-time transaction fraud scoring',
+            'Behavioral anomaly detection',
+            'Risk assessment and decision automation',
+            'Compliance reporting and audit trails'
+          ],
+          link: '/ai-services',
+        },
+        {
+          name: 'Conversational AI Platform',
+          blurb: 'Multi-channel chatbots, voice assistants, and intelligent virtual agents with natural language understanding.',
+          price: '$8,000 – $35,000 setup',
+          eta: '6–14 weeks',
+          bullets: [,
+            'Multi-language conversational AI',
+            'Voice and text interaction capabilities',
+            'Integration with existing business systems',
+            'Continuous learning and improvement'
+          ],
+          link: '/ai-services',
+        }
+      ]
     },
     {
-      id: 3,
-      name: 'Customer Feedback & NPS Micro-App',
-      category: 'micro-saas',
-      description: 'Embed surveys analyze sentiment and route issues to the right team automatically.',
-      pricing: '$149–$799/month',
-      rating: 4.7,
-      delivery: '1-3 weeks',
-      features: ['Survey Builder', 'Sentiment Analysis', 'Auto-Routing', 'Analytics Dashboard']
-    },
-    {
-      id: 4,
-      name: 'API Rate Limiter & Analytics',
-      category: 'micro-saas',
-      description: 'Intelligent rate limiting usage analytics, and API monetization for SaaS platforms.',
-      pricing: '$199–$999/month',
-      rating: 4.6,
-      delivery: '2-4 weeks',
-      features: ['Rate Limiting', 'Usage Analytics', 'Monetization', 'Security Monitoring']
-    },
-    {
-      id: 5,
-      name: 'Smart Document Processing',
-      category: 'ai-services',
-      description: 'AI-powered OCR data extraction, and document workflow automation for businesses.',
-      pricing: '$399–$1999/month',
-      rating: 4.8,
-      delivery: '4-8 weeks',
-      features: ['OCR Technology', 'Data Extraction', 'Workflow Automation', 'Integration APIs']
-    },
-    {
-      id: 6,
-      name: 'Social Media Scheduler Pro',
-      category: 'micro-saas',
-      description: 'Multi-platform scheduling content optimization, and engagement analytics.',
-      pricing: '$99–$499/month',
-      rating: 4.5,
-      delivery: '1-2 weeks',
-      features: ['Multi-Platform', 'Content Optimization', 'Analytics', 'Auto-Posting']
-    }
+      id: 'it',
+      title: 'IT & Cloud Services',
+      icon: Cloud,
+      items: [,
+        {
+          name: 'Cloud Landing Zone + Migration',
+          blurb: 'Secure multi‑account AWS/Azure/GCP landing zone, IaC, guardrails, and app migration.',
+          price: '$8,000 – $45,000 fixed or $150 – $220/hr',
+          eta: '3–10 weeks',
+          bullets: [,
+            'Networking, IAM, SSO, logging, backups',
+            'Foundational IaC (Terraform/Pulumi)',
+            'VPC design, cost and security guardrails',
+            'Application assessment and phased migration'
+          ],
+          link: '/it-services',
+        },
+        {
+          name: 'Kubernetes & Container Orchestration',
+          blurb: 'Production-ready Kubernetes clusters, microservices architecture, and container security hardening.',
+          price: '$8,000 – $40,000 project',
+          eta: '4–8 weeks',
+          bullets: [,
+            'EKS/GKE/AKS cluster setup and configuration',
+            'Microservices architecture design',
+            'Container security and compliance',
+            'Auto-scaling and load balancing'
+          ],
+          link: '/it-services',
+        },
+        {
+          name: 'Cybersecurity Hardening & SOC',
+          blurb: 'Comprehensive security assessment, Zero Trust implementation, and Security Operations Center setup.',
+          price: '$5,000 – $40,000 project',
+          eta: '6–12 weeks',
+          bullets: [,
+            'Zero Trust architecture implementation',
+            'Endpoint Detection and Response (EDR)',
+            'Security monitoring and incident response',
+            'Compliance and audit preparation'
+          ],
+          link: '/it-services',
+        },
+        {
+          name: 'Data Engineering & Analytics',
+          blurb: 'Modern data pipeline development, ETL processes, data warehousing, and analytics platform setup.',
+          price: '$12,000 – $60,000 project',
+          eta: '8–16 weeks',
+          bullets: [,
+            'Data pipeline architecture and development',
+            'ETL/ELT process automation',
+            'Data warehouse and lake setup',
+            'Business intelligence and analytics dashboards'
+          ],
+          link: '/it-services',
+        }
+      ]
+    };
   ];
 
   const categories = [
-    { id: 'all', name: 'All Services' },
-    { id: 'micro-saas', name: 'Micro SaaS' },
-    { id: 'ai-services', name: 'AI Services' },
-    { id: 'it-services', name: 'IT Services' },
-    { id: 'cloud', name: 'Cloud Solutions' },
-    { id: 'security', name: 'Cybersecurity' }
+    { id: 'all', name: 'All Services', },
+    { id: 'micro-saas', name: 'Micro SaaS', },
+    { id: 'ai-services', name: 'AI Services', },
+    { id: 'it-services', name: 'IT Services', },
+    { id: 'cloud', name: 'Cloud Solutions', },
+    { id: 'security', name: 'Cybersecurity', }
   ];
 
   const filteredServices = services.filter(service => {
@@ -85,245 +205,89 @@ export default function ServicesCatalog() {
   });
 
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">";
       <Head>
-        <title>Services Catalog - Zion Tech Group</title>
-        <meta name="description" content="Browse our comprehensive catalog of technology services including AI solutions, micro SaaS products, and IT services." />
-        <meta name="keywords" content="services catalog, AI services, micro SaaS, IT solutions, technology services" />
-        <link rel="canonical" href="https://ziontechgroup.com/services-catalog" />
-        <meta property="og:title" content="Services Catalog - Zion Tech Group" />
-        <meta property="og:description" content="Browse our comprehensive catalog of technology services including AI solutions, micro SaaS products, and IT services." />
-        <meta property="og:url" content="https://ziontechgroup.com/services-catalog" />
-        <meta property="og:type" content="website" />
+        <title>Services Catalog — Zion Tech Group</title>
+        <meta name="description" content="Expanded catalog of Micro SaaS products, AI platforms, and IT services with transparent pricing and timelines." />";
+        <link rel="canonical" href={`${contact.site}/services-catalog`} />`;
       </Head>
 
-      <div style={{ 
-        minHeight: '100vh', 
-        background: 'linear-gradient(135deg, #0b1220 0%, #1a1f3a 100%)', 
-        color: 'white' 
-      }}>
-        <div style={{ maxWidth: 1200, margin: '0 auto', padding: '40px 20px' }}>
-          {/* Header */}
-          <div style={{ textAlign: 'center', marginBottom: 60 }}>
-            <h1 style={{ 
-              fontSize: '3rem', 
-              fontWeight: 800, 
-              marginBottom: 20,
-              background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent'
-            }}>
-              Services Catalog
-            </h1>
-            <p style={{ fontSize: '1.2rem', color: '#94a3b8', maxWidth: 600, margin: '0 auto' }}>
-              Explore our comprehensive portfolio of technology solutions designed to accelerate your digital transformation.
-            </p>
-          </div>
+      <header className="py-20 text-center px-4">";
+        <h1 className="text-4xl md: text-5xl font-extrabold tracking-tight">Services Catalog</h1>,";
+        <p className="mt-4 text-slate-300 max-w-3xl mx-auto">";
+          Production‑ready Micro SaaS, AI, and Cloud solutions. Transparent pricing, clear timelines, and measurable outcomes.
+        </p>
+        <div className="mt-6 flex flex-col sm: flex-row items-center justify-center gap-3">,";
+          <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-5 py-2 rounded bg-blue-600 hover:bg-blue-700">Call {contact.phone}</a>";`;
+          <a href={`mailto:${contact.email}`} className="px-5 py-2 rounded bg-purple-600 hover:bg-purple-700">Email {contact.email}</a>";`;
+          <Link href="/contact" className="px-5 py-2 rounded bg-slate-800 hover: bg-slate-700 border border-white/10">Contact Form</Link>,";
+        </div>
+        <div className="mt-2 text-slate-400 text-sm">{contact.address}</div>";
+      </header>
 
-          {/* Search and Filter */}
-          <div style={{ 
-            background: 'rgba(255, 255, 255, 0.1)', 
-            padding: 30, 
-            borderRadius: 12, 
-            border: '1px solid rgba(255, 255, 255, 0.2)',
-            marginBottom: 40
-          }}>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
-              <div style={{ position: 'relative' }}>
-                <input
-                  type="text"
-                  placeholder="Search services..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  style={{
-                    width: '100%',
-                    padding: '15px 20px 15px 50px',
-                    fontSize: '1.1rem',
-                    background: 'rgba(255, 255, 255, 0.1)',
-                    border: '1px solid rgba(255, 255, 255, 0.2)',
-                    borderRadius: 8,
-                    color: 'white',
-                    outline: 'none'
-                  }}
-                />
-                <span style={{ 
-                  position: 'absolute', 
-                  left: 15, 
-                  top: '50%', 
-                  transform: 'translateY(-50%)',
-                  fontSize: '1.2rem'
-                }}>
-                  🔍
-                </span>
-              </div>
-
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
-                {categories.map((category) => (
-                  <button
-                    key={category.id}
-                    onClick={() => setSelectedCategory(category.id)}
-                    style={{
-                      padding: '8px 16px',
-                      background: selectedCategory === category.id 
-                        ? 'linear-gradient(135deg, #3b82f6, #8b5cf6)' 
-                        : 'rgba(255, 255, 255, 0.1)',
-                      color: 'white',
-                      border: '1px solid rgba(255, 255, 255, 0.2)',
-                      borderRadius: 20,
-                      cursor: 'pointer',
-                      fontSize: '0.9rem',
-                      fontWeight: 500,
-                      transition: 'all 0.3s ease'
-                    }}
-                  >
-                    {category.name}
-                  </button>
-                ))}
-              </div>
+      <main className="max-w-6xl mx-auto px-4 pb-24 space-y-16">";
+        {sections.map(section => (
+          <section key={section.id} id={section.id}>
+            <div className="flex items-center gap-3 mb-6">";
+              <section.icon className="w-6 h-6 text-blue-400" />";
+              <h2 className="text-2xl md:text-3xl font-bold">{section.title}</h2>";
             </div>
-          </div>
-
-          {/* Services Grid */}
-          <div style={{ 
-            display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', 
-            gap: 30 
-          }}>
-            {filteredServices.map((service) => (
-              <div 
-                key={service.id}
-                style={{ 
-                  background: 'rgba(255, 255, 255, 0.05)', 
-                  padding: 30, 
-                  borderRadius: 12, 
-                  border: '1px solid rgba(255, 255, 255, 0.1)',
-                  transition: 'all 0.3s ease'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-5px)';
-                  e.currentTarget.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.3)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = 'none';
-                }}
-              >
-                <div style={{ marginBottom: 20 }}>
-                  <div style={{ 
-                    display: 'flex', 
-                    justifyContent: 'space-between', 
-                    alignItems: 'flex-start', 
-                    marginBottom: 15 
-                  }}>
-                    <h3 style={{ fontSize: '1.3rem', fontWeight: 600, marginBottom: 8 }}>
-                      {service.name}
-                    </h3>
-                    <div style={{ 
-                      background: 'rgba(59, 130, 246, 0.2)', 
-                      color: '#3b82f6', 
-                      padding: '4px 8px', 
-                      borderRadius: 12, 
-                      fontSize: '0.8rem', 
-                      fontWeight: 600 
-                    }}>
-                      {service.category}
-                    </div>
+            <div className="grid md: grid-cols-2 gap-6">,";
+              {section.items.map(item => (
+                <div key={item.name} className="rounded-xl border border-white/10 bg-slate-900/60 p-6 hover: border-blue-500/40 transition-colors">,";
+                  <h3 className="text-xl font-semibold">{item.name}</h3>";
+                  <p className="mt-2 text-slate-300">{item.blurb}</p>";
+                  <div className="mt-4 flex flex-wrap items-center gap-3 text-sm">";
+                    <span className="px-2.5 py-1 rounded bg-slate-800/70 border border-white/10">{item.price}</span>";
+                    <span className="px-2.5 py-1 rounded bg-slate-800/70 border border-white/10">Lead time: {item.eta}</span>";
                   </div>
-                  
-                  <p style={{ color: '#94a3b8', fontSize: '1rem', lineHeight: 1.6, marginBottom: 15 }}>
-                    {service.description}
-                  </p>
-                  
-                  <div style={{ 
-                    display: 'flex', 
-                    justifyContent: 'space-between', 
-                    alignItems: 'center', 
-                    marginBottom: 20 
-                  }}>
-                    <span style={{ fontSize: '1.1rem', fontWeight: 600, color: '#10b981' }}>
-                      {service.pricing}
-                    </span>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
-                      <span style={{ fontSize: '1rem' }}>⭐</span>
-                      <span style={{ fontSize: '0.9rem', color: '#94a3b8' }}>
-                        {service.rating}
-                      </span>
-                    </div>
+                  <ul className="mt-4 space-y-2 text-slate-300 list-disc list-inside">";
+                    {item.bullets.map(point => (<li key={point}>{point}</li>))}
+                  </ul>
+                  <div className="mt-4 flex flex-wrap gap-3">";
+                    <Link href={item.link} className="px-3 py-1.5 rounded bg-blue-600 hover: bg-blue-700 text-sm">Learn more</Link>,";
+                    <Link href="/contact" className="px-3 py-1.5 rounded bg-slate-800 hover: bg-slate-700 border border-white/10 text-sm">Request quote</Link>,";
                   </div>
                 </div>
 
-                <div style={{ marginBottom: 20 }}>
-                  <h4 style={{ fontSize: '0.9rem', fontWeight: 600, marginBottom: 10, color: '#e2e8f0' }}>
-                    Key Features:
-                  </h4>
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-                    {service.features.map((feature, index) => (
-                      <span 
-                        key={index}
-                        style={{ 
-                          background: 'rgba(59, 130, 246, 0.1)', 
-                          color: '#3b82f6', 
-                          padding: '4px 8px', 
-                          borderRadius: 12, 
-                          fontSize: '0.8rem', 
-                          fontWeight: 500 
-                        }}
-                      >
-                        {feature}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                <div style={{ 
-                  display: 'flex', 
-                  justifyContent: 'space-between', 
-                  alignItems: 'center',
-                  paddingTop: 20,
-                  borderTop: '1px solid rgba(255, 255, 255, 0.1)'
-                }}>
-                  <span style={{ fontSize: '0.9rem', color: '#94a3b8' }}>
-                    Delivery: {service.delivery}
-                  </span>
-                  <button style={{
-                    background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
-                    color: 'white',
-                    padding: '8px 16px',
-                    border: 'none',
-                    borderRadius: 6,
-                    fontSize: '0.9rem',
-                    fontWeight: 600,
-                    cursor: 'pointer',
-                    transition: 'transform 0.2s ease'
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = 'translateY(-2px)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = 'translateY(0)';
-                  }}
-                  >
-                    Learn More
-                  </button>
-                </div>
-              </div>
-            ))}
+        <section className="pt-4">";
+          <h2 className="text-xl font-semibold mb-2">Need something custom?</h2>";
+          <p className="text-slate-300">We scope custom builds with fixed‑bid or time‑and‑materials. Typical rates: $120 – $220/hr depending on skillset and urgency.</p>,";
+          <div className="mt-3">";
+            <a href={`${contact.site}/contact`} className="underline">Discuss your project</a>";`;
           </div>
 
           {filteredServices.length === 0 && (
-            <div style={{ 
-              textAlign: 'center', 
-              padding: '60px 20px',
-              color: '#94a3b8'
-            }}>
-              <h3 style={{ fontSize: '1.5rem', marginBottom: 10 }}>
-                No services found
-              </h3>
-              <p>Try adjusting your search terms or category filter.</p>
+            <div className="text-center py-12">
+              <div className="w-16 h-16 bg-gray-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Search className="w-8 h-8 text-gray-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">No services found</h3>
+              <p className="text-gray-300 mb-6">Try adjusting your search terms or filters</p>
+              <button
+                onClick={() => {
+                  setSearchTerm('');
+                  setSelectedCategory('all');
+                }}
+                className="text-blue-400 hover: text-blue-300 transition-colors"
+              >
+                Clear filters
+              </button>
             </div>
           )}
+
+          {/* CTA Section */}
+          <div className="text-center mt-16">
+            <h2 className="text-3xl font-bold text-white mb-6">Need a Custom Solution?</h2>
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+              Don't see what you're looking for? Our team can create custom solutions tailored to your specific needs.
+            </p>
+            <Link href="/contact" className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover: from-blue-600 hover:to-purple-600 transition-all duration-300">,
+              Discuss Your Project
+            </Link>
+          </div>
         </div>
       </div>
     </>
   );
-}
+};

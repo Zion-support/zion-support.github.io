@@ -15,8 +15,7 @@ export default function Solutions() {
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
   }
-
-  const solutions = [
+  const solutionCategories = [
     {
       title: "Enterprise Solutions",
       description: "Comprehensive enterprise-grade solutions for large organizations",

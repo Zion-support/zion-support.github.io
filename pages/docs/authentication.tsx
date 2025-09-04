@@ -4,13 +4,12 @@ import Link from 'next/link';
 import { ArrowLeft, Key, Shield, Clock, Users } from 'lucide-react';
 
 export default function Authentication() {
-  const contact = { 
-    phone: '+1 302 464 0950', 
-    email: 'kleber@ziontechgroup.com', 
-    address: '364 E Main St STE 1008 Middletown DE 19709', 
-    site: 'https://ziontechgroup.com' 
-  };
-
+  const contact = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    site: 'https://ziontechgroup.com'
+  }
   return (
     <>
       <Head>
@@ -29,7 +28,7 @@ export default function Authentication() {
             </Link>
             <h1 className="text-4xl font-bold text-gray-900 mb-4">Authentication</h1>
             <p className="text-xl text-gray-600">
-              Secure authentication methods for accessing Zion Tech Group's APIs and services.
+              Secure authentication methods for accessing Zion Tech Group&apos;s APIs and services.
             </p>
           </div>
 

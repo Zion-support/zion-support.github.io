@@ -1,22 +1,29 @@
 import React, { Component, type ErrorInfo, type ReactNode } from 'react';
 
 interface Props {
-  children: ReactNode;
+  children: ReactNode;,
   fallback?: ReactNode;
 }
 
 interface State {
-  hasError: boolean;
+  hasError: boolean;,
   error?: Error;
 }
 
 class ErrorBoundary extends Component<Props, State> {
   public state: State = {
     hasError: false
-  };
-
-  public static getDerivedStateFromError(): State {
-    return { hasError: true };
+  }
+  public static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error }
+  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
+    
+    // In production, you might want to send this to an error reporting service
+    if (process.env.NODE_ENV === 'production') {
+      // Example: Send to error reporting service
+      // errorReportingService.captureException(error, { extra: errorInfo });
+    }
   }
 
   public componentDidCatch(_error: Error, _errorInfo: ErrorInfo) {
@@ -42,13 +49,13 @@ class ErrorBoundary extends Component<Props, State> {
             <div className="space-y-3">
               <button
                 onClick={() => window.location.reload()}
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+                className="w-full bg-blue-600 hover: bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors",
               >
                 Refresh Page
               </button>
               <button
-                onClick={() => (window.location.href = '/')}
-                className="w-full bg-slate-800 hover:bg-slate-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+                onClick={() => window.location.href = '/'}
+                className="w-full bg-slate-800 hover: bg-slate-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors",
               >
                 Go Home
               </button>
@@ -68,6 +75,4 @@ class ErrorBoundary extends Component<Props, State> {
 
     return this.props.children;
   }
-}
-
 export default ErrorBoundary;

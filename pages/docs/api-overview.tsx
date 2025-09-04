@@ -4,13 +4,12 @@ import Link from 'next/link';
 import { Code, Key, Zap, Shield } from 'lucide-react';
 
 export default function APIOverview() {
-  const contact = { 
-    phone: '+1 302 464 0950', 
-    email: 'kleber@ziontechgroup.com', 
-    address: '364 E Main St STE 1008 Middletown DE 19709', 
-    site: 'https://ziontechgroup.com' 
-  };
-
+  const contact = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    site: 'https://ziontechgroup.com'
+  }
   return (
     <>
       <Head>
@@ -29,7 +28,7 @@ export default function APIOverview() {
             </Link>
             <h1 className="text-4xl font-bold text-gray-900 mb-4">API Overview</h1>
             <p className="text-xl text-gray-600">
-              Comprehensive API services for integrating Zion Tech Group's solutions into your applications.
+              Comprehensive API services for integrating Zion Tech Group&apos;s solutions into your applications.
             </p>
           </div>
 

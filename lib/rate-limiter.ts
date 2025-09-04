@@ -10,11 +10,9 @@ interface RateLimitStore {
   [key: string]: {
     count: number;
     resetTime: number;
-  };
-}
-
+  }
 class RateLimiter {
-  private store: RateLimitStore = {};
+  private store: RateLimitStore = {}
   private config: RateLimitConfig;
 
   constructor(config: RateLimitConfig) {
@@ -49,31 +47,24 @@ class RateLimiter {
       this.store[key] = {
         count: 1,
         resetTime: now + this.config.windowMs
-      };
+      }
       return {
         allowed: true,
         remaining: this.config.maxRequests - 1,
         resetTime: this.store[key].resetTime
-      };
-    }
-
+      }
     if (this.store[key].count >= this.config.maxRequests) {
       return {
         allowed: false,
         remaining: 0,
         resetTime: this.store[key].resetTime
-      };
-    }
-
+      }
     this.store[key].count++;
     return {
       allowed: true,
       remaining: this.config.maxRequests - this.store[key].count,
       resetTime: this.store[key].resetTime
-    };
-  }
-}
-
+    }
 // Create rate limiter instances
 export const apiRateLimiter = new RateLimiter({
   windowMs: 15 * 60 * 1000, // 15 minutes
@@ -106,4 +97,4 @@ export const rateLimitMiddleware = (limiter: RateLimiter) =>
     }
     
     next();
-  };
+  }

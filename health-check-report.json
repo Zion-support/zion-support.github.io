@@ -1,62 +1,51 @@
 {
-  "timestamp": "2025-09-03T21:30:05.200Z",
+  "timestamp": "2025-09-04T01:35:00.505Z",
   "status": "completed",
   "checks": [
     {
-      "name": "Package.json Validation",
+      "name": "Package.json validation",
       "status": "passed",
       "result": {
         "name": "ziontechgroup.com",
         "version": "0.1.0"
       },
-      "timestamp": "2025-09-03T21:30:05.201Z"
+      "timestamp": "2025-09-04T01:35:00.505Z"
     },
     {
-      "name": "Dependencies Check",
-      "status": "passed",
-      "result": {
-        "status": "dependencies_installed"
-      },
-      "timestamp": "2025-09-03T21:30:05.201Z"
-    },
-    {
-      "name": "Build Directory Check",
-      "status": "passed",
-      "result": {
-        "status": "build_directory_exists"
-      },
-      "timestamp": "2025-09-03T21:30:05.201Z"
-    },
-    {
-      "name": "PM2 Process Check",
+      "name": "Dependencies check",
       "status": "failed",
-      "error": "PM2 not available or no processes running",
-      "timestamp": "2025-09-03T21:30:05.476Z"
+      "error": "node_modules not found - run npm install",
+      "timestamp": "2025-09-04T01:35:00.505Z"
     },
     {
-      "name": "Disk Space Check",
+      "name": "Build directory check",
       "status": "passed",
       "result": {
-        "available": "105G",
-        "used": "15G",
-        "total": "126G"
+        "status": "no_build_directory"
       },
-      "timestamp": "2025-09-03T21:30:05.484Z"
+      "timestamp": "2025-09-04T01:35:00.505Z"
     },
     {
-      "name": "Memory Check",
+      "name": "Disk space check",
       "status": "passed",
       "result": {
-        "total": "16017MB",
-        "used": "2433MB",
-        "available": "13584MB"
+        "used": "14G",
+        "available": "107G",
+        "usePercent": "12%"
       },
-      "timestamp": "2025-09-03T21:30:05.512Z"
+      "timestamp": "2025-09-04T01:35:00.508Z"
+    },
+    {
+      "name": "Memory check",
+      "status": "passed",
+      "result": {
+        "total": "15Gi",
+        "used": "1.6Gi",
+        "free": "791Mi",
+        "available": "6.7Mi"
+      },
+      "timestamp": "2025-09-04T01:35:00.511Z"
     }
   ],
-  "summary": {
-    "total": 6,
-    "passed": 5,
-    "failed": 1
-  }
+  "completedAt": "2025-09-04T01:35:00.511Z"
 }

@@ -1,39 +1,68 @@
+
 import React from 'react';
-import { cn } from '../../lib/utils';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
-  size?: 'sm' | 'md' | 'lg'; children: React.ReactNode;
+  size?: 'small' | 'medium' | 'large';
+  loading?: boolean;
+  icon?: React.ReactNode;
+  iconPosition?: 'left' | 'right';
 }
 
-const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant = 'primary', size = 'md', children, ...props }, ref) => {
-    const baseStyles = 'inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none';
-    
-    const variants = {
-      primary: 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl',
-      secondary: 'bg-gray-100 text-gray-900 hover:bg-gray-200',
-      outline: 'border border-gray-300 bg-transparent hover:bg-gray-50',
-      ghost: 'hover:bg-gray-100'
-    };
-    
-    const sizes = {
-      sm: 'h-8 px-3 text-sm',
-      md: 'h-10 px-4 py-2',
-      lg: 'h-12 px-6 text-lg'
-    };
-    return (
-      <button
-        className={cn(baseStyles, variants[variant], sizes[size], className)}
-        ref={ref}
-        {...props}
-      >
-        {children}
-      </button>
-    );
-  }
-);
+export const Button: React.FC<ButtonProps> = ({
+  variant = 'primary',
+  size = 'medium',
+  loading = false,
+  icon,
+  iconPosition = 'left',
+  children,
+  disabled,
+  className = '',
+  ...props
+}) => {
+  const getVariantClasses = () => {
+    switch (variant) {
+      case 'primary':
+        return 'bg-blue-600 hover:bg-blue-700 text-white border-transparent';
+      case 'secondary':
+        return 'bg-gray-600 hover:bg-gray-700 text-white border-transparent';
+      case 'outline':
+        return 'bg-transparent hover:bg-gray-50 text-gray-700 border-gray-300';
+      case 'ghost':
+        return 'bg-transparent hover:bg-gray-100 text-gray-700 border-transparent';
+      default:
+        return 'bg-blue-600 hover:bg-blue-700 text-white border-transparent';
+    }
+  };
 
-Button.displayName = 'Button';
+  const getSizeClasses = () => {
+    switch (size) {
+      case 'small':
+        return 'px-3 py-1.5 text-sm';
+      case 'large':
+        return 'px-6 py-3 text-lg';
+      default:
+        return 'px-4 py-2 text-base';
+    }
+  };
 
-export { Button }
+  const baseClasses = 'inline-flex items-center justify-center font-medium rounded-md border transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed';
+
+  return (
+    <button
+      className={`${baseClasses} ${getVariantClasses()} ${getSizeClasses()} ${className}`}
+      disabled={disabled || loading}
+      {...props}
+    >
+      {icon && iconPosition === 'left' && (
+        <span className="mr-2">{icon}</span>
+      )}
+      {loading ? 'Loading...' : children}
+      {icon && iconPosition === 'right' && (
+        <span className="ml-2">{icon}</span>
+      )}
+    </button>
+  );
+};
+
+export default Button;

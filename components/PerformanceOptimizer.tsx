@@ -1,60 +1,72 @@
-import { useEffect, ReactNode } from 'react';
+import { useEffect } from 'react';
 
 interface PerformanceOptimizerProps {
-  children: ReactNode;
+  children: React.ReactNode;
 }
 
-export default function PerformanceOptimizer({ children }: PerformanceOptimizerProps) {
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   useEffect(() => {
     // Preload critical resources
     const preloadCriticalResources = () => {
       const criticalImages = [
-        '/og-image.jpg',
-        '/favicon.svg'
+        '/favicon.svg',
+        // Add other critical images here
       ];
 
-      criticalImages.forEach((src) => {
+      criticalImages.forEach(src => {
         const link = document.createElement('link');
         link.rel = 'preload';
         link.as = 'image';
         link.href = src;
         document.head.appendChild(link);
       });
-    }
-    // Optimize images with lazy loading
-    const optimizeImages = () => {
-      const images = document.querySelectorAll('img[data-src]');
-      const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
-            img.src = img.dataset.src || '';
-            img.classList.remove('lazy');
-            imageObserver.unobserve(img);
-          }
-        });
-      });
+    };
 
-      images.forEach((img) => imageObserver.observe(img));
-    }
-    // Initialize optimizations
+    // Optimize images
+    const optimizeImages = () => {
+      const images = document.querySelectorAll('img');
+      images.forEach(img => {
+        if (!img.loading) {
+          img.loading = 'lazy';
+        }
+        if (!img.decoding) {
+          img.decoding = 'async';
+        }
+      });
+    };
+
+    // Defer non-critical scripts
+    const deferNonCriticalScripts = () => {
+      const scripts = document.querySelectorAll('script[data-defer]');
+      scripts.forEach(script => {
+        script.defer = true;
+      });
+    };
+
+    // Run optimizations
     preloadCriticalResources();
     optimizeImages();
+    deferNonCriticalScripts();
 
-    // Cleanup
-    return () => {
-      // Cleanup if needed
+    // Monitor performance
+    if ('performance' in window) {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'navigation') {
+            console.log('Page Load Time:', entry.loadEventEnd - entry.loadEventStart);
+          }
+        }
+      });
+
+      try {
+        observer.observe({ entryTypes: ['navigation'] });
+      } catch (e) {
+        // Fallback for browsers that don't support navigation timing
+      }
     }
   }, []);
 
-  return <>{children}</>; // Render children
-}
-
-// Web Vitals monitoring
-export const reportWebVitals = (metric: { name: string; value: number; delta: number }) => {
-  if (process.env.NODE_ENV === 'production') {
-    // Send to analytics service
-    // eslint-disable-next-line no-console
-    console.log('Web Vital:', metric);
-  }
+  return <>{children}</>;
 };
+
+export default PerformanceOptimizer;

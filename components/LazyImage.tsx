@@ -29,6 +29,8 @@ export default function LazyImage({
   useEffect(() => {
     if (priority) return;
 
+    if (typeof window === 'undefined' || !window.IntersectionObserver) return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -36,7 +38,10 @@ export default function LazyImage({
           observer.disconnect();
         }
       },
-      { threshold: 0.1, rootMargin: '50px' }
+      { 
+        threshold: 0.1,
+        rootMargin: '50px'
+      }
     );
 
     if (imgRef.current) {

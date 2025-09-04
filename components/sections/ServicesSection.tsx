@@ -114,7 +114,7 @@ const ServicesSection: React.FC = () => {
         {/* Bottom CTA */}
         <div className="text-center">
           <Link href="/services">
-            <Button size="lg">
+            <Button size="large">
               View All Services
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
@@ -123,6 +123,5 @@ const ServicesSection: React.FC = () => {
       </div>
     </section>
   );
-};
-
+}
 export default ServicesSection;
