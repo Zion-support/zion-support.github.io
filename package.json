@@ -168,7 +168,12 @@
     "automation:performance": "node automation/performance-optimizer.cjs",
     "automation:seo": "node automation/seo-optimizer.cjs",
     "automation:health": "node automation/health-check.cjs",
-    "automation:security": "node automation/security-scanner.cjs"
+    "automation:security": "node automation/security-scanner.cjs",
+    "optimize:performance": "node scripts/performance-optimizer.cjs",
+    "monitor:health": "node scripts/health-monitor-enhanced.cjs",
+    "audit:security": "node scripts/security-audit-enhanced.cjs",
+    "optimize:ux": "node scripts/ux-optimizer.cjs",
+    "improve:all": "npm run optimize:performance && npm run monitor:health && npm run audit:security && npm run optimize:ux"
   },
   "pm2": {
     "ecosystem": "ecosystem.maintenance.cjs"
@@ -252,7 +257,6 @@
     "react-router-dom": "^7.8.2",
     "sharp": "^0.34.3",
     "tailwind-merge": "^3.3.1",
-    
     "tailwindcss-animate": "^1.0.7",
     "uuid": "^11.1.0",
     "web-vitals": "^5.1.0"
