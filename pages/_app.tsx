@@ -1,139 +1,128 @@
 import type { AppProps } from 'next/app';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import Head from 'next/head';
 import ErrorBoundary from '../components/ErrorBoundary';
 import PerformanceMonitor from '../components/PerformanceMonitor';
+import ThemeToggle from '../components/ThemeToggle';
 import '../styles/globals.css';
 
 function Header(): any {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <header style={{
-      position: 'sticky', top: 0, zIndex: 50, background: 'rgba(11, 18, 32, 0.95)', 
-      backdropFilter: 'blur(10px)', color: 'white',
-      borderBottom: '1px solid rgba(255,255,255,0.1)',
-    }}>
-      <nav style={{
-        maxWidth: 1400, margin: '0 auto', padding: '12px 20px', display: 'flex',
-        alignItems: 'center', justifyContent: 'space-between', gap: 16}}>
-        <Link href="/" style={{ 
-          fontWeight: 800, letterSpacing: 0.3, fontSize: '1.25rem',
-          background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          backgroundClip: 'text',
-          textDecoration: 'none'
-        }}>Zion Tech Group</Link>
-        
-        {/* Desktop Navigation */}
-        <div style={{ 
-          display: 'flex', gap: 4, flexWrap: 'wrap', alignItems: 'center'
-        }} className="hidden md:flex">
-          <Link href="/" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }}>Home</Link>
-          <Link href="/services" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }}>All Services</Link>
-          <Link href="/micro-saas" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }}>Micro SaaS</Link>
-          <Link href="/ai-services" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }}>AI Services</Link>
-          <Link href="/it-services" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }}>IT Services</Link>
-          <Link href="/services-catalog" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }}>Catalog</Link>
-          <Link href="/pricing" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }}>Pricing</Link>
-          <Link href="/about" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }}>About</Link>
-          <Link href="/contact" style={{ 
-            fontWeight: 600, background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', 
-            color: 'white', padding: '8px 16px', borderRadius: 8,
-            transition: 'all 0.2s ease', textDecoration: 'none'
-          }}>Contact</Link>
-        </div>
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-slate-900/90 backdrop-blur-sm'
+    }`}>
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          <Link href="/" className="flex items-center space-x-2">
+            <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-sm">Z</span>
+            </div>
+            <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Zion Tech Group
+            </span>
+          </Link>
+          
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-1">
+            <Link href="/" className="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 transition-colors">
+              Home
+            </Link>
+            <Link href="/services" className="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 transition-colors">
+              All Services
+            </Link>
+            <Link href="/micro-saas" className="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 transition-colors">
+              Micro SaaS
+            </Link>
+            <Link href="/ai-services" className="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 transition-colors">
+              AI Services
+            </Link>
+            <Link href="/it-services" className="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 transition-colors">
+              IT Services
+            </Link>
+            <Link href="/services-catalog" className="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 transition-colors">
+              Catalog
+            </Link>
+            <Link href="/pricing" className="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 transition-colors">
+              Pricing
+            </Link>
+            <Link href="/about" className="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 transition-colors">
+              About
+            </Link>
+            <div className="ml-4 flex items-center space-x-2">
+              <ThemeToggle />
+              <Link href="/contact" className="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200">
+                Contact
+              </Link>
+            </div>
+          </div>
 
-        {/* Mobile Navigation */}
-        <div style={{
-          display: 'flex', gap: 4, alignItems: 'center'
-        }} className="md:hidden">
-          <Link href="/contact" style={{ 
-            fontWeight: 600, background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', 
-            color: 'white', padding: '6px 12px', borderRadius: 6,
-            transition: 'all 0.2s ease', textDecoration: 'none', fontSize: '0.9rem'
-          }}>Contact</Link>
-          <button 
-            style={{
-              background: 'none', border: 'none', color: 'white', fontSize: '1.2rem',
-              cursor: 'pointer', padding: '6px', borderRadius: 4
-            }}
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle mobile menu"
-            aria-expanded={mobileMenuOpen}
-          >
-            ☰
-          </button>
+          {/* Mobile Navigation */}
+          <div className="md:hidden flex items-center space-x-2">
+            <ThemeToggle />
+            <Link href="/contact" className="px-3 py-1.5 bg-gradient-to-r from-blue-500 to-purple-600 text-white text-xs font-semibold rounded-md hover:from-blue-600 hover:to-purple-700 transition-all duration-200">
+              Contact
+            </Link>
+            <button 
+              className="p-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md transition-colors"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle mobile menu"
+              aria-expanded={mobileMenuOpen}
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {mobileMenuOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </button>
+          </div>
         </div>
       </nav>
       
-      {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <div style={{
-          position: 'absolute', top: '100%', left: 0, right: 0, 
-          background: 'rgba(11, 18, 32, 0.98)', backdropFilter: 'blur(10px)',
-          borderBottom: '1px solid rgba(255,255,255,0.1)',
-          padding: '20px', display: 'flex', flexDirection: 'column', gap: '12px'
-        }}>
-          <Link href="/" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }} onClick={() => setMobileMenuOpen(false)}>Home</Link>
-          <Link href="/services" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }} onClick={() => setMobileMenuOpen(false)}>All Services</Link>
-          <Link href="/micro-saas" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }} onClick={() => setMobileMenuOpen(false)}>Micro SaaS</Link>
-          <Link href="/ai-services" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }} onClick={() => setMobileMenuOpen(false)}>AI Services</Link>
-          <Link href="/it-services" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }} onClick={() => setMobileMenuOpen(false)}>IT Services</Link>
-          <Link href="/services-catalog" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }} onClick={() => setMobileMenuOpen(false)}>Catalog</Link>
-          <Link href="/pricing" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }} onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
-          <Link href="/about" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }} onClick={() => setMobileMenuOpen(false)}>About</Link>
-        </div>
-      )}
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="absolute top-full left-0 right-0 bg-slate-900/98 backdrop-blur-md border-t border-gray-700 shadow-lg">
+            <div className="px-4 py-4 space-y-2">
+              <Link href="/" className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md transition-colors" onClick={() => setMobileMenuOpen(false)}>
+                Home
+              </Link>
+              <Link href="/services" className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md transition-colors" onClick={() => setMobileMenuOpen(false)}>
+                All Services
+              </Link>
+              <Link href="/micro-saas" className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md transition-colors" onClick={() => setMobileMenuOpen(false)}>
+                Micro SaaS
+              </Link>
+              <Link href="/ai-services" className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md transition-colors" onClick={() => setMobileMenuOpen(false)}>
+                AI Services
+              </Link>
+              <Link href="/it-services" className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md transition-colors" onClick={() => setMobileMenuOpen(false)}>
+                IT Services
+              </Link>
+              <Link href="/services-catalog" className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md transition-colors" onClick={() => setMobileMenuOpen(false)}>
+                Catalog
+              </Link>
+              <Link href="/pricing" className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md transition-colors" onClick={() => setMobileMenuOpen(false)}>
+                Pricing
+              </Link>
+              <Link href="/about" className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md transition-colors" onClick={() => setMobileMenuOpen(false)}>
+                About
+              </Link>
+            </div>
+          </div>
+        )}
     </header>
   );
 }
@@ -263,7 +252,9 @@ export default function App({ Component, pageProps }: AppProps) {
     <ErrorBoundary>
       <PerformanceMonitor />
       <Header />
-      <Component {...pageProps} />
+      <main className="pt-16">
+        <Component {...pageProps} />
+      </main>
       <Footer />
     </ErrorBoundary>
   );
