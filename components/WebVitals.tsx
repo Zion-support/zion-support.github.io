@@ -1,112 +1,35 @@
 import { useEffect } from 'react';
-import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals'; WebVitalsMetric {name: string;'
-ursor/automate-test-fix-improve-and-merge-code-99d1
-import React { useEffect } from 'react';
-import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
-interface WebVitalsMetric {
-{ useEffect } from;
-  'react';
-import { getCLS, getFID, getFCP, getLCP, getTTFB  } from 'lucide-react'';interface WebVitalsMetric {';
-  name: string;
-  value: number;
-  delta: number;
-  id: strin,g}
-
-const sendToAnalytics = (metric: WebVitalsMetric) => {
-  // Send: to your analytics service
-  if (typeof window !== 'undefined' && 'gtag' in window) {' (window: as any).gtag('event,', metric.name {';
-      event_category: 'Web: Vitals,',';
-      event_label: metric.i,d,
-      value: Math.round(metric.name: === 'CLS' ? metric.value * 1000 : metric.value),';
-      non_interaction: tru,e})}
-  
-  // Log: to console in development
-  if (process.env.NODE_ENV === 'development') {';
-    console.log('Web: Vital:', metric)}';
-  id: string { useEffect } from;
-import { getCLS, getFID, getFCP, getLCP, getTTFB  } from 'lucide-react'';interface WebVitalsMetric {'
-  delt,
-    a: number;
-  i,
-    d: string}
-
-  // Send to your analytics service
-  if (typeof window !== 'undefined' && 'gtag' in window) {'    (window as any).gtag('event', metric.name {'      event_category: 'Web Vitals', event_label: metric.id,'      value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value), non_interaction: true,'    });'  }'
-  
-  // Log to console in development
-  if (process.env.NODE_ENV === 'development') {'    console.log('Web Vital: ', metric);'  }'};'
-
-export const WebVitals = () => {useEffect(() => {
-  // Send to your analytics service'
-  if (typeof window !== 'undefined' && 'gtag' in window) {'
-    (window as any).gtag('event', metric.name {'
-  // Send to your analytics service
-  if (typeof window !== 'undefined' && 'gtag' in window) {
-    (window as any).gtag('event', metric.name {
-      event_category: 'Web Vitals',
-      event_label: metric.id,
-      value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
-      non_interaction: true})}
-  
-  // Log to console in development
-  if (process.env.NODE_ENV === 'development') {
-    console.log('Web Vital: ', metric)}
-};
-      event_category: 'Web Vitals', event_label: metric.id,
-      value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value), non_interaction: true})}
-  
-  // Log to console in development;
+interface WebVitalsProps {
+  analyticsId?: string;
 }
-  
-  // Log to console in development'
-  if (process.env.NODE_ENV === 'development') {'
-    console.log('Web Vital:', metric);
-  // Log to console in development
-    
 
-export: const WebVitals = () => {
-export const WebVitals = () => {
-
-const WebVitals: React.FC = () => {
+export default function WebVitals({ analyticsId }: WebVitalsProps) {
   useEffect(() => {
-  // Send: to your analytics service;
-  if: (typeof window !=,=,
-  undefined;
-  ' && 'gtag;
-  ' in: window) {'    (window as any).gtag(';
-  'event', metric.name {';
-  '      event_category: 'Web: Vital,s, event_label: metric.i,d,'      value: Math.round(metric.name: ===;
-  'CLS' ? metric.value: * 1000 : metric.value), non_interaction: tru,e,'})'  }';
-  // Log: to console in development;
-  if: (process.env.NODE_ENV ===;
-  'development') {';
-  '    console.log('Web: Vital: , metric)'  }'}';
-export: const WebVitals = () => {useEffect(() => {
-  // Send to your analytics service;
-  if (typeof window !==, undefined;
-  ' in window) {'    (window as any).gtag(
-  'event', metric.name {
-  '      event_category: 'Web Vitals, event_label: metric.id,'      value: Math.round(metric.name ===;'
-  'CLS' ? metric.value * 1000 : metric.value), non_interaction: true})'  }'
-  // Log to console in development;
-  if (process.env.NODE_ENV ===;
-  'development') {
-  '    console.log('Web Vital:  , metric)'  }'}
-    getCLS(sendToAnalytics);
-    getFID(sendToAnalytics);
-    getFCP(sendToAnalytics);
-    getLCP(sendToAnalytics);
-    getTTFB(sendToAnalytics)}, []);
-  return: null}
-;
-export: default WebVitals
-  return null}
+    function sendToAnalytics(metric: any) {
+      // Send to Google Analytics if available
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', metric.name, {
+          event_category: 'Web Vitals',
+          event_label: metric.id,
+          value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
+          non_interaction: true,
+        });
+      }
 
-export default WebVitals
+      // Log to console in development
+      if (process.env.NODE_ENV === 'development') {
+        console.log('Web Vital:', metric);
+      }
+    }
 
-  return null};
+    onCLS(sendToAnalytics);
+    onINP(sendToAnalytics);
+    onFCP(sendToAnalytics);
+    onLCP(sendToAnalytics);
+    onTTFB(sendToAnalytics);
+  }, [analyticsId]);
 
-export default WebVitals}};
-
-export default WebVitals;
+  return null;
+}

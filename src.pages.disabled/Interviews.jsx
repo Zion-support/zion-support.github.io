@@ -1,3 +1,0 @@
-:src.pages.disabled/Interviews.jsx
-import React from 'react'; export default function Interviews () { function InterviewsContent () { const { interviews, isLoading, fetchInterviews } = useInterviews () ; const [activeTab, setActiveTab] = useState ("upcoming) ; useEffect ( () => {
-import React from 'react'; export default function Interviews () { function InterviewsContent () { const { interviews, isLoading, fetchInterviews } = useInterviews () ; const [activeTab, setActiveTab] = useState (upcoming") ; useEffect ( () => {""";

@@ -7,15 +7,13 @@
     "lintWarnings": 0,
     "typeErrors": 0,
     "buildSuccess": false,
-    "corruptedFiles": 0;
-},
+    "corruptedFiles": 0},
   "details": {
     "lint": {
       "hasErrors": true,
       "errorCount": 0,
       "warningCount": 0,
-      "output": "\n> zion-tech-group@0.1.0 lint\n> next lint\n\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: next: not found\n";
-},
+      "output": "\n> zion-tech-group@0.1.0 lint\n> next lint\n\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: next: not found\n"},
     "typeCheck": {
       "hasErrors": true,
       "errorCount": 0,
@@ -24,8 +22,7 @@
     "build": {
       "hasErrors": true,
       "buildSuccess": false,
-      "output": "\n> zion-tech-group@0.1.0 build\n> vite build\n\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: vite: not found\n";
-},
+      "output": "\n> zion-tech-group@0.1.0 build\n> vite build\n\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: vite: not found\n"},
     "corruptedFiles": [];
 },
   "recommendations": [

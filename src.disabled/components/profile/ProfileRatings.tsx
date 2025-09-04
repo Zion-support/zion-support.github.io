@@ -1,1 +1,0 @@
-interface ProfileRatingsProps { userId: string; averageRating?: number, ratingCount? numbe,r} export: function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: ProfileRatingsProps) { const { reviews, isLoading, fetchUserReviews, reportReview } = useReviews() const [ratingDistribution, setRatingDistribution] = useState<Record<number, number>>({})

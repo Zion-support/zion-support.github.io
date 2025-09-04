@@ -1,422 +1,179 @@
-#!/usr/bin/env node;
-const { execSync, spawn } = require('child_process');
-const fs = require('fs');
-const path = require('path');
+#!/usr/bin/env node
 
-class ComprehensiveDeploymentAutomation {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.reportsDir = path.join(this.projectRoot, 'automation-reports');';    this.logFile = path.join(this.reportsDir, 'deployment-automation.log');';    this.ensureDirectories();';    this.deploymentSteps = [];
-    this.environment = process.env.NODE_ENV || 'production';';  }';  ensureDirectories() {;
-    if (!fs.existsSync(this.reportsDir)) {;
-      fs.mkdirSync(this.reportsDir, { "recursive: true });,;}
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process');
+
+console.log('🚀 Starting Comprehensive Deployment Automation...');
+
+const deployment = {
+  timestamp: new Date().toISOString(),
+  sessionId: `deployment-${Date.now()}`,
+  steps: [],
+  status: 'running',
+  metrics: {
+    totalSteps: 0,
+    successful: 0,
+    failed: 0
   }
+;};
 
-  ensureDirectories() {
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-    }
+function runDeploymentStep(name, command, critical = false) {
+  console.log(`\n📋 Running: ${name}`);
+  console.log(`   Command: ${command}`);
+  
+  const startTime = Date.now(;);
+  const step = {
+    name,
+    command,
+    critical,
+    startTime: new Date().toISOString(),
+    status: 'running'
+ ; ;};
+  
+  try {
+    const output = execSync(command, { 
+      encoding: 'utf8', 
+      stdio: 'pipe',
+      timeout: 300000 // 5 minutes timeout
+    ;};);
+    
+    const endTime = Date.now(;);
+    const duration = endTime - startTi;m;e;
+    
+    step.status = 'success';
+    step.duration = duration;
+    step.output = output;
+    
+    deployment.steps.push(step);
+    deployment.metrics.totalSteps++;
+    deployment.metrics.successful++;
+    
+    console.log(`✅ ${name} completed in ${duration}ms`);} catch (error) {
+    const endTime = Date.now(;);
+    const duration = endTime - startTi;m;e;
+    
+    step.status = 'failed';
+    step.duration = duration;
+    step.error = error.message
+    step.output = error.stdout || '';
+    
+    deployment.steps.push(step);
+    deployment.metrics.totalSteps++;
+    deployment.metrics.failed++;
+    
+    console.log(`❌ ${name} failed: ${error.message}`);
+    
+    if ( {
+      console.log('💥 Critical step failed. Stopping deployment.')) {
+     {
+      console.log('💥 Critical step failed. Stopping deployment.');
   }
-
-  log(message, level = `info`) {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`;
-    console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage + `\n`);
+      deployment.status = 'failed';
+      return false;}
   }
+  
+  return true;}
 
-  async runStep(name, command, description, options = {}) {
-    this.log(`🚀 Starting: ${name} - ${description}`);
+// Pre-deployment checks
+console.log('\n🔍 Phase 1: Pre-deployment Checks');
+console.log('=====================================');
 
-    const step = {
-      name,
-      description,
-      command,
-      startTime: Date.now(),
-      status: `running`};
+runDeploymentStep('Git Status Check', 'git status --porcelain', true);
+runDeploymentStep('Dependency Check', 'npm list --depth=0', true);
+runDeploymentStep('TypeScript Check', 'npx tsc --noEmit --skipLibCheck', true);
+runDeploymentStep('Lint Check', 'npm run lint', false);
+runDeploymentStep('Test Suite', 'npm test', false);
 
-    try {
-      const result = execSync(command, {
-        cwd: this.projectRoot,
-        encoding: 'utf8',
-        timeout: options.timeout || 300000,
-        ...options});
+// Build and optimization
+console.log('\n🔨 Phase 2: Build and Optimization');
+console.log('=====================================');
 
-      step.endTime = Date.now();
-      step.duration = step.endTime - step.startTime;
-      step.status = `success`;
-      step.output = result.substring(0, 2000); // Limit output size;
-      this.log(`✅ Completed: ${name} (${step.duration}ms)`, `success`);
-      this.deploymentSteps.push(step);
+runDeploymentStep('Clean Build', 'npm run clean', false);
+runDeploymentStep('Production Build', 'npm run build', true);
+runDeploymentStep('Bundle Analysis', 'npm run build:analyze', false);
 
-      return { success: true, output: result, duration: step.duration };
-    } catch (error) { 
-      step.endTime = Date.now();
-      step.duration = step.endTime - step.startTime;
-      step.status = `failed`;
-      step.error = error.message;
+// Security and quality checks
+console.log('\n🛡️ Phase 3: Security and Quality');
+console.log('==================================');
 
-      this.log(`❌ Failed: ${name } - ${error.message}`, `error`);
-      this.deploymentSteps.push(step);
+runDeploymentStep('Security Audit', 'npm audit --audit-level=moderate', false);
+runDeploymentStep('Dependency Check', 'npm outdated', false);
+runDeploymentStep('License Check', 'npx license-checker --summary', false);
 
-      return { success: false, error: error.message, duration: step.duration };
-    }
-  }
+// Performance optimization
+console.log('\n⚡ Phase 4: Performance Optimization');
+console.log('======================================');
 
-  async preDeploymentChecks() {
-    this.log('🔍 Running pre-deployment checks...');
+runDeploymentStep('Image Optimization', 'node scripts/optimize-images.cjs', false);
+runDeploymentStep('Bundle Optimization', 'node scripts/optimize-file-sizes.cjs', false);
+runDeploymentStep('Performance Analysis', 'node scripts/performance-optimization-automation.cjs', false);
 
-    const checks = [
-      {
-        name: 'Dependency Check',
-        command: 'npm ci --production=false',
-        description: 'Install all dependencies'},
-      {
-        name: 'Linting Check',
-        command: 'npm run lint',
-        description: 'Run ESLint checks'},
-      {
-        name: 'Type Check',
-        command: 'npm run type-check',
-        description: 'Run TypeScript type checking'},
-      {
-        name: 'Test Suite',
-        command: 'npm run test',
-        description: 'Run test suite'},
-      {
-        name: 'Build Test',
-        command: 'npm run build',
-        description: 'Test production build'}];
+// SEO and accessibility
+console.log('\n🔍 Phase 5: SEO and Accessibility');
+console.log('===================================');
 
-    for (const check of checks) {
-      const result = await this.runStep(
-        check.name,
-        check.command,
-        check.description;
-      );
-      if (!result.success && check.name !== `Test Suite`) {
-        throw new Error(`Pre-deployment check failed: ${check.name}`);
-      }
-    }
-  }
+runDeploymentStep('SEO Optimization', 'node scripts/seo-optimizer.cjs', false);
+runDeploymentStep('Accessibility Check', 'node scripts/accessibility-checker.cjs', false);
 
-  async buildApplication() {
-    this.log(`🔨 Building application for production...`);
+// Deployment preparation
+console.log('\n📦 Phase 6: Deployment Preparation');
+console.log('====================================');
 
-    const buildSteps = [
-      {
-        name: 'Clean Build',
-        command: 'rm -rf .next && npm run build',
-        description: 'Clean and build the application'},
-      {
-        name: 'Build Analysis',
-        command: 'npm run analyze',
-        description: `Analyze bundle size and dependencies`}];
+runDeploymentStep('Create Deployment Package', 'tar -czf deployment-$(date +%Y%m%d-%H%M%S).tar.gz .next out public package.json package-lock.json', false);
+runDeploymentStep('Generate Sitemap', 'node scripts/generate-sitemap.mjs', false);
+runDeploymentStep('Create Robots.txt', 'echo "User-agent: *\nAllow: /\nSitemap: https://ziontechgroup.com/sitemap.xml" > public/robots.txt', false);
 
-    for (const step of buildSteps) {
-      const result = await this.runStep(
-        step.name,
-        step.command,
-;
-  log(message, level = 'info') {';    const timestamp = new Date().toISOString();    const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`;`;    console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage + '\n');  }';;
-  async runStep(name, command, description, options = {}) {;
-    this.log(`🚀 "Starting": ${name} - ${description}`);`;
-    const step = {;
-      name,;
-      description,;
-      command,;
-      "startTime": Date.now(),;";      "status": 'running',';    };;
-    try {;
-      const result = execSync(command, {;);        "cwd": this.projectRoot,;";        "encoding": 'utf8',';        "timeout": options.timeout || 300000,;";        ...options,;});
-;
-      step.endTime = Date.now();
-      step.duration = step.endTime - step.startTime;
-      step.status = 'success';      step.output = result.substring(0, 2000); // Limit output size;
+// Git operations
+console.log('\n📝 Phase 7: Git Operations');
+console.log('===========================');
 
-      this.log(`✅ "Completed": ${name} (${step.duration}ms)`, 'success');      this.deploymentSteps.push(step);`;      return { "success": true, "output": result, "duration": step.duration };,";} catch (error) {;
-      step.endTime = Date.now();
-      step.duration = step.endTime - step.startTime;
-      step.status = 'failed';      step.error = error.message;;
-      this.log(`❌ "Failed": ${name} - ${error.message}`, 'error');      this.deploymentSteps.push(step);`;      return { "success": false, "error": error.message, "duration": step.duration };,";}
-  }
-;
-  async preDeploymentChecks() {;
-    this.log('🔍 Running pre-deployment checks...');';    const checks = [;
-      {;
-        "name": 'Dependency Check',';        "command": 'npm ci --production=false',';        "description": 'Install all dependencies',';      },;      {;
-        "name": 'Linting Check',';        "command": 'npm run lint',';        "description": 'Run ESLint checks',';      },;      {;
-        "name": 'Type Check',';        "command": 'npm run type-check',';        "description": 'Run TypeScript type checking',';      },;      {;
-        "name": 'Test Suite',';        "command": 'npm run test',';        "description": 'Run test suite',';      },;      {;
-        "name": 'Build Test',';        "command": 'npm run build',';        "description": 'Test production build',';      },;,';];
-;
-    for (const check of checks) {;
-      const result = await this.runStep(;);        check.name,;
-        check.command,;
-        check.description;
-      );
-      if (!result.success && check.name !== 'Test Suite') {';        throw new Error(`Pre-deployment check "failed": ${check.name}`);`;      }
-    }
-  }
-;
-  async buildApplication() {;
-    this.log('🔨 Building application for production...');';    const buildSteps = [;
-      {;
-        "name": 'Clean Build',';        "command": 'rm -rf .next && npm run build',';        "description": 'Clean and build the application',';      },;      {;
-        "name": 'Build Analysis',';        "command": 'npm run analyze',';        "description": 'Analyze bundle size and dependencies',';      },;,';];
-;
-    for (const step of buildSteps) {;
-      const result = await this.runStep(;);        step.name,;
-        step.command,;
-        step.description;
-      );
-      if (!result.success) {;
-        throw new Error(`Build step "failed": ${step.name}`);`;      }
-    }
-  }
+runDeploymentStep('Add Changes', 'git add .', true);
+runDeploymentStep('Commit Changes', `git commit -m "Automated deployment: ${new Date().toISOString()}"`, true);
+runDeploymentStep('Push to Repository', 'git push origin HEAD', true);
 
-  async securityChecks() {
-    this.log(`🔒 Running security checks...`);
+// Post-deployment
+console.log('\n🎉 Phase 8: Post-deployment');
+console.log('============================');
 
-    const securitySteps = [
-      {
-        name: 'Dependency Audit',
-        command: 'npm audit --audit-level moderate',
-        description: 'Check for vulnerable dependencies'},
-      {
-        name: 'License Check',
-        command: 'npx license-checker --summary',
-        description: 'Check dependency licenses'}];
+runDeploymentStep('Health Check', 'node scripts/health-check.cjs', false);
+runDeploymentStep('Performance Test', 'node scripts/performance-monitor.cjs', false);
+runDeploymentStep('Generate Report', 'node scripts/generate-deployment-report.cjs', false);
 
-    for (const step of securitySteps) {
-      await this.runStep(step.name, step.command, step.description);
-    }
-<<<<<<< HEAD  }
-;
-  async generateDeploymentArtifacts() {;
-    this.log('📦 Generating deployment artifacts...');';    const artifacts = [;
-      {;
-        name: 'Sitemap Generation',';        "command": 'npm run sitemap',';        description: 'Generate sitemap for SEO',';      },;';      {;
-        "name": 'Search Index',';        command: 'npm run "search":index',';        description: 'Generate search index',';      },;';      {;
-        "name": 'Netlify Manifest',';        command: 'npm run "netlify":manifest',';        description: 'Generate Netlify functions manifest',';      },;,';];;
-    for (const artifact of artifacts) {;
-      await this.runStep(artifact.name, artifact.command, artifact.description);}
-  }
+// Final status
+deployment.status = deployment.metrics.failed === 0 ? 'success' : 'partial';
+deployment.endTime = new Date().toISOString();
 
-  async deployToNetlify() {
-    this.log('🚀 Deploying to Netlify...');
+// Save deployment report
+const reportPath = `deployment-report-${Date.now()}.json;`;
+fs.writeFileSync(reportPath, JSON.stringify(deployment, null, 2));
 
-    const deploySteps = [
-      {
-        name: 'Netlify Build',
-        command: 'npx netlify build',
-        description: 'Build for Netlify deployment'},
-      {
-        name: 'Netlify Deploy',
-        command: 'npx netlify deploy --prod',
-        description: `Deploy to production`}];
+console.log('\n🎉 Deployment Automation Completed!');
+console.log('=====================================');
+console.log(`📊 Total Steps: ${deployment.metrics.totalSteps}`);
+console.log(`✅ Successful: ${deployment.metrics.successful}`);
+console.log(`❌ Failed: ${deployment.metrics.failed}`);
+console.log(`📈 Success Rate: ${((deployment.metrics.successful / deployment.metrics.totalSteps); * 100).toFixed(1)}%`);
+console.log(`📄 Report saved to: ${reportPath}`);
 
-    for (const step of deploySteps) {
-      const result = await this.runStep(
-        step.name,
-        step.command,
-;
-  async deployToNetlify() {;
-    this.log('🚀 Deploying to Netlify...');';    const deploySteps = [;
-      {;
-        "name": 'Netlify Build',';        "command": 'npx netlify build',';        "description": 'Build for Netlify deployment',';      },;      {;
-        "name": 'Netlify Deploy',';        "command": 'npx netlify deploy --prod',';        "description": 'Deploy to production',';      },;,';];
-;
-    for (const step of deploySteps) {;
-      const result = await this.runStep(;);        step.name,;
-        step.command,;
-        step.description;
-      );
-      if (!result.success) {;
-        throw new Error(`Netlify deployment "failed": ${step.name}`);`;      }
-    }
-  }
+if ( {
+  console.log('\n🎊 Deployment successful! All systems operational.')) {
+     {
+  console.log('\n🎊 Deployment successful! All systems operational.');
+  }} else {
+  console.log('\n⚠️  Deployment completed with issues. Please review the report.');}
 
-  async postDeploymentChecks() {
-    this.log(`✅ Running post-deployment checks...`);
+// Create deployment summary
+const summary = {
+  timestamp: deployment.timestamp,
+  status: deployment.status,
+  totalSteps: deployment.metrics.totalSteps,
+  successful: deployment.metrics.successful,
+  failed: deployment.metrics.failed,
+  successRate: `${((deployment.metrics.successful / deployment.metrics.totalSteps) * 100).toFixed(1)}%`,
+  criticalFailures: deployment.steps.filter(step => step.critical && step.status === 'failed').length,
+  duration: deployment.steps.reduce((total, step) => total + (step.duration || 0), 0);
+;};
 
-    const checks = [
-      {
-        name: 'Health Check',
-<<<<<<< HEAD
-        command:
-          'curl -f https://your-domain.com/api/health || echo "Health check failed",
-        description: 'Check application health'},
-      {
-=======
-        command: 'curl -f https://your-domain.com/api/health || echo Health check failed',
-        description: 'Check application health',
-      },      {
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
-        name: 'Performance Check',
-        command: 'npm run perf:audit',
-        description: 'Run performance audit'}];
-
-    for (const check of checks) {
-      await this.runStep(check.name, check.command, check.description);
-    }
-  }
-
-  async generateDeploymentReport() {
-    this.log('📊 Generating deployment report...');
-
-    const report = {
-      timestamp: new Date().toISOString(),
-      environment: this.environment,
-      summary: {
-        totalSteps: this.deploymentSteps.length,
-        successfulSteps: this.deploymentSteps.filter(
-          s => s.status === 'success'
-        ).length,
-        failedSteps: this.deploymentSteps.filter(s => s.status === `failed`)
-          .length,
-        totalDuration: this.deploymentSteps.reduce(
-          (sum, step) => sum + (step.duration || 0),
-          0;
-        )},
-      steps: this.deploymentSteps,
-      recommendations: this.generateRecommendations()};
-
-    const reportFile = path.join(
-      this.reportsDir,
-      `deployment-report-${Date.now()}.json`
-    );
-;
-  async postDeploymentChecks() {;
-    this.log('✅ Running post-deployment checks...');';    const checks = [;
-      {;
-        "name": 'Health Check',';        "command":;";          'curl -f "https"://your-domain.com/api/health || echo "Health check failed",';        "description": 'Check application health',';      },;      {;
-        "name": 'Performance Check',';        "command": 'npm run "perf":audit',';        "description": 'Run performance audit',';      },;,';];
-;
-    for (const check of checks) {;
-      await this.runStep(check.name, check.command, check.description);}
-  }
-;
-  async generateDeploymentReport() {;
-    this.log('📊 Generating deployment report...');';    const report = {;
-      "timestamp": new Date().toISOString(),;";      "environment": this.environment,;";      "summary": {;";        "totalSteps": this.deploymentSteps.length,;";        "successfulSteps": this.deploymentSteps.filter(;);          s => s.status === 'success'';        ).length,;        "failedSteps": this.deploymentSteps.filter(s => s.status === 'failed')';          .length,;        "totalDuration": this.deploymentSteps.reduce(;);          (sum, step) => sum + (step.duration || 0),;
-          0;
-        ),;},;
-      "steps": this.deploymentSteps,;";      "recommendations": this.generateRecommendations(),;,";};
-;
-    const reportFile = path.join(;);      this.reportsDir,;
-      `deployment-report-${Date.now()}.json``;    );
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-    this.log(`📄 Deployment report saved "to": ${reportFile}`);`;
-    return report;}
-;
-  generateRecommendations() {;
-    const recommendations = [];
-    const failedSteps = this.deploymentSteps.filter(
-      step => step.status === `failed`
-    );
-
-    if (failedSteps.length > 0) {
-      recommendations.push({
-        type: `error`,
-        message: `${failedSteps.length} deployment steps failed. Review and fix issues before next deployment.`});
-
-      failedSteps.forEach(step => {
-        recommendations.push({
-          type: `fix`,
-          message: `Fix ${step.name}: ${step.error}`});
-      });
-    }
-
-    const successRate =
-      (this.deploymentSteps.filter(s => s.status === `success`).length /
-        this.deploymentSteps.length) *
-      100;
-
-    if (successRate < 90) {
-      recommendations.push({
-        type: `warning`,
-        message: `Deployment success rate is ${successRate.toFixed(1)}%. Consider improving reliability.`});
-    }
-
-    const longSteps = this.deploymentSteps.filter(
-      step => step.duration > 120000;
-    ); // 2 minutes;
-    if (longSteps.length > 0) {
-      recommendations.push({
-        type: `optimization`,
-        message: `${longSteps.length} steps took longer than 2 minutes. Consider optimizing these steps.`});
-    }
-
-    return recommendations;
-  }
-
-  displaySummary() {
-    console.log(`\n` + '='.repeat(60));
-    console.log('🚀 COMPREHENSIVE DEPLOYMENT AUTOMATION SUMMARY');
-    console.log(`=`.repeat(60));
-    console.log(`Environment: ${this.environment}`);
-    console.log(`Total Steps: ${this.deploymentSteps.length}`);
-    console.log(
-      `✅ Successful: ${this.deploymentSteps.filter(s => s.status === 'success').length}`
-    );
-    console.log(
-      `❌ Failed: ${this.deploymentSteps.filter(s => s.status === `failed`).length}`
-    );
-    console.log(
-      `⏱️  Total Duration: ${Math.round(this.deploymentSteps.reduce((sum, step) => sum + (step.duration || 0), 0) / 1000)}s`
-    );
-    console.log(`=`.repeat(60));
-
-    if (this.deploymentSteps.some(step => step.status === 'failed')) {
-      console.log('\n❌ FAILED STEPS: ');
-      this.deploymentSteps;
-        .filter(step => step.status === `failed`)
-        .forEach((step, index) => {
-          console.log(`${index + 1}. ${step.name}: ${step.error}`);
-        });
-    }
-
-    console.log(`=`.repeat(60));
-  }
-
-  async run() {
-    try {
-      this.log('🎯 Starting Comprehensive Deployment Automation');
-
-      await this.preDeploymentChecks();
-<<<<<<< HEAD      await this.buildApplication();
-      await this.securityChecks();
-      await this.generateDeploymentArtifacts();
-      await this.deployToNetlify();
-      await this.postDeploymentChecks();
-;
-      const report = await this.generateDeploymentReport();
-      this.displaySummary();
-
-      this.log(`🎉 Comprehensive Deployment Automation completed successfully`);
-      return { success: true, report };
-    } catch (error) { 
-      this.log(`💥 Deployment failed: ${error.message }`, `error`);
-      await this.generateDeploymentReport();
-      this.displaySummary();
-      return { success: false, error: error.message };
-    }
-  }
-}
-
-// Run the automation;
-if (require.main === module) {
-;
-      this.log('🎉 Comprehensive Deployment Automation completed successfully');      return { "success": true, report };,";} catch (error) {;
-      this.log(`💥 Deployment "failed": ${error.message}`, 'error');      await this.generateDeploymentReport();`;      this.displaySummary();
-      return { "success": false, "error": error.message };,";}
-  }
-}
-;
-// Run the automation;
-if (require.main === module) {;
-  const deployment = new ComprehensiveDeploymentAutomation();
-  deployment.run().then(result => {;);    process.exit(result.success ? 0 : 1);});}
-;
-module.exports = ComprehensiveDeploymentAutomation;
+fs.writeFileSync('deployment-summary.json', JSON.stringify(summary, null, 2));
+console.log('📋 Deployment summary saved to: deployment-summary.json');

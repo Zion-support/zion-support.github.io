@@ -4,8 +4,7 @@
     "totalFiles": 276,
     "filesFixed": 276,
     "filesWithErrors": 0,
-    "totalFixesApplied": 541;
-},
+    "totalFixesApplied": 541},
   "fixes": [
     {
       "file": "/workspace/src/App.jsx",
@@ -14,18 +13,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 21;
-},
+          "matches": 21},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 33;
-},
+          "matches": 33},
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -35,13 +31,11 @@
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 9;
-},
+          "matches": 9},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 15;
-}
+          "matches": 15}
       ]
 },
     {
@@ -51,8 +45,7 @@
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 16;
-}
+          "matches": 16}
       ]
 },
     {
@@ -62,8 +55,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 4;
-}
+          "matches": 4}
       ]
 },
     {
@@ -73,23 +65,19 @@
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 79;
-},
+          "matches": 79},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 56;
-},
+          "matches": 56},
         {
           "category": "syntax",
           "description": "Fix unescaped backslashes",
-          "matches": 1;
-},
+          "matches": 1},
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 6;
-}
+          "matches": 6}
       ]
 },
     {
@@ -99,8 +87,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -110,8 +97,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -121,8 +107,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 8;
-}
+          "matches": 8}
       ]
 },
     {
@@ -132,8 +117,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 3;
-}
+          "matches": 3}
       ]
 },
     {
@@ -143,8 +127,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -154,8 +137,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -165,8 +147,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 4;
-}
+          "matches": 4}
       ]
 },
     {
@@ -176,8 +157,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -187,18 +167,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 4;
-},
+          "matches": 4},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 11;
-},
+          "matches": 11},
         {
           "category": "console",
           "description": "Remove console statements from production code",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -208,8 +185,7 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -219,8 +195,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -230,18 +205,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 7;
-},
+          "matches": 7},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 51;
-},
+          "matches": 51},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 84;
-}
+          "matches": 84}
       ]
 },
     {
@@ -251,8 +223,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -262,8 +233,7 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 17;
-}
+          "matches": 17}
       ]
 },
     {
@@ -273,8 +243,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -284,8 +253,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 5;
-}
+          "matches": 5}
       ]
 },
     {
@@ -295,13 +263,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 2;
-},
+          "matches": 2},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 4;
-}
+          "matches": 4}
       ]
 },
     {
@@ -311,8 +277,7 @@
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 48;
-}
+          "matches": 48}
       ]
 },
     {
@@ -322,18 +287,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 11;
-},
+          "matches": 11},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 6;
-},
+          "matches": 6},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 10;
-}
+          "matches": 10}
       ]
 },
     {
@@ -343,13 +305,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 17;
-},
+          "matches": 17},
         {
           "category": "console",
           "description": "Remove console statements from production code",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -359,8 +319,7 @@
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 3;
-}
+          "matches": 3}
       ]
 },
     {
@@ -370,8 +329,7 @@
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 5;
-}
+          "matches": 5}
       ]
 },
     {
@@ -381,18 +339,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 13;
-},
+          "matches": 13},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 15;
-},
+          "matches": 15},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 21;
-}
+          "matches": 21}
       ]
 },
     {
@@ -402,8 +357,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -413,8 +367,7 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 5;
-}
+          "matches": 5}
       ]
 },
     {
@@ -424,8 +377,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -435,8 +387,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -446,18 +397,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 11;
-},
+          "matches": 11},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 75;
-},
+          "matches": 75},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 138;
-}
+          "matches": 138}
       ]
 },
     {
@@ -467,13 +415,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 2;
-},
+          "matches": 2},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 4;
-}
+          "matches": 4}
       ]
 },
     {
@@ -483,13 +429,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 1;
-},
+          "matches": 1},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -499,8 +443,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 3;
-}
+          "matches": 3}
       ]
 },
     {
@@ -510,18 +453,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 16;
-},
+          "matches": 16},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 15;
-},
+          "matches": 15},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 19;
-}
+          "matches": 19}
       ]
 },
     {
@@ -531,8 +471,7 @@
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 19;
-}
+          "matches": 19}
       ]
 },
     {
@@ -542,8 +481,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -553,8 +491,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -564,18 +501,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 38;
-},
+          "matches": 38},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 15;
-},
+          "matches": 15},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 14;
-}
+          "matches": 14}
       ]
 },
     {
@@ -585,23 +519,19 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 17;
-},
+          "matches": 17},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 24;
-},
+          "matches": 24},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 33;
-},
+          "matches": 33},
         {
           "category": "console",
           "description": "Remove console statements from production code",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -611,8 +541,7 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 3;
-}
+          "matches": 3}
       ]
 },
     {
@@ -622,18 +551,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 9;
-},
+          "matches": 9},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 41;
-},
+          "matches": 41},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 74;
-}
+          "matches": 74}
       ]
 },
     {
@@ -643,18 +569,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 7;
-},
+          "matches": 7},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 41;
-},
+          "matches": 41},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 81;
-}
+          "matches": 81}
       ]
 },
     {
@@ -664,23 +587,19 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 15;
-},
+          "matches": 15},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 24;
-},
+          "matches": 24},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 32;
-},
+          "matches": 32},
         {
           "category": "console",
           "description": "Remove console statements from production code",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -690,8 +609,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -701,8 +619,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -712,8 +629,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -723,8 +639,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -734,8 +649,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -745,8 +659,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -756,18 +669,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 54;
-},
+          "matches": 54},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 22;
-},
+          "matches": 22},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 10;
-}
+          "matches": 10}
       ]
 },
     {
@@ -777,8 +687,7 @@
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 21;
-}
+          "matches": 21}
       ]
 },
     {
@@ -788,8 +697,7 @@
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 5;
-}
+          "matches": 5}
       ]
 },
     {
@@ -799,8 +707,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -810,8 +717,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 5;
-}
+          "matches": 5}
       ]
 },
     {
@@ -821,8 +727,7 @@
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 25;
-}
+          "matches": 25}
       ]
 },
     {
@@ -832,8 +737,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -843,8 +747,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -854,8 +757,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 3;
-}
+          "matches": 3}
       ]
 },
     {
@@ -865,8 +767,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -876,8 +777,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 4;
-}
+          "matches": 4}
       ]
 },
     {
@@ -887,8 +787,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -898,13 +797,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 5;
-},
+          "matches": 5},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 109;
-}
+          "matches": 109}
       ]
 },
     {
@@ -914,23 +811,19 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 7;
-},
+          "matches": 7},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 8;
-},
+          "matches": 8},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 7;
-},
+          "matches": 7},
         {
           "category": "console",
           "description": "Remove console statements from production code",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -940,13 +833,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 21;
-},
+          "matches": 21},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 41;
-}
+          "matches": 41}
       ]
 },
     {
@@ -956,13 +847,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 3;
-},
+          "matches": 3},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 6;
-}
+          "matches": 6}
       ]
 },
     {
@@ -972,8 +861,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 5;
-}
+          "matches": 5}
       ]
 },
     {
@@ -983,8 +871,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -994,8 +881,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -1005,8 +891,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -1016,8 +901,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -1027,23 +911,19 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 8;
-},
+          "matches": 8},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 48;
-},
+          "matches": 48},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 69;
-},
+          "matches": 69},
         {
           "category": "syntax",
           "description": "Fix unescaped backslashes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -1053,13 +933,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 1;
-},
+          "matches": 1},
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -1069,8 +947,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -1080,8 +957,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -1091,8 +967,7 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -1102,8 +977,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -1113,8 +987,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -1124,8 +997,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -1135,18 +1007,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 6;
-},
+          "matches": 6},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 28;
-},
+          "matches": 28},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 48;
-}
+          "matches": 48}
       ]
 },
     {
@@ -1156,8 +1025,7 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -1167,8 +1035,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -1178,8 +1045,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -1189,8 +1055,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -1200,8 +1065,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 4;
-}
+          "matches": 4}
       ]
 },
     {
@@ -1211,8 +1075,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -1222,8 +1085,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 4;
-}
+          "matches": 4}
       ]
 },
     {
@@ -1233,8 +1095,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -1244,8 +1105,7 @@
         {
           "category": "imports",
           "description": "Merge duplicate imports from same module",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -1255,8 +1115,7 @@
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 4;
-}
+          "matches": 4}
       ]
 },
     {
@@ -1266,8 +1125,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -1277,23 +1135,19 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 11;
-},
+          "matches": 11},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 65;
-},
+          "matches": 65},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 113;
-},
+          "matches": 113},
         {
           "category": "syntax",
           "description": "Fix unescaped backslashes",
-          "matches": 4;
-}
+          "matches": 4}
       ]
 },
     {
@@ -1303,18 +1157,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 5;
-},
+          "matches": 5},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 83;
-},
+          "matches": 83},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 163;
-}
+          "matches": 163}
       ]
 },
     {
@@ -1324,13 +1175,11 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 3;
-},
+          "matches": 3},
         {
           "category": "imports",
           "description": "Merge duplicate imports from same module",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -1340,8 +1189,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 4;
-}
+          "matches": 4}
       ]
 },
     {
@@ -1351,8 +1199,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -1362,8 +1209,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -1373,8 +1219,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -1384,8 +1229,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -1395,8 +1239,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -1406,8 +1249,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -1417,8 +1259,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -1428,8 +1269,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -1439,8 +1279,7 @@
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -1450,8 +1289,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -1461,8 +1299,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -1472,8 +1309,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -1483,8 +1319,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -1494,8 +1329,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -1505,8 +1339,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -1516,8 +1349,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -1527,8 +1359,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -1538,8 +1369,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -1549,8 +1379,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -1560,8 +1389,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -1571,8 +1399,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 3;
-}
+          "matches": 3}
       ]
 },
     {
@@ -1582,8 +1409,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -1593,8 +1419,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -1604,8 +1429,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -1615,8 +1439,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -1626,8 +1449,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -1637,8 +1459,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -1648,8 +1469,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -1659,8 +1479,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -1670,8 +1489,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -1681,8 +1499,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -1692,8 +1509,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -1703,8 +1519,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -1714,8 +1529,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -1725,8 +1539,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -1736,8 +1549,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -1747,8 +1559,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -1758,8 +1569,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -1769,8 +1579,7 @@
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -1780,13 +1589,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 13;
-},
+          "matches": 13},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 5;
-}
+          "matches": 5}
       ]
 },
     {
@@ -1796,8 +1603,7 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 31;
-}
+          "matches": 31}
       ]
 },
     {
@@ -1807,13 +1613,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 14;
-},
+          "matches": 14},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 6;
-}
+          "matches": 6}
       ]
 },
     {
@@ -1823,8 +1627,7 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 26;
-}
+          "matches": 26}
       ]
 },
     {
@@ -1834,13 +1637,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 13;
-},
+          "matches": 13},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 11;
-}
+          "matches": 11}
       ]
 },
     {
@@ -1850,8 +1651,7 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 6;
-}
+          "matches": 6}
       ]
 },
     {
@@ -1861,13 +1661,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 3;
-},
+          "matches": 3},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 3;
-}
+          "matches": 3}
       ]
 },
     {
@@ -1877,8 +1675,7 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 7;
-}
+          "matches": 7}
       ]
 },
     {
@@ -1888,18 +1685,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 10;
-},
+          "matches": 10},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 285;
-},
+          "matches": 285},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 260;
-}
+          "matches": 260}
       ]
 },
     {
@@ -1909,18 +1703,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 9;
-},
+          "matches": 9},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 45;
-},
+          "matches": 45},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 61;
-}
+          "matches": 61}
       ]
 },
     {
@@ -1930,23 +1721,19 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 10;
-},
+          "matches": 10},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 43;
-},
+          "matches": 43},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 58;
-},
+          "matches": 58},
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 5;
-}
+          "matches": 5}
       ]
 },
     {
@@ -1956,23 +1743,19 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 19;
-},
+          "matches": 19},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 27;
-},
+          "matches": 27},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 39;
-},
+          "matches": 39},
         {
           "category": "syntax",
           "description": "Fix unescaped backslashes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -1982,18 +1765,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 8;
-},
+          "matches": 8},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 12;
-},
+          "matches": 12},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 3;
-}
+          "matches": 3}
       ]
 },
     {
@@ -2003,18 +1783,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 26;
-},
+          "matches": 26},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 57;
-},
+          "matches": 57},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 75;
-}
+          "matches": 75}
       ]
 },
     {
@@ -2024,18 +1801,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 25;
-},
+          "matches": 25},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 38;
-},
+          "matches": 38},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 69;
-}
+          "matches": 69}
       ]
 },
     {
@@ -2045,18 +1819,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 6;
-},
+          "matches": 6},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 66;
-},
+          "matches": 66},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 77;
-}
+          "matches": 77}
       ]
 },
     {
@@ -2066,18 +1837,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 11;
-},
+          "matches": 11},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 315;
-},
+          "matches": 315},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 260;
-}
+          "matches": 260}
       ]
 },
     {
@@ -2087,18 +1855,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 11;
-},
+          "matches": 11},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 323;
-},
+          "matches": 323},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 284;
-}
+          "matches": 284}
       ]
 },
     {
@@ -2108,23 +1873,19 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 10;
-},
+          "matches": 10},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 32;
-},
+          "matches": 32},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 33;
-},
+          "matches": 33},
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -2134,18 +1895,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 7;
-},
+          "matches": 7},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 28;
-},
+          "matches": 28},
         {
           "category": "syntax",
           "description": "Fix unescaped backslashes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -2155,18 +1913,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 25;
-},
+          "matches": 25},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 63;
-},
+          "matches": 63},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 66;
-}
+          "matches": 66}
       ]
 },
     {
@@ -2176,23 +1931,19 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 22;
-},
+          "matches": 22},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 18;
-},
+          "matches": 18},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 30;
-},
+          "matches": 30},
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -2202,8 +1953,7 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 7;
-}
+          "matches": 7}
       ]
 },
     {
@@ -2213,13 +1963,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 7;
-},
+          "matches": 7},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 6;
-}
+          "matches": 6}
       ]
 },
     {
@@ -2229,13 +1977,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 7;
-},
+          "matches": 7},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 8;
-}
+          "matches": 8}
       ]
 },
     {
@@ -2245,18 +1991,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 7;
-},
+          "matches": 7},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 77;
-},
+          "matches": 77},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 51;
-}
+          "matches": 51}
       ]
 },
     {
@@ -2266,18 +2009,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 7;
-},
+          "matches": 7},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 31;
-},
+          "matches": 31},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 60;
-}
+          "matches": 60}
       ]
 },
     {
@@ -2287,18 +2027,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 10;
-},
+          "matches": 10},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 44;
-},
+          "matches": 44},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 44;
-}
+          "matches": 44}
       ]
 },
     {
@@ -2308,18 +2045,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 9;
-},
+          "matches": 9},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 22;
-},
+          "matches": 22},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 22;
-}
+          "matches": 22}
       ]
 },
     {
@@ -2329,18 +2063,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 10;
-},
+          "matches": 10},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 42;
-},
+          "matches": 42},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 44;
-}
+          "matches": 44}
       ]
 },
     {
@@ -2350,18 +2081,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 9;
-},
+          "matches": 9},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 22;
-},
+          "matches": 22},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 23;
-}
+          "matches": 23}
       ]
 },
     {
@@ -2371,18 +2099,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 10;
-},
+          "matches": 10},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 57;
-},
+          "matches": 57},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 54;
-}
+          "matches": 54}
       ]
 },
     {
@@ -2392,18 +2117,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 9;
-},
+          "matches": 9},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 19;
-},
+          "matches": 19},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 23;
-}
+          "matches": 23}
       ]
 },
     {
@@ -2413,18 +2135,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 9;
-},
+          "matches": 9},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 17;
-},
+          "matches": 17},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 23;
-}
+          "matches": 23}
       ]
 },
     {
@@ -2434,18 +2153,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 11;
-},
+          "matches": 11},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 45;
-},
+          "matches": 45},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 50;
-}
+          "matches": 50}
       ]
 },
     {
@@ -2455,18 +2171,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 22;
-},
+          "matches": 22},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 32;
-},
+          "matches": 32},
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -2476,13 +2189,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 3;
-},
+          "matches": 3},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -2492,18 +2203,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 57;
-},
+          "matches": 57},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 22;
-},
+          "matches": 22},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 37;
-}
+          "matches": 37}
       ]
 },
     {
@@ -2513,13 +2221,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 3;
-},
+          "matches": 3},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -2529,18 +2235,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 47;
-},
+          "matches": 47},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 27;
-},
+          "matches": 27},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 29;
-}
+          "matches": 29}
       ]
 },
     {
@@ -2550,18 +2253,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 72;
-},
+          "matches": 72},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 83;
-},
+          "matches": 83},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 118;
-}
+          "matches": 118}
       ]
 },
     {
@@ -2571,13 +2271,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 3;
-},
+          "matches": 3},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -2587,13 +2285,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 50;
-},
+          "matches": 50},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 23;
-}
+          "matches": 23}
       ]
 },
     {
@@ -2603,13 +2299,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 45;
-},
+          "matches": 45},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 37;
-}
+          "matches": 37}
       ]
 },
     {
@@ -2619,13 +2313,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 3;
-},
+          "matches": 3},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -2635,13 +2327,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 114;
-},
+          "matches": 114},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 97;
-}
+          "matches": 97}
       ]
 },
     {
@@ -2651,13 +2341,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 3;
-},
+          "matches": 3},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -2667,18 +2355,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 58;
-},
+          "matches": 58},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 53;
-},
+          "matches": 53},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 54;
-}
+          "matches": 54}
       ]
 },
     {
@@ -2688,13 +2373,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 3;
-},
+          "matches": 3},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -2704,28 +2387,23 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 53;
-},
+          "matches": 53},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 25;
-},
+          "matches": 25},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 48;
-},
+          "matches": 48},
         {
           "category": "syntax",
           "description": "Fix unescaped backslashes",
-          "matches": 3;
-},
+          "matches": 3},
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -2735,13 +2413,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 3;
-},
+          "matches": 3},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -2751,13 +2427,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 21;
-},
+          "matches": 21},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 17;
-}
+          "matches": 17}
       ]
 },
     {
@@ -2767,13 +2441,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 3;
-},
+          "matches": 3},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -2783,23 +2455,19 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 26;
-},
+          "matches": 26},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 36;
-},
+          "matches": 36},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 63;
-},
+          "matches": 63},
         {
           "category": "console",
           "description": "Remove console statements from production code",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -2809,23 +2477,19 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 45;
-},
+          "matches": 45},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 64;
-},
+          "matches": 64},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 98;
-},
+          "matches": 98},
         {
           "category": "syntax",
           "description": "Fix unescaped backslashes",
-          "matches": 4;
-}
+          "matches": 4}
       ]
 },
     {
@@ -2835,13 +2499,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 3;
-},
+          "matches": 3},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -2851,23 +2513,19 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 24;
-},
+          "matches": 24},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 21;
-},
+          "matches": 21},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 36;
-},
+          "matches": 36},
         {
           "category": "console",
           "description": "Remove console statements from production code",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -2877,13 +2535,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 3;
-},
+          "matches": 3},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -2893,13 +2549,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 3;
-},
+          "matches": 3},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -2909,23 +2563,19 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 43;
-},
+          "matches": 43},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 62;
-},
+          "matches": 62},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 119;
-},
+          "matches": 119},
         {
           "category": "syntax",
           "description": "Fix unescaped backslashes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -2935,13 +2585,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 3;
-},
+          "matches": 3},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -2951,23 +2599,19 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 41;
-},
+          "matches": 41},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 29;
-},
+          "matches": 29},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 55;
-},
+          "matches": 55},
         {
           "category": "console",
           "description": "Remove console statements from production code",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -2977,13 +2621,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 3;
-},
+          "matches": 3},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -2993,18 +2635,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 16;
-},
+          "matches": 16},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 20;
-},
+          "matches": 20},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 34;
-}
+          "matches": 34}
       ]
 },
     {
@@ -3014,18 +2653,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 69;
-},
+          "matches": 69},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 77;
-},
+          "matches": 77},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 153;
-}
+          "matches": 153}
       ]
 },
     {
@@ -3035,13 +2671,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 3;
-},
+          "matches": 3},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -3051,18 +2685,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 8;
-},
+          "matches": 8},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 4;
-},
+          "matches": 4},
         {
           "category": "console",
           "description": "Remove console statements from production code",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -3072,23 +2703,19 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 11;
-},
+          "matches": 11},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 10;
-},
+          "matches": 10},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 17;
-},
+          "matches": 17},
         {
           "category": "console",
           "description": "Remove console statements from production code",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -3098,13 +2725,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 3;
-},
+          "matches": 3},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -3114,18 +2739,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 24;
-},
+          "matches": 24},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 28;
-},
+          "matches": 28},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 63;
-}
+          "matches": 63}
       ]
 },
     {
@@ -3135,13 +2757,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 3;
-},
+          "matches": 3},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -3151,13 +2771,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 3;
-},
+          "matches": 3},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -3167,13 +2785,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 3;
-},
+          "matches": 3},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -3183,13 +2799,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 3;
-},
+          "matches": 3},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -3199,13 +2813,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 9;
-},
+          "matches": 9},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 6;
-}
+          "matches": 6}
       ]
 },
     {
@@ -3215,13 +2827,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 3;
-},
+          "matches": 3},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -3231,13 +2841,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 16;
-},
+          "matches": 16},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 10;
-}
+          "matches": 10}
       ]
 },
     {
@@ -3247,13 +2855,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 3;
-},
+          "matches": 3},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -3263,13 +2869,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 3;
-},
+          "matches": 3},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -3279,18 +2883,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 19;
-},
+          "matches": 19},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 72;
-},
+          "matches": 72},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 130;
-}
+          "matches": 130}
       ]
 },
     {
@@ -3300,13 +2901,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 3;
-},
+          "matches": 3},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -3316,13 +2915,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 3;
-},
+          "matches": 3},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -3332,18 +2929,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 12;
-},
+          "matches": 12},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 25;
-},
+          "matches": 25},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 46;
-}
+          "matches": 46}
       ]
 },
     {
@@ -3353,18 +2947,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 76;
-},
+          "matches": 76},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 56;
-},
+          "matches": 56},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 83;
-}
+          "matches": 83}
       ]
 },
     {
@@ -3374,13 +2965,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 3;
-},
+          "matches": 3},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -3390,18 +2979,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 43;
-},
+          "matches": 43},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 14;
-},
+          "matches": 14},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 21;
-}
+          "matches": 21}
       ]
 },
     {
@@ -3411,13 +2997,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 3;
-},
+          "matches": 3},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -3427,18 +3011,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 43;
-},
+          "matches": 43},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 13;
-},
+          "matches": 13},
         {
           "category": "console",
           "description": "Remove console statements from production code",
-          "matches": 4;
-}
+          "matches": 4}
       ]
 },
     {
@@ -3448,13 +3029,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 3;
-},
+          "matches": 3},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -3464,13 +3043,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 69;
-},
+          "matches": 69},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 27;
-}
+          "matches": 27}
       ]
 },
     {
@@ -3480,13 +3057,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 3;
-},
+          "matches": 3},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -3496,13 +3071,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 52;
-},
+          "matches": 52},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 14;
-}
+          "matches": 14}
       ]
 },
     {
@@ -3512,13 +3085,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 3;
-},
+          "matches": 3},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -3528,23 +3099,19 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 26;
-},
+          "matches": 26},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 14;
-},
+          "matches": 14},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 14;
-},
+          "matches": 14},
         {
           "category": "console",
           "description": "Remove console statements from production code",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -3554,13 +3121,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 3;
-},
+          "matches": 3},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -3570,18 +3135,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 33;
-},
+          "matches": 33},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 19;
-},
+          "matches": 19},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 48;
-}
+          "matches": 48}
       ]
 },
     {
@@ -3591,13 +3153,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 3;
-},
+          "matches": 3},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -3607,18 +3167,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 15;
-},
+          "matches": 15},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 30;
-},
+          "matches": 30},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 36;
-}
+          "matches": 36}
       ]
 },
     {
@@ -3628,13 +3185,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 3;
-},
+          "matches": 3},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -3644,13 +3199,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 3;
-},
+          "matches": 3},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -3660,18 +3213,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 37;
-},
+          "matches": 37},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 25;
-},
+          "matches": 25},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 53;
-}
+          "matches": 53}
       ]
 },
     {
@@ -3681,13 +3231,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 3;
-},
+          "matches": 3},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -3697,13 +3245,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 29;
-},
+          "matches": 29},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 16;
-}
+          "matches": 16}
       ]
 },
     {
@@ -3713,13 +3259,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 3;
-},
+          "matches": 3},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -3729,28 +3273,23 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 59;
-},
+          "matches": 59},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 21;
-},
+          "matches": 21},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 14;
-},
+          "matches": 14},
         {
           "category": "syntax",
           "description": "Fix unescaped backslashes",
-          "matches": 4;
-},
+          "matches": 4},
         {
           "category": "console",
           "description": "Remove console statements from production code",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -3760,13 +3299,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 3;
-},
+          "matches": 3},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -3776,13 +3313,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 18;
-},
+          "matches": 18},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 13;
-}
+          "matches": 13}
       ]
 },
     {
@@ -3792,13 +3327,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 3;
-},
+          "matches": 3},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -3808,18 +3341,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 11;
-},
+          "matches": 11},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 36;
-},
+          "matches": 36},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 44;
-}
+          "matches": 44}
       ]
 },
     {
@@ -3829,18 +3359,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 13;
-},
+          "matches": 13},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 34;
-},
+          "matches": 34},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 49;
-}
+          "matches": 49}
       ]
 },
     {
@@ -3850,13 +3377,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 3;
-},
+          "matches": 3},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -3866,18 +3391,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 24;
-},
+          "matches": 24},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 19;
-},
+          "matches": 19},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 44;
-}
+          "matches": 44}
       ]
 },
     {
@@ -3887,18 +3409,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 46;
-},
+          "matches": 46},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 28;
-},
+          "matches": 28},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 61;
-}
+          "matches": 61}
       ]
 },
     {
@@ -3908,13 +3427,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 3;
-},
+          "matches": 3},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -3924,23 +3441,19 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 17;
-},
+          "matches": 17},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 8;
-},
+          "matches": 8},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 10;
-},
+          "matches": 10},
         {
           "category": "console",
           "description": "Remove console statements from production code",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -3950,18 +3463,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 47;
-},
+          "matches": 47},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 17;
-},
+          "matches": 17},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 15;
-}
+          "matches": 15}
       ]
 },
     {
@@ -3971,28 +3481,23 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 22;
-},
+          "matches": 22},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 19;
-},
+          "matches": 19},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 30;
-},
+          "matches": 30},
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-},
+          "matches": 1},
         {
           "category": "console",
           "description": "Remove console statements from production code",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -4002,13 +3507,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 22;
-},
+          "matches": 22},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 23;
-}
+          "matches": 23}
       ]
 },
     {
@@ -4018,13 +3521,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 9;
-},
+          "matches": 9},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 7;
-}
+          "matches": 7}
       ]
 },
     {
@@ -4034,18 +3535,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 31;
-},
+          "matches": 31},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 80;
-},
+          "matches": 80},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 170;
-}
+          "matches": 170}
       ]
 },
     {
@@ -4055,18 +3553,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 29;
-},
+          "matches": 29},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 48;
-},
+          "matches": 48},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 98;
-}
+          "matches": 98}
       ]
 },
     {
@@ -4076,18 +3571,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 10;
-},
+          "matches": 10},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 24;
-},
+          "matches": 24},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 37;
-}
+          "matches": 37}
       ]
 },
     {
@@ -4097,18 +3589,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 14;
-},
+          "matches": 14},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 6;
-},
+          "matches": 6},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 7;
-}
+          "matches": 7}
       ]
 },
     {
@@ -4118,8 +3607,7 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 3;
-}
+          "matches": 3}
       ]
 },
     {
@@ -4129,8 +3617,7 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -4140,18 +3627,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 12;
-},
+          "matches": 12},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 18;
-},
+          "matches": 18},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 26;
-}
+          "matches": 26}
       ]
 },
     {
@@ -4161,18 +3645,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 37;
-},
+          "matches": 37},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 20;
-},
+          "matches": 20},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 25;
-}
+          "matches": 25}
       ]
 },
     {
@@ -4182,13 +3663,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 56;
-},
+          "matches": 56},
         {
           "category": "quotes",
           "description": "Replace HTML entities with proper quotes",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -4198,13 +3677,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 32;
-},
+          "matches": 32},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 51;
-}
+          "matches": 51}
       ]
 },
     {
@@ -4214,18 +3691,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 5;
-},
+          "matches": 5},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 8;
-},
+          "matches": 8},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 7;
-}
+          "matches": 7}
       ]
 },
     {
@@ -4235,18 +3709,15 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 9;
-},
+          "matches": 9},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 9;
-},
+          "matches": 9},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 14;
-}
+          "matches": 14}
       ]
 },
     {
@@ -4256,13 +3727,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 15;
-},
+          "matches": 15},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 21;
-}
+          "matches": 21}
       ]
 },
     {
@@ -4272,13 +3741,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 6;
-},
+          "matches": 6},
         {
           "category": "syntax",
           "description": "Fix colon spacing issues",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -4288,8 +3755,7 @@
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -4299,13 +3765,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 12;
-},
+          "matches": 12},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 3;
-}
+          "matches": 3}
       ]
 },
     {
@@ -4315,8 +3779,7 @@
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -4326,8 +3789,7 @@
         {
           "category": "console",
           "description": "Remove console statements from production code",
-          "matches": 2;
-}
+          "matches": 2}
       ]
 },
     {
@@ -4337,8 +3799,7 @@
         {
           "category": "syntax",
           "description": "Fix unescaped backslashes",
-          "matches": 10;
-}
+          "matches": 10}
       ]
 },
     {
@@ -4348,8 +3809,7 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 1;
-}
+          "matches": 1}
       ]
 },
     {
@@ -4359,13 +3819,11 @@
         {
           "category": "syntax",
           "description": "Fix missing semicolons",
-          "matches": 19;
-},
+          "matches": 19},
         {
           "category": "syntax",
           "description": "Fix comma spacing issues",
-          "matches": 11;
-}
+          "matches": 11}
       ]
 }
   ],
