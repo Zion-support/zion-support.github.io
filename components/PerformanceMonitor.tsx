@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect } from 'react';
 
 const PerformanceMonitor: React.FC = () => {
@@ -9,6 +10,10 @@ const PerformanceMonitor: React.FC = () => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
             console.log('LCP:', entry.startTime);
+            // Send to analytics
+            if (entry.startTime > 2500) {
+              console.warn('LCP is slow:', entry.startTime);
+            }
           }
         }
       });
@@ -24,6 +29,10 @@ const PerformanceMonitor: React.FC = () => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'first-input') {
             console.log('FID:', entry.processingStart - entry.startTime);
+            // Send to analytics
+            if (entry.processingStart - entry.startTime > 100) {
+              console.warn('FID is slow:', entry.processingStart - entry.startTime);
+            }
           }
         }
       });
@@ -43,6 +52,10 @@ const PerformanceMonitor: React.FC = () => {
           }
         }
         console.log('CLS:', clsValue);
+        // Send to analytics
+        if (clsValue > 0.1) {
+          console.warn('CLS is poor:', clsValue);
+        }
       });
 
       try {
@@ -60,5 +73,6 @@ const PerformanceMonitor: React.FC = () => {
   }, []);
 
   return null; // This component doesn't render anything
-}
+};
+
 export default PerformanceMonitor;

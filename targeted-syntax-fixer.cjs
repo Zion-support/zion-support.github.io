@@ -138,7 +138,7 @@ class TargetedSyntaxFixer {
 
 // Run the targeted syntax fixer
 const fixer = new TargetedSyntaxFixer();
-fixer.run().then(report => {
+fixer.run().then(() => {
   console.log("✅ Targeted syntax fixing completed successfully");
   process.exit(0);
 }).catch(error => {

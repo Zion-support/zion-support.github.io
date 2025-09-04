@@ -9,7 +9,6 @@ interface BreadcrumbItem {
 export default function Breadcrumb() {
   const router = useRouter();
   const pathSegments = router.asPath.split('/').filter(segment => segment !== '');
-
   const breadcrumbs: BreadcrumbItem[] = [
     { label: 'Home', href: '/' }
   ];

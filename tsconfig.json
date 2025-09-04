@@ -22,7 +22,12 @@
   },
   "include": [
     "next-env.d.ts",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "pages/**/*",
+    "components/**/*",
+    "lib/**/*",
+    "hooks/**/*",
+    "styles/**/*"
   ],
   "exclude": [
     "node_modules",

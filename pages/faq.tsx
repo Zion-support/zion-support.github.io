@@ -2,51 +2,49 @@ import Head from 'next/head';
 import Link from 'next/link';
 
 export default function FAQ() {
-  const contact = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    site: 'https://ziontechgroup.com'
+  const contact ={
+    phone: email, 'kleber@ziontechgroup.com'
+    address: site, 'https://ziontechgroup.com'
   }
   const faqs = [
     {
-      question: "What services does Zion Tech Group offer?",
+      question: "What services does Zion Tech Group offer?"
       answer: "We offer 40+ micro SaaS products, 16+ AI services, and 16+ IT solutions including cloud migration, cybersecurity, data engineering, machine learning, and more."
     },
     {
-      question: "How do I get started with your services?",
+      question: "How do I get started with your services?"
       answer: "Contact us through our contact form, call us at +1 302 464 0950, or email kleber@ziontechgroup.com. We'll schedule a consultation to understand your needs and provide a custom solution."
     },
     {
-      question: "What is the typical pricing for your services?",
+      question: "What is the typical pricing for your services?"
       answer: "Pricing varies by service and complexity. Micro SaaS products typically range from $99-$3,500/month, AI services from $699-$12,999/month, and IT services from $999-$15,999/month. Contact us for a custom quote."
     },
     {
-      question: "Do you offer custom development?",
+      question: "Do you offer custom development?"
       answer: "Yes, we specialize in custom development for micro SaaS products, AI solutions, and IT services. We work closely with clients to build tailored solutions that meet their specific business requirements."
     },
     {
-      question: "What technologies do you work with?",
+      question: "What technologies do you work with?"
       answer: "We work with modern technologies including AWS, Azure, GCP, Kubernetes, Docker, Python, JavaScript, React, Node.js, machine learning frameworks, and various cloud and AI platforms."
     },
     {
-      question: "How long does a typical project take?",
+      question: "How long does a typical project take?"
       answer: "Project timelines vary based on complexity. Simple micro SaaS products can be delivered in 2-4 weeks, while complex AI or IT solutions may take 2-6 months. We provide detailed timelines during consultation."
     },
     {
-      question: "Do you provide ongoing support?",
+      question: "Do you provide ongoing support?"
       answer: "Yes, we offer comprehensive support and maintenance services for all our solutions. This includes monitoring, updates, troubleshooting, and optimization to ensure optimal performance."
     },
     {
-      question: "Can you help with cloud migration?",
+      question: "Can you help with cloud migration?"
       answer: "Absolutely! We specialize in cloud migration and modernization services, helping businesses move to AWS, Azure, or GCP with minimal downtime and maximum efficiency."
     },
     {
-      question: "What makes your AI services different?",
+      question: "What makes your AI services different?"
       answer: "Our AI services are tailored to specific business needs, not generic solutions. We focus on practical applications that deliver measurable ROI, with custom model development and integration support."
     },
     {
-      question: "Do you work with small businesses?",
+      question: "Do you work with small businesses?"
       answer: "Yes, we work with businesses of all sizes, from startups to enterprises. Our micro SaaS products are particularly well-suited for small and medium businesses looking for cost-effective solutions."
     }
   ];
@@ -64,7 +62,7 @@ export default function FAQ() {
         {/* Hero Section */}
         <section className="py-20 px-4 text-center">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
+            <h1 className="text-4xl md: text-5xl font-extrabold tracking-tight mb-6">
               Frequently Asked Questions
             </h1>
             <p className="text-xl text-slate-300 mb-8">
@@ -72,7 +70,7 @@ export default function FAQ() {
             </p>
             <p className="text-lg text-slate-400 mb-12 max-w-3xl mx-auto">
               Find answers to the most common questions about our services, pricing, 
-              implementation, and support. Can't find what you're looking for? Contact us directly.
+implementation, and support. Can't find what you're looking for? Contact us directly.
             </p>
           </div>
         </section>
@@ -94,7 +92,7 @@ export default function FAQ() {
         {/* Contact CTA */}
         <section className="py-16 px-4 bg-slate-900/40">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8">
+            <h2 className="text-3xl md: text-4xl font-bold mb-8">
               Still Have Questions?
             </h2>
             <p className="text-lg text-slate-300 mb-8">
@@ -103,13 +101,13 @@ export default function FAQ() {
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
+              <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-8 py-3 bg-blue-600 hover: bg-blue-700 rounded-lg font-semibold transition-colors">
                 Call {contact.phone}
               </a>
-              <a href={`mailto:${contact.email}`} className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors">
+              <a href={`mailto: ${contact.email}`} className="px-8 py-3 bg-purple-600 hover: bg-purple-700 rounded-lg font-semibold transition-colors">
                 Email {contact.email}
               </a>
-              <Link href="/contact" className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
+              <Link href="/contact" className="px-8 py-3 bg-slate-800 hover: bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
                 Contact Form
               </Link>
             </div>
@@ -117,5 +115,4 @@ export default function FAQ() {
         </section>
       </main>
     </>
-  );
-}
+  )}

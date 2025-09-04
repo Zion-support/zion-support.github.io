@@ -1,0 +1,42 @@
+{
+  "timestamp": "2025-09-04T03:00:22.167Z",
+  "optimizations": [
+    {
+      "type": "bundle-analysis",
+      "status": "completed",
+      "details": {
+        "totalSize": 104448,
+        "pageCount": 46
+      }
+    },
+    {
+      "type": "image-optimization",
+      "status": "completed",
+      "filesAnalyzed": 12
+    },
+    {
+      "type": "css-optimization",
+      "status": "completed",
+      "totalSize": 58389
+    },
+    {
+      "type": "javascript-optimization",
+      "status": "completed",
+      "totalSize": 893933,
+      "componentCount": 22
+    }
+  ],
+  "recommendations": [
+    {
+      "type": "css-optimization",
+      "priority": "medium",
+      "message": "CSS bundle size is 57.02KB. Consider purging unused CSS."
+    }
+  ],
+  "summary": {
+    "totalOptimizations": 4,
+    "highPriorityRecommendations": 0,
+    "mediumPriorityRecommendations": 1,
+    "lowPriorityRecommendations": 0
+  }
+}
