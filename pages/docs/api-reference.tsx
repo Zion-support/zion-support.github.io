@@ -161,12 +161,16 @@ export default function ApiReference() {
 }`}
                 </pre>
               </div>
+            </div>
+
+            <div style={{ background: '#2a2a2a', padding: 20, borderRadius: 8 }}>
+              <h3 style={{ fontSize: '1.125rem', fontWeight: 600, marginBottom: 12 }}>GET /micro-saas/apps/{"{id}"}</h3>
+              <p style={{ opacity: 0.8, marginBottom: 12 }}>Get detailed information about a specific micro SaaS application.</p>
               
               <div style={{ marginBottom: 16 }}>
                 <h4 style={{ fontWeight: 600, marginBottom: 8, color: '#f59e0b' }}>Response</h4>
                 <pre style={{ background: '#1e293b', padding: 12, borderRadius: 6, overflow: 'auto', fontSize: '0.8rem', color: '#e2e8f0' }}>
 {`{
-  "success": true,
   "data": {
     "quote_id": "qt_123456789",
     "status": "pending",
