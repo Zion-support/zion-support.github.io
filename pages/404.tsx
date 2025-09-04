@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { Home, ArrowLeft, Search } from 'lucide-react';
@@ -8,7 +8,7 @@ export default function Custom404() {
     <>
       <Head>
         <title>Page Not Found - Zion Tech Group</title>
-        <meta name="description" content="The page you're looking for doesn't exist. Return to Zion Tech Group's homepage to explore our services." />
+        <meta name="description" content="The page you&apos;re looking for doesn&apos;t exist. Return to Zion Tech Group's homepage to explore our services." />
         <meta name="robots" content="noindex, nofollow" />
       </Head>
       

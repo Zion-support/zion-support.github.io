@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-09-04T02:27:52.034Z",
+  "project": "/workspace",
+  "preDeploymentChecks": {
+    "checks": {
+      "lint": {
+        "status": "success",
+        "message": "Lint check passed"
+      },
+      "typeCheck": {
+        "status": "failed",
+        "message": "Command failed: npm run type-check\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
+      },
+      "build": {
+        "status": "success",
+        "message": "Build check passed"
+      },
+      "test": {
+        "status": "warning",
+        "message": "No tests configured or tests failed"
+      }
+    },
+    "allPassed": false
+  },
+  "build": {
+    "status": "success",
+    "message": "Build completed"
+  },
+  "optimization": {
+    "status": "success",
+    "message": "Build optimization completed"
+  },
+  "readiness": {
+    "buildExists": true,
+    "packageJsonExists": true,
+    "nodeModulesExists": true,
+    "logsDirectoryExists": true,
+    "isReady": true
+  },
+  "recommendations": [
+    "Implement automated testing in CI/CD pipeline",
+    "Use environment-specific configuration files",
+    "Implement blue-green deployment strategy",
+    "Set up monitoring and alerting for deployments",
+    "Use containerization for consistent deployments",
+    "Implement rollback mechanisms",
+    "Set up automated health checks post-deployment"
+  ]
+}
