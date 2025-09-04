@@ -9,10 +9,11 @@ const PerformanceMonitor: React.FC = () => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
             // Send to analytics
-            if (entry.startTime > 2500) {
+            if ((entry as any).startTime > 2500) {
               // LCP is slow
             }
           }
+        }
       });
       
       try {
@@ -32,6 +33,7 @@ const PerformanceMonitor: React.FC = () => {
               // FID is slow
             }
           }
+        }
       });
 
       try {
@@ -64,9 +66,10 @@ const PerformanceMonitor: React.FC = () => {
         observer.disconnect();
         fidObserver.disconnect();
         clsObserver.disconnect();
-      }
+      };
+    }
   }, []);
 
   return null; // This component doesn't render anything
-}
+};
 export default PerformanceMonitor;

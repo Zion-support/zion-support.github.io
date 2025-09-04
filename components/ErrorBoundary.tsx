@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-import React, {  Component, ErrorInfo, ReactNode  } from "react";
-=======
-import React, { Component, ReactNode } from 'react';
->>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
+import React, { Component, type ErrorInfo, type ReactNode } from 'react';
 
-interface Props { children: ReactNode;
+interface Props {
+  children: ReactNode;
   fallback?: ReactNode;
 }
 
@@ -16,7 +13,7 @@ interface State {
 class ErrorBoundary extends Component<Props, State> {
   public state: State = {
     hasError: false
-  }
+  };
 
   public static getDerivedStateFromError(): State {
     return { hasError: true };
@@ -50,7 +47,7 @@ class ErrorBoundary extends Component<Props, State> {
                 Refresh Page
               </button>
               <button
-                onClick={() => window.location.href = '/'}
+                onClick={() => (window.location.href = '/')}
                 className="w-full bg-slate-800 hover:bg-slate-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
               >
                 Go Home
