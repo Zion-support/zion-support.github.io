@@ -1,8 +1,54 @@
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+;
+import { UserMenu } from './UserMenu.jsx';
+import { LanguageSelector } from './LanguageSelector.jsx';
+import { MainNavigation } from '@/layout/MainNavigation';
+import { MobileMenu } from './MobileMenu.jsx';
+import { useAuth } from '@/hooks/useAuth';
+import { useWhitelabel } from '@/context/WhitelabelContext';
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
+import { generateSearchSuggestions } from "@/data/marketplaceData";
+import { useNavigate } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Menu, X, Sparkles } from "lucide-react";
+import { Search as SearchIcon } from "lucide-react";
 
-        color: effectiveTheme.textColor,
+export function Header({ hideLogin = false, customLogo, customTheme }) {  const { user } = useAuth();
+  const { isWhitelabel, primaryColor } = useWhitelabel();
+  const navigate = useNavigate();'
+  const [query, setQuery] = useState('');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const searchSuggestions = generateSearchSuggestions();
+  // If we have a white-label tenant and no specific customTheme is provided,'
+  // use the tenant's primary color;
+  const effectiveTheme =
+    customTheme ||
+    (isWhitelabel;
+      ? {}
+          primaryColor,'
+          backgroundColor: '#000000', // Default dark background''
+          textColor: '#ffffff', // Default light text;
+        }
+      : undefined);
+  const headerStyle = effectiveTheme;
+    ? {}
+        backgroundColor: effectiveTheme.backgroundColor,
+color: effectiveTheme.textColor,
         borderColor: "${effectiveTheme.primaryColor}20"}
 
-  // comment
+// Handle scroll effect
+  useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+// comment
 useEffect(() => {const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)};""
     window.addEventListener()

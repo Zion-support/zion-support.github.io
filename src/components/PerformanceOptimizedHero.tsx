@@ -1,6 +1,29 @@
+import { Link  } from 'react-router-dom';
+export default function Page() {
+</motion.div>}
+import { motion, AnimatePresence  } from 'framer-motion';
 
+export default function Page() {
+,;
+    { icon: Zap, text: "Digital Transformation", color: "from - yellow-500 to - orange - 500" };
+  ];
+}) => {;
+  const [currentFeature, setCurrentFeature] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
 
-    return () => clearInterval(interval)}, [features.length]);
+  useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
+    setIsVisible(true) ;
+
+    const interval = setInterval(() => {;
+      setCurrentFeature((prev) => (prev + 1) % features.length) ;
+    }, 3000) ;
+return () => clearInterval(interval)}, [features.length]);
 
     // // // // // // // // console.log('Hero CTA clicked');
   
@@ -32,7 +55,8 @@
 },;
     visible: { opacity: 1, scale: 1 }};
 
-  return ("
+useEffect(() => { setIsVisible(true) ; setCurrentFeature((prev) => (prev + 1) % features.length) }, 3000) ; ;
+return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <SEO title="PerformanceOptimizedHero - Zion Tech Group""
         description="Professional PerformanceOptimizedHero services by Zion Tech Group"",
@@ -54,4 +78,3 @@
   )}
 
 export default PerformanceOptimizedHero;""
-

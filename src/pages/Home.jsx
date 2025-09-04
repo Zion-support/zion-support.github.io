@@ -46,3 +46,28 @@ export default function Home() {
     }
   ];
 
+<HeroSection />
+      <QuickAccess />
+      <FeatureCTAs />
+      <FeatureHighlights />
+      <CategoriesSection />
+      <BenefitsSection />
+      <HowItWorksSection />
+      <FeaturedListingsSection />
+      <ServicesShowcase />
+      <NewsletterSection />
+      <ITServiceRequestHero />
+      <FloatingCTA />
+    </>
+  );
+}
+
+export { Home };
+
+export { Home };
+
+export { Home };
+
+export { Home };
+
+export { Home };

@@ -22,7 +22,6 @@ export function ModernHeader() {};
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
-
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
     setIsServicesOpen(false);
@@ -42,7 +41,6 @@ export function ModernHeader() {};
     { name: 'Digital Transformation', href: '/digital-transformation', description: 'Business modernization' },
     { name: 'Quantum Computing', href: '/quantum-computing', description: 'Quantum solutions and consulting' }
   ]
-
   return (
     <>
       {/* Top Bar */}
@@ -75,7 +73,6 @@ export function ModernHeader() {};
           </div>
         </div>
       </div>
-
       {/* Main Header */}
       <header className="bg-white shadow-lg sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -89,24 +86,29 @@ export function ModernHeader() {};
                 <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
               </Link>
             </div>
-
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8">
               <Link href="/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                 Home
               </Link>
-              
               {/* Services Dropdown */}
               <div className="relative">
                 <button
                   className="flex items-center text-gray-700 hover:text-blue-600 transition-colors font-medium"
-                  onMouseEnter={() => setIsServicesOpen(true)}
-                  onMouseLeave={() => setIsServicesOpen(false)}
+                  onMouseEnter={() => setIsServicesOpen(true)
+      )}
+    </div>
+  );
+}
+                  onMouseLeave={() => setIsServicesOpen(false)
+      )}
+    </div>
+  );
+}
                 >
                   Services
                   <ChevronDown className="ml-1 h-4 w-4" />
                 </button>
-                
                 {isServicesOpen && (
                   <div
                     className="absolute top-full left-0 mt-2 w-[600px] bg-white rounded-lg shadow-xl border border-gray-200 py-4"

@@ -1,5 +1,102 @@
-
-            freeTrial: "21 days",
+import React from 'react';
+;
+;
+;import { Building, Users, BarChart3, MessageSquare, Calendar, FileText, CreditCard, Globe, TrendingUp, CheckCircle, Star, Phone, Mail, MapPin, ExternalLink, BarChart, Shield, Zap } from "lucide-react";
+export default function MicroSAASServicesPage() {}
+    const microSAASServices = []
+        {}
+"""
+""""
+            id: "crm-saas",""""
+            title: "ZionCRM Pro",""""
+            description: "Complete customer relationship management solution with sales automation, lead tracking, and analytics.",""""
+            icon: <Users className="h-8 w-8 text-blue-500"/>,"""
+            price: 29,""""
+            currency: "$","""
+            features: [""""
+                "Contact Management",""""
+                "Sales Pipeline",""""
+                "Lead Scoring",""""
+                "Email Automation",""""
+                "Analytics Dashboard",""""
+                "Mobile App""""
+            ],""""
+            category: "Business Tools",""""
+            badge: "Popular",""""
+            link: "https://ziontechgroup.com/zion-crm",""""
+            details: "Streamline your sales process with our comprehensive CRM solution. Track leads, manage contacts, and close more deals with intelligent automation and insights.",
+            pricing: {}
+"""
+""""
+                starter: "$29/month",""""
+                professional: "$79/month",""""
+                enterprise: "$199/month""""
+            },""""
+            freeTrial: "14 days",
+            rating: 4.8,
+            reviewCount: 342;
+        },
+        {}
+"""
+""""
+            id: "project-management",""""
+            title: "ZionProject Hub",""""
+            description: "Project management platform with task tracking, team collaboration, and resource management.",""""
+            icon: <Calendar className="h-8 w-8 text-green-500"/>,"""
+            price: 19,""""
+            currency: "$","""
+            features: [""""
+                "Task Management",""""
+                "Team Collaboration",""""
+                "Time Tracking",""""
+                "Resource Planning",""""
+                "Gantt Charts",""""
+                "File Sharing""""
+            ],""""
+            category: "Project Management",""""
+            badge: "Essential",""""
+            link: "https://ziontechgroup.com/zion-project",""""
+            details: "Keep your projects on track with our intuitive project management platform. Collaborate with your team, track progress, and deliver results on time.",
+            pricing: {}
+"""
+""""
+                starter: "$19/month",""""
+                professional: "$49/month",""""
+                enterprise: "$99/month""""
+            },""""
+            freeTrial: "30 days",
+            rating: 4.7,
+            reviewCount: 267;
+        },
+        {}
+"""
+""""
+            id: "analytics-platform",""""
+            title: "ZionAnalytics",""""
+            description: "Business intelligence platform with real-time dashboards, reporting, and data visualization.",""""
+            icon: <BarChart3 className="h-8 w-8 text-purple-500"/>,"""
+            price: 39,""""
+            currency: "$","""
+            features: [""""
+                "Real-time Dashboards",""""
+                "Custom Reports",""""
+                "Data Integration",""""
+                "Predictive Analytics",""""
+                "Export Options",""""
+                "API Access""""
+            ],""""
+            category: "Analytics",""""
+            badge: "Insightful",""""
+            link: "https://ziontechgroup.com/zion-analytics",""""
+            details: "Transform your data into actionable insights with our powerful analytics platform. Create custom dashboards, generate reports, and make data-driven decisions.",
+            pricing: {}
+"""
+""""
+                starter: "$39/month",""""
+                professional: "$89/month",""""
+                enterprise: "$199/month""""
+            },""""
+freeTrial: "21 days",
             rating: 4.9,
             reviewCount: 189
         },
@@ -895,4 +992,14 @@
           </div>
         </div>
       </div>
+</div>)}
 
+export { MicroSAASServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard };
+
+export { MicroSAASServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard };
+
+export { MicroSAASServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard };
+
+export { MicroSAASServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard };
+
+export { MicroSAASServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard };

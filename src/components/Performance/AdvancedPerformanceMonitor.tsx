@@ -1,0 +1,6 @@
+import React, { useEffect, useState } from 'react' import { motion } from 'framer-motioninterface PerformanceMetrics {fcp: number;'
+   lcp: number;
+   fid: number;
+   cls: number;
+   ttfb: number;
+   fmp: number} const AdvancedPerformanceMonitor: React.FC = () => { const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null) const [isVisible, setIsVisible] = useState(false) useEffect(() => {

@@ -2,6 +2,10 @@
  * Production logging utility for error tracking and monitoring
  */
 
+// Simple production logger utility
+  // In production, you might want to send this to a logging service
+  // For now, we'll just log to console in development'
+  if(process.env.NODE_ENV === 'development') {
 /**
  * Log warning to production monitoring service
  * @param {string} message - Warning message

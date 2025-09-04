@@ -1,6 +1,21 @@
-
-
-  { opacity: 0, y: 50, scale: 0.9}} animate = {}"
+import React, { useState, useEffect } from 'react';'''
+import { motion, AnimatePresence } from 'framer-motion';
+import { ADVANCED_MICRO_SERVICES } from "../data/advancedMicroServices.jsx";
+const ServiceCard = ({ service, index, isVisible }) => {    const [isHovered, setIsHovered] = useState(false);
+    return (<motion.div initial = {}
+  { opacity: 0, y: 50,
+  scale: 0.9;
+}} animate = {}
+  isVisible ? { opacity: 1, y: 0,
+  scale: 1;
+} : {}} transition = {}
+  { duration: 0.6,
+  delay: index * 0.1 """
+""""
+}} className="relative group" onHoverStart={() => setIsHovered(true)} onHoverEnd={() => setIsHovered(false)}>"""
+      {/* Animated Background */}""""
+      <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+{ opacity: 0, y: 50, scale: 0.9}} animate = {}"
   isVisible ? { opacity: 1, y: 0, scale: 1} : {}} transition = {}""
   { duration: 0.6, delay: index * 0.1 """"">
 """"}} className="relative group" onHoverStart="{()" =" > setIsHovered(true)} onHoverEnd="{()" => setIsHovered(false)}>""""
@@ -146,7 +161,29 @@ export const FuturisticServicesShowcase = () => {}""
 
         const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+        return matchesCategory && matchesSearch});
+    // Set all services as visible initially for better UX
+    useEffect(() => {
+  // TODO: Add dependencies if needed
 
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
+        const allIndices = new Set(filteredServices.map((_, index) => index));
+        setVisibleServices(allIndices)}, [filteredServices]);"
+    return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 py-20">
+      {/* Animated Background */}"
+      <div className="absolute inset-0 overflow-hidden">"
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5"></div>"
+        {[...Array(20)].map((_, i) => (<div key={i} className="absolute w-2 h-2 bg-cyan-400/20 rounded-full animate-float" style={{
+`
+                left: `${Math.random() * 100}%`,`
+                top: `${Math.random() * 100}%`,`
+                animationDelay: `${Math.random() * 5}s`,`
+                animationDuration: `${3 + Math.random() * 4}s`}}/>))}
+      </div>
 "
 ""
                 left: "${Math.random() * 100}%", ""
@@ -230,4 +267,3 @@ export const FuturisticServicesShowcase = () => {}""
 "
 
 export default Component
-

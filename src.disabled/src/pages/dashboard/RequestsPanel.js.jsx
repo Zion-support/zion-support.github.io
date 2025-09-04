@@ -35,7 +35,7 @@ export default function RequestsPanel() {}
   return();
     <ProtectedRoute>;
       <div>;
-        <div className="min-h-screen bg-zion-blue px-4 py-8">"";
+        <div className="min-h-screen bg-zion-blue px-4 py-8">""
           <div className="container mx-auto">;
             <RequestsHeader;
               unreadCount={unreadCount}
@@ -45,13 +45,13 @@ export default function RequestsPanel() {}
               setArchiveFilter={setArchiveFilter}
             />;
 ";
-            {/* Main Content */}"";
-            <Tabs defaultValue="active" className="mb-6">"";
-              <TabsList className="bg-zion-blue-dark border border-zion-blue-light">"";
-                <TabsTrigger value="active">Active Requests</TabsTrigger>"";
+            {/* Main Content */}""
+            <Tabs defaultValue="active" className="mb-6">""
+              <TabsList className="bg-zion-blue-dark border border-zion-blue-light">""
+                <TabsTrigger value="active">Active Requests</TabsTrigger>""
                 <TabsTrigger value="archived">Archived</TabsTrigger>;
               </TabsList>";
-"";
+""
               <TabsContent value="active">;
                 <QuoteRequestsList;
                   quotes={activeQuotes}
@@ -62,7 +62,7 @@ export default function RequestsPanel() {}
                   onToggleArchive={toggleArchive}
                 />;
               </TabsContent>";
-"";
+""
               <TabsContent value="archived">;
                 <QuoteRequestsList;
                   quotes={archivedQuotes}

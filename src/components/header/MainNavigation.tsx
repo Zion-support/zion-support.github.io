@@ -1,5 +1,5 @@
-
-
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { 
   ChevronDown, 
   Zap, 
@@ -12,8 +12,31 @@ import {
   FileText, 
   HelpCircle, 
   BarChart3,
+Rocket,
+  Server,
+  Cloud,
+  Lock,
+  Workflow,
+  Database,
+  MessageCircle,
+  CheckCircle,
+  ArrowRight,
+  ExternalLink,
+  Handshake,
+  Monitor,
+  GraduationCap,
+  Lightbulb,
+  Code,
+  Activity,
+  Target
+} from 'lucide-react';
 
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
+interface MainNavigationProps {
+  className?: string;
+}
+
+export function MainNavigation({ className = '' }: MainNavigationProps) {
+const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isCompanyOpen, setIsCompanyOpen] = useState(false);
 
@@ -22,8 +45,8 @@ import {
       {/* Home */}
       <Link 
         to="/" 
-
-      >
+className="text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors"
+>
         Home
       </Link>
 
@@ -32,16 +55,33 @@ import {
         <button
           onMouseEnter={() => setIsServicesOpen(true)}
           onMouseLeave={() => setIsServicesOpen(false)}
-
-        >
+className="flex items-center space-x-1 text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors"
+>
           <Zap className="w-4 h-4" />
           <span>Services</span>
           <ChevronDown className="w-3 h-3" />
         </button>
         
         {isServicesOpen && (
-
+<div 
+            onMouseEnter={() => setIsServicesOpen(true)} 
+            onMouseLeave={() => setIsServicesOpen(false)}
+            className="absolute top-full left-0 mt-2 w-96 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50"
+          >
+            <div className="p-4">
+              <div className="grid grid-cols-3 gap-4">
+                <div>
+                  <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
+                    <Rocket className="w-4 h-4 mr-2" />
+                    Micro SAAS
+                  </h4>
+                  <ul className="space-y-2 text-sm">
                     <li>
+                      <Link to="/services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                        All Services
+                      </Link>
+                    </li>
+<li>
                       <Link to="/services/ai-sales-copilot" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
                         AI Sales Copilot
                       </Link>
@@ -68,21 +108,21 @@ import {
                     </li>
                   </ul>
                 </div>
-
-                <div>
+{/* IT Services */}
+<div>
                   <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
                     <Shield className="w-4 h-4 mr-2" />
                     IT Services
                   </h4>
                   <ul className="space-y-2 text-sm">
                     <li>
-
-                        Quantum Neural Network
+<Link to="/services/quantum-neural-network-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+Quantum Neural Network
                       </Link>
                     </li>
                     <li>
-
-                        Autonomous Operations
+<Link to="/services/autonomous-business-operations-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+Autonomous Operations
                       </Link>
                     </li>
                     <li>
@@ -91,26 +131,30 @@ import {
                       </Link>
                     </li>
                     <li>
-
-                      <Link to="/services/cloud-devops" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
-                        Cloud & DevOps
+<Link to="/services/enhanced-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                        Enhanced Services
                       </Link>
                     </li>
-
-                <div>
+                    <li>
+                      <Link to="/services/it-onsite-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                        Onsite Support
+                      </Link>
+                    </li>
+                    <li>
+<div>
                   <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
                     <Brain className="w-4 h-4 mr-2" />
                     AI Solutions
                   </h4>
                   <ul className="space-y-2 text-sm">
                     <li>
-
-                        AI Services
+<Link to="/services/ai-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+AI Services
                       </Link>
                     </li>
                     <li>
-
-                        AI Solutions
+<Link to="/services/ai-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+AI Solutions
                       </Link>
                     </li>
                     <li>
@@ -128,14 +172,17 @@ import {
                         AI Supply Chain
                       </Link>
                     </li>
-
-                      </Link>
+<li>
+                      <Link to="/services/ai-quantum-hybrid-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                        AI Quantum Hybrid
+</Link>
                     </li>
                   </ul>
                 </div>
               </div>
-
-                <Link 
+              
+<div className="mt-4 pt-4 border-t border-zion-purple/20">
+<Link 
                   to="/services" 
                   className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center"
                 >
@@ -144,27 +191,32 @@ import {
                 </Link>
               </div>
             </div>
-
-          </div>
+</div>
         )}
       </div>
 
       {/* Solutions Dropdown */}
       <div className="relative group">
-
-          <span>Solutions</span>
+<button
+          onMouseEnter={() => setIsSolutionsOpen(true)}
+          onMouseLeave={() => setIsSolutionsOpen(false)}
+          className="flex items-center space-x-1 text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors"
+        >
+          <Brain className="w-4 h-4" />
+<span>Solutions</span>
           <ChevronDown className="w-3 h-3" />
         </button>
         
         {isSolutionsOpen && (
-
-            onMouseLeave={() => setIsSolutionsOpen(false)}
+<div 
+            onMouseEnter={() => setIsSolutionsOpen(true)}
+onMouseLeave={() => setIsSolutionsOpen(false)}
             className="absolute top-full left-0 mt-2 w-80 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50"
           >
             <div className="p-4">
               <div className="grid grid-cols-2 gap-4">
-
-                <div>
+{/* Talent */}
+<div>
                   <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
                     <Users className="w-4 h-4 mr-2" />
                     Talent
@@ -192,8 +244,7 @@ import {
                     </li>
                   </ul>
                 </div>
-
-                <div>
+<div>
                   <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
                     <HardDrive className="w-4 h-4 mr-2" />
                     Resources
@@ -232,24 +283,27 @@ import {
                   <TrendingUp className="w-4 h-4 ml-2" />
                 </Link>
               </div>
-
-            </div>
+</div>
           </div>
         )}
       </div>
 
       {/* Company Dropdown */}
       <div className="relative group">
-
-        >
+<button
+          onMouseEnter={() => setIsCompanyOpen(true)}
+          onMouseLeave={() => setIsCompanyOpen(false)}
+          className="flex items-center space-x-1 text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors"
+>
           <Building2 className="w-4 h-4" />
           <span>Company</span>
           <ChevronDown className="w-3 h-3" />
         </button>
         
         {isCompanyOpen && (
-
-            onMouseLeave={() => setIsCompanyOpen(false)}
+<div 
+            onMouseEnter={() => setIsCompanyOpen(true)}
+onMouseLeave={() => setIsCompanyOpen(false)}
             className="absolute top-full left-0 mt-2 w-64 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50"
           >
             <div className="p-4">
@@ -290,13 +344,34 @@ import {
                   </Link>
                 </li>
               </ul>
-
-            </div>
+</div>
           </div>
         )}
       </div>
 
-      >
+{/* Resources */}
+      <Link 
+        to="/resources" 
+        className="text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors"
+>
         Resources
       </Link>
 
+{/* Blog */}
+      <Link 
+        to="/blog" 
+        className="text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors"
+      >
+        Blog
+      </Link>
+
+      {/* Contact */}
+      <Link 
+        to="/contact" 
+        className="text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors"
+      >
+        Contact
+      </Link>
+    </nav>
+  );
+}

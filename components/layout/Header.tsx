@@ -9,7 +9,7 @@
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
+          <Link href="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
               <Brain className="w-5 h-5 text-white" />
 
@@ -99,90 +99,69 @@
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
+          <Link href="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-              <Brain className="w-5 h-5 text-white" />
+              <span className="text-white font-bold text-sm">Z</span>
             </div>
-            <span className="text-xl font-bold text-white">Zion Tech Group</span>
+            <span className="text-white font-bold text-xl">Zion Tech Group</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
-            {navigation.map((item) => (
+          <nav className="hidden md:flex items-center space-x-8">
+            {navigationItems.map((item) => (
               <div key={item.name} className="relative">
-                {item.dropdown ? (
-                  <div
-                    className="flex items-center space-x-1 text-gray-300 hover:text-white transition-colors cursor-pointer"
-                    onMouseEnter={() => setActiveDropdown(item.name)}
-                    onMouseLeave={() => setActiveDropdown(null)}
-                  >
-                    <item.icon className="w-4 h-4" />
-                    <span>{item.name}</span>
-                    <ChevronDown className="w-4 h-4" />
-                  </div>
-                ) : (
-                  <Link
-                    to={item.href}
-                    className={`flex items-center space-x-1 transition-colors ${
-                      isActive(item.href)
-                        ? 'text-blue-400'
-                        : 'text-gray-300 hover:text-white'
-                    }`}
-                  >
-                    <item.icon className="w-4 h-4" />
-                    <span>{item.name}</span>
-                  </Link>
-                )}
+                <Link
+                  href={item.href}
+                  className="flex items-center space-x-1 text-gray-300 hover:text-white transition-colors duration-200"
+                  onMouseEnter={() => item.hasDropdown && setIsServicesOpen(true)}
+                  onMouseLeave={() => item.hasDropdown && setIsServicesOpen(false)}
+                >
+                  <item.icon className="w-4 h-4" />
+                  <span>{item.name}</span>
+                  {item.hasDropdown && <ChevronDown className="w-4 h-4" />}
+                </Link>
 
-                {/* Dropdown Menu */}
-                <AnimatePresence>
-                  {activeDropdown === item.name && item.dropdown && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
-                      transition={{ duration: 0.2 }}
-                      className="absolute top-full left-0 mt-2 w-80 bg-slate-800 rounded-lg shadow-xl border border-slate-700 overflow-hidden"
-                      onMouseEnter={() => setActiveDropdown(item.name)}
-                      onMouseLeave={() => setActiveDropdown(null)}
-                    >
-                      <div className="p-2">
-                        {item.dropdown.map((dropdownItem) => (
+                {/* Services Dropdown */}
+                {item.hasDropdown && (
+                  <AnimatePresence>
+                    {isServicesOpen && (
+                      <motion.div
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -10 }}
+                        className="absolute top-full left-0 mt-2 w-64 bg-slate-800 rounded-lg shadow-lg border border-slate-700 py-2"
+                        onMouseEnter={() => setIsServicesOpen(true)}
+                        onMouseLeave={() => setIsServicesOpen(false)}
+                      >
+                        {serviceCategories.map((category) => (
                           <Link
-                            key={dropdownItem.name}
-                            to={dropdownItem.href}
-                            className="flex items-start space-x-3 p-3 rounded-lg hover:bg-slate-700 transition-colors group"
+                            key={category.name}
+                            href={category.href}
+                            className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-white hover:bg-slate-700 transition-colors duration-200"
                           >
-                            <dropdownItem.icon className="w-5 h-5 text-blue-400 mt-0.5 group-hover:text-blue-300" />
-                            <div>
-                              <div className="text-white font-medium group-hover:text-blue-300">
-                                {dropdownItem.name}
-                              </div>
-                              <div className="text-gray-400 text-sm">
-                                {dropdownItem.description}
-                              </div>
-                            </div>
-                            <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-white ml-auto mt-0.5" />
+                            <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                            <span>{category.name}</span>
                           </Link>
                         ))}
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                )}
               </div>
 
             ))}
           </nav>
 
-          {/* CTA Buttons */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <Button variant="outline" size="sm">
-              <Search className="w-4 h-4 mr-2" />
-              Search
-            </Button>
-            <Button size="sm" className="bg-gradient-to-r from-blue-500 to-purple-600 text-white">
-              Get Started
-            </Button>
+          {/* Contact Info */}
+          <div className="hidden lg:flex items-center space-x-6">
+            <div className="flex items-center space-x-2 text-gray-300">
+              <Phone className="w-4 h-4" />
+              <span className="text-sm">+1 302 464 0950</span>
+            </div>
+            <div className="flex items-center space-x-2 text-gray-300">
+              <Mail className="w-4 h-4" />
+              <span className="text-sm">kleber@ziontechgroup.com</span>
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -266,17 +245,16 @@
 
       {/* Mobile Menu */}
       <AnimatePresence>
-        {isMenuOpen && (
+        {isMobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
 
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="lg:hidden bg-slate-900 border-t border-slate-700"
+            className="md:hidden bg-slate-900 border-t border-slate-700"
           >
             <div className="px-4 py-6 space-y-4">
-              {navigation.map((item) => (
+              {navigationItems.map((item) => (
                 <div key={item.name}>
                   {item.dropdown ? (
                     <div>
@@ -313,6 +291,7 @@
                 </div>
 
               </div>
+</div>
 
               {/* Solutions Dropdown */}
               <div className="relative group">
@@ -392,12 +371,12 @@
 
                 {navigation.map((item) => (
                   <Link
-                    key={item.name}
                     href={item.href}
-                    className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
-                    onClick={() => setIsMenuOpen(false)}
+                    className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-2"
+                    onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    {item.name}
+                    <item.icon className="w-5 h-5" />
+                    <span>{item.name}</span>
                   </Link>
                 ))}
                 

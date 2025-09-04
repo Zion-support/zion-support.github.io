@@ -1,5 +1,21 @@
-
-    const processedData = useMemo(() => {}
+import { useState, useMemo, useCallback } from 'react';'
+import { motion, AnimatePresence } from 'framer-motion';'
+import { ChevronUp, ChevronDown, Search, Filter, Download, Eye, Edit, Trash2, ArrowUpDown } from 'lucide-react';
+import { useVirtualScroll } from "../hooks/useVirtualScroll.jsx";
+;
+export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = '', onRowClick, onSelectionChange, onExport }) => {
+    const { trackEvent } = useAnalytics({        enableTracking: true,
+        enableUserBehaviorTracking: true;
+    });'
+    // State management''
+    const [searchQuery, setSearchQuery] = useState('');
+    const [sortConfig, setSortConfig] = useState(null);
+    const [filters, setFilters] = useState([]);
+    const [selectedItems, setSelectedItems] = useState(new Set());
+    const [currentPage, setCurrentPage] = useState(1);
+    const [showFilters, setShowFilters] = useState(false);
+    // Process data based on search, filters, and sorting;
+const processedData = useMemo(() => {}
 
         let: result = [...data],
         // comment
@@ -832,3 +848,18 @@ y: 0 "","
 ";"
 ;"
 
+const page = i + 1;`
+                return (<button key={page} onClick={() => setCurrentPage(page)} className={`px-3 py-1 text-sm rounded transition-colors ${currentPage === page'
+                        ? 'bg-blue-500 text-white''`
+                        : 'border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-600'}`}>
+                    {page}
+                  </button>) }) }
+
+              <button onClick = { () => setCurrentPage(prev => Math.min (totalPages,
+  prev + 1) ) } disabled={currentPage === totalPages} className="px-3 py-1 text-sm border border-gray - 300 dark:border-gray - 600 rounded hover:bg-gray - 100 dark:hover:bg-gray - 600 disabled:opacity - 50 disabled:cursor - not - allowed transition -colors">                Next
+              </button>
+            </div>
+          </div>
+        </div>)}
+    </div>)};
+'"`

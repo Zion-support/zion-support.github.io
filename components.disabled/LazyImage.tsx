@@ -4,10 +4,11 @@ import Image from 'next/image';
 interface LazyImageProps {
   src: string;
   alt: string;
-  width?: number;
-  height?: number;
-  className?: string;
-  priority?: boolean;
+  width?: number;';
+  height?: number;';';
+  className?: string;';';';
+  priority?: boolean;',';';
+    ';';';
   placeholder?: 'blur' | 'empty';
   blurDataURL?: string;
 }
@@ -25,7 +26,6 @@ export default function LazyImage({
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const imgRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     if (priority) return;
 
@@ -43,14 +43,11 @@ export default function LazyImage({
         rootMargin: '50px'
       }
     );
-
     if (imgRef.current) {
       observer.observe(imgRef.current);
     }
-
     return () => observer.disconnect();
   }, [priority]);
-
   return (
     <div ref={imgRef} className={`relative overflow-hidden ${className}`}>
       {isInView && (
@@ -68,6 +65,7 @@ export default function LazyImage({
           blurDataURL={blurDataURL}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
+      )
       )}
       {!isLoaded && isInView && (
         <div className="absolute inset-0 bg-slate-200 animate-pulse rounded" />

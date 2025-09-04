@@ -49,8 +49,7 @@ const AnalyticsManager: React.FC<AnalyticsManagerProps> = ({
       gtag('config', '${trackingId}', {
         page_title: document.title,
         page_location: window.location.href,
-        send_page_view: true
-      });
+        send_page_view: "true"      "});
     `;
     document.head.appendChild(script2);
 
@@ -74,8 +73,7 @@ const AnalyticsManager: React.FC<AnalyticsManagerProps> = ({
           };
 
           window.gtag('event', 'performance_metrics', {
-            event_category: 'Performance',
-            custom_map: metrics,
+            event_category: 'Performance',"            custom_map: "metrics",
           });
         }
       }
@@ -92,8 +90,7 @@ const AnalyticsManager: React.FC<AnalyticsManagerProps> = ({
     const handleError = (event: ErrorEvent) => {
       if (typeof window.gtag !== 'undefined') {
         window.gtag('event', 'exception', {
-          description: event.message,
-          fatal: false,
+          description: event.message,"          fatal: "false",
           error_file: event.filename,
           error_line: event.lineno,
         });
@@ -103,8 +100,7 @@ const AnalyticsManager: React.FC<AnalyticsManagerProps> = ({
     const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
       if (typeof window.gtag !== 'undefined') {
         window.gtag('event', 'exception', {
-          description: event.reason?.toString() || 'Unhandled Promise Rejection',
-          fatal: false,
+          description: event.reason?.toString() || 'Unhandled Promise Rejection',"          fatal: "false",
         });
       }
     };
@@ -133,24 +129,16 @@ export const trackEvent = (event: AnalyticsEvent) => {
     });
   }
 };
-
-export const trackPageView = (url: string, title: string) => {
+"export const trackPageView = (url: "string", title: string) => {
   if (typeof window.gtag !== 'undefined') {
-    window.gtag('config', process.env.NEXT_PUBLIC_GA_TRACKING_ID || '', {
-      page_title: title,
-      page_location: url,
+    window.gtag('config', process.env.NEXT_PUBLIC_GA_TRACKING_ID || '', {"      page_title: "title","      page_location: "url",
     });
   }
 };
-
-export const trackConversion = (conversionId: string, value?: number, currency?: string) => {
+"export const trackConversion = (conversionId: "string", value?: number, currency?: string) => {
   if (typeof window.gtag !== 'undefined') {
-    window.gtag('event', 'conversion', {
-      send_to: conversionId,
-      value: value,
-      currency: currency,
+    window.gtag('event', 'conversion', {"      send_to: "conversionId","      value: "value","      currency: "currency",
     });
   }
 };
-
-export default AnalyticsManager;
+"export default AnalyticsManager;

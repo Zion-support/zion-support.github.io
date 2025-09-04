@@ -1,10 +1,32 @@
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { MainNavigation } from './header/MainNavigation';
+import { Zap, Search, Sun, Moon, User, Menu, X } from 'lucide-react';
 
+interface HeaderProps {
+  className?: string;
 }
 export function Header() {const router = useRouter()
 }
 export function Header() {
 
-    const handleScroll = () => {
+export function Header({ className = '' }: HeaderProps) {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
+  const [searchQuery, setSearchQuery] = useState('');
+  const location = useLocation();
+
+  useEffect(() => {
+// TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
+const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
 
@@ -128,7 +150,11 @@ export function Header() {
               </button>
             </form>
           </div>
-        )}
+        )
+      )}
+    </div>
+  );
+}
       </div>
 
       {/* Mobile Navigation Overlay */}
@@ -142,8 +168,7 @@ export function Header() {
     </header>
   );
 }
-
-  const router = useRouter()
+const router = useRouter()
 }
   const [mobileMenuOpen, setMobileMenuOpen] = useState()"
   const [searchQuery, setSearchQuery] = useState("")
@@ -371,4 +396,3 @@ export function Header() {
 "
 
 export default Component
-

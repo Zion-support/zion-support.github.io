@@ -22,10 +22,11 @@ const Navigation: React.FC = () => {
       name: 'Services',
       href: '/services',
       dropdown: [
-        { name: 'AI Development', href: '/services/ai-development' },
-        { name: 'Cloud Architecture', href: '/services/cloud-architecture' },
+        { name: 'AI Services', href: '/ai-services' },
+        { name: 'IT Services', href: '/it-services' },
+        { name: 'Micro SaaS', href: '/micro-saas' },
+        { name: 'Cloud Services', href: '/services/cloud-services' },
         { name: 'Cybersecurity', href: '/services/cybersecurity' },
-        { name: 'Data Analytics', href: '/services/data-analytics' },
         { name: 'DevOps', href: '/services/devops' },
       ],
     },
@@ -38,6 +39,8 @@ const Navigation: React.FC = () => {
         { name: 'Digital Transformation', href: '/solutions/digital-transformation' },
       ],
     },
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'Blog', href: '/blog' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
   ];

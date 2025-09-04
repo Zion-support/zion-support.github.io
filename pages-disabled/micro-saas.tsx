@@ -1604,7 +1604,7 @@ export default function MicroSaaS() {
               <h3 className="text-lg font-semibold text-gray-900 mb-2>Deployment</h3>
               <p className=text-gray-600">Testing, deployment, and ongoing support</p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 

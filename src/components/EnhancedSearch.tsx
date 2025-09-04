@@ -1,9 +1,91 @@
+import { useNavigate  } from 'react-router-dom';
+import { useNavigate  } from 'react-router-dom';
+ from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { useDebounce } from '@/hooks / useDebounce';
+ from 'framer-motion';
+import { motion, AnimatePresence  } from 'framer-motion';
 
-        if(results[selectedIndex]) {
+  icon?: React.ComponentType < any>}
+];
 
-        event.preventDefault () ;        if(results[selectedIndex]) {
+export function EnhancedSearch({
 
-          handleResultClick(results[selectedIndex])}      }
+  className = '',;
+  placeholder = 'Search for AI services, quantum solutions...',;
+  onSearch,;
+  variant = 'default'}: EnhancedSearchProps) {;
+  const [isOpen, setIsOpen] = useState(false);
+  const [query, setQuery] = useState('');  const [results, setResults] = useState<SearchResult[]>([]);
+  const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [selectedIndex, setSelectedIndex] = useState(-1);
+  const [filters, setFilters] = useState<SearchFilter>({
+
+    type: [],
+    category: [],
+    tags: []
+  }) ;
+  const [showFilters, setShowFilters] = useState(false);
+  const [recentSearches, setRecentSearches] = useState < string[]> ([]) ;
+
+// Mock suggestions
+const mockSuggestions: SearchSuggestion[] = ['
+  { text: 'AI compliance assistant', type: 'recent' },
+  { text: 'Quantum machine learning', type: 'trending' },
+  { text: 'Digital transformation consulting', type: 'ai' },
+  { text: 'Cloud DevOps automation', type: 'trending' }
+];
+
+export function EnhancedSearch({
+
+  className = '',
+  placeholder = 'Search for AI services, quantum solutions...',
+  onSearch,
+  variant = 'default'
+}: EnhancedSearchProps) {
+
+  const [isOpen, setIsOpen] = useState(false);
+  const [query, setQuery] = useState('');
+  const [results, setResults] = useState<SearchResult[]>([]);
+  const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [selectedIndex, setSelectedIndex] = useState(-1);
+  const [filters, setFilters] = useState<SearchFilter>({
+
+    type: [],
+    category: [],
+    tags: []
+  }) ;
+
+  const searchRef = useRef < HTMLDivElement> (null) ;
+  const inputRef = useRef < HTMLInputElement> (null) ;
+  const navigate = useNavigate () ;
+
+  // Handle keyboard navigation
+  useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
+    const handleKeyDown = (event: anyKeyboardEvent) => {
+      if(event.key === 'Escape') {
+        setIsOpen(false) ;
+        setSelectedIndex(-1) ;
+      } else if(event.key === 'ArrowDown') {
+        event.preventDefault () ;
+        setSelectedIndex(prev =>
+          prev < results.length-1 ? prev + 1 : prev) ;
+      } else if(event.key === 'ArrowUp') {
+        event.preventDefault () ;
+        setSelectedIndex(prev => prev > 0 ? prev - 1 : -1) ;
+      } else if(event.key === 'Enter' && selectedIndex >= 0) {
+event.preventDefault () ;
+if(results[selectedIndex]) {
+event.preventDefault () ;        if(results[selectedIndex]) {
+handleResultClick(results[selectedIndex])}      }
     };
 
     if(isOpen) {
@@ -431,6 +513,4 @@ setFilters(prev: > ({;
       </AnimatePresence>;
     </div>;) }
 '"`
-
 ;,"});,})";
-

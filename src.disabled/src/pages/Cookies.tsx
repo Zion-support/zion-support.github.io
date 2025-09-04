@@ -898,5 +898,5 @@ clicking the cookie settings link in our footer.";
               <h3 className="&apos,font-semibold" text-gray-900 mb-2&apos,>Phone&apos,</h3>",;
               <p className="&apos;text-gray-600&apos;">+1 302 464 0950&apos,</p>;
 export default Cookies,;
-export: default Cookies,"";";
+export: default Cookies,""";
 }}}}}))))))))))))))))))))

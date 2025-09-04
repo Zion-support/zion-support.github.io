@@ -1,122 +1,49 @@
+import {  import { motion, AnimatePresence  } from 'framer-motion';
 
-  useEffect(() => {
-  // TODO: Add dependencies if needed
+export default function Page() {
+> {
 
-  return () => {
-    // Cleanup function
-  };
-}, []);, []);
-    if(settings.sound) {
+  maxNotifications?: number;
+  position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
+  enableSound?: boolean;
+  enableVibration?: boolean;
+  autoDismiss?: boolean;
+  defaultDuration?: number}
 
-      audioRef.current = new Audio('/notification-sound.mp3'); // You can add a custom sound file
-      audioRef.current.volume = 0.3}}, [settings.sound]) ;
-  // Update unread count
-  useEffect(() => {
-  // TODO: Add dependencies if needed
+interface NotificationSettings {
+  sound: boolean;
+  vibration: boolean;
+  autoDismiss: boolean;
+  position: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
+  maxNotifications: number;
+  defaultDuration: number}
 
-  return () => {
-    // Cleanup function
-  };
-}, []);, []);
-    setUnreadCount(notifications.filter (n => !n.read) .length) }, [notifications]) ;
+export const NotificationSystem: React.FC<NotificationSystemProps> = ({
 
-  // Auto - dismiss notifications
-  useEffect(() => {
-  // TODO: Add dependencies if needed
+  maxNotifications = 5,
+  position = 'top-right',
+enableSound:  true,;
+  enableVibration = true,;
+  autoDismiss = true,;
+  defaultDuration = 5000}) => {;
+  const [notifications, setNotifications] = useState<Notification[]>([]);
+  const [settings, setSettings] = useState<NotificationSettings>({
 
-  return () => {
-    // Cleanup function
-  };
-}, []);, []);
-    if(!settings.autoDismiss) return;
-
-    const timeouts: NodeJS.Timeout[] = [];
-
-    notifications.forEach(notification => {
-
-      if (notification.duration !== 0) {
-
-        }, notification.duration || settings.defaultDuration);
-        timeouts.push(timeout)}
-    }) ;
-    return () => {
-      timeouts.forEach(timeout => clearTimeout (timeout) ) }}, [notifications, settings.autoDismiss, settings.defaultDuration]) ;
-
-  // Play notification sound'
-        // // // // // // // // console.warn('Could not play notification sound:', error)}    }
-  }, [settings.sound]) ;
-
-  // Trigger vibration'
-        // // // // // // // // console.warn('Could not trigger vibration:', error)}    }
-  }, [settings.vibration]) ;
-
-  // Add notification'
+    sound: enableSound,
+    vibration: enableVibration,
+    autoDismiss: autoDismiss,
+    position,
+    maxNotifications,
+    defaultDuration
+  }) ;
+  const [showSettings, setShowSettings] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [unreadCount, setUnreadCount] = useState(0);
   
-;
-;
-
-`}-${Math.random().toString(36).substr(2, 9)}`,;
-      timestamp: new Date(),;
-      read: false,;
-      duration: notification.duration ?? settings.defaultDuration};
-
-    setNotifications(prev = > {;
-      
-      return updated.slice (0, settings.maxNotifications) }) ;
-    // Play sound and vibrate
-    playSound () ;
-    triggerVibration () }, [settings.maxNotifications, settings.defaultDuration, playSound, triggerVibration]) ;
-
-  // Dismiss notification
-  
-    setNotifications(prev => prev.filter (n => n.id !== id) ) }, []) ;
-
-  // Mark notification as read
-  
-  }, []);
-
-  // Mark all as read
-  
-    setNotifications(prev => prev.map (n => ({ ...n, read: true }) ) ) }, []) ;
-
-  // Clear all notifications
-  
-    setNotifications([]) }, []) ;
-
-  // Get notification icon
-
-    switch(type) {
-
-      case 'success':'`
-        return <CheckCircle {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-green-600' : 'text-green-500'}`}  />;
-      case 'warning':'`
-        return <AlertTriangle {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-yellow-600' : 'text-yellow-500'}`}  />;
-      case 'error':'`
-        return <AlertTriangle {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-red-600' : 'text-red-500'}`}  />;
-      case 'info':'`
-        return <Info {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-blue-600' : 'text-blue-500'}`}  />;
-      case 'achievement':'`
-        return <Star {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-purple-600' : 'text-purple-500'}`}  />;
-      default:"
-        return <Bell {...iconProps} className="w-5 h-5 text-zion-slate"  />}};
-  // Get notification styles'
-        return baseStyles + 'border-zion-slate bg-zion-slate/10'}
-  };
-
-  // Get position classes
-  
-    switch(settings.position) {;
-      case 'top-left':;
-        return 'top-4 left-4';
-      case 'top-right':'
-        return 'top-4 right-4';
-      case 'bottom-left':'
-
-      default:'
-
-  // Initialize audio for notification sounds      default:'
-
-        return 'top-4 right-4'}
+// Initialize audio for notification sounds
+default:'
+// Initialize audio for notification sounds      default:'
+return 'top-4 right-4'}
   };
 
   // Update settings
@@ -442,6 +369,4 @@ export
   }
 };
 '"`
-
 ;,"});,})";
-
