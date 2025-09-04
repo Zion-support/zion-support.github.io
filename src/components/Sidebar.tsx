@@ -9,6 +9,7 @@ export function Sidebar() {
   const navigationItems = [
     { name: 'Home', href: '/', icon: Home },
     { name: 'Services', href: '/services', icon: Settings },
+    { name: 'New Services 2025', href: '/new-services-2025', icon: Zap },
     { name: 'AI Services', href: '/ai-services', icon: Zap },
     { name: 'IT Services', href: '/it-services', icon: Settings },
     { name: 'Micro SaaS', href: '/micro-saas', icon: Zap },

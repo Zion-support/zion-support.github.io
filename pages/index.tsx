@@ -1,9 +1,7 @@
 
 import React, { memo } from 'react';
 import Link from 'next/link';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOHead from '../components/seo/SEOHead';
+import Head from 'next/head';
 import { ArrowRight, CheckCircle, Star, Phone, Mail, MapPin, Brain, Server, Smartphone, Globe, Zap, Shield, Users } from 'lucide-react';
 
 const Home = memo(() => {
@@ -89,14 +87,13 @@ const Home = memo(() => {
 
   return (
     <>
-      <SEOHead
-        title="Zion Tech Group - Leading Technology Solutions Provider"
-        description="Transform your business with cutting-edge AI services, IT solutions, and micro SaaS development. Expert technology consulting and implementation."
-        keywords="AI services, IT solutions, micro SaaS, technology consulting, digital transformation, cloud services, cybersecurity"
-        structuredData={structuredData as unknown as Record<string, unknown>}
-      />
-
-      <Navigation />
+      <Head>
+        <title>Zion Tech Group - Leading Technology Solutions Provider</title>
+        <meta name="description" content="Transform your business with cutting-edge AI services, IT solutions, and micro SaaS development. Expert technology consulting and implementation." />
+        <meta name="keywords" content="AI services, IT solutions, micro SaaS, technology consulting, digital transformation, cloud services, cybersecurity" />
+        <link rel="canonical" href="https://ziontechgroup.com" />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
+      </Head>
 
       <main className="min-h-screen bg-white">
         <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20" role="banner" aria-labelledby="hero-heading">
@@ -222,9 +219,46 @@ const Home = memo(() => {
         </section>
       </main>
 
-      <Footer />
+      <footer className="bg-gray-900 text-white py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+              <h3 className="text-xl font-bold mb-4">Zion Tech Group</h3>
+              <p className="text-gray-300">Leading provider of AI, IT, and Micro SaaS solutions.</p>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Services</h4>
+              <ul className="space-y-2 text-gray-300">
+                <li><Link href="/ai-services">AI Services</Link></li>
+                <li><Link href="/it-services">IT Services</Link></li>
+                <li><Link href="/micro-saas">Micro SaaS</Link></li>
+                <li><Link href="/new-services-2025">New Services 2025</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Company</h4>
+              <ul className="space-y-2 text-gray-300">
+                <li><Link href="/about">About</Link></li>
+                <li><Link href="/contact">Contact</Link></li>
+                <li><Link href="/careers">Careers</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Contact</h4>
+              <div className="space-y-2 text-gray-300">
+                <p>+1 302 464 0950</p>
+                <p>kleber@ziontechgroup.com</p>
+                <p>364 E Main St STE 1008<br />Middletown, DE 19709</p>
+              </div>
+            </div>
+          </div>
+          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+            <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
     </>
   );
-}
+});
 
 export default Home;
