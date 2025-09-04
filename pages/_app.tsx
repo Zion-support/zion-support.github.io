@@ -25,49 +25,130 @@ function Header(): any {
           WebkitTextFillColor: 'transparent',
           backgroundClip: 'text',
           textDecoration: 'none'
-        }}>Zion Tech Group        </Link>
+        }}>Zion Tech Group</Link>
         
         {/* Desktop Navigation */}
-        <div className="hidden md:flex gap-4 flex-wrap items-center">
-          <Link href="/" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Home</Link>
-          <Link href="/services" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Services</Link>
-          <Link href="/services-overview" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Overview</Link>
-          <Link href="/services-catalog" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Catalog</Link>
-          <Link href="/services-comparison" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Compare</Link>
-          <Link href="/enterprise" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Enterprise</Link>
-          <Link href="/docs" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Docs</Link>
-          <Link href="/pricing" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Pricing</Link>
+        <div style={{ 
+          display: 'flex', gap: 4, flexWrap: 'wrap', alignItems: 'center'
+        }} className="hidden md:flex">
+          <Link href="/" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }}>Home</Link>
+          <Link href="/services" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }}>All Services</Link>
+          <Link href="/micro-saas" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }}>Micro SaaS</Link>
+          <Link href="/ai-services" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }}>AI Services</Link>
+          <Link href="/it-services" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }}>IT Services</Link>
+          <Link href="/services-catalog" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }}>Catalog</Link>
+          <Link href="/services-overview" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }}>Overview</Link>
+          <Link href="/services-comparison" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }}>Compare</Link>
+          <Link href="/pricing" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }}>Pricing</Link>
+          <Link href="/about" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }}>About</Link>
           <Link href="/contact" style={{ 
-            background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
-            color: 'white', padding: '8px 16px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem', fontWeight: 600
+            fontWeight: 600, background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', 
+            color: 'white', padding: '8px 16px', borderRadius: 8,
+            transition: 'all 0.2s ease', textDecoration: 'none'
           }}>Contact</Link>
         </div>
 
-        {/* Mobile Menu Button */}
-        <button 
-          className="md:hidden bg-none border-none text-white text-2xl cursor-pointer"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label="Toggle mobile menu"
-          aria-expanded={mobileMenuOpen}
-        >
-          ☰
-        </button>
+        {/* Mobile Navigation */}
+        <div style={{
+          display: 'flex', gap: 4, alignItems: 'center'
+        }} className="md:hidden">
+          <Link href="/contact" style={{ 
+            fontWeight: 600, background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', 
+            color: 'white', padding: '6px 12px', borderRadius: 6,
+            transition: 'all 0.2s ease', textDecoration: 'none', fontSize: '0.9rem'
+          }}>Contact</Link>
+          <button 
+            style={{
+              background: 'none', border: 'none', color: 'white', fontSize: '1.2rem',
+              cursor: 'pointer', padding: '6px', borderRadius: 4
+            }}
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle mobile menu"
+            aria-expanded={mobileMenuOpen}
+          >
+            ☰
+          </button>
+        </div>
       </nav>
       
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-slate-900/98 border-t border-white/10 p-5">
-          <div className="flex flex-col gap-3 max-w-7xl mx-auto">
-            <Link href="/" className="text-white py-3 text-decoration-none border-b border-white/10 hover:text-blue-300 transition-colors" onClick={() => setMobileMenuOpen(false)}>Home</Link>
-            <Link href="/services" className="text-white py-3 text-decoration-none border-b border-white/10 hover:text-blue-300 transition-colors" onClick={() => setMobileMenuOpen(false)}>Services</Link>
-            <Link href="/services-overview" className="text-white py-3 text-decoration-none border-b border-white/10 hover:text-blue-300 transition-colors" onClick={() => setMobileMenuOpen(false)}>Overview</Link>
-            <Link href="/services-catalog" className="text-white py-3 text-decoration-none border-b border-white/10 hover:text-blue-300 transition-colors" onClick={() => setMobileMenuOpen(false)}>Catalog</Link>
-            <Link href="/services-comparison" className="text-white py-3 text-decoration-none border-b border-white/10 hover:text-blue-300 transition-colors" onClick={() => setMobileMenuOpen(false)}>Compare</Link>
-            <Link href="/enterprise" className="text-white py-3 text-decoration-none border-b border-white/10 hover:text-blue-300 transition-colors" onClick={() => setMobileMenuOpen(false)}>Enterprise</Link>
-            <Link href="/docs" className="text-white py-3 text-decoration-none border-b border-white/10 hover:text-blue-300 transition-colors" onClick={() => setMobileMenuOpen(false)}>Docs</Link>
-            <Link href="/pricing" className="text-white py-3 text-decoration-none border-b border-white/10 hover:text-blue-300 transition-colors" onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
-            <Link href="/contact" className="bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 px-4 text-decoration-none rounded text-center font-semibold mt-2 hover:from-blue-600 hover:to-purple-600 transition-all" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
-          </div>
+        <div style={{
+          position: 'absolute', top: '100%', left: 0, right: 0, 
+          background: 'rgba(11, 18, 32, 0.98)', backdropFilter: 'blur(10px)',
+          borderBottom: '1px solid rgba(255,255,255,0.1)',
+          padding: '20px', display: 'flex', flexDirection: 'column', gap: '12px'
+        }}>
+          <Link href="/" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }} onClick={() => setMobileMenuOpen(false)}>Home</Link>
+          <Link href="/services" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }} onClick={() => setMobileMenuOpen(false)}>All Services</Link>
+          <Link href="/micro-saas" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }} onClick={() => setMobileMenuOpen(false)}>Micro SaaS</Link>
+          <Link href="/ai-services" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }} onClick={() => setMobileMenuOpen(false)}>AI Services</Link>
+          <Link href="/it-services" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }} onClick={() => setMobileMenuOpen(false)}>IT Services</Link>
+          <Link href="/services-catalog" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }} onClick={() => setMobileMenuOpen(false)}>Catalog</Link>
+          <Link href="/services-overview" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }} onClick={() => setMobileMenuOpen(false)}>Overview</Link>
+          <Link href="/services-comparison" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }} onClick={() => setMobileMenuOpen(false)}>Compare</Link>
+          <Link href="/pricing" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }} onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
+          <Link href="/about" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }} onClick={() => setMobileMenuOpen(false)}>About</Link>
         </div>
       )}
     </header>
@@ -78,30 +159,26 @@ function Footer(): any {
   return (
     <footer style={{ 
       background: 'linear-gradient(135deg, #0b1220, #1e293b)', 
-      color: 'white', 
-      marginTop: 60, 
+      color: 'white', marginTop: 60, 
       borderTop: '1px solid rgba(255,255,255,0.1)' 
     }}>
       <div style={{ 
-        maxWidth: 1400, 
-        margin: '0 auto', 
-        padding: '40px 20px',
-        display: 'grid', 
-        gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', 
+        maxWidth: 1400, margin: '0 auto', padding: '40px 20px',
+        display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', 
         gap: 32 
       }}>
         {/* Company Info */}
         <div style={{ display: 'grid', gap: 12 }}>
           <div style={{ 
-            fontWeight: 800, 
-            fontSize: '1.25rem',
+            fontWeight: 800, fontSize: '1.25rem',
             background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text'
           }}>Zion Tech Group</div>
           <p style={{ opacity: 0.8, lineHeight: 1.6 }}>
-            Transforming businesses through innovative AI, quantum computing, and cutting-edge technology solutions.
+            Leading provider of innovative micro SaaS products, AI services, and IT solutions. 
+            Empowering businesses with cutting-edge technology and digital transformation.
           </p>
           <div style={{ display: 'grid', gap: 6, fontSize: '0.9rem' }}>
             <div>📞 <a href="tel:+13024640950" style={{ color: '#93c5fd', textDecoration: 'none' }}>+1 302 464 0950</a></div>
@@ -115,7 +192,6 @@ function Footer(): any {
         <div style={{ display: 'grid', gap: 12 }}>
           <h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>Our Services</h3>
           <div style={{ display: 'grid', gap: 8 }}>
-            <Link href="/solutions" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Solutions</Link>
             <Link href="/services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>All Services</Link>
             <Link href="/micro-saas" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Micro SaaS Products</Link>
             <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>AI Services</Link>
@@ -134,14 +210,14 @@ function Footer(): any {
         <div style={{ display: 'grid', gap: 12 }}>
           <h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>Solutions</h3>
           <div style={{ display: 'grid', gap: 8 }}>
-            <Link href="/solutions" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Digital Transformation</Link>
-            <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>AI & Machine Learning</Link>
-            <Link href="/cybersecurity" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Cybersecurity</Link>
-            <Link href="/cloud-devops" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Cloud & DevOps</Link>
-            <Link href="/quantum-computing" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Quantum Computing</Link>
-            <Link href="/green-it" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Green IT</Link>
-            <Link href="/research-development" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Research & Development</Link>
-            <Link href="/request-quote" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Request Quote</Link>
+            <Link href="/micro-saas" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Cloud Cost Optimization</Link>
+            <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>AI Automation</Link>
+            <Link href="/it-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Digital Transformation</Link>
+            <Link href="/micro-saas" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Process Automation</Link>
+            <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Predictive Analytics</Link>
+            <Link href="/it-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Cybersecurity</Link>
+            <Link href="/micro-saas" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Content Creation</Link>
+            <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Customer Support</Link>
           </div>
         </div>
 
@@ -151,14 +227,11 @@ function Footer(): any {
           <div style={{ display: 'grid', gap: 8 }}>
             <Link href="/" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Home</Link>
             <Link href="/about" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>About Us</Link>
-            <Link href="/careers" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Careers</Link>
-            <Link href="/partners" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Partners</Link>
-            <Link href="/news" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>News</Link>
-            <Link href="/blog" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Blog</Link>
             <Link href="/contact" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Contact Us</Link>
             <Link href="/faq" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>FAQ</Link>
             <Link href="/privacy" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Privacy Policy</Link>
             <Link href="/terms" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Terms of Service</Link>
+            <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Main Website</a>
           </div>
         </div>
 
@@ -171,30 +244,18 @@ function Footer(): any {
           <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
             <Link href="/contact" style={{ 
               background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
-              color: 'white', 
-              padding: '10px 16px', 
-              borderRadius: 8,
-              textAlign: 'center', 
-              textDecoration: 'none', 
-              fontWeight: 600
+              color: 'white', padding: '10px 16px', borderRadius: 8,
+              textAlign: 'center', textDecoration: 'none', fontWeight: 600
             }}>Request Quote</Link>
             <a href="tel:+13024640950" style={{ 
-              background: 'rgba(255,255,255,0.1)', 
-              color: 'white', 
-              padding: '10px 16px', 
-              borderRadius: 8,
-              textAlign: 'center', 
-              textDecoration: 'none', 
-              fontWeight: 600
+              background: 'rgba(255,255,255,0.1)', color: 'white', 
+              padding: '10px 16px', borderRadius: 8,
+              textAlign: 'center', textDecoration: 'none', fontWeight: 600
             }}>Call Now</a>
             <a href="mailto:kleber@ziontechgroup.com" style={{ 
-              background: 'rgba(255,255,255,0.1)', 
-              color: 'white', 
-              padding: '10px 16px', 
-              borderRadius: 8,
-              textAlign: 'center', 
-              textDecoration: 'none', 
-              fontWeight: 600
+              background: 'rgba(255,255,255,0.1)', color: 'white', 
+              padding: '10px 16px', borderRadius: 8,
+              textAlign: 'center', textDecoration: 'none', fontWeight: 600
             }}>Email Us</a>
           </div>
         </div>
@@ -202,8 +263,7 @@ function Footer(): any {
       
       <div style={{ 
         borderTop: '1px solid rgba(255,255,255,0.1)', 
-        padding: '20px', 
-        textAlign: 'center' 
+        padding: '20px', textAlign: 'center' 
       }}>
         <small style={{ opacity: 0.7 }}>
           © {new Date().getFullYear()} Zion Tech Group. All rights reserved. | 
@@ -218,12 +278,11 @@ function Footer(): any {
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <ErrorBoundary>
-      <PerformanceOptimizer>
-        <PerformanceMonitor />
-        <Header />
-        <Component {...pageProps} />
-        <Footer />
-      </PerformanceOptimizer>
+      <PerformanceMonitor />
+      <PerformanceOptimizer />
+      <Header />
+      <Component {...pageProps} />
+      <Footer />
     </ErrorBoundary>
   );
 }

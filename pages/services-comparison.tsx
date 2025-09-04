@@ -1,273 +1,233 @@
-import Head from 'next/head';
-import { Check, X, Star, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
-import { useState } from 'react';
+import Head from 'next/head';
 
 export default function ServicesComparison() {
-  const [selectedServices, setSelectedServices] = useState<string[]>([]);
-
-  const services = [
-    {
-      id: 'cloud-cost-guard',
-      name: 'Cloud Cost Guard',
-      category: 'FinOps',
-      description: 'Anomaly detection and cost optimization for cloud infrastructure',
-      pricing: '$299–$1,499/month',
-      features: {
-        'Anomaly Detection': true,
-        'Cost Optimization': true,
-        'Budget Alerts': true,
-        'Multi-Cloud Support': true,
-        'Real-time Monitoring': true,
-        'Custom Dashboards': true,
-        'API Integration': true,
-        '24/7 Support': true
-      },
-      pros: ['Immediate cost savings', 'Easy setup', 'Multi-cloud support'],
-      cons: ['Requires cloud expertise', 'Monthly subscription']
-    },
-    {
-      id: 'llm-evaluation',
-      name: 'LLM Evaluation Suite',
-      category: 'AI Safety',
-      description: 'Comprehensive evaluation and safety testing for large language models',
-      pricing: '$799–$3,500/month',
-      features: {
-        'Anomaly Detection': false,
-        'Cost Optimization': false,
-        'Budget Alerts': false,
-        'Multi-Cloud Support': false,
-        'Real-time Monitoring': true,
-        'Custom Dashboards': true,
-        'API Integration': true,
-        '24/7 Support': true,
-        'Bias Detection': true,
-        'Safety Testing': true,
-        'Prompt Optimization': true,
-        'Compliance Monitoring': true
-      },
-      pros: ['Comprehensive safety testing', 'Regulatory compliance', 'Advanced analytics'],
-      cons: ['Higher cost', 'Complex setup', 'Requires AI expertise']
-    },
-    {
-      id: 'customer-feedback',
-      name: 'Customer Feedback App',
-      category: 'Customer Experience',
-      description: 'Automated feedback collection and sentiment analysis platform',
-      pricing: '$149–$799/month',
-      features: {
-        'Anomaly Detection': false,
-        'Cost Optimization': false,
-        'Budget Alerts': false,
-        'Multi-Cloud Support': false,
-        'Real-time Monitoring': true,
-        'Custom Dashboards': true,
-        'API Integration': true,
-        '24/7 Support': false,
-        'Survey Builder': true,
-        'Sentiment Analysis': true,
-        'Auto-Routing': true,
-        'Analytics Dashboard': true
-      },
-      pros: ['Easy to use', 'Quick setup', 'Affordable pricing'],
-      cons: ['Limited customization', 'Basic analytics', 'No 24/7 support']
-    },
-    {
-      id: 'api-rate-limiter',
-      name: 'API Rate Limiter',
-      category: 'API Management',
-      description: 'Intelligent rate limiting and API monetization platform',
-      pricing: '$199–$999/month',
-      features: {
-        'Anomaly Detection': true,
-        'Cost Optimization': false,
-        'Budget Alerts': false,
-        'Multi-Cloud Support': true,
-        'Real-time Monitoring': true,
-        'Custom Dashboards': true,
-        'API Integration': true,
-        '24/7 Support': true,
-        'Rate Limiting': true,
-        'Usage Analytics': true,
-        'Monetization': true,
-        'Security Monitoring': true
-      },
-      pros: ['High performance', 'Developer-friendly', 'Comprehensive analytics'],
-      cons: ['Technical complexity', 'Requires API knowledge']
-    }
-  ];
-
-  const toggleService = (serviceId: string) => {
-    setSelectedServices(prev => 
-      prev.includes(serviceId) 
-        ? prev.filter(id => id !== serviceId)
-        : [...prev, serviceId]
-    );
+  const contact = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    site: 'https://ziontechgroup.com'
   };
 
-  const selectedServicesData = services.filter(service => selectedServices.includes(service.id));
+  const serviceCategories = [
+    {
+      name: 'Micro SaaS Products',
+      count: '150+',
+      description: 'Focused software solutions for specific business needs',
+      features: ['Quick deployment', 'Scalable architecture', 'API integrations', 'Custom branding'],
+      pricing: 'Starting at $29/month',
+      href: '/micro-saas',
+      color: 'blue'
+    },
+    {
+      name: 'AI Services',
+      count: '90+',
+      description: 'Advanced artificial intelligence and automation solutions',
+      features: ['Machine learning models', 'Natural language processing', 'Computer vision', 'Predictive analytics'],
+      pricing: 'Starting at $99/month',
+      href: '/ai-services',
+      color: 'purple'
+    },
+    {
+      name: 'IT Solutions',
+      count: '100+',
+      description: 'Comprehensive IT services and infrastructure solutions',
+      features: ['Cloud management', 'Security solutions', 'DevOps automation', 'Data analytics'],
+      pricing: 'Starting at $199/month',
+      href: '/it-services',
+      color: 'green'
+    }
+  ];
 
   return (
     <>
       <Head>
         <title>Services Comparison - Zion Tech Group</title>
-        <meta name="description" content="Compare our technology services side-by-side to find the perfect solution for your business needs." />
-        <meta name="keywords" content="services comparison, technology solutions, AI services, micro SaaS comparison" />
-        <link rel="canonical" href="https://ziontechgroup.com/services-comparison" />
+        <meta name="description" content="Compare Zion Tech Group's service categories: Micro SaaS Products, AI Services, and IT Solutions. Find the right technology solutions for your business needs." />
+        <meta name="keywords" content="services comparison, micro SaaS vs AI services, IT solutions comparison, technology services, business solutions" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href={`${contact.site}/services-comparison`} />
         <meta property="og:title" content="Services Comparison - Zion Tech Group" />
-        <meta property="og:description" content="Compare our technology services side-by-side to find the perfect solution for your business needs." />
-        <meta property="og:url" content="https://ziontechgroup.com/services-comparison" />
+        <meta property="og:description" content="Compare Zion Tech Group's service categories: Micro SaaS Products, AI Services, and IT Solutions. Find the right technology solutions for your business needs." />
+        <meta property="og:url" content={`${contact.site}/services-comparison`} />
         <meta property="og:type" content="website" />
       </Head>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-        <div className="container mx-auto px-4 py-20">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Services <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Comparison</span>
+      
+      <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white" role="main">
+        {/* Hero Section */}
+        <section className="py-20 px-4 text-center">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
+              Services Comparison
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Compare our services side-by-side to find the perfect solution for your business needs.
+            <p className="text-xl text-slate-300 mb-8">
+              Choose the Right Technology Solutions for Your Business
+            </p>
+            <p className="text-lg text-slate-400 mb-12 max-w-3xl mx-auto">
+              Compare our three main service categories to find the perfect fit for your business needs and budget.
             </p>
           </div>
+        </section>
 
-          {/* Service Selection */}
-          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 mb-12">
-            <h2 className="text-2xl font-bold text-white mb-6">Select Services to Compare</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-              {services.map((service) => (
-                <button
-                  key={service.id}
-                  onClick={() => toggleService(service.id)}
-                  className={`p-4 rounded-lg border-2 transition-all duration-300 text-left ${
-                    selectedServices.includes(service.id)
-                      ? 'border-blue-400 bg-blue-500/20'
-                      : 'border-white/20 bg-white/5 hover:border-white/40'
-                  }`}
-                >
-                  <h3 className="font-semibold text-white mb-2">{service.name}</h3>
-                  <p className="text-sm text-gray-300 mb-2">{service.description}</p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-blue-400 font-medium">{service.pricing}</span>
-                    <div className="flex items-center gap-1">
-                      <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                      <span className="text-white text-sm">4.8</span>
-                    </div>
-                  </div>
-                </button>
-              ))}
+        {/* Comparison Table */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="overflow-x-auto">
+              <table className="w-full bg-slate-900/60 rounded-xl border border-white/10 overflow-hidden">
+                <thead>
+                  <tr className="border-b border-white/10">
+                    <th className="p-6 text-left font-semibold text-slate-300">Features</th>
+                    {serviceCategories.map((service) => (
+                      <th key={service.name} className="p-6 text-center">
+                        <div className={`text-${service.color}-400 font-bold text-xl mb-2`}>
+                          {service.name}
+                        </div>
+                        <div className="text-slate-400 text-sm">{service.count} Services</div>
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-white/10">
+                    <td className="p-6 font-semibold text-slate-300">Description</td>
+                    {serviceCategories.map((service) => (
+                      <td key={service.name} className="p-6 text-center text-slate-400">
+                        {service.description}
+                      </td>
+                    ))}
+                  </tr>
+                  <tr className="border-b border-white/10">
+                    <td className="p-6 font-semibold text-slate-300">Key Features</td>
+                    {serviceCategories.map((service) => (
+                      <td key={service.name} className="p-6">
+                        <ul className="text-slate-400 space-y-2">
+                          {service.features.map((feature, index) => (
+                            <li key={index} className="flex items-center">
+                              <span className="text-green-400 mr-2">✓</span>
+                              {feature}
+                            </li>
+                          ))}
+                        </ul>
+                      </td>
+                    ))}
+                  </tr>
+                  <tr className="border-b border-white/10">
+                    <td className="p-6 font-semibold text-slate-300">Starting Price</td>
+                    {serviceCategories.map((service) => (
+                      <td key={service.name} className="p-6 text-center">
+                        <span className={`text-${service.color}-400 font-bold text-lg`}>
+                          {service.pricing}
+                        </span>
+                      </td>
+                    ))}
+                  </tr>
+                  <tr>
+                    <td className="p-6 font-semibold text-slate-300">Action</td>
+                    {serviceCategories.map((service) => (
+                      <td key={service.name} className="p-6 text-center">
+                        <Link
+                          href={service.href}
+                          className={`inline-block px-6 py-2 bg-${service.color}-600 hover:bg-${service.color}-700 rounded-lg font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-${service.color}-500 focus:ring-offset-2 focus:ring-offset-slate-900`}
+                          aria-label={`Learn more about ${service.name}`}
+                        >
+                          Learn More
+                        </Link>
+                      </td>
+                    ))}
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
+        </section>
 
-          {/* Comparison Table */}
-          {selectedServices.length > 0 && (
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 mb-12 overflow-x-auto">
-              <h2 className="text-2xl font-bold text-white mb-6">Feature Comparison</h2>
-              
-              <div className="min-w-full">
-                <table className="w-full">
-                  <thead>
-                    <tr className="border-b border-white/20">
-                      <th className="text-left py-4 px-4 text-white font-semibold">Features</th>
-                      {selectedServicesData.map((service) => (
-                        <th key={service.id} className="text-center py-4 px-4 text-white font-semibold min-w-[200px]">
-                          <div>
-                            <div className="font-bold">{service.name}</div>
-                            <div className="text-sm text-gray-300">{service.pricing}</div>
-                          </div>
-                        </th>
-                      ))}
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {Object.keys(services[0].features).map((feature) => (
-                      <tr key={feature} className="border-b border-white/10">
-                        <td className="py-4 px-4 text-white font-medium">{feature}</td>
-                        {selectedServicesData.map((service) => (
-                          <td key={service.id} className="text-center py-4 px-4">
-                            {service.features[feature as keyof typeof service.features] ? (
-                              <Check className="w-6 h-6 text-green-400 mx-auto" />
-                            ) : (
-                              <X className="w-6 h-6 text-red-400 mx-auto" />
-                            )}
-                          </td>
-                        ))}
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+        {/* Use Cases */}
+        <section className="py-16 px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-center mb-12">When to Choose Each Service</h2>
+            
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10">
+                <h3 className="text-2xl font-bold mb-4 text-blue-400">Micro SaaS Products</h3>
+                <p className="text-slate-300 mb-6">
+                  Perfect for businesses looking for:
+                </p>
+                <ul className="text-slate-400 space-y-2 mb-6">
+                  <li>• Quick solutions to specific problems</li>
+                  <li>• Cost-effective software tools</li>
+                  <li>• Easy-to-use applications</li>
+                  <li>• Rapid deployment and setup</li>
+                  <li>• Minimal maintenance requirements</li>
+                </ul>
+                <div className="text-sm text-slate-500">
+                  <strong>Best for:</strong> Small to medium businesses, startups, individual professionals
+                </div>
+              </div>
+
+              <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10">
+                <h3 className="text-2xl font-bold mb-4 text-purple-400">AI Services</h3>
+                <p className="text-slate-300 mb-6">
+                  Ideal for organizations needing:
+                </p>
+                <ul className="text-slate-400 space-y-2 mb-6">
+                  <li>• Intelligent automation</li>
+                  <li>• Data-driven insights</li>
+                  <li>• Advanced analytics</li>
+                  <li>• Machine learning capabilities</li>
+                  <li>• Competitive advantage through AI</li>
+                </ul>
+                <div className="text-sm text-slate-500">
+                  <strong>Best for:</strong> Data-driven companies, enterprises, tech-forward organizations
+                </div>
+              </div>
+
+              <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10">
+                <h3 className="text-2xl font-bold mb-4 text-green-400">IT Solutions</h3>
+                <p className="text-slate-300 mb-6">
+                  Essential for businesses requiring:
+                </p>
+                <ul className="text-slate-400 space-y-2 mb-6">
+                  <li>• Robust infrastructure</li>
+                  <li>• Enterprise-grade security</li>
+                  <li>• Scalable systems</li>
+                  <li>• 24/7 support and monitoring</li>
+                  <li>• Compliance and governance</li>
+                </ul>
+                <div className="text-sm text-slate-500">
+                  <strong>Best for:</strong> Large enterprises, regulated industries, mission-critical operations
+                </div>
               </div>
             </div>
-          )}
+          </div>
+        </section>
 
-          {/* Detailed Comparison */}
-          {selectedServices.length > 0 && (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-              {selectedServicesData.map((service) => (
-                <div key={service.id} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
-                  <div className="mb-4">
-                    <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
-                    <span className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm">
-                      {service.category}
-                    </span>
-                  </div>
-
-                  <p className="text-gray-300 mb-6">{service.description}</p>
-
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-3">Pros</h4>
-                    <ul className="space-y-2">
-                      {service.pros.map((pro, index) => (
-                        <li key={index} className="flex items-center gap-2 text-green-300">
-                          <Check className="w-4 h-4" />
-                          <span className="text-sm">{pro}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-3">Cons</h4>
-                    <ul className="space-y-2">
-                      {service.cons.map((con, index) => (
-                        <li key={index} className="flex items-center gap-2 text-red-300">
-                          <X className="w-4 h-4" />
-                          <span className="text-sm">{con}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <Link 
-                    href="/contact" 
-                    className="inline-flex items-center justify-center w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300"
-                  >
-                    Get Started
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Link>
-                </div>
-              ))}
-            </div>
-          )}
-
-          {/* CTA Section */}
-          <div className="text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">Need Help Choosing?</h2>
-            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Our experts can help you select the right combination of services for your specific needs and budget.
+        {/* CTA Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-6">Still Not Sure Which Service is Right for You?</h2>
+            <p className="text-xl text-slate-300 mb-8">
+              Our experts can help you choose the perfect combination of services for your specific needs.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300">
-                Get Expert Consultation
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link 
+                href="/contact" 
+                className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-900"
+                aria-label="Get a free consultation"
+              >
+                Get Free Consultation
               </Link>
-              <Link href="/services-catalog" className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-                Browse All Services
+              <Link 
+                href="/services-overview" 
+                className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-900"
+                aria-label="View services overview"
+              >
+                View Services Overview
               </Link>
             </div>
           </div>
-        </div>
-      </div>
+        </section>
+      </main>
     </>
   );
 }
