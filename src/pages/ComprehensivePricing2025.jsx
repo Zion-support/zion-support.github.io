@@ -617,7 +617,7 @@ export default function ComprehensivePricing2025() {""',';';
             </p>
           </div>
 "
-          <div className="grid grid-cols-1 md:grid-cols-2 l,
+          <div className="grid grid-cols-1 md:grid-cols-2 l
     g:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {addOns.map((addon, index) => ("
               <div key={index} className="bg-zion-blue-dark/50 border border-zion-purple/20 rounded-xl p-6 hover:border-zion-purple/40 transition-all duration-300">"
@@ -823,8 +823,8 @@ export default function ComprehensivePricing2025() {""',';';
               </Link>
               <Link"
                 to="/services""
-                className="inline-flex items-center px-8 py-4 border-2 border-zion-purple/30 text-zion-cyan font-semibold rounded-lg hove,
-    r:bg-zion-purple/10 hove,
+                className="inline-flex items-center px-8 py-4 border-2 border-zion-purple/30 text-zion-cyan font-semibold rounded-lg hove
+    r:bg-zion-purple/10 hove
     r:border-zion-purple/50 transition-all duration-300"
               >
       {/* CTA Section */}""

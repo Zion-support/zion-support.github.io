@@ -76,7 +76,7 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     customers: 86,
     rating: 4.8,
     reviews: 55
-  },
+  }
   {
     id:,
   ai-rfp-response-copilot',
@@ -137,9 +137,9 @@ roi: 'Save 60–80% proposal hours,
   Doc parser, RAG knowledge base, reviewer workflows, export to Word/PDF',
     launchDate: '2025-02-20,
     customers: 41,
-    rating: 4.7,
+    rating: 4.7
     reviews: 29
-  },
+  }
   {
     id:,
   local-seo-insights-engine',
@@ -199,7 +199,7 @@ roi: 'Save 60–80% proposal hours,
     customers: 211,
     rating: 4.8,
     reviews: 77
-  },
+  }
   {
     id:,
   gdpr-cookie-consent-manager',
@@ -258,7 +258,7 @@ roi: 'Save 60–80% proposal hours,
     customers: 318,
     rating: 4.7,
     reviews: 96
-  },
+  }
   {
     id:,
   churn-prediction-insights',
@@ -319,7 +319,7 @@ roi: 'Save 60–80% proposal hours,
     customers: 122,
     rating: 4.6,
     reviews: 41
-  },
+  }
   {
     id:,
   docs-to-knowledge-bot',
@@ -380,7 +380,7 @@ roi: 'Save 60–80% proposal hours,
     customers: 187,
     rating: 4.8,
     reviews: 68
-  },
+  }
   {
     id:,
   soc2-evidence-collector',
@@ -442,7 +442,7 @@ roi: 'Save 60–80% proposal hours,
     customers: 57,
     rating: 4.7,
     reviews: 24
-  },
+  }
   {
     id:,
   smart-invoice-extractor',
@@ -502,7 +502,7 @@ roi: 'Save 60–80% proposal hours,
     customers: 133,
     rating: 4.6,
     reviews: 52
-  },
+  }
   {
     id:,
   partner-portal-builder',
@@ -562,7 +562,7 @@ roi: 'Save 60–80% proposal hours,
     customers: 48,
     rating: 4.7,
     reviews: 19
-  },
+  }
   {
     id:,
   ai-procurement-bid-analyzer',
@@ -623,7 +623,7 @@ roi: 'Save 60–80% proposal hours,
     customers: 33,
     rating: 4.6,
     reviews: 14
-  },
+  }
   {
     id:,
   smart-terms-policy-generator',
@@ -683,7 +683,7 @@ roi: 'Save 60–80% proposal hours,
     customers: 122,
     rating: 4.7,
     reviews: 39
-  },
+  }
   {
     id:,
   vendor-security-review-assistant',
@@ -743,7 +743,7 @@ roi: 'Save 60–80% proposal hours,
     customers: 58,
     rating: 4.6,
     reviews: 21
-  },
+  }
   {
     id:,
   smart-release-notes-broadcaster',
@@ -804,7 +804,7 @@ roi: 'Save 60–80% proposal hours,
     customers: 74,
     rating: 4.7,
     reviews: 26
-  },
+  }
   {
     id:,
   contract-redline-copilot',
@@ -864,7 +864,7 @@ roi: 'Save 60–80% proposal hours,
     customers: 61,
     rating: 4.7,
     reviews: 28
-  },
+  }
   {
     id:,
   vendor-security-questionnaire-automation',
@@ -924,7 +924,7 @@ roi: 'Save 60–80% proposal hours,
     customers: 57,
     rating: 4.7,
     reviews: 33
-  },
+  }
   {
     id:,
   contract-clause-analyzer',
@@ -984,7 +984,7 @@ roi: 'Save 60–80% proposal hours,
     customers: 39,
     rating: 4.6,
     reviews: 22
-  },
+  }
   {
     id:,
   marketing-attribution-insights',
@@ -1046,7 +1046,7 @@ roi: 'Save 60–80% proposal hours,
     customers: 102,
     rating: 4.8,
     reviews: 61
-  },
+  }
   {
     id:,
   ai-compliance-policy-watcher',
@@ -1106,7 +1106,7 @@ roi: 'Save 60–80% proposal hours,
     customers: 27,
     rating: 4.6,
     reviews: 12
-  },
+  }
   {
     id:,
   smart-churn-winback-campaigns',
@@ -1165,7 +1165,7 @@ roi: 'Save 60–80% proposal hours,
     customers: 44,
     rating: 4.7,
     reviews: 20
-  },
+  }
   {
     id:,
   ai-sla-uptime-reporter',
@@ -1223,7 +1223,7 @@ roi: 'Save 60–80% proposal hours,
   Metrics pullers + calculators + export templates',
     launchDate: '2025-06-22,
     customers: 31,
-    rating: 4.6,
+    rating: 4.6
     reviews: 14
 
 ]}}

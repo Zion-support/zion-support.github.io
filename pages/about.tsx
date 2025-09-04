@@ -182,8 +182,8 @@ const About: NextPag e = () => {
               Join Our Team
             </Link>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </Layout>
   );
 };

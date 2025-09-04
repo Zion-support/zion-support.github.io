@@ -419,10 +419,8 @@ function SecurityServiceCard(...args: any[]): any {,
     let matchesPrice = true
     if (priceRange ===
   'low') matchesPrice = service.price < 500;
-    else if (priceRange ===;
-  'medium') matchesPrice = service.price >= 500 && service.price < 1000;
-    else if (priceRange ===;
-  'high') matchesPrice = service.price >= 1000;
+    else if (priceRange ===';medium') matchesPrice = service.price >= 500 && service.price < 1000;
+    else if (priceRange ===';high') matchesPrice = service.price >= 1000;
     return matchesSearch && matchesSubcategory && matchesPrice})
   const getPricingModelIcon = (model: anystring) => {
     switch (model) {

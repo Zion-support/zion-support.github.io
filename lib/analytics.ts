@@ -23,7 +23,7 @@ export const measurePerformance = () => {
     )[0] as PerformanceNavigationTiming;
 
     return {
-      loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+      loadTime: navigation.loadEventEnd - navigation.loadEventStart
       domContentLoaded:
         navigation.domContentLoadedEventEnd -
         navigation.domContentLoadedEventStart,
@@ -31,7 +31,7 @@ export const measurePerformance = () => {
         performance.getEntriesByName('first-paint')[0]?.startTime || 0,
       firstContentfulPaint:
         performance.getEntriesByName('first-contentful-paint')[0]?.startTime ||
-        0,
+        0
     };
   }
   return null;
@@ -47,10 +47,10 @@ interface WebVitalMetric {
 export const trackWebVitals = (metric: WebVitalMetric) => {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', metric.name, {
-      value: Math.round(metric.value),
+      value: Math.round(metric.value)
       event_category: 'Web Vitals',
-      event_label: metric.id,
-      non_interaction: true,
+      event_label: metric.id
+      non_interaction: true
     });
   }
 };

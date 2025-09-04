@@ -127,7 +127,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     customers: 28,
     rating: 4.9,
     reviews: 67
-  },
+  }
   {
     id:,
   quantum-resistant-encryption-suite',
@@ -206,7 +206,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     customers: 15,
     rating: 4.8,
     reviews: 23
-  },
+  }
   {
     id:,
   zero-trust-security-framework',
@@ -287,7 +287,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     customers: 42,
     rating: 4.7,
     reviews: 89
-  },
+  }
   {
     id:,
   ai-powered-security-operations-center',
@@ -367,7 +367,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     customers: 18,
     rating: 4.9,
     reviews: 45
-  },
+  }
   {
     id:,
   blockchain-security-auditor',
@@ -447,7 +447,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     customers: 35,
     rating: 4.6,
     reviews: 78
-  },
+  }
   {
     id:,
   iot-security-orchestrator',
@@ -524,6 +524,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
   Comprehensive IoT security platform with device authentication and behavioral monitoring.',
     launchDate: '2024-07-25,
     customers: 52,
-    rating: 4.5,
+    rating: 4.5
     reviews: 96
 ];}}

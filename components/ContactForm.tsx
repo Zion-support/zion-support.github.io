@@ -27,12 +27,12 @@ const ContactForm: Reac t.FC = () => {
   const services = [
     'AI & Machine Learning',
     'Cloud & DevOps',
-    'Cybersecurity',
+      'Cybersecurity'
     'Web Development',
-    'Mobile Development',
+      'Mobile Development'
     'Data Analytics',
-    'Digital Transformation',
-    'Other',
+      'Digital Transformation'
+    'Other'
   ]
 
   const validateForm = (): boolean => {

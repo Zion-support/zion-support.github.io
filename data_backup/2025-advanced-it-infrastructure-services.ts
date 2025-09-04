@@ -325,7 +325,7 @@ reviews: number;export const advancedITInfrastructure2025: AdvancedITInfrastruct
   AI-powered DevOps automation platform with intelligent CI/CD optimization and comprehensive automation capabilities.',
     launchDate: '2025-01-15,
     customers: 89,
-    rating: 4.7,
+    rating: 4.7
     reviews: 67
   },
   // Quantum-Resistant Data Storage Platform

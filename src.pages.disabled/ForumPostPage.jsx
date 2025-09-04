@@ -1,0 +1,6 @@
+<<<<<<< HEAD:src.pages.disabled/ForumPostPage.jsx
+import React from 'react'; export default function ForumPostPage () {
+import React from 'react'; export default function ForumPostPage () {'';
+
+
+

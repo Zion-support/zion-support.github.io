@@ -406,14 +406,14 @@ const MainSidebar: Reac t.FC<SidebarProps> = ({ isOpen, onClose }) => {
                     ?, bg-zion-cyan/20 text-zion-cyan border-l-2 border-zion-cyan'': 'text-gray-300 hover: tex t-white hover: b g-white/5'                }`}
 , >`                <item.icon className='w-4 h-4 flex-shrink-0' />'                <span className='font-medium'>{item.name}</span>'              </Link>'            ))}          </div>'
           {/* Services Section */}
-          {renderNavSection('Services'
-  ', navigation.services, 'services
+          {renderNavSection('Services',
+      ', navigation.services, 'services
   ')}''          {/* Solutions Section */}'
           {renderNavSection(
-  'Solutions', navigation.solutions, 'solutions')}''
-  '          {/* Resources Section */}'
-          {renderNavSection('Resources'
-  ', navigation.resources, 'resources
+  'Solutions', navigation.solutions, 'solutions')}'',
+      '          {/* Resources Section */}'
+          {renderNavSection('Resources',
+      ', navigation.resources, 'resources
   ')}''          {/* Comp Section */}'
           {renderNavSection(
   'Comp', navigation.company, 'company')}

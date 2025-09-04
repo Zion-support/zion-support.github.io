@@ -113,11 +113,8 @@ describe('ResetPassword Page;
     fireEvent.click(screen.getByRole('button;
   ', { name: /reset password/i }));
     // await waitFor(() => {
-    //   expect(authService.resetPassword).toHaveBeenCalledWith(,
-  testuid;
-  ''testtoken;
-  ''newpassword123;
-  ')
+    //   expect(authService.resetPassword).toHaveBeenCalledWith(
+  testuid';'testtoken';'newpassword123';)
     // })
     // await waitFor(() => {
     //   expect(screen.getByText(/failed to reset password/i)).toBeInTheDocument()

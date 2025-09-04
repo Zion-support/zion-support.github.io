@@ -111,8 +111,8 @@ interface EnhancedLoadingSpinnerProps {
 }
 
 export default function EnhancedLoadingSpinner({ 
-  size = 'md', 
-  text = 'Loading...',
+  size = 'md'
+  text = 'Loading...'
   className = ''
 }: EnhancedLoadingSpinnerProps) {
   const sizeClasses = { sm: 'w-8 h-8',

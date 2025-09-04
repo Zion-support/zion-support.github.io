@@ -80,7 +80,7 @@ const authSlice = createSlice({ name: 'auth', initialState,
 interface AuthState {isLoggedIn: boolean;
   toke,
     n: string | null;
-  erro,
+  erro
     r: string | null}
 const initialState: AuthStat e: =  {,
   isLoggedIn: fal s,e,
