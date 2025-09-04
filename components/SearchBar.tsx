@@ -140,6 +140,7 @@ function SearchBar() {
   }
   const handleResultClick = () => {
     setIsOpen(false);
+    setQuery('');
   }
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Escape') {
@@ -151,7 +152,6 @@ function SearchBar() {
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
         setIsOpen(false);
       }
-    };
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);

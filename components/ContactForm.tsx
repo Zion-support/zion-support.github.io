@@ -32,8 +32,14 @@ const ContactForm: React.FC = () => {
       ...prev,
       [name]: value,
     }));
-  };
-
+    
+    // Clear error when user starts typing
+    if (errors[name as keyof FormData]) {
+      setErrors(prev => ({
+        ...prev,
+        [name]: undefined
+      }));
+    }
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -56,8 +62,6 @@ const ContactForm: React.FC = () => {
     } finally {
       setIsSubmitting(false);
     }
-  };
-
   return (
     <form onSubmit={handleSubmit} className="space-y-6" aria-label="Contact form">
       {submitStatus === 'success' && (
@@ -228,6 +232,5 @@ const ContactForm: React.FC = () => {
       </button>
     </form>
   );
-};
-
+}
 export default ContactForm;

@@ -15,8 +15,7 @@ export default function Careers() {
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
   }
-
-  const openPositions = [
+  const jobOpenings = [
     {
       title: "Senior Full Stack Developer",
       department: "Engineering",
