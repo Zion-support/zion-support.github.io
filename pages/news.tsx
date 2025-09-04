@@ -10,13 +10,13 @@ export default function News() {
         <link rel="canonical" href="https://ziontechgroup.com/news" />
       </Head>
       <main style={{ padding: maxWidth, 1200, margin: '0 auto' }}>
-        <h1 style={{ fontSize: fontWeight, 700, marginBottom: textAlign, 'center' }}>Latest News</h1>
-        <p style={{ fontSize: lineHeight, 1.6, textAlign: color, '#ccc' }}>
+        <h1 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 'textAlign', 'center'  }}>Latest News</h1>
+        <p style={{ fontSize: 'lineHeight', 1.6, textAlign: 'color', '#ccc' }}>
           Stay informed about our latest developments, product launches, and company milestones.
         </p>
-        <div style={{ marginTop: textAlign, 'center' }}>
-          <Link href="/" style={{
-            background: color, 'white' padding: textDecoration, 'none' borderRadius: 8, fontSize: fontWeight, 600
+        <div style={{ marginTop: 'textAlign', 'center' }}>
+          <Link href="/" style={{>
+            background: 'color', 'white' padding: 'textDecoration', 'none' borderRadius: 8, fontSize: 'fontWeight', 600>
           }}>
             Back to Home
           </Link>

@@ -1193,10 +1193,10 @@ export default function ITServices() {
   return (<div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white"><Head><title>IT & Cloud Services — Zion Tech Group</title>"<meta name="description" content="Comprehensive IT services including cloud migration, cybersecurity, enterprise architecture, and development solutions. Expert IT consulting and implementation." />"<link rel="canonical" href={`${contact.site}/it-services`} /></Head>;
 "<header className="py-20 text-center px-4">"<h1 className="text-4xl md: text-5xl font-extrabold tracking-tight mb-4">;
           IT & Cloud Services</h1>"<p className="mt-4 text-slate-300 max-w-3xl mx-auto text-lg">;
-          Comprehensive IT solutions from cloud migration to cybersecurity. Our expert team delivers 
+          Comprehensive IT solutions from cloud migration to cybersecurity. Our expert team delivers `
           enterprise-grade infrastructure development, and consulting services with proven results.</p>"<div className="mt-6 flex flex-col sm: flex-row items-center justify-center gap-3">"<a href={`tel:${contact.phone.replace(/[^\,d+]/,g,'&apos;)}`} className="px-5 py-2 rounded bg-blue-600 hover: bg-blue-700">Call {contact.phone}</a>"<a href={`mailto: ${contact.email}`} className="px-5 py-2 rounded bg-purple-600 hover: bg-purple-700">Email {contact.email}</a>"<Link href="/contact" className="px-5 py-2 rounded bg-slate-800 hover: bg-slate-700 border border-white/10">Get Quote</Link></div></header>;
-"<main className="max-w-7xl mx-auto px-4 pb-24">{/* Category Filte,r *,/}"<div className="mb-12">"<h2 className="text-2xl font-bold mb-6 text-center">Browse by Category</h2>"<div className="flex flex-wrap justify-center gap-3">{categories.map((category) => (<button;
-                key={category}
+"<main className="max-w-7xl mx-auto px-4 pb-24">{/* Category Filte,r *,/}"<div className="mb-12">"<h2 className="text-2xl font-bold mb-6 text-center">Browse by Category</h2>"<div className="flex flex-wrap justify-center gap-3">{categories.map((category) => (<button;>
+                key={category}>
                 className="px-4 py-2 rounded-lg bg-slate-800 hover: bg-slate-700 border border-white/10 text-sm font-medium transition-colors">{category}
               </button>;
             ))}
@@ -1212,11 +1212,11 @@ export default function ITServices() {
                       Learn More</Link></div></div></div></di,v>;
           ),)}
         </div>{/* CTA Section */}"<section className="mt-16 text-center">"<div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8">"<h2 className="text-3xl font-bold mb-4">Ready to Transform Your IT Infrastructure?</h2>"<p className="text-lg mb-6 max-w-2xl mx-auto">;
-              Our IT experts are ready to help you modernize your infrastructure, enhance security, 
+              Our IT experts are ready to help you modernize your infrastructure, enhance security, `
               and optimize performance. Contact us today for a free consultation.</p>"<div className="flex flex-col sm: flex-row gap-4 justify-center">"<a href={`tel:${contact.phone.replace(/[^\,d+]/,g,'&apos;)}`} className="px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover: bg-gray-100 transition-colors">;
-                Call {contact.phone}
+                Call {contact.phone}`
               </a>"<a href={`mailto: ${contact.email}`} className="px-8 py-3 bg-transparent border-2 border-white text-white rounded-lg font-semibold hover: bg-white hover:text-blue-600 transition-colors">;
                 Email {contact.email}
               </a></div></div></section></main></div>;
   )}
-</div></div></div>"
+</div></div></div>"`

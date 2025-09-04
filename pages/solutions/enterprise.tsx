@@ -10,8 +10,8 @@ export default function EnterpriseSolutions() {
   }, []);
 
   const contact ={
-    phone: email, 'kleber@ziontechgroup.com'
-    address: site, 'https://ziontechgroup.com'
+    phone: 'email', 'kleber@ziontechgroup.com'
+    address: 'site', 'https://ziontechgroup.com'
   }
 
   const enterpriseServices = [
@@ -55,11 +55,11 @@ export default function EnterpriseSolutions() {
         <meta name="keywords" content="enterprise solutions, digital transformation, enterprise architecture, enterprise security, enterprise integration, enterprise analytics" />
         <link rel="canonical" href={`${contact.site}/solutions/enterprise`} />
         <meta property="og:title" content="Enterprise Solutions - Zion Tech Group" />
-        <meta property="og:description" content="Comprehensive enterprise solutions for large organizations" />
+        <meta property="og:description" content="Comprehensive enterprise solutions for large organizations" />`
         <meta property="og:url" content={`${contact.site}/solutions/enterprise`} />
         <meta property="og:type" content="website" />
       </Head>
-
+`
       <div className={`min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
         {/* Hero Section */}
         <section className="relative py-20 px-4">
@@ -151,10 +151,10 @@ export default function EnterpriseSolutions() {
             <p className="text-xl text-slate-300 mb-8">
               Let our enterprise experts help you design and implement the perfect solution for your organization
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">`
               <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
                 Call {contact.phone}
-              </a>
+              </a>`
               <a href={`mailto:${contact.email}`} className="px-8 py-4 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors">
                 Email {contact.email}
               </a>
@@ -167,4 +167,4 @@ export default function EnterpriseSolutions() {
       </div>
     </>
   );
-}
+}`

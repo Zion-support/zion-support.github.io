@@ -22,7 +22,13 @@ export default function Enterprise() {
       features: ['Multi-Cloud Strategy' 'Infrastructure as Code' 'Disaster Recovery' 'Global Deploymen,t'], }
   ];
 
-  const industries = [{ name: 'Financial Services' clients: '50+' solutions: 'Banking Insurance, FinTech' },{ name: 'Healthcare' clients: '75+' solutions: 'Hospitals Pharma, Medical Devices' },{ name: 'Manufacturing' clients: '100+' solutions: 'Automotive Aerospace, Industrial' },{ name: 'Retail & E-commerce' clients: '80+' solutions: 'Omnichannel Supply Chain, Analytics' },{ name: 'Government' clients: '25+' solutions: 'Public Services Security, Compliance' },{ name: 'Education' clients: '60+' solutions: 'Universities K-12, EdTech' }
+  const industries = [{ name: 'Financial Services',
+    clients: '50+' solutions: 'Banking Insurance, FinTech' },{ name: 'Healthcare',
+    clients: '75+' solutions: 'Hospitals Pharma, Medical Devices' },{ name: 'Manufacturing',
+    clients: '100+' solutions: 'Automotive Aerospace, Industrial' },{ name: 'Retail & E-commerce',
+    clients: '80+' solutions: 'Omnichannel Supply Chain, Analytics' },{ name: 'Government',
+    clients: '25+' solutions: 'Public Services Security, Compliance' },{ name: 'Education',
+    clients: '60+' solutions: 'Universities K-12, EdTech' }
   ];
 
   return (<><Head><title>Enterprise Solutions - Zion Tech Group</title>"<meta name="description" content="Comprehensive enterprise technology solutions including digital transformation, AI automation, cloud services, and cybersecurity for large organizations." />"<meta name="keywords" content="enterprise solutions, digital transformation, enterprise AI, cloud migration, cybersecurity, large organizations" />"<link rel="canonical" href="https: //ziontechgroup.com/enterprise" />"<meta property="og:title" content="Enterprise Solutions - Zion Tech Group" />"<meta property="og:description" content="Comprehensive enterprise technology solutions including digital transformation AI automation, cloud services, and cybersecurity for large organizations." />"<meta property="og: url" content="https://ziontechgroup.com/enterprise" />"<meta property="og:type" content="website" /></Head>;

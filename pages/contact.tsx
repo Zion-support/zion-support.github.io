@@ -140,7 +140,7 @@ export default function Contact(): JSX.Element {
                 Send Us a Message
               </h2>
               <p className="text-lg text-slate-300">
-                Fill out the form below and we'll get back to you within 24 hours
+                Fill out the form below and we&apos;ll get back to you within 24 hours
               </p>
             </div>
             <ContactForm />
@@ -154,7 +154,7 @@ export default function Contact(): JSX.Element {
               Ready to Get Started?
             </h2>
             <p className="text-lg text-slate-300 mb-8">
-Choose your preferred way to contact us and let's discuss how we can help
+Choose your preferred way to contact us and let&apos;s discuss how we can help
               transform your business with cutting-edge technology solutions.
             </p>
             

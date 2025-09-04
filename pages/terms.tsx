@@ -3,8 +3,8 @@ import Link from 'next/link';
 
 export default function Terms() {
   const contact ={
-    phone: email, 'kleber@ziontechgroup.com'
-    address: site, 'https://ziontechgroup.com'
+    phone: 'email', 'kleber@ziontechgroup.com'
+    address: 'site', 'https://ziontechgroup.com'
   }
   return (
     <>
@@ -98,10 +98,10 @@ Permission is granted to temporarily download one copy of Zion Tech Group's serv
               <p className="text-slate-300 mb-4">
                 If you have any questions about these Terms of Service, please contact us: </p>
               <div className="bg-slate-900/60 p-6 rounded-lg border border-white/10">
-                <p className="text-slate-300 mb-2">
+                <p className="text-slate-300 mb-2">`
                   <strong>Phone:</strong> <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="text-blue-400 hover: text-blue-300">{contact.phone}</a>
                 </p>
-                <p className="text-slate-300 mb-2">
+                <p className="text-slate-300 mb-2">`
                   <strong>Email: </strong> <a href={`mailto:${contact.email}`} className="text-blue-400 hover: text-blue-300">{contact.email}</a>
                 </p>
                 <p className="text-slate-300">
@@ -119,4 +119,4 @@ Permission is granted to temporarily download one copy of Zion Tech Group's serv
         </div>
       </main>
     </>
-  )}
+  )}`

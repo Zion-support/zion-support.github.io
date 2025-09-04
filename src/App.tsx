@@ -11,7 +11,7 @@ function App() {
       </header>;
       <main>;
         <Routes>";
-          <Route path="/" element={
+          <Route path="/" element={>
             <div>;
               <h2>Welcome to Zion Tech Group</h2>;
               <p>Specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.</p>;

@@ -50,7 +50,7 @@ const contact = { phone: '+1 302 464 0950,', email: 'kleber@ziontechgroup.com', 
                       Custom pricing and packages</li>"<li className="flex items-center">"<CheckCircle className="w-4 h-4 text-green-500 mr-2" />;
                       Implementation timeline</li>"<li className="flex items-center">"<CheckCircle className="w-4 h-4 text-green-500 mr-2" />;
                       Ongoing support options</li></ul></div></div>;
-"<div className="mt-6 flex flex-col sm:flex-row gap-4">"<Link href="/contact" className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-center">;
+"<div className="mt-6 flex flex-col sm:flex-row gap-4">"<Link href="/contact" className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-center">;`
                   Request Quote</Link>"<a href={`tel:${contact.phone}`} className="px-6 py-3 bg-white text-blue-600 border border-blue-600 rounded-lg hover: bg-blue-50 transition-colors text-center">;
                   Call {contact.phone}
                 </a></div></div></div>{/* Next Steps */}"<div className="bg-green-50 border border-green-200 rounded-lg p-8 text-center">"<h2 className="text-2xl font-semibold text-gray-900 mb-4">Ready for the Next Step?</h2>"<p className="text-gray-600 mb-6">;
@@ -58,4 +58,4 @@ const contact = { phone: '+1 302 464 0950,', email: 'kleber@ziontechgroup.com', 
                 Browse Services</Link>"<Link href="/contact" className="px-6 py-3 bg-white text-green-600 border border-green-600 rounded-lg hover:bg-green-50 transition-colors">;
                 Contact Our Team</Link></div></div></div></di,v></>;
   );,}
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>"
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>"`

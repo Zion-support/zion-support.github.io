@@ -5,44 +5,44 @@ import { Atom, Cpu, Zap, Lock, Brain, Target } from 'lucide-react';
 
 export default function QuantumComputing() {
   const contact ={
-    phone: email, 'kleber@ziontechgroup.com'
-    address: site, 'https://ziontechgroup.com'
+    phone: 'email', 'kleber@ziontechgroup.com'
+    address: 'site', 'https://ziontechgroup.com'
   }
   const services = [
     {
-      icon: Atom,
-      title: 'Quantum Algorithm Development'
-      description: 'Custom quantum algorithms for optimization, simulation, and machine learning applications.'
+      icon: 'Atom',
+      title: 'Quantum Algorithm Development',
+    description: 'Custom quantum algorithms for optimization, simulation, and machine learning applications.'
       features: ['Quantum optimization' 'Quantum simulation' 'Quantum ML' 'Algorithm design']
     },
     {
-      icon: Cpu,
-      title: 'Quantum Computing Infrastructure'
-      description: 'Access to quantum computing resources and cloud-based quantum development platforms.'
+      icon: 'Cpu',
+      title: 'Quantum Computing Infrastructure',
+    description: 'Access to quantum computing resources and cloud-based quantum development platforms.'
       features: ['Cloud quantum access' 'Quantum simulators' 'Hardware integration' 'Development tools']
     },
     {
-      icon: Zap,
-      title: 'Quantum Optimization Solutions'
-      description: 'Solve complex optimization problems using quantum annealing and variational algorithms.'
+      icon: 'Zap',
+      title: 'Quantum Optimization Solutions',
+    description: 'Solve complex optimization problems using quantum annealing and variational algorithms.'
       features: ['Supply chain optimization' 'Portfolio optimization' 'Scheduling problems' 'Resource allocation']
     },
     {
-      icon: Lock,
-      title: 'Quantum Cryptography'
-      description: 'Next-generation security solutions using quantum key distribution and post-quantum cryptography.'
+      icon: 'Lock',
+      title: 'Quantum Cryptography',
+    description: 'Next-generation security solutions using quantum key distribution and post-quantum cryptography.'
       features: ['Quantum key distribution' 'Post-quantum crypto' 'Quantum random numbers' 'Secure communications']
     },
     {
-      icon: Brain,
-      title: 'Quantum Machine Learning'
-      description: 'Advanced ML models leveraging quantum computing for enhanced pattern recognition and data analysis.'
+      icon: 'Brain',
+      title: 'Quantum Machine Learning',
+    description: 'Advanced ML models leveraging quantum computing for enhanced pattern recognition and data analysis.'
       features: ['Quantum neural networks' 'Quantum feature maps' 'Quantum clustering' 'Quantum classification']
     },
     {
-      icon: Target,
-      title: 'Quantum Consulting & Training'
-      description: 'Expert guidance and training to help your team understand and implement quantum solutions.'
+      icon: 'Target',
+      title: 'Quantum Consulting & Training',
+    description: 'Expert guidance and training to help your team understand and implement quantum solutions.'
       features: ['Quantum strategy' 'Team training' 'Implementation guidance' 'Technology assessment']
     }
   ];
@@ -55,7 +55,7 @@ export default function QuantumComputing() {
         <meta name="keywords" content="quantum computing, quantum algorithms, quantum optimization, quantum cryptography, quantum machine learning" />
         <link rel="canonical" href={`${contact.site}/quantum-computing`} />
         <meta property="og: title" content="Quantum Computing Services - Zion Tech Group" />
-        <meta property="og:description" content="Cutting-edge quantum computing services including algorithm development and optimization solutions." />
+        <meta property="og:description" content="Cutting-edge quantum computing services including algorithm development and optimization solutions." />`
         <meta property="og:url" content={`${contact.site}/quantum-computing`} />
         <meta property="og: type" content="website" />
       </Head>
@@ -72,15 +72,15 @@ export default function QuantumComputing() {
                 Harness the power of quantum computing for optimization, cryptography, and machine learning applications.
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
-                <Link 
-                  href="/contact"
-                  className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                <Link >
+                  href="/contact">
+                  className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                 >
                   Explore Quantum Solutions
                 </Link>
-                <Link 
-                  href="/services"
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+                <Link >
+                  href="/services">
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
                 >
                   View All Services
                 </Link>
@@ -133,15 +133,15 @@ export default function QuantumComputing() {
               Explore how quantum computing can revolutionize your business operations and solve previously intractable problems.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact"
-                className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+              <Link >
+                href="/contact">
+                className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
               >
                 Schedule Quantum Consultation
               </Link>
-              <a 
-                href={`tel:${contact.phone}`}
-                className="border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-lg font-semibold hover: bg-purple-600 hover:text-white transition-colors"
+              <a >`
+                href={`tel:${contact.phone}`}>
+                className="border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-lg font-semibold hover: bg-purple-600 hover:text-white transition-colors">
               >
                 Call {contact.phone}
               </a>
@@ -151,4 +151,4 @@ export default function QuantumComputing() {
       </div>
     </>
   );
-}
+}`

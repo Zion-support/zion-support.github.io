@@ -3,8 +3,8 @@ import Link from 'next/link';
 
 export default function FAQ() {
   const contact ={
-    phone: email, 'kleber@ziontechgroup.com'
-    address: site, 'https://ziontechgroup.com'
+    phone: 'email', 'kleber@ziontechgroup.com'
+    address: 'site', 'https://ziontechgroup.com'
   }
   const faqs = [
     {
@@ -100,10 +100,10 @@ implementation, and support. Can't find what you're looking for? Contact us dire
               and to discuss how we can help your business.
             </p>
             
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">`
               <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-8 py-3 bg-blue-600 hover: bg-blue-700 rounded-lg font-semibold transition-colors">
                 Call {contact.phone}
-              </a>
+              </a>`
               <a href={`mailto: ${contact.email}`} className="px-8 py-3 bg-purple-600 hover: bg-purple-700 rounded-lg font-semibold transition-colors">
                 Email {contact.email}
               </a>
@@ -115,4 +115,4 @@ implementation, and support. Can't find what you're looking for? Contact us dire
         </section>
       </main>
     </>
-  )}
+  )}`
