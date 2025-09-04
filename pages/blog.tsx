@@ -1,3 +1,23 @@
+import Head from 'next/head'
+import Link from 'next/link'
+
+export default function Blog() {
+  return (
+    <>
+      <Head>
+        <title>Blog | Zion Tech Group</title>
+        <meta name="description" content="Insights on AI, Micro SaaS, DevOps, and cybersecurity from Zion Tech Group." />
+        <link rel="canonical" href="https://ziontechgroup.com/blog" />
+      </Head>
+      <main className="max-w-5xl mx-auto px-4 py-16">
+        <h1 className="text-3xl font-bold mb-4">Blog</h1>
+        <p className="text-gray-600 mb-8">Articles and updates will appear here. Stay tuned.</p>
+        <Link href="/contact" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg">Contact Us</Link>
+      </main>
+    </>
+  )
+}
+
 import type { NextPage } from 'next';
 import Layout from '../components/Layout';
 import Link from 'next/link';
