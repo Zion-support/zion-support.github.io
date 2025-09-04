@@ -34,24 +34,24 @@ export default function Documentation() {
     },
     {
       icon: Video,
-      title: 'Tutorials & Guides'
-      description: 'Step-by-step tutorials and best practices.'
+      title: 'Tutorials & Guides',
+      description: 'Step-by-step tutorials and best practices.',
       items: [
-        { name: 'Video Tutorials' link: '/docs/video-tutorials' },
-        { name: 'Code Examples' link: '/docs/code-examples' },
-        { name: 'Best Practices' link: '/docs/best-practices' },
-        { name: 'Troubleshooting' link: '/docs/troubleshooting' }
+        { name: 'Video Tutorials', link: '/docs/video-tutorials' },
+        { name: 'Code Examples', link: '/docs/code-examples' },
+        { name: 'Best Practices', link: '/docs/best-practices' },
+        { name: 'Troubleshooting', link: '/docs/troubleshooting' }
       ]
     },
     {
       icon: Download,
-      title: 'Resources'
-      description: 'Downloadable resources and additional materials.'
+      title: 'Resources',
+      description: 'Downloadable resources and additional materials.',
       items: [
-        { name: 'White Papers' link: '/docs/white-papers' },
-        { name: 'Case Studies' link: '/docs/case-studies' },
-        { name: 'Templates' link: '/docs/templates' },
-        { name: 'Changelog' link: '/docs/changelog' }
+        { name: 'White Papers', link: '/docs/white-papers' },
+        { name: 'Case Studies', link: '/docs/case-studies' },
+        { name: 'Templates', link: '/docs/templates' },
+        { name: 'Changelog', link: '/docs/changelog' }
       ]
     }
   ];

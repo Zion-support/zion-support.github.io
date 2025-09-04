@@ -10,23 +10,23 @@ export default function ApiQuickStart() {
         <link rel="canonical" href="https://ziontechgroup.com/docs/api-quick-start" />
       </Head>
       
-      <div style={{ maxWidth: 1200, margin: padding, '40px 20px' }}>
+      <div style={{ maxWidth: 1200, margin: '40px 20px' }}>
         <div style={{ marginBottom: 40 }}>
-          <Link href="/docs" style={{ color: textDecoration, 'none' marginBottom: 20, display: 'inline-block' }}>
+          <Link href="/docs" style={{ color: '#3b82f6', textDecoration: 'none', marginBottom: 20, display: 'inline-block' }}>
             ← Back to Documentation
           </Link>
-          <h1 style={{ fontSize: fontWeight, 800, marginBottom: 16, background: WebkitBackgroundClip, 'text' WebkitTextFillColor: 'transparent' }}>
+          <h1 style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: 16, background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
             API Quick Start
           </h1>
-          <p style={{ fontSize: opacity, 0.8, lineHeight: 1.6 }}>
+          <p style={{ fontSize: '1.1rem', opacity: 0.8, lineHeight: 1.6 }}>
             Get up and running with Zion Tech Group APIs in minutes. This guide covers authentication, making your first request, and common use cases.
           </p>
         </div>
 
-        <div style={{ display: gap, 32 }}>
+        <div style={{ display: 'flex', gap: 32 }}>
           {/* Authentication */}
-          <section style={{ background: padding, 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)' }}>
-            <h2 style={{ fontSize: fontWeight, 700, marginBottom: 16 }}>🔐 Authentication</h2>
+          <section style={{ background: '#f8f9fa', padding: 32, borderRadius: 12, border: '1px solid #e9ecef' }}>
+            <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: 16 }}>🔐 Authentication</h2>
             <p style={{ opacity: 0.8, marginBottom: 20 }}>All API requests require authentication using your API key.</p>
             
             <div style={{ background: padding, 20, borderRadius: 8, marginBottom: 20 }}>
