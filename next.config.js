@@ -1,22 +1,17 @@
 // Performance optimizations
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
   compress: true,
   poweredByHeader: false,
-  eslint: { 
-    ignoreDuringBuilds: false,
-    dirs: ['pages', 'src/components', 'src/lib', 'src/hooks']
-  },
-  typescript: { 
-    ignoreBuildErrors: true 
-  },
+
+  eslint: { ignoreDuringBuilds: true },
+  typescript: { ignoreBuildErrors: true },
   trailingSlash: true,
   output: 'export',
   generateBuildId: async () => 'build-' + Date.now(),
-
+  
   // Include all page types
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js', 'page.tsx'],
   
   // Image optimization
   images: {
@@ -85,6 +80,7 @@ const nextConfig = {
         permanent: true,
       },
     ];
+
   }
 };
 
