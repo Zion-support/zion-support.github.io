@@ -10,6 +10,7 @@ const PerformanceMonitor: React.FC = () => {
           if (entry.entryType === 'largest-contentful-paint') {
             console.log('LCP:', entry.startTime);
           }
+        }
       });
       
       try {
@@ -24,6 +25,7 @@ const PerformanceMonitor: React.FC = () => {
           if (entry.entryType === 'first-input') {
             console.log('FID:', entry.processingStart - entry.startTime);
           }
+        }
       });
 
       try {
@@ -39,6 +41,7 @@ const PerformanceMonitor: React.FC = () => {
           if (!(entry as any).hadRecentInput) {
             clsValue += (entry as any).value;
           }
+        }
         console.log('CLS:', clsValue);
       });
 
