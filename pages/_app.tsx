@@ -28,9 +28,8 @@ function Header(): any {
         
         {/* Desktop Navigation */}
         <div style={{ 
-          display: 'flex', gap: 4, flexWrap: 'wrap', alignItems: 'center',
-          '@media (max-width: 768px)': { display: 'none' } as any
-        }}>
+          display: 'flex', gap: 4, flexWrap: 'wrap', alignItems: 'center'
+        } as React.CSSProperties}>
           <Link href="/" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Home</Link>
           <Link href="/services" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>All Services</Link>
           <Link href="/services-catalog" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Catalog</Link>
@@ -49,9 +48,8 @@ function Header(): any {
         <button 
           style={{ 
             background: 'none', border: 'none', color: 'white', fontSize: '1.5rem', cursor: 'pointer',
-            display: 'none',
-            '@media (max-width: 768px)': { display: 'block' } as any
-          }
+            display: 'none'
+          } as React.CSSProperties}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle mobile menu"
           aria-expanded={mobileMenuOpen}
