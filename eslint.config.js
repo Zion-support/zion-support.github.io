@@ -19,10 +19,9 @@ export default [
         },
       },
       globals: {
+        console: 'readonly',
         window: 'readonly',
         document: 'readonly',
-        localStorage: 'readonly',
-        console: 'readonly',
         process: 'readonly',
         PerformanceObserver: 'readonly',
         React: 'readonly',
