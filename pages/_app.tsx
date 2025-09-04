@@ -1,15 +1,28 @@
 import type { AppProps } from 'next/app';
+import Link from 'next/link';
 import { useState } from 'react';
-import ErrorBoundary from '../components/ErrorBoundary';
-import PerformanceMonitor from '../components/PerformanceMonitor';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import Sidebar from '../components/Sidebar';
-import '../styles/globals.css';
 
-function Header(): JSX.Element {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+function Header(): any {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const navigationItems = [
+    { href: '/', label: 'Home' },
+    { href: '/about', label: 'About' },
+    { 
+      href: '/services', 
+      label: 'Services',
+      submenu: [
+        { href: '/services', label: 'All Services' },
+        { href: '/micro-saas', label: 'Micro SaaS' },
+        { href: '/ai-services', label: 'AI Services' },
+        { href: '/it-services', label: 'IT Services' },
+        { href: '/services-catalog', label: 'Services Catalog' }
+      ]
+    },
+    { href: '/pricing', label: 'Pricing' },
+    { href: '/faq', label: 'FAQ' },
+    { href: '/contact', label: 'Contact' }
+  ];
 
   return (
     <header style={{
@@ -31,170 +44,89 @@ function Header(): JSX.Element {
         
         {/* Desktop Navigation */}
         <div style={{ 
-          display: 'flex', gap: 4, flexWrap: 'wrap', alignItems: 'center'
-        }} className="hidden md:flex">
-          <Link href="/" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }}>Home</Link>
-          
-          {/* Services Dropdown */}
-          <div style={{ position: 'relative', display: 'inline-block' }}>
-            <button 
-              style={{ 
+          display: 'flex', gap: 8, flexWrap: 'wrap', alignItems: 'center',
+          '@media (max-width: 768px)': { display: 'none' }
+        }}>
+          {navigationItems.map((item) => (
+            <div key={item.href} style={{ position: 'relative' }}>
+              <Link href={item.href} style={{ 
                 padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-                transition: 'all 0.2s ease', textDecoration: 'none', color: 'white',
-                background: 'none', border: 'none', cursor: 'pointer'
-              }}
-              onMouseEnter={() => setServicesDropdownOpen(true)}
-              onMouseLeave={() => setServicesDropdownOpen(false)}
-            >Services ▼</button>
-            <div style={{
-              position: 'absolute', top: '100%', left: 0, 
-              background: 'rgba(11, 18, 32, 0.98)', backdropFilter: 'blur(10px)',
-              border: '1px solid rgba(255,255,255,0.1)', borderRadius: 8,
-              padding: '8px 0', minWidth: 200, zIndex: 1000,
-              display: servicesDropdownOpen ? 'block' : 'none'
-            }} 
-            onMouseEnter={() => setServicesDropdownOpen(true)}
-            onMouseLeave={() => setServicesDropdownOpen(false)}
-            className="services-dropdown">
-              <Link href="/services" style={{ 
-                display: 'block', padding: '8px 16px', color: 'white', textDecoration: 'none',
-                transition: 'all 0.2s ease'
-              }}>All Services</Link>
-              <Link href="/micro-saas" style={{ 
-                display: 'block', padding: '8px 16px', color: 'white', textDecoration: 'none',
-                transition: 'all 0.2s ease'
-              }}>Micro SaaS Products</Link>
-              <Link href="/ai-services" style={{ 
-                display: 'block', padding: '8px 16px', color: 'white', textDecoration: 'none',
-                transition: 'all 0.2s ease'
-              }}>AI Services</Link>
-              <Link href="/it-services" style={{ 
-                display: 'block', padding: '8px 16px', color: 'white', textDecoration: 'none',
-                transition: 'all 0.2s ease'
-              }}>IT Services</Link>
-              <Link href="/cloud-devops" style={{ 
-                display: 'block', padding: '8px 16px', color: 'white', textDecoration: 'none',
-                transition: 'all 0.2s ease'
-              }}>Cloud & DevOps</Link>
-              <Link href="/cybersecurity" style={{ 
-                display: 'block', padding: '8px 16px', color: 'white', textDecoration: 'none',
-                transition: 'all 0.2s ease'
-              }}>Cybersecurity</Link>
-              <Link href="/quantum-computing" style={{ 
-                display: 'block', padding: '8px 16px', color: 'white', textDecoration: 'none',
-                transition: 'all 0.2s ease'
-              }}>Quantum Computing</Link>
+                transition: 'all 0.2s ease', textDecoration: 'none',
+                display: 'flex', alignItems: 'center', gap: 4
+              }}>
+                {item.label}
+                {item.submenu && <span style={{ fontSize: '0.8rem' }}>▼</span>}
+              </Link>
+              {item.submenu && (
+                <div style={{
+                  position: 'absolute', top: '100%', left: 0, 
+                  background: 'rgba(11, 18, 32, 0.98)', 
+                  border: '1px solid rgba(255,255,255,0.1)',
+                  borderRadius: 8, padding: '8px 0', minWidth: 200,
+                  display: 'none', zIndex: 1000
+                }}>
+                  {item.submenu.map((subItem) => (
+                    <Link key={subItem.href} href={subItem.href} style={{
+                      display: 'block', padding: '8px 16px', 
+                      textDecoration: 'none', opacity: 0.9,
+                      transition: 'all 0.2s ease'
+                    }}>
+                      {subItem.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
             </div>
-          </div>
-          
-          <Link href="/services-catalog" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }}>Catalog</Link>
-          <Link href="/pricing" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }}>Pricing</Link>
-          <Link href="/about" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }}>About</Link>
-          <Link href="/faq" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }}>FAQ</Link>
-          <Link href="/contact" style={{ 
-            fontWeight: 600, background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', 
-            color: 'white', padding: '8px 16px', borderRadius: 8,
-            transition: 'all 0.2s ease', textDecoration: 'none'
-          }}>Contact</Link>
+          ))}
         </div>
 
-        {/* Mobile Navigation */}
-        <div style={{
-          display: 'flex', gap: 4, alignItems: 'center'
-        }} className="md:hidden">
-          <Link href="/contact" style={{ 
-            fontWeight: 600, background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', 
-            color: 'white', padding: '6px 12px', borderRadius: 6,
-            transition: 'all 0.2s ease', textDecoration: 'none', fontSize: '0.9rem'
-          }}>Contact</Link>
-          <button 
-            style={{
-              background: 'none', border: 'none', color: 'white', fontSize: '1.2rem',
-              cursor: 'pointer', padding: '6px', borderRadius: 4
-            }}
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle mobile menu"
-            aria-expanded={mobileMenuOpen}
-          >
-            ☰
-          </button>
-        </div>
+        {/* Mobile menu button */}
+        <button 
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          style={{
+            display: 'none',
+            '@media (max-width: 768px)': { display: 'block' },
+            background: 'none', border: 'none', color: 'white', fontSize: '1.5rem',
+            cursor: 'pointer', padding: '8px'
+          }}
+        >
+          ☰
+        </button>
       </nav>
-      
-      {/* Mobile Menu */}
-      {mobileMenuOpen && (
+
+      {/* Mobile Navigation Menu */}
+      {isMobileMenuOpen && (
         <div style={{
-          position: 'absolute', top: '100%', left: 0, right: 0, 
-          background: 'rgba(11, 18, 32, 0.98)', backdropFilter: 'blur(10px)',
-          borderBottom: '1px solid rgba(255,255,255,0.1)',
-          padding: '20px', display: 'flex', flexDirection: 'column', gap: '12px'
+          display: 'block',
+          '@media (min-width: 769px)': { display: 'none' },
+          background: 'rgba(11, 18, 32, 0.98)', 
+          borderTop: '1px solid rgba(255,255,255,0.1)',
+          padding: '16px 20px'
         }}>
-          <div className="md:hidden mb-4">
-            <SearchBar />
-          </div>
-          <Link href="/" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }} onClick={() => setMobileMenuOpen(false)}>Home</Link>
-          <Link href="/services" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }} onClick={() => setMobileMenuOpen(false)}>All Services</Link>
-          <Link href="/micro-saas" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }} onClick={() => setMobileMenuOpen(false)}>Micro SaaS</Link>
-          <Link href="/ai-services" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }} onClick={() => setMobileMenuOpen(false)}>AI Services</Link>
-          <Link href="/it-services" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }} onClick={() => setMobileMenuOpen(false)}>IT Services</Link>
-          <Link href="/cloud-devops" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }} onClick={() => setMobileMenuOpen(false)}>Cloud & DevOps</Link>
-          <Link href="/cybersecurity" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }} onClick={() => setMobileMenuOpen(false)}>Cybersecurity</Link>
-          <Link href="/quantum-computing" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }} onClick={() => setMobileMenuOpen(false)}>Quantum Computing</Link>
-          <Link href="/services-catalog" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }} onClick={() => setMobileMenuOpen(false)}>Catalog</Link>
-          <Link href="/pricing" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }} onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
-          <Link href="/about" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }} onClick={() => setMobileMenuOpen(false)}>About</Link>
-          <Link href="/faq" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }} onClick={() => setMobileMenuOpen(false)}>FAQ</Link>
+          {navigationItems.map((item) => (
+            <div key={item.href}>
+              <Link href={item.href} style={{
+                display: 'block', padding: '12px 0', 
+                textDecoration: 'none', opacity: 0.9,
+                borderBottom: '1px solid rgba(255,255,255,0.1)'
+              }}>
+                {item.label}
+              </Link>
+              {item.submenu && (
+                <div style={{ paddingLeft: '16px' }}>
+                  {item.submenu.map((subItem) => (
+                    <Link key={subItem.href} href={subItem.href} style={{
+                      display: 'block', padding: '8px 0', 
+                      textDecoration: 'none', opacity: 0.7,
+                      fontSize: '0.9rem'
+                    }}>
+                      {subItem.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
         </div>
       )}
     </header>
@@ -230,36 +162,48 @@ function Footer(): JSX.Element {
             <div>📞 <a href="tel:+13024640950" style={{ color: '#93c5fd', textDecoration: 'none' }}>+1 302 464 0950</a></div>
             <div>✉️ <a href="mailto:kleber@ziontechgroup.com" style={{ color: '#93c5fd', textDecoration: 'none' }}>kleber@ziontechgroup.com</a></div>
             <div>📍 364 E Main St STE 1008, Middletown DE 19709</div>
-            <div>🌐 <a href="https://ziontechgroup.com" style={{ color: '#93c5fd', textDecoration: 'none' }}>ziontechgroup.com</a></div>
+            <div>🌐 <a href="https://ziontechgroup.com" style={{ color: '#93c5fd' }}>ziontechgroup.com</a></div>
           </div>
         </div>
 
         {/* Services */}
-        <div className="footer-section">
-          <h3>Services</h3>
-          <Link href="/services">All Services</Link>
-          <Link href="/micro-saas">Micro SaaS Products</Link>
-          <Link href="/ai-services">AI Services</Link>
-          <Link href="/it-services">IT Services</Link>
-          <Link href="/services-catalog">Services Catalog</Link>
-          <Link href="/pricing">Pricing</Link>
-          <div className="text-sm mt-2 space-y-1">
-            <div>• 120+ Micro SaaS Products</div>
-            <div>• 80+ AI Services</div>
-            <div>• 80+ IT Solutions</div>
+        <div style={{ display: 'grid', gap: 12 }}>
+          <h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>Services</h3>
+          <div style={{ display: 'grid', gap: 8 }}>
+            <Link href="/services" style={{ opacity: 0.8, textDecoration: 'none' }}>All Services</Link>
+            <Link href="/micro-saas" style={{ opacity: 0.8, textDecoration: 'none' }}>Micro SaaS Products</Link>
+            <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none' }}>AI Services</Link>
+            <Link href="/it-services" style={{ opacity: 0.8, textDecoration: 'none' }}>IT Services</Link>
+            <Link href="/services-catalog" style={{ opacity: 0.8, textDecoration: 'none' }}>Services Catalog</Link>
+            <Link href="/pricing" style={{ opacity: 0.8, textDecoration: 'none' }}>Pricing</Link>
           </div>
         </div>
 
-        {/* Quick Links */}
-        <div className="footer-section">
-          <h3>Quick Links</h3>
-          <Link href="/">Home</Link>
-          <Link href="/about">About Us</Link>
-          <Link href="/contact">Contact Us</Link>
-          <Link href="/faq">FAQ</Link>
-          <Link href="/privacy">Privacy Policy</Link>
-          <Link href="/terms">Terms of Service</Link>
-          <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer">Main Website</a>
+        {/* Company */}
+        <div style={{ display: 'grid', gap: 12 }}>
+          <h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>Company</h3>
+          <div style={{ display: 'grid', gap: 8 }}>
+            <Link href="/" style={{ opacity: 0.8, textDecoration: 'none' }}>Home</Link>
+            <Link href="/about" style={{ opacity: 0.8, textDecoration: 'none' }}>About Us</Link>
+            <Link href="/contact" style={{ opacity: 0.8, textDecoration: 'none' }}>Contact Us</Link>
+            <Link href="/faq" style={{ opacity: 0.8, textDecoration: 'none' }}>FAQ</Link>
+            <div style={{ opacity: 0.8, fontSize: '0.9rem', marginTop: 8 }}>
+              <div>• 60+ Micro SaaS Products</div>
+              <div>• 40+ AI Services</div>
+              <div>• 40+ IT Solutions</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Legal & Support */}
+        <div style={{ display: 'grid', gap: 12 }}>
+          <h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>Legal & Support</h3>
+          <div style={{ display: 'grid', gap: 8 }}>
+            <Link href="/privacy" style={{ opacity: 0.8, textDecoration: 'none' }}>Privacy Policy</Link>
+            <Link href="/terms" style={{ opacity: 0.8, textDecoration: 'none' }}>Terms of Service</Link>
+            <Link href="/faq" style={{ opacity: 0.8, textDecoration: 'none' }}>Support</Link>
+            <a href="mailto:kleber@ziontechgroup.com" style={{ opacity: 0.8, textDecoration: 'none' }}>Support Email</a>
+          </div>
         </div>
 
         {/* Contact CTA */}
@@ -279,11 +223,12 @@ function Footer(): JSX.Element {
               padding: '10px 16px', borderRadius: 8,
               textAlign: 'center', textDecoration: 'none', fontWeight: 600
             }}>Call Now</a>
-            <a href="mailto:kleber@ziontechgroup.com" style={{ 
-              background: 'rgba(255,255,255,0.1)', color: 'white', 
+            <Link href="/services-catalog" style={{ 
+              background: 'rgba(255,255,255,0.05)', color: 'white', 
               padding: '10px 16px', borderRadius: 8,
-              textAlign: 'center', textDecoration: 'none', fontWeight: 600
-            }}>Email Us</a>
+              textAlign: 'center', textDecoration: 'none', fontWeight: 600,
+              border: '1px solid rgba(255,255,255,0.1)'
+            }}>View Catalog</Link>
           </div>
         </div>
       </div>
@@ -294,7 +239,8 @@ function Footer(): JSX.Element {
       }}>
         <small style={{ opacity: 0.7 }}>
           © {new Date().getFullYear()} Zion Tech Group. All rights reserved. | 
-          <Link href="/privacy">Privacy Policy</Link>
+          <Link href="/privacy" style={{ color: '#93c5fd', marginLeft: 8, textDecoration: 'none' }}>Privacy Policy</Link> | 
+          <Link href="/terms" style={{ color: '#93c5fd', marginLeft: 8, textDecoration: 'none' }}>Terms of Service</Link>
         </small>
       </div>
     </footer>
