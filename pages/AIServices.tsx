@@ -1,6 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
-import Head from 'next/head';
+import { Link } from 'react-router-dom';
 
 export default function AIServices() {
   const aiServices = [
@@ -348,6 +347,213 @@ export default function AIServices() {
       ],
       marketPrice: "$600-900/month",
       savings: "Save up to $550/month"
+    },
+    {
+      name: "AI Code Review Assistant",
+      description: "Intelligent code review platform that automatically analyzes code quality, identifies bugs, and suggests improvements using advanced AI algorithms.",
+      price: "$199/month",
+      features: [
+        "Automated code analysis",
+        "Bug detection and prevention",
+        "Code quality scoring",
+        "Security vulnerability scanning",
+        "Performance optimization suggestions",
+        "Code style enforcement",
+        "Integration with Git workflows",
+        "Team collaboration tools"
+      ],
+      benefits: [
+        "Reduce bugs by 70%",
+        "Improve code quality by 85%",
+        "Accelerate development cycles",
+        "Enhance team productivity"
+      ],
+      marketPrice: "$400-700/month",
+      savings: "Save up to $500/month"
+    },
+    {
+      name: "AI Customer Journey Optimizer",
+      description: "Advanced customer journey mapping and optimization platform that uses AI to identify friction points and improve conversion rates.",
+      price: "$599/month",
+      features: [
+        "Customer journey visualization",
+        "Friction point identification",
+        "Conversion optimization suggestions",
+        "A/B testing automation",
+        "Behavioral analytics",
+        "Personalization recommendations",
+        "Multi-channel tracking",
+        "ROI measurement tools"
+      ],
+      benefits: [
+        "Increase conversion rates by 60%",
+        "Reduce customer churn by 45%",
+        "Improve customer satisfaction",
+        "Optimize marketing spend"
+      ],
+      marketPrice: "$1000-1500/month",
+      savings: "Save up to $900/month"
+    },
+    {
+      name: "AI Fraud Detection System",
+      description: "Real-time fraud detection and prevention system using machine learning to identify suspicious activities and protect business transactions.",
+      price: "$799/month",
+      features: [
+        "Real-time fraud monitoring",
+        "Machine learning algorithms",
+        "Behavioral pattern analysis",
+        "Risk scoring system",
+        "Automated alerts and responses",
+        "Multi-channel protection",
+        "Custom rule configuration",
+        "Compliance reporting"
+      ],
+      benefits: [
+        "Reduce fraud losses by 90%",
+        "Minimize false positives by 80%",
+        "Protect customer data",
+        "Ensure regulatory compliance"
+      ],
+      marketPrice: "$1500-2500/month",
+      savings: "Save up to $1700/month"
+    },
+    {
+      name: "AI Personalization Engine",
+      description: "Advanced personalization platform that delivers tailored experiences across all customer touchpoints using real-time AI insights.",
+      price: "$699/month",
+      features: [
+        "Real-time personalization",
+        "Multi-channel content delivery",
+        "Behavioral prediction models",
+        "Dynamic pricing optimization",
+        "Product recommendation engine",
+        "Email personalization",
+        "Website customization",
+        "Performance analytics"
+      ],
+      benefits: [
+        "Increase engagement by 120%",
+        "Boost conversion rates by 75%",
+        "Improve customer lifetime value",
+        "Enhance user experience"
+      ],
+      marketPrice: "$1200-2000/month",
+      savings: "Save up to $1300/month"
+    },
+    {
+      name: "AI Inventory Forecasting",
+      description: "Intelligent inventory management system that predicts demand, optimizes stock levels, and prevents stockouts using advanced AI algorithms.",
+      price: "$499/month",
+      features: [
+        "Demand forecasting models",
+        "Seasonal trend analysis",
+        "Supplier performance tracking",
+        "Automated reorder points",
+        "Cost optimization",
+        "Multi-location management",
+        "Integration with ERP systems",
+        "Real-time reporting"
+      ],
+      benefits: [
+        "Reduce inventory costs by 40%",
+        "Eliminate stockouts by 95%",
+        "Improve cash flow",
+        "Optimize supplier relationships"
+      ],
+      marketPrice: "$800-1200/month",
+      savings: "Save up to $700/month"
+    },
+    {
+      name: "AI Voice Analytics Platform",
+      description: "Advanced voice analytics system that analyzes customer calls, extracts insights, and provides actionable recommendations for improvement.",
+      price: "$449/month",
+      features: [
+        "Call transcription and analysis",
+        "Sentiment analysis",
+        "Keyword extraction",
+        "Performance metrics",
+        "Quality scoring",
+        "Training recommendations",
+        "Compliance monitoring",
+        "Real-time dashboards"
+      ],
+      benefits: [
+        "Improve call quality by 80%",
+        "Increase customer satisfaction",
+        "Identify training needs",
+        "Ensure compliance standards"
+      ],
+      marketPrice: "$800-1200/month",
+      savings: "Save up to $750/month"
+    },
+    {
+      name: "AI Content Moderation System",
+      description: "Automated content moderation platform that uses AI to detect and filter inappropriate content across multiple channels and formats.",
+      price: "$399/month",
+      features: [
+        "Multi-format content analysis",
+        "Real-time moderation",
+        "Custom policy configuration",
+        "False positive reduction",
+        "Multi-language support",
+        "Escalation workflows",
+        "Analytics and reporting",
+        "API integration"
+      ],
+      benefits: [
+        "Reduce moderation costs by 85%",
+        "Improve response time by 95%",
+        "Maintain brand safety",
+        "Scale content operations"
+      ],
+      marketPrice: "$700-1000/month",
+      savings: "Save up to $600/month"
+    },
+    {
+      name: "AI Energy Optimization Platform",
+      description: "Smart energy management system that uses AI to optimize energy consumption, reduce costs, and improve sustainability across facilities.",
+      price: "$599/month",
+      features: [
+        "Energy consumption monitoring",
+        "Predictive maintenance",
+        "Cost optimization algorithms",
+        "Sustainability tracking",
+        "Real-time alerts",
+        "Integration with IoT devices",
+        "Carbon footprint analysis",
+        "Compliance reporting"
+      ],
+      benefits: [
+        "Reduce energy costs by 35%",
+        "Improve sustainability metrics",
+        "Prevent equipment failures",
+        "Ensure regulatory compliance"
+      ],
+      marketPrice: "$1000-1500/month",
+      savings: "Save up to $900/month"
+    },
+    {
+      name: "AI Translation and Localization",
+      description: "Advanced translation platform with AI-powered language processing, cultural adaptation, and real-time multilingual content generation.",
+      price: "$299/month",
+      features: [
+        "Real-time translation",
+        "Cultural adaptation",
+        "Context-aware translation",
+        "Multi-language support",
+        "Quality assurance",
+        "Integration with content systems",
+        "Custom terminology management",
+        "Performance analytics"
+      ],
+      benefits: [
+        "Expand global reach",
+        "Improve translation accuracy by 90%",
+        "Reduce localization costs by 60%",
+        "Maintain brand consistency"
+      ],
+      marketPrice: "$500-800/month",
+      savings: "Save up to $500/month"
     }
   ];
 
