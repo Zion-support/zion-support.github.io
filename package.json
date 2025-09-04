@@ -186,7 +186,15 @@
     "dev:setup": "bash scripts/dev-setup.sh",
     "quick:test": "bash scripts/quick-test.sh",
     "deploy:app": "bash scripts/deploy.sh",
-    "health:check": "bash scripts/health-check.sh"
+    "health:check": "bash scripts/health-check.sh",
+    "error-prevention:start": "node scripts/error-prevention-automation.js start",
+    "error-prevention:stop": "node scripts/error-prevention-automation.js stop",
+    "error-prevention:status": "node scripts/error-prevention-automation.js status",
+    "error-prevention:health": "node scripts/error-prevention-automation.js health",
+    "error-prevention:pm2:start": "pm2 start ecosystem.error-prevention.config.cjs",
+    "error-prevention:pm2:stop": "pm2 stop ecosystem.error-prevention.config.cjs",
+    "error-prevention:pm2:restart": "pm2 restart ecosystem.error-prevention.config.cjs",
+    "error-prevention:pm2:status": "pm2 status"
   },
   "pm2": {
     "ecosystem": "ecosystem.maintenance.cjs"
