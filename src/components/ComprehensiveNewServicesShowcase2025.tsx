@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { 
-  revolutionaryMicroSaasServices2025, 
-  comprehensiveITInfrastructureServices2025, 
-  advancedAIServices2025 
-} from '../data/comprehensiveNewServices2025';
+  NEW_MICRO_SAAS_SERVICES_2025,
+  NEW_IT_SERVICES_2025,
+  NEW_INNOVATIVE_SERVICES_2025
+} from '../data/servicesData';
 import { 
   Zap, 
   Brain, 
@@ -34,19 +34,19 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
   const [selectedService, setSelectedService] = useState<any>(null);
 
   const tabs = [
-    { id: 'micro-saas', name: 'Micro SAAS', icon: Zap, count: revolutionaryMicroSaasServices2025.length },
-    { id: 'it-services', name: 'IT Services', icon: Server, count: comprehensiveITInfrastructureServices2025.length },
-    { id: 'ai-services', name: 'AI Services', icon: Brain, count: advancedAIServices2025.length }
+    { id: 'micro-saas', name: 'Micro SAAS', icon: Zap, count: NEW_MICRO_SAAS_SERVICES_2025.length },
+    { id: 'it-services', name: 'IT Services', icon: Server, count: NEW_IT_SERVICES_2025.length },
+    { id: 'ai-services', name: 'AI Services', icon: Brain, count: NEW_INNOVATIVE_SERVICES_2025.length }
   ];
 
   const getCurrentServices = () => {
     switch (activeTab) {
       case 'micro-saas':
-        return revolutionaryMicroSaasServices2025;
+        return NEW_MICRO_SAAS_SERVICES_2025;
       case 'it-services':
-        return comprehensiveITInfrastructureServices2025;
+        return NEW_IT_SERVICES_2025;
       case 'ai-services':
-        return advancedAIServices2025;
+        return NEW_INNOVATIVE_SERVICES_2025;
       default:
         return [];
     }
