@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-const { spawn } = // // require('child_process');
-const fs = // // require('fs');
-const path = // // require('path');
+const { spawn } = require('child_process');
+const fs = require('fs');
+const path = require('path');
 
 class MasterAutomationOrchestrator {
   constructor() {
@@ -15,18 +15,21 @@ class MasterAutomationOrchestrator {
       summary: { total: 0, successful: 0, failed: 0 },
       phases: {},
       overallStatus: 'pending'
-    }}
+    };
+  }
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true })}
+      fs.mkdirSync(this.reportsDir, { recursive: true });
+    }
   }
 
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}`;
     console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage + '\n')}
+    fs.appendFileSync(this.logFile, logMessage + '\n');
+  }
 
   async runScript(scriptPath, phaseName, timeout = 300000) {
     this.log(`🚀 Starting Phase: ${phaseName}`);
@@ -42,10 +45,12 @@ class MasterAutomationOrchestrator {
       let errorOutput = '';
 
       child.stdout.on('data', (data) => {
-        output += data.toString()});
+        output += data.toString();
+      });
 
       child.stderr.on('data', (data) => {
-        errorOutput += data.toString()});
+        errorOutput += data.toString();
+      });
 
       const timeoutId = setTimeout(() => {
         child.kill('SIGTERM');
@@ -56,7 +61,8 @@ class MasterAutomationOrchestrator {
           output: output.substring(0, 1000),
           error: 'Script timed out'
         };
-        resolve({ success: false, error: 'Script timed out' })}, timeout);
+        resolve({ success: false, error: 'Script timed out' });
+      }, timeout);
 
       child.on('close', (code) => {
         clearTimeout(timeoutId);
@@ -69,7 +75,8 @@ class MasterAutomationOrchestrator {
             output: output.substring(0, 1000),
             exitCode: code
           };
-          resolve({ success: true, output })} else {
+          resolve({ success: true, output });
+        } else {
           this.log(`❌ Failed: ${phaseName} (exit code: ${code})`, 'ERROR');
           this.results.summary.failed++;
           this.results.phases[phaseName] = {
@@ -78,7 +85,8 @@ class MasterAutomationOrchestrator {
             error: errorOutput.substring(0, 1000),
             exitCode: code
           };
-          resolve({ success: false, error: errorOutput, exitCode: code })}
+          resolve({ success: false, error: errorOutput, exitCode: code });
+        }
       });
 
       child.on('error', (error) => {
@@ -89,16 +97,21 @@ class MasterAutomationOrchestrator {
           status: 'error',
           error: error.message
         };
-        resolve({ success: false, error: error.message })})})}
+        resolve({ success: false, error: error.message });
+      });
+    });
+  }
 
   async runMonitoringPhase() {
     this.log('📊 Phase 1: System Monitoring');
     const scriptPath = path.join(this.projectRoot, 'scripts', 'enhanced-monitoring-system.js');
     
     if (fs.existsSync(scriptPath)) {
-      return await this.runScript(scriptPath, 'monitoring', 60000)} else {
+      return await this.runScript(scriptPath, 'monitoring', 60000);
+    } else {
       this.log('⚠️ Monitoring script not found, skipping', 'WARN');
-      return { success: true, skipped: true }}
+      return { success: true, skipped: true };
+    }
   }
 
   async runTestPhase() {
@@ -106,9 +119,11 @@ class MasterAutomationOrchestrator {
     const scriptPath = path.join(this.projectRoot, 'scripts', 'enhanced-test-automation.js');
     
     if (fs.existsSync(scriptPath)) {
-      return await this.runScript(scriptPath, 'testing', 120000)} else {
+      return await this.runScript(scriptPath, 'testing', 120000);
+    } else {
       this.log('⚠️ Test automation script not found, skipping', 'WARN');
-      return { success: true, skipped: true }}
+      return { success: true, skipped: true };
+    }
   }
 
   async runAutomationPhase() {
@@ -116,9 +131,11 @@ class MasterAutomationOrchestrator {
     const scriptPath = path.join(this.projectRoot, 'scripts', 'enhanced-automation-orchestrator.js');
     
     if (fs.existsSync(scriptPath)) {
-      return await this.runScript(scriptPath, 'automation', 180000)} else {
+      return await this.runScript(scriptPath, 'automation', 180000);
+    } else {
       this.log('⚠️ Automation orchestrator script not found, skipping', 'WARN');
-      return { success: true, skipped: true }}
+      return { success: true, skipped: true };
+    }
   }
 
   async runDeploymentPhase() {
@@ -126,9 +143,11 @@ class MasterAutomationOrchestrator {
     const scriptPath = path.join(this.projectRoot, 'scripts', 'enhanced-deployment-automation.js');
     
     if (fs.existsSync(scriptPath)) {
-      return await this.runScript(scriptPath, 'deployment', 300000)} else {
+      return await this.runScript(scriptPath, 'deployment', 300000);
+    } else {
       this.log('⚠️ Deployment automation script not found, skipping', 'WARN');
-      return { success: true, skipped: true }}
+      return { success: true, skipped: true };
+    }
   }
 
   async runLegacyScripts() {
@@ -149,10 +168,12 @@ class MasterAutomationOrchestrator {
       if (fs.existsSync(scriptPath)) {
         this.log(`🔄 Running legacy script: ${script}`);
         const result = await this.runScript(scriptPath, `legacy_${script}`, 120000);
-        results.push({ script, ...result })}
+        results.push({ script, ...result });
+      }
     }
     
-    return results}
+    return results;
+  }
 
   async runCustomScripts() {
     this.log('⚙️ Phase 6: Custom Scripts');
@@ -171,19 +192,24 @@ class MasterAutomationOrchestrator {
       if (fs.existsSync(scriptPath)) {
         this.log(`⚙️ Running custom script: ${script}`);
         const result = await this.runScript(scriptPath, `custom_${path.basename(script)}`, 60000);
-        results.push({ script, ...result })}
+        results.push({ script, ...result });
+      }
     }
     
-    return results}
+    return results;
+  }
 
   calculateOverallStatus() {
     const totalPhases = Object.keys(this.results.phases).length;
     const successfulPhases = Object.values(this.results.phases).filter(p => p.status === 'completed').length;
     
     if (successfulPhases === totalPhases) {
-      this.results.overallStatus = 'success'} else if (successfulPhases > totalPhases / 2) {
-      this.results.overallStatus = 'partial'} else {
-      this.results.overallStatus = 'failed'}
+      this.results.overallStatus = 'success';
+    } else if (successfulPhases > totalPhases / 2) {
+      this.results.overallStatus = 'partial';
+    } else {
+      this.results.overallStatus = 'failed';
+    }
   }
 
   generateMasterReport() {
@@ -193,7 +219,8 @@ class MasterAutomationOrchestrator {
     fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));
     this.log(`📊 Master report generated: ${reportPath}`);
     
-    return reportPath}
+    return reportPath;
+  }
 
   async run() {
     this.log('🎯 Starting Master Automation Orchestrator');
@@ -230,7 +257,8 @@ class MasterAutomationOrchestrator {
         reportPath,
         summary: this.results.summary,
         overallStatus: this.results.overallStatus
-      }} catch (error) {
+      };
+    } catch (error) {
       this.log(`💥 Master automation failed: ${error.message}`, 'ERROR');
       this.results.overallStatus = 'failed';
       
@@ -242,7 +270,8 @@ class MasterAutomationOrchestrator {
         reportPath,
         summary: this.results.summary,
         overallStatus: this.results.overallStatus
-      }}
+      };
+    }
   }
 }
 
@@ -250,6 +279,8 @@ class MasterAutomationOrchestrator {
 if (require.main === module) {
   const orchestrator = new MasterAutomationOrchestrator();
   orchestrator.run().then(result => {
-    process.exit(result.success ? 0 : 1)})}
+    process.exit(result.success ? 0 : 1);
+  });
+}
 
 module.exports = MasterAutomationOrchestrator;

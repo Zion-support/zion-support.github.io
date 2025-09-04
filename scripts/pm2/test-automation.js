@@ -56,7 +56,7 @@ class TestAutomation {
     try {
       // Check if test script exists in package.json
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-      const testScript = packageJson.scripts?.test || packageJson.scripts?.test:smoke;
+      const testScript = packageJson.scripts?.test || packageJson.scripts?.['test:smoke'];
       
       if (!testScript) {
         this.log('No test script found in package.json', 'WARNING');
