@@ -1,34 +1,26 @@
 {
-  "timestamp": "2025-09-03T16:52:55.156Z",
-  "checks": {
-    "NPM Audit": {
-      "status": "passed",
-      "message": "Audit check completed"
+  "timestamp": "2025-09-04T00:00:10.786Z",
+  "scans": {
+    "packageJson": {
+      "status": "completed",
+      "dependencies": 111,
+      "vulnerablePackages": 0
     },
-    "Sensitive Files": {
-      "status": "passed",
-      "message": "No sensitive files in root directory"
+    "sensitiveFiles": {
+      "status": "completed",
+      "found": 0,
+      "files": []
     },
-    "Hardcoded Secrets": {
-      "status": "passed",
-      "message": "No obvious hardcoded secrets found"
+    "codeScan": {
+      "status": "completed",
+      "filesScanned": 10,
+      "potentialSecrets": 0
     },
-    "HTTPS Configuration": {
-      "status": "warning",
-      "warning": true,
-      "message": "HTTPS configuration not found"
-    },
-    "Security Headers": {
-      "status": "passed",
-      "message": "Security headers configured"
+    "npmAudit": {
+      "status": "skipped",
+      "message": "npm audit not available or failed"
     }
   },
   "vulnerabilities": [],
-  "summary": {
-    "total": 5,
-    "passed": 4,
-    "failed": 0,
-    "warnings": 1,
-    "vulnerabilities": 0
-  }
+  "status": "secure"
 }
