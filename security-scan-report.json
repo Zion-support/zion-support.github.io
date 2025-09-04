@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "timestamp": "2025-09-04T02:05:34.188Z",
   "status": "failed",
   "scans": [
@@ -85,4 +86,30 @@
     "low": 0,
     "info": 0
   }
+=======
+  "timestamp": "2025-09-04T00:00:10.786Z",
+  "scans": {
+    "packageJson": {
+      "status": "completed",
+      "dependencies": 111,
+      "vulnerablePackages": 0
+    },
+    "sensitiveFiles": {
+      "status": "completed",
+      "found": 0,
+      "files": []
+    },
+    "codeScan": {
+      "status": "completed",
+      "filesScanned": 10,
+      "potentialSecrets": 0
+    },
+    "npmAudit": {
+      "status": "skipped",
+      "message": "npm audit not available or failed"
+    }
+  },
+  "vulnerabilities": [],
+  "status": "secure"
+>>>>>>> 128840a43b844df0edc9aa22038e6fb53d898bf5
 }
