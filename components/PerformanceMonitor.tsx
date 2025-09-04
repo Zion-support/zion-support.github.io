@@ -10,6 +10,7 @@ const PerformanceMonitor: React.FC = () => {
           if (entry.entryType === 'largest-contentful-paint') {
             console.log('LCP:', entry.startTime);
           }
+        }
       });
       
       try {
