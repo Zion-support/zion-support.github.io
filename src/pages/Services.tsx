@@ -434,7 +434,7 @@ export default function Services() {
                 View Solutions
               </Link>
             </div>
-          </motion.div>
+          ))}
         </div>
       </section>
 
