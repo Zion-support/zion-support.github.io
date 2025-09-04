@@ -319,3 +319,6 @@ export const AIChatbotSystem: Reac t.FC<AIChatbotSystemProps> = ({
     </>
   );
 };
+
+
+export default AIChatbotSystem;

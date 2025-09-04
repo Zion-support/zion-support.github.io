@@ -10,3 +10,6 @@ function Skeleton({ className = '', ...props }) {
 }
 
 export { Skeleton };
+
+
+export default skeleton;
