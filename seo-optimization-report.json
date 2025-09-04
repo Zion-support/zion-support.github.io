@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-04T02:58:47.361Z",
+  "timestamp": "2025-09-04T02:55:58.186Z",
   "pages": [
     {
       "file": "pages/404.tsx",
@@ -96,60 +96,6 @@
       "externalLinks": 0,
       "issues": [
         "Title is too short (less than 30 characters)"
-      ],
-      "recommendations": [
-        "Add canonical URL",
-        "Add Open Graph meta tags",
-        "Add Twitter Card meta tags",
-        "Add structured data (JSON-LD)"
-      ]
-    },
-    {
-      "file": "pages/api/docs.ts",
-      "hasTitle": false,
-      "hasMetaDescription": false,
-      "hasMetaKeywords": false,
-      "hasCanonical": false,
-      "hasOpenGraph": false,
-      "hasTwitterCard": false,
-      "hasStructuredData": false,
-      "h1Count": 0,
-      "h2Count": 0,
-      "imageCount": 0,
-      "imagesWithAlt": 0,
-      "internalLinks": 0,
-      "externalLinks": 0,
-      "issues": [
-        "Missing title tag",
-        "Missing meta description",
-        "No H1 tag found"
-      ],
-      "recommendations": [
-        "Add canonical URL",
-        "Add Open Graph meta tags",
-        "Add Twitter Card meta tags",
-        "Add structured data (JSON-LD)"
-      ]
-    },
-    {
-      "file": "pages/api/health.ts",
-      "hasTitle": false,
-      "hasMetaDescription": false,
-      "hasMetaKeywords": false,
-      "hasCanonical": false,
-      "hasOpenGraph": false,
-      "hasTwitterCard": false,
-      "hasStructuredData": false,
-      "h1Count": 0,
-      "h2Count": 0,
-      "imageCount": 0,
-      "imagesWithAlt": 0,
-      "internalLinks": 0,
-      "externalLinks": 0,
-      "issues": [
-        "Missing title tag",
-        "Missing meta description",
-        "No H1 tag found"
       ],
       "recommendations": [
         "Add canonical URL",
@@ -354,52 +300,6 @@
       ]
     },
     {
-      "file": "pages/docs/api-quick-start.tsx",
-      "hasTitle": true,
-      "hasMetaDescription": true,
-      "hasMetaKeywords": false,
-      "hasCanonical": true,
-      "hasOpenGraph": false,
-      "hasTwitterCard": false,
-      "hasStructuredData": false,
-      "h1Count": 1,
-      "h2Count": 5,
-      "imageCount": 0,
-      "imagesWithAlt": 0,
-      "internalLinks": 0,
-      "externalLinks": 0,
-      "issues": [
-        "Meta description is too short (less than 120 characters)"
-      ],
-      "recommendations": [
-        "Add Open Graph meta tags",
-        "Add Twitter Card meta tags",
-        "Add structured data (JSON-LD)"
-      ]
-    },
-    {
-      "file": "pages/docs/api-reference.tsx",
-      "hasTitle": true,
-      "hasMetaDescription": true,
-      "hasMetaKeywords": false,
-      "hasCanonical": true,
-      "hasOpenGraph": false,
-      "hasTwitterCard": false,
-      "hasStructuredData": false,
-      "h1Count": 1,
-      "h2Count": 6,
-      "imageCount": 0,
-      "imagesWithAlt": 0,
-      "internalLinks": 0,
-      "externalLinks": 0,
-      "issues": [],
-      "recommendations": [
-        "Add Open Graph meta tags",
-        "Add Twitter Card meta tags",
-        "Add structured data (JSON-LD)"
-      ]
-    },
-    {
       "file": "pages/docs/authentication.tsx",
       "hasTitle": true,
       "hasMetaDescription": true,
@@ -469,54 +369,6 @@
       ],
       "recommendations": [
         "Add canonical URL",
-        "Add Open Graph meta tags",
-        "Add Twitter Card meta tags",
-        "Add structured data (JSON-LD)"
-      ]
-    },
-    {
-      "file": "pages/docs/integration-examples.tsx",
-      "hasTitle": true,
-      "hasMetaDescription": true,
-      "hasMetaKeywords": false,
-      "hasCanonical": true,
-      "hasOpenGraph": false,
-      "hasTwitterCard": false,
-      "hasStructuredData": false,
-      "h1Count": 1,
-      "h2Count": 6,
-      "imageCount": 0,
-      "imagesWithAlt": 0,
-      "internalLinks": 0,
-      "externalLinks": 0,
-      "issues": [
-        "Meta description is too short (less than 120 characters)"
-      ],
-      "recommendations": [
-        "Add Open Graph meta tags",
-        "Add Twitter Card meta tags",
-        "Add structured data (JSON-LD)"
-      ]
-    },
-    {
-      "file": "pages/docs/sdk.tsx",
-      "hasTitle": true,
-      "hasMetaDescription": true,
-      "hasMetaKeywords": false,
-      "hasCanonical": true,
-      "hasOpenGraph": false,
-      "hasTwitterCard": false,
-      "hasStructuredData": false,
-      "h1Count": 1,
-      "h2Count": 6,
-      "imageCount": 0,
-      "imagesWithAlt": 0,
-      "internalLinks": 0,
-      "externalLinks": 0,
-      "issues": [
-        "Meta description is too short (less than 120 characters)"
-      ],
-      "recommendations": [
         "Add Open Graph meta tags",
         "Add Twitter Card meta tags",
         "Add structured data (JSON-LD)"
@@ -622,18 +474,20 @@
       "hasTitle": true,
       "hasMetaDescription": true,
       "hasMetaKeywords": true,
-      "hasCanonical": true,
+      "hasCanonical": false,
       "hasOpenGraph": true,
-      "hasTwitterCard": true,
+      "hasTwitterCard": false,
       "hasStructuredData": false,
       "h1Count": 1,
-      "h2Count": 1,
+      "h2Count": 4,
       "imageCount": 0,
       "imagesWithAlt": 0,
       "internalLinks": 0,
       "externalLinks": 0,
       "issues": [],
       "recommendations": [
+        "Add canonical URL",
+        "Add Twitter Card meta tags",
         "Add structured data (JSON-LD)"
       ]
     },
@@ -810,20 +664,20 @@
       "file": "pages/pricing.tsx",
       "hasTitle": true,
       "hasMetaDescription": true,
-      "hasMetaKeywords": false,
+      "hasMetaKeywords": true,
       "hasCanonical": false,
       "hasOpenGraph": false,
       "hasTwitterCard": false,
       "hasStructuredData": false,
       "h1Count": 1,
-      "h2Count": 0,
+      "h2Count": 1,
       "imageCount": 0,
       "imagesWithAlt": 0,
       "internalLinks": 0,
       "externalLinks": 0,
       "issues": [
-        "Title is too short (less than 30 characters)",
-        "Meta description is too short (less than 120 characters)"
+        "Title is too long (more than 60 characters)",
+        "Meta description is too long (more than 160 characters)"
       ],
       "recommendations": [
         "Add canonical URL",
@@ -883,6 +737,78 @@
     },
     {
       "file": "pages/request-quote.tsx",
+      "hasTitle": true,
+      "hasMetaDescription": true,
+      "hasMetaKeywords": true,
+      "hasCanonical": true,
+      "hasOpenGraph": true,
+      "hasTwitterCard": false,
+      "hasStructuredData": false,
+      "h1Count": 0,
+      "h2Count": 1,
+      "imageCount": 0,
+      "imagesWithAlt": 0,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "issues": [
+        "Meta description is too short (less than 120 characters)",
+        "No H1 tag found"
+      ],
+      "recommendations": [
+        "Add Twitter Card meta tags",
+        "Add structured data (JSON-LD)"
+      ]
+    },
+    {
+      "file": "pages/services-comparison.tsx",
+      "hasTitle": true,
+      "hasMetaDescription": true,
+      "hasMetaKeywords": true,
+      "hasCanonical": false,
+      "hasOpenGraph": true,
+      "hasTwitterCard": false,
+      "hasStructuredData": false,
+      "h1Count": 1,
+      "h2Count": 2,
+      "imageCount": 0,
+      "imagesWithAlt": 0,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "issues": [
+        "Meta description is too short (less than 120 characters)"
+      ],
+      "recommendations": [
+        "Add canonical URL",
+        "Add Twitter Card meta tags",
+        "Add structured data (JSON-LD)"
+      ]
+    },
+    {
+      "file": "pages/services-overview.tsx",
+      "hasTitle": true,
+      "hasMetaDescription": true,
+      "hasMetaKeywords": true,
+      "hasCanonical": false,
+      "hasOpenGraph": true,
+      "hasTwitterCard": false,
+      "hasStructuredData": false,
+      "h1Count": 1,
+      "h2Count": 3,
+      "imageCount": 0,
+      "imagesWithAlt": 0,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "issues": [
+        "Meta description is too short (less than 120 characters)"
+      ],
+      "recommendations": [
+        "Add canonical URL",
+        "Add Twitter Card meta tags",
+        "Add structured data (JSON-LD)"
+      ]
+    },
+    {
+      "file": "pages/services/blockchain.tsx",
       "hasTitle": true,
       "hasMetaDescription": true,
       "hasMetaKeywords": false,
@@ -978,51 +904,6 @@
       ]
     },
     {
-      "file": "pages/services/ai-analytics.tsx",
-      "hasTitle": true,
-      "hasMetaDescription": true,
-      "hasMetaKeywords": true,
-      "hasCanonical": true,
-      "hasOpenGraph": true,
-      "hasTwitterCard": true,
-      "hasStructuredData": false,
-      "h1Count": 1,
-      "h2Count": 2,
-      "imageCount": 0,
-      "imagesWithAlt": 0,
-      "internalLinks": 0,
-      "externalLinks": 0,
-      "issues": [
-        "Title is too long (more than 60 characters)",
-        "Meta description is too long (more than 160 characters)"
-      ],
-      "recommendations": [
-        "Add structured data (JSON-LD)"
-      ]
-    },
-    {
-      "file": "pages/services/blockchain.tsx",
-      "hasTitle": true,
-      "hasMetaDescription": true,
-      "hasMetaKeywords": true,
-      "hasCanonical": true,
-      "hasOpenGraph": true,
-      "hasTwitterCard": true,
-      "hasStructuredData": false,
-      "h1Count": 1,
-      "h2Count": 2,
-      "imageCount": 0,
-      "imagesWithAlt": 0,
-      "internalLinks": 0,
-      "externalLinks": 0,
-      "issues": [
-        "Title is too long (more than 60 characters)"
-      ],
-      "recommendations": [
-        "Add structured data (JSON-LD)"
-      ]
-    },
-    {
       "file": "pages/services-catalog.tsx",
       "hasTitle": true,
       "hasMetaDescription": true,
@@ -1090,31 +971,6 @@
       ],
       "recommendations": [
         "Add canonical URL",
-        "Add Twitter Card meta tags",
-        "Add structured data (JSON-LD)"
-      ]
-    },
-    {
-      "file": "pages/services/blockchain.tsx",
-      "hasTitle": true,
-      "hasMetaDescription": true,
-      "hasMetaKeywords": false,
-      "hasCanonical": false,
-      "hasOpenGraph": false,
-      "hasTwitterCard": false,
-      "hasStructuredData": false,
-      "h1Count": 1,
-      "h2Count": 2,
-      "imageCount": 0,
-      "imagesWithAlt": 0,
-      "internalLinks": 0,
-      "externalLinks": 0,
-      "issues": [
-        "Meta description is too short (less than 120 characters)"
-      ],
-      "recommendations": [
-        "Add canonical URL",
-        "Add Open Graph meta tags",
         "Add Twitter Card meta tags",
         "Add structured data (JSON-LD)"
       ]
@@ -1262,6 +1118,150 @@
       ]
     },
     {
+      "file": "pages/signup.tsx",
+      "hasTitle": true,
+      "hasMetaDescription": true,
+      "hasMetaKeywords": true,
+      "hasCanonical": false,
+      "hasOpenGraph": true,
+      "hasTwitterCard": false,
+      "hasStructuredData": false,
+      "h1Count": 1,
+      "h2Count": 0,
+      "imageCount": 0,
+      "imagesWithAlt": 0,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "issues": [],
+      "recommendations": [
+        "Add canonical URL",
+        "Add Twitter Card meta tags",
+        "Add structured data (JSON-LD)"
+      ]
+    },
+    {
+      "file": "pages/sitemap.tsx",
+      "hasTitle": true,
+      "hasMetaDescription": true,
+      "hasMetaKeywords": false,
+      "hasCanonical": false,
+      "hasOpenGraph": false,
+      "hasTwitterCard": false,
+      "hasStructuredData": false,
+      "h1Count": 1,
+      "h2Count": 4,
+      "imageCount": 0,
+      "imagesWithAlt": 0,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "issues": [
+        "Title is too short (less than 30 characters)",
+        "Meta description is too short (less than 120 characters)"
+      ],
+      "recommendations": [
+        "Add canonical URL",
+        "Add Open Graph meta tags",
+        "Add Twitter Card meta tags",
+        "Add structured data (JSON-LD)"
+      ]
+    },
+    {
+      "file": "pages/solutions/enterprise.tsx",
+      "hasTitle": true,
+      "hasMetaDescription": true,
+      "hasMetaKeywords": true,
+      "hasCanonical": false,
+      "hasOpenGraph": true,
+      "hasTwitterCard": false,
+      "hasStructuredData": false,
+      "h1Count": 1,
+      "h2Count": 3,
+      "imageCount": 0,
+      "imagesWithAlt": 0,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "issues": [
+        "Title is too long (more than 60 characters)",
+        "Meta description is too long (more than 160 characters)"
+      ],
+      "recommendations": [
+        "Add canonical URL",
+        "Add Twitter Card meta tags",
+        "Add structured data (JSON-LD)"
+      ]
+    },
+    {
+      "file": "pages/solutions.tsx",
+      "hasTitle": true,
+      "hasMetaDescription": true,
+      "hasMetaKeywords": false,
+      "hasCanonical": true,
+      "hasOpenGraph": false,
+      "hasTwitterCard": false,
+      "hasStructuredData": false,
+      "h1Count": 1,
+      "h2Count": 0,
+      "imageCount": 0,
+      "imagesWithAlt": 0,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "issues": [
+        "Title is too short (less than 30 characters)",
+        "Meta description is too short (less than 120 characters)"
+      ],
+      "recommendations": [
+        "Add Open Graph meta tags",
+        "Add Twitter Card meta tags",
+        "Add structured data (JSON-LD)"
+      ]
+    },
+    {
+      "file": "pages/status.tsx",
+      "hasTitle": true,
+      "hasMetaDescription": true,
+      "hasMetaKeywords": true,
+      "hasCanonical": false,
+      "hasOpenGraph": true,
+      "hasTwitterCard": false,
+      "hasStructuredData": false,
+      "h1Count": 1,
+      "h2Count": 4,
+      "imageCount": 0,
+      "imagesWithAlt": 0,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "issues": [
+        "Meta description is too short (less than 120 characters)"
+      ],
+      "recommendations": [
+        "Add canonical URL",
+        "Add Twitter Card meta tags",
+        "Add structured data (JSON-LD)"
+      ]
+    },
+    {
+      "file": "pages/team.tsx",
+      "hasTitle": true,
+      "hasMetaDescription": true,
+      "hasMetaKeywords": true,
+      "hasCanonical": false,
+      "hasOpenGraph": true,
+      "hasTwitterCard": false,
+      "hasStructuredData": false,
+      "h1Count": 1,
+      "h2Count": 3,
+      "imageCount": 0,
+      "imagesWithAlt": 0,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "issues": [],
+      "recommendations": [
+        "Add canonical URL",
+        "Add Twitter Card meta tags",
+        "Add structured data (JSON-LD)"
+      ]
+    },
+    {
       "file": "pages/terms.tsx",
       "hasTitle": true,
       "hasMetaDescription": true,
@@ -1378,11 +1378,11 @@
     "Implement proper heading hierarchy (H1 > H2 > H3)"
   ],
   "metrics": {
-    "totalPages": 56,
-    "pagesWithMeta": 48,
-    "pagesWithTitle": 48,
+    "totalPages": 48,
+    "pagesWithMeta": 42,
+    "pagesWithTitle": 42,
     "pagesWithDescription": 0,
-    "pagesWithOpenGraph": 21,
+    "pagesWithOpenGraph": 19,
     "pagesWithStructuredData": 1,
     "pagesWithMetaDescription": null
   }

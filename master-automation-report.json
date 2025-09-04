@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-04T02:50:15.065Z",
+  "timestamp": "2025-09-04T02:55:27.818Z",
   "duration": "0s",
   "results": {
     "automation": {
@@ -7,7 +7,7 @@
     },
     "testing": {
       "success": false,
-      "error": "Cannot find module './test-suite.js'\nRequire stack:\n- /workspace/master-automation.cjs"
+      "error": "Class constructor TestSuite cannot be invoked without 'new'"
     },
     "git": {
       "success": true

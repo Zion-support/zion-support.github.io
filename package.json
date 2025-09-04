@@ -156,14 +156,18 @@
     "test:watch": "jest --watch --config jest.config.ts",
     "test:coverage": "jest --coverage --config jest.config.ts",
     "analyze": "ANALYZE=true npm run build",
-    "build:production": "NODE_ENV=production npm run build",
     "dev:fast": "npm run dev -- --turbo",
     "lint:check": "eslint . --max-warnings 0",
     "automation:master": "node automation/master-orchestrator.cjs",
     "automation:performance": "node automation/performance-optimizer.cjs",
     "automation:seo": "node automation/seo-optimizer.cjs",
     "automation:health": "node automation/health-check.cjs",
-    "automation:security": "node automation/security-scanner.cjs"
+    "automation:security": "node automation/security-scanner.cjs",
+    "automation:run": "node comprehensive-automation.js",
+    "automation:test": "node test-suite.js",
+    "automation:git": "node git-workflow.js",
+    "test:comprehensive": "node test-suite.js",
+    "performance:monitor": "node scripts/performance-monitor.js"
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
