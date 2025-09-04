@@ -17,6 +17,7 @@ const PerformanceMonitor: React.FC = () => {
           }
         }
       };
+
       // Monitor Largest Contentful Paint (LCP)
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {

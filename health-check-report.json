@@ -1,52 +1,31 @@
 {
-  "timestamp": "2025-09-04T02:10:00.397Z",
-  "duration": "2ms",
-=======
-  "timestamp": "2025-09-04T02:31:34.193Z",
-  "duration": "1ms",
-  "overallStatus": "healthy",
-  "summary": {
-    "total": 7,
-    "healthy": 7,
-    "warnings": 0,
-    "unhealthy": 0
-  },
+  "timestamp": "2025-09-04T02:50:46.794Z",
   "checks": [
     {
-      "name": "File System",
-      "status": "healthy",
-      "details": "File system accessible"
+      "name": "Package.json exists",
+      "status": "pass",
+      "result": "package.json found"
     },
     {
-      "name": "Node.js Version",
-      "status": "healthy",
-      "details": "Node.js v22.16.0 (compatible)"
+      "name": "Dependencies installed",
+      "status": "pass",
+      "result": "Dependencies installed"
     },
     {
-      "name": "Package.json",
-      "status": "healthy",
-      "details": "Package: ziontechgroup.com v0.1.0"
+      "name": "Build process",
+      "status": "fail",
+      "error": "Build failed"
     },
     {
-      "name": "Dependencies",
-      "status": "healthy",
-      "details": "node_modules directory exists"
+      "name": "Linting",
+      "status": "pass",
+      "result": "Linting passed"
     },
     {
-      "name": "Build System",
-      "status": "healthy",
-      "details": "Next.js configuration found"
-    },
-    {
-      "name": "Source Files",
-      "status": "healthy",
-      "details": "Required directories present"
-    },
-    {
-      "name": "Environment",
-      "status": "healthy",
-      "details": "Required environment variables set"
+      "name": "TypeScript compilation",
+      "status": "fail",
+      "error": "TypeScript compilation failed"
     }
-  ]
->>>>>>> c5ae1602a7f (Fix environment variable configuration and update health check status)
+  ],
+  "status": "unhealthy"
 }

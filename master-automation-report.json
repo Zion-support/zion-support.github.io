@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-04T02:23:12.916Z",
+  "timestamp": "2025-09-04T02:50:15.065Z",
   "duration": "0s",
   "results": {
     "automation": {
@@ -8,7 +8,7 @@
     },
     "testing": {
       "success": false,
-      "error": "require is not defined"
+      "error": "Cannot find module './test-suite.js'\nRequire stack:\n- /workspace/master-automation.cjs"
     },
     "git": {
       "success": false,

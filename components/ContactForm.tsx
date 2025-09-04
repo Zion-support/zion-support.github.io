@@ -25,8 +25,7 @@ const ContactForm: React.FC = () => {
   const [errors, setErrors] = useState<Partial<FormData>>({});
 
   const validateForm = useCallback((data: FormData): Partial<FormData> => {
-    const newErrors: Partial<FormData> = {};
-    
+    const newErrors: Partial<FormData> = {}
     if (!data.name.trim()) newErrors.name = 'Name is required';
     if (!data.email.trim()) newErrors.email = 'Email is required';
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) newErrors.email = 'Invalid email format';
@@ -101,6 +100,11 @@ const ContactForm: React.FC = () => {
             placeholder="Your full name"
             aria-describedby="name-error"
           />
+          {errors.name && (
+            <p id="name-error" className="mt-1 text-sm text-red-400" role="alert">
+              {errors.name}
+            </p>
+          )}
         </div>
 
         <div>
@@ -118,6 +122,11 @@ const ContactForm: React.FC = () => {
             placeholder="your.email@company.com"
             aria-describedby="email-error"
           />
+          {errors.email && (
+            <p id="email-error" className="mt-1 text-sm text-red-400" role="alert">
+              {errors.email}
+            </p>
+          )}
         </div>
       </div>
 
@@ -165,9 +174,11 @@ const ContactForm: React.FC = () => {
           className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
         >
           <option value="">Select a service</option>
-          <option value="micro-saas">Micro SaaS Products</option>
-          <option value="ai-services">AI Services</option>
-          <option value="it-services">IT & Cloud Services</option>
+          <option value="web-development">Web Development</option>
+          <option value="mobile-development">Mobile Development</option>
+          <option value="cloud-solutions">Cloud Solutions</option>
+          <option value="ai-ml">AI & Machine Learning</option>
+          <option value="cybersecurity">Cybersecurity</option>
           <option value="consulting">Consulting</option>
           <option value="other">Other</option>
         </select>
@@ -183,22 +194,32 @@ const ContactForm: React.FC = () => {
           value={formData.message}
           onChange={handleInputChange}
           required
-          rows={5}
+          rows={6}
           className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-vertical"
-          placeholder="Tell us about your project requirements..."
+          placeholder="Tell us about your project or how we can help you..."
           aria-describedby="message-error"
         />
+        {errors.message && (
+          <p id="message-error" className="mt-1 text-sm text-red-400" role="alert">
+            {errors.message}
+          </p>
+        )}
       </div>
 
+      {/* Status Messages */}
       {submitStatus === 'success' && (
-        <div className="p-4 bg-green-900/50 border border-green-500 rounded-lg text-green-300" role="alert">
-          Thank you for your message! We&apos;ll get back to you within 24 hours.
+        <div className="p-4 bg-green-900/20 border border-green-500/30 rounded-lg">
+          <p className="text-green-400 text-sm">
+            ✅ Thank you! Your message has been sent successfully. We'll get back to you soon.
+          </p>
         </div>
       )}
 
       {submitStatus === 'error' && (
-        <div className="p-4 bg-red-900/50 border border-red-500 rounded-lg text-red-300" role="alert">
-          There was an error sending your message. Please try again or contact us directly.
+        <div className="p-4 bg-red-900/20 border border-red-500/30 rounded-lg">
+          <p className="text-red-400 text-sm">
+            ❌ Sorry, there was an error sending your message. Please try again.
+          </p>
         </div>
       )}
 

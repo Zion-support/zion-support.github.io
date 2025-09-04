@@ -8,8 +8,7 @@ export default function Login() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  };
-
+  }
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -22,15 +21,13 @@ export default function Login() {
       ...prev,
       [name]: type === 'checkbox' ? checked : value
     }));
-  };
-
+  }
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle login logic here
     console.log('Login attempt:', formData);
     alert('Login functionality will be implemented with authentication system.');
-  };
-
+  }
   return (
     <>
       <Head>

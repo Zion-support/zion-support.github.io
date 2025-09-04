@@ -16,8 +16,7 @@ export default function PerformanceOptimizer() {
         link.href = src;
         document.head.appendChild(link);
       });
-    };
-
+    }
     // Optimize images with lazy loading
     const optimizeImages = () => {
       const images = document.querySelectorAll('img[data-src]');
@@ -33,8 +32,7 @@ export default function PerformanceOptimizer() {
       });
 
       images.forEach((img) => imageObserver.observe(img));
-    };
-
+    }
     // Initialize optimizations
     preloadCriticalResources();
     optimizeImages();
@@ -42,7 +40,7 @@ export default function PerformanceOptimizer() {
     // Cleanup
     return () => {
       // Cleanup if needed
-    };
+    }
   }, []);
 
   return null; // This component doesn't render anything
@@ -54,4 +52,3 @@ export const reportWebVitals = (metric: any) => {
     // Send to analytics service
     console.log('Web Vital:', metric);
   }
-};

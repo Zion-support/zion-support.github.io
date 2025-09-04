@@ -162,6 +162,5 @@ const ContactSection: React.FC = () => {
       </div>
     </section>
   );
-};
-
+}
 export default ContactSection;
