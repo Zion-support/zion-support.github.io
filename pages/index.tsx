@@ -86,17 +86,17 @@ export default function Home() {
             </div>
 
             <div className="grid md:grid-cols-3 gap-6 text-center">
-              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
-                <h3 className="text-2xl font-bold text-blue-400 mb-2">150+</h3>
-                <p className="text-slate-300">Micro SaaS Products</p>
+              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 hover:border-blue-500/40 transition-all duration-300 hover:scale-105 group">
+                <h3 className="text-2xl font-bold text-blue-400 mb-2 group-hover:text-blue-300 transition-colors">150+</h3>
+                <p className="text-slate-300 group-hover:text-slate-200 transition-colors">Micro SaaS Products</p>
               </div>
-              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
- (feat: Add 30+ new innovative services across micro SaaS, AI, and IT categories)
-                <p className="text-slate-300">AI Services</p>
+              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 hover:border-purple-500/40 transition-all duration-300 hover:scale-105 group">
+                <h3 className="text-2xl font-bold text-purple-400 mb-2 group-hover:text-purple-300 transition-colors" aria-label="100 plus AI services">100+</h3>
+                <p className="text-slate-300 group-hover:text-slate-200 transition-colors">AI Services</p>
               </div>
-              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
-                <h3 className="text-2xl font-bold text-green-400 mb-2">100+</h3>
-                <p className="text-slate-300">IT Solutions</p>
+              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 hover:border-green-500/40 transition-all duration-300 hover:scale-105 group">
+                <h3 className="text-2xl font-bold text-green-400 mb-2 group-hover:text-green-300 transition-colors">100+</h3>
+                <p className="text-slate-300 group-hover:text-slate-200 transition-colors">IT Solutions</p>
               </div>
             </div>
           </div>
