@@ -4,34 +4,34 @@ import Link from 'next/link';
 import { Cloud, Server, Database, Shield, Zap, Users } from 'lucide-react';
 
 export default function CloudDevOps() {
-  const contact ={
-    phone: email, 'kleber@ziontechgroup.com'
-    address: site, 'https://ziontechgroup.com'
-  }
+  const contact = {
+    email: 'kleber@ziontechgroup.com',
+    site: 'https://ziontechgroup.com'
+  };
   const services = [
     {
       icon: Cloud,
-      title: 'Cloud Migration & Strategy'
-      description: 'Seamless migration to AWS, Azure, or GCP with zero downtime and optimized cost structures.'
-      features: ['Multi-cloud strategy' 'Cost optimization' 'Security compliance' 'Performance monitoring']
+      title: 'Cloud Migration & Strategy',
+      description: 'Seamless migration to AWS, Azure, or GCP with zero downtime and optimized cost structures.',
+      features: ['Multi-cloud strategy', 'Cost optimization', 'Security compliance', 'Performance monitoring']
     },
     {
       icon: Server,
-      title: 'Infrastructure as Code'
-      description: 'Automated infrastructure provisioning and management using Terraform, Ansible, and CloudFormation.'
-      features: ['Terraform automation' 'Ansible playbooks' 'CloudFormation templates' 'GitOps workflows']
+      title: 'Infrastructure as Code',
+      description: 'Automated infrastructure provisioning and management using Terraform, Ansible, and CloudFormation.',
+      features: ['Terraform automation', 'Ansible playbooks', 'CloudFormation templates', 'GitOps workflows']
     },
     {
       icon: Database,
-      title: 'Database Management'
-      description: 'High-performance database solutions with automated backups, scaling, and optimization.'
-      features: ['Database migration' 'Performance tuning' 'Automated backups' 'High availability']
+      title: 'Database Management',
+      description: 'High-performance database solutions with automated backups, scaling, and optimization.',
+      features: ['Database migration', 'Performance tuning', 'Automated backups', 'High availability']
     },
     {
       icon: Shield,
-      title: 'DevSecOps & Security'
-      description: 'Integrated security practices throughout the development lifecycle with automated compliance.'
-      features: ['Security scanning' 'Compliance automation' 'Vulnerability management' 'Access controls']
+      title: 'DevSecOps & Security',
+      description: 'Integrated security practices throughout the development lifecycle with automated compliance.',
+      features: ['Security scanning', 'Compliance automation', 'Vulnerability management', 'Access controls']
     },
     {
       icon: Zap,
