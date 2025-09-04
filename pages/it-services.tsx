@@ -1298,6 +1298,351 @@ export default function ITServices() {
         'Advanced data processing and analysis'
       ],
       category: 'High-Performance Computing'
+    },
+    {
+      icon: Brain,
+      name: 'AI-Powered DevOps & MLOps Platform',
+      description: 'Intelligent DevOps platform that automates CI/CD pipelines, monitors system health, and optimizes machine learning model deployment.',
+      features: [
+        'AI-powered CI/CD pipeline optimization',
+        'Automated testing and quality assurance',
+        'ML model deployment and monitoring',
+        'Intelligent infrastructure scaling',
+        'Predictive failure detection and prevention',
+        'Integration with cloud platforms and tools'
+      ],
+      pricing: '$150 – $350/hour',
+      projectPricing: '$25,000 – $150,000/project',
+      timeline: '6–16 weeks',
+      benefits: [
+        '50% reduction in deployment time',
+        'Automated quality assurance',
+        'Improved system reliability',
+        'Optimized resource utilization'
+      ],
+      category: 'DevOps & Automation'
+    },
+    {
+      icon: Shield,
+      name: 'Zero Trust Security Architecture',
+      description: 'Comprehensive zero trust security implementation with identity verification, micro-segmentation, and continuous monitoring.',
+      features: [
+        'Identity and access management (IAM)',
+        'Network micro-segmentation',
+        'Continuous security monitoring',
+        'Privileged access management',
+        'Data loss prevention (DLP)',
+        'Security orchestration and automation'
+      ],
+      pricing: '$200 – $500/hour',
+      projectPricing: '$50,000 – $300,000/project',
+      timeline: '8–20 weeks',
+      benefits: [
+        'Enhanced security posture',
+        'Reduced attack surface',
+        'Compliance with security standards',
+        'Automated threat response'
+      ],
+      category: 'Cybersecurity'
+    },
+    {
+      icon: Globe,
+      name: 'Multi-Cloud Management & Optimization',
+      description: 'Comprehensive multi-cloud strategy with cost optimization, security management, and performance monitoring across AWS, Azure, and GCP.',
+      features: [
+        'Multi-cloud architecture design',
+        'Cost optimization and FinOps',
+        'Security and compliance management',
+        'Performance monitoring and optimization',
+        'Disaster recovery and backup',
+        'Cloud migration and modernization'
+      ],
+      pricing: '$180 – $400/hour',
+      projectPricing: '$40,000 – $250,000/project',
+      timeline: '6–24 weeks',
+      benefits: [
+        '30% reduction in cloud costs',
+        'Improved security and compliance',
+        'Enhanced performance and reliability',
+        'Simplified cloud management'
+      ],
+      category: 'Cloud Management'
+    },
+    {
+      icon: Database,
+      name: 'Data Lake & Analytics Platform',
+      description: 'Enterprise data lake implementation with real-time analytics, machine learning integration, and business intelligence dashboards.',
+      features: [
+        'Data lake architecture and implementation',
+        'Real-time data processing and analytics',
+        'Machine learning model integration',
+        'Business intelligence and visualization',
+        'Data governance and security',
+        'Integration with existing systems'
+      ],
+      pricing: '$200 – $450/hour',
+      projectPricing: '$60,000 – $400,000/project',
+      timeline: '8–24 weeks',
+      benefits: [
+        'Unified data management',
+        'Real-time business insights',
+        'Improved decision making',
+        'Scalable analytics platform'
+      ],
+      category: 'Data & Analytics'
+    },
+    {
+      icon: Cpu,
+      name: 'Edge Computing Infrastructure',
+      description: 'Edge computing platform deployment with IoT device management, real-time processing, and cloud integration.',
+      features: [
+        'Edge computing infrastructure setup',
+        'IoT device management and monitoring',
+        'Real-time data processing',
+        'Edge-to-cloud integration',
+        'Security and compliance management',
+        'Performance optimization and monitoring'
+      ],
+      pricing: '$180 – $400/hour',
+      projectPricing: '$35,000 – $200,000/project',
+      timeline: '6–16 weeks',
+      benefits: [
+        'Reduced latency and improved performance',
+        'Lower bandwidth costs',
+        'Enhanced data privacy',
+        'Scalable IoT infrastructure'
+      ],
+      category: 'Edge Computing'
+    },
+    {
+      icon: Smartphone,
+      name: 'Progressive Web App (PWA) Development',
+      description: 'Modern PWA development with offline capabilities, push notifications, and native app-like experience.',
+      features: [
+        'PWA architecture and development',
+        'Offline functionality and caching',
+        'Push notifications and background sync',
+        'App-like user experience',
+        'Cross-platform compatibility',
+        'Performance optimization and SEO'
+      ],
+      pricing: '$120 – $280/hour',
+      projectPricing: '$20,000 – $100,000/project',
+      timeline: '4–12 weeks',
+      benefits: [
+        'Native app-like experience',
+        'Reduced development costs',
+        'Cross-platform compatibility',
+        'Improved user engagement'
+      ],
+      category: 'Web Development'
+    },
+    {
+      icon: Shield,
+      name: 'Blockchain & Web3 Development',
+      description: 'Comprehensive blockchain development including smart contracts, DeFi protocols, and Web3 applications.',
+      features: [
+        'Smart contract development and auditing',
+        'DeFi protocol development',
+        'Web3 application development',
+        'Blockchain integration and APIs',
+        'Cryptocurrency wallet development',
+        'NFT marketplace development'
+      ],
+      pricing: '$200 – $500/hour',
+      projectPricing: '$40,000 – $300,000/project',
+      timeline: '8–24 weeks',
+      benefits: [
+        'Decentralized application development',
+        'Enhanced security and transparency',
+        'Innovative business models',
+        'Future-proof technology adoption'
+      ],
+      category: 'Blockchain Development'
+    },
+    {
+      icon: BarChart3,
+      name: 'Business Intelligence & Data Visualization',
+      description: 'Comprehensive BI solution with interactive dashboards, predictive analytics, and automated reporting.',
+      features: [
+        'Interactive dashboard development',
+        'Predictive analytics and forecasting',
+        'Automated reporting and alerts',
+        'Data visualization and storytelling',
+        'Self-service analytics platform',
+        'Integration with data sources'
+      ],
+      pricing: '$150 – $350/hour',
+      projectPricing: '$25,000 – $150,000/project',
+      timeline: '4–16 weeks',
+      benefits: [
+        'Data-driven decision making',
+        'Improved business insights',
+        'Automated reporting processes',
+        'Enhanced operational efficiency'
+      ],
+      category: 'Business Intelligence'
+    },
+    {
+      icon: Globe,
+      name: 'API Gateway & Microservices Architecture',
+      description: 'Enterprise API gateway implementation with microservices architecture, service mesh, and API management.',
+      features: [
+        'API gateway design and implementation',
+        'Microservices architecture development',
+        'Service mesh implementation',
+        'API security and authentication',
+        'Rate limiting and throttling',
+        'API monitoring and analytics'
+      ],
+      pricing: '$180 – $400/hour',
+      projectPricing: '$35,000 – $200,000/project',
+      timeline: '6–20 weeks',
+      benefits: [
+        'Scalable and maintainable architecture',
+        'Improved API security',
+        'Better service management',
+        'Enhanced developer experience'
+      ],
+      category: 'API Development'
+    },
+    {
+      icon: Shield,
+      name: 'Compliance & Regulatory Management',
+      description: 'Comprehensive compliance management system for GDPR, HIPAA, SOX, and other regulatory requirements.',
+      features: [
+        'Compliance assessment and gap analysis',
+        'Policy and procedure development',
+        'Audit trail and documentation',
+        'Risk assessment and management',
+        'Training and awareness programs',
+        'Continuous monitoring and reporting'
+      ],
+      pricing: '$200 – $450/hour',
+      projectPricing: '$30,000 – $200,000/project',
+      timeline: '4–16 weeks',
+      benefits: [
+        'Regulatory compliance assurance',
+        'Reduced compliance risks',
+        'Automated compliance monitoring',
+        'Improved audit readiness'
+      ],
+      category: 'Compliance'
+    },
+    {
+      icon: Cpu,
+      name: 'Quantum Computing Integration',
+      description: 'Quantum computing integration services for optimization problems, cryptography, and advanced simulations.',
+      features: [
+        'Quantum algorithm development',
+        'Quantum computing integration',
+        'Hybrid classical-quantum solutions',
+        'Quantum cryptography implementation',
+        'Quantum simulation and modeling',
+        'Performance optimization and testing'
+      ],
+      pricing: '$300 – $600/hour',
+      projectPricing: '$100,000 – $1,000,000/project',
+      timeline: '12–40 weeks',
+      benefits: [
+        'Exponential computational power',
+        'Advanced optimization capabilities',
+        'Enhanced security solutions',
+        'Cutting-edge research capabilities'
+      ],
+      category: 'Quantum Computing'
+    },
+    {
+      icon: Database,
+      name: 'Real-Time Data Streaming Platform',
+      description: 'Real-time data streaming infrastructure with Apache Kafka, Apache Flink, and real-time analytics.',
+      features: [
+        'Real-time data streaming architecture',
+        'Apache Kafka and Flink implementation',
+        'Real-time analytics and processing',
+        'Data pipeline optimization',
+        'Monitoring and alerting systems',
+        'Integration with data warehouses'
+      ],
+      pricing: '$180 – $400/hour',
+      projectPricing: '$40,000 – $250,000/project',
+      timeline: '6–20 weeks',
+      benefits: [
+        'Real-time data processing',
+        'Improved decision making speed',
+        'Scalable streaming architecture',
+        'Enhanced data insights'
+      ],
+      category: 'Data Streaming'
+    },
+    {
+      icon: Globe,
+      name: 'Digital Transformation Consulting',
+      description: 'Comprehensive digital transformation strategy and implementation for modern business operations.',
+      features: [
+        'Digital strategy and roadmap development',
+        'Legacy system modernization',
+        'Process automation and optimization',
+        'Change management and training',
+        'Technology stack evaluation',
+        'Performance measurement and optimization'
+      ],
+      pricing: '$250 – $500/hour',
+      projectPricing: '$100,000 – $1,000,000/project',
+      timeline: '12–52 weeks',
+      benefits: [
+        'Modernized business operations',
+        'Improved efficiency and productivity',
+        'Enhanced customer experience',
+        'Competitive advantage in digital markets'
+      ],
+      category: 'Digital Transformation'
+    },
+    {
+      icon: Shield,
+      name: 'Penetration Testing & Security Assessment',
+      description: 'Comprehensive security testing including penetration testing, vulnerability assessment, and security auditing.',
+      features: [
+        'Penetration testing and ethical hacking',
+        'Vulnerability assessment and scanning',
+        'Security code review and analysis',
+        'Social engineering testing',
+        'Compliance and regulatory testing',
+        'Security recommendations and remediation'
+      ],
+      pricing: '$200 – $500/hour',
+      projectPricing: '$15,000 – $100,000/project',
+      timeline: '2–8 weeks',
+      benefits: [
+        'Enhanced security posture',
+        'Proactive vulnerability identification',
+        'Compliance with security standards',
+        'Reduced security risks'
+      ],
+      category: 'Security Testing'
+    },
+    {
+      icon: BarChart3,
+      name: 'Performance Engineering & Optimization',
+      description: 'Comprehensive performance testing, optimization, and monitoring for applications and infrastructure.',
+      features: [
+        'Performance testing and load testing',
+        'Application performance optimization',
+        'Database performance tuning',
+        'Infrastructure optimization',
+        'Performance monitoring and alerting',
+        'Capacity planning and scaling'
+      ],
+      pricing: '$150 – $350/hour',
+      projectPricing: '$20,000 – $150,000/project',
+      timeline: '4–16 weeks',
+      benefits: [
+        'Improved application performance',
+        'Reduced infrastructure costs',
+        'Better user experience',
+        'Scalable and reliable systems'
+      ],
+      category: 'Performance Engineering'
     }
   ];
 

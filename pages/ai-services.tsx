@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Brain, Zap, Shield, Eye, Mic, TrendingUp, Database, FileText, Mail, Code, Cog, Search } from 'lucide-react';
+import { Brain, Zap, Shield, Eye, Mic, TrendingUp, Database, FileText, Mail, Code, Cog, Search, Globe, Users, Stethoscope, Cpu, BarChart3 } from 'lucide-react';
 
 export default function AIServices() {
   const contact = {
@@ -1021,6 +1021,292 @@ export default function AIServices() {
         'Reduced transportation costs',
         'Improved fleet efficiency',
         'Advanced autonomous capabilities'
+      ]
+    },
+    {
+      icon: Brain,
+      name: 'AI-Powered Code Generation & Optimization',
+      description: 'Advanced AI system that generates, reviews, and optimizes code across multiple programming languages with human-level quality.',
+      features: [
+        'Multi-language code generation (Python, JavaScript, Java, C++, etc.)',
+        'Intelligent code review and bug detection',
+        'Performance optimization suggestions',
+        'Security vulnerability scanning',
+        'Code documentation generation',
+        'Integration with popular IDEs and version control'
+      ],
+      pricing: '$2,000 – $15,000 setup',
+      perUnit: '$0.10 – $1.00 per line of code',
+      timeline: '6–10 weeks',
+      benefits: [
+        '80% reduction in development time',
+        'Improved code quality and security',
+        'Automated code documentation',
+        'Faster time-to-market for software products'
+      ]
+    },
+    {
+      icon: Eye,
+      name: 'AI-Powered Medical Imaging Analysis',
+      description: 'Advanced computer vision system for medical image analysis, disease detection, and treatment planning assistance.',
+      features: [
+        'Radiology image analysis (X-rays, CT, MRI, ultrasound)',
+        'Pathology image analysis and cancer detection',
+        'Dermatology image analysis for skin conditions',
+        'Ophthalmology image analysis for eye diseases',
+        'Treatment recommendation algorithms',
+        'Integration with hospital information systems'
+      ],
+      pricing: '$15,000 – $100,000 setup',
+      perUnit: '$5.00 – $50.00 per analysis',
+      timeline: '12–24 weeks',
+      benefits: [
+        '95% accuracy in medical image analysis',
+        'Faster diagnosis and treatment planning',
+        'Reduced medical errors and misdiagnosis',
+        'Improved patient outcomes and care quality'
+      ]
+    },
+    {
+      icon: Zap,
+      name: 'AI-Powered Financial Trading Algorithm',
+      description: 'Sophisticated AI trading system that analyzes market data, predicts trends, and executes trades with advanced risk management.',
+      features: [
+        'Real-time market data analysis',
+        'Multi-asset trading (stocks, forex, crypto, commodities)',
+        'Risk management and portfolio optimization',
+        'Sentiment analysis from news and social media',
+        'Backtesting and strategy validation',
+        'Regulatory compliance and reporting'
+      ],
+      pricing: '$10,000 – $75,000 setup',
+      perUnit: '2–5% of profits generated',
+      timeline: '8–16 weeks',
+      benefits: [
+        'Consistent profitable trading performance',
+        'Reduced emotional trading decisions',
+        '24/7 market monitoring and trading',
+        'Advanced risk management and protection'
+      ]
+    },
+    {
+      icon: Shield,
+      name: 'AI-Powered Cybersecurity Threat Hunter',
+      description: 'Advanced AI system that proactively hunts for cyber threats, analyzes attack patterns, and provides real-time security recommendations.',
+      features: [
+        'Proactive threat hunting and detection',
+        'Behavioral analysis and anomaly detection',
+        'Zero-day attack identification',
+        'Automated incident response and containment',
+        'Threat intelligence integration',
+        'Security orchestration and automation'
+      ],
+      pricing: '$8,000 – $50,000 setup',
+      perUnit: '$0.50 – $5.00 per event analyzed',
+      timeline: '8–16 weeks',
+      benefits: [
+        '99.9% threat detection accuracy',
+        'Proactive security posture',
+        'Reduced security incidents and breaches',
+        'Automated threat response and mitigation'
+      ]
+    },
+    {
+      icon: Mic,
+      name: 'AI-Powered Voice Cloning & Synthesis',
+      description: 'Advanced voice AI that can clone voices, generate natural speech, and create personalized voice assistants with emotional intelligence.',
+      features: [
+        'High-quality voice cloning from minimal samples',
+        'Emotional voice synthesis and modulation',
+        'Multi-language voice generation',
+        'Real-time voice conversion and translation',
+        'Voice biometric authentication',
+        'Integration with voice assistants and chatbots'
+      ],
+      pricing: '$5,000 – $30,000 setup',
+      perUnit: '$0.05 – $0.50 per minute of audio',
+      timeline: '6–12 weeks',
+      benefits: [
+        'Natural and expressive voice generation',
+        'Personalized voice experiences',
+        'Accessibility improvements for voice-impaired users',
+        'Enhanced customer engagement and interaction'
+      ]
+    },
+    {
+      icon: TrendingUp,
+      name: 'AI-Powered Predictive Maintenance',
+      description: 'Intelligent system that predicts equipment failures, optimizes maintenance schedules, and reduces downtime through advanced analytics.',
+      features: [
+        'Equipment failure prediction using IoT data',
+        'Maintenance schedule optimization',
+        'Anomaly detection in equipment performance',
+        'Root cause analysis and recommendations',
+        'Integration with CMMS and ERP systems',
+        'Cost-benefit analysis for maintenance decisions'
+      ],
+      pricing: '$12,000 – $60,000 setup',
+      perUnit: '$0.10 – $1.00 per asset monitored',
+      timeline: '8–16 weeks',
+      benefits: [
+        '40% reduction in unplanned downtime',
+        '30% reduction in maintenance costs',
+        'Improved equipment reliability and lifespan',
+        'Data-driven maintenance decision making'
+      ]
+    },
+    {
+      icon: Database,
+      name: 'AI-Powered Data Quality & Cleansing',
+      description: 'Intelligent data management system that automatically cleans, validates, and enriches data to ensure high-quality information assets.',
+      features: [
+        'Automated data quality assessment',
+        'Intelligent data cleansing and deduplication',
+        'Data enrichment and augmentation',
+        'Anomaly detection and outlier identification',
+        'Data lineage tracking and documentation',
+        'Integration with data warehouses and lakes'
+      ],
+      pricing: '$3,000 – $20,000 setup',
+      perUnit: '$0.01 – $0.10 per record processed',
+      timeline: '4–8 weeks',
+      benefits: [
+        '95% improvement in data quality',
+        'Automated data management processes',
+        'Reduced data processing time',
+        'Better business intelligence and analytics'
+      ]
+    },
+    {
+      icon: FileText,
+      name: 'AI-Powered Legal Document Analysis',
+      description: 'Advanced AI system for legal document review, contract analysis, and compliance checking with natural language understanding.',
+      features: [
+        'Contract analysis and risk assessment',
+        'Legal document review and summarization',
+        'Compliance checking and regulatory analysis',
+        'Due diligence automation',
+        'Legal research and case law analysis',
+        'Integration with legal practice management systems'
+      ],
+      pricing: '$8,000 – $40,000 setup',
+      perUnit: '$0.50 – $5.00 per document',
+      timeline: '8–16 weeks',
+      benefits: [
+        '90% reduction in document review time',
+        'Improved accuracy in legal analysis',
+        'Automated compliance monitoring',
+        'Enhanced legal research capabilities'
+      ]
+    },
+    {
+      icon: Globe,
+      name: 'AI-Powered Climate & Environmental Monitoring',
+      description: 'Intelligent environmental monitoring system that analyzes climate data, predicts environmental changes, and provides sustainability insights.',
+      features: [
+        'Climate data analysis and prediction',
+        'Environmental impact assessment',
+        'Carbon footprint tracking and optimization',
+        'Renewable energy optimization',
+        'Natural disaster prediction and warning',
+        'Sustainability reporting and compliance'
+      ],
+      pricing: '$10,000 – $75,000 setup',
+      perUnit: '$0.10 – $1.00 per data point analyzed',
+      timeline: '10–20 weeks',
+      benefits: [
+        'Accurate climate and environmental predictions',
+        'Improved sustainability planning',
+        'Reduced environmental risks',
+        'Enhanced regulatory compliance'
+      ]
+    },
+    {
+      icon: Users,
+      name: 'AI-Powered Human Resources Analytics',
+      description: 'Comprehensive HR AI system that analyzes employee data, predicts turnover, and optimizes workforce planning and management.',
+      features: [
+        'Employee performance analysis and prediction',
+        'Turnover risk assessment and prevention',
+        'Recruitment optimization and candidate matching',
+        'Workforce planning and capacity optimization',
+        'Employee engagement and satisfaction analysis',
+        'Integration with HRIS and talent management systems'
+      ],
+      pricing: '$5,000 – $35,000 setup',
+      perUnit: '$0.25 – $2.50 per employee per month',
+      timeline: '6–12 weeks',
+      benefits: [
+        '30% reduction in employee turnover',
+        'Improved recruitment success rates',
+        'Data-driven HR decision making',
+        'Enhanced employee satisfaction and retention'
+      ]
+    },
+    {
+      icon: Cpu,
+      name: 'AI-Powered Quantum Machine Learning',
+      description: 'Cutting-edge AI system that leverages quantum computing principles for solving complex optimization and machine learning problems.',
+      features: [
+        'Quantum machine learning algorithms',
+        'Complex optimization problem solving',
+        'Quantum neural networks',
+        'Cryptographic security applications',
+        'Drug discovery and molecular simulation',
+        'Financial modeling and risk analysis'
+      ],
+      pricing: '$25,000 – $150,000 setup',
+      perUnit: '$1.00 – $10.00 per computation',
+      timeline: '16–32 weeks',
+      benefits: [
+        'Exponential computational speed improvements',
+        'Solution to previously intractable problems',
+        'Advanced optimization capabilities',
+        'Cutting-edge research and development'
+      ]
+    },
+    {
+      icon: Stethoscope,
+      name: 'AI-Powered Drug Discovery & Development',
+      description: 'Revolutionary AI system that accelerates drug discovery, predicts drug interactions, and optimizes treatment protocols.',
+      features: [
+        'Molecular structure analysis and drug design',
+        'Drug interaction prediction and analysis',
+        'Clinical trial optimization',
+        'Personalized medicine recommendations',
+        'Side effect prediction and mitigation',
+        'Integration with pharmaceutical databases'
+      ],
+      pricing: '$50,000 – $500,000 setup',
+      perUnit: '$10.00 – $100.00 per analysis',
+      timeline: '20–40 weeks',
+      benefits: [
+        '50% reduction in drug development time',
+        'Improved drug efficacy and safety',
+        'Reduced development costs',
+        'Personalized treatment optimization'
+      ]
+    },
+    {
+      icon: BarChart3,
+      name: 'AI-Powered Market Intelligence & Forecasting',
+      description: 'Advanced AI system that analyzes market trends, predicts consumer behavior, and provides strategic business intelligence.',
+      features: [
+        'Market trend analysis and prediction',
+        'Consumer behavior modeling',
+        'Competitive intelligence gathering',
+        'Price optimization and strategy',
+        'Demand forecasting and planning',
+        'Integration with business intelligence platforms'
+      ],
+      pricing: '$8,000 – $50,000 setup',
+      perUnit: '$0.25 – $2.50 per analysis',
+      timeline: '8–16 weeks',
+      benefits: [
+        '90% accuracy in market predictions',
+        'Improved strategic decision making',
+        'Competitive advantage through insights',
+        'Optimized pricing and marketing strategies'
       ]
     }
   ];
