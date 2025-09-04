@@ -1,10 +1,13 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useEffect, memo, useMemo, useCallback } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Header } from './src/components/Header.tsx';
 import { Footer } from './src/components/Footer.tsx';
 import { Sidebar } from './src/components/Sidebar.tsx';
-import { ErrorBoundary } from 'react-error-boundary';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import { LoadingSpinner } from './src/components/ui/loading-spinner.tsx';
+import { AccessibilityControls } from './components/AccessibilityEnhancer';
+import { preloadCriticalResources, enableLazyLoading } from './utils/performance';
+import './styles/accessibility.css';
 
 // Enhanced Components
 import PerformanceOptimizer from './src/components/PerformanceOptimizer.tsx';
@@ -78,9 +81,32 @@ const Support = createLazyComponent(() => import('./pages/Support'));
 const WhitePapers = createLazyComponent(() => import('./pages/WhitePapers'));
 const ComprehensivePricing = createLazyComponent(() => import('./pages/ComprehensivePricing'));
 
-export default function App(props: any) {
+const App: React.FC = memo(() => {
+  // Initialize performance optimizations
+  useEffect(() => {
+    preloadCriticalResources();
+    enableLazyLoading();
+  }, []);
+
+  // Memoize error boundary fallback
+  const errorFallback = useCallback(({ error, resetErrorBoundary }: any) => (
+    <div className="error-boundary">
+      <div className="error-boundary-content">
+        <h1>Something went wrong</h1>
+        <p>{error?.message}</p>
+        <button onClick={resetErrorBoundary}>
+          Try again
+        </button>
+      </div>
+    </div>
+  ), []);
+
   return (
-    <ErrorBoundary>
+    <EnhancedErrorBoundary 
+      fallback={errorFallback}
+      showDetails={process.env.NODE_ENV === 'development'}
+      enableReporting={true}
+    >
       <div className="min-h-screen bg-gray-50">
         <Header />
         <Sidebar />
@@ -209,7 +235,12 @@ export default function App(props: any) {
         <EnhancedAccessibilityEnhancer />
         <MobileExperienceEnhancer />
         <ChatAssistant />
+        <AccessibilityControls />
       </div>
-    </ErrorBoundary>
+    </EnhancedErrorBoundary>
   );
-}
+});
+
+App.displayName = 'App';
+
+export default App;
