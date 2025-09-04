@@ -69,12 +69,12 @@ export default function ServicesCatalog() {
   ];
 
   const categories = [
-    { id: 'all', name: 'All Services' },
-    { id: 'micro-saas', name: 'Micro SaaS' },
-    { id: 'ai-services', name: 'AI Services' },
-    { id: 'it-services', name: 'IT Services' },
-    { id: 'cloud', name: 'Cloud Solutions' },
-    { id: 'security', name: 'Cybersecurity' }
+    { id: 'all', name: 'All Services', },
+    { id: 'micro-saas', name: 'Micro SaaS', },
+    { id: 'ai-services', name: 'AI Services', },
+    { id: 'it-services', name: 'IT Services', },
+    { id: 'cloud', name: 'Cloud Solutions', },
+    { id: 'security', name: 'Cybersecurity', }
   ];
 
   const filteredServices = services.filter(service => {
@@ -90,11 +90,11 @@ export default function ServicesCatalog() {
         <title>Services Catalog - Zion Tech Group</title>
         <meta name="description" content="Browse our comprehensive catalog of technology services including AI solutions, micro SaaS products, and IT services." />
         <meta name="keywords" content="services catalog, AI services, micro SaaS, IT solutions, technology services" />
-        <link rel="canonical" href="https://ziontechgroup.com/services-catalog" />
-        <meta property="og:title" content="Services Catalog - Zion Tech Group" />
+        <link rel="canonical" href="https: //ziontechgroup.com/services-catalog" />,
+        <meta property="og: title" content="Services Catalog - Zion Tech Group" />,
         <meta property="og:description" content="Browse our comprehensive catalog of technology services including AI solutions, micro SaaS products, and IT services." />
-        <meta property="og:url" content="https://ziontechgroup.com/services-catalog" />
-        <meta property="og:type" content="website" />
+        <meta property="og: url" content="https://ziontechgroup.com/services-catalog" />,
+        <meta property="og: type" content="website" />,
       </Head>
 
       <div style={{ 
@@ -104,16 +104,9 @@ export default function ServicesCatalog() {
       }}>
         <div style={{ maxWidth: 1200, margin: '0 auto', padding: '40px 20px' }}>
           {/* Header */}
-          <div style={{ textAlign: 'center', marginBottom: 60 }}>
-            <h1 style={{ 
-              fontSize: '3rem', 
-              fontWeight: 800, 
-              marginBottom: 20,
-              background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent'
-            }}>
-              Services Catalog
+          <div className="text-center mb-12">
+            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">,
+              Services <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Catalog</span>
             </h1>
             <p style={{ fontSize: '1.2rem', color: '#94a3b8', maxWidth: 600, margin: '0 auto' }}>
               Explore our comprehensive portfolio of technology solutions designed to accelerate your digital transformation.
@@ -121,30 +114,16 @@ export default function ServicesCatalog() {
           </div>
 
           {/* Search and Filter */}
-          <div style={{ 
-            background: 'rgba(255, 255, 255, 0.1)', 
-            padding: 30, 
-            borderRadius: 12, 
-            border: '1px solid rgba(255, 255, 255, 0.2)',
-            marginBottom: 40
-          }}>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
-              <div style={{ position: 'relative' }}>
+          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 mb-12">
+            <div className="flex flex-col md: flex-row gap-4">,
+              <div className="flex-1 relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
                   placeholder="Search services..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  style={{
-                    width: '100%',
-                    padding: '15px 20px 15px 50px',
-                    fontSize: '1.1rem',
-                    background: 'rgba(255, 255, 255, 0.1)',
-                    border: '1px solid rgba(255, 255, 255, 0.2)',
-                    borderRadius: 8,
-                    color: 'white',
-                    outline: 'none'
-                  }}
+                  className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-blue-400"
                 />
                 <span style={{ 
                   position: 'absolute', 
@@ -156,107 +135,59 @@ export default function ServicesCatalog() {
                   🔍
                 </span>
               </div>
-
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
-                {categories.map((category) => (
-                  <button
-                    key={category.id}
-                    onClick={() => setSelectedCategory(category.id)}
-                    style={{
-                      padding: '8px 16px',
-                      background: selectedCategory === category.id 
-                        ? 'linear-gradient(135deg, #3b82f6, #8b5cf6)' 
-                        : 'rgba(255, 255, 255, 0.1)',
-                      color: 'white',
-                      border: '1px solid rgba(255, 255, 255, 0.2)',
-                      borderRadius: 20,
-                      cursor: 'pointer',
-                      fontSize: '0.9rem',
-                      fontWeight: 500,
-                      transition: 'all 0.3s ease'
-                    }}
-                  >
-                    {category.name}
-                  </button>
-                ))}
+              <div className="flex gap-2">
+                <Filter className="w-5 h-5 text-gray-400 mt-3" />
+                <select
+                  value={selectedCategory}
+                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:border-blue-400"
+                >
+                  {categories.map(category => (
+                    <option key={category.id} value={category.id} className="bg-slate-800">
+                      {category.name}
+                    </option>
+                  ))}
+                </select>
               </div>
             </div>
           </div>
 
           {/* Services Grid */}
-          <div style={{ 
-            display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', 
-            gap: 30 
-          }}>
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">,
             {filteredServices.map((service) => (
-              <div 
-                key={service.id}
-                style={{ 
-                  background: 'rgba(255, 255, 255, 0.05)', 
-                  padding: 30, 
-                  borderRadius: 12, 
-                  border: '1px solid rgba(255, 255, 255, 0.1)',
-                  transition: 'all 0.3s ease'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-5px)';
-                  e.currentTarget.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.3)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = 'none';
-                }}
-              >
-                <div style={{ marginBottom: 20 }}>
-                  <div style={{ 
-                    display: 'flex', 
-                    justifyContent: 'space-between', 
-                    alignItems: 'flex-start', 
-                    marginBottom: 15 
-                  }}>
-                    <h3 style={{ fontSize: '1.3rem', fontWeight: 600, marginBottom: 8 }}>
-                      {service.name}
-                    </h3>
-                    <div style={{ 
-                      background: 'rgba(59, 130, 246, 0.2)', 
-                      color: '#3b82f6', 
-                      padding: '4px 8px', 
-                      borderRadius: 12, 
-                      fontSize: '0.8rem', 
-                      fontWeight: 600 
-                    }}>
-                      {service.category}
-                    </div>
-                  </div>
-                  
-                  <p style={{ color: '#94a3b8', fontSize: '1rem', lineHeight: 1.6, marginBottom: 15 }}>
-                    {service.description}
-                  </p>
-                  
-                  <div style={{ 
-                    display: 'flex', 
-                    justifyContent: 'space-between', 
-                    alignItems: 'center', 
-                    marginBottom: 20 
-                  }}>
-                    <span style={{ fontSize: '1.1rem', fontWeight: 600, color: '#10b981' }}>
-                      {service.pricing}
-                    </span>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
-                      <span style={{ fontSize: '1rem' }}>⭐</span>
-                      <span style={{ fontSize: '0.9rem', color: '#94a3b8' }}>
-                        {service.rating}
-                      </span>
-                    </div>
+              <div key={service.id} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover: border-blue-400/50 transition-all duration-300 group">,
+                <div className="flex items-center justify-between mb-4">
+                  <span className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm font-medium">
+                    {categories.find(cat => cat.id === service.category)?.name}
+                  </span>
+                  <div className="flex items-center gap-1">
+                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                    <span className="text-white font-medium">{service.rating}</span>
                   </div>
                 </div>
 
-                <div style={{ marginBottom: 20 }}>
-                  <h4 style={{ fontSize: '0.9rem', fontWeight: 600, marginBottom: 10, color: '#e2e8f0' }}>
-                    Key Features:
-                  </h4>
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+                <h3 className="text-xl font-bold text-white mb-3 group-hover: text-blue-300 transition-colors">,
+                  {service.name}
+                </h3>
+
+                <p className="text-gray-300 mb-4 text-sm leading-relaxed">
+                  {service.description}
+                </p>
+
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center gap-2 text-sm text-gray-300">
+                    <DollarSign className="w-4 h-4" />
+                    <span>{service.pricing}</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-gray-300">
+                    <Clock className="w-4 h-4" />
+                    <span>Delivery: {service.delivery}</span>
+                  </div>
+                </div>
+
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-white mb-2">Key Features: </h4>,
+                  <div className="flex flex-wrap gap-2">
                     {service.features.map((feature, index) => (
                       <span 
                         key={index}
@@ -275,37 +206,13 @@ export default function ServicesCatalog() {
                   </div>
                 </div>
 
-                <div style={{ 
-                  display: 'flex', 
-                  justifyContent: 'space-between', 
-                  alignItems: 'center',
-                  paddingTop: 20,
-                  borderTop: '1px solid rgba(255, 255, 255, 0.1)'
-                }}>
-                  <span style={{ fontSize: '0.9rem', color: '#94a3b8' }}>
-                    Delivery: {service.delivery}
-                  </span>
-                  <button style={{
-                    background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
-                    color: 'white',
-                    padding: '8px 16px',
-                    border: 'none',
-                    borderRadius: 6,
-                    fontSize: '0.9rem',
-                    fontWeight: 600,
-                    cursor: 'pointer',
-                    transition: 'transform 0.2s ease'
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = 'translateY(-2px)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = 'translateY(0)';
-                  }}
-                  >
-                    Learn More
-                  </button>
-                </div>
+                <Link 
+                  href="/contact" 
+                  className="inline-flex items-center justify-center w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-3 rounded-lg font-semibold hover: from-blue-600 hover:to-purple-600 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-blue-500/25"
+                >
+                  Get Started
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform" />,
+                </Link>
               </div>
             ))}
           </div>
@@ -322,12 +229,23 @@ export default function ServicesCatalog() {
                   setSearchTerm('');
                   setSelectedCategory('all');
                 }}
-                className="text-blue-400 hover:text-blue-300 transition-colors"
+                className="text-blue-400 hover: text-blue-300 transition-colors"
               >
                 Clear filters
               </button>
             </div>
           )}
+
+          {/* CTA Section */}
+          <div className="text-center mt-16">
+            <h2 className="text-3xl font-bold text-white mb-6">Need a Custom Solution?</h2>
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+              Don't see what you're looking for? Our team can create custom solutions tailored to your specific needs.
+            </p>
+            <Link href="/contact" className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover: from-blue-600 hover:to-purple-600 transition-all duration-300">,
+              Discuss Your Project
+            </Link>
+          </div>
         </div>
       </div>
     </>

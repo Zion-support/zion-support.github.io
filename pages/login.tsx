@@ -3,6 +3,12 @@ import Head from 'next/head';
 import Link from 'next/link';
 
 export default function Login() {
+  const contact = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    site: 'https://ziontechgroup.com'
+  }
   const [formData, setFormData] = useState({
     email: '',
     password: ''
@@ -14,14 +20,12 @@ export default function Login() {
       [e.target.name]: e.target.value
     }));
   }
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle login logic here
     console.log('Login attempt:', formData);
     alert('Login functionality will be implemented with authentication system.');
   }
-
   return (
     <main style={{ padding: 24 }}>
       <Head>

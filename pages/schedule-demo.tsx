@@ -37,9 +37,7 @@ export default function ScheduleDemo() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Demo scheduled:', { selectedDate, selectedTime, formData });
-    alert('Demo request submitted! We will contact you soon to confirm the details.');
-  };
-
+  }
   return (
     <>
       <Head>

@@ -137,23 +137,21 @@ function SearchBar() {
     const value = e.target.value;
     setQuery(value);
     handleSearch(value);
-  };
+  }
   const handleResultClick = () => {
     setIsOpen(false);
-  };
+    setQuery('');
+  }
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Escape') {
       setIsOpen(false);
       inputRef.current?.blur();
     }
-  };
-  
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
         setIsOpen(false);
       }
-    };
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
@@ -229,3 +227,4 @@ function SearchBar() {
     </div>
   );
 }
+export default SearchBar;

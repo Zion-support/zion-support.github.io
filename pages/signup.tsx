@@ -9,8 +9,7 @@ export default function Signup() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown, DE 19709',
     site: 'https://ziontechgroup.com'
-  };
-
+  }
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -29,8 +28,7 @@ export default function Signup() {
       ...prev,
       [name]: type === 'checkbox' ? checked : value
     }));
-  };
-
+  }
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
@@ -47,8 +45,7 @@ export default function Signup() {
     // Handle signup logic here
     console.log('Signup attempt:', formData);
     alert('Account creation functionality will be implemented with authentication system.');
-  };
-
+  }
   return (
     <>
       <Head>

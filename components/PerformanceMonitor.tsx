@@ -4,6 +4,20 @@ const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     // Monitor Core Web Vitals
     if (typeof window !== 'undefined' && 'performance' in window) {
+      // Send performance data to analytics in production
+      const sendToAnalytics = (metric: string, value: number) => {
+        if (process.env.NODE_ENV === 'production') {
+          // Send to Google Analytics or other analytics service
+          if (typeof (window as any).gtag !== 'undefined') {
+            (window as any).gtag('event', 'web_vitals', {
+              metric_name: metric,
+              metric_value: Math.round(value),
+              metric_rating: value < 2.5 ? 'good' : value < 4 ? 'needs-improvement' : 'poor'
+            });
+          }
+        }
+      };
+
       // Monitor Largest Contentful Paint (LCP)
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
