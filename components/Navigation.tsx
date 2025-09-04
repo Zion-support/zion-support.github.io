@@ -89,6 +89,51 @@ const Navigation: React.FC = () => {
                   )}
                 </div>
               ))}
+              
+              {/* Services Dropdown */}
+              <div className="relative">
+                <button
+                  onClick={() => setIsServicesOpen(!isServicesOpen)}
+                  className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 flex items-center"
+                >
+                  <Shield className="h-4 w-4 mr-2" />
+                  Services
+                  <ChevronDown className="h-4 w-4 ml-1" />
+                </button>
+                
+                {isServicesOpen && (
+                  <div className="absolute right-0 mt-2 w-96 bg-white rounded-md shadow-lg py-1 z-50 border">
+                    <div className="grid grid-cols-3 gap-4 p-4">
+                      {serviceCategories.map((category) => (
+                        <div key={category.name}>
+                          <h3 className="text-sm font-semibold text-gray-900 mb-2">{category.name}</h3>
+                          <ul className="space-y-1">
+                            {category.services.map((service) => (
+                              <li key={service.name}>
+                                <Link
+                                  href={service.href}
+                                  className="text-sm text-gray-600 hover:text-blue-600 block py-1"
+                                  onClick={() => setIsServicesOpen(false)}
+                                >
+                                  {service.name}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              <Link
+                href="/contact"
+                className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors duration-200 flex items-center"
+              >
+                <Phone className="h-4 w-4 mr-2" />
+                Contact Us
+              </Link>
             </div>
           </div>
           {/* Mobile menu button */}
