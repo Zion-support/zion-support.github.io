@@ -3,6 +3,9 @@ import { INNOVATIVE_SERVICES } from '../data/servicesData';
 import { IT_SERVICES } from '../data/itServicesData';
 import { AI_SERVICES } from '../data/aiServicesData';
 import { MICRO_SAAS_SERVICES } from '../data/microSaasServicesData';
+import { ADVANCED_MICRO_SAAS_SERVICES } from '../data/advancedMicroSaasServices2025';
+import { ADVANCED_IT_SERVICES } from '../data/advancedITServices2025';
+import { ADVANCED_AI_SERVICES } from '../data/advancedAIServices2025';
 
 interface Service {
   id: string;
@@ -47,7 +50,10 @@ const ComprehensiveServicesShowcase: React.FC = () => {
     ...INNOVATIVE_SERVICES.map(s => ({ ...s, serviceType: 'Innovative Services' })),
     ...IT_SERVICES.map(s => ({ ...s, serviceType: 'IT Services' })),
     ...AI_SERVICES.map(s => ({ ...s, serviceType: 'AI Services' })),
-    ...MICRO_SAAS_SERVICES.map(s => ({ ...s, serviceType: 'Micro SAAS Services' }))
+    ...MICRO_SAAS_SERVICES.map(s => ({ ...s, serviceType: 'Micro SAAS Services' })),
+    ...ADVANCED_MICRO_SAAS_SERVICES.map(s => ({ ...s, serviceType: 'Advanced Micro SAAS Services' })),
+    ...ADVANCED_IT_SERVICES.map(s => ({ ...s, serviceType: 'Advanced IT Services' })),
+    ...ADVANCED_AI_SERVICES.map(s => ({ ...s, serviceType: 'Advanced AI Services' }))
   ];
 
   const categories = [
