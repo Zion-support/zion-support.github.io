@@ -96,6 +96,7 @@ export default [
       'react': react,
       'react-hooks': reactHooks,
     },
+    plugins: { react, 'react-hooks': reactHooks, 'react-refresh': reactRefresh },
     rules: {
       ...typescript.configs.recommended.rules,
       ...react.configs.recommended.rules,
@@ -116,6 +117,7 @@ export default [
       },
     },
   },
+  // TS/TSX files (use TS parser and project)
   {
     files: ['**/*.cjs'],
     languageOptions: {
