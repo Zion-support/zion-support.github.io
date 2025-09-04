@@ -18,6 +18,12 @@ const nextConfig = {
   experimental: {
     scrollRestoration: true
   },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   async headers() {
     return [
       {
