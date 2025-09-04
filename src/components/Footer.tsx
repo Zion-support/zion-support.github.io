@@ -48,7 +48,26 @@ import {
   Users2,
   Settings,
   Palette,
-  ChevronDown
+  ChevronDown,
+  Brain,
+  Shield,
+  Users,
+  HardDrive,
+  TrendingUp,
+  Building2,
+  FileText,
+  HelpCircle,
+  Activity,
+  Cpu,
+  GraduationCap,
+  BarChart3,
+  Zap,
+  Twitter,
+  Linkedin,
+  Facebook,
+  Instagram,
+  Github,
+  Youtube
 } from 'lucide-react';
 
 export default function Footer() {
