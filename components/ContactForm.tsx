@@ -10,7 +10,7 @@ interface FormData {
   message: string;
 }
 
-const ContactForm: React.FC = () => {
+const ContactForm: React.FC = (): JSX.Element => {
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -76,7 +76,7 @@ const ContactForm: React.FC = () => {
         service: '',
         message: ''
       });
-    } catch {
+    } catch (error) {
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -192,7 +192,7 @@ const ContactForm: React.FC = () => {
 
       {submitStatus === 'success' && (
         <div className="p-4 bg-green-900/50 border border-green-500 rounded-lg text-green-300" role="alert">
-          Thank you for your message! We&apos;ll get back to you within 24 hours.
+          Thank you for your message! We'll get back to you within 24 hours.
         </div>
       )}
 

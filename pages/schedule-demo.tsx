@@ -1,3 +1,4 @@
+import React from 'react';
 import Head from 'next/head';
 import { Calendar, Clock, Users, Video, CheckCircle, ArrowRight } from 'lucide-react';
 import { useState } from 'react';
