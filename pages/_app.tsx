@@ -7,6 +7,9 @@ import '../styles/globals.css';
 
 function Header(): any {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+  const [solutionsDropdownOpen, setSolutionsDropdownOpen] = useState(false);
+  const [resourcesDropdownOpen, setResourcesDropdownOpen] = useState(false);
 
   return (
     <header style={{
@@ -28,48 +31,146 @@ function Header(): any {
         
         {/* Desktop Navigation */}
         <div style={{ 
-          display: 'flex', gap: 4, flexWrap: 'wrap', alignItems: 'center'
+          display: 'flex', gap: 8, flexWrap: 'wrap', alignItems: 'center'
         }} className="hidden md:flex">
           <Link href="/" style={{ 
             padding: '8px 12px', borderRadius: 6, opacity: 0.9,
             transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
           }}>Home</Link>
-          <Link href="/services" style={{ 
+          
+          {/* Services Dropdown */}
+          <div style={{ position: 'relative' }}>
+            <button
+              style={{
+                background: 'none', border: 'none', color: 'white', padding: '8px 12px',
+                borderRadius: 6, opacity: 0.9, cursor: 'pointer', display: 'flex',
+                alignItems: 'center', gap: 4, transition: 'all 0.2s ease'
+              }}
+              onMouseEnter={() => setServicesDropdownOpen(true)}
+              onMouseLeave={() => setServicesDropdownOpen(false)}
+            >
+              Services ▼
+            </button>
+            {servicesDropdownOpen && (
+              <div
+                style={{
+                  position: 'absolute', top: '100%', left: 0, background: 'rgba(11, 18, 32, 0.98)',
+                  backdropFilter: 'blur(10px)', border: '1px solid rgba(255,255,255,0.1)',
+                  borderRadius: 8, padding: '8px 0', minWidth: 200, zIndex: 1000
+                }}
+                onMouseEnter={() => setServicesDropdownOpen(true)}
+                onMouseLeave={() => setServicesDropdownOpen(false)}
+              >
+                <Link href="/services" style={{ 
+                  display: 'block', padding: '8px 16px', color: 'white', textDecoration: 'none',
+                  transition: 'all 0.2s ease'
+                }}>All Services</Link>
+                <Link href="/micro-saas" style={{ 
+                  display: 'block', padding: '8px 16px', color: 'white', textDecoration: 'none',
+                  transition: 'all 0.2s ease'
+                }}>Micro SaaS Products</Link>
+                <Link href="/ai-services" style={{ 
+                  display: 'block', padding: '8px 16px', color: 'white', textDecoration: 'none',
+                  transition: 'all 0.2s ease'
+                }}>AI Services</Link>
+                <Link href="/it-services" style={{ 
+                  display: 'block', padding: '8px 16px', color: 'white', textDecoration: 'none',
+                  transition: 'all 0.2s ease'
+                }}>IT Services</Link>
+                <Link href="/services-catalog" style={{ 
+                  display: 'block', padding: '8px 16px', color: 'white', textDecoration: 'none',
+                  transition: 'all 0.2s ease'
+                }}>Services Catalog</Link>
+              </div>
+            )}
+          </div>
+
+          {/* Solutions Dropdown */}
+          <div style={{ position: 'relative' }}>
+            <button
+              style={{
+                background: 'none', border: 'none', color: 'white', padding: '8px 12px',
+                borderRadius: 6, opacity: 0.9, cursor: 'pointer', display: 'flex',
+                alignItems: 'center', gap: 4, transition: 'all 0.2s ease'
+              }}
+              onMouseEnter={() => setSolutionsDropdownOpen(true)}
+              onMouseLeave={() => setSolutionsDropdownOpen(false)}
+            >
+              Solutions ▼
+            </button>
+            {solutionsDropdownOpen && (
+              <div
+                style={{
+                  position: 'absolute', top: '100%', left: 0, background: 'rgba(11, 18, 32, 0.98)',
+                  backdropFilter: 'blur(10px)', border: '1px solid rgba(255,255,255,0.1)',
+                  borderRadius: 8, padding: '8px 0', minWidth: 200, zIndex: 1000
+                }}
+                onMouseEnter={() => setSolutionsDropdownOpen(true)}
+                onMouseLeave={() => setSolutionsDropdownOpen(false)}
+              >
+                <Link href="/cloud-devops" style={{ 
+                  display: 'block', padding: '8px 16px', color: 'white', textDecoration: 'none',
+                  transition: 'all 0.2s ease'
+                }}>Cloud & DevOps</Link>
+                <Link href="/cybersecurity" style={{ 
+                  display: 'block', padding: '8px 16px', color: 'white', textDecoration: 'none',
+                  transition: 'all 0.2s ease'
+                }}>Cybersecurity</Link>
+                <Link href="/quantum-computing" style={{ 
+                  display: 'block', padding: '8px 16px', color: 'white', textDecoration: 'none',
+                  transition: 'all 0.2s ease'
+                }}>Quantum Computing</Link>
+              </div>
+            )}
+          </div>
+
+          {/* Resources Dropdown */}
+          <div style={{ position: 'relative' }}>
+            <button
+              style={{
+                background: 'none', border: 'none', color: 'white', padding: '8px 12px',
+                borderRadius: 6, opacity: 0.9, cursor: 'pointer', display: 'flex',
+                alignItems: 'center', gap: 4, transition: 'all 0.2s ease'
+              }}
+              onMouseEnter={() => setResourcesDropdownOpen(true)}
+              onMouseLeave={() => setResourcesDropdownOpen(false)}
+            >
+              Resources ▼
+            </button>
+            {resourcesDropdownOpen && (
+              <div
+                style={{
+                  position: 'absolute', top: '100%', left: 0, background: 'rgba(11, 18, 32, 0.98)',
+                  backdropFilter: 'blur(10px)', border: '1px solid rgba(255,255,255,0.1)',
+                  borderRadius: 8, padding: '8px 0', minWidth: 200, zIndex: 1000
+                }}
+                onMouseEnter={() => setResourcesDropdownOpen(true)}
+                onMouseLeave={() => setResourcesDropdownOpen(false)}
+              >
+                <Link href="/docs" style={{ 
+                  display: 'block', padding: '8px 16px', color: 'white', textDecoration: 'none',
+                  transition: 'all 0.2s ease'
+                }}>Documentation</Link>
+                <Link href="/docs/getting-started" style={{ 
+                  display: 'block', padding: '8px 16px', color: 'white', textDecoration: 'none',
+                  transition: 'all 0.2s ease'
+                }}>Getting Started</Link>
+                <Link href="/docs/api-overview" style={{ 
+                  display: 'block', padding: '8px 16px', color: 'white', textDecoration: 'none',
+                  transition: 'all 0.2s ease'
+                }}>API Overview</Link>
+                <Link href="/faq" style={{ 
+                  display: 'block', padding: '8px 16px', color: 'white', textDecoration: 'none',
+                  transition: 'all 0.2s ease'
+                }}>FAQ</Link>
+              </div>
+            )}
+          </div>
+
+          <Link href="/blog" style={{ 
             padding: '8px 12px', borderRadius: 6, opacity: 0.9,
             transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }}>All Services</Link>
-          <Link href="/micro-saas" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }}>Micro SaaS</Link>
-          <Link href="/ai-services" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }}>AI Services</Link>
-          <Link href="/it-services" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }}>IT Services</Link>
-          <Link href="/services-catalog" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }}>Catalog</Link>
-          <Link href="/cloud-devops" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }}>Cloud & DevOps</Link>
-          <Link href="/cybersecurity" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }}>Cybersecurity</Link>
-          <Link href="/quantum-computing" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }}>Quantum Computing</Link>
-          <Link href="/docs" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }}>Documentation</Link>
+          }}>Blog</Link>
           <Link href="/pricing" style={{ 
             padding: '8px 12px', borderRadius: 6, opacity: 0.9,
             transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
@@ -78,6 +179,10 @@ function Header(): any {
             padding: '8px 12px', borderRadius: 6, opacity: 0.9,
             transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
           }}>About</Link>
+          <Link href="/careers" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }}>Careers</Link>
           <Link href="/contact" style={{ 
             fontWeight: 600, background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', 
             color: 'white', padding: '8px 16px', borderRadius: 8,
@@ -156,6 +261,10 @@ function Header(): any {
             padding: '8px 12px', borderRadius: 6, opacity: 0.9,
             transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
           }} onClick={() => setMobileMenuOpen(false)}>Documentation</Link>
+          <Link href="/blog" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }} onClick={() => setMobileMenuOpen(false)}>Blog</Link>
           <Link href="/pricing" style={{ 
             padding: '8px 12px', borderRadius: 6, opacity: 0.9,
             transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
@@ -164,6 +273,10 @@ function Header(): any {
             padding: '8px 12px', borderRadius: 6, opacity: 0.9,
             transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
           }} onClick={() => setMobileMenuOpen(false)}>About</Link>
+          <Link href="/careers" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }} onClick={() => setMobileMenuOpen(false)}>Careers</Link>
         </div>
       )}
     </header>
@@ -247,7 +360,9 @@ function Footer(): any {
             <Link href="/docs/getting-started" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Getting Started</Link>
             <Link href="/docs/api-overview" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>API Overview</Link>
             <Link href="/docs/authentication" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Authentication</Link>
+            <Link href="/blog" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Blog</Link>
             <Link href="/faq" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>FAQ</Link>
+            <Link href="/sitemap" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Sitemap</Link>
             <Link href="/privacy" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Privacy Policy</Link>
             <Link href="/terms" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Terms of Service</Link>
           </div>
@@ -259,6 +374,7 @@ function Footer(): any {
           <div style={{ display: 'grid', gap: 8 }}>
             <Link href="/" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Home</Link>
             <Link href="/about" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>About Us</Link>
+            <Link href="/careers" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Careers</Link>
             <Link href="/contact" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Contact Us</Link>
             <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Main Website</a>
           </div>
