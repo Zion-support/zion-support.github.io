@@ -4,8 +4,8 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-console.log('🚀 Starting Enhanced App Improvement Automation');
-console.log('================================================');
+console.log('🚀 Starting Simple App Improvement Automation');
+console.log('==============================================');
 
 const timestamp = new Date().toISOString();
 const report = {
@@ -56,14 +56,14 @@ function runCheck(name, checkFn) {
       status: 'pass',
       result
     });
-    console.log(`✅ ${name}: OK`);
+    console.log('✅ ' + name + ': OK');
   } catch (error) {
     healthReport.checks.push({
       name,
       status: 'fail',
       error: error.message
     });
-    console.log(`❌ ${name}: ${error.message}`);
+    console.log('❌ ' + name + ': ' + error.message);
     healthReport.status = 'unhealthy';
   }
 }
@@ -117,7 +117,7 @@ runCheck('TypeScript compilation', () => {
 // Save report
 fs.writeFileSync('health-check-report.json', JSON.stringify(healthReport, null, 2));
 console.log('📄 Health report saved to health-check-report.json');
-console.log(`🏥 Overall status: ${healthReport.status}`);
+console.log('🏥 Overall status: ' + healthReport.status);
 
 process.exit(healthReport.status === 'healthy' ? 0 : 1);
 `;
@@ -156,7 +156,7 @@ function runTest(name, testFn) {
       result
     });
     testReport.summary.passed++;
-    console.log(`✅ ${name}: PASSED`);
+    console.log('✅ ' + name + ': PASSED');
   } catch (error) {
     testReport.tests.push({
       name,
@@ -164,7 +164,7 @@ function runTest(name, testFn) {
       error: error.message
     });
     testReport.summary.failed++;
-    console.log(`❌ ${name}: FAILED - ${error.message}`);
+    console.log('❌ ' + name + ': FAILED - ' + error.message);
   }
 }
 
@@ -200,111 +200,13 @@ runTest('Security Audit', () => {
 // Save report
 fs.writeFileSync('test-automation-report.json', JSON.stringify(testReport, null, 2));
 console.log('📄 Test report saved to test-automation-report.json');
-console.log(`🧪 Test Summary: ${testReport.summary.passed}/${testReport.summary.total} passed`);
+console.log('🧪 Test Summary: ' + testReport.summary.passed + '/' + testReport.summary.total + ' passed');
 
 process.exit(testReport.summary.failed > 0 ? 1 : 0);
 `;
 
   fs.writeFileSync('scripts/automated-testing.cjs', testingContent);
   console.log('✅ Automated testing script created');
-}
-
-// Function to create deployment automation script
-function createDeploymentScript() {
-  const deploymentContent = `#!/usr/bin/env node
-
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-
-console.log('🚀 Starting Deployment Automation...');
-
-const deploymentReport = {
-  timestamp: new Date().toISOString(),
-  steps: [],
-  status: 'pending'
-};
-
-function runStep(name, stepFn) {
-  try {
-    console.log(`📋 ${name}...`);
-    const result = stepFn();
-    deploymentReport.steps.push({
-      name,
-      status: 'success',
-      result
-    });
-    console.log(`✅ ${name} completed`);
-  } catch (error) {
-    deploymentReport.steps.push({
-      name,
-      status: 'failed',
-      error: error.message
-    });
-    console.log(`❌ ${name} failed: ${error.message}`);
-    throw error;
-  }
-}
-
-try {
-  // Step 1: Clean previous builds
-  runStep('Clean previous builds', () => {
-    if (fs.existsSync('.next')) {
-      execSync('rm -rf .next', { stdio: 'pipe' });
-    }
-    if (fs.existsSync('out')) {
-      execSync('rm -rf out', { stdio: 'pipe' });
-    }
-    return 'Previous builds cleaned';
-  });
-
-  // Step 2: Install dependencies
-  runStep('Install dependencies', () => {
-    execSync('npm install', { stdio: 'pipe' });
-    return 'Dependencies installed';
-  });
-
-  // Step 3: Run tests
-  runStep('Run tests', () => {
-    execSync('npm run lint', { stdio: 'pipe' });
-    execSync('npm run type-check', { stdio: 'pipe' });
-    return 'Tests passed';
-  });
-
-  // Step 4: Build application
-  runStep('Build application', () => {
-    execSync('npm run build', { stdio: 'pipe' });
-    return 'Application built successfully';
-  });
-
-  // Step 5: Generate static export (if needed)
-  runStep('Generate static export', () => {
-    try {
-      execSync('npm run export', { stdio: 'pipe' });
-      return 'Static export generated';
-    } catch (error) {
-      // Export might not be configured, that's okay
-      return 'Static export skipped (not configured)';
-    }
-  });
-
-  deploymentReport.status = 'success';
-  console.log('🎉 Deployment automation completed successfully!');
-
-} catch (error) {
-  deploymentReport.status = 'failed';
-  console.log('💥 Deployment automation failed!');
-}
-
-// Save report
-fs.writeFileSync('deployment-automation-report.json', JSON.stringify(deploymentReport, null, 2));
-console.log('📄 Deployment report saved to deployment-automation-report.json');
-
-process.exit(deploymentReport.status === 'success' ? 0 : 1);
-`;
-
-  fs.writeFileSync('scripts/deployment-automation.cjs', deploymentContent);
-  console.log('✅ Deployment automation script created');
 }
 
 // Function to create monitoring script
@@ -364,7 +266,7 @@ try {
       bytes: buildSize,
       formatted: formatBytes(buildSize)
     };
-    console.log(`📦 Build size: ${formatBytes(buildSize)}`);
+    console.log('📦 Build size: ' + formatBytes(buildSize));
   }
 } catch (error) {
   monitoringReport.alerts.push('Could not measure build size');
@@ -378,7 +280,7 @@ try {
       bytes: nodeModulesSize,
       formatted: formatBytes(nodeModulesSize)
     };
-    console.log(`📚 Node modules size: ${formatBytes(nodeModulesSize)}`);
+    console.log('📚 Node modules size: ' + formatBytes(nodeModulesSize));
   }
 } catch (error) {
   monitoringReport.alerts.push('Could not measure node_modules size');
@@ -407,43 +309,9 @@ try {
     components: componentCount
   };
   
-  console.log(`📄 Pages: ${pageCount}, Components: ${componentCount}`);
+  console.log('📄 Pages: ' + pageCount + ', Components: ' + componentCount);
 } catch (error) {
   monitoringReport.alerts.push('Could not count files');
-}
-
-// Check for large files
-try {
-  const largeFiles = [];
-  function findLargeFiles(dir, maxSize = 1024 * 1024) { // 1MB
-    const files = fs.readdirSync(dir);
-    for (const file of files) {
-      const filePath = path.join(dir, file);
-      const stats = fs.statSync(filePath);
-      if (stats.isFile() && stats.size > maxSize) {
-        largeFiles.push({
-          path: filePath,
-          size: formatBytes(stats.size)
-        });
-      } else if (stats.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-        findLargeFiles(filePath, maxSize);
-      }
-    }
-  }
-  
-  findLargeFiles(process.cwd());
-  monitoringReport.metrics.largeFiles = largeFiles;
-  
-  if (largeFiles.length > 0) {
-    console.log(`⚠️  Large files found: ${largeFiles.length}`);
-    largeFiles.forEach(file => {
-      console.log(`   - ${file.path}: ${file.size}`);
-    });
-  } else {
-    console.log('✅ No large files found');
-  }
-} catch (error) {
-  monitoringReport.alerts.push('Could not check for large files');
 }
 
 // Save report
@@ -451,8 +319,8 @@ fs.writeFileSync('monitoring-report.json', JSON.stringify(monitoringReport, null
 console.log('📄 Monitoring report saved to monitoring-report.json');
 
 if (monitoringReport.alerts.length > 0) {
-  console.log(`⚠️  Alerts: ${monitoringReport.alerts.length}`);
-  monitoringReport.alerts.forEach(alert => console.log(`   - ${alert}`));
+  console.log('⚠️  Alerts: ' + monitoringReport.alerts.length);
+  monitoringReport.alerts.forEach(alert => console.log('   - ' + alert));
 }
 
 console.log('📊 Monitoring completed');
@@ -472,14 +340,11 @@ async function main() {
     createTestingScript();
     report.improvements.push('Automated testing script created');
     
-    createDeploymentScript();
-    report.improvements.push('Deployment automation script created');
-    
     createMonitoringScript();
     report.improvements.push('Monitoring automation script created');
     
     // Run the new scripts
-    console.log('\\n🧪 Running automated tests...');
+    console.log('\n🧪 Running automated tests...');
     const testResult = runCommand('node scripts/automated-testing.cjs', 'Automated Testing');
     if (testResult.success) {
       report.improvements.push('Automated tests passed');
@@ -487,7 +352,7 @@ async function main() {
       report.errors.push('Automated tests failed');
     }
     
-    console.log('\\n🏥 Running health check...');
+    console.log('\n🏥 Running health check...');
     const healthResult = runCommand('node scripts/health-check.cjs', 'Health Check');
     if (healthResult.success) {
       report.improvements.push('Health check passed');
@@ -495,7 +360,7 @@ async function main() {
       report.errors.push('Health check failed');
     }
     
-    console.log('\\n📊 Running monitoring...');
+    console.log('\n📊 Running monitoring...');
     const monitoringResult = runCommand('node scripts/monitoring-automation.cjs', 'Monitoring');
     if (monitoringResult.success) {
       report.improvements.push('Monitoring completed');
@@ -509,16 +374,16 @@ async function main() {
     report.summary.failedImprovements = report.errors.length;
     
     // Save report
-    fs.writeFileSync('enhanced-app-improvement-report.json', JSON.stringify(report, null, 2));
+    fs.writeFileSync('simple-app-improvement-report.json', JSON.stringify(report, null, 2));
     
-    console.log('\\n🎉 Enhanced App Improvement Automation Completed!');
-    console.log(`📊 Summary: ${report.summary.successfulImprovements} improvements, ${report.summary.failedImprovements} errors`);
-    console.log('📄 Report saved to enhanced-app-improvement-report.json');
+    console.log('\n🎉 Simple App Improvement Automation Completed!');
+    console.log('📊 Summary: ' + report.summary.successfulImprovements + ' improvements, ' + report.summary.failedImprovements + ' errors');
+    console.log('📄 Report saved to simple-app-improvement-report.json');
     
   } catch (error) {
     console.error('💥 Automation failed:', error.message);
     report.errors.push(error.message);
-    fs.writeFileSync('enhanced-app-improvement-report.json', JSON.stringify(report, null, 2));
+    fs.writeFileSync('simple-app-improvement-report.json', JSON.stringify(report, null, 2));
     process.exit(1);
   }
 }

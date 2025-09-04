@@ -1,0 +1,19 @@
+{
+  "timestamp": "2025-09-03T23:51:17.721Z",
+  "metrics": {
+    "buildSize": {
+      "bytes": 48335815,
+      "formatted": "46.1 MB"
+    },
+    "nodeModulesSize": {
+      "bytes": 820676108,
+      "formatted": "782.66 MB"
+    },
+    "fileCounts": {
+      "pages": 18,
+      "components": 7
+    }
+  },
+  "alerts": [],
+  "status": "monitoring"
+}
