@@ -2,10 +2,13 @@ import Head from 'next/head';
 import Link from 'next/link';
 
 export default function Terms() {
-  const contact ={
-    phone: email, 'kleber@ziontechgroup.com'
-    address: site, 'https://ziontechgroup.com'
-  }
+  const contact = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    site: 'https://ziontechgroup.com'
+  };
+
   return (
     <>
       <Head>
@@ -37,7 +40,7 @@ export default function Terms() {
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-4 text-blue-400">2. Use License</h2>
               <p className="text-slate-300 mb-4">
-Permission is granted to temporarily download one copy of Zion Tech Group's services for personal, 
+                Permission is granted to temporarily download one copy of Zion Tech Group's services for personal, 
                 non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
               </p>
               <ul className="list-disc list-inside text-slate-300 mb-4 space-y-2">
@@ -59,64 +62,67 @@ Permission is granted to temporarily download one copy of Zion Tech Group's serv
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-4 text-blue-400">4. User Responsibilities</h2>
               <p className="text-slate-300 mb-4">
-                Users are responsible for: </p>
+                Users are responsible for:
+              </p>
               <ul className="list-disc list-inside text-slate-300 mb-4 space-y-2">
                 <li>Maintaining the confidentiality of their account credentials</li>
                 <li>All activities that occur under their account</li>
                 <li>Complying with all applicable laws and regulations</li>
-                <li>Not using the services for any unlawful or prohibited purpose</li>
+                <li>Not using our services for any unlawful or prohibited purpose</li>
               </ul>
             </section>
 
             <section className="mb-12">
-              <h2 className="text-2xl font-bold mb-4 text-blue-400">5. Payment Terms</h2>
+              <h2 className="text-2xl font-bold mb-4 text-blue-400">5. Intellectual Property</h2>
               <p className="text-slate-300 mb-4">
-                Payment terms vary by service. All fees are non-refundable unless otherwise specified. 
-                We reserve the right to change our pricing with 30 days notice to existing customers.
+                All content, trademarks, and intellectual property on this website are the property of Zion Tech Group 
+                or its licensors. Users may not use, reproduce, or distribute any content without written permission.
               </p>
             </section>
 
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-4 text-blue-400">6. Limitation of Liability</h2>
               <p className="text-slate-300 mb-4">
-                In no event shall Zion Tech Group or its suppliers be liable for any damages (including, without limitation, 
-                damages for loss of data or profit, or due to business interruption) arising out of the use or inability 
-                to use the services, even if Zion Tech Group or a Zion Tech Group authorized representative has been notified 
-                orally or in writing of the possibility of such damage.
+                In no event shall Zion Tech Group be liable for any damages arising out of the use or inability to use 
+                our services, including but not limited to direct, indirect, incidental, or consequential damages.
               </p>
             </section>
 
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-4 text-blue-400">7. Privacy Policy</h2>
               <p className="text-slate-300 mb-4">
-                Your privacy is important to us. Please review our Privacy Policy, which also governs your use of the services.
+                Your privacy is important to us. Please review our Privacy Policy, which also governs your use of our services.
               </p>
             </section>
 
             <section className="mb-12">
-              <h2 className="text-2xl font-bold mb-4 text-blue-400">8. Contact Information</h2>
+              <h2 className="text-2xl font-bold mb-4 text-blue-400">8. Changes to Terms</h2>
               <p className="text-slate-300 mb-4">
-                If you have any questions about these Terms of Service, please contact us: </p>
-              <div className="bg-slate-900/60 p-6 rounded-lg border border-white/10">
+                Zion Tech Group reserves the right to modify these terms at any time. Changes will be effective immediately 
+                upon posting. Continued use of our services constitutes acceptance of the modified terms.
+              </p>
+            </section>
+
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold mb-4 text-blue-400">9. Contact Information</h2>
+              <p className="text-slate-300 mb-4">
+                If you have any questions about these Terms of Service, please contact us:
+              </p>
+              <div className="bg-slate-800 p-6 rounded-lg">
                 <p className="text-slate-300 mb-2">
-                  <strong>Phone:</strong> <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="text-blue-400 hover: text-blue-300">{contact.phone}</a>
+                  <strong>Email:</strong> {contact.email}
                 </p>
                 <p className="text-slate-300 mb-2">
-                  <strong>Email: </strong> <a href={`mailto:${contact.email}`} className="text-blue-400 hover: text-blue-300">{contact.email}</a>
+                  <strong>Phone:</strong> {contact.phone}
                 </p>
                 <p className="text-slate-300">
-                  <strong>Address: </strong> {contact.address}
+                  <strong>Address:</strong> {contact.address}
                 </p>
               </div>
             </section>
           </div>
-
-          <div className="mt-12 text-center">
-            <Link href="/" className="px-8 py-3 bg-blue-600 hover: bg-blue-700 rounded-lg font-semibold transition-colors">
-              Back to Home
-            </Link>
-          </div>
         </div>
       </main>
     </>
-  )}
+  );
+}

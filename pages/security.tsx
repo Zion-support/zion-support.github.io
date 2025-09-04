@@ -2,143 +2,150 @@ import Link from 'next/link';
 import Head from 'next/head';
 
 export default function Security() {
-const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', site: 'https://ziontechgroup.com'
+  const contact = { 
+    phone: '+1 302 464 0950', 
+    email: 'kleber@ziontechgroup.com', 
+    address: '364 E Main St STE 1008 Middletown DE 19709', 
+    site: 'https://ziontechgroup.com' 
   };
+
   const securityMeasures = [
     {
-      title: "Data Encryption"
-      description: "All data is encrypted both in transit and at rest using industry-standard encryption protocols"
-      icon: "🔐"
+      title: "Data Encryption",
+      description: "All data is encrypted both in transit and at rest using industry-standard encryption protocols",
+      icon: "🔐",
       details: [
-        "AES-256 encryption for data at rest"
-        "TLS 1.3 for data in transit"
-        "End-to-end encryption for sensitive communications"
+        "AES-256 encryption for data at rest",
+        "TLS 1.3 for data in transit",
+        "End-to-end encryption for sensitive communications",
         "Regular encryption key rotation"
       ]
     },
     {
-      title: "Access Control"
-      description: "Multi-layered access control systems ensure only authorized personnel can access sensitive information"
-      icon: "🔑"
+      title: "Access Control",
+      description: "Multi-layered access control systems ensure only authorized personnel can access sensitive information",
+      icon: "🔑",
       details: [
-        "Multi-factor authentication (MFA)"
-        "Role-based access control (RBAC)"
-        "Principle of least privilege"
+        "Multi-factor authentication (MFA)",
+        "Role-based access control (RBAC)",
+        "Principle of least privilege",
         "Regular access reviews and audits"
       ]
     },
     {
-      title: "Network Security"
-      description: "Advanced network security measures protect against external threats and unauthorized access"
-      icon: "🛡️"
+      title: "Network Security",
+      description: "Advanced network security measures protect against external threats and unauthorized access",
+      icon: "🛡️",
       details: [
-        "Firewall protection and intrusion detection"
-        "DDoS protection and mitigation"
-        "Network segmentation and isolation"
+        "Firewall protection and intrusion detection",
+        "DDoS protection and mitigation",
+        "Network segmentation and isolation",
         "Continuous network monitoring"
       ]
     },
     {
-      title: "Compliance & Auditing"
-      description: "Regular compliance audits and security assessments ensure adherence to industry standards"
-      icon: "📋"
+      title: "Compliance & Auditing",
+      description: "Regular compliance audits and security assessments ensure adherence to industry standards",
+      icon: "📋",
       details: [
-        "SOC 2 Type II compliance"
-        "ISO 27001 certification"
-        "Regular penetration testing"
+        "SOC 2 Type II compliance",
+        "ISO 27001 certification",
+        "Regular penetration testing",
         "Third-party security audits"
       ]
+    },
+    {
+      title: "Incident Response",
+      description: "Comprehensive incident response procedures ensure rapid detection and mitigation of security threats",
+      icon: "🚨",
+      details: [
+        "24/7 security monitoring",
+        "Automated threat detection",
+        "Rapid incident response team",
+        "Post-incident analysis and improvement"
+      ]
+    },
+    {
+      title: "Employee Training",
+      description: "Regular security awareness training ensures all team members understand and follow security best practices",
+      icon: "👥",
+      details: [
+        "Security awareness training programs",
+        "Phishing simulation exercises",
+        "Regular security updates and briefings",
+        "Security policy compliance monitoring"
+      ]
     }
-  ];
-
-  const certifications = [
-    { name: "SOC 2 Type II" description: "Security, availability, and confidentiality controls" },
-    { name: "ISO 27001" description: "Information security management system" },
-    { name: "HIPAA Compliant" description: "Healthcare data protection standards" },
-    { name: "GDPR Compliant" description: "European data protection regulations" },
-    { name: "PCI DSS" description: "Payment card industry security standards" },
-    { name: "NIST Framework" description: "Cybersecurity framework compliance" }
-  ];
-
-  const securityFeatures = [
-    "24/7 Security Monitoring"
-    "Automated Threat Detection"
-    "Incident Response Team"
-    "Regular Security Updates"
-    "Employee Security Training"
-    "Vulnerability Management"
-    "Data Backup & Recovery"
-    "Business Continuity Planning"
   ];
 
   return (
     <>
       <Head>
-        <title>Security - Zion Tech Group | Information Security & Data Protection</title>
-        <meta name="description" content="Learn about Zion Tech Group's comprehensive security measures, data protection policies, and compliance certifications." />
+        <title>Security - Zion Tech Group | Enterprise-Grade Security Solutions</title>
+        <meta name="description" content="Learn about Zion Tech Group's comprehensive security measures, compliance standards, and data protection practices. Your data security is our priority." />
         <meta name="keywords" content="security, data protection, encryption, compliance, SOC 2, ISO 27001, cybersecurity, privacy" />
         <link rel="canonical" href={`${contact.site}/security`} />
-        <meta property="og:title" content="Security - Zion Tech Group | Information Security & Data Protection" />
-        <meta property="og:description" content="Learn about Zion Tech Group's comprehensive security measures, data protection policies, and compliance certifications." />
+        <meta property="og:title" content="Security - Zion Tech Group | Enterprise-Grade Security Solutions" />
+        <meta property="og:description" content="Learn about Zion Tech Group's comprehensive security measures and data protection practices." />
         <meta property="og:url" content={`${contact.site}/security`} />
         <meta property="og:type" content="website" />
       </Head>
 
-      <div style={{ minHeight: '100vh', background: color, 'white' }}>
-        <div style={{ maxWidth: 1200, margin: padding, '40px 20px' }}>
-          <div style={{ textAlign: 'center', marginBottom: 60 }}>
-            <h1 style={{ 
-              fontSize: fontWeight, 800, 
-              marginBottom: 20,
-              background: WebkitBackgroundClip, 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text'
-            },,}>
-              Security & Compliance
-            </h1>
-            <p style={{ fontSize: '1.2rem', color: maxWidth, 600, margin: '0 auto' }}>
-              Your data security is our top priority. We implement industry-leading security measures and maintain strict compliance with global standards.
-            </p>
+      <div className="min-h-screen bg-white">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-red-600 to-orange-600 text-white py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Security & Compliance
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                Enterprise-grade security measures and compliance standards to protect your data and ensure regulatory adherence.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link 
+                  href="/contact"
+                  className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  Learn More
+                </Link>
+                <Link 
+                  href="/services"
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors"
+                >
+                  View Security Services
+                </Link>
+              </div>
+            </div>
           </div>
+        </section>
 
-          <div style={{ marginBottom: 80 }}>
-            <h2 style={{ fontSize: fontWeight, 700, marginBottom: 40, textAlign: 'center' }}>
-              Security Measures
-            </h2>
-            <div style={{ display: gap, 30 }}>
+        {/* Security Measures */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Our Security Measures
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                We implement multiple layers of security to protect your data and ensure the highest standards of compliance.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {securityMeasures.map((measure, index) => (
-                <div key={index} style={{
-                  background: borderRadius, 12,
-                  padding: 30,
-                  border: '1px solid rgba(255, 255, 255, 0.1)'
-                }}>
-                  <div style={{ display: alignItems, 'center' gap: 20, marginBottom: 20 }}>
-                    <div style={{ fontSize: '3rem' }}>{measure.icon}</div>
-                    <div>
-                      <h3 style={{ fontSize: fontWeight, 700, marginBottom: 10 }}>
-                        {measure.title}
-                      </h3>
-                      <p style={{ color: '#94a3b8', fontSize: '1.1rem' }}>
-                        {measure.description}
-                      </p>
-                    </div>
+                <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
+                  <div className="text-center mb-6">
+                    <div className="text-4xl mb-4">{measure.icon}</div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{measure.title}</h3>
+                    <p className="text-gray-600">{measure.description}</p>
                   </div>
                   
-                  <div style={{ display: gridTemplateColumns, 'repeat(auto-fit, minmax(250px, 1fr))' gap: 15 }}>
+                  <div className="space-y-3">
                     {measure.details.map((detail, detailIndex) => (
-                      <div key={detailIndex} style={{
-                        display: alignItems, 'center'
-                        gap: 12,
-                        padding: 15,
-                        background: borderRadius, 8,
-                        border: '1px solid rgba(239, 68, 68, 0.2)'
-                      }}>
-                        <div style={{
-                          width: 8,
-                          height: 8,
-                          background: borderRadius, '50%'
-                        }} />
-                        <span style={{ fontSize: '1rem' }}>{detail}</span>
+                      <div key={detailIndex} className="flex items-center text-sm text-gray-700">
+                        <span className="w-2 h-2 bg-red-600 rounded-full mr-3"></span>
+                        {detail}
                       </div>
                     ))}
                   </div>
@@ -146,105 +153,73 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
               ))}
             </div>
           </div>
+        </section>
 
-          <div style={{ marginBottom: 80 }}>
-            <h2 style={{ fontSize: fontWeight, 700, marginBottom: 40, textAlign: 'center' }}>
-              Compliance Certifications
-            </h2>
-            <div style={{ display: gridTemplateColumns, 'repeat(auto-fit, minmax(300px, 1fr))' gap: 25 }}>
-              {certifications.map((cert, index) => (
-<div key={index} style={{ background: 'rgba(255, 255, 255, 0.05)',
-                  borderRadius: 12, padding: 25, border: '1px solid rgba(255, 255, 255, 0.1)',
-                  textAlign: 'center', transition: 'transform 0.3s ease, box-shadow 0.3s ease', cursor: 'pointer'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-5px)';
-                  e.currentTarget.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.3)';
-                }
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = 'none';
-                }}>
-                  <div style={{
-                    background: color, 'white'
-                    padding: borderRadius, 20,
-                    fontSize: fontWeight, 600,
-                    marginBottom: 15,
-                    display: 'inline-block'
-                  }}>
-                    {cert.name}
-                  </div>
-                  <p style={{ color: fontSize, '1rem' }}>
-                    {cert.description}
-                  </p>
-                </div>
-              ))}
+        {/* Compliance Section */}
+        <section className="bg-gray-50 py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Compliance & Certifications
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                We maintain the highest standards of compliance and hold industry-recognized certifications.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="bg-white p-6 rounded-lg shadow-md text-center">
+                <div className="text-3xl mb-4">🏆</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">SOC 2 Type II</h3>
+                <p className="text-gray-600 text-sm">Audited security controls and processes</p>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg shadow-md text-center">
+                <div className="text-3xl mb-4">🔒</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">ISO 27001</h3>
+                <p className="text-gray-600 text-sm">Information security management system</p>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg shadow-md text-center">
+                <div className="text-3xl mb-4">🛡️</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">GDPR Compliant</h3>
+                <p className="text-gray-600 text-sm">European data protection standards</p>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg shadow-md text-center">
+                <div className="text-3xl mb-4">✅</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">CCPA Compliant</h3>
+                <p className="text-gray-600 text-sm">California consumer privacy act</p>
+              </div>
             </div>
           </div>
+        </section>
 
-          <div style={{ marginBottom: 80 }}>
-            <h2 style={{ fontSize: fontWeight, 700, marginBottom: 40, textAlign: 'center' }}>
-              Security Features
+        {/* CTA Section */}
+        <section className="bg-red-600 py-20">
+          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Questions About Our Security?
             </h2>
-            <div style={{ display: gridTemplateColumns, 'repeat(auto-fit, minmax(250px, 1fr))' gap: 20 }}>
-              {securityFeatures.map((feature, index) => (
-                <div key={index} style={{ 
-                  display: alignItems, 'center' 
-                  gap: 15,
-                  padding: 20,
-                  background: borderRadius, 8,
-                  border: '1px solid rgba(255, 255, 255, 0.1)'
-                }}>
-                  <div style={{
-                    width: 8,
-                    height: 8,
-                    background: borderRadius, '50%'
-                  }} />
-                  <span style={{ fontSize: '1rem' }}>{feature}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div style={{ 
-            background: borderRadius, 12,
-            padding: 40,
-            border: textAlign, 'center'
-          },,}>
-            <h2 style={{ fontSize: fontWeight, 700, marginBottom: 20 }}>
-              Report Security Issues
-            </h2>
-            <p style={{ fontSize: color, '#94a3b8' marginBottom: 30, maxWidth: 600, margin: '0 auto 30px' }}>
-              If you discover a security vulnerability or have concerns about our security practices, please report them to our security team immediately.
+            <p className="text-xl text-white mb-8 opacity-90">
+              Contact our security team to learn more about our security measures and compliance standards.
             </p>
-            <div style={{ display: gap, 20, justifyContent: flexWrap, 'wrap' }}>
-              <a href={`mailto:security@ziontechgroup.com`} style={{
-                background: color, 'white'
-                padding: textDecoration, 'none'
-                borderRadius: 8,
-                fontSize: fontWeight, 600,
-                display: 'inline-block'
-              }}>
-                Report Security Issue
-              </a>
-              <Link href="/contact" style={{
-                background: color, '#ef4444'
-                padding: textDecoration, 'none'
-                borderRadius: 8,
-fontSize: '1.1rem',
-fontWeight: 600, display: 'inline-block', border: '2px solid #ef4444', transition: 'background-color 0.3s ease'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.background = 'rgba(239, 68, 68, 0.1)';
-              }
-              onMouseLeave={(e) => {
-                e.currentTarget.style.background = 'transparent';
-              }}>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                href="/contact"
+                className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              >
                 Contact Security Team
               </Link>
+              <a 
+                href={`tel:${contact.phone}`}
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors"
+              >
+                Call {contact.phone}
+              </a>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </>
   );

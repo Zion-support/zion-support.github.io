@@ -10,105 +10,125 @@ type Service = {
 }
 const microSaaS: Service[] = [
   {
-    name: 'Cloud Cost Guard (FinOps Assistant)'
-    summary: 'Anomaly detection, rightsizing, forecasting and budget guardrails across AWS/Azure/GCP.'
-    pricing: 'Typical: $299–$1,499/month'
-    link: 'https://ziontechgroup.com/micro-saas'},
+    name: 'Cloud Cost Guard (FinOps Assistant)',
+    summary: 'Anomaly detection, rightsizing, forecasting and budget guardrails across AWS/Azure/GCP.',
+    pricing: 'Typical: $299–$1,499/month',
+    link: 'https://ziontechgroup.com/micro-saas'
+  },
   {
-    name: 'LLM Evaluation & Safety Suite'
-    summary: 'Prompt evaluation, bias/toxicity checks, jailbreak tests and guardrail policies.'
-    pricing: 'Typical: $799–$3,500/month'
-    link: 'https://ziontechgroup.com/ai-services'},
+    name: 'LLM Evaluation & Safety Suite',
+    summary: 'Prompt evaluation, bias/toxicity checks, jailbreak tests and guardrail policies.',
+    pricing: 'Typical: $799–$3,500/month',
+    link: 'https://ziontechgroup.com/ai-services'
+  },
   {
-    name: 'Customer Feedback & NPS Micro-App'
-    summary: 'Embed surveys, analyze sentiment and route issues to the right team automatically.'
-    pricing: 'Typical: $149–$799/month'
-    link: 'https://ziontechgroup.com/micro-saas'},
+    name: 'Customer Feedback & NPS Micro-App',
+    summary: 'Embed surveys, analyze sentiment and route issues to the right team automatically.',
+    pricing: 'Typical: $149–$799/month',
+    link: 'https://ziontechgroup.com/micro-saas'
+  },
   {
-    name: 'API Rate Limiter & Analytics'
-    summary: 'Intelligent rate limiting, usage analytics, and API monetization for SaaS platforms.'
-    pricing: 'Typical: $199–$999/month'
-    link: 'https://ziontechgroup.com/micro-saas'},
+    name: 'API Rate Limiter & Analytics',
+    summary: 'Intelligent rate limiting, usage analytics, and API monetization for SaaS platforms.',
+    pricing: 'Typical: $199–$999/month',
+    link: 'https://ziontechgroup.com/micro-saas'
+  },
   {
-    name: 'Smart Document Processing'
-    summary: 'AI-powered OCR, data extraction, and document workflow automation for businesses.'
-    pricing: 'Typical: $399–$1,999/month'
-    link: 'https://ziontechgroup.com/micro-saas'},
+    name: 'Smart Document Processing',
+    summary: 'AI-powered OCR, data extraction, and document workflow automation for businesses.',
+    pricing: 'Typical: $399–$1,999/month',
+    link: 'https://ziontechgroup.com/micro-saas'
+  },
   {
-    name: 'Social Media Scheduler Pro'
-    summary: 'Multi-platform scheduling, content optimization, and engagement analytics.'
-    pricing: 'Typical: $99–$499/month'
-    link: 'https://ziontechgroup.com/micro-saas'},
+    name: 'Social Media Scheduler Pro',
+    summary: 'Multi-platform scheduling, content optimization, and engagement analytics.',
+    pricing: 'Typical: $99–$499/month',
+    link: 'https://ziontechgroup.com/micro-saas'
+  },
   {
-    name: 'Email Deliverability Monitor'
-    summary: 'Real-time email reputation tracking, bounce analysis, and deliverability optimization.'
-    pricing: 'Typical: $149–$699/month'
-    link: 'https://ziontechgroup.com/micro-saas'},
+    name: 'Email Deliverability Monitor',
+    summary: 'Real-time email reputation tracking, bounce analysis, and deliverability optimization.',
+    pricing: 'Typical: $149–$699/month',
+    link: 'https://ziontechgroup.com/micro-saas'
+  },
   {
-    name: 'Website Performance Optimizer'
-    summary: 'Automated Core Web Vitals monitoring, optimization suggestions, and performance alerts.'
-    pricing: 'Typical: $199–$899/month'
-    link: 'https://ziontechgroup.com/micro-saas'},
+    name: 'Website Performance Optimizer',
+    summary: 'Automated Core Web Vitals monitoring, optimization suggestions, and performance alerts.',
+    pricing: 'Typical: $199–$899/month',
+    link: 'https://ziontechgroup.com/micro-saas'
+  },
   {
-    name: 'Lead Scoring & Qualification'
-    summary: 'AI-powered lead scoring, qualification workflows, and CRM integration.'
-    pricing: 'Typical: $299–$1,299/month'
-    link: 'https://ziontechgroup.com/micro-saas'},
+    name: 'Lead Scoring & Qualification',
+    summary: 'AI-powered lead scoring, qualification workflows, and CRM integration.',
+    pricing: 'Typical: $299–$1,299/month',
+    link: 'https://ziontechgroup.com/micro-saas'
+  },
   {
-    name: 'Inventory Management AI'
-    summary: 'Predictive inventory optimization, demand forecasting, and automated reordering.'
-    pricing: 'Typical: $399–$1,999/month'
-    link: 'https://ziontechgroup.com/micro-saas'},
+    name: 'Inventory Management AI',
+    summary: 'Predictive inventory optimization, demand forecasting, and automated reordering.',
+    pricing: 'Typical: $399–$1,999/month',
+    link: 'https://ziontechgroup.com/micro-saas'
+  },
   {
-    name: 'Employee Productivity Tracker'
-    summary: 'Non-invasive productivity analytics, time tracking, and performance insights.'
-    pricing: 'Typical: $99–$399/month'
-    link: 'https://ziontechgroup.com/micro-saas'},
+    name: 'Employee Productivity Tracker',
+    summary: 'Non-invasive productivity analytics, time tracking, and performance insights.',
+    pricing: 'Typical: $99–$399/month',
+    link: 'https://ziontechgroup.com/micro-saas'
+  },
   {
-    name: 'Competitor Price Monitor'
-    summary: 'Real-time competitor pricing tracking, alerts, and dynamic pricing recommendations.'
-    pricing: 'Typical: $199–$799/month'
-    link: 'https://ziontechgroup.com/micro-saas'},
+    name: 'Competitor Price Monitor',
+    summary: 'Real-time competitor pricing tracking, alerts, and dynamic pricing recommendations.',
+    pricing: 'Typical: $199–$799/month',
+    link: 'https://ziontechgroup.com/micro-saas'
+  },
   {
-    name: 'SEO Content Optimizer'
-    summary: 'AI-powered content optimization, keyword research, and SERP tracking.'
-    pricing: 'Typical: $149–$699/month'
-    link: 'https://ziontechgroup.com/micro-saas'},
+    name: 'SEO Content Optimizer',
+    summary: 'AI-powered content optimization, keyword research, and SERP tracking.',
+    pricing: 'Typical: $149–$699/month',
+    link: 'https://ziontechgroup.com/micro-saas'
+  },
   {
-    name: 'Customer Churn Predictor'
-    summary: 'Machine learning models to predict and prevent customer churn with actionable insights.'
-    pricing: 'Typical: $399–$1,599/month'
-    link: 'https://ziontechgroup.com/micro-saas'},
+    name: 'Customer Churn Predictor',
+    summary: 'Machine learning models to predict and prevent customer churn with actionable insights.',
+    pricing: 'Typical: $399–$1,599/month',
+    link: 'https://ziontechgroup.com/micro-saas'
+  },
   {
-    name: 'Automated A/B Testing Platform'
-    summary: 'Statistical significance testing, multivariate experiments, and conversion optimization.'
-    pricing: 'Typical: $299–$1,199/month'
-    link: 'https://ziontechgroup.com/micro-saas'},
+    name: 'Automated A/B Testing Platform',
+    summary: 'Statistical significance testing, multivariate experiments, and conversion optimization.',
+    pricing: 'Typical: $299–$1,199/month',
+    link: 'https://ziontechgroup.com/micro-saas'
+  },
   {
-    name: 'Smart Invoice Processing & AP Automation'
-    summary: 'AI-powered invoice extraction, approval workflows, and automated payment processing.'
-    pricing: 'Typical: $199–$899/month'
-    link: 'https://ziontechgroup.com/micro-saas'},
+    name: 'Smart Invoice Processing & AP Automation',
+    summary: 'AI-powered invoice extraction, approval workflows, and automated payment processing.',
+    pricing: 'Typical: $199–$899/month',
+    link: 'https://ziontechgroup.com/micro-saas'
+  },
   {
-    name: 'Real-time Collaboration Workspace'
-    summary: 'Virtual whiteboards, document collaboration, and team productivity analytics.'
-    pricing: 'Typical: $99–$499/month'
-    link: 'https://ziontechgroup.com/micro-saas'},
+    name: 'Real-time Collaboration Workspace',
+    summary: 'Virtual whiteboards, document collaboration, and team productivity analytics.',
+    pricing: 'Typical: $99–$499/month',
+    link: 'https://ziontechgroup.com/micro-saas'
+  },
   {
-    name: 'AI-Powered Code Review Assistant'
-    summary: 'Automated code quality analysis, security scanning, and performance optimization suggestions.'
-    pricing: 'Typical: $149–$699/month'
-    link: 'https://ziontechgroup.com/micro-saas'},
+    name: 'AI-Powered Code Review Assistant',
+    summary: 'Automated code quality analysis, security scanning, and performance optimization suggestions.',
+    pricing: 'Typical: $149–$699/month',
+    link: 'https://ziontechgroup.com/micro-saas'
+  },
   {
-    name: 'Dynamic Pricing Optimization Engine'
-    summary: 'Real-time pricing adjustments based on demand, competition, and market conditions.'
-    pricing: 'Typical: $399–$1,999/month'
-    link: 'https://ziontechgroup.com/micro-saas'},
+    name: 'Dynamic Pricing Optimization Engine',
+    summary: 'Real-time pricing adjustments based on demand, competition, and market conditions.',
+    pricing: 'Typical: $399–$1,999/month',
+    link: 'https://ziontechgroup.com/micro-saas'
+  },
   {
-    name: 'Smart Contract Management System'
-    summary: 'Contract lifecycle management, renewal tracking, and compliance monitoring.'
-    pricing: 'Typical: $299–$1,299/month'
-    link: 'https://ziontechgroup.com/micro-saas'},
+    name: 'Smart Contract Management System',
+    summary: 'Contract lifecycle management, renewal tracking, and compliance monitoring.',
+    pricing: 'Typical: $299–$1,299/month',
+    link: 'https://ziontechgroup.com/micro-saas'
+  },
   {
     name: 'AI-Powered HR Analytics Platform'
     summary: 'Employee performance insights, retention prediction, and workforce optimization.'
