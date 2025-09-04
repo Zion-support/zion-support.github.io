@@ -1,324 +1,361 @@
-import Link from 'next/link';
-import Head from 'next/head';
+import React from 'react'
+import dynamic from 'next/dynamic'
+import Head from 'next/head'
+import Link from 'next/link'
+import { motion } from 'framer-motion'
+import { 
+  ShoppingCart, 
+  Users, 
+  Server, 
+  Wrench, 
+  ArrowRight, 
+  CheckCircle, 
+  Star,
+  Clock,
+  Globe,
+  Zap,
+  Shield,
+  Database
+} from 'lucide-react'
 
-export default function Marketplace() {
-const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', site: 'https://ziontechgroup.com'
-}
-  const marketplaceCategories = [
-    {
-      title: "Products"
-      description: "Discover innovative technology products and solutions"
-      icon: "🛍️"
-      items: [
-        { name: "AI-Powered Analytics Platform" price: "Starting at $299/month" category: "AI & Analytics"  },
-        { name: "Cloud Infrastructure Suite" price: "Starting at $199/month" category: "Cloud Computing"  },
-        { name: "Cybersecurity Monitoring Tool" price: "Starting at $149/month" category: "Security"  },
-        { name: "Quantum Computing Simulator" price: "Starting at $499/month" category: "Quantum Computing"  }
-      ]
+const SEO = dynamic(() => import('../src/components/SEO'), { ssr: false })
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false })
+
+const MarketplacePage: React.FC = () => {
+  const sections = [
+    { 
+      title: 'Products', 
+      href: '/marketplace/products', 
+      description: 'AI tools, software, and platforms.',
+      icon: <ShoppingCart className="w-8 h-8" />,
+      count: '150+'
     },
-    {
-      title: "Talent"
-      description: "Connect with skilled technology professionals"
-      icon: "👥"
-      items: [
-        { name: "Senior AI/ML Engineers" price: "$120-180/hour" category: "AI & Machine Learning"  },
-        { name: "Cloud DevOps Specialists" price: "$100-150/hour" category: "Cloud & DevOps"  },
-        { name: "Cybersecurity Experts" price: "$110-170/hour" category: "Cybersecurity"  },
-        { name: "Quantum Computing Researchers" price: "$150-250/hour" category: "Quantum Computing"  }
-      ]
+    { 
+      title: 'Talent', 
+      href: '/marketplace/talent', 
+      description: 'Expert contractors and fractional teams.',
+      icon: <Users className="w-8 h-8" />,
+      count: '500+'
     },
-    {
-      title: "Equipment"
-      description: "Access cutting-edge technology equipment and hardware"
-      icon: "🔧"
-      items: [
-        { name: "High-Performance Servers" price: "Starting at $2,999" category: "Hardware"  },
-        { name: "Quantum Computing Hardware" price: "Starting at $50,000" category: "Quantum Hardware"  },
-        { name: "Network Security Appliances" price: "Starting at $1,999" category: "Security Hardware"  },
-        { name: "Edge Computing Devices" price: "Starting at $499" category: "IoT & Edge"  }
-      ]
+    { 
+      title: 'Equipment', 
+      href: '/marketplace/equipment', 
+      description: 'Hardware and infrastructure.',
+      icon: <Server className="w-8 h-8" />,
+      count: '200+'
     },
-    {
-      title: "Services"
-      description: "Professional technology services and consulting"
-      icon: "⚙️"
-      items: [
-        { name: "Digital Transformation Consulting" price: "$200-300/hour" category: "Consulting"  },
-        { name: "Cloud Migration Services" price: "$150-250/hour" category: "Cloud Services"  },
-        { name: "Security Assessment & Auditing" price: "$180-280/hour" category: "Security Services"  },
-        { name: "Custom Software Development" price: "$120-200/hour" category: "Development"  }
-      ]
+    { 
+      title: 'Services', 
+      href: '/marketplace/services', 
+      description: 'Professional and managed services.',
+      icon: <Wrench className="w-8 h-8" />,
+      count: '100+'
     }
-  ];
+  ]
 
-  const featuredItems = [
+  const featuredProducts = [
     {
-      name: "AI Business Intelligence Suite"
-      description: "Comprehensive AI-powered analytics platform for enterprise decision making"
-      price: "$299/month"
-      category: "AI & Analytics"
-      rating: 4.9,
-      reviews: 127
-},
-    {
-      name: "Quantum Algorithm Development"
-      description: "Expert quantum computing research and algorithm development services"
-      price: "$200/hour"
-      category: "Quantum Computing"
+      title: 'AI Analytics Platform',
+      description: 'Advanced AI-powered analytics platform for business intelligence.',
+      price: '$299/month',
       rating: 4.8,
-      reviews: 89
-},
+      reviews: 156,
+      category: 'AI Tools'
+    },
     {
-      name: "Enterprise Security Platform"
-      description: "Advanced cybersecurity monitoring and threat detection system"
-      price: "$199/month"
-      category: "Cybersecurity"
+      title: 'Cloud Infrastructure Suite',
+      description: 'Comprehensive cloud infrastructure management solution.',
+      price: '$499/month',
       rating: 4.9,
-      reviews: 156
-}
-  ];
+      reviews: 89,
+      category: 'Infrastructure'
+    },
+    {
+      title: 'Cybersecurity Toolkit',
+      description: 'Complete cybersecurity solution for small to medium businesses.',
+      price: '$199/month',
+      rating: 4.7,
+      reviews: 234,
+      category: 'Security'
+    }
+  ]
+
+  const benefits = [
+    {
+      icon: <Shield className="w-6 h-6" />,
+      title: 'Verified Quality',
+      description: 'All products and services are verified for quality and security'
+    },
+    {
+      icon: <Zap className="w-6 h-6" />,
+      title: 'Fast Deployment',
+      description: 'Quick setup and deployment for all marketplace solutions'
+    },
+    {
+      icon: <Globe className="w-6 h-6" />,
+      title: 'Global Access',
+      description: 'Access to products and services from around the world'
+    },
+    {
+      icon: <Clock className="w-6 h-6" />,
+      title: '24/7 Support',
+      description: 'Round-the-clock support for all marketplace transactions'
+    }
+  ]
 
   return (
     <>
-      <Head>
-        <title>Marketplace - Zion Tech Group | Technology Products, Services & Talent</title>
-        <meta name="description"
-  content="Explore Zion Tech Group's marketplace for technology products, professional services, skilled talent, and cutting-edge equipment." />
-        <meta name="keywords"
-  content="technology marketplace, AI products, cloud services, cybersecurity tools, quantum computing, tech talent, equipment" />
-        <link rel="canonical"
-  href={`${contact.site}/marketplace`} />
-        <meta property="og:title"
-  content="Marketplace - Zion Tech Group | Technology Products, Services & Talent" />
-        <meta property="og:description"
-  content="Explore Zion Tech Group's marketplace for technology products, professional services, skilled talent, and cutting-edge equipment." />
-        <meta property="og:url"
-  content={`${contact.site}/marketplace`} />
-        <meta property="og:type"
-  content="website" />
-      </Head>
+      <SEO
+        title="Marketplace - Zion Tech Group"
+        description="Discover products, talent, equipment, and services in our marketplace."
+        keywords="marketplace, products, talent, equipment, services, Zion Tech Group"
+        canonical="https://ziontechgroup.com/marketplace"
+      />
+      
+      <PageTransition>
+        <main className="min-h-screen bg-white">
+          {/* Hero Section */}
+          <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-center"
+              >
+                <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                  Marketplace
+                </h1>
+                <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                  Discover products, talent, equipment, and services to accelerate your business growth.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <motion.a
+                    href="#sections"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
+                  >
+                    <ArrowRight className="w-5 h-5" />
+                    Explore Marketplace
+                  </motion.a>
+                  <motion.a
+                    href="/contact"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
+                  >
+                    <ArrowRight className="w-5 h-5" />
+                    Become a Seller
+                  </motion.a>
+                </div>
+              </motion.div>
+            </div>
+          </section>
 
-      <div style={{ minHeight: 100vh, background: color, 'white' }}>
-        <div style={{ maxWidth: 1200, margin: padding, '40px 20px' }}>
-          <div style={{ textAlign: center, marginBottom: 60
-}}>
-            <h1 style={{ 
-              fontSize: fontWeight, 800, 
-              marginBottom: 20,
-              background: WebkitBackgroundClip, 'text',
-              WebkitTextFillColor: transparent,
-              backgroundClip: text
-},,}>
-              Technology Marketplace
-            </h1>
-            <p style={{ fontSize: '1.2rem', color: maxWidth, 600, margin: '0 auto'
-}}>
-              Discover innovative products, connect with skilled professionals, and access cutting-edge technology solutions all in one place.
-            </p>
-          </div>
+          {/* Marketplace Sections */}
+          <section id="sections" className="py-20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="text-center mb-16"
+              >
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                  Marketplace Categories
+                </h2>
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                  Explore our comprehensive marketplace with products, talent, equipment, and services.
+                </p>
+              </motion.div>
 
-          <div style={{ marginBottom: 80
-}}>
-            <h2 style={{ fontSize: fontWeight, 700, marginBottom: 40, textAlign: center
-}}>
-              Featured Items
-            </h2>
-            <div style={{ display: gridTemplateColumns, 'repeat(auto-fit, minmax(350px, 1fr))' gap: 30
-}}>
-              {featuredItems.map((item, index) => (
-<div key={index} style={{ background: 'rgba(255, 255, 255, 0.05)',
-                  borderRadius: 12, padding: 30, border: '1px solid rgba(255, 255, 255, 0.1)', transition: 'transform 0.3s ease, box-shadow 0.3s ease', cursor: pointer
-}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-5px)';
-                  e.currentTarget.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.3)';
-                }
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = 'none';
-                }}>
-                  <div style={{ marginBottom: 15
-}}>
-                    <span style={{
-            background: color, 'white'
-                      padding: borderRadius, 20,
-                      fontSize: fontWeight, 600
-                    
-          }}>
-                      {item.category}
-                    </span>
-                  </div>
-                  
-                  <h3 style={{
-            fontSize: fontWeight, 700, 
-                    marginBottom: 15,
-                    lineHeight: '1.3'
-}}>
-                    {item.name}
-                  </h3>
-                  
-                  <p style={{ 
-                    color: marginBottom, 20, 
-                    lineHeight: '1.6',
-                    fontSize: 1rem
-}}>
-                    {item.description}
-                  </p>
-                  
-                  <div style={{
-            display: justifyContent, 'space-between' 
-                    alignItems: marginBottom, 20
-                  
-          }}>
-                    <div style={{
-            fontSize: fontWeight, 700,
-                      background: WebkitBackgroundClip, 'text'
-                      WebkitTextFillColor: backgroundClip, 'text'
-                    
-          }}>
-                      {item.price}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {sections.map((section, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow duration-300"
+                  >
+                    <div className="text-blue-600 mb-4 flex justify-center">
+                      {section.icon}
                     </div>
-                    <div style={{ display: alignItems, 'center' gap: 5
-}}>
-                      <span style={{ color: '#fbbf24'
-}}>⭐</span>
-                      <span style={{ fontSize: color, '#94a3b8' }}>
-                        {item.rating} ({item.reviews} reviews)
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                      {section.title}
+                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      {section.description}
+                    </p>
+                    <div className="text-sm text-gray-500 mb-6">
+                      {section.count} items available
+                    </div>
+                    <motion.a
+                      href={section.href}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-blue-700 transition-colors"
+                    >
+                      <ArrowRight className="w-5 h-5" />
+                      Explore
+                    </motion.a>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Featured Products */}
+          <section className="bg-gray-50 py-20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-center mb-16"
+              >
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                  Featured Products
+                </h2>
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                  Discover our most popular and highly-rated products and services.
+                </p>
+              </motion.div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {featuredProducts.map((product, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300"
+                  >
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                        {product.category}
+                      </span>
+                      <div className="flex items-center gap-1">
+                        <Star className="w-4 h-4 text-yellow-500 fill-current" />
+                        <span className="text-sm text-gray-600">{product.rating}</span>
+                      </div>
+                    </div>
+                    
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                      {product.title}
+                    </h3>
+                    
+                    <p className="text-gray-600 mb-4">
+                      {product.description}
+                    </p>
+                    
+                    <div className="flex items-center justify-between mb-6">
+                      <span className="text-2xl font-bold text-green-600">
+                        {product.price}
+                      </span>
+                      <span className="text-sm text-gray-500">
+                        {product.reviews} reviews
                       </span>
                     </div>
-                  </div>
-                  
-                  <Link href="/contact"
-  style={{
-                    background: color, 'white'
-                    padding: textDecoration, 'none'
-                    borderRadius: 6,
-                    fontSize: fontWeight, 600,
-                    display: width, '100%'
-                    textAlign: center
-}}>
-                    Learn More
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div style={{
-            display: gap, 60 
-          }}>
-            {marketplaceCategories.map((category, categoryIndex) => (
-              <div key={categoryIndex}>
-                <div style={{ display: alignItems, 'center' gap: 20, marginBottom: 30
-}}>
-                  <div style={{ fontSize: 3rem
-}}>{category.icon}</div>
-                  <div>
-                    <h2 style={{ fontSize: fontWeight, 700, marginBottom: 10
-}}>
-                      {category.title}
-                    </h2>
-                    <p style={{ color: '#94a3b8', fontSize: '1.1rem'
-}}>
-                      {category.description}
-                    </p>
-                  </div>
-                </div>
-                
-                <div style={{ display: gridTemplateColumns, 'repeat(auto-fit, minmax(280px, 1fr))' gap: 20
-}}>
-                  {category.items.map((item, itemIndex) => (
-<div key={itemIndex} style={{ background: 'rgba(255, 255, 255, 0.05)',
-                      borderRadius: 12, padding: 25, border: '1px solid rgba(255, 255, 255, 0.1)', transition: 'transform 0.3s ease, box-shadow 0.3s ease', cursor: pointer
-}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.transform = 'translateY(-3px)';
-                      e.currentTarget.style.boxShadow = '0 15px 30px rgba(0, 0, 0, 0.2)';
-                    }
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.transform = 'translateY(0)';
-                      e.currentTarget.style.boxShadow = 'none';
-                    }}>
-                      <div style={{ marginBottom: 15
-}}>
-                        <span style={{
-            background: color, '#3b82f6'
-                          padding: borderRadius, 20,
-                          fontSize: fontWeight, 600
-                        
-          }}>
-                          {item.category}
-                        </span>
-                      </div>
-                      
-                      <h3 style={{
-            fontSize: fontWeight, 700, 
-                        marginBottom: 10,
-                        lineHeight: '1.3'
-}}>
-                        {item.name}
-                      </h3>
-                      
-                      <div style={{
-            fontSize: fontWeight, 600,
-                        background: WebkitBackgroundClip, 'text'
-                        WebkitTextFillColor: backgroundClip, 'text'
-                      
-          }}>
-                        {item.price}
-                      </div>
-                    </div>
-                  ))}
-                </div>
+                    
+                    <motion.button
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                      className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-blue-700 transition-colors"
+                    >
+                      <ArrowRight className="w-5 h-5" />
+                      View Details
+                    </motion.button>
+                  </motion.div>
+                ))}
               </div>
-            ))}
-          </div>
-
-          <div style={{
-            background: borderRadius, 12,
-            padding: 40,
-            border: textAlign, 'center'
-            marginTop: 80
-}}>
-            <h2 style={{ fontSize: fontWeight, 700, marginBottom: 20
-}}>
-              Ready to Explore Our Marketplace?
-            </h2>
-            <p style={{ fontSize: color, '#94a3b8' marginBottom: 30, maxWidth: 600, margin: '0 auto 30px'
-}}>
-              Browse our comprehensive marketplace to find the perfect technology solutions, services, and talent for your business needs.
-            </p>
-            <div style={{ display: gap, 20, justifyContent: flexWrap, 'wrap' }}>
-              <Link href="/contact"
-  style={{
-                background: color, 'white'
-                padding: textDecoration, 'none'
-                borderRadius: 8,
-                fontSize: fontWeight, 600,
-                display: 'inline-block'
-}}>
-                Browse Marketplace
-              </Link>
-              <Link href="/request-quote"
-  style={{
-                background: color, 'white'
-                padding: textDecoration, 'none'
-                borderRadius: 8,
-fontSize: '1.1rem',
-fontWeight: 600, display: 'inline-block', border: '2px solid rgba(255, 255, 255, 0.3)', transition: 'border-color 0.3s ease'
-}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = '#3b82f6';
-              }
-              onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.3)';
-              }}>
-                Get Custom Quote
-              </Link>
             </div>
-          </div>
-        </div>
-      </div>
+          </section>
+
+          {/* Benefits Section */}
+          <section className="py-20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-center mb-16"
+              >
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                  Why Choose Our Marketplace?
+                </h2>
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                  We provide a trusted platform for buying and selling technology solutions.
+                </p>
+              </motion.div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {benefits.map((benefit, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center"
+                  >
+                    <div className="text-blue-600 mb-4 flex justify-center">
+                      {benefit.icon}
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                      {benefit.title}
+                    </h3>
+                    <p className="text-gray-600">
+                      {benefit.description}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* CTA Section */}
+          <section className="bg-gray-50 py-20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-center"
+              >
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                  Ready to Get Started?
+                </h2>
+                <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                  Join our marketplace and discover the tools and services you need to grow your business.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <motion.a
+                    href="/contact"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
+                  >
+                    <ArrowRight className="w-5 h-5" />
+                    Get Started Today
+                  </motion.a>
+                  <motion.a
+                    href="tel:+13024640950"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
+                  >
+                    <ArrowRight className="w-5 h-5" />
+                    Call Us: +1 302 464 0950
+                  </motion.a>
+                </div>
+              </motion.div>
+            </div>
+          </section>
+        </main>
+      </PageTransition>
     </>
-  );
+  )
 }
+
+export default MarketplacePage

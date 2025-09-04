@@ -1535,7 +1535,7 @@ export default function ITServices() {
                 Call Now <span aria-hidden="true">→</span>
               </a>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
     </PageTransition>

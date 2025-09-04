@@ -1,9 +1,9 @@
-
-    e.preventDefault();
-
-      e.preventDefault();
-
-    if(searchQuery.trim()) {
+import {  import { MobileSidebarToggle } from './MobileSidebarToggle';
+export default function Page() {
+, [location.pathname]);
+e.preventDefault();
+e.preventDefault();
+if(searchQuery.trim()) {
 
       window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`};
   
@@ -328,6 +328,4 @@
     </>
   )};
 '"`
-
 ;,"});,})";
-

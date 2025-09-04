@@ -1,4 +1,71 @@
-
+import React from 'react',;',';';
+    ';';';';
+import { Link  } from 'react-router-dom'; import { motion  } from 'framer-motion',;',';';
+    ';';';';
+import { Globe, Phone, Mail, MapPin, Linkedin, Twitter, Facebook, Instagram, Github, ArrowRight, Heart, Shield, Zap, Users  } from 'lucide-react'; const EnhancedFooter: React.FC = () => { const currentYear = new Date().getFullYear(); const footerSections = [{ title: 'Services', links: [ { name: 'AI Solutions', href: '/services/ai-services' } { name: 'IT & Security', href: '/services/it-services' } { name: 'Blockchain & Web3', href: '/services/blockchain-services' } { name: 'Sustainability', href: '/services/sustainability' } { name: 'Healthcare Tech', href: '/services/healthcare-tech' } { name: 'Edge Computing', href: '/services/edge-computing' } ] } { title: 'Solutions', links: [{ name: 'Enterprise', href: '/solutions/enterprise' } { name: 'Startups', href: '/solutions/startups' } { name: 'Healthcare', href: '/solutions/healthcare' } { name: 'Financial Services', href: '/solutions/financial' } { name: 'Manufacturing', href: '/solutions/manufacturing' } { name: 'Education', href: '/solutions/education' } ] } { title: 'Company', links: [{ name: 'About Us', href: '/about' } { name: 'Our Team', href: '/about/team' } { name: 'Careers', href: '/careers' } { name: 'Partners', href: '/partners' } { name: 'Press', href: '/press' } { name: 'Case Studies', href: '/case-studies' } ] } { title: 'Resources', links: [{ name: 'Blog', href: '/blog' } { name: 'Documentation', href: '/docs' } { name: 'API Reference', href: '/api' } { name: 'Developer Tools', href: '/developer' } { name: 'Training', href: '/training' } { name: 'Support', href: '/support' } ] } ]; const socialLinks = [ { name: 'LinkedIn', href: 'https:';';';
+import React from,',;';';
+    ';';';
+  react';';';';
+import { Link } from;',',';';
+    'react-router-dom'; import { motion } from';',';';
+    'framer-motion';';';';
+import { Globe, Phone, Mail, MapPin, Linkedin, Twitter, Facebook, Instagram, Github, ArrowRight, Heart, Shield, Zap, Users } from;',',';';
+    'lucide-react'; const EnhancedFooter: React.FC = () => { const currentYear = new Date().getFullYear(); const footerSections = [ { title:';',';';
+    'Services, links: [ { name:,';';';';
+  AI Solutions', href: '/services/ai-services } { name:,',';';
+    ';';';
+  IT & Security', href: '/services/it-services } { name:,',';';
+    ';';';
+  Blockchain & Web3', href: '/services/blockchain-services } { name:,',';';
+    ';';';
+  Sustainability', href: '/services/sustainability } { name:,',';';
+    ';';';
+  Healthcare Tech', href: '/services/healthcare-tech } { name:,',';';
+    ';';';
+  Edge Computing', href: '/services/edge-computing } ] } { title:,',';';
+    ';';';
+  Solutions', links: [ { name:',',';';
+    'Enterprise, href:,';';';';
+  /solutions/enterprise' } { name: 'Startups, href:,',';';
+    ';';';
+  /solutions/startups' } { name: 'Healthcare, href:,',';';
+    ';';';
+  /solutions/healthcare' } { name: 'Financial Services, href:,',';';
+    ';';';
+  /solutions/financial' } { name: 'Manufacturing, href:,',';';
+    ';';';
+  /solutions/manufacturing' } { name: 'Education, href:,',';';
+    ';';';
+  /solutions/education' } ] } { title: 'Company, links: [ { name:,',';';
+    ';';';
+  About Us', href: '/about } { name:,',';';
+    ';';';
+  Our Team', href: '/about/team } { name:,',';';
+    ';';';
+  Careers', href: '/careers } { name:,',';';
+    ';';';
+  Partners', href: '/partners } { name:,',';';
+    ';';';
+  Press', href: '/press } { name:,',';';
+    ';';';
+  Case Studies', href: '/case-studies } ] } { title:,',';';
+    ';';';
+  Resources', links: [ { name:',',';';
+    'Blog, href:,';';';';
+  /blog' } { name: 'Documentation, href:,',';';
+    ';';';
+  /docs' } { name: 'API Reference, href:,',';';
+    ';';';
+  /api' } { name: 'Developer Tools, href:,',';';
+    ';';';
+  /developer' } { name: 'Training, href:,',';';
+    ';';';
+  /training' } { name: 'Support, href:,',';';
+    ';';';
+  /support' } ] } ]; const socialLinks = [ { name: 'LinkedIn, href:,',';';
+    ';';';
+  https: ''',';';
+    ';';';
 import React from 'react';
 
 export const EnhancedFooter: React.FC = () => {
@@ -45,31 +112,3 @@ export const EnhancedFooter: React.FC = () => {
     </footer>
   );
 };
-
-import React from "react"; const EnhancedFooter: React.FC = () => { const currentYear = new Date().getFullYear(), const footerSections = [] } { title: "Solutions", links: [{ name: "Enterprise", href: "/solutions/enterprise" } { name: "Startups", href: "/solutions/startups" } { name: "Healthcare", href: "/solutions/healthcare" } { name: "Financial Services", href: "/solutions/financial" } { name: "Manufacturing", href: "/solutions/manufacturing" } { name: "Education", href: "/solutions/education" } ] } { title: "Company", links: [{ name: "About Us", href: "/about" } { name: "Our Team", href: "/about/team" } { name: "Careers", href: "/careers" } { name: "Partners", href: "/partners" } { name: "Press", href: "/press" } { name: "Case Studies", href: "/case-studies" } ] } { title: "Resources", links: [{ name: "Blog", href: "/blog" } { name: "Documentation", href: "/docs" } { name: "API Reference", href: "/api" } { name: "Developer Tools", href: "/developer" } { name: "Training", href: "/training" } { name: "Support", href: "/support" } ] } ]; const socialLinks = [] } { title:,"
-  Solutions", links: [ { name:",
-  "Enterprise, href:,"
-  /solutions/enterprise" } { name: "Startups, href:,"
-  /solutions/startups" } { name: "Healthcare, href:,"
-  /solutions/healthcare" } { name: "Financial Services, href:,"
-  /solutions/financial" } { name: "Manufacturing, href:,"
-  /solutions/manufacturing" } { name: "Education, href:,"
-  /solutions/education" } ] } { title: "Company, links: [ { name:,"
-  About Us", href: "/about } { name:,"
-  Our Team", href: "/about/team } { name:,"
-  Careers", href: "/careers } { name:,"
-  Partners", href: "/partners } { name:,"
-  Press", href: "/press } { name:,"
-  Case Studies", href: "/case-studies } ] } { title:,"
-  Resources", links: [ { name:",
-  "Blog, href:,"
-  /blog" } { name: "Documentation, href:,"
-  /docs" } { name: "API Reference, href:,"
-  /api" } { name: "Developer Tools, href:,
-  /developer" } { name: "Training, href:,
-  /training" } { name: "Support, href:,
-  /support" } ] } ]; const socialLinks = []} {"
-      title: "Services",
-      links: [",
-        { name: "All Services", href: "/comprehensive - services-showcase-2026" } { name: "Micro SaaS", href: "/services / micro-saas" } { name: "AI & Machine Learning", href: "/services/ai-services" } { name: "IT Services", href: "/services/it-services" } { name: "Cloud & Infrastructure", href: "/services/cloud-infrastructure" } { name: "Data & Analytics", href: "/services/data-analytics" } { name: "Developer Tools", href: "/services/developer-tools" } { name: "Industry Solutions", href: "/services/industry-solutions" } { name: "Emerging Technology", href: "/services/emerging-tech" }
-

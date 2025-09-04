@@ -23,4 +23,16 @@ import React from "react"; "export default function PostCard({ post }) { return 
             <span>{post.likes} likes</span>
             <span>{post.views} views</span>
           </div>
+</div>
+      </div>
+    </div>)}
 
+export { PostCard };
+
+export { PostCard };
+
+export { PostCard };
+
+export { PostCard };
+
+export { PostCard };

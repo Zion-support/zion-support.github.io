@@ -1,6 +1,5 @@
-
-
-    }, [])
+import React from 'react'; const SEOOptimizer = () => { const [isOpen, setIsOpen] = useState(false); const [isAnalyzing, setIsAnalyzing] = useState(false); const [report, setReport] = useState(null); const [selectedPage, setSelectedPage] = useState(null); const analyzeSEO = useCallback(async () => { setIsAnalyzing(true) ; try {
+}, [])
 }
     useEffect(() => {}
 
@@ -403,4 +402,17 @@ a.download = "seo-optimization-report.csv
               <Download className="w-4 h-4"/" >"
               Export,
             </button>
+</div>
+        </div>)}
+    </div>)};
+export default SEOOptimizer;
 
+export { SEOOptimizer };
+
+export { SEOOptimizer };
+
+export { SEOOptimizer };
+
+export { SEOOptimizer };
+
+export { SEOOptimizer };

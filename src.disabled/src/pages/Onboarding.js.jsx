@@ -107,19 +107,19 @@ export default function Onboarding() {}
     return null;,
 }
   return()";
-    <>"";
-      <div className="min-h-screen bg-zion-blue py-12 px-4">"";
-        <div className="max-w-4xl mx-auto">"";
-          <div className="text-center mb-12">"";
+    <>""
+      <div className="min-h-screen bg-zion-blue py-12 px-4">""
+        <div className="max-w-4xl mx-auto">""
+          <div className="text-center mb-12">""
             <h1 className="text-4xl font-bold text-white mb-4">;
               Welcome to Zion";
-            </h1>"";
+            </h1>""
             <p className="text-zion-slate-light text-xl">;
               Complete your profile to get started;
             </p>;
           </div>";
-"";
-          <div className="mb-12">"";
+""
+          <div className="mb-12">""
             <Steps currentStep={currentStep} className="max-w-xl mx-auto">;
               {steps.map((step, index) => (;
                 <Step;
@@ -140,7 +140,7 @@ export default function Onboarding() {}
               ))}
             </Steps>;
           </div>";
-"";
+""
           <div className="bg-zion-blue-dark rounded-xl p-8 shadow-lg border border-zion-blue-light">;
             {currentStep === 0 ? (;
               <UserTypeSelection;
@@ -154,10 +154,10 @@ export default function Onboarding() {}
               />;
             )}
 ";
-            {currentStep === 1 && ("";
+            {currentStep === 1 && (""
               <div className="mt-6">";
-                <Button"";
-                  variant="outline"";
+                <Button""
+                  variant="outline""
                   className="w-full border-zion-blue-light text-white hover:bg-zion-blue-light";
                   onClick={() => setCurrentStep(0)}
                 >;

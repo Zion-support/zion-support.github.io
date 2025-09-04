@@ -1,105 +1,11 @@
+interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
 
-interface EnhancedLoadingSpinnerProps {
-  // Add your props here
-
-  enabled?: boolean;
+  size?: 'sm' | 'md' | 'lg';
+  variant?: 'default' | 'futuristic' | 'ai' | 'quantum';
+  text?: string;
   showProgress?: boolean;
-  showEstimatedTime?: boolean;
-  size?: 'small' | 'medium' | 'large';
-  variant?: 'default' | 'futuristic' | 'minimal' | 'themed';
-  onComplete?: : unknown void;
-  autoComplete?: boolean;
-  autoCompleteDelay?: number;
-export function EnhancedLoadingSpinner({
-
-  enabled = true,
-  showProgress = true,
-  showEstimatedTime = true,
-  size = 'medium',
-  variant = 'futuristic',
-  onComplete,
-  autoComplete = false,
-  autoCompleteDelay = 3000}: EnhancedLoadingSpinnerProps) {
-
-  const [loadingState, setLoadingState] = useState<LoadingState>({
-
-    type: 'loading',
-    message: 'Loading...',
-    progress: 0,
-    estimatedTime: 3
-  }) ;
-
-  const [isVisible, setIsVisible] = useState(true);
-  const [currentStep, setCurrentStep] = useState(0);
-
-  // Size configurations
-
-  // Loading steps for themed variant
-  
-  // Progress simulation
-  useEffect(() => {
-  // TODO: Add dependencies if needed
-
-  return () => {
-    // Cleanup function
-  };
-}, []);, []);
-    if(!enabled || !showProgress) return;
-
-    const interval = setInterval(() => {
-      setLoadingState(prev => {
-
-        if (prev.progress! >= 100) {
-
-          clearInterval(interval);          if(autoComplete) {
-
-            setTimeout(() => {
-              setLoadingState({
-
-                type: 'success',
-                message: 'Ready!',
-                progress: 100,
-                estimatedTime: 0
-              }) ;
-              setTimeout(() => {
-                setIsVisible(false) ;
-                onComplete?.() }, 1000) }, autoCompleteDelay) }
-          return prev}
-
-        return {
-
-          ...prev,
-          progress: newProgress,
-          estimatedTime: newEstimatedTime
-        }}) }, 200) ;
-
-    return () => clearInterval(interval) }, [enabled, showProgress, autoComplete, autoCompleteDelay, onComplete]) ;
-  // Step progression for themed variant
-  useEffect(() => {
-  // TODO: Add dependencies if needed
-
-  return () => {
-    // Cleanup function
-  };
-}, []);, []);
-
-    if(variant !== 'themed') return;
-
-          return prev}
-        return prev + 1}) }, 1000) ;
-
-    return () => clearInterval(stepInterval) }, [variant]) ;
-  // Auto - complete effect
-  useEffect(() => {
-  // TODO: Add dependencies if needed
-
-  return () => {
-    // Cleanup function
-  };
-}, []);, []);
-    if(autoComplete && enabled) {
-
-        setTimeout(() => {
+  progress?: number}
+setTimeout(() => {
           setIsVisible(false) ;
           onComplete?.() }, 1000) }, autoCompleteDelay) ;
 
@@ -196,8 +102,78 @@ export function EnhancedLoadingSpinner({
           />) }
   }}
     return ()
+import React from 'react'
+import { motion  } from 'framer-motion'
 
-  const sizeClasses = {}"}>
+interface EnhancedLoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg'
+  text?: string
+  className?: string
+}
+
+export default function EnhancedLoadingSpinner({ 
+  size = 'md', 
+  text = 'Loading...',
+  className = ''
+}: EnhancedLoadingSpinnerProps) {
+  const sizeClasses = { sm: 'w-8 h-8',
+    md: 'w-12 h-12',
+    lg: 'w-16 h-16'
+  }
+
+  const textSizes = { sm: 'text-sm',
+    md: 'text-base',
+    lg: 'text-lg'
+  }
+
+  return(<div className={`flex flex-col items-center justify-center space-y-4 ${className}`}>
+<motion.div
+        className={`${sizeClasses[size]} relative`}
+        animate={{ rotate: 360   }}
+        transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+      >
+        {/* Outer ring */}
+        <div className={`${sizeClasses[size]} border-4 border-blue-200 rounded-full`} />
+        {/* Inner spinning ring */}
+        <motion.div
+          className={`${sizeClasses[size]} border-4 border-transparent border-t-blue-600 rounded-full absolute inset-0`}
+          animate={{ rotate: -360   }}
+          transition={{ duration: 0.8, repeat: Infinity, ease: "linear" }}
+        />
+        {/* Center dot */}
+        <motion.div
+          className="absolute inset-0 flex items-center justify-center"
+          animate={{ scale: [1, 1.2, 1] }}
+          transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+        >
+          <div className="w-2 h-2 bg-blue-600 rounded-full" />
+        </motion.div>
+      </motion.div>
+)};
+
+    if(!config) return null}}};
+
+export default function EnhancedLoadingSpinner() {
+
+  ;
+'
+  sm: 'w-8 h-8','
+    md: 'w-12 h-12',;  ;
+  ;
+  ;
+  ;
+  lg: 'w-16 h-16'}};
+
+  ;
+'
+  sm: 'text-sm','
+    md: 'text-base',;  ;
+  ;
+  ;
+  ;
+  lg: 'text-lg';
+  };
+const sizeClasses = {}"}>
       <motion.div,"
 className="{"${sizeClasses[size]}" relative"}"
         animate="{{" rotate: 360 }}"
@@ -458,4 +434,3 @@ key={i}"""
 "
 ;"">
 }"""
-

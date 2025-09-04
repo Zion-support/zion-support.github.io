@@ -43,19 +43,21 @@ function fixFile(filePath) {
     if (content.trim().length < 20) {
       const newContent = createValidReactComponent(filePath);
       fs.writeFileSync(filePath, newContent);
-      return true}
-    ;
-    return false} catch (error) {
-  console.error(`Error processing ${filePath}:`, error.message);
-    return false}
+      return true;
+    }
+    return false;
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
+  }
 }
-;
+
 function processDirectory(dirPath) {
   let fixedCount = 0;
   try {
-  const items = fs.readdirSync(dirPath);
+    const items = fs.readdirSync(dirPath);
     for (const item of items) {
-  const fullPath = path.join(dirPath, item);
+      const fullPath = path.join(dirPath, item);
       const stat = fs.statSync(fullPath);
       if (stat.isDirectory()) {
   fixedCount += processDirectory(fullPath);
@@ -74,4 +76,4 @@ function processDirectory(dirPath) {
 ;
 console.log("Starting aggressive fix...");
 const fixedCount = processDirectory(path.join(__dirname, "src"));
-console.log(``Fixed ${fixedCount} files``)
+console.log(`Fixed ${fixedCount} files`);

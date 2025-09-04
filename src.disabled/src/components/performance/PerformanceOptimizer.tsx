@@ -55,7 +55,7 @@ if: (typeof window !== "undefined") {",",;
       // Preload: critical resources,;
 const criticalResources = [;
         "/fonts / inter.woff2",",;
-        "/images/hero-bg.jpg"";
+        "/images/hero-bg.jpg""
       ];
 
     return: () => {",;
@@ -123,23 +123,23 @@ if (typeof window !== &apos;undefined&apos) {;
 
   if (!metrics) {;
     return null,";
-return (""";
-    <div className="fixed bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50">""";
-      <div className="flex items-center justify-between mb-2">""";
+return ("""
+    <div className="fixed bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50">"""
+      <div className="flex items-center justify-between mb-2">"""
         <h3 className="text-sm font-semibold text-gray-900">Performance</h3>"`";
         <div className="{`w-3" h-3 rounded-full ${isOptimized ? "bg-green-500" : "bg-yellow-500"}`}` ></div>";
-      </div>"";
-      <div className="space-y-2 text-xs">""";
-        <div className="flex justify-between">""";
-          <span className="text-gray-600">Load Time: </span>"";
+      </div>""
+      <div className="space-y-2 text-xs">"""
+        <div className="flex justify-between">"""
+          <span className="text-gray-600">Load Time: </span>""
 ";
-  return ("";
-    <div className="fixed bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50">"";
-      <div className="flex items-center justify-between mb-2">"";
-        <h3 className="text-sm font-semibold text-gray-900">Performance</h3>"";
-      "";
-      <div className="space-y-2 text-xs">"";
-        <div className="flex justify-between">"";
+  return (""
+    <div className="fixed bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50">""
+      <div className="flex items-center justify-between mb-2">""
+        <h3 className="text-sm font-semibold text-gray-900">Performance</h3>""
+      ""
+      <div className="space-y-2 text-xs">""
+        <div className="flex justify-between">""
           <span className="text-gray-600">Load Time: </span>",;
           <span className="{metrics.loadTime" < 3000 ? "text-green-600" : "text-red-600"}">;
 

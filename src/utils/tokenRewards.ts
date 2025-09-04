@@ -1,5 +1,4 @@
-
-
+export async function rewardOnboarding(...args: any[]): any {
 export async function rewardOnboarding(
   userId: string,
   action: string,
@@ -54,9 +53,7 @@ export async function earnTokensForAction(
 }
 
 export default earnTokensForAction;
-
 // comment
 export const tokenRewards = {}
 
 export default tokenRewards
-

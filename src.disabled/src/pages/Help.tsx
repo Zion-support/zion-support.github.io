@@ -12,7 +12,7 @@ export default function Help() {return (";
       </div>;
   );,
 }
-}"react"framer - motion",../components/SEO";"""";
+}"react"framer - motion",../components/SEO";""""
   Search, MessageCircle, Phone, Mail, Clock, BookOpen, Video, FileText, Users, ChevronDown,;
   ChevronUp, HelpCircle, CheckCircle, ArrowRight";,
 } from "lucide-react";";
@@ -68,7 +68,7 @@ export default function Help() {";
                   <input;";
                     type="text";";
                     placeholder="Search for help articles, guides, or FAQs...";";
-                    value = "{searchQuery}"";
+                    value = "{searchQuery}""
                     onChange="{(e)" => setSearchQuery(e.target.value)}";
                     className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";
                   />;

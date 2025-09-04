@@ -114,8 +114,8 @@ const Categories: React.FC = () => {}
                 View Services →;
               </a>,;
     <,</div>";
-  )}"";
-export default Categories"";
+  )}""
+export default Categories""
 ";
   )}
 

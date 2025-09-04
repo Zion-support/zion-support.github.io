@@ -18,7 +18,7 @@ import {
   ArrowRight,
   DollarSign
 } from 'lucide-react';
-import PageTransition from '../src/components/PageTransition';
+// import PageTransition from '../src/components/PageTransition';
 
 export default function AdditionalServices() {
   const title = 'Expanded Services Catalog — Zion Tech Group';

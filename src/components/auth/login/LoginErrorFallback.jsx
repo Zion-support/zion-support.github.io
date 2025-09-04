@@ -136,4 +136,25 @@ const LoginErrorFallback = memo(({error, resetErrorBoundary }) => {}
                 {error.message}
 
               </pre>
+</details>
+          )}
+          <button"""
+            onClick={resetErrorBoundary}""""
+            className="w-full bg-primary text-primary-foreground hover:bg-primary/90 px-4 py-2 rounded-md font-medium"""
+            Try Again;
+          </button>
+        </div>
+      </div>
+    </div>
+  )};
+export default LoginErrorFallback;
 
+export { LoginErrorFallback };
+
+export { LoginErrorFallback };
+
+export { LoginErrorFallback };
+
+export { LoginErrorFallback };
+
+export { LoginErrorFallback };

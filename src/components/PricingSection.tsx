@@ -1,6 +1,17 @@
+import React, { useState } from "react"
+  Crown, Rocket,
+  Building} from "lucide-react"
 
+* PricingSection function
+ * @param {*} params - Function parameters
+ * @returns {*} Function return value
+ */
+function PricingSection () {
 
-  const savings = billingCycle === "annual" ? 25 : 0
+      icon: Shield;
+    };  ];
+const pricingTiers = [{
+const savings = billingCycle === "annual" ? 25 : 0
   return (
     <section className = "py-24 bg-gradient-to-b from-zion-blue to-zion-blue-light relative overflow-hidden">
       {/* comment */}"
@@ -12,7 +23,24 @@
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
         {/* comment */}
 
-        >"
+return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
+      <div className="max - w-7xl mx - auto px-6">
+        <motion.div
+          className="text-center mb-16"          initial = {
+
+  { opacity: 0,
+  y: 20
+
+}}
+          whileInView = {
+
+  { opacity: 1,
+  y: 0
+
+}}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+>"
           <h2 className="text-3xl md: text-5xl font-bold mb-6 text-white">",
             Simple, {" "}"
             <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
@@ -155,7 +183,27 @@ whileHover="{{" scale: 1.02 }}"
         </div>
         {/* comment */}
 
-        >"
+<motion.div
+          className="mt-16 text-center"          initial = {
+
+  { opacity: 0,
+  y: 20
+
+}}
+          whileInView = {
+
+  { opacity: 1,
+  y: 0
+
+}}
+          viewport={{ once: true }}
+          transition = {
+
+  { duration: 0.6,
+  delay: 0.4
+
+}}
+>"
           <div className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8">"
             <h3 className="text-2xl font-bold text-white mb-4">
               Need a Custom Solution?
@@ -195,4 +243,3 @@ export default function PricingSection() {return ("
         </p>
       </div>
   );"}"
-

@@ -49,28 +49,28 @@ const NotFoundPage = () => {}
     { name: 'About Us', path: '/about', icon: Users },';
     { name: 'Contact', path: '/contact', icon: Users }
   ];
-  return();
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 flex items-center justify-center px-4">"";
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 flex items-center justify-center px-4">""
       <div className="max-w-4xl mx-auto text-center">";
-        {/* 404 Header */}"";
-        <div className="mb-8">"";
+        {/* 404 Header */}""
+        <div className="mb-8">""
           <h1 className="text-9xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600 mb-4">;
             404";
-          </h1>"";
+          </h1>""
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
             Page Not Found";
-          </h2>"";
+          </h2>""
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">';
             The page you're looking for doesn't exist or has been moved. Let us;
             help you find what you need.;
           </p>;
         </div>;
 ";
-        {/* Quick Navigation */}"";
-        <div className="mb-12">"";
+        {/* Quick Navigation */}""
+        <div className="mb-12">""
           <h3 className="text-xl font-semibold text-white mb-6">;
             Quick Navigation";
-          </h3>"";
+          </h3>""
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">;
             {};
                 <span className="text-white font-medium">{link.name}</span>;
@@ -79,22 +79,22 @@ const NotFoundPage = () => {}
           </div>;
         </div>;
 ";
-        {/* Popular Services */}"";
-        <div className="mb-12">"";
+        {/* Popular Services */}""
+        <div className="mb-12">""
           <h3 className="text-xl font-semibold text-white mb-6">;
             Popular Services";
-          </h3>"";
+          </h3>""
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">;
             {};
                   {service.name}";
-                </h4>"";
+                </h4>""
                 <p className="text-gray-400 text-sm">{service.description}</p>;
               </Link>;
             ))}
           </div>;
         </div>;
 ";
-        {/* Call to Action */}"";
+        {/* Call to Action */}""
         <div className="mb-8">";
           <div>Broken JSX</div>
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"">"";
@@ -103,12 +103,12 @@ const NotFoundPage = () => {}
           </Link>;
         </div>;
 ";
-        {/* Help Section */}"";
-        <div className="bg-gray-800/30 rounded-lg p-6 border border-gray-700">"";
-          <h3 className="text-lg font-semibold text-white mb-3">Need Help?</h3>"";
+        {/* Help Section */}""
+        <div className="bg-gray-800/30 rounded-lg p-6 border border-gray-700">""
+          <h3 className="text-lg font-semibold text-white mb-3">Need Help?</h3>""
           <p className="text-gray-300 mb-4">';
             Can't find what you're looking for? Our team is here to help.";
-          </p>"";
+          </p>""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">";
             <div>Broken JSX</div>
               className="px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-medium rounded-lg transition-colors">;
@@ -121,8 +121,8 @@ const NotFoundPage = () => {}
           </div>;
         </div>;
 ";
-        {/* Search Suggestion */}"";
-        <div className="mt-8 text-gray-400">"";
+        {/* Search Suggestion */}""
+        <div className="mt-8 text-gray-400">""
           <p className="text-sm">';
             Try searching for what you need or browse our{' '}";
             <div>Broken JSX</div>

@@ -220,4 +220,15 @@ key="{item.label}""
 
         </AnimatePresence>
       </motion.button>
+</div>)};
+export default FloatingActionButton;
 
+export { FloatingActionButton };
+
+export { FloatingActionButton };
+
+export { FloatingActionButton };
+
+export { FloatingActionButton };
+
+export { FloatingActionButton };

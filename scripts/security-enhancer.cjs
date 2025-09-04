@@ -1,7 +1,11 @@
 #!/usr/bin/env node
-const fs = require("$1");
-const path = require("$1");
-const { execSync } = require("child_process")
+const fs = require('fs').promises;
+const path = require('path');
+const { exec } = require('child_process');
+const util = require('util');
+
+const execAsync = util.promisify(exec);
+
 class SecurityEnhancer {
   constructor() {
     this.projectRoot = process.cwd()
@@ -12,6 +16,7 @@ class SecurityEnhancer {
     const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`
     console.log(logEntry)}
   async runSecurityAudit() {
+    await this.log('Running security audit...');
     try {
       this.log("Running security audit...")
       // Check for common security vulnerabilities
@@ -23,6 +28,7 @@ class SecurityEnhancer {
       this.log(`Security audit failed: ${error.message}`, "error")}
   }
   async checkDependencies() {
+    await this.log('Checking dependencies for vulnerabilities...');
     try {
       this.log("Checking dependencies for vulnerabilities...")
       execSync("npm audit --audit-level=moderate", {cwd: this.projectRoot,stdio: "pipe"})

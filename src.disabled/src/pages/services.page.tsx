@@ -1,0 +1,40 @@
+import React from 'react';
+import Link from 'next/link';
+
+const services = [
+	{ title: 'AI-Powered Email Responder', price: 'From $49/month', href: '/services/ai-email-responder' },
+	{ title: 'E-Commerce Return Management SaaS', price: 'From $99/month', href: '/services/ecommerce-return-management' },
+	{ title: 'AI Video Clip Maker', price: 'From $59/month', href: '/services/ai-video-clip-maker' },
+	{ title: 'Employee Scheduling Software', price: 'From $69/month', href: '/services/employee-scheduling' },
+	{ title: 'Learning Management System (LMS)', price: 'From $99/month', href: '/services/lms' },
+	{ title: 'Affiliate Marketing Tracking', price: 'From $79/month', href: '/services/affiliate-marketing-tracking' },
+	{ title: 'Website Analytics for SMBs', price: 'From $49/month', href: '/services/website-analytics' },
+	{ title: 'AI Content Creation Tools', price: 'From $39/month', href: '/services/ai-content-tools' },
+	{ title: 'Mobile-First Survey Tool', price: 'From $25/month', href: '/services/mobile-survey-tool' },
+	{ title: 'Niche Productivity Planner', price: 'From $30/month', href: '/services/niche-productivity-planner' },
+];
+
+export default function ServicesPage() {
+	return (
+		<main className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
+			<section className="max-w-6xl mx-auto px-6 py-16">
+				<h1 className="text-4xl md:text-5xl font-extrabold">Services</h1>
+				<p className="mt-3 text-gray-300">Production-ready Micro SaaS, IT and AI solutions. We add services without removing existing ones.</p>
+				<div className="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+					{services.map((s) => (
+						<Link key={s.title} href={s.href} className="block rounded-xl p-6 bg-white/5 border border-white/10 hover:border-cyan-500/50">
+							<div className="text-lg font-semibold">{s.title}</div>
+							<div className="text-cyan-300 mt-2">{s.price}</div>
+							<div className="mt-3 text-sm text-gray-300">Learn more →</div>
+						</Link>
+					))}
+				</div>
+				<div className="mt-12 text-sm text-gray-300">
+					<div>Need help choosing? Call <a className="underline" href="tel:+13024640950">+1 302 464 0950</a> or email <a className="underline" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>.</div>
+					<div className="mt-2">Visit <a className="underline" href="https://ziontechgroup.com">ziontechgroup.com</a> for more.</div>
+				</div>
+			</section>
+		</main>
+	);
+}
+

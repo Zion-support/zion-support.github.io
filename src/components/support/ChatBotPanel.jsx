@@ -1,5 +1,25 @@
-
-            sender: "bot",
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { toast } from "@/components/ui/use-toast";
+import { useTheme } from "@/hooks/useTheme";
+import { cn } from "@/lib/utils";
+import { apiClient } from "@/utils/apiClient";
+import { Loader2, Send import { useEffect, useRef, useState } from "react";
+;
+;
+// Define suggested quick replies
+const QUICK_REPLIES = [
+    { id: "hire", text: "How do I hire?" },
+    { id: "match", text: "How do I get matched?" },
+    { id: "billing", text: "Billing help" },];
+export function ChatBotPanel() {}
+    const [messages, setMessages] = useState([{}
+"""
+""""
+            id: "welcome",""""
+            content: "Hi! How can I help you?",""""
+sender: "bot",
             timestamp: new Date()},
     ]);"
     const [inputValue, setInputValue] = useState("");

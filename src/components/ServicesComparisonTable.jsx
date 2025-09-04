@@ -1,4 +1,35 @@
-
+import { Check, X, Star, Clock, Phone, Mail } from 'lucide - react';'''
+import React from 'react';
+;
+import { Badge } from "./ui/badge";
+import { Button } from "./ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";import { Check, X, Star, Clock, Phone, Mail } from 'lucide-react';
+import {}
+  COMPREHENSIVE_SERVICES,'
+  CONTACT_INFO} from '@/data/comprehensiveServices';
+export function ServicesComparisonTable() {}
+''
+'''
+  const serviceCategories = ['AI Services',IT Services',Micro SAAS'];
+  const getFeatureIcon = hasFeature => {}
+    return hasFeature ? (
+      <Check className="w-4 h-4 text-green-500" />"""
+    ) : (""""
+      <X className="w-4 h-4 text-red-500" />
+    );
+  };"""
+  return (""""
+    <div className="py-16 bg-slate-50 dark:bg-slate-900">""""
+      <div className="container mx-auto px-4">""""
+        <div className="text-center mb-12">""""
+          <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">
+            Services Comparison"""
+          </h2>""""
+          <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+            Compare our comprehensive service offerings to find the perfect;
+            solution for your business needs;
+          </p>
+        </div>
 """
 """""
   const serviceCategories = []
