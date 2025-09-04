@@ -1,0 +1,60 @@
+{
+  "timestamp": "2025-09-03T22:48:44.196Z",
+  "tasks": [
+    {
+      "name": "Health Check",
+      "status": "success",
+      "duration": 28,
+      "output": "🩺 Starting Health Check...\n✅ Health check completed\n📄 Report saved to: health-check-report.json\n📊 Health Check Summary:\n   - Total checks: 5\n   - OK: 5\n   - Errors: 0\n   - Status: HEALTHY\n🎉 System is healthy!\n",
+      "error": null
+    },
+    {
+      "name": "Security Scan",
+      "status": "success",
+      "duration": 674,
+      "output": "🔒 Starting Security Scanner...\n✅ Security scan completed\n📄 Report saved to: security-scan-report.json\n📊 Security Scan Summary:\n   - Total vulnerabilities: 0\n   - High severity: 0\n   - Medium severity: 0\n   - Status: SECURE\n🎉 No security issues found!\n",
+      "error": null
+    },
+    {
+      "name": "Syntax Fix",
+      "status": "success",
+      "duration": 28,
+      "output": "🔧 Starting syntax error fixing...\n✅ Fixed 3 issues in components/ErrorBoundary.tsx\n✅ Fixed 6 issues in components/PerformanceMonitor.tsx\n✅ Fixed 1 issues in pages/_app.tsx\n✅ Fixed 1 issues in pages/index.tsx\n\n📊 Syntax fixing complete:\n   - Files processed: 7\n   - Fixes applied: 6\n   - Issues encountered: 0\n\n✅ Fixes applied:\n   - components/ErrorBoundary.tsx: Remove semicolon after closing brace (1 fixes)\n   - components/ErrorBoundary.tsx: Remove duplicate closing braces (2 fixes)\n   - components/PerformanceMonitor.tsx: Remove semicolon after closing brace (2 fixes)\n   - components/PerformanceMonitor.tsx: Remove duplicate closing braces (4 fixes)\n   - pages/_app.tsx: Remove duplicate closing braces (1 fixes)\n   - pages/index.tsx: Remove duplicate closing braces (1 fixes)\n\n📄 Report saved to syntax-fix-report.json\n",
+      "error": null
+    },
+    {
+      "name": "Performance Monitor",
+      "status": "success",
+      "duration": 614,
+      "output": "⚡ Starting performance monitoring...\n\n📊 Performance Metrics:\n   - .next bundle size: 46.10 MB\n   - node_modules size: 782.66 MB\n   - TypeScript files: 25\n   - JavaScript files: 0\n   - CSS files: 2\n\n✅ No performance issues detected\n\n📄 Performance report saved to performance-metrics.json\n",
+      "error": null
+    },
+    {
+      "name": "Security Audit",
+      "status": "success",
+      "duration": 27,
+      "output": "🔒 Starting security audit...\n\n🔒 Security Audit Results:\n\n⚠️  Warnings (1):\n   - pages/index.tsx: Use of innerHTML - potential XSS risk\n\n📄 Security audit report saved to security-audit-report.json\n",
+      "error": null
+    },
+    {
+      "name": "Code Quality Monitor",
+      "status": "success",
+      "duration": 39,
+      "output": "📊 Starting code quality monitoring...\n\n📊 Code Quality Report:\n   - Total files analyzed: 26\n   - Total lines of code: 8,387\n   - Average complexity: 1.38\n   - Files with issues: 7\n\n⚠️  Quality Issues:\n\n   📁 pages/404.tsx:\n      - Function Length: Functions should be under 50 lines (1)\n\n   📁 pages/_app.tsx:\n      - Duplicate Code: Potential duplicate code detected (21)\n\n   📁 pages/about.tsx:\n      - Duplicate Code: Potential duplicate code detected (10)\n\n   📁 pages/ai-services.tsx:\n      - File Length: Files should be under 500 lines (1)\n      - Duplicate Code: Potential duplicate code detected (76)\n\n   📁 pages/it-services.tsx:\n      - File Length: Files should be under 500 lines (1)\n      - Duplicate Code: Potential duplicate code detected (112)\n\n   📁 pages/micro-saas.tsx:\n      - File Length: Files should be under 500 lines (1)\n      - Duplicate Code: Potential duplicate code detected (61)\n\n   📁 pages/services.tsx:\n      - File Length: Files should be under 500 lines (1)\n    ",
+      "error": null
+    },
+    {
+      "name": "Dependency Update Check",
+      "status": "success",
+      "duration": 2422,
+      "output": "📦 Starting dependency update check...\n🔍 Checking for outdated packages...\n✅ All packages are up to date\n🔒 Checking for security vulnerabilities...\n⚠️  Could not check security vulnerabilities: Command failed: npm audit --json\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\n\n📊 Dependency Update Report:\n   - Outdated packages: 0\n   - Security vulnerabilities: 0\n   - Recommendations: 0\n\n📄 Dependency update report saved to dependency-update-report.json\n",
+      "error": null
+    }
+  ],
+  "summary": {
+    "total": 7,
+    "successful": 7,
+    "failed": 0,
+    "criticalFailures": 0
+  }
+}

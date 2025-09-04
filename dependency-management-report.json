@@ -1,0 +1,525 @@
+{
+  "timestamp": "2025-09-04T02:27:08.038Z",
+  "project": "/workspace",
+  "analysis": {
+    "dependencies": {
+      "production": [
+        "@google-analytics/data",
+        "@google/generative-ai",
+        "@hookform/resolvers",
+        "@magneticwatermelon/mcp-toolkit",
+        "@modelcontextprotocol/sdk",
+        "@modelcontextprotocol/server-filesystem",
+        "@modelcontextprotocol/server-memory",
+        "@modelcontextprotocol/server-sequential-thinking",
+        "@radix-ui/react-accordion",
+        "@radix-ui/react-alert-dialog",
+        "@radix-ui/react-avatar",
+        "@radix-ui/react-checkbox",
+        "@radix-ui/react-collapsible",
+        "@radix-ui/react-dialog",
+        "@radix-ui/react-dropdown-menu",
+        "@radix-ui/react-hover-card",
+        "@radix-ui/react-label",
+        "@radix-ui/react-menubar",
+        "@radix-ui/react-navigation-menu",
+        "@radix-ui/react-popover",
+        "@radix-ui/react-progress",
+        "@radix-ui/react-radio-group",
+        "@radix-ui/react-scroll-area",
+        "@radix-ui/react-select",
+        "@radix-ui/react-separator",
+        "@radix-ui/react-slider",
+        "@radix-ui/react-slot",
+        "@radix-ui/react-switch",
+        "@radix-ui/react-tabs",
+        "@radix-ui/react-toast",
+        "@radix-ui/react-toggle",
+        "@radix-ui/react-toggle-group",
+        "@radix-ui/react-tooltip",
+        "@reduxjs/toolkit",
+        "@stripe/stripe-js",
+        "@supabase/ssr",
+        "@supabase/supabase-js",
+        "@tailwindcss/aspect-ratio",
+        "@tailwindcss/forms",
+        "@tailwindcss/typography",
+        "@tanstack/react-query",
+        "@types/react",
+        "@types/react-datepicker",
+        "@types/react-dom",
+        "autoprefixer",
+        "axios",
+        "cheerio",
+        "child_process",
+        "chokidar",
+        "class-variance-authority",
+        "clsx",
+        "critters",
+        "cron-parser",
+        "events",
+        "framer-motion",
+        "fs",
+        "fs-extra",
+        "glob",
+        "https",
+        "import-fresh",
+        "lucide-react",
+        "next",
+        "node-cron",
+        "openai",
+        "path",
+        "postcss",
+        "postcss-preset-env",
+        "prettier",
+        "react",
+        "react-datepicker",
+        "react-dom",
+        "react-error-boundary",
+        "react-helmet-async",
+        "react-router-dom",
+        "tailwind-merge",
+        "tailwindcss",
+        "tailwindcss-animate",
+        "uuid",
+        "web-vitals"
+      ],
+      "development": [
+        "@babel/plugin-transform-class-properties",
+        "@babel/preset-env",
+        "@babel/preset-react",
+        "@babel/preset-typescript",
+        "@eslint/eslintrc",
+        "@eslint/js",
+        "@netlify/plugin-nextjs",
+        "@next/bundle-analyzer",
+        "@next/eslint-plugin-next",
+        "@testing-library/jest-dom",
+        "@testing-library/react",
+        "@types/jest",
+        "@types/next",
+        "@types/node",
+        "@types/node-cron",
+        "@types/react",
+        "@types/react-dom",
+        "@typescript-eslint/eslint-plugin",
+        "@typescript-eslint/parser",
+        "autoprefixer",
+        "eslint",
+        "eslint-config-next",
+        "eslint-plugin-react",
+        "eslint-plugin-react-hooks",
+        "eslint-plugin-react-refresh",
+        "globals",
+        "husky",
+        "jest",
+        "jsdom",
+        "pm2",
+        "postcss",
+        "tailwindcss",
+        "terser",
+        "ts-jest",
+        "ts-node",
+        "typescript",
+        "vite"
+      ],
+      "total": 116
+    },
+    "outdated": {
+      "count": 74,
+      "packages": {
+        "@google-analytics/data": {
+          "wanted": "5.2.0",
+          "latest": "5.2.0",
+          "dependent": "workspace"
+        },
+        "@google/generative-ai": {
+          "wanted": "0.24.1",
+          "latest": "0.24.1",
+          "dependent": "workspace"
+        },
+        "@hookform/resolvers": {
+          "wanted": "5.2.1",
+          "latest": "5.2.1",
+          "dependent": "workspace"
+        },
+        "@magneticwatermelon/mcp-toolkit": {
+          "wanted": "1.1.5",
+          "latest": "1.1.5",
+          "dependent": "workspace"
+        },
+        "@modelcontextprotocol/sdk": {
+          "wanted": "1.17.5",
+          "latest": "1.17.5",
+          "dependent": "workspace"
+        },
+        "@modelcontextprotocol/server-filesystem": {
+          "wanted": "2025.8.21",
+          "latest": "2025.8.21",
+          "dependent": "workspace"
+        },
+        "@modelcontextprotocol/server-memory": {
+          "wanted": "2025.8.4",
+          "latest": "2025.8.4",
+          "dependent": "workspace"
+        },
+        "@modelcontextprotocol/server-sequential-thinking": {
+          "wanted": "2025.7.1",
+          "latest": "2025.7.1",
+          "dependent": "workspace"
+        },
+        "@radix-ui/react-accordion": {
+          "wanted": "1.2.12",
+          "latest": "1.2.12",
+          "dependent": "workspace"
+        },
+        "@radix-ui/react-alert-dialog": {
+          "wanted": "1.1.15",
+          "latest": "1.1.15",
+          "dependent": "workspace"
+        },
+        "@radix-ui/react-avatar": {
+          "wanted": "1.1.10",
+          "latest": "1.1.10",
+          "dependent": "workspace"
+        },
+        "@radix-ui/react-checkbox": {
+          "wanted": "1.3.3",
+          "latest": "1.3.3",
+          "dependent": "workspace"
+        },
+        "@radix-ui/react-collapsible": {
+          "wanted": "1.1.12",
+          "latest": "1.1.12",
+          "dependent": "workspace"
+        },
+        "@radix-ui/react-dialog": {
+          "wanted": "1.1.15",
+          "latest": "1.1.15",
+          "dependent": "workspace"
+        },
+        "@radix-ui/react-dropdown-menu": {
+          "wanted": "2.1.16",
+          "latest": "2.1.16",
+          "dependent": "workspace"
+        },
+        "@radix-ui/react-hover-card": {
+          "wanted": "1.1.15",
+          "latest": "1.1.15",
+          "dependent": "workspace"
+        },
+        "@radix-ui/react-label": {
+          "wanted": "2.1.7",
+          "latest": "2.1.7",
+          "dependent": "workspace"
+        },
+        "@radix-ui/react-menubar": {
+          "wanted": "1.1.16",
+          "latest": "1.1.16",
+          "dependent": "workspace"
+        },
+        "@radix-ui/react-navigation-menu": {
+          "wanted": "1.2.14",
+          "latest": "1.2.14",
+          "dependent": "workspace"
+        },
+        "@radix-ui/react-popover": {
+          "wanted": "1.1.15",
+          "latest": "1.1.15",
+          "dependent": "workspace"
+        },
+        "@radix-ui/react-progress": {
+          "wanted": "1.1.7",
+          "latest": "1.1.7",
+          "dependent": "workspace"
+        },
+        "@radix-ui/react-radio-group": {
+          "wanted": "1.3.8",
+          "latest": "1.3.8",
+          "dependent": "workspace"
+        },
+        "@radix-ui/react-scroll-area": {
+          "wanted": "1.2.10",
+          "latest": "1.2.10",
+          "dependent": "workspace"
+        },
+        "@radix-ui/react-select": {
+          "wanted": "2.2.6",
+          "latest": "2.2.6",
+          "dependent": "workspace"
+        },
+        "@radix-ui/react-separator": {
+          "wanted": "1.1.7",
+          "latest": "1.1.7",
+          "dependent": "workspace"
+        },
+        "@radix-ui/react-slider": {
+          "wanted": "1.3.6",
+          "latest": "1.3.6",
+          "dependent": "workspace"
+        },
+        "@radix-ui/react-slot": {
+          "wanted": "1.2.3",
+          "latest": "1.2.3",
+          "dependent": "workspace"
+        },
+        "@radix-ui/react-switch": {
+          "wanted": "1.2.6",
+          "latest": "1.2.6",
+          "dependent": "workspace"
+        },
+        "@radix-ui/react-tabs": {
+          "wanted": "1.1.13",
+          "latest": "1.1.13",
+          "dependent": "workspace"
+        },
+        "@radix-ui/react-toast": {
+          "wanted": "1.2.15",
+          "latest": "1.2.15",
+          "dependent": "workspace"
+        },
+        "@radix-ui/react-toggle": {
+          "wanted": "1.1.10",
+          "latest": "1.1.10",
+          "dependent": "workspace"
+        },
+        "@radix-ui/react-toggle-group": {
+          "wanted": "1.1.11",
+          "latest": "1.1.11",
+          "dependent": "workspace"
+        },
+        "@radix-ui/react-tooltip": {
+          "wanted": "1.2.8",
+          "latest": "1.2.8",
+          "dependent": "workspace"
+        },
+        "@reduxjs/toolkit": {
+          "wanted": "2.9.0",
+          "latest": "2.9.0",
+          "dependent": "workspace"
+        },
+        "@stripe/stripe-js": {
+          "wanted": "2.4.0",
+          "latest": "7.9.0",
+          "dependent": "workspace"
+        },
+        "@supabase/ssr": {
+          "wanted": "0.6.1",
+          "latest": "0.7.0",
+          "dependent": "workspace"
+        },
+        "@supabase/supabase-js": {
+          "wanted": "2.57.0",
+          "latest": "2.57.0",
+          "dependent": "workspace"
+        },
+        "@tailwindcss/aspect-ratio": {
+          "wanted": "0.4.2",
+          "latest": "0.4.2",
+          "dependent": "workspace"
+        },
+        "@tailwindcss/forms": {
+          "wanted": "0.5.10",
+          "latest": "0.5.10",
+          "dependent": "workspace"
+        },
+        "@tailwindcss/typography": {
+          "wanted": "0.5.16",
+          "latest": "0.5.16",
+          "dependent": "workspace"
+        },
+        "@tanstack/react-query": {
+          "wanted": "5.85.9",
+          "latest": "5.85.9",
+          "dependent": "workspace"
+        },
+        "@types/react-datepicker": {
+          "wanted": "6.2.0",
+          "latest": "6.2.0",
+          "dependent": "workspace"
+        },
+        "axios": {
+          "wanted": "1.11.0",
+          "latest": "1.11.0",
+          "dependent": "workspace"
+        },
+        "cheerio": {
+          "wanted": "1.1.2",
+          "latest": "1.1.2",
+          "dependent": "workspace"
+        },
+        "child_process": {
+          "wanted": "1.0.2",
+          "latest": "1.0.2",
+          "dependent": "workspace"
+        },
+        "chokidar": {
+          "wanted": "4.0.3",
+          "latest": "4.0.3",
+          "dependent": "workspace"
+        },
+        "class-variance-authority": {
+          "wanted": "0.7.1",
+          "latest": "0.7.1",
+          "dependent": "workspace"
+        },
+        "clsx": {
+          "wanted": "2.1.1",
+          "latest": "2.1.1",
+          "dependent": "workspace"
+        },
+        "critters": {
+          "wanted": "0.0.23",
+          "latest": "0.0.23",
+          "dependent": "workspace"
+        },
+        "cron-parser": {
+          "wanted": "5.3.1",
+          "latest": "5.3.1",
+          "dependent": "workspace"
+        },
+        "events": {
+          "wanted": "3.3.0",
+          "latest": "3.3.0",
+          "dependent": "workspace"
+        },
+        "framer-motion": {
+          "wanted": "10.18.0",
+          "latest": "12.23.12",
+          "dependent": "workspace"
+        },
+        "fs": {
+          "wanted": "0.0.1-security",
+          "latest": "0.0.1-security",
+          "dependent": "workspace"
+        },
+        "fs-extra": {
+          "wanted": "11.3.1",
+          "latest": "11.3.1",
+          "dependent": "workspace"
+        },
+        "glob": {
+          "wanted": "11.0.3",
+          "latest": "11.0.3",
+          "dependent": "workspace"
+        },
+        "https": {
+          "wanted": "1.0.0",
+          "latest": "1.0.0",
+          "dependent": "workspace"
+        },
+        "import-fresh": {
+          "wanted": "3.3.1",
+          "latest": "3.3.1",
+          "dependent": "workspace"
+        },
+        "lucide-react": {
+          "wanted": "0.536.0",
+          "latest": "0.542.0",
+          "dependent": "workspace"
+        },
+        "next": {
+          "wanted": "15.5.2",
+          "latest": "15.5.2",
+          "dependent": "workspace"
+        },
+        "node-cron": {
+          "wanted": "4.2.1",
+          "latest": "4.2.1",
+          "dependent": "workspace"
+        },
+        "openai": {
+          "wanted": "5.19.1",
+          "latest": "5.19.1",
+          "dependent": "workspace"
+        },
+        "path": {
+          "wanted": "0.12.7",
+          "latest": "0.12.7",
+          "dependent": "workspace"
+        },
+        "postcss-preset-env": {
+          "wanted": "10.3.1",
+          "latest": "10.3.1",
+          "dependent": "workspace"
+        },
+        "prettier": {
+          "wanted": "3.6.2",
+          "latest": "3.6.2",
+          "dependent": "workspace"
+        },
+        "react": {
+          "wanted": "18.3.1",
+          "latest": "19.1.1",
+          "dependent": "workspace"
+        },
+        "react-datepicker": {
+          "wanted": "8.7.0",
+          "latest": "8.7.0",
+          "dependent": "workspace"
+        },
+        "react-dom": {
+          "wanted": "18.3.1",
+          "latest": "19.1.1",
+          "dependent": "workspace"
+        },
+        "react-error-boundary": {
+          "wanted": "6.0.0",
+          "latest": "6.0.0",
+          "dependent": "workspace"
+        },
+        "react-helmet-async": {
+          "wanted": "2.0.5",
+          "latest": "2.0.5",
+          "dependent": "workspace"
+        },
+        "react-router-dom": {
+          "wanted": "7.8.2",
+          "latest": "7.8.2",
+          "dependent": "workspace"
+        },
+        "tailwind-merge": {
+          "wanted": "3.3.1",
+          "latest": "3.3.1",
+          "dependent": "workspace"
+        },
+        "tailwindcss-animate": {
+          "wanted": "1.0.7",
+          "latest": "1.0.7",
+          "dependent": "workspace"
+        },
+        "uuid": {
+          "wanted": "11.1.0",
+          "latest": "11.1.0",
+          "dependent": "workspace"
+        },
+        "web-vitals": {
+          "wanted": "5.1.0",
+          "latest": "5.1.0",
+          "dependent": "workspace"
+        }
+      }
+    },
+    "security": {
+      "error": "Command failed: npm audit --json\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
+    }
+  },
+  "actions": {
+    "update": {
+      "status": "success"
+    },
+    "securityFix": {
+      "status": "failed",
+      "error": "Command failed: npm audit fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
+    }
+  },
+  "recommendations": [
+    "Regularly update dependencies to get security patches",
+    "Use npm audit to check for vulnerabilities",
+    "Consider using npm-check-updates for major version updates",
+    "Pin dependency versions in package-lock.json",
+    "Use automated dependency update tools like Dependabot",
+    "Review and remove unused dependencies regularly",
+    "Use exact versions for critical dependencies"
+  ]
+}

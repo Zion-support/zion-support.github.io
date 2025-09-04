@@ -12457,17 +12457,14 @@
     {
       "message": "Error fixing unused imports",
       "error": "Command failed: npm run lint -- --fix",
-      "stack": "Error: Command failed: npm run lint -- --fix\n    at genericNodeError (node:internal/errors:983:15)\n    at wrappedFn (node:internal/errors:537:14)\n    at checkExecSyncError (node:child_process:882:11)\n    at execSync (node:child_process:954:15)\n    at ErrorFixerAutomation.fixUnusedImports (/workspace/scripts/automation/error-fixer-automation.cjs:145:7)\n    at ErrorFixerAutomation.run (/workspace/scripts/automation/error-fixer-automation.cjs:32:18)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)";
-},
+      "stack": "Error: Command failed: npm run lint -- --fix\n    at genericNodeError (node:internal/errors:983:15)\n    at wrappedFn (node:internal/errors:537:14)\n    at checkExecSyncError (node:child_process:882:11)\n    at execSync (node:child_process:954:15)\n    at ErrorFixerAutomation.fixUnusedImports (/workspace/scripts/automation/error-fixer-automation.cjs:145:7)\n    at ErrorFixerAutomation.run (/workspace/scripts/automation/error-fixer-automation.cjs:32:18)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"},
     {
       "message": "Error fixing linting errors",
       "error": "Command failed: npm run lint -- --fix",
-      "stack": "Error: Command failed: npm run lint -- --fix\n    at genericNodeError (node:internal/errors:983:15)\n    at wrappedFn (node:internal/errors:537:14)\n    at checkExecSyncError (node:child_process:882:11)\n    at execSync (node:child_process:954:15)\n    at ErrorFixerAutomation.fixLintingErrors (/workspace/scripts/automation/error-fixer-automation.cjs:201:7)\n    at ErrorFixerAutomation.run (/workspace/scripts/automation/error-fixer-automation.cjs:34:18)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)";
-}
+      "stack": "Error: Command failed: npm run lint -- --fix\n    at genericNodeError (node:internal/errors:983:15)\n    at wrappedFn (node:internal/errors:537:14)\n    at checkExecSyncError (node:child_process:882:11)\n    at execSync (node:child_process:954:15)\n    at ErrorFixerAutomation.fixLintingErrors (/workspace/scripts/automation/error-fixer-automation.cjs:201:7)\n    at ErrorFixerAutomation.run (/workspace/scripts/automation/error-fixer-automation.cjs:34:18)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"}
   ],
   "summary": {
     "totalFixes": 2490,
     "totalErrors": 2,
-    "successRate": 100;
-}
+    "successRate": 100}
 }

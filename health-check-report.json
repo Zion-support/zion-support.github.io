@@ -1,73 +1,31 @@
 {
-<<<<<<< HEAD
-  "timestamp": "2025-09-02T22:04:25.517Z",
-  "fileStructure": {
-    "directories": {
-      "src": true,
-      "public": true,
-      "pages": true;
-},
-    "files": {
-      "package.json": true,
-      "next.config.js": true,
-      "tsconfig.json": true;
-},
-    "issues": [];
-},
-  "configuration": {
-    "packageJson": {
-      "valid": true,
-      "issues": [];
-},
-    "nextConfig": {
-      "valid": true,
-      "issues": [];
-},
-    "tsConfig": {
-      "valid": true,
-      "issues": [];
-}
-  ]
-}
-  },
-  "dependencies": {
-    "total": 45,
-    "missing": [],
-    "outdated": [];
-},
-  "summary": {
-    "overall": "healthy",
-    "issues": [];
-}
-}
-=======
-  "timestamp: 2025-09-02T22: 04:25.517Z",
-  "fileStructure: {
-    directories": {
-      "src: true,
-      public": true,
-      "pages: true
+  "timestamp": "2025-09-04T06:30:45.510Z",
+  "checks": [
+    {
+      "name": "Package.json exists",
+      "status": "pass",
+      "result": "package.json found"
     },
-    files": {
-      "package.json: true,
-      next.config.js": true,
-      "tsconfig.json: true
+    {
+      "name": "Dependencies installed",
+      "status": "pass",
+      "result": "Dependencies installed"
     },
-    issues": []
-  },
-  "configuration: {
-    packageJson": {
-      "valid: true,
-      issues": []
+    {
+      "name": "Build process",
+      "status": "fail",
+      "error": "Build failed"
     },
-    "nextConfig: {
-      valid": true,
-      "issues: []
+    {
+      "name": "Linting",
+      "status": "fail",
+      "error": "Linting failed"
     },
-    tsConfig": {
-      "valid: true,
-      issues": []
+    {
+      "name": "TypeScript compilation",
+      "status": "fail",
+      "error": "TypeScript compilation failed"
     }
-  ]
+  ],
+  "status": "unhealthy"
 }
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

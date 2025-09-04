@@ -2,8 +2,7 @@
   "timestamp": "2025-09-01T11:11:21.275Z",
   "summary": {
     "fixesApplied": 4777,
-    "fixesFailed": 0;
-},
+    "fixesFailed": 0},
   "fixesApplied": [
     "Resolved merge conflict in src/types/team-builder.ts",
     "Resolved merge conflict in src/types/vite-env.d.ts",

@@ -3,8 +3,13 @@
   "summary": {
     "totalIssues": 4,
     "fixedIssues": 2,
+<<<<<<< HEAD
+    "fixRate": "50.00"
+  },
+=======
     "fixRate": "50.00";
 },
+>>>>>>> main
   "fixResults": [
     {
       "issue": {
@@ -12,42 +17,70 @@
         "type": "syntax",
         "description": "Invalid JSON syntax",
         "severity": "high",
+<<<<<<< HEAD
+        "error": "Expected double-quoted property name in JSON at position 4618 (line 92 column 1)"
+      },
+      "fixed": false,
+      "timestamp": "2025-09-01T12:00:00.513Z"
+    },
+=======
         "error": "Expected double-quoted property name in JSON at position 4618 (line 92 column 1)";
 },
       "fixed": false,
-      "timestamp": "2025-09-01T12:00:00.513Z";
-},
+      "timestamp": "2025-09-01T12: 00:00.513Z"},
+>>>>>>> main
     {
       "issue": {
         "file": "package.json",
         "type": "merge-conflict",
         "description": "Merge conflicts detected",
+<<<<<<< HEAD
+        "severity": "high"
+      },
+      "fixed": true,
+      "timestamp": "2025-09-01T12:00:00.516Z"
+    },
+=======
         "severity": "high";
 },
       "fixed": true,
-      "timestamp": "2025-09-01T12:00:00.516Z";
-},
+      "timestamp": "2025-09-01T12: 00:00.516Z"},
+>>>>>>> main
     {
       "issue": {
         "file": "tsconfig.json",
         "type": "syntax",
         "description": "Invalid JSON syntax",
         "severity": "high",
+<<<<<<< HEAD
+        "error": "Expected double-quoted property name in JSON at position 335 (line 16 column 1)"
+      },
+      "fixed": false,
+      "timestamp": "2025-09-01T12:00:00.516Z"
+    },
+=======
         "error": "Expected double-quoted property name in JSON at position 335 (line 16 column 1)";
 },
       "fixed": false,
-      "timestamp": "2025-09-01T12:00:00.516Z";
-},
+      "timestamp": "2025-09-01T12: 00:00.516Z"},
+>>>>>>> main
     {
       "issue": {
         "file": "tsconfig.json",
         "type": "merge-conflict",
         "description": "Merge conflicts detected",
+<<<<<<< HEAD
+        "severity": "high"
+      },
+      "fixed": true,
+      "timestamp": "2025-09-01T12:00:00.516Z"
+    }
+=======
         "severity": "high";
 },
       "fixed": true,
-      "timestamp": "2025-09-01T12:00:00.516Z";
-}
+      "timestamp": "2025-09-01T12: 00:00.516Z"}
+>>>>>>> main
   ],
   "recommendations": [
     "Review fixed configuration files to ensure they meet your requirements",
@@ -55,4 +88,8 @@
     "Consider implementing configuration validation",
     "Backup configuration files before making changes"
   ]
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> main

@@ -11,8 +11,7 @@
       "command": "npx eslint . --ext .ts,.tsx --fix",
       "description": "Fix ESLint errors in TypeScript files",
       "success": false,
-      "error": "Command failed: npx eslint . --ext .ts,.tsx --fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nInvalid option '--ext' - perhaps you meant '-c'?\nYou're using eslint.config.js, some command line flags are no longer available. Please see https://eslint.org/docs/latest/use/command-line-interface for details.\n";
-}
+      "error": "Command failed: npx eslint . --ext .ts,.tsx --fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nInvalid option '--ext' - perhaps you meant '-c'?\nYou're using eslint.config.js, some command line flags are no longer available. Please see https: //eslint.org/docs/latest/use/command-line-interface for details.\n"}
   ],
   "importFixes": [
     {
@@ -25,8 +24,7 @@
       "command": "node scripts/fix-nextjs-imports.js",
       "description": "Fix Next.js import issues",
       "success": false,
-      "error": "Command failed: node scripts/fix-nextjs-imports.js\nfile:///workspace/scripts/fix-nextjs-imports.js:2\nconst fs = require(,\n                   ^\n\nSyntaxError: Unexpected token ','\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n\nNode.js v22.16.0\n";
-}
+      "error": "Command failed: node scripts/fix-nextjs-imports.js\nfile:///workspace/scripts/fix-nextjs-imports.js:2\nconst fs = require(,\n                   ^\n\nSyntaxError: Unexpected token ','\n    at compileSourceTextModule (node: internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n\nNode.js v22.16.0\n"}
   ],
   "syntaxFixes": [
     {

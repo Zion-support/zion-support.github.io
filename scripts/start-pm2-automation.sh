@@ -1,111 +1,216 @@
 #!/bin/bash
 
-echo "🚀 Starting PM2 Automation System for Zion App..."
+# PM2 Automation Startup Script
+# This script starts the complete PM2 automation ecosystem for error prevention and monitoring
+
+set -e
+
+# Colors for output
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+PURPLE='\033[0;35m'
+CYAN='\033[0;36m'
+NC='\033[0m' # No Color
+
+# Project configuration
+PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+ECOSYSTEM_FILE="$PROJECT_ROOT/ecosystem.config.cjs"
+LOG_DIR="$PROJECT_ROOT/automation/logs"
+
+# Logging functions
+log() {
+    echo -e "${BLUE}[$(date +'%Y-%m-%d %H:%M:%S')]${NC} $1"
+}
+
+success() {
+    echo -e "${GREEN}✅ $1${NC}"
+}
+
+warning() {
+    echo -e "${YELLOW}⚠️  $1${NC}"
+}
+
+error() {
+    echo -e "${RED}❌ $1${NC}"
+}
+
+info() {
+    echo -e "${CYAN}ℹ️  $1${NC}"
+}
 
 # Check if PM2 is installed
-if ! command -v pm2 &> /dev/null; then
-    echo "❌ PM2 is not installed. Installing PM2..."
-    npm install -g pm2
-fi
+check_pm2() {
+    if ! command -v pm2 &> /dev/null; then
+        error "PM2 is not installed. Installing PM2 globally..."
+        npm install -g pm2
+        success "PM2 installed successfully"
+    else
+        info "PM2 is already installed"
+    fi
+}
 
-# Navigate to project root
-cd "$(dirname "$0")/.."
+# Check if ecosystem file exists
+check_ecosystem() {
+    if [ ! -f "$ECOSYSTEM_FILE" ]; then
+        error "Ecosystem file not found: $ECOSYSTEM_FILE"
+        exit 1
+    else
+        success "Ecosystem file found: $ECOSYSTEM_FILE"
+    fi
+}
 
-echo "📁 Working directory: $(pwd)"
+# Create necessary directories
+setup_directories() {
+    log "Setting up directories..."
+    
+    # Create log directory
+    mkdir -p "$LOG_DIR"
+    success "Log directory created: $LOG_DIR"
+    
+    # Create automation directory if it doesn't exist
+    mkdir -p "$PROJECT_ROOT/automation"
+    success "Automation directory ready"
+}
 
-# Stop any existing PM2 processes
-echo "🛑 Stopping existing PM2 processes..."
-pm2 stop all 2>/dev/null || true
-pm2 delete all 2>/dev/null || true
+# Install dependencies
+install_dependencies() {
+    log "Installing dependencies..."
+    
+    if [ -f "$PROJECT_ROOT/package.json" ]; then
+        npm install
+        success "Dependencies installed"
+    else
+        warning "No package.json found, skipping dependency installation"
+    fi
+}
 
-# Start the main application
-echo "🚀 Starting main Zion app..."
-pm2 start ecosystem.config.js --only zion-app
+# Stop existing PM2 processes
+stop_existing() {
+    log "Stopping existing PM2 processes..."
+    
+    # Stop all processes for this ecosystem
+    pm2 stop ecosystem.config.cjs 2>/dev/null || true
+    pm2 delete ecosystem.config.cjs 2>/dev/null || true
+    
+    success "Existing processes stopped"
+}
 
-# Start the backend server
-echo "🚀 Starting backend server..."
-pm2 start ecosystem.config.js --only zion-backend
+# Start PM2 processes
+start_processes() {
+    log "Starting PM2 processes..."
+    
+    # Start the ecosystem
+    pm2 start "$ECOSYSTEM_FILE" --update-env
+    
+    success "PM2 processes started"
+}
 
-# Start all automation processes
-echo "🤖 Starting automation processes..."
+# Setup PM2 log rotation
+setup_log_rotation() {
+    log "Setting up PM2 log rotation..."
+    
+    # Install logrotate module if not already installed
+    pm2 install pm2-logrotate 2>/dev/null || true
+    
+    # Configure log rotation
+    pm2 set pm2-logrotate:max_size 10M
+    pm2 set pm2-logrotate:retain 30
+    pm2 set pm2-logrotate:compress true
+    pm2 set pm2-logrotate:workerInterval 60
+    pm2 set pm2-logrotate:rotateInterval '0 0 * * *'
+    
+    success "Log rotation configured"
+}
 
-# Start console error fixer first (highest priority)
-echo "🔧 Starting console error fixer..."
-pm2 start ecosystem.config.js --only console-error-fixer
+# Show PM2 status
+show_status() {
+    log "PM2 Status:"
+    pm2 status
+    
+    log "PM2 Logs (last 20 lines):"
+    pm2 logs --lines 20
+}
 
-# Start other automations
-echo "🔍 Starting quality checks..."
-pm2 start ecosystem.config.js --only quality-checks
+# Setup monitoring
+setup_monitoring() {
+    log "Setting up monitoring..."
+    
+    # Save PM2 configuration
+    pm2 save
+    
+    # Generate startup script
+    pm2 startup 2>/dev/null || true
+    
+    success "Monitoring setup completed"
+}
 
-echo "🔗 Starting link checker..."
-pm2 start ecosystem.config.js --only link-checker
+# Main execution
+main() {
+    log "Starting PM2 Automation System..."
+    log "Project Root: $PROJECT_ROOT"
+    
+    # Pre-flight checks
+    check_pm2
+    check_ecosystem
+    setup_directories
+    install_dependencies
+    
+    # Stop existing processes
+    stop_existing
+    
+    # Start new processes
+    start_processes
+    
+    # Setup additional features
+    setup_log_rotation
+    setup_monitoring
+    
+    # Show status
+    show_status
+    
+    success "PM2 Automation System started successfully!"
+    
+    info "Available commands:"
+    info "  pm2 status          - Show process status"
+    info "  pm2 logs            - Show logs"
+    info "  pm2 restart all     - Restart all processes"
+    info "  pm2 stop all        - Stop all processes"
+    info "  pm2 delete all      - Delete all processes"
+    
+    info "Log files are located in: $LOG_DIR"
+}
 
-echo "🔗 Starting link integrity checker..."
-pm2 start ecosystem.config.js --only link-integrity
-
-echo "📊 Starting performance monitor..."
-pm2 start ecosystem.config.js --only performance-monitor
-
-echo "🔒 Starting security audit..."
-pm2 start ecosystem.config.js --only security-audit
-
-echo "📦 Starting dependency updates..."
-pm2 start ecosystem.config.js --only dependency-updates
-
-echo "🔄 Starting continuous improvement..."
-pm2 start ecosystem.config.js --only continuous-improvement
-
-echo "🏗️ Starting daily build test..."
-pm2 start ecosystem.config.js --only daily-build-test
-
-echo "📈 Starting front maximizer..."
-pm2 start ecosystem.config.js --only front-maximizer
-
-echo "🗺️ Starting sitemap runner..."
-pm2 start ecosystem.config.js --only sitemap-runner
-
-# Save PM2 configuration
-echo "💾 Saving PM2 configuration..."
-pm2 save
-
-# Show status
-echo "📊 PM2 Status:"
-pm2 status
-
-echo "📋 PM2 Logs:"
-pm2 logs --lines 5
-
-echo ""
-echo "✅ PM2 Automation System started successfully!"
-echo ""
-echo "🔧 Console Error Fixer: Runs every 15 minutes"
-echo "🔍 Quality Checks: Runs every 3 hours"
-echo "🔗 Link Checker: Runs every 30 minutes"
-echo "🔗 Link Integrity: Runs every 2 hours"
-echo "📊 Performance Monitor: Runs every 2 hours"
-echo "🔒 Security Audit: Runs every 4 hours"
-echo "📦 Dependency Updates: Runs every 6 hours"
-echo "🔄 Continuous Improvement: Runs every 2 hours"
-echo "🏗️ Daily Build Test: Runs every hour"
-echo "📈 Front Maximizer: Runs every 4 hours"
-echo "🗺️ Sitemap Runner: Runs every 6 hours"
-echo ""
-echo "📖 Useful commands:"
-echo "  pm2 status                    - Show all processes"
-echo "  pm2 logs                      - Show all logs"
-echo "  pm2 logs console-error-fixer  - Show error fixer logs"
-echo "  pm2 restart all               - Restart all processes"
-echo "  pm2 stop all                  - Stop all processes"
-echo "  pm2 delete all                - Remove all processes"
-echo ""
-echo "🔧 The console error fixer will automatically:"
-echo "  - Scan for TypeScript/JavaScript errors every 15 minutes"
-echo "  - Auto-fix import path issues"
-echo "  - Auto-fix syntax errors"
-echo "  - Auto-fix type errors"
-echo "  - Auto-fix runtime errors"
-echo "  - Auto-fix reference errors"
-echo "  - Run build tests to verify fixes"
-echo "  - Generate detailed error reports"
-echo ""
-echo "🚀 All automations are now running autonomously!"
+# Handle script arguments
+case "${1:-start}" in
+    "start")
+        main
+        ;;
+    "stop")
+        log "Stopping PM2 processes..."
+        pm2 stop ecosystem.config.cjs 2>/dev/null || true
+        pm2 delete ecosystem.config.cjs 2>/dev/null || true
+        success "PM2 processes stopped"
+        ;;
+    "restart")
+        log "Restarting PM2 processes..."
+        pm2 restart ecosystem.config.cjs 2>/dev/null || pm2 start ecosystem.config.cjs --update-env
+        success "PM2 processes restarted"
+        ;;
+    "status")
+        show_status
+        ;;
+    "logs")
+        pm2 logs --lines 100
+        ;;
+    *)
+        echo "Usage: $0 {start|stop|restart|status|logs}"
+        echo "  start   - Start PM2 automation system (default)"
+        echo "  stop    - Stop PM2 processes"
+        echo "  restart - Restart PM2 processes"
+        echo "  status  - Show PM2 status"
+        echo "  logs    - Show PM2 logs"
+        exit 1
+        ;;
+esac

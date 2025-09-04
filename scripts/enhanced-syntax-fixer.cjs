@@ -1,123 +1,163 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process');
 
-class EnhancedSyntaxFixer {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.fixedFiles = [];
-    this.errors = [];
-  }
+async function enhancedSyntaxFixer() {
+  console.log('🔧 Starting Enhanced Syntax Fixer...');
+  
+  const fixReport = {
+    timestamp: new Date().toISOString(),
+    filesProcessed: [],
+    fixesApplied: [],
+    errors: []
+ ; ;};
 
-  log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
-
-  fixFile(filePath) {
-    try {
-      let content = fs.readFileSync(filePath, 'utf8');
-      let originalContent = content;
-      
-      // Fix merge conflicts
-      content = content.replace(/<<<<<<< HEAD\n/g, '');
-      content = content.replace(/=======\n/g, '');
-      content = content.replace(/      
-      // Fix unterminated strings
-      content = content.replace(/&apos;s\s*"'\s*>/gm, '&apos;s">');
-      content = content.replace(/&apos;s\s*"'\s*,/gm, '&apos;s",');
-      
-      // Fix unterminated strings in general
-      content = content.replace(/"'\s*$/gm, '"');
-      content = content.replace(/"'\s*>/gm, '">');
-      content = content.replace(/"'\s*,/gm, '",');
-      
-      // Fix missing semicolons
-      content = content.replace(/([^;}])\n\s*}/g, '$1;\n}');
-      
-      // Fix specific syntax errors we've seen
-      content = content.replace(/import Head from 'next\/head;/g, "import Head from 'next/head';");
-      content = content.replace(/';/g, "';");
-      content = content.replace(/category: 'Communication AI',/g, "category: 'Communication AI',");
-      content = content.replace(/response: 'JWT token',/g, "response: 'JWT token',");
-      content = content.replace(/Award,/g, "Award,");
-      content = content.replace(/category: 'Technology',/g, "category: 'Technology',");
-      
-      if (content !== originalContent) {
-        fs.writeFileSync(filePath, content, 'utf8');
-        this.fixedFiles.push(filePath);
-        this.log(`Fixed syntax errors in: ${filePath}`);
-        return true;
-      }
-      
-      return false;
-    } catch (error) {
-      this.errors.push({ file: filePath, error: error.message });
-      this.log(`Error fixing ${filePath}: ${error.message}`);
-      return false;
-    }
-  }
-
-  async fixAllFiles() {
-    this.log('Starting enhanced syntax error fixing...');
+  try {
+    // Get all TypeScript/JavaScript files
+    const files = findCodeFiles('.;';);
     
-    const extensions = ['.js', '.jsx', '.ts', '.tsx', '.cjs', '.mjs', '.json'];
-    const files = this.getAllFiles(this.projectRoot, extensions);
-    
-    let fixedCount = 0;
     for (const file of files) {
-      if (this.fixFile(file)) {
-        fixedCount++;
-      }
-    }
-    
-    this.log(`Fixed ${fixedCount} files with syntax errors`);
-    this.log(`Encountered ${this.errors.length} errors`);
-    
-    return {
-      fixedFiles: this.fixedFiles,
-      errors: this.errors,
-      fixedCount;
-};
-  }
+      try {
+        const originalContent = fs.readFileSync(file, 'utf8';);
+        let content = originalConte;n;t;
+        let fixes = [;];
 
-  getAllFiles(dir, extensions) {
-    let files = [];
+        // Fix 1: Ensure proper function closing braces
+        if (&& !content.match(/}\s*export default/)) {
+          const lines = content.split('\n') {
+    && !content.match(/}\s*export default/)) {
+          const lines = content.split('\n';
+  });
+          const exportLineIndex = lines.findIndex(line => line.trim().startsWith('export default';););
+          if ( {
+            const prevLine = lines[exportLineIndex - 1].trim() {
+     {
+            const prevLine = lines[exportLineIndex - 1].trim(;
+  });
+            if (&& !prevLine.endsWith(') {
+    && !prevLine.endsWith(';
+  }')) {
+              lines[exportLineIndex - 1] = prevLine + '}';
+              content = lines.join('\n');
+              fixes.push('Added missing closing brace before export')}
+          }
+        }
+
+        // Fix 2: Fix JSX closing tags
+        content = content.replace(/<(\w+)([^>]*?)\s*>\s*<\/\1>/g, '<$1$2></$1>');
+
+        // Fix 3: Fix missing semicolons in object properties
+        content = content.replace(/(\w+)\s*:\s*([^,}]+)(?=\s*[}])/g, (match, key, value) => {
+          if (.endsWith(') {
+    .endsWith(';
+  }') && !value.trim().endsWith('}') && !value.trim().endsWith(')')) {
+            return `${key;}: ${value};`}
+          return match;});
+
+        // Fix 4: Fix useEffect structure
+        content = content.replace(/useEffect\(\(\)\s*=>\s*{([^}]+)}\s*,\s*\[\]\)/g, (match, body) => {
+          if (.endsWith('}')) {
+            return `useEffect(() => {${body) {
+    .endsWith('}')) {
+            return `useEffect(() => {${body;
+  }}}, []);`}
+          return match;});
+
+        // Fix 5: Fix class method structure
+        content = content.replace(/(\w+)\s*\([^)]*\)\s*{\s*([^}]+)\s*}/g, (match, methodName, body) => {
+          if (&& !body.trim().endsWith(') {
+    && !body.trim().endsWith(';
+  }') && !body.trim().endsWith('}')) {
+            return `${methodName;}() { ${body}}`}
+          return match;});
+
+        // Only write if changes were made
+        if ( {
+          fs.writeFileSync(file, content)) {
+     {
+          fs.writeFileSync(file, content);
+  }
+          fixReport.filesProcessed.push(file);
+          fixReport.fixesApplied.push(...fixes);
+          console.log(`✅ Fixed ${fixes.length} issues in ${file}`);}
+
+      } catch (error) {
+        fixReport.errors.push({
+          file: file,
+          error: error.message
+        });
+        console.log(`❌ Error processing ${file}: ${error.message}`);}
+    }
+
+    // Save report
+    const reportPath = 'enhanced-syntax-fix-report.json;';
+    fs.writeFileSync(reportPath, JSON.stringify(fixReport, null, 2));
     
+    console.log(`\n📊 Enhanced Syntax Fixer Summary:`);
+    console.log(`   - Files processed: ${fixReport.filesProcessed.length}`);
+    console.log(`   - Fixes applied: ${fixReport.fixesApplied.length}`);
+    console.log(`   - Errors: ${fixReport.errors.length}`);
+    console.log(`📄 Report saved to: ${reportPath}`);
+
+    return fixReport;} catch (error) {
+    console.error('❌ Enhanced syntax fixer failed:', error.message);
+    throw error}
+}
+
+function findCodeFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
+  const files = [;];
+  
+  function traverse(currentDir) {
     try {
-      const items = fs.readdirSync(dir);
+      const items = fs.readdirSync(currentDir;);
       
       for (const item of items) {
-        const fullPath = path.join(dir, item);
-        const stat = fs.statSync(fullPath);
+        const fullPath = path.join(currentDir, item;);
+        const stat = fs.statSync(fullPath;);
         
-        if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-          files = files.concat(this.getAllFiles(fullPath, extensions));
+        if () {
+          if (!['node_modules', '.git', '.next', 'dist', 'build'].includes(item)) {
+            traverse(fullPath)}
         } else if (stat.isFile()) {
-          const ext = path.extname(item);
-          if (extensions.includes(ext)) {
-            files.push(fullPath);
-          }
+          const ext = path.extname(item) {
+    ) {
+          if (!['node_modules', '.git', '.next', 'dist', 'build'].includes(item)) {
+            traverse(fullPath)}
+        } else if (stat.isFile()) {
+          const ext = path.extname(item;
+  });
+          if () {
+            files.push(fullPath)}
         }
       }
     } catch (error) {
-      this.log(`Error reading directory ${dir}: ${error.message}`);
+      // Skip directories that can't be read
     }
-    
-    return files;
   }
-}
+  
+  traverse(dir)) {
+    ) {
+            files.push(fullPath)}
+        }
+      }
+    } catch (error) {
+      // Skip directories that can't be read
+    }
+  }
+  
+  traverse(dir);
+  }
+  return files;}
 
-// Run the fixer
-if (require.main === module) {
-  const fixer = new EnhancedSyntaxFixer();
-  fixer.fixAllFiles().then(result => {
-    console.log('Enhanced syntax fixing completed:', result);
-    process.exit(0);
-  }).catch(error => {
-    console.error('Enhanced syntax fixing failed:', error);
-    process.exit(1);
-  });
-}
+// Run if called directly
+if ( {
+  enhancedSyntaxFixer().catch(console.error)}
 
-module.exports = EnhancedSyntaxFixer;
+module.exports = { enhancedSyntaxFixer }) {
+     {
+  enhancedSyntaxFixer().catch(console.error)}
+
+module.exports = { enhancedSyntaxFixer };
+  }

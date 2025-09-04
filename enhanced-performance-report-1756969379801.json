@@ -1,0 +1,80 @@
+{
+  "timestamp": "2025-09-04T07:02:59.801Z",
+  "sessionId": "1756969379801",
+  "systemInfo": {
+    "platform": "linux",
+    "arch": "x64",
+    "nodeVersion": "v22.16.0",
+    "totalMemory": 16795742208,
+    "freeMemory": 15201853440,
+    "cpus": 4,
+    "uptime": 735396.96
+  },
+  "metrics": {
+    "cpu": [
+      {
+        "cpu": 5,
+        "memory": 9,
+        "memoryUsed": 1593888768,
+        "memoryTotal": 16795742208,
+        "memoryFree": 15201853440,
+        "timestamp": 1756969379802
+      }
+    ],
+    "memory": [
+      {
+        "cpu": 5,
+        "memory": 9,
+        "memoryUsed": 1593888768,
+        "memoryTotal": 16795742208,
+        "memoryFree": 15201853440,
+        "timestamp": 1756969379802
+      }
+    ],
+    "disk": [
+      {
+        "total": "126G",
+        "used": "14G",
+        "available": "106G",
+        "percentage": 12,
+        "timestamp": 1756969379805
+      }
+    ],
+    "network": [
+      {
+        "totalBytes": 13142240958,
+        "totalPackets": 4796286,
+        "timestamp": 1756969379807
+      }
+    ],
+    "build": {
+      "duration": 13125,
+      "success": true,
+      "outputSize": 4547,
+      "timestamp": "2025-09-04T07:03:12.932Z"
+    },
+    "runtime": {
+      "startupTime": 30018,
+      "success": false,
+      "error": "Server startup timeout",
+      "timestamp": "2025-09-04T07:03:42.951Z"
+    }
+  },
+  "alerts": [],
+  "recommendations": [
+    {
+      "type": "runtime",
+      "priority": "medium",
+      "message": "Server startup time is longer than 10 seconds",
+      "action": "Consider optimizing server startup process or using faster development server"
+    }
+  ],
+  "summary": {
+    "averageCpu": 5,
+    "averageMemory": 9,
+    "peakCpu": 5,
+    "peakMemory": 9,
+    "totalAlerts": 0,
+    "performanceScore": 90
+  }
+}

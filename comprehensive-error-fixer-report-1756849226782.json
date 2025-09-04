@@ -4,8 +4,7 @@
   "summary": {
     "totalFiles": 251,
     "fixes": 251,
-    "success": true;
-},
+    "success": true},
   "logs": [
     "[2025-09-02T21:38:57.555Z] [INFO] Starting comprehensive error fixing...",
     "[2025-09-02T21:38:57.555Z] [INFO] Fixing common syntax errors...",

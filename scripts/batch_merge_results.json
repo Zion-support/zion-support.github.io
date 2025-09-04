@@ -7,8 +7,7 @@
       "head": "cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-2e78",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -21,8 +20,7 @@
       "head": "cursor/website-audit-content-update-and-deployment-948e",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -35,8 +33,7 @@
       "head": "cursor/website-audit-content-update-and-deployment-d99d",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -49,8 +46,7 @@
       "head": "cursor/analyze-improve-and-deploy-application-87e3",
       "update": {
         "updated": true,
-        "output": "Merge made by the 'ort' strategy.\n README.md                                  |  45 ----\n components/layout/Header.tsx               |   7 +\n components/layout/Layout.tsx               |  20 ++\n next.config.js                             |  37 +++-\n package.json                               |   7 +-\n pages/_app.tsx                             |  13 +-\n pages/_document.tsx                        |   3 +-\n public/sitemap.xml                         | 323 ++++++++---------------------\n smart-merge-manageable-20250902-104322.txt | 172 +++++++++++++++\n smart-merge-manageable-20250902-104454.txt | 172 +++++++++++++++\n tsconfig.tsbuildinfo                       |   2 +-\n 11 files changed, 517 insertions(+), 284 deletions(-)\n create mode 100644 smart-merge-manageable-20250902-104322.txt\n create mode 100644 smart-merge-manageable-20250902-104454.txt\n\nTo https://github.com/Zion-Holdings/zion.app\n   9e7f70f373c..672c7f92ec0  pr-update-cursor/analyze-improve-and-deploy-application-87e3 -> cursor/analyze-improve-and-deploy-application-87e3\n";
-},
+        "output": "Merge made by the 'ort' strategy.\n README.md                                  |  45 ----\n components/layout/Header.tsx               |   7 +\n components/layout/Layout.tsx               |  20 ++\n next.config.js                             |  37 +++-\n package.json                               |   7 +-\n pages/_app.tsx                             |  13 +-\n pages/_document.tsx                        |   3 +-\n public/sitemap.xml                         | 323 ++++++++---------------------\n smart-merge-manageable-20250902-104322.txt | 172 +++++++++++++++\n smart-merge-manageable-20250902-104454.txt | 172 +++++++++++++++\n tsconfig.tsbuildinfo                       |   2 +-\n 11 files changed, 517 insertions(+), 284 deletions(-)\n create mode 100644 smart-merge-manageable-20250902-104322.txt\n create mode 100644 smart-merge-manageable-20250902-104454.txt\n\nTo https: //github.com/Zion-Holdings/zion.app\n   9e7f70f373c..672c7f92ec0  pr-update-cursor/analyze-improve-and-deploy-application-87e3 -> cursor/analyze-improve-and-deploy-application-87e3\n"},
       "merge": {
         "merged": false,
         "reason": "http_error",
@@ -63,8 +59,7 @@
       "head": "cursor/analyze-improve-and-deploy-application-51d0",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -77,8 +72,7 @@
       "head": "cursor/analyze-improve-and-deploy-application-8682",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -91,8 +85,7 @@
       "head": "cursor/analyze-improve-and-deploy-application-b615",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -105,8 +98,7 @@
       "head": "cursor/analyze-improve-and-deploy-application-b155",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -119,8 +111,7 @@
       "head": "cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-d603",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -133,8 +124,7 @@
       "head": "cursor/analyze-improve-and-deploy-application-f724",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -147,8 +137,7 @@
       "head": "cursor/add-new-services-and-advertise-them-9be8",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -161,8 +150,7 @@
       "head": "cursor/add-new-services-and-advertise-them-d925",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -175,8 +163,7 @@
       "head": "cursor/add-new-services-and-advertise-them-3e8d",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -189,8 +176,7 @@
       "head": "cursor/analyze-improve-and-deploy-application-9f38",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -203,8 +189,7 @@
       "head": "cursor/add-new-services-and-advertise-them-6aa6",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -217,8 +202,7 @@
       "head": "cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-4209",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -231,8 +215,7 @@
       "head": "cursor/add-new-services-and-advertise-them-75f7",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -245,8 +228,7 @@
       "head": "cursor/analyze-improve-and-deploy-application-ecc2",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -259,8 +241,7 @@
       "head": "cursor/analyze-improve-and-deploy-application-3c05",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -273,8 +254,7 @@
       "head": "cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-98ba",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -287,8 +267,7 @@
       "head": "cursor/website-audit-content-update-and-deployment-0748",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -301,8 +280,7 @@
       "head": "cursor/website-audit-content-update-and-deployment-ae09",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -315,8 +293,7 @@
       "head": "cursor/website-audit-content-update-and-deployment-5995",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -329,8 +306,7 @@
       "head": "cursor/website-audit-content-update-and-deployment-5078",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -343,8 +319,7 @@
       "head": "cursor/analyze-improve-and-deploy-application-1c42",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -357,8 +332,7 @@
       "head": "cursor/website-audit-content-update-and-deployment-03eb",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -371,8 +345,7 @@
       "head": "cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f139",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -385,8 +358,7 @@
       "head": "cursor/analyze-improve-and-deploy-application-0ceb",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -399,8 +371,7 @@
       "head": "cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-4476",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -413,8 +384,7 @@
       "head": "cursor/website-audit-content-update-and-deployment-5082",
       "update": {
         "updated": true,
-        "output": "Merge made by the 'ort' strategy.\n README.md                                  |  45 ----\n components/layout/Header.tsx               |   7 +\n components/layout/Layout.tsx               |  20 ++\n next.config.js                             |  37 +++-\n package.json                               |   7 +-\n pages/_app.tsx                             |  13 +-\n pages/_document.tsx                        |   3 +-\n public/sitemap.xml                         | 323 ++++++++---------------------\n smart-merge-manageable-20250902-104322.txt | 172 +++++++++++++++\n smart-merge-manageable-20250902-104454.txt | 172 +++++++++++++++\n tsconfig.tsbuildinfo                       |   2 +-\n 11 files changed, 517 insertions(+), 284 deletions(-)\n create mode 100644 smart-merge-manageable-20250902-104322.txt\n create mode 100644 smart-merge-manageable-20250902-104454.txt\n\nTo https://github.com/Zion-Holdings/zion.app\n   94752bfec3b..f91b354c478  pr-update-cursor/website-audit-content-update-and-deployment-5082 -> cursor/website-audit-content-update-and-deployment-5082\n";
-},
+        "output": "Merge made by the 'ort' strategy.\n README.md                                  |  45 ----\n components/layout/Header.tsx               |   7 +\n components/layout/Layout.tsx               |  20 ++\n next.config.js                             |  37 +++-\n package.json                               |   7 +-\n pages/_app.tsx                             |  13 +-\n pages/_document.tsx                        |   3 +-\n public/sitemap.xml                         | 323 ++++++++---------------------\n smart-merge-manageable-20250902-104322.txt | 172 +++++++++++++++\n smart-merge-manageable-20250902-104454.txt | 172 +++++++++++++++\n tsconfig.tsbuildinfo                       |   2 +-\n 11 files changed, 517 insertions(+), 284 deletions(-)\n create mode 100644 smart-merge-manageable-20250902-104322.txt\n create mode 100644 smart-merge-manageable-20250902-104454.txt\n\nTo https: //github.com/Zion-Holdings/zion.app\n   94752bfec3b..f91b354c478  pr-update-cursor/website-audit-content-update-and-deployment-5082 -> cursor/website-audit-content-update-and-deployment-5082\n"},
       "merge": {
         "merged": false,
         "reason": "http_error",
@@ -427,8 +397,7 @@
       "head": "cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-7b66",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -441,8 +410,7 @@
       "head": "cursor/website-audit-content-update-and-deployment-39b7",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -455,8 +423,7 @@
       "head": "cursor/analyze-improve-and-deploy-application-72b8",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -469,8 +436,7 @@
       "head": "cursor/add-new-services-and-advertise-them-5e24",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -483,8 +449,7 @@
       "head": "cursor/add-new-services-and-advertise-them-6e61",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -497,8 +462,7 @@
       "head": "cursor/website-audit-content-update-and-deployment-cdb6",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -511,8 +475,7 @@
       "head": "cursor/website-audit-content-update-and-deployment-5360",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -525,8 +488,7 @@
       "head": "cursor/website-audit-content-update-and-deployment-be87",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -539,8 +501,7 @@
       "head": "cursor/website-audit-content-update-and-deployment-1b15",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -553,8 +514,7 @@
       "head": "cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-123f",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -567,8 +527,7 @@
       "head": "cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-3f3a",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -581,8 +540,7 @@
       "head": "cursor/website-audit-content-update-and-deployment-ec94",
       "update": {
         "updated": true,
-        "output": "Merge made by the 'ort' strategy.\n README.md                                  |  45 ----\n components/layout/Header.tsx               |   7 +\n components/layout/Layout.tsx               |  20 ++\n next.config.js                             |  37 +++-\n package.json                               |   7 +-\n pages/_app.tsx                             |  13 +-\n pages/_document.tsx                        |   3 +-\n public/sitemap.xml                         | 323 ++++++++---------------------\n smart-merge-manageable-20250902-104322.txt | 172 +++++++++++++++\n smart-merge-manageable-20250902-104454.txt | 172 +++++++++++++++\n tsconfig.tsbuildinfo                       |   2 +-\n 11 files changed, 517 insertions(+), 284 deletions(-)\n create mode 100644 smart-merge-manageable-20250902-104322.txt\n create mode 100644 smart-merge-manageable-20250902-104454.txt\n\nTo https://github.com/Zion-Holdings/zion.app\n   d536aa59991..311b70defec  pr-update-cursor/website-audit-content-update-and-deployment-ec94 -> cursor/website-audit-content-update-and-deployment-ec94\n";
-},
+        "output": "Merge made by the 'ort' strategy.\n README.md                                  |  45 ----\n components/layout/Header.tsx               |   7 +\n components/layout/Layout.tsx               |  20 ++\n next.config.js                             |  37 +++-\n package.json                               |   7 +-\n pages/_app.tsx                             |  13 +-\n pages/_document.tsx                        |   3 +-\n public/sitemap.xml                         | 323 ++++++++---------------------\n smart-merge-manageable-20250902-104322.txt | 172 +++++++++++++++\n smart-merge-manageable-20250902-104454.txt | 172 +++++++++++++++\n tsconfig.tsbuildinfo                       |   2 +-\n 11 files changed, 517 insertions(+), 284 deletions(-)\n create mode 100644 smart-merge-manageable-20250902-104322.txt\n create mode 100644 smart-merge-manageable-20250902-104454.txt\n\nTo https: //github.com/Zion-Holdings/zion.app\n   d536aa59991..311b70defec  pr-update-cursor/website-audit-content-update-and-deployment-ec94 -> cursor/website-audit-content-update-and-deployment-ec94\n"},
       "merge": {
         "merged": false,
         "reason": "http_error",
@@ -595,8 +553,7 @@
       "head": "cursor/analyze-improve-and-deploy-application-4178",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -609,8 +566,7 @@
       "head": "cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-8831",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -623,8 +579,7 @@
       "head": "cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-4a6e",
       "update": {
         "updated": true,
-        "output": "Merge made by the 'ort' strategy.\n README.md                                  |  45 ----\n components/layout/Header.tsx               |   7 +\n components/layout/Layout.tsx               |  20 ++\n next.config.js                             |  37 +++-\n package.json                               |   7 +-\n pages/_app.tsx                             |  13 +-\n pages/_document.tsx                        |   3 +-\n public/sitemap.xml                         | 323 ++++++++---------------------\n smart-merge-manageable-20250902-104322.txt | 172 +++++++++++++++\n smart-merge-manageable-20250902-104454.txt | 172 +++++++++++++++\n tsconfig.tsbuildinfo                       |   2 +-\n 11 files changed, 517 insertions(+), 284 deletions(-)\n create mode 100644 smart-merge-manageable-20250902-104322.txt\n create mode 100644 smart-merge-manageable-20250902-104454.txt\n\nTo https://github.com/Zion-Holdings/zion.app\n   92b4eafd948..c9b14ae978f  pr-update-cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-4a6e -> cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-4a6e\n";
-},
+        "output": "Merge made by the 'ort' strategy.\n README.md                                  |  45 ----\n components/layout/Header.tsx               |   7 +\n components/layout/Layout.tsx               |  20 ++\n next.config.js                             |  37 +++-\n package.json                               |   7 +-\n pages/_app.tsx                             |  13 +-\n pages/_document.tsx                        |   3 +-\n public/sitemap.xml                         | 323 ++++++++---------------------\n smart-merge-manageable-20250902-104322.txt | 172 +++++++++++++++\n smart-merge-manageable-20250902-104454.txt | 172 +++++++++++++++\n tsconfig.tsbuildinfo                       |   2 +-\n 11 files changed, 517 insertions(+), 284 deletions(-)\n create mode 100644 smart-merge-manageable-20250902-104322.txt\n create mode 100644 smart-merge-manageable-20250902-104454.txt\n\nTo https: //github.com/Zion-Holdings/zion.app\n   92b4eafd948..c9b14ae978f  pr-update-cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-4a6e -> cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-4a6e\n"},
       "merge": {
         "merged": false,
         "reason": "http_error",
@@ -637,8 +592,7 @@
       "head": "cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-adfc",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -651,8 +605,7 @@
       "head": "cursor/add-new-services-and-advertise-them-defe",
       "update": {
         "updated": true,
-        "output": "Merge made by the 'ort' strategy.\n README.md                                  |  45 ----\n components/layout/Header.tsx               |   7 +\n components/layout/Layout.tsx               |  20 ++\n next.config.js                             |  37 +++-\n package.json                               |   7 +-\n pages/_app.tsx                             |  13 +-\n pages/_document.tsx                        |   3 +-\n public/sitemap.xml                         | 323 ++++++++---------------------\n smart-merge-manageable-20250902-104322.txt | 172 +++++++++++++++\n smart-merge-manageable-20250902-104454.txt | 172 +++++++++++++++\n tsconfig.tsbuildinfo                       |   2 +-\n 11 files changed, 517 insertions(+), 284 deletions(-)\n create mode 100644 smart-merge-manageable-20250902-104322.txt\n create mode 100644 smart-merge-manageable-20250902-104454.txt\n\nTo https://github.com/Zion-Holdings/zion.app\n   34194744d25..6e2fa42dc56  pr-update-cursor/add-new-services-and-advertise-them-defe -> cursor/add-new-services-and-advertise-them-defe\n";
-},
+        "output": "Merge made by the 'ort' strategy.\n README.md                                  |  45 ----\n components/layout/Header.tsx               |   7 +\n components/layout/Layout.tsx               |  20 ++\n next.config.js                             |  37 +++-\n package.json                               |   7 +-\n pages/_app.tsx                             |  13 +-\n pages/_document.tsx                        |   3 +-\n public/sitemap.xml                         | 323 ++++++++---------------------\n smart-merge-manageable-20250902-104322.txt | 172 +++++++++++++++\n smart-merge-manageable-20250902-104454.txt | 172 +++++++++++++++\n tsconfig.tsbuildinfo                       |   2 +-\n 11 files changed, 517 insertions(+), 284 deletions(-)\n create mode 100644 smart-merge-manageable-20250902-104322.txt\n create mode 100644 smart-merge-manageable-20250902-104454.txt\n\nTo https: //github.com/Zion-Holdings/zion.app\n   34194744d25..6e2fa42dc56  pr-update-cursor/add-new-services-and-advertise-them-defe -> cursor/add-new-services-and-advertise-them-defe\n"},
       "merge": {
         "merged": false,
         "reason": "http_error",
@@ -665,8 +618,7 @@
       "head": "cursor/add-new-services-and-advertise-them-5cc7",
       "update": {
         "updated": true,
-        "output": "Merge made by the 'ort' strategy.\n README.md                                  |  45 ----\n components/layout/Header.tsx               |   7 +\n components/layout/Layout.tsx               |  20 ++\n next.config.js                             |  37 +++-\n package.json                               |   7 +-\n pages/_app.tsx                             |  13 +-\n pages/_document.tsx                        |   3 +-\n public/sitemap.xml                         | 323 ++++++++---------------------\n smart-merge-manageable-20250902-104322.txt | 172 +++++++++++++++\n smart-merge-manageable-20250902-104454.txt | 172 +++++++++++++++\n tsconfig.tsbuildinfo                       |   2 +-\n 11 files changed, 517 insertions(+), 284 deletions(-)\n create mode 100644 smart-merge-manageable-20250902-104322.txt\n create mode 100644 smart-merge-manageable-20250902-104454.txt\n\nTo https://github.com/Zion-Holdings/zion.app\n   4433758a809..2cbc8ec466b  pr-update-cursor/add-new-services-and-advertise-them-5cc7 -> cursor/add-new-services-and-advertise-them-5cc7\n";
-},
+        "output": "Merge made by the 'ort' strategy.\n README.md                                  |  45 ----\n components/layout/Header.tsx               |   7 +\n components/layout/Layout.tsx               |  20 ++\n next.config.js                             |  37 +++-\n package.json                               |   7 +-\n pages/_app.tsx                             |  13 +-\n pages/_document.tsx                        |   3 +-\n public/sitemap.xml                         | 323 ++++++++---------------------\n smart-merge-manageable-20250902-104322.txt | 172 +++++++++++++++\n smart-merge-manageable-20250902-104454.txt | 172 +++++++++++++++\n tsconfig.tsbuildinfo                       |   2 +-\n 11 files changed, 517 insertions(+), 284 deletions(-)\n create mode 100644 smart-merge-manageable-20250902-104322.txt\n create mode 100644 smart-merge-manageable-20250902-104454.txt\n\nTo https: //github.com/Zion-Holdings/zion.app\n   4433758a809..2cbc8ec466b  pr-update-cursor/add-new-services-and-advertise-them-5cc7 -> cursor/add-new-services-and-advertise-them-5cc7\n"},
       "merge": {
         "merged": false,
         "reason": "http_error",
@@ -679,8 +631,7 @@
       "head": "cursor/add-new-services-and-advertise-them-e82f",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -693,8 +644,7 @@
       "head": "cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-c101",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -707,8 +657,7 @@
       "head": "cursor/add-new-services-and-advertise-them-cc24",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -721,8 +670,7 @@
       "head": "cursor/website-audit-content-update-and-deployment-aba3",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -735,8 +683,7 @@
       "head": "cursor/add-new-services-and-advertise-them-8e86",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -749,8 +696,7 @@
       "head": "cursor/website-audit-content-update-and-deployment-312e",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -763,8 +709,7 @@
       "head": "cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-3396",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -777,8 +722,7 @@
       "head": "cursor/analyze-improve-and-deploy-application-ff27",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -791,8 +735,7 @@
       "head": "cursor/website-audit-content-update-and-deployment-24e3",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -805,8 +748,7 @@
       "head": "cursor/website-audit-content-update-and-deployment-9e2b",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -819,8 +761,7 @@
       "head": "cursor/add-new-services-and-advertise-them-b883",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -833,8 +774,7 @@
       "head": "cursor/analyze-improve-and-deploy-application-69ed",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -847,8 +787,7 @@
       "head": "cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-84da",
       "update": {
         "updated": true,
-        "output": "Merge made by the 'ort' strategy.\n README.md                                  |  45 ----\n components/layout/Header.tsx               |   7 +\n components/layout/Layout.tsx               |  20 ++\n next.config.js                             |  37 +++-\n package.json                               |   7 +-\n pages/_app.tsx                             |  13 +-\n pages/_document.tsx                        |   3 +-\n public/sitemap.xml                         | 323 ++++++++---------------------\n smart-merge-manageable-20250902-104322.txt | 172 +++++++++++++++\n smart-merge-manageable-20250902-104454.txt | 172 +++++++++++++++\n tsconfig.tsbuildinfo                       |   2 +-\n 11 files changed, 517 insertions(+), 284 deletions(-)\n create mode 100644 smart-merge-manageable-20250902-104322.txt\n create mode 100644 smart-merge-manageable-20250902-104454.txt\n\nTo https://github.com/Zion-Holdings/zion.app\n   d897fc696ba..43a73f300de  pr-update-cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-84da -> cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-84da\n";
-},
+        "output": "Merge made by the 'ort' strategy.\n README.md                                  |  45 ----\n components/layout/Header.tsx               |   7 +\n components/layout/Layout.tsx               |  20 ++\n next.config.js                             |  37 +++-\n package.json                               |   7 +-\n pages/_app.tsx                             |  13 +-\n pages/_document.tsx                        |   3 +-\n public/sitemap.xml                         | 323 ++++++++---------------------\n smart-merge-manageable-20250902-104322.txt | 172 +++++++++++++++\n smart-merge-manageable-20250902-104454.txt | 172 +++++++++++++++\n tsconfig.tsbuildinfo                       |   2 +-\n 11 files changed, 517 insertions(+), 284 deletions(-)\n create mode 100644 smart-merge-manageable-20250902-104322.txt\n create mode 100644 smart-merge-manageable-20250902-104454.txt\n\nTo https: //github.com/Zion-Holdings/zion.app\n   d897fc696ba..43a73f300de  pr-update-cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-84da -> cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-84da\n"},
       "merge": {
         "merged": false,
         "reason": "http_error",
@@ -861,8 +800,7 @@
       "head": "cursor/add-new-services-and-advertise-them-614b",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -875,8 +813,7 @@
       "head": "cursor/analyze-improve-and-deploy-application-4d04",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -889,8 +826,7 @@
       "head": "cursor/analyze-improve-and-deploy-application-f410",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -903,8 +839,7 @@
       "head": "cursor/analyze-improve-and-deploy-application-daa1",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -917,8 +852,7 @@
       "head": "cursor/website-audit-content-update-and-deployment-7a4d",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -931,8 +865,7 @@
       "head": "cursor/analyze-improve-and-deploy-application-f2ab",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -945,8 +878,7 @@
       "head": "cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-ac0b",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -959,8 +891,7 @@
       "head": "cursor/website-audit-content-update-and-deployment-aff0",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -973,8 +904,7 @@
       "head": "cursor/analyze-improve-and-deploy-application-165d",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -987,8 +917,7 @@
       "head": "cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f2d7",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -1001,8 +930,7 @@
       "head": "cursor/analyze-improve-and-deploy-application-d827",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -1015,8 +943,7 @@
       "head": "cursor/add-new-services-and-advertise-them-7573",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -1029,8 +956,7 @@
       "head": "cursor/analyze-improve-and-deploy-application-54d0",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -1043,8 +969,7 @@
       "head": "cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-37f8",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -1057,8 +982,7 @@
       "head": "cursor/analyze-improve-and-deploy-application-38d2",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -1071,8 +995,7 @@
       "head": "cursor/website-audit-content-update-and-deployment-f639",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -1085,8 +1008,7 @@
       "head": "cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-e2bc",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -1099,8 +1021,7 @@
       "head": "cursor/analyze-improve-and-deploy-application-d40f",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -1113,8 +1034,7 @@
       "head": "cursor/add-new-services-and-advertise-them-0c47",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -1127,8 +1047,7 @@
       "head": "cursor/website-audit-content-update-and-deployment-19ea",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -1141,8 +1060,7 @@
       "head": "cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-daef",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -1155,8 +1073,7 @@
       "head": "cursor/website-audit-content-update-and-deployment-87ce",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -1169,8 +1086,7 @@
       "head": "cursor/analyze-improve-and-deploy-application-729e",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -1183,8 +1099,7 @@
       "head": "cursor/analyze-improve-and-deploy-application-f219",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -1197,8 +1112,7 @@
       "head": "cursor/analyze-improve-and-deploy-application-27a9",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -1211,8 +1125,7 @@
       "head": "cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-dd14",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -1225,8 +1138,7 @@
       "head": "cursor/analyze-improve-and-deploy-application-9732",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -1239,8 +1151,7 @@
       "head": "cursor/website-audit-content-update-and-deployment-d6ef",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -1253,8 +1164,7 @@
       "head": "cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-5973",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -1267,8 +1177,7 @@
       "head": "cursor/add-new-services-and-advertise-them-a989",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -1281,8 +1190,7 @@
       "head": "cursor/website-audit-content-update-and-deployment-6bd2",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -1295,8 +1203,7 @@
       "head": "cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-e81f",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -1309,8 +1216,7 @@
       "head": "cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-7105",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -1323,8 +1229,7 @@
       "head": "cursor/website-audit-content-update-and-deployment-8853",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -1337,8 +1242,7 @@
       "head": "cursor/analyze-improve-and-deploy-application-aad9",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -1351,8 +1255,7 @@
       "head": "cursor/analyze-improve-and-deploy-application-db61",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -1365,8 +1268,7 @@
       "head": "cursor/website-audit-content-update-and-deployment-43f1",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -1379,8 +1281,7 @@
       "head": "cursor/add-new-services-and-advertise-them-1cb7",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
@@ -1393,8 +1294,7 @@
       "head": "cursor/analyze-improve-and-deploy-application-6fbe",
       "update": {
         "updated": false,
-        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n";
-},
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"},
       "merge": {
         "merged": false,
         "reason": "not_mergeable",
