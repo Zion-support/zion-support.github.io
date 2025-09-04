@@ -134,14 +134,12 @@ export default function EnhancedLoadingSpinner({
       >
         {/* Outer ring */}
         <div className={`${sizeClasses[size]} border-4 border-blue-200 rounded-full`} />
-        
         {/* Inner spinning ring */}
         <motion.div
           className={`${sizeClasses[size]} border-4 border-transparent border-t-blue-600 rounded-full absolute inset-0`}
           animate={{ rotate: -360   }}
           transition={{ duration: 0.8, repeat: Infinity, ease: "linear" }}
         />
-        
         {/* Center dot */}
         <motion.div
           className="absolute inset-0 flex items-center justify-center"

@@ -101,14 +101,14 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
     // Initialize optimizations
     preloadCriticalResources();
     optimizeImages();
-
     // Set up intersection observer for lazy loading
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const target = entry.target as HTMLElement;
-            if(target.dataset.src) {
-              target.style.backgroundImage = `url(${target.dataset.src})`;
+          if (entry.isIntersecting) {';
+            const target = entry.target as HTMLElement;';';
+            if(target.dataset.src) {';';';
+              target.style.backgroundImage = `url(${target.dataset.src})`;',';';
+    ';';';
               target.removeAttribute('data-src');
               observer.unobserve(target);
             }

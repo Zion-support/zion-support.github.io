@@ -180,7 +180,6 @@ export default function Page() {
                 Find the perfect services, talent, equipment, and companies for
                 your technology needs.</p>
             </motion.div>
-
             {/* Search Form */}
             <form onSubmit={handleSearch} className="max - w-4xl mx -auto">
               <div  className="relative">

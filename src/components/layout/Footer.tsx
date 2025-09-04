@@ -226,7 +226,11 @@ export function Footer() {
                     <span>{link.name}</span>
                   </Link>
                 </li>
-              ))}
+              ))
+      )}
+    </div>
+  );
+}
             </ul>
           </div>
 

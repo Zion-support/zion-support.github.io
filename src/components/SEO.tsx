@@ -81,7 +81,6 @@ type = 'website',
       <meta name="author" content="Zion Tech Group" />
       <meta name="robots" content="index, follow" />
       <link rel="canonical" href={url} />
-
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={type} />
       <meta property="og:url" content={url} />
@@ -89,7 +88,6 @@ type = 'website',
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
       <meta property="og:site_name" content="Zion Tech Group" />
-
       {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content={url} />
@@ -100,7 +98,6 @@ type = 'website',
       {/* Additional SEO */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-      
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify({

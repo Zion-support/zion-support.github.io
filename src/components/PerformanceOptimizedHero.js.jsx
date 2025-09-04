@@ -215,6 +215,7 @@ future.""
             className="absolute top-1/3 right-1/3 w-2 h-2 bg-green-400 rounded-full animate-ping animation-delay-1000"""
             aria-hidden="true""" ></div>
         </>
+      )
       )}
 
     </section>

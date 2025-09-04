@@ -13,10 +13,10 @@ import {
   Shield,
   Rocket
 } from 'lucide-react';
-
 export default function AISalesCopilotPage() {
   return (
-    <div className="min-h-screen bg-zion-slate-dark text-white">
+  return (
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-7xl">
@@ -42,7 +42,6 @@ export default function AISalesCopilotPage() {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-darker">
         <div className="container mx-auto max-w-7xl">
@@ -54,7 +53,6 @@ export default function AISalesCopilotPage() {
               Our AI Sales Copilot combines advanced machine learning with proven sales methodologies to deliver exceptional results.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/30">
               <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mb-4">
@@ -65,7 +63,6 @@ export default function AISalesCopilotPage() {
                 AI-powered lead scoring that analyzes behavior patterns, engagement metrics, and conversion likelihood to prioritize your best prospects.
               </p>
             </div>
-
             <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/30">
               <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mb-4">
                 <MessageCircle className="w-6 h-6 text-zion-cyan" />
@@ -75,7 +72,6 @@ export default function AISalesCopilotPage() {
                 Personalized email sequences, follow-up reminders, and multi-channel communication that adapts to customer preferences and responses.
               </p>
             </div>
-
             <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/30">
               <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mb-4">
                 <BarChart3 className="w-6 h-6 text-zion-cyan" />
@@ -85,7 +81,6 @@ export default function AISalesCopilotPage() {
                 Advanced analytics that forecast sales trends, identify opportunities, and provide actionable insights to optimize your sales strategy.
               </p>
             </div>
-
             <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/30">
               <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mb-4">
                 <Target className="w-6 h-6 text-zion-cyan" />
@@ -95,7 +90,6 @@ export default function AISalesCopilotPage() {
                 Dynamic customer segmentation based on behavior, demographics, and engagement patterns for highly targeted campaigns.
               </p>
             </div>
-
             <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/30">
               <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mb-4">
                 <Zap className="w-6 h-6 text-zion-cyan" />
@@ -105,7 +99,6 @@ export default function AISalesCopilotPage() {
                 Live dashboards and notifications that keep your team informed about opportunities, conversions, and performance metrics.
               </p>
             </div>
-
             <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/30">
               <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mb-4">
                 <Shield className="w-6 h-6 text-zion-cyan" />
@@ -118,7 +111,6 @@ export default function AISalesCopilotPage() {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-7xl">
@@ -190,7 +182,6 @@ export default function AISalesCopilotPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20">
         <div className="container mx-auto max-w-4xl text-center">

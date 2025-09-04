@@ -47,7 +47,6 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       <div
         className={`${sizeClasses[size]} border-2 border-gray-300 border-t-blue-600 rounded-full animate-spin`}
         role="status"
-        
       >
         <span className="sr-only">Loading...</span>
       </div>

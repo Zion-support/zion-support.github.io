@@ -17,8 +17,9 @@ import {
   Star,
   CheckCircle
 } from 'lucide-react';
-
 export default function ResourcesPage() {
+  return (
+  return (
   const whitepapers = [
     {
       title: "AI-Powered Business Transformation: A Comprehensive Guide",
@@ -48,7 +49,6 @@ export default function ResourcesPage() {
       downloadUrl: "/resources/whitepapers/ai-cybersecurity.pdf"
     }
   ];
-
   const caseStudies = [
     {
       title: "How TechCorp Reduced Cloud Costs by 40%",
@@ -75,7 +75,6 @@ export default function ResourcesPage() {
       url: "/resources/case-studies/quantumbank-quantum-computing"
     }
   ];
-
   const guides = [
     {
       title: "Getting Started with AI Implementation",
@@ -102,7 +101,6 @@ export default function ResourcesPage() {
       url: "/resources/guides/cybersecurity-framework-implementation"
     }
   ];
-
   const webinars = [
     {
       title: "The Future of AI in Business",
@@ -121,9 +119,8 @@ export default function ResourcesPage() {
       registrationUrl: "/webinars/cloud-cost-optimization-workshop"
     }
   ];
-
   return (
-    <div className="min-h-screen bg-zion-slate-dark text-white">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-7xl">
@@ -141,7 +138,6 @@ export default function ResourcesPage() {
           </div>
         </div>
       </section>
-
       {/* Whitepapers Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-darker">
         <div className="container mx-auto max-w-7xl">
@@ -153,7 +149,6 @@ export default function ResourcesPage() {
               In-depth research and insights on the latest technology trends and business strategies.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {whitepapers.map((paper, index) => (
               <div key={index} className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/30 hover:border-zion-cyan/50 transition-all duration-300">
@@ -166,26 +161,26 @@ export default function ResourcesPage() {
                     {paper.rating}
                   </div>
                 </div>
-                
                 <h3 className="text-xl font-semibold text-white mb-3">{paper.title}</h3>
                 <p className="text-zion-slate-light text-sm mb-4">{paper.description}</p>
-                
                 <div className="flex items-center justify-between text-xs text-zion-slate-light mb-4">
                   <span>📥 {paper.downloadCount} downloads</span>
                   <span>📁 {paper.fileSize}</span>
                 </div>
-                
-                <a href={paper.downloadUrl} 
+                <a href={paper.downloadUrl}
                    className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue text-white text-center py-3 rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 flex items-center justify-center">
                   <Download className="w-4 h-4 mr-2" />
                   Download Whitepaper
                 </a>
               </div>
-            ))}
+            ))
+      )}
+    </div>
+  );
+}
           </div>
         </div>
       </section>
-
       {/* Case Studies Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-7xl">
@@ -197,7 +192,6 @@ export default function ResourcesPage() {
               Real-world examples of how our solutions have transformed businesses across industries.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {caseStudies.map((study, index) => (
               <div key={index} className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/30 hover:border-zion-cyan/50 transition-all duration-300">
@@ -206,10 +200,8 @@ export default function ResourcesPage() {
                     {study.industry}
                   </span>
                 </div>
-                
                 <h3 className="text-xl font-semibold text-white mb-2">{study.title}</h3>
                 <p className="text-zion-cyan font-medium mb-3">{study.company}</p>
-                
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-white mb-2">Key Results:</h4>
                   <ul className="space-y-1">
@@ -218,10 +210,13 @@ export default function ResourcesPage() {
                         <CheckCircle className="w-3 h-3 text-zion-cyan mr-2" />
                         {result}
                       </li>
-                    ))}
+                    ))
+      )}
+    </div>
+  );
+}
                   </ul>
                 </div>
-                
                 <div className="flex items-center justify-between">
                   <span className="text-xs text-zion-slate-light">{study.readTime}</span>
                   <a href={study.url} className="text-zion-cyan hover:text-zion-cyan-light text-sm font-medium flex items-center">
@@ -230,11 +225,14 @@ export default function ResourcesPage() {
                   </a>
                 </div>
               </div>
-            ))}
+            ))
+      )}
+    </div>
+  );
+}
           </div>
         </div>
       </section>
-
       {/* Guides Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-darker">
         <div className="container mx-auto max-w-7xl">
@@ -246,7 +244,6 @@ export default function ResourcesPage() {
               Step-by-step guides and best practices to help you implement technology solutions effectively.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {guides.map((guide, index) => (
               <div key={index} className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/30 hover:border-zion-cyan/50 transition-all duration-300">
@@ -258,27 +255,27 @@ export default function ResourcesPage() {
                     {guide.level}
                   </span>
                 </div>
-                
                 <h3 className="text-xl font-semibold text-white mb-3">{guide.title}</h3>
                 <p className="text-zion-slate-light text-sm mb-4">{guide.description}</p>
-                
                 <div className="flex items-center justify-between text-xs text-zion-slate-light mb-4">
                   <span className="flex items-center">
                     <Clock className="w-3 h-3 mr-1" />
                     {guide.estimatedTime}
                   </span>
                 </div>
-                
                 <a href={guide.url} className="w-full border border-zion-cyan text-zion-cyan text-center py-3 rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center justify-center">
                   <BookOpen className="w-4 h-4 mr-2" />
                   Read Guide
                 </a>
               </div>
-            ))}
+            ))
+      )}
+    </div>
+  );
+}
           </div>
         </div>
       </section>
-
       {/* Webinars Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-7xl">
@@ -290,7 +287,6 @@ export default function ResourcesPage() {
               Join our live sessions with industry experts and gain valuable insights on technology trends and best practices.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {webinars.map((webinar, index) => (
               <div key={index} className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/30">
@@ -300,10 +296,8 @@ export default function ResourcesPage() {
                   </span>
                   <span className="text-zion-slate-light text-sm">{webinar.date}</span>
                 </div>
-                
                 <h3 className="text-xl font-semibold text-white mb-3">{webinar.title}</h3>
                 <p className="text-zion-slate-light text-sm mb-4">{webinar.description}</p>
-                
                 <div className="mb-4">
                   <p className="text-zion-cyan text-sm font-medium mb-1">Speaker: {webinar.speaker}</p>
                   <p className="text-zion-slate-light text-sm flex items-center">
@@ -311,17 +305,19 @@ export default function ResourcesPage() {
                     {webinar.date} at {webinar.time}
                   </p>
                 </div>
-                
                 <a href={webinar.registrationUrl} className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue text-white text-center py-3 rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 flex items-center justify-center">
                   <Video className="w-4 h-4 mr-2" />
                   Register Now
                 </a>
               </div>
-            ))}
+            ))
+      )}
+    </div>
+  );
+}
           </div>
         </div>
       </section>
-
       {/* Newsletter Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20">
         <div className="container mx-auto max-w-4xl text-center">

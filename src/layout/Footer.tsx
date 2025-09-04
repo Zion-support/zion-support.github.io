@@ -306,7 +306,6 @@ name: string,
     y: string}
   price: number,
   category: string}
-
 interface FormData {[key: string]: string | number | boolean | File}
 interface FormData {
 

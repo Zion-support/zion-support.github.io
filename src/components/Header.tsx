@@ -150,7 +150,11 @@ const handleScroll = () => {
               </button>
             </form>
           </div>
-        )}
+        )
+      )}
+    </div>
+  );
+}
       </div>
 
       {/* Mobile Navigation Overlay */}

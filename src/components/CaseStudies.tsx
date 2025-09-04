@@ -50,13 +50,14 @@ const caseStudies: CaseStudy[] = [{ id: '1',
     duration: '4 months'
   }
 ]
-
 export default function CaseStudies() {
+  return (
+  return (
   return(<section className="py-24 sm:py-32 bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Header */}
         <div className="mx-auto max-w-2xl lg:text-center mb-16">
-          <motion.h2 
+          <motion.h2
             className="text-base font-semibold leading-7 text-blue-600"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -65,7 +66,7 @@ export default function CaseStudies() {
           >
             Success Stories
           </motion.h2>
-          <motion.p 
+          <motion.p
             className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -83,7 +84,6 @@ export default function CaseStudies() {
           >
             See how our AI, cloud, and cybersecurity solutions have transformed businesses across industries.</motion.p>
         </div>
-
         {/* Case Studies Grid */}
         <div className="grid gap-8 lg:grid-cols-1">
           {caseStudies.map((study, index) => (
