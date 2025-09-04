@@ -1,6 +1,6 @@
-import fs from "fs";
-import path from "path";
-import { fileURLToPath } from "url";
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -8,11 +8,11 @@ const __dirname = path.dirname(__filename);
 function createValidReactComponent(filePath) {
   const fileName = path.basename(filePath, path.extname(filePath));
   const componentName = fileName
-    .split("-")
+    .split('-')
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join("")
-    .replace(/[^a-zA-Z0-9]/g, "");
-  
+    .join('')
+    .replace(/[^a-zA-Z0-9]/g, '');
+
   return `import React from "react";
 export default function ${componentName}() {
   return (
@@ -37,7 +37,7 @@ export default function ${componentName}() {
 
 function fixFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath, "utf8");
+    const content = fs.readFileSync(filePath, 'utf8');
     // Basic heuristic: if the file is very short or empty, rewrite it
     if (content.trim().length < 20) {
       const newContent = createValidReactComponent(filePath);
@@ -60,7 +60,12 @@ function processDirectory(dirPath) {
       const stat = fs.statSync(fullPath);
       if (stat.isDirectory()) {
         fixedCount += processDirectory(fullPath);
-      } else if (item.endsWith(".tsx") || item.endsWith(".ts") || item.endsWith(".js") || item.endsWith(".jsx")) {
+      } else if (
+        item.endsWith('.tsx') ||
+        item.endsWith('.ts') ||
+        item.endsWith('.js') ||
+        item.endsWith('.jsx')
+      ) {
         if (fixFile(fullPath)) {
           fixedCount++;
         }
@@ -72,6 +77,6 @@ function processDirectory(dirPath) {
     return 0;
   }
 }
-console.log("Starting aggressive fix...");
-const fixedCount = processDirectory(path.join(__dirname, "src"));
+console.log('Starting aggressive fix...');
+const fixedCount = processDirectory(path.join(__dirname, 'src'));
 console.log(`Fixed ${fixedCount} files`);
