@@ -6,6 +6,8 @@ import { useState } from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 import '../styles/globals.css';
+import EnhancedNavigation from '../components/layout/EnhancedNavigation';
+import EnhancedFooter from '../components/layout/EnhancedFooter';
 
 function Header(): any {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
