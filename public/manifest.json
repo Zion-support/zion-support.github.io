@@ -1,22 +1,13 @@
 {
-  "name": "Zion Tech Group",
-  "short_name": "Zion Tech",
-  "description": "Leading technology solutions provider for modern businesses",
+  "name": "Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions",
+  "short_name": "Zion Tech Group",
+  "description": "Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0b1220",
   "theme_color": "#3b82f6",
   "orientation": "portrait-primary",
-  "scope": "/",
-  "lang": "en",
-  "categories": ["business", "productivity", "technology"],
   "icons": [
-    {
-      "src": "/favicon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any"
-    },
     {
       "src": "/icon-192x192.png",
       "sizes": "192x192",
@@ -30,46 +21,7 @@
       "purpose": "maskable any"
     }
   ],
-  "screenshots": [
-    {
-      "src": "/screenshot-wide.png",
-      "sizes": "1280x720",
-      "type": "image/png",
-      "form_factor": "wide"
-    },
-    {
-      "src": "/screenshot-narrow.png",
-      "sizes": "750x1334",
-      "type": "image/png",
-      "form_factor": "narrow"
-    }
-  ],
-  "shortcuts": [
-    {
-      "name": "AI Services",
-      "short_name": "AI",
-      "description": "Explore our AI services",
-      "url": "/ai-services",
-      "icons": [
-        {
-          "src": "/favicon.svg",
-          "sizes": "96x96"
-        }
-      ]
-    },
-    {
-      "name": "Contact Us",
-      "short_name": "Contact",
-      "description": "Get in touch with our team",
-      "url": "/contact",
-      "icons": [
-        {
-          "src": "/favicon.svg",
-          "sizes": "96x96"
-        }
-      ]
-    }
-  ],
-  "related_applications": [],
-  "prefer_related_applications": false
+  "categories": ["business", "productivity", "technology"],
+  "lang": "en-US",
+  "dir": "ltr"
 }
