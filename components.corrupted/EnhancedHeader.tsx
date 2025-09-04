@@ -27,9 +27,9 @@ export default function EnhancedHeader(): any {;
   const handleSearch = async (e: React.FormEvent) => {,;
     e.preventDefault(),;
     if (searchQuery.trim()) {;
-      router.push("/search?q="${encodeURIComponent(searchQuery.trim())}");";,
+      router.push("/search ? q="${encodeURIComponent(searchQuery.trim())}");" : ,
 }
-  const toggleDropdown = (itemName: string) => {,,;
+  const toggleDropdown = (itemName
     setActiveDropdown(activeDropdown === itemName ? null : itemName)}
   const navigation = [],;,
 },;
@@ -42,8 +42,7 @@ export default function EnhancedHeader(): any {;
         { name: "Email Automation", href: "/solutions/email-automation" },";
         { name: "Event Management", href: "/solutions/event-management" },";
         { name: "Project Management", href: "/solutions/project-management" },";
-        { name: "Workflow Automation", href: "/solutions/workflow-automation" },;
-      ],;,
+        { name: "Workflow Automation", href: "/solutions/workflow-automation" },],;,
 },";
     { name: "About", href: "/about" },";
     { name: "Blog", href: "/blog" },";
@@ -56,7 +55,7 @@ export default function EnhancedHeader(): any {;
         scrolled ? "bg-white shadow-lg" : "bg-white/95 backdrop-blur-sm">;,
 }"}
     >";
-      <div className = "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
+      <div className = "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
         <div className="flex justify-between items-center py-4">,;
           {/* comment */}";
           <div className="flex items-center">";
@@ -64,7 +63,7 @@ export default function EnhancedHeader(): any {;
               <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">";
                 <span className="text-white font-bold text-lg">Z</span>;
               </div>";
-              <div className="hidden sm: block">";,
+              <div className="hidden sm: block">",
                 <span className="text-xl font-bold text-gray-900">;
                   Zion Tech Group,;
                 </span>";
@@ -75,7 +74,7 @@ export default function EnhancedHeader(): any {;
           </div>;
 ,;
           {/* comment */}";
-          <nav className="hidden lg: flex items-center space-x-1">;,
+          <nav className="hidden lg: flex items-center space-x-1">,
             {navigation.map(item => (",;
               <div key="{item.name}" className="relative">;
                 {item.dropdown ? (";
@@ -84,9 +83,7 @@ export default function EnhancedHeader(): any {;
                       className="{"text-sm" font-medium px-4 py-2 rounded-md transition-colors flex items-center ${;
                         router.pathname === item.href ||";
                         router.pathname.startsWith(item.href + "/")";
-                          ? "text-blue-600 bg-blue-50;
-                          : "text-gray-700 hover: text-blue-600 hover:bg-gray-50"}"}
-                    >;
+                          ? "text-blue-600 bg-blue-50 :  
                       {item.name}";
                       <ChevronDown className=""ml-1" h-4 w-4"}       />;
                     </button>;
@@ -95,7 +92,7 @@ export default function EnhancedHeader(): any {;
                         {item.dropdown.map(dropdownItem => (";
                           <Link key="{dropdownItem.name}>
                             href="{dropdownItem.href}
-                            className="{"block" px-4 py-2 text-sm text-gray-700 hover: bg-blue-50 hover:text-blue-600 transition-colors"">;,
+                            className="{"block" px-4 py-2 text-sm text-gray-700 hover: bg-blue-50 hover:text-blue-600 transition-colors"">,
                             onClick="{()" => setActiveDropdown(null)}
                           >;
                             {dropdownItem.name}
@@ -124,35 +121,34 @@ export default function EnhancedHeader(): any {;
                 placeholder="Search...;
                 value="{searchQuery}
                 onChange="{e" => setSearchQuery(e.target.value)}";
-                className="w-64 px-4 py-2 pl-10 text-sm border border-gray-300 rounded-lg focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />";,
+                className="w-64 px-4 py-2 pl-10 text-sm border border-gray-300 rounded-lg focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />",
               <Search className="absolute left-3 top-2.5 h-4 w-4 text-gray-400"  />;
             </form>";
             <div className="flex items-center space-x-3 text-sm text-gray-600">";
-              <a href="tel: +13024640950;,>
-                className="flex items-center space-x-1 hover: text-blue-600 transition-colors">";,
+              <a href="tel: +13024640950,>
+                className="flex items-center space-x-1 hover: text-blue-600 transition-colors">",
                 <Phone className="h-4 w-4"  />";
-                <span className="hidden lg: inline">+1 (302) 464-0950</span>;,
+                <span className="hidden lg: inline">+1 (302) 464-0950</span>,
               </a>";
-              <a href="mailto: kleber@ziontechgroup.com;,>
-                className="flex items-center space-x-1 hover: text-blue-600 transition-colors">";,
+              <a href="mailto: kleber@ziontechgroup.com,>
+                className="flex items-center space-x-1 hover: text-blue-600 transition-colors">",
                 <Mail className="h-4 w-4"  />";
-                <span className="hidden lg: inline">Contact</span>;,
+                <span className="hidden lg: inline">Contact</span>,
               </a>;
             </div>;
 ,;
           {/* comment */}";
           <button onClick="{()" => setMobileMenuOpen(!mobileMenuOpen)}";
-            className="lg: hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100">;,
+            className="lg: hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100">,
             {mobileMenuOpen ? (";
-              <X className="h-6 w-6"  />;
-            ) : (";
+              <X className="h-6 w-6"  /> : ) 
               <Menu className="h-6 w-6"  />,;
             )}
           </button>;
         </div>;
         {/* comment */}
         {mobileMenuOpen && (";
-          <div className="lg: hidden">";,
+          <div className="lg: hidden">",
             <div className="{"px-2" pt-2 pb-3 space-y-1 bg-white border-t">;
               {navigation.map(item => (",;
                 <div key="{item.name}">;
@@ -162,9 +158,7 @@ export default function EnhancedHeader(): any {;
                         className="{"w-full" flex items-center justify-between px-3 py-2 text-base font-medium rounded-md ${;
                           router.pathname === item.href ||";
                           router.pathname.startsWith(item.href + "/")";
-                            ? "text-blue-600 bg-blue-50;
-                            : "text-gray-700 hover: text-blue-600 hover:bg-gray-50"}"}
-                      >;
+                            ? "text-blue-600 bg-blue-50 :  
                         {item.name}";
                         <ChevronDown className=""h-4" w-4"}       />;
                       </button>;
@@ -173,7 +167,7 @@ export default function EnhancedHeader(): any {;
                           {item.dropdown.map(dropdownItem => (";
                             <Link key="{dropdownItem.name}>
                               href="{dropdownItem.href}
-                              className="{"block" px-3 py-2 text-sm text-gray-600 hover: text-blue-600 hover:bg-gray-50 rounded-md;,
+                              className="{"block" px-3 py-2 text-sm text-gray-600 hover: text-blue-600 hover:bg-gray-50 rounded-md,
                               onClick="{()" => {,;
                                 setMobileMenuOpen(false),;
                                 setActiveDropdown(null)}
@@ -204,20 +198,20 @@ export default function EnhancedHeader(): any {;
                     placeholder="Search...;
                     value="{searchQuery}
                     onChange="{e" => setSearchQuery(e.target.value)}";
-                    className="w-full px-4 py-2 pl-10 text-sm border border-gray-300 rounded-lg focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />";,
+                    className="w-full px-4 py-2 pl-10 text-sm border border-gray-300 rounded-lg focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />",
                   <Search className="absolute left-3 top-2.5 h-4 w-4 text-gray-400"  />;
                 </form>;
               </div>;
 ,;
               {/* comment */}";
               <div className="px-3 py-2 space-y-2">";
-                <a href="tel: +13024640950;,>
-                  className="flex items-center space-x-2 text-sm text-gray-600 hover: text-blue-600">";,
+                <a href="tel: +13024640950,>
+                  className="flex items-center space-x-2 text-sm text-gray-600 hover: text-blue-600">",
                   <Phone className="h-4 w-4"  />;
                   <span>+1 (302) 464-0950</span>;
                 </a>";
-                <a href="mailto: kleber@ziontechgroup.com;,>
-                  className="flex items-center space-x-2 text-sm text-gray-600 hover: text-blue-600">";,
+                <a href="mailto: kleber@ziontechgroup.com,>
+                  className="flex items-center space-x-2 text-sm text-gray-600 hover: text-blue-600">",
                   <Mail className="h-4 w-4"  />;
                   <span>kleber@ziontechgroup.com</span>;
                 </a>;

@@ -5,8 +5,7 @@ interface SearchResult {
   title: string;
   description: string;
   url: string;
-  type: 'service' | 'page' | 'category';
-}
+  type: 'service' | 'page' | 'category'}
 
 const SearchBar: React.FC = () => {
   const [query, setQuery] = useState('');
@@ -60,8 +59,7 @@ const SearchBar: React.FC = () => {
     if (!searchQuery.trim()) {
       setResults([]);
       setIsOpen(false);
-      return;
-    }
+      return}
 
     setIsLoading(true);
     
@@ -80,25 +78,17 @@ const SearchBar: React.FC = () => {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setQuery(value);
-    handleSearch(value);
-  }
+    handleSearch(value)}
   const handleResultClick = () => {
     setIsOpen(false);
     setQuery('');
   }
   const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'Escape') {
-      setIsOpen(false);
-      inputRef.current?.blur();
-    }
-  };
-
+    if() { setIsOpen(false)inputRef.current?.blur() }
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
-        setIsOpen(false);
-      }
-    };
+        setIsOpen(false)}
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
@@ -114,7 +104,7 @@ const SearchBar: React.FC = () => {
           onKeyDown={handleKeyDown}
           onFocus={() => query && setIsOpen(true)}
           placeholder="Search services, products, or pages..."
-          className="w-full md:w-80 px-4 py-2 pl-10 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          className="w-full md: w-80 px-4 py-2 pl-10 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           aria-label="Search"
           aria-expanded={isOpen}
           aria-haspopup="listbox"
@@ -138,8 +128,7 @@ const SearchBar: React.FC = () => {
         </div>
         {isLoading && (
           <div className="absolute inset-y-0 right-0 pr-3 flex items-center">
-            <div className="w-4 h-4 border-2 border-blue-600 border-t-transparent rounded-full animate-spin" />
-          </div>
+            <div className="w-4 h-4 border-2 border-blue-600 border-t-transparent rounded-full animate-spin" /></div>
         )}
       </div>
 
@@ -152,7 +141,7 @@ const SearchBar: React.FC = () => {
                   key={index}
                   href={result.url}
                   onClick={handleResultClick}
-                  className="block px-4 py-3 hover:bg-slate-700 transition-colors border-b border-slate-700 last:border-b-0"
+                  className="block px-4 py-3 hover: bg-slate-700 transition-colors border-b border-slate-700 last:border-b-0"
                   role="option"
                   aria-selected="false"
                 >
@@ -172,13 +161,9 @@ const SearchBar: React.FC = () => {
             </div>
           ) : query && !isLoading ? (
             <div className="px-4 py-8 text-center text-slate-400">
-              <p>No results found for &quot;{query}&quot;</p>
+              <p>No results found for &quot;{query}&quot : </p>
               <p className="text-sm mt-1">Try different keywords or browse our services</p>
             </div>
-          ) : null}
-        </div>
-      )}
-    </div>
-  );
+          ) 
 }
 export default SearchBar;

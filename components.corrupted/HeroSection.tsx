@@ -1,14 +1,14 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Play, Star, Users, Award, Globe } from 'lucide-react';
-const HeroSection: React.FC = () => {;,
+const HeroSection: React.FC = () => {,
   return (;
     <>;
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">;
       {/* Animated Background */}
       <div className="absolute inset-0">;
-        <div className="absolute inset-0 opacity-20" style={{;>
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`;,
+        <div className="absolute inset-0 opacity-20" style={{>
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http: //www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
 }}></div>;
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent via-transparent to-black/20"></div>;
       </div>;
@@ -22,7 +22,7 @@ const HeroSection: React.FC = () => {;,
           </div>;
 
           {/* Main Heading */}
-          <h1 className="text-5xl md: text-7xl font-bold mb-6 leading-tight">;,
+          <h1 className="text-5xl md: text-7xl font-bold mb-6 leading-tight">,
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;
               AI-Powered;
             </span>;
@@ -31,44 +31,44 @@ const HeroSection: React.FC = () => {;,
           </h1>;
 
           {/* Subtitle */}
-          <p className="text-xl md: text-2xl mb-8 max-w-4xl mx-auto text-gray-200 leading-relaxed">;,
+          <p className="text-xl md: text-2xl mb-8 max-w-4xl mx-auto text-gray-200 leading-relaxed">,
             Transform your business with cutting-edge AI, cloud architecture, and innovative development services. ;
             Join the future of technology with Zion Tech Group.;
           </p>;
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm: flex-row gap-4 justify-center mb-16">;,
+          <div className="flex flex-col sm: flex-row gap-4 justify-center mb-16">,
             <Link;>
               href="/services";
-              className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 flex items-center justify-center space-x-2">;,
+              className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 flex items-center justify-center space-x-2">,
               <span>Explore Services</span>;
-              <ArrowRight className="w-5 h-5 group-hover: translate-x-1 transition-transform" />;,
+              <ArrowRight className="w-5 h-5 group-hover: translate-x-1 transition-transform" />,
             </Link>;
             <Link;>
               href="/contact";
-              className="group bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover: bg-white hover:text-blue-900 transition-all duration-300 flex items-center justify-center space-x-2">;,
+              className="group bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover: bg-white hover:text-blue-900 transition-all duration-300 flex items-center justify-center space-x-2">,
               <Play className="w-5 h-5" />;
               <span>Watch Demo</span>;
             </Link>;
           </div>;
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md: grid-cols-4 gap-8 max-w-4xl mx-auto">;,
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-8 max-w-4xl mx-auto">,
             <div className="text-center">;
-              <div className="text-3xl md: text-4xl font-bold text-blue-400 mb-2">500+</div>;,
-              <div className="text-gray-300 text-sm md: text-base">Projects Completed</div>;,
+              <div className="text-3xl md: text-4xl font-bold text-blue-400 mb-2">500+</div>,
+              <div className="text-gray-300 text-sm md: text-base">Projects Completed</div>,
             </div>;
             <div className="text-center">;
-              <div className="text-3xl md: text-4xl font-bold text-purple-400 mb-2">50+</div>;,
-              <div className="text-gray-300 text-sm md: text-base">Expert Team</div>;,
+              <div className="text-3xl md: text-4xl font-bold text-purple-400 mb-2">50+</div>,
+              <div className="text-gray-300 text-sm md: text-base">Expert Team</div>,
             </div>;
             <div className="text-center">;
-              <div className="text-3xl md: text-4xl font-bold text-pink-400 mb-2">24/7</div>;,
-              <div className="text-gray-300 text-sm md: text-base">Support</div>;,
+              <div className="text-3xl md: text-4xl font-bold text-pink-400 mb-2">24/7</div>,
+              <div className="text-gray-300 text-sm md: text-base">Support</div>,
             </div>;
             <div className="text-center">;
-              <div className="text-3xl md: text-4xl font-bold text-green-400 mb-2">99%</div>;,
-              <div className="text-gray-300 text-sm md: text-base">Client Satisfaction</div>;,
+              <div className="text-3xl md: text-4xl font-bold text-green-400 mb-2">99%</div>,
+              <div className="text-gray-300 text-sm md: text-base">Client Satisfaction</div>,
             </div>;
           </div>;
         </div>;

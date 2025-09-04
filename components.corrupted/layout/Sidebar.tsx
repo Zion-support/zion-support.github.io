@@ -2,43 +2,40 @@ import React from 'react';
 import Link from 'next/link';
 import { X, Phone, Mail, MapPin, ArrowRight } from 'lucide-react';
 interface SidebarProps {;
-  isOpen: boolean;,
-  onClose: () => void;,
+  isOpen: boolean,
+  onClose: () => void,
 }
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
   const serviceCategories = [;
     {;
       title: 'Micro SaaS',;
-      services: [;,
+      services: [,
         { name: 'AI Email Responder Pro', href: '/services/ai-email-responder' },;
         { name: 'Smart Inventory Predictor', href: '/services/smart-inventory-predictor' },;
         { name: 'AI Customer Insights Platform', href: '/services/ai-customer-insights' },;
         { name: 'Smart Contract Security Auditor', href: '/services/smart-contract-auditor' },;
         { name: 'AI Video Editor Pro', href: '/services/ai-video-editor' },;
-        { name: 'Smart Energy Monitor', href: '/services/smart-energy-monitor' },;
-      ];,
+        { name: 'Smart Energy Monitor', href: '/services/smart-energy-monitor' },];,
 },;
     {;
       title: 'IT Services',;
-      services: [;,
+      services: [,
         { name: 'Zero Trust Security Implementation', href: '/services/zero-trust-security' },;
         { name: 'Hybrid Cloud Management Platform', href: '/services/hybrid-cloud-management' },;
         { name: 'IoT Platform Development', href: '/services/iot-platform-development' },;
         { name: 'API Security Gateway', href: '/services/api-security-gateway' },;
         { name: 'Edge Computing Solutions', href: '/services/edge-computing-solutions' },;
-        { name: 'Quantum-Ready Security', href: '/services/quantum-ready-security' },;
-      ];,
+        { name: 'Quantum-Ready Security', href: '/services/quantum-ready-security' },];,
 },;
     {;
       title: 'AI Services',;
-      services: [;,
+      services: [,
         { name: 'AI Voice Synthesis Platform', href: '/services/ai-voice-synthesis' },;
         { name: 'AI Medical Diagnosis Assistant', href: '/services/ai-medical-diagnosis' },;
         { name: 'AI Legal Document Analyzer', href: '/services/ai-legal-document-analyzer' },;
         { name: 'AI Autonomous Vehicle Systems', href: '/services/ai-autonomous-vehicles' },;
         { name: 'AI Robotic Process Automation', href: '/services/ai-robotic-process-automation' },;
-        { name: 'AI Drug Discovery Platform', href: '/services/ai-drug-discovery' },;
-      ];,
+        { name: 'AI Drug Discovery Platform', href: '/services/ai-drug-discovery' },];,
 }
   ];
   const quickLinks = [;
@@ -48,20 +45,19 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
     { name: 'Blog', href: '/blog' },;
     { name: 'Case Studies', href: '/case-studies' },;
     { name: 'Privacy Policy', href: '/privacy' },;
-    { name: 'Terms of Service', href: '/terms' },;
-  ];
+    { name: 'Terms of Service', href: '/terms' },];
   return (;
     <>;
       {/* Overlay */}
       {isOpen && (;
         <div ;>
-          className="fixed inset-0 bg-black bg-opacity-50 z-40 lg: hidden";,
+          className="fixed inset-0 bg-black bg-opacity-50 z-40 lg: hidden",
           onClick={onClose}
         />;
       )}
       {/* Sidebar */}
-      <div className={`fixed top-0 right-0 h-full w-80 bg-white shadow-2xl transform transition-transform duration-300 ease-in-out z-50 lg: hidden ${;,>
-        isOpen ? 'translate-x-0' : 'translate-x-full';,
+      <div className={`fixed top-0 right-0 h-full w-80 bg-white shadow-2xl transform transition-transform duration-300 ease-in-out z-50 lg: hidden ${,>
+        isOpen ? 'translate-x-0' : 'translate-x-full',
 }`}>;
         <div className="flex flex-col h-full">;
           {/* Header */}
@@ -69,7 +65,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
             <h2 className="text-xl font-bold text-gray-900">Services & Solutions</h2>;
             <button;>
               onClick={onClose}
-              className="p-2 hover: bg-gray-100 rounded-lg transition-colors">;,
+              className="p-2 hover: bg-gray-100 rounded-lg transition-colors">,
               <X className="w-6 h-6 text-gray-600" />;
             </button>;
           </div>;
@@ -82,13 +78,13 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
               <div className="space-y-3">;
                 <div className="flex items-center space-x-3">;
                   <Phone className="w-5 h-5 text-blue-600" />;
-                  <a href="tel: +13024640950" className="text-gray-700 hover:text-blue-600 transition-colors">;,
+                  <a href="tel: +13024640950" className="text-gray-700 hover:text-blue-600 transition-colors">,
                     +1 302 464 0950;
                   </a>;
                 </div>;
                 <div className="flex items-center space-x-3">;
                   <Mail className="w-5 h-5 text-blue-600" />;
-                  <a href="mailto: kleber@ziontechgroup.com" className="text-gray-700 hover:text-blue-600 transition-colors">;,
+                  <a href="mailto: kleber@ziontechgroup.com" className="text-gray-700 hover:text-blue-600 transition-colors">,
                     kleber@ziontechgroup.com;
                   </a>;
                 </div>;
@@ -112,7 +108,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
                       <li key={service.name}>;
                         <Link;>
                           href={service.href}
-                          className="flex items-center justify-between text-gray-600 hover: text-blue-600 transition-colors py-2";,
+                          className="flex items-center justify-between text-gray-600 hover: text-blue-600 transition-colors py-2",
                           onClick={onClose}
                         >;
                           <span className="text-sm">{service.name}</span>;
@@ -133,7 +129,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
                   <li key={link.name}>;
                     <Link;>
                       href={link.href}
-                      className="text-gray-600 hover: text-blue-600 transition-colors text-sm py-1 block";,
+                      className="text-gray-600 hover: text-blue-600 transition-colors text-sm py-1 block",
                       onClick={onClose}
                     >;
                       {link.name}
@@ -148,7 +144,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
           <div className="p-6 border-t border-gray-200 bg-gray-50">;
             <Link;>
               href="/contact";
-              className="w-full bg-blue-600 hover: bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors text-center block";,
+              className="w-full bg-blue-600 hover: bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors text-center block",
               onClick={onClose}
             >;
               Get Free Quote;

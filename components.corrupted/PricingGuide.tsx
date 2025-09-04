@@ -2,52 +2,51 @@ import React, { useState } from 'react';
 import { CheckCircle, X, Star, TrendingUp, DollarSign, Users, Zap, Shield } from 'lucide-react';
 import { motion } from 'framer-motion';
 interface PricingTier {;
-  name: string;,
-  price: number;,
-  period: string;,
-  description: string;,
-  features: string[];,
+  name: string,
+  price: number,
+  period: string,
+  description: string,
+  features: string[],
   popular?: boolean;
-  icon: React.ReactNode;,
-  color: string;,
+  icon: React.ReactNode,
+  color: string,
 }
 interface ServicePricing {;
-  category: string;,
-  services: {;,
-    name: string;,
-    starter: number;,
-    professional: number;,
-    enterprise: number;,
-    marketAverage: number;,
-    savings: number;,
-    features: string[];,
+  category: string,
+  services: {,
+    name: string,
+    starter: number,
+    professional: number,
+    enterprise: number,
+    marketAverage: number,
+    savings: number,
+    features: string[],
 }[];,
 }
-const PricingGuide: React.FC = () => {;,
+const PricingGuide: React.FC = () => {,
   const [selectedCategory, setSelectedCategory] = useState('micro-saas');
-  const pricingTiers: PricingTier[] = [;,
+  const pricingTiers: PricingTier[] = [,
     {;
       name: 'Starter',;
       price: 29,;
       period: 'month',;
       description: 'Perfect for small businesses and startups',;
-      features: [;,
+      features: [,
         'Basic features and functionality',;
         'Email support',;
         'Standard integrations',;
         'Basic analytics',;
         'Up to 5 users',;
-        '99.9% uptime guarantee';
-      ],;
+        '99.9% uptime guarantee'],;
       icon: <Users className="w-8 h-8" />,;
-      color: 'blue';,
+      color: 'blue',
 },;
     {;
       name: 'Professional',;
       price: 79,;
       period: 'month',;
       description: 'Ideal for growing businesses',;
-      features: [;,
+      features: [,
         'All Starter features',;
         'Priority support',;
         'Advanced integrations',;
@@ -55,18 +54,17 @@ const PricingGuide: React.FC = () => {;,
         'Advanced analytics',;
         'Up to 25 users',;
         'API access',;
-        'Mobile apps';
-      ],;
+        'Mobile apps'],;
       popular: true,;
       icon: <TrendingUp className="w-8 h-8" />,;
-      color: 'purple';,
+      color: 'purple',
 },;
     {;
       name: 'Enterprise',;
       price: 199,;
       period: 'month',;
       description: 'For large organizations',;
-      features: [;,
+      features: [,
         'All Professional features',;
         'Dedicated support',;
         'Custom development',;
@@ -74,24 +72,22 @@ const PricingGuide: React.FC = () => {;,
         'White-label options',;
         'Unlimited users',;
         'Advanced security',;
-        '24/7 phone support';
-      ],;
+        '24/7 phone support'],;
       icon: <Shield className="w-8 h-8" />,;
-      color: 'green';,
+      color: 'green',
 }
   ];
-  const servicePricing: ServicePricing[] = [;,
+  const servicePricing: ServicePricing[] = [,
     {;
       category: 'micro-saas',;
-      services: [;,
+      services: [,
         {;
           name: 'AI Content Generator Pro',;
           starter: 29,;
           professional: 79,;
           enterprise: 199,;
           marketAverage: 89,;
-          savings: 11,;
-          features: ['GPT-4 integration', 'Multi-language support', 'SEO optimization', 'Brand voice customization'];,
+          savings: 11,features: ['GPT-4 integration', 'Multi-language support', 'SEO optimization', 'Brand voice customization'];,
 },;
         {;
           name: 'Social Media Scheduler Pro',;
@@ -133,15 +129,14 @@ const PricingGuide: React.FC = () => {;,
 },;
     {;
       category: 'ai-services',;
-      services: [;,
+      services: [,
         {;
           name: 'Custom AI Model Development',;
           starter: 10000,;
           professional: 30000,;
           enterprise: 100000,;
           marketAverage: 45000,;
-          savings: 33,;
-          features: ['Custom model training', 'Data preprocessing', 'API development', 'Ongoing maintenance'];,
+          savings: 33,features: ['Custom model training', 'Data preprocessing', 'API development', 'Ongoing maintenance'];,
 },;
         {;
           name: 'Computer Vision Solutions',;
@@ -183,15 +178,14 @@ const PricingGuide: React.FC = () => {;,
 },;
     {;
       category: 'it-services',;
-      services: [;,
+      services: [,
         {;
           name: 'Cloud Migration & Architecture',;
           starter: 15000,;
           professional: 45000,;
           enterprise: 120000,;
           marketAverage: 60000,;
-          savings: 25,;
-          features: ['Infrastructure assessment', 'Migration planning', 'Security implementation', 'Ongoing support'];,
+          savings: 25,features: ['Infrastructure assessment', 'Migration planning', 'Security implementation', 'Ongoing support'];,
 },;
         {;
           name: 'Edge Computing Infrastructure',;
@@ -235,8 +229,7 @@ const PricingGuide: React.FC = () => {;,
   const currentServices = servicePricing.find(cat => cat.category === selectedCategory)?.services || [];
   const categories = [;
     { id: 'micro-saas', name: 'Micro SaaS', icon: <Zap className="w-5 h-5" /> },;
-    { id: 'ai-services', name: 'AI Services', icon: <Star className="w-5 h-5" /> },;
-    { id: 'it-services', name: 'IT Services', icon: <Shield className="w-5 h-5" /> }
+    { id: 'ai-services', name: 'AI Services', icon: <Star className="w-5 h-5" /> },{ id: 'it-services', name: 'IT Services', icon: <Shield className="w-5 h-5" /> }
   ];
   return (;
     <div className="py-20 bg-gray-50">;
@@ -271,9 +264,7 @@ const PricingGuide: React.FC = () => {;,
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}
               className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-medium transition-all duration-300 ${;
-                selectedCategory === category.id;
-                  ? 'bg-blue-600 text-white shadow-lg';
-                  : 'bg-white text-gray-700 hover:bg-blue-50 hover:text-blue-600';,
+                selectedCategory === category.id? 'bg-blue-600 text-white shadow-lg': 'bg-white text-gray-700 hover: bg-blue-50 hover:text-blue-600',
 }`}
             >;
               {category.icon}
@@ -283,12 +274,11 @@ const PricingGuide: React.FC = () => {;,
         </div>;
 
         {/* Pricing Tiers */}
-        <div className="grid grid-cols-1 md: grid-cols-3 gap-8 mb-16">;,
+        <div className="grid grid-cols-1 md: grid-cols-3 gap-8 mb-16">,
           {pricingTiers.map((tier, index) => (;
             <motion.div;>
               key={tier.name}
-              className={`bg-white rounded-lg shadow-lg p-8 relative ${;
-                tier.popular ? 'border-2 border-blue-600 transform scale-105' : 'border border-gray-200';,
+              className={`bg-white rounded-lg shadow-lg p-8 relative ${tier.popular ? 'border-2 border-blue-600 transform scale-105' : 'border border-gray-200',
 }`}
               initial={{ opacity: 0, y: 30 }
               whileInView={{ opacity: 1, y: 0 }
@@ -306,8 +296,7 @@ const PricingGuide: React.FC = () => {;,
               <div className="text-center mb-6">;
                 <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full mb-4 ${;>
                   tier.color === 'blue' ? 'bg-blue-100 text-blue-600' :;
-                  tier.color === 'purple' ? 'bg-purple-100 text-purple-600' :;
-                  'bg-green-100 text-green-600';,
+                  tier.color === 'purple' ? 'bg-purple-100 text-purple-600' :'bg-green-100 text-green-600',
 }`}>;
                   {tier.icon}
                 </div>;
@@ -328,10 +317,9 @@ const PricingGuide: React.FC = () => {;,
                 ))}
               </ul>;
 
-              <button className={`w-full py-3 rounded-lg font-medium transition-colors ${;>
-                tier.popular;
-                  ? 'bg-blue-600 hover: bg-blue-700 text-white';,
-                  : 'bg-gray-600 hover:bg-gray-700 text-white';,
+              <button className={`w-full py-3 rounded-lg font-medium transition-colors ${>
+                tier.popular? 'bg-blue-600 hover: bg-blue-700 text-white',
+                  : 'bg-gray-600 hover: bg-gray-700 text-white',
 }`}>;
                 Get Started;
               </button>;
@@ -358,7 +346,7 @@ const PricingGuide: React.FC = () => {;,
               </thead>;
               <tbody>;
                 {currentServices.map((service, index) => (;
-                  <tr key={index} className="border-b border-gray-100 hover: bg-gray-50">;,
+                  <tr key={index} className="border-b border-gray-100 hover: bg-gray-50">,
                     <td className="p-4">;
                       <div className="font-medium text-gray-900">{service.name}</div>;
                       <div className="text-sm text-gray-600 mt-1">;
@@ -400,9 +388,7 @@ const PricingGuide: React.FC = () => {;,
         {/* Market Comparison */}
         <div className="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-8 text-white">;
           <div className="text-center">;
-            <h3 className="text-3xl font-bold mb-4">Why Choose Zion Tech Group?</h3>;
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-8 mt-8">;,
-              <div className="text-center">;
+            <h3 className="text-3xl font-bold mb-4">Why Choose Zion Tech Group ? </h3> : <div className="grid grid-cols-1 md
                 <DollarSign className="w-12 h-12 mx-auto mb-4 text-blue-200" />;
                 <h4 className="text-xl font-semibold mb-2">25-40% Cost Savings</h4>;
                 <p className="text-blue-100">Competitive pricing with no hidden fees</p>;

@@ -22,7 +22,7 @@ export const Skeleton: React.FC<SkeletonProps> = ({",;
    />;
   );,
 }
-export const CardSkeleton: React.FC = () => (`";,
+export const CardSkeleton: React.FC = () => (`",
   <div className="bg-white rounded-lg shadow-md p-6">",;
     <Skeleton height="{20}" className="mb-4"  />;
     <Skeleton height="{16}" className="mb-2"  />;

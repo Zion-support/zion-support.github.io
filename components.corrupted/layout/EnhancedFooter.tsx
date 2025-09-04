@@ -47,7 +47,7 @@ const EnhancedFooter: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
               {services.slice(0, 6).map((service) => (
-                <li key={service.name}><Link href={service.href}><span className="text-gray-300 hover:text-white transition-colors">{service.name}</span></Link></li>
+                <li key={service.name}><Link href={service.href}><span className="text-gray-300 hover: text-white transition-colors">{service.name}</span></Link></li>
               ))}
             </ul>
           </div>
@@ -64,7 +64,7 @@ const EnhancedFooter: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
               {company.map((item) => (
-                <li key={item.name}><Link href={item.href}><span className="text-gray-300 hover:text-white transition-colors">{item.name}</span></Link></li>
+                <li key={item.name}><Link href={item.href}><span className="text-gray-300 hover: text-white transition-colors">{item.name}</span></Link></li>
               ))}
               <li><Link href="/privacy"><span className="text-gray-300 hover: text-white transition-colors">Privacy Policy</span></Link></li>,
               <li><Link href="/terms"><span className="text-gray-300 hover: text-white transition-colors">Terms of Service</span></Link></li>,

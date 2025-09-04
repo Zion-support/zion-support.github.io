@@ -1,22 +1,22 @@
 import React from 'react';
 import Head from 'next/head';
 interface SEOProps {;
-  title: string;,
-  description: string;,
+  title: string,
+  description: string,
   keywords?: string;
   image?: string;
   url?: string;
   type?: string;,
 }
-const SEO: React.FC<SEOProps> = ({;,
+const SEO: React.FC<SEOProps> = ({,
   title,;
   description,;
   keywords = "AI solutions, cloud services, technology consulting, digital transformation, IT services, Zion Tech Group",;
-  image = "https://ziontechgroup.com/og-image.png",;
-  url = "https://ziontechgroup.com",;
+  image = "https: //ziontechgroup.com/og-image.png",;
+  url = "https: //ziontechgroup.com",;
   type = "website";,
 }) => {;
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
+  const fullTitle = title.includes('Zion Tech Group') ? title: `${title} | Zion Tech Group`;
   return (;
     <Head>;
       {/* Basic Meta Tags */}
@@ -27,19 +27,19 @@ const SEO: React.FC<SEOProps> = ({;,
       <meta name="robots" content="index, follow" />;
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />;
       {/* Open Graph / Facebook */}
-      <meta property="og:type" content={type} />;
-      <meta property="og:url" content={url} />;
-      <meta property="og:title" content={fullTitle} />;
-      <meta property="og:description" content={description} />;
-      <meta property="og:image" content={image} />;
-      <meta property="og: site_name" content="Zion Tech Group" />;,
+      <meta property="og: type" content={type} />;
+      <meta property="og: url" content={url} />;
+      <meta property="og: title" content={fullTitle} />;
+      <meta property="og: description" content={description} />;
+      <meta property="og: image" content={image} />;
+      <meta property="og: site_name" content="Zion Tech Group" />,
       ;
       {/* Twitter */}
-      <meta property="twitter: card" content="summary_large_image" />;,
-      <meta property="twitter:url" content={url} />;
-      <meta property="twitter:title" content={fullTitle} />;
-      <meta property="twitter:description" content={description} />;
-      <meta property="twitter:image" content={image} />;
+      <meta property="twitter: card" content="summary_large_image" />,
+      <meta property="twitter: url" content={url} />;
+      <meta property="twitter: title" content={fullTitle} />;
+      <meta property="twitter: description" content={description} />;
+      <meta property="twitter: image" content={image} />;
       {/* Additional SEO */}
       <meta name="theme-color" content="#3B82F6" />;
       <meta name="msapplication-TileColor" content="#3B82F6" />;
@@ -55,17 +55,17 @@ const SEO: React.FC<SEOProps> = ({;,
       <script;>
         type="application/ld+json";
         dangerouslySetInnerHTML={{;
-          __html: JSON.stringify({;,
-            "@context": "https://schema.org",;
+          __html: JSON.stringify({,
+            "@context": "https: //schema.org",;
             "@type": "Organization",;
             "name": "Zion Tech Group",;
-            "url": "https://ziontechgroup.com",;
-            "logo": "https://ziontechgroup.com/logo.png",;
+            "url": "https: //ziontechgroup.com",;
+            "logo": "https: //ziontechgroup.com/logo.png",;
             "description": "Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.",;
             "address": {;
               "@type": "PostalAddress",;
               "addressCountry": "BR",;
-              "addressLocality": "São Paulo";,
+              "addressLocality": "São Paulo",
 },;
             "contactPoint": {;
               "@type": "ContactPoint",;
@@ -73,7 +73,7 @@ const SEO: React.FC<SEOProps> = ({;,
               "availableLanguage": ["English", "Portuguese"];,
 },;
             "sameAs": [;
-              "https: //www.linkedin.com/company/zion-technologies";,
+              "https: //www.linkedin.com/company/zion-technologies",
             ];,
 });,
 }

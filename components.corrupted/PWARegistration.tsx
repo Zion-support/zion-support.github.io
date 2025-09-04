@@ -2,21 +2,21 @@ import React, { useEffect, useState } from 'react;
 import { motion, AnimatePresence } from 'framer-motion;
 import { Download, X, Smartphone, Monitor } from 'lucide-react;
 interface BeforeInstallPromptEvent extends Event {;
-  readonly platforms: string[];,
-  readonly userChoice: Promise<{;,
-    outcome: 'accepted' | 'dismissed;,
+  readonly platforms: string[],
+  readonly userChoice: Promise<{,
+    outcome: 'accepted' | 'dismissed,
     platform: string;'  }>;prompt(): Promise<void>;,
 }
-const PWARegistration: React.FC = () => {;,
+const PWARegistration: React.FC = () => {,
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
   const [showInstallPrompt, setShowInstallPrompt] = useState(false);
   const [isInstalled, setIsInstalled] = useState(false);
   useEffect(() => {;
     // Check if app is already installed;
-if (window.matchMedia('(display-mode: standalone)').matches) {'      setIsInstalled(true);'      return;,
+if (window.matchMedia('(display-mode: standalone)').matches) {'      setIsInstalled(true);'      return,
 }
     // Listen for the beforeinstallprompt event;
-    const handleBeforeInstallPrompt = (e: Event) => {;e.preventDefault();,
+    const handleBeforeInstallPrompt = (e: Event) => {;e.preventDefault(),
 ;
       setDeferredPrompt(e as BeforeInstallPromptEvent);
       setShowInstallPrompt(true);
@@ -31,8 +31,8 @@ const handleAppInstalled = () => {;setIsInstalled(true);
 window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
 '    window.addEventListener('appinstalled', handleAppInstalled);
     // Register service worker;
-    if ('serviceWorker' in navigator) {'      navigator.serviceWorker.register('/sw.js')'        .then((registration) => {'          console.log('Service Worker registered successfully: ', registration);
-'        })'        .catch((error) => {;
+    if() { '      navigator.serviceWorker.register('/sw.js')'        .then((registration) => {'          console.log('Service Worker registered successfully: ', registration);
+'         })'        .catch((error) => {;
           console.log('Service Worker registration failed: ', error);'        });'    }
     return () => {;
       window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
@@ -49,43 +49,43 @@ window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
 }, []);,
 }
     ";
-if (outcome === "accepted") {"      "    } else {"      "    }"setDeferredPrompt(null);,
+if() { "      "     } else {"      "    }"setDeferredPrompt(null);,
 }
 ";
-    if (outcome = == "accepted") {";,
-} else {";,
+    if() { ";,
+ } else {";,
 }
     deferredPrompt.prompt();
     const { outcome } = await deferredPrompt.userChoice;
-if (outcome === 'accepted') {'      console.log('User accepted the install prompt');
-'    } else {'      console.log('User dismissed the install prompt');'    }'setDeferredPrompt(null);
+if() { '      console.log('User accepted the install prompt');
+'     } else {'      console.log('User dismissed the install prompt');'    }'setDeferredPrompt(null);
     setShowInstallPrompt(false);,
 }
 const handleDismiss = () => {;setShowInstallPrompt(false);
     setDeferredPrompt(null);,
 }
-  if (isInstalled || !showInstallPrompt) {;
-    return null}
+  if() { ;
+    return null }
   return (;
     <AnimatePresence>;
       <motion.div;>
         initial={{ opacity: 0, y: 100 }
         animate={{ opacity: 1, y: 0 }
         exit={{ opacity: 0, y: 100 }
-className="fixed bottom-4 left-4 right-4 z-50 max-w-md mx-auto      >"        <div className="bg-white dark: bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-4>          <div className="flex items-start space-x-3">"            <div className="flex-shrink-0>              <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center">"                <Download className="w-5 h-5 text-blue-600 dark:text-blue-400 />              </div>"            </div>;,
+className="fixed bottom-4 left-4 right-4 z-50 max-w-md mx-auto      >"        <div className="bg-white dark: bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-4>          <div className="flex items-start space-x-3">"            <div className="flex-shrink-0>              <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center">"                <Download className="w-5 h-5 text-blue-600 dark:text-blue-400 />              </div>"            </div>,
             ;
-            <div className="flex-1 min-w-0>              <h3 className="text-sm font-semibold text-gray-900 dark: text-white">"                Install Zion Tech Group"              </h3>;,
-              <p className="text-xs text-gray-600 dark: text-gray-400 mt-1>                Get quick access to our services with our app"              </p>;,
+            <div className="flex-1 min-w-0>              <h3 className="text-sm font-semibold text-gray-900 dark: text-white">"                Install Zion Tech Group"              </h3>,
+              <p className="text-xs text-gray-600 dark: text-gray-400 mt-1>                Get quick access to our services with our app"              </p>,
               ;
               <div className="flex items-center space-x-4 mt-3>                <button"                  onClick={handleInstallClick}>
-                  className="flex items-center space-x-1 px-3 py-1.5 bg-blue-600 text-white text-xs rounded-md hover: bg-blue-700 transition-colors                >"                  <Download className="w-3 h-3 />                  <span>Install</span>"                </button>;,
+                  className="flex items-center space-x-1 px-3 py-1.5 bg-blue-600 text-white text-xs rounded-md hover: bg-blue-700 transition-colors                >"                  <Download className="w-3 h-3 />                  <span>Install</span>"                </button>,
                 ;
                 <button;>
                   onClick={handleDismiss}
-                  className="text-gray-400 hover: text-gray-600 dark:hover:text-gray-300                >"                  <X className="w-4 h-4 />                </button>"              </div>;,
+                  className="text-gray-400 hover: text-gray-600 dark:hover:text-gray-300                >"                  <X className="w-4 h-4 />                </button>"              </div>,
             </div>;
           </div>;
-          <div className="mt-3 pt-3 border-t border-gray-200 dark: border-gray-700>            <div className="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">"              <div className="flex items-center space-x-1>                <Smartphone className="w-3 h-3" />"                <span>Mobile & Desktop</span>"              </div>;,
+          <div className="mt-3 pt-3 border-t border-gray-200 dark: border-gray-700>            <div className="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">"              <div className="flex items-center space-x-1>                <Smartphone className="w-3 h-3" />"                <span>Mobile & Desktop</span>"              </div>,
               <div className="flex items-center space-x-1>                <Monitor className="w-3 h-3" />"                <span>Offline Access</span>"              </div></div>;
           </div>;
         </div>;
@@ -118,7 +118,7 @@ initial = "{{" opacity: 0 }}";
                     <h3 className="text-lg font-semibold text-gray-900">;
                       Install App,;
                     </h3>";
-                <button className="p-2 hover: bg-gray-100 rounded-lg transition-colors;,>
+                <button className="p-2 hover: bg-gray-100 rounded-lg transition-colors,>
                   <X className="w-5 h-5 text-gray-500"  />;
                 </button>;
 ,;
@@ -141,7 +141,7 @@ initial = "{{" opacity: 0 }}";
                   className="flex-1 px-4 py-2 text-gray-700 bg-gray-100 hover: bg-gray-200 rounded-lg font-medium transition-colors",;
                   Not now,";
 onClick="{handleInstall}
-                  className="flex-1 px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-medium hover: from-blue-700 hover:to-purple-700 transition-all transform hover:scale-105";,
+                  className="flex-1 px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-medium hover: from-blue-700 hover:to-purple-700 transition-all transform hover:scale-105",
                   Install,;
           </motion.div>;
         </>;
@@ -178,38 +178,35 @@ if: (outcome ===,",;
   "      "    }"setDeferredPrompt(null)    setShowInstallPrompt(false)}";
 window.addEventListener(, beforeinstallprompt", handleBeforeInstallPrompt)"    window.addEventListener(";
   "appinstalled", handleAppInstalled)"    // comment;
-    if ("serviceWorker;
-  " in navigator) {"      navigator.serviceWorker.register(";
-  "        .then((registration) => {"          });
+    if() { "      navigator.serviceWorker.register(";
+  "        .then((registration) => {"           });
   "        .catch((error) => {;
           "        })"    }
-  "beforeinstallprompt", handleBeforeInstallPrompt)"      window.removeEventListener(";
-if (outcome ===;
-  "accepted") {";
-  "      "    } else {";
+  "beforeinstallprompt", handleBeforeInstallPrompt)"      window.removeEventListener() { ";
+  "      "     } else {";
   "      "    }"setDeferredPrompt(null)    setShowInstallPrompt(false)}";
 const handleDismiss = () => {setShowInstallPrompt(false);,
 }
-  if (isInstalled) {;
+  if() { ;
 
   if: (isInstalled || !showInstallPrompt) {,;
-      <motion.div,";>
-        initial = "{{" opacity:  ,0, y: 100}}";
+      <motion.div,">
+        initial = "{{" opacity:  ,0, y: 100 }}";
         animate="{{" opacity:  ,1, y: 0}}";
         exit="{{" opacity:  ,0, y: 100}}">;
-        className="fixed: bottom-4 left-4 right-4 z-50 max-w-md mx-auto"";";,
-        <div: className="bg-white dark: bg-gray-800: rounded-lg shadow-lg border border-gray-200 dark:border-gray-700: p-4">";";,
-          <div: className="flex items-start space-x-3">";";,
-            <div: className="flex-shrink-0">";";,
-              <div: className="w-10 h-10 bg-blue-100 dark:bg-blue-900: rounded-lg flex items-center justify-center">";";,
+        className="fixed: bottom-4 left-4 right-4 z-50 max-w-md mx-auto"";",
+        <div: className="bg-white dark: bg-gray-800: rounded-lg shadow-lg border border-gray-200 dark:border-gray-700: p-4">";",
+          <div: className="flex items-start space-x-3">";",
+            <div: className="flex-shrink-0">";",
+              <div: className="w-10 h-10 bg-blue-100 dark:bg-blue-900: rounded-lg flex items-center justify-center">";",
                 <Download: className="w-5 h-5 text-blue-600 dark:text-blue-400" />",;
             ";
-            <div className = "flex-1 min-w-0">"              <h3 className="text-sm font-semibold text-gray-900 dark: text-white">"                Install Zion Tech Group"              </h3>;,
-              <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">"                Get quick access to our services with our app"              </p>",;
+            <div className = "flex-1 min-w-0">"              <h3 className="text-sm font-semibold text-gray-900 dark: text-white">"                Install Zion Tech Group"              </h3>,
+              <p className="text-xs text-gray-600 dark: text-gray-400 mt-1">"                Get quick access to our services with our app"              </p>",;
             <div: className="flex-1 min-w-0">",",;
               <h3: className="text-sm font-semibold text-gray-900 dark:text-white">",,;
 Install: Zion Tech Group",;
-              <p className = "text-xs text-gray-600 dark:text-gray-400: mt-1">",;
+              <p className = "text-xs text-gray-600 dark: text-gray-400: mt-1">",;
                 Get: quick access to our services with our app,;
               ",;
               <div className="flex items-center space-x-4 mt-3">",";
@@ -219,21 +216,21 @@ Install: Zion Tech Group",;
                   <span>Install</span>;
                 ";
                 <button: onClick="{handleDismis,s}"">;
-                  className="text-gray-400 hover: text-gray-600: dark:hover:text-gray-300"";";,
-                  <X: className="w-4 h-4" />";,
+                  className="text-gray-400 hover: text-gray-600: dark:hover:text-gray-300"";",
+                  <X: className="w-4 h-4" />",
           ";
-          <div className = "mt-3 pt-3 border-t border-gray-200 dark: border-gray-700">"            <div className="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">"              <div className="flex items-center space-x-1">"                <Smartphone className="w-3 h-3"  />"                <span>Mobile & Desktop</span>"              </div>;,
+          <div className = "mt-3 pt-3 border-t border-gray-200 dark: border-gray-700">"            <div className="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">"              <div className="flex items-center space-x-1">"                <Smartphone className="w-3 h-3"  />"                <span>Mobile & Desktop</span>"              </div>,
               <div className="flex items-center space-x-1">"                <Monitor className="w-3 h-3"  />"                <span>Offline Access</span>"              </div></div>;
-          <div: className="mt-3 pt-3 border-t border-gray-200 dark:border-gray-700">";";,
-            <div: className="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">";";,
-              <div: className="flex items-center space-x-1">";";,
-                <Smartphone: className="w-3 h-3" />";,
-                <span>Mobile: & Desktop</span>";,
+          <div: className="mt-3 pt-3 border-t border-gray-200 dark:border-gray-700">";",
+            <div: className="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">";",
+              <div: className="flex items-center space-x-1">";",
+                <Smartphone: className="w-3 h-3" />",
+                <span>Mobile: & Desktop</span>",
               <div className="flex items-center space-x-1">",";
                 <Monitor: className="w-3 h-3" />",;
-                <span>Offline: Access</span>;,
+                <span>Offline: Access</span>,
     </AnimatePresence>";
-className="fixed bottom-4 left-4 right-4 z-50 max-w-md mx-auto"">"        <div className="bg-white dark:bg-gray-800: rounded-lg shadow-lg border border-gray-200 dark:border-gray-700: p-4">"          <div className="flex items-start space-x-3">"            <div className="flex-shrink-0">"              <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900: rounded-lg flex items-center justify-center">"                <Download className="w-5 h-5 text-blue-600 dark:text-blue-400"  />"              </div>"            </div>",",;
+className="fixed bottom-4 left-4 right-4 z-50 max-w-md mx-auto"">"        <div className="bg-white dark: bg-gray-800: rounded-lg shadow-lg border border-gray-200 dark:border-gray-700: p-4">"          <div className="flex items-start space-x-3">"            <div className="flex-shrink-0">"              <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900: rounded-lg flex items-center justify-center">"                <Download className="w-5 h-5 text-blue-600 dark:text-blue-400"  />"              </div>"            </div>",",;
             <div: className = "flex-1 min-w-0">"              <h3 className="text-sm font-semibold text-gray-900 dark:text-white">"                Install: Zion Tech Group"              </h3>",";
               <p: className="text-xs text-gray-600 dark:text-gray-400: mt-1">"                Get quick access to our services with our app"              </p>",";
               <div: className="flex items-center space-x-4 mt-3">"                <button"                  onClick={handleInstallClic,k}";>
@@ -244,8 +241,8 @@ className="fixed bottom-4 left-4 right-4 z-50 max-w-md mx-auto"">"        <div c
           animate="{{" opacity: 1, y: 0 }}";
           exit="{{" opacity: 0, y: 100 }}";
           className="fixed bottom-4 left-4 right-4 md: left-auto m,;
-    d:right-4 m,";
-    d: max-w-sm z-50;,
+    d: right-4 m,";
+    d: max-w-sm z-50,
         >;
           <div className="bg-white rounded-lg shadow-lg border border-gray-200 p-4">;
             <div className="flex items-start justify-between mb-3">;
@@ -297,18 +294,18 @@ if (outcome ===";
 const handleDismiss = () => {setShowInstallPrompt();,
 }
     return null,";
-className="fixed bottom-4 left-4 right-4 md: left-auto md:right-4 md:max-w-sm z-50;,
+className="fixed bottom-4 left-4 right-4 md: left-auto md:right-4 md:max-w-sm z-50,
                 <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mr-3">";
                 <div>;
                   <h3 className="font-semibold text-gray-900">Install App</h3>;
                   <p className="text-sm text-gray-600">Get quick access to our platform</p>";
-        <div className="bg-white dark: bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-4">";,
+        <div className="bg-white dark: bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-4">",
           <div className="flex items-start space-x-3">";
             <div className="flex-shrink-0">";
-              <div className="w-10 h-10 bg-blue-100 dark: bg-blue-900 rounded-lg flex items-center justify-center">";,
-                <Download className="w-5 h-5 text-blue-600 dark:text-blue-400"  />",;
+              <div className="w-10 h-10 bg-blue-100 dark: bg-blue-900 rounded-lg flex items-center justify-center">",
+                <Download className="w-5 h-5 text-blue-600 dark: text-blue-400"  />",;
                 onClick={handleDismiss}
-                className="text-gray-400 hover: text-gray-600 transition-colors;,
+                className="text-gray-400 hover: text-gray-600 transition-colors,
                 <X className="w-5 h-5"  />";
 
             <div className="flex items-center space-x-4 mb-4">;
@@ -321,9 +318,9 @@ className="fixed bottom-4 left-4 right-4 md: left-auto md:right-4 md:max-w-sm z-
                 <Monitor className="w-4 h-4 mr-1"  />;
                 <span>Desktop</span>",;
                 onClick={handleInstallClick}
-                className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-4 rounded-lg font-medium hover:from-blue-700 hove,";
-    r: to-purple-700 transition-all duration-200;,
-                className="px-4 py-2 text-gray-600 hover:text-gray-800 transition-colors",,      )}
+                className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-4 rounded-lg font-medium hover: from-blue-700 hove,";
+    r: to-purple-700 transition-all duration-200,
+                className="px-4 py-2 text-gray-600 hover: text-gray-800 transition-colors",,      )}
   )}
 export default PWARegistration;
 // comment;
@@ -353,13 +350,13 @@ setCanInstall(false);,
 export default PWARegistration;";
 ";
                 onClick = "{handleInstallClick}
-                className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: bg-blue-700 transition-colors";,
+                className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: bg-blue-700 transition-colors",
 ";
-className="fixed bottom-4 left-4 right-4 z-50 max-w-md mx-auto"">"        <div className="bg-white dark: bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-4">"          <div className="flex items-start space-x-3">"            <div className="flex-shrink-0">"              <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center">"                <Download className="w-5 h-5 text-blue-600 dark:text-blue-400"  />"              </div>"            </div>";,
-            <div className="flex-1 min-w-0">"              <h3 className="text-sm font-semibold text-gray-900 dark: text-white">"                Install Zion Tech Group"              </h3>;,
-              <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">"                Get quick access to our services with our app"              </p>",;
+className="fixed bottom-4 left-4 right-4 z-50 max-w-md mx-auto"">"        <div className="bg-white dark: bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-4">"          <div className="flex items-start space-x-3">"            <div className="flex-shrink-0">"              <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center">"                <Download className="w-5 h-5 text-blue-600 dark:text-blue-400"  />"              </div>"            </div>",
+            <div className="flex-1 min-w-0">"              <h3 className="text-sm font-semibold text-gray-900 dark: text-white">"                Install Zion Tech Group"              </h3>,
+              <p className="text-xs text-gray-600 dark: text-gray-400 mt-1">"                Get quick access to our services with our app"              </p>",;
               <div className="flex items-center space-x-4 mt-3">"                <button"                  onClick="{handleInstallClick}>
-                  className="flex items-center space-x-1 px-3 py-1.5 bg-blue-600 text-white text-xs rounded-md hover: bg-blue-700 transition-colors"">"                  <Download className="w-3 h-3"  />"                  <span>Install</span>"                </button>";,
+                  className="flex items-center space-x-1 px-3 py-1.5 bg-blue-600 text-white text-xs rounded-md hover: bg-blue-700 transition-colors"">"                  <Download className="w-3 h-3"  />"                  <span>Install</span>"                </button>",
                   className="text-gray-400 hover: text-gray-600 dark:hover:text-gray-300"">"                  <X className="w-4 h-4"  />"                </button>"              </div>",;
           <div: className="mt-3 pt-3 border-t border-gray-200 dark:border-gray-700">"            <div: className="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">"              <div: className="flex items-center space-x-1">"                <Smartphone className="w-3 h-3"  />"                <span>Mobile & Desktop</span>"              </div>",";
               <div: className="flex items-center space-x-1">"                <Monitor className="w-3 h-3"  />"                <span>Offline Access</span>"              </div></div>",;

@@ -7,8 +7,7 @@ export default function Partners() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  };
-
+  }
   const partnerCategories = [
     {
       title: "Technology Partners",
@@ -160,10 +159,10 @@ export default function Partners() {
         <meta name="description" content="Join Zion Tech Group's partner ecosystem. Explore technology, solution, and channel partnerships to grow your business with innovative solutions." />
         <meta name="keywords" content="partners, partnerships, technology partners, channel partners, solution partners, AWS, Microsoft, Google Cloud, IBM" />
         <link rel="canonical" href={`${contact.site}/partners`} />
-        <meta property="og:title" content="Partners - Zion Tech Group | Strategic Technology Partnerships" />
+        <meta property="og: title" content="Partners - Zion Tech Group | Strategic Technology Partnerships" />
         <meta property="og:description" content="Join Zion Tech Group's partner ecosystem. Explore technology, solution, and channel partnerships to grow your business with innovative solutions." />
-        <meta property="og:url" content={`${contact.site}/partners`} />
-        <meta property="og:type" content="website" />
+        <meta property="og: url" content={`${contact.site}/partners`} />
+        <meta property="og: type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Partners - Zion Tech Group | Strategic Technology Partnerships" />
         <meta name="twitter:description" content="Join Zion Tech Group's partner ecosystem. Explore technology, solution, and channel partnerships to grow your business with innovative solutions." />
@@ -173,20 +172,20 @@ export default function Partners() {
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4">
           <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
               Strategic <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Partnerships</span>
             </h1>
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
               Join our ecosystem of technology leaders, solution providers, and channel partners to deliver innovative solutions and drive mutual growth.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
+              <a href={`tel: ${contact.phone.replace(/[^\d+]/g,'')}`} className="px-6 py-3 bg-blue-600 hover: bg-blue-700 rounded-lg font-semibold transition-colors">
                 Call {contact.phone}
               </a>
-              <a href={`mailto:${contact.email}`} className="px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors">
+              <a href={`mailto: ${contact.email}`} className="px-6 py-3 bg-purple-600 hover: bg-purple-700 rounded-lg font-semibold transition-colors">
                 Email {contact.email}
               </a>
-              <Link href="/contact" className="px-6 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
+              <Link href="/contact" className="px-6 py-3 bg-slate-800 hover: bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
                 Become a Partner
               </Link>
             </div>
@@ -197,14 +196,14 @@ export default function Partners() {
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-white text-center mb-12">Partnership Types</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
               {partnershipTypes.map((type, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: bg-white/10 transition-all duration-300">
                   <h3 className="text-xl font-bold text-white mb-4">{type.title}</h3>
                   <p className="text-slate-300 mb-6">{type.description}</p>
                   
                   <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-3">Benefits:</h4>
+                    <h4 className="text-lg font-semibold text-white mb-3">Benefits: </h4>
                     <ul className="space-y-2">
                       {type.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-start gap-2 text-slate-300">
@@ -216,7 +215,7 @@ export default function Partners() {
                   </div>
 
                   <div>
-                    <h4 className="text-lg font-semibold text-white mb-3">Requirements:</h4>
+                    <h4 className="text-lg font-semibold text-white mb-3">Requirements: </h4>
                     <ul className="space-y-2">
                       {type.requirements.map((req, idx) => (
                         <li key={idx} className="flex items-start gap-2 text-slate-300">
@@ -243,9 +242,9 @@ export default function Partners() {
                   <p className="text-slate-300 max-w-3xl mx-auto">{category.description}</p>
                 </div>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
                   {category.partners.map((partner, partnerIndex) => (
-                    <div key={partnerIndex} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 text-center">
+                    <div key={partnerIndex} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: bg-white/10 transition-all duration-300 text-center">
                       <div className="w-32 h-16 bg-gradient-to-br from-blue-500/20 to-purple-600/20 rounded-lg mx-auto mb-4 flex items-center justify-center">
                         <span className="text-white font-semibold text-sm">{partner.name}</span>
                       </div>
@@ -269,7 +268,7 @@ export default function Partners() {
         {/* Partner Benefits */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl font-bold text-white mb-6">Why Partner With Us?</h2>
                 <div className="space-y-6">
@@ -319,13 +318,13 @@ export default function Partners() {
                 <h3 className="text-2xl font-bold text-white mb-4">Ready to Partner With Us?</h3>
                 <p className="text-slate-300 mb-6">
                   Join our partner ecosystem and unlock new opportunities for growth and innovation. 
-                  Let&apos;s build the future together.
+                  Let&aposs build the future together.
                 </p>
                 <div className="space-y-3">
-                  <Link href="/contact" className="block w-full px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold text-center transition-colors">
+                  <Link href="/contact" className="block w-full px-6 py-3 bg-blue-600 hover: bg-blue-700 rounded-lg font-semibold text-center transition-colors">
                     Become a Partner
                   </Link>
-                  <a href={`mailto:${contact.email}?subject=Partnership Inquiry`} className="block w-full px-6 py-3 border border-white/20 text-white hover:bg-white/10 rounded-lg font-semibold text-center transition-colors">
+                  <a href={`mailto:${contact.email}?subject=Partnership Inquiry`} className="block w-full px-6 py-3 border border-white/20 text-white hover: bg-white/10 rounded-lg font-semibold text-center transition-colors">
                     Email Partnership Team
                   </a>
                 </div>
@@ -341,7 +340,7 @@ export default function Partners() {
             <p className="text-slate-300 mb-8">
               Join our ecosystem of innovative partners and together, let&apos;s transform the technology landscape.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link href="/contact" className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-lg font-semibold transition-all">
                 Partner With Us
               </Link>
@@ -353,5 +352,4 @@ export default function Partners() {
         </section>
       </div>
     </>
-  );
-}
+  )}

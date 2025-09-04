@@ -7,8 +7,7 @@ interface LayoutProps {
   title?: string;
   description?: string;
   keywords?: string;
-  ogImage?: string;
-}
+  ogImage?: string}
 
 const Layout: React.FC<LayoutProps> = ({
   children, 

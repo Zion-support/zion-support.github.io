@@ -19,31 +19,27 @@ export default function EnhancedFooter(): any {;
       { name: "Customer Support", href: "/solutions/customer-support" },";
       { name: "Email Automation", href: "/solutions/email-automation" },";
       { name: "Event Management", href: "/solutions/event-management" },";
-      { name: "Project Management", href: "/solutions/project-management" },";
-      { name: "Workflow Automation", href: "/solutions/workflow-automation" }],;
+      { name: "Project Management", href: "/solutions/project-management" },"{ name: "Workflow Automation", href: "/solutions/workflow-automation" }],;
     company: [",;
       { name: "About Us", href: "/about" },";
       { name: "Careers", href: "/careers" },";
       { name: "Partners", href: "/partners" },";
-      { name: "Contact", href: "/contact" },";
-      { name: "Blog", href: "/blog" }],;
+      { name: "Contact", href: "/contact" },"{ name: "Blog", href: "/blog" }],;
     resources: [",;
       { name: "Help Center", href: "/help" },";
       { name: "Pricing Guide", href: "/pricing-guide" },";
-      { name: "Search", href: "/search" },";
-      { name: "Sitemap", href: "/sitemap" }],;
+      { name: "Search", href: "/search" },"{ name: "Sitemap", href: "/sitemap" }],;
     legal: [",;
       { name: "Privacy Policy", href: "/privacy" },";
-      { name: "Terms of Service", href: "/terms" },";
-      { name: "Cookie Policy", href: "/cookies" }]}
+      { name: "Terms of Service", href: "/terms" },"{ name: "Cookie Policy", href: "/cookies" }]}
   const socialLinks = [];
 
   return (;
     <footer className="bg-gray-900 text-white">";
-      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">";,
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">,;
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">",
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-6 gap-8">,;
           {/* comment */}";
-          <div className="lg: col-span-2">";,
+          <div className="lg: col-span-2">",
             <div className="flex items-center space-x-2 mb-4">";
               <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">";
                 <span className="text-white font-bold text-lg">Z</span>;
@@ -63,15 +59,15 @@ digital age.;
             <div className="space-y-3">";
               <div className="flex items-center space-x-3 text-gray-400">";
                 <Phone className="w-4 h-4"  />";
-                <a href="tel: +13024640950;,>
-                  className="hover: text-white transition-colors">;,
+                <a href="tel: +13024640950,>
+                  className="hover: text-white transition-colors">,
                   +1 (302) 464-0950,;
                 </a>;
               </div>";
               <div className="flex items-center space-x-3 text-gray-400">";
                 <Mail className="w-4 h-4"  />";
-                <a href="mailto: kleber@ziontechgroup.com;,>
-                  className="hover: text-white transition-colors">;,
+                <a href="mailto: kleber@ziontechgroup.com,>
+                  className="hover: text-white transition-colors">,
                   kleber@ziontechgroup.com,;
                 </a>;
               </div>";
@@ -166,12 +162,12 @@ digital age.;
               Subscribe to our newsletter for the latest technology insights and,;
 company updates.;
             </p>";
-            <form className="flex flex-col sm: flex-row gap-3 max-w-md mx-auto">";,
+            <form className="flex flex-col sm: flex-row gap-3 max-w-md mx-auto">",
               <input type="email;>
                 placeholder="Enter your email;
-                className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"  />";,
+                className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"  />",
               <button type="submit;>
-                className="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover: bg-blue-700 transition-colors">;,
+                className="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover: bg-blue-700 transition-colors">,
                 Subscribe,;
               </button>;
             </form>;
@@ -179,8 +175,8 @@ company updates.;
 ,;
         {/* comment */}";
         <div className="border-t border-gray-800 pt-8">";
-          <div className="flex flex-col md: flex-row justify-between items-center">";,
-            <div className="text-gray-400 text-sm mb-4 md:mb-0">,;
+          <div className="flex flex-col md: flex-row justify-between items-center">",
+            <div className="text-gray-400 text-sm mb-4 md: mb-0">,;
               © {currentYear} Zion Tech Group. All rights reserved.;
             </div>";
             <div className="flex items-center space-x-6">";
@@ -190,7 +186,7 @@ company updates.;
                     href="{social.href}
                     target="_blank;
                     rel="noopener noreferrer;
-                    className="text-gray-400 hover: text-white transition-colors"">;,
+                    className="text-gray-400 hover: text-white transition-colors"">,
                     aria-label="{social.name}">";
                     <social.icon className="w-5 h-5" />;
                   </a>;
@@ -198,7 +194,7 @@ company updates.;
               </div>;
       {/* comment */}";
       <button onClick="{scrollToTop}>
-        className="fixed bottom-8 right-8 bg-blue-600 hover: bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors z-50;,
+        className="fixed bottom-8 right-8 bg-blue-600 hover: bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors z-50,
         aria-label="Scroll to top">";
         <ArrowUp className="w-5 h-5"  />;
       </button>,;

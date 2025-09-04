@@ -17,7 +17,7 @@ const SEO: React.FC<SEOProps> = ({,;
   type = "website",";
   siteName = "Zion Tech Group";,;,
 }) => {;
-  const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
+  const fullTitle = title.includes(siteName) ? title: `${title} | ${siteName}`;
   const fullImage = image || "/images/og-image.jpg";
   const fullUrl = url || "https: //ziontechgroup.com",;
 const SEO: React.FC<SEOProps> = ({,;
@@ -29,9 +29,9 @@ const SEO: React.FC<SEOProps> = ({,;
   type = "website",";
   siteName = "Zion Tech Group";,
 }) => {;
-  const fullTitle = title.includes(siteName) ? title : "${title} | ${siteName}";
+  const fullTitle = title.includes(siteName) ? title: "${title} | ${siteName}";
   const fullImage = image || "/images/og-image.jpg";
-  const fullUrl = url || "https: // comment;,
+  const fullUrl = url || "https: // comment,
 
   return (;
 <Head>;
@@ -39,17 +39,17 @@ const SEO: React.FC<SEOProps> = ({,;
       <meta name = "description" content="{description}"  />;
       {keywords && <meta name="keywords" content="{keywords}"  />}
       {/* comment */}
-      <meta property="og:type" content="{type}"  />;
-      <meta property="og:title" content="{fullTitle}"  />;
-      <meta property="og:description" content="{description}"  />;
-      <meta property="og:image" content="{fullImage}"  />;
-      <meta property="og:url" content="{fullUrl}"  />;
-      <meta property="og:site_name" content="{siteName}"  />;
+      <meta property="og: type" content="{type}"  />;
+      <meta property="og: title" content="{fullTitle}"  />;
+      <meta property="og: description" content="{description}"  />;
+      <meta property="og: image" content="{fullImage}"  />;
+      <meta property="og: url" content="{fullUrl}"  />;
+      <meta property="og: site_name" content="{siteName}"  />;
       {/* comment */}";
       <meta name="twitter: card" content="summary_large_image"  />",;
-      <meta name="twitter:title" content="{fullTitle}"  />;
-      <meta name="twitter:description" content="{description}"  />;
-      <meta name="twitter:image" content="{fullImage}"  />;
+      <meta name="twitter: title" content="{fullTitle}"  />;
+      <meta name="twitter: description" content="{description}"  />;
+      <meta name="twitter: image" content="{fullImage}"  />;
       {/* comment */}
       <meta name="viewport" content="width=device-width, initial-scale=1"  />";
       <meta name="robots" content="index, follow"  />;
@@ -58,11 +58,11 @@ const SEO: React.FC<SEOProps> = ({,;
       <script type="application/ld+json;>
         dangerouslySetInnerHTML="{{";
           __html: JSON.stringify({",;
-            "@context": "https: // comment;,
+            "@context": "https: // comment,
             "@type": "Organization",";
             "name": siteName,";
-            "url": "https: // comment;,
-            "logo": "https: // comment;,
+            "url": "https: // comment,
+            "logo": "https: // comment,
             "description": "Leading technology solutions provider specializing in AI, quantum computing, and innovative micro SAAS services.",";
             "address": {";
               "@type": "PostalAddress",";
@@ -78,9 +78,8 @@ const SEO: React.FC<SEOProps> = ({,;
               "contactType": "customer service",";
               "email": "kleber@ziontechgroup.com";,
 },";
-            "sameAs": [";
-              "https: // comment;,
-              "https: // comment;,
+            "sameAs": [""https: // comment,
+              "https: // comment,
             ]>;,
 })>;,
 }

@@ -1,6 +1,18 @@
 {
-  "timestamp": "2025-09-03T16:52:59.017Z",
+  "timestamp": "2025-09-04T02:29:38.554Z",
   "files": {
+    "components/Breadcrumb.tsx": {
+      "path": "components/Breadcrumb.tsx",
+      "lines": 74,
+      "issues": [],
+      "complexity": 3
+    },
+    "components/ContactForm.tsx": {
+      "path": "components/ContactForm.tsx",
+      "lines": 193,
+      "issues": [],
+      "complexity": 1
+    },
     "components/ErrorBoundary.tsx": {
       "path": "components/ErrorBoundary.tsx",
       "lines": 68,
@@ -9,21 +21,63 @@
     },
     "components/Loading.tsx": {
       "path": "components/Loading.tsx",
-      "lines": 24,
+      "lines": 25,
+      "issues": [],
+      "complexity": 2
+    },
+    "components/LoadingOptimized.tsx": {
+      "path": "components/LoadingOptimized.tsx",
+      "lines": 29,
+      "issues": [],
+      "complexity": 3
+    },
+    "components/LoadingSpinner.tsx": {
+      "path": "components/LoadingSpinner.tsx",
+      "lines": 29,
       "issues": [],
       "complexity": 2
     },
     "components/PerformanceMonitor.tsx": {
       "path": "components/PerformanceMonitor.tsx",
-      "lines": 60,
+      "lines": 91,
       "issues": [],
-      "complexity": 10
+      "complexity": 14
+    },
+    "components/SearchBar.tsx": {
+      "path": "components/SearchBar.tsx",
+      "lines": 181,
+      "issues": [],
+      "complexity": 5
+    },
+    "components/ThemeToggle.tsx": {
+      "path": "components/ThemeToggle.tsx",
+      "lines": 47,
+      "issues": [],
+      "complexity": 5
+    },
+    "pages/404.tsx": {
+      "path": "pages/404.tsx",
+      "lines": 60,
+      "issues": [
+        {
+          "rule": "Function Length",
+          "value": 1,
+          "message": "Functions should be under 50 lines"
+        }
+      ],
+      "complexity": 1
     },
     "pages/_app.tsx": {
       "path": "pages/_app.tsx",
-      "lines": 118,
-      "issues": [],
-      "complexity": 1
+      "lines": 215,
+      "issues": [
+        {
+          "rule": "Duplicate Code",
+          "value": 10,
+          "message": "Potential duplicate code detected"
+        }
+      ],
+      "complexity": 0
     },
     "pages/about.tsx": {
       "path": "pages/about.tsx",
@@ -39,7 +93,7 @@
     },
     "pages/ai-services.tsx": {
       "path": "pages/ai-services.tsx",
-      "lines": 741,
+      "lines": 979,
       "issues": [
         {
           "rule": "File Length",
@@ -48,15 +102,51 @@
         },
         {
           "rule": "Duplicate Code",
-          "value": 33,
+          "value": 65,
           "message": "Potential duplicate code detected"
         }
       ],
       "complexity": 0
     },
+    "pages/blog.tsx": {
+      "path": "pages/blog.tsx",
+      "lines": 193,
+      "issues": [],
+      "complexity": 0
+    },
+    "pages/careers.tsx": {
+      "path": "pages/careers.tsx",
+      "lines": 310,
+      "issues": [
+        {
+          "rule": "Duplicate Code",
+          "value": 10,
+          "message": "Potential duplicate code detected"
+        }
+      ],
+      "complexity": 1
+    },
+    "pages/cloud-devops.tsx": {
+      "path": "pages/cloud-devops.tsx",
+      "lines": 156,
+      "issues": [],
+      "complexity": 0
+    },
     "pages/contact.tsx": {
       "path": "pages/contact.tsx",
-      "lines": 166,
+      "lines": 182,
+      "issues": [],
+      "complexity": 0
+    },
+    "pages/cybersecurity.tsx": {
+      "path": "pages/cybersecurity.tsx",
+      "lines": 156,
+      "issues": [],
+      "complexity": 0
+    },
+    "pages/docs.tsx": {
+      "path": "pages/docs.tsx",
+      "lines": 188,
       "issues": [],
       "complexity": 0
     },
@@ -66,15 +156,27 @@
       "issues": [],
       "complexity": 0
     },
+    "pages/green-it.tsx": {
+      "path": "pages/green-it.tsx",
+      "lines": 398,
+      "issues": [
+        {
+          "rule": "Duplicate Code",
+          "value": 11,
+          "message": "Potential duplicate code detected"
+        }
+      ],
+      "complexity": 0
+    },
     "pages/index.tsx": {
       "path": "pages/index.tsx",
-      "lines": 34,
+      "lines": 200,
       "issues": [],
       "complexity": 0
     },
     "pages/it-services.tsx": {
       "path": "pages/it-services.tsx",
-      "lines": 956,
+      "lines": 1243,
       "issues": [
         {
           "rule": "File Length",
@@ -83,7 +185,7 @@
         },
         {
           "rule": "Duplicate Code",
-          "value": 58,
+          "value": 87,
           "message": "Potential duplicate code detected"
         }
       ],
@@ -91,42 +193,7 @@
     },
     "pages/micro-saas.tsx": {
       "path": "pages/micro-saas.tsx",
-      "lines": 1005,
-      "issues": [
-        {
-          "rule": "File Length",
-          "value": 1,
-          "message": "Files should be under 500 lines"
-        },
-        {
-          "rule": "Duplicate Code",
-          "value": 29,
-          "message": "Potential duplicate code detected"
-        }
-      ],
-      "complexity": 0
-    },
-    "pages/pricing.tsx": {
-      "path": "pages/pricing.tsx",
-      "lines": 87,
-      "issues": [],
-      "complexity": 0
-    },
-    "pages/privacy.tsx": {
-      "path": "pages/privacy.tsx",
-      "lines": 46,
-      "issues": [],
-      "complexity": 0
-    },
-    "pages/services-catalog.tsx": {
-      "path": "pages/services-catalog.tsx",
-      "lines": 253,
-      "issues": [],
-      "complexity": 0
-    },
-    "pages/services.tsx": {
-      "path": "pages/services.tsx",
-      "lines": 1636,
+      "lines": 1275,
       "issues": [
         {
           "rule": "File Length",
@@ -141,18 +208,145 @@
       ],
       "complexity": 0
     },
+    "pages/news.tsx": {
+      "path": "pages/news.tsx",
+      "lines": 316,
+      "issues": [
+        {
+          "rule": "Duplicate Code",
+          "value": 10,
+          "message": "Potential duplicate code detected"
+        }
+      ],
+      "complexity": 2
+    },
+    "pages/partners.tsx": {
+      "path": "pages/partners.tsx",
+      "lines": 356,
+      "issues": [
+        {
+          "rule": "Duplicate Code",
+          "value": 7,
+          "message": "Potential duplicate code detected"
+        }
+      ],
+      "complexity": 1
+    },
+    "pages/pricing.tsx": {
+      "path": "pages/pricing.tsx",
+      "lines": 87,
+      "issues": [],
+      "complexity": 0
+    },
+    "pages/privacy.tsx": {
+      "path": "pages/privacy.tsx",
+      "lines": 46,
+      "issues": [],
+      "complexity": 0
+    },
+    "pages/quantum-computing.tsx": {
+      "path": "pages/quantum-computing.tsx",
+      "lines": 156,
+      "issues": [],
+      "complexity": 0
+    },
+    "pages/request-quote.tsx": {
+      "path": "pages/request-quote.tsx",
+      "lines": 470,
+      "issues": [
+        {
+          "rule": "Duplicate Code",
+          "value": 11,
+          "message": "Potential duplicate code detected"
+        }
+      ],
+      "complexity": 3
+    },
+    "pages/research-development.tsx": {
+      "path": "pages/research-development.tsx",
+      "lines": 455,
+      "issues": [
+        {
+          "rule": "Duplicate Code",
+          "value": 15,
+          "message": "Potential duplicate code detected"
+        }
+      ],
+      "complexity": 5
+    },
+    "pages/services-catalog.tsx": {
+      "path": "pages/services-catalog.tsx",
+      "lines": 318,
+      "issues": [],
+      "complexity": 0
+    },
+    "pages/services.tsx": {
+      "path": "pages/services.tsx",
+      "lines": 1781,
+      "issues": [
+        {
+          "rule": "File Length",
+          "value": 1,
+          "message": "Files should be under 500 lines"
+        },
+        {
+          "rule": "Duplicate Code",
+          "value": 59,
+          "message": "Potential duplicate code detected"
+        }
+      ],
+      "complexity": 0
+    },
+    "pages/solutions.tsx": {
+      "path": "pages/solutions.tsx",
+      "lines": 360,
+      "issues": [],
+      "complexity": 0
+    },
     "pages/terms.tsx": {
       "path": "pages/terms.tsx",
       "lines": 127,
       "issues": [],
       "complexity": 0
+    },
+    "scripts/analyze-bundle.js": {
+      "path": "scripts/analyze-bundle.js",
+      "lines": 19,
+      "issues": [],
+      "complexity": 2
+    },
+    "scripts/performance-monitor.js": {
+      "path": "scripts/performance-monitor.js",
+      "lines": 115,
+      "issues": [],
+      "complexity": 11
     }
   },
   "summary": {
-    "totalFiles": 16,
-    "totalLines": 5598,
-    "averageComplexity": "1.06",
+    "totalFiles": 37,
+    "totalLines": 11175,
+    "averageComplexity": "1.76",
     "issues": [
+      {
+        "file": "pages/404.tsx",
+        "issues": [
+          {
+            "rule": "Function Length",
+            "value": 1,
+            "message": "Functions should be under 50 lines"
+          }
+        ]
+      },
+      {
+        "file": "pages/_app.tsx",
+        "issues": [
+          {
+            "rule": "Duplicate Code",
+            "value": 10,
+            "message": "Potential duplicate code detected"
+          }
+        ]
+      },
       {
         "file": "pages/about.tsx",
         "issues": [
@@ -173,7 +367,27 @@
           },
           {
             "rule": "Duplicate Code",
-            "value": 33,
+            "value": 65,
+            "message": "Potential duplicate code detected"
+          }
+        ]
+      },
+      {
+        "file": "pages/careers.tsx",
+        "issues": [
+          {
+            "rule": "Duplicate Code",
+            "value": 10,
+            "message": "Potential duplicate code detected"
+          }
+        ]
+      },
+      {
+        "file": "pages/green-it.tsx",
+        "issues": [
+          {
+            "rule": "Duplicate Code",
+            "value": 11,
             "message": "Potential duplicate code detected"
           }
         ]
@@ -188,7 +402,7 @@
           },
           {
             "rule": "Duplicate Code",
-            "value": 58,
+            "value": 87,
             "message": "Potential duplicate code detected"
           }
         ]
@@ -203,7 +417,47 @@
           },
           {
             "rule": "Duplicate Code",
-            "value": 29,
+            "value": 50,
+            "message": "Potential duplicate code detected"
+          }
+        ]
+      },
+      {
+        "file": "pages/news.tsx",
+        "issues": [
+          {
+            "rule": "Duplicate Code",
+            "value": 10,
+            "message": "Potential duplicate code detected"
+          }
+        ]
+      },
+      {
+        "file": "pages/partners.tsx",
+        "issues": [
+          {
+            "rule": "Duplicate Code",
+            "value": 7,
+            "message": "Potential duplicate code detected"
+          }
+        ]
+      },
+      {
+        "file": "pages/request-quote.tsx",
+        "issues": [
+          {
+            "rule": "Duplicate Code",
+            "value": 11,
+            "message": "Potential duplicate code detected"
+          }
+        ]
+      },
+      {
+        "file": "pages/research-development.tsx",
+        "issues": [
+          {
+            "rule": "Duplicate Code",
+            "value": 15,
             "message": "Potential duplicate code detected"
           }
         ]
@@ -218,7 +472,7 @@
           },
           {
             "rule": "Duplicate Code",
-            "value": 50,
+            "value": 59,
             "message": "Potential duplicate code detected"
           }
         ]

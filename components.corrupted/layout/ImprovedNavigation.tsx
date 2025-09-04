@@ -15,8 +15,7 @@ const ImprovedNavigation: React.FC = () => {,,;
         { name: "Small Business", href: "/solutions/small-business" },";
         { name: "Startups", href: "/solutions/startups" },";
         { name: "Healthcare", href: "/solutions/healthcare" },";
-        { name: "Finance", href: "/solutions/finance" },";
-        { name: "E-commerce", href: "/solutions/ecommerce" }
+        { name: "Finance", href: "/solutions/finance" },"{ name: "E-commerce", href: "/solutions/ecommerce" }
       ];,
 },;
     { ";
@@ -26,8 +25,7 @@ const ImprovedNavigation: React.FC = () => {,,;
         { name: "Blog", href: "/blog" },";
         { name: "Case Studies", href: "/case-studies" },";
         { name: "White Papers", href: "/white-papers" },";
-        { name: "Webinars", href: "/webinars" },";
-        { name: "Documentation", href: "/docs" }
+        { name: "Webinars", href: "/webinars" },"{ name: "Documentation", href: "/docs" }
       ];,
 },;
     { ";
@@ -35,8 +33,7 @@ const ImprovedNavigation: React.FC = () => {,,;
       href: "/company",;
       dropdown: [",;
         { name: "Our Team", href: "/team" },";
-        { name: "Careers", href: "/careers" },";
-        { name: "Contact", href: "/contact" }
+        { name: "Careers", href: "/careers" },"{ name: "Contact", href: "/contact" }
       ];
   ];
 
@@ -50,7 +47,7 @@ const ImprovedNavigation: React.FC = () => {,,;
 }
   return (;
     <nav className = "bg-white shadow-lg sticky top-0 z-50">";
-      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
         <div className="flex justify-between items-center h-16">,;
           {/* comment */}";
           <div className="flex-shrink-0">";
@@ -62,14 +59,13 @@ const ImprovedNavigation: React.FC = () => {,,;
             </Link>;
           </div>;
           {/* comment */}";
-          <div className="hidden lg: block">";,
+          <div className="hidden lg: block">",
             <div className="ml-10 flex items-baseline space-x-8">;
               {navigationItems.map((item) => (",;
                 <div key="{item.name}" className="relative">;
                   {item.dropdown ? (";
                     <div className="relative">";
-                      <button onClick="{()" => toggleDropdown(item.name)}";
-                        className="text-gray-700 hover: text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center">,;
+                      <button onClick="{()" => toggleDropdown(item.name)}" : className="text-gray-700 hover
                         {item.name}";
                         <ChevronDown className="ml-1 h-4 w-4"  />;
                       </button>;
@@ -78,7 +74,7 @@ const ImprovedNavigation: React.FC = () => {,,;
                           {item.dropdown.map((dropdownItem) => (";
                             <Link key="{dropdownItem.name}>
                               href="{dropdownItem.href}
-                              className="block px-4 py-2 text-sm text-gray-700 hover: bg-blue-50 hover:text-blue-600 transition-colors"">;,
+                              className="block px-4 py-2 text-sm text-gray-700 hover: bg-blue-50 hover:text-blue-600 transition-colors"">,
                               onClick="{()" => setActiveDropdown(null)}
                             >;
                               {dropdownItem.name}
@@ -97,9 +93,9 @@ const ImprovedNavigation: React.FC = () => {,,;
               ))}
             </div>;
           {/* comment */}";
-          <div className="hidden lg: block">";,
+          <div className="hidden lg: block">",
             <Link href="/contact">";
-              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover: from-blue-700 hover:to-purple-700 transition-all duration-300">;,
+              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover: from-blue-700 hover:to-purple-700 transition-all duration-300">,
                 Get Started,;
               </button>;
             </Link>;
@@ -114,14 +110,13 @@ const ImprovedNavigation: React.FC = () => {,,;
           </div>;
       {/* comment */}
       {isOpen && (";
-        <div className="lg: hidden">";,
-          <div className="px-2 pt-2 pb-3 space-y-1 sm: px-3 bg-white border-t">;,
+        <div className="lg: hidden">",
+          <div className="px-2 pt-2 pb-3 space-y-1 sm: px-3 bg-white border-t">,
             {navigationItems.map((item) => (",;
               <div key="{item.name}">;
                 {item.dropdown ? (;
                   <div>";
-                    <button onClick="{()" => toggleDropdown(item.name)}";
-                      className="text-gray-700 hover: text-blue-600 block px-3 py-2 rounded-md text-base font-medium w-full text-left flex items-center justify-between">,;
+                    <button onClick="{()" => toggleDropdown(item.name)}" : className="text-gray-700 hover
                       {item.name}";
                       <ChevronDown className="h-4 w-4"  />;
                     </button>;
@@ -130,7 +125,7 @@ const ImprovedNavigation: React.FC = () => {,,;
                         {item.dropdown.map((dropdownItem) => (";
                           <Link key="{dropdownItem.name}>
                             href="{dropdownItem.href}
-                            className="text-gray-600 hover: text-blue-600 block px-3 py-2 rounded-md text-sm"">;,
+                            className="text-gray-600 hover: text-blue-600 block px-3 py-2 rounded-md text-sm"">,
                             onClick="{closeMobileMenu}">;
                             {dropdownItem.name}
                           </Link>;
@@ -140,7 +135,7 @@ const ImprovedNavigation: React.FC = () => {,,;
                   </div>;
                 ) : (";
                   <Link href="{item.href}>
-                    className="text-gray-700 hover: text-blue-600 block px-3 py-2 rounded-md text-base font-medium"">;,
+                    className="text-gray-700 hover: text-blue-600 block px-3 py-2 rounded-md text-base font-medium"">,
                     onClick="{closeMobileMenu}">;
                     {item.name}
                   </Link>;

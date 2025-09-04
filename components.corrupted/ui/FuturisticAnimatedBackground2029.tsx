@@ -2,11 +2,11 @@ import React from "react";
         if (this.y < 0) this.y = canvas.height;
         if (this.y > canvas.height) this.y = 0;
         // comment;
-draw() {;
+draw() { ;
         if (ctx) {;
           const alpha = this.life / this.maxLife;
           ctx.save();,
-}
+ }
           ctx.globalAlpha = alpha;
           ctx.fillStyle = this.color;
           ctx.beginPath();,
@@ -19,7 +19,7 @@ draw() {;
 ctx.shadowColor = this.color          ctx.restore()}
 ;,
 }
-      isDead() {;
+      isDead() { ;
     // Grid system,;
 class Grid {;
       spacing: number,;
@@ -34,7 +34,7 @@ class Grid {;
           // comment;
 for (let x = this.offset % this.spacing; x < canvas.width; x += this.spacing) {;
             ctx.moveTo(x, 0);,
-}
+ }
             ctx.lineTo(x, canvas.height);,
 }            ctx.stroke()}
     // Wave system,;
@@ -47,13 +47,13 @@ frequency: number,;
       speed: number,";
           ctx.strokeStyle = "rgba(150, 100, 255, 0.3)";
           ctx.lineWidth = 2;
-          for (let x = 0; x < canvas.width; x++) {;
-      particles.push(new Particle())}
+          for() { ;
+      particles.push(new Particle()) }
     // comment;
-for (let i = 0; i < 3; i++) {";
+for() { ";
       ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
       // comment;
-particles[index] = new Particle()}
+particles[index] = new Particle() }
 ;,
 });,
 }

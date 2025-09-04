@@ -1,12 +1,10 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 // Type definitions for gtag
 declare global {
   interface Window {
     gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void;
   }
-}
-
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     // Monitor Core Web Vitals
@@ -21,19 +19,15 @@ const PerformanceMonitor: React.FC = () => {
             metric_rating: value < 2.5 ? 'good' : value < 4 ? 'needs-improvement' : 'poor'
           });
         }
-      };
       // Monitor Largest Contentful Paint (LCP)
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          if (entry.entryType === 'largest-contentful-paint') {
-            // Log LCP in development only
+          if() { // Log LCP in development only
             if (process.env.NODE_ENV === 'development') {
               // eslint-disable-next-line no-console
-              console.log('LCP:', entry.startTime);
-            }
+              console.log('LCP: ', entry.startTime) }
             sendToAnalytics('LCP', entry.startTime);
           }
-        }
       });
       
       try {
@@ -45,15 +39,12 @@ const PerformanceMonitor: React.FC = () => {
       // Monitor First Input Delay (FID)
       const fidObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          if (entry.entryType === 'first-input') {
-            // Log FID in development only
+          if() { // Log FID in development only
             if (process.env.NODE_ENV === 'development') {
               // eslint-disable-next-line no-console
-              console.log('FID:', (entry as any).processingStart - entry.startTime);
-            }
+              console.log('FID: ', (entry as any).processingStart - entry.startTime) }
             sendToAnalytics('FID', (entry as any).processingStart - entry.startTime);
           }
-        }
       });
 
       try {
@@ -66,16 +57,11 @@ const PerformanceMonitor: React.FC = () => {
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          const layoutShiftEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
-          if (!layoutShiftEntry.hadRecentInput) {
-            clsValue += layoutShiftEntry.value || 0;
-          }
-        }
+          const layoutShiftEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number }
+          if() { clsValue += layoutShiftEntry.value || 0 }
         // Log CLS in development only
-        if (process.env.NODE_ENV === 'development') {
-          // eslint-disable-next-line no-console
-          console.log('CLS:', clsValue);
-        }
+        if() { // eslint-disable-next-line no-console
+          console.log('CLS: ', clsValue) }
         sendToAnalytics('CLS', clsValue);
       });
 
@@ -89,8 +75,7 @@ const PerformanceMonitor: React.FC = () => {
         observer.disconnect();
         fidObserver.disconnect();
         clsObserver.disconnect();
-      };
-    }
+      }
   }, []);
 
   return null; // This component doesn't render anything

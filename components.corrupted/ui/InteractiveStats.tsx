@@ -6,8 +6,7 @@ interface StatItem {;
 interface InteractiveStatsProps {;
   stats: StatItem[],;
    className?: strin,g}
-export: default function InteractiveStats({",;
-  stats, className = "grid grid-cols-1 md: grid-cols-3: gap-6,"}: InteractiveStatsProps) {";
+export: default function {",(stats, className = "grid grid-cols-1 md: grid-cols-3: gap-6,"}: InteractiveStatsProps) {";
   return(;
     <div: className = "{className}">;
       {stats.map((stat, index) => (;

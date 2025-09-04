@@ -7,8 +7,7 @@ export default function News() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  };
-
+  }
   const newsArticles = [
     {
       id: 1,
@@ -104,10 +103,10 @@ export default function News() {
         <meta name="description" content="Stay updated with the latest news, announcements, and developments from Zion Tech Group. Read about our innovations, partnerships, and industry insights." />
         <meta name="keywords" content="news, announcements, company updates, technology news, AI, micro SaaS, cybersecurity, quantum computing, partnerships" />
         <link rel="canonical" href={`${contact.site}/news`} />
-        <meta property="og:title" content="News - Zion Tech Group | Latest Company Updates & Industry News" />
+        <meta property="og: title" content="News - Zion Tech Group | Latest Company Updates & Industry News" />
         <meta property="og:description" content="Stay updated with the latest news, announcements, and developments from Zion Tech Group. Read about our innovations, partnerships, and industry insights." />
-        <meta property="og:url" content={`${contact.site}/news`} />
-        <meta property="og:type" content="website" />
+        <meta property="og: url" content={`${contact.site}/news`} />
+        <meta property="og: type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="News - Zion Tech Group | Latest Company Updates & Industry News" />
         <meta name="twitter:description" content="Stay updated with the latest news, announcements, and developments from Zion Tech Group. Read about our innovations, partnerships, and industry insights." />
@@ -117,21 +116,21 @@ export default function News() {
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4">
           <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
               Latest <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">News</span>
             </h1>
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
               Stay informed about our latest innovations, partnerships, and industry developments. 
-              Discover how we&apos;re shaping the future of technology.
+              Discover how we&aposre shaping the future of technology.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
+              <a href={`tel: ${contact.phone.replace(/[^\d+]/g,'')}`} className="px-6 py-3 bg-blue-600 hover: bg-blue-700 rounded-lg font-semibold transition-colors">
                 Call {contact.phone}
               </a>
-              <a href={`mailto:${contact.email}`} className="px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors">
+              <a href={`mailto: ${contact.email}`} className="px-6 py-3 bg-purple-600 hover: bg-purple-700 rounded-lg font-semibold transition-colors">
                 Email {contact.email}
               </a>
-              <Link href="/contact" className="px-6 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
+              <Link href="/contact" className="px-6 py-3 bg-slate-800 hover: bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
                 Get in Touch
               </Link>
             </div>
@@ -145,7 +144,7 @@ export default function News() {
               {categories.map((category) => (
                 <button
                   key={category}
-                  className="px-6 py-2 rounded-full border border-white/20 text-white hover:bg-white/10 transition-colors"
+                  className="px-6 py-2 rounded-full border border-white/20 text-white hover: bg-white/10 transition-colors"
                 >
                   {category}
                 </button>
@@ -159,7 +158,7 @@ export default function News() {
           <section className="py-16 px-4">
             <div className="max-w-7xl mx-auto">
               <h2 className="text-2xl font-bold text-white mb-8">Featured Story</h2>
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300">
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover: bg-white/10 transition-all duration-300">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                   <div className="aspect-video bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg"></div>
                   <div>
@@ -168,7 +167,7 @@ export default function News() {
                       <span>{featuredArticle.date}</span>
                       <span>{featuredArticle.readTime}</span>
                     </div>
-                    <h3 className="text-3xl font-bold text-white mb-4 hover:text-blue-400 transition-colors">
+                    <h3 className="text-3xl font-bold text-white mb-4 hover: text-blue-400 transition-colors">
                       {featuredArticle.title}
                     </h3>
                     <p className="text-slate-300 mb-6 text-lg">
@@ -188,16 +187,16 @@ export default function News() {
         <section className="py-16 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-2xl font-bold text-white mb-8">Recent News</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {regularArticles.map((article) => (
-                <article key={article.id} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
+                <article key={article.id} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: bg-white/10 transition-all duration-300">
                   <div className="aspect-video bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg mb-4"></div>
                   <div className="flex items-center gap-4 text-sm text-slate-400 mb-3">
                     <span className="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full">{article.category}</span>
                     <span>{article.date}</span>
                     <span>{article.readTime}</span>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3 hover:text-blue-400 transition-colors">
+                  <h3 className="text-xl font-bold text-white mb-3 hover: text-blue-400 transition-colors">
                     {article.title}
                   </h3>
                   <p className="text-slate-300 mb-4 line-clamp-3">
@@ -215,7 +214,7 @@ export default function News() {
         {/* Press Kit */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl font-bold text-white mb-6">Press & Media</h2>
                 <p className="text-slate-300 mb-6">
@@ -246,13 +245,13 @@ export default function News() {
                 <div className="space-y-4 mb-6">
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-2">Press Inquiries</h4>
-                    <a href={`mailto:${contact.email}?subject=Press Inquiry`} className="text-blue-400 hover:text-blue-300">
+                    <a href={`mailto: ${contact.email}?subject=Press Inquiry`} className="text-blue-400 hover: text-blue-300">
                       {contact.email}
                     </a>
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-2">Phone</h4>
-                    <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="text-blue-400 hover:text-blue-300">
+                    <a href={`tel: ${contact.phone.replace(/[^\d+]/g,'')}`} className="text-blue-400 hover: text-blue-300">
                       {contact.phone}
                     </a>
                   </div>
@@ -262,7 +261,7 @@ export default function News() {
                   </div>
                 </div>
                 <div className="space-y-3">
-                  <a href={`mailto:${contact.email}?subject=Press Inquiry`} className="block w-full px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold text-center transition-colors">
+                  <a href={`mailto: ${contact.email}?subject=Press Inquiry`} className="block w-full px-6 py-3 bg-blue-600 hover: bg-blue-700 rounded-lg font-semibold text-center transition-colors">
                     Contact Press Team
                   </a>
                   <Link href="/about" className="block w-full px-6 py-3 border border-white/20 text-white hover:bg-white/10 rounded-lg font-semibold text-center transition-colors">
@@ -281,7 +280,7 @@ export default function News() {
             <p className="text-slate-300 mb-8">
               Subscribe to our newsletter for the latest news, announcements, and industry insights.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+            <div className="flex flex-col sm: flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"
                 placeholder="Enter your email"
@@ -301,7 +300,7 @@ export default function News() {
             <p className="text-slate-300 mb-8">
               Discover how our innovative solutions can transform your business and drive growth.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link href="/contact" className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-lg font-semibold transition-all">
                 Get Started
               </Link>
@@ -313,5 +312,4 @@ export default function News() {
         </section>
       </div>
     </>
-  );
-}
+  )}

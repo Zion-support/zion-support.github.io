@@ -264,14 +264,14 @@ export default function ServicesCatalog() {
       </Head>
 
       <header className="py-20 text-center px-4">
-        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight">Services Catalog</h1>
+        <h1 className="text-4xl md: text-5xl font-extrabold tracking-tight">Services Catalog</h1>
         <p className="mt-4 text-slate-300 max-w-3xl mx-auto">
           Production‑ready Micro SaaS, AI, and Cloud solutions. Transparent pricing, clear timelines, and measurable outcomes.
         </p>
-        <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
-          <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-5 py-2 rounded bg-blue-600 hover:bg-blue-700">Call {contact.phone}</a>
-          <a href={`mailto:${contact.email}`} className="px-5 py-2 rounded bg-purple-600 hover:bg-purple-700">Email {contact.email}</a>
-          <Link href="/contact" className="px-5 py-2 rounded bg-slate-800 hover:bg-slate-700 border border-white/10">Contact Form</Link>
+        <div className="mt-6 flex flex-col sm: flex-row items-center justify-center gap-3">
+          <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-5 py-2 rounded bg-blue-600 hover: bg-blue-700">Call {contact.phone}</a>
+          <a href={`mailto: ${contact.email}`} className="px-5 py-2 rounded bg-purple-600 hover: bg-purple-700">Email {contact.email}</a>
+          <Link href="/contact" className="px-5 py-2 rounded bg-slate-800 hover: bg-slate-700 border border-white/10">Contact Form</Link>
         </div>
         <div className="mt-2 text-slate-400 text-sm">{contact.address}</div>
       </header>
@@ -281,11 +281,11 @@ export default function ServicesCatalog() {
           <section key={section.id} id={section.id}>
             <div className="flex items-center gap-3 mb-6">
               <section.icon className="w-6 h-6 text-blue-400" />
-              <h2 className="text-2xl md:text-3xl font-bold">{section.title}</h2>
+              <h2 className="text-2xl md: text-3xl font-bold">{section.title}</h2>
             </div>
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md: grid-cols-2 gap-6">
               {section.items.map(item => (
-                <div key={item.name} className="rounded-xl border border-white/10 bg-slate-900/60 p-6 hover:border-blue-500/40 transition-colors">
+                <div key={item.name} className="rounded-xl border border-white/10 bg-slate-900/60 p-6 hover: border-blue-500/40 transition-colors">
                   <h3 className="text-xl font-semibold">{item.name}</h3>
                   <p className="mt-2 text-slate-300">{item.blurb}</p>
                   <div className="mt-4 flex flex-wrap items-center gap-3 text-sm">

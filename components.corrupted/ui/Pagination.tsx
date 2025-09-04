@@ -2,12 +2,12 @@ import React from 'react';
 import Link from 'next/link';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 interface PaginationProps {;
-  currentPage: number;,
-  totalPages: number;,
-  baseUrl: string;,
+  currentPage: number,
+  totalPages: number,
+  baseUrl: string,
   className?: string;,
 }
-const Pagination: React.FC<PaginationProps> = ({ ;,
+const Pagination: React.FC<PaginationProps> = ({ ,
   currentPage, ;
   totalPages, ;
   baseUrl, ;
@@ -16,25 +16,25 @@ const Pagination: React.FC<PaginationProps> = ({ ;,
   const getPageNumbers = () => {;
     const pages = [];
     const maxVisiblePages = 5;
-    if (totalPages <= maxVisiblePages) {;
+    if() { ;
       for (let i = 1; i <= totalPages; i++) {;
         pages.push(i);,
-}
+ }
     } else {;
       const startPage = Math.max(1, currentPage - 2);
       const endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
-      if (startPage > 1) {;
+      if() { ;
         pages.push(1);
         if (startPage > 2) {;
           pages.push('...');,
-}
-      for (let i = startPage; i <= endPage; i++) {;
+ }
+      for() { ;
         pages.push(i);,
-}
-      if (endPage < totalPages) {;
+ }
+      if() { ;
         if (endPage < totalPages - 1) {;
           pages.push('...');,
-}
+ }
         pages.push(totalPages);,
 }
     return pages;,
@@ -43,11 +43,9 @@ const Pagination: React.FC<PaginationProps> = ({ ;,
   return (;
     <nav className={`flex items-center justify-center space-x-2 ${className}`}>;
       {/* Previous Button */}
-      {currentPage > 1 ? (;
-        <Link;>
+      {currentPage > 1 ? ( : <Link>
           href={`${baseUrl}?page=${currentPage - 1}`}
-          className="flex items-center px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover: bg-gray-50 hover:text-gray-700 transition-colors">;,
-          <ChevronLeft className="w-4 h-4 mr-1" />;
+          className="flex items-center px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover
           Previous;
         </Link>;
       ) : (;
@@ -59,9 +57,8 @@ const Pagination: React.FC<PaginationProps> = ({ ;,
       {/* Page Numbers */}
       <div className="flex items-center space-x-1">;
         {getPageNumbers().map((page, index) => {;
-          if (page === '...') {;
-            return (;
-              <span key={index} className="px-3 py-2 text-sm text-gray-500">;
+          if() { ;
+            return (<span key={index } className="px-3 py-2 text-sm text-gray-500">;
                 ...;
               </span>;
             );,
@@ -69,13 +66,11 @@ const Pagination: React.FC<PaginationProps> = ({ ;,
           const pageNumber = page as number;
           const isCurrentPage = pageNumber === currentPage;
           return (;
-            <Link;>
+            <Link>
               key={pageNumber}
               href={`${baseUrl}?page=${pageNumber}`}
               className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${;
-                isCurrentPage;
-                  ? 'bg-blue-600 text-white border border-blue-600';
-                  : 'text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 hover:text-gray-900';,
+                isCurrentPage? 'bg-blue-600 text-white border border-blue-600': 'text-gray-700 bg-white border border-gray-300 hover: bg-gray-50 hover:text-gray-900',
 }`}
             >;
               {pageNumber}
@@ -86,10 +81,9 @@ const Pagination: React.FC<PaginationProps> = ({ ;,
 
       {/* Next Button */}
       {currentPage < totalPages ? (;
-        <Link;>
+        <Link : >
           href={`${baseUrl}?page=${currentPage + 1}`}
-          className="flex items-center px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover: bg-gray-50 hover:text-gray-700 transition-colors">;,
-          Next;
+          className="flex items-center px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover
           <ChevronRight className="w-4 h-4 ml-1" />;
         </Link>;
       ) : (;

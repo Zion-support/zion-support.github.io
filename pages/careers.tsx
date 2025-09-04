@@ -7,8 +7,7 @@ export default function Careers() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  };
-
+  }
   const jobOpenings = [
     {
       id: 1,
@@ -148,10 +147,10 @@ export default function Careers() {
         <meta name="description" content="Join Zion Tech Group's innovative team. Explore career opportunities in AI, micro SaaS, cybersecurity, and cutting-edge technology solutions." />
         <meta name="keywords" content="careers, jobs, AI engineer, full-stack developer, cybersecurity specialist, DevOps engineer, quantum computing, remote work" />
         <link rel="canonical" href={`${contact.site}/careers`} />
-        <meta property="og:title" content="Careers - Zion Tech Group | Join Our Innovative Team" />
+        <meta property="og: title" content="Careers - Zion Tech Group | Join Our Innovative Team" />
         <meta property="og:description" content="Join Zion Tech Group's innovative team. Explore career opportunities in AI, micro SaaS, cybersecurity, and cutting-edge technology solutions." />
-        <meta property="og:url" content={`${contact.site}/careers`} />
-        <meta property="og:type" content="website" />
+        <meta property="og: url" content={`${contact.site}/careers`} />
+        <meta property="og: type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Careers - Zion Tech Group | Join Our Innovative Team" />
         <meta name="twitter:description" content="Join Zion Tech Group's innovative team. Explore career opportunities in AI, micro SaaS, cybersecurity, and cutting-edge technology solutions." />
@@ -161,20 +160,20 @@ export default function Careers() {
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4">
           <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
               Join Our <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Innovative Team</span>
             </h1>
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Be part of a forward-thinking company that&apos;s shaping the future of technology. Work on cutting-edge projects and make a real impact.
+              Be part of a forward-thinking company that&aposs shaping the future of technology. Work on cutting-edge projects and make a real impact.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
+              <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-6 py-3 bg-blue-600 hover: bg-blue-700 rounded-lg font-semibold transition-colors">
                 Call {contact.phone}
               </a>
-              <a href={`mailto:${contact.email}`} className="px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors">
+              <a href={`mailto: ${contact.email}`} className="px-6 py-3 bg-purple-600 hover: bg-purple-700 rounded-lg font-semibold transition-colors">
                 Email {contact.email}
               </a>
-              <Link href="/contact" className="px-6 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
+              <Link href="/contact" className="px-6 py-3 bg-slate-800 hover: bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
                 Get in Touch
               </Link>
             </div>
@@ -185,7 +184,7 @@ export default function Careers() {
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-white text-center mb-12">Why Work With Us?</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
                   <div className="text-4xl mb-4">{benefit.icon}</div>
@@ -203,7 +202,7 @@ export default function Careers() {
             <h2 className="text-3xl font-bold text-white text-center mb-12">Open Positions</h2>
             <div className="space-y-6">
               {jobOpenings.map((job) => (
-                <div key={job.id} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
+                <div key={job.id} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: bg-white/10 transition-all duration-300">
                   <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
                     <div>
                       <h3 className="text-2xl font-bold text-white mb-2">{job.title}</h3>
@@ -214,15 +213,15 @@ export default function Careers() {
                         <span>🎯 {job.experience}</span>
                       </div>
                     </div>
-                    <div className="mt-4 lg:mt-0">
-                      <Link href={`/careers/${job.id}`} className="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
+                    <div className="mt-4 lg: mt-0">
+                      <Link href={`/careers/${job.id}`} className="px-6 py-2 bg-blue-600 hover: bg-blue-700 rounded-lg font-semibold transition-colors">
                         Apply Now
                       </Link>
                     </div>
                   </div>
                   <p className="text-slate-300 mb-4">{job.description}</p>
                   <div>
-                    <h4 className="text-lg font-semibold text-white mb-2">Key Requirements:</h4>
+                    <h4 className="text-lg font-semibold text-white mb-2">Key Requirements: </h4>
                     <ul className="list-disc list-inside text-slate-300 space-y-1">
                       {job.requirements.slice(0, 3).map((req, index) => (
                         <li key={index}>{req}</li>
@@ -243,7 +242,7 @@ export default function Careers() {
         {/* Company Culture */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl font-bold text-white mb-6">Our Culture</h2>
                 <p className="text-slate-300 mb-6">
@@ -270,30 +269,27 @@ export default function Careers() {
                 </div>
               </div>
               <div className="bg-gradient-to-br from-blue-500/20 to-purple-600/20 rounded-xl p-8 border border-white/10">
-                <h3 className="text-2xl font-bold text-white mb-4">Ready to Join Us?</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">Ready to Join Us ? </h3>
                 <p className="text-slate-300 mb-6">
-                  Don&apos;t see a position that matches your skills? We&apos;re always looking for talented individuals 
+                  Don&apos : t see a position that matches your skills? We&aposre always looking for talented individuals 
                   who share our passion for innovation.
                 </p>
                 <div className="space-y-3">
-                  <Link href="/contact" className="block w-full px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold text-center transition-colors">
-                    Send Us Your Resume
+                  <Link href="/contact" className="block w-full px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold text-white text-center transition-colors">
+                    Join Our Team
                   </Link>
-                  <a href={`mailto:${contact.email}?subject=Career Inquiry`} className="block w-full px-6 py-3 border border-white/20 text-white hover:bg-white/10 rounded-lg font-semibold text-center transition-colors">
-                    Email Us Directly
-                  </a>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-16 px-4 bg-white/5">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">Start Your Journey With Us</h2>
-            <p className="text-slate-300 mb-8">
-              Join a team that&apos;s building the future of technology. Apply today and be part of something extraordinary.
+        {/* Call to Action */}
+        <section className="py-20 px-4 text-center">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl font-bold mb-6">Ready to Build the Future?</h2>
+            <p className="text-xl text-slate-300 mb-8">
+              Join our team of passionate innovators who are building the future of technology. Apply today and be part of something extraordinary.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-lg font-semibold transition-all">
@@ -307,5 +303,4 @@ export default function Careers() {
         </section>
       </div>
     </>
-  );
-}
+  )}

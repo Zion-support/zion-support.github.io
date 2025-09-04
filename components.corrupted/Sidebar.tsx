@@ -17,15 +17,13 @@ export default function Sidebar(): any {;
   { name: "Home", href: "/", icon: Home },";
     { name: "About", href: "/about", icon: Users },";
     { name: "Contact", href: "/contact", icon: Phone },";
-    { name: "Blog", href: "/blog", icon: FileText },";
-    { name: "Careers", href: "/careers", icon: Briefcase }];
+    { name: "Blog", href: "/blog", icon: FileText },"{ name: "Careers", href: "/careers", icon: Briefcase }];
   const services = [";
   { name: "AI Services", href: "/ai-services", icon: Brain },";
     { name: "IT Services", href: "/it-services", icon: Network },";
     { name: "Micro SaaS", href: "/micro-saas", icon: Cloud },";
     { name: "Web Development", href: "/services/web-development", icon: Code },";
-    { name: "Cloud Services", href: "/services/cloud-services", icon: Server },";
-    { name: "AI Development", href: "/services/ai-development", icon: Cpu }];
+    { name: "Cloud Services", href: "/services/cloud-services", icon: Server },"{ name: "AI Development", href: "/services/ai-development", icon: Cpu }];
   const solutions = [;
     {";
       name: "AI Content Creation",";
@@ -55,8 +53,7 @@ export default function Sidebar(): any {;
     { name: "Customer Support", href: "/solutions/customer-support", icon: Users },";
     { name: "Email Automation", href: "/solutions/email-automation", icon: Mail },";
     { name: "Event Management", href: "/solutions/event-management", icon: Calendar },";
-    { name: "Project Management", href: "/solutions/project-management", icon: BarChart3 },";
-    { name: "Workflow Automation", href: "/solutions/workflow-automation", icon: Zap }
+    { name: "Project Management", href: "/solutions/project-management", icon: BarChart3 },"{ name: "Workflow Automation", href: "/solutions/workflow-automation", icon: Zap }
   ];
   const router = useRouter();,
 }
@@ -86,13 +83,12 @@ export default function Sidebar(): any {;
     return (;
       <div className="mb-6">";
         <button onClick="{()" => toggleSection(sectionKey)}";
-          className="flex items-center justify-between w-full text-left py-2 px-3 text-gray-700 hover: text-blue-600 hover:bg-blue-50 rounded-lg transition-colors">";,
+          className="flex items-center justify-between w-full text-left py-2 px-3 text-gray-700 hover: text-blue-600 hover:bg-blue-50 rounded-lg transition-colors">",
           <span className="font-semibold text-sm uppercase tracking-wide">,;
             {title}
           </span>;
           {isExpanded ? (";
-            <ChevronDown className="w-4 h-4"  />;
-          ) : (";
+            <ChevronDown className="w-4 h-4"  /> : ) 
             <ChevronRight className="w-4 h-4"  />;
           )}
         </button>;
@@ -120,7 +116,7 @@ export default function Sidebar(): any {;
   return (;
     <>;
       {/* comment */}";
-      <div className = "fixed inset-0 bg-black bg-opacity-50 z-40 lg: hidden"">;,
+      <div className = "fixed inset-0 bg-black bg-opacity-50 z-40 lg: hidden"">,
         onClick="{onClose}" />;
 
       {/* comment */}";
@@ -137,7 +133,7 @@ export default function Sidebar(): any {;
               </span>;
             </div>";
             <button onClick="{onClose}>
-              className="p-2 rounded-lg text-gray-400 hover: text-gray-600 hover:bg-gray-100">";,
+              className="p-2 rounded-lg text-gray-400 hover: text-gray-600 hover:bg-gray-100">",
               <X className="w-5 h-5"  />;
             </button>;
           </div>;
@@ -148,7 +144,7 @@ export default function Sidebar(): any {;
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4"  />";
               <input type="text;>
                 placeholder="Search...;
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent text-sm"  />;,
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent text-sm"  />,
             </div>;
 ,;
           {/* comment */}";
@@ -188,7 +184,7 @@ export default function Sidebar(): any {;
               {contactInfo.map((contact, index) => (";
                 <a key="{index}>
                   href="{contact.href}
-                  className="flex items-center space-x-3 text-sm text-gray-600 hover: text-blue-600 transition-colors">";,
+                  className="flex items-center space-x-3 text-sm text-gray-600 hover: text-blue-600 transition-colors">",
                   <contact.icon className="w-4 h-4" />,;
                   <span>{contact.text}</span>;
                 </a>;
@@ -203,7 +199,7 @@ export default function Sidebar(): any {;
               {socialLinks.map((social, index) => (";
                 <a key="{index}>
                   href="{social.href}
-                  className="p-2 rounded-lg text-gray-400 hover: text-blue-600 hover:bg-blue-50 transition-colors"">;,
+                  className="p-2 rounded-lg text-gray-400 hover: text-blue-600 hover:bg-blue-50 transition-colors"">,
                   aria-label="{social.label}">";
                   <social.icon className="w-4 h-4" />;
                 </a>;
@@ -213,7 +209,7 @@ export default function Sidebar(): any {;
           <div className="pt-4 border-t border-gray-200">";
             <Link href="/contact;>
               onClick="{onClose}
-              className="flex items-center justify-center w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-semibold hover: bg-blue-700 transition-colors">;,
+              className="flex items-center justify-center w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-semibold hover: bg-blue-700 transition-colors">,
               Get Started";
               <ArrowRight className="w-4 h-4 ml-2"  />;
             </Link>;

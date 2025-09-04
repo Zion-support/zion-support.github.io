@@ -1,24 +1,24 @@
 import React, { useState } from "react";
 interface Notification {;
-  id: string;,
-  title: string;,
-  message: string;,
-  type: "success" | "warning" | "error" | "info";,
-  priority: "low" | "medium" | "high" | "critical";,
-  timestamp: Date;,
-  read: boolean;,
-  archived: boolean;,
-  category: string;,
+  id: string,
+  title: string,
+  message: string,
+  type: "success" | "warning" | "error" | "info",
+  priority: "low" | "medium" | "high" | "critical",
+  timestamp: Date,
+  read: boolean,
+  archived: boolean,
+  category: string,
   actionUrl?: string;
   metadata?: Record<string, any>;,
 }
 interface AdvancedNotificationCenterProps {;
-  notifications: Notification[];,
-  onMarkAsRead?: (id: string) => void;,
-  onArchive?: (id: string) => void;,
-  onDelete?: (id: string) => void;,
+  notifications: Notification[],
+  onMarkAsRead?: (id: string) => void,
+  onArchive?: (id: string) => void,
+  onDelete?: (id: string) => void,
 }
-const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({;,
+const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({,
   notifications,;
   onMarkAsRead,;
   onArchive,;
@@ -33,8 +33,8 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
     const matchesType = typeFilter === "all" || notification.type === typeFilter;
     return matchesFilter && matchesType;,
 });
-  const getTypeIcon = (type: string) => {;,
-    switch (type) {;
+  const getTypeIcon = (type: string) => {,
+    switch() { ;
       case "success":;
         return "✅";
       case "warning":;
@@ -43,11 +43,11 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
         return "❌";
       case "info":;
         return "ℹ️";
-      default: ;,
+      default:  ,
         return "📢";,
-}
-  const getTypeColor = (type: string) => {;,
-    switch (type) {;
+ }
+  const getTypeColor = (type: string) => {,
+    switch() { ;
       case "success":;
         return "border-green-500 bg-green-50";
       case "warning":;
@@ -56,9 +56,9 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
         return "border-red-500 bg-red-50";
       case "info":;
         return "border-blue-500 bg-blue-50";
-      default: ;,
+      default:  ,
         return "border-gray-500 bg-gray-50";,
-}
+ }
   return (;
     <div className="bg-white rounded-lg shadow-lg p-6">;
       <div className="flex justify-between items-center mb-6">;
@@ -89,13 +89,12 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
         {filteredNotifications.length === 0 ? (;
           <div className="text-center py-8 text-gray-500">;
             No notifications found;
-          </div>;
-        ) : (;
+          </div> : ) 
           filteredNotifications.map((notification) => (;
             <div;>
               key={notification.id}
               className={`border-l-4 p-4 rounded-r-lg ${getTypeColor(notification.type)} ${;
-                !notification.read ? "opacity-100" : "opacity-75";,
+                !notification.read ? "opacity-100" : "opacity-75",
 }`}
             >;
               <div className="flex items-start justify-between">;
@@ -115,8 +114,7 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
                           : notification.priority === "high";
                           ? "bg-orange-200 text-orange-800";
                           : notification.priority === "medium";
-                          ? "bg-yellow-200 text-yellow-800";
-                          : "bg-green-200 text-green-800";,
+                          ? "bg-yellow-200 text-yellow-800": "bg-green-200 text-green-800",
 }`}>;
                         {notification.priority}
                       </span>;
@@ -127,21 +125,21 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
                   {!notification.read && onMarkAsRead && (;
                     <button;>
                       onClick={() => onMarkAsRead(notification.id)}
-                      className="text-blue-600 hover: text-blue-800 text-sm">;,
+                      className="text-blue-600 hover: text-blue-800 text-sm">,
                       Mark as read;
                     </button>;
                   )}
                   {onArchive && (;
                     <button;>
                       onClick={() => onArchive(notification.id)}
-                      className="text-gray-600 hover: text-gray-800 text-sm">;,
+                      className="text-gray-600 hover: text-gray-800 text-sm">,
                       Archive;
                     </button>;
                   )}
                   {onDelete && (;
                     <button;>
                       onClick={() => onDelete(notification.id)}
-                      className="text-red-600 hover: text-red-800 text-sm">;,
+                      className="text-red-600 hover: text-red-800 text-sm">,
                       Delete;
                     </button>;
                   )}

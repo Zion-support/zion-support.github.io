@@ -1,29 +1,23 @@
 import { useState, useEffect } from 'react';
 
-export default function ThemeToggle() {
-  const [isDark, setIsDark] = useState(true);
+export default function ThemeToggle() { const [isDark, setIsDark] = useState(true);
 
   useEffect(() => {
     // Check for saved theme preference or default to dark mode
     if (typeof window !== 'undefined') {
       const savedTheme = localStorage.getItem('theme');
       if (savedTheme) {
-        setIsDark(savedTheme === 'dark');
-      }
-    }
+        setIsDark(savedTheme === 'dark') }
   }, []);
 
   useEffect(() => {
     // Apply theme to document
-    if (typeof window !== 'undefined') {
-      if (isDark) {
+    if() { if (isDark) {
         document.documentElement.classList.add('dark');
-        localStorage.setItem('theme', 'dark');
-      } else {
+        localStorage.setItem('theme', 'dark') } else {
         document.documentElement.classList.remove('dark');
         localStorage.setItem('theme', 'light');
       }
-    }
   }, [isDark]);
 
   const toggleTheme = () => {
@@ -32,7 +26,7 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="p-2 rounded-lg bg-slate-800/50 hover:bg-slate-700/50 transition-colors"
+      className="p-2 rounded-lg bg-slate-800/50 hover: bg-slate-700/50 transition-colors"
       aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
     >
       {isDark ? (

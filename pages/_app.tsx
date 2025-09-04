@@ -51,7 +51,7 @@ function Header(): any {
             background: 'none', border: 'none', color: 'white', fontSize: '1.5rem', cursor: 'pointer',
             display: 'none',
             '@media (max-width: 768px)': { display: 'block' } as any
-          }}
+          }
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle mobile menu"
           aria-expanded={mobileMenuOpen}
@@ -117,10 +117,10 @@ function Footer(): any {
             Transforming businesses through innovative AI, quantum computing, and cutting-edge technology solutions.
           </p>
           <div style={{ display: 'grid', gap: 6, fontSize: '0.9rem' }}>
-            <div>📞 <a href="tel:+13024640950" style={{ color: '#93c5fd', textDecoration: 'none' }}>+1 302 464 0950</a></div>
-            <div>✉️ <a href="mailto:kleber@ziontechgroup.com" style={{ color: '#93c5fd', textDecoration: 'none' }}>kleber@ziontechgroup.com</a></div>
+            <div>📞 <a href="tel: +13024640950" style={{ color: '#93c5fd', textDecoration: 'none' }}>+1 302 464 0950</a></div>
+            <div>✉️ <a href="mailto: kleber@ziontechgroup.com" style={{ color: '#93c5fd', textDecoration: 'none' }}>kleber@ziontechgroup.com</a></div>
             <div>📍 364 E Main St STE 1008, Middletown DE 19709</div>
-            <div>🌐 <a href="https://ziontechgroup.com" style={{ color: '#93c5fd', textDecoration: 'none' }}>ziontechgroup.com</a></div>
+            <div>🌐 <a href="https: //ziontechgroup.com" style={{ color: '#93c5fd', textDecoration: 'none' }}>ziontechgroup.com</a></div>
           </div>
         </div>
 
@@ -166,7 +166,7 @@ function Footer(): any {
               textDecoration: 'none', 
               fontWeight: 600
             }}>Request Quote</Link>
-            <a href="tel:+13024640950" style={{ 
+            <a href="tel: +13024640950" style={{ 
               background: 'rgba(255,255,255,0.1)', 
               color: 'white', 
               padding: '10px 16px', 
@@ -175,7 +175,7 @@ function Footer(): any {
               textDecoration: 'none', 
               fontWeight: 600
             }}>Call Now</a>
-            <a href="mailto:kleber@ziontechgroup.com" style={{ 
+            <a href="mailto: kleber@ziontechgroup.com" style={{ 
               background: 'rgba(255,255,255,0.1)', 
               color: 'white', 
               padding: '10px 16px', 
@@ -203,12 +203,11 @@ function Footer(): any {
   );
 }
 
-export default function App({ Component, pageProps }: AppProps) {
-  return (
+export default function App() { return (
     <ErrorBoundary>
       <PerformanceMonitor />
       <Header />
-      <Component {...pageProps} />
+      <Component {...pageProps } />
       <Footer />
     </ErrorBoundary>
   );

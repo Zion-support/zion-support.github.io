@@ -16,40 +16,36 @@ const ImprovedFooter: React.FC = () => {,;
       { name: "Small Business", href: "/solutions/small-business" },";
       { name: "Startups", href: "/solutions/startups" },";
       { name: "Healthcare", href: "/solutions/healthcare" },";
-      { name: "Finance", href: "/solutions/finance" },";
-      { name: "E-commerce", href: "/solutions/ecommerce" }
+      { name: "Finance", href: "/solutions/finance" },"{ name: "E-commerce", href: "/solutions/ecommerce" }
     ],;
     company: [",;
       { name: "About Us", href: "/about" },";
       { name: "Our Team", href: "/team" },";
       { name: "Careers", href: "/careers" },";
       { name: "Contact", href: "/contact" },";
-      { name: "Blog", href: "/blog" },";
-      { name: "Case Studies", href: "/case-studies" }
+      { name: "Blog", href: "/blog" },"{ name: "Case Studies", href: "/case-studies" }
     ],;
     resources: [",;
       { name: "Documentation", href: "/docs" },";
       { name: "White Papers", href: "/white-papers" },";
       { name: "Webinars", href: "/webinars" },";
       { name: "Support", href: "/support" },";
-      { name: "API Reference", href: "/api" },";
-      { name: "Sitemap", href: "/sitemap" }
+      { name: "API Reference", href: "/api" },"{ name: "Sitemap", href: "/sitemap" }
     ],;
     legal: [",;
       { name: "Privacy Policy", href: "/privacy" },";
       { name: "Terms of Service", href: "/terms" },";
-      { name: "Cookie Policy", href: "/cookies" },";
-      { name: "GDPR Compliance", href: "/gdpr" }
+      { name: "Cookie Policy", href: "/cookies" },"{ name: "GDPR Compliance", href: "/gdpr" }
     ];
   const socialLinks = [];
 
   return (;
     <footer className="bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 text-white">;
       {/* comment */}";
-      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">";,
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">,;
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">",
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-6 gap-8">,;
           {/* comment */}";
-          <div className="lg: col-span-2">";,
+          <div className="lg: col-span-2">",
             <div className="flex items-center space-x-2 mb-6">";
               <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">";
                 <span className="text-white font-bold text-xl">Z</span>;
@@ -64,13 +60,13 @@ with cutting-edge AI, cloud architecture, and innovative development services.;
             <div className="space-y-3">";
               <div className="flex items-center text-gray-300">";
                 <Mail className="h-5 w-5 mr-3 text-blue-400"  />";
-                <a href="mailto: info@ziontechgroup.com" className="hover:text-white transition-colors">;,
+                <a href="mailto: info@ziontechgroup.com" className="hover:text-white transition-colors">,
                   info@ziontechgroup.com,;
                 </a>;
               </div>";
               <div className="flex items-center text-gray-300">";
                 <Phone className="h-5 w-5 mr-3 text-blue-400"  />";
-                <a href="tel: +15551234567" className="hover:text-white transition-colors">;,
+                <a href="tel: +15551234567" className="hover:text-white transition-colors">,
                   +1 (555) 123-4567,;
                 </a>;
               </div>";
@@ -85,8 +81,8 @@ with cutting-edge AI, cloud architecture, and innovative development services.;
               {footerLinks.services.map((link) => (";
                 <li key="{link.name}">";
                   <Link href="{link.href}" ";>
-                    className="text-gray-300 hover: text-white transition-colors flex items-center group">";,
-                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity"  />,;
+                    className="text-gray-300 hover: text-white transition-colors flex items-center group">",
+                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover: opacity-100 transition-opacity"  />,;
                     {link.name}
                   </Link>;
                 </li>;
@@ -100,8 +96,8 @@ with cutting-edge AI, cloud architecture, and innovative development services.;
               {footerLinks.solutions.map((link) => (";
                 <li key="{link.name}">";
                   <Link href="{link.href}" ";>
-                    className="text-gray-300 hover: text-white transition-colors flex items-center group">";,
-                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity"  />,;
+                    className="text-gray-300 hover: text-white transition-colors flex items-center group">",
+                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover: opacity-100 transition-opacity"  />,;
                     {link.name}
                   </Link>;
                 </li>;
@@ -115,8 +111,8 @@ with cutting-edge AI, cloud architecture, and innovative development services.;
               {footerLinks.company.map((link) => (";
                 <li key="{link.name}">";
                   <Link href="{link.href}" ";>
-                    className="text-gray-300 hover: text-white transition-colors flex items-center group">";,
-                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity"  />,;
+                    className="text-gray-300 hover: text-white transition-colors flex items-center group">",
+                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover: opacity-100 transition-opacity"  />,;
                     {link.name}
                   </Link>;
                 </li>;
@@ -130,8 +126,8 @@ with cutting-edge AI, cloud architecture, and innovative development services.;
               {footerLinks.resources.map((link) => (";
                 <li key="{link.name}">";
                   <Link href="{link.href}" ";>
-                    className="text-gray-300 hover: text-white transition-colors flex items-center group">";,
-                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity"  />,;
+                    className="text-gray-300 hover: text-white transition-colors flex items-center group">",
+                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover: opacity-100 transition-opacity"  />,;
                     {link.name}
                   </Link>;
                 </li>;
@@ -148,16 +144,16 @@ with cutting-edge AI, cloud architecture, and innovative development services.;
             <div className="flex">";
               <input type="email;>
                 placeholder="Enter your email;
-                className="flex-1 px-4 py-2 bg-gray-800 border border-gray-600 rounded-l-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400"  />";,
-              <button className="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-r-lg hover: from-blue-700 hover:to-purple-700 transition-all duration-300">;,
+                className="flex-1 px-4 py-2 bg-gray-800 border border-gray-600 rounded-l-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400"  />",
+              <button className="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-r-lg hover: from-blue-700 hover:to-purple-700 transition-all duration-300">,
                 Subscribe,;
               </button>;
             </div>;
 ,;
       {/* comment */}";
       <div className="border-t border-gray-700">";
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-6">";,
-          <div className="flex flex-col md:flex-row justify-between items-center">,;
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-6">",
+          <div className="flex flex-col md: flex-row justify-between items-center">,;
             {/* comment */}";
             <div className="flex items-center text-gray-400 text-sm mb-4 md: mb-0">,;
               <span>© {currentYear} Zion Tech Group. All rights reserved.</span>";
@@ -165,13 +161,13 @@ with cutting-edge AI, cloud architecture, and innovative development services.;
               <span>Made with love in San Francisco</span>;
             </div>;
             {/* comment */}";
-            <div className="flex items-center space-x-4 mb-4 md: mb-0">;,
+            <div className="flex items-center space-x-4 mb-4 md: mb-0">,
               {socialLinks.map((social) => (",;
                 <a key="{social.name}>
                   href="{social.href}
                   target="_blank;
                   rel="noopener noreferrer;
-                  className="text-gray-400 hover: text-white transition-colors"">;,
+                  className="text-gray-400 hover: text-white transition-colors"">,
                   aria-label="{social.name}">";
                   <social.icon className="w-5 h-5" />;
                 </a>;

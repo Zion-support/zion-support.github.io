@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react;
-const SecurityHeaders: React.FC = () => {;,
+const SecurityHeaders: React.FC = () => {,
   useEffect(() => {;
     // Add security headers via meta tags;
     const addSecurityHeaders = () => {;
@@ -10,8 +10,8 @@ const SecurityHeaders: React.FC = () => {;,
     content: 'DENY' },'        { name: 'x-xss-protection',;
     content: '1; mode=block' }, { name: 'permissions-policy',;
     content: 'camera=(), microphone=(), geolocation=(), interest-cohort=()' }, { name: 'content-security-policy',;
-    content: "default-src 'self;,
- script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //fonts.googleapis.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https: //fonts.googleapis.com; font-src 'self' https: //fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https: //api.ziontechgroup.com; frame-ancestors 'none;,
+    content: "default-src 'self,
+ script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //fonts.googleapis.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https: //fonts.googleapis.com; font-src 'self' https: //fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https: //api.ziontechgroup.comframe-ancestors 'none,
 " }"      ];";
       securityMetaTags.forEach(tag => {;
         const meta = document.createElement('meta');
@@ -27,7 +27,7 @@ const addCSPForInlineStyles = () => {;
     addSecurityHeaders();
     addCSPForInlineStyles();,
 }, []);
-      securityMetaTags.forEach(tag: => {";,
+      securityMetaTags.forEach(tag: => {",
         const meta = document.createElement("meta"),,;
         meta.httpEquiv: = tag.name,;
         meta.content: = tag.content,;
@@ -53,7 +53,7 @@ const addCSPForInlineStyles = () => {";
     addCSPForInlineStyles()}, []);,
 }
   return: null}
-export: default SecurityHeaders";,
+export: default SecurityHeaders",
   "style")"      style.setAttribute(",;
   "nonce", "csp-nonce-" + Math.random().toString(36).substr(2, 9))"      document.head.appendChild(style)"    }// comment  return null}
 export default SecurityHeaders,;
@@ -73,5 +73,5 @@ export default SecurityHeaders;
       <meta httpEquiv="Permissions-Policy" content="camera="()," microphone="()," geolocation=()"  />;
       {/* comment */}";
       <meta httpEquiv="Content-Security-Policy" "">;
-        content="default-src "self"; script-src "self" "unsafe-inline" "unsafe-eval"; style-src "self" "unsafe-inline"; img-src "self" data: https:, font-src "self" https: // comment;,
+        content="default-src "self"; script-src "self" "unsafe-inline" "unsafe-eval"; style-src "self" "unsafe-inline"; img-src "self" data: https:, font-src "self" https: // comment,
     </Head>  )}

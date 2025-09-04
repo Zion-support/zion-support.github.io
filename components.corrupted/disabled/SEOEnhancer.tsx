@@ -12,13 +12,13 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({",;
   title = "Zion Tech Group - Leading Technology Solutions Provider",";
   description = "Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.",";
   keywords = "technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services",";
-  ogImage = "https: // comment;,
-  url = "https: // comment;,
+  ogImage = "https: // comment,
+  url = "https: // comment,
   type = "website",";
   siteName = "Zion Tech Group";,
 }) => {";
-  const fullTitle = title.includes("Zion Tech Group") ? title : "${title} - Zion Tech Group";
-  const fullUrl = url.startsWith("http") ? url : "https: // comment;,
+  const fullTitle = title.includes("Zion Tech Group") ? title: "${title} - Zion Tech Group";
+  const fullUrl = url.startsWith("http") ? url: "https: // comment,
   return (;
 <Head>;
       <title>{fullTitle}</title>;
@@ -28,17 +28,17 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({",;
       <meta name="robots" content="index, follow"  />";
       <meta name="viewport" content="width=device-width, initial-scale=1"  />;
       {/* comment */}";
-      <meta property="og:title" content="{fullTitle}"  />";
-      <meta property="og:description" content="{description}"  />";
-      <meta property="og:image" content="{ogImage}"  />";
-      <meta property="og:url" content="{fullUrl}"  />";
-      <meta property="og:type" content="{type}"  />";
-      <meta property="og:site_name" content="{siteName}"  />;
+      <meta property="og: title" content="{fullTitle}"  />";
+      <meta property="og: description" content="{description}"  />";
+      <meta property="og: image" content="{ogImage}"  />";
+      <meta property="og: url" content="{fullUrl}"  />";
+      <meta property="og: type" content="{type}"  />";
+      <meta property="og: site_name" content="{siteName}"  />;
       {/* comment */}";
       <meta name="twitter: card" content="summary_large_image"  />",;
-      <meta name="twitter:title" content="{fullTitle}"  />";
-      <meta name="twitter:description" content="{description}"  />";
-      <meta name="twitter:image" content="{ogImage}"  />;
+      <meta name="twitter: title" content="{fullTitle}"  />";
+      <meta name="twitter: description" content="{description}"  />";
+      <meta name="twitter: image" content="{ogImage}"  />;
       {/* comment */}";
       <link rel="canonical" href="{fullUrl}"  />;
       {/* comment */}";

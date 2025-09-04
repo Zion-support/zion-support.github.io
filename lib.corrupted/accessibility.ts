@@ -1,5 +1,5 @@
 // Accessibility configuration;
-export const accessibilityConfig = {;
+export const accessibilityConfig={;
   // ARIA labels for common elements;
   ariaLabels: {;
     navigation: "Main navigation",;
@@ -13,18 +13,18 @@ export const accessibilityConfig = {;
     loading: "Loading",;
     error: "Error",;
     success: "Success",;
-    warning: "Warning";,;,
+    warning: "Warning",,
 },;
   // Focus management;
   focusManagement: {;
     skipToContent: true,;
     focusTrap: true,;
-    focusVisible: true;,;,
+    focusVisible: true,;,
 },;
   // Color contrast;
   colorContrast: {;
     minimumRatio: 4.5,;
-    enhancedRatio: 7.0;,;,
+    enhancedRatio: 7.0,;,
 },;
   // Keyboard navigation;
   keyboardNavigation: {;
@@ -32,12 +32,11 @@ export const accessibilityConfig = {;
     arrowKeys: true,;
     escapeKey: true,;
     enterKey: true,;
-    spaceKey: true;,;,
+    spaceKey: true,;,
 }
 // Accessibility utilities;
-export const accessibilityUtils = {;
-  // Generate unique IDs for ARIA attributes;
-  generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2, 9)}`,;
+export const accessibilityUtils={;
+  // Generate unique IDs for ARIA attributesgenerateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2, 9)}`,;
   // Check if element is visible;
   isVisible: ({;
     const style = window.getComputedStyle(element)) => $3;

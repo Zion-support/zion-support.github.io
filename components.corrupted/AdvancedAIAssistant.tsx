@@ -13,38 +13,38 @@ import { ;
   Bot;,
 } from "lucide-react";
 interface AIConversation {;
-  id: string;,
-  type: "chat" | "task" | "analysis" | "recommendation";,
-  title: string;,
-  description: string;,
-  status: "active" | "completed" | "archived";,
-  priority: "low" | "medium" | "high" | "critical";,
-  createdAt: string;,
-  lastUpdated: string;,
+  id: string,
+  type: "chat" | "task" | "analysis" | "recommendation",
+  title: string,
+  description: string,
+  status: "active" | "completed" | "archived",
+  priority: "low" | "medium" | "high" | "critical",
+  createdAt: string,
+  lastUpdated: string,
 }
 interface AIInsight {;
-  id: string;,
-  title: string;,
-  description: string;,
-  type: "positive" | "warning" | "critical" | "info";,
-  impact: "high" | "medium" | "low";,
-  confidence: number;,
+  id: string,
+  title: string,
+  description: string,
+  type: "positive" | "warning" | "critical" | "info",
+  impact: "high" | "medium" | "low",
+  confidence: number,
   data: Record<string, string | number | boolean>;
-  createdAt: string;,
+  createdAt: string,
 }
 interface AIFeature {;
-  id: string;,
-  name: string;,
-  description: string;,
-  icon: React.ReactNode;,
-  status: "active" | "beta" | "coming-soon";,
-  usage: number;,
-  accuracy: number;,
+  id: string,
+  name: string,
+  description: string,
+  icon: React.ReactNode,
+  status: "active" | "beta" | "coming-soon",
+  usage: number,
+  accuracy: number,
 }
-const AdvancedAIAssistant: React.FC = () => {;,
+const AdvancedAIAssistant: React.FC = () => {,
   const [selectedView, setSelectedView] = useState<"overview" | "conversations" | "insights" | "features">("overview");
   const [searchQuery, setSearchQuery] = useState("");
-  const aiFeatures: AIFeature[] = [;,
+  const aiFeatures: AIFeature[] = [,
     {;
       id: "1",;
       name: "Natural Language Processing",;
@@ -52,7 +52,7 @@ const AdvancedAIAssistant: React.FC = () => {;,
       icon: <Brain className="w-6 h-6" />,;
       status: "active",;
       usage: 95,;
-      accuracy: 94;,
+      accuracy: 94,
 },;
     {;
       id: "2",;
@@ -61,7 +61,7 @@ const AdvancedAIAssistant: React.FC = () => {;,
       icon: <TrendingUp className="w-6 h-6" />,;
       status: "active",;
       usage: 87,;
-      accuracy: 89;,
+      accuracy: 89,
 },;
     {;
       id: "3",;
@@ -70,7 +70,7 @@ const AdvancedAIAssistant: React.FC = () => {;,
       icon: <Zap className="w-6 h-6" />,;
       status: "active",;
       usage: 92,;
-      accuracy: 91;,
+      accuracy: 91,
 },;
     {;
       id: "4",;
@@ -79,7 +79,7 @@ const AdvancedAIAssistant: React.FC = () => {;,
       icon: <MessageCircle className="w-6 h-6" />,;
       status: "beta",;
       usage: 73,;
-      accuracy: 87;,
+      accuracy: 87,
 },;
     {;
       id: "5",;
@@ -88,7 +88,7 @@ const AdvancedAIAssistant: React.FC = () => {;,
       icon: <Users className="w-6 h-6" />,;
       status: "active",;
       usage: 89,;
-      accuracy: 93;,
+      accuracy: 93,
 },;
     {;
       id: "6",;
@@ -96,11 +96,10 @@ const AdvancedAIAssistant: React.FC = () => {;,
       description: "Intelligent risk identification and mitigation strategies",;
       icon: <Shield className="w-6 h-6" />,;
       status: "beta",;
-      usage: 68,;
-      accuracy: 85;,
+      usage: 68,accuracy: 85,
 }
   ];
-  const aiInsights: AIInsight[] = [;,
+  const aiInsights: AIInsight[] = [,
     {;
       id: "1",;
       title: "Project Timeline Optimization",;
@@ -109,7 +108,7 @@ const AdvancedAIAssistant: React.FC = () => {;,
       impact: "high",;
       confidence: 0.91,;
       data: { compression: 15, savings: "2 weeks", risk: "low" },;
-      createdAt: "2025-01-27 16:00";,
+      createdAt: "2025-01-27 16:00",
 },;
     {;
       id: "2",;
@@ -119,7 +118,7 @@ const AdvancedAIAssistant: React.FC = () => {;,
       impact: "medium",;
       confidence: 0.87,;
       data: { underutilization: 23, potentialSavings: "$8,500", timeframe: "2 weeks" },;
-      createdAt: "2025-01-27 15:45";,
+      createdAt: "2025-01-27 15:45",
 },;
     {;
       id: "3",;
@@ -128,21 +127,20 @@ const AdvancedAIAssistant: React.FC = () => {;,
       type: "positive",;
       impact: "high",;
       confidence: 0.94,;
-      data: { improvement: 12, aiContribution: 8, trend: "positive" },;
-      createdAt: "2025-01-27 15:30";,
+      data: { improvement: 12, aiContribution: 8, trend: "positive" },createdAt: "2025-01-27 15:30",
 }
   ];
-  const getInsightIcon = (type: string) => {;,
-    switch (type) {;
+  const getInsightIcon = (type: string) => {,
+    switch() { ;
       case "positive":;
         return <CheckCircle className="w-6 h-6 text-green-400" />;
       case "warning":;
         return <AlertCircle className="w-6 h-6 text-yellow-400" />;
       case "critical":;
         return <AlertCircle className="w-6 h-6 text-red-400" />;
-      default: ;,
+      default:  ,
         return <Activity className="w-6 h-6 text-blue-400" />;,
-}
+ }
   return (;
     <section className="py-20 bg-gradient-to-br from-gray-900 via-black to-gray-900">;
       <div className="container mx-auto px-4">;
@@ -161,16 +159,13 @@ const AdvancedAIAssistant: React.FC = () => {;,
           {[;
             { id: "overview", label: "Overview" },;
             { id: "conversations", label: "Conversations" },;
-            { id: "insights", label: "Insights" },;
-            { id: "features", label: "Features" }
+            { id: "insights", label: "Insights" },{ id: "features", label: "Features" }
           ].map((tab) => (;
             <button;>
               key={tab.id}
               onClick={() => setSelectedView(tab.id as any)}
               className={`px-6 py-3 mx-2 mb-2 rounded-lg font-medium transition-colors ${;
-                selectedView === tab.id;
-                  ? "bg-blue-600 text-white";
-                  : "bg-gray-800 text-gray-300 hover:bg-gray-700";,
+                selectedView === tab.id? "bg-blue-600 text-white": "bg-gray-800 text-gray-300 hover: bg-gray-700",
 }`}
             >;
               {tab.label}
@@ -185,13 +180,13 @@ const AdvancedAIAssistant: React.FC = () => {;,
             placeholder="Search AI features and insights...";
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500";,
+            className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500",
           />;
         </div>;
 
         {/* Content based on selected view */}
         {selectedView === "overview" && (;
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-6">;,
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-6">,
             {aiFeatures.slice(0, 6).map((feature) => (;
               <div key={feature.id} className="bg-gray-800 p-6 rounded-lg border border-gray-700">;
                 <div className="flex items-center mb-4">;
@@ -206,8 +201,7 @@ const AdvancedAIAssistant: React.FC = () => {;,
                     feature.status === "active" ;
                       ? "bg-green-900 text-green-300";
                       : feature.status === "beta";
-                      ? "bg-yellow-900 text-yellow-300";
-                      : "bg-gray-700 text-gray-300";,
+                      ? "bg-yellow-900 text-yellow-300": "bg-gray-700 text-gray-300",
 }`}>;
                     {feature.status}
                   </span>;
@@ -237,8 +231,7 @@ const AdvancedAIAssistant: React.FC = () => {;,
                           insight.impact === "high" ;
                             ? "bg-red-900 text-red-300";
                             : insight.impact === "medium";
-                            ? "bg-yellow-900 text-yellow-300";
-                            : "bg-green-900 text-green-300";,
+                            ? "bg-yellow-900 text-yellow-300": "bg-green-900 text-green-300",
 }`}>;
                           {insight.impact} impact;
                         </span>;
@@ -257,7 +250,7 @@ const AdvancedAIAssistant: React.FC = () => {;,
           </div>;
         )}
         {selectedView === "features" && (;
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-6">;,
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-6">,
             {aiFeatures.map((feature) => (;
               <div key={feature.id} className="bg-gray-800 p-6 rounded-lg border border-gray-700">;
                 <div className="flex items-center mb-4">;
@@ -284,8 +277,7 @@ const AdvancedAIAssistant: React.FC = () => {;,
                   </div>;
                   <div className="w-full bg-gray-700 rounded-full h-2">;
                     <div ;>
-                      className="bg-green-600 h-2 rounded-full" ;
-                      style={{ width: `${feature.accuracy}%` }
+                      className="bg-green-600 h-2 rounded-full" style={{ width: `${feature.accuracy}%` }
                     ></div>;
                   </div>;
                 </div>;

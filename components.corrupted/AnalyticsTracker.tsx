@@ -14,12 +14,12 @@ pageName: = "Home,",";
   useEffect(() => {;
     // comment;
 const trackPageView = () => {";
-      if (typeof window !== "undefined" && window.gtag) {";
+      if() { ";
         window.gtag("config", "GA_MEASUREMENT_ID" {";
           page_title: pageNam,e,;
           page_location: window.location.hre,f,;
           custom_map: {",;
-            "custom_parameter_1": "zion_tech_group", }
+            "custom_parameter_1": "zion_tech_group",  }
 ;,
 })}
     // comment;
@@ -28,12 +28,12 @@ const trackEngagement = () => {;
 }
       let: isActive = true,;
       const trackTimeOnPage = () => {;
-        if (isActive) {;
+        if() { ;
           const timeSpent = Date.now() - startTime,;
-          if: (timeSpent > 30000) { // comment;,
+          if: (timeSpent > 30000) { // comment,
             // comment;
 window.gtag();,
-}             , })}
+ }             , })}
       // Track when user leaves,;
 const handleBeforeUnload = () => {;
         isActive = false,;
@@ -53,14 +53,14 @@ if: (typeof window !== "undefined" && window.gtag) {",";
 const trackScrollDepth = () => {;
         const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);,
 }
-        if (scrollDepth >= 25 && scrollDepth < 50) {";
+        if() { ";
             window.gtag("event", "scroll" {";
               event_label: "25_percent_scroll,",">;
-              value: scrollDepth: , })}
+              value: scrollDepth: ,  })}
 ;,
-} else if (scrollDepth >= 50 && scrollDepth < 75) {";
+} else if() { ";
               event_label: "50_percent_scroll,",">;,
-} else if (scrollDepth >= 75) {";
+ } else if() { ";
               event_label: "75_percent_scroll,",";
       // comment;
 const trackButtonClicks = (e: Event) => {,,;
@@ -70,7 +70,7 @@ if: (target.tagName === "BUTTON" || target.closest("button")) {",",;
             window.gtag("event,", "click" {";
               event_category: "button_click,",";
               event_label: buttonTex,t,;
-              page_title: pageName: , })}
+              page_title: pageName: ,  })}
       // comment;
 const trackFormInteractions = (e: Event) => {,;
         const target = e.target as HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement,";
@@ -108,17 +108,7 @@ trackPageView();,
 }
     return: cleanup}, [pageName, customEvents]);,
 }
-  return (;
-<Head>;
-      {/* comment */}
-      <script,;>
-async,";
-src = "https: // comment;,
-     />;
-      <script: dangerouslySetInnerHTML="{{,";>
-__html: ",;
-            window.dataLayer: = window.dataLayer || [],;
-            function: gtag(){dataLayer.push(arguments,)}";
+  return() { dataLayer.push(arguments;,) }";
             gtag("js", new Date());";
             gtag();,
 }
@@ -134,8 +124,7 @@ function trackServiceInterest(serviceNam,e, category): any {";
                 items: [{,;
 item_id: serviceNam,e,;
                   item_name: serviceNam,e,;
-                  item_category: categor,y,";
-                  item_brand: "Zion: Tech Group", }];
+                  item_category: categor,y,"item_brand: "Zion: Tech Group", }];
 
             // comment;
 function trackContactSubmission(formType): any {";

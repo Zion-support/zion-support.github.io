@@ -5,7 +5,7 @@ interface PerformanceMetrics {fcp?: number;
   cls?: number;
   ttfb?: number;,
 }
-const PerformanceMonitor: React.FC = () => {;,
+const PerformanceMonitor: React.FC = () => {,
   const [metrics, setMetrics] = useState<PerformanceMetrics>({});
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {;
@@ -19,7 +19,7 @@ if (typeof window === 'undefined') return;
         switch (entry.entryType) {;
 case 'paint': if (entry.name === 'first-contentful-paint') {'              setMetrics(prev => ({ ...prev, fcp: entry.startTime }));'            }
             break;
-          case 'largest-contentful-paint': setMetrics(prev => ({ ...prev, lcp: entry.startTime }));'            break;'          case 'first-input': setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));'            break;'          case 'layout-shift': if (!(entry as any).hadRecentInput) {'              setMetrics(prev => ({ '                ...prev, cls: (prev.cls || 0) + (entry as any).value ;,
+          case 'largest-contentful-paint': setMetrics(prev => ({ ...prev, lcp: entry.startTime }));'            break;'          case 'first-input': setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));'            break;'          case 'layout-shift': if (!(entry as any).hadRecentInput) {'              setMetrics(prev => ({ '                ...prev, cls: (prev.cls || 0) + (entry as any).value ,
 }));,
 }
             break;
@@ -28,8 +28,8 @@ case 'paint': if (entry.name === 'first-contentful-paint') {'              setMe
     // Observe different types of performance entries;
     try {;
 observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift', 'navigation'] });
-'    } catch (e) {'      // Fallback for browsers that don&apos;t support all entry types;
-      observer.observe({ entryTypes: ['paint', 'largest-contentful-paint'] });
+'    } catch() { '      // Fallback for browsers that don&apos;t support all entry types;
+      observer.observe({ entryTypes: ['paint', 'largest-contentful-paint']  });
 '    }';
     // Show metrics after 3 seconds;
     const timer = setTimeout(() => {;setIsVisible(true);
@@ -73,7 +73,7 @@ if (value <= thresholds.good) return 'text-green-600;
         )}
       </div>;
 <div className="mt-3 pt-2 border-t border-gray-200>        <button"          onClick={() => setIsVisible(false)}
-          className="text-xs text-gray-500 hover: text-gray-700        >"          Hide</button>;,
+          className="text-xs text-gray-500 hover: text-gray-700        >"          Hide</button>,
       </div>;
     </div>;
   );,

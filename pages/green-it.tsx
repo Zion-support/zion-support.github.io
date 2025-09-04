@@ -7,8 +7,7 @@ export default function GreenIT() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  };
-
+  }
   const greenInitiatives = [
     {
       title: "Carbon-Neutral Data Centers",
@@ -164,10 +163,10 @@ export default function GreenIT() {
         <meta name="description" content="Discover Zion Tech Group's commitment to sustainable technology. Learn about our green IT initiatives, carbon-neutral operations, and environmental responsibility." />
         <meta name="keywords" content="green IT, sustainable technology, carbon neutral, renewable energy, environmental responsibility, green computing, eco-friendly technology" />
         <link rel="canonical" href={`${contact.site}/green-it`} />
-        <meta property="og:title" content="Green IT - Zion Tech Group | Sustainable Technology Solutions" />
+        <meta property="og: title" content="Green IT - Zion Tech Group | Sustainable Technology Solutions" />
         <meta property="og:description" content="Discover Zion Tech Group's commitment to sustainable technology. Learn about our green IT initiatives, carbon-neutral operations, and environmental responsibility." />
-        <meta property="og:url" content={`${contact.site}/green-it`} />
-        <meta property="og:type" content="website" />
+        <meta property="og: url" content={`${contact.site}/green-it`} />
+        <meta property="og: type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Green IT - Zion Tech Group | Sustainable Technology Solutions" />
         <meta name="twitter:description" content="Discover Zion Tech Group's commitment to sustainable technology. Learn about our green IT initiatives, carbon-neutral operations, and environmental responsibility." />
@@ -177,7 +176,7 @@ export default function GreenIT() {
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4">
           <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
               Green <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">Technology</span>
             </h1>
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
@@ -185,13 +184,13 @@ export default function GreenIT() {
               Join us in building a greener future through innovation.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-6 py-3 bg-green-600 hover:bg-green-700 rounded-lg font-semibold transition-colors">
+              <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-6 py-3 bg-green-600 hover: bg-green-700 rounded-lg font-semibold transition-colors">
                 Call {contact.phone}
               </a>
-              <a href={`mailto:${contact.email}`} className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
+              <a href={`mailto: ${contact.email}`} className="px-6 py-3 bg-blue-600 hover: bg-blue-700 rounded-lg font-semibold transition-colors">
                 Email {contact.email}
               </a>
-              <Link href="/contact" className="px-6 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
+              <Link href="/contact" className="px-6 py-3 bg-slate-800 hover: bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
                 Learn More
               </Link>
             </div>
@@ -202,7 +201,7 @@ export default function GreenIT() {
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-white text-center mb-12">Our Environmental Impact</h2>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-4 gap-8">
               {sustainabilityMetrics.map((metric, index) => (
                 <div key={index} className="text-center">
                   <div className="text-4xl mb-4">{metric.icon}</div>
@@ -218,15 +217,15 @@ export default function GreenIT() {
         <section className="py-16 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-white text-center mb-12">Green IT Initiatives</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {greenInitiatives.map((initiative, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: bg-white/10 transition-all duration-300">
                   <div className="text-4xl mb-4">{initiative.icon}</div>
                   <h3 className="text-xl font-bold text-white mb-3">{initiative.title}</h3>
                   <p className="text-slate-300 mb-4">{initiative.description}</p>
                   
                   <div className="mb-4">
-                    <h4 className="text-lg font-semibold text-white mb-2">Key Benefits:</h4>
+                    <h4 className="text-lg font-semibold text-white mb-2">Key Benefits: </h4>
                     <ul className="space-y-1">
                       {initiative.benefits.map((benefit, benefitIndex) => (
                         <li key={benefitIndex} className="flex items-center gap-2 text-sm text-slate-300">
@@ -252,9 +251,9 @@ export default function GreenIT() {
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-white text-center mb-12">Green Technologies</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
               {greenTechnologies.map((tech, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: bg-white/10 transition-all duration-300">
                   <h3 className="text-xl font-bold text-white mb-3">{tech.name}</h3>
                   <p className="text-slate-300 mb-4">{tech.description}</p>
                   <div className="space-y-2">
@@ -275,7 +274,7 @@ export default function GreenIT() {
         <section className="py-16 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-white text-center mb-12">Environmental Certifications</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
               {certifications.map((cert, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
                   <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -296,7 +295,7 @@ export default function GreenIT() {
         {/* Environmental Commitment */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl font-bold text-white mb-6">Our Environmental Commitment</h2>
                 <p className="text-slate-300 mb-6">
@@ -331,7 +330,7 @@ export default function GreenIT() {
                   environmental impact while improving your business performance.
                 </p>
                 <div className="space-y-3">
-                  <Link href="/contact" className="block w-full px-6 py-3 bg-green-600 hover:bg-green-700 rounded-lg font-semibold text-center transition-colors">
+                  <Link href="/contact" className="block w-full px-6 py-3 bg-green-600 hover: bg-green-700 rounded-lg font-semibold text-center transition-colors">
                     Start Your Green Journey
                   </Link>
                   <Link href="/solutions" className="block w-full px-6 py-3 border border-white/20 text-white hover:bg-white/10 rounded-lg font-semibold text-center transition-colors">
@@ -347,7 +346,7 @@ export default function GreenIT() {
         <section className="py-16 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-white text-center mb-12">Benefits of Green IT</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">💰</span>
@@ -383,7 +382,7 @@ export default function GreenIT() {
               Transform your business with sustainable technology solutions that protect the environment 
               while driving innovation and growth.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link href="/contact" className="px-8 py-3 bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 rounded-lg font-semibold transition-all">
                 Start Your Green Journey
               </Link>
@@ -395,5 +394,4 @@ export default function GreenIT() {
         </section>
       </div>
     </>
-  );
-}
+  )}

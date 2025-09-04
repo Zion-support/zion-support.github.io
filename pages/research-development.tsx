@@ -7,8 +7,7 @@ export default function ResearchDevelopment() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  };
-
+  }
   const researchAreas = [
     {
       title: "Quantum Computing",
@@ -227,10 +226,10 @@ export default function ResearchDevelopment() {
         <meta name="description" content="Explore Zion Tech Group's cutting-edge research and development initiatives in quantum computing, AI, edge computing, blockchain, and cybersecurity." />
         <meta name="keywords" content="research, development, R&D, quantum computing, artificial intelligence, edge computing, blockchain, cybersecurity, innovation, patents, publications" />
         <link rel="canonical" href={`${contact.site}/research-development`} />
-        <meta property="og:title" content="Research & Development - Zion Tech Group | Innovation & Technology Research" />
+        <meta property="og: title" content="Research & Development - Zion Tech Group | Innovation & Technology Research" />
         <meta property="og:description" content="Explore Zion Tech Group's cutting-edge research and development initiatives in quantum computing, AI, edge computing, blockchain, and cybersecurity." />
-        <meta property="og:url" content={`${contact.site}/research-development`} />
-        <meta property="og:type" content="website" />
+        <meta property="og: url" content={`${contact.site}/research-development`} />
+        <meta property="og: type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Research & Development - Zion Tech Group | Innovation & Technology Research" />
         <meta name="twitter:description" content="Explore Zion Tech Group's cutting-edge research and development initiatives in quantum computing, AI, edge computing, blockchain, and cybersecurity." />
@@ -240,21 +239,21 @@ export default function ResearchDevelopment() {
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4">
           <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
               Research & <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Development</span>
             </h1>
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
               Pushing the boundaries of technology through cutting-edge research and development. 
-              We&apos;re building the future of computing, AI, and digital innovation.
+              We&aposre building the future of computing, AI, and digital innovation.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
+              <a href={`tel: ${contact.phone.replace(/[^\d+]/g,'')}`} className="px-6 py-3 bg-blue-600 hover: bg-blue-700 rounded-lg font-semibold transition-colors">
                 Call {contact.phone}
               </a>
-              <a href={`mailto:${contact.email}`} className="px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors">
+              <a href={`mailto: ${contact.email}`} className="px-6 py-3 bg-purple-600 hover: bg-purple-700 rounded-lg font-semibold transition-colors">
                 Email {contact.email}
               </a>
-              <Link href="/contact" className="px-6 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
+              <Link href="/contact" className="px-6 py-3 bg-slate-800 hover: bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
                 Collaborate With Us
               </Link>
             </div>
@@ -276,9 +275,9 @@ export default function ResearchDevelopment() {
                     </div>
                   </div>
                   
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div className="grid grid-cols-1 md: grid-cols-3 gap-6">
                     {area.projects.map((project, projectIndex) => (
-                      <div key={projectIndex} className="bg-white/5 rounded-lg p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
+                      <div key={projectIndex} className="bg-white/5 rounded-lg p-6 border border-white/10 hover: bg-white/10 transition-all duration-300">
                         <div className="flex items-center justify-between mb-3">
                           <h4 className="text-lg font-bold text-white">{project.name}</h4>
                           <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
@@ -292,7 +291,7 @@ export default function ResearchDevelopment() {
                         </div>
                         <p className="text-slate-300 mb-3">{project.description}</p>
                         <div className="text-sm text-slate-400">
-                          <strong>Timeline:</strong> {project.timeline}
+                          <strong>Timeline: </strong> {project.timeline}
                         </div>
                       </div>
                     ))}
@@ -307,7 +306,7 @@ export default function ResearchDevelopment() {
         <section className="py-16 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-white text-center mb-12">Research Impact</h2>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-4 gap-8">
               <div className="text-center">
                 <div className="text-4xl font-bold text-blue-400 mb-2">50+</div>
                 <h3 className="text-xl font-bold text-white mb-2">Research Projects</h3>
@@ -341,14 +340,14 @@ export default function ResearchDevelopment() {
             <h2 className="text-3xl font-bold text-white text-center mb-12">Recent Publications</h2>
             <div className="space-y-6">
               {publications.map((pub, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: bg-white/10 transition-all duration-300">
                   <h3 className="text-xl font-bold text-white mb-3">{pub.title}</h3>
-                  <p className="text-slate-300 mb-2"><strong>Authors:</strong> {pub.authors}</p>
-                  <p className="text-slate-300 mb-2"><strong>Journal:</strong> {pub.journal}</p>
+                  <p className="text-slate-300 mb-2"><strong>Authors: </strong> {pub.authors}</p>
+                  <p className="text-slate-300 mb-2"><strong>Journal: </strong> {pub.journal}</p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4 text-sm text-slate-400">
-                      <span><strong>Year:</strong> {pub.year}</span>
-                      <span><strong>DOI:</strong> {pub.doi}</span>
+                      <span><strong>Year: </strong> {pub.year}</span>
+                      <span><strong>DOI: </strong> {pub.doi}</span>
                     </div>
                     <a href="#" className="text-blue-400 hover:text-blue-300 font-semibold">
                       View Paper →
@@ -364,9 +363,9 @@ export default function ResearchDevelopment() {
         <section className="py-16 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-white text-center mb-12">Patents & Intellectual Property</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
               {patents.map((patent, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: bg-white/10 transition-all duration-300">
                   <div className="flex items-center justify-between mb-3">
                     <h3 className="text-lg font-bold text-white">{patent.title}</h3>
                     <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
@@ -375,8 +374,8 @@ export default function ResearchDevelopment() {
                       {patent.status}
                     </span>
                   </div>
-                  <p className="text-slate-300 mb-2"><strong>Patent Number:</strong> {patent.number}</p>
-                  <p className="text-slate-300"><strong>Year:</strong> {patent.year}</p>
+                  <p className="text-slate-300 mb-2"><strong>Patent Number: </strong> {patent.number}</p>
+                  <p className="text-slate-300"><strong>Year: </strong> {patent.year}</p>
                 </div>
               ))}
             </div>
@@ -386,7 +385,7 @@ export default function ResearchDevelopment() {
         {/* Collaboration */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl font-bold text-white mb-6">Collaborate With Us</h2>
                 <p className="text-slate-300 mb-6">
@@ -420,10 +419,10 @@ export default function ResearchDevelopment() {
                   Contact us to discuss potential partnerships and opportunities.
                 </p>
                 <div className="space-y-3">
-                  <Link href="/contact" className="block w-full px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold text-center transition-colors">
+                  <Link href="/contact" className="block w-full px-6 py-3 bg-blue-600 hover: bg-blue-700 rounded-lg font-semibold text-center transition-colors">
                     Contact Research Team
                   </Link>
-                  <a href={`mailto:${contact.email}?subject=Research Collaboration`} className="block w-full px-6 py-3 border border-white/20 text-white hover:bg-white/10 rounded-lg font-semibold text-center transition-colors">
+                  <a href={`mailto:${contact.email}?subject=Research Collaboration`} className="block w-full px-6 py-3 border border-white/20 text-white hover: bg-white/10 rounded-lg font-semibold text-center transition-colors">
                     Email Research Director
                   </a>
                 </div>
@@ -440,7 +439,7 @@ export default function ResearchDevelopment() {
               Join us in pushing the boundaries of what&apos;s possible. 
               Together, we can create the next generation of technology solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link href="/contact" className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-lg font-semibold transition-all">
                 Collaborate With Us
               </Link>
@@ -452,5 +451,4 @@ export default function ResearchDevelopment() {
         </section>
       </div>
     </>
-  );
-}
+  )}
