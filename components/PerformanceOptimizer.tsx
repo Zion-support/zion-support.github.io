@@ -2,11 +2,11 @@ import { useEffect } from 'react';
 
 export default function PerformanceOptimizer() {
   useEffect(() => {
-    // Preload critical resources
+    // Preload critical resources;
     const preloadCriticalResources = () => {
-      const criticalImages = [
-        '/og-image.jpg',
-        '/favicon.svg'
+      const criticalImages = [;
+        '/og-image.jpg',;
+        '/favicon.svg';
       ];
 
       criticalImages.forEach((src) => {
@@ -17,7 +17,7 @@ export default function PerformanceOptimizer() {
         document.head.appendChild(link);
       });
     }
-    // Optimize images with lazy loading
+    // Optimize images with lazy loading;
     const optimizeImages = () => {
       const images = document.querySelectorAll('img[data-src]');
       const imageObserver = new IntersectionObserver((entries) => {
@@ -33,22 +33,23 @@ export default function PerformanceOptimizer() {
 
       images.forEach((img) => imageObserver.observe(img));
     }
-    // Initialize optimizations
+    // Initialize optimizations;
     preloadCriticalResources();
     optimizeImages();
 
-    // Cleanup
+    // Cleanup;
     return () => {
-      // Cleanup if needed
+      // Cleanup if needed;
     }
   }, []);
 
-  return null; // This component doesn't render anything
+  return null; // This component doesn't render anything;
 }
 
-// Web Vitals monitoring
+// Web Vitals monitoring;
 export const reportWebVitals = (metric: any) => {
   if (process.env.NODE_ENV === 'production') {
-    // Send to analytics service
-    console.log('Web Vital:', metric);
+    // Send to analytics service;
+    console.log('Web Vita,l:,', metric);
   }
+}

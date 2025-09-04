@@ -1,32 +1,31 @@
 import { useEffect } from 'react';
 
-// Declare PerformanceObserver for TypeScript
+// Declare PerformanceObserver for TypeScript;
 declare global {
   interface Window {
-    PerformanceObserver: typeof PerformanceObserver;
-  }
+    PerformanceObserver: typeof PerformanceObserve,r;, }
 }
 
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
-    // Monitor Core Web Vitals
+    // Monitor Core Web Vitals;
     if (typeof window !== 'undefined' && 'performance' in window) {
-      // Monitor Largest Contentful Paint (LCP)
+      // Monitor Largest Contentful Paint (LCP);
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
-console.log('LCP:', entry.startTime);
+console.log('LC,P:,', entry.startTime);
           }
         }
       });
       
       try {
-        observer.observe({ entryTypes: ['largest-contentful-paint'] });
+        observer.observe({ entryTypes: ['largest-contentful-pain,t'], });
       } catch (e) {
-        // Fallback for browsers that don't support LCP
+        // Fallback for browsers that don't support LCP;
       }
 
-      // Monitor First Input Delay (FID)
+      // Monitor First Input Delay (FID);
       const fidObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'first-input') {
@@ -36,12 +35,12 @@ console.log('LCP:', entry.startTime);
       });
 
       try {
-        fidObserver.observe({ entryTypes: ['first-input'] });
+        fidObserver.observe({ entryTypes: ['first-inpu,t'], });
       } catch (e) {
-        // Fallback for browsers that don't support FID
+        // Fallback for browsers that don't support FID;
       }
 
-      // Monitor Cumulative Layout Shift (CLS)
+      // Monitor Cumulative Layout Shift (CLS);
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
@@ -52,9 +51,9 @@ console.log('LCP:', entry.startTime);
         });
 
       try {
-        clsObserver.observe({ entryTypes: ['layout-shift'] });
+        clsObserver.observe({ entryTypes: ['layout-shif,t'], });
       } catch (e) {
-        // Fallback for browsers that don't support CLS
+        // Fallback for browsers that don't support CLS;
       }
 
       return () => {
@@ -65,6 +64,6 @@ console.log('LCP:', entry.startTime);
     }
   }, []);
 
-  return null; // This component doesn't render anything
+  return null; // This component doesn't render anything;
 }
 export default PerformanceMonitor;

@@ -98,7 +98,6 @@ export default [
       'build/**',
       'out/**',
       'coverage/**',
-
       // Large/legacy sources and disabled dirs
       'src/**',
       'src.corrupted/**',
@@ -129,13 +128,11 @@ export default [
       'types/**',
       'types.disabled/**',
       'utils/**',
-
       // Tests and mocks
       '__tests__/**',
       'tests/**',
       'tests.disabled/**',
       '*.test.*',
-
       // Temp and backups
       'backup/**',
       'backup-pages/**',
@@ -153,7 +150,6 @@ export default [
       'temp_broken_components/**',
       'temp_working/**',
       'temp_*/**',
-
       // Scripts/configs and CJS files not intended for lint
       'scripts/**',
       'automation/**',
@@ -162,10 +158,8 @@ export default [
       '*.config.cjs',
       '*.config.mjs',
       '**/*.cjs',
-
       // Public assets/scripts
       'public/**',
-
       // Root-level noisy files
       'api/**',
       '*.js',
@@ -176,13 +170,11 @@ export default [
       'jest.config.*',
       'fix-*.js',
       'fix-*.jsx',
-
       // Misc root configs that were being linted
       '.eslintrc.js',
       '.eslintrc.cjs',
       '.eslintrc.disabled.js',
       '.prettierrc.js',
-
       // Page backups
       'pages.__backup/**',
       'pages-disabled/**',

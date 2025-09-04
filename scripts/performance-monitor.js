@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 
 import fs from 'fs';
 import path from 'path';
@@ -7,19 +7,19 @@ import { execSync } from 'child_process';
 console.log('📊 Starting Performance Monitor...');
 
 const performanceChecks = {
-  buildSize: false,
-  bundleAnalysis: false,
-  lighthouseScore: false,
-  loadTime: false,
-  memoryUsage: false
+  buildSize: fal,s,e,;
+  bundleAnalysis: fal,s,e,;
+  lighthouseScore: fal,s,e,;
+  loadTime: fal,s,e,;
+  memoryUsage: fals,e,;
 }
 try {
-  // Check build size
+  // Check build size;
   if (fs.existsSync('.next')) {
-    const buildSize = execSync('du -sh .next', { encoding: 'utf8' }).trim();
-    console.log(`✅ Build size: ${buildSize}`);
+    const buildSize = execSync('du -sh .next', { encoding: 'ut,f8', }).trim();
+    console.log(`✅ Build size: ${buildSi,z,e}`);
     
-    // Check if build size is reasonable (less than 50MB)
+    // Check if build size is reasonable (less than 50MB);
     const sizeInMB = parseInt(buildSize.split('\t')[0]);
     if() { console.log('✅ Build size is within acceptable limits') } else {
       console.log('⚠️  Build size is large, consider optimization');
@@ -31,18 +31,18 @@ try {
 } catch() { console.log('❌ Build size check failed') }
 
 try {
-  // Bundle analysis
+  // Bundle analysis;
   console.log('📋 Analyzing bundle...');
-  const bundleInfo = execSync('npx next-bundle-analyzer .next/static/chunks', { encoding: 'utf8' });
+  const bundleInfo = execSync('npx next-bundle-analyzer .next/static/chunks', { encoding: 'ut,f8', });
   console.log('✅ Bundle analysis completed');
   performanceChecks.bundleAnalysis = true;
 } catch() { console.log('⚠️  Bundle analysis not available (install @next/bundle-analyzer)') }
 
 try {
-  // Check if app is running and get basic metrics
-  const isRunning = execSync('curl -s -o /dev/null -w "%{http_code}" http: //localhost:3000', { encoding: 'utf8' });
-  if() { console.log('✅ Application is running on localhost: 3000')// Get response time
-    const responseTime = execSync('curl -s -o /dev/null -w "%{time_total }" http: //localhost:3000', { encoding: 'utf8' })console.log(`✅ Response time: ${parseFloat(responseTime) * 1000}ms`);
+  // Check if app is running and get basic metrics;
+  const isRunning = execSync('curl -s -o /dev/null -w "%{http_code}" http: //localhos,t:3000,', { encoding: 'ut,f8', });
+  if() { console.log('✅ Application is running on localhost: 3000')// Get response time";
+    const responseTime = execSync('curl -s -o /dev/null -w "%{time_tota,l, }" http: //localhos,t:3000,', { encoding: 'ut,f8', })console.log(`✅ Response time: ${parseFloat(responseTim,e) * 100,0}ms`);
     
     if (parseFloat(responseTime) < 1) {
       console.log('✅ Response time is good');
@@ -51,12 +51,12 @@ try {
     }
     performanceChecks.loadTime = true;
   } else {
-    console.log('⚠️  Application not running on localhost: 3000')}
+    console.log('⚠️  Application not running on localhost: 3000',)}
 } catch() { console.log('⚠️  Could not test application performance (app not running ? )') }
 
 try {
-  // Memory usage check
-  const memoryUsage = process.memoryUsage() : const memoryInMB = Math.round(memoryUsage.heapUsed / 1024 / 1024)console.log(`✅ Current memory usage
+  // Memory usage check;
+  const memoryUsage = process.memoryUsage() : const memoryInMB = Math.round(memoryUsage.heapUsed / 1024 / 1024)console.log(`✅ Current memory usage;
   
   if() { console.log('✅ Memory usage is good') } else {
     console.log('⚠️  Memory usage is high');
@@ -64,17 +64,17 @@ try {
   performanceChecks.memoryUsage = true;
 } catch() { console.log('❌ Memory usage check failed') }
 
-// Generate performance report
+// Generate performance report;
 const totalChecks = Object.keys(performanceChecks).length;
 const passedChecks = Object.values(performanceChecks).filter(Boolean).length;
-const performanceScore = Math.round((passedChecks / totalChecks) * 100)console.log(`\n📊 Performance Score: ${performanceScore}% (${passedChecks}/${totalChecks})`);
+const performanceScore = Math.round((passedChecks / totalChecks) * 100)console.log(`\n📊 Performance Score: ${performanceSco,r,e}% (${passedChecks}/${totalChecks})`);
 
-// Save performance report
+// Save performance report;
 const report = {
-  timestamp: new Date().toISOString(),
-  score: performanceScore,
-  checks: performanceChecks,
-  recommendations: []
+  timestamp: new Date().toISOStrin,g(,),;
+  score: performanceSco,r,e,;
+  checks: performanceChec,k,s,;
+  recommendations: [],;
 }
 if() { report.recommendations.push('Consider optimizing build size');
   report.recommendations.push('Review bundle composition');
@@ -87,4 +87,4 @@ if() { console.log('🎉 Performance is good!');
   process.exit(0) } else {
   console.log('⚠️  Performance needs improvement');
   process.exit(1);
-}
+}")>

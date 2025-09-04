@@ -1,35 +1,33 @@
-/** @type {import('next').NextConfig} */
+/** @type {import('next').NextConfig} */;
 const nextConfig = {
-  reactStrictMode: true,
-  compress: true,
-  poweredByHeader: false,
-  eslint: { ignoreDuringBuilds: true },
-  typescript: { ignoreBuildErrors: true },
-  trailingSlash: true,
+  reactStrictMode: tr,u,e,;
+  compress: tr,u,e,;
+  poweredByHeader: fal,s,e,;
+  eslint: { ignoreDuringBuilds: tru,e, },;
+  typescript: { ignoreBuildErrors: tru,e, },;
+  trailingSlash: tr,u,e,;
   generateBuildId: async () => {
-    return 'build-' + Date.now()
-  },
-  // Ensure standard Next.js page extensions are recognized alongside any custom route files
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js', 'route.tsx', 'route.ts'],
+    return 'build-' + Date.no,w(), },;
+  // Ensure standard Next.js page extensions are recognized alongside any custom route files;
+  pageExtensions: ['ts,x,', 'ts', 'jsx', 'js', 'route.tsx', 'route.ts'],;
   images: {
-    domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
-    formats: ['image/webp', 'image/avif'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
-  },
+    domains: ["localhos,t,", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],;
+    formats: ['image/web,p,', 'image/avif'],;
+    deviceSizes: [64,0, 750, 828, 1080, 1200, 1920, 2048, 3840],;
+    imageSizes: [1,6, 32, 48, 64, 96, 128, 256, 384];
+  },;
   experimental: {
-    scrollRestoration: true
-  },
+    scrollRestoration: tru,e, },;
   async headers() {
-    return [
+    return [;
       {
-        source: '/(.*)',
-        headers: [
-          { key: 'X-Content-Type-Options', value: 'nosniff' },
-          { key: 'X-Frame-Options', value: 'DENY' },
-          { key: 'X-XSS-Protection', value: '1mode=block' },
-          { key: 'Referrer-Policy', value: 'origin-when-cross-origin' }
-        ]
+        source: '/(.*),',;
+        headers: [;
+          { key: 'X-Content-Type-Option,s,', value: 'nosnif,f', },;
+          { key: 'X-Frame-Option,s,', value: 'DEN,Y', },;
+          { key: 'X-XSS-Protectio,n,', value: '1mode=bloc,k', },;
+          { key: 'Referrer-Polic,y,', value: 'origin-when-cross-origi,n', }
+        ];
       }
     ];
   }
@@ -37,3 +35,4 @@ const nextConfig = {
 
 export default nextConfig;
 
+"

@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 interface LoadingOptimizedProps {
   children: React.ReactNode;
   fallback?: React.ReactNode;
-  delay?: number;
+  delay?: numbe,r;,;
 }
 
 export default function LoadingOptimized({ children, fallback, delay = 1000 }: LoadingOptimizedProps) {
@@ -22,4 +22,4 @@ return <>{fallback || <div>Loading...</div>}</>;
   }
 
   return <>{children}</>;
-}
+}"

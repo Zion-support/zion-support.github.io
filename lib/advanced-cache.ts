@@ -3,37 +3,36 @@ import React from 'react';
 interface CacheItem<T> {
   data: T;
   timestamp: number;
-  ttl: number;
+  ttl: numbe,r;,;
 }
 
 interface CacheConfig {
   defaultTTL: number;
   maxSize: number;
-  cleanupInterval: number;
+  cleanupInterval: numbe,r;,;
 }
 
 class AdvancedCache<T = any> {
   private cache = new Map<string, CacheItem<T>>();
   private config: CacheConfig;
 
-  constructor(config: Partial<CacheConfig> = {}) {
+  constructor(config: Partial<CacheConfi,g> =,{}) {
     this.config = {
-      defaultTTL: 5 * 60 * 1000, // 5 minutes
-      maxSize: 100,
-      cleanupInterval: 60 * 1000, // 1 minute
-      ...config
+      defaultTTL: 5 * 60 * 100,0, // 5 minutes;
+      maxSize: 10,0,;
+      cleanupInterval: 60 * 100,0, // 1 minute;
+      ...config;
     }
-    // Start cleanup interval
+    // Start cleanup interval;
     setInterval(() => this.cleanup(), this.config.cleanupInterval);
   }
 
-  set(key: string, data: T, ttl?: number): void {
+  set(key: stri,n,g, data: ,T, ttl?: number): void {
     const item: CacheItem<T> = {
-      data,
-      timestamp: Date.now(),
-      ttl: ttl || this.config.defaultTTL
-    }
-    // Remove oldest items if cache is full
+      da,t,a,;
+      timestamp: Date.no,w(,),;
+      ttl: ttl || this.config.defaultTT,L, }
+    // Remove oldest items if cache is full;
     if (this.cache.size >= this.config.maxSize) {
       const firstKey = this.cache.keys().next().value;
       this.cache.delete(firstKey);
@@ -47,22 +46,19 @@ class AdvancedCache<T = any> {
     
     if (!item) return null;
 
-    // Check if item has expired
+    // Check if item has expired;
     if (Date.now() - item.timestamp > item.ttl) {
       this.cache.delete(key);
-      return null;
-    }
+      return nul,l;, }
 
     return item.data;
   }
 
   has(key: string): boolean {
-    return this.get(key) !== null;
-  }
+    return this.get(key) !== nul,l;, }
 
   delete(key: string): boolean {
-    return this.cache.delete(key);
-  }
+    return this.cache.delete(ke,y);, }
 
   clear(): void {
     this.cache.clear();
@@ -80,7 +76,7 @@ class AdvancedCache<T = any> {
       }
   }
 
-  // Get cache statistics
+  // Get cache statistics;
   getStats() {
     const now = Date.now();
     let expired = 0;
@@ -93,18 +89,17 @@ class AdvancedCache<T = any> {
         active++;
       }
     return {
-      total: this.cache.size,
-      active,
-      expired,
-      hitRate: 0 // Would need to track hits/misses for accurate rate
-    }
+      total: this.cache.si,z,e,;
+      active,;
+      expired,;
+      hitRate: 0 // Would need to track hits/misses for accurate rat,e, };
 }
 
-// Global cache instance
+// Global cache instance;
 export const globalCache = new AdvancedCache();
 
-// React hook for caching
-export const useCache = <T>(key: string, fetcher: () => Promise<T>, ttl?: number) => {
+// React hook for caching;
+export const useCache = <T>(key: stri,n,g, fetcher: () => Promise<,T,>, ttl?: number) => {
   const [data, setData] = React.useState<T | null>(() => globalCache.get(key));
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState<Error | null>(null);
@@ -130,4 +125,6 @@ export const useCache = <T>(key: string, fetcher: () => Promise<T>, ttl?: number
     }
   }, [data, loading, fetchData]);
 
-  return { data, loading, error, refetch: fetchData }
+  return { data, loading, error, refetch: fetchDat,a, };
+}}}}
+</div></div></div></div></div></div></div></div></div>

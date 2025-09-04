@@ -17,7 +17,9 @@ class AdvancedErrorBoundary extends Component<Props, State> {
     hasError: false
   }
   public static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error }
+    return { hasError: true, error };
+  }
+
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     // Report to error tracking service
     if (this.props.onError) {
@@ -75,4 +77,6 @@ class AdvancedErrorBoundary extends Component<Props, State> {
 
     return this.props.children;
   }
+}
+
 export default AdvancedErrorBoundary;

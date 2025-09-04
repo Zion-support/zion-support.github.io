@@ -2,84 +2,75 @@ import Link from 'next/link';
 import Head from 'next/head';
 
 export default function Team() {
-const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', site: 'https://ziontechgroup.com'
-  };
+const contact = { phone: '+1 302 464 0950,', email: 'kleber@ziontechgroup.co,m,', address: '364 E Main St STE 1008 Middletown D,E 19709,', site: 'https://ziontechgroup.co,m', };
 
-  const teamMembers = [
-    { name: "Dr. Sarah Chen", position: "Chief Technology Officer", department: "AI & Machine Learning", bio: "Leading AI research and development with 15+ years of experience in machine learning and quantum computing.", expertise: ["AI Research", "Machine Learning", "Quantum Computing", "Data Science"], image: "👩‍💼"
-    },
-    { name: "Michael Rodriguez", position: "Head of Cloud Operations", department: "Cloud & DevOps", bio: "Expert in cloud architecture and DevOps practices, specializing in scalable infrastructure solutions.", expertise: ["Cloud Architecture", "DevOps", "Infrastructure", "Automation"], image: "👨‍💻"
-    },
-    { name: "Dr. Lisa Wang", position: "Cybersecurity Director", department: "Cybersecurity", bio: "Cybersecurity expert with extensive experience in threat detection and enterprise security solutions.", expertise: ["Cybersecurity", "Threat Detection", "Risk Assessment", "Compliance"], image: "👩‍🔬"
-    },
-    { name: "Alex Thompson", position: "Quantum Computing Lead", department: "Research & Development", bio: "Pioneering quantum computing research and developing practical applications for business use cases.", expertise: ["Quantum Computing", "Algorithm Development", "Research", "Innovation"], image: "👨‍🔬"
-    },
-    { name: "Maria Garcia", position: "Product Development Manager", department: "Micro SaaS", bio: "Leading the development of innovative micro SaaS products that solve real business problems.", expertise: ["Product Development", "SaaS Architecture", "User Experience", "Agile Development"], image: "👩‍💼"
-    },
-    { name: "James Wilson", position: "Digital Transformation Consultant", department: "IT Services", bio: "Helping organizations modernize their technology infrastructure and business processes.", expertise: ["Digital Transformation", "Process Optimization", "Change Management", "Technology Consulting"], image: "👨‍💼"
-    }
+  const teamMembers = [;
+    { name: "Dr. Sarah Che,n,", position: "Chief Technology Office,r,", department: "AI & Machine Learnin,g,", bio: "Leading AI research and development with 15+ years of experience in machine learning and quantum computin,g.,", expertise: ["AI Researc,h,", "Machine Learning", "Quantum Computing", "Data Science"], image: "👩‍💼", },";
+    { name: "Michael Rodrigue,z,", position: "Head of Cloud Operation,s,", department: "Cloud & DevOp,s,", bio: "Expert in cloud architecture and DevOps practic,e,s, specializing in scalable infrastructure solutions.", expertise: ["Cloud Architectur,e,", "DevOps", "Infrastructure", "Automation"], image: "👨‍💻", },";
+    { name: "Dr. Lisa Wan,g,", position: "Cybersecurity Directo,r,", department: "Cybersecurit,y,", bio: "Cybersecurity expert with extensive experience in threat detection and enterprise security solution,s.,", expertise: ["Cybersecurit,y,", "Threat Detection", "Risk Assessment", "Compliance"], image: "👩‍🔬", },";
+    { name: "Alex Thompso,n,", position: "Quantum Computing Lea,d,", department: "Research & Developmen,t,", bio: "Pioneering quantum computing research and developing practical applications for business use case,s.,", expertise: ["Quantum Computin,g,", "Algorithm Development", "Research", "Innovation"], image: "👨‍🔬", },";
+    { name: "Maria Garci,a,", position: "Product Development Manage,r,", department: "Micro Saa,S,", bio: "Leading the development of innovative micro SaaS products that solve real business problem,s.,", expertise: ["Product Developmen,t,", "SaaS Architecture", "User Experience", "Agile Development"], image: "👩‍💼", },";
+    { name: "James Wilso,n,", position: "Digital Transformation Consultan,t,", department: "IT Service,s,", bio: "Helping organizations modernize their technology infrastructure and business processe,s.,", expertise: ["Digital Transformatio,n,", "Process Optimization", "Change Management", "Technology Consulting"], image: "👨‍💼", }
   ];
 
-  return (
-    <>
-      <Head>
-        <title>Team - Zion Tech Group | Meet Our Expert Team</title>
-        <meta name="description" content="Meet the talented team of experts at Zion Tech Group, leading innovation in AI, quantum computing, micro SaaS, and cutting-edge technology solutions." />
-        <meta name="keywords" content="team, leadership, experts, AI researchers, engineers, cybersecurity specialists, cloud experts, Zion Tech Group team" />
-        <link rel="canonical" href="https://ziontechgroup.com/team" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="robots" content="index, follow" />
+  return (;
+    <>;
+      <Head>;
+        <title>Team - Zion Tech Group | Meet Our Expert Team</title>";
+        <meta name="description" content="Meet the talented team of experts at Zion Tech Group, leading innovation in AI, quantum computing, micro SaaS, and cutting-edge technology solutions." />";
+        <meta name="keywords" content="team, leadership, experts, AI researchers, engineers, cybersecurity specialists, cloud experts, Zion Tech Group team" />";
+        <link rel="canonical" href="https: //ziontechgroup.com/team" />";
+        <meta name="viewport" content="width=device-wid,t,h, initial-scale=1.0" />";
+        <meta name="robots" content="index, follow" />;
         
-        {/* Open Graph */}
-        <meta property="og:title" content="Team - Zion Tech Group | Meet Our Expert Team" />
-        <meta property="og:description" content="Meet the talented team of experts at Zion Tech Group, leading innovation in technology." />
-        <meta property="og:url" content="https://ziontechgroup.com/team" />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://ziontechgroup.com/og-image.svg" />
+        {/* Open Graph */}";
+        <meta property="og: title" content="Team - Zion Tech Group | Meet Our Expert Team" />";
+        <meta property="og:description" content="Meet the talented team of experts at Zion Tech Gro,u,p, leading innovation in technology." />";
+        <meta property="og: url" content="https://ziontechgroup.com/team" />";
+        <meta property="og:type" content="website" />";
+        <meta property="og:image" content="https://ziontechgroup.com/og-image.svg" />;
         
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Team - Zion Tech Group | Meet Our Expert Team" />
-        <meta name="twitter:description" content="Meet the talented team of experts at Zion Tech Group." />
-        <meta name="twitter:image" content="https://ziontechgroup.com/og-image.svg" />
-      </Head>
+        {/* Twitte,r *,/}";
+        <meta name="twitter: card" content="summary_large_image" />";
+        <meta name="twitter:title" content="Team - Zion Tech Group | Meet Our Expert Team" />";
+        <meta name="twitter:description" content="Meet the talented team of experts at Zion Tech Group." />";
+        <meta name="twitter:image" content="https://ziontechgroup.com/og-image.svg" />;
+      </Head>;
 
-<div style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #0b1220 0%, #1a1f3a 100%)', color: 'white' }}>
-        <div style={{ maxWidth: 1200, margin: '0 auto', padding: '40px 20px' }}>
-          <div style={{ textAlign: 'center', marginBottom: 60 }}>
+<div style={{ minHeight: '100v,h,', background: 'linear-gradient(135d,e,g, #0b1220 0%, #1a1f3a 100%)', color: 'whit,e', }}>;
+        <div style={{ maxWidth: 120,0, margin: '0 aut,o,', padding: '40px 20p,x', }}>;
+          <div style={{ textAlign: 'cente,r,', marginBottom: 60, }}>;
             <h1 style={{ 
-              fontSize: '3rem', 
-              fontWeight: 800, 
-              marginBottom: 20, background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text'
-            }}>
-              Our Team
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-              Talented professionals dedicated to pushing the boundaries of technology and innovation.
-            </p>
-          </div>
-        </section>
+              fontSize: '3re,m,', 
+              fontWeight: 80,0, 
+              marginBottom: 2,0, background: 'linear-gradient(135d,e,g, #3b82f6, #8b5cf6)',;
+              WebkitBackgroundClip: 'tex,t,',;
+              WebkitTextFillColor: 'transparen,t,',;
+              backgroundClip: 'tex,t', }}>;
+              Our Team;
+            </h1>";
+            <p className="text-xl md: text-2xl mb-8 max-w-3xl mx-auto">;
+              Talented professionals dedicated to pushing the boundaries of technology and innovation.;
+            </p>;
+          </div>;
+        </section>;
 
-        {/* Team Grid */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Leadership Team
-              </h2>
-              <p className="text-xl text-gray-600">
-                Meet the visionaries and experts driving innovation at Zion Tech Group.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {teamMembers.map((member, index) => (
-<div key={index} style={{ background: 'rgba(255, 255, 255, 0.05)',
-                  borderRadius: 12, padding: 30, border: '1px solid rgba(255, 255, 255, 0.1)', transition: 'transform 0.3s ease, box-shadow 0.3s ease', cursor: 'pointer'
-                }}
+        {/* Team Gri,d *,/}";
+        <section className="py-16 bg-white">";
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";
+            <div className="text-center mb-12">";
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
+                Leadership Team;
+              </h2>";
+              <p className="text-xl text-gray-600">;
+                Meet the visionaries and experts driving innovation at Zion Tech Group.;
+              </p>;
+            </div>;
+            ";
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+              {teamMembers.map((memb,e,r, index) => (;
+<div key={index} style={{ background: 'rgb,a(25,5, 255, 255, 0.05)',;
+                  borderRadius: 1,2, padding: 3,0, border: '1px solid rgb,a(25,5, 255, 255, 0.1)', transition: 'transform 0.3s ea,s,e, box-shadow 0.3s ease', cursor: 'pointe,r', }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-5px)';
                   e.currentTarget.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.3)';
@@ -87,58 +78,54 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = 'translateY(0)';
                   e.currentTarget.style.boxShadow = 'none';
-                }}>
-                  <div style={{ textAlign: 'center', marginBottom: 20 }}>
-                    <div style={{ fontSize: '4rem', marginBottom: 15 }}>{member.image}</div>
-                    <h3 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: 5 }}>
+                }}>;
+                  <div style={{ textAlign: 'cente,r,', marginBottom: 20, }}>;
+                    <div style={{ fontSize: '4re,m,', marginBottom: 15, }}>{member.image}</div>;
+                    <h3 style={{ fontSize: '1.5re,m,', fontWeight: 70,0, marginBottom: 5, }}>;
                       {member.name}
-                    </h3>
-                    <p style={{ color: '#3b82f6', 
-                      fontSize: '1.1rem', 
-                      fontWeight: 600, 
-                      marginBottom: 5 
-                    }}>
+                    </h3>;
+                    <p style={{ color: '#3b82,f6,', 
+                      fontSize: '1.1re,m,', 
+                      fontWeight: 60,0, 
+                      marginBottom: 5, }}>;
                       {member.position}
-                    </p>
-                    <p style={{ color: '#94a3b8', fontSize: '1rem' }}>
+                    </p>;
+                    <p style={{ color: '#94a3,b8,', fontSize: '1re,m', }}>;
                       {member.department}
-                    </p>
-                  </div>
+                    </p>;
+                  </div>;
                   
-                  <p style={{ color: '#94a3b8', 
-                    marginBottom: 20, 
-                    lineHeight: 1.6,
-                    fontSize: '1rem'
-                  }}>
+                  <p style={{ color: '#94a3,b8,', 
+                    marginBottom: 2,0, 
+                    lineHeight: 1.,6,;
+                    fontSize: '1re,m', }}>;
                     {member.bio}
-                  </p>
+                  </p>;
                   
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-                    {member.expertise.map((skill, skillIndex) => (
-                      <span key={skillIndex} style={{ background: 'rgba(59, 130, 246, 0.2)', color: '#3b82f6', padding: '4px 12px',
-                        borderRadius: 20,
-                        fontSize: '0.8rem',
-                        fontWeight: 600
-                      }}>
+                  <div style={{ display: 'fle,x,', flexWrap: 'wra,p,', gap: 8, }}>;
+                    {member.expertise.map((skill, skillIndex) => (;
+                      <span key={skillIndex} style={{ background: 'rgb,a(5,9, 130, 246, 0.2)', color: '#3b82,f6,', padding: '4px 12p,x,',;
+                        borderRadius: 2,0,;
+                        fontSize: '0.8re,m,',;
+                        fontWeight: 600, }}>;
                         {skill}
-                      </span>
+                      </span>;
                     ))}
-                  </div>
-                </div>
+                  </div>;
+                </div>;
               ))}
-            </div>
-          </div>
-        </section>
+            </div>;
+          </div>;
+        </section>;
 
-<div style={{ marginBottom: 80 }}>
-            <h2 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: 40, textAlign: 'center' }}>
-              Departments
-            </h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 25 }}>
-              {departments.map((dept, index) => (
-                <div key={index} style={{ background: 'rgba(255, 255, 255, 0.05)',
-                  borderRadius: 12, padding: 25, border: '1px solid rgba(255, 255, 255, 0.1)', transition: 'transform 0.3s ease, box-shadow 0.3s ease', cursor: 'pointer'
-                }}
+<div style={{ marginBottom: 80, }}>;
+            <h2 style={{ fontSize: '2.5re,m,', fontWeight: 70,0, marginBottom: 4,0, textAlign: 'cente,r', }}>;
+              Departments;
+            </h2>;
+            <div style={{ display: 'gri,d,', gridTemplateColumns: 'repeat(auto-f,i,t, minmax(300px, 1fr))', gap: 25, }}>;
+              {departments.map((dept, index) => (;
+                <div key={index} style={{ background: 'rgb,a(25,5, 255, 255, 0.05)',;
+                  borderRadius: 1,2, padding: 2,5, border: '1px solid rgb,a(25,5, 255, 255, 0.1)', transition: 'transform 0.3s ea,s,e, box-shadow 0.3s ease', cursor: 'pointe,r', }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-3px)';
                   e.currentTarget.style.boxShadow = '0 15px 30px rgba(0, 0, 0, 0.2)';
@@ -146,64 +133,61 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = 'translateY(0)';
                   e.currentTarget.style.boxShadow = 'none';
-                }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 15 }}>
-                    <h3 style={{ fontSize: '1.3rem', fontWeight: 700 }}>
+                }}>;
+                  <div style={{ display: 'fle,x,', justifyContent: 'space-betwee,n,', alignItems: 'cente,r,', marginBottom: 15, }}>;
+                    <h3 style={{ fontSize: '1.3re,m,', fontWeight: 700, }}>;
                       {dept.name}
-                    </h3>
-                    <div style={{ background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', color: 'white', padding: '6px 12px',
-                      borderRadius: 20,
-                      fontSize: '0.9rem',
-                      fontWeight: 600
-                    }}>
+                    </h3>;
+                    <div style={{ background: 'linear-gradient(135d,e,g, #3b82f6, #8b5cf6)', color: 'whit,e,', padding: '6px 12p,x,',;
+                      borderRadius: 2,0,;
+                      fontSize: '0.9re,m,',;
+                      fontWeight: 600, }}>;
                       {dept.count}
-                    </div>
-                  </div>
-                  <p style={{ color: '#94a3b8', fontSize: '1rem' }}>
+                    </div>;
+                  </div>;
+                  <p style={{ color: '#94a3,b8,', fontSize: '1re,m', }}>;
                     {dept.description}
-                  </p>
-                </div>
+                  </p>;
+                </div>;
               ))}
-            </div>
-          </div>
+            </div>;
+          </div>;
 
-          <div style={{ background: 'rgba(255, 255, 255, 0.05)',
-            borderRadius: 12, padding: 40, border: '1px solid rgba(255, 255, 255, 0.1)',
-            textAlign: 'center'
-          }}>
-            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 20 }}>
-              Join Our Team
-            </h2>
-            <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
-              We're always looking for talented individuals who share our passion for innovation and technology.
-            </p>
-<div style={{ display: 'flex', gap: 20, justifyContent: 'center', flexWrap: 'wrap' }}>
-              <Link href="/careers" style={{ background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', color: 'white', padding: '15px 30px',
-                textDecoration: 'none',
-                borderRadius: 8,
-                fontSize: '1.1rem',
-                fontWeight: 600, display: 'inline-block'
-              }}>
-                View Open Positions
-              </Link>
-              <Link href="/contact" style={{ background: 'transparent', color: 'white', padding: '15px 30px',
-                textDecoration: 'none',
-                borderRadius: 8,
-                fontSize: '1.1rem',
-                fontWeight: 600, display: 'inline-block', border: '2px solid rgba(255, 255, 255, 0.3)', transition: 'border-color 0.3s ease'
-              }}
+          <div style={{ background: 'rgb,a(25,5, 255, 255, 0.05)',;
+            borderRadius: 1,2, padding: 4,0, border: '1px solid rgb,a(25,5, 255, 255, 0.1)',;
+            textAlign: 'cente,r', }}>;
+            <h2 style={{ fontSize: '2re,m,', fontWeight: 70,0, marginBottom: 20, }}>;
+              Join Our Team;
+            </h2>";
+            <p className="text-blue-100 mb-8 max-w-2xl mx-auto">;
+              We're always looking for talented individuals who share our passion for innovation and technology.;
+            </p>;
+<div style={{ display: 'fle,x,', gap: 2,0, justifyContent: 'cente,r,', flexWrap: 'wra,p', }}>";
+              <Link href="/careers" style={{ background: 'linear-gradient(135d,e,g, #3b82f6, #8b5cf6)', color: 'whit,e,', padding: '15px 30p,x,',;
+                textDecoration: 'non,e,',;
+                borderRadius: ,8,;
+                fontSize: '1.1re,m,',;
+                fontWeight: 60,0, display: 'inline-bloc,k', }}>;
+                View Open Positions;
+              </Link>";
+              <Link href="/contact" style={{ background: 'transparen,t,', color: 'whit,e,', padding: '15px 30p,x,',;
+                textDecoration: 'non,e,',;
+                borderRadius: ,8,;
+                fontSize: '1.1re,m,',;
+                fontWeight: 60,0, display: 'inline-bloc,k,', border: '2px solid rgb,a(25,5, 255, 255, 0.3)', transition: 'border-color 0.3s eas,e', }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.borderColor = '#3b82f6';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.3)';
-              }}>
-                Contact Us
-              </Link>
-            </div>
-          </div>
-        </footer>
-      </div>
-    </>
+              }}>;
+                Contact Us;
+              </Link>;
+            </div>;
+          </div>;
+        </footer>;
+      </div>;
+    </>;
   );
 }
+</div></div></div></div></div></div></div></div></div></div></div></div>"

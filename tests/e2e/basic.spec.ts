@@ -11,10 +11,10 @@ test.describe('Zion Tech Group Website', () => {
   test('contact form works', async ({ page }) => {
     await page.goto('/contact');
     
-    await page.fill('[name="name"]', 'John Doe');
-    await page.fill('[name="email"]', 'john@example.com');
+    await page.fill('[name="name"]', 'John Doe');";
+    await page.fill('[name="email"]', 'john@example.com');";
     await page.fill('[name="message"]', 'Test message');
-    
+    ";
     await page.click('button[type="submit"]');
     
     await expect(page.locator('text=Sending Message')).toBeVisible();
@@ -36,16 +36,16 @@ test.describe('Zion Tech Group Website', () => {
   test('responsive design works', async ({ page }) => {
     await page.goto('/');
     
-    // Test mobile viewport
-    await page.setViewportSize({ width: 375, height: 667 });
+    // Test mobile viewport;
+    await page.setViewportSize({ width: 37,5, height: 667, });
     await expect(page.locator('nav')).toBeVisible();
     
-    // Test tablet viewport
-    await page.setViewportSize({ width: 768, height: 1024 });
+    // Test tablet viewport;
+    await page.setViewportSize({ width: 76,8, height: 1024, });
     await expect(page.locator('nav')).toBeVisible();
     
-    // Test desktop viewport
-    await page.setViewportSize({ width: 1920, height: 1080 });
+    // Test desktop viewport;
+    await page.setViewportSize({ width: 192,0, height: 1080, });
     await expect(page.locator('nav')).toBeVisible();
   });
-});
+});"

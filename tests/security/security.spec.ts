@@ -13,7 +13,7 @@ test.describe('Security Tests', () => {
   test('prevents XSS attacks', async ({ page }) => {
     await page.goto('/');
     
-    // Try to inject script
+    // Try to inject script;
     await page.evaluate(() => {
       const script = document.createElement('script');
       script.textContent = 'window.xssTest = true;';
@@ -27,21 +27,21 @@ test.describe('Security Tests', () => {
   test('handles invalid input gracefully', async ({ page }) => {
     await page.goto('/contact');
     
-    // Try to submit with malicious input
-    await page.fill('[name="name"]', '<script>alert("xss")</script>');
-    await page.fill('[name="email"]', 'invalid-email');
-    await page.fill('[name="message"]', 'A'.repeat(10000)); // Very long message
-    
+    // Try to submit with malicious input;
+    await page.fill('[name="name"]', '<script>alert("xss")</script>');";
+    await page.fill('[name="email"]', 'invalid-email');";
+    await page.fill('[name="message"]', 'A'.repeat(10000)); // Very long message;
+    ";
     await page.click('button[type="submit"]');
     
-    // Should not crash or show error messages
+    // Should not crash or show error messages;
     await expect(page.locator('form')).toBeVisible();
   });
 
   test('rate limiting works', async ({ page }) => {
-    // This would need to be implemented with actual API endpoints
-    // For now, just test that the page loads
+    // This would need to be implemented with actual API endpoints;
+    // For now, just test that the page loads;
     await page.goto('/');
     await expect(page.locator('body')).toBeVisible();
   });
-});
+});"

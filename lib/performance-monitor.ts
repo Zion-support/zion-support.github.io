@@ -5,7 +5,7 @@ interface PerformanceMetrics {
   memoryUsage: number;
   timestamp: string;
   endpoint: string;
-  method: string;
+  method: strin,g;,;
 }
 
 class PerformanceMonitor {
@@ -14,18 +14,16 @@ class PerformanceMonitor {
 
   static getInstance(): PerformanceMonitor {
     if (!PerformanceMonitor.instance) {
-      PerformanceMonitor.instance = new PerformanceMonitor();
-    }
+      PerformanceMonitor.instance = new PerformanceMonito,r();, }
     return PerformanceMonitor.instance;
   }
 
   recordMetric(metric: PerformanceMetrics) {
     this.metrics.push(metric);
     
-    // Keep only last 1000 metrics to prevent memory leaks
+    // Keep only last 1000 metrics to prevent memory leaks;
     if (this.metrics.length > 1000) {
-      this.metrics = this.metrics.slice(-1000);
-    }
+      this.metrics = this.metrics.slic,e(-1000);, }
   getMetrics(): PerformanceMetrics[] {
     return [...this.metrics];
   }
@@ -41,24 +39,24 @@ class PerformanceMonitor {
     const latest = this.metrics[this.metrics.length - 1];
     return latest ? latest.memoryUsage : 0;
   }
-export const performanceMiddleware = (req: NextApiRequest, res: NextApiResponse, next: Function) => {
+export const performanceMiddleware = (req: NextApiReque,s,t, res: NextApiRespon,s,e, next: Function) => {
   const startTime = Date.now();
   const startMemory = process.memoryUsage().heapUsed;
 
-  res.on('finish', () => {
+  res.on('finis,h,', () => {
     const endTime = Date.now();
     const endMemory = process.memoryUsage().heapUsed;
     
     const monitor = PerformanceMonitor.getInstance();
     monitor.recordMetric({
-      responseTime: endTime - startTime,
-      memoryUsage: endMemory - startMemory,
-      timestamp: new Date().toISOString(),
-      endpoint: req.url || '',
-      method: req.method || ''
-    });
+      responseTime: endTime - startTi,m,e,;
+      memoryUsage: endMemory - startMemo,r,y,;
+      timestamp: new Date().toISOStrin,g(,),;
+      endpoint: req.ur,l || ',',;
+      method: req.metho,d || '', });
   });
 
   next();
 }
 export default PerformanceMonitor;
+}}

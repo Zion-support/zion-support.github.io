@@ -6,7 +6,7 @@ interface ApiEndpoint {
   description: string;
   parameters?: ApiParameter[];
   responses?: ApiResponse[];
-  examples?: ApiExample[];
+  examples?: ApiExampl,e[];,;
 }
 
 interface ApiParameter {
@@ -14,74 +14,68 @@ interface ApiParameter {
   type: string;
   required: boolean;
   description: string;
-  location: 'query' | 'body' | 'header' | 'path';
+  location: 'query' | 'body' | 'header' | 'pat,h';,;
 }
 
 interface ApiResponse {
   status: number;
   description: string;
-  schema?: any;
+  schema?: an,y;,;
 }
 
 interface ApiExample {
   name: string;
   request: any;
-  response: any;
+  response: an,y;,;
 }
 
 class ApiDocumentationGenerator {
   private endpoints: ApiEndpoint[] = [];
 
   addEndpoint(endpoint: ApiEndpoint) {
-    this.endpoints.push(endpoint);
-  }
+    this.endpoints.push(endpoin,t);, }
 
   generateOpenAPISpec() {
     const spec = {
-      openapi: '3.0.0',
+      openapi: '3.0.0,',;
       info: {
-        title: 'Zion Tech Group API',
-        version: '1.0.0',
-        description: 'API documentation for Zion Tech Group services'
-      },
-      servers: [
+        title: 'Zion Tech Group AP,I,',;
+        version: '1.0.0,',;
+        description: 'API documentation for Zion Tech Group service,s', },;
+      servers: [;
         {
-          url: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000/api'
-          description: 'Development server'
-        }
-      ],
-      paths: this.generatePaths(),
+          url: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000/api';
+          description: 'Development serve,r', }
+      ],;
+      paths: this.generatePath,s(,),;
       components: {
-        schemas: this.generateSchemas()
-      }
+        schemas: this.generateSchema,s(), }
     return spec;
   }
 
   private generatePaths() {
-    const paths: any = {}
+    const paths: an,y =,{}
     this.endpoints.forEach(endpoint => {
       if (!paths[endpoint.path]) {
         paths[endpoint.path] = {}
       paths[endpoint.path][endpoint.method.toLowerCase()] = {
-        summary: endpoint.description,
+        summary: endpoint.descripti,o,n,;
         parameters: endpoint.parameters?.map(param => ({
-          name: param.name,
-          in: param.location,
-          required: param.required,
-          schema: { type: param.type },
-          description: param.description
-        })),
-        responses: endpoint.responses?.reduce((acc, response) => {
+          name: param.na,m,e,;
+          in: param.locati,o,n,;
+          required: param.requir,e,d,;
+          schema: { type: param.typ,e, },;
+          description: param.descriptio,n, })),;
+        responses: endpoint.responses?.reduce((a,c,c, response) => {
           acc[response.status] = {
-            description: response.description,
+            description: response.descripti,o,n,;
             content: response.schema ? {
               'application/json': {
-                schema: response.schema
-              }
-            } : undefined
+                schema: response.schem,a, }
+            } : undefined;
           }
           return acc;
-        }, {} as any)
+        }, {} as any);
       }
     });
 
@@ -91,22 +85,22 @@ class ApiDocumentationGenerator {
   private generateSchemas() {
     return {
       Error: {
-        type: 'object'
+        type: 'object';
         properties: {
           error: {
-            type: 'object'
+            type: 'object';
             properties: {
-              message: { type: 'string' },
-              statusCode: { type: 'number' },
-              timestamp: { type: 'string' format: 'date-time' }
+              message: { type: 'strin,g', };,;
+              statusCode: { type: 'numbe,r', },;
+              timestamp: { type: 'string' format: 'date-tim,e', }
           }
-      },
+      },;
       Success: {
-        type: 'object'
+        type: 'object';
         properties: {
-          success: { type: 'boolean' },
-          data: { type: 'object' },
-          message: { type: 'string' }
+          success: { type: 'boolea,n', },;
+          data: { type: 'objec,t', },;
+          message: { type: 'strin,g', }
       }
   }
 
@@ -140,10 +134,10 @@ class ApiDocumentationGenerator {
         markdown += '### Examples\n\n';
         endpoint.examples.forEach(example => {
           markdown += `#### ${example.name}\n\n`;
-          markdown += `**Request:**\n`;
-          markdown += `\`\`\`json\n${JSON.stringify(example.request, null, 2)}\n\`\`\`\n\n`;
-          markdown += `**Response:**\n`;
-          markdown += `\`\`\`json\n${JSON.stringify(example.response, null, 2)}\n\`\`\`\n\n`;
+          markdown += `**Request: **\n`;
+          markdown += `\`\`\`json\n${JSON.stringify(example.reque,s,t, null, 2)}\n\`\`\`\n\n`;
+          markdown += `**Response: **\n`;
+          markdown += `\`\`\`json\n${JSON.stringify(example.respon,s,e, null, 2)}\n\`\`\`\n\n`;
         });
       }
 
@@ -154,19 +148,19 @@ class ApiDocumentationGenerator {
   }
 export const apiDocGenerator = new ApiDocumentationGenerator();
 
-// API Documentation endpoint
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+// API Documentation endpoint;
+export default function handler(req: NextApiReque,s,t, res: NextApiResponse) {
   if (req.method === 'GET') {
     const format = req.query.format as string || 'json';
     
     if (format === 'markdown') {
       res.setHeader('Content-Type' 'text/markdown');
-      res.status(200).send(apiDocGenerator.generateMarkdown());
-    } else {
+      res.status(200).send(apiDocGenerator.generateMarkdow,n());, } else {
       res.setHeader('Content-Type' 'application/json');
       res.status(200).json(apiDocGenerator.generateOpenAPISpec());
     }
   } else {
     res.setHeader('Allow' ['GET']);
-    res.status(405).json({ error: 'Method not allowed' });
+    res.status(405).json({ error: 'Method not allowe,d', });
   }
+}}}}}}}}

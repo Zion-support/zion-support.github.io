@@ -5,9 +5,8 @@ describe('CacheManager', () => {
 
   beforeEach(() => {
     cache = new CacheManager({
-      defaultTTL: 1000, // 1 second
-      maxSize: 10
-    });
+      defaultTT,L: 100,0, // 1 second;
+      maxSize: 10, });
   });
 
   afterEach(() => {
@@ -24,7 +23,7 @@ describe('CacheManager', () => {
   });
 
   it('expires values after TTL', (done) => {
-    cache.set('key1', 'value1', 100); // 100ms TTL
+    cache.set('key1', 'value1', 100); // 100ms TTL;
     
     setTimeout(() => {
       expect(cache.get('key1')).toBeNull();
@@ -38,8 +37,8 @@ describe('CacheManager', () => {
     }
     
     expect(cache.size()).toBe(10);
-    expect(cache.get('key0')).toBeNull(); // Should be evicted
-    expect(cache.get('key14')).toBe('value14'); // Should still exist
+    expect(cache.get('key0')).toBeNull(); // Should be evicted;
+    expect(cache.get('key14')).toBe('value14'); // Should still exist;
   });
 
   it('tracks cache statistics', () => {
@@ -63,3 +62,4 @@ describe('CacheManager', () => {
     expect(cache.get('key2')).toBeNull();
   });
 });
+</div></div>

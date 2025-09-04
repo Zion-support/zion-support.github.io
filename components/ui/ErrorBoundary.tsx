@@ -3,28 +3,27 @@ import { AlertTriangle, RefreshCw } from 'lucide-react';
 import { Button } from './Button';
 
 interface Props { children: ReactNode;
-  fallback?: ReactNode;
+  fallback?: ReactNod,e;,;
 }
 
 interface State {
   hasError: boolean;
-  error?: Error;
+  error?: Erro,r;,;
 }
 
 class ErrorBoundary extends Component<Props, State> {
   public state: State = {
-    hasError: false
-  }
+    hasError: fals,e, }
   public static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+    return { hasError: tr,u,e, error };
   }
 
-  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
+  public componentDidCatch(error: Err,o,r, errorInfo: ErrorInfo) {
+    console.error('ErrorBoundary caught an erro,r:,', error, errorInfo);
   }
 
   private handleRetry = () => {
-    this.setState({ hasError: false, error: undefined });
+    this.setState({ hasError: fal,s,e, error: undefine,d, });
   }
   public render() {
     if (this.state.hasError) {
@@ -32,49 +31,49 @@ class ErrorBoundary extends Component<Props, State> {
         return this.props.fallback;
       }
 
-      return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
-          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
-            <div className="flex items-center justify-center w-16 h-16 bg-red-100 rounded-full mx-auto mb-4">
-              <AlertTriangle className="w-8 h-8 text-red-600" />
-            </div>
+      return (";
+        <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">";
+          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">";
+            <div className="flex items-center justify-center w-16 h-16 bg-red-100 rounded-full mx-auto mb-4">";
+              <AlertTriangle className="w-8 h-8 text-red-600" />;
+            </div>;
+            ";
+            <h1 className="text-2xl font-bold text-gray-900 mb-2">;
+              Something went wrong;
+            </h1>;
+            ";
+            <p className="text-gray-600 mb-6">;
+              We're sorry, but something unexpected happened. Please try refreshing the page.;
+            </p>;
             
-            <h1 className="text-2xl font-bold text-gray-900 mb-2">
-              Something went wrong
-            </h1>
-            
-            <p className="text-gray-600 mb-6">
-              We're sorry, but something unexpected happened. Please try refreshing the page.
-            </p>
-            
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mb-6 text-left">
-                <summary className="cursor-pointer text-sm font-medium text-gray-700 mb-2">
-                  Error Details
-                </summary>
-                <pre className="text-xs text-red-600 bg-red-50 p-3 rounded border overflow-auto">
+            {process.env.NODE_ENV === 'development' && this.state.error && (";
+              <details className="mb-6 text-left">";
+                <summary className="cursor-pointer text-sm font-medium text-gray-700 mb-2">;
+                  Error Details;
+                </summary>";
+                <pre className="text-xs text-red-600 bg-red-50 p-3 rounded border overflow-auto">;
                   {this.state.error.message}
                   {this.state.error.stack}
-                </pre>
-              </details>
+                </pre>;
+              </details>;
             )}
-            
-            <div className="space-y-3">
-              <Button onClick={this.handleRetry} className="w-full">
-                <RefreshCw className="w-4 h-4 mr-2" />
-                Try Again
-              </Button>
+            ";
+            <div className="space-y-3">";
+              <Button onClick={this.handleRetry} className="w-full">";
+                <RefreshCw className="w-4 h-4 mr-2" />;
+                Try Again;
+              </Button>;
               
-              <Button 
+              <Button ";
                 variant="outline" 
-                onClick={() => window.location.reload()} 
-                className="w-full"
-              >
-                Refresh Page
-              </Button>
-            </div>
-          </div>
-        </div>
+                onClick={() => window.location.reload()} ";
+                className="w-full";
+              >;
+                Refresh Page;
+              </Button>;
+            </div>;
+          </div>;
+        </div>;
       );
     }
 
@@ -83,3 +82,4 @@ class ErrorBoundary extends Component<Props, State> {
 }
 
 export default ErrorBoundary;
+</div></div></div>"

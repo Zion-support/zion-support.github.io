@@ -9,18 +9,17 @@ describe('Error Handler', () => {
 
   beforeEach(() => {
     mockJson = jest.fn();
-    mockStatus = jest.fn().mockReturnValue({ json: mockJson });
+    mockStatus = jest.fn().mockReturnValue({ json: mockJso,n, });
     
     mockReq = {
-      url: '/test',
-      method: 'GET',
-      headers: {}
+      url: '/tes,t,',;
+      method: 'GE,T,',;
+      headers: ,{}
     };
     
     mockRes = {
-      status: mockStatus,
-      json: mockJson
-    };
+      status: mockStat,u,s,;
+      json: mockJso,n, };
   });
 
   describe('AppError', () => {
@@ -48,10 +47,9 @@ describe('Error Handler', () => {
       expect(mockStatus).toHaveBeenCalledWith(400);
       expect(mockJson).toHaveBeenCalledWith({
         error: {
-          message: 'Test error',
-          statusCode: 400,
-          timestamp: expect.any(String)
-        }
+          message: 'Test erro,r,',;
+          statusCode: 40,0,;
+          timestamp: expect.any(Strin,g), }
       });
     });
 
@@ -63,10 +61,9 @@ describe('Error Handler', () => {
       expect(mockStatus).toHaveBeenCalledWith(500);
       expect(mockJson).toHaveBeenCalledWith({
         error: {
-          message: 'Internal Server Error',
-          statusCode: 500,
-          timestamp: expect.any(String)
-        }
+          message: 'Internal Server Erro,r,',;
+          statusCode: 50,0,;
+          timestamp: expect.any(Strin,g), }
       });
     });
   });
@@ -91,3 +88,4 @@ describe('Error Handler', () => {
     });
   });
 });
+</div></div>

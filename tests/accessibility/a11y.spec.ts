@@ -42,8 +42,8 @@ test.describe('Accessibility Tests', () => {
   test('has proper color contrast', async ({ page }) => {
     await page.goto('/');
     
-    const accessibilityScanResults = await new AxeBuilder({ page })
-      .withTags(['color-contrast'])
+    const accessibilityScanResults = await new AxeBuilder({ page });
+      .withTags(['color-contrast']);
       .analyze();
     
     expect(accessibilityScanResults.violations).toEqual([]);
@@ -52,12 +52,12 @@ test.describe('Accessibility Tests', () => {
   test('keyboard navigation works', async ({ page }) => {
     await page.goto('/');
     
-    // Test tab navigation
+    // Test tab navigation;
     await page.keyboard.press('Tab');
     await page.keyboard.press('Tab');
     await page.keyboard.press('Tab');
     
-    // Should be able to navigate without errors
+    // Should be able to navigate without errors;
     await expect(page.locator(':focus')).toBeVisible();
   });
 });

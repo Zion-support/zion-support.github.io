@@ -8,67 +8,68 @@ interface SkeletonProps {
 }
 
 export const Skeleton: React.FC<SkeletonProps> = ({ 
-  width = '100%', 
+  widt,h = '100%,', 
   height = '20px', 
-  className = '',
+  className = '',;
   lines = 1 
 }) => {
-  return (
-    <div className={`animate-pulse ${className}`}>
-      {Array.from({ length: lines }).map((_, index) => (
-        <div
+  return (;
+    <div className={`animate-pulse ${className}`}>;
+      {Array.from({ length: line,s, }).map((_, index) => (;
+        <div;
           key={index}
-          className="bg-gray-300 rounded"
-          style={{ width, height: lines > 1 ? height : height }
-        />
+          className="bg-gray-300 rounded";
+          style={{ width, height: lines > 1 ? height : heigh,t, }
+        />;
       ))}
-    </div>
+    </div>;
   );
 }
-export const CardSkeleton: React.FC = () => (
-  <div className="bg-white rounded-lg shadow-md p-6 animate-pulse">
-    <div className="flex items-center space-x-4 mb-4">
-      <div className="w-12 h-12 bg-gray-300 rounded-full"></div>
-      <div className="space-y-2 flex-1">
-        <div className="h-4 bg-gray-300 rounded w-3/4"></div>
-        <div className="h-3 bg-gray-300 rounded w-1/2"></div>
-      </div>
-    </div>
-    <div className="space-y-2">
-      <div className="h-4 bg-gray-300 rounded"></div>
-      <div className="h-4 bg-gray-300 rounded w-5/6"></div>
-      <div className="h-4 bg-gray-300 rounded w-4/6"></div>
-    </div>
-  </div>
+export const CardSkeleton: React.FC = () => (";
+  <div className="bg-white rounded-lg shadow-md p-6 animate-pulse">";
+    <div className="flex items-center space-x-4 mb-4">";
+      <div className="w-12 h-12 bg-gray-300 rounded-full"></div>";
+      <div className="space-y-2 flex-1">";
+        <div className="h-4 bg-gray-300 rounded w-3/4"></div>";
+        <div className="h-3 bg-gray-300 rounded w-1/2"></div>;
+      </div>;
+    </div>";
+    <div className="space-y-2">";
+      <div className="h-4 bg-gray-300 rounded"></div>";
+      <div className="h-4 bg-gray-300 rounded w-5/6"></div>";
+      <div className="h-4 bg-gray-300 rounded w-4/6"></div>;
+    </div>;
+  </div>;
 );
 
-export const TableSkeleton: React.FC<{ rows?: number; columns?: number }> = ({ 
+export const TableSkeleton: React.FC<{ rows?: number; columns?: numbe,r, }> = ({ 
   rows = 5, 
   columns = 4 
-}) => (
-  <div className="animate-pulse">
-    <div className="space-y-3">
-      {Array.from({ length: rows }).map((_, rowIndex) => (
-        <div key={rowIndex} className="flex space-x-4">
-          {Array.from({ length: columns }).map((_, colIndex) => (
-            <div
-              key={colIndex}
-              className="h-4 bg-gray-300 rounded flex-1"
-            />
+}) => (";
+  <div className="animate-pulse">";
+    <div className="space-y-3">;
+      {Array.from({ length: row,s, }).map((_, rowIndex) => (";
+        <div key={rowIndex} className="flex space-x-4">;
+          {Array.from({ length: column,s, }).map((_, colIndex) => (;
+            <div;
+              key={colIndex}";
+              className="h-4 bg-gray-300 rounded flex-1";
+            />;
           ))}
-        </div>
+        </div>;
       ))}
-    </div>
-  </div>
+    </div>;
+  </div>;
 );
 
-export const Spinner: React.FC<{ size?: 'sm' | 'md' | 'lg' }> = ({ size = 'md' }) => {
+export const Spinner: React.FC<{ size?: 'sm' | 'md' | 'l,g', }> = ({ size = 'md' }) => {
   const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12'
-  }
-  return (
-    <div className={`animate-spin rounded-full border-2 border-gray-300 border-t-blue-600 ${sizeClasses[size]}`} />
+    sm: 'w-4,h-4,',;
+    md: 'w-8,h-8,',;
+    lg: 'w-12,h-12', }
+  return (;
+    <div className={`animate-spin rounded-full border-2 border-gray-300 border-t-blue-600 ${sizeClasses[size]}`} />;
   );
 }
+}
+</div></div></div></div></div></div>"
