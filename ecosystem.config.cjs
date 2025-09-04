@@ -1,10 +1,10 @@
 module.exports = {
   apps: [
     {
-      name: 'ziontechgroup-web',
+      name: 'ziontechgroup-main',
       script: 'npm',
       args: 'start',
-      cwd: '/workspace',
+      cwd: './',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -17,122 +17,135 @@ module.exports = {
         NODE_ENV: 'development',
         PORT: 3000
       },
-      log_file: './logs/web.log',
-      out_file: './logs/web-out.log',
-      error_file: './logs/web-error.log',
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+      error_file: './automation/logs/main-error.log',
+      out_file: './automation/logs/main-out.log',
+      log_file: './automation/logs/main-combined.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+      merge_logs: true,
+      max_restarts: 10,
+      min_uptime: '10s',
+      restart_delay: 4000
     },
     {
-      name: 'automation-health-check',
-      script: 'node',
-      args: 'automation/health-check.cjs',
-      cwd: '/workspace',
+      name: 'error-monitor',
+      script: './automation/error-monitor.js',
       instances: 1,
       autorestart: true,
       watch: false,
-      cron_restart: '*/5 * * * *', // Restart every 5 minutes
+      max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production'
       },
-      log_file: './logs/health-check.log',
-      out_file: './logs/health-check-out.log',
-      error_file: './logs/health-check-error.log'
+      error_file: './automation/logs/error-monitor-error.log',
+      out_file: './automation/logs/error-monitor-out.log',
+      log_file: './automation/logs/error-monitor-combined.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+      merge_logs: true,
+      max_restarts: 5,
+      min_uptime: '10s',
+      restart_delay: 2000
     },
     {
-      name: 'automation-security-scanner',
-      script: 'node',
-      args: 'automation/security-scanner.cjs',
-      cwd: '/workspace',
+      name: 'build-monitor',
+      script: './automation/build-monitor.js',
       instances: 1,
       autorestart: true,
       watch: false,
-      cron_restart: '0 */6 * * *', // Restart every 6 hours
+      max_memory_restart: '256M',
       env: {
         NODE_ENV: 'production'
       },
-      log_file: './logs/security-scanner.log',
-      out_file: './logs/security-scanner-out.log',
-      error_file: './logs/security-scanner-error.log'
+      error_file: './automation/logs/build-monitor-error.log',
+      out_file: './automation/logs/build-monitor-out.log',
+      log_file: './automation/logs/build-monitor-combined.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+      merge_logs: true,
+      max_restarts: 5,
+      min_uptime: '10s',
+      restart_delay: 2000
     },
     {
-      name: 'automation-performance-monitor',
-      script: 'node',
-      args: 'scripts/performance-monitor.cjs',
-      cwd: '/workspace',
+      name: 'linting-automation',
+      script: './automation/linting-automation.js',
       instances: 1,
       autorestart: true,
       watch: false,
-      cron_restart: '0 */2 * * *', // Restart every 2 hours
+      max_memory_restart: '256M',
       env: {
         NODE_ENV: 'production'
       },
-      log_file: './logs/performance-monitor.log',
-      out_file: './logs/performance-monitor-out.log',
-      error_file: './logs/performance-monitor-error.log'
+      error_file: './automation/logs/linting-automation-error.log',
+      out_file: './automation/logs/linting-automation-out.log',
+      log_file: './automation/logs/linting-automation-combined.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+      merge_logs: true,
+      max_restarts: 5,
+      min_uptime: '10s',
+      restart_delay: 2000
     },
     {
-      name: 'automation-ci-cd',
-      script: 'node',
-      args: 'scripts/automation-orchestrator.cjs',
-      cwd: '/workspace',
+      name: 'security-scanner',
+      script: './automation/security-scanner.js',
       instances: 1,
       autorestart: true,
       watch: false,
-      cron_restart: '0 */1 * * *', // Restart every hour
+      max_memory_restart: '256M',
       env: {
         NODE_ENV: 'production'
       },
-      log_file: './logs/ci-cd.log',
-      out_file: './logs/ci-cd-out.log',
-      error_file: './logs/ci-cd-error.log'
+      error_file: './automation/logs/security-scanner-error.log',
+      out_file: './automation/logs/security-scanner-out.log',
+      log_file: './automation/logs/security-scanner-combined.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+      merge_logs: true,
+      max_restarts: 5,
+      min_uptime: '10s',
+      restart_delay: 2000
     },
     {
-      name: 'automation-continuous-improvement',
-      script: 'node',
-      args: 'scripts/enhanced-app-improvement-automation.cjs',
-      cwd: '/workspace',
+      name: 'performance-monitor',
+      script: './automation/performance-monitor.js',
       instances: 1,
       autorestart: true,
       watch: false,
-      cron_restart: '0 */2 * * *', // Restart every 2 hours
+      max_memory_restart: '256M',
       env: {
         NODE_ENV: 'production'
       },
-      log_file: './logs/continuous-improvement.log',
-      out_file: './logs/continuous-improvement-out.log',
-      error_file: './logs/continuous-improvement-error.log'
+      error_file: './automation/logs/performance-monitor-error.log',
+      out_file: './automation/logs/performance-monitor-out.log',
+      log_file: './automation/logs/performance-monitor-combined.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+      merge_logs: true,
+      max_restarts: 5,
+      min_uptime: '10s',
+      restart_delay: 2000
     },
     {
-      name: 'automation-dependency-updates',
-      script: 'node',
-      args: 'scripts/dependency-updater.cjs',
-      cwd: '/workspace',
+      name: 'error-prevention',
+      script: './automation/error-prevention-automation.js',
       instances: 1,
       autorestart: true,
       watch: false,
-      cron_restart: '0 */6 * * *', // Restart every 6 hours
+      max_memory_restart: '256M',
       env: {
         NODE_ENV: 'production'
       },
-      log_file: './logs/dependency-updates.log',
-      out_file: './logs/dependency-updates-out.log',
-      error_file: './logs/dependency-updates-error.log'
-    },
-    {
-      name: 'automation-quality-checks',
-      script: 'node',
-      args: 'scripts/code-quality-monitor.cjs',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      cron_restart: '0 */3 * * *', // Restart every 3 hours
-      env: {
-        NODE_ENV: 'production'
-      },
-      log_file: './logs/quality-checks.log',
-      out_file: './logs/quality-checks-out.log',
-      error_file: './logs/quality-checks-error.log'
+      error_file: './automation/logs/error-prevention-error.log',
+      out_file: './automation/logs/error-prevention-out.log',
+      log_file: './automation/logs/error-prevention-combined.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+      merge_logs: true,
+      max_restarts: 5,
+      min_uptime: '10s',
+      restart_delay: 2000
     }
   ]
 };
