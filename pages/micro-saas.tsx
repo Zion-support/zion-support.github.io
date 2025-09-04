@@ -1070,169 +1070,128 @@ export default function MicroSaaS() {
     {
       icon: Brain,
       name: 'AI-Powered Email Responder',
-ursor/analyze-improve-and-deploy-application-d144
+      description: 'Intelligent email automation and response system',
       timeline: '3–4 weeks',
       benefits: [
-        '50% reduction in event planning time',
-        'Automated attendee management',
-ursor/analyze-improve-and-deploy-application-d144
+        '50% reduction in email response time',
+        'Automated email categorization',
+        'Smart reply suggestions',
+        'Multi-language support'
       ],
-      category: 'Event Management'
+      category: 'Communication'
     },
     {
-ursor/analyze-improve-and-deploy-application-d144
-      ],
-      pricing: '$199 – $1,299/month',
+      icon: ShoppingCart,
+      name: 'E-Commerce Analytics Dashboard',
+      description: 'Comprehensive analytics for online stores',
       timeline: '2–3 weeks',
       benefits: [
-ursor/analyze-improve-and-deploy-application-d144
+        'Real-time sales tracking',
+        'Customer behavior insights',
+        'Inventory management',
+        'Revenue forecasting'
       ],
       category: 'E-Commerce'
     },
     {
-ursor/analyze-improve-and-deploy-application-d144
-      ],
-      pricing: '$299 – $1,999/month',
-      timeline: '3–4 weeks',
-      benefits: [
-ursor/analyze-improve-and-deploy-application-d144
-    },
-    {
       icon: Shield,
       name: 'Cybersecurity Compliance Manager',
-ursor/analyze-improve-and-deploy-application-d144
+      description: 'Automated compliance monitoring and reporting',
+      timeline: '4–6 weeks',
+      benefits: [
+        'Automated compliance checks',
+        'Real-time security monitoring',
+        'Regulatory reporting',
+        'Risk assessment tools'
+      ],
+      category: 'Security'
     }
   ];
 
-  const categories = [...new Set(microSaaSServices.map(service => service.category))];
+  const categories = [...new Set(microSaasProducts.map(product => product.category))];
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
-        <title>Micro SaaS Products — Zion Tech Group</title>
-        <meta name="description" content="Ready-to-deploy micro SaaS products including cloud cost optimization, document processing, API management, and more. Transform your business with innovative solutions." />
-        <link rel="canonical" href={`${contact.site}/micro-saas`} />
+        <title>Micro SaaS Solutions - Zion Tech Group</title>
+        <meta name="description" content="Custom micro SaaS solutions for modern businesses" />
       </Head>
-
-      <header className="py-20 text-center px-4">
-        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
-          Micro SaaS Products
-        </h1>
-        <p className="mt-4 text-slate-300 max-w-3xl mx-auto text-lg">
-          Ready-to-deploy SaaS solutions that solve real business problems. From cloud cost optimization 
-          to document processing, our micro SaaS products deliver immediate value with minimal setup time.
-        </p>
-        <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
-          <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-5 py-2 rounded bg-blue-600 hover:bg-blue-700">Call {contact.phone}</a>
-          <a href={`mailto:${contact.email}`} className="px-5 py-2 rounded bg-purple-600 hover:bg-purple-700">Email {contact.email}</a>
-          <Link href="/contact" className="px-5 py-2 rounded bg-slate-800 hover:bg-slate-700 border border-white/10">Get Started</Link>
+      
+      <main className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold text-center mb-8">Micro SaaS Solutions</h1>
+        
+        {/* Filter Section */}
+        <div className="flex flex-wrap justify-center gap-4 mb-8">
+          <button
+            onClick={() => setSelectedCategory('All')}
+            className={`px-6 py-2 rounded-full ${
+              selectedCategory === 'All' 
+                ? 'bg-blue-600 text-white' 
+                : 'bg-slate-700 text-gray-300 hover:bg-slate-600'
+            }`}
+          >
+            All
+          </button>
+          {categories.map(category => (
+            <button
+              key={category}
+              onClick={() => setSelectedCategory(category)}
+              className={`px-6 py-2 rounded-full ${
+                selectedCategory === category 
+                  ? 'bg-blue-600 text-white' 
+                  : 'bg-slate-700 text-gray-300 hover:bg-slate-600'
+              }`}
+            >
+              {category}
+            </button>
+          ))}
         </div>
-      </header>
 
-      <main className="max-w-7xl mx-auto px-4 pb-24">
-        {/* Category Filter */}
-        <div className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-center">Browse by Category</h2>
-          <div className="flex flex-wrap justify-center gap-3">
-            {categories.map((category) => (
-              <button
-                key={category}
-                className="px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 border border-white/10 text-sm font-medium transition-colors"
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* Services Grid */}
-        <div className="grid gap-8">
-          {microSaaSServices.map((service, index) => (
-            <div key={index} className="rounded-xl border border-white/10 bg-slate-900/60 p-8 hover:border-blue-500/40 transition-colors">
-              <div className="flex items-start gap-4 mb-6">
-                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <service.icon className="w-6 h-6" />
-                </div>
-                <div className="flex-1">
-                  <div className="flex items-center gap-3 mb-2">
-                    <h2 className="text-2xl font-bold">{service.name}</h2>
-                    <span className="px-2 py-1 rounded bg-slate-800/70 border border-white/10 text-xs font-medium">
-                      {service.category}
-                    </span>
-                  </div>
-                  <p className="text-slate-300 text-lg">{service.description}</p>
-                </div>
+        {/* Products Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredProducts.map((product, index) => (
+            <div key={index} className="bg-slate-800 rounded-lg p-6 hover:bg-slate-700 transition-colors">
+              <div className="flex items-center mb-4">
+                <product.icon className="h-8 w-8 text-blue-400 mr-3" />
+                <h3 className="text-xl font-semibold">{product.name}</h3>
               </div>
-
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-lg font-semibold mb-3 text-blue-400">Key Features</h3>
-                  <ul className="space-y-2 text-slate-300">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-2">
-                        <span className="text-blue-400 mt-1">•</span>
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div>
-                  <h3 className="text-lg font-semibold mb-3 text-green-400">Business Benefits</h3>
-                  <ul className="space-y-2 text-slate-300">
-                    {service.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-start gap-2">
-                        <span className="text-green-400 mt-1">✓</span>
-                        <span>{benefit}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+              
+              <p className="text-gray-300 mb-4">{product.description}</p>
+              
+              <div className="mb-4">
+                <span className="text-sm text-gray-400">Timeline: </span>
+                <span className="text-blue-400">{product.timeline}</span>
               </div>
-
-              <div className="mt-6 pt-6 border-t border-white/10">
-                <div className="flex flex-wrap items-center gap-6">
-                  <div className="flex items-center gap-2">
-                    <span className="text-slate-400">Pricing:</span>
-                    <span className="font-semibold text-blue-400">{service.pricing}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-slate-400">Setup Time:</span>
-                    <span className="font-semibold text-green-400">{service.timeline}</span>
-                  </div>
-                  <div className="ml-auto flex gap-3">
-                    <Link href="/contact" className="px-4 py-2 rounded bg-blue-600 hover:bg-blue-700 text-sm font-semibold">
-                      Get Started
-                    </Link>
-                    <Link href="/contact" className="px-4 py-2 rounded bg-slate-800 hover:bg-slate-700 border border-white/10 text-sm font-semibold">
-                      Learn More
-                    </Link>
-                  </div>
-                </div>
+              
+              <div className="mb-4">
+                <span className="text-sm text-gray-400">Pricing: </span>
+                <span className="text-green-400">{product.pricing}</span>
+              </div>
+              
+              <div className="mb-4">
+                <h4 className="text-sm font-semibold text-gray-400 mb-2">Benefits:</h4>
+                <ul className="text-sm text-gray-300 space-y-1">
+                  {product.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-start">
+                      <span className="text-green-400 mr-2">✓</span>
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              
+              <div className="flex justify-between items-center">
+                <span className="text-xs bg-slate-700 px-2 py-1 rounded">{product.category}</span>
+                <button className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded text-sm font-semibold">
+                  Learn More
+                </button>
               </div>
             </div>
           ))}
         </div>
-
-        {/* CTA Section */}
-        <section className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8">
-            <h2 className="text-3xl font-bold mb-4">Ready to Deploy Your Micro SaaS Solution?</h2>
-            <p className="text-lg mb-6 max-w-2xl mx-auto">
-              Our micro SaaS products are designed for quick deployment and immediate value. 
-              Most solutions can be up and running within 1-4 weeks.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                Call {contact.phone}
-              </a>
-              <a href={`mailto:${contact.email}`} className="px-8 py-3 bg-transparent border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                Email {contact.email}
-              </a>
-            </div>
-          </div>
-        </section>
       </main>
     </div>
   );
 }
+export default MicroSaas;
+      timeline: '2–3 weeks',

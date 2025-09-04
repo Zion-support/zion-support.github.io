@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-04T01:35:36.861Z",
+  "timestamp": "2025-09-04T01:39:38.817Z",
   "files": {
     "components/Breadcrumb.tsx": {
       "path": "components/Breadcrumb.tsx",
@@ -157,7 +157,7 @@
     },
     "pages/micro-saas.tsx": {
       "path": "pages/micro-saas.tsx",
-      "lines": 1238,
+      "lines": 1198,
       "issues": [
         {
           "rule": "File Length",
@@ -166,11 +166,11 @@
         },
         {
           "rule": "Duplicate Code",
-          "value": 50,
+          "value": 49,
           "message": "Potential duplicate code detected"
         }
       ],
-      "complexity": 0
+      "complexity": 2
     },
     "pages/pricing.tsx": {
       "path": "pages/pricing.tsx",
@@ -234,8 +234,8 @@
   },
   "summary": {
     "totalFiles": 28,
-    "totalLines": 7990,
-    "averageComplexity": "2.00",
+    "totalLines": 7950,
+    "averageComplexity": "2.07",
     "issues": [
       {
         "file": "pages/404.tsx",
@@ -307,7 +307,7 @@
           },
           {
             "rule": "Duplicate Code",
-            "value": 50,
+            "value": 49,
             "message": "Potential duplicate code detected"
           }
         ]
