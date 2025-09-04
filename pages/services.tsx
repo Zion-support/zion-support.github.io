@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { useState } from 'react';
 
 type Service = {
   name: string;
@@ -542,171 +541,6 @@ const microSaaS: Service[] = [
     name: 'Intelligent Customer Optimization Engine',
     summary: 'End-to-end customer optimization, lifecycle management, and value maximization.',
     pricing: 'Typical: $499–$2,499/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Voice Cloning & Synthesis',
-    summary: 'Advanced voice synthesis technology for creating realistic voice clones and automated voice content.',
-    pricing: 'Typical: $499–$3,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Blockchain Smart Contract Auditor',
-    summary: 'Automated smart contract security analysis and vulnerability detection for DeFi and Web3 projects.',
-    pricing: 'Typical: $399–$2,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Carbon Footprint Tracker',
-    summary: 'Real-time carbon emission tracking and sustainability reporting for businesses and individuals.',
-    pricing: 'Typical: $199–$1,499/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Quantum Computing Simulation Platform',
-    summary: 'Cloud-based quantum computing simulation for research, optimization, and cryptography applications.',
-    pricing: 'Typical: $299–$2,499/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Medical Image Analysis',
-    summary: 'Advanced medical imaging analysis for diagnostic assistance and treatment planning.',
-    pricing: 'Typical: $999–$7,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Metaverse Virtual Event Platform',
-    summary: 'Immersive virtual event hosting with 3D environments, avatars, and interactive experiences.',
-    pricing: 'Typical: $499–$3,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Drug Discovery Platform',
-    summary: 'Machine learning platform for pharmaceutical research, drug discovery, and molecular analysis.',
-    pricing: 'Typical: $1,999–$12,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Trading Algorithm Platform',
-    summary: 'Advanced algorithmic trading platform with machine learning models and risk management.',
-    pricing: 'Typical: $799–$5,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Smart City Management',
-    summary: 'Comprehensive smart city platform for traffic, utilities, and public services optimization.',
-    pricing: 'Typical: $2,999–$19,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Legal Document Analyzer',
-    summary: 'Intelligent legal document analysis with contract review, risk assessment, and compliance checking.',
-    pricing: 'Typical: $599–$3,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Threat Intelligence Platform',
-    summary: 'Real-time cybersecurity threat intelligence with automated threat hunting and incident response.',
-    pricing: 'Typical: $799–$4,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Market Research Platform',
-    summary: 'Intelligent market research automation with sentiment analysis, competitor tracking, and trend prediction.',
-    pricing: 'Typical: $399–$2,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Customer Success Platform',
-    summary: 'Intelligent customer success management with churn prediction, health scoring, and automated engagement.',
-    pricing: 'Typical: $299–$2,499/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Website Accessibility Checker',
-    summary: 'Automated web accessibility testing and remediation with WCAG compliance and inclusive design recommendations.',
-    pricing: 'Typical: $199–$1,499/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Patent Research Platform',
-    summary: 'Intelligent patent research and analysis with prior art detection, patentability assessment, and IP strategy recommendations.',
-    pricing: 'Typical: $499–$3,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Energy Trading Platform',
-    summary: 'Intelligent energy trading with real-time market analysis, price prediction, and automated trading strategies.',
-    pricing: 'Typical: $999–$7,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Drug Discovery Platform',
-    summary: 'Intelligent drug discovery with molecular analysis, compound screening, and clinical trial optimization.',
-    pricing: 'Typical: $1,999–$14,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Insurance Risk Assessment',
-    summary: 'Intelligent insurance risk evaluation with automated underwriting, fraud detection, and claims processing.',
-    pricing: 'Typical: $699–$4,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Supply Chain Optimizer',
-    summary: 'Intelligent supply chain optimization with demand forecasting, route optimization, and inventory management.',
-    pricing: 'Typical: $599–$3,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Mental Health Platform',
-    summary: 'Intelligent mental health support with mood tracking, therapy recommendations, and crisis intervention.',
-    pricing: 'Typical: $199–$1,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Carbon Footprint Tracker',
-    summary: 'Intelligent carbon footprint monitoring with sustainability recommendations and ESG reporting automation.',
-    pricing: 'Typical: $299–$2,499/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Grant Writing Assistant',
-    summary: 'Intelligent grant writing platform with proposal generation, compliance checking, and success prediction.',
-    pricing: 'Typical: $199–$1,499/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Voice Analytics Platform',
-    summary: 'Intelligent voice analysis with emotion detection, sentiment analysis, and conversation optimization.',
-    pricing: 'Typical: $399–$2,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Data Privacy Manager',
-    summary: 'Intelligent data privacy management with GDPR compliance, consent tracking, and privacy impact assessment.',
-    pricing: 'Typical: $299–$2,499/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Real Estate Analytics',
-    summary: 'Intelligent real estate market analysis with property valuation, investment recommendations, and market forecasting.',
-    pricing: 'Typical: $399–$2,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Employee Wellness Platform',
-    summary: 'Intelligent employee wellness management with health monitoring, stress detection, and wellness recommendations.',
-    pricing: 'Typical: $199–$1,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Language Learning Platform',
-    summary: 'Intelligent language learning with personalized curriculum, pronunciation analysis, and conversation practice.',
-    pricing: 'Typical: $149–$1,299/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Scientific Research Assistant',
-    summary: 'Intelligent research platform with literature analysis, hypothesis generation, and experimental design optimization.',
-    pricing: 'Typical: $299–$2,499/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Personal Finance Advisor',
-    summary: 'Intelligent personal finance management with budgeting, investment recommendations, and financial goal tracking.',
-    pricing: 'Typical: $99–$799/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Food Safety Monitor',
-    summary: 'Intelligent food safety management with contamination detection, quality monitoring, and compliance tracking.',
-    pricing: 'Typical: $399–$2,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Sports Analytics Platform',
-    summary: 'Intelligent sports performance analysis with player tracking, injury prediction, and strategy optimization.',
-    pricing: 'Typical: $499–$3,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Elderly Care Platform',
-    summary: 'Intelligent elderly care management with health monitoring, medication reminders, and emergency response.',
-    pricing: 'Typical: $199–$1,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Smart City Platform',
-    summary: 'Intelligent smart city management with traffic optimization, resource management, and citizen services.',
-    pricing: 'Typical: $999–$7,999/month',
     link: 'https://ziontechgroup.com/micro-saas'}
 ];
 
@@ -1150,51 +984,6 @@ const aiServices: Service[] = [
     name: 'AI-Powered Advanced Intelligence Platform',
     summary: 'Comprehensive AI solutions, intelligent decision making, and strategic insights.',
     pricing: 'Typical: $75k–$500k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'Generative AI Content Studio',
-    summary: 'Advanced AI-powered content creation platform for marketing, social media, and brand communications.',
-    pricing: 'Typical: $2,000–$12,000/month',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Zero Trust Security',
-    summary: 'Advanced AI-driven security platform implementing zero trust architecture with behavioral analysis.',
-    pricing: 'Typical: $5,000–$25,000 setup',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Satellite Image Analysis',
-    summary: 'Advanced satellite imagery analysis for agriculture, urban planning, and environmental monitoring.',
-    pricing: 'Typical: $3,000–$15,000 setup',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Supply Chain Optimization',
-    summary: 'Intelligent supply chain management with predictive analytics and automated optimization.',
-    pricing: 'Typical: $4,000–$20,000 setup',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Legal Document Analysis',
-    summary: 'Advanced legal document processing with contract analysis, compliance checking, and risk assessment.',
-    pricing: 'Typical: $2,000–$10,000/month',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Agricultural Intelligence',
-    summary: 'Comprehensive agricultural AI platform for crop monitoring, yield optimization, and farm management.',
-    pricing: 'Typical: $1,000–$8,000/month',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Market Intelligence Platform',
-    summary: 'Advanced market research and competitive intelligence with real-time analysis and insights.',
-    pricing: 'Typical: $2,000–$15,000/month',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Learning Management System',
-    summary: 'Intelligent educational platform with personalized learning paths and automated assessment.',
-    pricing: 'Typical: $1,500–$10,000/month',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Quality Assurance Platform',
-    summary: 'Comprehensive quality control system with automated testing and defect detection.',
-    pricing: 'Typical: $2,000–$12,000/month',
     link: 'https://ziontechgroup.com/ai-services'}
 ];
 
@@ -1688,75 +1477,11 @@ const itServices: Service[] = [
     name: 'Enterprise IT End-to-End Service Management',
     summary: 'Comprehensive IT service management, end-to-end optimization, and service excellence.',
     pricing: 'Typical: $75k–$500k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Edge Computing Infrastructure',
-    summary: 'Distributed edge computing solutions for low-latency applications and IoT device management.',
-    pricing: 'Typical: $200–$400/hour',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Zero Trust Network Architecture',
-    summary: 'Comprehensive zero trust security implementation with micro-segmentation and continuous verification.',
-    pricing: 'Typical: $8,000–$50,000/project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Multi-Cloud Orchestration Platform',
-    summary: 'Unified management platform for multi-cloud environments with cost optimization and governance.',
-    pricing: 'Typical: $150–$300/hour',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Data Mesh Architecture Implementation',
-    summary: 'Modern data architecture with decentralized data ownership and self-serve data infrastructure.',
-    pricing: 'Typical: $180–$350/hour',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Platform Engineering & Internal Developer Platform',
-    summary: 'Self-service platform for developers with automated CI/CD, infrastructure, and tooling.',
-    pricing: 'Typical: $200–$400/hour',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: '5G Network Infrastructure & Private Networks',
-    summary: 'Private 5G network deployment and management for enterprise applications and IoT.',
-    pricing: 'Typical: $250–$500/hour',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Quantum-Safe Cryptography Implementation',
-    summary: 'Post-quantum cryptography solutions to protect against future quantum computing threats.',
-    pricing: 'Typical: $300–$600/hour',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'AI Infrastructure & MLOps Platform',
-    summary: 'Complete AI/ML infrastructure with model training, deployment, and monitoring capabilities.',
-    pricing: 'Typical: $180–$350/hour',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Web3 & Blockchain Infrastructure',
-    summary: 'Blockchain infrastructure setup and management for DeFi, NFTs, and Web3 applications.',
-    pricing: 'Typical: $200–$450/hour',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'High-Performance Computing (HPC) Infrastructure',
-    summary: 'Specialized HPC infrastructure for scientific computing, simulations, and data-intensive workloads.',
-    pricing: 'Typical: $250–$500/hour',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Digital Transformation Consulting',
-    summary: 'Comprehensive digital transformation strategy and implementation for enterprise modernization.',
-    pricing: 'Typical: $200–$400/hour',
     link: 'https://ziontechgroup.com/it-services'}
 ];
 
-export default function Services(): any {
-  const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 12;
-
-  const Section = ({ title, items, color }: { title: string; items: Service[]; color: string }) => {
-    const totalPages = Math.ceil(items.length / itemsPerPage);
-    const startIndex = (currentPage - 1) * itemsPerPage;
-    const endIndex = startIndex + itemsPerPage;
-    const currentItems = items.slice(startIndex, endIndex);
-
-    return (
+export default function Services(): React.JSX.Element {
+  const Section = ({ title, items, color }: { title: string; items: Service[]; color: string }) => (
     <section style={{ maxWidth: 1400, margin: '0 auto', padding: '32px 20px', }}>
       <div style={{ 
         display: 'flex', alignItems: 'center', gap: 12, marginBottom: 24,
@@ -1784,7 +1509,7 @@ export default function Services(): any {
         gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', 
         gap: 20 
       }}>
-        {currentItems.map((s) => (
+        {items.map((s) => (
           <a key={s.name} href={s.link} style={{
             border: '1px solid rgba(0,0,0,0.08)', borderRadius: 16, padding: 24,
             background: 'white', textDecoration: 'none', color: '#0b1220',
@@ -1811,76 +1536,8 @@ export default function Services(): any {
           </a>
         ))}
       </div>
-      
-      {/* Pagination Controls */}
-      {totalPages > 1 && (
-        <div style={{ 
-          display: 'flex', 
-          justifyContent: 'center', 
-          alignItems: 'center', 
-          gap: 8, 
-          marginTop: 32,
-          paddingTop: 24,
-          borderTop: '1px solid rgba(0,0,0,0.1)'
-        }}>
-          <button
-            onClick={() => setCurrentPage(Math.max(1, currentPage - 1))}
-            disabled={currentPage === 1}
-            style={{
-              padding: '8px 16px',
-              border: '1px solid #e2e8f0',
-              borderRadius: 8,
-              background: currentPage === 1 ? '#f8fafc' : 'white',
-              color: currentPage === 1 ? '#94a3b8' : '#475569',
-              cursor: currentPage === 1 ? 'not-allowed' : 'pointer',
-              fontSize: 14,
-              fontWeight: 500
-            }}
-          >
-            Previous
-          </button>
-          
-          {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-            <button
-              key={page}
-              onClick={() => setCurrentPage(page)}
-              style={{
-                padding: '8px 12px',
-                border: '1px solid #e2e8f0',
-                borderRadius: 8,
-                background: currentPage === page ? color : 'white',
-                color: currentPage === page ? 'white' : '#475569',
-                cursor: 'pointer',
-                fontSize: 14,
-                fontWeight: 500,
-                minWidth: 40
-              }}
-            >
-              {page}
-            </button>
-          ))}
-          
-          <button
-            onClick={() => setCurrentPage(Math.min(totalPages, currentPage + 1))}
-            disabled={currentPage === totalPages}
-            style={{
-              padding: '8px 16px',
-              border: '1px solid #e2e8f0',
-              borderRadius: 8,
-              background: currentPage === totalPages ? '#f8fafc' : 'white',
-              color: currentPage === totalPages ? '#94a3b8' : '#475569',
-              cursor: currentPage === totalPages ? 'not-allowed' : 'pointer',
-              fontSize: 14,
-              fontWeight: 500
-            }}
-          >
-            Next
-          </button>
-        </div>
-      )}
     </section>
   );
-  };
 
   return (
     <main style={{ 
@@ -1914,7 +1571,7 @@ export default function Services(): any {
               background: 'rgba(59, 130, 246, 0.1)', padding: '12px 20px', 
               borderRadius: 12, border: '1px solid rgba(59, 130, 246, 0.2)'
             }}>
-              <div style={{ fontSize: 24, fontWeight: 700, color: '#3b82f6' }}>80+</div>
+              <div style={{ fontSize: 24, fontWeight: 700, color: '#3b82f6' }}>60+</div>
               <div style={{ fontSize: 14, opacity: 0.8 }}>Micro SaaS</div>
             </div>
             <div style={{ 
