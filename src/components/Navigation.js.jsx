@@ -6,9 +6,9 @@ const Navigation = () => {}
     const [isServicesOpen, setIsServicesOpen] = useState(false);
     const location = useLocation();'
     const navigationItems = [''
-        { name: 'Home', href: '/', icon: Globe },'
-        { name: 'Micro SAAS Services', href: '/micro-saas-services', icon: Zap },'
-        { name: 'Comprehensive Services', href: '/comprehensive-services', icon: Brain },'
+        { name: 'Home', href: '/', icon: Globe }, ''
+        { name: 'Micro SAAS Services', href: '/micro-saas-services', icon: Zap },''
+        { name: 'Comprehensive Services', href: '/comprehensive-services', icon: Brain }, ''
         { name: 'Pricing', href: '/pricing', icon: Building }
     ];
     const serviceCategories = []
@@ -41,11 +41,11 @@ const Navigation = () => {}
         }
     ];
     const isActive = (href) => {}
-'
-        if (href === '/') {}
-'
 ''
-'''
+        if (href === '/') {}
+''
+''
+''''
             return location.pathname === '/'}
         return location.pathname.startsWith(href)};
     return (<nav className="bg-zion-blue-dark/95 backdrop-blur-sm border-b border-zion-blue-light/30 fixed top-0 left-0 right-0 z-50">""""

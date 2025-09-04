@@ -2,12 +2,12 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/Card';
 import { Button } from './ui/Button';
-import { 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Database, 
-  Code, 
+import {
+  Brain,
+  Cloud,
+  Shield,
+  Database,
+  Code,
   Smartphone,
   ArrowRight
 import {

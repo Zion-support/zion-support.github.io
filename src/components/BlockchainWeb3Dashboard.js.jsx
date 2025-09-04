@@ -12,19 +12,19 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
     const [showSendTransaction, setShowSendTransaction] = useState(false);
     const { wallet, contracts, nfts, defiPositions, transactions, metrics, isConnecting, isProcessing, connectWallet, disconnectWallet, switchNetwork, addContract, mintNFT, sendTransaction, createDeFiPosition } = useBlockchainWeb3();
     const [nftForm, setNftForm] = useState({}
-'
 ''
-'''
-        name: '','''
-        description: '','''
+''
+''''
+        name: '', ''''
+        description: '',''''
         image: ''
     });
     const [transactionForm, setTransactionForm] = useState({}
-'
 ''
-'''
-        to: '','''
-        value: '','''
+''
+''''
+        to: '', ''''
+        value: '',''''
         data: ''
     });
     const handleConnectWallet = useCallback(async () => {}
@@ -32,7 +32,6 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
             await connectWallet();'
             trackEvent('blockchain',dashboard',wallet_connected')}
         catch (error) {}
-'
 ''
 '''
             // console.error('Failed to connect wallet:', error)}

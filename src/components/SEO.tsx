@@ -82,7 +82,7 @@ type = 'website',
       <meta name="robots" content="index, follow" />
       <link rel="canonical" href={url} />
       {/* Open Graph / Facebook */}
-      <meta property="og:type" content={type} />
+      <meta property="og: type" content={type} />
       <meta property="og:url" content={url} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
