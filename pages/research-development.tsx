@@ -245,7 +245,7 @@ export default function ResearchDevelopment() {
             </h1>
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
               Pushing the boundaries of technology through cutting-edge research and development. 
-              We're building the future of computing, AI, and digital innovation.
+              We&apos;re building the future of computing, AI, and digital innovation.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
@@ -437,7 +437,7 @@ export default function ResearchDevelopment() {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-4">Shape the Future of Technology</h2>
             <p className="text-slate-300 mb-8">
-              Join us in pushing the boundaries of what's possible. 
+              Join us in pushing the boundaries of what&apos;s possible. 
               Together, we can create the next generation of technology solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
