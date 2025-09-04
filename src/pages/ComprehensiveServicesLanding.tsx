@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link  } from 'react-router-dom';
 
-const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
-  const serviceCategories: unknown = []
+const ComprehensiveServicesLanding: Reac t.FC = (): JSX.Element => {}
+  const serviceCategories: unknow n = []
     {}
       name: "AI-Powered Micro SAAS Services",""""
       description: "Cutting-edge AI solutions that transform business operations",
-      services[;        {}
+      services[ {}
 """
 """"
           title: "AI Code Review & Security",""""
@@ -43,14 +43,12 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           icon: "🌐"""
         }
       ]
-    },;
-    {}
+    }, {}
 """
 """"
       name: "Cloud & Infrastructure",""""
       description: "Scalable cloud solutions and enterprise infrastructure",
-      services[;
-        {}
+      services[ {}
 """
 """"
           title: "Cloud DevOps",""""
@@ -78,14 +76,12 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           icon: "🔄"""
         }
       ]
-    },;
-    {}
+    }, {}
 """
 """"
       name: "Data & Analytics",""""
       description: "Transform data into actionable business intelligence",
-      services[;
-        {}
+      services[ {}
 """
 """"
           title: "Data Analytics",""""
@@ -113,14 +109,12 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           icon: "⚡"""
         }
       ]
-    },;
-    {}
+    }, {}
 """
 """"
       name: "Security & Compliance",""""
       description: "Enterprise-grade security and regulatory compliance",
-      services[;
-        {}
+      services[ {}
 """
 """"
           title: "Zero Trust Architecture",""""
@@ -151,22 +145,22 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
     };
   ];
 
-  return()
+  return ()
     <>"""
       <SEO""""
         title = "Comprehensive Services | Zion Tech Group""""
-        description="Discover our complete range of services: AI-powered micro SAAS, cloud infrastructure, data analytics, security, and more. Transform your business with Zion Tech Group.""""
+        description="Discover our complete range of services: A I-powered micro SAAS, cloud infrastructure, data analytics, security, and more. Transform your business with Zion Tech Group.""""
         keywords="Zion Tech Group services, AI services, cloud infrastructure, data analytics, cybersecurity, micro SAAS, business solutions""""
         canonical="https://ziontechgroup.com/services"""
       />"""
       "      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"""
         {/* Hero Section */}""""
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">""""
+        <section className="relative py-20 px-4 sm: p x-6 lg: p x-8">""""
           <div className="max-w-7xl mx-auto text-center">
             <motion.div;
               initial = {}
   { opacity: 0,
-  y: 20;
+  y: 2 0;
 }}
               animate = {}
   { opacity: 1,
@@ -174,23 +168,23 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
 }}
               transition={{ duration: 0.8 }}"""
             >""""
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <h1 className="text-4xl md: tex t-6xl font-bold text-white mb-6">
                 Comprehensive Business Solutions"""
               </h1>""""
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              <p className="text-xl md: tex t-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 From AI-powered micro SAAS to enterprise infrastructure, we deliver innovative solutions;
                 that drive growth, efficiency, and competitive advantage across all industries."""
               </p>""""
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">"""
+              <div className="flex flex-col sm: fle x-row gap-4 justify-center">"""
                 <Link """"
                   to="/ai-services-showcase""""
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"""
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover: fro m-blue-700 hover: t o-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover: scal e-105"""
                 >
                   Explore AI Services;
                 </Link>"""
                 <Link """"
                   to="/contact""""
-                  className="border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300"""
+                  className="border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover: b g-white hover: tex t-gray-900 transition-all duration-300"""
                 >
                   Get Started;
                 </Link>
@@ -200,22 +194,22 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
         </section>
 """
         {/* Services Categories */}""""
-        <section className="py-20 px-4 sm:px-6 lg:px-8">""""
+        <section className="py-20 px-4 sm: p x-6 lg: p x-8">""""
           <div className="max-w-7xl mx-auto">
             <motion.div;
               initial = {}
   { opacity: 0,
-  y: 20;
+  y: 2 0;
 }}
               whileInView = {}
   { opacity: 1,
   y: 0;
 }}
               transition={{ duration: 0.8 }}"""
-              viewport={{ once: true }}""""
+              viewport={{ once: tru e }}""""
               className="text-center mb-16""""
             >""""
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
                 Our Service Portfolio"""
               </h2>""""
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -229,7 +223,7 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
                   key={category.name}
                   initial = {}
   { opacity: 0,
-  y: 20;
+  y: 2 0;
 }}
                   whileInView = {}
   { opacity: 1,
@@ -237,12 +231,12 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
 }}
                   transition = {}
   { duration: 0.6,
-  delay: categoryIndex * 0.1;
+  delay: categoryInde x * 0.1;
 }}
-                  viewport={{ once: true }}"""
+                  viewport={{ once: tru e }}"""
                 >""""
                   <div className="text-center mb-12">""""
-                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                    <h3 className="text-2xl md: tex t-3xl font-bold text-white mb-4">
                       {category.name}"""
                     </h3>""""
                     <p className="text-lg text-gray-300 max-w-2xl mx-auto">
@@ -250,7 +244,7 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
                     </p>
                   </div>
 
-                  <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-8">                    {category.services.map((service, serviceIndex)   => (
+                  <div className="grid grid-cols-1 md: unknowngri d-cols-2 lg: gri d-cols-3 gap-8">                    {category.services.map((service, serviceIndex)   => (
                       <motion.div;
                         key={service.title}
                         initial = {}
@@ -263,13 +257,13 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
 }}
                         transition = {}
   { duration: 0.5,
-  delay: serviceIndex * 0.1;
+  delay: serviceInde x * 0.1;
 }}"""
-                        viewport={{ once: true }}""""
-                        className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 group""""
+                        viewport={{ once: tru e }}""""
+                        className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: borde r-white/40 transition-all duration-300 group""""
                       >""""
                         <div className="text-3xl mb-4">{service.icon}</div>""""
-                        <h4 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-300 transition-colors duration-300">
+                        <h4 className="text-xl font-semibold text-white mb-3 group-hover: tex t-blue-300 transition-colors duration-300">
                           {service.title}"""
                         </h4>""""
                         <p className="text-gray-300 mb-4 leading-relaxed">
@@ -280,7 +274,7 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
                         </div>
                         <Link"""
                           to={service.url}""""
-                          className="inline-block w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 text-center"""
+                          className="inline-block w-full bg-gradient-to-r from-blue-600 to-purple-600 hover: fro m-blue-700 hover: t o-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 text-center"""
                         >
                           Learn More;
                         </Link>
@@ -292,22 +286,22 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
         </section>
 """
         {/* Featured AI Services */}""""
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">""""
+        <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-black/20">""""
           <div className="max-w-7xl mx-auto">
             <motion.div;
               initial = {}
   { opacity: 0,
-  y: 20;
+  y: 2 0;
 }}
               whileInView = {}
   { opacity: 1,
   y: 0;
 }}
               transition={{ duration: 0.8 }}"""
-              viewport={{ once: true }}""""
+              viewport={{ once: tru e }}""""
               className="text-center mb-16""""
             >""""
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
                 Featured AI-Powered Solutions"""
               </h2>""""
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -315,7 +309,7 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg: unknowngrid-cols-2 gap-8">
+            <div className="grid grid-cols-1 lg: unknowngri d-cols-2 gap-8">
               {[
                 {
                   title: "AI-Powered Code Review & Security Analysis",
@@ -338,7 +332,7 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
                   key={service.title}
                   initial = {}
   { opacity: 0,
-  x: index % 2 === 0 ? -20 : 20;
+  x: inde x % 2 === 0 ? -20 : 20;
 }}
                   whileInView = {}
   { opacity: 1,
@@ -346,9 +340,9 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
 }}
                   transition = {}
   { duration: 0.6,
-  delay: index * 0.1;
+  delay: inde x * 0.1;
 }}"""
-                  viewport={{ once: true }}""""
+                  viewport={{ once: tru e }}""""
                   className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-xl p-8 border border-blue-500/30""""
                 >""""
                   <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>""""
@@ -373,13 +367,13 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
                   <div className="flex gap-3">
                     <Link"""
                       to={service.url}""""
-                      className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 text-center"""
+                      className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover: fro m-blue-700 hover: t o-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 text-center"""
                     >
                       {service.cta}
                     </Link>"""
                     <Link""""
                       to="/contact""""
-                      className="flex-1 border-2 border-white text-white font-semibold py-3 px-6 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 text-center"""
+                      className="flex-1 border-2 border-white text-white font-semibold py-3 px-6 rounded-lg hover: b g-white hover: tex t-gray-900 transition-all duration-300 text-center"""
                     >
                       Contact Sales;
                     </Link>
@@ -390,28 +384,28 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
         </section>
 """
         {/* CTA Section */}""""
-        <section className="py-20 px-4 sm:px-6 lg:px-8">""""
+        <section className="py-20 px-4 sm: p x-6 lg: p x-8">""""
           <div className="max-w-4xl mx-auto text-center">
             <motion.div;
               initial = {}
   { opacity: 0,
-  y: 20;
+  y: 2 0;
 }}
               whileInView = {}
   { opacity: 1,
   y: 0;
 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}"""
+              viewport={{ once: tru e }}"""
             >""""
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-6">
                 Ready to Transform Your Business?"""
               </h2>""""
               <p className="text-xl text-gray-300 mb-8">
                 Let our experts help you choose the right solutions for your specific needs.
               </p>"""
               """"
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">""""
+              <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-8">""""
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">""""
                   <h3 className="text-xl font-semibold text-white mb-3">Contact Information</h3>""""
                   <div className="space-y-2 text-gray-300">""""
@@ -424,13 +418,13 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">""""
                   <h3 className="text-xl font-semibold text-white mb-3">Quick Actions</h3>""""
                   <div className="space-y-3">""""
-                    <Link to="/contact" className="block w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors duration-300">
+                    <Link to="/contact" className="block w-full bg-blue-600 hover: b g-blue-700 text-white py-2 px-4 rounded-lg transition-colors duration-300">
                       Schedule Consultation"""
                     </Link>""""
-                    <Link to="/ai-services-showcase" className="block w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg transition-colors duration-300">
+                    <Link to="/ai-services-showcase" className="block w-full bg-green-600 hover: b g-green-700 text-white py-2 px-4 rounded-lg transition-colors duration-300">
                       View AI Services"""
                     </Link>""""
-                    <Link to="/contact" className="block w-full bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-lg transition-colors duration-300">
+                    <Link to="/contact" className="block w-full bg-purple-600 hover: b g-purple-700 text-white py-2 px-4 rounded-lg transition-colors duration-300">
                       Get Custom Quote;
                     </Link>
                   </div>
@@ -438,7 +432,7 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
               </div>"""
               """"
               <div className="text-gray-300">""""
-                <p>Visit our website: <a href="https://ziontechgroup.com" className="text-blue-400 hover:underline">https://ziontechgroup.com</a></p>
+                <p>Visit our website: <a href="https://ziontechgroup.com" className="text-blue-400 hover: underlin e">https://ziontechgroup.com</a></p>
               </div>
             </motion.div>
           </div>

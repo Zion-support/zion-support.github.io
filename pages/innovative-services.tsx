@@ -36,7 +36,7 @@ import {
   MapPin
 } from "lucide-react"
 
-const PageTransition = ({ children }: { children: React.ReactNode }) => <div>{children}</div>
+const PageTransition = ({ children }: { children: Reac t.ReactNode }) => <div>{children}</div>
 
 export default function InnovativeServices() {
   const title = "Innovative Services — Zion Tech Group"
@@ -46,7 +46,7 @@ export default function InnovativeServices() {
     {
       title: "AI-Powered Email Automation Suite",
       description: "Intelligent email marketing platform with AI-driven personalization and automated follow-up sequences",
-      icon: Mail,
+      icon: Mai l,
       features: [
         "AI-powered email content generation",
         "Behavioral trigger automation",
@@ -64,7 +64,7 @@ export default function InnovativeServices() {
     {
       title: "Smart Inventory Management System",
       description: "AI-driven inventory optimization with predictive analytics and automated reordering",
-      icon: Database,
+      icon: Databas e,
       features: [
         "Predictive demand forecasting",
         "Automated reorder point calculations",
@@ -82,7 +82,7 @@ export default function InnovativeServices() {
     {
       title: "AI Customer Support Chatbot",
       description: "Advanced conversational AI that handles customer inquiries with human-like responses",
-      icon: Bot,
+      icon: Bo t,
       features: [
         "Natural language processing and understanding",
         "Multi-language support and translation",
@@ -100,7 +100,7 @@ export default function InnovativeServices() {
     {
       title: "Blockchain Document Verification",
       description: "Secure document authentication and verification using blockchain technology",
-      icon: Shield,
+      icon: Shiel d,
       features: [
         "Immutable document verification",
         "Digital signature validation",
@@ -118,7 +118,7 @@ export default function InnovativeServices() {
     {
       title: "IoT Device Management Platform",
       description: "Comprehensive IoT device monitoring, management, and analytics platform",
-      icon: Wifi,
+      icon: Wif i,
       features: [
         "Real-time device monitoring and alerts",
         "Remote device configuration and updates",
@@ -136,7 +136,7 @@ export default function InnovativeServices() {
     {
       title: "AI-Powered Social Media Manager",
       description: "Intelligent social media content creation, scheduling, and engagement automation",
-      icon: Globe,
+      icon: Glob e,
       features: [
         "AI-generated content for multiple platforms",
         "Optimal posting time recommendations",
@@ -154,7 +154,7 @@ export default function InnovativeServices() {
     {
       title: "Smart Contract Development Platform",
       description: "No-code smart contract creation and deployment platform for blockchain applications",
-      icon: Code,
+      icon: Cod e,
       features: [
         "Visual smart contract builder",
         "Pre-built contract templates",
@@ -172,7 +172,7 @@ export default function InnovativeServices() {
     {
       title: "AI-Powered Lead Scoring System",
       description: "Intelligent lead qualification and scoring using machine learning algorithms",
-      icon: Target,
+      icon: Targe t,
       features: [
         "Behavioral pattern analysis",
         "Predictive lead scoring models",
@@ -190,7 +190,7 @@ export default function InnovativeServices() {
     {
       title: "Quantum-Safe Encryption Service",
       description: "Future-proof encryption solutions resistant to quantum computing attacks",
-      icon: Lock,
+      icon: Loc k,
       features: [
         "Post-quantum cryptographic algorithms",
         "Hybrid classical-quantum encryption",
@@ -208,7 +208,7 @@ export default function InnovativeServices() {
     {
       title: "AI-Powered Code Review Assistant",
       description: "Automated code analysis, review, and optimization using advanced AI",
-      icon: Cpu,
+      icon: Cp u,
       features: [
         "Automated code quality analysis",
         "Security vulnerability detection",
@@ -229,24 +229,24 @@ export default function InnovativeServices() {
     <>
       <Head>
         <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content="innovative services, micro SaaS, AI services, IT solutions, blockchain, IoT, automation" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://ziontechgroup.com/innovative-services" />
+        <meta name="description" content={description}  />
+        <meta name="keywords" content="innovative services, micro SaaS, AI services, IT solutions, blockchain, IoT, automation"  />
+        <meta name="viewport" content="width=device-width, initial-scale=1"  />
+        <link rel="canonical" href="https://ziontechgroup.com/innovative-services"  />
       </Head>
       
       <PageTransition>
         {/* Header Section */}
-        <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm: p y-32">
+          <div className="mx-auto max-w-7xl px-6 lg: p x-8">
             <div className="mx-auto max-w-2xl text-center">
               <div className="flex items-center justify-center mb-4">
-                <Award className="h-6 w-6 text-blue-600 mr-2" />
+                <Award className="h-6 w-6 text-blue-600 mr-2"  />
                 <span className="text-base font-semibold leading-7 text-blue-600">
                   Innovative Services
                 </span>
               </div>
-              <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm: tex t-4xl">
                 Cutting-Edge Technology Solutions
               </h1>
               <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -258,16 +258,16 @@ export default function InnovativeServices() {
         </section>
 
         {/* Services Grid */}
-        <section className="py-24 sm:py-32">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="grid gap-8 lg:grid-cols-2">
+        <section className="py-24 sm: p y-32">
+          <div className="mx-auto max-w-7xl px-6 lg: p x-8">
+            <div className="grid gap-8 lg: gri d-cols-2">
               {innovativeServices.map((service, index) => (
                 <div
                   key={index}
-                  className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:border-blue-300"
+                  className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shado w-lg transition-all duration-300 hover: borde r-blue-300"
                 >
                   <div className="flex items-center gap-x-3 mb-6">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 group-hover:bg-blue-700 transition-colors">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 group-hover: b g-blue-700 transition-colors">
                       <service.icon className="h-7 w-7 text-white" />
                     </div>
                     <div>
@@ -287,7 +287,7 @@ export default function InnovativeServices() {
                   <ul className="space-y-3 mb-6">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center gap-x-3">
-                        <CheckCircle className="h-4 w-4 text-blue-600" />
+                        <CheckCircle className="h-4 w-4 text-blue-600"  />
                         <span className="text-sm text-gray-700">{feature}</span>
                       </li>
                     ))}
@@ -295,11 +295,11 @@ export default function InnovativeServices() {
                   
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center space-x-2 text-sm text-gray-500">
-                      <Clock className="h-4 w-4" />
+                      <Clock className="h-4 w-4"  />
                       <span>{service.delivery}</span>
                     </div>
                     <div className="flex items-center space-x-2 text-sm text-gray-500">
-                      <TrendingUp className="h-4 w-4" />
+                      <TrendingUp className="h-4 w-4"  />
                       <span>{service.pricing}</span>
                     </div>
                   </div>
@@ -317,14 +317,14 @@ export default function InnovativeServices() {
                   <div className="flex items-center justify-between">
                     <Link
                       href="/contact"
-                      className="inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-500"
+                      className="inline-flex items-center text-sm font-medium text-blue-600 hover: tex t-blue-500"
                     >
                       Get Started
-                      <ArrowRight className="ml-1 h-4 w-4" />
+                      <ArrowRight className="ml-1 h-4 w-4"  />
                     </Link>
                     <Link
                       href="/request-quote"
-                      className="inline-flex items-center px-4 py-2 border border-blue-600 text-blue-600 hover:bg-blue-50 font-medium rounded-lg transition-colors"
+                      className="inline-flex items-center px-4 py-2 border border-blue-600 text-blue-600 hover: b g-blue-50 font-medium rounded-lg transition-colors"
                     >
                       Request Quote
                     </Link>
@@ -337,7 +337,7 @@ export default function InnovativeServices() {
 
         {/* Contact Section */}
         <section className="bg-gray-50 py-16">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl px-6 lg: p x-8">
             <div className="text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
                 Ready to Transform Your Business?
@@ -345,24 +345,24 @@ export default function InnovativeServices() {
               <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
                 Contact our experts to discuss how these innovative services can drive your business forward.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: fle x-row gap-4 justify-center">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors"
+                  className="inline-flex items-center px-8 py-3 bg-blue-600 hover: b g-blue-700 text-white font-medium rounded-lg transition-colors"
                 >
-                  <Phone className="w-5 h-5 mr-2" />
+                  <Phone className="w-5 h-5 mr-2"  />
                   +1 302 464 0950
                 </Link>
                 <Link
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="inline-flex items-center px-8 py-3 border border-blue-600 text-blue-600 hover:bg-blue-50 font-medium rounded-lg transition-colors"
+                  href="mailto: klebe r@ziontechgroup.com"
+                  className="inline-flex items-center px-8 py-3 border border-blue-600 text-blue-600 hover: b g-blue-50 font-medium rounded-lg transition-colors"
                 >
-                  <Mail className="w-5 h-5 mr-2" />
+                  <Mail className="w-5 h-5 mr-2"  />
                   kleber@ziontechgroup.com
                 </Link>
               </div>
               <div className="mt-6 text-sm text-gray-500">
-                <MapPin className="w-4 h-4 inline mr-1" />
+                <MapPin className="w-4 h-4 inline mr-1"  />
                 364 E Main St STE 1008, Middletown DE 19709
               </div>
             </div>

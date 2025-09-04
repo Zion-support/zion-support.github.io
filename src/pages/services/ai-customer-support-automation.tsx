@@ -51,25 +51,25 @@ export default function AICustomerSupportAutomation
 export { AICustomerSupportAutomation }() {
   const features = [
     {
-      icon: Bot,
+      icon: Bo t,
       title: "AI-Powered Chatbots",
       description: "Intelligent chatbots that understand context and provide instant, accurate responses 24/7",
       benefits: ["Instant response time", "Multilingual support", "Context-aware conversations", "Seamless handoff to humans"]
     },
     {
-      icon: Brain,
+      icon: Brai n,
       title: "Natural Language Processing",
       description: "Advanced NLP that understands customer intent and sentiment for better service delivery",
       benefits: ["Intent recognition", "Sentiment analysis", "Emotion detection", "Contextual understanding"]
     },
     {
-      icon: Workflow,
+      icon: Workflo w,
       title: "Automated Ticket Routing",
       description: "Smart routing system that directs tickets to the right agent based on expertise and workload",
       benefits: ["Reduced resolution time", "Improved agent efficiency", "Better customer satisfaction", "Load balancing"]
     },
     {
-      icon: BarChart3,
+      icon: BarChart 3,
       title: "Real-time Analytics",
       description: "Comprehensive analytics dashboard for monitoring support performance and customer satisfaction",
       benefits: ["Performance metrics", "Customer satisfaction tracking", "Agent productivity insights", "Trend analysis"]
@@ -88,7 +88,7 @@ export { AICustomerSupportAutomation }() {
         "Basic analytics",
         "Standard integrations"
       ],
-      popular: false
+      popular: fals e
     },
     {
       name: "Professional",
@@ -102,7 +102,7 @@ export { AICustomerSupportAutomation }() {
         "Custom integrations",
         "Priority support"
       ],
-      popular: true
+      popular: tru e
     },
     {
       name: "Enterprise",
@@ -116,28 +116,28 @@ export { AICustomerSupportAutomation }() {
         "Dedicated support",
         "SLA guarantee"
       ],
-      popular: false
+      popular: fals e
     }
   ];
 
   const benefits = [
     {
-      icon: Clock,
+      icon: Cloc k,
       title: "24/7 Availability",
       description: "Never miss a customer inquiry with round-the-clock automated support"
     },
     {
-      icon: TrendingUp,
+      icon: TrendingU p,
       title: "Increased Efficiency",
       description: "Reduce response time by 80% and handle 5x more inquiries simultaneously"
     },
     {
-      icon: Users,
+      icon: User s,
       title: "Improved Satisfaction",
       description: "Deliver consistent, high-quality support that keeps customers happy"
     },
     {
-      icon: Shield,
+      icon: Shiel d,
       title: "Scalable Solution",
       description: "Easily scale your support operations without proportional cost increases"
     }
@@ -147,20 +147,20 @@ export { AICustomerSupportAutomation }() {
     <>
       <Head>
         <title>AI Customer Support Automation - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered customer support automation that reduces response time by 80% and increases customer satisfaction. 24/7 intelligent chatbots with natural language processing." />
-        <meta name="keywords" content="AI customer support, chatbot automation, customer service AI, support automation, AI chatbots, customer experience" />
+        <meta name="description" content="Revolutionary AI-powered customer support automation that reduces response time by 80% and increases customer satisfaction. 24/7 intelligent chatbots with natural language processing."  />
+        <meta name="keywords" content="AI customer support, chatbot automation, customer service AI, support automation, AI chatbots, customer experience"  />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm: p x-6 lg: p x-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-blue-800 text-sm font-medium mb-6">
-                <Bot className="w-4 h-4 mr-2" />
+                <Bot className="w-4 h-4 mr-2"  />
                 AI-Powered Customer Support
               </div>
-              <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+              <h1 className="text-5xl md: tex t-6xl font-bold text-gray-900 mb-6">
                 Transform Your Customer
                 <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> Support</span>
               </h1>
@@ -168,26 +168,26 @@ export { AICustomerSupportAutomation }() {
                 Revolutionary AI-powered customer support automation that reduces response time by 80%, 
                 increases customer satisfaction by 40%, and handles 5x more inquiries simultaneously.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: fle x-row gap-4 justify-center">
                 <a 
                   href="tel:+13024640950" 
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-medium flex items-center justify-center"
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg hover: shado w-lg transition-all duration-300 font-medium flex items-center justify-center"
                 >
-                  <Phone className="w-5 h-5 mr-2" />
+                  <Phone className="w-5 h-5 mr-2"  />
                   Call +1 302 464 0950
                 </a>
                 <a 
-                  href="mailto:kleber@ziontechgroup.com" 
-                  className="bg-white text-gray-900 px-8 py-4 rounded-lg border-2 border-gray-200 hover:border-blue-600 transition-all duration-300 font-medium flex items-center justify-center"
+                  href="mailto: klebe r@ziontechgroup.com" 
+                  className="bg-white text-gray-900 px-8 py-4 rounded-lg border-2 border-gray-200 hover: borde r-blue-600 transition-all duration-300 font-medium flex items-center justify-center"
                 >
-                  <Mail className="w-5 h-5 mr-2" />
+                  <Mail className="w-5 h-5 mr-2"  />
                   Get Quote
                 </a>
               </div>
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+            <div className="grid grid-cols-2 md: gri d-cols-4 gap-8 mb-16">
               <div className="text-center">
                 <div className="text-4xl font-bold text-blue-600 mb-2">80%</div>
                 <div className="text-gray-600">Faster Response</div>
@@ -209,7 +209,7 @@ export { AICustomerSupportAutomation }() {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-white">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -221,9 +221,9 @@ export { AICustomerSupportAutomation }() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md: gri d-cols-2 lg: gri d-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-all duration-300">
+                <div key={index} className="bg-gray-50 p-8 rounded-xl hover: shado w-lg transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
@@ -232,7 +232,7 @@ export { AICustomerSupportAutomation }() {
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"  />
                         {benefit}
                       </li>
                     ))}
@@ -244,7 +244,7 @@ export { AICustomerSupportAutomation }() {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-50 to-purple-50">
+        <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-gradient-to-r from-blue-50 to-purple-50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -255,7 +255,7 @@ export { AICustomerSupportAutomation }() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md: gri d-cols-2 lg: gri d-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
@@ -270,7 +270,7 @@ export { AICustomerSupportAutomation }() {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-white">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -281,7 +281,7 @@ export { AICustomerSupportAutomation }() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md: gri d-cols-3 gap-8">
               {pricing.map((plan, index) => (
                 <div key={index} className={`relative bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-blue-600 transform scale-105' : ''}`}>
                   {plan.popular && (
@@ -299,7 +299,7 @@ export { AICustomerSupportAutomation }() {
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center">
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0"  />
                         <span className="text-gray-600">{feature}</span>
                       </li>
                     ))}
@@ -308,8 +308,8 @@ export { AICustomerSupportAutomation }() {
                     href="tel:+13024640950" 
                     className={`w-full block text-center py-3 px-6 rounded-lg font-medium transition-all duration-300 ${
                       plan.popular 
-                        ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:shadow-lg' 
-                        : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+                        ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover: shado w-lg' 
+                        : 'bg-gray-100 text-gray-900 hover: b g-gray-200'
                     }`}
                   >
                     Get Started
@@ -321,7 +321,7 @@ export { AICustomerSupportAutomation }() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-purple-600">
+        <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-gradient-to-r from-blue-600 to-purple-600">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Customer Support?
@@ -329,19 +329,19 @@ export { AICustomerSupportAutomation }() {
             <p className="text-xl text-blue-100 mb-8">
               Join thousands of businesses already using our AI-powered customer support automation.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
               <a 
                 href="tel:+13024640950" 
-                className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-medium flex items-center justify-center"
+                className="bg-white text-blue-600 px-8 py-4 rounded-lg hover: shado w-lg transition-all duration-300 font-medium flex items-center justify-center"
               >
-                <Phone className="w-5 h-5 mr-2" />
+                <Phone className="w-5 h-5 mr-2"  />
                 Call +1 302 464 0950
               </a>
               <a 
-                href="mailto:kleber@ziontechgroup.com" 
-                className="bg-transparent text-white px-8 py-4 rounded-lg border-2 border-white hover:bg-white hover:text-blue-600 transition-all duration-300 font-medium flex items-center justify-center"
+                href="mailto: klebe r@ziontechgroup.com" 
+                className="bg-transparent text-white px-8 py-4 rounded-lg border-2 border-white hover: b g-white hover: tex t-blue-600 transition-all duration-300 font-medium flex items-center justify-center"
               >
-                <Mail className="w-5 h-5 mr-2" />
+                <Mail className="w-5 h-5 mr-2"  />
                 Email Us
               </a>
             </div>
@@ -349,34 +349,34 @@ export { AICustomerSupportAutomation }() {
         </section>
 
         {/* Contact Info */}
-        <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-900">
+        <section className="py-12 px-4 sm: p x-6 lg: p x-8 bg-gray-900">
           <div className="max-w-7xl mx-auto">
             <div className="text-center text-white">
               <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
-              <div className="grid md:grid-cols-3 gap-8 text-sm">
+              <div className="grid md: gri d-cols-3 gap-8 text-sm">
                 <div>
                   <p className="font-semibold mb-2">Phone</p>
-                  <a href="tel:+13024640950" className="text-blue-400 hover:text-blue-300">
+                  <a href="tel:+13024640950" className="text-blue-400 hover: tex t-blue-300">
                     +1 302 464 0950
                   </a>
                 </div>
                 <div>
                   <p className="font-semibold mb-2">Email</p>
-                  <a href="mailto:kleber@ziontechgroup.com" className="text-blue-400 hover:text-blue-300">
+                  <a href="mailto: klebe r@ziontechgroup.com" className="text-blue-400 hover: tex t-blue-300">
                     kleber@ziontechgroup.com
                   </a>
                 </div>
                 <div>
                   <p className="font-semibold mb-2">Address</p>
-                  <p>364 E Main St STE 1008<br />Middletown DE 19709</p>
+                  <p>364 E Main St STE 1008<br  />Middletown DE 19709</p>
                 </div>
               </div>
               <div className="mt-8">
                 <a 
                   href="https://ziontechgroup.com" 
-                  className="text-blue-400 hover:text-blue-300 font-medium"
+                  className="text-blue-400 hover: tex t-blue-300 font-medium"
                 >
-                  Visit our website: ziontechgroup.com
+                  Visit our website: ziontechgrou p.com
                 </a>
               </div>
             </div>

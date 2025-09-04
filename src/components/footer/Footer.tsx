@@ -53,21 +53,21 @@ export function Footer() {
   ];
 
   const socialLinks = [
-    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: LinkedIn },
-    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
-    { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube },
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
+    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Faceboo k },
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitte r },
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: LinkedI n },
+    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagra m },
+    { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtub e },
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Githu b }
   ];
 
   return (
     <footer className="bg-slate-900 border-t border-slate-700">
       {/* Main Footer Content */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+      <div className="container mx-auto px-4 sm: p x-6 lg: p x-8 py-12">
+        <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-6 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-2">
+          <div className="lg: co l-span-2">
             <Link to="/" className="flex items-center space-x-2 mb-6">
               <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-xl">Z</span>
@@ -82,21 +82,21 @@ export function Footer() {
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center text-slate-300">
-                <Phone className="w-4 h-4 mr-3 text-cyan-400" />
-                <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">
+                <Phone className="w-4 h-4 mr-3 text-cyan-400"  />
+                <a href="tel:+13024640950" className="hover: tex t-cyan-400 transition-colors">
                   +1 (302) 464-0950
                 </a>
               </div>
               <div className="flex items-center text-slate-300">
-                <Mail className="w-4 h-4 mr-3 text-cyan-400" />
-                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">
+                <Mail className="w-4 h-4 mr-3 text-cyan-400"  />
+                <a href="mailto: klebe r@ziontechgroup.com" className="hover: tex t-cyan-400 transition-colors">
                   kleber@ziontechgroup.com
                 </a>
               </div>
               <div className="flex items-start text-slate-300">
-                <MapPin className="w-4 h-4 mr-3 mt-0.5 text-cyan-400 flex-shrink-0" />
+                <MapPin className="w-4 h-4 mr-3 mt-0.5 text-cyan-400 flex-shrink-0"  />
                 <span>
-                  364 E Main St STE 1008<br />
+                  364 E Main St STE 1008<br  />
                   Middletown, DE 19709
                 </span>
               </div>
@@ -112,7 +112,7 @@ export function Footer() {
                   <li key={link.name}>
                     <Link
                       to={link.href}
-                      className="text-slate-300 hover:text-cyan-400 transition-colors duration-200"
+                      className="text-slate-300 hover: tex t-cyan-400 transition-colors duration-200"
                     >
                       {link.name}
                     </Link>
@@ -126,19 +126,18 @@ export function Footer() {
 
       {/* Newsletter Signup */}
       <div className="border-t border-slate-700 py-8">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="mb-4 md:mb-0">
+        <div className="container mx-auto px-4 sm: p x-6 lg: p x-8">
+          <div className="flex flex-col md: fle x-row items-center justify-between">
+            <div className="mb-4 md: m b-0">
               <h3 className="text-white font-semibold mb-2">Stay Updated</h3>
               <p className="text-slate-300">Get the latest news and updates from Zion Tech Group</p>
             </div>
             <div className="flex w-full md:w-auto">
-              <input
-                type="email"
+              <input type="email"
                 placeholder="Enter your email"
-                className="flex-1 md:w-64 px-4 py-2 bg-slate-800 text-white rounded-l-lg border border-slate-600 focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/20"
-              />
-              <button className="px-6 py-2 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-r-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200">
+                className="flex-1 md:w-64 px-4 py-2 bg-slate-800 text-white rounded-l-lg border border-slate-600 focus: borde r-cyan-400 focus: outlin e-none focus: rin g-2 focus: rin g-cyan-400/20"
+               />
+              <button className="px-6 py-2 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-r-lg hover: fro m-cyan-500 hover: t o-blue-600 transition-all duration-200">
                 Subscribe
               </button>
             </div>
@@ -148,21 +147,21 @@ export function Footer() {
 
       {/* Bottom Footer */}
       <div className="border-t border-slate-700 py-6">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="text-slate-400 text-sm mb-4 md:mb-0">
+        <div className="container mx-auto px-4 sm: p x-6 lg: p x-8">
+          <div className="flex flex-col md: fle x-row items-center justify-between">
+            <div className="text-slate-400 text-sm mb-4 md: m b-0">
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
             
             {/* Legal Links */}
-            <div className="flex items-center space-x-6 mb-4 md:mb-0">
-              <Link to="/privacy" className="text-slate-400 hover:text-cyan-400 transition-colors text-sm">
+            <div className="flex items-center space-x-6 mb-4 md: m b-0">
+              <Link to="/privacy" className="text-slate-400 hover: tex t-cyan-400 transition-colors text-sm">
                 Privacy Policy
               </Link>
-              <Link to="/terms" className="text-slate-400 hover:text-cyan-400 transition-colors text-sm">
+              <Link to="/terms" className="text-slate-400 hover: tex t-cyan-400 transition-colors text-sm">
                 Terms of Service
               </Link>
-              <Link to="/cookies" className="text-slate-400 hover:text-cyan-400 transition-colors text-sm">
+              <Link to="/cookies" className="text-slate-400 hover: tex t-cyan-400 transition-colors text-sm">
                 Cookie Policy
               </Link>
             </div>
@@ -175,7 +174,7 @@ export function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-slate-400 hover:text-cyan-400 transition-colors duration-200"
+                  className="text-slate-400 hover: tex t-cyan-400 transition-colors duration-200"
                   aria-label={social.name}
                 >
                   <social.icon className="w-5 h-5" />

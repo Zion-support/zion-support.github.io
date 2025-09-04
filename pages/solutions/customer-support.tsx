@@ -8,37 +8,37 @@ import { Badge } from '../../components/ui/Badge';
 export default function CustomerSupport() {
   const features = [
     {
-      icon: Bot,
+      icon: Bo t,
       title: 'AI Chatbots',
       description:
         'Intelligent chatbots that provide instant responses and escalate complex issues to human agents.',
     },
     {
-      icon: MessageSquare,
+      icon: MessageSquar e,
       title: 'Ticket Management',
       description:
         'Comprehensive ticket system with priority levels, categorization, and automated routing.',
     },
     {
-      icon: FileText,
+      icon: FileTex t,
       title: 'Knowledge Base',
       description:
         'Self-service knowledge base with searchable articles, FAQs, and video tutorials.',
     },
     {
-      icon: Globe,
+      icon: Glob e,
       title: 'Multi-channel Support',
       description:
         'Support customers across email, chat, phone, social media, and other channels.',
     },
     {
-      icon: BarChart3,
+      icon: BarChart 3,
       title: 'Analytics & Reporting',
       description:
         'Track performance metrics, customer satisfaction, and team productivity.',
     },
     {
-      icon: Clock,
+      icon: Cloc k,
       title: '24/7 Availability',
       description:
         'Round-the-clock customer support with automated responses and escalation.',
@@ -47,24 +47,23 @@ export default function CustomerSupport() {
 
   return (
     <>
-      <SEO
-        title="Customer Support Platform - Zion Tech Group"
+      <SEO title="Customer Support Platform - Zion Tech Group"
         description="AI-powered customer support system with chatbots, ticket management, and knowledge base. Improve customer satisfaction."
         keywords="customer support, AI chatbots, ticket management, knowledge base, helpdesk"
-      />
+       />
       <Head>
         <title>Customer Support Platform - Zion Tech Group</title>
       </Head>
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
           <div className="text-center">
             <Badge className="mb-4 bg-blue-500 text-white">
-              <Headphones className="w-4 h-4 mr-2" />
+              <Headphones className="w-4 h-4 mr-2"  />
               Customer Support
             </Badge>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-4xl md: tex t-6xl font-bold mb-6">
               Customer Support
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
                 {' '}
@@ -76,15 +75,15 @@ export default function CustomerSupport() {
               featuring intelligent chatbots, comprehensive ticket management,
               and self-service knowledge base.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
+              <Button size="lg" className="bg-blue-600 hover: b g-blue-700">
                 Start Free Trial
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5"  />
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-gray-900"
+                className="border-white text-white hover: b g-white hover: tex t-gray-900"
               >
                 Schedule Demo
               </Button>
@@ -95,9 +94,9 @@ export default function CustomerSupport() {
 
       {/* Features Section */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4">
               Comprehensive Support Features
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -106,11 +105,11 @@ export default function CustomerSupport() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
             {features.map((feature, index) => (
               <Card
                 key={index}
-                className="p-6 hover: shadow-xl transition-shadow duration-300"
+                className="p-6 hover: shado w-xl transition-shadow duration-300"
               >
                 <div className="flex items-center mb-4">
                   <div className="p-3 bg-blue-100 rounded-lg mr-4">
@@ -129,27 +128,27 @@ export default function CustomerSupport() {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8 text-center">
+          <h2 className="text-3xl md: tex t-4xl font-bold mb-4">
             Ready to Transform Your Customer Support?
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Join thousands of businesses already using our customer support
             platform to improve satisfaction and reduce support costs.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: fle x-row gap-4 justify-center">
             <Button
               size="lg"
-              className="bg-white text-blue-600 hover:bg-gray-100"
+              className="bg-white text-blue-600 hover: b g-gray-100"
             >
               Start Free Trial
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <ArrowRight className="ml-2 h-5 w-5"  />
             </Button>
             <Link href="/contact">
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-blue-600"
+                className="border-white text-white hover: b g-white hover: tex t-blue-600"
               >
                 Contact Sales
               </Button>

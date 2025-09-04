@@ -5,6 +5,6 @@ import ModernLayout from "../components/layout/ModernLayout";
 export default function App() {
   return (
     <ModernLayout>
-      <Component {...pageProps} />
+      <Component {...pageProps}  />
     </ModernLayout>
   )}

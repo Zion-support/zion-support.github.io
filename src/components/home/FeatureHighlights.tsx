@@ -21,8 +21,7 @@ import { motion  } from 'framer-motion';
     icon: "🤖",
     title: "AI-Powered Intelligence",
     description: "Smart automation and predictive analytics that adapt to your business requirements";
-  },;
-  {;
+  }, {;
     icon: "📊",;
     title: "Real-Time Analytics",;
     description: "Comprehensive insights and reporting to make data-driven decisions instantly";
@@ -34,7 +33,7 @@ import { motion  } from 'framer-motion';
   };
 
   const itemVariants = {
-  hidden: { opacity: 0, y: 30,
+  hidden: { opacity: 0, y: 3 0,
   scale: 0.95
 
 },
@@ -80,7 +79,7 @@ export function FeatureHighlights() {
           initial = {
 
   { opacity: 0,
-  y: 20
+  y: 2 0
 
 }}
           whileInView = {
@@ -89,23 +88,23 @@ export function FeatureHighlights() {
   y: 0
 
 }}
-          viewport={{ once: true }}
+          viewport={{ once: tru e }}
           transition={{ duration: 0.6 }}
         >"
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-zion-purple/10 border border-zion-purple/20 rounded-full text-zion-purple text-sm font-medium mb-6">"
-            <Award className="w-4 h-4"  />            <span>Why Choose Zion</span>
+            <Award className="w-4 h-4"   />            <span>Why Choose Zion</span>
           </div>
 "
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+          <h2 className="text-3xl md: tex t-4xl lg: tex t-5xl font-bold text-white mb-6">
             Built for the Future of Work
           </h2>
 "
-          <p className="text-lg md:text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md: tex t-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
             Experience the next generation of talent marketplace with cutting-edge AI,
             global reach, and enterprise-grade security.</p>
         </motion.div>
 "
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
           {features.map((feature, index (
             <motion.div
               key={index}
@@ -118,21 +117,21 @@ export function FeatureHighlights() {
               }}"
               className="group"
 "
-              <div className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-white/20 transition-all duration-300">
-                <div className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>`
+              <div className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover: borde r-white/20 transition-all duration-300">
+                <div className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4 group-hover: scal e-110 transition-transform duration-300`}>`
                   <feature.icon className={`w-6 h-6 ${feature.iconColor}`} />
                 </div>
 "
-                <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">
+                <h3 className="text-xl font-semibold text-white mb-2 group-hover: tex t-blue-400 transition-colors duration-300">
                   {feature.title}
                 </h3>
 "
-                <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                <p className="text-gray-400 group-hover: tex t-gray-300 transition-colors duration-300">
                   {feature.description}
                 </p>
               </div>
 
-              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-200">
+              <h3 className="text-xl font-bold text-white mb-3 group-hover: tex t-blue-400 transition-colors duration-200">
                 {feature.title}
               </h3>
               <p className="text-gray-400 text-sm leading-relaxed">
@@ -143,9 +142,9 @@ export function FeatureHighlights() {
         </div>
 
         <motion.div          className="mt-16 text-center"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 2 0 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: tru e }}
           transition = {
 
   { duration: 0.6,

@@ -7,7 +7,7 @@ import {  import { motion, AnimatePresence  } from 'framer-motion';
   type: 'success' | 'error' | 'warning' | 'info' | 'system';
   priority: 'low' | 'medium' | 'high' | 'critical';
   category: 'user' | 'system' | 'security' | 'performance' | 'update';
-  timestamp: Date;
+  timestamp: Dat e;
   read: boolean;
   archived: boolean;
   actions?: NotificationAction[];
@@ -23,9 +23,9 @@ interface SmartNotificationSystemProps {
   // Add your props here
 };
 
-const SmartNotificationSystem: React.FC<SmartNotificationSystemProps> = ({ enabled = true }) => {
+const SmartNotificationSystem: Reac t.FC<SmartNotificationSystemProps> = ({ enabled = true }) => {
   if(!enabled) return null;
-  return <div className="hidden" aria-hidden="true" />};
+  return <div className="hidden" aria-hidden="true"  />};
 
 export default SmartNotificationSystem;
 ;,"});,})";

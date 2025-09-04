@@ -11,15 +11,15 @@ interface PerformanceMetrics {
   loadTime: number | null;
 }
 
-const PerformanceMonitor: React.FC = () => {
+const PerformanceMonitor: Reac t.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
 
-    fcp: null,
-    lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null,
-    loadTime: null});
+    fcp: nul l,
+    lcp: nul l,
+    fid: nul l,
+    cls: nul l,
+    ttfb: nul l,
+    loadTime: nul l});
 
   const [isVisible, setIsVisible] = useState(false);
 
@@ -40,7 +40,7 @@ const PerformanceMonitor: React.FC = () => {
         const fcpEntry = entries.find((entry) => entry.name === 'first-contentful-paint');
         if (fcpEntry) {
 
-          setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
+          setMetrics(prev => ({ ...prev, fcp: fcpEntr y.startTime }));
         }'
       });''
       fcpObserver.observe({ entryTypes: ['paint'] });
@@ -52,7 +52,7 @@ const PerformanceMonitor: React.FC = () => {
         const lastEntry = entries[entries.length - 1];
         if (lastEntry) {
 
-          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+          setMetrics(prev => ({ ...prev, lcp: lastEntr y.startTime }));
         }'
       });''
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
@@ -66,7 +66,7 @@ const PerformanceMonitor: React.FC = () => {
 ''
           if (entry.entryType === 'first-input') {
 
-            setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
+            setMetrics(prev => ({ ...prev, fid: entr y.processingStart - entry.startTime }));
           }
         });'
       });''
@@ -83,7 +83,7 @@ const PerformanceMonitor: React.FC = () => {
             clsValue += (entry as any).value;
           }
         }
-        setMetrics(prev => ({ ...prev, cls: clsValue }));'
+        setMetrics(prev => ({ ...prev, cls: clsValu e }));'
       });''
       clsObserver.observe({ entryTypes: ['layout-shift'] });
 
@@ -102,12 +102,12 @@ const PerformanceMonitor: React.FC = () => {
       const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (navigationEntry) {
 
-        setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
+        setMetrics(prev => ({ ...prev, ttfb: navigationEntr y.responseStart - navigationEntry.requestStart }));
       }
 
       // Measure page load time
       const loadEventEnd = performance.timing.loadEventEnd - performance.timing.navigationStart;
-      setMetrics(prev => ({ ...prev, loadTime: loadEventEnd }));
+      setMetrics(prev => ({ ...prev, loadTime: loadEventEn d }));
     }
   }, []);
 
@@ -155,15 +155,15 @@ const PerformanceMonitor: React.FC = () => {
 
   if (!isVisible) return null;
 
-  return()
-    <div className="fixed bottom-4 right-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg p-4 max-w-sm z-50">""
+  return ()
+    <div className="fixed bottom-4 right-4 bg-white dark: b g-gray-800 border border-gray-200 dark: borde r-gray-700 rounded-lg shadow-lg p-4 max-w-sm z-50">""
       <div className="flex items-center justify-between mb-3">""
-        <h3 className="text-sm font-semibold text-gray-900 dark:text-white">
+        <h3 className="text-sm font-semibold text-gray-900 dark: tex t-white">
           Performance Monitor
         </h3>
         <button"
           onClick={() => setIsVisible(false)}""
-          className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+          className="text-gray-400 hover: tex t-gray-600 dark: hove r:text-gray-300"
         >
           ×
         </button>
@@ -171,7 +171,7 @@ const PerformanceMonitor: React.FC = () => {
       ""
       <div className="space-y-2 text-xs">""
         <div className="flex justify-between">"'"
-          <span className="text-gray-600 dark:text-gray-400">FCP:</span>''
+          <span className="text-gray-600 dark: tex t-gray-400">FCP:</span>''
           <span className={getScoreColor('fcp', metrics.fcp)}>''
             {metrics.fcp ? `${Math.round(metrics.fcp)}ms` : 'N/A'}"
           </span>"'"
@@ -181,7 +181,7 @@ const PerformanceMonitor: React.FC = () => {
         </div>"
         ""
         <div className="flex justify-between">"'"
-          <span className="text-gray-600 dark:text-gray-400">LCP:</span>''`
+          <span className="text-gray-600 dark: tex t-gray-400">LCP:</span>''`
           <span className={getScoreColor('lcp', metrics.lcp)}>'`'`
             {metrics.lcp ? `${Math.round(metrics.lcp)}ms` : 'N/A'}"
           </span>"'"
@@ -191,7 +191,7 @@ const PerformanceMonitor: React.FC = () => {
         </div>"
         ""
         <div className="flex justify-between">"'"
-          <span className="text-gray-600 dark:text-gray-400">FID:</span>''`
+          <span className="text-gray-600 dark: tex t-gray-400">FID:</span>''`
           <span className={getScoreColor('fid', metrics.fid)}>'`'`
             {metrics.fid ? `${Math.round(metrics.fid)}ms` : 'N/A'}"
           </span>"'"
@@ -201,7 +201,7 @@ const PerformanceMonitor: React.FC = () => {
         </div>"
         ""
         <div className="flex justify-between">"'"
-          <span className="text-gray-600 dark:text-gray-400">CLS:</span>''
+          <span className="text-gray-600 dark: tex t-gray-400">CLS:</span>''
           <span className={getScoreColor('cls', metrics.cls)}>''
             {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}"
           </span>"'"
@@ -211,24 +211,24 @@ const PerformanceMonitor: React.FC = () => {
         </div>"
         ""
         <div className="flex justify-between">""
-          <span className="text-gray-600 dark:text-gray-400">TTFB:</span>"'"`
-          <span className="text-gray-900 dark:text-white">'`'`
+          <span className="text-gray-600 dark: tex t-gray-400">TTFB:</span>"'"`
+          <span className="text-gray-900 dark: tex t-white">'`'`
             {metrics.ttfb ? `${Math.round(metrics.ttfb)}ms` : 'N/A'}
           </span>
         </div>"
         ""
         <div className="flex justify-between">""
-          <span className="text-gray-600 dark:text-gray-400">Load Time:</span>"'"`
-          <span className="text-gray-900 dark:text-white">'`'`
+          <span className="text-gray-600 dark: tex t-gray-400">Load Time:</span>"'"`
+          <span className="text-gray-900 dark: tex t-white">'`'`
             {metrics.loadTime ? `${Math.round(metrics.loadTime)}ms` : 'N/A'}
           </span>
         </div>
       </div>"
       ""
-      <div className="mt-3 pt-2 border-t border-gray-200 dark:border-gray-700">
+      <div className="mt-3 pt-2 border-t border-gray-200 dark: borde r-gray-700">
         <button"
           onClick={() => window.location.reload()}""
-          className="w-full text-xs bg-blue-500 hover:bg-blue-600 text-white px-2 py-1 rounded"
+          className="w-full text-xs bg-blue-500 hover: b g-blue-600 text-white px-2 py-1 rounded"
         >
           Refresh Metrics
         </button>

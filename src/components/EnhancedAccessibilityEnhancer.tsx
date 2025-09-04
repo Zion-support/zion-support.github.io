@@ -149,7 +149,7 @@ export default function Page() {
 
   // Zoom controls
   
-      applySettings({ zoomLevel: newZoom });`
+      applySettings({ zoomLevel: newZoo m });`
       announceToScreenReader(`Zoom level ${newZoom}%`)},
     [settings.zoomLevel, applySettings, announceToScreenReader]
   );
@@ -159,49 +159,49 @@ export default function Page() {
       {/* Accessibility Toggle Button */}
       <motion.button
         onClick={() => setIsVisible(!isVisible)}
-        className="fixed bottom-6 left-6 z-50 p-3 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
+        className="fixed bottom-6 left-6 z-50 p-3 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full shadow-lg hover: shado w-xl transition-all duration-300 group"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         onClick={() => setIsVisible(!isVisible)}"
-        className="fixed top-4 right-4 z-50 p-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
+        className="fixed top-4 right-4 z-50 p-3 bg-blue-600 text-white rounded-full shadow-lg hover: b g-blue-700 transition-all duration-200 focus: outlin e-none focus: rin g-2 focus: rin g-blue-400 focus: rin g-offset-2"
         
         title="Accessibility Options"
       >"
-        <Accessibility className="w-5 h-5"  />      </motion.button>
+        <Accessibility className="w-5 h-5"   />      </motion.button>
 
       {/* Accessibility Panel */}
       <AnimatePresence>
         {isVisible && (<motion.div
-            initial={{ opacity: 0, x: 300 }}
+            initial={{ opacity: 0, x: 30 0 }}
             animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 300 }}"
-            className="fixed top-4 right-20 z-50 w-80 bg-white dark:bg-slate-800 rounded-lg shadow-xl border border-slate-200 dark:border-slate-700 overflow-hidden"
+            exit={{ opacity: 0, x: 30 0 }}"
+            className="fixed top-4 right-20 z-50 w-80 bg-white dark: b g-slate-800 rounded-lg shadow-xl border border-slate-200 dark: borde r-slate-700 overflow-hidden"
           >
             {/* Header */}"
             <div className="flex items-center justify-between p-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
               <div className="flex items-center space-x-2">"
-                <Accessibility className="w-5 h-5"  />"                <h3 className="font-semibold">Accessibility</h3>
+                <Accessibility className="w-5 h-5"   />"                <h3 className="font-semibold">Accessibility</h3>
               </div>
               <button
                 onClick={() => setIsVisible(false)}"
-                className="p-1 hover:bg-white/20 rounded transition-colors"
+                className="p-1 hover: b g-white/20 rounded transition-colors"
                 
               >"
-                <EyeOff className="w-4 h-4"  />              </button>
+                <EyeOff className="w-4 h-4"   />              </button>
             </div>
 
             {/* Content */}"
             <div className="p-4 space-y-4 max-h-96 overflow-y-auto">
               {/* Visual Enhancements */}"
               <div className="space-y-3">"
-                <h4 className="text-sm font-semibold text-slate-700 dark:text-slate-300">
+                <h4 className="text-sm font-semibold text-slate-700 dark: tex t-slate-300">
                   Visual Enhancements
                 </h4>
 "
                 <div className="flex items-center justify-between">"
                   <div className="flex items-center space-x-2">"
-                    <Contrast className="w-4 h-4 text-slate-600 dark:text-slate-400"  />"
-                    <span className="text-sm text-slate-700 dark:text-slate-300">
+                    <Contrast className="w-4 h-4 text-slate-600 dark: tex t-slate-400"   />"
+                    <span className="text-sm text-slate-700 dark: tex t-slate-300">
                       High Contrast
                     </span>                  </div>
                   <button'
@@ -221,8 +221,8 @@ export default function Page() {
 "
                 <div className="flex items-center justify-between">"
                   <div className="flex items-center space-x-2">"
-                    <Type className="w-4 h-4 text-slate-600 dark:text-slate-400"  />"
-                    <span className="text-sm text-slate-700 dark:text-slate-300">
+                    <Type className="w-4 h-4 text-slate-600 dark: tex t-slate-400"   />"
+                    <span className="text-sm text-slate-700 dark: tex t-slate-300">
                       Large Text
                     </span>                  </div>
                   <button'
@@ -240,8 +240,8 @@ export default function Page() {
 "
                 <div className="flex items-center justify-between">"
                   <div className="flex items-center space-x-2">"
-                    <Eye className="w-4 h-4 text-slate-600 dark:text-slate-400"  />"
-                    <span className="text-sm text-slate-700 dark:text-slate-300">
+                    <Eye className="w-4 h-4 text-slate-600 dark: tex t-slate-400"   />"
+                    <span className="text-sm text-slate-700 dark: tex t-slate-300">
                       Focus Indicator
                     </span>                  </div>
                   <button'
@@ -262,14 +262,14 @@ export default function Page() {
 
               {/* Navigation Options */}"
               <div className="space-y-3">"
-                <h4 className="text-sm font-semibold text-slate-700 dark:text-slate-300">
+                <h4 className="text-sm font-semibold text-slate-700 dark: tex t-slate-300">
                   Navigation
                 </h4>
 "
                 <div className="flex items-center justify-between">"
                   <div className="flex items-center space-x-2">"
-                    <Keyboard className="w-4 h-4 text-slate-600 dark:text-slate-400"  />"
-                    <span className="text-sm text-slate-700 dark:text-slate-300">
+                    <Keyboard className="w-4 h-4 text-slate-600 dark: tex t-slate-400"   />"
+                    <span className="text-sm text-slate-700 dark: tex t-slate-300">
                       Keyboard Navigation
                     </span>                  </div>
                   <button'
@@ -291,8 +291,8 @@ export default function Page() {
 "
                 <div className="flex items-center justify-between">"
                   <div className="flex items-center space-x-2">"
-                    <MousePointer className="w-4 h-4 text-slate-600 dark:text-slate-400"  />"
-                    <span className="text-sm text-slate-700 dark:text-slate-300">
+                    <MousePointer className="w-4 h-4 text-slate-600 dark: tex t-slate-400"   />"
+                    <span className="text-sm text-slate-700 dark: tex t-slate-300">
                       Reduced Motion
                     </span>                  </div>
                   <button'
@@ -310,37 +310,37 @@ export default function Page() {
                   </button>
                 </div>
                 <button
-                  onClick={() => applySettings({ ...settings, zoomLevel: 100 })}
-                  className="flex items-center space-x-2 text-zion-purple/60 hover:text-zion-purple text-xs transition-colors"
+                  onClick={() => applySettings({ ...settings, zoomLevel: 10 0 })}
+                  className="flex items-center space-x-2 text-zion-purple/60 hover: tex t-zion-purple text-xs transition-colors"
                 >
-                  <RotateCcw className="w-3 h-3"  />
+                  <RotateCcw className="w-3 h-3"   />
                   <span>Reset to 100%</span>
                 </button>
               </div>
 
               {/* Zoom Controls */}"
               <div className="space-y-3">"
-                <h4 className="text-sm font-semibold text-slate-700 dark:text-slate-300">
+                <h4 className="text-sm font-semibold text-slate-700 dark: tex t-slate-300">
                   Zoom Controls
                 </h4>
 "
                 <div className="flex items-center justify-between">"
-                  <span className="text-sm text-slate-700 dark:text-slate-300">
+                  <span className="text-sm text-slate-700 dark: tex t-slate-300">
                     {settings.zoomLevel}%
                   </span>"
                   <div className="flex items-center space-x-2">
                     <button'
                       onClick={() => adjustZoom('out')}"
-                      className="p-2 rounded-lg bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors"
+                      className="p-2 rounded-lg bg-slate-100 dark: b g-slate-700 hover: b g-slate-200 dark: hove r:bg-slate-600 transition-colors"
                       
                     >"
-                      <ZoomOut className="w-4 h-4"  />                    </button>
+                      <ZoomOut className="w-4 h-4"   />                    </button>
                     <button'
                       onClick={() => adjustZoom('in')}"
-                      className="p-2 rounded-lg bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors"
+                      className="p-2 rounded-lg bg-slate-100 dark: b g-slate-700 hover: b g-slate-200 dark: hove r:bg-slate-600 transition-colors"
                       
                     >"
-                      <ZoomIn className="w-4 h-4"  />                    </button>
+                      <ZoomIn className="w-4 h-4"   />                    </button>
                   </div>
                 </div>
                 
@@ -350,7 +350,7 @@ export default function Page() {
                     <div className="space-y-1">
                       {accessibilityIssues.slice(0, 3).map((issue, index) => (
                         <div key={index} className="text-white/80 text-xs bg-zion-slate/30 p-2 rounded-lg flex items-start space-x-2">
-                          <AlertTriangle className="w-3 h-3 text-yellow-500 mt-0.5 flex-shrink-0"  />
+                          <AlertTriangle className="w-3 h-3 text-yellow-500 mt-0.5 flex-shrink-0"   />
                           <span>{issue}</span>
                         </div>
                       ))}
@@ -365,7 +365,7 @@ export default function Page() {
 
                 <button
                   onClick={runAccessibilityAudit}
-                  className="w-full bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple text-sm py-2 rounded-lg transition-colors"
+                  className="w-full bg-zion-purple/20 hover: b g-zion-purple/30 text-zion-purple text-sm py-2 rounded-lg transition-colors"
                 >
                   Run Accessibility Audit
                 </button>
@@ -373,14 +373,14 @@ export default function Page() {
 
               {/* Screen Reader Support */}"
               <div className="space-y-3">"
-                <h4 className="text-sm font-semibold text-slate-700 dark:text-slate-300">
+                <h4 className="text-sm font-semibold text-slate-700 dark: tex t-slate-300">
                   Screen Reader
                 </h4>
 "
                 <div className="flex items-center justify-between">"
                   <div className="flex items-center space-x-2">"
-                    <Volume2 className="w-4 h-4 text-slate-600 dark:text-slate-400" />"
-                    <span className="text-sm text-slate-700 dark:text-slate-300">
+                    <Volume2 className="w-4 h-4 text-slate-600 dark: tex t-slate-400"  />"
+                    <span className="text-sm text-slate-700 dark: tex t-slate-300">
                       Enhanced Support
                     </span>
                   </div>
@@ -403,11 +403,11 @@ export default function Page() {
 
               {/* Current Focus Indicator */}
               {currentFocus && settings.focusIndicator && ("
-                <div className="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">"
-                  <h4 className="text-sm font-semibold text-blue-700 dark:text-blue-300 mb-2">
+                <div className="p-3 bg-blue-50 dark: b g-blue-900/20 rounded-lg border border-blue-200 dark: borde r-blue-800">"
+                  <h4 className="text-sm font-semibold text-blue-700 dark: tex t-blue-300 mb-2">
                     Current Focus
                   </h4>"
-                  <p className="text-xs text-blue-600 dark:text-blue-400">
+                  <p className="text-xs text-blue-600 dark: tex t-blue-400">
                     {currentFocus.tagName.toLowerCase()}:{' '}
                     {currentFocus.textContent?.substring(0, 50) ||'
                       'No text content'}
@@ -422,19 +422,19 @@ export default function Page() {
       <style jsx>{`
         .sr-only {
 
-          position: absolute;
-          width: 1px;
-          height: 1px;
+          position: absolut e;
+          width: 1p x;
+          height: 1p x;
           padding: 0;
           margin: -1px;
-          overflow: hidden;
-          clip: rect(0, 0, 0, 0);
-          white-space: nowrap;
+          overflow: hidde n;
+          clip: rec t(0, 0, 0, 0);
+          white-space: nowra p;
           border: 0}
 
         .high-contrast {
 
-          filter: contrast(1.5) brightness(1.2)}
+          filter: contras t(1.5) brightness(1.2)}
 
         .large-text {
 

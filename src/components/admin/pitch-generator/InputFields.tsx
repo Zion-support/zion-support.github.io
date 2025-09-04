@@ -1,20 +1,20 @@
 import React from 'react';
 
 interface InputFieldsProps {
-  inputData: any;
-  setInputData: (data: any) => void;
+  inputData: an y;
+  setInputData: (data: an y) => void;
   onNext: () => void;
 }
 
-const InputFields: React.FC<InputFieldsProps> = ({ inputData, setInputData, onNext }) => {
-  const handleInputChange = (field: string, value: any) => {
+const InputFields: Reac t.FC<InputFieldsProps> = ({ inputData, setInputData, onNext }) => {
+  const handleInputChange = (field: string, value: an y) => {
     setInputData({
       ...inputData,
       [field]: value
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: Reac t.FormEvent) => {
     e.preventDefault();
     if (inputData?.companyName && inputData?.industry) {
       onNext();
@@ -31,7 +31,7 @@ const InputFields: React.FC<InputFieldsProps> = ({ inputData, setInputData, onNe
             type="text"
             value={inputData?.companyName || ''}
             onChange={(e) => handleInputChange('companyName', e.target.value)}
-            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full p-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent"
             placeholder="Enter company name"
             required
           />
@@ -42,7 +42,7 @@ const InputFields: React.FC<InputFieldsProps> = ({ inputData, setInputData, onNe
           <select
             value={inputData?.industry || ''}
             onChange={(e) => handleInputChange('industry', e.target.value)}
-            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full p-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent"
             required
           >
             <option value="">Select industry</option>
@@ -61,7 +61,7 @@ const InputFields: React.FC<InputFieldsProps> = ({ inputData, setInputData, onNe
           <textarea
             value={inputData?.description || ''}
             onChange={(e) => handleInputChange('description', e.target.value)}
-            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full p-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent"
             rows={4}
             placeholder="Brief description of your company"
           />
@@ -73,14 +73,14 @@ const InputFields: React.FC<InputFieldsProps> = ({ inputData, setInputData, onNe
             type="text"
             value={inputData?.targetAudience || ''}
             onChange={(e) => handleInputChange('targetAudience', e.target.value)}
-            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full p-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent"
             placeholder="e.g., Small businesses, Enterprise clients"
           />
         </div>
         
         <button
           type="submit"
-          className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors"
+          className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover: b g-blue-700 transition-colors"
         >
           Continue to Data Sync
         </button>

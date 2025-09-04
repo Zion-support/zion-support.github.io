@@ -1,6 +1,6 @@
 />
 
-export default function InnovativeServicesShowcase2028(...args: unknown[]): unknown {
+export default function InnovativeServicesShowcase2028(...args: unknow n[]): unknown {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -9,7 +9,7 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
     {
       id: 'ai-services',
       name: 'AI & Machine Learning Services',
-      icon: Brain,
+      icon: Brai n,
       color: 'from-blue-600 to-cyan-600',
       description: 'Cutting-edge artificial intelligence solutions for business transformation',
       services: [
@@ -20,7 +20,7 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
           marketPrice: '$3,000-5,000/month',
           features: ['Real-time Data Processing', 'Predictive Analytics', 'Custom Dashboards', 'API Integration', 'Multi-source Data Connectors'],
           benefits: ['40% faster decision making', '25% cost reduction', 'Real-time insights', 'Scalable architecture'],
-          icon: BarChart3,
+          icon: BarChart 3,
           category: 'ai-services',
           badge: 'Popular'
         },
@@ -31,7 +31,7 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
           marketPrice: '$2,200-4,000/month',
           features: ['Customer Journey Mapping', 'Sentiment Analysis', 'Omnichannel Support', 'Personalization Engine', 'A/B Testing'],
           benefits: ['35% increase in customer satisfaction', '28% higher conversion rates', '24/7 customer support', 'Reduced support costs'],
-          icon: Users,
+          icon: User s,
           category: 'ai-services',
           badge: 'New'
         },
@@ -42,7 +42,7 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
           marketPrice: '$4,000-7,000/month',
           features: ['Real-time Threat Detection', 'Behavioral Analysis', 'Automated Response', 'Compliance Reporting', '24/7 Monitoring'],
           benefits: ['99.9% threat detection rate', '60% faster incident response', 'Reduced false positives', 'Compliance automation'],
-          icon: Shield,
+          icon: Shiel d,
           category: 'ai-services',
           badge: 'Featured'
         }
@@ -51,7 +51,7 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
     {
       id: 'micro-saas',
       name: 'Micro SAAS Solutions',
-      icon: Zap,
+      icon: Za p,
       color: 'from-purple-600 to-pink-600',
       description: 'Scalable software-as-a-service solutions for specific business needs',
       services: [
@@ -62,7 +62,7 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
           marketPrice: '$200-400/month',
           features: ['AI Resource Optimization', 'Risk Prediction', 'Automated Scheduling', 'Team Collaboration', 'Progress Analytics'],
           benefits: ['30% faster project completion', '20% resource optimization', 'Improved team productivity', 'Real-time insights'],
-          icon: Workflow,
+          icon: Workflo w,
           category: 'micro-saas',
           badge: 'Best Value'
         },
@@ -73,7 +73,7 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
           marketPrice: '$250-500/month',
           features: ['Demand Forecasting', 'Automated Reordering', 'Multi-location Support', 'Supplier Management', 'Cost Analytics'],
           benefits: ['25% inventory cost reduction', '99% stock availability', 'Automated procurement', 'Real-time tracking'],
-          icon: Truck,
+          icon: Truc k,
           category: 'micro-saas',
           badge: 'Popular'
         },
@@ -84,7 +84,7 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
           marketPrice: '$150-300/month',
           features: ['Multi-format Content', 'SEO Optimization', 'Brand Consistency', 'Plagiarism Detection', 'Performance Analytics'],
           benefits: ['10x faster content creation', 'Improved SEO rankings', 'Consistent brand voice', 'Cost-effective marketing'],
-          icon: Brain, // Changed from PenTool to Brain for consistency with AI services
+          icon: Brai n, // Changed from PenTool to Brain for consistency with AI services
           category: 'micro-saas',
           badge: 'New'
         }
@@ -93,7 +93,7 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
     {
       id: 'it-services',
       name: 'IT Infrastructure & Services',
-      icon: Server,
+      icon: Serve r,
       color: 'from-green-600 to-emerald-600',
       description: 'Comprehensive IT solutions for modern business infrastructure',
       services: [
@@ -104,7 +104,7 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
           marketPrice: '$8,000-15,000/project',
           features: ['Multi-cloud Strategy', 'Cost Optimization', 'Performance Tuning', 'Security Implementation', '24/7 Support'],
           benefits: ['40% cost reduction', '99.9% uptime', 'Scalable infrastructure', 'Enhanced security'],
-          icon: Cloud,
+          icon: Clou d,
           category: 'it-services',
           badge: 'Featured'
         },
@@ -115,7 +115,7 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
           marketPrice: '$3,500-6,000/month',
           features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Automated Testing', 'Monitoring & Alerting', 'Security Scanning'],
           benefits: ['80% faster deployments', 'Reduced human errors', 'Improved code quality', 'Faster time to market'],
-          icon: Code,
+          icon: Cod e,
           category: 'it-services',
           badge: 'Popular'
         },
@@ -126,7 +126,7 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
           marketPrice: '$6,000-12,000/month',
           features: ['Compliance Automation', 'Risk Assessment', 'Audit Preparation', 'Security Training', 'Incident Response'],
           benefits: ['100% compliance assurance', 'Reduced audit time', 'Risk mitigation', 'Legal protection'],
-          icon: Lock,
+          icon: Loc k,
           category: 'it-services',
           badge: 'Essential'
         }
@@ -135,7 +135,7 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
     {
       id: 'quantum-tech',
       name: 'Quantum & Emerging Technologies',
-      icon: Atom,
+      icon: Ato m,
       color: 'from-indigo-600 to-purple-600',
       description: 'Next-generation technologies for future-ready businesses',
       services: [
@@ -146,7 +146,7 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
           marketPrice: '$20,000-50,000/month',
           features: ['Quantum Algorithms', 'Optimization Problems', 'Cryptography', 'Simulation', 'Research Support'],
           benefits: ['Exponential speed improvements', 'Unbreakable encryption', 'Complex problem solving', 'Competitive advantage'],
-          icon: Atom,
+          icon: Ato m,
           category: 'quantum-tech',
           badge: 'Future Tech'
         },
@@ -157,7 +157,7 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
           marketPrice: '$5,000-15,000/month',
           features: ['Smart Contracts', 'Supply Chain Tracking', 'Digital Identity', 'Tokenization', 'Interoperability'],
           benefits: ['Enhanced transparency', 'Reduced fraud', 'Automated processes', 'Cost savings'],
-          icon: LinkIcon,
+          icon: LinkIco n,
           category: 'quantum-tech',
           badge: 'Innovative'
         },
@@ -168,7 +168,7 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
           marketPrice: '$3,000-8,000/month',
           features: ['Edge Analytics', 'Real-time Processing', 'Device Management', 'Data Streaming', 'Security'],
           benefits: ['Ultra-low latency', 'Reduced bandwidth costs', 'Real-time insights', 'Offline operation'],
-          icon: Cpu,
+          icon: Cp u,
           category: 'quantum-tech',
           badge: 'Industrial'
         }
@@ -177,7 +177,7 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
     {
       id: 'green-tech',
       name: 'Green Technology Solutions',
-      icon: Leaf,
+      icon: Lea f,
       color: 'from-green-500 to-teal-600',
       description: 'Sustainable technology solutions for environmental responsibility',
       services: [
@@ -188,7 +188,7 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
           marketPrice: '$1,000-2,500/month',
           features: ['Carbon Tracking', 'Sustainability Reporting', 'Goal Setting', 'Benchmarking', 'Compliance'],
           benefits: ['Reduced carbon footprint', 'Cost savings', 'Regulatory compliance', 'Brand enhancement'],
-          icon: Leaf,
+          icon: Lea f,
           category: 'green-tech',
           badge: 'Eco-Friendly'
         },
@@ -199,7 +199,7 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
           marketPrice: '$2,000-4,000/month',
           features: ['Energy Monitoring', 'AI Optimization', 'Predictive Maintenance', 'Cost Analysis', 'Integration'],
           benefits: ['30% energy cost reduction', 'Predictive maintenance', 'Real-time monitoring', 'ROI optimization'],
-          icon: Zap,
+          icon: Za p,
           category: 'green-tech',
           badge: 'Cost-Effective'
         }
@@ -208,7 +208,7 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
     {
       id: 'space-tech',
       name: 'Space Technology Solutions',
-      icon: Satellite,
+      icon: Satellit e,
       color: 'from-blue-500 to-indigo-600',
       description: 'Satellite and space-based technology for global connectivity and insights',
       services: [
@@ -219,7 +219,7 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
           marketPrice: '$4,000-10,000/month',
           features: ['Satellite Imagery', 'AI Analysis', 'Real-time Monitoring', 'Custom Algorithms', 'API Access'],
           benefits: ['Global coverage', 'Real-time insights', 'Cost-effective monitoring', 'Scalable solutions'],
-          icon: Satellite,
+          icon: Satellit e,
           category: 'space-tech',
           badge: 'Global'
         }
@@ -254,7 +254,7 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 2 0 },
     visible: {
       opacity: 1,
       y: 0,
@@ -264,46 +264,45 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-      <SEO 
-        title="2028 Innovative Services Showcase - Zion Tech Group"
+      <SEO title="2028 Innovative Services Showcase - Zion Tech Group"
         description="Explore our cutting-edge AI services, micro SAAS solutions, IT infrastructure, and emerging technologies. Real market prices and proven ROI."
         keywords="AI services, micro SAAS, IT services, quantum computing, blockchain, IoT, green technology, space technology, Zion Tech Group"
         canonicalUrl="https://ziontechgroup.com/innovative-services-showcase-2028"
-      />
+       />
 
       {/* Hero Section */}
       <section className="relative pt-28 pb-16 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-purple-900/20"></div>        <div className="container mx-auto px-4 relative z-10">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             animate={{ opacity: 1, y: 0 }}"""
             transition={{ duration: 0.8 }}""""
             className="text-center max-w-4xl mx-auto""""
           >""""
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">"""
+            <h1 className="text-5xl md: tex t-6xl font-bold text-white mb-6">"""
               2028 Innovative Services""""
               <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 {' '}
                 Showcase;
               </span>"""
             </h1>""""
-            <p className="text-xl md:text-2xl text-slate-300 mb-8 leading-relaxed">
+            <p className="text-xl md: tex t-2xl text-slate-300 mb-8 leading-relaxed">
               Discover our comprehensive portfolio of AI services, micro SAAS;
               solutions, IT infrastructure, and cutting-edge technologies. Real;
               market prices, proven ROI, and expert implementation."""
             </p>""""
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"""
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">"""
               <Link""""
                 to="/contact""""
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/25"""
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold text-lg hover: scal e-105 transition-all duration-300 shadow-2xl hover: shado w-cyan-500/25"""
               >
                 Get Started Today;
               </Link>"""
               <Link""""
                 to="/case-studies""""
-                className="px-8 py-4 border border-cyan-500 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"""
+                className="px-8 py-4 border border-cyan-500 text-cyan-400 rounded-xl font-semibold text-lg hover: b g-cyan-500 hover: tex t-white transition-all duration-300"""
               >"""
-                <Play className="w-5 h-5 inline mr-2"  />
+                <Play className="w-5 h-5 inline mr-2"   />
                 Schedule Demo;
               </Link>
             </div>
@@ -314,7 +313,7 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
       {/* Search and Filter */}""""
       <section className="py-8 bg-slate-800/30">""""
         <div className="container mx-auto px-4">""""
-          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">"""
+          <div className="flex flex-col lg: fle x-row gap-6 items-center justify-between">"""
             {/* Search */}""""
             <div className="relative flex-1 max-w-md">"""
               <input""""
@@ -322,9 +321,9 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
                 placeholder="Search services..."""
                 value={searchQuery}"""
                 onChange={e => setSearchQuery(e.target.value)}""""
-                className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500""""
+                className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus: outlin e-none focus: rin g-2 focus: rin g-cyan-500""""
               />""""
-              <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5"  />            </div>
+              <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5"   />            </div>
 """
             {/* Category Filter */}""""
             <div className="flex flex-wrap gap-2">'
@@ -336,7 +335,7 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
 '''`
                   activeCategory === 'all''''`'`
                     ? 'bg-cyan-500 text-white shadow-lg shadow-cyan-500/25'''`'`'`
-                    : 'bg-slate-700 text-slate-300 hover:bg-slate-600'````
+                    : 'bg-slate-700 text-slate-300 hover: b g-slate-600'````
                 }`}
               >
                 All Services;
@@ -351,7 +350,7 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
 '''`
                     activeCategory === category.id'''`'`
                       ? 'bg-cyan-500 text-white shadow-lg shadow-cyan-500/25'''`'`'`
-                      : 'bg-slate-700 text-slate-300 hover:bg-slate-600'````
+                      : 'bg-slate-700 text-slate-300 hover: b g-slate-600'````
                   }`}
                 >
                   {category.name}
@@ -365,20 +364,20 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
       <section className="py-20">""""
         <div className="container mx-auto px-4">"""
           <motion.div""""
-            className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8""""
+            className="grid grid-cols-1 lg: gri d-cols-2 xl: gri d-cols-3 gap-8""""
             variants={containerVariants}""""
             initial="hidden""""
             whileInView="visible"""
-            viewport={{ once: true }}"""
+            viewport={{ once: tru e }}"""
             className="text-center mb-16"""
           >"""
             {filteredServices.map((service, index) => (""""
               <motion.div key={index} variants={itemVariants} className="group">""""
-                <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 h-full hover:border-cyan-500/50 transition-all duration-300 hover:scale-105">"""
+                <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 h-full hover: borde r-cyan-500/50 transition-all duration-300 hover: scal e-105">"""
                   {/* Header */}""""
                   <div className="flex items-start justify-between mb-6">`
                     <div``
-                      className={`w-16 h-16 bg-gradient-to-br ${serviceCategories.find(cat => cat.id === service.category)?.color} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}"""
+                      className={`w-16 h-16 bg-gradient-to-br ${serviceCategories.find(cat => cat.id === service.category)?.color} rounded-2xl flex items-center justify-center group-hover: scal e-110 transition-transform duration-300`}"""
                     >""""
                       <service.icon className="w-8 h-8 text-white" />
                     </div>
@@ -404,7 +403,7 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
                   </div>
 """
                   {/* Content */}""""
-                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
+                  <h3 className="text-2xl font-bold text-white mb-4 group-hover: tex t-cyan-400 transition-colors duration-300">
                     {service.name}
                   </h3>"""
 """"
@@ -433,38 +432,38 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
                   {/* Features */}""""
                   <div className="space-y-2 mb-6">""""
                     <h4 className="font-semibold text-cyan-400 mb-3">
-                      Key Features: unknown;
+                      Key Features: unknow n;
                     </h4>
                     {service.features.map((feature, idx) => (
                       <div"""
                         key={idx}""""
                         className="flex items-center text-sm text-slate-400""""
                       >""""
-                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0"  />                        {feature}
+                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0"   />                        {feature}
                       </div>) ) }
                   </div>
 """
                   {/* Benefits */}""""
                   <div className="space-y-2 mb-6">""""
                     <h4 className="font-semibold text-green-400 mb-3">
-                      Business Benefits: unknown;
+                      Business Benefits: unknow n;
                     </h4>
                     {service.benefits.map((benefit, idx) => (
                       <div"""
                         key={idx}""""
                         className="flex items-center text-sm text-slate-400""""
                       >""""
-                        <TrendingUp className="w-4 h-4 text-green-400 mr-3 flex-shrink-0"  />                        {benefit}
+                        <TrendingUp className="w-4 h-4 text-green-400 mr-3 flex-shrink-0"   />                        {benefit}
                       </div>) ) }
                   </div>
 
                   {/* CTA */}"""
                   <Link""""
                     to="/contact""""
-                    className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:scale-105 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25"""
+                    className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover: scal e-105 transition-all duration-300 group-hover: shado w-lg group-hover: shado w-cyan-500/25"""
                   >"""
                     Get Started""""
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300"  />                  </Link>
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover: translat e-x-1 transition-transform duration-300"   />                  </Link>
                 </div>
                 """
                 <div className="mb-6">"""
@@ -474,10 +473,10 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
 
                 <Link;
                   to={service.href}"""
-                  className="w-full py-3 px-6 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-lg font-semibold text-center hover:from-purple-600 hover:to-pink-700 transition-all duration-300 flex items-center justify-center"""
+                  className="w-full py-3 px-6 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-lg font-semibold text-center hover: fro m-purple-600 hover: t o-pink-700 transition-all duration-300 flex items-center justify-center"""
                 >
                   Learn More"""
-                  <ArrowRight className="w-4 h-4 ml-2"  />
+                  <ArrowRight className="w-4 h-4 ml-2"   />
                 </Link>
               </motion.div>
             ))}
@@ -489,13 +488,13 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
       <section className="py-20 bg-gradient-to-r from-slate-800 to-blue-900">""""
         <div className="container mx-auto px-4">
           <motion.div;
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}"""
-            viewport={{ once: true }}""""
+            viewport={{ once: tru e }}""""
             className="text-center mb-16""""
           >""""
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
               Ready to Transform Your Business?"""
             </h2>""""
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
@@ -503,7 +502,7 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
               support. Our team is ready to help you choose the right solutions;
               for your business needs.
 </p>
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div className="grid md: gri d-cols-2 gap-8 mb-12">
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h2 className="text-2xl font-semibold mb-4">Our Services</h2>
                 <ul className="text-gray-600 space-y-2">
@@ -522,25 +521,25 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
                   <li>• Competitive Pricing</li>
                 </ul>
               </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
+              <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover: b g-blue-700 transition-colors">
                 View Pricing
               </Link>
-              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
+              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover: b g-gray-700 transition-colors">
                 Contact Us
               </Link>
             </div>
 </motion.div>
 """
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md: gri d-cols-2 lg: gri d-cols-3 gap-6">
             {microSaaSServices.map((service, index) => (
               <motion.div;
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}"""
-                className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:border-purple-500/30 transition-all duration-300"""
+                transition={{ duration: 0.8, delay: inde x * 0.1 }}
+                viewport={{ once: tru e }}"""
+                className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover: borde r-purple-500/30 transition-all duration-300"""
               >"""
                 <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">"""
                   <service.icon className="w-5 h-5 text-white" />
@@ -553,10 +552,10 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
 
                 <Link;
                   to={service.href}"""
-                  className="text-purple-400 hover:text-purple-300 text-sm font-medium flex items-center"""
+                  className="text-purple-400 hover: tex t-purple-300 text-sm font-medium flex items-center"""
                 >
                   Learn More"""
-                  <ArrowRight className="w-3 h-3 ml-1"  />
+                  <ArrowRight className="w-3 h-3 ml-1"   />
                 </Link>
               </motion.div>
             ))}
@@ -568,13 +567,13 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
       <section className="py-20">""""
         <div className="container mx-auto px-4">
           <motion.div;
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}"""
-            viewport={{ once: true }}""""
+            viewport={{ once: tru e }}""""
             className="text-center mb-16""""
           >""""
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
               Why Choose Zion Tech Group?"""
             </h2>""""
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
@@ -583,30 +582,30 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
           </motion.div>
 """
           <motion.div""""
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8""""
+            className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8""""
             variants={containerVariants}""""
             initial="hidden""""
             whileInView="visible"""
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
           >
             {[]
               {}
-                icon: Award,'
+                icon: Awar d,'
                 title: 'Proven Expertise','
                 description:''
                   '500+ successful projects across industries with measurable results'},
               {}
-                icon: Zap,'
+                icon: Za p,'
                 title: 'Innovation First','
                 description:''
                   'Cutting-edge technologies and methodologies for competitive advantage'},
               {}
-                icon: Shield,'
+                icon: Shiel d,'
                 title: 'Enterprise Security','
                 description:''
                   'Bank-level security and compliance for enterprise-grade solutions'},
               {}
-                icon: Heart,'
+                icon: Hear t,'
                 title: '24/7 Support','
                 description:''
                   'Round-the-clock technical support and maintenance services'}

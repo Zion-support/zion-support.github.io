@@ -9,22 +9,22 @@ export { LLMContentStudio }(...args: []):  {
     <>
       <Helmet>
         <title>LLM Content Studio - Zion Tech Group</title>
-        <meta name = "description" content="Create high-quality, on-brand content with our AI-powered LLM Content Studio. Generate articles, marketing copy, and creative content at scale." />
-        <meta name="keywords" content="LLM content studio, AI content generation, content creation, marketing copy, AI writing, content automation" />
+        <meta name = "description" content="Create high-quality, on-brand content with our AI-powered LLM Content Studio. Generate articles, marketing copy, and creative content at scale."  />
+        <meta name="keywords" content="LLM content studio, AI content generation, content creation, marketing copy, AI writing, content automation"  />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-pink-600/10"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="relative max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
             <div className="text-center">
               <div className="inline-flex items-center px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full text-purple-400 text-sm font-medium mb-8">
-                <BookOpen className="w-4 h-4 mr-2" />
+                <BookOpen className="w-4 h-4 mr-2"  />
                 AI-Powered Content Creation
               </div>
 
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <h1 className="text-4xl md: tex t-6xl font-bold text-white mb-6">
                 LLM Content
                 <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent"> Studio</span>
               </h1>
@@ -34,16 +34,15 @@ export { LLMContentStudio }(...args: []):  {
                 on-brand content at scale for blogs, marketing, and creative projects.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200 shadow-lg hover:shadow-xl"
+              <div className="flex flex-col sm: fle x-row gap-4 justify-center">
+                <Link to="/contact"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover: fro m-purple-600 hover: t o-pink-700 transition-all duration-200 shadow-lg hover: shado w-xl"
 
                   Get Started
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                  <ArrowRight className="ml-2 w-5 h-5"  />
                 </Link>
-                <button className="inline-flex items-center px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200">
-                  <Play className="mr-2 w-5 h-5" />
+                <button className="inline-flex items-center px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover: b g-purple-500/10 transition-all duration-200">
+                  <Play className="mr-2 w-5 h-5"  />
                   Watch Demo
                 </button>
               </div>
@@ -53,9 +52,9 @@ export { LLMContentStudio }(...args: []):  {
 
         {/* Features Section */}
         <section className="py-20">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
                 AI-Powered Content Creation
               </h2>
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
@@ -64,40 +63,40 @@ export { LLMContentStudio }(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
               {[
                 {
-                  icon: Sparkles,
+                  icon: Sparkle s,
                   title: "AI Content Generation",
                   description: "Generate original content using advanced language models and AI algorithms."
                 },
                 {
-                  icon: PenTool,
+                  icon: PenToo l,
                   title: "Creative Writing",
                   description: "Create compelling stories, articles, and creative content with AI assistance."
                 },
                 {
-                  icon: Target,
+                  icon: Targe t,
                   title: "Brand Voice Consistency",
                   description: "Maintain consistent brand voice and tone across all content pieces."
                 },
                 {
-                  icon: Users,
+                  icon: User s,
                   title: "Multi-format Support",
                   description: "Create content for blogs, social media, emails, and marketing materials."
                 },
                 {
-                  icon: Zap,
+                  icon: Za p,
                   title: "Rapid Content Creation",
                   description: "Generate high-quality content in minutes, not hours or days."
                 },
                 {
-                  icon: Shield,
+                  icon: Shiel d,
                   title: "Quality Assurance",
                   description: "Built-in plagiarism detection and content quality validation."
                 }
               ].map((feature, index)  => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover: b g-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
@@ -111,9 +110,9 @@ export { LLMContentStudio }(...args: []):  {
 
         {/* Content Types Section */}
         <section className="py-20 bg-slate-800/30">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
                 Content Types & Formats
               </h2>
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
@@ -121,46 +120,46 @@ export { LLMContentStudio }(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
               {[
                 {
                   title: "Blog Posts & Articles",
                   description: "Long-form content, blog posts, and comprehensive articles.",
-                  icon: BookOpen,
+                  icon: BookOpe n,
                   benefits: ["SEO optimization", "Research-backed", "Engaging narratives"]
                 },
                 {
                   title: "Marketing Copy",
                   description: "Ad copy, landing pages, and promotional content.",
-                  icon: Target,
+                  icon: Targe t,
                   benefits: ["Conversion-focused", "Brand-aligned", "Compelling messaging"]
                 },
                 {
                   title: "Social Media Content",
                   description: "Posts, captions, and social media marketing content.",
-                  icon: Users,
+                  icon: User s,
                   benefits: ["Platform-optimized", "Trend-aware", "Engagement-driven"]
                 },
                 {
                   title: "Email Marketing",
                   description: "Newsletters, promotional emails, and drip campaigns.",
-                  icon: Mail,
+                  icon: Mai l,
                   benefits: ["Personalized", "Segmented", "Action-oriented"]
                 },
                 {
                   title: "Product Descriptions",
                   description: "E-commerce product descriptions and catalog content.",
-                  icon: Activity,
+                  icon: Activit y,
                   benefits: ["Feature-focused", "Benefit-driven", "SEO-optimized"]
                 },
                 {
                   title: "Creative Writing",
                   description: "Stories, scripts, and creative content projects.",
-                  icon: PenTool,
+                  icon: PenToo l,
                   benefits: ["Imaginative", "Emotionally engaging", "Original concepts"]
                 }
               ].map((contentType, index)  => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover: b g-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
                     <contentType.icon className="w-6 h-6 text-white" />
                   </div>
@@ -169,7 +168,7 @@ export { LLMContentStudio }(...args: []):  {
                   <ul className="space-y-1">
                     {contentType.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="text-sm text-purple-400 flex items-center">
-                        <CheckCircle className="w-3 h-3 mr-2" />
+                        <CheckCircle className="w-3 h-3 mr-2"  />
                         {benefit}
                       </li>
                     ))}
@@ -182,9 +181,9 @@ export { LLMContentStudio }(...args: []):  {
 
         {/* AI Capabilities Section */}
         <section className="py-20">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
                 Advanced AI Capabilities
               </h2>
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
@@ -192,7 +191,7 @@ export { LLMContentStudio }(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-1 lg: gri d-cols-2 gap-12 items-center">
               <div>
                 <div className="space-y-6">
                   {[
@@ -204,7 +203,7 @@ export { LLMContentStudio }(...args: []):  {
                     "Real-time collaboration and version control for team projects"
                   ].map((capability, index) => (
                     <div key={index} className="flex items-start space-x-3">
-                      <CheckCircle className="w-6 h-6 text-purple-400 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-6 h-6 text-purple-400 mt-0.5 flex-shrink-0"  />
                       <span className="text-slate-300">{capability}</span>
                     </div>
                   ))}
@@ -215,10 +214,10 @@ export { LLMContentStudio }(...args: []):  {
                 <h3 className="text-2xl font-semibold text-white mb-4">AI Models Supported</h3>
                 <div className="space-y-4">
                   {[
-                    { model: "GPT-4", icon: Sparkles, color: "from-blue-500 to-cyan-500", description: "Advanced language model" },
-                    { model: "Claude", icon: BookOpen, color: "from-purple-500 to-pink-500", description: "Anthropic's AI assistant" },
-                    { model: "LLaMA", icon: PenTool, color: "from-green-500 to-emerald-500", description: "Open-source LLM" },
-                    { model: "Custom Models", icon: Settings, color: "from-orange-500 to-red-500", description: "Fine-tuned for your brand" }
+                    { model: "GPT-4", icon: Sparkle s, color: "from-blue-500 to-cyan-500", description: "Advanced language model" },
+                    { model: "Claude", icon: BookOpe n, color: "from-purple-500 to-pink-500", description: "Anthropic's AI assistant" },
+                    { model: "LLaMA", icon: PenToo l, color: "from-green-500 to-emerald-500", description: "Open-source LLM" },
+                    { model: "Custom Models", icon: Setting s, color: "from-orange-500 to-red-500", description: "Fine-tuned for your brand" }
                   ].map((item, index)  => (
                     <div key={index} className="flex items-center space-x-3">
                       <div className={`w-8 h-8 bg-gradient-to-r ${item.color} rounded-lg flex items-center justify-center`}>
@@ -238,9 +237,9 @@ export { LLMContentStudio }(...args: []):  {
 
         {/* Workflow Section */}
         <section className="py-20 bg-slate-800/30">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
                 Content Creation Workflow
               </h2>
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
@@ -248,7 +247,7 @@ export { LLMContentStudio }(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
               {[
                 {
                   step: "01",
@@ -285,9 +284,9 @@ export { LLMContentStudio }(...args: []):  {
 
         {/* Benefits Section */}
         <section className="py-20">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
                 Transform Your Content Strategy
               </h2>
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
@@ -295,7 +294,7 @@ export { LLMContentStudio }(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-2 gap-12">
               <div>
                 <h3 className="text-2xl font-semibold text-white mb-6">Content Creation Benefits</h3>
                 <div className="space-y-4">
@@ -308,7 +307,7 @@ export { LLMContentStudio }(...args: []):  {
                     "Accelerate time-to-market for content-driven initiatives"
                   ].map((benefit, index) => (
                     <div key={index} className="flex items-start space-x-3">
-                      <CheckCircle className="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0"  />
                       <span className="text-slate-300">{benefit}</span>
                     </div>
                   ))}
@@ -327,7 +326,7 @@ export { LLMContentStudio }(...args: []):  {
                     "Drive higher conversion rates through targeted messaging"
                   ].map((impact, index) => (
                     <div key={index} className="flex items-start space-x-3">
-                      <CheckCircle className="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0"  />
                       <span className="text-slate-300">{impact}</span>
                     </div>
                   ))}
@@ -339,9 +338,9 @@ export { LLMContentStudio }(...args: []):  {
 
         {/* Analytics Section */}
         <section className="py-20 bg-slate-800/30">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
                 Content Performance Analytics
               </h2>
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
@@ -349,7 +348,7 @@ export { LLMContentStudio }(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
               {[
                 {
                   metric: "Engagement",
@@ -386,24 +385,23 @@ export { LLMContentStudio }(...args: []):  {
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-600/10">;
-          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <div className="max-w-4xl mx-auto text-center px-4 sm: p x-6 lg: p x-8">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
               Ready to Transform Your Content Creation?
             </h2>
             <p className="text-xl text-slate-300 mb-8">
               Leverage AI-powered content generation to scale your content strategy and drive business growth.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200"
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
+              <Link to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover: fro m-purple-600 hover: t o-pink-700 transition-all duration-200"
 
                 Start Creating
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5"  />
               </Link>
               <Link
                 to="/services"
-                className="inline-flex items-center px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200"
+                className="inline-flex items-center px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover: b g-purple-500/10 transition-all duration-200"
               >
                 Explore All Services;
               </Link>;

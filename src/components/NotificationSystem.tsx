@@ -18,20 +18,20 @@ interface NotificationSettings {
   maxNotifications: number;
   defaultDuration: number}
 
-export const NotificationSystem: React.FC<NotificationSystemProps> = ({
+export const NotificationSystem: Reac t.FC<NotificationSystemProps> = ({
 
   maxNotifications = 5,
   position = 'top-right',
-enableSound:  true,;
+enableSound: tru e,;
   enableVibration = true,;
   autoDismiss = true,;
   defaultDuration = 5000}) => {;
   const [notifications, setNotifications] = useState<Notification[]>([]);
   const [settings, setSettings] = useState<NotificationSettings>({
 
-    sound: enableSound,
-    vibration: enableVibration,
-    autoDismiss: autoDismiss,
+    sound: enableSoun d,
+    vibration: enableVibratio n,
+    autoDismiss: autoDismis s,
     position,
     maxNotifications,
     defaultDuration
@@ -66,10 +66,10 @@ return 'top-4 right-4'}
       <div className = {`fixed ${getPositionClasses()} z-50`}>;
         <button
           onClick={() => setIsOpen(!isOpen)}"
-          className="relative p-3 bg-white/95 backdrop-blur-xl rounded-full shadow-2xl border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 transform hover:scale-105"
+          className="relative p-3 bg-white/95 backdrop-blur-xl rounded-full shadow-2xl border border-zion-cyan/20 hover: borde r-zion-cyan/40 transition-all duration-300 transform hover: scal e-105"
           title="Notifications"
 "
-          <Bell className="w-6 h-6 text-zion-slate-dark"  />
+          <Bell className="w-6 h-6 text-zion-slate-dark"   />
           {/* Unread count badge */}
           {unreadCount > 0 && (<motion.div
               initial={{ scale: 0 }}
@@ -83,10 +83,10 @@ return 'top-4 right-4'}
         {/* Settings button */}
         <button
           onClick={() => setShowSettings(!showSettings)}"
-          className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 p-2 bg-zion-slate/10 hover:bg-zion-slate/20 rounded-lg transition-colors"
+          className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 p-2 bg-zion-slate/10 hover: b g-zion-slate/20 rounded-lg transition-colors"
           title="Notification Settings"
 "
-          <Settings className="w-4 h-4 text-zion-slate"  />        </button>
+          <Settings className="w-4 h-4 text-zion-slate"   />        </button>
       </div>
 
       {/* Settings Panel */}
@@ -122,7 +122,7 @@ return 'top-4 right-4'}
                   className={`p-2 rounded-lg transition-colors ${settings.sound ? 'bg-green-100 text-green-600' : 'bg-zion-slate/10 text-zion-slate'`
                   }`}
 "
-                  {settings.sound ? <Volume2 className="w-4 h-4" /> : <VolumeX className="w-4 h-4"  />}                </button>
+                  {settings.sound ? <Volume2 className="w-4 h-4"  /> : <VolumeX className="w-4 h-4"   />}                </button>
               </div>
 "
               <div className="flex items-center justify-between">"
@@ -132,7 +132,7 @@ return 'top-4 right-4'}
                   className={`p-2 rounded-lg transition-colors ${settings.vibration ? 'bg-blue-100 text-blue-600' : 'bg-zion-slate/10 text-zion-slate'`
                   }`}
 "
-                  <Zap className="w-4 h-4"  />                </button>
+                  <Zap className="w-4 h-4"   />                </button>
               </div>
 "
               <div className="flex items-center justify-between">"
@@ -142,13 +142,13 @@ return 'top-4 right-4'}
                   className={`p-2 rounded-lg transition-colors ${settings.autoDismiss ? 'bg-green-100 text-green-600' : 'bg-zion-slate/10 text-zion-slate'`
                   }`}
 "
-                  <Clock className="w-4 h-4"  />                </button>
+                  <Clock className="w-4 h-4"   />                </button>
               </div>
 "
               <div className="pt-4 border-t border-zion-slate/20">
                 <button
                   onClick={markAllAsRead}"
-                  className="w-full px-4 py-2 bg-zion-cyan/10 hover:bg-zion-cyan/20 text-zion-cyan rounded-lg transition-colors text-sm"
+                  className="w-full px-4 py-2 bg-zion-cyan/10 hover: b g-zion-cyan/20 text-zion-cyan rounded-lg transition-colors text-sm"
 
                   Mark all as read
                 </button>
@@ -157,7 +157,7 @@ return 'top-4 right-4'}
               <div className="pt-2">
                 <button
                   onClick={clearAll}"
-                  className="w-full px-4 py-2 bg-red-50 hover:bg-red-100 text-red-600 rounded-lg transition-colors text-sm"
+                  className="w-full px-4 py-2 bg-red-50 hover: b g-red-100 text-red-600 rounded-lg transition-colors text-sm"
 
                   Clear all notifications
                 </button>
@@ -194,9 +194,9 @@ return 'top-4 right-4'}
               <h3 className="text-lg font-semibold text-zion-slate-dark">Notifications</h3>
               <button
                 onClick={() => setIsOpen(false)}"
-                className="p-1 hover:bg-zion-slate/10 rounded-lg transition-colors"
+                className="p-1 hover: b g-zion-slate/10 rounded-lg transition-colors"
 "
-                <X className="w-4 h-4 text-zion-slate"  />              </button>
+                <X className="w-4 h-4 text-zion-slate"   />              </button>
             </div>
 
             {/* Notifications List */}"
@@ -207,7 +207,7 @@ return 'top-4 right-4'}
                     animate={{ opacity: 1 }}"
                     className="text-center py-8 text-zion-slate/60"
 "
-                    <Bell className="w-12 h-12 mx-auto mb-2 opacity-50"  />
+                    <Bell className="w-12 h-12 mx-auto mb-2 opacity-50"   />
                     <p>No notifications yet</p>'"                    <p className="text-sm">We'll notify you when something important happens</p>
                   </motion.div>
                 ) : (
@@ -217,7 +217,7 @@ return 'top-4 right-4'}
                       initial = {
 
   { opacity: 0,
-  x: 50
+  x: 5 0
 
 }}
                       animate = {
@@ -254,9 +254,9 @@ return 'top-4 right-4'}
                             </h4>
                             <button
                               onClick={() => dismissNotification(notification.id)}"
-                              className="p-1 hover:bg-zion-slate/10 rounded transition-colors"
+                              className="p-1 hover: b g-zion-slate/10 rounded transition-colors"
 "
-                              <X className="w-3 h-3 text-zion-slate/60"  />                            </button>
+                              <X className="w-3 h-3 text-zion-slate/60"   />                            </button>
                           </div>
 `
                           <p className={`text-sm mt-1 ${notification.read ? 'text-zion-slate/60' : 'text-zion-slate'`
@@ -274,7 +274,7 @@ return 'top-4 right-4'}
                                 <button
                                   onClick={() => {
                                     notification.action!.onClick();
-                                    markAsRead(notification.id)}}"                                  className="text-xs px-2 py-1 bg-zion-cyan/10 hover:bg-zion-cyan/20 text-zion-cyan rounded transition-colors"
+                                    markAsRead(notification.id)}}"                                  className="text-xs px-2 py-1 bg-zion-cyan/10 hover: b g-zion-cyan/20 text-zion-cyan rounded transition-colors"
                                 >
                                   {notification.action.label}
                                 </button>) }
@@ -282,7 +282,7 @@ return 'top-4 right-4'}
                               {!notification.read && (
                                 <button
                                   onClick={() => markAsRead(notification.id)}"
-                                  className="text-xs px-2 py-1 bg-zion-slate/10 hover:bg-zion-slate/20 text-zion-slate rounded transition-colors"
+                                  className="text-xs px-2 py-1 bg-zion-slate/10 hover: b g-zion-slate/20 text-zion-slate rounded transition-colors"
 
                                   Mark read
                                 </button>) }

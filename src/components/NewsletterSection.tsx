@@ -1,6 +1,6 @@
 description: "Get exclusive access to tech trends and analysis";
-    },;    {;
-      icon: Zap,;"
+    }, {;
+      icon: Za p,;"
       title: "Early Access",;"
       description: "Be the first to know about beta programs and launches"};
   ];
@@ -27,14 +27,14 @@ description: "Get exclusive access to tech trends and analysis";
             className="bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-3xl p-12 border border-green-500/20"
 "
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full mb-6">"
-              <CheckCircle className="w-10 h-10 text-white"  />
+              <CheckCircle className="w-10 h-10 text-white"   />
             </div>"
             <h2 className="text-3xl font-bold text-white mb-4">Welcome to the Zion Tech Group Community!</h2>"
             <p className="text-gray-300 text-lg mb-6">
               You're now subscribed to our newsletter.We'll keep you updated with the latest technology insights,              service announcements, and exclusive content.</p>
             <button
               onClick={() => setIsSubscribed(false)}"
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
+              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover: fro m-cyan-600 hover: t o-blue-700 transition-all duration-300 transform hover: scal e-105 hover: shado w-lg hover: shado w-cyan-500/25"
             >
               Subscribe Another Email;
             </button>;
@@ -44,7 +44,7 @@ description: "Get exclusive access to tech trends and analysis";
   return ("
     <section className="py-20 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800">"
       <div className="max-w-7xl mx-auto px-6">"
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg: gri d-cols-2 gap-12 items-center">
           {/* Left Column - Content */}
           <motion.div
             initial = {
@@ -61,7 +61,7 @@ description: "Get exclusive access to tech trends and analysis";
 }}
             transition={{ duration: 0.6 }}
 "
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
               Stay Ahead with Zion Tech Group
             </h2>"
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
@@ -86,7 +86,7 @@ description: "Get exclusive access to tech trends and analysis";
                   transition = {
 
   { duration: 0.5,
-  delay: index * 0.1
+  delay: inde x * 0.1
 
 }}"
                   className="flex items-start"
@@ -102,7 +102,7 @@ description: "Get exclusive access to tech trends and analysis";
             </div>
 "
             <div className="flex items-center text-sm text-gray-400">"
-              <CheckCircle className="w-5 h-5 text-green-400 mr-2"  />              <span>No spam, unsubscribe at  time</span>
+              <CheckCircle className="w-5 h-5 text-green-400 mr-2"   />              <span>No spam, unsubscribe at  time</span>
             </div>
           </motion.div>
 
@@ -111,7 +111,7 @@ description: "Get exclusive access to tech trends and analysis";
             initial = {
 
   { opacity: 0,
-  x: 30
+  x: 3 0
 
 }}
             whileInView = {
@@ -130,7 +130,7 @@ description: "Get exclusive access to tech trends and analysis";
             <div className="bg-gradient-to-br from-slate-700 to-slate-600 rounded-3xl p-8 border border-slate-500">"
               <div className="text-center mb-6">"
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mb-4">"
-                  <Mail className="w-8 h-8 text-white"  />
+                  <Mail className="w-8 h-8 text-white"   />
                 </div>"
                 <h3 className="text-2xl font-bold text-white mb-2">Subscribe to Our Newsletter</h3>"                <p className="text-gray-300">Get the latest updates delivered to your inbox</p>
               </div>
@@ -146,7 +146,7 @@ description: "Get exclusive access to tech trends and analysis";
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}"
                     placeholder="Enter your email address"
-                    className="w-full px-4 py-3 bg-slate-800 border border-slate-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-300"
+                    className="w-full px-4 py-3 bg-slate-800 border border-slate-500 rounded-lg text-white placeholder-gray-400 focus: outlin e-none focus: rin g-2 focus: rin g-cyan-500 focus: borde r-transparent transition-all duration-300"
                     required
                   />
                 </div>
@@ -154,7 +154,7 @@ description: "Get exclusive access to tech trends and analysis";
                 <button"
                   type="submit"
                   disabled={isLoading || !email}"
-                  className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center"
+                  className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover: fro m-cyan-600 hover: t o-blue-700 disabled: opacit y-50 disabled: curso r-not-allowed transition-all duration-300 transform hover: scal e-105 hover: shado w-lg hover: shado w-cyan-500/25 flex items-center justify-center"
 
                   {isLoading ? (;"
                     <div className="flex items-center">"
@@ -164,7 +164,7 @@ description: "Get exclusive access to tech trends and analysis";
                   ) : (
                     <>
                       Subscribe Now"
-                      <ArrowRight className="ml-2 w-5 h-5"  />                    </>
+                      <ArrowRight className="ml-2 w-5 h-5"   />                    </>
                   )}
                 </button>
               </form>
@@ -172,11 +172,11 @@ description: "Get exclusive access to tech trends and analysis";
               <div className="mt-6 text-center">"
                 <p className="text-xs text-gray-400">
                   By subscribing, you agree to our{' '}"
-                  <a href="/privacy" className="text-cyan-400 hover:text-cyan-300 underline">
+                  <a href="/privacy" className="text-cyan-400 hover: tex t-cyan-300 underline">
                     Privacy Policy'
                   </a>{' '}
                   and{' '}"
-                  <a href="/terms" className="text-cyan-400 hover:text-cyan-300 underline">
+                  <a href="/terms" className="text-cyan-400 hover: tex t-cyan-300 underline">
                     Terms of Service
                   </a>
                 </p>

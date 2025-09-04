@@ -1,6 +1,6 @@
 ;
 export { function };
-export default function AICustomerSupport(...args: unknown[]): unknown {
+export default function AICustomerSupport(...args: unknow n[]): unknown {
   
   
   
@@ -10,31 +10,31 @@ export default function AICustomerSupport(...args: unknown[]): unknown {
       <SEO "
         title="AI Customer Support - Intelligent Customer Service Automation | Zion Tech Group""
         description="Transform your customer support with AI-powered chatbots, 24/7 availability, and intelligent ticket routing. Start free trial today.""        keywords="AI customer support, chatbot, customer service automation, AI support, customer service software"
-       />
+        />
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"
-        <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 via-purple-600/20 to-pink-600/20" />'"
-        <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 via-purple-600/20 to-pink-600/20"  />'"
+        <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10"  />
         "
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8 relative z-10">
           <motion.div "
             className="text-center"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >"
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+            <h1 className="text-5xl md: tex t-7xl font-bold text-white mb-6">
               AI Customer Support
             </h1>"
-            <p className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto mb-8">
+            <p className="text-xl md: tex t-2xl text-zion-slate-light max-w-4xl mx-auto mb-8">
               Revolutionize your customer service with AI-powered support that's available 24/7, speaks 50+ languages, and never gets tired.
             </p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-              <button className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">"
+              <button className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover: fro m-indigo-700 hover: t o-purple-700 transition-all duration-300 transform hover: scal e-105">
                 Start Free Trial
               </button>"
-              <button className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
+              <button className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover: b g-white/10 transition-all duration-300">
                 Watch Demo
               </button>
             </div>
@@ -44,15 +44,15 @@ export default function AICustomerSupport(...args: unknown[]): unknown {
 
       {/* Features Section */}"
       <section className="py-20 relative">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
           <motion.div "
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
             transition={{ duration: 0.8 }}
           >"
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
               Powered by Advanced AI
             </h2>"
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
@@ -60,15 +60,15 @@ export default function AICustomerSupport(...args: unknown[]): unknown {
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map(feature: unknown, index: unknown (
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
+            {features.map(feature: unknow n, index: unknow n (
               <motion.div
                 key={index}"
-                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300"
-                initial={{ opacity: 0, y: 30 }}
+                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: borde r-white/20 transition-all duration-300"
+                initial={{ opacity: 0, y: 3 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: tru e }}
+                transition={{ duration: 0.6, delay: inde x * 0.1 }}
                 whileHover={{ y: -5, scale: 1.02 }}
               >
                 <div className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4`}>"
@@ -84,15 +84,15 @@ export default function AICustomerSupport(...args: unknown[]): unknown {
 
       {/* Benefits Section */}"
       <section className="py-20 bg-gradient-to-r from-white/5 to-white/10 relative">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
           <motion.div "
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
             transition={{ duration: 0.8 }}
           >"
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
               Proven Results
             </h2>"
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
@@ -100,15 +100,15 @@ export default function AICustomerSupport(...args: unknown[]): unknown {
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {benefits.map(benefit: unknown, index: unknown (
+          <div className="grid grid-cols-1 md: gri d-cols-3 gap-8">
+            {benefits.map(benefit: unknow n, index: unknow n (
               <motion.div
                 key={index}"
                 className="text-center"
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 3 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
+                viewport={{ once: tru e }}
+                transition={{ duration: 0.6, delay: inde x * 0.2 }}
               >"
                 <div className="w-20 h-20 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">"
                   <benefit.icon className="w-10 h-10 text-white" />
@@ -124,15 +124,15 @@ export default function AICustomerSupport(...args: unknown[]): unknown {
 
       {/* Integrations Section */}"
       <section className="py-20 relative">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
           <motion.div "
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
             transition={{ duration: 0.8 }}
           >"
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
               Seamless Integrations
             </h2>"
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
@@ -140,15 +140,15 @@ export default function AICustomerSupport(...args: unknown[]): unknown {
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {integrations.map(integration: unknown, index: unknown (
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
+            {integrations.map(integration: unknow n, index: unknow n (
               <motion.div
                 key={index}"
                 className="text-center"
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 3 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: tru e }}
+                transition={{ duration: 0.6, delay: inde x * 0.1 }}
               >`
                 <div className={`w-20 h-20 bg-gradient-to-r ${integration.color} rounded-full flex items-center justify-center mx-auto mb-6`}>"
                   <integration.icon className="w-10 h-10 text-white" />
@@ -163,15 +163,15 @@ export default function AICustomerSupport(...args: unknown[]): unknown {
 
       {/* Pricing Section */}"
       <section className="py-20 bg-gradient-to-r from-white/5 to-white/10 relative">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
           <motion.div "
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
             transition={{ duration: 0.8 }}
           >"
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
               Simple, Transparent Pricing
             </h2>"
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
@@ -179,18 +179,18 @@ export default function AICustomerSupport(...args: unknown[]): unknown {
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map(plan: unknown, index: unknown (
+          <div className="grid grid-cols-1 md: gri d-cols-3 gap-8">
+            {pricingPlans.map(plan: unknow n, index: unknow n (
               <motion.div
                 key={index}`
                 className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
 
                   plan.popular ? 'border-purple-500/50 bg-purple-500/10' : 'border-white/10'`
                 }`}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 3 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: tru e }}
+                transition={{ duration: 0.6, delay: inde x * 0.1 }}
                 whileHover={{ y: -5, scale: 1.02 }}
               >
                 {plan.popular && ("
@@ -213,7 +213,7 @@ export default function AICustomerSupport(...args: unknown[]): unknown {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />"                      <span className="text-white">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"   />"                      <span className="text-white">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -221,8 +221,8 @@ export default function AICustomerSupport(...args: unknown[]): unknown {
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
 
                   plan.popular'
-                    ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:from-indigo-700 hover:to-purple-700''
-                    : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'`
+                    ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover: fro m-indigo-700 hover: t o-purple-700''
+                    : 'bg-white/10 text-white border border-white/20 hover: b g-white/20'`
                 }`}>
                   {plan.cta}
                 </button>
@@ -234,24 +234,24 @@ export default function AICustomerSupport(...args: unknown[]): unknown {
 
       {/* CTA Section */}"
       <section className="py-20 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 relative">"
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-4xl mx-auto px-4 sm: p x-6 lg: p x-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
             transition={{ duration: 0.8 }}
           >"
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
               Ready to Transform Your Customer Support?
             </h2>"
             <p className="text-xl text-zion-slate-light mb-8">
               Join thousands of businesses who have already revolutionized their customer service with AI
             </p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-              <button className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">"
+              <button className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover: fro m-indigo-700 hover: t o-purple-700 transition-all duration-300 transform hover: scal e-105">
                 Start Free Trial
               </button>"
-              <button className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
+              <button className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover: b g-white/10 transition-all duration-300">
                 Schedule Demo
               </button>
             </div>

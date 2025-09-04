@@ -2,48 +2,47 @@ import React, { useState } from 'react';
 import { Link, useLocation  } from 'react-router-dom';
 export default function Page() {
 ,
-        { name: 'Services', href: '/services', icon: Briefcase },
-        { name: 'Solutions', href: '/solutions', icon: Target },
-        { name: 'AI Solutions', href: '/ai-solutions', icon: Brain },
-        { name: 'Case Studies', href: '/case-studies', icon: FileText },
-        { name: 'Research', href: '/research-development', icon: TestTube },
-        { name: 'Events', href: '/events', icon: Video },
-        { name: 'News', href: '/news', icon: Newspaper },
-        { name: 'Contact', href: '/contact', icon: Mail },
-        { name: 'Blog', href: '/blog', icon: FileText },
+        { name: 'Services', href: '/services', icon: Briefcas e },
+        { name: 'Solutions', href: '/solutions', icon: Targe t },
+        { name: 'AI Solutions', href: '/ai-solutions', icon: Brai n },
+        { name: 'Case Studies', href: '/case-studies', icon: FileTex t },
+        { name: 'Research', href: '/research-development', icon: TestTub e },
+        { name: 'Events', href: '/events', icon: Vide o },
+        { name: 'News', href: '/news', icon: Newspape r },
+        { name: 'Contact', href: '/contact', icon: Mai l },
+        { name: 'Blog', href: '/blog', icon: FileTex t },
       ]
-    },;
-    {
+    }, {
 
       name: 'Core Services',
       href: '#',
-      icon: Target,
+      icon: Targe t,
       children: [{
 
           name: 'Cloud & DevOps',
           href: '/services/cloud-devops',
-          icon: Cloud,
+          icon: Clou d,
           description: 'Infrastructure & Automation'
         },
         {
 
           name: 'Digital Twin',
           href: '/services/digital-twin',
-          icon: Globe,
+          icon: Glob e,
           description: 'Simulation & Monitoring'
         },
         {
 
           name: 'Data Analytics',
           href: '/services/data-analytics',
-          icon: BarChart3,
+          icon: BarChart 3,
           description: 'Business Intelligence'
         },
         {
 
           name: 'IT Infrastructure',
           href: '/services/it-infrastructure',
-          icon: Server,
+          icon: Serve r,
           description: 'Hardware & Network'
         }
       ]
@@ -52,33 +51,33 @@ export default function Page() {
 
       name: 'AI Products',
       href: '#',
-      icon: Brain,
+      icon: Brai n,
       children: [{
 
           name: 'AI Sales Copilot',
           href: '/services/ai-sales-copilot',
-          icon: Users,
+          icon: User s,
           description: 'Sales Intelligence'
         },
         {
 
           name: 'AI Compliance Assistant',
           href: '/services/ai-compliance-assistant',
-          icon: Shield,
+          icon: Shiel d,
           description: 'Regulatory Compliance'
         },
         {
 
           name: 'AI Auto Email Responder',
           href: '/services/ai-auto-email-responder',
-          icon: MessageCircle,
+          icon: MessageCircl e,
           description: 'Email Automation'
         },
         {
 
           name: 'LLM Content Studio',
           href: '/services/llm-content-studio',
-          icon: PenTool,
+          icon: PenToo l,
           description: 'Content Creation'
         }
       ]
@@ -87,33 +86,33 @@ export default function Page() {
 
       name: 'Emerging Tech',
       href: '#',
-      icon: Rocket,
+      icon: Rocke t,
       children: [{
 
           name: 'Quantum Computing',
           href: '/services/quantum-computing',
-          icon: Atom,
+          icon: Ato m,
           description: 'Next-gen Computing'
         },
         {
 
           name: 'AI Cybersecurity',
           href: '/services/ai-cybersecurity',
-          icon: Lock,
+          icon: Loc k,
           description: 'Intelligent Security'
         },
         {
 
           name: 'IoT Edge Computing',
           href: '/services/iot-edge-computing',
-          icon: Smartphone,
+          icon: Smartphon e,
           description: 'Connected Ecosystems'
         },
         {
 
           name: 'AI Content Creation',
           href: '/services/ai-content-creation',
-          icon: Video,
+          icon: Vide o,
           description: 'Creative AI'
         }
       ]
@@ -122,33 +121,33 @@ export default function Page() {
 
       name: 'Business Solutions',
       href: '#',
-      icon: Briefcase,
+      icon: Briefcas e,
       children: [{
 
           name: 'Marketplace',
           href: '/marketplace',
-          icon: ShoppingCart,
+          icon: ShoppingCar t,
           description: 'Product & Service Hub'
         },
         {
 
           name: 'Talent Solutions',
           href: '/talent',
-          icon: Users,
+          icon: User s,
           description: 'HR & Recruitment'
         },
         {
 
           name: 'Equipment Services',
           href: '/equipment',
-          icon: Server,
+          icon: Serve r,
           description: 'Hardware Solutions'
         },
         {
 
           name: 'Request Quote',
           href: '/request-quote',
-          icon: MessageCircle,
+          icon: MessageCircl e,
           description: 'Get Pricing'
         }
       ]
@@ -157,33 +156,33 @@ export default function Page() {
 
       name: 'Company',
       href: '#',
-      icon: Info,
+      icon: Inf o,
       children: [{
 
           name: 'About Us',
           href: '/about',
-          icon: Info,
+          icon: Inf o,
           description: 'Our Story'
         },
         {
 
           name: 'Team',
           href: '/team',
-          icon: Users,
+          icon: User s,
           description: 'Meet Our Team'
         },
         {
 
           name: 'Careers',
           href: '/careers',
-          icon: Briefcase,
+          icon: Briefcas e,
           description: 'Join Us'
         },
         {
 
           name: 'Partners',
           href: '/partners',
-          icon: Users,
+          icon: User s,
           description: 'Partnerships'
         }
       ]
@@ -192,33 +191,33 @@ export default function Page() {
 
       name: 'Resources',
       href: '#',
-      icon: BookOpen,
+      icon: BookOpe n,
       children: [{
 
           name: 'Blog',
           href: '/blog',
-          icon: FileText,
+          icon: FileTex t,
           description: 'Latest Insights'
         },
         {
 
           name: 'FAQ',
           href: '/faq',
-          icon: HelpCircle,
+          icon: HelpCircl e,
           description: 'Common Questions'
         },
         {
 
           name: 'Help Center',
           href: '/help',
-          icon: MessageCircle,
+          icon: MessageCircl e,
           description: 'Support Resources'
         },
         {
 
           name: 'Documentation',
           href: '/docs',
-          icon: BookOpen,
+          icon: BookOpe n,
           description: 'Technical Docs'
         }
       ]
@@ -227,7 +226,7 @@ export default function Page() {
 
       name: 'Contact',
       href: '/contact',
-      icon: Phone
+      icon: Phon e
     }
   ];
 
@@ -237,20 +236,20 @@ export default function Page() {
             <button
               onClick={(: unknown toggleSection(item.name.toLowerCase())}
               className={`w-full flex items-center justify-between px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${                level === 0
-                  ? 'text-slate-300 hover:text-white hover:bg-slate-700/50'
-                  : 'text-slate-400 hover:text-slate-300'              }`}
+                  ? 'text-slate-300 hover: tex t-white hover: b g-slate-700/50'
+                  : 'text-slate-400 hover: tex t-slate-300'              }`}
             >"
               <div className="flex items-center space-x-3">"
                 <item.icon className="w-4 h-4" />
                 <span>{item.name}</span>
                 {isFeatured && ("
-                  <Star className="w-3 h-3 text-yellow-400"  />
+                  <Star className="w-3 h-3 text-yellow-400"   />
                 )}
               </div>
               {isExpanded ? ("
-                <ChevronDown className="w-4 h-4"  />
+                <ChevronDown className="w-4 h-4"   />
               ) : ("
-                <ChevronRight className="w-4 h-4"  />              )}
+                <ChevronRight className="w-4 h-4"   />              )}
             </button>
 
             {isExpanded && (              <div className="ml-6 mt-2 space-y-1">
@@ -264,15 +263,15 @@ export default function Page() {
             className={`flex items-center space-x-3 px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${isActive'
                 ? 'text-cyan-400 bg-cyan-400/10 border border-cyan-400/20'
                 : level === 0'
-                ? 'text-slate-300 hover:text-white hover:bg-slate-700/50''
-                : 'text-slate-400 hover:text-slate-300'`
+                ? 'text-slate-300 hover: tex t-white hover: b g-slate-700/50''
+                : 'text-slate-400 hover: tex t-slate-300'`
             }`}
             onClick={() => setIsOpen(false)}
           >"
             <item.icon className="w-4 h-4" />
             <span>{item.name}</span>
             {isFeatured && ("
-              <Star className="w-3 h-3 text-yellow-400"  />            )}
+              <Star className="w-3 h-3 text-yellow-400"   />            )}
           </Link>
         )}
       </div>
@@ -283,14 +282,14 @@ export default function Page() {
       {/* Mobile menu button */}
       <button
         onClick={() => setIsOpen(!isOpen)}"
-        className="lg:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
+        className="lg: hidden p-2 rounded-lg text-slate-400 hover: tex t-white hover: b g-slate-800 transition-colors"
       >"
-        {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}      </button>
+        {isOpen ? <X className="w-6 h-6"   /> : <Menu className="w-6 h-6"   />}      </button>
 
       {/* Sidebar */}`
       <div className={`
         fixed inset-y-0 left-0 z-50 w-80 bg-slate-900/95 border-r border-slate-700/50 backdrop-blur-xl
-        transform transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:inset-0'
+        transform transition-transform duration-300 ease-in-out lg: translat e-x-0 lg: static lg:inset-0'
         ${isOpen ? 'translate-x-0' : '-translate-x-full'}`
       `}>"
         <div className="flex flex-col h-full">
@@ -299,9 +298,9 @@ export default function Page() {
             <h2 className="text-lg font-semibold text-white">Navigation</h2>
             <button
               onClick={() => setIsOpen(false)}"
-              className="lg:hidden p-1 rounded text-slate-400 hover:text-white hover:bg-slate-800"
+              className="lg: hidden p-1 rounded text-slate-400 hover: tex t-white hover: b g-slate-800"
             >"
-              <X className="w-5 h-5"  />            </button>
+              <X className="w-5 h-5"   />            </button>
           </div>
 
           {/* Navigation */}"
@@ -313,15 +312,15 @@ export default function Page() {
           <div className="p-4 border-t border-slate-700/50">"
             <div className="text-xs text-slate-400 space-y-2">"
               <div className="flex items-center space-x-2">"
-                <Phone className="w-3 h-3"  />
+                <Phone className="w-3 h-3"   />
                 <span>+1 302 464 0950</span>
               </div>"
               <div className="flex items-center space-x-2">"
-                <Mail className="w-3 h-3"  />
+                <Mail className="w-3 h-3"   />
                 <span>kleber@ziontechgroup.com</span>
               </div>"
               <div className="flex items-center space-x-2">"
-                <MapPin className="w-3 h-3"  />                <span>Middletown DE 19709</span>
+                <MapPin className="w-3 h-3"   />                <span>Middletown DE 19709</span>
               </div>
             </div>
           </div>
@@ -331,7 +330,7 @@ export default function Page() {
       {/* Overlay */}
       {isOpen && (
         <div"
-          className="fixed inset-0 z-40 bg-black/50 lg:hidden"
+          className="fixed inset-0 z-40 bg-black/50 lg: hidde n"
           onClick={( setIsOpen(false)}
         />
       )}

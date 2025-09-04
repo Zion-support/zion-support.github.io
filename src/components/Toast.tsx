@@ -8,16 +8,16 @@ interface Toast {
   duration?: number}
 
 interface ToastContextType {
-  toasts: Toast[];
-  addToast: (toast: Omit<Toast, 'id'>) => void;
+  toasts: Toas t[];
+  addToast: (toast: Omi t<Toast, 'id'>) => void;
   removeToast: (id: string) => void}
 
 const ToastContext = createContext<ToastContextType | undefined>(undefined);
 
-export function ToastProvider({ children }: { children: React.ReactNode }) {
+export function ToastProvider({ children }: { children: Reac t.ReactNode }) {
   const [toasts, setToasts] = useState<Toast[]>([]);
 
-  const addToast = useCallback((toast: Omit<Toast, 'id'>) => {
+  const addToast = useCallback((toast: Omi t<Toast, 'id'>) => {
     const id = Math.random().toString(36).substr(2, 9);
     const newToast = { ...toast, id }
     setToasts(prev => [...prev, newToast]);
@@ -33,7 +33,7 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
   return (
     <ToastContext.Provider value={{ toasts, addToast, removeToast }}>
       {children}
-      <ToastContainer toasts={toasts} removeToast={removeToast} />
+      <ToastContainer toasts={toasts} removeToast={removeToast}  />
     </ToastContext.Provider>
   )}
 
@@ -43,17 +43,17 @@ export function useToast() {
     throw new Error('useToast must be used within a ToastProvider')}
   return context}
 
-function ToastContainer({ toasts, removeToast }: { toasts: Toast[]; removeToast: (id: string) => void }) {
+function ToastContainer({ toasts, removeToast }: { toasts: Toas t[]; removeToast: (id: string) => void }) {
   return (
     <div className="fixed top-4 right-4 z-50 space-y-2">
       {toasts.map(toast => (
-        <Toast key={toast.id} toast={toast} onRemove={removeToast} />
+        <Toast key={toast.id} toast={toast} onRemove={removeToast}  />
       ))
       )}
     </div>
   )}
 
-function Toast({ toast, onRemove }: { toast: Toast; onRemove: (id: string) => void }) {
+function Toast({ toast, onRemove }: { toast: Toas t; onRemove: (id: string) => void }) {
   const bgColor = {
     success: 'bg-green-500',
     error: 'bg-red-500',
@@ -72,7 +72,7 @@ function Toast({ toast, onRemove }: { toast: Toast; onRemove: (id: string) => vo
         </div>
         <button
           onClick={() => onRemove(toast.id)}
-          className="ml-2 text-white hover:text-gray-200"
+          className="ml-2 text-white hover: tex t-gray-200"
         >
           ×
         </button>

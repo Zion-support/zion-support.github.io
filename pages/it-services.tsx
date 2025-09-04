@@ -41,7 +41,7 @@ export default function ITServices() {
     {
       title: 'Cloud Infrastructure & Migration',
       description: 'Complete cloud transformation with AWS, Azure, and Google Cloud Platform',
-      icon: Cloud,
+      icon: Clou d,
       features: [
         'Multi-cloud architecture design and implementation',
         'Legacy system migration and modernization',
@@ -57,7 +57,7 @@ export default function ITServices() {
     {
       title: 'Cybersecurity & Compliance',
       description: 'Enterprise-grade security solutions and compliance management',
-      icon: Shield,
+      icon: Shiel d,
       features: [
         'Zero-trust security architecture',
         'SOC 2, GDPR, HIPAA compliance automation',
@@ -73,7 +73,7 @@ export default function ITServices() {
     {
       title: 'Network Infrastructure',
       description: 'Design, implementation, and management of enterprise networks',
-      icon: Network,
+      icon: Networ k,
       features: [
         'SD-WAN and hybrid network solutions',
         'Network security and firewall management',
@@ -89,7 +89,7 @@ export default function ITServices() {
     {
       title: 'IT Support & Helpdesk',
       description: '24/7 technical support and helpdesk services',
-      icon: Users,
+      icon: User s,
       features: [
         '24/7/365 technical support coverage',
         'Remote desktop and troubleshooting',
@@ -105,7 +105,7 @@ export default function ITServices() {
     {
       title: 'Data Management & Analytics',
       description: 'Data warehousing, analytics, and business intelligence solutions',
-      icon: Database,
+      icon: Databas e,
       features: [
         'Data warehouse design and implementation',
         'ETL/ELT pipeline development',
@@ -121,7 +121,7 @@ export default function ITServices() {
     {
       title: 'DevOps & CI/CD',
       description: 'Automated deployment pipelines and infrastructure as code',
-      icon: Settings,
+      icon: Setting s,
       features: [
         'CI/CD pipeline setup and optimization',
         'Infrastructure as Code (IaC) implementation',
@@ -137,7 +137,7 @@ export default function ITServices() {
     {
       title: 'Digital Transformation',
       description: 'End-to-end digital transformation consulting and implementation',
-      icon: Zap,
+      icon: Za p,
       features: [
         'Digital strategy and roadmap development',
         'Process automation and optimization',
@@ -153,7 +153,7 @@ export default function ITServices() {
     {
       title: 'Managed IT Services',
       description: 'Comprehensive IT management and monitoring services',
-      icon: Monitor,
+      icon: Monito r,
       features: [
         'Proactive monitoring and maintenance',
         'Patch management and updates',
@@ -169,7 +169,7 @@ export default function ITServices() {
     {
       title: 'Blockchain & Web3 Solutions',
       description: 'Blockchain development, smart contracts, and decentralized applications',
-      icon: Network,
+      icon: Networ k,
       features: [
         'Smart contract development and auditing',
         'DeFi and NFT platform development',
@@ -185,7 +185,7 @@ export default function ITServices() {
     {
       title: 'IoT & Edge Computing',
       description: 'Internet of Things solutions and edge computing infrastructure',
-      icon: Cpu,
+      icon: Cp u,
       features: [
         'IoT device development and integration',
         'Edge computing platform setup',
@@ -201,7 +201,7 @@ export default function ITServices() {
     {
       title: 'Quantum Computing Consulting',
       description: 'Quantum computing strategy, algorithm development, and implementation',
-      icon: Cpu,
+      icon: Cp u,
       features: [
         'Quantum algorithm development',
         'Quantum computing strategy consulting',
@@ -217,7 +217,7 @@ export default function ITServices() {
     {
       title: '5G & Network Modernization',
       description: '5G network implementation and legacy network modernization',
-      icon: Wifi,
+      icon: Wif i,
       features: [
         '5G network planning and deployment',
         'Network slicing and optimization',
@@ -233,7 +233,7 @@ export default function ITServices() {
     {
       title: 'AR/VR Development & Implementation',
       description: 'Augmented and virtual reality solutions for business applications',
-      icon: Monitor,
+      icon: Monito r,
       features: [
         'AR/VR application development',
         '3D modeling and animation',
@@ -249,7 +249,7 @@ export default function ITServices() {
     {
       title: 'API Management & Integration',
       description: 'Comprehensive API strategy, development, and management platform',
-      icon: Code,
+      icon: Cod e,
       features: [
         'API design and development',
         'API gateway setup and management',
@@ -265,7 +265,7 @@ export default function ITServices() {
     {
       title: 'Disaster Recovery & Business Continuity',
       description: 'Comprehensive disaster recovery planning and implementation',
-      icon: Shield,
+      icon: Shiel d,
       features: [
         'Disaster recovery strategy development',
         'Backup and replication solutions',
@@ -281,7 +281,7 @@ export default function ITServices() {
     {
       title: 'Green IT & Sustainability Solutions',
       description: 'Sustainable IT practices and carbon footprint reduction',
-      icon: Globe,
+      icon: Glob e,
       features: [
         'Energy-efficient infrastructure design',
         'Carbon footprint assessment and reduction',
@@ -297,7 +297,7 @@ export default function ITServices() {
     {
       title: 'FinTech & Payment Solutions',
       description: 'Financial technology solutions and payment system integration',
-      icon: Database,
+      icon: Databas e,
       features: [
         'Payment gateway integration',
         'Financial API development',
@@ -313,37 +313,37 @@ export default function ITServices() {
   ];
 
   const technologies = [
-    { name: 'Cloud Platforms', icon: Cloud, description: 'AWS, Azure, GCP, DigitalOcean' },
-    { name: 'Containerization', icon: Server, description: 'Docker, Kubernetes, OpenShift' },
-    { name: 'Security Tools', icon: Shield, description: 'SIEM, WAF, IAM, Encryption' },
-    { name: 'Monitoring', icon: BarChart3, description: 'Prometheus, Grafana, ELK Stack' },
-    { name: 'Databases', icon: Database, description: 'PostgreSQL, MongoDB, Redis' },
-    { name: 'Networking', icon: Network, description: 'Cisco, Fortinet, SD-WAN' }
+    { name: 'Cloud Platforms', icon: Clou d, description: 'AWS, Azure, GCP, DigitalOcean' },
+    { name: 'Containerization', icon: Serve r, description: 'Docker, Kubernetes, OpenShift' },
+    { name: 'Security Tools', icon: Shiel d, description: 'SIEM, WAF, IAM, Encryption' },
+    { name: 'Monitoring', icon: BarChart 3, description: 'Prometheus, Grafana, ELK Stack' },
+    { name: 'Databases', icon: Databas e, description: 'PostgreSQL, MongoDB, Redis' },
+    { name: 'Networking', icon: Networ k, description: 'Cisco, Fortinet, SD-WAN' }
   ];
 
   const benefits = [
     {
       title: 'Reduced Downtime',
       description: 'Proactive monitoring and maintenance',
-      icon: Clock,
+      icon: Cloc k,
       stat: '99.9%'
     },
     {
       title: 'Cost Savings',
       description: 'Optimized infrastructure and processes',
-      icon: Zap,
+      icon: Za p,
       stat: '40%'
     },
     {
       title: 'Enhanced Security',
       description: 'Enterprise-grade protection',
-      icon: Shield,
+      icon: Shiel d,
       stat: '100%'
     },
     {
       title: 'Scalability',
       description: 'Flexible and scalable solutions',
-      icon: TrendingUp,
+      icon: TrendingU p,
       stat: 'Unlimited'
     }
   ];
@@ -352,21 +352,21 @@ export default function ITServices() {
     <PageTransition>
       <Head>
         <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://ziontechgroup.com/it-services" />
+        <meta name="description" content={description}  />
+        <meta name="viewport" content="width=device-width, initial-scale=1"  />
+        <link rel="canonical" href="https://ziontechgroup.com/it-services"  />
       </Head>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 py-20 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 py-20 sm: p y-32">
+        <div className="mx-auto max-w-7xl px-6 lg: p x-8">
           <div className="mx-auto max-w-3xl text-center">
             <div className="flex items-center justify-center mb-6">
-              <Server className="h-12 w-12 text-green-600 mr-4" />
-              <Award className="h-6 w-6 text-green-600 mr-2" />
+              <Server className="h-12 w-12 text-green-600 mr-4"  />
+              <Award className="h-6 w-6 text-green-600 mr-2"  />
               <span className="text-base font-semibold leading-7 text-green-600">IT Services</span>
             </div>
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm: tex t-6xl">
               Information Technology Solutions
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -376,14 +376,14 @@ export default function ITServices() {
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link
                 href="/contact"
-                className="rounded-md bg-green-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
+                className="rounded-md bg-green-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover: b g-green-500 focus-visible: outline focus-visible: outlin e-2 focus-visible: outlin e-offset-2 focus-visible: outlin e-green-600"
               >
                 Get Started
-                <ArrowRight className="ml-2 h-4 w-4 inline" />
+                <ArrowRight className="ml-2 h-4 w-4 inline"  />
               </Link>
               <Link
                 href="/pricing-guide"
-                className="text-sm font-semibold leading-6 text-gray-900 hover:text-green-600"
+                className="text-sm font-semibold leading-6 text-gray-900 hover: tex t-green-600"
               >
                 View Pricing <span aria-hidden="true">→</span>
               </Link>
@@ -393,17 +393,17 @@ export default function ITServices() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-24 sm:py-32 bg-white">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="py-24 sm: p y-32 bg-white">
+        <div className="mx-auto max-w-7xl px-6 lg: p x-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm: tex t-4xl">
               Why Choose Our IT Services?
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
               Proven expertise and measurable results for your technology infrastructure
             </p>
           </div>
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-8 sm: gri d-cols-2 lg: gri d-cols-4">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
                 <div className="flex items-center justify-center h-16 w-16 rounded-full bg-green-100 mx-auto mb-4">
@@ -419,19 +419,19 @@ export default function ITServices() {
       </section>
 
       {/* Technologies Section */}
-      <section className="py-24 sm:py-32 bg-gray-50">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="py-24 sm: p y-32 bg-gray-50">
+        <div className="mx-auto max-w-7xl px-6 lg: p x-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm: tex t-4xl">
               Technologies We Master
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
               Cutting-edge technologies powering modern IT infrastructure
             </p>
           </div>
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-8 sm: gri d-cols-2 lg: gri d-cols-3">
             {technologies.map((tech, index) => (
-              <div key={index} className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
+              <div key={index} className="bg-white rounded-2xl p-6 shadow-sm hover: shado w-md transition-shadow">
                 <div className="flex items-center mb-4">
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-green-100">
                     <tech.icon className="h-6 w-6 text-green-600" />
@@ -446,30 +446,30 @@ export default function ITServices() {
       </section>
 
       {/* IT Services Grid */}
-      <section className="py-24 sm:py-32 bg-white">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="py-24 sm: p y-32 bg-white">
+        <div className="mx-auto max-w-7xl px-6 lg: p x-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm: tex t-4xl">
               Our IT Service Portfolio
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
               Comprehensive IT solutions tailored to your business needs. All services include implementation, 
               training, and ongoing support. Contact us at{' '}
-              <a href="mailto:kleber@ziontechgroup.com" className="text-green-600 hover:text-green-500">
+              <a href="mailto: klebe r@ziontechgroup.com" className="text-green-600 hover: tex t-green-500">
                 kleber@ziontechgroup.com
               </a>{' '}
               or call{' '}
-              <a href="tel:+13024640950" className="text-green-600 hover:text-green-500">
+              <a href="tel:+13024640950" className="text-green-600 hover: tex t-green-500">
                 +1 302 464 0950
               </a>{' '}
               for custom pricing.
             </p>
           </div>
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+          <div className="grid grid-cols-1 gap-8 lg: gri d-cols-2">
             {itServices.map((service, index) => (
-              <div key={index} className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300">
+              <div key={index} className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shado w-lg transition-all duration-300">
                 <div className="flex items-center gap-x-3 mb-6">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-green-600 group-hover:bg-green-700 transition-colors">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-green-600 group-hover: b g-green-700 transition-colors">
                     <service.icon className="h-7 w-7 text-white" />
                   </div>
                   <div>
@@ -481,7 +481,7 @@ export default function ITServices() {
                 <ul className="space-y-3 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center gap-x-3">
-                      <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
+                      <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0"  />
                       <span className="text-sm text-gray-700">{feature}</span>
                     </li>
                   ))}
@@ -489,17 +489,17 @@ export default function ITServices() {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-4 text-sm text-gray-500">
                     <div className="flex items-center space-x-1">
-                      <Clock className="h-4 w-4" />
+                      <Clock className="h-4 w-4"  />
                       <span>{service.delivery}</span>
                     </div>
                     <div className="font-semibold text-green-600">{service.pricing}</div>
                   </div>
                   <Link
                     href="/contact"
-                    className="inline-flex items-center text-sm font-semibold text-green-600 hover:text-green-500 transition-colors group"
+                    className="inline-flex items-center text-sm font-semibold text-green-600 hover: tex t-green-500 transition-colors group"
                   >
                     Get Started
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="ml-2 h-4 w-4 group-hover: translat e-x-1 transition-transform"  />
                   </Link>
                 </div>
               </div>
@@ -509,53 +509,53 @@ export default function ITServices() {
       </section>
 
       {/* Contact Information Section */}
-      <section className="bg-gray-50 py-16 sm:py-24">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="bg-gray-50 py-16 sm: p y-24">
+        <div className="mx-auto max-w-7xl px-6 lg: p x-8">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm: tex t-4xl">
               Ready to Transform Your IT Infrastructure?
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
               Let's discuss how our IT services can optimize your technology infrastructure. 
               Get a free consultation and custom proposal.
             </p>
-            <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-3">
+            <div className="mt-10 grid grid-cols-1 gap-8 sm: gri d-cols-3">
               <div className="text-center">
                 <div className="flex items-center justify-center h-12 w-12 rounded-full bg-green-100 mx-auto mb-4">
-                  <Phone className="h-6 w-6 text-green-600" />
+                  <Phone className="h-6 w-6 text-green-600"  />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Call Us</h3>
-                <a href="tel:+13024640950" className="text-green-600 hover:text-green-500">
+                <a href="tel:+13024640950" className="text-green-600 hover: tex t-green-500">
                   +1 302 464 0950
                 </a>
               </div>
               <div className="text-center">
                 <div className="flex items-center justify-center h-12 w-12 rounded-full bg-green-100 mx-auto mb-4">
-                  <Mail className="h-6 w-6 text-green-600" />
+                  <Mail className="h-6 w-6 text-green-600"  />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Email Us</h3>
-                <a href="mailto:kleber@ziontechgroup.com" className="text-green-600 hover:text-green-500">
+                <a href="mailto: klebe r@ziontechgroup.com" className="text-green-600 hover: tex t-green-500">
                   kleber@ziontechgroup.com
                 </a>
               </div>
               <div className="text-center">
                 <div className="flex items-center justify-center h-12 w-12 rounded-full bg-green-100 mx-auto mb-4">
-                  <MapPin className="h-6 w-6 text-green-600" />
+                  <MapPin className="h-6 w-6 text-green-600"  />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Visit Us</h3>
-                <p className="text-gray-600">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                <p className="text-gray-600">364 E Main St STE 1008<br  />Middletown DE 19709</p>
               </div>
             </div>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link
                 href="/contact"
-                className="rounded-md bg-green-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
+                className="rounded-md bg-green-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover: b g-green-500 focus-visible: outline focus-visible: outlin e-2 focus-visible: outlin e-offset-2 focus-visible: outlin e-green-600"
               >
                 Schedule Consultation
               </Link>
               <a
                 href="tel:+13024640950"
-                className="text-sm font-semibold leading-6 text-gray-900 hover:text-green-600"
+                className="text-sm font-semibold leading-6 text-gray-900 hover: tex t-green-600"
               >
                 Call Now <span aria-hidden="true">→</span>
               </a>

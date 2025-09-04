@@ -27,13 +27,13 @@ import {
   Pause,
   RefreshCw} from 'lucide-react.ts';
 
-export default function AIDevOpsAutomationPlatform(...args: any[]): any {
+export default function AIDevOpsAutomationPlatform(...args: an y[]): any {
 
   
   
   
   
-  return()
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <SEO"
         title="AI DevOps Automation Platform | Zion Tech Group""
@@ -41,44 +41,44 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {
        />
 
       {/* Hero Section */}"
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"
+      <section className="relative overflow-hidden py-20 px-4 sm: p x-6 lg: p x-8">"
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20"></div>"
         <div className="relative max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}"
             className="text-center"
           >"
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-2xl mb-8 border border-blue-400/30">"
-              <Cpu className="w-10 h-10 text-blue-400"  />
+              <Cpu className="w-10 h-10 text-blue-400"   />
             </div>"
-            <h1 className="text-5xl md:text-7xl font-bold mb-8">"              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+            <h1 className="text-5xl md: tex t-7xl font-bold mb-8">"              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 AI DevOps
               </span>
-              <br />"
+              <br  />"
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
                 Automation Platform
               </span>
             </h1>"
-            <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
+            <p className="text-xl md: tex t-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
               The future of DevOps is here. Our AI-powered automation platform
               revolutionizes software development, deployment, and operations
               with intelligent automation that learns, adapts, and optimizes
               continuously.
             </p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
               <a"
                 href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover: fro m-blue-700 hover: t o-cyan-700 transition-all duration-300 transform hover: scal e-105"
               >"
-                <Phone className="w-5 h-5 mr-2"  />                Get Started Today
+                <Phone className="w-5 h-5 mr-2"   />                Get Started Today
               </a>
               <a"
-                href="mailto:kleber@ziontechgroup.com"
-                className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
+                href="mailto: klebe r@ziontechgroup.com"
+                className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover: b g-blue-400 hover: tex t-white transition-all duration-300"
               >"
-                <Mail className="w-5 h-5 mr-2"  />                Contact Us
+                <Mail className="w-5 h-5 mr-2"   />                Contact Us
               </a>
             </div>
           </motion.div>
@@ -86,16 +86,16 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {
       </section>
 
       {/* Features Section */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8">"
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8">"
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}"
+            viewport={{ once: tru e }}"
             className="text-center mb-16"
           >"
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
               Revolutionary Features
             </h2>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -103,18 +103,18 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: anygri d-cols-2 lg: gri d-cols-4 gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={feature}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}"
-                className="bg-white/5 backdrop-blur-sm border border-blue-400/20 rounded-2xl p-6 hover:bg-white/10 hover:border-blue-400/40 transition-all duration-300"
+                transition={{ duration: 0.5, delay: inde x * 0.1 }}
+                viewport={{ once: tru e }}"
+                className="bg-white/5 backdrop-blur-sm border border-blue-400/20 rounded-2xl p-6 hover: b g-white/10 hover: borde r-blue-400/40 transition-all duration-300"
               >"
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-xl flex items-center justify-center mb-6 border border-blue-400/30">"
-                  <Zap className="w-8 h-8 text-blue-400"  />
+                  <Zap className="w-8 h-8 text-blue-400"   />
                 </div>"
                 <h3 className="text-lg font-semibold text-white mb-4">
                   {feature}
@@ -125,16 +125,16 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {
       </section>
 
       {/* Benefits Section */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">"
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-white/5">"
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}"
+            viewport={{ once: tru e }}"
             className="text-center mb-16"
           >"
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
               Transformative Benefits
             </h2>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -143,18 +143,18 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md: anygri d-cols-2 gap-8">
             {benefits.map((benefit, index) => (
               <motion.div
                 key={benefit}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                initial={{ opacity: 0, x: inde x % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}"
+                transition={{ duration: 0.5, delay: inde x * 0.1 }}
+                viewport={{ once: tru e }}"
                 className="flex items-start space-x-4"
               >"
                 <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">"
-                  <CheckCircle className="w-5 h-5 text-white"  />
+                  <CheckCircle className="w-5 h-5 text-white"   />
                 </div>"                <p className="text-gray-300 text-lg">{benefit}</p>
               </motion.div>
             ))}
@@ -163,16 +163,16 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {
       </section>
 
       {/* Capabilities Section */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8">"
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8">"
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}"
+            viewport={{ once: tru e }}"
             className="text-center mb-16"
           >"
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
               Comprehensive Capabilities
             </h2>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -181,27 +181,27 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md: anygri d-cols-2 gap-8">
             {capabilities.map((category, index) => (
               <motion.div
                 key={category.category}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}"
-                className="bg-white/5 backdrop-blur-sm border border-blue-400/20 rounded-2xl p-8 hover:bg-white/10 hover:border-blue-400/40 transition-all duration-300"
+                transition={{ duration: 0.5, delay: inde x * 0.1 }}
+                viewport={{ once: tru e }}"
+                className="bg-white/5 backdrop-blur-sm border border-blue-400/20 rounded-2xl p-8 hover: b g-white/10 hover: borde r-blue-400/40 transition-all duration-300"
               >"
                 <div className="flex items-center mb-6">"
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-xl flex items-center justify-center mr-4 border border-blue-400/30">"
-                    {index === 0 && <Code className="w-6 h-6 text-blue-400"  />}
+                    {index === 0 && <Code className="w-6 h-6 text-blue-400"   />}
                     {index === 1 && ("
-                      <GitBranch className="w-6 h-6 text-blue-400"  />
+                      <GitBranch className="w-6 h-6 text-blue-400"   />
                     )}
                     {index === 2 && ("
-                      <Server className="w-6 h-6 text-blue-400"  />
+                      <Server className="w-6 h-6 text-blue-400"   />
                     )}
                     {index === 3 && ("
-                      <Monitor className="w-6 h-6 text-blue-400"  />
+                      <Monitor className="w-6 h-6 text-blue-400"   />
                     )}
                   </div>"
                   <h3 className="text-2xl font-bold text-white">
@@ -214,7 +214,7 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {
                       key={itemIndex}"
                       className="flex items-start text-gray-300"
                     >"
-                      <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0 mt-0.5"  />                      {item}
+                      <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0 mt-0.5"   />                      {item}
                     </li>
                   ))}
                 </ul>
@@ -225,16 +225,16 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {
       </section>
 
       {/* Pricing Section */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">"
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-white/5">"
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}"
+            viewport={{ once: tru e }}"
             className="text-center mb-16"
           >"
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
               Investment Plans
             </h2>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -242,20 +242,20 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: anygri d-cols-3 gap-8">
             {pricing.map((plan, index) => (
               <motion.div
                 key={plan.name}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: inde x * 0.1 }}
+                viewport={{ once: tru e }}
                 className={`bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${
 
                   plan.name === 'Professional''
                     ? 'border-blue-400/50 bg-gradient-to-b from-blue-500/10 to-transparent''
                     : 'border-blue-400/20'`
-                } hover:border-blue-400/40 transition-all duration-300`}
+                } hover: borde r-blue-400/40 transition-all duration-300`}
               >
                 {plan.name === 'Professional' && ("
                   <div className="text-center mb-4">"
@@ -279,16 +279,16 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {
                       key={featureIndex}"
                       className="flex items-center text-gray-300"
                     >"
-                      <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0"  />                      {feature}
+                      <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0"   />                      {feature}
                     </li>
                   ))}
                 </ul>
                 <a"
                   href="tel:+13024640950"
-                  className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
+                  className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover: fro m-blue-600 hover: t o-cyan-600 transition-all duration-300 transform hover: scal e-105"
                 >
                   Get Started"
-                  <ArrowRight className="w-5 h-5 ml-2"  />                </a>
+                  <ArrowRight className="w-5 h-5 ml-2"   />                </a>
               </motion.div>
             ))}
           </div>
@@ -296,16 +296,16 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {
       </section>
 
       {/* Contact Section */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8">"
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8">"
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}"
+            viewport={{ once: tru e }}"
             className="text-center mb-16"
           >"
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
               Ready to Automate Your DevOps?
             </h2>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -314,54 +314,54 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-3 gap-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 2 0 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}"
+              viewport={{ once: tru e }}"
               className="text-center"
             >"
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-blue-400/30">"
-                <Phone className="w-8 h-8 text-blue-400"  />
+                <Phone className="w-8 h-8 text-blue-400"   />
               </div>"
               <h3 className="text-xl font-bold text-white mb-2">Phone</h3>"              <p className="text-gray-300 mb-4">+1 302 464 0950</p>
               <a"
                 href="tel:+13024640950"
-                className="text-blue-400 hover:text-blue-300 transition-colors duration-300"
+                className="text-blue-400 hover: tex t-blue-300 transition-colors duration-300"
               >
                 Call Now
               </a>
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 2 0 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              viewport={{ once: true }}"
+              viewport={{ once: tru e }}"
               className="text-center"
             >"
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-blue-400/30">"
-                <Mail className="w-8 h-8 text-blue-400"  />
+                <Mail className="w-8 h-8 text-blue-400"   />
               </div>"
               <h3 className="text-xl font-bold text-white mb-2">Email</h3>"              <p className="text-gray-300 mb-4">kleber@ziontechgroup.com</p>
               <a"
-                href="mailto:kleber@ziontechgroup.com"
-                className="text-blue-400 hover:text-blue-300 transition-colors duration-300"
+                href="mailto: klebe r@ziontechgroup.com"
+                className="text-blue-400 hover: tex t-blue-300 transition-colors duration-300"
               >
                 Send Email
               </a>
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 2 0 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              viewport={{ once: true }}"
+              viewport={{ once: tru e }}"
               className="text-center"
             >"
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-blue-400/30">"
-                <MapPin className="w-8 h-8 text-blue-400"  />
+                <MapPin className="w-8 h-8 text-blue-400"   />
               </div>"
               <h3 className="text-xl font-bold text-white mb-2">Address</h3>"
               <p className="text-gray-300 mb-4">
@@ -370,7 +370,7 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {
               <a"
                 href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709""
                 target="_blank""
-                rel="noopener noreferrer""                className="text-blue-400 hover:text-blue-300 transition-colors duration-300"
+                rel="noopener noreferrer""                className="text-blue-400 hover: tex t-blue-300 transition-colors duration-300"
               >
                 View on Map
               </a>

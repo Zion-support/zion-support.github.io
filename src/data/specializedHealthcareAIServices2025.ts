@@ -44,14 +44,14 @@ const zionContact = {
 
 };
 
-export const specializedHealthcareAIServices2025: HealthcareAIService[] = [{
+export const specializedHealthcareAIServices2025: HealthcareAIServic e[] = [{
 
     id: 1,"
     name: "MedAI Diagnostics Pro","
     category: "AI-Powered Medical Diagnostics","
     description: "Advanced AI platform for medical imaging analysis, disease detection, and diagnostic assistance with FDA-cleared algorithms and clinical validation","
     pricing: "Enterprise",
-    price: 7999,"
+    price: 799 9,"
     pricingModel: "monthly",
     features[;"
       "AI-powered medical image analysis","
@@ -86,14 +86,14 @@ export const specializedHealthcareAIServices2025: HealthcareAIService[] = [{
       "Lung CT screening","
       "Emergency radiology"
     ],;"
-    technologies["Deep Learning", "Computer Vision", "Medical Imaging", "Clinical AI"]},;  {
+    technologies["Deep Learning", "Computer Vision", "Medical Imaging", "Clinical AI"]}, {
 
     id: 2,"
     name: "GenomicAI Platform","
     category: "AI-Powered Genomic Analysis","
     description: "Comprehensive genomic analysis platform using AI to identify genetic variants, predict disease risk, and provide personalized medicine insights","
     pricing: "Premium",
-    price: 6499,"
+    price: 649 9,"
     pricingModel: "monthly",
     features[;"
       "AI-powered variant calling","
@@ -128,14 +128,14 @@ export const specializedHealthcareAIServices2025: HealthcareAIService[] = [{
       "Pharmacogenomics","
       "Population genomics"
     ],;"
-    technologies["Machine Learning", "Bioinformatics", "Cloud Computing", "Data Analytics"]},;  {
+    technologies["Machine Learning", "Bioinformatics", "Cloud Computing", "Data Analytics"]}, {
 
     id: 3,"
     name: "HealthTech Analytics Suite","
     category: "Healthcare Data Analytics","
     description: "Comprehensive healthcare analytics platform providing insights into patient outcomes, operational efficiency, and population health management","
     pricing: "Professional",
-    price: 3999,"
+    price: 399 9,"
     pricingModel: "monthly",
     features[;"
       "Patient outcome analytics","
@@ -170,14 +170,14 @@ export const specializedHealthcareAIServices2025: HealthcareAIService[] = [{
       "Population health","
       "Operational efficiency"
     ],;"
-    technologies["Data Analytics", "Machine Learning", "Business Intelligence", "Cloud Computing"]},;  {
+    technologies["Data Analytics", "Machine Learning", "Business Intelligence", "Cloud Computing"]}, {
 
     id: 4,"
     name: "TeleMed AI Platform","
     category: "AI-Powered Telemedicine","
     description: "Intelligent telemedicine platform with AI-powered symptom assessment, virtual consultations, and automated follow-up care","
     pricing: "Premium",
-    price: 5499,"
+    price: 549 9,"
     pricingModel: "monthly",
     features[;"
       "AI symptom assessment","
@@ -212,14 +212,14 @@ export const specializedHealthcareAIServices2025: HealthcareAIService[] = [{
       "Follow-up care","
       "Chronic disease management"
     ],;"
-    technologies["AI/ML", "Video Conferencing", "Mobile Apps", "Cloud Computing"]},;  {
+    technologies["AI/ML", "Video Conferencing", "Mobile Apps", "Cloud Computing"]}, {
 
     id: 5,"
     name: "PharmaAI Research Platform","
     category: "AI-Powered Drug Discovery","
     description: "Advanced AI platform for pharmaceutical research, drug discovery, and clinical trial optimization using machine learning and predictive modeling","
     pricing: "Enterprise",
-    price: 9999,"
+    price: 999 9,"
     pricingModel: "monthly",
     features[;"
       "AI-powered drug discovery","
@@ -254,14 +254,14 @@ export const specializedHealthcareAIServices2025: HealthcareAIService[] = [{
       "Clinical trial optimization","
       "Safety assessment"
     ],;"
-    technologies["Machine Learning", "Molecular Modeling", "Predictive Analytics", "High-Performance Computing"]},;  {
+    technologies["Machine Learning", "Molecular Modeling", "Predictive Analytics", "High-Performance Computing"]}, {
 
     id: 6,"
     name: "MentalHealth AI Companion","
     category: "AI-Powered Mental Health","
     description: "Intelligent mental health platform providing AI-powered therapy, mood tracking, and crisis intervention with clinical validation and safety protocols","
     pricing: "Professional",
-    price: 2999,"
+    price: 299 9,"
     pricingModel: "monthly",
     features[;"
       "AI-powered therapy sessions","

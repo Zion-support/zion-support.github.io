@@ -40,32 +40,32 @@ const MicroCRM = () => {
     {
       title: "Contact Management",
       description: "Organize and manage all your customer contacts with detailed profiles and interaction history",
-      icon: Users
+      icon: User s
     },
     {
       title: "Lead Tracking",
       description: "Track leads through your sales pipeline with automated scoring and qualification",
-      icon: Target
+      icon: Targe t
     },
     {
       title: "Sales Pipeline",
       description: "Visualize and manage your sales process with customizable stages and workflows",
-      icon: TrendingUp
+      icon: TrendingU p
     },
     {
       title: "Email Integration",
       description: "Seamlessly integrate with your email provider for automatic contact sync and tracking",
-      icon: Mail
+      icon: Mai l
     },
     {
       title: "Analytics Dashboard",
       description: "Get insights into your sales performance with real-time analytics and reports",
-      icon: BarChart3
+      icon: BarChart 3
     },
     {
       title: "Mobile Access",
       description: "Access your CRM on the go with our responsive mobile application",
-      icon: Zap
+      icon: Za p
     }
   ];
 
@@ -83,7 +83,7 @@ const MicroCRM = () => {
         "Email support",
         "Basic reporting"
       ],
-      popular: false
+      popular: fals e
     },
     {
       name: "Professional",
@@ -100,7 +100,7 @@ const MicroCRM = () => {
         "API access",
         "Custom fields"
       ],
-      popular: true
+      popular: tru e
     },
     {
       name: "Enterprise",
@@ -117,7 +117,7 @@ const MicroCRM = () => {
         "White-label options",
         "Advanced security"
       ],
-      popular: false
+      popular: fals e
     }
   ];
 
@@ -148,25 +148,25 @@ const MicroCRM = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
       {/* Header */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 px-4 sm: p x-6 lg: p x-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             <Link 
               to="/services" 
-              className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors mb-8"
+              className="inline-flex items-center text-purple-400 hover: tex t-purple-300 transition-colors mb-8"
             >
-              <ArrowLeft className="w-4 h-4 mr-2" />
+              <ArrowLeft className="w-4 h-4 mr-2"  />
               Back to Services
             </Link>
             
             <div className="text-center mb-12">
               <div className="flex items-center justify-center mb-6">
-                <Users className="w-16 h-16 text-purple-400 mr-4" />
-                <h1 className="text-5xl md:text-6xl font-bold text-white">
+                <Users className="w-16 h-16 text-purple-400 mr-4"  />
+                <h1 className="text-5xl md: tex t-6xl font-bold text-white">
                   Micro CRM Platform
                 </h1>
               </div>
@@ -176,33 +176,33 @@ const MicroCRM = () => {
               
               {/* Contact Info */}
               <div className="flex flex-wrap justify-center gap-6 mb-8">
-                <a href={`tel:${contactInfo.phone}`} className="flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors">
-                  <Phone className="w-5 h-5" />
+                <a href={`tel:${contactInfo.phone}`} className="flex items-center space-x-2 text-purple-400 hover: tex t-purple-300 transition-colors">
+                  <Phone className="w-5 h-5"  />
                   <span>{contactInfo.phone}</span>
                 </a>
-                <a href={`mailto:${contactInfo.email}`} className="flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors">
-                  <Mail className="w-5 h-5" />
+                <a href={`mailto:${contactInfo.email}`} className="flex items-center space-x-2 text-purple-400 hover: tex t-purple-300 transition-colors">
+                  <Mail className="w-5 h-5"  />
                   <span>{contactInfo.email}</span>
                 </a>
-                <a href={contactInfo.website} className="flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors">
-                  <Globe className="w-5 h-5" />
+                <a href={contactInfo.website} className="flex items-center space-x-2 text-purple-400 hover: tex t-purple-300 transition-colors">
+                  <Globe className="w-5 h-5"  />
                   <span>{contactInfo.website}</span>
                 </a>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: fle x-row gap-4 justify-center">
                 <a
                   href={`tel:${contactInfo.phone}`}
-                  className="bg-purple-500 hover:bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center"
+                  className="bg-purple-500 hover: b g-purple-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center"
                 >
-                  <Phone className="w-5 h-5 mr-2" />
+                  <Phone className="w-5 h-5 mr-2"  />
                   Get Started Today
                 </a>
                 <a
                   href={`mailto:${contactInfo.email}`}
-                  className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center"
+                  className="bg-cyan-500 hover: b g-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center"
                 >
-                  <Mail className="w-5 h-5 mr-2" />
+                  <Mail className="w-5 h-5 mr-2"  />
                   Request Demo
                 </a>
               </div>
@@ -212,10 +212,10 @@ const MicroCRM = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-center mb-16"
@@ -226,14 +226,14 @@ const MicroCRM = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 * index }}
-                className="bg-gray-800/50 border border-gray-700 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300"
+                className="bg-gray-800/50 border border-gray-700 rounded-xl p-6 hover: borde r-purple-500/50 transition-all duration-300"
               >
                 <div className="flex items-center mb-4">
                   <feature.icon className="w-8 h-8 text-purple-400 mr-3" />
@@ -247,10 +247,10 @@ const MicroCRM = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/20 to-cyan-900/20">
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-gradient-to-r from-purple-900/20 to-cyan-900/20">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -261,11 +261,11 @@ const MicroCRM = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <motion.div
                 key={plan.name}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 * index }}
                 className={`bg-gray-800/50 border rounded-xl p-8 relative ${
@@ -294,7 +294,7 @@ const MicroCRM = () => {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />
                       {feature}
                     </li>
                   ))}
@@ -304,8 +304,8 @@ const MicroCRM = () => {
                   href={`tel:${contactInfo.phone}`}
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors flex items-center justify-center ${
                     plan.popular
-                      ? 'bg-purple-500 hover:bg-purple-600 text-white'
-                      : 'bg-gray-700 hover:bg-gray-600 text-white'
+                      ? 'bg-purple-500 hover: b g-purple-600 text-white'
+                      : 'bg-gray-700 hover: b g-gray-600 text-white'
                   }`}
                 >
                   Get Started
@@ -317,10 +317,10 @@ const MicroCRM = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -331,18 +331,18 @@ const MicroCRM = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={testimonial.name}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 * index }}
                 className="bg-gray-800/50 border border-gray-700 rounded-xl p-6"
               >
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current"  />
                   ))}
                 </div>
                 <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
@@ -358,11 +358,11 @@ const MicroCRM = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/20 to-cyan-900/20">
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-gradient-to-r from-purple-900/20 to-cyan-900/20">
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2 
             className="text-4xl font-bold text-white mb-6"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
@@ -370,30 +370,30 @@ const MicroCRM = () => {
           </motion.h2>
           <motion.p 
             className="text-xl text-gray-300 mb-8"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             Start managing your customer relationships more effectively today.
           </motion.p>
           <motion.div 
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-            initial={{ opacity: 0, y: 20 }}
+            className="flex flex-col sm: fle x-row gap-4 justify-center"
+            initial={{ opacity: 0, y: 2 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <a
               href={`tel:${contactInfo.phone}`}
-              className="bg-purple-500 hover:bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center"
+              className="bg-purple-500 hover: b g-purple-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center"
             >
-              <Phone className="w-5 h-5 mr-2" />
+              <Phone className="w-5 h-5 mr-2"  />
               Call Now
             </a>
             <a
               href={`mailto:${contactInfo.email}`}
-              className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center"
+              className="bg-cyan-500 hover: b g-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center"
             >
-              <Mail className="w-5 h-5 mr-2" />
+              <Mail className="w-5 h-5 mr-2"  />
               Email Us
             </a>
           </motion.div>

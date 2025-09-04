@@ -9,22 +9,22 @@ export { AIAutoEmailResponder }(...args: []):  {
     <>
       <Helmet>
         <title>AI Auto Email Responder - Zion Tech Group</title>
-        <meta name = "description" content="Automate your email responses with AI-powered email management. Faster replies, CRM logging, and intelligent email automation." />
-        <meta name="keywords" content="AI email responder, email automation, email management, CRM integration, auto reply, email bot" />
+        <meta name = "description" content="Automate your email responses with AI-powered email management. Faster replies, CRM logging, and intelligent email automation."  />
+        <meta name="keywords" content="AI email responder, email automation, email management, CRM integration, auto reply, email bot"  />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-indigo-600/10"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="relative max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
             <div className="text-center">
               <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-8">
-                <Mail className="w-4 h-4 mr-2" />
+                <Mail className="w-4 h-4 mr-2"  />
                 AI-Powered Email Automation
               </div>
 
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <h1 className="text-4xl md: tex t-6xl font-bold text-white mb-6">
                 AI Auto Email
                 <span className="bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent"> Responder</span>
               </h1>
@@ -34,16 +34,15 @@ export { AIAutoEmailResponder }(...args: []):  {
                 intelligent responses, and seamless CRM integration for better customer communication.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-indigo-700 transition-all duration-200 shadow-lg hover:shadow-xl"
+              <div className="flex flex-col sm: fle x-row gap-4 justify-center">
+                <Link to="/contact"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg hover: fro m-blue-600 hover: t o-indigo-700 transition-all duration-200 shadow-lg hover: shado w-xl"
 
                   Get Started
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                  <ArrowRight className="ml-2 w-5 h-5"  />
                 </Link>
-                <button className="inline-flex items-center px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200">
-                  <Play className="mr-2 w-5 h-5" />
+                <button className="inline-flex items-center px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover: b g-blue-500/10 transition-all duration-200">
+                  <Play className="mr-2 w-5 h-5"  />
                   Watch Demo
                 </button>
               </div>
@@ -53,9 +52,9 @@ export { AIAutoEmailResponder }(...args: []):  {
 
         {/* Features Section */}
         <section className="py-20">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
                 Intelligent Email Automation
               </h2>
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
@@ -64,40 +63,40 @@ export { AIAutoEmailResponder }(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
               {[
                 {
-                  icon: Bot,
+                  icon: Bo t,
                   title: "AI-Powered Responses",
                   description: "Intelligent email responses that understand context and provide relevant answers."
                 },
                 {
-                  icon: Clock,
+                  icon: Cloc k,
                   title: "24/7 Availability",
                   description: "Round-the-clock email response and customer support automation."
                 },
                 {
-                  icon: MessageCircle,
+                  icon: MessageCircl e,
                   title: "Smart Categorization",
                   description: "Automatically categorize and prioritize emails based on content and sender."
                 },
                 {
-                  icon: Settings,
+                  icon: Setting s,
                   title: "Customizable Templates",
                   description: "Create and customize email templates for different scenarios and industries."
                 },
                 {
-                  icon: Users,
+                  icon: User s,
                   title: "CRM Integration",
                   description: "Seamless integration with popular CRM systems for customer data management."
                 },
                 {
-                  icon: Shield,
+                  icon: Shiel d,
                   title: "Security & Privacy",
                   description: "Enterprise-grade security with data encryption and privacy protection."
                 }
               ].map((feature, index)  => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover: b g-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
@@ -111,9 +110,9 @@ export { AIAutoEmailResponder }(...args: []):  {
 
         {/* Use Cases Section */}
         <section className="py-20 bg-slate-800/30">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
                 Email Automation Use Cases
               </h2>
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
@@ -121,46 +120,46 @@ export { AIAutoEmailResponder }(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
               {[
                 {
                   title: "Customer Support",
                   description: "Automated responses to common customer inquiries and support requests.",
-                  icon: Users,
+                  icon: User s,
                   benefits: ["FAQ responses", "Ticket routing", "Support escalation"]
                 },
                 {
                   title: "Sales & Marketing",
                   description: "Lead nurturing, follow-ups, and automated sales communication.",
-                  icon: Target,
+                  icon: Targe t,
                   benefits: ["Lead nurturing", "Follow-ups", "Sales automation"]
                 },
                 {
                   title: "Appointment Booking",
                   description: "Automated scheduling, confirmations, and reminder emails.",
-                  icon: Clock,
+                  icon: Cloc k,
                   benefits: ["Scheduling", "Confirmations", "Reminders"]
                 },
                 {
                   title: "Order Management",
                   description: "Order confirmations, shipping updates, and delivery notifications.",
-                  icon: Activity,
+                  icon: Activit y,
                   benefits: ["Order confirmations", "Shipping updates", "Delivery tracking"]
                 },
                 {
                   title: "Internal Communication",
                   description: "Team notifications, project updates, and comp announcements.",
-                  icon: MessageCircle,
+                  icon: MessageCircl e,
                   benefits: ["Team notifications", "Project updates", "Announcements"]
                 },
                 {
                   title: "Feedback Collection",
                   description: "Automated surveys, review requests, and customer feedback gathering.",
-                  icon: BarChart3,
+                  icon: BarChart 3,
                   benefits: ["Surveys", "Review requests", "Feedback collection"]
                 }
               ].map((useCase, index)  => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover: b g-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">
                     <useCase.icon className="w-6 h-6 text-white" />
                   </div>
@@ -169,7 +168,7 @@ export { AIAutoEmailResponder }(...args: []):  {
                   <ul className="space-y-1">
                     {useCase.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="text-sm text-blue-400 flex items-center">
-                        <CheckCircle className="w-3 h-3 mr-2" />
+                        <CheckCircle className="w-3 h-3 mr-2"  />
                         {benefit}
                       </li>
                     ))}
@@ -182,9 +181,9 @@ export { AIAutoEmailResponder }(...args: []):  {
 
         {/* How It Works Section */}
         <section className="py-20">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
                 How AI Email Automation Works
               </h2>
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
@@ -192,7 +191,7 @@ export { AIAutoEmailResponder }(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
               {[
                 {
                   step: "01",
@@ -229,9 +228,9 @@ export { AIAutoEmailResponder }(...args: []):  {
 
         {/* Benefits Section */}
         <section className="py-20 bg-slate-800/30">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
                 Transform Your Email Management
               </h2>
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
@@ -239,7 +238,7 @@ export { AIAutoEmailResponder }(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-1 lg: gri d-cols-2 gap-12 items-center">
               <div>
                 <div className="space-y-6">
                   {[
@@ -251,7 +250,7 @@ export { AIAutoEmailResponder }(...args: []):  {
                     "Provide 24/7 customer support and communication"
                   ].map((benefit, index) => (
                     <div key={index} className="flex items-start space-x-3">
-                      <CheckCircle className="w-6 h-6 text-blue-400 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-6 h-6 text-blue-400 mt-0.5 flex-shrink-0"  />
                       <span className="text-slate-300">{benefit}</span>
                     </div>
                   ))}
@@ -280,9 +279,9 @@ export { AIAutoEmailResponder }(...args: []):  {
 
         {/* Integration Section */}
         <section className="py-20">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
                 Seamless Integrations
               </h2>
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
@@ -290,46 +289,46 @@ export { AIAutoEmailResponder }(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
               {[
                 {
                   title: "Email Platforms",
                   description: "Gmail, Outlook, Yahoo, and other popular email services.",
-                  icon: Mail,
+                  icon: Mai l,
                   features: ["Gmail", "Outlook", "Yahoo", "Custom SMTP"]
                 },
                 {
                   title: "CRM Systems",
                   description: "Salesforce, HubSpot, Pipedrive, and other CRM platforms.",
-                  icon: Database,
+                  icon: Databas e,
                   features: ["Salesforce", "HubSpot", "Pipedrive", "Custom CRM"]
                 },
                 {
                   title: "Business Tools",
                   description: "Slack, Teams, Zapier, and other business applications.",
-                  icon: Settings,
+                  icon: Setting s,
                   features: ["Slack", "Teams", "Zapier", "API Integration"]
                 },
                 {
                   title: "Analytics Platforms",
                   description: "Google Analytics, Mixpanel, and other analytics tools.",
-                  icon: BarChart3,
+                  icon: BarChart 3,
                   features: ["Google Analytics", "Mixpanel", "Custom Analytics"]
                 },
                 {
                   title: "Marketing Tools",
                   description: "Mailchimp, Constant Contact, and email marketing platforms.",
-                  icon: Target,
+                  icon: Targe t,
                   features: ["Mailchimp", "Constant Contact", "Email Marketing"]
                 },
                 {
                   title: "Support Systems",
                   description: "Zendesk, Freshdesk, and customer support platforms.",
-                  icon: Users,
+                  icon: User s,
                   features: ["Zendesk", "Freshdesk", "Support Systems"]
                 }
               ].map((integration, index)  => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover: b g-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">
                     <integration.icon className="w-6 h-6 text-white" />
                   </div>
@@ -338,7 +337,7 @@ export { AIAutoEmailResponder }(...args: []):  {
                   <ul className="space-y-1">
                     {integration.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="text-sm text-blue-400 flex items-center">
-                        <CheckCircle className="w-3 h-3 mr-2" />
+                        <CheckCircle className="w-3 h-3 mr-2"  />
                         {feature}
                       </li>
                     ))}
@@ -351,24 +350,23 @@ export { AIAutoEmailResponder }(...args: []):  {
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-500/10 to-indigo-600/10">;
-          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <div className="max-w-4xl mx-auto text-center px-4 sm: p x-6 lg: p x-8">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
               Ready to Automate Your Email Management?
             </h2>
             <p className="text-xl text-slate-300 mb-8">
               Transform your email communication with AI-powered automation and intelligent responses.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-indigo-700 transition-all duration-200"
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
+              <Link to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg hover: fro m-blue-600 hover: t o-indigo-700 transition-all duration-200"
 
                 Schedule a Demo
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5"  />
               </Link>
               <Link
                 to="/services"
-                className="inline-flex items-center px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200"
+                className="inline-flex items-center px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover: b g-blue-500/10 transition-all duration-200"
               >
                 Explore All Services;
               </Link>;

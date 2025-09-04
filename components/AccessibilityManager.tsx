@@ -8,13 +8,13 @@ interface AccessibilitySettings {
   screenReader: boolean;
 }
 
-const AccessibilityManager: React.FC = () => {
+const AccessibilityManager: Reac t.FC = () => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
-    highContrast: false,
+    highContrast: fals e,
     fontSize: "normal",
-    reducedMotion: false,
-    focusVisible: false,
-    screenReader: false,
+    reducedMotion: fals e,
+    focusVisible: fals e,
+    screenReader: fals e,
   });
 
   useEffect(() => {
@@ -35,7 +35,7 @@ const AccessibilityManager: React.FC = () => {
     applyAccessibilityStyles(newSettings);
   };
 
-  const applyAccessibilityStyles = (settings: AccessibilitySettings) => {
+  const applyAccessibilityStyles = (settings: AccessibilitySetting s) => {
     const root = document.documentElement;
 
     if (settings.highContrast) {

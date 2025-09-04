@@ -1,10 +1,10 @@
 import { Link  } from 'react-router-dom';
 
-export default function ComprehensivePricingGuide2027(...args: unknown[]): unknown {
+export default function ComprehensivePricingGuide2027(...args: unknow n[]): unknown {
   const serviceCategories = [
     {
       name: "AI & Machine Learning Services",
-      icon: Brain,
+      icon: Brai n,
       description: "Cutting-edge AI solutions for business transformation",
       color: "from-zion-cyan to-zion-purple",
       services: [
@@ -14,7 +14,7 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
           price: "$299",
           period: "/month",
           features: ["AI-powered process optimization", "Visual workflow designer", "Automated execution", "Performance analytics", "Up to 50 workflows", "Standard integrations"],
-          popular: true,
+          popular: tru e,
           link: "/services/ai-workflow-orchestrator"
         },
         {
@@ -23,7 +23,7 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
           price: "$499",
           period: "/month",
           features: ["AI-powered data discovery", "Advanced access control", "Data lineage tracking", "Compliance automation", "Up to 10TB data", "Standard compliance templates"],
-          popular: false,
+          popular: fals e,
           link: "/services/ai-data-governance-platform"
         },
         {
@@ -32,14 +32,14 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
           price: "$399",
           period: "/month",
           features: ["Sentiment analysis", "Customer journey mapping", "Predictive analytics", "Personalization engine", "Up to 10K interactions", "Basic reporting"],
-          popular: false,
+          popular: fals e,
           link: "/services/ai-customer-experience-analytics"
         }
       ]
     },
     {
       name: "Cloud & DevOps Services",
-      icon: Network,
+      icon: Networ k,
       description: "Scalable cloud infrastructure and development operations",
       color: "from-zion-blue to-zion-cyan",
       services: [
@@ -49,7 +49,7 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
           price: "$599",
           period: "/month",
           features: ["Infrastructure as Code", "CI/CD pipelines", "Auto-scaling", "Monitoring & alerting", "24/7 support", "Multi-cloud support"],
-          popular: false,
+          popular: fals e,
           link: "/services/cloud-devops"
         },
         {
@@ -58,14 +58,14 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
           price: "$799",
           period: "/month",
           features: ["Network design", "Server management", "Security implementation", "Backup & recovery", "Performance optimization", "Compliance support"],
-          popular: false,
+          popular: fals e,
           link: "/services/it-infrastructure"
         }
       ]
     },
     {
       name: "Security & Compliance Services",
-      icon: Shield,
+      icon: Shiel d,
       description: "Enterprise-grade security and compliance solutions",
       color: "from-zion-red to-zion-orange",
       services: [
@@ -75,7 +75,7 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
           price: "$899",
           period: "/month",
           features: ["Identity verification", "Access control", "Threat detection", "Compliance monitoring", "Real-time alerts", "Security analytics"],
-          popular: false,
+          popular: fals e,
           link: "/services/zero-trust-network-access"
         },
         {
@@ -84,14 +84,14 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
           price: "$299",
           period: "/month",
           features: ["Security headers", "Content Security Policy", "XSS protection", "HTTPS enforcement", "Security monitoring", "Compliance reporting"],
-          popular: false,
+          popular: fals e,
           link: "/services/security-headers-csp"
         }
       ]
     },
     {
       name: "Business Process Automation",
-              icon: WorkflowIcon,
+              icon: WorkflowIco n,
       description: "Streamline operations with intelligent automation",
       color: "from-zion-purple to-zion-pink",
       services: [
@@ -101,7 +101,7 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
           price: "$449",
           period: "/month",
           features: ["AI task prioritization", "Resource optimization", "Risk assessment", "Progress tracking", "Team collaboration", "Performance analytics"],
-          popular: false,
+          popular: fals e,
           link: "/services/ai-project-management"
         },
         {
@@ -110,7 +110,7 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
           price: "$349",
           period: "/month",
           features: ["Chatbot integration", "Ticket routing", "Knowledge base", "Sentiment analysis", "Performance metrics", "Multi-channel support"],
-          popular: false,
+          popular: fals e,
           link: "/services/ai-customer-support-automation"
         }
       ]
@@ -131,7 +131,7 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
         "Compliance reporting",
         "Training & onboarding"
       ],
-      popular: false
+      popular: fals e
     },
     {
       name: "Professional Enterprise",
@@ -147,7 +147,7 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
         "SLA guarantees",
         "Custom development"
       ],
-      popular: true
+      popular: tru e
     },
     {
       name: "Ultimate Enterprise",
@@ -164,7 +164,7 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
         "Compliance automation",
         "Strategic consulting"
       ],
-      popular: false
+      popular: fals e
     }
   ];
 
@@ -203,45 +203,45 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-900 via-zion-slate-800 to-zion-slate-900">
       {/* Futuristic Animated Background */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>        <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/5 via-transparent to-zion-purple/5"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size: 50px_50p x] animate-pulse"></div>        <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/5 via-transparent to-zion-purple/5"></div>
       </div>"""
 """"
       <div className="relative z-10">"""
         {/* Hero Section */}""""
-        <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">""""
+        <section className="relative pt-32 pb-20 px-4 sm: p x-6 lg: p x-8">""""
           <div className="max-w-7xl mx-auto text-center">
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 2 0 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}"""
             >""""
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-zion-cyan/10 border border-zion-cyan/20 text-zion-cyan text-sm font-medium mb-8">""""
-                <DollarSign className="w-4 h-4 mr-2"  />                Comprehensive Pricing Guide 2027;
+                <DollarSign className="w-4 h-4 mr-2"   />                Comprehensive Pricing Guide 2027;
               </div>"""
               """"
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan bg-clip-text text-transparent">
+              <h1 className="text-5xl md: tex t-7xl font-bold text-white mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan bg-clip-text text-transparent">
                 Transparent Pricing Guide;
               </h1>"""
               """"
-              <p className="text-xl md:text-2xl text-zion-slate-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+              <p className="text-xl md: tex t-2xl text-zion-slate-300 mb-8 max-w-4xl mx-auto leading-relaxed">
                 Discover our competitive pricing for cutting-edge AI and technology services. 
                 Compare our transparent pricing with market rates and see how much you can save.
               </p>"""
               """"
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <div className="flex flex-col sm: fle x-row gap-4 justify-center items-center">
                 <motion.button;
                   whileHover={{ scale: 1.05 }}"""
                   whileTap={{ scale: 0.95 }}""""
-                  className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center""""
+                  className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg shadow-lg hover: shado w-xl transition-all duration-300 flex items-center""""
                 >""""
-                  <Play className="w-5 h-5 mr-2"  />                  Start Free Trial;
+                  <Play className="w-5 h-5 mr-2"   />                  Start Free Trial;
                 </motion.button>
                 <motion.button;
                   whileHover={{ scale: 1.05 }}"""
                   whileTap={{ scale: 0.95 }}""""
-                  className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan/10 transition-all duration-300 flex items-center""""
+                  className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan font-semibold rounded-lg hover: b g-zion-cyan/10 transition-all duration-300 flex items-center""""
                 >""""
-                  <MessageCircle className="w-5 h-5 mr-2"  />                  Contact Sales;
+                  <MessageCircle className="w-5 h-5 mr-2"   />                  Contact Sales;
                 </motion.button>
               </div>
             </motion.div>
@@ -249,16 +249,16 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
         </section>
 """
         {/* Service Categories Pricing */}""""
-        <section className="py-20 px-4 sm:px-6 lg:px-8">""""
+        <section className="py-20 px-4 sm: p x-6 lg: p x-8">""""
           <div className="max-w-7xl mx-auto">
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 2 0 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}"""
-              viewport={{ once: true }}""""
+              viewport={{ once: tru e }}""""
               className="text-center mb-16""""
             >""""
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
                 Service Category Pricing"""
               </h2>""""
               <p className="text-xl text-zion-slate-300 max-w-3xl mx-auto">
@@ -269,10 +269,10 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
 
             {serviceCategories.map((category, categoryIndex) => (<motion.div;
                 key={categoryIndex}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: categoryIndex * 0.1 }}"""
-                viewport={{ once: true }}""""
+                transition={{ duration: 0.8, delay: categoryInde x * 0.1 }}"""
+                viewport={{ once: tru e }}""""
                 className="mb-16""""
               >""""
                 <div className="text-center mb-12">"""
@@ -283,15 +283,15 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
                   <p className="text-xl text-zion-slate-300 max-w-2xl mx-auto">{category.description}</p>
                 </div>"""
 """"
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
                   {category.services.map((service, serviceIndex) => (
                     <motion.div;
                       key={serviceIndex}
-                      initial={{ opacity: 0, y: 20 }}
+                      initial={{ opacity: 0, y: 2 0 }}
                       whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8, delay: serviceIndex * 0.1 }}`
-                      viewport={{ once: true }}``
-                      className={`relative bg-zion-slate-800/50 backdrop-blur-sm border rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 ${}
+                      transition={{ duration: 0.8, delay: serviceInde x * 0.1 }}`
+                      viewport={{ once: tru e }}``
+                      className={`relative bg-zion-slate-800/50 backdrop-blur-sm border rounded-xl p-8 hover: borde r-zion-cyan/40 transition-all duration-300 ${}
 `
                         service.popular ? 'border-zion-cyan/50 bg-zion-cyan/5' : 'border-zion-slate-600/50'``
                       }`}
@@ -314,7 +314,7 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
                       <ul className="space-y-3 mb-6">"""
                         {service.features.map((feature, idx) => (""""
                           <li key={idx} className="flex items-center text-zion-slate-300">""""
-                            <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0"  />                            {feature}
+                            <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0"   />                            {feature}
                           </li>) ) }
                       </ul>
 
@@ -327,8 +327,8 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
 ''
 '''`
                             service.popular'''`'`
-                              ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover:shadow-lg hover:shadow-zion-cyan/25'''`'`'`
-                              : 'bg-zion-slate-700 text-white hover:bg-zion-slate-600'````
+                              ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover: shado w-lg hover: shado w-zion-cyan/25'''`'`'`
+                              : 'bg-zion-slate-700 text-white hover: b g-zion-slate-600'````
                           }`}
                         >
                           Learn More;
@@ -341,16 +341,16 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
         </section>
 """
         {/* Enterprise Packages */}""""
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-800/30">""""
+        <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-zion-slate-800/30">""""
           <div className="max-w-7xl mx-auto">
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 2 0 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}"""
-              viewport={{ once: true }}""""
+              viewport={{ once: tru e }}""""
               className="text-center mb-16""""
             >""""
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
                 Enterprise Packages"""
               </h2>""""
               <p className="text-xl text-zion-slate-300 max-w-3xl mx-auto">
@@ -358,14 +358,14 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
               </p>
             </motion.div>"""
 """"
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: gri d-cols-3 gap-8">
               {enterprisePackages.map((pkg, index) => (
                 <motion.div;
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 2 0 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}`
-                  viewport={{ once: true }}``
+                  transition={{ duration: 0.8, delay: inde x * 0.1 }}`
+                  viewport={{ once: tru e }}``
                   className={`relative bg-zion-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${}
 '
                     pkg.popular ''
@@ -400,7 +400,7 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
                   <ul className="space-y-4 mb-8">"""
                     {pkg.features.map((feature, idx) => (""""
                       <li key={idx} className="flex items-center text-zion-slate-300">""""
-                        <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0"  />                        {feature}
+                        <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0"   />                        {feature}
                       </li>) ) }
                   </ul>
 
@@ -412,8 +412,8 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
 ''
 '''`
                       pkg.popular'''`'`
-                        ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover:shadow-lg hover:shadow-zion-cyan/25'''`'`'`
-                        : 'bg-zion-slate-700 text-white hover:bg-zion-slate-600'````
+                        ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover: shado w-lg hover: shado w-zion-cyan/25'''`'`'`
+                        : 'bg-zion-slate-700 text-white hover: b g-zion-slate-600'````
                     }`}
                   >
                     Get Started;
@@ -424,16 +424,16 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
         </section>
 """
         {/* Market Comparison */}""""
-        <section className="py-20 px-4 sm:px-6 lg:px-8">""""
+        <section className="py-20 px-4 sm: p x-6 lg: p x-8">""""
           <div className="max-w-7xl mx-auto">
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 2 0 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}"""
-              viewport={{ once: true }}""""
+              viewport={{ once: tru e }}""""
               className="text-center mb-16""""
             >""""
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
                 Market Price Comparison"""
               </h2>""""
               <p className="text-xl text-zion-slate-300 max-w-3xl mx-auto">
@@ -471,15 +471,15 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
         </section>
 """
         {/* CTA Section */}""""
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-cyan/10">""""
+        <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-cyan/10">""""
           <div className="max-w-4xl mx-auto text-center">
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 2 0 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}"""
+              viewport={{ once: tru e }}"""
             >""""
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
                 Ready to Save on Premium Services?"""
               </h2>""""
               <p className="text-xl text-zion-slate-300 mb-8">
@@ -487,20 +487,20 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
                 of our transparent pricing model.
               </p>"""
               """"
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <div className="flex flex-col sm: fle x-row gap-4 justify-center items-center">
                 <motion.button;
                   whileHover={{ scale: 1.05 }}"""
                   whileTap={{ scale: 0.95 }}""""
-                  className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center""""
+                  className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg shadow-lg hover: shado w-xl transition-all duration-300 flex items-center""""
                 >""""
-                  <Rocket className="w-5 h-5 mr-2"  />                  Start Free Trial;
+                  <Rocket className="w-5 h-5 mr-2"   />                  Start Free Trial;
                 </motion.button>
                 <motion.button;
                   whileHover={{ scale: 1.05 }}"""
                   whileTap={{ scale: 0.95 }}""""
-                  className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan/10 transition-all duration-300 flex items-center""""
+                  className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan font-semibold rounded-lg hover: b g-zion-cyan/10 transition-all duration-300 flex items-center""""
                 >""""
-                  <MessageCircle className="w-5 h-5 mr-2"  />                  Schedule Consultation;
+                  <MessageCircle className="w-5 h-5 mr-2"   />                  Schedule Consultation;
                 </motion.button>
               </motion.div>
             )})}
@@ -516,7 +516,7 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
                 setSearchTerm('');'
                 setSelectedCategory('all');'
                 setSelectedPriceRange('all')}}"""
-              className="text-cyan-400 hover:text-cyan-300 transition-colors"""
+              className="text-cyan-400 hover: tex t-cyan-300 transition-colors"""
             >
               Clear all filters;
             </button>
@@ -525,20 +525,20 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
       </section>
 """
         {/* Contact Information */}""""
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zion-slate-800/50">""""
+        <section className="py-16 px-4 sm: p x-6 lg: p x-8 bg-zion-slate-800/50">""""
           <div className="max-w-4xl mx-auto text-center">""""
             <h3 className="text-2xl font-bold text-white mb-8">Get in Touch</h3>""""
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">""""
+            <div className="grid grid-cols-1 md: gri d-cols-3 gap-8">""""
               <div className="flex flex-col items-center">""""
-                <Phone className="w-8 h-8 text-zion-cyan mb-4"  />""""
+                <Phone className="w-8 h-8 text-zion-cyan mb-4"   />""""
                 <p className="text-zion-slate-300">+1 302 464 0950</p>"""
               </div>""""
               <div className="flex flex-col items-center">""""
-                <Mail className="w-8 h-8 text-zion-cyan mb-4"  />""""
+                <Mail className="w-8 h-8 text-zion-cyan mb-4"   />""""
                 <p className="text-zion-slate-300">kleber@ziontechgroup.com</p>"""
               </div>""""
               <div className="flex flex-col items-center">""""
-                <MapPin className="w-8 h-8 text-zion-cyan mb-4"  />"                <p className="text-zion-slate-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                <MapPin className="w-8 h-8 text-zion-cyan mb-4"   />"                <p className="text-zion-slate-300">364 E Main St STE 1008<br  />Middletown DE 19709</p>
               </div>
             </div>
           </div>

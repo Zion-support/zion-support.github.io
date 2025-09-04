@@ -1,8 +1,8 @@
 declare module 'jspdf' {
 	export class jsPDF {
-		constructor(...args: any[]);
-		addImage(...args: any[]): any;
-		text(...args: any[]): any;
+		constructor(...args: an y[]);
+		addImage(...args: an y[]): any;
+		text(...args: an y[]): any;
 		save(filename?: string): void;
 	}
 }

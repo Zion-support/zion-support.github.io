@@ -3,18 +3,16 @@ export { function };
 export default function CustomerExperience(...args[]):  {
 
   
-    },;
-    {;
-      icon: Star,;
+    }, {;
+      icon: Sta r,;
       title: 'Loyalty Programs',;
       description: 'Reward and retain your best customers'};
-  ]},;
-    {;'
+  ]}, {;'
       title: 'Performance Analytics',;'      description: 'Track and improve customer experience metrics',;
-      icon: TrendingUp};
+      icon: TrendingU p};
   ];
 
-  return()
+  return ()
     <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}"
       <section className="relative pt-32 pb-20 overflow-hidden">"
@@ -24,7 +22,7 @@ export default function CustomerExperience(...args[]):  {
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -47,10 +45,10 @@ export default function CustomerExperience(...args[]):  {
             className="text-center max-w-4xl mx-auto"
 "
             <div className="inline-flex items-center space-x-2 bg-pink-500/10 border border-pink-500/20 rounded-full px-4 py-2 mb-6">"
-              <Heart className="w-5 h-5 text-pink-400"  />"              <span className="text-pink-400 font-medium">Customer Experience</span>
+              <Heart className="w-5 h-5 text-pink-400"   />"              <span className="text-pink-400 font-medium">Customer Experience</span>
             </div>
 "
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md: tex t-6xl font-bold text-white mb-6">
               Delight Your"
               <span className="text-gradient"> Customers</span>
             </h1>
@@ -60,26 +58,24 @@ export default function CustomerExperience(...args[]):  {
               and business growth with our comprehensive CX platform.
             </p>
 "
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">"
               <button className="btn-futuristic px-8 py-4 text-lg">
                 Start Free Trial"
-                <ArrowRight className="w-5 h-5 ml-2"  />
+                <ArrowRight className="w-5 h-5 ml-2"   />
               </button>"              <button className="btn-outline px-8 py-4 text-lg">
                 Watch Demo
               </button>
             </div>
           </motion.div>
         </div>
-      </section>;
-
-      {/* Features Section */}"
+      </section> {/* Features Section */}"
       <section className="py-20">;"
         <div className="container-responsive">
           <motion.div
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -99,7 +95,7 @@ export default function CustomerExperience(...args[]):  {
 
 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}"
+            viewport={{ once: tru e }}"
             className="text-center mb-16"
 "
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -110,14 +106,14 @@ export default function CustomerExperience(...args[]):  {
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
             {features.map((feature, index (
               <motion.div
                 key={feature.title}
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -139,7 +135,7 @@ export default function CustomerExperience(...args[]):  {
                 transition = {
 
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -147,10 +143,10 @@ export default function CustomerExperience(...args[]):  {
 
 
 }}
-                viewport={{ once: true }}"
-                className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
+                viewport={{ once: tru e }}"
+                className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover: borde r-zion-cyan/40 transition-all duration-300 group"
 "
-                <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">"
+                <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 group-hover: scal e-110 transition-transform duration-300">"
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>"
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>"
@@ -168,7 +164,7 @@ export default function CustomerExperience(...args[]):  {
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -188,7 +184,7 @@ export default function CustomerExperience(...args[]):  {
 
 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}"
+            viewport={{ once: tru e }}"
             className="text-center mb-16"
 "
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -199,14 +195,14 @@ export default function CustomerExperience(...args[]):  {
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
-            {capabilities.map(capability: unknown, index: unknown (
+          <div className="grid grid-cols-1 md: gri d-cols-2 gap-8">
+            {capabilities.map(capability: unknow n, index: unknow n (
               <motion.div
                 key={capability.title}
                 initial = {
 
   { opacity: 0,
-  x: index % 2 === 0 ? -20 : 20 
+  x: inde x % 2 === 0 ? -20 : 20 
 
 
 
@@ -228,7 +224,7 @@ export default function CustomerExperience(...args[]):  {
                 transition = {
 
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -236,11 +232,11 @@ export default function CustomerExperience(...args[]):  {
 
 
 }}
-                viewport={{ once: true }}"
-                className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group"
+                viewport={{ once: tru e }}"
+                className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover: borde r-zion-cyan/40 transition-all duration-300 group"
 "
                 <div className="flex items-start space-x-4">"
-                  <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">"
+                  <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover: scal e-110 transition-transform duration-300">"
                     <capability.icon className="w-8 h-8 text-white" />
                   </div>
                   <div>"
@@ -261,7 +257,7 @@ export default function CustomerExperience(...args[]):  {
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -281,7 +277,7 @@ export default function CustomerExperience(...args[]):  {
 
 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}"
+            viewport={{ once: tru e }}"
             className="bg-gradient-to-r from-pink-600 to-pink-700 rounded-3xl p-12 text-center relative overflow-hidden"
 "
             <div className="absolute inset-0 bg-black/20"></div>"
@@ -292,11 +288,11 @@ export default function CustomerExperience(...args[]):  {
               <p className="text-xl text-pink-100 mb-8 max-w-2xl mx-auto">
                 Start building exceptional customer relationships today.
               </p>"
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-                <button className="bg-white text-pink-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors duration-300">
+              <div className="flex flex-col sm: fle x-row gap-4 justify-center">"
+                <button className="bg-white text-pink-600 px-8 py-4 rounded-xl font-semibold hover: b g-gray-100 transition-colors duration-300">
                   Start Free Trial
                 </button>"
-                <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-pink-600 transition-colors duration-300">
+                <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover: b g-white hover: tex t-pink-600 transition-colors duration-300">
                   Schedule Demo
                 </button>
               </div>

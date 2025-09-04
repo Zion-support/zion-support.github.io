@@ -17,11 +17,11 @@
         "API access"
       ],"
       cta: "Get Started",
-      popular: false
+      popular: fals e
     },
     {
 
-      icon: Brain,"
+      icon: Brai n,"
       title: "Hybrid Quantum-Classical Computing","
       description: "Seamless integration of quantum and classical computing resources for optimal performance and practical applications.","
       benefits: ["Best of both worlds", "Practical quantum advantage", "Scalable solutions"]
@@ -42,7 +42,7 @@
         "SLA guarantees",;"        "Quantum strategy consulting";
       ],;"
       cta: "Contact Sales",;
-      popular: false};
+      popular: fals e};
   ];
 
   const useCases = [
@@ -50,21 +50,21 @@
 "
       name: "Financial Services","
       description: "Portfolio optimization, risk assessment, and algorithmic trading with quantum advantage",
-      icon: DollarSign,"
+      icon: DollarSig n,"
       examples: ["Portfolio optimization", "Risk modeling", "Option pricing", "Fraud detection"]
     },
     {
 "
       name: "Pharmaceutical Research","
       description: "Drug discovery, molecular modeling, and protein folding simulations",
-      icon: Atom,"
+      icon: Ato m,"
       examples: ["Drug discovery", "Molecular dynamics", "Protein folding", "Chemical reactions"]
     },
     {
 "
       name: "Logistics & Supply Chain","
       description: "Route optimization, inventory management, and supply chain optimization",
-      icon: Network,"
+      icon: Networ k,"
       examples: ["Route optimization", "Inventory management", "Supply chain optimization", "Scheduling"]
     },
     {
@@ -75,29 +75,26 @@
         "Energy trading",;"
         "Resource allocation",;"        "Climate modeling";
       ]};
-  ];
-
-  
-    {;"
+  ] {;"
       title: "Quantum Entanglement",;"
       description: "Leverage quantum correlations for secure communication",;
-      icon: Network,;"
+      icon: Networ k,;"
       metric: "100%"};  ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
         title="Quantum AI Platform - Zion Tech Group""        description="Revolutionize your business with quantum computing and AI. Access unprecedented computational power for optimization, cryptography, and machine learning."
-       />
+        />
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
           <motion.div
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -120,9 +117,9 @@
             className="text-center"
 "
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white text-sm font-medium mb-6">"
-              <Atom className="w-4 h-4 mr-2"  />              Next-Generation Quantum Technology
+              <Atom className="w-4 h-4 mr-2"   />              Next-Generation Quantum Technology
             </div>"
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md: tex t-6xl font-bold text-white mb-6">
               Quantum AI Platform"
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Revolution</span>
             </h1>"
@@ -130,16 +127,16 @@
               Access the future of computing with our revolutionary quantum AI platform. Solve previously intractable problems, 
               accelerate research, and gain quantum advantage in optimization and machine learning.
             </p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
               <a "
                 href="tel:+13024640950"
-                className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:scale-105"
+                className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all hover: scal e-105"
               >
                 📞 Call +1 (302) 464-0950
               </a>
               <a "
                 href="/request-quote"
-                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all"
+                className="bg-transparent border-2 border-white text-white hover: b g-white hover: tex t-slate-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all"
               >
                 Get Quantum Access
               </a>
@@ -154,12 +151,12 @@
 
       {/* Quantum Advantages Section */}"
       <section className="py-20">;"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
           <motion.div
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -190,14 +187,14 @@
             </p>
           </motion.div>
 "
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {quantumAdvantages.map(advantage: unknown, index: unknown (
+          <div className="grid md: gri d-cols-2 lg: gri d-cols-4 gap-8">
+            {quantumAdvantages.map(advantage: unknow n, index: unknow n (
               <motion.div
                 key={index}
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -219,7 +216,7 @@
                 transition = {
 
   { duration: 0.8,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -227,7 +224,7 @@
 
 
 }}"
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300 text-center"
+                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover: borde r-blue-500 transition-all duration-300 text-center"
 "
                 <div className="p-3 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg mx-auto mb-4 w-fit">"
                   <advantage.icon className="w-8 h-8 text-white" />
@@ -244,12 +241,12 @@
 
       {/* Features Section */}"
       <section className="py-20 bg-slate-800/30">;"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
           <motion.div
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -280,14 +277,14 @@
             </p>
           </motion.div>
 "
-          <div className="grid md:grid-cols-2 gap-8">
-            {features.map(feature: unknown, index: unknown 
+          <div className="grid md: gri d-cols-2 gap-8">
+            {features.map(feature: unknow n, index: unknow n 
               <motion.div
                 key={index}
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -309,7 +306,7 @@
                 transition = {
 
   { duration: 0.8,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -317,7 +314,7 @@
 
 
 }}"
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-blue-500 transition-all duration-300"
+                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover: borde r-blue-500 transition-all duration-300"
 "
                 <div className="flex items-center mb-4">"
                   <div className="p-3 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg mr-4">"
@@ -330,7 +327,7 @@
                 <ul className="space-y-3">
                   {feature.benefits.map((benefit, idx) => ("
                     <li key={idx} className="text-gray-300 flex items-center">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />                      {benefit}
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />                      {benefit}
                     </li>
                   ))}
                 </ul>
@@ -342,12 +339,12 @@
 
       {/* Pricing Section */}"
       <section className="py-20">;"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
           <motion.div
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -378,14 +375,14 @@
             </p>
           </motion.div>
 "
-          <div className="grid md:grid-cols-3 gap-8">
-            {pricingPlans.map(plan: unknown, index: unknown (
+          <div className="grid md: gri d-cols-3 gap-8">
+            {pricingPlans.map(plan: unknow n, index: unknow n (
               <motion.div
                 key={index}
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -407,7 +404,7 @@
                 transition = {
 
   { duration: 0.8,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -440,7 +437,7 @@
                 <ul className="space-y-4 mb-8">
                   {tier.features.map((feature, idx) => ("
                     <li key={idx} className="text-gray-300 flex items-center">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />                      {feature}
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -449,8 +446,8 @@
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all ${
 
                     tier.popular'
-                      ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:scale-105''
-                      : 'bg-transparent border-2 border-white text-white hover:bg-white hover:text-slate-900'`
+                      ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover: scal e-105''
+                      : 'bg-transparent border-2 border-white text-white hover: b g-white hover: tex t-slate-900'`
                   }`}
                 >
                   Get Started
@@ -463,12 +460,12 @@
 
       {/* Use Cases Section */}"
       <section className="py-20 bg-slate-800/30">;"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
           <motion.div
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -499,14 +496,14 @@
             </p>
           </motion.div>
 "
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map(useCase: unknown, index: unknown 
+          <div className="grid md: gri d-cols-2 lg: gri d-cols-4 gap-8">
+            {useCases.map(useCase: unknow n, index: unknow n 
               <motion.div
                 key={index}
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -528,7 +525,7 @@
                 transition = {
 
   { duration: 0.8,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -536,13 +533,13 @@
 
 
 }}"
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300"
+                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover: borde r-blue-500 transition-all duration-300"
 "
                 <h3 className="text-xl font-semibold text-white mb-4">{useCase.industry}</h3>"
                 <ul className="space-y-2">
                   {useCase.applications.map((application, appIndex) => ("
                     <li key={appIndex} className="text-gray-300 text-sm flex items-center">"
-                      <ArrowRight className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0"  />                      {application}
+                      <ArrowRight className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0"   />                      {application}
                     </li>
                   ))}
                 </div>"
@@ -559,12 +556,12 @@
 
       {/* CTA Section */}"
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">;"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8 text-center">
           <motion.div
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -593,18 +590,18 @@
               that will transform your industry and accelerate innovation.
             </p>
 "
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
-                className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300"
+                className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover: b g-gray-100 transition-all duration-300"
 
                 Start Free Trial
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
-                className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300"
+                className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover: b g-white hover: tex t-blue-600 transition-all duration-300"
               >
                 Contact Quantum Experts;
               </motion.button>;

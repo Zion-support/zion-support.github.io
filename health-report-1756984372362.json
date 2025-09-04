@@ -1,0 +1,39 @@
+{
+  "status": "healthy",
+  "checks": {
+    "memory": {
+      "status": "healthy",
+      "usage": {
+        "rss": 47124480,
+        "heapTotal": 5570560,
+        "heapUsed": 4256176,
+        "external": 1472872,
+        "arrayBuffers": 10515
+      },
+      "message": "Memory usage normal"
+    },
+    "disk": {
+      "status": "healthy",
+      "message": "Disk space available"
+    },
+    "network": {
+      "status": "healthy",
+      "message": "Network connectivity normal"
+    },
+    "database": {
+      "status": "healthy",
+      "message": "Database connection stable"
+    }
+  },
+  "metrics": {
+    "uptime": 0.011683874,
+    "memory": {
+      "rss": 43118592,
+      "heapTotal": 5308416,
+      "heapUsed": 3651096,
+      "external": 1178203,
+      "arrayBuffers": 10515
+    },
+    "timestamp": "2025-09-04T11:12:52.358Z"
+  }
+}

@@ -8,32 +8,31 @@ export default function AISupportHelpdesk
 export { AISupportHelpdesk }(...args[]):  {
   const features = [
     {
-      icon: Brain,
+      icon: Brai n,
       title: "AI-Powered Support",
       description: "Intelligent chatbots and virtual agents that understand context and provide accurate, helpful responses 24/7."
     },
     {
-      icon: MessageCircle,
+      icon: MessageCircl e,
       title: "Multi-channel Support",
       description: "Seamless support across email, chat, phone, social media, and self-service portals."
     },
     {
-      icon: Zap,
+      icon: Za p,
       title: "Instant Resolution",
       description: "Automated ticket routing, smart categorization, and AI-powered solutions for faster issue resolution."
     },
     {
-      icon: BarChart3,
+      icon: BarChart 3,
       title: "Advanced Analytics",
       description: "Comprehensive insights into support performance, customer satisfaction, and operational efficiency."
     },
     {
-      icon: Smartphone,
+      icon: Smartphon e,
       title: "Mobile-First Design",
       description: "Fully responsive support platform accessible on  device with native mobile apps.";
-    },;
-    {;
-      icon: Globe,;
+    }, {;
+      icon: Glob e,;
       title: "Global Support",;
       description: "Multi-language support with localization and timezone-aware routing for global teams.";
     };
@@ -41,32 +40,31 @@ export { AISupportHelpdesk }(...args[]):  {
 
   const aiCapabilities = [
     {
-      icon: Brain,
+      icon: Brai n,
       title: "Natural Language Processing",
       description: "Advanced NLP for understanding customer intent and context"
     },
     {
-      icon: MessageCircle,
+      icon: MessageCircl e,
       title: "Conversational AI",
       description: "Human-like conversations with personality and empathy"
     },
     {
-      icon: Zap,
+      icon: Za p,
       title: "Predictive Analytics",
       description: "Anticipate issues and proactively resolve problems"
     },
     {
-      icon: Shield,
+      icon: Shiel d,
       title: "Smart Escalation",
       description: "Intelligent routing to the right agent or department"
     },
     {
-      icon: Clock,
+      icon: Cloc k,
       title: "24/7 Availability",
       description: "Round-the-clock support without human intervention";
-    },;
-    {;
-      icon: Users,;
+    }, {;
+      icon: User s,;
       title: "Learning & Improvement",;
       description: "Continuous learning from interactions to improve responses";
     };
@@ -86,7 +84,7 @@ export { AISupportHelpdesk }(...args[]):  {
         "Mobile app access",
         "Email support"
       ],;
-      popular: false
+      popular: fals e
     },
     {
       name: "Support Professional",
@@ -102,7 +100,7 @@ export { AISupportHelpdesk }(...args[]):  {
         "API access",
         "Custom integrations"
       ],;
-      popular: true
+      popular: tru e
     },
     {
       name: "Support Enterprise",
@@ -118,7 +116,7 @@ export { AISupportHelpdesk }(...args[]):  {
         "Custom training",;
         "On-premise options";
       ],;
-      popular: false;
+      popular: fals e;
     };
   ];
 
@@ -126,53 +124,51 @@ export { AISupportHelpdesk }(...args[]):  {
     {
       title: "Reduce Support Costs",
       description: "Automate routine inquiries and reduce the need for human agents by up to 70%.",
-      icon: TrendingUp
+      icon: TrendingU p
     },
     {
       title: "Improve Customer Satisfaction",
       description: "Provide instant, accurate responses and faster resolution times for better customer experience.",
-      icon: Users
+      icon: User s
     },
     {
       title: "Scale Support Operations",
       description: "Handle unlimited support requests without increasing headcount or response times.",
-      icon: Globe;
-    },;
-    {;
+      icon: Glob e;
+    }, {;
       title: "Gain Actionable Insights",;
       description: "Understand customer needs and improve products with comprehensive support analytics.",;
-      icon: BarChart3;
+      icon: BarChart 3;
     };
   ];
 
   const supportChannels = [
     {
-      icon: MessageCircle,
+      icon: MessageCircl e,
       title: "Live Chat",
       description: "Real-time chat support with AI assistance and human handoff"
     },
     {
-      icon: Mail,
+      icon: Mai l,
       title: "Email Support",
       description: "Structured email support with automated categorization and routing"
     },
     {
-      icon: Phone,
+      icon: Phon e,
       title: "Phone Support",
       description: "Voice support with AI call screening and intelligent routing"
     },
     {
-      icon: Globe,
+      icon: Glob e,
       title: "Self-Service Portal",
       description: "Knowledge base and FAQ with AI-powered search and suggestions"
     },
     {
-      icon: Smartphone,
+      icon: Smartphon e,
       title: "Mobile App",
       description: "Native mobile apps for iOS and Android with push notifications";
-    },;
-    {;
-      icon: Users,;
+    }, {;
+      icon: User s,;
       title: "Social Media",;
       description: "Monitor and respond to support requests across social platforms";
     };
@@ -180,11 +176,10 @@ export { AISupportHelpdesk }(...args[]):  {
 
   return (
     <>
-      <SEO 
-        title = "AI Support Helpdesk - Zion Tech Group"
+      <SEO title = "AI Support Helpdesk - Zion Tech Group"
         description="Professional AI-powered support helpdesk platform with intelligent chatbots, multi-channel support, and advanced analytics for exceptional customer service."
         canonical="/services/ai-support-helpdesk"
-      />
+       />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
@@ -195,7 +190,7 @@ export { AISupportHelpdesk }(...args[]):  {
               <motion.div
                 initial = {
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -215,25 +210,25 @@ export { AISupportHelpdesk }(...args[]):  {
 }}
                 transition={{ duration: 0.6 }}
 
-                <h1 className="text-5xl md:text-6xl font-bold mb-6">
+                <h1 className="text-5xl md: tex t-6xl font-bold mb-6">
                   <span className="bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-400 bg-clip-text text-transparent">
                     AI Support Helpdesk
                   </span>
                 </h1>
-                <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                <p className="text-xl md: tex t-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                   Professional AI-powered support helpdesk platform with intelligent chatbots, multi-channel support,
                   and advanced analytics for exceptional customer service. Transform your support operations with AI.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm: fle x-row gap-4 justify-center">
                   <Link
                     to="/request-quote"
-                    className="px-8 py-4 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-lg font-semibold hover:from-teal-600 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
+                    className="px-8 py-4 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-lg font-semibold hover: fro m-teal-600 hover: t o-cyan-700 transition-all duration-300 transform hover: scal e-105"
 
                     Start Free Trial
                   </Link>
                   <Link
                     to="/contact"
-                    className="px-8 py-4 border-2 border-teal-500 text-teal-400 rounded-lg font-semibold hover:bg-teal-500 hover:text-white transition-all duration-300"
+                    className="px-8 py-4 border-2 border-teal-500 text-teal-400 rounded-lg font-semibold hover: b g-teal-500 hover: tex t-white transition-all duration-300"
 
                     Schedule Demo
                   </Link>
@@ -255,13 +250,13 @@ export { AISupportHelpdesk }(...args[]):  {
               </p>
             </div>
             
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md: gri d-cols-2 lg: gri d-cols-3 gap-8">
               {features.map((feature, index)  => (
                 <motion.div
                   key={index}
                   initial = {
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -281,7 +276,7 @@ export { AISupportHelpdesk }(...args[]):  {
 }}
                   transition = {
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -289,7 +284,7 @@ export { AISupportHelpdesk }(...args[]):  {
 
 
 }}
-                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-teal-500 transition-all duration-300"
+                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover: borde r-teal-500 transition-all duration-300"
 
                   <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
@@ -314,13 +309,13 @@ export { AISupportHelpdesk }(...args[]):  {
               </p>
             </div>
             
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md: gri d-cols-2 lg: gri d-cols-3 gap-8">
               {aiCapabilities.map((capability, index)  => (
                 <motion.div
                   key={index}
                   initial = {
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -340,7 +335,7 @@ export { AISupportHelpdesk }(...args[]):  {
 }}
                   transition = {
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -348,7 +343,7 @@ export { AISupportHelpdesk }(...args[]):  {
 
 
 }}
-                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-500 transition-all duration-300"
+                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover: borde r-cyan-500 transition-all duration-300"
 
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                     <capability.icon className="w-6 h-6 text-white" />
@@ -373,13 +368,13 @@ export { AISupportHelpdesk }(...args[]):  {
               </p>
             </div>
             
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md: gri d-cols-2 lg: gri d-cols-3 gap-8">
               {supportChannels.map((channel, index)  => (
                 <motion.div
                   key={index}
                   initial = {
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -399,7 +394,7 @@ export { AISupportHelpdesk }(...args[]):  {
 }}
                   transition = {
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -407,7 +402,7 @@ export { AISupportHelpdesk }(...args[]):  {
 
 
 }}
-                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-teal-500 transition-all duration-300"
+                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover: borde r-teal-500 transition-all duration-300"
 
                   <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
                     <channel.icon className="w-6 h-6 text-white" />
@@ -432,13 +427,13 @@ export { AISupportHelpdesk }(...args[]):  {
               </p>
             </div>
             
-            <div className="grid md: grid-cols-2 gap-8">
+            <div className="grid md: gri d-cols-2 gap-8">
               {benefits.map((benefit, index)  => (
                 <motion.div
                   key={index}
                   initial = {
   { opacity: 0,
-  x: index % 2 === 0 ? -20 : 20 
+  x: inde x % 2 === 0 ? -20 : 20 
 
 
 
@@ -458,7 +453,7 @@ export { AISupportHelpdesk }(...args[]):  {
 }}
                   transition = {
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -493,13 +488,13 @@ export { AISupportHelpdesk }(...args[]):  {
               </p>
             </div>
             
-            <div className="grid md: grid-cols-3 gap-8">
+            <div className="grid md: gri d-cols-3 gap-8">
               {pricingPlans.map((plan, index)  => (
                 <motion.div
                   key={index}
                   initial = {
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -519,7 +514,7 @@ export { AISupportHelpdesk }(...args[]):  {
 }}
                   transition = {
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -553,7 +548,7 @@ export { AISupportHelpdesk }(...args[]):  {
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center space-x-3">
-                        <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0"  />
                         <span className="text-gray-300">{feature}</span>
                       </li>
                     ))}
@@ -563,8 +558,8 @@ export { AISupportHelpdesk }(...args[]):  {
                     to="/request-quote"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-teal-500 to-cyan-600 text-white hover:from-teal-600 hover:to-cyan-700'
-                        : 'bg-slate-700 text-white hover:bg-slate-600'
+                        ? 'bg-gradient-to-r from-teal-500 to-cyan-600 text-white hover: fro m-teal-600 hover: t o-cyan-700'
+                        : 'bg-slate-700 text-white hover: b g-slate-600'
                     }`}
 
                     Get Started
@@ -581,7 +576,7 @@ export { AISupportHelpdesk }(...args[]):  {
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -607,16 +602,16 @@ export { AISupportHelpdesk }(...args[]):  {
               <p className="text-xl text-gray-300 mb-8">
                 Join thousands of businesses using our AI platform to deliver exceptional customer service.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: fle x-row gap-4 justify-center">
                 <Link
                   to="/request-quote"
-                  className="px-8 py-4 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-lg font-semibold hover:from-teal-600 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
+                  className="px-8 py-4 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-lg font-semibold hover: fro m-teal-600 hover: t o-cyan-700 transition-all duration-300 transform hover: scal e-105"
 
                   Start Free Trial
                 </Link>
                 <Link
                   to="/contact"
-                  className="px-8 py-4 border-2 border-teal-500 text-teal-400 rounded-lg font-semibold hover:bg-teal-500 hover:text-white transition-all duration-300"
+                  className="px-8 py-4 border-2 border-teal-500 text-teal-400 rounded-lg font-semibold hover: b g-teal-500 hover: tex t-white transition-all duration-300"
 
                   Contact Sales
                 </Link>

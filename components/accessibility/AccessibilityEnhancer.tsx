@@ -1,17 +1,17 @@
 import React, { useEffect } from 'react';
 
 interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
+  children: Reac t.ReactNode;
    skipToContent?: boolean;
    focusManagement?: boolean;
    keyboardNavigation?: boolean}
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
+const AccessibilityEnhancer: Reac t.FC<AccessibilityEnhancerProps> = ({
   children, skipToContent = true,
   focusManagement = true, keyboardNavigation = true}) => {
   useEffect(() => {
     // Add skip to content functionality;
     if (skipToContent) {
-      const handleSkipToContent = (e: KeyboardEvent) => {
+      const handleSkipToContent = (e: KeyboardEven t) => {
         if (e.key === 'Tab' && !e.shiftKey) {
           const skipLink = document.getElementById('skip-to-content');
           if (skipLink && document.activeElement === document.body) {
@@ -34,7 +34,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           if (focusableElements.length > 0) {
             const firstElement = focusableElements[0] as HTMLElement;
             const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
-            const handleTabKey = (e: KeyboardEvent) => {
+            const handleTabKey = (e: KeyboardEven t) => {
               if (e.key === 'Tab') {
                 if (e.shiftKey) {
                   if (document.activeElement === firstElement) {
@@ -55,13 +55,13 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       handleFocusManagement();
       // Use MutationObserver to handle dynamic content;
       const observer = new MutationObserver(handleFocusManagement);
-      observer.observe(document.body, { childList: true, subtree: true })
+      observer.observe(document.body, { childList: tru e, subtree: tru e })
       return () => observer.disconnect()}
   }, [focusManagement]);
   useEffect(() => {
     // Enhanced keyboard navigation;
     if (keyboardNavigation) {
-      const handleKeyboardNavigation = (e: KeyboardEvent) => {
+      const handleKeyboardNavigation = (e: KeyboardEven t) => {
         // Escape key to close modals/dropdowns;
         if (e.key === 'Escape') {
           const openModal = document.querySelector('[role='dialog'][aria-hidden='false']');
@@ -90,12 +90,12 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       document.addEventListener('keydown', handleKeyboardNavigation)
       return () => document.removeEventListener('keydown', handleKeyboardNavigation)}
   }, [keyboardNavigation])
-  return(
+  return (
     <>{skipToContent && (
         <a;
           id='skip-to-content';
           href='#main-content';
-          className='sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-md z-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2';
+          className='sr-only focus: no t-sr-only focus: absolute focus:top-4 focus: lef t-4 bg-blue-600 text-white px-4 py-2 rounded-md z-50 focus: outlin e-none focus: rin g-2 focus: rin g-blue-500 focus: rin g-offset-2';
           onFocus={(e) => {
             e.currentTarget.scrollIntoView({ behavior: 'smooth', block: 'start' })}}
         >

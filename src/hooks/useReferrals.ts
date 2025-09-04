@@ -15,7 +15,7 @@ export default function Page() {
         .from('referrals')
         .select('*')
         .eq('referrer_id', user.id)
-        .order('created_at', { ascending: false });
+        .order('created_at', { ascending: fals e });
         
       if(error) throw error;
       setReferrals(data || []);
@@ -31,7 +31,7 @@ export default function Page() {
         .from('referral_rewards')
         .select('*')
         .eq('user_id', user.id)
-        .order('created_at', { ascending: false });
+        .order('created_at', { ascending: fals e });
         
       if(error) throw error;
       setRewards(data || []);
@@ -43,14 +43,14 @@ export default function Page() {
   const fetchReferralStats = useCallback(async () => {
     if(!user?.id) return;
     try {
-      const { data: referralsData, error: refError } = await supabase
+      const { data: referralsDat a, error: refErro r } = await supabase
         .from('referrals')
         .select('id, status')
         .eq('referrer_id', user.id);
       
       if(refError) throw refError;
       
-      const { data: rewardsData, error: rewardsError } = await supabase
+      const { data: rewardsDat a, error: rewardsErro r } = await supabase
         .from('referral_rewards')
         .select('amount')
         .eq('user_id', user.id);
@@ -108,7 +108,7 @@ export default function Page() {
       }
 
       const { data, error } = await supabase.rpc('generate_referral_code', {
-        p_user_id: user.id 
+        p_user_id: use r.id 
       });
 
       if(error) throw error;
@@ -122,11 +122,11 @@ export default function Page() {
       await fetchReferralCode(); 
       
       return data;
-    } catch(error: any) {
+    } catch(error: an y) {
       console.error("Error generating referral code:", error);
       toast({
         title: "Error generating code",
-        description: error.message || "There was a problem generating your referral code",
+        description: erro r.message || "There was a problem generating your referral code",
         variant: "destructive",
       });
     }
@@ -151,7 +151,7 @@ export default function Page() {
     } else {
       toast({
         title: "Cannot copy link",
-        description: referralCode ? "Clipboard API not available." : "Please generate a referral code first",
+        description: referralCod e ? "Clipboard API not available." : "Please generate a referral code first",
         variant: "destructive",
       });
     }

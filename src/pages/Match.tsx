@@ -1,29 +1,29 @@
 import React from 'react';
-const Match: React.FC = () => {;''''
+const Match: Reac t.FC = () => {;''''
   const [selectedCategory, setSelectedCategory] = useState('all');''''
   const [searchQuery, setSearchQuery] = useState('');'
 ''
   '''
-    { id: 'all', name: 'All Categories', icon: Sparkles, count: 150 },;'''
-    { id: 'ai', name: 'AI Services', icon: Brain, count: 45 },;'''
-    { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: 32 },;'''
-    { id: 'security', name: 'Cybersecurity', icon: Shield, count: 28 },;'''
-    { id: 'data', name: 'Data & Analytics', icon: Database, count: 25 },;'''
-    { id: 'iot', name: 'IoT & Edge', icon: Cpu, count: 20 };
+    { id: 'all', name: 'All Categories', icon: Sparkle s, count: 15 0 },;'''
+    { id: 'ai', name: 'AI Services', icon: Brai n, count: 4 5 },;'''
+    { id: 'cloud', name: 'Cloud & DevOps', icon: Clou d, count: 3 2 },;'''
+    { id: 'security', name: 'Cybersecurity', icon: Shiel d, count: 2 8 },;'''
+    { id: 'data', name: 'Data & Analytics', icon: Databas e, count: 2 5 },;'''
+    { id: 'iot', name: 'IoT & Edge', icon: Cp u, count: 2 0 };
   ];
 
-  const matchedServices: unknown = [{}
+  const matchedServices: unknow n = [{}
       id: 1,
       name: "AI Business Intelligence",""""
       category: "ai",""""
       description: "Transform raw data into actionable insights with our advanced AI-powered analytics platform.",
       rating: 4.9,"""
-      reviews: 127,""""
+      reviews: 12 7,""""
       price: "$2,999/mo",""""
       features: ["Predictive Analytics", "Real-time Dashboards", "Custom AI Models", "Data Visualization"],
-      matchScore: 98,
-      icon: Brain,
-      featured: true;
+      matchScore: 9 8,
+      icon: Brai n,
+      featured: tru e;
     },
     {}
 """
@@ -32,12 +32,12 @@ const Match: React.FC = () => {;''''
       category: "cloud",""""
       description: "Streamline your development and operations with intelligent automation and CI/CD pipelines.",
       rating: 4.8,"""
-      reviews: 89,""""
+      reviews: 8 9,""""
       price: "$1,999/mo",""""
       features: ["CI/CD Pipelines", "Infrastructure as Code", "Monitoring & Alerting", "Auto-scaling"],
-      matchScore: 95,
-      icon: Cloud,
-      featured: false;
+      matchScore: 9 5,
+      icon: Clou d,
+      featured: fals e;
     },
     {}
 """
@@ -46,12 +46,12 @@ const Match: React.FC = () => {;''''
       category: "security",""""
       description: "Protect your digital assets with AI-powered threat detection and response systems.",
       rating: 4.9,"""
-      reviews: 156,""""
+      reviews: 15 6,""""
       price: "$3,499/mo",""""
       features: ["Threat Detection", "Behavioral Analysis", "Incident Response", "Risk Assessment"],
-      matchScore: 92,
-      icon: Shield,
-      featured: true;
+      matchScore: 9 2,
+      icon: Shiel d,
+      featured: tru e;
     },
     {}
 """
@@ -60,12 +60,12 @@ const Match: React.FC = () => {;''''
       category: "data",""""
       description: "Unlock the full potential of your data with advanced analytics and business intelligence.",
       rating: 4.7,"""
-      reviews: 73,""""
+      reviews: 7 3,""""
       price: "$1,799/mo",""""
       features: ["Data Mining", "Pattern Recognition", "Custom Reports", "Real-time Insights"],
-      matchScore: 90,
-      icon: Database,
-      featured: false;
+      matchScore: 9 0,
+      icon: Databas e,
+      featured: fals e;
     },
     {}
 """
@@ -74,12 +74,12 @@ const Match: React.FC = () => {;''''
       category: "iot",""""
       description: "Build and deploy intelligent IoT solutions with edge computing capabilities.",
       rating: 4.8,"""
-      reviews: 94,""""
+      reviews: 9 4,""""
       price: "$2,499/mo",""""
       features: ["Edge Processing", "Real-time Analytics", "Device Management", "Security"],
-      matchScore: 88,
-      icon: Cpu,
-      featured: false;
+      matchScore: 8 8,
+      icon: Cp u,
+      featured: fals e;
     },
     {}
 """
@@ -88,11 +88,11 @@ const Match: React.FC = () => {;''''
       category: "ai",""""
       description: "Automate complex business processes with intelligent AI workflows and decision engines.",
       rating: 4.9,"""
-      reviews: 112,;""""
+      reviews: 11 2,;""""
       price: "$2,799/mo",;"      features: ["Process Automation", "Smart Routing", "Exception Handling", "Performance Analytics"],;
-      matchScore: 87,;
-      icon: Zap,;
-      featured: true;
+      matchScore: 8 7,;
+      icon: Za p,;
+      featured: tru e;
     };
   ];
 
@@ -103,7 +103,7 @@ const Match: React.FC = () => {;''''
       <SEO """"
         title="AI Service Matcher - Zion Tech Group"""""
         description="Find the perfect AI and technology services for your business with our intelligent matching algorithm. Get personalized recommendations based on your needs.""        keywords="AI service matcher, technology matching, business solutions, Zion Tech Group"""
-       />
+        />
 """
       {/* Hero Section */}""""
       <section className="relative py-20 overflow-hidden">""""
@@ -112,7 +112,7 @@ const Match: React.FC = () => {;''''
           <motion.div;
             initial = {}
   { opacity: 0,
-  y: 30;
+  y: 3 0;
 }}
             animate = {}
   { opacity: 1,
@@ -123,32 +123,32 @@ const Match: React.FC = () => {;''''
 """"
             <div className="flex items-center justify-center mb-6">""""
               <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mr-4">""""
-                <Sparkles className="w-8 h-8 text-white"  />"""
+                <Sparkles className="w-8 h-8 text-white"   />"""
               </div>"              <h1 className="text-4xl font-bold text-white">AI Service Matcher</h1>
             </div>"""
 """"
-            <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">"""
+            <h2 className="text-5xl md: tex t-6xl font-bold text-white mb-6 leading-tight">"""
               Find Your Perfect""""
               <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 Technology Match;
               </span>
             </h2>"""
 """"
-            <p className="text-xl md:text-2xl text-slate-300 mb-8 leading-relaxed">
+            <p className="text-xl md: tex t-2xl text-slate-300 mb-8 leading-relaxed">
               Our AI-powered matching algorithm analyzes your business needs and connects you;
               with the perfect technology solutions. Get personalized recommendations in seconds.
             </p>"""
 """"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"""
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">"""
               <Link""""
                 to="/contact""""
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/25"""
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover: fro m-cyan-400 hover: t o-blue-500 transition-all duration-200 hover: scal e-105 shadow-lg shadow-cyan-500/25"""
 """
                 Get Matched""""
-                <ArrowRight className="ml-2 w-5 h-5"  />              </Link>"""
+                <ArrowRight className="ml-2 w-5 h-5"   />              </Link>"""
               <Link""""
                 to="/services""""
-                className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"""
+                className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover: b g-cyan-400/10 transition-all duration-200"""
                 Browse All Services;
               </Link>
             </div>
@@ -162,12 +162,12 @@ const Match: React.FC = () => {;''''
           <div className="max-w-4xl mx-auto">"""
             {/* Search Bar */}""""
             <div className="relative mb-8">""""
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400"  />"""
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400"   />"""
               <input""""
                 type="text""                placeholder="Search for services, features, or use cases..."""
                 value={searchQuery}"""
                 onChange={(e) => setSearchQuery(e.target.value)}""""
-                className="w-full pl-12 pr-4 py-4 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-200"""
+                className="w-full pl-12 pr-4 py-4 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white placeholder-slate-400 focus: outlin e-none focus: borde r-cyan-400 focus: rin g-2 focus: rin g-cyan-400/20 transition-all duration-200"""
               />
             </div>
 """
@@ -181,13 +181,12 @@ const Match: React.FC = () => {;''''
 '
                     selectedCategory === category.id''
                       ? 'bg-cyan-500 text-white shadow-lg shadow-cyan-500/25'''`
-                      : 'bg-slate-700/50 text-slate-300 hover:bg-slate-600/50 hover:text-white border border-slate-600/50'``
+                      : 'bg-slate-700/50 text-slate-300 hover: b g-slate-600/50 hover: tex t-white border border-slate-600/50'``
                   }`}"""
 """"
                   <category.icon className="w-4 h-4" />"""
                   {category.name}""""
-                  <span className="text-xs bg-white/20 px-2 py-1 rounded-full">;
-                    {category.count}
+                  <span className="text-xs bg-white/20 px-2 py-1 rounded-full"> {category.count}
                   </span>;
                 </button>) ) }
             </div>
@@ -201,7 +200,7 @@ const Match: React.FC = () => {;''''
           <motion.div;
             initial = {}
   { opacity: 0,
-  y: 30;
+  y: 3 0;
 }}
             whileInView = {}
   { opacity: 1,
@@ -219,13 +218,13 @@ const Match: React.FC = () => {;''''
             </p>
           </motion.div>"""
 """"
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
             {filteredServices.map((service, index) => (
               <motion.div;
                 key={service.id}
                 initial = {}
   { opacity: 0,
-  y: 30;
+  y: 3 0;
 }}
                 whileInView = {}
   { opacity: 1,
@@ -233,10 +232,10 @@ const Match: React.FC = () => {;''''
 }}
                 transition = {}
   { duration: 0.6,
-  delay: index * 0.1;
+  delay: inde x * 0.1;
 `
 }}``
-                className={`bg-slate-800/50 border rounded-xl p-6 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 ${}
+                className={`bg-slate-800/50 border rounded-xl p-6 hover: borde r-cyan-400/50 transition-all duration-300 hover: scal e-105 ${}
 '`
                   service.featured ? 'border-cyan-400/30 bg-gradient-to-br from-cyan-400/5 to-blue-500/5' : 'border-slate-700/50'``
                 }`}
@@ -249,7 +248,7 @@ const Match: React.FC = () => {;''''
                   <div className="text-right">"""
                     {service.featured && (""""
                       <div className="flex items-center mb-2">""""
-                        <Star className="w-4 h-4 text-yellow-400 mr-1"  />"                        <span className="text-yellow-400 text-xs font-semibold">Featured</span>
+                        <Star className="w-4 h-4 text-yellow-400 mr-1"   />"                        <span className="text-yellow-400 text-xs font-semibold">Featured</span>
                       </div>"""
                     )}""""
                     <div className="bg-cyan-500 text-white text-xs font-bold px-2 py-1 rounded-full">
@@ -267,7 +266,7 @@ const Match: React.FC = () => {;''''
                   <div className="flex items-center">""""
                     <div className="flex items-center text-yellow-400 mr-2">'`
                       {[...Array(5)].map((_, i) => ('`'`
-                        <Star key={i} className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'fill-current' : ''}`}  />                      ))}"""
+                        <Star key={i} className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'fill-current' : ''}`}   />                      ))}"""
                     </div>""""
                     <span className="text-slate-400 text-sm">{service.rating} ({service.reviews})</span>"""
                   </div>""""
@@ -278,7 +277,7 @@ const Match: React.FC = () => {;''''
                 <div className="space-y-2 mb-6">"""
                   {service.features.slice(0, 3).map((feature, featureIndex) => (""""
                     <div key={featureIndex} className="flex items-center text-sm text-slate-400">""""
-                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0"  />                      {feature}
+                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0"   />                      {feature}
                     </div>
                   ))}"""
                   {service.features.length > 3 && (""""
@@ -300,12 +299,12 @@ const Match: React.FC = () => {;''''
 `
 `"`
 }`}""""
-                    className="flex-1 inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200"""
+                    className="flex-1 inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium rounded-lg hover: fro m-cyan-400 hover: t o-blue-500 transition-all duration-200"""
                     Learn More;
                   </Link>"""
                   <Link""""
                     to="/contact""""
-                    className="inline-flex items-center justify-center px-4 py-2 border border-cyan-400/30 text-cyan-400 text-sm font-medium rounded-lg hover:bg-cyan-400/10 transition-all duration-200"""
+                    className="inline-flex items-center justify-center px-4 py-2 border border-cyan-400/30 text-cyan-400 text-sm font-medium rounded-lg hover: b g-cyan-400/10 transition-all duration-200"""
                     Contact;
                   </Link>
                 </div>
@@ -319,7 +318,7 @@ const Match: React.FC = () => {;''''
               className="text-center py-16""""
 """"
               <div className="w-24 h-24 bg-slate-700/50 rounded-full flex items-center justify-center mx-auto mb-6">""""
-                <Search className="w-12 h-12 text-slate-400"  />"""
+                <Search className="w-12 h-12 text-slate-400"   />"""
               </div>""""
               <h3 className="text-2xl font-bold text-white mb-4">No matches found</h3>""""
               <p className="text-slate-300 mb-6">
@@ -327,10 +326,10 @@ const Match: React.FC = () => {;''''
               </p>"""
               <Link""""
                 to="/services""""
-                className="inline-flex items-center px-6 py-3 bg-cyan-500 text-white font-medium rounded-lg hover:bg-cyan-400 transition-all duration-200"""
+                className="inline-flex items-center px-6 py-3 bg-cyan-500 text-white font-medium rounded-lg hover: b g-cyan-400 transition-all duration-200"""
 """
                 Browse All Services""""
-                <ArrowRight className="ml-2 w-4 h-4"  />              </Link>;
+                <ArrowRight className="ml-2 w-4 h-4"   />              </Link>;
             </motion.div>) }
         </div>
       </section>
@@ -341,7 +340,7 @@ const Match: React.FC = () => {;''''
           <motion.div;
             initial = {}
   { opacity: 0,
-  y: 30;
+  y: 3 0;
 }}
             whileInView = {}
   { opacity: 1,
@@ -359,7 +358,7 @@ const Match: React.FC = () => {;''''
             </p>
           </motion.div>"""
 """"
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md: gri d-cols-3 gap-8 max-w-4xl mx-auto">
             {[]
               {}
 """
@@ -367,7 +366,7 @@ const Match: React.FC = () => {;''''
                 step: "01",""""
                 title: "Analyze Your Needs",""""
                 description: "Our AI analyzes your business profile, industry, and specific requirements.",
-                icon: Brain;
+                icon: Brai n;
               },
               {}
 """
@@ -375,7 +374,7 @@ const Match: React.FC = () => {;''''
                 step: "02",""""
                 title: "Match with Services",""""
                 description: "We match you with services that best fit your needs and budget.",
-                icon: Target;
+                icon: Targe t;
               },
               {}
 """
@@ -383,13 +382,13 @@ const Match: React.FC = () => {;''''
                 step: "03",""""
                 title: "Get Recommendations",""""
                 description: "Receive personalized recommendations with match scores and detailed analysis.",
-                icon: Sparkles;
+                icon: Sparkle s;
             ].map((step, index) => (;
               <motion.div;
                 key={index}
                 initial = {}
   { opacity: 0,
-  y: 30;
+  y: 3 0;
 }}
                 whileInView = {}
   { opacity: 1,
@@ -397,7 +396,7 @@ const Match: React.FC = () => {;''''
 }}
                 transition = {}
   { duration: 0.6,
-  delay: index * 0.1;
+  delay: inde x * 0.1;
 """
 }}""""
                 className="text-center""""
@@ -420,7 +419,7 @@ const Match: React.FC = () => {;''''
           <motion.div;
             initial = {}
   { opacity: 0,
-  y: 30;
+  y: 3 0;
 }}
             whileInView = {}
   { opacity: 1,
@@ -436,16 +435,16 @@ const Match: React.FC = () => {;''''
               Get started today and discover services tailored to your needs.
             </p>"""
 """"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"""
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">"""
               <Link""""
                 to="/contact""""
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/25"""
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover: fro m-cyan-400 hover: t o-blue-500 transition-all duration-200 hover: scal e-105 shadow-lg shadow-cyan-500/25"""
 """
                 Start Matching""""
-                <ArrowRight className="ml-2 w-5 h-5"  />              </Link>"""
+                <ArrowRight className="ml-2 w-5 h-5"   />              </Link>"""
               <Link""""
                 to="/services""""
-                className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"""
+                className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover: b g-cyan-400/10 transition-all duration-200"""
               >
                 Browse All Services;
               </Link>;

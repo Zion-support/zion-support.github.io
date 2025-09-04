@@ -27,15 +27,15 @@ interface AccessibilityEnhancerProps {
 
 export function AccessibilityEnhancer({ enabled = true, showSettings = true }: AccessibilityEnhancerProps) {
   const [settings, setSettings] = useState<AccessibilitySettings>({
-    fontSize: 16,
-    highContrast: false,
-    largeText: false,
-    reducedMotion: false,
-    highSaturation: false,
+    fontSize: 1 6,
+    highContrast: fals e,
+    largeText: fals e,
+    reducedMotion: fals e,
+    highSaturation: fals e,
     lineHeight: 1.5,
     letterSpacing: 0,
-    keyboardNavigation: true,
-    screenReader: true
+    keyboardNavigation: tru e,
+    screenReader: tru e
   });
 
   const [isOpen, setIsOpen] = useState(false);
@@ -88,7 +88,7 @@ export function AccessibilityEnhancer({ enabled = true, showSettings = true }: A
   useEffect(() => {
     if (!enabled || !settings.keyboardNavigation) return;
 
-    const handleKeyDown = (event: KeyboardEvent) => {
+    const handleKeyDown = (event: KeyboardEven t) => {
       const target = event.target as HTMLElement;
       
       // Tab navigation enhancement
@@ -143,12 +143,12 @@ export function AccessibilityEnhancer({ enabled = true, showSettings = true }: A
       // Add focus indicators
       if (!el.hasAttribute('data-accessibility-enhanced')) {
         el.setAttribute('data-accessibility-enhanced', 'true');
-        el.classList.add('focus-visible:outline-2', 'focus-visible:outline-blue-500', 'focus-visible:outline-offset-2');
+        el.classList.add('focus-visible: outlin e-2', 'focus-visible: outlin e-blue-500', 'focus-visible: outlin e-offset-2');
       }
     });
   }, [enabled]);
 
-  const updateSetting = (key: keyof AccessibilitySettings, value: any) => {
+  const updateSetting = (key: keyof AccessibilitySettings, value: an y) => {
     setSettings(prev => ({
       ...prev,
       [key]: value
@@ -163,22 +163,22 @@ export function AccessibilityEnhancer({ enabled = true, showSettings = true }: A
       {showSettings && (
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="fixed bottom-4 left-16 z-50 p-3 bg-blue-500 hover:bg-blue-600 text-white rounded-full shadow-lg transition-all duration-200 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
+          className="fixed bottom-4 left-16 z-50 p-3 bg-blue-500 hover: b g-blue-600 text-white rounded-full shadow-lg transition-all duration-200 hover: scal e-110 focus: outlin e-none focus: rin g-2 focus: rin g-blue-400 focus: rin g-offset-2"
           aria-label="Accessibility Settings"
           title="Accessibility Settings"
         >
-          <AccessibilityIcon className="w-6 h-6" />
+          <AccessibilityIcon className="w-6 h-6"  />
         </button>
       )}
 
       {/* Accessibility Panel */}
       {isOpen && showSettings && (
-        <div className="fixed bottom-20 left-4 z-40 w-80 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 p-6">
+        <div className="fixed bottom-20 left-4 z-40 w-80 bg-white dark: b g-gray-800 rounded-lg shadow-xl border border-gray-200 dark: borde r-gray-700 p-6">
           <div className="flex items-center justify-between mb-4">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Accessibility</h3>
+            <h3 className="text-lg font-semibold text-gray-900 dark: tex t-white">Accessibility</h3>
             <button
               onClick={() => setIsOpen(false)}
-              className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+              className="text-gray-400 hover: tex t-gray-600 dark: hove r:text-gray-300"
             >
               ×
             </button>
@@ -187,19 +187,19 @@ export function AccessibilityEnhancer({ enabled = true, showSettings = true }: A
           <div className="space-y-4">
             {/* Font Size */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              <label className="block text-sm font-medium text-gray-700 dark: tex t-gray-300 mb-2">
                 Font Size: {settings.fontSize}px
               </label>
               <div className="flex items-center gap-2">
                 <button
                   onClick={() => updateSetting('fontSize', Math.max(settings.fontSize - 2, 12))}
-                  className="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded hover:bg-gray-300 dark:hover:bg-gray-600"
+                  className="px-3 py-1 bg-gray-200 dark: b g-gray-700 text-gray-700 dark: tex t-gray-300 rounded hover: b g-gray-300 dark: hove r:bg-gray-600"
                 >
                   A-
                 </button>
                 <button
                   onClick={() => updateSetting('fontSize', Math.min(settings.fontSize + 2, 24))}
-                  className="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded hover:bg-gray-300 dark:hover:bg-gray-600"
+                  className="px-3 py-1 bg-gray-200 dark: b g-gray-700 text-gray-700 dark: tex t-gray-300 rounded hover: b g-gray-300 dark: hove r:bg-gray-600"
                 >
                   A+
                 </button>
@@ -215,7 +215,7 @@ export function AccessibilityEnhancer({ enabled = true, showSettings = true }: A
                   onChange={(e) => updateSetting('highContrast', e.target.checked)}
                   className="mr-2"
                 />
-                <span className="text-sm text-gray-700 dark:text-gray-300">High Contrast</span>
+                <span className="text-sm text-gray-700 dark: tex t-gray-300">High Contrast</span>
               </label>
             </div>
 
@@ -228,7 +228,7 @@ export function AccessibilityEnhancer({ enabled = true, showSettings = true }: A
                   onChange={(e) => updateSetting('largeText', e.target.checked)}
                   className="mr-2"
                 />
-                <span className="text-sm text-gray-700 dark:text-gray-300">Large Text</span>
+                <span className="text-sm text-gray-700 dark: tex t-gray-300">Large Text</span>
               </label>
             </div>
 
@@ -241,7 +241,7 @@ export function AccessibilityEnhancer({ enabled = true, showSettings = true }: A
                   onChange={(e) => updateSetting('reducedMotion', e.target.checked)}
                   className="mr-2"
                 />
-                <span className="text-sm text-gray-700 dark:text-gray-300">Reduced Motion</span>
+                <span className="text-sm text-gray-700 dark: tex t-gray-300">Reduced Motion</span>
               </label>
             </div>
 
@@ -254,7 +254,7 @@ export function AccessibilityEnhancer({ enabled = true, showSettings = true }: A
                   onChange={(e) => updateSetting('keyboardNavigation', e.target.checked)}
                   className="mr-2"
                 />
-                <span className="text-sm text-gray-700 dark:text-gray-300">Enhanced Keyboard Navigation</span>
+                <span className="text-sm text-gray-700 dark: tex t-gray-300">Enhanced Keyboard Navigation</span>
               </label>
             </div>
 
@@ -267,7 +267,7 @@ export function AccessibilityEnhancer({ enabled = true, showSettings = true }: A
                   onChange={(e) => updateSetting('screenReader', e.target.checked)}
                   className="mr-2"
                 />
-                <span className="text-sm text-gray-700 dark:text-gray-300">Screen Reader Support</span>
+                <span className="text-sm text-gray-700 dark: tex t-gray-300">Screen Reader Support</span>
               </label>
             </div>
           </div>

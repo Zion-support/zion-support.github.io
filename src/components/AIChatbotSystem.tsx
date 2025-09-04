@@ -19,7 +19,7 @@ interface ChatMessage {
   id: string;
   content: string;
   sender: 'user' | 'bot';
-  timestamp: Date;
+  timestamp: Dat e;
   type: 'text';
   status: 'sent';
   metadata?: {
@@ -37,7 +37,7 @@ interface AIChatbotSystemProps {
   autoScroll?: boolean;
 }
 
-export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
+export const AIChatbotSystem: Reac t.FC<AIChatbotSystemProps> = ({
   showHeader = true,
   showSettings = true,
   maxMessages = 50,
@@ -52,7 +52,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   // Sample welcome message
   useEffect(() => {
     if (isOpen && messages.length === 0) {
-      const welcomeMessage: ChatMessage = {
+      const welcomeMessage: ChatMessag e = {
         id: 'welcome',
         content: "Hello! I'm Zion AI, your intelligent assistant. I can help you with:\n\n• Information about our services\n• Technical support and guidance\n• Project inquiries and quotes\n• General questions about Zion Tech Group\n\nHow can I assist you today?",
         sender: 'bot',
@@ -104,17 +104,17 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
 
     const randomResponse = responses[Math.floor(Math.random() * responses.length)];
 
-    const botMessage: ChatMessage = {
-      id: Date.now().toString(),
-      content: randomResponse.content,
+    const botMessage: ChatMessag e = {
+      id: Dat e.now().toString(),
+      content: randomRespons e.content,
       sender: 'bot',
       timestamp: new Date(),
       type: 'text',
       status: 'sent',
       metadata: {
         confidence: 0.85 + Math.random() * 0.1,
-        suggestions: randomResponse.suggestions,
-        relatedServices: randomResponse.relatedServices,
+        suggestions: randomRespons e.suggestions,
+        relatedServices: randomRespons e.relatedServices,
         estimatedResponseTime: 1 + Math.random() * 2
       }
     };
@@ -124,13 +124,13 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   }, []);
 
   // Handle message submission
-  const handleSubmit = useCallback(async (e: React.FormEvent) => {
+  const handleSubmit = useCallback(async (e: Reac t.FormEvent) => {
     e.preventDefault();
     if (!inputValue.trim() || isTyping) return;
 
-    const userMessage: ChatMessage = {
-      id: Date.now().toString(),
-      content: inputValue.trim(),
+    const userMessage: ChatMessag e = {
+      id: Dat e.now().toString(),
+      content: inputValu e.trim(),
       sender: 'user',
       timestamp: new Date(),
       type: 'text',
@@ -149,11 +149,11 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
     }, []);
 
   // Handle file upload
-  const handleFileUpload = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileUpload = useCallback((e: Reac t.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
-      const fileMessage: ChatMessage = {
-        id: Date.now().toString(),
+      const fileMessage: ChatMessag e = {
+        id: Dat e.now().toString(),
         content: `Uploaded: ${file.name}`,
         sender: 'user',
         timestamp: new Date(),
@@ -179,21 +179,21 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
       {/* Chat Toggle Button */}
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-4 right-4 z-50 p-4 bg-cyan-500 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+        className="fixed bottom-4 right-4 z-50 p-4 bg-cyan-500 text-white rounded-full shadow-lg hover: shado w-xl transition-all duration-300 focus: outlin e-none focus: rin g-2 focus: rin g-cyan-500 focus: rin g-offset-2 focus: rin g-offset-gray-900"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         aria-label="Toggle AI chatbot"
       >
-        {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
+        {isOpen ? <X className="w-6 h-6"  /> : <MessageCircle className="w-6 h-6"  />}
       </button>
 
       {/* Chat Interface */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+            initial={{ opacity: 0, scale: 0.9, y: 2 0 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.9, y: 20 }}
+            exit={{ opacity: 0, scale: 0.9, y: 2 0 }}
             transition={{ duration: 0.3, ease: 'easeOut' }}
             className="fixed bottom-20 right-4 z-40 w-96 h-[600px] bg-gray-900/95 backdrop-blur-md border border-gray-700/50 rounded-xl shadow-2xl overflow-hidden"
           >
@@ -203,7 +203,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <div className="w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center">
-                      <Bot className="w-4 h-4 text-white" />
+                      <Bot className="w-4 h-4 text-white"  />
                     </div>
                     <div>
                       <h3 className="text-white font-semibold">Zion AI Assistant</h3>
@@ -212,15 +212,15 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                   </div>
                   <div className="flex items-center gap-2">
                     {showSettings && (
-                      <button className="p-2 text-gray-400 hover:text-white transition-colors">
-                        <Settings className="w-4 h-4" />
+                      <button className="p-2 text-gray-400 hover: tex t-white transition-colors">
+                        <Settings className="w-4 h-4"  />
                       </button>
                     )}
                     <button 
                       onClick={clearChat}
-                      className="p-2 text-gray-400 hover:text-white transition-colors"
+                      className="p-2 text-gray-400 hover: tex t-white transition-colors"
                     >
-                      <HelpCircle className="w-4 h-4" />
+                      <HelpCircle className="w-4 h-4"  />
                     </button>
                   </div>
                 </div>
@@ -232,7 +232,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
               {messages.map((message) => (
                 <motion.div
                   key={message.id}
-                  initial={{ opacity: 0, y: 10 }}
+                  initial={{ opacity: 0, y: 1 0 }}
                   animate={{ opacity: 1, y: 0 }}
                   className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
                 >
@@ -244,7 +244,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                           <button
                             key={index}
                             onClick={() => handleSuggestionClick(suggestion)}
-                            className="text-xs bg-gray-700 hover:bg-gray-600 text-gray-300 px-2 py-1 rounded transition-colors"
+                            className="text-xs bg-gray-700 hover: b g-gray-600 text-gray-300 px-2 py-1 rounded transition-colors"
                           >
                             {suggestion}
                           </button>
@@ -273,7 +273,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                 </motion.div>
               )}
 
-              <div ref={messagesEndRef} />
+              <div ref={messagesEndRef}  />
             </div>
 
             {/* Input Area */}
@@ -285,7 +285,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                     value={inputValue}
                     onChange={(e) => setInputValue(e.target.value)}
                     placeholder="Ask me anything about Zion Tech Group..."
-                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus: outlin e-none focus: rin g-2 focus: rin g-cyan-500 focus: borde r-transparent"
                     disabled={isTyping}
                   />
                 </div>
@@ -294,21 +294,21 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                 <button
                   type="submit"
                   disabled={!inputValue.trim() || isTyping}
-                  className="p-3 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="p-3 bg-cyan-500 text-white rounded-lg hover: b g-cyan-600 transition-colors disabled: opacit y-50 disabled: curso r-not-allowed"
                   aria-label="Send message"
                 >
-                  <Send className="w-4 h-4" />
+                  <Send className="w-4 h-4"  />
                 </button>
               </form>
 
               {/* Quick Actions */}
               <div className="flex items-center justify-between mt-3 text-xs text-gray-500">
                 <div className="flex items-center gap-2">
-                  <Sparkles className="w-3 h-3" />
+                  <Sparkles className="w-3 h-3"  />
                   <span>Powered by Zion AI</span>
                 </div>
                 <div className="flex items-center gap-1">
-                  <Clock className="w-3 h-3" />
+                  <Clock className="w-3 h-3"  />
                   <span>24/7 Available</span>
                 </div>
               </div>

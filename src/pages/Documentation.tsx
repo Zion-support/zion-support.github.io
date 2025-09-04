@@ -26,13 +26,13 @@ export default function Documentation() {
         <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">;"
           <div className="container mx-auto px-4">
             <motion.div;"
-              initial = "{{" opacity: 0, y: 20 }}"
+              initial = "{{" opacity: 0, y: 2 0 }}"
               animate="{{" opacity: 1, y: 0 }}"
               transition="{{" duration: 0.8   }}"
               transition="{{" duration: 0.8 }}"
               className="text-center max-w-4xl mx-auto">
             >;"
-              <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">,
+              <h1 className="text-5xl md: tex t-6xl font-bold text-white mb-6">,
                 Documentation,,
               </h1>,"
               <p className = "text-xl text-gray-300 mb-8">,
@@ -42,11 +42,11 @@ export default function Documentation() {
               {/* comment */}"
               <div className="max-w-2xl mx-auto">;"
                 <div className="relative">;"
-                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
+                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"   />
                   <input;"
                     type="text";"
                     placeholder="Search documentation...";"
-                    className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outlin e-none focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent">
                  />
                 </div>,
             </motion.div>,,
@@ -56,7 +56,7 @@ export default function Documentation() {
         <section className="py-16">;"
           <div className="container mx-auto px-4">
             <motion.div;"
-              initial = "{{" opacity: 0, y: 20 }}"
+              initial = "{{" opacity: 0, y: 2 0 }}"
               whileInView="{{" opacity: 1, y: 0 }}"
               transition="{{" duration: 0.8 }}"
               className="text-center mb-12">
@@ -67,7 +67,7 @@ export default function Documentation() {
               </p>
             </motion.div>
 "
-            <div className = "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,
+            <div className = "grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">,
               {docCategories.map((category, index) => (
                 <motion.div
   return (&quot>
@@ -83,19 +83,19 @@ export default function Documentation() {
         <section className="&quot;py-20" bg-gradient-to-r from-blue-600/20 to-purple-600/20&quot;>&quot;""
           <div className="&quot;container" mx-auto px-4&quot;>&quot;"
             <motion.div,"
-initial = "{{" opacity: 0, y: 20 }}"
+initial = "{{" opacity: 0, y: 2 0 }}"
               animate="{{" opacity: 1, y: 0 }}"
               transition="{{" duration: 0.8 }}"
               className="&quot;text-center" max-w-4xl mx-auto&quot>
             >&quot;"
-              <h1 className="&quot;text-5xl" md: text-6xl font-bold text-white mb-6&quot,>
+              <h1 className="&quot;text-5xl" md: tex t-6xl font-bold text-white mb-6&quot,>
                 Documentation&quot,"
-              initial = "{{" opacity: 0, y: 20 }"
+              initial = "{{" opacity: 0, y: 2 0 }"
               animate="{{" opacity: 1, y: 0 }"
               transition="{{" duration: 0.8 }"
               className="text-center max-w-4xl mx-auto"
             ></motion>"
-              <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
+              <h1 className="text-5xl md: tex t-6xl font-bold text-white mb-6">
                 Documentation,
               </h1>",
               <p className="&quot,text-xl" text-gray-300 mb-8&quot,>
@@ -105,14 +105,14 @@ to help you build amazing solutions with our platform&quot
               {/* comment */}"
               <div className="&quot;max-w-2xl" mx-auto&quot;>&quot;""
                 <div className="&quot;relative&quot;">&quot;""
-                  <Search className="&quot;absolute" left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5&quot;       />&quot;"
+                  <Search className="&quot;absolute" left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5&quot;        />&quot;"
                   <input type="&quot;text&quot;""
                     placeholder="&quot;Search" documentation...&quot;"
-                    className="&quot;w-full" pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focu,s: border-transparent&quot>
+                    className="&quot;w-full" pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outlin e-none focus: rin g-2 focus: rin g-blue-500 focu,s: borde r-transparent&quot>
                  />&quot,"
                     type = "text""
                     placeholder="Search documentation...""
-                    className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+                    className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outlin e-none focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent" />
                 </div>
             </motion.div>
           </div>
@@ -122,7 +122,7 @@ to help you build amazing solutions with our platform&quot
         <section className="&quot;py-16&quot;">&quot;""
           <div className="&quot;container" mx-auto px-4&quot;>&quot;"
             <motion.div,"
-initial = "{{" opacity: 0, y: 20 }}"
+initial = "{{" opacity: 0, y: 2 0 }}"
               whileInView="{{" opacity: 1, y: 0 }}"
               transition="{{" duration: 0.8   }}"
               transition="{{" duration: 0.8 }}"
@@ -131,7 +131,7 @@ initial = "{{" opacity: 0, y: 20 }}"
               <h2 className="&quot;text-4xl" font-bold text-white mb-4&quot;>Browse Documentation&quot;</h2>"
               <p className="&quot;text-xl" text-gray-300 max-w-3xl mx-auto&quot;>
                 Find the information you need organized by category and topic&quot;"
-              initial = "{{" opacity: 0, y: 20 }"
+              initial = "{{" opacity: 0, y: 2 0 }"
               whileInView="{{" opacity: 1, y: 0 }"
               transition="{{" duration: 0.8 }"
               className="text-center mb-12"
@@ -142,15 +142,15 @@ initial = "{{" opacity: 0, y: 20 }}"
               </p>
             </motion.div>
 "
-            <div className="&quot;grid" grid-cols-1 md:grid-cols-2 l,g: grid-cols-4 gap-8&quot,>
+            <div className="&quot;grid" grid-cols-1 md: gri d-cols-2 l,g: gri d-cols-4 gap-8&quot,>
               {docCategories.map((category, index) => (&quot}
 
                 <motion.div,"
 key = "{category.title}""
-                  initial="{{" opacity: 0, y: 20 }}"
+                  initial="{{" opacity: 0, y: 2 0 }}"
                   whileInView="{{" opacity: 1, y: 0 }}"
-                  transition="{{" duration: 0.8, delay: index * 0.1 }}"
-                  className="{"bg-gradient-to-br" from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover: border-cyan-400/50 transition-all duration-300 hover:scale-105 cursor-pointer">
+                  transition="{{" duration: 0.8, delay: inde x * 0.1 }}"
+                  className="{"bg-gradient-to-br" from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover: borde r-cyan-400/50 transition-all duration-300 hover: scal e-105 cursor-pointer">
                 >,"
                   <div className="{"w-16" h-16 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center mb-4"}>;"
                     <category.icon className=""w-8" h-8 text-white"} />
@@ -159,15 +159,15 @@ key = "{category.title}""
                   <p className="text-gray-300 text-sm mb-3">{category.description}</p>;"
                   <div className="flex items-center justify-between">;"
                     <span className="text-blue-400 text-sm">{category.articles} articles</span>;"
-                    <ArrowRight className="w-5 h-5 text-gray-400"  />
+                    <ArrowRight className="w-5 h-5 text-gray-400"   />
                   </div>
                 </motion.div>;"
-                  className="&quot;bg-gradient-to-br" from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hove,r: scale-105 cursor-pointer&quot,
+                  className="&quot;bg-gradient-to-br" from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover: borde r-cyan-400/50 transition-all duration-300 hove,r: scal e-105 cursor-pointer&quot,
                 >&quot,"
-                  initial = "{{" opacity: 0, y: 20 }"
+                  initial = "{{" opacity: 0, y: 2 0 }"
                   whileInView="{{" opacity: 1, y: 0 }"
-                  transition="{{" duration: 0.8, delay: index * 0.1 }"
-                  className="{"bg-gradient-to-br" from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover: border-cyan-400/50 transition-all duration-300 hover:scale-105 cursor-pointer"
+                  transition="{{" duration: 0.8, delay: inde x * 0.1 }"
+                  className="{"bg-gradient-to-br" from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover: borde r-cyan-400/50 transition-all duration-300 hover: scal e-105 cursor-pointer"
                 ></motion>",
                   <div className="{"w-16" h-16 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center mb-4"}>"
                     <category.icon className="&quot;w-8" h-8 text-white&quot; />&quot
@@ -176,12 +176,12 @@ key = "{category.title}""
                   <p className="&quot;text-gray-300" text-sm mb-3&quot;>{category.description}&quot;</p>"
                   <div className="&quot;flex" items-center justify-between&quot;>&quot;""
                     <span className="&quot;text-blue-400" text-sm&quot;>{category.articles} articles&quot;</span>"
-                    <ArrowRight className="&quot;w-5" h-5 text-gray-400&quot;       />&quot;"
+                    <ArrowRight className="&quot;w-5" h-5 text-gray-400&quot;        />&quot;"
                   <h3 className = ""}text-xl" font-bold text-white mb-2"></h>{category.title}</h3>"
                   <p className="text-gray-300 text-sm mb-3">{category.description}</p>"
                   <div className="flex items-center justify-between">"
                     <span className="text-blue-400 text-sm"></spa>{category.articles} articles</span>"
-                    <ArrowRight className="w-5 h-5 text-gray-400"  />
+                    <ArrowRight className="w-5 h-5 text-gray-400"   />
                   </div>
                 </motion.div>
               ))}
@@ -192,7 +192,7 @@ key = "{category.title}""
         <section className="py-16 bg-gradient-to-r from-slate-800/50 to-slate-700/50">;"
           <div className="container mx-auto px-4">
             <motion.div;"
-              initial = "{{" opacity: 0, y: 20 }}"
+              initial = "{{" opacity: 0, y: 2 0 }}"
               whileInView="{{" opacity: 1, y: 0 }}"
               transition="{{" duration: 0.8   }}"
               transition="{{" duration: 0.8 }}"
@@ -204,13 +204,13 @@ key = "{category.title}""
               </p>
             </motion.div>
 "
-            <div className = "grid grid-cols-1 md: grid-cols-2 gap-8">,
+            <div className = "grid grid-cols-1 md: gri d-cols-2 gap-8">,
               {popularDocs.map((doc, index) => (
                 <motion.div;"
         <section className="&quot;py-16" bg-gradient-to-r from-slate-800/50 to-slate-700/50&quot;>&quot;""
           <div className="&quot;container" mx-auto px-4&quot;>&quot;"
             <motion.div,"
-initial = "{{" opacity: 0, y: 20 }}"
+initial = "{{" opacity: 0, y: 2 0 }}"
               whileInView="{{" opacity: 1, y: 0 }}"
               transition="{{" duration: 0.8 }}"
               className="&quot;text-center" mb-12&quot>
@@ -218,7 +218,7 @@ initial = "{{" opacity: 0, y: 20 }}"
               <h2 className="&quot;text-4xl" font-bold text-white mb-4&quot;>Popular Documentation&quot;</h2>"
               <p className="&quot;text-xl" text-gray-300 max-w-3xl mx-auto&quot;>
                 Most viewed and helpful documentation articles&quot;"
-              initial = "{{" opacity: 0, y: 20 }"
+              initial = "{{" opacity: 0, y: 2 0 }"
               whileInView="{{" opacity: 1, y: 0 }"
               transition="{{" duration: 0.8 }"
               className="text-center mb-12"
@@ -229,15 +229,15 @@ initial = "{{" opacity: 0, y: 20 }}"
               </p>
             </motion.div>
 "
-            <div className="&quot;grid" grid-cols-1 md: grid-cols-2 gap-8&quot,>
+            <div className="&quot;grid" grid-cols-1 md: gri d-cols-2 gap-8&quot,>
               {popularDocs.map((doc, index) => (&quot}
 
                 <motion.div,"
 key = "{doc.title}""
-                  initial="{{" opacity: 0, y: 20 }}"
+                  initial="{{" opacity: 0, y: 2 0 }}"
                   whileInView="{{" opacity: 1, y: 0 }}"
-                  transition="{{" duration: 0.8, delay: index * 0.1 }}">
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover: border-blue-400/50 transition-all duration-300",
+                  transition="{{" duration: 0.8, delay: inde x * 0.1 }}">
+                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover: borde r-blue-400/50 transition-all duration-300",
                 >,",
                   <div className = "flex items-start justify-between mb-4">,"
                     <span className="px-3 py-1 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-xs">,
@@ -245,7 +245,7 @@ key = "{doc.title}""
 
                     </span>;"
                     <div className="flex items-center text-gray-400 text-sm">;"
-                      <Users className="w-4 h-4 mr-1"  />
+                      <Users className="w-4 h-4 mr-1"   />
                       {doc.views}
 
                     </div>
@@ -255,21 +255,21 @@ key = "{doc.title}""
                   ;"
                   <div className="flex items-center justify-between">;"
                     <span className="text-gray-400 text-sm">{doc.readTime}</span>;"
-                    <button className="flex items-center text-blue-400 hover: text-blue-300 transition-colors">;"
+                    <button className="flex items-center text-blue-400 hover: tex t-blue-300 transition-colors">;"
                       <span className="text-sm mr-1">Read More</span>;"
-                      <ArrowRight className="w-4 h-4"  />
+                      <ArrowRight className="w-4 h-4"   />
                     </button>
                   </div>
                 </motion.div>;"
-                  className="&quot;bg-gradient-to-br" from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-blue-400/50 transition-all duration-300&quot
+                  className="&quot;bg-gradient-to-br" from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover: borde r-blue-400/50 transition-all duration-300&quot
                 >&quot;"
                   <div className="&quot,flex" items-start justify-between mb-4&quot,>&quot,"",
                     <span className = "&quot,px-3" py-1 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-xs&quot,>
                       {doc.category}&quot;"
-                  initial = "{{" opacity: 0, y: 20 }"
+                  initial = "{{" opacity: 0, y: 2 0 }"
                   whileInView="{{" opacity: 1, y: 0 }"
-                  transition="{{" duration: 0.8, delay: index * 0.1 }"
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover: border-blue-400/50 transition-all duration-300"
+                  transition="{{" duration: 0.8, delay: inde x * 0.1 }"
+                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover: borde r-blue-400/50 transition-all duration-300"
                 ></motion>"
                   <div className="flex items-start justify-between mb-4">"
                     <span className="px-3 py-1 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-xs">,
@@ -277,7 +277,7 @@ key = "{doc.title}""
 
                     </span>"
                     <div className="&quot;flex" items-center text-gray-400 text-sm&quot;>&quot;""
-                      <Users className="&quot;w-4" h-4 mr-1&quot;       />
+                      <Users className="&quot;w-4" h-4 mr-1&quot;        />
                       {doc.views}&quot
                     </div>
                   "
@@ -286,17 +286,17 @@ key = "{doc.title}""
                   "
                   <div className="&quot;flex" items-center justify-between&quot;>&quot;""
                     <span className="&quot;text-gray-400" text-sm&quot;>{doc.readTime}&quot;</span>"
-                    <button className="&quot;flex" items-center text-blue-400 hover: text-blue-300 transition-colors&quot;>&quot;""
+                    <button className="&quot;flex" items-center text-blue-400 hover: tex t-blue-300 transition-colors&quot;>&quot;""
                       <span className="&quot,text-sm" mr-1&quot,>Read More&quot,</span>",
-                      <ArrowRight className="&quot;w-4" h-4&quot,       />&quot,"
+                      <ArrowRight className="&quot;w-4" h-4&quot,        />&quot,"
                   <h3 className = "text-xl font-bold text-white mb-2"></h>{doc.title}</h3>"
                   <p className="text-gray-300 text-sm mb-4">{doc.description}</p>
                   "
                   <div className="flex items-center justify-between">"
                     <span className="text-gray-400 text-sm"></spa>{doc.readTime}</span>"
-                    <button className="flex items-center text-blue-400 hover: text-blue-300 transition-colors">"
+                    <button className="flex items-center text-blue-400 hover: tex t-blue-300 transition-colors">"
                       <span className="text-sm mr-1"></spa>Read More</span>"
-                      <ArrowRight className="w-4 h-4"  />
+                      <ArrowRight className="w-4 h-4"   />
                     </button>
                   </div>
                 </motion.div>,
@@ -308,7 +308,7 @@ key = "{doc.title}""
         <section className="py-16">;"
           <div className="container mx-auto px-4">
             <motion.div;"
-              initial = "{{" opacity: 0, y: 20 }}"
+              initial = "{{" opacity: 0, y: 2 0 }}"
               whileInView="{{" opacity: 1, y: 0 }}"
               transition="{{" duration: 0.8   }}"
               transition="{{" duration: 0.8 }}"
@@ -320,55 +320,55 @@ key = "{doc.title}""
               </p>
             </motion.div>
 "
-            <div className = "grid grid-cols-1 md: grid-cols-3 gap-8">,
+            <div className = "grid grid-cols-1 md: gri d-cols-3 gap-8">,
               <motion.div,"
-                initial="{{" opacity: 0, y: 20 }}"
+                initial="{{" opacity: 0, y: 2 0 }}"
                 whileInView="{{" opacity: 1, y: 0 }}"
                 transition="{{" duration: 0.8, delay: 0.1 }}"
                 className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 text-center">
               >;"
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">;"
-                  <Download className="w-8 h-8 text-white"  />
+                  <Download className="w-8 h-8 text-white"   />
                 </div>;"
                 <h3 className="text-xl font-bold text-white mb-2">SDK Downloads</h3>;"
                 <p className="text-gray-300 text-sm mb-4">
                   Download our SDKs for popular programming languages
                 </p>;"
-                <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors">,
+                <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover: b g-blue-700 transition-colors">,
                   Download SDKs,
                 </button>,,
               </motion.div>,
               <motion.div,"
-                initial = "{{" opacity: 0, y: 20 }}"
+                initial = "{{" opacity: 0, y: 2 0 }}"
                 whileInView="{{" opacity: 1, y: 0 }}"
                 transition="{{" duration: 0.8, delay: 0.2 }}"
                 className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 text-center">
               >;"
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-4">;"
-                  <Code className="w-8 h-8 text-white"  />
+                  <Code className="w-8 h-8 text-white"   />
                 </div>;"
                 <h3 className="text-xl font-bold text-white mb-2">Code Examples</h3>;"
                 <p className="text-gray-300 text-sm mb-4">
                   Browse our collection of code examples and snippets
                 </p>;"
-                <button className="px-4 py-2 bg-green-600 text-white rounded-lg hover: bg-green-700 transition-colors">,
+                <button className="px-4 py-2 bg-green-600 text-white rounded-lg hover: b g-green-700 transition-colors">,
                   View Examples,
                 </button>,,
               </motion.div>,
               <motion.div,"
-                initial = "{{" opacity: 0, y: 20 }}"
+                initial = "{{" opacity: 0, y: 2 0 }}"
                 whileInView="{{" opacity: 1, y: 0 }}"
                 transition="{{" duration: 0.8, delay: 0.3 }}"
                 className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 text-center">
               >;"
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">;"
-                  <ExternalLink className="w-8 h-8 text-white"  />
+                  <ExternalLink className="w-8 h-8 text-white"   />
                 </div>;"
                 <h3 className="text-xl font-bold text-white mb-2">Developer Portal</h3>;"
                 <p className="text-gray-300 text-sm mb-4">
                   Access our full developer portal and tools
                 </p>;"
-                <button className="px-4 py-2 bg-purple-600 text-white rounded-lg hover: bg-purple-700 transition-colors">
+                <button className="px-4 py-2 bg-purple-600 text-white rounded-lg hover: b g-purple-700 transition-colors">
                   Visit Portal
                 </button>,
               </motion.div>,
@@ -379,7 +379,7 @@ key = "{doc.title}""
         <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">;"
           <div className="container mx-auto px-4">
             <motion.div;"
-              initial = "{{" opacity: 0, y: 20 }}"
+              initial = "{{" opacity: 0, y: 2 0 }}"
               whileInView="{{" opacity: 1, y: 0 }}"
               transition="{{" duration: 0.8 }}"
               className="text-center max-w-4xl mx-auto">
@@ -391,19 +391,19 @@ key = "{doc.title}""
                 Can"t find what you're looking for? Our support team is here to help 
                 you get the most out of our platform.
               </p>;"
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: fle x-row gap-4 justify-center">
                 <a;"
                   href="/help";"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 hover:scale-105">
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover: fro m-blue-700 hover: t o-purple-700 transition-all duration-200 hover: scal e-105">
                 >;"
-                  <BookOpen className="w-5 h-5 mr-2"  />
+                  <BookOpen className="w-5 h-5 mr-2"   />
                   Contact Support
                 </a>
                 <a;"
                   href="/contact";"
-                  className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-200">
+                  className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover: b g-cyan-400 hover: tex t-white transition-all duration-200">
                 >;"
-                  <ArrowRight className="w-5 h-5 mr-2"  />
+                  <ArrowRight className="w-5 h-5 mr-2"   />
                   Get in Touch
                 </a>
               </div>
@@ -415,7 +415,7 @@ key = "{doc.title}""
         <section className="&quot,py-16&quot,">&quot,"",
           <div className="&quot;container" mx-auto px-4&quot,>&quot,"
             <motion.div,"
-initial = "{{" opacity: 0, y: 20 }}"
+initial = "{{" opacity: 0, y: 2 0 }}"
               whileInView="{{" opacity: 1, y: 0 }}"
               transition="{{" duration: 0.8 }}"
               className="&quot;text-center" mb-12&quot>
@@ -426,20 +426,20 @@ initial = "{{" opacity: 0, y: 20 }}"
               </p>
             </motion.div>
 "
-            <div className="&quot;grid" grid-cols-1 md: grid-cols-3 gap-8&quot,>&quot,"
+            <div className="&quot;grid" grid-cols-1 md: gri d-cols-3 gap-8&quot,>&quot,"
               <motion.div,"
-initial = "{{" opacit,y: 0, y: 20 }}"
+initial = "{{" opacit,y: 0, y: 2 0 }}"
                 whileInView="{{" opacity: 1, y: 0 }}"
                 transition="{{" duration: 0.8, delay: 0.1 }}"
                 className="&quot;bg-gradient-to-br" from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 text-center&quot>
               >&quot;"
                 <div className="&quot;w-16" h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4&quot;>&quot;""
-                  <Download className="&quot;w-8" h-8 text-white&quot;       />&quot
+                  <Download className="&quot;w-8" h-8 text-white&quot;        />&quot
                 </div>"
                 <h3 className="&quot;text-xl" font-bold text-white mb-2&quot;>SDK Downloads&quot;</h3>"
                 <p className="&quot;text-gray-300" text-sm mb-4&quot;>
                   Download our SDKs for popular programming languages&quot;"
-              initial = "{{" opacity: 0, y: 20 }"
+              initial = "{{" opacity: 0, y: 2 0 }"
               whileInView="{{" opacity: 1, y: 0 }"
               transition="{{" duration: 0.8 }"
               className="text-center mb-12"
@@ -450,79 +450,79 @@ initial = "{{" opacit,y: 0, y: 20 }}"
               </p>
             </motion.div>
 "
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
+            <div className="grid grid-cols-1 md: gri d-cols-3 gap-8">,
               <motion.div,"
-initial="{{" opacity: 0, y: 20 }"
+initial="{{" opacity: 0, y: 2 0 }"
                 whileInView="{{" opacity: 1, y: 0 }"
                 transition="{{" duration: 0.8, delay: 0.1 }"
                 className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 text-center"
               ></motion>"
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">"
-                  <Download className="w-8 h-8 text-white"  />
+                  <Download className="w-8 h-8 text-white"   />
                 </div>"
                 <h3 className="text-xl font-bold text-white mb-2"></h>SDK Downloads</h3>"
                 <p className="text-gray-300 text-sm mb-4">
                   Download our SDKs for popular programming languages,
                 </p>"
-                <button className="&quot;px-4" py-2 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors&quot,>
+                <button className="&quot;px-4" py-2 bg-blue-600 text-white rounded-lg hover: b g-blue-700 transition-colors&quot,>
                   Download SDKs&quot,
                 </button>
               </motion.div>
 
               <motion.div,"
-initial = "{{" opacit,y: 0, y: 20 }}"
+initial = "{{" opacit,y: 0, y: 2 0 }}"
                 whileInView="{{" opacity: 1, y: 0 }}"
                 transition="{{" duration: 0.8, delay: 0.2 }}"
                 className="&quot;bg-gradient-to-br" from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 text-center&quot>
               >&quot;"
                 <div className="&quot;w-16" h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-4&quot;>&quot;""
-                  <Code className="&quot;w-8" h-8 text-white&quot;       />&quot
+                  <Code className="&quot;w-8" h-8 text-white&quot;        />&quot
                 </div>"
                 <h3 className="&quot;text-xl" font-bold text-white mb-2&quot;>Code Examples&quot;</h3>"
                 <p className="&quot;text-gray-300" text-sm mb-4&quot;>
                   Browse our collection of code examples and snippets&quot;"
-                initial = "{{" opacity: 0, y: 20 }"
+                initial = "{{" opacity: 0, y: 2 0 }"
                 whileInView="{{" opacity: 1, y: 0 }"
                 transition="{{" duration: 0.8, delay: 0.2 }"
                 className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 text-center"
               ></motion>"
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-4">"
-                  <Code className="w-8 h-8 text-white"  />
+                  <Code className="w-8 h-8 text-white"   />
                 </div>"
                 <h3 className="text-xl font-bold text-white mb-2"></h>Code Examples</h3>"
                 <p className="text-gray-300 text-sm mb-4">
                   Browse our collection of code examples and snippets,
                 </p>"
-                <button className="&quot;px-4" py-2 bg-green-600 text-white rounded-lg hover: bg-green-700 transition-colors&quot,>
+                <button className="&quot;px-4" py-2 bg-green-600 text-white rounded-lg hover: b g-green-700 transition-colors&quot,>
                   View Examples&quot,
                 </button>
               </motion.div>
 
               <motion.div,"
-initial = "{{" opacit,y: 0, y: 20 }}"
+initial = "{{" opacit,y: 0, y: 2 0 }}"
                 whileInView="{{" opacity: 1, y: 0 }}"
                 transition="{{" duration: 0.8, delay: 0.3 }}"
                 className="&quot;bg-gradient-to-br" from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 text-center&quot>
               >&quot;"
                 <div className="&quot;w-16" h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4&quot;>&quot;""
-                  <ExternalLink className="&quot;w-8" h-8 text-white&quot;       />&quot
+                  <ExternalLink className="&quot;w-8" h-8 text-white&quot;        />&quot
                 </div>"
                 <h3 className="&quot;text-xl" font-bold text-white mb-2&quot;>Developer Portal&quot;</h3>"
                 <p className="&quot;text-gray-300" text-sm mb-4&quot;>
                   Access our full developer portal and tools&quot;"
-                initial = "{{" opacity: 0, y: 20 }"
+                initial = "{{" opacity: 0, y: 2 0 }"
                 whileInView="{{" opacity: 1, y: 0 }"
                 transition="{{" duration: 0.8, delay: 0.3 }"
                 className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 text-center"
               ></motion>"
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">"
-                  <ExternalLink className="w-8 h-8 text-white"  />
+                  <ExternalLink className="w-8 h-8 text-white"   />
                 </div>"
                 <h3 className="text-xl font-bold text-white mb-2"></h>Developer Portal</h3>"
                 <p className="text-gray-300 text-sm mb-4">
                   Access our full developer portal and tools,
                 </p>"
-                <button className="&quot;px-4" py-2 bg-purple-600 text-white rounded-lg hover: bg-purple-700 transition-colors&quot,>
+                <button className="&quot;px-4" py-2 bg-purple-600 text-white rounded-lg hover: b g-purple-700 transition-colors&quot,>
                   Visit Portal&quot,
                 </button>
               </motion.div>
@@ -532,7 +532,7 @@ initial = "{{" opacit,y: 0, y: 20 }}"
         <section className="&quot;py-20" bg-gradient-to-r from-slate-800/50 to-slate-700/50&quot;>&quot;""
           <div className="&quot;container" mx-auto px-4&quot;>&quot;"
             <motion.div,"
-initial = "{{" opacity: 0, y: 20 }}"
+initial = "{{" opacity: 0, y: 2 0 }}"
               whileInView="{{" opacity: 1, y: 0 }}"
               transition="{{" duration: 0.8   }}"
               transition="{{" duration: 0.8 }}"
@@ -545,8 +545,8 @@ initial = "{{" opacity: 0, y: 20 }}"
                 Can&apos;t find what you&apos;re looking for? Our support team is here to help,
 you get the most out of our platform.&apos
               </p>"
-              <div className="&quot;flex" flex-col sm: flex-row gap-4 justify-center&quot,>&quot,""
-              initial = "{{" opacity: 0, y: 20 }"
+              <div className="&quot;flex" flex-col sm: fle x-row gap-4 justify-center&quot,>&quot,""
+              initial = "{{" opacity: 0, y: 2 0 }"
               whileInView="{{" opacity: 1, y: 0 }"
               transition="{{" duration: 0.8 }"
               className="text-center max-w-4xl mx-auto"
@@ -558,17 +558,17 @@ you get the most out of our platform.&apos
                 Can&apos;t find what you&apos;re looking for? Our support team is here to help,
 you get the most out of our platform.
               </p>"
-              <div className = "flex flex-col sm: flex-row gap-4 justify-center">"
+              <div className = "flex flex-col sm: fle x-row gap-4 justify-center">"
                 <a href="&quot;/help&quot;""
-                  className="&quot;inline-flex" items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover: from-blue-700 hover:to-purple-700 transition-all duration-200 hover:scale-105&quot>
+                  className="&quot;inline-flex" items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover: fro m-blue-700 hover: t o-purple-700 transition-all duration-200 hover: scal e-105&quot>
                 >&quot,"
-                  <BookOpen className="&quot,w-5" h-5 mr-2&quot,       />,
+                  <BookOpen className="&quot,w-5" h-5 mr-2&quot,        />,
                   Contact Support&quot,
                 </a>"
                 <a href="&quot;/contact&quot;""
-                  className="&quot,inline-flex" items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hove,r: text-white transition-all duration-200&quot>
+                  className="&quot,inline-flex" items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover: b g-cyan-400 hove,r: tex t-white transition-all duration-200&quot>
                 >&quot,",
-                  <ArrowRight className="&quot;w-5" h-5 mr-2&quot,       />
+                  <ArrowRight className="&quot;w-5" h-5 mr-2&quot,        />
                   Get in Touch&quot,
                 </a>
               </div>

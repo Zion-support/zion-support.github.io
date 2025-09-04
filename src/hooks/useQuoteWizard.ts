@@ -3,12 +3,11 @@ import { captureException } from '@/utils/sentry';
 import { useState } from 'react';
 
 export interface ServiceItem {
-  id: string
-  title: string
+  id: string title: string
 }
 
 export interface WizardResponse {
-  items: ServiceItem[]
+  items: ServiceIte m[]
   total?: number
 }
 
@@ -23,9 +22,9 @@ const fetcher = async (url: string): Promise<WizardResponse> => {
     // `items` property. Normalize it here so the caller can rely on a
     // consistent shape.
     if (Array.isArray(data)) {
-      return { items: data };
+      return { items: dat a };
     }
-    return { items: data.items || [], total: data.total };
+    return { items: dat a.items || [], total: dat a.total };
   } catch (err) {
     if (process.env.NODE_ENV === 'development') {
       console.error(err);
@@ -41,15 +40,15 @@ export function useQuoteWizard(
   page = 1,
   search = ''
 ) {
-  const params = new URLSearchParams({ page: String(page) });
+  const params = new URLSearchParams({ page: Strin g(page) });
   if (search) params.set('q', search);
   return useSWR<WizardResponse>(`/api/${category}?${params.toString()}`, fetcher, {
     onErrorRetry: (error, key, config, revalidate, { retryCount }) => {
       if (retryCount >= 1) return;
       const timeout = Math.pow(2, retryCount) * 1000; // 1s, 2s, 4s
-      setTimeout(() => revalidate({ retryCount: retryCount + 1 }), timeout);
+      setTimeout(() => revalidate({ retryCount: retryCoun t + 1 }), timeout);
     },
-    dedupingInterval: 600000,
+    dedupingInterval: 60000 0,
   });
 }
 
@@ -66,7 +65,7 @@ export function useRequestQuoteWizard() {
 
   const submitQuote = (message: string) => {
     // In a real app, this would submit to an API
-    console.log('Submitting quote:', { serviceId: selectedService, message });
+    console.log('Submitting quote:', { serviceId: selectedServic e, message });
     setStep('Success');
   };
 

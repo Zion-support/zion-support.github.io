@@ -43,40 +43,40 @@ import {
   ExternalLink
 } from 'lucide-react';
 
-const AISocialMediaManager: React.FC = () => {
+const AISocialMediaManager: Reac t.FC = () => {
   const features = [
     {
-      icon: Brain,
+      icon: Brai n,
       title: "AI Content Generation",
       description: "Automatically create engaging posts, captions, and hashtags tailored to your brand voice and audience preferences.",
       benefits: ["Save 10+ hours per week", "Increase engagement by 40%", "Maintain consistent brand voice", "Generate trending content ideas"]
     },
     {
-      icon: BarChart3,
+      icon: BarChart 3,
       title: "Advanced Analytics & Insights",
       description: "Real-time performance tracking with AI-powered insights to optimize your social media strategy.",
       benefits: ["Track ROI and engagement metrics", "Identify best posting times", "Monitor competitor performance", "Predict viral content potential"]
     },
     {
-      icon: Calendar,
+      icon: Calenda r,
       title: "Smart Scheduling",
       description: "AI-optimized posting schedule that maximizes reach and engagement across all platforms.",
       benefits: ["Optimal timing for each platform", "Automated posting across channels", "Content calendar management", "Timezone optimization"]
     },
     {
-      icon: Target,
+      icon: Targe t,
       title: "Audience Intelligence",
       description: "Deep audience analysis to understand demographics, interests, and behavior patterns.",
       benefits: ["Detailed audience insights", "Demographic analysis", "Interest mapping", "Behavior prediction"]
     },
     {
-      icon: MessageSquare,
+      icon: MessageSquar e,
       title: "Automated Engagement",
       description: "AI-powered responses to comments, DMs, and mentions to maintain active community engagement.",
       benefits: ["24/7 community management", "Personalized responses", "Sentiment analysis", "Crisis management alerts"]
     },
     {
-      icon: TrendingUp,
+      icon: TrendingU p,
       title: "Growth Optimization",
       description: "AI-driven strategies to increase followers, engagement, and brand awareness across platforms.",
       benefits: ["Follower growth strategies", "Engagement optimization", "Hashtag research", "Influencer identification"]
@@ -84,14 +84,14 @@ const AISocialMediaManager: React.FC = () => {
   ];
 
   const platforms = [
-    { name: "Instagram", icon: Camera, color: "from-pink-400 to-purple-500" },
-    { name: "Facebook", icon: Users, color: "from-blue-400 to-indigo-500" },
-    { name: "Twitter", icon: MessageSquare, color: "from-cyan-400 to-blue-500" },
-    { name: "LinkedIn", icon: Briefcase, color: "from-blue-500 to-blue-600" },
-    { name: "TikTok", icon: Video, color: "from-gray-800 to-gray-900" },
-    { name: "YouTube", icon: Play, color: "from-red-400 to-red-600" },
-    { name: "Pinterest", icon: Bookmark, color: "from-red-500 to-pink-500" },
-    { name: "Snapchat", icon: Camera, color: "from-yellow-400 to-orange-500" }
+    { name: "Instagram", icon: Camer a, color: "from-pink-400 to-purple-500" },
+    { name: "Facebook", icon: User s, color: "from-blue-400 to-indigo-500" },
+    { name: "Twitter", icon: MessageSquar e, color: "from-cyan-400 to-blue-500" },
+    { name: "LinkedIn", icon: Briefcas e, color: "from-blue-500 to-blue-600" },
+    { name: "TikTok", icon: Vide o, color: "from-gray-800 to-gray-900" },
+    { name: "YouTube", icon: Pla y, color: "from-red-400 to-red-600" },
+    { name: "Pinterest", icon: Bookmar k, color: "from-red-500 to-pink-500" },
+    { name: "Snapchat", icon: Camer a, color: "from-yellow-400 to-orange-500" }
   ];
 
   const pricingPlans = [
@@ -107,7 +107,7 @@ const AISocialMediaManager: React.FC = () => {
         "Email support",
         "Mobile app access"
       ],
-      popular: false,
+      popular: fals e,
       color: "from-gray-400 to-gray-600"
     },
     {
@@ -124,7 +124,7 @@ const AISocialMediaManager: React.FC = () => {
         "Team collaboration tools",
         "Custom brand voice training"
       ],
-      popular: true,
+      popular: tru e,
       color: "from-blue-400 to-cyan-500"
     },
     {
@@ -142,7 +142,7 @@ const AISocialMediaManager: React.FC = () => {
         "Custom reporting",
         "Multi-brand management"
       ],
-      popular: false,
+      popular: fals e,
       color: "from-purple-400 to-pink-500"
     }
   ];
@@ -174,9 +174,9 @@ const AISocialMediaManager: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <Helmet>
         <title>AI Social Media Manager - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered social media management platform that automates content creation, scheduling, and engagement across all major platforms. Increase your social media ROI by 300%." />
-        <meta name="keywords" content="AI social media manager, social media automation, content generation, social media analytics, social media scheduling" />
-        <link rel="canonical" href="https://ziontechgroup.com/services/ai-social-media-manager" />
+        <meta name="description" content="Revolutionary AI-powered social media management platform that automates content creation, scheduling, and engagement across all major platforms. Increase your social media ROI by 300%."  />
+        <meta name="keywords" content="AI social media manager, social media automation, content generation, social media analytics, social media scheduling"  />
+        <link rel="canonical" href="https://ziontechgroup.com/services/ai-social-media-manager"  />
       </Helmet>
 
       {/* Hero Section */}
@@ -184,36 +184,36 @@ const AISocialMediaManager: React.FC = () => {
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full text-sm font-medium mb-6">
-              <Zap className="w-4 h-4 mr-2" />
+              <Zap className="w-4 h-4 mr-2"  />
               AI-Powered Social Media Management
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+            <h1 className="text-5xl md: tex t-7xl font-bold text-white mb-6">
               AI Social Media Manager
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            <p className="text-xl md: tex t-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Transform your social media presence with AI that creates, schedules, and optimizes content across all platforms. 
               Increase engagement by 300% and save 20+ hours per week.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
               <a 
                 href="tel:+13024640950" 
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white rounded-lg font-semibold hover:from-cyan-500 hover:to-blue-600 transition-all duration-300"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white rounded-lg font-semibold hover: fro m-cyan-500 hover: t o-blue-600 transition-all duration-300"
               >
-                <Phone className="w-5 h-5 mr-2" />
+                <Phone className="w-5 h-5 mr-2"  />
                 Call Now: +1 302 464 0950
               </a>
               <a 
-                href="mailto:kleber@ziontechgroup.com" 
-                className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300"
+                href="mailto: klebe r@ziontechgroup.com" 
+                className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-lg font-semibold hover: b g-cyan-400 hover: tex t-white transition-all duration-300"
               >
-                <Mail className="w-5 h-5 mr-2" />
+                <Mail className="w-5 h-5 mr-2"  />
                 Get Quote
               </a>
             </div>
           </div>
 
           {/* Key Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
+          <div className="grid grid-cols-1 md: gri d-cols-4 gap-8 mb-16">
             <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl">
               <div className="text-3xl font-bold text-cyan-400 mb-2">300%</div>
               <div className="text-gray-300">Average Engagement Increase</div>
@@ -238,7 +238,7 @@ const AISocialMediaManager: React.FC = () => {
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
               Powerful AI Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -246,9 +246,9 @@ const AISocialMediaManager: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="p-8 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300">
+              <div key={index} className="p-8 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover: b g-white/10 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-lg flex items-center justify-center mb-6">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
@@ -257,7 +257,7 @@ const AISocialMediaManager: React.FC = () => {
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, idx) => (
                     <li key={idx} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0"  />
                       {benefit}
                     </li>
                   ))}
@@ -272,7 +272,7 @@ const AISocialMediaManager: React.FC = () => {
       <section className="py-20 px-4 bg-white/5">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
               All Major Platforms Supported
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -280,9 +280,9 @@ const AISocialMediaManager: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md: gri d-cols-4 gap-6">
             {platforms.map((platform, index) => (
-              <div key={index} className="p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 text-center hover:bg-white/10 transition-all duration-300">
+              <div key={index} className="p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 text-center hover: b g-white/10 transition-all duration-300">
                 <div className={`w-16 h-16 bg-gradient-to-r ${platform.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
                   <platform.icon className="w-8 h-8 text-white" />
                 </div>
@@ -297,7 +297,7 @@ const AISocialMediaManager: React.FC = () => {
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
               Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -305,7 +305,7 @@ const AISocialMediaManager: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`p-8 rounded-xl border-2 transition-all duration-300 ${
                 plan.popular 
@@ -315,7 +315,7 @@ const AISocialMediaManager: React.FC = () => {
                 {plan.popular && (
                   <div className="text-center mb-6">
                     <span className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-400 to-blue-500 text-white rounded-full text-sm font-medium">
-                      <Star className="w-4 h-4 mr-2" />
+                      <Star className="w-4 h-4 mr-2"  />
                       Most Popular
                     </span>
                   </div>
@@ -330,7 +330,7 @@ const AISocialMediaManager: React.FC = () => {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />
                       {feature}
                     </li>
                   ))}
@@ -340,12 +340,12 @@ const AISocialMediaManager: React.FC = () => {
                   href="tel:+13024640950" 
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-cyan-400 to-blue-500 text-white hover:from-cyan-500 hover:to-blue-600'
-                      : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
+                      ? 'bg-gradient-to-r from-cyan-400 to-blue-500 text-white hover: fro m-cyan-500 hover: t o-blue-600'
+                      : 'border-2 border-cyan-400 text-cyan-400 hover: b g-cyan-400 hover: tex t-white'
                   }`}
                 >
                   Get Started
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                  <ArrowRight className="w-4 h-4 ml-2"  />
                 </a>
               </div>
             ))}
@@ -354,11 +354,11 @@ const AISocialMediaManager: React.FC = () => {
           <div className="text-center mt-12">
             <p className="text-gray-300 mb-4">Need a custom solution for your enterprise?</p>
             <a 
-              href="mailto:kleber@ziontechgroup.com" 
-              className="inline-flex items-center px-6 py-3 border-2 border-purple-400 text-purple-400 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
+              href="mailto: klebe r@ziontechgroup.com" 
+              className="inline-flex items-center px-6 py-3 border-2 border-purple-400 text-purple-400 rounded-lg font-semibold hover: b g-purple-400 hover: tex t-white transition-all duration-300"
             >
               Contact Sales
-              <ExternalLink className="w-4 h-4 ml-2" />
+              <ExternalLink className="w-4 h-4 ml-2"  />
             </a>
           </div>
         </div>
@@ -368,7 +368,7 @@ const AISocialMediaManager: React.FC = () => {
       <section className="py-20 px-4 bg-white/5">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
               Proven Results Across Industries
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -376,13 +376,13 @@ const AISocialMediaManager: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-2 gap-8">
             {useCases.map((useCase, index) => (
               <div key={index} className="p-8 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
                 <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>
                 <p className="text-gray-300 mb-6">{useCase.description}</p>
                 <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-400 to-emerald-500 text-white rounded-full text-sm font-medium">
-                  <TrendingUp className="w-4 h-4 mr-2" />
+                  <TrendingUp className="w-4 h-4 mr-2"  />
                   {useCase.results}
                 </div>
               </div>
@@ -395,26 +395,26 @@ const AISocialMediaManager: React.FC = () => {
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center bg-gradient-to-r from-purple-500/20 to-pink-500/20 backdrop-blur-sm rounded-2xl p-12 border border-white/10">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
               Ready to Transform Your Social Media?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Join thousands of businesses already using our AI social media manager to increase engagement, save time, and grow their online presence.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
               <a 
                 href="tel:+13024640950" 
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white rounded-lg font-semibold hover:from-cyan-500 hover:to-blue-600 transition-all duration-300"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white rounded-lg font-semibold hover: fro m-cyan-500 hover: t o-blue-600 transition-all duration-300"
               >
-                <Phone className="w-5 h-5 mr-2" />
+                <Phone className="w-5 h-5 mr-2"  />
                 Call: +1 302 464 0950
               </a>
               <a 
-                href="mailto:kleber@ziontechgroup.com" 
-                className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300"
+                href="mailto: klebe r@ziontechgroup.com" 
+                className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-lg font-semibold hover: b g-cyan-400 hover: tex t-white transition-all duration-300"
               >
-                <Mail className="w-5 h-5 mr-2" />
-                Email: kleber@ziontechgroup.com
+                <Mail className="w-5 h-5 mr-2"  />
+                Email: klebe r@ziontechgroup.com
               </a>
             </div>
             <div className="mt-8 text-sm text-gray-400">

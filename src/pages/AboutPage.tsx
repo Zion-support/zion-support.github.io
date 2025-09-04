@@ -18,22 +18,22 @@ import {
 export default function AboutPage() {
   const values = [
     {
-      icon: Lightbulb,
+      icon: Lightbul b,
       title: 'Innovation First',
       description: 'We push the boundaries of what\'s possible, constantly exploring emerging technologies and creative solutions.'
     },
     {
-      icon: Shield,
+      icon: Shiel d,
       title: 'Trust & Security',
       description: 'Your data and business operations are protected with enterprise-grade security and compliance standards.'
     },
     {
-      icon: Users,
+      icon: User s,
       title: 'Client Success',
       description: 'We measure our success by your success, building long-term partnerships based on mutual growth.'
     },
     {
-      icon: Zap,
+      icon: Za p,
       title: 'Agile Excellence',
       description: 'Rapid delivery and continuous improvement are core to our development and service delivery approach.'
     }
@@ -67,33 +67,33 @@ export default function AboutPage() {
   ];
 
   const achievements = [
-    { number: '500+', label: 'Projects Delivered', icon: CheckCircle },
-    { number: '50+', label: 'Enterprise Clients', icon: Building2 },
-    { number: '15+', label: 'Years Experience', icon: Award },
-    { number: '99.9%', label: 'Uptime SLA', icon: Shield }
+    { number: '500+', label: 'Projects Delivered', icon: CheckCircl e },
+    { number: '50+', label: 'Enterprise Clients', icon: Building 2 },
+    { number: '15+', label: 'Years Experience', icon: Awar d },
+    { number: '99.9%', label: 'Uptime SLA', icon: Shiel d }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 via-purple-900 to-blue-900 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8 text-center">
+          <h1 className="text-5xl md: tex t-6xl font-bold mb-6">
             About Zion Tech Group
           </h1>
-          <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto mb-8">
+          <p className="text-xl md: tex t-2xl text-blue-100 max-w-4xl mx-auto mb-8">
             Empowering businesses through cutting-edge AI, innovative technology solutions, and expert consulting services.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: fle x-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
+              className="bg-gradient-to-r from-blue-500 to-purple-600 hover: fro m-blue-600 hover: t o-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover: scal e-105"
             >
               Get Started
             </Link>
             <Link
               to="/services"
-              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
+              className="bg-transparent border-2 border-white text-white hover: b g-white hover: tex t-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
             >
               Our Services
             </Link>
@@ -103,8 +103,8 @@ export default function AboutPage() {
 
       {/* Mission & Vision */}
       <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+          <div className="grid grid-cols-1 lg: gri d-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
                 Our Mission
@@ -116,7 +116,7 @@ export default function AboutPage() {
                 We believe that every organization deserves access to enterprise-grade technology that drives growth, enhances security, and creates competitive advantages in today's rapidly evolving marketplace.
               </p>
               <div className="flex items-center space-x-4">
-                <Target className="w-8 h-8 text-blue-600" />
+                <Target className="w-8 h-8 text-blue-600"  />
                 <span className="text-lg font-semibold text-gray-900">Innovation for All</span>
               </div>
             </div>
@@ -127,15 +127,15 @@ export default function AboutPage() {
               </p>
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
-                  <Globe className="w-5 h-5 text-blue-600" />
+                  <Globe className="w-5 h-5 text-blue-600"  />
                   <span className="text-gray-700">Global technology accessibility</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Brain className="w-5 h-5 text-purple-600" />
+                  <Brain className="w-5 h-5 text-purple-600"  />
                   <span className="text-gray-700">AI-powered business transformation</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Shield className="w-5 h-5 text-green-600" />
+                  <Shield className="w-5 h-5 text-green-600"  />
                   <span className="text-gray-700">Secure, scalable solutions</span>
                 </div>
               </div>
@@ -146,7 +146,7 @@ export default function AboutPage() {
 
       {/* Values */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Our Core Values
@@ -155,9 +155,9 @@ export default function AboutPage() {
               The principles that guide everything we do, from client interactions to technology development.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
             {values.map((value, index) => (
-              <div key={index} className="text-center p-6 bg-gray-50 rounded-xl hover:bg-white hover:shadow-lg transition-all duration-300">
+              <div key={index} className="text-center p-6 bg-gray-50 rounded-xl hover: b g-white hover: shado w-lg transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <value.icon className="w-8 h-8 text-white" />
                 </div>
@@ -171,7 +171,7 @@ export default function AboutPage() {
 
       {/* Team */}
       <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Meet Our Leadership Team
@@ -180,12 +180,12 @@ export default function AboutPage() {
               Experienced professionals passionate about technology innovation and client success.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
             {teamMembers.map((member, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
+              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover: shado w-xl transition-all duration-300">
                 <div className="p-6">
                   <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Users className="w-10 h-10 text-white" />
+                    <Users className="w-10 h-10 text-white"  />
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 text-center mb-2">{member.name}</h3>
                   <p className="text-blue-600 font-medium text-center mb-3">{member.role}</p>
@@ -193,7 +193,7 @@ export default function AboutPage() {
                   <div className="space-y-2">
                     {member.expertise.map((skill, skillIndex) => (
                       <div key={skillIndex} className="flex items-center space-x-2">
-                        <TrendingUp className="w-4 h-4 text-green-500" />
+                        <TrendingUp className="w-4 h-4 text-green-500"  />
                         <span className="text-sm text-gray-600">{skill}</span>
                       </div>
                     ))}
@@ -207,7 +207,7 @@ export default function AboutPage() {
 
       {/* Achievements */}
       <section className="py-20 bg-gradient-to-r from-blue-900 to-purple-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">
               Our Achievements
@@ -216,7 +216,7 @@ export default function AboutPage() {
               Numbers that tell the story of our commitment to excellence and client success.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
             {achievements.map((achievement, index) => (
               <div key={index} className="text-center">
                 <div className="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -232,23 +232,23 @@ export default function AboutPage() {
 
       {/* CTA Section */}
       <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-4xl mx-auto px-4 sm: p x-6 lg: p x-8 text-center">
           <h2 className="text-4xl font-bold text-gray-900 mb-6">
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
             Join hundreds of organizations that have already experienced the power of our innovative technology solutions.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: fle x-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
+              className="bg-gradient-to-r from-blue-600 to-purple-600 hover: fro m-blue-700 hover: t o-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover: scal e-105"
             >
               Start Your Journey
             </Link>
             <Link
               to="/case-studies"
-              className="bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
+              className="bg-transparent border-2 border-blue-600 text-blue-600 hover: b g-blue-600 hover: tex t-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
             >
               View Case Studies
             </Link>

@@ -1,29 +1,29 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
-  children: ReactNode;
+  children: ReactNod e;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  onError?: (error: Erro r, errorInfo: ErrorInf o) => void;
   showDetails?: boolean;
 }
 
 interface State {
   hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
+  error: Erro r | null;
+  errorInfo: ErrorInf o | null;
 }
 
 class EnhancedErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
+  constructor(props: Prop s) {
     super(props);
-    this.state = { hasError: false, error: null, errorInfo: null };
+    this.state = { hasError: fals e, error: nul l, errorInfo: nul l };
   }
 
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error, errorInfo: null };
+  static getDerivedStateFromError(error: Erro r): State {
+    return { hasError: tru e, error, errorInfo: nul l };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  componentDidCatch(error: Erro r, errorInfo: ErrorInf o) {
     this.setState({ errorInfo });
     this.props.onError?.(error, errorInfo);
   }

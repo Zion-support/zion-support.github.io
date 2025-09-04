@@ -16,7 +16,7 @@ Plus,
 interface FloatingAction {
 
   id: string;
-  icon: React.ComponentType<{ size?: number; className?: string 
+  icon: Reac t.ComponentType<{ size?: number; className?: string 
 }>;
   label: string;
   action: () => void;
@@ -31,7 +31,7 @@ interface FloatingActionButtonProps {
   showContactActions?: boolean;
   showUtilityActions?: boolean;
 
-const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
+const FloatingActionButton: Reac t.FC<FloatingActionButtonProps> = ({
 
   actions = [],
   position = 'bottom-right',
@@ -78,12 +78,12 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
     return () => window.removeEventListener('scroll', handleScroll)}, []);
 
   // Default actions
-  const defaultActions: FloatingAction[] = [// Contact actions
+  const defaultActions: FloatingActio n[] = [// Contact actions
     ...(showContactActions ? [
       {
 
         id: 'contact',
-        icon: MessageCircle,
+        icon: MessageCircl e,
         label: 'Contact Us',
         action: () => {
 
@@ -91,40 +91,40 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
 
             contactSection.scrollIntoView({ behavior: 'smooth' })}
         },
-        color: 'bg-blue-500 hover:bg-blue-600',
+        color: 'bg-blue-500 hover: b g-blue-600',
         priority: 'high' as const
       },
       {
 
         id: 'phone',
-        icon: Phone,
+        icon: Phon e,
         label: 'Call Now',
         action: () => {
 
           window.location.href = 'tel:+1234567890'},
-        color: 'bg-green-500 hover:bg-green-600',
+        color: 'bg-green-500 hover: b g-green-600',
         priority: 'high' as const
       },
       {
 
         id: 'email',
-        icon: Mail,
+        icon: Mai l,
         label: 'Send Email',
         action: () => {
 
-          window.location.href = 'mailto:info@ziontechgroup.com'},
-        color: 'bg-purple-500 hover:bg-purple-600',
+          window.location.href = 'mailto: inf o@ziontechgroup.com'},
+        color: 'bg-purple-500 hover: b g-purple-600',
         priority: 'medium' as const
       },
       {
 
         id: 'location',
-        icon: MapPin,
+        icon: MapPi n,
         label: 'Get Directions',
         action: () => {
 
           window.open('https://maps.google.com/?q=Zion+Tech+Group',_blank')},
-        color: 'bg-red-500 hover:bg-red-600',
+        color: 'bg-red-500 hover: b g-red-600',
         priority: 'medium' as const
       }
     ] : []),
@@ -133,15 +133,15 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
     ...(showUtilityActions ? [{
 
         id: 'bookmark',
-        icon: Bookmark,
+        icon: Bookmar k,
         label: 'Bookmark Page',
         action: () => {
           if(navigator.share) {
 
             navigator.share({
 
-              title: document.title,
-              url: window.location.href
+              title: documen t.title,
+              url: windo w.location.href
             })} else {
 
             // Fallback for browsers without share API
@@ -150,21 +150,21 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
               // Show success message'
               showNotification('Page URL copied to clipboard!')})}
         },
-        color: 'bg-yellow-500 hover:bg-yellow-600',
+        color: 'bg-yellow-500 hover: b g-yellow-600',
         priority: 'low' as const
       },
       {
 
         id: 'share',
-        icon: Share2,
+        icon: Share 2,
         label: 'Share Page',
         action: () => {
           if(navigator.share) {
 
             navigator.share({
 
-              title: document.title,
-              url: window.location.href
+              title: documen t.title,
+              url: windo w.location.href
             })} else {
 
             // Fallback for browsers without share API
@@ -173,13 +173,13 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
 
               showNotification('Page URL copied to clipboard!')})}
         },
-        color: 'bg-indigo-500 hover:bg-indigo-600',
+        color: 'bg-indigo-500 hover: b g-indigo-600',
         priority: 'low' as const
       },
       {
 
         id: 'download',
-        icon: Download,
+        icon: Downloa d,
         label: 'Download Brochure',
         action: () => {
           // Create a temporary link to trigger download'
@@ -189,17 +189,17 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
           document.body.appendChild(link);
           link.click();
           document.body.removeChild(link)},
-        color: 'bg-teal-500 hover:bg-teal-600',
+        color: 'bg-teal-500 hover: b g-teal-600',
         priority: 'low' as const
       },
       {
 
         id: 'print',
-        icon: Printer,
+        icon: Printe r,
         label: 'Print Page',
         action: () => {
           window.print()},
-        color: 'bg-gray-500 hover:bg-gray-600',
+        color: 'bg-gray-500 hover: b g-gray-600',
         priority: 'low' as const
       }
     ] : []),
@@ -270,7 +270,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
                   className={`
                     flex items-center space-x-3 p-3 rounded-lg shadow-lg transition-all duration-300
                     ${action.color} text-white transform opacity-0 scale-75
-                    hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white/50`
+                    hover: scal e-105 focus: outlin e-none focus: rin g-2 focus: rin g-white/50`
                   `}
                   style={{
 `
@@ -291,13 +291,13 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
             className={`
               p-4 rounded-full shadow-lg transition-all duration-300
               ${getThemeClasses()} border-2
-              hover:scale-110 focus:outline-none focus:ring-4 focus:ring-zion-cyan/30'
+              hover: scal e-110 focus: outlin e-none focus: rin g-4 focus: rin g-zion-cyan/30'
               ${isExpanded ? 'rotate-45' : ''}`
             `}
             aria-label={isExpanded ? 'Close actions' : 'Open actions'}
             aria-expanded={isExpanded}
           >"
-            <Plus size={24} className="transition-transform duration-300"  />
+            <Plus size={24} className="transition-transform duration-300"   />
           </button>
         </div>
       </div>
@@ -309,12 +309,12 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
           className={`
             fixed bottom-6 right-6 z-40 p-4 rounded-full shadow-lg transition-all duration-300
             ${getThemeClasses()} border-2
-            hover:scale-110 focus:outline-none focus:ring-4 focus:ring-zion-cyan/30
+            hover: scal e-110 focus: outlin e-none focus: rin g-4 focus: rin g-zion-cyan/30
             animate-bounce`
           `}"
           
         >
-          <ArrowUp size={24}  />
+          <ArrowUp size={24}   />
         </button>) }
 
       {/* CSS Animations */}`
@@ -324,27 +324,27 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
           from {
 
             opacity: 0;
-            transform: translateY(20px) scale(0.75) }
+            transform: translate Y(20px) scale(0.75) }
           to {
 
             opacity: 1;
-            transform: translateY(0) scale(1) }
+            transform: translate Y(0) scale(1) }
         }
 
         @keyframes bounce {
 
           0%, 20%, 53%, 80%, 100% {
 
-            transform: translate3d(0,0,0)}
+            transform: translate3 d(0,0,0)}
           40%, 43% {
 
-            transform: translate3d(0, -30px, 0)}
+            transform: translate3 d(0, -30px, 0)}
           70% {
 
-            transform: translate3d(0, -15px, 0)}
+            transform: translate3 d(0, -15px, 0)}
           90% {
 
-            transform: translate3d(0, -4px, 0)}
+            transform: translate3 d(0, -4px, 0)}
         }
         
         .animate-bounce {
@@ -356,16 +356,16 @@ type FloatingActionButtonProps = {
   enabled?: boolean;
 };
 
-const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ enabled = true }) => {
+const FloatingActionButton: Reac t.FC<FloatingActionButtonProps> = ({ enabled = true }) => {
   const [open, setOpen] = useState(false);
   if(!enabled) return null;
   return (<button
       onClick={() => setOpen(!open)}
       aria-expanded={open}
       
-      className="fixed bottom-6 right-6 z-50 p-4 rounded-full shadow-lg bg-cyan-500 hover:bg-cyan-600 text-white"
+      className="fixed bottom-6 right-6 z-50 p-4 rounded-full shadow-lg bg-cyan-500 hover: b g-cyan-600 text-white"
     >
-      <Plus size={24}  />
+      <Plus size={24}   />
     </button>
   )};
 

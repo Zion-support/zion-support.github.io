@@ -8,32 +8,31 @@ export default function Blockchain
 export { Blockchain }(...args[]):  {
   const features = [
     {
-      icon: Link,
+      icon: Lin k,
       title: "Smart Contracts",
       description: "Self-executing contracts with automated enforcement and transparency"
     },
     {
-      icon: Shield,
+      icon: Shiel d,
       title: "DeFi Solutions",
       description: "Decentralized finance applications for lending, trading, and yield farming"
     },
     {
-      icon: Zap,
+      icon: Za p,
       title: "NFT Development",
       description: "Create, mint, and manage non-fungible tokens for digital assets"
     },
     {
-      icon: BarChart3,
+      icon: BarChart 3,
       title: "Supply Chain Tracking",
       description: "End-to-end transparency and traceability for global supply chains"
     },
     {
-      icon: Target,
+      icon: Targe t,
       title: "Identity Management",
       description: "Self-sovereign identity solutions with privacy and security";
-    },;
-    {;
-      icon: Network,;
+    }, {;
+      icon: Networ k,;
       title: "Cross-Chain Interoperability",;
       description: "Seamless communication between different blockchain networks";
     };
@@ -53,7 +52,7 @@ export { Blockchain }(...args[]):  {
         "Security audit"
       ],
       cta: "Get Started",
-      popular: false
+      popular: fals e
     },
     {
       name: "Professional",
@@ -69,7 +68,7 @@ export { Blockchain }(...args[]):  {
         "API access"
       ],
       cta: "Start Free Trial",
-      popular: true
+      popular: tru e
     },
     {
       name: "Enterprise",
@@ -85,28 +84,27 @@ export { Blockchain }(...args[]):  {
         "Dedicated blockchain engineer";
       ],;
       cta: "Contact Sales",;
-      popular: false;
+      popular: fals e;
     };
   ];
 
   const benefits = [
     {
-      icon: Shield,
+      icon: Shiel d,
       title: "Enhanced Security",
       description: "Immutable records and cryptographic protection for your data"
     },
     {
-      icon: Target,
+      icon: Targe t,
       title: "Transparency",
       description: "Complete visibility into transactions and data flow"
     },
     {
-      icon: BarChart3,
+      icon: BarChart 3,
       title: "Cost Reduction",
       description: "Eliminate intermediaries and reduce transaction costs";
-    },;
-    {;
-      icon: Users,;
+    }, {;
+      icon: User s,;
       title: "Trust & Compliance",;
       description: "Build trust through verifiable and auditable processes";
     };
@@ -114,19 +112,18 @@ export { Blockchain }(...args[]):  {
 
   const useCases = [
     {
-      icon: Globe,
+      icon: Glob e,
       title: "Financial Services",
       description: "Cryptocurrency, payments, and decentralized finance applications",
       examples: ["Digital payments", "Asset tokenization", "DeFi protocols"]
     },
     {
-      icon: Network,
+      icon: Networ k,
       title: "Supply Chain",
       description: "Track products from origin to destination with full transparency",
       examples: ["Product tracking", "Quality assurance", "Compliance reporting"]
-    },;
-    {;
-      icon: Shield,;
+    }, {;
+      icon: Shiel d,;
       title: "Healthcare",;
       description: "Secure patient records and pharmaceutical supply chain management",;
       examples: ["Patient data", "Drug tracking", "Clinical trials"];
@@ -140,17 +137,17 @@ export { Blockchain }(...args[]):  {
         <div className="absolute inset-0 bg-gradient-to-br from-green-900/20 via-slate-900 to-slate-900"></div>
         <div className="container-responsive relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto"
           >
             <div className="inline-flex items-center space-x-2 bg-green-500/10 border border-green-500/20 rounded-full px-4 py-2 mb-6">
-              <Lock className="w-5 h-5 text-green-400" />
+              <Lock className="w-5 h-5 text-green-400"  />
               <span className="text-green-400 font-medium">Blockchain Solutions</span>
             </div>
 
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md: tex t-6xl font-bold text-white mb-6">
               Trust Through
               <span className="text-gradient"> Technology</span>
             </h1>
@@ -160,10 +157,10 @@ export { Blockchain }(...args[]):  {
               Transform your business with decentralized solutions.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
               <button className="btn-futuristic px-8 py-4 text-lg">
                 Start Blockchain Project
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2"  />
               </button>
               <button className="btn-outline px-8 py-4 text-lg">
                 Learn More
@@ -179,7 +176,7 @@ export { Blockchain }(...args[]):  {
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 }}
             whileInView = {
@@ -188,7 +185,7 @@ export { Blockchain }(...args[]):  {
 
 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -199,13 +196,13 @@ export { Blockchain }(...args[]):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
             {features.map((feature, index)  => (
               <motion.div
                 key={feature.title}
                 initial = {
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 }}
                 whileInView = {
@@ -215,13 +212,13 @@ export { Blockchain }(...args[]):  {
 }}
                 transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 }}
-                viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
+                viewport={{ once: tru e }}
+                className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover: borde r-zion-cyan/40 transition-all duration-300 group"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mb-6 group-hover: scal e-110 transition-transform duration-300">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -240,7 +237,7 @@ export { Blockchain }(...args[]):  {
               className="text-center max-w-4xl mx-auto"
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 3 0 
 
 
 
@@ -261,27 +258,26 @@ export { Blockchain }(...args[]):  {
               transition={{ duration: 0.8 }}
 
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400 text-sm font-medium mb-6">
-                <Link className="w-4 h-4 mr-2" />
+                <Link className="w-4 h-4 mr-2"  />
                 Blockchain Innovation
               </div>
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              <h1 className="text-5xl md: tex t-6xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-orange-400 via-red-500 to-pink-500 bg-clip-text text-transparent">Blockchain</span> Solutions for the Future
               </h1>
               <p className="text-xl text-zinc-300 mb-8 leading-relaxed">
                 Leverage the power of blockchain technology to create transparent, secure, and efficient
                 business processes. From smart contracts to DeFi, we're building the decentralized future.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <RouterLink
-                  to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105"
+              <div className="flex flex-col sm: fle x-row gap-4 justify-center">
+                <RouterLink to="/contact"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover: fro m-orange-600 hover: t o-red-600 transition-all duration-300 transform hover: scal e-105"
 
                   Get Started
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                  <ArrowRight className="w-5 h-5 ml-2"  />
                 </RouterLink>
                 <RouterLink
                   to="/request-quote"
-                  className="inline-flex items-center px-8 py-4 border border-orange-500/30 text-orange-400 font-semibold rounded-lg hover:bg-orange-500/10 transition-all duration-300"
+                  className="inline-flex items-center px-8 py-4 border border-orange-500/30 text-orange-400 font-semibold rounded-lg hover: b g-orange-500/10 transition-all duration-300"
 
                   Request Quote
                 </RouterLink>
@@ -297,7 +293,7 @@ export { Blockchain }(...args[]):  {
               className="text-center mb-16"
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 3 0 
 
 
 
@@ -316,7 +312,7 @@ export { Blockchain }(...args[]):  {
 
 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: tru e }}
 
               <h2 className="text-4xl font-bold text-white mb-4">
                 Blockchain Applications
@@ -326,14 +322,14 @@ export { Blockchain }(...args[]):  {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: gri d-cols-3 gap-8">
               {useCases.map((useCase, index) => (
                 <motion.div
                   key={index}
-                  className="p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:border-orange-500/30 transition-all duration-300"
+                  className="p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover: borde r-orange-500/30 transition-all duration-300"
                   initial = {
   { opacity: 0,
-  y: 30 
+  y: 3 0 
 
 
 
@@ -353,7 +349,7 @@ export { Blockchain }(...args[]):  {
 }}
                   transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -361,7 +357,7 @@ export { Blockchain }(...args[]):  {
 
 
 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: tru e }}
 
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-4">
                     <useCase.icon className="w-6 h-6 text-white" />
@@ -371,7 +367,7 @@ export { Blockchain }(...args[]):  {
                   <ul className="space-y-2">
                     {useCase.examples.map((example, exampleIndex) => (
                       <li key={exampleIndex} className="flex items-center text-zinc-300 text-sm">
-                        <CheckCircle className="w-4 h-4 text-orange-400 mr-2 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 text-orange-400 mr-2 flex-shrink-0"  />
                         {example}
                       </li>
                     ))}
@@ -389,7 +385,7 @@ export { Blockchain }(...args[]):  {
               className="text-center mb-16"
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 3 0 
 
 
 
@@ -408,7 +404,7 @@ export { Blockchain }(...args[]):  {
 
 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: tru e }}
 
               <h2 className="text-4xl font-bold text-white mb-4">
                 Why Choose Our Blockchain?
@@ -418,14 +414,14 @@ export { Blockchain }(...args[]):  {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
               {features.map((feature, index) => (
                 <motion.div
                   key={index}
-                  className="p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:border-orange-500/30 transition-all duration-300"
+                  className="p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover: borde r-orange-500/30 transition-all duration-300"
                   initial = {
   { opacity: 0,
-  y: 30 
+  y: 3 0 
 
 
 
@@ -445,7 +441,7 @@ export { Blockchain }(...args[]):  {
 }}
                   transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -453,7 +449,7 @@ export { Blockchain }(...args[]):  {
 
 
 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: tru e }}
 
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
@@ -473,7 +469,7 @@ export { Blockchain }(...args[]):  {
               className="text-center mb-16"
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 3 0 
 
 
 
@@ -492,7 +488,7 @@ export { Blockchain }(...args[]):  {
 
 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: tru e }}
 
               <h2 className="text-4xl font-bold text-white mb-4">
                 Transparent Pricing
@@ -502,7 +498,7 @@ export { Blockchain }(...args[]):  {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md: gri d-cols-3 gap-8 max-w-6xl mx-auto">
               {pricing.map((plan, index) => (
                 <motion.div
                   key={index}
@@ -513,7 +509,7 @@ export { Blockchain }(...args[]):  {
                   } backdrop-blur-sm`}
                   initial = {
   { opacity: 0,
-  y: 30 
+  y: 3 0 
 
 
 
@@ -533,7 +529,7 @@ export { Blockchain }(...args[]):  {
 }}
                   transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -541,7 +537,7 @@ export { Blockchain }(...args[]):  {
 
 
 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: tru e }}
 
                   {plan.popular && (;
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -563,7 +559,7 @@ export { Blockchain }(...args[]):  {
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-zinc-300">
-                        <CheckCircle className="w-5 h-5 text-orange-400 mr-3 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-orange-400 mr-3 flex-shrink-0"  />
                         {feature}
                       </li>
                     ))}
@@ -573,8 +569,8 @@ export { Blockchain }(...args[]):  {
                     to={plan.name === "Enterprise" ? "/contact" : "/request-quote"}
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white hover:from-orange-600 hover:to-red-600'
-                        : 'bg-white/10 text-white hover:bg-white/20 border border-white/20'
+                        ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white hover: fro m-orange-600 hover: t o-red-600'
+                        : 'bg-white/10 text-white hover: b g-white/20 border border-white/20'
                     }`}
 
                     {plan.cta}
@@ -592,7 +588,7 @@ export { Blockchain }(...args[]):  {
               className="text-center mb-16"
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 3 0 
 
 
 
@@ -611,7 +607,7 @@ export { Blockchain }(...args[]):  {
 
 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: tru e }}
 
               <h2 className="text-4xl font-bold text-white mb-4">
                 Business Benefits
@@ -621,14 +617,14 @@ export { Blockchain }(...args[]):  {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md: gri d-cols-2 gap-8">
               {benefits.map((benefit, index) => (
                 <motion.div
                   key={index}
                   className="flex items-start space-x-4 p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm"
                   initial = {
   { opacity: 0,
-  x: index % 2 === 0 ? -30 : 30 
+  x: inde x % 2 === 0 ? -30 : 30 
 
 
 
@@ -648,7 +644,7 @@ export { Blockchain }(...args[]):  {
 }}
                   transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -656,7 +652,7 @@ export { Blockchain }(...args[]):  {
 
 
 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: tru e }}
 
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <benefit.icon className="w-6 h-6 text-white" />
@@ -677,7 +673,7 @@ export { Blockchain }(...args[]):  {
             <motion.div
               initial = {
   { opacity: 0,
-  y: 30 
+  y: 3 0 
 
 
 
@@ -696,7 +692,7 @@ export { Blockchain }(...args[]):  {
 
 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: tru e }}
 
               <h2 className="text-4xl font-bold text-white mb-6">
                 Ready to Go Blockchain?
@@ -704,17 +700,16 @@ export { Blockchain }(...args[]):  {
               <p className="text-xl text-zinc-300 mb-8 max-w-3xl mx-auto">
                 Join the blockchain revolution with Zion Tech Group's cutting-edge decentralized solutions
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <RouterLink
-                  to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105"
+              <div className="flex flex-col sm: fle x-row gap-4 justify-center">
+                <RouterLink to="/contact"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover: fro m-orange-600 hover: t o-red-600 transition-all duration-300 transform hover: scal e-105"
 
                   Start Your Journey
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                  <ArrowRight className="w-5 h-5 ml-2"  />
                 </RouterLink>
                 <RouterLink
                   to="/request-quote"
-                  className="inline-flex items-center px-8 py-4 border border-orange-500/30 text-orange-400 font-semibold rounded-lg hover:bg-orange-500/10 transition-all duration-300"
+                  className="inline-flex items-center px-8 py-4 border border-orange-500/30 text-orange-400 font-semibold rounded-lg hover: b g-orange-500/10 transition-all duration-300"
 
                   Get Custom Quote
                 </RouterLink>

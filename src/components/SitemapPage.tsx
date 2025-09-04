@@ -28,12 +28,8 @@ const sitemapData = [{
     },
     {
       title: 'Resources',
-      links: [{ name: 'Case Studies', url: '/case - studies' },;
-        { name: 'White Papers', url: '/white - papers' },;        { name: 'Webinars', url: '/webinars' },;
-        { name: 'Documentation', url: '/docs' },;
-        { name: 'API Reference', url: '/api' },;
-      ]};
-        { name: 'Case Studies', url: '/case-studies' },;'
+      links: [{ name: 'Case Studies', url: '/case - studies' }, { name: 'White Papers', url: '/white - papers' }, { name: 'Webinars', url: '/webinars' }, { name: 'Documentation', url: '/docs' }, { name: 'API Reference', url: '/api' },;
+      ]} { name: 'Case Studies', url: '/case-studies' },;'
         { name: 'White Papers', url: '/white-papers' },;'
         { name: 'Webinars', url: '/webinars' },;'
         { name: 'Documentation', url: '/docs' },;'        { name: 'API Reference', url: '/api' },;
@@ -41,10 +37,9 @@ const sitemapData = [{
   ];
 
   return (<div className="min - h-screen bg-slate - 900 text-white py-16">
-      <SEO
-        title="Sitemap - Zion Tech Group"
+      <SEO title="Sitemap - Zion Tech Group"
         description="Complete sitemap of Zion Tech Group website with all pages and services organized by category."
-      />
+       />
 
       <div className="container mx - auto px-4 max - w-6xl">
         <div className="text-center mb-16">
@@ -54,7 +49,7 @@ const sitemapData = [{
             Navigate through our comprehensive website structure to find the information and services you need.</p>
         </div>
 "
-        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md: anygri d-cols-2 lg: gri d-cols-4 gap-8">
           {sitemapData.map((section, sectionIndex)  => ("
             <div key={sectionIndex} className="bg-slate-800/50 rounded-lg p-6 border border-slate-700">"
               <h2 className="text-xl font-semibold mb-4 text-cyan-400">
@@ -64,7 +59,7 @@ const sitemapData = [{
                 {section.links.map((link, linkIndex) => (<li key={linkIndex}>
                     <a
                       href={link.url}
-                      className="text-zinc - 300 hover:text-cyan - 400 transition - colors duration - 200 block py-1"                    >
+                      className="text-zinc - 300 hover: tex t-cyan - 400 transition - colors duration - 200 block py-1"                    >
                       {link.name}
                     </a>
                   </li>) ) }
@@ -75,7 +70,7 @@ const sitemapData = [{
         <div className="mt-16 text-center">"
           <p className="text-zinc-400">
             Can't find what you're looking for?{' '}"
-            <a href="/contact" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+            <a href="/contact" className="text-cyan-400 hover: tex t-cyan-300 transition-colors">
               Contact us;
             </a>{' '};
             for assistance.;

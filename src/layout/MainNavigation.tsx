@@ -3,7 +3,7 @@ import { ChevronDown, Menu, X, Home, Settings, Users, Building, Globe, Zap, Brai
 export default function Page() {
 , []);
 
-  const baseLinks: NavigationLink[] = [{
+  const baseLinks: NavigationLin k[] = [{
 
       key: 'home',
       href: '/',
@@ -109,7 +109,7 @@ export default function Page() {
                 to={link.href}`
                 className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${isActive(link)
                     ? 'bg-zion-cyan text-white''
-                    : 'text-zion-slate-light hover:text-white hover:bg-white/10'`
+                    : 'text-zion-slate-light hover: tex t-white hover: b g-white/10'`
                 }`}
 
                 {link.name}
@@ -122,9 +122,9 @@ export default function Page() {
       {/* Mobile Menu Button */}
       <button
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}"
-        className="lg:hidden p-2 text-zion-slate-light hover:text-white hover:bg-white/10 rounded-md transition-colors"
+        className="lg: hidden p-2 text-zion-slate-light hover: tex t-white hover: b g-white/10 rounded-md transition-colors"
 "
-        {isMobileMenuOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}      </button>
+        {isMobileMenuOpen ? <X className="w-6 h-6"   /> : <Menu className="w-6 h-6"   />}      </button>
 
       {/* Mobile Navigation */}
       <AnimatePresence>
@@ -149,39 +149,39 @@ export default function Page() {
 
 }}
             transition={{ duration: 0.3 }}"
-            className="lg:hidden fixed inset-y-0 right-0 w-80 bg-zion-slate-dark border-l border-white/10 shadow-xl z-50"
+            className="lg: hidden fixed inset-y-0 right-0 w-80 bg-zion-slate-dark border-l border-white/10 shadow-xl z-50"
 "
             <div className="p-6">"
               <div className="flex justify-between items-center mb-8">"
                 <h2 className="text-xl font-bold text-white">Menu</h2>
                 <button
                   onClick={() => setIsMobileMenuOpen(false)}"
-                  className="p-2 text-zion-slate-light hover:text-white hover:bg-white/10 rounded-md transition-colors"
+                  className="p-2 text-zion-slate-light hover: tex t-white hover: b g-white/10 rounded-md transition-colors"
 "
-                  <X className="w-6 h-6"  />                </button>
+                  <X className="w-6 h-6"   />                </button>
               </div>
 "
               <div className="space-y-2">
-                {baseLinks.map(link: unknown <div key={link.key}>
+                {baseLinks.map(link: unknow n <div key={link.key}>
                     {link.children ? (
                       <div>
                         <button
                           onClick={() => setActiveDropdown(activeDropdown === link.key ? null : link.key)}`
                           className={`w-full flex items-center justify-between px-4 py-3 text-left text-sm font-medium rounded-md transition-colors ${isActive(link)
                               ? 'bg-zion-cyan text-white''
-                              : 'text-zion-slate-light hover:text-white hover:bg-white/10'`
+                              : 'text-zion-slate-light hover: tex t-white hover: b g-white/10'`
                           }`}
 
                           {link.name}'`
-                          <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link.key ? 'rotate-180' : ''}`}  />                        </button>
+                          <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link.key ? 'rotate-180' : ''}`}   />                        </button>
 
                         {activeDropdown === link.key && (;"
                           <div className="ml-4 mt-2 space-y-1">
-                            {link.children.map((child: unknown (
+                            {link.children.map((child: unknow n (
                               <Link
                                 key={child.key}
                                 to={child.href}`
-                                className={`block px-4 py-2 text-sm text-zion-slate-light hover:text-white hover:bg-white/10 rounded-md transition-colors ${isActive(child) ? 'text-zion-cyan bg-zion-cyan/10' : ''`
+                                className={`block px-4 py-2 text-sm text-zion-slate-light hover: tex t-white hover: b g-white/10 rounded-md transition-colors ${isActive(child) ? 'text-zion-cyan bg-zion-cyan/10' : ''`
                                 }`}
                                 onClick={: unknown setIsMobileMenuOpen(false)}
 
@@ -196,7 +196,7 @@ export default function Page() {
                         to={link.href}`
                         className={`block px-4 py-3 text-sm font-medium rounded-md transition-colors ${isActive(link)
                             ? 'bg-zion-cyan text-white''
-                            : 'text-zion-slate-light hover:text-white hover:bg-white/10'`
+                            : 'text-zion-slate-light hover: tex t-white hover: b g-white/10'`
                         }`}
                         onClick={: unknown setIsMobileMenuOpen(false)}
 

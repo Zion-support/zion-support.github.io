@@ -428,7 +428,7 @@ export default function InnovativeMicroSaaS() {
       id: 'ai-email-responder',
       title: 'AI-Powered Email Responder',
       description: 'Intelligent email automation that categorizes, prioritizes, and responds to emails with 95% accuracy',
-      icon: Mail,
+      icon: Mai l,
       category: 'AI Automation',
       features: [
         'Smart email categorization and prioritization',
@@ -445,7 +445,7 @@ export default function InnovativeMicroSaaS() {
       },
       delivery: '2-3 weeks',
       benefits: 'Reduce email response time by 80% and improve customer satisfaction by 60%',
-      roi: 'Expected ROI: 300-500% within 3 months',
+      roi: 'Expected ROI: 30 0-500% within 3 months',
       marketPrice: '$30-50/month',
       link: 'https://ziontechgroup.com/contact',
       contact: {
@@ -457,7 +457,7 @@ export default function InnovativeMicroSaaS() {
       id: 'mobile-survey-tool',
       title: 'Mobile-First Survey Platform',
       description: 'Advanced survey creation tool with adaptive questioning and real-time analytics',
-      icon: MessageSquare,
+      icon: MessageSquar e,
       category: 'Data Collection',
       features: [
         'Adaptive questioning based on responses',
@@ -474,7 +474,7 @@ export default function InnovativeMicroSaaS() {
       },
       delivery: '3-4 weeks',
       benefits: 'Increase survey completion rates by 150% and improve data quality by 70%',
-      roi: 'Expected ROI: 250-400% within 4 months',
+      roi: 'Expected ROI: 25 0-400% within 4 months',
       marketPrice: '$20-40/month',
       link: 'https://ziontechgroup.com/contact',
       contact: {
@@ -486,7 +486,7 @@ export default function InnovativeMicroSaaS() {
       id: 'productivity-planner',
       title: 'AI Productivity Planner',
       description: 'Industry-specific productivity platform with intelligent task management and goal tracking',
-      icon: Target,
+      icon: Targe t,
       category: 'Productivity',
       features: [
         'AI-powered task prioritization and scheduling',
@@ -503,7 +503,7 @@ export default function InnovativeMicroSaaS() {
       },
       delivery: '4-5 weeks',
       benefits: 'Increase productivity by 200% and reduce project completion time by 45%',
-      roi: 'Expected ROI: 350-550% within 5 months',
+      roi: 'Expected ROI: 35 0-550% within 5 months',
       marketPrice: '$25-45/month',
       link: 'https://ziontechgroup.com/contact',
       contact: {
@@ -515,7 +515,7 @@ export default function InnovativeMicroSaaS() {
       id: 'event-management',
       title: 'Smart Event Management Suite',
       description: 'Comprehensive event planning platform with AI-powered optimization and guest management',
-      icon: Calendar,
+      icon: Calenda r,
       category: 'Event Management',
       features: [
         'AI-powered event optimization and recommendations',
@@ -532,7 +532,7 @@ export default function InnovativeMicroSaaS() {
       },
       delivery: '6-8 weeks',
       benefits: 'Increase event attendance by 120% and reduce planning time by 65%',
-      roi: 'Expected ROI: 400-600% within 6 months',
+      roi: 'Expected ROI: 40 0-600% within 6 months',
       marketPrice: '$50-100/month',
       link: 'https://ziontechgroup.com/contact',
       contact: {
@@ -544,7 +544,7 @@ export default function InnovativeMicroSaaS() {
       id: 'content-creation-ai',
       title: 'AI Content Creation Studio',
       description: 'Multi-format content generation platform with brand consistency and optimization',
-      icon: FileText,
+      icon: FileTex t,
       category: 'Content Marketing',
       features: [
         'Multi-format content generation (text, images, videos)',
@@ -561,7 +561,7 @@ export default function InnovativeMicroSaaS() {
       },
       delivery: '5-7 weeks',
       benefits: 'Reduce content creation time by 75% and increase engagement by 180%',
-      roi: 'Expected ROI: 300-500% within 4 months',
+      roi: 'Expected ROI: 30 0-500% within 4 months',
       marketPrice: '$40-80/month',
       link: 'https://ziontechgroup.com/contact',
       contact: {
@@ -573,7 +573,7 @@ export default function InnovativeMicroSaaS() {
       id: 'customer-support-platform',
       title: 'AI Customer Support Suite',
       description: 'Intelligent helpdesk platform with automated ticket management and chatbot integration',
-      icon: Headphones,
+      icon: Headphone s,
       category: 'Customer Support',
       features: [
         'AI-powered ticket categorization and routing',
@@ -590,7 +590,7 @@ export default function InnovativeMicroSaaS() {
       },
       delivery: '4-6 weeks',
       benefits: 'Reduce response time by 85% and increase customer satisfaction by 90%',
-      roi: 'Expected ROI: 250-400% within 3 months',
+      roi: 'Expected ROI: 25 0-400% within 3 months',
       marketPrice: '$50-100/month',
       link: 'https://ziontechgroup.com/contact',
       contact: {
@@ -602,7 +602,7 @@ export default function InnovativeMicroSaaS() {
       id: 'affiliate-tracking',
       title: 'Affiliate Marketing Tracker',
       description: 'Advanced affiliate management platform with automated tracking and commission calculations',
-      icon: Link2,
+      icon: Link 2,
       category: 'Marketing',
       features: [
         'Automated affiliate link generation and tracking',
@@ -619,7 +619,7 @@ export default function InnovativeMicroSaaS() {
       },
       delivery: '3-5 weeks',
       benefits: 'Increase affiliate conversions by 150% and reduce fraud by 95%',
-      roi: 'Expected ROI: 400-700% within 4 months',
+      roi: 'Expected ROI: 40 0-700% within 4 months',
       marketPrice: '$30-60/month',
       link: 'https://ziontechgroup.com/contact',
       contact: {
@@ -631,7 +631,7 @@ export default function InnovativeMicroSaaS() {
       id: 'website-analytics',
       title: 'Small Business Analytics Dashboard',
       description: 'User-friendly analytics platform designed specifically for small business owners',
-      icon: BarChart3,
+      icon: BarChart 3,
       category: 'Analytics',
       features: [
         'Simplified analytics without technical complexity',
@@ -648,7 +648,7 @@ export default function InnovativeMicroSaaS() {
       },
       delivery: '2-4 weeks',
       benefits: 'Improve decision-making speed by 300% and increase ROI by 200%',
-      roi: 'Expected ROI: 250-400% within 3 months',
+      roi: 'Expected ROI: 25 0-400% within 3 months',
       marketPrice: '$20-40/month',
       link: 'https://ziontechgroup.com/contact',
       contact: {
@@ -660,7 +660,7 @@ export default function InnovativeMicroSaaS() {
       id: 'it-helpdesk',
       title: 'IT Helpdesk Management System',
       description: 'Comprehensive IT service management platform for managed service providers',
-      icon: Settings,
+      icon: Setting s,
       category: 'IT Management',
       features: [
         'Automated ticket routing and prioritization',
@@ -677,7 +677,7 @@ export default function InnovativeMicroSaaS() {
       },
       delivery: '5-7 weeks',
       benefits: 'Reduce ticket resolution time by 70% and improve client satisfaction by 85%',
-      roi: 'Expected ROI: 300-500% within 6 months',
+      roi: 'Expected ROI: 30 0-500% within 6 months',
       marketPrice: '$50-100/month',
       link: 'https://ziontechgroup.com/contact',
       contact: {
@@ -689,7 +689,7 @@ export default function InnovativeMicroSaaS() {
       id: 'ecommerce-returns',
       title: 'E-Commerce Return Management',
       description: 'Automated return processing platform with intelligent fraud detection',
-      icon: RotateCcw,
+      icon: RotateCc w,
       category: 'E-Commerce',
       features: [
         'Automated return request processing',
@@ -706,7 +706,7 @@ export default function InnovativeMicroSaaS() {
       },
       delivery: '3-5 weeks',
       benefits: 'Reduce return processing time by 80% and decrease fraud by 90%',
-      roi: 'Expected ROI: 350-550% within 4 months',
+      roi: 'Expected ROI: 35 0-550% within 4 months',
       marketPrice: '$30-60/month',
       link: 'https://ziontechgroup.com/contact',
       contact: {
@@ -721,7 +721,7 @@ export default function InnovativeMicroSaaS() {
       id: 'ai-chatbot-platform',
       title: 'Conversational AI Platform',
       description: 'Advanced chatbot development platform with natural language understanding',
-      icon: Bot,
+      icon: Bo t,
       category: 'AI Development',
       features: [
         'Natural language processing and understanding',
@@ -738,7 +738,7 @@ export default function InnovativeMicroSaaS() {
       },
       delivery: '4-6 weeks',
       benefits: 'Reduce customer service costs by 60% and improve response time by 95%',
-      roi: 'Expected ROI: 400-800% within 6 months',
+      roi: 'Expected ROI: 40 0-800% within 6 months',
       marketPrice: '$100-300/month',
       link: 'https://ziontechgroup.com/contact',
       contact: {
@@ -750,7 +750,7 @@ export default function InnovativeMicroSaaS() {
       id: 'ai-data-analytics',
       title: 'AI-Powered Data Analytics',
       description: 'Intelligent data analysis platform with predictive modeling and insights',
-      icon: Brain,
+      icon: Brai n,
       category: 'AI Analytics',
       features: [
         'Automated data analysis and pattern recognition',
@@ -767,7 +767,7 @@ export default function InnovativeMicroSaaS() {
       },
       delivery: '6-8 weeks',
       benefits: 'Accelerate data insights by 500% and improve decision accuracy by 80%',
-      roi: 'Expected ROI: 600-1000% within 8 months',
+      roi: 'Expected ROI: 60 0-1000% within 8 months',
       marketPrice: '$200-500/month',
       link: 'https://ziontechgroup.com/contact',
       contact: {
@@ -779,7 +779,7 @@ export default function InnovativeMicroSaaS() {
       id: 'ai-process-automation',
       title: 'Intelligent Process Automation',
       description: 'AI-driven workflow automation with cognitive decision making',
-      icon: Workflow,
+      icon: Workflo w,
       category: 'Process Automation',
       features: [
         'Cognitive process automation with decision making',
@@ -796,7 +796,7 @@ export default function InnovativeMicroSaaS() {
       },
       delivery: '8-12 weeks',
       benefits: 'Reduce manual work by 90% and improve process efficiency by 300%',
-      roi: 'Expected ROI: 500-900% within 10 months',
+      roi: 'Expected ROI: 50 0-900% within 10 months',
       marketPrice: '$300-800/month',
       link: 'https://ziontechgroup.com/contact',
       contact: {
@@ -811,7 +811,7 @@ export default function InnovativeMicroSaaS() {
       id: 'cloud-migration',
       title: 'Cloud Migration & Optimization',
       description: 'Comprehensive cloud migration services with cost optimization',
-      icon: Cloud,
+      icon: Clou d,
       category: 'Cloud Services',
       features: [
         'Automated cloud migration planning and execution',
@@ -828,7 +828,7 @@ export default function InnovativeMicroSaaS() {
       },
       delivery: '4-8 weeks',
       benefits: 'Reduce infrastructure costs by 40% and improve scalability by 200%',
-      roi: 'Expected ROI: 300-600% within 12 months',
+      roi: 'Expected ROI: 30 0-600% within 12 months',
       marketPrice: '$3,000-25,000/project',
       link: 'https://ziontechgroup.com/contact',
       contact: {
@@ -840,7 +840,7 @@ export default function InnovativeMicroSaaS() {
       id: 'cybersecurity-audit',
       title: 'Cybersecurity Assessment & Implementation',
       description: 'Comprehensive security audit and implementation services',
-      icon: Shield,
+      icon: Shiel d,
       category: 'Cybersecurity',
       features: [
         'Comprehensive security vulnerability assessment',
@@ -857,7 +857,7 @@ export default function InnovativeMicroSaaS() {
       },
       delivery: '6-12 weeks',
       benefits: 'Reduce security risks by 95% and ensure compliance with industry standards',
-      roi: 'Expected ROI: 200-400% within 18 months',
+      roi: 'Expected ROI: 20 0-400% within 18 months',
       marketPrice: '$5,000-40,000/project',
       link: 'https://ziontechgroup.com/contact',
       contact: {
@@ -869,7 +869,7 @@ export default function InnovativeMicroSaaS() {
       id: 'devops-transformation',
       title: 'DevOps Transformation Services',
       description: 'Complete DevOps implementation with CI/CD pipeline optimization',
-      icon: GitBranch,
+      icon: GitBranc h,
       category: 'DevOps',
       features: [
         'CI/CD pipeline design and implementation',
@@ -886,7 +886,7 @@ export default function InnovativeMicroSaaS() {
       },
       delivery: '8-16 weeks',
       benefits: 'Reduce deployment time by 80% and improve system reliability by 90%',
-      roi: 'Expected ROI: 400-800% within 15 months',
+      roi: 'Expected ROI: 40 0-800% within 15 months',
       marketPrice: '$8,000-50,000/project',
       link: 'https://ziontechgroup.com/contact',
       contact: {
@@ -901,20 +901,20 @@ export default function InnovativeMicroSaaS() {
       <PageTransition>
         <Head>
           <title>{title}</title>
-          <meta name="description" content={description} />
-          <meta name="keywords" content="micro SaaS, AI services, IT solutions, business automation, software development" />
-          <link rel="canonical" href="https://ziontechgroup.com/innovative-micro-saas" />
+          <meta name="description" content={description}  />
+          <meta name="keywords" content="micro SaaS, AI services, IT solutions, business automation, software development"  />
+          <link rel="canonical" href="https://ziontechgroup.com/innovative-micro-saas"  />
         </Head>
 
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 py-20 sm:py-32">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <section className="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 py-20 sm: p y-32">
+          <div className="mx-auto max-w-7xl px-6 lg: p x-8">
             <div className="mx-auto max-w-4xl text-center">
               <div className="flex items-center justify-center mb-6">
-                <Rocket className="h-8 w-8 text-blue-600 mr-3" />
+                <Rocket className="h-8 w-8 text-blue-600 mr-3"  />
                 <span className="text-lg font-semibold leading-7 text-blue-600">Innovative Solutions</span>
               </div>
-              <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+              <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm: tex t-6xl">
                 Micro SaaS & AI Services
               </h1>
               <p className="mt-6 text-xl leading-8 text-gray-600">
@@ -923,15 +923,15 @@ export default function InnovativeMicroSaaS() {
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <Link
                   href="/contact"
-                  className="rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200"
+                  className="rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover: b g-blue-500 focus-visible: outline focus-visible: outlin e-2 focus-visible: outlin e-offset-2 focus-visible: outlin e-blue-600 transition-all duration-200"
                 >
                   Get Started Today
                 </Link>
                 <Link
                   href="/services"
-                  className="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-600 transition-colors"
+                  className="text-sm font-semibold leading-6 text-gray-900 hover: tex t-blue-600 transition-colors"
                 >
-                  View All Services <ArrowRight className="inline h-4 w-4 ml-1" />
+                  View All Services <ArrowRight className="inline h-4 w-4 ml-1"  />
                 </Link>
               </div>
             </div>
@@ -940,24 +940,24 @@ export default function InnovativeMicroSaaS() {
 
         {/* Contact Information Banner */}
         <section className="bg-blue-600 py-8">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl px-6 lg: p x-8">
             <div className="text-center">
               <h2 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-white">
+              <div className="grid grid-cols-1 md: gri d-cols-3 gap-6 text-white">
                 <div className="flex items-center justify-center">
-                  <Phone className="h-5 w-5 mr-2" />
-                  <a href="tel:+13024640950" className="hover:text-blue-200 transition-colors">
+                  <Phone className="h-5 w-5 mr-2"  />
+                  <a href="tel:+13024640950" className="hover: tex t-blue-200 transition-colors">
                     +1 302 464 0950
                   </a>
                 </div>
                 <div className="flex items-center justify-center">
-                  <Mail className="h-5 w-5 mr-2" />
-                  <a href="mailto:kleber@ziontechgroup.com" className="hover:text-blue-200 transition-colors">
+                  <Mail className="h-5 w-5 mr-2"  />
+                  <a href="mailto: klebe r@ziontechgroup.com" className="hover: tex t-blue-200 transition-colors">
                     kleber@ziontechgroup.com
                   </a>
                 </div>
                 <div className="flex items-center justify-center">
-                  <Globe className="h-5 w-5 mr-2" />
+                  <Globe className="h-5 w-5 mr-2"  />
                   <span>364 E Main St STE 1008, Middletown DE 19709</span>
                 </div>
               </div>
@@ -966,10 +966,10 @@ export default function InnovativeMicroSaaS() {
         </section>
 
         {/* Micro SaaS Services */}
-        <section className="py-16 sm:py-24">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <section className="py-16 sm: p y-24">
+          <div className="mx-auto max-w-7xl px-6 lg: p x-8">
             <div className="mx-auto max-w-2xl text-center mb-16">
-              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm: tex t-4xl">
                 Micro SaaS Solutions
               </h2>
               <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -977,11 +977,11 @@ export default function InnovativeMicroSaaS() {
               </p>
             </div>
 
-            <div className="grid gap-8 lg:grid-cols-2">
+            <div className="grid gap-8 lg: gri d-cols-2">
               {microSaaSServices.map((service) => (
-                <div key={service.id} className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:border-blue-300">
+                <div key={service.id} className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shado w-xl transition-all duration-300 hover: borde r-blue-300">
                   <div className="flex items-center gap-x-4 mb-6">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-blue-600 group-hover:bg-blue-700 transition-colors">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-blue-600 group-hover: b g-blue-700 transition-colors">
                       <service.icon className="h-8 w-8 text-white" />
                     </div>
                     <div>
@@ -997,7 +997,7 @@ export default function InnovativeMicroSaaS() {
                     <ul className="space-y-2">
                       {service.features.slice(0, 4).map((feature, index) => (
                         <li key={index} className="flex items-center gap-x-3">
-                          <CheckCircle className="h-4 w-4 text-blue-600 flex-shrink-0" />
+                          <CheckCircle className="h-4 w-4 text-blue-600 flex-shrink-0"  />
                           <span className="text-sm text-gray-700">{feature}</span>
                         </li>
                       ))}
@@ -1028,15 +1028,15 @@ export default function InnovativeMicroSaaS() {
 
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-2 text-sm text-gray-500">
-                      <Clock className="h-4 w-4" />
+                      <Clock className="h-4 w-4"  />
                       <span>{service.delivery} delivery</span>
                     </div>
                     <Link
                       href={service.link}
-                      className="inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-500 transition-colors group"
+                      className="inline-flex items-center text-sm font-semibold text-blue-600 hover: tex t-blue-500 transition-colors group"
                     >
                       Get Started
-                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover: translat e-x-1 transition-transform"  />
                     </Link>
                   </div>
                 </div>
@@ -1046,10 +1046,10 @@ export default function InnovativeMicroSaaS() {
         </section>
 
         {/* AI Services */}
-        <section className="py-16 sm:py-24 bg-gray-50">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <section className="py-16 sm: p y-24 bg-gray-50">
+          <div className="mx-auto max-w-7xl px-6 lg: p x-8">
             <div className="mx-auto max-w-2xl text-center mb-16">
-              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm: tex t-4xl">
                 AI-Powered Solutions
               </h2>
               <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -1057,11 +1057,11 @@ export default function InnovativeMicroSaaS() {
               </p>
             </div>
 
-            <div className="grid gap-8 lg:grid-cols-3">
+            <div className="grid gap-8 lg: gri d-cols-3">
               {aiServices.map((service) => (
-                <div key={service.id} className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:border-purple-300">
+                <div key={service.id} className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shado w-xl transition-all duration-300 hover: borde r-purple-300">
                   <div className="flex items-center gap-x-4 mb-6">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-purple-600 group-hover:bg-purple-700 transition-colors">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-purple-600 group-hover: b g-purple-700 transition-colors">
                       <service.icon className="h-8 w-8 text-white" />
                     </div>
                     <div>
@@ -1077,7 +1077,7 @@ export default function InnovativeMicroSaaS() {
                     <ul className="space-y-2">
                       {service.features.slice(0, 3).map((feature, index) => (
                         <li key={index} className="flex items-center gap-x-3">
-                          <CheckCircle className="h-4 w-4 text-purple-600 flex-shrink-0" />
+                          <CheckCircle className="h-4 w-4 text-purple-600 flex-shrink-0"  />
                           <span className="text-sm text-gray-700">{feature}</span>
                         </li>
                       ))}
@@ -1102,15 +1102,15 @@ export default function InnovativeMicroSaaS() {
 
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-2 text-sm text-gray-500">
-                      <Clock className="h-4 w-4" />
+                      <Clock className="h-4 w-4"  />
                       <span>{service.delivery} delivery</span>
                     </div>
                     <Link
                       href={service.link}
-                      className="inline-flex items-center text-sm font-semibold text-purple-600 hover:text-purple-500 transition-colors group"
+                      className="inline-flex items-center text-sm font-semibold text-purple-600 hover: tex t-purple-500 transition-colors group"
                     >
                       Get Started
-                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover: translat e-x-1 transition-transform"  />
                     </Link>
                   </div>
                 </div>
@@ -1120,10 +1120,10 @@ export default function InnovativeMicroSaaS() {
         </section>
 
         {/* IT Services */}
-        <section className="py-16 sm:py-24">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <section className="py-16 sm: p y-24">
+          <div className="mx-auto max-w-7xl px-6 lg: p x-8">
             <div className="mx-auto max-w-2xl text-center mb-16">
-              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm: tex t-4xl">
                 IT Infrastructure Services
               </h2>
               <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -1131,11 +1131,11 @@ export default function InnovativeMicroSaaS() {
               </p>
             </div>
 
-            <div className="grid gap-8 lg:grid-cols-3">
+            <div className="grid gap-8 lg: gri d-cols-3">
               {itServices.map((service) => (
-                <div key={service.id} className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:border-green-300">
+                <div key={service.id} className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shado w-xl transition-all duration-300 hover: borde r-green-300">
                   <div className="flex items-center gap-x-4 mb-6">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-green-600 group-hover:bg-green-700 transition-colors">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-green-600 group-hover: b g-green-700 transition-colors">
                       <service.icon className="h-8 w-8 text-white" />
                     </div>
                     <div>
@@ -1151,7 +1151,7 @@ export default function InnovativeMicroSaaS() {
                     <ul className="space-y-2">
                       {service.features.slice(0, 3).map((feature, index) => (
                         <li key={index} className="flex items-center gap-x-3">
-                          <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
+                          <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0"  />
                           <span className="text-sm text-gray-700">{feature}</span>
                         </li>
                       ))}
@@ -1176,15 +1176,15 @@ export default function InnovativeMicroSaaS() {
 
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-2 text-sm text-gray-500">
-                      <Clock className="h-4 w-4" />
+                      <Clock className="h-4 w-4"  />
                       <span>{service.delivery} delivery</span>
                     </div>
                     <Link
                       href={service.link}
-                      className="inline-flex items-center text-sm font-semibold text-green-600 hover:text-green-500 transition-colors group"
+                      className="inline-flex items-center text-sm font-semibold text-green-600 hover: tex t-green-500 transition-colors group"
                     >
                       Get Started
-                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover: translat e-x-1 transition-transform"  />
                     </Link>
                   </div>
                 </div>
@@ -1194,10 +1194,10 @@ export default function InnovativeMicroSaaS() {
         </section>
 
         {/* Call to Action */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-16 sm:py-24">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-16 sm: p y-24">
+          <div className="mx-auto max-w-7xl px-6 lg: p x-8">
             <div className="mx-auto max-w-2xl text-center">
-              <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+              <h2 className="text-3xl font-bold tracking-tight text-white sm: tex t-4xl">
                 Ready to Transform Your Business?
               </h2>
               <p className="mt-6 text-lg leading-8 text-blue-100">
@@ -1207,13 +1207,13 @@ export default function InnovativeMicroSaaS() {
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <Link
                   href="/contact"
-                  className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all duration-200"
+                  className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-sm hover: b g-gray-50 focus-visible: outline focus-visible: outlin e-2 focus-visible: outlin e-offset-2 focus-visible: outlin e-white transition-all duration-200"
                 >
                   Get Free Consultation
                 </Link>
                 <a
                   href="tel:+13024640950"
-                  className="text-sm font-semibold leading-6 text-white hover:text-blue-200 transition-colors"
+                  className="text-sm font-semibold leading-6 text-white hover: tex t-blue-200 transition-colors"
                 >
                   Call +1 302 464 0950
                 </a>
@@ -1221,7 +1221,7 @@ export default function InnovativeMicroSaaS() {
               <div className="mt-8 text-center">
                 <p className="text-sm text-blue-100">
                   Or email us at{' '}
-                  <a href="mailto:kleber@ziontechgroup.com" className="text-white hover:text-blue-200 underline">
+                  <a href="mailto: klebe r@ziontechgroup.com" className="text-white hover: tex t-blue-200 underline">
                     kleber@ziontechgroup.com
                   </a>
                 </p>

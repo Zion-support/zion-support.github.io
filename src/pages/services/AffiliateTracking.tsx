@@ -1,5 +1,5 @@
 import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, ArrowRight, Mail export { function };
-export default function AffiliateTracking(...args: unknown[]): unknown {  const features: { title: string; description: string }[] = [
+export default function AffiliateTracking(...args: unknow n[]): unknown {  const features: { title: string; description: string }[] = [
     {
 
       title: 'Multi-channel attribution',
@@ -47,7 +47,7 @@ export default function AffiliateTracking(...args: unknown[]): unknown {  const 
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
-  return()
+  return ()
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO"
         title="Affiliate Tracking Platform - Zion Tech Group""
@@ -55,14 +55,14 @@ export default function AffiliateTracking(...args: unknown[]): unknown {  const 
        />
 
       {/* Hero */}"
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">"
-        <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark/20 to-zion-purple/20" />"
+      <section className="relative py-20 px-4 sm: p x-6 lg: p x-8 overflow-hidden">"
+        <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark/20 to-zion-purple/20"  />"
         <div className="relative max-w-7xl mx-auto">
           <motion.h1
             initial = {
 
   { opacity: 0,
-  y: 30 
+  y: 3 0 
 
 
 
@@ -82,40 +82,38 @@ export default function AffiliateTracking(...args: unknown[]): unknown {  const 
 
 }}
             transition={{ duration: 0.6 }}"
-            className="text-4xl md:text-6xl font-bold text-white mb-6"
+            className="text-4xl md: tex t-6xl font-bold text-white mb-6"
 
             Affiliate Tracking Platform"
-            <span className="block text-zion-cyan text-2xl md:text-3xl mt-2">Recruit. Attribute. Reward.</span>
+            <span className="block text-zion-cyan text-2xl md: tex t-3xl mt-2">Recruit. Attribute. Reward.</span>
           </motion.h1>
 "
           <p className="text-xl text-zion-slate-light max-w-3xl">
             End-to-end partner marketing infrastructure: from recruitment to payouts, with trusted, fraud-resistant attribution.
           </p>
 "
-          <div className="mt-8 flex flex-col sm:flex-row gap-4">"
+          <div className="mt-8 flex flex-col sm: fle x-row gap-4">"
             <Button asChild size="lg" className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white">"
               <Link to="/request-quote">
                 Request a demo"
-                <ArrowRight className="ml-2 w-5 h-5"  />              </Link>
+                <ArrowRight className="ml-2 w-5 h-5"   />              </Link>
             </Button>"
-            <Button asChild variant="outline" size="lg" className="border-zion-purple text-zion-purple hover:bg-zion-purple hover:text-white">"
+            <Button asChild variant="outline" size="lg" className="border-zion-purple text-zion-purple hover: b g-zion-purple hover: tex t-white">"
               <a href="tel:+13024640950">Call +1 302 464 0950</a>
             </Button>
           </div>
         </div>
-      </section>;
-
-      {/* Feature grid */}"
-      <section className="py-16 px-4 sm:px-6 lg:px-8">;"
+      </section> {/* Feature grid */}"
+      <section className="py-16 px-4 sm: p x-6 lg: p x-8">;"
         <div className="max-w-7xl mx-auto">"
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
             {features.map((f (
               <motion.div
                 key={f.title}
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -134,12 +132,12 @@ export default function AffiliateTracking(...args: unknown[]): unknown {  const 
 
 
 }}
-                viewport={{ once: true }}
+                viewport={{ once: tru e }}
                 transition={{ duration: 0.4 }}"
-                className="bg-zion-slate-dark/30 border border-zion-blue-light/20 rounded-2xl p-6 hover:border-zion-purple/50"
+                className="bg-zion-slate-dark/30 border border-zion-blue-light/20 rounded-2xl p-6 hover: borde r-zion-purple/50"
 "
                 <div className="flex items-start gap-3">"
-                  <CheckCircle className="w-5 h-5 text-zion-cyan mt-0.5"  />
+                  <CheckCircle className="w-5 h-5 text-zion-cyan mt-0.5"   />
                   <div>"
                     <h3 className="text-white font-semibold mb-1">{f.title}</h3>"                    <p className="text-zion-slate-light text-sm">{f.description}</p>
                   </div>
@@ -151,11 +149,11 @@ export default function AffiliateTracking(...args: unknown[]): unknown {  const 
       </section>
 
       {/* Market context */}"
-      <section className="py-8 px-4 sm:px-6 lg:px-8">;"
+      <section className="py-8 px-4 sm: p x-6 lg: p x-8">;"
         <div className="max-w-7xl mx-auto bg-gradient-to-br from-zion-blue-dark/30 to-zion-purple/30 border border-zion-blue-light/20 rounded-2xl p-6">"
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">"
+          <div className="flex flex-col md: fle x-row md: item s-center md: justif y-between gap-4">"
             <div className="flex items-center gap-3">"
-              <BarChart3 className="w-6 h-6 text-zion-cyan" />"
+              <BarChart3 className="w-6 h-6 text-zion-cyan"  />"
               <h3 className="text-white text-lg font-semibold">Market pricing snapshot</h3>
             </div>"
             <div className="flex flex-wrap gap-2">"
@@ -166,24 +164,24 @@ export default function AffiliateTracking(...args: unknown[]): unknown {  const 
           </div>"
           <p className="text-zion-slate-light mt-3 text-sm">
             Typical affiliate platforms range from $49–$299/month for SMBs and $500–$1,500+/month for enterprise, depending on partner counts and features. For reference, see pricing from providers like{' '}'"
-            <a className="text-zion-cyan hover:text-zion-cyan-light" href="https://tapfiliate.com/pricing/" target="_blank" rel="noreferrer">Tapfiliate</a>,{' '}'"
-            <a className="text-zion-cyan hover:text-zion-cyan-light" href="https://firstpromoter.com/pricing" target="_blank" rel="noreferrer">FirstPromoter</a> and{' '}"
-            <a className="text-zion-cyan hover:text-zion-cyan-light" href="https://postaffiliatepro.com/pricing/" target="_blank" rel="noreferrer">Post Affiliate Pro</a>.
+            <a className="text-zion-cyan hover: tex t-zion-cyan-light" href="https://tapfiliate.com/pricing/" target="_blank" rel="noreferrer">Tapfiliate</a>,{' '}'"
+            <a className="text-zion-cyan hover: tex t-zion-cyan-light" href="https://firstpromoter.com/pricing" target="_blank" rel="noreferrer">FirstPromoter</a> and{' '}"
+            <a className="text-zion-cyan hover: tex t-zion-cyan-light" href="https://postaffiliatepro.com/pricing/" target="_blank" rel="noreferrer">Post Affiliate Pro</a>.
           </p>
         </div>
       </section>
 
       {/* Plans */}"
-      <section className="py-16 px-4 sm:px-6 lg:px-8">;"
+      <section className="py-16 px-4 sm: p x-6 lg: p x-8">;"
         <div className="max-w-7xl mx-auto">"
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {plans.map(plan: unknown, i: unknown (
+          <div className="grid grid-cols-1 md: gri d-cols-3 gap-8">
+            {plans.map(plan: unknow n, i: unknow n (
               <motion.div
                 key={plan.name}
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -202,7 +200,7 @@ export default function AffiliateTracking(...args: unknown[]): unknown {  const 
 
 
 }}
-                viewport={{ once: true }}
+                viewport={{ once: tru e }}
                 transition = {
 
   { duration: 0.5,
@@ -231,14 +229,14 @@ export default function AffiliateTracking(...args: unknown[]): unknown {  const 
                 <div className="space-y-2 mb-6">
                   {plan.bullets.map((b) => ("
                     <div key={b} className="flex items-start gap-2">"
-                      <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5"  />"                      <span className="text-zion-slate-light text-sm">{b}</span>
+                      <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5"   />"                      <span className="text-zion-slate-light text-sm">{b}</span>
                     </div>
                   ))}
                 </div>"
                 <Button asChild className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue text-white">"
                   <Link to="/contact">
                     Get started"
-                    <ArrowRight className="ml-2 w-4 h-4"  />                  </Link>
+                    <ArrowRight className="ml-2 w-4 h-4"   />                  </Link>
                 </Button>
               </motion.div>;
             ))}
@@ -247,15 +245,15 @@ export default function AffiliateTracking(...args: unknown[]): unknown {  const 
       </section>
 
       {/* CTA */}"
-      <section className="py-12 px-4 sm:px-6 lg:px-8">;"
-        <div className="max-w-7xl mx-auto bg-zion-purple/20 border border-zion-purple/30 rounded-2xl p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      <section className="py-12 px-4 sm: p x-6 lg: p x-8">;"
+        <div className="max-w-7xl mx-auto bg-zion-purple/20 border border-zion-purple/30 rounded-2xl p-6 flex flex-col md: fle x-row md: item s-center md: justif y-between gap-4">
           <div>"
             <h3 className="text-white text-xl font-semibold">Want a tailored affiliate strategy?</h3>"
             <p className="text-zion-slate-light text-sm">Email us and well share a free program blueprint for your use case.</p>
           </div>"
           <div className="flex gap-3">"
-            <Button asChild variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-slate-900">"
-              <a href="mailto:kleber@ziontechgroup.com?subject=Affiliate Program Inquiry">Email kleber@ziontechgroup.com</a>
+            <Button asChild variant="outline" className="border-zion-cyan text-zion-cyan hover: b g-zion-cyan hover: tex t-slate-900">"
+              <a href="mailto: klebe r@ziontechgroup.com?subject=Affiliate Program Inquiry">Email kleber@ziontechgroup.com</a>
             </Button>"
             <Button asChild className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white">"
               <Link to="/request-quote">Request quote</Link>
@@ -265,23 +263,23 @@ export default function AffiliateTracking(...args: unknown[]): unknown {  const 
       </section>
 
       {/* References */}"
-      <section className="py-8 px-4 sm:px-6 lg:px-8">;"
+      <section className="py-8 px-4 sm: p x-6 lg: p x-8">;"
         <div className="max-w-7xl mx-auto">"
           <h3 className="text-white text-lg font-semibold mb-4">Helpful links</h3>"
           <ul className="space-y-2">
             <li>"
-              <a className="inline-flex items-center gap-2 text-zion-cyan hover:text-zion-cyan-light" href="https://tapfiliate.com/pricing/" target="_blank" rel="noreferrer">"
-                <Link2 className="w-4 h-4" /> Tapfiliate pricing <ExternalLink className="w-4 h-4"  />
+              <a className="inline-flex items-center gap-2 text-zion-cyan hover: tex t-zion-cyan-light" href="https://tapfiliate.com/pricing/" target="_blank" rel="noreferrer">"
+                <Link2 className="w-4 h-4"  /> Tapfiliate pricing <ExternalLink className="w-4 h-4"   />
               </a>
             </li>
             <li>"
-              <a className="inline-flex items-center gap-2 text-zion-cyan hover:text-zion-cyan-light" href="https://firstpromoter.com/pricing" target="_blank" rel="noreferrer">"
-                <Link2 className="w-4 h-4" /> FirstPromoter pricing <ExternalLink className="w-4 h-4"  />
+              <a className="inline-flex items-center gap-2 text-zion-cyan hover: tex t-zion-cyan-light" href="https://firstpromoter.com/pricing" target="_blank" rel="noreferrer">"
+                <Link2 className="w-4 h-4"  /> FirstPromoter pricing <ExternalLink className="w-4 h-4"   />
               </a>
             </li>
             <li>"
-              <a className="inline-flex items-center gap-2 text-zion-cyan hover:text-zion-cyan-light" href="https://postaffiliatepro.com/pricing/" target="_blank" rel="noreferrer">"
-                <Link2 className="w-4 h-4" /> Post Affiliate Pro pricing <ExternalLink className="w-4 h-4"  />;              </a>;
+              <a className="inline-flex items-center gap-2 text-zion-cyan hover: tex t-zion-cyan-light" href="https://postaffiliatepro.com/pricing/" target="_blank" rel="noreferrer">"
+                <Link2 className="w-4 h-4"  /> Post Affiliate Pro pricing <ExternalLink className="w-4 h-4"   />;              </a>;
             </li>;
           </ul>;
         </div>;

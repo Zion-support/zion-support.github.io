@@ -11,7 +11,7 @@ export default function Page() {
       tags: ['AI', 'Sales', 'CRM', 'Automation', 'Lead Generation'],
       relevance: 0.89,
       lastUpdated: '2024 - 11 - 25',
-      icon: Users
+      icon: User s
     },
 
     // Cloud Services
@@ -25,7 +25,7 @@ export default function Page() {
       tags: ['Cloud', 'DevOps', 'Automation', 'Infrastructure', 'AWS', 'Azure'],
       relevance: 0.87,
       lastUpdated: '2024 - 11 - 20',
-      icon: Cloud
+      icon: Clou d
     },
     {
       id: 'it - infrastructure',
@@ -37,7 +37,7 @@ export default function Page() {
       tags: ['Infrastructure', 'IT', 'Enterprise', 'Networking', 'Security'],
       relevance: 0.84,
       lastUpdated: '2024 - 11 - 18',
-      icon: Server
+      icon: Serve r
     },
 
     // Security Services
@@ -51,8 +51,8 @@ export default function Page() {
       tags: ['Cybersecurity', 'AI', 'Threat Detection', 'Security', 'Compliance'],
       relevance: 0.91,
       lastUpdated: '2024 - 11 - 22',
-      icon: Shield,
-      featured: true
+      icon: Shiel d,
+      featured: tru e
     },
     {
       id: 'zero - trust',
@@ -64,7 +64,7 @@ export default function Page() {
       tags: ['Zero Trust', 'Security', 'Network', 'Access Control', 'Compliance'],
       relevance: 0.86,
       lastUpdated: '2024 - 11 - 15',
-      icon: Lock
+      icon: Loc k
     },
 
     // Quantum Computing
@@ -78,7 +78,7 @@ export default function Page() {
       tags: ['Quantum Computing', 'Optimization', 'Cryptography', 'AI', 'Research'],
       relevance: 0.88,
       lastUpdated: '2024 - 11 - 10',
-      icon: Atom
+      icon: Ato m
     },
 
     // Blog Posts
@@ -92,7 +92,7 @@ export default function Page() {
       tags: ['AI', 'Trends', 'Technology', '2024', 'Innovation'],
       relevance: 0.82,
       lastUpdated: '2024 - 12 - 01',
-      icon: BookOpen
+      icon: BookOpe n
     },
     {
       id: 'cloud - migration - guide',
@@ -104,7 +104,7 @@ export default function Page() {
       tags: ['Cloud Migration', 'Guide', 'Best Practices', 'Infrastructure'],
       relevance: 0.79,
       lastUpdated: '2024 - 11 - 28',
-      icon: Cloud
+      icon: Clou d
     },
 
     // Case Studies
@@ -118,18 +118,18 @@ export default function Page() {
       tags: ['AI', 'Healthcare', 'Case Study', 'Transformation', 'Patient Care'],
       relevance: 0.85,
       lastUpdated: '2024 - 11 - 20',
-      icon: FileText
+      icon: FileTex t
     }
   ];
 
-  const filterOptions = [{ id: 'ai - services', name: 'AI Services', icon: Brain, count: 0 },
-    { id: 'cloud - infrastructure', name: 'Cloud & Infrastructure', icon: Cloud, count: 0 },
-    { id: 'security', name: 'Security & Compliance', icon: Shield, count: 0 },
-    { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: 0 },
-    { id: 'iot', name: 'IoT & Edge Computing', icon: Network, count: 0 },
-    { id: 'blog', name: 'Blog Posts', icon: BookOpen, count: 0 },
-    { id: 'case - studies', name: 'Case Studies', icon: FileText, count: 0 },
-    { id: 'documentation', name: 'Documentation', icon: Code, count: 0 }
+  const filterOptions = [{ id: 'ai - services', name: 'AI Services', icon: Brai n, count: 0 },
+    { id: 'cloud - infrastructure', name: 'Cloud & Infrastructure', icon: Clou d, count: 0 },
+    { id: 'security', name: 'Security & Compliance', icon: Shiel d, count: 0 },
+    { id: 'quantum', name: 'Quantum Computing', icon: Ato m, count: 0 },
+    { id: 'iot', name: 'IoT & Edge Computing', icon: Networ k, count: 0 },
+    { id: 'blog', name: 'Blog Posts', icon: BookOpe n, count: 0 },
+    { id: 'case - studies', name: 'Case Studies', icon: FileTex t, count: 0 },
+    { id: 'documentation', name: 'Documentation', icon: Cod e, count: 0 }
   ];
 
   useEffect(() => {
@@ -165,8 +165,7 @@ export default function Page() {
           return new Date(b.lastUpdated) .getTime () - new Date(a.lastUpdated) .getTime () ;
         case 'popularity':
           return b.relevance - a.relevance;
-        default:
-          return b.relevance - a.relevance;
+        default: return b.relevance - a.relevance;
       }
     }) ;
 
@@ -192,10 +191,10 @@ export default function Page() {
   };
 
   // Handle search
-  const handleSearch = useCallback((e: React.FormEvent) => {
+  const handleSearch = useCallback((e: Reac t.FormEvent) => {
     e.preventDefault () ;
     if(searchQuery.trim () ) {
-      setSearchParams({ q: searchQuery.trim () }) ;
+      setSearchParams({ q: searchQuer y.trim () }) ;
       setIsSearching(true) ;
       setTimeout(() => setIsSearching(false) , 1000) ;
     }
@@ -236,7 +235,7 @@ export default function Page() {
       case 'blog': return 'from - green - 500 to - emerald - 500';
       case 'case - study': return 'from - purple - 500 to - pink - 500';
       case 'documentation': return 'from - orange - 500 to - red - 500';
-      default: return 'from - gray - 500 to - slate - 500';
+      default: retur n 'from - gray - 500 to - slate - 500';
     }
   };
 
@@ -250,9 +249,9 @@ export default function Page() {
   return (<div  className="min - h-screen bg-gradient - to - br from - slate - 50 via - blue - 50 to - indigo -50">
       {/* Header */}
       <div  className="bg-white border-b border-gray -200">
-        <div  className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8 py-8">
+        <div  className="max - w-7xl mx - auto px-4 sm: p x-6 lg: p x-8 py-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="text-center"
@@ -264,26 +263,26 @@ export default function Page() {
         </div>
       </div>
 
-      <div  className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8 py-8">
+      <div  className="max - w-7xl mx - auto px-4 sm: p x-6 lg: p x-8 py-8">
         {/* Search Form */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 2 0 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
           className="mb-8"
         >
           <form onSubmit={handleSearch} className="max - w-3xl mx -auto">
             <div  className="relative">
-              <Search className="absolute left - 4 top - 1/2 transform - translate - y-1 / 2 h-6 w-6 text-gray -400" />
+              <Search className="absolute left - 4 top - 1/2 transform - translate - y-1 / 2 h-6 w-6 text-gray -400"  />
               <input
                 type="text"
                 value={searchQuery}
                 onChange={ (e) => setSearchQuery(e.target.value) }
                 placeholder="Search for services, solutions, documentation, or insights..."
-                className="w-full pl - 12 pr - 4 py-4 text-lg border border-gray - 300 rounded-xl shadow-sm focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border-blue -500"
+                className="w-full pl - 12 pr - 4 py-4 text-lg border border-gray - 300 rounded-xl shadow-sm focus: outlin e - none focus: rin g - 2 focus: rin g - blue - 500 focus: borde r-blue -500"
               />
               <button     type="submit"
-                className="absolute right - 2 top - 1/2 transform - translate - y-1 / 2 px-6 py-2 bg-gradient - to - r from - blue - 600 to - purple - 600 text-white rounded-lg hover:from - blue - 700 hover:to - purple - 700 transition - all duration -200"
+                className="absolute right - 2 top - 1/2 transform - translate - y-1 / 2 px-6 py-2 bg-gradient - to - r from - blue - 600 to - purple - 600 text-white rounded-lg hover: fro m - blue - 700 hover: t o - purple - 700 transition - all duration -200"
               >
                 Search
               </button>
@@ -292,14 +291,14 @@ export default function Page() {
         </motion.div>
 
         {/* Filters and Results */}
-        <div  className="grid grid - cols - 1 lg:grid - cols - 4 gap-8">
+        <div  className="grid grid - cols - 1 lg: gri d - cols - 4 gap-8">
           {/* Filters Sidebar */}
-          <div  className="lg:col - span -1">
+          <div  className="lg: co l - span -1">
             <div  className="bg-white rounded-xl shadow-sm border border-gray - 200 p -6">
               <div  className="flex items - center justify - between mb-4">
                 <h3 className="text-lg font - semibold text-gray -900">Filters</h3>
                 <button     onClick={clearFilters}
-                  className="text-sm text-blue - 600 hover:text-blue -700"
+                  className="text-sm text-blue - 600 hover: tex t-blue -700"
                 >
                   Clear All
                 </button>
@@ -311,7 +310,7 @@ export default function Page() {
                 <select
                   value={sortBy}
                   onChange={ (e) => setSortBy(e.target.value as any) }
-                  className="w-full px-3 py-2 border border-gray - 300 rounded-lg focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border-blue -500"
+                  className="w-full px-3 py-2 border border-gray - 300 rounded-lg focus: outlin e - none focus: rin g - 2 focus: rin g - blue - 500 focus: borde r-blue -500"
                 >
                   <option value="relevance">Relevance</option>
                   <option value="date">Date</option>
@@ -324,7 +323,7 @@ export default function Page() {
                 {filterOptions.map(filter => (<button     key={filter.id}
                     onClick={ () => toggleFilter(filter.id) }
                     className={`w-full flex items - center justify - between p - 3 rounded-lg transition - colors ${selectedFilters.has(filter.id) ? 'bg-blue - 50 border border-blue - 200'
-                        : 'hover:bg-gray - 50'
+                        : 'hover: b g-gray - 50'
                     }`}
                   >
                     <div  className="flex items - center space - x-3">
@@ -340,7 +339,7 @@ export default function Page() {
 
         {/* Search Results */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 2 0 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           className="max - w-6xl mx -auto"
@@ -350,7 +349,7 @@ export default function Page() {
             <p className="text-slate -300">
               {searchQuery ? `Found ${filteredResults.length} results for "${searchQuery}"` : `Showing ${filteredResults.length} items`}
 </p>
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div className="grid md: gri d-cols-2 gap-8 mb-12">
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h2 className="text-2xl font-semibold mb-4">Our Services</h2>
                 <ul className="text-gray-600 space-y-2">
@@ -369,11 +368,11 @@ export default function Page() {
                   <li>• Competitive Pricing</li>
                 </ul>
               </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
+              <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover: b g-blue-700 transition-colors">
                 View Pricing
               </Link>
-              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
+              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover: b g-gray-700 transition-colors">
                 Contact Us
               </Link>
             </div>

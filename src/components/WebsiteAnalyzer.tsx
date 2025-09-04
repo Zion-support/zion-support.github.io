@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-export const WebsiteAnalyzer: React.FC = () : JSX.Element => {
+export const WebsiteAnalyzer: Reac t.FC = () : JSX.Element => {
 export default WebsiteAnalyzer;
 import { CheckCircle, import { LinkChecker, LinkInfo, PageInfo } from '../utils / linkChecker';
 
@@ -14,7 +14,7 @@ export default function Page() {
       setAnalysisResult({
 
         summary,
-        pages: results,
+        pages: result s,
         brokenLinks,
         missingPages
       }) } catch(error) {
@@ -33,13 +33,13 @@ export default function Page() {
     URL.revokeObjectURL(url)};
 
       case 'broken':"
-        return <XCircle className="w-4 h-4 text-red-500"  />;
+        return <XCircle className="w-4 h-4 text-red-500"   />;
       case 'missing':"
-        return <AlertTriangle className="w-4 h-4 text-yellow-500"  />;
+        return <AlertTriangle className="w-4 h-4 text-yellow-500"   />;
       case 'external':"
-        return <ExternalLink className="w-4 h-4 text-blue-500"  />;
+        return <ExternalLink className="w-4 h-4 text-blue-500"   />;
       default:"
-        return <AlertTriangle className="w-4 h-4 text-gray-500"  />}
+        return <AlertTriangle className="w-4 h-4 text-gray-500"   />}
   };
 
       case 'broken':'
@@ -65,20 +65,20 @@ export default function Page() {
             <button
               onClick={analyzeWebsite}
               disabled={isAnalyzing}"
-              className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover: b g-blue-700 disabled: opacit y-50 disabled: curso r-not-allowed"
             >
               {isAnalyzing ? ("
-                <RefreshCw className="w-4 h-4 mr-2 animate-spin"  />
+                <RefreshCw className="w-4 h-4 mr-2 animate-spin"   />
               ) : ("
-                <Search className="w-4 h-4 mr-2"  />
+                <Search className="w-4 h-4 mr-2"   />
               )}
               {isAnalyzing ? 'Analyzing...' : 'Start Analysis'}            </button>
             {analysisResult && (
               <button
                 onClick={exportReport}"
-                className="flex items-center px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700"
+                className="flex items-center px-4 py-2 bg-green-600 text-white rounded-lg hover: b g-green-700"
               >"
-                <Download className="w-4 h-4 mr-2"  />                Export Report
+                <Download className="w-4 h-4 mr-2"   />                Export Report
               </button>) }
           </div>
         </div>
@@ -93,7 +93,7 @@ export default function Page() {
               <div "
                 className="bg-blue-600 h-2 rounded-full transition-all duration-300"`
                 style={{ width: `${progress}%` }}
-              />
+               />
             </div>
             {currentPage && ("
               <p className="text-sm text-gray-600 mt-2">"
@@ -106,10 +106,10 @@ export default function Page() {
         {analysisResult && ("
           <div className="space-y-6">
             {/* Summary Cards */}"
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">"
+            <div className="grid grid-cols-1 md: gri d-cols-4 gap-4">"
               <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">"
                 <div className="flex items-center">"
-                  <LinkIcon className="w-8 h-8 text-blue-600 mr-3"  />
+                  <LinkIcon className="w-8 h-8 text-blue-600 mr-3"   />
                   <div>"
                     <p className="text-2xl font-bold text-blue-900">{analysisResult.summary.totalLinks}</p>"                    <p className="text-sm text-blue-700">Total Links</p>
                   </div>
@@ -118,7 +118,7 @@ export default function Page() {
 
               <div  className="bg-green - 50 p - 4 rounded-lg border border-green -200">
                 <div  className="flex items -center">
-                  <CheckCircle className="w-8 h-8 text-green - 600 mr-3" />
+                  <CheckCircle className="w-8 h-8 text-green - 600 mr-3"  />
                   <div>
                     <p className="text-2xl font - bold text-green -900">                      {analysisResult.summary.totalLinks - analysisResult.summary.brokenLinks - analysisResult.summary.missingPages}
                     </p>"
@@ -129,7 +129,7 @@ export default function Page() {
 
               <div  className="bg-red - 50 p - 4 rounded-lg border border-red -200">
                 <div  className="flex items -center">
-                  <XCircle className="w-8 h-8 text-red - 600 mr-3" />
+                  <XCircle className="w-8 h-8 text-red - 600 mr-3"  />
                   <div>
                     <p className="text-2xl font - bold text-red -900">{analysisResult.summary.brokenLinks}</p>
                     <p className="text-sm text-red -700">Broken Links</p>
@@ -139,7 +139,7 @@ export default function Page() {
 
               <div  className="bg-yellow-50 p - 4 rounded-lg border border-yellow-200">
                 <div  className="flex items -center">
-                  <AlertTriangle className="w-8 h-8 text-yellow-600 mr-3" />
+                  <AlertTriangle className="w-8 h-8 text-yellow-600 mr-3"  />
                   <div>
                     <p className="text-2xl font - bold text-yellow-900">{analysisResult.summary.missingPages}</p>
                     <p className="text-sm text-yellow-700">Missing Pages</p>                  </div>
@@ -151,7 +151,7 @@ export default function Page() {
             {analysisResult.brokenLinks.length > 0 && ("
               <div className="bg-red-50 border border-red-200 rounded-lg p-4">"
                 <h3 className="text-lg font-semibold text-red-900 mb-3 flex items-center">"
-                  <XCircle className="w-5 h-5 mr-2"  />                  Broken Links Found
+                  <XCircle className="w-5 h-5 mr-2"   />                  Broken Links Found
                 </h3>"
                 <div className="space-y-2">
                   {analysisResult.brokenLinks.map((link, index) => ("
@@ -171,7 +171,7 @@ export default function Page() {
             {analysisResult.missingPages.length > 0 && ("
               <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">"
                 <h3 className="text-lg font-semibold text-yellow-900 mb-3 flex items-center">"
-                  <AlertTriangle className="w-5 h-5 mr-2"  />                  Missing Pages
+                  <AlertTriangle className="w-5 h-5 mr-2"   />                  Missing Pages
                 </h3>"
                 <div className="space-y-2">
                   {analysisResult.missingPages.map((page, index) => ("
@@ -189,7 +189,7 @@ export default function Page() {
             {/* Page Analysis */}"
             <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">"
               <h3 className="text-lg font-semibold text-gray-900 mb-3 flex items-center">"
-                <FileText className="w-5 h-5 mr-2"  />                Page Analysis
+                <FileText className="w-5 h-5 mr-2"   />                Page Analysis
               </h3>"
               <div className="space-y-3">
                 {analysisResult.pages.map((page, index) => ("
@@ -200,7 +200,7 @@ export default function Page() {
                     </div>"
                     <p className="text-sm text-gray-600 mb-3 font-mono">{page.path}</p>
                     {page.links.length > 0 && ("
-                      <div className="grid grid-cols-1 md: anygrid-cols-2 gap-2">
+                      <div className="grid grid-cols-1 md: anygri d-cols-2 gap-2">
                         {page.links.slice(0, 6).map((link, linkIndex)  => ("
                           <div key={linkIndex} className="flex items-center space-x-2 text-sm">
                             {getStatusIcon(link.status)}"

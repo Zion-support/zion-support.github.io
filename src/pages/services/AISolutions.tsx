@@ -32,37 +32,37 @@ export function AISolutions() {
     {
       title: 'AI-Powered Analytics',
       description: 'Transform data into actionable insights with advanced machine learning algorithms',
-      icon: BarChart3,
+      icon: BarChart 3,
       features: ['Predictive Analytics', 'Real-time Dashboards', 'Custom ML Models', 'Data Visualization']
     },
     {
       title: 'Natural Language Processing',
       description: 'Build intelligent chatbots and language understanding systems',
-      icon: MessageCircle,
+      icon: MessageCircl e,
       features: ['Chatbot Development', 'Text Analysis', 'Language Translation', 'Sentiment Analysis']
     },
     {
       title: 'Computer Vision',
       description: 'Implement image and video recognition for automation and security',
-      icon: Eye,
+      icon: Ey e,
       features: ['Image Recognition', 'Video Analysis', 'Object Detection', 'Facial Recognition']
     },
     {
       title: 'AI Automation',
       description: 'Streamline business processes with intelligent automation',
-      icon: Workflow,
+      icon: Workflo w,
       features: ['Process Automation', 'Workflow Optimization', 'Decision Support', 'Predictive Maintenance']
     },
     {
       title: 'AI Consulting',
       description: 'Strategic guidance for AI implementation and digital transformation',
-      icon: Lightbulb,
+      icon: Lightbul b,
       features: ['AI Strategy', 'Technology Assessment', 'Implementation Planning', 'Training & Support']
     },
     {
       title: 'Custom AI Development',
       description: 'Tailored AI solutions designed for your specific business needs',
-      icon: Code,
+      icon: Cod e,
       features: ['Custom Algorithms', 'API Development', 'Integration Services', 'Scalable Architecture']
     }
   ];
@@ -71,37 +71,37 @@ export function AISolutions() {
     {
       title: 'Increased Efficiency',
       description: 'Automate repetitive tasks and optimize workflows',
-      icon: Zap
+      icon: Za p
     },
     {
       title: 'Better Decision Making',
       description: 'Data-driven insights for strategic business decisions',
-      icon: Target
+      icon: Targe t
     },
     {
       title: 'Cost Reduction',
       description: 'Lower operational costs through intelligent automation',
-      icon: TrendingUp
+      icon: TrendingU p
     },
     {
       title: 'Competitive Advantage',
       description: 'Stay ahead with cutting-edge AI technology',
-      icon: Rocket
+      icon: Rocke t
     }
   ];
 
   return (
     <div className="min-h-screen bg-futuristic">
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden py-20 px-4 sm: p x-6 lg: p x-8">
         <div className="max-w-7xl mx-auto">
           <motion.div 
             className="text-center"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md: tex t-6xl font-bold text-white mb-6">
               AI Solutions
               <span className="block bg-gradient-to-r from-purple-400 via-pink-500 to-red-600 bg-clip-text text-transparent">
                 & Services
@@ -111,16 +111,16 @@ export function AISolutions() {
               Transform your business with cutting-edge artificial intelligence solutions. 
               From machine learning to automation, we help you harness the power of AI.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200"
+                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover: fro m-purple-600 hover: t o-pink-700 transition-all duration-200"
               >
                 Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5"  />
               </Link>
-              <button className="inline-flex items-center px-8 py-3 border border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-200">
-                <Play className="mr-2 h-5 w-5" />
+              <button className="inline-flex items-center px-8 py-3 border border-purple-500 text-purple-400 font-semibold rounded-lg hover: b g-purple-500 hover: tex t-white transition-all duration-200">
+                <Play className="mr-2 h-5 w-5"  />
                 Watch Demo
               </button>
             </div>
@@ -136,24 +136,24 @@ export function AISolutions() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
               Our AI Services
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
               Comprehensive AI solutions designed to accelerate your business growth
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
             {aiServices.map((service, index) => (
               <motion.div
                 key={index}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105"
-                initial={{ opacity: 0, y: 20 }}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover: borde r-purple-500/50 transition-all duration-300 hover: transform hover:scale-105"
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.5, delay: inde x * 0.1 }}
               >
                 <div className="flex items-center mb-6">
                   <div className="p-3 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg">
@@ -167,7 +167,7 @@ export function AISolutions() {
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-slate-300">
-                      <CheckCircle className="h-4 w-4 text-purple-400 mr-2" />
+                      <CheckCircle className="h-4 w-4 text-purple-400 mr-2"  />
                       {feature}
                     </li>
                   ))}
@@ -179,24 +179,24 @@ export function AISolutions() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900/50">
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-slate-900/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
               Why Choose Our AI Solutions?
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
               Experience the transformative power of artificial intelligence
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
                 className="text-center"
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.5, delay: inde x * 0.1 }}
               >
                 <div className="p-4 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                   <benefit.icon className="h-8 w-8 text-white" />
@@ -210,30 +210,30 @@ export function AISolutions() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-6">
               Ready to Transform Your Business with AI?
             </h2>
             <p className="text-xl text-slate-300 mb-8">
               Let's discuss how our AI solutions can drive your business forward
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200"
+                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover: fro m-purple-600 hover: t o-pink-700 transition-all duration-200"
               >
                 Get Free Consultation
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5"  />
               </Link>
               <Link
                 to="/services"
-                className="inline-flex items-center px-8 py-3 border border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-200"
+                className="inline-flex items-center px-8 py-3 border border-purple-500 text-purple-400 font-semibold rounded-lg hover: b g-purple-500 hover: tex t-white transition-all duration-200"
               >
                 View All Services
               </Link>

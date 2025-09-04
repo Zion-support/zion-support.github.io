@@ -1,7 +1,7 @@
 import { BarChart3, Target, Users, Check, ExternalLink, Phone, Mail, Zap, Brain, TrendingUp, MessageSquare, Mail as MailIcon  } from 'lucide-react';
 
 export default function AIMarketingAutomationSuite
-export { AIMarketingAutomationSuite }(...args: any[]): any {
+export { AIMarketingAutomationSuite }(...args: an y[]): any {
   const features = [
     'AI-powered audience segmentation and targeting',
     'Predictive customer behavior modeling',
@@ -74,21 +74,21 @@ export { AIMarketingAutomationSuite }(...args: any[]): any {
       <section className="bg-gradient-to-br from-purple-900 via-purple-800 to-purple-700 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
-            <BarChart3 className="w-4 h-4 mr-2" /> AI-Powered Marketing
+            <BarChart3 className="w-4 h-4 mr-2"  /> AI-Powered Marketing
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">AI Marketing Automation Suite</h1>
+          <h1 className="text-4xl md: tex t-6xl font-bold text-white mb-4">AI Marketing Automation Suite</h1>
           <p className="text-purple-100 text-xl">Transform your marketing with intelligent automation, predictive analytics, and personalized customer experiences.</p>
         </div>
       </section>
 
       <section className="py-16 max-w-6xl mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-10">
+        <div className="grid md: gri d-cols-2 gap-10">
           <div>
             <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">Revolutionary Marketing Features</h2>
             <ul className="space-y-3">
               {features.map((f) => (
                 <li key={f} className="flex items-start">
-                  <Check className="w-5 h-5 text-purple-600 mr-3 mt-0.5" />
+                  <Check className="w-5 h-5 text-purple-600 mr-3 mt-0.5"  />
                   <span className="text-zion-slate-dark">{f}</span>
                 </li>
               ))}
@@ -99,7 +99,7 @@ export { AIMarketingAutomationSuite }(...args: any[]): any {
           </div>
           <div className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
             <h3 className="text-2xl font-semibold text-zion-slate-dark mb-4">Marketing Plans</h3>
-            <div className="grid md: anygrid-cols-1 gap-4">
+            <div className="grid md: anygri d-cols-1 gap-4">
               {tiers.map((t)  => (
                 <div key={t.name} className="rounded-lg p-4 border border-zion-slate-light/30">
                   <div className="text-lg font-semibold mb-1">{t.name}</div>
@@ -111,23 +111,23 @@ export { AIMarketingAutomationSuite }(...args: any[]): any {
               ))}
             </div>
             <div className="mt-6 flex flex-wrap gap-3">
-              <a href="/pricing" className="px-5 py-3 bg-purple-600/10 text-purple-600 rounded-lg hover:bg-purple-600/20 transition-colors inline-flex items-center">
-                View Full Pricing <ExternalLink className="w-4 h-4 ml-2" />
+              <a href="/pricing" className="px-5 py-3 bg-purple-600/10 text-purple-600 rounded-lg hover: b g-purple-600/20 transition-colors inline-flex items-center">
+                View Full Pricing <ExternalLink className="w-4 h-4 ml-2"  />
               </a>
               <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="px-5 py-3 border border-purple-600 text-purple-600 rounded-lg inline-flex items-center">
-                Learn More <ExternalLink className="w-4 h-4 ml-2" />
+                Learn More <ExternalLink className="w-4 h-4 ml-2"  />
               </a>
             </div>
           </div>
         </div>
 
-        <div className="mt-12 grid md:grid-cols-2 gap-8">
+        <div className="mt-12 grid md: gri d-cols-2 gap-8">
           <div>
             <h3 className="text-2xl font-bold text-zion-slate-dark mb-4">Marketing Benefits</h3>
             <ul className="space-y-3">
               {benefits.map((b) => (
                 <li key={b} className="flex items-start">
-                  <TrendingUp className="w-5 h-5 text-purple-600 mr-3 mt-0.5" />
+                  <TrendingUp className="w-5 h-5 text-purple-600 mr-3 mt-0.5"  />
                   <span className="text-zion-slate-dark">{b}</span>
                 </li>
               ))}
@@ -138,7 +138,7 @@ export { AIMarketingAutomationSuite }(...args: any[]): any {
             <ul className="space-y-3">
               {useCases.map((u) => (
                 <li key={u} className="flex items-start">
-                  <Target className="w-5 h-5 text-purple-600 mr-3 mt-0.5" />
+                  <Target className="w-5 h-5 text-purple-600 mr-3 mt-0.5"  />
                   <span className="text-zion-slate-dark">{u}</span>
                 </li>
               ))}
@@ -148,10 +148,10 @@ export { AIMarketingAutomationSuite }(...args: any[]): any {
 
         <div className="mt-12">
           <h3 className="text-2xl font-bold text-zion-slate-dark mb-6 text-center">Multi-Channel Marketing Support</h3>
-          <div className="grid md: anygrid-cols-3 gap-6">
+          <div className="grid md: anygri d-cols-3 gap-6">
             {marketingChannels.map((c)  => (
               <div key={c} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">
-                <MessageSquare className="w-6 h-6 text-purple-600 mb-3" />
+                <MessageSquare className="w-6 h-6 text-purple-600 mb-3"  />
                 <div className="text-zion-slate-dark font-semibold">{c}</div>
               </div>
             ))}
@@ -160,10 +160,10 @@ export { AIMarketingAutomationSuite }(...args: any[]): any {
 
         <div className="mt-12">
           <h3 className="text-2xl font-bold text-zion-slate-dark mb-6 text-center">AI-Powered Capabilities</h3>
-          <div className="grid md: anygrid-cols-3 gap-6">
+          <div className="grid md: anygri d-cols-3 gap-6">
             {aiCapabilities.map((c)  => (
               <div key={c} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">
-                <Brain className="w-6 h-6 text-purple-600 mb-3" />
+                <Brain className="w-6 h-6 text-purple-600 mb-3"  />
                 <div className="text-zion-slate-dark font-semibold">{c}</div>
               </div>
             ))}
@@ -172,7 +172,7 @@ export { AIMarketingAutomationSuite }(...args: any[]): any {
 
         <div className="mt-12 bg-gradient-to-r from-purple-50 to-purple-100 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-zion-slate-dark mb-4 text-center">Marketing Automation Workflow</h3>
-          <div className="grid md:grid-cols-4 gap-4 text-center">
+          <div className="grid md: gri d-cols-4 gap-4 text-center">
             <div>
               <div className="w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center mx-auto mb-2 font-bold">1</div>
               <h4 className="font-semibold text-zion-slate-dark mb-1">Data Collection</h4>
@@ -198,16 +198,16 @@ export { AIMarketingAutomationSuite }(...args: any[]): any {
 
         <div className="mt-14 text-center">
           <div className="text-sm text-zion-slate-light mb-2">Ready to revolutionize your marketing?</div>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: fle x-row gap-4 justify-center">
             <a href="tel:+13024640950" className="inline-flex items-center px-5 py-3 bg-purple-600 text-white rounded-lg">
-              <Phone className="w-4 h-4 mr-2"/> +1 302 464 0950
+              <Phone className="w-4 h-4 mr-2" /> +1 302 464 0950
             </a>
-            <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-purple-600 text-purple-600 rounded-lg">
-              <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
+            <a href="mailto: klebe r@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-purple-600 text-purple-600 rounded-lg">
+              <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com
             </a>
           </div>
           <div className="mt-4 text-sm text-zion-slate-light">
-            Visit us at: <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="text-purple-600 hover:underline">https://ziontechgroup.com</a>
+            Visit us at: <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="text-purple-600 hover: underlin e">https://ziontechgroup.com</a>
           </div>
         </div>
       </section>

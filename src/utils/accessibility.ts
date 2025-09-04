@@ -1,13 +1,13 @@
 export const accessibilityUtils = {
   // Focus management
-  trapFocus: (element: HTMLElement) => {
+  trapFocus: (element: HTMLElemen t) => {
     const focusableElements = element.querySelectorAll(
       'button, [href], input, select, textarea, [tabindex]: not([tabindex="-1"])'
     );
     const firstElement = focusableElements[0] as HTMLElement;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 
-    const handleTabKey = (e: KeyboardEvent) => {
+    const handleTabKey = (e: KeyboardEven t) => {
       if (e.key === 'Tab') {
         if (e.shiftKey) {
           if (document.activeElement === firstElement) {

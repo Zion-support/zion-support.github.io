@@ -17,43 +17,31 @@ import {
   Search,;',';';
     ';';';
   Filter} from 'lucide-react';';';';
-const AIServicesPricingComparison2025: React.FC = () => {',';';
+const AIServicesPricingComparison2025: Reac t.FC = () => {',';';
     ';';';
   const [activeCategory, setActiveCategory] = useState('all');',';';
     ';';';
   const [searchTerm, setSearchTerm] = useState('');';';';
   const categories = [',';';
-    ';';';
-    { id: 'all', name: 'All Services', icon: '🚀' },',';';
-    ';';';
-    { id: 'Legal Technology', name: 'Legal Technology', icon: '⚖️' },',';';
-    ';';';
-    { id: 'Human Resources', name: 'Human Resources', icon: '👥' },',';';
-    ';';';
-    { id: 'Digital Marketing', name: 'Digital Marketing', icon: '📱' },',';';
-    ';';';
-    { id: 'Sales Technology', name: 'Sales Technology', icon: '💼' },',';';
-    ';';';
-    { id: 'Financial Technology', name: 'Financial Technology', icon: '💰' },',';';
-    ';';';
-    { id: 'Cybersecurity', name: 'Cybersecurity', icon: '🛡️' },',';';
-    ';';';
-    { id: 'Data Analytics', name: 'Data Analytics', icon: '📈' },',';';
-    ';';';
-    { id: 'DevOps', name: 'DevOps', icon: '⚙️' },',';';
-    ';';';
-    { id: 'Cloud Computing', name: 'Cloud Computing', icon: '☁️' },',';';
-    ';';';
-    { id: 'Blockchain', name: 'Blockchain', icon: '🔗' },',';';
-    ';';';
-    { id: 'Quantum Computing', name: 'Quantum Computing', icon: '⚛️' }
+    ';';' { id: 'all', name: 'All Services', icon: '🚀' },',';';
+    ';';' { id: 'Legal Technology', name: 'Legal Technology', icon: '⚖️' },',';';
+    ';';' { id: 'Human Resources', name: 'Human Resources', icon: '👥' },',';';
+    ';';' { id: 'Digital Marketing', name: 'Digital Marketing', icon: '📱' },',';';
+    ';';' { id: 'Sales Technology', name: 'Sales Technology', icon: '💼' },',';';
+    ';';' { id: 'Financial Technology', name: 'Financial Technology', icon: '💰' },',';';
+    ';';' { id: 'Cybersecurity', name: 'Cybersecurity', icon: '🛡️' },',';';
+    ';';' { id: 'Data Analytics', name: 'Data Analytics', icon: '📈' },',';';
+    ';';' { id: 'DevOps', name: 'DevOps', icon: '⚙️' },',';';
+    ';';' { id: 'Cloud Computing', name: 'Cloud Computing', icon: '☁️' },',';';
+    ';';' { id: 'Blockchain', name: 'Blockchain', icon: '🔗' },',';';
+    ';';' { id: 'Quantum Computing', name: 'Quantum Computing', icon: '⚛️' }
   ]
   const pricingComparison = [
     {
       id: "ai-autonomous-legal-counsel",
       service: "AI Autonomous Legal Counsel",
       category: "Legal Technology",
-      zionPrice: 5999,
+      zionPrice: 599 9,
       zionFeatures: [
         "Contract Analysis & Risk Assessment",
         "Legal Automation & Compliance",
@@ -65,13 +53,13 @@ const AIServicesPricingComparison2025: React.FC = () => {',';';
       competitors: [
         {
           name: "DoNotPay",
-          price: 12000,
+          price: 1200 0,
           features: ["Basic Legal Forms", "Limited Automation", "No Risk Assessment", "Basic Support"],
           missing: ["Advanced AI", "Custom Solutions", "Enterprise Features"]
 },
         {
           name: "LegalZoom",
-          price: 15000,
+          price: 1500 0,
           features: ["Document Templates", "Basic Legal Advice", "Standard Support", "Limited AI"],
           missing: ["AI Automation", "Risk Analysis", "Cost Optimization"]
 }
@@ -83,7 +71,7 @@ const AIServicesPricingComparison2025: React.FC = () => {',';';
       id: "ai-autonomous-hr-platform",
       service: "AI Autonomous HR Platform",
       category: "Human Resources",
-      zionPrice: 3999,
+      zionPrice: 399 9,
       zionFeatures: [
         "Recruitment Automation",
         "Performance Analytics",
@@ -95,13 +83,13 @@ const AIServicesPricingComparison2025: React.FC = () => {',';';
       competitors: [
         {
           name: "Workday",
-          price: 25000,
+          price: 2500 0,
           features: ["Basic HR Management", "Standard Reporting", "Traditional Support", "Limited AI"],
           missing: ["AI Automation", "Predictive Analytics", "Cost Optimization"]
 },
         {
           name: "BambooHR",
-          price: 18000,
+          price: 1800 0,
           features: ["HR Database", "Basic Reporting", "Standard Support", "No AI"],
           missing: ["AI Features", "Automation", "Intelligence"]
 }
@@ -113,7 +101,7 @@ const AIServicesPricingComparison2025: React.FC = () => {',';';
       id: "ai-autonomous-marketing-platform",
       service: "AI Autonomous Marketing Platform",
       category: "Digital Marketing",
-      zionPrice: 4499,
+      zionPrice: 449 9,
       zionFeatures: [
         "Campaign Automation",
         "Multi-channel Management",
@@ -125,13 +113,13 @@ const AIServicesPricingComparison2025: React.FC = () => {',';';
       competitors: [
         {
           name: "HubSpot",
-          price: 32000,
+          price: 3200 0,
           features: ["Basic Marketing Tools", "Standard Automation", "Limited AI", "Basic Analytics"],
           missing: ["Advanced AI", "ROI Optimization", "Intelligent Insights"]
 },
         {
           name: "Marketo",
-          price: 45000,
+          price: 4500 0,
           features: ["Marketing Automation", "Basic Reporting", "Standard Support", "Limited Intelligence"],
           missing: ["AI Optimization", "ROI Focus", "Advanced Analytics"]
 }
@@ -143,7 +131,7 @@ const AIServicesPricingComparison2025: React.FC = () => {',';';
       id: "ai-autonomous-sales-platform",
       service: "AI Autonomous Sales Platform",
       category: "Sales Technology",
-      zionPrice: 3999,
+      zionPrice: 399 9,
       zionFeatures: [
         "Lead Scoring",
         "Sales Prediction",
@@ -155,13 +143,13 @@ const AIServicesPricingComparison2025: React.FC = () => {',';';
       competitors: [
         {
           name: "Salesforce",
-          price: 36000,
+          price: 3600 0,
           features: ["CRM Database", "Basic Reporting", "Standard Automation", "Limited AI"],
           missing: ["AI Prediction", "Process Optimization", "Intelligent Coaching"]
 },
         {
           name: "HubSpot Sales",
-          price: 24000,
+          price: 2400 0,
           features: ["Basic CRM", "Standard Tools", "Limited Intelligence", "Basic Support"],
           missing: ["AI Features", "Advanced Analytics", "Process Optimization"]
 }
@@ -173,7 +161,7 @@ const AIServicesPricingComparison2025: React.FC = () => {',';';
       id: "ai-autonomous-finance-platform",
       service: "AI Autonomous Finance Platform",
       category: "Financial Technology",
-      zionPrice: 4999,
+      zionPrice: 499 9,
       zionFeatures: [
         "Accounting Automation",
         "Financial Reporting",
@@ -185,13 +173,13 @@ const AIServicesPricingComparison2025: React.FC = () => {',';';
       competitors: [
         {
           name: "QuickBooks Enterprise",
-          price: 15000,
+          price: 1500 0,
           features: ["Basic Accounting", "Standard Reporting", "Limited Automation", "No AI"],
           missing: ["AI Automation", "Intelligence", "Risk Assessment"]
 },
         {
           name: "Xero",
-          price: 12000,
+          price: 1200 0,
           features: ["Cloud Accounting", "Basic Tools", "Standard Support", "Limited Features"],
           missing: ["AI Features", "Automation", "Advanced Analytics"]
 }
@@ -203,7 +191,7 @@ const AIServicesPricingComparison2025: React.FC = () => {',';';
       id: "ai-autonomous-cybersecurity-platform",
       service: "AI Autonomous Cybersecurity Platform",
       category: "Cybersecurity",
-      zionPrice: 6999,
+      zionPrice: 699 9,
       zionFeatures: [
         "Threat Detection",
         "Incident Response",
@@ -215,13 +203,13 @@ const AIServicesPricingComparison2025: React.FC = () => {',';';
       competitors: [
         {
           name: "CrowdStrike",
-          price: 50000,
+          price: 5000 0,
           features: ["Basic Security", "Standard Monitoring", "Limited AI", "Basic Support"],
           missing: ["AI Intelligence", "Autonomous Response", "Advanced Analytics"]
 },
         {
           name: "SentinelOne",
-          price: 45000,
+          price: 4500 0,
           features: ["Security Tools", "Basic AI", "Standard Features", "Limited Intelligence"],
           missing: ["Advanced AI", "Autonomous Operations", "Intelligent Insights"]
 }
@@ -233,7 +221,7 @@ const AIServicesPricingComparison2025: React.FC = () => {',';';
       id: "ai-autonomous-data-analytics-platform",
       service: "AI Autonomous Data Analytics Platform",
       category: "Data Analytics",
-      zionPrice: 4999,
+      zionPrice: 499 9,
       zionFeatures: [
         "Data Analysis",
         "Insight Generation",
@@ -245,13 +233,13 @@ const AIServicesPricingComparison2025: React.FC = () => {',';';
       competitors: [
         {
           name: "Tableau",
-          price: 35000,
+          price: 3500 0,
           features: ["Data Visualization", "Basic Analytics", "Standard Reporting", "Limited AI"],
           missing: ["AI Intelligence", "Predictive Analytics", "Autonomous Insights"]
 },
         {
           name: "Power BI",
-          price: 25000,
+          price: 2500 0,
           features: ["Microsoft Integration", "Basic BI", "Standard Tools", "Limited Intelligence"],
           missing: ["Advanced AI", "Predictive Features", "Autonomous Analytics"]
 }
@@ -263,7 +251,7 @@ const AIServicesPricingComparison2025: React.FC = () => {',';';
       id: "ai-autonomous-devops-platform",
       service: "AI Autonomous DevOps Platform",
       category: "DevOps",
-      zionPrice: 5499,
+      zionPrice: 549 9,
       zionFeatures: [
         "Deployment Management",
         "CI/CD Optimization",
@@ -275,13 +263,13 @@ const AIServicesPricingComparison2025: React.FC = () => {',';';
       competitors: [
         {
           name: "Jenkins Enterprise",
-          price: 40000,
+          price: 4000 0,
           features: ["Basic CI/CD", "Standard Tools", "Limited Automation", "No AI"],
           missing: ["AI Intelligence", "Advanced Optimization", "Intelligent Automation"]
 },
         {
           name: "GitLab CI",
-          price: 30000,
+          price: 3000 0,
           features: ["Git Integration", "Basic CI/CD", "Standard Features", "Limited Intelligence"],
           missing: ["AI Features", "Advanced Analytics", "Autonomous Operations"]
 }
@@ -293,7 +281,7 @@ const AIServicesPricingComparison2025: React.FC = () => {',';';
       id: "ai-autonomous-cloud-management-platform",
       service: "AI Autonomous Cloud Management Platform",
       category: "Cloud Computing",
-      zionPrice: 5999,
+      zionPrice: 599 9,
       zionFeatures: [
         "Resource Management",
         "Cost Optimization",
@@ -305,13 +293,13 @@ const AIServicesPricingComparison2025: React.FC = () => {',';';
       competitors: [
         {
           name: "AWS CloudFormation",
-          price: 50000,
+          price: 5000 0,
           features: ["Basic Cloud Tools", "Standard Management", "Limited AI", "Basic Support"],
           missing: ["AI Intelligence", "Cost Optimization", "Intelligent Orchestration"]
 },
         {
           name: "Terraform Enterprise",
-          price: 45000,
+          price: 4500 0,
           features: ["Infrastructure as Code", "Basic Tools", "Standard Features", "Limited Intelligence"],
           missing: ["AI Features", "Advanced Analytics", "Autonomous Management"]
 }
@@ -323,7 +311,7 @@ const AIServicesPricingComparison2025: React.FC = () => {',';';
       id: "ai-autonomous-blockchain-platform",
       service: "AI Autonomous Blockchain Platform",
       category: "Blockchain",
-      zionPrice: 7499,
+      zionPrice: 749 9,
       zionFeatures: [
         "Smart Contract Management",
         "Transaction Optimization",
@@ -335,13 +323,13 @@ const AIServicesPricingComparison2025: React.FC = () => {',';';
       competitors: [
         {
           name: "Ethereum Enterprise",
-          price: 100000,
+          price: 10000 0,
           features: ["Basic Blockchain", "Standard Tools", "Limited AI", "Basic Support"],
           missing: ["AI Intelligence", "Advanced Analytics", "Autonomous Operations"]
 },
         {
           name: "Hyperledger",
-          price: 80000,
+          price: 8000 0,
           features: ["Enterprise Blockchain", "Basic Features", "Standard Tools", "Limited Intelligence"],
           missing: ["AI Features", "Advanced Analytics", "Intelligent Management"]
 }
@@ -353,7 +341,7 @@ const AIServicesPricingComparison2025: React.FC = () => {',';';
       id: "ai-autonomous-quantum-platform",
       service: "AI Autonomous Quantum Platform",
       category: "Quantum Computing",
-      zionPrice: 9999,
+      zionPrice: 999 9,
       zionFeatures: [
         "Quantum Computation",
         "Algorithm Optimization",
@@ -365,13 +353,13 @@ const AIServicesPricingComparison2025: React.FC = () => {',';';
       competitors: [
         {
           name: "IBM Quantum",
-          price: 200000,
+          price: 20000 0,
           features: ["Basic Quantum", "Standard Tools", "Limited AI", "Basic Support"],
           missing: ["AI Intelligence", "Advanced Analytics", "Autonomous Operations"]
 },
         {
           name: "Google Quantum",
-          price: 180000,
+          price: 18000 0,
           features: ["Quantum Computing", "Basic Features", "Standard Tools", "Limited Intelligence"],
           missing: ["AI Features", "Advanced Analytics", "Intelligent Management"]
 }
@@ -395,7 +383,7 @@ const AIServicesPricingComparison2025: React.FC = () => {',';';
     }
   };
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 2 0, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
@@ -409,9 +397,9 @@ const AIServicesPricingComparison2025: React.FC = () => {',';';
       <Helmet>';';';
         <title>AI Services Pricing Comparison 2025 | Zion Tech Group</title>',';';
     ';';';
-        <meta name="description" content="Compare Zion Tech Group's AI autonomous services pricing with competitors. See how our advanced AI solutions offer better value and ROI than traditional alternatives." />
-        <meta name="keywords" content="AI services pricing, pricing comparison, ROI comparison, cost analysis, AI automation pricing" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-services-pricing-comparison-2025" />
+        <meta name="description" content="Compare Zion Tech Group's AI autonomous services pricing with competitors. See how our advanced AI solutions offer better value and ROI than traditional alternatives."  />
+        <meta name="keywords" content="AI services pricing, pricing comparison, ROI comparison, cost analysis, AI automation pricing"  />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-services-pricing-comparison-2025"  />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -419,10 +407,10 @@ const AIServicesPricingComparison2025: React.FC = () => {',';';
           <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
             <motion.h1
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 3 0 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-5xl md:text-7xl font-bold text-white mb-6"
+              className="text-5xl md: tex t-7xl font-bold text-white mb-6"
             >
               AI Services Pricing
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
@@ -430,10 +418,10 @@ const AIServicesPricingComparison2025: React.FC = () => {',';';
               </span>
             </motion.h1>
             <motion.p
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 3 0 }}
               animate={{ opacity: 1, y: 0 }}';
               transition={{ duration: 0.8, delay: 0.2 }}';';
-              className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"';';';
+              className="text-xl md: tex t-2xl text-gray-300 mb-8 max-w-4xl mx-auto"';';';
             >',';';
     ';';';
               See how Zion Tech Group's AI autonomous platforms deliver superior value,
@@ -445,7 +433,7 @@ const AIServicesPricingComparison2025: React.FC = () => {',';';
         <section className="bg-gradient-to-r from-green-600 to-blue-600 py-8 px-4">
           <div className="max-w-7xl mx-auto text-center text-white">
             <h2 className="text-2xl font-bold mb-4">Get Expert Pricing Analysis</h2>
-            <div className="flex flex-col md:flex-row justify-center items-center gap-6 text-lg">
+            <div className="flex flex-col md: fle x-row justify-center items-center gap-6 text-lg">
               <div className="flex items-center gap-2">
                 <span>📞 +1 302 464 0950</span>
               </div>
@@ -463,9 +451,9 @@ const AIServicesPricingComparison2025: React.FC = () => {',';';
           <div className="max-w-7xl mx-auto">
             {/* Search and Filter */}
             <div className="mb-12">
-              <div className="flex flex-col md:flex-row gap-4 mb-8">
+              <div className="flex flex-col md: fle x-row gap-4 mb-8">
                 <div className="flex-1 relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
                   <input
                     type="text"
                     placeholder="Search services..."
@@ -475,7 +463,7 @@ const AIServicesPricingComparison2025: React.FC = () => {',';';
     </div>
   );
 }
-                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500"
+                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outlin e-none focus: rin g-2 focus: rin g-green-500"
                   />
                 </div>
                 <select
@@ -485,7 +473,7 @@ const AIServicesPricingComparison2025: React.FC = () => {',';';
     </div>
   );
 }
-                  className="px-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-green-500"
+                  className="px-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white focus: outlin e-none focus: rin g-2 focus: rin g-green-500"
                 >
                   { categories.map((category) => (
                     <option key={category.id} value={category.id}>
@@ -516,7 +504,7 @@ const AIServicesPricingComparison2025: React.FC = () => {',';';
                     <h3 className="text-3xl font-bold text-white mb-2">{service.service}</h3>
                     <p className="text-gray-400">{service.category}</p>
                   </div>
-                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                  <div className="grid grid-cols-1 lg: gri d-cols-3 gap-8">
                     {/* Zion Tech Group */}
                     <div className="bg-gradient-to-br from-green-500/20 to-blue-500/20 border border-green-500/50 rounded-lg p-6">
                       <div className="text-center mb-6">
@@ -537,7 +525,7 @@ const AIServicesPricingComparison2025: React.FC = () => {',';';
                         <h5 className="font-semibold text-white mb-3">Features:</h5>
                         {service.zionFeatures.map((feature, index) => (
                           <div key={index} className="flex items-center gap-2">
-                            <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                            <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0"  />
                             <span className="text-gray-300 text-sm">{feature}</span>
                           </div>
                         ))
@@ -551,7 +539,7 @@ const AIServicesPricingComparison2025: React.FC = () => {',';';
                           href={service.website}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="w-full bg-gradient-to-r from-green-500 to-blue-600 text-white py-3 px-4 rounded-lg hover:from-green-600 hover:to-blue-700 transition-all duration-300 font-semibold block"
+                          className="w-full bg-gradient-to-r from-green-500 to-blue-600 text-white py-3 px-4 rounded-lg hover: fro m-green-600 hover: t o-blue-700 transition-all duration-300 font-semibold block"
                         >
                           Learn More
                         </a>
@@ -578,7 +566,7 @@ const AIServicesPricingComparison2025: React.FC = () => {',';';
                           <h5 className="font-semibold text-white mb-3">Limited Features:</h5>
                           {competitor.features.map((feature, index) => (
                             <div key={index} className="flex items-center gap-2">
-                              <CheckCircle className="w-4 h-4 text-gray-500 flex-shrink-0" />
+                              <CheckCircle className="w-4 h-4 text-gray-500 flex-shrink-0"  />
                               <span className="text-gray-400 text-sm">{feature}</span>
                             </div>
                           ))
@@ -591,7 +579,7 @@ const AIServicesPricingComparison2025: React.FC = () => {',';';
                           <h5 className="font-semibold text-red-400 mb-3">Missing:</h5>
                           {competitor.missing.map((feature, index) => (
                             <div key={index} className="flex items-center gap-2">
-                              <XCircle className="w-4 h-4 text-red-400 flex-shrink-0" />
+                              <XCircle className="w-4 h-4 text-red-400 flex-shrink-0"  />
                               <span className="text-gray-400 text-sm">{feature}</span>
                             </div>
                           ))
@@ -610,17 +598,17 @@ const AIServicesPricingComparison2025: React.FC = () => {',';';
                   <div className="mt-8 text-center">
                     <div className="bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-500/50 rounded-lg p-6">
                       <h4 className="text-xl font-bold text-white mb-3">Why Choose Zion Tech Group?</h4>
-                      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                      <div className="grid grid-cols-1 md: gri d-cols-3 gap-4 text-sm">
                         <div className="flex items-center gap-2 justify-center">
-                          <TrendingUp className="w-4 h-4 text-green-400" />
+                          <TrendingUp className="w-4 h-4 text-green-400"  />
                           <span className="text-gray-300">Better ROI: {service.roi}</span>
                         </div>
                         <div className="flex items-center gap-2 justify-center">
-                          <Zap className="w-4 h-4 text-blue-400" />
+                          <Zap className="w-4 h-4 text-blue-400"  />
                           <span className="text-gray-300">Faster Setup: {service.setupTime}</span>
                         </div>
                         <div className="flex items-center gap-2 justify-center">
-                          <Shield className="w-4 h-4 text-purple-400" />
+                          <Shield className="w-4 h-4 text-purple-400"  />
                           <span className="text-gray-300">Advanced AI Features</span>
                         </div>
                       </div>
@@ -639,28 +627,28 @@ const AIServicesPricingComparison2025: React.FC = () => {',';';
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 3 0 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: tru e }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
                 Ready to Save Money & Get Better Results?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Our AI autonomous platforms deliver superior value, better ROI, and advanced features
                 compared to traditional solutions. Get started today and transform your business.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
+              <div className="flex flex-col sm: fle x-row gap-4 justify-center items-center">
                 <a
-                  href="mailto:kleber@ziontechgroup.com?subject=AI Services Pricing Consultation"
-                  className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold rounded-lg hover:from-green-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+                  href="mailto: klebe r@ziontechgroup.com?subject=AI Services Pricing Consultation"
+                  className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold rounded-lg hover: fro m-green-600 hover: t o-blue-700 transition-all duration-300 transform hover: scal e-105"
                 >
                   Get Custom Quote
                 </a>
                 <a
                   href="tel:+13024640950"
-                  className="px-8 py-4 border-2 border-green-500 text-green-400 font-semibold rounded-lg hover:bg-green-500 hover:text-white transition-all duration-300"
+                  className="px-8 py-4 border-2 border-green-500 text-green-400 font-semibold rounded-lg hover: b g-green-500 hover: tex t-white transition-all duration-300"
                 >
                   Call: +1 302 464 0950
                 </a>

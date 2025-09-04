@@ -5,11 +5,11 @@ export default function Page() {
 ;
   return ()
     <div className="min-h-screen py-8 bg-gray-900">"
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
         {/* Header Section */}"
         <div className="text-center mb-16">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >"
@@ -23,15 +23,15 @@ export default function Page() {
 
         {/* Search and Filter Section */}"
         <div className="mb-12">"
-          <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
+          <div className="flex flex-col lg: fle x-row gap-4 items-center justify-between">
             {/* Search */}"
             <div className="relative flex-1 max-w-md">"
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"   />
               <input"
                 type="text"
                 placeholder="Search services..."                value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}"
-                className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus: outlin e-none focus: rin g-2 focus: rin g-cyan-500 focus: borde r-transparent"
               />
             </div>
 
@@ -43,7 +43,7 @@ export default function Page() {
                   onClick={() => setSelectedCategory(category.id)}
                   className={`flex items-center space-x-2 px-4 py-2 rounded-lg whitespace-nowrap transition-all duration-200 ${selectedCategory === category.id'
                       ? 'bg-cyan-600 text-white''
-                      : 'bg-gray-800 text-gray-300 hover:bg-gray-700'`
+                      : 'bg-gray-800 text-gray-300 hover: b g-gray-700'`
                   }`}
                 >"
                   <category.icon className="w-4 h-4" />
@@ -55,7 +55,7 @@ export default function Page() {
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}"
-              className="px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+              className="px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus: outlin e-none focus: rin g-2 focus: rin g-cyan-500 focus: borde r-transparent"
             >"
               <option value="featured">Featured First</option>"
               <option value="price-low">Price: Low to High</option>"
@@ -65,14 +65,14 @@ export default function Page() {
         </div>
 
         {/* Services Grid */}"
-        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md: anygri d-cols-2 lg: gri d-cols-3 gap-8">
           {filteredServices.map((service, index)  => (
             <motion.div
               key={service.id}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 2 0 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}"
-              className="bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-all duration-300 border border-gray-700 hover:border-cyan-500/30 group"
+              transition={{ duration: 0.5, delay: inde x * 0.1 }}"
+              className="bg-gray-800 rounded-xl p-6 hover: b g-gray-700 transition-all duration-300 border border-gray-700 hover: borde r-cyan-500/30 group"
             >
               {/* Service Header */}"
               <div className="flex items-start justify-between mb-4">"
@@ -81,7 +81,7 @@ export default function Page() {
                     {service.icon}
                   </div>
                   <div>"
-                    <h3 className="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">
+                    <h3 className="text-lg font-bold text-white group-hover: tex t-cyan-400 transition-colors">
                       {service.title}
                     </h3>"
                     <p className="text-sm text-gray-400">{service.tagline}</p>
@@ -89,7 +89,7 @@ export default function Page() {
                 </div>
                 {service.featured && ("
                   <div className="flex items-center space-x-1 text-yellow-400">"
-                    <Star className="w-4 h-4 fill-current"  />"                    <span className="text-xs">Featured</span>
+                    <Star className="w-4 h-4 fill-current"   />"                    <span className="text-xs">Featured</span>
                   </div>
                 )}
               </div>
@@ -122,7 +122,7 @@ export default function Page() {
                 <div className="space-y-1">
                   {service.features.slice(0, 3).map((feature, featureIndex) => ("
                     <div key={featureIndex} className="flex items-center space-x-2 text-xs text-gray-300">"
-                      <CheckCircle className="w-3 h-3 text-cyan-400 flex-shrink-0"  />                      <span>{feature}</span>
+                      <CheckCircle className="w-3 h-3 text-cyan-400 flex-shrink-0"   />                      <span>{feature}</span>
                     </div>
                   ))}
                   {service.features.length > 3 && ("
@@ -138,7 +138,7 @@ export default function Page() {
                 <div className="space-y-1">
                   {service.benefits.slice(0, 2).map((benefit, benefitIndex) => ("
                     <div key={benefitIndex} className="flex items-center space-x-2 text-xs text-gray-300">"
-                      <TrendingUp className="w-3 h-3 text-green-400 flex-shrink-0"  />                      <span>{benefit}</span>
+                      <TrendingUp className="w-3 h-3 text-green-400 flex-shrink-0"   />                      <span>{benefit}</span>
                     </div>) ) }
                 </div>
               </div>
@@ -179,13 +179,13 @@ export default function Page() {
                   href={service.link}"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full text-center bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-cyan-700 hover:to-blue-700 transition-all duration-200 group-hover:scale-105"
+                  className="block w-full text-center bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover: fro m-cyan-700 hover: t o-blue-700 transition-all duration-200 group-hover: scal e-105"
                 >
                   Learn More"
-                  <ArrowRight className="w-4 h-4 inline ml-2 group-hover:translate-x-1 transition-transform"  />                </a>
+                  <ArrowRight className="w-4 h-4 inline ml-2 group-hover: translat e-x-1 transition-transform"   />                </a>
                 <a`
                   href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.title}`}"
-                  className="block w-full text-center bg-transparent text-cyan-400 px-4 py-2 rounded-lg font-semibold border border-cyan-400 hover:bg-cyan-400 hover:text-white transition-all duration-200"
+                  className="block w-full text-center bg-transparent text-cyan-400 px-4 py-2 rounded-lg font-semibold border border-cyan-400 hover: b g-cyan-400 hover: tex t-white transition-all duration-200"
                 >
                   Contact Sales
                 </a>
@@ -195,7 +195,7 @@ export default function Page() {
 
         {/* Contact Information Section */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 2 0 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}"
           className="mt-20 bg-gradient-to-r from-cyan-600 to-blue-700 rounded-2xl p-12"
@@ -208,10 +208,10 @@ export default function Page() {
               Our team of experts is ready to help you implement these cutting-edge solutions.Get in touch today to start your transformation journey.</p>
           </div>
 "
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
+          <div className="grid grid-cols-1 md: gri d-cols-3 gap-8">"
             <div className="text-center">"
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">"
-                <Phone className="w-8 h-8 text-white"  />
+                <Phone className="w-8 h-8 text-white"   />
               </div>"
               <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>"
               <p className="text-cyan-100">+1 302 464 0950</p>"
@@ -220,7 +220,7 @@ export default function Page() {
 "
             <div className="text-center">"
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">"
-                <Mail className="w-8 h-8 text-white"  />
+                <Mail className="w-8 h-8 text-white"   />
               </div>"
               <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>"
               <p className="text-cyan-100">kleber@ziontechgroup.com</p>"
@@ -229,7 +229,7 @@ export default function Page() {
 "
             <div className="text-center">"
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">"
-                <MapPin className="w-8 h-8 text-white"  />
+                <MapPin className="w-8 h-8 text-white"   />
               </div>"
               <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>"
               <p className="text-cyan-100">364 E Main St STE 1008</p>"              <p className="text-cyan-200 text-sm">Middletown DE 19709</p>
@@ -241,67 +241,67 @@ export default function Page() {
               href="https://ziontechgroup.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-cyan-600 rounded-lg hover:bg-gray-100 transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
+              className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-cyan-600 rounded-lg hover: b g-gray-100 transition-all duration-200 font-semibold text-lg shadow-lg hover: shado w-xl transform hover: scal e-105"
             >"
-              <Globe className="w-5 h-5"  />              <span>Visit Our Website</span>
+              <Globe className="w-5 h-5"   />              <span>Visit Our Website</span>
             </a>
           </div>
         </motion.div>
 
         {/* Stats Section */}"
         <div className="mt-20">"
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md: gri d-cols-4 gap-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 2 0 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}"
               className="text-center"
             >"
               <div className="flex justify-center mb-4">"
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center">"
-                  <Rocket className="w-8 h-8 text-white"  />                </div>
+                  <Rocket className="w-8 h-8 text-white"   />                </div>
               </div>"
               <div className="text-3xl font-bold text-white mb-2">15+</div>"
               <div className="text-gray-400">New Services</div>
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 2 0 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}"
               className="text-center"
             >"
               <div className="flex justify-center mb-4">"
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center">"
-                  <Brain className="w-8 h-8 text-white"  />                </div>
+                  <Brain className="w-8 h-8 text-white"   />                </div>
               </div>"
               <div className="text-3xl font-bold text-white mb-2">10+</div>"
               <div className="text-gray-400">AI-Powered</div>
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 2 0 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}"
               className="text-center"
             >"
               <div className="flex justify-center mb-4">"
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-600 rounded-full flex items-center justify-center">"
-                  <Shield className="w-8 h-8 text-white"  />                </div>
+                  <Shield className="w-8 h-8 text-white"   />                </div>
               </div>"
               <div className="text-3xl font-bold text-white mb-2">99.9%</div>"
               <div className="text-gray-400">Uptime</div>
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 2 0 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}"
               className="text-center"
             >"
               <div className="flex justify-center mb-4">"
                 <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-full flex items-center justify-center">"
-                  <Zap className="w-8 h-8 text-white"  />                </div>
+                  <Zap className="w-8 h-8 text-white"   />                </div>
               </div>"
               <div className="text-3xl font-bold text-white mb-2">24/7</div>"
               <div className="text-gray-400">Support</div>

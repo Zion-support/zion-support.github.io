@@ -1,6 +1,6 @@
 import React from 'react';
 
-const GreenITServices: React.FC = () => {
+const GreenITServices: Reac t.FC = () => {
   return (
     <div className="min-h-screen bg-white py-20">
       <div className="max-w-5xl mx-auto px-4">

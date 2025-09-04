@@ -1,11 +1,10 @@
 import React from 'react';
-const AIServicesShowcase: React.FC = (): JSX.Element => {}
+const AIServicesShowcase: Reac t.FC = (): JSX.Element => {}
       pricing: '$49 - $799/month','
       url: '/services/ai-code-review-security','
       icon: '🔒','
       category: 'Security & Development','
-      benefits['Reduce security incidents by 60%',Faster code review process',Compliance ready']},;
-    {}
+      benefits['Reduce security incidents by 60%',Faster code review process',Compliance ready']}, {}
 '
 ''
 '''
@@ -17,8 +16,7 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
       url: '/services/ai-customer-experience-analytics','''
       icon: '📊','''
       category: 'Analytics & Customer Success','''
-      benefits['Increase customer satisfaction by 35%',Reduce churn by 25%',Real-time insights']},;
-    {}
+      benefits['Increase customer satisfaction by 35%',Reduce churn by 25%',Real-time insights']}, {}
 '
 ''
 '''
@@ -30,8 +28,7 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
       url: '/services/ai-devops-automation-platform','''
       icon: '🚀','''
       category: 'DevOps & Infrastructure','''
-      benefits['Reduce deployment time by 80%',Decrease failures by 90%',Faster time to market']},;
-    {}
+      benefits['Reduce deployment time by 80%',Decrease failures by 90%',Faster time to market']}, {}
 '
 ''
 '''
@@ -46,21 +43,21 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
       benefits['Reduce latency by 90%',Lower bandwidth costs by 70%',Real-time decision making']};
   ];
 
-  return()
+  return ()
     <>
       <SEO title = "AI-Powered Micro SAAS Services Showcase | Zion Tech Group""""
         description="Discover our cutting-edge AI-powered micro SAAS services. From code security to customer analytics, DevOps automation to IoT edge computing. Transform your business with intelligent solutions.""""
         keywords="AI services, micro SAAS, code security, customer analytics, DevOps automation, IoT edge computing, Zion Tech Group""""
         canonical="https://ziontechgroup.com/ai-services-showcase"""
-       />"""
+        />"""
       "      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"""
         {/* Hero Section */}""""
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">""""
+        <section className="relative py-20 px-4 sm: p x-6 lg: p x-8">""""
           <div className="max-w-7xl mx-auto text-center">
             <motion.div;
               initial = {}
   { opacity: 0,
-  y: 20;
+  y: 2 0;
 }}
               animate = {}
   { opacity: 1,
@@ -68,23 +65,23 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
 }}
               transition={{ duration: 0.8 }}"""
             >""""
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <h1 className="text-4xl md: tex t-6xl font-bold text-white mb-6">
                 AI-Powered Micro SAAS Services"""
               </h1>""""
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              <p className="text-xl md: tex t-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Transform your business with our cutting-edge AI-powered micro SAAS solutions. 
                 From code security to customer analytics, we deliver intelligent automation that drives real results."""
               </p>""""
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">"""
+              <div className="flex flex-col sm: fle x-row gap-4 justify-center">"""
                 <Link """"
                   to="/contact""""
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"""
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover: fro m-blue-700 hover: t o-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover: scal e-105"""
                 >
                   Get Started Today;
                 </Link>"""
                 <Link """"
                   to="/services""""
-                  className="border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300"""
+                  className="border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover: b g-white hover: tex t-gray-900 transition-all duration-300"""
                 >
                   View All Services;
                 </Link>
@@ -94,22 +91,22 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
         </section>
 """
         {/* Services Grid */}""""
-        <section className="py-20 px-4 sm:px-6 lg:px-8">""""
+        <section className="py-20 px-4 sm: p x-6 lg: p x-8">""""
           <div className="max-w-7xl mx-auto">
             <motion.div;
               initial = {}
   { opacity: 0,
-  y: 20;
+  y: 2 0;
 }}
               whileInView = {}
   { opacity: 1,
   y: 0;
 }}
               transition={{ duration: 0.8 }}"""
-              viewport={{ once: true }}""""
+              viewport={{ once: tru e }}""""
               className="text-center mb-16""""
             >""""
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
                 Revolutionary AI-Powered Solutions"""
               </h2>""""
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -117,12 +114,12 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg: unknowngrid-cols-2 gap-8">              {aiServices.map((service, index)   => (
+            <div className="grid grid-cols-1 lg: unknowngri d-cols-2 gap-8">              {aiServices.map((service, index)   => (
                 <motion.div;
                   key={service.id}
                   initial = {}
   { opacity: 0,
-  y: 20;
+  y: 2 0;
 }}
                   whileInView = {}
   { opacity: 1,
@@ -130,10 +127,10 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
 }}
                   transition = {}
   { duration: 0.6,
-  delay: index * 0.1;
+  delay: inde x * 0.1;
 }}"""
-                  viewport={{ once: true }}""""
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 group""""
+                  viewport={{ once: tru e }}""""
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover: borde r-white/40 transition-all duration-300 group""""
                 >""""
                   <div className="flex items-start justify-between mb-6">""""
                     <div className="text-4xl">{service.icon}</div>""""
@@ -142,7 +139,7 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
                     </span>
                   </div>"""
                   """"
-                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-300 transition-colors duration-300">
+                  <h3 className="text-2xl font-bold text-white mb-4 group-hover: tex t-blue-300 transition-colors duration-300">
                     {service.title}
                   </h3>"""
                   """"
@@ -180,13 +177,13 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
                   <div className="flex gap-3">
                     <Link"""
                       to={service.url}""""
-                      className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 text-center"""
+                      className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover: fro m-blue-700 hover: t o-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 text-center"""
                     >
                       Learn More;
                     </Link>"""
                     <Link""""
                       to="/contact""""
-                      className="flex-1 border-2 border-white text-white font-semibold py-3 px-6 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 text-center"""
+                      className="flex-1 border-2 border-white text-white font-semibold py-3 px-6 rounded-lg hover: b g-white hover: tex t-gray-900 transition-all duration-300 text-center"""
                     >
                       Contact Sales;
                     </Link>
@@ -197,22 +194,22 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
         </section>
 """
         {/* Why Choose Us Section */}""""
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">""""
+        <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-black/20">""""
           <div className="max-w-7xl mx-auto">
             <motion.div;
               initial = {}
   { opacity: 0,
-  y: 20;
+  y: 2 0;
 }}
               whileInView = {}
   { opacity: 1,
   y: 0;
 }}
               transition={{ duration: 0.8 }}"""
-              viewport={{ once: true }}""""
+              viewport={{ once: tru e }}""""
               className="text-center mb-16""""
             >""""
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
                 Why Choose Zion Tech Group?"""
               </h2>""""
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -220,7 +217,7 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: unknowngri d-cols-2 lg: gri d-cols-3 gap-8">
               {[
                 {
                   title: "AI-First Approach",
@@ -265,7 +262,7 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
                   key={index}
                   initial = {}
   { opacity: 0,
-  y: 20;
+  y: 2 0;
 }}
                   whileInView = {}
   { opacity: 1,
@@ -273,9 +270,9 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
 }}
                   transition = {}
   { duration: 0.6,
-  delay: index * 0.1;
+  delay: inde x * 0.1;
 }}"""
-                  viewport={{ once: true }}""""
+                  viewport={{ once: tru e }}""""
                   className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20""""
                 >""""
                   <div className="text-4xl mb-4">{feature.icon}</div>""""
@@ -288,28 +285,28 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
         </section>
 """
         {/* CTA Section */}""""
-        <section className="py-20 px-4 sm:px-6 lg:px-8">""""
+        <section className="py-20 px-4 sm: p x-6 lg: p x-8">""""
           <div className="max-w-4xl mx-auto text-center">
             <motion.div;
               initial = {}
   { opacity: 0,
-  y: 20;
+  y: 2 0;
 }}
               whileInView = {}
   { opacity: 1,
   y: 0;
 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}"""
+              viewport={{ once: tru e }}"""
             >""""
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-6">
                 Ready to Transform Your Business?"""
               </h2>""""
               <p className="text-xl text-gray-300 mb-8">
                 Join leading organizations who trust our AI-powered platforms to drive innovation and growth.
               </p>"""
               """"
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">""""
+              <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-8">""""
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">""""
                   <h3 className="text-xl font-semibold text-white mb-3">Contact Information</h3>""""
                   <div className="space-y-2 text-gray-300">""""
@@ -322,13 +319,13 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">""""
                   <h3 className="text-xl font-semibold text-white mb-3">Quick Actions</h3>""""
                   <div className="space-y-3">""""
-                    <Link to="/contact" className="block w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors duration-300">
+                    <Link to="/contact" className="block w-full bg-blue-600 hover: b g-blue-700 text-white py-2 px-4 rounded-lg transition-colors duration-300">
                       Schedule Demo"""
                     </Link>""""
-                    <Link to="/contact" className="block w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg transition-colors duration-300">
+                    <Link to="/contact" className="block w-full bg-green-600 hover: b g-green-700 text-white py-2 px-4 rounded-lg transition-colors duration-300">
                       Start Free Trial"""
                     </Link>""""
-                    <Link to="/contact" className="block w-full bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-lg transition-colors duration-300">
+                    <Link to="/contact" className="block w-full bg-purple-600 hover: b g-purple-700 text-white py-2 px-4 rounded-lg transition-colors duration-300">
                       Get Pricing Quote;
                     </Link>
                   </div>
@@ -336,7 +333,7 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
               </div>"""
               """"
               <div className="text-gray-300">""""
-                <p>Visit our website: <a href="https://ziontechgroup.com" className="text-blue-400 hover:underline">https://ziontechgroup.com</a></p>
+                <p>Visit our website: <a href="https://ziontechgroup.com" className="text-blue-400 hover: underlin e">https://ziontechgroup.com</a></p>
               </div>
             </motion.div>
           </div>

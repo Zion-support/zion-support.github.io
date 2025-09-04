@@ -30,32 +30,32 @@ import { SEO  } from '../../components/SEO';
 const AIBusinessIntelligenceDashboard = () => {
   const features = [
     {
-      icon: Brain,
+      icon: Brai n,
       title: "AI-Powered Insights",
       description: "Advanced machine learning algorithms that automatically identify trends, anomalies, and opportunities in your data"
     },
     {
-      icon: BarChart3,
+      icon: BarChart 3,
       title: "Real-time Analytics",
       description: "Live dashboards with real-time data updates from multiple sources including CRM, ERP, and external APIs"
     },
     {
-      icon: TrendingUp,
+      icon: TrendingU p,
       title: "Predictive Analytics",
       description: "Forecast future trends and outcomes using historical data and AI models with 95%+ accuracy"
     },
     {
-      icon: Zap,
+      icon: Za p,
       title: "Automated Reporting",
       description: "Intelligent report generation that adapts to your business needs and automatically highlights key insights"
     },
     {
-      icon: Shield,
+      icon: Shiel d,
       title: "Enterprise Security",
       description: "Bank-grade security with role-based access control, data encryption, and compliance with GDPR, HIPAA, and SOC 2"
     },
     {
-      icon: Globe,
+      icon: Glob e,
       title: "Multi-platform Access",
       description: "Access your dashboards from anywhere - web, mobile apps, and integrate with existing business tools"
     }
@@ -75,7 +75,7 @@ const AIBusinessIntelligenceDashboard = () => {
         "Email support",
         "Basic integrations"
       ],
-      popular: false
+      popular: fals e
     },
     {
       name: "Professional",
@@ -92,7 +92,7 @@ const AIBusinessIntelligenceDashboard = () => {
         "Advanced integrations",
         "White-label options"
       ],
-      popular: true
+      popular: tru e
     },
     {
       name: "Enterprise",
@@ -109,7 +109,7 @@ const AIBusinessIntelligenceDashboard = () => {
         "On-premise options",
         "SLA guarantees"
       ],
-      popular: false
+      popular: fals e
     }
   ];
 
@@ -117,22 +117,22 @@ const AIBusinessIntelligenceDashboard = () => {
     {
       title: "Sales Performance Analytics",
       description: "Track sales metrics, pipeline analysis, and revenue forecasting with AI-powered insights",
-      icon: TrendingUp
+      icon: TrendingU p
     },
     {
       title: "Customer Behavior Analysis",
       description: "Understand customer patterns, churn prediction, and lifetime value optimization",
-      icon: Users
+      icon: User s
     },
     {
       title: "Financial Performance Tracking",
       description: "Monitor KPIs, budget vs actual, and financial forecasting with automated alerts",
-      icon: BarChart3
+      icon: BarChart 3
     },
     {
       title: "Operational Efficiency",
       description: "Identify bottlenecks, optimize processes, and improve productivity across teams",
-      icon: Activity
+      icon: Activit y
     }
   ];
 
@@ -162,51 +162,50 @@ const AIBusinessIntelligenceDashboard = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
-      <SEO 
-        title="AI-Powered Business Intelligence Dashboard - Zion Tech Group"
+      <SEO title="AI-Powered Business Intelligence Dashboard - Zion Tech Group"
         description="Transform your business with AI-powered BI dashboards. Real-time analytics, predictive insights, and automated reporting. Start from $299/month."
-      />
+       />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      <section className="pt-32 pb-20 px-4 sm: p x-6 lg: p x-8 relative overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center relative z-10"
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-full text-sm font-medium mb-8 backdrop-blur-sm">
-              <Brain className="w-4 h-4 mr-2 text-cyan-400" />
+              <Brain className="w-4 h-4 mr-2 text-cyan-400"  />
               AI-Powered Business Intelligence
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">
+            <h1 className="text-5xl md: tex t-7xl font-bold mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
                 AI Business Intelligence
               </span>
-              <br />
+              <br  />
               <span className="text-white">Dashboard</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+            <p className="text-xl md: tex t-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
               Transform your business data into actionable insights with our AI-powered business intelligence platform. 
               Get real-time analytics, predictive insights, and automated reporting that drives growth.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center items-center">
               <a
                 href="https://ziontechgroup.com/contact"
-                className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 flex items-center group"
+                className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover: fro m-cyan-400 hover: t o-blue-400 transition-all duration-300 flex items-center group"
               >
                 Start Free Trial
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="ml-2 w-5 h-5 group-hover: translat e-x-1 transition-transform"  />
               </a>
               <a
                 href="#demo"
-                className="border border-cyan-400/30 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 flex items-center group"
+                className="border border-cyan-400/30 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover: b g-cyan-400/10 transition-all duration-300 flex items-center group"
               >
-                <Play className="w-5 h-5 mr-2" />
+                <Play className="w-5 h-5 mr-2"  />
                 Watch Demo
               </a>
             </div>
@@ -221,16 +220,16 @@ const AIBusinessIntelligenceDashboard = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative">
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-white/5 relative">
         <div className="max-w-7xl mx-auto">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
                 Powerful Features
               </span>
@@ -240,21 +239,21 @@ const AIBusinessIntelligenceDashboard = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: unknowngri d-cols-2 lg: gri d-cols-3 gap-8">
             {features.map((feature, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: inde x * 0.1 }}
+                viewport={{ once: tru e }}
                 className="group"
               >
-                <div className="glass rounded-2xl p-8 border border-white/20 hover:border-cyan-400/40 transition-all duration-300 group-hover:transform group-hover:scale-105 backdrop-blur-sm h-full">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="glass rounded-2xl p-8 border border-white/20 hover: borde r-cyan-400/40 transition-all duration-300 group-hover: transform group-hover: scal e-105 backdrop-blur-sm h-full">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6 group-hover: scal e-110 transition-transform duration-300">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors duration-300">
+                  <h3 className="text-2xl font-bold text-white mb-4 group-hover: tex t-cyan-300 transition-colors duration-300">
                     {feature.title}
                   </h3>
                   <p className="text-gray-300 leading-relaxed">
@@ -268,16 +267,16 @@ const AIBusinessIntelligenceDashboard = () => {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8 relative">
         <div className="max-w-7xl mx-auto">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
                 Use Cases
               </span>
@@ -287,21 +286,21 @@ const AIBusinessIntelligenceDashboard = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md: unknowngrid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md: unknowngri d-cols-2 gap-8">
             {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+                initial={{ opacity: 0, x: inde x % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: inde x * 0.1 }}
+                viewport={{ once: tru e }}
                 className="group"
               >
-                <div className="glass rounded-2xl p-8 border border-white/20 hover:border-cyan-400/40 transition-all duration-300 group-hover:transform group-hover:scale-105 backdrop-blur-sm">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="glass rounded-2xl p-8 border border-white/20 hover: borde r-cyan-400/40 transition-all duration-300 group-hover: transform group-hover: scal e-105 backdrop-blur-sm">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6 group-hover: scal e-110 transition-transform duration-300">
                     <useCase.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors duration-300">
+                  <h3 className="text-2xl font-bold text-white mb-4 group-hover: tex t-cyan-300 transition-colors duration-300">
                     {useCase.title}
                   </h3>
                   <p className="text-gray-300 leading-relaxed">
@@ -315,16 +314,16 @@ const AIBusinessIntelligenceDashboard = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative">
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-white/5 relative">
         <div className="max-w-7xl mx-auto">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
                 Pricing Plans
               </span>
@@ -334,14 +333,14 @@ const AIBusinessIntelligenceDashboard = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 lg: unknowngrid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg: unknowngri d-cols-3 gap-8">
             {pricingPlans.map((plan, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 3 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: inde x * 0.1 }}
+                viewport={{ once: tru e }}
                 className={`relative ${plan.popular ? 'lg:-mt-8' : ''}`}
               >
                 {plan.popular && (
@@ -355,7 +354,7 @@ const AIBusinessIntelligenceDashboard = () => {
                 <div className={`glass rounded-2xl p-8 border transition-all duration-300 backdrop-blur-sm h-full ${
                   plan.popular 
                     ? 'border-cyan-400/40 bg-gradient-to-br from-cyan-500/10 to-blue-500/10' 
-                    : 'border-white/20 hover:border-cyan-400/40'
+                    : 'border-white/20 hover: borde r-cyan-400/40'
                 }`}>
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
@@ -369,7 +368,7 @@ const AIBusinessIntelligenceDashboard = () => {
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0"  />
                         {feature}
                       </li>
                     ))}
@@ -379,8 +378,8 @@ const AIBusinessIntelligenceDashboard = () => {
                     href="https://ziontechgroup.com/contact"
                     className={`w-full py-3 px-6 rounded-xl font-semibold text-center transition-all duration-300 block ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-400 hover:to-blue-400'
-                        : 'border border-cyan-400/30 text-cyan-400 hover:bg-cyan-400/10'
+                        ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover: fro m-cyan-400 hover: t o-blue-400'
+                        : 'border border-cyan-400/30 text-cyan-400 hover: b g-cyan-400/10'
                     }`}
                   >
                     Start Free Trial
@@ -393,36 +392,36 @@ const AIBusinessIntelligenceDashboard = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8 relative">
         <div className="max-w-7xl mx-auto">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
                 What Our Clients Say
               </span>
             </h2>
           </motion.div>
           
-          <div className="grid grid-cols-1 md: unknowngrid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: unknowngri d-cols-3 gap-8">
             {testimonials.map((testimonial, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 3 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: inde x * 0.1 }}
+                viewport={{ once: tru e }}
                 className="group"
               >
-                <div className="glass rounded-2xl p-8 border border-white/20 hover:border-cyan-400/40 transition-all duration-300 group-hover:transform group-hover:scale-105 backdrop-blur-sm h-full">
+                <div className="glass rounded-2xl p-8 border border-white/20 hover: borde r-cyan-400/40 transition-all duration-300 group-hover: transform group-hover: scal e-105 backdrop-blur-sm h-full">
                   <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-current text-yellow-400" />
+                      <Star key={i} className="w-5 h-5 fill-current text-yellow-400"  />
                     ))}
                   </div>
                   <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
@@ -439,33 +438,33 @@ const AIBusinessIntelligenceDashboard = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 relative">
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 relative">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Join thousands of businesses that are already using AI-powered insights to drive growth and efficiency.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center items-center">
               <a
                 href="https://ziontechgroup.com/contact"
-                className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 flex items-center group"
+                className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover: fro m-cyan-400 hover: t o-blue-400 transition-all duration-300 flex items-center group"
               >
                 Start Free Trial
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="ml-2 w-5 h-5 group-hover: translat e-x-1 transition-transform"  />
               </a>
               <a
                 href="tel:+13024640950"
-                className="border border-cyan-400/30 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 flex items-center group"
+                className="border border-cyan-400/30 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover: b g-cyan-400/10 transition-all duration-300 flex items-center group"
               >
-                <Phone className="w-5 h-5 mr-2" />
+                <Phone className="w-5 h-5 mr-2"  />
                 Call +1 302 464 0950
               </a>
             </div>
@@ -474,29 +473,29 @@ const AIBusinessIntelligenceDashboard = () => {
       </section>
 
       {/* Contact Information */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+      <section className="py-16 px-4 sm: p x-6 lg: p x-8 bg-white/5">
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-3 gap-8">
             <div className="flex flex-col items-center">
-              <Phone className="w-8 h-8 text-cyan-400 mb-4" />
+              <Phone className="w-8 h-8 text-cyan-400 mb-4"  />
               <div className="text-white font-semibold">Phone</div>
-              <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+              <a href="tel:+13024640950" className="text-cyan-400 hover: tex t-cyan-300 transition-colors">
                 +1 302 464 0950
               </a>
             </div>
             <div className="flex flex-col items-center">
-              <Mail className="w-8 h-8 text-cyan-400 mb-4" />
+              <Mail className="w-8 h-8 text-cyan-400 mb-4"  />
               <div className="text-white font-semibold">Email</div>
-              <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+              <a href="mailto: klebe r@ziontechgroup.com" className="text-cyan-400 hover: tex t-cyan-300 transition-colors">
                 kleber@ziontechgroup.com
               </a>
             </div>
             <div className="flex flex-col items-center">
-              <MapPin className="w-8 h-8 text-cyan-400 mb-4" />
+              <MapPin className="w-8 h-8 text-cyan-400 mb-4"  />
               <div className="text-white font-semibold">Address</div>
               <div className="text-gray-300 text-sm">
-                364 E Main St STE 1008<br />
+                364 E Main St STE 1008<br  />
                 Middletown DE 19709
               </div>
             </div>

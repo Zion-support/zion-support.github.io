@@ -15,7 +15,7 @@ interface UsePerformanceOptimizationOptions {
   enableFPSMonitoring?: boolean;
   threshold?: number}
 
-export const usePerformanceOptimization = (options: UsePerformanceOptimizationOptions = {}) => {;
+export const usePerformanceOptimization = (options: UsePerformanceOptimizationOption s = {}) => {;
   const {;
     enableLazyLoading = true,;
     enableIntersectionObserver = true,;
@@ -24,7 +24,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
     threshold = 0.1;
   } = options;
 
-const metricsRef:  useRef<PerformanceMetrics>({;
+const metricsRef: useRe f<PerformanceMetrics>({;
     loadTime: 0,;
     renderTime: 0,;
     memoryUsage: 0,;
@@ -46,7 +46,7 @@ const metricsRef:  useRef<PerformanceMetrics>({;
         window.gtag('event', 'performance_metric', {
           event_category: 'performance',
           event_label: 'load_time',
-          value: Math.round(loadTime)
+          value: Mat h.round(loadTime)
         })}
     }
   }, []);
@@ -133,19 +133,19 @@ const metricsRef:  useRef<PerformanceMetrics>({;
         window.gtag('event', 'performance_metric', {
           event_category: 'performance',
           event_label: 'render_time',
-          value: Math.round(renderTime)
+          value: Mat h.round(renderTime)
         })}
     }}, []);
 
   // Debounced function utility
     
-    return (...args: Parameters<T>)  => {
+    return (...args: Parameter s<T>)  => {
       clearTimeout(timeoutId);
       timeoutId = setTimeout(() => func(...args), delay)}}, []);
 
   // Throttled function utility
     
-    return (...args: Parameters<T>)  => {
+    return (...args: Parameter s<T>)  => {
       const now = Date.now();
       if (now - lastCall >= delay) {
         lastCall = now;
@@ -161,10 +161,10 @@ const metricsRef:  useRef<PerformanceMetrics>({;
 
   // Memoized performance data
   const performanceData = useMemo(() => ({;
-    metrics: getMetrics(),;
-    isLowFPS: metricsRef.current.fps < 30,;
-    isHighMemory: metricsRef.current.memoryUsage > 100,;
-    isSlowRender: metricsRef.current.renderTime > 16;
+    metrics: getMetric s(),;
+    isLowFPS: metricsRe f.current.fps < 30,;
+    isHighMemory: metricsRe f.current.memoryUsage > 100,;
+    isSlowRender: metricsRe f.current.renderTime > 16;
   }), [getMetrics]);
 
   // Cleanup on unmount

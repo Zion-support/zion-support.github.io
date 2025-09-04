@@ -8,7 +8,7 @@ interface DataVisualizationProps extends React.PropsWithChildren<{}> {
   showCharts?: boolean;
   showActions?: boolean}
 
-export const DataVisualization: React.FC<DataVisualizationProps> = ({
+export const DataVisualization: Reac t.FC<DataVisualizationProps> = ({
 
 title:  "Data Analytics Dashboard",;
   showMetrics = true,;
@@ -35,9 +35,9 @@ title:  "Data Analytics Dashboard",;
 
       title: 'Total Revenue',
       value: '$2.4M',
-      change: 12.5,
+      change: 1 2.5,
       changeType: 'increase',"
-      icon: <DollarSign className="w-5 h-5"  />,
+      icon: <DollarSign className="w-5 h-5"   />,
       color: 'text-green-400'    },
     {
 
@@ -45,7 +45,7 @@ title:  "Data Analytics Dashboard",;
       value: '45.2K',
       change: 8.1,
       changeType: 'increase',"
-      icon: <Users className="w-5 h-5"  />,
+      icon: <Users className="w-5 h-5"   />,
       color: 'text-blue-400'    },
     {
 
@@ -53,7 +53,7 @@ title:  "Data Analytics Dashboard",;
       value: '3.24%',
       change: -2.4,
       changeType: 'decrease',"
-      icon: <Target className="w-5 h-5"  />,
+      icon: <Target className="w-5 h-5"   />,
       color: 'text-yellow-400'    },
     {
 
@@ -61,7 +61,7 @@ title:  "Data Analytics Dashboard",;
       value: '2m 47s',;
       change: 0.0,;
       changeType: 'neutral',;"
-      icon: <Activity className="w-5 h-5"  />,;
+      icon: <Activity className="w-5 h-5"   />,;
       color: 'text-purple-400'};
   ]) ;
 
@@ -75,15 +75,15 @@ setChartData(prev:  > ({;
       ...prev,;
       datasets: [{;
         ...prev.datasets[0],;
-        data: prev.datasets[0].data.map ( () => Math.floor(Math.random () * 100) + 20) }]}) ) ;
+        data: pre v.datasets[0].data.map ( () => Math.floor(Math.random () * 100) + 20) }]}) ) ;
     // Update metrics with new random values
     setMetrics(prev => prev.map(metric => ({
 
       ...metric,
-      change: Math.random() > 0.5 ?
+      change: Mat h.random() > 0.5 ?
         (Math.random() * 20 - 10) :
         (Math.random() * 15 - 7.5),
-      changeType: Math.random() > 0.6 ? 'increase' :'
+      changeType: Mat h.random() > 0.6 ? 'increase' :'
                  Math.random() > 0.3 ? 'decrease' : 'neutral'
     })));
 

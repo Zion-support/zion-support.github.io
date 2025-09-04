@@ -55,17 +55,17 @@ export
     progressValue = 50}
 ;
   const getAlertVariant = () => {;'"
-    if (status === 'good') return "bg-green-50 border-green-500 text-green-700 dark:bg-green-900/30 dark:text-green-300";'"
-    if (status === 'warning') return "bg-yellow-50 border-yellow-500 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300";'"
-    if (status === 'danger') return "bg-red-50 border-red-500 text-red-700 dark:bg-red-900/30 dark:text-red-300";"
-    return "bg-blue-50 border-blue-500 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300"; // Info
+    if (status === 'good') return "bg-green-50 border-green-500 text-green-700 dark: b g-green-900/30 dark: tex t-green-300";'"
+    if (status === 'warning') return "bg-yellow-50 border-yellow-500 text-yellow-700 dark: b g-yellow-900/30 dark: tex t-yellow-300";'"
+    if (status === 'danger') return "bg-red-50 border-red-500 text-red-700 dark: b g-red-900/30 dark: tex t-red-300";"
+    return "bg-blue-50 border-blue-500 text-blue-700 dark: b g-blue-900/30 dark: tex t-blue-300"; // Info
   };
 
   const getIcon = () => {;'"
-    if (status === 'good') return <CheckCircle className="h-5 w-5 text-green-500"  />;'"
-    if (status === 'warning') return <AlertTriangle className="h-5 w-5 text-yellow-500"  />;'"
-    if (status === 'danger') return <TrendingDown className="h-5 w-5 text-red-500"  />; // Or AlertTriangle"
-    return <Info className="h-5 w-5 text-blue-500"  />};
+    if (status === 'good') return <CheckCircle className="h-5 w-5 text-green-500"   />;'"
+    if (status === 'warning') return <AlertTriangle className="h-5 w-5 text-yellow-500"   />;'"
+    if (status === 'danger') return <TrendingDown className="h-5 w-5 text-red-500"   />; // Or AlertTriangle"
+    return <Info className="h-5 w-5 text-blue-500"   />};
 
   const getProgressColor = () => {;'"
     if (status === 'good') return "bg-green-500";'"
@@ -81,7 +81,7 @@ export
       <AlertDescription className="text-sm mb-3">{message}</AlertDescription>
       {userBudget.max !== null && userBudget.max !== Infinity && userBudget.max > 0 && (
         <>
-          <Progress value={progressValue} className={`w-full h-2.5 ${getProgressColor()}`}  />"          <div className="flex justify-between text-xs text-muted-foreground mt-1">
+          <Progress value={progressValue} className={`w-full h-2.5 ${getProgressColor()}`}   />"          <div className="flex justify-between text-xs text-muted-foreground mt-1">
             <span>Your Max: ${userBudget.max.toLocaleString()}</span>
             <span>Est. Avg: ${estimatedAvgCost.toLocaleString()}</span>
           </div>

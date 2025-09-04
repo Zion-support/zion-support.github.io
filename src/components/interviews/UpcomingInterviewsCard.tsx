@@ -51,7 +51,7 @@ export function UpcomingInterviewsCard() {
     return (<Card className="bg-zion-blue-dark/40 border-zion-blue-light">
         <CardHeader>
           <CardTitle className="text-lg flex items-center">
-            <Video className="h-5 w-5 mr-2 text-zion-purple" />
+            <Video className="h-5 w-5 mr-2 text-zion-purple"  />
             Upcoming Interviews
           </CardTitle>
         </CardHeader>
@@ -76,13 +76,13 @@ export function UpcomingInterviewsCard() {
     return (<Card className="bg-zion-blue-dark/40 border-zion-blue-light">
         <CardHeader>
           <CardTitle className="text-lg flex items-center">
-            <Video className="h-5 w-5 mr-2 text-zion-purple" />
+            <Video className="h-5 w-5 mr-2 text-zion-purple"  />
             Upcoming Interviews
           </CardTitle>
         </CardHeader>
         <CardContent>
           <div className="text-center py-6">
-            <Calendar className="h-10 w-10 mx-auto mb-2 text-muted-foreground" />
+            <Calendar className="h-10 w-10 mx-auto mb-2 text-muted-foreground"  />
             <p className="text-sm text-muted-foreground">No upcoming interviews scheduled</p>
             <Button asChild className="mt-4" variant="outline" size="sm">
               <Link to="/interviews">Schedule Interview</Link>
@@ -96,7 +96,7 @@ export function UpcomingInterviewsCard() {
   return (<Card className="bg-zion-blue-dark/40 border-zion-blue-light">
       <CardHeader>
         <CardTitle className="text-lg flex items-center">
-          <Video className="h-5 w-5 mr-2 text-zion-purple" />
+          <Video className="h-5 w-5 mr-2 text-zion-purple"  />
           Upcoming Interviews
         </CardTitle>
       </CardHeader>
@@ -105,7 +105,7 @@ export function UpcomingInterviewsCard() {
           {upcomingInterviews.map(interview => {
             const interviewDate = parseISO(interview.scheduled_date);
             const formattedDate = format(interviewDate, 'EEE, MMM d');
-            const formattedTime = format(interviewDate, 'h:mm a');
+            const formattedTime = format(interviewDate, 'h: mm a');
             
             const now = new Date();
             const isStartingSoon = 
@@ -117,10 +117,9 @@ export function UpcomingInterviewsCard() {
                   {/* Assuming AvatarImage and AvatarFallback are part of Avatar or imported separately */}
                   {/* For now, conditional rendering based on available image */}
                   {interview.client_avatar || interview.talent_avatar ? (
-                    <img 
-                      src={interview.client_avatar || interview.talent_avatar || undefined} // Ensure src is string | undefined
+                    <img src={interview.client_avatar || interview.talent_avatar || undefined} // Ensure src is string | undefined
                       alt={interview.client_name || interview.talent_name || "User"} // Ensure alt is string
-                    />
+                     />
                   ) : (
                     <div className="flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium">
                       {(interview.client_name || interview.talent_name || "U").charAt(0)}
@@ -139,7 +138,7 @@ export function UpcomingInterviewsCard() {
                     )}
                   </div>
                   <div className="flex items-center text-sm text-muted-foreground">
-                    <Clock className="h-3 w-3 mr-1" />
+                    <Clock className="h-3 w-3 mr-1"  />
                     {formattedDate} at {formattedTime}
                   </div>
                 </div>

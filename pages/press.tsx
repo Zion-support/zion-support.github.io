@@ -18,10 +18,10 @@ import {
   Award
 } from 'lucide-react'
 
-const SEO = dynamic(() => import('../src/components/SEO'), { ssr: false })
-const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false })
+const SEO = dynamic(() => import('../src/components/SEO'), { ssr: fals e })
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: fals e })
 
-const PressPage: React.FC = () => {
+const PressPage: Reac t.FC = () => {
   const pressReleases = [
     {
       id: 1,
@@ -96,38 +96,37 @@ const PressPage: React.FC = () => {
 
   return (
     <>
-      <SEO
-        title="Press - Zion Tech Group"
+      <SEO title="Press - Zion Tech Group"
         description="Latest news, press releases, and media coverage about Zion Tech Group. Stay updated on our innovations and achievements."
         keywords="press, news, media coverage, Zion Tech Group, AI services, IT solutions"
         canonical="https://ziontechgroup.com/press"
-      />
+       />
       
       <PageTransition>
         <main className="min-h-screen bg-white">
           {/* Hero Section */}
           <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="text-center"
               >
-                <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                <h1 className="text-4xl md: tex t-6xl font-bold text-gray-900 mb-6">
                   Press & <span className="text-blue-600">Media</span>
                 </h1>
                 <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
                   Stay updated with the latest news, press releases, and media coverage about Zion Tech Group.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm: fle x-row gap-4 justify-center">
                   <motion.a
                     href="#press-releases"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
                   >
-                    <ArrowRight className="w-5 h-5" />
+                    <ArrowRight className="w-5 h-5"  />
                     View Press Releases
                   </motion.a>
                   <motion.a
@@ -136,7 +135,7 @@ const PressPage: React.FC = () => {
                     whileTap={{ scale: 0.95 }}
                     className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
                   >
-                    <ArrowRight className="w-5 h-5" />
+                    <ArrowRight className="w-5 h-5"  />
                     Media Contact
                   </motion.a>
                 </div>
@@ -146,14 +145,14 @@ const PressPage: React.FC = () => {
 
           {/* Press Releases */}
           <section id="press-releases" className="py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-center mb-16"
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4">
                   Press Releases
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -165,22 +164,22 @@ const PressPage: React.FC = () => {
                 {pressReleases.map((release, index) => (
                   <motion.div
                     key={release.id}
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 2 0 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300"
+                    transition={{ duration: 0.6, delay: inde x * 0.1 }}
+                    className="bg-white rounded-xl shadow-lg p-8 hover: shado w-xl transition-shadow duration-300"
                   >
-                    <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
-                      <div className="flex items-center gap-3 mb-4 lg:mb-0">
+                    <div className="flex flex-col lg: fle x-row lg: item s-center lg: justif y-between mb-4">
+                      <div className="flex items-center gap-3 mb-4 lg: m b-0">
                         <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
                           {release.category}
                         </span>
                         <div className="flex items-center gap-2 text-sm text-gray-500">
-                          <Calendar className="w-4 h-4" />
+                          <Calendar className="w-4 h-4"  />
                           {release.date}
                         </div>
                         <div className="flex items-center gap-2 text-sm text-gray-500">
-                          <Clock className="w-4 h-4" />
+                          <Clock className="w-4 h-4"  />
                           {release.readTime}
                         </div>
                       </div>
@@ -197,9 +196,9 @@ const PressPage: React.FC = () => {
                     <motion.button
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
-                      className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-blue-700 transition-colors"
+                      className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold flex items-center gap-2 hover: b g-blue-700 transition-colors"
                     >
-                      <ExternalLink className="w-5 h-5" />
+                      <ExternalLink className="w-5 h-5"  />
                       Read Full Release
                     </motion.button>
                   </motion.div>
@@ -210,14 +209,14 @@ const PressPage: React.FC = () => {
 
           {/* Media Coverage */}
           <section className="bg-gray-50 py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="text-center mb-16"
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4">
                   Media Coverage
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -225,17 +224,17 @@ const PressPage: React.FC = () => {
                 </p>
               </motion.div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md: gri d-cols-3 gap-8">
                 {mediaCoverage.map((coverage, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 2 0 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300"
+                    transition={{ duration: 0.6, delay: inde x * 0.1 }}
+                    className="bg-white rounded-xl shadow-lg p-8 hover: shado w-xl transition-shadow duration-300"
                   >
                     <div className="flex items-center gap-2 text-sm text-gray-500 mb-3">
-                      <Newspaper className="w-4 h-4" />
+                      <Newspaper className="w-4 h-4"  />
                       {coverage.source}
                     </div>
                     
@@ -255,10 +254,10 @@ const PressPage: React.FC = () => {
                         href={coverage.link}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="text-blue-600 hover:text-blue-700 font-semibold flex items-center gap-1"
+                        className="text-blue-600 hover: tex t-blue-700 font-semibold flex items-center gap-1"
                       >
                         Read More
-                        <ExternalLink className="w-4 h-4" />
+                        <ExternalLink className="w-4 h-4"  />
                       </motion.a>
                     </div>
                   </motion.div>
@@ -269,14 +268,14 @@ const PressPage: React.FC = () => {
 
           {/* Awards */}
           <section className="py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="text-center mb-16"
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4">
                   Awards & Recognition
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -284,17 +283,17 @@ const PressPage: React.FC = () => {
                 </p>
               </motion.div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md: gri d-cols-3 gap-8">
                 {awards.map((award, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 2 0 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow duration-300"
+                    transition={{ duration: 0.6, delay: inde x * 0.1 }}
+                    className="bg-white rounded-xl shadow-lg p-8 text-center hover: shado w-xl transition-shadow duration-300"
                   >
                     <div className="text-blue-600 mb-4 flex justify-center">
-                      <Award className="w-12 h-12" />
+                      <Award className="w-12 h-12"  />
                     </div>
                     
                     <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -320,27 +319,27 @@ const PressPage: React.FC = () => {
 
           {/* Media Contact */}
           <section className="bg-gray-50 py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="text-center"
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-6">
                   Media Contact
                 </h2>
                 <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
                   For media inquiries, press releases, and interview requests, please contact our media team.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm: fle x-row gap-4 justify-center">
                   <motion.a
-                    href="mailto:press@ziontechgroup.com"
+                    href="mailto: pres s@ziontechgroup.com"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
                   >
-                    <ArrowRight className="w-5 h-5" />
+                    <ArrowRight className="w-5 h-5"  />
                     Contact Media Team
                   </motion.a>
                   <motion.a
@@ -349,7 +348,7 @@ const PressPage: React.FC = () => {
                     whileTap={{ scale: 0.95 }}
                     className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
                   >
-                    <ArrowRight className="w-5 h-5" />
+                    <ArrowRight className="w-5 h-5"  />
                     Call: +1 302 464 0950
                   </motion.a>
                 </div>

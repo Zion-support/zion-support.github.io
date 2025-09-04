@@ -1,12 +1,10 @@
-import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, Network, Code, Key, Target, CheckCircle, Clock, TrendingUp const AICybersecurity: React.FC = () => {
+import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, Network, Code, Key, Target, CheckCircle, Clock, TrendingUp const AICybersecurity: Reac t.FC = () => {
   
-    },;
-    {;
-      icon: Eye,;
+    }, {;
+      icon: Ey e,;
       title: 'Behavioral Analytics',;
       description: 'Monitor and analyze user behavior for suspicious activity'};
-  ]},;
-    {;
+  ]}, {;
       title: 'Security Automation',;
       description: 'Automate security operations and responses',;
       icon: '⚡'};
@@ -20,11 +18,11 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
     'Cost-effective security operations',;'    'Compliance and regulatory support';
   ];
 
-  return()
+  return ()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
         title="AI Cybersecurity Services - Zion Tech Group""        description="Advanced AI-powered cybersecurity solutions for threat detection, prevention, and response. Protect your business with intelligent security systems."
-       />
+        />
 
       {/* Hero Section */}"
       <section className="pt-20 pb-16 px-4">"
@@ -33,7 +31,7 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -56,10 +54,10 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
             className="text-center"
 "
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-full border border-red-400/30 mb-6">"
-              <Shield className="w-5 h-5 text-red-400 mr-2"  />"              <span className="text-red-300 font-medium">AI Cybersecurity</span>
+              <Shield className="w-5 h-5 text-red-400 mr-2"   />"              <span className="text-red-300 font-medium">AI Cybersecurity</span>
             </div>
 "
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md: tex t-6xl font-bold text-white mb-6">
               AI-Powered"
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-orange-500 to-yellow-400">
                 Cybersecurity
@@ -71,11 +69,11 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
               Our AI-powered security solutions detect and prevent threats before they can cause harm.
             </p>
 "
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-              <button className="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg hover:from-red-400 hover:to-orange-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-red-500/20">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">"
+              <button className="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg hover: fro m-red-400 hover: t o-orange-500 transition-all duration-200 hover: scal e-105 shadow-lg shadow-red-500/20">
                 Secure Your Business
               </button>"
-              <button className="px-8 py-4 border border-red-400/30 text-red-300 font-semibold rounded-lg hover:bg-red-400/10 transition-all duration-200">
+              <button className="px-8 py-4 border border-red-400/30 text-red-300 font-semibold rounded-lg hover: b g-red-400/10 transition-all duration-200">
                 Security Assessment
               </button>
             </div>
@@ -90,7 +88,7 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -120,14 +118,14 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
             </p>
           </motion.div>
 "
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md: gri d-cols-2 lg: gri d-cols-4 gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -149,7 +147,7 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
                 transition = {
 
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -157,7 +155,7 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
 
 
 }}"
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-red-400/30 transition-all duration-200 hover:scale-105"
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover: borde r-red-400/30 transition-all duration-200 hover: scal e-105"
 "
                 <div className="w-12 h-12 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-lg flex items-center justify-center mb-4">"
                   <feature.icon className="w-6 h-6 text-red-400" />
@@ -177,7 +175,7 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -207,14 +205,14 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
             </p>
           </motion.div>
 "
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md: gri d-cols-2 gap-8">
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
                 initial = {
 
   { opacity: 0,
-  x: index % 2 === 0 ? -20 : 20 
+  x: inde x % 2 === 0 ? -20 : 20 
 
 
 
@@ -236,7 +234,7 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
                 transition = {
 
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -244,7 +242,7 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
 
 
 }}"
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-red-400/30 transition-all duration-200"
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover: borde r-red-400/30 transition-all duration-200"
 "
                 <div className="flex items-start space-x-4">"
                   <div className="text-4xl">{service.icon}</div>
@@ -257,7 +255,7 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
                 <ul className="space-y-2">
                   {service.items.map((item, itemIndex) => (
                     <li key={itemIndex} className="text-gray-400 text-sm flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400"  />
+                      <CheckCircle className="w-4 h-4 text-green-400"   />
                       {item}
                     </li>
                   ))}
@@ -275,7 +273,7 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -305,7 +303,7 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
             </p>
           </motion.div>
 "
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md: gri d-cols-2 gap-8">
             <motion.div
               initial = {
 
@@ -336,7 +334,7 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => ("
                   <li key={index} className="flex items-center space-x-3">"
-                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0"  />"                    <span className="text-gray-300">{benefit}</span>
+                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0"   />"                    <span className="text-gray-300">{benefit}</span>
                   </li>
                 ))}
               </ul>
@@ -346,7 +344,7 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
               initial = {
 
   { opacity: 0,
-  x: 20 
+  x: 2 0 
 
 
 
@@ -373,7 +371,7 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
                 Don't wait for a security breach. Our AI cybersecurity experts can assess your current
                 security posture and implement advanced protection measures.
               </p>"
-              <button className="w-full px-6 py-3 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg hover:from-red-400 hover:to-orange-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-red-500/20">
+              <button className="w-full px-6 py-3 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg hover: fro m-red-400 hover: t o-orange-500 transition-all duration-200 hover: scal e-105 shadow-lg shadow-red-500/20">
                 Security Assessment
               </button>
             </motion.div>
@@ -388,7 +386,7 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -415,11 +413,11 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
             <p className="text-xl text-gray-300 mb-8">
               Protect your digital assets with AI-powered cybersecurity that never sleeps
             </p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-              <button className="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg hover:from-red-400 hover:to-orange-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-red-500/20">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">"
+              <button className="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg hover: fro m-red-400 hover: t o-orange-500 transition-all duration-200 hover: scal e-105 shadow-lg shadow-red-500/20">
                 Start Security Assessment
               </button>"
-              <button className="px-8 py-4 border border-red-400/30 text-red-300 font-semibold rounded-lg hover:bg-red-400/10 transition-all duration-200">
+              <button className="px-8 py-4 border border-red-400/30 text-red-300 font-semibold rounded-lg hover: b g-red-400/10 transition-all duration-200">
                 Contact Security Team;
               </button>;
             </div>;

@@ -52,7 +52,7 @@ function safeConsoleError(message, error) {
 
 export const safeStorage = {
 
-  getItem: key => {
+  getItem: ke y => {
 
     try {
       return localStorage.getItem(key);
@@ -75,7 +75,7 @@ export const safeStorage = {
     }
   },
 
-  removeItem: key => {
+  removeItem: ke y => {
 
     try {
       localStorage.removeItem(key);
@@ -98,7 +98,7 @@ export const safeStorage = {
     }
   },
 
-  key: index => {
+  key: inde x => {
 
     try {
       return localStorage.key(index);

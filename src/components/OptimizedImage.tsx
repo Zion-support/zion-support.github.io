@@ -28,7 +28,7 @@ const [isLoading, setIsLoading] = useState(true);
       setIsLoading(true)} else {
       setHasError(true);
       setIsLoading(false);
-      onError?.(new Error(`Failed to load image: any${src}`))}
+      onError?.(new Error(`Failed to load image: an y${src}`))}
   };
 
   // Cleanup on unmount
@@ -67,21 +67,21 @@ const [isLoading, setIsLoading] = useState(true);
   // Loading skeleton
   if(!isIntersecting) {
     return (<div
-        className={`${baseClasses} bg-gray - 200 dark:bg-gray - 700 animate - pulse`}        style={{ width, height }}
+        className={`${baseClasses} bg-gray - 200 dark: b g-gray - 700 animate - pulse`}        style={{ width, height }}
       >
         <div className="w-full h-full flex items-center justify-center">"
-          <Loader2 className="w-8 h-8 text-gray-400 animate-spin" />
+          <Loader2 className="w-8 h-8 text-gray-400 animate-spin"  />
         </div>
       </div>) }
   // Error state
   if(hasError) {
     return (<div
-        className={`${baseClasses} bg-gray - 100 dark:bg-gray - 800 flex items - center justify - center`}
+        className={`${baseClasses} bg-gray - 100 dark: b g-gray - 800 flex items - center justify - center`}
         style={{ width, height }}
       >
         <div className="text-center">
-          <AlertCircle className="w-12 h-12 text-gray - 400 mx - auto mb-2" />
-          <p className="text-sm text-gray - 500 dark:text-gray -400">Image failed to load</p>
+          <AlertCircle className="w-12 h-12 text-gray - 400 mx - auto mb-2"  />
+          <p className="text-sm text-gray - 500 dark: tex t-gray -400">Image failed to load</p>
         </div>
       </div>) ;
   }}) => {

@@ -17,7 +17,7 @@
         "Security dashboard"
       ],"
       cta: "Get Started",
-      popular: false
+      popular: fals e
     },
     {
 "
@@ -36,7 +36,7 @@
         "Security consulting"
       ],"
       cta: "Start Free Trial",
-      popular: true
+      popular: tru e
     },
     {
 "
@@ -54,7 +54,7 @@
         "On-premise deployment",;"        "SLA guarantees";
       ],;"
       cta: "Contact Sales",;
-      popular: false};
+      popular: fals e};
   ];
 
   const useCases = [
@@ -103,28 +103,28 @@
 "
       title: "Threat Detection Rate","
       description: "AI-powered detection with machine learning",
-      icon: Eye,
+      icon: Ey e,
       title: 'Behavioral Analytics',
       description: 'Monitor user and system behavior patterns to detect anomalies and potential threats',
       color: 'from-green-500 to-emerald-500'
     },
     {
 
-      icon: Shield,
+      icon: Shiel d,
       title: 'Zero-Day Protection',
       description: 'Protect against unknown threats using AI-powered predictive security models',
       color: 'from-purple-500 to-pink-500'
     },
     {
 
-      icon: Zap,
+      icon: Za p,
       title: 'Automated Response',
       description: 'Instant automated threat response and incident containment without human intervention',
       color: 'from-yellow-500 to-orange-500'
     },
     {
 
-      icon: Network,
+      icon: Networ k,
       title: 'Network Security',
       description: 'Comprehensive network monitoring and protection with AI-driven threat intelligence',
       color: 'from-red-500 to-pink-500'
@@ -133,48 +133,39 @@
 "
       title: "Compliance Coverage",;"
       description: "Automated compliance for all major frameworks",;
-      icon: CheckCircle,;"
+      icon: CheckCircl e,;"
       metric: "100%"};
-  ]},;
-    {
+  ]}, {
 
       title: 'Security Operations Center (SOC),
       description: 'AI-enhanced SOC services with automated threat detection and response',
       price: 'From $8,000/month',
-      features['AI threat detection',Automated response',Security analysts',Incident management']},;
-    {
+      features['AI threat detection',Automated response',Security analysts',Incident management']}, {
 
       title: 'Vulnerability Assessment',
       description: 'Comprehensive security assessment using AI-powered scanning and analysis',
       price: 'From $5,000',
-      features['AI vulnerability scanning',Penetration testing',Security audit',Remediation plan']},;
-    {
+      features['AI vulnerability scanning',Penetration testing',Security audit',Remediation plan']}, {
 
       title: 'Compliance & Governance',
       description: 'AI-powered compliance monitoring and reporting for regulatory requirements',
       price: 'From $3,500/month',
       features['GDPR compliance',SOC 2 monitoring',HIPAA compliance',Automated reporting']};
-  ]},;
-    {
+  ]}, {
 
       title: 'Cloud Security',
       description: 'Comprehensive cloud security monitoring and threat detection',
-      features['Multi-cloud protection',API security',Data encryption',Access control']},;
-    {
+      features['Multi-cloud protection',API security',Data encryption',Access control']}, {
 
       title: 'Identity & Access Management',
       description: 'AI-enhanced identity verification and access control systems',
-      features['Multi-factor authentication',Behavioral biometrics',Privileged access management',Single sign-on']},;
-    {
+      features['Multi-factor authentication',Behavioral biometrics',Privileged access management',Single sign-on']}, {
 
       title: 'Incident Response',
       description: 'Automated incident response with AI-powered threat containment',
       features['Automated containment',Forensic analysis',Recovery procedures',Post-incident review']};
   ]};
-  ];
-
-  
-    { name: 'Cloud-Native Security', description: 'Built for modern cloud and hybrid environments' };
+  ] { name: 'Cloud-Native Security', description: 'Built for modern cloud and hybrid environments' };
 =======
     { name: 'Machine Learning', description: 'Advanced ML algorithms for threat detection and analysis' },'
     { name: 'Natural Language Processing', description: 'AI-powered analysis of security logs and reports' },'
@@ -188,7 +179,7 @@
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
         title="AI Cybersecurity Suite - Zion Tech Group""        description="Advanced AI-powered cybersecurity solutions that protect your business from evolving threats. Real-time threat detection, automated response, and comprehensive security monitoring."
-       />
+        />
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20">"
@@ -198,7 +189,7 @@
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -222,26 +213,26 @@
           >"
             <div className="flex justify-center mb-6">"
               <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center">"
-                <Shield className="w-10 h-10 text-white"  />              </div>
+                <Shield className="w-10 h-10 text-white"   />              </div>
             </div>"
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md: tex t-6xl font-bold text-white mb-6">
               AI Cybersecurity Suite
             </h1>"
             <p className="text-xl text-gray-300 mb-8">
               Next-generation cybersecurity powered by artificial intelligence. Protect your business from evolving threats with automated detection, response, and prevention.
             </p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
               <a "
                 href="https://ziontechgroup.com/contact"
-                className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 flex items-center justify-center gap-2"
+                className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-3 rounded-lg font-semibold hover: fro m-blue-600 hover: t o-cyan-600 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 Get Protected"
-                <ArrowRight className="w-5 h-5"  />              </a>
+                <ArrowRight className="w-5 h-5"   />              </a>
               <a "
                 href="tel:+13024640950"
-                className="border border-blue-500 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
+                className="border border-blue-500 text-blue-400 px-8 py-3 rounded-lg font-semibold hover: b g-blue-500 hover: tex t-white transition-all duration-300 flex items-center justify-center gap-2"
               >"
-                <Phone className="w-5 h-5"  />                Security Consultation
+                <Phone className="w-5 h-5"   />                Security Consultation
               </a>
             </div>
           </motion.div>
@@ -254,12 +245,12 @@
 
       {/* Security Metrics Section */}"
       <section className="py-20">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
           <motion.div
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -290,14 +281,14 @@
             </p>
           </motion.div>
 "
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md: gri d-cols-2 lg: gri d-cols-4 gap-8">
             {securityMetrics.map((metric, index (
               <motion.div
                 key={index}
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -319,7 +310,7 @@
                 transition = {
 
   { duration: 0.8,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -327,7 +318,7 @@
 
 
 }}"
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-red-500 transition-all duration-300 text-center"
+                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover: borde r-red-500 transition-all duration-300 text-center"
 "
                 <div className="p-3 bg-gradient-to-r from-red-600 to-orange-600 rounded-lg mx-auto mb-4 w-fit">"
                   <metric.icon className="w-8 h-8 text-white" />
@@ -349,7 +340,7 @@
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -379,14 +370,14 @@
             </p>
           </motion.div>
 "
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map(feature: unknown, index: unknown (
+          <div className="grid md: gri d-cols-2 lg: gri d-cols-3 gap-8">
+            {features.map(feature: unknow n, index: unknow n (
               <motion.div
                 key={index}
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -408,7 +399,7 @@
                 transition = {
 
   { duration: 0.8,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -416,7 +407,7 @@
 
 
 }}"
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-red-500 transition-all duration-300"
+                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover: borde r-red-500 transition-all duration-300"
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-6`}>"
                   <feature.icon className="w-8 h-8 text-white" />
@@ -436,7 +427,7 @@
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -466,14 +457,14 @@
             </p>
           </motion.div>
 "
-          <div className="grid md: grid-cols-2 gap-8">
-            {services.map(service: unknown, index: unknown 
+          <div className="grid md: gri d-cols-2 gap-8">
+            {services.map(service: unknow n, index: unknow n 
               <motion.div
                 key={index}
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -495,7 +486,7 @@
                 transition = {
 
   { duration: 0.8,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -516,7 +507,7 @@
                 <ul className="space-y-3">
                   {service.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center gap-3 text-gray-300">"
-                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0"  />                      {feature}
+                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0"   />                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -533,7 +524,7 @@
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -563,14 +554,14 @@
             </p>
           </motion.div>
 "
-          <div className="grid md: grid-cols-2 gap-8">
-            {securityModules.map(module: unknown, index: unknown 
+          <div className="grid md: gri d-cols-2 gap-8">
+            {securityModules.map(module: unknow n, index: unknow n 
               <motion.div
                 key={index}
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -592,7 +583,7 @@
                 transition = {
 
   { duration: 0.8,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -600,14 +591,14 @@
 
 
 }}"
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-red-500 transition-all duration-300"
+                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover: borde r-red-500 transition-all duration-300"
               >"
                 <h3 className="text-2xl font-bold text-white mb-4">{module.title}</h3>"
                 <p className="text-gray-300 mb-6">{module.description}</p>"
                 <ul className="space-y-3">
                   {module.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center gap-3 text-gray-300">"
-                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0"  />                      {feature}
+                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0"   />                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -624,7 +615,7 @@
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 }}
             whileInView = {
@@ -644,14 +635,14 @@
             </p>
           </motion.div>
 "
-          <div className="grid md: grid-cols-2 gap-8">
-            {benefits.map(benefit: unknown, index: unknown (
+          <div className="grid md: gri d-cols-2 gap-8">
+            {benefits.map(benefit: unknow n, index: unknow n (
               <motion.div
                 key={index}
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 }}
                 whileInView = {
@@ -663,7 +654,7 @@
                 transition = {
 
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 }}"
                 className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600"
@@ -686,7 +677,7 @@
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 }}
             whileInView = {
@@ -706,14 +697,14 @@
             </p>
           </motion.div>
 "
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {technologies.map(tech: unknown, index: unknown (
+          <div className="grid md: gri d-cols-2 lg: gri d-cols-3 gap-8">
+            {technologies.map(tech: unknow n, index: unknow n (
               <motion.div
                 key={index}
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 }}
                 whileInView = {
@@ -725,7 +716,7 @@
                 transition = {
 
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 }}"
                 className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-2xl border border-slate-600 text-center"
@@ -745,7 +736,7 @@
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -772,16 +763,16 @@
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
               Don't wait for a security breach. Protect your business with AI-powered cybersecurity that adapts and evolves with threats.
             </p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
               <a "
                 href="https://ziontechgroup.com/contact"
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center gap-2"
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover: b g-gray-100 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 Start Security Assessment"
-                <ArrowRight className="w-5 h-5"  />              </a>
+                <ArrowRight className="w-5 h-5"   />              </a>
               <a "
                 href="tel:+13024640950"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 flex items-center justify-center gap-2"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover: b g-white hover: tex t-blue-600 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 Contact Security Experts;
               </motion.button>;

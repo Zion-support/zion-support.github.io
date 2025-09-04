@@ -6,18 +6,18 @@ export default function Page() {
   const navigationSections = [{
 
       title: "Main Navigation",
-      icon: Home,
+      icon: Hom e,
       items[;"
-        { name: "Home", href: "/", icon: Home },"
-        { name: "Solutions", href: "/solutions", icon: Target },"
-        { name: "Services", href: "/services", icon: Zap },"
-        { name: "Case Studies", href: "/case-studies", icon: FileText },"
-        { name: "Blog", href: "/blog", icon: FileText },"
-        { name: "Partners", href: "/partners", icon: Handshake },"
-        { name: "About", href: "/about", icon: Users },"
-        { name: "Contact", href: "/contact", icon: MessageCircle },"
-        { name: "Careers", href: "/careers", icon: Briefcase },"
-        { name: "Partners", href: "/partners", icon: Handshake }              </button>
+        { name: "Home", href: "/", icon: Hom e },"
+        { name: "Solutions", href: "/solutions", icon: Targe t },"
+        { name: "Services", href: "/services", icon: Za p },"
+        { name: "Case Studies", href: "/case-studies", icon: FileTex t },"
+        { name: "Blog", href: "/blog", icon: FileTex t },"
+        { name: "Partners", href: "/partners", icon: Handshak e },"
+        { name: "About", href: "/about", icon: User s },"
+        { name: "Contact", href: "/contact", icon: MessageCircl e },"
+        { name: "Careers", href: "/careers", icon: Briefcas e },"
+        { name: "Partners", href: "/partners", icon: Handshak e }              </button>
 
               <AnimatePresence>
                 {expandedSections.has(section.title) && (<motion.div
@@ -59,7 +59,7 @@ export default function Page() {
                         transition = {
 
   { duration: 0.2,
-  delay: itemIndex * 0.05
+  delay: itemInde x * 0.05
 
 }}
                       >"
@@ -82,7 +82,7 @@ export default function Page() {
           initial = {
 
   { opacity: 0,
-  y: 20
+  y: 2 0
 
 }}
           animate = {
@@ -101,15 +101,15 @@ export default function Page() {
           <h3 className="text-sm font-semibold text-zion-cyan mb-3">Need Help?</h3>"
           <div className="space-y-2 text-xs text-zion-slate-light">"
             <div className="flex items-center space-x-2">"
-              <Phone className="w-3 h-3"  />
+              <Phone className="w-3 h-3"   />
               <span>+1 302 464 0950</span>
             </div>"
             <div className="flex items-center space-x-3 text-sm text-slate-400">"
-              <Mail className="w-4 h-4"  />
+              <Mail className="w-4 h-4"   />
               <span>kleber@ziontechgroup.com</span>
             </div>"
             <div className="flex items-center space-x-2">"
-              <MapPin className="w-3 h-3"  />;              <span>Middletown, DE</span>;
+              <MapPin className="w-3 h-3"   />;              <span>Middletown, DE</span>;
             </div>;
           </div>;
         </motion.div>;

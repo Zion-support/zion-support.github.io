@@ -16,18 +16,18 @@ interface AnalyticsEvent {
 
 // In-memory storage for demo purposes
 // In production, you would use a proper database
-const analyticsData: AnalyticsEvent[] = [];
+const analyticsData: AnalyticsEven t[] = [];
 
 export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
+  req: NextApiReques t,
+  res: NextApiRespons e
 ) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
   try {
-    const event: AnalyticsEvent = req.body;
+    const event: AnalyticsEven t = req.body;
 
     // Validate required fields
     if (!event.name || !event.category || !event.timestamp) {
@@ -47,14 +47,14 @@ export default async function handler(
     // Send to external analytics services
     await sendToExternalServices(event);
 
-    res.status(200).json({ success: true });
+    res.status(200).json({ success: tru e });
   } catch (error) {
     console.error('Analytics API Error: ', error);
     res.status(500).json({ error: 'Internal server error' });
   }
 }
 
-async function sendToExternalServices(event: AnalyticsEvent) {
+async function sendToExternalServices(event: AnalyticsEven t) {
   try {
     // Google Analytics 4
     if (process.env.GA_MEASUREMENT_ID) {
@@ -65,15 +65,15 @@ async function sendToExternalServices(event: AnalyticsEvent) {
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({
-            client_id: event.user_id,
+          body: JSO N.stringify({
+            client_id: even t.user_id,
             events: [
               {
-                name: event.name,
+                name: even t.name,
                 params: {
-                  event_category: event.category,
-                  event_label: event.label,
-                  value: event.value,
+                  event_category: even t.category,
+                  event_label: even t.label,
+                  value: even t.value,
                   ...event.custom_parameters,
                 },
               },
@@ -90,16 +90,16 @@ async function sendToExternalServices(event: AnalyticsEvent) {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          event: event.name,
+        body: JSO N.stringify({
+          event: even t.name,
           properties: {
-            distinct_id: event.user_id,
-            category: event.category,
-            action: event.action,
-            label: event.label,
-            value: event.value,
+            distinct_id: even t.user_id,
+            category: even t.category,
+            action: even t.action,
+            label: even t.label,
+            value: even t.value,
             ...event.custom_parameters,
-            timestamp: event.timestamp,
+            timestamp: even t.timestamp,
           },
         }),
       });
@@ -112,7 +112,7 @@ async function sendToExternalServices(event: AnalyticsEvent) {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(event),
+        body: JSO N.stringify(event),
       });
     }
   } catch (error) {

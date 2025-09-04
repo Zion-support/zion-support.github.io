@@ -1,10 +1,10 @@
       ],;
-      popular: false
+      popular: fals e
     },
     {
 "
       name: "Professional",
-      price: 499,"
+      price: 49 9,"
       period: "month","
       description: "Ideal for growing businesses with advanced analytics needs",
       features[;"
@@ -17,12 +17,12 @@
         "Predictive modeling","
         "API access"
       ],;
-      popular: true
+      popular: tru e
     },
     {
 "
       name: "Enterprise",
-      price: 1299,"
+      price: 129 9,"
       period: "month","
       description: "For large organizations with complex data analytics requirements",
       features[;"
@@ -35,7 +35,7 @@
         "Custom integrations",;"
         "SLA guarantees";
       ],;
-      popular: false};
+      popular: fals e};
   ];
 
   const useCases = [
@@ -57,8 +57,7 @@
     {
 "
       industry: "Manufacturing",;"
-      description: "Predictive maintenance, quality control, and supply chain optimization"},;
-    {;"
+      description: "Predictive maintenance, quality control, and supply chain optimization"}, {;"
       industry: "Retail",;"
       description: "Demand forecasting, customer segmentation, and store performance analysis"};  ];
 
@@ -66,16 +65,16 @@
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
         title="AI Business Intelligence Platform - Zion Tech Group""        description="Advanced AI-powered business intelligence platform providing real-time insights, predictive analytics, and automated reporting for data-driven decision making."
-       />
+        />
 
       {/* Hero Section */}"
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
+      <section className="relative py-20 px-4 sm: p x-6 lg: p x-8">"
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -99,7 +98,7 @@
             <Badge className="mb-6 bg-gradient-to-r from-purple-600 to-pink-600 text-white border-0">
               AI-Powered Business Intelligence
             </Badge>"
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md: tex t-6xl font-bold text-white mb-6">
               Transform Your Data Into"
               <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"> Actionable Intelligence</span>
             </h1>"
@@ -107,26 +106,24 @@
               Advanced AI-powered business intelligence platform that provides real-time insights,
               predictive analytics, and automated reporting for data-driven decision making.
             </p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-              <Button size="lg" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">"
+              <Button size="lg" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: fro m-cyan-600 hover: t o-blue-700">
                 Start Free Trial"
-                <ArrowRight className="ml-2 h-5 w-5"  />
-              </Button>"              <Button size="lg" variant="outline" className="border-gray-600 text-white hover:bg-gray-800">
+                <ArrowRight className="ml-2 h-5 w-5"   />
+              </Button>"              <Button size="lg" variant="outline" className="border-gray-600 text-white hover: b g-gray-800">
                 Schedule Demo
               </Button>
             </div>
           </motion.div>
         </div>
-      </section>;
-
-      {/* Features Section */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;"
+      </section> {/* Features Section */}"
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8">;"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -146,10 +143,10 @@
 
 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}"
+            viewport={{ once: tru e }}"
             className="text-center mb-16"
 "
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
               Powerful Features for Modern Businesses
             </h2>"
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
@@ -158,14 +155,14 @@
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
             {features.map((feature, index (
               <motion.div
                 key={index}
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -187,7 +184,7 @@
                 transition = {
 
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -195,8 +192,8 @@
 
 
 }}
-                viewport={{ once: true }}"
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-500/50 transition-all duration-300"
+                viewport={{ once: tru e }}"
+                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover: borde r-cyan-500/50 transition-all duration-300"
 "
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">"
                   <feature.icon className="h-6 w-6 text-white" />
@@ -210,13 +207,13 @@
       </section>
 
       {/* Benefits Section */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">;"
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-slate-800/30">;"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -236,10 +233,10 @@
 
 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}"
+            viewport={{ once: tru e }}"
             className="text-center mb-16"
 "
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
               Transform Your Business Performance
             </h2>"
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
@@ -247,8 +244,8 @@
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map(benefit: unknown, index: unknown (
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-6">
+            {benefits.map(benefit: unknow n, index: unknow n (
               <motion.div
                 key={index}
                 initial = {
@@ -276,7 +273,7 @@
                 transition = {
 
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -284,10 +281,10 @@
 
 
 }}
-                viewport={{ once: true }}"
+                viewport={{ once: tru e }}"
                 className="flex items-start space-x-3"
 "
-                <CheckCircle className="h-6 w-6 text-cyan-500 mt-1 flex-shrink-0"  />"                <span className="text-gray-300">{benefit}</span>
+                <CheckCircle className="h-6 w-6 text-cyan-500 mt-1 flex-shrink-0"   />"                <span className="text-gray-300">{benefit}</span>
               </motion.div>;
             ))}
           </div>
@@ -295,13 +292,13 @@
       </section>
 
       {/* Pricing Section */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;"
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8">;"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -321,10 +318,10 @@
 
 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}"
+            viewport={{ once: tru e }}"
             className="text-center mb-16"
 "
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
               Choose Your Plan
             </h2>"
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
@@ -332,14 +329,14 @@
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
-            {pricingTiers.map(tier: unknown, index: unknown (
+          <div className="grid grid-cols-1 md: gri d-cols-3 gap-8">
+            {pricingTiers.map(tier: unknow n, index: unknow n (
               <motion.div
                 key={index}
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -361,7 +358,7 @@
                 transition = {
 
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -369,7 +366,7 @@
 
 
 }}
-                viewport={{ once: true }}
+                viewport={{ once: tru e }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${
 
                   tier.popular'
@@ -397,7 +394,7 @@
                 <ul className="space-y-4 mb-8">
                   {tier.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center">"
-                      <CheckCircle className="h-5 w-5 text-cyan-500 mr-3 flex-shrink-0"  />"                      <span className="text-gray-300">{feature}</span>
+                      <CheckCircle className="h-5 w-5 text-cyan-500 mr-3 flex-shrink-0"   />"                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -406,8 +403,8 @@
                   className={`w-full ${
 
                     tier.popular'
-                      ? 'bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700''
-                      : 'bg-slate-700 hover:bg-slate-600'`
+                      ? 'bg-gradient-to-r from-cyan-500 to-blue-600 hover: fro m-cyan-600 hover: t o-blue-700''
+                      : 'bg-slate-700 hover: b g-slate-600'`
                   }`}
 
                   Get Started
@@ -419,13 +416,13 @@
       </section>
 
       {/* Use Cases Section */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">;"
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-slate-800/30">;"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -445,10 +442,10 @@
 
 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}"
+            viewport={{ once: tru e }}"
             className="text-center mb-16"
 "
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
               Industry Applications
             </h2>"
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
@@ -456,14 +453,14 @@
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {useCases.map(useCase: unknown, index: unknown (
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
+            {useCases.map(useCase: unknow n, index: unknow n (
               <motion.div
                 key={index}
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -485,7 +482,7 @@
                 transition = {
 
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -493,7 +490,7 @@
 
 
 }}
-                viewport={{ once: true }}"
+                viewport={{ once: tru e }}"
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700"
 "
                 <h3 className="text-xl font-semibold text-white mb-3">{useCase.industry}</h3>"
@@ -505,13 +502,13 @@
       </section>
 
       {/* CTA Section */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;"
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8">;"
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -531,19 +528,19 @@
 
 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
 "
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-6">
               Ready to Transform Your Business Intelligence?
             </h2>"
             <p className="text-xl text-gray-300 mb-8">
               Join thousands of businesses already using AI to make better decisions and drive growth.
             </p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-              <Button size="lg" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">"
+              <Button size="lg" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: fro m-cyan-600 hover: t o-blue-700">
                 Start Free Trial"
-                <ArrowRight className="ml-2 h-5 w-5"  />
-              </Button>"              <Button size="lg" variant="outline" className="border-gray-600 text-white hover:bg-gray-800">
+                <ArrowRight className="ml-2 h-5 w-5"   />
+              </Button>"              <Button size="lg" variant="outline" className="border-gray-600 text-white hover: b g-gray-800">
                 Contact Sales
               </Button>
             </div>
@@ -552,13 +549,13 @@
       </section>
 
       {/* Contact Section */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">;"
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-slate-800/30">;"
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -578,37 +575,37 @@
 
 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
 "
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-6">
               Get in Touch
             </h2>"
             <p className="text-xl text-gray-300 mb-8">
               Have questions? Our team is here to help you get started.
             </p>
 "
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">"
+            <div className="grid grid-cols-1 md: gri d-cols-3 gap-8 mb-8">"
               <div className="flex flex-col items-center">"
-                <Phone className="h-8 w-8 text-cyan-500 mb-4"  />"
+                <Phone className="h-8 w-8 text-cyan-500 mb-4"   />"
                 <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>"
                 <p className="text-gray-300">+1 302 464 0950</p>
               </div>"
               <div className="flex flex-col items-center">"
-                <Mail className="h-8 w-8 text-cyan-500 mb-4"  />"
+                <Mail className="h-8 w-8 text-cyan-500 mb-4"   />"
                 <h3 className="text-lg font-semibold text-white mb-2">Email</h3>"
                 <p className="text-gray-300">kleber@ziontechgroup.com</p>
               </div>"
               <div className="flex flex-col items-center">"
-                <MapPin className="h-8 w-8 text-cyan-500 mb-4"  />"
-                <h3 className="text-lg font-semibold text-white mb-2">Address</h3>"                <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                <MapPin className="h-8 w-8 text-cyan-500 mb-4"   />"
+                <h3 className="text-lg font-semibold text-white mb-2">Address</h3>"                <p className="text-gray-300">364 E Main St STE 1008<br  />Middletown DE 19709</p>
               </div>
             </div>
 "
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-              <Button size="lg" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">"
+              <Button size="lg" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: fro m-cyan-600 hover: t o-blue-700">
                 Schedule a Call
               </Button>"
-              <Button size="lg" variant="outline" className="border-gray-600 text-white hover:bg-gray-800">
+              <Button size="lg" variant="outline" className="border-gray-600 text-white hover: b g-gray-800">
                 Send Message
               </Button>
             </div>;

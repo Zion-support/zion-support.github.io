@@ -31,13 +31,13 @@ export default function API() {
     <>
       <Head>
         <title>API Documentation - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive API documentation for Zion Tech Group services and integrations." />
+        <meta name="description" content="Comprehensive API documentation for Zion Tech Group services and integrations."  />
       </Head>
       
       <div className="min-h-screen bg-white">
         <section className="bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-500 py-20 text-center">
           <div className="max-w-5xl mx-auto px-6">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">API Documentation</h1>
+            <h1 className="text-4xl md: tex t-6xl font-bold text-white mb-4">API Documentation</h1>
             <p className="text-blue-100 text-xl">
               Integrate with our services using our comprehensive REST API
             </p>
@@ -75,7 +75,7 @@ export default function API() {
             <p className="text-gray-600 text-xl mb-8">
               Our team is here to help you integrate our APIs into your applications.
             </p>
-            <Link href="/contact" className="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors inline-flex items-center">
+            <Link href="/contact" className="px-8 py-3 bg-blue-600 text-white rounded-lg hover: b g-blue-700 transition-colors inline-flex items-center">
               Contact Our API Team
             </Link>
           </div>

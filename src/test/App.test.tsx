@@ -16,7 +16,7 @@ vi.mock('../components/Footer', () => ({ Footer: () => <div data-testid="footer"
 describe('App', () => {
   it('renders without crashing', () => {
     render(<BrowserRouter>
-        <App />
+        <App  />
       </BrowserRouter>
     )
     
@@ -26,7 +26,7 @@ describe('App', () => {
 
   it('renders main navigation elements', () => {
     render(<BrowserRouter>
-        <App />
+        <App  />
       </BrowserRouter>
     )
     

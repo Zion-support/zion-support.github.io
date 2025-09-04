@@ -16,10 +16,10 @@ import {
   Users
 } from 'lucide-react'
 
-const SEO = dynamic(() => import('../src/components/SEO'), { ssr: false })
-const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false })
+const SEO = dynamic(() => import('../src/components/SEO'), { ssr: fals e })
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: fals e })
 
-const CybersecurityPage: React.FC = () => {
+const CybersecurityPage: Reac t.FC = () => {
   const services = [
     {
       id: 1,
@@ -35,7 +35,7 @@ const CybersecurityPage: React.FC = () => {
       pricing: "Starting at $2,500",
       delivery: "1-3 weeks",
       category: "Assessment",
-      icon: <Shield className="w-8 h-8" />
+      icon: <Shield className="w-8 h-8"  />
     },
     {
       id: 2,
@@ -51,7 +51,7 @@ const CybersecurityPage: React.FC = () => {
       pricing: "Starting at $3,000",
       delivery: "2-4 weeks",
       category: "Protection",
-      icon: <Lock className="w-8 h-8" />
+      icon: <Lock className="w-8 h-8"  />
     },
     {
       id: 3,
@@ -67,7 +67,7 @@ const CybersecurityPage: React.FC = () => {
       pricing: "Starting at $1,500/month",
       delivery: "Ongoing",
       category: "Monitoring",
-      icon: <Eye className="w-8 h-8" />
+      icon: <Eye className="w-8 h-8"  />
     },
     {
       id: 4,
@@ -83,7 +83,7 @@ const CybersecurityPage: React.FC = () => {
       pricing: "Starting at $5,000",
       delivery: "Immediate",
       category: "Response",
-      icon: <AlertTriangle className="w-8 h-8" />
+      icon: <AlertTriangle className="w-8 h-8"  />
     },
     {
       id: 5,
@@ -99,7 +99,7 @@ const CybersecurityPage: React.FC = () => {
       pricing: "Starting at $4,000",
       delivery: "2-6 weeks",
       category: "Compliance",
-      icon: <Settings className="w-8 h-8" />
+      icon: <Settings className="w-8 h-8"  />
     },
     {
       id: 6,
@@ -115,7 +115,7 @@ const CybersecurityPage: React.FC = () => {
       pricing: "Starting at $1,000",
       delivery: "1-2 weeks",
       category: "Training",
-      icon: <Users className="w-8 h-8" />
+      icon: <Users className="w-8 h-8"  />
     }
   ]
 
@@ -130,38 +130,37 @@ const CybersecurityPage: React.FC = () => {
 
   return (
     <>
-      <SEO
-        title="Cybersecurity Services - Zion Tech Group"
+      <SEO title="Cybersecurity Services - Zion Tech Group"
         description="Comprehensive cybersecurity services including security assessments, data protection, monitoring, and incident response. Protect your business with our expert security solutions."
         keywords="cybersecurity, security assessment, data protection, threat monitoring, incident response, compliance"
         canonical="https://ziontechgroup.com/cybersecurity"
-      />
+       />
       
       <PageTransition>
         <main className="min-h-screen bg-white">
           {/* Hero Section */}
           <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="text-center"
               >
-                <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                <h1 className="text-4xl md: tex t-6xl font-bold text-gray-900 mb-6">
                   Cybersecurity <span className="text-blue-600">Services</span>
                 </h1>
                 <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
                   Protect your business with comprehensive cybersecurity solutions including security assessments, data protection, and threat monitoring.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm: fle x-row gap-4 justify-center">
                   <motion.a
                     href="#services"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
                   >
-                    <ArrowRight className="w-5 h-5" />
+                    <ArrowRight className="w-5 h-5"  />
                     Explore Services
                   </motion.a>
                   <motion.a
@@ -170,7 +169,7 @@ const CybersecurityPage: React.FC = () => {
                     whileTap={{ scale: 0.95 }}
                     className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
                   >
-                    <ArrowRight className="w-5 h-5" />
+                    <ArrowRight className="w-5 h-5"  />
                     Get Started
                   </motion.a>
                 </div>
@@ -180,14 +179,14 @@ const CybersecurityPage: React.FC = () => {
 
           {/* Services Grid */}
           <section id="services" className="py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-center mb-16"
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4">
                   Our Cybersecurity Services
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -195,14 +194,14 @@ const CybersecurityPage: React.FC = () => {
                 </p>
               </motion.div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
                 {services.map((service, index) => (
                   <motion.div
                     key={service.id}
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 2 0 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+                    transition={{ duration: 0.6, delay: inde x * 0.1 }}
+                    className="bg-white rounded-xl shadow-lg hover: shado w-xl transition-shadow duration-300 overflow-hidden"
                   >
                     <div className="p-8">
                       <div className="flex items-center justify-between mb-4">
@@ -227,7 +226,7 @@ const CybersecurityPage: React.FC = () => {
                         <ul className="space-y-2">
                           {service.features.map((feature, idx) => (
                             <li key={idx} className="flex items-center gap-2 text-sm text-gray-600">
-                              <CheckCircle className="w-4 h-4 text-green-500" />
+                              <CheckCircle className="w-4 h-4 text-green-500"  />
                               {feature}
                             </li>
                           ))}
@@ -242,9 +241,9 @@ const CybersecurityPage: React.FC = () => {
                       <motion.button
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
-                        className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-blue-700 transition-colors"
+                        className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover: b g-blue-700 transition-colors"
                       >
-                        <ArrowRight className="w-5 h-5" />
+                        <ArrowRight className="w-5 h-5"  />
                         Learn More
                       </motion.button>
                     </div>
@@ -256,14 +255,14 @@ const CybersecurityPage: React.FC = () => {
 
           {/* Compliance Standards */}
           <section className="bg-gray-50 py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="text-center mb-16"
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4">
                   Compliance Standards
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -271,14 +270,14 @@ const CybersecurityPage: React.FC = () => {
                 </p>
               </motion.div>
 
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+              <div className="grid grid-cols-2 md: gri d-cols-3 lg: gri d-cols-6 gap-8">
                 {complianceStandards.map((standard, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 2 0 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center"
+                    transition={{ duration: 0.6, delay: inde x * 0.1 }}
+                    className="bg-white rounded-xl p-6 shadow-lg hover: shado w-xl transition-shadow duration-300 text-center"
                   >
                     <h3 className="text-lg font-bold text-gray-900 mb-2">
                       {standard.name}
@@ -294,27 +293,27 @@ const CybersecurityPage: React.FC = () => {
 
           {/* CTA Section */}
           <section className="py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="text-center"
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-6">
                   Secure Your Business Today
                 </h2>
                 <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
                   Don't wait for a security breach. Protect your business with our comprehensive cybersecurity solutions.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm: fle x-row gap-4 justify-center">
                   <motion.a
                     href="/contact"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
                   >
-                    <ArrowRight className="w-5 h-5" />
+                    <ArrowRight className="w-5 h-5"  />
                     Get Started Today
                   </motion.a>
                   <motion.a
@@ -323,7 +322,7 @@ const CybersecurityPage: React.FC = () => {
                     whileTap={{ scale: 0.95 }}
                     className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
                   >
-                    <ArrowRight className="w-5 h-5" />
+                    <ArrowRight className="w-5 h-5"  />
                     Call Us: +1 302 464 0950
                   </motion.a>
                 </div>

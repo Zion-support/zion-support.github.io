@@ -6,10 +6,10 @@ export default function Page() {
   { code: 'ar' as SupportedLanguage, name: 'العربية', flag: '🇸🇦' }
 ];
 
-const defaultLanguageContext: LanguageContextType = {
+const defaultLanguageContext: LanguageContextTyp e = {
   currentLanguage: 'en',
-  changeLanguage: async () => {},
-  isRTL: false,
+  changeLanguage: asyn c () => {},
+  isRTL: fals e,
   supportedLanguages
 };
 
@@ -18,16 +18,16 @@ const LanguageContext = createContext(defaultLanguageContext);
 export const useLanguage = (): LanguageContextType => useContext(LanguageContext);
 
 interface LanguageProviderProps {
-  children: ReactNode;
+  children: ReactNod e;
   authState?: { 
     isAuthenticated: boolean;
     user: { id?: string } | null;
   };
 }
 
-export const LanguageProvider: React.FC<LanguageProviderProps> = ({ 
+export const LanguageProvider: Reac t.FC<LanguageProviderProps> = ({ 
   children, 
-  authState = { isAuthenticated: false, user: null } 
+  authState = { isAuthenticated: fals e, user: nul l } 
 }) => {
   const { i18n, t } = useTranslation();
   const { isAuthenticated, user } = authState;
@@ -82,7 +82,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
         try {
           const { error } = await supabase
             .from('profiles')
-            .update({ preferred_language: currentLanguage })
+            .update({ preferred_language: currentLanguag e })
             .eq('id', user.id);
             
           if(error) {
@@ -97,7 +97,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
     syncLanguageWithProfile();
   }, [currentLanguage, isAuthenticated, user]); // Correct dependencies
   
-  const changeLanguage = async(lang: SupportedLanguage) => {
+  const changeLanguage = async(lang: SupportedLanguag e) => {
     if(lang === currentLanguage) return;
     
     try {
@@ -107,7 +107,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       
       const langName = supportedLanguages.find(l => l.code === lang)?.name || lang;
       toast({
-        description: t('language.language_changed', { language: langName })
+        description: t('language.language_changed', { language: langNam e })
       });
       
       // The language preference sync will be handled by the useEffect above

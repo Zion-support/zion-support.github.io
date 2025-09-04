@@ -15,7 +15,7 @@ interface ImageOptimizerProps {
    style?: React.CSSProperties;
    onLoad?: () => void
    onError?: () => void}
-const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
+const ImageOptimizer: Reac t.FC<ImageOptimizerProps> = ({
   src, alt,
   width, height,
   className = '', priority = false,
@@ -27,7 +27,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   const [hasError, setHasError] = useState(false)
   const imgRef = useRef<HTMLImageElement>(null);
   // Generate a simple blur placeholder if none provided;
-  const defaultBlurDataURL = 'data: image/jpeg;base64, /9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=';
+  const defaultBlurDataURL = 'data: imag e/jpeg;base64, /9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=';
   const handleLoad = () => {
     setIsLoaded(true);
     onLoad?.()}
@@ -65,7 +65,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
         <span className="text-gray-500 text-sm">Image failed to load</span>
       </div>
     )}
-  return(
+  return (
     <div
       ref={imgRef}
       className={`relative overflow-hidden ${className}`}
@@ -75,8 +75,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
           : { width, height, ...style }
       }
     >
-      <img
-        src={src}
+      <img src={src}
         alt={alt}
         width={fill ? undefined : width}
         height={fill ? undefined : height}
@@ -85,14 +84,13 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
         onLoad={handleLoad}
         onError={handleError}
         style={{
-          objectFit: 'cover', width: fill ? '100%' : width,
-          height: fill ? '100%' : height, ...style}}
+          objectFit: 'cover', width: fil l ? '100%' : width,
+          height: fil l ? '100%' : height, ...style}}
         loading={priority ? 'eager' : 'lazy'}
-      />{/* Loading skeleton */}
+       />{/* Loading skeleton */}
       {!isLoaded && !hasError && (
-        <div
-          className='absolute inset-0 bg-gray-200 animate-pulse';
-          aria-hidden='true'/>)}
+        <div className='absolute inset-0 bg-gray-200 animate-pulse';
+          aria-hidden='true' />)}
     </div>
   )}
 

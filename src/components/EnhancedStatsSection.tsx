@@ -3,7 +3,7 @@ import {  import { motion, useAnimation  } from 'framer-motion';
 
 interface Stat {
   id: string;
-  icon: React.ComponentType < any>;
+  icon: Reac t.ComponentType < any>;
   value: string;
   label: string;
   description: string;
@@ -11,10 +11,10 @@ interface Stat {
   gradient: string
 }
 ;
-const stats: Stat[] = [{
+const stats: Sta t[] = [{
 
     id: 'clients',
-    icon: Users,
+    icon: User s,
     value: '500+',
     label: 'Global Clients',
     description: 'Serving businesses across 50+ countries',
@@ -24,7 +24,7 @@ const stats: Stat[] = [{
   {
 
     id: 'uptime',
-    icon: Shield,
+    icon: Shiel d,
     value: '99.99%',
     label: 'Uptime Guarantee',
     description: 'Enterprise-grade reliability and performance',
@@ -34,7 +34,7 @@ const stats: Stat[] = [{
   {
 
     id: 'roi',
-    icon: TrendingUp,
+    icon: TrendingU p,
     value: '600%',
     label: 'Average ROI',
     description: 'Proven business impact and cost savings',
@@ -44,7 +44,7 @@ const stats: Stat[] = [{
   {
 
     id: 'satisfaction',
-    icon: Star,
+    icon: Sta r,
     value: '4.9/5',
     label: 'Client Satisfaction',
     description: 'Consistently exceeding expectations',
@@ -54,7 +54,7 @@ const stats: Stat[] = [{
   {
 
     id: 'innovation',
-    icon: Zap,
+    icon: Za p,
     value: '50+',
     label: 'Patents & Innovations',
     description: 'Leading edge technology development',
@@ -64,7 +64,7 @@ const stats: Stat[] = [{
   {
 
     id: 'growth',
-    icon: Rocket,
+    icon: Rocke t,
     value: '300%',
     label: 'Annual Growth',
     description: 'Rapidly expanding global presence',
@@ -80,7 +80,7 @@ export default function EnhancedStatsSection(...args[]):  {
   const [ref, inView] = useInView({
 
     threshold: 0.3,
-    triggerOnce: true
+    triggerOnce: tru e
   }) ;
 
   useEffect(() => {
@@ -125,14 +125,14 @@ setCountedValues(prev:  > ({;
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-zion-blue/5 rounded-full blur-3xl"></div>
       </div>
 "
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="container mx-auto px-4 sm: p x-6 lg: p x-8 relative z-10">
         {/* Section Header */}
         <motion.div
           ref={ref}
           initial = {
 
   { opacity: 0,
-  y: 30
+  y: 3 0
 
 }}
           animate={controls}
@@ -153,7 +153,7 @@ setCountedValues(prev:  > ({;
           }}"
           className="text-center mb-16"
 "
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl sm: tex t-5xl font-bold text-white mb-6">
             Proven Results & Global Impact
           </h2>"
           <p className="text-xl text-zion-cyan max-w-3xl mx-auto">
@@ -162,14 +162,14 @@ setCountedValues(prev:  > ({;
         </motion.div>
 
         {/* Stats Grid */}"
-        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
           {stats.map((stat, index)  => (
             <motion.div
               key={stat.id}
               initial = {
 
   { opacity: 0,
-  y: 30
+  y: 3 0
 
 }}
               animate={controls}
@@ -184,7 +184,7 @@ setCountedValues(prev:  > ({;
                   transition: {
 
                     duration: 0.6,
-  delay: index * 0.1
+  delay: inde x * 0.1
 
 }
                 }
@@ -204,14 +204,14 @@ setCountedValues(prev:  > ({;
                 transition={{ duration: 0.3 }}
 
                 {/* Background gradient overlay */}`
-                <div className={`absolute inset-0 bg-gradient-to-br ${stat.gradient} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
+                <div className={`absolute inset-0 bg-gradient-to-br ${stat.gradient} opacity-5 group-hover: opacit y-10 transition-opacity duration-300`}></div>
 
                 {/* Icon */}
                 <motion.div`
 className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-20 flex items-center justify-center mx-auto mb-6 relative z-10 border border-white/20`}
                   whileHover={{
 
-                    rotate: 360,
+                    rotate: 36 0,
   scale: 1.1
 
 }}
@@ -228,7 +228,7 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
                   transition = {
 
   { duration: 0.5,
-  delay: index * 0.1
+  delay: inde x * 0.1
 
 }}
                 >"
@@ -251,7 +251,7 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
 
                 {/* Hover effect overlay */}
                 <motion.div"
-                  className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-purple/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-purple/5 rounded-3xl opacity-0 group-hover: opacit y-100 transition-opacity duration-300"
                   initial={false}
                 />
               </motion.div>
@@ -263,7 +263,7 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
           initial = {
 
   { opacity: 0,
-  y: 30 }}          animate={controls}
+  y: 3 0 }}          animate={controls}
           variants = {
 
   {
@@ -282,10 +282,10 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
           <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-3xl p-8 lg:p-12 text-center">;
             <motion.div"
               className="w-20 h-20 rounded-full bg-gradient-to-r from-zion-cyan to-zion-purple flex items-center justify-center mx-auto mb-6"
-              whileHover={{ rotate: 360 }}
+              whileHover={{ rotate: 36 0 }}
               transition={{ duration: 0.6 }}
 "
-              <Award className="w-10 h-10 text-white"  />            </motion.div>
+              <Award className="w-10 h-10 text-white"   />            </motion.div>
 "
             <h3 className="text-3xl font-bold text-white mb-4">
               Industry Recognition & Awards
@@ -293,7 +293,7 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Consistently recognized as a leader in innovation, receiving prestigious awards for our groundbreaking technology solutions and exceptional client service.</p>
 "
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">"
+            <div className="grid grid-cols-1 md: gri d-cols-3 gap-6 max-w-4xl mx-auto">"
               <div className="text-center">"
                 <div className="text-3xl font-bold text-zion-cyan mb-2">15+</div>"
                 <div className="text-gray-300">Industry Awards</div>

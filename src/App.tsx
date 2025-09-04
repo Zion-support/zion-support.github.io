@@ -9,7 +9,7 @@ function App() {
     <HelmetProvider>
       <ErrorBoundary>
         <Layout>
-          <HomePage />
+          <HomePage  />
         </Layout>
       </ErrorBoundary>
     </HelmetProvider>

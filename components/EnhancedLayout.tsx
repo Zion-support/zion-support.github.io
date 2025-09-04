@@ -2,14 +2,14 @@ import Head from 'next/head';
 import React, { ReactNode } from 'react';
 
 interface EnhancedLayoutProps {
-  children: ReactNode;
+  children: ReactNod e;
   title?: string;
   description?: string;
   canonical?: string;
   noindex?: boolean;
 }
 
-const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({
+const EnhancedLayout: Reac t.FC<EnhancedLayoutProps> = ({
   children,
   title = 'Zion Tech Group',
   description = 'Leading technology solutions provider',
@@ -21,9 +21,9 @@ const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({
     <>
       <Head>
         <title>{fullTitle}</title>
-        <meta name="description" content={description} />
-        <meta name="robots" content={noindex ? 'noindex,nofollow' : 'index,follow'} />
-        {canonical && <link rel="canonical" href={canonical} />}
+        <meta name="description" content={description}  />
+        <meta name="robots" content={noindex ? 'noindex,nofollow' : 'index,follow'}  />
+        {canonical && <link rel="canonical" href={canonical}  />}
       </Head>
       <div className="min-h-screen">{children}</div>
     </>

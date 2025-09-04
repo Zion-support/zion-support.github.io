@@ -140,7 +140,7 @@ import { Brain,
   CalendarYear2
  } from 'lucide-react';
 
-export default function InnovativeServices2025(...args: unknown[]): unknown {
+export default function InnovativeServices2025(...args: unknow n[]): unknown {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState('popularity');
@@ -155,14 +155,14 @@ export default function InnovativeServices2025(...args: unknown[]): unknown {
       category: 'AI & ML',
       price: '$2,500/month',
       features: ['Predictive Analytics', 'Real-time Dashboards', 'Custom Reports', 'API Integration', '24/7 Support'],
-      icon: Brain,
+      icon: Brai n,
       badge: 'Popular',
       color: 'from-purple-600 to-indigo-700',
       link: '/services/ai-business-intelligence',
       marketPrice: '$3,200/month',
       savings: '22%',
       rating: 4.9,
-      reviews: 127
+      reviews: 12 7
     },
     {
       id: 'ai-compliance-assistant',
@@ -171,14 +171,14 @@ export default function InnovativeServices2025(...args: unknown[]): unknown {
       category: 'AI & ML',
       price: '$1,800/month',
       features: ['Regulatory Monitoring', 'Automated Reporting', 'Risk Assessment', 'Audit Trails', 'Compliance Dashboard'],
-      icon: Shield,
+      icon: Shiel d,
       badge: 'New',
       color: 'from-green-600 to-emerald-700',
       link: '/services/ai-compliance-assistant',
       marketPrice: '$2,400/month',
       savings: '25%',
       rating: 4.8,
-      reviews: 89
+      reviews: 8 9
     },
     {
       id: 'ai-sales-copilot',
@@ -187,14 +187,14 @@ export default function InnovativeServices2025(...args: unknown[]): unknown {
       category: 'AI & ML',
       price: '$2,200/month',
       features: ['Lead Scoring', 'Customer Insights', 'Sales Forecasting', 'CRM Integration', 'Performance Analytics'],
-      icon: TrendingUp,
+      icon: TrendingU p,
       badge: 'Featured',
       color: 'from-blue-600 to-cyan-700',
       link: '/services/ai-sales-copilot',
       marketPrice: '$2,800/month',
       savings: '21%',
       rating: 4.9,
-      reviews: 156
+      reviews: 15 6
     },
     {
       id: 'ai-content-marketing-suite',
@@ -203,14 +203,14 @@ export default function InnovativeServices2025(...args: unknown[]): unknown {
       category: 'AI & ML',
       price: '$1,900/month',
       features: ['Content Creation', 'SEO Optimization', 'Social Media Management', 'Analytics Dashboard', 'Multi-platform Publishing'],
-      icon: PenTool,
+      icon: PenToo l,
       badge: 'New',
       color: 'from-pink-600 to-rose-700',
       link: '/services/ai-content-marketing-suite',
       marketPrice: '$2,500/month',
       savings: '24%',
       rating: 4.7,
-      reviews: 94
+      reviews: 9 4
     },
     {
       id: 'ai-customer-support-automation',
@@ -219,14 +219,14 @@ export default function InnovativeServices2025(...args: unknown[]): unknown {
       category: 'AI & ML',
       price: '$1,600/month',
       features: ['Smart Chatbots', 'Ticket Routing', 'Sentiment Analysis', 'Knowledge Base', 'Performance Metrics'],
-      icon: MessageCircle,
+      icon: MessageCircl e,
       badge: 'Popular',
       color: 'from-cyan-600 to-blue-700',
       link: '/services/ai-customer-support-automation',
       marketPrice: '$2,100/month',
       savings: '24%',
       rating: 4.8,
-      reviews: 203
+      reviews: 20 3
     },
     {
       id: 'ai-project-management',
@@ -235,14 +235,14 @@ export default function InnovativeServices2025(...args: unknown[]): unknown {
       category: 'AI & ML',
       price: '$2,300/month',
       features: ['Smart Planning', 'Resource Optimization', 'Risk Management', 'Team Collaboration', 'Progress Tracking'],
-      icon: Workflow,
+      icon: Workflo w,
       badge: 'Featured',
       color: 'from-orange-600 to-red-700',
       link: '/services/ai-project-management',
       marketPrice: '$2,900/month',
       savings: '21%',
       rating: 4.9,
-      reviews: 178
+      reviews: 17 8
     },
 
     // IT Infrastructure Services
@@ -253,14 +253,14 @@ export default function InnovativeServices2025(...args: unknown[]): unknown {
       category: 'IT Infrastructure',
       price: '$3,200/month',
       features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Monitoring & Alerting', 'Security Scanning', 'Auto-scaling'],
-      icon: Cloud,
+      icon: Clou d,
       badge: 'Popular',
       color: 'from-blue-600 to-indigo-700',
       link: '/services/cloud-devops',
       marketPrice: '$4,100/month',
       savings: '22%',
       rating: 4.9,
-      reviews: 234
+      reviews: 23 4
     },
     {
       id: 'it-infrastructure-management',
@@ -269,14 +269,14 @@ export default function InnovativeServices2025(...args: unknown[]): unknown {
       category: 'IT Infrastructure',
       price: '$2,800/month',
       features: ['Infrastructure Monitoring', 'Performance Optimization', 'Capacity Planning', 'Security Management', 'Backup & Recovery'],
-      icon: Server,
+      icon: Serve r,
       badge: 'Featured',
       color: 'from-gray-600 to-slate-700',
       link: '/services/it-infrastructure',
       marketPrice: '$3,500/month',
       savings: '20%',
       rating: 4.8,
-      reviews: 167
+      reviews: 16 7
     },
     {
       id: 'cybersecurity-platform',
@@ -285,14 +285,14 @@ export default function InnovativeServices2025(...args: unknown[]): unknown {
       category: 'IT Infrastructure',
       price: '$3,500/month',
       features: ['Threat Detection', 'Vulnerability Assessment', 'Security Automation', 'Incident Response', 'Compliance Reporting'],
-      icon: Lock,
+      icon: Loc k,
       badge: 'Popular',
       color: 'from-red-600 to-pink-700',
       link: '/services/ai-cybersecurity-platform',
       marketPrice: '$4,400/month',
       savings: '20%',
       rating: 4.9,
-      reviews: 289
+      reviews: 28 9
     },
 
     // Micro SaaS Solutions
@@ -303,14 +303,14 @@ export default function InnovativeServices2025(...args: unknown[]): unknown {
       category: 'Micro SaaS',
       price: '$1,200/month',
       features: ['Cost Optimization', 'Budget Management', 'Resource Tracking', 'Cost Allocation', 'Savings Recommendations'],
-      icon: DollarSign,
+      icon: DollarSig n,
       badge: 'New',
       color: 'from-green-600 to-emerald-700',
       link: '/services/finops-advisor',
       marketPrice: '$1,600/month',
       savings: '25%',
       rating: 4.7,
-      reviews: 76
+      reviews: 7 6
     },
     {
       id: 'zero-trust-network',
@@ -319,14 +319,14 @@ export default function InnovativeServices2025(...args: unknown[]): unknown {
       category: 'Micro SaaS',
       price: '$2,100/month',
       features: ['Identity Verification', 'Access Control', 'Continuous Monitoring', 'Threat Detection', 'Compliance Reporting'],
-      icon: Shield,
+      icon: Shiel d,
       badge: 'Featured',
       color: 'from-indigo-600 to-purple-700',
       link: '/services/zero-trust-network-access',
       marketPrice: '$2,700/month',
       savings: '22%',
       rating: 4.8,
-      reviews: 134
+      reviews: 13 4
     },
     {
       id: 'dsr-portal',
@@ -335,14 +335,14 @@ export default function InnovativeServices2025(...args: unknown[]): unknown {
       category: 'Micro SaaS',
       price: '$900/month',
       features: ['Request Management', 'Data Mapping', 'Consent Management', 'Privacy Impact Assessment', 'Compliance Reporting'],
-      icon: FileText,
+      icon: FileTex t,
       badge: 'New',
       color: 'from-teal-600 to-cyan-700',
       link: '/services/dsr-portal',
       marketPrice: '$1,200/month',
       savings: '25%',
       rating: 4.6,
-      reviews: 89
+      reviews: 8 9
     },
 
     // Emerging Technology Services
@@ -353,14 +353,14 @@ export default function InnovativeServices2025(...args: unknown[]): unknown {
       category: 'Emerging Tech',
       price: '$5,000/month',
       features: ['Quantum Algorithms', 'Optimization Problems', 'Cryptography', 'Scientific Computing', 'Research Support'],
-      icon: Atom,
+      icon: Ato m,
       badge: 'Future',
       color: 'from-purple-600 to-pink-700',
       link: '/services/quantum-computing',
       marketPrice: '$6,500/month',
       savings: '23%',
       rating: 4.9,
-      reviews: 45
+      reviews: 4 5
     },
     {
       id: 'edge-computing-platform',
@@ -369,14 +369,14 @@ export default function InnovativeServices2025(...args: unknown[]): unknown {
       category: 'Emerging Tech',
       price: '$2,800/month',
       features: ['Edge Nodes', 'Real-time Processing', 'IoT Integration', 'Low Latency', 'Scalable Architecture'],
-      icon: Cpu,
+      icon: Cp u,
       badge: 'Featured',
       color: 'from-blue-600 to-cyan-700',
       link: '/services/edge-computing',
       marketPrice: '$3,600/month',
       savings: '22%',
       rating: 4.8,
-      reviews: 123
+      reviews: 12 3
     },
     {
       id: 'blockchain-platform',
@@ -385,23 +385,20 @@ export default function InnovativeServices2025(...args: unknown[]): unknown {
       category: 'Emerging Tech',
       price: '$3,200/month',
       features: ['Smart Contracts', 'Supply Chain Tracking', 'Digital Identity', 'Token Management', 'Consensus Mechanisms'],
-      icon: Link,
+      icon: Lin k,
       badge: 'Popular',
       color: 'from-green-600 to-blue-700',
       link: '/services/blockchain',
       marketPrice: '$4,100/month',
       savings: '22%',
       rating: 4.7,
-      reviews: 167
+      reviews: 16 7
     }
   ];
 
   const categories = [
-    { id: unknown'all', name: 'All Services', icon: Star, count: services.length },;
-    { id: 'AI & ML', name: 'AI & Machine Learning', icon: Brain, count: services.filter(s  => s.category === 'AI & ML').length },
-    { id: unknown'IT Infrastructure', name: 'IT Infrastructure', icon: Server, count: services.filter(s  => s.category === 'IT Infrastructure').length },;
-    { id: unknown'Micro SaaS', name: 'Micro SaaS', icon: Rocket, count: services.filter(s  => s.category === 'Micro SaaS').length },;
-    { id: unknown'Emerging Tech', name: 'Emerging Technology', icon: Atom, count: services.filter(s  => s.category === 'Emerging Tech').length }
+    { id: unknow n'all', name: 'All Services', icon: Sta r, count: service s.length }, { id: 'AI & ML', name: 'AI & Machine Learning', icon: Brai n, count: service s.filter(s  => s.category === 'AI & ML').length },
+    { id: unknow n'IT Infrastructure', name: 'IT Infrastructure', icon: Serve r, count: service s.filter(s  => s.category === 'IT Infrastructure').length }, { id: unknow n'Micro SaaS', name: 'Micro SaaS', icon: Rocke t, count: service s.filter(s  => s.category === 'Micro SaaS').length }, { id: unknow n'Emerging Tech', name: 'Emerging Technology', icon: Ato m, count: service s.filter(s  => s.category === 'Emerging Tech').length }
   ];
 
   const filteredServices = services.filter(service => {
@@ -420,46 +417,46 @@ export default function InnovativeServices2025(...args: unknown[]): unknown {
       case 'rating':
         return b.rating - a.rating;
       case 'popularity':
-      default:        return b.reviews - a.reviews;
+      default: return b.reviews - a.reviews;
     }
   }) ;
-  return()
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">"""
       {/* Hero Section */}""""
       <section className="relative overflow-hidden bg-gradient-to-r from-zion-blue-dark via-zion-blue to-zion-blue-light py-20">""""
         <div className="absolute inset-0 bg-black/20"></div>""""
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.h1;
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             animate={{ opacity: 1, y: 0 }}"""
             transition={{ duration: 0.8 }}""""
-            className="text-5xl md:text-6xl font-bold text-white mb-6"""
+            className="text-5xl md: tex t-6xl font-bold text-white mb-6"""
           >
             Innovative Services 2025;
           </motion.h1>
           <motion.p;
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             animate={{ opacity: 1, y: 0 }}"""
             transition={{ duration: 0.8, delay: 0.2 }}""""
-            className="text-xl md:text-2xl text-zion-blue-light max-w-4xl mx-auto mb-8"""
+            className="text-xl md: tex t-2xl text-zion-blue-light max-w-4xl mx-auto mb-8"""
           >
             Discover cutting - edge AI solutions, micro SAAS platforms, and revolutionary IT services that will transform your business in 2025;
           </motion.p>
           <motion.div;
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             animate={{ opacity: 1, y: 0 }}"""
             transition={{ duration: 0.8, delay: 0.4 }}""""
             className="flex flex-wrap justify-center gap-4"""
           >"""
             <Link""""
               to="/contact""""
-              className="bg-white text-zion-blue-dark px-8 py-3 rounded-full font-semibold hover:bg-zion-blue-light transition-colors duration-300"""
+              className="bg-white text-zion-blue-dark px-8 py-3 rounded-full font-semibold hover: b g-zion-blue-light transition-colors duration-300"""
             >
               Get Started Today;
             </Link>"""
             <Link""""
               to="/pricing""""
-              className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-zion-blue-dark transition-colors duration-300"""
+              className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover: b g-white hover: tex t-zion-blue-dark transition-colors duration-300"""
             >
               View Pricing;
             </Link>
@@ -472,15 +469,15 @@ export default function InnovativeServices2025(...args: unknown[]): unknown {
         <div className="container mx-auto px-4">""""
           <div className="flex flex-wrap items-center justify-center gap-8 text-zion-blue-light">""""
             <div className="flex items-center gap-2">""""
-              <Phone className="w-5 h-5"  />
+              <Phone className="w-5 h-5"   />
               <span>+1 302 464 0950</span>"""
             </div>""""
             <div className="flex items-center gap-2">""""
-              <Mail className="w-5 h-5"  />
+              <Mail className="w-5 h-5"   />
               <span>kleber@ziontechgroup.com</span>"""
             </div>""""
             <div className="flex items-center gap-2">""""
-              <MapPin className="w-5 h-5"  />              <span>364 E Main St STE 1008, Middletown DE 19709</span>
+              <MapPin className="w-5 h-5"   />              <span>364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
           </div>
         </div>
@@ -489,7 +486,7 @@ export default function InnovativeServices2025(...args: unknown[]): unknown {
       {/* Filters and Search */}""""
       <section className="py-8 bg-white/5 backdrop-blur-sm">""""
         <div className="container mx-auto px-4">""""
-          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">"""
+          <div className="flex flex-col lg: fle x-row gap-6 items-center justify-between">"""
             {/* Category Filters */}""""
             <div className="flex flex-wrap gap-3">
               {categories.map((category) => (
@@ -500,7 +497,7 @@ export default function InnovativeServices2025(...args: unknown[]): unknown {
 '
                     selectedCategory === category.id''
                       ? 'bg-zion-blue text-white'''`
-                      : 'bg-zion-slate text-zion-blue-light hover:bg-zion-slate-light'``
+                      : 'bg-zion-slate text-zion-blue-light hover: b g-zion-slate-light'``
                   }`}"""
                 >""""
                   <category.icon className="w-4 h-4" />"""
@@ -512,20 +509,20 @@ export default function InnovativeServices2025(...args: unknown[]): unknown {
             </div>
 """
             {/* Search and Sort */}""""
-            <div className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto">""""
+            <div className="flex flex-col sm: fle x-row gap-4 w-full lg:w-auto">""""
               <div className="relative">"""
                 <input""""
                   type="text""""
                   placeholder="Search services..."""
                   value={searchQuery}"""
                   onChange={(e) => setSearchQuery(e.target.value)}""""
-                  className="w-full sm:w-64 px-4 py-2 pl-10 bg-zion-slate text-white rounded-lg border border-zion-slate-light focus:border-zion-blue focus:outline-none""""
+                  className="w-full sm:w-64 px-4 py-2 pl-10 bg-zion-slate text-white rounded-lg border border-zion-slate-light focus: borde r-zion-blue focus: outlin e-none""""
                 />""""
-                <Search className="absolute left-3 top-2.5 w-4 h-4 text-zion-blue-light"  />              </div>
+                <Search className="absolute left-3 top-2.5 w-4 h-4 text-zion-blue-light"   />              </div>
               <select;
                 value={sortBy}"""
                 onChange={(e) => setSortBy(e.target.value)}""""
-                className="px-4 py-2 bg-zion-slate text-white rounded-lg border border-zion-slate-light focus:border-zion-blue focus:outline-none""""
+                className="px-4 py-2 bg-zion-slate text-white rounded-lg border border-zion-slate-light focus: borde r-zion-blue focus: outlin e-none""""
               >""""
                 <option value="popularity">Most Popular</option>""""
                 <option value="rating">Highest Rated</option>""""
@@ -543,17 +540,17 @@ export default function InnovativeServices2025(...args: unknown[]): unknown {
           <AnimatePresence mode="wait">`
             <motion.div``
               key={`${selectedCategory}-${searchQuery}-${sortBy}`}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 2 0 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5 }}
-              className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-8"            >
+              className="grid grid-cols-1 md: unknowngri d-cols-2 lg: gri d-cols-3 gap-8"            >
               {sortedServices.map((service, index) => (<motion.div;
                   key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 2 0 }}
                   animate={{ opacity: 1, y: 0 }}"""
-                  transition={{ duration: 0.5, delay: index * 0.1 }}""""
-                  className="group relative bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-zion-slate-light hover:border-zion-blue transition-all duration-300 hover:shadow-2xl hover:shadow-zion-blue/20"""
+                  transition={{ duration: 0.5, delay: inde x * 0.1 }}""""
+                  className="group relative bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-zion-slate-light hover: borde r-zion-blue transition-all duration-300 hover: shado w-2xl hover: shado w-zion-blue/20"""
                 >
                   {/* Badge */}"""
                   {service.badge && (""`
@@ -572,12 +569,12 @@ export default function InnovativeServices2025(...args: unknown[]): unknown {
                     </div>) }
 `
                   {/* Icon */}`"`
-                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 mb-6 group-hover:scale-110 transition-transform duration-300`}>""""
+                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 mb-6 group-hover: scal e-110 transition-transform duration-300`}>""""
                     <service.icon className="w-full h-full text-white" />
                   </div>
 """
                   {/* Content */}""""
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-blue-light transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover: tex t-zion-blue-light transition-colors duration-300">
                     {service.name}"""
                   </h3>""""
                   <p className="text-zion-blue-light mb-4 line-clamp-3">
@@ -611,7 +608,7 @@ export default function InnovativeServices2025(...args: unknown[]): unknown {
                                 ? 'text-yellow-400 fill-current'''`
                                 : 'text-zion-slate-light'``
                             }`}
-                            />
+                             />
                         ))}"""
                       </div>""""
                       <div className="text-xs text-zion-blue-light">
@@ -625,10 +622,10 @@ export default function InnovativeServices2025(...args: unknown[]): unknown {
                   {/* CTA Button */}
                   <Link"""
                     to={service.link}""""
-                    className="w-full bg-gradient-to-r from-zion-blue to-zion-blue-light text-white py-3 px-6 rounded-xl font-semibold hover:from-zion-blue-light hover:to-zion-blue transition-all duration-300 text-center block group-hover:shadow-lg group-hover:shadow-zion-blue/25"""
+                    className="w-full bg-gradient-to-r from-zion-blue to-zion-blue-light text-white py-3 px-6 rounded-xl font-semibold hover: fro m-zion-blue-light hover: t o-zion-blue transition-all duration-300 text-center block group-hover: shado w-lg group-hover: shado w-zion-blue/25"""
                   >"""
                     Learn More""""
-                    <ArrowRight className="inline-block w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300"  />                  </Link>
+                    <ArrowRight className="inline-block w-4 h-4 ml-2 group-hover: translat e-x-1 transition-transform duration-300"   />                  </Link>
                 </motion.div>) ) }
             </motion.div>
           </AnimatePresence>
@@ -651,35 +648,35 @@ export default function InnovativeServices2025(...args: unknown[]): unknown {
       <section className="py-20 bg-gradient-to-r from-zion-blue-dark via-zion-blue to-zion-blue-light">""""
         <div className="container mx-auto px-4 text-center">
           <motion.h2;
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             whileInView={{ opacity: 1, y: 0 }}"""
             transition={{ duration: 0.8 }}""""
-            className="text-4xl md:text-5xl font-bold text-white mb-6"""
+            className="text-4xl md: tex t-5xl font-bold text-white mb-6"""
           >
             Ready to Transform Your Business?
           </motion.h2>
           <motion.p;
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             whileInView={{ opacity: 1, y: 0 }}"""
             transition={{ duration: 0.8, delay: 0.2 }}""""
             className="text-xl text-zion-blue-light max-w-3xl mx-auto mb-8"""
           >
             Join thousands of businesses already leveraging our innovative services to stay ahead of the competition.</motion.p>
           <motion.div;
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             whileInView={{ opacity: 1, y: 0 }}"""
             transition={{ duration: 0.8, delay: 0.4 }}""""
             className="flex flex-wrap justify-center gap-4"""
           >"""
             <Link""""
               to="/contact""""
-              className="bg-white text-zion-blue-dark px-8 py-4 rounded-full font-semibold hover:bg-zion-blue-light transition-colors duration-300 text-lg"""
+              className="bg-white text-zion-blue-dark px-8 py-4 rounded-full font-semibold hover: b g-zion-blue-light transition-colors duration-300 text-lg"""
             >
               Schedule a Demo;
             </Link>"""
             <Link""""
               to="/pricing""""
-              className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-zion-blue-dark transition-colors duration-300 text-lg"""
+              className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover: b g-white hover: tex t-zion-blue-dark transition-colors duration-300 text-lg"""
             >
               View Full Pricing;
             </Link>

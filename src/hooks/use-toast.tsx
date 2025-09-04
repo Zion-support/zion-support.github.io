@@ -15,7 +15,7 @@ export function useToast(...args[]):  {
 
   
     
-    const newToast: Toast = { id, title, description, variant, duration };
+    const newToast: Toas t = { id, title, description, variant, duration };
 
     setToasts(prev => [...prev, newToast]);
 

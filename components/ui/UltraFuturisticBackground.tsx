@@ -2,7 +2,7 @@ import React from 'react';
 
 type Props = {
 
-  children: React.ReactNode;
+  children: Reac t.ReactNode;
 };
 
 export default function UltraFuturisticBackground({ children }: Props) {

@@ -14,8 +14,8 @@ interface ShippingRate {
   tax?: string}
 
 interface Props {
-  toAddress: Address | null;
-  onSelect?: (rate: ShippingRate) => void}
+  toAddress: Addres s | null;
+  onSelect?: (rate: ShippingRat e) => void}
 
 export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {
   const [rates, setRates] = useState<ShippingRate[]>([]);
@@ -53,7 +53,7 @@ export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {
         <RadioGroup value={selected} onValueChange={handleChange} className="space-y-2">
           {rates.map(rate => (
             <label key={rate.id} className="flex items-center gap-2">
-              <RadioGroupItem value={rate.id}  />
+              <RadioGroupItem value={rate.id}   />
               <span>{`${rate.carrier} ${rate.service} - ${rate.rate} ${rate.currency}`}</span>
               {rate.tax && <span className="ml-1 text-sm">(+{rate.tax} taxes)</span>}
             </label>

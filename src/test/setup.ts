@@ -2,10 +2,10 @@ import '@testing-library/jest-dom';
 
 // Global test setup
 global.ResizeObserver = jest.fn().mockImplementation(() => ({
-  observe: jest.fn(), unobserve: jest.fn(), disconnect: jest.fn(), }));
+  observe: jes t.fn(), unobserve: jes t.fn(), disconnect: jes t.fn(), }));
 
 // Mock IntersectionObserver
 global.IntersectionObserver = jest.fn().mockImplementation(() => ({
-  observe: jest.fn(), unobserve: jest.fn(), disconnect: jest.fn(), }));
-  ...console, warn: jest.fn(), error: jest.fn()}
+  observe: jes t.fn(), unobserve: jes t.fn(), disconnect: jes t.fn(), }));
+  ...console, warn: jes t.fn(), error: jes t.fn()}
 

@@ -3,7 +3,7 @@ import Layout from '../components/Layout';
 import Link from 'next/link';
 import { Calendar, User, ArrowRight, Tag, Clock } from 'lucide-react';
 
-const Blog: NextPage = () => {
+const Blog: NextPag e = () => {
   const blogPosts = [
     {
       id: 1,
@@ -93,11 +93,11 @@ const Blog: NextPage = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+          <h1 className="text-5xl md: tex t-6xl font-bold mb-6">
             Tech
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Blog</span>
           </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
+          <p className="text-xl md: tex t-2xl mb-8 max-w-4xl mx-auto text-gray-200">
             Stay ahead of the curve with insights, trends, and best practices from our technology experts.
           </p>
         </div>
@@ -106,9 +106,9 @@ const Blog: NextPage = () => {
       {/* Blog Content */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 lg: gri d-cols-4 gap-8">
             {/* Sidebar */}
-            <div className="lg:col-span-1">
+            <div className="lg: co l-span-1">
               <div className="sticky top-8">
                 {/* Categories */}
                 <div className="bg-gray-50 rounded-lg p-6 mb-8">
@@ -121,7 +121,7 @@ const Blog: NextPage = () => {
                           className={`block px-3 py-2 rounded-md text-sm transition-colors ${
                             index === 0
                               ? 'bg-blue-100 text-blue-700 font-medium'
-                              : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900'
+                              : 'text-gray-600 hover: b g-gray-100 hover: tex t-gray-900'
                           }`}
                         >
                           {category}
@@ -138,14 +138,13 @@ const Blog: NextPage = () => {
                     Subscribe to our newsletter for the latest tech insights and updates.
                   </p>
                   <form className="space-y-3">
-                    <input
-                      type="email"
+                    <input type="email"
                       placeholder="Enter your email"
                       className="w-full px-3 py-2 rounded-md text-gray-900 text-sm"
-                    />
+                     />
                     <button
                       type="submit"
-                      className="w-full bg-white text-blue-600 hover:bg-gray-100 px-4 py-2 rounded-md font-semibold text-sm transition-colors"
+                      className="w-full bg-white text-blue-600 hover: b g-gray-100 px-4 py-2 rounded-md font-semibold text-sm transition-colors"
                     >
                       Subscribe
                     </button>
@@ -155,19 +154,19 @@ const Blog: NextPage = () => {
             </div>
 
             {/* Blog Posts */}
-            <div className="lg:col-span-3">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="lg: co l-span-3">
+              <div className="grid grid-cols-1 md: gri d-cols-2 gap-8">
                 {blogPosts.map((post) => (
-                  <article key={post.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                  <article key={post.id} className="bg-white rounded-lg shadow-md overflow-hidden hover: shado w-lg transition-shadow">
                     <div className="h-48 bg-gradient-to-br from-blue-400 to-purple-500"></div>
                     <div className="p-6">
                       <div className="flex items-center space-x-4 text-sm text-gray-500 mb-3">
                         <span className="flex items-center">
-                          <Tag className="w-4 h-4 mr-1" />
+                          <Tag className="w-4 h-4 mr-1"  />
                           {post.category}
                         </span>
                         <span className="flex items-center">
-                          <Clock className="w-4 h-4 mr-1" />
+                          <Clock className="w-4 h-4 mr-1"  />
                           {post.readTime}
                         </span>
                       </div>
@@ -183,21 +182,21 @@ const Blog: NextPage = () => {
                       <div className="flex items-center justify-between">
                         <div className="flex items-center space-x-3 text-sm text-gray-500">
                           <span className="flex items-center">
-                            <User className="w-4 h-4 mr-1" />
+                            <User className="w-4 h-4 mr-1"  />
                             {post.author}
                           </span>
                           <span className="flex items-center">
-                            <Calendar className="w-4 h-4 mr-1" />
+                            <Calendar className="w-4 h-4 mr-1"  />
                             {new Date(post.date).toLocaleDateString()}
                           </span>
                         </div>
                         
                         <Link
                           href={`/blog/${post.slug}`}
-                          className="text-blue-600 hover:text-blue-700 font-medium flex items-center text-sm"
+                          className="text-blue-600 hover: tex t-blue-700 font-medium flex items-center text-sm"
                         >
                           Read More
-                          <ArrowRight className="w-4 h-4 ml-1" />
+                          <ArrowRight className="w-4 h-4 ml-1"  />
                         </Link>
                       </div>
                     </div>
@@ -207,7 +206,7 @@ const Blog: NextPage = () => {
 
               {/* Load More Button */}
               <div className="text-center mt-12">
-                <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                <button className="bg-blue-600 hover: b g-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
                   Load More Posts
                 </button>
               </div>
@@ -223,11 +222,11 @@ const Blog: NextPage = () => {
           <p className="text-xl mb-8 max-w-3xl mx-auto">
             Let's discuss how our technology solutions can help you achieve your goals and stay ahead of the competition.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
+          <div className="flex flex-col sm: fle x-row justify-center gap-4">
+            <Link href="/contact" className="bg-white text-blue-600 hover: b g-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
               Get Started Today
             </Link>
-            <Link href="/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
+            <Link href="/services" className="bg-transparent border-2 border-white text-white hover: b g-white hover: tex t-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
               View Our Services
             </Link>
           </div>

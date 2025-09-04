@@ -22,7 +22,7 @@ export { ServicesPage }() {
     {
       id: 'ai-services',
       title: 'AI & Machine Learning',
-      icon: Brain,
+      icon: Brai n,
       description: 'Cutting-edge artificial intelligence solutions for modern businesses',
       color: 'from-purple-500 to-pink-500',
       services: [
@@ -49,7 +49,7 @@ export { ServicesPage }() {
     {
       id: 'cybersecurity',
       title: 'Cybersecurity',
-      icon: Shield,
+      icon: Shiel d,
       description: 'Comprehensive security solutions to protect your digital assets',
       color: 'from-red-500 to-orange-500',
       services: [
@@ -76,7 +76,7 @@ export { ServicesPage }() {
     {
       id: 'cloud-services',
       title: 'Cloud Infrastructure',
-      icon: Cloud,
+      icon: Clou d,
       description: 'Scalable cloud solutions for growing businesses',
       color: 'from-blue-500 to-cyan-500',
       services: [
@@ -103,7 +103,7 @@ export { ServicesPage }() {
     {
       id: 'data-analytics',
       title: 'Data Analytics',
-      icon: BarChart3,
+      icon: BarChart 3,
       description: 'Transform raw data into actionable business intelligence',
       color: 'from-green-500 to-emerald-500',
       services: [
@@ -137,8 +137,8 @@ export { ServicesPage }() {
     <div className="min-h-screen bg-zion-blue-dark text-white">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-purple-dark">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8 text-center">
+          <h1 className="text-5xl md: tex t-6xl font-bold mb-6">
             Our Services
           </h1>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
@@ -152,7 +152,7 @@ export { ServicesPage }() {
               placeholder="Search services..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full px-4 py-3 rounded-lg bg-zion-blue-dark/80 border border-zion-purple/30 text-white placeholder-zion-slate-light focus:border-zion-cyan focus:outline-none"
+              className="w-full px-4 py-3 rounded-lg bg-zion-blue-dark/80 border border-zion-purple/30 text-white placeholder-zion-slate-light focus: borde r-zion-cyan focus: outlin e-none"
             />
             
             <div className="flex flex-wrap gap-2 justify-center">
@@ -161,7 +161,7 @@ export { ServicesPage }() {
                 className={`px-4 py-2 rounded-lg transition-colors ${
                   selectedCategory === 'all'
                     ? 'bg-zion-cyan text-white'
-                    : 'bg-zion-blue-dark/80 text-zion-slate-light hover:bg-zion-blue-dark'
+                    : 'bg-zion-blue-dark/80 text-zion-slate-light hover: b g-zion-blue-dark'
                 }`}
               >
                 All Services
@@ -173,7 +173,7 @@ export { ServicesPage }() {
                   className={`px-4 py-2 rounded-lg transition-colors ${
                     selectedCategory === category.id
                       ? 'bg-zion-cyan text-white'
-                      : 'bg-zion-blue-dark/80 text-zion-slate-light hover:bg-zion-blue-dark'
+                      : 'bg-zion-blue-dark/80 text-zion-slate-light hover: b g-zion-blue-dark'
                   }`}
                 >
                   {category.title}
@@ -186,12 +186,12 @@ export { ServicesPage }() {
 
       {/* Services Grid */}
       <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
             {filteredCategories.map((category) => (
               <div
                 key={category.id}
-                className="bg-zion-blue-dark/80 backdrop-blur-sm border border-zion-purple/30 rounded-xl p-6 hover:border-zion-purple/60 transition-all duration-300 hover:scale-105"
+                className="bg-zion-blue-dark/80 backdrop-blur-sm border border-zion-purple/30 rounded-xl p-6 hover: borde r-zion-purple/60 transition-all duration-300 hover: scal e-105"
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-lg flex items-center justify-center mx-auto mb-4`}>
                   <category.icon className="w-8 h-8 text-white" />
@@ -217,7 +217,7 @@ export { ServicesPage }() {
                 
                 <Link
                   to={`/services/${category.id}`}
-                  className="mt-6 w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan/90 hover:to-zion-purple/90 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 hover:scale-105 text-center inline-block"
+                  className="mt-6 w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover: fro m-zion-cyan/90 hover: t o-zion-purple/90 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 hover: scal e-105 text-center inline-block"
                 >
                   Learn More
                 </Link>
@@ -229,23 +229,23 @@ export { ServicesPage }() {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-purple-dark">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+        <div className="max-w-4xl mx-auto px-4 sm: p x-6 lg: p x-8 text-center">
+          <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
             Ready to Get Started?
           </h2>
           <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
             Let's discuss how our services can help transform your business and drive innovation.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: fle x-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan/90 hover:to-zion-purple/90 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
+              className="bg-gradient-to-r from-zion-cyan to-zion-purple hover: fro m-zion-cyan/90 hover: t o-zion-purple/90 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover: scal e-105"
             >
               Get Started
             </Link>
             <Link
               to="/pricing"
-              className="bg-transparent border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
+              className="bg-transparent border-2 border-zion-cyan text-zion-cyan hover: b g-zion-cyan hover: tex t-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover: scal e-105"
             >
               View Pricing
             </Link>

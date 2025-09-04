@@ -17,30 +17,29 @@ import {
   Cloud
 } from 'lucide-react'
 
-const SEO = dynamic(() => import('../src/components/SEO'), { ssr: false })
-const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false })
+const SEO = dynamic(() => import('../src/components/SEO'), { ssr: fals e })
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: fals e })
 
-const PricingGuidePage: React.FC = () => {
+const PricingGuidePage: Reac t.FC = () => {
   return (
     <>
-      <SEO
-        title="Pricing Guide - Zion Tech Group"
+      <SEO title="Pricing Guide - Zion Tech Group"
         description="Transparent pricing for AI services, cloud solutions, cybersecurity, and micro SaaS platforms. Get custom quotes for your business needs."
         keywords="pricing, AI services, cloud solutions, cybersecurity, micro SaaS, Zion Tech Group"
         canonical="https://ziontechgroup.com/pricing-guide"
-      />
+       />
       
       <PageTransition>
         <main className="min-h-screen bg-white">
           <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="text-center"
               >
-                <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                <h1 className="text-4xl md: tex t-6xl font-bold text-gray-900 mb-6">
                   Pricing <span className="text-blue-600">Guide</span>
                 </h1>
                 <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
@@ -61,13 +60,13 @@ export default PricingGuidePage
 
         {/*   */}"
         <section className="py-20 bg-white">"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
+          <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">"
             <div className="text-center mb-16">"
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Service Packages</h2>"
               <p className="text-xl text-gray-600">Choose the package that fits your business needs</p>
             </div>
             "
-            <div className="{`grid" grid-cols-1 md:grid-cols-3 gap-8`>,
+            <div className="{`grid" grid-cols-1 md: gri d-cols-3 gap-8`>,
               {pricingTiers.map((tier, index) => ("
                 <div key="{index}""
                   className="{`relative" rounded-2xl border-2 p-8 ${
@@ -96,7 +95,7 @@ export default PricingGuidePage
                   <ul className="space-y-4 mb-8">
                     {tier.features.map((feature, featureIndex) => ("
                       <li key="{featureIndex}" className="flex items-center">"
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />"
+                        <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0"  />"
                         <span className="text-gray-700">{feature}</span>
                       </li>
                     ))}
@@ -105,8 +104,8 @@ export default PricingGuidePage
                   <Link href="{`/contact`""
                     className="{`block" w-full text-center py-3 px-6 rounded-lg font-medium transition-colors ${
                       tier.popular'
-                        ? 'bg-blue-600 text-white hover: bg-blue-700''>
-                        : 'bg-gray-900 text-white hover:bg-gray-800'}`}
+                        ? 'bg-blue-600 text-white hover: b g-blue-700''>
+                        : 'bg-gray-900 text-white hover: b g-gray-800'}`}
                   >
                     Get Started,
                   </Link>
@@ -118,20 +117,20 @@ export default PricingGuidePage
 
         {/*   */}"
         <section className="`py-20" bg-gray-50`}>"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
+          <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">"
             <div className="text-center mb-16">"
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Service Categories</h2>"
               <p className="text-xl text-gray-600">Detailed pricing for individual services</p>
             </div>
             "
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
+            <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">,
               {serviceCategories.map((category, index) => {
                 const IconComponent = category.icon
                 return ("
                   <div key = "{index}" className="bg-white rounded-xl p-6 shadow-lg">"
                     <div className="flex items-center mb-6">"
                       <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">"
-                        <IconComponent className="h-6 w-6 text-blue-600" />
+                        <IconComponent className="h-6 w-6 text-blue-600"  />
                       </div>"
                       <h3 className="text-xl font-semibold text-gray-900">{category.title}</h3>"
 ursor/automate-test-fix-improve-and-merge-code-99d1,"});,"})"
@@ -159,7 +158,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"});,"});"
 ;,"});,"});"
 } from,"});,"})"
   'lucide-react';,"});,"})"
-const PricingGuide: React.FC = () => {,"});,"})"
+const PricingGuide: Reac t.FC = () => {,"});,"})"
   const pricingFactors = [;,"});,"})"
     {;,"});,"})"
       factor: 'Project Complexity',"});,"})"
@@ -170,7 +169,7 @@ const PricingGuide: React.FC = () => {,"});,"})"
         'Custom AI models: $5,000 - $15, 000',,"});,"})"
         'Enterprise solutions: $15, 000 - $50,000+',,"});,"})"
       ],,"});,"})"
-      icon: Brain,"});,"})"
+      icon: Brai n,"});,"})"
       color: 'from-blue-500 to-cyan-500',"});,"});"
 },,"});,"})"
     {;,"});,"})"
@@ -182,7 +181,7 @@ const PricingGuide: React.FC = () => {,"});,"})"
         'Medium datasets: $3, 000 - $8,000',,"});,"})"
         'Large datasets: $8,000 - $20, 000+',,"});,"})"
       ],,"});,"})"
-      icon: Database,"});,"})"
+      icon: Databas e,"});,"})"
       color: 'from-green-500 to-emerald-500',"});,"});"
 },,"});,"})"
     {;,"});,"})"
@@ -194,7 +193,7 @@ const PricingGuide: React.FC = () => {,"});,"})"
         'Complex integrations: $4, 000 - $10,000',,"});,"})"
         'Enterprise integrations: $10,000 - $25, 000+',,"});,"})"
       ],,"});,"})"
-      icon: Network,"});,"})"
+      icon: Networ k,"});,"})"
       color: 'from-purple-500 to-pink-500',"});,"});"
 },,"});,"})"
     {;,"});,"})"
@@ -205,7 +204,7 @@ const PricingGuide: React.FC = () => {,"});,"})"
         'Rush delivery (50% faster): +30% cost',,"});,"})"
         'Emergency delivery (75% faster): +50% cost',,"});,"})"
       ],,"});,"})"
-      icon: Clock,"});,"})"
+      icon: Cloc k,"});,"})"
       color: 'from-orange-500 to-red-500',"});,"});"
 },,"});,"})"
   ],"});,"})"
@@ -286,18 +285,18 @@ const PricingGuide: React.FC = () => {,"});,"})"
         description="Comprehensive guide to understanding AI solution pricing. Learn about cost factors, get estimates, and find the best pricing strategy for your project.";,"});,"})"
       />;,"});,"})"
       {/*   */}"});,"})"
-      <section className="relative py-20 px-4 sm: px-6 lg:px-8">,"});,"})"
+      <section className="relative py-20 px-4 sm: p x-6 lg: p x-8">,"});,"})"
         <div className="max-w-7xl mx-auto text-center">;,"});,"})"
           <motion.div,"});,"})"
-            initial="{{" opacity: 0, y: 20 }}"});,"})"
+            initial="{{" opacity: 0, y: 2 0 }}"});,"})"
             animate="{{" opacity: 1, y: 0 }}"});,"})"
             transition="{{" duration: 0.6 }}"});,"})"
           >;,"});,"})"
             <Badge variant="secondary" className="mb-4">;,"});,"})"
-              <Calculator className="w-4 h-4 mr-2" />;,"});,"})"
+              <Calculator className="w-4 h-4 mr-2"  />;,"});,"})"
               Pricing Guide,"});,"})"
             </Badge>;,"});,"})"
-            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">,"});,"})"
+            <h1 className="text-5xl md: tex t-6xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">,"});,"})"
               AI Solution Pricing Guide,"});,"})"
             </h1>;,"});,"})"
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;,"});,"})"
@@ -308,10 +307,10 @@ const PricingGuide: React.FC = () => {,"});,"})"
         </div>;,"});,"})"
       </section>;,"});,"})"
       {/*   */}"});,"})"
-      <section className="py-20 px-4 sm: px-6 lg:px-8">,"});,"})"
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8">,"});,"})"
         <div className="max-w-7xl mx-auto">;,"});,"})"
           <motion.div,"});,"})"
-            initial="{{" opacity: 0, y: 20 }}"});,"})"
+            initial="{{" opacity: 0, y: 2 0 }}"});,"})"
             animate="{{" opacity: 1, y: 0 }}"});,"})"
             transition="{{" duration: 0.6 }}"});,"})"
             className="text-center mb-16";,"});,"})"
@@ -323,11 +322,11 @@ const PricingGuide: React.FC = () => {,"});,"})"
               Several key factors determine the cost of your AI implementation,"});,"})"
             </p>;,"});,"})"
           </motion.div>;,"});,"})"
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">,"});,"})"
+          <div className="grid grid-cols-1 md: gri d-cols-2 gap-8">,"});,"})"
             {pricingFactors.map((factor, index) => (;,"});,"})"
               <motion.div,"});,"})"
                 key={factor.factor}"});,"})"
-                initial="{{" opacity: 0, y: 20 }}"});,"})"
+                initial="{{" opacity: 0, y: 2 0 }}"});,"})"
                 animate="{{" opacity: 1, y: 0 }}"});,"})"
                 transition="{{" duration: 0.6, delay: 0.1 * index }}"});,"})"
               >;,"});,"})"
@@ -351,7 +350,7 @@ const PricingGuide: React.FC = () => {,"});,"})"
                         key={detailIndex}"});,"})"
                         className="flex items-center text-gray-300";,"});,"})"
                       >;,"});,"})"
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />;,"});,"})"
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0"  />;,"});,"})"
                         {detail}"});,"})"
                       </li>;,"});,"})"
                     ))}"});,"})"
@@ -363,10 +362,10 @@ const PricingGuide: React.FC = () => {,"});,"})"
         </div>;,"});,"})"
       </section>;,"});,"})"
       {/*   */}"});,"})"
-      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-slate-800/50">,"});,"})"
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-slate-800/50">,"});,"})"
         <div className="max-w-7xl mx-auto">;,"});,"})"
           <motion.div,"});,"})"
-            initial="{{" opacity: 0, y: 20 }}"});,"})"
+            initial="{{" opacity: 0, y: 2 0 }}"});,"})"
             animate="{{" opacity: 1, y: 0 }}"});,"})"
             transition="{{" duration: 0.6 }}"});,"})"
             className="text-center mb-16";,"});,"})"
@@ -378,11 +377,11 @@ const PricingGuide: React.FC = () => {,"});,"})"
               See how different project types are priced,"});,"})"
             </p>;,"});,"})"
           </motion.div>;,"});,"})"
-          <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">,"});,"})"
+          <div className="grid grid-cols-1 lg: gri d-cols-3 gap-8">,"});,"})"
             {pricingExamples.map((example, index) => (;,"});,"})"
               <motion.div,"});,"})"
                 key={example.scenario}"});,"})"
-                initial="{{" opacity: 0, y: 20 }}"});,"})"
+                initial="{{" opacity: 0, y: 2 0 }}"});,"})"
                 animate="{{" opacity: 1, y: 0 }}"});,"})"
                 transition="{{" duration: 0.6, delay: 0.1 * index }}"});,"})"
               >;,"});,"})"
@@ -407,14 +406,14 @@ const PricingGuide: React.FC = () => {,"});,"})"
                         key={featureIndex}"});,"})"
                         className="flex items-center text-gray-300 text-sm";,"});,"})"
                       >;,"});,"})"
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />;,"});,"})"
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0"  />;,"});,"})"
                         {feature}"});,"})"
                       </li>;,"});,"})"
                     ))}"});,"})"
                   </ul>;,"});,"})"
                   <div className="text-center">;,"});,"})"
                     <Badge variant="secondary" className="text-green-400">;,"});,"})"
-                      <TrendingUp className="w-4 h-4 mr-1" />;,"});,"})"
+                      <TrendingUp className="w-4 h-4 mr-1"  />;,"});,"})"
                       {example.roi}"});,"})"
                     </Badge>;,"});,"})"
                   </div>;,"});,"})"
@@ -425,10 +424,10 @@ const PricingGuide: React.FC = () => {,"});,"})"
         </div>;,"});,"})"
       </section>;,"});,"})"
       {/*   */}"});,"})"
-      <section className="py-20 px-4 sm: px-6 lg:px-8">,"});,"})"
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8">,"});,"})"
         <div className="max-w-7xl mx-auto">;,"});,"})"
           <motion.div,"});,"})"
-            initial="{{" opacity: 0, y: 20 }}"});,"})"
+            initial="{{" opacity: 0, y: 2 0 }}"});,"})"
             animate="{{" opacity: 1, y: 0 }}"});,"})"
             transition="{{" duration: 0.6 }}"});,"})"
             className="text-center mb-16";,"});,"})"
@@ -440,18 +439,18 @@ const PricingGuide: React.FC = () => {,"});,"})"
               Smart strategies to maximize your AI investment,"});,"})"
             </p>;,"});,"})"
           </motion.div>;,"});,"})"
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">,"});,"})"
+          <div className="grid grid-cols-1 md: gri d-cols-2 gap-8">,"});,"})"
             {costSavingTips.map((tip, index) => (;,"});,"})"
               <motion.div,"});,"})"
                 key={tip.tip}"});,"})"
-                initial="{{" opacity: 0, y: 20 }}"});,"})"
+                initial="{{" opacity: 0, y: 2 0 }}"});,"})"
                 animate="{{" opacity: 1, y: 0 }}"});,"})"
                 transition="{{" duration: 0.6, delay: 0.1 * index }}"});,"})"
               >;,"});,"})"
                 <Card className="p-6">;,"});,"})"
                   <div className="flex items-start">;,"});,"})"
                     <div className="p-2 rounded-lg bg-gradient-to-r from-green-500 to-emerald-500 mr-4">;,"});,"})"
-                      <Lightbulb className="w-5 h-5 text-white" />;,"});,"})"
+                      <Lightbulb className="w-5 h-5 text-white"  />;,"});,"})"
                     </div>;,"});,"})"
                     <div className="flex-1">;,"});,"})"
                       <h3 className="text-lg font-bold text-white mb-2">;,"});,"})"
@@ -470,10 +469,10 @@ const PricingGuide: React.FC = () => {,"});,"})"
         </div>;,"});,"})"
       </section>;,"});,"})"
       {/*   */}"});,"})"
-      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-slate-800/50">,"});,"})"
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-slate-800/50">,"});,"})"
         <div className="max-w-4xl mx-auto text-center">;,"});,"})"
           <motion.div,"});,"})"
-            initial="{{" opacity: 0, y: 20 }}"});,"})"
+            initial="{{" opacity: 0, y: 2 0 }}"});,"})"
             animate="{{" opacity: 1, y: 0 }}"});,"})"
             transition="{{" duration: 0.6 }}"});,"})"
           >;,"});,"})"
@@ -484,16 +483,16 @@ const PricingGuide: React.FC = () => {,"});,"})"
               Ready to get started? Contact us for a personalized quote based on,"});,"})"
               your specific requirements.;,"});,"})"
             </p>;,"});,"})"
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">,"});,"})"
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">,"});,"})"
               <Button,"});,"})"
                 size="lg";,"});,"})"
                 className="bg-gradient-to-r from-blue-500 to-purple-600 text-white";,"});,"})"
               >;,"});,"})"
-                <Calculator className="w-5 h-5 mr-2" />;,"});,"})"
+                <Calculator className="w-5 h-5 mr-2"  />;,"});,"})"
                 Get Free Quote,"});,"})"
               </Button>;,"});,"})"
               <Button size="lg" variant="outline">;,"});,"})"
-                <HelpCircle className="w-5 h-5 mr-2" />;,"});,"})"
+                <HelpCircle className="w-5 h-5 mr-2"  />;,"});,"})"
                 Ask Questions,"});,"})"
               </Button>;,"});,"})"
             </div>;,"});,"})"
@@ -506,16 +505,16 @@ const PricingGuide: React.FC = () => {,"});,"})"
 ;,"});,"})"
 export default PricingGuide,"});,"})"
 ;,"});,"})'
-const React = dynamic(() => import('react'), { ssr: false })
-const PricingGuide: React.FC = () => {
+const React = dynamic(() => import('react'), { ssr: fals e })
+const PricingGuide: Reac t.FC = () => {
   const pricingFactors = [',,
-const Head = dynamic(() => import('next/head'), { ssr: false })
-const Link = dynamic(() => import('next/link'), { ssr: false })
+const Head = dynamic(() => import('next/head'), { ssr: fals e })
+const Link = dynamic(() => import('next/link'), { ssr: fals e })
   HelpCircle,
   Network'
 } from 'lucide-react'
 
-const PricingGuide: React.FC = () => {
+const PricingGuide: Reac t.FC = () => {
   const pricingFactors = ['
     {',
       facto,'
@@ -524,28 +523,28 @@ const PricingGuide: React.FC = () => {
         'Simple automatio,'
     n: $2,000 - $5,000', 'Custom AI models: $5,000 - $15,000','
         'Enterprise solutions: $15,000 - $50,000+'
-      ], icon: Brain,'
+      ], icon: Brai n,'
       color: 'from-blue-500 to-cyan-500'}, {''
       factor: 'Data Requirements','
       description: 'Amount and quality of data needed for training and implementation', details: ['',
         'Small dataset,'
     s: $1,000 - $3,000','
         'Medium datasets: $3,000 - $8,000', 'Large datasets: $8,000 - $20,000+'
-      ], icon: Database,'
+      ], icon: Databas e,'
       color: 'from-green-500 to-emerald-500'}, {''
       factor: 'Integration Needs','
       description: 'Complexity of integrating with existing systems and platforms', details: ['',
         'Basic integration,'
     s: $1,500 - $4,000','
         'Complex integrations: $4,000 - $10,000', 'Enterprise integrations: $10,000 - $25,000+'
-      ], icon: Network,'
+      ], icon: Networ k,'
       color: 'from-purple-500 to-pink-500'}, {''
       factor: 'Timeline Requirements','
       description: 'How quickly you need the solution delivered', details: ['',
         'Standard timelin,'
     e: Base price','
         'Rush delivery (50% faster): +30% cost', 'Emergency delivery (75% faster): +50% cost'
-      ], icon: Clock,'
+      ], icon: Cloc k,'
       color: 'from-orange-500 to-red-500'}
   ]
 
@@ -594,22 +593,22 @@ const PricingGuide: React.FC = () => {
         description='Comprehensive guide to understanding AI solution pricing. Learn about cost factors, get estimates, and find the best pricing strategy for your project.'
       />
       {/*   */}"
-      <section className="relative py-20 px-4 sm: px-6 lg:px-8">"
+      <section className="relative py-20 px-4 sm: p x-6 lg: p x-8">"
         <div className="{`max-w-7xl" mx-auto text-center`>',
-      <section className='relative py-20 px-4 sm: px-6 l>
-    g: px-8>'
+      <section className='relative py-20 px-4 sm: p x-6 l>
+    g: p x-8>'
         <div className='max-w-7xl mx-auto text-center'>,
           <motion.div,"
 initial="{{" opacit>
-    y: 0, y: 20 }}"
+    y: 0, y: 2 0 }}"
             animate="{{" opacity: 1, y: 0 }}"
             transition="{{" duration: 0.6 }}>
           >'
             <Badge variant='secondary' className='mb-4>
-              <Calculator className='w-4 h-4 mr-2' />
+              <Calculator className='w-4 h-4 mr-2'  />
               Pricing Guide,
             </Badge>''
-            <h1 className = 'text-5xl md: text-6xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>,
+            <h1 className = 'text-5xl md: tex t-6xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>,
               AI Solution Pricing Guide,'
             </h1>''
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
@@ -619,12 +618,12 @@ initial="{{" opacit>
         </div>
       </section>
       {/*   */}'
-      <section className='py-20 px-4 sm: px-6 l>
-    g: px-8>'
+      <section className='py-20 px-4 sm: p x-6 l>
+    g: p x-8>'
         <div className='max-w-7xl mx-auto'>,
           <motion.div,"
 initial="{{" opacit>
-    y: 0, y: 20 }}"
+    y: 0, y: 2 0 }}"
             animate="{{" opacity: 1, y: 0 }}"
             transition="{{" duration: 0.6 }}'
             className='text-center mb-16''
@@ -636,11 +635,11 @@ initial="{{" opacit>
               Several key factors determine the cost of your AI implementation
             </p>'
           </motion.div>''
-          <div className = 'grid grid-cols-1 md: grid-cols-2 gap-8'>,
+          <div className = 'grid grid-cols-1 md: gri d-cols-2 gap-8'>,
             {pricingFactors.map((factor, index) => (
               <motion.div,"
 key="{factor.factor}""
-                initial="{{" opacity: 0, y: 20 }}"
+                initial="{{" opacity: 0, y: 2 0 }}"
                 animate="{{" opacity: 1, y: 0 }}"
                 transition="{{" duration: 0.6, delay: 0.1 * index }}'
               >''
@@ -657,7 +656,7 @@ key="{factor.factor}""
                   <ul className='space-y-3'>'
                     {factor.details.map((detail, detailIndex) => ('
                       <li key="{detailIndex}" className='flex items-center text-gray-300>'
-                        <CheckCircle className='w-5 h-5 text-green-500 mr-3 flex-shrink-0' />
+                        <CheckCircle className='w-5 h-5 text-green-500 mr-3 flex-shrink-0'  />
                         {detail}
                       </li>
                     ))}
@@ -669,14 +668,14 @@ key="{factor.factor}""
         </div>
       </section>
       {/*   */}"
-      <section className="`py-20" px-4 sm: px-6 lg:px-8 bg-slate-800/50`}>"
+      <section className="`py-20" px-4 sm: p x-6 lg: p x-8 bg-slate-800/50`}>"
         <div className="max-w-7xl mx-auto">'
-      <section className='py-20 px-4 sm: px-6 l>
-    g: px-8 bg-slate-800/50>'
+      <section className='py-20 px-4 sm: p x-6 l>
+    g: p x-8 bg-slate-800/50>'
         <div className='max-w-7xl mx-auto'>,
           <motion.div,"
 initial="{{" opacit>
-    y: 0, y: 20 }}"
+    y: 0, y: 2 0 }}"
             animate="{{" opacity: 1, y: 0 }}"
             transition="{{" duration: 0.6 }}'
             className='text-center mb-16''
@@ -688,11 +687,11 @@ initial="{{" opacit>
               See how different project types are priced
             </p>'
           </motion.div>''
-          <div className = 'grid grid-cols-1 lg: grid-cols-3 gap-8'>,
+          <div className = 'grid grid-cols-1 lg: gri d-cols-3 gap-8'>,
             {pricingExamples.map((example, index) => (
               <motion.div,"
 key="{example.scenario}""
-                initial="{{" opacity: 0, y: 20 }}"
+                initial="{{" opacity: 0, y: 2 0 }}"
                 animate="{{" opacity: 1, y: 0 }}"
                 transition="{{" duration: 0.6, delay: 0.1 * index }}'
               >''
@@ -706,14 +705,14 @@ key="{example.scenario}""
                   <ul className='space-y-3 mb-6'>'
                     {example.features.map((feature, featureIndex) => ('
                       <li key="{featureIndex}" className='flex items-center text-gray-300 text-sm>'
-                        <CheckCircle className='w-4 h-4 text-green-500 mr-3 flex-shrink-0' />
+                        <CheckCircle className='w-4 h-4 text-green-500 mr-3 flex-shrink-0'  />
                         {feature}
                       </li>
                     ))}'
                   </ul>''
                   <div className='text-center>'
                     <Badge variant='secondary' className='text-green-400>'
-                      <TrendingUp className='w-4 h-4 mr-1' />
+                      <TrendingUp className='w-4 h-4 mr-1'  />
                       {example.roi}
                     </Badge>
                   </div>
@@ -724,14 +723,14 @@ key="{example.scenario}""
         </div>
       </section>
       {/*   */}"
-      <section className="py-20 px-4 sm: px-6 lg:px-8">"
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8">"
         <div className="max-w-7xl mx-auto">',
-      <section className='py-20 px-4 sm: px-6 l>
-    g: px-8>'
+      <section className='py-20 px-4 sm: p x-6 l>
+    g: p x-8>'
         <div className='max-w-7xl mx-auto'>,
           <motion.div,"
 initial="{{" opacit>
-    y: 0, y: 20 }}"
+    y: 0, y: 2 0 }}"
             animate="{{" opacity: 1, y: 0 }}"
             transition="{{" duration: 0.6 }}'
             className='text-center mb-16''
@@ -743,18 +742,18 @@ initial="{{" opacit>
               Smart strategies to maximize your AI investment,
             </p>'
           </motion.div>''
-          <div className='grid grid-cols-1 md: grid-cols-2 gap-8'>,
+          <div className='grid grid-cols-1 md: gri d-cols-2 gap-8'>,
             {costSavingTips.map((tip, index) => (
               <motion.div,"
 key="{tip.tip}""
-                initial="{{" opacity: 0, y: 20 }}"
+                initial="{{" opacity: 0, y: 2 0 }}"
                 animate="{{" opacity: 1, y: 0 }}"
                 transition="{{" duration: 0.6, delay: 0.1 * index }}'
               >''
                 <Card className='p-6>'
                   <div className='flex items-start>'
                     <div className='p-2 rounded-lg bg-gradient-to-r from-green-500 to-emerald-500 mr-4>'
-                      <Lightbulb className='w-5 h-5 text-white' />'
+                      <Lightbulb className='w-5 h-5 text-white'  />'
                     </div>''
                     <div className='flex-1>'
                       <h3 className='text-lg font-bold text-white mb-2'>{tip.tip}</h3>''
@@ -780,10 +779,10 @@ key="{tip.tip}""
         </section>
 
       {/*   */}"
-      <section className = "py-20 px-4 sm: px-6 lg:px-8 bg-slate-800/50">"
+      <section className = "py-20 px-4 sm: p x-6 lg: p x-8 bg-slate-800/50">"
         <div className="max-w-4xl mx-auto text-center">,
           <motion.div,"
-initial="{{" opacity: 0, y: 20 }}"
+initial="{{" opacity: 0, y: 2 0 }}"
             animate="{{" opacity: 1, y: 0 }}"
             transition="{{" duration: 0.6 }}
           >"
@@ -791,33 +790,33 @@ initial="{{" opacity: 0, y: 20 }}"
               Get Your Custom Quote,
         {/*   */}"
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">"
+          <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8 text-center">"
             <h2 className="text-3xl font-bold text-white mb-6">
               Need a Custom Quote?
             </h2>"
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
               Every business is unique. Contact us for a personalized pricing proposal tailored to your specific needs.
             </p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">"
               <Link href="/contact""
-                className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-50 transition-colors font-semibold text-lg inline-flex items-center justify-center"
+                className="bg-white text-blue-600 px-8 py-4 rounded-lg hover: b g-gray-50 transition-colors font-semibold text-lg inline-flex items-center justify-center"
               >
                 Get Custom Quote"
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5"  />
               </Link>"
               <Link href="/services""
-                className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold text-lg inline-flex items-center justify-center"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg hover: b g-white hover: tex t-blue-600 transition-colors font-semibold text-lg inline-flex items-center justify-center"
               >
                 View All Services,
         </div>
       </section>,
       {/*   */}'
-      <section className='py-20 px-4 sm: px-6 l>
-    g: px-8 bg-slate-800/50>'
+      <section className='py-20 px-4 sm: p x-6 l>
+    g: p x-8 bg-slate-800/50>'
         <div className='max-w-4xl mx-auto text-center'>,
           <motion.div,"
 initial="{{" opacit>
-    y: 0, y: 20 }}"
+    y: 0, y: 2 0 }}"
             animate="{{" opacity: 1, y: 0 }}"
             transition="{{" duration: 0.6 }}'
           >''
@@ -827,13 +826,13 @@ initial="{{" opacit>
             <p className = 'text-xl text-gray-300 mb-8'>
               Ready to get started? Contact us for a personalized quote based on your specific requirements.
             </p>''
-            <div className = 'flex flex-col sm: flex-row gap-4 justify-center>'
+            <div className = 'flex flex-col sm: fle x-row gap-4 justify-center>'
               <Button size='lg' className='bg-gradient-to-r from-blue-500 to-purple-600 text-white>'
-                <Calculator className='w-5 h-5 mr-2' />,
+                <Calculator className='w-5 h-5 mr-2'  />,
                 Get Free Quote,'
               </Button>''
               <Button size='lg' variant='outline>'
-                <HelpCircle className='w-5 h-5 mr-2' />
+                <HelpCircle className='w-5 h-5 mr-2'  />
                 Ask Questions,
               </Button>
   TrendingUp,
@@ -851,7 +850,7 @@ export default function PricingGuide() {
         'Up to 5 team members', 'Basic AI services','
         'Email support', 'Standard templates','
         'Basic analytics', '1GB storage'
-      ], popular: false,'
+      ], popular: fals e,'
       cta: 'Start Free Trial'}, {'
       name: 'Professional','
       price: '$299', period: '/month','
@@ -861,7 +860,7 @@ export default function PricingGuide() {
         'Custom templates', 'Advanced analytics','
         '10GB storage', 'API access','
         'Custom integrations'
-      ], popular: true,'
+      ], popular: tru e,'
       cta: 'Start Free Trial'}, {'
       name: 'Enterprise','
       price: 'Custom', period: '','
@@ -871,23 +870,23 @@ export default function PricingGuide() {
         'White-label options', 'Custom analytics','
         'Unlimited storage', 'Full API access','
         'Custom development', 'SLA guarantee'
-      ], popular: false,'
+      ], popular: fals e,'
       cta: 'Contact Sales'}
   ]
 
   const addOns = [
     {'
       name: 'Additional AI Credits', price: '$0.10','
-      description: 'Per AI-generated content piece', icon: Brain},
+      description: 'Per AI-generated content piece', icon: Brai n},
     {'
       name: 'Extra Storage', price: '$5','
-      description: 'Per 10GB per month', icon: Database},
+      description: 'Per 10GB per month', icon: Databas e},
     {'
       name: 'Priority Support', price: '$99','
-      description: 'Per month for faster response', icon: Shield},
+      description: 'Per month for faster response', icon: Shiel d},
     {'
       name: 'Custom Development', price: '$150','
-      description: 'Per hour for custom features', icon: Network}
+      description: 'Per hour for custom features', icon: Networ k}
   ]
 
   const faqs = [
@@ -913,7 +912,7 @@ name: 'Startup','
       price: '$2,500','
       period: '/month','
       description: 'Perfect for startups and small businesses',
-      icon: Users,
+      icon: User s,
       features: [',
         'Basic AI automation','
         'Cloud infrastructure setup','
@@ -923,13 +922,13 @@ name: 'Startup','
         'Basic security features','
         'Basic AI automation,Cloud infrastructure setup,Email support,Monthly reporting,Up to 5 team members,Basic security features'
       ],
-      popular: false},
+      popular: fals e},
     {'
       name: 'Professional','
       price: '$7,500','
       period: '/month','
       description: 'Ideal for growing businesses',
-      icon: Building,
+      icon: Buildin g,
       features: [',
         'Advanced AI solutions','
         'Full cloud migration','
@@ -941,13 +940,13 @@ name: 'Startup','
         'Custom dashboards','
         'Advanced AI solutions,Full cloud migration,Priority support,Weekly reporting,Up to 25 team members,Advanced security,API integrations,Custom dashboards'
       ],
-      popular: true},
+      popular: tru e},
     {'
       name: 'Enterprise','
       price: 'Custom','
       period: '','
       description: 'Tailored solutions for large organizations',
-      icon: Award,
+      icon: Awar d,
       features: [',
         'Custom AI development','
         'Multi-cloud architecture','
@@ -960,7 +959,7 @@ name: 'Startup','
         'SLA guarantees',
         'Custom AI development,Multi-cloud architecture,24/7 dedicated support,Real-time monitoring,Unlimited team members,Enterprise security,Custom integrations,Dedicated account manager,SLA guarantees
       ],
-      popular: false}]
+      popular: fals e}]
   const addOnServices = [
   {'
       name: 'AI Development','
@@ -987,41 +986,41 @@ name: 'Startup','
         <title>Pricing Guide - Zion Tech Group</title>"
         <meta name = "description""
           content="Transparent pricing for AI services, cloud solutions, and technology consulting. Choose the plan that fits your business needs."
-        />"
-        <meta name="viewport" content="width="device-width," initial-scale=1" />
+         />"
+        <meta name="viewport" content="width="device-width," initial-scale=1"  />
       </Head>
 "
       <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/*   */}'
         <section className='relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600'>'
-          <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20 sm:py-32'>'
+          <div className='max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8 py-20 sm: p y-32'>'
             <div className='text-center'>'
               <Badge className='mb-4 bg-white/20 text-white border-white/30'>"
         <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600">"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20 sm:py-32">"
+          <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8 py-20 sm: p y-32">"
             <div className="text-center">"
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+              <h1 className="text-4xl sm: tex t-5xl lg: tex t-6xl font-bold text-white mb-6">
                 Transparent Pricing,
               </h1>"
-              <p className="text-xl sm:text-2xl text-blue-100 max-w-4xl mx-auto mb-8">,
+              <p className="text-xl sm: tex t-2xl text-blue-100 max-w-4xl mx-auto mb-8">,
                 Choose the perfect plan for your business needs. No hidden fees,
                 no surprises.
               </p>'
-              <div className='flex flex-col sm: flex-row gap-4 justify-center'>'
-                <Button size='lg' className='bg-white text-blue-600 hover:bg-blue-50'>
+              <div className='flex flex-col sm: fle x-row gap-4 justify-center'>'
+                <Button size='lg' className='bg-white text-blue-600 hover: b g-blue-50'>
                   Start Free Trial'
-                  <ArrowRight className='ml-2 h-5 w-5' />
+                  <ArrowRight className='ml-2 h-5 w-5'  />
                 </Button>'
-                <Button size='lg' variant='outline' className='border-white text-white hover:bg-white hover:text-blue-600'>
+                <Button size='lg' variant='outline' className='border-white text-white hover: b g-white hover: tex t-blue-600'>
                   Contact Sales,
                 </Button>"
               <div className="flex items-center justify-center space-x-4 text-blue-100">"
                 <div className="flex items-center">"
-                  <Shield className="w-5 h-5 mr-2" />
+                  <Shield className="w-5 h-5 mr-2"  />
                   <span>30-day money-back guarantee</span>
                 </div>"
                 <div className="flex items-center">"
-                  <Clock className="w-5 h-5 mr-2" />
+                  <Clock className="w-5 h-5 mr-2"  />
                   <span>Cancel anytime</span>
                 </div>
               </div>
@@ -1030,26 +1029,26 @@ name: 'Startup','
         </section>
 ,
         {/*   */}"
-        <section className="py-20 sm: py-32">"
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
+        <section className="py-20 sm: p y-32">"
+          <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">"
             <div className="text-center mb-16">"
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl sm: tex t-4xl font-bold text-gray-900 mb-6">
                 Choose Your Plan,
               </h2>"
-              <p className="{`text-lg" sm:text-xl text-gray-600 max-w-3xl mx-auto`>
+              <p className="{`text-lg" sm: tex t-xl text-gray-600 max-w-3xl mx-auto`>
                 Flexible pricing options designed to scale with your business,
               </p>
             </div>
 
 '
-            <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>,
+            <div className='grid grid-cols-1 md: gri d-cols-3 gap-8'>,
               {plans.map((plan, index) => ("
                 <Card key="{index}" className="{`p-8" relative ${plan.popular ? 'ring-2 ring-blue-500 shadow-xl scale-105' : ''}`}>
                   {plan.popular && ('
                     <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>'
                       <Badge className='bg-blue-500 text-white'>Most Popular</Badge>
             "
-            <div className="`grid" grid-cols-1 lg: grid-cols-3 gap-8`>,
+            <div className="`grid" grid-cols-1 lg: gri d-cols-3 gap-8`>,
               {pricingTiers.map((tier, index) => ("
                 <div key="{index}""
                   className="{`relative" bg-white rounded-2xl shadow-lg p-8 ${tier.popular ? 'ring-2 ring-blue-500 transform scale-105' : ''}`}
@@ -1081,7 +1080,7 @@ name: 'Startup','
                   <ul className="space-y-4 mb-8">
                     {tier.features.map((feature, featureIndex) => ("
                       <li key="{featureIndex}" className="flex items-center">"
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />"
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0"  />"
                         <span className="text-gray-700">{feature}</span>
                       </li>
                     ))}
@@ -1090,11 +1089,11 @@ name: 'Startup','
                   <Link href="{`/contact`">"
                     <button className="{`w-full" py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                         tier.popular'
-                          ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover: from-blue-700 hover:to-purple-700''>
-                          : 'bg-gray-100 text-gray-900 hover:bg-gray-200'}`}
+                          ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover: fro m-blue-700 hover: t o-purple-700''>
+                          : 'bg-gray-100 text-gray-900 hover: b g-gray-200'}`}
                     >
                       Get Started"
-                      <ArrowRight className="`w-4" h-4 ml-2 inline`} />
+                      <ArrowRight className="`w-4" h-4 ml-2 inline`}  />
                     </button>
                   </Link>
                 </div>
@@ -1105,36 +1104,36 @@ name: 'Startup','
 
         {/*   */}'
         <section className='py-20 bg-white'>'
-          <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>'
+          <div className='max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8'>'
             <div className='text-center mb-16'>'
-              <h2 className='text-3xl sm:text-4xl font-bold text-gray-900 mb-4'>
+              <h2 className='text-3xl sm: tex t-4xl font-bold text-gray-900 mb-4'>
                 Add-on Services,
         {/*   */}"
         <section className="py-20 bg-white">"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
+          <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">"
             <div className="text-center mb-16">"
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl sm: tex t-4xl font-bold text-gray-900 mb-6">
                 Additional Services,
               </h2>"
-              <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-lg sm: tex t-xl text-gray-600 max-w-3xl mx-auto">
                 Enhance your plan with specialized services,
               </p>
             </div>
 
 '
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>,
+            <div className='grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8'>,
               {addOns.map((addon, index) => ("
-                <Card key="{index}" className='p-6 text-center hover: shadow-lg transition-shadow duration-300'>'
+                <Card key="{index}" className='p-6 text-center hover: shado w-lg transition-shadow duration-300'>'
                   <div className='inline-flex items-center justify-center w-12 h-12 rounded-full bg-blue-100 mb-4'>'
                     <addon.icon className='h-6 w-6 text-blue-600' />
             "
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">,
+            <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-6">,
               {addOnServices.map((service, index) => ("
                 <div key="{index}""
-                  className="bg-gray-50 rounded-xl p-6 hover: shadow-lg transition-shadow"
+                  className="bg-gray-50 rounded-xl p-6 hover: shado w-lg transition-shadow"
                 >"
                   <div className="text-center">"
-                    <Calculator className="w-12 h-12 text-blue-600 mx-auto mb-4" />"
+                    <Calculator className="w-12 h-12 text-blue-600 mx-auto mb-4"  />"
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">,
                       {service.name}
                     </h3>"
@@ -1156,13 +1155,13 @@ name: 'Startup','
 
         {/*   */}'
         <section className='py-20'>'
-          <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8'>'
+          <div className='max-w-4xl mx-auto px-4 sm: p x-6 lg: p x-8'>'
             <div className='text-center mb-16'>'
-              <h2 className='text-3xl sm:text-4xl font-bold text-gray-900 mb-4'>"
+              <h2 className='text-3xl sm: tex t-4xl font-bold text-gray-900 mb-4'>"
         <section className="py-20 bg-gray-50">"
-          <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8">"
+          <div className="max-w-4xl mx-auto px-4 sm: p x-6 lg: p x-8">"
             <div className="text-center mb-16">"
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl sm: tex t-4xl font-bold text-gray-900 mb-6">
                 Frequently Asked Questions,
               </h2>
             </div>
@@ -1218,36 +1217,36 @@ accommodate enterprise billing arrangements.
 
         {/*   */}'
         <section className='py-20 bg-gradient-to-r from-blue-600 to-purple-600'>'
-          <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>'
-            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-4'>"
+          <div className='max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8 text-center'>'
+            <h2 className='text-3xl sm: tex t-4xl font-bold text-white mb-4'>"
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">"
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+          <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8 text-center">"
+            <h2 className="text-3xl sm: tex t-4xl font-bold text-white mb-6">
               Ready to Get Started?
             </h2>"
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">,
               Contact us today for a free consultation and custom quote tailored,
 to your needs.
             </p>"
-            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">"
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center items-center">"
               <a href="tel:+13024640950""
-                className="flex items-center text-white hover:text-blue-200 transition-colors"
+                className="flex items-center text-white hover: tex t-blue-200 transition-colors"
               >"
-                <Phone className="w-5 h-5 mr-2" />
+                <Phone className="w-5 h-5 mr-2"  />
                 +1 302 464 0950,
               </a>"
-              <a href="mailto:kleber@ziontechgroup.com""
-                className="flex items-center text-white hover:text-blue-200 transition-colors"
+              <a href="mailto: klebe r@ziontechgroup.com""
+                className="flex items-center text-white hover: tex t-blue-200 transition-colors"
               >"
-                <Mail className="w-5 h-5 mr-2" />
+                <Mail className="w-5 h-5 mr-2"  />
                 kleber@ziontechgroup.com,
               </a>
             </div>"
             <div className="mt-8">"
               <Link href="/contact">"
-                <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
+                <button className="bg-white text-blue-600 hover: b g-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
                   Get Free Consultation"
-                  <ArrowRight className="w-5 h-5 ml-2 inline" />
+                  <ArrowRight className="w-5 h-5 ml-2 inline"  />
                 </button>
               </Link>
             </div>
@@ -1255,7 +1254,7 @@ to your needs.
         </section>
       </main>
       
-      <SimpleFooter />
+      <SimpleFooter  />
     </>
   )}
       </div>

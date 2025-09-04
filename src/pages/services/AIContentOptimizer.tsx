@@ -13,13 +13,13 @@ import {
   Search,
   PenTool} from 'lucide-react.ts';
 
-export default function AIContentOptimizer(...args: any[]): any {
+export default function AIContentOptimizer(...args: an y[]): any {
 
   
   
   
   
-  return()
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
         title="AI Content Optimizer - Intelligent Content Optimization Platform | Zion Tech Group""
@@ -28,28 +28,28 @@ export default function AIContentOptimizer(...args: any[]): any {
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"
-        <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 via-blue-600/20 to-purple-600/20" />'"
-        <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 via-blue-600/20 to-purple-600/20"  />'"
+        <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10"  />
 "
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8 relative z-10">
           <motion.div"
             className="text-center"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >"
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+            <h1 className="text-5xl md: tex t-7xl font-bold text-white mb-6">
               AI Content Optimizer
             </h1>"
-            <p className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto mb-8">
+            <p className="text-xl md: tex t-2xl text-zion-slate-light max-w-4xl mx-auto mb-8">
               Supercharge your content performance with AI-powered optimization,
               analytics, and intelligent content creation.
             </p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-              <button className="px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">"
+              <button className="px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-lg hover: fro m-green-700 hover: t o-blue-700 transition-all duration-300 transform hover: scal e-105">
                 Start Free Trial
               </button>"
-              <button className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
+              <button className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover: b g-white/10 transition-all duration-300">
                 Watch Demo
               </button>
             </div>
@@ -59,15 +59,15 @@ export default function AIContentOptimizer(...args: any[]): any {
 
       {/* Features Section */}"
       <section className="py-20 relative">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
           <motion.div"
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
             transition={{ duration: 0.8 }}
           >"
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
               Powered by Advanced AI
             </h2>"
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
@@ -76,15 +76,15 @@ export default function AIContentOptimizer(...args: any[]): any {
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: anygri d-cols-2 lg: gri d-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={index}"
-                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300"
-                initial={{ opacity: 0, y: 30 }}
+                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: borde r-white/20 transition-all duration-300"
+                initial={{ opacity: 0, y: 3 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: tru e }}
+                transition={{ duration: 0.6, delay: inde x * 0.1 }}
                 whileHover={{ y: -5, scale: 1.02 }}
               >
                 <div
@@ -104,15 +104,15 @@ export default function AIContentOptimizer(...args: any[]): any {
 
       {/* Use Cases Section */}"
       <section className="py-20 bg-gradient-to-r from-white/5 to-white/10 relative">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
           <motion.div"
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
             transition={{ duration: 0.8 }}
           >"
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
               Optimize Any Content Type
             </h2>"
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
@@ -121,15 +121,15 @@ export default function AIContentOptimizer(...args: any[]): any {
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: anygri d-cols-2 lg: gri d-cols-4 gap-8">
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}"
                 className="text-center"
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 3 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: tru e }}
+                transition={{ duration: 0.6, delay: inde x * 0.1 }}
               >
                 <div`
                   className={`w-20 h-20 bg-gradient-to-r ${useCase.color} rounded-full flex items-center justify-center mx-auto mb-6`}
@@ -148,15 +148,15 @@ export default function AIContentOptimizer(...args: any[]): any {
 
       {/* Benefits Section */}"
       <section className="py-20 relative">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
           <motion.div"
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
             transition={{ duration: 0.8 }}
           >"
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
               Proven Results
             </h2>"
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
@@ -165,15 +165,15 @@ export default function AIContentOptimizer(...args: any[]): any {
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: anygri d-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}"
                 className="text-center"
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 3 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
+                viewport={{ once: tru e }}
+                transition={{ duration: 0.6, delay: inde x * 0.2 }}
               >"
                 <div className="w-20 h-20 bg-gradient-to-r from-green-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">"
                   <benefit.icon className="w-10 h-10 text-white" />
@@ -193,15 +193,15 @@ export default function AIContentOptimizer(...args: any[]): any {
 
       {/* Pricing Section */}"
       <section className="py-20 bg-gradient-to-r from-white/5 to-white/10 relative">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
           <motion.div"
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
             transition={{ duration: 0.8 }}
           >"
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
               Simple, Transparent Pricing
             </h2>"
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
@@ -210,7 +210,7 @@ export default function AIContentOptimizer(...args: any[]): any {
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: anygri d-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <motion.div
                 key={index}`
@@ -220,10 +220,10 @@ export default function AIContentOptimizer(...args: any[]): any {
                     ? 'border-blue-500/50 bg-blue-500/10''
                     : 'border-white/10'`
                 }`}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 3 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: tru e }}
+                transition={{ duration: 0.6, delay: inde x * 0.1 }}
                 whileHover={{ y: -5, scale: 1.02 }}
               >
                 {plan.popular && ("
@@ -252,7 +252,7 @@ export default function AIContentOptimizer(...args: any[]): any {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />"                      <span className="text-white">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"   />"                      <span className="text-white">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -261,8 +261,8 @@ export default function AIContentOptimizer(...args: any[]): any {
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
 
                     plan.popular'
-                      ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white hover:from-green-700 hover:to-blue-700''
-                      : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'`
+                      ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white hover: fro m-green-700 hover: t o-blue-700''
+                      : 'bg-white/10 text-white border border-white/20 hover: b g-white/20'`
                   }`}
                 >
                   {plan.cta}
@@ -275,25 +275,25 @@ export default function AIContentOptimizer(...args: any[]): any {
 
       {/* CTA Section */}"
       <section className="py-20 bg-gradient-to-r from-green-600/20 to-blue-600/20 relative">"
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-4xl mx-auto px-4 sm: p x-6 lg: p x-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
             transition={{ duration: 0.8 }}
           >"
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
               Ready to Optimize Your Content?
             </h2>"
             <p className="text-xl text-zion-slate-light mb-8">
               Join thousands of content creators who have already revolutionized
               their content performance with AI
             </p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-              <button className="px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">"
+              <button className="px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-lg hover: fro m-green-700 hover: t o-blue-700 transition-all duration-300 transform hover: scal e-105">
                 Start Free Trial
               </button>"
-              <button className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
+              <button className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover: b g-white/10 transition-all duration-300">
                 Schedule Demo
               </button>
             </div>
