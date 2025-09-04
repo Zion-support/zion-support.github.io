@@ -15,7 +15,7 @@ export default function FirstSteps() {
     <>
       <Head>
         <title>First Steps - Zion Tech Group Documentation</title>
-        <meta name="description" content="Your first steps to getting started with Zion Tech Group's services and solutions." />
+        <meta name="description" content="Your first steps to getting started with Zion Tech Group&apos;s services and solutions." />
         <link rel="canonical" href={`${contact.site}/docs/first-steps`} />
       </Head>
 
@@ -29,7 +29,7 @@ export default function FirstSteps() {
             </Link>
             <h1 className="text-4xl font-bold text-gray-900 mb-4">First Steps</h1>
             <p className="text-xl text-gray-600">
-              A step-by-step guide to begin your journey with Zion Tech Group's innovative solutions.
+              A step-by-step guide to begin your journey with Zion Tech Group&apos;s innovative solutions.
             </p>
           </div>
 
@@ -37,12 +37,12 @@ export default function FirstSteps() {
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-8 text-white mb-8">
             <h2 className="text-2xl font-semibold mb-4">Welcome to Zion Tech Group!</h2>
             <p className="text-blue-100 mb-6">
-              You're about to discover how our 350+ services can transform your business operations, 
+              You&apos;re about to discover how our 350+ services can transform your business operations, 
               from micro SaaS applications to AI-powered automation and comprehensive IT solutions.
             </p>
             <div className="flex items-center">
               <Play className="w-5 h-5 mr-2" />
-              <span className="font-medium">Let's get started on your digital transformation journey</span>
+              <span className="font-medium">Let&apos;s get started on your digital transformation journey</span>
             </div>
           </div>
 
@@ -57,7 +57,7 @@ export default function FirstSteps() {
               </div>
               
               <p className="text-gray-600 mb-6">
-                Before diving in, let's understand what you're looking to achieve. Our services span three main categories:
+                Before diving in, let&apos;s understand what you&apos;re looking to achieve. Our services span three main categories:
               </p>
 
               <div className="grid md:grid-cols-3 gap-6">
@@ -204,7 +204,7 @@ export default function FirstSteps() {
               </div>
               
               <p className="text-gray-600 mb-6">
-                Once you've identified the services you need, contact our team for a personalized quote and implementation plan.
+                Once you&apos;ve identified the services you need, contact our team for a personalized quote and implementation plan.
               </p>
 
               <div className="grid md:grid-cols-2 gap-6">
@@ -213,7 +213,7 @@ export default function FirstSteps() {
                   <ul className="space-y-2 text-gray-600">
                     <li className="flex items-center">
                       <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                      Specific services you're interested in
+                      Specific services you&apos;re interested in
                     </li>
                     <li className="flex items-center">
                       <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
@@ -267,7 +267,7 @@ export default function FirstSteps() {
           <div className="bg-green-50 border border-green-200 rounded-lg p-8 text-center">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">Ready for the Next Step?</h2>
             <p className="text-gray-600 mb-6">
-              You're now ready to explore our services and start your digital transformation journey.
+              You&apos;re now ready to explore our services and start your digital transformation journey.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/services-catalog" className="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">

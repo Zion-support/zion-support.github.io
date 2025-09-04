@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { ArrowLeft, Key, Shield, Lock, User } from 'lucide-react';
+import { ArrowLeft, Key, Shield, Lock } from 'lucide-react';
 
 export default function Authentication() {
   const contact = {
@@ -29,7 +29,7 @@ export default function Authentication() {
             </Link>
             <h1 className="text-4xl font-bold text-gray-900 mb-4">Authentication</h1>
             <p className="text-xl text-gray-600">
-              Secure authentication methods for accessing Zion Tech Group's APIs and services.
+              Secure authentication methods for accessing Zion Tech Group&apos;s APIs and services.
             </p>
           </div>
 

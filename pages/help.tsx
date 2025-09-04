@@ -272,7 +272,7 @@ export default function Help() {
               Still Need Help?
             </h2>
             <p style={{ fontSize: '1.1rem', color: '#94a3b8', marginBottom: 30, maxWidth: 600, margin: '0 auto 30px' }}>
-              Can't find what you're looking for? Our support team is here to help you with any questions or issues.
+              Can&apos;t find what you&apos;re looking for? Our support team is here to help you with any questions or issues.
             </p>
             <div style={{ display: 'flex', gap: 20, justifyContent: 'center', flexWrap: 'wrap' }}>
               <Link href="/contact" style={{

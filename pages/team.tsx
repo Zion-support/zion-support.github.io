@@ -225,7 +225,7 @@ export default function Team() {
               Join Our Team
             </h2>
             <p style={{ fontSize: '1.1rem', color: '#94a3b8', marginBottom: 30, maxWidth: 600, margin: '0 auto 30px' }}>
-              We're always looking for talented individuals who share our passion for technology and innovation. 
+              We&apos;re always looking for talented individuals who share our passion for technology and innovation. 
               Join us in building the future of technology.
             </p>
             <div style={{ display: 'flex', gap: 20, justifyContent: 'center', flexWrap: 'wrap' }}>

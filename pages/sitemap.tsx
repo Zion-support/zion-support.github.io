@@ -124,7 +124,7 @@ export default function Sitemap() {
             <div className="bg-slate-900/60 rounded-xl p-8 border border-white/10">
               <h2 className="text-2xl font-bold mb-4">Need Help Finding Something?</h2>
               <p className="text-slate-300 mb-6">
-                If you can't find what you're looking for, our team is here to help.
+                If you can&apos;t find what you&apos;re looking for, our team is here to help.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a 
