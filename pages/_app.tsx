@@ -28,9 +28,8 @@ function Header(): any {
         
         {/* Desktop Navigation */}
         <div style={{ 
-          display: 'flex', gap: 4, flexWrap: 'wrap', alignItems: 'center',
-          '@media (max-width: 768px)': { display: 'none' } as any
-        }}>
+          display: 'flex', gap: 4, flexWrap: 'wrap', alignItems: 'center'
+        } as any}>
           <Link href="/" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Home</Link>
           <Link href="/services" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>All Services</Link>
           <Link href="/services-catalog" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Catalog</Link>
@@ -49,9 +48,8 @@ function Header(): any {
         <button 
           style={{ 
             background: 'none', border: 'none', color: 'white', fontSize: '1.5rem', cursor: 'pointer',
-            display: 'none',
-            '@media (max-width: 768px)': { display: 'block' } as any
-          }}
+            display: 'none'
+          } as any}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle mobile menu"
           aria-expanded={mobileMenuOpen}
@@ -61,30 +59,28 @@ function Header(): any {
       </nav>
       
       {/* Mobile Menu */}
-      <div style={{ 
-        background: 'rgba(11, 18, 32, 0.98)', 
-        borderTop: '1px solid rgba(255,255,255,0.1)',
-        padding: '20px',
-        display: mobileMenuOpen ? 'block' : 'none',
-        animation: mobileMenuOpen ? 'slideDown 0.3s ease-out' : 'slideUp 0.3s ease-out',
-        position: 'relative',
-        zIndex: 40
-      }}>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 12, maxWidth: 1400, margin: '0 auto' }}>
-          <Link href="/" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)', transition: 'color 0.2s ease' }} onClick={() => setMobileMenuOpen(false)} onMouseEnter={(e) => e.target.style.color = '#3b82f6'} onMouseLeave={(e) => e.target.style.color = 'white'}>Home</Link>
-          <Link href="/services" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)', transition: 'color 0.2s ease' }} onClick={() => setMobileMenuOpen(false)} onMouseEnter={(e) => e.target.style.color = '#3b82f6'} onMouseLeave={(e) => e.target.style.color = 'white'}>All Services</Link>
-          <Link href="/services-catalog" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)', transition: 'color 0.2s ease' }} onClick={() => setMobileMenuOpen(false)} onMouseEnter={(e) => e.target.style.color = '#3b82f6'} onMouseLeave={(e) => e.target.style.color = 'white'}>Catalog</Link>
-          <Link href="/cloud-devops" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)', transition: 'color 0.2s ease' }} onClick={() => setMobileMenuOpen(false)} onMouseEnter={(e) => e.target.style.color = '#3b82f6'} onMouseLeave={(e) => e.target.style.color = 'white'}>Cloud DevOps</Link>
-          <Link href="/cybersecurity" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)', transition: 'color 0.2s ease' }} onClick={() => setMobileMenuOpen(false)} onMouseEnter={(e) => e.target.style.color = '#3b82f6'} onMouseLeave={(e) => e.target.style.color = 'white'}>Cybersecurity</Link>
-          <Link href="/quantum-computing" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)', transition: 'color 0.2s ease' }} onClick={() => setMobileMenuOpen(false)} onMouseEnter={(e) => e.target.style.color = '#3b82f6'} onMouseLeave={(e) => e.target.style.color = 'white'}>Quantum</Link>
-          <Link href="/docs" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)', transition: 'color 0.2s ease' }} onClick={() => setMobileMenuOpen(false)} onMouseEnter={(e) => e.target.style.color = '#3b82f6'} onMouseLeave={(e) => e.target.style.color = 'white'}>Docs</Link>
-          <Link href="/pricing" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)', transition: 'color 0.2s ease' }} onClick={() => setMobileMenuOpen(false)} onMouseEnter={(e) => e.target.style.color = '#3b82f6'} onMouseLeave={(e) => e.target.style.color = 'white'}>Pricing</Link>
-          <Link href="/contact" style={{ 
-            background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
-            color: 'white', padding: '12px 16px', textDecoration: 'none', borderRadius: 6, textAlign: 'center', fontWeight: 600, marginTop: 8, transition: 'transform 0.2s ease'
-          }} onClick={() => setMobileMenuOpen(false)} onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'} onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}>Contact</Link>
+      {mobileMenuOpen && (
+        <div style={{ 
+          background: 'rgba(11, 18, 32, 0.98)', 
+          borderTop: '1px solid rgba(255,255,255,0.1)',
+          padding: '20px'
+        }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 12, maxWidth: 1400, margin: '0 auto' }}>
+            <Link href="/" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)' }} onClick={() => setMobileMenuOpen(false)}>Home</Link>
+            <Link href="/services" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)' }} onClick={() => setMobileMenuOpen(false)}>All Services</Link>
+            <Link href="/services-catalog" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)' }} onClick={() => setMobileMenuOpen(false)}>Catalog</Link>
+            <Link href="/cloud-devops" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)' }} onClick={() => setMobileMenuOpen(false)}>Cloud DevOps</Link>
+            <Link href="/cybersecurity" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)' }} onClick={() => setMobileMenuOpen(false)}>Cybersecurity</Link>
+            <Link href="/quantum-computing" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)' }} onClick={() => setMobileMenuOpen(false)}>Quantum</Link>
+            <Link href="/docs" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)' }} onClick={() => setMobileMenuOpen(false)}>Docs</Link>
+            <Link href="/pricing" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)' }} onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
+            <Link href="/contact" style={{ 
+              background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+              color: 'white', padding: '12px 16px', textDecoration: 'none', borderRadius: 6, textAlign: 'center', fontWeight: 600, marginTop: 8
+            }} onClick={() => setMobileMenuOpen(false)}>Contact</Link>
+          </div>
         </div>
-      </div>
+      )}
     </header>
   );
 }
