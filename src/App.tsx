@@ -1,6 +1,7 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 import './App.css';
+import ServicesPage from './components/ServicesPage';
 
 function App() {
   return (
@@ -8,6 +9,10 @@ function App() {
       <header className="App-header">
         <h1>Zion Tech Group</h1>
         <p>Leading technology solutions provider</p>
+        <nav style={{ marginTop: 12 }}>
+          <Link to="/" style={{ marginRight: 12 }}>Home</Link>
+          <Link to="/services">Services</Link>
+        </nav>
       </header>
       <main>
         <Routes>
@@ -22,6 +27,7 @@ function App() {
               </div>
             }
           />
+          <Route path="/services" element={<ServicesPage />} />
         </Routes>
       </main>
     </div>
