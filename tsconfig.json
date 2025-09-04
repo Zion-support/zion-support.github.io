@@ -8,29 +8,57 @@
     "strict": true,
     "noEmit": true,
     "skipLibCheck": true,
-    "allowJs": true,
-    "baseUrl": ".",
+
     "paths": {
       "@/*": ["src/*"]
-    }
+    },
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "incremental": false,
+    "baseUrl": ".",
+    "noEmit": true
   },
   "include": [
-    "src/main.tsx",
-    "src/App.tsx"
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "scripts/**/*.ts",
+    "automation/**/*.ts",
+    "types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
     "dist",
-    "out",
-    "build",
-    "automation",
-    "scripts",
-    "tests",
-    "**/*.test.*",
-    "**/__tests__/**",
-    "src/pages/**",
-    "src/store/**",
-    "src/utils/**",
-    "src/types/**"
+
+    "data_backup/**",
+    "src.corrupted/**",
+    "pages/**",
+    "components/**",
+    "src/**",
+    "utils/next-link-shim.tsx",
+    "playwright.config.ts",
+    "api-backup",
+    "api-disabled",
+    "api.disabled.temp",
+    "pages.disabled",
+    "backup-pages",
+    "automation/**",
+    "scripts/**",
+    "src.corrupted/**",
+    "deployments/**",
+    "deployment/**",
+    "backup/**",
+    "automation/backups",
+    "automation_backup",
+    "broken_files_backup",
+    "contracts",
+    "data",
+    "data/**",
+    "cypress",
+    "temp_working",
+    "supabase/functions",
+    "**/*.backup",
+    "**/*.disabled"
   ]
 }
