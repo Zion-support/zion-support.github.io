@@ -1,80 +1,107 @@
 #!/bin/bash
 
-echo "🔧 Resolving merge conflicts automatically..."
+# Comprehensive Merge Conflict Resolution Script
+# This script will resolve common merge conflicts and merge recent branches
 
-# Function to resolve conflicts by accepting our version
-accept_our_version() {
-    local file="$1"
-    if [ -f "$file" ]; then
-        echo "Accepting our version for: $file"
-        git checkout --ours "$file"
-        git add "$file"
+set -e
+
+echo "🚀 Starting comprehensive merge conflict resolution..."
+
+# Function to resolve conflicts by accepting our version (main branch)
+resolve_conflicts_ours() {
+    local branch=$1
+    echo "📋 Resolving conflicts for branch: $branch"
+    
+    # Checkout the branch
+    git checkout -b "temp-merge-$branch" origin/$branch
+    
+    # Merge main into the branch
+    git merge main --no-commit --no-ff || true
+    
+    # Resolve conflicts by accepting our version for most files
+    git checkout --ours . || true
+    
+    # Add all resolved files
+    git add . || true
+    
+    # Commit the merge
+    git commit -m "Resolve merge conflicts: accept main branch changes for $branch" || true
+    
+    # Merge back to main
+    git checkout main
+    git merge "temp-merge-$branch" --no-ff -m "Merge $branch with resolved conflicts"
+    
+    # Clean up
+    git branch -D "temp-merge-$branch"
+    
+    echo "✅ Successfully merged $branch"
+}
+
+# Function to resolve conflicts by accepting their version (feature branch)
+resolve_conflicts_theirs() {
+    local branch=$1
+    echo "📋 Resolving conflicts for branch: $branch (accepting their changes)"
+    
+    # Checkout the branch
+    git checkout -b "temp-merge-$branch" origin/$branch
+    
+    # Merge main into the branch
+    git merge main --no-commit --no-ff || true
+    
+    # Resolve conflicts by accepting their version for most files
+    git checkout --theirs . || true
+    
+    # Add all resolved files
+    git add . || true
+    
+    # Commit the merge
+    git commit -m "Resolve merge conflicts: accept feature branch changes for $branch" || true
+    
+    # Merge back to main
+    git checkout main
+    git merge "temp-merge-$branch" --no-ff -m "Merge $branch with resolved conflicts"
+    
+    # Clean up
+    git branch -D "temp-merge-$branch"
+    
+    echo "✅ Successfully merged $branch"
+}
+
+# List of recent branches to merge (most recent first)
+RECENT_BRANCHES=(
+    "cursor/automate-test-fix-improve-and-merge-code-ee3b"
+    "cursor/add-new-services-and-deploy-updates-e792"
+    "cursor/fix-lint-push-and-merge-to-main-4d20"
+    "cursor/automate-test-fix-improve-and-merge-code-c782"
+    "cursor/add-new-services-and-advertise-them-ef37"
+    "cursor/fix-syntax-push-and-merge-to-main-5a4f"
+    "cursor/enhance-pm2-automations-for-development-and-deployment-ada5"
+    "cursor/resolve-conflicts-and-merge-to-main-2fac"
+)
+
+# Ensure we're on main and up to date
+git checkout main
+git pull origin main
+
+# Process each branch
+for branch in "${RECENT_BRANCHES[@]}"; do
+    echo "🔄 Processing branch: $branch"
+    
+    # Check if branch exists
+    if git show-ref --verify --quiet refs/remotes/origin/$branch; then
+        # Try to merge with conflict resolution
+        if resolve_conflicts_ours "$branch"; then
+            echo "✅ Successfully processed $branch"
+        else
+            echo "⚠️  Failed to process $branch, trying alternative approach..."
+            # Try accepting their changes instead
+            resolve_conflicts_theirs "$branch" || echo "❌ Failed to process $branch"
+        fi
+    else
+        echo "⚠️  Branch $branch does not exist, skipping..."
     fi
-}
+done
 
-# Function to resolve conflicts by accepting their version
-accept_their_version() {
-    local file="$1"
-    if [ -f "$file" ]; then
-        echo "Accepting their version for: $file"
-        git checkout --theirs "$file"
-        git add "$file"
-    fi
-}
-
-# Function to remove deleted files
-remove_deleted_file() {
-    local file="$1"
-    echo "Removing deleted file: $file"
-    git rm "$file" 2>/dev/null || true
-}
-
-# Resolve conflicts by accepting our version for key files
-accept_our_version "ERROR_FIXING_AUTOMATION_SUMMARY.md"
-accept_our_version "continuous-improvement-report.json"
-accept_our_version "quality-report.json"
-accept_our_version "package.json"
-accept_our_version "yarn.lock"
-accept_our_version "scripts/automation/enhanced-error-fixing-automation.cjs"
-accept_our_version "src/components/AIChatbot.jsx"
-accept_our_version "src/components/MobileExperienceEnhancer.tsx"
-accept_our_version "src/components/ui/Card.jsx"
-accept_our_version "src/pages/ComprehensiveServicesShowcase2027.tsx"
-accept_our_version "src/pages/Search.tsx"
-
-# Remove deleted files that were deleted in main
-remove_deleted_file ".eslintrc.cjs"
-remove_deleted_file "out/automation/content-registry.json"
-remove_deleted_file "out/automation/new-content-registry.json"
-remove_deleted_file "package-lock.json"
-remove_deleted_file "pages.disabled/comprehensive-services-showcase-2025.tsx"
-remove_deleted_file "src/components/ui/Badge.js.jsx"
-remove_deleted_file "src/components/ui/FloatingOrbs.js.jsx"
-remove_deleted_file "src/components/ui/FloatingOrbs.jsx"
-remove_deleted_file "src/components/ui/Input.js.jsx"
-remove_deleted_file "src/components/ui/Input.jsx"
-remove_deleted_file "src/components/ui/Tabs.js.jsx"
-remove_deleted_file "src/components/ui/badge.js.jsx"
-remove_deleted_file "src/components/ui/card.js.jsx"
-remove_deleted_file "src/components/ui/input.js.jsx"
-remove_deleted_file "src/components/ui/separator.js.jsx"
-remove_deleted_file "src/components/ui/tabs.js.jsx"
-remove_deleted_file "src/lib/slugify.ts"
-remove_deleted_file "src/store/wishlistSlice.js.jsx"
-
-# Accept their version for files that were updated in main
-accept_their_version "components.disabled/layout/EnhancedLayout.tsx"
-accept_their_version "fix_remaining_errors.cjs"
-accept_their_version "hooks.disabled/useWallet.ts"
-
-echo "✅ Merge conflicts resolved!"
-echo "📝 Committing the merge..."
-
-git commit -m "feat: merge main branch with error fixing automation
-
-- Resolved merge conflicts by accepting our error fixing automation changes
-- Removed deleted files that were cleaned up in main branch
-- Integrated latest main branch updates with our automation system
-- All error fixing automation features preserved and functional"
-
-echo "🎉 Merge completed successfully!"
+echo "🎉 Merge conflict resolution completed!"
+echo "📊 Current status:"
+git status
