@@ -103,10 +103,7 @@ const ServicesSection: React.FC = () => {
               </ul>
 
               {/* CTA */}
-              <Link 
-                href={service.href} 
-                className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium group-hover:translate-x-1 transition-transform"
-              >
+              <Link href={service.href} className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium group-hover:translate-x-1 transition-transform">
                 Learn More
                 <ArrowRight className="w-4 h-4 ml-1" />
               </Link>

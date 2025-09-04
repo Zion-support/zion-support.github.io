@@ -1,6 +1,7 @@
 import type { AppProps } from 'next/app';
 import ErrorBoundary from '../components/ErrorBoundary';
 import PerformanceMonitor from '../components/PerformanceMonitor';
+
 import '../styles/globals.css';
 
 function Header(): any {
@@ -155,7 +156,7 @@ function Footer(): any {
 
         {/* Company */}
         <div style={{ display: 'grid', gap: 12 }}>
-          <h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>Company</h3>
+          <h3 style={{ fontWeight: 700, fontSize: '1.1rem'}}>Company</h3>
           <div style={{ display: 'grid', gap: 8 }}>
             <Link href="/" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Home</Link>
             <Link href="/about" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>About Us</Link>
@@ -172,8 +173,8 @@ function Footer(): any {
 
         {/* Contact CTA */}
         <div style={{ display: 'grid', gap: 12 }}>
-          <h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>Get Started</h3>
-          <p style={{ opacity: 0.8, fontSize: '0.9rem' }}>
+          <h3 style={{ fontWeight: 700, fontSize: '1.1rem'}}>Get Started</h3>
+          <p style={{ opacity: 0.8, fontSize: '0.9rem'}}>
             Ready to transform your business with our innovative solutions?
           </p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
@@ -226,7 +227,6 @@ function Footer(): any {
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <ErrorBoundary>
-      <PerformanceOptimizer />
       <PerformanceMonitor />
       <Header />
       <Component {...pageProps} />

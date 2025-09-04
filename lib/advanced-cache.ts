@@ -38,6 +38,7 @@ class AdvancedCache<T = any> {
       const firstKey = this.cache.keys().next().value;
       this.cache.delete(firstKey);
     }
+
     this.cache.set(key, item);
   }
 
