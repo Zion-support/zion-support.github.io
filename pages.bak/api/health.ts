@@ -1,5 +1,8 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 
+import { dbManager } from '../../lib/database';
+import { apiCache, userCache, staticCache } from '../../lib/cache';
+
 interface SystemHealth {
   status: healthy | 'degraded' | 'unhealthy';
   timestamp: string;
@@ -26,9 +29,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const startTime = Date.now();
 
   try {
-    // In a real implementation, replace these with live checks
-    const dbHealth = true; // Example: await dbManager.healthCheck();
 
+    // Check database health
+    const dbHealth = await dbManager.healthCheck();
+    
+    // Check cache health
     const cacheStats = {
       api: { active: 0 },
       user: { active: 0 },
