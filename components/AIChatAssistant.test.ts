@@ -1,1 +1,1 @@
-describe('AIChatAssistant',() => { it('renders without crashing',() => { render(<AIChatAssistant />)}); it('handles user interactions',() => { render(<AIChatAssistant />);
+describe('AIChatAssistant',() => { it('renders without crashing',() => { render(<AIChatAssistant />)}); it('handles user interactions',() => { render(<AIChatAssistant />);'
