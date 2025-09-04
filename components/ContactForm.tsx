@@ -4,7 +4,7 @@ import LoadingSpinner from './LoadingSpinner';
 interface FormData { name: string; email: string; company: string; phone: string; service: string; message: string;
 }
 
-const ContactForm: React.FC = () => {
+const ContactForm: React.FC = (): JSX.Element => {
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
