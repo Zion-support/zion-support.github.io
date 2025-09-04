@@ -1,3 +1,5 @@
+import Head from 'next/head';
+import React from 'react';
 
   description?: string;
   keywords?: string;
