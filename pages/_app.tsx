@@ -4,6 +4,7 @@ import { useState } from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 import '../styles/globals.css';
+import Sidebar from '../components/Sidebar';
 
 function Header(): any {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -210,7 +211,14 @@ export default function App({ Component, pageProps }: AppProps) {
     <ErrorBoundary>
       <PerformanceMonitor />
       <Header />
-      <Component {...pageProps} />
+      <div style={{ display: 'grid', gridTemplateColumns: '240px 1fr', minHeight: '60vh' }}>
+        <div style={{ background: 'white' }}>
+          <Sidebar />
+        </div>
+        <main style={{ padding: 24 }}>
+          <Component {...pageProps} />
+        </main>
+      </div>
       <Footer />
     </ErrorBoundary>
   );
