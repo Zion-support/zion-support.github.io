@@ -10,7 +10,8 @@ export const useKeyboardNavigation = () => {
         if (main) {
           (main as HTMLElement).focus();
         }
-    }
+      }
+    };
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);

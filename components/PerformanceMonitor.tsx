@@ -41,6 +41,7 @@ const PerformanceMonitor: React.FC = (): JSX.Element => {
           if (!(entry as any).hadRecentInput) {
             clsValue += (entry as any).value;
           }
+        }
         console.log('CLS:', clsValue);
       });
 

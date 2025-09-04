@@ -29,6 +29,8 @@ export default function LazyImage({
   useEffect(() => {
     if (priority) return;
 
+    if (typeof window === 'undefined' || !window.IntersectionObserver) return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {

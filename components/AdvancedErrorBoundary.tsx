@@ -18,6 +18,8 @@ class AdvancedErrorBoundary extends Component<Props, State> {
   }
   public static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error }
+  }
+  
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('AdvancedErrorBoundary caught an error:', error, errorInfo);
     
