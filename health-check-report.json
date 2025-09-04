@@ -1,40 +1,31 @@
 {
-  "timestamp": "2025-09-03T17:32:53.642Z",
-  "checks": {
-    "Node.js Version": {
-      "status": "passed",
-      "message": "Node.js v22.16.0"
+  "timestamp": "2025-09-04T06:30:45.510Z",
+  "checks": [
+    {
+      "name": "Package.json exists",
+      "status": "pass",
+      "result": "package.json found"
     },
-    "Package.json": {
-      "status": "passed",
-      "message": "package.json exists"
+    {
+      "name": "Dependencies installed",
+      "status": "pass",
+      "result": "Dependencies installed"
     },
-    "Dependencies": {
-      "status": "passed",
-      "message": "Dependencies installed"
+    {
+      "name": "Build process",
+      "status": "fail",
+      "error": "Build failed"
     },
-    "Disk Space": {
-      "status": "passed",
-      "message": "Disk usage: 12%"
+    {
+      "name": "Linting",
+      "status": "fail",
+      "error": "Linting failed"
     },
-    "Memory Usage": {
-      "status": "passed",
-      "message": "Memory usage: 9%"
-    },
-    "Build Test": {
-      "status": "passed",
-      "message": "Build successful"
-    },
-    "Linting": {
-      "status": "warning",
-      "warning": true,
-      "message": "Linting errors found"
+    {
+      "name": "TypeScript compilation",
+      "status": "fail",
+      "error": "TypeScript compilation failed"
     }
-  },
-  "summary": {
-    "total": 7,
-    "passed": 6,
-    "failed": 0,
-    "warnings": 1
-  }
+  ],
+  "status": "unhealthy"
 }

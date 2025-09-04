@@ -21,8 +21,7 @@ export interface MicroSaasService {
   technicalSpecs: string[];
   integrations: string[];
   support: string[];
-  compliance: string[];
-}
+  compliance: string[]}
 
 export const SERVICE_CATEGORIES = [
   'AI & Machine Learning',
@@ -40,7 +39,7 @@ export const SERVICE_CATEGORIES = [
   'Quantum Computing',
   'Edge Computing',
   'API Management'
-];
+;];
 
 export const PRICING_TIERS = [
   {
@@ -58,14 +57,14 @@ export const PRICING_TIERS = [
     price: '$1,999/mo',
     features: ['Full feature suite', 'Unlimited users', '24/7 support', '99.99% SLA', 'Custom integrations']
   }
-];
+;];
 
 export const ZION_CONTACT_INFO = {
   phone: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-};
+  website: 'https://ziontechgroup.com';
+;};
 
 export const REAL_MICRO_SAAS_SERVICES_2025: MicroSaasService[] = [
   // AI & Machine Learning Services
@@ -953,12 +952,11 @@ export const SERVICE_STATISTICS = {
   averageRating: 4.8,
   totalReviews: 1892,
   featuredServices: REAL_MICRO_SAAS_SERVICES_2025.filter(service => service.featured).length,
-  priceRange: {
+  priceRange: {,
     min: 199,
     max: 4999,
-    average: 1099
-  }
-};
+    average: 1099,
+  ;};};
 
 export const MARKET_INSIGHTS = {
   totalMarketSize: '$2.5 trillion',
@@ -976,5 +974,4 @@ export const MARKET_INSIGHTS = {
     'Enterprise-grade security',
     'Global infrastructure',
     '24/7 expert support'
-  ]
-};
+  ;];};

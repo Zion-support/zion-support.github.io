@@ -1,33 +1,51 @@
 {
-  "timestamp": "2025-09-03T16:33:14.967Z",
-  "optimizer": "Build Optimizer",
-  "results": [
+  "timestamp": "2025-09-03T19:43:51.020Z",
+  "optimizations": [
     {
-      "name": "Clean Build Directory",
-      "success": true
+      "name": "Next.js Configuration",
+      "status": "skipped",
+      "message": "Next.js config already optimized",
+      "duration": 0,
+      "impact": "none",
+      "details": {}
     },
     {
-      "name": "Optimize Next.js Config",
-      "success": true
+      "name": "Package.json Scripts",
+      "status": "skipped",
+      "message": "package.json already optimized",
+      "duration": 1,
+      "impact": "none",
+      "details": {}
     },
     {
-      "name": "Check Dependencies",
-      "success": true
+      "name": "Bundle Analyzer",
+      "status": "skipped",
+      "message": "Bundle analyzer already exists",
+      "duration": 0,
+      "impact": "none",
+      "details": {}
     },
     {
-      "name": "Type Check",
-      "success": true
+      "name": "Tailwind Configuration",
+      "status": "skipped",
+      "message": "Tailwind config already optimized",
+      "duration": 0,
+      "impact": "none",
+      "details": {}
     },
     {
-      "name": "Build Application",
-      "success": true,
-      "result": false
+      "name": "Service Worker",
+      "status": "skipped",
+      "message": "Service worker already exists",
+      "duration": 0,
+      "impact": "none",
+      "details": {}
     }
   ],
-  "summary": {
-    "total": 5,
-    "successful": 5,
-    "failed": 0,
-    "successRate": 100
+  "metrics": {
+    "beforeSize": 30316175,
+    "afterSize": 30316175,
+    "buildTime": 4,
+    "optimizationsApplied": 0
   }
 }
