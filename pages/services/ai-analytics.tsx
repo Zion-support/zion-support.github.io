@@ -1,105 +1,111 @@
-import React from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
+import Head from 'next/head';
 
 export default function AIAnalytics() {
   return (
     <>
       <Head>
-        <title>AI Analytics Services - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI analytics solutions to transform your data into actionable insights and drive business growth." />
+        <title>AI Analytics Services - Zion Tech Group | Advanced Data Intelligence</title>
+        <meta name="description" content="Transform your data into actionable insights with our advanced AI analytics services. Machine learning, predictive analytics, and business intelligence solutions." />
+        <meta name="keywords" content="AI analytics, machine learning, predictive analytics, business intelligence, data science, AI consulting" />
+        <link rel="canonical" href="https://ziontechgroup.com/services/ai-analytics" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="robots" content="index, follow" />
+        {/* Open Graph */}
+        <meta property="og:title" content="AI Analytics Services - Zion Tech Group | Advanced Data Intelligence" />
+        <meta property="og:description" content="Transform your data into actionable insights with our advanced AI analytics services." />
+        <meta property="og:url" content="https://ziontechgroup.com/services/ai-analytics" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://ziontechgroup.com/og-image.svg" />
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="AI Analytics Services - Zion Tech Group | Advanced Data Intelligence" />
+        <meta name="twitter:description" content="Transform your data into actionable insights with our advanced AI analytics services." />
+        <meta name="twitter:image" content="https://ziontechgroup.com/og-image.svg" />
       </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        {/* Header */}
+        <header className="bg-white shadow-sm">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-between items-center py-6">
+              <div className="flex items-center">
+                <Link href="/" className="text-2xl font-bold text-blue-600">
+                  Zion Tech Group
+                </Link>
+              </div>
+              <nav className="hidden md:flex space-x-8">
+                <Link href="/" className="text-gray-700 hover:text-blue-600">Home</Link>
+                <Link href="/services" className="text-gray-700 hover:text-blue-600">Services</Link>
+                <Link href="/about" className="text-gray-700 hover:text-blue-600">About</Link>
+                <Link href="/contact" className="text-gray-700 hover:text-blue-600">Contact</Link>
+              </nav>
+            </div>
+          </div>
+        </header>
 
-      <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
         {/* Hero Section */}
-        <section className="py-20 px-4 text-center">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
               AI Analytics Services
             </h1>
-            <p className="text-xl text-slate-300 mb-8">
-              Transform Your Data Into Actionable Insights
-            </p>
-            <p className="text-lg text-slate-400 mb-12 max-w-3xl mx-auto">
-              Leverage advanced AI and machine learning to unlock the full potential of your data and drive informed business decisions.
+            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+              Transform your data into actionable insights with our advanced AI analytics and machine learning solutions.
             </p>
           </div>
         </section>
 
         {/* Services Overview */}
-        <section className="py-16 px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-              Our AI Analytics Solutions
-            </h2>
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Advanced AI Analytics Solutions
+              </h2>
+              <p className="text-xl text-gray-600">
+                Leverage the power of artificial intelligence to unlock valuable insights from your data.
+              </p>
+            </div>
+            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-slate-800 rounded-lg p-8 hover:bg-slate-700 transition-colors">
-                <div className="text-4xl mb-4">📊</div>
-                <h3 className="text-2xl font-bold text-white mb-4">
-                  Predictive Analytics
-                </h3>
-                <p className="text-slate-300 mb-6">
-                  Forecast future trends and behaviors using advanced machine learning models.
-                </p>
-                <ul className="space-y-2 text-slate-300">
-                  <li>• Demand forecasting</li>
-                  <li>• Risk assessment</li>
-                  <li>• Customer behavior prediction</li>
-                  <li>• Market trend analysis</li>
-                </ul>
-              </div>
-
-              <div className="bg-slate-800 rounded-lg p-8 hover:bg-slate-700 transition-colors">
-                <div className="text-4xl mb-4">🔍</div>
-                <h3 className="text-2xl font-bold text-white mb-4">
-                  Real-time Analytics
-                </h3>
-                <p className="text-slate-300 mb-6">
-                  Process and analyze data in real-time for immediate insights and responses.
-                </p>
-                <ul className="space-y-2 text-slate-300">
-                  <li>• Live dashboards</li>
-                  <li>• Stream processing</li>
-                  <li>• Anomaly detection</li>
-                  <li>• Performance monitoring</li>
-                </ul>
-              </div>
-
-              <div className="bg-slate-800 rounded-lg p-8 hover:bg-slate-700 transition-colors">
+              <div className="bg-gray-50 rounded-lg p-6">
                 <div className="text-4xl mb-4">🧠</div>
-                <h3 className="text-2xl font-bold text-white mb-4">
-                  Natural Language Processing
-                </h3>
-                <p className="text-slate-300 mb-6">
-                  Extract insights from unstructured text data using advanced NLP techniques.
-                </p>
-                <ul className="space-y-2 text-slate-300">
-                  <li>• Sentiment analysis</li>
-                  <li>• Text classification</li>
-                  <li>• Entity extraction</li>
-                  <li>• Language translation</li>
-                </ul>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Machine Learning Models</h3>
+                <p className="text-gray-600">Custom ML models tailored to your specific business needs and data patterns.</p>
+              </div>
+              
+              <div className="bg-gray-50 rounded-lg p-6">
+                <div className="text-4xl mb-4">📊</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Predictive Analytics</h3>
+                <p className="text-gray-600">Forecast future trends and behaviors to make informed business decisions.</p>
+              </div>
+              
+              <div className="bg-gray-50 rounded-lg p-6">
+                <div className="text-4xl mb-4">📈</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Business Intelligence</h3>
+                <p className="text-gray-600">Comprehensive BI solutions with real-time dashboards and reporting.</p>
               </div>
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Transform Your Data?
+        <section className="py-16 bg-blue-600">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Ready to Unlock Your Data's Potential?
             </h2>
-            <p className="text-xl text-slate-300 mb-8">
-              Let's discuss how AI analytics can revolutionize your business intelligence.
+            <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
+              Let our AI experts help you transform your data into competitive advantages.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold">
+              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors">
                 Get Started
-              </Link>
-              <Link href="/schedule-demo" className="inline-flex items-center px-8 py-4 bg-transparent text-white border-2 border-white rounded-lg hover:bg-white hover:text-slate-900 transition-colors font-semibold">
-                Schedule Demo
-              </Link>
+              </button>
+              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-600 transition-colors">
+                Learn More
+              </button>
             </div>
           </div>
         </section>
@@ -147,7 +153,7 @@ export default function AIAnalytics() {
             </div>
           </div>
         </footer>
-      </main>
+      </div>
     </>
   );
 }

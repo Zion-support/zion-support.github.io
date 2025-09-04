@@ -4,7 +4,6 @@ interface LoadingProps {
   message?: string;
   size?: 'sm' | 'md' | 'lg';
 }
-}
 
 const Loading: React.FC<LoadingProps> = ({ 
   message = 'Loading...', 

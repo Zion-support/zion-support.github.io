@@ -23,7 +23,6 @@ interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
 }
-}
 
 export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   const [expandedSections, setExpandedSections] = useState<string[]>(['services']);
@@ -37,11 +36,11 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   };
 
   const navigation = [
-    { name: 'Home', href: '/', icon: 'Home' },
-    { name: 'About', href: '/about', icon: 'Users' },
+    { name: 'Home', href: '/', icon: Home },
+    { name: 'About', href: '/about', icon: Users },
     { 
       name: 'Services', 
-      icon: 'Settings', 
+      icon: Settings, 
       children: [
         { name: 'All Services', href: '/services' },
         { name: 'Services Catalog', href: '/services-catalog' },
@@ -53,19 +52,19 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         { name: 'Quantum Computing', href: '/quantum-computing' }
       ]
     },
-    { name: 'Documentation', href: '/docs', icon: 'BookOpen' },
-    { name: 'Pricing', href: '/pricing', icon: 'DollarSign' },
-    { name: 'FAQ', href: '/faq', icon: 'HelpCircle' },
-    { name: 'Contact', href: '/contact', icon: 'Mail' }
+    { name: 'Documentation', href: '/docs', icon: BookOpen },
+    { name: 'Pricing', href: '/pricing', icon: DollarSign },
+    { name: 'FAQ', href: '/faq', icon: HelpCircle },
+    { name: 'Contact', href: '/contact', icon: Mail }
   ];
 
   const quickLinks = [
-    { name: 'Cloud Migration', href: '/cloud-devops', icon: 'Cloud' },
-    { name: 'Security Audit', href: '/cybersecurity', icon: 'Shield' },
-    { name: 'AI Solutions', href: '/ai-services', icon: 'Brain' },
-    { name: 'Micro SaaS', href: '/micro-saas', icon: 'Layers' },
-    { name: 'IT Support', href: '/it-services', icon: 'Server' },
-    { name: 'Quantum Computing', href: '/quantum-computing', icon: 'Zap' }
+    { name: 'Cloud Migration', href: '/cloud-devops', icon: Cloud },
+    { name: 'Security Audit', href: '/cybersecurity', icon: Shield },
+    { name: 'AI Solutions', href: '/ai-services', icon: Brain },
+    { name: 'Micro SaaS', href: '/micro-saas', icon: Layers },
+    { name: 'IT Support', href: '/it-services', icon: Server },
+    { name: 'Quantum Computing', href: '/quantum-computing', icon: Zap }
   ];
 
   if (!isOpen) return null;

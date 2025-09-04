@@ -55,11 +55,11 @@ console.log(data);`}
           </section>
 
           {/* First API Call */}
-          <section style={{ background: '#1e293b', padding: 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)'  }}>
-            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 16  }}>🚀 Your First API Call</h2>
+          <section style={{ background: '#1e293b', padding: 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)' }}>
+            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 16 }}>🚀 Your First API Call</h2>
             <p style={{ opacity: '0.8', marginBottom: 20 }}>Let's start with a simple request to list available services.</p>
             
-            <div style={{ background: '#1e293b', padding: 20, borderRadius: 8, marginBottom: 20  }}>
+            <div style={{ background: '#1e293b', padding: 20, borderRadius: 8, marginBottom: 20 }}>
               <h3 style={{ fontWeight: 600, marginBottom: 12, color: '#86efac' }}>Request</h3>
               <pre style={{ background: '#0f172a', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem' }}>
 {`GET /v1/services
@@ -69,22 +69,22 @@ Authorization: Bearer YOUR_API_KEY`}
             
             <div style={{ background: '#1e293b', padding: 20, borderRadius: 8 }}>
               <h3 style={{ fontWeight: 600, marginBottom: 12, color: '#86efac' }}>Response</h3>
-              <pre style={{ background: '#0f172a', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem' }}>`
+              <pre style={{ background: '#0f172a', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem' }}>
 {`{
   "success": true,
   "data": [
     {
-      "id": "micro-saas"
-      "name": "Micro SaaS Products"
-      "description": "Ready-to-use software solutions"
-      "category": "software"
+      "id": "micro-saas",
+      "name": "Micro SaaS Products",
+      "description": "Ready-to-use software solutions",
+      "category": "software",
       "endpoints": ["/v1/micro-saas"]
     },
     {
-      "id": "ai-services"
-      "name": "AI Services"
-      "description": "AI and machine learning solutions"
-      "category": "ai"
+      "id": "ai-services",
+      "name": "AI Services",
+      "description": "AI and machine learning solutions",
+      "category": "ai",
       "endpoints": ["/v1/ai"]
     }
   ],
@@ -99,8 +99,8 @@ Authorization: Bearer YOUR_API_KEY`}
           </section>
 
           {/* Common Use Cases */}
-          <section style={{ background: '#1e293b', padding: 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)'  }}>
-            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 24  }}>💡 Common Use Cases</h2>
+          <section style={{ background: '#1e293b', padding: 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)' }}>
+            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 24 }}>💡 Common Use Cases</h2>
             <div style={{ display: 'grid', gap: 20 }}>
               <div style={{ padding: 20, background: 'rgba(59, 130, 246, 0.1)', borderRadius: 8, border: '1px solid rgba(59, 130, 246, 0.2)' }}>
                 <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#93c5fd' }}>1. List Available Services</h3>
@@ -123,8 +123,8 @@ Authorization: Bearer YOUR_API_KEY`}
           </section>
 
           {/* Error Handling */}
-          <section style={{ background: '#1e293b', padding: 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)'  }}>
-            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 16  }}>⚠️ Error Handling</h2>
+          <section style={{ background: '#1e293b', padding: 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)' }}>
+            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 16 }}>⚠️ Error Handling</h2>
             <p style={{ opacity: '0.8', marginBottom: 20 }}>Our API uses standard HTTP status codes and returns detailed error information.</p>
             
             <div style={{ background: '#1e293b', padding: 20, borderRadius: 8, border: '1px solid rgba(239, 68, 68, 0.2)' }}>
@@ -144,10 +144,10 @@ Authorization: Bearer YOUR_API_KEY`}
           </section>
 
           {/* Next Steps */}
-          <section style={{ background: '#1e293b', padding: 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)'  }}>
-            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 16  }}>🎯 Next Steps</h2>
+          <section style={{ background: '#1e293b', padding: 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)' }}>
+            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 16 }}>🎯 Next Steps</h2>
             <div style={{ display: 'grid', gap: 16 }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 12, padding: 16, background: 'rgba(59, 130, 246, 0.1)', borderRadius: 8 }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 12, padding: 16, background: 'rgba(255,255,255,0.05)', borderRadius: 8 }}>
                 <div style={{ fontSize: '1.5rem' }}>📖</div>
                 <div>
                   <h3 style={{ fontWeight: 600, marginBottom: 4 }}>Read the Full API Reference</h3>
@@ -155,7 +155,7 @@ Authorization: Bearer YOUR_API_KEY`}
                 </div>
               </div>
               
-              <div style={{ display: 'flex', alignItems: 'center', gap: 12, padding: 16, background: 'rgba(139, 92, 246, 0.1)', borderRadius: 8 }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 12, padding: 16, background: 'rgba(255,255,255,0.05)', borderRadius: 8 }}>
                 <div style={{ fontSize: '1.5rem' }}>💻</div>
                 <div>
                   <h3 style={{ fontWeight: 600, marginBottom: 4 }}>Try Integration Examples</h3>
@@ -163,7 +163,7 @@ Authorization: Bearer YOUR_API_KEY`}
                 </div>
               </div>
               
-              <div style={{ display: 'flex', alignItems: 'center', gap: 12, padding: 16, background: 'rgba(34, 197, 94, 0.1)', borderRadius: 8 }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 12, padding: 16, background: 'rgba(255,255,255,0.05)', borderRadius: 8 }}>
                 <div style={{ fontSize: '1.5rem' }}>🤝</div>
                 <div>
                   <h3 style={{ fontWeight: 600, marginBottom: 4 }}>Get API Access</h3>

@@ -74,12 +74,12 @@ const cookieTypes = [
       </Head>
 
       <div style={{ minHeight: '100vh', background: 'white' }}>
-        <div style={{ maxWidth: '1000', margin: '0 auto', padding: '40px 20px' }}>
-          <div style={{ textAlign: 'center', marginBottom: '60' }}>
+        <div style={{ maxWidth: 1000, margin: '0 auto', padding: '40px 20px' }}>
+          <div style={{ textAlign: 'center', marginBottom: 60 }}>
             <h1 style={{ 
               fontSize: '2.5rem',
-              fontWeight: '800', 
-              marginBottom: '20',
+              fontWeight: 800, 
+              marginBottom: 20,
               background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
@@ -87,45 +87,45 @@ const cookieTypes = [
             }}>
               Cookie Policy
             </h1>
-            <p style={{ fontSize: '1.2rem', color: '#666', maxWidth: '600', margin: '0 auto' }}>
+            <p style={{ fontSize: '1.2rem', color: '#666', maxWidth: 600, margin: '0 auto' }}>
               Learn about how we use cookies and similar technologies on our website to enhance your experience.
             </p>
           </div>
 
-          <div style={{ marginBottom: '60' }}>
-            <h2 style={{ fontSize: '1.8rem', fontWeight: '700', marginBottom: '20' }}>
+          <div style={{ marginBottom: 60 }}>
+            <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: 20 }}>
               What Are Cookies?
             </h2>
             <div style={{
               background: '#f8fafc',
-              borderRadius: '12',
-              padding: '30',
+              borderRadius: 12,
+              padding: 30,
               border: '1px solid #e2e8f0',
-              marginBottom: '30'
+              marginBottom: 30
             }}>
-              <p style={{ fontSize: '1rem', lineHeight: '1.6', color: '#94a3b8' }}>
+              <p style={{ fontSize: '1rem', lineHeight: 1.6, color: '#94a3b8' }}>
                 Cookies are small text files that are placed on your computer or mobile device when you visit our website. 
                 They are widely used to make websites work more efficiently and to provide information to website owners.
               </p>
             </div>
           </div>
 
-          <div style={{ marginBottom: '60' }}>
-            <h2 style={{ fontSize: '2rem', fontWeight: '700', marginBottom: '30' }}>
+          <div style={{ marginBottom: 60 }}>
+            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 30 }}>
               Types of Cookies We Use
             </h2>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '30' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 30 }}>
               {cookieTypes.map((cookie, index) => (
                 <div key={index} style={{
                   background: '#f8fafc',
-                  borderRadius: '12',
-                  padding: '30',
+                  borderRadius: 12,
+                  padding: 30,
                   border: '1px solid #e2e8f0'
                 }}>
                   <h3 style={{ 
                     fontSize: '1.3rem',
-                    fontWeight: '700', 
-                    marginBottom: '15',
+                    fontWeight: 700, 
+                    marginBottom: 15,
                     color: '#3b82f6'
                   }}>
                     {cookie.type}
@@ -133,29 +133,29 @@ const cookieTypes = [
                   
                   <p style={{ 
                     color: '#64748b',
-                    marginBottom: '20', 
-                    lineHeight: '1.6',
+                    marginBottom: 20, 
+                    lineHeight: 1.6,
                     fontSize: '1.1rem'
                   }}>
                     {cookie.description}
                   </p>
                   
-                  <div style={{ marginBottom: '20' }}>
-                    <h4 style={{ fontSize: '1rem', fontWeight: '600', marginBottom: '10', color: '#64748b' }}>
+                  <div style={{ marginBottom: 20 }}>
+                    <h4 style={{ fontSize: '1rem', fontWeight: 600, marginBottom: 10, color: '#64748b' }}>
                       Purpose:
                     </h4>
-                    <p style={{ color: '#64748b', lineHeight: '1.5' }}>
+                    <p style={{ color: '#64748b', lineHeight: 1.5 }}>
                       {cookie.purpose}
                     </p>
                   </div>
                   
-                  <div style={{ marginBottom: '20' }}>
-                    <h4 style={{ fontSize: '1rem', fontWeight: '600', marginBottom: '10', color: '#64748b' }}>
+                  <div style={{ marginBottom: 20 }}>
+                    <h4 style={{ fontSize: '1rem', fontWeight: 600, marginBottom: 10, color: '#64748b' }}>
                       Examples:
                     </h4>
-                    <ul style={{ color: '#64748b', paddingLeft: '20' }}>
+                    <ul style={{ color: '#64748b', paddingLeft: 20 }}>
                       {cookie.examples.map((example, exampleIndex) => (
-                        <li key={exampleIndex} style={{ marginBottom: '5' }}>
+                        <li key={exampleIndex} style={{ marginBottom: 5 }}>
                           {example}
                         </li>
                       ))}
@@ -163,7 +163,7 @@ const cookieTypes = [
                   </div>
                   
                   <div>
-                    <h4 style={{ fontSize: '1rem', fontWeight: '600', marginBottom: '10', color: '#64748b' }}>
+                    <h4 style={{ fontSize: '1rem', fontWeight: 600, marginBottom: 10, color: '#64748b' }}>
                       Retention Period:
                     </h4>
                     <p style={{ color: '#94a3b8' }}>
@@ -175,26 +175,26 @@ const cookieTypes = [
             </div>
           </div>
 
-          <div style={{ marginBottom: '60' }}>
-            <h2 style={{ fontSize: '1.8rem', fontWeight: '700', marginBottom: '20' }}>
+          <div style={{ marginBottom: 60 }}>
+            <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: 20 }}>
               Managing Your Cookie Preferences
             </h2>
             <div style={{
               background: '#f8fafc',
-              borderRadius: '12',
-              padding: '30',
+              borderRadius: 12,
+              padding: 30,
               border: '1px solid #e2e8f0'
             }}>
-              <p style={{ fontSize: '1rem', lineHeight: '1.6', color: '#94a3b8', marginBottom: '20' }}>
+              <p style={{ fontSize: '1rem', lineHeight: 1.6, color: '#94a3b8', marginBottom: 20 }}>
                 You have the right to choose whether to accept or reject cookies. You can exercise your cookie rights by 
                 setting your preferences in our cookie banner or by adjusting your browser settings.
               </p>
               
-              <div style={{ marginBottom: '20' }}>
-                <h3 style={{ fontSize: '1rem', fontWeight: '600', marginBottom: '10', color: '#e5e7eb' }}>
+              <div style={{ marginBottom: 20 }}>
+                <h3 style={{ fontSize: '1rem', fontWeight: 600, marginBottom: 10, color: '#e5e7eb' }}>
                   Browser Settings:
                 </h3>
-                <p style={{ color: '#64748b', lineHeight: '1.5' }}>
+                <p style={{ color: '#64748b', lineHeight: 1.5 }}>
                   Most web browsers allow you to control cookies through their settings preferences. You can set your 
                   browser to refuse cookies or delete certain cookies. However, if you choose to delete or refuse cookies, 
                   some features of our website may not function properly.
@@ -202,10 +202,10 @@ const cookieTypes = [
               </div>
               
               <div>
-                <h3 style={{ fontSize: '1rem', fontWeight: '600', marginBottom: '10', color: '#e5e7eb' }}>
+                <h3 style={{ fontSize: '1rem', fontWeight: 600, marginBottom: 10, color: '#e5e7eb' }}>
                   Cookie Banner:
                 </h3>
-                <p style={{ color: '#64748b', lineHeight: '1.5' }}>
+                <p style={{ color: '#64748b', lineHeight: 1.5 }}>
                   When you first visit our website, you will see a cookie banner that allows you to accept or reject 
                   non-essential cookies. You can change your preferences at any time by clicking the cookie settings 
                   link in our website footer.
@@ -214,32 +214,32 @@ const cookieTypes = [
             </div>
           </div>
 
-          <div style={{ marginBottom: '60' }}>
-            <h2 style={{ fontSize: '1.8rem', fontWeight: '700', marginBottom: '20' }}>
+          <div style={{ marginBottom: 60 }}>
+            <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: 20 }}>
               Third-Party Cookies
             </h2>
             <div style={{
               background: '#f8fafc',
-              borderRadius: '12',
-              padding: '30',
+              borderRadius: 12,
+              padding: 30,
               border: '1px solid rgba(255, 255, 255, 0.1)'
             }}>
-              <p style={{ fontSize: '1rem', lineHeight: '1.6', color: '#94a3b8', marginBottom: '20' }}>
+              <p style={{ fontSize: '1rem', lineHeight: 1.6, color: '#94a3b8', marginBottom: 20 }}>
                 Some cookies on our website are set by third-party services that appear on our pages. These third parties 
                 may use cookies to collect information about your online activities across different websites.
               </p>
               
-              <div style={{ display: 'grid', gap: '15' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '10' }}>
-                  <div style={{ width: '6', height: '6', background: '#3b82f6', borderRadius: '50%' }} />
+              <div style={{ display: 'grid', gap: 15 }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                  <div style={{ width: 6, height: 6, background: '#3b82f6', borderRadius: '50%' }} />
                   <span style={{ color: '#94a3b8' }}>Google Analytics - Website analytics and performance monitoring</span>
                 </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '10' }}>
-                  <div style={{ width: '6', height: '6', background: '#3b82f6', borderRadius: '50%' }} />
+                <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                  <div style={{ width: 6, height: 6, background: '#3b82f6', borderRadius: '50%' }} />
                   <span style={{ color: '#94a3b8' }}>Social Media Platforms - Social sharing and engagement tracking</span>
                 </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '10' }}>
-                  <div style={{ width: '6', height: '6', background: '#3b82f6', borderRadius: '50%' }} />
+                <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                  <div style={{ width: 6, height: 6, background: '#3b82f6', borderRadius: '50%' }} />
                   <span style={{ color: '#94a3b8' }}>Advertising Networks - Targeted advertising and campaign measurement</span>
                 </div>
               </div>
@@ -248,15 +248,15 @@ const cookieTypes = [
 
           <div style={{ 
             background: '#f8fafc',
-            borderRadius: '12',
-            padding: '30',
+            borderRadius: 12,
+            padding: 30,
             border: '1px solid #e2e8f0',
             textAlign: 'center'
           }}>
-            <h2 style={{ fontSize: '1.5rem', fontWeight: '700', marginBottom: '15' }}>
+            <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: 15 }}>
               Questions About Our Cookie Policy?
             </h2>
-            <p style={{ color: '#94a3b8', marginBottom: '20' }}>
+            <p style={{ color: '#94a3b8', marginBottom: 20 }}>
               If you have any questions about our use of cookies or this Cookie Policy, please contact us.
             </p>
             <Link href="/contact" style={{
@@ -264,8 +264,8 @@ const cookieTypes = [
               color: 'white',
               padding: '12px 24px',
               textDecoration: 'none',
-              borderRadius: '8',
-              fontSize: '1rem', fontWeight: '600',
+              borderRadius: 8,
+              fontSize: '1rem', fontWeight: 600,
               display: 'inline-block'
             }}>
               Contact Us

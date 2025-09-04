@@ -16,9 +16,12 @@ class ErrorBoundary extends Component<Props, State> {
     hasError: false
   }
   public static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error }
+    return { hasError: true, error };
+  }
+
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // Error logged to console in development
+    // eslint-disable-next-line no-console
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
   }
 
   private handleRetry = () => {
@@ -78,4 +81,6 @@ class ErrorBoundary extends Component<Props, State> {
 
     return this.props.children;
   }
+}
+
 export default ErrorBoundary;
