@@ -8,7 +8,7 @@ console.log('🎯 Starting Automation Orchestrator...');
 const automationTasks = [
   {
     name: 'Health Check',
-    script: 'bash scripts/health-check.sh',
+    script: 'node scripts/comprehensive-health-check.cjs',
     critical: true,
     timeout: 30000
   },
