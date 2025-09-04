@@ -4,20 +4,19 @@ interface AnalyticsProps {
   trackingId?: string;
 }
 
-const Analytics: React.FC<AnalyticsProps> = ({ 
-  trackingId = process.env.NEXT_PUBLIC_GA_TRACKING_ID 
+const Analytics: React.FC<AnalyticsProps> = ({
+  trackingId = process.env.NEXT_PUBLIC_GA_TRACKING_ID,
 }) => {
   useEffect(() => {
     if (!trackingId || typeof window === 'undefined') return;
 
-    // Load Google Analytics
-    const script1 = document.createElement('script');
-    script1.async = true;
-    script1.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
-    document.head.appendChild(script1);
+    const analyticsScript = document.createElement('script');
+    analyticsScript.async = true;
+    analyticsScript.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
+    document.head.appendChild(analyticsScript);
 
-    const script2 = document.createElement('script');
-    script2.innerHTML = `
+    const inlineScript = document.createElement('script');
+    inlineScript.innerHTML = `
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
@@ -27,9 +26,8 @@ const Analytics: React.FC<AnalyticsProps> = ({
         send_page_view: true
       });
     `;
-    document.head.appendChild(script2);
+    document.head.appendChild(inlineScript);
 
-    // Track page views on route changes
     const handleRouteChange = () => {
       if (typeof window.gtag !== 'undefined') {
         window.gtag('config', trackingId, {
@@ -39,9 +37,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
       }
     };
 
-    // Listen for route changes (Next.js)
     window.addEventListener('popstate', handleRouteChange);
-
     return () => {
       window.removeEventListener('popstate', handleRouteChange);
     };
