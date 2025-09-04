@@ -41,7 +41,8 @@ import {
   Sprout,
   Mail,
   ShoppingCart,
-  BookOpen
+  BookOpen,
+  DollarSign
 } from 'lucide-react';
 
 const aiServices = [
@@ -208,6 +209,169 @@ const aiServices = [
     features: ['Multi-channel Analysis', 'Emotion Detection', 'Trend Analysis', 'Alert System'],
     pricing: '$1,000 - $5,000/month',
     category: 'Customer Analytics'
+  },
+  {
+    title: 'AI-Powered Autonomous Vehicles',
+    description: 'Advanced AI systems for autonomous vehicle navigation and safety.',
+    icon: Car,
+    features: ['Computer Vision', 'Path Planning', 'Obstacle Detection', 'Decision Making'],
+    pricing: '$100,000 - $500,000/project',
+    category: 'Autonomous Systems',
+    popular: true
+  },
+  {
+    title: 'AI Medical Diagnosis Assistant',
+    description: 'AI-powered medical diagnosis and treatment recommendation system.',
+    icon: Heart,
+    features: ['Symptom Analysis', 'Disease Prediction', 'Treatment Recommendations', 'Drug Interaction Check'],
+    pricing: '$50,000 - $300,000/project',
+    category: 'Healthcare',
+    popular: true
+  },
+  {
+    title: 'AI Climate Change Modeling',
+    description: 'Advanced climate modeling and environmental impact prediction using AI.',
+    icon: Globe,
+    features: ['Climate Prediction', 'Impact Analysis', 'Policy Simulation', 'Risk Assessment'],
+    pricing: '$75,000 - $400,000/project',
+    category: 'Environmental'
+  },
+  {
+    title: 'AI Cybersecurity Threat Intelligence',
+    description: 'Advanced threat detection and response using AI and machine learning.',
+    icon: Shield,
+    features: ['Threat Detection', 'Behavioral Analysis', 'Automated Response', 'Threat Hunting'],
+    pricing: '$25,000 - $150,000/setup',
+    category: 'Cybersecurity',
+    popular: true
+  },
+  {
+    title: 'AI Quantum Computing Optimization',
+    description: 'AI algorithms optimized for quantum computing applications.',
+    icon: Cpu,
+    features: ['Quantum Algorithms', 'Optimization Problems', 'Simulation', 'Error Correction'],
+    pricing: '$100,000 - $500,000/project',
+    category: 'Quantum Computing'
+  },
+  {
+    title: 'AI Space Mission Planning',
+    description: 'AI-powered mission planning and optimization for space exploration.',
+    icon: Rocket,
+    features: ['Mission Planning', 'Resource Optimization', 'Risk Assessment', 'Trajectory Planning'],
+    pricing: '$200,000 - $1,000,000/project',
+    category: 'Aerospace'
+  },
+  {
+    title: 'AI Agricultural Intelligence',
+    description: 'Smart farming solutions using AI for crop optimization and yield prediction.',
+    icon: Sprout,
+    features: ['Crop Monitoring', 'Yield Prediction', 'Pest Detection', 'Irrigation Optimization'],
+    pricing: '$30,000 - $200,000/project',
+    category: 'Agriculture'
+  },
+  {
+    title: 'AI Mental Health Assistant',
+    description: 'AI-powered mental health monitoring and support system.',
+    icon: Heart,
+    features: ['Mood Tracking', 'Crisis Detection', 'Therapy Recommendations', 'Progress Monitoring'],
+    pricing: '$15,000 - $100,000/project',
+    category: 'Mental Health'
+  },
+  {
+    title: 'AI Smart City Management',
+    description: 'Comprehensive AI system for smart city infrastructure management.',
+    icon: Building,
+    features: ['Traffic Optimization', 'Energy Management', 'Public Safety', 'Resource Allocation'],
+    pricing: '$500,000 - $2,000,000/project',
+    category: 'Smart Cities'
+  },
+  {
+    title: 'AI Sports Performance Analytics',
+    description: 'Advanced sports analytics and performance optimization using AI.',
+    icon: Target,
+    features: ['Performance Analysis', 'Injury Prevention', 'Tactical Analysis', 'Player Development'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'Sports'
+  },
+  {
+    title: 'AI Language Translation & Localization',
+    description: 'Advanced AI translation and cultural localization services.',
+    icon: Globe,
+    features: ['Real-time Translation', 'Cultural Adaptation', 'Context Understanding', 'Quality Assurance'],
+    pricing: '$5,000 - $30,000/setup',
+    category: 'Language Services'
+  },
+  {
+    title: 'AI Personal Finance Advisor',
+    description: 'AI-powered personal finance management and investment advice.',
+    icon: DollarSign,
+    features: ['Portfolio Management', 'Risk Assessment', 'Tax Optimization', 'Goal Planning'],
+    pricing: '$2,000 - $15,000/setup',
+    category: 'Personal Finance'
+  },
+  {
+    title: 'AI Content Moderation Suite',
+    description: 'Advanced AI content moderation for social media and online platforms.',
+    icon: Eye,
+    features: ['Multi-modal Detection', 'Context Understanding', 'Bias Detection', 'Scalable Processing'],
+    pricing: '$10,000 - $60,000/setup',
+    category: 'Content Safety'
+  },
+  {
+    title: 'AI Predictive Maintenance',
+    description: 'AI-powered predictive maintenance for industrial equipment and machinery.',
+    icon: Settings,
+    features: ['Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization', 'Performance Monitoring'],
+    pricing: '$20,000 - $120,000/project',
+    category: 'Industrial IoT'
+  },
+  {
+    title: 'AI Voice Cloning & Synthesis',
+    description: 'Advanced voice cloning and text-to-speech synthesis technology.',
+    icon: Mic,
+    features: ['Voice Cloning', 'Emotion Control', 'Language Support', 'Real-time Synthesis'],
+    pricing: '$15,000 - $100,000/project',
+    category: 'Voice Technology'
+  },
+  {
+    title: 'AI Blockchain Analytics',
+    description: 'AI-powered blockchain transaction analysis and fraud detection.',
+    icon: Lock,
+    features: ['Transaction Analysis', 'Pattern Recognition', 'Risk Assessment', 'Compliance Monitoring'],
+    pricing: '$25,000 - $150,000/setup',
+    category: 'Blockchain'
+  },
+  {
+    title: 'AI Augmented Reality Assistant',
+    description: 'AI-powered AR assistant for industrial and consumer applications.',
+    icon: Monitor,
+    features: ['Object Recognition', 'Spatial Mapping', 'Real-time Guidance', 'Hands-free Operation'],
+    pricing: '$30,000 - $200,000/project',
+    category: 'Augmented Reality'
+  },
+  {
+    title: 'AI Drug Interaction Checker',
+    description: 'AI system for detecting drug interactions and adverse effects.',
+    icon: Heart,
+    features: ['Interaction Detection', 'Side Effect Prediction', 'Dosage Optimization', 'Patient Safety'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'Pharmaceutical'
+  },
+  {
+    title: 'AI Wildlife Conservation',
+    description: 'AI-powered wildlife monitoring and conservation management.',
+    icon: Heart,
+    features: ['Species Identification', 'Population Tracking', 'Threat Detection', 'Habitat Analysis'],
+    pricing: '$40,000 - $250,000/project',
+    category: 'Conservation'
+  },
+  {
+    title: 'AI Disaster Response System',
+    description: 'AI-powered disaster prediction, response, and recovery management.',
+    icon: Shield,
+    features: ['Disaster Prediction', 'Resource Allocation', 'Evacuation Planning', 'Recovery Optimization'],
+    pricing: '$100,000 - $500,000/project',
+    category: 'Emergency Management'
   }
 ];
 

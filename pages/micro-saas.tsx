@@ -42,7 +42,10 @@ import {
   Package,
   Calendar,
   BookOpen,
-  ShoppingCart
+  ShoppingCart,
+  Bug,
+  AlertTriangle,
+  Database
 } from 'lucide-react';
 
 const microSaaSProducts = [
@@ -240,6 +243,160 @@ const microSaaSProducts = [
     features: ['Maintenance Scheduling', 'Work Order Management', 'Vendor Management', 'Reporting'],
     pricing: '$49 - $299/month',
     category: 'Property Management'
+  },
+  {
+    title: 'AI-Powered Code Review Assistant',
+    description: 'Automated code review with security, performance, and best practice analysis.',
+    icon: Code,
+    features: ['Security Scanning', 'Performance Analysis', 'Code Quality Metrics', 'Git Integration'],
+    pricing: '$199 - $999/month',
+    category: 'Developer Tools',
+    popular: true
+  },
+  {
+    title: 'Smart Contract Audit Platform',
+    description: 'Automated smart contract security auditing and vulnerability detection.',
+    icon: Shield,
+    features: ['Vulnerability Detection', 'Gas Optimization', 'Compliance Checking', 'Audit Reports'],
+    pricing: '$499 - $2,999/month',
+    category: 'Blockchain',
+    popular: true
+  },
+  {
+    title: 'API Documentation Generator',
+    description: 'Automatically generate and maintain API documentation from code.',
+    icon: FileText,
+    features: ['Auto Documentation', 'Interactive Testing', 'Version Control', 'Team Collaboration'],
+    pricing: '$79 - $399/month',
+    category: 'Developer Tools'
+  },
+  {
+    title: 'Database Performance Monitor',
+    description: 'Real-time database performance monitoring and optimization recommendations.',
+    icon: Database,
+    features: ['Query Analysis', 'Performance Metrics', 'Alert System', 'Optimization Tips'],
+    pricing: '$149 - $799/month',
+    category: 'Database'
+  },
+  {
+    title: 'Microservice Health Dashboard',
+    description: 'Comprehensive monitoring dashboard for microservices architecture.',
+    icon: Monitor,
+    features: ['Service Discovery', 'Health Checks', 'Dependency Mapping', 'Alert Management'],
+    pricing: '$299 - $1,499/month',
+    category: 'DevOps'
+  },
+  {
+    title: 'AI-Powered Test Generator',
+    description: 'Automatically generate unit and integration tests using AI.',
+    icon: Cpu,
+    features: ['Test Generation', 'Coverage Analysis', 'Mock Data Creation', 'CI/CD Integration'],
+    pricing: '$199 - $999/month',
+    category: 'Testing'
+  },
+  {
+    title: 'Log Aggregation & Analysis',
+    description: 'Centralized log management with intelligent analysis and alerting.',
+    icon: Search,
+    features: ['Log Collection', 'Pattern Recognition', 'Anomaly Detection', 'Custom Dashboards'],
+    pricing: '$99 - $599/month',
+    category: 'Monitoring'
+  },
+  {
+    title: 'Container Security Scanner',
+    description: 'Comprehensive security scanning for Docker containers and Kubernetes clusters.',
+    icon: Lock,
+    features: ['Vulnerability Scanning', 'Compliance Checks', 'Runtime Protection', 'Policy Enforcement'],
+    pricing: '$199 - $1,199/month',
+    category: 'Security'
+  },
+  {
+    title: 'Serverless Function Monitor',
+    description: 'Monitoring and optimization for serverless functions across cloud providers.',
+    icon: Cloud,
+    features: ['Performance Tracking', 'Cost Analysis', 'Error Monitoring', 'Auto-scaling'],
+    pricing: '$149 - $799/month',
+    category: 'Serverless'
+  },
+  {
+    title: 'GraphQL API Gateway',
+    description: 'Unified GraphQL gateway for microservices with caching and rate limiting.',
+    icon: Network,
+    features: ['Schema Federation', 'Query Caching', 'Rate Limiting', 'Analytics'],
+    pricing: '$199 - $999/month',
+    category: 'API Management'
+  },
+  {
+    title: 'Real-time Collaboration Platform',
+    description: 'Real-time collaborative editing and communication for development teams.',
+    icon: Users,
+    features: ['Live Editing', 'Video Calls', 'Screen Sharing', 'File Sharing'],
+    pricing: '$29 - $199/month',
+    category: 'Collaboration'
+  },
+  {
+    title: 'AI-Powered Bug Triage',
+    description: 'Automatically categorize, prioritize, and assign bugs using machine learning.',
+    icon: Bug,
+    features: ['Auto Categorization', 'Priority Scoring', 'Assignment Logic', 'Trend Analysis'],
+    pricing: '$99 - $499/month',
+    category: 'Project Management'
+  },
+  {
+    title: 'Performance Budget Tracker',
+    description: 'Monitor and enforce performance budgets for web applications.',
+    icon: TrendingUp,
+    features: ['Budget Tracking', 'Performance Metrics', 'Alert System', 'Historical Analysis'],
+    pricing: '$49 - $299/month',
+    category: 'Performance'
+  },
+  {
+    title: 'Dependency Vulnerability Scanner',
+    description: 'Continuous scanning for vulnerable dependencies in your codebase.',
+    icon: Shield,
+    features: ['Dependency Scanning', 'Vulnerability Database', 'Fix Recommendations', 'License Compliance'],
+    pricing: '$79 - $399/month',
+    category: 'Security'
+  },
+  {
+    title: 'API Rate Limiting & Throttling',
+    description: 'Intelligent rate limiting and throttling for APIs with detailed analytics.',
+    icon: BarChart3,
+    features: ['Smart Rate Limiting', 'Usage Analytics', 'Custom Rules', 'Real-time Monitoring'],
+    pricing: '$99 - $599/month',
+    category: 'API Management'
+  },
+  {
+    title: 'Feature Flag Management',
+    description: 'Advanced feature flag management with A/B testing and gradual rollouts.',
+    icon: Settings,
+    features: ['Feature Toggles', 'A/B Testing', 'Gradual Rollouts', 'User Targeting'],
+    pricing: '$149 - $799/month',
+    category: 'Feature Management'
+  },
+  {
+    title: 'Error Tracking & Monitoring',
+    description: 'Comprehensive error tracking and performance monitoring for applications.',
+    icon: AlertTriangle,
+    features: ['Error Tracking', 'Performance Monitoring', 'User Impact Analysis', 'Release Tracking'],
+    pricing: '$29 - $199/month',
+    category: 'Monitoring'
+  },
+  {
+    title: 'Code Quality Metrics Dashboard',
+    description: 'Comprehensive code quality analysis and technical debt tracking.',
+    icon: Award,
+    features: ['Code Metrics', 'Technical Debt', 'Quality Trends', 'Team Comparisons'],
+    pricing: '$99 - $499/month',
+    category: 'Code Quality'
+  },
+  {
+    title: 'Infrastructure as Code Validator',
+    description: 'Validate and optimize Infrastructure as Code templates and configurations.',
+    icon: Server,
+    features: ['Template Validation', 'Best Practices', 'Cost Optimization', 'Security Checks'],
+    pricing: '$199 - $999/month',
+    category: 'Infrastructure'
   }
 ];
 

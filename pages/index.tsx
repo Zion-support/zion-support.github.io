@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Brain, Network, Cloud, ArrowRight } from 'lucide-react';
+import { Brain, Network, Cloud, ArrowRight, Award, Zap, Shield, TrendingUp, DollarSign, Globe, CheckCircle } from 'lucide-react';
 import MainLayout from '../components/layout/MainLayout';
 
 const stats = [
@@ -34,49 +34,6 @@ const services = [
 
 export default function HomePage() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
-      <Head>
-        <title>Zion Tech Solutions - Leading Technology Solutions Provider</title>
-        <meta name="description" content="Zion Tech Solutions provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence." />
-      </Head>
-      
-      <main className="container mx-auto px-4 py-16">
-        <div className="text-center text-white">
-          <h1 className="text-5xl font-bold mb-6">
-            Welcome to Zion Tech Solutions
-          </h1>
-          <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Leading technology solutions provider helping businesses transform their digital presence 
-            with cutting-edge AI, cloud architecture, and innovative development services.
-          </p>
-          
-          <div className="flex justify-center gap-6 mb-12">
-            <Link href="/services">
-              <span className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-                Our Services
-              </span>
-            </Link>
-            <Link href="/contact">
-              <span className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-semibold transition-colors">
-                Get in Touch
-              </span>
-            </Link>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8 mt-16">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">AI Development</h3>
-              <p>Custom AI solutions and machine learning models for your business needs.</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cloud Architecture</h3>
-              <p>Scalable cloud solutions and infrastructure design for modern applications.</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Digital Transformation</h3>
-              <p>End-to-end digital transformation services to modernize your business.</p>
-=======
     <MainLayout>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
 
@@ -114,7 +71,6 @@ export default function HomePage() {
               <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
                 Explore Services
               </Link>
->>>>>>> 86e2a4cca918c6ff376b51aa8638f7a375ebfe57
             </div>
           </motion.div>
         </div>
@@ -193,6 +149,269 @@ export default function HomePage() {
                 <div className="text-gray-600 font-medium">{stat.label}</div>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-12 md:mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Why Choose Zion Tech Group?
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              We're not just another technology company. We're your strategic partner in digital transformation, 
+              combining cutting-edge technology with deep industry expertise to deliver exceptional results.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <motion.div
+              className="bg-white p-6 rounded-lg shadow-lg"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-blue-600 mb-4">
+                <Award className="w-12 h-12" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Proven Expertise</h3>
+              <p className="text-gray-600 mb-4">
+                Over 500+ successful projects delivered across various industries, with a 99.9% client satisfaction rate.
+              </p>
+              <ul className="text-sm text-gray-600 space-y-2">
+                <li>• 50+ Certified Professionals</li>
+                <li>• 15+ Years Industry Experience</li>
+                <li>• 24/7 Expert Support</li>
+              </ul>
+            </motion.div>
+
+            <motion.div
+              className="bg-white p-6 rounded-lg shadow-lg"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-blue-600 mb-4">
+                <Zap className="w-12 h-12" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Rapid Delivery</h3>
+              <p className="text-gray-600 mb-4">
+                Fast-track your digital transformation with our agile development methodology and pre-built solutions.
+              </p>
+              <ul className="text-sm text-gray-600 space-y-2">
+                <li>• 80% Faster Time to Market</li>
+                <li>• Pre-built Micro SaaS Solutions</li>
+                <li>• Agile Development Process</li>
+              </ul>
+            </motion.div>
+
+            <motion.div
+              className="bg-white p-6 rounded-lg shadow-lg"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-blue-600 mb-4">
+                <Shield className="w-12 h-12" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Enterprise Security</h3>
+              <p className="text-gray-600 mb-4">
+                Bank-level security and compliance with SOC 2, GDPR, and industry-specific regulations.
+              </p>
+              <ul className="text-sm text-gray-600 space-y-2">
+                <li>• SOC 2 Type II Compliant</li>
+                <li>• GDPR & HIPAA Ready</li>
+                <li>• End-to-End Encryption</li>
+              </ul>
+            </motion.div>
+
+            <motion.div
+              className="bg-white p-6 rounded-lg shadow-lg"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-blue-600 mb-4">
+                <TrendingUp className="w-12 h-12" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Scalable Solutions</h3>
+              <p className="text-gray-600 mb-4">
+                Future-proof your technology investments with scalable, cloud-native solutions that grow with your business.
+              </p>
+              <ul className="text-sm text-gray-600 space-y-2">
+                <li>• Auto-scaling Infrastructure</li>
+                <li>• Microservices Architecture</li>
+                <li>• Multi-cloud Support</li>
+              </ul>
+            </motion.div>
+
+            <motion.div
+              className="bg-white p-6 rounded-lg shadow-lg"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-blue-600 mb-4">
+                <DollarSign className="w-12 h-12" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Cost Effective</h3>
+              <p className="text-gray-600 mb-4">
+                Reduce development costs by up to 60% with our pre-built solutions and efficient development processes.
+              </p>
+              <ul className="text-sm text-gray-600 space-y-2">
+                <li>• 60% Cost Reduction</li>
+                <li>• Transparent Pricing</li>
+                <li>• No Hidden Fees</li>
+              </ul>
+            </motion.div>
+
+            <motion.div
+              className="bg-white p-6 rounded-lg shadow-lg"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-blue-600 mb-4">
+                <Globe className="w-12 h-12" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Global Reach</h3>
+              <p className="text-gray-600 mb-4">
+                Serving clients worldwide with local expertise and 24/7 support across multiple time zones.
+              </p>
+              <ul className="text-sm text-gray-600 space-y-2">
+                <li>• Global Client Base</li>
+                <li>• Multi-timezone Support</li>
+                <li>• Local Expertise</li>
+              </ul>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-12 md:mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Transparent, Competitive Pricing
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              Get enterprise-grade solutions at startup-friendly prices. No hidden costs, no surprises.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <motion.div
+              className="bg-gray-50 p-8 rounded-lg border-2 border-gray-200"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Micro SaaS</h3>
+              <div className="text-4xl font-bold text-blue-600 mb-4">$29 - $2,999</div>
+              <p className="text-gray-600 mb-6">per month</p>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center text-gray-600">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  Pre-built Solutions
+                </li>
+                <li className="flex items-center text-gray-600">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  Quick Deployment
+                </li>
+                <li className="flex items-center text-gray-600">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  Basic Support
+                </li>
+              </ul>
+              <Link href="/micro-saas" className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors text-center block">
+                Explore Solutions
+              </Link>
+            </motion.div>
+
+            <motion.div
+              className="bg-blue-600 p-8 rounded-lg text-white relative"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <span className="bg-yellow-400 text-yellow-900 px-4 py-1 rounded-full text-sm font-semibold">
+                  Most Popular
+                </span>
+              </div>
+              <h3 className="text-2xl font-bold mb-4">IT Services</h3>
+              <div className="text-4xl font-bold mb-4">$2,000 - $500,000</div>
+              <p className="text-blue-100 mb-6">per project</p>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center text-blue-100">
+                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
+                  Custom Development
+                </li>
+                <li className="flex items-center text-blue-100">
+                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
+                  Enterprise Support
+                </li>
+                <li className="flex items-center text-blue-100">
+                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
+                  SLA Guarantees
+                </li>
+              </ul>
+              <Link href="/it-services" className="w-full bg-white text-blue-600 py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors text-center block">
+                View Services
+              </Link>
+            </motion.div>
+
+            <motion.div
+              className="bg-gray-50 p-8 rounded-lg border-2 border-gray-200"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Services</h3>
+              <div className="text-4xl font-bold text-blue-600 mb-4">$1,000 - $2,000,000</div>
+              <p className="text-gray-600 mb-6">per project</p>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center text-gray-600">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  Custom AI Models
+                </li>
+                <li className="flex items-center text-gray-600">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  Advanced Analytics
+                </li>
+                <li className="flex items-center text-gray-600">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  Ongoing Optimization
+                </li>
+              </ul>
+              <Link href="/ai-services" className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors text-center block">
+                Discover AI
+              </Link>
+            </motion.div>
           </div>
         </div>
       </section>

@@ -30,7 +30,11 @@ import {
   Code,
   Search,
   ShoppingCart,
-  BookOpen
+  BookOpen,
+  Bot,
+  Rocket,
+  Sprout,
+  DollarSign
 } from 'lucide-react';
 
 const itServices = [
@@ -204,6 +208,160 @@ const itServices = [
     features: ['Compliance Assessment', 'Regulatory Reporting', 'Policy Development', 'Audit Support'],
     pricing: '$8,000 - $40,000/project',
     category: 'Compliance'
+  },
+  {
+    title: 'Zero Trust Security Architecture',
+    description: 'Implementation of zero trust security model with identity verification and micro-segmentation.',
+    icon: Lock,
+    features: ['Identity Verification', 'Micro-segmentation', 'Continuous Monitoring', 'Policy Enforcement'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'Security',
+    popular: true
+  },
+  {
+    title: 'AI-Powered IT Operations (AIOps)',
+    description: 'Intelligent IT operations using AI and machine learning for predictive maintenance.',
+    icon: Cpu,
+    features: ['Predictive Analytics', 'Anomaly Detection', 'Automated Remediation', 'Performance Optimization'],
+    pricing: '$15,000 - $75,000/setup',
+    category: 'AIOps',
+    popular: true
+  },
+  {
+    title: 'Edge Computing Infrastructure',
+    description: 'Edge computing solutions for low-latency applications and IoT deployments.',
+    icon: Globe,
+    features: ['Edge Nodes', 'IoT Integration', 'Low Latency', 'Distributed Processing'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'Edge Computing'
+  },
+  {
+    title: 'Quantum-Safe Cryptography',
+    description: 'Implementation of quantum-resistant cryptographic solutions for future-proof security.',
+    icon: Shield,
+    features: ['Quantum Algorithms', 'Key Management', 'Migration Planning', 'Compliance'],
+    pricing: '$30,000 - $200,000/project',
+    category: 'Advanced Security'
+  },
+  {
+    title: '5G Network Integration',
+    description: '5G network planning, implementation, and integration for enterprise environments.',
+    icon: Network,
+    features: ['5G Planning', 'Network Slicing', 'IoT Connectivity', 'Performance Optimization'],
+    pricing: '$50,000 - $300,000/project',
+    category: '5G Networks'
+  },
+  {
+    title: 'Blockchain Infrastructure',
+    description: 'Enterprise blockchain solutions including private networks and smart contracts.',
+    icon: Lock,
+    features: ['Private Networks', 'Smart Contracts', 'Consensus Mechanisms', 'Integration'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'Blockchain'
+  },
+  {
+    title: 'Augmented Reality (AR) Infrastructure',
+    description: 'AR/VR infrastructure setup for enterprise applications and training.',
+    icon: Monitor,
+    features: ['AR Hardware', 'Software Platform', 'Content Creation', 'User Training'],
+    pricing: '$15,000 - $100,000/project',
+    category: 'AR/VR'
+  },
+  {
+    title: 'Digital Twin Implementation',
+    description: 'Digital twin technology for asset monitoring and predictive maintenance.',
+    icon: Building,
+    features: ['3D Modeling', 'IoT Integration', 'Real-time Monitoring', 'Predictive Analytics'],
+    pricing: '$40,000 - $250,000/project',
+    category: 'Digital Twin'
+  },
+  {
+    title: 'Robotic Process Automation (RPA)',
+    description: 'Implementation of RPA solutions for business process automation.',
+    icon: Bot,
+    features: ['Process Analysis', 'Bot Development', 'Integration', 'Monitoring'],
+    pricing: '$10,000 - $60,000/project',
+    category: 'RPA'
+  },
+  {
+    title: 'IT Service Management (ITSM)',
+    description: 'Complete ITSM implementation with ServiceNow, Jira Service Management, or custom solutions.',
+    icon: Settings,
+    features: ['Service Catalog', 'Incident Management', 'Change Management', 'Knowledge Base'],
+    pricing: '$20,000 - $120,000/project',
+    category: 'ITSM'
+  },
+  {
+    title: 'Multi-Cloud Management Platform',
+    description: 'Unified management platform for multiple cloud providers and hybrid environments.',
+    icon: Cloud,
+    features: ['Multi-cloud Dashboard', 'Cost Optimization', 'Security Management', 'Compliance'],
+    pricing: '$30,000 - $180,000/project',
+    category: 'Cloud Management'
+  },
+  {
+    title: 'IT Disaster Recovery as a Service (DRaaS)',
+    description: 'Comprehensive disaster recovery services with guaranteed RTO and RPO.',
+    icon: Shield,
+    features: ['Automated Failover', 'Data Replication', 'Recovery Testing', 'SLA Guarantees'],
+    pricing: '$5,000 - $30,000/month',
+    category: 'DRaaS'
+  },
+  {
+    title: 'IT Performance Optimization',
+    description: 'Comprehensive IT infrastructure performance analysis and optimization.',
+    icon: TrendingUp,
+    features: ['Performance Analysis', 'Bottleneck Identification', 'Optimization Implementation', 'Monitoring'],
+    pricing: '$10,000 - $50,000/project',
+    category: 'Performance'
+  },
+  {
+    title: 'IT Cost Optimization',
+    description: 'Strategic IT cost analysis and optimization across all technology investments.',
+    icon: DollarSign,
+    features: ['Cost Analysis', 'Vendor Optimization', 'License Management', 'ROI Analysis'],
+    pricing: '$15,000 - $75,000/project',
+    category: 'Cost Optimization'
+  },
+  {
+    title: 'IT Innovation Lab',
+    description: 'Dedicated innovation lab for testing and implementing emerging technologies.',
+    icon: Rocket,
+    features: ['Technology Research', 'Proof of Concepts', 'Pilot Programs', 'Innovation Strategy'],
+    pricing: '$50,000 - $200,000/project',
+    category: 'Innovation'
+  },
+  {
+    title: 'IT Merger & Acquisition Integration',
+    description: 'IT integration services for mergers, acquisitions, and divestitures.',
+    icon: Building,
+    features: ['Integration Planning', 'Data Migration', 'System Consolidation', 'Change Management'],
+    pricing: '$100,000 - $500,000/project',
+    category: 'M&A Integration'
+  },
+  {
+    title: 'IT Sustainability & Green Computing',
+    description: 'Sustainable IT practices and green computing implementation.',
+    icon: Sprout,
+    features: ['Energy Efficiency', 'Carbon Footprint', 'Sustainable Procurement', 'Green Policies'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'Sustainability'
+  },
+  {
+    title: 'IT Risk Management',
+    description: 'Comprehensive IT risk assessment and management framework implementation.',
+    icon: Shield,
+    features: ['Risk Assessment', 'Mitigation Strategies', 'Monitoring', 'Reporting'],
+    pricing: '$25,000 - $125,000/project',
+    category: 'Risk Management'
+  },
+  {
+    title: 'IT Business Continuity Planning',
+    description: 'Business continuity planning and implementation for IT systems and processes.',
+    icon: Clock,
+    features: ['BCP Development', 'Testing', 'Training', 'Maintenance'],
+    pricing: '$15,000 - $75,000/project',
+    category: 'Business Continuity'
   }
 ];
 
