@@ -42,6 +42,41 @@ body{margin:0;background:var(--bg);color:var(--fg);font-family:ui-sans-serif,sys
 @tailwind components;
 @tailwind utilities;
 
+/* Performance optimizations */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-display: swap;
+}
+
+/* Lazy loading for images */
+img[data-src] {
+  filter: blur(5px);
+  transition: filter 0.3s;
+}
+
+img[data-src].loaded {
+  filter: blur(0);
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 /* Custom CSS Variables */
 :root {
   --header-bg: rgba(11, 18, 32, 0.95);
