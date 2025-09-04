@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "timestamp": "2025-09-03T16:52:59.017Z",
+=======
+  "timestamp": "2025-09-03T21:22:51.525Z",
+>>>>>>> origin/main
   "files": {
     "components/ErrorBoundary.tsx": {
       "path": "components/ErrorBoundary.tsx",
@@ -21,9 +25,21 @@
     },
     "pages/_app.tsx": {
       "path": "pages/_app.tsx",
+<<<<<<< HEAD
       "lines": 118,
       "issues": [],
       "complexity": 1
+=======
+      "lines": 215,
+      "issues": [
+        {
+          "rule": "Duplicate Code",
+          "value": 10,
+          "message": "Potential duplicate code detected"
+        }
+      ],
+      "complexity": 0
+>>>>>>> origin/main
     },
     "pages/about.tsx": {
       "path": "pages/about.tsx",
@@ -68,7 +84,11 @@
     },
     "pages/index.tsx": {
       "path": "pages/index.tsx",
+<<<<<<< HEAD
       "lines": 34,
+=======
+      "lines": 219,
+>>>>>>> origin/main
       "issues": [],
       "complexity": 0
     },
@@ -149,9 +169,15 @@
     }
   },
   "summary": {
+<<<<<<< HEAD
     "totalFiles": 16,
     "totalLines": 5598,
     "averageComplexity": "1.06",
+=======
+    "totalFiles": 28,
+    "totalLines": 8473,
+    "averageComplexity": "1.75",
+>>>>>>> origin/main
     "issues": [
       {
         "file": "pages/about.tsx",
