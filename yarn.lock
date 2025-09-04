@@ -2033,8 +2033,6 @@
   resolved "https://registry.npmjs.org/@nolyfill/is-core-module/-/is-core-module-1.0.39.tgz"
   integrity sha512-nn5ozdjYQpUCZlWGuxcJY/KpxkWQs4DcbMCmKojjyrYDEAGy4Ce19NN4v5MduafTwJlbKc99UA8YhSVqq9yPZA==
 
-<<<<<<< HEAD
-=======
 "@opentelemetry/api-logs@0.57.2":
   version "0.57.2"
   resolved "https://registry.npmjs.org/@opentelemetry/api-logs/-/api-logs-0.57.2.tgz"
@@ -2309,7 +2307,6 @@
     legacy-javascript latest
     third-party-web latest
 
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
 "@pkgr/core@^0.2.9":
   version "0.2.9"
   resolved "https://registry.npmjs.org/@pkgr/core/-/core-0.2.9.tgz"
@@ -3062,8 +3059,6 @@
   resolved "https://registry.npmjs.org/@rushstack/eslint-patch/-/eslint-patch-1.12.0.tgz"
   integrity sha512-5EwMtOqvJMMa3HbmxLlF74e+3/HhwBTMcvt3nqVJgGCozO6hzIPOBlwm8mGVNR9SN2IJpxSnlxczyDjcn7qIyw==
 
-<<<<<<< HEAD
-=======
 "@sentry/core@9.46.0":
   version "9.46.0"
   resolved "https://registry.npmjs.org/@sentry/core/-/core-9.46.0.tgz"
@@ -3126,7 +3121,6 @@
   dependencies:
     "@sentry/core" "9.46.0"
 
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
 "@sinclair/typebox@^0.27.8":
   version "0.27.8"
   resolved "https://registry.npmjs.org/@sinclair/typebox/-/typebox-0.27.8.tgz"
@@ -3391,8 +3385,6 @@
   dependencies:
     "@babel/types" "^7.28.2"
 
-<<<<<<< HEAD
-=======
 "@types/connect@3.4.38":
   version "3.4.38"
   resolved "https://registry.npmjs.org/@types/connect/-/connect-3.4.38.tgz"
@@ -3400,7 +3392,6 @@
   dependencies:
     "@types/node" "*"
 
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
 "@types/estree@^1.0.6", "@types/estree@1.0.8":
   version "1.0.8"
   resolved "https://registry.npmjs.org/@types/estree/-/estree-1.0.8.tgz"
@@ -3464,8 +3455,6 @@
   dependencies:
     mongodb "*"
 
-<<<<<<< HEAD
-=======
 "@types/mysql@2.15.26":
   version "2.15.26"
   resolved "https://registry.npmjs.org/@types/mysql/-/mysql-2.15.26.tgz"
@@ -3473,7 +3462,6 @@
   dependencies:
     "@types/node" "*"
 
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
 "@types/next-server@*":
   version "8.1.2"
   resolved "https://registry.npmjs.org/@types/next-server/-/next-server-8.1.2.tgz"
@@ -3514,12 +3502,6 @@
   dependencies:
     undici-types "~5.26.4"
 
-<<<<<<< HEAD
-"@types/phoenix@^1.6.6":
-  version "1.6.6"
-  resolved "https://registry.npmjs.org/@types/phoenix/-/phoenix-1.6.6.tgz"
-  integrity sha512-PIzZZlEppgrpoT2QgbnDU+MMzuR6BbCjllj0bM70lWoejMeNJAxCchxnv7J3XFkI8MpygtRpzXrIlmWUBclP5A==
-=======
 "@types/pg-pool@2.0.6":
   version "2.0.6"
   resolved "https://registry.npmjs.org/@types/pg-pool/-/pg-pool-2.0.6.tgz"
@@ -3535,7 +3517,11 @@
     "@types/node" "*"
     pg-protocol "*"
     pg-types "^2.2.0"
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
+
+"@types/phoenix@^1.6.6":
+  version "1.6.6"
+  resolved "https://registry.npmjs.org/@types/phoenix/-/phoenix-1.6.6.tgz"
+  integrity sha512-PIzZZlEppgrpoT2QgbnDU+MMzuR6BbCjllj0bM70lWoejMeNJAxCchxnv7J3XFkI8MpygtRpzXrIlmWUBclP5A==
 
 "@types/prop-types@*":
   version "15.7.15"
@@ -3589,14 +3575,11 @@
     "@types/prop-types" "*"
     csstype "^3.0.2"
 
-<<<<<<< HEAD
-=======
 "@types/shimmer@^1.2.0":
   version "1.2.0"
   resolved "https://registry.npmjs.org/@types/shimmer/-/shimmer-1.2.0.tgz"
   integrity sha512-UE7oxhQLLd9gub6JKIAhDq06T0F6FnztwMNRvYgjeQSBeMc1ZG/tA47EwfduvkuQS8apbkM/lpLpWsaCeYsXVg==
 
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
 "@types/source-list-map@*":
   version "0.1.6"
   resolved "https://registry.npmjs.org/@types/source-list-map/-/source-list-map-0.1.6.tgz"
@@ -3612,8 +3595,6 @@
   resolved "https://registry.npmjs.org/@types/tapable/-/tapable-1.0.12.tgz"
   integrity sha512-bTHG8fcxEqv1M9+TD14P8ok8hjxoOCkfKc8XXLaaD05kI7ohpeI956jtDOD3XHKBQrlyPughUtzm1jtVhHpA5Q==
 
-<<<<<<< HEAD
-=======
 "@types/tedious@^4.0.14":
   version "4.0.14"
   resolved "https://registry.npmjs.org/@types/tedious/-/tedious-4.0.14.tgz"
@@ -3621,7 +3602,6 @@
   dependencies:
     "@types/node" "*"
 
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
 "@types/tough-cookie@*":
   version "4.0.5"
   resolved "https://registry.npmjs.org/@types/tough-cookie/-/tough-cookie-4.0.5.tgz"
@@ -3825,11 +3805,7 @@ acorn-walk@^8.0.0, acorn-walk@^8.1.1:
   dependencies:
     acorn "^8.11.0"
 
-<<<<<<< HEAD
-acorn@^8.0.4, acorn@^8.11.0, acorn@^8.15.0, acorn@^8.4.1:
-=======
 acorn@^8.0.4, acorn@^8.11.0, acorn@^8.14.0, acorn@^8.15.0, acorn@^8.4.1:
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
   version "8.15.0"
   resolved "https://registry.npmjs.org/acorn/-/acorn-8.15.0.tgz"
   integrity sha512-NZyJarBfL7nWwIq+FDL6Zp/yHEhePMNnnJ0y3qfieCrmNvYct8uvtiV41UvlSe6apAfk0fY1FbWx+NwfmpvtTg==
@@ -4098,8 +4074,6 @@ asynckit@^0.4.0:
   resolved "https://registry.npmjs.org/asynckit/-/asynckit-0.4.0.tgz"
   integrity sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==
 
-<<<<<<< HEAD
-=======
 atomically@^2.0.3:
   version "2.0.3"
   resolved "https://registry.npmjs.org/atomically/-/atomically-2.0.3.tgz"
@@ -4108,7 +4082,6 @@ atomically@^2.0.3:
     stubborn-fs "^1.2.5"
     when-exit "^2.1.1"
 
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
 autoprefixer@^10.4.21:
   version "10.4.21"
   resolved "https://registry.npmjs.org/autoprefixer/-/autoprefixer-10.4.21.tgz"
@@ -4128,11 +4101,7 @@ available-typed-arrays@^1.0.7:
   dependencies:
     possible-typed-array-names "^1.0.0"
 
-<<<<<<< HEAD
-axe-core@^4.10.0:
-=======
 axe-core@^4.10.0, axe-core@^4.10.3:
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
   version "4.10.3"
   resolved "https://registry.npmjs.org/axe-core/-/axe-core-4.10.3.tgz"
   integrity sha512-Xm7bpRXnDSX2YE2YFfBk2FnF0ep6tmG7xPh8iHee8MIcrgq762Nkce856dYtJYLkuIoYZvGfTs/PbZhideTcEg==
@@ -4151,14 +4120,11 @@ axobject-query@^4.1.0:
   resolved "https://registry.npmjs.org/axobject-query/-/axobject-query-4.1.0.tgz"
   integrity sha512-qIj0G9wZbMGNLjLmg1PT6v2mE9AH2zlnADJD/2tC6E00hgmhUOfEB6greHPAfLRSufHqROIUTkw6E+M3lH0PTQ==
 
-<<<<<<< HEAD
-=======
 b4a@^1.6.4:
   version "1.6.7"
   resolved "https://registry.npmjs.org/b4a/-/b4a-1.6.7.tgz"
   integrity sha512-OnAYlL5b7LEkALw87fUVafQw5rVR9RjwGd4KUwNQ6DrrNmaVaUCgLipfVlzrPQ4tWOR9P0IXGNOx50jYCCdSJg==
 
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
 babel-jest@30.1.2:
   version "30.1.2"
   resolved "https://registry.npmjs.org/babel-jest/-/babel-jest-30.1.2.tgz"
@@ -4336,14 +4302,11 @@ bson@^6.10.4:
   resolved "https://registry.npmjs.org/bson/-/bson-6.10.4.tgz"
   integrity sha512-WIsKqkSC0ABoBJuT1LEX+2HEvNmNKKgnTAyd0fL8qzK4SH2i9NXg+t08YtdZp/V9IZ33cxe3iV4yM0qg8lMQng==
 
-<<<<<<< HEAD
-=======
 buffer-crc32@~0.2.3:
   version "0.2.13"
   resolved "https://registry.npmjs.org/buffer-crc32/-/buffer-crc32-0.2.13.tgz"
   integrity sha512-VO9Ht/+p3SN7SKWqcrgEzjGbRSJYTx+Q1pTQC0wrWqHx0vpJraQ6GtHx8tvcg1rlK1byhU5gccxgOgj7B0TDkQ==
 
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
 buffer-equal-constant-time@^1.0.1:
   version "1.0.1"
   resolved "https://registry.npmjs.org/buffer-equal-constant-time/-/buffer-equal-constant-time-1.0.1.tgz"
@@ -4541,8 +4504,6 @@ chownr@^3.0.0:
   resolved "https://registry.npmjs.org/chownr/-/chownr-3.0.0.tgz"
   integrity sha512-+IxzY9BZOQd/XuYPRmrvEVjF/nqj5kgT4kEq7VofrDoM1MxoRjEWkrCC3EtLi59TVawxTAn+orJwFQcrqEN1+g==
 
-<<<<<<< HEAD
-=======
 chrome-launcher@^1.2.0:
   version "1.2.0"
   resolved "https://registry.npmjs.org/chrome-launcher/-/chrome-launcher-1.2.0.tgz"
@@ -4561,7 +4522,6 @@ chromium-bidi@8.0.0:
     mitt "^3.0.1"
     zod "^3.24.1"
 
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
 ci-info@^3.2.0:
   version "3.9.0"
   resolved "https://registry.npmjs.org/ci-info/-/ci-info-3.9.0.tgz"
@@ -4771,14 +4731,11 @@ cross-spawn@^7.0.3, cross-spawn@^7.0.6:
     shebang-command "^2.0.0"
     which "^2.0.1"
 
-<<<<<<< HEAD
-=======
 csp_evaluator@1.1.5:
   version "1.1.5"
   resolved "https://registry.npmjs.org/csp_evaluator/-/csp_evaluator-1.1.5.tgz"
   integrity sha512-EL/iN9etCTzw/fBnp0/uj0f5BOOGvZut2mzsiiBZ/FdT6gFQCKRO/tmcKOxn5drWZ2Ndm/xBb1SI4zwWbGtmIw==
 
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
 css-blank-pseudo@^7.0.1:
   version "7.0.1"
   resolved "https://registry.npmjs.org/css-blank-pseudo/-/css-blank-pseudo-7.0.1.tgz"
@@ -5058,11 +5015,7 @@ debug@^3.2.7:
   dependencies:
     ms "^2.1.1"
 
-<<<<<<< HEAD
-debug@^4.1.0, debug@^4.1.1, debug@^4.3.1, debug@^4.3.2, debug@^4.3.4, debug@^4.3.7, debug@^4.4.0, debug@^4.4.1, debug@4:
-=======
 debug@^4.1.0, debug@^4.1.1, debug@^4.3.1, debug@^4.3.2, debug@^4.3.4, debug@^4.3.5, debug@^4.3.7, debug@^4.4.0, debug@^4.4.1, debug@4:
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
   version "4.4.1"
   resolved "https://registry.npmjs.org/debug/-/debug-4.4.1.tgz"
   integrity sha512-KcKCqiftBJcZr++7ykoDIEwSa3XWowTfNPo92BYxjXiyYEVrUQh2aLyhxBCwww+heortUFxEJYcRzosstTEBYQ==
@@ -5291,11 +5244,7 @@ encoding-sniffer@^0.2.1:
     iconv-lite "^0.6.3"
     whatwg-encoding "^3.1.1"
 
-<<<<<<< HEAD
-end-of-stream@^1.4.1:
-=======
 end-of-stream@^1.1.0, end-of-stream@^1.4.1:
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
   version "1.4.5"
   resolved "https://registry.npmjs.org/end-of-stream/-/end-of-stream-1.4.5.tgz"
   integrity sha512-ooEGc6HP26xXq/N+GCGOT0JKCLDGrq2bQUZrQ7gyrJiZANJ/8YDTxTpQBXGMn+WbIQXNVpyWymm7KYVICQnyOg==
@@ -5310,11 +5259,7 @@ enhanced-resolve@^5.18.3:
     graceful-fs "^4.2.4"
     tapable "^2.2.0"
 
-<<<<<<< HEAD
-enquirer@2.3.6:
-=======
 enquirer@^2.3.6, enquirer@2.3.6:
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
   version "2.3.6"
   resolved "https://registry.npmjs.org/enquirer/-/enquirer-2.3.6.tgz"
   integrity sha512-yjNnPr315/FjS4zIsUxYguYUPP2e1NK4d7E7ZOLiyYCcbFBiTMyID+2wvm2w6+pZ/odMA7cRkjhsPbltwBOrLg==
@@ -5821,8 +5766,6 @@ extend@^3.0.2:
   resolved "https://registry.npmjs.org/extend/-/extend-3.0.2.tgz"
   integrity sha512-fjquC59cD7CyW6urNXK0FBufkZcoiGG80wTuPujX590cB5Ttln20E2UB4S/WARVqhXffZl2LNgS+gQdPIIim/g==
 
-<<<<<<< HEAD
-=======
 extract-zip@^2.0.1:
   version "2.0.1"
   resolved "https://registry.npmjs.org/extract-zip/-/extract-zip-2.0.1.tgz"
@@ -5834,7 +5777,6 @@ extract-zip@^2.0.1:
   optionalDependencies:
     "@types/yauzl" "^2.9.1"
 
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
 extrareqp2@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/extrareqp2/-/extrareqp2-1.0.0.tgz"
@@ -5847,14 +5789,11 @@ fast-deep-equal@^3.1.1, fast-deep-equal@^3.1.3:
   resolved "https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz"
   integrity sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==
 
-<<<<<<< HEAD
-=======
 fast-fifo@^1.2.0, fast-fifo@^1.3.2:
   version "1.3.2"
   resolved "https://registry.npmjs.org/fast-fifo/-/fast-fifo-1.3.2.tgz"
   integrity sha512-/d9sfos4yxzpwkDkuN7k2SqFKtYNmCTzgfEpz82x34IM9/zc8KGxQoXg1liNC/izpRM/MBdt44Nmx41ZWqk+FQ==
 
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
 fast-glob@^3.3.2:
   version "3.3.3"
   resolved "https://registry.npmjs.org/fast-glob/-/fast-glob-3.3.3.tgz"
@@ -5900,8 +5839,6 @@ fclone@~1.0.11, fclone@1.0.11:
   resolved "https://registry.npmjs.org/fclone/-/fclone-1.0.11.tgz"
   integrity sha512-GDqVQezKzRABdeqflsgMr7ktzgF9CyS+p2oe0jJqUY6izSSbhPIQJDpoU4PtGcD7VPM9xh/dVrTu6z1nwgmEGw==
 
-<<<<<<< HEAD
-=======
 fd-slicer@~1.1.0:
   version "1.1.0"
   resolved "https://registry.npmjs.org/fd-slicer/-/fd-slicer-1.1.0.tgz"
@@ -5909,7 +5846,6 @@ fd-slicer@~1.1.0:
   dependencies:
     pend "~1.2.0"
 
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
 fdir@^6.4.4, fdir@^6.5.0:
   version "6.5.0"
   resolved "https://registry.npmjs.org/fdir/-/fdir-6.5.0.tgz"
@@ -6429,14 +6365,11 @@ htmlparser2@^8.0.2:
     domutils "^3.0.1"
     entities "^4.4.0"
 
-<<<<<<< HEAD
-=======
 http-link-header@^1.1.1:
   version "1.1.3"
   resolved "https://registry.npmjs.org/http-link-header/-/http-link-header-1.1.3.tgz"
   integrity sha512-3cZ0SRL8fb9MUlU3mKM61FcQvPfXx2dBrZW3Vbg5CXa8jFlK8OaEpePenLe1oEXQduhz8b0QjsqfS59QP4AJDQ==
 
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
 http-proxy-agent@^5.0.0:
   version "5.0.0"
   resolved "https://registry.npmjs.org/http-proxy-agent/-/http-proxy-agent-5.0.0.tgz"
@@ -6530,14 +6463,11 @@ ignore@^7.0.0:
   resolved "https://registry.npmjs.org/ignore/-/ignore-7.0.5.tgz"
   integrity sha512-Hs59xBNfUIunMFgWAbGX5cq6893IbWg4KnrjbYwX3tx0ztorVgTDA6B2sxf8ejHJ4wz8BqGUMYlnzNBer5NvGg==
 
-<<<<<<< HEAD
-=======
 image-ssim@^0.2.0:
   version "0.2.0"
   resolved "https://registry.npmjs.org/image-ssim/-/image-ssim-0.2.0.tgz"
   integrity sha512-W7+sO6/yhxy83L0G7xR8YAc5Z5QFtYEXXRV6EaE8tuYBZJnA3gVgp3q7X7muhLZVodeb9UfvjSbwt9VJwjIYAg==
 
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
 immer@^10.0.3:
   version "10.1.3"
   resolved "https://registry.npmjs.org/immer/-/immer-10.1.3.tgz"
@@ -7399,14 +7329,11 @@ jiti@^2.5.1:
   resolved "https://registry.npmjs.org/jiti/-/jiti-2.5.1.tgz"
   integrity sha512-twQoecYPiVA5K/h6SxtORw/Bs3ar+mLUtoPSc7iMXzQzK8d7eJ/R09wmTwAjiamETn1cXYPGfNnu7DMoHgu12w==
 
-<<<<<<< HEAD
-=======
 jpeg-js@^0.4.1, jpeg-js@^0.4.4:
   version "0.4.4"
   resolved "https://registry.npmjs.org/jpeg-js/-/jpeg-js-0.4.4.tgz"
   integrity sha512-WZzeDOEtTOBK4Mdsar0IqEU5sMr3vSV2RqkAIzUEV2BHnUfKGyswWFPFwK5EeDo93K3FohSHbLAjj0s1Wzd+dg==
 
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
 js-git@^0.7.8:
   version "0.7.8"
   resolved "https://registry.npmjs.org/js-git/-/js-git-0.7.8.tgz"
@@ -7417,14 +7344,11 @@ js-git@^0.7.8:
     git-sha1 "^0.1.2"
     pako "^0.2.5"
 
-<<<<<<< HEAD
-=======
 js-library-detector@^6.7.0:
   version "6.7.0"
   resolved "https://registry.npmjs.org/js-library-detector/-/js-library-detector-6.7.0.tgz"
   integrity sha512-c80Qupofp43y4cJ7+8TTDN/AsDwLi5oOm/plBrWI+iQt485vKXCco+yVmOwEgdo9VOdsYTuV0UlTeetVPTriXA==
 
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"
   resolved "https://registry.npmjs.org/js-tokens/-/js-tokens-4.0.0.tgz"
@@ -7602,14 +7526,11 @@ language-tags@^1.0.9:
   dependencies:
     language-subtag-registry "^0.3.20"
 
-<<<<<<< HEAD
-=======
 legacy-javascript@latest:
   version "0.0.1"
   resolved "https://registry.npmjs.org/legacy-javascript/-/legacy-javascript-0.0.1.tgz"
   integrity sha512-lPyntS4/aS7jpuvOlitZDFifBCb4W8L/3QU0PLbUTUj+zYah8rfVjYic88yG7ZKTxhS5h9iz7duT8oUXKszLhg==
 
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
 leven@^3.1.0:
   version "3.1.0"
   resolved "https://registry.npmjs.org/leven/-/leven-3.1.0.tgz"
@@ -7878,14 +7799,11 @@ merge2@^1.3.0:
   resolved "https://registry.npmjs.org/merge2/-/merge2-1.4.1.tgz"
   integrity sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==
 
-<<<<<<< HEAD
-=======
 metaviewport-parser@0.3.0:
   version "0.3.0"
   resolved "https://registry.npmjs.org/metaviewport-parser/-/metaviewport-parser-0.3.0.tgz"
   integrity sha512-EoYJ8xfjQ6kpe9VbVHvZTZHiOl4HL1Z18CrZ+qahvLXT7ZO4YTC2JMyt5FaUp9JJp6J4Ybb/z7IsCXZt86/QkQ==
 
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
 micromatch@^4.0.4, micromatch@^4.0.8:
   version "4.0.8"
   resolved "https://registry.npmjs.org/micromatch/-/micromatch-4.0.8.tgz"
@@ -7935,8 +7853,6 @@ minimatch@^3.0.4, minimatch@^3.1.1, minimatch@^3.1.2:
   dependencies:
     brace-expansion "^1.1.7"
 
-<<<<<<< HEAD
-=======
 minimatch@^9.0.0:
   version "9.0.5"
   resolved "https://registry.npmjs.org/minimatch/-/minimatch-9.0.5.tgz"
@@ -7944,7 +7860,6 @@ minimatch@^9.0.0:
   dependencies:
     brace-expansion "^2.0.1"
 
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
 minimatch@^9.0.1:
   version "9.0.5"
   resolved "https://registry.npmjs.org/minimatch/-/minimatch-9.0.5.tgz"
@@ -8235,8 +8150,6 @@ onetime@^5.1.2:
   dependencies:
     mimic-fn "^2.1.0"
 
-<<<<<<< HEAD
-=======
 open@^8.4.0:
   version "8.4.2"
   resolved "https://registry.npmjs.org/open/-/open-8.4.2.tgz"
@@ -8246,7 +8159,6 @@ open@^8.4.0:
     is-docker "^2.1.1"
     is-wsl "^2.2.0"
 
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
 openai@^5.11.0:
   version "5.18.1"
   resolved "https://registry.npmjs.org/openai/-/openai-5.18.1.tgz"
@@ -8311,11 +8223,7 @@ p-try@^2.0.0:
   resolved "https://registry.npmjs.org/p-try/-/p-try-2.2.0.tgz"
   integrity sha512-R4nPAVTAU0B9D35/Gk3uJf/7XYbQcyohSKdvAxIRSNghFl4e71hVoGnBNQz9cWaXxO2I10KTC+3jMdvvoKw6dQ==
 
-<<<<<<< HEAD
-pac-proxy-agent@^7.0.1:
-=======
 pac-proxy-agent@^7.0.1, pac-proxy-agent@^7.1.0:
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
   version "7.2.0"
   resolved "https://registry.npmjs.org/pac-proxy-agent/-/pac-proxy-agent-7.2.0.tgz"
   integrity sha512-TEB8ESquiLMc0lV8vcd5Ql/JAKAoyzHFXaStwjkzpOpC5Yv+pIzLfHvjTSdf3vpa2bMiUQrg9i6276yn8666aA==
@@ -9147,8 +9055,6 @@ postcss@8.4.31:
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
 
-<<<<<<< HEAD
-=======
 postgres-array@~2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/postgres-array/-/postgres-array-2.0.0.tgz"
@@ -9171,7 +9077,6 @@ postgres-interval@^1.1.0:
   dependencies:
     xtend "^4.0.0"
 
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
 prelude-ls@^1.2.1:
   version "1.2.1"
   resolved "https://registry.npmjs.org/prelude-ls/-/prelude-ls-1.2.1.tgz"
@@ -9200,14 +9105,11 @@ process@^0.11.1:
   resolved "https://registry.npmjs.org/process/-/process-0.11.10.tgz"
   integrity sha512-cdGef/drWFoydD1JsMzuFf8100nZl+GT+yacc2bEced5f9Rjk4z+WtFUTBu9PhOi9j/jfmBPu0mMEY4wIdAF8A==
 
-<<<<<<< HEAD
-=======
 progress@^2.0.3:
   version "2.0.3"
   resolved "https://registry.npmjs.org/progress/-/progress-2.0.3.tgz"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
 promptly@^2:
   version "2.2.0"
   resolved "https://registry.npmjs.org/promptly/-/promptly-2.2.0.tgz"
@@ -9249,8 +9151,6 @@ protobufjs@^7.2.5, protobufjs@^7.4.0, protobufjs@^7.5.3:
     "@types/node" ">=13.7.0"
     long "^5.0.0"
 
-<<<<<<< HEAD
-=======
 proxy-agent@^6.5.0:
   version "6.5.0"
   resolved "https://registry.npmjs.org/proxy-agent/-/proxy-agent-6.5.0.tgz"
@@ -9265,7 +9165,6 @@ proxy-agent@^6.5.0:
     proxy-from-env "^1.1.0"
     socks-proxy-agent "^8.0.5"
 
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
 proxy-agent@~6.4.0:
   version "6.4.0"
   resolved "https://registry.npmjs.org/proxy-agent/-/proxy-agent-6.4.0.tgz"
@@ -9292,8 +9191,6 @@ psl@^1.1.33:
   dependencies:
     punycode "^2.3.1"
 
-<<<<<<< HEAD
-=======
 pump@^3.0.0:
   version "3.0.3"
   resolved "https://registry.npmjs.org/pump/-/pump-3.0.3.tgz"
@@ -9302,7 +9199,6 @@ pump@^3.0.0:
     end-of-stream "^1.1.0"
     once "^1.3.1"
 
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
 punycode@^2.1.0, punycode@^2.1.1, punycode@^2.3.1:
   version "2.3.1"
   resolved "https://registry.npmjs.org/punycode/-/punycode-2.3.1.tgz"
@@ -9594,8 +9490,6 @@ require-in-the-middle@^5.0.0:
     module-details-from-path "^1.0.3"
     resolve "^1.22.1"
 
-<<<<<<< HEAD
-=======
 require-in-the-middle@^7.1.1:
   version "7.5.2"
   resolved "https://registry.npmjs.org/require-in-the-middle/-/require-in-the-middle-7.5.2.tgz"
@@ -9605,7 +9499,6 @@ require-in-the-middle@^7.1.1:
     module-details-from-path "^1.0.3"
     resolve "^1.22.8"
 
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
 requires-port@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/requires-port/-/requires-port-1.0.0.tgz"
@@ -9669,14 +9562,11 @@ reusify@^1.0.4:
   resolved "https://registry.npmjs.org/reusify/-/reusify-1.1.0.tgz"
   integrity sha512-g6QUff04oZpHs0eG5p83rFLhHeV00ug/Yf9nZM6fLeUrPguBTkTQOdpAWWspMh55TZfVQDPaN3NQJfbVRAxdIw==
 
-<<<<<<< HEAD
-=======
 robots-parser@^3.0.1:
   version "3.0.1"
   resolved "https://registry.npmjs.org/robots-parser/-/robots-parser-3.0.1.tgz"
   integrity sha512-s+pyvQeIKIZ0dx5iJiQk1tPLJAWln39+MI5jtM8wnyws+G5azk+dMnMX0qfbqNetKKNgcWWOdi0sfm+FbQbgdQ==
 
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
 rollup@^4.43.0, rollup@^4.50.0:
   version "4.50.0"
   resolved "https://registry.npmjs.org/rollup/-/rollup-4.50.0.tgz"
@@ -9798,14 +9688,11 @@ semver@^6.3.1:
   resolved "https://registry.npmjs.org/semver/-/semver-6.3.1.tgz"
   integrity sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==
 
-<<<<<<< HEAD
-=======
 semver@^7.5.2:
   version "7.7.2"
   resolved "https://registry.npmjs.org/semver/-/semver-7.7.2.tgz"
   integrity sha512-RF0Fw+rO5AMf9MAyaRXI4AV0Ulj5lMHqVxxdSgiVbixSCXoEmmX/jk0CuJw4+3SqroYO9VoUh+HcuJivvtJemA==
 
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
 semver@^7.5.3:
   version "7.7.2"
   resolved "https://registry.npmjs.org/semver/-/semver-7.7.2.tgz"
@@ -9935,11 +9822,7 @@ shell-quote@^1.8.1:
   resolved "https://registry.npmjs.org/shell-quote/-/shell-quote-1.8.3.tgz"
   integrity sha512-ObmnIF4hXNg1BqhnHmgbDETF8dLPCggZWBjkQfhZpbszZnYur5DUljTcCHii5LC3J5E0yeO/1LIMyH+UvHQgyw==
 
-<<<<<<< HEAD
-shimmer@^1.2.0:
-=======
 shimmer@^1.2.0, shimmer@^1.2.1:
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
   version "1.2.1"
   resolved "https://registry.npmjs.org/shimmer/-/shimmer-1.2.1.tgz"
   integrity sha512-sQTKC1Re/rM6XyFM6fIAGHRPVGvyXfgzIDvzoq608vM+jeyVD0Tu1E6Np0Kc2zAIFWIj963V2800iF/9LPieQw==
@@ -10517,8 +10400,6 @@ test-exclude@^6.0.0:
     glob "^7.1.4"
     minimatch "^3.0.4"
 
-<<<<<<< HEAD
-=======
 text-decoder@^1.1.0:
   version "1.2.3"
   resolved "https://registry.npmjs.org/text-decoder/-/text-decoder-1.2.3.tgz"
@@ -10526,7 +10407,6 @@ text-decoder@^1.1.0:
   dependencies:
     b4a "^1.6.4"
 
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
 thenify-all@^1.0.0:
   version "1.6.0"
   resolved "https://registry.npmjs.org/thenify-all/-/thenify-all-1.6.0.tgz"
@@ -10541,14 +10421,11 @@ thenify-all@^1.0.0:
   dependencies:
     any-promise "^1.0.0"
 
-<<<<<<< HEAD
-=======
 third-party-web@^0.27.0, third-party-web@latest:
   version "0.27.0"
   resolved "https://registry.npmjs.org/third-party-web/-/third-party-web-0.27.0.tgz"
   integrity sha512-h0JYX+dO2Zr3abCQpS6/uFjujaOjA1DyDzGQ41+oFn9VW/ARiq9g5ln7qEP9+BTzDpOMyIfsfj4OvfgXAsMUSA==
 
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
 tinyglobby@^0.2.13, tinyglobby@^0.2.14:
   version "0.2.14"
   resolved "https://registry.npmjs.org/tinyglobby/-/tinyglobby-0.2.14.tgz"
@@ -11034,7 +10911,6 @@ whatwg-url@^14.0.0, "whatwg-url@^14.1.0 || ^13.0.0", whatwg-url@^14.1.1:
     tr46 "^5.1.0"
     webidl-conversions "^7.0.0"
 
-<<<<<<< HEAD
 whatwg-url@^5.0.0:
   version "5.0.0"
   resolved "https://registry.npmjs.org/whatwg-url/-/whatwg-url-5.0.0.tgz"
@@ -11042,12 +10918,11 @@ whatwg-url@^5.0.0:
   dependencies:
     tr46 "~0.0.3"
     webidl-conversions "^3.0.0"
-=======
+
 when-exit@^2.1.1:
   version "2.1.4"
   resolved "https://registry.npmjs.org/when-exit/-/when-exit-2.1.4.tgz"
   integrity sha512-4rnvd3A1t16PWzrBUcSDZqcAmsUIy4minDXT/CZ8F2mVDgd65i4Aalimgz1aQkRGU0iH5eT5+6Rx2TK8o443Pg==
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
 
 which-boxed-primitive@^1.1.0, which-boxed-primitive@^1.1.1:
   version "1.1.1"
@@ -11169,11 +11044,7 @@ ws@^7.3.1:
   resolved "https://registry.npmjs.org/ws/-/ws-7.5.10.tgz"
   integrity sha512-+dbF1tHwZpXcbOJdVOkzLDxZP1ailvSxM6ZweXTegylPny803bFhA+vqBYw4s31NSAk4S2Qz+AKXK9a4wkdjcQ==
 
-<<<<<<< HEAD
-ws@^8.18.0, ws@^8.18.2:
-=======
-ws@^8.18.0, ws@^8.18.3:
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
+ws@^8.18.0, ws@^8.18.2, ws@^8.18.3:
   version "8.18.3"
   resolved "https://registry.npmjs.org/ws/-/ws-8.18.3.tgz"
   integrity sha512-PEIGCY5tSlUt50cqyMXfCzX+oOPqN0vuGqWzbcJ2xvnkzkq46oOpz7dQaTDBdfICb4N14+GARUDw2XV2N4tvzg==
@@ -11183,14 +11054,11 @@ ws@~7.5.10:
   resolved "https://registry.npmjs.org/ws/-/ws-7.5.10.tgz"
   integrity sha512-+dbF1tHwZpXcbOJdVOkzLDxZP1ailvSxM6ZweXTegylPny803bFhA+vqBYw4s31NSAk4S2Qz+AKXK9a4wkdjcQ==
 
-<<<<<<< HEAD
-=======
 xdg-basedir@^5.1.0:
   version "5.1.0"
   resolved "https://registry.npmjs.org/xdg-basedir/-/xdg-basedir-5.1.0.tgz"
   integrity sha512-GCPAHLvrIH13+c0SuacwvRYj2SxJXQ4kaVTT5xgL3kPrz56XxkF21IGhjSE1+W0aw7gpBWRGXLCPnPby6lSpmQ==
 
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
 xml-name-validator@^5.0.0:
   version "5.0.0"
   resolved "https://registry.npmjs.org/xml-name-validator/-/xml-name-validator-5.0.0.tgz"

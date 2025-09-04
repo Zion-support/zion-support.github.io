@@ -19,7 +19,7 @@ export default {
     {
       name: 'auto-fix',
       script: 'node',
-      args: 'scripts/pm2/auto-fix.js',
+      args: 'scripts/pm2/auto-fix.cjs',
       cron_restart: '0 */6 * * *',
       autorestart: 'true',
       watch: 'false',
@@ -34,7 +34,7 @@ export default {
     {
       name: 'healthcheck',
       script: 'node',
-      args: 'scripts/pm2/healthcheck.js',
+      args: 'scripts/pm2/healthcheck.cjs',
       cron_restart: '*/5 * * * *',
       autorestart: 'true',
       watch: 'false',
@@ -48,7 +48,7 @@ export default {
     },
     {
       name: 'code-quality-monitor',
-      script: 'scripts/pm2/code-quality-monitor.js',
+      script: 'scripts/pm2/code-quality-monitor.cjs',
       instances: '1',
       autorestart: 'true',
       watch: 'false',
@@ -66,7 +66,7 @@ export default {
     },
     {
       name: 'auto-commit-fixes',
-      script: 'scripts/pm2/auto-commit-fixes.js',
+      script: 'scripts/pm2/auto-commit-fixes.cjs',
       instances: '1',
       autorestart: 'true',
       watch: 'false',
@@ -84,7 +84,7 @@ export default {
     },
     {
       name: 'dependency-monitor',
-      script: 'scripts/pm2/dependency-monitor.js',
+      script: 'scripts/pm2/dependency-monitor.cjs',
       instances: '1',
       autorestart: 'true',
       watch: 'false',
@@ -102,7 +102,7 @@ export default {
     },
     {
       name: 'performance-monitor',
-      script: 'scripts/pm2/performance-monitor.js',
+      script: 'scripts/pm2/performance-monitor.cjs',
       instances: '1',
       autorestart: 'true',
       watch: 'false',
@@ -120,7 +120,7 @@ export default {
     },
     {
       name: 'test-automation',
-      script: 'scripts/pm2/test-automation.js',
+      script: 'scripts/pm2/test-automation.cjs',
       instances: '1',
       autorestart: 'true',
       watch: 'false',
@@ -139,7 +139,7 @@ export default {
     },
     {
       name: 'security-scanner',
-      script: 'scripts/pm2/security-scanner.js',
+      script: 'scripts/pm2/security-scanner.cjs',
       instances: '1',
       autorestart: 'true',
       watch: 'false',
@@ -159,7 +159,7 @@ export default {
     },
     {
       name: 'build-optimizer',
-      script: 'scripts/pm2/build-optimizer.js',
+      script: 'scripts/pm2/build-optimizer.cjs',
       instances: '1',
       autorestart: 'true',
       watch: 'false',
@@ -179,7 +179,7 @@ export default {
     },
     {
       name: 'git-workflow',
-      script: 'scripts/pm2/git-workflow.js',
+      script: 'scripts/pm2/git-workflow.cjs',
       instances: '1',
       autorestart: 'true',
       watch: 'false',
@@ -199,7 +199,7 @@ export default {
     },
     {
       name: 'health-monitor',
-      script: 'scripts/pm2/health-monitor.js',
+      script: 'scripts/pm2/health-monitor.cjs',
       instances: '1',
       autorestart: 'true',
       watch: 'false',
@@ -219,7 +219,7 @@ export default {
     },
     {
       name: 'docs-generator',
-      script: 'scripts/pm2/docs-generator.js',
+      script: 'scripts/pm2/docs-generator.cjs',
       instances: '1',
       autorestart: 'true',
       watch: 'false',
@@ -239,7 +239,7 @@ export default {
     },
     {
       name: 'seo-accessibility',
-      script: 'scripts/pm2/seo-accessibility.js',
+      script: 'scripts/pm2/seo-accessibility.cjs',
       instances: '1',
       autorestart: 'true',
       watch: 'false',
