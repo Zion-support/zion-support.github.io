@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
+import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, FileText, Globe, HeartHandshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, PenTool, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap, Sparkles, Flame, Crown, Infinity, Gauge, GitFork, Truck, BarChart3, Eye, Server, Smartphone, Database, Network, Clock, Key, Globe2, ShieldCheck, CheckCircle, ArrowUpRight, Play, MailIcon, SparklesIcon, BrainCircuit, CpuIcon, ShieldIcon, ZapIcon, RocketIcon, HeartIcon, StarIcon, CrownIcon, FlameIcon, InfinityIcon, GaugeIcon, GitForkIcon, TruckIcon, BarChart3Icon, EyeIcon, ServerIcon, SmartphoneIcon, DatabaseIcon, NetworkIcon, ClockIcon, KeyIcon, Globe2Icon, ShieldCheckIcon, CheckCircleIcon, ArrowUpRightIcon, PlayIcon } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, FileText, Globe, HeartHandshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, PenTool, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap, User, Bell, Award, GraduationCap, LifeBuoy, BarChart3, Server, Satellite, Gauge, Workflow, Truck, Eye, Smartphone, Database, Network, Clock, PanelLeft, Sparkles } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -71,20 +71,12 @@ const AppHeader: React.FC = () => {
     },
 <<<<<<< HEAD
     { 
-      name: 'Innovative Micro SAAS 2025', 
-      href: '/innovative-micro-saas-services-2025', 
-      icon: Rocket, 
-      description: 'Cutting-edge AI Services',
-      featured: true,
-      color: 'from-purple-500 to-pink-500'
-    },
-    { 
-      name: 'AI Business Intelligence', 
+      name: 'AI & Business Intelligence', 
       href: '/services/ai-business-intelligence', 
       icon: Brain, 
       description: 'Machine Learning & Data Science',
       featured: true,
-      color: 'from-purple-500 to-cyan-500'
+      color: 'from-purple-500 to-pink-500'
     },
     { 
       name: 'AI Healthcare Platform', 
@@ -159,81 +151,20 @@ const AppHeader: React.FC = () => {
       color: 'from-indigo-500 to-purple-500'
     },
     { 
-      name: 'Pricing Guide 2026', 
-      href: '/comprehensive-pricing-guide-2026', 
-      icon: DollarSign, 
-      description: 'Complete Pricing & ROI Analysis',
+      name: 'Innovative Micro SAAS 2025', 
+      href: '/innovative-micro-saas-services-2025', 
+      icon: Sparkles, 
+      description: 'Cutting-edge AI Services',
       featured: true,
-      color: 'from-green-500 to-emerald-500'
+      color: 'from-yellow-500 to-orange-500'
     },
     { 
-      name: 'Pricing Guide 2030', 
-      href: '/comprehensive-pricing-guide-2030', 
-      icon: DollarSign, 
-      description: 'Revolutionary 2030 Services Pricing',
+      name: 'Emerging Tech Services', 
+      href: '/services/emerging-tech', 
+      icon: Flame, 
+      description: 'Next-Generation Technology',
       featured: true,
-      color: 'from-purple-500 to-pink-500'
-    },
-    { 
-      name: 'AI Business Intelligence', 
-      href: '/services/ai-business-intelligence', 
-      icon: Brain, 
-      description: 'Machine Learning & Data Science',
-      featured: false,
-      color: 'from-purple-500 to-cyan-500'
-    },
-    { 
-      name: 'Cloud DevOps', 
-      href: '/services/cloud-devops', 
-      icon: Cloud, 
-      description: 'DevOps & Infrastructure',
-      featured: false,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    { 
-      name: 'Digital Twin Platform', 
-      href: '/services/digital-twin', 
-      icon: Globe, 
-      description: 'Virtual Replicas & Simulation',
-      featured: false,
-      color: 'from-green-500 to-emerald-500'
-=======
-    {
-      name: 'Cloud Services',
-      href: '/cloud-services',
-      icon: Cloud,
-      color: 'from-blue-500 to-cyan-400',
-      dropdown: [
-        { name: 'Infrastructure', href: '/cloud-services/infrastructure' },
-        { name: 'DevOps', href: '/cloud-services/devops' },
-        { name: 'Migration', href: '/cloud-services/migration' },
-        { name: 'Monitoring', href: '/cloud-services/monitoring' }
-      ]
-    },
-    {
-      name: 'Security',
-      href: '/security',
-      icon: Shield,
-      color: 'from-red-500 to-pink-500',
-      dropdown: [
-        { name: 'Cybersecurity', href: '/security/cybersecurity' },
-        { name: 'Compliance', href: '/security/compliance' },
-        { name: 'Penetration Testing', href: '/security/penetration-testing' },
-        { name: 'Security Audits', href: '/security/audits' }
-      ]
-    },
-    {
-      name: 'About',
-      href: '/about',
-      icon: Users,
-      color: 'from-green-500 to-blue-500'
-    },
-    {
-      name: 'Innovation',
-      href: '/innovation',
-      icon: Sparkles,
-      color: 'from-purple-500 to-pink-500'
->>>>>>> origin/main
+      color: 'from-red-500 to-yellow-500'
     }
   ];
 
@@ -1007,45 +938,73 @@ const AppHeader: React.FC = () => {
   ];
   const solutions = [
     {
-      name: 'Enterprise Solutions',
-      href: '/solutions',
-      icon: Building2,
-      description: 'Large-scale business transformations',
-      featured: true
-    },
-    {
-      name: 'AI Solutions',
-      href: '/solutions',
-      icon: Brain,
-      description: 'Artificial Intelligence & Machine Learning',
-      featured: true
-    },
-    {
-      name: 'Cybersecurity Solutions',
-      href: '/solutions',
-      icon: Shield,
-      description: 'Advanced security & threat protection',
-      featured: true
-    },
-    {
-      name: 'Cloud Solutions',
-      href: '/solutions',
-      icon: Cloud,
-      description: 'Cloud infrastructure & migration',
-      featured: false
-    },
-    {
       name: 'Healthcare Solutions',
-      href: '/solutions',
+      href: '/solutions/healthcare',
       icon: Heart,
       description: 'Digital health transformation',
       featured: true
     },
     {
       name: 'Financial Solutions',
-      href: '/solutions',
+      href: '/solutions/financial',
       icon: TrendingUp,
       description: 'Fintech innovation & compliance',
+      featured: true
+    },
+    {
+      name: 'Manufacturing Solutions',
+      href: '/solutions/manufacturing',
+      icon: Building2,
+      description: 'Smart manufacturing & Industry 4.0',
+      featured: true
+    },
+    {
+      name: 'Retail Solutions',
+      href: '/solutions/retail',
+      icon: ShoppingCart,
+      description: 'E-commerce & retail innovation',
+      featured: true
+    },
+    {
+      name: 'Education Solutions',
+      href: '/solutions/education',
+      icon: BookOpen,
+      description: 'EdTech & learning platforms',
+      featured: true
+    },
+    {
+      name: 'Legal Tech Solutions',
+      href: '/solutions/legal-tech',
+      icon: Scale,
+      description: 'Legal automation & compliance',
+      featured: true
+    },
+    {
+      name: 'Real Estate Solutions',
+      href: '/solutions/real-estate',
+      icon: Building,
+      description: 'Property technology & analytics',
+      featured: true
+    },
+    {
+      name: 'Logistics Solutions',
+      href: '/solutions/logistics',
+      icon: Truck,
+      description: 'Supply chain optimization',
+      featured: true
+    },
+    {
+      name: 'Hospitality Solutions',
+      href: '/solutions/hospitality',
+      icon: HeartHandshake,
+      description: 'Guest experience & operations',
+      featured: true
+    },
+    {
+      name: 'Energy Solutions',
+      href: '/solutions/energy',
+      icon: Zap,
+      description: 'Sustainable energy management',
       featured: true
     }
   ];
@@ -1097,6 +1056,27 @@ const AppHeader: React.FC = () => {
       href: '/pricing',
       icon: DollarSign,
       description: 'Complete pricing information',
+      featured: true
+    },
+    {
+      name: 'Pricing Guide 2027',
+      href: '/pricing-guide-2027',
+      icon: DollarSign,
+      description: 'Advanced pricing strategies',
+      featured: true
+    },
+    {
+      name: 'Pricing Guide 2030',
+      href: '/pricing-guide-2030',
+      icon: DollarSign,
+      description: 'Future pricing models',
+      featured: true
+    },
+    {
+      name: 'Marketplace',
+      href: '/marketplace',
+      icon: ShoppingCart,
+      description: 'Browse our service catalog',
       featured: true
     }
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-fc73
@@ -1288,28 +1268,163 @@ const AppHeader: React.FC = () => {
             <div className="flex items-center space-x-6">
 >>>>>>> merge-all-prs-20250904-105408
               {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-<<<<<<< HEAD
-                  className="text-slate-300 hover: tex t-cyan-400 block px-3 py-2 text-base font-medium transition-colors duration-200"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ))}
-              
-              {/* Mobile Services */}
-              <div className="px-3 py-2">
-                <div className="text-slate-400 text-sm font-medium mb-2">Services</div>
-                <div className="space-y-1">
-                  {services.map((service) => (
+                <div key={item.name} className="relative">
+                  {item.hasDropdown ? (
+                    <div className="relative">
+                      <button
+                        onClick={() => {
+                          if (item.name === 'Services') {
+                            setServicesDropdownOpen(!servicesDropdownOpen);
+                            setSolutionsDropdownOpen(false);
+                            setResourcesDropdownOpen(false);
+                          } else if (item.name === 'Solutions') {
+                            setSolutionsDropdownOpen(!solutionsDropdownOpen);
+                            setServicesDropdownOpen(false);
+                            setResourcesDropdownOpen(false);
+                          } else if (item.name === 'Resources') {
+                            setResourcesDropdownOpen(!resourcesDropdownOpen);
+                            setServicesDropdownOpen(false);
+                            setSolutionsDropdownOpen(false);
+                          }
+                        }}
+                        className="flex items-center text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-all duration-200 relative group"
+                      >
+                        {item.name}
+                        <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-200 group-hover:rotate-180" />
+                      </button>
+                      
+                      {/* Services Dropdown */}
+                      {item.name === 'Services' && servicesDropdownOpen && (
+                        <div className="absolute top-full left-0 mt-2 w-[800px] bg-slate-900/95 backdrop-blur-xl border border-cyan-400/20 rounded-xl shadow-2xl shadow-cyan-400/10 p-6 z-50">
+                          <div className="grid grid-cols-2 gap-6">
+                            <div>
+                              <h3 className="text-lg font-semibold text-cyan-400 mb-4">Core Services</h3>
+                              <div className="space-y-3">
+                                {services.slice(0, 6).map((service) => (
+                                  <Link
+                                    key={service.name}
+                                    to={service.href}
+                                    className="flex items-center p-3 rounded-lg hover:bg-slate-800/50 transition-all duration-200 group"
+                                    onClick={() => setServicesDropdownOpen(false)}
+                                  >
+                                    <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${service.color} flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-200`}>
+                                      <service.icon className="w-5 h-5 text-white" />
+                                    </div>
+                                    <div>
+                                      <div className="font-medium text-slate-200 group-hover:text-cyan-400 transition-colors duration-200">
+                                        {service.name}
+                                      </div>
+                                      <div className="text-sm text-slate-400">{service.description}</div>
+                                    </div>
+                                  </Link>
+                                ))}
+                              </div>
+                            </div>
+                            <div>
+                              <h3 className="text-lg font-semibold text-cyan-400 mb-4">Specialized Solutions</h3>
+                              <div className="space-y-3">
+                                {services.slice(6).map((service) => (
+                                  <Link
+                                    key={service.name}
+                                    to={service.href}
+                                    className="flex items-center p-3 rounded-lg hover:bg-slate-800/50 transition-all duration-200 group"
+                                    onClick={() => setServicesDropdownOpen(false)}
+                                  >
+                                    <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${service.color} flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-200`}>
+                                      <service.icon className="w-5 h-5 text-white" />
+                                    </div>
+                                    <div>
+                                      <div className="font-medium text-slate-200 group-hover:text-cyan-400 transition-colors duration-200">
+                                        {service.name}
+                                      </div>
+                                      <div className="text-sm text-slate-400">{service.description}</div>
+                                    </div>
+                                  </Link>
+                                ))}
+                              </div>
+                              <div className="mt-6 pt-4 border-t border-slate-700">
+                                <Link
+                                  to="/services"
+                                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors duration-200"
+                                  onClick={() => setServicesDropdownOpen(false)}
+                                >
+                                  View All Services
+                                  <ArrowRight className="ml-2 h-4 w-4" />
+                                </Link>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      )}
+
+                      {/* Solutions Dropdown */}
+                      {item.name === 'Solutions' && solutionsDropdownOpen && (
+                        <div className="absolute top-full left-0 mt-2 w-[600px] bg-slate-900/95 backdrop-blur-xl border border-cyan-400/20 rounded-xl shadow-2xl shadow-cyan-400/10 p-6 z-50">
+                          <h3 className="text-lg font-semibold text-cyan-400 mb-4">Industry Solutions</h3>
+                          <div className="grid grid-cols-2 gap-4">
+                            {solutions.map((solution) => (
+                              <Link
+                                key={solution.name}
+                                to={solution.href}
+                                className="flex items-center p-3 rounded-lg hover:bg-slate-800/50 transition-all duration-200 group"
+                                onClick={() => setSolutionsDropdownOpen(false)}
+                              >
+                                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-200">
+                                  <solution.icon className="w-5 h-5 text-white" />
+                                </div>
+                                <div>
+                                  <div className="font-medium text-slate-200 group-hover:text-cyan-400 transition-colors duration-200">
+                                    {solution.name}
+                                  </div>
+                                  <div className="text-sm text-slate-400">{solution.description}</div>
+                                </div>
+                              </Link>
+                            ))}
+                          </div>
+                          <div className="mt-4 pt-4 border-t border-slate-700">
+                            <Link
+                              to="/solutions"
+                              className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors duration-200"
+                              onClick={() => setSolutionsDropdownOpen(false)}
+                            >
+                              View All Solutions
+                              <ArrowRight className="ml-2 h-4 w-4" />
+                            </Link>
+                          </div>
+                        </div>
+                      )}
+
+                      {/* Resources Dropdown */}
+                      {item.name === 'Resources' && resourcesDropdownOpen && (
+                        <div className="absolute top-full left-0 mt-2 w-[500px] bg-slate-900/95 backdrop-blur-xl border border-cyan-400/20 rounded-xl shadow-2xl shadow-cyan-400/10 p-6 z-50">
+                          <h3 className="text-lg font-semibold text-cyan-400 mb-4">Learning & Support</h3>
+                          <div className="space-y-3">
+                            {resources.map((resource) => (
+                              <Link
+                                key={resource.name}
+                                to={resource.href}
+                                className="flex items-center p-3 rounded-lg hover:bg-slate-800/50 transition-all duration-200 group"
+                                onClick={() => setResourcesDropdownOpen(false)}
+                              >
+                                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-200">
+                                  <resource.icon className="w-5 h-5 text-white" />
+                                </div>
+                                <div>
+                                  <div className="font-medium text-slate-200 group-hover:text-cyan-400 transition-colors duration-200">
+                                    {resource.name}
+                                  </div>
+                                  <div className="text-sm text-slate-400">{resource.description}</div>
+                                </div>
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  ) : (
                     <Link
-                      key={service.name}
-                      to={service.href}
-                      className="block text-slate-300 hover: tex t-cyan-400 px-3 py-2 text-sm transition-colors duration-200"
-                      onClick={() => setMobileMenuOpen(false)}
-                      className={`block w-full text-center px-4 py-2 bg-gradient-to-r ${action.color} text-white rounded-lg hover:shadow-lg transition-all duration-200 text-sm font-medium`}
+                      to={item.href}
+                      className="text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-all duration-200"
                     >
                       {action.name}
                     </Link>
@@ -1474,416 +1589,206 @@ const AppHeader: React.FC = () => {
               ))}
             </nav>
 
-            {/* Mobile Contact */}
-            <div className="mt-6 pt-4 border-t border-gray-200/50 space-y-3">
-              <a
-                href="tel:+15551234567"
-                className="flex items-center space-x-2 text-gray-600 hover:text-cyan-600 transition-colors duration-300"
-              >
-                <Phone className="w-4 h-4" />
-                <span>+1 (555) 123-4567</span>
-              </a>
-              <a
-                href="mailto:info@ziontechgroup.com"
-                className="flex items-center space-x-2 text-gray-600 hover:text-cyan-600 transition-colors duration-300"
-              >
-                <Mail className="w-4 h-4" />
-                <span>info@ziontechgroup.com</span>
-              </a>
-              <Link
-                to="/contact"
-                className="block w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-center px-6 py-3 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Get Started
-              </Link>
->>>>>>> origin/main
-            </div>
-          </div>
-        )}
-      </div>
-    </header>
-  );
-<<<<<<< HEAD
-}
-=======
-};
-
-export { AppHeader };
->>>>>>> origin/main
-=======
-                  className={`relative px-3 py-2 text-sm font-medium rounded-lg transition-all duration-300 group ${
-                    item.current 
-                      ? 'text-cyan-400 bg-cyan-500/10 border border-cyan-400/20' 
-                      : 'text-gray-300 hover:text-white hover:bg-white/5'
-                  }`}
+            {/* Search Bar */}
+            <div className="hidden lg:flex items-center space-x-4">
+              <form onSubmit={handleSearch} className="relative">
+                <input
+                  type="text"
+                  placeholder="Search services..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-64 px-4 py-2 bg-slate-800/50 border border-slate-600 rounded-lg text-slate-200 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-200"
+                />
+                <button
+                  type="submit"
+                  disabled={isSearching}
+                  className="absolute right-2 top-1/2 transform -translate-y-1/2 p-1 text-slate-400 hover:text-cyan-400 transition-colors duration-200"
                 >
-                  {item.name}
-                  {item.featured && (
-                    <span className="absolute -top-1 -right-1 w-2 h-2 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full animate-pulse"></span>
+                  {isSearching ? (
+                    <div className="w-5 h-5 border-2 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
+                  ) : (
+                    <Search className="w-5 h-5" />
                   )}
-                  <div className={`absolute inset-0 rounded-lg transition-all duration-300 ${
-                    item.current 
-                      ? 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20' 
-                      : 'group-hover:bg-gradient-to-r group-hover:from-cyan-500/10 group-hover:to-blue-500/10'
-                  }`}></div>
+                </button>
+              </form>
+
+              {/* Quick Actions */}
+              <div className="flex items-center space-x-2">
+                <Link
+                  to="/request-quote"
+                  className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 font-medium"
+                >
+                  Get Quote
                 </Link>
-              ))}
+                <ThemeToggle />
+              </div>
             </div>
 
-            {/* Services Dropdown */}
-            <div className="relative">
+            {/* Mobile menu button */}
+            <div className="lg:hidden">
               <button
-                onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
-                className="flex items-center space-x-2 px-4 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-300 group"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="p-2 text-slate-300 hover:text-cyan-400 transition-colors duration-200"
               >
-                <span>Services</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
-                  servicesDropdownOpen ? 'rotate-180' : ''
-                }`} />
-                <div className="absolute inset-0 rounded-lg group-hover:bg-gradient-to-r group-hover:from-purple-500/10 group-hover:to-pink-500/10 transition-all duration-300"></div>
+                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
               </button>
-
-              <AnimatePresence>
-                {servicesDropdownOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                    transition={{ duration: 0.2 }}
-                    className="absolute top-full left-0 mt-2 w-96 bg-zion-slate-dark/95 backdrop-blur-md border border-cyan-400/20 rounded-2xl shadow-2xl shadow-cyan-500/20 overflow-hidden"
-                  >
-                    <div className="p-4">
-                      <div className="text-sm font-semibold text-cyan-400 mb-3 px-2">Our Services</div>
-                      
-                      {/* Featured Services */}
-                      <div className="mb-4">
-                        <div className="text-xs font-medium text-gray-400 mb-2 px-2">Featured</div>
-                        {services.filter(s => s.featured).map((service) => (
-                          <Link
-                            key={service.name}
-                            to={service.href}
-                            onClick={() => setServicesDropdownOpen(false)}
-                            className="flex items-center space-x-3 p-2 rounded-lg hover:bg-white/5 transition-all duration-200 group"
-                          >
-                            <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center`}>
-                              <service.icon className="w-4 h-4 text-white" />
-                            </div>
-                            <div className="flex-1">
-                              <div className="text-sm font-medium text-white group-hover:text-cyan-400 transition-colors duration-200">
-                                {service.name}
-                              </div>
-                              <div className="text-xs text-gray-400">{service.description}</div>
-                            </div>
-                          </Link>
-                        ))}
-                      </div>
-
-                      {/* Service Categories */}
-                      <div className="space-y-3">
-                        {Array.from(new Set(services.map(s => s.category))).map((category) => (
-                          <div key={category}>
-                            <div className="text-xs font-medium text-gray-400 mb-2 px-2">{category}</div>
-                            {services.filter(s => s.category === category).slice(0, 3).map((service) => (
-                              <Link
-                                key={service.name}
-                                to={service.href}
-                                onClick={() => setServicesDropdownOpen(false)}
-                                className="flex items-center space-x-3 p-2 rounded-lg hover:bg-white/5 transition-all duration-200 group"
-                              >
-                                <div className={`w-6 h-6 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center`}>
-                                  <service.icon className="w-3 h-3 text-white" />
-                                </div>
-                                <div className="flex-1">
-                                  <div className="text-sm text-white group-hover:text-cyan-400 transition-colors duration-200">
-                                    {service.name}
-                                  </div>
-                                </div>
-                              </Link>
-                            ))}
-                          </div>
-                        ))}
-                      </div>
-
-                      {/* View All Services Link */}
-                      <div className="mt-4 pt-3 border-t border-cyan-400/20">
-                        <Link
-                          to="/services"
-                          onClick={() => setServicesDropdownOpen(false)}
-                          className="flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-cyan-400 hover:text-white bg-gradient-to-r from-cyan-500/10 to-blue-500/10 hover:from-cyan-500/20 hover:to-blue-500/20 rounded-lg transition-all duration-300"
-                        >
-                          View All Services
-                          <ArrowRight className="w-4 h-4 ml-2" />
-                        </Link>
-                      </div>
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
             </div>
-
-            {/* Quick Links */}
-            <div className="flex items-center space-x-4">
-              {quickLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  to={link.href}
-                  className="p-2 text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-300 group"
-                >
-                  <link.icon className="w-5 h-5" />
-                  <div className="absolute inset-0 rounded-lg group-hover:bg-gradient-to-r group-hover:from-cyan-500/10 group-hover:to-blue-500/10 transition-all duration-300"></div>
-                </Link>
-              ))}
-            </div>
-          </nav>
-
-          {/* Right Side Actions */}
-          <div className="flex items-center space-x-4">
-            {/* Search */}
-            <div className="hidden md:block relative">
-              <form onSubmit={handleSearch} className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-                <input
-                  type="text"
-                  placeholder="Search..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-64 pl-10 pr-4 py-2 bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-cyan-400/50 transition-all duration-300"
-                />
-              </form>
-            </div>
-
-            {/* Notifications */}
-            <button className="p-2 text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-300 relative group">
-              <Bell className="w-5 h-5" />
-              <span className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
-              <div className="absolute inset-0 rounded-lg group-hover:bg-gradient-to-r group-hover:from-red-500/10 group-hover:to-pink-500/10 transition-all duration-300"></div>
-            </button>
-
-            {/* User Menu */}
-            <button className="p-2 text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-300 group">
-              <User className="w-5 h-5" />
-              <div className="absolute inset-0 rounded-lg group-hover:bg-gradient-to-r group-hover:from-cyan-500/10 group-hover:to-blue-500/10 transition-all duration-300"></div>
-            </button>
-
-            {/* Theme Toggle */}
-            <ThemeToggle />
-
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-300"
-            >
-              {mobileMenuOpen ? (
-                <X className="w-6 h-6" />
-              ) : (
-                <Menu className="w-6 h-6" />
-              )}
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Mobile Menu */}
-      <AnimatePresence>
-        {mobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="lg:hidden bg-zion-slate-dark/95 backdrop-blur-md border-t border-cyan-400/20"
-          >
-            <div className="px-4 py-6 space-y-4">
-              {/* Mobile Search */}
-              <form onSubmit={handleSearch} className="relative">
-=======
-          <nav className="hidden md:flex space-x-8">
-            {navigationItems.map((item) => (
-              <div key={item.name} className="relative group">
-                <Link
-                  to={item.href}
-                  className="flex items-center space-x-1 text-gray-700 dark:text-gray-300 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors duration-200"
-                >
-                  <item.icon className="w-4 h-4" />
-                  <span>{item.name}</span>
-                  {item.dropdown && <ChevronDown className="w-3 h-3" />}
-                </Link>
-                
-                {/* Dropdown Menu */}
-                {item.dropdown && (
-                  <div className="absolute top-full left-0 mt-2 w-64 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                    <div className="py-2">
-                      {item.dropdown.map((subItem) => (
-                        <Link
-                          key={subItem.name}
-                          to={subItem.href}
-                          className="flex items-center space-x-3 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200"
-                        >
-                          <div className={`w-6 h-6 bg-gradient-to-r ${subItem.color} rounded flex items-center justify-center`}>
-                            <subItem.icon className="w-3 h-3 text-white" />
-                          </div>
-                          <span>{subItem.name}</span>
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
-            ))}
-          </nav>
-
-          {/* Search and User Actions */}
-          <div className="hidden md:flex items-center space-x-4">
-            {/* Search */}
-            <form onSubmit={handleSearch} className="relative">
-              <div className="relative">
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-f8ab
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-                <input
-                  type="text"
-                  placeholder="Search..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-<<<<<<< HEAD
-                  className="w-full pl-10 pr-4 py-3 bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-cyan-400/50 transition-all duration-300"
-                />
-              </form>
-
-              {/* Mobile Navigation */}
-              <nav className="space-y-2">
-                {navigation.map((item) => (
-                  <Link
-                    key={item.name}
-                    to={item.href}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className={`block px-4 py-3 text-base font-medium rounded-lg transition-all duration-300 ${
-                      item.current 
-                        ? 'text-cyan-400 bg-cyan-500/10 border border-cyan-400/20' 
-                        : 'text-gray-300 hover:text-white hover:bg-white/5'
-                    }`}
-                  >
-                    {item.name}
-                    {item.featured && (
-                      <span className="ml-2 inline-block w-2 h-2 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full animate-pulse"></span>
-                    )}
-                  </Link>
-                ))}
-              </nav>
-
-              {/* Mobile Services */}
-              <div className="space-y-2">
-                <div className="px-4 py-2 text-sm font-semibold text-cyan-400">Services</div>
-                {services.slice(0, 6).map((service) => (
-                  <Link
-                    key={service.name}
-                    to={service.href}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-300"
-                  >
-                    <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center`}>
-                      <service.icon className="w-4 h-4 text-white" />
-                    </div>
-                    <div>
-                      <div className="text-sm font-medium">{service.name}</div>
-                      <div className="text-xs text-gray-400">{service.description}</div>
-                    </div>
-                  </Link>
-                ))}
-                <Link
-                  to="/services"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="block px-4 py-3 text-center text-cyan-400 font-medium hover:text-white transition-colors duration-300"
-                >
-                  View All Services →
-                </Link>
-              </div>
-
-              {/* Mobile Quick Links */}
-              <div className="pt-4 border-t border-cyan-400/20">
-                <div className="grid grid-cols-2 gap-2">
-                  {quickLinks.map((link) => (
-                    <Link
-                      key={link.name}
-                      to={link.href}
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="flex items-center space-x-2 px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-300"
-                    >
-                      <link.icon className="w-4 h-4" />
-                      <span className="text-sm">{link.name}</span>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-=======
-                  className="pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                />
-              </div>
-            </form>
-
-            {/* Notifications */}
-            <button className="p-2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-200">
-              <Bell className="w-5 h-5" />
-            </button>
-
-            {/* User Menu */}
-            <button className="p-2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-200">
-              <User className="w-5 h-5" />
-            </button>
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-200"
-            >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
           </div>
         </div>
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
-              {navigationItems.map((item) => (
-                <div key={item.name}>
-                  <Link
-                    to={item.href}
-                    className="flex items-center space-x-2 px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:text-cyan-600 dark:hover:text-cyan-400 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-md transition-colors duration-200"
-                    onClick={() => setMobileMenuOpen(false)}
+          <div className="lg:hidden bg-slate-900/95 backdrop-blur-xl border-t border-slate-700/20">
+            <div className="container-responsive py-4">
+              <div className="space-y-4">
+                {/* Mobile Search */}
+                <form onSubmit={handleSearch} className="relative">
+                  <input
+                    type="text"
+                    placeholder="Search services..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600 rounded-lg text-slate-200 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+                  />
+                  <button
+                    type="submit"
+                    disabled={isSearching}
+                    className="absolute right-3 top-1/2 transform -translate-y-1/2 p-1 text-slate-400 hover:text-cyan-400"
                   >
-                    <item.icon className="w-4 h-4" />
-                    <span>{item.name}</span>
-                  </Link>
-                  {item.dropdown && (
-                    <div className="ml-6 space-y-1">
-                      {item.dropdown.map((subItem) => (
+                    {isSearching ? (
+                      <div className="w-5 h-5 border-2 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
+                    ) : (
+                      <Search className="w-5 h-5" />
+                    )}
+                  </button>
+                </form>
+
+                {/* Mobile Navigation Links */}
+                <div className="space-y-2">
+                  {navigation.map((item) => (
+                    <div key={item.name}>
+                      {item.hasDropdown ? (
+                        <div>
+                          <button
+                            onClick={() => {
+                              if (item.name === 'Services') {
+                                setServicesDropdownOpen(!servicesDropdownOpen);
+                                setSolutionsDropdownOpen(false);
+                                setResourcesDropdownOpen(false);
+                              } else if (item.name === 'Solutions') {
+                                setSolutionsDropdownOpen(!solutionsDropdownOpen);
+                                setServicesDropdownOpen(false);
+                                setResourcesDropdownOpen(false);
+                              } else if (item.name === 'Resources') {
+                                setResourcesDropdownOpen(!resourcesDropdownOpen);
+                                setServicesDropdownOpen(false);
+                                setSolutionsDropdownOpen(false);
+                              }
+                            }}
+                            className="w-full flex items-center justify-between px-4 py-3 text-left text-slate-300 hover:text-cyan-400 hover:bg-slate-800/50 rounded-lg transition-all duration-200"
+                          >
+                            {item.name}
+                            <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${
+                              (item.name === 'Services' && servicesDropdownOpen) ||
+                              (item.name === 'Solutions' && solutionsDropdownOpen) ||
+                              (item.name === 'Resources' && resourcesDropdownOpen)
+                                ? 'rotate-180' : ''
+                            }`} />
+                          </button>
+                          
+                          {/* Mobile Services Dropdown */}
+                          {item.name === 'Services' && servicesDropdownOpen && (
+                            <div className="ml-4 mt-2 space-y-2">
+                              {services.map((service) => (
+                                <Link
+                                  key={service.name}
+                                  to={service.href}
+                                  className="block px-4 py-2 text-slate-400 hover:text-cyan-400 hover:bg-slate-800/30 rounded transition-all duration-200"
+                                  onClick={() => setMobileMenuOpen(false)}
+                                >
+                                  {service.name}
+                                </Link>
+                              ))}
+                            </div>
+                          )}
+
+                          {/* Mobile Solutions Dropdown */}
+                          {item.name === 'Solutions' && solutionsDropdownOpen && (
+                            <div className="ml-4 mt-2 space-y-2">
+                              {solutions.map((solution) => (
+                                <Link
+                                  key={solution.name}
+                                  to={solution.href}
+                                  className="block px-4 py-2 text-slate-400 hover:text-cyan-400 hover:bg-slate-800/30 rounded transition-all duration-200"
+                                  onClick={() => setMobileMenuOpen(false)}
+                                >
+                                  {solution.name}
+                                </Link>
+                              ))}
+                            </div>
+                          )}
+
+                          {/* Mobile Resources Dropdown */}
+                          {item.name === 'Resources' && resourcesDropdownOpen && (
+                            <div className="ml-4 mt-2 space-y-2">
+                              {resources.map((resource) => (
+                                <Link
+                                  key={resource.name}
+                                  to={resource.href}
+                                  className="block px-4 py-2 text-slate-400 hover:text-cyan-400 hover:bg-slate-800/30 rounded transition-all duration-200"
+                                  onClick={() => setMobileMenuOpen(false)}
+                                >
+                                  {resource.name}
+                                </Link>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      ) : (
                         <Link
-                          key={subItem.name}
-                          to={subItem.href}
-                          className="flex items-center space-x-2 px-3 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-cyan-600 dark:hover:text-cyan-400 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-md transition-colors duration-200"
+                          to={item.href}
+                          className="block px-4 py-3 text-slate-300 hover:text-cyan-400 hover:bg-slate-800/50 rounded-lg transition-all duration-200"
                           onClick={() => setMobileMenuOpen(false)}
                         >
-                          <subItem.icon className="w-3 h-3" />
-                          <span>{subItem.name}</span>
+                          {item.name}
                         </Link>
-                      ))}
+                      )}
                     </div>
-                  )}
+                  ))}
                 </div>
-              ))}
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-f8ab
+
+                {/* Mobile Quick Actions */}
+                <div className="pt-4 border-t border-slate-700">
+                  <div className="space-y-2">
+                    {quickLinks.map((link) => (
+                      <Link
+                        key={link.name}
+                        to={link.href}
+                        className="flex items-center px-4 py-2 text-slate-400 hover:text-cyan-400 hover:bg-slate-800/30 rounded transition-all duration-200"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        <link.icon className="w-4 h-4 mr-3" />
+                        {link.name}
+                      </Link>
+                    ))}
+                  </div>
+                  
+                  <div className="mt-4 pt-4 border-t border-slate-700">
+                    <Link
+                      to="/request-quote"
+                      className="block w-full text-center px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 font-medium"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Get Quote
+                    </Link>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         )}
-<<<<<<< HEAD
-      </AnimatePresence>
-
-      {/* Sidebar */}
-      <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
-    </header>
+      </header>
+    </>
   );
 }
 =======
