@@ -38,7 +38,13 @@ import {
   Search,
   Eye,
   Target,
-  TrendingUp
+  TrendingUp,
+  ShoppingCart,
+  Share,
+  CreditCard,
+  BookOpen,
+  Phone,
+  MapPin
 } from 'lucide-react';
 
 const microSaaSProducts = [
@@ -90,6 +96,95 @@ const microSaaSProducts = [
     features: ['Visual Builder', '100+ Integrations', 'Conditional Logic', 'Scheduled Tasks'],
     pricing: '$99 - $599/month',
     category: 'Automation'
+  },
+  {
+    title: 'AI-Powered Email Responder',
+    description: 'Intelligent email automation that reads, categorizes, and responds to customer inquiries using advanced NLP.',
+    icon: Mail,
+    features: ['Smart Categorization', 'Auto Responses', 'Sentiment Analysis', 'CRM Integration'],
+    pricing: '$199 - $1,299/month',
+    category: 'Communication',
+    popular: true
+  },
+  {
+    title: 'E-Commerce Return Management',
+    description: 'Automated return processing with label generation, tracking, and analytics for online retailers.',
+    icon: ShoppingCart,
+    features: ['Auto Return Labels', 'Return Analytics', 'Inventory Sync', 'Customer Portal'],
+    pricing: '$149 - $899/month',
+    category: 'E-commerce'
+  },
+  {
+    title: 'AI Video Clip Maker',
+    description: 'Automatically convert long-form videos into engaging short clips for social media platforms.',
+    icon: Video,
+    features: ['Auto Editing', 'Multi-format Export', 'AI Highlights', 'Social Optimization'],
+    pricing: '$79 - $499/month',
+    category: 'Content Creation'
+  },
+  {
+    title: 'Employee Scheduling Software',
+    description: 'Smart scheduling solution with shift swapping, availability tracking, and labor cost optimization.',
+    icon: Users,
+    features: ['Smart Scheduling', 'Shift Swapping', 'Time Tracking', 'Cost Analytics'],
+    pricing: '$49 - $299/month',
+    category: 'HR Management'
+  },
+  {
+    title: 'Learning Management System',
+    description: 'Comprehensive LMS for employee training with progress tracking and certification management.',
+    icon: BookOpen,
+    features: ['Course Builder', 'Progress Tracking', 'Certifications', 'Mobile Learning'],
+    pricing: '$199 - $1,199/month',
+    category: 'Education'
+  },
+  {
+    title: 'AI Content Creation Suite',
+    description: 'Generate high-quality content including articles, social posts, and marketing materials using AI.',
+    icon: FileText,
+    features: ['Multi-format Generation', 'SEO Optimization', 'Brand Voice', 'Content Calendar'],
+    pricing: '$99 - $799/month',
+    category: 'Content Marketing'
+  },
+  {
+    title: 'Customer Support Helpdesk',
+    description: 'Complete support platform with ticketing, live chat, knowledge base, and AI chatbots.',
+    icon: MessageSquare,
+    features: ['Ticket Management', 'Live Chat', 'Knowledge Base', 'AI Chatbots'],
+    pricing: '$149 - $999/month',
+    category: 'Customer Support'
+  },
+  {
+    title: 'API Documentation Generator',
+    description: 'Automatically generate interactive API documentation from your code with testing capabilities.',
+    icon: Code,
+    features: ['Auto Generation', 'Interactive Testing', 'Version Control', 'Team Collaboration'],
+    pricing: '$79 - $499/month',
+    category: 'Developer Tools'
+  },
+  {
+    title: 'Social Media Scheduler',
+    description: 'AI-powered social media management with optimal posting times and content suggestions.',
+    icon: Share,
+    features: ['Smart Scheduling', 'Content Suggestions', 'Analytics', 'Multi-platform'],
+    pricing: '$49 - $399/month',
+    category: 'Social Media'
+  },
+  {
+    title: 'Invoice & Payment Processor',
+    description: 'Streamlined invoicing with automated payment collection and financial reporting.',
+    icon: CreditCard,
+    features: ['Auto Invoicing', 'Payment Processing', 'Financial Reports', 'Tax Calculations'],
+    pricing: '$29 - $199/month',
+    category: 'Finance'
+  },
+  {
+    title: 'Project Time Tracker',
+    description: 'Advanced time tracking with project management, team monitoring, and productivity analytics.',
+    icon: Clock,
+    features: ['Time Tracking', 'Project Management', 'Team Monitoring', 'Productivity Analytics'],
+    pricing: '$39 - $299/month',
+    category: 'Productivity'
   }
 ];
 
@@ -499,6 +594,62 @@ export default function MicroSaaSPage() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Contact Information Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Get Started Today
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-12">
+              Ready to transform your business with our micro SaaS solutions? Contact our expert team for a free consultation and custom pricing tailored to your needs.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <div className="text-blue-600 mb-4">
+                  <Mail className="w-8 h-8 mx-auto" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Email Us</h3>
+                <p className="text-gray-600 mb-4">Get detailed information about our services</p>
+                <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:text-blue-800 font-semibold">
+                  kleber@ziontechgroup.com
+                </a>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <div className="text-blue-600 mb-4">
+                  <Phone className="w-8 h-8 mx-auto" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Call Us</h3>
+                <p className="text-gray-600 mb-4">Speak directly with our experts</p>
+                <a href="tel:+13024640950" className="text-blue-600 hover:text-blue-800 font-semibold">
+                  +1 302 464 0950
+                </a>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <div className="text-blue-600 mb-4">
+                  <MapPin className="w-8 h-8 mx-auto" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Visit Us</h3>
+                <p className="text-gray-600 mb-4">Our headquarters location</p>
+                <p className="text-gray-600 text-sm">
+                  364 E Main St STE 1008<br />
+                  Middletown, DE 19709
+                </p>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 

@@ -29,17 +29,25 @@ export default function ContactPage() {
                 <div className="space-y-4">
                   <div>
                     <h3 className="font-semibold text-gray-900">Email</h3>
-                    <p className="text-gray-600">contact@ziontechgroup.com</p>
+                    <p className="text-gray-600">kleber@ziontechgroup.com</p>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900">Phone</h3>
-                    <p className="text-gray-600">+1 (555) 123-4567</p>
+                    <h3 className="font-semibold text-gray-900">Mobile</h3>
+                    <p className="text-gray-600">+1 302 464 0950</p>
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900">Address</h3>
                     <p className="text-gray-600">
-                      123 Technology Drive<br />
-                      Innovation City, IC 12345
+                      364 E Main St STE 1008<br />
+                      Middletown, DE 19709
+                    </p>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900">Website</h3>
+                    <p className="text-gray-600">
+                      <a href="https://ziontechgroup.com" className="text-blue-600 hover:text-blue-800">
+                        https://ziontechgroup.com
+                      </a>
                     </p>
                   </div>
                 </div>

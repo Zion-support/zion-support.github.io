@@ -26,7 +26,10 @@ import {
   Smartphone,
   Laptop,
   Building,
-  BarChart3
+  BarChart3,
+  Code,
+  DollarSign,
+  MessageSquare
 } from 'lucide-react';
 
 const itServices = [
@@ -77,6 +80,79 @@ const itServices = [
     features: ['Technology Assessment', 'Strategic Planning', 'Vendor Selection', 'Implementation Support'],
     pricing: '$150 - $300/hour',
     category: 'Consulting'
+  },
+  {
+    title: 'DevOps & CI/CD Implementation',
+    description: 'Complete DevOps transformation with automated CI/CD pipelines and infrastructure as code.',
+    icon: Code,
+    features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Container Orchestration', 'Automated Testing'],
+    pricing: '$5,000 - $35,000/project',
+    category: 'DevOps',
+    popular: true
+  },
+  {
+    title: 'Data Center Migration',
+    description: 'Seamless migration of on-premises infrastructure to cloud or hybrid environments.',
+    icon: Server,
+    features: ['Migration Planning', 'Zero Downtime Migration', 'Data Validation', 'Performance Optimization'],
+    pricing: '$10,000 - $100,000/project',
+    category: 'Migration'
+  },
+  {
+    title: 'Disaster Recovery & Business Continuity',
+    description: 'Comprehensive disaster recovery solutions ensuring business continuity and data protection.',
+    icon: Shield,
+    features: ['Backup Strategies', 'Recovery Testing', 'RTO/RPO Planning', 'Multi-site Replication'],
+    pricing: '$3,000 - $25,000/project',
+    category: 'Disaster Recovery'
+  },
+  {
+    title: 'IT Asset Management',
+    description: 'Complete lifecycle management of IT assets including procurement, tracking, and disposal.',
+    icon: HardDrive,
+    features: ['Asset Tracking', 'License Management', 'Depreciation Analysis', 'Compliance Reporting'],
+    pricing: '$1,500 - $8,000/month',
+    category: 'Asset Management'
+  },
+  {
+    title: 'Mobile Device Management (MDM)',
+    description: 'Enterprise mobile device management with security policies and application control.',
+    icon: Smartphone,
+    features: ['Device Enrollment', 'Security Policies', 'App Management', 'Remote Wipe'],
+    pricing: '$2,000 - $12,000/project',
+    category: 'Mobile Management'
+  },
+  {
+    title: 'IT Service Desk & Support',
+    description: '24/7 IT service desk with ticketing system, knowledge base, and remote support capabilities.',
+    icon: MessageSquare,
+    features: ['Ticketing System', 'Knowledge Base', 'Remote Support', 'SLA Management'],
+    pricing: '$3,000 - $15,000/month',
+    category: 'Service Desk'
+  },
+  {
+    title: 'Cloud Cost Optimization',
+    description: 'Expert analysis and optimization of cloud infrastructure costs across AWS, Azure, and GCP.',
+    icon: DollarSign,
+    features: ['Cost Analysis', 'Resource Optimization', 'Reserved Instances', 'Cost Forecasting'],
+    pricing: '$2,000 - $15,000/project',
+    category: 'Cloud Optimization'
+  },
+  {
+    title: 'IT Compliance & Audit',
+    description: 'Comprehensive IT compliance assessment and audit services for regulatory requirements.',
+    icon: CheckCircle,
+    features: ['Compliance Assessment', 'Audit Preparation', 'Policy Development', 'Risk Mitigation'],
+    pricing: '$5,000 - $30,000/project',
+    category: 'Compliance'
+  },
+  {
+    title: 'Network Security Assessment',
+    description: 'Comprehensive network security evaluation including penetration testing and vulnerability assessment.',
+    icon: Lock,
+    features: ['Penetration Testing', 'Vulnerability Scanning', 'Security Audits', 'Remediation Planning'],
+    pricing: '$3,000 - $20,000/project',
+    category: 'Security Assessment'
   }
 ];
 

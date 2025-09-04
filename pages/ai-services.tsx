@@ -92,6 +92,79 @@ const aiServices = [
     features: ['Speech-to-Text', 'Text-to-Speech', 'Voice Commands', 'Multi-language Support'],
     pricing: '$2,500 - $12,000 project',
     category: 'Voice'
+  },
+  {
+    title: 'AI-Powered Fraud Detection',
+    description: 'Advanced machine learning algorithms to detect and prevent fraudulent activities in real-time.',
+    icon: Shield,
+    features: ['Real-time Detection', 'Pattern Recognition', 'Risk Scoring', 'Automated Alerts'],
+    pricing: '$3,500 - $18,000/month',
+    category: 'Security',
+    popular: true
+  },
+  {
+    title: 'Intelligent Document Processing',
+    description: 'AI-powered document analysis, extraction, and classification for business automation.',
+    icon: FileText,
+    features: ['Document Classification', 'Data Extraction', 'OCR Processing', 'Workflow Automation'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Document Processing'
+  },
+  {
+    title: 'AI-Powered Recommendation Engine',
+    description: 'Personalized recommendation system using machine learning for e-commerce and content platforms.',
+    icon: Target,
+    features: ['Personalization', 'Real-time Updates', 'A/B Testing', 'Performance Analytics'],
+    pricing: '$2,500 - $15,000/month',
+    category: 'Recommendations'
+  },
+  {
+    title: 'Natural Language Processing API',
+    description: 'Comprehensive NLP services including sentiment analysis, entity recognition, and text classification.',
+    icon: Brain,
+    features: ['Sentiment Analysis', 'Entity Recognition', 'Text Classification', 'Language Translation'],
+    pricing: '$1,000 - $8,000/month',
+    category: 'NLP'
+  },
+  {
+    title: 'AI-Powered Supply Chain Optimization',
+    description: 'Machine learning solutions for inventory management, demand forecasting, and logistics optimization.',
+    icon: Network,
+    features: ['Demand Forecasting', 'Inventory Optimization', 'Route Planning', 'Cost Reduction'],
+    pricing: '$4,000 - $25,000/project',
+    category: 'Supply Chain'
+  },
+  {
+    title: 'Intelligent Process Automation',
+    description: 'AI-driven automation of complex business processes with cognitive decision-making capabilities.',
+    icon: Settings,
+    features: ['Process Mining', 'Cognitive Automation', 'Decision Intelligence', 'ROI Tracking'],
+    pricing: '$3,000 - $20,000/project',
+    category: 'Automation'
+  },
+  {
+    title: 'AI-Powered Quality Assurance',
+    description: 'Automated testing and quality control using computer vision and machine learning algorithms.',
+    icon: CheckCircle,
+    features: ['Automated Testing', 'Defect Detection', 'Quality Metrics', 'Continuous Monitoring'],
+    pricing: '$2,000 - $12,000/month',
+    category: 'Quality Assurance'
+  },
+  {
+    title: 'Predictive Maintenance AI',
+    description: 'Machine learning models to predict equipment failures and optimize maintenance schedules.',
+    icon: Monitor,
+    features: ['Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization', 'Real-time Monitoring'],
+    pricing: '$3,500 - $18,000/project',
+    category: 'Maintenance'
+  },
+  {
+    title: 'AI-Powered Talent Analytics',
+    description: 'Advanced analytics for HR including candidate screening, performance prediction, and retention analysis.',
+    icon: Users,
+    features: ['Candidate Screening', 'Performance Prediction', 'Retention Analysis', 'Skills Matching'],
+    pricing: '$2,500 - $15,000/month',
+    category: 'HR Analytics'
   }
 ];
 
