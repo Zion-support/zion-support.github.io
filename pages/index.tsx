@@ -49,7 +49,7 @@ export default function Home(): any {
               },
               "sameAs": [contact.site]";
             })
-          }}
+          }
         />
       </Head>
       
