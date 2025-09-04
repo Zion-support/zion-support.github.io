@@ -17,14 +17,15 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    "jsxImportSource": "react",
     "incremental": false,
     "baseUrl": "."
   },
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
-    "components/**/*",
-    "pages/**/*"
+    "pages/**/*",
+    "src.corrupted/**/*"
   ],
   "exclude": [
     "node_modules",
