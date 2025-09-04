@@ -129,24 +129,29 @@ function Footer(): JSX.Element {
         <div className="footer-section">
           <h3>Services</h3>
           <Link href="/services">All Services</Link>
+          <Link href="/micro-saas">Micro SaaS Products</Link>
+          <Link href="/ai-services">AI Services</Link>
+          <Link href="/it-services">IT Services</Link>
           <Link href="/services-catalog">Services Catalog</Link>
           <Link href="/pricing">Pricing</Link>
           <Link href="/faq">FAQ</Link>
           <div className="text-sm mt-2 space-y-1">
-            <div>• Custom Development</div>
-            <div>• Consulting Services</div>
-            <div>• 24/7 Support</div>
+            <div>• 120+ Micro SaaS Products</div>
+            <div>• 80+ AI Services</div>
+            <div>• 80+ IT Solutions</div>
           </div>
         </div>
 
-        {/* Company */}
+        {/* Quick Links */}
         <div className="footer-section">
-          <h3>Company</h3>
+          <h3>Quick Links</h3>
+          <Link href="/">Home</Link>
           <Link href="/about">About Us</Link>
-          <Link href="/careers">Careers</Link>
-          <Link href="/contact">Contact</Link>
+          <Link href="/contact">Contact Us</Link>
+          <Link href="/faq">FAQ</Link>
           <Link href="/privacy">Privacy Policy</Link>
           <Link href="/terms">Terms of Service</Link>
+          <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer">Main Website</a>
         </div>
 
         {/* Contact CTA */}
