@@ -1,9 +1,9 @@
 
 import React, { memo } from 'react';
 import Link from 'next/link';
-import Navigation from '../src/components/Navigation';
-import Footer from '../src/components/Footer';
-import SEOHead from '../src/components/seo/SEOHead';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOHead from '../components/seo/SEOHead';
 import { ArrowRight, CheckCircle, Star, Phone, Mail, MapPin, Brain, Server, Smartphone, Globe, Zap, Shield, Users } from 'lucide-react';
 
 const Home = memo(() => {

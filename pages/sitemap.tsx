@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const routes = [
   { name: 'Home', href: '/' },
@@ -23,7 +23,7 @@ export default function SitemapPage() {
       <ul className="space-y-3">
         {routes.map((r) => (
           <li key={r.href}>
-            <Link to={r.href} className="text-blue-600 hover:underline">{r.name}</Link>
+            <Link href={r.href} className="text-blue-600 hover:underline">{r.name}</Link>
           </li>
         ))}
       </ul>
