@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useState } from 'react';
-;
+
 export default function Page() {;
 `);
             setQuery('');
-;
+
             // console.log('PrimaryNav search submit:', query);`;
             router(`/search/${slugify(query)}`);
             // console.log('PrimaryNav search submit:', query);`;
@@ -31,17 +31,17 @@ export default function Page() {;
 
                 // Product listings with IDs go to product detail page`;
                 navigate(`/marketplace/listing/${sugg.id}`);
-;
+
             else if(sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {;
 
                 // Documentation suggestions navigate directly to their path;
                 navigate(sugg.slug);
-;
+
             else if(sugg.type === 'blog' && sugg.slug) {;
 
                 // Blog posts navigate to blog detail page`;
                 navigate(`/blog/${sugg.slug}`);
-;
+
             else {;
 
                 // Default: search results page with slug`;
@@ -62,8 +62,6 @@ export default function Page() {;
 
                 // Product listings with IDs go to product detail page`;
                 router(`/marketplace/listing/${sugg.id;
-
-;
 `;,
 }`);,
 }

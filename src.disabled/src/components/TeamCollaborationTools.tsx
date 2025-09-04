@@ -1,5 +1,5 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
-;
+
 export default function Page() {;
 interface Comment {;
   id: string;
@@ -9,7 +9,7 @@ interface Comment {;
   likes: number;
   replies: Comment[];,
 }
-;
+
 interface Message {;
   id: string;
   sender: string;
@@ -19,7 +19,7 @@ interface Message {;
   attachments?: string[];
   reactions: { type: string; count: number}[];
   isRead: boolean}
-;
+
 interface FileItem {;
   id: string;
   name: string;
@@ -33,7 +33,7 @@ interface FileItem {;
   permissions: 'view' | 'edit' | 'admin';
   version: string;,
 }
-;
+
 interface TeamCollaborationToolsProps extends React.PropsWithChildren<{}> {;
 
   showTeamMembers?: boolean;
@@ -41,7 +41,7 @@ interface TeamCollaborationToolsProps extends React.PropsWithChildren<{}> {;
   showCommunication?: boolean;
   showFileSharing?: boolean;
   maxItems?: number}
-;
+
 export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({;
 
   showTeamMembers = true,;
@@ -60,7 +60,7 @@ showProjects:  true,;
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedDepartment, setSelectedDepartment] = useState<any>('all');
   const [selectedStatus, setSelectedStatus] = useState<any>('all');
-;
+
   // Sample data;
   useEffect(() => {;
   // TODO: Add dependencies if needed;
@@ -112,22 +112,22 @@ showProjects:  true,;
         version: '1.0';
 
     ];
-;
+
     setTeamMembers(sampleTeamMembers) ;
     setProjects(sampleProjects) ;
     setMessages(sampleMessages) ;
     setFiles(sampleFiles) }, []) ;
-;
+
   // Get status color and icon';
       default: return { color: 'text-zinc-400 bg-zinc-400/20', icon: <div className="w-2 h-2 bg-zinc-400 rounded-full"></div> }}};
   // Get project status color';
       default: return 'text-zinc-400 bg-zinc-400/20'}
   };
-;
+
   // Get priority color';
       default: return 'text-zinc-400 bg-zinc-400/20'}
   };
-;
+
   // Get file type icon";
       default: return <File className="w-5 h-5"  />}};
   // Format file size;
@@ -136,7 +136,7 @@ showProjects:  true,;
           msg.reactions.push({ type: reactionType, count: 1 })}
       }
       return msg}) ) };
-;
+
   return (";
     <div className="w-full max-w-7xl mx-auto p-6">;
       {/* Header */}";
@@ -160,7 +160,7 @@ showProjects:  true,;
                   ? 'bg-zion-cyan text-white'';
                   : 'text-zinc-400 hover:text-white hover:bg-zinc-800/50'`;,
 }`}
-;
+
               {tab.icon}
               {tab.label}
             </button>) ) }
@@ -220,7 +220,7 @@ showProjects:  true,;
               </div>";
               <div className="text-zinc-400">Online Now</div>;
             </motion.div>;
-;
+
             <motion.div;
               initial = {;
 
@@ -309,7 +309,7 @@ showProjects:  true,;
                     {member.availability.charAt(0) .toUpperCase () + member.availability.slice(1) }
                   </span>;
                 </div>;
-;
+
                 {/* Skills */}";
                 <div className="mb-4">;";
                   <h4 className="text-sm font-medium text-zinc-300 mb-2">Skills</h4>";
@@ -359,7 +359,7 @@ showProjects:  true,;
               </motion.div>) ) }
           </div>;
         </motion.div>) }
-;
+
       {/* Projects Tab */}
       {activeTab === 'projects' && showProjects && (;
         <motion.div;
@@ -413,7 +413,7 @@ showProjects:  true,;
               </div>";
               <div className="text-zinc-400">Active</div>;
             </motion.div>;
-;
+
             <motion.div;
               initial = {;
 
@@ -473,7 +473,7 @@ showProjects:  true,;
                 transition={{ delay: index * 0.1 }}";
                 className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300 cursor-pointer";
                 onClick={() => handleProjectSelect(project)}
-;
+
                 {/* Project Header */}";
                 <div className="flex items-start justify-between mb-4">";
                   <div className="flex-1">";
@@ -524,7 +524,7 @@ showProjects:  true,;
                     />;
                   </div>;
                 </div>;
-;
+
                 {/* Project Details */}";
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">;";
                   <div className="p-3 bg-zinc-800/30 rounded-lg">";
@@ -544,7 +544,7 @@ showProjects:  true,;
                     <div className="text-white font-medium">{project.teamMembers.length} members</div>;
                   </div>;
                 </div>;
-;
+
                 {/* Tags */}";
                 <div className="flex flex-wrap gap-2">;
                   {project.tags.map((tag) => (;
@@ -568,7 +568,7 @@ showProjects:  true,;
             </button>;
           </div>;
         </motion.div>) }
-;
+
       {/* Communication Tab */}
       {activeTab === 'communication' && showCommunication && (;
         <motion.div;
@@ -622,7 +622,7 @@ showProjects:  true,;
               </div>";
               <div className="text-zinc-400">Read</div>;
             </motion.div>;
-;
+
             <motion.div;
               initial = {;
 
@@ -734,7 +734,7 @@ showProjects:  true,;
             </div>;
           </div>;
         </motion.div>) }
-;
+
       {/* File Sharing Tab */}
       {activeTab === 'files' && showFileSharing && (;
         <motion.div;
@@ -788,7 +788,7 @@ showProjects:  true,;
               </div>";
               <div className="text-zinc-400">Documents</div>;
             </motion.div>;
-;
+
             <motion.div;
               initial = {;
 

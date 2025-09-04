@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-;
-;
 const CuttingEdgeServicesShowcase = () => {;
     const [selectedCategory, setSelectedCategory] = useState('All');
     const [selectedIndustry, setSelectedIndustry] = useState('All');
@@ -374,14 +372,12 @@ const CuttingEdgeServicesShowcase = () => {;
       </div>;
     </div>)};
 export default CuttingEdgeServicesShowcase;
-;
+export { CuttingEdgeServicesShowcase };
 
 export { CuttingEdgeServicesShowcase };
-;
+
 export { CuttingEdgeServicesShowcase };
-;
+
 export { CuttingEdgeServicesShowcase };
-;
-export { CuttingEdgeServicesShowcase };
-;
+
 export { CuttingEdgeServicesShowcase };

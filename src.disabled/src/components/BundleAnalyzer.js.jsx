@@ -206,7 +206,7 @@ export default function Page() {;
                     </button>;
                   </div>;
                 </div>) }
-;
+
               {/* Chunks Tab */}'";
               {activeTab === 'chunks' && (<div className="space-y-3">";
                   <h4 className="font-medium text-gray-900 dark:text-white text-sm mb-3">Bundle Chunks</h4>";
@@ -240,7 +240,7 @@ export default function Page() {;
                         </div>) }
                     </div>) ) }
                 </div>) }
-;
+
               {/* Recommendations Tab */}'";
               {activeTab === 'recommendations' && (<div className="space-y-3">";
                   <h4 className="font-medium text-gray-900 dark:text-white text-sm mb-3">Optimization Tips</h4>";

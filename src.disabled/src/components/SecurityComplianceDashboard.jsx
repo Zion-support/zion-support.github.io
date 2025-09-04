@@ -1,8 +1,6 @@
 import React, { useState, useCallback } from 'react';''';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Shield, AlertTriangle, CheckCircle, XCircle, Download, Settings, RefreshCw, Loader2, FileText, BarChart3, Clock, Play, Square } from 'lucide-react';
-;
-;
 export const SecurityComplianceDashboard = ({ className = '' }) => {;
     const { trackEvent } = useAnalytics({;
         enableTracking: true,;
@@ -46,10 +44,6 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {;
             requirements: ['Requirement 1', 'Requirement 2'],;
   violations: [];
         ;
-
-;
-
-;,
 };
         addComplianceRule(newRule);
         trackEvent('security', 'dashboard', 'compliance_rule_added')}, [addComplianceRule, trackEvent]);

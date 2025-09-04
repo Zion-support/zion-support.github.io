@@ -263,14 +263,12 @@ const AIAutonomousHealthcarePhysician = () => {}
       </div>;
     </>)};
 export default AIAutonomousHealthcarePhysician;
-;
+export { AIAutonomousHealthcarePhysician };
 
 export { AIAutonomousHealthcarePhysician };
-;
+
 export { AIAutonomousHealthcarePhysician };
-;
+
 export { AIAutonomousHealthcarePhysician };
-;
-export { AIAutonomousHealthcarePhysician };
-;
+
 export { AIAutonomousHealthcarePhysician };

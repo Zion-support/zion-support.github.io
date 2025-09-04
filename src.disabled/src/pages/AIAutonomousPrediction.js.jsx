@@ -240,14 +240,12 @@ const AIAutonomousPrediction = () => {}
       </div>;
     </>)};
 export default AIAutonomousPrediction;
-;
+export { AIAutonomousPrediction };
 
 export { AIAutonomousPrediction };
-;
+
 export { AIAutonomousPrediction };
-;
+
 export { AIAutonomousPrediction };
-;
-export { AIAutonomousPrediction };
-;
+
 export { AIAutonomousPrediction };

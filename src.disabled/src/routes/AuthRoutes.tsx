@@ -2,7 +2,7 @@ import { Route, Routes  } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 import { ProtectedRoute } from '../components/ProtectedRoute';
 import LoadingSpinner from '../components/LoadingSpinner';
-;
+
 // Lazy load auth pages;
 const Login = lazy(() => import('../pages/Login'));
 const Signup = lazy(() => import('../pages/Signup'));
@@ -11,7 +11,7 @@ const UpdatePassword = lazy(() => import('../pages/UpdatePassword'));
 const Onboarding = lazy(() => import('../pages/Onboarding'));
 const TalentOnboarding = lazy(() => import('../pages/TalentOnboarding'));
 const ServiceOnboarding = lazy(() => import('../pages/ServiceOnboarding'));
-;
+
 const AuthRoutes: React.FC = () => {;
   return(<Suspense fallback={<LoadingSpinner />}>;
       <Routes>;
@@ -41,5 +41,5 @@ const AuthRoutes: React.FC = () => {;
     </Suspense>;
   );,
 };
-;
+
 export default AuthRoutes;

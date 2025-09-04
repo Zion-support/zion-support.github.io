@@ -245,14 +245,12 @@ const AIAutonomousForensics = () => {}
       </div>;
     </>)};
 export default AIAutonomousForensics;
-;
+export { AIAutonomousForensics };
 
 export { AIAutonomousForensics };
-;
+
 export { AIAutonomousForensics };
-;
+
 export { AIAutonomousForensics };
-;
-export { AIAutonomousForensics };
-;
+
 export { AIAutonomousForensics };

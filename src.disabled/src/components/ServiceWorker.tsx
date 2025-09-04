@@ -5,15 +5,15 @@ interface ServiceWorkerState {;
   isOnline: boolean;
   hasUpdate: boolean;
   isInstalling: boolean;
-;,
+
 }
-;
+
   const [swState, setSwState] = useState < any> ({    isInstalled: anyfalse,;
     isOnline: navigator.onLine,;
     hasUpdate: false,;
     isInstalling: false;,
 }) ;
-;
+
   useEffect(() => {;
   // TODO: Add dependencies if needed;,
 }, []);
@@ -26,7 +26,7 @@ interface ServiceWorkerState {;
 
           // console.log('SW registered: any, registration);
           setSwState(prev  => ({ ...prev, isInstalled: anytrue }));
-;
+
           // Check for updates';
           registration.addEventListener('updatefound', () => {;
             const newWorker = registration.installing;            if(newWorker) {;
@@ -40,7 +40,7 @@ interface ServiceWorkerState {;
             const newWorker = registration.installing;
             if(newWorker) {;
               setSwState(prev => ({ ...prev, isInstalling: anytrue }) ) ;
-;
+
               newWorker.addEventListener('statechange', () => {;
                 if(newWorker.state = == 'installed') {;
 setSwState(prev: > ({ ;
@@ -49,30 +49,30 @@ setSwState(prev: > ({ ;
                     hasUpdate: true }) ) }
               }) }
           }) ;
-;
+
           // Handle updates';
           navigator.serviceWorker.addEventListener('controllerchange', () => {;
             window.location.reload()})});
         .catch((registrationError) => {;
 
           // console.log('SW registration failed: ', registrationError)})}
-;
+
     // Online/offline detection;
     ;
     window.addEventListener('online', handleOnline);
     window.addEventListener('offline', handleOffline);
-;
+
     return () => {;
 
       window.removeEventListener('online', handleOnline);
       window.removeEventListener('offline', handleOffline)}}, []) ;
-;
+
     if('serviceWorker' in navigator) {;
       navigator.serviceWorker.ready.then((registration) => {;
         registration.waiting?.postMessage({ type: 'SKIP_WAITING' })})}  };
-;
+
   if(!swState.isInstalled) return null;
-;
+
   return ();
     <AnimatePresence>;
       {swState.hasUpdate && (;

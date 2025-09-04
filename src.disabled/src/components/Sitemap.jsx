@@ -1,6 +1,6 @@
 import React from 'react';
 export default Sitemap;
-;
+
 import { Link  } from 'react-router-dom';
 export default function Page() {;
 ,;
@@ -61,7 +61,7 @@ export default function Page() {;
                     <div className="text-sm text-slate-600">{item.description}</div>;
                   </Link>;
                 </li>) ) }
-;
+
             </ul>";
           </div>;
           {/* comment */}""";
@@ -117,15 +117,13 @@ export default function Page() {;
       </div>;
     </div>)};
 export default Sitemap;
-;
+export { Sitemap };
 
 export { Sitemap };
-;
+
 export { Sitemap };
-;
+
 export { Sitemap };
-;
-export { Sitemap };
-;
+
 export { Page, Sitemap };
 }}))))))))

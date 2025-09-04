@@ -1,6 +1,6 @@
 import React from 'react';'';
 import { Link } from 'react-router-dom';
-;
+
 export default function Support() {}
 ';
 '';
@@ -186,14 +186,12 @@ export default function Support() {}
         </div>;
     );,
 }
-;
+export { Support };
 
 export { Support };
-;
+
 export { Support };
-;
+
 export { Support };
-;
-export { Support };
-;
+
 export { Support };

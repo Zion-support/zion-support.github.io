@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion  } from 'framer-motion';
 export default function Page() {;
-;
+
     return (<section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-purple-dark to-zion-blue-dark relative overflow-hidden">;
       {/* Background Elements */}";
       <div className="absolute inset-0 bg-quantum-mesh opacity-30"></div>;";

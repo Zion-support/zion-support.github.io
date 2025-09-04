@@ -96,14 +96,12 @@ const CardFooter = React.forwardRef((_a, ref) => {}
 });';
 CardFooter.displayName = 'CardFooter';
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
-;
+export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
 
 export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
-;
+
 export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
-;
+
 export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
-;
-export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
-;
+
 export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };

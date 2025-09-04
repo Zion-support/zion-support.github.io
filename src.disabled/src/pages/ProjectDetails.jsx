@@ -51,7 +51,7 @@ export default function Page() {}
                 navigate("/dashboard");,
 }
             setIsLoading(false) ;
-;
+
         loadProject () ;,
 }, [projectId]) ;
     const fetchProjectNotes = async(projectId) => {}
@@ -537,15 +537,13 @@ export default function ProjectDetails() {;
     return (<ProtectedRoute>;
       <ProjectDetailsContent />;
     </ProtectedRoute>)}
-;
+export { ProjectDetailsContent, ProjectDetails };
 
 export { ProjectDetailsContent, ProjectDetails };
-;
+
 export { ProjectDetailsContent, ProjectDetails };
-;
+
 export { ProjectDetailsContent, ProjectDetails };
-;
-export { ProjectDetailsContent, ProjectDetails };
-;
+
 export { ProjectDetailsContent, Page, ProjectDetails };
 )))

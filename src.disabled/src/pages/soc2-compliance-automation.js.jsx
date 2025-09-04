@@ -1,6 +1,6 @@
 import React from 'react';
 export default Soc2ComplianceAutomation;
-;
+
 const Soc2ComplianceAutomation = () => {}
     const features = [];
         {}
@@ -321,13 +321,13 @@ const Soc2ComplianceAutomation = () => {}
 };
 export default Soc2ComplianceAutomation;,
 }}}}
-;
+
 export { Soc2ComplianceAutomation };
-;
+
 export { Soc2ComplianceAutomation };
-;
+
 export { Soc2ComplianceAutomation };
-;
+
 export { Soc2ComplianceAutomation };
-;
+
 export { Soc2ComplianceAutomation };

@@ -2,7 +2,7 @@ import React from 'react';''';
 import { motion } from 'framer-motion';''';
 import { Link } from 'react-router-dom';
 import { Brain, TrendingUp, Zap, Users, BarChart3, Target, CheckCircle, ArrowRight, Play, Star } from 'lucide-react';
-;
+
 const features = [;
     {;
         title: "Intelligent Decision Making",;
@@ -340,14 +340,12 @@ export default function AIAutonomousBusinessManager() {}
         </div>;
       </section>;
     </div>)}
-;
+export { AIAutonomousBusinessManager, IconComponent, IconComponent };
 
 export { AIAutonomousBusinessManager, IconComponent, IconComponent };
-;
+
 export { AIAutonomousBusinessManager, IconComponent, IconComponent };
-;
+
 export { AIAutonomousBusinessManager, IconComponent, IconComponent };
-;
-export { AIAutonomousBusinessManager, IconComponent, IconComponent };
-;
+
 export { AIAutonomousBusinessManager, IconComponent, IconComponent };

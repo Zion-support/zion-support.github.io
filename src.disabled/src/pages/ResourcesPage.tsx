@@ -32,11 +32,11 @@ import { ;
   Target,;
   CheckCircle;,
 } from 'lucide-react';
-;
+
 export function ResourcesPage() {;
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
-;
+
   const categories = [;
     { id: 'all', name: 'All Resources', icon: BookOpen },;
     { id: 'whitepapers', name: 'White Papers', icon: FileText },;
@@ -47,7 +47,7 @@ export function ResourcesPage() {;
     { id: 'research', name: 'Research', icon: Brain },;
     { id: 'tools', name: 'Tools', icon: Code }
   ];
-;
+
   const resources = [;
     {;
       id: 1,;
@@ -194,7 +194,7 @@ export function ResourcesPage() {;
       downloadUrl: '/downloads/cloud-migration-checklist.pdf';,
 }
   ];
-;
+
   const filteredResources = resources.filter(resource => {;
     const matchesCategory = selectedCategory === 'all' || resource.category === selectedCategory;
     const matchesSearch = resource.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
@@ -202,10 +202,10 @@ export function ResourcesPage() {;
                          resource.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch;,
 });
-;
+
   const featuredResources = filteredResources.filter(resource => resource.isFeatured);
   const regularResources = filteredResources.filter(resource => !resource.isFeatured);
-;
+
   return (;
     <div className="min-h-screen bg-zion-slate-dark">;
       {/* Hero Section */}
@@ -367,7 +367,7 @@ export function ResourcesPage() {;
           </div>;
         </section>;
       )}
-;
+
       {/* All Resources */}
       <section className="py-16 bg-zion-slate-darker">;
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
@@ -536,5 +536,5 @@ export function ResourcesPage() {;
     </div>;
   );,
 }
-;
+
 export default ResourcesPage;

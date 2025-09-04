@@ -19,7 +19,7 @@ import { ;
   Calendar,;
   MessageSquare;,
 } from 'lucide-react';
-;
+
 const SmartCRMPlatform = () => {;
   const features = [;
     'AI-powered lead scoring',;
@@ -31,7 +31,7 @@ const SmartCRMPlatform = () => {;
     'Integration with 500+ apps',;
     '24/7 customer support';
   ];
-;
+
   const benefits = [;
     'Increase sales by 25%',;
     'Improve customer retention',;
@@ -42,7 +42,7 @@ const SmartCRMPlatform = () => {;
     'Automated follow-ups',;
     'Team collaboration tools';
   ];
-;
+
   const integrations = [;
     'Gmail & Outlook',;
     'Slack & Teams',;
@@ -53,7 +53,7 @@ const SmartCRMPlatform = () => {;
     'Microsoft 365',;
     'Salesforce';
   ];
-;
+
   const pricing = {;
     starter: {;
       name: 'Starter',;
@@ -78,14 +78,14 @@ const SmartCRMPlatform = () => {;
       marketPrice: '$399/month';,
 }
   };
-;
+
   const contactInfo = {;
     phone: '+1 302 464 0950',;
     email: 'kleber@ziontechgroup.com',;
     address: '364 E Main St STE 1008 Middletown DE 19709',;
     website: 'https://ziontechgroup.com';,
 };
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">;
       {/* Header */}
@@ -315,5 +315,5 @@ const SmartCRMPlatform = () => {;
     </div>;
   );,
 };
-;
+
 export default SmartCRMPlatform;

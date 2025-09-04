@@ -4,7 +4,7 @@ export default function ComprehensiveServices(...args: unknown[]): unknown {;
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [priceRange, setPriceRange] = useState('all');
-;
+
   // Comprehensive service categories with real market prices;
   const serviceCategories = [;
     {;
@@ -242,14 +242,14 @@ export default function ComprehensiveServices(...args: unknown[]): unknown {;
       ];,
 }
   ];
-;
+
   const contactInfo = {;
     phone: '+1 302 464 0950',;
     email: 'kleber@ziontechgroup.com',;
     address: '364 E Main St STE 1008, Middletown DE 19709',;
     website: 'https://ziontechgroup.com';,
 };
-;
+
   const filteredServices = serviceCategories.flatMap(category => ;
     category.services.filter(service => {;
       const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
@@ -264,7 +264,7 @@ export default function ComprehensiveServices(...args: unknown[]): unknown {;
       return matchesCategory && matchesSearch && matchesPrice;,
 });
   );
-;
+
   const containerVariants = {;
     hidden: { opacity: 0 },;
     visible: {;
@@ -274,7 +274,7 @@ export default function ComprehensiveServices(...args: unknown[]): unknown {;
 }
     }
   };
-;
+
   const itemVariants = {;
     hidden: { opacity: 0, y: 20 },;
     visible: {;
@@ -283,7 +283,7 @@ export default function ComprehensiveServices(...args: unknown[]): unknown {;
       transition: { duration: 0.6 }
     }
   };
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">;
       <SEO ;
@@ -695,14 +695,12 @@ export default function ComprehensiveServices(...args: unknown[]): unknown {;
     </div>;
   );,
 }
-;
+export { ComprehensiveServices };
 
 export { ComprehensiveServices };
-;
+
 export { ComprehensiveServices };
-;
+
 export { ComprehensiveServices };
-;
-export { ComprehensiveServices };
-;
+
 export { ComprehensiveServices };

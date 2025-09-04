@@ -10,7 +10,7 @@ import {}
   ArrowRight,'';
   ChevronDown,''';
   ChevronRight} from 'lucide-react';
-;
+
 export default function HelpCenter() {}
 ';
   const [searchQuery, setSearchQuery] = useState('');';
@@ -24,7 +24,7 @@ export default function HelpCenter() {}
         : [...prev, category];
     );,
 };
-;
+
   const helpCategories = {}
 ';
     'getting-started': {}
@@ -331,14 +331,12 @@ export default function HelpCenter() {}
     </>;
   );,
 }
-;
+export { HelpCenter };
 
 export { HelpCenter };
-;
+
 export { HelpCenter };
-;
+
 export { HelpCenter };
-;
-export { HelpCenter };
-;
+
 export { HelpCenter };

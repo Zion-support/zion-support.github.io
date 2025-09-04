@@ -2,7 +2,7 @@ import React from 'react';''';
 import { motion } from 'framer-motion';''';
 import { Link } from 'react-router-dom';
 import { Brain, TrendingUp, Zap, BarChart3, CheckCircle, ArrowRight, Play } from 'lucide-react';
-;
+
 const features = [;
     {;
         title: "AI-Powered Autonomous Testing",;
@@ -193,14 +193,12 @@ export default function AIAutonomousTesting() {}
         </div>;
       </section>;
     </div>)}
-;
+export { AIAutonomousTesting, IconComponent };
 
 export { AIAutonomousTesting, IconComponent };
-;
+
 export { AIAutonomousTesting, IconComponent };
-;
+
 export { AIAutonomousTesting, IconComponent };
-;
-export { AIAutonomousTesting, IconComponent };
-;
+
 export { AIAutonomousTesting, IconComponent };

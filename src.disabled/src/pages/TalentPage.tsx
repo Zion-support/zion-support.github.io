@@ -20,7 +20,7 @@ import { ;
   Brain,;
   Zap;,
 } from 'lucide-react';
-;
+
 export function TalentPage() {;
   const talentCategories = [;
     {;
@@ -60,7 +60,7 @@ export function TalentPage() {;
       skills: ['Solidity', 'Web3', 'DeFi', 'Smart Contracts', 'Ethereum'];,
 }
   ];
-;
+
   const featuredProfessionals = [;
     {;
       name: 'Sarah Chen',;
@@ -107,7 +107,7 @@ export function TalentPage() {;
       avatar: '👨‍💻';,
 }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-zion-slate-dark">;
       {/* Hero Section */}
@@ -348,5 +348,5 @@ export function TalentPage() {;
     </div>;
   );,
 }
-;
+
 export default TalentPage;

@@ -14,7 +14,7 @@ import { ;
   Zap,;
   Star;,
 } from 'lucide-react';
-;
+
 const AboutTeam = () => {;
   const leadershipTeam = [;
     {;
@@ -62,7 +62,7 @@ const AboutTeam = () => {;
       achievements: ['Goldman Sachs Alumni', '500M+ Funding Raised', '15+ Strategic Partnerships'];,
 }
   ];
-;
+
   const companyValues = [;
     {;
       icon: Heart,;
@@ -101,14 +101,14 @@ const AboutTeam = () => {;
       color: 'from-amber-500 to-yellow-500';,
 }
   ];
-;
+
   const teamStats = [;
     { number: '500+', label: 'Team Members', icon: Users },;
     { number: '50+', label: 'Countries Served', icon: Globe },;
     { number: '1000+', label: 'Projects Delivered', icon: Award },;
     { number: '99.9%', label: 'Uptime SLA', icon: Star }
   ];
-;
+
   const cultureHighlights = [;
     {;
       title: 'Remote-First Culture',;
@@ -131,7 +131,7 @@ const AboutTeam = () => {;
       icon: Heart;,
 }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
       {/* Hero Section */}
@@ -384,5 +384,5 @@ const AboutTeam = () => {;
     </div>;
   );,
 };
-;
+
 export default AboutTeam;

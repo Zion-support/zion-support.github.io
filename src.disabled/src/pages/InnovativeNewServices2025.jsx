@@ -2,7 +2,7 @@ import React, { useState } from 'react';''';
 import { Link } from 'react-router-dom';''';
 import { Brain, Cpu, Cloud, Zap, Globe, CheckCircle, Star, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
 import { SEOHead } from "../components/SEOHead.jsx";
-;import { SPECIALIZED_IT_SERVICES_2025 } from "../data/specializedITServices2025";
+
 const InnovativeNewServices2025 = () => {}
 ';
 '';
@@ -263,14 +263,14 @@ const InnovativeNewServices2025 = () => {}
     </div>)};
 export default InnovativeNewServices2025;,
 }}}
-;
+
 export { InnovativeNewServices2025, IconComponent };
-;
+
 export { InnovativeNewServices2025, IconComponent };
-;
+
 export { InnovativeNewServices2025, IconComponent };
-;
+
 export { InnovativeNewServices2025, IconComponent };
-;
+
 export { InnovativeNewServices2025, IconComponent };
 )

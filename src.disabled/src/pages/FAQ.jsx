@@ -48,14 +48,12 @@ import { Footer } from "@/components/Footer";        <div className="container m
     </>;
   );,
 }
-;
+export { CustomAccordion, FAQ };
 
 export { CustomAccordion, FAQ };
-;
+
 export { CustomAccordion, FAQ };
-;
+
 export { CustomAccordion, FAQ };
-;
-export { CustomAccordion, FAQ };
-;
+
 export { CustomAccordion, FAQ };

@@ -2,15 +2,13 @@ import React, { useState } from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Check, Star, Users, Zap, Shield, Brain, Rocket, Globe, Cpu, TrendingUp, Target, BarChart3, Code, Truck, Car, Plane, Dna, Atom, Link, Box, Crown, Sparkles  } from 'lucide-react.ts';
 import { SEO  } from '@/components/SEO';
-;
-;
-;
+
 export default function ComprehensivePricingGuide2029(...args: unknown[]): unknown {;
   const [selectedPlan, setSelectedPlan] = useState('enterprise');
   const [billingCycle, setBillingCycle] = useState('monthly');
-;
+
   const allServices = [...REVOLUTIONARY_2029_CUTTING_EDGE_SERVICES, ...REVOLUTIONARY_2029_EMERGING_TECH_SERVICES];
-;
+
   const pricingPlans = [;
     {;
       id: 'starter',;
@@ -70,7 +68,7 @@ export default function ComprehensivePricingGuide2029(...args: unknown[]): unkno
       buttonColor: 'from-purple-600 to-indigo-700';,
 }
   ];
-;
+
   const serviceCategories = [;
     {;
       name: 'AI & Analytics',;
@@ -128,9 +126,9 @@ export default function ComprehensivePricingGuide2029(...args: unknown[]): unkno
       services: unknownallServices.filter(s  => !s.category.includes('AI') && !s.category.includes('Space') && !s.category.includes('Quantum'));,
 }
   ];
-;
+
   const getDiscountMultiplier = () => billingCycle === 'yearly' ? 0.83 : 1;
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <SEO ;
@@ -450,13 +448,13 @@ export default function ComprehensivePricingGuide2029(...args: unknown[]): unkno
     </div>;
   );,
 }
-;
+
 export { ComprehensivePricingGuide2029 };
-;
+
 export { ComprehensivePricingGuide2029 };
-;
+
 export { ComprehensivePricingGuide2029 };
-;
+
 export { ComprehensivePricingGuide2029 };
-;
+
 export { ComprehensivePricingGuide2029 };

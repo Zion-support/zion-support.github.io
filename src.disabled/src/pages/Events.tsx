@@ -63,11 +63,11 @@ export default function Page(...args: any[]): any {): unknown {): unknown {}
     image: "/images / digital - transformation - summit.jpg";,
 }
 ];
-;
+
 const eventTypes = ['All', 'Conference', 'Workshop', 'Webinar', 'Symposium'];
 const categories = ['All', 'AI & ML', 'Cybersecurity', 'Cloud & DevOps', 'Data Analytics', 'IoT & Edge', 'Digital Transformation'];
 const statuses = ['All', 'upcoming', 'past'];
-;
+
 export default function Events(...args: unknown[]): unknown {;
   const [selectedType, setSelectedType] = useState('All');
   const [selectedCategory, setSelectedCategory] = useState('All');  const [selectedStatus, setSelectedStatus] = useState('All');
@@ -75,7 +75,7 @@ export default function Events(...args: unknown[]): unknown {;
   const [searchTerm, setSearchTerm] = useState('');';
   const [selectedCategory, setSelectedCategory] = useState('all');';
   const [selectedType, setSelectedType] = useState('all');
-;
+
   const categories: unknown = [{ id: 'all', name: 'All Categories', icon: Calendar, count: 0 },;
     { id: 'ai - ml', name: 'AI & Machine Learning', icon: Brain, count: 8 },;
     { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, count: 6 },;
@@ -87,7 +87,7 @@ export default function Events(...args: unknown[]): unknown {;
     { id: 'digital - transformation', name: 'Digital Transformation', icon: TrendingUp, count: 9 },;
     { id: 'startup - tech', name: 'Startup Technology', icon: Rocket, count: 3 }
   ];
-;
+
   const eventTypes = [;
     { id: 'all', name: 'All Types', icon: Calendar },;
     { id: 'webinar', name: 'Webinar', icon: Video },;
@@ -97,7 +97,7 @@ export default function Events(...args: unknown[]): unknown {;
     { id: 'meetup', name: 'Meetup', icon: Users },;
     { id: 'summit', name: 'Summit', icon: Star }
   ];
-;
+
   const events = [;
     {;
       id: 1,;
@@ -278,7 +278,7 @@ export default function Events(...args: unknown[]): unknown {;
       image: '/events/iot-hackathon.jpg';,
 }
   ];
-;
+
   const filteredEvents = events.filter(event => {;
     const matchesSearch = event.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          event.description.toLowerCase().includes(searchTerm.toLowerCase());
@@ -287,10 +287,10 @@ export default function Events(...args: unknown[]): unknown {;
     ;
     return matchesSearch && matchesCategory && matchesType;,
 });
-;
+
   const upcomingEvents = events.filter(event => new Date(event.date) >= new Date()).slice(0, 3);
   const featuredEvents = events.filter(event => event.featured);
-;
+
   const formatDate = (dateString: unknownstring)  => {;
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', { ;
@@ -298,8 +298,6 @@ export default function Events(...args: unknown[]): unknown {;
       year: 'numeric', ;
       month: 'long',       day: 'numeric' ;,
 }) };
-;
-
   const getCategoryIcon = (category: unknownstring)  => {;
     switch (category) {;
       case 'AI & ML': return Brain;
@@ -312,16 +310,16 @@ export default function Events(...args: unknown[]): unknown {;
 "";
       return <span className="px-3 py-1 bg-gray-500/20 text-gray-400 text-xs rounded-full border border-gray-500/30">Past</span>}
   };
-;
+
   const getStatusBadge = (status: unknownstring)  => {;
     if (status === 'upcoming') {;
       return <span className="px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Upcoming</span>;,
 } else {;
       return <span className="px-3 py-1 bg-gray-500/20 text-gray-400 text-xs rounded-full border border-gray-500/30">Past</span>;,
 }
-;,
+
 };
-;
+
   return (;
     <div className="min-h-screen bg-zion-blue">;
       {/* Hero Section */}
@@ -451,8 +449,6 @@ export default function Events(...args: unknown[]): unknown {;
                 Don't miss these must-attend events featuring industry leaders and cutting-edge topics.;
               </p>;
             </motion.div>;
-
-;
             <div className="grid grid-cols-1 lg: unknowngrid-cols-2 gap-8">;
               {upcomingEvents.map((event, index)  => {;
                 const CategoryIcon = getCategoryIcon(event.category);
@@ -569,8 +565,6 @@ export default function Events(...args: unknown[]): unknown {;
                     ))}
                   </div>;
                 </div>;
-
-;
             <div className="grid grid-cols-1 lg: unknowngrid-cols-2 gap-8">;
               {pastEvents.map((event, index)  => {;
                 const CategoryIcon = getCategoryIcon(event.category);
@@ -584,7 +578,7 @@ export default function Events(...args: unknown[]): unknown {;
                     Clear all filters;
                   </button>;
                 </div>;) }
-;
+
               {/* Load More Button */}";
               {filteredEvents.length > 6 && ("";
                 <div className="text-center mt-12">"";
@@ -691,14 +685,14 @@ const Events: React.FC = () => {}
     </div>;
   );,
 }
-;
+
 export { Events, CategoryIcon, CategoryIcon };
-;
+
 export { Events, CategoryIcon, CategoryIcon };
-;
+
 export { Events, CategoryIcon, CategoryIcon };
-;
+
 export { Events, CategoryIcon, CategoryIcon };
-;
+
 export { Page, Events, CategoryIcon, CategoryIcon, Events };
 )

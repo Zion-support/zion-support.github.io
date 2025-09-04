@@ -1,8 +1,6 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';';
 import { motion } from 'framer-motion';';
 import { Users, MessageSquare, Sparkles, Save, Download, Loader2 } from 'lucide-react';
-;
-;
 export const CollaborativeTextEditor = ({ roomId, userId, userName, initialContent = '', enableAI = true, enableCollaboration = true, enableVersioning = true, className = '', onSave, onExport }) => {;
     const { trackEvent } = useAnalytics({        enableTracking: true,;
         enableUserBehaviorTracking: true;,
@@ -37,7 +35,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
 }
     // comment;
     const collaboration = useRealTimeCollaboration({}
-;
+
         roomId,;
         userId,;
         userName,;
@@ -68,13 +66,13 @@ messageRetention: 1000});,
 }
     // comment;
     const handleTextChange = useCallback((event) => {}
-;
+
         const;const;const newContent = event.target.value;
         const selectedText = newContent.slice(selectionStart, selectionEnd);,
 }        setEditorState(prev = > {}
-;
+
             const change = {}
-;
+
                 id: "change_${Date.now()}_${Math.random().toString(36).substr(2, 9)}",";
                 type: newContent.length > prev.content.length ? "insert" : "delete",;
 position: Math.min(selectionStart, prev.content.length) ,;
@@ -82,9 +80,9 @@ position: Math.min(selectionStart, prev.content.length) ,;
 length: Math.abs(newContent.length-prev.content.length) ,;
 timestamp: new Date(),,;
                 userId,version: prev.version + 1}
-;
+
             return {}
-;
+
                 ...prev,;
                 content: newContent,;
 selection: { start: selectionStart, end: selectionEnd, text: selectedText },;
@@ -98,18 +96,18 @@ changes[...prev.changes, change];,
                 length: Math.abs(newContent.length-prev.content.length) ,;
                 timestamp: new Date () ,;
                 userId,                version: prev.version + 1}
-;
+
             return {}
-;
+
                 ...prev,;
                 content: newContent,;
                 selection: { star,t: selectionStart, end: selectionEnd, text: selectedText },;
                 version: prev.version + 1,;
                 id: "change_${Date.now()}_${Math.random().toString(36).substr(2, 9)}", ";
                 type: newContent.length > prev.content.length ? "insert" : "delete", position: Math.min(selectionStart, prev.content.length) , text: newContent.length > prev.content.length ? newContent.slice(prev.content.length) : null, length: Math.abs(newContent.length-prev.content.length) , timestamp: new Date () , userId,                version: prev.version + 1}
-;
+
             return {}
-;
+
                 ...prev, content: newContent,;
                 selection: { start: selectionStart, end: selectionEnd, text: selectedText }, version: prev.version + 1,;
                 changes[...prev.changes, change];,
@@ -117,7 +115,7 @@ changes[...prev.changes, change];,
 }
         // comment;
         if(enableCollaboration && collaboration.isConnected) {}
-;
+
             collaboration.syncTextChange({}";
 ",;
 ";
@@ -135,13 +133,13 @@ selection: { start: selectionStart, end: selectionEnd },;
                 content: newContent,;
                 selection: { star,t: selectionStart, end: selectionEnd },";
                 version: editorState.version + 1})}
-;
+
         // comment;
         trackEvent(&apos;editor&apos,text_changed&apos,content_modified&apos, newContent.length)}, [enableCollaboration, collaboration, editorState.version, trackEvent]);,
 }
     // comment;
 ";
-;
+
 """;
                 type: "text_change", content: newContent,;
                 selection: { start: selectionStart, end: selectionEnd },";
@@ -151,29 +149,29 @@ selection: { start: selectionStart, end: selectionEnd },;
 }
     // comment;
     const handleSelectionChange = useCallback((event) => {}
-;
+
         const;const;const target = event.target;
         const start = target.selectionStart;
         const end = target.selectionEnd;
         const text = target.value.slice(start, end);,
 }
         setEditorState(prev = > ({}
-;
+
             ...prev,            selection: { start, end, text }
-;
+
             ...prev, selection: { start, end, text }
-;,
+
 }) );,
 }
         // comment        if(enableCollaboration && collaboration.isConnected) {}
-;
+
             collaboration.updateSelection(start, end, text)}
-;,
+
 }, [enableCollaboration, collaboration]);,
 }
     // comment;
     const handleCursorMove = useCallback((event) => {}
-;
+
         if(!enableCollaboration || !collaboration.isConnected);,
 }
             return,;
@@ -190,20 +188,20 @@ selection: { start: selectionStart, end: selectionEnd },;
 }
     // comment;
     const generateAISuggestions = useCallback(async () => {}
-;
+
         if(!enableAI || !editorState.content.trim () ) return;
         setIsProcessing(true);,
 }
         try {}
-;
+
             // comment;
             await new Promise (resolve = > setTimeout (resolve, 2000) ) ,;
             const suggestions = []";
             // comment;
             if (editorState.content.includes("its")) {}
-;
+
                 suggestions.push({}
-;
+
 ";
 
                     id: "suggestion_${Date.now()}_1",;
@@ -217,9 +215,9 @@ confidence: 0.95,";
 })}";
             // comment;
             if (editorState.content.includes("very")) {}
-;
+
                 suggestions.push({}
-;
+
 ";
 
                     id: "suggestion_${Date.now()}_2",;
@@ -233,9 +231,9 @@ confidence: 0.88,";
 })}";
             // comment;
             if (editorState.content.endsWith("The main benefits")) {}
-;
+
                 suggestions.push({}
-;
+
 ";
 
                     id: "suggestion_${Date.now()}_3",;
@@ -250,9 +248,9 @@ position: editorState.content.length,;
                         " are numerous and well - documented in industry research.",",;
                         " can be measured through key performance indicators.";
             // comment            if (editorState.content.includes(&apos;its&apos)) {}
-;
+
                 suggestions.push({}
-;
+
 ";
 
                     id: "suggestion_${Date.now()}_1",&apos;&apos,";
@@ -264,11 +262,11 @@ position: editorState.content.length,;
                     reason: &apos;Consider using &apos;it&apos,s&apos, (contraction of &apos,it is&apos) instead of &apos,its&apos, (possessive)&apos,"&apos;&apos,;
                     alternatives[&apos;it&apos;s&apos, &apos;it is&apos],;,
 })}
-;
+
             // comment            if (editorState.content.includes(&apos;very&apos)) {}
-;
+
                 suggestions.push({}
-;
+
 ";
 
                     id: "suggestion_${Date.now()}_2",&apos;&apos,";
@@ -280,11 +278,11 @@ position: editorState.content.length,;
                     reason: &apos,Consider using a more specific adjective instead of &apos,very&apos,&apos,&apos;&apos,;
                     alternatives[&apos;extremely&apos, &apos;highly&apos, &apos;remarkably&apos, &apos;exceptionally&apos],;,
 })}
-;
+
             // comment            if (editorState.content.endsWith(&apos;The main benefits&apos)) {}
-;
+
                 suggestions.push({}
-;
+
 ";
 
                     id: "suggestion_${Date.now()}_3",&apos;&apos,";
@@ -297,15 +295,15 @@ position: editorState.content.length,;
                     alternatives[&apos;&apos,;
                         &apos; include improved efficiency, cost savings, and enhanced user experience.&apos,"&apos;&apos,;
                         &apos; are numerous and well-documented in industry research.&apos,"&apos;&apos                        &apos; can be measured through key performance indicators.&apos;&apos]})}
-;
+
             setEditorState(prev = > ({}
-;
+
                 ...prev,;
                 suggestions[...prev.suggestions, ...suggestions],;,
 }));,
 }
             trackEvent(&apos;editor&apos,ai_suggestions_generated&apos,suggestions_created&apos, suggestions.length)}
-;
+
         catch (error) {}";
 ";
             // comment;
@@ -317,9 +315,9 @@ position: editorState.content.length,;
             const suggestions = []";
             // comment;
             if (editorState.content.includes("its")) {}
-;
+
                 suggestions.push({}
-;
+
 ";
 
                     id: "suggestion_${Date.now()}_1", "";
@@ -333,9 +331,9 @@ position: editorState.content.length,;
 })}";
             // comment;
             if (editorState.content.includes("very")) {}
-;
+
                 suggestions.push({}
-;
+
 ";
 
                     id: "suggestion_${Date.now()}_2", "";
@@ -348,9 +346,9 @@ position: editorState.content.length,;
 })}";
             // comment;
             if (editorState.content.endsWith("The main benefits")) {}
-;
+
                 suggestions.push({}
-;
+
 ";
 
                     id: "suggestion_${Date.now()}_3", "";
@@ -363,49 +361,49 @@ position: editorState.content.length,;
                         " include improved efficiency, cost savings, and enhanced user experience.", "";
                         " are numerous and well - documented in industry research.", """,;
                         " can be measured through key performance indicators.""                    ]})}
-;
+
             setEditorState(prev = > ({}
-;
+
                 ...prev, suggestions[...prev.suggestions, ...suggestions],;,
 }))";
             trackEvent("editor", ai_suggestions_generated",suggestions_created", suggestions.length)}
-;
+
         catch (error) {}";
 ";
             // comment;
             trackEvent("editor", ai_suggestions_failed",generation_error", null, {}";
 ";
-;
+
 """;
                 error: error instanceof Error ? error.message : "Unknown error"})}
         finally {}
-;
+
             setIsProcessing(false)}
-;,
+
 }, [enableAI, editorState.content, trackEvent]);,
 }
     // comment    const applySuggestion = useCallback((suggestion) => {}
-;
+
         setEditorState(prev => {}
-;
+
             let newContent = prev.content;
             if (suggestion.type === &apos;completion&apos) {}"                newContent = newContent.slice(0, suggestion.position) + suggestion.text + newContent.slice(suggestion.position)}
-;
+
             else if (suggestion.type === &apos;grammar&apos; || suggestion.type === &apos;style&apos) {}
-;
+
                 // comment;
             let newContent = prev.content";
             if (suggestion.type = == "completion") {}
-;
+
                 newContent = newContent.slice(0, suggestion.position) + suggestion.text + newContent.slice(suggestion.position)}",";
             else if (suggestion.type = == "grammar" || suggestion.type === "style") {}
-;
+
                 // comment;
                 const searchText = editorState.content.slice(suggestion.position, suggestion.position + suggestion.length);,
 }                newContent = newContent.replace(searchText, suggestion.text) }
-;
+
             return {}
-;
+
                 ...prev,;
                 content: newContent,;
 suggestions: prev.suggestions.filter(s => s.id !== suggestion.id) }});,
@@ -415,17 +413,17 @@ suggestions: prev.suggestions.filter(s => s.id !== suggestion.id) }});,
 }
         // comment;
         if(editorRef.current) {}
-;
+
             editorRef.current.focus();,
 }
             const newPosition = suggestion.position + suggestion.text.length,;
             editorRef.current.setSelectionRange(newPosition, newPosition)}
-;
+
         trackEvent(&apos;editor&apos,ai_suggestion_applied&apos, suggestion.type, null, { suggestionId: suggestion.id })}, [editorState.content, trackEvent]);,
 }
     // comment;
     const handleSave = useCallback(() => {}
-;
+
         onSave ? .(editorState.content);,
 }
         setLastSaved(new Date());,
@@ -434,20 +432,20 @@ suggestions: prev.suggestions.filter(s => s.id !== suggestion.id) }});,
 }
     // comment;
     const handleExport = useCallback((format) => {}
-;
+
         let export;export;exportContent = editorState.content;
         if (format === &apos;html&apos) {}
-;
+
 ";
 ""&apos;&apos,;
             exportContent = "<html><body><pre>${editorState.content}</pre></body></html>"}
-;
+
         else if (format === &apos;md&apos) {}";
             editorRef.current.setSelectionRange(newPosition, newPosition)}";
         trackEvent("editor", ai_suggestion_applied", suggestion.type, null, { suggestionId : suggestion.id })}, [editorState.content, trackEvent]),;
     // comment;
     const handleSave = useCallback(() => {}
-;
+
         onSave?.(editorState.content);,
 }
         setLastSaved(new Date())";
@@ -455,18 +453,18 @@ suggestions: prev.suggestions.filter(s => s.id !== suggestion.id) }});,
 }
     // comment;
     const handleExport = useCallback((format) => {}
-;
+
         let exportContent = editorState.content";
         if (format = == "html") {}
-;
+
 ";
 
             exportContent = "<html><body><pre>${editorState.content}</pre></body></html>"}
-;
+
 ";
             exportContent = "<html><body><pre>${editorState.content}</pre></body></html>"}",";
         else if (format = == "md") {}
-;
+
 ";
 
 ";
@@ -475,9 +473,9 @@ suggestions: prev.suggestions.filter(s => s.id !== suggestion.id) }});,
 
 ${editorState.content}"}
         if(onExport) {}
-;
+
             onExport(exportContent, format)}
-;
+
             // Default export behavior';
             const blob = new Blob([exportContent], { type: 'text/plain' });
             const url = window.URL.createObjectURL(blob);
@@ -525,7 +523,7 @@ ${editorState.content}"}
         trackEvent(&apos;editor&apos,content_&apos;&apos;exported&apos, format, null, { format })}, [editorState.content, onExport, trackEvent]);,
 }
 ";
-;
+
 """;
             // comment;
             const blob = new Blob([exportContent], { type: "text/plain" })";";
@@ -540,38 +538,38 @@ ${editorState.content}"}
     // comment;
     useEffect(() => {}&apos;
         const handleCollaborationTextChange = (event) => {}
-;
+
             const;const;const { message } = event.detail;
             if (message.type === &apos;text_change&apos; && message.userId != = userId) {}";
             const { message } = event.detail",";
             if (message.type = == "text_change" && message.userId !== userId) {}
-;
+
                 // comment;
                 setEditorState(prev = > {}
-;
+
                     // comment;
                     return {}
-;
+
                         ...prev,;
                         content: message.payload.content,";
 version: Math.max(prev.version, message.payload.version)}})";
                 trackEvent("editor",collaboration_sync",text_synced", null, {}
-;
+
                     userId: message.userId,;
                         ...prev,;
                         content: message.payload.content,";
                         version: Math.max(prev.version, message.payload.version)}});,
 }
                 trackEvent(&apos;editor&apos,collaboration_sync&apos,text_synced&apos, null, {}
-;
+
                     userId: message.userId,;
                     version: message.payload.version})}";,
 }
-;
+
         window.addEventListener(&apos;collaborationTextChange&apos, handleCollaborationTextChange);,
 }
         return () => {}
-;
+
 ";
 &apos;
 &apos;&apos;
@@ -581,21 +579,21 @@ version: Math.max(prev.version, message.payload.version)}})";
                         ...prev, content: message.payload.content,";
                         version: Math.max(prev.version, message.payload.version)}})";
                 trackEvent("editor", collaboration_sync",text_synced", null, {}
-;
+
                     userId: message.userId, version: message.payload.version})}";,
 }";
         window.addEventListener("collaborationTextChange", handleCollaborationTextChange);,
 }
         return () => {}
-;
+
 ";
-;
+
 """;
             window.removeEventListener("collaborationTextChange", handleCollaborationTextChange)}}, [userId, trackEvent]);,
 }
     // comment;
     useEffect(() => {}
-;
+
             window.removeEventListener('collaborationTextChange', handleCollaborationTextChange)}}, [userId, trackEvent]);
     // Auto-save functionality;
     useEffect(() => {;
@@ -605,9 +603,9 @@ version: Math.max(prev.version, message.payload.version)}})";
     // Cleanup function;,
 };,
 }, []);, []);
-;
+
                 generateAISuggestions()}
-;,
+
 }, 3000)";
         return () => clearTimeout(debounceTimer)}, [editorState.content, enableAI, generateAISuggestions])";
     return (";
@@ -625,10 +623,10 @@ version: Math.max(prev.version, message.payload.version)}})";
           <div className = "flex items-center gap-2">""{/* comment */}""{enableCollaboration && (<button onClick="{()" => setShowCollaborators(!showCollaborators)} className="px-3 py-1 bg-white/20 hover: bg-white/30 rounded text-sm transition-colors flex items-center gap-2">",";
                 <Users className="w-4 h-4"  />,;
                 {collaboration.onlineUsers.length}
-;
+
               </button>) }";
             ""{/* comment */}""{enableAI && (<button onClick="{generateAISuggestions}" disabled="{isProcessing}" className="px-3 py-1 bg-white/20 hover:bg-white/30 rounded text-sm transition-colors flex items-center gap-2 disabled:opacity-50">""{isProcessing ? (<Loader2 className="w-4 h-4 animate-spin"  />) : (<Sparkles className="w-4 h-4"  />)}
-;
+
                 AI;
               </button>) }";
             ""{/* comment */}"";";
@@ -650,7 +648,7 @@ version: Math.max(prev.version, message.payload.version)}})";
             </span>;
             <span>";
               Version {editorState.version}""{lastSaved && " • Last saved ${lastSaved.toLocaleTimeString()}"}
-;
+
             </span>;
           </div>;
 ""{/* comment */}"";";
@@ -662,10 +660,10 @@ version: Math.max(prev.version, message.payload.version)}})";
               ",";
               <div className = "space-y-3">,";
                 {editorState.suggestions.map(suggestion => (<motion.div key="{suggestion.id}" initial = {}
-;
+
   { opacity: 0>;
 x: 20}} animate = {}
-;
+
   { opacity: 1,";
 x: 0 ",">;
 ""}} className="p-3 bg-white dark: bg-gray-600 rounded-lg border border-gray-200 dark:border-gray-500">"",";
@@ -681,12 +679,12 @@ x: 0 ",">;
                     "";";
                     <p className = "text-sm text-gray-700 dark: text-gray-300 mb-2">,;
                       {suggestion.reason}
-;
+
                     </p>;
                     "";";
                     <div className = "text-sm font-medium text-gray-900 dark: text-white mb-2">,;
                       {suggestion.text}
-;
+
                     </div>;
                     "";";
                     <button onClick="{()" => applySuggestion(suggestion)} className="w-full px-2 py-1 bg-blue-500 hover: bg-blue-600 text-white text-xs rounded transition-colors">,,;
@@ -705,7 +703,7 @@ x: 0 ",">;
                 <div className="&apos;w-2" h-2 bg-green-400 rounded-full&apos;>&apos,</div>;
                 Live,;
               </div>)}
-;
+
           </h3>&apos;&apos,;
           &apos;&apos,&apos;&apos,";
           <div className="&apos;flex" items-center gap-2&apos;>"&apos;&apos;{/* comment */}&apos;&apos,&apos;{enableCollaboration && (&apos}&apos;<button onClick="{()" => setShowCollaborators(!showCollaborators)} className="&apos;px-3" py-1 bg-white/20 hover: bg-white/30 rounded text-sm transition-colors flex items-center gap-2&apos,>"&apos,&apos,&apos;&apos,",;
@@ -713,7 +711,7 @@ x: 0 ",">;
                 {collaboration.onlineUsers.length}&apos;
               </button>) }";
             &apos;&apos,{/* comment */}&apos;&apos,&apos;{enableAI && (&apos}&apos;<button onClick="{generateAISuggestions}" disabled="{isProcessing}" className="&apos;px-3" py-1 bg-white/20 hover:bg-white/30 rounded text-sm transition-colors flex items-center gap-2 disable,d: opacity-50&apos,>"&apos,&apos,"{isProcessing ? (&apos}&apos;<Loader2 className="&apos;w-4" h-4 animate-spin&apos;       />) : (&apos;<Sparkles className="&apos;w-4" h-4&apos;       />)}
-;
+
                 AI&apos;
               </button>) }";
             &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,";
@@ -735,7 +733,7 @@ x: 0 ",">;
           <div className="flex items-center gap-2">"""{/* comment */}""""{enableCollaboration && (<button onClick="{()" => setShowCollaborators(!showCollaborators)} className="px-3 py-1 bg-white/20 hover: bg-white/30 rounded text-sm transition-colors flex items-center gap-2">""";
                 <Users className="w-4 h-4"  />,;
                 {collaboration.onlineUsers.length}
-;
+
               </button>) }";
             """{/* comment */}""""{enableAI && (<button onClick="{generateAISuggestions}" disabled="{isProcessing}" className="px-3 py-1 bg-white/20 hover: bg-white/30 rounded text-sm transition-colors flex items-center gap-2 disabled:opacity-50">""""{isProcessing ? (<Loader2 className="w-4 h-4 animate-spin"  />) : (<Sparkles className="w-4 h-4"  />)}";
                 AI,;
@@ -764,7 +762,7 @@ x: 0 ",">;
             </span>;
             <span>";
               Version {editorState.version}""{lastSaved && " • Last saved ${lastSaved.toLocaleTimeString()}"}
-;
+
             </span>;
           </div>;
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,";
@@ -776,10 +774,10 @@ x: 0 ",">;
               &apos;&apos,&apos;&apos,",;
               <div className = "&apos,space-y-3&apos,">";
                 {editorState.suggestions.map(suggestion => (&apos}<motion.div key="{suggestion.id}" initial = {}
-;
+
   { opacity: 0>;
   x: 20}} animate = {}
-;
+
   { opacity: 1,>;
   x: 0 &apos,&apos,",;
 &apos,&apos,"&apos}} className="&apos;p-3" bg-white dark: bg-gray-600 rounded-lg border border-gray-200 dark:border-gray-500&apos;>"&apos;&apos;"&apos;&apos;";
@@ -807,7 +805,7 @@ x: 0 ",">;
                   </motion.div>))}&apos;&apos,";
                 &apos;&apos,&apos;{editorState.suggestions.length === 0 && (&apos}&apos;<p className="&apos;text-sm" text-gray-500 text-center py-4&apos;>;
                     No suggestions yet.Start typing to get AI-powered recommendations.&apos;</p>)}
-;
+
               </div>;
             </div>) }";
 &apos;&apos,{/* comment */}&apos;&apos,&apos;{enableCollaboration && showCollaborators && (&apos}&apos;<div className="&apos;p-4" border-b border-gray-200 dark: border-gray-600&apos,>"&apos,&apos,&apos,&apos,";
@@ -838,9 +836,9 @@ x: 0 ",">;
               </h4>""";
               "";
               <div className="space-y-3">",                {editorState.suggestions.map(suggestion => (<motion.div key="{suggestion.id}" initial = {}
-;
+
   { opacity: 0, x: 20}} animate = {}
-;
+
   { opacity: 1,";
   x: 0 "",";
 """"}} className="p-3 bg-white dark: bg-gray-600 rounded-lg border border-gray-200 dark:border-gray-500">""";
@@ -868,7 +866,7 @@ x: 0 ",">;
                   </motion.div>))}"";
                 """"{editorState.suggestions.length === 0 && (<p className="text-sm text-gray-500 text-center py-4">;
                     No suggestions yet.Start typing to get AI-powered recommendations.</p>)}
-;
+
               </div>;
             </div>) }";
 ""{/* comment */}""{enableCollaboration && showCollaborators && (<div className="p-4 border-b border-gray-200 dark: border-gray-600">",",;
@@ -892,7 +890,7 @@ x: 0 ",">;
                     </span>"";";
                     <span className="text-xs text-gray-400">;
                       {user.lastSeen.toLocaleTimeString()}
-;
+
                     </span>;";
 """{/* comment */}""""{enableCollaboration && showCollaborators && (<div className = "p-4 border-b border-gray-200 dark: border-gray-600">""";
               <h4 className="font-medium text-gray-900 dark:text-white mb-3 flex items-center gap-2">"";
@@ -914,10 +912,10 @@ x: 0 ",">;
                     </span>"";
                     <span className="text-xs text-gray-400">;
                       {user.lastSeen.toLocaleTimeString()}
-;
+
                     </span>;
                   </div>) ) }
-;
+
               </div>;
             </div>) }";
 ""{/* comment */}"";";
@@ -945,7 +943,7 @@ x: 0 ",">;
       </div>,";
 ""{/* comment */}""{enableCollaboration && (<div ref="{collaborationRef}" className="absolute inset-0 pointer-events-none" style="{{" zIndex: 10 }}>;";
           {collaboration.activeCursors.map(({ x, y, user }) => (<motion.div key = "{user.id}" initial = {}
-;
+
   { opacity: 0",>;
 &apos,&apos,"{/* comment */}&apos;&apos,&apos;&apos,";
           <div className="&apos;p-4&apos;">"&apos;&apos,&apos;&apos;";
@@ -988,23 +986,23 @@ x: 0 ",">;
       </div>";,;
 &apos,&apos,"{/* comment */}&apos;&apos,&apos;{enableCollaboration && (&apos}&apos;<div ref="{collaborationRef}" className="&apos;absolute" inset-0 pointer-events-none&apos; style = "{{" zIndex: 10 }}>";
           {collaboration.activeCursors.map(({ x, y, user }) => (&apos;<motion.div key = "{user.id}" initial = {}
-;
+
   { opacity: 0,;
   scale: 0}} animate = {}
-;
+
   { opacity: 1,;
 scale: 1}} exit = {}
-;
+
   { opacity: 0,";
 scale: 0 ",";
 ""}} className="absolute w-4 h-4" style = {}
-;
+
   { opacity: 0,;
   scale: 0 &apos,&apos,">;
 &apos,&apos,"&apos}} className="&apos;absolute" w-4 h-4&apos; style = {}
-;
+
   {}
-;
+
                     left: x,>;
 top: y,";
                     transform: "translate(-50%",;
@@ -1017,20 +1015,20 @@ top: y,";
               <div className="&apos;absolute" top-5 left-0 bg-gray-800 text-white text-xs px-2 py-1 rounded whitespace-nowrap&apos;>;
                 {user.name}&apos;
               </div>            </motion.div>))}
-;
+
         </div>)}
-;
+
     </div>)}&apos;&apos;";
 &apos;&apos;"&apos;&apos;";
 """{/* comment */}""""{enableCollaboration && (<div ref = "{collaborationRef}" className="absolute inset-0 pointer-events-none" style="{{" zIndex: 10 }}>"          {collaboration.activeCursors.map(({ x, y, user }) => (<motion.div key="{user.id}" initial = {}
-;
+
   { opacity: 0, scale: 0}} animate = {}
-;
+
   { opacity: 1>;
   scale: 1}} exit = {}";
   { opacity: 0, scale: 0 "",";
 """"}} className="absolute w-4 h-4" style = {}
-;
+
   {}>;
                     left: x, top: y,";
                     transform: "translate(-50%, ;
@@ -1038,10 +1036,10 @@ top: y,";
               <div className = "w-full h-full rounded-full border-2 border-white shadow-lg" style="{{" backgroundColor: user.color }}></div>"";
               <div className="absolute top-5 left-0 bg-gray-800 text-white text-xs px-2 py-1 rounded whitespace-nowrap">;
                 {user.name}
-;
+
               </div>;
             </motion.div>))}
-;
+
         </div>)}";
     </div>)}"";
 """"";

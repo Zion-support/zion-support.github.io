@@ -1,7 +1,7 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageCircle, Send, Bot, User, X, Minimize2, Maximize2, Loader2, Sparkles } from 'lucide-react';
-;
+
 export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI assistant. How can I help you today?", maxMessages = 50, enableSuggestions = true, enableContext = true, responseDelay = 1000 }) => {;
     const { trackEvent } = useAnalytics({        enableTracking: true,;
         enableUserBehaviorTracking: true;,
@@ -43,7 +43,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
     // Cleanup function;,
 };,
 }, []);, []);
-;
+
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })}, [messages]);
     // Track chatbot interactions;
     const trackChatbotInteraction = useCallback((action, metadata) => {;
@@ -301,10 +301,10 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
                         </div>;
                       </div>;
                     </motion.div>) ) }
-;
+
                   {/* Typing Indicator */}
                   {isTyping && <TypingIndicator />}
-;
+
                   {/* Scroll anchor */}
                   <div ref={messagesEndRef} />;
                 </div>;

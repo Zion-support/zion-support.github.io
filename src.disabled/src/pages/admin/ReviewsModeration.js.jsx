@@ -112,14 +112,12 @@ export default function ReviewsModeration() {}
     <ProtectedRoute>;
       <ReviewsModerationContent />;
     </ProtectedRoute>)}
-;
+export { ReviewsModerationContent, ReviewsModeration };
 
 export { ReviewsModerationContent, ReviewsModeration };
-;
+
 export { ReviewsModerationContent, ReviewsModeration };
-;
+
 export { ReviewsModerationContent, ReviewsModeration };
-;
-export { ReviewsModerationContent, ReviewsModeration };
-;
+
 export { ReviewsModerationContent, ReviewsModeration };

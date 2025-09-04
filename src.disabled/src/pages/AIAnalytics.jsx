@@ -24,11 +24,11 @@ import {}
   PieChart,''';
   LineChart'''';,
 } from 'lucide-react';
-;
+
     integrations["Python", "Scikit - learn", "TensorFlow", "Custom APIs"];,
 }
 ];
-;
+
 const aiCapabilities = [];
   {}
 ";
@@ -62,7 +62,7 @@ const aiCapabilities = [];
     icon: Eye,"";
     impact: "High";
 ];
-;
+
 const successStories = [];
   {}
 ";
@@ -94,7 +94,7 @@ const successStories = [];
     results: "40% improvement in patient outcomes, 35% reduction in readmissions","";
     logo: "HN";
 ];
-;
+
 const processSteps = [];
   {}
 ";
@@ -128,7 +128,7 @@ const processSteps = [];
     icon: Zap,"";
     duration: "2-4 weeks";
 ];
-;
+
 export default function AIAnalytics() {}
 ';
 '';
@@ -373,7 +373,7 @@ export default function AIAnalytics() {}
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'''`'`'`;
                     : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````;,
 }`}
-;
+
                 {category}
               </button>) ) }
           </div>";
@@ -396,7 +396,7 @@ export default function AIAnalytics() {}
 }}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 hover:border-zion - cyan / 40 transition - all duration - 300 cursor -pointer";
                 onClick={ () => setSelectedSolution(solution) }
-;
+
 ";,
 }}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer";
@@ -562,14 +562,12 @@ export default function AIAnalytics() {}
       </section>;
     </div>;
   )}
-;
+export { AIAnalytics };
 
 export { AIAnalytics };
-;
+
 export { AIAnalytics };
-;
+
 export { AIAnalytics };
-;
-export { AIAnalytics };
-;
+
 export { AIAnalytics };

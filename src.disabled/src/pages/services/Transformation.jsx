@@ -37,14 +37,12 @@ const DigitalTransformation = () => {;
     </div>);,
 };
 export default DigitalTransformation;
-;
+export { DigitalTransformation };
 
 export { DigitalTransformation };
-;
+
 export { DigitalTransformation };
-;
+
 export { DigitalTransformation };
-;
-export { DigitalTransformation };
-;
+
 export { DigitalTransformation };

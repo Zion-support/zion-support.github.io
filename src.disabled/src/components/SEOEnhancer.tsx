@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import Head from 'next/head';
-;
+
 interface SEOEnhancerProps {;
   title?: string;
   description?: string;
@@ -9,7 +9,7 @@ interface SEOEnhancerProps {;
   ogImage?: string;
   structuredData?: any;,
 }
-;
+
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({;
   title = "Zion Tech Group - AI Services, IT Solutions & Micro SaaS",;
   description = "Leading provider of AI services, IT solutions, and micro SaaS applications. Transform your business with cutting-edge technology and innovative solutions.",;
@@ -26,13 +26,13 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({;
       script.text = JSON.stringify(structuredData);
       document.head.appendChild(script);,
 }
-;
+
     // Optimize meta tags;
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {;
       metaDescription.setAttribute('content', description);,
 }
-;
+
     // Add canonical URL;
     if (canonical) {;
       let canonicalLink = document.querySelector('link[rel="canonical"]');
@@ -44,7 +44,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({;
       canonicalLink.setAttribute('href', canonical);,
 }
   }, [description, canonical, structuredData]);
-;
+
   const defaultStructuredData = {;
     "@context": "https://schema.org",;
     "@type": "Organization",;
@@ -66,7 +66,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({;
       "https://twitter.com/ziontechgroup";
     ];,
 };
-;
+
   return (;
     <Head>;
       <title>{title}</title>;
@@ -105,5 +105,5 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({;
     </Head>;
   );,
 };
-;
+
 export default SEOEnhancer;

@@ -3,7 +3,7 @@ import { Search, X  } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { AutocompleteSuggestions } from '@/components/search/AutocompleteSuggestions'; ;
 import { SearchSuggestion } from '@/types/search';
-;
+
 export function EnhancedSearchInput({;
   value,;
   onChange,;
@@ -16,29 +16,29 @@ export function EnhancedSearchInput({;
   const [highlightedIndex, setHighlightedIndex] = useState<number>(-1);
   const inputRef = useRef<HTMLInputElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-;
+
   const debouncedFilterSuggestions = useMemo(// Changed from useCallback to useMemo;
     () => debounce((currentValue: string, suggestions: SearchSuggestion[]) => {;
       if(!currentValue) {;
         setFilteredSuggestions(suggestions.filter(s => s.type === 'recent'));
         return;,
 }
-;
+
       const filtered = suggestions.filter(suggestion =>;
         suggestion.text.toLowerCase().includes(currentValue.toLowerCase());
       );
-;
+
       filtered.sort((a, b) => {;
         const aStartsWith = a.text.toLowerCase().startsWith(currentValue.toLowerCase()) ? -1 : 0;
         const bStartsWith = b.text.toLowerCase().startsWith(currentValue.toLowerCase()) ? -1 : 0;
         return aStartsWith-bStartsWith;,
 });
-;
+
       setFilteredSuggestions(filtered.slice(0, 8)); ;,
 }, 300),;
     [setFilteredSuggestions] // setFilteredSuggestions from useState is stable;
   );
-;
+
   useEffect(() => {;
   // TODO: Add dependencies if needed;
 
@@ -52,7 +52,7 @@ export function EnhancedSearchInput({;
       debouncedFilterSuggestions.cancel();,
 };,
 }, [value, searchSuggestions, debouncedFilterSuggestions]);
-;
+
   useEffect(() => {;
   // TODO: Add dependencies if needed;
 
@@ -69,7 +69,7 @@ export function EnhancedSearchInput({;
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);,
 }, []);
-;
+
   const handleSelectSuggestion = (suggestionText: string) => { // Renamed suggestion to suggestionText;
     onChange(suggestionText);
     if(onSelectSuggestion) {;
@@ -79,7 +79,7 @@ export function EnhancedSearchInput({;
     inputRef.current?.blur();
     setHighlightedIndex(-1); ;,
 };
-;
+
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {;
     if(!isFocused || filteredSuggestions.length === 0) {;
       if(e.key === 'Escape') { ;
@@ -90,7 +90,7 @@ export function EnhancedSearchInput({;
 }
       return;,
 }
-;
+
     switch(e.key) {;
       case 'ArrowDown':;
         e.preventDefault();

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion  } from 'framer-motion';
-;
+
 export default function Page() {;
 ${url.url}</loc>'`;
         ${url.lastmod ? `<lastmod>${url.lastmod}</lastmod>` : ''}'`;
@@ -10,7 +10,7 @@ ${url.url}</loc>'`;
             return urlElement.replace(/\s+/g,).trim();,
 }).join('');`;
         return `${xmlHeader}\n${urlsetOpen}\n${urlElements}\n${urlsetClose}`;
-;
+
     /**;
      * Generate sitemap index for large sites;
      */;
@@ -25,7 +25,7 @@ ${url.url}</loc>'`;
       </sitemap>`;,
 }).join('');`;
         return `${xmlHeader}\n${sitemapindexOpen}\n${sitemapElements}\n${sitemapindexClose}`;
-;
+
     /**;
      * Generate robots.txt content;
      */;
@@ -39,7 +39,7 @@ Sitemap: ${baseUrl}/sitemap.xml;
 
   const generateSitemap = async () => {;
     setIsGenerating(true) ;
-;
+
     // Simulate sitemap generation;
     setTimeout(() => {;
       const sitemap = {;
@@ -62,17 +62,17 @@ Sitemap: ${baseUrl}/sitemap.xml;
         ],;
         totalUrls: 10,;
         generatedAt: new Date () .toISOString () };
-;
+
       setSitemapData(sitemap) ;
       setIsGenerating(false) ;
-;
+
       if(onGenerate) {;
 
         onGenerate(sitemap);,
 }
     }, 2000) ;,
 };
-;
+
   return (";
     <div className="space-y-4">;
       <button;
@@ -105,7 +105,7 @@ Sitemap: ${baseUrl}/sitemap.xml;
               </div>;
         // // // // // // // // console.error('Error generating sitemaps:', error);
         throw error;
-;,
+
 };
             </div>;
           </div>;
@@ -131,9 +131,9 @@ Sitemap: ${baseUrl}/sitemap.xml;
         </motion.div>) }
     </div>) ;,
 };
-;
+
 export default SitemapGenerator;
-;
+
 export default to;
 export default to;
 '"`

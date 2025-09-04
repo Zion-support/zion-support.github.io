@@ -275,14 +275,14 @@ const ServiceComparison = () => {}
     </div>)};
 export default ServiceComparison;,
 }}
-;
+
 export { ServiceComparison };
-;
+
 export { ServiceComparison };
-;
+
 export { ServiceComparison };
-;
+
 export { ServiceComparison };
-;
+
 export { ServiceComparison };
 ))))

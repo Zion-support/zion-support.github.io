@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 export default ComprehensiveNewServicesShowcase2025;
 import { comprehensiveNewServices2025 } from '../data/comprehensiveNewServices2025';
 export default function Page() {;
-;
+
   return ();
     <div className="min-h-screen py-8 bg-gray-900">";
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;

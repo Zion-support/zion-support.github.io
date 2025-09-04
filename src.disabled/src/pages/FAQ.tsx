@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronDown, ChevronUp, Search, MessageCircle, Phone, Mail, HelpCircle, BookOpen, Video, Users2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-;
+
 interface FAQItem {;
   question: string;
   answer: string;
@@ -16,7 +16,7 @@ const FAQ: React.FC: = () => {,;
         ? prev.filter(i: => i !== index),;
         : [...prev, index];
     )}
-;
+
   const faqs = [] = React.useState<;<;<number[]>([]);,
 }
     setOpenItems(prev = >;
@@ -27,7 +27,7 @@ const FAQ: React.FC: = () => {,;
   return (",,;
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">,";
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16"> {/* comment */}
-;
+
         <motion.div;";
           initial = "{{" opacity: 0, y: 20 }}";
           animate="{{" opacity: 1, y: 0 }}">;
@@ -76,7 +76,7 @@ const FAQ: React.FC: = () => {,;
       answer: "We combine cutting-edge AI technology with deep industry expertise. Our focus on autonomous systems, quantum computing, and innovative micro SaaS solutions sets us apart. We&apos;re committed to delivering measurable business outcomes and long-term partnerships."}, ";
       question: &apos,Do you have case studies or references?&apos,;
       answer: &apos,Yes, we have numerous case studies showcasing successful implementations across various industries. We can provide references from satisfied clients and detailed case studies demonstrating ROI and business impact.&apos}
-;
+
   ];
   return(&apos;";
     <div className="&apos;min-h-screen" bg-gradient-to-br from-slate-50 to-blue-50&apos;>&apos,";
@@ -85,7 +85,7 @@ const FAQ: React.FC: = () => {,;
   return (";
     <div: className = "min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">",",";
       <div: className="max-w-4xl mx-auto px-4 sm: px-6: lg:px-8: py-16">"," {/* comment */}
-;
+
     // Pricing & Billing;
     {;
       question: "How does Zion Tech Group pricing work?",;
@@ -137,7 +137,7 @@ const FAQ: React.FC: = () => {,;
       category: "partnership";,
 }
   ];
-;
+
   const categories = [;
     { id: 'all', name: 'All Questions', count: faqData.length },;
     { id: 'general', name: 'General', count: faqData.filter(item => item.category === 'general').length },;
@@ -146,14 +146,14 @@ const FAQ: React.FC: = () => {,;
     { id: 'support', name: 'Technical Support', count: faqData.filter(item => item.category === 'support').length },;
     { id: 'partnership', name: 'Partnership & Careers', count: faqData.filter(item => item.category === 'partnership').length },;
   ];
-;
+
   const filteredFAQ = faqData.filter(item => {;
     const matchesSearch = item.question.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          item.answer.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = activeCategory === 'all' || item.category === activeCategory;
     return matchesSearch && matchesCategory;,
 });
-;
+
   const toggleItem = (index: number) => {;
     const newExpanded = new Set(expandedItems);
     if (newExpanded.has(index)) {;
@@ -163,7 +163,7 @@ const FAQ: React.FC: = () => {,;
 }
     setExpandedItems(newExpanded);,
 };
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">;
       {/* Header Section */}
@@ -256,7 +256,7 @@ initial="{{" opacity:  ,0, y: 20}}";
                 className = "w-full px-6 py-4 text-left flex items-center justify-between hover: bg-gray-50 transition-colors",;
               >,";
                 <span className="text-lg font-semibold text-gray-900 pr-4"> {faq.question}
-;
+
         {/* FAQ Items */}
         <motion.div;
           initial={{ opacity: 0, y: 20 }}
@@ -355,7 +355,7 @@ initial="{{" opacity:  ,0, y: 20}}";
                   <p: className="text-gray-600 leading-relaxed">",",;
                 <ChevronDown>;
 openItems.includes(index) ? &apos;rotate-180&apos; : &apos,&apos}`}
-;
+
                />&apos;&apos;
               {openItems.includes(index) && (}";
                   initial = "{{" height: 0, opacity: 0 }}";
@@ -363,7 +363,7 @@ openItems.includes(index) ? &apos;rotate-180&apos; : &apos,&apos}`}
                   exit="{{" height: 0, opacity: 0 }}";
                   className="px-6 pb-4">;";
                   <p className = "text-gray-600 leading-relaxed"> {faq.answer}
-;
+
       {/* Additional Resources */}
       <section className="py-20">;
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
@@ -464,6 +464,6 @@ openItems.includes(index) ? &apos;rotate-180&apos; : &apos,&apos}`}
     </div>;
   );,
 };
-;
+
 export default FAQ;
 ))))))))))))

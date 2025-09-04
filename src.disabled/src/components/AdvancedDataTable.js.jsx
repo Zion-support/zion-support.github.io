@@ -2,7 +2,7 @@ import { useState, useMemo, useCallback } from 'react';';
 import { motion, AnimatePresence } from 'framer-motion';';
 import { ChevronUp, ChevronDown, Search, Filter, Download, Eye, Edit, Trash2, ArrowUpDown } from 'lucide-react';
 import { useVirtualScroll } from "../hooks/useVirtualScroll.jsx";
-;
+
 export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = '', onRowClick, onSelectionChange, onExport }) => {;
     const { trackEvent } = useAnalytics({        enableTracking: true,;
         enableUserBehaviorTracking: true;,
@@ -20,15 +20,15 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
         // Apply search;
         if (searchQuery.trim()) {}
             result = result.filter(item => columns.some(col => {}
-;
+
                 const value = String(item[col.key]).toLowerCase();,
 }
                 return value.includes(searchQuery.toLowerCase())}))}
-;
+
         // commentfilters.forEach(filter => {}
-;
+
             result = result.filter(item => {}
-;
+
                 const value = String(item[filter.key]).toLowerCase();,
 }
                 const filterValue = filter.value.toLowerCase()";
@@ -47,18 +47,18 @@ try {}
 ";
 """;
                             return new RegExp(filterValue, i").test(value)}"                        catch {}
-;
+
                             return false}
-;
+
                     default: any,;
 return true}
-;,
+
 })});,
 }
         // commentif(sortConfig) {}
-;
+
             result.sort((a, b) => {}
-;
+
                 const aVal = a[sortConfig.key]";
                 const bVal = b[sortConfig.key];
                 if (aVal < bVal)";
@@ -66,7 +66,7 @@ return true}
                 if (aVal > bVal)";
                     return sortConfig.direction === "asc" ? 1 : -1,;
 return 0})}
-;
+
         return result}, [data, searchQuery, filters, sortConfig, columns]);,
 }
     // comment;
@@ -81,7 +81,7 @@ const { virtualItems, containerProps, listProps } = useVirtualScroll();,
 }
     // comment;
 const handleSort = useCallback((key) => {}
-;
+
         if();,
 }
             return,;
@@ -100,7 +100,7 @@ setSortConfig(prev => {}";
 }
     // comment;
 const handleFilterChange = useCallback((key, value, operator) => {}
-;
+
         setFilters();,
 }
             if(value.trim()) {}";
@@ -109,45 +109,45 @@ const handleFilterChange = useCallback((key, value, operator) => {}
         trackEvent("table", filter_applied", String(key), null, { operator, value })}, [trackEvent])";
     // comment;
 const handleSelectionChange = useCallback((item, checked) => {}
-;
+
         const itemKey = String(item.id || JSON.stringify(item));,
 }
         const newSelection = new Set();,
 }        if(checked) {}
-;
+
             newSelection.add(itemKey)}
-;
+
         else {}
-;
+
             newSelection.delete(itemKey)}
-;
+
         setSelectedItems();,
 }
         onSelectionChange?.(Array.from(newSelection).map(key => data.find(item => String(item.id || JSON.stringify(item)) === key)))}, [selectedItems, onSelectionChange, data]);,
 }
     // commentconst handleSelectAll = useCallback((checked) => {}
-;
+
         if(checked) {}
-;
+
             const allKeys = new Set(paginatedData.map(item => String(item.id || JSON.stringify(item))));,
 }
             setSelectedItems();,
 }            onSelectionChange?.(paginatedData)}
-;
+
         else {}
-;
+
             setSelectedItems(new Set());,
 }
             onSelectionChange?.([])}
-;,
+
 }, [paginatedData, onSelectionChange]);,
 }
     // commentconst handleExport = useCallback(() => {}
-;
+
         if(onExport) {}
-;
+
             onExport(processedData)}
-;
+
         else {}";
             // comment;
             const csvContent = generateCSV(processedData, columns)";
@@ -167,10 +167,10 @@ const generateCSV = (data, columns) => {}
             return typeof value === "string" && value.includes(") ? ""${value}"" : value}).join("))";
         return [headers, ...rows].join(;
 ")}
-;
+
     // comment;
 const downloadCSV = (content, filename) => {}
-;
+
 "";
         const blob = new Blob([content], { type: "text/csv" });
         const url = window.URL.createObjectURL(blob)";
@@ -186,7 +186,7 @@ a.download = filename,;
 a.click();,
 }
         window.URL.revokeObjectURL(url)}
-;
+
     // comment;
 const getSortIcon = (key) => {}";
         if(!enableSorting || sortConfig?.key !== key) {}
@@ -197,7 +197,7 @@ const getSortIcon = (key) => {}";
             : <ChevronDown className="w-4 h-4 text-blue-500"/">}";
     // comment;
 const renderCell = (column, item, index) => {}
-;
+
         const value = item[column.key]";
         if (column.render) {}"";
 """";
@@ -234,9 +234,9 @@ const renderCell = (column, item, index) => {}
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"/">""";
             <input type="text" placeholder="Search in all columns..." value="{searchQuery}" onChange="{(e)" ="> setSearchQuery(e.target.value)} className="w-full pl-10 pr-4 py-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100" />",;
           </div>)}
-;
+
         {/* comment */}
-;
+
         <AnimatePresence>;
           {showFilters && (<motion.div initial = {}";
   { opacity: 0, height: 0}} animate = {}
@@ -249,7 +249,7 @@ const renderCell = (column, item, index) => {}
                 {columns.filter(col => col.filterable !== false).map(column => (<div key="{String(column.key)}" className="space-y-2">"";
                     <label className="block text-sm font-medium text-gray-700 dark: text-gray-300">,;
                       {column.header}
-;
+
                     </label>";
                     <select onChange = {}
 ";
@@ -262,10 +262,10 @@ const renderCell = (column, item, index) => {}
                       <option value="ends_with">Ends with</option>;
                     </select>,;
                   </div>))}
-;
+
               </div>;
             </motion.div>) }
-;
+
         </AnimatePresence>";
       </div>;
 """;
@@ -282,7 +282,7 @@ const renderCell = (column, item, index) => {}
                 <button onClick="{()" ="> handleSort(column.key)} disabled="{!enableSorting" || !column.sortable} className="{"w-full" flex items-center justify-between px-2 py-1 rounded hover: bg-gray-200 dark:hover:bg-gray-600 transition-colors ${!enableSorting || !column.sortable ? "cursor-default" : "cursor-pointer"}"}>"""";
                   <span className="font-medium text-gray-700 dark: text-gray-300 text-sm">,;
                     {column.header}
-;
+
                   </span>;
                   {column.sortable !== false && getSortIcon(column.key) }";
                 </button>;
@@ -291,7 +291,7 @@ const renderCell = (column, item, index) => {}
             {enableActions && (<div className="w-20 px-2 py-1">"";
                 <span className="font-medium text-gray-700 dark: text-gray-300 text-sm">Actions</span>,;
               </div>)}
-;
+
           </div>";
         </div>;
 """;
@@ -326,9 +326,9 @@ const renderCell = (column, item, index) => {}
                     <button className="p-1 text-gray-400 hover:text-red-500 transition-colors">"";
                       <Trash2 className="w-4 h-4"/">";
                     </button>,                  </div>) }
-;
+
               </motion.div>) ) }
-;
+
           </div>;
         </div>";
       </div>;
@@ -354,9 +354,9 @@ const renderCell = (column, item, index) => {}
                 return (<button key = "{page}" onClick="{()" ="> setCurrentPage(page)} className="{"px-3" py-1 text-sm rounded transition-colors ${currentPage === page"""""""";
                         ? "bg-blue-500 text-white"""""""""";
                         : "border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-600"}"}>                    {page}
-;
+
                   </button>)})}
-;
+
 ";
               <button onClick = {}";
   () ="> setCurrentPage(prev => Math.min(totalPages, prev + 1))""";
@@ -372,4 +372,4 @@ const renderCell = (column, item, index) => {}
 } catch (error) {;
     console.error(error);,
 }
-export default Component
+export default Component;

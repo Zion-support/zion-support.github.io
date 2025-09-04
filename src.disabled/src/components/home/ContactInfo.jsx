@@ -35,4 +35,4 @@ export function ContactInfo() { const compStats = [] return (" <section classNam
 ";
 
   );
-export default Component
+export default Component;

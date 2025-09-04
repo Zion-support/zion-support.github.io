@@ -6,7 +6,7 @@ export default function Page() {;
   showSettings?: boolean;
   maxMessages?: number;
   autoScroll?: boolean}
-;
+
 showHeader:  true,;
   showSettings = true,;
   maxMessages = 50,;
@@ -27,7 +27,7 @@ showHeader:  true,;
   const [isListening, setIsListening] = useState(false);
   const [chatHistory, setChatHistory] = useState < any> ([]) ;
   const messagesEndRef = useRef < HTMLDivElement> (null) ;
-;
+
   // Sample welcome message;
   useEffect(() => {;
   // TODO: Add dependencies if needed;
@@ -50,13 +50,11 @@ showHeader:  true,;
           relatedServices: ['AI Consulting', 'Cloud Solutions', 'Digital Transformation'],;
   estimatedResponseTime: 2;
         ;
-;
-;,
 };,
 };
       setMessages([welcomeMessage]) }
   }, [isOpen, messages.length]) ;
-;
+
   // Auto - scroll to bottom;
   useEffect(() => {;
   // TODO: Add dependencies if needed;
@@ -68,7 +66,7 @@ showHeader:  true,;
     if(autoScroll && messagesEndRef.current) {;
       messagesEndRef.current.scrollIntoView({ behavior: 'smooth' }) }
   }, [messages, autoScroll]) ;
-;
+
   // Simulate AI response;
         suggestions['Strategy development', 'Implementation process', 'Change management', 'ROI examples'],;
         relatedServices['Digital Transformation', 'Process Optimization', 'Change Management'];,
@@ -79,9 +77,9 @@ showHeader:  true,;
         relatedServices: ['Digital Transformation', 'Process Optimization', 'Change Management'];,
 };
     ];
-;
+
     const randomResponse = responses[Math.floor(Math.random () * responses.length) ];
-;
+
     const botMessage: ChatMessage = {;
   id: Date.now () .toString () ,;
       content: randomResponse.content,;
@@ -97,24 +95,22 @@ showHeader:  true,;
   ;
   estimatedResponseTime: 1 + Math.random () * 2;
       ;
-;
-;,
 };,
 };
-;
+
     setMessages(prev => [...prev, botMessage]) ;
     setIsTyping(false) ;,
 };
-;
+
   // Handle message submission;
       setMessages(prev = > [...prev, fileMessage]) };,
 };
-;
+
   // Handle suggestion click;
   const handleSuggestionClick = useCallback((suggestion: string) => {;
     setInputValue(suggestion) ;,
 };
-;
+
   // Rate response;
   const rateResponse = (messageId: string, rating: 'positive' | 'negative') => {;
     setMessages(prev => prev.map (msg =>;
@@ -122,12 +118,12 @@ showHeader:  true,;
         ? { ...msg, metadata: { ...msg.metadata, userRating: rating } }
         : msg) ) ;,
 };
-;
+
   // Clear chat;
   const clearChat = () => {;
     setMessages([]) ;
     setChatHistory([]) };
-;
+
   return (<>;
       {/* Chat Toggle Button */}
       <motion.button;
@@ -135,7 +131,7 @@ showHeader:  true,;
         className="fixed bottom - 4 right - 4 z - 50 p - 4 bg-zion - cyan text-white rounded-full shadow-lg hover:shadow-xl transition - all duration - 300 focus:outline - none focus:ring - 2 focus:ring - zion - cyan focus:ring - offset - 2 focus:ring - offset - zinc -900";
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
-;
+
         {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
       </motion.button>;
 
@@ -190,7 +186,7 @@ showHeader:  true,;
                   </div>;
                 </div>;
               </div>) }
-;
+
             {/* Settings Panel */}
             <AnimatePresence>;
               {showSettingsPanel && (<motion.div;
@@ -219,7 +215,7 @@ showHeader:  true,;
                             ? 'bg-zion - cyan text-white';
                             : 'bg-zinc - 700 text-zinc - 400 hover:bg-zinc - 600';,
 }`}
-;
+
                         {settings.voiceEnabled ? <Mic className="w-4 h-4" /> : <MicOff className="w-4 h-4" />}
                       </button>;
                     </div>;
@@ -233,7 +229,7 @@ showHeader:  true,;
                             ? 'bg-zion - cyan text-white';
                             : 'bg-zinc - 700 text-zinc - 400 hover:bg-zinc - 600';,
 }`}
-;
+
                         <CheckCircle className="w-4 h-4" />;
                       </button>;
                     </div>;
@@ -255,7 +251,7 @@ showHeader:  true,;
   y: 0;,
 }}
                   className={`flex ${message.sender === 'user' ? 'justify - end' : 'justify - start'}`}
-;
+
                   <div  className={`max - w-[80%] ${message.sender === 'user' ? 'order - 2' : 'order - 1'}`}>;
                     <div  className={`p - 3 rounded-lg ${message.sender === 'user';
                         ? 'bg-zion - cyan text-white';
@@ -268,7 +264,7 @@ showHeader:  true,;
                           {message.metadata.confidence && (<div  className="text-xs text-zinc - 400 mb-1">;
                               Confidence: {Math.round(message.metadata.confidence * 100) }%;
                             </div>) }
-;
+
                           {message.metadata.suggestions && (<div  className="flex flex - wrap gap-1 mb-2">;
                               {message.metadata.suggestions.map((suggestion, index) => (<button     key={index}
                                   onClick={ () => handleSuggestionClick(suggestion) }
@@ -277,7 +273,7 @@ showHeader:  true,;
                                   {suggestion}
                                 </button>) ) }
                             </div>) }
-;
+
                           {message.metadata.relatedServices && (<div  className="flex flex - wrap gap-1">;
                               {message.metadata.relatedServices.map((service, index) => (<span;
                                   key={index}
@@ -323,7 +319,7 @@ showHeader:  true,;
                       </div>) }
                   </div>;
                 </motion.div>) ) }
-;
+
               {/* Typing Indicator */}
               {isTyping && (<motion.div;
                   initial={{ opacity: 0 }}
@@ -339,7 +335,7 @@ showHeader:  true,;
                     <span className="text-sm text-zinc -400">Zion AI is typing...</span>;
                   </div>;
                 </motion.div>;) }
-;
+
               <div  ref={messagesEndRef} />;
             </div>;
 
@@ -375,10 +371,10 @@ showHeader:  true,;
                         ? 'bg-red - 500 text-white';
                         : 'bg-zinc - 700 text-zinc - 400 hover:bg-zinc - 600';,
 }`}
-;
+
                     {isListening ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />}
                   </button>) }
-;
+
                 {/* Send Button */}
                 <button     type="submit";
                   disabled={!inputValue.trim () || isTyping}

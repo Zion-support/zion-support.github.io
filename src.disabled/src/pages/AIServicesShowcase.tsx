@@ -45,7 +45,7 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
       category: 'IoT & Edge Computing',''';
       benefits['Reduce latency by 90%',Lower bandwidth costs by 70%',Real-time decision making']};
   ];
-;
+
   return();
     <>;
       <SEO title = "AI-Powered Micro SAAS Services Showcase | Zion Tech Group"";
@@ -334,15 +334,15 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
       </div>;
     </>;
   )};
-;
+
 export default AIServicesShowcase;
-;
+
 export { AIServicesShowcase };
-;
+
 export { AIServicesShowcase };
-;
+
 export { AIServicesShowcase };
-;
+
 export { AIServicesShowcase };
-;
+
 export { AIServicesShowcase };

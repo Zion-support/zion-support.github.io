@@ -193,14 +193,12 @@ const AIAgentOrchestrator = () => {}
       </div>;
     </>)};
 export default AIAgentOrchestrator;
-;
+export { AIAgentOrchestrator };
 
 export { AIAgentOrchestrator };
-;
+
 export { AIAgentOrchestrator };
-;
+
 export { AIAgentOrchestrator };
-;
-export { AIAgentOrchestrator };
-;
+
 export { AIAgentOrchestrator };

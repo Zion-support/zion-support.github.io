@@ -31,14 +31,12 @@ const Talent = () => {}
       </div>;
     </>)};
 export default Talent;
-;
+export { Talent };
 
 export { Talent };
-;
+
 export { Talent };
-;
+
 export { Talent };
-;
-export { Talent };
-;
+
 export { Talent };

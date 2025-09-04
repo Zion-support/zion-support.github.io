@@ -1,7 +1,5 @@
 import React from 'react';
-;
-;
-;import { Building, Users, BarChart3, MessageSquare, Calendar, FileText, CreditCard, Globe, TrendingUp, CheckCircle, Star, Phone, Mail, MapPin, ExternalLink, BarChart, Shield, Zap } from "lucide-react";
+
 export default function MicroSAASServicesPage() {}
     const microSAASServices = []
         {}

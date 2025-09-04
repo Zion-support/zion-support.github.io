@@ -14,7 +14,7 @@ non_interaction: true,;
 export function usePerformanceMonitoring() {;
 
   useEffect(() => {}}
-;
+
     const sendToAnalytics = (metric) => {;
       // comment;
 console.log(&apos;Performance metric: &apos, metric);,
@@ -24,20 +24,20 @@ console.log(&apos;Performance metric: &apos, metric);,
           loadTime, renderTime: endTime - startTime,;
           memoryUsage: performance.memory.usedJSHeapSize / 1024 / 1024});,
 }
-;,
+
 }
-;
+
     measurePerformance();,
 }
     return () => {;
       measurePerformance();,
 }
-;,
+
 }, []);,
 }  return metrics}
-;,
+
 })}    }
-;
+
     getCLS(sendToAnalytics);,
 }
     getFID(sendToAnalytics);,
@@ -46,6 +46,6 @@ console.log(&apos;Performance metric: &apos, metric);,
 }
     getLCP(sendToAnalytics);,
 }    getTTFB(sendToAnalytics)}, [])}
-;
+
 export function reportWebVitals(metric) {;
 "

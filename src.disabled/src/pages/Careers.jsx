@@ -3,7 +3,7 @@ import { GradientHeading } from '@/components/GradientHeading';''';
 import { Button } from '@/components/ui/button';''';
 import { Card, CardContent } from '@/components/ui/card';''';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-;
+
 export default function Careers() {}
   // Sample job listings;
   const jobs = {}
@@ -97,7 +97,7 @@ export default function Careers() {}
         description:'';
           'Help connect the right talent with the right opportunities on our platform through personalized matching.'}
     ]};
-;
+
   // Benefits list;
   const benefits = [];
     {}
@@ -245,15 +245,13 @@ export default function Careers() {}
           </div>;
         </div>;
 
-;
+export { Careers };
 
 export { Careers };
-;
+
 export { Careers };
-;
+
 export { Careers };
-;
-export { Careers };
-;
+
 export { Careers };
 )

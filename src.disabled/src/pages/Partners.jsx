@@ -334,14 +334,12 @@ export default function Partners() {}
     </div>;
   );,
 }
-;
+export { Partners };
 
 export { Partners };
-;
+
 export { Partners };
-;
+
 export { Partners };
-;
-export { Partners };
-;
+
 export { Partners };

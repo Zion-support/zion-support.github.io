@@ -5,7 +5,7 @@ import { useForm, type UseFormReturn } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter, Loader2 } from "lucide-react";
-;
+
 import { useAuth } from "@/hooks/useAuth";
 import { register } from "@/services/auth";
 import { toast } from "@/hooks/use-toast";
@@ -22,7 +22,7 @@ import {;
   FormLabel,;
   FormMessage,;,
 } from "@/components/ui/form";
-;
+
 // Form validation schema;
 const signupSchema = z;
   .object({;
@@ -42,9 +42,9 @@ const signupSchema = z;
     message: "Passwords do not match",;
     path: ["confirmPassword"],;,
 });
-;
+
 type SignupFormValues = z.infer<typeof signupSchema>;
-;
+
 export default function Signup() {;
   const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth();
   const navigate = useNavigate();
@@ -66,7 +66,7 @@ export default function Signup() {;
       termsAccepted: false,;,
 },;,
 }) as UseFormReturn<SignupFormValues>;
-;
+
   // Form submission handler;
   const onSubmit = async (data: SignupFormValues) => {;
     if (isSubmitting) return; // Prevent multiple submissions;
@@ -78,21 +78,21 @@ export default function Signup() {;
         data.email,;
         data.password;
       );
-;
+
       // Handle duplicate email error from API;
       if (res.status === 409 && resData?.code === 'EMAIL_EXISTS') {;
         form.setError('email', { message: resData.message });
         toast.error('Email already registered – please login.');
         return;,
 }
-;
+
       // Check for successful response;
       if (res.ok && resData.token && resData.user) {;
         // Successful registration;
         safeStorage.setItem('authToken', resData.token);
         setUser(resData.user);
         setTokens({ accessToken: resData.token, refreshToken: resData.refreshToken || null });
-;
+
       // Handle email verification required case;
       if (resData?.emailVerificationRequired) {;
         setShowVerificationMessage(true);
@@ -119,7 +119,7 @@ export default function Signup() {;
         // Potentially navigate to login or show a more specific error;
         return;,
 }
-;
+
       // Subscribe user to Mailchimp if opted in (only if registration is fully complete, not pending verification);
       if (data.newsletterOptIn && mailchimpService && !resData?.emailVerificationRequired) {;
         try {;
@@ -142,14 +142,14 @@ export default function Signup() {;
 } finally {;
       setIsSubmitting(false);    }
   };
-;
+
   const onInvalid = (errors: any) => {;
     const firstError = Object.keys(errors)[0] as keyof SignupFormValues;
     if (firstError) {;
       form.setFocus(firstError);,
 }
   };
-;
+
   // Redirect if user is already logged in and has completed profile;
   if (isAuthenticated && user?.profileComplete) {;
     return <Navigate to="/" />;,
@@ -159,7 +159,7 @@ export default function Signup() {;
   if (isAuthenticated && !user?.profileComplete) {;
     return <Navigate to="/onboarding" />;,
 }
-;
+
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";

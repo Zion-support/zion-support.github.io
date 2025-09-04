@@ -1,5 +1,5 @@
 import {  import { Badge } from './ui / badge';
-;
+
 export default function Page() {;,
 };
   return (";

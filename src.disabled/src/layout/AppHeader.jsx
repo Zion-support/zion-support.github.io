@@ -21,7 +21,7 @@ export function AppHeader() {;
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const location = useLocation();
-;
+
   // Handle scroll effect;
   useEffect(() => {;
     const handleScroll = () => {;
@@ -30,13 +30,13 @@ export function AppHeader() {;
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);,
 }, []);
-;
+
   // Close mobile menu when route changes;
   useEffect(() => {;
     setMobileMenuOpen(false);
     setActiveDropdown(null);,
 }, [location.pathname]);
-;
+
   const navigationItems = [;
     { name: 'Home', path: '/', icon: null },;
     { ;
@@ -57,9 +57,9 @@ export function AppHeader() {;
     { name: 'About', path: '/about', icon: null },;
     { name: 'Contact', path: '/contact', icon: null },;
   ];
-;
+
   const isActive = (path) => location.pathname === path;
-;
+
   return (;
     <motion.header ;
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${;
@@ -121,7 +121,7 @@ export function AppHeader() {;
                     {item.name}
                   </Link>;
                 )}
-;
+
                 {/* Dropdown Menu */}
                 {item.dropdown && activeDropdown === item.name && (;
                   <motion.div;

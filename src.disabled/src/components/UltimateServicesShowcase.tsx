@@ -12,32 +12,26 @@ import { enterpriseITInfrastructureServices2025 } from '../../data / 2025 - ente
 import { innovativeMicroSaasSolutions2025 } from '../../data / 2025 - innovative - micro - saas -solutions';
 import { motion  } from 'framer-motion';
 import { ultimateInnovativeServices2025 } from '../../data / 2025 - ultimate - innovative - services -expansion';
-;
+
  from 'lucide - react';
-;
+
 // Import the new services;
   ;
   ;
   ;
   website: 'https://ziontechgroup.com';,
 };
-;
-;
     name: 'Micro SAAS Solutions',;
     description: 'Innovative software solutions for small businesses',;";
     icon: <Code className="w-8 h-8"  />,;
     color: 'from-green-600 to-emerald-700',;
     services: innovativeMicroSaasSolutions2025};
 ];
-;
-;
   ;
   ;  ;
   ;
   'Emerging': 'from-green-600 to-emerald-700';,
 };
-;
-;
   ;
   ;
 ';
@@ -47,15 +41,13 @@ import { ultimateInnovativeServices2025 } from '../../data / 2025 - ultimate - i
   ;
   ;
   'Open Source': 'from-purple-600 to-violet-700';
-;
-;,
 };
-;
+
 export function UltimateServicesShowcase(...args[]):  {;
 
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedService, setSelectedService] = useState<any>(null);
-;
+
     ...ultimateInnovativeServices2025,;
     ...enterpriseITInfrastructureServices2025,;
     ...innovativeMicroSaasSolutions2025;
@@ -133,7 +125,7 @@ export function UltimateServicesShowcase(...args[]):  {;
                 ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-lg shadow-zion-cyan/25'';
                 : 'bg-zion-slate-light text-zion-gray-light hover: bg-zion-slate hover:text-white'`;,
 }`}
-;
+
             All Services({allServices.length});
           </button>;
           {categories.map((category)  => (;
@@ -144,7 +136,7 @@ export function UltimateServicesShowcase(...args[]):  {;
                   ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-lg shadow-zion-cyan/25'';
                   : 'bg-zion-slate-light text-zion-gray-light hover:bg-zion-slate hover:text-white'`;,
 }`}
-;
+
               {category.name} ({category.services.length}) ;
             </button>;) ) }
         </motion.div>;

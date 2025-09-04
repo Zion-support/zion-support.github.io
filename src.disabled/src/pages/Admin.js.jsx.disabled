@@ -33,14 +33,12 @@ const Admin = () => {}
       </div>;
     </>)};
 export default Admin;
-;
+export { Admin };
 
 export { Admin };
-;
+
 export { Admin };
-;
+
 export { Admin };
-;
-export { Admin };
-;
+
 export { Admin };

@@ -302,14 +302,12 @@ const ServiceRecommendations = () => {;
       </section>;
     </div>)};
 export default ServiceRecommendations;
-;
+export { ServiceRecommendations };
 
 export { ServiceRecommendations };
-;
+
 export { ServiceRecommendations };
-;
+
 export { ServiceRecommendations };
-;
-export { ServiceRecommendations };
-;
+
 export { ServiceRecommendations };

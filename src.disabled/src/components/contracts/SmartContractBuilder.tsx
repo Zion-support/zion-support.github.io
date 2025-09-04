@@ -1,12 +1,10 @@
-
-;
 // Placeholder ABIs - these should be generated from compiled contracts;
 const SIMPLE_AGREEMENT_ABI: ethers.InterfaceAbi = ["constructor(address client, address talent, string projectDetailsIPFSHash)",;
   "function client() view returns(address)",;
   "function talent() view returns(address)",;
   "function projectDetailsIPFSHash() view returns(string)",;
 ];
-;
+
 const ESCROW_AGREEMENT_ABI: ethers.InterfaceAbi = [// From Ownable;
   "constructor(address initialOwner)",;
   "function owner() view returns(address)",;
@@ -26,7 +24,7 @@ const ESCROW_AGREEMENT_ABI: ethers.InterfaceAbi = [// From Ownable;
   "function markAsDelivered()",;
   "function raiseDispute()",;
 ];
-;
+
 interface SmartContractBuilderProps {;
   isOpen: boolean;
   onClose: () => void;
@@ -35,11 +33,11 @@ interface SmartContractBuilderProps {;
   onContractGenerated?: (contractContent: string) => void; // For Solidity;
   onLegalDraftGenerated?: (markdownContent: string) => void; // For Markdown;
   onDeploy?: (contractContent: string) => void}
-;
+
 // Helper to ensure milestones are always an array;,
 }
   return []};
-;
+
 export function SmartContractBuilder({;
   isOpen,;
   onClose,;
@@ -50,18 +48,18 @@ export function SmartContractBuilder({;
   onDeploy;,
 }: SmartContractBuilderProps) {;
   const [activeTab, setActiveTab] = useState<string>("form");
-;
+
   // State for Solidity contract(existing);
   const [generatedSolidityContract, setGeneratedSolidityContract] = useState<string | null>(null);
-;
+
   // New state for Markdown legal draft;
   const [generatedMarkdownContract, setGeneratedMarkdownContract] = useState<string | null>(null);
   const [isLoadingLegalDraft, setIsLoadingLegalDraft] = useState<boolean>(false);
   const [legalDraftError, setLegalDraftError] = useState<string | null>(null);
-;
+
   const [formValues, setFormValues] = useState<ContractFormValues | undefined>(undefined);
   const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
-;
+
   const [deployOptions, setDeployOptions] = useState<DeploymentOptions>({;
     network: 'ethereum', // Default network;
     useEscrow: true,;
@@ -85,7 +83,7 @@ export function SmartContractBuilder({;
   const [contractAbi, setContractAbi] = useState<any | null>(null); // ABI based on contractType;
 
   // This hook might be for the older Solidity template system.// We are now using supabase function 'generate-smart-contract' for Solidity for deployment.const { generateSolidityContract: generateSolidityFromHook, deploySmartContract: deployViaHook } = useSmartContracts();
-;
+
   // Prefill form with talent and client name(existing useEffect);
   useEffect(() => {;
   // TODO: Add dependencies if needed;
@@ -118,7 +116,7 @@ export function SmartContractBuilder({;
     setGeneratedSolidityContract(null);
     setLegalDraftError(null);
     setActiveTab("form")};
-;
+
   // For generating Solidity(existing logic, adapted);
   ;
       return}
@@ -143,16 +141,16 @@ export function SmartContractBuilder({;
     setIsLoadingLegalDraft(true);
     setLegalDraftError(null);
     setGeneratedMarkdownContract(null);
-;
+
     try {;
       ;
       const { data, error } = await supabase.functions.invoke('generate-contract', {;
         body: payload,;,
 });
-;
+
       if(error) {;
         throw error}
-;
+
       if(data && data.markdownContent) { // Assuming your Supabase func returns { markdownContent: "..." }
         setGeneratedMarkdownContract(data.markdownContent);
         if(onLegalDraftGenerated) {;
@@ -166,7 +164,7 @@ export function SmartContractBuilder({;
       toast.error(err.message || "Failed to generate legal draft.")} finally {;
       setIsLoadingLegalDraft(false)}
   };
-;
+
       toast.info("Generating PDF...");
       html2pdf().from(element).set(opt).save();
         .then(() => toast.success("PDF downloaded successfully!"));
@@ -175,21 +173,21 @@ export function SmartContractBuilder({;
           console.error("Error generating PDF:", err)})} else {;
       toast.warn("No draft content available to download or form values missing.")}
   };
-;
+
       return}
-;
+
     setOnChainDeploymentStatus('connecting');
     setDeploymentError(null);
     setTransactionHash(null);
     setDeployedContractAddress(null);
     setPopulatedSolidityCode(null);
-;
+
     try {;
       if(!window.ethereum) {;
         throw new Error("MetaMask is not installed.Please install it to continue.")}
-;
+
       await window.ethereum.request({ method: 'eth_requestAccounts' });
-;
+
       const targetChainId = selectedNetwork === 'ethereum' ? '0x1' : '0x89'; // 1 for Ethereum Mainnet, 137 for Polygon;
 
       if(currentNetwork.chainId.toString() !== BigInt(targetChainId).toString()) {;
@@ -205,7 +203,7 @@ export function SmartContractBuilder({;
             throw new Error(`Please add ${selectedNetwork} to MetaMask and switch to it.`)}
           throw new Error(`Failed to switch network: ${switchError.message}`)}
       }
-;
+
       setOnChainDeploymentStatus('fetching_code');
       // Determine contractType(e.g. from a form field if it's selectable, or default);
       // For now, let's assume it's part of formValues or a fixed choice for this flow.const contractTypeToDeploy: ContractType = formValues.contractType || 'simple'; // Default to 'simple';
@@ -222,16 +220,16 @@ export function SmartContractBuilder({;
           projectDetailsIPFSHash: projectDetailsIPFSHash,;,
 },;,
 });
-;
+
       if(funcError) throw new Error(`Failed to fetch contract code: ${funcError.message}`);
       if(!data || !data.solidityCode) throw new Error("No Solidity code received from generator.");
-;
+
       setPopulatedSolidityCode(data.solidityCode); // This is actually bytecode if Supabase func compiles;
       // For now, assuming data.solidityCode IS the bytecode.This is a placeholder.// In reality, the Supabase function should return bytecode and ABI.// Or, if it returns Solidity, we'd compile it client-side(not recommended for production).setContractAbi(currentAbi);
-;
+
       setOnChainDeploymentStatus('deploying');
       toast.info("Deploying contract... This may take a moment.Please confirm in MetaMask.");
-;
+
       // IMPORTANT: populatedSolidityCode here should be BYTECODE.// The current 'generate-smart-contract' returns Solidity source.This will not work.// This is a placeholder for the actual deployment flow.// We need a compile step or the Supabase function must return bytecode.// For now, this will fail if populatedSolidityCode is not bytecode.let contract;
       // Adjust constructor arguments based on contractTypeToDeploy;
       if(contractTypeToDeploy === 'simple') {;
@@ -239,7 +237,7 @@ export function SmartContractBuilder({;
         // EscrowAgreement constructor: constructor(address _talent, address _client, string memory _projectDetailsIPFSHash) Ownable(_client);
         // The Ownable(_client) is handled by OpenZeppelin's constructor if `initialOwner` is the first arg to Ownable's constructor.// Or, if our EscrowAgreement's constructor directly calls Ownable(_client), then that's fine.// Based on EscrowAgreement.sol: constructor(address _talent, address _client, string memory _projectDetailsIPFSHash) Ownable(_client);
         // The ethers.js deploy will pass these args to the Solidity constructor.contract = await factory.deploy(formValues.talentWalletAddress, formValues.clientWalletAddress, projectDetailsIPFSHash)}
-;
+
       await contract.waitForDeployment();
       ;
       setDeployedContractAddress(deployedAddr);
@@ -251,11 +249,11 @@ export function SmartContractBuilder({;
       setOnChainDeploymentStatus('error');
       toast.error(err.message || "Deployment failed.")}
   };
-;
+
   // This function is passed to ContractForm.// We now decide what "generate" means in this context.// The subtask asks for a "Generate Legal Draft" button.// Let's assume ContractForm's onContractGenerated is for the primary action, which could be Solidity or data pass-through.// For clarity, we will add a dedicated "Generate Legal Draft" button in SmartContractBuilder's JSX.// The onContractGenerated from ContractForm might be re-purposed or trigger our Solidity generation.const handleFormSubmitFromContractForm = (values: ContractFormValues) => {;
     // This is called by ContractForm's own submit/generate button.// Let's make this one generate the Solidity code, as per existing flow.setFormValues(values); // Update formValues state first;
     handleGenerateSolidity(); // Then generate Solidity.};
-;
+
   return (<Dialog open={isOpen} onOpenChange={onClose}>;
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">;
         <DialogHeader>;
@@ -415,7 +413,7 @@ export function SmartContractBuilder({;
               </>;
             )}
             {!enableOnChainAgreement && <p className="text-muted-foreground p-4 text-center">Enable on-chain agreement to deploy this contract to a blockchain.</p>}
-;
+
             {/* Fallback for old Solidity preview if needed, or remove if fully replaced by on-chain flow */}
             {/* {generatedSolidityContract && !deployOptions.deployToChain && !enableOnChainAgreement && ( ... )} */}
           </TabsContent>;

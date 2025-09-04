@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { CheckCircle, XCircle, AlertTriangle, ExternalLink  } from 'lucide-react';
-;
+
 export default function Page() {;
-;,
+
 }
       // For internal links, we'll assume they're healthy since they're part of our app';
       if(url.startsWith('/') || url.includes('ziontechgroup.com')) {;
@@ -202,7 +202,7 @@ export default function Page() {;
             review and fix these links to improve user experience.</p>;
         </div>;
       )}
-;
+
       {healthyCount === links.length && (";
         <div className="mt-6 p-4 bg-green-500/10 border border-green-500/20 rounded-lg">";
           <h4 className="text-green-400 font-semibold mb-2">;
@@ -214,14 +214,12 @@ export default function Page() {;
         </div>)}
     </div>)};
 export default LinkHealthChecker;
-;
+export { LinkHealthChecker };
 
 export { LinkHealthChecker };
-;
+
 export { LinkHealthChecker };
-;
+
 export { LinkHealthChecker };
-;
-export { LinkHealthChecker };
-;
+
 export { LinkHealthChecker };

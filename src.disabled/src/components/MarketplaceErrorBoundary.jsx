@@ -14,7 +14,7 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
             resetErrorBoundary();
             // // // // // // // // console.error('Error during retry:', retryError);
             Sentry.captureException(retryError);
-;,
+
 }
         catch(retryError) {;
 

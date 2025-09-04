@@ -14,7 +14,7 @@ export default function UltimateInnovativeServices2026(...args[]):  {}
     { id: 'federated-learning', name: 'Federated Learning', icon: Network, color: 'from-zion-purple to-zion-blue' },;''';
     { id: 'sustainable-technology', name: 'Sustainable Technology', icon: Leaf, color: 'from-zion-green to-zion-blue' };
   ];
-;
+
   ';
     { id: 'all', name: 'All Prices', range: 'All' },;';
     { id: 'under-10k', name: 'Under $10K', range: 'Under $10,000' },;';
@@ -28,10 +28,10 @@ export default function UltimateInnovativeServices2026(...args[]):  {}
     { id: 'price-high', name: 'Price: High to Low' },;'';
     { id: 'innovation', name: 'Innovation Level' },;'    { id: 'roi', name: 'ROI Potential' };
   ];
-;
+
         return 0}
   }) ;
-;
+
     setExpandedService (expandedService === serviceId ? null : serviceId) };
   return ("";
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">";
@@ -150,7 +150,7 @@ export default function UltimateInnovativeServices2026(...args[]):  {}
                     ? 'bg-zion-cyan text-white'''`'`'`;
                     : 'bg-white/10 text-zion-slate-300 hover:bg-white/20'````;,
 }`}
-;
+
                 {option.name}
               </button>) ) }
           </div>;
@@ -400,14 +400,12 @@ export default function UltimateInnovativeServices2026(...args[]):  {}
     </div>;
   );,
 }
-;
+export { UltimateInnovativeServices2026 };
 
 export { UltimateInnovativeServices2026 };
-;
+
 export { UltimateInnovativeServices2026 };
-;
+
 export { UltimateInnovativeServices2026 };
-;
-export { UltimateInnovativeServices2026 };
-;
+
 export { UltimateInnovativeServices2026 };

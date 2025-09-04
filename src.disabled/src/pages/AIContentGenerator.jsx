@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge";"";
 import SEO from "@/components/SEO";"";
 import { PenTool, FileText, Brain, Zap, Target, Users, ArrowRight, CheckCircle, Star, Globe, Shield, Type, Video, ShoppingBag, Mail } from "lucide-react";"";
 import { Link } from "react-router-dom";
-;
+
     const features = [];
         {}
 ";
@@ -38,7 +38,7 @@ import { Link } from "react-router-dom";
             icon: <Target className="h-6 w-6 text-zion-cyan"/>;
 
     ];
-;
+
     const contentTypes = [];
         {}
 ";
@@ -83,7 +83,7 @@ import { Link } from "react-router-dom";
             icon: <Video className="h-8 w-8 text-zion-blue"/>;
 
     ];
-;
+
     const pricingPlans = [];
         {}
 ";
@@ -349,11 +349,11 @@ import { Link } from "react-router-dom";
         </div>;
     );
 </Card></Card></Card></Card></Card>}}}}}
-;
+
 export { AIContentGenerator };
-;
+
 export { AIContentGenerator };
-;
+
 export { AIContentGenerator };
-;
+
 export { AIContentGenerator };

@@ -2,7 +2,7 @@ import React from 'react';''';
 import { motion } from 'framer-motion';''';
 import { Link } from 'react-router-dom';''';
 import { Brain, TrendingUp, Zap, BarChart3, CheckCircle, ArrowRight, Play } from 'lucide-react';
-;
+
 const features = [;
     {;
         title: "AI-Powered Climate Prediction Platform",;
@@ -207,14 +207,12 @@ export default function AIClimatePredictionPlatform() {}
         </div>;
       </section>;
     </div>)}
-;
+export { AIClimatePredictionPlatform, IconComponent };
 
 export { AIClimatePredictionPlatform, IconComponent };
-;
+
 export { AIClimatePredictionPlatform, IconComponent };
-;
+
 export { AIClimatePredictionPlatform, IconComponent };
-;
-export { AIClimatePredictionPlatform, IconComponent };
-;
+
 export { AIClimatePredictionPlatform, IconComponent };

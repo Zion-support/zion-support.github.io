@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Cloud, Zap, Database, Server, GitFork, Cpu, Globe, Shield } from 'lucide-react';
 import { SEO } from '@/components/SEO';
-;
+
 const CloudDevOps = () => {;
   const cloudServices = [;
     {;
@@ -30,7 +30,7 @@ const CloudDevOps = () => {;
       features: ["AWS RDS", "Azure SQL", "MongoDB Atlas", "Redis"];,
 }
   ];
-;
+
   const platforms = [;
     {;
       name: "AWS",;
@@ -53,14 +53,14 @@ const CloudDevOps = () => {;
       icon: "🌐";,
 }
   ];
-;
+
   const devOpsTools = [;
     { category: "CI/CD", tools: ["Jenkins", "GitLab CI", "GitHub Actions", "CircleCI", "ArgoCD"] },;
     { category: "Infrastructure", tools: ["Terraform", "Ansible", "Puppet", "Chef", "CloudFormation"] },;
     { category: "Monitoring", tools: ["Prometheus", "Grafana", "ELK Stack", "Datadog", "New Relic"] },;
     { category: "Security", tools: ["Vault", "AWS IAM", "Azure AD", "Google IAM", "Prisma Cloud"] }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <SEO;
@@ -177,16 +177,14 @@ const CloudDevOps = () => {;
     </div>;
   );,
 };
-;
+
 export default CloudDevOps;
-;
+export { CloudDevOps };
 
 export { CloudDevOps };
-;
+
 export { CloudDevOps };
-;
+
 export { CloudDevOps };
-;
-export { CloudDevOps };
-;
+
 export { CloudDevOps };

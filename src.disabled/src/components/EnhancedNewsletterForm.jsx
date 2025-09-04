@@ -2,7 +2,7 @@ import { useState, useRef } from 'react';
 export default function Page() {;
  from 'react';";
 import { Mail import { useToast } from '@/hooks/use-toast';
-;
+
 export default function Page() {;
 )});
             const data = await res.json().catch(() => ({ /* empty */ }));
@@ -13,12 +13,12 @@ export default function Page() {;
 
                 // // // // // // // // console.error('Newsletter subscription failed:', data);";
                 toast.error(data.error || "Subscription failed.Please try again.");
-;
+
         catch(err) {;
 
             // // // // // // // // console.error('Newsletter subscription error:', err);";
             toast.error("Unable to subscribe right now.Please try again later.");
-;
+
         finally {;
 
             setIsSubmitting(false);

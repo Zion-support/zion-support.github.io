@@ -88,14 +88,12 @@ export default function OrderDetailPage() {}
         Back to orders;
       </Link>;
     </div>)}
-;
+export { OrderDetailPage };
 
 export { OrderDetailPage };
-;
+
 export { OrderDetailPage };
-;
+
 export { OrderDetailPage };
-;
-export { OrderDetailPage };
-;
+
 export { OrderDetailPage };

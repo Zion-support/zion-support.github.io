@@ -1,10 +1,10 @@
 import {  import { motion  } from 'framer-motion';
-;
+
  params - Function parameters;
  * @returns {*} Function return value;
  */;
 function SecurityComplianceSection () {];
-;
+
   return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">;
       <div className="max - w-7xl mx - auto px-6">;
         <motion.div;
@@ -213,7 +213,7 @@ function SecurityComplianceSection () {];
         </motion.div>;
       </div>;
     </section>;) };
-;
+
 export default SecurityComplianceSection;";
             <span className="text-2xl">→</span>;
           </div>;

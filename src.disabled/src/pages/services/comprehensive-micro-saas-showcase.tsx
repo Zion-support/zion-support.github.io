@@ -32,7 +32,7 @@ import { ;
   Leaf;,
 } from 'lucide-react';
 import { REAL_MICRO_SAAS_SERVICES_2025, SERVICE_CATEGORIES, PRICING_TIERS, ZION_CONTACT_INFO } from '../../data/realMicroSaasServices2025';
-;
+
 const ComprehensiveMicroSaasShowcase: React.FC = () => {;
   const categories = [;
     {;
@@ -120,9 +120,9 @@ const ComprehensiveMicroSaasShowcase: React.FC = () => {;
       services: REAL_MICRO_SAAS_SERVICES_2025.filter(s => s.category === "AI Transportation");,
 }
   ];
-;
+
   const featuredServices = REAL_MICRO_SAAS_SERVICES_2025.filter(service => service.featured).slice(0, 6);
-;
+
   return (;
     <div className="min-h-screen bg-white">;
       {/* Hero Section */}
@@ -444,5 +444,5 @@ const ComprehensiveMicroSaasShowcase: React.FC = () => {;
     </div>;
   );,
 };
-;
+
 export default ComprehensiveMicroSaasShowcase;

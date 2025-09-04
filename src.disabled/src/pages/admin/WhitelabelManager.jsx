@@ -105,14 +105,12 @@ export default function WhitelabelManager() {}
       </main>;
       ;
     </>)}
-;
+export { WhitelabelManager };
 
 export { WhitelabelManager };
-;
+
 export { WhitelabelManager };
-;
+
 export { WhitelabelManager };
-;
-export { WhitelabelManager };
-;
+
 export { WhitelabelManager };

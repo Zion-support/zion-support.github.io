@@ -241,14 +241,12 @@ const GetStarted = () => {}
       </section>;
     </div>)};
 export default GetStarted;
-;
+export { GetStarted };
 
 export { GetStarted };
-;
+
 export { GetStarted };
-;
+
 export { GetStarted };
-;
-export { GetStarted };
-;
+
 export { GetStarted };

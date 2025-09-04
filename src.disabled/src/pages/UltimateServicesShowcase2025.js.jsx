@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-;
-;
-;
+
 const UltimateServicesShowcase2025 = () => {;
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedPriceRange, setSelectedPriceRange] = useState('all');
@@ -269,14 +267,12 @@ const UltimateServicesShowcase2025 = () => {;
       </div>;
     </div>)};
 export default UltimateServicesShowcase2025;
-;
+export { UltimateServicesShowcase2025 };
 
 export { UltimateServicesShowcase2025 };
-;
+
 export { UltimateServicesShowcase2025 };
-;
+
 export { UltimateServicesShowcase2025 };
-;
-export { UltimateServicesShowcase2025 };
-;
+
 export { UltimateServicesShowcase2025 };

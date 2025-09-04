@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-;
-;
 const RevolutionaryServicesShowcase2025 = () => {;
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
@@ -310,14 +308,12 @@ const RevolutionaryServicesShowcase2025 = () => {;
       </div>;
     </div>)};
 export default RevolutionaryServicesShowcase2025;
-;
+export { RevolutionaryServicesShowcase2025 };
 
 export { RevolutionaryServicesShowcase2025 };
-;
+
 export { RevolutionaryServicesShowcase2025 };
-;
+
 export { RevolutionaryServicesShowcase2025 };
-;
-export { RevolutionaryServicesShowcase2025 };
-;
+
 export { RevolutionaryServicesShowcase2025 };

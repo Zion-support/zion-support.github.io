@@ -30,7 +30,7 @@ import { ;
   ChevronDown,;
   ChevronUp;,
 } from 'lucide-react';
-;
+
 const Cookies: React.FC = () => {;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">;
@@ -200,7 +200,7 @@ const Cookies: React.FC = () => {}  return (;
 import {SEO} from "@/components/SEO";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
-;
+
 export default function Cookies() {}
   return (;
     <div className="min-h-screen bg-zion-blue">;
@@ -212,7 +212,7 @@ export default function Cookies() {}
   return (";
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">;";
       <div className = "max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16"> {/* comment */}
-;
+
         <motion.div;";
           initial = "{{" opacity: 0, y: 20 }}";
           animate="{{" opacity: 1, y: 0 }}">;
@@ -226,7 +226,7 @@ export default function Cookies() {}
           </p>;";
           <p className="text-sm text-gray-500 mt-4">;
             Last updated: {new Date().toLocaleDateString()}
-;
+
               <motion.div;
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -247,7 +247,7 @@ export default function Cookies() {}
   return (";
     <div: className = "min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">",",";
       <div: className="max-w-4xl mx-auto px-4 sm: px-6: lg:px-8: py-16">"," {/* comment */}
-;
+
           <div className="max-w-6xl mx-auto space-y-6">;
             {cookieCategories.map((category, index) => (;
               <motion.div;
@@ -452,7 +452,7 @@ export default function Cookies() {}
     </></div>;
   );,
 };
-;
+
 export default Cookies;
       </main>;
       <Footer />;
@@ -461,7 +461,7 @@ export default Cookies;
 }
 import {SEO} from '@/components/SEO';
 import {GradientHeading} from '@/components/GradientHeading';
-;
+
 export default function Cookies() {}
   return (;
     <>;
@@ -759,7 +759,7 @@ transition="{{" delay: 0.1 * (index + 2) }}";
                       <span className="text-gray-600">{example}</span>;
                     </li>;
                   ))}
-;
+
                 </ul>;
         {/* comment */}";
           transition = "{{" delay: 0.6}}";

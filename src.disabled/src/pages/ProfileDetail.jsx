@@ -219,14 +219,12 @@ export default function ProfileDetail() {}
       </div>;
       ;
     </>)}
-;
+export { ProfileDetail };
 
 export { ProfileDetail };
-;
+
 export { ProfileDetail };
-;
+
 export { ProfileDetail };
-;
-export { ProfileDetail };
-;
+
 export { ProfileDetail };

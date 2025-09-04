@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';''';
 import { motion } from 'framer-motion';
 import { Search, Filter, Grid, List, ExternalLink, Phone, Mail, Globe, Clock, Users, CheckCircle, TrendingUp, Award } from 'lucide-react';
-;
+
 export default function NextGenInnovativeServices() {;
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
@@ -549,14 +549,12 @@ export default function NextGenInnovativeServices() {;
         </motion.div>;
       </div>;
     </div>)}
-;
+export { NextGenInnovativeServices };
 
 export { NextGenInnovativeServices };
-;
+
 export { NextGenInnovativeServices };
-;
+
 export { NextGenInnovativeServices };
-;
-export { NextGenInnovativeServices };
-;
+
 export { NextGenInnovativeServices };

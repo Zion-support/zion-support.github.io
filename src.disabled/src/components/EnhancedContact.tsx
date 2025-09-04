@@ -1,6 +1,6 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
  from 'lucide-react';
-;
+
 interface ContactFormData {;
   name: string;
   email: string;
@@ -9,10 +9,10 @@ interface ContactFormData {;
   service: string;
   message: string;,
 }
-;
+
 interface ContactFormErrors {;
   [key: string]: string}
-;
+
 export function EnhancedContact(...args[]):  {;
 
   const [formData, setFormData] = useState<any>({;
@@ -24,11 +24,11 @@ export function EnhancedContact(...args[]):  {;
     service: 'general',;
     message: '';,
 }) ;
-;
+
   const [errors, setErrors] = useState<any> ({}) ;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-;
+
     { value: 'cloud-infrastructure', label: 'Cloud Infrastructure' },;
     { value: 'cybersecurity', label: 'Cybersecurity' },;
     { value: 'digital-transformation', label: 'Digital Transformation' },;
@@ -36,18 +36,18 @@ export function EnhancedContact(...args[]):  {;
     { value: 'quantum-computing', label: 'Quantum Computing' },;
     { value: 'green-it', label: 'Green IT Solutions' };
   ];
-;
+
     const newErrors: ContactFormErrors = {};      // console.error('Error submitting form:', error)} finally {;
 
       setIsSubmitting(false)}
   };
-;
+
     {;
       icon: Clock,;
       title: 'Business Hours',;
       value: 'Mon-Fri: 9AM-6PM EST',;
       description: 'Available during these hours'};  ];
-;
+
   if(isSubmitted) {;
 
     return ();

@@ -39,11 +39,11 @@ import {}
   RefreshCw,''';
   AlertTriangle'''';,
 } from 'lucide-react';
-;
+
     technologies["BMS Integration", "IoT Sensors", "3D Modeling", "AI Analytics"];,
 }
 ];
-;
+
 const digitalTwinTechnologies = [];
   {}
 ";
@@ -81,7 +81,7 @@ const digitalTwinTechnologies = [];
     useCase: "Monitoring","";
     reliability: "Critical";
 ];
-;
+
 const successStories = [];
   {}
 ";
@@ -113,7 +113,7 @@ const successStories = [];
     results: "15% improvement in grid efficiency, 40% reduction in outages, optimized energy distribution","";
     logo: "RPG";
 ];
-;
+
 const processSteps = [];
   {}
 ";
@@ -147,7 +147,7 @@ const processSteps = [];
     icon: Brain,"";
     duration: "4-8 weeks";
 ];
-;
+
 const digitalTwinBenefits = [];
   {}
 ";
@@ -182,7 +182,7 @@ const digitalTwinBenefits = [];
     examples["Energy optimization", "Maintenance planning", "Resource allocation"];,
 }
 ];
-;
+
 export default function DigitalTwin() {}
 ';
 '';
@@ -491,7 +491,7 @@ export default function DigitalTwin() {}
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'''`'`'`;
                     : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````;,
 }`}
-;
+
                 {category}
               </button>) ) }
           </div>";
@@ -514,7 +514,7 @@ export default function DigitalTwin() {}
 }}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 hover:border-zion - cyan / 40 transition - all duration - 300 cursor -pointer";
                 onClick={ () => setSelectedSolution(solution) }
-;
+
 ";,
 }}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer";
@@ -680,14 +680,12 @@ export default function DigitalTwin() {}
       </section>;
     </div>;
   )}
-;
+export { DigitalTwin };
 
 export { DigitalTwin };
-;
+
 export { DigitalTwin };
-;
+
 export { DigitalTwin };
-;
-export { DigitalTwin };
-;
+
 export { DigitalTwin };

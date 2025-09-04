@@ -3,18 +3,18 @@ export function AdvancedAICodeGenerator () {;
 export function useApi < T> ({ url, method = 'GET', body, headers }: UseApiOptions < T>) {;
 export function useLocalStorage < T> (key: string, initialValue: T) {;
 import { Code, Brain, Zap, Download, RefreshCw, X, Maximize2, Minimize2, Eye, EyeOff, Search, FileText, CheckCircle, AlertCircle, Copy, Shield, Activity, BarChart3, Gauge const mockCodeSnippets = [; { id: '1', title: 'React Hook for API Calls', description: 'Custom hook for managing API calls with loading states and error handling', language: 'typescript', code: `import { useState, useEffect } from 'react';
-;
+
 export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<T>) {;
 
   const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-;
+
   const execute = async () => {;
     try {;
       setLoading(true) ;
       setError(null) ;
-;
+
       const response = await fetch(url, {;
 
         method,;
@@ -23,11 +23,11 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
           'Content-Type': 'application/json',;
           ...headers},;
         body: body ? JSON.stringify(body) : null});
-;
+
       if(!response.ok) {;
 `;
         throw new Error(\`HTTP error! status: \${response.status}\`)}
-;
+
       const result = await response.json();
       setData(result)} catch(err) {;
 
@@ -35,7 +35,7 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
 
       setLoading(false)}
   };
-;
+
   useEffect(() => {;
   // TODO: Add dependencies if needed;
 
@@ -43,7 +43,7 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
     // Cleanup function;,
 };,
 }, []);, []);
-;
+
     if(method === 'GET') {;
 
       execute()}
@@ -65,10 +65,10 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
         code: `@layer utilities {;
   .animate - float {;
     animation: float 3s ease - in - out infinite}
-;
+
   .animate - glow {;
     animation: glow 2s ease - in - out infinite alternate}
-;
+
   .animate - shimmer {;
     background: linear - gradient(90deg,      transparent,;
       rgba(255, 255, 255, 0.4) ,;
@@ -76,19 +76,19 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
     background - size: 200% 100%;
     animation: shimmer 1.5s infinite}
 }
-;
+
 @keyframes float {;
 
   0%, 100% { transform: translateY(0px)}
   50% { transform: translateY(-10px)}
 }
-;
+
 @keyframes glow {;
 
   from { box-shadow: 0 0 20px rgba(59, 130, 246, 0.5)}
   to { box-shadow: 0 0 30px rgba(59, 130, 246, 0.8)}
 }
-;
+
 @keyframes shimmer {;
 
   0% { background-position: -200% 0}
@@ -117,38 +117,38 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
       showErrors: true,;
   ...options;,
 };
-;
+
     this.rules = new Map () ;
     this.errors = new Map () ;
     this.init () }
-;
+
   addRule(field, rule) {;
 
     if(!this.rules.has(field)) {;
 
       this.rules.set(field, [])}
     this.rules.get(field).push(rule)}
-;
+
   validateField(field) {;
 
     const value = this.form[field]?.value;
     const fieldErrors = [];
-;
+
     for(const result = rule (value, this.form) ;
       if(result !== true) {;
 
         fieldErrors.push(result)}
     }
-;
+
     this.errors.set(field, fieldErrors) ;
     this.updateFieldUI(field) ;
     return fieldErrors.length === 0}
-;
+
   validateForm () {;
     let isValid = true;
     for(const fieldElement = this.form[field];
     const errors = this.errors.get (field) || [];
-;
+
     if(errors.length > 0) {;
 
       fieldElement.classList.add('error');
@@ -157,7 +157,7 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
       fieldElement.classList.remove('error');
       this.hideFieldErrors(field)}
   }
-;
+
   showFieldErrors(field, errors) {;
 
     // Implementation for showing field-specific errors;
@@ -175,7 +175,7 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
 
           this.validateField(e.target.name)}
       }, true)}
-;
+
     if(this.options.validateOnSubmit) {;
 
       this.form.addEventListener('submit', (e) => {;
@@ -198,7 +198,7 @@ const mockAIGenerations = [{;
         id: '1',;
         prompt: 'Create a React hook for managing local storage with TypeScript',`;
         generatedCode: `import { useState, useEffect } from 'react';
-;
+
 export function useLocalStorage<T>(key: string, initialValue: T) {;
 
   const [storedValue, setStoredValue] = useState<T>(() => {;
@@ -206,13 +206,13 @@ export function useLocalStorage<T>(key: string, initialValue: T) {;
       const item = window.localStorage.getItem(key);`;
       // // // // // // // // console.error(\`Error reading localStorage key "\${key}":\`, error);
       return initialValue;
-;
+
       return item ? JSON.parse(item) : initialValue} catch(error) {;
 "`;
       // console.error(\`Error reading localStorage key "\${key}":\`, error);
       return initialValue}
   }) ;
-;
+
   const setValue = (value: T | ((val: T) => T)) => {;
 
     try {;
@@ -603,7 +603,7 @@ export function AdvancedAICodeGenerator() {;
                             </li>) ) }
                         </ul>;
                       </div>) }
-;
+
                     {analysis.warnings.length > 0 && (<div>";
                         <h5 className="text-sm font-medium text-yellow-700 dark:text-yellow-400 mb-2">";
                           <AlertCircle className="w-4 h-4 inline mr-1"/>;

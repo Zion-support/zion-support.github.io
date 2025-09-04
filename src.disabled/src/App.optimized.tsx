@@ -1,17 +1,17 @@
 import React, { Suspense, lazy } from 'react';
 import { Routes, Route  } from 'react-router-dom';
 import { HelmetProvider  } from 'react-helmet-async';
-;
+
 // Core Components;
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { SEO } from './components/SEO';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { LoadingSpinner  } from './components/ui/loading-spinner';
-;
+
 // Layout Components;
 import { EnhancedHeader } from './components/EnhancedHeader';
 import { EnhancedFooter } from './components/EnhancedFooter';
-;
+
 // Optimized lazy loading with preloading hints;
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {;
   const LazyComponent = lazy(importFn);
@@ -21,7 +21,7 @@ const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.Reac
     </Suspense>;
   );,
 };
-;
+
 // Core pages with optimized imports;
 const Home = createLazyComponent(() => import('./pages/Home'));
 const About = createLazyComponent(() => import('./pages/About'));
@@ -33,7 +33,7 @@ const News = createLazyComponent(() => import('./pages/News'));
 const CaseStudies = createLazyComponent(() => import('./pages/CaseStudies'));
 const Privacy = createLazyComponent(() => import('./pages/Privacy'));
 const Terms = createLazyComponent(() => import('./pages/Terms'));
-;
+
 // Service pages;
 const AIServices = createLazyComponent(() => import('./pages/AIServices'));
 const CloudServices = createLazyComponent(() => import('./pages/CloudServices'));
@@ -41,7 +41,7 @@ const CybersecurityServices = createLazyComponent(() => import('./pages/Cybersec
 const InfrastructureServices = createLazyComponent(() => import('./pages/InfrastructureServices'));
 const TransformationServices = createLazyComponent(() => import('./pages/TransformationServices'));
 const ConsultingServices = createLazyComponent(() => import('./pages/ConsultingServices'));
-;
+
 // Error Fallback Component;
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void   }) => (;
   <div className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 flex items-center justify-center p-4">;
@@ -66,7 +66,7 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
     </div>;
   </div>;
 );
-;
+
 function App() {;
   return(<HelmetProvider>;
       <ErrorBoundary fallback={<ErrorFallback error={new Error('App failed to load')} resetErrorBoundary={() => window.location.reload()} />}>;
@@ -133,7 +133,7 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error, resetError
           className = "w-full bg-blue-600 hover: bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors"">"          Try again</button><button",";
           onClick="{()" => window.location.href = "/"}"          className="w-full bg-gray-700 hover: bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors"">"          Go home",;
   )}
-;
+
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {const LazyComponent = lazy(importFn)  return(props: any) => (,;
 // comment;
         </button>      </div>,";

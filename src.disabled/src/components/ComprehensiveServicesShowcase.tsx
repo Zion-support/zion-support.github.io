@@ -1,5 +1,5 @@
 import {  import { EMERGING_TECH_SERVICES_2025 } from '../data/emergingTechServices2025';
-;
+
 export default function Page() {;
 const ComprehensiveServicesShowcase: React.FC = () => {;
   const [selectedCategory, setSelectedCategory] = useState<string>('all');

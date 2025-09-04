@@ -29,14 +29,12 @@ export default function PrivacyPolicy() {}
       </main>;
       <Footer />;
     </>)}
-;
+export { PrivacyPolicy };
 
 export { PrivacyPolicy };
-;
+
 export { PrivacyPolicy };
-;
+
 export { PrivacyPolicy };
-;
-export { PrivacyPolicy };
-;
+
 export { PrivacyPolicy };

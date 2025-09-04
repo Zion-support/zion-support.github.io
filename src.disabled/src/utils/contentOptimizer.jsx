@@ -1,14 +1,14 @@
 export class ContentOptimizer {;
 export default ContentOptimizer;
     if(internalLinks.length < 2) score -= 10;
-;
+
     return Math.max(0, score);,
 }
-;
+
   static identifyIssues(content, page, metrics) {;
 
     const issues = [];
-;
+
     if(metrics.wordCount < this.MIN_WORD_COUNT) {;
 
       issues.push({;
@@ -17,7 +17,7 @@ export default ContentOptimizer;
         severity: 'medium',;
         message: `Content is too short.Aim for at least ${this.MIN_WORD_COUNT} words.`});,
 }
-;
+
     if(metrics.headingCount < this.MIN_HEADING_COUNT) {;
 
       issues.push({;
@@ -26,7 +26,7 @@ export default ContentOptimizer;
         severity: 'low',`;
         message: `Add more headings to improve content structure.`});,
 }
-;
+
     if(metrics.imageCount < this.MIN_IMAGE_COUNT) {;
 
       issues.push({;
@@ -35,7 +35,7 @@ export default ContentOptimizer;
         severity: 'low',`;
         message: `Consider adding images to make content more engaging.`});,
 }
-;
+
     if(metrics.linkCount < this.MIN_LINK_COUNT) {;
 
       issues.push({;
@@ -44,14 +44,14 @@ export default ContentOptimizer;
         severity: 'low',`;
         message: `Add more internal and external links for better SEO.`});,
 }
-;
+
     return issues;,
 }
-;
+
   static generateSuggestions(issues, page) {;
 
     const suggestions = [];
-;
+
     issues.forEach(issue => {;
 
       switch (issue.type) {;
@@ -78,15 +78,15 @@ export default ContentOptimizer;
           break;,
 }
     });
-;
+
     return suggestions;,
 }
-;
+
   static optimizeContent(content, page) {;
 
     const analysis = this.analyzeContent(content, page);
     const optimizedContent = content;
-;
+
     // Apply optimizations based on analysis;
     if(analysis.issues.length > 0) {;
 
@@ -96,9 +96,9 @@ export default ContentOptimizer;
         .join('\n');`;
       return `${optimizationComments}\n\n${optimizedContent}`;,
 }
-;
+
     return optimizedContent;,
 }}
-;
+
 export default ContentOptimizer;
 '"`

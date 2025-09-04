@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-;
+
 export default function DisputeManagement() {;
     const [activeTab, setActiveTab] = useState('overview');
     return (<>;
@@ -412,14 +412,12 @@ export default function DisputeManagement() {;
         </div>;
       </main>;
     </>)}
-;
+export { DisputeManagement };
 
 export { DisputeManagement };
-;
+
 export { DisputeManagement };
-;
+
 export { DisputeManagement };
-;
-export { DisputeManagement };
-;
+
 export { DisputeManagement };

@@ -4,7 +4,7 @@ export default function Page() {;
 ,;
     ],;,
 };
-;
+
   const formatDate = (dateString: string) => {;
     return new Date(dateString) .toLocaleDateString('en - US', {;
       year: 'numeric',;
@@ -12,7 +12,7 @@ export default function Page() {;
       day: 'numeric',;,
 }) ;,
 };
-;
+
   const getCategoryIcon = (category: string) => {;
     const categoryIcons: { [key: string]: any } = {;
       ai: Brain,;
@@ -25,7 +25,7 @@ export default function Page() {;
 };
     return categoryIcons[category] || BookOpen;,
 };
-;
+
   const getCategoryName = (category: string) => {;
     const categoryNames: { [key: string]: string } = {;
       ai: 'Artificial Intelligence',;
@@ -38,7 +38,7 @@ export default function Page() {;
 };
     return categoryNames[category] || 'Uncategorized';,
 };
-;
+
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">;
       <SEO;
         title={`${blogPost.title} - Zion Tech Group Blog`}

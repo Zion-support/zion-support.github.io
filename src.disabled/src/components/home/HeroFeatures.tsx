@@ -4,11 +4,11 @@ icon: React.ComponentType<{ className?: string}>;
   title: string;
   description: string;
   gradient: string}
-;
+
 interface HeroFeaturesProps extends React.PropsWithChildren<{}> {;
 
   features: HeroFeature[]}
-;
+
 const HeroFeatures: React.FC<HeroFeaturesProps> = ({ features }) => {;
 
   return ();
@@ -17,7 +17,7 @@ const HeroFeatures: React.FC<HeroFeaturesProps> = ({ features }) => {;
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: 0.6 }}
-;
+
       {features.map((feature, index (;
         <motion.div;
           key={feature.title}";
@@ -76,5 +76,5 @@ const HeroFeatures: React.FC<HeroFeaturesProps> = ({ features }) => {;
       ))};
     </motion.div>;
   )};
-;
+
 export default HeroFeatures}}'"`;

@@ -1,5 +1,5 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
-;
+
  params - Function parameters;
  * @returns {*} Function return value;
  */;
@@ -10,14 +10,14 @@ function InteractiveTestimonials () {export function InteractiveTestimonials() {
 ";
   const filteredTestimonials = selectedCategory === "All" ;    ? testimonials ;
     : testimonials.filter(t => t.category === selectedCategory) ;
-;
+
     setSelectedTestimonial((prev) => ;
       prev === filteredTestimonials.length-1 ? 0 : prev + 1;) };
-;
+
     setSelectedTestimonial((prev) => ;
       prev === 0 ? filteredTestimonials.length-1 : prev - 1;) ;,
 };
-;
+
   return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">;
       <div  className="max - w-7xl mx - auto px-6">;
         <motion.div;
@@ -191,7 +191,7 @@ function InteractiveTestimonials () {export function InteractiveTestimonials() {
         </motion.div>;
       </div>;
     </section>;) };
-;
+
 export default InteractiveTestimonials;";
             <span className="text-2xl">→</span>;
           </div>;

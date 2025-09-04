@@ -7,7 +7,7 @@ import { ;
   CheckCircle, ;
   AlertCircle ;,
 } from 'lucide-react';
-;
+
 export const ContactForm: React.FC = () => {;
   const [formData, setFormData] = useState({;
     firstName: '',;
@@ -20,10 +20,10 @@ export const ContactForm: React.FC = () => {;
     budget: '',;
     timeline: '';,
 });
-;
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-;
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
     const { name, value } = e.target;
     setFormData(prev => ({;
@@ -31,7 +31,7 @@ export const ContactForm: React.FC = () => {;
       [name]: value;,
 }));,
 };
-;
+
   const handleSubmit = async (e: React.FormEvent) => {;
     e.preventDefault();
     setIsSubmitting(true);
@@ -57,7 +57,7 @@ export const ContactForm: React.FC = () => {;
       setIsSubmitting(false);,
 }
   };
-;
+
   const services = [;
     'AI Solutions',;
     'Quantum Computing',;
@@ -68,7 +68,7 @@ export const ContactForm: React.FC = () => {;
     'Machine Learning',;
     'Space Technology';
   ];
-;
+
   const budgets = [;
     'Under $10,000',;
     '$10,000 - $50,000',;
@@ -76,7 +76,7 @@ export const ContactForm: React.FC = () => {;
     '$100,000 - $500,000',;
     'Over $500,000';
   ];
-;
+
   const timelines = [;
     'ASAP',;
     '1-3 months',;
@@ -84,7 +84,7 @@ export const ContactForm: React.FC = () => {;
     '6-12 months',;
     '12+ months';
   ];
-;
+
   if (submitStatus === 'success') {;
     return (;
       <div className="text-center py-12">;
@@ -103,7 +103,7 @@ export const ContactForm: React.FC = () => {;
       </div>;
     );,
 }
-;
+
   return (;
     <div className="bg-white/10 backdrop-blur-md border border-purple-200 rounded-2xl p-8">;
       <div className="text-center mb-8">;
@@ -309,7 +309,7 @@ export const ContactForm: React.FC = () => {;
               <span>There was an error sending your message. Please try again.</span>;
             </div>;
           )}
-;
+
           <button;
             type="submit";
             disabled={isSubmitting}
@@ -331,5 +331,5 @@ export const ContactForm: React.FC = () => {;
     </div>;
   );,
 };
-;
+
 export default ContactForm;

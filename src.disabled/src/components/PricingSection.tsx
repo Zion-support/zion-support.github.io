@@ -23,7 +23,7 @@ const pricingTiers = [{;
 ";
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,;
         {/* comment */}
-;
+
   return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">;
       <div className="max - w-7xl mx - auto px-6">;
         <motion.div;
@@ -62,7 +62,7 @@ layout,";
 className="{"w-6" h-6 bg-zion-cyan rounded-full shadow-lg ${;
                   billingCycle === "annual" ? "ml-8" : "ml-0>;,
 }"}
-;
+
              />;
             </button>";
             <span className = "{"text-sm" ${billingCycle === "annual" ? "text-white" : "text-zion-slate-light"}"}>;
@@ -73,13 +73,13 @@ className="{"w-6" h-6 bg-zion-cyan rounded-full shadow-lg ${;
 initial="{{" opacity: 0, scale: 0.8 }}";
                 animate="{{" opacity: 1, scale: 1 }}";
                 className=""inline-flex" items-center gap-1 px-3 py-1 bg-green-500/20 border border-green-500/30 rounded-full text-green-400 text-sm font-medium"}
-;
+
               >";
                 <Check className="w-4 h-4"  />;
                 Save {savings}%;
               </motion.span>;
             )}
-;
+
           </div>;
         </motion.div>;
 
@@ -96,10 +96,10 @@ key = "{plan.name}
                 transition="{{" duration: 0.6, delay: index * 0.1 }}";
                 className="{"relative" group ${";
                   plan.popular ? "md: -mt-4 md:mb-4" : ""}"}
-;
+
               >;
                 {/* comment */}
-;
+
                 {plan.popular && (";
                   <div className=""absolute" -top-4 left-1/2 transform -translate-x-1/2 z-10"}>";
                     <div className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">";
@@ -107,7 +107,7 @@ key = "{plan.name}
                       Most Popular,;
                     </div>;
                   </div>                )}
-;
+
                 {/*   */}";
                 <div className="{`relative" h-full bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover: border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 ${">;
                   plan.popular ? "border-zion-cyan/50 bg-zion-blue-light/20" : ""}`}>;
@@ -115,7 +115,7 @@ key = "{plan.name}
                   <div className="{`w-16" h-16 bg-gradient-to-br ${plan.color} rounded-2xl mb-6 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300`}>";
                     <IconComponent className="`w-8" h-8`} />;
                   </div>;
-;
+
                 {/* comment */}";
                 <div className="{"relative" h-full bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover: border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 ${">;
                   plan.popular ? "border-zion-cyan/50 bg-zion-blue-light/20" : ""}"}>;
@@ -135,15 +135,15 @@ key = "{plan.name}
                         {plan.originalPrice && (";
                           <span className="{"text-lg" text-zion-slate-light line-through">;
                             ${plan.originalPrice}
-;
+
                           </span>;
                         )}
-;
+
                       </div>;
                     ) : (";
                       <div className=""text-3xl" font-bold text-white"}>{plan.price}</div>;
                     )}
-;
+
                   </div>;
                   {/* comment */}";
                   <ul className="space-y-3 mb-8">;
@@ -153,7 +153,7 @@ key = "{plan.name}
                         <span className="text-zion-slate-light">{feature}</span>;
                       </li>;
                     ))}
-;
+
                   </ul>;
                   {/* comment */}";
                   <Link to="{plan.name" === "Enterprise" ? "/contact" : "/signup"}";
@@ -165,7 +165,7 @@ whileHover="{{" scale: 1.02 }}";
                         plan.popular";
                           ? "bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover: from-zion-cyan/90 hover:to-zion-purple/90"">;
                           : "border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white"}"}
-;
+
                     >;
                       {plan.cta}";
                       <ArrowRight className=""w-4" h-4"}       />;
@@ -176,10 +176,10 @@ whileHover="{{" scale: 1.02 }}";
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 group-hover: opacity-20 transition-opacity duration-300 -z-10"></div>;
               </motion.div>,;
             )})}
-;
+
         </div>;
         {/* comment */}
-;
+
         <motion.div;
           className="mt-16 text-center"          initial = {;
 

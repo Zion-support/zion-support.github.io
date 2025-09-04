@@ -31,12 +31,10 @@ import { Brain, ;
   ExternalLink,;
   Server;,
 } from 'lucide-react.ts';
-;
-;
 export default function ComprehensiveServicesShowcase2029(...args: unknown[]): unknown {;
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
-;
+
   const categories = {;
     'all': { name: 'All Services', icon: <Rocket className="w-6 h-6" />, color: 'from-cyan-500 to-blue-500' },;
     'ai-ml': { name: 'AI & Machine Learning', icon: <Brain className="w-6 h-6" />, color: 'from-purple-500 to-pink-500' },;
@@ -46,7 +44,7 @@ export default function ComprehensiveServicesShowcase2029(...args: unknown[]): u
     'analytics': { name: 'Analytics & BI', icon: <BarChart3 className="w-6 h-6" />, color: 'from-green-500 to-emerald-500' },;
     'cloud': { name: 'Cloud & Infrastructure', icon: <Cloud className="w-6 h-6" />, color: 'from-sky-500 to-blue-500' },;
     'micro-saas': { name: 'Micro SAAS', icon: <Code className="w-6 h-6" />, color: 'from-yellow-500 to-orange-500' }  };
-;
+
   const services: unknown = [// AI & Machine Learning;
     {}
       id: 'ai - quantum - hybrid',;
@@ -254,7 +252,7 @@ export default function ComprehensiveServicesShowcase2029(...args: unknown[]): u
       featured: false;,
 }
   ];
-;
+
   innovativeServices2029,';
   serviceCategories,'';
   pricingTiers,''';
@@ -265,9 +263,9 @@ export default function ComprehensiveServicesShowcase2029(...args: unknown[]): u
 ''';
   const [selectedCategory, setSelectedCategory] = useState('all');''';
   const [searchTerm, setSearchTerm] = useState('');
-;
+
     return matchesCategory && matchesSearch}) ;
-;
+
   return ("";
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">";
       <SEO"";
@@ -537,15 +535,15 @@ export default function ComprehensiveServicesShowcase2029(...args: unknown[]): u
     </div>;
   );,
 };
-;
+
 export default ComprehensiveServicesShowcase2029;
-;
+
 export { ComprehensiveServicesShowcase2029 };
-;
+
 export { ComprehensiveServicesShowcase2029 };
-;
+
 export { ComprehensiveServicesShowcase2029 };
-;
+
 export { ComprehensiveServicesShowcase2029 };
-;
+
 export { ComprehensiveServicesShowcase2029, ComprehensiveServicesShowcase2029 };

@@ -17,7 +17,7 @@ import {;
   Award,;
   Cloud;,
 } from 'lucide-react';
-;
+
 export default function Home() {;
   const stats = [;
     {;
@@ -45,7 +45,7 @@ export default function Home() {;
       description: "Reliable infrastructure";,
 }
   ];
-;
+
       <HeroSection />;
       <QuickAccess />;
       <FeatureCTAs />;
@@ -61,14 +61,12 @@ export default function Home() {;
     </>;
   );,
 }
-;
+export { Home };
 
 export { Home };
-;
+
 export { Home };
-;
+
 export { Home };
-;
-export { Home };
-;
+
 export { Home };

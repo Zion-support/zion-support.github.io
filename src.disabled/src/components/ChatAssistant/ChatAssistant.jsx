@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useRef, useContext } from 'react';
 import { AuthContext } from "../../context/auth/AuthContext";
-;
-;
-;
+
 import { ChatInput } from "./ChatInput.jsx";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";import { X import { focusManagement } from '@/utils/accessibility';
@@ -166,7 +164,7 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
         {contextHeader && (<div className="border-b border-zion-purple/20 bg-zion-blue-dark/50 p-3">;
             {contextHeader}
           </div>)}
-;
+
         {/* Messages */}";
         <div className="flex-1 overflow-y-auto p-4 space-y-4" aria-live="polite">";
           {currentMessages.length === 0 ? (<div className="text-center text-zion-slate py-8">;

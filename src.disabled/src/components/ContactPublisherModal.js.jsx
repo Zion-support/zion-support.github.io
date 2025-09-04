@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { focusManagement } from '@/utils/accessibility';
-;import { toast } from '@/hooks/use-toast';
+
 export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) {}
 ';
 '';
@@ -12,14 +12,14 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
     const firstInputRef = useRef(null);
     const modalRef = useRef(null);
     useEffect(() => {}
-;
+
         if();,
 }
             return,";
 function handleKeyDown(e) {}
 ";
             if (e.key === "Escape") {}
-;
+
                 e.preventDefault()";
                 onClose()}", ";,
 }";
@@ -30,17 +30,17 @@ function handleKeyDown(e) {}
         firstInputRef.current?.focus()";
         document.addEventListener("keydown", handleKeyDown)";
         return () => {}
-;
+
 "";
             document.removeEventListener();,
 }
             removeTrap && removeTrap()}}, [isOpen, onClose]);,
 }    if (!isOpen) {}
-;
+
         return null}
-;
+
     const handleSubmit = async(e) => {}
-;
+
         e.preventDefault()";
         if (!subject.trim() || !message.trim()) {}
 ";
@@ -118,4 +118,4 @@ try {}
 } catch (error) {;
     console.error(error);,
 }
-export default Component
+export default Component;

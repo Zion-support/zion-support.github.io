@@ -5,10 +5,10 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { useDebounce } from '@/hooks / useDebounce';
  from 'framer-motion';
 import { motion, AnimatePresence  } from 'framer-motion';
-;
+
   icon?: React.ComponentType < any>}
 ];
-;
+
 export function EnhancedSearch({;
 
   className = '',;
@@ -28,7 +28,7 @@ export function EnhancedSearch({;
 }) ;
   const [showFilters, setShowFilters] = useState(false);
   const [recentSearches, setRecentSearches] = useState < string[]> ([]) ;
-;
+
 // Mock suggestions;
 const mockSuggestions: SearchSuggestion[] = [';
   { text: 'AI compliance assistant', type: 'recent' },;
@@ -36,7 +36,7 @@ const mockSuggestions: SearchSuggestion[] = [';
   { text: 'Digital transformation consulting', type: 'ai' },;
   { text: 'Cloud DevOps automation', type: 'trending' }
 ];
-;
+
 export function EnhancedSearch({;
 
   className = '',;
@@ -57,11 +57,11 @@ export function EnhancedSearch({;
     category: [],;
     tags: [];,
 }) ;
-;
+
   const searchRef = useRef < HTMLDivElement> (null) ;
   const inputRef = useRef < HTMLInputElement> (null) ;
   const navigate = useNavigate () ;
-;
+
   // Handle keyboard navigation;
   useEffect(() => {;
   // TODO: Add dependencies if needed;
@@ -88,7 +88,7 @@ export function EnhancedSearch({;
 
           handleResultClick(results[selectedIndex])}      }
     };
-;
+
     if(isOpen) {;
 
       document.addEventListener('keydown', handleKeyDown)}
@@ -105,20 +105,20 @@ export function EnhancedSearch({;
 
       setResults([]);
       return}
-;
+
     const searchResults = searchData;
       .filter(item => {;
         const matchesQuery = item.title.toLowerCase () .includes(debouncedQuery.toLowerCase () ) ||;
                            item.description.toLowerCase () .includes(debouncedQuery.toLowerCase () ) ||;
                            item.tags.some(tag => tag.toLowerCase () .includes(debouncedQuery.toLowerCase () ) ) ;
-;
+
         const matchesFilters = filters.type.length === 0 || filters.type.includes(item.type) &&;
                               filters.category.length === 0 || filters.category.includes(item.category) &&;
                               filters.tags.length === 0 || filters.tags.some(tag => item.tags.includes (tag) ) ;
         return matchesQuery && matchesFilters}) .sort((a, b) => b.relevance - a.relevance) .slice(0, 10) ;
-;
+
     setResults(searchResults) }, [debouncedQuery, filters]) ;
-;
+
   // Handle click outside;
   useEffect(() => {;
   // TODO: Add dependencies if needed;
@@ -132,7 +132,7 @@ export function EnhancedSearch({;
 
         // console.error('Failed to parse recent searches:', error)}    }
   }, []) ;
-;
+
   // Handle click outside;
   useEffect(() => {;
   // TODO: Add dependencies if needed;
@@ -147,9 +147,9 @@ export function EnhancedSearch({;
         setSelectedIndex(-1) ;,
 }
     };
-;
+
     document.addEventListener('mousedown', handleClickOutside);    return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
-;
+
   // Handle keyboard navigation;
   useEffect(() => {;
   // TODO: Add dependencies if needed;
@@ -160,10 +160,10 @@ export function EnhancedSearch({;
 }, []);, []);
         inputRef.current?.focus () }
     };
-;
+
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown)}, []);
-;
+
       // Add to recent searches;
       ;
       setRecentSearches(updated);
@@ -172,11 +172,11 @@ export function EnhancedSearch({;
       setIsOpen(false);
       setQuery('')}
   }, [recentSearches]);
-;
+
     handleSearch(result.title) ;
     router(result.url) ;
     const handleKeyDown = (event: KeyboardEvent) => {;      if(!isOpen) return;
-;
+
       switch(event.key) {;
 
         case 'ArrowDown':;
@@ -202,59 +202,59 @@ export function EnhancedSearch({;
           setSelectedIndex(-1) ;
           break}
     };
-;
+
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown)}, [isOpen, results, selectedIndex, query]);
-;
+
     if(!query.trim () ) return;
     setIsLoading(true) ;
-;
+
     // Simulate API call delay;
     await new Promise(resolve => setTimeout (resolve, 300) ) ;
-;
+
     // Filter search results based on query and filters;
 
                           result.description.toLowerCase () .includes(query.toLowerCase () ) ||;
                           result.tags.some(tag => tag.toLowerCase () .includes(query.toLowerCase () ) ) ;
-;
+
       const matchesFilters = (filters.type.length === 0 || filters.type.includes(result.type) ) &&; (filters.category.length === 0 || filters.category.includes(result.category) ) &&; (filters.tags.length === 0 || filters.tags.some(tag => result.tags.includes (tag) ) ) ;
-;
+
       return matchesQuery && matchesFilters}) ;
-;
+
     setIsOpen(false);
     setQuery('')};
-;
+
     onSearch?.(suggestion.text)};
-;
+
     setFilters({ type[], category[], tags[] }) };
-;
+
 setFilters(prev: > ({;
       ...prev,;
       [filterType]: prev[filterType].includes (value) ;
         ? prev[filterType].filter(v => v !== value) ;
         : [...prev[filterType], value]}) ) };
-;
+
     setFilters({ type: [], category: [], tags: [] }) };
-;
+
     switch(type) {;
       case 'service': return <Code className="h-4 w-4"  />;'";
       case 'page': return <Globe className="h-4 w-4"  />;'";
       case 'blog': return <TrendingUp className="h-4 w-4"  />;'";
       case 'case-study': return <Building className="h-4 w-4"  />}
   };
-;
+
     setResults([]);
 ';
     setQuery('');    setResults([]);
     setIsOpen(false);
     setSelectedIndex(-1)};
-;
+
       case 'minimal':';
         return 'bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700';
       default:';
         return 'bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-lg'}
   };
-;
+
   return ();
     <div ref = {searchRef} className={`relative ${className}`}>`;
       <div className={`relative rounded-xl ${getVariantStyles()}`}>";
@@ -277,7 +277,7 @@ setFilters(prev: > ({;
           )}
         </div>;";
       default: return <Search className="h-4 w-4"  />};
-;
+
     switch(variant) {;
       case 'futuristic':;
         return 'bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-500/20 hover:border-purple-500/40 focus-within:border-purple-500 focus-within:ring-2 focus-within:ring-purple-500/20';
@@ -285,7 +285,7 @@ setFilters(prev: > ({;
         return 'bg-gray-100 border border-gray-200 hover:border-gray-300 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-500/20';
       default:';
         return 'bg-white border border-gray-300 hover:border-gray-400 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-500/20'}  };
-;
+
   return ()`;
     <div ref = {searchRef} className={`relative ${className}`}>;
       {/* Search Input */}`;
@@ -428,7 +428,7 @@ setFilters(prev: > ({;
                           </button>) ) }
                       </div>;
                     </div>;) }
-;
+
                   {/* Popular Searches */}
                   <div>";
                     <h4 className="text-sm font-medium text-gray-900 mb-2 flex items-center gap-2">";

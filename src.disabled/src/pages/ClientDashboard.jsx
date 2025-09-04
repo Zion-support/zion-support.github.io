@@ -157,14 +157,12 @@ function ClientDashboardContent() {}
   return (<ProtectedRoute>;
       <ClientDashboardContent />;
     </ProtectedRoute>)}
-;
+export { ClientDashboardContent, ClientDashboard };
 
 export { ClientDashboardContent, ClientDashboard };
-;
+
 export { ClientDashboardContent, ClientDashboard };
-;
+
 export { ClientDashboardContent, ClientDashboard };
-;
-export { ClientDashboardContent, ClientDashboard };
-;
+
 export { ClientDashboardContent };

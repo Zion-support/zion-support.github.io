@@ -35,14 +35,12 @@ const TransformationServices = () => {}
   );,
 };
 export default TransformationServices;
-;
+export { TransformationServices };
 
 export { TransformationServices };
-;
+
 export { TransformationServices };
-;
+
 export { TransformationServices };
-;
-export { TransformationServices };
-;
+
 export { TransformationServices };

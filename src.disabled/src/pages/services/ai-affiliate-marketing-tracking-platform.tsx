@@ -32,7 +32,7 @@ import { ;
   UserCheck,;
   Settings;,
 } from 'lucide-react';
-;
+
 const AIAffiliateMarketingTrackingPlatform = () => {;
   const features = [;
     {;
@@ -66,7 +66,7 @@ const AIAffiliateMarketingTrackingPlatform = () => {;
       description: "Built-in compliance tools for FTC guidelines, GDPR, and regional advertising regulations with automated reporting.";,
 }
   ];
-;
+
   const pricingTiers = [;
     {;
       name: "Starter",;
@@ -121,7 +121,7 @@ const AIAffiliateMarketingTrackingPlatform = () => {;
       popular: false;,
 }
   ];
-;
+
   const benefits = [;
     {;
       icon: <TrendingUp className="w-8 h-8 text-green-500" />,;
@@ -144,7 +144,7 @@ const AIAffiliateMarketingTrackingPlatform = () => {;
       description: "Predictive analytics and optimization recommendations boost campaign ROI.";,
 }
   ];
-;
+
   const integrations = [;
     { name: "Shopify", logo: "🛍️" },;
     { name: "WooCommerce", logo: "🛒" },;
@@ -159,7 +159,7 @@ const AIAffiliateMarketingTrackingPlatform = () => {;
     { name: "PayPal", logo: "💰" },;
     { name: "Zapier", logo: "⚡" }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       {/* Hero Section */}
@@ -464,5 +464,5 @@ const AIAffiliateMarketingTrackingPlatform = () => {;
     </div>;
   );,
 };
-;
+
 export default AIAffiliateMarketingTrackingPlatform;

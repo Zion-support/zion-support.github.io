@@ -1,12 +1,12 @@
 import React from 'react';
 import { ArrowRight, CheckCircle, ExternalLink  } from 'lucide-react';
-;
+
 const anchor = (url: unknownstring, label?: string)  => (;
   <a className="text-cyan-400 underline" href={url} target="_blank" rel="noopener noreferrer">;
     {label ?? new URL(url).host + (url.includes('/pricing') ? '/pricing' : '')}
   </a>;
 );
-;
+
 const ServicesAdvertising: React.FC = (): JSX.Element => {;
   const contact = {;
     mobile: '+1 302 464 0950',;
@@ -14,7 +14,7 @@ const ServicesAdvertising: React.FC = (): JSX.Element => {;
     address: '364 E Main St STE 1008 Middletown DE 19709',;
     website: 'https://ziontechgroup.com';,
 } as const;
-;
+
   const benefits: string[] = [;
     'High-ROI projects with measurable KPIs',;
     'Transparent pricing with market references',;
@@ -26,7 +26,7 @@ const ServicesAdvertising: React.FC = (): JSX.Element => {;
     'SOC 2-aligned processes and data handling',;
     'Flexible deployment: SaaS or self-hosted options';
   ];
-;
+
   const spotlight = [;
     {;
       title: 'Developer Productivity Copilot',;
@@ -87,12 +87,12 @@ const ServicesAdvertising: React.FC = (): JSX.Element => {;
       href: '/services / status - incident - hub';,
 }
   ] as const;
-;
+
 const ServicesAdvertising: React.FC = (): JSX.Element => {}
   const benefits: string[] = ['';
     'High-ROI projects with measurable KPIs',Transparent pricing with market references',Fast onboarding with templates and playbooks',Enterprise-grade security and compliance',24/7 support with SLAs',Proven architectures and reference implementations',No long-term lock-in; cancel anytime',SOC 2-aligned processes and data handling',Flexible deployment: SaaS or self-hosted options';
   ];
-;
+
   return ("";
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">";
       <SEO"";
@@ -209,17 +209,15 @@ const ServicesAdvertising: React.FC = (): JSX.Element => {}
     </div>;
   );,
 };
-;
-export default ServicesAdvertising;
-;
 
-;
+export default ServicesAdvertising;
+
 export { ServicesAdvertising };
-;
+
 export { ServicesAdvertising };
-;
+
 export { ServicesAdvertising };
-;
+
 export { ServicesAdvertising };
-;
+
 export { ServicesAdvertising, ServicesAdvertising };

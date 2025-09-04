@@ -1,6 +1,6 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
  from 'lucide-react';
-;
+
 interface AnalyticsData {;
 
   id: string;
@@ -12,7 +12,7 @@ interface AnalyticsData {;
   timestamp: Date;
   target?: number;
   unit?: string}
-;
+
 interface ChartData {;
 
   labels: string[];
@@ -48,7 +48,7 @@ export function AdvancedAnalyticsDashboard({;
   const [analyticsData, setAnalyticsData] = useState<AnalyticsData[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [showAdvancedMetrics, setShowAdvancedMetrics] = useState(false);
-;
+
   // Generate sample analytics data;
 
     const newData: AnalyticsData[] = [];
@@ -72,15 +72,15 @@ export function AdvancedAnalyticsDashboard({;
               : category === 'revenue'';
                 ? '$'';
                 : ''})})});
-;
+
     setAnalyticsData(newData) }, []) ;
-;
+
   // Refresh data;
   ;
     setTimeout(() => {;
       generateAnalyticsData () ;
       setIsLoading(false) }, 1000) }, [generateAnalyticsData]) ;
-;
+
   // Export data;
   ;,
 } else {;
@@ -102,7 +102,7 @@ export function AdvancedAnalyticsDashboard({;
 
       generateAnalyticsData();
       intervalRef.current = setInterval(generateAnalyticsData, refreshInterval);
-;
+
       return () => {;
         if(intervalRef.current) {;
 
@@ -121,7 +121,7 @@ export function AdvancedAnalyticsDashboard({;
 
       generateAnalyticsData()}
   }, [isOpen, generateAnalyticsData]) ;
-;
+
   // Get trend icon and color';
 
     return ()`      <div className={`flex items-center space-x-1 ${colors[trend]}`}>;
@@ -131,7 +131,7 @@ export function AdvancedAnalyticsDashboard({;
           {change}%;
         </span>;
       </div>) };
-;
+
   // Get category icon;
   const getCategoryIcon = (category: string) => {;
 
@@ -143,11 +143,11 @@ export function AdvancedAnalyticsDashboard({;
       engagement: <Activity className="w-5 h-5"  />,";
       technical: <Cpu className="w-5 h-5"  />};";
     return icons[category] || <Activity className="w-5 h-5"  />};
-;
+
   // Filter data by selected metrics;
   ;
   if(!enabled) return null;
-;
+
   return ();
     <>;
       {/* Floating Analytics Button */}

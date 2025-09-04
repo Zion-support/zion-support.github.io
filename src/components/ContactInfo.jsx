@@ -1,7 +1,5 @@
 import React from 'react';
-;
-;
-;
+
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star export function ContactInfo() {
     return (<section className="py-20 bg-zion-blue-dark">
@@ -822,4 +820,4 @@ size="lg"""
 }"
 "
 
-export default Component
+export default Component;

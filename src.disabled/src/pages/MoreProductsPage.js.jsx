@@ -8,14 +8,12 @@ export default function MoreProductsPage() {;
   { min: 0,;
   max: 2000 ;,
 }}/>)}
-;
+export { CATEGORY_FILTERS, MoreProductsPage };
 
 export { CATEGORY_FILTERS, MoreProductsPage };
-;
+
 export { CATEGORY_FILTERS, MoreProductsPage };
-;
+
 export { CATEGORY_FILTERS, MoreProductsPage };
-;
-export { CATEGORY_FILTERS, MoreProductsPage };
-;
+
 export { CATEGORY_FILTERS, MoreProductsPage };

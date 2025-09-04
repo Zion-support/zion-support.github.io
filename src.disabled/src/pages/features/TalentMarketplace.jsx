@@ -81,14 +81,12 @@ export default function TalentMarketplace() {}
       </main>;
       <Footer />;
     </>)}
-;
+export { TalentMarketplace };
 
 export { TalentMarketplace };
-;
+
 export { TalentMarketplace };
-;
+
 export { TalentMarketplace };
-;
-export { TalentMarketplace };
-;
+
 export { TalentMarketplace };

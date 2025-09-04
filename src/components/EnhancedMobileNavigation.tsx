@@ -199,7 +199,7 @@ export default function EnhancedMobileNavigation() {
 
       document.addEventListener('mousedown', handleClickOutside);
       document.body.style.overflow = 'hidden'}
-;
+
     return () => {;
       document.removeEventListener('mousedown', handleClickOutside);
       document.body.style.overflow = 'unset'}}, [isOpen]);

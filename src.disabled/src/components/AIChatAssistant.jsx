@@ -159,7 +159,7 @@ export function AIChatAssistant() {;
                 <User className="w-4 h-4 text-white"/>;
               </div>)}
           </div>))}
-;
+
         {/* Typing Indicator */}";
         {isTyping && (<div className="flex gap-3 justify-start">";
             <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center flex-shrink-0">";
@@ -173,7 +173,7 @@ export function AIChatAssistant() {;
               </div>;
             </div>;
           </div>) }
-;
+
         <div ref={messagesEndRef} />;
       </div>;
 

@@ -141,11 +141,11 @@ import {}
   Battery,''';
   Signal'''';,
 } from 'lucide-react';
-;
+
     technologies["Business Intelligence", "Machine Learning", "Data Mining", "Visualization Tools"];,
 }
 ];
-;
+
 const hrTechnologies = [];
   {}
 ";
@@ -183,7 +183,7 @@ const hrTechnologies = [];
     useCase: "Infrastructure","";
     reliability: "High";
 ];
-;
+
 const successStories = [];
   {}
 ";
@@ -215,7 +215,7 @@ const successStories = [];
     results: "35% improvement in productivity, 45% increase in employee engagement, better retention","";
     logo: "MC";
 ];
-;
+
 const processSteps = [];
   {}
 ";
@@ -249,7 +249,7 @@ const processSteps = [];
     icon: Users,"";
     duration: "2-6 weeks";
 ];
-;
+
 const hrBenefits = [];
   {}
 ";
@@ -284,7 +284,7 @@ const hrBenefits = [];
     examples["Regulatory compliance", "Data encryption", "Access controls", "Audit trails"];,
 }
 ];
-;
+
 export default function HRPlatform() {}
 ';
 '';
@@ -593,7 +593,7 @@ export default function HRPlatform() {}
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'''`'`'`;
                     : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````;,
 }`}
-;
+
                 {category}
               </button>) ) }
           </div>";
@@ -616,7 +616,7 @@ export default function HRPlatform() {}
 }}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 hover:border-zion - cyan / 40 transition - all duration - 300 cursor -pointer";
                 onClick={ () => setSelectedSolution(solution) }
-;
+
 ";,
 }}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer";
@@ -782,14 +782,12 @@ export default function HRPlatform() {}
       </section>;
     </div>;
   )}
-;
+export { HRPlatform };
 
 export { HRPlatform };
-;
+
 export { HRPlatform };
-;
+
 export { HRPlatform };
-;
-export { HRPlatform };
-;
+
 export { HRPlatform };

@@ -495,14 +495,12 @@ const ITServices = () => {;
     </div>);,
 };
 export default ITServices;
-;
+export { ITServices };
 
 export { ITServices };
-;
+
 export { ITServices };
-;
+
 export { ITServices };
-;
-export { ITServices };
-;
+
 export { ITServices };

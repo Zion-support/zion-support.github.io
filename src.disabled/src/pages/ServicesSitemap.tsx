@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link  } from 'react-router-dom';
-;
+
 const ServicesSitemap: React.FC = (): JSX.Element => {}
         {}
 "";
@@ -166,7 +166,7 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
     { title: "Pricing Guide", url: "/pricing", description: "Transparent pricing information" },"";
     { title: "Contact Sales", url: "/contact", description: "Get expert consultation" },;"    { title: "Request Quote", url: "/request-quote", description: "Get custom pricing" };
   ];
-;
+
   return();
     <>";
       <SEO"";
@@ -430,15 +430,15 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
             </div>;
     </>;
   )};
-;
+
 export default ServicesSitemap;
-;
+
 export { ServicesSitemap };
-;
+
 export { ServicesSitemap };
-;
+
 export { ServicesSitemap };
-;
+
 export { ServicesSitemap };
-;
+
 export { ServicesSitemap };

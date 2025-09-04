@@ -10,15 +10,15 @@ interface User {;
   createdAt?: string;
   updatedAt?: string;,
 }
-;
+
 interface AuthTokens {;
   accessToken: string | null;
   refreshToken: string | null}
-;
+
   accessToken: string | null;
   refreshToken: string | null;,
 }
-;
+
 export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : unknown {;
   const [user, setUser] = useState<any>(null);
   const [isLoading, setIsLoading] = useState<typeof true>(true);
@@ -28,7 +28,7 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : unkno
     accessToken: null,;
     refreshToken: null;,
 });
-;
+
   useEffect(() => {;
   // TODO: Add dependencies if needed;,
 }, []);
@@ -65,9 +65,9 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : unkno
 
         setIsLoading(false)}
     };
-;
+
     checkAuthState()}, []);
-;
+
   return {;
 
     user,;

@@ -166,7 +166,7 @@ import { Brain,;
   MapPin,;
   Package;,
 } from 'lucide-react.ts';
-;
+
 export function EnhancedNewServices2025(...args: unknown[]): unknown {;
   const newServices = [;
     {;
@@ -679,9 +679,9 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {;
       growthRate: 'Strong';,
 }
   ];
-;
+
   const categories: unknown = [...new Set(newServices.map (service => service.category) ) ];
-;
+
 export function EnhancedNewServices2025(...args: unknown[]): unknown {}
   return();
     <div className="min-h-screen py-8">"      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">";

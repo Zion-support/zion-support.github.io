@@ -1,12 +1,12 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
-;
+
 export default function Page() {;
 > {;
 
   showStats?: boolean;
   showFilters?: boolean;
   maxFeedback?: number}
-;
+
 export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({;
 
 showStats:  true,;
@@ -30,7 +30,7 @@ showStats:  true,;
     comment: '',;
     category: 'overall' as Feedback['category'];,
 });
-;
+
   // Sample feedback data;
   useEffect(() => {;
   // TODO: Add dependencies if needed;
@@ -110,10 +110,10 @@ showStats:  true,;
         verified: true;
 
     ];
-;
+
     setFeedback(sampleFeedback) ;
     setFilteredFeedback(sampleFeedback) }, []) ;
-;
+
   // Calculate stats;
   useEffect(() => {;
   // TODO: Add dependencies if needed;
@@ -128,7 +128,7 @@ showStats:  true,;
 
       const categoryCounts = feedback.reduce((acc, f) => {;        acc[f.category] = (acc[f.category] || 0) + 1;
         return acc}, {} as Record < string, any>) ;
-;
+
           count,;
           percentage: (count / totalFeedback) * 100}) ) ;
         .sort((a, b) => b.count - a.count) ;
@@ -142,7 +142,7 @@ showStats:  true,;
         topCategories;,
 }) }
   }, [feedback]) ;
-;
+
   // Filter feedback;
   useEffect(() => {;
   // TODO: Add dependencies if needed;
@@ -152,15 +152,15 @@ showStats:  true,;
 };,
 }, []);, []);
     let filtered = feedback;
-;
+
     if(selectedCategory !== 'all') {;
 
       filtered = filtered.filter(f => f.category === selectedCategory)}
-;
+
     if(selectedRating > 0) {;
 
       filtered = filtered.filter(f => f.rating === selectedRating)}
-;
+
     if(searchQuery) {;
 
       filtered = filtered.filter(f =>;
@@ -173,9 +173,9 @@ showStats:  true,;
         f.customerName.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         f.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
       )}
-;
+
     setFilteredFeedback(filtered.slice (0, maxFeedback) ) }, [feedback, selectedCategory, selectedRating, searchQuery, maxFeedback]) ;
-;
+
   // Handle feedback submission;
   ;
     if(newFeedback.rating === 0 || !newFeedback.comment.trim () ) return;
@@ -195,26 +195,26 @@ showStats:  true,;
   ;
   verified: false;,
 };
-;
+
     setFeedback(prev  => [feedback, ...prev]);    setNewFeedback({ rating: 0, comment: '', category: 'overall' });
     setShowFeedbackForm(false)};
-;
+
   // Handle helpful/unhelpful votes';
   ;
         return {;
           ...f,;
           helpful: type === 'helpful' ? f.helpful + 1 : f.helpful,;
           unhelpful: type === 'unhelpful' ? f.unhelpful + 1 : f.unhelpful};
-;
+
       return f}) ) };
-;
+
   // Get sentiment color;
   ;
     switch(sentiment) {;
       case 'positive': return 'text-green-400 bg-green-400/20';
       case 'negative': return 'text-red-400 bg-red-400/20';
       default: return 'text-yellow-400 bg-yellow-400/20'}  };
-;
+
   // Get category color;
   ;
   ;
@@ -280,7 +280,7 @@ showStats:  true,;
             </div>";
             <div className="text-zinc-400">Average Rating</div>;
           </motion.div>;
-;
+
           <motion.div;
             initial = {;
 
@@ -298,7 +298,7 @@ showStats:  true,;
             <div className="text-3xl font-bold text-green-400 mb-2">{stats.positivePercentage.toFixed(1)}%</div>";
             <div className="text-zinc-400">Positive Feedback</div>;
           </motion.div>;
-;
+
           <motion.div;
             initial = {;
 
@@ -317,7 +317,7 @@ showStats:  true,;
             <div className="text-zinc-400">Response Rate</div>;
           </motion.div>;
         </div>) }
-;
+
       {/* Top Categories */}
       {showStats && (";
         <div className="mb-8">";
@@ -346,7 +346,7 @@ showStats:  true,;
             ))}
           </div>;
         </div>;) }
-;
+
       {/* Filters and Search */}
       {showFilters && (";
         <div className="flex flex-wrap items-center gap-4 mb-6">;
@@ -396,7 +396,7 @@ showStats:  true,;
             <MessageCircle className="w-4 h-4"  />;            Add Feedback;
           </button>;
         </div>) }
-;
+
       {/* Feedback Form */}
       <AnimatePresence>;
         {showFeedbackForm && (<motion.div;
@@ -552,7 +552,7 @@ showStats:  true,;
 
             {/* Comment */}";
             <p className="text-zinc-300 mb-4 leading-relaxed">{item.comment}</p>;
-;
+
             {/* Tags */}
             {item.tags.length > 0 && (;";
               <div className="flex flex-wrap gap-2 mb-4">;
@@ -564,7 +564,7 @@ showStats:  true,;
                     {tag}
                   </span>) ) }
               </div>) }
-;
+
             {/* Actions */}";
             <div className="flex items-center justify-between pt-4 border-t border-zinc-700/50">";
               <div className="flex items-center gap-4">;

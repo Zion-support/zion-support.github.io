@@ -23,14 +23,12 @@ export default function EnterpriseAdmin() {}
       </main>;
       ;
     </ProtectedRoute>)}
-;
+export { EnterpriseAdmin };
 
 export { EnterpriseAdmin };
-;
+
 export { EnterpriseAdmin };
-;
+
 export { EnterpriseAdmin };
-;
-export { EnterpriseAdmin };
-;
+
 export { EnterpriseAdmin };

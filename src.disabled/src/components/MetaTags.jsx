@@ -1,7 +1,7 @@
 import React from 'react';
 export const MetaTags = ({ title, description, keywords = 'AI, artificial intelligence, machine learning, cybersecurity, cloud computing, IT services, enterprise solutions, Zion Tech Group', image = 'https://ziontechgroup.com / og - image.jpg', url = 'https://ziontechgroup.com', type = 'website', author = 'Zion Tech Group', publishedTime, modifiedTime }) => {;
 import { Helmet } from 'react-helmet-async';
-;
+
 export default function Page() {;
 </title>;
       <meta name="description" content={description}/>";
@@ -39,7 +39,7 @@ export default function Page() {;
       {type === 'article' && publishedTime && (<meta property="article:published_time" content={publishedTime}/>)}'";
       {type === 'article' && modifiedTime && (<meta property="article:modified_time" content={modifiedTime}/>)}'";
       {type === 'article' && (<meta property="article:author" content={author}/>)}
-;
+
       {/* Structured Data */}";
       <script type="application/ld+json">;
         {JSON.stringify({;

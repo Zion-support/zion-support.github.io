@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
-;
+
 export default function Page() {;
             // Check for very short content;
             if(words.length > 0 && words.length < 10) {;
@@ -450,13 +450,13 @@ export default function Page() {;
                         </div>;
                       </div>;
                     </>)}
-;
+
                   {/* Analyze Button */}";
                   <button onClick={analyzeContent} disabled={isAnalyzing} className="w-full bg-purple-600 hover:bg-purple-700 disabled:bg-gray-400 text-white px-4 py-2 rounded-lg transition-colors">;
                     {isAnalyzing ? 'Analyzing...' : 'Analyze Content'}
                   </button>;
                 </div>)}
-;
+
               {/* Issues Tab */}'";
               {activeTab === 'issues' && (<div className="space-y-4">";
                   {!analysis ? (<div className="text-center text-gray-500 dark:text-gray-400">";
@@ -498,7 +498,7 @@ export default function Page() {;
                         </div>))}
                     </div>)}
                 </div>)}
-;
+
               {/* Suggestions Tab */}'";
               {activeTab === 'suggestions' && (<div className="space-y-4">";
                   {!analysis ? (<div className="text-center text-gray-500 dark:text-gray-400">";
@@ -535,7 +535,7 @@ export default function Page() {;
                         </div>))}
                     </div>)}
                 </div>)}
-;
+
               {/* Actions Tab */}'";
               {activeTab === 'actions' && (<div className="space-y-4">";
                   <div className="text-center text-gray-500 dark:text-gray-400">";
@@ -547,7 +547,7 @@ export default function Page() {;
                   {analysis && analysis.issues.filter(i => i.fixable).length > 0 && (<button onClick={autoFixIssues} className="w-full bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors">;
                       Auto-fix Issues;
                     </button>)}
-;
+
                   {/* Re-analyze Button */}";
                   <button onClick={analyzeContent} disabled={isAnalyzing} className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white px-4 py-2 rounded-lg transition-colors">";
                     <ArrowPathIcon className="w-4 h-4 inline mr-2"/>;

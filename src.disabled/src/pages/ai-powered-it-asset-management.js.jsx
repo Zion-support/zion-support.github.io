@@ -214,14 +214,12 @@ const AIPoweredITAssetManagement = () => {}
       </div>;
     </div>)};
 export default AIPoweredITAssetManagement;
-;
+export { AIPoweredITAssetManagement };
 
 export { AIPoweredITAssetManagement };
-;
+
 export { AIPoweredITAssetManagement };
-;
+
 export { AIPoweredITAssetManagement };
-;
-export { AIPoweredITAssetManagement };
-;
+
 export { AIPoweredITAssetManagement };

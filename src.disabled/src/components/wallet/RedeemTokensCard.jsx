@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useWallet } from '@/hooks/useWallet';
-;
+
 export default function Page() {;
  from '@/components/ui/card';";
 import { Button } from '@/components/ui/button';";

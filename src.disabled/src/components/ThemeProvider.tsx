@@ -3,22 +3,22 @@ export const ThemeProvider: React.FC < ThemeProviderProps> = ({ children }) => {
 export const useTheme = () => {;
 type Theme = 'light' | 'dark' | 'system';
 'type Theme = 'light' | 'dark' | 'system';
-;
+
 interface ThemeContextType {;
   theme: Theme;
   setTheme: (theme: Theme) => void;
   isDark: boolean}
-;
+
 export ;
   ;
   if(context = == null) {;
     throw new Error('useTheme must be used within a ThemeProvider');
   return context};
-;
+
 interface ThemeProviderProps extends React.PropsWithChildren<{}> {;
 
   children: React.ReactNode}
-;
+
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {;
 
   const [theme, setTheme] = useState<Theme>(() => {;
@@ -29,9 +29,9 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {;
         return saved}
     }
     return 'system'});
-;
+
   const [isDark, setIsDark] = useState(false);
-;
+
   useEffect(() => {;
   // TODO: Add dependencies if needed;
 

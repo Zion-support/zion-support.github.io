@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { supabase, getFromProfiles } from '../../integrations/supabase/client';
 export default function Page() {;
  = useAuthEventHandlers(setUser, setOnboardingStep);
-;
+
   const {;
     login: loginImpl,;
     signup: signupImpl,;
@@ -14,7 +14,7 @@ export default function Page() {;
     loginWithTwitter,;
     loginWithWeb3;,
 } = useAuthOperations(setUser, setIsLoading, setAvatarUrl);
-;
+
   // Wrapper for login to match the AuthContextType interface;
   const login = async(email: string, password: string) => {;
     const { res, data } = await loginUser(email, password); // Calls /api/auth/login;
@@ -31,20 +31,20 @@ export default function Page() {;
         // loginImpl(useEmailAuth.login) already shows a toast.console.error("Client-side login after server confirmation failed:", clientLoginResult.error);
         return { error: (clientLoginResult.error as any)?.message || "Client-side login failed." };,
 }
-;
+
       // Navigation logic(already present);
       const params = new URLSearchParams(location.search);
       const next = params.get('redirectTo') || params.get('next') || '/equipment/recommendations';
       navigate(next, { replace: true });
-;
+
       return { error: null }; // Successful login;,
 }
-;
+
     // Handle errors from the API call(res.status !== 200);
     // data is expected to be { error: "message", code: "ERROR_CODE" }
     let toastMessage = data?.error || "An unknown error occurred.";
     const errorCode = data?.code;
-;
+
     if(errorCode === "EMAIL_NOT_CONFIRMED") { // Expected for 403;
       toastMessage = data?.error || "Email not confirmed.Please check your inbox to verify your email.";,
 } else if(errorCode === "INVALID_CREDENTIALS") { // Expected for 401;
@@ -63,13 +63,13 @@ export default function Page() {;
 });
     return { error: toastMessage };,
 };
-;
+
   // Refactored signup method;
   const signup = async(name: string, email: string, password: string) => {;
     setIsLoading(true);
     try {;
       const { res, data } = await registerUser(name, email, password);
-;
+
       if(!res.ok) {;
         // Handle API errors(e.g., 400, 409, 500) from /api/auth/register;
         toast({;
@@ -80,7 +80,7 @@ export default function Page() {;
         setIsLoading(false);
         return { error: data?.message || 'Signup failed', emailVerificationRequired: false };,
 }
-;
+
       if(data?.emailVerificationRequired) {;
         toast({;
           title: "Signup Successful",;
@@ -99,7 +99,7 @@ export default function Page() {;
           access_token: data.session.access_token,;
           refresh_token: data.session.refresh_token,;,
 });
-;
+
         if(sessionError) {;
           console.error("Error setting Supabase session:", sessionError);
           toast({;
@@ -110,15 +110,15 @@ export default function Page() {;
           setIsLoading(false);
           return { error: "Failed to initialize session.", emailVerificationRequired: false };,
 }
-;
+
         // setTokens is handled by onAuthStateChange or if direct setting is preferred:;
         setTokens({ accessToken: data.session.access_token, refreshToken: data.session.refresh_token });
-;
+
         // The user object from /api/auth/register might need mapping.// For now, we assume data.user is compatible or onAuthStateChange will handle it.// setUser(data.user); // This will be handled by onAuthStateChange after setSession;
 
         const firstName = (data.user.user_metadata?.display_name || name).split(' ')[0];
         toast({ title: `Welcome, ${firstName}!` });
-;
+
         const params = new URLSearchParams(location.search);
         const next = params.get('redirectTo') || params.get('next') || '/dashboard';
         navigate(next, { replace: true });
@@ -145,7 +145,7 @@ export default function Page() {;
       return { error: err.message || "Signup failed", emailVerificationRequired: false };,
 }
   };
-;
+
   useEffect(() => {;
   // TODO: Add dependencies if needed;,
 }, []);
@@ -159,7 +159,7 @@ export default function Page() {;
               .select('*');
               .eq('id', session.user.id);
               .single();
-;
+
             if(profile) {;
               const mappedUser = mapProfileToUser(session.user, profile);
               setUser(mappedUser);
@@ -172,7 +172,7 @@ export default function Page() {;
                 const nextFromUrl = params.get('redirectTo') || params.get('next'); // Renamed to avoid conflict;
 
                 const nextPathFromStorage = safeStorage.getItem('nextPath');
-;
+
                 if(nextPathFromStorage) {;
                   safeStorage.removeItem('nextPath');
                   navigate(decodeURIComponent(nextPathFromStorage), { replace: true });,
@@ -208,7 +208,7 @@ export default function Page() {;
         setIsLoading(false);,
 }
     );
-;
+
     return () => {;
       subscription.unsubscribe();,
 };,
@@ -225,7 +225,7 @@ export default function Page() {;
     setUser,;
     setTokens // setTokens was also used indirectly via handleSignedIn if session is new;
   ]);
-;
+
   const authContextValue = {;
     user,;
     isLoading,;
@@ -246,7 +246,7 @@ export default function Page() {;
     avatarUrl,;
     setAvatarUrl;,
 };
-;
+
   return (<AuthContext.Provider value={authContextValue}>;
       {children}
     </AuthContext.Provider>;

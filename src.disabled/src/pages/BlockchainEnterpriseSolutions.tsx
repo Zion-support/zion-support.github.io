@@ -74,7 +74,7 @@ id: 2,"";
     category: "Integration",;"";
     technologies: ["Integration", "APIs", "Migration", "Legacy Systems"]};
 ];
-;
+
 const blockchainTechnologies: unknown = [];
   {}
 ";
@@ -110,7 +110,7 @@ const blockchainTechnologies: unknown = [];
     useCase: "Security & Privacy",;"";
     reliability: "High"};
 ];
-;
+
 const successStories: unknown = [];
   {}
 ";
@@ -142,7 +142,7 @@ const successStories: unknown = [];
     results: "100% data security, 90% faster verification, better privacy, improved compliance",;"";
     logo: "HIS"};
 ];
-;
+
 ";
     step: 4,;"";
     title: "Testing & Deployment",;"";
@@ -171,7 +171,7 @@ const successStories: unknown = [];
     description: "Blockchain eliminates intermediaries and reduces operational costs",;";
     icon: TrendingUp,;"";
     examples: ["No intermediaries", "Reduced costs", "Better efficiency", "Improved ROI"]};];
-;
+
 const blockchainBenefits: unknown = [{}
     title: "Transparency & Trust",;
     description: "Blockchain provides immutable, transparent records that build trust",;
@@ -199,10 +199,10 @@ const blockchainBenefits: unknown = [{}
     examples: ["No intermediaries", "Reduced costs", "Better efficiency", "Improved ROI"];,
 };
 ];
-;
+
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
-;
+
   ";
   return ("    <div className = "min-h-screen bg-futuristic">";
       {/* Hero Section */}"";
@@ -498,7 +498,7 @@ const blockchainBenefits: unknown = [{}
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'''`'`'`;
                     : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````;,
 }`}
-;
+
                 {category}
               </button>) ) }
           </div>";
@@ -521,7 +521,7 @@ const blockchainBenefits: unknown = [{}
 }}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 hover:border-zion - cyan / 40 transition - all duration - 300 cursor -pointer";
                 onClick={ () => setSelectedSolution(solution) }
-;
+
 ";,
 }}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer";
@@ -685,12 +685,10 @@ const blockchainBenefits: unknown = [{}
     </div>;
   );,
 }
-;
+export { BlockchainEnterpriseSolutions };
 
 export { BlockchainEnterpriseSolutions };
-;
+
 export { BlockchainEnterpriseSolutions };
-;
-export { BlockchainEnterpriseSolutions };
-;
+
 export { BlockchainEnterpriseSolutions };

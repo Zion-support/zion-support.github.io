@@ -265,14 +265,12 @@ const Cybersecurity = () => {}
       </section>;
     </div>)};
 export default Cybersecurity;
-;
+export { Cybersecurity };
 
 export { Cybersecurity };
-;
+
 export { Cybersecurity };
-;
+
 export { Cybersecurity };
-;
-export { Cybersecurity };
-;
+
 export { Cybersecurity };

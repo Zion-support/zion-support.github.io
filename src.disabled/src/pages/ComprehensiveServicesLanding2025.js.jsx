@@ -1,6 +1,6 @@
 import React, { useState } from 'react';''';
 import { Link } from 'react-router-dom';
-;
+
 const ComprehensiveServicesLanding2025 = () => {;
     const [selectedIndustry, setSelectedIndustry] = useState('all');
     const industries = [;
@@ -29,7 +29,7 @@ const ComprehensiveServicesLanding2025 = () => {;
             'logistics'['Logistics & Transportation'],;''';
             'legal'['Legal Tech & AI'],;''';
   'marketing'['Marketing & AI'];
-;,
+
 };
         return allEnhancedServices.filter(service => industryMap[industry]?.includes(service.category))};";
     const filteredServices = getServicesByIndustry(selectedIndustry);"";
@@ -426,14 +426,12 @@ const ComprehensiveServicesLanding2025 = () => {;
       </section>;
     </div>)};
 export default ComprehensiveServicesLanding2025;
-;
+export { ComprehensiveServicesLanding2025 };
 
 export { ComprehensiveServicesLanding2025 };
-;
+
 export { ComprehensiveServicesLanding2025 };
-;
+
 export { ComprehensiveServicesLanding2025 };
-;
-export { ComprehensiveServicesLanding2025 };
-;
+
 export { ComprehensiveServicesLanding2025 };

@@ -6,14 +6,14 @@ export default function Page() {;
     { id: 'equipment', name: 'Equipment', count: 0 },;
     { id: 'companies', name: 'Companies', count: 0 },;
   ];
-;
+
   const sortOptions = [{ id: 'relevance', name: 'Relevance' },;
     { id: 'newest', name: 'Newest' },;
     { id: 'rating', name: 'Highest Rated' },;
     { id: 'price - low', name: 'Price: Low to High' },;
     { id: 'price - high', name: 'Price: High to Low' },;
   ];
-;
+
   const mockResults = [{;
       id: 1,;
       title: 'AI - Powered Business Intelligence Platform',;
@@ -75,7 +75,7 @@ export default function Page() {;
       date: '2024 - 11 - 20',;,
 },;
   ];
-;
+
   useEffect(() => {;
   // TODO: Add dependencies if needed;,
 }, []);
@@ -83,24 +83,24 @@ export default function Page() {;
       performSearch () ;,
 }
   }, [searchQuery, activeCategory, sortBy]) ;
-;
+
   const performSearch = async () => {;
     setLoading(true) ;
     // Simulate API call delay;
     await new Promise(resolve => setTimeout (resolve, 500) ) ;
-;
+
     // Filter results based on search query and category;
     let filteredResults = mockResults.filter(result => {;
       const matchesQuery = result.title.toLowerCase () .includes(searchQuery.toLowerCase () ) ||;
         result.description.toLowerCase () .includes(searchQuery.toLowerCase () ) ||;
         result.tags.some((tag: string) =>;
           tag.toLowerCase () .includes(searchQuery.toLowerCase () ) ) ;
-;
+
       const matchesCategory = activeCategory === 'all' || result.type === activeCategory;
-;
+
       return matchesQuery && matchesCategory;,
 }) ;
-;
+
     // Sort results;
     filteredResults.sort((a, b) => {;
       switch(sortBy) {;
@@ -118,18 +118,18 @@ export default function Page() {;
           return 0;,
 }
     }) ;
-;
+
     setResults(filteredResults) ;
     setLoading(false) ;,
 };
-;
+
   const handleSearch = useCallback((e: React.FormEvent) => {;
     e.preventDefault () ;
     if(searchQuery.trim () ) {;
       performSearch () ;,
 }
   };
-;
+
   const getTypeIcon = (type: string) => {;
     switch(type) {;
       case 'services':;
@@ -142,7 +142,7 @@ export default function Page() {;
         return < SearchIcon className="w-5 h-5 text-gray -400" />;,
 }
   };
-;
+
   const getTypeLabel = (type: string) => {;
     switch(type) {;
       case 'services':;
@@ -155,7 +155,7 @@ export default function Page() {;
         return 'Unknown';,
 }
   };
-;
+
   return (<>;
       <SEO;
         title="Search-Zion Tech Group";

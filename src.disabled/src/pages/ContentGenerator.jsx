@@ -12,10 +12,10 @@ export default function Page() {;
             setPreviewContent(data) ;
             // // // // // // // console.error("Error generating content:", error) ;
             toast.error("Failed to generate content.Please try again.") ;
-;
+
         finally {;
             setIsGenerating(false) ;
-;
+
             toast.success(`${contentType === 'blog' ? 'Blog post' : 'Newsletter'} generated successfully!`) }
         catch(error) {;
             console.error("Error generating content:", error) ;
@@ -42,7 +42,7 @@ export default function Page() {;
             if(error) throw error;
             // // // // // // // console.error("Error sending test newsletter:", error) ;
             toast.error("Failed to send test newsletter.Please try again.") ;
-;
+
             toast.success(`Test newsletter sent to ${testEmail}!`) }
         catch(error) {;
             console.error("Error sending test newsletter:", error) ;
@@ -90,7 +90,7 @@ export default function Page() {;
                     <Input id="topic" placeholder = {;
   contentType === 'blog' ? "e.g., Hiring AI Freelancers" : "e.g.,;
   May Platform Updates";
-;,
+
 } className="bg-zion - blue border border-zion - blue - light text-white" value={topic} onChange={ (e) => setTopic(e.target.value) }/>;
                   </div>;
 
@@ -110,7 +110,7 @@ export default function Page() {;
                         <Switch id="includeImage" checked={includeImage} onCheckedChange={setIncludeImage}/>;
                       </div>;
                     </>) }
-;
+
                   {contentType === 'newsletter' && (<div className="space - y-2">;
                       <Label htmlFor="testEmail" className="text-white">Test Email</Label>;
                       <Input id="testEmail" type="email" placeholder="your@email.com" className="bg-zion - blue border border-zion - blue - light text-white" value={testEmail} onChange={ (e) => setTestEmail(e.target.value) }/>;
@@ -156,7 +156,7 @@ export default function Page() {;
                 __html: previewContent.body;
                     .replace(/^#{1,;
   6;
-;,
+
 }\s+ (.+) $/gm, "<h$1>$2</h$1>") ;
                     .replace(/\*\* (.+?) \*\*/g, "<strong>$1</strong>") .replace(/\* (.+?) \*/g, "<em>$1</em>") .replace(/^-\s+ (.+) $/gm, "<li>$1</li>") .replace(/\n\n / g, "<br><br>") }}/>;
                               </div>;
@@ -196,7 +196,7 @@ export default function Page() {;
                                   <h3 className="text-white font - semibold mb-1">Tweet Summary</h3>;
                                   <p className="text-zion - slate -light">{previewContent.tweetSummary}</p>;
                                 </div>) }
-;
+
                               {previewContent.imagePrompt && (<div>;
                                   <h3 className="text-white font - semibold mb-1">Image Prompt</h3>;
                                   <p className="text-zion - slate -light">{previewContent.imagePrompt}</p>;
@@ -260,15 +260,13 @@ export default function Page() {;
       </div>;
       ;
     </>)}
-;
+export { ContentGenerator };
 
 export { ContentGenerator };
-;
+
 export { ContentGenerator };
-;
+
 export { ContentGenerator };
-;
-export { ContentGenerator };
-;
+
 export { ContentGenerator };
 }

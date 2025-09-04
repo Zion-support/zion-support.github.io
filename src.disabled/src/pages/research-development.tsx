@@ -39,11 +39,11 @@ import {;
   Satellite,;
   Telescope;,
 } from 'lucide-react';
-;
+
 export default function ResearchDevelopment() {;
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedArea, setSelectedArea] = useState('all');
-;
+
   const researchAreas = [;
     'all',;
     'AI & Machine Learning',;
@@ -57,7 +57,7 @@ export default function ResearchDevelopment() {;
     'Data Science',;
     'Biotechnology';
   ];
-;
+
   const projects = [;
     {;
       id: 1,;
@@ -204,21 +204,21 @@ export default function ResearchDevelopment() {;
       ];,
 }
   ];
-;
+
   const filteredProjects = projects.filter(project => {;
     const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          project.description.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesArea = selectedArea === 'all' || project.area === selectedArea;
     return matchesSearch && matchesArea;,
 });
-;
+
   const stats = [;
     { number: "25+", label: "Active Projects", icon: FlaskConical },;
     { number: "$15M+", label: "Research Funding", icon: DollarSign },;
     { number: "50+", label: "Research Team", icon: Users },;
     { number: "100+", label: "Publications", icon: BookOpen }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gray-50">;
       {/* Header */}

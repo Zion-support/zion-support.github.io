@@ -5,18 +5,18 @@ export default function Page() {;
   { code: 'pt' as SupportedLanguage, name: 'Português', flag: '🇧🇷' },;
   { code: 'ar' as SupportedLanguage, name: 'العربية', flag: '🇸🇦' }
 ];
-;
+
 const defaultLanguageContext: LanguageContextType = {;
   currentLanguage: 'en',;
   changeLanguage: async () => {},;
   isRTL: false,;
   supportedLanguages;,
 };
-;
+
 const LanguageContext = createContext(defaultLanguageContext);
-;
+
 export const useLanguage = (): LanguageContextType => useContext(LanguageContext);
-;
+
 interface LanguageProviderProps {;
   children: ReactNode;
   authState?: { ;
@@ -24,7 +24,7 @@ interface LanguageProviderProps {;
     user: { id?: string } | null;,
 };,
 }
-;
+
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ ;
   children, ;
   authState = { isAuthenticated: false, user: null } ;,

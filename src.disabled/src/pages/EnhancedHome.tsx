@@ -1,7 +1,7 @@
 import { Link  } from 'react-router-dom';
 export default function Page() {;
 ) ) , []) ;
-;
+
   return (<div  className="fixed inset - 0 overflow-hidden pointer - events -none" aria-hidden="true">;
       {/* Animated grid with neon effect */}
       <div  className="absolute inset - 0 bg-[linear - gradient (rgba (6,182,212,0.15) _1px,transparent_1px) ,linear - gradient(90deg,rgba (6,182,212,0.15) _1px,transparent_1px) ] bg-[size:50px_50px] animate -pulse"></div>;
@@ -29,13 +29,13 @@ export default function Page() {;
         />) ) }
     </div>) ;,
 }) ;
-;
+
 FuturisticBackground.displayName = 'FuturisticBackground';
-;
+
 // Enhanced hero section component;
 const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) => {;
   const [currentSlide, setCurrentSlide] = useState(0);
-;
+
   const heroSlides = useMemo(() => [{;
       title: "AI - Powered Solutions",;
       description: "Transform your business with cutting - edge artificial intelligence",;
@@ -61,15 +61,15 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
       features: ["Cloud Migration", "DevOps", "Security", "Compliance"];,
 }
   ], []) ;
-;
+
   const nextSlide = useCallback(() => {;
     setCurrentSlide((prev) => (prev + 1) % heroSlides.length) ;,
 }, [heroSlides.length]) ;
-;
+
   const prevSlide = useCallback(() => {;
     setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length) ;,
 }, [heroSlides.length]) ;
-;
+
   useEffect(() => {;
   // TODO: Add dependencies if needed;
 
@@ -80,7 +80,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
     const interval = setInterval(nextSlide, 5000) ;
     return () => clearInterval(interval) ;,
 }, [nextSlide]) ;
-;
+
   return (<section className="relative min - h-screen flex items - center justify - center px-4 sm:px-6 lg:px-8 pt -20">;
       <div  className="max - w-7xl mx - auto text-center">;
         {/* Hero Content */}
@@ -175,9 +175,9 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
       </div>;
     </section>) ;,
 }) ;
-;
+
 HeroSection.displayName = 'HeroSection';
-;
+
 // Enhanced features section;
 const FeaturesSection = React.memo(() => {;
   const features = useMemo(() => [{;
@@ -205,7 +205,7 @@ const FeaturesSection = React.memo(() => {;
       color: "from - yellow-500 to - orange - 500";,
 }
   ], []) ;
-;
+
   return (<section className="py-20 px-4 sm:px-6 lg:px-8">;
       <div  className="max - w-7xl mx -auto">;
         <motion.div;
@@ -241,9 +241,9 @@ const FeaturesSection = React.memo(() => {;
       </div>;
     </section>) ;,
 }) ;
-;
+
 FeaturesSection.displayName = 'FeaturesSection';
-;
+
 // Enhanced stats section;
 const StatsSection = React.memo(() => {;
   const stats = useMemo(() => [{ number: "500+", label: "Projects Completed", icon: CheckCircle },;
@@ -251,7 +251,7 @@ const StatsSection = React.memo(() => {;
     { number: "99.9%", label: "Uptime Guarantee", icon: ShieldCheck },;
     { number: "24 / 7", label: "Support Available", icon: Clock }
   ], []) ;
-;
+
   return (<section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient - to - r from - zion - slate - dark to - zion -slate">;
       <div  className="max - w-7xl mx -auto">;
         <div  className="grid grid - cols - 2 md:grid - cols - 4 gap-8">;
@@ -272,9 +272,9 @@ const StatsSection = React.memo(() => {;
       </div>;
     </section>) ;,
 }) ;
-;
+
 StatsSection.displayName = 'StatsSection';
-;
+
 // Enhanced CTA section;
 const CTASection = React.memo(() => {;
   return (<section className="py-20 px-4 sm:px-6 lg:px-8">;
@@ -308,13 +308,13 @@ const CTASection = React.memo(() => {;
       </div>;
     </section>) ;,
 }) ;
-;
+
 CTASection.displayName = 'CTASection';
-;
+
 // Main EnhancedHome component;
 const EnhancedHome: React.FC = () => {;
   const [isLoaded, setIsLoaded] = useState(false);
-;
+
   useEffect(() => {;
   // TODO: Add dependencies if needed;
 
@@ -324,7 +324,7 @@ const EnhancedHome: React.FC = () => {;
 }, []);, []);
     setIsLoaded(true) ;,
 }, []) ;
-;
+
   const handleGetStarted = useCallback(() => {;
     // Scroll to services section or navigate;
     const servicesSection = document.getElementById('services') ;
@@ -332,13 +332,13 @@ const EnhancedHome: React.FC = () => {;
       servicesSection.scrollIntoView({ behavior: 'smooth' }) ;,
 }
   }, []) ;
-;
+
   if(!isLoaded) {;
     return (<div  className="min - h-screen bg-zion - slate - dark flex items - center justify -center">;
         <div  className="animate - spin rounded-full h-32 w-32 border-b-2 border-cyan -400"></div>;
       </div>) ;,
 }
-;
+
   return (<>;
       <EnhancedSEO;
         title="Zion Tech Group - Leading AI Solutions & Technology Services";

@@ -8,7 +8,7 @@ interface SecurityIssue {;
   description: string;
   status: 'open' | 'resolved';,
 }
-;
+
 export default function SecurityAudit() {;
   const [issues, setIssues] = useState<SecurityIssue[]>([]);
 

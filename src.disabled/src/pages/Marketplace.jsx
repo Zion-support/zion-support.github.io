@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';''';
 import { useNavigate } from 'react-router-dom';''';
 import { Button } from '@/components/ui/button';''';
 import { Grid3X3, ListFilter, Loader2 } from 'lucide-react';
-;
+
 export default function Marketplace() {}
   const navigate = useNavigate();';
   const [searchQuery, setSearchQuery] = useState('');
@@ -13,7 +13,7 @@ export default function Marketplace() {}
   const [listings, setListings] = useState([]);'';
   const [isLoading, setIsLoading] = useState(false);''';
   const [view, setView] = useState('grid');
-;
+
   // Sample data for demonstration;
   useEffect ( () => {}
     setListings ([];
@@ -35,7 +35,7 @@ export default function Marketplace() {}
         description: 'Enterprise cloud infrastructure and DevOps solutions'}
     ]);,
 }, []);
-;
+
   const clearAllFilters = () => {}
 ';
 '';
@@ -46,7 +46,7 @@ export default function Marketplace() {}
     setSelectedAvailability([]);
     setSelectedRating(null);,
 };
-;
+
   const handleRequestQuote = listingId => {}
     const listing = listings.find(item => item.id === listingId);
     if (listing) {}
@@ -57,7 +57,7 @@ export default function Marketplace() {}
           specificItem: listing}});,
 }
   };
-;
+
   const filteredListings = listings.filter(listing => {}
     if();
       searchQuery &&;
@@ -82,7 +82,7 @@ export default function Marketplace() {}
 }
     return true;,
 }) ;
-;
+
   return();
     <main className="flex-grow container mx-auto px-4 py-8">"";
       <div className="max-w-4xl mx-auto mb-8">"";
@@ -203,14 +203,12 @@ export default function Marketplace() {}
     </main>;
   );,
 }
-;
+export { Marketplace };
 
 export { Marketplace };
-;
+
 export { Marketplace };
-;
+
 export { Marketplace };
-;
-export { Marketplace };
-;
+
 export { Marketplace };

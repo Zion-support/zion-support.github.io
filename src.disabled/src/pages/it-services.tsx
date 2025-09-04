@@ -16,7 +16,7 @@ import { ;
   Mail,;
   MapPin;,
 } from 'lucide-react';
-;
+
 const ITServices: React.FC = () => {;
   const itServiceCategories = [;
     {;
@@ -72,7 +72,7 @@ const ITServices: React.FC = () => {;
       ];,
 }
   ];
-;
+
   const featuredITServices = [;
     {;
       title: "Quantum Cloud Infrastructure",;
@@ -109,7 +109,7 @@ const ITServices: React.FC = () => {;
       icon: Shield;,
 }
   ];
-;
+
   return (;
     <>;
       <Helmet>;
@@ -306,5 +306,5 @@ const ITServices: React.FC = () => {;
     </>;
   );,
 };
-;
+
 export default ITServices;

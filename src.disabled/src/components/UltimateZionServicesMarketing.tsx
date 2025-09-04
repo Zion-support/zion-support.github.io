@@ -1,7 +1,7 @@
 
 const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
   const [selectedCategory, setSelectedCategory] = useState('all');
-;
+
   const categories = [{;
       id: 'quantum - computing',;
       name: 'Quantum Computing & AI',;
@@ -64,12 +64,12 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
       marketSize: '$25.2 billion by 2027',;
       growthRate: '150% annually'};
   ];
-;
+
     if(categoryId === 'all') return ultimateZionServices2025;
     return ultimateZionServices2025.filter(service => service.category === categoryId) };
-;
+
   const selectedServices = getServicesByCategory(selectedCategory) ;
-;
+
   return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - purple - 900 to - slate - 900 text-white">;
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
@@ -238,7 +238,7 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
           </motion.div>;
         </div>;
       </section>;
-;
+
       {/* Category Overview */};
       {selectedCategory !== 'all' && (;";
         <section className="py-12 px-4 sm:px-6 lg:px-8">;";
@@ -246,7 +246,7 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
             {(() => {;
               ;
               if(!category) return null;
-;
+
               return (<motion.div;
                   className="bg-gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - lg rounded-2xl p - 8 border border-purple -400 / 30"                  initial = {;
 
@@ -281,7 +281,7 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
                   </div>;
                 </motion.div>;) }) () }          </div>;
         </section>) }
-;
+
       {/* Services Grid */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div  className="max - w-7xl mx -auto">;
@@ -418,7 +418,7 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
                       </p>;
                     </div>;
                   </div>) }
-;
+
                 {/* Trial and Setup */}";
                 <div className="flex justify-between items-center mb-6 text-sm">";
                   <div className="text-center">";

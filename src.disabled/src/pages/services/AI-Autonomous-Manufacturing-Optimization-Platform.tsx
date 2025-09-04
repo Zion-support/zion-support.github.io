@@ -26,7 +26,7 @@ import { ;
   Cog,;
   Monitor;,
 } from 'lucide-react';
-;
+
 const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {;
   const features = [;
     {;
@@ -54,7 +54,7 @@ const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {;
       benefits: ["Real-time inventory tracking", "Automated reorder management", "Supplier performance analytics"];,
 }
   ];
-;
+
   const pricingPlans = [;
     {;
       name: "Small Factory",;
@@ -98,7 +98,7 @@ const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {;
       popular: false;,
 }
   ];
-;
+
   const useCases = [;
     {;
       title: "Automotive Manufacturing",;
@@ -121,7 +121,7 @@ const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {;
       icon: Pill;,
 }
   ];
-;
+
   const benefits = [;
     {;
       metric: "25%",;
@@ -144,7 +144,7 @@ const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {;
       detail: "Average reduction in manufacturing costs";,
 }
   ];
-;
+
   const manufacturingProcesses = [;
     "Production Planning",;
     "Quality Control",;
@@ -155,7 +155,7 @@ const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {;
     "Predictive Analytics",;
     "Process Optimization";
   ];
-;
+
   const industryStandards = [;
     "ISO 9001",;
     "ISO 14001",;
@@ -166,7 +166,7 @@ const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {;
     "Smart Factory",;
     "Digital Twin";
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900">;
       <SEO ;
@@ -405,7 +405,7 @@ const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {;
                     </span>;
                   </div>;
                 )}
-;
+
                 <div className="text-center mb-8">;
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>;
                   <p className="text-slate-400 mb-6">{plan.description}</p>;
@@ -521,5 +521,5 @@ const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {;
     </div>;
   );,
 };
-;
+
 export default AIAutonomousManufacturingOptimizationPlatform;

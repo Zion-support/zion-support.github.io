@@ -8,7 +8,7 @@
   noindex?: boolean,;
   showPerformanceMetrics?: boolean,;
   showSEOAnalysis?: boolean}
-;
+
 export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,";
   title = "Zion Tech Group - Leading Technology Solutions Provider",";
   description = "Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.",";
@@ -31,7 +31,7 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,";
       >;
 <Head>;
           {/* comment */}
-;
+
           <title>{fullTitle}</title>";
           <meta name="description" content="{description}"  />;
           <meta name="keywords" content="{keywords}"  />";
@@ -40,7 +40,7 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,";
           ;
           {/* comment */}";
           {canonicalUrl && <link rel="canonical" href="{canonicalUrl}"  />}
-;
+
           {/* comment */}";
           <meta property="og:title" content="{fullTitle}"  />";
           <meta property="og:description" content="{description}"  />";
@@ -153,12 +153,10 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,";
                     "@type": "Service",";
                     "name": "Digital Transformation",";
                     "description": "End-to-end digital transformation services";
-
-;
                 ];,
 })>;,
 }}
-;
+
          />;
         </Head>;
         {/* comment */}";

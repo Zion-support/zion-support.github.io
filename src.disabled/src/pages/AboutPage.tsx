@@ -1,5 +1,5 @@
 import React from 'react';
-;
+
 const AboutPage: React.FC = () => {;
   return (;
     <div className="min-h-screen bg-gray-50 py-20">;
@@ -45,5 +45,5 @@ const AboutPage: React.FC = () => {;
     </div>;
   );,
 };
-;
+
 export default AboutPage;

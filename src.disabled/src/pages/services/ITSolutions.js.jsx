@@ -155,14 +155,12 @@ const ITSolutions = () => {}
   );,
 };
 export default ITSolutions;
-;
+export { ITSolutions };
 
 export { ITSolutions };
-;
+
 export { ITSolutions };
-;
+
 export { ITSolutions };
-;
-export { ITSolutions };
-;
+
 export { ITSolutions };

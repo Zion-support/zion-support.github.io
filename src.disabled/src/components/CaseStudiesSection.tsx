@@ -1,5 +1,5 @@
 import {  import { motion  } from 'framer-motion';
-;
+
  params - Function parameters;
  * @returns {*} Function return value;
  */;
@@ -137,7 +137,7 @@ export function CaseStudiesSection() {;
         </motion.div>;
       </div>;
     </section>;) };
-;
+
 export default CaseStudiesSection;";
             <span className="text-2xl">→</span>;
           </div>;

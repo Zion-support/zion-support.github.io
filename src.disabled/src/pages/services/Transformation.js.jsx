@@ -59,14 +59,12 @@ const DigitalTransformation = () => {}
   );,
 };
 export default DigitalTransformation;
-;
+export { DigitalTransformation };
 
 export { DigitalTransformation };
-;
+
 export { DigitalTransformation };
-;
+
 export { DigitalTransformation };
-;
-export { DigitalTransformation };
-;
+
 export { DigitalTransformation };

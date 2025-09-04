@@ -1,7 +1,7 @@
 import React from 'react';
 import { Heart, Check, ArrowRight } from 'lucide-react';
 import { SEO } from '../../components/SEO';
-;
+
 export default function AIHealthcareRevenueCycle() {;
   const features = [;
     'Automated revenue cycle management',;
@@ -11,7 +11,7 @@ export default function AIHealthcareRevenueCycle() {;
     'Integration with major EHR systems',;
     'Custom reporting and analytics';
   ];
-;
+
   const tiers = [;
     {;
       name: 'Starter',;
@@ -29,7 +29,7 @@ export default function AIHealthcareRevenueCycle() {;
       details: ['All RCM features', 'Dedicated support', 'Unlimited claims'];,
 }
   ];
-;
+
   return (;
     <>;
       <SEO ;

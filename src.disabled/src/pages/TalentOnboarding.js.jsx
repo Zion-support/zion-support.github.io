@@ -28,14 +28,12 @@ export default function TalentOnboarding() {}
       </div>;
       ;
     </>)}
-;
+export { TalentOnboarding };
 
 export { TalentOnboarding };
-;
+
 export { TalentOnboarding };
-;
+
 export { TalentOnboarding };
-;
-export { TalentOnboarding };
-;
+
 export { TalentOnboarding };

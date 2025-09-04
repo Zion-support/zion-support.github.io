@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion  } from 'framer-motion';
-;
+
 ,;
   {;
     icon: "⚡",;
@@ -28,11 +28,11 @@ import { motion  } from 'framer-motion';
     description: "Comprehensive insights and reporting to make data-driven decisions instantly";,
 };
 ];
-;,
+
 };,
 };,
 };
-;
+
   const itemVariants = {;
   hidden: { opacity: 0, y: 30,;
   scale: 0.95;,
@@ -47,7 +47,7 @@ import { motion  } from 'framer-motion';
 };,
 };,
 };
-;
+
   const achievementVariants = {;
   hidden: { opacity: 0,;
   scale: 0.8;,
@@ -58,7 +58,7 @@ import { motion  } from 'framer-motion';
       transition: { duration: 0.5 };,
 };,
 };
-;
+
   const techVariants = {;
   hidden: { opacity: 0,;
   x: -20;,
@@ -155,7 +155,5 @@ export function FeatureHighlights() {;
       </div>;
     </section>;
   )}
-;
-
 '"`;
 )

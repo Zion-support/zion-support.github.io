@@ -13,7 +13,7 @@ import { ;
   Zap,;
   Shield;,
 } from 'lucide-react';
-;
+
 const ContactPage: React.FC = () => {;
   const contactInfo = {;
     phone: "+1 302 464 0950",;
@@ -22,7 +22,7 @@ const ContactPage: React.FC = () => {;
     website: "https://ziontechgroup.com",;
     hours: "Monday - Friday: 9:00 AM - 6:00 PM EST";,
 };
-;
+
   const services = [;
     "AI Customer Churn Prediction",;
     "AI Financial Fraud Detection", ;
@@ -42,7 +42,7 @@ const ContactPage: React.FC = () => {;
     "AI Smart City Infrastructure",;
     "AI Quantum Financial Trading";
   ];
-;
+
   return (;
     <div className="min-h-screen bg-white">;
       {/* Hero Section */}
@@ -326,5 +326,5 @@ const ContactPage: React.FC = () => {;
     </div>;
   );,
 };
-;
+
 export default ContactPage;

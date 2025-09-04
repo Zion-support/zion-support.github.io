@@ -2,72 +2,72 @@ import React from 'react'; const SEOOptimizer = () => { const [isOpen, setIsOpen
 }, []);,
 }
     useEffect(() => {}
-;
+
         // comment;
 analyzeSEO()}, [analyzeSEO]);,
 }
     const calculateSEOScore = (page) => {}
-;
+
         let score = 0,;
 let maxScore = 0,;
         // commentif(page.title.length >= 30 && page.title.length <= 60) {}
-;
+
             score += 20}
-;
+
         else if(page.title.length > 0) {}
-;
+
             score += 10}
-;
+
         // commentif(page.metaDescription.length >= 120 && page.metaDescription.length <= 160) {}
-;
+
             score += 15}
-;
+
         else if(page.metaDescription.length > 0) {}
-;
+
             score += 8}
-;
+
         // commentif(page.headings.length >= 3) {}
-;
+
             score += 15}
-;
+
         else if(page.headings.length >= 1) {}
-;
+
             score += 10}
-;
+
         // commentif(page.images.length >= 2) {}
-;
+
             score += 10}
-;
+
         else if(page.images.length >= 1) {}
-;
+
             score += 5}
-;
+
         // commentif(page.links.length >= 3) {}
-;
+
             score += 15}
-;
+
         else if(page.links.length >= 1) {}
-;
+
             score += 10}
-;
+
         // commentif(page.keywords.length >= 3) {}
-;
+
             score += 10}
-;
+
         else if(page.keywords.length >= 1) {}
-;
+
             score += 5}";
         // comment;
         maxScore += 15";
         if (page.url === "/" || page.url.includes("-")) {}
             score += 15}
-;
+
         else if(page.url.length > 0) {}
-;
+
             score += 8}
-;
+
         return Math.round((score / maxScore) * 100) }
-;
+
     const issues = []";
         if (!page.title || page.title.length < 30) {}
 ";
@@ -126,7 +126,7 @@ let maxScore = 0,;
 ";
             recommendations.push("Research and include relevant keywords naturally throughout the content")}";
         if (issues.some(issue => issue.includes("URL"))) {}
-;
+
 "";
             recommendations.push("Use SEO-friendly URLs with hyphens and descriptive terms")}"";
         recommendations.push("Ensure content is unique, valuable, and addresses user intent")";
@@ -137,9 +137,9 @@ let maxScore = 0,;
         recommendations.push("Implement structured data markup for better search engine understanding")";
         recommendations.push();,
 }        return recommendations}
-;
+
     const generateSummary = (pageAnalyses, topIssues) => {}
-;
+
         const totalPages = pageAnalyses.length,;
 const excellentPages = pageAnalyses.filter(page => page.score >= 80) .length,;
 const goodPages = pageAnalyses.filter(page => page.score >= 60) .length,;
@@ -151,14 +151,14 @@ let summary = "Analyzed ${totalPages} pages for SEO.";
 ";
 "";
             summary += "${excellentPages} pages have excellent SEO. "}
-;
+
         if (goodPages > 0) {}";
 ";
 
 ";
 "";
             summary += "${goodPages} pages have good SEO. "}
-;
+
         if (poorPages > 0) {}";
 ";
 
@@ -172,7 +172,7 @@ let summary = "Analyzed ${totalPages} pages for SEO.";
 """""""""";
             summary += "Top SEO issues to address: ${topIssues.slice(0, 3).join(")}."}";
         return summary}
-;
+
     const exportSEOReport = () => {}";
         if (!report);
             return";
@@ -277,9 +277,9 @@ a.download = "seo-optimization-report.csv;
                     </h4>""";
                     <div className="space-y-1">""",;
                       {report.topIssues.slice(0, 3).map((issue, index) => (<div key="{index}" className="text-sm text-yellow-700 dark: text-yellow-300">,                          • {issue}
-;
+
                         </div>) ) }
-;
+
                     </div>";
                   </div>) }
 """;
@@ -325,7 +325,7 @@ a.download = "seo-optimization-report.csv;
                               {page.issues.length} issues,;
                             </td>;
                           </tr>) ) }
-;
+
                       </tbody>;
                     </table>;
                   </div>";
@@ -370,7 +370,7 @@ a.download = "seo-optimization-report.csv;
                                   <AlertTriangle className="w-4 h-4 mt-0.5 flex-shrink-0"/">",;
                                   <span>{issue}</span>;
                                 </div>) ) }
-;
+
                             </div>";
                           </div>) }
 """;
@@ -381,7 +381,7 @@ a.download = "seo-optimization-report.csv;
                                   <Zap className="w-4 h-4 mt-0.5 flex-shrink-0"/">",;
                                   <span>{rec}</span>;
                                 </div>) ) }
-;
+
                             </div>;
                           </div>) }";
                       </div>;
@@ -406,15 +406,13 @@ a.download = "seo-optimization-report.csv;
         </div>)}
     </div>)};
 export default SEOOptimizer;
-;
+export { SEOOptimizer };
 
 export { SEOOptimizer };
-;
+
 export { SEOOptimizer };
-;
+
 export { SEOOptimizer };
-;
-export { SEOOptimizer };
-;
+
 export { SEOOptimizer };
 )

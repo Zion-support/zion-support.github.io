@@ -13,7 +13,7 @@ import { ;
   Zap,;
   Shield;,
 } from 'lucide-react';
-;
+
 export default function PartnersPage() {;
   const strategicPartners = [;
     {;
@@ -41,7 +41,7 @@ export default function PartnersPage() {;
       tier: "Specialization Partner";,
 }
   ];
-;
+
   const technologyPartners = [;
     {;
       name: "NVIDIA",;
@@ -62,7 +62,7 @@ export default function PartnersPage() {;
       benefits: ["Network solutions", "Security integration", "Enterprise support"];,
 }
   ];
-;
+
   const partnerPrograms = [;
     {;
       name: "Technology Partner Program",;
@@ -86,7 +86,7 @@ export default function PartnersPage() {;
       icon: Users;,
 }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-zion-slate-dark text-white">;
       {/* Hero Section */}

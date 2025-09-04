@@ -557,7 +557,7 @@ export default function HelpCenter() {
   );
 }
   ];
-;
+
   const popularArticles = [;
     'How to get started with AI services',;
     'Understanding our pricing structure',;
@@ -566,7 +566,7 @@ export default function HelpCenter() {
     'API integration guide',;
     'Troubleshooting common issues';
   ];
-;
+
   const contactMethods = [;
     {;
       icon: <Mail className="w-6 h-6" />,;
@@ -590,18 +590,18 @@ export default function HelpCenter() {
       link: '#';,
 }
   ];
-;
+
   const toggleCategory = (categoryId: string) => {;
     setExpandedCategory(expandedCategory === categoryId ? null : categoryId);,
 };
-;
+
   const filteredCategories = helpCategories.filter(category =>;
     category.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
     category.articles.some(article => ;
       article.title.toLowerCase().includes(searchQuery.toLowerCase());
     );
   );
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-20">;
       {/* Hero Section */}
@@ -822,7 +822,7 @@ export default function HelpCenter() {
   );
 import React from "react";
 import { SEO } from "@/components/SEO";
-;,"});,"});,
+
 }
 export default function HelpCenter() {return (";
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">";

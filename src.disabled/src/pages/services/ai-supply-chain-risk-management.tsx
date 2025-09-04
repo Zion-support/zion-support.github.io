@@ -1,6 +1,6 @@
 import React from 'react';
 import { Shield, TrendingUp, Globe, AlertTriangle, BarChart3, Users, CheckCircle, Star, Zap } from 'lucide-react';
-;
+
 export default function AISupplyChainRiskManagement() {;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;

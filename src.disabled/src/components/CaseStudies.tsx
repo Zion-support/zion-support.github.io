@@ -1,7 +1,7 @@
 React from 'react';
 import {  motion   } from "framer-motion";
 import {  CheckCircle, TrendingUp, Users, DollarSign   } from "lucide-react";
-;
+
 interface CaseStudy { id: string;
   title: string;
   description: string;
@@ -14,7 +14,7 @@ interface CaseStudy { id: string;
   technologies: string[];
   duration: string;,
 }
-;
+
 const caseStudies: CaseStudy[] = [{ id: '1',;
     title: 'AI-Powered Customer Service Automation',;
     description: 'Implemented multi-agent AI system for enterprise customer service, reducing response time and improving satisfaction.',;

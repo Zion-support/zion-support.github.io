@@ -33,7 +33,7 @@ import { ;
   Target,;
   Zap;,
 } from 'lucide-react';
-;
+
 export function AccessibilityPage() {;
   const accessibilityFeatures = [;
     {;
@@ -89,7 +89,7 @@ export function AccessibilityPage() {;
       ];,
 }
   ];
-;
+
   const standards = [;
     {;
       name: 'WCAG 2.1 AA',;
@@ -120,7 +120,7 @@ export function AccessibilityPage() {;
       details: 'Compliance with European accessibility standards.';,
 }
   ];
-;
+
   const assistiveTechnologies = [;
     {;
       name: 'Screen Readers',;
@@ -147,7 +147,7 @@ export function AccessibilityPage() {;
       supported: ['ZoomText', 'MAGic', 'Browser Zoom', 'System Magnification'];,
 }
   ];
-;
+
   const accessibilityTools = [;
     {;
       name: 'High Contrast Mode',;
@@ -174,7 +174,7 @@ export function AccessibilityPage() {;
       action: 'Screen Reader Guide';,
 }
   ];
-;
+
   const keyboardShortcuts = [;
     { key: 'Tab', description: 'Navigate to next interactive element' },;
     { key: 'Shift + Tab', description: 'Navigate to previous interactive element' },;
@@ -185,7 +185,7 @@ export function AccessibilityPage() {;
     { key: 'Home', description: 'Go to beginning of page' },;
     { key: 'End', description: 'Go to end of page' }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-zion-slate-dark">;
       {/* Hero Section */}
@@ -495,5 +495,5 @@ export function AccessibilityPage() {;
     </div>;
   );,
 }
-;
+
 export default AccessibilityPage;

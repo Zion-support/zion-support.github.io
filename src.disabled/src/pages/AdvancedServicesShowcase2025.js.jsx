@@ -1,8 +1,6 @@
 import React, { useState } from 'react';''';
 import { motion } from 'framer-motion';''';
 import { Star, CheckCircle, Clock, Users, TrendingUp, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
-;
-;
 import SEOHead from "../components/SEOHead.jsx";
 const AdvancedServicesShowcase2025 = () => {;
     const [selectedCategory, setSelectedCategory] = useState('all');
@@ -69,7 +67,7 @@ const AdvancedServicesShowcase2025 = () => {;
             description: "Discover our comprehensive collection of 20+ advanced real micro SAAS, IT, and AI services. Market-ready solutions with proven ROI and competitive pricing.","";
             keywords: "advanced services, micro SAAS, AI services, IT solutions, real services, enterprise solutions,"";
   Zion Tech Group";
-;,
+
 }}/>;
 ";
       {/* Hero Section */}"";
@@ -337,14 +335,12 @@ const AdvancedServicesShowcase2025 = () => {;
       </section>;
     </div>)};
 export default AdvancedServicesShowcase2025;
-;
+export { AdvancedServicesShowcase2025 };
 
 export { AdvancedServicesShowcase2025 };
-;
+
 export { AdvancedServicesShowcase2025 };
-;
+
 export { AdvancedServicesShowcase2025 };
-;
-export { AdvancedServicesShowcase2025 };
-;
+
 export { AdvancedServicesShowcase2025 };

@@ -24,11 +24,11 @@ import {}
   Wrench,''';
   Cpu'''';,
 } from 'lucide-react';
-;
+
     technologies["TLS / SSL", "OAuth 2.0", "JWT", "Zero Trust"];,
 }
 ];
-;
+
 const iotTechnologies = [];
   {}
 ";
@@ -66,7 +66,7 @@ const iotTechnologies = [];
     useCase: "Wide-area IoT","";
     reliability: "Medium";
 ];
-;
+
 const successStories = [];
   {}
 ";
@@ -98,7 +98,7 @@ const successStories = [];
     results: "50% improvement in delivery times, 35% reduction in fuel costs","";
     logo: "LN";
 ];
-;
+
 const processSteps = [];
   {}
 ";
@@ -132,7 +132,7 @@ const processSteps = [];
     icon: CheckCircle,"";
     duration: "2-4 weeks";
 ];
-;
+
 export default function IoTEdge() {}
 ';
 '';
@@ -378,7 +378,7 @@ export default function IoTEdge() {}
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'''`'`'`;
                     : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````;,
 }`}
-;
+
                 {category}
               </button>) ) }
           </div>";
@@ -401,7 +401,7 @@ export default function IoTEdge() {}
 }}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 hover:border-zion - cyan / 40 transition - all duration - 300 cursor -pointer";
                 onClick={ () => setSelectedSolution(solution) }
-;
+
 ";,
 }}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer";
@@ -567,14 +567,12 @@ export default function IoTEdge() {}
       </section>;
     </div>;
   )}
-;
+export { IoTEdge };
 
 export { IoTEdge };
-;
+
 export { IoTEdge };
-;
+
 export { IoTEdge };
-;
-export { IoTEdge };
-;
+
 export { IoTEdge };

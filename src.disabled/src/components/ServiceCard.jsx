@@ -1,9 +1,9 @@
 import React from 'react';
 export default ServiceCard;
 import { motion  } from 'framer-motion';
-;
+
 export default function Page() {;
-;
+
     const iconVariants = {;
 
   hidden: { scale: 0.8,;
@@ -64,7 +64,7 @@ export default function Page() {;
             ⭐ Most Popular;
           </div>;
         </motion.div>) }
-;
+
       {/* Enhanced New Badge */}";
       {isNew && (<motion.div className="absolute -top-3 right-4 z-10" initial = {;
 
@@ -128,7 +128,7 @@ export default function Page() {;
                   </motion.li>) ) }
               </ul>;
             </div>) }
-;
+
           {/* Enhanced Price */}";
           <div className="text-center mb-6">";
             <motion.div className="text-2xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent mb-2" whileHover={{ scale: 1.1 }}>;
@@ -175,13 +175,13 @@ export default function Page() {;
     </motion.div>)};
 export default ServiceCard;,
 }}}}}}}}}}
-;
+
 export { ServiceCard };
-;
+
 export { ServiceCard };
-;
+
 export { ServiceCard };
-;
+
 export { ServiceCard };
-;
+
 export { ServiceCard };

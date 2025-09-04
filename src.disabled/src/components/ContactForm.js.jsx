@@ -82,7 +82,7 @@ const ContactForm = () => {;
           </div>;
     </div>;,;
   )}
-;
+
           <div>";
             <label"";
               htmlFor="lastName"";
@@ -229,14 +229,12 @@ const ContactForm = () => {;
       </form>;
     </div>)};
 export default ContactForm;
-;
+export { ContactForm };
 
 export { ContactForm };
-;
+
 export { ContactForm };
-;
+
 export { ContactForm };
-;
-export { ContactForm };
-;
+
 export { ContactForm };

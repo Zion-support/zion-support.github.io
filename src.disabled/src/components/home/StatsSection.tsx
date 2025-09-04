@@ -7,15 +7,15 @@ interface Stat {;
 icon: React.ComponentType<{ className?: string;,
 }>;
   color: string}
-;
+
 interface StatsSectionProps extends React.PropsWithChildren<{}> {;
 
   stats: Stat[]}
-;
+
 const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {;
 
   const [counts, setCounts] = useState<any>({});
-;
+
   useEffect(() => {;
   // TODO: Add dependencies if needed;,
 }, []);
@@ -28,16 +28,16 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {;
 
               current = targetNumber;
               clearInterval(countTimer)}
-;
+
             setCounts(prev => ({;
 
               ...prev,;
               [stat.label]: Math.floor(current);,
 }))}, 50)})}, 500);
-;
+
       return : unknown clearTimeout(timer)}
   }, [isInView, stats]);
-;
+
   return ();
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate-dark/80 to-zion-slate-dark" role="region" aria-labelledby="stats-heading">";
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
@@ -91,7 +91,7 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {;
   transition: { duration: 0.3;,
 }
               }}
-;
+
               {/* Animated background */}";
               <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-blue/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />;
 
@@ -113,7 +113,7 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {;
   delay: index * 0.1 + 0.5;,
 }}
                 viewport={{ once: true }}
-;
+
                 {counts[stat.label] || 0}
                 {stat.number.includes('%') ? '%' : stat.number.includes('+') ? '+' : ''}
               </motion.div>;
@@ -134,5 +134,5 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {;
       </div>;
     </section>;
   )};
-;
+
 export default StatsSection}}}}}'"`;

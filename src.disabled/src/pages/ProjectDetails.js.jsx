@@ -530,14 +530,12 @@ function ProjectDetailsContent() {}
   return (<ProtectedRoute>;
       <ProjectDetailsContent />;
     </ProtectedRoute>)}
-;
+export { ProjectDetailsContent, ProjectDetails };
 
 export { ProjectDetailsContent, ProjectDetails };
-;
+
 export { ProjectDetailsContent, ProjectDetails };
-;
+
 export { ProjectDetailsContent, ProjectDetails };
-;
-export { ProjectDetailsContent, ProjectDetails };
-;
+
 export { ProjectDetailsContent };

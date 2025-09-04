@@ -305,14 +305,12 @@ const ServicePortfolioDashboard = () => {;
       </section>;
     </div>)};
 export default ServicePortfolioDashboard;
-;
+export { ServicePortfolioDashboard };
 
 export { ServicePortfolioDashboard };
-;
+
 export { ServicePortfolioDashboard };
-;
+
 export { ServicePortfolioDashboard };
-;
-export { ServicePortfolioDashboard };
-;
+
 export { ServicePortfolioDashboard };

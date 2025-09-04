@@ -1,4 +1,4 @@
-;
+
 const Mobile = () => {;
     const mobileStats = [;
         {;
@@ -209,14 +209,12 @@ const Mobile = () => {;
       </div>;
     </>)};
 export default Mobile;
-;
+export { Mobile };
 
 export { Mobile };
-;
+
 export { Mobile };
-;
+
 export { Mobile };
-;
-export { Mobile };
-;
+
 export { Mobile };

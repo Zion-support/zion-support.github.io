@@ -577,11 +577,11 @@ import {}
   Zap,''';
   Brain'''';,
 } from 'lucide-react';
-;
+
     technologies["AI", "Exit Planning", "Market Analysis", "Optimization"];,
 }
 ];
-;
+
 const vcTechnologies = [];
   {}
 ";
@@ -619,7 +619,7 @@ const vcTechnologies = [];
     useCase: "Risk Analysis","";
     reliability: "High";
 ];
-;
+
 const successStories = [];
   {}
 ";
@@ -651,7 +651,7 @@ const successStories = [];
     results: "30% better portfolio performance, 45% improved exit timing, better returns, optimized strategies","";
     logo: "SVL";
 ];
-;
+
 const processSteps = [];
   {}
 ";
@@ -685,7 +685,7 @@ const processSteps = [];
     icon: Gauge,"";
     duration: "4-8 weeks";
 ];
-;
+
 const vcBenefits = [];
   {}
 ";
@@ -720,7 +720,7 @@ const vcBenefits = [];
     examples["Process automation", "Due diligence", "Reporting", "Better efficiency"];,
 }
 ];
-;
+
 export default function AIAutonomousVentureCapitalist() {}
 ';
 '';
@@ -1029,7 +1029,7 @@ export default function AIAutonomousVentureCapitalist() {}
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'''`'`'`;
                     : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````;,
 }`}
-;
+
                 {category}
               </button>) ) }
           </div>";
@@ -1052,7 +1052,7 @@ export default function AIAutonomousVentureCapitalist() {}
 }}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 hover:border-zion - cyan / 40 transition - all duration - 300 cursor -pointer";
                 onClick={ () => setSelectedSolution(solution) }
-;
+
 ";,
 }}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer";
@@ -1218,14 +1218,12 @@ export default function AIAutonomousVentureCapitalist() {}
       </section>;
     </div>;
   )}
-;
+export { AIAutonomousVentureCapitalist };
 
 export { AIAutonomousVentureCapitalist };
-;
+
 export { AIAutonomousVentureCapitalist };
-;
+
 export { AIAutonomousVentureCapitalist };
-;
-export { AIAutonomousVentureCapitalist };
-;
+
 export { AIAutonomousVentureCapitalist };

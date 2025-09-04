@@ -1,6 +1,6 @@
 import React from "react";
 ,"});,"})","});,"})";
-;,"});,"})";
+
 export default function Footer() {,"});,"})";
   const currentYear = new Date().getFullYear();,"});,"})";
   const footerSections = [],"});,"});";,
@@ -42,7 +42,7 @@ export default function Footer() {,"});,"})";
       title: "Support,",";";
       links:  ,[ { name: "Help: Center,", href: "/help"},";" { name: "FAQ,", href: "/faq"},";" { name: "Support,", href: "/support"},";" { name: "System: Status,", href: "/system - status"},", { name: "Request: Quote,", href: "/request-quote"}";
       ]}
-;
+
   ]";
   const legalLinks = []}, {";
       title: "Solutions",";
@@ -54,13 +54,13 @@ links: [ { name: "Blog", href: "/blog" }, { name: "Case Studies", href: "/case-s
       title: "Support",";
 links: [ { name: "Help Center", href: "/help" }, { name: "FAQ", href: "/faq" }, { name: "Support", href: "/support" }, { name: "System Status", href: "/system-status" }, { name: "Request Quote", href: "/request-quote" }";
   const legalLinks = []: string | number | boolean | File}
-;
+
 interface FormData {;
   [key: string]: string | number | boolean | File}
-;
+
 interface ComponentProps {className?: string;
   children?: React.ReactNode [key: string]: unknown}
-;
+
 export default function Footer()   {const currentYear = new Date().getFullYear();,
 }
   const footerSections = []} {title: "Solutions",";
@@ -107,20 +107,20 @@ e: "About Us", href: "/about" } {;
     {;
       title: &apos,Services&apos,,;
       links: [{ nam,e: &apos,AI & Machine Learning&apos,, href: &apos,/services/ai-machine-learning&apos} { name: &apos,Cloud & DevOps&apos,, href: &apos,/services/cloud-devops&apos} { name: &apos,Cybersecurity&apos,, href: &apos,/services/cybersecurity&apos} { name: &apos,Digital Transformation&apos,, href: &apos,/services/digital-transformation&apos} { name: &apos,Financial Solutions&apos,, href: &apos,/services/financial-solutions&apos} { name: &apos,Manufacturing Solutions&apos,, href: &apos,/services/manufacturing-solutions&apos}
-;
+
       title: &apos,Solutions&apos,,;
       links: [,;
         { nam,e: &apos,Enterprise Solutions&apos,, href: &apos,/solutions/enterprise&apos} { name: &apos,Startup Solutions&apos,, href: &apos,/solutions/startup&apos} { name: &apos,Space Technology&apos,, href: &apos,/solutions/space-tech&apos} { name: &apos,Supply Chain&apos,, href: &apos,/solutions/supply-chain&apos} { name: &apos,Industry Solutions&apos,, href: &apos,/solutions/industry&apos}
-;
+
       title: &apos,Company&apos,,;
         { nam,e: &apos,About Us&apos,, href: &apos,/about&apos} { name: &apos,Our Story&apos,, href: &apos,/about/story&apos} { name: &apos,Team&apos,, href: &apos,/about/team&apos} { name: &apos,Careers&apos,, href: &apos,/careers&apos} { name: &apos,Partners&apos,, href: &apos,/partners&apos} { name: &apos,Contact&apos,, href: &apos,/contact&apos}
-;
+
       title: &apos,Resources&apos,,;
         { nam,e: &apos,Blog&apos,, href: &apos,/blog&apos} { name: &apos,Case Studies&apos,, href: &apos,/case-studies&apos} { name: &apos,White Papers&apos,, href: &apos,/white-papers&apos} { name: &apos,Webinars&apos,, href: &apos,/webinars&apos} { name: &apos,Training&apos,, href: &apos,/training&apos} { name: &apos,Documentation&apos,, href: &apos,/docs&apos}
-;
+
       title: &apos,Support&apos,,;
         { nam,e: &apos,Help Center&apos,, href: &apos,/help&apos} { name: &apos,FAQ&apos,, href: &apos,/faq&apos} { name: &apos,Support&apos,, href: &apos,/support&apos} { name: &apos,System Status&apos,, href: &apos,/system-status&apos} { name: &apos,Request Quote&apos,, href: &apos,/request-quote&apos}
-;
+
   ]&apos;
   const legalLinks = []} { title: "Company",";
         { name: "About Us", href: "/about" } { name: "Our Story", href: "/about/story" } { name: "Team", href: "/about/team" } { name: "Careers", href: "/careers" } { name: "Partners", href: "/partners" } { name: "Contact", href: "/contact" }";
@@ -251,7 +251,7 @@ e: "About Us", href: "/about" } {;
                   <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/  >";
                   <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.746-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001 12.017.001z"/  >,;
           {/* comment */}
-;
+
           {footerSections.map((section) => (";
             <div key="{section.title}">";
               <h4 className="text - white font-semibold mb-4">{section.title}</h4>",";
@@ -268,7 +268,7 @@ e: "About Us", href: "/about" } {;
                 {section.links.map((link) => (";
                   <li key={link.name}">";
                     <Link to="{link.href}" className="text-gray-400 hover: text-white transition-colors text-sm">{link.name}
-;
+
           {footerSections.map((section) => (}";
               <h4 className="&apos;text-white" font-semibold mb-4&apos;>{section.title}&apos;</h4>";
               <ul className="&apos;space-y-2&apos;">;
@@ -287,11 +287,11 @@ e: "About Us", href: "/about" } {;
                       className="&apos;text-gray-400" hover: text-white transition-colors text-sm&apos,>{link.name}&apos,;
                       to = {link.href}";
                       className="text-gray-400 hover: text-white transition-colors text-sm">{link.name}
-;
+
                     </Link>;
                   </li>;
                 ))}
-;
+
               </ul>;
       </div> {/* comment */}";
       <div className="border-t border-gray-800">;";

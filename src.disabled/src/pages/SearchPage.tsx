@@ -121,7 +121,7 @@ export default function Page() {;
       icon: FileText;,
 }
   ];
-;
+
   const filterOptions = [{ id: 'ai - services', name: 'AI Services', icon: Brain, count: 0 },;
     { id: 'cloud - infrastructure', name: 'Cloud & Infrastructure', icon: Cloud, count: 0 },;
     { id: 'security', name: 'Security & Compliance', icon: Shield, count: 0 },;
@@ -131,7 +131,7 @@ export default function Page() {;
     { id: 'case - studies', name: 'Case Studies', icon: FileText, count: 0 },;
     { id: 'documentation', name: 'Documentation', icon: Code, count: 0 }
   ];
-;
+
   useEffect(() => {;
   // TODO: Add dependencies if needed;,
 }, []);
@@ -139,25 +139,25 @@ export default function Page() {;
       performSearch () ;,
 }
   }, [searchQuery, selectedFilters, sortBy]) ;
-;
+
   const performSearch = async () => {;
     setIsSearching(true) ;
-;
+
     // Simulate API call delay;
     await new Promise(resolve => setTimeout (resolve, 800) ) ;
-;
+
     let filtered = mockSearchResults.filter(result => {;
       const matchesQuery = result.title.toLowerCase () .includes(searchQuery.toLowerCase () ) ||;
                           result.description.toLowerCase () .includes(searchQuery.toLowerCase () ) ||;
                           result.tags.some(tag => tag.toLowerCase () .includes(searchQuery.toLowerCase () ) ) ;
-;
+
       const matchesFilters = selectedFilters.size === 0 ||;
                            selectedFilters.has(result.category.toLowerCase () .replace(/\s+/g, '-') ) ||;
                            selectedFilters.has(result.type) ;
-;
+
       return matchesQuery && matchesFilters;,
 }) ;
-;
+
     // Sort results;
     filtered.sort((a, b) => {;
       switch(sortBy) {;
@@ -169,18 +169,18 @@ export default function Page() {;
           return b.relevance - a.relevance;,
 }
     }) ;
-;
+
     setSearchResults(filtered) ;
     setIsSearching(false) ;,
 };
-;
+
   const toggleFilter = (filterType: keyof typeof activeFilters, value: string) => {;
     setActiveFilters(prev => ({;
       ...prev,;
       [filterType]: prev[filterType].includes (value) ? prev[filterType].filter(v => v !== value) : [...prev[filterType], value];,
 }) ) ;,
 };
-;
+
   const clearAllFilters = () => {;
     setActiveFilters({;
       type: [],;
@@ -190,7 +190,7 @@ export default function Page() {;
       rating: [];,
 }) ;,
 };
-;
+
   // Handle search;
   const handleSearch = useCallback((e: React.FormEvent) => {;
     e.preventDefault () ;
@@ -200,7 +200,7 @@ export default function Page() {;
       setTimeout(() => setIsSearching(false) , 1000) ;,
 }
   };
-;
+
   const toggleFilter = (filterId: string) => {;
     const newFilters = new Set(selectedFilters) ;
     if(newFilters.has (filterId) ) {;
@@ -210,7 +210,7 @@ export default function Page() {;
 }
     setSelectedFilters(newFilters) ;,
 };
-;
+
   // Clear all filters;
   const clearFilters = () => {;
     setSelectedCategory('all') ;
@@ -218,7 +218,7 @@ export default function Page() {;
     setSearchQuery('') ;
     setSearchParams({}) ;,
 };
-;
+
   const getResultIcon = (type: string) => {;
     switch(type) {;
       case 'service': return Zap;
@@ -229,7 +229,7 @@ export default function Page() {;
       default: return FileText;,
 }
   };
-;
+
   const getResultColor = (type: string) => {;
     switch(type) {;
       case 'service': return 'from - blue - 500 to - indigo - 500';
@@ -239,14 +239,14 @@ export default function Page() {;
       default: return 'from - gray - 500 to - slate - 500';,
 }
   };
-;
+
   // Calculate filter counts;
   filterOptions.forEach(filter => {;
     filter.count = mockSearchResults.filter (result =>;
       result.category.toLowerCase () .replace(/\s+/g, '-') === filter.id ||;
       result.type === filter.id) .length;,
 }) ;
-;
+
   return (<div  className="min - h-screen bg-gradient - to - br from - slate - 50 via - blue - 50 to - indigo -50">;
       {/* Header */}
       <div  className="bg-white border-b border-gray -200">;

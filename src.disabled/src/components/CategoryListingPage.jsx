@@ -36,7 +36,7 @@ import { Select, SelectTrigger, SelectContent, SelectItem } from '@/components/u
     // Cleanup function;,
 };,
 }, []);, []);
-;
+
         localStorage.setItem('category_selected_sort', selectedSort)}, [selectedSort]);
     useEffect(() => {;
   // TODO: Add dependencies if needed;
@@ -45,7 +45,7 @@ import { Select, SelectTrigger, SelectContent, SelectItem } from '@/components/u
     // Cleanup function;,
 };,
 }, []);, []);
-;
+
         localStorage.setItem('category_selected_filter', selectedFilter)}, [selectedFilter]);
     useEffect(() => {;
   // TODO: Add dependencies if needed;

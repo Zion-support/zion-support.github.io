@@ -1,6 +1,6 @@
 import React from 'react';
 import { SEO } from '../components/SEO';
-;
+
 const About: React.FC = () => {;
   return(<>;
       <SEO ;
@@ -21,7 +21,7 @@ const About: React.FC = () => {;
     </>;
   );,
 };
-;
+
   return (";
     <div className="min-h-screen bg-white">;
       <Header  /> {/* comment */}";
@@ -70,13 +70,13 @@ understandable, and beneficial for businesses of all sizes. We believe that;
               <div key="{index}" className="text-center">;";
                 <div className="text-5xl mb-4">{value.icon}</div>;";
                 <h3 className = "text-xl font-bold text-gray-900 mb-3"> {value.title}
-;
+
                 </h3>;";
                 <p className = "text-gray-600 leading-relaxed"> {value.description}";
         title="&apos;About" Us - Zion Tech Group&apos;&apos;        description="&apos;Learn" about Zion Tech Group&aposs mission, values, and commitment to delivering cutting-edge technology solutions.&apos;&apos,     />&apos;&apos,      <div className="&apos;min-h-screen" bg-white py-20&apos;>"&apos;&apos;        <div className="&apos;max-w-4xl" mx-auto px-4&apos;>"&apos;&apos;          <h1 className="&apos;text-4xl" font-bold text-gray-900 mb-8&apos;>About Zion Tech Group&apos;</h1>&apos;&apos,          <p className="&apos;text-lg" text-gray-600 mb-6&apos;>&apos;            Zion Tech Group is a leading technology solutions provider dedicated to helping &apos;            organizations transform their digital infrastructure and achieve their business goals.&apos;&apos,";
           <p className="&apos;text-lg" text-gray-600&apos;>&apos;            Our team of experts specializes in AI, cybersecurity, cloud infrastructure, and digital transformation services.&apos;&apos,          </p></div>;
 export default function About() {}
-;
+
   const values = []&apos;
   const team = [;
     {;
@@ -98,7 +98,7 @@ export default function About() {}
       image: "/images/team/elena-petrov.jpg";,
 }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">;
       {/* Hero Section */}
@@ -132,7 +132,7 @@ export default function About() {}
                 <h3 className = "text-2xl font-bold text-gray-900 mb-2"> {member.name}";
                 <p className="text-blue-600 font-semibold mb-4"> {member.role}";
                 <p className="text-gray-600 leading-relaxed"> {member.description}
-;
+
               Our Team&apos;
               Our Team,;
 Meet the passionate professionals who make Zion Tech Group a trusted technology partner.&apos;";
@@ -154,7 +154,7 @@ Meet the passionate professionals who make Zion Tech Group a trusted technology 
                   {member.role}&apos;
                   {member.description}&apos;
       {/* comment */}
-;
+
             <motion.div;
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -335,9 +335,9 @@ Key: milestones that mark our growth and commitment to technological excellence.
                       <div: className = "text-2xl font-bold text-blue-600 mb-2">"," {milestone.year}";
                       <h3: className="text-xl font-bold text-gray-900 mb-2">"," {milestone.title}";
                       <p: className="text-gray-600">"," {milestone.description}
-;
+
       </section> {/* comment */}
-;
+
               Our Journey;
               Key milestones that mark our growth and commitment to technological excellence.;";
           <div className = "relative"> {/* comment */}";
@@ -360,7 +360,7 @@ Key milestones that mark our growth and commitment to technological excellence.&
             <div className="&apos;absolute" left-1/2 transform -translate-x-px h-full w-0.5 bg-blue-200&apos;>&apos,</div>";
             <div className="&apos;space-y-12&apos;">;
               {milestones.map((milestone, index) => (&apos}
-;
+
                   index % 2 === 0 ? &apos;flex-row&apos; : &apos;flex-row-reverse&apos}"}>{/* comment */}&apos;";
                   <div className="&apos;absolute" left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-lg&apos;>&apos,</div>;
                   {/* comment */}";

@@ -6,11 +6,11 @@ icon: React.ComponentType<{ className?: string;,
   color: string;
   items: string[];
   description?: string}
-;
+
 interface ServicesOverviewProps extends React.PropsWithChildren<{}> {;
 
   services: Service[]}
-;
+
 const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {;
 
   return ();
@@ -72,7 +72,7 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {;
   transition: { duration: 0.3;,
 }
               }}
-;
+
               {/* Animated background */}";
               <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 via-zion-blue/5 to-zion-purple/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />;
 
@@ -124,10 +124,10 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {;
                 to={`/services/${service.category.toLowerCase().replace(/\s+/g,-')}`}";
                 className="relative inline-flex items-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover:from-zion-blue hover:to-zion-purple transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/30 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:ring-offset-2 focus:ring-offset-zion-slate-dark"`;
                 aria-label={`Learn more about ${service.category} services`}
-;
+
                 Explore {service.category}";
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" aria-hidden="true"  />              </Link>;
-;
+
               {/* Hover indicator */}";
               <div className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-zion-cyan to-zion-blue group-hover:w-full transition-all duration-700" />;
             </motion.div>;
@@ -136,5 +136,5 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {;
       </div>;
     </section>;
   )};
-;
+
 export default ServicesOverview}}}'"`;

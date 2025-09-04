@@ -1,5 +1,5 @@
 import React from 'react';
-;
+
 const BlogPage: React.FC = () => {;
   return (;
     <div className="min-h-screen bg-gray-50 py-20">;
@@ -24,5 +24,5 @@ const BlogPage: React.FC = () => {;
     </div>;
   );,
 };
-;
+
 export default BlogPage;

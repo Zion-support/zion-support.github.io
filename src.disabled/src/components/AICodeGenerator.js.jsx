@@ -2,7 +2,7 @@ import React, { useState, useCallback } from 'react';''';
 import { motion, AnimatePresence } from 'framer-motion';''';
 import { Code, Sparkles, Download, TestTube, FileText, Settings, Zap, Shield, Gauge, Wrench, Eye, Trash2, Copy, CheckCircle, AlertCircle, Info, Loader2 } from 'lucide-react';
 import { useAICodeGeneration } from "../hooks/useAICodeGeneration.jsx";
-;
+
 export const AICodeGenerator = () => {;
     const { trackEvent } = useAnalytics({        enableTracking: true,;
         enableUserBehaviorTracking: true;,
@@ -79,7 +79,7 @@ export const AICodeGenerator = () => {;
     // Copy code to clipboard;
     const copyToClipboard = useCallback(async (code) => {}
         try {}
-;
+
             await navigator.clipboard.writeText(code)";
             setCopied(true);
             setTimeout(() => setCopied(false), 2000)";
@@ -141,9 +141,9 @@ const handleClearHistory = useCallback(() => {}
                 ? "border-purple-500 text-purple-600 dark: text-purple-400"""""""",;
                 : "border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"}"}>"";
               <Icon className="w-4 h-4"/">"              {label}
-;
+
             </button>) ) }
-;
+
         </nav>";
       </div>;
 """;
@@ -151,7 +151,7 @@ const handleClearHistory = useCallback(() => {}
       <div className="p-6">""""";
         <AnimatePresence mode="wait">""""";
           {activeTab === "generate" && (<motion.div key="generate" initial = {}
-;
+
   { opacity: 0, y: 20}} animate = {}";
   { opacity: 1, y: 0}} exit = {}
   { opacity: 0, y: -20 """"">;
@@ -240,7 +240,7 @@ const handleClearHistory = useCallback(() => {}
                   {showAdvanced ? "Hide" : "Show"} Advanced Options,;
                 </button>;
                 {/* comment */}
-;
+
                 {showAdvanced && (<motion.div initial = {}";
   { opacity: 0, height: 0}} animate = {}
   { opacity: 1, ";
@@ -269,11 +269,11 @@ const handleClearHistory = useCallback(() => {}
                       <Sparkles className="w-5 h-5"/">";
                       Generate Code,;
 </>) }
-;
+
                 </button>;
               </form>;
               {/* comment */}
-;
+
               {generatedCode && (<motion.div initial = {}";
   { opacity: 0, y: 20}} animate = {}
   { opacity: 1, y: 0 """"">;
@@ -303,7 +303,7 @@ const handleClearHistory = useCallback(() => {}
             </motion.div>)}""";
 """"";
           {activeTab === "analyze" && (<motion.div key="analyze" initial = {}
-;
+
   { opacity: 0, y: 20}} animate = {}";
   { opacity: 1, y: 0}} exit = {}
   { opacity: 0, y: -20 """"">;
@@ -323,10 +323,10 @@ const handleClearHistory = useCallback(() => {}
                     <Eye className="w-5 h-5"/">";
                     Analyze Code,;
 </>) }
-;
+
               </button>;
               {/* comment */}
-;
+
               {codeAnalysis && (<motion.div initial = {}";
   { opacity: 0, y: 20}} animate = {}
   { opacity: 1, y: 0 """"">;
@@ -351,7 +351,7 @@ const handleClearHistory = useCallback(() => {}
                             </div>"";
                             <div className="text-sm text-gray-600 dark:text-gray-400">{label}</div>;
                           </div>)}
-;
+
                     return null})}";
                   </div>;
 """;
@@ -365,7 +365,7 @@ const handleClearHistory = useCallback(() => {}
                             {key.replace(/([A-Z])/g, $1").trim()}";
                           </div>;
                         </div>))}
-;
+
                     </div>";
                   </div>;
 """;
@@ -382,19 +382,19 @@ const handleClearHistory = useCallback(() => {}
                                 {issue.message}""";
                               </div>"";
                               {issue.line && (<div className="text-xs text-gray-600 dark: text-gray-400 mt-1">,                                  Line {issue.line}
-;
+
                                 </div>) }
-;
+
                             </div>;
                           </div>) ) }
-;
+
                       </div>;
                     </div>)}";
                 </motion.div>)}
             </motion.div>)}""";
 """"";
           {activeTab === "optimize" && (<motion.div key="optimize" initial = {}
-;
+
   { opacity: 0, y: 20}} animate = {}";
   { opacity: 1, y: 0}} exit = {}
   { opacity: 0, y: -20 """"">;
@@ -425,7 +425,7 @@ const handleClearHistory = useCallback(() => {}
             </motion.div>)}""";
 """"";
           {activeTab === "tests" && (<motion.div key="tests" initial = {}
-;
+
   { opacity: 0, y: 20}} animate = {}";
   { opacity: 1, y: 0}} exit = {}
   { opacity: 0, y: -20 """"">;
@@ -447,7 +447,7 @@ const handleClearHistory = useCallback(() => {}
             </motion.div>)}""";
 """"";
           {activeTab === "docs" && (<motion.div key="docs" initial = {}
-;
+
   { opacity: 0, y: 20}} animate = {}";
   { opacity: 1, y: 0}} exit = {}
   { opacity: 0, y: -20 """"">;
@@ -467,10 +467,10 @@ const handleClearHistory = useCallback(() => {}
                 Generate Documentation,;
               </button>,;
             </motion.div>) }
-;
+
         </AnimatePresence>;
         {/* comment */}
-;
+
         {suggestions.length > 0 && (<motion.div initial = {}";
   { opacity: 0, y: 20}} animate = {}
   { opacity: 1, y: 0 """"">;
@@ -522,12 +522,12 @@ const handleClearHistory = useCallback(() => {}
                     </button>;
                   </div>,;
                 </motion.div>) ) }
-;
+
             </div>;
           </motion.div>) }
-;
+
         {/* comment */}
-;
+
         {history.length > 0 && (<motion.div initial = {}";
   { opacity: 0, y: 20}} animate = {}
   { opacity: 1, y: 0 """"">;
@@ -569,7 +569,7 @@ const handleClearHistory = useCallback(() => {}
                     </button>;
                   </div>,;
                 </div>) ) }
-;
+
             </div>;
           </motion.div>) }";
       </div>"";

@@ -112,7 +112,7 @@ export default function AdvancedServiceInnovationHub() {return (";
 }
     // comment;
     const innovationTrends = []{}
-;
+
 &apos;&apos,;
             id: &apos,quantum-supremacy&apos,"&apos,;
             title: &apos,Quantum Supremacy & Commercialization&apos,"&apos,;
@@ -168,7 +168,7 @@ export default function AdvancedServiceInnovationHub() {return (";
             keyPlayers[&apos;Neuralink&apos,Kernel&apos,Medical Device Companies&apos],";
             technologies[&apos;Neural Interfaces&apos,Signal Processing&apos,AI/ML&apos],;
             status: &apos,Emerging&apos}
-;
+
     ]&apos;&apos,"""""""";
 """;
     const [selectedCategory, setSelectedCategory] = useState("all")";
@@ -285,19 +285,19 @@ export default function AdvancedServiceInnovationHub() {return (";
             keyPlayers["Neuralink", Kernel",Medical Device Companies"], ";
             technologies["Neural Interfaces", Signal Processing",AI / ML"], ",;
             status: "Emerging"}
-;
+
     ]    const filteredTrends = useMemo(() => {}
-;
+
         return innovationTrends.filter(trend => {}
-;
+
             const;const;const matchesSearch = trend.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                 trend.description.toLowerCase().includes(searchTerm.toLowerCase());,
 }
             return matchesCategory && matchesImpact && matchesStatus && matchesSearch})}, [selectedCategory, selectedImpact, selectedStatus, searchTerm]);,
 }    const getImpactColor = (impact) => {}
-;
+
         switch (impact) {}
-;
+
             case "High": return "bg-red-100 text-red-800";
             case "Medium": return "bg-yellow-100 text-yellow-800";
             case "Low": return "bg-green-100 text-green-800;
@@ -305,18 +305,18 @@ export default function AdvancedServiceInnovationHub() {return (";
             case &apos;Medium&apos;: return &apos;bg-yellow-100 text-yellow-800&apos;
             case &apos;Low&apos;: return &apos;bg-green-100 text-green-800&apos;
             default: return &apos,bg-gray-100 text-gray-800&apos}
-;,
+
 }&apos;&apos    const getStatusColor = (status) => {}
-;
+
         switch (status) {}
-;
+
             case &apos;Emerging&apos;: return &apos;bg-blue-100 text-blue-800&apos;
             case &apos;Growing&apos;: return &apos;bg-green-100 text-green-800&apos;
             case &apos;Mature&apos;: return &apos;bg-orange-100 text-orange-800&apos;
             case &apos;Disruptive&apos;: return &apos;bg-purple-100 text-purple-800&apos    const getCategoryIcon = (category) => {}
-;
+
         switch(category) {}
-;
+
 &apos;&apos,";
 &apos;&apos,&apos;&apos,";
             case &apos;quantum&apos;: return&apos;&apos; <Atom className="&apos;w-5" h-5&apos;       />&apos;&apos;&apos,";
@@ -325,7 +325,7 @@ export default function AdvancedServiceInnovationHub() {return (";
             case &apos;green-tech&apos;: return&apos;&apos; <Leaf className="&apos;w-5" h-5&apos;       />&apos;&apos;&apos,";
             case &apos;biotech-ai&apos;: return&apos;&apos; <Dna className="&apos;w-5" h-5&apos;       />";&apos;&apos;";
             default: return&apos,&apos, <Cpu className = "&apos,w-5" h-5&apos,       />}
-;,
+
 }&apos;&apos;&apos,";
     const categories = []";&apos;&apos;";
     return (&apos;&apos;<div className="&apos;max-w-7xl" mx-auto p-6&apos;>;
@@ -334,9 +334,9 @@ export default function AdvancedServiceInnovationHub() {return (";
             case "Medium": return "bg - yellow-100 text-yellow-800",;
             case "Low": return "bg - green-100 text-green-800",;
             default: return "bg-gray-100 text-gray-800"}
-;,
+
 }
-;
+
             case "Emerging": return "bg-blue-100 text-blue-800";
             case "Growing": return "bg-green-100 text-green-800";
             case "Mature": return "bg-orange-100 text-orange-800";
@@ -353,7 +353,7 @@ export default function AdvancedServiceInnovationHub() {return (";
             case "green - tech": return <Leaf className="w-5 h-5"  />",";
             case "biotech-ai": return <Dna className="w-5 h-5"  />";";
             default: return <Cpu className = "w-5 h-5"  />}
-;,
+
 }";";
     const categories = [];
     return (";
@@ -370,12 +370,12 @@ export default function AdvancedServiceInnovationHub() {return (";
     return (";
     <div className = "max-w-7xl mx-auto p-6">;
       {/* comment */}
-;
+
       <motion.div initial = {}
-;
+
   { opacity: 0>;
 y: 20}} animate = {}
-;
+
   { opacity: 1,;
 y: 0 ",">;
 ""}} className="mb-8">"";";
@@ -390,18 +390,18 @@ y: 0 ",">;
           </div>"";";
           <div className = "flex gap-2">"""{["trends",roadmap",insights"].map((mode) => (<Button key="{mode}" variant="{viewMode" === mode ? "default" : "outline"} size="sm" onClick="{()" => setViewMode(mode)}>"""{mode === "trends" && <TrendingUp className="w-4 h-4 mr-2"  />}"""{mode === "roadmap" && <Rocket className="w-4 h-4 mr-2"  />}"""{mode === "insights" && <Lightbulb className="w-4 h-4 mr-2"  />}
                 {mode.charAt(0).toUpperCase() + mode.slice(1)}
-;
+
               </Button>))}
-;
+
           </div>;
       </motion.div>";
 "{/* comment */}""{viewMode = == "trends" && (<>{/* comment */}";
 ""}} transition="{{" delay: 0.1 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">"";";
             <div className = "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-4">",";
                 <label className="block text-sm font-medium text-zion-slate-dark mb-2">Category</label>","                <select value="{selectedCategory}" onChange="{(e)" => setSelectedCategory(e.target.value)} className="w-full p-2 border border-zion-slate-light rounded-md">{categories.map(category => (<option key="{category.id}" value="{category.id}"> {category.name}
-;
+
                     </option>) ) }
-;
+
                 </select>;";
                 <label className="block text-sm font-medium text-zion-slate-dark mb-2">Impact</label>"";";
                 <select value = "{selectedImpact}" onChange="{(e)" => setSelectedImpact(e.target.value)} className="w - full p-2 border border-zion-slate-light rounded-md">",;
@@ -420,7 +420,7 @@ y: 0 ",">;
                 <Input placeholder="Search trends..." value="{searchTerm}" onChange="{(e)" => setSearchTerm(e.target.value)} className="w-full" />;
           </motion.div> {/* comment */}";
 ""}} transition = "{{" delay: 0.2 }} className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">{filteredTrends.map((trend, index) => (<motion.div key="{trend.id}" initial = {}
-;
+
   x: index % 2 === 0 ? -20 : 20}} animate = {}">;
   x: 0","}} transition="{{" delay: 0.1 * index }}>"";";
                 <Card className="h-full hover: shadow-lg transition-shadow">",;
@@ -434,11 +434,11 @@ y: 0 ",">;
                             <Badge className="{getImpactColor(trend.impact)}"> {trend.impact} Impact;
                             </Badge>;";
                             <Badge className = "{getStatusColor(trend.status)" }> {trend.status}
-;
+
                   </CardHeader>;
                   <CardContent>"";";
                     <p className = "text-zion-slate-light mb-4"> {trend.description}
-;
+
                     </p>"";";
                     <div className="space-y-3">"";";
                       <div className="flex justify-between items-center">"";";
@@ -453,11 +453,11 @@ y: 0 ",">;
                         <span className="text-sm font-medium text-zion-cyan">{trend.investment}</span>;";
                         <span className = "text-sm text-zion-slate-light">Key Technologies: </span>",";
                         <div className="flex flex-wrap gap-1 mt-1">""{trend.technologies.slice(0, 3).map((tech, idx) => (<Badge key="{idx}" variant="outline" className="text-xs"> {tech}
-;
+
                             </Badge>) ) }";
                         <span className="text-sm text-zion-slate-light">Key Players: </span>",";
                         <div className="flex flex-wrap gap-1 mt-1">""{trend.keyPlayers.slice(0, 3).map((player, idx) => (<Badge key="{idx}" variant="outline" className="text-xs"> { opacity: 0, y: 20}} animate = {}
-;
+
   { opacity: 1,;
   y: 0 &apos,&apos,",;
 &apos,&apos,"&apos}} className="&apos;mb-8&apos;">"&apos;&apos,&apos;&apos;";
@@ -471,7 +471,7 @@ y: 0 ",">;
           </div>&apos;&apos,;
           &apos;&apos,&apos;&apos,;
           <div className="&apos;flex" gap-2&apos;>"&apos;&apos,&apos;&apos {[&apos;trends&apos,roadmap&apos,insights&apos].map((mode) => (&apos}&apos;<Button key="{mode}" variant="{viewMode" === mode ? &apos;default&apos; : &apos;outline&apos} size="&apos;sm&apos;" onClick="{()" => setViewMode(mode)}>&apos;&apos,&apos;&apos,{mode === &apos;trends&apos; &&"}&apos; <TrendingUp className="&apos;w-4" h-4 mr-2&apos;       />}&apos;&apos,&apos;&apos,{mode === &apos;roadmap&apos; &&"}&apos; <Rocket className="&apos;w-4" h-4 mr-2&apos;       />}&apos;&apos,&apos;&apos,{mode === &apos;insights&apos; &&"}&apos; <Lightbulb className="&apos;w-4" h-4 mr-2&apos;       />}
-;
+
                 {mode.charAt(0).toUpperCase() + mode.slice(1)}&apos;
       </motion.div>&apos,;
 "&apos {/* comment */}&apos;&apos,{viewMode === &apos;trends&apos; && (&apos}&apos;<>{/* comment */}";
@@ -498,7 +498,7 @@ y: 0 ",">;
                 <label className="block text-sm font-medium text-zion-slate-dark mb-2">Category</label>""",;
                 <select value="{selectedCategory}" onChange="{(e)" => setSelectedCategory(e.target.value)} className="w-full p-2 border border-zion-slate-light rounded-md">{categories.map(category => (<option key="{category.id}" value="{category.id}">;
                       {category.name}
-;
+
                 </select>;
               &apos;&apos,&apos;&apos;";
                 <label className="&apos;block" text-sm font-medium text-zion-slate-dark mb-2&apos;>Impact&apos;</label>&apos;&apos,&apos;&apos,";
@@ -534,7 +534,7 @@ y: 0 ",">;
           </motion.div>;
           {/* comment */}";
 &apos;&apos,&apos}} transition="{{" delay: 0.2 }} className="&apos;grid" grid-cols-1 lg: grid-cols-2 gap-6 mb-8&apos,>{filteredTrends.map((trend, index) => (&apos}&apos;<motion.div key = "{trend.id}" initial = {}
-;
+
   { opacity: 0,">;
   x: 0",&apos}} transition="{{" delay: 0.1 * index }}>&apos;&apos,&apos;&apos,";
                 <Card className="&apos;h-full" hover: shadow-lg transition-shadow&apos,>"&apos,&apos,;
@@ -549,7 +549,7 @@ y: 0 ",">;
                           </CardTitle>&apos;&apos,&apos;&apos,";
                           <div className="&apos;flex" gap-2 mt-2&apos;>&apos,";
 """"}} transition = "{{" delay: 0.2 }} className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">{filteredTrends.map((trend, index) => (<motion.div key="{trend.id}" initial = {}
-;
+
   { opacity: 0, x: index % 2 === 0 ? -20 : 20}} animate = {}";
   x: 0","}} transition="{{" delay: 0.1 * index }}>"";
                 <Card className="h-full hover: shadow-lg transition-shadow">""";
@@ -567,7 +567,7 @@ y: 0 ",">;
                             </Badge>";
                             <Badge className="{getStatusColor(trend.status)" }>;
                               {trend.status}
-;
+
                   </CardHeader>;
                   <CardContent>&apos;&apos,&apos;&apos,";
                     <p className="&apos;text-zion-slate-light" mb-4&apos;>;
@@ -612,16 +612,16 @@ y: 0 ",">;
                         <span className="text-sm text-zion-slate-light">Key Players: </span>""",;
                         <div className="flex flex-wrap gap-1 mt-1">""""{trend.keyPlayers.slice(0, 3).map((player, idx) => (<Badge key="{idx}" variant="outline" className="text-xs">;
                               {player}
-;
+
                   </CardContent>;
                 </Card>;
               </motion.div>) ) }
-;
+
           </motion.div>;
         </>) }";
       {/* comment */}"{viewMode = == "roadmap" && (<motion.div initial = {}";
 ""}} transition="{{" delay: 0.1 }} className="space-y-6">{futureRoadmap.map((roadmap, index) => (<motion.div key="{roadmap.id}" initial = {}
-;
+
   x: -20}} animate = {}">;
               <Card className="hover: shadow-lg transition-shadow">",";
                   <div className="flex items-start justify-between">",",;
@@ -643,9 +643,9 @@ y: 0 ",">;
                         Key Milestones",";
                       </h4>",";
                       <ul className="space-y-2">""{roadmap.milestones.map((milestone, idx) => (<li key="{idx}" className="text-sm text-zion-slate-light flex items-start gap-2">"";"                            <div className = "w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0"></div> {milestone}
-;
+
                           </li>) ) }
-;
+
                       </ul>;";
                         <Shield className="w - 4 h-4 text-orange-500"  />,;
                         Challenges"";";
@@ -676,7 +676,7 @@ y: 0 ",">;
                           {roadmap.category.toUpperCase()}&apos,;
       {/* comment */}"{viewMode = == "roadmap" && (<motion.div initial = {}";
 """"}} transition="{{" delay: 0.1 }} className="space-y-6">{futureRoadmap.map((roadmap, index) => (<motion.div key="{roadmap.id}" initial = {}
-;
+
   { opacity: 0, x: -20}} animate = {}";
               <Card className="hover: shadow-lg transition-shadow">"";
                   <div className="flex items-start justify-between">"";
@@ -710,7 +710,7 @@ y: 0 ",">;
                       <ul className="space-y-2">""""{roadmap.milestones.map((milestone, idx) => (<li key="{idx}" className="text-sm text-zion-slate-light flex items-start gap-2">"";
                             <div className="w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0"></div>;
                             {milestone}
-;
+
                       </ul>";
                         <Shield className="&apos;w-4" h-4 text-orange-500&apos;       />";
                         Challenges&apos;&apos,&apos;&apos;";
@@ -730,7 +730,7 @@ y: 0 ",">;
                       <ul className="space-y-2">""""{roadmap.opportunities.map((opportunity, idx) => (<li key="{idx}" className="text-sm text-zion-slate-light flex items-start gap-2">"";
                             <div className="w-2 h-2 bg-yellow-500 rounded-full mt-2 flex-shrink-0"></div>;
                             {opportunity}
-;
+
         </motion.div>) }";
       {/* comment */}"{viewMode === "insights" && (<motion.div initial = {}">;
 ""}} transition="{{" delay: 0.1 }} className="space-y-6">"";";
@@ -958,14 +958,14 @@ of emerging technologies and capitalize on future opportunities."";
     </div>)};
 export default AdvancedServiceInnovationHub;,
 }}}}}}
-;
+
 export { AdvancedServiceInnovationHub };
-;
+
 export { AdvancedServiceInnovationHub };
-;
+
 export { AdvancedServiceInnovationHub };
-;
+
 export { AdvancedServiceInnovationHub };
-;
+
 export { AdvancedServiceInnovationHub };
 ))))))))))))))))))))))))))))))))))))))))))))))))))))))

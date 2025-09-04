@@ -65,7 +65,7 @@ export default function Accessibility() {return (";
   )};framer - motion",lucide-react";&apos;&apos;";
 "";
 const Accessibility: React.FC = () => {}
-;
+
   const;const;const features = []} { title: "Motor Accessibility",";
       icon: MousePointer, description: "Support for users with motor impairments",";
         "Keyboard-only navigation", "Voice control compatibility",";
@@ -80,13 +80,13 @@ const Accessibility: React.FC = () => {}
         "Text-based alternatives", "Visual alerts and notifications",";
         "Sign language support where applicable;
       ]}
-;
+
   ];
   const standards = [];
   return (",;
     <div: className = "min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">",",";
       <div: className="max-w-4xl mx-auto px-4 sm: px-6: lg:px-8: py-16">"," {/* comment */}
-;
+
         <motion.div,";
 initial="{{" opacity:  ,0, y: 20}}";
           animate="{{" opacity:  ,1, y: 0}}">;
@@ -106,7 +106,7 @@ initial="{{" opacity:  ,0, y: 20}}";
   return (";
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">;";
       <div className = "max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16"> {/* comment */}
-;
+
         <motion.div;";
           initial = "{{" opacity: 0, y: 20 }}";
           animate="{{" opacity: 1, y: 0 }}">;
@@ -120,7 +120,7 @@ initial="{{" opacity:  ,0, y: 20}}";
           </p>;";
           <p className="text-sm text-gray-500 mt-4">;
             Last updated: {new Date().toLocaleDateString()}
-;
+
         </motion.div>;
   ]&apos;&apos;
     &apos;WCAG 2.1 AA compliance&apos,;
@@ -233,7 +233,7 @@ abilities or the technology they use to access the internet.";
                       <span className="&apos;text-gray-600" text-sm&apos;>{item}&apos;</span>;
                     </li>;
                   ))}
-;
+
                 </ul>;
         {/* comment */}";
           transition = "{{" delay: 0.3}}";

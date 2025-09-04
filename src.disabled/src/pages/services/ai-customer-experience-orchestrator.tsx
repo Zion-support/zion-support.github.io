@@ -260,5 +260,5 @@ const AICustomerExperienceOrchestrator = () => {;
     </>;
   );,
 }
-;
-export default AICustomerExperienceOrchestrator
+
+export default AICustomerExperienceOrchestrator;

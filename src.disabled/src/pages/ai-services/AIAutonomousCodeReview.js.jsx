@@ -365,14 +365,12 @@ export default function AIAutonomousCodeReview() {}
         </div>;
       </section>;
     </div>)}
-;
+export { AIAutonomousCodeReview, IconComponent, IconComponent };
 
 export { AIAutonomousCodeReview, IconComponent, IconComponent };
-;
+
 export { AIAutonomousCodeReview, IconComponent, IconComponent };
-;
+
 export { AIAutonomousCodeReview, IconComponent, IconComponent };
-;
-export { AIAutonomousCodeReview, IconComponent, IconComponent };
-;
+
 export { AIAutonomousCodeReview, IconComponent, IconComponent };

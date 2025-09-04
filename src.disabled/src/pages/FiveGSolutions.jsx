@@ -47,11 +47,11 @@ import {}
   Router,''';
   Tower'''';,
 } from 'lucide-react';
-;
+
     technologies["5G Networks", "Industrial IoT", "AI Analytics", "Predictive Maintenance"];,
 }
 ];
-;
+
 const fiveGTechnologies = [];
   {}
 ";
@@ -89,7 +89,7 @@ const fiveGTechnologies = [];
     useCase: "Service Isolation","";
     reliability: "High";
 ];
-;
+
 const successStories = [];
   {}
 ";
@@ -121,7 +121,7 @@ const successStories = [];
     results: "Enhanced telemedicine capabilities, improved patient monitoring, reduced hospital visits","";
     logo: "RHN";
 ];
-;
+
 const processSteps = [];
   {}
 ";
@@ -155,7 +155,7 @@ const processSteps = [];
     icon: Gauge,"";
     duration: "4-8 weeks";
 ];
-;
+
 const fiveGBenefits = [];
   {}
 ";
@@ -190,7 +190,7 @@ const fiveGBenefits = [];
     examples["Customized services", "Service isolation", "Quality guarantees"];,
 }
 ];
-;
+
 export default function FiveGSolutions() {}
 ';
 '';
@@ -499,7 +499,7 @@ export default function FiveGSolutions() {}
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'''`'`'`;
                     : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````;,
 }`}
-;
+
                 {category}
               </button>) ) }
           </div>";
@@ -522,7 +522,7 @@ export default function FiveGSolutions() {}
 }}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 hover:border-zion - cyan / 40 transition - all duration - 300 cursor -pointer";
                 onClick={ () => setSelectedSolution(solution) }
-;
+
 ";,
 }}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer";
@@ -688,14 +688,12 @@ export default function FiveGSolutions() {}
       </section>;
     </div>;
   )}
-;
+export { FiveGSolutions };
 
 export { FiveGSolutions };
-;
+
 export { FiveGSolutions };
-;
+
 export { FiveGSolutions };
-;
-export { FiveGSolutions };
-;
+
 export { FiveGSolutions };

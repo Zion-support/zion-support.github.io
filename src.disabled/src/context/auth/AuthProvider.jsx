@@ -1,6 +1,4 @@
 import React, { useEffect } from "react";
-;
-;
 import { AuthContext } from "./AuthContext";
 import { cleanupAuthState } from "../../utils/authUtils";
 import { useNavigate, useLocation } from 'react-router-dom';
@@ -136,12 +134,12 @@ export const AuthProvider = ({ children }) => {}
 ";
                         // // // // // // // // console.error("Error fetching user profile:", error);
                         setUser(null);
-;
+
                 catch(error) {;
 ";
                     // // // // // // // // console.error("Error fetching user profile:", error);
                     setUser(null);
-;
+
                         console.error("Error fetching user profile:", error);                        setUser(null)}
                 }
                 catch(error) {;

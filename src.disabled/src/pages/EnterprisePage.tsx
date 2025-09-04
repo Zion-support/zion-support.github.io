@@ -22,7 +22,7 @@ import { ;
   Network,;
   Server;,
 } from 'lucide-react';
-;
+
 export function EnterprisePage() {;
   const enterpriseSolutions = [;
     {;
@@ -54,7 +54,7 @@ export function EnterprisePage() {;
       industries: ['Manufacturing', 'Retail', 'Banking', 'Insurance'];,
 }
   ];
-;
+
   const enterpriseFeatures = [;
     {;
       icon: Lock,;
@@ -87,7 +87,7 @@ export function EnterprisePage() {;
       description: 'Track record of successful enterprise implementations with measurable business outcomes.';,
 }
   ];
-;
+
   const industries = [;
     {;
       name: 'Financial Services',;
@@ -126,7 +126,7 @@ export function EnterprisePage() {;
       solutions: ['DevOps Automation', 'API Management', 'Microservices', 'Cloud Migration'];,
 }
   ];
-;
+
   const testimonials = [;
     {;
       name: 'Sarah Johnson',;
@@ -150,7 +150,7 @@ export function EnterprisePage() {;
       rating: 5;,
 }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-zion-slate-dark">;
       {/* Hero Section */}
@@ -390,5 +390,5 @@ export function EnterprisePage() {;
     </div>;
   );,
 }
-;
+
 export default EnterprisePage;

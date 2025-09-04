@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Building2, Shield, Globe, Zap, Users, BarChart3, Lock } from 'lucide-react';
-;
+
 const EnterpriseSolutions = () => {;
     const solutions = [;
         {;
@@ -237,15 +237,15 @@ const EnterpriseSolutions = () => {;
     </div>;
   );,
 };
-;
+
 export default EnterpriseSolutions;
-;
+
 export { EnterpriseSolutions, Icon, Icon, Icon };
-;
+
 export { EnterpriseSolutions, Icon, Icon, Icon };
-;
+
 export { EnterpriseSolutions, Icon, Icon, Icon };
-;
+
 export { EnterpriseSolutions, Icon, Icon, Icon };
-;
+
 export { EnterpriseSolutions, Icon, Icon, Icon };

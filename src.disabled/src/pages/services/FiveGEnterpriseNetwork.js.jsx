@@ -29,14 +29,12 @@ const FiveGEnterpriseNetwork = () => {}
   );,
 };
 export default FiveGEnterpriseNetwork;
-;
+export { FiveGEnterpriseNetwork };
 
 export { FiveGEnterpriseNetwork };
-;
+
 export { FiveGEnterpriseNetwork };
-;
+
 export { FiveGEnterpriseNetwork };
-;
-export { FiveGEnterpriseNetwork };
-;
+
 export { FiveGEnterpriseNetwork };

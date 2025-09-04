@@ -28,13 +28,13 @@ export default function Page() {}
     </motion.div>)};
 export default LazyWrapper;,
 }}}
-;
+
 export { LazyWrapper };
-;
+
 export { LazyWrapper };
-;
+
 export { LazyWrapper };
-;
+
 export { LazyWrapper };
-;
+
 export { LazyWrapper, Page };

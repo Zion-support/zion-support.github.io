@@ -18,7 +18,7 @@ import { ;
   Target,;
   Lightbulb;,
 } from 'lucide-react';
-;
+
 const features = [;
   {;
     icon: Brain,;
@@ -45,7 +45,7 @@ const features = [;
     benefits: ['Pattern discovery', 'Anomaly detection', 'Data quality', 'Insight generation'];,
 }
 ];
-;
+
 const useCases = [;
   {;
     industry: 'E-commerce',;
@@ -76,7 +76,7 @@ const useCases = [;
     metrics: ['70% reduction in downtime', '45% lower maintenance costs', '95% equipment reliability'];,
 }
 ];
-;
+
 const technologies = [;
   { name: 'TensorFlow', description: 'Advanced deep learning framework', icon: Code },;
   { name: 'PyTorch', description: 'Flexible machine learning library', icon: Brain },;
@@ -85,7 +85,7 @@ const technologies = [;
   { name: 'AWS SageMaker', description: 'Cloud-based ML platform', icon: Cloud },;
   { name: 'Google Cloud AI', description: 'Enterprise AI services', icon: Globe }
 ];
-;
+
 export default function AIAnalytics() {;
   return (;
     <div className="min-h-screen bg-futuristic">;

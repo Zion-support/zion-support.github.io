@@ -204,7 +204,7 @@ import { ;
   Repeat as RepeatIcon,;
   Repeat1 as Repeat1Icon;,
 } from 'lucide-react';
-;
+
 const AIServices: React.FC = () => {;
   const aiServiceCategories = [;
     {;
@@ -268,7 +268,7 @@ const AIServices: React.FC = () => {;
       ];,
 }
   ];
-;
+
   const featuredAIServices = [;
     {;
       title: "AI Autonomous Business Orchestrator",;
@@ -345,7 +345,7 @@ const AIServices: React.FC = () => {;
       color: "from-green-400 to-emerald-500";,
 }
   ];
-;
+
   const aiSolutions = [;
     {;
       name: "Machine Learning Model Development",;
@@ -396,7 +396,7 @@ const AIServices: React.FC = () => {;
       color: "from-red-400 to-pink-500";,
 }
   ];
-;
+
   const pricingTiers = [;
     {;
       name: "AI Starter",;
@@ -452,7 +452,7 @@ const AIServices: React.FC = () => {;
       cta: "Contact Sales";,
 }
   ];
-;
+
   return (;
     <>;
       <Helmet>;
@@ -766,5 +766,5 @@ const AIServices: React.FC = () => {;
     </>;
   );,
 };
-;
+
 export default AIServices;

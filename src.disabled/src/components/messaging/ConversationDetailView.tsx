@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { format } from 'date-fns';
-;
+
 export default function Page() {;
 , [activeConversation, loadMessages]); // Changed activeConversation?.id to activeConversation;
   ;
@@ -9,7 +9,7 @@ export default function Page() {;
 }, []);
     scrollToBottom();,
 }, [activeMessages]);
-;
+
   const scrollToBottom = () => {;
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });,
 };
@@ -50,7 +50,7 @@ export default function Page() {;
   ;
   const hasContextData = activeConversation.context_data && ;
     (activeConversation.context_data.title || activeConversation.context_data.description);
-;
+
   return (<div className="flex-1 flex flex-col h-full">;
       {/* Header */}
       <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/30">;

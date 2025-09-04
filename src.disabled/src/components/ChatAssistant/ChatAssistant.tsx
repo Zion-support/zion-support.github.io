@@ -19,7 +19,7 @@ export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {
   ;
   ;
   ;
-;,
+
 };    setMessages(prev => [...prev, userMessage]);
     setInputMessage('');
     // Simulate AI response;
@@ -34,7 +34,7 @@ export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {
   ;
   ;
   ;
-;,
+
 };
       setMessages(prev => [...prev, aiMessage]);,
 }, 1000);,

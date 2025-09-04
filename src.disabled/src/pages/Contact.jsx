@@ -10,7 +10,7 @@ import {;
   Building,;
   MessageSquare;,
 } from 'lucide-react';
-;
+
 export default function Contact() {;
   const [formData, setFormData] = useState({;
     firstName: '',;
@@ -23,7 +23,7 @@ export default function Contact() {;
 });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
-;
+
   const contactMethods = [;
     {;
       icon: Phone,;
@@ -54,7 +54,7 @@ export default function Contact() {;
       action: null;,
 }
   ];
-;
+
   const services = [;
     "AI & Machine Learning",;
     "Cloud Solutions",;
@@ -64,7 +64,7 @@ export default function Contact() {;
     "Consulting",;
     "Other";
   ];
-;
+
   const handleInputChange = (e) => {;
     const { name, value } = e.target;
     setFormData(prev => ({;
@@ -72,7 +72,7 @@ export default function Contact() {;
       [name]: value;,
 }));,
 };
-;
+
   const handleSubmit = async (e) => {;
     e.preventDefault();
     setIsSubmitting(true);
@@ -97,7 +97,7 @@ export default function Contact() {;
 });,
 }, 3000);,
 };
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       {/* Hero Section */}
@@ -410,12 +410,10 @@ export default function Contact() {;
     </div>;
   );,
 }
-;
+export { Contact };
 
 export { Contact };
-;
+
 export { Contact };
-;
-export { Contact };
-;
+
 export { Contact };

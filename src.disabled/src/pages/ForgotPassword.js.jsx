@@ -199,14 +199,12 @@ export default function ForgotPassword() {}
       </div>;
       ;
     </>)}
-;
+export { ForgotPassword };
 
 export { ForgotPassword };
-;
+
 export { ForgotPassword };
-;
+
 export { ForgotPassword };
-;
-export { ForgotPassword };
-;
+
 export { ForgotPassword };

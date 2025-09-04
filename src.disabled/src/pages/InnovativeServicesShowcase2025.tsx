@@ -7,7 +7,7 @@ import { ;
   ArrowRight, ExternalLink, Phone, Mail, Zap, Target, Clock, Globe, Check;,
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
-;
+
 export default function InnovativeServicesShowcase2025(...args: unknown[]): unknown {;
   const services = [;
     {;
@@ -220,7 +220,7 @@ export default function InnovativeServicesShowcase2025(...args: unknown[]): unkn
       case 'Emerging Tech': return 'from-yellow-600 to-orange-600';''';
       default: return 'from-gray-600 to-slate-600'}
   };
-;
+
   return();
     <div className="min-h-screen bg-white">";
       <SEO "";
@@ -576,15 +576,13 @@ export default function InnovativeServicesShowcase2025(...args: unknown[]): unkn
     </div>;
   );,
 }
-;
+export { InnovativeServicesShowcase2025 };
 
 export { InnovativeServicesShowcase2025 };
-;
+
 export { InnovativeServicesShowcase2025 };
-;
+
 export { InnovativeServicesShowcase2025 };
-;
-export { InnovativeServicesShowcase2025 };
-;
+
 export { InnovativeServicesShowcase2025 };
 )

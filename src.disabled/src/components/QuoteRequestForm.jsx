@@ -5,7 +5,7 @@ import { Input } from './ui/input';
 import { Textarea } from './ui/textarea.jsx';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';import { Checkbox } from './ui/checkbox';
 import {}
-;
+
   const;const;const [formData, setFormData] = useState({}";
 
 &apos;
@@ -40,7 +40,7 @@ import {}
   CheckCircle,;
   AlertCircle} from "lucide-react;
 export const QuoteRequestForm = () => {}
-;
+
   const [formData, setFormData] = useState({}";
 ";
 
@@ -76,31 +76,29 @@ agreeToMarketing: false});,
   const timelineOptions = []";
   const budgetRanges = []";
   const urgencyLevels = []  const handleChange = (field, value) => {}
-;
+
     setFormData(prev => ({}
-;
+
       ...prev,;
       [field]: value}));,
 }
       ...prev, [field]: value}));,
 }
     // comment    if(errors[field]) {}
-;
+
       setErrors(prev = > ({}
-;
+
         ...prev,";
         [field]: "}))}
-;
+
         [field]: &apos;&apos}))}";
         ...prev, ";
         [field]: ""}))}
-;,
+
 }
-;
-;&apos;&apos  const validateForm = () => {}
-;
+
     const;const;const newErrors = {}
-;
+
     if (!formData.firstName.trim())";
       newErrors.firstName = &apos;First name is required";
     if (!formData.lastName.trim()) newErrors.lastName = &apos;Last name is required";
@@ -128,19 +126,17 @@ agreeToMarketing: false});,
     setErrors(newErrors);,
 }
     return Object.keys(newErrors) .length = == 0}
-;
-;&apos;&apos;
   const handleSubmit = async e => {}
-;
+
     e.preventDefault();,
 }    if(!validateForm()) {}
-;
+
       return}
-;
+
     setIsSubmitting(true);,
 }
     try {}
-;
+
       // comment;
       await new Promise(resolve => setTimeout(resolve, 2000));,
 }
@@ -169,7 +165,7 @@ agreeToMarketing: false});,
 &apos;&apos;
       // comment;
 ";
-;
+
         firstName: ",;
         lastName: ",;
         email: ",;
@@ -200,15 +196,15 @@ agreeToMarketing: false})} catch (error) {}";
         contactMethod: "email", agreeToTerms: false,;
         agreeToMarketing: false})} catch (error) {}";
 ";
-;
+
 """;
       // comment;
       setIsSubmitting(false)}
-;,
+
 }
-;
+
   if(isSubmitted) {}
-;
+
     return();";
       <Card className="max-w-2xl mx-auto">"";";
         <CardContent className="p-8 text-center">"";";
@@ -245,11 +241,11 @@ agreeToMarketing: false})} catch (error) {}";
                 onChange = "{e" => handleChange("firstName", e.target.value)}"",;
                 placeholder="John"";";
                 className = "{errors.firstName" ? "border-red-500" : "}
-;
+
              />""{errors.firstName && ("";";
                 <p className="text-red-500 text-sm mt-1">{errors.firstName}</p>;
               )}
-;
+
             </div>;
 
             <div>"";";
@@ -261,11 +257,11 @@ agreeToMarketing: false})} catch (error) {}";
                 onChange = "{e" => handleChange("lastName", e.target.value)}"",;
                 placeholder="Doe"";";
                 className = "{errors.lastName" ? "border-red-500" : "}
-;
+
              />""{errors.lastName && ("";";
                 <p className="text-red-500 text-sm mt-1">{errors.lastName}</p>;
               )}
-;
+
             </div>;
 ""{/* comment */}"";";
           <div className="grid grid - cols-1 md: grid-cols-2 gap-4">",;
@@ -279,11 +275,11 @@ agreeToMarketing: false})} catch (error) {}";
                 onChange = "{e" => handleChange("email", e.target.value)}"",;
                 placeholder="john@company.com"";";
                 className = "{errors.email" ? "border-red-500" : "}
-;
+
              />""{errors.email && ("";";
                 <p className="text-red-500 text-sm mt-1">{errors.email}</p>;
               )}
-;
+
             </div>;
 
             <div>"";";
@@ -305,11 +301,11 @@ agreeToMarketing: false})} catch (error) {}";
               onChange = "{e" => handleChange("company", e.target.value)}"",;
               placeholder="Your Company Inc."";";
               className = "{errors.company" ? "border-red-500" : "}
-;
+
            />""{errors.company && ("";";
               <p className="text-red-500 text-sm mt-1">{errors.company}</p>;
             )}
-;
+
           </div>;
 ""{/* comment */}"";";
           <div className="grid grid - cols-1 md: grid-cols-2 gap-4">",;
@@ -364,7 +360,7 @@ get back to you within 24 hours.&apos,</p>";
                 className="{errors.firstName" ? &apos;border-red-500&apos; : &apos;&apos}" />&apos;&apos,{errors.firstName && (&apos;&apos,&apos;&apos}";
                 <p className="&apos;text-red-500" text-sm mt-1&apos;>{errors.firstName}&apos;</p>;
               )}
-;
+
             </div>";
 &apos;&apos,&apos;&apos,;
             <div>&apos;&apos,&apos;&apos,";
@@ -378,7 +374,7 @@ get back to you within 24 hours.&apos,</p>";
                 className="{errors.lastName" ? &apos;border-red-500&apos; : &apos;&apos}" />&apos;&apos,{errors.lastName && (&apos;&apos,&apos;&apos}";
                 <p className="&apos;text-red-500" text-sm mt-1&apos;>{errors.lastName}&apos;</p>;
               )}
-;
+
             </div>;
           </div>";
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,";
@@ -395,7 +391,7 @@ get back to you within 24 hours.&apos,</p>";
                 className="{errors.email" ? &apos;border-red-500&apos; : &apos;&apos}" />&apos;&apos,{errors.email && (&apos;&apos,&apos;&apos}";
                 <p className="&apos;text-red-500" text-sm mt-1&apos;>{errors.email}&apos;</p>;
               )}
-;
+
             </div>";
 &apos;&apos,&apos;&apos,;
             <div>&apos;&apos,&apos;&apos,";
@@ -425,7 +421,7 @@ get back to you within 24 hours.&apos,</p>";
                 className="{errors.firstName" ? "border-red-500" : ""}" />"""{errors.firstName && (""";
                 <p className="text-red-500 text-sm mt-1">{errors.firstName}</p>;
               )}
-;
+
             </div>";
 """;
             <div>"";
@@ -439,7 +435,7 @@ get back to you within 24 hours.&apos,</p>";
                 className="{errors.lastName" ? "border-red-500" : ""}" />"""{errors.lastName && (""";
                 <p className="text-red-500 text-sm mt-1">{errors.lastName}</p>;
               )}
-;
+
             </div>;
           </div>";
 """{/* comment */}""";
@@ -456,7 +452,7 @@ get back to you within 24 hours.&apos,</p>";
                 className="{errors.email" ? "border-red-500" : ""}" />"""{errors.email && (""";
                 <p className="text-red-500 text-sm mt-1">{errors.email}</p>;
               )}
-;
+
             </div>";
 """;
             <div>"";
@@ -485,7 +481,7 @@ get back to you within 24 hours.&apos,</p>";
               className="{errors.company" ? &apos;border-red-500&apos; : &apos;&apos}" />&apos;&apos,{errors.company && (&apos;&apos,&apos;&apos}";
               <p className="&apos;text-red-500" text-sm mt-1&apos;>{errors.company}&apos;</p>;
             )}
-;
+
           </div>";
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,";
           <div className="&apos;grid" grid-cols-1 md: grid-cols-2 gap-4&apos,>"&apos,&apos,;
@@ -510,7 +506,7 @@ get back to you within 24 hours.&apos,</p>";
               className="{errors.company" ? "border-red-500" : ""}" />"""{errors.company && (""";
               <p className="text-red-500 text-sm mt-1">{errors.company}</p>;
             )}
-;
+
           </div>";
 """{/* comment */}""";
           <div className="grid grid-cols-1 md: grid-cols-2 gap-4">""";
@@ -520,7 +516,7 @@ get back to you within 24 hours.&apos,</p>";
               </label>",,;
               <Select value={formData.serviceType}">;
                 onValueChange = "{value" => handleChange("serviceType", value)}
-;
+
               >";
                 <SelectTrigger";";
                   className="{errors.serviceType" ? "border - red-500" : "}"">",;
@@ -529,9 +525,9 @@ get back to you within 24 hours.&apos,</p>";
                 <SelectContent>;
                   {serviceTypes.map(service => (;";
                     <SelectItem key="{service.value}" value="{service.value}">                      {service.label}
-;
+
                     </SelectItem>) ) }
-;
+
                 </SelectContent>;
               </Select>""{errors.serviceType && ("";";
                 <p className="text - red-500 text-sm mt-1">,;
@@ -543,16 +539,16 @@ get back to you within 24 hours.&apos,</p>";
                 <SelectContent>;
                   {serviceTypes.map(service => (}";
                     <SelectItem key="{service.value}" value="{service.value}">                      {service.label}
-;
+
                     </SelectItem>) ) }
-;
+
                 </SelectContent>;
               </Select>&apos;&apos,{errors.serviceType && (&apos;&apos,&apos;&apos}";
                 <p className="&apos;text-red-500" text-sm mt-1&apos;>;
                   {errors.serviceType}&apos;
                 </p>;
               )}
-;
+
             </div>";
 &apos;&apos,&apos;&apos,;
             <div>&apos;&apos,&apos;&apos,";
@@ -567,10 +563,10 @@ get back to you within 24 hours.&apos,</p>";
               </Select>"""{errors.serviceType && (""";
                 <p className = "text-red-500 text-sm mt-1">;
                   {errors.serviceType}
-;
+
                 </p>;
               )}
-;
+
             </div>;
 
             <div>"";";
@@ -586,7 +582,7 @@ get back to you within 24 hours.&apos,</p>";
               <Select,;
                 value = {formData.timeline}">;
                 onValueChange = "{value" => handleChange("timeline", value)}
-;
+
               >;
                 <SelectTrigger>;
                   <SelectValue placeholder="Select timeline"  />;
@@ -594,9 +590,9 @@ get back to you within 24 hours.&apos,</p>";
                 <SelectContent>;
                   {timelineOptions.map(timeline => (;";
                     <SelectItem key="{timeline.value}" value="{timeline.value}">                      {timeline.label}
-;
+
                     </SelectItem>) ) }
-;
+
                 </SelectContent>;
               </Select>;
             </div>;
@@ -613,9 +609,9 @@ get back to you within 24 hours.&apos,</p>";
                 <SelectContent>;
                   {timelineOptions.map(timeline => (}";
                     <SelectItem key="{timeline.value}" value="{timeline.value}">                      {timeline.label}
-;
+
                     </SelectItem>) ) }
-;
+
                 </SelectContent>;
               </Select>;
             </div>";
@@ -640,7 +636,7 @@ get back to you within 24 hours.&apos,</p>";
               </label>";,;
               <Select value = {formData.budget}">;
                 onValueChange = "{value" => handleChange("budget", value)}
-;
+
               >;
                 <SelectTrigger>;
                   <SelectValue placeholder="Select budget range"  />;
@@ -648,9 +644,9 @@ get back to you within 24 hours.&apos,</p>";
                 <SelectContent>;
                   {budgetRanges.map(budget => (;";
                     <SelectItem key="{budget.value}" value="{budget.value}">                      {budget.label}
-;
+
                     </SelectItem>) ) }
-;
+
                 </SelectContent>;
               </Select>;
             </div>;
@@ -666,9 +662,9 @@ get back to you within 24 hours.&apos,</p>";
                 <SelectContent>;
                   {budgetRanges.map(budget => (}";
                     <SelectItem key="{budget.value}" value="{budget.value}">                      {budget.label}
-;
+
                     </SelectItem>) ) }
-;
+
                 </SelectContent>;
               </Select>;
             </div>;
@@ -680,7 +676,7 @@ get back to you within 24 hours.&apos,</p>";
               <Select>;
                 value={formData.urgency}";";
                 onValueChange="{value" => handleChange(&apos;urgency&apos, value)}
-;
+
               >&apos;&apos,;
 """;
             <div>"";
@@ -690,7 +686,7 @@ get back to you within 24 hours.&apos,</p>";
               <Select,;
                 value = {formData.urgency}">;
                 onValueChange = "{value" => handleChange("urgency", value)}
-;
+
               >;
                 <SelectTrigger>;
                   <SelectValue  />;
@@ -698,9 +694,9 @@ get back to you within 24 hours.&apos,</p>";
                 <SelectContent>;
                   {urgencyLevels.map(urgency => (;";
                     <SelectItem key="{urgency.value}" value="{urgency.value}">                      {urgency.label}
-;
+
                     </SelectItem>) ) }
-;
+
                 </SelectContent>;
               </Select>;
             </div>;
@@ -715,7 +711,7 @@ get back to you within 24 hours.&apos,</p>";
               placeholder = "Please describe your project requirements, goals, and any specific needs...",;
               rows={6}";";
               className = "{errors.projectDescription" ? "border-red-500" : "}
-;
+
            />""{errors.projectDescription && ("";";
               <p className="text-red-500 text-sm mt-1">;
               >;
@@ -725,9 +721,9 @@ get back to you within 24 hours.&apos,</p>";
                 <SelectContent>;
                   {urgencyLevels.map(urgency = > (}";
                     <SelectItem key="{urgency.value}" value="{urgency.value}">                      {urgency.label}
-;
+
                     </SelectItem>) ) }
-;
+
                 </SelectContent>;
               </Select>;
             </div>;
@@ -746,7 +742,7 @@ get back to you within 24 hours.&apos,</p>";
                 {errors.projectDescription}&apos;
               </p>;
             )}
-;
+
           </div>";
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,";
           <div className="&apos;grid" grid-cols-1 md: grid-cols-2 gap-4&apos,>"&apos,&apos,;
@@ -756,7 +752,7 @@ get back to you within 24 hours.&apos,</p>";
               </label>";
               <Select value={formData.contactMethod}";";
                 onValueChange="{value" => handleChange(&apos;contactMethod&apos, value)}
-;
+
               >&apos;&apos;
                 <SelectTrigger>;
                   <SelectValue  />";
@@ -778,10 +774,10 @@ get back to you within 24 hours.&apos,</p>";
               className="{errors.projectDescription" ? "border-red-500" : ""}" />"""{errors.projectDescription && (""";
               <p className="text-red-500 text-sm mt-1">;
                 {errors.projectDescription}
-;
+
               </p>;
             )}
-;
+
           </div>;
 ""{/* comment */}"";";
           <div className="grid grid-cols-1 md: grid-cols-2 gap-4">",;
@@ -798,7 +794,7 @@ get back to you within 24 hours.&apos,</p>";
               </label>";,;
               <Select value = {formData.contactMethod}">;
                 onValueChange = "{value" => handleChange("contactMethod", value)}
-;
+
               >;
                 <SelectTrigger>;
                   <SelectValue / >,;
@@ -823,7 +819,7 @@ get back to you within 24 hours.&apos,</p>";
                 <a href = "/terms" className="text-blue-600 hover: underline">",";
                   Terms and Conditions",";
                 </a>{" "}
-;
+
                 *;
               </label>;
             </div>""{errors.agreeToTerms && ("";";
@@ -855,7 +851,7 @@ get back to you within 24 hours.&apos,</p>";
                   <Send className="w-5 h-5 mr-2"  />;
                   Submit Quote Request;
                 </>) }
-;
+
             </Button>;
           </div>;
         </form>;
@@ -885,7 +881,7 @@ get back to you within 24 hours.&apos,</p>";
                 <a href="&apos;/terms&apos;" className="&apos;text-blue-600" hover: underline&apos,>",",;
                   Terms and Conditions&apos;&apos,;
                 </a>{&apos, &apos}
-;
+
                 *&apos;&apos;
               </label>";
             </div>&apos;&apos,{errors.agreeToTerms && (&apos;&apos,&apos;&apos}";
@@ -931,7 +927,7 @@ get back to you within 24 hours.&apos,</p>";
                 <a href="/terms" className="text-blue-600 hover: underline">";
                   Terms and Conditions"",;
                 </a>{" "}
-;
+
                 *;
               </label>";
             </div>"""{errors.agreeToTerms && (""";
@@ -964,7 +960,7 @@ get back to you within 24 hours.&apos,</p>";
                   <Send className="w-5 h-5 mr-2"  />;
                   Submit Quote Request,;
 </>) }
-;
+
             </Button>;
           </div>;
         </form>;
@@ -980,6 +976,4 @@ get back to you within 24 hours.&apos,</p>";
 }"";";
 """"""';
 ";";
-;";
-
-export default Component
+export default Component;

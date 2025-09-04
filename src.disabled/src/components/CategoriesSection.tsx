@@ -34,7 +34,7 @@ const categories = [{;
     color: "from - emerald - 500 to - green - 600",;,
 },;
 ];
-;
+
 const specialServices = [{;
     title: "IT Onsite Services",;
     link: "/it - onsite - services";,
@@ -52,10 +52,6 @@ interface CategoriesSectionProps {;
   // Add your props here;
 
   showTitle?: boolean}
-;
-;
-;
-;
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {;
 
   return (";
@@ -83,7 +79,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
               Discover our comprehensive ecosystem of tech services, talent, equipment, and innovation;
             </p>;
           </motion.div>;) }
-;
+
         <motion.div;
           className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 4 gap-6";
           variants={containerVariants}          initial="hidden";

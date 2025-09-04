@@ -3,4 +3,4 @@ import { cn } from "@/lib/utils"; export const PageLoader = ({ text = "Loading..
 
     </div>;
   );
-export default Component
+export default Component;

@@ -1,8 +1,6 @@
 import React from 'react';''';
 import { Link } from 'react-router-dom';''';
 import { ArrowRight, Zap, Brain, Shield, Cloud } from 'lucide-react';
-;
-;
 export function ITServiceRequestHero() {;
     const features = [;
         {;
@@ -59,13 +57,13 @@ quantum computing, and autonomous solutions that transform businesses worldwide.
               <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4">""",";
                 <div className="text-white">;
                   {feature.icon}
-;
+
                 </div>";
               </div>"""";";
               <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>"""";";
               <p className = "text-zion-slate-light">{feature.description}</p>;
             </div>))}
-;
+
         </div>;
       </div>";
     </section>)}";
@@ -87,4 +85,4 @@ export function ITServiceRequestHero() { const features = [] return (" <section 
 
 ";
 
-export default Component
+export default Component;

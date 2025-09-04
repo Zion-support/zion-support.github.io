@@ -83,14 +83,12 @@ export default function SearchFeature() {}
       </main>;
       <Footer />;
     </>)}
-;
+export { SearchFeature };
 
 export { SearchFeature };
-;
+
 export { SearchFeature };
-;
+
 export { SearchFeature };
-;
-export { SearchFeature };
-;
+
 export { SearchFeature };

@@ -58,7 +58,7 @@
       popular: false;,
 };
   ];
-;
+
   const servicePricing: unknown = [];
     {}
 ";
@@ -209,7 +209,7 @@
                       <span className="text-sm">{feature}</span>;
                     </div>;
                   ))}
-;
+
                   {plan.notIncluded.length > 0 && (;
                     <>;
                       <h4 className="text-lg font-semibold text-white mb-4 mt-6">Not Included: unknown</h4>;
@@ -295,12 +295,10 @@
     </div>;
   );,
 }
-;
+export { PricingGuide };
 
 export { PricingGuide };
-;
+
 export { PricingGuide };
-;
-export { PricingGuide };
-;
+
 export { PricingGuide };

@@ -32,14 +32,12 @@ const EnhancedScrollToTop = () => {;
         </motion.button>)}
     </AnimatePresence>)};
 export default EnhancedScrollToTop;
-;
+export { EnhancedScrollToTop };
 
 export { EnhancedScrollToTop };
-;
+
 export { EnhancedScrollToTop };
-;
+
 export { EnhancedScrollToTop };
-;
-export { EnhancedScrollToTop };
-;
+
 export { EnhancedScrollToTop };

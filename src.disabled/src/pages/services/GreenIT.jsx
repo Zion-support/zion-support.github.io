@@ -19,7 +19,7 @@ import { ;
   Network,;
   Battery;,
 } from 'lucide-react';
-;
+
 export default function GreenIT() {;
   const services = [;
     {;
@@ -59,7 +59,7 @@ export default function GreenIT() {;
       features: ['Code optimization', 'Resource management', 'Efficient algorithms', 'Green software practices'];,
 }
   ];
-;
+
   const benefits = [;
     {;
       icon: TrendingUp,;
@@ -82,7 +82,7 @@ export default function GreenIT() {;
       description: 'Leading-edge sustainable technology solutions';,
 }
   ];
-;
+
   const technologies = [;
     {;
       icon: Battery,;
@@ -105,7 +105,7 @@ export default function GreenIT() {;
       description: 'Comprehensive carbon footprint measurement';,
 }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <SEO ;
@@ -355,14 +355,12 @@ export default function GreenIT() {;
     </div>;
   );,
 }
-;
+export { GreenIT };
 
 export { GreenIT };
-;
+
 export { GreenIT };
-;
+
 export { GreenIT };
-;
-export { GreenIT };
-;
+
 export { GreenIT };

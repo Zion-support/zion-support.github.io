@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BarChart3, TrendingUp, Activity, Eye, Clock, Target, RefreshCw } from 'lucide-react';
-;
+
 export const AnalyticsDashboard = ({ className = '', showRealTime = true, refreshInterval = 5000 }) => {;
     const { isTracking, currentSession, performanceMetrics, events, getAnalyticsSummary, trackEvent, trackConversion } = useAnalytics({;
         enableTracking: true,;
@@ -75,7 +75,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
             return `${(num / 1000).toFixed(1)}K`;
         return num.toString()};
     return (<div className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>      {/* Header */}
-;
+
     // comment;
 useEffect(() => {;
         updateAnalyticsSummary()}, [events, currentSession]);,
@@ -83,11 +83,11 @@ useEffect(() => {;
     // comment;
 const handleDashboardInteraction = (action, metadata) => {;
         trackEvent("dashboard", action, "dashboard_interaction", null, metadata)}
-;
+
     // comment;
 const handleTrackConversion = () => {";
         trackConversion("dashboard_engagement", 1, { timeRange: selectedTimeRange })}
-;
+
     // comment;
 const getEventsByCategory = () => {;
         if();,
@@ -95,7 +95,7 @@ const getEventsByCategory = () => {;
             return [];
         return Object.entries(analyticsSummary.eventsByCategory).map(([category, count]) => ({;
             category, count: count}))}
-;
+
     // comment;
 const getPerformanceScore = () => {;
         if();,
@@ -122,7 +122,7 @@ else if();,
 }
             score -= 10,;
 return Math.max(0, score)}
-;
+
     // comment;
 const formatDuration = () => {;
         if();,
@@ -132,7 +132,7 @@ const formatDuration = () => {;
 }
         const remainingSeconds = seconds % 60";
         return "${minutes}m ${remainingSeconds}s"}
-;
+
     // comment;
 const formatNumber = () => {;
         if (num >= 1000000)";
@@ -155,7 +155,7 @@ const formatNumber = () => {;
               <div """""";
                 className="{"w-2" h-2 rounded-full ${isTracking ? "bg-green-400" : "bg-red-400"}"}""></div>";
               {isTracking ? "Tracking" : "Stopped"}
-;
+
             </div>;
             {/* comment */}";
             <select value="{selectedTimeRange}"">;
@@ -189,7 +189,7 @@ const formatNumber = () => {;
                 isExpanded ? "Collapse dashboard"  : "Expand dashboard", ",;,
 }">""";
               {isExpanded ? "−" : }
-;
+
             </button>;
           </div>;
         </div>";
@@ -294,7 +294,7 @@ const formatNumber = () => {;
                 </div>"";
                 <span className="text-xs text-gray-500">;
                   {new Date(event.timestamp).toLocaleTimeString()}
-;
+
                 </span>;
               </div>";
             ))}
@@ -304,7 +304,7 @@ const formatNumber = () => {;
               No events tracked yet,;
             </div>;
           )}
-;
+
         </div>";
       </div>;
       {/* comment */}""";
@@ -350,7 +350,7 @@ const formatNumber = () => {;
                   </span>"";
                   <span className="font-medium">,;
                     {performanceMetrics.cumulativeLayoutShift.toFixed(3)}
-;
+
                   </span>;
                 </div>;
             </div>";
@@ -384,11 +384,11 @@ const formatNumber = () => {;
                     </div>"";
                     <span className="text-green-700 dark: text-green-300 text-sm font-medium w-8 text-right">,;
                       {item.count}
-;
+
                     </span>;
                   </div>;
               ))}
-;
+
             </div>";
           </div>;
           {/* comment */}""";
@@ -429,11 +429,11 @@ Referrer: """;
                   </span>"";
                   <span className="font-medium text-xs max-w-32 truncate">"",;
                     {currentSession.referrer || "Direct"}
-;
+
                   </span>;
                 </div>;
           )}
-;
+
         </div>";
       )}
 """;

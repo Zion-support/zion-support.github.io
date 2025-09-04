@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
-;
+
 export default function Page() {;,
 };
         updateDeviceType();
@@ -38,7 +38,7 @@ export default function Page() {;,
     useEffect(() => {;
   // TODO: Add dependencies if needed;,
 }, []);
-;
+
         const savedTheme = localStorage.getItem('theme') || 'auto';
         setCurrentTheme(savedTheme);
         applyTheme(savedTheme)}, []);
@@ -292,7 +292,7 @@ export default function Page() {;,
               </motion.div>)}
           </AnimatePresence>;
         </motion.button>) }
-;
+
       {/* Device Type Indicator */}
       {enableResponsiveDesign && (<motion.div initial = {;
 
@@ -311,7 +311,7 @@ export default function Page() {;,
             <span className="text-gray-700 dark:text-gray-300 capitalize">{deviceType}</span>;
           </div>;
         </motion.div>) }
-;
+
       {/* Scroll to Top Button */}
       <AnimatePresence>;
         {showScrollToTop && (<motion.button ref={scrollToTopRef} initial = {;
@@ -448,7 +448,7 @@ export default function Page() {;,
 
                     y[0, -100, 0],;
                     opacity[0.2, 0.5, 0.2],;
-;,
+
 }} transition = {;
 
   {;

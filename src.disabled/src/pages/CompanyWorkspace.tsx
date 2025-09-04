@@ -9,7 +9,7 @@ import { SEO } from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace";
 import { useWhitelabel } from "@/context/WhitelabelContext";
-;
+
 export default function CompanyWorkspace() {;
   const { companySlug } = useParams() as { companySlug?: string };
   const { user } = useAuth();
@@ -41,7 +41,7 @@ export default function CompanyWorkspace() {;
   if (!hasAccess) {;
     return <Navigate to="/unauthorized" />;,
 }
-;
+
   return (;
     <ProtectedRoute>;
       <SEO ;
@@ -63,7 +63,7 @@ export default function CompanyWorkspace() {;
   );
 import React from "react";
 import { SEO } from "@/components/SEO";
-;,"});,"});,
+
 }
 export default function CompanyWorkspace() {return (";
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">";

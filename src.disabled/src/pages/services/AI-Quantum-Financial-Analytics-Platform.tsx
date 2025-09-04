@@ -21,7 +21,7 @@ import { ;
   ArrowRight,;
   Phone;,
 } from 'lucide-react';
-;
+
 const AIQuantumFinancialAnalyticsPlatform: React.FC = () => {;
   const features = [;
     {;
@@ -49,7 +49,7 @@ const AIQuantumFinancialAnalyticsPlatform: React.FC = () => {;
       benefits: ["SOC 2 Type II certified", "GDPR compliant", "End-to-end encryption"];,
 }
   ];
-;
+
   const pricingPlans = [;
     {;
       name: "Starter",;
@@ -93,7 +93,7 @@ const AIQuantumFinancialAnalyticsPlatform: React.FC = () => {;
       popular: false;,
 }
   ];
-;
+
   const useCases = [;
     {;
       title: "Portfolio Management",;
@@ -116,7 +116,7 @@ const AIQuantumFinancialAnalyticsPlatform: React.FC = () => {;
       icon: CheckCircle;,
 }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
       <SEO ;
@@ -254,7 +254,7 @@ const AIQuantumFinancialAnalyticsPlatform: React.FC = () => {;
                     </span>;
                   </div>;
                 )}
-;
+
                 <div className="text-center mb-8">;
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>;
                   <p className="text-slate-400 mb-6">{plan.description}</p>;
@@ -370,5 +370,5 @@ const AIQuantumFinancialAnalyticsPlatform: React.FC = () => {;
     </div>;
   );,
 };
-;
+
 export default AIQuantumFinancialAnalyticsPlatform;

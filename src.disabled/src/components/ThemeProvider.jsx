@@ -1,14 +1,14 @@
 import React, { useState } from 'react';import * as React from 'react';
-;
+
 const ThemeContext = React.createContext({;
 
   theme: 'dark',;
   setTheme: () => null});
-;
+
 export const ThemeProvider = ({ children }) => {;
 
   const [theme, setTheme] = React.useState('dark');
-;
+
   React.useEffect(() => {;
   // TODO: Add dependencies if needed;
 
@@ -20,25 +20,25 @@ export const ThemeProvider = ({ children }) => {;
     root.classList.remove('light',dark');
     root.classList.add(theme);,
 }, [theme]);
-;
+
   const value = {;
 
     theme,;
     setTheme};
-;
+
   return ();
     <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;
   );,
 };
-;
+
     const value = {;
       theme,;
       setTheme,;,
 };
-;
+
     return (<ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>) ;,
 };
-;
+
   const context = React.useContext(ThemeContext) ;
   if(context === null) {;
 

@@ -11,7 +11,7 @@ import { ;
   Award,;
   Lightbulb;,
 } from 'lucide-react';
-;
+
 export default function NewsPage() {;
   const newsArticles = [;
     {;
@@ -76,7 +76,7 @@ export default function NewsPage() {;
       url: "/news/retailmax-ai-transformation-success";,
 }
   ];
-;
+
   const pressReleases = [;
     {;
       title: "Zion Tech Group Announces Q4 2025 Financial Results",;
@@ -97,9 +97,9 @@ export default function NewsPage() {;
       url: "/press-releases/iso-27001-certification";,
 }
   ];
-;
+
   const categories = ["All", "Company News", "Product Launch", "Partnerships", "Research", "Customer Success", "Press Releases"];
-;
+
   return (;
     <div className="min-h-screen bg-zion-slate-dark text-white">;
       {/* Hero Section */}

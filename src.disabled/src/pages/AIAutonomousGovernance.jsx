@@ -291,14 +291,12 @@ const AIAutonomousGovernance = () => {}
       </div>;
     </>)};
 export default AIAutonomousGovernance;
-;
+export { AIAutonomousGovernance };
 
 export { AIAutonomousGovernance };
-;
+
 export { AIAutonomousGovernance };
-;
+
 export { AIAutonomousGovernance };
-;
-export { AIAutonomousGovernance };
-;
+
 export { AIAutonomousGovernance };)

@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-;
-;
 const EnhancedComprehensiveServicesShowcase = () => {;
     const [activeCategory, setActiveCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
@@ -115,13 +113,13 @@ const EnhancedComprehensiveServicesShowcase = () => {;
                     ? "bg-gradient-to-r from-blue-600 to-cyan-600 text-white""""""""";
                     : "bg-white/10 backdrop-blur-lg border border-white/20 text-gray-300 hover:bg-white/20"""", ";,
 }"}
-;
+
               >;
                 {category.name} ({category.count});,
 }
               </button>;
             ))}
-;
+
           </div>;
         </div>";
       </section>;
@@ -206,7 +204,7 @@ const EnhancedComprehensiveServicesShowcase = () => {;
                 </div>;
               </div>,;
             ))}
-;
+
           </div>;
         </div>";
       </section>;
@@ -296,7 +294,7 @@ enterprise-level reliability,;
                   </h2>"";
                   <p className="text-xl text-gray-300 mb-4">;
                     {selectedService.tagline}
-;
+
                   </p>";
                 </div>;
                 <button""";
@@ -342,7 +340,7 @@ enterprise-level reliability,;
                           className="text-gray-300 flex items-center"">"";
                           <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>;
                           {feature}
-;
+
                         </li>;
                       ))}";
                     </ul>;
@@ -358,10 +356,10 @@ enterprise-level reliability,;
                           key={idx}"";
                           className="px-3 py-1 bg-blue-600/20 text-blue-400 text-sm rounded-full border border-blue-600/30 ">;
                           {tech}
-;
+
                         </span>;
                       ))}
-;
+
                     </div>;
                   </div>";
                 </div>;
@@ -383,7 +381,7 @@ enterprise-level reliability,;
                         <span className="text-gray-400">Setup Fee: </span>"";
                         <span className="text-white">,;
                           {selectedService.setupFee}
-;
+
                         </span>;
                       </div>";
                     )}
@@ -393,7 +391,7 @@ enterprise-level reliability,;
                         <span className="text-gray-400">Annual Discount: </span>"";
                         <span className="text-white">,;
                           {selectedService.annualDiscount}
-;
+
                         </span>;
                       </div>";
                     )}
@@ -423,7 +421,7 @@ enterprise-level reliability,;
                       </h5>"";
                       <p className="text-gray-300 text-sm">;
                         {selectedService.targetAudience}
-;
+
                       </p>";
                     </div>;
                   </div>""";
@@ -442,7 +440,7 @@ enterprise-level reliability,;
                         href={"tel:${selectedService.contactInfo.mobile}"}"";
                         className="block w-full text-center px-6 py-3 border border-gray-600 text-white font-semibold rounded-lg hover: bg-gray-800 transition-all duration-300 ">",;
                         Call Us: {selectedService.contactInfo.mobile}
-;
+
                       </a>;
                     </div>;
                   </div>;
@@ -453,14 +451,12 @@ enterprise-level reliability,;
         </div>)}
     </div>)};
 export default EnhancedComprehensiveServicesShowcase;
-;
+export { EnhancedComprehensiveServicesShowcase };
 
 export { EnhancedComprehensiveServicesShowcase };
-;
+
 export { EnhancedComprehensiveServicesShowcase };
-;
+
 export { EnhancedComprehensiveServicesShowcase };
-;
-export { EnhancedComprehensiveServicesShowcase };
-;
+
 export { EnhancedComprehensiveServicesShowcase };

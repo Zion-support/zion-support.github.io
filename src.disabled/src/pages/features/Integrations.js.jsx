@@ -85,14 +85,12 @@ export default function IntegrationsFeature() {}
       </main>;
       <Footer />;
     </>)}
-;
+export { IntegrationsFeature };
 
 export { IntegrationsFeature };
-;
+
 export { IntegrationsFeature };
-;
+
 export { IntegrationsFeature };
-;
-export { IntegrationsFeature };
-;
+
 export { IntegrationsFeature };

@@ -182,15 +182,13 @@ export default function FuturisticHero() {}
                 x: Math.random() * window.innerWidth,;
                 y: Math.random() * window.innerHeight,;
                 opacity: Math.random(),;
+export { FuturisticHero };
 
-;
 export { FuturisticHero };
-;
+
 export { FuturisticHero };
-;
+
 export { FuturisticHero };
-;
-export { FuturisticHero };
-;
+
 export { FuturisticHero };
 )))

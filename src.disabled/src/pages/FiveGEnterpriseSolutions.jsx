@@ -577,11 +577,11 @@ import {}
   Zap,''';
   Brain'''';,
 } from 'lucide-react';
-;
+
     technologies["5G Analytics", "Performance Insights", "Predictive", "Reporting"];,
 }
 ];
-;
+
 const fiveGTechnologies = [];
   {}
 ";
@@ -619,7 +619,7 @@ const fiveGTechnologies = [];
     useCase: "Edge Processing","";
     reliability: "High";
 ];
-;
+
 const successStories = [];
   {}
 ";
@@ -651,7 +651,7 @@ const successStories = [];
     results: "40% operational improvement, 50% cost savings, better citizen services, enhanced monitoring","";
     logo: "SCS";
 ];
-;
+
 const processSteps = [];
   {}
 ";
@@ -685,7 +685,7 @@ const processSteps = [];
     icon: Gauge,"";
     duration: "4-8 weeks";
 ];
-;
+
 const fiveGBenefits = [];
   {}
 ";
@@ -720,7 +720,7 @@ const fiveGBenefits = [];
     examples["Device connectivity", "Data collection", "Real-time monitoring", "Automation"];,
 }
 ];
-;
+
 export default function FiveGEnterpriseSolutions() {}
 ';
 '';
@@ -1029,7 +1029,7 @@ export default function FiveGEnterpriseSolutions() {}
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'''`'`'`;
                     : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````;,
 }`}
-;
+
                 {category}
               </button>) ) }
           </div>";
@@ -1052,7 +1052,7 @@ export default function FiveGEnterpriseSolutions() {}
 }}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 hover:border-zion - cyan / 40 transition - all duration - 300 cursor -pointer";
                 onClick={ () => setSelectedSolution(solution) }
-;
+
 ";,
 }}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer";
@@ -1218,14 +1218,12 @@ export default function FiveGEnterpriseSolutions() {}
       </section>;
     </div>;
   )}
-;
+export { FiveGEnterpriseSolutions };
 
 export { FiveGEnterpriseSolutions };
-;
+
 export { FiveGEnterpriseSolutions };
-;
+
 export { FiveGEnterpriseSolutions };
-;
-export { FiveGEnterpriseSolutions };
-;
+
 export { FiveGEnterpriseSolutions };

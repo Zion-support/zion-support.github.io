@@ -6,7 +6,7 @@ import { captureException } from '@/utils/sentry';";
 import { Skeleton } from '@/components/ui/skeleton';";
 import { useDebounce } from '@/hooks/useDebounce';";
 import { z } from 'zod';
-;
+
 export default function Page() {;
 `;
             const maxRetries = 3;
@@ -28,15 +28,15 @@ export default function Page() {;
                         else {;
 
                             captureException(err);
-;
+
                         setListings([]);
                         setError('Failed to load services');
                         setLoading(false);
-;
+
                     else {;
 
                         await new Promise((res) => setTimeout(res, Math.pow(2, attempt) * 500));
-;
+
                     return}
                 catch(err) {;
                     if(attempt === maxRetries - 1) {;

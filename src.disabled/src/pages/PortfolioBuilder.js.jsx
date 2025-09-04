@@ -53,14 +53,12 @@ export default function PortfolioBuilder() {}
     <ProtectedRoute>;
       <PortfolioBuilderContent />;
     </ProtectedRoute>)}
-;
+export { PortfolioBuilderContent, PortfolioBuilder };
 
 export { PortfolioBuilderContent, PortfolioBuilder };
-;
+
 export { PortfolioBuilderContent, PortfolioBuilder };
-;
+
 export { PortfolioBuilderContent, PortfolioBuilder };
-;
-export { PortfolioBuilderContent, PortfolioBuilder };
-;
+
 export { PortfolioBuilderContent, PortfolioBuilder };

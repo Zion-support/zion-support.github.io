@@ -195,15 +195,15 @@ className="px-8" py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white ro
             </a>
           </div>
       </div>;,    </div>)}
-;
+
 export { ExpensiveComponent }
-;
+
 export { ExpensiveComponent }
-;
+
 export { ExpensiveComponent }
-;
+
 export { ExpensiveComponent }
-;
+
 export { ExpensiveComponent }
 
 export { ExpensiveComponent }

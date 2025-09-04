@@ -16,7 +16,7 @@ import {;
   CheckCircle,;
   Search;,
 } from 'lucide-react';
-;
+
 export const EnhancedServicesShowcase: React.FC = () => {;
   const services = [;
     {;
@@ -92,7 +92,7 @@ export const EnhancedServicesShowcase: React.FC = () => {;
       glowColor: 'pink';,
 };
   ];
-;
+
   const containerVariants = {;
     hidden: { opacity: 0 },;
     visible: {;
@@ -102,18 +102,18 @@ export const EnhancedServicesShowcase: React.FC = () => {;
 };,
 };,
 };
-;
+
 const categories = ['All', 'AI & Analytics', 'Quantum Computing', 'Cybersecurity', 'Cloud & DevOps', 'Data & Analytics', 'Blockchain & Web3'];
-;
+
 export default function EnhancedServicesShowcase(...args: unknown[]): unknown {  const [selectedCategory, setSelectedCategory] = useState('All');
   const [hoveredService, setHoveredService] = useState<string | null>(null);
-;
+
  params - Function parameters;
  * @returns {*} Function return value;
  */;
 function EnhancedServicesShowcase () {export default function EnhancedServicesShowcase() {;
 import React from "react";
-;,"});,"})";
+
 ,"});,"})","});,"})","});,"})","});,"})";
   Brain,,"});,"})";
   Shield,,"});,"})";
@@ -129,7 +129,7 @@ import React from "react";
   CheckCircle,,"});,"})";
   Search,"});,"});";,
 } from "lucide-react";,"});,"})";
-;,"});,"})";
+
 export const EnhancedServicesShowcase: React.FC = () => {,"});,"})";
   const services = [],,"});,"})";
       benefits: ["Reduce manual work by 70-85%", "Improve efficiency by 60%", "Cut operational costs by 40-50%"],,"});,"})";
@@ -197,7 +197,7 @@ export const EnhancedServicesShowcase: React.FC = () => {,"});,"})";
       glowColor: "pink","});,"});";,
 };,"});,"})";
   ],"});,"})";
-;,"});,"})";
+
   const containerVariants = {});,"})";
     hidden: { opacity: 0 },,"});,"})";
     visible: {,"});,"})";
@@ -206,14 +206,14 @@ export const EnhancedServicesShowcase: React.FC = () => {,"});,"})";
         staggerChildren: 0.1,"});,"});";,
 };,"});,"});";,
 };,"});,"})";
-;,"});,"})";
+
 const categories = [];,"});,"})";
-;,"});,"})";
+
 export default function EnhancedServicesShowcase(...args: unknown[]): unknown {  const [selectedCategory, setSelectedCategory] = useState("All");,"});,"})";
   const [hoveredService, setHoveredService] = useState<string | null>(null);,"});,"});,
 }
 ";
-;import { motion } from "framer-motion";";
+
 export default function EnhancedServicesShowcase() {return (";
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">";
       <SEO title="EnhancedServicesShowcase - Zion Tech Group" description="Professional EnhancedServicesShowcase services by Zion Tech Group"  />";
@@ -299,17 +299,17 @@ features: ["Lead scoring", "CRM automation", "Sales analytics", "Predictive insi
       benefits: ["Reduce admin time by 40 - 60%", "Improve conversion rates", "Shorten sales cycles"],,;
       color: "from-pink-500 to-rose-600",";
 glowColor: "pink"}
-;
+
   ];
   const containerVariants = {},;
     visible: {,;
       opacity: 1,;
 transition: {,        staggerChildren: 0.1}
-;,
+
 }
-;,
+
 }
-;
+
 const categories = [];
 export default function EnhancedServicesShowcase(...args: unknown[]): unknown {  const [selectedCategory, setSelectedCategory] = useState("All");,
 }
@@ -319,7 +319,7 @@ export default function EnhancedServicesShowcase(...args: unknown[]): unknown { 
   CheckCircle,;
   Search} from &apos;lucide-react";&apos;&apos;
 export const EnhancedServicesShowcase: React.FC = () => {}
-;
+
   const;const;const services = [],;
       benefits: [&apos,Reduce manual work by 70-85%&apos, &apos;Improve efficiency by 60%&apos, &apos;Cut operational costs by 40-50%&apos],;
       color: &apos,from-cyan-500 to-blue-600&apos,;
@@ -379,19 +379,19 @@ export const EnhancedServicesShowcase: React.FC = () => {}
       benefits: [&apos,Reduce admin time by 40-60%&apos, &apos;Improve conversion rates&apos, &apos;Shorten sales cycles&apos],;
       color: &apos,from-pink-500 to-rose-600&apos,;
       glowColor: &apos,pink&apos}
-;
+
   ]&apos;
   const containerVariants = {},;
     visible: {,;
       opacit,y: 1,;
       transition: {,        staggerChildre,n: 0.1}
-;,
+
 }
-;,
+
 }
-;
+
 const categories = [];
-;&apos,;
+
 export default function EnhancedServicesShowcase(...args: unknown[]): unknown ,{}  const [selectedCategory, setSelectedCategory] = useState(&apos;All&apos)&apos,;
   const [hoveredService, setHoveredService] = useState<;<string | null>(null);";
   TrendingUp, Users,";
@@ -406,7 +406,7 @@ export const EnhancedServicesShowcase: React.FC = () => {;
       title: "IoT Edge Computing", description: "Process data at the edge and reduce latency by 90%", price: "From $399/month", path: "/services/iot-edge-computing", icon: Cpu, category: "IoT & Edge", features: ["Edge processing", "Device management", "Real-time analytics", "AI at the edge"], benefits: ["Reduce latency by 90%", "Cut bandwidth costs by 60-80%", "Scale to millions of devices"], color: "from-orange-500 to-red-600", glowColor: "orange"}, {";
       title: "Cloud & DevOps", description: "Build, deploy, and scale with enterprise-grade cloud infrastructure", price: "From $799/month", path: "/services/cloud-devops", icon: Cloud, category: "Infrastructure", features: ["Cloud migration", "CI/CD pipelines", "Infrastructure as code", "Monitoring & alerting"], benefits: ["Faster deployments", "Improved reliability", "Cost optimization", "Scalability"], color: "from-blue-500 to-cyan-600", glowColor: "blue"}, {;
       title: "AI Sales Copilot", description: "Automate sales processes and boost conversion rates with AI", price: "From $1, 500/month", path: "/services/ai-sales-copilot", icon: Brain, category: "Sales AI", features: ["Lead scoring", "CRM automation", "Sales analytics", "Predictive insights"], benefits: ["Reduce admin time by 40-60%", "Improve conversion rates", "Shorten sales cycles"], color: "from-pink-500 to-rose-600", glowColor: "pink"}
-;
+
   Clock, CheckCircle,;
   Search} from "lucide-react";
 export const EnhancedServicesShowcase: React.FC = () => {",;
@@ -432,11 +432,11 @@ export const EnhancedServicesShowcase: React.FC = () => {",;
       icon: Brain, category: "Sales AI",";
       features: ["Lead scoring", "CRM automation", "Sales analytics", "Predictive insights"], benefits: ["Reduce admin time by 40-60%", "Improve conversion rates", "Shorten sales cycles"], color: "from-pink-500 to-rose-600",";
       glowColor: "pink"}
-;
+
   ];
   const containerVariants = {}, visible: { opacity: 1,;
       transition: { staggerChildren: 0.1  }
-;
+
   { opacity: 1,;
   y: 0;,
 }}
@@ -473,22 +473,22 @@ export const EnhancedServicesShowcase: React.FC = () => {;
       title: "IoT Edge Computing", description: "Process data at the edge and reduce latency by 90%", price: "From $399/month", path: "/services/iot-edge-computing", icon: Cpu, category: "IoT & Edge", features: ["Edge processing,Device management,Real-time analytics,AI at the edge"], benefits: ["Reduce latency by 90%,Cut bandwidth costs by 60-80%,Scale to millions of devices"], color: "from-orange-500 to-red-600", glowColor: "orange"}, {;
       title: "Cloud & DevOps", description: "Build, deploy, and scale with enterprise-grade cloud infrastructure", price: "From $799/month", path: "/services/cloud-devops", icon: Cloud, category: "Infrastructure", features: ["Cloud migration,CI/CD pipelines,Infrastructure as code,Monitoring & alerting"], benefits: ["Faster deployments,Improved reliability,Cost optimization,Scalability"], color: "from-blue-500 to-cyan-600", glowColor: "blue"}, {;
       title: "AI Sales Copilot", description: "Automate sales processes and boost conversion rates with AI", price: "From $1,500/month", path: "/services/ai-sales-copilot", icon: Brain, category: "Sales AI", features: ["Lead scoring,CRM automation,Sales analytics,Predictive insights"], benefits: ["Reduce admin time by 40-60%,Improve conversion rates,Shorten sales cycles"], color: "from-pink-500 to-rose-600", glowColor: "pink"}
-;
+
   ];
 
   const containerVariants = {}, visible: {,;
 opacity: 1, transition: {,staggerChildren: 0.1}
-;,
+
 }
-;,
+
 }";
 
 const categories = [];
 ";
 ""        staggerChildren: 0.1}
-;,
+
 }
-;
+
                 {/* Hover Glow Effect */}`;
                 <div className={`absolute inset-0 bg-gradient-to-r ${service.color} rounded-3xl opacity-0 group-hover:opacity-5 transition-opacity duration-500 blur-xl`}></div>;
               </div>;
@@ -610,7 +610,7 @@ const categories = [];
 
   { opacity: 1,;
   y: 0 ;
-;
+
         {/* CTA Section */}
         <motion.div ;
           className="text-center mt-20";
@@ -675,7 +675,7 @@ const categories = [];
             Questions? Email <a href="mailto:kleber@ziontechgroup.com" className="text-zion-cyan hover:underline">kleber@ziontechgroup.com</a>;
           </div>;
         )}
-;
+
         {/* Results Count */}
         {filteredServices.length > 0 && (;
           <div className="text-center mt-8 text-slate-400">;

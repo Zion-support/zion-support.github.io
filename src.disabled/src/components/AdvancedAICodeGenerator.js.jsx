@@ -1,19 +1,19 @@
 import React, { useState, useRef } from 'react';
 import { Code, Brain, Zap, Download, RefreshCw, X, Maximize2, Minimize2, Eye, EyeOff, Search, FileText, CheckCircle, AlertCircle, Copy, Shield, Activity, BarChart3, Gauge  } from 'lucide-react';
  from 'react';
-;
+
 interface UseApiOptions<T> {;
 
   url: string;
   method?: 'GET' | 'POST' | 'PUT' | 'DELETE';
   body?;headers?: Record<string, string>}
-;
+
 export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<T>) {;
 
   const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-;
+
   const execute = async () => {;
     try {;
       setLoading(true) ;
@@ -27,11 +27,11 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
           'Content-Type': 'application/json',;
           ...headers},;
         body: body ? JSON.stringify(body) : null});
-;
+
       if(!response.ok) {;
 `;
         throw new Error(\`HTTP error! status: \${response.status}\`)}
-;
+
       const result = await response.json();
       setData(result)} catch(err) {;
 
@@ -39,7 +39,7 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
 
       setLoading(false)}
   };
-;
+
   useEffect(() => {;
   // TODO: Add dependencies if needed;
 
@@ -47,7 +47,7 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
     // Cleanup function;,
 };,
 }, []);, []);
-;
+
     if(method === 'GET') {;
 
       execute()}
@@ -86,19 +86,19 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
     background - size: 200% 100%;
     animation: shimmer 1.5s infinite}
 }
-;
+
 @keyframes float {;
 
   0%, 100% { transform: translateY(0px)}
   50% { transform: translateY(-10px)}
 }
-;
+
 @keyframes glow {;
 
   from { box-shadow: 0 0 20px rgba(59, 130, 246, 0.5)}
   to { box-shadow: 0 0 30px rgba(59, 130, 246, 0.8)}
 }
-;
+
 @keyframes shimmer {;
 
   0% { background-position: -200% 0}
@@ -131,29 +131,29 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
     this.rules = new Map () ;
     this.errors = new Map () ;
     this.init () }
-;
+
   addRule(field, rule) {;
 
     if(!this.rules.has(field)) {;
 
       this.rules.set(field, [])}
     this.rules.get(field).push(rule)}
-;
+
   validateField(field) {;
 
     const value = this.form[field]?.value;
     const fieldErrors = [];
-;
+
     for(const result = rule (value, this.form) ;
       if(result !== true) {;
 
         fieldErrors.push(result)}
     }
-;
+
     this.errors.set(field, fieldErrors) ;
     this.updateFieldUI(field) ;
     return fieldErrors.length === 0}
-;
+
   validateForm () {;
     let isValid = true;
     for(const fieldElement = this.form[field];
@@ -167,17 +167,17 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
       fieldElement.classList.remove('error');
       this.hideFieldErrors(field)}
   }
-;
+
   showFieldErrors(field, errors) {;
 
     // Implementation for showing field-specific errors;,
 }
-;
+
   hideFieldErrors(field) {;
 
     // Implementation for hiding field-specific errors;,
 }
-;
+
   init () {;
     if(this.options.validateOnBlur) {;
 
@@ -187,7 +187,7 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
 
           this.validateField(e.target.name)}
       }, true)}
-;
+
     if(this.options.validateOnSubmit) {;
 
       this.form.addEventListener('submit', (e) => {;
@@ -210,7 +210,7 @@ const mockAIGenerations = [{;
         id: '1',;
         prompt: 'Create a React hook for managing local storage with TypeScript',`;
         generatedCode: `import { useState, useEffect } from 'react';
-;
+
 export function useLocalStorage<T>(key: string, initialValue: T) {;
 
   const [storedValue, setStoredValue] = useState<T>(() => {;
@@ -221,7 +221,7 @@ export function useLocalStorage<T>(key: string, initialValue: T) {;
       // console.error(\`Error reading localStorage key "\${key}":\`, error);
       return initialValue}
   }) ;
-;
+
   const setValue = (value: T | ((val: T) => T)) => {;
 
     try {;

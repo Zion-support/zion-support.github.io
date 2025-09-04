@@ -142,7 +142,7 @@ title: "Become a Partner",";
           {title: "Digital Transformation",";
             description: "End-to-end business transformation services to modernize your operations",";
             link: "/services/transformation"}
-;
+
         ];,
 },";
       "/solutions": {;
@@ -181,7 +181,7 @@ title: "Manufacturing",";
           {title: "Retail",";
             description: "E-commerce and omnichannel retail solutions",";
             link: "/solutions/retail"}
-;
+
         ];,
 },";
       "/about": {;
@@ -220,7 +220,7 @@ title: "Our Mission",";
           {title: "Our History",";
             description: "From startup to industry leader - our journey of innovation and growth",";
             link: "/about/history"}
-;
+
         ];,
 },";
       "/contact": {;
@@ -259,7 +259,7 @@ title: "Get a Quote",";
           {title: "Partnership",";
             description: "Explore partnership opportunities with Zion Tech Group",";
             link: "/partners"}
-;
+
         ];,
 },";
       "/blog": {;
@@ -298,7 +298,7 @@ title: "Technology Trends",";
           {title: "Expert Opinions",";
             description: "Thought leadership and expert perspectives on technology",";
             link: "/blog/expert"}
-;
+
         ];,
 },";
       "/careers": {;
@@ -337,7 +337,7 @@ title: "Open Positions",";
           {title: "Career Growth",";
             description: "Opportunities for professional development and advancement",";
             link: "/careers/growth"}
-;
+
         ];,
 },";
       "/partners": {;
@@ -376,12 +376,10 @@ title: "Become a Partner",";
           {title: "Partner Success Stories",";
             description: "See how our partners have grown with us",";
             link: "/partners/success"}
-;
-        ];
 
-;,
+        ];
 }
-;
+
 ";
     return pathMap[pathname] || {;
       title: "Page Not Found",";
@@ -537,9 +535,9 @@ title: "Become a Partner,";
             description: "See how our partners have grown with us,";
             link: "/partners/success"}
         ]}
-;,
+
 }
-;
+
 ";
     return pathMap[pathname] || {";
       title: "Page Not Found", ";
@@ -551,7 +549,7 @@ title: "Become a Partner,";
       subtitle: "The page you"re looking for doesn"t exist,";
       description: "We couldn"t find the page you requested. Please check the URL or navigate back to our homepage.",;
       sections: []}}
-;
+
 ";
   const pageInfo = getPageInfo(location.pathname);
   const breadcrumbs = location.pathname.split("/").filter(Boolean);,
@@ -586,7 +584,7 @@ title: "Become a Partner,";
               <span className="capitalize">{crumb}</span>;
             </div>;
           ))}
-;
+
         </nav>;
       </div>;
 ";
@@ -603,7 +601,7 @@ title: "Become a Partner,";
           <div className="text-center max-w-4xl mx-auto">";
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">,;
               {pageInfo.title}
-;
+
             </h1>";
             <p className="text-xl md: text-2xl text-zion-cyan mb-6">",;
       {/* comment */}";
@@ -619,7 +617,7 @@ title: "Become a Partner,";
             </p>";
             <p className="text-lg text-zion-slate-light leading-relaxed">;
               {pageInfo.description}
-;
+
             </p>;
           </div>;
       </section>;
@@ -635,7 +633,7 @@ title: "Become a Partner,";
                   </h3>;
                   <p className="text-zion-slate-light mb-6 leading-relaxed">;
                     {section.description}
-;
+
                   </p>";
                   <Link to={section.link}
                     className="inline-flex items-center text-zion-cyan hover: text-white transition-colors group-hove,";
@@ -661,7 +659,7 @@ title: "Become a Partner,";
                   </h3>";
                   <p className="text-zion-slate-light mb-6 leading-relaxed">;
                     {section.description}
-;
+
                   </p>";
                   <Link to="{section.link}" className="inline-flex items-center text-zion-cyan hover: text-white transition-colors group-hover:translate-x-1">;
                     Learn More";
@@ -673,11 +671,11 @@ title: "Become a Partner,";
                   </Link>;
                 </div>,;
               ))}
-;
+
             </div>;
         </section>;
       )}
-;
+
 ";
       {/* comment */}
       <section className="py-20">;
@@ -706,7 +704,7 @@ title: "Become a Partner,";
         <div className="container mx-auto px-4">";
           <div className="bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 border border-zion-purple/30 rounded-2xl p-12 text-center">;
       )}
-;
+
 ";
       {/* comment */}";
       <section className="py-20">";

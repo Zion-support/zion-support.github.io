@@ -1,13 +1,13 @@
 import React from 'react'; const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = "quantum" }) => { const canvasRef = useRef(null); const animationRef = useRef(); useEffect(() => { const canvas = canvasRef.current; if(!canvas) return; const ctx = canvas.getContext("2d"); if(!ctx) return; canvas.width = window.innerWidth; canvas.height = window.innerHeight; const particles = []; const colors = { quantum["#00ffff",#ff00ff",#ffff00",#00ff00"],; neon["#ff0080",#8000ff",#00ffff",#ffff00"],; holographic["#ff6b6b",#4ecdc4",#45b7d1",; "#96ceb4"] }; const selectedColors = colors[theme];
-;
+
  const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = "quantum" }) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext("2d") if (!ctx) return canvas.width = window.innerWidth canvas.height = window.innerHeight const particles = [] const colors = {} const selectedColors = colors[theme];import React, { useEffect, useRef }  from "react";const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = "quantum" }) => {}
-;
+
     const canvasRef = useRef();,
 }
     const animationRef = useRef();,
 }
     useEffect(() => {}
-;
+
         const canvas = canvasRef.current,";
 if (!canvas);
             return;
@@ -20,7 +20,7 @@ canvas.width = window.innerWidth,;
 canvas.height = window.innerHeight,;
 const particles = []";
         const colors = {}
-;
+
 """;";
   quantum["#00ffff", #ff00ff",#ffff00", #00ff00"], ";";
             neon["#ff0080", #8000ff",#00ffff", #ffff00"], ";";
@@ -30,20 +30,20 @@ const particles = []";
             neon["#ff0080",#8000ff",#00ffff",#ffff00"],";
             holographic["#ff6b6b",#4ecdc4",#45b7d1,;
   "#96ceb4"]}
-;
+
         const selectedColors = colors[theme];
         // commentfor(let i = 0 i < 100 i++) {}
-;
+
             particles.push({}
-;
+
                 x: Math.random() * canvas.width, y: Math.random() * canvas.height, vx: (Math.random() - 0.5) * 2, vy: (Math.random() - 0.5) * 2, size: Math.random() * 3 + 1, opacity: Math.random() * 0.5 + 0.3, color: selectedColors[Math.floor(Math.random() * selectedColors.length)]})}>;
         const animate = () => {}
-;
+
             ctx.clearRect();,
 }
             // comment;
 particles.forEach((particle, index) => {}
-;
+
                 particle.x += particle.vx,;
 particle.y += particle.vy,;
                 // comment;
@@ -67,7 +67,7 @@ ctx.beginPath()";
 }
                 // comment;
 particles.forEach((otherParticle, otherIndex) => {}
-;
+
                     if();,
 }
                         return,;
@@ -88,7 +88,7 @@ ctx.stroke()}", ";,
                 ctx.globalCompositeOperation = "screen";
                 // comment;
 for(let i = 0 i < 5 i++) {}
-;
+
                     const time = Date.now() * 0.001>;
 const wave = Math.sin(time + i) * 100";
                     ctx.beginPath()";
@@ -102,9 +102,9 @@ ctx.stroke()}
                 ctx.save()";
                 ctx.shadowColor = "#ff0080";
                 ctx.shadowBlur = 20,>particles.forEach(particle => {}
-;
+
                     if (particle.size > 2) {}
-;
+
                         ctx.beginPath();,
 }
                         ctx.arc();,
@@ -121,32 +121,32 @@ ctx.stroke()}";,
                 // comment;
 const gridSize = 50,;
 for(let x = 0 x < canvas.width x += gridSize) {}
-;
+
                     ctx.beginPath()";
                     ctx.moveTo(x, 0)";
                     ctx.lineTo(x, canvas.height)";
                     ctx.strokeStyle = "rgba(255, 255, 255, ${0.1 * intensity})";
                     ctx.lineWidth = 0.5,ctx.stroke()}
-;
+
                 for(let y = 0 y < canvas.height y += gridSize) {}
-;
+
                     ctx.beginPath()";
                     ctx.moveTo(0, y)";
                     ctx.lineTo(canvas.width, y)";
                     ctx.strokeStyle = "rgba(255, 255, 255, ${0.1 * intensity})";
                     ctx.lineWidth = 0.5>ctx.stroke()}
-;
+
                 ctx.restore()}
-;
+
             animationRef.current = requestAnimationFrame(animate)}
-;
+
         animate()>;
         const handleResize = () => {}";
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight}
         window.addEventListener();,
 }        return () => {}
-;
+
             if(animationRef.current) {}
                 cancelAnimationFrame(animationRef.current)}';
             window.removeEventListener('resize', handleResize)}}, [intensity, theme]);
@@ -156,15 +156,13 @@ for(let x = 0 x < canvas.width x += gridSize) {}
   filter: theme === 'quantum' ? 'blur(0.5px)' : 'none';,
 }}/>)};
 export default UltraFuturisticBackground2034;
-;
+export { UltraFuturisticBackground2034 };
 
 export { UltraFuturisticBackground2034 };
-;
+
 export { UltraFuturisticBackground2034 };
-;
+
 export { UltraFuturisticBackground2034 };
-;
-export { UltraFuturisticBackground2034 };
-;
+
 export { UltraFuturisticBackground2034 };
 ))

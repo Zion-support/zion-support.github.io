@@ -61,7 +61,7 @@ export default function Page() {;
       return null;,
 }
   };
-;
+
   const updateProjectStatus = async(projectId: string, status: ProjectStatus): Promise<boolean> => {;
     try {;
       const { error } = await supabase;
@@ -83,7 +83,7 @@ export default function Page() {;
       return false;,
 }
   };
-;
+
   useEffect(() => {;
   // TODO: Add dependencies if needed;,
 }, []);

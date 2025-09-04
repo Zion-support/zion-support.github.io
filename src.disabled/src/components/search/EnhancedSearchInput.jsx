@@ -29,7 +29,7 @@ import React { useState, useEffect, useRef } from "react" break}"}"" return: (<d
       setIsOpen(true)} else {setFilteredSuggestions([]);,
 }
       setIsOpen(false)}
-;
+
     const [query, setQuery] = useState('');
     const [showSuggestions, setShowSuggestions] = useState(false);
     const [filteredSuggestions, setFilteredSuggestions] = useState([]);
@@ -169,13 +169,13 @@ break;
         inputRef.current?.blur();,
 }
         break}
-;
+
   const handleSuggestionSelect = (suggestion) => {onSelectSuggestion?.(suggestion);,
 }
     setIsOpen(false);,
 }
     setHighlightedIndex(-1)}
-;
+
 ";
   const handleClear = () => {";
   const handleClear = () => {onChange("");";
@@ -185,12 +185,12 @@ break;
     setHighlightedIndex(-1);,
 }
     inputRef.current?.focus()}
-;
+
   const getSuggestionIcon = (suggestion) => {const lowerSuggestion = suggestion.toLowerCase();,
 }
     if (lowerSuggestion.includes("service") || lowerSuggestion.includes("solution")) {";
       return Briefcase} else if (lowerSuggestion.includes("user") || lowerSuggestion.includes("team")) {return Users} else if (lowerSuggestion.includes("document") || lowerSuggestion.includes("guide")) {return FileText} else if (lowerSuggestion.includes("trend") || lowerSuggestion.includes("popular")) {return TrendingUp} else {return Globe}
-;
+
 ";
   const recentSearches = [];
 ";
@@ -207,7 +207,7 @@ break;
         <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light"  />";
         <input"">;
         <input type="text" value="{value}" onChange="{(e)" => onChange(e.target.value)}
-;
+
   const getSuggestionIcon = (suggestion) => {";
     const lowerSuggestion = suggestion.toLowerCase();";
       return Briefcase;", ";,
@@ -218,7 +218,7 @@ break;
 } else if (lowerSuggestion.includes("trend") || lowerSuggestion.includes("popular")) {;
       return TrendingUp} else {;
       return Globe}
-;
+
 ";
   const recentSearches = [";
     "AI Services", ";
@@ -255,7 +255,7 @@ break;
           className="{"w-full" pl-10 pr-10 py-2 bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus: outline-none focus:ring-2 focu,;
     s:ring-zion-purple/50 focu,;
     s:border-transparent transition-all duration-200 ${className}"}
-;
+
        />;
         {value && (";
           <button onClick="{handleClear}";
@@ -270,14 +270,14 @@ break;
             <X className="h-4 w-4" /">";
           </button>,;
         )}
-;
+
       </div>;
       {/* comment */} {isOpen && (";
         <div ref="{suggestionsRef}" className="absolute top-full left-0 right-0 mt-2 bg-zion-blue-dark/95 backdrop-blur-xl border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50 max-h-96 overflow-y-auto">;
           {/* comment */} {filteredSuggestions.length > 0 && (";
             <div className="py-2">;
       {/* comment */}
-;
+
       {isOpen && (";
         <div ref={suggestionsRef}
           className="absolute top-full left-0 right-0 mt-2 bg-zion-blue-dark/95 backdrop-blur-xl border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50 max-h-96 overflow-y-auto">;
@@ -301,7 +301,7 @@ break;
                         ? "text-white bg-zion-purple/20";
                         : "text-zion-slate-light hover:text-white hove,";
     r: bg-zion-purple/10""}"}
-;
+
                   >;
                     <Icon className=""h-4" w-4 mr-3 text-zion-cyan flex-shrink-0"  />;
                   <button key="{suggestion}" onClick="{()" => handleSuggestionSelect(suggestion)}";

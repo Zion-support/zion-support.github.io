@@ -246,14 +246,12 @@ const AIAutonomousOptimization = () => {}
       </div>;
     </>)};
 export default AIAutonomousOptimization;
-;
+export { AIAutonomousOptimization };
 
 export { AIAutonomousOptimization };
-;
+
 export { AIAutonomousOptimization };
-;
+
 export { AIAutonomousOptimization };
-;
-export { AIAutonomousOptimization };
-;
+
 export { AIAutonomousOptimization };

@@ -39,14 +39,12 @@ const Separator = React.forwardRef((_a, ref) => {}
 });';
 Separator.displayName = 'Separator';
 export { Separator };
-;
+export { Separator };
 
 export { Separator };
-;
+
 export { Separator };
-;
+
 export { Separator };
-;
-export { Separator };
-;
+
 export { Separator };
