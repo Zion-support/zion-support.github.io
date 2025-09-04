@@ -14,8 +14,7 @@ export default function LoadingOptimized() { const [isLoading, setIsLoading] = u
     return () => clearTimeout(timer);
   }, [delay]);
 
-  if() { return <>{fallback }</>;
-  }
+  if (isLoading) { return <>{fallback}</>; }
 
   return <>{children}</>;
 }

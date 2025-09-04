@@ -5,8 +5,10 @@ interface BreadcrumbItem {
   label: string;
   href?: string}
 
-export default function Breadcrumb() { const router = useRouter();
-  const pathSegments = router.asPath.split('/').filter(segment => segment !== '')const breadcrumbs: BreadcrumbItem[] = [
+export default function Breadcrumb() {
+  const router = useRouter();
+  const pathSegments = router.asPath.split('/').filter(segment => segment !== '');
+  const breadcrumbs: BreadcrumbItem[] = [
     { label: 'Home', href: '/'  }
   ];
 
@@ -29,7 +31,7 @@ export default function Breadcrumb() { const router = useRouter();
   });
 
   // Don't show breadcrumbs on home page
-  if() { return null }
+  if (breadcrumbs.length <= 1) { return null; }
 
   return (
     <nav className="bg-slate-900/50 border-b border-white/10" aria-label="Breadcrumb">

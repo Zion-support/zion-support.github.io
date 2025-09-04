@@ -150,9 +150,9 @@ class ApiDocumentationGenerator {
         endpoint.examples.forEach(example => {
           markdown += `#### ${example.name}\n\n`;
           markdown += `**Request:**\n`;
-          markdown += ```json\n${JSON.stringify(example.request, null, 2)}\n```\n\n`;
+          markdown += `\`\`\`json\n${JSON.stringify(example.request, null, 2)}\n\`\`\`\n\n`;
           markdown += `**Response:**\n`;
-          markdown += ```json\n${JSON.stringify(example.response, null, 2)}\n```\n\n`;
+          markdown += `\`\`\`json\n${JSON.stringify(example.response, null, 2)}\n\`\`\`\n\n`;
         });
       }
 
