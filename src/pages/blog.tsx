@@ -1,7 +1,6 @@
-import React from "react"
-import Head from "next/head"
-import Link from "next/link"
-const blog = () => {
+import React from 'react';
+
+const Blog: React.FC = () => {
   return (
     <>
       <Head>
