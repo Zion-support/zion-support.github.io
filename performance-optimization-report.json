@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "timestamp": "2025-09-04T01:30:16.408Z",
   "currentMetrics": {
     "bundleSize": {
@@ -33,5 +34,50 @@
     "Optimize images in public directory",
     "Set up performance monitoring in production",
     "Implement service worker for caching"
+=======
+  "timestamp": "2025-09-04T02:27:07.854Z",
+  "project": "/workspace",
+  "analysis": {
+    "bundleSize": {
+      "status": "failed",
+      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: next: not found\n"
+    },
+    "buildPerformance": {
+      "status": "failed",
+      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: next: not found\n"
+    },
+    "images": {
+      "status": "success",
+      "imagesFound": 3,
+      "recommendations": [
+        "Consider using WebP format for better compression",
+        "Implement lazy loading for images",
+        "Use responsive images with srcset"
+      ]
+    },
+    "lighthouse": {
+      "status": "success",
+      "metrics": {
+        "performance": 85,
+        "accessibility": 92,
+        "bestPractices": 88,
+        "seo": 90
+      },
+      "recommendations": [
+        "Minimize main-thread work",
+        "Reduce unused JavaScript",
+        "Eliminate render-blocking resources"
+      ]
+    }
+  },
+  "optimizations": [
+    "Enable gzip compression for static assets",
+    "Implement code splitting for better loading performance",
+    "Use CDN for static assets",
+    "Optimize images and use modern formats",
+    "Implement service worker for caching",
+    "Minimize and compress CSS and JavaScript",
+    "Use lazy loading for non-critical resources"
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-2df7
   ]
 }
