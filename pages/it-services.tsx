@@ -1298,6 +1298,236 @@ export default function ITServices() {
         'Advanced data processing and analysis'
       ],
       category: 'High-Performance Computing'
+    },
+    {
+      icon: Brain,
+      name: 'Edge Computing & IoT Infrastructure',
+      description: 'Edge computing solutions with IoT device management, real-time data processing, and distributed architecture.',
+      features: [
+        'Edge computing infrastructure deployment',
+        'IoT device management and monitoring',
+        'Real-time data processing and analytics',
+        'Edge-to-cloud data synchronization',
+        'Low-latency application deployment',
+        'Distributed system architecture and optimization'
+      ],
+      pricing: '$150 – $300/hour',
+      projectPricing: '$25,000 – $200,000/project',
+      timeline: '8–16 weeks',
+      benefits: [
+        'Ultra-low latency processing',
+        'Reduced bandwidth costs',
+        'Improved data privacy and security',
+        'Enhanced scalability and performance'
+      ],
+      category: 'Edge Computing'
+    },
+    {
+      icon: Database,
+      name: 'Multi-Cloud Data Architecture',
+      description: 'Advanced multi-cloud data architecture with data mesh, data lakes, and real-time analytics platforms.',
+      features: [
+        'Multi-cloud data lake and warehouse design',
+        'Data mesh architecture implementation',
+        'Real-time streaming analytics',
+        'Data governance and lineage tracking',
+        'Advanced ETL/ELT pipeline development',
+        'Cross-cloud data integration and migration'
+      ],
+      pricing: '$180 – $350/hour',
+      projectPricing: '$50,000 – $500,000/project',
+      timeline: '12–24 weeks',
+      benefits: [
+        'Unified data access across clouds',
+        'Improved data quality and governance',
+        'Real-time business insights',
+        'Reduced vendor lock-in risks'
+      ],
+      category: 'Data Architecture'
+    },
+    {
+      icon: Shield,
+      name: 'Zero Trust Network Architecture',
+      description: 'Comprehensive zero trust security implementation with micro-segmentation, identity management, and continuous verification.',
+      features: [
+        'Zero trust architecture design and implementation',
+        'Network micro-segmentation',
+        'Identity and access management (IAM)',
+        'Continuous security monitoring and verification',
+        'Privileged access management (PAM)',
+        'Security orchestration and automated response'
+      ],
+      pricing: '$200 – $400/hour',
+      projectPricing: '$75,000 – $750,000/project',
+      timeline: '16–32 weeks',
+      benefits: [
+        '99.9% security breach prevention',
+        'Granular access control',
+        'Reduced attack surface',
+        'Enhanced compliance and audit capabilities'
+      ],
+      category: 'Zero Trust Security'
+    },
+    {
+      icon: Cpu,
+      name: 'Quantum Computing Integration',
+      description: 'Quantum computing integration services for optimization problems, cryptography, and advanced research applications.',
+      features: [
+        'Quantum algorithm development and optimization',
+        'Hybrid classical-quantum computing systems',
+        'Quantum cryptography implementation',
+        'Quantum machine learning applications',
+        'Quantum simulation and modeling',
+        'Quantum computing infrastructure setup'
+      ],
+      pricing: '$300 – $500/hour',
+      projectPricing: '$100,000 – $1,000,000/project',
+      timeline: '24–52 weeks',
+      benefits: [
+        'Exponential computational advantages',
+        'Advanced optimization capabilities',
+        'Quantum-secure communications',
+        'Cutting-edge research capabilities'
+      ],
+      category: 'Quantum Computing'
+    },
+    {
+      icon: Globe,
+      name: '5G Network Infrastructure & Applications',
+      description: 'Next-generation 5G network infrastructure with ultra-low latency applications and edge computing integration.',
+      features: [
+        '5G network infrastructure design and deployment',
+        'Ultra-low latency application development',
+        'Network slicing and optimization',
+        'Edge computing integration with 5G',
+        'Private 5G network solutions',
+        '5G-enabled IoT and smart city applications'
+      ],
+      pricing: '$250 – $450/hour',
+      projectPricing: '$150,000 – $2,000,000/project',
+      timeline: '20–40 weeks',
+      benefits: [
+        'Ultra-high speed connectivity',
+        'Massive device connectivity',
+        'Real-time application capabilities',
+        'Enhanced mobile and IoT experiences'
+      ],
+      category: '5G Networks'
+    },
+    {
+      icon: Code,
+      name: 'Serverless & Event-Driven Architecture',
+      description: 'Modern serverless computing solutions with event-driven architecture, microservices, and auto-scaling capabilities.',
+      features: [
+        'Serverless application architecture and development',
+        'Event-driven system design and implementation',
+        'Microservices decomposition and orchestration',
+        'Auto-scaling and cost optimization',
+        'Serverless data processing pipelines',
+        'Function-as-a-Service (FaaS) deployment'
+      ],
+      pricing: '$120 – $250/hour',
+      projectPricing: '$20,000 – $150,000/project',
+      timeline: '6–16 weeks',
+      benefits: [
+        'Pay-per-use cost model',
+        'Automatic scaling and availability',
+        'Reduced infrastructure management',
+        'Faster time-to-market'
+      ],
+      category: 'Serverless Computing'
+    },
+    {
+      icon: BarChart3,
+      name: 'Digital Twin & Simulation Platforms',
+      description: 'Digital twin development and simulation platforms for manufacturing, smart cities, and complex system modeling.',
+      features: [
+        'Digital twin architecture and development',
+        'Real-time simulation and modeling',
+        'IoT sensor integration and data collection',
+        'Predictive analytics and optimization',
+        '3D visualization and virtual reality integration',
+        'Digital twin lifecycle management'
+      ],
+      pricing: '$200 – $400/hour',
+      projectPricing: '$75,000 – $750,000/project',
+      timeline: '16–32 weeks',
+      benefits: [
+        'Predictive maintenance capabilities',
+        'Optimized system performance',
+        'Reduced operational costs',
+        'Enhanced decision-making insights'
+      ],
+      category: 'Digital Twin'
+    },
+    {
+      icon: Shield,
+      name: 'Blockchain & Distributed Ledger Solutions',
+      description: 'Enterprise blockchain solutions with smart contracts, DeFi applications, and distributed ledger technology.',
+      features: [
+        'Blockchain architecture design and development',
+        'Smart contract development and auditing',
+        'DeFi application development',
+        'Cryptocurrency and token systems',
+        'Distributed ledger integration',
+        'Blockchain security and compliance'
+      ],
+      pricing: '$180 – $350/hour',
+      projectPricing: '$50,000 – $500,000/project',
+      timeline: '12–28 weeks',
+      benefits: [
+        'Immutable transaction records',
+        'Decentralized trust and verification',
+        'Reduced intermediary costs',
+        'Enhanced transparency and auditability'
+      ],
+      category: 'Blockchain'
+    },
+    {
+      icon: Database,
+      name: 'Advanced Analytics & Business Intelligence',
+      description: 'Comprehensive analytics platforms with real-time dashboards, predictive modeling, and self-service BI capabilities.',
+      features: [
+        'Advanced analytics platform development',
+        'Real-time dashboard and visualization',
+        'Predictive modeling and machine learning',
+        'Self-service business intelligence tools',
+        'Data warehousing and ETL optimization',
+        'Advanced statistical analysis and reporting'
+      ],
+      pricing: '$140 – $280/hour',
+      projectPricing: '$30,000 – $300,000/project',
+      timeline: '8–20 weeks',
+      benefits: [
+        'Data-driven decision making',
+        'Real-time business insights',
+        'Improved operational efficiency',
+        'Predictive business intelligence'
+      ],
+      category: 'Analytics & BI'
+    },
+    {
+      icon: Wrench,
+      name: 'IT Service Management & ITIL Implementation',
+      description: 'Comprehensive IT service management with ITIL best practices, service desk, and IT operations optimization.',
+      features: [
+        'ITIL framework implementation',
+        'Service desk and incident management',
+        'Change and configuration management',
+        'IT asset and inventory management',
+        'Service level management and reporting',
+        'IT operations automation and optimization'
+      ],
+      pricing: '$100 – $200/hour',
+      projectPricing: '$25,000 – $200,000/project',
+      timeline: '8–24 weeks',
+      benefits: [
+        'Improved IT service delivery',
+        'Reduced downtime and incidents',
+        'Enhanced customer satisfaction',
+        'Optimized IT operations costs'
+      ],
+      category: 'IT Service Management'
     }
   ];
 
