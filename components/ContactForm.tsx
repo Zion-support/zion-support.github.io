@@ -28,8 +28,7 @@ const ContactForm: React.FC = () => {
       ...prev,
       [name]: value
     }));
-  };
-
+  }
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -55,8 +54,6 @@ const ContactForm: React.FC = () => {
     } finally {
       setIsSubmitting(false);
     }
-  };
-
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       {submitStatus === 'success' && (
@@ -196,6 +193,5 @@ const ContactForm: React.FC = () => {
       </button>
     </form>
   );
-};
-
+}
 export default ContactForm;
