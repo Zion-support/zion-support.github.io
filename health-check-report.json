@@ -1,10 +1,29 @@
 {
-  "timestamp": "2025-09-03T21:22:52.907Z",
-  "status": "healthy",
+  "timestamp": "2025-09-04T01:30:00.454Z",
   "checks": {
-    "packageJson": true,
-    "buildDir": false,
-    "dependencies": true,
-    "criticalFiles": true
-  }
+    "packageJson": {
+      "status": "ok",
+      "message": "Package.json found",
+      "version": "0.1.0"
+    },
+    "dependencies": {
+      "status": "ok",
+      "message": "Dependencies installed"
+    },
+    "diskSpace": {
+      "status": "ok",
+      "message": "Disk space available",
+      "details": "overlay         126G   15G  106G  13% /"
+    },
+    "memory": {
+      "status": "ok",
+      "message": "Memory check completed",
+      "details": "Mem:            15Gi       1.5Gi       496Mi       6.5Mi        14Gi        14Gi"
+    },
+    "build": {
+      "status": "ok",
+      "message": "Build directory found"
+    }
+  },
+  "status": "healthy"
 }
