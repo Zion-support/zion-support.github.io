@@ -1,251 +1,223 @@
-import Head from 'next/head';
 import Link from 'next/link';
+import Head from 'next/head';
 
-const contact = {
-  site: 'https://ziontechgroup.com',
-  email: 'kleber@ziontechgroup.com',
-  phone: '+1 302 464 0950',
-};
-
-export default function ApiQuickStart(): any {
+export default function ApiQuickStart() {
   return (
     <>
       <Head>
-        <title>API Quick Start Guide - Zion Tech Group</title>
-        <meta name="description" content="Get up and running with Zion Tech Group APIs in minutes. Complete quick start guide with examples and best practices." />";
-        <meta name="keywords" content="API, quick start, documentation, integration, Zion Tech Group" />";
-        <link rel="canonical" href={`${contact.site}/docs/api-quick-start`} />`;
+        <title>API Quick Start - Zion Tech Group Documentation</title>
+        <meta name="description" content="Quick start guide for Zion Tech Group APIs. Learn how to authenticate, make your first API call, and integrate our services into your applications." />
+        <meta name="keywords" content="API, quick start, authentication, integration, micro SaaS, AI services" />
+        <link rel="canonical" href="https://ziontechgroup.com/docs/api-quick-start" />
       </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">";
-        <div className="container mx-auto px-4 py-16">";
-          {/* Header */}
-          <div className="text-center mb-16">";
-            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">,";
-              API Quick Start Guide
-            </h1>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">";
-              Get up and running with our APIs in minutes. This guide will help you integrate our services quickly and efficiently.
-            </p>
-          </div>
-
-          {/* Navigation Breadcrumb */}
-          <nav className="mb-8">";
-            <div className="flex items-center space-x-2 text-slate-400">";
-              <Link href="/" className="hover: text-white">Home</Link>,";
-              <span>›</span>
-              <Link href="/docs" className="hover: text-white">Documentation</Link>,";
-              <span>›</span>
-              <span className="text-white">API Quick Start</span>";
-            </div>
+      <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #0b1220 0%, #1a1a2e 50%, #16213e 100%)', color: 'white' }}>
+        <div style={{ maxWidth: 1200, margin: '0 auto', padding: '40px 20px' }}>
+          {/* Breadcrumb */}
+          <nav style={{ marginBottom: 32, fontSize: '0.9rem' }}>
+            <Link href="/" style={{ color: '#93c5fd', textDecoration: 'none' }}>Home</Link>
+            <span style={{ margin: '0 8px', color: '#64748b' }}>/</span>
+            <Link href="/docs" style={{ color: '#93c5fd', textDecoration: 'none' }}>Documentation</Link>
+            <span style={{ margin: '0 8px', color: '#64748b' }}>/</span>
+            <span style={{ color: '#64748b' }}>API Quick Start</span>
           </nav>
 
-          <div className="max-w-4xl mx-auto">";
-            {/* Getting Started */}
-            <section className="bg-white/10 backdrop-blur-sm rounded-xl p-8 mb-8">";
-              <h2 className="text-2xl font-bold text-white mb-6">Getting Started</h2>";
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 3fr', gap: 40, alignItems: 'start' }}>
+            {/* Sidebar */}
+            <aside style={{ 
+              background: 'rgba(15, 23, 42, 0.8)', 
+              borderRadius: 12, 
+              padding: 24, 
+              border: '1px solid rgba(255,255,255,0.1)',
+              position: 'sticky',
+              top: 20
+            }}>
+              <h3 style={{ marginBottom: 16, fontSize: '1.1rem', fontWeight: 600 }}>Documentation</h3>
+              <nav style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+                <Link href="/docs" style={{ color: '#93c5fd', textDecoration: 'none', padding: '8px 0', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>Overview</Link>
+                <Link href="/docs/getting-started" style={{ color: '#93c5fd', textDecoration: 'none', padding: '8px 0', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>Getting Started</Link>
+                <Link href="/docs/api-quick-start" style={{ color: 'white', textDecoration: 'none', padding: '8px 0', borderBottom: '1px solid rgba(255,255,255,0.1)', fontWeight: 600 }}>API Quick Start</Link>
+                <Link href="/docs/integration-examples" style={{ color: '#93c5fd', textDecoration: 'none', padding: '8px 0', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>Integration Examples</Link>
+              </nav>
+            </aside>
+
+            {/* Main Content */}
+            <main>
+              <h1 style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: 16, background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+                API Quick Start
+              </h1>
               
-              <div className="space-y-6">";
-                <div>
-                  <h3 className="text-xl font-semibold text-blue-400 mb-3">1. Authentication</h3>";
-                  <p className="text-slate-300 mb-4">";
-                    All API requests require authentication using your API key. You can obtain your API key from the dashboard.
+              <p style={{ fontSize: '1.2rem', color: '#cbd5e1', marginBottom: 32, lineHeight: 1.6 }}>
+                Get started with Zion Tech Group APIs in minutes. This guide will walk you through authentication, making your first API call, and common integration patterns.
+              </p>
+
+              <div style={{ display: 'grid', gap: 24 }}>
+                {/* Authentication */}
+                <section style={{ 
+                  background: 'rgba(15, 23, 42, 0.6)', 
+                  borderRadius: 12, 
+                  padding: 24, 
+                  border: '1px solid rgba(255,255,255,0.1)' 
+                }}>
+                  <h2 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: 16, color: '#3b82f6' }}>Authentication</h2>
+                  <p style={{ color: '#cbd5e1', marginBottom: 16 }}>
+                    All API requests require authentication using API keys. You can obtain your API keys from the dashboard after signing up.
                   </p>
-                  <div className="bg-slate-800 rounded-lg p-4">
-                    <pre className="text-green-400 text-sm overflow-x-auto">
-{`curl -X GET "https://api.ziontechgroup.com/v1/services" \\
+                  
+                  <div style={{ background: 'rgba(0, 0, 0, 0.3)', borderRadius: 8, padding: 16, marginBottom: 16 }}>
+                    <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: 8, color: '#22c55e' }}>API Key Header</h3>
+                    <pre style={{ color: '#cbd5e1', fontSize: '0.9rem', overflow: 'auto' }}>{`Authorization: Bearer YOUR_API_KEY
+Content-Type: application/json`}</pre>
+                  </div>
+
+                  <div style={{ background: 'rgba(0, 0, 0, 0.3)', borderRadius: 8, padding: 16 }}>
+                    <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: 8, color: '#22c55e' }}>Example cURL Request</h3>
+                    <pre style={{ color: '#cbd5e1', fontSize: '0.9rem', overflow: 'auto' }}>{`curl -X GET "https://api.ziontechgroup.com/v1/services" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
-  -H "Content-Type: application/json"`}
-                    </pre>
+  -H "Content-Type: application/json"`}</pre>
                   </div>
-                </div>
+                </section>
 
-                <div>
-                  <h3 className="text-xl font-semibold text-blue-400 mb-3">2. Base URL</h3>";
-                  <p className="text-slate-300 mb-4">";
-                    All API endpoints are relative to our base URL: </p>,
-                  <div className="bg-slate-800 rounded-lg p-4">";
-                    <code className="text-green-400">https: //api.ziontechgroup.com/v1</code>,";
-                  </div>
-                </div>
-
-                <div>
-                  <h3 className="text-xl font-semibold text-blue-400 mb-3">3. Rate Limits</h3>";
-                  <p className="text-slate-300 mb-4">";
-                    API requests are rate limited to ensure fair usage: </p>,
-                  <ul className="text-slate-300 space-y-2 ml-4">";
-                    <li>• Free tier: 100 requests per hour</li>,
-                    <li>• Pro tier: 1,000 requests per hour</li>
-                    <li>• Enterprise: Custom limits</li>,
-                  </ul>
-                </div>
-              </div>
-            </section>
-
-            {/* Common Endpoints */}
-            <section className="bg-white/10 backdrop-blur-sm rounded-xl p-8 mb-8">
-              <h2 className="text-2xl font-bold text-white mb-6">Common Endpoints</h2>
-              
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-xl font-semibold text-purple-400 mb-3">Get All Services</h3>
-                  <div className="bg-slate-800 rounded-lg p-4 mb-3">
-                    <pre className="text-green-400 text-sm overflow-x-auto">
-{`GET /services`}
-
-Response: {
-  "services": [
-    {
-      "id": "ai-services",
-      "name": "AI Services",";
-      "description": "Advanced AI solutions",";
-      "pricing": "Starting at $99/month"
-    }
-  ]
-}`}`;
-                    </pre>
-                  </div>
-                </div>
-
-                <div>
-                  <h3 className="text-xl font-semibold text-purple-400 mb-3">Get Service Details</h3>";
-                  <div className="bg-slate-800 rounded-lg p-4 mb-3">";
-                    <pre className="text-green-400 text-sm overflow-x-auto">";
-{`GET /services/{service_id}`;
-
-Response: {,
-  "id": "ai-services",";
-  "name": "AI Services",";
-  "description": "Advanced AI solutions",";
-  "features": ["Machine Learning", "NLP", "Computer Vision"],";
-  "pricing": {";
-    "basic": "$99/month",";
-    "pro": "$299/month",";
-    "enterprise": "Custom"
+                {/* Making Your First Request */}
+                <section style={{ 
+                  background: 'rgba(15, 23, 42, 0.6)', 
+                  borderRadius: 12, 
+                  padding: 24, 
+                  border: '1px solid rgba(255,255,255,0.1)' 
+                }}>
+                  <h2 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: 16, color: '#8b5cf6' }}>Making Your First Request</h2>
+                  <p style={{ color: '#cbd5e1', marginBottom: 16 }}>
+                    Let's start with a simple request to list available services:
+                  </p>
+                  
+                  <div style={{ background: 'rgba(0, 0, 0, 0.3)', borderRadius: 8, padding: 16, marginBottom: 16 }}>
+                    <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: 8, color: '#22c55e' }}>JavaScript Example</h3>
+                    <pre style={{ color: '#cbd5e1', fontSize: '0.9rem', overflow: 'auto' }}>{`const response = await fetch('https://api.ziontechgroup.com/v1/services', {
+  method: 'GET',
+  headers: {
+    'Authorization': 'Bearer YOUR_API_KEY',
+    'Content-Type': 'application/json'
   }
-}`}`;
-                    </pre>
+});
+
+const services = await response.json();
+console.log(services);`}</pre>
                   </div>
-                </div>
 
-                <div>
-                  <h3 className="text-xl font-semibold text-purple-400 mb-3">Submit Contact Form</h3>";
-                  <div className="bg-slate-800 rounded-lg p-4 mb-3">";
-                    <pre className="text-green-400 text-sm overflow-x-auto">";
-{`POST /contact`;
+                  <div style={{ background: 'rgba(0, 0, 0, 0.3)', borderRadius: 8, padding: 16 }}>
+                    <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: 8, color: '#22c55e' }}>Python Example</h3>
+                    <pre style={{ color: '#cbd5e1', fontSize: '0.9rem', overflow: 'auto' }}>{`import requests
 
-Request Body: {,
-  "name": "John Doe",";
-  "email": "john@example.com",";
-  "company": "Acme Corp",";
-  "message": "Interested in AI services",";
-  "service": "ai-services"
+headers = {
+    'Authorization': 'Bearer YOUR_API_KEY',
+    'Content-Type': 'application/json'
 }
 
-Response: {,
-  "success": true,";
-  "message": "Contact form submitted successfully",";
-  "id": "contact_123"
-}`}`;
-                    </pre>
+response = requests.get('https://api.ziontechgroup.com/v1/services', headers=headers)
+services = response.json()
+print(services)`}</pre>
                   </div>
-                </div>
-              </div>
-            </section>
+                </section>
 
-            {/* Error Handling */}
-            <section className="bg-white/10 backdrop-blur-sm rounded-xl p-8 mb-8">";
-              <h2 className="text-2xl font-bold text-white mb-6">Error Handling</h2>";
-              
-              <div className="space-y-4">";
-                <p className="text-slate-300">";
-                  Our API uses standard HTTP status codes and returns detailed error messages: </p>,
-                
-                <div className="bg-slate-800 rounded-lg p-4">";
-                  <pre className="text-red-400 text-sm overflow-x-auto">";
-{`{`;
-  "error": {";
-    "code": "INVALID_API_KEY",";
-    "message": "The provided API key is invalid",";
+                {/* Common Endpoints */}
+                <section style={{ 
+                  background: 'rgba(15, 23, 42, 0.6)', 
+                  borderRadius: 12, 
+                  padding: 24, 
+                  border: '1px solid rgba(255,255,255,0.1)' 
+                }}>
+                  <h2 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: 16, color: '#22c55e' }}>Common Endpoints</h2>
+                  <div style={{ display: 'grid', gap: 16 }}>
+                    <div style={{ padding: 16, background: 'rgba(0, 0, 0, 0.2)', borderRadius: 8, border: '1px solid rgba(255,255,255,0.1)' }}>
+                      <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: 8, color: '#3b82f6' }}>GET /v1/services</h3>
+                      <p style={{ color: '#cbd5e1', fontSize: '0.9rem', marginBottom: 8 }}>List all available services</p>
+                      <code style={{ color: '#22c55e', fontSize: '0.8rem' }}>Returns: Array of service objects</code>
+                    </div>
+                    <div style={{ padding: 16, background: 'rgba(0, 0, 0, 0.2)', borderRadius: 8, border: '1px solid rgba(255,255,255,0.1)' }}>
+                      <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: 8, color: '#8b5cf6' }}>POST /v1/ai/analyze</h3>
+                      <p style={{ color: '#cbd5e1', fontSize: '0.9rem', marginBottom: 8 }}>Analyze text using AI services</p>
+                      <code style={{ color: '#22c55e', fontSize: '0.8rem' }}>Body: {`{"text": "string", "type": "sentiment|classification|extraction"}`}</code>
+                    </div>
+                    <div style={{ padding: 16, background: 'rgba(0, 0, 0, 0.2)', borderRadius: 8, border: '1px solid rgba(255,255,255,0.1)' }}>
+                      <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: 8, color: '#22c55e' }}>GET /v1/usage</h3>
+                      <p style={{ color: '#cbd5e1', fontSize: '0.9rem', marginBottom: 8 }}>Get your API usage statistics</p>
+                      <code style={{ color: '#22c55e', fontSize: '0.8rem' }}>Returns: Usage metrics and limits</code>
+                    </div>
+                  </div>
+                </section>
+
+                {/* Error Handling */}
+                <section style={{ 
+                  background: 'rgba(15, 23, 42, 0.6)', 
+                  borderRadius: 12, 
+                  padding: 24, 
+                  border: '1px solid rgba(255,255,255,0.1)' 
+                }}>
+                  <h2 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: 16, color: '#ef4444' }}>Error Handling</h2>
+                  <p style={{ color: '#cbd5e1', marginBottom: 16 }}>
+                    Our API uses standard HTTP status codes and returns detailed error messages:
+                  </p>
+                  
+                  <div style={{ background: 'rgba(0, 0, 0, 0.3)', borderRadius: 8, padding: 16 }}>
+                    <pre style={{ color: '#cbd5e1', fontSize: '0.9rem', overflow: 'auto' }}>{`{
+  "error": {
+    "code": "INVALID_API_KEY",
+    "message": "The provided API key is invalid or expired",
     "details": "Please check your API key and try again"
   }
-}`}`;
-                  </pre>
-                </div>
+}`}</pre>
+                  </div>
 
-                <div className="grid grid-cols-1 md: grid-cols-2 gap-4 mt-6">,";
-                  <div className="bg-red-900/20 border border-red-500/30 rounded-lg p-4">";
-                    <h4 className="text-red-400 font-semibold mb-2">400 - Bad Request</h4>";
-                    <p className="text-slate-300 text-sm">Invalid request parameters</p>";
+                  <div style={{ marginTop: 16 }}>
+                    <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: 8, color: '#ef4444' }}>Common Status Codes</h3>
+                    <ul style={{ color: '#cbd5e1', paddingLeft: 20, lineHeight: 1.6 }}>
+                      <li><strong>200</strong> - Success</li>
+                      <li><strong>400</strong> - Bad Request (invalid parameters)</li>
+                      <li><strong>401</strong> - Unauthorized (invalid API key)</li>
+                      <li><strong>429</strong> - Rate Limited (too many requests)</li>
+                      <li><strong>500</strong> - Internal Server Error</li>
+                    </ul>
                   </div>
-                  <div className="bg-red-900/20 border border-red-500/30 rounded-lg p-4">";
-                    <h4 className="text-red-400 font-semibold mb-2">401 - Unauthorized</h4>";
-                    <p className="text-slate-300 text-sm">Invalid or missing API key</p>";
+                </section>
+
+                {/* Next Steps */}
+                <section style={{ 
+                  background: 'rgba(15, 23, 42, 0.6)', 
+                  borderRadius: 12, 
+                  padding: 24, 
+                  border: '1px solid rgba(255,255,255,0.1)' 
+                }}>
+                  <h2 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: 16, color: '#22c55e' }}>Next Steps</h2>
+                  <p style={{ color: '#cbd5e1', marginBottom: 16 }}>
+                    Ready to build something amazing? Check out these resources:
+                  </p>
+                  <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
+                    <Link href="/docs/integration-examples" style={{ 
+                      display: 'inline-block', 
+                      padding: '12px 24px', 
+                      background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', 
+                      color: 'white', 
+                      textDecoration: 'none', 
+                      borderRadius: 8, 
+                      fontWeight: 600
+                    }}>Integration Examples</Link>
+                    <Link href="/contact" style={{ 
+                      display: 'inline-block', 
+                      padding: '12px 24px', 
+                      background: 'rgba(15, 23, 42, 0.8)', 
+                      color: 'white', 
+                      textDecoration: 'none', 
+                      borderRadius: 8, 
+                      border: '1px solid rgba(255,255,255,0.2)',
+                      fontWeight: 600
+                    }}>Get API Keys</Link>
                   </div>
-                  <div className="bg-red-900/20 border border-red-500/30 rounded-lg p-4">";
-                    <h4 className="text-red-400 font-semibold mb-2">429 - Too Many Requests</h4>";
-                    <p className="text-slate-300 text-sm">Rate limit exceeded</p>";
-                  </div>
-                  <div className="bg-red-900/20 border border-red-500/30 rounded-lg p-4">";
-                    <h4 className="text-red-400 font-semibold mb-2">500 - Server Error</h4>";
-                    <p className="text-slate-300 text-sm">Internal server error</p>";
-                  </div>
-                </div>
+                </section>
               </div>
-            </section>
-
-            {/* SDKs and Libraries */}
-            <section className="bg-white/10 backdrop-blur-sm rounded-xl p-8 mb-8">";
-              <h2 className="text-2xl font-bold text-white mb-6">SDKs and Libraries</h2>";
-              
-              <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,";
-                <div className="bg-slate-800 rounded-lg p-6">";
-                  <h3 className="text-lg font-semibold text-blue-400 mb-3">JavaScript/Node.js</h3>";
-                  <div className="bg-slate-900 rounded p-3 mb-4">";
-                    <code className="text-green-400 text-sm">npm install @ziontechgroup/api-client</code>";
-                  </div>
-                  <p className="text-slate-300 text-sm mb-4">Official JavaScript SDK for web and Node.js applications</p>";
-                  <a href="#" className="text-blue-400 hover: text-blue-300 text-sm">View Documentation →</a>,";
-                </div>
-
-                <div className="bg-slate-800 rounded-lg p-6">";
-                  <h3 className="text-lg font-semibold text-green-400 mb-3">Python</h3>";
-                  <div className="bg-slate-900 rounded p-3 mb-4">";
-                    <code className="text-green-400 text-sm">pip install ziontechgroup-api</code>";
-                  </div>
-                  <p className="text-slate-300 text-sm mb-4">Python client library for data science and automation</p>";
-                  <a href="#" className="text-blue-400 hover: text-blue-300 text-sm">View Documentation →</a>,";
-                </div>
-
-                <div className="bg-slate-800 rounded-lg p-6">";
-                  <h3 className="text-lg font-semibold text-purple-400 mb-3">PHP</h3>";
-                  <div className="bg-slate-900 rounded p-3 mb-4">";
-                    <code className="text-green-400 text-sm">composer require ziontechgroup/api-client</code>";
-                  </div>
-                  <p className="text-slate-300 text-sm mb-4">PHP client for web applications and Laravel</p>";
-                  <a href="#" className="text-blue-400 hover: text-blue-300 text-sm">View Documentation →</a>,";
-                </div>
-              </div>
-            </section>
-
-            {/* Next Steps */}
-            <section className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-center">";
-              <h2 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h2>";
-              <p className="text-blue-100 mb-6">";
-                Get your API key and start building amazing applications with our services.
-              </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">,";
-                <Link href="/contact" className="px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover: bg-gray-100 transition-colors">,";
-                  Get API Key
-                </Link>
-                <Link href="/docs/integration-examples" className="px-8 py-3 bg-transparent border-2 border-white text-white rounded-lg font-semibold hover: bg-white hover:text-blue-600 transition-colors">,";
-                  View Examples
-                </Link>
-              </div>
-            </section>
+            </main>
           </div>
         </div>
       </div>
     </>
   );
-};
+}
