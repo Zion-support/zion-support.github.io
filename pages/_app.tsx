@@ -33,6 +33,7 @@ const dropdownStyles = `
 
 function Header(): any {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
 
   return (
     <>
@@ -54,69 +55,34 @@ function Header(): any {
           textDecoration: 'none'
         }}>Zion Tech Group</Link>
         
-        {/* Desktop Navigation */}
-        <div style={{ 
-          display: 'flex', gap: 4, flexWrap: 'wrap', alignItems: 'center'
-        }} className="hidden md:flex">
-          <Link href="/" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }}>Home</Link>
+        <div className="header-nav-links">
+          <Link href="/" className="header-nav-link">Home</Link>
           
           {/* Services Dropdown */}
-          <div className="services-dropdown-parent" style={{ position: 'relative', display: 'inline-block' }}>
-            <button style={{ 
-              padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-              transition: 'all 0.2s ease', textDecoration: 'none', color: 'white',
-              background: 'none', border: 'none', cursor: 'pointer'
-            }}>Services ▼</button>
-            <div style={{ 
-              position: 'absolute', top: '100%', left: 0, 
-              background: 'rgba(11, 18, 32, 0.98)', backdropFilter: 'blur(10px)',
-              border: '1px solid rgba(255,255,255,0.1)', borderRadius: 8,
-              padding: '12px', minWidth: 200, display: 'none', zIndex: 1000
-            }} className="services-dropdown">
-              <Link href="/services" style={{ 
-                display: 'block', padding: '6px 8px', borderRadius: 4, opacity: 0.9,
-                transition: 'all 0.2s ease', textDecoration: 'none', color: 'white',
-                fontSize: '0.9rem'
-              }}>All Services</Link>
-              <Link href="/micro-saas" style={{ 
-                display: 'block', padding: '6px 8px', borderRadius: 4, opacity: 0.9,
-                transition: 'all 0.2s ease', textDecoration: 'none', color: 'white',
-                fontSize: '0.9rem'
-              }}>Micro SaaS</Link>
-              <Link href="/ai-services" style={{ 
-                display: 'block', padding: '6px 8px', borderRadius: 4, opacity: 0.9,
-                transition: 'all 0.2s ease', textDecoration: 'none', color: 'white',
-                fontSize: '0.9rem'
-              }}>AI Services</Link>
-              <Link href="/it-services" style={{ 
-                display: 'block', padding: '6px 8px', borderRadius: 4, opacity: 0.9,
-                transition: 'all 0.2s ease', textDecoration: 'none', color: 'white',
-                fontSize: '0.9rem'
-              }}>IT Services</Link>
-              <Link href="/services-catalog" style={{ 
-                display: 'block', padding: '6px 8px', borderRadius: 4, opacity: 0.9,
-                transition: 'all 0.2s ease', textDecoration: 'none', color: 'white',
-                fontSize: '0.9rem'
-              }}>Services Catalog</Link>
+          <div className="dropdown-container">
+            <button 
+              className="header-nav-link dropdown-trigger"
+              onMouseEnter={() => setServicesDropdownOpen(true)}
+              onMouseLeave={() => setServicesDropdownOpen(false)}
+              onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
+            >
+              Services ▼
+            </button>
+            <div className={`dropdown-menu ${servicesDropdownOpen ? 'open' : ''}`}>
+              <Link href="/services" className="dropdown-item">All Services</Link>
+              <Link href="/services-catalog" className="dropdown-item">Services Catalog</Link>
+              <div className="dropdown-divider"></div>
+              <Link href="/micro-saas" className="dropdown-item">Micro SaaS Products</Link>
+              <Link href="/ai-services" className="dropdown-item">AI Services</Link>
+              <Link href="/it-services" className="dropdown-item">IT Services</Link>
             </div>
           </div>
-          
-          <Link href="/pricing" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }}>Pricing</Link>
-          <Link href="/about" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }}>About</Link>
-          <Link href="/contact" style={{ 
-            fontWeight: 600, background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', 
-            color: 'white', padding: '8px 16px', borderRadius: 8,
-            transition: 'all 0.2s ease', textDecoration: 'none'
-          }}>Contact</Link>
+
+          <Link href="/about" className="header-nav-link">About</Link>
+          <Link href="/blog" className="header-nav-link">Blog</Link>
+          <Link href="/pricing" className="header-nav-link">Pricing</Link>
+          <Link href="/faq" className="header-nav-link">FAQ</Link>
+          <Link href="/contact" className="header-nav-cta">Contact</Link>
         </div>
 
         {/* Mobile Navigation */}
@@ -142,48 +108,19 @@ function Header(): any {
         </div>
       </nav>
       
-      {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <div style={{
-          position: 'absolute', top: '100%', left: 0, right: 0, 
-          background: 'rgba(11, 18, 32, 0.98)', backdropFilter: 'blur(10px)',
-          borderBottom: '1px solid rgba(255,255,255,0.1)',
-          padding: '20px', display: 'flex', flexDirection: 'column', gap: '12px'
-        }}>
-          <Link href="/" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }} onClick={() => setMobileMenuOpen(false)}>Home</Link>
-          <Link href="/services" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }} onClick={() => setMobileMenuOpen(false)}>All Services</Link>
-          <Link href="/micro-saas" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }} onClick={() => setMobileMenuOpen(false)}>Micro SaaS</Link>
-          <Link href="/ai-services" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }} onClick={() => setMobileMenuOpen(false)}>AI Services</Link>
-          <Link href="/it-services" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }} onClick={() => setMobileMenuOpen(false)}>IT Services</Link>
-          <Link href="/services-catalog" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }} onClick={() => setMobileMenuOpen(false)}>Catalog</Link>
-          <Link href="/pricing" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }} onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
-          <Link href="/about" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }} onClick={() => setMobileMenuOpen(false)}>About</Link>
-        </div>
-      )}
+      <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
+        <Link href="/" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Home</Link>
+        <Link href="/services" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>All Services</Link>
+        <Link href="/services-catalog" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Services Catalog</Link>
+        <Link href="/micro-saas" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Micro SaaS</Link>
+        <Link href="/ai-services" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>AI Services</Link>
+        <Link href="/it-services" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>IT Services</Link>
+        <Link href="/about" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>About</Link>
+        <Link href="/blog" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
+        <Link href="/pricing" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
+        <Link href="/faq" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>FAQ</Link>
+        <Link href="/contact" className="header-nav-cta" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
+      </div>
     </header>
     </>
   );
@@ -214,110 +151,84 @@ function Footer(): any {
             Leading provider of innovative micro SaaS products, AI services, and IT solutions. 
             Empowering businesses with cutting-edge technology and digital transformation.
           </p>
-          <div style={{ display: 'grid', gap: 6, fontSize: '0.9rem' }}>
-            <div>📞 <a href="tel:+13024640950" style={{ color: '#93c5fd', textDecoration: 'none' }}>+1 302 464 0950</a></div>
-            <div>✉️ <a href="mailto:kleber@ziontechgroup.com" style={{ color: '#93c5fd', textDecoration: 'none' }}>kleber@ziontechgroup.com</a></div>
-            <div>📍 364 E Main St STE 1008, Middletown DE 19709</div>
-            <div>🌐 <a href="https://ziontechgroup.com" style={{ color: '#93c5fd', textDecoration: 'none' }}>ziontechgroup.com</a></div>
-          </div>
-        </div>
-
-        {/* Services */}
-        <div style={{ display: 'grid', gap: 12 }}>
-          <h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>Our Services</h3>
-          <div style={{ display: 'grid', gap: 8 }}>
-            <Link href="/services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>All Services</Link>
-            <Link href="/micro-saas" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Micro SaaS Products</Link>
-            <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>AI Services</Link>
-            <Link href="/it-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>IT Services</Link>
-            <Link href="/services-catalog" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Services Catalog</Link>
-            <Link href="/pricing" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Pricing</Link>
-            <div style={{ opacity: 0.8, fontSize: '0.9rem', marginTop: 8 }}>
-              <div>• 200+ Micro SaaS Products</div>
-              <div>• 150+ AI Services</div>
-              <div>• 150+ IT Solutions</div>
+          <div className="contact-info">
+            <div className="contact-item">
+              <span className="contact-icon">📞</span>
+              <a href="tel:+13024640950" className="contact-link">+1 302 464 0950</a>
+            </div>
+            <div className="contact-item">
+              <span className="contact-icon">✉️</span>
+              <a href="mailto:kleber@ziontechgroup.com" className="contact-link">kleber@ziontechgroup.com</a>
+            </div>
+            <div className="contact-item">
+              <span className="contact-icon">📍</span>
+              <span>364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
           </div>
         </div>
 
-        {/* Solutions */}
-        <div style={{ display: 'grid', gap: 12 }}>
-          <h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>Solutions</h3>
-          <div style={{ display: 'grid', gap: 8 }}>
-            <Link href="/micro-saas" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Cloud Cost Optimization</Link>
-            <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>AI Automation</Link>
-            <Link href="/it-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Digital Transformation</Link>
-            <Link href="/micro-saas" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Process Automation</Link>
-            <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Predictive Analytics</Link>
-            <Link href="/it-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Cybersecurity Solutions</Link>
-            <Link href="/micro-saas" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Content Management</Link>
-            <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Customer Support AI</Link>
-            <Link href="/it-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Edge Computing</Link>
-            <Link href="/micro-saas" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Data Analytics</Link>
+        {/* Services */}
+        <div className="footer-section">
+          <h3>Our Services</h3>
+          <div className="footer-links">
+            <Link href="/services" className="footer-link">All Services</Link>
+            <Link href="/services-catalog" className="footer-link">Services Catalog</Link>
+            <Link href="/micro-saas" className="footer-link">Micro SaaS Products</Link>
+            <Link href="/ai-services" className="footer-link">AI Services</Link>
+            <Link href="/it-services" className="footer-link">IT Services</Link>
+            <Link href="/pricing" className="footer-link">Pricing</Link>
           </div>
-        </div>
-
-        {/* Specialized Services */}
-        <div style={{ display: 'grid', gap: 12 }}>
-          <h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>Specialized Services</h3>
-          <div style={{ display: 'grid', gap: 8 }}>
-            <Link href="/quantum-computing" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Quantum Computing</Link>
-            <Link href="/cloud-devops" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Cloud DevOps</Link>
-            <Link href="/cybersecurity" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Cybersecurity</Link>
-            <Link href="/docs" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Documentation</Link>
-            <Link href="/faq" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>FAQ</Link>
+          <div className="service-stats">
+            <div className="stat-item">• 120+ Micro SaaS Products</div>
+            <div className="stat-item">• 80+ AI Services</div>
+            <div className="stat-item">• 80+ IT Solutions</div>
           </div>
         </div>
 
         {/* Company */}
-        <div style={{ display: 'grid', gap: 12 }}>
-          <h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>Company</h3>
-          <div style={{ display: 'grid', gap: 8 }}>
-            <Link href="/" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Home</Link>
-            <Link href="/about" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>About Us</Link>
-            <Link href="/contact" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Contact Us</Link>
-            <Link href="/faq" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>FAQ</Link>
-            <Link href="/privacy" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Privacy Policy</Link>
-            <Link href="/terms" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Terms of Service</Link>
-            <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Main Website</a>
+        <div className="footer-section">
+          <h3>Company</h3>
+          <div className="footer-links">
+            <Link href="/" className="footer-link">Home</Link>
+            <Link href="/about" className="footer-link">About Us</Link>
+            <Link href="/blog" className="footer-link">Blog</Link>
+            <Link href="/contact" className="footer-link">Contact Us</Link>
+            <Link href="/faq" className="footer-link">FAQ</Link>
+            <Link href="/privacy" className="footer-link">Privacy Policy</Link>
+            <Link href="/terms" className="footer-link">Terms of Service</Link>
           </div>
         </div>
 
-        {/* Contact CTA */}
-        <div style={{ display: 'grid', gap: 12 }}>
-          <h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>Get Started</h3>
-          <p style={{ opacity: 0.8, fontSize: '0.9rem' }}>
-            Ready to transform your business with our innovative solutions?
+        {/* Get Started */}
+        <div className="footer-section">
+          <h3>Get Started</h3>
+          <p className="footer-description">
+            Ready to transform your business with our innovative solutions? 
+            Contact us today for a free consultation.
           </p>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-            <Link href="/contact" style={{ 
-              background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
-              color: 'white', padding: '10px 16px', borderRadius: 8,
-              textAlign: 'center', textDecoration: 'none', fontWeight: 600
-            }}>Request Quote</Link>
-            <a href="tel:+13024640950" style={{ 
-              background: 'rgba(255,255,255,0.1)', color: 'white', 
-              padding: '10px 16px', borderRadius: 8,
-              textAlign: 'center', textDecoration: 'none', fontWeight: 600
-            }}>Call Now</a>
-            <a href="mailto:kleber@ziontechgroup.com" style={{ 
-              background: 'rgba(255,255,255,0.1)', color: 'white', 
-              padding: '10px 16px', borderRadius: 8,
-              textAlign: 'center', textDecoration: 'none', fontWeight: 600
-            }}>Email Us</a>
+          <div className="footer-cta">
+            <Link href="/contact" className="footer-cta-button">Request Quote</Link>
+            <a href="tel:+13024640950" className="footer-cta-secondary">Call Now</a>
+          </div>
+          <div className="social-links">
+            <a href="https://ziontechgroup.com" className="social-link" target="_blank" rel="noopener noreferrer">
+              🌐 Main Website
+            </a>
           </div>
         </div>
       </div>
       
-      <div style={{ 
-        borderTop: '1px solid rgba(255,255,255,0.1)', 
-        padding: '20px', textAlign: 'center' 
-      }}>
-        <small style={{ opacity: 0.7 }}>
-          © {new Date().getFullYear()} Zion Tech Group. All rights reserved. | 
-          <Link href="/privacy" style={{ color: '#93c5fd', marginLeft: 8, textDecoration: 'none' }}>Privacy Policy</Link> | 
-          <Link href="/terms" style={{ color: '#93c5fd', marginLeft: 8, textDecoration: 'none' }}>Terms of Service</Link>
-        </small>
+      <div className="footer-bottom">
+        <div className="footer-bottom-content">
+          <small>
+            © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
+          </small>
+          <div className="footer-bottom-links">
+            <Link href="/privacy" className="footer-bottom-link">Privacy Policy</Link>
+            <Link href="/terms" className="footer-bottom-link">Terms of Service</Link>
+            <a href="https://ziontechgroup.com" className="footer-bottom-link">Main Website</a>
+          </div>
+        </div>
       </div>
     </footer>
   );
