@@ -3,7 +3,7 @@
           [...prev, value];
       )}};
 
-  return()
+  return ()
     <div className = {`space-y-1 ${className}`}>
       {React.Children.map(children, (child) => {
 
@@ -11,7 +11,7 @@
 
           return React.cloneElement(child, {
 
-            isOpen: openItems.includes(child.props.value),
+            isOpen: openItem s.includes(child.props.value),
             onToggle: : unknown handleToggle(child.props.value)
           })}
         return child})}
@@ -34,7 +34,7 @@ export function Accordion({
           : [...prev, value];
       )};
 
-  return()`
+  return ()`
     <div className={`space-y-1 ${className}`}>
       {React.Children.map(children, (child) => {
 
@@ -42,7 +42,7 @@ export function Accordion({
 
           return React.cloneElement(child, {
 
-            isOpen: openItems.includes(child.props.value),
+            isOpen: openItem s.includes(child.props.value),
             onToggle: : unknown handleToggle(child.props.value)
           });
 
@@ -52,7 +52,7 @@ export function Accordion({
 
 interface AccordionItemProps extends React.PropsWithChildren<{}> {
 
-  children: React.ReactNode;
+  children: Reac t.ReactNode;
   value: string;
   className?: string;
   isOpen?: boolean;
@@ -64,8 +64,7 @@ export function AccordionItem({
   className = '',
   isOpen = false,;
   onToggle}: AccordionItemProps) {;
-  return (;`    <div className={`border-b border-gray-200 ${className}`}>;
-      {React.Children.map(children: unknown, (child: unknown {;
+  return (;`    <div className={`border-b border-gray-200 ${className}`}> {React.Children.map(children: unknow n, (child: unknow n {;
         if (React.isValidElement(child)) {;
           return React.cloneElement(child, { isOpen, onToggle });
 
@@ -75,7 +74,7 @@ export function AccordionItem({
 
 interface AccordionTriggerProps extends React.PropsWithChildren<{}> {
 
-  children: React.ReactNode;
+  children: Reac t.ReactNode;
   className?: string;
   isOpen?: boolean;
   onToggle?: ()  => void}
@@ -88,9 +87,9 @@ export function AccordionTrigger({
   onToggle
 }: AccordionTriggerProps) {
 
-  return()
+  return ()
     <button`
-      className = {`flex w-full items-center justify-between py-4 font-medium transition-all hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${className}`}
+      className = {`flex w-full items-center justify-between py-4 font-medium transition-all hover: underline focus:outline-none focus: rin g-2 focus: rin g-blue-500 focus: rin g-offset-2 ${className}`}
       onClick={onToggle}
 
       {children}
@@ -109,7 +108,7 @@ interface AccordionContentProps extends React.PropsWithChildren<{}> {;`
     </button>;
   )}
 
-  children: React.ReactNode;
+  children: Reac t.ReactNode;
   className?: string;
   isOpen?: boolean}
 
@@ -121,7 +120,7 @@ export function AccordionContent({
 
   if (!isOpen) return null;
 
-  return()`
+  return ()`
     <div className = {`overflow-hidden text-sm transition-all pb-4 pt-0 ${className}`}>
       {children}
     </div>
@@ -132,9 +131,8 @@ export function AccordionContent({ ;
   isOpen = false}: AccordionContentProps) {;
   if (!isOpen) return null;
 
-  return()`
-    <div className = {`overflow-hidden text-sm transition-all pb-4 pt-0 ${className}`}>;
-      {children};
+  return ()`
+    <div className = {`overflow-hidden text-sm transition-all pb-4 pt-0 ${className}`}> {children};
     </div>;
   )}
 '`

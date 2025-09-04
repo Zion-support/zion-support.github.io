@@ -24,9 +24,8 @@ const features = ["
   "SOC 2 Type II Compliant",;"
   "30-Day Money Back Guarantee";
 ];
-},;
-  {;"
-    icon: <CheckCircle className="h-6 w-6" />,;"
+}, {;"
+    icon: <CheckCircle className="h-6 w-6"  />,;"
     title: "Quality Guaranteed",;"
     description: "30-day money-back guarantee with free migration support"};
 ];
@@ -35,21 +34,21 @@ const features = ["
   ;      <div className="container mx-auto px-4">
         {/* Header */}"
         <div className="text-center mb-16">"
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
             Revolutionary 2027 Micro SAAS Solutions
           </h2>"
           <p className="text-xl text-zion-slate-light max-w-4xl mx-auto mb-8">
             Transform your business with our cutting-edge micro SAAS services.From AI automation to quantum computing, we provide innovative solutions that drive growth and innovation.</p>"
           <div className="flex flex-wrap justify-center gap-4">"
             <Link to="/contact">"
-              <Button size="lg" className="bg-white text-zion-blue hover:bg-gray-100">"
-                <Phone className="h-5 w-5 mr-2" />
+              <Button size="lg" className="bg-white text-zion-blue hover: b g-gray-100">"
+                <Phone className="h-5 w-5 mr-2"  />
                 Get Free Consultation
               </Button>
             </Link>"
             <Link to="/contact">"
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-blue">"
-                <Mail className="h-5 w-5 mr-2" />                Request Demo
+              <Button size="lg" variant="outline" className="border-white text-white hover: b g-white hover: tex t-zion-blue">"
+                <Mail className="h-5 w-5 mr-2"  />                Request Demo
               </Button>
             </Link>
           </div>
@@ -57,19 +56,19 @@ const features = ["
 
         {/* Contact Information Banner */}"
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-16 border border-white/20">"
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">"
+          <div className="grid grid-cols-1 md: gri d-cols-3 gap-6 text-center">"
             <div className="flex flex-col items-center">"
-              <Phone className="h-8 w-8 text-zion-cyan mb-2" />"
+              <Phone className="h-8 w-8 text-zion-cyan mb-2"  />"
               <h3 className="text-lg font-semibold text-white mb-1">Call Us</h3>"
               <p className="text-zion-slate-light">{contactInfo.mobile}</p>
             </div>"
             <div className="flex flex-col items-center">"
-              <Mail className="h-8 w-8 text-zion-cyan mb-2" />"
+              <Mail className="h-8 w-8 text-zion-cyan mb-2"  />"
               <h3 className="text-lg font-semibold text-white mb-1">Email Us</h3>"
               <p className="text-zion-slate-light">{contactInfo.email}</p>
             </div>"
             <div className="flex flex-col items-center">"
-              <MapPin className="h-8 w-8 text-zion-cyan mb-2" />"
+              <MapPin className="h-8 w-8 text-zion-cyan mb-2"  />"
               <h3 className="text-lg font-semibold text-white mb-1">Visit Us</h3>"              <p className="text-zion-slate-light text-sm">{contactInfo.address}</p>
             </div>
           </div>
@@ -77,16 +76,16 @@ const features = ["
 
         {/* Search and Filter */}"
         <div className="mb-16">"
-          <div className="flex flex-col md:flex-row gap-4 mb-6">
+          <div className="flex flex-col md: fle x-row gap-4 mb-6">
             <input"
               type="text"
               placeholder="Search services..."
-              className="flex-1 px-4 py-3 rounded-lg border border-white/20 bg-white/10 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+              className="flex-1 px-4 py-3 rounded-lg border border-white/20 bg-white/10 text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan"
               value={searchQuery}
               onChange={ (e) => setSearchQuery(e.target.value) }
             />
             <select"
-              className="px-4 py-3 rounded-lg border border-white/20 bg-white/10 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+              className="px-4 py-3 rounded-lg border border-white/20 bg-white/10 text-white focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan"
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
 "
@@ -99,9 +98,9 @@ const features = ["
         {/* Featured Services */}"
         <div className="mb-20">"
           <h3 className="text-3xl font-bold text-white mb-8 text-center">Featured Services</h3>"
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-6">
             {featuredServices.map((service)  => ("
-              <Card key={service.id} className="bg-zion-blue-dark border-zion-blue-light text-white hover:border-zion-purple/50 transition-all duration-300 hover:scale-105">"
+              <Card key={service.id} className="bg-zion-blue-dark border-zion-blue-light text-white hover: borde r-zion-purple/50 transition-all duration-300 hover: scal e-105">"
                 <CardHeader className="text-center">
                   <div className={`mx-auto w-16 h-16 bg-gradient-to-br ${categoryColors[service.category] || 'from-gray-500 to-gray-600'} rounded-full flex items-center justify-center mb-4 text-2xl`}>
                     {service.icon}
@@ -125,14 +124,14 @@ const features = ["
                   <div className="space-y-2">
                     {service.features.slice(0, 3).map((feature, index) => ("
                       <div key={index} className="flex items-center text-sm text-zion-slate-light">"
-                        <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
+                        <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0"  />
                         {feature}
                       </div>
                     ))}
                   </div>"
                   <div className="mt-4 flex items-center justify-between text-sm">"
                     <div className="flex items-center">"
-                      <Star className="h-4 w-4 text-yellow-400 mr-1" />
+                      <Star className="h-4 w-4 text-yellow-400 mr-1"  />
                       <span>{service.rating}</span>"                      <span className="text-zion-slate-light ml-1">({service.reviews})</span>
                     </div>"
                     <Badge variant="outline" className="border-zion-cyan text-zion-cyan">
@@ -140,9 +139,9 @@ const features = ["
                     </Badge>
                   </div>"
                   <Link to={service.link} className="mt-4 w-full">"
-                    <Button className="w-full bg-zion-cyan text-white hover:bg-zion-cyan-dark">
+                    <Button className="w-full bg-zion-cyan text-white hover: b g-zion-cyan-dark">
                       Learn More"
-                      <ArrowRight className="h-4 w-4 ml-2" />                    </Button>
+                      <ArrowRight className="h-4 w-4 ml-2"  />                    </Button>
                   </Link>
                 </CardContent>
               </Card>) ) }
@@ -154,9 +153,9 @@ const features = ["
           <h3 className="text-3xl font-bold text-white mb-8 text-center">
             All Services({filteredServices.length})
           </h3>"
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-6">
             {filteredServices.map((service)  => ("
-              <Card key={service.id} className="bg-zion-blue-dark border-zion-blue-light text-white hover:border-zion-purple/50 transition-all duration-300 hover:scale-105">
+              <Card key={service.id} className="bg-zion-blue-dark border-zion-blue-light text-white hover: borde r-zion-purple/50 transition-all duration-300 hover: scal e-105">
                 <CardHeader>"
                   <div className="flex items-center justify-between mb-2">'`
                     <div className={`w-12 h-12 bg-gradient-to-br ${categoryColors[service.category] || 'from-gray-500 to-gray-600'} rounded-full flex items-center justify-center text-xl`}>
@@ -185,10 +184,10 @@ const features = ["
 
                   {/* Key Features */}"
                   <div className="space-y-2 mb-4">"
-                    <h4 className="font-semibold text-white text-sm">Key Features: any</h4>
+                    <h4 className="font-semibold text-white text-sm">Key Features: an y</h4>
                     {service.features.slice(0, 3).map((feature, index)  => ("
                       <div key={index} className="flex items-center text-sm text-zion-slate-light">"
-                        <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />                        {feature}
+                        <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0"  />                        {feature}
                       </div>) ) }
                   </div>
 
@@ -211,7 +210,7 @@ const features = ["
                   {/* Service Stats */}"
                   <div className="flex items-center justify-between text-sm mb-4">"
                     <div className="flex items-center">"
-                      <Star className="h-4 w-4 text-yellow-400 mr-1" />
+                      <Star className="h-4 w-4 text-yellow-400 mr-1"  />
                       <span>{service.rating}</span>"                      <span className="text-zion-slate-light ml-1">({service.reviews})</span>
                     </div>"
                     <Badge variant="outline" className="border-zion-cyan text-zion-cyan">
@@ -222,14 +221,14 @@ const features = ["
                   {/* Action Buttons */}"
                   <div className="space-y-2">"
                     <Link to={service.link} className="w-full">"
-                      <Button className="w-full bg-zion-cyan text-white hover:bg-zion-cyan-dark">
+                      <Button className="w-full bg-zion-cyan text-white hover: b g-zion-cyan-dark">
                         Learn More"
-                        <ArrowRight className="h-4 w-4 ml-2" />
+                        <ArrowRight className="h-4 w-4 ml-2"  />
                       </Button>
                     </Link>"
                     <Link to="/contact" className="w-full">"
-                      <Button variant="outline" className="w-full border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white">"
-                        <Phone className="h-4 w-4 mr-2" />                        Get Quote
+                      <Button variant="outline" className="w-full border-zion-cyan text-zion-cyan hover: b g-zion-cyan hover: tex t-white">"
+                        <Phone className="h-4 w-4 mr-2"  />                        Get Quote
                       </Button>
                     </Link>
                   </div>
@@ -241,7 +240,7 @@ const features = ["
         {/* Benefits Section */}"
         <div className="mt-20">"
           <h3 className="text-3xl font-bold text-white mb-12 text-center">Why Choose Zion Tech Group?</h3>"
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-6">
             {benefits.map((benefit, index)  => ("
               <div key={index} className="text-center">"
                 <div className="mx-auto w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mb-4">
@@ -263,16 +262,16 @@ const features = ["
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
               Join thousands of businesses already using our innovative solutions to drive growth,
               improve efficiency, and stay ahead of the competition.</p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">"
               <Link to="/contact">"
-                <Button size="lg" className="bg-zion-cyan text-white hover:bg-zion-cyan-dark px-8 py-3">"
-                  <Phone className="h-5 w-5 mr-2" />
+                <Button size="lg" className="bg-zion-cyan text-white hover: b g-zion-cyan-dark px-8 py-3">"
+                  <Phone className="h-5 w-5 mr-2"  />
                   Start Free Trial
                 </Button>
               </Link>"
               <Link to="/contact">"
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-blue px-8 py-3">"
-                  <Mail className="h-5 w-5 mr-2" />                  Schedule Demo
+                <Button size="lg" variant="outline" className="border-white text-white hover: b g-white hover: tex t-zion-blue px-8 py-3">"
+                  <Mail className="h-5 w-5 mr-2"  />                  Schedule Demo
                 </Button>
               </Link>
             </div>"

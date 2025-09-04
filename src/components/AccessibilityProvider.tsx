@@ -28,10 +28,10 @@ export const useAccessibility = () => {
 };
 
 interface AccessibilityProviderProps {
-  children: ReactNode;
+  children: ReactNod e;
 }
 
-export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {
+export const AccessibilityProvider: Reac t.FC<AccessibilityProviderProps> = ({ children }) => {
   const [highContrast, setHighContrast] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
   const [fontSize, setFontSize] = useState(16);
@@ -75,7 +75,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 
   // Keyboard navigation support
   useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
+    const handleKeyDown = (event: KeyboardEven t) => {
       // Show skip links on Tab press
       if (event.key === 'Tab') {
         setShowSkipLinks(true);
@@ -167,19 +167,19 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
             <div className="max-w-4xl mx-auto flex flex-wrap justify-center gap-4">
               <a
                 href="#main-content"
-                className="px-4 py-2 bg-white text-blue-500 rounded-lg font-semibold hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-white"
+                className="px-4 py-2 bg-white text-blue-500 rounded-lg font-semibold hover: b g-gray-100 focus: outlin e-none focus: rin g-2 focus: rin g-white"
               >
                 Skip to main content
               </a>
               <a
                 href="#navigation"
-                className="px-4 py-2 bg-white text-blue-500 rounded-lg font-semibold hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-white"
+                className="px-4 py-2 bg-white text-blue-500 rounded-lg font-semibold hover: b g-gray-100 focus: outlin e-none focus: rin g-2 focus: rin g-white"
               >
                 Skip to navigation
               </a>
               <button
                 onClick={() => setShowSkipLinks(false)}
-                className="px-4 py-2 bg-white text-blue-500 rounded-lg font-semibold hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-white"
+                className="px-4 py-2 bg-white text-blue-500 rounded-lg font-semibold hover: b g-gray-100 focus: outlin e-none focus: rin g-2 focus: rin g-white"
               >
                 Close
               </button>
@@ -201,47 +201,47 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
               className={`p-2 rounded-lg transition-colors ${
                 highContrast
                   ? 'bg-blue-500 text-white'
-                  : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+                  : 'bg-gray-700 text-gray-300 hover: b g-gray-600'
               }`}
               title="Toggle high contrast"
             >
-              <Sun className="w-4 h-4" />
+              <Sun className="w-4 h-4"  />
             </button>
             <button
               onClick={toggleReducedMotion}
               className={`p-2 rounded-lg transition-colors ${
                 reducedMotion
                   ? 'bg-blue-500 text-white'
-                  : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+                  : 'bg-gray-700 text-gray-300 hover: b g-gray-600'
               }`}
               title="Toggle reduced motion"
             >
-              <SkipForward className="w-4 h-4" />
+              <SkipForward className="w-4 h-4"  />
             </button>
             <button
               onClick={increaseFontSize}
-              className="p-2 bg-gray-700 text-gray-300 hover:bg-gray-600 rounded-lg transition-colors"
+              className="p-2 bg-gray-700 text-gray-300 hover: b g-gray-600 rounded-lg transition-colors"
               title="Increase font size"
             >
-              <Volume2 className="w-4 h-4" />
+              <Volume2 className="w-4 h-4"  />
             </button>
             <button
               onClick={decreaseFontSize}
-              className="p-2 bg-gray-700 text-gray-300 hover:bg-gray-600 rounded-lg transition-colors"
+              className="p-2 bg-gray-700 text-gray-300 hover: b g-gray-600 rounded-lg transition-colors"
               title="Decrease font size"
             >
-              <VolumeX className="w-4 h-4" />
+              <VolumeX className="w-4 h-4"  />
             </button>
                           <button
                 onClick={toggleVoiceNavigation}
                 className={`p-2 rounded-lg transition-colors ${
                   voiceNavigation
                     ? 'bg-blue-500 text-white'
-                    : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+                    : 'bg-gray-700 text-gray-300 hover: b g-gray-600'
                 }`}
                 title="Toggle voice navigation"
               >
-                <Accessibility className="w-4 h-4" />
+                <Accessibility className="w-4 h-4"  />
               </button>
           </div>
         </motion.div>
@@ -253,14 +253,14 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 };
 
 // Focus trap component for modals
-export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = ({
+export const FocusTrap: Reac t.FC<{ children: ReactNod e; isActive?: boolean }> = ({
   children,
   isActive = true
 }) => {
   useEffect(() => {
     if (!isActive) return;
 
-    const handleKeyDown = (event: KeyboardEvent) => {
+    const handleKeyDown = (event: KeyboardEven t) => {
       if (event.key !== 'Tab') return;
 
       const focusableElements = document.querySelectorAll(

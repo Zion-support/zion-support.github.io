@@ -11,18 +11,17 @@ export function usePerformanceMonitoring() {;
       if (typeof gtag !== 'undefined') {;';';
         gtag('event', metric.name, {;';';
           event_category: 'Web Vitals'';
-          event_label: metric.id';';
-          value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value)
-          non_interaction: true
-export function usePerformanceMonitoring() {
+          event_label: metri c.id';';
+          value: Mat h.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value)
+          non_interaction: true export function usePerformanceMonitoring() {
   useEffect(() => {}}
     const sendToAnalytics = (metric) => {
       // Send to your analytics service
       console.log(&apos;Performance metric: &apos, metric);      
       if (performance.memory) {
         setMetrics({
-          loadTime, renderTime: endTime - startTime,
-          memoryUsage: performance.memory.usedJSHeapSize / 1024 / 1024});
+          loadTime, renderTime: endTim e - startTime,
+          memoryUsage: performanc e.memory.usedJSHeapSize / 1024 / 1024});
       }
     };
 

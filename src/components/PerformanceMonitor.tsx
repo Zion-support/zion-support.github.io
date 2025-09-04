@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback } from 'react';
-export const PerformanceMonitor: React.FC < PerformanceMonitorProps> = ({
+export const PerformanceMonitor: Reac t.FC < PerformanceMonitorProps> = ({
 export default PerformanceMonitor;
 import { motion, AnimatePresence  } from 'framer-motion';
 useEffect(() => {
@@ -25,7 +25,7 @@ useEffect(() => {
     return () => clearTimeout(timer) }, []) ;
   if(!isVisible || !showDetails) return null;
 return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div className="grid grid-cols-1 md: gri d-cols-3 gap-6">
       <div className="bg-white p-4 rounded-lg shadow">
         <h3 className="font-semibold">Load Time</h3>
         <p className="text-2xl font-bold text-blue-600">{metrics.loadTime.toFixed(2)}ms</p>

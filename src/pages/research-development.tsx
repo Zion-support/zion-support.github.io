@@ -67,8 +67,8 @@ export default function ResearchDevelopment() {
       status: "In Progress",
       funding: "$2.5M",
       duration: "24 months",
-      team: 12,
-      icon: Brain,
+      team: 1 2,
+      icon: Brai n,
       color: "from-blue-500 to-cyan-500",
       features: [
         "Quantum Neural Networks",
@@ -92,7 +92,7 @@ export default function ResearchDevelopment() {
       funding: "$1.8M",
       duration: "18 months",
       team: 8,
-      icon: Shield,
+      icon: Shiel d,
       color: "from-green-500 to-emerald-500",
       features: [
         "AI Threat Detection",
@@ -115,8 +115,8 @@ export default function ResearchDevelopment() {
       status: "In Progress",
       funding: "$3.2M",
       duration: "30 months",
-      team: 15,
-      icon: Cpu,
+      team: 1 5,
+      icon: Cp u,
       color: "from-orange-500 to-red-500",
       features: [
         "Distributed Processing",
@@ -139,8 +139,8 @@ export default function ResearchDevelopment() {
       status: "Planning",
       funding: "$4.1M",
       duration: "36 months",
-      team: 20,
-      icon: Heart,
+      team: 2 0,
+      icon: Hear t,
       color: "from-purple-500 to-pink-500",
       features: [
         "Medical Image Analysis",
@@ -163,8 +163,8 @@ export default function ResearchDevelopment() {
       status: "In Progress",
       funding: "$2.8M",
       duration: "28 months",
-      team: 14,
-      icon: Rocket,
+      team: 1 4,
+      icon: Rocke t,
       color: "from-indigo-500 to-blue-500",
       features: [
         "Computer Vision",
@@ -187,8 +187,8 @@ export default function ResearchDevelopment() {
       status: "Completed",
       funding: "$1.5M",
       duration: "20 months",
-      team: 10,
-      icon: Network,
+      team: 1 0,
+      icon: Networ k,
       color: "from-yellow-500 to-orange-500",
       features: [
         "Layer 2 Solutions",
@@ -213,19 +213,19 @@ export default function ResearchDevelopment() {
   });
 
   const stats = [
-    { number: "25+", label: "Active Projects", icon: FlaskConical },
-    { number: "$15M+", label: "Research Funding", icon: DollarSign },
-    { number: "50+", label: "Research Team", icon: Users },
-    { number: "100+", label: "Publications", icon: BookOpen }
+    { number: "25+", label: "Active Projects", icon: FlaskConica l },
+    { number: "$15M+", label: "Research Funding", icon: DollarSig n },
+    { number: "50+", label: "Research Team", icon: User s },
+    { number: "100+", label: "Publications", icon: BookOpe n }
   ];
 
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8 py-24">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-4xl md: tex t-6xl font-bold mb-6">
               Research & Development
             </h1>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
@@ -237,15 +237,15 @@ export default function ResearchDevelopment() {
 
       {/* Stats Section */}
       <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+          <div className="grid grid-cols-2 md: gri d-cols-4 gap-8">
             {stats.map((stat, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: inde x * 0.1 }}
+                viewport={{ once: tru e }}
                 className="text-center"
               >
                 <div className="bg-gray-50 p-6 rounded-lg shadow-lg">
@@ -260,28 +260,28 @@ export default function ResearchDevelopment() {
       </section>
 
       {/* Filters */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8 py-8">
         <div className="bg-white rounded-lg shadow-sm p-6 mb-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md: gri d-cols-2 gap-4">
             {/* Search */}
             <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5"  />
               <input
                 type="text"
                 placeholder="Search research projects..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent"
               />
             </div>
 
             {/* Area Filter */}
             <div className="flex items-center gap-2">
-              <Filter className="h-5 w-5 text-gray-400" />
+              <Filter className="h-5 w-5 text-gray-400"  />
               <select
                 value={selectedArea}
                 onChange={(e) => setSelectedArea(e.target.value)}
-                className="border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="border border-gray-300 rounded-lg px-3 py-2 focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent"
               >
                 {researchAreas.map(area => (
                   <option key={area} value={area}>
@@ -294,15 +294,15 @@ export default function ResearchDevelopment() {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg: gri d-cols-2 gap-8">
           {filteredProjects.map((project) => (
             <motion.div
               key={project.id}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 2 0 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300"
+              viewport={{ once: tru e }}
+              className="bg-white rounded-lg shadow-sm overflow-hidden hover: shado w-lg transition-shadow duration-300"
             >
               <div className={`h-48 bg-gradient-to-br ${project.color} flex items-center justify-center`}>
                 <project.icon className="w-16 h-16 text-white" />
@@ -341,13 +341,13 @@ export default function ResearchDevelopment() {
                   </div>
                 </div>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-2">Key Features</h4>
                     <ul className="space-y-1">
                       {project.features.map((feature, index) => (
                         <li key={index} className="flex items-center text-sm text-gray-600">
-                          <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                          <CheckCircle className="h-4 w-4 text-green-500 mr-2"  />
                           {feature}
                         </li>
                       ))}
@@ -359,7 +359,7 @@ export default function ResearchDevelopment() {
                     <ul className="space-y-1">
                       {project.outcomes.map((outcome, index) => (
                         <li key={index} className="flex items-center text-sm text-gray-600">
-                          <Star className="h-4 w-4 text-yellow-500 mr-2" />
+                          <Star className="h-4 w-4 text-yellow-500 mr-2"  />
                           {outcome}
                         </li>
                       ))}
@@ -369,13 +369,13 @@ export default function ResearchDevelopment() {
                 
                 <div className="flex items-center justify-between">
                   <div className="flex items-center text-sm text-gray-500">
-                    <Users className="h-4 w-4 mr-1" />
+                    <Users className="h-4 w-4 mr-1"  />
                     {project.team} team members
                   </div>
                   
-                  <button className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium">
+                  <button className="inline-flex items-center text-blue-600 hover: tex t-blue-700 font-medium">
                     Learn More
-                    <ArrowRight className="ml-2 h-4 w-4" />
+                    <ArrowRight className="ml-2 h-4 w-4"  />
                   </button>
                 </div>
               </div>
@@ -391,7 +391,7 @@ export default function ResearchDevelopment() {
                 setSearchTerm('');
                 setSelectedArea('all');
               }}
-              className="mt-4 text-blue-600 hover:text-blue-700 font-medium"
+              className="mt-4 text-blue-600 hover: tex t-blue-700 font-medium"
             >
               Clear filters
             </button>

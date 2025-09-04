@@ -5,8 +5,8 @@ import { API_BASE_URL } from '../config / constants';
 export default function Page() {
 : any): Promise < ApiResponse < T>> {
   
-  const config: RequestInit = {
-    method: options.method || 'GET',
+  const config: RequestIni t = {
+    method: option s.method || 'GET',
     headers: {
       'Content - Type': 'application / json',
       ...options.headers,
@@ -38,41 +38,41 @@ export default function Page() {
     apiRequest<{ id: number; name: string; email: string; createdAt: string }> ('/users',
       {
         method: 'POST',
-        body: JSON.stringify(userData) ,
+        body: JSO N.stringify(userData) ,
       }) ,
   updateUser: (id: number, userData: { name?: string; email?: string }) =>
     apiRequest<{ id: number; name: string; email: string; updatedAt: string }> (`/users/${id}`,
       {
         method: 'PUT',
-        body: JSON.stringify(userData) ,
+        body: JSO N.stringify(userData) ,
       }) ,
   deleteUser: (id: number) => apiRequest(`/users/${id}`, { method: 'DELETE' }) ,
 
   // Authentication
   login: (credentials: { email: string; password: string }) =>
-    apiRequest<{ token: string; user: any }> ('/auth / login', {
+    apiRequest<{ token: string; user: an y }> ('/auth / login', {
       method: 'POST',
-      body: JSON.stringify(credentials) ,
+      body: JSO N.stringify(credentials) ,
     }) ,
   register: (userData: { name: string; email: string; password: string }) =>
-    apiRequest<{ token: string; user: any }> ('/auth / register', {
+    apiRequest<{ token: string; user: an y }> ('/auth / register', {
       method: 'POST',
-      body: JSON.stringify(userData) ,
+      body: JSO N.stringify(userData) ,
     }) ,
   logout: () => apiRequest('/auth / logout', { method: 'POST' }) ,
 
   // Products / Services
   getProducts: () => apiRequest < Array < any>> ('/products') ,
   getProduct: (id: number) => apiRequest < any> (`/products/${id}`) ,
-  createProduct: (productData: any) =>
+  createProduct: (productData: an y) =>
     apiRequest < any> ('/products', {
       method: 'POST',
-      body: JSON.stringify(productData) ,
+      body: JSO N.stringify(productData) ,
     }) ,
-  updateProduct: (id: number, productData: any) =>
+  updateProduct: (id: number, productData: an y) =>
     apiRequest < any> (`/products/${id}`, {
       method: 'PUT',
-      body: JSON.stringify(productData) ,
+      body: JSO N.stringify(productData) ,
     }) ,
   deleteProduct: (id: number) =>
     apiRequest(`/products/${id}`, { method: 'DELETE' }) ,
@@ -80,15 +80,15 @@ export default function Page() {
   // Orders
   getOrders: () => apiRequest < Array < any>> ('/orders') ,
   getOrder: (id: number) => apiRequest < any> (`/orders/${id}`) ,
-  createOrder: (orderData: any) =>
+  createOrder: (orderData: an y) =>
     apiRequest < any> ('/orders', {
       method: 'POST',
-      body: JSON.stringify(orderData) ,
+      body: JSO N.stringify(orderData) ,
     }) ,
-  updateOrder: (id: number, orderData: any) =>
+  updateOrder: (id: number, orderData: an y) =>
     apiRequest < any> (`/orders/${id}`, {
       method: 'PUT',
-      body: JSON.stringify(orderData) ,
+      body: JSO N.stringify(orderData) ,
     }) ,
   deleteOrder: (id: number) =>
     apiRequest(`/orders/${id}`, { method: 'DELETE' }) ,

@@ -12,7 +12,7 @@
               <li>Auto RMA approval rules and fraud checks</li>
               <li>Warehouse disposition workflows and QA photos</li>
               <li>Refund/exchange automation and gift‑card issuance</li>
-              <li>Integrations: Shopify, Magento, WooCommerce, BigCommerce</li>
+              <li>Integrations: Shopif y, Magento, WooCommerce, BigCommerce</li>
             </ul>
           </div>"
           <div className="card-futuristic">"
@@ -26,7 +26,7 @@
           </div>
         </div>
 "
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="mt-12 grid grid-cols-1 md: gri d-cols-3 gap-6">
           {[{
 
             plan: 'Starter', price: '$99/mo', features: ['Up to 500 returns',1 brand portal',1 store integration']

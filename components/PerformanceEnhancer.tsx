@@ -10,12 +10,12 @@ interface PerformanceMetrics {
    ttfb: number | null;
    loadTime: number | null;
    memoryUsage: number | null}
-const PerformanceEnhancer: React.FC = () => {
+const PerformanceEnhancer: Reac t.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fcp: null, lcp: null,
-    fid: null, cls: null,
-    ttfb: null, loadTime: null,
-    memoryUsage: null})
+    fcp: nul l, lcp: nul l,
+    fid: nul l, cls: nul l,
+    ttfb: nul l, loadTime: nul l,
+    memoryUsage: nul l})
   const [isVisible, setIsVisible] = useState(false);
   // const optimizer = usePerformanceOptimization();
   // Only show in development or when explicitly enabled;
@@ -33,38 +33,38 @@ const PerformanceEnhancer: React.FC = () => {
           const entries = list.getEntries();
           const fcpEntry = entries.find((entry) => entry.name === 'first-contentful-paint');
           if (fcpEntry) {
-            setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }))}
+            setMetrics(prev => ({ ...prev, fcp: fcpEntr y.startTime }))}
         })
         fcpObserver.observe({ entryTypes: ['paint'] })
         // Measure Largest Contentful Paint (LCP);
         const lcpObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           const lastEntry = entries[entries.length - 1];
-          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }))})
+          setMetrics(prev => ({ ...prev, lcp: lastEntr y.startTime }))})
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
         // Measure First Input Delay (FID);
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: any) => {
+          entries.forEach((entry: an y) => {
             setMetrics(prev => ({
-              ...prev, fid: entry.processingStart - entry.startTime}))})})
+              ...prev, fid: entr y.processingStart - entry.startTime}))})})
         fidObserver.observe({ entryTypes: ['first-input'] })
         // Measure Cumulative Layout Shift (CLS);
         let clsValue = 0;
         const clsObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: any) => {
+          entries.forEach((entry: an y) => {
             if (!entry.hadRecentInput) {
               clsValue += entry.value;
-              setMetrics(prev => ({ ...prev, cls: clsValue }))}
+              setMetrics(prev => ({ ...prev, cls: clsValu e }))}
           })})
         clsObserver.observe({ entryTypes: ['layout-shift'] })
         // Measure Time to First Byte (TTFB);
         const navigationObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: any) => {
+          entries.forEach((entry: an y) => {
             setMetrics(prev => ({
-              ...prev, ttfb: entry.responseStart - entry.requestStart}))})})
+              ...prev, ttfb: entr y.responseStart - entry.requestStart}))})})
         navigationObserver.observe({ entryTypes: ['navigation'] })
         // Measure page load time;
         window.addEventListener('load', () => {
@@ -75,7 +75,7 @@ const PerformanceEnhancer: React.FC = () => {
           if ('memory' in performance) {
             const memory = (performance as any).memory;
             setMetrics(prev => ({
-              ...prev, memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB}))}
+              ...prev, memoryUsage: memor y.usedJSHeapSize / 1024 / 1024 // Convert to MB}))}
         }
 ;
         updateMemoryUsage();
@@ -96,8 +96,8 @@ const PerformanceEnhancer: React.FC = () => {
   const sendToAnalytics = useCallback((metricName: string, value: number) => {
     if (typeof gtag !== 'undefined') {
       gtag('event', 'web_vitals', {
-        name: metricName, value: Math.round(value), event_category: 'Performance',
-        event_label: metricName, non_interaction: true})}
+        name: metricNam e, value: Mat h.round(value), event_category: 'Performance',
+        event_label: metricNam e, non_interaction: tru e})}
   }, []);
   // Send metrics when they change;
   useEffect(() => {
@@ -118,25 +118,25 @@ const PerformanceEnhancer: React.FC = () => {
     if (value <= thresholds.needsImprovement) return 'Needs Improvement';
     return 'Poor'}
 ;
-  return(
+  return (
     <div className='fixed bottom-4 right-4 bg-white border border-gray-200 rounded-lg shadow-lg p-4 max-w-sm z-50'>
       <h3 className='text-sm font-semibold text-gray-900 mb-3'>Performance Metrics</h3>
       <div className='space-y-2 text-xs'>
         <div className='flex justify-between'>
           <span>FCP: </span>
-          <span className={getScoreColor(metrics.fcp, { good: 1800, needsImprovement: 3000 })}>
+          <span className={getScoreColor(metrics.fcp, { good: 180 0, needsImprovement: 300 0 })}>
             {metrics.fcp ? `${Math.round(metrics.fcp)}ms` : 'Measuring...'}
           </span>
         </div>
         <div className='flex justify-between'>
           <span>LCP:</span>
-          <span className={getScoreColor(metrics.lcp, { good: 2500, needsImprovement: 4000 })}>
+          <span className={getScoreColor(metrics.lcp, { good: 250 0, needsImprovement: 400 0 })}>
             {metrics.lcp ? `${Math.round(metrics.lcp)}ms` : 'Measuring...'}
           </span>
         </div>
         <div className='flex justify-between'>
           <span>FID:</span>
-          <span className={getScoreColor(metrics.fid, { good: 100, needsImprovement: 300 })}>
+          <span className={getScoreColor(metrics.fid, { good: 10 0, needsImprovement: 30 0 })}>
             {metrics.fid ? `${Math.round(metrics.fid)}ms` : 'Measuring...'}
           </span>
         </div>
@@ -148,20 +148,20 @@ const PerformanceEnhancer: React.FC = () => {
         </div>
         <div className='flex justify-between'>
           <span>TTFB:</span>
-          <span className={getScoreColor(metrics.ttfb, { good: 800, needsImprovement: 1800 })}>
+          <span className={getScoreColor(metrics.ttfb, { good: 80 0, needsImprovement: 180 0 })}>
             {metrics.ttfb ? `${Math.round(metrics.ttfb)}ms` : 'Measuring...'}
           </span>
         </div>
         <div className='flex justify-between'>
           <span>Load Time:</span>
-          <span className={getScoreColor(metrics.loadTime, { good: 2000, needsImprovement: 4000 })}>
+          <span className={getScoreColor(metrics.loadTime, { good: 200 0, needsImprovement: 400 0 })}>
             {metrics.loadTime ? `${Math.round(metrics.loadTime)}ms` : 'Measuring...'}
           </span>
         </div>
         {metrics.memoryUsage && (
           <div className='flex justify-between'>
             <span>Memory:</span>
-            <span className={getScoreColor(metrics.memoryUsage, { good: 50, needsImprovement: 100 })}>
+            <span className={getScoreColor(metrics.memoryUsage, { good: 5 0, needsImprovement: 10 0 })}>
               {Math.round(metrics.memoryUsage)}MB
             </span>
           </div>
@@ -171,7 +171,7 @@ const PerformanceEnhancer: React.FC = () => {
         <div className='text-xs text-gray-500'>
           Overall Score: {(() => {
             const scores = [
-              getScoreText(metrics.fcp, { good: 1800, needsImprovement: 3000 }), getScoreText(metrics.lcp, { good: 2500, needsImprovement: 4000 }), getScoreText(metrics.fid, { good: 100, needsImprovement: 300 }), getScoreText(metrics.cls, { good: 0.1, needsImprovement: 0.25 })];
+              getScoreText(metrics.fcp, { good: 180 0, needsImprovement: 300 0 }), getScoreText(metrics.lcp, { good: 250 0, needsImprovement: 400 0 }), getScoreText(metrics.fid, { good: 10 0, needsImprovement: 30 0 }), getScoreText(metrics.cls, { good: 0.1, needsImprovement: 0.25 })];
             const goodCount = scores.filter(score => score === 'Good').length;
             const totalCount = scores.filter(score => score !== 'Measuring...').length;
             if (totalCount === 0) return 'Measuring...';

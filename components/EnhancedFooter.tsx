@@ -38,9 +38,9 @@ export default function EnhancedFooter() {
 
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
-          <div className="lg:col-span-2">
+      <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8 py-12">
+        <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-6 gap-8">
+          <div className="lg: co l-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">Z</span>
@@ -55,19 +55,19 @@ export default function EnhancedFooter() {
             </p>
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-gray-400">
-                <Phone className="w-4 h-4" />
-                <a href="tel:+13024640950" className="hover:text-white transition-colors">
+                <Phone className="w-4 h-4"  />
+                <a href="tel:+13024640950" className="hover: tex t-white transition-colors">
                   +1 (302) 464-0950
                 </a>
               </div>
               <div className="flex items-center space-x-3 text-gray-400">
-                <Mail className="w-4 h-4" />
-                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white transition-colors">
+                <Mail className="w-4 h-4"  />
+                <a href="mailto: klebe r@ziontechgroup.com" className="hover: tex t-white transition-colors">
                   kleber@ziontechgroup.com
                 </a>
               </div>
               <div className="flex items-center space-x-3 text-gray-400">
-                <MapPin className="w-4 h-4" />
+                <MapPin className="w-4 h-4"  />
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
             </div>
@@ -75,12 +75,12 @@ export default function EnhancedFooter() {
 
           <div>
             <h3 className="text-lg font-semibold mb-4 flex items-center">
-              <Globe className="w-5 h-5 mr-2 text-blue-400" /> Services
+              <Globe className="w-5 h-5 mr-2 text-blue-400"  /> Services
             </h3>
             <ul className="space-y-2">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-gray-400 hover:text-white transition-colors text-sm">
+                  <Link href={link.href} className="text-gray-400 hover: tex t-white transition-colors text-sm">
                     {link.name}
                   </Link>
                 </li>
@@ -90,12 +90,12 @@ export default function EnhancedFooter() {
 
           <div>
             <h3 className="text-lg font-semibold mb-4 flex items-center">
-              <Shield className="w-5 h-5 mr-2 text-green-400" /> Solutions
+              <Shield className="w-5 h-5 mr-2 text-green-400"  /> Solutions
             </h3>
             <ul className="space-y-2">
               {footerLinks.solutions.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-gray-400 hover:text-white transition-colors text-sm">
+                  <Link href={link.href} className="text-gray-400 hover: tex t-white transition-colors text-sm">
                     {link.name}
                   </Link>
                 </li>
@@ -105,12 +105,12 @@ export default function EnhancedFooter() {
 
           <div>
             <h3 className="text-lg font-semibold mb-4 flex items-center">
-              <FileText className="w-5 h-5 mr-2 text-purple-400" /> Company
+              <FileText className="w-5 h-5 mr-2 text-purple-400"  /> Company
             </h3>
             <ul className="space-y-2">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-gray-400 hover:text-white transition-colors text-sm">
+                  <Link href={link.href} className="text-gray-400 hover: tex t-white transition-colors text-sm">
                     {link.name}
                   </Link>
                 </li>
@@ -120,12 +120,12 @@ export default function EnhancedFooter() {
 
           <div>
             <h3 className="text-lg font-semibold mb-4 flex items-center">
-              <HelpCircle className="w-5 h-5 mr-2 text-yellow-400" /> Resources
+              <HelpCircle className="w-5 h-5 mr-2 text-yellow-400"  /> Resources
             </h3>
             <ul className="space-y-2 mb-6">
               {footerLinks.resources.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-gray-400 hover:text-white transition-colors text-sm">
+                  <Link href={link.href} className="text-gray-400 hover: tex t-white transition-colors text-sm">
                     {link.name}
                   </Link>
                 </li>
@@ -135,7 +135,7 @@ export default function EnhancedFooter() {
             <ul className="space-y-2">
               {footerLinks.legal.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-gray-400 hover:text-white transition-colors text-sm">
+                  <Link href={link.href} className="text-gray-400 hover: tex t-white transition-colors text-sm">
                     {link.name}
                   </Link>
                 </li>
@@ -144,10 +144,10 @@ export default function EnhancedFooter() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <div className="text-gray-400 text-sm mb-4 md:mb-0">© {currentYear} Zion Tech Group. All rights reserved.</div>
-          <button onClick={scrollToTop} className="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors" aria-label="Scroll to top">
-            <ArrowUp className="w-5 h-5" />
+        <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md: fle x-row justify-between items-center">
+          <div className="text-gray-400 text-sm mb-4 md: m b-0">© {currentYear} Zion Tech Group. All rights reserved.</div>
+          <button onClick={scrollToTop} className="bg-blue-600 hover: b g-blue-700 text-white p-3 rounded-full shadow-lg transition-colors" aria-label="Scroll to top">
+            <ArrowUp className="w-5 h-5"  />
           </button>
         </div>
       </div>

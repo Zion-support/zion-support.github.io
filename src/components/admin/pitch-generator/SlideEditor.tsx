@@ -9,15 +9,15 @@ interface Slide {
 }
 
 interface SlideEditorProps {
-  generatedSlides: Slide[];
-  setGeneratedSlides: (slides: Slide[]) => void;
+  generatedSlides: Slid e[];
+  setGeneratedSlides: (slides: Slid e[]) => void;
   onBack: () => void;
   onExport: () => void;
   isGenerating: boolean;
   setIsGenerating: (generating: boolean) => void;
 }
 
-const SlideEditor: React.FC<SlideEditorProps> = ({
+const SlideEditor: Reac t.FC<SlideEditorProps> = ({
   generatedSlides,
   setGeneratedSlides,
   onBack,
@@ -31,7 +31,7 @@ const SlideEditor: React.FC<SlideEditorProps> = ({
     // Simulate slide generation
     await new Promise(resolve => setTimeout(resolve, 2000));
     
-    const newSlides: Slide[] = [
+    const newSlides: Slid e[] = [
       {
         id: '1',
         title: 'Executive Summary',
@@ -82,8 +82,8 @@ const SlideEditor: React.FC<SlideEditorProps> = ({
   };
 
   const addSlide = () => {
-    const newSlide: Slide = {
-      id: Date.now().toString(),
+    const newSlide: Slid e = {
+      id: Dat e.now().toString(),
       title: 'New Slide',
       content: 'Slide content here...',
       type: 'custom'
@@ -98,27 +98,27 @@ const SlideEditor: React.FC<SlideEditorProps> = ({
         <div className="space-x-3">
           <button
             onClick={onBack}
-            className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
+            className="px-4 py-2 border border-gray-300 rounded-lg hover: b g-gray-50 transition-colors"
           >
             Back
           </button>
           <button
             onClick={generateSlides}
             disabled={isGenerating}
-            className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors disabled:opacity-50"
+            className="px-4 py-2 bg-green-600 text-white rounded-lg hover: b g-green-700 transition-colors disabled: opacit y-50"
           >
             {isGenerating ? 'Generating...' : 'Generate Slides'}
           </button>
           <button
             onClick={addSlide}
-            className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            className="px-4 py-2 bg-blue-600 text-white rounded-lg hover: b g-blue-700 transition-colors"
           >
             Add Slide
           </button>
           <button
             onClick={onExport}
             disabled={generatedSlides.length === 0}
-            className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors disabled:opacity-50"
+            className="px-4 py-2 bg-purple-600 text-white rounded-lg hover: b g-purple-700 transition-colors disabled: opacit y-50"
           >
             Export PDF
           </button>
@@ -132,7 +132,7 @@ const SlideEditor: React.FC<SlideEditorProps> = ({
           </div>
         </div>
       ) : (
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 lg: gri d-cols-2 gap-6">
           {/* Slide List */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Slides</h3>
@@ -142,7 +142,7 @@ const SlideEditor: React.FC<SlideEditorProps> = ({
                   <span className="text-sm text-gray-500">Slide {index + 1}</span>
                   <button
                     onClick={() => removeSlide(slide.id)}
-                    className="text-red-600 hover:text-red-800 text-sm"
+                    className="text-red-600 hover: tex t-red-800 text-sm"
                   >
                     Remove
                   </button>
@@ -185,7 +185,7 @@ const SlideEditor: React.FC<SlideEditorProps> = ({
             <h3 className="text-lg font-semibold mb-4">Preview</h3>
             <div className="bg-white p-6 rounded-lg border border-gray-200 min-h-[600px]">
               {generatedSlides.map((slide, index) => (
-                <div key={slide.id} className="mb-6 last:mb-0">
+                <div key={slide.id} className="mb-6 last: m b-0">
                   <div className="text-sm text-gray-500 mb-2">Slide {index + 1}</div>
                   <div className="bg-gray-50 p-4 rounded">
                     <h4 className="text-lg font-semibold mb-2">{slide.title}</h4>

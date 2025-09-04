@@ -40,7 +40,7 @@ export { RequestsPanel }(...args[]):  {
   };
 
   // Filter quotes by archive status
-  const archivedQuotes = quotes.filter((q: QuoteRequest) => q.is_archived);
+  const archivedQuotes = quotes.filter((q: QuoteReques t) => q.is_archived);
 
   return (
     <ProtectedRoute>
@@ -48,13 +48,12 @@ export { RequestsPanel }(...args[]):  {
 
         <div className="min-h-screen bg-zion-blue px-4 py-8">
           <div className="container mx-auto">
-            <RequestsHeader
-              unreadCount={unreadCount}
+            <RequestsHeader unreadCount={unreadCount}
               statusFilter={statusFilter}
               setStatusFilter={setStatusFilter}
               archiveFilter={archiveFilter}
               setArchiveFilter={setArchiveFilter}
-            />
+             />
 
             {/* Main Content */}
             <Tabs defaultValue="active" className="mb-6">
@@ -64,25 +63,23 @@ export { RequestsPanel }(...args[]):  {
               </TabsList>
 
               <TabsContent value="active">
-                <QuoteRequestsList
-                  quotes={activeQuotes}
+                <QuoteRequestsList quotes={activeQuotes}
                   isLoading={isLoading}
                   isArchived={false}
                   onViewDetails={handleViewDetails}
                   onMarkAsResponded={markAsResponded}
                   onToggleArchive={toggleArchive}
-                />
+                 />
               </TabsContent>
 
               <TabsContent value="archived">
-                <QuoteRequestsList
-                  quotes={archivedQuotes}
+                <QuoteRequestsList quotes={archivedQuotes}
                   isLoading={isLoading}
                   isArchived={true}
                   onViewDetails={handleViewDetails}
                   onMarkAsResponded={markAsResponded}
                   onToggleArchive={toggleArchive}
-                />
+                 />
               </TabsContent>
             </Tabs>
           </div>

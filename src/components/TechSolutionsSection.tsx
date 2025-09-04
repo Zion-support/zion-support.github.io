@@ -13,7 +13,7 @@ export function TechSolutionsSection() {
           initial = {
 
   { opacity: 0,
-  y: 20
+  y: 2 0
 
 }}
           whileInView = {
@@ -22,10 +22,10 @@ export function TechSolutionsSection() {
   y: 0
 
 }}
-          viewport={{ once: true }}
+          viewport={{ once: tru e }}
           transition={{ duration: 0.6 }}
         >"
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-4">
             Technology Solutions
           </h2>"
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -33,15 +33,15 @@ export function TechSolutionsSection() {
             enhance security, and accelerate your digital transformation journey.</p>
         </motion.div>
 "
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
           {techSolutions.map((solution, index) => (
             <motion.div
               key={solution.title}"
-              className="bg-slate-800 border border-slate-700 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 group"
+              className="bg-slate-800 border border-slate-700 rounded-xl p-6 hover: borde r-blue-500/50 transition-all duration-300 hover: shado w-lg hover: shado w-blue-500/25 group"
               initial = {
 
   { opacity: 0,
-  y: 30
+  y: 3 0
 
 }}
               whileInView = {
@@ -50,19 +50,19 @@ export function TechSolutionsSection() {
   y: 0
 
 }}
-              viewport={{ once: true }}
+              viewport={{ once: tru e }}
               transition = {
 
   { duration: 0.6,
-  delay: index * 0.1
+  delay: inde x * 0.1
 
 }}
             >
-              <div className={`w-16 h-16 bg-gradient-to-br ${solution.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>"
+              <div className={`w-16 h-16 bg-gradient-to-br ${solution.color} rounded-xl flex items-center justify-center mb-6 group-hover: scal e-110 transition-transform duration-300`}>"
                 <span className="text-3xl">{solution.icon}</span>
               </div>
 
-              <h3 className="text-xl font - bold text-white mb-3 group - hover:text-blue - 400 transition - colors duration -200">
+              <h3 className="text-xl font - bold text-white mb-3 group - hover: tex t-blue - 400 transition - colors duration -200">
                 {solution.title}
               </h3>
 
@@ -78,7 +78,7 @@ export function TechSolutionsSection() {
               </ul>
 
               <div className="mt-6 pt - 4 border-t border-slate -700">
-                <div className="text-blue - 400 text-sm font - semibold group - hover:text-blue - 300 transition - colors duration -200">                  Learn More →
+                <div className="text-blue - 400 text-sm font - semibold group - hover: tex t-blue - 300 transition - colors duration -200">                  Learn More →
                 </div>
 "
                 <p className="text-gray-600 mb-6 leading-relaxed">
@@ -95,10 +95,10 @@ export function TechSolutionsSection() {
 
                 <Link"
                   to="/services"
-                  className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors duration-200 group-hover:translate-x-1"
+                  className="inline-flex items-center text-blue-600 hover: tex t-blue-700 font-medium transition-colors duration-200 group-hover: translat e-x-1"
 
                   Learn More"
-                  <Rocket className="ml-2 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1"  />                </Link>
+                  <Rocket className="ml-2 h-4 w-4 transition-transform duration-200 group-hover: translat e-x-1"   />                </Link>
               </motion.div>) }) }
         </div>
 
@@ -106,7 +106,7 @@ export function TechSolutionsSection() {
           className="mt-16 text-center"          initial = {
 
   { opacity: 0,
-  y: 20
+  y: 2 0
 
 }}
           whileInView = {
@@ -115,7 +115,7 @@ export function TechSolutionsSection() {
   y: 0
 
 }}
-          viewport={{ once: true }}
+          viewport={{ once: tru e }}
           transition = {
 
   { duration: 0.6,
@@ -130,20 +130,20 @@ export function TechSolutionsSection() {
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
               Let's discuss how our technology solutions can help you achieve
               your business goals and stay ahead of the competition.</p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
               <Link"
                 to="/contact"
-                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
+                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-blue-600 hover: b g-blue-700 transition-colors duration-200"
 
                 Get Started"
-                <Rocket className="ml-2 h-5 w-5"  />
+                <Rocket className="ml-2 h-5 w-5"   />
               </Link>
               <Link"
                 to="/services"
-                className="inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-lg text-gray-700 bg-white hover:bg-gray-50 transition-colors duration-200"
+                className="inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-lg text-gray-700 bg-white hover: b g-gray-50 transition-colors duration-200"
 
                 View All Services"
-                <Code className="ml-2 h-5 w-5"  />              </Link>
+                <Code className="ml-2 h-5 w-5"   />              </Link>
             </div>
           </div>
         </motion.div>;

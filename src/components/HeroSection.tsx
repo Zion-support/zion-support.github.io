@@ -3,7 +3,7 @@ import {  import { motion, AnimatePresence  } from 'framer-motion';
 export default function Page() {
 []}
 ;
-const heroSlides: HeroSlide[] = [  {
+const heroSlides: HeroSlid e[] = [  {
 
     id: 'ai-solutions',
     title: 'AI-Powered Business Solutions',
@@ -18,11 +18,11 @@ const heroSlides: HeroSlide[] = [  {
       'Machine Learning',Predictive Analytics',Process Automation',Real-time Insights',
     ],
     gradient: 'from-zion-cyan via-zion-purple to-zion-blue',
-    icon: Brain,
+    icon: Brai n,
     stats: ['
-      { label: 'Accuracy Rate', value: '95%+', icon: Target },
-      { label: 'ROI Increase', value: '450%', icon: TrendingUp },
-      { label: 'Market Growth', value: '280%', icon: Rocket },
+      { label: 'Accuracy Rate', value: '95%+', icon: Targe t },
+      { label: 'ROI Increase', value: '450%', icon: TrendingU p },
+      { label: 'Market Growth', value: '280%', icon: Rocke t },
     ]},
   {
 
@@ -38,11 +38,11 @@ const heroSlides: HeroSlide[] = [  {
       'Cloud Infrastructure',Cybersecurity',DevOps Automation',24/7 Support',
     ],
     gradient: 'from-zion-blue via-zion-cyan to-zion-purple',
-    icon: Shield,
+    icon: Shiel d,
     stats: ['
-      { label: 'Uptime', value: '99.99%', icon: Target },
-      { label: 'Cost Savings', value: '700%', icon: TrendingUp },
-      { label: 'Response Time', value: '<5min', icon: Rocket },
+      { label: 'Uptime', value: '99.99%', icon: Targe t },
+      { label: 'Cost Savings', value: '700%', icon: TrendingU p },
+      { label: 'Response Time', value: '<5min', icon: Rocke t },
     ]},
   {
 
@@ -58,11 +58,11 @@ const heroSlides: HeroSlide[] = [  {
       'Energy Efficiency',Carbon Reduction',Sustainable Practices',Cost Savings',
     ],
     gradient: 'from-zion-cyan via-zion-blue to-zion-purple',
-    icon: Globe,
+    icon: Glob e,
     stats: ['
-      { label: 'Energy Savings', value: '60%', icon: Target },
-      { label: 'Carbon Reduction', value: '75%', icon: TrendingUp },
-      { label: 'Cost Reduction', value: '40%', icon: Rocket },
+      { label: 'Energy Savings', value: '60%', icon: Targe t },
+      { label: 'Carbon Reduction', value: '75%', icon: TrendingU p },
+      { label: 'Cost Reduction', value: '40%', icon: Rocke t },
     ]},
 ];
 };
@@ -152,13 +152,13 @@ const heroSlides: HeroSlide[] = [  {
     <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Background Pattern */}"
       <div className="absolute inset-0 opacity-10">"
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.1),transparent_50%)]" />"
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(139,92,246,0.1),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.1),transparent_50%)]"  />"
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(139,92,246,0.1),transparent_50%)]"  />
       </div>
 
       {/* Hero Content */}"
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">"
-        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
+      <div className="relative z-10 container mx-auto px-4 sm: p x-6 lg: p x-8 pt-20 pb-16">"
+        <div className="grid lg: gri d-cols-2 gap-12 items-center min-h-[80vh]">
           {/* Text Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -168,19 +168,19 @@ const heroSlides: HeroSlide[] = [  {
           >"
             <div className="space-y-4">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}"
                 className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 text-cyan-300 text-sm font-medium"
               >"
-                <Star className="w-4 h-4 mr-2 text-yellow-400"  />                Leading Technology Solutions
+                <Star className="w-4 h-4 mr-2 text-yellow-400"   />                Leading Technology Solutions
               </motion.div>
 
               <motion.h1
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}"
-                className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight"
+                className="text-4xl sm: tex t-5xl lg: tex t-6xl font-bold text-white leading-tight"
               >"
                 <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                   {currentSlideData.title}
@@ -188,7 +188,7 @@ const heroSlides: HeroSlide[] = [  {
               </motion.h1>
 
               <motion.p
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.8 }}"
                 className="text-xl text-slate-300 leading-relaxed"
@@ -197,7 +197,7 @@ const heroSlides: HeroSlide[] = [  {
               </motion.p>
 
               <motion.p
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 1.0 }}"
                 className="text-lg text-slate-400 leading-relaxed"
@@ -208,50 +208,50 @@ const heroSlides: HeroSlide[] = [  {
 
             {/* Features */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 2 0 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.2 }}"
               className="grid grid-cols-2 gap-3"
             >
               {currentSlideData.features.map((feature, index) => ("
                 <div key={feature} className="flex items-center space-x-2">"
-                  <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0"  />"                  <span className="text-slate-300 text-sm">{feature}</span>
+                  <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0"   />"                  <span className="text-slate-300 text-sm">{feature}</span>
                 </div>
               ))}
             </motion.div>
 
             {/* CTA Button */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 2 0 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.4 }}"
-              className="flex flex-col sm:flex-row gap-4"
+              className="flex flex-col sm: fle x-row gap-4"
             >
               <Link
                 to={currentSlideData.path}"
-                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25"
+                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover: fro m-cyan-600 hover: t o-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover: scal e-105 hover: shado w-2xl hover: shado w-cyan-500/25"
               >
                 {currentSlideData.cta}"
-                <ArrowRight className="w-5 h-5 ml-2"  />              </Link>
+                <ArrowRight className="w-5 h-5 ml-2"   />              </Link>
 
               <button
                 onClick={() => setIsAutoPlaying(!isAutoPlaying)}"
-                className="inline-flex items-center justify-center px-6 py-4 border border-slate-600 hover:border-cyan-400 text-slate-300 hover:text-cyan-400 font-medium rounded-lg transition-all duration-300"
+                className="inline-flex items-center justify-center px-6 py-4 border border-slate-600 hover: borde r-cyan-400 text-slate-300 hover: tex t-cyan-400 font-medium rounded-lg transition-all duration-300"
                 aria-label={
 
                   isAutoPlaying ? 'Pause slideshow' : 'Play slideshow'
                 }
               >
                 {isAutoPlaying ? ("
-                  <Pause className="w-5 h-5"  />
+                  <Pause className="w-5 h-5"   />
                 ) : ("
-                  <Play className="w-5 h-5"  />
+                  <Play className="w-5 h-5"   />
                 )}              </button>
             </motion.div>
 
             {/* Stats */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 2 0 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.6 }}"
               className="grid grid-cols-3 gap-6 pt-8"
@@ -269,7 +269,7 @@ const heroSlides: HeroSlide[] = [  {
 
           {/* Visual Content */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: 5 0 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}"
             className="relative"
@@ -301,7 +301,7 @@ const heroSlides: HeroSlide[] = [  {
               onClick={() => goToSlide(index)}`
               className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide'
                   ? 'bg-cyan-400 scale-125''
-                  : 'bg-slate-600 hover:bg-slate-500'`
+                  : 'bg-slate-600 hover: b g-slate-500'`
               }`}`
               aria-label={`Go to slide ${index + 1}`}
             />
@@ -312,17 +312,17 @@ const heroSlides: HeroSlide[] = [  {
       {/* Arrow Navigation */}
       <button
         onClick={prevSlide}"
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full bg-slate-800/50 hover:bg-slate-700/70 text-slate-300 hover:text-white transition-all duration-300 backdrop-blur-sm"
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full bg-slate-800/50 hover: b g-slate-700/70 text-slate-300 hover: tex t-white transition-all duration-300 backdrop-blur-sm"
         
       >"
-        <ChevronLeft className="w-6 h-6"  />      </button>
+        <ChevronLeft className="w-6 h-6"   />      </button>
 
       <button
         onClick={nextSlide}"
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full bg-slate-800/50 hover:bg-slate-700/70 text-slate-300 hover:text-white transition-all duration-300 backdrop-blur-sm"
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full bg-slate-800/50 hover: b g-slate-700/70 text-slate-300 hover: tex t-white transition-all duration-300 backdrop-blur-sm"
         
       >"
-        <ChevronRight className="w-6 h-6"  />
+        <ChevronRight className="w-6 h-6"   />
       </button>
     </section>) }
 export { HeroSection };

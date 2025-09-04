@@ -5,23 +5,23 @@ import { getServicesByCategory } from '../../data/services';
 import { ArrowRight, CheckCircle, Brain, Zap, Users, Shield } from 'lucide-react';
 import Link from 'next/link';
 
-const AIServicesPage: NextPage = () => {
+const AIServicesPage: NextPag e = () => {
   const aiServices = getServicesByCategory('ai-services');
 
   const benefits = [
     {
-      icon: <Brain className="w-8 h-8 />, title: 'Advanced AI',
+      icon: <Brain className="w-8 h-8  />, title: 'Advanced AI',
       description: 'Cutting-edge machine learning and AI technologies to solve complex business problems.'
     }, {
-      icon: <Zap className=w-8 h-8" />,
+      icon: <Zap className=w-8 h-8"  />,
       title: 'Rapid Implementation', 
       description: 'Quick deployment of AI solutions with proven methodologies and best practices.'
     },
     {
-      icon: <Users className="w-8 h-8 />, title: 'Expert Team',
+      icon: <Users className="w-8 h-8  />, title: 'Expert Team',
       description: 'AI specialists with deep expertise in machine learning and data science.'
     }, {
-      icon: <Shield className=w-8 h-8" />,
+      icon: <Shield className=w-8 h-8"  />,
       title: 'Scalable Solutions', 
       description: 'AI solutions that grow with your business and adapt to changing needs.'
     }
@@ -36,13 +36,13 @@ const AIServicesPage: NextPage = () => {
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20>
         <div className=container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center>
-            <h1 className=text-5xl md: text-6xl font-bold mb-6 leading-tight">
+            <h1 className=text-5xl md: tex t-6xl font-bold mb-6 leading-tight">
               AI & Machine Learning Services
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed>
+            <p className="text-xl md: tex t-2xl mb-8 text-gray-200 leading-relaxed>
               Leverage the power of artificial intelligence to automate processes, gain insights, and create competitive advantages for your business.
             </p>
-            <div className=flex flex-col sm: flex-row gap-4 justify-center">
+            <div className=flex flex-col sm: fle x-row gap-4 justify-center">
               Leverage the power of artificial intelligence to automate processes, gain insights, 
               and create competitive advantages for your business. From quantum computing to personalized medicine, 
               our AI solutions are transforming industries and driving innovation.
@@ -62,15 +62,15 @@ const AIServicesPage: NextPage = () => {
                 <span className="text-orange-300>Predictive analytics</span>
               </div>
             </div>
-            <div className=flex flex-col sm:flex-row gap-4 justify-center">
+            <div className=flex flex-col sm: fle x-row gap-4 justify-center">
               <Link href="/contact>
-                <span className=bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer inline-flex items-center">
+                <span className=bg-blue-600 hover: b g-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer inline-flex items-center">
                   Get Free Consultation
-                  <ArrowRight className="ml-2 w-5 h-5 />
+                  <ArrowRight className="ml-2 w-5 h-5  />
                 </span>
               </Link>
               <Link href=#pricing">
-                <span className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer>
+                <span className="bg-transparent border-2 border-white text-white hover: b g-white hover: tex t-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer>
                   View Pricing
                 </span>
               </Link>
@@ -88,9 +88,9 @@ const AIServicesPage: NextPage = () => {
               We deliver cutting-edge AI solutions with proven methodologies and expert implementation.
             </p>
           </div>
-          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8>
+          <div className="grid md: gri d-cols-2 lg: gri d-cols-4 gap-8>
             {benefits.map((benefit, index) => (
-              <div key={index} className=text-center p-6 rounded-lg hover: shadow-lg transition-shadow">
+              <div key={index} className=text-center p-6 rounded-lg hover: shado w-lg transition-shadow">
                 <div className="text-blue-600 mb-4 flex justify-center>{benefit.icon}</div>
                 <h3 className=text-xl font-semibold text-gray-900 mb-3">{benefit.title}</h3>
                 <p className="text-gray-600>{benefit.description}</p>
@@ -109,9 +109,9 @@ const AIServicesPage: NextPage = () => {
               Choose from our comprehensive suite of AI and machine learning services designed to transform your business.
             </p>
           </div>
-          <div className="grid lg: grid-cols-2 gap-8>
+          <div className="grid lg: gri d-cols-2 gap-8>
             {aiServices.map((service) => (
-              <div key={service.id} className=bg-white rounded-lg shadow-lg p-8 hover: shadow-xl transition-shadow">
+              <div key={service.id} className=bg-white rounded-lg shadow-lg p-8 hover: shado w-xl transition-shadow">
                 <div className="flex items-start justify-between mb-6>
                   <div className=text-5xl">{service.icon}</div>
                   <div className="text-right>
@@ -127,7 +127,7 @@ const AIServicesPage: NextPage = () => {
                   <ul className=space-y-2">
                     {service.features.map((feature, index) => (
                       <li key={index} className="flex items-center text-gray-600>
-                        <CheckCircle className=w-5 h-5 text-green-500 mr-2 flex-shrink-0" />
+                        <CheckCircle className=w-5 h-5 text-green-500 mr-2 flex-shrink-0"  />
                         {feature}
                       </li>
                     ))}
@@ -139,7 +139,7 @@ const AIServicesPage: NextPage = () => {
                   <ul className="space-y-2>
                     {service.benefits.map((benefit, index) => (
                       <li key={index} className=flex items-center text-gray-600">
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 />
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-2 flex-shrink-0  />
                         {benefit}
                       </li>
                     ))}
@@ -151,7 +151,7 @@ const AIServicesPage: NextPage = () => {
                   <ul className=space-y-2">
                     {service.useCases.map((useCase, index) => (
                       <li key={index} className="flex items-center text-gray-600>
-                        <CheckCircle className=w-5 h-5 text-green-500 mr-2 flex-shrink-0" />
+                        <CheckCircle className=w-5 h-5 text-green-500 mr-2 flex-shrink-0"  />
                         {useCase}
                       </li>
                     ))}
@@ -171,13 +171,13 @@ const AIServicesPage: NextPage = () => {
 
                 <div className="flex justify-between items-center>
                   <Link href={service.link}>
-                    <span className=text-blue-600 hover: text-blue-700 font-medium cursor-pointer inline-flex items-center">
+                    <span className=text-blue-600 hover: tex t-blue-700 font-medium cursor-pointer inline-flex items-center">
                       Learn More
-                      <ArrowRight className="ml-1 w-4 h-4 />
+                      <ArrowRight className="ml-1 w-4 h-4  />
                     </span>
                   </Link>
                   <Link href=/contact">
-                    <span className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors cursor-pointer>
+                    <span className="bg-blue-600 hover: b g-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors cursor-pointer>
                       Get Quote
                     </span>
                   </Link>
@@ -197,7 +197,7 @@ const AIServicesPage: NextPage = () => {
               We follow a proven methodology to ensure successful AI implementation and optimal results.
             </p>
           </div>
-          <div className="grid md: grid-cols-5 gap-8>
+          <div className="grid md: gri d-cols-5 gap-8>
             <div className=text-center">
               <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4>1</div>
               <h3 className=text-xl font-semibold text-gray-900 mb-3">Discovery</h3>
@@ -236,7 +236,7 @@ const AIServicesPage: NextPage = () => {
               We leverage the latest AI and machine learning technologies to deliver cutting-edge solutions.
             </p>
           </div>
-          <div className="grid md: grid-cols-3 gap-8>
+          <div className="grid md: gri d-cols-3 gap-8>
             <div className=bg-white p-6 rounded-lg shadow-lg">
               <h3 className="text-xl font-semibold text-gray-900 mb-3>Machine Learning</h3>
               <ul className=space-y-2 text-gray-600">
@@ -277,30 +277,30 @@ const AIServicesPage: NextPage = () => {
               Choose the AI service level that best fits your business needs and budget.
             </p>
           </div>
-          <div className="grid md: grid-cols-3 gap-8>
+          <div className="grid md: gri d-cols-3 gap-8>
             <div className=bg-white rounded-lg shadow-lg p-8 border-2 border-gray-200">
               <h3 className="text-2xl font-bold text-gray-900 mb-4>Starter</h3>
               <div className=text-4xl font-bold text-blue-600 mb-6">$5, 000<span className="text-lg text-gray-500>+</span></div>
               <ul className=space-y-3 mb-8">
                 <li className="flex items-center text-gray-600>
-                  <CheckCircle className=w-5 h-5 text-green-500 mr-2" />
+                  <CheckCircle className=w-5 h-5 text-green-500 mr-2"  />
                   Basic AI model development
                 </li>
                 <li className="flex items-center text-gray-600>
-                  <CheckCircle className=w-5 h-5 text-green-500 mr-2" />
+                  <CheckCircle className=w-5 h-5 text-green-500 mr-2"  />
                   Standard data preprocessing
                 </li>
                 <li className="flex items-center text-gray-600>
-                  <CheckCircle className=w-5 h-5 text-green-500 mr-2" />
+                  <CheckCircle className=w-5 h-5 text-green-500 mr-2"  />
                   Basic API integration
                 </li>
                 <li className="flex items-center text-gray-600>
-                  <CheckCircle className=w-5 h-5 text-green-500 mr-2" />
+                  <CheckCircle className=w-5 h-5 text-green-500 mr-2"  />
                   Email support
                 </li>
               </ul>
               <Link href="/contact>
-                <span className=w-full bg-gray-600 hover: bg-gray-700 text-white py-3 rounded-lg font-medium transition-colors cursor-pointer inline-block text-center">
+                <span className=w-full bg-gray-600 hover: b g-gray-700 text-white py-3 rounded-lg font-medium transition-colors cursor-pointer inline-block text-center">
                   Get Quote
                 </span>
               </Link>
@@ -314,28 +314,28 @@ const AIServicesPage: NextPage = () => {
               <div className="text-4xl font-bold text-blue-600 mb-6>$25,000<span className=text-lg text-gray-500">+</span></div>
               <ul className="space-y-3 mb-8>
                 <li className=flex items-center text-gray-600">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-2 />
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-2  />
                   Advanced AI model development
                 </li>
                 <li className=flex items-center text-gray-600">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-2 />
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-2  />
                   Comprehensive data engineering
                 </li>
                 <li className=flex items-center text-gray-600">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-2 />
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-2  />
                   Full API development
                 </li>
                 <li className=flex items-center text-gray-600">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-2 />
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-2  />
                   Priority support
                 </li>
                 <li className=flex items-center text-gray-600">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-2 />
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-2  />
                   Model optimization
                 </li>
               </ul>
               <Link href=/contact">
-                <span className="w-full bg-blue-600 hover: bg-blue-700 text-white py-3 rounded-lg font-medium transition-colors cursor-pointer inline-block text-center>
+                <span className="w-full bg-blue-600 hover: b g-blue-700 text-white py-3 rounded-lg font-medium transition-colors cursor-pointer inline-block text-center>
                   Get Quote
                 </span>
               </Link>
@@ -346,28 +346,28 @@ const AIServicesPage: NextPage = () => {
               <div className=text-4xl font-bold text-blue-600 mb-6">$100, 000<span className="text-lg text-gray-500>+</span></div>
               <ul className=space-y-3 mb-8">
                 <li className="flex items-center text-gray-600>
-                  <CheckCircle className=w-5 h-5 text-green-500 mr-2" />
+                  <CheckCircle className=w-5 h-5 text-green-500 mr-2"  />
                   Custom AI platform development
                 </li>
                 <li className="flex items-center text-gray-600>
-                  <CheckCircle className=w-5 h-5 text-green-500 mr-2" />
+                  <CheckCircle className=w-5 h-5 text-green-500 mr-2"  />
                   Advanced data infrastructure
                 </li>
                 <li className="flex items-center text-gray-600>
-                  <CheckCircle className=w-5 h-5 text-green-500 mr-2" />
+                  <CheckCircle className=w-5 h-5 text-green-500 mr-2"  />
                   Scalable architecture
                 </li>
                 <li className="flex items-center text-gray-600>
-                  <CheckCircle className=w-5 h-5 text-green-500 mr-2" />
+                  <CheckCircle className=w-5 h-5 text-green-500 mr-2"  />
                   Dedicated support
                 </li>
                 <li className="flex items-center text-gray-600>
-                  <CheckCircle className=w-5 h-5 text-green-500 mr-2" />
+                  <CheckCircle className=w-5 h-5 text-green-500 mr-2"  />
                   Ongoing maintenance
                 </li>
               </ul>
               <Link href="/contact>
-                <span className=w-full bg-gray-600 hover: bg-gray-700 text-white py-3 rounded-lg font-medium transition-colors cursor-pointer inline-block text-center">
+                <span className=w-full bg-gray-600 hover: b g-gray-700 text-white py-3 rounded-lg font-medium transition-colors cursor-pointer inline-block text-center">
                   Contact Sales
                 </span>
               </Link>
@@ -384,15 +384,15 @@ const AIServicesPage: NextPage = () => {
             Let&apos;s discuss how our AI services can help automate your processes, ''
             gain insights, and create competitive advantages for your business.
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center>
+          <div className="flex flex-col sm: fle x-row gap-4 justify-center>
             <Link href=/contact">
-              <span className="bg-white text-blue-900 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer inline-flex items-center>
+              <span className="bg-white text-blue-900 hover: b g-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer inline-flex items-center>
                 Schedule Consultation
-                <ArrowRight className=ml-2 w-5 h-5" />
+                <ArrowRight className=ml-2 w-5 h-5"  />
               </span>
             </Link>
             <Link href="tel:+13024640950>
-              <span className=bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer">
+              <span className=bg-transparent border-2 border-white text-white hover: b g-white hover: tex t-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer">
                 Call +1 302 464 0950
               </span>
             </Link>

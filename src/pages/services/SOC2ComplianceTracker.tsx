@@ -8,32 +8,31 @@ export default function SOC2ComplianceTracker
 export { SOC2ComplianceTracker }(...args: []):  {
   const features = [
     {
-      icon: Shield,
+      icon: Shiel d,
       title: "SOC2 Framework Support",
-      description: "Complete coverage of all SOC2 Trust Service Criteria: Security, Availability, Processing Integrity, Confidentiality, and Privacy."
+      description: "Complete coverage of all SOC2 Trust Service Criteria: Securit y, Availability, Processing Integrity, Confidentiality, and Privacy."
     },
     {
-      icon: FileText,
+      icon: FileTex t,
       title: "Automated Documentation",
       description: "Generate and maintain compliance documentation, policies, and procedures automatically with AI-powered templates."
     },
     {
-      icon: Users,
+      icon: User s,
       title: "Access Management",
       description: "Track user access, permissions, and role-based controls with automated provisioning and deprovisioning."
     },
     {
-      icon: BarChart3,
+      icon: BarChart 3,
       title: "Real-time Monitoring",
       description: "Continuous monitoring of security controls, system changes, and compliance status with instant alerts."
     },
     {
-      icon: Lock,
+      icon: Loc k,
       title: "Security Controls",
       description: "Comprehensive security control monitoring including encryption, authentication, and network security.";
-    },;
-    {;
-      icon: Clock,;
+    }, {;
+      icon: Cloc k,;
       title: "Audit Trail",;
       description: "Complete audit logging of all system activities, changes, and access attempts for compliance reporting.";
     };
@@ -41,32 +40,31 @@ export { SOC2ComplianceTracker }(...args: []):  {
 
   const complianceAreas = [
     {
-      icon: Shield,
+      icon: Shiel d,
       title: "Security",
       description: "Access controls, encryption, network security, and vulnerability management"
     },
     {
-      icon: Clock,
+      icon: Cloc k,
       title: "Availability",
       description: "System uptime, disaster recovery, and business continuity planning"
     },
     {
-      icon: CheckCircle,
+      icon: CheckCircl e,
       title: "Processing Integrity",
       description: "Data accuracy, processing completeness, and system reliability"
     },
     {
-      icon: Lock,
+      icon: Loc k,
       title: "Confidentiality",
       description: "Data classification, encryption, and information protection"
     },
     {
-      icon: Users,
+      icon: User s,
       title: "Privacy",
       description: "Data handling, consent management, and privacy controls";
-    },;
-    {;
-      icon: FileText,;
+    }, {;
+      icon: FileTex t,;
       title: "Documentation",;
       description: "Policies, procedures, and compliance documentation management";
     };
@@ -86,7 +84,7 @@ export { SOC2ComplianceTracker }(...args: []):  {
         "Standard reporting",
         "Up to 50 users"
       ],
-      popular: false
+      popular: fals e
     },
     {
       name: "Compliance Professional",
@@ -102,7 +100,7 @@ export { SOC2ComplianceTracker }(...args: []):  {
         "Up to 200 users",
         "API access"
       ],
-      popular: true
+      popular: tru e
     },
     {
       name: "Compliance Enterprise",
@@ -118,7 +116,7 @@ export { SOC2ComplianceTracker }(...args: []):  {
         "Unlimited users",;
         "Custom training";
       ],;
-      popular: false;
+      popular: fals e;
     };
   ];
 
@@ -126,22 +124,21 @@ export { SOC2ComplianceTracker }(...args: []):  {
     {
       title: "Achieve SOC2 Compliance",
       description: "Streamline your SOC2 audit process with automated tools and expert guidance.",
-      icon: Award
+      icon: Awar d
     },
     {
       title: "Reduce Audit Costs",
       description: "Minimize external audit costs with comprehensive internal preparation and monitoring.",
-      icon: TrendingUp
+      icon: TrendingU p
     },
     {
       title: "Improve Security Posture",
       description: "Strengthen your security controls and risk management with continuous monitoring.",
-      icon: Shield;
-    },;
-    {;
+      icon: Shiel d;
+    }, {;
       title: "Build Customer Trust",;
       description: "Demonstrate your commitment to security and compliance to build customer confidence.",;
-      icon: Users;
+      icon: User s;
     };
   ];
 
@@ -170,8 +167,7 @@ export { SOC2ComplianceTracker }(...args: []):  {
       step: "05",
       title: "Audit Preparation",
       description: "Prepare for external audit with complete documentation and evidence";
-    },;
-    {;
+    }, {;
       step: "06",;
       title: "Ongoing Compliance",;
       description: "Maintain compliance with continuous monitoring and improvement";
@@ -180,11 +176,10 @@ export { SOC2ComplianceTracker }(...args: []):  {
 
   return (
     <>
-      <SEO 
-        title = "SOC2 Compliance Tracker - Zion Tech Group"
+      <SEO title = "SOC2 Compliance Tracker - Zion Tech Group"
         description="Professional SOC2 compliance tracking platform with automated controls monitoring, documentation management, and audit preparation tools."
         canonical="/services/soc2-compliance-tracker"
-      />
+       />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
@@ -195,7 +190,7 @@ export { SOC2ComplianceTracker }(...args: []):  {
               <motion.div
                 initial = {
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -215,25 +210,25 @@ export { SOC2ComplianceTracker }(...args: []):  {
 }}
                 transition={{ duration: 0.6 }}
 
-                <h1 className="text-5xl md:text-6xl font-bold mb-6">
+                <h1 className="text-5xl md: tex t-6xl font-bold mb-6">
                   <span className="bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-400 bg-clip-text text-transparent">
                     SOC2 Compliance Tracker
                   </span>
                 </h1>
-                <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                <p className="text-xl md: tex t-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                   Professional SOC2 compliance tracking platform with automated controls monitoring, documentation management,
                   and audit preparation tools. Achieve and maintain SOC2 compliance efficiently.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm: fle x-row gap-4 justify-center">
                   <Link
                     to="/request-quote"
-                    className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                    className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg font-semibold hover: fro m-indigo-600 hover: t o-purple-700 transition-all duration-300 transform hover: scal e-105"
 
                     Start Compliance Journey
                   </Link>
                   <Link
                     to="/contact"
-                    className="px-8 py-4 border-2 border-indigo-500 text-indigo-400 rounded-lg font-semibold hover:bg-indigo-500 hover:text-white transition-all duration-300"
+                    className="px-8 py-4 border-2 border-indigo-500 text-indigo-400 rounded-lg font-semibold hover: b g-indigo-500 hover: tex t-white transition-all duration-300"
 
                     Schedule Demo
                   </Link>
@@ -255,13 +250,13 @@ export { SOC2ComplianceTracker }(...args: []):  {
               </p>
             </div>
             
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md: gri d-cols-2 lg: gri d-cols-3 gap-8">
               {features.map((feature, index)  => (
                 <motion.div
                   key={index}
                   initial = {
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -281,7 +276,7 @@ export { SOC2ComplianceTracker }(...args: []):  {
 }}
                   transition = {
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -289,7 +284,7 @@ export { SOC2ComplianceTracker }(...args: []):  {
 
 
 }}
-                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-indigo-500 transition-all duration-300"
+                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover: borde r-indigo-500 transition-all duration-300"
 
                   <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
@@ -314,13 +309,13 @@ export { SOC2ComplianceTracker }(...args: []):  {
               </p>
             </div>
             
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md: gri d-cols-2 lg: gri d-cols-3 gap-8">
               {complianceAreas.map((area, index)  => (
                 <motion.div
                   key={index}
                   initial = {
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -340,7 +335,7 @@ export { SOC2ComplianceTracker }(...args: []):  {
 }}
                   transition = {
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -348,7 +343,7 @@ export { SOC2ComplianceTracker }(...args: []):  {
 
 
 }}
-                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300"
+                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover: borde r-purple-500 transition-all duration-300"
 
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
                     <area.icon className="w-6 h-6 text-white" />
@@ -373,13 +368,13 @@ export { SOC2ComplianceTracker }(...args: []):  {
               </p>
             </div>
             
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md: gri d-cols-2 lg: gri d-cols-3 gap-8">
               {complianceSteps.map((step, index)  => (
                 <motion.div
                   key={index}
                   initial = {
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -399,7 +394,7 @@ export { SOC2ComplianceTracker }(...args: []):  {
 }}
                   transition = {
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -407,7 +402,7 @@ export { SOC2ComplianceTracker }(...args: []):  {
 
 
 }}
-                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-indigo-500 transition-all duration-300"
+                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover: borde r-indigo-500 transition-all duration-300"
 
                   <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full flex items-center justify-center mb-4 mx-auto">
                     <span className="text-white font-bold text-lg">{step.step}</span>
@@ -432,13 +427,13 @@ export { SOC2ComplianceTracker }(...args: []):  {
               </p>
             </div>
             
-            <div className="grid md: grid-cols-2 gap-8">
+            <div className="grid md: gri d-cols-2 gap-8">
               {benefits.map((benefit, index)  => (
                 <motion.div
                   key={index}
                   initial = {
   { opacity: 0,
-  x: index % 2 === 0 ? -20 : 20 
+  x: inde x % 2 === 0 ? -20 : 20 
 
 
 
@@ -458,7 +453,7 @@ export { SOC2ComplianceTracker }(...args: []):  {
 }}
                   transition = {
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -493,13 +488,13 @@ export { SOC2ComplianceTracker }(...args: []):  {
               </p>
             </div>
             
-            <div className="grid md: grid-cols-3 gap-8">
+            <div className="grid md: gri d-cols-3 gap-8">
               {pricingPlans.map((plan, index)  => (
                 <motion.div
                   key={index}
                   initial = {
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -519,7 +514,7 @@ export { SOC2ComplianceTracker }(...args: []):  {
 }}
                   transition = {
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -553,7 +548,7 @@ export { SOC2ComplianceTracker }(...args: []):  {
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center space-x-3">
-                        <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0"  />
                         <span className="text-gray-300">{feature}</span>
                       </li>
                     ))}
@@ -563,8 +558,8 @@ export { SOC2ComplianceTracker }(...args: []):  {
                     to="/request-quote"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover:from-indigo-600 hover:to-purple-700'
-                        : 'bg-slate-700 text-white hover:bg-slate-600'
+                        ? 'bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover: fro m-indigo-600 hover: t o-purple-700'
+                        : 'bg-slate-700 text-white hover: b g-slate-600'
                     }`}
 
                     Get Started
@@ -581,7 +576,7 @@ export { SOC2ComplianceTracker }(...args: []):  {
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -607,16 +602,16 @@ export { SOC2ComplianceTracker }(...args: []):  {
               <p className="text-xl text-gray-300 mb-8">
                 Join hundreds of organizations using our platform to streamline their compliance journey.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: fle x-row gap-4 justify-center">
                 <Link
                   to="/request-quote"
-                  className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                  className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg font-semibold hover: fro m-indigo-600 hover: t o-purple-700 transition-all duration-300 transform hover: scal e-105"
 
                   Start Free Trial
                 </Link>
                 <Link
                   to="/contact"
-                  className="px-8 py-4 border-2 border-indigo-500 text-indigo-400 rounded-lg font-semibold hover:bg-indigo-500 hover:text-white transition-all duration-300"
+                  className="px-8 py-4 border-2 border-indigo-500 text-indigo-400 rounded-lg font-semibold hover: b g-indigo-500 hover: tex t-white transition-all duration-300"
 
                   Contact Sales
                 </Link>;

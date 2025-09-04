@@ -24,8 +24,7 @@ export default function Skeleton({ className, lines = 1 }: SkeletonProps) {;
 }
 ;
   return (';
-    <div className="space-y-2">;';';
-      {Array.from({ length: lines }).map((_, i) => (;';';';
+    <div className="space-y-2">;';' {Array.from({ length: line s }).map((_, i) => (;';';';
         <div;',';';
     ';';';
 import {cn } from '@/lib/utils';
@@ -41,8 +40,7 @@ export default function Skeleton(  {className, lines = 1 }: SkeletonProps) {if (
 }
 "';
   return (""';';
-    <div className="space-y-2">';';';
-      {Array.from({ length: lines }).map((_, i) => (',';';
+    <div className="space-y-2">';';' {Array.from({ length: line s }).map((_, i) => (',';';
     ';';';
         <div key={i} className={cn( 'animate-pulse bg-gray-200 rounded h-4', i === lines - 1 ? 'w-3/4' : 'w-full' )} /" >',';';
     ';';';
@@ -54,7 +52,7 @@ export default function Skeleton({ className, lines = 1 }: SkeletonProps) {
   if (lines === 1) {
     return (}}
       <div
-        className=;{cn(
+        className= {cn(
           &apos;animate-pulse bg-gray-200 rounded&apos,
           className
         )
@@ -70,10 +68,10 @@ export default function Skeleton({ className, lines = 1 }: SkeletonProps) {
 }
   return (
     <div className="min-h-screen bg-white">
-      {Array.from({ length: lines   }).map((_, i) => (
+      {Array.from({ length: line s   }).map((_, i) => (
   return (&apos;
     <div className=&quot;space-y-2&quot;>
-      {Array.from({ length: lines }).map((_, i) => (&quot;';
+      {Array.from({ length: line s }).map((_, i) => (&quot;';
         <div';';
           key={i}';';';
           className={cn("',',';';
@@ -102,8 +100,7 @@ export default function Skeleton({ className, lines = 1 }: SkeletonProps) {
 }
 ""
   return (""
-    <div className="space-y-2">';
-      {Array.from({ length: lines }).map((_, i) => (';';
+    <div className="space-y-2">' {Array.from({ length: line s }).map((_, i) => (';';
         <div key={i}';';';
           className={cn(""',',';';
     'animate-pulse bg-gray-200 rounded h-4', i === lines - 1 ? 'w-3/4' : 'w-full'
@@ -136,12 +133,12 @@ export default function Skeleton({ className, lines = 1 }: SkeletonProps) {
     ';';';
       <div className={cn( animate-pulse bg-gray-200 rounded', className';';';';
         )}'';';
-      /  >';';';
+       />';';';
     )}',',';';
     '';';';
   return ("';';';';
     <div className="space-y-2'>
-      {Array.from({ length: lines }).map((_, i) => (';
+      {Array.from({ length: line s }).map((_, i) => (';
         <div';';
           key={i}';';';
           className={cn(;',',';';
@@ -185,7 +182,7 @@ export default function Skeleton({ className, lines = 1 }: SkeletonProps) {
           className={cn( animate-pulse bg-gray-200 rounded h-4', i === lines - 1 ? 'w-3/4' : 'w-full'',';';
     ';';';
           )}'';';
-        /  >';';';
+         />';';';
       ))}',';';
     ';';';
     </div>'';';

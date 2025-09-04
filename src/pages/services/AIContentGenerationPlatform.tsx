@@ -25,63 +25,52 @@ export { function };
 export default function AIContentGenerationPlatform(...args[]):  {
 
   
-    },;
-    {
+    }, {
 
-      icon: Palette,
+      icon: Palett e,
       title: 'Visual Content Creation',
       description: 'Generate stunning images, graphics, and visual assets using cutting-edge AI image generation technology.',
-      benefits['Custom brand styling',High-resolution output',Style transfer',Batch generation']},;
-    {
+      benefits['Custom brand styling',High-resolution output',Style transfer',Batch generation']}, {
 
-      icon: Video,
+      icon: Vide o,
       title: 'Video Content Generation',
       description: 'Create professional videos, animations, and multimedia content with AI-powered video generation tools.',
-      benefits['Auto-script generation',Voice synthesis',Background music',Template library']},;
-    {
+      benefits['Auto-script generation',Voice synthesis',Background music',Template library']}, {
 
-      icon: Code,
+      icon: Cod e,
       title: 'Technical Content',
       description: 'Generate technical documentation, code comments, and developer resources with specialized AI models.',
-      benefits['Code documentation',API guides',Tutorial generation',Technical writing']},;
-    {
+      benefits['Code documentation',API guides',Tutorial generation',Technical writing']}, {
 
-      icon: Shield,
+      icon: Shiel d,
       title: 'Content Moderation',
       description: 'Built-in AI content filtering and moderation to ensure all generated content meets quality and safety standards.',
-      benefits['Plagiarism detection',Content filtering',Quality scoring',Compliance checking']},;
-    {
+      benefits['Plagiarism detection',Content filtering',Quality scoring',Compliance checking']}, {
 
       benefits['Real-time editing',Approval workflows',Version history',Team analytics']};
-      icon: Users,;
+      icon: User s,;
       title: 'Team Collaboration',;
       description: 'Collaborative workspace for teams to create, edit, and manage content with version control and approval workflows.',;
       benefits: ['Real-time editing',Approval workflows',Version history',Team analytics']};
-  ]},;
-    {
+  ]}, {
 
       industry: 'E-commerce',
       title: 'Product Descriptions & Marketing',
       description: 'Create compelling product descriptions, marketing copy, and visual assets for online stores.',
-      metrics['60% faster product onboarding',35% improvement in conversion rates',25% increase in SEO traffic']},;
-    {
+      metrics['60% faster product onboarding',35% improvement in conversion rates',25% increase in SEO traffic']}, {
 
       industry: 'Publishing & Media',
       title: 'Content Production',
       description: 'Generate articles, blog posts, and multimedia content for digital publishing platforms.',
-      metrics['70% increase in content output',45% reduction in editorial time',40% improvement in reader engagement']},;
-    {
+      metrics['70% increase in content output',45% reduction in editorial time',40% improvement in reader engagement']}, {
 
       metrics['55% faster report creation',50% improvement in brand consistency',35% reduction in review cycles']};
       industry: 'Corporate Communications',;
       title: 'Business Content',;
       description: 'Create professional reports, presentations, and corporate communications with consistent branding.',;
       metrics: ['55% faster report creation',50% improvement in brand consistency',35% reduction in review cycles']};
-  ];
-
-  
-    {;
-      icon: TrendingUp,;
+  ] {;
+      icon: TrendingU p,;
       title: 'Scalability',;
       description: 'Scale content production without proportional increases in resources.',;
       value: '10x'};
@@ -109,7 +98,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
       ],;'
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       cta: 'Start Free Trial',
-      popular: false
+      popular: fals e
     },
     {
 
@@ -121,7 +110,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
         '100,000 words per month',1,000 AI-generated images',50 video generations',Advanced templates',Priority support',High-quality output',Team collaboration',Brand voice training'
       ],;
       cta: 'Start Free Trial',
-      popular: true
+      popular: tru e
     },
     {
 
@@ -135,14 +124,14 @@ export default function AIContentGenerationPlatform(...args[]):  {
         'SLA guarantees';
       ],;
       cta: 'Contact Sales',;
-      popular: false};
+      popular: fals e};
   ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
         title="AI Content Generation Platform - Zion Tech Group""        description="Transform your content creation with our AI-powered platform. Generate high-quality text, images, videos, and more with advanced AI technology."
-       />
+        />
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20">"
@@ -151,7 +140,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
             initial = {
 
   { opacity: 0,
-  y: 30 
+  y: 3 0 
 
 
 
@@ -174,8 +163,8 @@ export default function AIContentGenerationPlatform(...args[]):  {
             className="text-center mb-16"
 "
             <div className="w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-8">"
-              <PenTool className="w-10 h-10 text-white"  />
-            </div>"            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              <PenTool className="w-10 h-10 text-white"   />
+            </div>"            <h1 className="text-5xl md: tex t-6xl font-bold text-white mb-6">
               AI-Powered"
               <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-600 bg-clip-text text-transparent">
                 {' '}Content Generation
@@ -186,28 +175,26 @@ export default function AIContentGenerationPlatform(...args[]):  {
               videos, and multimedia content in minutes, not hours. Scale your content production while maintaining
               exceptional quality and brand consistency.
             </p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
               <a"
                 href="/contact"
-                className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-400 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-500 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-400 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover: fro m-purple-500 hover: t o-pink-600 transition-all duration-300 transform hover: scal e-105"
 
                 <span>Start Free Trial</span>"
-                <ArrowRight className="w-5 h-5"  />              </a>
+                <ArrowRight className="w-5 h-5"   />              </a>
               <a"
                 href="#pricing"
-                className="inline-flex items-center space-x-2 border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
+                className="inline-flex items-center space-x-2 border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover: b g-purple-400 hover: tex t-white transition-all duration-300"
 
                 <span>View Pricing</span>"
-                <ArrowRight className="w-5 h-5"  />              </a>
+                <ArrowRight className="w-5 h-5"   />              </a>
             </div>
-          </motion.div>;
-
-          {/* Stats */}
+          </motion.div> {/* Stats */}
           <motion.div
             initial = {
 
   { opacity: 0,
-  y: 30 }}
+  y: 3 0 }}
             animate = {
 
   { opacity: 1,
@@ -215,7 +202,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
             transition = {
 
   { duration: 0.8,
-  delay: 0.2 }}"            className="grid grid-cols-2 md:grid-cols-4 gap-8"
+  delay: 0.2 }}"            className="grid grid-cols-2 md: gri d-cols-4 gap-8"
 "
             <div className="text-center">;"
               <div className="text-3xl font-bold text-white mb-2">80-90%</div>"
@@ -244,7 +231,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
             initial = {
 
   { opacity: 0,
-  y: 30 
+  y: 3 0 
 
 
 
@@ -278,14 +265,14 @@ export default function AIContentGenerationPlatform(...args[]):  {
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
             {features.map((feature, index 
               <motion.div
                 key={index}
                 initial = {
 
   { opacity: 0,
-  y: 30 
+  y: 3 0 
 
 
 
@@ -307,7 +294,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
                 transition = {
 
   { duration: 0.8,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -315,7 +302,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
 
 
 }}"
-                className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300"
+                className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover: borde r-purple-400/50 transition-all duration-300"
 "
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-xl flex items-center justify-center mb-6">"
                   <feature.icon className="w-8 h-8 text-white" />
@@ -325,7 +312,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, idx) => ("
                     <li key={idx} className="flex items-center space-x-2 text-sm">"
-                      <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0"  />"                      <span className="text-slate-300">{benefit}</span>
+                      <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0"   />"                      <span className="text-slate-300">{benefit}</span>
                     </li>
                   ))}
                 </ul>
@@ -342,7 +329,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
             initial = {
 
   { opacity: 0,
-  y: 30 
+  y: 3 0 
 
 
 
@@ -375,14 +362,14 @@ export default function AIContentGenerationPlatform(...args[]):  {
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-            {useCases.map(useCase: unknown, index: unknown 
+          <div className="grid grid-cols-1 lg: gri d-cols-2 gap-8">
+            {useCases.map(useCase: unknow n, index: unknow n 
               <motion.div
                 key={index}
                 initial = {
 
   { opacity: 0,
-  y: 30 
+  y: 3 0 
 
 
 
@@ -404,7 +391,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
                 transition = {
 
   { duration: 0.8,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -412,7 +399,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
 
 
 }}"
-                className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300"
+                className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover: borde r-purple-400/50 transition-all duration-300"
 "
                 <div className="flex items-center space-x-3 mb-4">"
                   <span className="px-3 py-1 bg-purple-400/20 text-purple-400 text-sm rounded-full">
@@ -422,10 +409,10 @@ export default function AIContentGenerationPlatform(...args[]):  {
                 <h3 className="text-2xl font-bold text-white mb-4">{useCase.title}</h3>"
                 <p className="text-slate-300 mb-6 leading-relaxed">{useCase.description}</p>"
                 <div className="space-y-3">"
-                  <h4 className="text-white font-semibold">Key Results: any</h4>
+                  <h4 className="text-white font-semibold">Key Results: an y</h4>
                   {useCase.metrics.map((metric, idx)  => ("
                     <div key={idx} className="flex items-center space-x-2 text-sm">"
-                      <Star className="w-4 h-4 text-yellow-400 flex-shrink-0"  />"                      <span className="text-slate-300">{metric}</span>
+                      <Star className="w-4 h-4 text-yellow-400 flex-shrink-0"   />"                      <span className="text-slate-300">{metric}</span>
                     </div>
                   ))}
                 </div>
@@ -442,7 +429,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
             initial = {
 
   { opacity: 0,
-  y: 30 
+  y: 3 0 
 
 
 
@@ -475,14 +462,14 @@ export default function AIContentGenerationPlatform(...args[]):  {
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map(benefit: unknown, index: unknown (
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
+            {benefits.map(benefit: unknow n, index: unknow n (
               <motion.div
                 key={index}
                 initial = {
 
   { opacity: 0,
-  y: 30 
+  y: 3 0 
 
 
 
@@ -504,7 +491,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
                 transition = {
 
   { duration: 0.8,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -533,7 +520,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
             initial = {
 
   { opacity: 0,
-  y: 30 
+  y: 3 0 
 
 
 
@@ -566,8 +553,8 @@ export default function AIContentGenerationPlatform(...args[]):  {
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-4 gap-4">
-            {technologies.map(tech: unknown, index: unknown (
+          <div className="grid grid-cols-2 md: gri d-cols-3 lg: gri d-cols-4 gap-4">
+            {technologies.map(tech: unknow n, index: unknow n (
               <motion.div
                 key={index}
                 initial = {
@@ -595,7 +582,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
                 transition = {
 
   { duration: 0.6,
-  delay: index * 0.05 
+  delay: inde x * 0.05 
 
 
 
@@ -603,7 +590,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
 
 
 }}"
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300 text-center"
+                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover: borde r-purple-400/50 transition-all duration-300 text-center"
 "
                 <div className="text-white font-semibold">{tech}</div>
               </motion.div>;
@@ -619,7 +606,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
             initial = {
 
   { opacity: 0,
-  y: 30 
+  y: 3 0 
 
 
 
@@ -652,14 +639,14 @@ export default function AIContentGenerationPlatform(...args[]):  {
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricing.map(plan: unknown, index: unknown (
+          <div className="grid grid-cols-1 md: gri d-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricing.map(plan: unknow n, index: unknow n (
               <motion.div
                 key={index}
                 initial = {
 
   { opacity: 0,
-  y: 30 
+  y: 3 0 
 
 
 
@@ -681,7 +668,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
                 transition = {
 
   { duration: 0.8,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -693,7 +680,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
 
                   plan.popular'
                     ? 'border-purple-400/50 scale-105''
-                    : 'border-slate-700/50 hover:border-purple-400/50'`
+                    : 'border-slate-700/50 hover: borde r-purple-400/50'`
                 }`}
 
                 {plan.popular && (;"
@@ -716,7 +703,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, idx) => ("
                     <li key={idx} className="flex items-center space-x-3">"
-                      <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0"  />"                      <span className="text-slate-300">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0"   />"                      <span className="text-slate-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -726,8 +713,8 @@ export default function AIContentGenerationPlatform(...args[]):  {
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
 
                     plan.popular'
-                      ? 'bg-gradient-to-r from-purple-400 to-pink-500 text-white hover:from-purple-500 hover:to-pink-600''
-                      : 'border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white'`
+                      ? 'bg-gradient-to-r from-purple-400 to-pink-500 text-white hover: fro m-purple-500 hover: t o-pink-600''
+                      : 'border border-purple-400 text-purple-400 hover: b g-purple-400 hover: tex t-white'`
                   }`}
 
                   {plan.cta}
@@ -745,7 +732,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
             initial = {
 
   { opacity: 0,
-  y: 30 
+  y: 3 0 
 
 
 
@@ -776,23 +763,23 @@ export default function AIContentGenerationPlatform(...args[]):  {
               Join thousands of content creators who have already revolutionized their workflow
               with our AI-powered content generation platform.
             </p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
               <a"
                 href="/contact"
-                className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-400 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-500 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-400 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover: fro m-purple-500 hover: t o-pink-600 transition-all duration-300 transform hover: scal e-105"
 
                 <span>Start Free Trial</span>"
-                <ArrowRight className="w-5 h-5"  />              </a>
+                <ArrowRight className="w-5 h-5"   />              </a>
               <a"
                 href="tel:+13024640950"
-                className="inline-flex items-center space-x-2 border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
+                className="inline-flex items-center space-x-2 border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover: b g-purple-400 hover: tex t-white transition-all duration-300"
 
                 <span>Call +1 302 464 0950</span>"
-                <ArrowRight className="w-5 h-5"  />              </a>
+                <ArrowRight className="w-5 h-5"   />              </a>
             </div>"
             <div className="mt-6 text-slate-400">"
-              <p>Questions? Email us at <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300">kleber@ziontechgroup.com</a></p>"
-              <p>Visit us at <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">ziontechgroup.com</a></p>
+              <p>Questions? Email us at <a href="mailto: klebe r@ziontechgroup.com" className="text-purple-400 hover: tex t-purple-300">kleber@ziontechgroup.com</a></p>"
+              <p>Visit us at <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover: tex t-purple-300">ziontechgroup.com</a></p>
             </div>;
           </motion.div>;
         </div>;

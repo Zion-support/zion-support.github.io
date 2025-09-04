@@ -18,10 +18,10 @@ import {
   Headphones,'
   ShoppingBag} from 'lucide-react.ts';              AI-Powered CX Platform
             </Badge>"
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-pink-400 via-purple-500 to-indigo-400 bg-clip-text text-transparent">
+            <h1 className="text-5xl md: tex t-6xl font-bold text-white mb-6 bg-gradient-to-r from-pink-400 via-purple-500 to-indigo-400 bg-clip-text text-transparent">
               AI Customer Experience Platform
             </h1>"
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md: tex t-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               Transform customer interactions with AI that personalizes
               experiences, predicts needs, and delivers exceptional service.
               Achieve 95% customer satisfaction and 300% increase in customer
@@ -29,17 +29,17 @@ import {
             </p>
           </div>
 "
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm: fle x-row gap-4 justify-center items-center">
             <Button"
               size="lg"
-              className="bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700"
+              className="bg-gradient-to-r from-pink-600 to-purple-600 hover: fro m-pink-700 hover: t o-purple-700"
             >
               Start Free Trial
             </Button>
             <Button"
               size="lg"
               variant="outline"
-              className="border-white text-white hover:bg-white hover:text-slate-900"
+              className="border-white text-white hover: b g-white hover: tex t-slate-900"
             >
               Schedule Demo
             </Button>
@@ -48,16 +48,16 @@ import {
       </section>
 
       {/* Key Benefits */}"
-      <section className="py-16 px-4 sm:px-6 lg:px-8">"
+      <section className="py-16 px-4 sm: p x-6 lg: p x-8">"
         <div className="max-w-7xl mx-auto">"
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+          <h2 className="text-3xl md: tex t-4xl font-bold text-white text-center mb-12">
             Why Choose AI Customer Experience?
           </h2>
 "
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">"
             <Card className="bg-slate-800/50 border-slate-700 p-6 text-center">"
               <div className="w-16 h-16 bg-pink-600/20 rounded-full flex items-center justify-center mx-auto mb-4">"
-                <Heart className="w-8 h-8 text-pink-400"  />
+                <Heart className="w-8 h-8 text-pink-400"   />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-3">
                 95% Customer Satisfaction
@@ -70,7 +70,7 @@ import {
 "
             <Card className="bg-slate-800/50 border-slate-700 p-6 text-center">"
               <div className="w-16 h-16 bg-purple-600/20 rounded-full flex items-center justify-center mx-auto mb-4">"
-                <TrendingUp className="w-8 h-8 text-purple-400"  />
+                <TrendingUp className="w-8 h-8 text-purple-400"   />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-3">
                 300% CLV Increase
@@ -83,7 +83,7 @@ import {
 "
             <Card className="bg-slate-800/50 border-slate-700 p-6 text-center">"
               <div className="w-16 h-16 bg-indigo-600/20 rounded-full flex items-center justify-center mx-auto mb-4">"
-                <Zap className="w-8 h-8 text-indigo-400"  />
+                <Zap className="w-8 h-8 text-indigo-400"   />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-3">
                 80% Faster Resolution
@@ -96,7 +96,7 @@ import {
 "
             <Card className="bg-slate-800/50 border-slate-700 p-6 text-center">"
               <div className="w-16 h-16 bg-blue-600/20 rounded-full flex items-center justify-center mx-auto mb-4">"
-                <Users className="w-8 h-8 text-blue-400"  />
+                <Users className="w-8 h-8 text-blue-400"   />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-3">
                 24/7 Availability
@@ -110,16 +110,16 @@ import {
       </section>
 
       {/* Features */}"
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">"
+      <section className="py-16 px-4 sm: p x-6 lg: p x-8 bg-slate-800/30">"
         <div className="max-w-7xl mx-auto">"
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+          <h2 className="text-3xl md: tex t-4xl font-bold text-white text-center mb-12">
             Advanced AI Features
           </h2>
 "
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">"
+          <div className="grid grid-cols-1 md: gri d-cols-2 gap-8">"
             <div className="space-y-6">"
               <div className="flex items-start space-x-4">"
-                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"  />
+                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"   />
                 <div>"
                   <h3 className="text-lg font-semibold text-white mb-2">
                     AI-Powered Personalization
@@ -132,7 +132,7 @@ import {
               </div>
 "
               <div className="flex items-start space-x-4">"
-                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"  />
+                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"   />
                 <div>"
                   <h3 className="text-lg font-semibold text-white mb-2">
                     Predictive Customer Analytics
@@ -145,7 +145,7 @@ import {
               </div>
 "
               <div className="flex items-start space-x-4">"
-                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"  />
+                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"   />
                 <div>"
                   <h3 className="text-lg font-semibold text-white mb-2">
                     Intelligent Chatbots
@@ -158,7 +158,7 @@ import {
               </div>
 "
               <div className="flex items-start space-x-4">"
-                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"  />
+                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"   />
                 <div>"
                   <h3 className="text-lg font-semibold text-white mb-2">
                     Sentiment Analysis
@@ -173,7 +173,7 @@ import {
 "
             <div className="space-y-6">"
               <div className="flex items-start space-x-4">"
-                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"  />
+                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"   />
                 <div>"
                   <h3 className="text-lg font-semibold text-white mb-2">
                     Omnichannel Integration
@@ -186,7 +186,7 @@ import {
               </div>
 "
               <div className="flex items-start space-x-4">"
-                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"  />
+                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"   />
                 <div>"
                   <h3 className="text-lg font-semibold text-white mb-2">
                     Proactive Customer Service
@@ -199,7 +199,7 @@ import {
               </div>
 "
               <div className="flex items-start space-x-4">"
-                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"  />
+                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"   />
                 <div>"
                   <h3 className="text-lg font-semibold text-white mb-2">
                     Customer Journey Mapping
@@ -212,7 +212,7 @@ import {
               </div>
 "
               <div className="flex items-start space-x-4">"
-                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"  />
+                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"   />
                 <div>"
                   <h3 className="text-lg font-semibold text-white mb-2">
                     Voice & Video Analytics
@@ -228,16 +228,16 @@ import {
       </section>
 
       {/* Use Cases */}"
-      <section className="py-16 px-4 sm:px-6 lg:px-8">"
+      <section className="py-16 px-4 sm: p x-6 lg: p x-8">"
         <div className="max-w-7xl mx-auto">"
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+          <h2 className="text-3xl md: tex t-4xl font-bold text-white text-center mb-12">
             Industry Applications
           </h2>
 "
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">"
             <Card className="bg-slate-800/50 border-slate-700 p-6">"
               <div className="w-12 h-12 bg-pink-600/20 rounded-lg flex items-center justify-center mb-4">"
-                <ShoppingBag className="w-6 h-6 text-pink-400"  />
+                <ShoppingBag className="w-6 h-6 text-pink-400"   />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-3">
                 E-commerce & Retail
@@ -250,7 +250,7 @@ import {
 "
             <Card className="bg-slate-800/50 border-slate-700 p-6">"
               <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center mb-4">"
-                <Headphones className="w-6 h-6 text-purple-400"  />
+                <Headphones className="w-6 h-6 text-purple-400"   />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-3">
                 Contact Centers
@@ -263,7 +263,7 @@ import {
 "
             <Card className="bg-slate-800/50 border-slate-700 p-6">"
               <div className="w-12 h-12 bg-indigo-600/20 rounded-lg flex items-center justify-center mb-4">"
-                <MessageCircle className="w-6 h-6 text-indigo-400"  />
+                <MessageCircle className="w-6 h-6 text-indigo-400"   />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-3">
                 Social Media
@@ -276,7 +276,7 @@ import {
 "
             <Card className="bg-slate-800/50 border-slate-700 p-6">"
               <div className="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center mb-4">"
-                <Globe className="w-6 h-6 text-blue-400"  />
+                <Globe className="w-6 h-6 text-blue-400"   />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-3">
                 Financial Services
@@ -289,7 +289,7 @@ import {
 "
             <Card className="bg-slate-800/50 border-slate-700 p-6">"
               <div className="w-12 h-12 bg-green-600/20 rounded-lg flex items-center justify-center mb-4">"
-                <Target className="w-6 h-6 text-green-400"  />
+                <Target className="w-6 h-6 text-green-400"   />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-3">
                 Healthcare
@@ -301,7 +301,7 @@ import {
 "
             <Card className="bg-slate-800/50 border-slate-700 p-6">"
               <div className="w-12 h-12 bg-orange-600/20 rounded-lg flex items-center justify-center mb-4">"
-                <BarChart3 className="w-6 h-6 text-orange-400" />
+                <BarChart3 className="w-6 h-6 text-orange-400"  />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-3">
                 Travel & Hospitality
@@ -316,13 +316,13 @@ import {
       </section>
 
       {/* Pricing */}"
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">"
+      <section className="py-16 px-4 sm: p x-6 lg: p x-8 bg-slate-800/30">"
         <div className="max-w-7xl mx-auto">"
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+          <h2 className="text-3xl md: tex t-4xl font-bold text-white text-center mb-12">
             Competitive Pricing
           </h2>
 "
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
+          <div className="grid grid-cols-1 md: gri d-cols-3 gap-8">"
             <Card className="bg-slate-800/50 border-slate-700 p-8 text-center relative">"
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
                 <Badge variant="secondary">Starter</Badge>
@@ -336,22 +336,22 @@ import {
               </div>"
               <ul className="space-y-3 mb-8 text-left">"
                 <li className="flex items-center text-gray-300">"
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3"  />
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3"   />
                   Up to 10,000 customers
                 </li>"
                 <li className="flex items-center text-gray-300">"
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3"  />
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3"   />
                   Basic AI personalization
                 </li>"
                 <li className="flex items-center text-gray-300">"
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3"  />
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3"   />
                   Standard chatbots
                 </li>"
                 <li className="flex items-center text-gray-300">"
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3"  />                  Email support
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3"   />                  Email support
                 </li>
               </ul>"
-              <Button className="w-full bg-pink-600 hover:bg-pink-700">
+              <Button className="w-full bg-pink-600 hover: b g-pink-700">
                 Start Free Trial
               </Button>
             </Card>
@@ -369,26 +369,26 @@ import {
               </div>"
               <ul className="space-y-3 mb-8 text-left">"
                 <li className="flex items-center text-white">"
-                  <CheckCircle className="w-5 h-5 text-white mr-3"  />
+                  <CheckCircle className="w-5 h-5 text-white mr-3"   />
                   Up to 100,000 customers
                 </li>"
                 <li className="flex items-center text-white">"
-                  <CheckCircle className="w-5 h-5 text-white mr-3"  />
+                  <CheckCircle className="w-5 h-5 text-white mr-3"   />
                   Advanced AI features
                 </li>"
                 <li className="flex items-center text-white">"
-                  <CheckCircle className="w-5 h-5 text-white mr-3"  />
+                  <CheckCircle className="w-5 h-5 text-white mr-3"   />
                   Custom dashboards
                 </li>"
                 <li className="flex items-center text-white">"
-                  <CheckCircle className="w-5 h-5 text-white mr-3"  />
+                  <CheckCircle className="w-5 h-5 text-white mr-3"   />
                   Priority support
                 </li>"
                 <li className="flex items-center text-white">"
-                  <CheckCircle className="w-5 h-5 text-white mr-3"  />                  API access
+                  <CheckCircle className="w-5 h-5 text-white mr-3"   />                  API access
                 </li>
               </ul>"
-              <Button className="w-full bg-white text-pink-600 hover:bg-gray-100">
+              <Button className="w-full bg-white text-pink-600 hover: b g-gray-100">
                 Get Started
               </Button>
             </Card>
@@ -404,26 +404,26 @@ import {
               </div>"
               <ul className="space-y-3 mb-8 text-left">"
                 <li className="flex items-center text-gray-300">"
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3"  />
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3"   />
                   Unlimited customers
                 </li>"
                 <li className="flex items-center text-gray-300">"
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3"  />
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3"   />
                   Full AI capabilities
                 </li>"
                 <li className="flex items-center text-gray-300">"
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3"  />
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3"   />
                   Custom integrations
                 </li>"
                 <li className="flex items-center text-gray-300">"
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3"  />
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3"   />
                   24/7 dedicated support
                 </li>"
                 <li className="flex items-center text-gray-300">"
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3"  />                  White-label options
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3"   />                  White-label options
                 </li>
               </ul>"
-              <Button className="w-full bg-purple-600 hover:bg-purple-700">
+              <Button className="w-full bg-purple-600 hover: b g-purple-700">
                 Contact Sales
               </Button>
             </Card>
@@ -432,13 +432,13 @@ import {
       </section>
 
       {/* Market Information */}"
-      <section className="py-16 px-4 sm:px-6 lg:px-8">"
+      <section className="py-16 px-4 sm: p x-6 lg: p x-8">"
         <div className="max-w-7xl mx-auto">"
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+          <h2 className="text-3xl md: tex t-4xl font-bold text-white text-center mb-12">
             Market Analysis & ROI
           </h2>
 "
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">"
             <div className="text-center">"
               <div className="text-4xl font-bold text-pink-400 mb-2">
                 $109.5B
@@ -464,9 +464,9 @@ import {
       </section>
 
       {/* Contact Section */}"
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">"
+      <section className="py-16 px-4 sm: p x-6 lg: p x-8 bg-slate-800/30">"
         <div className="max-w-4xl mx-auto text-center">"
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
+          <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-8">
             Ready to Transform Customer Experience?
           </h2>"
           <p className="text-xl text-gray-300 mb-8">
@@ -474,38 +474,38 @@ import {
             interactions.
           </p>
 "
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">"
+          <div className="grid grid-cols-1 md: gri d-cols-3 gap-6 mb-8">"
             <div className="flex items-center justify-center space-x-3 text-gray-300">"
-              <Phone className="w-5 h-5 text-pink-400"  />
+              <Phone className="w-5 h-5 text-pink-400"   />
               <span>+1 302 464 0950</span>
             </div>"
             <div className="flex items-center justify-center space-x-3 text-gray-300">"
-              <Mail className="w-5 h-5 text-pink-400"  />
+              <Mail className="w-5 h-5 text-pink-400"   />
               <span>kleber@ziontechgroup.com</span>
             </div>"
             <div className="flex items-center justify-center space-x-3 text-gray-300">"
-              <Globe className="w-5 h-5 text-pink-400"  />              <span>ziontechgroup.com</span>
+              <Globe className="w-5 h-5 text-pink-400"   />              <span>ziontechgroup.com</span>
             </div>
           </div>
 "
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: fle x-row gap-4 justify-center">
             <Button"
               size="lg"
-              className="bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700"
+              className="bg-gradient-to-r from-pink-600 to-purple-600 hover: fro m-pink-700 hover: t o-purple-700"
             >
               Start Free Trial
             </Button>
             <Button"
               size="lg"
               variant="outline"
-              className="border-white text-white hover:bg-white hover:text-slate-900"
+              className="border-white text-white hover: b g-white hover: tex t-slate-900"
             >
               Schedule Demo
             </Button>
             <Button"
               size="lg"
               variant="outline"
-              className="border-white text-white hover:bg-white hover:text-slate-900"
+              className="border-white text-white hover: b g-white hover: tex t-slate-900"
             >
               Download CX Guide
             </Button>

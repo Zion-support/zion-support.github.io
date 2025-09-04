@@ -23,35 +23,35 @@ import { Brain,
  } from 'lucide-react';
 import { Link  } from 'react-router-dom';
 
-const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
+const AIBusinessProcessOptimization: Reac t.FC = (): JSX.Element => {
   const features = [
     {
-      icon: Brain,
+      icon: Brai n,
       title: "AI-Powered Process Analysis",
       description: "Advanced machine learning algorithms analyze your business processes to identify inefficiencies, bottlenecks, and optimization opportunities in real-time."
     },
     {
-      icon: Workflow,
+      icon: Workflo w,
       title: "Intelligent Workflow Automation",
       description: "Automatically design and implement optimized workflows that adapt to changing business conditions and learn from user behavior patterns."
     },
     {
-      icon: BarChart3,
+      icon: BarChart 3,
       title: "Predictive Performance Analytics",
       description: "Forecast process performance, resource requirements, and potential issues before they impact your operations using AI-driven predictive modeling."
     },
     {
-      icon: Zap,
+      icon: Za p,
       title: "Real-Time Optimization",
       description: "Continuously monitor and optimize processes in real-time, automatically adjusting parameters and workflows for maximum efficiency."
     },
     {
-      icon: Users,
+      icon: User s,
       title: "Human-AI Collaboration",
       description: "Seamless integration between human workers and AI systems, with intelligent task allocation and decision support for optimal team performance."
     },
     {
-      icon: Shield,
+      icon: Shiel d,
       title: "Compliance & Risk Management",
       description: "Built-in compliance monitoring and risk assessment, ensuring all process optimizations meet regulatory requirements and industry standards."
     }
@@ -70,22 +70,22 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
     {
       title: "Manufacturing & Production",
       description: "Optimize production lines, inventory management, and quality control processes for maximum efficiency and minimal waste.",
-      icon: Cpu
+      icon: Cp u
     },
     {
       title: "Financial Services",
       description: "Streamline loan processing, risk assessment, compliance workflows, and customer onboarding for faster service delivery.",
-      icon: DollarSign
+      icon: DollarSig n
     },
     {
       title: "Healthcare & Life Sciences",
       description: "Optimize patient care workflows, clinical trial processes, and administrative operations for better patient outcomes.",
-      icon: Users
+      icon: User s
     },
     {
       title: "Retail & E-commerce",
       description: "Streamline order fulfillment, inventory management, customer service, and supply chain operations for seamless customer experiences.",
-      icon: Globe
+      icon: Glob e
     }
   ];
 
@@ -103,7 +103,7 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
         "Basic integration capabilities"
       ],
       cta: "Start Free Trial",
-      popular: false
+      popular: fals e
     },
     {
       name: "Professional",
@@ -120,7 +120,7 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
         "Process simulation and testing"
       ],
       cta: "Start Free Trial",
-      popular: true
+      popular: tru e
     },
     {
       name: "Enterprise",
@@ -138,7 +138,7 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
         "Advanced security and compliance"
       ],
       cta: "Contact Sales",
-      popular: false
+      popular: fals e
     }
   ];
 
@@ -168,36 +168,36 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <section className="relative py-20 px-4 sm: p x-6 lg: p x-8 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
         <div className="relative max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl mb-8">
-              <Workflow className="w-10 h-10 text-white" />
+              <Workflow className="w-10 h-10 text-white"  />
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md: tex t-6xl font-bold text-white mb-6">
               AI-Powered Business Process Optimization
             </h1>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
               Transform your business operations with intelligent process optimization that learns, adapts, and continuously improves your workflows for maximum efficiency and cost savings.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center items-center">
               <Link
                 to="/contact"
-                className="group px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold text-lg rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-slate-900"
+                className="group px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold text-lg rounded-xl transition-all duration-300 transform hover: scal e-105 shadow-lg hover: shado w-blue-500/25 focus: outlin e-none focus: rin g-2 focus: rin g-blue-400 focus: rin g-offset-2 focus: rin g-offset-slate-900"
               >
                 Start Optimizing Today
-                <ArrowRight className="w-5 h-5 ml-2 inline-block group-hover:translate-x-1 transition-transform duration-200" />
+                <ArrowRight className="w-5 h-5 ml-2 inline-block group-hover: translat e-x-1 transition-transform duration-200"  />
               </Link>
               <a
                 href="tel:+13024640950"
-                className="group px-8 py-4 bg-white/10 backdrop-blur-sm border border-blue-400/30 text-white font-bold text-lg rounded-xl transition-all duration-300 hover:bg-white/20 hover:border-blue-400/50 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-slate-900"
+                className="group px-8 py-4 bg-white/10 backdrop-blur-sm border border-blue-400/30 text-white font-bold text-lg rounded-xl transition-all duration-300 hover: b g-white/20 hover: borde r-blue-400/50 focus: outlin e-none focus: rin g-2 focus: rin g-blue-400 focus: rin g-offset-2 focus: rin g-offset-slate-900"
               >
-                <Phone className="w-5 h-5 mr-2 inline-block" />
+                <Phone className="w-5 h-5 mr-2 inline-block"  />
                 Call Now
               </a>
             </div>
@@ -206,13 +206,13 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -223,17 +223,17 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
             </p>
           </motion.div>
 
-          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md: anygri d-cols-2 lg: gri d-cols-3 gap-8">
             {features.map((feature, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/15 hover:border-blue-400/40 transition-all duration-300 group hover:transform hover:scale-105"
+                transition={{ duration: 0.5, delay: inde x * 0.1 }}
+                viewport={{ once: tru e }}
+                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover: b g-white/15 hover: borde r-blue-400/40 transition-all duration-300 group hover: transform hover:scale-105"
               >
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl mb-6 group-hover: scal e-110 transition-transform duration-300">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
@@ -245,13 +245,13 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/10 to-purple-600/10">
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-gradient-to-r from-blue-600/10 to-purple-600/10">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -262,17 +262,17 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
             </p>
           </motion.div>
 
-          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md: anygri d-cols-2 lg: gri d-cols-3 gap-8">
             {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="flex items-start space-x-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover:bg-white/15 transition-all duration-300"
+                transition={{ duration: 0.5, delay: inde x * 0.1 }}
+                viewport={{ once: tru e }}
+                className="flex items-start space-x-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover: b g-white/15 transition-all duration-300"
               >
-                <CheckCircle className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />
+                <CheckCircle className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0"  />
                 <span className="text-white font-medium">{benefit}</span>
               </motion.div>
             ))}
@@ -281,13 +281,13 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -298,15 +298,15 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
             </p>
           </motion.div>
 
-          <div className="grid md: anygrid-cols-2 gap-8">
+          <div className="grid md: anygri d-cols-2 gap-8">
             {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/15 transition-all duration-300"
+                transition={{ duration: 0.5, delay: inde x * 0.1 }}
+                viewport={{ once: tru e }}
+                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover: b g-white/15 transition-all duration-300"
               >
                 <div className="flex items-center space-x-4 mb-4">
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl">
@@ -322,13 +322,13 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/10 to-purple-600/10">
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-gradient-to-r from-blue-600/10 to-purple-600/10">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -339,14 +339,14 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
             </p>
           </motion.div>
 
-          <div className="grid md: anygrid-cols-3 gap-8">
+          <div className="grid md: anygri d-cols-3 gap-8">
             {pricing.map((plan, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: inde x * 0.1 }}
+                viewport={{ once: tru e }}
                 className={`relative bg-white/10 backdrop-blur-sm border rounded-2xl p-8 ${
                   plan.popular 
                     ? 'border-blue-400/50 bg-gradient-to-br from-blue-600/20 to-purple-600/20' 
@@ -373,13 +373,13 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-blue-400 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-blue-400 flex-shrink-0"  />
                       <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
 
-                <button className="w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105">
+                <button className="w-full bg-gradient-to-r from-blue-500 to-purple-500 hover: fro m-blue-600 hover: t o-purple-600 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 transform hover: scal e-105">
                   {plan.cta}
                 </button>
               </motion.div>
@@ -389,13 +389,13 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
       </section>
 
       {/* ROI Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -406,15 +406,15 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
             </p>
           </motion.div>
 
-          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md: anygri d-cols-2 lg: gri d-cols-4 gap-8">
             {roi.map((metric, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/15 transition-all duration-300"
+                transition={{ duration: 0.5, delay: inde x * 0.1 }}
+                viewport={{ once: tru e }}
+                className="text-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover: b g-white/15 transition-all duration-300"
               >
                 <div className="text-3xl font-bold text-blue-400 mb-2">{metric.improvement}</div>
                 <h3 className="text-lg font-semibold text-white mb-2">{metric.metric}</h3>
@@ -426,13 +426,13 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/10 to-purple-600/10">
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-gradient-to-r from-blue-600/10 to-purple-600/10">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Optimize Your Business Processes?
@@ -441,34 +441,34 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
               Let's discuss how our AI-powered process optimization can transform your operations and drive measurable results for your business.
             </p>
             
-            <div className="grid md:grid-cols-3 gap-6 mb-8">
+            <div className="grid md: gri d-cols-3 gap-6 mb-8">
               <div className="flex items-center justify-center space-x-3 text-white">
-                <Phone className="w-5 h-5 text-blue-400" />
+                <Phone className="w-5 h-5 text-blue-400"  />
                 <span>+1 302 464 0950</span>
               </div>
               <div className="flex items-center justify-center space-x-3 text-white">
-                <Mail className="w-5 h-5 text-blue-400" />
+                <Mail className="w-5 h-5 text-blue-400"  />
                 <span>kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center justify-center space-x-3 text-white">
-                <MapPin className="w-5 h-5 text-blue-400" />
+                <MapPin className="w-5 h-5 text-blue-400"  />
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center items-center">
               <Link
                 to="/contact"
-                className="group px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold text-lg rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25"
+                className="group px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold text-lg rounded-xl transition-all duration-300 transform hover: scal e-105 shadow-lg hover: shado w-blue-500/25"
               >
                 Schedule a Consultation
-                <ArrowRight className="w-5 h-5 ml-2 inline-block group-hover:translate-x-1 transition-transform duration-200" />
+                <ArrowRight className="w-5 h-5 ml-2 inline-block group-hover: translat e-x-1 transition-transform duration-200"  />
               </Link>
               <a
                 href="tel:+13024640950"
-                className="group px-8 py-4 bg-white/10 backdrop-blur-sm border border-blue-400/30 text-white font-bold text-lg rounded-xl transition-all duration-300 hover:bg-white/20 hover:border-blue-400/50"
+                className="group px-8 py-4 bg-white/10 backdrop-blur-sm border border-blue-400/30 text-white font-bold text-lg rounded-xl transition-all duration-300 hover: b g-white/20 hover: borde r-blue-400/50"
               >
-                <Phone className="w-5 h-5 mr-2 inline-block" />
+                <Phone className="w-5 h-5 mr-2 inline-block"  />
                 Call Now
               </a>
             </div>
@@ -477,18 +477,18 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-4 sm:px-6 lg:px-8 border-t border-white/10">
+      <footer className="py-12 px-4 sm: p x-6 lg: p x-8 border-t border-white/10">
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex items-center justify-center space-x-2 mb-4">
-            <Star className="w-5 h-5 text-blue-400" />
+            <Star className="w-5 h-5 text-blue-400"  />
             <span className="text-white font-semibold">Zion Tech Group</span>
-            <Star className="w-5 h-5 text-purple-400" />
+            <Star className="w-5 h-5 text-purple-400"  />
           </div>
           <p className="text-gray-400">
             Transforming businesses through intelligent AI solutions and process optimization.
           </p>
           <div className="mt-4 text-sm text-gray-500">
-            <a href="https://ziontechgroup.com" className="hover:text-blue-400 transition-colors">
+            <a href="https://ziontechgroup.com" className="hover: tex t-blue-400 transition-colors">
               ziontechgroup.com
             </a>
           </div>

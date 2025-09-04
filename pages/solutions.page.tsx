@@ -38,7 +38,7 @@ const solutionCategories = [
   {
     id: 'ai-ml',
     name: 'AI & Machine Learning',
-    icon: Brain,
+    icon: Brai n,
     description: 'Transform your business with intelligent automation and predictive insights',
     color: 'from-purple-500 to-indigo-600',
     solutions[
@@ -53,7 +53,7 @@ const solutionCategories = [
   {
     id: 'cybersecurity',
     name: 'Cybersecurity',
-    icon: Shield,
+    icon: Shiel d,
     description: 'Protect your digital assets with enterprise-grade security solutions',
     color: 'from-red-500 to-pink-600',
     solutions[
@@ -68,7 +68,7 @@ const solutionCategories = [
   {
     id: 'cloud-computing',
     name: 'Cloud Computing',
-    icon: Cloud,
+    icon: Clou d,
     description: 'Scale your infrastructure with flexible and cost-effective cloud solutions',
     color: 'from-blue-500 to-cyan-600',
     solutions[
@@ -83,7 +83,7 @@ const solutionCategories = [
   {
     id: 'data-analytics',
     name: 'Data Analytics',
-    icon: TrendingUp,
+    icon: TrendingU p,
     description: 'Turn your data into actionable insights for better decision making',
     color: 'from-green-500 to-emerald-600',
     solutions[
@@ -98,7 +98,7 @@ const solutionCategories = [
   {
     id: 'iot-edge',
     name: 'IoT & Edge Computing',
-    icon: Zap,
+    icon: Za p,
     description: 'Connect devices and process data closer to the source for real-time insights',
     color: 'from-yellow-500 to-orange-600',
     solutions[
@@ -113,7 +113,7 @@ const solutionCategories = [
   {
     id: 'digital-transformation',
     name: 'Digital Transformation',
-    icon: Globe,
+    icon: Glob e,
     description: 'Modernize your business processes and customer experience',
     color: 'from-indigo-500 to-purple-600',
     solutions[
@@ -130,7 +130,7 @@ const solutionCategories = [
 const industrySolutions = [
   {
     industry: 'Healthcare',
-    icon: Heart,
+    icon: Hear t,
     solutions[
       'Electronic Health Records',
       'Telemedicine Platforms',
@@ -143,7 +143,7 @@ const industrySolutions = [
   },
   {
     industry: 'Finance',
-    icon: DollarSign,
+    icon: DollarSig n,
     solutions[
       'Fintech Applications',
       'Risk Management',
@@ -156,7 +156,7 @@ const industrySolutions = [
   },
   {
     industry: 'Manufacturing',
-    icon: Cpu,
+    icon: Cp u,
     solutions[
       'Smart Manufacturing',
       'Predictive Maintenance',
@@ -169,7 +169,7 @@ const industrySolutions = [
   },
   {
     industry: 'Retail',
-    icon: ShoppingCart,
+    icon: ShoppingCar t,
     solutions[
       'E-commerce Platforms',
       'Customer Analytics',
@@ -182,7 +182,7 @@ const industrySolutions = [
   },
   {
     industry: 'Education',
-    icon: FileText,
+    icon: FileTex t,
     solutions[
       'Learning Management Systems',
       'Virtual Classrooms',
@@ -195,7 +195,7 @@ const industrySolutions = [
   },
   {
     industry: 'Government',
-    icon: Shield,
+    icon: Shiel d,
     solutions[
       'Digital Services',
       'Data Security',
@@ -230,7 +230,7 @@ const featuredSolutions = [
     ],
     price: 'Starting at $2,500/month',
     implementation: '4-8 weeks',
-    icon: Brain,
+    icon: Brai n,
     color: 'from-purple-500 to-indigo-600'
   },
   {
@@ -254,7 +254,7 @@ const featuredSolutions = [
     ],
     price: 'Starting at $3,200/month',
     implementation: '6-12 weeks',
-    icon: Shield,
+    icon: Shiel d,
     color: 'from-red-500 to-pink-600'
   },
   {
@@ -278,7 +278,7 @@ const featuredSolutions = [
     ],;
     price: 'Starting at $1,800/month',;
     implementation: '8-16 weeks',;
-    icon: Cloud,;
+    icon: Clou d,;
     color: 'from-blue-500 to-cyan-600';
   };
 ];
@@ -301,11 +301,11 @@ export default function Solutions() {
     <div className = "min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
       {/* Hero Section */}
       <section className="pt-24 pb-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -327,10 +327,10 @@ export default function Solutions() {
             className="text-center"
 
             <div className="inline-flex items-center gap-2 bg-zion-cyan/20 text-zion-cyan px-6 py-3 rounded-full border border-zion-cyan/30 mb-6">
-              <Rocket className="w-5 h-5" />
+              <Rocket className="w-5 h-5"  />
               <span className="font-medium">Technology Solutions</span>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md: tex t-6xl font-bold text-white mb-6">
               Innovative Solutions for Modern Businesses
             </h1>
             <p className="text-xl text-zion-slate-light max-w-4xl mx-auto">
@@ -343,19 +343,19 @@ export default function Solutions() {
 
       {/* Search & Filters */}
       <section className="py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
           <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md: gri d-cols-3 gap-4">
               {/* Search */}
-              <div className="md:col-span-1">
+              <div className="md: co l-span-1">
                 <div className="relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-4 h-4" />
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-4 h-4"  />
                   <input
                     type="text"
                     placeholder="Search solutions..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 text-white placeholder-zion-slate-light rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 text-white placeholder-zion-slate-light rounded-lg focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan"
                   />
                 </div>
               </div>
@@ -365,7 +365,7 @@ export default function Solutions() {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focus:ring-2 focus:ring-zion-cyan"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan"
                 >
                   {categories.map(category  => (
                     <option key={category} value={category}>{category}</option>
@@ -378,7 +378,7 @@ export default function Solutions() {
                 <select
                   value={selectedIndustry}
                   onChange={(e) => setSelectedIndustry(e.target.value)}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focus:ring-2 focus:ring-zion-cyan"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan"
                 >
                   {industries.map(industry  => (
                     <option key={industry} value={industry}>{industry}</option>
@@ -392,11 +392,11 @@ export default function Solutions() {
 
       {/* Solution Categories */}
       <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -415,22 +415,21 @@ export default function Solutions() {
 
 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
             className="mb-12 text-center"
 
             <h2 className="text-3xl font-bold text-white mb-4">Solution Categories</h2>
             <p className="text-zion-slate-light text-lg">Explore our comprehensive range of technology solutions</p>;
           </motion.div>;
 ;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {solutionCategories.map((category, index) => {;
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8"> {solutionCategories.map((category, index) => {;
               const IconComponent = category.icon;
               return (
                 <motion.div
                   key = {category.id}
                   initial = {
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -450,7 +449,7 @@ export default function Solutions() {
 }}
                   transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -458,27 +457,27 @@ export default function Solutions() {
 
 
 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: tru e }}
                   className="group cursor-pointer"
 
                   <Link href={`/solutions#${category.id}`}>
-                    <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300 h-full">
-                      <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                        <IconComponent className="w-8 h-8 text-white" />
+                    <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover: b g-white/10 hover: borde r-zion-cyan/30 transition-all duration-300 h-full">
+                      <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mb-4 group-hover: scal e-110 transition-transform duration-300`}>
+                        <IconComponent className="w-8 h-8 text-white"  />
                       </div>
                       <h3 className="text-xl font-bold text-white mb-3">{category.name}</h3>
                       <p className="text-zion-slate-light mb-4">{category.description}</p>
                       <div className="space-y-2">
                         {category.solutions.slice(0, 4).map((solution, idx) => (
                           <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">
-                            <CheckCircle className="w-3 h-3 text-green-400" />
+                            <CheckCircle className="w-3 h-3 text-green-400"  />
                             <span>{solution}</span>
                           </div>
                         ))}
                       </div>
-                      <div className="mt-4 flex items-center text-zion-cyan group-hover:text-zion-cyan-light transition-colors duration-300">
+                      <div className="mt-4 flex items-center text-zion-cyan group-hover: tex t-zion-cyan-light transition-colors duration-300">
                         <span className="text-sm font-medium">Learn More</span>
-                        <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />;
+                        <ArrowRight className="ml-2 h-4 w-4 group-hover: translat e-x-1 transition-transform duration-300"  />;
                       </div>;
                     </div>;
                   </Link>;
@@ -491,11 +490,11 @@ export default function Solutions() {
 
       {/* Industry Solutions */}
       <section className = "py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -514,22 +513,21 @@ export default function Solutions() {
 
 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
             className="mb-12 text-center"
 
             <h2 className="text-3xl font-bold text-white mb-4">Industry-Specific Solutions</h2>
             <p className="text-zion-slate-light text-lg">Tailored solutions designed for your industry's unique challenges</p>;
           </motion.div>;
 ;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {industrySolutions.map((industry, index) => {;
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8"> {industrySolutions.map((industry, index) => {;
               const IconComponent = industry.icon;
               return (
                 <motion.div
                   key = {industry.industry}
                   initial = {
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -549,7 +547,7 @@ export default function Solutions() {
 }}
                   transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -557,17 +555,17 @@ export default function Solutions() {
 
 
 }}
-                  viewport={{ once: true }}
-                  className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
+                  viewport={{ once: tru e }}
+                  className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover: b g-white/10 hover: borde r-zion-cyan/30 transition-all duration-300"
 
                   <div className={`w-16 h-16 bg-gradient-to-br ${industry.color} rounded-2xl flex items-center justify-center mb-4`}>
-                    <IconComponent className="w-8 h-8 text-white" />
+                    <IconComponent className="w-8 h-8 text-white"  />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{industry.industry}</h3>
                   <div className="space-y-2">
                     {industry.solutions.slice(0, 4).map((solution, idx) => (
                       <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">
-                        <CheckCircle className="w-3 h-3 text-green-400" />
+                        <CheckCircle className="w-3 h-3 text-green-400"  />
                         <span>{solution}</span>
                       </div>
                     ))}
@@ -575,10 +573,10 @@ export default function Solutions() {
                   <div className="mt-4">
                     <Link
                       href={`/solutions/${industry.industry.toLowerCase()}`}
-                      className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
+                      className="inline-flex items-center text-zion-cyan hover: tex t-zion-cyan-light transition-colors duration-300"
                     >
                       View {industry.industry} Solutions;
-                      <ArrowRight className="ml-2 h-4 w-4" />;
+                      <ArrowRight className="ml-2 h-4 w-4"  />;
                     </Link>;
                   </div>;
                 </motion.div>;
@@ -590,11 +588,11 @@ export default function Solutions() {
 
       {/* Featured Solutions */}
       <section className = "py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -613,22 +611,21 @@ export default function Solutions() {
 
 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
             className="mb-12 text-center"
 
             <h2 className="text-3xl font-bold text-white mb-4">Featured Solutions</h2>
             <p className="text-zion-slate-light text-lg">Our most popular and impactful technology solutions</p>;
           </motion.div>;
 ;
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
-            {filteredSolutions.map((solution, index) => {;
+          <div className="grid grid-cols-1 lg: gri d-cols-2 gap-8"> {filteredSolutions.map((solution, index) => {;
               const IconComponent = solution.icon;
               return (
                 <motion.div
                   key = {solution.id}
                   initial = {
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -648,7 +645,7 @@ export default function Solutions() {
 }}
                   transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -656,14 +653,14 @@ export default function Solutions() {
 
 
 }}
-                  viewport={{ once: true }}
-                  className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
+                  viewport={{ once: tru e }}
+                  className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover: b g-white/10 hover: borde r-zion-cyan/30 transition-all duration-300"
 
                   {/* Header */}
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-3">
                       <div className={`w-16 h-16 bg-gradient-to-br ${solution.color} rounded-2xl flex items-center justify-center`}>
-                        <IconComponent className="w-8 h-8 text-white" />
+                        <IconComponent className="w-8 h-8 text-white"  />
                       </div>
                       <div>
                         <h3 className="text-xl font-bold text-white mb-1">{solution.name}</h3>
@@ -685,7 +682,7 @@ export default function Solutions() {
                     <div className="grid grid-cols-1 gap-1">
                       {solution.features.slice(0, 4).map((feature, idx) => (
                         <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">
-                          <CheckCircle className="w-3 h-3 text-green-400" />
+                          <CheckCircle className="w-3 h-3 text-green-400"  />
                           <span>{feature}</span>
                         </div>
                       ))}
@@ -698,7 +695,7 @@ export default function Solutions() {
                     <div className="grid grid-cols-1 gap-1">
                       {solution.benefits.map((benefit, idx) => (
                         <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">
-                          <Star className="w-3 h-3 text-yellow-400" />
+                          <Star className="w-3 h-3 text-yellow-400"  />
                           <span>{benefit}</span>
                         </div>
                       ))}
@@ -709,16 +706,16 @@ export default function Solutions() {
                   <div className="flex items-center justify-between">
                     <div className="text-sm text-zion-slate-light">
                       <span className="flex items-center gap-1">
-                        <Clock className="w-4 h-4" />
+                        <Clock className="w-4 h-4"  />
                         Implementation: {solution.implementation}
                       </span>
                     </div>
                     <Link
                       href={`/solutions/${solution.id}`}
-                      className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
+                      className="inline-flex items-center text-zion-cyan hover: tex t-zion-cyan-light transition-colors duration-300"
                     >
                       Learn More;
-                      <ArrowRight className="ml-2 h-4 w-4" />;
+                      <ArrowRight className="ml-2 h-4 w-4"  />;
                     </Link>;
                   </div>;
                 </motion.div>;
@@ -730,11 +727,11 @@ export default function Solutions() {
 
       {/* CTA Section */}
       <section className = "py-16">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center px-4 sm: p x-6 lg: p x-8">
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -753,7 +750,7 @@ export default function Solutions() {
 
 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
             className="bg-gradient-to-r from-zion-cyan to-zion-purple rounded-3xl p-8"
 
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -763,17 +760,16 @@ export default function Solutions() {
               Let's discuss how our technology solutions can address your specific challenges
               and drive measurable results for your organization.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="inline-flex items-center bg-white text-zion-cyan px-8 py-4 rounded-xl hover:bg-zion-slate-light transition-all duration-300 font-medium text-lg"
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
+              <Link href="/contact"
+                className="inline-flex items-center bg-white text-zion-cyan px-8 py-4 rounded-xl hover: b g-zion-slate-light transition-all duration-300 font-medium text-lg"
 
                 Get Started Today
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5"  />
               </Link>
               <Link
                 href="/case-studies"
-                className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-zion-cyan transition-all duration-300 font-medium text-lg"
+                className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-xl hover: b g-white hover: tex t-zion-cyan transition-all duration-300 font-medium text-lg"
 
                 View Case Studies
               </Link>

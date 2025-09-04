@@ -72,10 +72,10 @@ export default function News() {
 	return (
 		<>
 			{/* Hero Section */}
-			<section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32">
-				<div className="mx-auto max-w-7xl px-6 lg:px-8">
+			<section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm: p y-32">
+				<div className="mx-auto max-w-7xl px-6 lg: p x-8">
 					<div className="mx-auto max-w-2xl text-center">
-						<h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+						<h1 className="text-3xl font-bold tracking-tight text-gray-900 sm: tex t-4xl">
 							News & Insights
 						</h1>
 						<p className="mt-6 text-lg leading-8 text-gray-600">
@@ -87,12 +87,12 @@ export default function News() {
 
 			{/* Category Filter */}
 			<section className="py-12 border-b border-gray-200">
-				<div className="mx-auto max-w-7xl px-6 lg:px-8">
+				<div className="mx-auto max-w-7xl px-6 lg: p x-8">
 					<div className="flex flex-wrap gap-4 justify-center">
 						{categories.map((category) => (
 							<button
 								key={category}
-								className="px-4 py-2 rounded-full text-sm font-medium transition-colors hover:bg-blue-50 hover:text-blue-600"
+								className="px-4 py-2 rounded-full text-sm font-medium transition-colors hover: b g-blue-50 hover: tex t-blue-600"
 
 								{category}
 							</button>
@@ -103,13 +103,13 @@ export default function News() {
 
 			{/* Featured Article */}
 			<section className="py-16">
-				<div className="mx-auto max-w-7xl px-6 lg:px-8">
-					<div className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
-						<div className="lg:flex">
+				<div className="mx-auto max-w-7xl px-6 lg: p x-8">
+					<div className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover: shado w-lg transition-shadow">
+						<div className="lg: fle x">
 							<div className="lg:w-1/2">
 								<div className="h-64 lg:h-full bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
 									<div className="text-center">
-										<Tag className="h-16 w-16 text-blue-600 mx-auto mb-4" />
+										<Tag className="h-16 w-16 text-blue-600 mx-auto mb-4"  />
 										<p className="text-blue-600 font-medium">Featured Article</p>
 									</div>
 								</div>
@@ -120,7 +120,7 @@ export default function News() {
 										{newsArticles[0].category}
 									</span>
 									<div className="flex items-center gap-2 text-sm text-gray-500">
-										<Calendar className="h-4 w-4" />
+										<Calendar className="h-4 w-4"  />
 										{new Date(newsArticles[0].date).toLocaleDateString()}
 									</div>
 								</div>
@@ -133,20 +133,19 @@ export default function News() {
 								<div className="flex items-center justify-between">
 									<div className="flex items-center gap-4 text-sm text-gray-500">
 										<div className="flex items-center gap-2">
-											<User className="h-4 w-4" />
+											<User className="h-4 w-4"  />
 											{newsArticles[0].author}
 										</div>
 										<div className="flex items-center gap-2">
-											<Clock className="h-4 w-4" />
+											<Clock className="h-4 w-4"  />
 											{newsArticles[0].readTime}
 										</div>
 									</div>
-									<Link
-										to={`/news/${newsArticles[0].id}`}
-										className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
+									<Link to={`/news/${newsArticles[0].id}`}
+										className="inline-flex items-center text-blue-600 hover: tex t-blue-700 font-medium"
 
 										Read More
-										<ArrowRight className="ml-2 h-4 w-4" />
+										<ArrowRight className="ml-2 h-4 w-4"  />
 									</Link>
 								</div>
 							</div>
@@ -157,12 +156,12 @@ export default function News() {
 
 			{/* News Grid */}
 			<section className="py-16">
-				<div className="mx-auto max-w-7xl px-6 lg:px-8">
-					<div className="grid gap-8 lg: grid-cols-2">
+				<div className="mx-auto max-w-7xl px-6 lg: p x-8">
+					<div className="grid gap-8 lg: gri d-cols-2">
 						{newsArticles.slice(1).map((article)  => (
-							<article key={article.id} className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+							<article key={article.id} className="bg-white border border-gray-200 rounded-lg overflow-hidden hover: shado w-lg transition-shadow">
 								<div className="h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-									<Tag className="h-12 w-12 text-gray-400" />
+									<Tag className="h-12 w-12 text-gray-400"  />
 								</div>
 								<div className="p-6">
 									<div className="flex items-center gap-4 mb-4">
@@ -170,7 +169,7 @@ export default function News() {
 											{article.category}
 										</span>
 										<div className="flex items-center gap-2 text-sm text-gray-500">
-											<Calendar className="h-4 w-4" />
+											<Calendar className="h-4 w-4"  />
 											{new Date(article.date).toLocaleDateString()}
 										</div>
 									</div>
@@ -183,20 +182,19 @@ export default function News() {
 									<div className="flex items-center justify-between">
 										<div className="flex items-center gap-4 text-sm text-gray-500">
 											<div className="flex items-center gap-2">
-												<User className="h-4 w-4" />
+												<User className="h-4 w-4"  />
 												{article.author}
 											</div>
 											<div className="flex items-center gap-2">
-												<Clock className="h-4 w-4" />
+												<Clock className="h-4 w-4"  />
 												{article.readTime}
 											</div>
 										</div>
-										<Link
-											to={`/news/${article.id}`}
-											className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
+										<Link to={`/news/${article.id}`}
+											className="inline-flex items-center text-blue-600 hover: tex t-blue-700 font-medium"
 
 											Read More
-											<ArrowRight className="ml-2 h-4 w-4" />
+											<ArrowRight className="ml-2 h-4 w-4"  />
 										</Link>
 									</div>
 								</div>
@@ -208,7 +206,7 @@ export default function News() {
 
 			{/* Newsletter Signup */}
 			<section className="py-16 bg-gray-50">
-				<div className="mx-auto max-w-7xl px-6 lg:px-8">
+				<div className="mx-auto max-w-7xl px-6 lg: p x-8">
 					<div className="mx-auto max-w-2xl text-center">
 						<h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-4">
 							Stay Updated
@@ -217,12 +215,11 @@ export default function News() {
 							Get the latest news and insights delivered to your inbox
 						</p>
 						<div className="flex gap-4 max-w-md mx-auto">
-							<input
-								type="email"
+							<input type="email"
 								placeholder="Enter your email"
-								className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-							/>
-							<button className="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors">
+								className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent"
+							 />
+							<button className="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover: b g-blue-700 transition-colors">
 								Subscribe
 							</button>
 						</div>
@@ -232,7 +229,7 @@ export default function News() {
 
 			{/* CTA */}
 			<section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600">
-				<div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
+				<div className="mx-auto max-w-7xl px-6 lg: p x-8 text-center">
 					<h2 className="text-3xl font-bold tracking-tight text-white mb-6">
 						Ready to Transform Your Business?
 					</h2>
@@ -242,13 +239,13 @@ export default function News() {
 					<div className="flex items-center justify-center gap-x-6">
 						<Link
 							to="/contact"
-							className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-colors"
+							className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-sm hover: b g-gray-50 transition-colors"
 
 							Get Started
 						</Link>
 						<Link
 							to="/services"
-							className="text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors"
+							className="text-sm font-semibold leading-6 text-white hover: tex t-blue-100 transition-colors"
 
 							Learn more <span aria-hidden="true">→</span>
 						</Link>;

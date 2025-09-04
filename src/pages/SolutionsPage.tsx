@@ -26,7 +26,7 @@ export default function SolutionsPage() {
   const industrySolutions = [
     {
       name: 'Healthcare',
-      icon: Heart,
+      icon: Hear t,
       description: 'Transform healthcare delivery with AI-powered diagnostics, patient management, and compliance solutions.',
       color: 'from-red-500 to-pink-500',
       features: [
@@ -47,7 +47,7 @@ export default function SolutionsPage() {
     },
     {
       name: 'Financial Services',
-      icon: TrendingUp,
+      icon: TrendingU p,
       description: 'Secure, scalable financial technology solutions for banking, insurance, and fintech companies.',
       color: 'from-green-500 to-emerald-500',
       features: [
@@ -68,7 +68,7 @@ export default function SolutionsPage() {
     },
     {
       name: 'Manufacturing',
-      icon: Factory,
+      icon: Factor y,
       description: 'Smart manufacturing solutions with IoT, AI, and automation for Industry 4.0 transformation.',
       color: 'from-blue-500 to-cyan-500',
       features: [
@@ -89,7 +89,7 @@ export default function SolutionsPage() {
     },
     {
       name: 'Government',
-      icon: Shield,
+      icon: Shiel d,
       description: 'Secure, compliant government technology solutions with advanced cybersecurity and citizen services.',
       color: 'from-indigo-500 to-purple-500',
       features: [
@@ -110,7 +110,7 @@ export default function SolutionsPage() {
     },
     {
       name: 'Retail & E-commerce',
-      icon: ShoppingCart,
+      icon: ShoppingCar t,
       description: 'Omnichannel retail solutions with AI-powered personalization and seamless customer experiences.',
       color: 'from-orange-500 to-red-500',
       features: [
@@ -131,7 +131,7 @@ export default function SolutionsPage() {
     },
     {
       name: 'Education',
-      icon: Users,
+      icon: User s,
       description: 'Digital learning platforms and educational technology solutions for modern learning environments.',
       color: 'from-purple-500 to-pink-500',
       features: [
@@ -155,7 +155,7 @@ export default function SolutionsPage() {
   const technologySolutions = [
     {
       name: 'Digital Transformation',
-      icon: Zap,
+      icon: Za p,
       description: 'End-to-end digital transformation services to modernize your business operations and technology stack.',
       color: 'from-yellow-500 to-orange-500',
       features: [
@@ -169,7 +169,7 @@ export default function SolutionsPage() {
     },
     {
       name: 'AI & Machine Learning',
-      icon: Brain,
+      icon: Brai n,
       description: 'Cutting-edge AI solutions to automate processes, gain insights, and create competitive advantages.',
       color: 'from-purple-500 to-pink-500',
       features: [
@@ -183,7 +183,7 @@ export default function SolutionsPage() {
     },
     {
       name: 'Cloud & DevOps',
-      icon: Cloud,
+      icon: Clou d,
       description: 'Scalable cloud infrastructure and modern DevOps practices for rapid, reliable software delivery.',
       color: 'from-blue-500 to-cyan-500',
       features: [
@@ -197,7 +197,7 @@ export default function SolutionsPage() {
     },
     {
       name: 'Cybersecurity',
-      icon: Shield,
+      icon: Shiel d,
       description: 'Comprehensive security solutions to protect your digital assets and ensure compliance.',
       color: 'from-red-500 to-orange-500',
       features: [
@@ -212,10 +212,10 @@ export default function SolutionsPage() {
   ];
 
   const successMetrics = [
-    { number: '500+', label: 'Projects Delivered', icon: CheckCircle },
-    { number: '50+', label: 'Enterprise Clients', icon: Building2 },
-    { number: '99.9%', label: 'Client Satisfaction', icon: Star },
-    { number: '15+', label: 'Years Experience', icon: Award }
+    { number: '500+', label: 'Projects Delivered', icon: CheckCircl e },
+    { number: '50+', label: 'Enterprise Clients', icon: Building 2 },
+    { number: '99.9%', label: 'Client Satisfaction', icon: Sta r },
+    { number: '15+', label: 'Years Experience', icon: Awar d }
   ];
 
   const filteredSolutions = selectedCategory === 'all' 
@@ -226,23 +226,23 @@ export default function SolutionsPage() {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 via-purple-900 to-blue-900 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8 text-center">
+          <h1 className="text-5xl md: tex t-6xl font-bold mb-6">
             Industry Solutions
           </h1>
-          <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto mb-8">
+          <p className="text-xl md: tex t-2xl text-blue-100 max-w-4xl mx-auto mb-8">
             Tailored technology solutions designed for your industry's unique challenges and opportunities.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: fle x-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
+              className="bg-gradient-to-r from-blue-500 to-purple-600 hover: fro m-blue-600 hover: t o-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover: scal e-105"
             >
               Get Started
             </Link>
             <Link
               to="/services"
-              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
+              className="bg-transparent border-2 border-white text-white hover: b g-white hover: tex t-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
             >
               View Services
             </Link>
@@ -252,8 +252,8 @@ export default function SolutionsPage() {
 
       {/* Success Metrics */}
       <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
             {successMetrics.map((metric, index) => (
               <div key={index} className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -269,7 +269,7 @@ export default function SolutionsPage() {
 
       {/* Industry Solutions */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Industry Solutions
@@ -286,7 +286,7 @@ export default function SolutionsPage() {
               className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
                 selectedCategory === 'all'
                   ? 'bg-blue-600 text-white shadow-lg'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  : 'bg-gray-100 text-gray-700 hover: b g-gray-200'
               }`}
             >
               All Industries
@@ -298,7 +298,7 @@ export default function SolutionsPage() {
                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
                   selectedCategory === solution.name
                     ? 'bg-blue-600 text-white shadow-lg'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    : 'bg-gray-100 text-gray-700 hover: b g-gray-200'
                 }`}
               >
                 {solution.name}
@@ -306,9 +306,9 @@ export default function SolutionsPage() {
             ))}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
             {filteredSolutions.map((solution, index) => (
-              <div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100">
+              <div key={index} className="bg-white rounded-2xl shadow-lg hover: shado w-xl transition-all duration-300 overflow-hidden border border-gray-100">
                 <div className={`h-2 bg-gradient-to-r ${solution.color}`}></div>
                 <div className="p-8">
                   <div className={`w-16 h-16 bg-gradient-to-r ${solution.color} rounded-lg flex items-center justify-center mx-auto mb-6`}>
@@ -323,7 +323,7 @@ export default function SolutionsPage() {
                     <ul className="space-y-2">
                       {solution.features.slice(0, 4).map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center space-x-2 text-sm">
-                          <CheckCircle className="w-4 h-4 text-green-500" />
+                          <CheckCircle className="w-4 h-4 text-green-500"  />
                           <span className="text-gray-700">{feature}</span>
                         </li>
                       ))}
@@ -335,7 +335,7 @@ export default function SolutionsPage() {
                     <ul className="space-y-2">
                       {solution.benefits.map((benefit, benefitIndex) => (
                         <li key={benefitIndex} className="flex items-center space-x-2 text-sm">
-                          <Star className="w-4 h-4 text-blue-500" />
+                          <Star className="w-4 h-4 text-blue-500"  />
                           <span className="text-gray-700">{benefit}</span>
                         </li>
                       ))}
@@ -344,10 +344,10 @@ export default function SolutionsPage() {
                   
                   <Link
                     to={solution.href}
-                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-3 px-6 rounded-lg font-semibold text-center block transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-2"
+                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover: fro m-blue-700 hover: t o-purple-700 text-white py-3 px-6 rounded-lg font-semibold text-center block transition-all duration-300 hover: scal e-105 flex items-center justify-center space-x-2"
                   >
                     <span>Learn More</span>
-                    <ArrowRight className="w-4 h-4" />
+                    <ArrowRight className="w-4 h-4"  />
                   </Link>
                 </div>
               </div>
@@ -358,7 +358,7 @@ export default function SolutionsPage() {
 
       {/* Technology Solutions */}
       <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Technology Solutions
@@ -367,9 +367,9 @@ export default function SolutionsPage() {
               Core technology solutions that power our industry-specific offerings and drive business transformation.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-2 gap-8">
             {technologySolutions.map((solution, index) => (
-              <div key={index} className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300">
+              <div key={index} className="bg-white rounded-2xl shadow-lg p-8 hover: shado w-xl transition-all duration-300">
                 <div className={`w-16 h-16 bg-gradient-to-r ${solution.color} rounded-lg flex items-center justify-center mx-auto mb-6`}>
                   <solution.icon className="w-8 h-8 text-white" />
                 </div>
@@ -378,14 +378,14 @@ export default function SolutionsPage() {
                 <ul className="space-y-3 mb-6">
                   {solution.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center space-x-2">
-                      <CheckCircle className="w-5 h-5 text-green-500" />
+                      <CheckCircle className="w-5 h-5 text-green-500"  />
                       <span className="text-gray-700">{feature}</span>
                     </li>
                   ))}
                 </ul>
                 <Link
                   to="/services"
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-3 px-6 rounded-lg font-semibold text-center block transition-all duration-300 hover:scale-105"
+                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover: fro m-blue-700 hover: t o-purple-700 text-white py-3 px-6 rounded-lg font-semibold text-center block transition-all duration-300 hover: scal e-105"
                 >
                   Explore Services
                 </Link>
@@ -397,7 +397,7 @@ export default function SolutionsPage() {
 
       {/* Why Choose Us */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Why Choose Zion Tech Group?
@@ -406,24 +406,24 @@ export default function SolutionsPage() {
               We combine deep industry expertise with cutting-edge technology to deliver solutions that drive real business results.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
             <div className="text-center p-6">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-white" />
+                <Users className="w-8 h-8 text-white"  />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Industry Expertise</h3>
               <p className="text-gray-600">Deep understanding of your industry's challenges, regulations, and opportunities.</p>
             </div>
             <div className="text-center p-6">
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Zap className="w-8 h-8 text-white" />
+                <Zap className="w-8 h-8 text-white"  />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Innovation Focus</h3>
               <p className="text-gray-600">Cutting-edge technology solutions that give you a competitive advantage.</p>
             </div>
             <div className="text-center p-6">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Globe className="w-8 h-8 text-white" />
+                <Globe className="w-8 h-8 text-white"  />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Global Delivery</h3>
               <p className="text-gray-600">Worldwide delivery capabilities with local support and understanding.</p>
@@ -434,23 +434,23 @@ export default function SolutionsPage() {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-900 to-purple-900 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-4xl mx-auto px-4 sm: p x-6 lg: p x-8 text-center">
           <h2 className="text-4xl font-bold mb-6">
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
             Let's discuss how our industry-specific solutions can address your unique challenges and drive growth.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: fle x-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="bg-white text-blue-900 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
+              className="bg-white text-blue-900 hover: b g-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover: scal e-105"
             >
               Get Started
             </Link>
             <Link
               to="/case-studies"
-              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
+              className="bg-transparent border-2 border-white text-white hover: b g-white hover: tex t-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
             >
               View Case Studies
             </Link>

@@ -8,7 +8,7 @@ interface EnhancedAccessibilityProps {
   showControls?: boolean;
   className?: string;
 
-export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
+export const EnhancedAccessibility: Reac t.FC<EnhancedAccessibilityProps> = ({
 
   enabled = true,;
   showControls = true,;
@@ -18,16 +18,16 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
 
   colorBlindness: 'normal' | 'protanopia' | 'deuteranopia' | 'tritanopia';
   fontSize: 'small' | 'medium' | 'large' | 'xlarge'}
-export const EnhancedAccessibility: React.FC = () => {
+export const EnhancedAccessibility: Reac t.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [settings, setSettings] = useState<AccessibilitySettings>({
 
-    highContrast: false,
-    largeText: false,
-    reducedMotion: false,
-    screenReader: false,
-    keyboardNavigation: false,
-    focusIndicator: true,
+    highContrast: fals e,
+    largeText: fals e,
+    reducedMotion: fals e,
+    screenReader: fals e,
+    keyboardNavigation: fals e,
+    focusIndicator: tru e,
     colorBlindness: 'normal',
     fontSize: 'medium'
   }) ;

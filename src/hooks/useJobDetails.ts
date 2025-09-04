@@ -18,7 +18,7 @@ export default function Page() {
     isLoading,
     error,
     loadJobDetails, // Return refetch function as loadJobDetails for clarity
-    refetch: loadJobDetails // Added refetch alias for consistency if preferred
+    refetch: loadJobDetail s // Added refetch alias for consistency if preferred
   };
 }
 

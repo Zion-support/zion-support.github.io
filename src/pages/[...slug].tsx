@@ -12,18 +12,18 @@ export { GenericPage }() {
 
   return (
     <main style={{
-      padding: 20,
+      padding: 2 0,
       fontFamily: 'sans-serif',
       lineHeight: 1.6,
-      maxWidth: 900,
+      maxWidth: 90 0,
       margin: '0 auto'
     }}>
       <Helmet>
         <title>{title} | Zion Tech Group</title>
-        <meta name="description" content={`Information about ${title} at Zion Tech Group.`} />
-        <link rel="canonical" href={canonical} />
+        <meta name="description" content={`Information about ${title} at Zion Tech Group.`}  />
+        <link rel="canonical" href={canonical}  />
       </Helmet>
-      <nav style={{marginBottom: 16}} aria-label="Breadcrumbs">
+      <nav style={{marginBottom: 1 6}} aria-label="Breadcrumbs">
         <Link to="/" style={{color: '#2563eb'}}>Home</Link>
         <span style={{
           margin: '0 8px',
@@ -34,16 +34,16 @@ export { GenericPage }() {
       <h1 style={{marginBottom: 8}}>{title}</h1>
       <p style={{color: '#374151'}}>This page is under active development. If you were expecting specific information, please contact us and we will prioritize it.</p>
       <section style={{
-        marginTop: 16,
+        marginTop: 1 6,
         padding: '12px 16px',
         background: '#f9fafb',
         border: '1px solid #e5e7eb',
         borderRadius: 8
       }}>
         <h2 style={{marginBottom: 8}}>How we can help</h2>
-        <ul style={{paddingLeft: 18}}>
+        <ul style={{paddingLeft: 1 8}}>
           <li>Micro SaaS solutions tailored to your workflow</li>
-          <li>Applied AI: assistants, RAG, and automation</li>
+          <li>Applied AI: assistant s, RAG, and automation</li>
 
           <li>Cloud, DevOps, data, and cybersecurity services</li>
         </ul>

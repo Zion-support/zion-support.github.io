@@ -2,25 +2,24 @@
 import React from 'react';
 
 export default function AiSolutions
-export { AiSolutions }(...args: any[]): any {
+export { AiSolutions }(...args: an y[]): any {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-      <SEO 
-        title="AI Solutions - Zion Tech Group" 
+      <SEO title="AI Solutions - Zion Tech Group" 
         description="Explore our AI solutions including analytics, automation, and intelligent platforms."
-      />
+       />
       
       {/* Hero Section */}
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md: tex t-6xl font-bold text-white mb-6">
               AI Solutions for the
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple"> Future</span>
             </h1>
@@ -28,14 +27,14 @@ export { AiSolutions }(...args: any[]): any {
               Transform your business with cutting-edge artificial intelligence solutions. 
               From predictive analytics to intelligent automation, we deliver results that drive growth.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/25"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold text-lg hover: scal e-105 transition-all duration-300 shadow-2xl hover: shado w-cyan-500/25"
               >
                 Explore Solutions
               </Link>
-              <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300">
+              <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover: b g-zion-cyan hover: tex t-white transition-all duration-300">
                 Schedule Demo
               </button>
             </div>
@@ -47,10 +46,10 @@ export { AiSolutions }(...args: any[]): any {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">Our AI Services</h2>
@@ -60,17 +59,17 @@ export { AiSolutions }(...args: any[]): any {
           </motion.div>
 
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
           >
             {aiServices.map((service, index) => (
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
+                className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover: borde r-zion-cyan/40 transition-all duration-300"
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
                   <service.icon className="w-8 h-8 text-white" />
@@ -80,7 +79,7 @@ export { AiSolutions }(...args: any[]): any {
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0"  />
                       {feature}
                     </li>
                   ))}
@@ -95,10 +94,10 @@ export { AiSolutions }(...args: any[]): any {
       <section className="py-20 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">Industry Solutions</h2>
@@ -116,7 +115,7 @@ export { AiSolutions }(...args: any[]): any {
                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
                   selectedIndustry === industry.id
                     ? 'bg-zion-cyan text-white shadow-lg shadow-zion-cyan/25'
-                    : 'bg-zion-blue-dark/50 text-gray-300 hover:bg-zion-blue-dark/70 border border-zion-cyan/20'
+                    : 'bg-zion-blue-dark/50 text-gray-300 hover: b g-zion-blue-dark/70 border border-zion-cyan/20'
                 }`}
               >
                 <industry.icon className="w-5 h-5 inline mr-2" />
@@ -127,17 +126,17 @@ export { AiSolutions }(...args: any[]): any {
 
           {/* Solutions Grid */}
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
           >
             {filteredSolutions.map((solution, index) => (
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
+                className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover: borde r-zion-cyan/40 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <solution.icon className="w-8 h-8 text-white" />
@@ -147,7 +146,7 @@ export { AiSolutions }(...args: any[]): any {
                 <ul className="space-y-2">
                   {solution.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0"  />
                       {benefit}
                     </li>
                   ))}
@@ -162,10 +161,10 @@ export { AiSolutions }(...args: any[]): any {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">Proven Results</h2>
@@ -175,11 +174,11 @@ export { AiSolutions }(...args: any[]): any {
           </motion.div>
 
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+            className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
           >
             {successMetrics.map((metric, index) => (
               <motion.div
@@ -200,13 +199,13 @@ export { AiSolutions }(...args: any[]): any {
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
               Advanced AI Technologies
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
@@ -215,11 +214,11 @@ export { AiSolutions }(...args: any[]): any {
           </motion.div>
 
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
           >
             {aiTechnologies.map((tech, index) => (
               <motion.div
@@ -227,12 +226,12 @@ export { AiSolutions }(...args: any[]): any {
                 variants={itemVariants}
                 className="group"
               >
-                <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 h-full hover:border-cyan-500/50 transition-all duration-300 hover:scale-105">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 h-full hover: borde r-cyan-500/50 transition-all duration-300 hover: scal e-105">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scal e-110 transition-transform duration-300">
                     <tech.icon className="w-8 h-8 text-white" />
                   </div>
                   
-                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
+                  <h3 className="text-2xl font-bold text-white mb-4 group-hover: tex t-cyan-400 transition-colors duration-300">
                     {tech.name}
                   </h3>
                   
@@ -259,10 +258,10 @@ export { AiSolutions }(...args: any[]): any {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">Implementation Process</h2>
@@ -272,36 +271,36 @@ export { AiSolutions }(...args: any[]): any {
           </motion.div>
 
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+            className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
           >
             {[
               {
                 step: "01",
                 title: "Discovery & Analysis",
                 description: "Understand your business needs and data landscape",
-                icon: Lightbulb
+                icon: Lightbul b
               },
               {
                 step: "02",
                 title: "Strategy & Planning",
                 description: "Design AI roadmap and implementation strategy",
-                icon: Target
+                icon: Targe t
               },
               {
                 step: "03",
                 title: "Development & Testing",
                 description: "Build and validate AI models with your data",
-                icon: Code
+                icon: Cod e
               },
               {
                 step: "04",
                 title: "Deployment & Optimization",
                 description: "Launch AI solutions and continuously improve",
-                icon: Rocket
+                icon: Rocke t
               }
             ].map((phase, index) => (
               <motion.div
@@ -319,8 +318,8 @@ export { AiSolutions }(...args: any[]): any {
                 </div>
 
                 {index < 3 && (
-                  <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2">
-                    <ArrowRight className="w-8 h-8 text-cyan-400" />
+                  <div className="hidden lg: block absolute top-1/2 -right-4 transform -translate-y-1/2">
+                    <ArrowRight className="w-8 h-8 text-cyan-400"  />
                   </div>
                 )}
               </motion.div>
@@ -333,12 +332,12 @@ export { AiSolutions }(...args: any[]): any {
       <section className="py-20 bg-gradient-to-r from-slate-800 to-blue-900">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
               Ready to Harness the Power of AI?
             </h2>
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
@@ -346,14 +345,14 @@ export { AiSolutions }(...args: any[]): any {
               improve efficiency, and drive growth.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/25"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold text-lg hover: scal e-105 transition-all duration-300 shadow-2xl hover: shado w-cyan-500/25"
               >
                 Start AI Journey
               </Link>
-              <button className="px-8 py-4 border border-cyan-500 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-500 hover:text-white transition-all duration-300">
+              <button className="px-8 py-4 border border-cyan-500 text-cyan-400 rounded-xl font-semibold text-lg hover: b g-cyan-500 hover: tex t-white transition-all duration-300">
                 Download AI Guide
               </button>
             </div>

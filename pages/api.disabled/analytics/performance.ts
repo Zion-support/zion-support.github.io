@@ -13,13 +13,13 @@ interface PerformanceData {
   };
 }
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function handler(req: NextApiReques t, res: NextApiRespons e) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
   try {
-    const data: PerformanceData = req.body;
+    const data: PerformanceDat a = req.body;
 
     // Validate the data
     if (!data.url || !data.timestamp || !data.metrics) {
@@ -28,9 +28,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     // Log performance metrics (in production, you might want to send to a database or analytics service)
     console.log('Performance Metrics: ', {
-      url: data.url,
+      url: dat a.url,
       timestamp: new Date(data.timestamp).toISOString(),
-      metrics: data.metrics,
+      metrics: dat a.metrics,
     });
 
     // Here you could send the data to: // - A database (MongoDB, PostgreSQL, etc.)
@@ -40,9 +40,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     // For now, we&apos;ll just acknowledge receipt'
     res.status(200).json({
-      success: true,
+      success: tru e,
       message: 'Performance metrics recorded',
-      timestamp: Date.now(),
+      timestamp: Dat e.now(),
     });
   } catch (error) {
     console.error('Error processing performance data: ', error);

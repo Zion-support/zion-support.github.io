@@ -18,17 +18,17 @@ import {
   Mic
 } from 'lucide-react'
 
-const SEO = dynamic(() => import('../src/components/SEO'), { ssr: false })
-const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false })
+const SEO = dynamic(() => import('../src/components/SEO'), { ssr: fals e })
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: fals e })
 
-const MicroSaaSOldPage: React.FC = () => {
+const MicroSaaSOldPage: Reac t.FC = () => {
   const title = 'Micro SaaS Solutions — Zion Tech Group'
   const description = 'Custom micro SaaS applications and software solutions tailored to your business needs. Scalable, secure, and innovative.'
   const microSaaSServices = [
     {
       title: 'AI-Powered Email Responder',
       description: 'Intelligent email automation with sentiment analysis and smart categorization',
-      icon: MessageSquare,
+      icon: MessageSquar e,
       features: [
         'Automated email responses with personalization',
         'Smart categorization and priority handling',
@@ -44,7 +44,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {
       title: 'Mobile-First Survey Platform',
       description: 'Responsive survey tool optimized for mobile devices with real-time analytics',
-      icon: Smartphone,
+      icon: Smartphon e,
       features: [
         'Mobile-optimized survey creation',
         'Real-time response analytics',
@@ -60,7 +60,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {
       title: 'Niche Productivity Planner',
       description: 'Industry-specific productivity tools with customized workflows and templates',
-      icon: Target,
+      icon: Targe t,
       features: [
         'Industry-specific templates and workflows',
         'Project management and task tracking',
@@ -76,7 +76,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {
       title: 'Event Management Dashboard',
       description: 'Comprehensive event planning and management platform with ticketing and analytics',
-      icon: Calendar,
+      icon: Calenda r,
       features: [
         'Event creation and management',
         'Ticketing and registration system',
@@ -92,7 +92,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {
       title: 'AI Content Creation Suite',
       description: 'AI-powered content generation platform for marketing and documentation',
-      icon: FileText,
+      icon: FileTex t,
       features: [
         'Automated content generation',
         'SEO optimization and keyword integration',
@@ -108,7 +108,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {
       title: 'Customer Support Platform',
       description: 'Comprehensive helpdesk solution with AI chatbots and ticket management',
-      icon: Users,
+      icon: User s,
       features: [
         'Multi-channel ticket management',
         'AI-powered chatbot integration',
@@ -124,7 +124,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {
       title: 'AI Recruiting Platform',
       description: 'Intelligent recruitment system with automated screening and matching',
-      icon: Brain,
+      icon: Brai n,
       features: [
         'Resume parsing and skill extraction',
         'Automated candidate screening',
@@ -140,7 +140,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {
       title: 'Document Processing Automation',
       description: 'AI-powered document analysis and processing for business automation',
-      icon: FileText,
+      icon: FileTex t,
       features: [
         'Automated data extraction',
         'Document classification and routing',
@@ -156,7 +156,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {
       title: 'Analytics Dashboard Platform',
       description: 'Custom business intelligence and analytics platform with real-time insights',
-      icon: BarChart3,
+      icon: BarChart 3,
       features: [
         'Real-time data visualization',
         'Custom dashboard creation',
@@ -172,7 +172,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {
       title: 'Workflow Automation Engine',
       description: 'No-code workflow automation platform for business process optimization',
-      icon: Settings,
+      icon: Setting s,
       features: [
         'Visual workflow builder',
         'API integrations and webhooks',
@@ -188,7 +188,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {
       title: 'AI-Powered E-commerce Return Manager',
       description: 'Intelligent return processing system with automated decision making and fraud detection',
-      icon: ArrowRight,
+      icon: ArrowRigh t,
       features: [
         'Automated return request processing',
         'AI-powered fraud detection and prevention',
@@ -204,7 +204,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {
       title: 'Smart Inventory Optimization Platform',
       description: 'AI-driven inventory management with demand forecasting and automated reordering',
-      icon: BarChart3,
+      icon: BarChart 3,
       features: [
         'Demand forecasting with machine learning',
         'Automated reorder point calculations',
@@ -220,7 +220,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {
       title: 'AI-Powered SEO Content Optimizer',
       description: 'Intelligent content optimization platform that enhances web page performance and rankings',
-      icon: TrendingUp,
+      icon: TrendingU p,
       features: [
         'Real-time SEO analysis and recommendations',
         'Content optimization suggestions',
@@ -236,7 +236,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {
       title: 'Intelligent Lead Scoring Platform',
       description: 'AI-powered lead qualification and scoring system with behavioral analysis',
-      icon: Target,
+      icon: Targe t,
       features: [
         'Behavioral lead scoring algorithms',
         'Multi-channel lead tracking',
@@ -252,7 +252,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {
       title: 'AI-Powered Social Media Manager',
       description: 'Comprehensive social media management with AI content creation and scheduling',
-      icon: Globe,
+      icon: Glob e,
       features: [
         'AI-generated social media content',
         'Optimal posting time recommendations',
@@ -268,7 +268,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {
       title: 'Smart Expense Management System',
       description: 'AI-powered expense tracking and approval workflow with receipt processing',
-      icon: FileText,
+      icon: FileTex t,
       features: [
         'Automated receipt scanning and processing',
         'Expense categorization with AI',
@@ -284,7 +284,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {
       title: 'AI-Powered Customer Onboarding Platform',
       description: 'Intelligent customer onboarding with personalized journey mapping and automation',
-      icon: Users,
+      icon: User s,
       features: [
         'Personalized onboarding workflows',
         'Progress tracking and analytics',
@@ -300,7 +300,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {
       title: 'Intelligent Meeting Scheduler',
       description: 'AI-powered meeting scheduling with time zone optimization and conflict resolution',
-      icon: Calendar,
+      icon: Calenda r,
       features: [
         'Smart time zone handling',
         'Automatic conflict detection and resolution',
@@ -316,7 +316,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {
       title: 'AI-Powered Code Review Assistant',
       description: 'Intelligent code analysis and review platform with automated quality checks',
-      icon: Code,
+      icon: Cod e,
       features: [
         'Automated code quality analysis',
         'Security vulnerability detection',
@@ -332,7 +332,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {
       title: 'Affiliate Marketing Tracking Platform',
       description: 'Comprehensive affiliate program management with fraud detection and automated payouts',
-      icon: TrendingUp,
+      icon: TrendingU p,
       features: [
         'Custom referral link generation and tracking',
         'Cross-device attribution and fraud detection',
@@ -348,7 +348,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {
       title: 'AI-Powered Email Follow-up Automation',
       description: 'Intelligent email sequence automation with personalization and engagement tracking',
-      icon: Mail,
+      icon: Mai l,
       features: [
         'Smart follow-up sequence creation and management',
         'AI-powered personalization and timing optimization',
@@ -364,7 +364,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {
       title: 'Intelligent Helpdesk & Support Platform',
       description: 'AI-powered customer support system with ticket management and chatbot integration',
-      icon: MessageSquare,
+      icon: MessageSquar e,
       features: [
         'Smart ticket routing and prioritization',
         'AI chatbot with natural language processing',
@@ -380,7 +380,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {
       title: 'AI-Powered Real Estate Investment Analyzer',
       description: 'Comprehensive real estate investment analysis with market predictions and ROI calculations',
-      icon: Home,
+      icon: Hom e,
       features: [
         'Automated property valuation and market analysis',
         'ROI and cash flow projections with AI predictions',
@@ -399,7 +399,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {
       title: 'AI-Powered Website Analytics for Small Business',
       description: 'Intuitive website analytics dashboard designed specifically for small business owners without technical expertise',
-      icon: BarChart3,
+      icon: BarChart 3,
       features: [
         'User-friendly dashboard with plain English insights',
         'Traffic analysis and visitor behavior tracking',
@@ -415,7 +415,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {
       title: 'Smart E-commerce Return Management System',
       description: 'Automated return processing platform that simplifies returns for both merchants and customers',
-      icon: ArrowRight,
+      icon: ArrowRigh t,
       features: [
         'Automated return request processing and approval',
         'Smart return label generation and tracking',
@@ -431,7 +431,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {
       title: 'AI-Powered Content Creation Suite',
       description: 'Comprehensive AI content generation platform for blogs, social media, and marketing materials',
-      icon: FileText,
+      icon: FileTex t,
       features: [
         'AI-generated blog posts and articles',
         'Social media content creation and scheduling',
@@ -447,7 +447,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {
       title: 'Intelligent Email Follow-up Automation',
       description: 'Smart email sequence automation with AI-powered personalization and optimal timing',
-      icon: Mail,
+      icon: Mai l,
       features: [
         'AI-powered email sequence creation and optimization',
         'Personalized content based on recipient behavior',
@@ -466,7 +466,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {
       title: 'AI-Powered Social Media Management Platform',
       description: 'Comprehensive social media management with AI content creation, scheduling, and analytics',
-      icon: Globe,
+      icon: Glob e,
       features: [
         'AI-generated social media posts and captions',
         'Optimal posting time recommendations',
@@ -483,7 +483,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Smart Inventory Optimization System','
       description: 'AI-driven inventory management with demand forecasting and automated reordering',
-      icon: BarChart3,
+      icon: BarChart 3,
       features: [',
         'Demand forecasting with machine learning algorithms,Automated reorder point calculations and alerts,Multi-location inventory tracking and management,Supplier performance analytics and optimization,Cost reduction recommendations,Integration with POS and ERP systems'
       ],'
@@ -494,7 +494,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'AI-Powered Customer Segmentation Platform','
       description: 'Intelligent customer segmentation and targeting with behavioral analysis and predictive modeling',
-      icon: Users,
+      icon: User s,
       features: [',
         'AI-powered customer segmentation and profiling,Behavioral analysis and pattern recognition,Predictive customer lifetime value modeling,Personalized marketing campaign recommendations,Real-time customer journey tracking,Integration with marketing automation tools'
       ],'
@@ -505,7 +505,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Intelligent Project Management Suite','
       description: 'AI-enhanced project management with predictive analytics and resource optimization',
-      icon: Target,
+      icon: Targe t,
       features: [',
         'AI-powered project timeline prediction and optimization,Resource allocation and capacity planning,Risk assessment and mitigation recommendations,Team performance analytics and insights,Automated task prioritization and scheduling,Integration with popular project management tools'
       ],'
@@ -516,7 +516,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'AI-Powered Financial Planning Assistant','
       description: 'Intelligent financial planning and budgeting tool with predictive analytics and recommendations',
-      icon: TrendingUp,
+      icon: TrendingU p,
       features: [',
         'AI-powered budget creation and optimization,Expense categorization and spending analysis,Financial goal tracking and progress monitoring,Predictive cash flow analysis and forecasting,Investment recommendations and portfolio optimization,Tax planning and compliance assistance'
       ],'
@@ -528,7 +528,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Smart Healthcare Appointment Scheduler','
       description: 'AI-powered healthcare scheduling with patient preference learning and resource optimization',
-      icon: Heart,
+      icon: Hear t,
       features: [',
         'Intelligent appointment scheduling with patient preferences,Automated reminder system with multiple channels,Resource optimization and capacity planning,Patient flow analytics and wait time reduction,Integration with EHR and practice management systems,Telehealth appointment support and management'
       ],'
@@ -538,7 +538,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'AI-Powered Fleet Management System','
       description: 'Intelligent fleet tracking and optimization with predictive maintenance and route planning',
-      icon: Car,
+      icon: Ca r,
       features: [',
         'Real-time GPS tracking and route optimization,Predictive maintenance scheduling and alerts,Fuel consumption monitoring and optimization,Driver behavior analysis and safety scoring,Automated compliance reporting and documentation,Integration with telematics and IoT devices'
       ],'
@@ -548,7 +548,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Smart Environmental Monitoring Platform','
       description: 'IoT-based environmental monitoring with AI analytics and compliance reporting',
-      icon: TreePine,
+      icon: TreePin e,
       features: [',
         'Real-time air quality, temperature, and humidity monitoring,AI-powered environmental trend analysis and predictions,Automated compliance reporting for environmental regulations,Alert system for threshold violations and anomalies,Integration with IoT sensors and weather APIs,Custom dashboard and reporting for stakeholders'
       ],'
@@ -558,7 +558,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'AI-Powered Satellite Data Analytics','
       description: 'Advanced satellite imagery analysis for agriculture, urban planning, and environmental monitoring',
-      icon: Satellite,
+      icon: Satellit e,
       features: [',
         'Automated satellite imagery processing and analysis,Crop health monitoring and yield prediction,Urban development tracking and change detection,Environmental impact assessment and monitoring,Custom AI model training for specific use cases,API access for integration with existing systems'
       ],'
@@ -568,7 +568,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Intelligent Voice Analytics Platform','
       description: 'AI-powered voice analysis for call centers, sales teams, and customer service optimization',
-      icon: Mic,
+      icon: Mi c,
       features: [',
         'Real-time speech-to-text with sentiment analysis,Call quality scoring and performance analytics,Automated compliance monitoring and reporting,Customer emotion detection and escalation alerts,Sales conversation analysis and coaching insights,Integration with CRM and call center systems'
       ],'
@@ -578,7 +578,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Smart Invoice Generator Pro','
       description: 'AI-powered invoice creation with automated data extraction, smart categorization, and payment tracking',
-      icon: FileText,
+      icon: FileTex t,
       features: [',
         'Automated invoice generation from purchase orders and contracts,Smart data extraction from emails and documents,Intelligent categorization and tax calculations,Automated payment reminders and follow-ups,Multi-currency support and exchange rate updates,Integration with accounting software and payment gateways,Fraud detection and duplicate invoice prevention,Custom branding and template management'
       ],'
@@ -588,7 +588,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Real Estate Analytics Intelligence Platform','
       description: 'Advanced real estate market analysis with AI-powered predictions and investment insights',
-      icon: Home,
+      icon: Hom e,
       features: [',
         'Comprehensive market trend analysis and forecasting,Property valuation with AI-powered algorithms,Investment opportunity scoring and risk assessment,Neighborhood growth prediction and demographic analysis,Rental yield optimization and cash flow projections,Integration with MLS, Zillow, and property databases,Custom market reports and client presentations,Portfolio performance tracking and optimization'
       ],'
@@ -598,7 +598,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Health Monitoring Dashboard Pro','
       description: 'Comprehensive health tracking platform with AI insights and predictive health analytics',
-      icon: Heart,
+      icon: Hear t,
       features: [',
         'Multi-device health data integration (wearables, medical devices),AI-powered health trend analysis and anomaly detection,Predictive health risk assessment and early warning system,Personalized health recommendations and goal setting,Integration with healthcare providers and EHR systems,Medication tracking and adherence monitoring,Telehealth appointment scheduling and management,Family health monitoring and caregiver notifications'
       ],'
@@ -608,7 +608,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Supply Chain Optimizer AI','
       description: 'Intelligent supply chain management with predictive analytics and automated optimization',
-      icon: Network,
+      icon: Networ k,
       features: [',
         'AI-powered demand forecasting and inventory optimization,Automated supplier performance monitoring and risk assessment,Real-time supply chain visibility and tracking,Predictive maintenance for logistics and transportation,Cost optimization and route planning algorithms,Integration with ERP, WMS, and TMS systems,Sustainability tracking and carbon footprint analysis,Crisis management and disruption response automation'
       ],'
@@ -618,7 +618,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'AI-Powered Carbon Footprint Tracker','
       description: 'Comprehensive carbon footprint monitoring and reduction platform for businesses and individuals',
-      icon: TreePine,
+      icon: TreePin e,
       features: [',
         'Automated carbon footprint calculation across all business operations,Real-time emissions tracking and monitoring,AI-powered reduction recommendations and optimization strategies,Compliance reporting for environmental regulations,Supply chain carbon impact analysis and optimization,Sustainability goal setting and progress tracking,Integration with energy management and IoT systems,Carbon offset marketplace and trading platform'
       ],'
@@ -628,7 +628,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Smart Legal Document Analyzer','
       description: 'AI-powered legal document analysis with contract review, risk assessment, and compliance monitoring',
-      icon: FileText,
+      icon: FileTex t,
       features: [',
         'Automated contract analysis and risk identification,Legal document comparison and version control,Compliance monitoring and regulatory updates,AI-powered legal research and case law analysis,Document generation and template management,Client portal for document sharing and collaboration,Integration with legal databases and court systems,Billing and time tracking for legal professionals'
       ],'
@@ -638,7 +638,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'AI-Powered Restaurant Management Suite','
       description: 'Comprehensive restaurant operations management with AI-driven insights and automation',
-      icon: Heart,
+      icon: Hear t,
       features: [',
         'Intelligent inventory management and waste reduction,AI-powered menu optimization and pricing strategies,Customer behavior analysis and personalized recommendations,Staff scheduling optimization and labor cost management,Real-time sales analytics and performance tracking,Integration with POS systems and delivery platforms,Food safety compliance monitoring and reporting,Supplier relationship management and procurement optimization'
       ],'
@@ -648,7 +648,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Smart Learning Management System Pro','
       description: 'AI-enhanced learning platform with personalized content delivery and progress tracking',
-      icon: Brain,
+      icon: Brai n,
       features: [',
         'AI-powered personalized learning paths and content recommendations,Automated assessment generation and grading,Real-time progress tracking and performance analytics,Interactive content creation tools and multimedia support,Collaborative learning features and discussion forums,Integration with HR systems and performance management,Mobile learning apps and offline content access,Compliance tracking and certification management'
       ],'
@@ -658,7 +658,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'AI-Powered Customer Churn Predictor','
       description: 'Advanced customer retention platform with predictive analytics and automated intervention strategies',
-      icon: Users,
+      icon: User s,
       features: [',
         'AI-powered churn prediction with 95%+ accuracy,Real-time customer behavior monitoring and analysis,Automated intervention campaigns and retention strategies,Customer lifetime value prediction and optimization,Integration with CRM and marketing automation platforms,Personalized retention offers and loyalty programs,Performance analytics and ROI tracking,Multi-channel engagement and communication management'
       ],'
@@ -668,7 +668,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Smart Energy Management Platform','
       description: 'AI-driven energy optimization for buildings and facilities with cost reduction and sustainability focus',
-      icon: Zap,
+      icon: Za p,
       features: [',
         'Real-time energy consumption monitoring and analysis,AI-powered energy optimization and cost reduction,Automated demand response and load balancing,Integration with smart meters and IoT devices,Energy efficiency recommendations and implementation tracking,Renewable energy integration and management,Compliance reporting for energy regulations,Predictive maintenance for energy systems'
       ],'
@@ -678,7 +678,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'AI-Powered Fraud Detection Suite','
       description: 'Advanced fraud prevention and detection platform with real-time monitoring and automated response',
-      icon: Shield,
+      icon: Shiel d,
       features: [',
         'Real-time fraud detection with machine learning algorithms,Multi-channel fraud monitoring (transactions, accounts, devices),Automated risk scoring and decision making,Integration with payment processors and financial systems,Behavioral analysis and anomaly detection,Compliance reporting and audit trails,Custom fraud rules and exception handling,24/7 monitoring and alert system'
       ],'
@@ -688,7 +688,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Smart Inventory Forecasting Platform','
       description: 'AI-powered inventory prediction and optimization with demand forecasting and automated reordering',
-      icon: BarChart3,
+      icon: BarChart 3,
       features: [',
         'Advanced demand forecasting with seasonal and trend analysis,Automated reorder point calculations and safety stock optimization,Multi-location inventory tracking and management,Supplier performance monitoring and risk assessment,Integration with ERP and e-commerce platforms,Real-time inventory analytics and reporting,Cost optimization and waste reduction strategies,Supply chain disruption prediction and mitigation'
       ],'
@@ -698,7 +698,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'AI-Powered Social Media Analytics Suite','
       description: 'Comprehensive social media management with AI-driven content optimization and performance analytics',
-      icon: Globe,
+      icon: Glob e,
       features: [',
         'AI-powered content creation and optimization suggestions,Real-time social media monitoring and sentiment analysis,Automated posting schedule optimization,Influencer identification and relationship management,Competitor analysis and market intelligence,ROI tracking and performance analytics,Multi-platform content management and scheduling,Integration with CRM and marketing automation tools'
       ],'
@@ -708,7 +708,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Smart Compliance Management Platform','
       description: 'Automated compliance monitoring and reporting with AI-powered risk assessment and regulatory updates',
-      icon: Shield,
+      icon: Shiel d,
       features: [',
         'Automated compliance monitoring across multiple regulations,AI-powered risk assessment and mitigation recommendations,Real-time regulatory updates and change notifications,Document management and audit trail maintenance,Compliance reporting and dashboard analytics,Integration with business systems and data sources,Training management and certification tracking,Incident management and response workflows'
       ],'
@@ -718,7 +718,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Social Media Scheduler Pro','
       description: 'Advanced social media management with AI content creation and optimal posting strategies',
-      icon: Globe,
+      icon: Glob e,
       features: [',
         'AI-powered content creation and curation,Optimal posting time analysis and automation,Hashtag research and trending topic identification,Cross-platform content adaptation and optimization,Engagement prediction and audience targeting,Influencer collaboration and campaign management,Brand sentiment monitoring and crisis management,ROI tracking and performance analytics dashboard'
       ],'
@@ -728,7 +728,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Smart Learning Management System','
       description: 'AI-powered educational platform with personalized learning paths and progress tracking',
-      icon: Brain,
+      icon: Brai n,
       features: [',
         'Personalized learning path recommendations,Adaptive content delivery based on learning style,Automated assessment and grading with AI,Progress tracking and performance analytics,Gamification and engagement features,Integration with video conferencing and collaboration tools'
       ],'
@@ -738,7 +738,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'AI-Powered Legal Document Analyzer','
       description: 'Intelligent legal document review and analysis with contract risk assessment',
-      icon: FileText,
+      icon: FileTex t,
       features: [',
         'Automated contract analysis and risk identification,Legal precedent research and case law analysis,Compliance checking against regulations and standards,Document comparison and version control,Automated legal research and citation verification,Integration with legal practice management systems'
       ],'
@@ -748,7 +748,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Smart Restaurant Management Platform','
       description: 'Comprehensive restaurant operations management with AI-powered inventory and staff optimization',
-      icon: Heart,
+      icon: Hear t,
       features: [',
         'AI-powered demand forecasting and inventory management,Dynamic pricing optimization based on demand and competition,Staff scheduling optimization and labor cost management,Customer preference analysis and menu optimization,Real-time performance analytics and KPI tracking,Integration with POS, delivery, and reservation systems'
       ],'
@@ -758,7 +758,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'AI-Powered Personal Finance Manager','
       description: 'Intelligent personal finance tracking with budgeting, investment advice, and goal setting',
-      icon: TrendingUp,
+      icon: TrendingU p,
       features: [',
         'Automated expense categorization and budgeting,AI-powered investment recommendations and portfolio optimization,Goal-based savings and investment planning,Bill payment automation and reminder system,Credit score monitoring and improvement suggestions,Integration with banks, credit cards, and investment accounts'
       ],'
@@ -768,7 +768,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Smart Home Automation Platform','
       description: 'AI-powered home automation with energy optimization and security management',
-      icon: Home,
+      icon: Hom e,
       features: [',
         'Intelligent energy consumption monitoring and optimization,Automated security system management and alerts,Smart device integration and control via voice/phone,Predictive maintenance for home appliances,Energy cost analysis and savings recommendations,Integration with popular smart home ecosystems'
       ],'
@@ -778,7 +778,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'AI-Powered Content Creation Suite','
       description: 'Comprehensive content generation platform for blogs, social media, and marketing materials',
-      icon: FileText,
+      icon: FileTex t,
       features: [',
         'AI-generated blog posts, articles, and web content,Social media content creation and scheduling,Marketing copy and email templates,SEO optimization and keyword integration,Brand voice consistency and tone matching,Content calendar and publishing automation'
       ],'
@@ -788,7 +788,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Smart Project Management Dashboard','
       description: 'AI-enhanced project management with predictive analytics and resource optimization',
-      icon: Target,
+      icon: Targe t,
       features: [',
         'AI-powered project timeline prediction,Resource allocation and workload optimization,Risk assessment and mitigation recommendations,Team collaboration and communication tools,Progress tracking and milestone management,Integration with popular development and design tools'
       ],'
@@ -798,7 +798,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Intelligent Financial Analytics Platform','
       description: 'AI-powered financial analysis and forecasting with automated reporting',
-      icon: BarChart3,
+      icon: BarChart 3,
       features: [',
         'Automated financial data analysis and insights,Predictive cash flow and revenue forecasting,Expense categorization and budget optimization,Investment portfolio analysis and recommendations,Compliance reporting and audit preparation,Integration with accounting software and banks'
       ],'
@@ -808,7 +808,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'AI-Powered HR Management System','
       description: 'Comprehensive human resources platform with recruitment automation and employee analytics',
-      icon: Users,
+      icon: User s,
       features: [',
         'AI-powered resume screening and candidate matching,Employee performance tracking and analytics,Automated onboarding and training workflows,Payroll processing and benefits management,Employee engagement surveys and feedback,Compliance tracking and reporting'
       ],'
@@ -818,7 +818,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Quantum-Enhanced Data Analytics Platform','
       description: 'Next-generation analytics platform leveraging quantum computing for complex data processing and insights',
-      icon: Cpu,
+      icon: Cp u,
       features: [',
         'Quantum-powered data processing and analysis,Real-time complex pattern recognition,Advanced predictive modeling and forecasting,Multi-dimensional data visualization,Quantum machine learning algorithms,Integration with classical computing systems'
       ],'
@@ -828,7 +828,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'AI-Powered Cybersecurity Threat Intelligence','
       description: 'Advanced threat detection and response platform with AI-driven security analytics',
-      icon: Shield,
+      icon: Shiel d,
       features: [',
         'Real-time threat detection and analysis,AI-powered behavioral anomaly detection,Automated incident response and remediation,Zero-day vulnerability identification,Threat intelligence and attribution,Compliance monitoring and reporting'
       ],'
@@ -838,7 +838,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Blockchain-Based Supply Chain Transparency','
       description: 'Immutable supply chain tracking and verification platform with smart contracts',
-      icon: Network,
+      icon: Networ k,
       features: [',
         'End-to-end supply chain visibility,Smart contract automation and execution,Product authenticity verification,Sustainability and compliance tracking,Real-time inventory and logistics management,Integration with IoT sensors and devices'
       ],'
@@ -848,7 +848,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'AI-Powered Voice Commerce Platform','
       description: 'Voice-activated e-commerce solution with natural language processing and personalization',
-      icon: Mic,
+      icon: Mi c,
       features: [',
         'Voice-activated shopping and ordering,Natural language product search and recommendations,Voice-based payment processing,Multi-language voice recognition,Personalized shopping experiences,Integration with smart home devices'
       ],'
@@ -858,7 +858,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Metaverse Business Platform','
       description: 'Virtual business environment with 3D spaces, avatars, and immersive collaboration tools',
-      icon: Globe,
+      icon: Glob e,
       features: [',
         '3D virtual office spaces and meeting rooms,Avatar-based collaboration and networking,Virtual product demonstrations and showrooms,Immersive training and onboarding experiences,Virtual events and conferences,Integration with VR/AR devices'
       ],'
@@ -868,7 +868,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'AI-Powered Personal Finance Coach','
       description: 'Intelligent financial planning and investment advisory platform with personalized recommendations',
-      icon: TrendingUp,
+      icon: TrendingU p,
       features: [',
         'AI-driven financial goal setting and tracking,Personalized investment recommendations,Real-time market analysis and alerts,Automated budget optimization,Tax planning and optimization,Integration with banking and investment accounts'
       ],'
@@ -878,7 +878,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Smart Home Automation Hub','
       description: 'AI-powered home automation platform with predictive maintenance and energy optimization',
-      icon: Home,
+      icon: Hom e,
       features: [',
         'Intelligent device control and automation,Predictive maintenance and diagnostics,Energy consumption optimization,Security monitoring and alerts,Voice and gesture control,Integration with 500+ smart devices'
       ],'
@@ -888,7 +888,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'AI-Powered Mental Health Companion','
       description: 'Intelligent mental wellness platform with mood tracking, therapy sessions, and crisis intervention',
-      icon: Heart,
+      icon: Hear t,
       features: [',
         'AI-powered mood analysis and tracking,Personalized therapy and meditation sessions,Crisis detection and intervention,Progress monitoring and insights,Integration with wearable devices,HIPAA-compliant data protection'
       ],'
@@ -898,7 +898,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Autonomous Fleet Management System','
       description: 'AI-driven fleet optimization platform for autonomous and traditional vehicle management',
-      icon: Car,
+      icon: Ca r,
       features: [',
         'Autonomous vehicle coordination and routing,Predictive maintenance and diagnostics,Real-time traffic optimization,Fuel efficiency and cost optimization,Driver behavior analysis and coaching,Integration with telematics and sensors'
       ],'
@@ -908,7 +908,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'AI-Powered Legal Document Analyzer','
       description: 'Intelligent legal document processing platform with contract analysis and risk assessment',
-      icon: FileText,
+      icon: FileTex t,
       features: [',
         'Automated contract analysis and review,Legal risk assessment and recommendations,Compliance monitoring and alerts,Document generation and templating,Case law research and citation,Integration with legal databases and systems'
       ],'
@@ -918,7 +918,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Smart Agriculture Management Platform','
       description: 'AI-driven agricultural optimization platform with precision farming and yield prediction',
-      icon: TreePine,
+      icon: TreePin e,
       features: [',
         'Precision farming and crop monitoring,AI-powered yield prediction and optimization,Weather and climate analysis,Pest and disease detection,Automated irrigation and fertilization,Integration with IoT sensors and drones'
       ],'
@@ -928,7 +928,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'AI-Powered Energy Trading Platform','
       description: 'Intelligent energy market platform with automated trading and grid optimization',
-      icon: Zap,
+      icon: Za p,
       features: [',
         'AI-driven energy price prediction,Automated trading and arbitrage,Grid optimization and load balancing,Renewable energy integration,Carbon credit trading,Real-time market analysis and alerts'
       ],'
@@ -938,7 +938,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Virtual Reality Training Simulator','
       description: 'Immersive VR training platform for complex skills and emergency response scenarios',
-      icon: Eye,
+      icon: Ey e,
       features: [',
         'Immersive VR training environments,Realistic scenario simulation,Performance tracking and analytics,Multi-user collaborative training,Custom scenario creation tools,Integration with learning management systems'
       ],'
@@ -948,7 +948,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'AI-Powered Space Mission Planning','
       description: 'Advanced space mission optimization platform with trajectory planning and resource management',
-      icon: Satellite,
+      icon: Satellit e,
       features: [',
         'Orbital mechanics and trajectory optimization,Mission planning and resource allocation,Satellite constellation management,Space debris tracking and avoidance,Launch window optimization,Integration with space agency APIs'
       ],'
@@ -958,7 +958,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'AI-Powered Real Estate Investment Analyzer','
       description: 'Intelligent property investment platform with market analysis and ROI prediction',
-      icon: TrendingUp,
+      icon: TrendingU p,
       features: [',
         'AI-driven property valuation and market analysis,ROI prediction and investment recommendations,Neighborhood trend analysis and forecasting,Rental income optimization strategies,Risk assessment and portfolio diversification,Integration with MLS and property databases'
       ],'
@@ -968,7 +968,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Smart Waste Management Platform','
       description: 'AI-powered waste optimization system with route planning and recycling analytics',
-      icon: TreePine,
+      icon: TreePin e,
       features: [',
         'Intelligent waste collection route optimization,Recycling rate tracking and improvement,Predictive maintenance for waste equipment,Carbon footprint reduction analytics,Community engagement and education tools,Integration with IoT sensors and smart bins'
       ],'
@@ -978,7 +978,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'AI-Powered Language Learning Platform','
       description: 'Personalized language learning with AI tutors and real-time conversation practice',
-      icon: Brain,
+      icon: Brai n,
       features: [',
         'AI-powered personalized learning paths,Real-time pronunciation and accent correction,Conversational AI practice partners,Cultural context and immersion experiences,Progress tracking and adaptive difficulty,Integration with voice recognition and translation APIs'
       ],'
@@ -988,7 +988,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Intelligent Restaurant Management System','
       description: 'AI-driven restaurant operations platform with demand forecasting and inventory optimization',
-      icon: Heart,
+      icon: Hear t,
       features: [',
         'AI-powered demand forecasting and menu optimization,Dynamic pricing and revenue management,Inventory tracking and waste reduction,Customer preference analysis and personalization,Staff scheduling and performance optimization,Integration with POS systems and delivery platforms'
       ],'
@@ -998,7 +998,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'AI-Powered Pet Care Platform','
       description: 'Comprehensive pet health and wellness platform with AI diagnostics and care recommendations',
-      icon: Heart,
+      icon: Hear t,
       features: [',
         'AI-powered health monitoring and diagnostics,Personalized nutrition and exercise plans,Veterinary appointment scheduling and reminders,Behavioral analysis and training recommendations,Emergency detection and alert system,Integration with wearable pet devices and vet records'
       ],'
@@ -1008,7 +1008,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Smart City Traffic Optimization Platform','
       description: 'AI-driven urban traffic management with real-time optimization and congestion reduction',
-      icon: Car,
+      icon: Ca r,
       features: [',
         'Real-time traffic flow optimization,Predictive congestion modeling and prevention,Smart traffic light coordination,Emergency vehicle priority routing,Air quality monitoring and pollution reduction,Integration with city infrastructure and IoT sensors'
       ],'
@@ -1018,7 +1018,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'AI-Powered Personal Stylist Platform','
       description: 'Intelligent fashion and style recommendation system with virtual try-on capabilities',
-      icon: Eye,
+      icon: Ey e,
       features: [',
         'AI-powered style analysis and recommendations,Virtual try-on with AR technology,Wardrobe organization and outfit planning,Size prediction and fit optimization,Trend analysis and personal style evolution,Integration with fashion retailers and social media'
       ],'
@@ -1028,7 +1028,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Intelligent Home Security System','
       description: 'AI-powered home security platform with facial recognition and behavioral analysis',
-      icon: Shield,
+      icon: Shiel d,
       features: [',
         'AI-powered facial recognition and access control,Behavioral anomaly detection and alerts,Smart camera analytics and object recognition,Automated emergency response coordination,Integration with smart home devices,Privacy-focused local processing and storage'
       ],'
@@ -1038,7 +1038,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'AI-Powered Music Composition Platform','
       description: 'Intelligent music creation platform with AI composition and collaboration tools',
-      icon: Mic,
+      icon: Mi c,
       features: [',
         'AI-powered music composition and arrangement,Style transfer and genre adaptation,Real-time collaboration and version control,Lyrics generation and vocal synthesis,Copyright detection and royalty management,Integration with DAWs and music streaming platforms'
       ],'
@@ -1048,7 +1048,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Smart Water Quality Monitoring System','
       description: 'AI-driven water quality analysis platform with contamination detection and treatment optimization',
-      icon: TreePine,
+      icon: TreePin e,
       features: [',
         'Real-time water quality monitoring and analysis,Contamination detection and early warning systems,Treatment optimization and chemical dosing,Predictive maintenance for water infrastructure,Compliance monitoring and reporting,Integration with IoT sensors and SCADA systems'
       ],'
@@ -1058,7 +1058,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'AI-Powered Personal Trainer Platform','
       description: 'Intelligent fitness coaching platform with personalized workout plans and form analysis',
-      icon: Heart,
+      icon: Hear t,
       features: [',
         'AI-powered personalized workout and nutrition plans,Real-time form analysis and correction,Progress tracking and goal optimization,Injury prevention and recovery recommendations,Integration with fitness wearables and equipment,Virtual personal training sessions'
       ],'
@@ -1068,7 +1068,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Intelligent Supply Chain Risk Management','
       description: 'AI-powered supply chain resilience platform with risk prediction and mitigation strategies',
-      icon: Network,
+      icon: Networ k,
       features: [',
         'AI-powered risk assessment and prediction,Supply chain disruption early warning,Alternative supplier identification and evaluation,Cost optimization and procurement automation,Sustainability tracking and carbon footprint analysis,Integration with ERP and logistics systems'
       ],'
@@ -1078,7 +1078,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'AI-Powered Sleep Optimization Platform','
       description: 'Intelligent sleep analysis and improvement platform with personalized recommendations',
-      icon: Heart,
+      icon: Hear t,
       features: [',
         'AI-powered sleep pattern analysis and optimization,Personalized sleep environment recommendations,Sleep quality tracking and improvement plans,Integration with smart home devices and wearables,Sleep disorder detection and medical referrals,Circadian rhythm optimization and light therapy'
       ],'
@@ -1088,7 +1088,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Smart Parking Management System','
       description: 'AI-driven parking optimization platform with real-time availability and pricing',
-      icon: Car,
+      icon: Ca r,
       features: [',
         'Real-time parking space detection and availability,Dynamic pricing and demand-based optimization,Reservation system and mobile payments,Traffic flow optimization and congestion reduction,Integration with navigation apps and city systems,Revenue optimization and analytics dashboard'
       ],'
@@ -1098,7 +1098,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'AI-Powered Wine Recommendation Engine','
       description: 'Intelligent wine discovery platform with taste profiling and food pairing recommendations',
-      icon: Heart,
+      icon: Hear t,
       features: [',
         'AI-powered taste profile analysis and matching,Food pairing recommendations and menu optimization,Wine cellar management and inventory tracking,Price optimization and deal alerts,Social features and community recommendations,Integration with wine retailers and sommelier databases'
       ],'
@@ -1108,7 +1108,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Intelligent Elderly Care Platform','
       description: 'AI-powered senior care management system with health monitoring and family communication',
-      icon: Heart,
+      icon: Hear t,
       features: [',
         'AI-powered health monitoring and fall detection,Medication management and reminder systems,Family communication and care coordination,Emergency response and medical alert integration,Cognitive health tracking and stimulation activities,Integration with medical devices and healthcare providers'
       ],'
@@ -1118,7 +1118,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'AI-Powered Carbon Footprint Tracker','
       description: 'Intelligent environmental impact monitoring with reduction strategies and offset recommendations',
-      icon: TreePine,
+      icon: TreePin e,
       features: [',
         'AI-powered carbon footprint calculation and tracking,Personalized reduction strategies and recommendations,Carbon offset marketplace and verification,Sustainability goal setting and progress tracking,Integration with transportation and energy usage data,Corporate sustainability reporting and compliance'
       ],'
@@ -1128,7 +1128,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Smart Retail Analytics Platform','
       description: 'AI-driven retail optimization with customer behavior analysis and inventory management',
-      icon: BarChart3,
+      icon: BarChart 3,
       features: [',
         'AI-powered customer behavior analysis and prediction,Dynamic pricing and promotion optimization,Inventory management and demand forecasting,Store layout optimization and heat mapping,Customer journey tracking and personalization,Integration with POS systems and loyalty programs'
       ],'
@@ -1138,7 +1138,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'AI-Powered Customer Success Platform','
       description: 'Intelligent customer success management with predictive churn prevention and automated engagement',
-      icon: Users,
+      icon: User s,
       features: [',
         'Predictive churn analysis and prevention,Automated customer health scoring,Personalized engagement campaigns,Success milestone tracking and alerts,Integration with CRM and support systems,Advanced analytics and reporting dashboard'
       ],'
@@ -1148,7 +1148,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Smart Contract Management Platform','
       description: 'AI-powered contract lifecycle management with automated review and compliance monitoring',
-      icon: FileText,
+      icon: FileTex t,
       features: [',
         'Automated contract review and risk assessment,Smart clause extraction and analysis,Compliance monitoring and alerts,Contract renewal and expiration tracking,Digital signature integration,Advanced search and analytics'
       ],'
@@ -1158,7 +1158,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Intelligent Inventory Forecasting System','
       description: 'AI-driven inventory optimization with demand prediction and automated reordering',
-      icon: BarChart3,
+      icon: BarChart 3,
       features: [',
         'Demand forecasting with 95%+ accuracy,Automated reorder point optimization,Seasonal trend analysis and adjustment,Multi-location inventory synchronization,Supplier performance tracking,Cost optimization recommendations'
       ],'
@@ -1168,7 +1168,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'AI-Powered Sales Coaching Platform','
       description: 'Intelligent sales performance optimization with real-time coaching and analytics',
-      icon: Target,
+      icon: Targe t,
       features: [',
         'Real-time sales call analysis and feedback,Performance benchmarking and improvement suggestions,Automated coaching recommendations,Sales pipeline optimization,Team performance analytics,Integration with CRM and communication tools'
       ],'
@@ -1178,7 +1178,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Smart Employee Wellness Platform','
       description: 'Comprehensive employee wellness tracking with AI insights and personalized recommendations',
-      icon: Heart,
+      icon: Hear t,
       features: [',
         'Health and wellness tracking dashboard,AI-powered wellness recommendations,Mental health monitoring and support,Team wellness challenges and gamification,Integration with fitness trackers and health apps,Privacy-compliant analytics and reporting'
       ],'
@@ -1188,7 +1188,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'AI-Powered Content Moderation Platform','
       description: 'Intelligent content moderation with real-time detection and automated action',
-      icon: Shield,
+      icon: Shiel d,
       features: [',
         'Real-time content analysis and flagging,Multi-language content moderation,Custom moderation rule configuration,Automated action and escalation workflows,Detailed analytics and reporting,API integration for seamless deployment'
       ],'
@@ -1198,7 +1198,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Smart Energy Management Platform','
       description: 'AI-driven energy optimization for buildings and facilities with cost reduction',
-      icon: Zap,
+      icon: Za p,
       features: [',
         'Real-time energy consumption monitoring,Predictive energy usage optimization,Automated demand response management,Cost analysis and savings recommendations,Integration with smart building systems,Sustainability reporting and compliance'
       ],'
@@ -1208,7 +1208,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'AI-Powered Learning Management System','
       description: 'Intelligent educational platform with personalized learning paths and progress tracking',
-      icon: Brain,
+      icon: Brai n,
       features: [',
         'Personalized learning path generation,Adaptive content delivery and assessment,Progress tracking and performance analytics,Gamification and engagement features,Multi-modal content support,Integration with existing educational tools'
       ],'
@@ -1218,7 +1218,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Intelligent Property Management Platform','
       description: 'AI-powered property management with automated maintenance and tenant services',
-      icon: Home,
+      icon: Hom e,
       features: [',
         'Automated maintenance scheduling and tracking,Tenant communication and service requests,Property performance analytics,Financial management and reporting,Integration with IoT devices and sensors,Mobile app for tenants and managers'
       ],'
@@ -1228,7 +1228,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'AI-Powered Compliance Monitoring System','
       description: 'Automated compliance tracking and reporting with regulatory change management',
-      icon: Shield,
+      icon: Shiel d,
       features: [',
         'Real-time compliance monitoring and alerts,Automated regulatory change detection,Compliance reporting and documentation,Risk assessment and mitigation recommendations,Integration with existing business systems,Audit trail and evidence management'
       ],'
@@ -1238,7 +1238,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Smart Fleet Maintenance Platform','
       description: 'Predictive fleet maintenance with IoT integration and cost optimization',
-      icon: Car,
+      icon: Ca r,
       features: [',
         'Predictive maintenance scheduling,Real-time vehicle health monitoring,Maintenance cost optimization,Driver behavior analysis and coaching,Route optimization and fuel efficiency,Integration with fleet management systems'
       ],'
@@ -1248,7 +1248,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'AI-Powered Podcast Transcription Service','
       description: 'High-accuracy podcast transcription with speaker identification and SEO optimization',
-      icon: Mic,
+      icon: Mi c,
       features: [',
         '99%+ accuracy transcription with AI,Speaker identification and separation,Time-stamped transcripts with search functionality,SEO-optimized content generation,Multi-language support and translation,Integration with podcast hosting platforms'
       ],'
@@ -1258,7 +1258,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Intelligent Freelancer Portfolio Builder','
       description: 'AI-powered portfolio creation platform with automated content generation and optimization',
-      icon: Users,
+      icon: User s,
       features: [',
         'AI-generated portfolio content and descriptions,Automated project showcase creation,SEO optimization for better visibility,Integration with freelance platforms,Client testimonial management,Analytics and performance tracking'
       ],'
@@ -1268,7 +1268,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Smart Local Business CRM','
       description: 'Simplified CRM designed for local businesses with appointment scheduling and customer insights',
-      icon: Users,
+      icon: User s,
       features: [',
         'Customer contact and interaction tracking,Automated appointment scheduling and reminders,Local marketing campaign management,Customer feedback and review collection,Inventory and service management,Integration with local business tools'
       ],'
@@ -1278,7 +1278,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'AI-Powered Website Analytics for SMBs','
       description: 'Simplified website analytics with AI insights and actionable recommendations for small businesses',
-      icon: BarChart3,
+      icon: BarChart 3,
       features: [',
         'Simplified traffic and engagement metrics,AI-powered insights and recommendations,Conversion tracking and optimization,Competitor analysis and benchmarking,Automated reporting and alerts,Integration with marketing tools'
       ],'
@@ -1288,7 +1288,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Intelligent E-commerce Return Manager','
       description: 'Automated return processing with AI decision making and fraud prevention',
-      icon: ArrowRight,
+      icon: ArrowRigh t,
       features: [',
         'Automated return request processing,AI-powered fraud detection,Smart return label generation,Real-time inventory updates,Customer satisfaction tracking,Integration with major e-commerce platforms'
       ],'
@@ -1298,7 +1298,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'AI-Powered Content Moderation Platform','
       description: 'Automated content moderation with AI detection of inappropriate content and spam',
-      icon: Shield,
+      icon: Shiel d,
       features: [',
         'AI-powered content analysis and filtering,Real-time moderation across platforms,Custom moderation rules and policies,User behavior analysis and reporting,Integration with social media and forums,Compliance with platform guidelines'
       ],'
@@ -1308,7 +1308,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Smart Inventory Forecasting System','
       description: 'AI-driven inventory prediction with demand forecasting and automated reordering',
-      icon: TrendingUp,
+      icon: TrendingU p,
       features: [',
         'Machine learning demand forecasting,Automated reorder point calculations,Seasonal trend analysis,Supplier performance tracking,Cost optimization recommendations,Integration with POS and ERP systems'
       ],'
@@ -1318,7 +1318,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'AI-Powered Customer Feedback Analyzer','
       description: 'Intelligent feedback analysis with sentiment tracking and actionable insights',
-      icon: MessageSquare,
+      icon: MessageSquar e,
       features: [',
         'Automated sentiment analysis of customer feedback,Real-time feedback categorization and prioritization,Trend analysis and pattern recognition,Actionable insight generation,Integration with review platforms,Automated response suggestions'
       ],'
@@ -1328,7 +1328,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Intelligent Meeting Transcription & Notes','
       description: 'AI-powered meeting transcription with automatic note generation and action item extraction',
-      icon: Mic,
+      icon: Mi c,
       features: [',
         'Real-time meeting transcription,Automatic note generation and summarization,Action item extraction and assignment,Speaker identification and attribution,Integration with calendar and productivity tools,Search and retrieval of meeting content'
       ],'
@@ -1338,7 +1338,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'AI-Powered Social Media Analytics','
       description: 'Comprehensive social media analytics with AI insights and competitor analysis',
-      icon: Globe,
+      icon: Glob e,
       features: [',
         'Multi-platform social media analytics,AI-powered content performance insights,Competitor analysis and benchmarking,Hashtag and trend analysis,Audience sentiment and engagement tracking,Automated reporting and recommendations'
       ],'
@@ -1348,7 +1348,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'AI-Powered Legal Document Analyzer','
       description: 'Intelligent legal document review and analysis with contract risk assessment and compliance checking',
-      icon: FileText,
+      icon: FileTex t,
       features: [',
         'Automated contract analysis and risk assessment,Legal compliance checking and regulatory updates,Document comparison and version control,Clause extraction and categorization,Deadline tracking and reminder system,Integration with legal databases and case law,Client portal and collaboration tools,Cost tracking and billing automation'
       ],'
@@ -1358,7 +1358,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Smart Energy Management Platform','
       description: 'AI-driven energy optimization for buildings and facilities with predictive analytics and cost reduction',
-      icon: Zap,
+      icon: Za p,
       features: [',
         'Real-time energy consumption monitoring and analysis,AI-powered energy usage optimization and cost reduction,Predictive maintenance for energy systems,Peak demand management and load balancing,Renewable energy integration and optimization,Carbon footprint tracking and sustainability reporting,Integration with smart meters and IoT devices,Custom energy efficiency recommendations'
       ],'
@@ -1368,7 +1368,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'AI-Powered Learning Management System','
       description: 'Intelligent educational platform with personalized learning paths and automated assessment',
-      icon: Brain,
+      icon: Brai n,
       features: [',
         'AI-powered personalized learning path creation,Automated content generation and curriculum adaptation,Intelligent assessment and grading system,Student progress tracking and analytics,Adaptive learning algorithms and recommendation engine,Integration with educational tools and LMS platforms,Parent and teacher dashboard with insights,Compliance with educational standards and regulations'
       ],'
@@ -1378,7 +1378,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Smart Restaurant Management Suite','
       description: 'Comprehensive restaurant operations platform with AI-powered inventory, staffing, and customer analytics',
-      icon: Heart,
+      icon: Hear t,
       features: [',
         'AI-powered inventory management and waste reduction,Smart staffing optimization and scheduling,Customer behavior analysis and loyalty programs,Menu optimization based on sales data and trends,Kitchen workflow optimization and order management,Integration with POS systems and delivery platforms,Real-time analytics and performance dashboards,Compliance tracking for food safety and regulations'
       ],'
@@ -1388,7 +1388,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'AI-Powered Insurance Claims Processor','
       description: 'Intelligent insurance claims processing with automated damage assessment and fraud detection',
-      icon: Shield,
+      icon: Shiel d,
       features: [',
         'Automated claims intake and processing workflow,AI-powered damage assessment from photos and documents,Fraud detection and risk scoring algorithms,Automated settlement calculations and recommendations,Integration with insurance databases and third-party services,Real-time claim status tracking and customer communication,Compliance with insurance regulations and standards,Analytics and reporting for claims management'
       ],'
@@ -1398,7 +1398,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Smart Manufacturing Quality Control','
       description: 'AI-powered quality control system for manufacturing with real-time defect detection and process optimization',
-      icon: Settings,
+      icon: Setting s,
       features: [',
         'Real-time quality inspection with computer vision,Automated defect detection and classification,Process optimization and predictive maintenance,Quality trend analysis and root cause identification,Integration with manufacturing equipment and sensors,Compliance tracking and audit trail management,Supplier quality management and scoring,Cost reduction through waste minimization'
       ],'
@@ -1408,7 +1408,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'AI-Powered Personal Finance Coach','
       description: 'Intelligent personal finance management with budgeting, investment advice, and financial goal tracking',
-      icon: TrendingUp,
+      icon: TrendingU p,
       features: [',
         'AI-powered budgeting and expense categorization,Personalized investment recommendations and portfolio optimization,Financial goal setting and progress tracking,Bill payment automation and reminder system,Credit score monitoring and improvement suggestions,Tax optimization and preparation assistance,Integration with banks and financial institutions,Financial education and literacy content'
       ],'
@@ -1418,7 +1418,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Smart Agriculture Management Platform','
       description: 'AI-driven agricultural management with crop monitoring, yield prediction, and resource optimization',
-      icon: TreePine,
+      icon: TreePin e,
       features: [',
         'Crop health monitoring with satellite imagery and IoT sensors,AI-powered yield prediction and optimization,Precision agriculture and variable rate application,Weather integration and climate risk assessment,Soil analysis and nutrient management,Pest and disease detection and treatment recommendations,Integration with farm equipment and machinery,Market price tracking and selling optimization'
       ],'
@@ -1428,7 +1428,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'AI-Powered Mental Health Companion','
       description: 'Intelligent mental health support platform with mood tracking, therapy recommendations, and crisis intervention',
-      icon: Heart,
+      icon: Hear t,
       features: [',
         'AI-powered mood tracking and emotional analysis,Personalized therapy and wellness recommendations,Crisis detection and emergency intervention protocols,Integration with healthcare providers and therapists,Meditation and mindfulness exercises with AI guidance,Progress tracking and mental health insights,Peer support community and group therapy features,Compliance with HIPAA and mental health regulations'
       ],'
@@ -1438,7 +1438,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Smart Home Automation Hub','
       description: 'AI-powered home automation platform with intelligent device control and energy optimization',
-      icon: Home,
+      icon: Hom e,
       features: [',
         'AI-powered device automation and scheduling,Energy usage optimization and cost reduction,Security monitoring and alert system,Voice control integration with smart speakers,Learning algorithms for user behavior patterns,Integration with popular smart home devices,Remote monitoring and control capabilities,Maintenance alerts and device health monitoring'
       ],'
@@ -1448,7 +1448,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'AI-Powered Language Learning Platform','
       description: 'Intelligent language learning with personalized curriculum, speech recognition, and cultural context',
-      icon: Globe,
+      icon: Glob e,
       features: [',
         'AI-powered personalized learning curriculum,Advanced speech recognition and pronunciation analysis,Cultural context and real-world scenario training,Adaptive difficulty adjustment based on progress,Conversation practice with AI tutors,Integration with native speakers and language exchange,Progress tracking and achievement system,Multi-language support and cross-lingual learning'
       ],'
@@ -1458,7 +1458,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Smart Fitness & Wellness Coach','
       description: 'AI-powered fitness platform with personalized workout plans, nutrition tracking, and health monitoring',
-      icon: Heart,
+      icon: Hear t,
       features: [',
         'AI-powered personalized workout plan generation,Nutrition tracking and meal planning with AI recommendations,Real-time form analysis and injury prevention,Integration with fitness trackers and health devices,Progress tracking and goal achievement analytics,Social features and community challenges,Integration with personal trainers and nutritionists,Wellness coaching and lifestyle optimization'
       ],'
@@ -1468,7 +1468,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'AI-Powered Travel Planning Assistant','
       description: 'Intelligent travel planning with personalized recommendations, real-time updates, and cost optimization',
-      icon: Globe,
+      icon: Glob e,
       features: [',
         'AI-powered personalized travel recommendations,Real-time flight and hotel price monitoring,Itinerary optimization based on preferences and constraints,Weather and event integration for trip planning,Travel document and visa assistance,Local experience and activity recommendations,Cost tracking and budget optimization,Integration with booking platforms and travel services'
       ],'
@@ -1478,7 +1478,7 @@ const MicroSaaSOldPage: React.FC = () => {
     {'
       title: 'Smart Pet Care Management','
       description: 'AI-powered pet health monitoring with veterinary integration and care recommendations',
-      icon: Heart,
+      icon: Hear t,
       features: [',
         'AI-powered pet health monitoring and analysis,Veterinary appointment scheduling and reminders,Pet behavior analysis and training recommendations,Nutrition tracking and feeding schedule optimization,Integration with pet wearables and health devices,Emergency alert system and vet contact,Pet insurance integration and claims processing,Social features for pet owners and community'
       ],'
@@ -1488,34 +1488,34 @@ const MicroSaaSOldPage: React.FC = () => {
   ]
 
   const technologies = ['
-  { name: 'Frontend', icon: Monitor, description: 'React, Next.js, Vue.js, Angular' },'
-    { name: 'Backend', icon: Server, description: 'Node.js, Python, Go, Java' },'
-    { name: 'Database', icon: Database, description: 'PostgreSQL, MongoDB, Redis' },'
-    { name: 'Cloud', icon: Cloud, description: 'AWS, Azure, GCP, DigitalOcean' },'
-    { name: 'Security', icon: Shield, description: 'OAuth, JWT, SSL, Encryption' },'
-    { name: 'Mobile', icon: Smartphone, description: 'React Native, Flutter, PWA' }
+  { name: 'Frontend', icon: Monito r, description: 'React, Next.js, Vue.js, Angular' },'
+    { name: 'Backend', icon: Serve r, description: 'Node.js, Python, Go, Java' },'
+    { name: 'Database', icon: Databas e, description: 'PostgreSQL, MongoDB, Redis' },'
+    { name: 'Cloud', icon: Clou d, description: 'AWS, Azure, GCP, DigitalOcean' },'
+    { name: 'Security', icon: Shiel d, description: 'OAuth, JWT, SSL, Encryption' },'
+    { name: 'Mobile', icon: Smartphon e, description: 'React Native, Flutter, PWA' }
   ]
 
   const benefits = [
   {'
       title: 'Faster Development','
       description: 'Rapid prototyping and deployment',
-      icon: Zap,'
+      icon: Za p,'
       stat: '50%'},
     {'
       title: 'Cost Effective','
       description: 'Lower development and maintenance costs',
-      icon: TrendingUp,'
+      icon: TrendingU p,'
       stat: '60%'},
     {'
       title: 'Scalable Solutions','
       description: 'Built to grow with your business',
-      icon: Target,'
+      icon: Targe t,'
       stat: 'Unlimited'},
     {'
       title: 'Custom Features','
       description: 'Tailored to your specific needs',
-      icon: Settings,'
+      icon: Setting s,'
       stat: '100%'}
   ]
 
@@ -1523,21 +1523,21 @@ const MicroSaaSOldPage: React.FC = () => {
     <PageTransition>
 <Head>
         <title>{title}</title>
-        <meta name = "description content="{description}" />"
-        <meta name=viewport" content="width="device-width," initial-scale="1" />"
-        <link rel=canonical" href="https: //ziontechgroup.com/micro-saas />
+        <meta name = "description content="{description}"  />"
+        <meta name=viewport" content="width="device-width," initial-scale="1"  />"
+        <link rel=canonical" href="https: //ziontechgroup.com/micro-saas  />
       </Head>
 ,
       {/*   */}"
-      <section className="bg-gradient-to-br" from-orange-50 via-amber-50 to-yellow-50 py-16 sm: py-24 md:py-32">"
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8>"
+      <section className="bg-gradient-to-br" from-orange-50 via-amber-50 to-yellow-50 py-16 sm: p y-24 md: p y-32">"
+        <div className="mx-auto max-w-7xl px-4 sm: p x-6 lg: p x-8>"
           <div className="mx-auto" max-w-3xl text-center">"
             <div className="flex items-center justify-center mb-6>"
-              <Code className="h-12" w-12 text-orange-600 mr-4" />"
-              <Award className="h-6 w-6 text-orange-600 mr-2 />"
+              <Code className="h-12" w-12 text-orange-600 mr-4"  />"
+              <Award className="h-6 w-6 text-orange-600 mr-2  />"
               <span className="text-base" font-semibold leading-7 text-orange-600">Micro SaaS</span>
             </div>"
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl>
+            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm: tex t-6xl>
               Micro SaaS Solutions,
             </h1>"
             <p className="mt-6" text-lg leading-8 text-gray-600">,
@@ -1546,13 +1546,13 @@ const MicroSaaSOldPage: React.FC = () => {
             </p>"
             <div className="mt-10 flex items-center justify-center gap-x-6>"
               <Link href=/contact""
-                className="rounded-md bg-orange-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover: bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600>
+                className="rounded-md bg-orange-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover: b g-orange-500 focus-visible: outline focus-visible: outlin e-2 focus-visible: outlin e-offset-2 focus-visible: outlin e-orange-600>
               >
                 Get Started"
-                <ArrowRight className="ml-2" h-4 w-4 inline" />
+                <ArrowRight className="ml-2" h-4 w-4 inline"  />
               </Link>",
               <Link href="/pricing-guide,"
-className="text-sm" font-semibold leading-6 text-gray-900 hover: text-orange-600"
+className="text-sm" font-semibold leading-6 text-gray-900 hover: tex t-orange-600"
               >"
                 View Pricing <span aria-hidden="true>→</span>
               </Link>
@@ -1562,17 +1562,17 @@ className="text-sm" font-semibold leading-6 text-gray-900 hover: text-orange-600
       </section>
 ,
       {/*   */}"
-      <section className="py-24" sm: py-32 bg-white">"
-        <div className="mx-auto max-w-7xl px-6 lg:px-8>"
+      <section className="py-24" sm: p y-32 bg-white">"
+        <div className="mx-auto max-w-7xl px-6 lg: p x-8>"
           <div className="mx-auto" max-w-2xl text-center mb-16">"
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl>
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm: tex t-4xl>
               Why Choose Our Micro SaaS Solutions?
             </h2>"
             <p className="mt-6" text-lg leading-8 text-gray-600">,
               Proven expertise in building scalable, secure, and innovative software solutions,
             </p>
           </div>"
-          <div className="grid grid-cols-1 gap-8 sm: grid-cols-2 lg:grid-cols-4>,
+          <div className="grid grid-cols-1 gap-8 sm: gri d-cols-2 lg: gri d-cols-4>,
             {benefits.map((benefit, index) => ("
               <div key="{index}" className=text-center">"
                 <div className="flex items-center justify-center h-16 w-16 rounded-full bg-orange-100 mx-auto mb-4>"
@@ -1588,19 +1588,19 @@ className="text-sm" font-semibold leading-6 text-gray-900 hover: text-orange-600
       </section>
 
       {/*   */}"
-      <section className="py-24" sm: py-32 bg-gray-50">"
-        <div className="mx-auto max-w-7xl px-6 lg:px-8>"
+      <section className="py-24" sm: p y-32 bg-gray-50">"
+        <div className="mx-auto max-w-7xl px-6 lg: p x-8>"
           <div className="mx-auto" max-w-2xl text-center mb-16">"
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl>
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm: tex t-4xl>
               Technologies We Use,
             </h2>"
             <p className="mt-6" text-lg leading-8 text-gray-600">,
               Modern, proven technologies for building robust and scalable applications,
             </p>
           </div>"
-          <div className="grid grid-cols-1 gap-8 sm: grid-cols-2 lg:grid-cols-3>,
+          <div className="grid grid-cols-1 gap-8 sm: gri d-cols-2 lg: gri d-cols-3>,
             {technologies.map((tech, index) => ("
-              <div key="{index}" className="bg-white" rounded-2xl p-6 shadow-sm hover: shadow-md transition-shadow">"
+              <div key="{index}" className="bg-white" rounded-2xl p-6 shadow-sm hover: shado w-md transition-shadow">"
                 <div className="flex items-center mb-4>"
                   <div className="flex" h-12 w-12 items-center justify-center rounded-lg bg-orange-100">"
                     <tech.icon className="h-6 w-6 text-orange-600 />
@@ -1615,10 +1615,10 @@ className="text-sm" font-semibold leading-6 text-gray-900 hover: text-orange-600
       </section>
 
       {/*   */}"
-      <section className="py-24" sm: py-32 bg-white">"
-        <div className="mx-auto max-w-7xl px-6 lg:px-8>"
+      <section className="py-24" sm: p y-32 bg-white">"
+        <div className="mx-auto max-w-7xl px-6 lg: p x-8>"
           <div className="mx-auto" max-w-2xl text-center mb-16">"
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl>
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm: tex t-4xl>
               Our Micro SaaS Portfolio,
             </h2>"
             <p className="mt-6" text-lg leading-8 text-gray-600">,
@@ -1626,21 +1626,21 @@ className="text-sm" font-semibold leading-6 text-gray-900 hover: text-orange-600
               development, testing, and deployment. Our innovative micro SaaS solutions are designed to,
 solve specific business challenges with cutting-edge technology and proven methodologies. '
               Contact us at{' '}"
-              <a href="mailto: kleber@ziontechgroup.com className="text-orange-600" hover:text-orange-500 font-semibold">
+              <a href="mailto: klebe r@ziontechgroup.com className="text-orange-600" hover: tex t-orange-500 font-semibold">
                 kleber@ziontechgroup.com',
               </a>{' '}'
               or call{' '}"
-              <a href="tel: +13024640950 className="text-orange-600" hover:text-orange-500 font-semibold">
+              <a href="tel: +13024640950 className="text-orange-600" hover: tex t-orange-500 font-semibold">
                 +1 302 464 0950',
               </a>{' '}
               for custom pricing and free consultation.
             </p>
           </div>"
-          <div className="grid grid-cols-1 gap-8 lg: grid-cols-2>,
+          <div className="grid grid-cols-1 gap-8 lg: gri d-cols-2>,
             {microSaaSServices.map((service, index) => ("
-              <div key="{index}" className="group" relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-300">"
+              <div key="{index}" className="group" relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shado w-lg transition-all duration-300">"
                 <div className="flex items-center gap-x-3 mb-6>"
-                  <div className="flex" h-12 w-12 items-center justify-center rounded-lg bg-orange-600 group-hover:bg-orange-700 transition-colors">"
+                  <div className="flex" h-12 w-12 items-center justify-center rounded-lg bg-orange-600 group-hover: b g-orange-700 transition-colors">"
                     <service.icon className="h-7 w-7 text-white />
                   </div>
                   <div>",
@@ -1652,7 +1652,7 @@ solve specific business challenges with cutting-edge technology and proven metho
                 <ul className="space-y-3 mb-6>
                   {service.features.map((feature, featureIndex) => ("
                     <li key="{featureIndex}" className="flex" items-center gap-x-3">"
-                      <CheckCircle className="h-4 w-4 text-orange-600 flex-shrink-0 />"
+                      <CheckCircle className="h-4 w-4 text-orange-600 flex-shrink-0  />"
                       <span className="text-sm" text-gray-700">{feature}</span>
                     </li>
                   ))}
@@ -1660,16 +1660,16 @@ solve specific business challenges with cutting-edge technology and proven metho
                 <div className="flex items-center justify-between>"
                   <div className="flex" items-center space-x-4 text-sm text-gray-500">"
                     <div className="flex items-center space-x-1>"
-                      <Clock className="h-4" w-4" />
+                      <Clock className="h-4" w-4"  />
                       <span>{service.delivery}</span>
                     </div>"
                     <div className="font-semibold text-orange-600>{service.pricing}</div>
                   </div>"
                   <Link href=/contact""
-                    className="inline-flex items-center text-sm font-semibold text-orange-600 hover: text-orange-500 transition-colors group>
+                    className="inline-flex items-center text-sm font-semibold text-orange-600 hover: tex t-orange-500 transition-colors group>
                   >
                     Get Started"
-                    <ArrowRight className="ml-2" h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="ml-2" h-4 w-4 group-hover: translat e-x-1 transition-transform"  />
                   </Link>
                 </div>
               </div>,
@@ -1679,17 +1679,17 @@ solve specific business challenges with cutting-edge technology and proven metho
       </section>
 
       {/*   */}"
-      <section className="py-24 sm: py-32 bg-gray-50>"
-        <div className="mx-auto" max-w-7xl px-6 lg:px-8">"
+      <section className="py-24 sm: p y-32 bg-gray-50>"
+        <div className="mx-auto" max-w-7xl px-6 lg: p x-8">"
           <div className="mx-auto max-w-2xl text-center mb-16>"
-            <h2 className="text-3xl" font-bold tracking-tight text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl" font-bold tracking-tight text-gray-900 sm: tex t-4xl">
               Our Development Process,
             </h2>"
             <p className="mt-6 text-lg leading-8 text-gray-600>
               A proven methodology for delivering high-quality software solutions,
             </p>
           </div>"
-          <div className="grid" grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">"
+          <div className="grid" grid-cols-1 gap-8 sm: gri d-cols-2 lg: gri d-cols-4">"
             <div className="text-center>"
               <div className="flex" items-center justify-center h-16 w-16 rounded-full bg-orange-100 mx-auto mb-4">"
                 <span className="text-2xl font-bold text-orange-600>1</span>
@@ -1723,10 +1723,10 @@ solve specific business challenges with cutting-edge technology and proven metho
       </section>
 
       {/*   */}"
-      <section className="bg-orange-600 py-16 sm: py-24>"
-        <div className="mx-auto" max-w-7xl px-6 lg:px-8">"
+      <section className="bg-orange-600 py-16 sm: p y-24>"
+        <div className="mx-auto" max-w-7xl px-6 lg: p x-8">"
           <div className="mx-auto max-w-2xl text-center>"
-            <h2 className="text-3xl" font-bold tracking-tight text-white sm:text-4xl">
+            <h2 className="text-3xl" font-bold tracking-tight text-white sm: tex t-4xl">
               Ready to Build Your Custom SaaS Solution?
             </h2>"
             <p className="mt-6 text-lg leading-8 text-orange-100>,
@@ -1736,12 +1736,12 @@ space technology, we deliver cutting-edge software that gives you a competitive 
             </p>"
             <div className="mt-10" flex items-center justify-center gap-x-6">"
               <Link href="/contact,"
-className="rounded-md" bg-white px-6 py-3 text-sm font-semibold text-orange-600 shadow-sm hover: bg-gray-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+className="rounded-md" bg-white px-6 py-3 text-sm font-semibold text-orange-600 shadow-sm hover: b g-gray-50 focus-visible: outline focus-visible: outlin e-2 focus-visible: outlin e-offset-2 focus-visible: outlin e-white"
               >
                 Start Your Project,
               </Link>",
               <a href="tel:+13024640950,"
-className="text-sm" font-semibold leading-6 text-white hover: text-orange-100"
+className="text-sm" font-semibold leading-6 text-white hover: tex t-orange-100"
               >"
                 Call +1 302 464 0950 <span aria-hidden="true">→</span>
               </a>

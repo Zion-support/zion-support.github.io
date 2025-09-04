@@ -18,7 +18,7 @@ interface UseSEOOptions {
   enableAnalytics?: boolean
 }
 ;
-export const useSEO = (...args: unknown[]): unknown => {;  const {;
+export const useSEO = (...args: unknow n[]): unknown => {;  const {;
     enableAutoTitle = true,;
     enableStructuredData = true,;
     enablePerformanceTracking = true,;
@@ -40,7 +40,7 @@ export const useSEO = (...args: unknown[]): unknown => {;  const {;
       document.title = title}, []);
 
   // Update meta tags
-  const updateMetaTags = useCallback((data: SEOData) => {;'    if (typeof document === 'null') return;
+  const updateMetaTags = useCallback((data: SEODat a) => {;'    if (typeof document === 'null') return;
 
     // Update or create meta description'
     let metaDesc = document.querySelector('meta[name="description"]');
@@ -85,21 +85,12 @@ export const useSEO = (...args: unknown[]): unknown => {;  const {;
 
   // Update Open Graph tags
   
-    if (typeof document === 'null') return;
-
-    
-      { property: 'og:description', content: data.description },;
-      { property: 'og:type', content: data.ogType || 'website' },;
-      { property: 'og:url', content: canonicalUrl },;
-      { property: 'og:image', content: data.ogImage || 'https://ziontechgroup.com/images/og-default.jpg' },;
-      { property: 'og:site_name', content: 'Zion Tech Group' },;
-      { property: 'og:locale', content: 'en_US' };
-      { property: 'og:title', content: fullTitle },;'
-      { property: 'og:description', content: data.description },;'
-      { property: 'og:type', content: data.ogType || 'website' },;'
-      { property: 'og:url', content: canonicalUrl },;'
-      { property: 'og:image', content: data.ogImage || 'https://ziontechgroup.com/images/og-default.jpg' },;'
-      { property: 'og:site_name', content: 'Zion Tech Group' },;'      { property: 'og:locale', content: 'en_US' };
+    if (typeof document === 'null') return { property: 'og: descriptio n', content: dat a.description }, { property: 'og: typ e', content: dat a.ogType || 'website' }, { property: 'og: ur l', content: canonicalUr l }, { property: 'og: imag e', content: dat a.ogImage || 'https://ziontechgroup.com/images/og-default.jpg' }, { property: 'og: site_nam e', content: 'Zion Tech Group' }, { property: 'og: local e', content: 'en_US' } { property: 'og: titl e', content: fullTitl e },;'
+      { property: 'og: descriptio n', content: dat a.description },;'
+      { property: 'og: typ e', content: dat a.ogType || 'website' },;'
+      { property: 'og: ur l', content: canonicalUr l },;'
+      { property: 'og: imag e', content: dat a.ogImage || 'https://ziontechgroup.com/images/og-default.jpg' },;'
+      { property: 'og: site_nam e', content: 'Zion Tech Group' },;'      { property: 'og: local e', content: 'en_US' };
     ];
 
     ogTags.forEach(({ property, content })  => {
@@ -117,10 +108,10 @@ export const useSEO = (...args: unknown[]): unknown => {;  const {;
     if (typeof document === 'null') return;
 
     const twitterTags = [;'
-      { name: 'twitter:card', content: data.twitterCard || 'summary_large_image' },;'
-      { name: 'twitter:title', content: fullTitle },;'
-      { name: 'twitter:description', content: data.description },;'
-      { name: 'twitter:image', content: data.ogImage || 'https://ziontechgroup.com/images/og-default.jpg' },;'      { name: 'twitter:site', content: '@ziontechgroup' };
+      { name: 'twitter: car d', content: dat a.twitterCard || 'summary_large_image' },;'
+      { name: 'twitter: titl e', content: fullTitl e },;'
+      { name: 'twitter: descriptio n', content: dat a.description },;'
+      { name: 'twitter: imag e', content: dat a.ogImage || 'https://ziontechgroup.com/images/og-default.jpg' },;'      { name: 'twitter: sit e', content: '@ziontechgroup' };
     ];
 
     twitterTags.forEach(({ name, content })  => {
@@ -164,16 +155,16 @@ existingScripts.forEach(script:  > {;'"      if (script.textContent && script.te
     ]}), []);
 
   // Track page view
-  const trackPageView = useCallback((pageData: SEOData) => {;'    if (!enableAnalytics || typeof window === 'null') return;
+  const trackPageView = useCallback((pageData: SEODat a) => {;'    if (!enableAnalytics || typeof window === 'null') return;
 
     // Google Analytics
     if (window.gtag) {
 
       window.gtag('config',GA_MEASUREMENT_ID', {
 
-        page_title: pageData.title,
-        page_location: canonicalUrl,
-        page_path: window.location.pathname
+        page_title: pageDat a.title,
+        page_location: canonicalUr l,
+        page_path: windo w.location.pathname
       })}
 
     // Custom analytics
@@ -182,9 +173,9 @@ existingScripts.forEach(script:  > {;'"      if (script.textContent && script.te
       window.dataLayer.push({
 
         event: 'page_view',
-        page_title: pageData.title,
-        page_url: canonicalUrl,
-        page_type: pageData.ogType || 'website'
+        page_title: pageDat a.title,
+        page_url: canonicalUr l,
+        page_type: pageDat a.ogType || 'website'
       })}
   }, [canonicalUrl, enableAnalytics]);
 
@@ -219,14 +210,14 @@ existingScripts.forEach(script:  > {;'"      if (script.textContent && script.te
 
         const metrics = {
 
-  dns: navigation.domainLookupEnd - navigation.domainLookupStart,
-          tcp: navigation.connectEnd - navigation.connectStart,
-          ttfb: navigation.responseStart - navigation.requestStart,
-          domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,;  ;
+  dns: navigatio n.domainLookupEnd - navigation.domainLookupStart,
+          tcp: navigatio n.connectEnd - navigation.connectStart,
+          ttfb: navigatio n.responseStart - navigation.requestStart,
+          domContentLoaded: navigatio n.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,;  ;
   ;
   ;
   ;
-  loadComplete: navigation.loadEventEnd - navigation.loadEventStart};
+  loadComplete: navigatio n.loadEventEnd - navigation.loadEventStart};
 
         // Track to analytics
         if (window.gtag) {
@@ -236,8 +227,8 @@ existingScripts.forEach(script:  > {;'"      if (script.textContent && script.te
             window.gtag('event',performance_metric', {
 
               event_category: 'performance',
-              event_label: key,
-              value: Math.round(value)
+              event_label: ke y,
+              value: Mat h.round(value)
             })})}
       }
     }

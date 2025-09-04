@@ -1,15 +1,9 @@
-const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
+const UltimateZionServicesShowcase: Reac t.FC = () : JSX.Element => {;
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 
   const categories = [{ id: 'all', name: 'All Services', icon: '🌟', color: 'from - purple - 600 to - pink - 600' },
-    { id: 'quantum - computing', name: 'Quantum Computing', icon: '⚛️', color: 'from - blue - 600 to - cyan - 600' },;
-    { id: 'blockchain - web3', name: 'Blockchain & Web3', icon: '🔗', color: 'from - green - 600 to - emerald - 600' },;
-    { id: 'space - tech', name: 'Space Technology', icon: '🛰️', color: 'from - indigo - 600 to - purple - 600' },;
-    { id: 'biotech-ai', name: 'Biotech & AI', icon: '🧬', color: 'from - red - 600 to - pink - 600' },;
-    { id: 'emerging - tech', name: 'Emerging Tech', icon: '🚀', color: 'from - orange - 600 to - red - 600' },;
-    { id: 'micro - saas', name: 'Micro SAAS', icon: '💻', color: 'from - blue - 600 to - indigo - 600' },;
-    { id: 'it - services', name: 'IT Services', icon: '🖥️', color: 'from - gray - 600 to - slate - 600' };  ];
+    { id: 'quantum - computing', name: 'Quantum Computing', icon: '⚛️', color: 'from - blue - 600 to - cyan - 600' }, { id: 'blockchain - web3', name: 'Blockchain & Web3', icon: '🔗', color: 'from - green - 600 to - emerald - 600' }, { id: 'space - tech', name: 'Space Technology', icon: '🛰️', color: 'from - indigo - 600 to - purple - 600' }, { id: 'biotech-ai', name: 'Biotech & AI', icon: '🧬', color: 'from - red - 600 to - pink - 600' }, { id: 'emerging - tech', name: 'Emerging Tech', icon: '🚀', color: 'from - orange - 600 to - red - 600' }, { id: 'micro - saas', name: 'Micro SAAS', icon: '💻', color: 'from - blue - 600 to - indigo - 600' }, { id: 'it - services', name: 'IT Services', icon: '🖥️', color: 'from - gray - 600 to - slate - 600' };  ];
 
       service.description.toLowerCase () .includes(searchTerm.toLowerCase () ) ||;
       service.tagline.toLowerCase () .includes(searchTerm.toLowerCase () ) ;
@@ -24,7 +18,7 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
 
   const itemVariants = {
   hidden: { opacity: 0,
-  y: 20
+  y: 2 0
 
 ;
 },;
@@ -34,13 +28,13 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
 
   return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - purple - 900 to - slate - 900 text-white">
       {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8">
         <div  className="max - w-7xl mx - auto text-center">
           <motion.h1
-            className="text-4xl md:text-6xl font - bold mb-6"            initial = {
+            className="text-4xl md: tex t-6xl font - bold mb-6"            initial = {
 
   { opacity: 0,
-  y: 20
+  y: 2 0
 
 }}
             whileInView = {
@@ -55,7 +49,7 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">"
               {" "}Zion Technology
             </span>
-            <br />"
+            <br  />"
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
               Services 2025
             </span>
@@ -65,7 +59,7 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
             className="text-xl text-gray - 300 mb-8 max - w-4xl mx -auto"            initial = {
 
   { opacity: 0,
-  y: 20
+  y: 2 0
 
 }}
             whileInView = {
@@ -90,7 +84,7 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
             className="bg-white / 10 backdrop - blur - lg rounded-xl p - 6 mb-8 max - w-4xl mx - auto border border-white / 20"            initial = {
 
   { opacity: 0,
-  y: 20
+  y: 2 0
 
 }}
             whileInView = {
@@ -109,7 +103,7 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
             <h3 className="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
               🚀 Ready to Transform Your Business?
             </h3>
-            <div  className="grid grid - cols - 1 md:grid - cols - 3 gap-6 text-sm">
+            <div  className="grid grid - cols - 1 md: gri d - cols - 3 gap-6 text-sm">
               <div  className="text-center">
                 <div  className="text-purple - 400 font - semibold text-lg mb-2">📱 Contact Us</div>
                 <div  className="text-gray -300">+1 302 464 0950</div>
@@ -124,7 +118,7 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
                 <div  className="text-purple - 400 font - semibold text-lg mb-2">🌐 Website</div>
                 <div  className="text-gray -300">
                   <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer"
-                     className="text-blue - 400 hover:text-blue - 300 transition -colors">                    ziontechgroup.com
+                     className="text-blue - 400 hover: tex t-blue - 300 transition -colors">                    ziontechgroup.com
                   </a>
                 </div>"
                 <div className="text-gray-400 text-xs">Live demo available</div>
@@ -139,10 +133,10 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
 
           {/* Search and Filter */}
           <motion.div
-            className="flex flex - col md:flex - row gap-4 justify - center items - center mb-12"            initial = {
+            className="flex flex - col md: fle x - row gap-4 justify - center items - center mb-12"            initial = {
 
   { opacity: 0,
-  y: 20
+  y: 2 0
 
 }}
             whileInView = {
@@ -163,14 +157,14 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
               placeholder="Search revolutionary services..."
               value={searchTerm}
               onChange={ (e) => setSearchTerm(e.target.value) }
-              className="px-6 py-3 bg-white / 10 border border-white / 20 rounded-lg text-white placeholder - gray - 400 focus:outline - none focus:border-purple - 400 focus:ring - 2 focus:ring - purple - 400 / 20 w-full md:w-80"
+              className="px-6 py-3 bg-white / 10 border border-white / 20 rounded-lg text-white placeholder - gray - 400 focus: outlin e - none focus: borde r-purple - 400 focus: rin g - 2 focus: rin g - purple - 400 / 20 w-full md:w-80"
             />
             <div  className="flex flex - wrap gap-2">
               {categories.map((category) => (<button     key={category.id}
                   onClick={ () => setSelectedCategory(category.id) }
                   className={`px-4 py-2 rounded-lg border transition - all duration - 300 ${selectedCategory === category.id
                       ? 'bg-gradient - to - r from - purple - 600 to - pink - 600 border-purple - 400 text-white'
-                      : 'bg-white / 10 border-white / 20 text-gray - 300 hover:bg-white / 20 hover:border-white / 40'                  }`}
+                      : 'bg-white / 10 border-white / 20 text-gray - 300 hover: b g-white / 20 hover: borde r-white / 40'                  }`}
                 >"
                   <span className="mr-2">{category.icon}</span>
                   {category.name}
@@ -181,22 +175,22 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8">
         <div  className="max - w-7xl mx -auto">
           <motion.div
-            className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8"
+            className="grid grid - cols - 1 md: gri d - cols - 2 lg: gri d - cols - 3 gap-8"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anytrue }}
+            viewport={{ once: anytru e }}
           >
             {filteredServices.map((service, index) => (<motion.div
                 key={service.id}
                 variants={itemVariants}
-                className="bg-white / 10 backdrop - blur - lg rounded-xl p - 6 border border-white / 20 hover:border-white / 40 transition - all duration - 300 hover:transform hover:scale -105 group"              >
+                className="bg-white / 10 backdrop - blur - lg rounded-xl p - 6 border border-white / 20 hover: borde r-white / 40 transition - all duration - 300 hover: transform hover:scale -105 group"              >
                 {/* Service Header */}"
                 <div className="text-center mb-6">`
-                  <div className={`text-6xl mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                  <div className={`text-6xl mb-4 group-hover: scal e-110 transition-transform duration-300`}>
                     {service.icon}
                   </div>"
                   <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>"
@@ -292,7 +286,7 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
 
                 {/* Call to Action */}"
                 <div className="text-center">"
-                  <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover: fro m-purple-700 hover: t o-pink-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover: scal e-105">
                     🚀 Get Started Today
                   </button>"
                   <p className="text-xs text-gray-400 mt-2">
@@ -303,10 +297,10 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
                 {/* Contact Quick Access */}"
                 <div className="mt-4 text-center">"
                   <div className="text-xs text-gray-400">"
-                    📞 <a href="tel:+13024640950" className="text-blue-400 hover:text-blue-300">
+                    📞 <a href="tel:+13024640950" className="text-blue-400 hover: tex t-blue-300">
                       +1 302 464 0950
                     </a> |
-                    ✉️ <a href="mailto:kleber@ziontechgroup.com" className="text-blue - 400 hover:text-blue -300">                      kleber@ziontechgroup.com
+                    ✉️ <a href="mailto: klebe r@ziontechgroup.com" className="text-blue - 400 hover: tex t-blue -300">                      kleber@ziontechgroup.com
                     </a>
                   </div>
                 </div>
@@ -316,13 +310,13 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
       </section>
 
       {/* Bottom CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8">
         <div  className="max - w-4xl mx - auto text-center">
           <motion.div
             className="bg-gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - lg rounded-2xl p - 8 border border-purple -400 / 30"            initial = {
 
   { opacity: 0,
-  y: 20
+  y: 2 0
 
 }}
             whileInView = {
@@ -333,15 +327,15 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
 }}
             transition={{ duration: 0.6 }}
           >"
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+            <h2 className="text-3xl md: tex t-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
               Ready to Lead the Future?
             </h2>
             <p className="text-xl text-gray - 300 mb-8">
               Join the revolution and transform your business with cutting - edge technology solutions.Our team of experts is ready to help you implement these game - changing services.</p>
-            <div  className="flex flex - col md:flex - row gap-4 justify -center">
-              <button     className="bg-gradient - to - r from - purple - 600 to - pink - 600 hover:from - purple - 700 hover:to - pink - 700 text-white font - semibold py-4 px-8 rounded-lg transition - all duration - 300 transform hover:scale -105">                🚀 Schedule a Consultation
+            <div  className="flex flex - col md: fle x - row gap-4 justify -center">
+              <button     className="bg-gradient - to - r from - purple - 600 to - pink - 600 hover: fro m - purple - 700 hover: t o - pink - 700 text-white font - semibold py-4 px-8 rounded-lg transition - all duration - 300 transform hover: scal e -105">                🚀 Schedule a Consultation
               </button>"
-              <button className="bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300">
+              <button className="bg-white/10 hover: b g-white/20 border border-white/30 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300">
                 📋 View Full Portfolio
               </button>
             </div>"

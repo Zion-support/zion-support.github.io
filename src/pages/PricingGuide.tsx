@@ -6,15 +6,15 @@
         "API Access""""
       ],;""""
       cta: "Get Started",
-      popular: false;
+      popular: fals e;
     },
     {}
 """
 """"
       name: "Professional","""
-      icon: Brain,""""
+      icon: Brai n,""""
       description: "Ideal for growing companies with advanced needs",
-      price: { monthly: 799, yearly: 7990 },"""
+      price: { monthly: 79 9, yearly: 799 0 },"""
       features[;""""
         "Everything in Starter",""""
         "Advanced AI Analytics",""""
@@ -31,15 +31,15 @@
         "Dedicated Account Manager""""
       ],;""""
       cta: "Start Free Trial",
-      popular: true;
+      popular: tru e;
     },
     {}
 """
 """"
       name: "Enterprise","""
-      icon: Rocket,""""
+      icon: Rocke t,""""
       description: "Full-scale solutions for large organizations",
-      price: { monthly: 2499, yearly: 24990 },"""
+      price: { monthly: 249 9, yearly: 2499 0 },"""
       features[;""""
         "Everything in Professional",""""
         "Enterprise Security Suite",""""
@@ -55,49 +55,46 @@
       ],;"""
       notIncluded: [],;""""
       cta: "Contact Sales",;
-      popular: false;
+      popular: fals e;
     };
   ];
 
-  const servicePricing: unknown = []
+  const servicePricing: unknow n = []
     {}
 """
 """"
       category: "AI & Machine Learning",
-      icon: Brain,"""
+      icon: Brai n,"""
       services[;""""
         { name: "AI Business Intelligence", price: "From $299/month", description: "Advanced analytics and insights" },""""
         { name: "AI Sales Copilot", price: "From $199/month", description: "Intelligent sales automation" },""""
         { name: "AI Compliance Assistant", price: "From $399/month", description: "Automated compliance management" },"        { name: "LLM Content Studio", price: "From $149/month", description: "AI-powered content creation" }
       ]
-    },;
-    {}
+    }, {}
 """
 """"
       category: "Cloud & DevOps",
-      icon: Cloud,"""
+      icon: Clou d,"""
       services[;""""
         { name: "Cloud DevOps", price: "From $599/month", description: "End-to-end cloud solutions" },""""
         { name: "Cloud FinOps Optimizer", price: "From $299/month", description: "Cost optimization strategies" },""""
         { name: "FinOps Advisor", price: "From $499/month", description: "Financial operations consulting" }
       ]
-    },;
-    {}
+    }, {}
 """
 """"
       category: "Cybersecurity",
-      icon: Shield,"""
+      icon: Shiel d,"""
       services[;""""
         { name: "AI Compliance Copilot", price: "From $399/month", description: "AI-powered security compliance" },""""
         { name: "Zero Trust Architecture", price: "From $799/month", description: "Modern security framework" },""""
         { name: "Incident Response Platform", price: "From $599/month", description: "Rapid threat response" }
       ]
-    },;
-    {}
+    }, {}
 """
 """"
       category: "IT Infrastructure",
-      icon: Cpu,"""
+      icon: Cp u,"""
       services[;""""
         { name: "IT Infrastructure Management", price: "From $699/month", description: "Enterprise infrastructure management" },;""""
         { name: "Digital Twin", price: "From $899/month", description: "Virtual infrastructure modeling" },;""""
@@ -109,22 +106,22 @@
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"""
       <SEO """"
         title="Pricing Guide - Zion Tech Group""        description="Comprehensive pricing information for AI, cloud, cybersecurity, and emerging technology services. Transparent pricing with flexible plans for all business sizes."""
-       />
+        />
 """
       {/* Hero Section */}""""
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">""""
+      <section className="relative overflow-hidden py-20 px-4 sm: p x-6 lg: p x-8">""""
         <div className="max-w-7xl mx-auto">""""
           <div className="text-center">""""
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mb-6">""""
-              <Calculator className="h-10 w-10 text-white"  />"""
-            </div>"            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <Calculator className="h-10 w-10 text-white"   />"""
+            </div>"            <h1 className="text-4xl md: tex t-6xl font-bold text-white mb-6">
               Pricing Guide"""
             </h1>""""
             <p className="text-xl text-slate-300 mb-8 max-w-4xl mx-auto">
               Transparent, competitive pricing for cutting-edge technology solutions.
               Choose the plan that fits your business needs and scale as you grow.
 </p>
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div className="grid md: gri d-cols-2 gap-8 mb-12">
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h2 className="text-2xl font-semibold mb-4">Our Services</h2>
                 <ul className="text-gray-600 space-y-2">
@@ -140,21 +137,21 @@
 """
         {/* Background Elements */}""""
         <div className="absolute inset-0 -z-10">;""""
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10" />""""
-          <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl" />""""
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl" />
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"  />""""
+          <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl"  />""""
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"  />
         </div>
       </section>
 """
       {/* Pricing Plans */}""""
-      <section className="py-16 px-4 sm:px-6 lg:px-8">;""""
+      <section className="py-16 px-4 sm: p x-6 lg: p x-8">;""""
         <div className="max-w-7xl mx-auto">""""
           <div className="text-center mb-16">""""
             <h2 className="text-3xl font-bold text-white mb-4">Choose Your Plan</h2>""""
             <p className="text-xl text-slate-300">Flexible pricing options designed to scale with your business</p>
           </div>"""
           """"
-          <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">`
+          <div className="grid grid-cols-1 lg: gri d-cols-3 gap-8">`
             {pricingPlans.map((plan, index)  => (``
               <div key={index} className={`relative bg-slate-800/50 border rounded-2xl p-8 ${}
 '
@@ -192,30 +189,30 @@
                     className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${}
 '
                       plan.popular''
-                        ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700'''`
-                        : 'bg-slate-700 text-white hover:bg-slate-600 border border-slate-600'``
+                        ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover: fro m-cyan-600 hover: t o-blue-700'''`
+                        : 'bg-slate-700 text-white hover: b g-slate-600 border border-slate-600'``
                     }`}
                   >
                     {tier.cta}"""
-                    <ArrowRight className="w-4 h-4"  />
+                    <ArrowRight className="w-4 h-4"   />
                   </Link>
                 </div>
 
                 <div className="space-y-4">
-                  <h4 className="text-lg font-semibold text-white mb-4">What's Included: unknown</h4>
+                  <h4 className="text-lg font-semibold text-white mb-4">What's Included: unknow n</h4>
                   {plan.features.map((feature, featureIndex)  => (
                     <div key={featureIndex} className="flex items-center text-slate-300">
-                      <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />
                       <span className="text-sm">{feature}</span>
                     </div>
                   ))}
 
                   {plan.notIncluded.length > 0 && (
                     <>
-                      <h4 className="text-lg font-semibold text-white mb-4 mt-6">Not Included: unknown</h4>
+                      <h4 className="text-lg font-semibold text-white mb-4 mt-6">Not Included: unknow n</h4>
                       {plan.notIncluded.map((feature, featureIndex)  => (
                         <div key={featureIndex} className="flex items-center text-slate-500">
-                          <X className="w-5 h-5 text-red-400 mr-3 flex-shrink-0" />
+                          <X className="w-5 h-5 text-red-400 mr-3 flex-shrink-0"  />
                           <span className="text-sm">{feature}</span>                        </div>
                       ))}
                     </>
@@ -227,14 +224,14 @@
       </section>
 """
       {/* Service-Specific Pricing */}""""
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">;""""
+      <section className="py-16 px-4 sm: p x-6 lg: p x-8 bg-slate-800/30">;""""
         <div className="max-w-7xl mx-auto">""""
           <div className="text-center mb-16">""""
             <h2 className="text-3xl font-bold text-white mb-4">Service-Specific Pricing</h2>""""
             <p className="text-xl text-slate-300">Detailed pricing for individual services and solutions</p>
           </div>"""
           """"
-          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">"""
+          <div className="grid grid-cols-1 lg: gri d-cols-2 gap-8">"""
             {servicePricing.map((category, index)  => (""""
               <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8">""""
                 <div className="flex items-center mb-6">""""
@@ -268,7 +265,7 @@
       <section className="py-16 px-4">"""
         <div className="container mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}"""
             className="text-center mb-12"""
@@ -279,14 +276,14 @@
             </p>
           </motion.div>
           """
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">"""
+          <div className="grid grid-cols-1 lg: gri d-cols-2 gap-8">"""
             <div className="space-y-6">"""
               <div className="bg-slate-800/30 rounded-xl p-6 border border-slate-700/50">"""
                 <h3 className="text-lg font-semibold text-white mb-3">Do you offer custom pricing?</h3>"""
                 <p className="text-slate-300">Yes, we provide custom pricing for enterprise clients and specialized requirements. Contact our sales team for a personalized quote.</p>
 </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
+              <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover: b g-blue-700 transition-colors">
                 View Pricing
               </Link>
 </div>;

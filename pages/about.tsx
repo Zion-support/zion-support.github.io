@@ -3,7 +3,7 @@ import Layout from '../components/Layout';
 import Link from 'next/link';
 import { Users, Award, Target, CheckCircle, ArrowRight, Globe, Heart, Zap } from 'lucide-react';
 
-const About: NextPage = () => {
+const About: NextPag e = () => {
   return (
     <Layout
       title="About Us - Zion Tech Group"
@@ -12,11 +12,11 @@ const About: NextPage = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+          <h1 className="text-5xl md: tex t-6xl font-bold mb-6">
             About
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Zion Tech Group</span>
           </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
+          <p className="text-xl md: tex t-2xl mb-8 max-w-4xl mx-auto text-gray-200">
             Leading technology solutions provider helping businesses transform their digital presence 
             with cutting-edge AI, cloud architecture, and innovative development services.
           </p>
@@ -48,10 +48,10 @@ const About: NextPage = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
             <div className="bg-white rounded-lg p-8 shadow-lg text-center">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Target className="w-8 h-8 text-blue-600" />
+                <Target className="w-8 h-8 text-blue-600"  />
               </div>
               <h3 className="text-xl font-semibold mb-4">Excellence</h3>
               <p className="text-gray-600">
@@ -61,7 +61,7 @@ const About: NextPage = () => {
 
             <div className="bg-white rounded-lg p-8 shadow-lg text-center">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Heart className="w-8 h-8 text-green-600" />
+                <Heart className="w-8 h-8 text-green-600"  />
               </div>
               <h3 className="text-xl font-semibold mb-4">Integrity</h3>
               <p className="text-gray-600">
@@ -71,7 +71,7 @@ const About: NextPage = () => {
 
             <div className="bg-white rounded-lg p-8 shadow-lg text-center">
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Zap className="w-8 h-8 text-purple-600" />
+                <Zap className="w-8 h-8 text-purple-600"  />
               </div>
               <h3 className="text-xl font-semibold mb-4">Innovation</h3>
               <p className="text-gray-600">
@@ -81,7 +81,7 @@ const About: NextPage = () => {
 
             <div className="bg-white rounded-lg p-8 shadow-lg text-center">
               <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Users className="w-8 h-8 text-orange-600" />
+                <Users className="w-8 h-8 text-orange-600"  />
               </div>
               <h3 className="text-xl font-semibold mb-4">Collaboration</h3>
               <p className="text-gray-600">
@@ -102,10 +102,10 @@ const About: NextPage = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
             <div className="bg-gray-50 rounded-lg p-8 text-center">
               <div className="w-24 h-24 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Users className="w-12 h-12 text-white" />
+                <Users className="w-12 h-12 text-white"  />
               </div>
               <h3 className="text-xl font-semibold mb-2">50+ Team Members</h3>
               <p className="text-gray-600">
@@ -115,7 +115,7 @@ const About: NextPage = () => {
 
             <div className="bg-gray-50 rounded-lg p-8 text-center">
               <div className="w-24 h-24 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Award className="w-12 h-12 text-white" />
+                <Award className="w-12 h-12 text-white"  />
               </div>
               <h3 className="text-xl font-semibold mb-2">500+ Projects</h3>
               <p className="text-gray-600">
@@ -125,7 +125,7 @@ const About: NextPage = () => {
 
             <div className="bg-gray-50 rounded-lg p-8 text-center">
               <div className="w-24 h-24 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Globe className="w-12 h-12 text-white" />
+                <Globe className="w-12 h-12 text-white"  />
               </div>
               <h3 className="text-xl font-semibold mb-2">Global Reach</h3>
               <p className="text-gray-600">
@@ -146,7 +146,7 @@ const About: NextPage = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-2 md: gri d-cols-4 gap-8 text-center">
             <div>
               <div className="text-4xl font-bold mb-2">500+</div>
               <div className="text-blue-200">Projects Completed</div>
@@ -174,11 +174,11 @@ const About: NextPage = () => {
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
             Let's discuss how we can help transform your business with innovative technology solutions.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
+          <div className="flex flex-col sm: fle x-row justify-center gap-4">
+            <Link href="/contact" className="bg-blue-600 hover: b g-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
               Get in Touch
             </Link>
-            <Link href="/careers" className="bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
+            <Link href="/careers" className="bg-transparent border-2 border-blue-600 text-blue-600 hover: b g-blue-600 hover: tex t-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
               Join Our Team
             </Link>
           </div>

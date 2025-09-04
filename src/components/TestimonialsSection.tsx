@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-export const TestimonialsSection: React.FC = () => {
+export const TestimonialsSection: Reac t.FC = () => {
 import { motion, AnimatePresence  } from 'framer-motion';
 
 export default function Page() {
@@ -15,7 +15,7 @@ export default function Page() {
     content: "The AI financial analytics platform has given us unprecedented insights into market trends.Our investment decisions are now data-driven and we've outperformed the market by 25%.","
     industry: "Finance","
     results: ["25% market outperformance", "Real-time analytics", "Risk reduction"],
-    verified: true
+    verified: tru e
   },
   {
 
@@ -28,7 +28,7 @@ export default function Page() {
     content: "Zion's AI marketing automation tools have revolutionized our customer acquisition.We've seen a 150% increase in conversion rates and 80% reduction in marketing costs.","
     industry: "E-commerce","
     results: ["150% conversion increase", "80% cost reduction", "Personalized campaigns"],
-    verified: true
+    verified: tru e
   }"
     company: "Healthcare Innovations",;"
     content: "The cloud infrastructure solution provided by Zion Tech Group has dramatically improved our system reliability and scalability.",;
@@ -38,7 +38,7 @@ export default function Page() {
 ];
 
 ;
-export const TestimonialsSection: React.FC = props {
+export const TestimonialsSection: Reac t.FC = props {
   const [currentTestimonial, setCurrentTestimonial] = useState<typeof 0>(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState<typeof true>(true);
 
@@ -60,26 +60,25 @@ export const TestimonialsSection: React.FC = props {
   return ("
     <section className="py-20 bg-zion-blue-dark">"
       <div className="container mx-auto px-4">"
-        <div className="text-center mb-16">"          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <div className="text-center mb-16">"          <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
             What Our Users Say
           </h2>"
           <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
             Join thousands of satisfied professionals who trust Zion for their technology needs
           </p>
         </div>"
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md: gri d-cols-3 gap-8 max-w-6xl mx-auto">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}"
-              className="bg-zion-blue border border-zion-blue-light rounded-xl p-6 hover:border-zion-purple/50 transition-all duration-300 hover:transform hover:scale-105 group"
+              className="bg-zion-blue border border-zion-blue-light rounded-xl p-6 hover: borde r-zion-purple/50 transition-all duration-300 hover: transform hover:scale-105 group"
 
               {/* Quote icon */}"
               <div className="mb-4">"
-                <Quote className="w-8 h-8 text-zion-cyan opacity-60"  />              </div>
+                <Quote className="w-8 h-8 text-zion-cyan opacity-60"   />              </div>
               {/* Rating */}"
-              <div className="flex items-center mb-4">;
-                {[...Array(testimonial.rating)].map((_, i) => (;"
-                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current"  />                ))}
+              <div className="flex items-center mb-4"> {[...Array(testimonial.rating)].map((_, i) => (;"
+                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current"   />                ))}
               </div>
               {/* Content */}"
               <p className="text-zion-slate-light mb-6 leading-relaxed">"
@@ -120,12 +119,12 @@ export const TestimonialsSection: React.FC = props {
         {/* Stats Section */}
         <motion.div"
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 3 0 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: tru e }}
           transition={{ duration: 0.8 }}
         >"
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
             Trusted by Industry Leaders
           </h2>"
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -135,10 +134,10 @@ export const TestimonialsSection: React.FC = props {
 
         {/* Stats Section */}
         <motion.div"
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20"
-          initial={{ opacity: 0, y: 30 }}
+          className="grid grid-cols-2 md: gri d-cols-4 gap-8 mb-20"
+          initial={{ opacity: 0, y: 3 0 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: tru e }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           {stats.map((stat, index) => ("
@@ -158,24 +157,24 @@ export const TestimonialsSection: React.FC = props {
           <AnimatePresence mode="wait">
             <motion.div
               key={currentTestimonial}
-              initial={{ opacity: 0, x: 50 }}
+              initial={{ opacity: 0, x: 5 0 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -50 }}
               transition={{ duration: 0.5 }}"
               className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 md:p-12"
             >"
-              <div className="flex flex-col lg:flex-row items-start gap-8">
+              <div className="flex flex-col lg: fle x-row items-start gap-8">
                 {/* Testimonial Content */}"
                 <div className="flex-1">"
                   <div className="flex items-center gap-2 mb-4">
                     {[...Array(current.rating)].map((_, i) => ("
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current"  />
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current"   />
                     ))}
                   </div>
 
-                  <Quote className="w-8 h-8 text-cyan - 400 mb-4" />
+                  <Quote className="w-8 h-8 text-cyan - 400 mb-4"  />
 
-                  <blockquote className="text-lg md:text-xl text-white mb-6 leading -relaxed">
+                  <blockquote className="text-lg md: tex t-xl text-white mb-6 leading -relaxed">
                     "{current.content}"
                   </blockquote>
 
@@ -191,7 +190,7 @@ export const TestimonialsSection: React.FC = props {
                   {/* Verification Badge */}
                   {current.verified && ("
                     <div className="flex items-center gap-2 bg-green-500/20 border border-green-500/30 rounded-lg p-3">"
-                      <CheckCircle className="w-5 h-5 text-green-400"  />"                      <span className="text-green-400 text-sm font-medium">Verified Customer</span>
+                      <CheckCircle className="w-5 h-5 text-green-400"   />"                      <span className="text-green-400 text-sm font-medium">Verified Customer</span>
                     </div>
                   )}
 
@@ -201,7 +200,7 @@ export const TestimonialsSection: React.FC = props {
                     <ul className="space-y-2">
                       {current.results.map((result, index) => ("
                         <li key={index} className="flex items-center gap-2 text-sm text-gray-300">"
-                          <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0"  />                          {result}
+                          <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0"   />                          {result}
                         </li>) ) }
                     </ul>
                   </div>
@@ -219,10 +218,10 @@ export const TestimonialsSection: React.FC = props {
           <div className="flex items-center justify-center mt-8 gap-4">
             <button
               onClick={prevTestimonial}"
-              className="p-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full text-white transition-all duration-300 hover:scale-110"
+              className="p-3 bg-white/10 hover: b g-white/20 border border-white/20 rounded-full text-white transition-all duration-300 hover: scal e-110"
               
             >"
-              <ChevronLeft className="w-5 h-5"  />            </button>
+              <ChevronLeft className="w-5 h-5"   />            </button>
 
             {/* Dots */}"
             <div className="flex gap-2">
@@ -232,7 +231,7 @@ export const TestimonialsSection: React.FC = props {
                   onClick={() => goToTestimonial(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentTestimonial'
                       ? 'bg-cyan-400 scale-125''
-                      : 'bg-white/30 hover:bg-white/50'`
+                      : 'bg-white/30 hover: b g-white/50'`
                   }`}`
                   aria-label={`Go to testimonial ${index + 1}`}
                 />
@@ -241,10 +240,10 @@ export const TestimonialsSection: React.FC = props {
 
             <button
               onClick={nextTestimonial}"
-              className="p-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full text-white transition-all duration-300 hover:scale-110"
+              className="p-3 bg-white/10 hover: b g-white/20 border border-white/20 rounded-full text-white transition-all duration-300 hover: scal e-110"
               
             >"
-              <ChevronRight className="w-5 h-5"  />            </button>
+              <ChevronRight className="w-5 h-5"   />            </button>
           </div>
 
           {/* Auto-play Toggle */}"
@@ -253,7 +252,7 @@ export const TestimonialsSection: React.FC = props {
               onClick={() => setIsAutoPlaying(!isAutoPlaying)}`
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${isAutoPlaying'
                   ? 'bg-cyan-500 text-white''
-                  : 'bg-white/10 text-gray-300 hover:bg-white/20'`
+                  : 'bg-white/10 text-gray-300 hover: b g-white/20'`
               }`}
             >
               {isAutoPlaying ? 'Pause' : 'Play'} Auto-rotation
@@ -264,13 +263,13 @@ export const TestimonialsSection: React.FC = props {
         {/* Trust Indicators */}
         <motion.div"
           className="mt-20 text-center"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 3 0 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: tru e }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >"
           <h3 className="text-2xl font-semibold text-white mb-8">Trusted by Leading Organizations</h3>"
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60">
+          <div className="flex flex-wrap justify-center items-center gap-8 md: ga p-16 opacity-60">
             {/* Add company logos here */}"
             <div className="text-gray-400 text-sm">Fortune 500 Companies</div>"
             <div className="text-gray-400 text-sm">Government Agencies</div>"

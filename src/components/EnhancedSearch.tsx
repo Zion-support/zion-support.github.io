@@ -30,7 +30,7 @@ export function EnhancedSearch({
   const [recentSearches, setRecentSearches] = useState < string[]> ([]) ;
 
 // Mock suggestions
-const mockSuggestions: SearchSuggestion[] = ['
+const mockSuggestions: SearchSuggestio n[] = ['
   { text: 'AI compliance assistant', type: 'recent' },
   { text: 'Quantum machine learning', type: 'trending' },
   { text: 'Digital transformation consulting', type: 'ai' },
@@ -70,7 +70,7 @@ export function EnhancedSearch({
     // Cleanup function
   };
 }, []);, []);
-    const handleKeyDown = (event: anyKeyboardEvent) => {
+    const handleKeyDown = (event: anyKeyboardEven t) => {
       if(event.key === 'Escape') {
         setIsOpen(false) ;
         setSelectedIndex(-1) ;
@@ -174,7 +174,7 @@ handleResultClick(results[selectedIndex])}      }
 
     handleSearch(result.title) ;
     router(result.url) ;
-    const handleKeyDown = (event: KeyboardEvent) => {;      if(!isOpen) return;
+    const handleKeyDown = (event: KeyboardEven t) => {;      if(!isOpen) return;
 
       switch(event.key) {
 
@@ -236,10 +236,10 @@ setFilters(prev: > ({;
     setFilters({ type: [], category: [], tags: [] }) };
 
     switch(type) {;
-      case 'service': return <Code className="h-4 w-4"  />;'"
-      case 'page': return <Globe className="h-4 w-4"  />;'"
-      case 'blog': return <TrendingUp className="h-4 w-4"  />;'"
-      case 'case-study': return <Building className="h-4 w-4"  />}
+      case 'service': return <Code className="h-4 w-4"   />;'"
+      case 'page': return <Globe className="h-4 w-4"   />;'"
+      case 'blog': return <TrendingUp className="h-4 w-4"   />;'"
+      case 'case-study': return <Building className="h-4 w-4"   />}
   };
 
     setResults([]);
@@ -249,48 +249,47 @@ setFilters(prev: > ({;
     setSelectedIndex(-1)};
 
       case 'minimal':'
-        return 'bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700';
+        return 'bg-white dark: b g-gray-800 border border-gray-200 dark: borde r-gray-700';
       default:'
-        return 'bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-lg'}
+        return 'bg-white dark: b g-gray-800 border border-gray-200 dark: borde r-gray-700 shadow-lg'}
   };
 
   return ()
     <div ref = {searchRef} className={`relative ${className}`}>`
       <div className={`relative rounded-xl ${getVariantStyles()}`}>"
         <div className="flex items-center px-4 py-3">"
-          <Search className="w-5 h-5 text-gray-400 mr-3"  />          <input
-            ref={inputRef}"
+          <Search className="w-5 h-5 text-gray-400 mr-3"   />          <input ref={inputRef}"
             type="text"
             value={query}
             onChange={handleInputChange}
             onFocus={handleInputFocus}
             placeholder={placeholder}"
-            className="flex-1 bg-transparent text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none"
-          />
+            className="flex-1 bg-transparent text-gray-900 dark: tex t-white placeholder-gray-500 dark: placeholde r-gray-400 focus: outlin e-none"
+           />
           {query && (
             <button
               onClick={clearSearch}"
-              className="ml-2 p-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+              className="ml-2 p-1 rounded-full hover: b g-gray-100 dark: hove r:bg-gray-700 transition-colors"
             >"
-              <X className="w-4 h-4 text-gray-400"  />
+              <X className="w-4 h-4 text-gray-400"   />
             </button>
           )}
         </div>;"
-      default: return <Search className="h-4 w-4"  />};
+      default: retur n <Search className="h-4 w-4"   />};
 
     switch(variant) {;
       case 'futuristic':;
-        return 'bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-500/20 hover:border-purple-500/40 focus-within:border-purple-500 focus-within:ring-2 focus-within:ring-purple-500/20';
+        return 'bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-500/20 hover: borde r-purple-500/40 focus-within: borde r-purple-500 focus-within: rin g-2 focus-within: rin g-purple-500/20';
       case 'minimal':'
-        return 'bg-gray-100 border border-gray-200 hover:border-gray-300 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-500/20';
+        return 'bg-gray-100 border border-gray-200 hover: borde r-gray-300 focus-within: borde r-blue-500 focus-within: rin g-2 focus-within: rin g-blue-500/20';
       default:'
-        return 'bg-white border border-gray-300 hover:border-gray-400 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-500/20'}  };
+        return 'bg-white border border-gray-300 hover: borde r-gray-400 focus-within: borde r-blue-500 focus-within: rin g-2 focus-within: rin g-blue-500/20'}  };
 
   return ()`
     <div ref = {searchRef} className={`relative ${className}`}>
       {/* Search Input */}`
       <div className={`relative flex items-center rounded-xl transition-all duration-300 ${getVariantClasses()}`}>"
-        <Search className="absolute left-4 h-5 w-5 text-gray-400"  />        <input
+        <Search className="absolute left-4 h-5 w-5 text-gray-400"   />        <input
           ref={inputRef}"
           type="text"
           value={query}
@@ -302,9 +301,9 @@ setFilters(prev: > ({;
         {query && (
           <button'
             onClick={() => setQuery('')}"
-            className="absolute right-4 p-1 text-gray-400 hover:text-gray-600 transition-colors"
+            className="absolute right-4 p-1 text-gray-400 hover: tex t-gray-600 transition-colors"
           >"
-            <X className="h-4 w-4"  />          </button>
+            <X className="h-4 w-4"   />          </button>
         )}
       </div>
 
@@ -334,14 +333,14 @@ setFilters(prev: > ({;
             <div className="flex items-center justify-between p-4 border-b border-gray-200">
               <button
                 onClick={() => setShowFilters(!showFilters)}"
-                className="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                className="flex items-center gap-2 text-sm text-gray-600 hover: tex t-gray-900 transition-colors"
               >"
-                <Filter className="h-4 w-4"  />                Filters
+                <Filter className="h-4 w-4"   />                Filters
               </button>
               {(filters.type.length > 0 || filters.category.length > 0 || filters.tags.length > 0) && (
                 <button
                   onClick={clearFilters}"
-                  className="text-sm text-red-500 hover:text-red-600 transition-colors"
+                  className="text-sm text-red-500 hover: tex t-red-600 transition-colors"
                 >
                   Clear all
                 </button>) }
@@ -386,7 +385,7 @@ setFilters(prev: > ({;
 }`
                             className={`px-3 py-1 text-xs rounded-full transition-colors ${filters.type.includes(type)
                                 ? 'bg-blue-500 text-white''
-                                : 'bg-gray-100 text-gray-600 hover:bg-gray-200'`
+                                : 'bg-gray-100 text-gray-600 hover: b g-gray-200'`
                             }`}
                           >
                             {type.charAt(0) .toUpperCase () + type.slice(1) }
@@ -409,7 +408,7 @@ setFilters(prev: > ({;
 }`
                             className={`px-3 py-1 text-xs rounded-full transition-colors ${filters.category.includes(category.name)
                                 ? 'bg-blue-500 text-white''
-                                : 'bg-gray-100 text-gray-600 hover:bg-gray-200'`
+                                : 'bg-gray-100 text-gray-600 hover: b g-gray-200'`
                             }`}
                           >
                             {category.name}
@@ -428,15 +427,14 @@ setFilters(prev: > ({;
                   {recentSearches.length > 0 && (
                     <div>"
                       <h4 className="text-sm font-medium text-gray-900 mb-2 flex items-center gap-2">"
-                        <Clock className="h-4 w-4"  />                        Recent Searches;
+                        <Clock className="h-4 w-4"   />                        Recent Searches;
                       </h4>;"
-                      <div className="space-y-2">;
-                        {recentSearches.map((search, index) => (;
+                      <div className="space-y-2"> {recentSearches.map((search, index) => (;
                           <button;
                             key={index};
                             onClick={() => {;
                               setQuery(search);
-                              handleSearch()}}"                            className="w-full text-left p-2 text-sm text-gray-600 hover:bg-gray-50 rounded-lg transition-colors"
+                              handleSearch()}}"                            className="w-full text-left p-2 text-sm text-gray-600 hover: b g-gray-50 rounded-lg transition-colors"
                           >
                             {search}
                           </button>) ) }
@@ -446,15 +444,14 @@ setFilters(prev: > ({;
                   {/* Popular Searches */}
                   <div>"
                     <h4 className="text-sm font-medium text-gray-900 mb-2 flex items-center gap-2">"
-                      <TrendingUp className="h-4 w-4"  />                      Popular Searches;
+                      <TrendingUp className="h-4 w-4"   />                      Popular Searches;
                     </h4>;"
-                    <div className="flex flex-wrap gap-2">;
-                      {popularSearches.map((search, index) => (;
+                    <div className="flex flex-wrap gap-2"> {popularSearches.map((search, index) => (;
                         <button;
                           key={index};
                           onClick={() => {;
                             setQuery(search);
-                            handleSearch()}}"                          className="px-3 py-1 text-sm bg-gray-100 text-gray-600 rounded-full hover:bg-gray-200 transition-colors"
+                            handleSearch()}}"                          className="px-3 py-1 text-sm bg-gray-100 text-gray-600 rounded-full hover: b g-gray-200 transition-colors"
                         >
                           {search}
                         </button>) ) }
@@ -472,7 +469,7 @@ setFilters(prev: > ({;
                     <button
                       key={result.id}
                       onClick={() => handleResultClick(result)}`
-                      className={`w-full text-left p-3 hover:bg-gray-50 rounded-lg transition-colors group ${index === selectedIndex ? 'bg-blue-50' : ''`
+                      className={`w-full text-left p-3 hover: b g-gray-50 rounded-lg transition-colors group ${index === selectedIndex ? 'bg-blue-50' : ''`
                       }`}
                     >"
                       <div className="flex items-start gap-3">"
@@ -480,7 +477,7 @@ setFilters(prev: > ({;
                           {getTypeIcon(result.type)}
                         </div>"
                         <div className="flex-1 min-w-0">"
-                          <h4 className="text-sm font-medium text-gray-900 group-hover:text-blue-600 transition-colors">
+                          <h4 className="text-sm font-medium text-gray-900 group-hover: tex t-blue-600 transition-colors">
                             {result.title}
                           </h4>"
                           <p className="text-sm text-gray-600 mt-1 line-clamp-2">
@@ -501,7 +498,7 @@ setFilters(prev: > ({;
                 </div>
               ) : ("
                 <div className="p-8 text-center">"
-                  <Search className="h-12 w-12 text-gray-400 mx-auto mb-4"  />"                  <h3 className="text-lg font-medium text-gray-900 mb-2">
+                  <Search className="h-12 w-12 text-gray-400 mx-auto mb-4"   />"                  <h3 className="text-lg font-medium text-gray-900 mb-2">
                     No results found
                   </h3>"
                   <p className="text-gray-600">

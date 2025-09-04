@@ -11,8 +11,7 @@ interface SEOProps {title: string;
 import Head from "next/head""import React from "react"
 
 interface SEOProps {
-  title: string
-  description: string
+  title: string description: string
   keywords?: string
   image?: string
   url?: string
@@ -25,5 +24,5 @@ interface SEOProps {
   tags?: string[]
 }
 
-const SEO: React.FC<SEOProps> = ({
+const SEO: Reac t.FC<SEOProps> = ({
 "

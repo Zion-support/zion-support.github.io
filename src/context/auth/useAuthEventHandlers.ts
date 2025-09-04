@@ -12,10 +12,10 @@ interface User {
   updatedAt?: string}
 
 export const useAuthEventHandlers = (
-  setUser: (user: User | null)  => void,
+  setUser: (user: Use r | null)  => void,
   setOnboardingStep: (step: number)  => void
 ) => {;
-  const handleSignedIn = useCallback((user: User)  => {;
+  const handleSignedIn = useCallback((user: Use r)  => {;
     setUser(user);
     setOnboardingStep(1); // Start onboarding process
   }, [setUser, setOnboardingStep]);

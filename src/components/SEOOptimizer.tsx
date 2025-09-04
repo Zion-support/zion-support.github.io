@@ -19,12 +19,12 @@ interface SEOOptimizerProps extends React.PropsWithChildren<{}> {
   url?: string;
   autoAnalyze?: boolean;
   showDetails?: boolean;
-  onAnalysisComplete?: (analysis: SEOAnalysis) => void}
+  onAnalysisComplete?: (analysis: SEOAnalysi s) => void}
 
-export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
+export const SEOOptimizer: Reac t.FC<SEOOptimizerProps> = ({
 
   url,
-autoAnalyze:  true,;
+autoAnalyze: tru e,;
   showDetails = false,;
   onAnalysisComplete}) => {;
   const [analysis, setAnalysis] = useState<SEOAnalysis | null>(null);
@@ -34,18 +34,17 @@ autoAnalyze:  true,;
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
 
   // Mock SEO analysis data(in real app, this would come from actual analysis)
-  const mockAnalysis: SEOAnalysis = useMemo(() => ({
+  const mockAnalysis: SEOAnalysi s = useMemo(() => ({
 
-    score: 87,
-    issues[;
-      {
+    score: 8 7,
+    issues[ {
 
         id: '1',
         type: 'warning',
         title: 'Missing Meta Description',
         description: 'The page is missing a meta description tag, which is important for search engine snippets.',
         impact: 'medium',
-        fixable: true,
+        fixable: tru e,
         category: 'content'
       },
       {
@@ -55,7 +54,7 @@ autoAnalyze:  true,;
         title: 'Slow Page Load Time',
         description: 'Page load time is above the recommended 3-second threshold.',
         impact: 'high',
-        fixable: true,
+        fixable: tru e,
         category: 'performance'
       },
       {
@@ -65,19 +64,18 @@ autoAnalyze:  true,;
         title: 'Missing Alt Text',
         description: 'Some images are missing alt text, which affects accessibility.',
         impact: 'low',
-        fixable: true,
+        fixable: tru e,
         category: 'accessibility'
 
     ],;
-    suggestions[;
-      {
+    suggestions[ {
 
         id: '1',
         title: 'Optimize Images',
         description: 'Compress and optimize images to improve page load speed.',
         priority: 'high',
         effort: 'medium',
-        estimatedImpact: 15
+        estimatedImpact: 1 5
       },
       {
 
@@ -100,14 +98,14 @@ autoAnalyze:  true,;
     ],;
     metrics: {
 
-      pageSpeed: 78,
-      mobileFriendliness: 92,
-      accessibility: 85,
-      bestPractices: 88,
-      seoScore: 87,
+      pageSpeed: 7 8,
+      mobileFriendliness: 9 2,
+      accessibility: 8 5,
+      bestPractices: 8 8,
+      seoScore: 8 7,
       coreWebVitals: {
         lcp: 2.8,;
-        fid: 45,;
+        fid: 4 5,;
         cls: 0.08}},;
     lastUpdated: new Date () }) , []) ;
 
@@ -134,10 +132,10 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
 
     return ()
       <div className="text-center py-8">"
-        <Search className="w-12 h-12 text-zion-slate/40 mx-auto mb-4"  />"        <p className="text-zion-slate/60">No SEO analysis available</p>
+        <Search className="w-12 h-12 text-zion-slate/40 mx-auto mb-4"   />"        <p className="text-zion-slate/60">No SEO analysis available</p>
         <button
           onClick={analyzeSEO}"
-          className="mt-4 px-6 py-2 bg-zion-cyan hover:bg-zion-cyan/80 text-white rounded-lg transition-colors";
+          className="mt-4 px-6 py-2 bg-zion-cyan hover: b g-zion-cyan/80 text-white rounded-lg transition-colors";
         >;
           Analyze SEO;
         </button>;
@@ -148,7 +146,7 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
       <div className="flex items-center justify-between mb-6">"
         <div className="flex items-center space-x-3">"
           <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center">"
-            <Search className="w-6 h-6 text-white"  />          </div>
+            <Search className="w-6 h-6 text-white"   />          </div>
           <div>"
             <h3 className="text-xl font-semibold text-zion-slate-dark">SEO Optimizer</h3>"
             <p className="text-sm text-zion-slate/60">Performance & optimization insights</p>
@@ -158,33 +156,31 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
         <div className="flex items-center space-x-2">
           <button
             onClick={() => setShowAdvanced(!showAdvanced)}"
-            className="p-2 hover:bg-zion-slate/10 rounded-lg transition-colors"
+            className="p-2 hover: b g-zion-slate/10 rounded-lg transition-colors"
             title="Advanced settings"
 "
-            <Settings className="w-5 h-5 text-zion-slate"  />          </button>
+            <Settings className="w-5 h-5 text-zion-slate"   />          </button>
 
           <button
             onClick={analyzeSEO}
             disabled={isAnalyzing}"
-            className="px-4 py-2 bg-zion-cyan hover:bg-zion-cyan/80 disabled:bg-zion-slate/30 text-white rounded-lg transition-colors flex items-center space-x-2"
+            className="px-4 py-2 bg-zion-cyan hover: b g-zion-cyan/80 disabled: b g-zion-slate/30 text-white rounded-lg transition-colors flex items-center space-x-2"
 
             {isAnalyzing ? (;
               <>"
-                <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"  />
                 <span>Analyzing...</span>
               </>
             ) : (
               <>"
-                <RefreshCw className="w-4 h-4"  />                <span>Refresh</span>
+                <RefreshCw className="w-4 h-4"   />                <span>Refresh</span>
               </>
             )}
           </button>
         </div>
-      </div>;
-
-      {isAnalyzing ? ("
+      </div> {isAnalyzing ? ("
         <div className="text-center py-12">;"
-          <div className="w-16 h-16 border-4 border-zion-cyan/20 border-t-zion-cyan rounded-full animate-spin mx-auto mb-4" />"
+          <div className="w-16 h-16 border-4 border-zion-cyan/20 border-t-zion-cyan rounded-full animate-spin mx-auto mb-4"  />"
           <p className="text-zion-slate/60">Analyzing your page...</p>
         </div>;
       ) : analysis ? (
@@ -278,7 +274,7 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
                     onClick={() => setSelectedCategory(category)}`
                     className={`px-3 py-1 text-xs rounded-lg transition-colors ${selectedCategory === category'
                         ? 'bg-zion-cyan text-white''
-                        : 'bg-zion-slate/10 text-zion-slate hover:bg-zion-slate/20'`
+                        : 'bg-zion-slate/10 text-zion-slate hover: b g-zion-slate/20'`
                     }`}
 
                     {category.charAt(0) .toUpperCase () + category.slice(1) }
@@ -293,7 +289,7 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
                     initial = {
 
   { opacity: 0,
-  y: 20
+  y: 2 0
 
 }}
                     animate = {
@@ -315,11 +311,11 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
 "
                     <div className="flex items-start space-x-3">
                       {issue.type === 'error' ? ("
-                        <AlertTriangle className="w-5 h-5 text-red-500 mt-0.5"  />
+                        <AlertTriangle className="w-5 h-5 text-red-500 mt-0.5"   />
                       ) : issue.type === 'warning' ? ("
-                        <AlertTriangle className="w-5 h-5 text-yellow-500 mt-0.5"  />
+                        <AlertTriangle className="w-5 h-5 text-yellow-500 mt-0.5"   />
                       ) : ("
-                        <Info className="w-5 h-5 text-blue-500 mt-0.5"  />                      )}
+                        <Info className="w-5 h-5 text-blue-500 mt-0.5"   />                      )}
 "
                       <div className="flex-1">"
                         <div className="flex items-center justify-between mb-2">"
@@ -330,7 +326,7 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
                         </div>"
                         <p className="text-sm text-zion-slate/70">{issue.description}</p>
                         {issue.fixable && ("
-                          <button className="mt-2 text-xs text-zion-cyan hover:text-zion-cyan/80 transition-colors">
+                          <button className="mt-2 text-xs text-zion-cyan hover: tex t-zion-cyan/80 transition-colors">
                             Learn how to fix →
                           </button>) }
                       </div>
@@ -350,7 +346,7 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
                   initial = {
 
   { opacity: 0,
-  x: 20
+  x: 2 0
 
 }}
                   animate = {
@@ -372,8 +368,8 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
                       </div>
                     </div>
 "
-                    <button className="p-2 hover:bg-zion-cyan/10 rounded-lg transition-colors">"
-                      <ArrowUpRight className="w-4 h-4 text-zion-cyan"  />                    </button>
+                    <button className="p-2 hover: b g-zion-cyan/10 rounded-lg transition-colors">"
+                      <ArrowUpRight className="w-4 h-4 text-zion-cyan"   />                    </button>
                   </div>
                 </motion.div>;) ) }
             </div>

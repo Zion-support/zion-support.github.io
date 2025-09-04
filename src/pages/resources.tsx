@@ -105,7 +105,7 @@ export default function ResourcesPage() {
     {
       title: "The Future of AI in Business",
       date: "December 15, 2025",
-      time: "2:00 PM EST",
+      time: "2: 00 PM EST",
       speaker: "Dr. Sarah Chen, CTO",
       description: "Explore emerging AI trends and their impact on business strategy and operations.",
       registrationUrl: "/webinars/future-of-ai-business"
@@ -113,7 +113,7 @@ export default function ResourcesPage() {
     {
       title: "Cloud Cost Optimization Workshop",
       date: "December 22, 2025",
-      time: "1:00 PM EST",
+      time: "1: 00 PM EST",
       speaker: "Marcus Rodriguez, COO",
       description: "Hands-on workshop to optimize your cloud spending and improve resource utilization.",
       registrationUrl: "/webinars/cloud-cost-optimization-workshop"
@@ -122,14 +122,14 @@ export default function ResourcesPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 px-4 sm: p x-6 lg: p x-8">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center">
             <div className="inline-flex items-center px-4 py-2 bg-zion-cyan/20 text-zion-cyan rounded-full text-sm font-medium mb-6">
-              <BookOpen className="w-4 h-4 mr-2" />
+              <BookOpen className="w-4 h-4 mr-2"  />
               Knowledge Hub
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md: tex t-6xl font-bold text-white mb-6">
               Resources & Insights
             </h1>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
@@ -139,25 +139,25 @@ export default function ResourcesPage() {
         </div>
       </section>
       {/* Whitepapers Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-darker">
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-zion-slate-darker">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
               Featured Whitepapers
             </h2>
             <p className="text-lg text-zion-slate-light max-w-2xl mx-auto">
               In-depth research and insights on the latest technology trends and business strategies.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
             {whitepapers.map((paper, index) => (
-              <div key={index} className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/30 hover:border-zion-cyan/50 transition-all duration-300">
+              <div key={index} className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/30 hover: borde r-zion-cyan/50 transition-all duration-300">
                 <div className="flex items-center justify-between mb-4">
                   <span className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full">
                     {paper.category}
                   </span>
                   <div className="flex items-center text-zion-slate-light text-sm">
-                    <Star className="w-4 h-4 text-yellow-400 mr-1" />
+                    <Star className="w-4 h-4 text-yellow-400 mr-1"  />
                     {paper.rating}
                   </div>
                 </div>
@@ -168,8 +168,8 @@ export default function ResourcesPage() {
                   <span>📁 {paper.fileSize}</span>
                 </div>
                 <a href={paper.downloadUrl}
-                   className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue text-white text-center py-3 rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 flex items-center justify-center">
-                  <Download className="w-4 h-4 mr-2" />
+                   className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue text-white text-center py-3 rounded-lg hover: fro m-zion-cyan-light hover: t o-zion-blue-light transition-all duration-300 flex items-center justify-center">
+                  <Download className="w-4 h-4 mr-2"  />
                   Download Whitepaper
                 </a>
               </div>
@@ -182,19 +182,19 @@ export default function ResourcesPage() {
         </div>
       </section>
       {/* Case Studies Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
               Success Stories
             </h2>
             <p className="text-lg text-zion-slate-light max-w-2xl mx-auto">
               Real-world examples of how our solutions have transformed businesses across industries.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
             {caseStudies.map((study, index) => (
-              <div key={index} className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/30 hover:border-zion-cyan/50 transition-all duration-300">
+              <div key={index} className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/30 hover: borde r-zion-cyan/50 transition-all duration-300">
                 <div className="mb-4">
                   <span className="px-3 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded-full">
                     {study.industry}
@@ -207,7 +207,7 @@ export default function ResourcesPage() {
                   <ul className="space-y-1">
                     {study.results.map((result, resultIndex) => (
                       <li key={resultIndex} className="text-zion-slate-light text-sm flex items-center">
-                        <CheckCircle className="w-3 h-3 text-zion-cyan mr-2" />
+                        <CheckCircle className="w-3 h-3 text-zion-cyan mr-2"  />
                         {result}
                       </li>
                     ))
@@ -219,9 +219,9 @@ export default function ResourcesPage() {
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-xs text-zion-slate-light">{study.readTime}</span>
-                  <a href={study.url} className="text-zion-cyan hover:text-zion-cyan-light text-sm font-medium flex items-center">
+                  <a href={study.url} className="text-zion-cyan hover: tex t-zion-cyan-light text-sm font-medium flex items-center">
                     Read Case Study
-                    <ArrowRight className="w-3 h-3 ml-1" />
+                    <ArrowRight className="w-3 h-3 ml-1"  />
                   </a>
                 </div>
               </div>
@@ -234,19 +234,19 @@ export default function ResourcesPage() {
         </div>
       </section>
       {/* Guides Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-darker">
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-zion-slate-darker">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
               Practical Guides
             </h2>
             <p className="text-lg text-zion-slate-light max-w-2xl mx-auto">
               Step-by-step guides and best practices to help you implement technology solutions effectively.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
             {guides.map((guide, index) => (
-              <div key={index} className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/30 hover:border-zion-cyan/50 transition-all duration-300">
+              <div key={index} className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/30 hover: borde r-zion-cyan/50 transition-all duration-300">
                 <div className="flex items-center justify-between mb-4">
                   <span className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full">
                     {guide.category}
@@ -259,12 +259,12 @@ export default function ResourcesPage() {
                 <p className="text-zion-slate-light text-sm mb-4">{guide.description}</p>
                 <div className="flex items-center justify-between text-xs text-zion-slate-light mb-4">
                   <span className="flex items-center">
-                    <Clock className="w-3 h-3 mr-1" />
+                    <Clock className="w-3 h-3 mr-1"  />
                     {guide.estimatedTime}
                   </span>
                 </div>
-                <a href={guide.url} className="w-full border border-zion-cyan text-zion-cyan text-center py-3 rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center justify-center">
-                  <BookOpen className="w-4 h-4 mr-2" />
+                <a href={guide.url} className="w-full border border-zion-cyan text-zion-cyan text-center py-3 rounded-lg hover: b g-zion-cyan hover: tex t-white transition-all duration-300 flex items-center justify-center">
+                  <BookOpen className="w-4 h-4 mr-2"  />
                   Read Guide
                 </a>
               </div>
@@ -277,17 +277,17 @@ export default function ResourcesPage() {
         </div>
       </section>
       {/* Webinars Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
               Upcoming Webinars
             </h2>
             <p className="text-lg text-zion-slate-light max-w-2xl mx-auto">
               Join our live sessions with industry experts and gain valuable insights on technology trends and best practices.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md: gri d-cols-2 gap-8 max-w-4xl mx-auto">
             {webinars.map((webinar, index) => (
               <div key={index} className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/30">
                 <div className="flex items-center justify-between mb-4">
@@ -301,12 +301,12 @@ export default function ResourcesPage() {
                 <div className="mb-4">
                   <p className="text-zion-cyan text-sm font-medium mb-1">Speaker: {webinar.speaker}</p>
                   <p className="text-zion-slate-light text-sm flex items-center">
-                    <Calendar className="w-3 h-3 mr-1" />
+                    <Calendar className="w-3 h-3 mr-1"  />
                     {webinar.date} at {webinar.time}
                   </p>
                 </div>
-                <a href={webinar.registrationUrl} className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue text-white text-center py-3 rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 flex items-center justify-center">
-                  <Video className="w-4 h-4 mr-2" />
+                <a href={webinar.registrationUrl} className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue text-white text-center py-3 rounded-lg hover: fro m-zion-cyan-light hover: t o-zion-blue-light transition-all duration-300 flex items-center justify-center">
+                  <Video className="w-4 h-4 mr-2"  />
                   Register Now
                 </a>
               </div>
@@ -319,21 +319,20 @@ export default function ResourcesPage() {
         </div>
       </section>
       {/* Newsletter Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20">
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-6">
             Stay Updated
           </h2>
           <p className="text-lg text-zion-slate-light mb-8">
             Subscribe to our newsletter to receive the latest insights, whitepapers, and event notifications directly in your inbox.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-            <input 
-              type="email" 
+          <div className="flex flex-col sm: fle x-row gap-4 justify-center max-w-md mx-auto">
+            <input type="email" 
               placeholder="Enter your email address"
-              className="flex-1 px-4 py-3 bg-white text-zion-slate-dark rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-            />
-            <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300">
+              className="flex-1 px-4 py-3 bg-white text-zion-slate-dark rounded-lg focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan"
+             />
+            <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover: fro m-zion-cyan-light hover: t o-zion-blue-light transition-all duration-300">
               Subscribe
             </button>
           </div>

@@ -29,11 +29,11 @@ export default function ServiceDetail() {
 		<>
 			<Helmet>
 				<title>{title}</title>
-				<meta name="description" content={description} />
+				<meta name="description" content={description}  />
 			</Helmet>
 			<main className="mx-auto min-h-screen max-w-3xl px-6 py-12">
 				<nav className="text-sm text-gray-500"><Link href="/services/">Services</Link> / <span className="text-gray-700">{service.name}</span></nav>
-				<h1 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">{service.icon ? `${service.icon} ` : ''}{service.name}</h1>
+				<h1 className="mt-2 text-3xl font-semibold tracking-tight sm: tex t-4xl">{service.icon ? `${service.icon} ` : ''}{service.name}</h1>
 				<p className="mt-3 max-w-2xl text-gray-700">{service.tagline}</p>
 				<div className="mt-5 text-sm"><span className="font-semibold">{service.price}</span> <span className="text-gray-500">{service.period}</span></div>
 				{service.description && (<p className="mt-6 text-gray-700">{service.description}</p>)}
@@ -46,8 +46,8 @@ export default function ServiceDetail() {
 					</section>
 				)}
 				<div className="mt-10 flex gap-3">
-					<Link href="/request-quote/" className="inline-block rounded bg-blue-600 px-4 py-2 text-white hover:bg-blue-700">Request a quote</Link>;
-					<Link href="/contact/" className="inline-block rounded border px-4 py-2 text-blue-700 hover:bg-blue-50">Contact us</Link>;
+					<Link href="/request-quote/" className="inline-block rounded bg-blue-600 px-4 py-2 text-white hover: b g-blue-700">Request a quote</Link>;
+					<Link href="/contact/" className="inline-block rounded border px-4 py-2 text-blue-700 hover: b g-blue-50">Contact us</Link>;
 				</div>;
 			</main>;
 		</>;

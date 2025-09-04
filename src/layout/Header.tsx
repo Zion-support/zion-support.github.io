@@ -19,12 +19,12 @@ export default function Header() {
     {
       name: 'Home',
       href: '/',
-      current: location.pathname === '/',
+      current: locatio n.pathname === '/',
     },
     {
       name: 'Services',
       href: '/services',
-      current: location.pathname.startsWith('/services'),
+      current: locatio n.pathname.startsWith('/services'),
       dropdown: [
         { name: 'AI & Machine Learning', href: '/services/ai-machine-learning' },
         { name: 'Cloud & DevOps', href: '/services/cloud-devops' },
@@ -43,7 +43,7 @@ export default function Header() {
     {
       name: 'Solutions',
       href: '/solutions',
-      current: location.pathname.startsWith('/solutions'),
+      current: locatio n.pathname.startsWith('/solutions'),
       dropdown: [
         { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
         { name: 'Startup Solutions', href: '/solutions/startup' },
@@ -56,7 +56,7 @@ export default function Header() {
     {
       name: 'About',
       href: '/about',
-      current: location.pathname.startsWith('/about'),
+      current: locatio n.pathname.startsWith('/about'),
       dropdown: [
         { name: 'Our Story', href: '/about/story' },
         { name: 'Team', href: '/about/team' },
@@ -68,7 +68,7 @@ export default function Header() {
     {
       name: 'Resources',
       href: '/resources',
-      current: location.pathname.startsWith('/resources'),
+      current: locatio n.pathname.startsWith('/resources'),
       dropdown: [
         { name: 'Blog', href: '/blog' },
         { name: 'Case Studies', href: '/case-studies' },
@@ -82,7 +82,7 @@ export default function Header() {
     {
       name: 'Contact',
       href: '/contact',
-      current: location.pathname === '/contact',
+      current: locatio n.pathname === '/contact',
     },
   ];
 
@@ -92,21 +92,21 @@ export default function Header() {
         ? 'bg-white/95 backdrop-blur-xl border-b border-gray-200 shadow-lg'
         : 'bg-white/90 backdrop-blur-md'
     }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
             <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-xl">Z</span>
             </div>
-            <div className="hidden sm:block">
+            <div className="hidden sm: bloc k">
               <h1 className="text-xl font-bold text-gray-900">Zion Tech Group</h1>
               <p className="text-xs text-gray-600">Innovation & Technology</p>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden lg: flex items-center space-x-8">
             {navigation.map((item) => (
               <div key={item.name} className="relative group">
                 {item.dropdown ? (
@@ -114,21 +114,21 @@ export default function Header() {
                     <button className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
                       item.current
                         ? 'text-blue-600 bg-blue-50'
-                        : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                        : 'text-gray-700 hover: tex t-blue-600 hover: b g-gray-50'
                     }`}>
                       {item.name}
                       <svg className="ml-1 inline-block w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"  />
                       </svg>
                     </button>
                     {/* Dropdown Menu */}
-                    <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                    <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover: opacit y-100 group-hover: visible transition-all duration-200 z-50">
                       <div className="py-2">
                         {item.dropdown.map((subItem) => (
                           <Link
                             key={subItem.name}
                             to={subItem.href}
-                            className="block px-4 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors"
+                            className="block px-4 py-2 text-sm text-gray-700 hover: tex t-blue-600 hover: b g-blue-50 transition-colors"
                           >
                             {subItem.name}
                           </Link>
@@ -142,7 +142,7 @@ export default function Header() {
                     className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
                       item.current
                         ? 'text-blue-600 bg-blue-50'
-                        : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                        : 'text-gray-700 hover: tex t-blue-600 hover: b g-gray-50'
                     }`}
                   >
                     {item.name}
@@ -153,10 +153,10 @@ export default function Header() {
           </nav>
 
           {/* CTA Button */}
-          <div className="hidden lg:block">
+          <div className="hidden lg: bloc k">
             <Link
               to="/contact"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
+              className="bg-blue-600 hover: b g-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
             >
               Get Started
             </Link>
@@ -165,10 +165,10 @@ export default function Header() {
           {/* Mobile menu button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100"
+            className="lg: hidden p-2 rounded-md text-gray-700 hover: tex t-blue-600 hover: b g-gray-100"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16"  />
             </svg>
           </button>
         </div>
@@ -176,7 +176,7 @@ export default function Header() {
 
       {/* Mobile menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white border-t border-gray-200">
+        <div className="lg: hidden bg-white border-t border-gray-200">
           <div className="px-4 py-6 space-y-4">
             {navigation.map((item) => (
               <div key={item.name}>
@@ -188,7 +188,7 @@ export default function Header() {
                         <Link
                           key={subItem.name}
                           to={subItem.href}
-                          className="block text-sm text-gray-600 hover:text-blue-600"
+                          className="block text-sm text-gray-600 hover: tex t-blue-600"
                           onClick={() => setMobileMenuOpen(false)}
                         >
                           {subItem.name}
@@ -199,7 +199,7 @@ export default function Header() {
                 ) : (
                   <Link
                     to={item.href}
-                    className="block text-sm font-medium text-gray-900 hover:text-blue-600"
+                    className="block text-sm font-medium text-gray-900 hover: tex t-blue-600"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {item.name}
@@ -210,7 +210,7 @@ export default function Header() {
             <div className="pt-4">
               <Link
                 to="/contact"
-                className="block w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium text-center transition-colors"
+                className="block w-full bg-blue-600 hover: b g-blue-700 text-white px-6 py-3 rounded-lg font-medium text-center transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Get Started

@@ -48,6 +48,6 @@ export default function Page() {
     isLoading,
     isProcessing,
     triggerAIMatching,
-    refetch: fetchMatches // Added refetch
+    refetch: fetchMatche s // Added refetch
   };
 }

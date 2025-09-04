@@ -6,10 +6,10 @@ const Webinars = () => {
     <>
       <Head>
         <title>Webinars - Zion Tech Group</title>
-        <meta name="description" content="Professional Webinars services"  />
+        <meta name="description" content="Professional Webinars services"   />
       </Head>
       <div className="min-h-screen bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8 py-12">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-gray-900 mb-8">
               Webinars
@@ -17,7 +17,7 @@ const Webinars = () => {
             <p className="text-xl text-gray-600 mb-12">
               Professional Webinars services and solutions
             </p>
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div className="grid md: gri d-cols-2 gap-8 mb-12">
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h2 className="text-2xl font-semibold mb-4">Our Services</h2>
                 <ul className="text-gray-600 space-y-2">
@@ -36,11 +36,11 @@ const Webinars = () => {
                   <li>• Competitive Pricing</li>
                 </ul>
               </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
+              <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover: b g-blue-700 transition-colors">
                 View Pricing
               </Link>
-              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
+              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover: b g-gray-700 transition-colors">
                 Contact Us
               </Link>
             </div>

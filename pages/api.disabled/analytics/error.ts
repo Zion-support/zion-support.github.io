@@ -14,13 +14,13 @@ interface ErrorData {
   userAgent: string;
 }
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function handler(req: NextApiReques t, res: NextApiRespons e) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
   try {
-    const data: ErrorData = req.body;
+    const data: ErrorDat a = req.body;
 
     // Validate the error data
     if (!data.error || !data.error.message || !data.url) {
@@ -29,13 +29,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     // Log the error (in production, you might want to send to a monitoring service)
     console.error('Client Error: ', {
-      message: data.error.message,
-      name: data.error.name,
-      url: data.url,
+      message: dat a.error.message,
+      name: dat a.error.name,
+      url: dat a.url,
       timestamp: new Date(data.timestamp).toISOString(),
-      userAgent: data.userAgent,
-      stack: data.error.stack,
-      componentStack: data.errorInfo.componentStack,
+      userAgent: dat a.userAgent,
+      stack: dat a.error.stack,
+      componentStack: dat a.errorInfo.componentStack,
     });
 
     // Here you could send the error to: // - A monitoring service (Sentry, LogRocket, Bugsnag, etc.)
@@ -45,9 +45,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     // For now, we&apos;ll just acknowledge receipt'
     res.status(200).json({
-      success: true,
+      success: tru e,
       message: 'Error logged successfully',
-      timestamp: Date.now(),
+      timestamp: Dat e.now(),
     });
   } catch (error) {
     console.error('Error processing error data: ', error);

@@ -18,13 +18,13 @@ import {
   Database
 } from 'lucide-react'
 
-const SEO = dynamic(() => import('../src/components/SEO'), { ssr: false })
-const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false })
+const SEO = dynamic(() => import('../src/components/SEO'), { ssr: fals e })
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: fals e })
 
-const IoTSolutionsPage: React.FC = () => {
+const IoTSolutionsPage: Reac t.FC = () => {
   const features = [
     {
-      icon: <Wifi className="w-8 h-8" />,
+      icon: <Wifi className="w-8 h-8"  />,
       title: 'Smart Connectivity',
       description: 'Seamless wireless connectivity solutions for IoT devices and systems.',
       benefits: [
@@ -35,7 +35,7 @@ const IoTSolutionsPage: React.FC = () => {
       ]
     },
     {
-      icon: <Smartphone className="w-8 h-8" />,
+      icon: <Smartphone className="w-8 h-8"  />,
       title: 'Mobile Integration',
       description: 'Mobile app development for IoT device control and monitoring.',
       benefits: [
@@ -46,7 +46,7 @@ const IoTSolutionsPage: React.FC = () => {
       ]
     },
     {
-      icon: <Cpu className="w-8 h-8" />,
+      icon: <Cpu className="w-8 h-8"  />,
       title: 'Edge Computing',
       description: 'Edge computing solutions for faster data processing and reduced latency.',
       benefits: [
@@ -57,7 +57,7 @@ const IoTSolutionsPage: React.FC = () => {
       ]
     },
     {
-      icon: <Shield className="w-8 h-8" />,
+      icon: <Shield className="w-8 h-8"  />,
       title: 'Security & Privacy',
       description: 'Comprehensive security measures to protect IoT devices and data.',
       benefits: [
@@ -122,38 +122,37 @@ const IoTSolutionsPage: React.FC = () => {
 
   return (
     <>
-      <SEO
-        title="IoT Solutions - Zion Tech Group"
+      <SEO title="IoT Solutions - Zion Tech Group"
         description="Comprehensive IoT solutions including smart home automation, industrial IoT, and healthcare IoT. Connect and automate your devices with Zion Tech Group."
         keywords="IoT solutions, smart home, industrial IoT, healthcare IoT, device connectivity, Zion Tech Group"
         canonical="https://ziontechgroup.com/iot-solutions"
-      />
+       />
       
       <PageTransition>
         <main className="min-h-screen bg-white">
           {/* Hero Section */}
           <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="text-center"
               >
-                <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                <h1 className="text-4xl md: tex t-6xl font-bold text-gray-900 mb-6">
                   IoT <span className="text-blue-600">Solutions</span>
                 </h1>
                 <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
                   Connect and automate your devices with our comprehensive IoT solutions for smart homes, industrial applications, and healthcare.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm: fle x-row gap-4 justify-center">
                   <motion.a
                     href="#solutions"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
                   >
-                    <ArrowRight className="w-5 h-5" />
+                    <ArrowRight className="w-5 h-5"  />
                     Explore Solutions
                   </motion.a>
                   <motion.a
@@ -162,7 +161,7 @@ const IoTSolutionsPage: React.FC = () => {
                     whileTap={{ scale: 0.95 }}
                     className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
                   >
-                    <ArrowRight className="w-5 h-5" />
+                    <ArrowRight className="w-5 h-5"  />
                     Get Started
                   </motion.a>
                 </div>
@@ -172,14 +171,14 @@ const IoTSolutionsPage: React.FC = () => {
 
           {/* Features Section */}
           <section className="py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-center mb-16"
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4">
                   IoT Capabilities
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -187,13 +186,13 @@ const IoTSolutionsPage: React.FC = () => {
                 </p>
               </motion.div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md: gri d-cols-2 gap-8">
                 {features.map((feature, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 2 0 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    transition={{ duration: 0.6, delay: inde x * 0.1 }}
                     className="bg-white rounded-xl shadow-lg p-8"
                   >
                     <div className="flex items-center gap-4 mb-6">
@@ -214,7 +213,7 @@ const IoTSolutionsPage: React.FC = () => {
                       <ul className="space-y-2">
                         {feature.benefits.map((benefit, idx) => (
                           <li key={idx} className="flex items-center gap-2 text-sm text-gray-600">
-                            <CheckCircle className="w-4 h-4 text-green-500" />
+                            <CheckCircle className="w-4 h-4 text-green-500"  />
                             {benefit}
                           </li>
                         ))}
@@ -228,14 +227,14 @@ const IoTSolutionsPage: React.FC = () => {
 
           {/* Solutions Section */}
           <section id="solutions" className="bg-gray-50 py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="text-center mb-16"
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4">
                   Our IoT Solutions
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -243,13 +242,13 @@ const IoTSolutionsPage: React.FC = () => {
                 </p>
               </motion.div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md: gri d-cols-2 gap-8">
                 {solutions.map((solution, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 2 0 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    transition={{ duration: 0.6, delay: inde x * 0.1 }}
                     className="bg-white rounded-xl shadow-lg p-8"
                   >
                     <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -265,7 +264,7 @@ const IoTSolutionsPage: React.FC = () => {
                       <ul className="space-y-2">
                         {solution.features.map((feature, idx) => (
                           <li key={idx} className="flex items-center gap-2 text-sm text-gray-600">
-                            <CheckCircle className="w-4 h-4 text-green-500" />
+                            <CheckCircle className="w-4 h-4 text-green-500"  />
                             {feature}
                           </li>
                         ))}
@@ -280,9 +279,9 @@ const IoTSolutionsPage: React.FC = () => {
                     <motion.button
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
-                      className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-blue-700 transition-colors"
+                      className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover: b g-blue-700 transition-colors"
                     >
-                      <ArrowRight className="w-5 h-5" />
+                      <ArrowRight className="w-5 h-5"  />
                       Learn More
                     </motion.button>
                   </motion.div>
@@ -293,27 +292,27 @@ const IoTSolutionsPage: React.FC = () => {
 
           {/* CTA Section */}
           <section className="py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="text-center"
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-6">
                   Ready to Connect Your Devices?
                 </h2>
                 <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
                   Let us help you implement IoT solutions that will transform your business and improve efficiency.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm: fle x-row gap-4 justify-center">
                   <motion.a
                     href="/contact"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
                   >
-                    <ArrowRight className="w-5 h-5" />
+                    <ArrowRight className="w-5 h-5"  />
                     Get Started Today
                   </motion.a>
                   <motion.a
@@ -322,7 +321,7 @@ const IoTSolutionsPage: React.FC = () => {
                     whileTap={{ scale: 0.95 }}
                     className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
                   >
-                    <ArrowRight className="w-5 h-5" />
+                    <ArrowRight className="w-5 h-5"  />
                     Call Us: +1 302 464 0950
                   </motion.a>
                 </div>

@@ -2,8 +2,7 @@
               </button>
             </div>
           </div>
-        </div>;
-        {/* Background Elements */}"
+        </div> {/* Background Elements */}"
         <div className="absolute inset-0 -z-10">;"
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>"
           <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl"></div>"
@@ -11,21 +10,21 @@
         </div>
       </section>
       {/* Services Grid */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;"
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8">;"
         <div className="max-w-7xl mx-auto">"
           <div className="text-center mb-16">"
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
               Our Cybersecurity Services
             </h2>"
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
               Comprehensive security solutions designed to protect your business from evolving threats
             </p>
           </div>"
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-2 gap-8">
             {cyberServices.map((service, index 
               <div
                 key={index}"
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover: borde r-cyan-500/50 transition-all duration-300 hover: transform hover:scale-105"
 "
                 <div className="flex items-center mb-6">"
                   <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg">"
@@ -39,7 +38,7 @@
                 <ul className="space-y-3 mb-6">
                   {service.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center text-slate-300">"
-                      <CheckCircle className="h-5 w-5 text-cyan-400 mr-3 flex-shrink-0"  />                      {feature}
+                      <CheckCircle className="h-5 w-5 text-cyan-400 mr-3 flex-shrink-0"   />                      {feature}
                     </li>
                   ))}
                 </ul>"
@@ -50,7 +49,7 @@
                   </div>
                   <Link"
                     to="/contact"
-                    className="px-6 py-2 bg-cyan-600 hover:bg-cyan-700 text-white font-medium rounded-lg transition-colors duration-200"
+                    className="px-6 py-2 bg-cyan-600 hover: b g-cyan-700 text-white font-medium rounded-lg transition-colors duration-200"
 
                     Get Quote
                   </Link>
@@ -61,21 +60,21 @@
         </div>
       </section>
       {/* Security Technologies Section */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">;"
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-slate-800/30">;"
         <div className="max-w-7xl mx-auto">"
           <div className="text-center mb-16">"
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
               Advanced Security Technologies
             </h2>"
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
               We leverage cutting-edge security tools and technologies to protect your infrastructure
             </p>
           </div>"
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-            {securityTechnologies.map(tech: unknown, index: unknown (
+          <div className="grid grid-cols-2 md: gri d-cols-3 lg: gri d-cols-6 gap-8">
+            {securityTechnologies.map(tech: unknow n, index: unknow n (
               <div
                 key={index}"
-                className="text-center p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:border-cyan-500/50 transition-all duration-300"
+                className="text-center p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover: borde r-cyan-500/50 transition-all duration-300"
 "
                 <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg w-16 h-16 mx-auto mb-4 flex items-center justify-center">"
                   <tech.icon className="h-8 w-8 text-white" />
@@ -88,21 +87,21 @@
         </div>
       </section>
       {/* Compliance Frameworks Section */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;"
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8">;"
         <div className="max-w-7xl mx-auto">"
           <div className="text-center mb-16">"
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
               Compliance & Certifications
             </h2>"
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
               Meet industry standards and regulatory requirements with our compliance solutions
             </p>
           </div>"
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {complianceFrameworks.map(framework: unknown, index: unknown (
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
+            {complianceFrameworks.map(framework: unknow n, index: unknow n (
               <div
                 key={index}"
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300"
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover: borde r-cyan-500/50 transition-all duration-300"
 
                 <div className={`p-3 bg-gradient-to-r ${framework.color} rounded-lg w-12 h-12 mb-4 flex items-center justify-center`}>"
                   <framework.icon className="h-6 w-6 text-white" />
@@ -115,25 +114,25 @@
         </div>
       </section>
       {/* CTA Section */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;"
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8">;"
         <div className="max-w-4xl mx-auto text-center">"
           <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 border border-cyan-500/30 rounded-2xl p-12">"
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-6">
               Ready to Secure Your Business?
             </h2>"
             <p className="text-xl text-slate-300 mb-8">
               Let's discuss how our cybersecurity solutions can protect your organization
             </p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
               <Link"
                 to="/contact"
-                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
+                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover: fro m-cyan-600 hover: t o-blue-700 transition-all duration-200"
 
                 Schedule Security Assessment"
-                <ArrowRight className="ml-2 h-5 w-5"  />              </Link>
+                <ArrowRight className="ml-2 h-5 w-5"   />              </Link>
               <Link"
                 to="/services"
-                className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
+                className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover: b g-cyan-500 hover: tex t-white transition-all duration-200"
               >
                 Explore All Services;
               </Link>;

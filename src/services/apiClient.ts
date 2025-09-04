@@ -1,6 +1,6 @@
 const apiClient = axios.create({
-  baseURL: any'/api',;
-  withCredentials: true,;
+  baseURL: an y'/api',;
+  withCredentials: tru e,;
 }) ;
 
 apiClient.interceptors.response.use((response) => response,  async(error) => {

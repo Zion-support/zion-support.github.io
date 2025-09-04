@@ -1,8 +1,8 @@
-export const ErrorFallback: React.FC < ErrorFallbackProps> = ({ error, resetErrorBoundary }) => {
+export const ErrorFallback: Reac t.FC < ErrorFallbackProps> = ({ error, resetErrorBoundary }) => {
 
 interface ErrorFallbackProps extends React.PropsWithChildren<{}> {
 
-  error: anyError;
+  error: anyErro r;
   resetErrorBoundary: () => void;
 
 }
@@ -15,25 +15,24 @@ interface ErrorFallbackProps extends React.PropsWithChildren<{}> {
         <div className="space-y-3">
           <button
             onClick={resetErrorBoundary}"
-            className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+            className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover: b g-blue-700 transition-colors"
           >
             Try Again
           </button>
           <button'
             onClick={() => window.location.href = '/'}"
-            className="w-full bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors"
+            className="w-full bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover: b g-gray-300 transition-colors"
           >
             Go Home
           </button>
         </div>
         {process.env.NODE_ENV === 'development' && ("
           <details className="mt-6 text-left">"
-            <summary className="cursor-pointer text-sm text-gray-500 hover:text-gray-700">
+            <summary className="cursor-pointer text-sm text-gray-500 hover: tex t-gray-700">
               Error Details(Development)
             </summary>"
             <pre className="mt-2 text-xs text-red-600 bg-red-50 p-3 rounded overflow-auto">
-              {error.message};
-              {error.stack};
+              {error.message} {error.stack};
             </pre>;
           </details>;) };
       </div>;

@@ -215,20 +215,20 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"});,"})"
   Users2,
   Settings,
   Palette} from "lucide-react
-export function Footer(...args: any[]): any {,
+export function Footer(...args: an y[]): any {,
   const currentYear = new Date().getFullYear(),
   const [activeSection, setActiveSection] = useState<any>(null)"
   const footerSections = []}, {"
       title: "AI & Quantum Solutions",
-icon: Brain,"
+icon: Brai n,"
 category: "Core Services","
 services: [ { name: "AI Customer Success Automation", href: "/services/ai-customer-success-automation", badge: "Popular" }, { name: "AI Healthcare Analytics Platform", href: "/services/ai-healthcare-analytics-platform", badge: "New" }, { name: "AI Financial Risk Management", href: "/services/ai-financial-risk-management-enhanced", badge: "Featured" }, { name: "AI Supply Chain Optimization", href: "/services/ai-supply-chain-optimization-enhanced", badge: "Trending" }, { name: "AI Legal Document Automation", href: "/services/ai-legal-document-automation-platform", badge: "Innovative" }, { name: "AI Mental Health Support", href: "/services/ai-mental-health-support-platform", badge: "Healthcare" }, { name: "AI Smart Home Energy Management", href: "/services/ai-smart-home-energy-management-platform", badge: "IoT" }, { name: "AI Autonomous Logistics", href: "/services/ai-autonomous-logistics-platform", badge: "Logistics" }, { name: "AI-Powered SEO", href: "/services/ai-powered-seo", badge: "Marketing" }, { name: "Quantum Edge Computing", href: "/services/quantum-edge-computing-solutions", badge: "Quantum" }, { name: "AI Space Technology", href: "/services/ai-space-technology-platform", badge: "Space Tech" }, { name: "AI Carbon Footprint Management", href: "/services/ai-carbon-footprint-management-platform", badge: "Green Tech" }, { name: "AI Autonomous Manufacturing", href: "/services/ai-autonomous-manufacturing-platform", badge: "Manufacturing" }, { name: "AI Enterprise Resource Planning", href: "/services/ai-enterprise-resource-planning", badge: "ERP" }, { name: "AI Autonomous Business Operations", href: "/services/ai-autonomous-business-operations-platform", badge: "Automation" }, { name: "AI Customer Experience Analytics", href: "/services/ai-customer-experience-analytics-platform", badge: "Analytics" }"
       title: "AI Cybersecurity & Infrastructure",
-icon: Shield,"
+icon: Shiel d,"
 category: "Security & Infrastructure","
 services: [ { name: "AI-Powered DevOps Automation", href: "/services/ai-powered-devops-automation", badge: "New" }, { name: "AI-Powered Cybersecurity Suite", href: "/services/ai-powered-cybersecurity-suite", badge: "Security" }, { name: "Enterprise IT Infrastructure Management", href: "/services/enterprise-it-infrastructure-management", badge: "Infrastructure" }, { name: "Cloud Migration & Optimization", href: "/services/cloud-migration-and-optimization", badge: "Cloud" }, { name: "AI Data Analytics Platform", href: "/services/ai-data-analytics-platform", badge: "Analytics" }, { name: "AI DevOps Automation", href: "/services/ai-devops-automation", badge: "DevOps" }, { name: "Edge Computing Platform", href: "/services/edge-computing-platform", badge: "Edge" }"
       title: "Micro SaaS Solutions",
-icon: Code,"
+icon: Cod e,"
 category: "Micro SaaS","
 services: [ { name: "AI Email Automation Suite", href: "/services/ai-email-automation-suite", badge: "New" }, { name: "AI Social Media Scheduler", href: "/services/ai-social-media-scheduler", badge: "New" }, { name: "AI Customer Insights Platform", href: "/services/ai-customer-insights-platform", badge: "New" }, { name: "Micro CRM", href: "/services/micro-crm", badge: "Popular" }, { name: "Helpdesk Platform", href: "/services/helpdesk-platform", badge: "Support" }, { name: "Website Analytics", href: "/services/website-analytics", badge: "Analytics" }"
       title: "Solutions","
@@ -236,7 +236,7 @@ links: [ { name: "Enterprise Solutions", href: "/enterprise" }, { name: "Healthc
       title: "Company","
 links: [ { name: "About Us", href: "/about" }, { name: "Our Team", href: "/about/team" }, { name: "Careers", href: "/careers" }, { name: "Partners", href: "/partners" }, { name: "News & Updates", href: "/news" }, { name: "Case Studies", href: "/case-studies" }"
       title: "Quantum Computing & Emerging Tech",
-icon: Atom,"
+icon: Ato m,"
 services: [ { name: "AI-Quantum Hybrid Computing Platform", href: "/services/ai-quantum-hybrid-platform" }, { name: "Quantum Computing as a Service", href: "/services/quantum-computing-as-a-service" }, { name: "AI Space Technology Platform", href: "/services/ai-space-technology-platform" }, { name: "AI IoT Edge Computing Platform", href: "/services/ai-iot-edge-computing-platform" }"
       title: "Resources","
 links: [ { name: "Documentation", href: "/docs" }, { name: "White Papers", href: "/white-papers" }, { name: "Support Center", href: "/help" }, { name: "Training", href: "/training" }, { name: "Blog", href: "/blog" }, { name: "Research", href: "/research-development" }
@@ -247,10 +247,10 @@ links: [ { name: "Documentation", href: "/docs" }, { name: "White Papers", href:
   const solutions = []
 
   const contactInfo = [
-    { icon: Mail, label: "Email", value: "kleber@ziontechgroup.com", href: "mailto:kleber@ziontechgroup.com" },
-    { icon: Phone, label: "Phone", value: "+1 302 464 0950", href: "tel:+13024640950" },
-    { icon: MapPin, label: "Address", value: "364 E Main St STE 1008, Middletown DE 19709", href: "#" },
-    { icon: Globe, label: "Website", value: "ziontechgroup.com", href: "https://ziontechgroup.com" }
+    { icon: Mai l, label: "Email", value: "kleber@ziontechgroup.com", href: "mailto: klebe r@ziontechgroup.com" },
+    { icon: Phon e, label: "Phone", value: "+1 302 464 0950", href: "tel:+13024640950" },
+    { icon: MapPi n, label: "Address", value: "364 E Main St STE 1008, Middletown DE 19709", href: "#" },
+    { icon: Glob e, label: "Website", value: "ziontechgroup.com", href: "https://ziontechgroup.com" }
 ];
 
   const scrollToTop = () => {
@@ -263,13 +263,13 @@ links: [ { name: "Documentation", href: "/docs" }, { name: "White Papers", href:
   return (
     <footer className="bg-slate-900 text-white">
       {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8 py-12">
+        <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-5 gap-8">
           {/* Company Info */}
 <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <Zap className="w-6 h-6 text-white" />
+                <Zap className="w-6 h-6 text-white"  />
               </div>
               <span className="text-xl font-bold text-white">Zion Tech Group</span>
             </div>
@@ -278,17 +278,17 @@ links: [ { name: "Documentation", href: "/docs" }, { name: "White Papers", href:
               Transforming businesses through cutting-edge technology and expert consulting.
             </p>
             <div className="flex space-x-4">
-              <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-400 hover:text-blue-400 transition-colors">
-                <Linkedin className="w-5 h-5" />
+              <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-400 hover: tex t-blue-400 transition-colors">
+                <Linkedin className="w-5 h-5"  />
               </a>
-              <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-blue-400 transition-colors">
-                <Twitter className="w-5 h-5" />
+              <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover: tex t-blue-400 transition-colors">
+                <Twitter className="w-5 h-5"  />
               </a>
-              <a href="https://facebook.com/ziontechgroup" className="text-gray-400 hover:text-blue-400 transition-colors">
-                <Facebook className="w-5 h-5" />
+              <a href="https://facebook.com/ziontechgroup" className="text-gray-400 hover: tex t-blue-400 transition-colors">
+                <Facebook className="w-5 h-5"  />
               </a>
-              <a href="https://instagram.com/ziontechgroup" className="text-gray-400 hover:text-blue-400 transition-colors">
-                <Instagram className="w-5 h-5" />
+              <a href="https://instagram.com/ziontechgroup" className="text-gray-400 hover: tex t-blue-400 transition-colors">
+                <Instagram className="w-5 h-5"  />
               </a>
             </div>
           </div>
@@ -304,7 +304,7 @@ links: [ { name: "Documentation", href: "/docs" }, { name: "White Papers", href:
                   <li key={link.name}>
                     <Link
                       to={link.href}
-                      className="text-gray-400 hover:text-white transition-colors text-sm"
+                      className="text-gray-400 hover: tex t-white transition-colors text-sm"
                     >
                       {link.name}
                     </Link>
@@ -317,23 +317,23 @@ links: [ { name: "Documentation", href: "/docs" }, { name: "White Papers", href:
 
 {/* Contact Information */}
         <div className="mt-12 pt-8 border-t border-gray-800">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-3 gap-8">
             <div className="flex items-center space-x-3">
-              <Phone className="w-5 h-5 text-blue-400" />
+              <Phone className="w-5 h-5 text-blue-400"  />
               <div>
                 <p className="text-white font-medium">Phone</p>
                 <p className="text-gray-400 text-sm">+1 (555) 123-4567</p>
               </div>
             </div>
             <div className="flex items-center space-x-3">
-              <Mail className="w-5 h-5 text-blue-400" />
+              <Mail className="w-5 h-5 text-blue-400"  />
               <div>
                 <p className="text-white font-medium">Email</p>
                 <p className="text-gray-400 text-sm">contact@ziontechgroup.com</p>
               </div>
             </div>
             <div className="flex items-center space-x-3">
-              <MapPin className="w-5 h-5 text-blue-400" />
+              <MapPin className="w-5 h-5 text-blue-400"  />
               <div>
                 <p className="text-white font-medium">Location</p>
                 <p className="text-gray-400 text-sm">San Francisco, CA</p>
@@ -350,12 +350,11 @@ links: [ { name: "Documentation", href: "/docs" }, { name: "White Papers", href:
               Get the latest insights on AI, technology trends, and business innovation.
             </p>
             <div className="flex space-x-2">
-              <input
-                type="email"
+              <input type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
-              <button className="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
+                className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus: outlin e-none focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent"
+               />
+              <button className="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover: fro m-blue-700 hover: t o-purple-700 transition-all duration-300">
 Subscribe
               </button>
             </div>
@@ -364,18 +363,18 @@ Subscribe
 
 {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-gray-800">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+          <div className="flex flex-col md: fle x-row justify-between items-center space-y-4 md: spac e-y-0">
             <div className="text-gray-400 text-sm">
               © 2024 Zion Tech Group. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm">
-              <Link to="/privacy" className="text-gray-400 hover:text-white transition-colors">
+              <Link to="/privacy" className="text-gray-400 hover: tex t-white transition-colors">
                 Privacy Policy
               </Link>
-              <Link to="/terms" className="text-gray-400 hover:text-white transition-colors">
+              <Link to="/terms" className="text-gray-400 hover: tex t-white transition-colors">
                 Terms of Service
               </Link>
-              <Link to="/cookies" className="text-gray-400 hover:text-white transition-colors">
+              <Link to="/cookies" className="text-gray-400 hover: tex t-white transition-colors">
 Cookie Policy
               </Link>
             </div>

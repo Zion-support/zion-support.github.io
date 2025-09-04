@@ -16,13 +16,13 @@ import {
   Clock
 } from 'lucide-react'
 
-const SEO = dynamic(() => import('../src/components/SEO'), { ssr: false })
-const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false })
+const SEO = dynamic(() => import('../src/components/SEO'), { ssr: fals e })
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: fals e })
 
-const DeveloperPage: React.FC = () => {
+const DeveloperPage: Reac t.FC = () => {
   const resources = [
     {
-      icon: <BookOpen className="w-8 h-8" />,
+      icon: <BookOpen className="w-8 h-8"  />,
       title: 'Documentation',
       description: 'Comprehensive guides and API references',
       category: 'Documentation',
@@ -36,7 +36,7 @@ const DeveloperPage: React.FC = () => {
       type: 'Internal'
     },
     {
-      icon: <Code className="w-8 h-8" />,
+      icon: <Code className="w-8 h-8"  />,
       title: 'SDKs & Libraries',
       description: 'Ready-to-use SDKs and libraries for popular programming languages',
       category: 'Development',
@@ -50,7 +50,7 @@ const DeveloperPage: React.FC = () => {
       type: 'Download'
     },
     {
-      icon: <Globe className="w-8 h-8" />,
+      icon: <Globe className="w-8 h-8"  />,
       title: 'Webhooks',
       description: 'Real-time event notifications and data synchronization',
       category: 'Integration',
@@ -64,7 +64,7 @@ const DeveloperPage: React.FC = () => {
       type: 'Internal'
     },
     {
-      icon: <Database className="w-8 h-8" />,
+      icon: <Database className="w-8 h-8"  />,
       title: 'Database APIs',
       description: 'Direct access to our database services and data management',
       category: 'Data',
@@ -94,7 +94,7 @@ const result = await aiService.processText({
   text: 'Hello, world!',
   model: 'gpt-4',
   options: {
-    maxTokens: 100,
+    maxTokens: 10 0,
     temperature: 0.7
   }
 });
@@ -129,7 +129,7 @@ print(f"Project deployed: {deployment.url}")`
       title: 'REST API Example',
       code: `curl -X POST https://api.ziontechgroup.com/v1/ai/process \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
-  -H "Content-Type: application/json" \\
+  -H "Content-Type: applicatio n/json" \\
   -d '{
     "text": "Analyze this data",
     "model": "gpt-4",
@@ -146,66 +146,65 @@ print(f"Project deployed: {deployment.url}")`
       name: 'AI Services API',
       description: 'Access our AI and machine learning capabilities',
       version: 'v1',
-      endpoints: 15,
+      endpoints: 1 5,
       rateLimit: '1000/hour'
     },
     {
       name: 'Micro SaaS API',
       description: 'Manage and deploy micro SaaS applications',
       version: 'v2',
-      endpoints: 25,
+      endpoints: 2 5,
       rateLimit: '500/hour'
     },
     {
       name: 'IT Infrastructure API',
       description: 'Monitor and manage IT infrastructure',
       version: 'v1',
-      endpoints: 20,
+      endpoints: 2 0,
       rateLimit: '2000/hour'
     },
     {
       name: 'Cybersecurity API',
       description: 'Security monitoring and threat detection',
       version: 'v1',
-      endpoints: 12,
+      endpoints: 1 2,
       rateLimit: '800/hour'
     }
   ]
 
   return (
     <>
-      <SEO
-        title="Developer Resources - Zion Tech Group"
+      <SEO title="Developer Resources - Zion Tech Group"
         description="Developer resources, APIs, SDKs, and documentation for integrating with Zion Tech Group services."
         keywords="developer, API, SDK, documentation, integration, Zion Tech Group"
         canonical="https://ziontechgroup.com/developer"
-      />
+       />
       
       <PageTransition>
         <main className="min-h-screen bg-white">
           {/* Hero Section */}
           <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="text-center"
               >
-                <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                <h1 className="text-4xl md: tex t-6xl font-bold text-gray-900 mb-6">
                   Developer <span className="text-blue-600">Resources</span>
                 </h1>
                 <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
                   Everything you need to integrate with our AI services, IT solutions, and micro SaaS platforms.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm: fle x-row gap-4 justify-center">
                   <motion.a
                     href="#resources"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
                   >
-                    <ArrowRight className="w-5 h-5" />
+                    <ArrowRight className="w-5 h-5"  />
                     Explore Resources
                   </motion.a>
                   <motion.a
@@ -214,7 +213,7 @@ print(f"Project deployed: {deployment.url}")`
                     whileTap={{ scale: 0.95 }}
                     className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
                   >
-                    <ArrowRight className="w-5 h-5" />
+                    <ArrowRight className="w-5 h-5"  />
                     Get API Key
                   </motion.a>
                 </div>
@@ -224,14 +223,14 @@ print(f"Project deployed: {deployment.url}")`
 
           {/* Resources Grid */}
           <section id="resources" className="py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-center mb-16"
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4">
                   Developer Resources
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -239,14 +238,14 @@ print(f"Project deployed: {deployment.url}")`
                 </p>
               </motion.div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md: gri d-cols-2 gap-8">
                 {resources.map((resource, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 2 0 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+                    transition={{ duration: 0.6, delay: inde x * 0.1 }}
+                    className="bg-white rounded-xl shadow-lg hover: shado w-xl transition-shadow duration-300 overflow-hidden"
                   >
                     <div className="p-8">
                       <div className="flex items-center justify-between mb-4">
@@ -271,7 +270,7 @@ print(f"Project deployed: {deployment.url}")`
                         <ul className="space-y-2">
                           {resource.features.map((feature, idx) => (
                             <li key={idx} className="flex items-center gap-2 text-sm text-gray-600">
-                              <Star className="w-4 h-4 text-yellow-500" />
+                              <Star className="w-4 h-4 text-yellow-500"  />
                               {feature}
                             </li>
                           ))}
@@ -281,12 +280,12 @@ print(f"Project deployed: {deployment.url}")`
                       <motion.button
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
-                        className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-blue-700 transition-colors"
+                        className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover: b g-blue-700 transition-colors"
                       >
                         {resource.type === 'Download' ? (
-                          <Download className="w-5 h-5" />
+                          <Download className="w-5 h-5"  />
                         ) : (
-                          <ExternalLink className="w-5 h-5" />
+                          <ExternalLink className="w-5 h-5"  />
                         )}
                         {resource.type === 'Download' ? 'Download' : 'View'}
                       </motion.button>
@@ -299,14 +298,14 @@ print(f"Project deployed: {deployment.url}")`
 
           {/* Code Examples */}
           <section className="bg-gray-50 py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="text-center mb-16"
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4">
                   Code Examples
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -314,13 +313,13 @@ print(f"Project deployed: {deployment.url}")`
                 </p>
               </motion.div>
 
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 lg: gri d-cols-3 gap-8">
                 {codeExamples.map((example, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 2 0 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    transition={{ duration: 0.6, delay: inde x * 0.1 }}
                     className="bg-white rounded-xl shadow-lg overflow-hidden"
                   >
                     <div className="p-6 border-b border-gray-200">
@@ -346,14 +345,14 @@ print(f"Project deployed: {deployment.url}")`
 
           {/* API Overview */}
           <section className="py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="text-center mb-16"
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4">
                   API Overview
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -361,13 +360,13 @@ print(f"Project deployed: {deployment.url}")`
                 </p>
               </motion.div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md: gri d-cols-2 gap-8">
                 {apis.map((api, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 2 0 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    transition={{ duration: 0.6, delay: inde x * 0.1 }}
                     className="bg-white rounded-xl shadow-lg p-8"
                   >
                     <div className="flex items-center justify-between mb-4">
@@ -401,27 +400,27 @@ print(f"Project deployed: {deployment.url}")`
 
           {/* CTA Section */}
           <section className="bg-gray-50 py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="text-center"
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-6">
                   Ready to Start Building?
                 </h2>
                 <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
                   Get your API key and start integrating with our services today.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm: fle x-row gap-4 justify-center">
                   <motion.a
                     href="/contact"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
                   >
-                    <ArrowRight className="w-5 h-5" />
+                    <ArrowRight className="w-5 h-5"  />
                     Get API Key
                   </motion.a>
                   <motion.a
@@ -430,7 +429,7 @@ print(f"Project deployed: {deployment.url}")`
                     whileTap={{ scale: 0.95 }}
                     className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
                   >
-                    <ArrowRight className="w-5 h-5" />
+                    <ArrowRight className="w-5 h-5"  />
                     Call Us: +1 302 464 0950
                   </motion.a>
                 </div>

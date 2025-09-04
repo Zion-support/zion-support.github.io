@@ -3,7 +3,7 @@ import Layout from '../../components/Layout';
 import Link from 'next/link';
 import { Cloud, Server, Shield, Zap, CheckCircle, ArrowRight, Users, Award } from 'lucide-react';
 
-const CloudServices: NextPage = () => {
+const CloudServices: NextPag e = () => {
   return (
     <Layout
       title="Cloud Services - Zion Tech Group"
@@ -13,21 +13,21 @@ const CloudServices: NextPage = () => {
       <section className="bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <div className="w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
-            <Cloud className="w-10 h-10 text-white" />
+            <Cloud className="w-10 h-10 text-white"  />
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+          <h1 className="text-5xl md: tex t-6xl font-bold mb-6">
             Cloud Services
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400"> Solutions</span>
           </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
+          <p className="text-xl md: tex t-2xl mb-8 max-w-4xl mx-auto text-gray-200">
             Scalable cloud solutions and infrastructure design for modern applications that grow with your business.
           </p>
           
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
-            <Link href="/contact" className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
+          <div className="flex flex-col sm: fle x-row justify-center gap-4 mb-12">
+            <Link href="/contact" className="bg-purple-600 hover: b g-purple-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
               Get Started Today
             </Link>
-            <Link href="/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
+            <Link href="/services" className="bg-transparent border-2 border-white text-white hover: b g-white hover: tex t-purple-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
               View All Services
             </Link>
           </div>
@@ -44,10 +44,10 @@ const CloudServices: NextPage = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
+            <div className="bg-white rounded-lg p-8 shadow-lg hover: shado w-xl transition-shadow">
               <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                <Cloud className="w-8 h-8 text-purple-600" />
+                <Cloud className="w-8 h-8 text-purple-600"  />
               </div>
               <h3 className="text-xl font-semibold mb-4">Cloud Migration</h3>
               <p className="text-gray-600 mb-4">
@@ -61,9 +61,9 @@ const CloudServices: NextPage = () => {
               </ul>
             </div>
 
-            <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">
+            <div className="bg-white rounded-lg p-8 shadow-lg hover: shado w-xl transition-shadow">
               <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                <Server className="w-8 h-8 text-blue-600" />
+                <Server className="w-8 h-8 text-blue-600"  />
               </div>
               <h3 className="text-xl font-semibold mb-4">Cloud Infrastructure</h3>
               <p className="text-gray-600 mb-4">
@@ -77,9 +77,9 @@ const CloudServices: NextPage = () => {
               </ul>
             </div>
 
-            <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">
+            <div className="bg-white rounded-lg p-8 shadow-lg hover: shado w-xl transition-shadow">
               <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                <Shield className="w-8 h-8 text-green-600" />
+                <Shield className="w-8 h-8 text-green-600"  />
               </div>
               <h3 className="text-xl font-semibold mb-4">Cloud Security</h3>
               <p className="text-gray-600 mb-4">
@@ -93,9 +93,9 @@ const CloudServices: NextPage = () => {
               </ul>
             </div>
 
-            <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">
+            <div className="bg-white rounded-lg p-8 shadow-lg hover: shado w-xl transition-shadow">
               <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
-                <Zap className="w-8 h-8 text-orange-600" />
+                <Zap className="w-8 h-8 text-orange-600"  />
               </div>
               <h3 className="text-xl font-semibold mb-4">DevOps & Automation</h3>
               <p className="text-gray-600 mb-4">
@@ -109,9 +109,9 @@ const CloudServices: NextPage = () => {
               </ul>
             </div>
 
-            <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">
+            <div className="bg-white rounded-lg p-8 shadow-lg hover: shado w-xl transition-shadow">
               <div className="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6">
-                <Users className="w-8 h-8 text-red-600" />
+                <Users className="w-8 h-8 text-red-600"  />
               </div>
               <h3 className="text-xl font-semibold mb-4">Cloud Consulting</h3>
               <p className="text-gray-600 mb-4">
@@ -125,9 +125,9 @@ const CloudServices: NextPage = () => {
               </ul>
             </div>
 
-            <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">
+            <div className="bg-white rounded-lg p-8 shadow-lg hover: shado w-xl transition-shadow">
               <div className="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
-                <Award className="w-8 h-8 text-indigo-600" />
+                <Award className="w-8 h-8 text-indigo-600"  />
               </div>
               <h3 className="text-xl font-semibold mb-4">Managed Services</h3>
               <p className="text-gray-600 mb-4">
@@ -154,7 +154,7 @@ const CloudServices: NextPage = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold text-xl">1</span>
@@ -197,11 +197,11 @@ const CloudServices: NextPage = () => {
           <p className="text-xl mb-8 max-w-3xl mx-auto">
             Let's discuss how our cloud services can transform your infrastructure and drive business growth.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link href="/contact" className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
+          <div className="flex flex-col sm: fle x-row justify-center gap-4">
+            <Link href="/contact" className="bg-white text-purple-600 hover: b g-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
               Schedule a Consultation
             </Link>
-            <Link href="/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
+            <Link href="/services" className="bg-transparent border-2 border-white text-white hover: b g-white hover: tex t-purple-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
               View All Services
             </Link>
           </div>

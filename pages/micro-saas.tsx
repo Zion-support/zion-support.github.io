@@ -44,7 +44,7 @@ export default function MicroSaaS() {
     {
       title: 'AI-Powered Email Responder',
       description: 'Intelligent email automation with sentiment analysis and smart categorization',
-      icon: MessageSquare,
+      icon: MessageSquar e,
       features: [
         'Automated email responses with personalization',
         'Smart categorization and priority handling',
@@ -60,7 +60,7 @@ export default function MicroSaaS() {
     {
       title: 'Mobile-First Survey Platform',
       description: 'Responsive survey tool optimized for mobile devices with real-time analytics',
-      icon: Smartphone,
+      icon: Smartphon e,
       features: [
         'Mobile-optimized survey creation',
         'Real-time response analytics',
@@ -76,7 +76,7 @@ export default function MicroSaaS() {
     {
       title: 'Niche Productivity Planner',
       description: 'Industry-specific productivity tools with customized workflows and templates',
-      icon: Target,
+      icon: Targe t,
       features: [
         'Industry-specific templates and workflows',
         'Project management and task tracking',
@@ -92,7 +92,7 @@ export default function MicroSaaS() {
     {
       title: 'Event Management Dashboard',
       description: 'Comprehensive event planning and management platform with ticketing and analytics',
-      icon: Calendar,
+      icon: Calenda r,
       features: [
         'Event creation and management',
         'Ticketing and registration system',
@@ -108,7 +108,7 @@ export default function MicroSaaS() {
     {
       title: 'AI Content Creation Suite',
       description: 'AI-powered content generation platform for marketing and documentation',
-      icon: FileText,
+      icon: FileTex t,
       features: [
         'Automated content generation',
         'SEO optimization and keyword integration',
@@ -124,7 +124,7 @@ export default function MicroSaaS() {
     {
       title: 'Customer Support Platform',
       description: 'Comprehensive helpdesk solution with AI chatbots and ticket management',
-      icon: Users,
+      icon: User s,
       features: [
         'Multi-channel ticket management',
         'AI-powered chatbot integration',
@@ -140,7 +140,7 @@ export default function MicroSaaS() {
     {
       title: 'AI Recruiting Platform',
       description: 'Intelligent recruitment system with automated screening and matching',
-      icon: Brain,
+      icon: Brai n,
       features: [
         'Resume parsing and skill extraction',
         'Automated candidate screening',
@@ -156,7 +156,7 @@ export default function MicroSaaS() {
     {
       title: 'Document Processing Automation',
       description: 'AI-powered document analysis and processing for business automation',
-      icon: FileText,
+      icon: FileTex t,
       features: [
         'Automated data extraction',
         'Document classification and routing',
@@ -172,7 +172,7 @@ export default function MicroSaaS() {
     {
       title: 'Analytics Dashboard Platform',
       description: 'Custom business intelligence and analytics platform with real-time insights',
-      icon: BarChart3,
+      icon: BarChart 3,
       features: [
         'Real-time data visualization',
         'Custom dashboard creation',
@@ -188,7 +188,7 @@ export default function MicroSaaS() {
     {
       title: 'Workflow Automation Engine',
       description: 'No-code workflow automation platform for business process optimization',
-      icon: Settings,
+      icon: Setting s,
       features: [
         'Visual workflow builder',
         'API integrations and webhooks',
@@ -204,7 +204,7 @@ export default function MicroSaaS() {
     {
       title: 'AI-Powered E-commerce Return Manager',
       description: 'Intelligent return processing system with automated decision making and fraud detection',
-      icon: ArrowRight,
+      icon: ArrowRigh t,
       features: [
         'Automated return request processing',
         'AI-powered fraud detection and prevention',
@@ -220,7 +220,7 @@ export default function MicroSaaS() {
     {
       title: 'Smart Inventory Optimization Platform',
       description: 'AI-driven inventory management with demand forecasting and automated reordering',
-      icon: BarChart3,
+      icon: BarChart 3,
       features: [
         'Demand forecasting with machine learning',
         'Automated reorder point calculations',
@@ -236,7 +236,7 @@ export default function MicroSaaS() {
     {
       title: 'AI-Powered SEO Content Optimizer',
       description: 'Intelligent content optimization platform that enhances web page performance and rankings',
-      icon: TrendingUp,
+      icon: TrendingU p,
       features: [
         'Real-time SEO analysis and recommendations',
         'Content optimization suggestions',
@@ -252,7 +252,7 @@ export default function MicroSaaS() {
     {
       title: 'Intelligent Lead Scoring Platform',
       description: 'AI-powered lead qualification and scoring system with behavioral analysis',
-      icon: Target,
+      icon: Targe t,
       features: [
         'Behavioral lead scoring algorithms',
         'Multi-channel lead tracking',
@@ -268,7 +268,7 @@ export default function MicroSaaS() {
     {
       title: 'AI-Powered Social Media Manager',
       description: 'Comprehensive social media management with AI content creation and scheduling',
-      icon: Globe,
+      icon: Glob e,
       features: [
         'AI-generated social media content',
         'Optimal posting time recommendations',
@@ -284,7 +284,7 @@ export default function MicroSaaS() {
     {
       title: 'Smart Expense Management System',
       description: 'AI-powered expense tracking and approval workflow with receipt processing',
-      icon: FileText,
+      icon: FileTex t,
       features: [
         'Automated receipt scanning and processing',
         'Expense categorization with AI',
@@ -300,7 +300,7 @@ export default function MicroSaaS() {
     {
       title: 'AI-Powered Customer Onboarding Platform',
       description: 'Intelligent customer onboarding with personalized journey mapping and automation',
-      icon: Users,
+      icon: User s,
       features: [
         'Personalized onboarding workflows',
         'Progress tracking and analytics',
@@ -316,7 +316,7 @@ export default function MicroSaaS() {
     {
       title: 'Intelligent Meeting Scheduler',
       description: 'AI-powered meeting scheduling with time zone optimization and conflict resolution',
-      icon: Calendar,
+      icon: Calenda r,
       features: [
         'Smart time zone handling',
         'Automatic conflict detection and resolution',
@@ -332,7 +332,7 @@ export default function MicroSaaS() {
     {
       title: 'AI-Powered Code Review Assistant',
       description: 'Intelligent code analysis and review platform with automated quality checks',
-      icon: Code,
+      icon: Cod e,
       features: [
         'Automated code quality analysis',
         'Security vulnerability detection',
@@ -348,37 +348,37 @@ export default function MicroSaaS() {
   ];
 
   const technologies = [
-    { name: 'Frontend', icon: Monitor, description: 'React, Next.js, Vue.js, Angular' },
-    { name: 'Backend', icon: Server, description: 'Node.js, Python, Go, Java' },
-    { name: 'Database', icon: Database, description: 'PostgreSQL, MongoDB, Redis' },
-    { name: 'Cloud', icon: Cloud, description: 'AWS, Azure, GCP, DigitalOcean' },
-    { name: 'Security', icon: Shield, description: 'OAuth, JWT, SSL, Encryption' },
-    { name: 'Mobile', icon: Smartphone, description: 'React Native, Flutter, PWA' }
+    { name: 'Frontend', icon: Monito r, description: 'React, Next.js, Vue.js, Angular' },
+    { name: 'Backend', icon: Serve r, description: 'Node.js, Python, Go, Java' },
+    { name: 'Database', icon: Databas e, description: 'PostgreSQL, MongoDB, Redis' },
+    { name: 'Cloud', icon: Clou d, description: 'AWS, Azure, GCP, DigitalOcean' },
+    { name: 'Security', icon: Shiel d, description: 'OAuth, JWT, SSL, Encryption' },
+    { name: 'Mobile', icon: Smartphon e, description: 'React Native, Flutter, PWA' }
   ];
 
   const benefits = [
     {
       title: 'Faster Development',
       description: 'Rapid prototyping and deployment',
-      icon: Zap,
+      icon: Za p,
       stat: '50%'
     },
     {
       title: 'Cost Effective',
       description: 'Lower development and maintenance costs',
-      icon: TrendingUp,
+      icon: TrendingU p,
       stat: '60%'
     },
     {
       title: 'Scalable Solutions',
       description: 'Built to grow with your business',
-      icon: Target,
+      icon: Targe t,
       stat: 'Unlimited'
     },
     {
       title: 'Custom Features',
       description: 'Tailored to your specific needs',
-      icon: Settings,
+      icon: Setting s,
       stat: '100%'
     }
   ];
@@ -387,21 +387,21 @@ export default function MicroSaaS() {
     <PageTransition>
       <Head>
         <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://ziontechgroup.com/micro-saas" />
+        <meta name="description" content={description}  />
+        <meta name="viewport" content="width=device-width, initial-scale=1"  />
+        <link rel="canonical" href="https://ziontechgroup.com/micro-saas"  />
       </Head>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 py-20 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 py-20 sm: p y-32">
+        <div className="mx-auto max-w-7xl px-6 lg: p x-8">
           <div className="mx-auto max-w-3xl text-center">
             <div className="flex items-center justify-center mb-6">
-              <Code className="h-12 w-12 text-orange-600 mr-4" />
-              <Award className="h-6 w-6 text-orange-600 mr-2" />
+              <Code className="h-12 w-12 text-orange-600 mr-4"  />
+              <Award className="h-6 w-6 text-orange-600 mr-2"  />
               <span className="text-base font-semibold leading-7 text-orange-600">Micro SaaS</span>
             </div>
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm: tex t-6xl">
               Micro SaaS Solutions
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -411,14 +411,14 @@ export default function MicroSaaS() {
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link
                 href="/contact"
-                className="rounded-md bg-orange-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600"
+                className="rounded-md bg-orange-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover: b g-orange-500 focus-visible: outline focus-visible: outlin e-2 focus-visible: outlin e-offset-2 focus-visible: outlin e-orange-600"
               >
                 Get Started
-                <ArrowRight className="ml-2 h-4 w-4 inline" />
+                <ArrowRight className="ml-2 h-4 w-4 inline"  />
               </Link>
               <Link
                 href="/pricing-guide"
-                className="text-sm font-semibold leading-6 text-gray-900 hover:text-orange-600"
+                className="text-sm font-semibold leading-6 text-gray-900 hover: tex t-orange-600"
               >
                 View Pricing <span aria-hidden="true">→</span>
               </Link>
@@ -428,17 +428,17 @@ export default function MicroSaaS() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-24 sm:py-32 bg-white">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="py-24 sm: p y-32 bg-white">
+        <div className="mx-auto max-w-7xl px-6 lg: p x-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm: tex t-4xl">
               Why Choose Our Micro SaaS Solutions?
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
               Proven expertise in building scalable, secure, and innovative software solutions
             </p>
           </div>
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-8 sm: gri d-cols-2 lg: gri d-cols-4">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
                 <div className="flex items-center justify-center h-16 w-16 rounded-full bg-orange-100 mx-auto mb-4">
@@ -454,19 +454,19 @@ export default function MicroSaaS() {
       </section>
 
       {/* Technologies Section */}
-      <section className="py-24 sm:py-32 bg-gray-50">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="py-24 sm: p y-32 bg-gray-50">
+        <div className="mx-auto max-w-7xl px-6 lg: p x-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm: tex t-4xl">
               Technologies We Use
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
               Modern, proven technologies for building robust and scalable applications
             </p>
           </div>
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-8 sm: gri d-cols-2 lg: gri d-cols-3">
             {technologies.map((tech, index) => (
-              <div key={index} className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
+              <div key={index} className="bg-white rounded-2xl p-6 shadow-sm hover: shado w-md transition-shadow">
                 <div className="flex items-center mb-4">
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-orange-100">
                     <tech.icon className="h-6 w-6 text-orange-600" />
@@ -481,30 +481,30 @@ export default function MicroSaaS() {
       </section>
 
       {/* Micro SaaS Services Grid */}
-      <section className="py-24 sm:py-32 bg-white">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="py-24 sm: p y-32 bg-white">
+        <div className="mx-auto max-w-7xl px-6 lg: p x-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm: tex t-4xl">
               Our Micro SaaS Portfolio
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
               Custom software solutions tailored to your business needs. All applications include design, 
               development, testing, and deployment. Contact us at{' '}
-              <a href="mailto:kleber@ziontechgroup.com" className="text-orange-600 hover:text-orange-500">
+              <a href="mailto: klebe r@ziontechgroup.com" className="text-orange-600 hover: tex t-orange-500">
                 kleber@ziontechgroup.com
               </a>{' '}
               or call{' '}
-              <a href="tel:+13024640950" className="text-orange-600 hover:text-orange-500">
+              <a href="tel:+13024640950" className="text-orange-600 hover: tex t-orange-500">
                 +1 302 464 0950
               </a>{' '}
               for custom pricing.
             </p>
           </div>
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+          <div className="grid grid-cols-1 gap-8 lg: gri d-cols-2">
             {microSaaSServices.map((service, index) => (
-              <div key={index} className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300">
+              <div key={index} className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shado w-lg transition-all duration-300">
                 <div className="flex items-center gap-x-3 mb-6">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-orange-600 group-hover:bg-orange-700 transition-colors">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-orange-600 group-hover: b g-orange-700 transition-colors">
                     <service.icon className="h-7 w-7 text-white" />
                   </div>
                   <div>
@@ -516,7 +516,7 @@ export default function MicroSaaS() {
                 <ul className="space-y-3 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center gap-x-3">
-                      <CheckCircle className="h-4 w-4 text-orange-600 flex-shrink-0" />
+                      <CheckCircle className="h-4 w-4 text-orange-600 flex-shrink-0"  />
                       <span className="text-sm text-gray-700">{feature}</span>
                     </li>
                   ))}
@@ -524,17 +524,17 @@ export default function MicroSaaS() {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-4 text-sm text-gray-500">
                     <div className="flex items-center space-x-1">
-                      <Clock className="h-4 w-4" />
+                      <Clock className="h-4 w-4"  />
                       <span>{service.delivery}</span>
                     </div>
                     <div className="font-semibold text-orange-600">{service.pricing}</div>
                   </div>
                   <Link
                     href="/contact"
-                    className="inline-flex items-center text-sm font-semibold text-orange-600 hover:text-orange-500 transition-colors group"
+                    className="inline-flex items-center text-sm font-semibold text-orange-600 hover: tex t-orange-500 transition-colors group"
                   >
                     Get Started
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="ml-2 h-4 w-4 group-hover: translat e-x-1 transition-transform"  />
                   </Link>
                 </div>
               </div>
@@ -544,17 +544,17 @@ export default function MicroSaaS() {
       </section>
 
       {/* Development Process Section */}
-      <section className="py-24 sm:py-32 bg-gray-50">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="py-24 sm: p y-32 bg-gray-50">
+        <div className="mx-auto max-w-7xl px-6 lg: p x-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm: tex t-4xl">
               Our Development Process
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
               A proven methodology for delivering high-quality software solutions
             </p>
           </div>
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-8 sm: gri d-cols-2 lg: gri d-cols-4">
             <div className="text-center">
               <div className="flex items-center justify-center h-16 w-16 rounded-full bg-orange-100 mx-auto mb-4">
                 <span className="text-2xl font-bold text-orange-600">1</span>
@@ -588,10 +588,10 @@ export default function MicroSaaS() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-orange-600 py-16 sm:py-24">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="bg-orange-600 py-16 sm: p y-24">
+        <div className="mx-auto max-w-7xl px-6 lg: p x-8">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-white sm: tex t-4xl">
               Ready to Build Your Custom SaaS Solution?
             </h2>
             <p className="mt-6 text-lg leading-8 text-orange-100">
@@ -601,13 +601,13 @@ export default function MicroSaaS() {
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link
                 href="/contact"
-                className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-orange-600 shadow-sm hover:bg-gray-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-orange-600 shadow-sm hover: b g-gray-50 focus-visible: outline focus-visible: outlin e-2 focus-visible: outlin e-offset-2 focus-visible: outlin e-white"
               >
                 Start Your Project
               </Link>
               <a
                 href="tel:+13024640950"
-                className="text-sm font-semibold leading-6 text-white hover:text-orange-100"
+                className="text-sm font-semibold leading-6 text-white hover: tex t-orange-100"
               >
                 Call +1 302 464 0950 <span aria-hidden="true">→</span>
               </a>

@@ -57,13 +57,13 @@ export function EnhancedAccessibilityPanel() {
   const [isExpanded, setIsExpanded] = useState(false);
   const [settings, setSettings] = useState<AccessibilitySettings>({
 
-    highContrast: false,
-    largeText: false,
-    reducedMotion: false,
+    highContrast: fals e,
+    largeText: fals e,
+    reducedMotion: fals e,
     screenReader: boolean,
-    focusIndicator: true,
+    focusIndicator: tru e,
     colorBlindness: 'none',
-    fontSize: 16,
+    fontSize: 1 6,
     lineHeight: 1.5,
     letterSpacing: 0,
     wordSpacing: 0});

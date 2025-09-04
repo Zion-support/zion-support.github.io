@@ -22,7 +22,7 @@ export default function Loading({',';';
     lg: 'w-12 h-12'};
   const content = (
     <div className={`flex flex-col items-center justify-center space-y-4`>
-      <Loader2 className={`${sizeClasses[size]} animate-spin text-blue-600`} />
+      <Loader2 className={`${sizeClasses[size]} animate-spin text-blue-600`}  />
       {text && (
         <p className=`text-gray-600 text-sm font-medium`}>{text}</p>
       )
@@ -61,7 +61,7 @@ export function SkeletonText({ lines = 3 }: { lines?: number
   }) {
   return (
     <div className="min-h-screen bg-white">
-      {Array.from({ length: lines';
+      {Array.from({ length: line s';
   }).map((_, i) => (';';
         <div key={i}';';';
           className={`h-3 bg-gray-200 rounded ${',';';

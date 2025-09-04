@@ -21,24 +21,24 @@ export default function CloudFinOpsOptimizerPage() {
   return (
     <div className="min-h-screen bg-zion-slate-dark text-white">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 px-4 sm: p x-6 lg: p x-8">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center">
             <div className="inline-flex items-center px-4 py-2 bg-zion-cyan/20 text-zion-cyan rounded-full text-sm font-medium mb-6">
-              <Cloud className="w-4 h-4 mr-2" />
+              <Cloud className="w-4 h-4 mr-2"  />
               Cloud Cost Optimization
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md: tex t-6xl font-bold text-white mb-6">
               Cloud FinOps Optimizer
             </h1>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
               Maximize your cloud ROI with intelligent cost optimization, automated resource management, and comprehensive financial operations insights powered by AI.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 transform hover:scale-105">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover: fro m-zion-cyan-light hover: t o-zion-blue-light transition-all duration-300 transform hover: scal e-105">
                 Start Free Assessment
               </button>
-              <button className="px-8 py-4 border border-zion-purple text-zion-purple font-semibold rounded-lg hover:bg-zion-purple hover:text-white transition-all duration-300">
+              <button className="px-8 py-4 border border-zion-purple text-zion-purple font-semibold rounded-lg hover: b g-zion-purple hover: tex t-white transition-all duration-300">
                 Schedule Consultation
               </button>
             </div>
@@ -47,10 +47,10 @@ export default function CloudFinOpsOptimizerPage() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-darker">
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-zion-slate-darker">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
               Comprehensive Cloud Financial Management
             </h2>
             <p className="text-lg text-zion-slate-light max-w-2xl mx-auto">
@@ -58,10 +58,10 @@ export default function CloudFinOpsOptimizerPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
             <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/30">
               <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mb-4">
-                <DollarSign className="w-6 h-6 text-zion-cyan" />
+                <DollarSign className="w-6 h-6 text-zion-cyan"  />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Cost Optimization</h3>
               <p className="text-zion-slate-light">
@@ -71,7 +71,7 @@ export default function CloudFinOpsOptimizerPage() {
 
             <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/30">
               <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mb-4">
-                <BarChart3 className="w-6 h-6 text-zion-cyan" />
+                <BarChart3 className="w-6 h-6 text-zion-cyan"  />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Real-time Analytics</h3>
               <p className="text-zion-slate-light">
@@ -81,7 +81,7 @@ export default function CloudFinOpsOptimizerPage() {
 
             <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/30">
               <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mb-4">
-                <Zap className="w-6 h-6 text-zion-cyan" />
+                <Zap className="w-6 h-6 text-zion-cyan"  />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Automated Optimization</h3>
               <p className="text-zion-slate-light">
@@ -91,7 +91,7 @@ export default function CloudFinOpsOptimizerPage() {
 
             <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/30">
               <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mb-4">
-                <Shield className="w-6 h-6 text-zion-cyan" />
+                <Shield className="w-6 h-6 text-zion-cyan"  />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Budget Management</h3>
               <p className="text-zion-slate-light">
@@ -101,7 +101,7 @@ export default function CloudFinOpsOptimizerPage() {
 
             <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/30">
               <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mb-4">
-                <PieChart className="w-6 h-6 text-zion-cyan" />
+                <PieChart className="w-6 h-6 text-zion-cyan"  />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Resource Allocation</h3>
               <p className="text-zion-slate-light">
@@ -111,7 +111,7 @@ export default function CloudFinOpsOptimizerPage() {
 
             <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/30">
               <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mb-4">
-                <Activity className="w-6 h-6 text-zion-cyan" />
+                <Activity className="w-6 h-6 text-zion-cyan"  />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Performance Monitoring</h3>
               <p className="text-zion-slate-light">
@@ -123,16 +123,16 @@ export default function CloudFinOpsOptimizerPage() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8">
         <div className="container mx-auto max-w-7xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg: gri d-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-6">
                 Transform Your Cloud Financial Operations
               </h2>
               <div className="space-y-6">
                 <div className="flex items-start">
-                  <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 mr-3 flex-shrink-0" />
+                  <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 mr-3 flex-shrink-0"  />
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">Reduce Cloud Costs</h3>
                     <p className="text-zion-slate-light">
@@ -141,7 +141,7 @@ export default function CloudFinOpsOptimizerPage() {
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 mr-3 flex-shrink-0" />
+                  <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 mr-3 flex-shrink-0"  />
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">Improve Visibility</h3>
                     <p className="text-zion-slate-light">
@@ -150,7 +150,7 @@ export default function CloudFinOpsOptimizerPage() {
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 mr-3 flex-shrink-0" />
+                  <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 mr-3 flex-shrink-0"  />
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">Automate Operations</h3>
                     <p className="text-zion-slate-light">
@@ -159,7 +159,7 @@ export default function CloudFinOpsOptimizerPage() {
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 mr-3 flex-shrink-0" />
+                  <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 mr-3 flex-shrink-0"  />
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">Enhance Accountability</h3>
                     <p className="text-zion-slate-light">
@@ -195,10 +195,10 @@ export default function CloudFinOpsOptimizerPage() {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-darker">
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-zion-slate-darker">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
               Perfect For Every Cloud Environment
             </h2>
             <p className="text-lg text-zion-slate-light max-w-2xl mx-auto">
@@ -206,7 +206,7 @@ export default function CloudFinOpsOptimizerPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
             <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/30">
               <h3 className="text-xl font-semibold text-white mb-3">Enterprise Organizations</h3>
               <p className="text-zion-slate-light mb-4">
@@ -247,19 +247,19 @@ export default function CloudFinOpsOptimizerPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20">
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-6">
             Ready to Optimize Your Cloud Costs?
           </h2>
           <p className="text-lg text-zion-slate-light mb-8">
             Join hundreds of organizations that have already transformed their cloud financial operations with our FinOps platform.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 transform hover:scale-105">
+          <div className="flex flex-col sm: fle x-row gap-4 justify-center">
+            <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover: fro m-zion-cyan-light hover: t o-zion-blue-light transition-all duration-300 transform hover: scal e-105">
               Start Free Assessment
             </button>
-            <button className="px-8 py-4 border border-zion-purple text-zion-purple font-semibold rounded-lg hover:bg-zion-purple hover:text-white transition-all duration-300">
+            <button className="px-8 py-4 border border-zion-purple text-zion-purple font-semibold rounded-lg hover: b g-zion-purple hover: tex t-white transition-all duration-300">
               Schedule Demo
             </button>
           </div>

@@ -13,7 +13,7 @@ export function ClientSuccessStoriesSection() {
           initial = {
 
   { opacity: 0,
-  y: 20
+  y: 2 0
 
 }}
           whileInView = {
@@ -22,10 +22,10 @@ export function ClientSuccessStoriesSection() {
   y: 0
 
 }}
-          viewport={{ once: true }}
+          viewport={{ once: tru e }}
           transition={{ duration: 0.6 }}
         >"
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-4">
             Client Success Stories
           </h2>"
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -36,7 +36,7 @@ export function ClientSuccessStoriesSection() {
           initial = {
 
   { opacity: 0,
-  y: 20
+  y: 2 0
 
 }}
           whileInView = {
@@ -51,15 +51,14 @@ export function ClientSuccessStoriesSection() {
   delay: 0.1
 
 }}"
-          className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"
-        >;
-          {successMetrics.map ( (metric, index) => {;
+          className="grid grid-cols-2 md: gri d-cols-4 gap-8 mb-16"
+        > {successMetrics.map ( (metric, index) => {;
             
             return ("
               <div key = {metric.label} className="text-center">"
                 <div className="flex justify-center mb-4">"
                   <div className="p-3 bg-green-100 rounded-full">"
-                    <IconComponent className="h-8 w-8 text-green-600"  />                  </div>
+                    <IconComponent className="h-8 w-8 text-green-600"   />                  </div>
                 </div>"
                 <div className="text-3xl font-bold text-gray-900 mb-2">
                   {metric.value}
@@ -70,17 +69,17 @@ export function ClientSuccessStoriesSection() {
         </motion.div>
 
         {/* Testimonials Grid */}"
-        <div className="grid md: grid-cols-2 gap-8 mb-12">
+        <div className="grid md: gri d-cols-2 gap-8 mb-12">
           {testimonials.map((testimonial, index)  => ("
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 lg: gri d-cols-3 gap-8 mb-16">
           {successStories.map((story, index) => (
             <motion.div
               key={story.id}"
-              className="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
+              className="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden hover: borde r-blue-500/50 transition-all duration-300 hover: shado w-lg hover: shado w-blue-500/25"
               initial = {
 
   { opacity: 0,
-  y: 30
+  y: 3 0
 
 }}
               whileInView = {
@@ -89,11 +88,11 @@ export function ClientSuccessStoriesSection() {
   y: 0
 
 }}
-              viewport={{ once: true }}
+              viewport={{ once: tru e }}
               transition = {
 
   { duration: 0.6,
-  delay: index * 0.1
+  delay: inde x * 0.1
 
 }}
             >"
@@ -164,7 +163,7 @@ export function ClientSuccessStoriesSection() {
           className="mb-16";          initial = {
 
   { opacity: 0,
-  y: 30
+  y: 3 0
 
 }}
           whileInView = {
@@ -173,7 +172,7 @@ export function ClientSuccessStoriesSection() {
   y: 0
 
 }}
-          viewport={{ once: true }}
+          viewport={{ once: tru e }}
           transition = {
 
   { duration: 0.6,
@@ -186,7 +185,7 @@ export function ClientSuccessStoriesSection() {
               Success by the Numbers
             </h3>
 
-            <div className="grid grid - cols - 2 md:grid - cols - 4 gap-8">
+            <div className="grid grid - cols - 2 md: gri d - cols - 4 gap-8">
               <div className="text-center">
                 <div className="text-4xl font - bold text-blue - 400 mb-2">98%</div>
                 <div className="text-gray - 300 text-sm">Client Satisfaction</div>
@@ -210,7 +209,7 @@ export function ClientSuccessStoriesSection() {
           className="text-center"          initial = {
 
   { opacity: 0,
-  y: 20
+  y: 2 0
 
 }}
           whileInView = {
@@ -219,7 +218,7 @@ export function ClientSuccessStoriesSection() {
   y: 0
 
 }}
-          viewport={{ once: true }}
+          viewport={{ once: tru e }}
           transition = {
 
   { duration: 0.6,
@@ -234,14 +233,14 @@ export function ClientSuccessStoriesSection() {
             <p className="text-green-100 mb-6 max-w-2xl mx-auto">
               Join hundreds of satisfied clients who have transformed their
               businesses with our innovative technology solutions.</p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-              <button className="inline-flex items-center px-6 py-3 bg-white text-green-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">"
+              <button className="inline-flex items-center px-6 py-3 bg-white text-green-600 hover: b g-gray-100 rounded-lg font-medium transition-colors duration-200">
                 Start Your Project"
-                <ArrowRight className="ml-2 h-5 w-5"  />
+                <ArrowRight className="ml-2 h-5 w-5"   />
               </button>"
-              <button className="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-white hover:text-green-600 rounded-lg font-medium transition-colors duration-200">
+              <button className="inline-flex items-center px-6 py-3 border border-white text-white hover: b g-white hover: tex t-green-600 rounded-lg font-medium transition-colors duration-200">
                 View All Case Studies"
-                <Award className="ml-2 h-5 w-5"  />              </button>
+                <Award className="ml-2 h-5 w-5"   />              </button>
             </div>
           </div>
         </motion.div>

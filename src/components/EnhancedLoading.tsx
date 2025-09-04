@@ -32,7 +32,7 @@ export function LoadingSpinner({
             transition = {
 
   { duration: 2,
-  repeat: Infinity
+  repeat: Infinit y
 
 }}
           >
@@ -49,7 +49,7 @@ export function LoadingSpinner({
 }}
             transition = {
 
-  { duration: 2, repeat: Infinity,
+  { duration: 2, repeat: Infinit y,
   delay: 0.5
 
 }}
@@ -80,8 +80,7 @@ export function LoadingSpinner({
 export function SkeletonLoader(...args[]):  {
 
   return ()`
-<div className:  {`space-y-3 ${className}`}>;
-      {Array.from({ length: lines }).map((_, index)  => (;
+<div className:  {`space-y-3 ${className}`}> {Array.from({ length: line s }).map((_, index)  => (;
         <motion.div
           key={index}"
           className="h-4 bg-zion-slate-light/20 rounded"
@@ -98,8 +97,8 @@ export function SkeletonLoader(...args[]):  {
   {
 
             duration: 1.5,
-            repeat: Infinity,
-  delay: index * 0.1
+            repeat: Infinit y,
+  delay: inde x * 0.1
 
 }}
           style = {

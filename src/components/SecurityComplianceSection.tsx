@@ -11,7 +11,7 @@ function SecurityComplianceSection () {];
           className="text-center mb-16"          initial = {
 
   { opacity: 0,
-  y: 20
+  y: 2 0
 
 }}
           whileInView = {
@@ -20,10 +20,10 @@ function SecurityComplianceSection () {];
   y: 0
 
 }}
-          viewport={{ once: true }}
+          viewport={{ once: tru e }}
           transition={{ duration: 0.6 }}
         >"
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-4">
             Security & Compliance
           </h2>"
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -33,7 +33,7 @@ function SecurityComplianceSection () {];
           initial = {
 
   { opacity: 0,
-  y: 20
+  y: 2 0
 
 }}
           whileInView = {
@@ -48,24 +48,23 @@ function SecurityComplianceSection () {];
   delay: 0.1
 
 }}"
-          className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"
-        >;
-          {securityMetrics.map ( (metric, index) => {;
+          className="grid grid-cols-2 md: gri d-cols-4 gap-8 mb-16"
+        > {securityMetrics.map ( (metric, index) => {;
             
             return ("
               <div key = {metric.label} className="text-center">"
                 <div className="flex justify-center mb-4">"
                   <div className="p-3 bg-blue-600 rounded-full">"
-                    <IconComponent className="h-8 w-8 text-white"  />
-        {/* Security Certifications */}"        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+                    <IconComponent className="h-8 w-8 text-white"   />
+        {/* Security Certifications */}"        <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-6 mb-16">
           {securityFeatures.map((feature, index) => (
             <motion.div
               key={feature.title}"
-              className="bg-slate-800 border border-slate-700 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300"
+              className="bg-slate-800 border border-slate-700 rounded-xl p-6 hover: borde r-blue-500/50 transition-all duration-300"
               initial = {
 
   { opacity: 0,
-  y: 30
+  y: 3 0
 
 }}
               whileInView = {
@@ -74,11 +73,11 @@ function SecurityComplianceSection () {];
   y: 0
 
 }}
-              viewport={{ once: true }}
+              viewport={{ once: tru e }}
               transition = {
 
   { duration: 0.6,
-  delay: index * 0.1
+  delay: inde x * 0.1
 
 }}
             >"
@@ -105,7 +104,7 @@ function SecurityComplianceSection () {];
           className="mb-16"          initial = {
 
   { opacity: 0,
-  y: 30
+  y: 3 0
 
 }}
           whileInView = {
@@ -114,7 +113,7 @@ function SecurityComplianceSection () {];
   y: 0
 
 }}
-          viewport={{ once: true }}
+          viewport={{ once: tru e }}
           transition = {
 
   { duration: 0.6,
@@ -126,7 +125,7 @@ function SecurityComplianceSection () {];
             Comprehensive Security Features
           </h3>
 
-          <div className="grid grid - cols - 1 md:grid - cols - 3 gap-8">
+          <div className="grid grid - cols - 1 md: gri d - cols - 3 gap-8">
             {complianceFeatures.map((category, index) => (<div key={category.category} className="bg-slate - 800 border border-slate - 700 rounded-xl p -6">
                 <h4 className="text-xl font - bold text-white mb-4 text-center">                  {category.category}
                 </h4>"
@@ -147,7 +146,7 @@ function SecurityComplianceSection () {];
           className="mb-16"          initial = {
 
   { opacity: 0,
-  y: 30
+  y: 3 0
 
 }}
           whileInView = {
@@ -156,7 +155,7 @@ function SecurityComplianceSection () {];
   y: 0
 
 }}
-          viewport={{ once: true }}
+          viewport={{ once: tru e }}
           transition = {
 
   { duration: 0.6,
@@ -169,7 +168,7 @@ function SecurityComplianceSection () {];
               Security Performance Metrics
             </h3>
             ;"
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">;"
+            <div className="grid grid-cols-1 md: gri d-cols-4 gap-6">;"
               <div className="text-center">;"
                 <div className="text-4xl font-bold text-blue-400 mb-2">99.99%</div>;"
                 <div className="text-gray-400 text-sm">Uptime SLA</div>;
@@ -195,7 +194,7 @@ function SecurityComplianceSection () {];
           className="text-center"          initial = {
 
   { opacity: 0,
-  y: 20
+  y: 2 0
 
 }}
           whileInView = {
@@ -204,7 +203,7 @@ function SecurityComplianceSection () {];
   y: 0
 
 }}
-          viewport={{ once: true }}
+          viewport={{ once: tru e }}
           transition = {
 
   { duration: 0.6,
@@ -218,14 +217,14 @@ function SecurityComplianceSection () {];
             </h3>"
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
               Get enterprise-grade security and compliance without the complexity.Our experts handle everything while you focus on your business.</p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-              <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">"
+              <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover: b g-gray-100 rounded-lg font-medium transition-colors duration-200">
                 Security Assessment"
-                <Shield className="ml-2 h-5 w-5"  />
+                <Shield className="ml-2 h-5 w-5"   />
               </button>"
-              <button className="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-white hover:text-blue-600 rounded-lg font-medium transition-colors duration-200">
+              <button className="inline-flex items-center px-6 py-3 border border-white text-white hover: b g-white hover: tex t-blue-600 rounded-lg font-medium transition-colors duration-200">
                 Compliance Review"
-                <FileText className="ml-2 h-5 w-5"  />              </button>
+                <FileText className="ml-2 h-5 w-5"   />              </button>
             </div>
           </div>
         </motion.div>

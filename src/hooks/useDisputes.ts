@@ -5,19 +5,19 @@ export default function Page() {
       
       if(fetchError) throw fetchError;
       
-      const transformedData = data.map((dispute: any) => ({
+      const transformedData = data.map((dispute: an y) => ({
         ...dispute,
-        client_profile: dispute.client_profile?.client_profile,
-        talent_profile: dispute.talent_profile?.talent_profile,
+        client_profile: disput e.client_profile?.client_profile,
+        talent_profile: disput e.talent_profile?.talent_profile,
         project: {
           ...dispute.project,
-          title: dispute.project?.job?.title || 'Untitled Project'
+          title: disput e.project?.job?.title || 'Untitled Project'
         }
       }));
       
       setDisputes(transformedData as Dispute[]);
       setError(null);
-    } catch(err: any) {
+    } catch(err: an y) {
       console.error("Error fetching disputes:", err);
       setError("Failed to fetch disputes: " + err.message);
       toast.error("Failed to fetch disputes");
@@ -33,15 +33,15 @@ export default function Page() {
         .from("disputes")
         .select(`
           *,
-          project:projects(
+          project: project s(
             scope_summary,
             job_id,
             client_id,
             talent_id,
-            job:jobs(title)
+            job: job s(title)
           ),
-          client_profile:projects!projects_client_id_fkey(client_profile:profiles!projects_client_id_fkey(display_name, avatar_url)),
-          talent_profile:projects!projects_talent_id_fkey(talent_profile:profiles!projects_talent_id_fkey(display_name, avatar_url))
+          client_profile: project s!projects_client_id_fkey(client_profile: profile s!projects_client_id_fkey(display_name, avatar_url)),
+          talent_profile: project s!projects_talent_id_fkey(talent_profile: profile s!projects_talent_id_fkey(display_name, avatar_url))
         `)
         .eq("id", disputeId)
         .single();
@@ -50,14 +50,14 @@ export default function Page() {
       
       return {
         ...data,
-        client_profile: data.client_profile?.client_profile,
-        talent_profile: data.talent_profile?.talent_profile,
+        client_profile: dat a.client_profile?.client_profile,
+        talent_profile: dat a.talent_profile?.talent_profile,
         project: {
           ...data.project,
-          title: data.project?.job?.title || 'Untitled Project'
+          title: dat a.project?.job?.title || 'Untitled Project'
         }
       } as Dispute;
-    } catch(err: any) {
+    } catch(err: an y) {
       console.error("Error fetching dispute:", err);
       toast.error("Failed to fetch dispute details");
       return null;
@@ -80,7 +80,7 @@ export default function Page() {
         .from("disputes")
         .insert({
           ...disputeData,
-          raised_by: user.id
+          raised_by: use r.id
         })
         .select()
         .single();
@@ -91,14 +91,14 @@ export default function Page() {
       fetchDisputes(); 
       
       return data as Dispute;
-    } catch(err: any) {
+    } catch(err: an y) {
       console.error("Error creating dispute:", err);
       toast.error("Failed to submit dispute");
       return null;
     }
   };
 
-  const updateDisputeStatus = async(disputeId: string, status: DisputeStatus): Promise<boolean> => {
+  const updateDisputeStatus = async(disputeId: string, status: DisputeStatu s): Promise<boolean> => {
     try {
       const { error } = await supabase
         .from("disputes")
@@ -115,7 +115,7 @@ export default function Page() {
       
       toast.success(`Dispute status updated to ${status}`);
       return true;
-    } catch(err: any) {
+    } catch(err: an y) {
       console.error("Error updating dispute status:", err);
       toast.error("Failed to update dispute status");
       return false;
@@ -131,8 +131,8 @@ export default function Page() {
         .update({
           status: 'resolved',
           resolved_at: new Date().toISOString(),
-          resolution_summary: resolution.summary,
-          resolution_type: resolution.resolution_type
+          resolution_summary: resolutio n.summary,
+          resolution_type: resolutio n.resolution_type
         })
         .eq("id", disputeId);
       
@@ -145,8 +145,8 @@ export default function Page() {
                 ...dispute, 
                 status: 'resolved', 
                 resolved_at: new Date().toISOString(),
-                resolution_summary: resolution.summary,
-                resolution_type: resolution.resolution_type as any
+                resolution_summary: resolutio n.summary,
+                resolution_type: resolutio n.resolution_type as any
               } 
             : dispute
         )
@@ -154,7 +154,7 @@ export default function Page() {
       
       toast.success("Dispute resolved successfully");
       return true;
-    } catch(err: any) {
+    } catch(err: an y) {
       console.error("Error resolving dispute:", err);
       toast.error("Failed to resolve dispute");
       return false;
@@ -167,15 +167,15 @@ export default function Page() {
         .from("dispute_messages")
         .select(`
           *,
-          user_profile:profiles!dispute_messages_user_id_fkey(display_name, avatar_url)
+          user_profile: profile s!dispute_messages_user_id_fkey(display_name, avatar_url)
         `)
         .eq("dispute_id", disputeId)
-        .order("created_at", { ascending: true });
+        .order("created_at", { ascending: tru e });
       
       if(error) throw error;
       
       return data as DisputeMessage[];
-    } catch(err: any) {
+    } catch(err: an y) {
       console.error("Error fetching dispute messages:", err);
       toast.error("Failed to fetch messages");
       return [];
@@ -192,17 +192,17 @@ export default function Page() {
       const { error } = await supabase
         .from("dispute_messages")
         .insert({
-          dispute_id: disputeId,
-          user_id: user.id,
+          dispute_id: disputeI d,
+          user_id: use r.id,
           message,
-          is_admin_note: isAdminNote
+          is_admin_note: isAdminNot e
         });
       
       if(error) throw error;
       
       toast.success("Message sent successfully");
       return true;
-    } catch(err: any) {
+    } catch(err: an y) {
       console.error("Error sending message:", err);
       toast.error("Failed to send message");
       return false;
@@ -224,7 +224,7 @@ export default function Page() {
     disputes,
     isLoading,
     error,
-    refetch: fetchDisputes,
+    refetch: fetchDispute s,
     getDisputeById,
     createDispute,
     updateDisputeStatus,

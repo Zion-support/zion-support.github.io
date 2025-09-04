@@ -14,7 +14,7 @@ export default function Page() {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
   
-  const handleSendMessage = async(e: React.FormEvent) => {
+  const handleSendMessage = async(e: Reac t.FormEvent) => {
     e.preventDefault();
     if(!messageText.trim() || !activeConversation) return;
     
@@ -24,7 +24,7 @@ export default function Page() {
   
   if(!activeConversation) {
     return (<div className="flex-1 flex flex-col items-center justify-center p-8">
-        <MessageSquare className="h-16 w-16 text-zion-purple/40 mb-4" />
+        <MessageSquare className="h-16 w-16 text-zion-purple/40 mb-4"  />
         <h3 className="text-xl font-medium text-white mb-2">No Conversation Selected</h3>
         <p className="text-zion-slate text-center max-w-md">
           Select a conversation from the list to view and send messages.</p>
@@ -32,7 +32,7 @@ export default function Page() {
     );
   }
   
-  const groupedMessages: { date: string; messages: any[] }[] = [];
+  const groupedMessages: { date: string; messages: an y[] }[] = [];
   
   activeMessages.forEach(message => {
     const messageDate = format(new Date(message.created_at), 'yyyy-MM-dd');
@@ -42,7 +42,7 @@ export default function Page() {
       existingGroup.messages.push(message);
     } else {
       groupedMessages.push({
-        date: messageDate,
+        date: messageDat e,
         messages: [message]
       });
     }
@@ -56,10 +56,9 @@ export default function Page() {
       <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/30">
         <div className="flex items-center gap-3">
           <Avatar className="h-10 w-10 border border-zion-purple/20">
-            <AvatarImage 
-              src={activeConversation.other_user.avatar_url} 
+            <AvatarImage src={activeConversation.other_user.avatar_url} 
               alt={activeConversation.other_user.name} 
-            />
+             />
             <AvatarFallback className="bg-zion-blue-dark text-white">
               {activeConversation.other_user.name.charAt(0).toUpperCase()}
             </AvatarFallback>
@@ -83,11 +82,10 @@ export default function Page() {
             {activeConversation.context_data.image_url && (
               <div className="w-16 h-16 flex-shrink-0">
                 <AspectRatio ratio={1/1} className="rounded bg-zion-blue-dark/30 overflow-hidden">
-                  <img
-                    src={activeConversation.context_data.image_url}
+                  <img src={activeConversation.context_data.image_url}
                     alt={activeConversation.context_data.title || "Context"}
                     className="object-cover"
-                  />
+                   />
                 </AspectRatio>
               </div>
             )}
@@ -118,20 +116,19 @@ export default function Page() {
         ) : (
           groupedMessages.map((group, groupIndex) => (
             <div key={group.date}>
-              <DateDivider date={new Date(group.date)} />
+              <DateDivider date={new Date(group.date)}  />
               <div className="space-y-3">
                 {group.messages.map((message) => (
-                  <MessageBubble
-                    key={message.id}
+                  <MessageBubble key={message.id}
                     message={message}
                     isUserMessage={message.sender_id === user?.id}
-                  />
+                   />
                 ))}
               </div>
             </div>
           ))
         )}
-        <div ref={messagesEndRef} />
+        <div ref={messagesEndRef}  />
       </div>
       
       <div className="p-3 border-t border-zion-purple/20">
@@ -140,11 +137,11 @@ export default function Page() {
             value={messageText}
             onChange={(e) => setMessageText(e.target.value)}
             placeholder="Type a message..."
-            className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-black focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+            className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-black focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan"
           />
           <Button 
             type="submit"
-            className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+            className="bg-zion-purple hover: b g-zion-purple-dark text-white"
           >
             Send
           </Button>

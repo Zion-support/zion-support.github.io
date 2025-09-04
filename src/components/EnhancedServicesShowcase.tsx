@@ -12,13 +12,13 @@ import { motion } from 'framer-motionimport { Link } from react-router-domimport
   Users,
   Clock,
   CheckCircle,
-  Search} from lucide-reactexport const EnhancedServicesShowcase: React.FC = () => {
+  Search} from lucide-reactexport const EnhancedServicesShowcase: Reac t.FC = () => {
   const services = [{
       title: AI Workflow Automation,'
       description: 'Transform business operations with intelligent automation that learns and scales',
       price: 'From $299/month',
       path: '/services/ai-workflow-automation',
-              icon: GitFork,
+              icon: GitFor k,
       category: 'AI & Automation',
       features: ['Process optimization', 'AI-powered workflows', 'Real-time analytics', 'Scalable automation'],
       benefits: ['Reduce manual work by 70-85%', 'Improve efficiency by 60%', 'Cut operational costs by 40-50%'],
@@ -29,7 +29,7 @@ import { motion } from 'framer-motionimport { Link } from react-router-domimport
       description: 'Protect your business with AI-powered threat detection and prevention',
       price: 'From $499/month',
       path: '/services/ai-cybersecurity',
-      icon: Shield,
+      icon: Shiel d,
       category: 'Security',
       features: ['Threat detection', 'Behavioral analytics', 'Automated response', 'Compliance monitoring'],
       benefits: ['Detect threats 10x faster', 'Reduce false positives by 85%', 'Prevent 99.9% of attacks'],
@@ -40,7 +40,7 @@ import { motion } from 'framer-motionimport { Link } from react-router-domimport
       description: 'Solve complex problems 1000x faster with quantum computing solutions',
       price: 'From $2,999/month',
       path: '/services/quantum-computing-solutions',
-      icon: Atom,
+      icon: Ato m,
       category: 'Quantum Tech',
       features: ['Quantum algorithms', 'ML acceleration', 'Financial modeling', 'Drug discovery'],
       benefits: ['1000x faster computation', 'Breakthrough discoveries', 'Unbreakable encryption'],
@@ -51,7 +51,7 @@ import { motion } from 'framer-motionimport { Link } from react-router-domimport
       description: 'Process data at the edge and reduce latency by 90%',
       price: 'From $399/month',
       path: '/services/iot-edge-computing',
-      icon: Cpu,
+      icon: Cp u,
       category: 'IoT & Edge',
       features: ['Edge processing', 'Device management', 'Real-time analytics', 'AI at the edge'],
       benefits: ['Reduce latency by 90%', 'Cut bandwidth costs by 60-80%', 'Scale to millions of devices'],
@@ -62,7 +62,7 @@ import { motion } from 'framer-motionimport { Link } from react-router-domimport
       description: 'Build, deploy, and scale with enterprise-grade cloud infrastructure',
       price: 'From $799/month',
       path: '/services/cloud-devops',
-      icon: Cloud,
+      icon: Clou d,
       category: 'Infrastructure',
       features: ['Cloud migration', 'CI/CD pipelines', 'Infrastructure as code', 'Monitoring & alerting'],
       benefits: ['Faster deployments', 'Improved reliability', 'Cost optimization', 'Scalability'],
@@ -73,7 +73,7 @@ import { motion } from 'framer-motionimport { Link } from react-router-domimport
       description: 'Automate sales processes and boost conversion rates with AI',
       price: 'From $1,500/month',
       path: '/services/ai-sales-copilot',
-      icon: Brain,
+      icon: Brai n,
       category: 'Sales AI',
       features: ['Lead scoring', 'CRM automation', 'Sales analytics', 'Predictive insights'],
       benefits: ['Reduce admin time by 40-60%', 'Improve conversion rates', 'Shorten sales cycles'],
@@ -91,5 +91,5 @@ import { motion } from 'framer-motionimport { Link } from react-router-domimport
 ;
 const categories = ['All', 'AI & Analytics', 'Quantum Computing', 'Cybersecurity', 'Cloud & DevOps', 'Data & Analytics', 'Blockchain & Web3']
 ;
-export default function EnhancedServicesShowcase(...args: unknown[]): unknown {  const [selectedCategory, setSelectedCategory] = useState('All')
+export default function EnhancedServicesShowcase(...args: unknow n[]): unknown {  const [selectedCategory, setSelectedCategory] = useState('All')
   const [hoveredService, setHoveredService] = useState<string | null>(null)

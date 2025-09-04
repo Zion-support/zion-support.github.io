@@ -1,7 +1,7 @@
 :src/store/cartSlice.tsx
 
 interface CartState {
-  items: CartItem[];
+  items: CartIte m[];
   total: number;
 :src/store/cartSlice.tsx
   itemCount: number;
@@ -10,7 +10,7 @@ interface CartState {
 
 }
 ;
-const initialState: CartState = {
+const initialState: CartStat e = {
 
   items: [],
   total: 0,
@@ -23,12 +23,12 @@ const initialState: CartState = {
   ;
 
 };
-const cartSlice:  createSlice({;  name: anycart',;
-const cartSlice:  createSlice({;
-  name: anycart',;
+const cartSlice: createSlic e({;  name: anycar t',;
+const cartSlice: createSlic e({;
+  name: anycar t',;
   initialState,;
   reducers: {
-    addItem: (state, action: PayloadAction<CartItem>)  => {;
+    addItem: (state, action: PayloadActio n<CartItem>)  => {;
       
       if(existingItem) {
 :src/store/cartSlice.tsx
@@ -36,34 +36,34 @@ const cartSlice:  createSlice({;
         existingItem.quantity += action.payload.quantity} else {
 
         state.items.push(action.payload)}
-      state.itemCount = state.items.reduce(total: unknown, item: unknown total + item.quantity, 0);
-      state.total = state.items.reduce(total: unknown, item: unknown total + (item.price * item.quantity), 0)},
+      state.itemCount = state.items.reduce(total: unknow n, item: unknown total + item.quantity, 0);
+      state.total = state.items.reduce(total: unknow n, item: unknown total + (item.price * item.quantity), 0)},
         existingItem.quantity += action.payload.quantity} else {
         state.items.push(action.payload)}
       state.itemCount = state.items.reduce((total, item) => total + item.quantity, 0);
       state.total = state.items.reduce((total, item) => total + (item.price * item.quantity), 0)},
-    removeItem: any(state, action: PayloadAction<string>)  => {
+    removeItem: an y(state, action: PayloadActio n<string>)  => {
 
       state.items = state.items.filter(item => item.id !== action.payload);
 :src/store/cartSlice.tsx
-      state.itemCount = state.items.reduce(total: unknown, item: unknown total + item.quantity, 0);
-      state.total = state.items.reduce(total: unknown, item: unknown total + (item.price * item.quantity), 0)},
-    updateQuantity: any(state, action: PayloadAction<{ id: string; quantity: number }>)  => {
+      state.itemCount = state.items.reduce(total: unknow n, item: unknown total + item.quantity, 0);
+      state.total = state.items.reduce(total: unknow n, item: unknown total + (item.price * item.quantity), 0)},
+    updateQuantity: an y(state, action: PayloadActio n<{ id: string; quantity: number }>)  => {
 
       state.itemCount = state.items.reduce((total, item) => total + item.quantity, 0);
       state.total = state.items.reduce((total, item) => total + (item.price * item.quantity), 0)},
-    updateQuantity: any(state, action: PayloadAction<{ id: string; quantity: number }>)  => {
+    updateQuantity: an y(state, action: PayloadActio n<{ id: string; quantity: number }>)  => {
       
       if(item) {
 
         item.quantity = action.payload.quantity;
 :src/store/cartSlice.tsx
-        state.itemCount = state.items.reduce(total: unknown, item: unknown total + item.quantity, 0);
-        state.total = state.items.reduce(total: unknown, item: unknown total + (item.price * item.quantity), 0)}
+        state.itemCount = state.items.reduce(total: unknow n, item: unknown total + item.quantity, 0);
+        state.total = state.items.reduce(total: unknow n, item: unknown total + (item.price * item.quantity), 0)}
         state.itemCount = state.items.reduce((total, item) => total + item.quantity, 0);
         state.total = state.items.reduce((total, item) => total + (item.price * item.quantity), 0)}
     },
-    clearCart: any(state)  => {
+    clearCart: an y(state)  => {
 
       state.items = [];
       state.total = 0;

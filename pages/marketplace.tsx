@@ -18,37 +18,37 @@ import {
   Database
 } from 'lucide-react'
 
-const SEO = dynamic(() => import('../src/components/SEO'), { ssr: false })
-const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false })
+const SEO = dynamic(() => import('../src/components/SEO'), { ssr: fals e })
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: fals e })
 
-const MarketplacePage: React.FC = () => {
+const MarketplacePage: Reac t.FC = () => {
   const sections = [
     { 
       title: 'Products', 
       href: '/marketplace/products', 
       description: 'AI tools, software, and platforms.',
-      icon: <ShoppingCart className="w-8 h-8" />,
+      icon: <ShoppingCart className="w-8 h-8"  />,
       count: '150+'
     },
     { 
       title: 'Talent', 
       href: '/marketplace/talent', 
       description: 'Expert contractors and fractional teams.',
-      icon: <Users className="w-8 h-8" />,
+      icon: <Users className="w-8 h-8"  />,
       count: '500+'
     },
     { 
       title: 'Equipment', 
       href: '/marketplace/equipment', 
       description: 'Hardware and infrastructure.',
-      icon: <Server className="w-8 h-8" />,
+      icon: <Server className="w-8 h-8"  />,
       count: '200+'
     },
     { 
       title: 'Services', 
       href: '/marketplace/services', 
       description: 'Professional and managed services.',
-      icon: <Wrench className="w-8 h-8" />,
+      icon: <Wrench className="w-8 h-8"  />,
       count: '100+'
     }
   ]
@@ -59,7 +59,7 @@ const MarketplacePage: React.FC = () => {
       description: 'Advanced AI-powered analytics platform for business intelligence.',
       price: '$299/month',
       rating: 4.8,
-      reviews: 156,
+      reviews: 15 6,
       category: 'AI Tools'
     },
     {
@@ -67,7 +67,7 @@ const MarketplacePage: React.FC = () => {
       description: 'Comprehensive cloud infrastructure management solution.',
       price: '$499/month',
       rating: 4.9,
-      reviews: 89,
+      reviews: 8 9,
       category: 'Infrastructure'
     },
     {
@@ -75,29 +75,29 @@ const MarketplacePage: React.FC = () => {
       description: 'Complete cybersecurity solution for small to medium businesses.',
       price: '$199/month',
       rating: 4.7,
-      reviews: 234,
+      reviews: 23 4,
       category: 'Security'
     }
   ]
 
   const benefits = [
     {
-      icon: <Shield className="w-6 h-6" />,
+      icon: <Shield className="w-6 h-6"  />,
       title: 'Verified Quality',
       description: 'All products and services are verified for quality and security'
     },
     {
-      icon: <Zap className="w-6 h-6" />,
+      icon: <Zap className="w-6 h-6"  />,
       title: 'Fast Deployment',
       description: 'Quick setup and deployment for all marketplace solutions'
     },
     {
-      icon: <Globe className="w-6 h-6" />,
+      icon: <Globe className="w-6 h-6"  />,
       title: 'Global Access',
       description: 'Access to products and services from around the world'
     },
     {
-      icon: <Clock className="w-6 h-6" />,
+      icon: <Clock className="w-6 h-6"  />,
       title: '24/7 Support',
       description: 'Round-the-clock support for all marketplace transactions'
     }
@@ -105,38 +105,37 @@ const MarketplacePage: React.FC = () => {
 
   return (
     <>
-      <SEO
-        title="Marketplace - Zion Tech Group"
+      <SEO title="Marketplace - Zion Tech Group"
         description="Discover products, talent, equipment, and services in our marketplace."
         keywords="marketplace, products, talent, equipment, services, Zion Tech Group"
         canonical="https://ziontechgroup.com/marketplace"
-      />
+       />
       
       <PageTransition>
         <main className="min-h-screen bg-white">
           {/* Hero Section */}
           <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="text-center"
               >
-                <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                <h1 className="text-4xl md: tex t-6xl font-bold text-gray-900 mb-6">
                   Marketplace
                 </h1>
                 <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
                   Discover products, talent, equipment, and services to accelerate your business growth.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm: fle x-row gap-4 justify-center">
                   <motion.a
                     href="#sections"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
                   >
-                    <ArrowRight className="w-5 h-5" />
+                    <ArrowRight className="w-5 h-5"  />
                     Explore Marketplace
                   </motion.a>
                   <motion.a
@@ -145,7 +144,7 @@ const MarketplacePage: React.FC = () => {
                     whileTap={{ scale: 0.95 }}
                     className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
                   >
-                    <ArrowRight className="w-5 h-5" />
+                    <ArrowRight className="w-5 h-5"  />
                     Become a Seller
                   </motion.a>
                 </div>
@@ -155,14 +154,14 @@ const MarketplacePage: React.FC = () => {
 
           {/* Marketplace Sections */}
           <section id="sections" className="py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-center mb-16"
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4">
                   Marketplace Categories
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -170,14 +169,14 @@ const MarketplacePage: React.FC = () => {
                 </p>
               </motion.div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
                 {sections.map((section, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 2 0 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow duration-300"
+                    transition={{ duration: 0.6, delay: inde x * 0.1 }}
+                    className="bg-white rounded-xl shadow-lg p-8 text-center hover: shado w-xl transition-shadow duration-300"
                   >
                     <div className="text-blue-600 mb-4 flex justify-center">
                       {section.icon}
@@ -195,9 +194,9 @@ const MarketplacePage: React.FC = () => {
                       href={section.href}
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-blue-700 transition-colors"
+                      className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover: b g-blue-700 transition-colors"
                     >
-                      <ArrowRight className="w-5 h-5" />
+                      <ArrowRight className="w-5 h-5"  />
                       Explore
                     </motion.a>
                   </motion.div>
@@ -208,14 +207,14 @@ const MarketplacePage: React.FC = () => {
 
           {/* Featured Products */}
           <section className="bg-gray-50 py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="text-center mb-16"
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4">
                   Featured Products
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -223,21 +222,21 @@ const MarketplacePage: React.FC = () => {
                 </p>
               </motion.div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md: gri d-cols-3 gap-8">
                 {featuredProducts.map((product, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 2 0 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300"
+                    transition={{ duration: 0.6, delay: inde x * 0.1 }}
+                    className="bg-white rounded-xl shadow-lg p-8 hover: shado w-xl transition-shadow duration-300"
                   >
                     <div className="flex items-center justify-between mb-4">
                       <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
                         {product.category}
                       </span>
                       <div className="flex items-center gap-1">
-                        <Star className="w-4 h-4 text-yellow-500 fill-current" />
+                        <Star className="w-4 h-4 text-yellow-500 fill-current"  />
                         <span className="text-sm text-gray-600">{product.rating}</span>
                       </div>
                     </div>
@@ -262,9 +261,9 @@ const MarketplacePage: React.FC = () => {
                     <motion.button
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
-                      className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-blue-700 transition-colors"
+                      className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover: b g-blue-700 transition-colors"
                     >
-                      <ArrowRight className="w-5 h-5" />
+                      <ArrowRight className="w-5 h-5"  />
                       View Details
                     </motion.button>
                   </motion.div>
@@ -275,14 +274,14 @@ const MarketplacePage: React.FC = () => {
 
           {/* Benefits Section */}
           <section className="py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="text-center mb-16"
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4">
                   Why Choose Our Marketplace?
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -290,14 +289,14 @@ const MarketplacePage: React.FC = () => {
                 </p>
               </motion.div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
                 {benefits.map((benefit, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 2 0 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center"
+                    transition={{ duration: 0.6, delay: inde x * 0.1 }}
+                    className="bg-white rounded-xl p-8 shadow-lg hover: shado w-xl transition-shadow duration-300 text-center"
                   >
                     <div className="text-blue-600 mb-4 flex justify-center">
                       {benefit.icon}
@@ -316,27 +315,27 @@ const MarketplacePage: React.FC = () => {
 
           {/* CTA Section */}
           <section className="bg-gray-50 py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="text-center"
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-6">
                   Ready to Get Started?
                 </h2>
                 <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
                   Join our marketplace and discover the tools and services you need to grow your business.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm: fle x-row gap-4 justify-center">
                   <motion.a
                     href="/contact"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
                   >
-                    <ArrowRight className="w-5 h-5" />
+                    <ArrowRight className="w-5 h-5"  />
                     Get Started Today
                   </motion.a>
                   <motion.a
@@ -345,7 +344,7 @@ const MarketplacePage: React.FC = () => {
                     whileTap={{ scale: 0.95 }}
                     className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
                   >
-                    <ArrowRight className="w-5 h-5" />
+                    <ArrowRight className="w-5 h-5"  />
                     Call Us: +1 302 464 0950
                   </motion.a>
                 </div>

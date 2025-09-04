@@ -11,7 +11,7 @@ interface FormData {
   message: string;
 }
 
-const ContactForm: React.FC = () => {
+const ContactForm: Reac t.FC = () => {
 
   const [formData, setFormData] = useState<FormData>({
 
@@ -37,7 +37,7 @@ const ContactForm: React.FC = () => {
 
   const validateForm = (): boolean => {
 
-    const newErrors: Partial<FormData> = {};
+    const newErrors: Partia l<FormData> = {};
 
     if (!formData.name.trim()) {
 
@@ -61,7 +61,7 @@ const ContactForm: React.FC = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: Reac t.FormEvent) => {
 
     e.preventDefault();
 
@@ -93,7 +93,7 @@ const ContactForm: React.FC = () => {
   }
 
   const handleChange = (
-    e: React.ChangeEvent<
+    e: Reac t.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >
   ) => {
@@ -116,7 +116,7 @@ const ContactForm: React.FC = () => {
         animate={{ opacity: 1, scale: 1 }}
         className="bg-green-50 border border-green-200 rounded-xl p-8 text-center"
       >
-        <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
+        <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4"  />
         <h3 className="text-2xl font-bold text-green-800 mb-2">
           Message Sent!
         </h3>
@@ -137,33 +137,33 @@ const ContactForm: React.FC = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+      <div className="grid grid-cols-1 lg: gri d-cols-2 gap-8 mb-8">
         <div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
             Contact Information
           </h3>
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <Mail className="w-5 h-5 text-blue-600" />
+              <Mail className="w-5 h-5 text-blue-600"  />
               <div>
                 <p className="font-medium text-gray-900">Email</p>
                 <p className="text-gray-600">kleber@ziontechgroup.com</p>
               </div>
             </div>
             <div className="flex items-center space-x-3">
-              <Phone className="w-5 h-5 text-blue-600" />
+              <Phone className="w-5 h-5 text-blue-600"  />
               <div>
                 <p className="font-medium text-gray-900">Phone</p>
                 <p className="text-gray-600">+1 (302) 464-0950</p>
               </div>
             </div>
             <div className="flex items-center space-x-3">
-              <MapPin className="w-5 h-5 text-blue-600" />
+              <MapPin className="w-5 h-5 text-blue-600"  />
               <div>
                 <p className="font-medium text-gray-900">Address</p>
                 <p className="text-gray-600">
                   364 E Main St STE 1008
-                  <br />
+                  <br  />
                   Middletown, DE 19709
                 </p>
               </div>
@@ -172,7 +172,7 @@ const ContactForm: React.FC = () => {
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md: gri d-cols-2 gap-4">
             <div>
               <label
                 htmlFor="name"
@@ -180,18 +180,17 @@ const ContactForm: React.FC = () => {
               >
                 Full Name *
               </label>
-              <input
-                type="text"
+              <input type="text"
                 id="name"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                className={`w-full px-4 py-3 border rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent ${
 
                   errors.name ? 'border-red-500' : 'border-gray-300'
                 }`}
                 placeholder="John Doe"
-              />
+               />
               {errors.name && (
                 <p className="text-red-500 text-sm mt-1">{errors.name}</p>
               )}
@@ -204,25 +203,24 @@ const ContactForm: React.FC = () => {
               >
                 Email Address *
               </label>
-              <input
-                type="email"
+              <input type="email"
                 id="email"
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                className={`w-full px-4 py-3 border rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent ${
 
                   errors.email ? 'border-red-500' : 'border-gray-300'
                 }`}
                 placeholder="john@company.com"
-              />
+               />
               {errors.email && (
                 <p className="text-red-500 text-sm mt-1">{errors.email}</p>
               )}
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md: gri d-cols-2 gap-4">
             <div>
               <label
                 htmlFor="company"
@@ -230,15 +228,14 @@ const ContactForm: React.FC = () => {
               >
                 Company
               </label>
-              <input
-                type="text"
+              <input type="text"
                 id="company"
                 name="company"
                 value={formData.company}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent"
                 placeholder="Your Company"
-              />
+               />
             </div>
 
             <div>
@@ -253,7 +250,7 @@ const ContactForm: React.FC = () => {
                 name="service"
                 value={formData.service}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent"
               >
                 <option value="">Select a service</option>
                 {services.map(service => (
@@ -272,18 +269,17 @@ const ContactForm: React.FC = () => {
             >
               Message *
             </label>
-            <textarea
-              id="message"
+            <textarea id="message"
               name="message"
               value={formData.message}
               onChange={handleChange}
               rows={5}
-              className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+              className={`w-full px-4 py-3 border rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent ${
 
                 errors.message ? 'border-red-500' : 'border-gray-300'
               }`}
               placeholder="Tell us about your project and how we can help..."
-            />
+             />
             {errors.message && (
               <p className="text-red-500 text-sm mt-1">{errors.message}</p>
             )}
@@ -294,7 +290,7 @@ const ContactForm: React.FC = () => {
             disabled={isSubmitting}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className={`w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 flex items-center justify-center space-x-2 ${
+            className={`w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover: fro m-blue-700 hover: t o-purple-700 transition-all duration-200 flex items-center justify-center space-x-2 ${
 
               isSubmitting ? 'opacity-50 cursor-not-allowed' : ''
             }`}
@@ -306,7 +302,7 @@ const ContactForm: React.FC = () => {
               </>
             ) : (
               <>
-                <Send className="w-5 h-5" />
+                <Send className="w-5 h-5"  />
                 <span>Send Message</span>
               </>
             )}

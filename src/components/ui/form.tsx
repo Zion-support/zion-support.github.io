@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface FormProps extends React.FormHTMLAttributes<HTMLFormElement> {
-  children: React.ReactNode;
+  children: Reac t.ReactNode;
 }
 
 export function Form({ children, ...props }: FormProps) {
@@ -13,7 +13,7 @@ export function Form({ children, ...props }: FormProps) {
 }
 
 interface FormItemProps {
-  children: React.ReactNode;
+  children: Reac t.ReactNode;
   className?: string;
 }
 
@@ -26,7 +26,7 @@ export function FormItem({ children, className = '' }: FormItemProps) {
 }
 
 interface FormLabelProps {
-  children: React.ReactNode;
+  children: Reac t.ReactNode;
   className?: string;
   htmlFor?: string;
 }
@@ -43,7 +43,7 @@ export function FormLabel({ children, className = '', htmlFor }: FormLabelProps)
 }
 
 interface FormFieldProps {
-  children: React.ReactNode;
+  children: Reac t.ReactNode;
   className?: string;
 }
 

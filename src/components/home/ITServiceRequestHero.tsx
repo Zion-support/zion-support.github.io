@@ -3,7 +3,7 @@
   const [location, setLocation] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   
-  const handleSubmit = async e: React.FormEvent {;    e.preventDefault();
+  const handleSubmit = async e: Reac t.FormEvent {;    e.preventDefault();
     if(location.trim()) {
 
       setIsSubmitting(true);
@@ -14,7 +14,7 @@
 
   const containerVariants = {
   hidden: { opacity: 0,
-  y: 20
+  y: 2 0
 
 },
     visible: {
@@ -29,7 +29,7 @@
 
   const itemVariants = {
   hidden: { opacity: 0,
-  y: 20
+  y: 2 0
 
 },
     visible: {
@@ -39,10 +39,9 @@
     };
   };
 
-  const features = [{ icon: Clock, text: "24/7 Availability", color: "text-zion-cyan" },
-    { icon: Globe, text: "Global Coverage", color: "text-zion-purple" },
-    { icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light" },;
-    { icon: Zap, text: "Fast Response", color: "text-zion-purple-light" };
+  const features = [{ icon: Cloc k, text: "24/7 Availability", color: "text-zion-cyan" },
+    { icon: Glob e, text: "Global Coverage", color: "text-zion-purple" },
+    { icon: Shiel d, text: "Certified Technicians", color: "text-zion-cyan-light" }, { icon: Za p, text: "Fast Response", color: "text-zion-purple-light" };
   ];
 
 import React, { useState } from 'react';
@@ -50,9 +49,9 @@ import { motion  } from 'framer-motion';
 import { Link  } from 'react-router-dom';
 
 ,"
-    { icon: Globe, text: "Global Coverage", color: "text-zion-purple" },"
-    { icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light" },;"
-    { icon: Zap, text: "Fast Response", color: "text-zion-purple-light" };
+    { icon: Glob e, text: "Global Coverage", color: "text-zion-purple" },"
+    { icon: Shiel d, text: "Certified Technicians", color: "text-zion-cyan-light" },;"
+    { icon: Za p, text: "Fast Response", color: "text-zion-purple-light" };
   ];
 
 export function ITServiceRequestHero() {
@@ -69,20 +68,20 @@ export function ITServiceRequestHero() {
         variants={containerVariants}"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true }}
+        viewport={{ once: tru e }}
 "
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg: gri d-cols-2 gap-16 items-center">
           {/* Left content */}"
           <motion.div variants={itemVariants} className="text-white">"
             <div className="flex items-center gap-3 mb-6">"
               <div className="p-2 bg-zion-cyan/20 rounded-lg">"
-                <Zap className="w-6 h-6 text-zion-cyan"  />
+                <Zap className="w-6 h-6 text-zion-cyan"   />
               </div>"              <span className="text-zion-cyan font-semibold text-sm uppercase tracking-wider">
                 Global IT Services
               </span>
             </div>
 "
-            <GradientHeading className="mb-6 text-4xl md:text-5xl lg:text-6xl leading-tight">
+            <GradientHeading className="mb-6 text-4xl md: tex t-5xl lg: tex t-6xl leading-tight">
               24/7 Global IT Onsite Services
             </GradientHeading>
 "
@@ -111,16 +110,16 @@ export function ITServiceRequestHero() {
               </div>
             </div>
 "
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm: fle x-row gap-4">
               <Button'
                 onClick={() => document.getElementById('service-form')?.scrollIntoView({ behavior: 'smooth' })}"
-                className="bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-dark hover:to-zion-blue-dark text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                className="bg-gradient-to-r from-zion-cyan to-zion-blue hover: fro m-zion-cyan-dark hover: t o-zion-blue-dark text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover: shado w-xl transition-all duration-300"
 
                 Request Service Now"
-                <MapPin className="w-5 h-5 ml-2"  />              </Button>
+                <MapPin className="w-5 h-5 ml-2"   />              </Button>
               <Button"
                 variant="outline"
-                className="border-zion-cyan/30 text-zion-cyan hover:bg-zion-cyan/10 px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300"
+                className="border-zion-cyan/30 text-zion-cyan hover: b g-zion-cyan/10 px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300"
 
                 Learn More
               </Link>
@@ -131,7 +130,7 @@ export function ITServiceRequestHero() {
             initial = {
 
   { opacity: 0,
-  x: 30
+  x: 3 0
 
 }}
             whileInView = {
@@ -140,7 +139,7 @@ export function ITServiceRequestHero() {
   x: 0
 
 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
             transition = {
 
   { duration: 0.8,
@@ -177,7 +176,7 @@ export function ITServiceRequestHero() {
                 </div>
                 <div>"
                   <p className="text-gray-300 text-sm">Address</p>"
-                  <p className="text-white font-semibold text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                  <p className="text-white font-semibold text-sm">364 E Main St STE 1008<br  />Middletown DE 19709</p>
                 </div>
               </div>
 

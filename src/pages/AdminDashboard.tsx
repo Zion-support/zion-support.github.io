@@ -4,7 +4,7 @@ import {SEO } from '@/components/SEO';
 ,"});,"})
 export default function AdminDashboard() {return (
     <div className="min-h-screen bg-white">
-      <SEO title="AdminDashboard - Zion Tech Group" description="Professional AdminDashboard services by Zion Tech Group" />
+      <SEO title="AdminDashboard - Zion Tech Group" description="Professional AdminDashboard services by Zion Tech Group"  />
       <div className="container mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold text-white mb-8">AdminDashboard</h1>
         <p className="text-gray-300 text-lg">

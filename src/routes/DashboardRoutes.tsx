@@ -13,47 +13,47 @@ const ProjectMilestones = lazy(() => import('../pages/ProjectMilestones'));
 const ProjectDetails = lazy(() => import('../pages/ProjectDetails'));
 const ProjectRoom = lazy(() => import('../pages/ProjectRoom'));
 
-const DashboardRoutes: React.FC = () => {
-  return(<Suspense fallback={<LoadingSpinner />}>
+const DashboardRoutes: Reac t.FC = () => {
+  return (<Suspense fallback={<LoadingSpinner  />}>
       <Routes>
         <Route path="/dashboard" element={
           <ProtectedRoute>
-            <Dashboard />
+            <Dashboard  />
           </ProtectedRoute>
         } />
         <Route path="/client-dashboard" element={
           <ProtectedRoute>
-            <ClientDashboard />
+            <ClientDashboard  />
           </ProtectedRoute>
         } />
         <Route path="/talent-dashboard" element={
           <ProtectedRoute>
-            <TalentDashboard />
+            <TalentDashboard  />
           </ProtectedRoute>
         } />
         <Route path="/creator-dashboard" element={
           <ProtectedRoute>
-            <CreatorDashboard />
+            <CreatorDashboard  />
           </ProtectedRoute>
         } />
         <Route path="/analytics" element={
           <ProtectedRoute>
-            <Analytics />
+            <Analytics  />
           </ProtectedRoute>
         } />
         <Route path="/project-milestones" element={
           <ProtectedRoute>
-            <ProjectMilestones />
+            <ProjectMilestones  />
           </ProtectedRoute>
         } />
         <Route path="/project-details" element={
           <ProtectedRoute>
-            <ProjectDetails />
+            <ProjectDetails  />
           </ProtectedRoute>
         } />
         <Route path="/project-room" element={
           <ProtectedRoute>
-            <ProjectRoom />
+            <ProjectRoom  />
           </ProtectedRoute>
         } />
       </Routes>

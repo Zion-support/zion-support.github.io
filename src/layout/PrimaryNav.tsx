@@ -8,7 +8,7 @@
 
   const [isDark, setIsDark] = useState<typeof false>(false);
 
-  const toggleTheme = (...args: unknown[]): unknown => {;    setIsDark(!isDark);
+  const toggleTheme = (...args: unknow n[]): unknown => {;    setIsDark(!isDark);
     // Add theme switching logic here
   };
 
@@ -20,11 +20,11 @@
         
         data-testid="header"
 "
-        <div className="container flex flex-wrap items-center justify-between gap-2 min-h-16 px-4 sm:px-6">
+        <div className="container flex flex-wrap items-center justify-between gap-2 min-h-16 px-4 sm: p x-6">
           <Logo  />
 
           {/* Navigation - hidden on mobile, shown on desktop */}"
-          <div className="hidden md:block order-1 flex-shrink-0">
+          <div className="hidden md: block order-1 flex-shrink-0">
             <ResponsiveNavigation  />
           </div>
 
@@ -59,9 +59,9 @@
 
                     window.gtag('event',search_suggestion_click', {
 
-                      search_term: sugg.text,
-                      suggestion_type: sugg.type,
-                      suggestion_id: sugg.id || sugg.slug
+                      search_term: sug g.text,
+                      suggestion_type: sug g.type,
+                      suggestion_id: sug g.id || sugg.slug
                     })}
                 }}
                 searchSuggestions = {suggestions}
@@ -82,7 +82,7 @@
 
 }
                   >"
-                    <ShoppingCart aria-hidden="true" className="h-5 w-5 text-foreground hover:text-primary"  />
+                    <ShoppingCart aria-hidden="true" className="h-5 w-5 text-foreground hover: tex t-primary"   />
                     {cartCount > 0 && ("                      <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center">
                         {cartCount}
                       </span>
@@ -109,14 +109,14 @@
                 <>
                   <Link"
                     href="/auth/login"
-                    className="text-sm hover:text-primary whitespace-nowrap"
+                    className="text-sm hover: tex t-primary whitespace-nowrap"
                     data-testid="login-link"
 
                     {t('auth.login')}
                   </Link>
                   <Link"
                     href="/signup"
-                    className="text-sm hover:text-primary whitespace-nowrap"
+                    className="text-sm hover: tex t-primary whitespace-nowrap"
 
                     {t('auth.signup')}
                   </Link>
@@ -129,9 +129,9 @@
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}"
-            className="lg:hidden text-white hover:text-cyan-400 transition-colors duration-200"
+            className="lg: hidden text-white hover: tex t-cyan-400 transition-colors duration-200"
           >"
-            {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}          </button>
+            {isOpen ? <X className="w-6 h-6"   /> : <Menu className="w-6 h-6"   />}          </button>
         </div>
 
         {/* Mobile Navigation */}
@@ -157,7 +157,7 @@
 
 }}
               transition={{ duration: 0.3 }}"
-              className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-white/10"
+              className="lg: hidden bg-slate-900/95 backdrop-blur-md border-t border-white/10"
             >"
               <div className="px-4 py-6 space-y-4">
                 {services.map((category, index) => (
@@ -166,11 +166,11 @@
                       {category.category}
                     </h3>"
                     <div className="space-y-2 ml-4">
-                      {category.items.map((service: unknown, serviceIndex: unknown 
+                      {category.items.map((service: unknow n, serviceIndex: unknow n 
                         <Link
                           key={serviceIndex}
                           to={service.path}"
-                          className="block text-gray-300 hover:text-white transition-colors duration-200"
+                          className="block text-gray-300 hover: tex t-white transition-colors duration-200"
                           onClick={( setIsOpen(false)}
                         >
                           {service.name}
@@ -182,25 +182,25 @@
 
                 <div className="pt-4 border-t border-white/10 space-y-2">
                   <Link                    to="/solutions"
-                    className="block text-gray-300 hover:text-white transition-colors duration-200"
+                    className="block text-gray-300 hover: tex t-white transition-colors duration-200"
                     onClick={: unknown setIsOpen(false)}
                   >
                     Solutions
                   </Link>
                   <Link                    to="/about"
-                    className="block text-gray-300 hover:text-white transition-colors duration-200"
+                    className="block text-gray-300 hover: tex t-white transition-colors duration-200"
                     onClick={: unknown setIsOpen(false)}
                   >
                     About
                   </Link>
                   <Link                    to="/blog"
-                    className="block text-gray-300 hover:text-white transition-colors duration-200"
+                    className="block text-gray-300 hover: tex t-white transition-colors duration-200"
                     onClick={: unknown setIsOpen(false)}
                   >
                     Blog
                   </Link>
                   <Link                    to="/contact"
-                    className="block text-gray-300 hover:text-white transition-colors duration-200"
+                    className="block text-gray-300 hover: tex t-white transition-colors duration-200"
                     onClick={: unknown setIsOpen(false)}
                   >
                     Contact

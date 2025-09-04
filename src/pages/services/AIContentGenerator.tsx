@@ -24,27 +24,27 @@ export default function AIContentGenerator
 export { AIContentGenerator }(...args[]):  {
   const features = [
     {
-      icon: PenTool,
+      icon: PenToo l,
       title: "Multi-format Content",
       description: "Create blog posts, articles, social media content, emails, and marketing copy with AI assistance."
     },
     {
-      icon: Zap,
+      icon: Za p,
       title: "Instant Generation",
       description: "Generate content in seconds with customizable templates and intelligent suggestions."
     },
     {
-      icon: BarChart3,
+      icon: BarChart 3,
       title: "SEO Optimization",
       description: "AI-powered SEO recommendations and keyword optimization for better search rankings."
     },
     {
-      icon: Smartphone,
+      icon: Smartphon e,
       title: "Mobile-First Design",
       description: "Create and edit content on  device with our responsive platform and mobile apps."
     },
     {
-      icon: Globe,
+      icon: Glob e,
       title: "Multi-language Support",
       description: "Generate content in over 50 languages with native-level quality and cultural adaptation.";
     };
@@ -52,32 +52,32 @@ export { AIContentGenerator }(...args[]):  {
 
   const contentTypes = [
     {
-      icon: Edit3,
+      icon: Edit 3,
       title: "Blog Posts & Articles",
       description: "Long-form content with research, citations, and engaging narratives"
     },
     {
-      icon: Type,
+      icon: Typ e,
       title: "Social Media Content",
       description: "Platform-optimized posts for Twitter, LinkedIn, Instagram, and Facebook"
     },
     {
-      icon: FileText,
+      icon: FileTex t,
       title: "Marketing Copy",
       description: "Compelling ad copy, landing pages, and promotional materials"
     },
     {
-      icon: Mail,
+      icon: Mai l,
       title: "Email Campaigns",
       description: "Newsletters, drip campaigns, and personalized email content"
     },
     {
-      icon: Image,
+      icon: Imag e,
       title: 'AI Image Generation',
       description: 'Create stunning visuals, graphics, and illustrations using advanced AI image generation models'
     },
     {
-      icon: Video,
+      icon: Vide o,
       title: "Video Scripts",
       description: "Scripts for YouTube, TikTok, and marketing videos";
     };
@@ -97,7 +97,7 @@ export { AIContentGenerator }(...args[]):  {
         "Mobile app access",
         "Email support"
       ],;
-      popular: false
+      popular: fals e
     },
     {
       name: "Content Professional",
@@ -113,15 +113,14 @@ export { AIContentGenerator }(...args[]):  {
         "API access",
         "Team collaboration"
       ],;
-      popular: true
+      popular: tru e
     },
     {
-      icon: Target,
+      icon: Targe t,
       title: 'Audience Targeting',
       description: 'Content tailored to specific demographics, industries, and customer personas';
-    },;
-    {;
-      icon: BarChart3,;
+    }, {;
+      icon: BarChart 3,;
       title: 'Performance Analytics',;
       description: 'Track content performance with AI-powered insights and optimization recommendations';
     };
@@ -151,7 +150,7 @@ export { AIContentGenerator }(...args[]):  {
         'Basic analytics'
       ],
       cta: 'Start Free Trial',
-      popular: false
+      popular: fals e
     },
     {
       name: 'Professional',
@@ -169,7 +168,7 @@ export { AIContentGenerator }(...args[]):  {
         'Team collaboration tools'
       ],
       cta: 'Start Free Trial',
-      popular: true
+      popular: tru e
     },
     {
       name: 'Enterprise',
@@ -187,17 +186,16 @@ export { AIContentGenerator }(...args[]):  {
         'Custom integrations';
       ],;
       cta: 'Contact Sales',;
-      popular: false;
+      popular: fals e;
     };
   ];
 
   return (
     <>
-      <SEO 
-        title = "AI Content Generator - Create Engaging Content with AI"
+      <SEO title = "AI Content Generator - Create Engaging Content with AI"
         description="Generate high-quality, SEO-optimized content 10x faster with AI. Create articles, images, videos, and more for blogs, social media, and marketing campaigns."
         canonical="/services/ai-content-generator"
-      />
+       />
 
       <div className="min-h-screen bg-futuristic">
         {/* Hero Section */}
@@ -207,7 +205,7 @@ export { AIContentGenerator }(...args[]):  {
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -228,18 +226,18 @@ export { AIContentGenerator }(...args[]):  {
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto"
 
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-500 to-red-600 bg-clip-text text-transparent">
+              <h1 className="text-5xl md: tex t-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-500 to-red-600 bg-clip-text text-transparent">
                 AI Content Generator
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8">
+              <p className="text-xl md: tex t-2xl text-gray-300 mb-8">
                 Create engaging, SEO-optimized content 10x faster with artificial intelligence. 
                 Generate articles, images, videos, and more for  platform.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
+              <div className="flex flex-col sm: fle x-row gap-4 justify-center">
+                <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg font-semibold hover: fro m-purple-600 hover: t o-pink-700 transition-all duration-300 transform hover: scal e-105">
                   Start Free Trial
                 </button>
-                  <button className="px-8 py-4 border-2 border-purple-500 text-purple-400 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300">
+                  <button className="px-8 py-4 border-2 border-purple-500 text-purple-400 rounded-lg font-semibold hover: b g-purple-500 hover: tex t-white transition-all duration-300">
                   Watch Demo
                 </button>
               </div>
@@ -253,7 +251,7 @@ export { AIContentGenerator }(...args[]):  {
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -274,7 +272,7 @@ export { AIContentGenerator }(...args[]):  {
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
 
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+              <h2 className="text-4xl md: tex t-5xl font-bold mb-6 text-white">
                 AI-Powered Content Creation
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -283,13 +281,13 @@ export { AIContentGenerator }(...args[]):  {
               </p>
             </div>
             
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md: gri d-cols-2 lg: gri d-cols-3 gap-8">
               {features.map((feature, index)  => (
                 <motion.div
                   key={index}
                   initial = {
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -309,7 +307,7 @@ export { AIContentGenerator }(...args[]):  {
 }}
                   transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -317,9 +315,9 @@ export { AIContentGenerator }(...args[]):  {
 
 
 }}
-                  className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300 group"
+                  className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover: borde r-purple-500/50 transition-all duration-300 group"
 
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg mb-4 group-hover: scal e-110 transition-transform duration-300">
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -342,13 +340,13 @@ export { AIContentGenerator }(...args[]):  {
               </p>
             </div>
             
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md: gri d-cols-2 lg: gri d-cols-3 gap-8">
               {contentTypes.map((type, index)  => (
                 <motion.div
                   key={index}
                   initial = {
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 }}
                   whileInView = {
@@ -358,10 +356,10 @@ export { AIContentGenerator }(...args[]):  {
 }}
                   transition = {
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 }}
-                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300"
+                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover: borde r-purple-500 transition-all duration-300"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">
                     <type.icon className="w-6 h-6 text-white" />
@@ -386,13 +384,13 @@ export { AIContentGenerator }(...args[]):  {
               </p>
             </div>
             
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md: gri d-cols-2 lg: gri d-cols-3 gap-8">
               {useCases.map((useCase, index)  => (
                 <motion.div
                   key={index}
                   initial = {
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 }}
                   whileInView = {
@@ -402,10 +400,10 @@ export { AIContentGenerator }(...args[]):  {
 }}
                   transition = {
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 }}
-                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-pink-500 transition-all duration-300"
+                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover: borde r-pink-500 transition-all duration-300"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
                     <useCase.icon className="w-6 h-6 text-white" />
@@ -424,7 +422,7 @@ export { AIContentGenerator }(...args[]):  {
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -445,7 +443,7 @@ export { AIContentGenerator }(...args[]):  {
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
 
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+              <h2 className="text-4xl md: tex t-5xl font-bold mb-6 text-white">
                 Proven Results
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -454,7 +452,7 @@ export { AIContentGenerator }(...args[]):  {
               </p>
             </div>
             
-            <div className="grid md: grid-cols-2 gap-8">
+            <div className="grid md: gri d-cols-2 gap-8">
               {benefits.map((benefit, index)  => (
                 <motion.div
                   key={index}
@@ -480,7 +478,7 @@ export { AIContentGenerator }(...args[]):  {
 }}
                   transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -490,7 +488,7 @@ export { AIContentGenerator }(...args[]):  {
 }}
                   className="flex items-start space-x-3"
 
-                  <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />
+                  <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0"  />
                   <span className="text-gray-300">{benefit}</span>
                 </motion.div>;
               ))}
@@ -504,7 +502,7 @@ export { AIContentGenerator }(...args[]):  {
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -525,7 +523,7 @@ export { AIContentGenerator }(...args[]):  {
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
 
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+              <h2 className="text-4xl md: tex t-5xl font-bold mb-6 text-white">
                 Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -534,13 +532,13 @@ export { AIContentGenerator }(...args[]):  {
               </p>
             </div>
             
-            <div className="grid md: grid-cols-3 gap-8">
+            <div className="grid md: gri d-cols-3 gap-8">
               {pricingPlans.map((plan, index)  => (
                 <motion.div
                   key={index}
                   initial = {
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -560,7 +558,7 @@ export { AIContentGenerator }(...args[]):  {
 }}
                   transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -594,7 +592,7 @@ export { AIContentGenerator }(...args[]):  {
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center space-x-3">
-                        <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0"  />
                         <span className="text-gray-300">{feature}</span>
                       </li>
                     ))}
@@ -602,8 +600,8 @@ export { AIContentGenerator }(...args[]):  {
 
                   <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white'
-                      : 'border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white'
+                      ? 'bg-gradient-to-r from-purple-500 to-pink-600 hover: fro m-purple-600 hover: t o-pink-700 text-white'
+                      : 'border-2 border-purple-500 text-purple-400 hover: b g-purple-500 hover: tex t-white'
                   }`}>
                     {plan.cta}
                   </button>
@@ -619,7 +617,7 @@ export { AIContentGenerator }(...args[]):  {
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -640,18 +638,18 @@ export { AIContentGenerator }(...args[]):  {
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto"
 
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+              <h2 className="text-4xl md: tex t-5xl font-bold mb-6 text-white">
                 Ready to Revolutionize Your Content Creation?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Join thousands of creators using AI to produce engaging content
                 faster, smarter, and more effectively than ever before.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
+              <div className="flex flex-col sm: fle x-row gap-4 justify-center">
+                <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg font-semibold hover: fro m-purple-600 hover: t o-pink-700 transition-all duration-300 transform hover: scal e-105">
                   Start Free Trial
                 </button>
-                <button className="px-8 py-4 border-2 border-purple-500 text-purple-400 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300">
+                <button className="px-8 py-4 border-2 border-purple-500 text-purple-400 rounded-lg font-semibold hover: b g-purple-500 hover: tex t-white transition-all duration-300">
                   Schedule Demo
                 </button>
               </div>

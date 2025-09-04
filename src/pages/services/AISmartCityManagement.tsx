@@ -10,37 +10,37 @@ import {
 const AISmartCityManagement = () => {
   const features = [
     {
-      icon: Car,
+      icon: Ca r,
       title: 'Intelligent Traffic Management',
       description: 'AI-powered traffic optimization reducing congestion by up to 40% and emergency response times by 60%.',
       benefits: ['Real-time traffic optimization', 'Predictive congestion analysis', 'Emergency vehicle priority routing']
     },
     {
-      icon: Zap,
+      icon: Za p,
       title: 'Smart Energy Grid',
       description: 'Optimize city-wide energy consumption with predictive analytics and renewable energy integration.',
       benefits: ['30% energy cost reduction', 'Renewable energy optimization', 'Predictive maintenance']
     },
     {
-      icon: Leaf,
+      icon: Lea f,
       title: 'Environmental Monitoring',
       description: 'Real-time air quality, noise, and environmental data with predictive pollution modeling.',
       benefits: ['Real-time pollution tracking', 'Health impact predictions', 'Environmental compliance']
     },
     {
-      icon: Shield,
+      icon: Shiel d,
       title: 'Public Safety AI',
       description: 'Intelligent surveillance and predictive policing to enhance public safety and security.',
       benefits: ['Crime prediction models', 'Automated incident detection', 'Emergency response optimization']
     },
     {
-      icon: Building,
+      icon: Buildin g,
       title: 'Smart Infrastructure',
       description: 'IoT-enabled infrastructure monitoring with predictive maintenance and optimization.',
       benefits: ['Predictive maintenance', 'Infrastructure health monitoring', 'Cost optimization']
     },
     {
-      icon: Users,
+      icon: User s,
       title: 'Citizen Engagement Platform',
       description: 'AI-powered citizen services with chatbots, service requests, and satisfaction tracking.',
       benefits: ['24/7 citizen services', 'Automated service routing', 'Satisfaction analytics']
@@ -62,7 +62,7 @@ const AISmartCityManagement = () => {
         'Email support',
         '99.5% uptime SLA'
       ],
-      popular: false
+      popular: fals e
     },
     {
       name: 'Smart City Pro',
@@ -79,7 +79,7 @@ const AISmartCityManagement = () => {
         'Priority support',
         '99.9% uptime SLA'
       ],
-      popular: true
+      popular: tru e
     },
     {
       name: 'Metropolis Enterprise',
@@ -98,7 +98,7 @@ const AISmartCityManagement = () => {
         'Government compliance',
         'Multi-language support'
       ],
-      popular: false
+      popular: fals e
     }
   ];
 
@@ -120,10 +120,10 @@ const AISmartCityManagement = () => {
   ];
 
   const stats = [
-    { label: 'Cities Transformed', value: '150+', icon: Building },
-    { label: 'Average Traffic Reduction', value: '40%', icon: Car },
-    { label: 'Energy Savings', value: '35%', icon: Zap },
-    { label: 'Emergency Response Improvement', value: '60%', icon: Shield }
+    { label: 'Cities Transformed', value: '150+', icon: Buildin g },
+    { label: 'Average Traffic Reduction', value: '40%', icon: Ca r },
+    { label: 'Energy Savings', value: '35%', icon: Za p },
+    { label: 'Emergency Response Improvement', value: '60%', icon: Shiel d }
   ];
 
   return (
@@ -132,51 +132,51 @@ const AISmartCityManagement = () => {
       <section className="pt-24 pb-20 px-4">
         <div className="container mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             <div className="flex justify-center mb-8">
               <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-3xl flex items-center justify-center">
-                <Building className="w-10 h-10 text-white" />
+                <Building className="w-10 h-10 text-white"  />
               </div>
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+            <h1 className="text-5xl md: tex t-7xl font-bold text-white mb-6">
               AI Smart City
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
                 {' '}Management
               </span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
+            <p className="text-xl md: tex t-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
               Transform your city into an intelligent, sustainable, and efficient urban environment 
               with our comprehensive AI-powered smart city management platform.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center mb-16">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 transform hover:-translate-y-1 shadow-lg hover:shadow-xl"
+                className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: fro m-blue-600 hover: t o-cyan-600 transition-all duration-200 transform hover:-translate-y-1 shadow-lg hover: shado w-xl"
               >
                 Transform Your City
               </Link>
               <a
                 href="tel:+13024640950"
-                className="border-2 border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-500 hover:text-white transition-all duration-200"
+                className="border-2 border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover: b g-blue-500 hover: tex t-white transition-all duration-200"
               >
                 Schedule Demo
               </a>
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-2 md: gri d-cols-4 gap-8">
               {stats.map((stat, index) => (
                 <motion.div
                   key={stat.label}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 2 0 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  transition={{ duration: 0.5, delay: inde x * 0.1 }}
                   className="text-center"
                 >
                   <div className="flex justify-center mb-3">
@@ -197,13 +197,13 @@ const AISmartCityManagement = () => {
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
               Comprehensive Smart City Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -211,15 +211,15 @@ const AISmartCityManagement = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md: gri d-cols-2 lg: gri d-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-blue-500/50 transition-all duration-300"
+                viewport={{ once: tru e }}
+                transition={{ duration: 0.5, delay: inde x * 0.1 }}
+                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover: borde r-blue-500/50 transition-all duration-300"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-xl flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-blue-400" />
@@ -231,7 +231,7 @@ const AISmartCityManagement = () => {
                 <div className="space-y-2">
                   {feature.benefits.map((benefit, idx) => (
                     <div key={idx} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0"  />
                       {benefit}
                     </div>
                   ))}
@@ -246,13 +246,13 @@ const AISmartCityManagement = () => {
       <section className="py-20 px-4 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
         <div className="container mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
               Real-World Success Stories
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -260,14 +260,14 @@ const AISmartCityManagement = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md: gri d-cols-2 gap-8">
             {caseStudies.map((study, index) => (
               <motion.div
                 key={study.city}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: tru e }}
+                transition={{ duration: 0.5, delay: inde x * 0.1 }}
                 className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20"
               >
                 <div className="flex items-center justify-between mb-4">
@@ -286,7 +286,7 @@ const AISmartCityManagement = () => {
                 <div className="space-y-2">
                   {study.metrics.map((metric, idx) => (
                     <div key={idx} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0"  />
                       {metric}
                     </div>
                   ))}
@@ -301,13 +301,13 @@ const AISmartCityManagement = () => {
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
               Scalable Pricing Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -315,18 +315,18 @@ const AISmartCityManagement = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md: gri d-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <motion.div
                 key={plan.name}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: tru e }}
+                transition={{ duration: 0.5, delay: inde x * 0.1 }}
                 className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border transition-all duration-300 ${
                   plan.popular 
                     ? 'border-blue-500 scale-105' 
-                    : 'border-white/20 hover:border-blue-500/50'
+                    : 'border-white/20 hover: borde r-blue-500/50'
                 }`}
               >
                 {plan.popular && (
@@ -349,7 +349,7 @@ const AISmartCityManagement = () => {
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />
                       {feature}
                     </li>
                   ))}
@@ -359,8 +359,8 @@ const AISmartCityManagement = () => {
                   to="/contact"
                   className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white hover:from-blue-600 hover:to-cyan-600'
-                      : 'border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'
+                      ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white hover: fro m-blue-600 hover: t o-cyan-600'
+                      : 'border-2 border-blue-500 text-blue-400 hover: b g-blue-500 hover: tex t-white'
                   }`}
                 >
                   Get Started
@@ -375,45 +375,45 @@ const AISmartCityManagement = () => {
       <section className="py-20 px-4 bg-gradient-to-r from-blue-900 to-cyan-900">
         <div className="container mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
               Ready to Build Your Smart City?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Join the global movement towards intelligent urban environments. Transform your city today.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center mb-12">
               <Link
                 to="/contact"
-                className="px-8 py-4 bg-white text-blue-900 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-200 transform hover:-translate-y-1"
+                className="px-8 py-4 bg-white text-blue-900 font-semibold rounded-lg hover: b g-gray-100 transition-all duration-200 transform hover:-translate-y-1"
               >
                 Start Your Transformation
               </Link>
               <a
                 href="tel:+13024640950"
-                className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-900 transition-all duration-200"
+                className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover: b g-white hover: tex t-blue-900 transition-all duration-200"
               >
                 Schedule Consultation
               </a>
             </div>
 
             {/* Contact Info */}
-            <div className="grid md:grid-cols-3 gap-8 max-w-2xl mx-auto">
+            <div className="grid md: gri d-cols-3 gap-8 max-w-2xl mx-auto">
               <div className="flex items-center justify-center space-x-2">
-                <Phone className="w-5 h-5" />
+                <Phone className="w-5 h-5"  />
                 <span>+1 302 464 0950</span>
               </div>
               <div className="flex items-center justify-center space-x-2">
-                <Mail className="w-5 h-5" />
+                <Mail className="w-5 h-5"  />
                 <span>kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center justify-center space-x-2">
-                <MapPin className="w-5 h-5" />
+                <MapPin className="w-5 h-5"  />
                 <span>364 E Main St STE 1008, Middletown, DE 19709</span>
               </div>
             </div>

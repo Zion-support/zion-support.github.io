@@ -3,7 +3,7 @@ import { motion  } from 'framer-motion';
 
 interface Props extends React.PropsWithChildren<{}> {
 
-  children: ReactNode;
+  children: ReactNod e;
   fallback?: ReactNode;
 
 }
@@ -18,23 +18,23 @@ interface State {
 }
 
 class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
+  constructor(props: Prop s) {
     super(props);
     this.state = {
-      hasError: false,
+      hasError: fals e,
       retryCount: 0
     };
   }
 
-  static getDerivedStateFromError(error: Error): State {
+  static getDerivedStateFromError(error: Erro r): State {
     return {
-      hasError: true,
+      hasError: tru e,
       error,
       retryCount: 0
     };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  componentDidCatch(error: Erro r, errorInfo: ErrorInf o) {
     console.error('ErrorBoundary caught an error:', error, errorInfo);
     this.setState({
       error,
@@ -45,7 +45,7 @@ class ErrorBoundary extends Component<Props, State> {
     this.logError(error, errorInfo);
   }
 
-  logError = (error: anyError, errorInfo: ErrorInfo)  => {
+  logError = (error: anyErro r, errorInfo: ErrorInf o)  => {
     // Log to console for development
     if (process.env.NODE_ENV === 'development') {
       console.group('Error Boundary Error');
@@ -55,15 +55,15 @@ class ErrorBoundary extends Component<Props, State> {
     }
 
     // In production, you could send to error reporting service
-    // Example: Sentry, LogRocket, etc.
+    // Example: Sentr y, LogRocket, etc.
   };
 
   handleRetry = () => {
     this.setState(prevState => ({
-      hasError: false,
-      error: undefined,
-      errorInfo: undefined,
-      retryCount: prevState.retryCount + 1
+      hasError: fals e,
+      error: undefine d,
+      errorInfo: undefine d,
+      retryCount: prevStat e.retryCount + 1
     }));
   };
 
@@ -79,7 +79,7 @@ class ErrorBoundary extends Component<Props, State> {
 
       return (
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 2 0 }}
           animate={{ opacity: 1, y: 0 }}
           className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"
         >
@@ -97,12 +97,11 @@ class ErrorBoundary extends Component<Props, State> {
                   stroke="currentColor"
                   viewBox="0 0 24 24"
                 >
-                  <path
-                    strokeLinecap="round"
+                  <path strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={2}
                     d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"
-                  />
+                   />
                 </svg>
               </div>
 
@@ -143,7 +142,7 @@ class ErrorBoundary extends Component<Props, State> {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={this.handleRetry}
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200"
+                  className="w-full bg-blue-600 hover: b g-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200"
                 >
                   Try Again
                 </motion.button>
@@ -152,7 +151,7 @@ class ErrorBoundary extends Component<Props, State> {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={this.handleReload}
-                  className="w-full bg-gray-600 hover:bg-gray-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200"
+                  className="w-full bg-gray-600 hover: b g-gray-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200"
                 >
                   Reload Page
                 </motion.button>

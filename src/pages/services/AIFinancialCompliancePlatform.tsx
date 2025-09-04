@@ -324,32 +324,32 @@ import { Shield,
 const AIFinancialCompliancePlatform = () => {
   const features = [
     {
-      icon: Brain,
+      icon: Brai n,
       title: 'AI-Powered Risk Assessment',
       description: 'Advanced machine learning algorithms identify compliance risks with 98% accuracy'
     },
     {
-      icon: Shield,
+      icon: Shiel d,
       title: 'Automated Compliance Monitoring',
       description: 'Real-time monitoring of regulatory changes and automated compliance updates'
     },
     {
-      icon: FileText,
+      icon: FileTex t,
       title: 'Intelligent Document Analysis',
       description: 'AI-driven analysis of financial documents for compliance verification'
     },
     {
-      icon: TrendingUp,
+      icon: TrendingU p,
       title: 'Predictive Compliance Analytics',
       description: 'Forecast potential compliance issues before they become violations'
     },
     {
-      icon: Activity,
+      icon: Activit y,
       title: 'Real-time Audit Trails',
       description: 'Comprehensive tracking of all compliance activities and decisions'
     },
     {
-      icon: AlertTriangle,
+      icon: AlertTriangl e,
       title: 'Proactive Risk Alerts',
       description: 'Instant notifications of compliance risks and regulatory changes'
     }
@@ -476,19 +476,19 @@ const AIFinancialCompliancePlatform = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden py-20 px-4 sm: p x-6 lg: p x-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500 to-indigo-600 text-white text-sm font-medium mb-6">
-              <Sparkles className="w-4 h-4 mr-2" />
+              <Sparkles className="w-4 h-4 mr-2"  />
               AI-Powered Financial Compliance Platform
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md: tex t-6xl font-bold text-white mb-6">
               Transform Financial Compliance with
               <span className="bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
                 {' '}AI Intelligence
@@ -498,21 +498,21 @@ const AIFinancialCompliancePlatform = () => {
               Automate financial compliance, reduce risks, and ensure regulatory adherence with 
               our AI-powered platform. Stay ahead of regulatory changes and maintain compliance 24/7.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-indigo-700 transition-all duration-200"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-semibold rounded-lg hover: fro m-purple-600 hover: t o-indigo-700 transition-all duration-200"
               >
-                <Play className="w-5 h-5 mr-2" />
+                <Play className="w-5 h-5 mr-2"  />
                 Watch Demo
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200"
+                className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover: b g-zion-slate-light hover: tex t-zion-slate-dark transition-all duration-200"
               >
-                <Settings className="w-5 h-5 mr-2" />
+                <Settings className="w-5 h-5 mr-2"  />
                 Start Free Trial
               </motion.button>
             </div>
@@ -521,18 +521,18 @@ const AIFinancialCompliancePlatform = () => {
       </section>
 
       {/* Key Metrics Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
+      <section className="py-16 px-4 sm: p x-6 lg: p x-8 bg-zion-slate-dark/50">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md: anygri d-cols-4 gap-8">
             {keyMetrics.map((item, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.6, delay: inde x * 0.1 }}
                 className="text-center"
               >
-                <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2">{item.metric}</div>
+                <div className="text-4xl md: tex t-5xl font-bold text-purple-400 mb-2">{item.metric}</div>
                 <div className="text-zion-slate-light text-lg">{item.label}</div>
               </motion.div>
             ))}
@@ -541,15 +541,15 @@ const AIFinancialCompliancePlatform = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
               Advanced AI-Powered Features
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
@@ -557,14 +557,14 @@ const AIFinancialCompliancePlatform = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: anygri d-cols-2 lg: gri d-cols-3 gap-8">
             {features.map((feature, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border border-zion-slate-light/20 hover:border-zion-slate-light/40 transition-all duration-300"
+                transition={{ duration: 0.6, delay: inde x * 0.1 }}
+                className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border border-zion-slate-light/20 hover: borde r-zion-slate-light/40 transition-all duration-300"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
@@ -578,15 +578,15 @@ const AIFinancialCompliancePlatform = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-zion-slate-dark/50">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
               Measurable Business Impact
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
@@ -594,16 +594,16 @@ const AIFinancialCompliancePlatform = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md: anygri d-cols-2 lg: gri d-cols-3 gap-6">
             {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.6, delay: inde x * 0.1 }}
                 className="flex items-start space-x-3"
               >
-                <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />
+                <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0"  />
                 <span className="text-zion-slate-light text-lg">{benefit}</span>
               </motion.div>
             ))}
@@ -612,15 +612,15 @@ const AIFinancialCompliancePlatform = () => {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
               Industry Solutions
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
@@ -628,13 +628,13 @@ const AIFinancialCompliancePlatform = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md: anygri d-cols-2 gap-8">
             {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.6, delay: inde x * 0.1 }}
                 className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border border-zion-slate-light/20"
               >
                 <h3 className="text-xl font-semibold text-white mb-3">{useCase.industry}</h3>
@@ -646,15 +646,15 @@ const AIFinancialCompliancePlatform = () => {
       </section>
 
       {/* Regulations Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-zion-slate-dark/50">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
               Comprehensive Regulation Coverage
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
@@ -662,14 +662,14 @@ const AIFinancialCompliancePlatform = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-2 md: anygrid-cols-4 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 md: anygri d-cols-4 lg: gri d-cols-6 gap-4">
             {regulations.map((regulation, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-lg p-3 border border-zion-slate-light/20 text-center hover:border-purple-400/40 transition-all duration-300"
+                transition={{ duration: 0.6, delay: inde x * 0.1 }}
+                className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-lg p-3 border border-zion-slate-light/20 text-center hover: borde r-purple-400/40 transition-all duration-300"
               >
                 <span className="text-zion-slate-light font-medium text-sm">{regulation}</span>
               </motion.div>
@@ -679,15 +679,15 @@ const AIFinancialCompliancePlatform = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
               Transparent Pricing
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
@@ -695,13 +695,13 @@ const AIFinancialCompliancePlatform = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: anygri d-cols-3 gap-8">
             {pricing.map((plan, index)  => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.6, delay: inde x * 0.1 }}
                 className={`bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border ${
                   index === 1 
                     ? 'border-purple-500/50 bg-gradient-to-b from-purple-500/10 to-transparent' 
@@ -720,12 +720,12 @@ const AIFinancialCompliancePlatform = () => {
                 <ul className="space-y-3 mb-6">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0"  />
                       <span className="text-zion-slate-light">{feature}</span>
                     </li>
                   ))}
                 </ul>
-                <button className="w-full py-3 px-6 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-indigo-700 transition-all duration-200">
+                <button className="w-full py-3 px-6 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-semibold rounded-lg hover: fro m-purple-600 hover: t o-indigo-700 transition-all duration-200">
                   Get Started
                 </button>
               </motion.div>
@@ -735,15 +735,15 @@ const AIFinancialCompliancePlatform = () => {
       </section>
 
       {/* Integrations Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-zion-slate-dark/50">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
               Seamless Integrations
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
@@ -751,14 +751,14 @@ const AIFinancialCompliancePlatform = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-2 md: anygrid-cols-4 lg:grid-cols-6 gap-6">
+          <div className="grid grid-cols-2 md: anygri d-cols-4 lg: gri d-cols-6 gap-6">
             {integrations.map((integration, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-lg p-4 border border-zion-slate-light/20 text-center hover:border-zion-slate-light/40 transition-all duration-300"
+                transition={{ duration: 0.6, delay: inde x * 0.1 }}
+                className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-lg p-4 border border-zion-slate-light/20 text-center hover: borde r-zion-slate-light/40 transition-all duration-300"
               >
                 <span className="text-zion-slate-light font-medium text-sm">{integration}</span>
               </motion.div>
@@ -768,34 +768,34 @@ const AIFinancialCompliancePlatform = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-6">
               Ready to Transform Your Financial Compliance?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8">
               Join leading financial institutions using AI to ensure regulatory compliance
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-indigo-700 transition-all duration-200"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-semibold rounded-lg hover: fro m-purple-600 hover: t o-indigo-700 transition-all duration-200"
               >
-                <ArrowRight className="w-5 h-5 mr-2" />
+                <ArrowRight className="w-5 h-5 mr-2"  />
                 Start Free Trial
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200"
+                className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover: b g-zion-slate-light hover: tex t-zion-slate-dark transition-all duration-200"
               >
-                <MessageSquare className="w-5 h-5 mr-2" />
+                <MessageSquare className="w-5 h-5 mr-2"  />
                 Schedule Demo
               </motion.button>
             </div>
@@ -804,46 +804,46 @@ const AIFinancialCompliancePlatform = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-zion-slate-dark/50">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-6">
               Get in Touch
             </h2>
             <p className="text-xl text-zion-slate-light mb-8">
               Ready to discuss how AI can transform your financial compliance operations?
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div className="grid grid-cols-1 md: gri d-cols-3 gap-6 mb-8">
               <div className="flex items-center justify-center space-x-3">
-                <Phone className="w-6 h-6 text-purple-400" />
+                <Phone className="w-6 h-6 text-purple-400"  />
                 <span className="text-zion-slate-light">+1 302 464 0950</span>
               </div>
               <div className="flex items-center justify-center space-x-3">
-                <Mail className="w-6 h-6 text-purple-400" />
+                <Mail className="w-6 h-6 text-purple-400"  />
                 <span className="text-zion-slate-light">kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center justify-center space-x-3">
-                <MapPin className="w-6 h-6 text-purple-400" />
-                <span className="text-zion-slate-light">364 E Main St STE 1008<br />Middletown DE 19709</span>
+                <MapPin className="w-6 h-6 text-purple-400"  />
+                <span className="text-zion-slate-light">364 E Main St STE 1008<br  />Middletown DE 19709</span>
               </div>
             </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
               <a
                 href="https://ziontechgroup.com/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-indigo-700 transition-all duration-200"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-semibold rounded-lg hover: fro m-purple-600 hover: t o-indigo-700 transition-all duration-200"
               >
-                <ArrowRight className="w-5 h-5 mr-2" />
+                <ArrowRight className="w-5 h-5 mr-2"  />
                 Contact Us
               </a>
               <a
                 href="https://ziontechgroup.com"
-                className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200"
+                className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover: b g-zion-slate-light hover: tex t-zion-slate-dark transition-all duration-200"
               >
-                <Globe className="w-5 h-5 mr-2" />
+                <Globe className="w-5 h-5 mr-2"  />
                 Visit Website
               </a>
             </div>

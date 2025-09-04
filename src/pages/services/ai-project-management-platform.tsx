@@ -1,20 +1,20 @@
-      icon: Calendar};
+      icon: Calenda r};
   ];
 
-  return()
+  return ()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
         title="AI Project Management Platform - Zion Tech Group""        description="Revolutionize your project management with AI-powered task prioritization, predictive analytics, and intelligent team collaboration. Start from $299/month."
-       />
+        />
 
       {/* Hero Section */}"
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"
+      <section className="relative overflow-hidden py-20 px-4 sm: p x-6 lg: p x-8">"
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -36,10 +36,10 @@
             transition={{ duration: 0.8 }}
 "
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium mb-6">"
-              <Brain className="w-4 h-4 mr-2"  />              AI-Powered Project Management
+              <Brain className="w-4 h-4 mr-2"   />              AI-Powered Project Management
             </div>
 "
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md: tex t-6xl font-bold text-white mb-6">
               The Future of"
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Project Management</span>
             </h1>
@@ -49,26 +49,24 @@
               Manage teams smarter, deliver faster, and achieve more with our cutting-edge platform.
             </p>
 "
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-              <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">"
+              <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover: fro m-purple-700 hover: t o-pink-700 transition-all duration-300 transform hover: scal e-105">
                 Start Free Trial
               </button>"
-              <button className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">
+              <button className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover: b g-gray-800 transition-all duration-300">
                 Schedule Demo
               </button>
             </div>
           </motion.div>
         </div>
-      </section>;
-
-      {/* Features Section */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;"
+      </section> {/* Features Section */}"
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8">;"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -88,10 +86,10 @@
 
 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}"
+            viewport={{ once: tru e }}"
             className="text-center mb-16"
 "
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
               Powered by Advanced AI
             </h2>"
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
@@ -99,14 +97,14 @@
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
             {features.map((feature, index (
               <motion.div
                 key={index}
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -128,7 +126,7 @@
                 transition = {
 
   { duration: 0.8,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -136,8 +134,8 @@
 
 
 }}
-                viewport={{ once: true }}"
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-purple-500 transition-all duration-300"
+                viewport={{ once: tru e }}"
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover: borde r-purple-500 transition-all duration-300"
 "
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center mb-4">"
                   <feature.icon className="w-6 h-6 text-white" />
@@ -151,13 +149,13 @@
       </section>
 
       {/* Benefits Section */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;"
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-gray-800/30">;"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -177,10 +175,10 @@
 
 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}"
+            viewport={{ once: tru e }}"
             className="text-center mb-16"
 "
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
               Proven Results
             </h2>"
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
@@ -188,14 +186,14 @@
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map(benefit: unknown, index: unknown (
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
+            {benefits.map(benefit: unknow n, index: unknow n (
               <motion.div
                 key={index}
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -217,7 +215,7 @@
                 transition = {
 
   { duration: 0.8,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -225,7 +223,7 @@
 
 
 }}
-                viewport={{ once: true }}"
+                viewport={{ once: tru e }}"
                 className="text-center"
 "
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">"
@@ -240,13 +238,13 @@
       </section>
 
       {/* Use Cases Section */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;"
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8">;"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -266,10 +264,10 @@
 
 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}"
+            viewport={{ once: tru e }}"
             className="text-center mb-16"
 "
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
               Perfect for Every Industry
             </h2>"
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
@@ -277,14 +275,14 @@
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
-            {useCases.map(useCase: unknown, index: unknown (
+          <div className="grid grid-cols-1 md: gri d-cols-2 gap-8">
+            {useCases.map(useCase: unknow n, index: unknow n (
               <motion.div
                 key={index}
                 initial = {
 
   { opacity: 0,
-  x: index % 2 === 0 ? -20 : 20 
+  x: inde x % 2 === 0 ? -20 : 20 
 
 
 
@@ -306,7 +304,7 @@
                 transition = {
 
   { duration: 0.8,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -314,7 +312,7 @@
 
 
 }}
-                viewport={{ once: true }}"
+                viewport={{ once: tru e }}"
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700"
 "
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center mb-6">"
@@ -329,13 +327,13 @@
       </section>
 
       {/* Pricing Section */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;"
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-gray-800/30">;"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -355,10 +353,10 @@
 
 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}"
+            viewport={{ once: tru e }}"
             className="text-center mb-16"
 "
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
               Choose Your Plan
             </h2>"
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
@@ -366,14 +364,14 @@
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
-            {pricingPlans.map(plan: unknown, index: unknown (
+          <div className="grid grid-cols-1 md: gri d-cols-3 gap-8">
+            {pricingPlans.map(plan: unknow n, index: unknow n (
               <motion.div
                 key={index}
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -395,7 +393,7 @@
                 transition = {
 
   { duration: 0.8,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -403,7 +401,7 @@
 
 
 }}
-                viewport={{ once: true }}
+                viewport={{ once: tru e }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
 
                   plan.popular'
@@ -431,7 +429,7 @@
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-start">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0"  />"                      <span className="text-gray-300">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0"   />"                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -439,8 +437,8 @@
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
 
                   plan.popular'
-                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700''
-                    : 'bg-gray-700 text-white hover:bg-gray-600'`
+                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover: fro m-purple-700 hover: t o-pink-700''
+                    : 'bg-gray-700 text-white hover: b g-gray-600'`
                 }`}>
                   Get Started
                 </button>
@@ -451,13 +449,13 @@
       </section>
 
       {/* CTA Section */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;"
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8">;"
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -477,20 +475,20 @@
 
 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
 "
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-6">
               Ready to Transform Your Project Management?
             </h2>"
             <p className="text-xl text-gray-300 mb-8">
               Join thousands of teams already experiencing the future of project management
             </p>
 "
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-              <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">"
+              <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover: fro m-purple-700 hover: t o-pink-700 transition-all duration-300 transform hover: scal e-105">
                 Start Free Trial
               </button>"
-              <button className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">
+              <button className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover: b g-gray-800 transition-all duration-300">
                 Contact Sales
               </button>
             </div>

@@ -1,17 +1,17 @@
 import React from 'react';
 
 interface DataSyncProps {
-  syncedData: any;
+  syncedData: an y;
   onNext: () => void;
   onBack: () => void;
 }
 
-const DataSync: React.FC<DataSyncProps> = ({ syncedData, onNext, onBack }) => {
+const DataSync: Reac t.FC<DataSyncProps> = ({ syncedData, onNext, onBack }) => {
   return (
     <div className="max-w-4xl mx-auto p-6">
       <h2 className="text-2xl font-bold mb-6">Data Synchronization</h2>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+      <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-8">
         <div className="bg-white p-6 rounded-lg border border-gray-200">
           <h3 className="text-lg font-semibold mb-4">Key Metrics</h3>
           <div className="space-y-3">
@@ -51,7 +51,7 @@ const DataSync: React.FC<DataSyncProps> = ({ syncedData, onNext, onBack }) => {
       
       <div className="bg-white p-6 rounded-lg border border-gray-200 mb-8">
         <h3 className="text-lg font-semibold mb-4">Conversion Funnel</h3>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md: gri d-cols-4 gap-4">
           <div className="text-center">
             <div className="text-2xl font-bold text-blue-600">
               {syncedData?.marketplaceConversionFunnel?.visitors?.toLocaleString() || 'N/A'}
@@ -81,13 +81,13 @@ const DataSync: React.FC<DataSyncProps> = ({ syncedData, onNext, onBack }) => {
       
       <div className="bg-white p-6 rounded-lg border border-gray-200 mb-8">
         <h3 className="text-lg font-semibold mb-4">Notable Clients</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {syncedData?.notableClients?.map((client: any, index: number) => (
+        <div className="grid grid-cols-1 md: gri d-cols-2 gap-4">
+          {syncedData?.notableClients?.map((client: an y, index: number) => (
             <div key={index} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
               <span className="font-medium">{client.name}</span>
               <a 
                 href={client.caseStudyUrl} 
-                className="text-blue-600 hover:text-blue-800 text-sm"
+                className="text-blue-600 hover: tex t-blue-800 text-sm"
               >
                 View Case Study
               </a>
@@ -101,13 +101,13 @@ const DataSync: React.FC<DataSyncProps> = ({ syncedData, onNext, onBack }) => {
       <div className="flex justify-between">
         <button
           onClick={onBack}
-          className="px-6 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
+          className="px-6 py-3 border border-gray-300 rounded-lg hover: b g-gray-50 transition-colors"
         >
           Back
         </button>
         <button
           onClick={onNext}
-          className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+          className="px-6 py-3 bg-blue-600 text-white rounded-lg hover: b g-blue-700 transition-colors"
         >
           Continue to Slide Editor
         </button>

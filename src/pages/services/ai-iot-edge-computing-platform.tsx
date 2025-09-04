@@ -2,24 +2,23 @@ import React from 'react';
 import { SEO   } from '../../components/SEO';
 import { motion   } from 'framer-motion';
 
-const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
+const AIIoTEdgeComputingPlatform: Reac t.FC = (): JSX.Element => {
   return (
     <>
-      <SEO
-        title="AI-Powered IoT Edge Computing Platform | Zion Tech Group"
+      <SEO title="AI-Powered IoT Edge Computing Platform | Zion Tech Group"
         description="Advanced AI-driven IoT edge computing platform. Reduce latency by 90%, lower bandwidth costs by 70%, and process data at the edge with sub-millisecond response times."
         keywords="AI IoT, edge computing, real-time processing, distributed computing, hybrid cloud, edge intelligence, IoT analytics, edge AI"
         canonical="https://ziontechgroup.com/services/ai-iot-edge-computing-platform"
-      />
+       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm: p x-6 lg: p x-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 }}
               animate = {
@@ -29,17 +28,17 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <h1 className="text-4xl md: tex t-6xl font-bold text-white mb-6">
                 AI-Powered IoT Edge Computing Platform
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              <p className="text-xl md: tex t-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Revolutionize IoT with AI-powered edge computing. Process data at the edge with sub-millisecond latency, reduce bandwidth costs by 70%, and enable real-time intelligent decision making.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+              <div className="flex flex-col sm: fle x-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover: fro m-blue-700 hover: t o-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover: scal e-105">
                   Start Free Trial
                 </button>
-                <button className="border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300">
+                <button className="border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover: b g-white hover: tex t-gray-900 transition-all duration-300">
                   Schedule Demo
                 </button>
               </div>
@@ -48,12 +47,12 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm: p x-6 lg: p x-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 }}
               whileInView = {
@@ -62,10 +61,10 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
 
 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: tru e }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
                 Advanced AI-Powered Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -73,7 +72,7 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: unknowngri d-cols-2 lg: gri d-cols-3 gap-8">
               {[
                 {
                   title: "AI-Powered Edge Intelligence",
@@ -110,7 +109,7 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
                   key={index}
                   initial = {
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 }}
                   whileInView = {
@@ -120,11 +119,11 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
 }}
                   transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 }}
-                  viewport={{ once: true }}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"
+                  viewport={{ once: tru e }}
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: borde r-white/40 transition-all duration-300"
                 >
                   <div className="text-4xl mb-4">{feature.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -136,12 +135,12 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
+        <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-black/20">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 }}
               whileInView = {
@@ -150,10 +149,10 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
 
 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: tru e }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
                 Measurable Business Impact
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -161,7 +160,7 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: unknowngri d-cols-2 lg: gri d-cols-3 gap-8">
               {[
                 { metric: "90%", description: "Reduction in latency" },
                 { metric: "70%", description: "Lower bandwidth costs" },
@@ -184,13 +183,13 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
 }}
                   transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: tru e }}
                   className="text-center bg-gradient-to-br from-orange-600/20 to-red-600/20 rounded-xl p-8 border border-orange-500/30"
                 >
-                  <div className="text-4xl md:text-5xl font-bold text-orange-400 mb-2">{benefit.metric}</div>
+                  <div className="text-4xl md: tex t-5xl font-bold text-orange-400 mb-2">{benefit.metric}</div>
                   <p className="text-white text-lg">{benefit.description}</p>
                 </motion.div>
               ))}
@@ -199,12 +198,12 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
         </section>
 
         {/* Use Cases Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm: p x-6 lg: p x-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 }}
               whileInView = {
@@ -213,10 +212,10 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
 
 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: tru e }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
                 Industry-Specific Use Cases
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -224,7 +223,7 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: unknowngrid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md: unknowngri d-cols-2 gap-8">
               {[
                 {
                   industry: "Manufacturing",
@@ -251,7 +250,7 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
                   key={index}
                   initial = {
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 }}
                   whileInView = {
@@ -261,10 +260,10 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
 }}
                   transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: tru e }}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
                 >
                   <h3 className="text-xl font-semibold text-white mb-3">{useCase.industry}</h3>
@@ -284,12 +283,12 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
         </section>
 
         {/* Technologies Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
+        <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-black/20">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 }}
               whileInView = {
@@ -298,10 +297,10 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
 
 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: tru e }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
                 Technology Stack & Integrations
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -309,7 +308,7 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-2 md: unknowngrid-cols-4 gap-6">
+            <div className="grid grid-cols-2 md: unknowngri d-cols-4 gap-6">
               {[
                 "TensorFlow Lite", "ONNX Runtime", "Apache Kafka", "MQTT", "Kubernetes Edge", "Docker Edge", "AWS IoT", "Azure IoT",
                 "Google Cloud IoT", "Node-RED", "Grafana", "Prometheus", "InfluxDB", "Redis", "PostgreSQL", "MongoDB"
@@ -328,11 +327,11 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
 }}
                   transition = {
   { duration: 0.4,
-  delay: index * 0.05 
+  delay: inde x * 0.05 
 
 }}
-                  viewport={{ once: true }}
-                  className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-white/20 hover:border-white/40 transition-all duration-300"
+                  viewport={{ once: tru e }}
+                  className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-white/20 hover: borde r-white/40 transition-all duration-300"
                 >
                   <span className="text-white font-medium">{tech}</span>
                 </motion.div>
@@ -342,12 +341,12 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm: p x-6 lg: p x-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 }}
               whileInView = {
@@ -356,10 +355,10 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
 
 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: tru e }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
                 Transparent Pricing Plans
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -367,7 +366,7 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: unknowngrid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: unknowngri d-cols-3 gap-8">
               {[
                 {
                   name: "Starter",
@@ -382,7 +381,7 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
                     "Standard templates",
                     "Monthly reports"
                   ],
-                  popular: false
+                  popular: fals e
                 },
                 {
                   name: "Professional",
@@ -399,7 +398,7 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
                     "Advanced analytics",
                     "Team collaboration tools"
                   ],
-                  popular: true
+                  popular: tru e
                 },
                 {
                   name: "Enterprise",
@@ -416,14 +415,14 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
                     "Custom integrations",
                     "Dedicated IoT consultant"
                   ],
-                  popular: false
+                  popular: fals e
                 }
               ].map((plan, index)   => (
                 <motion.div
                   key={index}
                   initial = {
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 }}
                   whileInView = {
@@ -433,10 +432,10 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
 }}
                   transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: tru e }}
                   className={`relative rounded-xl p-8 ${
                     plan.popular 
                       ? 'bg-gradient-to-br from-orange-600 to-red-600 border-2 border-orange-400' 
@@ -471,8 +470,8 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
                   
                   <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-white text-orange-600 hover:bg-gray-100'
-                      : 'bg-orange-600 text-white hover:bg-orange-700'
+                      ? 'bg-white text-orange-600 hover: b g-gray-100'
+                      : 'bg-orange-600 text-white hover: b g-orange-700'
                   }`}>
                     Get Started
                   </button>
@@ -483,7 +482,7 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 }}
               whileInView = {
@@ -496,26 +495,26 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
   delay: 0.4 
 
 }}
-              viewport={{ once: true }}
+              viewport={{ once: tru e }}
               className="text-center mt-12"
             >
               <p className="text-gray-300 mb-4">
                 All plans include a 14-day free trial. Annual plans save 20%.
               </p>
               <p className="text-gray-300">
-                Need a custom plan? <span className="text-blue-400 cursor-pointer hover:underline">Contact us</span>
+                Need a custom plan? <span className="text-blue-400 cursor-pointer hover: underlin e">Contact us</span>
               </p>
             </motion.div>
           </div>
         </section>
 
         {/* Contact Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
+        <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-black/20">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 }}
               whileInView = {
@@ -524,16 +523,16 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
 
 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: tru e }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-6">
                 Ready to Transform Your IoT with Edge AI?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Join leading organizations who trust our AI-powered platform to revolutionize their IoT deployments.
               </p>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-8">
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                   <h3 className="text-xl font-semibold text-white mb-3">Contact Information</h3>
                   <div className="space-y-2 text-gray-300">
@@ -546,13 +545,13 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                   <h3 className="text-xl font-semibold text-white mb-3">Quick Actions</h3>
                   <div className="space-y-3">
-                    <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors duration-300">
+                    <button className="w-full bg-blue-600 hover: b g-blue-700 text-white py-2 px-4 rounded-lg transition-colors duration-300">
                       Schedule Demo
                     </button>
-                    <button className="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg transition-colors duration-300">
+                    <button className="w-full bg-green-600 hover: b g-green-700 text-white py-2 px-4 rounded-lg transition-colors duration-300">
                       Start Free Trial
                     </button>
-                    <button className="w-full bg-orange-600 hover:bg-orange-700 text-white py-2 px-4 rounded-lg transition-colors duration-300">
+                    <button className="w-full bg-orange-600 hover: b g-orange-700 text-white py-2 px-4 rounded-lg transition-colors duration-300">
                       Download Case Study
                     </button>
                   </div>
@@ -560,7 +559,7 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
               </div>
               
               <div className="text-gray-300">
-                <p>Visit our website: <a href="https://ziontechgroup.com" className="text-blue-400 hover:underline">https://ziontechgroup.com</a></p>
+                <p>Visit our website: <a href="https://ziontechgroup.com" className="text-blue-400 hover: underlin e">https://ziontechgroup.com</a></p>
               </div>
             </motion.div>
           </div>

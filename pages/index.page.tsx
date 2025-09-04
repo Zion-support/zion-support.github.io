@@ -7,30 +7,29 @@ export default function HomePage() {
     <>
       <Head>
         <title>Zion Tech Group — AI, Micro SaaS, IT Solutions</title>
-        <meta
-          name="description"
+        <meta name="description"
           content="AI solutions, Micro SaaS products, and IT services. Contact +1 302 464 0950 • kleber@ziontechgroup.com"
-        />
-        <link rel="canonical" href="https://ziontechgroup.com/" />
+         />
+        <link rel="canonical" href="https://ziontechgroup.com/"  />
       </Head>
       <main className="min-h-screen bg-gray-50">
-        <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4">Zion Tech Group</h1>
-          <p className="text-lg md:text-2xl text-gray-600 mb-8">
+        <section className="mx-auto max-w-7xl px-4 sm: p x-6 lg: p x-8 py-16 text-center">
+          <h1 className="text-4xl md: tex t-6xl font-bold text-gray-900 mb-4">Zion Tech Group</h1>
+          <p className="text-lg md: tex t-2xl text-gray-600 mb-8">
             AI services, micro SaaS platforms, and enterprise-grade IT solutions.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700" href="/services">
+          <div className="flex flex-col sm: fle x-row gap-4 justify-center">
+            <Link className="bg-blue-600 text-white px-6 py-3 rounded-lg hover: b g-blue-700" href="/services">
               Explore Services
             </Link>
-            <Link className="border border-gray-300 px-6 py-3 rounded-lg hover:bg-gray-100" href="/contact">
+            <Link className="border border-gray-300 px-6 py-3 rounded-lg hover: b g-gray-100" href="/contact">
               Contact Us
             </Link>
           </div>
           <div className="mt-8 text-sm text-gray-600">
             <p>
               Mobile: <a className="text-blue-700" href="tel:+13024640950">+1 302 464 0950</a> · Email:{' '}
-              <a className="text-blue-700" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · Address: 364 E
+              <a className="text-blue-700" href="mailto: klebe r@ziontechgroup.com">kleber@ziontechgroup.com</a> · Address: 364 E
               Main St STE 1008 Middletown DE 19709
             </p>
           </div>

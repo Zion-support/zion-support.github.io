@@ -79,20 +79,20 @@ export default function Signup() {
     <>
       <Helmet>
         <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://ziontechgroup.com/signup" />
+        <meta name="description" content={description}  />
+        <meta name="viewport" content="width=device-width, initial-scale=1"  />
+        <link rel="canonical" href="https://ziontechgroup.com/signup"  />
 
         {/* Open Graph */}
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:url" content="https://ziontechgroup.com/signup" />
-        <meta property="og:type" content="website" />
+        <meta property="og: titl e" content={title}  />
+        <meta property="og: descriptio n" content={description}  />
+        <meta property="og: ur l" content="https://ziontechgroup.com/signup"  />
+        <meta property="og: typ e" content="website"  />
 
         {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
+        <meta name="twitter: car d" content="summary_large_image"  />
+        <meta name="twitter: titl e" content={title}  />
+        <meta name="twitter: descriptio n" content={description}  />
       </Helmet>
 
       <main className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-dark text-white">
@@ -104,11 +104,11 @@ export default function Signup() {
             <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full"></div>
           </div>
 
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="container mx-auto px-4 sm: p x-6 lg: p x-8 relative z-10">
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -129,25 +129,25 @@ export default function Signup() {
               transition={{ duration: 0.6 }}
               className="text-center max-w-4xl mx-auto"
 
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent">
+              <h1 className="text-4xl md: tex t-6xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent">
                 Join Zion Tech Group
               </h1>
-              <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
+              <p className="text-xl md: tex t-2xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
                 Unlock access to revolutionary AI autonomous systems, quantum computing solutions,
                 and enterprise-grade cybersecurity platforms.
               </p>
 
               <div className="flex flex-wrap justify-center gap-6 mb-12">
                 <div className="flex items-center gap-3 text-zion-cyan">
-                  <Shield className="w-6 h-6" />
+                  <Shield className="w-6 h-6"  />
                   <span className="text-lg">Enterprise Security</span>
                 </div>
                 <div className="flex items-center gap-3 text-zion-purple-light">
-                  <Brain className="w-6 h-6" />
+                  <Brain className="w-6 h-6"  />
                   <span className="text-lg">AI Innovation</span>
                 </div>
                 <div className="flex items-center gap-3 text-zion-cyan-light">
-                  <Cloud className="w-6 h-6" />
+                  <Cloud className="w-6 h-6"  />
                   <span className="text-lg">Cloud Native</span>
                 </div>
               </div>
@@ -157,11 +157,11 @@ export default function Signup() {
 
         {/* Signup Form Section */}
         <section className="py-20 bg-white/5 backdrop-blur-sm">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="container mx-auto px-4 sm: p x-6 lg: p x-8">
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -198,28 +198,27 @@ export default function Signup() {
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Personal Information */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6">
                     <div>
                       <label htmlFor="firstName" className="block text-sm font-medium text-zion-slate-light mb-2">
                         First Name *
                       </label>
                       <div className="relative">
-                        <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
-                        <input
-                          type="text"
+                        <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"  />
+                        <input type="text"
                           id="firstName"
                           name="firstName"
                           value={formData.firstName}
                           onChange={handleInputChange}
-                          className={`w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan transition-all ${
+                          className={`w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${
                             errors.firstName ? 'border-red-500' : 'border-zion-blue-light'
                           }`}
                           placeholder="Enter your first name"
-                        />
+                         />
                       </div>
                       {errors.firstName && (
                         <p className="mt-1 text-sm text-red-400 flex items-center gap-2">
-                          <AlertCircle className="w-4 h-4" />
+                          <AlertCircle className="w-4 h-4"  />
                           {errors.firstName}
                         </p>
                       )}
@@ -230,22 +229,21 @@ export default function Signup() {
                         Last Name *
                       </label>
                       <div className="relative">
-                        <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
-                        <input
-                          type="text"
+                        <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"  />
+                        <input type="text"
                           id="lastName"
                           name="lastName"
                           value={formData.lastName}
                           onChange={handleInputChange}
-                          className={`w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan transition-all ${
+                          className={`w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${
                             errors.lastName ? 'border-red-500' : 'border-zion-blue-light'
                           }`}
                           placeholder="Enter your last name"
-                        />
+                         />
                       </div>
                       {errors.lastName && (
                         <p className="mt-1 text-sm text-red-400 flex items-center gap-2">
-                          <AlertCircle className="w-4 h-4" />
+                          <AlertCircle className="w-4 h-4"  />
                           {errors.lastName}
                         </p>
                       )}
@@ -258,22 +256,21 @@ export default function Signup() {
                       Email Address *
                     </label>
                     <div className="relative">
-                      <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
-                      <input
-                        type="email"
+                      <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"  />
+                      <input type="email"
                         id="email"
                         name="email"
                         value={formData.email}
                         onChange={handleInputChange}
-                        className={`w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan transition-all ${
+                        className={`w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${
                           errors.email ? 'border-red-500' : 'border-zion-blue-light'
                         }`}
                         placeholder="Enter your email address"
-                      />
+                       />
                     </div>
                     {errors.email && (
                       <p className="mt-1 text-sm text-red-400 flex items-center gap-2">
-                        <AlertCircle className="w-4 h-4" />
+                        <AlertCircle className="w-4 h-4"  />
                         {errors.email}
                       </p>
                     )}
@@ -285,29 +282,28 @@ export default function Signup() {
                       Password *
                     </label>
                     <div className="relative">
-                      <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
-                      <input
-                        type={showPassword ? 'text' : 'password'}
+                      <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"  />
+                      <input type={showPassword ? 'text' : 'password'}
                         id="password"
                         name="password"
                         value={formData.password}
                         onChange={handleInputChange}
-                        className={`w-full pl-10 pr-12 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan transition-all ${
+                        className={`w-full pl-10 pr-12 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${
                           errors.password ? 'border-red-500' : 'border-zion-blue-light'
                         }`}
                         placeholder="Create a strong password"
-                      />
+                       />
                       <button
                         type="button"
                         onClick={() => setShowPassword(!showPassword)}
-                        className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover:text-white transition-colors"
+                        className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover: tex t-white transition-colors"
 
-                        {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+                        {showPassword ? <EyeOff className="w-5 h-5"  /> : <Eye className="w-5 h-5"  />}
                       </button>
                     </div>
                     {errors.password && (
                       <p className="mt-1 text-sm text-red-400 flex items-center gap-2">
-                        <AlertCircle className="w-4 h-4" />
+                        <AlertCircle className="w-4 h-4"  />
                         {errors.password}
                       </p>
                     )}
@@ -319,51 +315,49 @@ export default function Signup() {
                       Confirm Password *
                     </label>
                     <div className="relative">
-                      <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
-                      <input
-                        type={showConfirmPassword ? 'text' : 'password'}
+                      <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"  />
+                      <input type={showConfirmPassword ? 'text' : 'password'}
                         id="confirmPassword"
                         name="confirmPassword"
                         value={formData.confirmPassword}
                         onChange={handleInputChange}
-                        className={`w-full pl-10 pr-12 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan transition-all ${
+                        className={`w-full pl-10 pr-12 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${
                           errors.confirmPassword ? 'border-red-500' : 'border-zion-blue-light'
                         }`}
                         placeholder="Confirm your password"
-                      />
+                       />
                       <button
                         type="button"
                         onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                        className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover:text-white transition-colors"
+                        className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover: tex t-white transition-colors"
 
-                        {showConfirmPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+                        {showConfirmPassword ? <EyeOff className="w-5 h-5"  /> : <Eye className="w-5 h-5"  />}
                       </button>
                     </div>
                     {errors.confirmPassword && (
                       <p className="mt-1 text-sm text-red-400 flex items-center gap-2">
-                        <AlertCircle className="w-4 h-4" />
+                        <AlertCircle className="w-4 h-4"  />
                         {errors.confirmPassword}
                       </p>
                     )}
                   </div>
 
                   {/* Comp Information */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6">
                     <div>
                       <label htmlFor="comp" className="block text-sm font-medium text-zion-slate-light mb-2">
                         Comp Name
                       </label>
                       <div className="relative">
-                        <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
-                        <input
-                          type="text"
+                        <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"  />
+                        <input type="text"
                           id="comp"
                           name="comp"
                           value={formData.comp}
                           onChange={handleInputChange}
-                          className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan transition-all"
+                          className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all"
                           placeholder="Enter comp name"
-                        />
+                         />
                       </div>
                     </div>
 
@@ -372,37 +366,35 @@ export default function Signup() {
                         Phone Number
                       </label>
                       <div className="relative">
-                        <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
-                        <input
-                          type="tel"
+                        <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"  />
+                        <input type="tel"
                           id="phone"
                           name="phone"
                           value={formData.phone}
                           onChange={handleInputChange}
-                          className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan transition-all"
+                          className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all"
                           placeholder="Enter phone number"
-                        />
+                         />
                       </div>
                     </div>
                   </div>
 
                   {/* Website and Industry */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6">
                     <div>
                       <label htmlFor="website" className="block text-sm font-medium text-zion-slate-light mb-2">
                         Website
                       </label>
                       <div className="relative">
-                        <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
-                        <input
-                          type="url"
+                        <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"  />
+                        <input type="url"
                           id="website"
                           name="website"
                           value={formData.website}
                           onChange={handleInputChange}
-                          className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan transition-all"
+                          className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all"
                           placeholder="https://yourcomp.com"
-                        />
+                         />
                       </div>
                     </div>
 
@@ -415,7 +407,7 @@ export default function Signup() {
                         name="industry"
                         value={formData.industry}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan transition-all"
+                        className="w-full px-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all"
 
                         <option value="">Select industry</option>
                         {industries.map(industry => (
@@ -437,7 +429,7 @@ export default function Signup() {
                       name="useCase"
                       value={formData.useCase}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan transition-all"
+                      className="w-full px-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all"
 
                       <option value="">Select primary use case</option>
                       {useCases.map(useCase => (
@@ -452,7 +444,7 @@ export default function Signup() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-4 px-8 rounded-lg font-semibold text-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                    className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-4 px-8 rounded-lg font-semibold text-lg hover: fro m-zion-cyan-dark hover: t o-zion-purple-dark transition-all duration-300 transform hover: scal e-105 disabled: opacit y-50 disabled: curso r-not-allowed disabled: transfor m-none"
 
                     {isSubmitting ? (
                       <div className="flex items-center justify-center gap-3">
@@ -461,7 +453,7 @@ export default function Signup() {
                       </div>
                     ) : (
                       <div className="flex items-center justify-center gap-3">
-                        <Zap className="w-5 h-5" />
+                        <Zap className="w-5 h-5"  />
                         Create Account
                       </div>
                     )}
@@ -472,17 +464,17 @@ export default function Signup() {
                 <div className="mt-8 text-center">
                   <p className="text-zion-slate-light text-sm">
                     Already have an account?{' '}
-                    <a href="/login" className="text-zion-cyan hover:text-zion-cyan-light transition-colors font-medium">
+                    <a href="/login" className="text-zion-cyan hover: tex t-zion-cyan-light transition-colors font-medium">
                       Sign in here
                     </a>
                   </p>
                   <p className="text-zion-slate-light text-xs mt-2">
                     By creating an account, you agree to our{' '}
-                    <a href="/terms" className="text-zion-cyan hover:text-zion-cyan-light transition-colors">
+                    <a href="/terms" className="text-zion-cyan hover: tex t-zion-cyan-light transition-colors">
                       Terms of Service
                     </a>{' '}
                     and{' '}
-                    <a href="/privacy" className="text-zion-cyan hover:text-zion-cyan-light transition-colors">
+                    <a href="/privacy" className="text-zion-cyan hover: tex t-zion-cyan-light transition-colors">
                       Privacy Policy
                     </a>
                   </p>
@@ -494,11 +486,11 @@ export default function Signup() {
 
         {/* Benefits Section */}
         <section className="py-20">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="container mx-auto px-4 sm: p x-6 lg: p x-8">
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -528,7 +520,7 @@ export default function Signup() {
 }}
               className="text-center mb-16"
 
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+              <h2 className="text-3xl md: tex t-4xl font-bold mb-6 text-white">
                 Why Join Zion Tech Group?
               </h2>
               <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
@@ -536,11 +528,11 @@ export default function Signup() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: gri d-cols-3 gap-8">
               <motion.div
                 initial = {
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -571,7 +563,7 @@ export default function Signup() {
                 className="text-center p-6"
 
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Shield className="w-8 h-8 text-white" />
+                  <Shield className="w-8 h-8 text-white"  />
                 </div>
                 <h3 className="text-xl font-semibold mb-3 text-white">Enterprise Security</h3>
                 <p className="text-zion-slate-light">
@@ -582,7 +574,7 @@ export default function Signup() {
               <motion.div
                 initial = {
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -613,7 +605,7 @@ export default function Signup() {
                 className="text-center p-6"
 
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Brain className="w-8 h-8 text-white" />
+                  <Brain className="w-8 h-8 text-white"  />
                 </div>
                 <h3 className="text-xl font-semibold mb-3 text-white">AI Innovation</h3>
                 <p className="text-zion-slate-light">
@@ -624,7 +616,7 @@ export default function Signup() {
               <motion.div
                 initial = {
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -655,7 +647,7 @@ export default function Signup() {
                 className="text-center p-6"
 
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan-light to-zion-purple-light rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Cloud className="w-8 h-8 text-white" />
+                  <Cloud className="w-8 h-8 text-white"  />
                 </div>
                 <h3 className="text-xl font-semibold mb-3 text-white">Cloud Native</h3>
                 <p className="text-zion-slate-light">

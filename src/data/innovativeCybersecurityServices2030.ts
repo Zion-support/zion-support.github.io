@@ -64,7 +64,7 @@ const zionContact = {
 
 };
 
-export const innovativeCybersecurityServices2030: CybersecurityService[] = [{
+export const innovativeCybersecurityServices2030: CybersecurityServic e[] = [{
 "
     id: "quantum-resistant-encryption","
     title: "Zion Quantum-Resistant Encryption Platform","
@@ -73,8 +73,8 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [{
     subcategory: "Encryption & Cryptography",
     pricing: {
 
-      monthly: 899,
-      yearly: 8990,"
+      monthly: 89 9,
+      yearly: 899 0,"
       custom: "Enterprise encryption solutions","
       currency: "$","
       pricingModel: "Monthly subscription with data volume pricing","
@@ -133,7 +133,7 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [{
     phone: "+1 302 464 0950","
     address: "364 E Main St STE 1008 Middletown DE 19709",
     rating: 4.9,
-    reviewCount: 178,"
+    reviewCount: 17 8,"
     innovationLevel: "Revolutionary","
     marketSize: "$15.2B by 2030","
     competitors["Thales", "Gemalto", "Utimaco", "Atos"],;
@@ -143,20 +143,20 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [{
     ],;"
     complianceStandards["FIPS 140-2", "Common Criteria", "SOC 2", "ISO 27001", "GDPR"],;"
     deploymentOptions["Cloud", "On-premise", "Hybrid", "Edge"],;
-    apiAccess: true,
-    customDevelopment: true,
-    trainingIncluded: true,
-    freeTrial: true,
-    moneyBackGuarantee: true,"
+    apiAccess: tru e,
+    customDevelopment: tru e,
+    trainingIncluded: tru e,
+    freeTrial: tru e,
+    moneyBackGuarantee: tru e,"
     sla: "99.99% uptime guarantee","
     responseTime: "< 1 second","
     availability: "Global","
     location: "Global","
     tags: ["Quantum Encryption", "Post-Quantum Cryptography", "Data Protection", "Compliance", "Zero Trust"],"
     image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto = format&fit=crop&w=800&h=500","
-    createdAt: "2030-01-15T10:00:00.000Z",
-    featured: true,
-    trending: true
+    createdAt: "2030-01-15T10: 0 0:00.000Z",
+    featured: tru e,
+    trending: tru e
   },
 
   {
@@ -168,8 +168,8 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [{
     subcategory: "Threat Detection & Response",
     pricing: {
 
-      monthly: 699,
-      yearly: 6990,"
+      monthly: 69 9,
+      yearly: 699 0,"
       custom: "Enterprise threat hunting solutions","
       currency: "$","
       pricingModel: "Monthly subscription with endpoint-based pricing","
@@ -228,7 +228,7 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [{
     phone: "+1 302 464 0950","
     address: "364 E Main St STE 1008 Middletown DE 19709",
     rating: 4.8,
-    reviewCount: 245,"
+    reviewCount: 24 5,"
     innovationLevel: "Innovative","
     marketSize: "$22.8B by 2030","
     competitors["CrowdStrike", "SentinelOne", "Darktrace", "Cylance"],;
@@ -238,20 +238,20 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [{
     ],;"
     complianceStandards["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],;"
     deploymentOptions["Cloud", "On-premise", "Hybrid"],;
-    apiAccess: true,
-    customDevelopment: true,
-    trainingIncluded: true,
-    freeTrial: true,
-    moneyBackGuarantee: true,"
+    apiAccess: tru e,
+    customDevelopment: tru e,
+    trainingIncluded: tru e,
+    freeTrial: tru e,
+    moneyBackGuarantee: tru e,"
     sla: "99.9% uptime guarantee","
     responseTime: "< 2 seconds","
     availability: "Global","
     location: "Global","
     tags["AI Threat Hunting", "Cybersecurity", "Threat Detection", "Incident Response", "SOC"],;"
     image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&h=500","
-    createdAt: "2030-01-15T10:00:00.000Z",
-    featured: true,
-    trending: true
+    createdAt: "2030-01-15T10: 0 0:00.000Z",
+    featured: tru e,
+    trending: tru e
   },
 
   {
@@ -263,8 +263,8 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [{
     subcategory: "Network Security",
     pricing: {
 
-      monthly: 499,
-      yearly: 4990,"
+      monthly: 49 9,
+      yearly: 499 0,"
       custom: "Enterprise ZTNA solutions","
       currency: "$","
       pricingModel: "Monthly subscription with user-based pricing","
@@ -323,7 +323,7 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [{
     phone: "+1 302 464 0950","
     address: "364 E Main St STE 1008 Middletown DE 19709",
     rating: 4.7,
-    reviewCount: 198,"
+    reviewCount: 19 8,"
     innovationLevel: "Innovative","
     marketSize: "$18.7B by 2030","
     competitors["Zscaler", "Cloudflare", "Akamai", "Perimeter 81"],;
@@ -333,20 +333,20 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [{
     ],;"
     complianceStandards["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],;"
     deploymentOptions["Cloud", "Hybrid", "On-premise"],;
-    apiAccess: true,
-    customDevelopment: true,
-    trainingIncluded: true,
-    freeTrial: true,
-    moneyBackGuarantee: true,"
+    apiAccess: tru e,
+    customDevelopment: tru e,
+    trainingIncluded: tru e,
+    freeTrial: tru e,
+    moneyBackGuarantee: tru e,"
     sla: "99.9% uptime guarantee","
     responseTime: "< 1 second","
     availability: "Global","
     location: "Global","
     tags["Zero Trust", "Network Security", "Access Control", "Identity Management", "VPN Alternative"],;"
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500","
-    createdAt: "2030-01-15T10:00:00.000Z",
-    featured: true,
-    trending: true
+    createdAt: "2030-01-15T10: 0 0:00.000Z",
+    featured: tru e,
+    trending: tru e
   },
 
   {
@@ -358,8 +358,8 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [{
     subcategory: "Vulnerability Management",
     pricing: {
 
-      monthly: 399,
-      yearly: 3990,"
+      monthly: 39 9,
+      yearly: 399 0,"
       custom: "Enterprise vulnerability management","
       currency: "$","
       pricingModel: "Monthly subscription with asset-based pricing","
@@ -418,7 +418,7 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [{
     phone: "+1 302 464 0950","
     address: "364 E Main St STE 1008 Middletown DE 19709",
     rating: 4.6,
-    reviewCount: 167,"
+    reviewCount: 16 7,"
     innovationLevel: "Innovative","
     marketSize: "$12.4B by 2030","
     competitors["Qualys", "Rapid7", "Tenable", "Nessus"],;
@@ -428,20 +428,20 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [{
     ],;"
     complianceStandards["SOC 2", "ISO 27001", "NIST", "GDPR", "PCI DSS"],;"
     deploymentOptions["Cloud", "On-premise", "Hybrid"],;
-    apiAccess: true,
-    customDevelopment: true,
-    trainingIncluded: true,
-    freeTrial: true,
-    moneyBackGuarantee: true,"
+    apiAccess: tru e,
+    customDevelopment: tru e,
+    trainingIncluded: tru e,
+    freeTrial: tru e,
+    moneyBackGuarantee: tru e,"
     sla: "99.9% uptime guarantee","
     responseTime: "< 2 seconds","
     availability: "Global","
     location: "Global","
     tags["Vulnerability Management", "AI Security", "Risk Assessment", "Patch Management", "Compliance"],;"
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500","
-    createdAt: "2030-01-15T10:00:00.000Z",
-    featured: true,
-    trending: true
+    createdAt: "2030-01-15T10: 0 0:00.000Z",
+    featured: tru e,
+    trending: tru e
   },
 
   {
@@ -453,8 +453,8 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [{
     subcategory: "Blockchain Security",
     pricing: {
 
-      monthly: 799,
-      yearly: 7990,"
+      monthly: 79 9,
+      yearly: 799 0,"
       custom: "Enterprise blockchain security","
       currency: "$","
       pricingModel: "Monthly subscription with audit-based pricing","
@@ -513,7 +513,7 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [{
     phone: "+1 302 464 0950","
     address: "364 E Main St STE 1008 Middletown DE 19709",
     rating: 4.8,
-    reviewCount: 134,"
+    reviewCount: 13 4,"
     innovationLevel: "Innovative","
     marketSize: "$8.9B by 2030","
     competitors["Consensys Diligence", "Trail of Bits", "OpenZeppelin", "Quantstamp"],;
@@ -523,20 +523,20 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [{
     ],;"
     complianceStandards["SOC 2", "ISO 27001", "NIST", "Industry-specific"],;"
     deploymentOptions["Cloud", "On-premise", "Hybrid"],;
-    apiAccess: true,
-    customDevelopment: true,
-    trainingIncluded: true,
-    freeTrial: true,
-    moneyBackGuarantee: true,"
+    apiAccess: tru e,
+    customDevelopment: tru e,
+    trainingIncluded: tru e,
+    freeTrial: tru e,
+    moneyBackGuarantee: tru e,"
     sla: "99.9% uptime guarantee","
     responseTime: "< 3 seconds","
     availability: "Global","
     location: "Global"}"
     tags: ["Blockchain Security", "Smart Contract Auditing", "DeFi Security", "Cryptocurrency", "Digital Assets"],;"
     image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500",;"
-    createdAt: "2030-01-15T10:00:00.000Z",;
-    featured: true,;
-    trending: true};
+    createdAt: "2030-01-15T10: 0 0:00.000Z",;
+    featured: tru e,;
+    trending: tru e};
 ];
 
 export default innovativeCybersecurityServices2030}}"

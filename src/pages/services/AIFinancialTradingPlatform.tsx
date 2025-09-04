@@ -1,6 +1,6 @@
       ],;"
       cta: "Start Free Trial",
-      popular: false
+      popular: fals e
     },
     {
 "
@@ -18,7 +18,7 @@
         "API access"
       ],;"
       cta: "Start Free Trial",
-      popular: true
+      popular: tru e
     },
     {
 "
@@ -36,23 +36,23 @@
         "24/7 phone support";
       ],;"
       cta: "Contact Sales",;
-      popular: false};
+      popular: fals e};
   ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
         title="AI Financial Trading Platform - Zion Tech Group""        description="Revolutionize your trading with AI-powered market analysis, algorithmic trading, and risk management. Increase returns and reduce risks."
-       />
+        />
 
       {/* Hero Section */}"
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
+      <section className="relative py-20 px-4 sm: p x-6 lg: p x-8">"
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -74,9 +74,9 @@
             transition={{ duration: 0.8 }}
 "
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-600 to-emerald-600 text-white text-sm font-medium mb-6">"
-              <Brain className="w-4 h-4 mr-2"  />              AI-Powered Trading
+              <Brain className="w-4 h-4 mr-2"   />              AI-Powered Trading
             </div>"
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md: tex t-6xl font-bold text-white mb-6">
               AI Financial"
               <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">"
                 {" "}Trading Platform
@@ -86,18 +86,18 @@
               Transform your trading with AI that analyzes markets, executes trades, and manages risk automatically.
               Increase returns, reduce risks, and trade with institutional-grade technology.
             </p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
-                className="px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-200"
+                className="px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover: fro m-green-700 hover: t o-emerald-700 transition-all duration-200"
 
                 Start Free Trial
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
-                className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200"
+                className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover: b g-gray-800 transition-all duration-200"
 
                 Watch Demo
               </motion.button>
@@ -107,13 +107,13 @@
       </section>
 
       {/* Features Section */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;"
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8">;"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -143,14 +143,14 @@
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
             {features.map((feature, index (
               <motion.div
                 key={index}
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -172,7 +172,7 @@
                 transition = {
 
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -180,10 +180,10 @@
 
 
 }}"
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500 transition-all duration-300"
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover: borde r-green-500 transition-all duration-300"
 "
                 <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-emerald-600 rounded-lg flex items-center justify-center mb-4">"
-                  <CheckCircle className="w-6 h-6 text-white"  />
+                  <CheckCircle className="w-6 h-6 text-white"   />
                 </div>"                <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>
               </motion.div>;
             ))}
@@ -192,13 +192,13 @@
       </section>
 
       {/* Benefits Section */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;"
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-gray-800/30">;"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -228,14 +228,14 @@
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map(benefit: unknown, index: unknown (
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
+            {benefits.map(benefit: unknow n, index: unknow n (
               <motion.div
                 key={index}
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -257,7 +257,7 @@
                 transition = {
 
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -268,7 +268,7 @@
                 className="text-center"
 "
                 <div className="w-20 h-20 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">"
-                  <TrendingUp className="w-10 h-10 text-white"  />
+                  <TrendingUp className="w-10 h-10 text-white"   />
                 </div>"                <p className="text-lg text-white font-medium">{benefit}</p>
               </motion.div>;
             ))}
@@ -277,13 +277,13 @@
       </section>
 
       {/* Use Cases Section */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;"
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8">;"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -313,14 +313,14 @@
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map(useCase: unknown, index: unknown (
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-6">
+            {useCases.map(useCase: unknow n, index: unknow n (
               <motion.div
                 key={index}
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -342,7 +342,7 @@
                 transition = {
 
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -350,10 +350,10 @@
 
 
 }}"
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-green-500 transition-all duration-300"
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover: borde r-green-500 transition-all duration-300"
 "
                 <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-lg flex items-center justify-center mx-auto mb-4">"
-                  <Target className="w-8 h-8 text-white"  />
+                  <Target className="w-8 h-8 text-white"   />
                 </div>"                <h3 className="text-lg font-semibold text-white">{useCase}</h3>
               </motion.div>;
             ))}
@@ -362,13 +362,13 @@
       </section>
 
       {/* Pricing Section */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;"
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-gray-800/30">;"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -398,14 +398,14 @@
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
-            {pricing.map(plan: unknown, index: unknown (
+          <div className="grid grid-cols-1 md: gri d-cols-3 gap-8">
+            {pricing.map(plan: unknow n, index: unknow n (
               <motion.div
                 key={index}
                 initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -427,7 +427,7 @@
                 transition = {
 
   { duration: 0.5,
-  delay: index * 0.1 
+  delay: inde x * 0.1 
 
 
 
@@ -462,7 +462,7 @@
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-start">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0"  />"                      <span className="text-gray-300">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0"   />"                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -473,8 +473,8 @@
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
 
                     plan.popular'
-                      ? 'bg-gradient-to-r from-green-600 to-emerald-600 text-white hover:from-green-700 hover:to-emerald-700''
-                      : 'bg-gray-700 text-white hover:bg-gray-600'`
+                      ? 'bg-gradient-to-r from-green-600 to-emerald-600 text-white hover: fro m-green-700 hover: t o-emerald-700''
+                      : 'bg-gray-700 text-white hover: b g-gray-600'`
                   }`}
 
                   {plan.cta}
@@ -486,13 +486,13 @@
       </section>
 
       {/* CTA Section */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;"
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8">;"
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial = {
 
   { opacity: 0,
-  y: 20 
+  y: 2 0 
 
 
 
@@ -519,18 +519,18 @@
             <p className="text-xl text-gray-300 mb-8">
               Join thousands of traders who have already revolutionized their trading with AI
             </p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
-                className="px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-200"
+                className="px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover: fro m-green-700 hover: t o-emerald-700 transition-all duration-200"
 
                 Start Free Trial
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
-                className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200"
+                className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover: b g-gray-800 transition-all duration-200"
 
                 Schedule Demo
               </motion.button>
@@ -543,12 +543,12 @@
       </section>
 
       {/* Contact Info */}"
-      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-800/50">;"
+      <section className="py-12 px-4 sm: p x-6 lg: p x-8 bg-gray-800/50">;"
         <div className="max-w-4xl mx-auto text-center">"
           <p className="text-gray-400 mb-4">
             Need help choosing the right plan? Contact our sales team
           </p>"
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm text-gray-400">
+          <div className="flex flex-col sm: fle x-row gap-4 justify-center items-center text-sm text-gray-400">
             <span>📞 +1 302 464 0950</span>
             <span>📧 kleber@ziontechgroup.com</span>
             <span>🌐 https://ziontechgroup.com</span>;

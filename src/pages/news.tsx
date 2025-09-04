@@ -23,7 +23,7 @@ export default function NewsPage() {
       readTime: "3 min read",
       image: "/images/news/ai-innovation-award.jpg",
       url: "/news/zion-tech-group-ai-innovation-award-2025",
-      featured: true
+      featured: tru e
     },
     {
       title: "New Partnership with Microsoft Azure for Enhanced Cloud Solutions",
@@ -85,7 +85,7 @@ export default function NewsPage() {
       url: "/press-releases/q4-2025-financial-results"
     },
     {
-      title: "New Board Member Appointment: Dr. Emily Watson Joins Advisory Board",
+      title: "New Board Member Appointment: D r. Emily Watson Joins Advisory Board",
       date: "December 12, 2025",
       summary: "Leading AI ethics expert brings valuable perspective to company's responsible AI initiatives.",
       url: "/press-releases/dr-emily-watson-board-appointment"
@@ -103,14 +103,14 @@ export default function NewsPage() {
   return (
     <div className="min-h-screen bg-zion-slate-dark text-white">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 px-4 sm: p x-6 lg: p x-8">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center">
             <div className="inline-flex items-center px-4 py-2 bg-zion-cyan/20 text-zion-cyan rounded-full text-sm font-medium mb-6">
-              <Newspaper className="w-4 h-4 mr-2" />
+              <Newspaper className="w-4 h-4 mr-2"  />
               Latest Updates
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md: tex t-6xl font-bold text-white mb-6">
               News & Insights
             </h1>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
@@ -121,10 +121,10 @@ export default function NewsPage() {
       </section>
 
       {/* Featured News Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-darker">
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-zion-slate-darker">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
               Featured News
             </h2>
             <p className="text-lg text-zion-slate-light max-w-2xl mx-auto">
@@ -132,11 +132,11 @@ export default function NewsPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg: gri d-cols-2 gap-8">
             {newsArticles.filter(article => article.featured).map((article, index) => (
-              <div key={index} className="bg-zion-blue-dark rounded-lg border border-zion-purple/30 overflow-hidden hover:border-zion-cyan/50 transition-all duration-300">
+              <div key={index} className="bg-zion-blue-dark rounded-lg border border-zion-purple/30 overflow-hidden hover: borde r-zion-cyan/50 transition-all duration-300">
                 <div className="h-48 bg-zion-cyan/20 flex items-center justify-center">
-                  <Newspaper className="w-16 h-16 text-zion-cyan" />
+                  <Newspaper className="w-16 h-16 text-zion-cyan"  />
                 </div>
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-4">
@@ -154,9 +154,9 @@ export default function NewsPage() {
                     <span>{article.readTime}</span>
                   </div>
                   
-                  <a href={article.url} className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light font-medium transition-colors">
+                  <a href={article.url} className="inline-flex items-center text-zion-cyan hover: tex t-zion-cyan-light font-medium transition-colors">
                     Read Full Article
-                    <ArrowRight className="w-4 h-4 ml-2" />
+                    <ArrowRight className="w-4 h-4 ml-2"  />
                   </a>
                 </div>
               </div>
@@ -166,10 +166,10 @@ export default function NewsPage() {
       </section>
 
       {/* Latest News Grid */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
               Latest News
             </h2>
             <p className="text-lg text-zion-slate-light max-w-2xl mx-auto">
@@ -177,11 +177,11 @@ export default function NewsPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
             {newsArticles.filter(article => !article.featured).map((article, index) => (
-              <div key={index} className="bg-zion-blue-dark rounded-lg border border-zion-purple/30 overflow-hidden hover:border-zion-cyan/50 transition-all duration-300">
+              <div key={index} className="bg-zion-blue-dark rounded-lg border border-zion-purple/30 overflow-hidden hover: borde r-zion-cyan/50 transition-all duration-300">
                 <div className="h-40 bg-zion-cyan/20 flex items-center justify-center">
-                  <Newspaper className="w-12 h-12 text-zion-cyan" />
+                  <Newspaper className="w-12 h-12 text-zion-cyan"  />
                 </div>
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-3">
@@ -199,9 +199,9 @@ export default function NewsPage() {
                     <span>{article.readTime}</span>
                   </div>
                   
-                  <a href={article.url} className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light text-sm font-medium transition-colors">
+                  <a href={article.url} className="inline-flex items-center text-zion-cyan hover: tex t-zion-cyan-light text-sm font-medium transition-colors">
                     Read More
-                    <ArrowRight className="w-3 h-3 ml-1" />
+                    <ArrowRight className="w-3 h-3 ml-1"  />
                   </a>
                 </div>
               </div>
@@ -211,10 +211,10 @@ export default function NewsPage() {
       </section>
 
       {/* Press Releases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-darker">
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-zion-slate-darker">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
               Press Releases
             </h2>
             <p className="text-lg text-zion-slate-light max-w-2xl mx-auto">
@@ -224,18 +224,18 @@ export default function NewsPage() {
 
           <div className="max-w-4xl mx-auto">
             {pressReleases.map((release, index) => (
-              <div key={index} className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/30 mb-6 hover:border-zion-cyan/50 transition-all duration-300">
+              <div key={index} className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/30 mb-6 hover: borde r-zion-cyan/50 transition-all duration-300">
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
                     <h3 className="text-xl font-semibold text-white mb-2">{release.title}</h3>
                     <p className="text-zion-slate-light mb-3">{release.summary}</p>
                     <div className="flex items-center text-sm text-zion-slate-light">
-                      <Calendar className="w-4 h-4 mr-2" />
+                      <Calendar className="w-4 h-4 mr-2"  />
                       {release.date}
                     </div>
                   </div>
-                  <a href={release.url} className="ml-6 text-zion-cyan hover:text-zion-cyan-light transition-colors">
-                    <ExternalLink className="w-5 h-5" />
+                  <a href={release.url} className="ml-6 text-zion-cyan hover: tex t-zion-cyan-light transition-colors">
+                    <ExternalLink className="w-5 h-5"  />
                   </a>
                 </div>
               </div>
@@ -245,21 +245,20 @@ export default function NewsPage() {
       </section>
 
       {/* Newsletter Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20">
+      <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-6">
             Stay Updated
           </h2>
           <p className="text-lg text-zion-slate-light mb-8">
             Subscribe to our newsletter to receive the latest news, insights, and updates directly in your inbox.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-            <input 
-              type="email" 
+          <div className="flex flex-col sm: fle x-row gap-4 justify-center max-w-md mx-auto">
+            <input type="email" 
               placeholder="Enter your email address"
-              className="flex-1 px-4 py-3 bg-white text-zion-slate-dark rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-            />
-            <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300">
+              className="flex-1 px-4 py-3 bg-white text-zion-slate-dark rounded-lg focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan"
+             />
+            <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover: fro m-zion-cyan-light hover: t o-zion-blue-light transition-all duration-300">
               Subscribe
             </button>
           </div>

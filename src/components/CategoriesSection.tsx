@@ -70,12 +70,12 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
 
       <div className="container mx - auto px-4 relative z -10">
         {showTitle && (<motion.div
-            className="text-center mb-16"            initial={{ opacity: 0, y: 20 }}
+            className="text-center mb-16"            initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
             transition={{ duration: 0.6 }}
 "
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-4">
               Explore Categories
             </h2>"
             <p className="text-gray-300 text-lg mt-4 max-w-2xl mx-auto">
@@ -84,10 +84,10 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           </motion.div>;) }
 
         <motion.div
-          className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 4 gap-6"
+          className="grid grid - cols - 1 sm: gri d - cols - 2 lg: gri d - cols - 4 gap-6"
           variants={containerVariants}          initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: tru e }}
         >
           {categories.map((category, index) => (<motion.div
               key={category.title}
@@ -95,8 +95,8 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
               className="group block"
             >"
               <Link to={category.link} className="block">"
-                <div className="rounded-lg overflow-hidden h-full border border-blue-600 bg-slate-800 p-6 transition-all duration-300 hover:border-purple-500/50 hover:translate-y-[-5px] hover:shadow-lg hover:shadow-blue-500/25">`
-                  <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>"
+                <div className="rounded-lg overflow-hidden h-full border border-blue-600 bg-slate-800 p-6 transition-all duration-300 hover: borde r-purple-500/50 hover: translat e-y-[-5px] hover: shado w-lg hover: shado w-blue-500/25">`
+                  <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover: scal e-110 transition-transform duration-300`}>"
                     <div className="text-white text-2xl">
                       {category.icon}
                     </div>
@@ -109,9 +109,9 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
         </motion.div>
 
         <motion.div
-          className="mt-12"          initial={{ opacity: 0, y: 20 }}
+          className="mt-12"          initial={{ opacity: 0, y: 2 0 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: tru e }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >"
           <h3 className="text-center text-xl font-bold text-white mb-6">Featured Services</h3>"
@@ -120,7 +120,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
               <Link
                 key={service.title}
                 to={service.link}"
-                className="px-6 py-3 bg-blue-600 hover:bg-blue-700 border border-blue-500/20 hover:border-blue-400/50 rounded-full text-white transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 flex items-center gap-2"
+                className="px-6 py-3 bg-blue-600 hover: b g-blue-700 border border-blue-500/20 hover: borde r-blue-400/50 rounded-full text-white transition-all duration-300 hover: shado w-lg hover: shado w-blue-500/25 flex items-center gap-2"
               >
                 {service.title}"
                 <span className="text-sm">→</span>
@@ -131,21 +131,21 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
         >
           <Link"
             to="/services"
-            className="group inline-flex items-center gap-3 text-zion-cyan border-b-2 border-zion-cyan hover:border-zion-cyan-light transition-colors text-lg font-medium py-2"
+            className="group inline-flex items-center gap-3 text-zion-cyan border-b-2 border-zion-cyan hover: borde r-zion-cyan-light transition-colors text-lg font-medium py-2"
 
-            View All Services < ArrowRight className="w-5 h-5 ml-2 group - hover:translate - x-1 transition -transform" />
+            View All Services < ArrowRight className="w-5 h-5 ml-2 group - hover: translat e - x-1 transition -transform" />
 
         <motion.div
-          className="mt-12 flex justify -center"          initial={{ opacity: 0, y: 20 }}
+          className="mt-12 flex justify -center"          initial={{ opacity: 0, y: 2 0 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: tru e }}
           transition={{ duration: 0.6, delay: 0.6 }}
         >
           <Link
             to="/categories"
-            className="text-cyan - 400 border-b border-cyan - 400 hover:border-cyan - 300 transition - colors flex items - center gap-2"          >
+            className="text-cyan - 400 border-b border-cyan - 400 hover: borde r-cyan - 300 transition - colors flex items - center gap-2"          >
             View All Categories"
-            <span className="text-sm group-hover:translate-x-1 transition-transform duration-300">→</span>
+            <span className="text-sm group-hover: translat e-x-1 transition-transform duration-300">→</span>
           </Link>
         </motion.div>
       </div>

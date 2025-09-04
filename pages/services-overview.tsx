@@ -61,16 +61,16 @@ export default function Services() {
   return (
     <PageTransition>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm: py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm: p y-32">
+        <div className="mx-auto max-w-7xl px-6 lg: p x-8">
           <div className="mx-auto max-w-2xl text-center">
             <div className="flex items-center justify-center mb-4">
-              <Award className="h-6 w-6 text-blue-600 mr-2" />
+              <Award className="h-6 w-6 text-blue-600 mr-2"  />
               <span className="text-base font-semibold leading-7 text-blue-600">
                 Our Services
               </span>
             </div>
-            <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm: tex t-4xl">
               Our Services
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -82,17 +82,17 @@ export default function Services() {
         </div>
       </section>
       {/* Services Grid */}
-      <section className="py-24 sm: py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid gap-8 lg:grid-cols-2">
+      <section className="py-24 sm: p y-32">
+        <div className="mx-auto max-w-7xl px-6 lg: p x-8">
+          <div className="grid gap-8 lg: gri d-cols-2">
             {/* AI Autonomous Systems */}
             <div
               id="ai"
-              className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:border-blue-300"
+              className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shado w-lg transition-all duration-300 hover: borde r-blue-300"
             >
               <div className="flex items-center gap-x-3 mb-6">
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 group-hover:bg-blue-700 transition-colors">
-                  <Brain className="h-7 w-7 text-white" />
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 group-hover: b g-blue-700 transition-colors">
+                  <Brain className="h-7 w-7 text-white"  />
                 </div>
                 <div>
                   <h2 className="text-xl font-semibold text-gray-900">
@@ -109,25 +109,25 @@ export default function Services() {
               </p>
               <ul className="space-y-3 mb-6">
                 <li className="flex items-center gap-x-3">
-                  <CheckCircle className="h-4 w-4 text-blue-600" />
+                  <CheckCircle className="h-4 w-4 text-blue-600"  />
                   <span className="text-sm text-gray-700">
                     Sales/CS multi-agent copilots
                   </span>
                 </li>
                 <li className="flex items-center gap-x-3">
-                  <CheckCircle className="h-4 w-4 text-blue-600" />
+                  <CheckCircle className="h-4 w-4 text-blue-600"  />
                   <span className="text-sm text-gray-700">
                     RAG and workflow orchestration
                   </span>
                 </li>
                 <li className="flex items-center gap-x-3">
-                  <CheckCircle className="h-4 w-4 text-blue-600" />
+                  <CheckCircle className="h-4 w-4 text-blue-600"  />
                   <span className="text-sm text-gray-700">
                     Observability and guardrails
                   </span>
                 </li>
                 <li className="flex items-center gap-x-3">
-                  <CheckCircle className="h-4 w-4 text-blue-600" />
+                  <CheckCircle className="h-4 w-4 text-blue-600"  />
                   <span className="text-sm text-gray-700">
                     Intelligent process automation
                   </span>
@@ -135,27 +135,27 @@ export default function Services() {
               </ul>
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-2 text-sm text-gray-500">
-                  <Clock className="h-4 w-4" />
+                  <Clock className="h-4 w-4"  />
                   <span>2-4 weeks delivery</span>
                 </div>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-500 transition-colors group"
+                  className="inline-flex items-center text-sm font-semibold text-blue-600 hover: tex t-blue-500 transition-colors group"
                   aria-label="Get started with AI services"
                 >
                   Get started with AI
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover: translat e-x-1 transition-transform"  />
                 </Link>
               </div>
             </div>
             {/* Cloud Platforms */}
             <div
               id="cloud"
-              className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:border-green-300"
+              className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shado w-lg transition-all duration-300 hover: borde r-green-300"
             >
               <div className="flex items-center gap-x-3 mb-6">
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-green-600 group-hover:bg-green-700 transition-colors">
-                  <Cloud className="h-7 w-7 text-white" />
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-green-600 group-hover: b g-green-700 transition-colors">
+                  <Cloud className="h-7 w-7 text-white"  />
                 </div>
                 <div>
                   <h2 className="text-xl font-semibold text-gray-900">
@@ -172,25 +172,25 @@ export default function Services() {
               </p>
               <ul className="space-y-3 mb-6">
                 <li className="flex items-center gap-x-3">
-                  <CheckCircle className="h-4 w-4 text-green-600" />
+                  <CheckCircle className="h-4 w-4 text-green-600"  />
                   <span className="text-sm text-gray-700">
                     Serverless and Kubernetes
                   </span>
                 </li>
                 <li className="flex items-center gap-x-3">
-                  <CheckCircle className="h-4 w-4 text-green-600" />
+                  <CheckCircle className="h-4 w-4 text-green-600"  />
                   <span className="text-sm text-gray-700">
                     Data pipelines and ML ops
                   </span>
                 </li>
                 <li className="flex items-center gap-x-3">
-                  <CheckCircle className="h-4 w-4 text-green-600" />
+                  <CheckCircle className="h-4 w-4 text-green-600"  />
                   <span className="text-sm text-gray-700">
                     FinOps and SRE practices
                   </span>
                 </li>
                 <li className="flex items-center gap-x-3">
-                  <CheckCircle className="h-4 w-4 text-green-600" />
+                  <CheckCircle className="h-4 w-4 text-green-600"  />
                   <span className="text-sm text-gray-700">
                     Multi-cloud architecture
                   </span>
@@ -198,27 +198,27 @@ export default function Services() {
               </ul>
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-2 text-sm text-gray-500">
-                  <Clock className="h-4 w-4" />
+                  <Clock className="h-4 w-4"  />
                   <span>4-8 weeks delivery</span>
                 </div>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center text-sm font-semibold text-green-600 hover: text-green-500 transition-colors group"
+                  className="inline-flex items-center text-sm font-semibold text-green-600 hover: tex t-green-500 transition-colors group"
                   aria-label="Get started with cloud services"
                 >
                   Get started with Cloud
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover: translat e-x-1 transition-transform"  />
                 </Link>
               </div>
             </div>
             {/* Cybersecurity */}
             <div
               id="cybersecurity"
-              className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:border-purple-300"
+              className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shado w-lg transition-all duration-300 hover: borde r-purple-300"
             >
               <div className="flex items-center gap-x-3 mb-6">
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-purple-600 group-hover:bg-purple-700 transition-colors">
-                  <Shield className="h-7 w-7 text-white" />
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-purple-600 group-hover: b g-purple-700 transition-colors">
+                  <Shield className="h-7 w-7 text-white"  />
                 </div>
                 <div>
                   <h2 className="text-xl font-semibold text-gray-900">
@@ -235,51 +235,51 @@ export default function Services() {
               </p>
               <ul className="space-y-3 mb-6">
                 <li className="flex items-center gap-x-3">
-                  <CheckCircle className="h-4 w-4 text-purple-600" />
+                  <CheckCircle className="h-4 w-4 text-purple-600"  />
                   <span className="text-sm text-gray-700">
                     Zero-trust architecture
                   </span>
                 </li>
                 <li className="flex items-center gap-x-3">
-                  <CheckCircle className="h-4 w-4 text-purple-600" />
+                  <CheckCircle className="h-4 w-4 text-purple-600"  />
                   <span className="text-sm text-gray-700">
                     Compliance automation
                   </span>
                 </li>
                 <li className="flex items-center gap-x-3">
-                  <CheckCircle className="h-4 w-4 text-purple-600" />
+                  <CheckCircle className="h-4 w-4 text-purple-600"  />
                   <span className="text-sm text-gray-700">
                     Incident response
                   </span>
                 </li>
                 <li className="flex items-center gap-x-3">
-                  <CheckCircle className="h-4 w-4 text-purple-600" />
+                  <CheckCircle className="h-4 w-4 text-purple-600"  />
                   <span className="text-sm text-gray-700">Security audits</span>
                 </li>
               </ul>
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-2 text-sm text-gray-500">
-                  <Clock className="h-4 w-4" />
+                  <Clock className="h-4 w-4"  />
                   <span>3-6 weeks delivery</span>
                 </div>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center text-sm font-semibold text-purple-600 hover:text-purple-500 transition-colors group"
+                  className="inline-flex items-center text-sm font-semibold text-purple-600 hover: tex t-purple-500 transition-colors group"
                   aria-label="Get started with cybersecurity services"
                 >
                   Get started with Security
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover: translat e-x-1 transition-transform"  />
                 </Link>
               </div>
             </div>
             {/* Micro SaaS */}
             <div
               id="saas"
-              className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:border-orange-300"
+              className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shado w-lg transition-all duration-300 hover: borde r-orange-300"
             >
               <div className="flex items-center gap-x-3 mb-6">
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-orange-600 group-hover:bg-orange-700 transition-colors">
-                  <Code className="h-7 w-7 text-white" />
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-orange-600 group-hover: b g-orange-700 transition-colors">
+                  <Code className="h-7 w-7 text-white"  />
                 </div>
                 <div>
                   <h2 className="text-xl font-semibold text-gray-900">
@@ -296,23 +296,23 @@ export default function Services() {
               </p>
               <ul className="space-y-3 mb-6">
                 <li className="flex items-center gap-x-3">
-                  <CheckCircle className="h-4 w-4 text-orange-600" />
+                  <CheckCircle className="h-4 w-4 text-orange-600"  />
                   <span className="text-sm text-gray-700">
                     Custom web applications
                   </span>
                 </li>
                 <li className="flex items-center gap-x-3">
-                  <CheckCircle className="h-4 w-4 text-orange-600" />
+                  <CheckCircle className="h-4 w-4 text-orange-600"  />
                   <span className="text-sm text-gray-700">API development</span>
                 </li>
                 <li className="flex items-center gap-x-3">
-                  <CheckCircle className="h-4 w-4 text-orange-600" />
+                  <CheckCircle className="h-4 w-4 text-orange-600"  />
                   <span className="text-sm text-gray-700">
                     Integration services
                   </span>
                 </li>
                 <li className="flex items-center gap-x-3">
-                  <CheckCircle className="h-4 w-4 text-orange-600" />
+                  <CheckCircle className="h-4 w-4 text-orange-600"  />
                   <span className="text-sm text-gray-700">
                     Maintenance & support
                   </span>
@@ -320,16 +320,16 @@ export default function Services() {
               </ul>
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-2 text-sm text-gray-500">
-                  <Clock className="h-4 w-4" />
+                  <Clock className="h-4 w-4"  />
                   <span>6-12 weeks delivery</span>
                 </div>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center text-sm font-semibold text-orange-600 hover:text-orange-500 transition-colors group"
+                  className="inline-flex items-center text-sm font-semibold text-orange-600 hover: tex t-orange-500 transition-colors group"
                   aria-label="Get started with custom software services"
                 >
                   Get started with SaaS
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover: translat e-x-1 transition-transform"  />
                 </Link>
               </div>
             </div>
@@ -337,10 +337,10 @@ export default function Services() {
         </div>
       </section>
       {/* Expanded Service Catalog */}
-      <section className="py-24 sm:py-32 bg-white">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="py-24 sm: p y-32 bg-white">
+        <div className="mx-auto max-w-7xl px-6 lg: p x-8">
           <div className="mx-auto max-w-4xl text-center mb-14">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm: tex t-4xl">
               Comprehensive Technology Solutions
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -350,7 +350,7 @@ export default function Services() {
               pricing and measurable outcomes. Explore our full capabilities at{' '}
               <a
                 href="https: //ziontechgroup.com"
-                className="text-blue-600 hover:text-blue-500 underline font-semibold"
+                className="text-blue-600 hover: tex t-blue-500 underline font-semibold"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -358,7 +358,7 @@ export default function Services() {
               </a>
               .
             </p>
-            <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+            <div className="mt-6 grid grid-cols-1 md: gri d-cols-3 gap-4 text-sm">
               <div className="bg-blue-50 p-4 rounded-lg">
                 <h3 className="font-semibold text-blue-900 mb-2">
                   AI & Machine Learning
@@ -393,18 +393,18 @@ export default function Services() {
               enterprise solutions and volume discounts, see our{' '}
               <Link
                 href="/pricing-guide"
-                className="text-blue-600 hover: text-blue-500 underline"
+                className="text-blue-600 hover: tex t-blue-500 underline"
               >
                 Enterprise Pricing Guide
               </Link>
               .
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
             {/* AI Services */}
-            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shado w-md transition">
               <div className="flex items-center gap-3 mb-3">
-                <Brain className="h-5 w-5 text-blue-600" />
+                <Brain className="h-5 w-5 text-blue-600"  />
                 <h3 className="font-semibold text-gray-900">
                   Revenue AI Agents (Sales/CS)
                 </h3>
@@ -422,15 +422,15 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-blue-600 hover: text-blue-500"
+                  className="text-blue-600 hover: tex t-blue-500"
                 >
                   Talk to us →
                 </Link>
               </div>
             </div>
-            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shado w-md transition">
               <div className="flex items-center gap-3 mb-3">
-                <Database className="h-5 w-5 text-indigo-600" />
+                <Database className="h-5 w-5 text-indigo-600"  />
                 <h3 className="font-semibold text-gray-900">
                   Data Engineering as a Service
                 </h3>
@@ -448,15 +448,15 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-indigo-600 hover: text-indigo-500"
+                  className="text-indigo-600 hover: tex t-indigo-500"
                 >
                   Get estimate →
                 </Link>
               </div>
             </div>
-            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shado w-md transition">
               <div className="flex items-center gap-3 mb-3">
-                <Server className="h-5 w-5 text-emerald-600" />
+                <Server className="h-5 w-5 text-emerald-600"  />
                 <h3 className="font-semibold text-gray-900">
                   MLOps Platform Setup
                 </h3>
@@ -474,16 +474,16 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-emerald-600 hover: text-emerald-500"
+                  className="text-emerald-600 hover: tex t-emerald-500"
                 >
                   Learn more →
                 </Link>
               </div>
             </div>
             {/* IT & Cloud */}
-            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shado w-md transition">
               <div className="flex items-center gap-3 mb-3">
-                <Cloud className="h-5 w-5 text-green-600" />
+                <Cloud className="h-5 w-5 text-green-600"  />
                 <h3 className="font-semibold text-gray-900">
                   FinOps & Cloud Cost Optimization
                 </h3>
@@ -501,15 +501,15 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-green-600 hover: text-green-500"
+                  className="text-green-600 hover: tex t-green-500"
                 >
                   Start now →
                 </Link>
               </div>
             </div>
-            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shado w-md transition">
               <div className="flex items-center gap-3 mb-3">
-                <Shield className="h-5 w-5 text-purple-600" />
+                <Shield className="h-5 w-5 text-purple-600"  />
                 <h3 className="font-semibold text-gray-900">
                   SOC-as-a-Service
                 </h3>
@@ -527,15 +527,15 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-purple-600 hover: text-purple-500"
+                  className="text-purple-600 hover: tex t-purple-500"
                 >
                   Request details →
                 </Link>
               </div>
             </div>
-            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shado w-md transition">
               <div className="flex items-center gap-3 mb-3">
-                <Globe className="h-5 w-5 text-orange-600" />
+                <Globe className="h-5 w-5 text-orange-600"  />
                 <h3 className="font-semibold text-gray-900">
                   Fractional CTO/Architecture Advisory
                 </h3>
@@ -553,16 +553,16 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-orange-600 hover: text-orange-500"
+                  className="text-orange-600 hover: tex t-orange-500"
                 >
                   Book intro →
                 </Link>
               </div>
             </div>
             {/* AI Services - Additional */}
-            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shado w-md transition">
               <div className="flex items-center gap-3 mb-3">
-                <Brain className="h-5 w-5 text-violet-600" />
+                <Brain className="h-5 w-5 text-violet-600"  />
                 <h3 className="font-semibold text-gray-900">
                   AI-Powered Business Intelligence
                 </h3>
@@ -582,15 +582,15 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-violet-600 hover: text-violet-500"
+                  className="text-violet-600 hover: tex t-violet-500"
                 >
                   Schedule demo →
                 </Link>
               </div>
             </div>
-            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shado w-md transition">
               <div className="flex items-center gap-3 mb-3">
-                <Database className="h-5 w-5 text-cyan-600" />
+                <Database className="h-5 w-5 text-cyan-600"  />
                 <h3 className="font-semibold text-gray-900">
                   Intelligent Document Processing
                 </h3>
@@ -609,15 +609,15 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-cyan-600 hover: text-cyan-500"
+                  className="text-cyan-600 hover: tex t-cyan-500"
                 >
                   Try free trial →
                 </Link>
               </div>
             </div>
-            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shado w-md transition">
               <div className="flex items-center gap-3 mb-3">
-                <Zap className="h-5 w-5 text-yellow-600" />
+                <Zap className="h-5 w-5 text-yellow-600"  />
                 <h3 className="font-semibold text-gray-900">
                   AI Test Automation Platform
                 </h3>
@@ -636,16 +636,16 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-yellow-600 hover:text-yellow-500"
+                  className="text-yellow-600 hover: tex t-yellow-500"
                 >
                   Start testing →
                 </Link>
               </div>
             </div>
             {/* Micro SaaS */}
-            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shado w-md transition">
               <div className="flex items-center gap-3 mb-3">
-                <Code className="h-5 w-5 text-rose-600" />
+                <Code className="h-5 w-5 text-rose-600"  />
                 <h3 className="font-semibold text-gray-900">
                   AI Content Localization SaaS
                 </h3>
@@ -663,15 +663,15 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-rose-600 hover:text-rose-500"
+                  className="text-rose-600 hover: tex t-rose-500"
                 >
                   Request demo →
                 </Link>
               </div>
             </div>
-            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shado w-md transition">
               <div className="flex items-center gap-3 mb-3">
-                <BarChart3 className="h-5 w-5 text-sky-600" />
+                <BarChart3 className="h-5 w-5 text-sky-600"  />
                 <h3 className="font-semibold text-gray-900">
                   Predictive Maintenance Toolkit
                 </h3>
@@ -687,15 +687,15 @@ export default function Services() {
                 <span className="font-semibold text-sky-600">From $299/mo</span>
                 <Link
                   href="/contact"
-                  className="text-sky-600 hover: text-sky-500"
+                  className="text-sky-600 hover: tex t-sky-500"
                 >
                   See live demo →
                 </Link>
               </div>
             </div>
-            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shado w-md transition">
               <div className="flex items-center gap-3 mb-3">
-                <Lock className="h-5 w-5 text-teal-600" />
+                <Lock className="h-5 w-5 text-teal-600"  />
                 <h3 className="font-semibold text-gray-900">
                   Compliance Copilot (SOC2/HIPAA/GDPR)
                 </h3>
@@ -713,16 +713,16 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-teal-600 hover: text-teal-500"
+                  className="text-teal-600 hover: tex t-teal-500"
                 >
                   Book a walkthrough →
                 </Link>
               </div>
             </div>
             {/* Additional IT Services */}
-            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shado w-md transition">
               <div className="flex items-center gap-3 mb-3">
-                <Server className="h-5 w-5 text-lime-600" />
+                <Server className="h-5 w-5 text-lime-600"  />
                 <h3 className="font-semibold text-gray-900">
                   DevOps Automation Platform
                 </h3>
@@ -741,15 +741,15 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-lime-600 hover:text-lime-500"
+                  className="text-lime-600 hover: tex t-lime-500"
                 >
                   Get started →
                 </Link>
               </div>
             </div>
-            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shado w-md transition">
               <div className="flex items-center gap-3 mb-3">
-                <Globe className="h-5 w-5 text-pink-600" />
+                <Globe className="h-5 w-5 text-pink-600"  />
                 <h3 className="font-semibold text-gray-900">
                   Digital Transformation Consulting
                 </h3>
@@ -768,15 +768,15 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-pink-600 hover:text-pink-500"
+                  className="text-pink-600 hover: tex t-pink-500"
                 >
                   Schedule consultation →
                 </Link>
               </div>
             </div>
-            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shado w-md transition">
               <div className="flex items-center gap-3 mb-3">
-                <BarChart3 className="h-5 w-5 text-amber-600" />
+                <BarChart3 className="h-5 w-5 text-amber-600"  />
                 <h3 className="font-semibold text-gray-900">
                   Infrastructure Monitoring & Observability
                 </h3>
@@ -795,16 +795,16 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-amber-600 hover: text-amber-500"
+                  className="text-amber-600 hover: tex t-amber-500"
                 >
                   Monitor now →
                 </Link>
               </div>
             </div>
             {/* Advanced AI Services */}
-            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shado w-md transition">
               <div className="flex items-center gap-3 mb-3">
-                <Eye className="h-5 w-5 text-blue-600" />
+                <Eye className="h-5 w-5 text-blue-600"  />
                 <h3 className="font-semibold text-gray-900">
                   Computer Vision & Image Recognition
                 </h3>
@@ -825,15 +825,15 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-blue-600 hover: text-blue-500"
+                  className="text-blue-600 hover: tex t-blue-500"
                 >
                   Schedule demo →
                 </Link>
               </div>
             </div>
-            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shado w-md transition">
               <div className="flex items-center gap-3 mb-3">
-                <MessageSquare className="h-5 w-5 text-green-600" />
+                <MessageSquare className="h-5 w-5 text-green-600"  />
                 <h3 className="font-semibold text-gray-900">
                   Natural Language Processing (NLP) Platform
                 </h3>
@@ -854,15 +854,15 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-green-600 hover: text-green-500"
+                  className="text-green-600 hover: tex t-green-500"
                 >
                   Try API →
                 </Link>
               </div>
             </div>
-            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shado w-md transition">
               <div className="flex items-center gap-3 mb-3">
-                <Palette className="h-5 w-5 text-purple-600" />
+                <Palette className="h-5 w-5 text-purple-600"  />
                 <h3 className="font-semibold text-gray-900">
                   Generative AI Content Studio
                 </h3>
@@ -882,15 +882,15 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-purple-600 hover: text-purple-500"
+                  className="text-purple-600 hover: tex t-purple-500"
                 >
                   Create content →
                 </Link>
               </div>
             </div>
-            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shado w-md transition">
               <div className="flex items-center gap-3 mb-3">
-                <Bot className="h-5 w-5 text-orange-600" />
+                <Bot className="h-5 w-5 text-orange-600"  />
                 <h3 className="font-semibold text-gray-900">
                   Conversational AI & Chatbots
                 </h3>
@@ -911,15 +911,15 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-orange-600 hover: text-orange-500"
+                  className="text-orange-600 hover: tex t-orange-500"
                 >
                   Build chatbot →
                 </Link>
               </div>
             </div>
-            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shado w-md transition">
               <div className="flex items-center gap-3 mb-3">
-                <TrendingUp className="h-5 w-5 text-red-600" />
+                <TrendingUp className="h-5 w-5 text-red-600"  />
                 <h3 className="font-semibold text-gray-900">
                   Predictive Analytics & Forecasting
                 </h3>
@@ -940,15 +940,15 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-red-600 hover: text-red-500"
+                  className="text-red-600 hover: tex t-red-500"
                 >
                   Predict trends →
                 </Link>
               </div>
             </div>
-            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shado w-md transition">
               <div className="flex items-center gap-3 mb-3">
-                <Users className="h-5 w-5 text-emerald-600" />
+                <Users className="h-5 w-5 text-emerald-600"  />
                 <h3 className="font-semibold text-gray-900">
                   Smart Project Management Suite
                 </h3>
@@ -968,16 +968,16 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-emerald-600 hover: text-emerald-500"
+                  className="text-emerald-600 hover: tex t-emerald-500"
                 >
                   Start free trial →
                 </Link>
               </div>
             </div>
             {/* Advanced IT Services */}
-            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shado w-md transition">
               <div className="flex items-center gap-3 mb-3">
-                <Cpu className="h-5 w-5 text-blue-600" />
+                <Cpu className="h-5 w-5 text-blue-600"  />
                 <h3 className="font-semibold text-gray-900">
                   Edge Computing & IoT Solutions
                 </h3>
@@ -998,15 +998,15 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-blue-600 hover: text-blue-500"
+                  className="text-blue-600 hover: tex t-blue-500"
                 >
                   Deploy edge →
                 </Link>
               </div>
             </div>
-            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shado w-md transition">
               <div className="flex items-center gap-3 mb-3">
-                <Link2 className="h-5 w-5 text-green-600" />
+                <Link2 className="h-5 w-5 text-green-600"  />
                 <h3 className="font-semibold text-gray-900">
                   Blockchain & Web3 Solutions
                 </h3>
@@ -1027,15 +1027,15 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-green-600 hover: text-green-500"
+                  className="text-green-600 hover: tex t-green-500"
                 >
                   Build Web3 →
                 </Link>
               </div>
             </div>
-            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shado w-md transition">
               <div className="flex items-center gap-3 mb-3">
-                <Wifi className="h-5 w-5 text-purple-600" />
+                <Wifi className="h-5 w-5 text-purple-600"  />
                 <h3 className="font-semibold text-gray-900">
                   5G & Network Infrastructure
                 </h3>
@@ -1056,15 +1056,15 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-purple-600 hover: text-purple-500"
+                  className="text-purple-600 hover: tex t-purple-500"
                 >
                   Upgrade network →
                 </Link>
               </div>
             </div>
-            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shado w-md transition">
               <div className="flex items-center gap-3 mb-3">
-                <HardDrive className="h-5 w-5 text-orange-600" />
+                <HardDrive className="h-5 w-5 text-orange-600"  />
                 <h3 className="font-semibold text-gray-900">
                   Quantum Computing Readiness
                 </h3>
@@ -1085,15 +1085,15 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-orange-600 hover: text-orange-500"
+                  className="text-orange-600 hover: tex t-orange-500"
                 >
                   Go quantum →
                 </Link>
               </div>
             </div>
-            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shado w-md transition">
               <div className="flex items-center gap-3 mb-3">
-                <Monitor className="h-5 w-5 text-red-600" />
+                <Monitor className="h-5 w-5 text-red-600"  />
                 <h3 className="font-semibold text-gray-900">
                   Extended Reality (XR) Solutions
                 </h3>
@@ -1114,15 +1114,15 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-red-600 hover: text-red-500"
+                  className="text-red-600 hover: tex t-red-500"
                 >
                   Enter XR →
                 </Link>
               </div>
             </div>
-            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shado w-md transition">
               <div className="flex items-center gap-3 mb-3">
-                <Star className="h-5 w-5 text-indigo-600" />
+                <Star className="h-5 w-5 text-indigo-600"  />
                 <h3 className="font-semibold text-gray-900">
                   Customer Feedback Intelligence Platform
                 </h3>
@@ -1142,16 +1142,16 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-indigo-600 hover:text-indigo-500"
+                  className="text-indigo-600 hover: tex t-indigo-500"
                 >
                   Analyze feedback →
                 </Link>
               </div>
             </div>
             {/* Innovative Micro SaaS Services */}
-            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shado w-md transition">
               <div className="flex items-center gap-3 mb-3">
-                <Activity className="h-5 w-5 text-blue-600" />
+                <Activity className="h-5 w-5 text-blue-600"  />
                 <h3 className="font-semibold text-gray-900">
                   Real-Time Analytics Dashboard
                 </h3>
@@ -1172,15 +1172,15 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-blue-600 hover:text-blue-500"
+                  className="text-blue-600 hover: tex t-blue-500"
                 >
                   View demo →
                 </Link>
               </div>
             </div>
-            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shado w-md transition">
               <div className="flex items-center gap-3 mb-3">
-                <Settings className="h-5 w-5 text-green-600" />
+                <Settings className="h-5 w-5 text-green-600"  />
                 <h3 className="font-semibold text-gray-900">
                   API Management & Gateway
                 </h3>
@@ -1201,15 +1201,15 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-green-600 hover: text-green-500"
+                  className="text-green-600 hover: tex t-green-500"
                 >
                   Manage APIs →
                 </Link>
               </div>
             </div>
-            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shado w-md transition">
               <div className="flex items-center gap-3 mb-3">
-                <Terminal className="h-5 w-5 text-purple-600" />
+                <Terminal className="h-5 w-5 text-purple-600"  />
                 <h3 className="font-semibold text-gray-900">
                   Developer Tools & IDE Extensions
                 </h3>
@@ -1230,15 +1230,15 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-purple-600 hover:text-purple-500"
+                  className="text-purple-600 hover: tex t-purple-500"
                 >
                   Boost productivity →
                 </Link>
               </div>
             </div>
-            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shado w-md transition">
               <div className="flex items-center gap-3 mb-3">
-                <CreditCard className="h-5 w-5 text-orange-600" />
+                <CreditCard className="h-5 w-5 text-orange-600"  />
                 <h3 className="font-semibold text-gray-900">
                   Fintech & Payment Solutions
                 </h3>
@@ -1258,15 +1258,15 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-orange-600 hover:text-orange-500"
+                  className="text-orange-600 hover: tex t-orange-500"
                 >
                   Process payments →
                 </Link>
               </div>
             </div>
-            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shado w-md transition">
               <div className="flex items-center gap-3 mb-3">
-                <Smartphone className="h-5 w-5 text-red-600" />
+                <Smartphone className="h-5 w-5 text-red-600"  />
                 <h3 className="font-semibold text-gray-900">
                   Mobile App Development Platform
                 </h3>
@@ -1286,15 +1286,15 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-red-600 hover: text-red-500"
+                  className="text-red-600 hover: tex t-red-500"
                 >
                   Build apps →
                 </Link>
               </div>
             </div>
-            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shado w-md transition">
               <div className="flex items-center gap-3 mb-3">
-                <Zap className="h-5 w-5 text-red-600" />
+                <Zap className="h-5 w-5 text-red-600"  />
                 <h3 className="font-semibold text-gray-900">
                   Workflow Automation Engine
                 </h3>
@@ -1312,7 +1312,7 @@ export default function Services() {
                 <span className="font-semibold text-red-600">From $79/mo</span>
                 <Link
                   href="/contact"
-                  className="text-red-600 hover:text-red-500"
+                  className="text-red-600 hover: tex t-red-500"
                 >
                   Automate workflows →
                 </Link>
@@ -1323,23 +1323,23 @@ export default function Services() {
             Need something custom? Visit our website at{' '}
             <a
               href="https://ziontechgroup.com"
-              className="text-blue-600 hover:text-blue-500 underline"
+              className="text-blue-600 hover: tex t-blue-500 underline"
               target="_blank"
               rel="noreferrer"
             >
               ziontechgroup.com
             </a>{' '}
-            or contact us directly: Email{' '}
+            or contact us directly: Emai l{' '}
             <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="text-blue-600 hover:text-blue-500"
+              href="mailto: klebe r@ziontechgroup.com"
+              className="text-blue-600 hover: tex t-blue-500"
             >
               kleber@ziontechgroup.com
             </a>{' '}
             | Phone{' '}
             <a
               href="tel:+13024640950"
-              className="text-blue-600 hover:text-blue-500"
+              className="text-blue-600 hover: tex t-blue-500"
             >
               +1 302 464 0950
             </a>{' '}
@@ -1348,10 +1348,10 @@ export default function Services() {
         </div>
       </section>
       {/* New Innovative Services Section */}
-      <section className="py-24 sm: py-32 bg-gradient-to-br from-blue-50 to-indigo-50">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="py-24 sm: p y-32 bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div className="mx-auto max-w-7xl px-6 lg: p x-8">
           <div className="mx-auto max-w-3xl text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm: tex t-4xl">
               Innovative AI & Automation Services
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -1359,7 +1359,7 @@ export default function Services() {
               businesses operate. Visit{' '}
               <a
                 href="https://ziontechgroup.com"
-                className="text-blue-600 hover:text-blue-500 underline"
+                className="text-blue-600 hover: tex t-blue-500 underline"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -1368,11 +1368,11 @@ export default function Services() {
               for live demos.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
             {/* AI Content Creation Tools */}
-            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white">
+            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shado w-md transition bg-white">
               <div className="flex items-center gap-3 mb-3">
-                <Brain className="h-5 w-5 text-blue-600" />
+                <Brain className="h-5 w-5 text-blue-600"  />
                 <h3 className="font-semibold text-gray-900">
                   AI Content Creation Suite
                 </h3>
@@ -1393,16 +1393,16 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-blue-600 hover: text-blue-500"
+                  className="text-blue-600 hover: tex t-blue-500"
                 >
                   Start free trial →
                 </Link>
               </div>
             </div>
             {/* Email Automation Platform */}
-            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white">
+            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shado w-md transition bg-white">
               <div className="flex items-center gap-3 mb-3">
-                <Mail className="h-5 w-5 text-green-600" />
+                <Mail className="h-5 w-5 text-green-600"  />
                 <h3 className="font-semibold text-gray-900">
                   Smart Email Automation
                 </h3>
@@ -1423,16 +1423,16 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-green-600 hover:text-green-500"
+                  className="text-green-600 hover: tex t-green-500"
                 >
                   Automate now →
                 </Link>
               </div>
             </div>
             {/* AI Email Responder */}
-            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white">
+            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shado w-md transition bg-white">
               <div className="flex items-center gap-3 mb-3">
-                <Zap className="h-5 w-5 text-purple-600" />
+                <Zap className="h-5 w-5 text-purple-600"  />
                 <h3 className="font-semibold text-gray-900">
                   AI Email Assistant
                 </h3>
@@ -1453,16 +1453,16 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-purple-600 hover:text-purple-500"
+                  className="text-purple-600 hover: tex t-purple-500"
                 >
                   Try demo →
                 </Link>
               </div>
             </div>
             {/* Customer Support Platform */}
-            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white">
+            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shado w-md transition bg-white">
               <div className="flex items-center gap-3 mb-3">
-                <Users className="h-5 w-5 text-orange-600" />
+                <Users className="h-5 w-5 text-orange-600"  />
                 <h3 className="font-semibold text-gray-900">
                   AI Customer Support Hub
                 </h3>
@@ -1483,16 +1483,16 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-orange-600 hover: text-orange-500"
+                  className="text-orange-600 hover: tex t-orange-500"
                 >
                   Setup support →
                 </Link>
               </div>
             </div>
             {/* Event Management Dashboard */}
-            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white">
+            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shado w-md transition bg-white">
               <div className="flex items-center gap-3 mb-3">
-                <Calendar className="h-5 w-5 text-red-600" />
+                <Calendar className="h-5 w-5 text-red-600"  />
                 <h3 className="font-semibold text-gray-900">
                   Smart Event Management
                 </h3>
@@ -1510,16 +1510,16 @@ export default function Services() {
                 <span className="font-semibold text-red-600">From $179/mo</span>
                 <Link
                   href="/contact"
-                  className="text-red-600 hover:text-red-500"
+                  className="text-red-600 hover: tex t-red-500"
                 >
                   Plan events →
                 </Link>
               </div>
             </div>
             {/* Workflow Automation Engine */}
-            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white">
+            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shado w-md transition bg-white">
               <div className="flex items-center gap-3 mb-3">
-                <Settings className="h-5 w-5 text-indigo-600" />
+                <Settings className="h-5 w-5 text-indigo-600"  />
                 <h3 className="font-semibold text-gray-900">
                   Business Process Automation
                 </h3>
@@ -1540,7 +1540,7 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-indigo-600 hover:text-indigo-500"
+                  className="text-indigo-600 hover: tex t-indigo-500"
                 >
                   Automate workflows →
                 </Link>
@@ -1552,32 +1552,32 @@ export default function Services() {
               All services include 30-day free trial, setup assistance, and 24/7
               support.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center items-center">
               <Link
                 href="/contact"
-                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
+                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover: b g-blue-700 transition-colors"
               >
                 Get Started Today
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <ArrowRight className="ml-2 h-4 w-4"  />
               </Link>
               <Link
                 href="https://ziontechgroup.com"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors"
+                className="inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover: b g-gray-50 transition-colors"
               >
                 Visit Live Demo
-                <Globe className="ml-2 h-4 w-4" />
+                <Globe className="ml-2 h-4 w-4"  />
               </Link>
             </div>
           </div>
         </div>
       </section>
       {/* Advanced IT Services Section */}
-      <section className="py-24 sm:py-32 bg-white">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="py-24 sm: p y-32 bg-white">
+        <div className="mx-auto max-w-7xl px-6 lg: p x-8">
           <div className="mx-auto max-w-3xl text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm: tex t-4xl">
               Advanced IT & Infrastructure Services
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -1585,11 +1585,11 @@ export default function Services() {
               services. Professional implementation with 99.9% uptime guarantee.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
             {/* DevOps Automation Platform */}
-            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white">
+            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shado w-md transition bg-white">
               <div className="flex items-center gap-3 mb-3">
-                <Server className="h-5 w-5 text-blue-600" />
+                <Server className="h-5 w-5 text-blue-600"  />
                 <h3 className="font-semibold text-gray-900">
                   DevOps Automation Suite
                 </h3>
@@ -1610,16 +1610,16 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-blue-600 hover: text-blue-500"
+                  className="text-blue-600 hover: tex t-blue-500"
                 >
                   Get started →
                 </Link>
               </div>
             </div>
             {/* Infrastructure Monitoring */}
-            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white">
+            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shado w-md transition bg-white">
               <div className="flex items-center gap-3 mb-3">
-                <BarChart3 className="h-5 w-5 text-green-600" />
+                <BarChart3 className="h-5 w-5 text-green-600"  />
                 <h3 className="font-semibold text-gray-900">
                   Infrastructure Monitoring & Observability
                 </h3>
@@ -1640,16 +1640,16 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-green-600 hover: text-green-500"
+                  className="text-green-600 hover: tex t-green-500"
                 >
                   Monitor now →
                 </Link>
               </div>
             </div>
             {/* API Management */}
-            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white">
+            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shado w-md transition bg-white">
               <div className="flex items-center gap-3 mb-3">
-                <Globe className="h-5 w-5 text-purple-600" />
+                <Globe className="h-5 w-5 text-purple-600"  />
                 <h3 className="font-semibold text-gray-900">
                   API Management & Gateway
                 </h3>
@@ -1670,16 +1670,16 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-purple-600 hover: text-purple-500"
+                  className="text-purple-600 hover: tex t-purple-500"
                 >
                   Manage APIs →
                 </Link>
               </div>
             </div>
             {/* Database Optimization */}
-            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white">
+            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shado w-md transition bg-white">
               <div className="flex items-center gap-3 mb-3">
-                <Database className="h-5 w-5 text-orange-600" />
+                <Database className="h-5 w-5 text-orange-600"  />
                 <h3 className="font-semibold text-gray-900">
                   Database Performance Optimization
                 </h3>
@@ -1700,16 +1700,16 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-orange-600 hover: text-orange-500"
+                  className="text-orange-600 hover: tex t-orange-500"
                 >
                   Optimize DB →
                 </Link>
               </div>
             </div>
             {/* Security Assessment */}
-            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white">
+            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shado w-md transition bg-white">
               <div className="flex items-center gap-3 mb-3">
-                <Shield className="h-5 w-5 text-red-600" />
+                <Shield className="h-5 w-5 text-red-600"  />
                 <h3 className="font-semibold text-gray-900">
                   Security Assessment & Penetration Testing
                 </h3>
@@ -1730,16 +1730,16 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-red-600 hover: text-red-500"
+                  className="text-red-600 hover: tex t-red-500"
                 >
                   Secure now →
                 </Link>
               </div>
             </div>
             {/* Cloud Migration */}
-            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white">
+            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shado w-md transition bg-white">
               <div className="flex items-center gap-3 mb-3">
-                <Cloud className="h-5 w-5 text-indigo-600" />
+                <Cloud className="h-5 w-5 text-indigo-600"  />
                 <h3 className="font-semibold text-gray-900">
                   Cloud Migration & Modernization
                 </h3>
@@ -1760,7 +1760,7 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-indigo-600 hover:text-indigo-500"
+                  className="text-indigo-600 hover: tex t-indigo-500"
                 >
                   Migrate to cloud →
                 </Link>
@@ -1772,32 +1772,32 @@ export default function Services() {
               All IT services include 24/7 monitoring, regular maintenance, and
               expert support.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center items-center">
               <Link
                 href="/contact"
-                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 transition-colors"
+                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover: b g-green-700 transition-colors"
               >
                 Get IT Consultation
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <ArrowRight className="ml-2 h-4 w-4"  />
               </Link>
               <Link
                 href="https://ziontechgroup.com"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors"
+                className="inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover: b g-gray-50 transition-colors"
               >
                 View Case Studies
-                <Globe className="ml-2 h-4 w-4" />
+                <Globe className="ml-2 h-4 w-4"  />
               </Link>
             </div>
           </div>
         </div>
       </section>
       {/* Micro SaaS Solutions Section */}
-      <section className="py-24 sm:py-32 bg-gradient-to-br from-purple-50 to-pink-50">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="py-24 sm: p y-32 bg-gradient-to-br from-purple-50 to-pink-50">
+        <div className="mx-auto max-w-7xl px-6 lg: p x-8">
           <div className="mx-auto max-w-3xl text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm: tex t-4xl">
               Micro SaaS Solutions
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -1806,11 +1806,11 @@ export default function Services() {
               integrations.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
             {/* Project Management Suite */}
-            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white">
+            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shado w-md transition bg-white">
               <div className="flex items-center gap-3 mb-3">
-                <Users className="h-5 w-5 text-blue-600" />
+                <Users className="h-5 w-5 text-blue-600"  />
                 <h3 className="font-semibold text-gray-900">
                   Smart Project Management Suite
                 </h3>
@@ -1831,16 +1831,16 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-blue-600 hover: text-blue-500"
+                  className="text-blue-600 hover: tex t-blue-500"
                 >
                   Start free trial →
                 </Link>
               </div>
             </div>
             {/* Analytics Platform */}
-            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white">
+            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shado w-md transition bg-white">
               <div className="flex items-center gap-3 mb-3">
-                <BarChart3 className="h-5 w-5 text-green-600" />
+                <BarChart3 className="h-5 w-5 text-green-600"  />
                 <h3 className="font-semibold text-gray-900">
                   Business Analytics Dashboard
                 </h3>
@@ -1861,16 +1861,16 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-green-600 hover:text-green-500"
+                  className="text-green-600 hover: tex t-green-500"
                 >
                   Analyze data →
                 </Link>
               </div>
             </div>
             {/* Customer Feedback Platform */}
-            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white">
+            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shado w-md transition bg-white">
               <div className="flex items-center gap-3 mb-3">
-                <Star className="h-5 w-5 text-purple-600" />
+                <Star className="h-5 w-5 text-purple-600"  />
                 <h3 className="font-semibold text-gray-900">
                   Customer Feedback Intelligence
                 </h3>
@@ -1891,16 +1891,16 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-purple-600 hover:text-purple-500"
+                  className="text-purple-600 hover: tex t-purple-500"
                 >
                   Analyze feedback →
                 </Link>
               </div>
             </div>
             {/* Inventory Management */}
-            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white">
+            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shado w-md transition bg-white">
               <div className="flex items-center gap-3 mb-3">
-                <Database className="h-5 w-5 text-orange-600" />
+                <Database className="h-5 w-5 text-orange-600"  />
                 <h3 className="font-semibold text-gray-900">
                   Smart Inventory Management
                 </h3>
@@ -1921,16 +1921,16 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-orange-600 hover:text-orange-500"
+                  className="text-orange-600 hover: tex t-orange-500"
                 >
                   Manage inventory →
                 </Link>
               </div>
             </div>
             {/* HR Management System */}
-            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white">
+            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shado w-md transition bg-white">
               <div className="flex items-center gap-3 mb-3">
-                <Users className="h-5 w-5 text-red-600" />
+                <Users className="h-5 w-5 text-red-600"  />
                 <h3 className="font-semibold text-gray-900">
                   HR Management Platform
                 </h3>
@@ -1949,16 +1949,16 @@ export default function Services() {
                 <span className="font-semibold text-red-600">From $249/mo</span>
                 <Link
                   href="/contact"
-                  className="text-red-600 hover: text-red-500"
+                  className="text-red-600 hover: tex t-red-500"
                 >
                   Manage HR →
                 </Link>
               </div>
             </div>
             {/* Financial Management */}
-            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white">
+            <div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shado w-md transition bg-white">
               <div className="flex items-center gap-3 mb-3">
-                <TrendingUp className="h-5 w-5 text-indigo-600" />
+                <TrendingUp className="h-5 w-5 text-indigo-600"  />
                 <h3 className="font-semibold text-gray-900">
                   Financial Management Suite
                 </h3>
@@ -1979,7 +1979,7 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-indigo-600 hover: text-indigo-500"
+                  className="text-indigo-600 hover: tex t-indigo-500"
                 >
                   Manage finances →
                 </Link>
@@ -1991,32 +1991,32 @@ export default function Services() {
               All Micro SaaS solutions include free setup, training, and 30-day
               money-back guarantee.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center items-center">
               <Link
                 href="/contact"
-                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 transition-colors"
+                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover: b g-purple-700 transition-colors"
               >
                 Get Custom Solution
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <ArrowRight className="ml-2 h-4 w-4"  />
               </Link>
               <Link
                 href="https://ziontechgroup.com"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors"
+                className="inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover: b g-gray-50 transition-colors"
               >
                 View Live Demos
-                <Globe className="ml-2 h-4 w-4" />
+                <Globe className="ml-2 h-4 w-4"  />
               </Link>
             </div>
           </div>
         </div>
       </section>
       {/* Process Section */}
-      <section className="py-24 sm:py-32 bg-gray-50">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl lg:text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+      <section className="py-24 sm: p y-32 bg-gray-50">
+        <div className="mx-auto max-w-7xl px-6 lg: p x-8">
+          <div className="mx-auto max-w-2xl lg: tex t-center mb-16">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm: tex t-4xl">
               Our Delivery Process
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -2024,9 +2024,9 @@ export default function Services() {
               successful outcomes.
             </p>
           </div>
-          <div className="grid grid-cols-1 md: grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-4 gap-8">
             <div className="text-center group">
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 group-hover:bg-blue-200 transition-colors mb-4">
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 group-hover: b g-blue-200 transition-colors mb-4">
                 <span className="text-2xl font-bold text-blue-600">1</span>
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
@@ -2037,7 +2037,7 @@ export default function Services() {
               </p>
             </div>
             <div className="text-center group">
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-green-100 group-hover:bg-green-200 transition-colors mb-4">
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-green-100 group-hover: b g-green-200 transition-colors mb-4">
                 <span className="text-2xl font-bold text-green-600">2</span>
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
@@ -2046,7 +2046,7 @@ export default function Services() {
               <p className="text-gray-600">Plan the solution architecture</p>
             </div>
             <div className="text-center group">
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-purple-100 group-hover:bg-purple-200 transition-colors mb-4">
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-purple-100 group-hover: b g-purple-200 transition-colors mb-4">
                 <span className="text-2xl font-bold text-purple-600">3</span>
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
@@ -2055,7 +2055,7 @@ export default function Services() {
               <p className="text-gray-600">Build and test the solution</p>
             </div>
             <div className="text-center group">
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-orange-100 group-hover:bg-orange-200 transition-colors mb-4">
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-orange-100 group-hover: b g-orange-200 transition-colors mb-4">
                 <span className="text-2xl font-bold text-orange-600">4</span>
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
@@ -2067,10 +2067,10 @@ export default function Services() {
         </div>
       </section>
       {/* Pricing & Market Positioning Section */}
-      <section className="py-24 sm:py-32 bg-gray-50">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="py-24 sm: p y-32 bg-gray-50">
+        <div className="mx-auto max-w-7xl px-6 lg: p x-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm: tex t-4xl">
               Competitive Pricing & Market Leadership
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -2080,8 +2080,8 @@ export default function Services() {
           </div>
 
           {/* Pricing Tiers */}
-          <div className="grid grid-cols-1 lg: grid-cols-3 gap-8 mb-16">
-            <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm hover:shadow-lg transition-all duration-300">
+          <div className="grid grid-cols-1 lg: gri d-cols-3 gap-8 mb-16">
+            <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm hover: shado w-lg transition-all duration-300">
               <div className="text-center mb-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   Micro SaaS Solutions
@@ -2093,19 +2093,19 @@ export default function Services() {
               </div>
               <ul className="space-y-3 mb-6">
                 <li className="flex items-center text-sm text-gray-600">
-                  <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                  <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0"  />
                   Rapid deployment (1-8 weeks)
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
-                  <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                  <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0"  />
                   Industry-specific solutions
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
-                  <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                  <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0"  />
                   AI-powered automation
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
-                  <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                  <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0"  />
                   Scalable architecture
                 </li>
               </ul>
@@ -2119,7 +2119,7 @@ export default function Services() {
               </div>
             </div>
 
-            <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm hover: shadow-lg transition-all duration-300 ring-2 ring-blue-500">
+            <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm hover: shado w-lg transition-all duration-300 ring-2 ring-blue-500">
               <div className="text-center mb-6">
                 <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800 mb-2">
                   Most Popular
@@ -2134,19 +2134,19 @@ export default function Services() {
               </div>
               <ul className="space-y-3 mb-6">
                 <li className="flex items-center text-sm text-gray-600">
-                  <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                  <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0"  />
                   Cutting-edge AI technology
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
-                  <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                  <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0"  />
                   Custom model development
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
-                  <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                  <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0"  />
                   Real-time processing
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
-                  <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                  <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0"  />
                   Advanced analytics
                 </li>
               </ul>
@@ -2160,7 +2160,7 @@ export default function Services() {
               </div>
             </div>
 
-            <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm hover: shadow-lg transition-all duration-300">
+            <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm hover: shado w-lg transition-all duration-300">
               <div className="text-center mb-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   IT Services
@@ -2172,19 +2172,19 @@ export default function Services() {
               </div>
               <ul className="space-y-3 mb-6">
                 <li className="flex items-center text-sm text-gray-600">
-                  <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                  <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0"  />
                   Enterprise-grade solutions
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
-                  <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                  <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0"  />
                   24/7 support & monitoring
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
-                  <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                  <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0"  />
                   Advanced security
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
-                  <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                  <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0"  />
                   Scalable infrastructure
                 </li>
               </ul>
@@ -2211,10 +2211,10 @@ export default function Services() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-6">
               <div className="text-center">
                 <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100 mb-4">
-                  <Award className="h-6 w-6 text-blue-600" />
+                  <Award className="h-6 w-6 text-blue-600"  />
                 </div>
                 <h4 className="text-lg font-semibold text-gray-900 mb-2">
                   Industry Leaders
@@ -2225,7 +2225,7 @@ export default function Services() {
               </div>
               <div className="text-center">
                 <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-lg bg-green-100 mb-4">
-                  <Zap className="h-6 w-6 text-green-600" />
+                  <Zap className="h-6 w-6 text-green-600"  />
                 </div>
                 <h4 className="text-lg font-semibold text-gray-900 mb-2">
                   Rapid Delivery
@@ -2236,7 +2236,7 @@ export default function Services() {
               </div>
               <div className="text-center">
                 <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-lg bg-purple-100 mb-4">
-                  <Shield className="h-6 w-6 text-purple-600" />
+                  <Shield className="h-6 w-6 text-purple-600"  />
                 </div>
                 <h4 className="text-lg font-semibold text-gray-900 mb-2">
                   Enterprise Security
@@ -2247,7 +2247,7 @@ export default function Services() {
               </div>
               <div className="text-center">
                 <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-lg bg-orange-100 mb-4">
-                  <TrendingUp className="h-6 w-6 text-orange-600" />
+                  <TrendingUp className="h-6 w-6 text-orange-600"  />
                 </div>
                 <h4 className="text-lg font-semibold text-gray-900 mb-2">
                   Proven ROI
@@ -2262,10 +2262,10 @@ export default function Services() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-24 sm: p y-32">
+        <div className="mx-auto max-w-7xl px-6 lg: p x-8">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-white sm: tex t-4xl">
               Ready to get started?
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-100">
@@ -2275,21 +2275,21 @@ export default function Services() {
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link
                 href="/contact"
-                className="group rounded-md bg-white px-8 py-4 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-all duration-200 hover:scale-105"
+                className="group rounded-md bg-white px-8 py-4 text-sm font-semibold text-blue-600 shadow-sm hover: b g-gray-50 transition-all duration-200 hover: scal e-105"
                 aria-label="Contact us to get started"
               >
                 Contact Us
-                <ArrowRight className="ml-2 h-4 w-4 inline group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="ml-2 h-4 w-4 inline group-hover: translat e-x-1 transition-transform"  />
               </Link>
               <Link
                 href="/"
-                className="text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors group"
+                className="text-sm font-semibold leading-6 text-white hover: tex t-blue-100 transition-colors group"
                 aria-label="Back to homepage"
               >
                 Back to Home{' '}
                 <span
                   aria-hidden="true"
-                  className="group-hover:translate-x-1 transition-transform inline-block"
+                  className="group-hover: translat e-x-1 transition-transform inline-block"
                 >
                   →
                 </span>

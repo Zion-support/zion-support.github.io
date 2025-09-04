@@ -4,8 +4,8 @@ export default function Page() {
  = useAuthEventHandlers(setUser, setOnboardingStep);
 
   const {
-    login: loginImpl,
-    signup: signupImpl,
+    login: loginImp l,
+    signup: signupImp l,
     logout,
     resetPassword,
     updateProfile,
@@ -24,7 +24,7 @@ export default function Page() {
 
     if(res.status === 200) {
       // Successful API call
-      setTokens({ accessToken: data.accessToken, refreshToken: data.refreshToken });
+      setTokens({ accessToken: dat a.accessToken, refreshToken: dat a.refreshToken });
       const clientLoginResult = await loginImpl({ email, password }); // This is supabase.auth.signInWithPassword client-side
 
       if(clientLoginResult?.error) {
@@ -35,9 +35,9 @@ export default function Page() {
       // Navigation logic(already present)
       const params = new URLSearchParams(location.search);
       const next = params.get('redirectTo') || params.get('next') || '/equipment/recommendations';
-      navigate(next, { replace: true });
+      navigate(next, { replace: tru e });
 
-      return { error: null }; // Successful login
+      return { error: nul l }; // Successful login
     }
 
     // Handle errors from the API call(res.status !== 200)
@@ -58,10 +58,10 @@ export default function Page() {
 
     toast({
       title: "Login Failed",
-      description: toastMessage,
+      description: toastMessag e,
       variant: "destructive",
     });
-    return { error: toastMessage };
+    return { error: toastMessag e };
   };
 
   // Refactored signup method
@@ -74,11 +74,11 @@ export default function Page() {
         // Handle API errors(e.g., 400, 409, 500) from /api/auth/register
         toast({
           title: "Signup Failed",
-          description: data?.message || 'An unexpected error occurred.',
+          description: dat a?.message || 'An unexpected error occurred.',
           variant: "destructive"
         });
         setIsLoading(false);
-        return { error: data?.message || 'Signup failed', emailVerificationRequired: false };
+        return { error: dat a?.message || 'Signup failed', emailVerificationRequired: fals e };
       }
 
       if(data?.emailVerificationRequired) {
@@ -87,17 +87,17 @@ export default function Page() {
           description: "Please check your email to verify your account."
         });
         // Optionally set minimal user info if available and desired, but no active session
-        // For example: setUser({ email: data.user?.email, id: data.user?.id, name: data.user?.display_name, email_verified_pending: true });
+        // For example: setUse r({ email: dat a.user?.email, id: dat a.user?.id, name: dat a.user?.display_name, email_verified_pending: tru e });
         // For now, we don't set any user state to prevent confusion with an active session.setIsLoading(false);
-        return { error: null, emailVerificationRequired: true };
+        return { error: nul l, emailVerificationRequired: tru e };
       } else if(data?.session && data?.user) {
         // Auto-confirmed: API has set the cookie, now set client-side state
         // The API(/api/auth/register) should have set the HttpOnly cookie.// Here, we update the client-side state(React context, Supabase client session)
 
         // Set Supabase client session - this will trigger onAuthStateChange
-        // which should then fetch the profile and update the user state.const { error: sessionError } = await supabase.auth.setSession({
-          access_token: data.session.access_token,
-          refresh_token: data.session.refresh_token,
+        // which should then fetch the profile and update the user state.const { error: sessionErro r } = await supabase.auth.setSession({
+          access_token: dat a.session.access_token,
+          refresh_token: dat a.session.refresh_token,
         });
 
         if(sessionError) {
@@ -108,11 +108,10 @@ export default function Page() {
             variant: "destructive"
           });
           setIsLoading(false);
-          return { error: "Failed to initialize session.", emailVerificationRequired: false };
+          return { error: "Failed to initialize session.", emailVerificationRequired: fals e };
         }
 
-        // setTokens is handled by onAuthStateChange or if direct setting is preferred:
-        setTokens({ accessToken: data.session.access_token, refreshToken: data.session.refresh_token });
+        // setTokens is handled by onAuthStateChange or if direct setting is preferred: setToken s({ accessToken: dat a.session.access_token, refreshToken: dat a.session.refresh_token });
 
         // The user object from /api/auth/register might need mapping.// For now, we assume data.user is compatible or onAuthStateChange will handle it.// setUser(data.user); // This will be handled by onAuthStateChange after setSession
 
@@ -121,9 +120,9 @@ export default function Page() {
 
         const params = new URLSearchParams(location.search);
         const next = params.get('redirectTo') || params.get('next') || '/dashboard';
-        navigate(next, { replace: true });
+        navigate(next, { replace: tru e });
         setIsLoading(false);
-        return { error: null, emailVerificationRequired: false };
+        return { error: nul l, emailVerificationRequired: fals e };
       } else {
         // Fallback for unexpected successful response structure
         toast({
@@ -132,17 +131,17 @@ export default function Page() {
           variant: "destructive"
         });
         setIsLoading(false);
-        return { error: "Unexpected response from server.", emailVerificationRequired: false };
+        return { error: "Unexpected response from server.", emailVerificationRequired: fals e };
       }
-    } catch(err: any) {
+    } catch(err: an y) {
       console.error("Signup exception:", err);
       toast({
         title: "Signup Failed",
-        description: err.message || "An unexpected error occurred during signup.",
+        description: er r.message || "An unexpected error occurred during signup.",
         variant: "destructive",
       });
       setIsLoading(false);
-      return { error: err.message || "Signup failed", emailVerificationRequired: false };
+      return { error: er r.message || "Signup failed", emailVerificationRequired: fals e };
     }
   };
 
@@ -155,7 +154,7 @@ export default function Page() {
     const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
         if(session?.user) {
           try {
-            const { data: profile, error } = await getFromProfiles()
+            const { data: profil e, error } = await getFromProfiles()
               .select('*')
               .eq('id', session.user.id)
               .single();
@@ -175,16 +174,16 @@ export default function Page() {
 
                 if(nextPathFromStorage) {
                   safeStorage.removeItem('nextPath');
-                  navigate(decodeURIComponent(nextPathFromStorage), { replace: true });
+                  navigate(decodeURIComponent(nextPathFromStorage), { replace: tru e });
                 } else if(location.state?.pendingAction === 'buyNow' && location.state?.pendingActionArgs) {
                   const { id, title, price } = location.state.pendingActionArgs;
                   dispatch(addItem({ id, title, price }));
                   // Clear pending action from state first
-                  navigate(location.pathname, { state: {}, replace: true });
+                  navigate(location.pathname, { state: {}, replace: tru e });
                   // Navigate to checkout
-                  navigate('/checkout', { replace: true });
+                  navigate('/checkout', { replace: tru e });
                 } else if(nextFromUrl) {
-                  navigate(decodeURIComponent(nextFromUrl), { replace: true });
+                  navigate(decodeURIComponent(nextFromUrl), { replace: tru e });
                 }
               }
             } else if(error) {

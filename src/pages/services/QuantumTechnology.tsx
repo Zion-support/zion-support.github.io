@@ -8,21 +8,21 @@ const QuantumTechnology = () => {
       description: "Advanced quantum machine learning algorithms for pattern recognition and data analysis.",
       price: "From $35,000/project",
       features: ["Quantum algorithms", "Pattern recognition", "Data analysis", "Machine learning"],
-      icon: Box
+      icon: Bo x
     },
     {
       title: "Quantum Edge Computing",
       description: "Distributed quantum computing solutions for real-time processing at the edge.",
       price: "From $28,000/month",
       features: ["Edge processing", "Real-time analytics", "Distributed computing", "Low latency"],
-      icon: Zap
+      icon: Za p
     },
     {;
       title: "Quantum Cryptography",;
       description: "Unbreakable encryption using quantum key distribution and quantum-resistant algorithms.",;
       price: "From $42,000/month",;
       features: ["Quantum key distribution", "Post-quantum cryptography", "Secure communications", "Threat protection"],;
-      icon: Shield;
+      icon: Shiel d;
     };
   ];
 
@@ -30,19 +30,18 @@ const QuantumTechnology = () => {
     {
       name: "Quantum Computing",
       description: "Superposition and entanglement-based computation",
-      icon: Cpu,
+      icon: Cp u,
       features: ["Qubit management", "Quantum gates", "Error correction", "Quantum algorithms"]
     },
     {
       name: "Quantum Machine Learning",
       description: "AI algorithms leveraging quantum properties",
-      icon: BarChart3,
+      icon: BarChart 3,
       features: ["Quantum neural networks", "Pattern recognition", "Optimization", "Data analysis"]
-    },;
-    {;
+    }, {;
       name: "Quantum Communications",;
       description: "Secure communication using quantum principles",;
-      icon: Globe,;
+      icon: Glob e,;
       features: ["Quantum key distribution", "Entanglement", "Secure channels", "Quantum networks"];
     };
   ];
@@ -59,14 +58,14 @@ const QuantumTechnology = () => {
   return (
     <div className = "min-h-screen bg-slate-900 text-white">
       {/* Hero Section */}
-      <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+      <section className="relative pt-24 pb-16 px-4 sm: p x-6 lg: p x-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
             <div className="inline-flex items-center px-4 py-2 bg-purple-500/10 text-purple-400 rounded-full text-sm font-medium mb-6">
-              <Box className="w-4 h-4 mr-2"/>
+              <Box className="w-4 h-4 mr-2" />
               Quantum Technology
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md: tex t-6xl font-bold text-white mb-6">
               Quantum
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Technology</span>
             </h1>
@@ -74,11 +73,11 @@ const QuantumTechnology = () => {
               Harness the power of quantum computing to solve complex problems that are impossible
               for classical computers. Experience the future of computation.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="#services" className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
+              <a href="#services" className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover: fro m-purple-700 hover: t o-pink-700 transition-all duration-300 shadow-lg hover: shado w-xl">
                 Explore Services
               </a>
-              <a href="/contact" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
+              <a href="/contact" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover: b g-white/10 transition-all duration-300">
                 Get Started
               </a>
             </div>
@@ -87,11 +86,11 @@ const QuantumTechnology = () => {
       </section>
 
       {/* What is Quantum Computing Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+      <section className="py-16 px-4 sm: p x-6 lg: p x-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg: gri d-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <h2 className="text-3xl md: tex t-4xl font-bold mb-6">
                 What is Quantum Computing?
               </h2>
               <p className="text-lg text-gray-300 mb-6">
@@ -116,7 +115,7 @@ const QuantumTechnology = () => {
             </div>
             <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 p-8 rounded-2xl border border-purple-500/30">
               <div className="text-center">
-                <Cpu className="h-24 w-24 text-purple-400 mx-auto mb-4"/>
+                <Cpu className="h-24 w-24 text-purple-400 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold mb-2">Quantum Advantage</h3>
                 <p className="text-gray-300">
                   Solve problems in minutes that would take classical computers thousands of years
@@ -128,10 +127,10 @@ const QuantumTechnology = () => {
       </section>
 
       {/* Quantum Services */}
-      <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">
+      <section id="services" className="py-16 px-4 sm: p x-6 lg: p x-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
               Our Quantum Services
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
@@ -140,9 +139,9 @@ const QuantumTechnology = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
             {quantumServices.map((service, index) => (
-              <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300">
+              <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover: borde r-purple-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <service.icon className="w-8 h-8 text-white"/>
                 </div>
@@ -164,10 +163,10 @@ const QuantumTechnology = () => {
       </section>
 
       {/* Quantum Technologies */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+      <section className="py-16 px-4 sm: p x-6 lg: p x-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
               Quantum Technologies We Use
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
@@ -176,9 +175,9 @@ const QuantumTechnology = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-3 gap-8">
             {quantumTechnologies.map((tech, index) => (
-              <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-purple-500/50 transition-all duration-300">
+              <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover: borde r-purple-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <tech.icon className="w-8 h-8 text-white"/>
                 </div>
@@ -198,11 +197,11 @@ const QuantumTechnology = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm: p x-6 lg: p x-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg: gri d-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-6">
                 Why Choose Quantum Technology?
               </h2>
               <p className="text-lg text-gray-300 mb-6">
@@ -220,7 +219,7 @@ const QuantumTechnology = () => {
             </div>
             <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl p-8 border border-purple-500/30">
               <div className="text-center">
-                <Rocket className="w-24 h-24 text-purple-400 mx-auto mb-4"/>
+                <Rocket className="w-24 h-24 text-purple-400 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-white mb-2">Quantum Innovation</h3>
                 <p className="text-gray-300 mb-6">
                   Our team is at the forefront of quantum technology research
@@ -238,20 +237,20 @@ const QuantumTechnology = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm: p x-6 lg: p x-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-6">
             Ready for the Quantum Future?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             Let's discuss how quantum technology can solve your most
             complex computational challenges.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+          <div className="flex flex-col sm: fle x-row gap-4 justify-center">
+            <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover: fro m-purple-700 hover: t o-pink-700 transition-all duration-300 shadow-lg hover: shado w-xl">
               Get Started
             </a>
-            <a href="/services" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">;
+            <a href="/services" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover: b g-white/10 transition-all duration-300">;
               View All Services;
             </a>;
           </div>;

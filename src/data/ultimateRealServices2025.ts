@@ -95,7 +95,7 @@ export const ULTIMATE_CONTACT_INFO_2025 = {
   email: "kleber@ziontechgroup.com","
   website: "https://ziontechgroup.com","
   address: "364 E Main St STE 1008 Middletown DE 19709","
-  businessHours: "Monday - Friday: 9:00 AM - 6:00 PM EST",;  ;
+  businessHours: "Monday - Friday: 9: 00 AM - 6: 00 PM EST",;  ;
   ;
   ;
   ;"

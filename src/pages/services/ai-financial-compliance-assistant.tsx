@@ -44,7 +44,7 @@ import {
   
   
   
-  return()
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
         title="AI Financial Compliance Assistant - Zion Tech Group""
@@ -54,41 +54,41 @@ import {
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"
-        <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20" />"
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"  />"
+        <div className="relative max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
           <motion.div"
             className="text-center"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >"
             <div className="inline-flex items-center px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-emerald-400 text-sm font-medium mb-6">"
-              <Shield className="w-4 h-4 mr-2"  />              AI-Powered Financial Compliance
+              <Shield className="w-4 h-4 mr-2"   />              AI-Powered Financial Compliance
             </div>
 "
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md: tex t-6xl font-bold text-white mb-6">
               AI Financial"
               <span className="block bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">
                 Compliance Assistant
               </span>
             </h1>
 "
-            <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+            <p className="text-xl md: tex t-2xl text-slate-300 max-w-4xl mx-auto mb-8 leading-relaxed">
               Stay compliant with financial regulations using AI-powered
               monitoring and automated reporting. Reduce compliance costs while
               ensuring regulatory adherence across all financial operations.
             </p>
 "
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
               <a"
                 href="#pricing"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-blue-500 text-white font-semibold rounded-xl hover:from-emerald-600 hover:to-blue-600 transition-all duration-200 shadow-lg hover:shadow-xl"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-blue-500 text-white font-semibold rounded-xl hover: fro m-emerald-600 hover: t o-blue-600 transition-all duration-200 shadow-lg hover: shado w-xl"
               >
                 View Pricing"
-                <ArrowRight className="ml-2 w-5 h-5"  />              </a>
+                <ArrowRight className="ml-2 w-5 h-5"   />              </a>
               <a"
-                href="mailto:kleber@ziontechgroup.com"
-                className="inline-flex items-center px-8 py-4 border border-slate-600 text-white font-semibold rounded-xl hover:border-slate-500 transition-all duration-200"
+                href="mailto: klebe r@ziontechgroup.com"
+                className="inline-flex items-center px-8 py-4 border border-slate-600 text-white font-semibold rounded-xl hover: borde r-slate-500 transition-all duration-200"
               >
                 Schedule Demo
               </a>
@@ -99,15 +99,15 @@ import {
 
       {/* Features Section */}"
       <section className="py-20">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
           <motion.div"
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
           >"
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
               Advanced Compliance Features
             </h2>"
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
@@ -115,15 +115,15 @@ import {
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
             {features.map((feature, index (
               <motion.div
                 key={index}"
-                className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:border-emerald-500/50 transition-all duration-300"
-                initial={{ opacity: 0, y: 20 }}
+                className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover: borde r-emerald-500/50 transition-all duration-300"
+                initial={{ opacity: 0, y: 2 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: inde x * 0.1 }}
+                viewport={{ once: tru e }}
               >"
                 <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-blue-500 rounded-lg flex items-center justify-center mb-4">"
                   <feature.icon className="w-6 h-6 text-white" />
@@ -140,15 +140,15 @@ import {
 
       {/* Compliance Areas Section */}"
       <section className="py-20 bg-slate-800/30">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
           <motion.div"
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
           >"
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
               Comprehensive Compliance Coverage
             </h2>"
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
@@ -157,15 +157,15 @@ import {
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {complianceAreas.map(area: unknown, index: unknown (
+          <div className="grid grid-cols-1 md: gri d-cols-2 gap-8">
+            {complianceAreas.map(area: unknow n, index: unknow n (
               <motion.div
                 key={index}"
                 className="bg-slate-800/50 rounded-xl p-8 border border-slate-700/50"
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                initial={{ opacity: 0, x: inde x % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: inde x * 0.1 }}
+                viewport={{ once: tru e }}
               >
                 <div
                   className={`w-16 h-16 bg-gradient-to-br ${area.color} rounded-xl flex items-center justify-center mb-6`}
@@ -184,15 +184,15 @@ import {
 
       {/* Benefits Section */}"
       <section className="py-20">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
           <motion.div"
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
           >"
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
               Business Benefits
             </h2>"
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
@@ -200,15 +200,15 @@ import {
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map(benefit: unknown, index: unknown (
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
+            {benefits.map(benefit: unknow n, index: unknow n (
               <motion.div
                 key={index}"
                 className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 text-center"
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: inde x * 0.1 }}
+                viewport={{ once: tru e }}
               >"
                 <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-blue-500 rounded-xl flex items-center justify-center mb-4 mx-auto">"
                   <benefit.icon className="w-8 h-8 text-white" />
@@ -225,15 +225,15 @@ import {
 
       {/* Use Cases Section */}"
       <section className="py-20 bg-slate-800/30">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
           <motion.div"
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
           >"
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
               Industry Applications
             </h2>"
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
@@ -242,15 +242,15 @@ import {
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map(useCase: unknown, index: unknown (
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
+            {useCases.map(useCase: unknow n, index: unknow n (
               <motion.div
                 key={index}"
                 className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 text-center"
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: inde x * 0.1 }}
+                viewport={{ once: tru e }}
               >"
                 <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-blue-500 rounded-xl flex items-center justify-center mb-4 mx-auto">"
                   <useCase.icon className="w-8 h-8 text-white" />
@@ -267,15 +267,15 @@ import {
 
       {/* Pricing Section */}"
       <section id="pricing" className="py-20">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
           <motion.div"
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
           >"
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
               Transparent Pricing
             </h2>"
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
@@ -284,8 +284,8 @@ import {
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map(plan: unknown, index: unknown (
+          <div className="grid grid-cols-1 md: gri d-cols-3 gap-8">
+            {pricingPlans.map(plan: unknow n, index: unknow n (
               <motion.div
                 key={index}`
                 className={`relative rounded-xl p-8 ${
@@ -294,10 +294,10 @@ import {
                     ? 'bg-gradient-to-br from-emerald-600 to-blue-600 border-2 border-emerald-400''
                     : 'bg-slate-800/50 border border-slate-700/50'`
                 }`}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 2 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: inde x * 0.1 }}
+                viewport={{ once: tru e }}
               >
                 {plan.popular && ("
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
@@ -323,18 +323,18 @@ import {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center">"
-                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 flex-shrink-0"  />"                      <span className="text-slate-300">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 flex-shrink-0"   />"                      <span className="text-slate-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
 
                 <a"
-                  href="mailto:kleber@ziontechgroup.com?subject=AI Financial Compliance Assistant - {plan.name} Plan"`
+                  href="mailto: klebe r@ziontechgroup.com?subject=AI Financial Compliance Assistant - {plan.name} Plan"`
                   className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
 
                     plan.popular'
-                      ? 'bg-white text-emerald-600 hover:bg-slate-100''
-                      : 'bg-gradient-to-r from-emerald-500 to-blue-500 text-white hover:from-emerald-600 hover:to-blue-600'`
+                      ? 'bg-white text-emerald-600 hover: b g-slate-100''
+                      : 'bg-gradient-to-r from-emerald-500 to-blue-500 text-white hover: fro m-emerald-600 hover: t o-blue-600'`
                   }`}
                 >
                   Get Started
@@ -347,15 +347,15 @@ import {
 
       {/* Contact Section */}"
       <section className="py-20 bg-slate-800/30">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
           <motion.div"
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
           >"
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
               Ready to Transform Your Compliance?
             </h2>"
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
@@ -364,29 +364,29 @@ import {
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-3 gap-8">
             <motion.div"
               className="text-center"
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 2 0 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              viewport={{ once: true }}
+              viewport={{ once: tru e }}
             >"
               <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">"
-                <Phone className="w-8 h-8 text-white"  />
+                <Phone className="w-8 h-8 text-white"   />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>"              <p className="text-slate-300">+1 302 464 0950</p>
             </motion.div>
 
             <motion.div"
               className="text-center"
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 2 0 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
+              viewport={{ once: tru e }}
             >"
               <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">"
-                <Mail className="w-8 h-8 text-white"  />
+                <Mail className="w-8 h-8 text-white"   />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-2">
                 Email Us
@@ -395,37 +395,37 @@ import {
 
             <motion.div"
               className="text-center"
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 2 0 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
+              viewport={{ once: tru e }}
             >"
               <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">"
-                <MapPin className="w-8 h-8 text-white"  />
+                <MapPin className="w-8 h-8 text-white"   />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-2">
                 Visit Us
               </h3>"
               <p className="text-slate-300">
                 364 E Main St STE 1008
-                <br />
+                <br  />
                 Middletown DE 19709
               </p>            </motion.div>
           </div>
 
           <motion.div"
             className="text-center mt-12"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            viewport={{ once: true }}
+            viewport={{ once: tru e }}
           >
             <a"
-              href="mailto:kleber@ziontechgroup.com?subject=AI Financial Compliance Assistant Demo Request"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-blue-500 text-white font-semibold rounded-xl hover:from-emerald-600 hover:to-blue-600 transition-all duration-200 shadow-lg hover:shadow-xl"
+              href="mailto: klebe r@ziontechgroup.com?subject=AI Financial Compliance Assistant Demo Request"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-blue-500 text-white font-semibold rounded-xl hover: fro m-emerald-600 hover: t o-blue-600 transition-all duration-200 shadow-lg hover: shado w-xl"
             >
               Request Demo"
-              <ArrowRight className="ml-2 w-5 h-5"  />            </a>
+              <ArrowRight className="ml-2 w-5 h-5"   />            </a>
           </motion.div>
         </div>
       </section>

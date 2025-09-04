@@ -8,12 +8,12 @@ import React from 'react';
       growthRate: '500%',''''
       roi: '800%',''''
       setupTime: '4-6 weeks',''
-      trialDays: 30,'''
+      trialDays: 3 0,'''
       features: ['Quantum consciousness mapping',Ethical boundary testing',Real-time monitoring'],'''
       targetAudience: 'AI research institutions, Government agencies,'''
   Ethics committees';
 
-},;    {}
+}, {}
 '
 ''
 '''
@@ -26,7 +26,7 @@ import React from 'react';
       growthRate: '280%',''''
       roi: '600%',''''
       setupTime: '2-3 weeks',''
-      trialDays: 14,'''
+      trialDays: 1 4,'''
       features['Quantum market analysis',Predictive trading',Risk management'],;'''
       targetAudience: 'Hedge funds, Investment banks, Trading firms'
     },
@@ -42,13 +42,12 @@ import React from 'react';
       growthRate: '320%','''
       roi: '450%','''
       setupTime: '3-4 weeks',''
-      trialDays: 21,'''
+      trialDays: 2 1,'''
       features['Medical diagnosis',Treatment optimization',Drug discovery'],;'''
       targetAudience: 'Hospitals, Medical centers, Pharmaceutical companies'
 
   ],;
-  microSAAS[;
-    {}
+  microSAAS[ {}
 '
 ''
 '''
@@ -60,7 +59,7 @@ import React from 'react';
       growthRate: '180%','''
       roi: '300%','''
       setupTime: '1-2 days',''
-      trialDays: 14,'''
+      trialDays: 1 4,'''
       features['AI article generation',Content optimization',Multi-language support'],;'''
       targetAudience: 'Content marketers, Digital agencies, Small businesses'
     },
@@ -92,13 +91,12 @@ import React from 'react';
       growthRate: '280%','''
       roi: '500%','''
       setupTime: '2-3 days',''
-      trialDays: 21,'''
+      trialDays: 2 1,'''
       features['Multi-language support',Bug detection',Code optimization'],;'''
       targetAudience: 'Software developers, Development teams, Tech companies'
 
   ],;
-  itServices[;
-    {}
+  itServices[ {}
 '
 ''
 '''
@@ -110,7 +108,7 @@ import React from 'react';
       growthRate: '320%','''
       roi: '700%','''
       setupTime: '6-8 weeks',''
-      trialDays: 30,'''
+      trialDays: 3 0,'''
       features['Quantum-ready nodes',Zero-latency networking',Auto-scaling'],;'''
       targetAudience: 'Enterprises, Cloud providers, Data centers'
     },
@@ -126,7 +124,7 @@ import React from 'react';
       growthRate: '280%','''
       roi: '500%','''
       setupTime: '2-3 weeks',''
-      trialDays: 14,'''
+      trialDays: 1 4,'''
       features['AI threat detection',Zero-trust architecture',Automated response'],;'''
       targetAudience: 'Enterprises, Government agencies, Financial institutions'
     },
@@ -144,20 +142,20 @@ import React from 'react';
       setupTime: '4-5 weeks'};
   ]};
 '
-const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {;''
-      trialDays: 21,;'''
+const ComprehensivePricingGuide2028: Reac t.FC = (): JSX.Element => {;''
+      trialDays: 2 1,;'''
       features: ['AI-powered CI/CD',Automated testing',Performance monitoring'],;'''
       targetAudience: 'Development teams, DevOps engineers, Technology companies'};''
   ]};'''
-const ComprehensivePricingGuide2028: React.FC = () => {;''''
+const ComprehensivePricingGuide2028: Reac t.FC = () => {;''''
   const [selectedCategory, setSelectedCategory] = useState('all');''''
   const [priceRange, setPriceRange] = useState('all');'
 ''
   '''
-    { id: 'all', name: 'All Services', icon: Globe, color: 'from-zion-cyan to-zion-purple' },;'''
-    { id: 'ai', name: 'AI Services', icon: Brain, color: 'from-zion-blue to-zion-cyan' },;'''
-    { id: 'saas', name: 'Micro SAAS', icon: Zap, color: 'from-zion-purple to-zion-pink' },;'''
-    { id: 'it', name: 'IT Services', icon: Server, color: 'from-zion-green to-zion-emerald' };
+    { id: 'all', name: 'All Services', icon: Glob e, color: 'from-zion-cyan to-zion-purple' },;'''
+    { id: 'ai', name: 'AI Services', icon: Brai n, color: 'from-zion-blue to-zion-cyan' },;'''
+    { id: 'saas', name: 'Micro SAAS', icon: Za p, color: 'from-zion-purple to-zion-pink' },;'''
+    { id: 'it', name: 'IT Services', icon: Serve r, color: 'from-zion-green to-zion-emerald' };
   ];'
 ''
   '''
@@ -184,27 +182,27 @@ const ComprehensivePricingGuide2028: React.FC = () => {;''''
   '''
     return parseInt(roi.replace('%',))};
 
-  return()    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">"""
+  return ()    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">"""
       {/* Hero Section */}""""
       <section className="relative py-20 overflow-hidden">""""
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10"></div>""""
         <div className="relative z-10 container mx-auto px-6 text-center">
           <motion.h1;
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             animate={{ opacity: 1, y: 0 }}"""
             transition={{ duration: 0.8 }}""""
-            className="text-5xl md:text-7xl font-bold mb-6 text-gradient"""
+            className="text-5xl md: tex t-7xl font-bold mb-6 text-gradient"""
             Comprehensive Pricing Guide 2028;
           </motion.h1>
           <motion.p;
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             animate={{ opacity: 1, y: 0 }}"""
             transition={{ duration: 0.8, delay: 0.2 }}""""
-            className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto"""
+            className="text-xl md: tex t-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto"""
             Complete pricing analysis, ROI calculations, and market positioning for all our innovative services;
           </motion.p>
           <motion.div;
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             animate={{ opacity: 1, y: 0 }}"""
             transition={{ duration: 0.8, delay: 0.4 }}""""
             className="flex flex-wrap justify-center gap-4""""
@@ -226,45 +224,45 @@ const ComprehensivePricingGuide2028: React.FC = () => {;''''
       <section className="py-20 bg-zion-slate-dark/50">;""""
         <div className="container mx-auto px-6">
           <motion.h2;
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             whileInView={{ opacity: 1, y: 0 }}"""
             transition={{ duration: 0.8 }}""""
             className="text-4xl font-bold text-center mb-12 text-gradient"""
             Market Overview & Growth Potential"""
           </motion.h2>""""
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-3 gap-8">
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 3 0 }}
               whileInView={{ opacity: 1, y: 0 }}"""
               transition={{ duration: 0.8, delay: 0.1 }}""""
               className="text-center""""
 """"
               <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-4">""""
-                <TrendingUp className="w-10 h-10 text-white"  />"""
+                <TrendingUp className="w-10 h-10 text-white"   />"""
               </div>""""
               <h3 className="text-2xl font-bold text-white mb-2">Total Market Size</h3>""""
               <p className="text-4xl font-bold text-zion-cyan mb-2">$89.2B</p>"              <p className="text-zion-slate-light">Combined market value across all service categories</p>
             </motion.div>
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 3 0 }}
               whileInView={{ opacity: 1, y: 0 }}"""
               transition={{ duration: 0.8, delay: 0.2 }}""""
               className="text-center""""
 """"
               <div className="w-20 h-20 bg-gradient-to-br from-zion-purple to-zion-pink rounded-full flex items-center justify-center mx-auto mb-4">""""
-                <Rocket className="w-10 h-10 text-white"  />"""
+                <Rocket className="w-10 h-10 text-white"   />"""
               </div>""""
               <h3 className="text-2xl font-bold text-white mb-2">Average Growth Rate</h3>""""
               <p className="text-4xl font-bold text-zion-purple mb-2">320%</p>"              <p className="text-zion-slate-light">Annual growth rate across all service categories</p>
             </motion.div>
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 3 0 }}
               whileInView={{ opacity: 1, y: 0 }}"""
               transition={{ duration: 0.8, delay: 0.3 }}""""
               className="text-center""""
 """"
               <div className="w-20 h-20 bg-gradient-to-br from-zion-green to-zion-emerald rounded-full flex items-center justify-center mx-auto mb-4">""""
-                <DollarSign className="w-10 h-10 text-white"  />"""
+                <DollarSign className="w-10 h-10 text-white"   />"""
               </div>""""
               <h3 className="text-2xl font-bold text-white mb-2">Average ROI</h3>""""
               <p className="text-4xl font-bold text-zion-green mb-2">550%</p>"              <p className="text-zion-slate-light">Average return on investment for customers</p>
@@ -276,7 +274,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;''''
       {/* Filters */}""""
       <section className="py-12 bg-zion-slate-dark/30">;""""
         <div className="container mx-auto px-6">""""
-          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">"""
+          <div className="flex flex-col lg: fle x-row gap-6 items-center justify-between">"""
             {/* Category Filter */}""""
             <div className="flex flex-wrap gap-3">
               {categories.map((category) => (
@@ -289,7 +287,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;''''
 '
                     selectedCategory === category.id''
                       ? 'bg-gradient-to-r ' + category.color + ' text-white shadow-lg'''`
-                      : 'bg-zion-slate/50 text-zion-slate-light hover:bg-zion-slate/70'``
+                      : 'bg-zion-slate/50 text-zion-slate-light hover: b g-zion-slate/70'``
                   }`}"""
 """"
                   <category.icon className="w-4 h-4" />
@@ -311,7 +309,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;''''
 '''`
                     priceRange === range.id'''`'`
                       ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg'''`'`'`
-                      : 'bg-zion-slate/50 text-zion-slate-light hover:bg-zion-slate/70'````
+                      : 'bg-zion-slate/50 text-zion-slate-light hover: b g-zion-slate/70'````
                   }`}
 
                   {range.name}
@@ -324,13 +322,13 @@ const ComprehensivePricingGuide2028: React.FC = () => {;''''
       {/* Services Grid */}""""
       <section className="py-20">;""""
         <div className="container mx-auto px-6">""""
-          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg: gri d-cols-2 gap-8">
             {sortedServices.map((service, index)  => (`
               <motion.div``
                 key={`${service.type}-${service.name}`}
                 initial = {}
   { opacity: 0,
-  y: 30;
+  y: 3 0;
 }}
                 animate = {}
   { opacity: 1,
@@ -338,12 +336,12 @@ const ComprehensivePricingGuide2028: React.FC = () => {;''''
 }}
                 transition = {}
   { duration: 0.6,
-  delay: index * 0.1;
+  delay: inde x * 0.1;
 }}
-                className="group relative bg-zion - slate / 30 backdrop - blur - sm border border-zion - slate / 40 rounded-2xl p - 8 hover:border-zion - cyan / 50 transition - all duration - 300 hover:shadow-2xl hover:shadow-zion -cyan / 20"""
+                className="group relative bg-zion - slate / 30 backdrop - blur - sm border border-zion - slate / 40 rounded-2xl p - 8 hover: borde r-zion - cyan / 50 transition - all duration - 300 hover: shado w-2xl hover: shado w-zion -cyan / 20"""
 """
 }}""""
-                className="group relative bg-zion-slate/30 backdrop-blur-sm border border-zion-slate/40 rounded-2xl p-8 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20"""
+                className="group relative bg-zion-slate/30 backdrop-blur-sm border border-zion-slate/40 rounded-2xl p-8 hover: borde r-zion-cyan/50 transition-all duration-300 hover: shado w-2xl hover: shado w-zion-cyan/20"""
 """
                 {/* Service Type Badge */}""""
                 <div className="absolute -top-3 -left-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg">
@@ -352,7 +350,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;''''
 """
                 {/* Service Header */}""""
                 <div className="mb-6">;""""
-                  <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors duration-300">
+                  <h3 className="text-2xl font-bold text-white mb-2 group-hover: tex t-zion-cyan transition-colors duration-300">
                     {service.name}"""
                   </h3>""""
                   <p className="text-zion-slate-light text-sm mb-4">
@@ -394,7 +392,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;''''
                   <div className="space-y-2">"""
                     {service.features.map((feature, idx) => (""""
                       <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">""""
-                        <CheckCircle className="w-4 h-4 text-zion-cyan"  />                        {feature}
+                        <CheckCircle className="w-4 h-4 text-zion-cyan"   />                        {feature}
                       </div>) ) }
                   </div>
                 </div>
@@ -407,9 +405,9 @@ const ComprehensivePricingGuide2028: React.FC = () => {;''''
 """
                 {/* CTA */}""""
                 <div className="text-center">""""
-                  <button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-3 px-6 rounded-lg font-semibold group-hover:shadow-lg group-hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2">"""
+                  <button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-3 px-6 rounded-lg font-semibold group-hover: shado w-lg group-hover: shado w-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2">"""
                     Get Started""""
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300"  />                  </button>
+                    <ArrowRight className="w-4 h-4 group-hover: translat e-x-1 transition-transform duration-300"   />                  </button>
                 </div>
               </motion.div>) ) }
           </div>
@@ -420,20 +418,20 @@ const ComprehensivePricingGuide2028: React.FC = () => {;''''
       <section className="py-20 bg-zion-slate-dark/50">;""""
         <div className="container mx-auto px-6">
           <motion.h2;
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             whileInView={{ opacity: 1, y: 0 }}"""
             transition={{ duration: 0.8 }}""""
             className="text-4xl font-bold text-center mb-12 text-gradient"""
             ROI Calculator"""
           </motion.h2>""""
           <div className="max-w-4xl mx-auto bg-zion-slate/30 backdrop-blur-sm border border-zion-slate/40 rounded-2xl p-8">""""
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">"""
+            <div className="grid grid-cols-1 md: gri d-cols-2 gap-8">"""
               <div>""""
                 <h3 className="text-2xl font-bold text-white mb-6">Calculate Your ROI</h3>""""
                 <div className="space-y-4">"""
                   <div>""""
                     <label className="block text-zion-slate-light mb-2">Service Category</label>""""
-                    <select className="w-full px-4 py-2 bg-zion-slate/50 border border-zion-slate/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50">
+                    <select className="w-full px-4 py-2 bg-zion-slate/50 border border-zion-slate/30 rounded-lg text-white focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan/50">
                       <option>AI Services</option>
                       <option>Micro SAAS</option>
                       <option>IT Services</option>
@@ -444,7 +442,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;''''
                     <input""""
                       type="number""""
                       placeholder="$0""""
-                      className="w-full px-4 py-2 bg-zion-slate/50 border border-zion-slate/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50"""
+                      className="w-full px-4 py-2 bg-zion-slate/50 border border-zion-slate/30 rounded-lg text-white focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan/50"""
                     />
                   </div>"""
                   <div>""""
@@ -452,7 +450,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;''''
                     <input""""
                       type="number""""
                       placeholder="25""""
-                      className="w-full px-4 py-2 bg-zion-slate/50 border border-zion-slate/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50"""
+                      className="w-full px-4 py-2 bg-zion-slate/50 border border-zion-slate/30 rounded-lg text-white focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan/50"""
                     />
                   </div>
                 </div>"""
@@ -487,36 +485,36 @@ const ComprehensivePricingGuide2028: React.FC = () => {;''''
       <section className="py-20">;""""
         <div className="container mx-auto px-6 text-center">
           <motion.h2;
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             whileInView={{ opacity: 1, y: 0 }}"""
             transition={{ duration: 0.8 }}""""
-            className="text-4xl md:text-5xl font-bold mb-6 text-gradient"""
+            className="text-4xl md: tex t-5xl font-bold mb-6 text-gradient"""
             Ready to Maximize Your ROI?
           </motion.h2>
           <motion.p;
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             whileInView={{ opacity: 1, y: 0 }}"""
             transition={{ duration: 0.8, delay: 0.2 }}""""
             className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto"""
             Contact our team to discuss how our innovative services can deliver exceptional returns on your investment;
           </motion.p>
           <motion.div;
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 3 0 }}
             whileInView={{ opacity: 1, y: 0 }}"""
             transition={{ duration: 0.8, delay: 0.4 }}""""
-            className="flex flex-col sm:flex-row gap-4 justify-center"""
+            className="flex flex-col sm: fle x-row gap-4 justify-center"""
 """
             <a""""
               href="tel:+13024640950""""
-              className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2""""
+              className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-4 rounded-lg font-semibold text-lg hover: shado w-lg hover: shado w-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2""""
 """"
-              <Phone className="w-5 h-5"  />              +1 302 464 0950;
+              <Phone className="w-5 h-5"   />              +1 302 464 0950;
             </a>"""
             <a""""
-              href="mailto:kleber@ziontechgroup.com""""
-              className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2""""
+              href="mailto: klebe r@ziontechgroup.com""""
+              className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white px-8 py-4 rounded-lg font-semibold text-lg hover: shado w-lg hover: shado w-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2""""
 """"
-              <Mail className="w-5 h-5"  />              kleber@ziontechgroup.com;
+              <Mail className="w-5 h-5"   />              kleber@ziontechgroup.com;
             </a>;
           </motion.div>;
         </div>;

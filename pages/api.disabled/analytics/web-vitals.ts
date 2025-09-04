@@ -12,14 +12,14 @@ interface WebVitalsData {
 }
 
 export default async function handler(
-  req: NextApiRequest, res: NextApiResponse
+  req: NextApiReques t, res: NextApiRespons e
 ) {
   if (req.method !==, POST') {'
     return res.status(405).json({ error: 'Method not allowed });'
   }
 
   try {
-    const data: WebVitalsData = req.body;
+    const data: WebVitalsDat a = req.body;
 
     // Validate required fields
     if (!data.name || typeof data.value !==, number') {'
@@ -29,8 +29,8 @@ export default async function handler(
     // Log the web vitals data (in production, you,
   d send this to your analytics service)
     console.log('Web Vitals:  , {'
-      metric: data.name,
-      value: data.value, url: data.url,
+      metric: dat a.name,
+      value: dat a.value, url: dat a.url,
       timestamp: new Date(data.timestamp).toISOString(), });
 
     // Here you would typically send the data to your analytics service
@@ -38,8 +38,8 @@ export default async function handler(
     
     // For now, we&apos;ll just acknowledge receipt'
     res.status(200).json({ 
-      success: true, message: 'Web vitals data received',
-      metric: data.name, value: data.value 
+      success: tru e, message: 'Web vitals data received',
+      metric: dat a.name, value: dat a.value 
     });
 
   } catch (error) {

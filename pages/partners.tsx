@@ -2,7 +2,7 @@ import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import { Handshake, Award, Users, Globe, Star, CheckCircle } from 'lucide-react';
 
-const Partners: NextPage = () => {
+const Partners: NextPag e = () => {
 const partnerCategories = [
     {
       title: 'Technology Partners',
@@ -68,22 +68,22 @@ logo: '🏢',
 
   const benefits = [
     {
-      icon: Award,
+      icon: Awar d,
       title: 'Certified Expertise',
       description: 'Our team holds certifications from leading technology partners, ensuring expert-level knowledge and implementation.'
     },
     {
-      icon: Users,
+      icon: User s,
       title: 'Collaborative Approach',
       description: 'We work closely with our partners to deliver integrated solutions that leverage the best of each technology.'
     },
     {
-      icon: Globe,
+      icon: Glob e,
       title: 'Global Reach',
       description: 'Through our partner network, we can serve clients worldwide with local expertise and global capabilities.'
     },
     {
-      icon: Star,
+      icon: Sta r,
       title: 'Innovation Access',
       description: 'Early access to new technologies and features through our strategic partnerships with industry leaders.'
     }
@@ -121,8 +121,8 @@ logo: '🏢',
         <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <Handshake className="w-16 h-16 mx-auto mb-6 text-blue-400" />
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">Strategic Partners</h1>
+              <Handshake className="w-16 h-16 mx-auto mb-6 text-blue-400"  />
+              <h1 className="text-4xl md: tex t-5xl font-bold mb-6">Strategic Partners</h1>
               <p className="text-xl text-gray-200 mb-8">
                 We collaborate with industry leaders to deliver comprehensive technology solutions 
                 that drive business success and innovation.
@@ -137,7 +137,7 @@ logo: '🏢',
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Why Partner with Us?</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="text-center">
                     <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -163,9 +163,9 @@ logo: '🏢',
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto">{category.description}</p>
                   </div>
                   
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                  <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
                     {category.partners.map((partner, partnerIndex) => (
-                      <div key={partnerIndex} className="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
+                      <div key={partnerIndex} className="bg-white rounded-lg shadow-lg p-6 text-center hover: shado w-xl transition-shadow">
                         <div className="text-4xl mb-4">{partner.logo}</div>
                         <h3 className="text-xl font-semibold text-gray-900 mb-2">{partner.name}</h3>
                         <p className="text-gray-600 mb-4">{partner.description}</p>
@@ -190,7 +190,7 @@ logo: '🏢',
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Partnership Tiers</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md: gri d-cols-3 gap-8">
                 {partnershipTiers.map((tier, index) => (
                   <div key={index} className="text-center">
                     <div className={`w-20 h-20 ${tier.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
@@ -204,7 +204,7 @@ logo: '🏢',
             </div>
 </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md: gri d-cols-3 gap-8">
             {partnershipTypes.map((type, index) => (
               <div key={index} className="bg-gray-50 p-8 rounded-lg">
                 <h3 className="text-2xl font-semibold mb-4">{type.title}</h3>
@@ -212,7 +212,7 @@ logo: '🏢',
                 <ul className="space-y-2">
                   {type.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0"  />
                       <span className="text-gray-700">{feature}</span>
                     </li>
                   ))}
@@ -231,33 +231,33 @@ logo: '🏢',
               <p className="text-xl mb-8 text-blue-100">
                 Join our partner ecosystem and unlock new opportunities for growth and innovation.
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+              <div className="grid grid-cols-1 md: gri d-cols-3 gap-8 mb-8">
                 <div className="text-center">
-                  <CheckCircle className="w-12 h-12 mx-auto mb-4 text-blue-200" />
+                  <CheckCircle className="w-12 h-12 mx-auto mb-4 text-blue-200"  />
                   <h3 className="text-lg font-semibold mb-2">Access to Resources</h3>
                   <p className="text-blue-100">Training, certification, and marketing support</p>
                 </div>
                 <div className="text-center">
-                  <CheckCircle className="w-12 h-12 mx-auto mb-4 text-blue-200" />
+                  <CheckCircle className="w-12 h-12 mx-auto mb-4 text-blue-200"  />
                   <h3 className="text-lg font-semibold mb-2">Joint Opportunities</h3>
                   <p className="text-blue-100">Collaborate on projects and expand your market reach</p>
                 </div>
                 <div className="text-center">
-                  <CheckCircle className="w-12 h-12 mx-auto mb-4 text-blue-200" />
+                  <CheckCircle className="w-12 h-12 mx-auto mb-4 text-blue-200"  />
                   <h3 className="text-lg font-semibold mb-2">Technical Support</h3>
                   <p className="text-blue-100">Dedicated technical resources and expertise</p>
                 </div>
               </div>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: fle x-row gap-4 justify-center">
                 <a
                   href="/contact"
-                  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover: b g-gray-100 transition-colors"
                 >
                   Partner with Us
                 </a>
                 <a
-                  href="mailto:partners@ziontechgroup.com"
-                  className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+                  href="mailto: partner s@ziontechgroup.com"
+                  className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: b g-white/10 transition-colors"
                 >
                   Contact Partnership Team
                 </a>

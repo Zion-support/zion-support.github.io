@@ -1,4 +1,4 @@
-;export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [// AI-Powered Micro SAAS Services
+;export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListin g[] = [// AI-Powered Micro SAAS Services
   {
 "
     id: "ai-autonomous-code-reviewer","
@@ -6,18 +6,18 @@
     description: "Advanced AI-powered code review system that automatically analyzes code quality, identifies security vulnerabilities, suggests optimizations, and enforces coding standards across multiple programming languages.","
     category: "AI Development","
     subcategory: "Code Quality",
-    price: 2999,"
+    price: 299 9,"
     currency: "$","
     tags: ["AI Code Review", "Security Analysis", "Code Quality", "Automation", "Multi-language Support"],"
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },"
     images: ["https://ziontechgroup.com/images/ai-code-reviewer.jpg"],"
-    createdAt: "2024-01-15T10:00:00.000Z",
+    createdAt: "2024-01-15T10: 0 0:00.000Z",
     rating: 4.9,
-    reviewCount: 234,
-    featured: true,"
+    reviewCount: 23 4,
+    featured: tru e,"
     location: "Global","
     availability: "2-3 Weeks",
-    aiScore: 98,
+    aiScore: 9 8,
     contactInfo: {
 "
       phone: "+1 302 464 0950","
@@ -38,18 +38,18 @@
     description: "Intelligent SEO platform that uses machine learning to analyze search trends, optimize content, track rankings, and provide actionable insights for improving search engine visibility and organic traffic.","
     category: "Digital Marketing","
     subcategory: "SEO",
-    price: 1999,"
+    price: 199 9,"
     currency: "$","
     tags: ["AI SEO", "Content Optimization", "Ranking Tracking", "Keyword Research", "Analytics"],"
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },"
     images: ["https://ziontechgroup.com/images/ai-seo-platform.jpg"],"
-    createdAt: "2024-01-20T10:00:00.000Z",
+    createdAt: "2024-01-20T10: 0 0:00.000Z",
     rating: 4.8,
-    reviewCount: 156,
-    featured: true,"
+    reviewCount: 15 6,
+    featured: tru e,"
     location: "Global","
     availability: "1-2 Weeks",
-    aiScore: 95,
+    aiScore: 9 5,
     contactInfo: {
 "
       phone: "+1 302 464 0950","
@@ -70,18 +70,18 @@
     description: "Intelligent customer support automation system with AI chatbots, ticket routing, sentiment analysis, and automated responses that reduce support costs while improving customer satisfaction.","
     category: "Customer Service","
     subcategory: "Automation",
-    price: 2499,"
+    price: 249 9,"
     currency: "$","
     tags: ["AI Chatbot", "Support Automation", "Ticket Management", "Sentiment Analysis", "24/7 Support"],"
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },"
     images: ["https://ziontechgroup.com/images/ai-support-automation.jpg"],"
-    createdAt: "2024-01-25T10:00:00.000Z",
+    createdAt: "2024-01-25T10: 0 0:00.000Z",
     rating: 4.7,
-    reviewCount: 189,
-    featured: true,"
+    reviewCount: 18 9,
+    featured: tru e,"
     location: "Global","
     availability: "2-3 Weeks",
-    aiScore: 94,
+    aiScore: 9 4,
     contactInfo: {
 "
       phone: "+1 302 464 0950","
@@ -102,18 +102,18 @@
     description: "Advanced financial analytics platform that uses machine learning to analyze financial data, predict market trends, identify investment opportunities, and provide risk assessment for businesses and investors.","
     category: "Financial Technology","
     subcategory: "Analytics",
-    price: 3999,"
+    price: 399 9,"
     currency: "$","
     tags: ["Financial Analytics", "Predictive Modeling", "Risk Assessment", "Investment Analysis", "Market Trends"],"
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },"
     images: ["https://ziontechgroup.com/images/ai-financial-analytics.jpg"],"
-    createdAt: "2024-01-30T10:00:00.000Z",
+    createdAt: "2024-01-30T10: 0 0:00.000Z",
     rating: 4.9,
-    reviewCount: 98,
-    featured: true,"
+    reviewCount: 9 8,
+    featured: tru e,"
     location: "Global","
     availability: "4-5 Weeks",
-    aiScore: 97,
+    aiScore: 9 7,
     contactInfo: {
 "
       phone: "+1 302 464 0950","
@@ -134,18 +134,18 @@
     description: "Comprehensive marketing automation platform that uses AI to optimize email campaigns, social media posts, ad targeting, and customer segmentation for maximum ROI and engagement.","
     category: "Digital Marketing","
     subcategory: "Automation",
-    price: 3499,"
+    price: 349 9,"
     currency: "$","
     tags: ["Marketing Automation", "Campaign Optimization", "Email Marketing", "Social Media", "Ad Targeting"],"
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },"
     images: ["https://ziontechgroup.com/images/ai-marketing-automation.jpg"],"
-    createdAt: "2024-02-05T10:00:00.000Z",
+    createdAt: "2024-02-05T10: 0 0:00.000Z",
     rating: 4.8,
-    reviewCount: 167,
-    featured: true,"
+    reviewCount: 16 7,
+    featured: tru e,"
     location: "Global","
     availability: "3-4 Weeks",
-    aiScore: 96,
+    aiScore: 9 6,
     contactInfo: {
 "
       phone: "+1 302 464 0950","
@@ -166,18 +166,18 @@
     description: "Smart project management platform that uses AI to predict project timelines, optimize resource allocation, identify potential risks, and provide real-time insights for better decision-making.","
     category: "Project Management","
     subcategory: "AI Intelligence",
-    price: 2799,"
+    price: 279 9,"
     currency: "$","
     tags: ["Project Management", "Resource Optimization", "Risk Assessment", "Timeline Prediction", "Team Collaboration"],"
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },"
     images: ["https://ziontechgroup.com/images/ai-project-management.jpg"],"
-    createdAt: "2024-02-10T10:00:00.000Z",
+    createdAt: "2024-02-10T10: 0 0:00.000Z",
     rating: 4.7,
-    reviewCount: 145,
-    featured: true,"
+    reviewCount: 14 5,
+    featured: tru e,"
     location: "Global","
     availability: "2-3 Weeks",
-    aiScore: 93,
+    aiScore: 9 3,
     contactInfo: {
 "
       phone: "+1 302 464 0950","
@@ -198,18 +198,18 @@
     description: "Intelligent supply chain management platform that uses machine learning to optimize inventory levels, predict demand, reduce costs, and improve supply chain efficiency for manufacturing and retail businesses.","
     category: "Supply Chain","
     subcategory: "Optimization",
-    price: 4499,"
+    price: 449 9,"
     currency: "$","
     tags: ["Supply Chain", "Demand Forecasting", "Inventory Optimization", "Cost Reduction", "Efficiency"],"
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },"
     images: ["https://ziontechgroup.com/images/ai-supply-chain.jpg"],"
-    createdAt: "2024-02-15T10:00:00.000Z",
+    createdAt: "2024-02-15T10: 0 0:00.000Z",
     rating: 4.9,
-    reviewCount: 78,
-    featured: true,"
+    reviewCount: 7 8,
+    featured: tru e,"
     location: "Global","
     availability: "5-6 Weeks",
-    aiScore: 96,
+    aiScore: 9 6,
     contactInfo: {
 "
       phone: "+1 302 464 0950","
@@ -230,18 +230,18 @@
     description: "Comprehensive content marketing platform that uses AI to generate content ideas, optimize headlines, analyze performance, and provide creative insights for better content strategy and engagement.","
     category: "Content Marketing","
     subcategory: "AI Intelligence",
-    price: 1999,"
+    price: 199 9,"
     currency: "$","
     tags: ["Content Marketing", "Content Generation", "Performance Analytics", "Creative Intelligence", "SEO Optimization"],"
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },"
     images: ["https://ziontechgroup.com/images/ai-content-marketing.jpg"],"
-    createdAt: "2024-02-20T10:00:00.000Z",
+    createdAt: "2024-02-20T10: 0 0:00.000Z",
     rating: 4.8,
-    reviewCount: 134,
-    featured: true,"
+    reviewCount: 13 4,
+    featured: tru e,"
     location: "Global","
     availability: "1-2 Weeks",
-    aiScore: 95,
+    aiScore: 9 5,
     contactInfo: {
 "
       phone: "+1 302 464 0950","
@@ -262,18 +262,18 @@
     description: "Revolutionary platform that combines AI and quantum computing to solve complex optimization problems, perform advanced simulations, and accelerate machine learning tasks for research and enterprise applications.","
     category: "Quantum Computing","
     subcategory: "AI Integration",
-    price: 8999,"
+    price: 899 9,"
     currency: "$","
     tags: ["Quantum Computing", "AI Integration", "Optimization", "Simulation", "Machine Learning"],"
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },"
     images: ["https://ziontechgroup.com/images/ai-quantum-hybrid.jpg"],"
-    createdAt: "2024-02-25T10:00:00.000Z",
+    createdAt: "2024-02-25T10: 0 0:00.000Z",
     rating: 4.9,
-    reviewCount: 45,
-    featured: true,"
+    reviewCount: 4 5,
+    featured: tru e,"
     location: "Global","
     availability: "8-10 Weeks",
-    aiScore: 99,
+    aiScore: 9 9,
     contactInfo: {
 "
       phone: "+1 302 464 0950","
@@ -294,18 +294,18 @@
     description: "Advanced cybersecurity platform that uses artificial intelligence to detect, prevent, and respond to cyber threats in real-time, providing comprehensive protection for businesses and organizations.","
     category: "Cybersecurity","
     subcategory: "AI Intelligence",
-    price: 5499,"
+    price: 549 9,"
     currency: "$","
     tags: ["Cybersecurity", "Threat Detection", "AI Security", "Real-time Protection", "Incident Response"],"
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },"
     images: ["https://ziontechgroup.com/images/ai-cybersecurity.jpg"],"
-    createdAt: "2024-03-01T10:00:00.000Z",
+    createdAt: "2024-03-01T10: 0 0:00.000Z",
     rating: 4.9,
-    reviewCount: 89,
-    featured: true,"
+    reviewCount: 8 9,
+    featured: tru e,"
     location: "Global","
     availability: "6-7 Weeks",
-    aiScore: 97,
+    aiScore: 9 7,
     contactInfo: {
 "
       phone: "+1 302 464 0950","
@@ -326,18 +326,18 @@
     description: "Revolutionary healthcare platform that uses AI to analyze medical images, assist in diagnosis, predict patient outcomes, and improve healthcare decision-making for medical professionals.","
     category: "Healthcare Technology","
     subcategory: "AI Diagnostics",
-    price: 6999,"
+    price: 699 9,"
     currency: "$","
     tags: ["Healthcare", "Medical Imaging", "AI Diagnostics", "Patient Care", "Medical Analysis"],"
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },"
     images: ["https://ziontechgroup.com/images/ai-healthcare.jpg"],"
-    createdAt: "2024-03-05T10:00:00.000Z",
+    createdAt: "2024-03-05T10: 0 0:00.000Z",
     rating: 4.9,
-    reviewCount: 67,
-    featured: true,"
+    reviewCount: 6 7,
+    featured: tru e,"
     location: "Global","
     availability: "7-8 Weeks",
-    aiScore: 98,
+    aiScore: 9 8,
     contactInfo: {
 "
       phone: "+1 302 464 0950","
@@ -358,18 +358,18 @@
     description: "Comprehensive business intelligence platform that uses AI to analyze business data, predict trends, generate insights, and provide actionable recommendations for strategic decision-making.","
     category: "Business Intelligence","
     subcategory: "AI Analytics",
-    price: 3999,"
+    price: 399 9,"
     currency: "$","
     tags: ["Business Intelligence", "Predictive Analytics", "Data Analysis", "Strategic Insights", "Decision Support"],"
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },"
     images: ["https://ziontechgroup.com/images/ai-business-intelligence.jpg"],"
-    createdAt: "2024-03-10T10:00:00.000Z",
+    createdAt: "2024-03-10T10: 0 0:00.000Z",
     rating: 4.8,
-    reviewCount: 123,
-    featured: true,"
+    reviewCount: 12 3,
+    featured: tru e,"
     location: "Global","
     availability: "4-5 Weeks",
-    aiScore: 96,
+    aiScore: 9 6,
     contactInfo: {
 "
       phone: "+1 302 464 0950","
@@ -390,18 +390,18 @@
     description: "Intelligent research platform that uses AI to automate literature reviews, discover research gaps, analyze trends, and accelerate scientific discovery across multiple disciplines.","
     category: "Research & Development","
     subcategory: "AI Assistant",
-    price: 3499,"
+    price: 349 9,"
     currency: "$","
     tags: ["Research Assistant", "Knowledge Discovery", "Literature Review", "Scientific Research", "Trend Analysis"],"
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },"
     images: ["https://ziontechgroup.com/images/ai-research-assistant.jpg"],"
-    createdAt: "2024-03-15T10:00:00.000Z",
+    createdAt: "2024-03-15T10: 0 0:00.000Z",
     rating: 4.8,
-    reviewCount: 78,
-    featured: true,"
+    reviewCount: 7 8,
+    featured: tru e,"
     location: "Global","
     availability: "3-4 Weeks",
-    aiScore: 95,
+    aiScore: 9 5,
     contactInfo: {
 "
       phone: "+1 302 464 0950","
@@ -423,18 +423,18 @@
     description: "Revolutionary computing platform that combines quantum computing with artificial intelligence to solve previously intractable problems in optimization, cryptography, drug discovery, and financial modeling.","
     category: "Quantum Computing","
     subcategory: "AI Integration",
-    price: 15999,"
+    price: 1599 9,"
     currency: "$","
     tags: ["Quantum Computing", "AI Integration", "Optimization", "Cryptography", "Drug Discovery"],"
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },"
     images: ["https://ziontechgroup.com/images/quantum-ai-hybrid.jpg"],"
-    createdAt: "2024-01-15T10:00:00.000Z",
+    createdAt: "2024-01-15T10: 0 0:00.000Z",
     rating: 4.9,
-    reviewCount: 67,
-    featured: true,"
+    reviewCount: 6 7,
+    featured: tru e,"
     location: "Global","
     availability: "10-12 Weeks",
-    aiScore: 99,
+    aiScore: 9 9,
     contactInfo: {
 "
       phone: "+1 302 464 0950","
@@ -455,18 +455,18 @@
     description: "Advanced computing platform that mimics the human brain's neural structure to process information more efficiently, enabling faster AI training, lower power consumption, and real-time learning capabilities.","
     category: "Neuromorphic Computing","
     subcategory: "AI Platform",
-    price: 12999,"
+    price: 1299 9,"
     currency: "$","
     tags: ["Neuromorphic Computing", "Brain-Inspired AI", "Neural Networks", "Real-time Learning", "Low Power"],"
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },"
     images: ["https://ziontechgroup.com/images/neuromorphic-computing.jpg"],"
-    createdAt: "2024-01-20T10:00:00.000Z",
+    createdAt: "2024-01-20T10: 0 0:00.000Z",
     rating: 4.8,
-    reviewCount: 45,
-    featured: true,"
+    reviewCount: 4 5,
+    featured: tru e,"
     location: "Global","
     availability: "8-10 Weeks",
-    aiScore: 98,
+    aiScore: 9 8,
     contactInfo: {
 "
       phone: "+1 302 464 0950","
@@ -487,18 +487,18 @@
     description: "Intelligent edge computing platform that brings AI processing closer to data sources, enabling real-time decision making, reduced latency, and improved privacy for IoT devices and edge networks.","
     category: "Edge Computing","
     subcategory: "AI Platform",
-    price: 8999,"
+    price: 899 9,"
     currency: "$","
     tags: ["Edge Computing", "Distributed AI", "Real-time Processing", "IoT", "Privacy"],"
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },"
     images: ["https://ziontechgroup.com/images/edge-ai-computing.jpg"],"
-    createdAt: "2024-01-25T10:00:00.000Z",
+    createdAt: "2024-01-25T10: 0 0:00.000Z",
     rating: 4.7,
-    reviewCount: 89,
-    featured: true,"
+    reviewCount: 8 9,
+    featured: tru e,"
     location: "Global","
     availability: "6-8 Weeks",
-    aiScore: 96,
+    aiScore: 9 6,
     contactInfo: {
 "
       phone: "+1 302 464 0950","
@@ -520,18 +520,18 @@
     description: "Comprehensive cloud migration platform that automates the transition to AWS, Azure, and Google Cloud with zero-downtime deployment, cost optimization, and performance monitoring.","
     category: "Cloud Services","
     subcategory: "Migration",
-    price: 15999,"
+    price: 1599 9,"
     currency: "$","
     tags: ["Cloud Migration", "AWS", "Azure", "Google Cloud", "Automation", "Zero Downtime"],"
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },"
     images: ["https://ziontechgroup.com/images/cloud-migration.jpg"],"
-    createdAt: "2024-01-15T10:00:00.000Z",
+    createdAt: "2024-01-15T10: 0 0:00.000Z",
     rating: 4.8,
-    reviewCount: 156,
-    featured: true,"
+    reviewCount: 15 6,
+    featured: tru e,"
     location: "Global","
     availability: "8-10 Weeks",
-    aiScore: 94,
+    aiScore: 9 4,
     contactInfo: {
 "
       phone: "+1 302 464 0950","
@@ -552,18 +552,18 @@
     description: "Advanced DevOps platform that automates software development, testing, and deployment processes with intelligent pipeline management, automated testing, and continuous integration.","
     category: "DevOps","
     subcategory: "Automation",
-    price: 8999,"
+    price: 899 9,"
     currency: "$","
     tags: ["DevOps", "CI/CD", "Automation", "Testing", "Deployment", "Pipeline Management"],"
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },"
     images: ["https://ziontechgroup.com/images/devops-automation.jpg"],"
-    createdAt: "2024-01-20T10:00:00.000Z",
+    createdAt: "2024-01-20T10: 0 0:00.000Z",
     rating: 4.7,
-    reviewCount: 234,
-    featured: true,"
+    reviewCount: 23 4,
+    featured: tru e,"
     location: "Global","
     availability: "4-6 Weeks",
-    aiScore: 93,
+    aiScore: 9 3,
     contactInfo: {
 "
       phone: "+1 302 464 0950","
@@ -584,18 +584,18 @@
     description: "Comprehensive cybersecurity platform that provides real-time threat detection, automated incident response, and intelligent security monitoring for enterprise networks and applications.","
     category: "Cybersecurity","
     subcategory: "Threat Intelligence",
-    price: 12999,"
+    price: 1299 9,"
     currency: "$","
     tags: ["Cybersecurity", "Threat Detection", "Incident Response", "Security Monitoring", "AI Security"],"
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },"
     images: ["https://ziontechgroup.com/images/cybersecurity-platform.jpg"],"
-    createdAt: "2024-01-25T10:00:00.000Z",
+    createdAt: "2024-01-25T10: 0 0:00.000Z",
     rating: 4.9,
-    reviewCount: 189,
-    featured: true,"
+    reviewCount: 18 9,
+    featured: tru e,"
     location: "Global","
     availability: "6-8 Weeks",
-    aiScore: 96,
+    aiScore: 9 6,
     contactInfo: {
 "
       phone: "+1 302 464 0950","
@@ -616,18 +616,18 @@
     description: "Powerful data analytics platform that transforms raw data into actionable insights with advanced visualization, predictive analytics, and real-time reporting capabilities.","
     category: "Data Analytics","
     subcategory: "Business Intelligence",
-    price: 9999,"
+    price: 999 9,"
     currency: "$","
     tags: ["Data Analytics", "Business Intelligence", "Data Visualization", "Predictive Analytics", "Real-time Reporting"],"
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },"
     images: ["https://ziontechgroup.com/images/data-analytics.jpg"],"
-    createdAt: "2024-01-30T10:00:00.000Z",
+    createdAt: "2024-01-30T10: 0 0:00.000Z",
     rating: 4.8,
-    reviewCount: 167,
-    featured: true,"
+    reviewCount: 16 7,
+    featured: tru e,"
     location: "Global","
     availability: "5-7 Weeks",
-    aiScore: 95,
+    aiScore: 9 5,
     contactInfo: {
 "
       phone: "+1 302 464 0950","
@@ -645,12 +645,12 @@
 export;
 export;
 export '
-export const pricingCategories2027: unknown = [;''
+export const pricingCategories2027: unknow n = [;''
   'Metaverse Solutions',;''
   'Web3 Solutions',;''
   'Sustainable Tech',;''
   'NeuroTech Solutions',;'  'Fusion Energy Solutions';
 ];
-export const pricingSubcategories2027: unknown = {}
+export const pricingSubcategories2027: unknow n = {}
 '"""
 '"'"""

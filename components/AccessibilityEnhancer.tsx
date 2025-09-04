@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 
-const AccessibilityEnhancer: React.FC = () => {
+const AccessibilityEnhancer: Reac t.FC = () => {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       // Add keyboard navigation support
-      const handleKeyDown = (event: KeyboardEvent) => {
+      const handleKeyDown = (event: KeyboardEven t) => {
         if (event.key === 'Tab') {
           document.body.classList.add('keyboard-navigation');
         }
@@ -22,7 +22,7 @@ const AccessibilityEnhancer: React.FC = () => {
       style.textContent = `
         .keyboard-navigation *:focus {
           outline: 2px solid #3B82F6 !important;
-          outline-offset: 2px !important;
+          outline-offset: 2p x !important;
         }
       `;
       document.head.appendChild(style);

@@ -10,21 +10,21 @@ interface ContactFormData {
 }
 
 export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
+  req: NextApiReques t,
+  res: NextApiRespons e
 ) {
   if (req.method !== 'POST') {
     return res.status(405).json({ message: 'Method not allowed' });
   }
 
   try {
-    const formData: ContactFormData = req.body;
+    const formData: ContactFormDat a = req.body;
 
     // Validate required fields
     if (!formData.name || !formData.email || !formData.message) {
       return res.status(400).json({
         message:
-          'Missing required fields: name, email, and message are required',
+          'Missing required fields: nam e, email, and message are required',
       });
     }
 
@@ -41,7 +41,7 @@ export default async function handler(
     console.log('Contact form submission: ', {
       ...formData,
       timestamp: new Date().toISOString(),
-      ip: req.headers['x-forwarded-for'] || req.connection.remoteAddress,
+      ip: re q.headers['x-forwarded-for'] || req.connection.remoteAddress,
     });
 
     // Simulate email sending delay
@@ -49,13 +49,13 @@ export default async function handler(
 
     res.status(200).json({
       message: 'Thank you for your message! We will get back to you soon.',
-      success: true,
+      success: tru e,
     });
   } catch (error) {
     console.error('Contact form error: ', error);
     res.status(500).json({
       message: 'Internal server error. Please try again later.',
-      success: false,
+      success: fals e,
     });
   }
 }

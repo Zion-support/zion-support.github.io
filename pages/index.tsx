@@ -45,47 +45,47 @@ const Home = memo(() => {
   {
       title: 'AI Services',
       description: 'Cutting-edge artificial intelligence solutions',
-      icon: Brain,
+      icon: Brai n,
       href: '/ai-services'
     },
     {
       title: 'IT Services',
       description: 'Comprehensive IT infrastructure and cloud solutions',
-      icon: Server,
+      icon: Serve r,
       href: '/it-services'
     },
     {
       title: 'Micro SaaS',
       description: 'Custom software-as-a-service applications',
-      icon: Smartphone,
+      icon: Smartphon e,
       href: '/micro-saas'
     },
     {
       title: 'All Services',
       description: 'Complete technology solutions overview',
-      icon: Globe,
+      icon: Glob e,
       href: '/comprehensive-services'
     }
   ];
 
   const features = [
   {
-      icon: Zap,
+      icon: Za p,
       title: 'Fast Delivery',
       description: 'Quick turnaround times without compromising quality',
     },
     {
-      icon: Shield,
+      icon: Shiel d,
       title: 'Enterprise Security',
       description: 'Bank-level security and compliance standards',
     },
     {
-      icon: Users,
+      icon: User s,
       title: 'Expert Team',
       description: 'Dedicated professionals with years of experience',
     },
     {
-      icon: Globe,
+      icon: Glob e,
       title: 'Global Reach',
       description: 'Serving clients worldwide with local expertise',
     },
@@ -93,22 +93,21 @@ const Home = memo(() => {
 
   return (
     <>
-      <SEOHead
-        title="Zion Tech Group - Leading Technology Solutions Provider"
+      <SEOHead title="Zion Tech Group - Leading Technology Solutions Provider"
         description="Transform your business with cutting-edge AI services, IT solutions, and micro SaaS development. Expert technology consulting and implementation."
         keywords="AI services, IT solutions, micro SaaS, technology consulting, digital transformation, cloud services, cybersecurity"
         structuredData={structuredData}
-      />
+       />
       
-      <Navigation />
-      <Sidebar isOpen={sidebarOpen} onClose={handleSidebarClose} />
+      <Navigation  />
+      <Sidebar isOpen={sidebarOpen} onClose={handleSidebarClose}  />
       
       <main className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20" role="banner" aria-labelledby="hero-heading">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
             <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              <h1 className="text-4xl md: tex t-6xl font-bold text-gray-900 mb-6">
                 Transform Your Business with
                 <span className="text-blue-600"> Technology</span>
               </h1>
@@ -117,22 +116,22 @@ const Home = memo(() => {
                 micro SaaS development. We help businesses innovate, scale, and
                 succeed in the digital age.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: fle x-row gap-4 justify-center">
                 <Link
                   href="/contact"
-                  className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                  className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover: b g-blue-700 transition-colors"
                 >
                   Get Started
                 </Link>
                 <Link
                   href="/services"
-                  className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+                  className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover: b g-blue-600 hover: tex t-white transition-colors"
                 >
                   View Services
                 </Link>
                 <button 
                   onClick={handleSidebarToggle}
-                  className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors flex items-center justify-center"
+                  className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover: b g-gray-50 transition-colors flex items-center justify-center"
                   aria-label="Open navigation menu"
                   aria-expanded={sidebarOpen}
                 >
@@ -142,10 +141,10 @@ const Home = memo(() => {
               <div>
                 <h4 className="text-white font-semibold mb-4">Services</h4>
                 <ul className="space-y-2">
-                  <li><Link href="/services/ai-machine-learning" className="text-gray-400 hover:text-white transition-colors text-sm">AI & Machine Learning</Link></li>
-                  <li><Link href="/services/micro-saas" className="text-gray-400 hover:text-white transition-colors text-sm">Micro SaaS Solutions</Link></li>
-                  <li><Link href="/services/ai-content-creation" className="text-gray-400 hover:text-white transition-colors text-sm">AI Content Creation</Link></li>
-                  <li><Link href="/services/email-automation" className="text-gray-400 hover:text-white transition-colors text-sm">Email Automation</Link></li>
+                  <li><Link href="/services/ai-machine-learning" className="text-gray-400 hover: tex t-white transition-colors text-sm">AI & Machine Learning</Link></li>
+                  <li><Link href="/services/micro-saas" className="text-gray-400 hover: tex t-white transition-colors text-sm">Micro SaaS Solutions</Link></li>
+                  <li><Link href="/services/ai-content-creation" className="text-gray-400 hover: tex t-white transition-colors text-sm">AI Content Creation</Link></li>
+                  <li><Link href="/services/email-automation" className="text-gray-400 hover: tex t-white transition-colors text-sm">Email Automation</Link></li>
                 </ul>
               </div>
               <div>
@@ -153,7 +152,7 @@ const Home = memo(() => {
                 <div className="space-y-2 text-gray-400 text-sm">
                   <p><strong>Phone:</strong> +1 302 464 0950</p>
                   <p><strong>Email:</strong> kleber@ziontechgroup.com</p>
-                  <p><strong>Address:</strong> 364 E Main St STE 1008<br />Middletown, DE 19709</p>
+                  <p><strong>Address:</strong> 364 E Main St STE 1008<br  />Middletown, DE 19709</p>
                 </div>
               </div>
             </div>
@@ -162,8 +161,8 @@ const Home = memo(() => {
 
         {/* Stats Section */}
         <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+            <div className="grid grid-cols-2 md: gri d-cols-4 gap-8">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="text-4xl font-bold text-blue-600 mb-2">
@@ -178,7 +177,7 @@ const Home = memo(() => {
 
         {/* Services Section */}
         <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
                 Our Services
@@ -189,11 +188,11 @@ const Home = memo(() => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: gri d-cols-3 gap-8">
               {services.map((service, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded-lg p-8 shadow-sm hover: shadow-md transition-shadow"
+                  className="bg-white rounded-lg p-8 shadow-sm hover: shado w-md transition-shadow"
                 >
                   <div className="p-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 w-fit mx-auto mb-6">
                     <service.icon className="w-8 h-8 text-white" />
@@ -205,9 +204,9 @@ const Home = memo(() => {
                     {service.description}
                   </p>
                   <Link href={service.href} className="block">
-                    <div className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center flex items-center justify-center">
+                    <div className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover: b g-blue-700 transition-colors text-center flex items-center justify-center">
                       Learn More
-                      <ArrowRight className="w-4 h-4 ml-2" />
+                      <ArrowRight className="w-4 h-4 ml-2"  />
                     </div>
                   </Link>
                 </div>
@@ -218,7 +217,7 @@ const Home = memo(() => {
 
         {/* Features Section */}
         <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
                 Why Choose Zion Tech Group?
@@ -229,7 +228,7 @@ const Home = memo(() => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="text-center">
                   <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
@@ -247,47 +246,47 @@ const Home = memo(() => {
 
         {/* Contact Information Section */}
         <section className="py-16 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Get In Touch</h2>
               <p className="text-lg text-gray-600">Ready to start your next project? Contact us today.</p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: gri d-cols-3 gap-8">
               <div className="text-center">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Phone className="w-6 h-6 text-blue-600" />
+                  <Phone className="w-6 h-6 text-blue-600"  />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Phone</h3>
-                <a href="tel:+13024640950" className="text-blue-600 hover:text-blue-700">
+                <a href="tel:+13024640950" className="text-blue-600 hover: tex t-blue-700">
                   +1 302 464 0950
                 </a>
               </div>
               
               <div className="text-center">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Mail className="w-6 h-6 text-blue-600" />
+                  <Mail className="w-6 h-6 text-blue-600"  />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Email</h3>
-                <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:text-blue-700">
+                <a href="mailto: klebe r@ziontechgroup.com" className="text-blue-600 hover: tex t-blue-700">
                   kleber@ziontechgroup.com
                 </a>
               </div>
               
               <div className="text-center">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <MapPin className="w-6 h-6 text-blue-600" />
+                  <MapPin className="w-6 h-6 text-blue-600"  />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Address</h3>
                 <p className="text-gray-600">
-                  364 E Main St STE 1008<br />
+                  364 E Main St STE 1008<br  />
                   Middletown, DE 19709
                 </p>
                 
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center gap-x-2">
-                      <CheckCircle className="h-4 w-4 text-blue-600" />
+                      <CheckCircle className="h-4 w-4 text-blue-600"  />
                       <span className="text-sm text-gray-700">{feature}</span>
                     </li>
                   ))}
@@ -295,21 +294,21 @@ const Home = memo(() => {
                 
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center space-x-2 text-sm text-gray-500">
-                    <Clock className="h-4 w-4" />
+                    <Clock className="h-4 w-4"  />
                     <span>{service.delivery}</span>
                   </div>
                   <div className="flex items-center space-x-2 text-sm text-gray-500">
-                    <DollarSign className="h-4 w-4" />
+                    <DollarSign className="h-4 w-4"  />
                     <span>{service.pricing}</span>
                   </div>
                 </div>
                 
                 <Link
                   href="/contact"
-                  className="inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-500"
+                  className="inline-flex items-center text-sm font-medium text-blue-600 hover: tex t-blue-500"
                 >
                   Learn More
-                  <ArrowRight className="ml-1 h-4 w-4" />
+                  <ArrowRight className="ml-1 h-4 w-4"  />
                 </Link>
               </div>
             </div>
@@ -318,7 +317,7 @@ const Home = memo(() => {
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
+          <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8 text-center">
             <h2 className="text-3xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
@@ -326,14 +325,14 @@ const Home = memo(() => {
               Let&apos;s discuss how our technology solutions can drive your
               success. Get started with a free consultation.'
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover: b g-gray-100 transition-colors"
               >
                 Get Free Consultation
               </Link>
-              <Link href="/request-quote" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+              <Link href="/request-quote" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover: b g-white hover: tex t-blue-600 transition-colors">
                 Request Quote
               </Link>
             </div>
@@ -341,7 +340,7 @@ const Home = memo(() => {
         </section>
       </main>
 
-      <Footer />
+      <Footer  />
     </>
   );
 });

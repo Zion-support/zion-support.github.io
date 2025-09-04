@@ -5,7 +5,7 @@ export default function Page() {
   {
     label: 'AI & Machine Learning',
     href: '/ai - services',
-    icon: <Brain className="w-4 h-4" />,
+    icon: <Brain className="w-4 h-4"  />,
     children: [
       { label: 'AI Workflow Orchestrator', href: '/services / ai - workflow-orchestrator' },
       { label: 'AI Data Governance Platform', href: '/services / ai - data - governance - platform' },
@@ -34,7 +34,7 @@ export default function Page() {
   {
     label: 'Cloud & Infrastructure',
     href: '/it - services',
-    icon: <Cloud className="w-4 h-4" />,
+    icon: <Cloud className="w-4 h-4"  />,
     children: [{ label: 'Cloud DevOps', href: '/services / cloud - devops' },
       { label: 'IT Infrastructure', href: '/services / it - infrastructure' },
       { label: 'FinOps Advisor', href: '/services / finops - advisor' },
@@ -50,7 +50,7 @@ export default function Page() {
   {
     label: 'Cybersecurity & Privacy',
     href: '/services / cybersecurity',
-    icon: <Shield className="w-4 h-4" />,
+    icon: <Shield className="w-4 h-4"  />,
     children: [{ label: 'AI Cybersecurity Platform', href: '/services / ai - cybersecurity - platform' },
       { label: 'Security Headers & CSP', href: '/services / security - headers - csp' },
       { label: 'DSR Privacy Portal', href: '/services / dsr - portal' },
@@ -61,7 +61,7 @@ export default function Page() {
   {
     label: 'Emerging Technologies',
     href: '/emerging - tech',
-    icon: <Atom className="w-4 h-4" />,
+    icon: <Atom className="w-4 h-4"  />,
     children: [{ label: 'Quantum Computing', href: '/services / quantum - computing' },
       { label: 'IoT Edge Computing', href: '/services / iot - edge - computing' },
       { label: 'AI Quantum Hybrid Platform', href: '/services / ai - quantum - hybrid - platform' },
@@ -74,7 +74,7 @@ export default function Page() {
   {
     label: 'Micro SaaS Solutions',
     href: '/micro - saas',
-    icon: <ShoppingCart className="w-4 h-4" />,
+    icon: <ShoppingCart className="w-4 h-4"  />,
     children: [{ label: 'Micro CRM', href: '/services / micro - crm' },
       { label: 'Helpdesk Platform', href: '/services / helpdesk - platform' },
       { label: 'Website Analytics', href: '/services / website - analytics' },
@@ -90,7 +90,7 @@ export default function Page() {
   {
     label: 'Solutions',
     href: '/solutions',
-    icon: <Building className="w-4 h-4" />,
+    icon: <Building className="w-4 h-4"  />,
     children: [{ label: 'Enterprise Solutions', href: '/solutions / enterprise' },
       { label: 'Healthcare Solutions', href: '/solutions / healthcare' },
       { label: 'Manufacturing Solutions', href: '/manufacturing - solutions' },
@@ -102,11 +102,11 @@ export default function Page() {
   {
     label: 'Comp',
     href: '/about',
-    icon: <Users className="w-4 h-4" />,
+    icon: <Users className="w-4 h-4"  />,
     children: [
     label: 'AI & Machine Learning',
     href: '/ai-services',
-    icon: <Brain className="w-4 h-4"  />,
+    icon: <Brain className="w-4 h-4"   />,
     children: ['
       { label: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator' },
       { label: 'AI Data Governance Platform', href: '/services/ai-data-governance-platform' },
@@ -136,7 +136,7 @@ export default function Page() {
 
     label: 'Cloud & Infrastructure',
     href: '/it-services',"
-    icon: <Cloud className="w-4 h-4"  />,
+    icon: <Cloud className="w-4 h-4"   />,
     children: ['
       { label: 'Cloud DevOps', href: '/services/cloud-devops' },
       { label: 'IT Infrastructure', href: '/services/it-infrastructure' },
@@ -154,7 +154,7 @@ export default function Page() {
 
     label: 'Cybersecurity & Privacy',
     href: '/services/cybersecurity',"
-    icon: <Shield className="w-4 h-4"  />,
+    icon: <Shield className="w-4 h-4"   />,
     children: ['
       { label: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform' },
       { label: 'Security Headers & CSP', href: '/services/security-headers-csp' },
@@ -167,7 +167,7 @@ export default function Page() {
 
     label: 'Emerging Technologies',
     href: '/emerging-tech',"
-    icon: <Atom className="w-4 h-4"  />,
+    icon: <Atom className="w-4 h-4"   />,
     children: ['
       { label: 'Quantum Computing', href: '/services/quantum-computing' },
       { label: 'IoT Edge Computing', href: '/services/iot-edge-computing' },
@@ -182,7 +182,7 @@ export default function Page() {
 
     label: 'Micro SaaS Solutions',
     href: '/micro-saas',"
-    icon: <ShoppingCart className="w-4 h-4"  />,
+    icon: <ShoppingCart className="w-4 h-4"   />,
     children: ['
       { label: 'Micro CRM', href: '/services/micro-crm' },
       { label: 'Helpdesk Platform', href: '/services/helpdesk-platform' },
@@ -200,7 +200,7 @@ export default function Page() {
 
     label: 'Solutions',
     href: '/solutions',"
-    icon: <Building className="w-4 h-4"  />,
+    icon: <Building className="w-4 h-4"   />,
     children: ['
       { label: 'Enterprise Solutions', href: '/solutions/enterprise' },
       { label: 'Healthcare Solutions', href: '/solutions/healthcare' },
@@ -214,7 +214,7 @@ export default function Page() {
 
     label: 'Comp',
     href: '/about',"
-    icon: <Users className="w-4 h-4"  />,
+    icon: <Users className="w-4 h-4"   />,
     children: ['
       { label: 'About Us', href: '/about' },
       { label: 'Team', href: '/team' },
@@ -228,11 +228,11 @@ export default function Page() {
   {
     label: 'Resources',
     href: '/resources',
-    icon: <BarChart3 className="w-4 h-4" />,
+    icon: <BarChart3 className="w-4 h-4"  />,
     children: [
     label: 'Resources',
     href: '/resources',"
-    icon: <BarChart3 className="w-4 h-4" />,
+    icon: <BarChart3 className="w-4 h-4"  />,
     children: ['
       { label: 'Pricing', href: '/pricing' },
       { label: 'FAQ', href: '/faq' },
@@ -249,7 +249,7 @@ export default function Page() {
   { label: 'Contact', href: '/contact' }
 ];
 
-export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
+export const EnhancedNavigation: Reac t.FC<EnhancedNavigationProps> = ({
 
 className:  '',;
   onThemeChange }) => {;
@@ -277,18 +277,18 @@ root.classList.add(newTheme)}
   };
 
   return (<nav className = {`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${isScrolled
-        ? 'bg-white / 95 dark:bg-slate - 900 / 95 backdrop - blur - md shadow-lg'
+        ? 'bg-white / 95 dark: b g-slate - 900 / 95 backdrop - blur - md shadow-lg'
         : 'bg-transparent'
     } ${className}`}>
-      <div  className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8">
+      <div  className="max - w-7xl mx - auto px-4 sm: p x-6 lg: p x-8">
         <div  className="flex justify - between items - center h-16">
           {/* Logo */}
           <div  className="flex - shrink -0">
             <Link to="/" className="flex items - center space - x-2">
               <div  className="w-8 h-8 bg-gradient - to - r from - blue - 600 to - purple - 600 rounded-lg flex items - center justify -center">
-                <Zap className="w-5 h-5 text-white" />
+                <Zap className="w-5 h-5 text-white"  />
               </div>
-              <span className="text-xl font - bold text-gray - 900 dark:text-white">                Zion Tech Group
+              <span className="text-xl font - bold text-gray - 900 dark: tex t-white">                Zion Tech Group
               </span>
             </Link>
           </div>
@@ -300,14 +300,14 @@ root.classList.add(newTheme)}
                 {item.children ? (
                   <button
                     onClick={() => toggleDropdown(item.label)}"
-                    className="flex items-center space-x-1 px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                    className="flex items-center space-x-1 px-3 py-2 text-sm font-medium text-gray-700 dark: tex t-gray-300 hover: tex t-blue-600 dark: hove r:text-blue-400 transition-colors"
                   >
                     <span>{item.label}</span>"
-                    <ChevronDown className="w-4 h-4"  />                  </button>
+                    <ChevronDown className="w-4 h-4"   />                  </button>
                 ) : (
                   <Link
                     to={item.href}"
-                    className="px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                    className="px-3 py-2 text-sm font-medium text-gray-700 dark: tex t-gray-300 hover: tex t-blue-600 dark: hove r:text-blue-400 transition-colors"
                   >
                     {item.label}
                   </Link>) }
@@ -347,9 +347,9 @@ root.classList.add(newTheme)}
                             <Link
                               key={child.href}
                               to={child.href}"
-                              className="flex items-center space-x-3 px-4 py-3 text-slate-300 hover:text-white hover:bg-slate-700/50 transition-colors duration-200 group"
+                              className="flex items-center space-x-3 px-4 py-3 text-slate-300 hover: tex t-white hover: b g-slate-700/50 transition-colors duration-200 group"
                             >"
-                              <div className="w-2 h-2 bg-slate-500 rounded-full group-hover:bg-cyan-400 transition-colors duration-200"></div>"
+                              <div className="w-2 h-2 bg-slate-500 rounded-full group-hover: b g-cyan-400 transition-colors duration-200"></div>"
                               <span className="text-sm font-medium">{child.label}</span>
                             </Link>
                           ))}
@@ -360,49 +360,49 @@ root.classList.add(newTheme)}
           </div>
 
           {/* Right Side Actions */}
-          <div  className="hidden lg:flex items - center space - x-4">
+          <div  className="hidden lg: flex items - center space - x-4">
             {/* Theme Toggle */}
-            <div  className="flex items - center space - x-2 bg-gray - 100 dark:bg-slate - 800 rounded-lg p -1">
+            <div  className="flex items - center space - x-2 bg-gray - 100 dark: b g-slate - 800 rounded-lg p -1">
               <button     onClick={ () => handleThemeChange('light') }
                 className={`p - 2 rounded-md transition - colors ${theme === 'light'
-                    ? 'bg-white dark:bg-slate - 700 text-blue - 600 shadow-sm'
-                    : 'text-gray - 500 dark:text-gray - 400 hover:text-gray - 700 dark:hover:text-gray - 300'
+                    ? 'bg-white dark: b g-slate - 700 text-blue - 600 shadow-sm'
+                    : 'text-gray - 500 dark: tex t-gray - 400 hover: tex t-gray - 700 dark: hove r:text-gray - 300'
                 }`}
               >
-                <Sun className="w-4 h-4" />
+                <Sun className="w-4 h-4"  />
               </button>
               <button     onClick={ () => handleThemeChange('dark') }
                 className={`p - 2 rounded-md transition - colors ${theme === 'dark'
-                    ? 'bg-white dark:bg-slate - 700 text-blue - 600 shadow-sm'
-                    : 'text-gray - 500 dark:text-gray - 400 hover:text-gray - 700 dark:hover:text-gray - 300'
+                    ? 'bg-white dark: b g-slate - 700 text-blue - 600 shadow-sm'
+                    : 'text-gray - 500 dark: tex t-gray - 400 hover: tex t-gray - 700 dark: hove r:text-gray - 300'
                 }`}
               >
-                <Moon className="w-4 h-4" />
+                <Moon className="w-4 h-4"  />
               </button>
               <button     onClick={ () => handleThemeChange('system') }
                 className={`p - 2 rounded-md transition - colors ${theme === 'system'
-                    ? 'bg-white dark:bg-slate - 700 text-blue - 600 shadow-sm'
-                    : 'text-gray - 500 dark:text-gray - 400 hover:text-gray - 700 dark:hover:text-gray - 300'                }`}
+                    ? 'bg-white dark: b g-slate - 700 text-blue - 600 shadow-sm'
+                    : 'text-gray - 500 dark: tex t-gray - 400 hover: tex t-gray - 700 dark: hove r:text-gray - 300'                }`}
               >"
-                <Monitor className="w-4 h-4"  />              </button>
+                <Monitor className="w-4 h-4"   />              </button>
             </div>
 
             {/* Contact Button */}
             <Link"
               to="/contact"
-              className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
+              className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover: b g-blue-700 transition-colors"
             >"
-              <Phone className="w-4 h-4 mr-2"  />              Get Quote
+              <Phone className="w-4 h-4 mr-2"   />              Get Quote
             </Link>
           </div>
 
           {/* Mobile menu button */}"
-          <div className="lg:hidden">
+          <div className="lg: hidde n">
             <button
               onClick={() => setIsOpen(!isOpen)}"
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover: tex t-gray-500 hover: b g-gray-100 dark: hove r:bg-slate-800 transition-colors"
             >"
-              {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}            </button>
+              {isOpen ? <X className="w-6 h-6"   /> : <Menu className="w-6 h-6"   />}            </button>
           </div>
         </div>
       </div>
@@ -415,7 +415,7 @@ root.classList.add(newTheme)}
                     animate={{ opacity: 1, height: 'auto' }}
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.3 }}"
-                    className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-slate-700/50"
+                    className="lg: hidden bg-slate-900/95 backdrop-blur-md border-t border-slate-700/50"
                   >"
                     <div className="px-4 py-6 space-y-4">
                       {navigationItems.map((item) => (
@@ -424,7 +424,7 @@ root.classList.add(newTheme)}
                             <div>
                               <button
                                 onClick={() => toggleDropdown(item.label)}"
-                                className="flex items-center justify-between w-full text-left text-slate-300 hover:text-white px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900"
+                                className="flex items-center justify-between w-full text-left text-slate-300 hover: tex t-white px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 focus: outlin e-none focus: rin g-2 focus: rin g-cyan-400 focus: rin g-offset-2 focus: rin g-offset-slate-900"
                                 aria-expanded={activeDropdown === item.label}"
                                 aria-haspopup="true"
                               >"
@@ -433,7 +433,7 @@ root.classList.add(newTheme)}
                                   <span>{item.label}</span>
                                 </div>
                                 <ChevronDown className={`w-5 h-5 transition - transform duration - 200 ${activeDropdown === item.label ? 'rotate - 180' : ''
-                                }`} />
+                                }`}  />
                               </button>
                               {activeDropdown === item.label && (<motion.div
                                   initial={{ opacity: 0, y: -10 }}
@@ -445,7 +445,7 @@ root.classList.add(newTheme)}
                                   {item.children.map((child) => (<Link
                                       key={child.href}
                                       to={child.href}"
-                                      className="block text-slate-400 hover:text-white px-3 py-2 rounded-md text-sm transition-colors duration-200 flex items-center space-x-2"
+                                      className="block text-slate-400 hover: tex t-white px-3 py-2 rounded-md text-sm transition-colors duration-200 flex items-center space-x-2"
                                     >"
                                       <div className="w-1.5 h-1.5 bg-slate-500 rounded-full"></div>
                                       <span>{child.label}</span>
@@ -457,7 +457,7 @@ root.classList.add(newTheme)}
                           ) : (
                             <Link
                               to={item.href}"
-                              className="block text-slate-300 hover:text-white px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900"
+                              className="block text-slate-300 hover: tex t-white px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 focus: outlin e-none focus: rin g-2 focus: rin g-cyan-400 focus: rin g-offset-2 focus: rin g-offset-slate-900"
                             >
                               {item.label}
                             </Link>) }
@@ -466,21 +466,21 @@ root.classList.add(newTheme)}
               {/* Mobile Actions */}"
               <div className="pt-4 border-t border-slate-700/50 space-y-3">"
                 <div className="flex items-center space-x-4 text-slate-400">"
-                  <Phone className="w-4 h-4"  />
+                  <Phone className="w-4 h-4"   />
                   <span>+1(555) 123-4567</span>
                 </div>"
                 <div className="flex items-center space-x-4 text-slate-400">"
-                  <Mail className="w-4 h-4"  />
+                  <Mail className="w-4 h-4"   />
                   <span>info@ziontechgroup.com</span>
                 </div>"
                 <div className="flex items-center space-x-4 text-slate-400">"
-                  <MapPin className="w-4 h-4"  />                  <span>123 Tech Street, Digital City</span>
+                  <MapPin className="w-4 h-4"   />                  <span>123 Tech Street, Digital City</span>
                 </div>
                 <Link"
                   to="/contact"
-                  className="mt-4 inline-flex items-center justify-center w-full px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
+                  className="mt-4 inline-flex items-center justify-center w-full px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover: b g-blue-700 transition-colors"
                 >"
-                  <Phone className="w-4 h-4 mr-2"  />                  Get Quote
+                  <Phone className="w-4 h-4 mr-2"   />                  Get Quote
                 </Link>
               </div>
             </div>

@@ -8,37 +8,37 @@ import { Badge } from '../../components/ui/Badge';
 export default function EmailAutomation() {
   const features = [
     {
-      icon: Send,
+      icon: Sen d,
       title: 'Drip Campaigns',
       description:
         'Create sophisticated email sequences that nurture leads and convert prospects into customers.',
     },
     {
-      icon: UserCheck,
+      icon: UserChec k,
       title: 'Personalization',
       description:
         'Deliver highly personalized emails using dynamic content and behavioral triggers.',
     },
     {
-      icon: Aperture,
+      icon: Apertur e,
       title: 'A/B Testing',
       description:
         'Optimize your email campaigns with built-in A/B testing and performance analytics.',
     },
     {
-      icon: BarChart3,
+      icon: BarChart 3,
       title: 'Analytics Dashboard',
       description:
         'Track open rates, click-through rates, and conversions with detailed reporting.',
     },
     {
-      icon: Clock,
+      icon: Cloc k,
       title: 'Automated Triggers',
       description:
         'Set up automated emails based on user behavior, time delays, and custom conditions.',
     },
     {
-      icon: Zap,
+      icon: Za p,
       title: 'Real-time Processing',
       description:
         'Process and send emails in real-time with our high-performance infrastructure.',
@@ -58,7 +58,7 @@ export default function EmailAutomation() {
         'Basic analytics',
         'Email support',
       ],
-      popular: false,
+      popular: fals e,
     },
     {
       name: 'Professional',
@@ -73,7 +73,7 @@ export default function EmailAutomation() {
         'Custom templates',
         'Priority support',
       ],
-      popular: true,
+      popular: tru e,
     },
     {
       name: 'Enterprise',
@@ -89,30 +89,29 @@ export default function EmailAutomation() {
         'Dedicated account manager',
         '24/7 phone support',
       ],
-      popular: false,
+      popular: fals e,
     },
   ];
 
   return (
     <>
-      <SEO
-        title="Email Automation - Zion Tech Group"
+      <SEO title="Email Automation - Zion Tech Group"
         description="Intelligent email marketing automation with personalized campaigns and advanced analytics. Boost your email marketing ROI."
         keywords="email automation, email marketing, drip campaigns, personalization, A/B testing"
-      />
+       />
       <Head>
         <title>Email Automation - Zion Tech Group</title>
       </Head>
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
           <div className="text-center">
             <Badge className="mb-4 bg-blue-500 text-white">
-              <Mail className="w-4 h-4 mr-2" />
+              <Mail className="w-4 h-4 mr-2"  />
               Marketing Automation
             </Badge>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-4xl md: tex t-6xl font-bold mb-6">
               Email Automation
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
                 {' '}
@@ -124,15 +123,15 @@ export default function EmailAutomation() {
               personalized campaigns, and advanced analytics. Drive engagement
               and boost conversions with our powerful platform.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
+              <Button size="lg" className="bg-blue-600 hover: b g-blue-700">
                 Start Free Trial
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5"  />
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-gray-900"
+                className="border-white text-white hover: b g-white hover: tex t-gray-900"
               >
                 Schedule Demo
               </Button>
@@ -143,9 +142,9 @@ export default function EmailAutomation() {
 
       {/* Features Section */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4">
               Powerful Email Automation Features
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -154,11 +153,11 @@ export default function EmailAutomation() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
             {features.map((feature, index) => (
               <Card
                 key={index}
-                className="p-6 hover: shadow-xl transition-shadow duration-300"
+                className="p-6 hover: shado w-xl transition-shadow duration-300"
               >
                 <div className="flex items-center mb-4">
                   <div className="p-3 bg-blue-100 rounded-lg mr-4">
@@ -177,9 +176,9 @@ export default function EmailAutomation() {
 
       {/* Pricing Section */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4">
               Choose Your Plan
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -188,7 +187,7 @@ export default function EmailAutomation() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: gri d-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <Card
                 key={index}
@@ -218,14 +217,14 @@ export default function EmailAutomation() {
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center">
-                      <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                      <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0"  />
                       <span className="text-gray-600">{feature}</span>
                     </li>
                   ))}
                 </ul>
 
                 <Button
-                  className={`w-full ${plan.popular ? 'bg-blue-600 hover: bg-blue-700' : ''}`}
+                  className={`w-full ${plan.popular ? 'bg-blue-600 hover: b g-blue-700' : ''}`}
                   variant={plan.popular ? 'default' : 'outline'}
                 >
                   Get Started
@@ -238,27 +237,27 @@ export default function EmailAutomation() {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8 text-center">
+          <h2 className="text-3xl md: tex t-4xl font-bold mb-4">
             Ready to Automate Your Email Marketing?
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Join thousands of businesses already using our email automation
             platform to increase engagement and drive conversions.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: fle x-row gap-4 justify-center">
             <Button
               size="lg"
-              className="bg-white text-blue-600 hover:bg-gray-100"
+              className="bg-white text-blue-600 hover: b g-gray-100"
             >
               Start Free Trial
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <ArrowRight className="ml-2 h-5 w-5"  />
             </Button>
             <Link href="/contact">
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-blue-600"
+                className="border-white text-white hover: b g-white hover: tex t-blue-600"
               >
                 Contact Sales
               </Button>
