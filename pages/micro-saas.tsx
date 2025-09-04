@@ -1344,7 +1344,139 @@ export default function MicroSaaS() {
         'Enhanced security solutions',
         'Cutting-edge research capabilities'
       ],
-      category: 'Quantum Computing'    }
+      category: 'Quantum Computing'    },
+    {
+      icon: Brain,
+      name: 'AI-Powered Legal Document Analyzer',
+      description: 'Intelligent legal document analysis with contract review, risk assessment, and compliance checking.',
+      features: [
+        'Contract clause analysis and risk identification',
+        'Legal document summarization and key point extraction',
+        'Compliance checking against regulations',
+        'Automated contract comparison and version control',
+        'Legal research and precedent analysis',
+        'Document generation and template management'
+      ],
+      pricing: '$599 – $3,999/month',
+      timeline: '2–4 weeks',
+      benefits: [
+        '90% reduction in legal review time',
+        'Enhanced contract risk assessment',
+        'Automated compliance monitoring',
+        'Improved legal document accuracy'
+      ],
+      category: 'Legal Tech'
+    },
+    {
+      icon: Shield,
+      name: 'AI-Powered Threat Intelligence Platform',
+      description: 'Real-time cybersecurity threat intelligence with automated threat hunting and response.',
+      features: [
+        'Real-time threat detection and analysis',
+        'Automated threat hunting and investigation',
+        'Threat intelligence feeds and correlation',
+        'Incident response automation',
+        'Security posture assessment',
+        'Threat actor profiling and attribution'
+      ],
+      pricing: '$1,299 – $7,999/month',
+      timeline: '3–6 weeks',
+      benefits: [
+        'Proactive threat detection',
+        'Reduced incident response time',
+        'Enhanced security visibility',
+        'Automated threat mitigation'
+      ],
+      category: 'Cybersecurity'
+    },
+    {
+      icon: BarChart3,
+      name: 'AI-Powered Market Research Platform',
+      description: 'Automated market research and competitive intelligence with real-time insights.',
+      features: [
+        'Automated market data collection and analysis',
+        'Competitive intelligence and benchmarking',
+        'Trend analysis and forecasting',
+        'Customer sentiment analysis',
+        'Market opportunity identification',
+        'Custom research report generation'
+      ],
+      pricing: '$799 – $4,999/month',
+      timeline: '2–4 weeks',
+      benefits: [
+        'Real-time market insights',
+        'Automated competitive analysis',
+        'Data-driven decision making',
+        'Reduced research costs'
+      ],
+      category: 'Market Research'
+    },
+    {
+      icon: Users,
+      name: 'AI-Powered Customer Success Platform',
+      description: 'Intelligent customer success management with predictive analytics and automated workflows.',
+      features: [
+        'Customer health scoring and prediction',
+        'Automated success workflows and playbooks',
+        'Churn prediction and prevention',
+        'Customer journey mapping and optimization',
+        'Success metrics tracking and reporting',
+        'Automated customer communication'
+      ],
+      pricing: '$499 – $2,999/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        'Improved customer retention',
+        'Proactive customer success management',
+        'Reduced churn rates',
+        'Enhanced customer satisfaction'
+      ],
+      category: 'Customer Success'
+    },
+    {
+      icon: Globe,
+      name: 'AI-Powered Website Accessibility Checker',
+      description: 'Automated website accessibility auditing and compliance monitoring with WCAG guidelines.',
+      features: [
+        'Automated accessibility scanning and testing',
+        'WCAG 2.1 and 2.2 compliance checking',
+        'Screen reader compatibility testing',
+        'Color contrast and visual accessibility analysis',
+        'Keyboard navigation testing',
+        'Accessibility report generation and recommendations'
+      ],
+      pricing: '$299 – $1,999/month',
+      timeline: '1–2 weeks',
+      benefits: [
+        'Improved website accessibility',
+        'WCAG compliance assurance',
+        'Better user experience for all users',
+        'Reduced legal compliance risks'
+      ],
+      category: 'Web Accessibility'
+    },
+    {
+      icon: FileText,
+      name: 'AI-Powered Patent Research Platform',
+      description: 'Intelligent patent search, analysis, and intellectual property management system.',
+      features: [
+        'Advanced patent search and filtering',
+        'Patent landscape analysis and mapping',
+        'Prior art detection and analysis',
+        'Patent portfolio management',
+        'Patent filing and prosecution support',
+        'IP infringement monitoring and alerts'
+      ],
+      pricing: '$899 – $5,999/month',
+      timeline: '3–5 weeks',
+      benefits: [
+        'Comprehensive patent research',
+        'Reduced IP research time',
+        'Enhanced patent portfolio management',
+        'Proactive IP protection'
+      ],
+      category: 'Intellectual Property'
+    }
   ];
 
   const categories = [...new Set(microSaaSServices.map(service => service.category))];
