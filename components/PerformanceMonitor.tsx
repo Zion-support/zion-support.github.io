@@ -1,12 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unused-vars, no-unused-vars */
 import { useEffect } from 'react';
-
-// Type definitions for gtag
-declare global {
-  interface Window {
-    gtag?: (...args: unknown[]) => void;
-  }
-}
 
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
@@ -16,12 +8,13 @@ const PerformanceMonitor: React.FC = () => {
       const sendToAnalytics = (metric: string, value: number) => {
         if (process.env.NODE_ENV === 'production') {
           // Send to Google Analytics or other analytics service
-          // eslint-disable-next-line no-console
-          console.log({
-            metric_name: metric,
-            metric_value: Math.round(value),
-            metric_rating: value < 2.5 ? 'good' : value < 4 ? 'needs-improvement' : 'poor'
-          });
+          if (typeof (window as any).gtag !== 'undefined') {
+            (window as any).gtag('event', 'web_vitals', {
+              metric_name: metric,
+              metric_value: Math.round(value),
+              metric_rating: value < 2.5 ? 'good' : value < 4 ? 'needs-improvement' : 'poor'
+            });
+          }
         }
       };
       // Monitor Largest Contentful Paint (LCP)
@@ -30,7 +23,6 @@ const PerformanceMonitor: React.FC = () => {
           if (entry.entryType === 'largest-contentful-paint') {
             // Log LCP in development only
             if (process.env.NODE_ENV === 'development') {
-              // eslint-disable-next-line no-console
               console.log('LCP:', entry.startTime);
             }
             sendToAnalytics('LCP', entry.startTime);
@@ -40,7 +32,7 @@ const PerformanceMonitor: React.FC = () => {
       
       try {
         observer.observe({ entryTypes: ['largest-contentful-paint'] });
-      } catch {
+      } catch (e) {
         // Fallback for browsers that don't support LCP
       }
 
@@ -48,20 +40,19 @@ const PerformanceMonitor: React.FC = () => {
       const fidObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'first-input') {
+            const fidEntry = entry as PerformanceEventTiming;
             // Log FID in development only
             if (process.env.NODE_ENV === 'development') {
-              // eslint-disable-next-line no-console, @typescript-eslint/no-explicit-any
-              console.log('FID:', (entry as any).processingStart - entry.startTime);
+              console.log('FID:', fidEntry.processingStart - fidEntry.startTime);
             }
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            sendToAnalytics('FID', (entry as any).processingStart - entry.startTime);
+            sendToAnalytics('FID', fidEntry.processingStart - fidEntry.startTime);
           }
         }
       });
 
       try {
         fidObserver.observe({ entryTypes: ['first-input'] });
-      } catch {
+      } catch (e) {
         // Fallback for browsers that don't support FID
       }
 
@@ -69,14 +60,12 @@ const PerformanceMonitor: React.FC = () => {
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          const layoutShiftEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
-          if (!layoutShiftEntry.hadRecentInput) {
-            clsValue += layoutShiftEntry.value || 0;
+          if (!(entry as any).hadRecentInput) {
+            clsValue += (entry as any).value;
           }
         }
         // Log CLS in development only
         if (process.env.NODE_ENV === 'development') {
-          // eslint-disable-next-line no-console
           console.log('CLS:', clsValue);
         }
         sendToAnalytics('CLS', clsValue);
@@ -84,7 +73,7 @@ const PerformanceMonitor: React.FC = () => {
 
       try {
         clsObserver.observe({ entryTypes: ['layout-shift'] });
-      } catch {
+      } catch (e) {
         // Fallback for browsers that don't support CLS
       }
 

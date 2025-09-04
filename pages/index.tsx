@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Head from 'next/head';
+import Image from 'next/image';
 
 export default function Home() {
   const contact = {
@@ -64,9 +65,8 @@ export default function Home() {
             </p>
             <p className="text-lg text-slate-400 mb-12 max-w-3xl mx-auto">
               We deliver cutting-edge technology solutions with 150+ innovative micro SaaS products, 
-              100+ advanced AI services, and 100+ comprehensive IT solutions. From cloud optimization 
-              to AI automation, quantum computing to blockchain solutions, we help businesses scale 
-              efficiently and securely with next-generation technology.
+              90+ advanced AI services, and 100+ comprehensive IT solutions. From quantum computing 
+              to AI automation, we help businesses scale efficiently and securely with next-generation technology.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
@@ -87,7 +87,6 @@ export default function Home() {
                 <p className="text-slate-300">Micro SaaS Products</p>
               </div>
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
-                <h3 className="text-2xl font-bold text-purple-400 mb-2">100+</h3>
                 <p className="text-slate-300">AI Services</p>
               </div>
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">

@@ -1,29 +1,50 @@
 {
-  "timestamp": "2025-09-04T02:23:04.448Z",
+<<<<<<< HEAD
+  "timestamp": "2025-09-03T17:32:53.642Z",
   "checks": {
-    "packageJson": {
-      "status": "ok",
-      "message": "Package.json found",
-      "version": "0.1.0"
+    "Node.js Version": {
+      "status": "passed",
+      "message": "Node.js v22.16.0"
     },
-    "dependencies": {
-      "status": "ok",
+    "Package.json": {
+      "status": "passed",
+      "message": "package.json exists"
+    },
+    "Dependencies": {
+      "status": "passed",
       "message": "Dependencies installed"
     },
-    "diskSpace": {
-      "status": "ok",
-      "message": "Disk space available",
-      "details": "overlay         126G   14G  107G  12% /"
+    "Disk Space": {
+      "status": "passed",
+      "message": "Disk usage: 12%"
     },
-    "memory": {
-      "status": "ok",
-      "message": "Memory check completed",
-      "details": "Mem:            15Gi       1.4Gi       909Mi        10Mi        13Gi        14Gi"
+    "Memory Usage": {
+      "status": "passed",
+      "message": "Memory usage: 9%"
     },
-    "build": {
-      "status": "info",
-      "message": "No build directory found (normal for development)"
+    "Build Test": {
+      "status": "passed",
+      "message": "Build successful"
+    },
+    "Linting": {
+      "status": "warning",
+      "warning": true,
+      "message": "Linting errors found"
     }
   },
-  "status": "healthy"
+  "summary": {
+    "total": 7,
+    "passed": 6,
+    "failed": 0,
+    "warnings": 1
+=======
+  "timestamp": "2025-09-03T21:22:52.907Z",
+  "status": "healthy",
+  "checks": {
+    "packageJson": true,
+    "buildDir": false,
+    "dependencies": true,
+    "criticalFiles": true
+>>>>>>> origin/main
+  }
 }
