@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 
-interface WebVitals {
-  name: string;
-  value: number;
-  delta: number;
-  id: string;
+// Type definitions for Performance Observer
+declare global {
+  interface Window {
+    PerformanceObserver: any;
+  }
 }
 
 const PerformanceMonitor: React.FC = () => {
@@ -24,7 +24,7 @@ const PerformanceMonitor: React.FC = () => {
           }
       }
       // Monitor Largest Contentful Paint (LCP)
-      const observer = new PerformanceObserver((list) => {
+      const observer = new window.PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
             sendToAnalytics({
@@ -43,7 +43,7 @@ const PerformanceMonitor: React.FC = () => {
       }
 
       // Monitor First Input Delay (FID)
-      const fidObserver = new PerformanceObserver((list) => {
+      const fidObserver = new window.PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'first-input') {
             // Cast to any to access processingStart property for FID calculation
@@ -63,7 +63,8 @@ const PerformanceMonitor: React.FC = () => {
       }
 
       // Monitor Cumulative Layout Shift (CLS)
-      const clsObserver = new PerformanceObserver((list) => {
+      let clsValue = 0;
+      const clsObserver = new window.PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           const layoutEntry = entry as LayoutShiftEntry;
           if (!layoutEntry.hadRecentInput) {
