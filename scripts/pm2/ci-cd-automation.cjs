@@ -21,7 +21,9 @@ const runCommand = (command, description) => {
     const output = execSync(command, { 
       encoding: 'utf8', 
       stdio: 'pipe',
-      cwd: process.cwd()
+      cwd: process.cwd(),
+      maxBuffer: 1024 * 1024 * 10, // 10MB buffer
+      timeout: 300000 // 5 minute timeout
     });
     log(`Completed: ${description}`);
     return { success: true, output };
@@ -50,7 +52,7 @@ const main = async () => {
   if (!buildResult.success) {
     log('Build failed, attempting to fix and rebuild');
     // Try to fix common build issues
-    runCommand('npm run build -- --no-cache', 'Rebuilding without cache');
+    runCommand('rm -rf .next && npm run build', 'Cleaning and rebuilding');
   }
   
   // Verify build output
