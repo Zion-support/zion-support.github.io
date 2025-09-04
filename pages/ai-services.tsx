@@ -827,7 +827,6 @@ export default function AIServices() {
     },
     {
       icon: Brain,
-<<<<<<< HEAD
       name: 'AI-Powered Drug Discovery Platform',
       description: 'Advanced AI platform for pharmaceutical research, drug discovery, and molecular analysis using deep learning.',
       features: [
@@ -846,7 +845,10 @@ export default function AIServices() {
         'Reduced research and development costs',
         'Improved success rates in clinical trials',
         'Enhanced drug safety profiles'
-=======
+      ]
+    },
+    {
+      icon: Brain,
       name: 'Generative AI Content Studio',
       description: 'Advanced AI-powered content creation platform that generates high-quality text, images, videos, and audio content for marketing, education, and entertainment.',
       features: [
@@ -865,7 +867,6 @@ export default function AIServices() {
         'Consistent brand messaging across all channels',
         'Reduced content creation costs by 70%',
         'Improved content engagement and conversion rates'
->>>>>>> 1735b00409ca432e079c8359c109c85b21bb1334
       ]
     },
     {
