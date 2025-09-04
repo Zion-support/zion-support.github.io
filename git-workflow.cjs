@@ -9,11 +9,14 @@ const fs = require('fs');
 const path = require('path');
 
 class GitWorkflow {
-  constructor() { this.branch = 'main';
+  constructor() { 
+    this.branch = 'main';
     this.changes = [];
-    this.reports = [] }
+    this.reports = [];
+  }
 
-  log() { const icons={
+  log(message, type = 'INFO') { 
+    const icons = {
       'INFO': 'ℹ️',
       'SUCCESS': '✅',
       'ERROR': '❌',
@@ -24,14 +27,17 @@ class GitWorkflow {
     console.log(`${icons[type]} ${message}`);
   }
 
-  checkGitRepository() { if (!fs.existsSync('.git')) {
+  checkGitRepository() { 
+    if (!fs.existsSync('.git')) {
       this.log('Not in a git repository', 'WARNING');
-      return false }
+      return false;
+    }
     this.log('Git repository found', 'SUCCESS');
     return true;
   }
 
-  generateCommitMessage() { const timestamp = new Date().toISOString();
+  generateCommitMessage() { 
+    const timestamp = new Date().toISOString();
     const changes = [
       'Automated improvements and optimizations',
       'Enhanced automation scripts',
@@ -39,10 +45,11 @@ class GitWorkflow {
       'Improved security configurations',
       'Performance optimizations'
     ];
-    return `${changes.join(', ') } - ${timestamp}`;
+    return `${changes.join(', ')} - ${timestamp}`;
   }
 
-  createGitIgnore() { const gitignoreContent = `# Dependencies
+  createGitIgnore() { 
+    const gitignoreContent = `# Dependencies
 node_modules/
 npm-debug.log*
 yarn-debug.log*
@@ -106,7 +113,7 @@ jspm_packages/
 # Yarn Integrity file
 .yarn-integrity
 
-# parcel-bundler cache (https: //parceljs.org/)
+# parcel-bundler cache (https://parceljs.org/)
 .cache
 .parcel-cache
 
@@ -138,7 +145,8 @@ temp/
 
 # OS generated files
 .DS_Store
-.DS_Store ? ._*
+.DS_Store?
+._*
 .Spotlight-V100
 .Trashes
 ehthumbs.db
@@ -158,11 +166,15 @@ security-reports/
 `;
 
     if (!fs.existsSync('.gitignore')) {
-      fs.writeFileSync('.gitignore', gitignoreContent) : this.log('Created .gitignore file', 'SUCCESS') } else {
-      this.log('.gitignore already exists', 'INFO')}
+      fs.writeFileSync('.gitignore', gitignoreContent);
+      this.log('Created .gitignore file', 'SUCCESS');
+    } else {
+      this.log('.gitignore already exists', 'INFO');
+    }
   }
 
-  createReadme() { const readmeContent = `# Zion Tech Group - Automation & Testing Suite
+  createReadme() { 
+    const readmeContent = `# Zion Tech Group - Automation & Testing Suite
 
 ## Overview
 This project includes comprehensive automation scripts, testing suites, and optimization tools for the Zion Tech Group application.
@@ -182,10 +194,10 @@ This project includes comprehensive automation scripts, testing suites, and opti
 node comprehensive-automation.js
 
 # Run test suite
-node test-suite.js
+node test-suite.cjs
 
 # Run git workflow
-node git-workflow.js
+node git-workflow.cjs
 \`\`\`
 
 ### Available Scripts
@@ -201,43 +213,89 @@ npm test
 
 # Lint
 npm run lint
+\`\`\`
+
+## Automation Scripts
+
+### Master Automation
+\`\`\`bash
+node master-automation.cjs
+\`\`\`
+
+### Individual Components
+- **Comprehensive Automation**: \`node comprehensive-automation.js\`
+- **Test Suite**: \`node test-suite.cjs\`
+- **Git Workflow**: \`node git-workflow.cjs\`
+
+## Generated Scripts
+- \`scripts/performance-monitor.js\` - Performance monitoring
+- \`scripts/security-auditor.js\` - Security auditing
+- \`scripts/test-runner.js\` - Test execution
+- \`scripts/git-workflow.js\` - Git operations
+
+## Reports
+All automation scripts generate detailed reports in JSON format for analysis and monitoring.
+
+## Contributing
+1. Run the automation suite before making changes
+2. Ensure all tests pass
+3. Follow the established git workflow
+4. Update documentation as needed
+
+## License
+MIT License - see LICENSE file for details
+`;
 
     if (!fs.existsSync('README-AUTOMATION.md')) {
       fs.writeFileSync('README-AUTOMATION.md', readmeContent);
-      this.log('Created README-AUTOMATION.md', 'SUCCESS') } else {
+      this.log('Created README-AUTOMATION.md', 'SUCCESS');
+    } else {
       this.log('README-AUTOMATION.md already exists', 'INFO');
     }
   }
 
-  createPackageJsonScripts() { try {
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'))// Add automation scripts if they don't exist
+  createPackageJsonScripts() { 
+    try {
+      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+      
+      // Add automation scripts if they don't exist
       const newScripts = {
-        'automation: run': 'node comprehensive-automation.js',
-        'automation: test': 'node test-suite.js',
-        'automation: git': 'node git-workflow.js',
-        'automation: all': 'npm run automation:run && npm run automation:test && npm run automation:git',
-        'test: comprehensive': 'node test-suite.js',
-        'performance: monitor': 'node scripts/performance-monitor.js',
-        'security: audit': 'node scripts/security-auditor.js'
-       };
+        'automation:run': 'node comprehensive-automation.js',
+        'automation:test': 'node test-suite.cjs',
+        'automation:git': 'node git-workflow.cjs',
+        'automation:all': 'npm run automation:run && npm run automation:test && npm run automation:git',
+        'test:comprehensive': 'node test-suite.cjs',
+        'performance:monitor': 'node scripts/performance-monitor.js',
+        'security:audit': 'node scripts/security-auditor.js'
+      };
 
       let updated = false;
-      Object.keys(newScripts).forEach() { packageJson.scripts[script] = newScripts[script];
-          updated = true }
+      Object.keys(newScripts).forEach(script => {
+        if (!packageJson.scripts[script]) {
+          packageJson.scripts[script] = newScripts[script];
+          updated = true;
+        }
       });
 
-      if() { fs.writeFileSync('package.json', JSON.stringify(packageJson, null, 2));
-        this.log('Updated package.json with automation scripts', 'SUCCESS') } else {
-        this.log('Package.json already has automation scripts', 'INFO')}
+      if (updated) { 
+        fs.writeFileSync('package.json', JSON.stringify(packageJson, null, 2));
+        this.log('Updated package.json with automation scripts', 'SUCCESS');
+      } else {
+        this.log('Package.json already has automation scripts', 'INFO');
+      }
     } catch (error) {
-      this.log(`Error updating package.json: ${error.message}`, 'ERROR')}
+      this.log(`Error updating package.json: ${error.message}`, 'ERROR');
+    }
   }
 
-  generateGitCommands() { const commands = [
+  generateGitCommands() { 
+    const commands = [
       'git add .',
       `git commit -m "${this.generateCommitMessage()}"`,
       'git push origin main'
-    ]const scriptContent = `#!/bin/bash
+    ];
+    
+    const scriptContent = `#!/bin/bash
 # Git workflow automation script
 echo "🚀 Starting git workflow..."
 
@@ -261,7 +319,8 @@ echo "✅ Git workflow completed successfully"
     this.log('Created git-workflow.sh script', 'SUCCESS');
   }
 
-  generateReport() { const report={
+  generateReport() { 
+    const report = {
       timestamp: new Date().toISOString(),
       gitRepository: this.checkGitRepository(),
       filesCreated: [
@@ -286,7 +345,8 @@ echo "✅ Git workflow completed successfully"
     this.log('🚀 Ready for git operations', 'SUCCESS');
   }
 
-  async run() { this.log('🔄 Starting Git Workflow Automation...', 'PROGRESS');
+  async run() { 
+    this.log('🔄 Starting Git Workflow Automation...', 'PROGRESS');
     
     this.createGitIgnore();
     this.createReadme();
@@ -294,14 +354,17 @@ echo "✅ Git workflow completed successfully"
     this.generateGitCommands();
     this.generateReport();
     
-    this.log('✅ Git Workflow Automation Completed', 'SUCCESS') }
+    this.log('✅ Git Workflow Automation Completed', 'SUCCESS');
+  }
 }
 
 // Run the git workflow
-if() { const workflow = new GitWorkflow();
+if (require.main === module) { 
+  const workflow = new GitWorkflow();
   workflow.run().catch(error => {
-    console.error('Git workflow failed: ', error);
-    process.exit(1) });
+    console.error('Git workflow failed:', error);
+    process.exit(1);
+  });
 }
 
 module.exports = GitWorkflow;

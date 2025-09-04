@@ -1,90 +1,12 @@
 {
-  "timestamp": "2025-09-04T03:05:10.197Z",
+  "timestamp": "2025-09-04T05:32:15.796Z",
+  "duration": "0s",
   "optimizations": [
-    {
-      "type": "image",
-      "file": "deployment/public/favicon.svg",
-      "action": "optimized",
-      "timestamp": "2025-09-04T03:05:10.197Z"
-    },
-    {
-      "type": "image",
-      "file": "deployment/public/og-image.svg",
-      "action": "optimized",
-      "timestamp": "2025-09-04T03:05:10.197Z"
-    },
-    {
-      "type": "image",
-      "file": "deployment/public/vite.svg",
-      "action": "optimized",
-      "timestamp": "2025-09-04T03:05:10.197Z"
-    },
-    {
-      "type": "image",
-      "file": "deployments/deployment-20250903-181759/production/public/favicon.svg",
-      "action": "optimized",
-      "timestamp": "2025-09-04T03:05:10.197Z"
-    },
-    {
-      "type": "image",
-      "file": "deployments/deployment-20250903-181759/production/public/og-image.svg",
-      "action": "optimized",
-      "timestamp": "2025-09-04T03:05:10.197Z"
-    },
-    {
-      "type": "image",
-      "file": "deployments/deployment-20250903-181759/production/public/vite.svg",
-      "action": "optimized",
-      "timestamp": "2025-09-04T03:05:10.197Z"
-    },
-    {
-      "type": "image",
-      "file": "deployments/deployment-20250903-181759/staging/public/favicon.svg",
-      "action": "optimized",
-      "timestamp": "2025-09-04T03:05:10.197Z"
-    },
-    {
-      "type": "image",
-      "file": "deployments/deployment-20250903-181759/staging/public/og-image.svg",
-      "action": "optimized",
-      "timestamp": "2025-09-04T03:05:10.197Z"
-    },
-    {
-      "type": "image",
-      "file": "deployments/deployment-20250903-181759/staging/public/vite.svg",
-      "action": "optimized",
-      "timestamp": "2025-09-04T03:05:10.197Z"
-    },
-    {
-      "type": "image",
-      "file": "public/favicon.svg",
-      "action": "optimized",
-      "timestamp": "2025-09-04T03:05:10.197Z"
-    },
-    {
-      "type": "image",
-      "file": "public/og-image.svg",
-      "action": "optimized",
-      "timestamp": "2025-09-04T03:05:10.197Z"
-    },
-    {
-      "type": "image",
-      "file": "public/vite.svg",
-      "action": "optimized",
-      "timestamp": "2025-09-04T03:05:10.197Z"
-    },
-    {
-      "type": "bundle",
-      "action": "analyzed",
-      "size": 79000,
-      "timestamp": "2025-09-04T03:05:10.197Z"
-    }
+    "Created image optimization script",
+    "Created bundle analyzer config",
+    "Created lazy loading components"
   ],
-  "recommendations": [
-    {
-      "type": "general",
-      "priority": "medium",
-      "message": "Consider implementing lazy loading for better performance."
-    }
-  ]
+  "summary": {
+    "totalOptimizations": 3
+  }
 }
