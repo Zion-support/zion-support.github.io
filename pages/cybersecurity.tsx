@@ -4,46 +4,47 @@ import Link from 'next/link';
 import { Shield, Lock, Eye, AlertTriangle, Users, Database } from 'lucide-react';
 
 export default function Cybersecurity() {
-  const contact ={
-    phone: email, 'kleber@ziontechgroup.com'
-    address: site, 'https://ziontechgroup.com'
+  const contact = {
+    email: 'kleber@ziontechgroup.com',
+    phone: '+1 (555) 123-4567',
+    address: 'https://ziontechgroup.com'
   }
   const services = [
     {
       icon: Shield,
-      title: 'Security Assessment & Auditing'
-      description: 'Comprehensive security evaluations to identify vulnerabilities and compliance gaps.'
-      features: ['Penetration testing' 'Vulnerability scanning' 'Compliance audits' 'Risk assessments']
+      title: 'Security Assessment & Auditing',
+      description: 'Comprehensive security evaluations to identify vulnerabilities and compliance gaps.',
+      features: ['Penetration testing', 'Vulnerability scanning', 'Compliance audits', 'Risk assessments']
     },
     {
       icon: Lock,
-      title: 'Identity & Access Management'
-      description: 'Robust IAM solutions to control user access and protect sensitive data.'
-      features: ['Multi-factor authentication' 'Single sign-on' 'Role-based access' 'Privileged access management']
+      title: 'Identity & Access Management',
+      description: 'Robust IAM solutions to control user access and protect sensitive data.',
+      features: ['Multi-factor authentication', 'Single sign-on', 'Role-based access', 'Privileged access management']
     },
     {
       icon: Eye,
-      title: 'Security Monitoring & SIEM'
-      description: '24/7 security monitoring with advanced threat detection and incident response.'
-      features: ['Real-time monitoring' 'Threat intelligence' 'Incident response' 'Forensic analysis']
+      title: 'Security Monitoring & SIEM',
+      description: '24/7 security monitoring with advanced threat detection and incident response.',
+      features: ['Real-time monitoring', 'Threat intelligence', 'Incident response', 'Forensic analysis']
     },
     {
       icon: AlertTriangle,
-      title: 'Threat Detection & Response'
-      description: 'Advanced threat hunting and automated response to security incidents.'
-      features: ['Behavioral analytics' 'AI-powered detection' 'Automated response' 'Threat hunting']
+      title: 'Threat Detection & Response',
+      description: 'Advanced threat hunting and automated response to security incidents.',
+      features: ['Behavioral analytics', 'AI-powered detection', 'Automated response', 'Threat hunting']
     },
     {
       icon: Users,
-      title: 'Security Training & Awareness'
-      description: 'Comprehensive security education programs to build a security-conscious culture.'
-      features: ['Phishing simulations' 'Security workshops' 'Compliance training' 'Awareness campaigns']
+      title: 'Security Training & Awareness',
+      description: 'Comprehensive security education programs to build a security-conscious culture.',
+      features: ['Phishing simulations', 'Security workshops', 'Compliance training', 'Awareness campaigns']
     },
     {
       icon: Database,
-      title: 'Data Protection & Encryption'
-      description: 'End-to-end data protection with advanced encryption and backup solutions.'
-      features: ['Data encryption' 'Backup solutions' 'Data loss prevention' 'Privacy compliance']
+      title: 'Data Protection & Encryption',
+      description: 'End-to-end data protection with advanced encryption and backup solutions.',
+      features: ['Data encryption', 'Backup solutions', 'Data loss prevention', 'Privacy compliance']
     }
   ];
 
@@ -53,11 +54,11 @@ export default function Cybersecurity() {
         <title>Cybersecurity Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive cybersecurity services including security assessments, threat detection, identity management, and compliance. Protect your business with Zion Tech Group." />
         <meta name="keywords" content="cybersecurity, security assessment, threat detection, identity management, compliance, penetration testing" />
-        <link rel="canonical" href={`${contact.site}/cybersecurity`} />
-        <meta property="og: title" content="Cybersecurity Services - Zion Tech Group" />
+        <link rel="canonical" href={`${contact.address}/cybersecurity`} />
+        <meta property="og:title" content="Cybersecurity Services - Zion Tech Group" />
         <meta property="og:description" content="Comprehensive cybersecurity services including security assessments, threat detection, and compliance." />
-        <meta property="og: url" content={`${contact.site}/cybersecurity`} />
-        <meta property="og: type" content="website" />
+        <meta property="og:url" content={`${contact.address}/cybersecurity`} />
+        <meta property="og:type" content="website" />
       </Head>
 
       <div className="min-h-screen bg-white">
