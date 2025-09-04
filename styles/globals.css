@@ -49,6 +49,27 @@
   align-items: center;
 }
 
+/* Services Dropdown Styles */
+.services-dropdown {
+  display: none !important;
+}
+
+.services-dropdown:hover {
+  display: block !important;
+}
+
+.services-dropdown-parent:hover .services-dropdown {
+  display: block !important;
+}
+
+.services-dropdown-parent {
+  position: relative;
+}
+
+.services-dropdown-parent:hover .services-dropdown {
+  display: block !important;
+}
+
 .header-nav-link {
   padding: 8px 12px;
   border-radius: 6px;
@@ -245,6 +266,135 @@
 .footer-cta-secondary:focus {
   outline: 2px solid #3b82f6;
   outline-offset: 2px;
+}
+
+/* Responsive Design Improvements */
+@media (max-width: 768px) {
+  .header-nav {
+    padding: 8px 16px;
+    flex-wrap: wrap;
+  }
+  
+  .header-nav-links {
+    gap: 4px;
+  }
+  
+  .services-dropdown {
+    position: fixed !important;
+    top: 60px !important;
+    left: 16px !important;
+    right: 16px !important;
+    width: auto !important;
+    min-width: auto !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-nav {
+    padding: 6px 12px;
+  }
+  
+  .header-logo {
+    font-size: 1.1rem;
+  }
+}
+
+/* Grid Responsiveness */
+.responsive-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .responsive-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/* Card Responsiveness */
+.responsive-card {
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(15, 23, 42, 0.6);
+  transition: all 0.2s ease;
+}
+
+@media (max-width: 640px) {
+  .responsive-card {
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+}
+
+/* Text Responsiveness */
+.responsive-text {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+  .responsive-text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+}
+
+.responsive-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+@media (max-width: 640px) {
+  .responsive-heading {
+    font-size: 1.5rem;
+  }
+}
+
+/* Button Responsiveness */
+.responsive-button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+@media (max-width: 640px) {
+  .responsive-button {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Container Responsiveness */
+.responsive-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+@media (max-width: 640px) {
+  .responsive-container {
+    padding: 0 1rem;
+  }
+}
+
+/* Footer Responsiveness */
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 }
 
 /* Loading states */

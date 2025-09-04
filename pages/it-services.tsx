@@ -1298,6 +1298,489 @@ export default function ITServices() {
         'Advanced data processing and analysis'
       ],
       category: 'High-Performance Computing'
+    },
+    {
+      icon: Globe,
+      name: '6G Network Infrastructure & Services',
+      description: 'Next-generation 6G network infrastructure with ultra-low latency, massive connectivity, and AI-integrated network management.',
+      features: [
+        'Ultra-low latency network architecture (<1ms)',
+        'Massive IoT connectivity (1M+ devices/km²)',
+        'AI-integrated network optimization',
+        'Terahertz frequency spectrum utilization',
+        'Holographic communication capabilities',
+        'Quantum-secured network protocols'
+      ],
+      pricing: '$50,000 – $500,000/project',
+      projectPricing: '$10,000 – $100,000/month managed',
+      timeline: '12–24 weeks',
+      benefits: [
+        'Revolutionary network performance',
+        'Ultra-low latency communications',
+        'Massive device connectivity',
+        'Future-proof network infrastructure'
+      ],
+      category: 'Next-Gen Networks'
+    },
+    {
+      icon: Cpu,
+      name: 'Quantum Computing Infrastructure',
+      description: 'Complete quantum computing infrastructure setup with quantum processors, quantum networks, and hybrid classical-quantum systems.',
+      features: [
+        'Quantum processor deployment and management',
+        'Quantum network infrastructure',
+        'Hybrid classical-quantum computing systems',
+        'Quantum algorithm development and optimization',
+        'Quantum error correction and fault tolerance',
+        'Quantum cloud computing platforms'
+      ],
+      pricing: '$100,000 – $2,000,000/project',
+      projectPricing: 'Custom pricing based on quantum resources',
+      timeline: '24–48 weeks',
+      benefits: [
+        'Exponential computational power',
+        'Breakthrough problem-solving capabilities',
+        'Quantum advantage in specific applications',
+        'Next-generation computing infrastructure'
+      ],
+      category: 'Quantum Computing'
+    },
+    {
+      icon: Brain,
+      name: 'Autonomous IT Operations Platform',
+      description: 'Fully autonomous IT operations platform with self-healing infrastructure, predictive maintenance, and intelligent automation.',
+      features: [
+        'Self-healing infrastructure automation',
+        'Predictive maintenance and failure prevention',
+        'Autonomous incident response and resolution',
+        'Intelligent capacity planning and scaling',
+        'Automated security threat response',
+        'Self-optimizing performance tuning'
+      ],
+      pricing: '$25,000 – $200,000/setup',
+      projectPricing: '$5,000 – $50,000/month managed',
+      timeline: '16–32 weeks',
+      benefits: [
+        '99.99% uptime guarantee',
+        'Automated operations management',
+        'Reduced operational costs',
+        'Predictive problem resolution'
+      ],
+      category: 'Autonomous Operations'
+    },
+    {
+      icon: Shield,
+      name: 'Zero Trust Security Architecture',
+      description: 'Comprehensive zero trust security implementation with continuous verification, micro-segmentation, and identity-centric security.',
+      features: [
+        'Identity and access management (IAM)',
+        'Micro-segmentation and network isolation',
+        'Continuous security verification',
+        'Privileged access management (PAM)',
+        'Security orchestration and automation',
+        'Advanced threat detection and response'
+      ],
+      pricing: '$30,000 – $300,000/project',
+      projectPricing: '$8,000 – $80,000/month managed',
+      timeline: '12–24 weeks',
+      benefits: [
+        'Enhanced security posture',
+        'Reduced attack surface',
+        'Automated threat response',
+        'Compliance with regulations'
+      ],
+      category: 'Cybersecurity'
+    },
+    {
+      icon: Cloud,
+      name: 'Multi-Cloud & Hybrid Cloud Management',
+      description: 'Advanced multi-cloud and hybrid cloud management platform with unified orchestration, cost optimization, and governance.',
+      features: [
+        'Unified multi-cloud orchestration',
+        'Hybrid cloud integration and management',
+        'Cloud cost optimization and FinOps',
+        'Cloud governance and compliance',
+        'Disaster recovery and backup automation',
+        'Cloud-native application deployment'
+      ],
+      pricing: '$20,000 – $150,000/project',
+      projectPricing: '$5,000 – $40,000/month managed',
+      timeline: '8–20 weeks',
+      benefits: [
+        'Optimized cloud costs',
+        'Enhanced cloud security',
+        'Improved operational efficiency',
+        'Flexible cloud strategy'
+      ],
+      category: 'Cloud Management'
+    },
+    {
+      icon: Database,
+      name: 'Advanced Data Mesh Architecture',
+      description: 'Modern data mesh architecture implementation with decentralized data ownership, self-serve data infrastructure, and federated governance.',
+      features: [
+        'Decentralized data architecture',
+        'Self-serve data infrastructure',
+        'Federated data governance',
+        'Data product development',
+        'Real-time data streaming and processing',
+        'Advanced data analytics and insights'
+      ],
+      pricing: '$40,000 – $400,000/project',
+      projectPricing: '$10,000 – $100,000/month managed',
+      timeline: '16–32 weeks',
+      benefits: [
+        'Scalable data architecture',
+        'Improved data accessibility',
+        'Enhanced data quality',
+        'Faster time-to-insight'
+      ],
+      category: 'Data Architecture'
+    },
+    {
+      icon: Code,
+      name: 'Platform Engineering & Internal Developer Platform',
+      description: 'Comprehensive platform engineering solution with internal developer platforms, self-service infrastructure, and developer experience optimization.',
+      features: [
+        'Internal developer platform (IDP)',
+        'Self-service infrastructure provisioning',
+        'Developer experience optimization',
+        'Platform as a Service (PaaS)',
+        'API management and governance',
+        'DevOps automation and tooling'
+      ],
+      pricing: '$35,000 – $350,000/project',
+      projectPricing: '$8,000 – $80,000/month managed',
+      timeline: '12–28 weeks',
+      benefits: [
+        'Accelerated development cycles',
+        'Improved developer productivity',
+        'Standardized development practices',
+        'Reduced operational overhead'
+      ],
+      category: 'Platform Engineering'
+    },
+    {
+      icon: Server,
+      name: 'Edge Computing & 5G/6G Integration',
+      description: 'Advanced edge computing infrastructure with 5G/6G integration, real-time processing, and distributed computing capabilities.',
+      features: [
+        'Edge computing infrastructure deployment',
+        '5G/6G network integration',
+        'Real-time data processing at the edge',
+        'Distributed computing orchestration',
+        'Edge AI and machine learning',
+        'Low-latency application deployment'
+      ],
+      pricing: '$25,000 – $250,000/project',
+      projectPricing: '$6,000 – $60,000/month managed',
+      timeline: '12–24 weeks',
+      benefits: [
+        'Ultra-low latency processing',
+        'Reduced bandwidth requirements',
+        'Enhanced data privacy',
+        'Improved application performance'
+      ],
+      category: 'Edge Computing'
+    },
+    {
+      icon: LinkIcon,
+      name: 'Advanced API Gateway & Service Mesh',
+      description: 'Comprehensive API gateway and service mesh implementation with traffic management, security, and observability.',
+      features: [
+        'Advanced API gateway configuration',
+        'Service mesh implementation (Istio, Linkerd)',
+        'Traffic management and load balancing',
+        'API security and authentication',
+        'Service discovery and registration',
+        'Distributed tracing and monitoring'
+      ],
+      pricing: '$15,000 – $150,000/project',
+      projectPricing: '$4,000 – $40,000/month managed',
+      timeline: '8–16 weeks',
+      benefits: [
+        'Enhanced API security',
+        'Improved service communication',
+        'Better observability and monitoring',
+        'Simplified microservices management'
+      ],
+      category: 'API & Service Management'
+    },
+    {
+      icon: TestTube,
+      name: 'Advanced Testing & Quality Assurance Platform',
+      description: 'Comprehensive testing and QA platform with automated testing, performance testing, and quality gates integration.',
+      features: [
+        'Automated testing framework setup',
+        'Performance and load testing',
+        'Security testing and vulnerability scanning',
+        'API testing and validation',
+        'Continuous testing integration',
+        'Quality gates and metrics'
+      ],
+      pricing: '$20,000 – $200,000/project',
+      projectPricing: '$5,000 – $50,000/month managed',
+      timeline: '8–20 weeks',
+      benefits: [
+        'Improved software quality',
+        'Reduced testing time',
+        'Automated quality assurance',
+        'Enhanced reliability'
+      ],
+      category: 'Quality Assurance'
+    },
+    {
+      icon: BookOpen,
+      name: 'Knowledge Management & Documentation Platform',
+      description: 'Advanced knowledge management platform with intelligent documentation, search, and collaboration capabilities.',
+      features: [
+        'Intelligent documentation generation',
+        'Advanced search and discovery',
+        'Knowledge base management',
+        'Collaborative documentation tools',
+        'Version control and change management',
+        'Integration with development tools'
+      ],
+      pricing: '$10,000 – $100,000/project',
+      projectPricing: '$2,000 – $20,000/month managed',
+      timeline: '6–12 weeks',
+      benefits: [
+        'Improved knowledge sharing',
+        'Enhanced team collaboration',
+        'Reduced onboarding time',
+        'Better documentation quality'
+      ],
+      category: 'Knowledge Management'
+    },
+    {
+      icon: Wrench,
+      name: 'Infrastructure as Code (IaC) & GitOps',
+      description: 'Complete Infrastructure as Code and GitOps implementation with automated provisioning, configuration management, and deployment.',
+      features: [
+        'Infrastructure as Code (Terraform, Pulumi)',
+        'GitOps workflow implementation',
+        'Configuration management automation',
+        'Environment provisioning automation',
+        'Infrastructure monitoring and alerting',
+        'Compliance and governance automation'
+      ],
+      pricing: '$15,000 – $150,000/project',
+      projectPricing: '$4,000 – $40,000/month managed',
+      timeline: '8–20 weeks',
+      benefits: [
+        'Consistent infrastructure deployment',
+        'Reduced manual errors',
+        'Faster environment provisioning',
+        'Improved compliance and governance'
+      ],
+      category: 'Infrastructure Automation'
+    },
+    {
+      icon: BarChart3,
+      name: 'Advanced Observability & Monitoring Platform',
+      description: 'Comprehensive observability platform with distributed tracing, metrics, logging, and intelligent alerting.',
+      features: [
+        'Distributed tracing and APM',
+        'Metrics collection and analysis',
+        'Centralized logging and log analysis',
+        'Intelligent alerting and incident management',
+        'Performance monitoring and optimization',
+        'Business intelligence and reporting'
+      ],
+      pricing: '$12,000 – $120,000/project',
+      projectPricing: '$3,000 – $30,000/month managed',
+      timeline: '6–16 weeks',
+      benefits: [
+        'Enhanced system visibility',
+        'Proactive issue detection',
+        'Improved system performance',
+        'Reduced mean time to resolution'
+      ],
+      category: 'Observability'
+    },
+    {
+      icon: Smartphone,
+      name: 'Mobile-First & Progressive Web App Development',
+      description: 'Advanced mobile and progressive web app development with cross-platform compatibility and offline capabilities.',
+      features: [
+        'Cross-platform mobile app development',
+        'Progressive Web App (PWA) implementation',
+        'Offline-first architecture',
+        'Mobile performance optimization',
+        'Push notifications and engagement',
+        'App store deployment and management'
+      ],
+      pricing: '$25,000 – $250,000/project',
+      projectPricing: '$6,000 – $60,000/month managed',
+      timeline: '12–28 weeks',
+      benefits: [
+        'Enhanced mobile user experience',
+        'Cross-platform compatibility',
+        'Improved app performance',
+        'Reduced development costs'
+      ],
+      category: 'Mobile Development'
+    },
+    {
+      icon: Globe,
+      name: 'Web3 & Blockchain Infrastructure',
+      description: 'Complete Web3 and blockchain infrastructure setup with smart contracts, decentralized applications, and blockchain integration.',
+      features: [
+        'Blockchain infrastructure deployment',
+        'Smart contract development and deployment',
+        'Decentralized application (dApp) development',
+        'Cryptocurrency and token integration',
+        'NFT marketplace development',
+        'DeFi protocol implementation'
+      ],
+      pricing: '$30,000 – $300,000/project',
+      projectPricing: '$8,000 – $80,000/month managed',
+      timeline: '16–32 weeks',
+      benefits: [
+        'Decentralized application capabilities',
+        'Enhanced security and transparency',
+        'Token economy implementation',
+        'Future-proof blockchain infrastructure'
+      ],
+      category: 'Web3 & Blockchain'
+    },
+    {
+      icon: Cpu,
+      name: 'High-Performance Computing (HPC) & GPU Clusters',
+      description: 'Advanced HPC infrastructure with GPU clusters, parallel computing, and scientific computing capabilities.',
+      features: [
+        'GPU cluster setup and management',
+        'Parallel computing optimization',
+        'Scientific computing workflows',
+        'Machine learning training infrastructure',
+        'High-performance storage systems',
+        'Job scheduling and resource management'
+      ],
+      pricing: '$50,000 – $500,000/project',
+      projectPricing: '$12,000 – $120,000/month managed',
+      timeline: '16–32 weeks',
+      benefits: [
+        'Massive computational power',
+        'Accelerated research and development',
+        'High-performance data processing',
+        'Advanced scientific computing'
+      ],
+      category: 'High-Performance Computing'
+    },
+    {
+      icon: Shield,
+      name: 'Advanced Threat Intelligence & SOC',
+      description: 'Comprehensive Security Operations Center (SOC) with advanced threat intelligence, incident response, and security automation.',
+      features: [
+        '24/7 Security Operations Center',
+        'Advanced threat intelligence platform',
+        'Incident response automation',
+        'Security orchestration and automation',
+        'Threat hunting and analysis',
+        'Compliance monitoring and reporting'
+      ],
+      pricing: '$40,000 – $400,000/project',
+      projectPricing: '$15,000 – $150,000/month managed',
+      timeline: '12–24 weeks',
+      benefits: [
+        'Proactive threat detection',
+        'Automated incident response',
+        'Enhanced security posture',
+        '24/7 security monitoring'
+      ],
+      category: 'Security Operations'
+    },
+    {
+      icon: Database,
+      name: 'Advanced Database & Data Platform Modernization',
+      description: 'Complete database and data platform modernization with cloud migration, performance optimization, and advanced analytics.',
+      features: [
+        'Database migration and modernization',
+        'Cloud database optimization',
+        'Data warehouse and lake implementation',
+        'Real-time data processing',
+        'Advanced analytics and BI',
+        'Data governance and compliance'
+      ],
+      pricing: '$35,000 – $350,000/project',
+      projectPricing: '$8,000 – $80,000/month managed',
+      timeline: '12–28 weeks',
+      benefits: [
+        'Improved data performance',
+        'Enhanced data accessibility',
+        'Advanced analytics capabilities',
+        'Reduced data management costs'
+      ],
+      category: 'Data Platform'
+    },
+    {
+      icon: LinkIcon,
+      name: 'Enterprise Integration & API Management',
+      description: 'Comprehensive enterprise integration platform with API management, data integration, and business process automation.',
+      features: [
+        'Enterprise service bus (ESB) implementation',
+        'API management and governance',
+        'Data integration and ETL/ELT',
+        'Business process automation',
+        'Legacy system integration',
+        'Real-time data synchronization'
+      ],
+      pricing: '$30,000 – $300,000/project',
+      projectPricing: '$7,000 – $70,000/month managed',
+      timeline: '12–24 weeks',
+      benefits: [
+        'Seamless system integration',
+        'Improved data flow',
+        'Enhanced business processes',
+        'Reduced integration complexity'
+      ],
+      category: 'Enterprise Integration'
+    },
+    {
+      icon: Globe,
+      name: 'Digital Twin & IoT Platform',
+      description: 'Advanced digital twin and IoT platform with real-time monitoring, predictive analytics, and autonomous control systems.',
+      features: [
+        'Digital twin creation and management',
+        'IoT device management and monitoring',
+        'Real-time data collection and processing',
+        'Predictive analytics and maintenance',
+        'Autonomous control systems',
+        'Advanced visualization and reporting'
+      ],
+      pricing: '$40,000 – $400,000/project',
+      projectPricing: '$10,000 – $100,000/month managed',
+      timeline: '16–32 weeks',
+      benefits: [
+        'Real-time asset monitoring',
+        'Predictive maintenance capabilities',
+        'Optimized operational efficiency',
+        'Data-driven decision making'
+      ],
+      category: 'Digital Twin & IoT'
+    },
+    {
+      icon: Brain,
+      name: 'AI/ML Infrastructure & MLOps Platform',
+      description: 'Complete AI/ML infrastructure with MLOps platform, model deployment, and automated machine learning pipelines.',
+      features: [
+        'MLOps platform implementation',
+        'Model training and deployment infrastructure',
+        'Automated ML pipeline orchestration',
+        'Model monitoring and management',
+        'Feature store and data versioning',
+        'A/B testing and model experimentation'
+      ],
+      pricing: '$35,000 – $350,000/project',
+      projectPricing: '$8,000 – $80,000/month managed',
+      timeline: '12–28 weeks',
+      benefits: [
+        'Accelerated ML model deployment',
+        'Automated ML operations',
+        'Enhanced model performance',
+        'Reduced ML development time'
+      ],
+      category: 'AI/ML Infrastructure'
     }
   ];
 
