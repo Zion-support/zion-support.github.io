@@ -1,6 +1,5 @@
 {
 <<<<<<< HEAD
-<<<<<<< HEAD
   "timestamp": "2025-09-03T20:36:49.970Z",
   "bundleSize": {
     ".next": {
@@ -18,34 +17,6 @@
       "size": 0,
       "sizeMB": "0.00"
     }
-=======
-  "timestamp": "2025-09-03T16:54:18.031Z",
-  "score": 60,
-  "bundleSize": {
-    ".next": {
-      "size": 41612654,
-      "sizeMB": "39.68"
-    },
-    "node_modules": {
-      "size": 819927451,
-      "sizeMB": "781.94"
-    }
-  },
-  "fileCounts": {
-    ".tsx": 16,
-    ".ts": 0,
-    ".jsx": 0,
-    ".js": 0,
-    ".css": 2,
-    ".json": 0
-  },
-  "checks": {
-    "buildSize": true,
-    "bundleAnalysis": false,
-    "lighthouseScore": false,
-    "loadTime": true,
-    "memoryUsage": true
->>>>>>> cursor/analyze-improve-and-deploy-application-d144
   },
   "fileCounts": {
     ".tsx": 25,
