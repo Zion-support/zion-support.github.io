@@ -20,13 +20,15 @@ class ComprehensiveAutomation {
     this.startTime = Date.now();
   }
 
-  log() { const timestamp = new Date().toISOString()const icons={
+  log(type, message) { 
+    const timestamp = new Date().toISOString();
+    const icons = {
       'INFO': 'ℹ️',
       'SUCCESS': '✅',
       'ERROR': '❌',
       'WARNING': '⚠️',
       'PROGRESS': '🔄'
-     };
+    };
     
     console.log(`${icons[type]} [${timestamp}] ${message}`);
   }

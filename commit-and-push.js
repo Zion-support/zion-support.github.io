@@ -23,7 +23,9 @@ class CommitAndPush {
     console.log(`${icons[type]} ${message}`);
   }
 
-  generateCommitMessage() { const timestamp = new Date().toISOString()return `Automated improvements and optimizations - ${timestamp }
+  generateCommitMessage() { 
+    const timestamp = new Date().toISOString();
+    return `Automated improvements and optimizations - ${timestamp}
 
 - Enhanced automation scripts and testing suite
 - Improved security configurations and performance optimizations

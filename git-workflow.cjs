@@ -38,7 +38,8 @@ class GitWorkflow {
       'Added comprehensive testing suite',
       'Improved security configurations',
       'Performance optimizations'
-    ]return `${changes.join(', ') } - ${timestamp}`;
+    ];
+    return `${changes.join(', ') } - ${timestamp}`;
   }
 
   createGitIgnore() { const gitignoreContent = `# Dependencies

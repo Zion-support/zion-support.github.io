@@ -4,7 +4,9 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-async function checkAutomationStatus() { console.log('🔍 Checking Automation Status...')const statusReport = {
+async function checkAutomationStatus() { 
+  console.log('🔍 Checking Automation Status...');
+  const statusReport = {
     timestamp: new Date().toISOString(),
     pm2Processes: [],
     automationScripts: [],
@@ -22,8 +24,10 @@ async function checkAutomationStatus() { console.log('🔍 Checking Automation S
       
       const runningProcesses = pm2Data.filter(proc => proc.pm2_env && proc.pm2_env.status === 'online');
       console.log(`✅ Found ${runningProcesses.length} running PM2 processes`);
-    } catch() { console.log('⚠️  PM2 not available or no processes running');
-      statusReport.pm2Processes = [] }
+    } catch(error) { 
+      console.log('⚠️  PM2 not available or no processes running');
+      statusReport.pm2Processes = [];
+    }
 
     // Check automation scripts
     console.log('📋 Checking automation scripts...');
@@ -35,8 +39,10 @@ async function checkAutomationStatus() { console.log('🔍 Checking Automation S
       'automation/health-check.cjs'
     ];
 
-    for() { const exists = fs.existsSync(script);
-      const isExecutable = exists ? fs.statSync(script).mode & parseInt('111', 8) : falsestatusReport.automationScripts.push({
+    for(const script of automationScripts) { 
+      const exists = fs.existsSync(script);
+      const isExecutable = exists ? fs.statSync(script).mode & parseInt('111', 8) : false;
+      statusReport.automationScripts.push({
         name: script,
         exists: exists,
         executable: isExecutable,

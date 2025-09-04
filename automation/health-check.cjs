@@ -4,7 +4,6 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-<<<<<<< HEAD
 console.log('🩺 Starting Health Check...');
 
 const healthCheck = {
@@ -124,7 +123,6 @@ if (healthCheck.status === 'healthy') {
   console.log('⚠️  System has issues that need attention');
   process.exit(1);
 }
-=======
 class HealthChecker {
   constructor() {
     this.logFile = path.join(__dirname, '../logs/health-check.log');

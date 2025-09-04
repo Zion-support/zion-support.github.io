@@ -21,13 +21,15 @@ class AutomationRunner {
     this.startTime = Date.now();
   }
 
-  log() { const timestamp = new Date().toISOString()const prefix={
+  log(type, message) { 
+    const timestamp = new Date().toISOString();
+    const prefix = {
       'INFO': 'ℹ️',
       'SUCCESS': '✅',
       'ERROR': '❌',
       'WARNING': '⚠️',
       'PROGRESS': '🔄'
-     }[type] || 'ℹ️';
+    }[type] || 'ℹ️';
     
     console.log(`${prefix} [${timestamp}] ${message}`)}
 
@@ -39,8 +41,11 @@ class AutomationRunner {
         stdio: 'pipe',
         timeout: timeout,
         cwd: process.cwd()
-      })this.log(`${description} completed successfully`, 'SUCCESS');
-      return { success: true, output: result }} catch() { this.log(`${description } failed: ${error.message}`, 'ERROR');
+      });
+      this.log(`${description} completed successfully`, 'SUCCESS');
+      return { success: true, output: result };
+    } catch(error) { 
+      this.log(`${description} failed: ${error.message}`, 'ERROR');
       return { success: false, error: error.message, output: error.stdout || error.stderr };
     }
   }
@@ -57,7 +62,9 @@ class AutomationRunner {
 
     // Run type checking
     const typeResult = await this.runCommand('npm run type-check', 'TypeScript type check', 30000);
-    if() { this.results.tests.passed++ } else {
+    if(typeResult.success) { 
+      this.results.tests.passed++;
+    } else {
       this.results.tests.failed++;
       this.results.tests.errors.push(typeResult.error);
     }

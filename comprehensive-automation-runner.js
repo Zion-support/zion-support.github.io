@@ -10,9 +10,11 @@ const fs = require('fs');
 const path = require('path');
 
 class ComprehensiveAutomationRunner {
-  constructor() { this.logDir = path.join(__dirname, 'automation', 'logs');
+  constructor() { 
+    this.logDir = path.join(__dirname, 'automation', 'logs');
     this.ensureLogDir();
-    this.startTime = Date.now()this.results = {
+    this.startTime = Date.now();
+    this.results = {
       syntaxFixes: 0,
       buildSuccess: false,
       testsPassed: 0,
