@@ -667,6 +667,7 @@ export function Sidebar({ isOpen = false, onClose }) {';';';
   );
 }
               </div>
+>>>>>>> main
             </div>
           ))
       )}
