@@ -1,4 +1,5 @@
 import React from 'react';
+import { FileText, Scale, Shield, AlertTriangle, CheckCircle, Users } from 'lucide-react';
 
 export default function Terms() {
   const sections = [
@@ -49,4 +50,17 @@ export default function Terms() {
             </div>
           </div>
         </div>
+</main>
+      <Footer />
+    </>);
+}
 
+export { Terms };
+
+export { Terms };
+
+export { Terms };
+
+export { Terms };
+
+export { Terms };

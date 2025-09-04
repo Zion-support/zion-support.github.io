@@ -43,7 +43,7 @@ export const BudgetStatusDisplay = ({ projectBriefBudget, estimatedCost }: Budge
 
   let status: 'good' | 'warning' | 'danger' | 'info' = 'info';  let message = "";
 ';
-  let status: 'good' | 'warning' | 'danger' | 'info' = 'info';"  let message = "";
+  let status: 'good' | 'warning' | 'danger' | 'info' = 'info';"  let message = ""
   let progressValue = 0; // Percentage for the progress bar;
 
   if(userBudget.max !== null && userBudget.max !== Infinity) {;

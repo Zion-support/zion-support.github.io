@@ -1,6 +1,11 @@
+import React, { useState } from 'react';
+import { Link  } from 'react-router-dom';
 
-
-    }
+export default function Page() {      >
+        <Home className="w-4 h-4 mr-1" />
+        Home
+      </NavLink>
+}
 
   ]
 
@@ -170,4 +175,3 @@
 "
 
 export default Component
-

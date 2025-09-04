@@ -1,6 +1,7 @@
-
-
-      icon: ChatBubbleLeftRightIcon,"
+import React, { useState } from 'react';
+export default FloatingActionButton;
+import { motion, AnimatePresence  } from 'framer-motion';
+icon: ChatBubbleLeftRightIcon,"
       label: &apos,Live Chat&apos,"
       action: () => window.open(&aposhttp,s: // comment
       color: &apos,bg - green-500 hove,r:bg-green-600&apos} {}"
@@ -151,3 +152,14 @@ initial="{{" opacity: 0, x: -10 }}&apos;&apos;"
               <PlusIcon className = "w-6 h-6"  />
     </div>)}
 
+export default FloatingActionButton;
+
+export { FloatingActionButton };
+
+export { FloatingActionButton };
+
+export { FloatingActionButton };
+
+export { FloatingActionButton };
+
+export { FloatingActionButton };

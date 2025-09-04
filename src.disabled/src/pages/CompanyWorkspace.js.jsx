@@ -14,15 +14,15 @@ export default function CompWorkspace() {}
   const { comp, isLoading, error } = useCompWorkspace(compSlug);
   const { isWhitelabel, tenant, brandName } = useWhitelabel();
   if (isLoading) {}
-    return();
-      <div className="flex items-center justify-center min-h-screen">"";
+    return (
+    <div className="flex items-center justify-center min-h-screen">""
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan"></div>;
       </div>;
     );,
 }
   if (error || !comp) {}
 ";
-"";
+""
     return <Navigate to="/" />;,
 }';
   // In white-label mode, use the tenant's theme instead of the comp's theme;
@@ -36,7 +36,7 @@ export default function CompWorkspace() {}
   const hasAccess = true; // For demo purposes, always grant access;
   if (!hasAccess) {}
 ";
-"";
+""
     return <Navigate to="/unauthorized" />;,
 }';
   return()'';
@@ -49,7 +49,7 @@ export default function CompWorkspace() {}
         customLogo={isWhitelabel ? tenant?.logo_url : company.logoUrl}
         customTheme={effectiveTheme}
       />";
-      <main"";
+      <main""
         className="min-h-screen";
         style={{}
 ';

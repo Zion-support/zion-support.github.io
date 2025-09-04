@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-const { execSync } = require("$1");
-const fs = require("$1");
+const { execSync } = require("child_process");
+const fs = require("child_process");
 const path = require("path")
 class FinalAutomationSuite {
   constructor() {

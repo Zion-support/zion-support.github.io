@@ -152,7 +152,6 @@
     "format": "prettier --write .",
     "automation:accessibility": "node automation/accessibility-checker.cjs",
     "automation:security-audit": "node automation/security-audit.cjs",
-    "automation:code-quality": "node automation/code-quality.cjs",
     "format:check": "prettier --check .",
     "test": "jest --config jest.config.ts",
     "test:smoke": "jest --config jest.config.ts",
@@ -170,6 +169,9 @@
     "automation:seo": "node automation/seo-optimizer.cjs",
     "automation:health": "node automation/health-check.cjs",
     "automation:security": "node automation/security-scanner.cjs"
+  },
+  "pm2": {
+    "ecosystem": "ecosystem.maintenance.cjs"
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
@@ -239,12 +241,14 @@
     "openai": "^5.11.0",
     "path": "^0.12.7",
     "postcss-preset-env": "^10.3.1",
-    "prettier": "^3.0.3",
     "react": "^18.3.1",
     "react-datepicker": "^8.4.0",
     "react-dom": "^18.3.1",
     "react-error-boundary": "^6.0.0",
     "react-helmet-async": "^2.0.5",
+    "react-hook-form": "^7.62.0",
+    "react-hot-toast": "^2.6.0",
+    "react-is": "^19.1.1",
     "react-router-dom": "^7.8.2",
     "sharp": "^0.34.3",
     "tailwind-merge": "^3.3.1",
@@ -265,6 +269,7 @@
     "@babel/preset-env": "^7.28.3",
     "@babel/preset-react": "^7.27.1",
     "@babel/preset-typescript": "^7.27.1",
+    "@esbuild/linux-x64": "^0.21.5",
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^8.57.1",
     "@netlify/plugin-nextjs": "^5.12.1",

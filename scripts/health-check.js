@@ -1,5 +1,5 @@
 
-const express = require("$1");
+const express = require("child_process");
 const app = express()
 app.get("/health", (req, res) => {
   res.status(200).json({status: "healthy",timestamp: new Date().toISOString(),uptime: process.uptime();

@@ -1,5 +1,22 @@
-
-        scrollToBottom()}, [activeMessages]);
+import React, { useState, useEffect, useRef } from 'react';'''
+import { format } from 'date-fns';'''
+import { MessageSquare import { useMessaging } from '@/context/MessagingContext';'''
+import { Button } from '@/components/ui/button';'''
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';'''
+import { AspectRatio } from '@/components/ui/aspect-ratio';'''
+import { useAuth } from '@/hooks/useAuth';
+;
+;
+export function ConversationDetailView() {    const { user } = useAuth();
+    const { activeConversation, activeMessages, sendMessage, loadMessages } = useMessaging();'
+    const [messageText, setMessageText] = useState('');
+    const messagesEndRef = useRef(null);
+    useEffect(() => {}
+        if (activeConversation) {}
+            loadMessages(activeConversation.id)}
+    }, [activeConversation?.id, loadMessages]);
+    useEffect(() => {}
+scrollToBottom()}, [activeMessages]);
     const scrollToBottom = () => {
 
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })};

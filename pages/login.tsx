@@ -1,43 +1,273 @@
-import Link from 'next/link';
-import Head from 'next/head';
+import React, { useState } from 'react'
+import dynamic from 'next/dynamic'
+import Head from 'next/head'
+import Link from 'next/link'
+import { motion } from 'framer-motion'
+import { 
+  Mail, 
+  Lock, 
+  Eye, 
+  EyeOff, 
+  ArrowRight, 
+  CheckCircle, 
+  Star,
+  Users,
+  Clock,
+  Globe,
+  Zap,
+  Shield
+} from 'lucide-react'
 
-export default function Login() {
+const SEO = dynamic(() => import('../src/components/SEO'), { ssr: false })
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false })
+
+const LoginPage: React.FC = () => {
+  const [formData, setFormData] = useState({
+    email: '',
+    password: ''
+  })
+  const [showPassword, setShowPassword] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }))
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsLoading(true)
+    
+    // Simulate login process
+    setTimeout(() => {
+      setIsLoading(false)
+      // Handle login logic here
+    }, 2000)
+  }
+
+  const features = [
+    {
+      icon: <Shield className="w-6 h-6" />,
+      title: 'Secure Access',
+      description: 'Enterprise-grade security for your account'
+    },
+    {
+      icon: <Zap className="w-6 h-6" />,
+      title: 'Fast Performance',
+      description: 'Lightning-fast access to all services'
+    },
+    {
+      icon: <Globe className="w-6 h-6" />,
+      title: 'Global Access',
+      description: 'Access your account from anywhere in the world'
+    }
+  ]
+
   return (
     <>
-      <Head>
-        <title>Login - Zion Tech Group</title>
-        <meta name="description" content="Login to your Zion Tech Group account to access your services and dashboard." />"        <meta name="keywords" content="login, account, authentication, sign in, user portal" />"        <link rel="canonical" href="https://ziontechgroup.com/login" />
-      </Head>
-      "      <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">"        <div className="max-w-md mx-auto px-4 py-16">"          <div className="text-center mb-8">"            <h1 className="text-3xl font-bold mb-4">Login</h1>"            <p className="text-slate-300">Access your account and services</p>
-          </div>
-"          <div className="bg-slate-900/60 rounded-lg border border-white/10 p-8">"            <form className="space-y-6">
-              <div>"                <label htmlFor="email" className="block text-sm font-medium mb-2">
-                  Email Address
-                </label>
-                <input"                  type="email""                  id="email""                  className="w-full px-3 py-2 bg-slate-800 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500""                  placeholder="Enter your email"
-                />
-              </div>
-
-              <div>"                <label htmlFor="password" className="block text-sm font-medium mb-2">
-                  Password
-                </label>
-                <input"                  type="password""                  id="password""                  className="w-full px-3 py-2 bg-slate-800 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500""                  placeholder="Enter your password"
-                />
-              </div>
-
-              <button"                type="submit""                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors"
+      <SEO
+        title="Login - Zion Tech Group"
+        description="Secure login to access your Zion Tech Group account and services."
+        keywords="login, account, access, Zion Tech Group"
+        canonical="https://ziontechgroup.com/login"
+      />
+      
+      <PageTransition>
+        <main className="min-h-screen bg-gray-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              {/* Left Side - Login Form */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                className="bg-white rounded-xl shadow-lg p-8"
               >
-                Login
-              </button>
-            </form>
-"            <div className="mt-6 text-center">"              <p className="text-slate-400">
-                Don't have an account?{' '}"                <Link href="/signup" className="text-blue-400 hover:text-blue-300">
-                  Sign up
-                </Link>
-              </p>
+                <div className="text-center mb-8">
+                  <h1 className="text-3xl font-bold text-gray-900 mb-2">
+                    Welcome Back
+                  </h1>
+                  <p className="text-gray-600">
+                    Sign in to your Zion Tech Group account
+                  </p>
+                </div>
+
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                      Email Address
+                    </label>
+                    <div className="relative">
+                      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <Mail className="h-5 w-5 text-gray-400" />
+                      </div>
+                      <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        required
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        placeholder="Enter your email"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
+                      Password
+                    </label>
+                    <div className="relative">
+                      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <Lock className="h-5 w-5 text-gray-400" />
+                      </div>
+                      <input
+                        id="password"
+                        name="password"
+                        type={showPassword ? 'text' : 'password'}
+                        required
+                        value={formData.password}
+                        onChange={handleInputChange}
+                        className="block w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        placeholder="Enter your password"
+                      />
+                      <button
+                        type="button"
+                        className="absolute inset-y-0 right-0 pr-3 flex items-center"
+                        onClick={() => setShowPassword(!showPassword)}
+                      >
+                        {showPassword ? (
+                          <EyeOff className="h-5 w-5 text-gray-400" />
+                        ) : (
+                          <Eye className="h-5 w-5 text-gray-400" />
+                        )}
+                      </button>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center">
+                      <input
+                        id="remember-me"
+                        name="remember-me"
+                        type="checkbox"
+                        className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                      />
+                      <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-700">
+                        Remember me
+                      </label>
+                    </div>
+                    <div className="text-sm">
+                      <a href="#" className="font-medium text-blue-600 hover:text-blue-500">
+                        Forgot your password?
+                      </a>
+                    </div>
+                  </div>
+
+                  <motion.button
+                    type="submit"
+                    disabled={isLoading}
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    {isLoading ? (
+                      <>
+                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
+                        Signing in...
+                      </>
+                    ) : (
+                      <>
+                        <ArrowRight className="w-5 h-5" />
+                        Sign In
+                      </>
+                    )}
+                  </motion.button>
+                </form>
+
+                <div className="mt-6 text-center">
+                  <p className="text-sm text-gray-600">
+                    Don't have an account?{' '}
+                    <a href="/register" className="font-medium text-blue-600 hover:text-blue-500">
+                      Sign up here
+                    </a>
+                  </p>
+                </div>
+              </motion.div>
+
+              {/* Right Side - Features */}
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="space-y-8"
+              >
+                <div>
+                  <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                    Why Choose Zion Tech Group?
+                  </h2>
+                  <p className="text-xl text-gray-600 mb-8">
+                    Access cutting-edge AI services, IT solutions, and micro SaaS development tools.
+                  </p>
+                </div>
+
+                <div className="space-y-6">
+                  {features.map((feature, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      className="flex items-start gap-4"
+                    >
+                      <div className="text-blue-600 mt-1">
+                        {feature.icon}
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-semibold text-gray-900 mb-1">
+                          {feature.title}
+                        </h3>
+                        <p className="text-gray-600">
+                          {feature.description}
+                        </p>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+
+                <div className="bg-blue-50 rounded-lg p-6">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                    Need Help?
+                  </h3>
+                  <p className="text-gray-600 mb-4">
+                    Contact our support team for assistance with your account.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <a
+                      href="tel:+13024640950"
+                      className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-700 transition-colors text-center"
+                    >
+                      Call: +1 302 464 0950
+                    </a>
+                    <a
+                      href="mailto:kleber@ziontechgroup.com"
+                      className="border border-blue-600 text-blue-600 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-50 transition-colors text-center"
+                    >
+                      Email Support
+                    </a>
+                  </div>
+                </div>
+              </motion.div>
             </div>
           </div>
-        </div>
-      </main>
+        </main>
+      </PageTransition>
     </>
-  );"}
+  )
+}
+
+export default LoginPage

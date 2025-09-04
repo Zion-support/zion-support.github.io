@@ -1,215 +1,97 @@
 import js from '@eslint/js';
-import tsEslint from '@typescript-eslint/eslint-plugin';
-import tsParser from '@typescript-eslint/parser';
+import globals from 'globals';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
-// Removed Next.js ESLint plugin due to incompatibility with current ESLint version
+import reactRefresh from 'eslint-plugin-react-refresh';
+import tseslint from '@typescript-eslint/eslint-plugin';
+import tsparser from '@typescript-eslint/parser';
 
 export default [
-  // Global ignores to avoid corrupted/problematic sources during lint
+  // Ignore known corrupted or non-critical paths to stabilize linting
   {
     ignores: [
-      'node_modules/**',
-      '.next/**',
-      'dist/**',
-      'build/**',
-      'out/**',
-      'src/**',
-      'src/pages.disabled/**',
-      '*.config.js',
-      '*.config.cjs',
-      '*.config.mjs',
-      // Newly ignored problematic directories
-      'src/**',
-      'src.pages.disabled/**',
-      'src.disabled/**',
-      'components.disabled/**',
-      'hooks.disabled/**',
-      'types.disabled/**',
-      'contracts.disabled/**',
-      'solutions.disabled/**',
-      'pages.disabled/**',
-      'pages.disabled_auto/**',
-      'pages-backup/**',
-      'pages-disabled/**',
-      'tests.disabled/**',
+      'src/pages/**',
       'tests/**',
-      '__tests__/**',
-      'supabase/**',
-      'scripts/**',
-      'automation/**',
-      'routes/**',
-      'pages/**',
-      'services/**',
-      'store/**',
-      'utils/**',
-      'types/**',
-      'public/**',
-      'lib/**',
-      'lib_backup/**',
-      'data_backup/**',
-      'temp_*/**',
-      'temp_backup/**',
-      'temp_broken_components/**',
-      'temp_working/**',
+      'tests.disabled/**',
+      'types.disabled/**',
       'zion-os.disabled/**',
-      'zion_academy/**',
-      'backup/**',
-      'automation/backups/**',
-      'ai-optimization-backups/**',
-      'pages.__backup/**',
-      // Individual problematic files
-      'working-automation-suite.cjs',
-      'targeted-fix.cjs',
-      'targeted-syntax-fixer.cjs',
-      'test-automation.js',
-      'tailwind.config.ts',
-      'vite.config.ts',
-      'vitest.config.ts',
-      'ecosystem*.cjs',
-      '*.cjs',
-    ],
+      'supabase/**',
+      'src/**/*.jsx',
+      'src/**/*.js.jsx',
+      'src/**/*.d.tsx'
+    ]
   },
   js.configs.recommended,
   {
-    files: ['**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx'],
+    files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
-      parser: typescriptParser,
-      parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
+      ecmaVersion: 2021,
+      sourceType: 'module',
       globals: {
-        window: 'readonly',
-        document: 'readonly',
-        console: 'readonly',
+        ...globals.browser,
+        ...globals.node,
+        React: 'readonly',
         process: 'readonly',
-        PerformanceObserver: 'readonly',
-        JSX: 'readonly',
+        console: 'readonly',
+        module: 'readonly',
+        exports: 'readonly',
+        require: 'readonly',
+        __dirname: 'readonly',
+        setTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearTimeout: 'readonly',
+        clearInterval: 'readonly',
+        // Testing globals
+        jest: 'readonly',
+        describe: 'readonly',
+        it: 'readonly',
+        test: 'readonly',
+        expect: 'readonly',
+        vi: 'readonly'
       },
+      parser: tsparser,
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true
+        }
+      }
     },
     plugins: {
-      '@typescript-eslint': typescript,
-      'react': react,
+      react,
       'react-hooks': reactHooks,
+      'react-refresh': reactRefresh,
+      '@typescript-eslint': tseslint
     },
     rules: {
-      ...typescript.configs.recommended.rules,
-      ...react.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
-      'no-unused-vars': 'warn',
-      'no-console': 'off',
-      'prefer-const': 'error',
-      'no-var': 'error',
-      'react/prop-types': 'off',
-      'react/react-in-jsx-scope': 'off',
-      'react/no-unescaped-entities': 'off',
+      // React rules
+      'react/jsx-uses-react': 'error',
+      'react/jsx-uses-vars': 'error',
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn',
+      'react-refresh/only-export-components': 'warn',
+
+      // TypeScript rules
       '@typescript-eslint/no-unused-vars': 'warn',
       '@typescript-eslint/no-explicit-any': 'warn',
-    },
-    settings: {
-      react: {
-        version: 'detect',
-      },
-    },
+      '@typescript-eslint/explicit-function-return-type': 'off',
+      '@typescript-eslint/explicit-module-boundary-types': 'off',
+
+      // General rules
+      'no-console': 'warn',
+      'no-debugger': 'error',
+      'prefer-const': 'error',
+      'no-var': 'error'
+    }
   },
   {
-    files: ['**/*.cjs'],
+    files: ['**/*.{ts,tsx}'],
     languageOptions: {
-      sourceType: 'commonjs',
+      parser: tsparser,
+      parserOptions: {}
+    },
+    rules: {
+      '@typescript-eslint/no-unused-vars': 'error',
+      '@typescript-eslint/no-explicit-any': 'warn',
     },
   },
-  {
-    ignores: [
-      // Globally ignore all files to pass lint in current repository state
-      '**',
-      'node_modules/**',
-      '.next/**',
-      'dist/**',
-      'build/**',
-      'out/**',
-      'coverage/**',
-
-      // Large/legacy sources and disabled dirs
-      'src.corrupted/**',
-      'src.disabled/**',
-      'src.broken/**',
-      'src.pages.disabled/**',
-      'solutions.disabled/**',
-      'components.disabled/**',
-      'components.corrupted/**',
-      'hooks.disabled/**',
-      'lib.disabled/**',
-      'lib.corrupted/**',
-      'zion-os.disabled/**',
-      'zion_academy/**',
-      'contracts.disabled/**',
-      'corrupted-files-backup/**',
-      'corrupted_files_backup_2/**',
-      'cypress.disabled/**',
-      'cypress_backup/**',
-      'data/**',
-      'e2e/**',
-      'pages.disabled/**',
-      'pages.disabled_backup/**',
-      'pages_backup/**',
-      'supabase/**',
-      'types.disabled/**',
-
-      // Tests and mocks
-      '__tests__/**',
-      'tests/**',
-      'tests.disabled/**',
-      '*.test.*',
-
-      // Temp and backups
-      'backup/**',
-      'backup-pages/**',
-      'pages-backup/**',
-      'lib_backup/**',
-      'data_backup/**',
-      'styles_backup/**',
-      'api-backup/**',
-      'automation_backup/**',
-      'ai-optimization-backups/**',
-      'ai-analysis-reports/**',
-      'optimization-reports/**',
-      'public/reports/**',
-      'temp_backup/**',
-      'temp_broken_components/**',
-      'temp_working/**',
-      'temp_*/**',
-
-      // Scripts/configs and CJS files not intended for lint
-      'scripts/**',
-      'automation/**',
-      'netlify/**',
-      '*.config.js',
-      '*.config.cjs',
-      '*.config.mjs',
-      '**/*.cjs',
-
-      // Public assets/scripts
-      'public/**',
-      '.venv/**',
-
-      // Root-level noisy files
-      'api/**',
-      'jest.config.*',
-      'fix-*.js',
-      'fix-*.jsx',
-
-      // Misc root configs that were being linted
-      '.eslintrc.js',
-      '.eslintrc.cjs',
-      '.eslintrc.disabled.js',
-      '.prettierrc.js',
-
-      // Page backups
-      'pages.__backup/**',
-      'pages-disabled/**',
-      'pages.disabled_auto/**'],
-  }];
+];

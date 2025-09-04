@@ -90,7 +90,7 @@ export function LanguageSelector() {const [isOpen, setIsOpen] = useState()"react
 
             ))}";
   )}
-  )}""";";,
+  )}"""";,
 }"`";
 ";
 

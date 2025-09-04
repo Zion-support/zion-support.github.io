@@ -17,22 +17,91 @@ const AIAutonomousDevOpsPlatform = () => {};
     "Cost Optimization Engine";
   ];
 
-  const benefits = [;
-    "Reduce deployment time by 80%",;
-    "Eliminate 95% of manual DevOps tasks",;
-    "Improve system reliability by 99.9%",;
-    "Reduce infrastructure costs by 40%",;
-    "Accelerate development cycles by 3x",;
-    "Minimize security vulnerabilities by 90%";
+  const capabilities = [
+    {
+      category: "Infrastructure Management",
+      items: [
+        "Auto-scaling based on demand patterns",
+        "Intelligent resource optimization",
+        "Multi-cloud orchestration",
+        "Container orchestration with AI"
+      ]
+    },
+    {
+      category: "CI/CD Automation",
+      items: [
+        "Smart build optimization",
+        "Automated testing with AI",
+        "Intelligent deployment strategies",
+        "Performance-based rollbacks"
+      ]
+    },
+    {
+      category: "Security & Compliance",
+      items: [
+        "Automated security scanning",
+        "Compliance monitoring",
+        "Threat intelligence integration",
+        "Zero-trust security implementation"
+      ]
+    },
+    {
+      category: "Monitoring & Analytics",
+      items: [
+        "Predictive performance monitoring",
+        "Anomaly detection",
+        "Cost optimization insights",
+        "Business impact analysis"
+      ]
+    }
   ];
 
-  const useCases = [;
-    "Enterprise Application Deployment",;
-    "Microservices Architecture Management",;
-    "Cloud Infrastructure Automation",;
-    "CI/CD Pipeline Optimization",;
-    "Multi-Cloud Operations",;
-    "Legacy System Modernization";
+  const pricingTiers = [
+    {
+      name: "Starter",
+      price: "$2,999",
+      period: "/month",
+      description: "Perfect for small teams and startups",
+      features: [
+        "Up to 10 applications",
+        "Basic AI automation",
+        "Standard monitoring",
+        "Email support",
+        "99.9% uptime SLA"
+      ],
+      popular: false
+    },
+    {
+      name: "Professional",
+      price: "$7,999",
+      period: "/month",
+      description: "Ideal for growing businesses",
+      features: [
+        "Up to 50 applications",
+        "Advanced AI automation",
+        "Predictive monitoring",
+        "Priority support",
+        "99.95% uptime SLA",
+        "Multi-cloud support"
+      ],
+      popular: true
+    },
+    {
+      name: "Enterprise",
+      price: "$19,999",
+      period: "/month",
+      description: "For large enterprises with complex needs",
+      features: [
+        "Unlimited applications",
+        "Full AI automation suite",
+        "Custom AI models",
+        "24/7 dedicated support",
+        "99.99% uptime SLA",
+        "On-premise deployment",
+        "Custom integrations"
+      ],
+      popular: false
+    }
   ];
 
   const pricing = [;
@@ -44,38 +113,13 @@ const AIAutonomousDevOpsPlatform = () => {};
 }
   ];
 
-  return (;
-    <>;
-      <Head>;
-        <title>AI Autonomous DevOps Platform - Zion Tech Group</title>;
-        <meta name="description" content="Revolutionary AI-powered autonomous DevOps platform that eliminates 95% of manual tasks and reduces deployment time by 80%." />;
-        <meta name="keywords" content="AI DevOps, autonomous deployment, infrastructure automation, CI/CD, cloud operations" />;
-      </Head>;
-      ;
-      <div className="min-h-screen bg-white">;
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 py-20 text-center">;
-          <div className="max-w-6xl mx-auto px-6">;
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">;
-              <Server className="w-4 h-4 mr-2" />;
-              AI-Powered DevOps Automation;
-            </div>;
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">;
-              AI Autonomous DevOps Platform;
-            </h1>;
-            <p className="text-blue-100 text-xl max-w-3xl mx-auto">;
-              Transform your DevOps operations with AI-powered automation that eliminates 95% of manual tasks, reduces deployment time by 80%, and ensures 99.9% system reliability.;
-            </p>;
-            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">;
-              <Link href="#contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">;
-                Start Free Trial;
-              </Link>;
-              <Link href="#demo" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors">;
-                Watch Demo;
-              </Link>;
-            </div>;
-          </div>;
-        </section>;
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      <Helmet>
+        <title>AI Autonomous DevOps Platform - Zion Tech Group</title>
+        <meta name="description" content="Eliminate 95% of manual DevOps tasks with our AI-powered autonomous platform. Deploy 80% faster with intelligent automation, predictive monitoring, and self-healing infrastructure." />
+        <meta name="keywords" content="AI DevOps, autonomous infrastructure, CI/CD automation, predictive monitoring, self-healing systems" />
+      </Helmet>
 
         {/* Features Section */}
         <section className="py-16 max-w-6xl mx-auto px-6">;
@@ -94,8 +138,9 @@ const AIAutonomousDevOpsPlatform = () => {};
                 <p className="text-gray-600 text-sm">Intelligent automation that learns and adapts to your infrastructure needs</p>;
               </div>;
             ))}
-          </div>;
-        </section>;
+          </div>
+        </div>
+      </section>
 
         {/* Benefits Section */}
         <section className="bg-gray-50 py-16">;
@@ -127,45 +172,24 @@ const AIAutonomousDevOpsPlatform = () => {};
                       <span className="text-gray-700">{useCase}</span>;
                     </li>;
                   ))}
-                </ul>;
-              </div>;
-            </div>;
-          </div>;
-        </section>;
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-        {/* Technical Architecture */}
-        <section className="py-16 max-w-6xl mx-auto px-6">;
-          <div className="text-center mb-12">;
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced AI Architecture</h2>;
-            <p className="text-gray-600 text-lg">Built on cutting-edge AI and machine learning technologies</p>;
-          </div>;
-          ;
-          <div className="grid md:grid-cols-3 gap-8">;
-            <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">;
-              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg flex items-center justify-center mb-4">;
-                <Brain className="w-6 h-6 text-white" />;
-              </div>;
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Machine Learning Engine</h3>;
-              <p className="text-gray-600">Advanced ML algorithms that learn from your infrastructure patterns and optimize operations automatically.</p>;
-            </div>;
-            ;
-            <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">;
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">;
-                <Shield className="w-6 h-6 text-white" />;
-              </div>;
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Security-First Design</h3>;
-              <p className="text-gray-600">Built-in security scanning, vulnerability detection, and compliance monitoring for enterprise-grade protection.</p>;
-            </div>;
-            ;
-            <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">;
-              <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-4">;
-                <Zap className="w-6 h-6 text-white" />;
-              </div>;
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Real-time Optimization</h3>;
-              <p className="text-gray-600">Continuous monitoring and optimization of your infrastructure for maximum performance and cost efficiency.</p>;
-            </div>;
-          </div>;
-        </section>;
+      {/* Pricing Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Transparent Pricing
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Choose the plan that fits your needs. All plans include our core AI automation features.
+            </p>
+          </div>
 
         {/* Pricing Section */}
         <section className="bg-gray-50 py-16">;

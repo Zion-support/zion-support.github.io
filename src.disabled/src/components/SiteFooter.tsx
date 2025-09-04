@@ -1,3 +1,75 @@
+import React from 'react';
+import Link from 'next/link';
+import { Linkedin, Twitter, Facebook, Instagram } from 'lucide-react';
+
+export default function SiteFooter() {
+  const year = new Date().getFullYear();
+  const nav = [
+    { title: 'Company', links: [
+      { name: 'About', href: '/about' },
+      { name: 'Contact', href: '/contact' },
+      { name: 'Case Studies', href: '/case-studies' },
+    ]},
+    { title: 'Services', links: [
+      { name: 'AI Services', href: '/ai-services' },
+      { name: 'IT Services', href: '/it-services' },
+      { name: 'Micro SaaS', href: '/micro-saas' },
+    ]},
+    { title: 'Resources', links: [
+      { name: 'Pricing', href: '/pricing' },
+      { name: 'Pricing Guide', href: '/pricing-guide' },
+      { name: 'FAQ', href: '/faq' },
+    ]},
+  ];
+
+  return (
+    <footer className="bg-slate-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <div className="text-xl font-bold">Zion Tech Group</div>
+            <p className="text-gray-400 text-sm mt-2">AI, IT and Micro SaaS solutions.</p>
+            <div className="flex gap-3 mt-4">
+              <a href="https://linkedin.com/company/ziontechgroup" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="text-gray-400 hover:text-white">
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a href="https://twitter.com/ziontechgroup" target="_blank" rel="noreferrer" aria-label="Twitter" className="text-gray-400 hover:text-white">
+                <Twitter className="w-5 h-5" />
+              </a>
+              <a href="https://facebook.com/ziontechgroup" target="_blank" rel="noreferrer" aria-label="Facebook" className="text-gray-400 hover:text-white">
+                <Facebook className="w-5 h-5" />
+              </a>
+              <a href="https://instagram.com/ziontechgroup" target="_blank" rel="noreferrer" aria-label="Instagram" className="text-gray-400 hover:text-white">
+                <Instagram className="w-5 h-5" />
+              </a>
+            </div>
+          </div>
+          {nav.map(section => (
+            <div key={section.title}>
+              <div className="font-semibold mb-3">{section.title}</div>
+              <ul className="space-y-2">
+                {section.links.map(link => (
+                  <li key={link.name}>
+                    <Link href={link.href} className="text-gray-400 hover:text-white text-sm">{link.name}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+        <div className="mt-10 pt-6 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="text-gray-400 text-sm">© {year} Zion Tech Group. All rights reserved.</div>
+          <div className="flex gap-6 text-sm">
+            <Link href="/privacy" className="text-gray-400 hover:text-white">Privacy</Link>
+            <Link href="/terms" className="text-gray-400 hover:text-white">Terms</Link>
+            <Link href="/sitemap.xml" className="text-gray-400 hover:text-white">Sitemap</Link>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
 import React from "react";
 export function SiteFooter() {;
 

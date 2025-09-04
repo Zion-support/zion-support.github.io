@@ -3,8 +3,8 @@
  * Comprehensive Error Fixer
  * Automatically fixes common syntax and logical errors in the codebase
  */
-const fs = require("$1");
-const path = require("$1");
+const fs = require("child_process");
+const path = require("child_process");
 const { execSync } = require("child_process")
 class ComprehensiveErrorFixer {
   constructor() {

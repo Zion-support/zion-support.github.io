@@ -63,4 +63,15 @@ export { EmptyState };,"});,"})"
 
         </Tooltip>
       </TooltipProvider>
+</div>)};
+export default EmptyState;
 
+export { EmptyState };
+
+export { EmptyState };
+
+export { EmptyState };
+
+export { EmptyState };
+
+export { EmptyState };

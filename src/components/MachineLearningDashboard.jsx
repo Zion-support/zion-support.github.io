@@ -1,6 +1,48 @@
-
-
+import React, { useState, useCallback } from 'react';'
+import { motion, AnimatePresence } from 'framer-motion';'
+import { Brain, Play, Square, Download, Upload, BarChart3, TrendingUp, Activity, Zap, Target, CheckCircle, XCircle, Loader2, Plus, Eye, Trash2 } from 'lucide-react';
+;
+;
+export const MachineLearningDashboard = ({ className = '' }) => {
+    const { trackEvent } = useAnalytics({        enableTracking: true,
+        enableUserBehaviorTracking: true;
+    });'
+    const [activeTab, setActiveTab] = useState('overview');
+    const [showCreateModel, setShowCreateModel] = useState(false);
+    const [showImportModel, setShowImportModel] = useState(false);
+    const { models, trainingJobs, predictions, metrics, isPredicting, createModel, startTraining, stopTraining, deployModel, archiveModel, makePrediction, exportModel, importModel } = useMachineLearning();
+    const [newModelForm, setNewModelForm] = useState({}
+'
+''
+'''
+        name: '','''
+        type: 'classification','''
+        framework: 'tensorflow'
+    });
+    const [predictionForm, setPredictionForm] = useState({}
+'
+''
+'''
+        modelId: '','''
+        input: ''
+    });
+    const handleCreateModel = useCallback(() => {}
         if(newModelForm.name.trim()) {}
+            createModel({}
+                name: newModelForm.name,
+                type: newModelForm.type,
+                framework: newModelForm.framework;
+            });'
+            setNewModelForm({ name: '', type: 'classification', framework: 'tensorflow' });
+            setShowCreateModel(false);'
+            trackEvent('ml',dashboard',model_created')}
+    }, [newModelForm, createModel, trackEvent]);
+    const hyperparameters = {}
+  learningRate: 0.001,
+            batchSize: 32,
+            epochs: 100,'
+  optimizer: 'adam'
+if(newModelForm.name.trim()) {}
 
             createModel({}
 
@@ -736,7 +778,56 @@ y: 0}} exit = {}"
               <AnimatePresence>
                 {showCreateModel && (<motion.div initial = {}
 
-                  </motion.div>) }
+{ opacity: 0,
+  height: 0
+
+}} animate = {
+
+  { opacity: 1,
+  height: 'auto'
+
+}} exit = {
+
+  { opacity: 0,
+  height: 0
+
+}} className="bg-gray - 50 dark:bg-gray - 800 p - 4 rounded-lg">
+                    <h4 className="font - medium text-gray - 900 dark:text-white mb-3">Create New Model</h4>
+                    <div className="grid grid - cols - 1 md:grid - cols - 3 gap-4">
+                      <input type="text" placeholder="Model Name" value={newModelForm.name} onChange = { (e) => setNewModelForm(prev => ({ ...prev,
+  name: e.target.value
+
+}) ) } className="px-3 py-2 border border-gray - 300 dark:border-gray - 600 rounded-lg bg-white dark:bg-gray - 700 text-gray - 900 dark:text-white"/>
+                      <select value={newModelForm.type} onChange = { (e) => setNewModelForm(prev => ({ ...prev,
+  type: e.target.value
+"
+}))} className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white">"
+                        <option value="classification">Classification</option>"
+                        <option value="regression">Regression</option>"
+                        <option value="clustering">Clustering</option>"
+                        <option value="nlp">NLP</option>"
+                        <option value="computer_vision">Computer Vision</option>"
+                        <option value="recommendation">Recommendation</option>
+                      </select>
+                      <select value={newModelForm.framework} onChange = { (e) => setNewModelForm(prev => ({ ...prev,
+  framework: e.target.value
+"
+}))} className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white">"
+                        <option value="tensorflow">TensorFlow</option>"
+                        <option value="pytorch">PyTorch</option>"
+                        <option value="scikit-learn">Scikit-learn</option>"
+                        <option value="custom">Custom</option>
+                      </select>
+                    </div>"
+                    <div className="flex space-x-2 mt-3">"
+                      <button onClick={handleCreateModel} className="px-4 py-2 text-sm font-medium text-white bg-green-600 rounded-lg hover:bg-green-700">
+                        Create Model
+                      </button>"
+                      <button onClick={() => setShowCreateModel(false)} className="px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600">
+                        Cancel
+                      </button>
+                    </div>
+</motion.div>) }
 
               </AnimatePresence> {/* comment */}
 
@@ -930,8 +1021,18 @@ y: 0}} exit = {}"
                             <XCircle className = "w-4 h-4 mr-2"  />,
                             Training failed,
                           </div>) }
+</div>
+                    </div>) }) }
 
-                    Make Prediction;"
+                {trainingJobs.length === 0 && (<div className="text-center py-8 text-gray - 500 dark:text-gray -400">
+                    <Activity className="w-12 h-12 mx - auto mb-4 text-gray -400"/>
+                    <p > No training jobs found</p>
+                    <p className="text-sm">Start training a model to see jobs here</p>
+                  </div>) }              </div>
+            </motion.div>)}
+'"
+          {activeTab === 'predictions' && (<motion.div key="predictions" initial = {
+Make Prediction;"
                 <textarea placeholder = "Enter input data (JSON format)" value="{predictionForm.input}" onChange = {}"
   input: e.target.value "","
 ""}))} rows="{3}" className="w-full px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"  />,
@@ -964,7 +1065,34 @@ y: 0}} exit = {}"
               <div className = "&apos,space-y-4&apos,">
                 {trainingJobs.map((job) => {}
 
-                            {prediction.processingTime && (}<p><strong>Processing Time:</strong> {prediction.processingTime}ms</p>)}"
+}} exit = {
+
+  { opacity: 0,
+  y: -20
+
+              {/* Prediction Form */}
+              <div className="bg-gray - 50 dark:bg-gray - 800 p - 4 rounded-lg">
+                <div className="grid grid - cols - 1 md:grid - cols - 2 gap-4 mb-4">
+                  <select value={predictionForm.modelId} onChange = { (e) => setPredictionForm(prev => ({ ...prev,
+  modelId: e.target.value
+"
+}))} className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white">"
+                    <option value="">Select a deployed model</option>
+                    {models.filter(m => m.status === 'deployed').map(model => (<option key={model.id} value={model.id}>
+                        {model.name} ({model.type})
+                      </option>))}
+                  </select>"
+                  <button onClick={handleMakePrediction} disabled={!predictionForm.modelId || !predictionForm.input.trim() || isPredicting} className="px-4 py-2 text-sm font-medium text-white bg-purple-600 rounded-lg hover:bg-purple-700 disabled:opacity-50">"
+                    {isPredicting ? (<Loader2 className="w-4 h-4 inline mr-2 animate-spin"/>) : (<Target className="w-4 h-4 inline mr-2"/>)}
+                    Make Prediction
+                  </button>
+                </div>
+                <textarea placeholder="Enter input data(JSON format) " value={predictionForm.input} onChange = { (e) => setPredictionForm(prev => ({ ...prev,
+  input: e.target.value
+"
+}))} rows={3} className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"/>
+              </div>
+{prediction.processingTime && (}<p><strong>Processing Time:</strong> {prediction.processingTime}ms</p>)}"
                           </div>)}&apos;&apos,&apos;"
                         &apos;&apos,&apos;&apos,{prediction.status === &apos;failed&apos; && prediction.error && (&apos}&apos;<div className="&apos;text-sm" text-red-600 dark: text-red-400&apos,>&apos,"
                             <strong>Erro,r:</strong> {prediction.error}"
@@ -1006,7 +1134,44 @@ y: 0}} exit = {}"
                       </option>))}""""
                   <button onClick="{handleMakePrediction}" disabled="{!predictionForm.modelId" || !predictionForm.input.trim() || isPredicting} className="px-4 py-2 text-sm font-medium text-white bg-purple-600 rounded-lg hover: bg-purple-700 disabled:opacity-50">""""{isPredicting ? (<Loader2 className="w-4 h-4 inline mr-2 animate-spin"  />) : (<Target className="w-4 h-4 inline mr-2"  />)}
 
-                            {prediction.processingTime && (<p><strong>Processing Time: </strong> {prediction.processingTime}ms</p>)}"
+const model = models.find(m => m.id === prediction.modelId);"
+                return (<div key={prediction.id} className="bg-white dark:bg-gray-700 p-3 rounded-lg">"
+                        <div className="flex items-center justify-between mb-2">"
+                          <div className="flex items-center space-x-2">"
+                            <span className="text-sm font-medium text-gray-900 dark:text-white">
+                              {model?.name || 'Unknown Model'}
+                            </span>'`
+                            <span className={`px-2 py-1 text-xs font-medium rounded-full ${prediction.status === 'completed' ? 'text-green-600 bg-green-100' :'
+                        prediction.status === 'failed' ? 'text-red-600 bg-red-100' :'`
+                            'text-yellow-600 bg-yellow-100'}`}>
+                              {prediction.status}
+                            </span>
+                          </div>"
+                          <span className="text-sm text-gray-500 dark:text-gray-400">
+                            {prediction.timestamp.toLocaleTimeString()}
+                          </span>
+                        </div>
+
+                        {prediction.status === 'completed' && prediction.result && (<div className="text-sm text-gray - 700 dark:text-gray -300">
+                            <p><strong > Result:</strong> {JSON.stringify(prediction.result) }</p>
+                            {prediction.confidence && (<p><strong > Confidence:</strong> { (prediction.confidence * 100) .toFixed(1) }%</p>) }
+                            {prediction.processingTime && (<p><strong > Processing Time:</strong> {prediction.processingTime}ms</p>) }
+                          </div>) }
+
+                        {prediction.status === 'failed' && prediction.error && (<div className="text-sm text-red - 600 dark:text-red -400">
+                            <strong > Error:</strong> {prediction.error}
+                          </div>) }
+                      </div>) }) }
+
+                  {predictions.length === 0 && (<div className="text-center py-4 text-gray - 500 dark:text-gray -400">
+                      <Target className="w-8 h-8 mx - auto mb-2 text-gray -400"/>
+                      <p > No predictions yet</p>
+                    </div>) }                </div>
+              </div>
+            </motion.div>)}
+'"
+          {activeTab === 'analytics' && (<motion.div key="analytics" initial = {
+{prediction.processingTime && (<p><strong>Processing Time: </strong> {prediction.processingTime}ms</p>)}"
                         """"""{prediction.status === "failed" && prediction.error && (<div className="text-sm text-red-600 dark: text-red-400">"
                   """"{predictions.length === 0 && (<div className="text-center py-4 text-gray-500 dark: text-gray-400">"""",
                       <Target className="w-8 h-8 mx-auto mb-2 text-gray-400"  />,

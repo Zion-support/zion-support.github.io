@@ -1,121 +1,403 @@
-import Link from 'next/link';
-import Head from 'next/head';
+import React from 'react'
+import dynamic from 'next/dynamic'
+import Head from 'next/head'
+import Link from 'next/link'
+import { motion } from 'framer-motion'
+import { 
+  Code, 
+  Brain, 
+  Shield, 
+  Users, 
+  ArrowRight, 
+  MapPin, 
+  Clock, 
+  DollarSign,
+  CheckCircle,
+  Star
+} from 'lucide-react'
 
-export default function Careers() {
-  const contact = {
-    phone: '+1: 302 464: 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE: 1008 Middletown DE: 19709',
-    site: 'https://ziontechgroup.com'
-  }
+const SEO = dynamic(() => import('../src/components/SEO'), { ssr: false })
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false })
 
-  const openPositions = [
+const CareersPage: React.FC = () => {
+  const jobOpenings = [
     {
-      title: "Senior Full-Stack Developer","      department: "Engineering","      location: "Remote / Delaware","      type: "Full-time","      description: "Join our engineering team to build innovative micro SaaS products and AI-powered solutions."
+      id: 1,
+      title: "Senior AI Engineer",
+      department: "AI & Machine Learning",
+      location: "Remote / Middletown, DE",
+      type: "Full-time",
+      salary: "$120,000 - $180,000",
+      experience: "5+ years",
+      description: "Lead the development of cutting-edge AI solutions and machine learning models.",
+      requirements: [
+        "Master's degree in Computer Science, AI, or related field",
+        "5+ years experience in machine learning and AI development",
+        "Proficiency in Python, TensorFlow, PyTorch",
+        "Experience with NLP, computer vision, or deep learning",
+        "Strong problem-solving and analytical skills"
+      ],
+      benefits: [
+        "Competitive salary and equity",
+        "Health, dental, and vision insurance",
+        "Flexible work arrangements",
+        "Professional development budget",
+        "401(k) with company matching"
+      ]
     },
-    {"      title: "AI/ML Engineer","      department: "AI Services","      location: "Remote / Delaware","      type: "Full-time","      description: "Develop cutting-edge AI services including healthcare diagnostics, cybersecurity, and automation solutions."
+    {
+      id: 2,
+      title: "Full Stack Developer",
+      department: "Micro SaaS Development",
+      location: "Remote / Middletown, DE",
+      type: "Full-time",
+      salary: "$90,000 - $140,000",
+      experience: "3+ years",
+      description: "Build scalable micro SaaS applications using modern web technologies.",
+      requirements: [
+        "Bachelor's degree in Computer Science or related field",
+        "3+ years experience in full-stack development",
+        "Proficiency in React, Node.js, TypeScript",
+        "Experience with cloud platforms (AWS, Azure, GCP)",
+        "Knowledge of database design and optimization"
+      ],
+      benefits: [
+        "Competitive salary and equity",
+        "Health, dental, and vision insurance",
+        "Flexible work arrangements",
+        "Professional development budget",
+        "401(k) with company matching"
+      ]
     },
-    {"      title: "DevOps Engineer","      department: "Infrastructure","      location: "Remote / Delaware","      type: "Full-time","      description: "Manage cloud infrastructure, CI/CD pipelines, and ensure high availability of our services."
+    {
+      id: 3,
+      title: "DevOps Engineer",
+      department: "IT Infrastructure",
+      location: "Remote / Middletown, DE",
+      type: "Full-time",
+      salary: "$100,000 - $150,000",
+      experience: "4+ years",
+      description: "Manage cloud infrastructure and implement DevOps best practices.",
+      requirements: [
+        "Bachelor's degree in Computer Science or related field",
+        "4+ years experience in DevOps and cloud infrastructure",
+        "Proficiency in AWS, Azure, or GCP",
+        "Experience with Docker, Kubernetes, CI/CD",
+        "Knowledge of infrastructure as code (Terraform, CloudFormation)"
+      ],
+      benefits: [
+        "Competitive salary and equity",
+        "Health, dental, and vision insurance",
+        "Flexible work arrangements",
+        "Professional development budget",
+        "401(k) with company matching"
+      ]
     },
-    {"      title: "Product Manager","      department: "Product","      location: "Remote / Delaware","      type: "Full-time","      description: "Lead product strategy and development for our micro SaaS portfolio and enterprise solutions."
+    {
+      id: 4,
+      title: "Cybersecurity Specialist",
+      department: "Security",
+      location: "Remote / Middletown, DE",
+      type: "Full-time",
+      salary: "$110,000 - $160,000",
+      experience: "4+ years",
+      description: "Protect our systems and data with advanced cybersecurity measures.",
+      requirements: [
+        "Bachelor's degree in Cybersecurity, Computer Science, or related field",
+        "4+ years experience in cybersecurity",
+        "Certifications: CISSP, CISM, or equivalent",
+        "Experience with security tools and frameworks",
+        "Knowledge of compliance standards (SOC 2, ISO 27001)"
+      ],
+      benefits: [
+        "Competitive salary and equity",
+        "Health, dental, and vision insurance",
+        "Flexible work arrangements",
+        "Professional development budget",
+        "401(k) with company matching"
+      ]
     },
-    {"      title: "Sales Engineer","      department: "Sales","      location: "Remote / Delaware","      type: "Full-time","      description: "Help clients understand and implement our technology solutions through technical sales support."
-    },
-    {"      title: "UX/UI Designer","      department: "Design","      location: "Remote / Delaware","      type: "Full-time","      description: "Create intuitive and beautiful user experiences for our diverse range of technology products."
+    {
+      id: 5,
+      title: "Product Manager",
+      department: "Product",
+      location: "Remote / Middletown, DE",
+      type: "Full-time",
+      salary: "$100,000 - $150,000",
+      experience: "3+ years",
+      description: "Drive product strategy and roadmap for our micro SaaS solutions.",
+      requirements: [
+        "Bachelor's degree in Business, Engineering, or related field",
+        "3+ years experience in product management",
+        "Experience with SaaS products and agile methodologies",
+        "Strong analytical and communication skills",
+        "Experience with user research and data analysis"
+      ],
+      benefits: [
+        "Competitive salary and equity",
+        "Health, dental, and vision insurance",
+        "Flexible work arrangements",
+        "Professional development budget",
+        "401(k) with company matching"
+      ]
     }
-  ];
+  ]
 
-  const benefits = ["    "Competitive salary and equity options","    "Comprehensive health, dental, and vision insurance","    "Flexible remote work arrangements","    "Professional development budget","    "Latest technology and tools","    "Collaborative and innovative culture","    "Opportunity to work on cutting-edge projects","    "Generous vacation and sick leave"
-  ];
+  const companyBenefits = [
+    {
+      icon: <DollarSign className="w-8 h-8" />,
+      title: "Competitive Compensation",
+      description: "Above-market salaries with equity participation and performance bonuses"
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: "Flexible Work Environment",
+      description: "Remote-first culture with flexible hours and work-life balance"
+    },
+    {
+      icon: <Brain className="w-8 h-8" />,
+      title: "Learning & Development",
+      description: "Annual learning budget, conference attendance, and skill development programs"
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: "Comprehensive Benefits",
+      description: "Health, dental, vision insurance, 401(k) matching, and wellness programs"
+    }
+  ]
 
   return (
     <>
-      <Head>
-        <title>Careers - Zion Tech Group</title>"        <meta name="description" content="Join Zion Tech Group and help build the future of technology. Explore career opportunities in AI, micro SaaS, and IT solutions." />"        <meta name="keywords" content="careers, jobs, technology careers, AI jobs, software development, remote work" />"        <link rel="canonical" href={`${contact.site}/careers`} />"        <meta property="og:title" content="Careers - Zion Tech Group" />"        <meta property="og:description" content="Join Zion Tech Group and help build the future of technology." />"        <meta property="og:url" content={`${contact.site}/careers`} />"        <meta property="og:type" content="website" />
-      </Head>
-      "      <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
-        {/* Hero Section */}"        <section className="py-20 px-4 text-center">"          <div className="max-w-4xl mx-auto">"            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
-              Join Our Team
-            </h1>"            <p className="text-xl md:text-2xl text-slate-300 mb-8">
-              Build the Future of Technology with Zion Tech Group
-            </p>"            <p className="text-lg text-slate-400 mb-12 max-w-3xl mx-auto">
-              We're looking for passionate individuals who want to make a difference in the world of technology. 
-              Join us in creating innovative solutions that transform businesses and industries.
-            </p>
-          </div>
-        </section>
-
-        {/* Why Work With Us */}"        <section className="py-16 px-4">"          <div className="max-w-6xl mx-auto">"            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-              Why Work With Us?
-            </h2>
-            "            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">"              <div className="p-6 bg-slate-900/60 rounded-xl border border-white/10 text-center">"                <div className="text-4xl mb-4">🚀</div>"                <h3 className="text-xl font-bold mb-2 text-blue-400">Innovation</h3>"                <p className="text-slate-300">Work on cutting-edge projects in AI, micro SaaS, and emerging technologies.</p>
-              </div>
-              "              <div className="p-6 bg-slate-900/60 rounded-xl border border-white/10 text-center">"                <div className="text-4xl mb-4">🌍</div>"                <h3 className="text-xl font-bold mb-2 text-green-400">Remote First</h3>"                <p className="text-slate-300">Flexible remote work arrangements with a focus on work-life balance.</p>
-              </div>
-              "              <div className="p-6 bg-slate-900/60 rounded-xl border border-white/10 text-center">"                <div className="text-4xl mb-4">📈</div>"                <h3 className="text-xl font-bold mb-2 text-purple-400">Growth</h3>"                <p className="text-slate-300">Continuous learning opportunities and career advancement paths.</p>
-              </div>
-              "              <div className="p-6 bg-slate-900/60 rounded-xl border border-white/10 text-center">"                <div className="text-4xl mb-4">🤝</div>"                <h3 className="text-xl font-bold mb-2 text-orange-400">Collaboration</h3>"                <p className="text-slate-300">Work with talented, diverse teams in a supportive environment.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits */}"        <section className="py-16 px-4 bg-slate-900/40">"          <div className="max-w-4xl mx-auto">"            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-              Benefits & Perks
-            </h2>
-            "            <div className="grid md:grid-cols-2 gap-8">"              <div className="space-y-4">
-                {benefits.slice(0, 4).map((benefit, index) => ("                  <div key={index} className="flex items-center space-x-3">"                    <div className="w-2 h-2 bg-blue-400 rounded-full" />"                    <span className="text-slate-300">{benefit}</span>
-                  </div>
-                ))}
-              </div>"              <div className="space-y-4">
-                {benefits.slice(4).map((benefit, index) => ("                  <div key={index} className="flex items-center space-x-3">"                    <div className="w-2 h-2 bg-purple-400 rounded-full" />"                    <span className="text-slate-300">{benefit}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Open Positions */}"        <section className="py-16 px-4">"          <div className="max-w-6xl mx-auto">"            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-              Open Positions
-            </h2>
-            "            <div className="space-y-6">
-              {openPositions.map((position, index) => ("                <div key={index} className="p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-blue-500/40 transition-colors">"                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                    <div>"                      <h3 className="text-2xl font-bold text-blue-400 mb-2">{position.title}</h3>"                      <div className="flex flex-wrap gap-4 text-sm text-slate-400">
-                        <span>📁 {position.department}</span>
-                        <span>📍 {position.location}</span>
-                        <span>⏰ {position.type}</span>
-                      </div>
-                    </div>"                    <div className="mt-4 md:mt-0">
-                      <a 
-                        href={`mailto:${contact.email}?subject=Application for ${position.title}`}"                        className="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors"
-                      >
-                        Apply Now
-                      </a>
-                    </div>
-                  </div>"                  <p className="text-slate-300">{position.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}"        <section className="py-16 px-4 bg-slate-900/40">"          <div className="max-w-4xl mx-auto text-center">"            <h2 className="text-3xl md:text-4xl font-bold mb-8">
-              Don't See Your Role?
-            </h2>"            <p className="text-lg text-slate-300 mb-8">
-              We're always looking for talented individuals. Send us your resume and let us know how you'd like to contribute.
-            </p>
-            "            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a 
-                href={`mailto:${contact.email}?subject=General Career Inquiry`}"                className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors"
+      <SEO
+        title="Careers - Zion Tech Group"
+        description="Join our team of innovative developers, AI engineers, and technology experts. Explore career opportunities at Zion Tech Group."
+        keywords="careers, jobs, AI engineer, developer, DevOps, cybersecurity, Zion Tech Group"
+        canonical="https://ziontechgroup.com/careers"
+      />
+      
+      <PageTransition>
+        <main className="min-h-screen bg-white">
+          {/* Hero Section */}
+          <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-center"
               >
-                Send Resume
-              </a>"              <Link href="/contact" className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
-                Contact Us
-              </Link>
+                <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                  Join Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Team</span>
+                </h1>
+                <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8">
+                  Build the future of technology with innovative AI, micro SaaS, and IT solutions
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <motion.a
+                    href="#openings"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
+                  >
+                    <ArrowRight className="w-5 h-5" />
+                    View Open Positions
+                  </motion.a>
+                  <motion.a
+                    href="mailto:careers@ziontechgroup.com"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
+                  >
+                    <ArrowRight className="w-5 h-5" />
+                    Send Resume
+                  </motion.a>
+                </div>
+              </motion.div>
             </div>
-          </div>
-        </section>
-      </main>
+          </section>
+
+          {/* Company Benefits */}
+          <section className="py-20 bg-gray-50">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="text-center mb-16"
+              >
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                  Why Work With Us?
+                </h2>
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                  We offer a comprehensive benefits package and a culture that values innovation, growth, and work-life balance.
+                </p>
+              </motion.div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {companyBenefits.map((benefit, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center"
+                  >
+                    <div className="text-blue-600 mb-4 flex justify-center">
+                      {benefit.icon}
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                      {benefit.title}
+                    </h3>
+                    <p className="text-gray-600">
+                      {benefit.description}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Job Openings */}
+          <section id="openings" className="py-20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-center mb-16"
+              >
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                  Open Positions
+                </h2>
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                  Join our team and help shape the future of technology
+                </p>
+              </motion.div>
+
+              <div className="space-y-8">
+                {jobOpenings.map((job, index) => (
+                  <motion.div
+                    key={job.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+                  >
+                    <div className="p-8">
+                      <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
+                        <div>
+                          <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                            {job.title}
+                          </h3>
+                          <p className="text-lg text-blue-600 font-semibold mb-2">
+                            {job.department}
+                          </p>
+                          <div className="flex flex-wrap gap-4 text-sm text-gray-600">
+                            <div className="flex items-center gap-1">
+                              <MapPin className="w-4 h-4" />
+                              {job.location}
+                            </div>
+                            <div className="flex items-center gap-1">
+                              <Clock className="w-4 h-4" />
+                              {job.type}
+                            </div>
+                            <div className="flex items-center gap-1">
+                              <DollarSign className="w-4 h-4" />
+                              {job.salary}
+                            </div>
+                            <div className="flex items-center gap-1">
+                              <Star className="w-4 h-4" />
+                              {job.experience}
+                            </div>
+                          </div>
+                        </div>
+                        <motion.button
+                          whileHover={{ scale: 1.05 }}
+                          whileTap={{ scale: 0.95 }}
+                          className="mt-4 lg:mt-0 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-blue-700 transition-colors"
+                        >
+                          <ArrowRight className="w-5 h-5" />
+                          Apply Now
+                        </motion.button>
+                      </div>
+                      
+                      <p className="text-gray-600 mb-6">
+                        {job.description}
+                      </p>
+                      
+                      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div>
+                          <h4 className="font-semibold text-gray-900 mb-3">Requirements:</h4>
+                          <ul className="space-y-2">
+                            {job.requirements.map((req, idx) => (
+                              <li key={idx} className="flex items-start gap-2 text-sm text-gray-600">
+                                <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+                                {req}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>
+                          <ul className="space-y-2">
+                            {job.benefits.map((benefit, idx) => (
+                              <li key={idx} className="flex items-start gap-2 text-sm text-gray-600">
+                                <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+                                {benefit}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Contact Section */}
+          <section className="bg-gray-50 py-20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-center"
+              >
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                  Don't See Your Role?
+                </h2>
+                <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                  We're always looking for talented individuals. Send us your resume and let us know how you can contribute to our team.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <motion.a
+                    href="mailto:careers@ziontechgroup.com"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
+                  >
+                    <ArrowRight className="w-5 h-5" />
+                    Send Resume
+                  </motion.a>
+                  <motion.a
+                    href="tel:+13024640950"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
+                  >
+                    <ArrowRight className="w-5 h-5" />
+                    Call Us: +1 302 464 0950
+                  </motion.a>
+                </div>
+              </motion.div>
+            </div>
+          </section>
+        </main>
+      </PageTransition>
     </>
-  );"}
+  )
+}
+
+export default CareersPage

@@ -1,6 +1,9 @@
-
-
-    const [clientProfile, setClientProfile] = useState()
+import React, { useState } from 'react';
+export default AdvancedServiceRecommendation;
+import { Badge } from './ui / badge';
+export default function Page() {
+ from './ui/badge';
+const [clientProfile, setClientProfile] = useState()
 }
     const [recommendations, setRecommendations] = useState([])"
     const [isAnalyzing, setIsAnalyzing] = useState(false)"
@@ -440,26 +443,36 @@ y: 0 "",">
               <option value="&apos;&apos;">Select Industry&apos;&apos;</option>"
               {industries.map(industry = > (}<option key="{industry}" value="{industry}">{industry}</option>) ) }
 
-            </select>
-          &apos;&apos,&apos;&apos;"
-            <label className="&apos;block" text-sm font-medium text-zion-slate-dark mb-2&apos;>Comp Size&apos;</label>
-  compSize: e.target.value &apos,&apos,",
-              <option value="&apos;&apos;">Select Comp Size&apos,&apos,</option>"
-              {compSizes.map(size = > (}<option key="{size}" value="{size}">{size}</option>) ) }"
-            <label className="&apos;block" text-sm font-medium text-zion-slate-dark mb-2&apos;>Budget Range&apos;</label>
-  budget: e.target.value &apos,&apos,",
-              <option value="&apos;&apos;">Select Budget Range&apos,&apos,</option>"
-              {budgets.map(budget = > (}<option key="{budget}" value="{budget}">{budget}</option>) ) }"
-            <label className="&apos;block" text-sm font-medium text-zion-slate-dark mb-2&apos;>Implementation Timeline&apos;</label>
-  timeline: e.target.value &apos,&apos,",
-              <option value="&apos;&apos;">Select Timeline&apos,&apos,</option>"
-              {timelines.map(timeline = > (}<option key="{timeline}" value="{timeline}">{timeline}</option>) ) }"
-            <label className="&apos;block" text-sm font-medium text-zion-slate-dark mb-2&apos;>Technology Maturity Level&apos;</label>
-  technologyMaturity: e.target.value &apos,&apos,",
-              <option value="&apos;&apos;">Select Technology Maturity&apos,&apos,</option>"
-              {technologyMaturityLevels.map(level = > (}<option key="{level}" value="{level}">{level}</option>) ) }
+{ opacity: 0,
+  y: 20
 
-                Get AI Recommendations
+}} animate = {
+
+  { opacity: 1,
+  y: 0
+
+"
+}} transition={{ delay: 0.1 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">"
+        <h2 className="text-2xl font-bold text-zion-blue-dark mb-6 flex items-center gap-2">"
+          <Brain className="w-6 h-6 text-zion-cyan"/>
+          Tell Us About Your Business
+        </h2>
+"
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>"
+            <label className="block text-sm font-medium text-zion-slate-dark mb-2">Industry</label>
+            <select value={clientProfile.industry} onChange = {
+
+        <div className="grid grid - cols - 1 md:grid - cols - 2 gap-6">
+          <div>
+            <label className="block text-sm font - medium text-zion - slate - dark mb-2">Industry</label>
+            <select value={clientProfile.industry} onChange = { (e) => setClientProfile(prev => ({ ...prev,
+  industry: e.target.value
+"
+}))} className="w-full p-3 border border-zion-slate-light rounded-md">"
+              <option value="">Select Industry</option>
+              {industries.map(industry => (<option key={industry} value={industry}>{industry}</option>) ) }
+Get AI Recommendations
               </>) }
 
           </Button>
@@ -720,3 +733,25 @@ for your business needs. Contact us today for a personalized consultation.""""
                   <Zap className="w-5 h-5 mr-2"  />""
                   Call Now,        </motion.div>)}
 
+"""
+}>""""
+                  <Zap className="w-5 h-5 mr-2"/>
+                  Call Now;
+                </Button>
+              </div>
+            </div>
+          </motion.div>
+        </motion.div>)}
+    </div>)};
+export default AdvancedServiceRecommendation;
+}}}}}}}}}
+
+export { AdvancedServiceRecommendation };
+
+export { AdvancedServiceRecommendation };
+
+export { AdvancedServiceRecommendation };
+
+export { AdvancedServiceRecommendation };
+
+export { AdvancedServiceRecommendation };

@@ -7,5 +7,5 @@ export {};
     const getDatacenters = (country) => {}
         const dataCenters = {}
 ";
-"";
+""
 export { Page };
