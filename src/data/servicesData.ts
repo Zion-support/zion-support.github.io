@@ -684,3 +684,8 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
     marketSize: "$5.6 billion by 2025"
   }
 ];
+
+// Import new advanced services
+export { ADVANCED_AI_SERVICES } from './advancedAIServices2025';
+export { INNOVATIVE_IT_SERVICES } from './innovativeITServices2025';
+export { INNOVATIVE_MICRO_SAAS } from './innovativeMicroSaas2025';
