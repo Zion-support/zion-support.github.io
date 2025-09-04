@@ -1,0 +1,56 @@
+{
+  "timestamp": "2025-09-03T16-42-20-606Z",
+  "totalTests": 4,
+  "passed": 2,
+  "failed": 2,
+  "skipped": 0,
+  "tests": [
+    {
+      "name": "build-test",
+      "description": "Build Test",
+      "startTime": "2025-09-03T16:42:20.608Z",
+      "status": "passed",
+      "output": "\n> ziontechgroup.com@0.1.0 prebuild\n> echo \"Starting build...\"\n\nStarting build...\n\n> ziontechgroup.com@0.1.0 build\n> next build\n\n   ▲ Next.js 15.5.2\n   - Experiments (use with caution):\n     ✓ scrollRestoration\n\n   Skipping validation of types\n   Skipping linting\n   Creating an optimized production build ...\n ✓ Compiled successfully in 3.2s\n   Collecting page data ...\n   Generating static pages (0/14) ...\n   Generating static pages (3/14) \r\n   Generating static pages (6/14) \r\n   Generating static pages (10/14) \r\n ✓ Generating static pages (14/14)\n   Finalizing page optimization ...\n   Collecting build traces ...\n\nRoute (pages)                                Size  First Load JS\n┌ ○ /                                     2.18 kB          88 kB\n├   /_app                                     0 B        85.8 kB\n├ ○ /404                                    180 B          86 kB\n├ ○ /about                                1.93 kB        87.7 kB\n├ ○ /ai-services                          7.85 kB        93.6 kB\n├ ○ /contact                              2.05 kB        87.8 kB\n├ ○ /faq                                  2.24 kB          88 kB\n├ ○ /it-services                           8.9 kB        94.7 kB\n├ ○ /micro-saas                           9.55 kB        95.3 kB\n├ ○ /pricing                              1.22 kB          87 kB\n├ ○ /privacy                              1.15 kB        86.9 kB\n├ ○ /services                             12.2 kB        97.9 kB\n├ ○ /services-catalog                     4.55 kB        90.3 kB\n└ ○ /terms                                2.11 kB        87.9 kB\n+ First Load JS shared by all             85.8 kB\n  ├ chunks/framework-a6e0b7e30f98059a.js  44.8 kB\n  ├ chunks/main-7079101eb4527540.js       36.2 kB\n  └ other shared chunks (total)           4.76 kB\n\n○  (Static)  prerendered as static content\n\n\n> ziontechgroup.com@0.1.0 postbuild\n> echo \"Build completed\"\n\nBuild completed\n",
+      "error": "",
+      "duration": 11616,
+      "endTime": "2025-09-03T16:42:32.224Z"
+    },
+    {
+      "name": "type-check",
+      "description": "TypeScript Type Check",
+      "startTime": "2025-09-03T16:42:32.225Z",
+      "status": "passed",
+      "output": "\n> ziontechgroup.com@0.1.0 type-check\n> tsc --noEmit\n\n",
+      "error": "",
+      "duration": 897,
+      "endTime": "2025-09-03T16:42:33.122Z"
+    },
+    {
+      "name": "lint-test",
+      "description": "Linting Test",
+      "startTime": "2025-09-03T16:42:33.122Z",
+      "status": "failed",
+      "output": "",
+      "error": "Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\nOops! Something went wrong! :(\n\nESLint: 8.57.1\n\nYou are linting \"pages/\", but all of the files matching the glob pattern \"pages/\" are ignored.\n\nIf you don't want to lint these files, remove the pattern \"pages/\" from the list of arguments passed to ESLint.\n\nIf you do want to lint these files, try the following solutions:\n\n* Check your .eslintignore file, or the eslintIgnore property in package.json, to ensure that the files are not configured to be ignored.\n* Explicitly list the files from this glob that you'd like to lint on the command-line, rather than providing a glob as an argument.\n\n",
+      "duration": 0,
+      "endTime": "2025-09-03T16:42:33.907Z"
+    },
+    {
+      "name": "security-audit",
+      "description": "Security Audit Test",
+      "startTime": "2025-09-03T16:42:33.908Z",
+      "status": "failed",
+      "output": "",
+      "error": "Command failed: npm audit --audit-level=moderate\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n",
+      "duration": 0,
+      "endTime": "2025-09-03T16:42:34.571Z"
+    }
+  ],
+  "summary": {
+    "passRate": "50.00%",
+    "averageDuration": 3128.25,
+    "recommendations": [
+      "Fix failing tests before deployment"
+    ]
+  }
+}
