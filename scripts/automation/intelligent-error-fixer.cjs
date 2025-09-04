@@ -349,6 +349,33 @@ function getAllSourceFiles() {
   files.push(fullPath);
 }
         }
+      });
+      
+    } catch (error) {
+      // TypeScript errors are expected here
+      log('TypeScript error analysis completed');
+    }
+    
+    return totalFixes;
+  },
+
+  // Fix syntax error in specific file
+  fixSyntaxErrorInFile: (filePath) => {
+    if (!fs.existsSync(filePath)) return 0;
+    
+    try {
+      const content = fs.readFileSync(filePath, 'utf8');
+      const { content: fixedContent, changes } = INTELLIGENT_FIXES.fixJsxSyntax(filePath, content);
+      
+      if (changes > 0) {
+        if (CONFIG.BACKUP_ENABLED) {
+          const backupPath = path.join(CONFIG.BACKUP_DIR, 
+            `${path.basename(filePath)}.${Date.now()}.backup`);
+          fs.writeFileSync(backupPath, content);
+        }
+        
+        fs.writeFileSync(filePath, fixedContent);
+        log(`Fixed ${changes} syntax errors in ${filePath}`);
       }
       traverse(dir);
 }
