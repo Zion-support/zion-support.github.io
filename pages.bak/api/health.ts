@@ -9,22 +9,18 @@ interface SystemHealth {
   services: {
     database: boolean;
     cache: boolean;
-    api: boolean;
-  };
+    api: boolean};
   metrics: {
     responseTime: number;
     memoryUsage: number;
     cacheHitRate: number;
-    activeConnections: number;
-  };
-  uptime: number;
-}
+    activeConnections: number};
+  uptime: number}
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
     res.setHeader('Allow', ['GET']);
-    return res.status(405).json({ error: 'Method not allowed' });
-  }
+    return res.status(405).json({ error: 'Method not allowed' })}
 
   const startTime = Date.now();
 
@@ -54,12 +50,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     
     let status: healthy | 'degraded' | 'unhealthy';
     if (healthyServices === totalServices) {
-      status = 'healthy';
-    } else if (healthyServices >= totalServices / 2) {
-      status = 'degraded';
-    } else {
-      status = 'unhealthy';
-    }
+      status = 'healthy'} else if (healthyServices >= totalServices / 2) {
+      status = 'degraded'} else {
+      status = 'unhealthy'}
 
     const health: SystemHealth = {
       status,
@@ -76,8 +69,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const responseTime = Date.now() - startTime;
 
-    return res.status(200).json({ ...health, responseTime });
-  } catch (error) {
+    return res.status(200).json({ ...health, responseTime })} catch (error) {
     console.error('Health check failed:', error);
 
     return res.status(500).json({
@@ -96,6 +88,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         activeConnections: 0
       },
       uptime: process.uptime()
-    });
-  }
+    })}
 }

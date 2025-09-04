@@ -55,9 +55,7 @@ const pagesDir = './pages';
 if (fs.existsSync(pagesDir)) {
   // // // // // // // console.log('Fixing empty pages...');
   fixEmptyFiles(pagesDir);
-  // // // // // // // console.log('Empty pages fixed successfully!');
-} else {
-  // // // // // // // console.error('Pages directory not found');
-}
+  // // // // // // // console.log('Empty pages fixed successfully!')} else {
+  // // // // // // // console.error('Pages directory not found')}
   console.log('Empty pages fixed successfully!')} else {
   console.error('Pages directory not found')}

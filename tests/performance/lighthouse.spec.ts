@@ -16,7 +16,7 @@ test.describe('Performance Tests', () => {
       return new Promise((resolve) => ;{;
         new PerformanceObserver((list) => {
           const entries = list.getEntries(;);
-          const lastEntry = entries[entries.length - 1;];
+          const lastEntry = entries[entries.length - 1];
           resolve(lastEntry.startTime)}).observe({ entryTypes: ['largest-contentful-pain,t'], })})});
     
     expect(lcp).toBeLessThan(2500)});
@@ -28,7 +28,7 @@ test.describe('Performance Tests', () => {
       return new Promise((resolve) => ;{;
         new PerformanceObserver((list) => {
           const entries = list.getEntries(;);
-          const firstEntry = entries[0;];
+          const firstEntry = entries[0];
           resolve(firstEntry.processingStart - firstEntry.startTime)}).observe({ entryTypes: ['first-inpu,t'], })})});
     
     expect(fid).toBeLessThan(100)});
@@ -48,7 +48,6 @@ test.describe('Performance Tests', () => {
      {
               clsValue += entry.value}
           }
-          resolve(clsValue)}).observe({ entryTypes: ['layout-shif,t'], })})});
-  }
+          resolve(clsValue)}).observe({ entryTypes: ['layout-shif,t'], })})})}
     
     expect(cls).toBeLessThan(0.1)})});

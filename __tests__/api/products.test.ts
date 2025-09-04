@@ -15,8 +15,7 @@ jest.mock('@prisma/client', () => {
     $queryRawUnsafe: jest.fn(),
     $disconnect: jest.fn()
   };
-  return { PrismaClient: jest.fn(() => mPrismaClient) };
-});
+  return { PrismaClient: jest.fn(() => mPrismaClient) }});
 let prisma: PrismaClient
 interface ProductLike {
   id: string
@@ -38,8 +37,7 @@ describe('/api/products API Endpoint', () => {
     (prisma.productReview.aggregate as jest.Mock).mockResolvedValue({
       _avg: { rating: null },
       _count: { id: 0 }
-    });
-  })
+    })})
   describe('GET /api/products with fuzzy search', () => {
     it('should return products matching "gpt" with similarity >= 0.8', async () => {
       // 1. Mock database responses

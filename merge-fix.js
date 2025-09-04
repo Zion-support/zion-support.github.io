@@ -18,14 +18,11 @@ function fixMergeConflicts(filePath) {
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`✅ Fixed merge conflicts in: ${path.relative(process.cwd(), filePath)}`);
-      return true;
-    }
+      return true}
     
-    return false;
-  } catch (error) {
+    return false} catch (error) {
     console.log(`❌ Error fixing ${filePath}: ${error.message}`);
-    return false;
-  }
+    return false}
 }
 
 // Function to get all files recursively
@@ -39,17 +36,14 @@ function getAllFiles(dir, extensions) {
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        files = files.concat(getAllFiles(fullPath, extensions));
-      } else if (extensions.some(ext => item.endsWith(ext))) {
-        files.push(fullPath);
-      }
+        files = files.concat(getAllFiles(fullPath, extensions))} else if (extensions.some(ext => item.endsWith(ext))) {
+        files.push(fullPath)}
     }
   } catch (error) {
     // Skip directories that can't be read
   }
   
-  return files;
-}
+  return files}
 
 // Main execution
 async function main() {
@@ -62,8 +56,7 @@ async function main() {
     try {
       const content = fs.readFileSync(file, 'utf8');
       if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('        if (fixMergeConflicts(file)) {
-          fixedCount++;
-        }
+          fixedCount++}
       }
     } catch (error) {
       // Skip files that can't be read
@@ -71,7 +64,6 @@ async function main() {
   }
   
   console.log(`🎉 Fixed merge conflicts in ${fixedCount} files`);
-  console.log('✅ Merge conflict resolution completed');
-}
+  console.log('✅ Merge conflict resolution completed')}
 
 main().catch(console.error);

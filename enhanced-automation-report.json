@@ -1,31 +1,31 @@
 {
-  "timestamp": "2025-09-03T11:57:36.216Z",
-  "duration": 10276,
-  "summary": {
-    "total": 5,
-    "successful": 1,
-    "errors": 3,
-    "warnings": 1
-  },
+  "startTime": "2025-09-04T15:38:13.274Z",
+  "endTime": "2025-09-04T15:38:25.424Z",
+  "duration": "12s",
   "results": {
-    "success": [
-      "Next.js Build completed successfully"
-    ],
+    "syntaxFixes": 3,
+    "performanceOptimizations": 3,
+    "securityEnhancements": 3,
+    "testImprovements": 2,
+    "buildOptimizations": 0,
     "errors": [
-      "ESLint Check failed: Command failed: npx eslint . --ext .ts,.tsx,.js,.jsx\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nInvalid option '--ext' - perhaps you meant '-c'?\nYou're using eslint.config.js, some command line flags are no longer available. Please see https://eslint.org/docs/latest/use/command-line-interface for details.\n",
-      "TypeScript Check failed: spawnSync /bin/sh ENOBUFS",
-      "Security Audit failed: Command failed: npm audit --audit-level=moderate\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
-    ],
-    "warnings": [
-      "Jest not available for testing"
+      {
+        "command": "npm run test:coverage",
+        "error": "Command failed: npm run test:coverage\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nError: Can't find a root directory while resolving a config file path.\nProvided path to resolve: jest.config.ts\ncwd: /workspace\n    at resolveConfigPath (/workspace/node_modules/jest-config/build/index.js:2448:11)\n    at readInitialOptions (/workspace/node_modules/jest-config/build/index.js:1138:55)\n    at readConfig (/workspace/node_modules/jest-config/build/index.js:918:13)\n    at readConfigs (/workspace/node_modules/jest-config/build/index.js:1168:32)\n    at runCLI (/workspace/node_modules/@jest/core/build/index.js:1397:43)\n    at Object.run (/workspace/node_modules/jest-cli/build/index.js:656:34)\n"
+      },
+      {
+        "command": "npm run build:clean",
+        "error": "Command failed: npm run build:clean\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error\n\n> Build error occurred\n[SyntaxError: Unexpected token '...']\n"
+      },
+      {
+        "command": "npm run build:analyze",
+        "error": "Command failed: npm run build:analyze\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error\n\n> Build error occurred\n[SyntaxError: Unexpected token '...']\n"
+      },
+      {
+        "command": "node scripts/build-optimizer.cjs",
+        "error": "Command failed: node scripts/build-optimizer.cjs\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error\n\n> Build error occurred\n[SyntaxError: Unexpected token '...']\n❌ Build optimization failed: Command failed: npm run build\n"
+      }
     ]
   },
-  "recommendations": [
-    "Review and fix any failed operations",
-    "Run automation suite regularly",
-    "Monitor application performance",
-    "Keep dependencies updated",
-    "Consider upgrading React to version 18+ for better compatibility",
-    "Install Jest for comprehensive testing"
-  ]
+  "status": "PARTIAL_SUCCESS"
 }

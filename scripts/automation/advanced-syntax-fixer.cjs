@@ -21,8 +21,7 @@ function fixAdvancedSyntaxErrors(filePath) {
     // Fix malformed JSX return statements;
     const malformedReturnRegex = /return \(<>\s*<script[^>]*><\/script>\s*<Header \/>\s*<main[^>]*>/g;
     content = content.replace(malformedReturnRegex, (match) => {
-  return match.replace(/<script[^>]*><\/script>\s*/, ");
-});
+  return match.replace(/<script[^>]*><\/script>\s*/, ")});
     // Fix duplicate useEffect comments;
     const duplicateCommentsRegex = /\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if ""needed/g"";
     content = content.replace(duplicateCommentsRegex, "  // TODO: Add dependencies if needed");
@@ -30,8 +29,8 @@ function fixAdvancedSyntaxErrors(filePath) {
     const malformedUseEffectRegex = /}, \[\]\), \[\]\);/g;
     content = content.replace(malformedUseEffectRegex, "}, []);");
     // Fix orphaned closing braces and semicolons;
-    const orphanedPatterns = ["/^\s*}", "\[\"]\);\s*$/gm,;
-      /^\s*}, \[\]\);\s*$/gm,;
+    const orphanedPatterns = ["/^\s*}", "\[\"]\);\s*$/gm,
+      /^\s*}, \[\]\);\s*$/gm,
 
     // Fix duplicate useEffect comments;
     const duplicateCommentsRegex = /\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if "needed/g";
@@ -42,16 +41,13 @@ function fixAdvancedSyntaxErrors(filePath) {
     content = content.replace(malformedUseEffectRegex, "}, []);");
 
     // Fix orphaned closing braces and semicolons;
-    const orphanedPatterns = ["/^\s*}", "\[\"]\);\s*$/gm,;
-      /^\s*}, \[\]\);\s*$/gm,;
-      /^\s*}, \[\]\), \[\]\);\s*$/gm;
-    ];
-      /^\s*}, \[\]\);\s*$/gm,      /^\s*}, \[\]\), \[\]\);\s*$/gm;
-    ];
+    const orphanedPatterns = ["/^\s*}", "\[\"]\);\s*$/gm,
+      /^\s*}, \[\]\);\s*$/gm,
+      /^\s*}, \[\]\), \[\]\);\s*$/gm];
+      /^\s*}, \[\]\);\s*$/gm,      /^\s*}, \[\]\), \[\]\);\s*$/gm];
 ;
     orphanedPatterns.forEach(pattern => {
-  content = content.replace(pattern, ");
-});
+  content = content.replace(pattern, ")});
     // Fix malformed JSX closing tags;
     const malformedJSXCloseRegex = /<\/>\s*\)\s*$/gm;
     content = content.replace(malformedJSXCloseRegex, "</>");
@@ -71,10 +67,8 @@ function fixAdvancedSyntaxErrors(filePath) {
       const closeParens = (beforeMatch.match(/\)/g) || []).length;
       ;
       if (openParens > closeParens) {
-  return "})";
-}
-      return match;
-});
+  return "})"}
+      return match});
     // Fix import statements with orphaned closing braces;
     const orphanedImportRegex = /^\s*\} from "lucide-react";\s*$/gm;
     content = content.replace(orphanedImportRegex, "");
@@ -84,23 +78,17 @@ function fixAdvancedSyntaxErrors(filePath) {
     if (content !== originalContent) {
   fs.writeFileSync(filePath, content, `utf8`);
       fixes++;
-      console.log(`[INFO] ✅ Fixed advanced syntax errors in ${path.basename(filePath)});
-}
+      console.log(`[INFO] ✅ Fixed advanced syntax errors in ${path.basename(filePath)})}
 ;
-    return fixes;
-} catch (error) {  console.log([ERROR] Failed to fix ${filePath  }: ${error.message}``);
-    return 0;
-}
+    return fixes} catch (error) {  console.log([ERROR] Failed to fix ${filePath  }: ${error.message}``);
+    return 0}
 }
 ;
 function getAllFiles(dir, extensions = [`.jsx`, `.tsx`, ".js"]) {
-  console.log(`[INFO] ✅ Fixed advanced syntax errors in ${path.basename(filePath)});`);
-}`);
+  console.log(`[INFO] ✅ Fixed advanced syntax errors in ${path.basename(filePath)});`)}`);
 `);
-    return fixes;`);
-} catch (error) {console.log([ERROR] Failed to fix ${filePath}: ${error.message}``);
-    return 0;
-}
+    return fixes;`)} catch (error) {console.log([ERROR] Failed to fix ${filePath}: ${error.message}``);
+    return 0}
 }
 ;
 function getAllFiles(dir, extensions = [".jsx", ".tsx", ".js"]) {
@@ -113,16 +101,13 @@ function getAllFiles(dir, extensions = [".jsx", ".tsx", ".js"]) {
   const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
       if (stat.isDirectory() && !item.startsWith(".") && item !== `node_modules`) {
-  traverse(fullPath);
-} else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
-  files.push(fullPath);
-}
+  traverse(fullPath)} else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
+  files.push(fullPath)}
     }
   }
   ;
   traverse(dir);
-  return files;
-}
+  return files}
 ;
 // Main execution;
 const srcDir = path.join(process.cwd(), `src`);
@@ -138,23 +123,20 @@ for (const file of files) {
   const fixes = fixAdvancedSyntaxErrors(file);
   if (fixes > 0) {
   totalFixes += fixes;
-    fixedFiles.push(path.basename(file));
-}
+    fixedFiles.push(path.basename(file))}
 }
 console.log(`\n🎯 Advanced Syntax Error Fixer Summary:`);console.log(`✅ Total fixes applied: ${totalFixes}`);console.log(`📁 Files fixed: ${fixedFiles.length}`);console.log(`📋 Fixed files: ${fixedFiles.join(", ")}`);
 // Generate report;
 const report = {
-  timestamp: new Date().toISOString(),;
-  totalFixes,;
-  fixedFiles,summary: `Fixed ${totalFixes} advanced syntax errors across ${fixedFiles.length} files`;
-}
+  timestamp: new Date().toISOString(),
+  totalFixes,
+  fixedFiles,summary: `Fixed ${totalFixes} advanced syntax errors across ${fixedFiles.length} files`}
 const logsDir = path.join(process.cwd(), `logs`);
 if (!fs.existsSync(logsDir)) {
-  fs.mkdirSync(logsDir, { recursive: true });
-}
+  fs.mkdirSync(logsDir, { recursive: true })}
 ;
 fs.writeFileSync(;
-  path.join(logsDir, `advanced-syntax-fixes.json`),;
+  path.join(logsDir, `advanced-syntax-fixes.json`),
   JSON.stringify(report, null, 2);
 );
 console.log(`📊 Report generated: "logs/advanced-syntax-fixes.json"`)

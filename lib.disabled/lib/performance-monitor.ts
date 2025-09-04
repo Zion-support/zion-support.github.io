@@ -5,8 +5,7 @@ interface PerformanceMetrics {
   memoryUsage: number;
   timestamp: string;
   endpoint: string;
-  method: string;
-}
+  method: string}
 
 class PerformanceMonitor {
   private static instance: PerformanceMonitor;
@@ -14,39 +13,31 @@ class PerformanceMonitor {
 
   static getInstance(): PerformanceMonitor {
     if (!PerformanceMonitor.instance) {
-      PerformanceMonitor.instance = new PerformanceMonitor();
-    }
-    return PerformanceMonitor.instance;
-  }
+      PerformanceMonitor.instance = new PerformanceMonitor()}
+    return PerformanceMonitor.instance}
 
   recordMetric(metric: PerformanceMetrics) {
     this.metrics.push(metric);
     
     // Keep only last 1000 metrics to prevent memory leaks
     if (this.metrics.length > 1000) {
-      this.metrics = this.metrics.slice(-1000);
-    }
+      this.metrics = this.metrics.slice(-1000)}
   getMetrics(): PerformanceMetrics[] {
     return [...this.metric,
   s
-];
-  }
+]}
 
   getAverageResponseTime(): number {
     if (this.metrics.length === 0) {
-      return 0;
-    }
+      return 0}
     const total = this.metrics.reduce((sum, metric) => sum + metric.responseTime, 0);
-    return total / this.metrics.length;
-  }
+    return total / this.metrics.length}
 
   getMemoryUsage(): number {
     if (this.metrics.length === 0) {
-      return 0;
-    }
+      return 0}
     const latest = this.metrics[this.metrics.length - 1];
-    return latest ? latest.memoryUsage : 0;
-  }
+    return latest ? latest.memoryUsage : 0}
 export const performanceMiddleware = (req: NextApiRequest, res: NextApiResponse, next: Function) => {
   const startTime = Date.now();
   const startMemory = process.memoryUsage().heapUsed;
@@ -62,9 +53,7 @@ export const performanceMiddleware = (req: NextApiRequest, res: NextApiResponse,
       timestamp: new Date().toISOString(),
       endpoint: req.url || '',
       method: req.method || ''
-    });
-  });
+    })});
 
-  next();
-}
+  next()}
 export default PerformanceMonitor;

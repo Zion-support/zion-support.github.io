@@ -1,33 +1,33 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react';';';
 import { Send, Bot, User } from 'lucide-react';
 
 interface Message {
-  id: string;
-  text: string;
+  id: string;';
+  text: string;';';
   sender: 'user' | 'ai';
 }
 
-const AIChatAssistant: React.FC = (props: any) => {
-  const [messages, setMessages] = useState<Message[]>([]);
+const AIChatAssistant: React.FC = (props: any) => {';
+  const [messages, setMessages] = useState<Message[]>([]);';';
   const [input, setInput] = useState<any>('');
 
   const handleSend = (props: any) => {
     if (!input.trim()) return;
 
     const userMessage: Message = {
-      id: Date.now().toString(),
-      text: input,
+      id: Date.now().toString(),';
+      text: input,';';
       sender: 'user'
     };
-
-    setMessages(prev => [...prev, userMessage]);
+';
+    setMessages(prev => [...prev, userMessage]);';';
     setInput('');
 
     // Simulate AI response
     setTimeout(() => {
       const aiMessage: Message = {
-        id: (Date.now() + 1).toString(),
-        text: `I understand: "${userMessage.text}". How can I help?`,
+        id: (Date.now() + 1).toString(),';
+        text: `I understand: "${userMessage.text}". How can I help?`,';';
         sender: 'ai'
       };
       setMessages(prev => [...prev, aiMessage]);
@@ -35,7 +35,7 @@ const AIChatAssistant: React.FC = (props: any) => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto bg-white rounded-lg shadow-lg">
+    <div className="min-h-screen bg-white">
       <div className="p-4 border-b">
         <h3 className="text-lg font-semibold flex items-center">
           <Bot className="w-5 h-5 mr-2 text-blue-500" />
@@ -43,9 +43,9 @@ const AIChatAssistant: React.FC = (props: any) => {
         </h3>
       </div>
       
-      <div className="h-96 overflow-y-auto p-4 space-y-4">
-        {messages.map((message) => (
-          <div key={message.id} className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
+      <div className="h-96 overflow-y-auto p-4 space-y-4">';
+        {messages.map((message) => (';';
+          <div key={message.id} className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}>';';
             <div className={`max-w-xs px-4 py-2 rounded-lg ${message.sender === 'user' ? 'bg-blue-500 text-white' : 'bg-gray-100'}`}>
               <p>{message.text}</p>
             </div>
@@ -57,8 +57,8 @@ const AIChatAssistant: React.FC = (props: any) => {
         <div className="flex space-x-2">
           <input
             type="text"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
+            value={input}';
+            onChange={(e) => setInput(e.target.value)}';';
             onKeyPress={(e) => e.key === 'Enter' && handleSend()}
             placeholder="Type your message..."
             className="flex-1 px-3 py-2 border rounded-lg"
@@ -77,5 +77,5 @@ const AIChatAssistant: React.FC = (props: any) => {
 
 export default AIChatAssistant;
 
-</any>
-</Message>
+</any>';
+</Message>;';;';

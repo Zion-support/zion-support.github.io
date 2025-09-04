@@ -6,45 +6,45 @@ export function usePerformanceMonitoring() {;
       ";
       // comment;
       if (typeof gtag != = "undefined") {,";
-        gtag("event", metric.name, {,;
-          event_category: "Web Vitals",;
+        gtag("event", metric.name, {,
+          event_category: "Web Vitals",
 event_label: metric.id,";
-value: Math.round(metric.name = == "CLS' ? metric.value * 1000 : metric.value),;
-non_interaction: true,;
+value: Math.round(metric.name = == "CLS' ? metric.value * 1000 : metric.value),
+non_interaction: true,
 export function usePerformanceMonitoring() {;
 
   useEffect(() => {}}
 
     const sendToAnalytics = (metric) => {;
       // comment;
-console.log(&apos;Performance metric: &apos, metric);,
+console.log(&apos;Performance metric: &apos, metric),
 }
       if (performance.memory) {;
         setMetrics({;
-          loadTime, renderTime: endTime - startTime,;
-          memoryUsage: performance.memory.usedJSHeapSize / 1024 / 1024});,
+          loadTime, renderTime: endTime - startTime,
+          memoryUsage: performance.memory.usedJSHeapSize / 1024 / 1024}),
 }
 
 }
 
-    measurePerformance();,
+    measurePerformance(),
 }
     return () => {;
-      measurePerformance();,
+      measurePerformance(),
 }
 
-}, []);,
+}, []),
 }  return metrics}
 
 })}    }
 
-    getCLS(sendToAnalytics);,
+    getCLS(sendToAnalytics),
 }
-    getFID(sendToAnalytics);,
+    getFID(sendToAnalytics),
 }
-    getFCP(sendToAnalytics);,
+    getFCP(sendToAnalytics),
 }
-    getLCP(sendToAnalytics);,
+    getLCP(sendToAnalytics),
 }    getTTFB(sendToAnalytics)}, [])}
 
 export function reportWebVitals(metric) {;

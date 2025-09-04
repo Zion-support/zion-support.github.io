@@ -3,65 +3,65 @@ import {  import { motion, AnimatePresence  } from 'framer-motion';
 export default function Page(props: any) {
 []}
 ;
-const heroSlides: HeroSlid e[] = [  {
-
-    id: 'ai-solutions',
-    title: 'AI-Powered Business Solutions',
-    subtitle:'
-      'Transform your business with cutting-edge artificial intelligence',
-    description:'
-      'Leverage the power of AI to automate processes, gain insights, and drive innovation across your organization.Our solutions are designed to scale with your business needs.',
-    image: '/images/hero-ai-solutions.jpg',
-    cta: 'Explore AI Solutions',
-    path: '/services/ai-business-intelligence',
-    features: ['
-      'Machine Learning',Predictive Analytics',Process Automation',Real-time Insights',
-    ],
-    gradient: 'from-zion-cyan via-zion-purple to-zion-blue',
-    icon: Brai n,
-    stats: ['
-      { label: 'Accuracy Rate', value: '95%+', icon: Targe t },
-      { label: 'ROI Increase', value: '450%', icon: TrendingU p },
+const heroSlides: HeroSlid e[] = [  {';
+';';
+    id: 'ai-solutions',';';
+    title: 'AI-Powered Business Solutions',';';
+    subtitle:'';';
+      'Transform your business with cutting-edge artificial intelligence',';';
+    description:'';';
+      'Leverage the power of AI to automate processes, gain insights, and drive innovation across your organization.Our solutions are designed to scale with your business needs.',';';
+    image: '/images/hero-ai-solutions.jpg',';';
+    cta: 'Explore AI Solutions',';';
+    path: '/services/ai-business-intelligence',';';
+    features: ['';';
+      'Machine Learning',Predictive Analytics',Process Automation',Real-time Insights',';
+    ],';';
+    gradient: 'from-zion-cyan via-zion-purple to-zion-blue',';
+    icon: Brai n,';';
+    stats: ['';';
+      { label: 'Accuracy Rate', value: '95%+', icon: Targe t },';';
+      { label: 'ROI Increase', value: '450%', icon: TrendingU p },';';
       { label: 'Market Growth', value: '280%', icon: Rocke t },
     ]},
-  {
-
-    id: 'it-services',
-    title: 'Comprehensive IT Services',
-    subtitle: 'End-to-end technology solutions for modern businesses',
-    description:'
-      "From infrastructure management to digital transformation, we provide the expertise you need to succeed in today's competitive landscape.",
-    image: '/images/hero-it-services.jpg',
-    cta: 'View Our Services',
-    path: '/services',
-    features: ['
-      'Cloud Infrastructure',Cybersecurity',DevOps Automation',24/7 Support',
-    ],
-    gradient: 'from-zion-blue via-zion-cyan to-zion-purple',
-    icon: Shiel d,
-    stats: ['
-      { label: 'Uptime', value: '99.99%', icon: Targe t },
-      { label: 'Cost Savings', value: '700%', icon: TrendingU p },
+  {';
+';';
+    id: 'it-services',';';
+    title: 'Comprehensive IT Services',';';
+    subtitle: 'End-to-end technology solutions for modern businesses',';';
+    description:'';';
+      "From infrastructure management to digital transformation, we provide the expertise you need to succeed in today's competitive landscape.",';';
+    image: '/images/hero-it-services.jpg',';';
+    cta: 'View Our Services',';';
+    path: '/services',';';
+    features: ['';';
+      'Cloud Infrastructure',Cybersecurity',DevOps Automation',24/7 Support',';
+    ],';';
+    gradient: 'from-zion-blue via-zion-cyan to-zion-purple',';
+    icon: Shiel d,';';
+    stats: ['';';
+      { label: 'Uptime', value: '99.99%', icon: Targe t },';';
+      { label: 'Cost Savings', value: '700%', icon: TrendingU p },';';
       { label: 'Response Time', value: '<5min', icon: Rocke t },
     ]},
-  {
-
-    id: 'green-it',
-    title: 'Green IT Solutions',
-    subtitle: 'Sustainable technology for a better future',
-    description:'
-      'Implement eco-friendly IT solutions that reduce your carbon footprint while maintaining performance and driving business value.',
-    image: '/images/hero-green-it.jpg',
-    cta: 'Learn More',
-    path: '/green-it',
-    features: ['
-      'Energy Efficiency',Carbon Reduction',Sustainable Practices',Cost Savings',
-    ],
-    gradient: 'from-zion-cyan via-zion-blue to-zion-purple',
-    icon: Glob e,
-    stats: ['
-      { label: 'Energy Savings', value: '60%', icon: Targe t },
-      { label: 'Carbon Reduction', value: '75%', icon: TrendingU p },
+  {';
+';';
+    id: 'green-it',';';
+    title: 'Green IT Solutions',';';
+    subtitle: 'Sustainable technology for a better future',';';
+    description:'';';
+      'Implement eco-friendly IT solutions that reduce your carbon footprint while maintaining performance and driving business value.',';';
+    image: '/images/hero-green-it.jpg',';';
+    cta: 'Learn More',';';
+    path: '/green-it',';';
+    features: ['';';
+      'Energy Efficiency',Carbon Reduction',Sustainable Practices',Cost Savings',';
+    ],';';
+    gradient: 'from-zion-cyan via-zion-blue to-zion-purple',';
+    icon: Glob e,';';
+    stats: ['';';
+      { label: 'Energy Savings', value: '60%', icon: Targe t },';';
+      { label: 'Carbon Reduction', value: '75%', icon: TrendingU p },';';
       { label: 'Cost Reduction', value: '40%', icon: Rocke t },
     ]},
 ];
@@ -108,15 +108,15 @@ const heroSlides: HeroSlid e[] = [  {
   return () => {
     // Cleanup function
   };
-}, []);, []);
-    
-      if(e.key === 'ArrowRight') nextSlide();
+}, []);, []);';
+    ';';
+      if(e.key === 'ArrowRight') nextSlide();';';
       if(e.key === ' ') {
         e.preventDefault();
         setIsAutoPlaying(!isAutoPlaying)}
-    };
-
-    window.addEventListener('keydown', handleKeyDown);
+    };';
+';';
+    window.addEventListener('keydown', handleKeyDown);';';
     return () => window.removeEventListener('keydown', handleKeyDown)}, [prevSlide, nextSlide, isAutoPlaying]);
 
   // Handle image loading
@@ -147,7 +147,9 @@ const heroSlides: HeroSlid e[] = [  {
             Loading amazing experiences...
           </p>
         </div>
-      </div>) }
+          </div>
+  );
+}
   return ("
     <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Background Pattern */}"
@@ -237,8 +239,8 @@ const heroSlides: HeroSlid e[] = [  {
               <button
                 onClick={() => setIsAutoPlaying(!isAutoPlaying)}"
                 className="inline-flex items-center justify-center px-6 py-4 border border-slate-600 hover: borde r-cyan-400 text-slate-300 hover: tex t-cyan-400 font-medium rounded-lg transition-all duration-300"
-                aria-label={
-
+                aria-label={';
+';';
                   isAutoPlaying ? 'Pause slideshow' : 'Play slideshow'
                 }
               >
@@ -297,10 +299,10 @@ const heroSlides: HeroSlid e[] = [  {
         <div className="flex space-x-2">
           {memoizedSlides.map((_, index) => (
             <button
-              key={index}
-              onClick={() => goToSlide(index)}`
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide'
-                  ? 'bg-cyan-400 scale-125''
+              key={index}';
+              onClick={() => goToSlide(index)}`';';
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide'';';
+                  ? 'bg-cyan-400 scale-125''';';
                   : 'bg-slate-600 hover: b g-slate-500'`
               }`}`
               aria-label={`Go to slide ${index + 1}`}
@@ -324,22 +326,14 @@ const heroSlides: HeroSlid e[] = [  {
       >"
         <ChevronRight className="w-6 h-6"   />
       </button>
-    </section>) }
-export { HeroSection };
+    </section>) }';
+export { HeroSection };';';
 '"`
 
 </button>
 </motion>
 </motion>
 </motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
 </any>
-</any>
-</any>
-</any>
-</5min>
+</any>';
+</5min>;';;';

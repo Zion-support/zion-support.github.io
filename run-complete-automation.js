@@ -8,19 +8,16 @@ class CompleteAutomation {
   constructor() {
     this.projectRoot = process.cwd();
     this.reportsDir = path.join(this.projectRoot, 'automation-reports');
-    this.ensureDirectories();
-  }
+    this.ensureDirectories()}
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-    }
+      fs.mkdirSync(this.reportsDir, { recursive: true })}
   }
 
   log(message) {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`);
-  }
+    console.log(`[${timestamp}] ${message}`)}
 
   async runScript(scriptPath, description) {
     this.log(`🔧 Running: ${description}`);
@@ -32,15 +29,12 @@ class CompleteAutomation {
           stdio: 'inherit'
         });
         this.log(`✅ Completed: ${description}`);
-        return { success: true };
-      } else {
+        return { success: true }} else {
         this.log(`⚠️ Script not found: ${scriptPath}`);
-        return { success: false, error: 'Script not found' };
-      }
+        return { success: false, error: 'Script not found' }}
     } catch (error) {
       this.log(`❌ Failed: ${description} - ${error.message}`);
-      return { success: false, error: error.message };
-    }
+      return { success: false, error: error.message }}
   }
 
   async runCompleteAutomation() {
@@ -68,8 +62,7 @@ class CompleteAutomation {
 
     for (const step of automationSteps) {
       const result = await this.runScript(step.script, step.description);
-      results.push({ ...step, ...result });
-    }
+      results.push({ ...step, ...result })}
 
     // Generate final summary report
     const summary = {
@@ -114,8 +107,7 @@ class CompleteAutomation {
     this.log(`📊 Complete automation summary: ${reportPath}`);
     this.log('🎉 Complete automation suite finished successfully');
     
-    return summary;
-  }
+    return summary}
 }
 
 if (require.main === module) {
@@ -130,12 +122,9 @@ if (require.main === module) {
       console.log('- Additional automation scripts have been created');
       console.log('- Code quality has been improved');
       console.log('- Changes are ready to be committed and pushed');
-      process.exit(0);
-    })
+      process.exit(0)})
     .catch((error) => {
       console.error('❌ Complete automation failed:', error);
-      process.exit(1);
-    });
-}
+      process.exit(1)})}
 
 module.exports = CompleteAutomation;

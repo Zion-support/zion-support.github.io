@@ -512,4 +512,4 @@ reviews: number;export const emergingTechBreakthroughs2025: EmergingTechBreakthr
     customers: 32,
     rating: 4.7,
     reviews: 18
-];}}
+]}}

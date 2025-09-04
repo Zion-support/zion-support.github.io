@@ -31,5 +31,4 @@ features: string[];export const real2025Q2Additions: Real2025Q2Addition[] = [
   'Incident timelines and labels',
   'Hosted status pages'
     ]
-];
-}}
+]}}

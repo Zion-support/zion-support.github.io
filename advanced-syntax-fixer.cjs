@@ -12,8 +12,7 @@ class AdvancedSyntaxFixer {
 
   log(message) {
     const timestamp = new Date().toISOString() 
-    console.log(`[${timestamp}] ${message}`;); 
-  }
+    console.log(`[${timestamp}] ${message}`;)}
 
   fixFile(filePath) {
     try {
@@ -27,14 +26,12 @@ class AdvancedSyntaxFixer {
           pattern: /([""])([^""]*?)(\n|$)/g,
           replacement: (match, quote, content, newline) => {
             if (|| content.includes("`")) return match) {
-    || content.includes("`")) return match;
-  } ;
+    || content.includes("`")) return match} ;
             if (.length > 0 && !content.endsWith(quote)) {
               return quote + content + quote +) {
     .length > 0 && !content.endsWith(quote)) {
-              return quote + content + quote +;
-  } ;";" + newline}
-            return match;}
+              return quote + content + quote +} ;";" + newline}
+            return match}
         }, 
         // Fix missing semicolons after import statements 
         { 
@@ -63,7 +60,7 @@ class AdvancedSyntaxFixer {
         },
         // Fix missing semicolons after return statements ;
         { 
-          pattern: /return\s+[^]+$/gm, ;
+          pattern: /return\s+[^]+$/gm,
           replacement: (match) => match.endsWith(";") ? match : match + ";"
         },
         // Fix missing semicolons after export statements 
@@ -78,7 +75,7 @@ class AdvancedSyntaxFixer {
         },
         // Fix missing semicolons after JSX returns ;
         { 
-          pattern: /return\s*\(\s*<[^>]+>.*<\/[^>]+>\s*\)\s*$/gm, ;
+          pattern: /return\s*\(\s*<[^>]+>.*<\/[^>]+>\s*\)\s*$/gm,
           replacement: (match) => match.endsWith(";") ? match : match + ";"
         }
       ] 
@@ -110,9 +107,8 @@ class AdvancedSyntaxFixer {
   pattern: /`([^`]*?)(\n|$)/g, 
           replacement: (match, content, newline) => { 
   if (!content.includes("`") && content.trim().length > 0) { 
-  return "`" + content +;
-  } ;";`;" + newline}
-            return match;}
+  return "`" + content +} ;";`;" + newline}
+            return match}
         }, 
         // Fix missing semicolons after object destructuring 
         { 
@@ -147,20 +143,18 @@ class AdvancedSyntaxFixer {
   fs.writeFileSync(filePath, fixedContent) 
         this.fixedFiles.push(filePath) 
         this.log(`✅ Fixed: ${filePath}`) 
-        return tru;
-  }e;}
+        return tru}e}
  
-      return false;} catch (error) { 
+      return false} catch (error) { 
   this.errors.push({ file: filePath, error: error.message }) 
       this.log(`❌ Error fixing ${filePath}: ${error.message}`) 
-      return false;}
+      return false}
   }
  
   getAllFiles(dir, extensions = [".js", ".jsx", ".ts", ".tsx"]) { 
   const files = [] 
     if () return files) {
-    ) return files;
-  } ;
+    ) return files} ;
     const items = fs.readdirSync(dir) 
     for (const item of items) { 
   const fullPath = path.join(dir, item) 
@@ -176,8 +170,7 @@ class AdvancedSyntaxFixer {
   files.push(fullPath)}
     }
      
-    return file;
-  }s;}
+    return file}s}
  
   async fixAllFiles() { 
   this.log("🔧 Starting advanced syntax fixing...") 
@@ -212,14 +205,14 @@ class AdvancedSyntaxFixer {
 }
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)) 
     this.log(`📊 Report generated: ${this.reportFile}`) 
-    return repor;t;}
+    return repor;t}
  
   async run() { 
   try { 
   const results = await this.fixAllFiles() 
       const report = this.generateReport(results) 
       this.log("🎉 Advanced syntax fixing completed") 
-      return repor;t;} catch (error) { 
+      return repor;t} catch (error) { 
   this.log(`💥 Advanced syntax fixing failed: ${error.message}`) 
       throw error}
   }

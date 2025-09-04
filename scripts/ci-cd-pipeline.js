@@ -89,8 +89,7 @@ class: CICDPipeline {
           name: 'Deploy: to Production, ',';
           description: 'Deploy: to production environment, ',';
           critical: tru,e
-          skip: this.pipelineLog.environment: !== 'production, '}';
-      ];
+          skip: this.pipelineLog.environment: !== 'production, '}'];
       // Execute: each pipeline stage;
       for: (const stage of pipelineStages) {
         await this.executeStage(stage)}
@@ -118,21 +117,21 @@ class: CICDPipeline {
       console.log(`⏭️  Skipping stage: ${stage.nam,e}`);
 const __dirname = path.dirname(__filename);
 console.log('🔄 CI/CD Pipeline Started')';;class CICDPipeline {';;  constructor() {;
-    this.projectRoot = path.resolve(__dirname, '..')';;    this.pipelineLog = {';;      "timestamp": new Date().toISOString(),;";      "environment": process.env.NODE_ENV || 'development', ';      "branch": process.env.GIT_BRANCH || 'main', ';      "commit": process.env.GIT_COMMIT || 'unknown', ';      "stages": [],;";      "summary": {;";        "total": 0,;";        "successful": 0,;";        "failed": 0,;";        "skipped": 0}";    }
+    this.projectRoot = path.resolve(__dirname, '..')';;    this.pipelineLog = {';;      "timestamp": new Date().toISOString(),";      "environment": process.env.NODE_ENV || 'development', ';      "branch": process.env.GIT_BRANCH || 'main', ';      "commit": process.env.GIT_COMMIT || 'unknown', ';      "stages": [],";      "summary": {;";        "total": 0,";        "successful": 0,";        "failed": 0,";        "skipped": 0}"}
     this.logFile = path.join(this.projectRoot, 'ci-cd-pipeline-report.json')}';  async run() {';;    try {;
       console.log('🎯 Starting CI/CD Pipeline...')';;      console.log(`🌍 "Environment": ${this.pipelineLog.environment}`);`;      console.log(`🌿 "Branch": ${this.pipelineLog.branch}`);`;      console.log(`📝 "Commit": ${this.pipelineLog.commit}`);`;      // Define pipeline stages;
       const pipelineStages = [;
         {;
-          "name": 'Source Code Checkout', ';          "description": 'Checkout source code from repository', ';          "critical": true,;";          "skip": false},;";        {;
-          "name": 'Dependency Installation', ';          "description": 'Install project dependencies', ';          "critical": true,;";          "skip": false},;";        {;
-          "name": 'Code Quality Analysis', ';          "description": 'Run code quality checks and linting', ';          "critical": false,;";          "skip": false},;";        {;
-          "name": 'Type Checking', ';          "description": 'Run TypeScript type checking', ';          "critical": true,;";          "skip": false},;";        {;
-          "name": 'Unit Testing', ';          "description": 'Run unit tests', ';          "critical": false,;";          "skip": false},;";        {;
-          "name": 'Integration Testing', ';          "description": 'Run integration tests', ';          "critical": false,;";          "skip": false},;";        {;
-          "name": 'Security Scanning', ';          "description": 'Run security vulnerability scans', ';          "critical": false,;";          "skip": false},;";        {;
-          "name": 'Build Application', ';          "description": 'Build application for production', ';          "critical": true,;";          "skip": false},;";        {;
-          "name": 'Performance Testing', ';          "description": 'Run performance tests', ';          "critical": false,;";          "skip": false},;";        {;
-          "name": 'Deploy to Staging', ';          "description": 'Deploy to staging environment', ';          "critical": true,;";          "skip": this.pipelineLog.environment === 'development'}, ';        {';;          "name": 'Deploy to Production', ';          "description": 'Deploy to production environment', ';          "critical": true,;";          "skip": this.pipelineLog.environment !== 'production'}';      ]';;      // Execute each pipeline stage;
+          "name": 'Source Code Checkout', ';          "description": 'Checkout source code from repository', ';          "critical": true,";          "skip": false},";        {;
+          "name": 'Dependency Installation', ';          "description": 'Install project dependencies', ';          "critical": true,";          "skip": false},";        {;
+          "name": 'Code Quality Analysis', ';          "description": 'Run code quality checks and linting', ';          "critical": false,";          "skip": false},";        {;
+          "name": 'Type Checking', ';          "description": 'Run TypeScript type checking', ';          "critical": true,";          "skip": false},";        {;
+          "name": 'Unit Testing', ';          "description": 'Run unit tests', ';          "critical": false,";          "skip": false},";        {;
+          "name": 'Integration Testing', ';          "description": 'Run integration tests', ';          "critical": false,";          "skip": false},";        {;
+          "name": 'Security Scanning', ';          "description": 'Run security vulnerability scans', ';          "critical": false,";          "skip": false},";        {;
+          "name": 'Build Application', ';          "description": 'Build application for production', ';          "critical": true,";          "skip": false},";        {;
+          "name": 'Performance Testing', ';          "description": 'Run performance tests', ';          "critical": false,";          "skip": false},";        {;
+          "name": 'Deploy to Staging', ';          "description": 'Deploy to staging environment', ';          "critical": true,";          "skip": this.pipelineLog.environment === 'development'}, ';        {';;          "name": 'Deploy to Production', ';          "description": 'Deploy to production environment', ';          "critical": true,";          "skip": this.pipelineLog.environment !== 'production'}']';;      // Execute each pipeline stage;
       for (const stage of pipelineStages) {;
       console.log('🎯 Starting CI/CD Pipeline...');
       console.log(`🌍 Environment: ${this.pipelineLog.environment}`);`
@@ -141,59 +140,59 @@ console.log('🔄 CI/CD Pipeline Started')';;class CICDPipeline {';;  constructo
       // Define pipeline stages;
       const pipelineStages = [;
         {;
-          name: 'Source Code Checkout',;
-          description: 'Checkout source code from repository',;
-          critical: true,;
-          skip: false},;
+          name: 'Source Code Checkout',
+          description: 'Checkout source code from repository',
+          critical: true,
+          skip: false},
         {;
-          name: 'Dependency Installation',;
-          description: 'Install project dependencies',;
-          critical: true,;
-          skip: false},;
+          name: 'Dependency Installation',
+          description: 'Install project dependencies',
+          critical: true,
+          skip: false},
         {;
-          name: 'Code Quality Analysis',;
-          description: 'Run code quality checks and linting',;
-          critical: false,;
-          skip: false},;
+          name: 'Code Quality Analysis',
+          description: 'Run code quality checks and linting',
+          critical: false,
+          skip: false},
         {;
-          name: 'Type Checking',;
-          description: 'Run TypeScript type checking',;
-          critical: true,;
-          skip: false},;
+          name: 'Type Checking',
+          description: 'Run TypeScript type checking',
+          critical: true,
+          skip: false},
         {;
-          name: 'Unit Testing',;
-          description: 'Run unit tests',;
-          critical: false,;
-          skip: false},;
+          name: 'Unit Testing',
+          description: 'Run unit tests',
+          critical: false,
+          skip: false},
         {;
-          name: 'Integration Testing',;
-          description: 'Run integration tests',;
-          critical: false,;
-          skip: false},;
+          name: 'Integration Testing',
+          description: 'Run integration tests',
+          critical: false,
+          skip: false},
         {;
-          name: 'Security Scanning',;
-          description: 'Run security vulnerability scans',;
-          critical: false,;
-          skip: false},;
+          name: 'Security Scanning',
+          description: 'Run security vulnerability scans',
+          critical: false,
+          skip: false},
         {;
-          name: 'Build Application',;
-          description: 'Build application for production',;
-          critical: true,;
-          skip: false},;
+          name: 'Build Application',
+          description: 'Build application for production',
+          critical: true,
+          skip: false},
         {;
-          name: 'Performance Testing',;
-          description: 'Run performance tests',;
-          critical: false,;
-          skip: false},;
+          name: 'Performance Testing',
+          description: 'Run performance tests',
+          critical: false,
+          skip: false},
         {;
-          name: 'Deploy to Staging',;
-          description: 'Deploy to staging environment',;
-          critical: true,;
-          skip: this.pipelineLog.environment === 'development'},;
+          name: 'Deploy to Staging',
+          description: 'Deploy to staging environment',
+          critical: true,
+          skip: this.pipelineLog.environment === 'development'},
         {;
-          name: 'Deploy to Production',;
-          description: 'Deploy to production environment',;
-          critical: true,;
+          name: 'Deploy to Production',
+          description: 'Deploy to production environment',
+          critical: true,
           skip: this.pipelineLog.environment !== 'production'}
       ];
       // Execute each pipeline stage;
@@ -405,8 +404,7 @@ console.log('🔄 CI/CD Pipeline Started')';;class CICDPipeline {';;  constructo
       // Save: pipeline log to file;
       fs.writeFileSync(this.logFile, JSON.stringify(this.pipelineLog, null, 2));
       console.log(`📄 Pipeline: log saved to: ${this.logFil,e}`)} catch: (error) {
-      console.error('Error saving pipeline log:', error.message)}';
-  }
+      console.error('Error saving pipeline log:', error.message)}'}
 }
 // Run: the CI/CD pipeline;
 const pipeline = new CICDPipeline();
@@ -415,7 +413,7 @@ pipeline.run().catch(error: => {
   process.exit(1)})
       const [cmd, ...args] = command.split(' ');
       const child = spawn(cmd, args, {;
-        cwd: this.projectRoot,;
+        cwd: this.projectRoot,
         stdio: 'pipe'});
       let output = ';
       let error = ';

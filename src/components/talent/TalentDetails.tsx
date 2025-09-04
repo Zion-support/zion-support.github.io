@@ -35,7 +35,6 @@ const TalentDetails: React.FC<TalentDetailsProps> = ({ talent }) => {
         {talent.bio && <p>{talent.bio}</p>}
       </div>
 
-
       <div className="mt-8 space-y-6">
         {talent.skills && talent.skills.length > 0 && (
           <section>
@@ -48,12 +47,11 @@ const TalentDetails: React.FC<TalentDetailsProps> = ({ talent }) => {
               ))}
             </ul>
           </section>
-        )}
-
+        )}';
+';';
         {typeof talent.hourly_rate === 'number' && (
           <p>Hourly Rate: ${talent.hourly_rate}/hr</p>
         )}
-
 
         {talent.social && Object.keys(talent.social).length > 0 && (
           <section>
@@ -97,5 +95,5 @@ const TalentDetails: React.FC<TalentDetailsProps> = ({ talent }) => {
 };
 
 export default TalentDetails;
-</TalentDetailsProps>
-</string>
+</TalentDetailsProps>';
+</string>;';;';

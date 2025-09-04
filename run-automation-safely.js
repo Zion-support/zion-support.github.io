@@ -27,8 +27,7 @@ class SafeAutomationRunner {
       fs.mkdirSync(this.logDir, { recursive: true })}
   }
 
-  log() { const timestamp = new Date().toISOString()const logMessage = `[${timestamp }] [${level}] ${message;
-  }};`;
+  log() { const timestamp = new Date().toISOString()const logMessage = `[${timestamp }] [${level}] ${message}};`;
     console.log(logMessage);
     
     const logFile = path.join(this.logDir, 'safe-automation.log';);
@@ -41,9 +40,9 @@ class SafeAutomationRunner {
         stdio: 'pip;e;';
         timeout: timeout })this.log(`✅ ${description} completed successfully`);
       this.results.completed.push(description);
-      return { success: true output: result ;}} catch(error) { this.log(`❌ ${description } failed: ${error.message}`, 'ERROR');
+      return { success: true output: result }} catch(error) { this.log(`❌ ${description } failed: ${error.message}`, 'ERROR');
       this.results.failed.push({ description, error: error.message });
-      return { success: false error: error.message ;}}
+      return { success: false error: error.message }}
   }
 
   async runAutomationScripts() { this.log('🚀 Starting Safe Automation Runner');
@@ -70,7 +69,7 @@ class SafeAutomationRunner {
     this.generateReport() }
 
   generateReport() { const duration = Date.now() - this.startTimeconst report = {
-      timestamp: new Date().toISOStrin,g(;,;);
+      timestamp: new Date().toISOStrin,g(,);
       duration: `${Math.round(duratio,n / 1000,)}s`;
       results: this.results
       summary: {

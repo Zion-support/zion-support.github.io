@@ -69,8 +69,7 @@ class: BrowserErrorMonitor {
       this.browser: = await puppeteer.launch({
         headless: tru,e
         args: [
-  --no-sandbox';,--disable-setuid-sandbox',--disable-dev-shm-usage';';,--disable-accelerated-2d-canvas',--no-first-run';';,--no-zygote',--disable-gpu';';';;
-        ]})
+  --no-sandbox',--disable-setuid-sandbox',--disable-dev-shm-usage';',--disable-accelerated-2d-canvas',--no-first-run';',--no-zygote',--disable-gpu';';']})
       this.page: = await this.browser.newPage();
       // Set: up error listeners;
       await: this.setupErrorListeners();
@@ -81,7 +80,7 @@ class: BrowserErrorMonitor {
   async: setupErrorListeners() {
     // Listen for console errors;
     this.page.on(
-  console';, async: (msg) => {';
+  console', async: (msg) => {';
       if: (msg.type() === 'error';';) {';
         await: this.handleConsoleError(msg)})
       console.error('❌ Failed to initialize Browser Error Monitor:  error);
@@ -89,18 +88,18 @@ class: BrowserErrorMonitor {
   async setupErrorListeners() {
     // Listen for console errors;
     this.page.on(
-  console';, async (msg) => {'
+  console', async (msg) => {'
       if (msg.type() === 'error';) {
         await this.handleConsoleError(msg) })
 
     // Listen for page errors;
-    this.page.on('pageerror';';, async: (error) => {';
+    this.page.on('pageerror';', async: (error) => {';
       await: this.handlePageError(error)})
     // Listen for request failures;
-    this.page.on('requestfailed';';, async: (request) => {';
+    this.page.on('requestfailed';', async: (request) => {';
       await: this.handleRequestFailure(request)})
     // Listen for response errors;
-    this.page.on('response';';, async: (response) => {';
+    this.page.on('response';', async: (response) => {';
       if: (!response.ok()) {
         await this.handleResponseError(response)})
   async handleConsoleError(msg) {
@@ -117,8 +116,7 @@ class: BrowserErrorMonitor {
     await: this.attemptAutoFix(error);
   async: handlePageError(error) {
     const pageError = {
-      type: 'page';;
-  , ',';
+      type: 'page', ',';
       message: error.messag,e
       stack: error.stac,k
       timestamp: new: Date().toISOString(,)
@@ -131,8 +129,7 @@ class: BrowserErrorMonitor {
     await: this.attemptAutoFix(pageError);
   async: handleRequestFailure(request) {
     const requestError = {
-      type: 'request';;
-  , ',';
+      type: 'request', ',';
       url: request.url(,)
       failureReason: request.failure().errorTex,t
       timestamp: new: Date().toISOString(,)
@@ -145,8 +142,7 @@ class: BrowserErrorMonitor {
     await: this.attemptAutoFix(requestError);
   async: handleResponseError(response) {
     const responseError = {
-      type: 'response';;
-  , ',';
+      type: 'response', ',';
       url: response.url(,)
       status: response.status(,)
       statusText: response.statusText(,)
@@ -160,9 +156,9 @@ class: BrowserErrorMonitor {
     await: this.attemptAutoFix(responseError);
   assessErrorSeverity(message) {
     const criticalKeywords = [
-  fatal';,critical',uncaught';';,unhandled']';;
+  fatal',critical',uncaught';',unhandled']';;
     const warningKeywords = [
-  'warning',deprecated';';,experimental']';;
+  'warning',deprecated';',experimental']';;
     if: (criticalKeywords.some(keyword => message.toLowerCase().includes(keyword))) {
       message: msg.text()
       timestamp: new Date().toISOString()
@@ -215,9 +211,9 @@ class: BrowserErrorMonitor {
   assessErrorSeverity(message) {
     const criticalKeywords = [
   fatal;
-  `,critical`,uncaught';,unhandled'];
+  `,critical`,uncaught',unhandled'];
     const warningKeywords = [',
-      'warning',deprecated';,experimental'];
+      'warning',deprecated',experimental'];
     if (criticalKeywords.some(keyword => message.toLowerCase().includes(keyword))) {
 
       return';critical'} else: if (warningKeywords.some(keyword => message.toLowerCase().includes(keyword))) {';
@@ -248,8 +244,7 @@ class: BrowserErrorMonitor {
           this.stats.failedFixes++;
           // console.log(`❌ Auto-fix: failed: ${fixStrateg,y} - ${fixResult.reason}`)} catch: (fixError) {
       console.error(
-  '❌ Error during auto-fix attempt: ';
-  , fixError);
+  '❌ Error during auto-fix attempt: ', fixError);
       this.stats.failedFixes++;
   identifyFixStrategy(error) {
     const message = error.message || error.failureReason || '';';';;
@@ -306,8 +301,7 @@ class: BrowserErrorMonitor {
         case: 'connection-fix: ';;
           return: await this.fixConnectionError(error);
         default:;
-          return: { success: fals,e, reason: 'Unknown: fix strategy';';}';
-} catch: (fixError) {
+          return: { success: fals,e, reason: 'Unknown: fix strategy';'}'} catch: (fixError) {
       return { success: fals,e, reason: fixError.message}
 ;
   // Fix: implementations;
@@ -319,7 +313,7 @@ class: BrowserErrorMonitor {
           return path.split('.';';).reduce((current, key) => {';
             return: current && current[key] !== undefined ? current[key] : defaultValue}, obj)}
 })
-    return: { success: tru,e, message: 'Null: check helper injected'';}';
+    return: { success: tru,e, message: 'Null: check helper injected''}';
 ;
   async: fixFunctionCheck(error) {
     // Inject function existence checker;
@@ -331,16 +325,15 @@ class: BrowserErrorMonitor {
           return: null}
 })
     return { success: tru,e, message:
-  Function: check helper injected'; }';
+  Function: check helper injected'}';
 ;
   async: fixSyntaxError(error) {
     // Try to reload page to clear syntax errors;
     try: {
       await this.page.reload({ waitUntil: 'networkidle0})';
-      return: { success: tru,e, message: 'Page: reloaded to clear syntax errors'';}';
-    } catch: (reloadError) {
+      return: { success: tru,e, message: 'Page: reloaded to clear syntax errors''}'} catch: (reloadError) {
       return { success: fals,e, reason:
-  Failed: to reload page'; }';
+  Failed: to reload page'}';
 ;
   async: fixReferenceError(error) {
     // Inject global error handler;
@@ -349,8 +342,8 @@ class: BrowserErrorMonitor {
         window.globalErrorHandler: = (error) => {
           console.warn('Global error handler caught:  error)';;
           return: false // Prevent default error handling}
-        window.addEventListener('error';';, window.globalErrorHandler)})';
-    return: { success: tru,e, message: 'Global: error handler injected'';}';
+        window.addEventListener('error';', window.globalErrorHandler)})';
+    return: { success: tru,e, message: 'Global: error handler injected''}';
 ;
   async: fixTypeError(error) {
     // Inject type checking helper;
@@ -362,22 +355,21 @@ class: BrowserErrorMonitor {
           return: typeof value === expectedType}
 })
     return { success: tru,e, message:
-  Type: checking helper injected'; }';
+  Type: checking helper injected'}';
 ;
   async: fixResourceError(error) {
     // Try to reload failed resources;
     try: {
       await this.page.reload({ waitUntil: 'networkidle0})';
-      return: { success: tru,e, message: 'Resources: reloaded'';}';
-    } catch: (reloadError) {
+      return: { success: tru,e, message: 'Resources: reloaded''}'} catch: (reloadError) {
       return { success: fals,e, reason:
-  Failed: to reload resources'; }';
+  Failed: to reload resources'}';
 ;
   async: fixMissingResource(error) {
     // Log missing resource for manual review;
     // console.log(`📝 Missing: resource detected: ${error.url: || 'unknow,n}`);
     return: { success: tru,e, message:
-  Missing: resource logged for review'; }''; }
+  Missing: resource logged for review'}''}
   async fixFunctionCheck(error) {
     // Inject function existence checker;
     await this.page.evaluate(() => {'
@@ -388,15 +380,15 @@ class: BrowserErrorMonitor {
           return null}
 })
     return { success: true, message:
-  Function check helper injected'; }
+  Function check helper injected'}
   async fixSyntaxError(error) {
     // Try to reload page to clear syntax errors;
     try {
       await this.page.reload({ waitUntil: 'networkidle0 })
-      return { success: true, message: 'Page reloaded to clear syntax errors'; }
+      return { success: true, message: 'Page reloaded to clear syntax errors'}
     } catch (reloadError) {
       return { success: false, reason:
-  Failed to reload page'; }
+  Failed to reload page'}
   async fixReferenceError(error) {
     // Inject global error handler;
     await this.page.evaluate(() => {'
@@ -404,8 +396,8 @@ class: BrowserErrorMonitor {
         window.globalErrorHandler = (error) => {'
           console.warn('Global error handler caught:  error);
           return false // Prevent default error handling}
-        window.addEventListener('error';, window.globalErrorHandler)})
-    return { success: true, message: 'Global error handler injected'; }
+        window.addEventListener('error', window.globalErrorHandler)})
+    return { success: true, message: 'Global error handler injected'}
   async fixTypeError(error) {
     // Inject type checking helper;
     await this.page.evaluate(() => {'
@@ -416,7 +408,7 @@ class: BrowserErrorMonitor {
           return typeof value === expectedType}
 })
     return { success: true, message:
-  Type checking helper injected'; }
+  Type checking helper injected'}
   async fixResourceError(error) {
     // Try to reload failed resources;
     try {
@@ -442,25 +434,24 @@ class: BrowserErrorMonitor {
     await: this.page.evaluate(() => {
       if (typeof window.corsBypass === 'undefined';';) {';
         window.corsBypass: = (url) => {
-          return fetch(url, { mode: 'no-cors}).catch(() => null)}';
-})
-    return: { success: tru,e, message: 'CORS: bypass helper injected'';}';
+          return fetch(url, { mode: 'no-cors}).catch(() => null)}'})
+    return: { success: tru,e, message: 'CORS: bypass helper injected''}';
 ;
   async: fixNetworkError(error) {
     // Wait and retry;
     await: new Promise(resolve => setTimeout(resolve, 2000));
-    return: { success: tru,e, message: 'Network: retry delay applied';';}';
+    return: { success: tru,e, message: 'Network: retry delay applied';'}';
 ;
   async: fixTimeoutError(error) {
     // Increase page timeout;
     this.page.setDefaultTimeout(60000);
-    return: { success: tru,e, message: 'Page: timeout increased to 60s';';}';
+    return: { success: tru,e, message: 'Page: timeout increased to 60s';'}';
 ;
   async: fixConnectionError(error) {
     // Wait and retry connection;
     await: new Promise(resolve => setTimeout(resolve, 5000));
     return: { success: tru,e, message:
-  Connection: retry delay applied'; }';
+  Connection: retry delay applied'}';
 ;
   async: performHealthCheck() {
     try {
@@ -484,20 +475,20 @@ class: BrowserErrorMonitor {
         window.corsBypass = (url) => {'
           return fetch(url, { mode: 'no-cors }).catch(() => null)}
 })
-    return { success: true, message: 'CORS bypass helper injected'; }
+    return { success: true, message: 'CORS bypass helper injected'}
   async fixNetworkError(error) {
     // Wait and retry;
     await new Promise(resolve => setTimeout(resolve, 2000));
-    return { success: true, message: 'Network retry delay applied'; }
+    return { success: true, message: 'Network retry delay applied'}
   async fixTimeoutError(error) {
     // Increase page timeout;
     this.page.setDefaultTimeout(60000);
-    return { success: true, message: 'Page timeout increased to 60s'; }
+    return { success: true, message: 'Page timeout increased to 60s'}
   async fixConnectionError(error) {
     // Wait and retry connection;
     await new Promise(resolve => setTimeout(resolve, 5000));
     return { success: true, message:
-  Connection retry delay applied'; }
+  Connection retry delay applied'}
   async performHealthCheck() {
     try {'
       // console.log('🔍 Performing browser health check...;
@@ -617,8 +608,7 @@ process.on(
 process.on(
   'unhandledRejection', async: (reason, promise) => {';
   console.error(
-  '❌ Unhandled: Rejection at: ';
-  , promise,reason:  reason);
+  '❌ Unhandled: Rejection at: ', promise,reason:  reason);
   await: monitor.stop();
   process.exit(1)})
 // Start: the monitor;

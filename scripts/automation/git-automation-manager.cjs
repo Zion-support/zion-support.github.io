@@ -27,8 +27,7 @@ class GitAutomationManager {
     // Ensure directories exist
     [this.logsDir, this.reportsDir, this.backupDir].forEach(dir => {
       if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { recursive: true });
-      }
+        fs.mkdirSync(dir, { recursive: true })}
     });
     
     this.logFile = path.join(this.logsDir, 'git-automation-manager.log');
@@ -57,8 +56,7 @@ class GitAutomationManager {
       lastMerge: null
     };
     
-    this.loadStatus();
-  }
+    this.loadStatus()}
 
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
@@ -67,21 +65,17 @@ class GitAutomationManager {
     console.log(logEntry);
     
     // Write to log file
-    fs.appendFileSync(this.logFile, logEntry + '\n');
-  }
+    fs.appendFileSync(this.logFile, logEntry + '\n')}
 
   saveStatus() {
     this.stats.lastUpdate = new Date().toISOString();
-    fs.writeFileSync(this.statusFile, JSON.stringify(this.stats, null, 2));
-  }
+    fs.writeFileSync(this.statusFile, JSON.stringify(this.stats, null, 2))}
 
   loadStatus() {
     if (fs.existsSync(this.statusFile)) {
       try {
-        this.stats = { ...this.stats, ...JSON.parse(fs.readFileSync(this.statusFile, 'utf8')) };
-      } catch (error) {
-        this.log(`Error loading status: ${error.message}`, 'ERROR');
-      }
+        this.stats = { ...this.stats, ...JSON.parse(fs.readFileSync(this.statusFile, 'utf8')) }} catch (error) {
+        this.log(`Error loading status: ${error.message}`, 'ERROR')}
     }
   }
 
@@ -98,45 +92,33 @@ class GitAutomationManager {
 
       if (options.silent) {
         child.stdout.on('data', (data) => {
-          stdout += data.toString();
-        });
+          stdout += data.toString()});
         child.stderr.on('data', (data) => {
-          stderr += data.toString();
-        });
-      }
+          stderr += data.toString()})}
 
       child.on('close', (code) => {
         if (code === 0) {
-          resolve({ success: true, stdout, stderr, code });
-        } else {
-          reject({ success: false, stdout, stderr, code });
-        }
+          resolve({ success: true, stdout, stderr, code })} else {
+          reject({ success: false, stdout, stderr, code })}
       });
 
       child.on('error', (error) => {
-        reject({ success: false, error: error.message });
-      });
-    });
-  }
+        reject({ success: false, error: error.message })})})}
 
   async getGitStatus() {
     try {
       const result = await this.executeCommand('git status --porcelain', { silent: true });
-      return result.stdout.trim().split('\n').filter(line => line.length > 0);
-    } catch (error) {
+      return result.stdout.trim().split('\n').filter(line => line.length > 0)} catch (error) {
       this.log(`Error getting git status: ${error.message}`, 'ERROR');
-      return [];
-    }
+      return []}
   }
 
   async getCurrentBranch() {
     try {
       const result = await this.executeCommand('git branch --show-current', { silent: true });
-      return result.stdout.trim();
-    } catch (error) {
+      return result.stdout.trim()} catch (error) {
       this.log(`Error getting current branch: ${error.message}`, 'ERROR');
-      return 'main';
-    }
+      return 'main'}
   }
 
   async getBranches() {
@@ -144,17 +126,14 @@ class GitAutomationManager {
       const result = await this.executeCommand('git branch -r', { silent: true });
       return result.stdout.trim().split('\n')
         .map(branch => branch.trim().replace('origin/', ''))
-        .filter(branch => branch && branch !== 'HEAD');
-    } catch (error) {
+        .filter(branch => branch && branch !== 'HEAD')} catch (error) {
       this.log(`Error getting branches: ${error.message}`, 'ERROR');
-      return [];
-    }
+      return []}
   }
 
   async hasUncommittedChanges() {
     const status = await this.getGitStatus();
-    return status.length > 0;
-  }
+    return status.length > 0}
 
   async createBackup() {
     if (!this.config.backupBeforeMerge) return true;
@@ -166,11 +145,9 @@ class GitAutomationManager {
       
       await this.executeCommand(`git worktree add ${backupPath} HEAD`);
       this.log(`Backup created at: ${backupPath}`);
-      return true;
-    } catch (error) {
+      return true} catch (error) {
       this.log(`Backup creation failed: ${error.message}`, 'WARN');
-      return false;
-    }
+      return false}
   }
 
   async autoCommit() {
@@ -180,8 +157,7 @@ class GitAutomationManager {
       const hasChanges = await this.hasUncommittedChanges();
       if (!hasChanges) {
         this.log('No changes to commit');
-        return false;
-      }
+        return false}
 
       const status = await this.getGitStatus();
       const changeTypes = this.categorizeChanges(status);
@@ -199,12 +175,10 @@ class GitAutomationManager {
       this.stats.lastCommit = new Date().toISOString();
       this.log(`Auto-commit successful: ${commitMessage}`);
       
-      return true;
-    } catch (error) {
+      return true} catch (error) {
       this.log(`Auto-commit failed: ${error.message}`, 'ERROR');
       this.stats.errors++;
-      return false;
-    }
+      return false}
   }
 
   async autoPush() {
@@ -217,8 +191,7 @@ class GitAutomationManager {
       const result = await this.executeCommand(`git log origin/${currentBranch}..HEAD --oneline`, { silent: true });
       if (!result.stdout.trim()) {
         this.log('No commits to push');
-        return false;
-      }
+        return false}
       
       await this.executeCommand(`git push origin ${currentBranch}`);
       
@@ -226,12 +199,10 @@ class GitAutomationManager {
       this.stats.lastPush = new Date().toISOString();
       this.log(`Auto-push successful to ${currentBranch}`);
       
-      return true;
-    } catch (error) {
+      return true} catch (error) {
       this.log(`Auto-push failed: ${error.message}`, 'ERROR');
       this.stats.errors++;
-      return false;
-    }
+      return false}
   }
 
   async autoMerge() {
@@ -241,8 +212,7 @@ class GitAutomationManager {
       const currentBranch = await this.getCurrentBranch();
       if (currentBranch !== 'main') {
         this.log(`Not on main branch (${currentBranch}), skipping merge`);
-        return false;
-      }
+        return false}
       
       const branches = await this.getBranches();
       const featureBranches = branches.filter(branch => 
@@ -253,8 +223,7 @@ class GitAutomationManager {
       
       if (featureBranches.length === 0) {
         this.log('No feature branches to merge');
-        return false;
-      }
+        return false}
       
       // Create backup before merging
       await this.createBackup();
@@ -270,8 +239,7 @@ class GitAutomationManager {
           const mergeable = await this.checkMergeability(branch);
           if (!mergeable) {
             this.log(`Branch ${branch} cannot be merged automatically, skipping`);
-            continue;
-          }
+            continue}
           
           // Attempt merge
           await this.executeCommand(`git merge origin/${branch} --no-edit`);
@@ -283,9 +251,7 @@ class GitAutomationManager {
           await this.executeCommand(`git push origin --delete ${branch}`);
           
           mergedCount++;
-          this.log(`Successfully merged and deleted branch: ${branch}`);
-          
-        } catch (error) {
+          this.log(`Successfully merged and deleted branch: ${branch}`)} catch (error) {
           this.log(`Merge conflict in branch ${branch}: ${error.message}`, 'WARN');
           
           // Try to resolve conflicts automatically
@@ -294,12 +260,10 @@ class GitAutomationManager {
             await this.executeCommand('git push origin main');
             await this.executeCommand(`git push origin --delete ${branch}`);
             mergedCount++;
-            this.log(`Resolved conflicts and merged branch: ${branch}`);
-          } else {
+            this.log(`Resolved conflicts and merged branch: ${branch}`)} else {
             // Abort merge and continue
             await this.executeCommand('git merge --abort');
-            conflictCount++;
-          }
+            conflictCount++}
         }
       }
       
@@ -308,23 +272,18 @@ class GitAutomationManager {
       this.stats.lastMerge = new Date().toISOString();
       
       this.log(`Merge operation completed: ${mergedCount} merged, ${conflictCount} conflicts`);
-      return mergedCount > 0;
-      
-    } catch (error) {
+      return mergedCount > 0} catch (error) {
       this.log(`Auto-merge failed: ${error.message}`, 'ERROR');
       this.stats.errors++;
-      return false;
-    }
+      return false}
   }
 
   async checkMergeability(branch) {
     try {
       // Check if branch is ahead of main
       const result = await this.executeCommand(`git log main..origin/${branch} --oneline`, { silent: true });
-      return result.stdout.trim().length > 0;
-    } catch (error) {
-      return false;
-    }
+      return result.stdout.trim().length > 0} catch (error) {
+      return false}
   }
 
   async resolveMergeConflicts(branch) {
@@ -341,8 +300,7 @@ class GitAutomationManager {
         const resolved = await this.resolveFileConflicts(file);
         if (!resolved) {
           this.log(`Could not resolve conflicts in ${file}`, 'WARN');
-          return false;
-        }
+          return false}
       }
       
       // Stage resolved files
@@ -351,11 +309,9 @@ class GitAutomationManager {
       // Commit the merge
       await this.executeCommand(`git commit -m "Resolve merge conflicts from ${branch}"`);
       
-      return true;
-    } catch (error) {
+      return true} catch (error) {
       this.log(`Error resolving merge conflicts: ${error.message}`, 'ERROR');
-      return false;
-    }
+      return false}
   }
 
   async resolveFileConflicts(file) {
@@ -370,14 +326,11 @@ class GitAutomationManager {
         // Remove conflict markers and keep both versions or choose one
         const resolvedContent = this.resolveConflictMarkers(content);
         fs.writeFileSync(filePath, resolvedContent);
-        return true;
-      }
+        return true}
       
-      return true;
-    } catch (error) {
+      return true} catch (error) {
       this.log(`Error resolving file ${file}: ${error.message}`, 'ERROR');
-      return false;
-    }
+      return false}
   }
 
   resolveConflictMarkers(content) {
@@ -404,11 +357,9 @@ class GitAutomationManager {
       else if (statusCode.includes('M')) categories.modified.push(file);
       else if (statusCode.includes('D')) categories.deleted.push(file);
       else if (statusCode.includes('R')) categories.renamed.push(file);
-      else categories.unknown.push(file);
-    });
+      else categories.unknown.push(file)});
     
-    return categories;
-  }
+    return categories}
 
   generateCommitMessage(changeTypes) {
     const totalChanges = Object.values(changeTypes).reduce((sum, files) => sum + files.length, 0);
@@ -418,20 +369,16 @@ class GitAutomationManager {
     const parts = [];
     
     if (changeTypes.added.length > 0) {
-      parts.push(`Add ${changeTypes.added.length} file(s)`);
-    }
+      parts.push(`Add ${changeTypes.added.length} file(s)`)}
     if (changeTypes.modified.length > 0) {
-      parts.push(`Update ${changeTypes.modified.length} file(s)`);
-    }
+      parts.push(`Update ${changeTypes.modified.length} file(s)`)}
     if (changeTypes.deleted.length > 0) {
-      parts.push(`Remove ${changeTypes.deleted.length} file(s)`);
-    }
+      parts.push(`Remove ${changeTypes.deleted.length} file(s)`)}
     
     const message = parts.join(', ');
     const timestamp = new Date().toISOString();
     
-    return `🤖 Auto-commit: ${message} - ${timestamp}`;
-  }
+    return `🤖 Auto-commit: ${message} - ${timestamp}`}
 
   async checkRepositoryHealth() {
     try {
@@ -450,16 +397,13 @@ class GitAutomationManager {
       const issues = [];
       
       if (health.currentBranch !== 'main') {
-        issues.push('Not on main branch');
-      }
+        issues.push('Not on main branch')}
       
       if (health.uncommittedChanges) {
-        issues.push('Has uncommitted changes');
-      }
+        issues.push('Has uncommitted changes')}
       
       if (this.stats.errors > 10) {
-        issues.push('High error count detected');
-      }
+        issues.push('High error count detected')}
       
       health.issues = issues;
       health.status = issues.length === 0 ? 'healthy' : 'needs_attention';
@@ -469,12 +413,9 @@ class GitAutomationManager {
       fs.writeFileSync(healthFile, JSON.stringify(health, null, 2));
       
       this.log(`Repository health check completed: ${health.status}`);
-      return health;
-      
-    } catch (error) {
+      return health} catch (error) {
       this.log(`Repository health check failed: ${error.message}`, 'ERROR');
-      return null;
-    }
+      return null}
   }
 
   async run() {
@@ -496,12 +437,9 @@ class GitAutomationManager {
         await this.checkRepositoryHealth();
         
         // Save current status
-        this.saveStatus();
-        
-      } catch (error) {
+        this.saveStatus()} catch (error) {
         this.log(`Automation cycle error: ${error.message}`, 'ERROR');
-        this.stats.errors++;
-      }
+        this.stats.errors++}
     };
     
     // Run initial cycle
@@ -518,9 +456,7 @@ class GitAutomationManager {
     process.on('SIGINT', () => {
       this.log('🛑 Shutting down Git Automation Manager');
       this.saveStatus();
-      process.exit(0);
-    });
-  }
+      process.exit(0)})}
 }
 
 // Start the automation manager
@@ -528,8 +464,6 @@ if (require.main === module) {
   const manager = new GitAutomationManager();
   manager.run().catch(error => {
     console.error('Fatal error:', error);
-    process.exit(1);
-  });
-}
+    process.exit(1)})}
 
 module.exports = GitAutomationManager;

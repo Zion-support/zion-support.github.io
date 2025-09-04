@@ -7,14 +7,9 @@ export default function handler(_req, res) {
     httpServer.io = io;
     io.on('connection', socket => {
       socket.on('join-room', roomId => {
-        socket.join(roomId);
-      });
+        socket.join(roomId)});
       socket.on('send-message', ({ roomId, message }) => {
-        socket.to(roomId).emit('receive-message', message);
-      });
-    });
-  }
-  res.end();
-}
+        socket.to(roomId).emit('receive-message', message)})})}
+  res.end()}
 
 

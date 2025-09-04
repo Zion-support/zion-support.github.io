@@ -16,65 +16,61 @@ class $1 {
   constructor() {
   this.projectRoot = process.cwd();
     this.logFile = path.join(;
-      this.projectRoot,logs",;
+      this.projectRoot,logs",
       "ai-code-review.log";
     );
     this.reviewHistory = path.join(;
-      this.projectRoot,logs",;
+      this.projectRoot,logs",
       "code-review-history.json";
     );
     this.issuesFound = 0;
     this.improvementsSuggested = 0;
-    this.autoFixesApplied = 0;
-}
+    this.autoFixesApplied = 0}
 ;
   async initialize() {
   console.log(`"🤖 AI-Powered Code Review System Initialized");
     this.ensureLogDirectory();
     this.loadReviewHistory();
         // Start continuous monitoring;
-    this.startContinuousReview();
-}
+    this.startContinuousReview()}
 ;
   ensureLogDirectory() {
   const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-  fs.mkdirSync(logDir, { recursive: true });
-}
+  fs.mkdirSync(logDir, { recursive: true })}
   }
 ;
   loadReviewHistory() {
   try {
   if (fs.existsSync(this.reviewHistory)) {
   const data = fs.readFileSync(this.reviewHistory, "utf8");
-        this.history = JSON.parse(data);
-} else {
+        this.history = JSON.parse(data)} else {
   this.history = {
-  totalReviews: 0,;
-          totalIssues: 0,;
-          totalImprovements: 0,;
-          totalAutoFixes: 0,;
-          lastReview: null,;
+  totalReviews: 0,
+          totalIssues: 0,
+          totalImprovements: 0,
+          totalAutoFixes: 0,
+          lastReview: null,
           reviewStats: {}
         }
       }
     } catch (error) {
   console.error("Error loading review history: ", error);
       this.history = {
-  totalReviews: 0,;
-        totalIssues: 0,;
-        totalImprovements: 0,;
-        totalAutoFixes: 0,;
-        lastReview: null,;
+  totalReviews: 0,
+        totalIssues: 0,
+        totalImprovements: 0,
+        totalAutoFixes: 0,
+        lastReview: null,
         reviewStats: {  }
     } catch (error) {
   console.error("Error loading review history: ", error);
       this.history = {
-  totalReviews: 0,;
-        totalIssues: 0,;
-        totalImprovements: 0,;
-        totalAutoFixes: 0,;
-        lastReview: null,;
+  totalReviews: 0,
+        totalIssues: 0,
+        totalImprovements: 0,
+        totalAutoFixes: 0,
+        lastReview: null,
         reviewStats: {}
       }
     }
@@ -91,21 +87,19 @@ class $1 {
     ;
     // Periodic comprehensive reviews;
     setInterval(async () => {
-  await this.performFullCodeReview();
-}, 30 * 60 * 1000); // Every 30 minutes;
-}
+  await this.performFullCodeReview()}, 30 * 60 * 1000); // Every 30 minutes}
 ;
   async performFullCodeReview() {
   console.log("📋 Performing comprehensive code review...");
     ;
     const startTime = Date.now();
     const reviewResults = {
-  timestamp: new Date().toISOString(),;
-      duration: 0,;
-      filesReviewed: 0,;
-      issues: [],;
-      improvements: [],;
-      autoFixes: [],;
+  timestamp: new Date().toISOString(),
+      duration: 0,
+      filesReviewed: 0,
+      issues: [],
+      improvements: [],
+      autoFixes: [],
       summary: {}
     }
     try {
@@ -151,14 +145,10 @@ class $1 {
       // Log results;
       this.logReviewResults(reviewResults);
       ;
-      console.log(✅ Code review completed in ${reviewResults.duration}ms);console.log(📊 Found ${reviewResults.issues.length} issues, ${reviewResults.improvements.length} improvements``);
-      ;
-} catch (error) {
+      console.log(✅ Code review completed in ${reviewResults.duration}ms);console.log(📊 Found ${reviewResults.issues.length} issues, ${reviewResults.improvements.length} improvements``)} catch (error) {
+  console.error(`❌ Error during code review: `, error)} catch (error) {
   console.error(`❌ Error during code review: `, error);
-} catch (error) {
-  console.error(`❌ Error during code review: `, error);
-this.logError(`Code review failed`, error);
-}
+this.logError(`Code review failed`, error)}
   }
 ;
   async reviewTypeScriptFiles(results) {
@@ -172,15 +162,11 @@ this.logError(`Code review failed`, error);
         results.filesReviewed++;
         results.issues.push(...fileResults.issues);
         results.improvements.push(...fileResults.improvements);
-        ;
-        ;
-} catch (error) {  console.error(Error reviewing ${file  }:, error`);
+        } catch (error) {  console.error(Error reviewing ${file  }:, error`);
         results.filesReviewed++;`);
         results.issues.push(...fileResults.issues);`);
         results.improvements.push(...fileResults.improvements);`);
-        `);
-} catch (error) {console.error(Error reviewing ${file}:, error`);
-}
+        `)} catch (error) {console.error(Error reviewing ${file}:, error`)}
     }
   }
 ;
@@ -189,14 +175,12 @@ this.logError(`Code review failed`, error);
     // Check for common TypeScript issues;
     if (content.includes(`any`)) {
   results.issues.push({
-  file: filePath,;
-        type: `typescript`,;
-        severity: "warning",;
-        message: "Usage of "any type detected. Consider using proper TypeScript types.",;
-        line: this.findLineNumber(content, "any"),;
-        suggestion: "Replace with specific interface or union type";
-});
-}
+  file: filePath,
+        type: `typescript`,
+        severity: "warning",
+        message: "Usage of "any type detected. Consider using proper TypeScript types.",
+        line: this.findLineNumber(content, "any"),
+        suggestion: "Replace with specific interface or union type"})}
     ;
     // Check for unused imports;
     const importMatches = content.match(/import\s+.*\s+from\s+["][^""]+[""]/g);
@@ -205,37 +189,32 @@ this.logError(`Code review failed`, error);
   const importedItem = importStmt.match(/import\s+{?\s*(\w+)/)?.[1];
         if (importedItem && !content.includes(importedItem)) {
   results.issues.push({
-  file: filePath,;
-            type: `typescript`,;
-            severity: `info`,message: `Unused import ${importedItem}`,;
-            line: this.findLineNumber(content, importStmt),;
+  file: filePath,
+            type: `typescript`,
+            severity: `info`,message: `Unused import ${importedItem}`,
+            line: this.findLineNumber(content, importStmt),
             suggestion: `Remove unused import`;
         if (importedItem && !content.includes(importedItem)) {
   results.issues.push({
-  file: filePath,;
-            type: "typescript",;
-            severity: "info",message: `Unused import ${importedItem}`,;
-            line: this.findLineNumber(content, importStmt),;
-            suggestion: "Remove unused import";
-});
-}
+  file: filePath,
+            type: "typescript",
+            severity: "info",message: `Unused import ${importedItem}`,
+            line: this.findLineNumber(content, importStmt),
+            suggestion: "Remove unused import"})}
       }
     }
     ;
     // Check for performance issues;
     if (content.includes(`useEffect`) && content.includes("[]")) {
   results.improvements.push({
-  file: filePath,;
-        type: "react",;
-        severity: "info",;
-        message: "Consider adding dependencies to useEffect or using ""useCallback/useMemo""",;
-        line: this.findLineNumber(content, "useEffect"),;
-        suggestion: "Review useEffect dependencies for optimization";
-});
-}
+  file: filePath,
+        type: "react",
+        severity: "info",
+        message: "Consider adding dependencies to useEffect or using ""useCallback/useMemo""",
+        line: this.findLineNumber(content, "useEffect"),
+        suggestion: "Review useEffect dependencies for optimization"})}
     ;
-    return results;
-}
+    return results}
 ;
   async reviewReactComponents(results) {
   console.log(`"⚛️ Reviewing React components...");
@@ -254,15 +233,8 @@ this.logError(`Code review failed`, error);
         const componentResults = await this.analyzeReactComponent(file, content);
         ;
         results.issues.push(...componentResults.issues);
-        results.improvements.push(...componentResults.improvements);
-        ;
-} catch (error) {  console.error(Error reviewing React component ${file  }:, error`);
-        ;
-} catch (error) {console.error(Error reviewing React component ${file}:, error`);
-}
-        ;
-} catch (error) {  console.error(Error reviewing React component ${file  }:, error`);
-}
+        results.improvements.push(...componentResults.improvements)} catch (error) {  console.error(Error reviewing React component ${file  }:, error`)} catch (error) {console.error(Error reviewing React component ${file}:, error`)}
+        } catch (error) {  console.error(Error reviewing React component ${file  }:, error`)}
 }
   }
 ;
@@ -271,51 +243,44 @@ this.logError(`Code review failed`, error);
     // Check for missing PropTypes or TypeScript interfaces;
     if (!content.includes(`interface`) && !content.includes(`type Props`) && !content.includes("PropTypes")) {
   results.improvements.push({
-  file: filePath,;
-        type: "react",;
-        severity: "info",;
-        message: "Component lacks type definitions",;
-        line: 1,;
-        suggestion: "Add TypeScript interface or PropTypes for better type safety";
-});
-}
+  file: filePath,
+        type: "react",
+        severity: "info",
+        message: "Component lacks type definitions",
+        line: 1,
+        suggestion: "Add TypeScript interface or PropTypes for better type safety"})}
     ;
     // Check for accessibility issues;
     if (content.includes("<button") && !content.includes("aria-label") && !content.includes("aria-labelledby")) {
   results.improvements.push({
-  file: filePath,;
-        type: "accessibility",;
-        severity: "warning",;
-        message: "Button missing accessibility attributes",;
-        line: this.findLineNumber(content, "<button"),;
+  file: filePath,
+        type: "accessibility",
+        severity: "warning",
+        message: "Button missing accessibility attributes",
+        line: this.findLineNumber(content, "<button"),
         suggestion: "Add aria-label or aria-labelledby for screen readers";
     ;
     // Check for missing PropTypes or TypeScript interfaces;
     if (!content.includes("interface") && !content.includes("type Props") && !content.includes("PropTypes")) {
   results.improvements.push({
-  file: filePath,;
-        type: "react",;
-        severity: "info",;
-        message: "Component lacks type definitions",;
-        line: 1,;
-        suggestion: "Add TypeScript interface or PropTypes for better type safety";
-});
-}
+  file: filePath,
+        type: "react",
+        severity: "info",
+        message: "Component lacks type definitions",
+        line: 1,
+        suggestion: "Add TypeScript interface or PropTypes for better type safety"})}
     ;
     // Check for accessibility issues;
     if (content.includes("<button") && !content.includes("aria-label") && !content.includes("aria-labelledby")) {
   results.improvements.push({
-  file: filePath,;
-        type: "accessibility",;
-        severity: "warning",;
-        message: "Button missing accessibility attributes",;
-        line: this.findLineNumber(content, "<button"),;
-        suggestion: "Add aria-label or aria-labelledby for screen readers";
-});
-}
+  file: filePath,
+        type: "accessibility",
+        severity: "warning",
+        message: "Button missing accessibility attributes",
+        line: this.findLineNumber(content, "<button"),
+        suggestion: "Add aria-label or aria-labelledby for screen readers"})}
     ;
-    return results;
-}
+    return results}
 ;
   async reviewConfigFiles(results) {
   console.log(`"⚙️ Reviewing configuration files...");
@@ -329,12 +294,7 @@ this.logError(`Code review failed`, error);
           const configResults = await this.analyzeConfigFile(configFile, content);
           ;
           results.issues.push(...configResults.issues);
-          results.improvements.push(...configResults.improvements);
-          ;
-} catch (error) {  console.error(Error reviewing config file ${configFile  }:, error`);
-          ;
-} catch (error) {console.error(Error reviewing config file ${configFile}:, error`);
-}
+          results.improvements.push(...configResults.improvements)} catch (error) {  console.error(Error reviewing config file ${configFile  }:, error`)} catch (error) {console.error(Error reviewing config file ${configFile}:, error`)}
       }
     }
   }
@@ -349,51 +309,40 @@ this.logError(`Code review failed`, error);
   for (const [`dep`, "version"] of Object.entries(pkg.dependencies)) {
   if (version.startsWith("^") || version.startsWith("~")) {
   results.improvements.push({
-  file: filePath,;
-                type: `dependencies`,;
-                severity: `info`,message: `Consider pinning dependency version: ${dep}`,;
-                line: this.findLineNumber(content, dep),;
-                suggestion: `Use exact version for production stability`;
-});
-}
+  file: filePath,
+                type: `dependencies`,
+                severity: `info`,message: `Consider pinning dependency version: ${dep}`,
+                line: this.findLineNumber(content, dep),
+                suggestion: `Use exact version for production stability`})}
           }
         }
         ;
         // Check for security issues;
         if (pkg.scripts && pkg.scripts.start && pkg.scripts.start.includes(`--inspect`)) {
   results.issues.push({
-  file: filePath,;
-            type: "security",;
-            severity: "warning",;
-            message: "Debug mode enabled in start script",;
-            line: this.findLineNumber(content, "--inspect"),;
-            suggestion: "Remove --inspect flag from production scripts";
-});
-}
-        ;
-} catch (error) {
+  file: filePath,
+            type: "security",
+            severity: "warning",
+            message: "Debug mode enabled in start script",
+            line: this.findLineNumber(content, "--inspect"),
+            suggestion: "Remove --inspect flag from production scripts"})}
+        } catch (error) {
   // Check for security issues;
         if (pkg.scripts && pkg.scripts.start && pkg.scripts.start.includes("--inspect")) {
   results.issues.push({
-  file: filePath,;
-            type: "security",;
-            severity: "warning",;
-            message: "Debug mode enabled in start script",;
-            line: this.findLineNumber(content, "--inspect"),;
-            suggestion: "Remove --inspect flag from production scripts";
-});
-}
-        ;
-} catch (error) {
-  console.error("Error parsing package.json: ", error);
-}
-        ;
-} catch (error) {
+  file: filePath,
+            type: "security",
+            severity: "warning",
+            message: "Debug mode enabled in start script",
+            line: this.findLineNumber(content, "--inspect"),
+            suggestion: "Remove --inspect flag from production scripts"})}
+        } catch (error) {
+  console.error("Error parsing package.json: ", error)}
+        } catch (error) {
   console.error("Error parsing package.json: ", error)}
 }
     ;
-    return results;
-}
+    return results}
 ;
   async reviewDependencies(results) {
   console.log(`"📦 Reviewing package dependencies...");
@@ -401,74 +350,63 @@ this.logError(`Code review failed`, error);
     try {
   // Check for outdated packages;
       const outdatedCheck = execSync("npm outdated --json", {
-  cwd: this.projectRoot,;
-        encoding: "utf8",;
+  cwd: this.projectRoot,
+        encoding: "utf8",
         stdio: "pipe";
   async reviewDependencies(results) {
   console.log(`📦 Reviewing package dependencies...`);
     try {
   // Check for outdated packages;
       const outdatedCheck = execSync("npm outdated --json", {
-  cwd: this.projectRoot,;
-        encoding: "utf8",;
-        stdio: "pipe";
-});
+  cwd: this.projectRoot,
+        encoding: "utf8",
+        stdio: "pipe"});
       ;
       if (outdatedCheck.trim()) {
   const outdated = JSON.parse(outdatedCheck);
         for (const ["pkg", "info"] of Object.entries(outdated)) {
   results.improvements.push({
-  file: "package.json",;
-            type: `dependencies`,;
-            severity: `info`,message: Outdated package: ${pkg} (current: ${info.current}, latest: ${info.latest}),;
-            line: 0,suggestion: `Update ${pkg} to latest version`;
-}`);
-}
+  file: "package.json",
+            type: `dependencies`,
+            severity: `info`,message: Outdated package: ${pkg} (current: ${info.current}, latest: ${info.latest}),
+            line: 0,suggestion: `Update ${pkg} to latest version`}`)}
       }
       ;
       // Check for security vulnerabilities;
       const auditCheck = execSync(`npm audit --json`, {
-  cwd: this.projectRoot,;
-        encoding: `utf8`,;
-        stdio: "pipe";
-});
+  cwd: this.projectRoot,
+        encoding: `utf8`,
+        stdio: "pipe"});
       ;
       if (auditCheck.trim()) {
   const audit = JSON.parse(auditCheck);
         if (audit.vulnerabilities) {
   for (const ["pkg", "vuln"] of Object.entries(audit.vulnerabilities)) {
   results.issues.push({
-  file: "package.json",;
-              type: `security`,;
-              severity: `high`,message: `Security vulnerability in ${pkg}: ${vuln.title}`,;
+  file: "package.json",
+              type: `security`,
+              severity: `high`,message: `Security vulnerability in ${pkg}: ${vuln.title}`,
               line: 0,suggestion: `Run `npm audit fix` or update ${pkg}`;
         if (audit.vulnerabilities) {
   for (const ["pkg", "vuln"] of Object.entries(audit.vulnerabilities)) {
   results.issues.push({
-  file: "package.json",;
-              type: "security",;
-              severity: "high",message: `Security vulnerability in ${pkg}: ${vuln.title}`,;
-              line: 0,suggestion: `Run "npm audit fix" or update ${pkg}`;
-});
-}
+  file: "package.json",
+              type: "security",
+              severity: "high",message: `Security vulnerability in ${pkg}: ${vuln.title}`,
+              line: 0,suggestion: `Run "npm audit fix" or update ${pkg}`})}
         }
       }
-      ;
-} catch (error) {
+      } catch (error) {
   // npm commands might fail if no issues found;
-      console.log(`"No dependency issues found");
-}
+      console.log(`"No dependency issues found")}
   }
 ;
   async generateAISuggestions(results) {
   console.log(`"🧠 Generating AI-powered suggestions...");
     ;
-    // Analyze patterns and generate intelligent suggestions;
-      ;
-} catch (error) {
+    // Analyze patterns and generate intelligent suggestions} catch (error) {
   // npm commands might fail if no issues found;
-      console.log(``No dependency issues found`);
-}
+      console.log(``No dependency issues found`)}
   }
 ;
   async generateAISuggestions(results) {
@@ -477,14 +415,13 @@ this.logError(`Code review failed`, error);
     const patterns = this.analyzeCodePatterns(results);
     for (const pattern of patterns) {
   results.improvements.push({
-  file: "AI Analysis",;
-        type: "ai-suggestion",;
-        severity: "info",;
-        message: pattern.message,;
+  file: "AI Analysis",
+        type: "ai-suggestion",
+        severity: "info",
+        message: pattern.message,
         line: 0} catch (error) {
   // npm commands might fail if no issues found;
-      console.log(`No dependency issues found`);
-}
+      console.log(`No dependency issues found`)}
   }
 ;
   async generateAISuggestions(results) {
@@ -495,14 +432,12 @@ this.logError(`Code review failed`, error);
 ;
     for (const pattern of patterns) {
   results.improvements.push({
-  file: "AI Analysis",;
-        type: "ai-suggestion",;
-        severity: "info",;
-        message: pattern.message,;
-        line: 0,;
-        suggestion: pattern.suggestion;
-});
-}
+  file: "AI Analysis",
+        type: "ai-suggestion",
+        severity: "info",
+        message: pattern.message,
+        line: 0,
+        suggestion: pattern.suggestion})}
   }
 ;
   analyzeCodePatterns(results) {
@@ -510,37 +445,30 @@ this.logError(`Code review failed`, error);
     // Analyze issue patterns;
     const issueTypes = results.issues.reduce((acc, issue) => {
   acc[issue.type] = (acc[issue.type] || 0) + 1;
-      return acc;
-}, {});
+      return acc}, {});
     // Suggest improvements based on patterns;
     if (issueTypes.typescript > 5) {
   patterns.push({
-  message: "High number of TypeScript issues detected",;
+  message: "High number of TypeScript issues detected",
         suggestion: "Consider implementing stricter TypeScript configuration and linting rules";
     ;
     // Analyze issue patterns;
     const issueTypes = results.issues.reduce((acc, issue) => {
   acc[issue.type] = (acc[issue.type] || 0) + 1;
-      return acc;
-}, {});
+      return acc}, {});
     ;
     // Suggest improvements based on patterns;
     if (issueTypes.typescript > 5) {
   patterns.push({
-  message: "High number of TypeScript issues detected",;
-        suggestion: "Consider implementing stricter TypeScript configuration and linting rules";
-});
-}
+  message: "High number of TypeScript issues detected",
+        suggestion: "Consider implementing stricter TypeScript configuration and linting rules"})}
     ;
     if (issueTypes.security > 0) {
   patterns.push({
-  message: "Security vulnerabilities detected",;
-        suggestion: "Prioritize security fixes and implement automated security scanning";
-});
-}
+  message: "Security vulnerabilities detected",
+        suggestion: "Prioritize security fixes and implement automated security scanning"})}
     ;
-    return patterns;
-}
+    return patterns}
 ;
   async applyAutoFixes(results) {
   console.log(`"🔧 Applying automatic fixes...");
@@ -553,12 +481,10 @@ this.logError(`Code review failed`, error);
   if (issue.severity === "info" && issue.type === "typescript") {
   if (await this.autoFixIssue(issue)) {
   fixesApplied++;
-          results.autoFixes.push(issue);
-}
+          results.autoFixes.push(issue)}
       }
     }
-    console.log(✅ Applied ${fixesApplied} automatic fixes);
-}
+    console.log(✅ Applied ${fixesApplied} automatic fixes)}
 ;
   async autoFixIssue(issue) {
   try {
@@ -570,14 +496,11 @@ this.logError(`Code review failed`, error);
         if (importLine.includes(`import`)) {
   lines.splice(issue.line - 1, 1);
           fs.writeFileSync(issue.file, lines.join(`\n`));
-          return true;
-}
+          return true}
       }
       ;
-      return false;
-} catch (error) {  console.error(Error auto-fixing issue in ${issue.file  }:, error`);
-      return false;
-}
+      return false} catch (error) {  console.error(Error auto-fixing issue in ${issue.file  }:, error`);
+      return false}
   }
 ;
   findFiles(patterns) {
@@ -586,21 +509,17 @@ this.logError(`Code review failed`, error);
   try {
   const glob = require(`glob`);
         const matches = glob.sync(pattern, { cwd: this.projectRoot });
-        files.push(...matches);
-} catch (error) {
+        files.push(...matches)} catch (error) {
   for (const pattern of patterns) {
   try {
   const glob = require("glob");
         const matches = glob.sync(pattern, { cwd: this.projectRoot });
-        files.push(...matches);
-} catch (error) {
+        files.push(...matches)} catch (error) {
   // Fallback to simple file search;
-        this.simpleFileSearch(pattern, files);
-}
+        this.simpleFileSearch(pattern, files)}
     }
     ;
-    return [...new Set(files)];
-}
+    return [...new Set(files)]}
 ;
   simpleFileSearch(pattern, files) {
   const walkDir = (dir) => {
@@ -609,15 +528,12 @@ this.logError(`Code review failed`, error);
   const fullPath = path.join(dir, item);
         const stat = fs.statSync(fullPath);
         if (stat.isDirectory() && !item.startsWith(`.`) && !item.includes("node_modules")) {
-  walkDir(fullPath);
-} else if (stat.isFile() && this.matchesPattern(fullPath, pattern)) {
-  files.push(fullPath);
-}
+  walkDir(fullPath)} else if (stat.isFile() && this.matchesPattern(fullPath, pattern)) {
+  files.push(fullPath)}
       }
     }
     ;
-    walkDir(this.projectRoot);
-}
+    walkDir(this.projectRoot)}
 ;
   matchesPattern(filePath, pattern) {
   const ext = path.extname(filePath);
@@ -625,18 +541,15 @@ this.logError(`Code review failed`, error);
     if (pattern.includes("*.tsx") && ext === ".tsx") return true;
     if (pattern.includes("*.js") && ext === ".js") return true;
     if (pattern.includes("*.jsx") && ext === ".jsx") return true;
-    return false;
-}
+    return false}
 ;
   findLineNumber(content, searchText) {
   const lines = content.split("\n");
     for (let i = 0; i < lines.length; i++) {
   if (lines[i].includes(searchText)) {
-  return i + 1;
-}
+  return i + 1}
     }
-    return 0;
-}
+    return 0}
 ;
   updateReviewHistory(results) {
   this.history.totalReviews++;
@@ -646,72 +559,62 @@ this.logError(`Code review failed`, error);
     this.history.lastReview = new Date().toISOString();
     // Update stats by type;
     for (const issue of results.issues) {
-  this.history.reviewStats[issue.type] = (this.history.reviewStats[issue.type] || 0) + 1;
-}
+  this.history.reviewStats[issue.type] = (this.history.reviewStats[issue.type] || 0) + 1}
     ;
     // Save updated history;
     try {
-  fs.writeFileSync(this.reviewHistory, JSON.stringify(this.history, null, 2));
-} catch (error) {
+  fs.writeFileSync(this.reviewHistory, JSON.stringify(this.history, null, 2))} catch (error) {
   console.error("Error saving review history: ", error)}
   }
 ;
   logReviewResults(results) {
   const logEntry = {
-  timestamp: new Date().toISOString(),;
+  timestamp: new Date().toISOString(),
       summary: {
-  filesReviewed: results.filesReviewed,;
-        issuesFound: results.issues.length,;
-        improvementsSuggested: results.improvements.length,;
-        autoFixesApplied: results.autoFixes.length,;
-        duration: results.duration;
-},;
+  filesReviewed: results.filesReviewed,
+        issuesFound: results.issues.length,
+        improvementsSuggested: results.improvements.length,
+        autoFixesApplied: results.autoFixes.length,
+        duration: results.duration},
 
   logReviewResults(results) {
   const logEntry = {
-  timestamp: new Date().toISOString(),;
+  timestamp: new Date().toISOString(),
       summary: {
-  filesReviewed: results.filesReviewed,;
-        issuesFound: results.issues.length,;
-        improvementsSuggested: results.improvements.length,;
-        autoFixesApplied: results.autoFixes.length,;
-        duration: results.duration;
-},;
-      details: results;
-}
+  filesReviewed: results.filesReviewed,
+        issuesFound: results.issues.length,
+        improvementsSuggested: results.improvements.length,
+        autoFixesApplied: results.autoFixes.length,
+        duration: results.duration},
+      details: results}
     ;
     try {
-  fs.appendFileSync(this.logFile, JSON.stringify(logEntry) + "\n");
-} catch (error) {
+  fs.appendFileSync(this.logFile, JSON.stringify(logEntry) + "\n")} catch (error) {
   
 } catch (error) {
-  console.error("Error logging review results: ", error);
-}
+  console.error("Error logging review results: ", error)}
     } catch (error) {
   console.error("Error logging review results: ", error)}
 }
 ;
   logError(message, error) {
   const errorEntry = {
-  timestamp: new Date().toISOString(),;
-      message,;
-      error: error.message,;
+  timestamp: new Date().toISOString(),
+      message,
+      error: error.message,
 
   logError(message, error) {
   const errorEntry = {
-  timestamp: new Date().toISOString(),;
-      message,;
-      error: error.message,;
-      stack: error.stack;
-}
+  timestamp: new Date().toISOString(),
+      message,
+      error: error.message,
+      stack: error.stack}
     ;
     try {
-  fs.appendFileSync(this.logFile, JSON.stringify(errorEntry) + "\n");
-} catch (error) {
+  fs.appendFileSync(this.logFile, JSON.stringify(errorEntry) + "\n")} catch (error) {
   
 } catch (error) {
-  console.error("Error logging error: ", error);
-}
+  console.error("Error logging error: ", error)}
     } catch (error) {
   console.error("Error logging error: ", error)}
 }
@@ -727,31 +630,25 @@ this.logError(`Code review failed`, error);
     // Simple file watching for demonstration;
     // In production, you"d use chokidar or similar;
     setInterval(() => {
-  this.checkForRecentChanges();
-}, 10000); // Check every 10 seconds;
-}
+  this.checkForRecentChanges()}, 10000); // Check every 10 seconds}
 ;
   async checkForRecentChanges() {
   try {
   const gitStatus = execSync("git status --porcelain", {
-  cwd: this.projectRoot,;
-        encoding: "utf8";
-});
+  cwd: this.projectRoot,
+        encoding: "utf8"});
       ;
       if (gitStatus.trim()) {
   console.log(`"📝 Changes detected, performing quick review...");
-        await this.performQuickReview();
-}
+        await this.performQuickReview()}
     } catch (error) {
-  // Git might not be available;
-}
+  // Git might not be available}
   }
 ;
   async performQuickReview() {
   
 } catch (error) {
-  // Git might not be available;
-}
+  // Git might not be available}
   }
 ;
   async performQuickReview() {
@@ -760,25 +657,21 @@ this.logError(`Code review failed`, error);
     ;
     for (const file of changedFiles) {
   if (file.endsWith(".ts") || file.endsWith(".tsx")) {
-  await this.reviewChangedFile(file);
-}
+  await this.reviewChangedFile(file)}
     }
   }
 ;
   getChangedFiles() {
   try {
   const gitStatus = execSync("git status --porcelain", {
-  cwd: this.projectRoot,;
-        encoding: "utf8";
-});
+  cwd: this.projectRoot,
+        encoding: "utf8"});
       return gitStatus;
         .split("\n");
         .filter(line => line.trim());
         .map(line => line.split(" ").pop());
-        .filter(file => file && !file.startsWith("."));
-} catch (error) {
-  return [];
-}
+        .filter(file => file && !file.startsWith("."))} catch (error) {
+  return []}
   }
 ;
   async reviewChangedFile(filePath) {
@@ -786,10 +679,8 @@ this.logError(`Code review failed`, error);
   const content = fs.readFileSync(filePath, "utf8');
       const results = await this.analyzeTypeScriptFile(filePath, content);
       ;
-      if (results.issues.length > 0 || results.improvements.length > 0) {console.log(🔍 Quick review of ${filePath}:);console.log(   Issues: ${results.issues.length}, Improvements: ${results.improvements.length}``);
-}
-    } catch (error) {  console.error(`Error reviewing changed file ${filePath  }:`, error);
-}
+      if (results.issues.length > 0 || results.improvements.length > 0) {console.log(🔍 Quick review of ${filePath}:);console.log(   Issues: ${results.issues.length}, Improvements: ${results.improvements.length}``)}
+    } catch (error) {  console.error(`Error reviewing changed file ${filePath  }:`, error)}
   }
 }
 ;

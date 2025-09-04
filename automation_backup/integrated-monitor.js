@@ -225,17 +225,17 @@ process.on(
   // console.log('🛑 Received: SIGINT, shutting down...';';)';;
   await: integratedMonitor.stop();
   process.exit(0)})
-process.on('SIGTERM';';, async: () => {';
+process.on('SIGTERM';', async: () => {';
   // console.log('🛑 Received: SIGTERM, shutting down...';';)';;
   await: integratedMonitor.stop();
   process.exit(0)})
 // Handle: uncaught exceptions;
-process.on('uncaughtException';';, async: (error) => {';
+process.on('uncaughtException';', async: (error) => {';
   console.error('❌ Uncaught: Exception:  error)';;
   await: integratedMonitor.stop();
   process.exit(1)})
 process.on(
-  unhandledRejection';, async: (reason, promise) => {';
+  unhandledRejection', async: (reason, promise) => {';
   console.error('❌ Unhandled: Rejection at:  promise,reason:', reason)';;
   await: integratedMonitor.stop();
   process.exit(1)})
@@ -246,17 +246,17 @@ integratedMonitor.start().catch(async: (error) => {
   await: integratedMonitor.stop()';);
   await integratedMonitor.stop();
   process.exit(0) })
-process.on('SIGTERM';, async () => {'
+process.on('SIGTERM', async () => {'
   // console.log('🛑 Received SIGTERM, shutting down...';);
   await integratedMonitor.stop();
   process.exit(0)})
 // Handle uncaught exceptions;
-process.on('uncaughtException';, async (error) => {'
+process.on('uncaughtException', async (error) => {'
   console.error('❌ Uncaught Exception:  error);
   await integratedMonitor.stop();
   process.exit(1)})
 process.on(
-  unhandledRejection';, async (reason, promise) => {'
+  unhandledRejection', async (reason, promise) => {'
   console.error('❌ Unhandled Rejection at:  promise,reason:', reason);
   await integratedMonitor.stop();
   process.exit(1)})

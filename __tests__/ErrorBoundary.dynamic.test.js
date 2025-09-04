@@ -6,8 +6,7 @@ import ErrorBoundarydynamic from '../components/ErrorBoundary.dynamic';
 describe('ErrorBoundarydynamic', () => {
   test('renders without crashing', () => {
     render(<ErrorBoundarydynamic />);
-    expect(screen.getByTestId('errorboundary.dynamic')).toBeInTheDocument();
-  });
+    expect(screen.getByTestId('errorboundary.dynamic')).toBeInTheDocument()});
 
   test('displays correct content', () => {
     render(<ErrorBoundarydynamic />);
@@ -22,5 +21,4 @@ describe('ErrorBoundarydynamic', () => {
   test('applies correct styling', () => {
     render(<ErrorBoundarydynamic />);
     // Add styling tests if needed
-  });
-});
+  })});

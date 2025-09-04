@@ -29,14 +29,10 @@ async function runPerformanceMonitor() {
     console.log("📦 Analyzing bundle size...");
     try {
   execSync("node scripts/analyze-bundle.js", { stdio: "inherit" });
-      console.log("✅ Bundle analysis completed");
+      console.log("✅ Bundle analysis completed")} catch (error) {
+  console.log("⚠️  Bundle analysis failed but continuing...")}
 } catch (error) {
-  console.log("⚠️  Bundle analysis failed but continuing...");
-}
-;
-} catch (error) {
-  console.log("⚠️  Bundle analysis failed but continuing...");
-}
+  console.log("⚠️  Bundle analysis failed but continuing...")}
 ;
     // Run Lighthouse performance tests if available;
     // Run Lighthouse performance tests if available;
@@ -44,15 +40,12 @@ console.log("🔍 Running Lighthouse performance tests...");
     try {
   if (fs.existsSync("lighthouserc.json")) {
   execSync("npx lighthouse --config=lighthouserc.json", {
-  stdio: "inherit",;
+  stdio: "inherit",
 });
-        console.log("✅ Lighthouse tests completed");
-} else {
-  console.log("ℹ️  No Lighthouse configuration found");
-}
+        console.log("✅ Lighthouse tests completed")} else {
+  console.log("ℹ️  No Lighthouse configuration found")}
     } catch (error) {
-  console.log("⚠️  Lighthouse tests failed but continuing...");
-}
+  console.log("⚠️  Lighthouse tests failed but continuing...")}
 ;
     // Check for large files in build output;
     console.log("📁 Checking build output for large files...");
@@ -63,45 +56,37 @@ console.log("🔍 Running Lighthouse performance tests...");
   console.log(`⚠️  Large files found in build output:`);
         largeFiles.forEach(file => {
   console.log(  - ${file.path}: ${(file.size / 1024 / 1024).toFixed(2)} MB`;
-          );
-});
-} else {
-  console.log(`✅ No excessively large files found`);
-}
+          )})} else {
+  console.log(`✅ No excessively large files found`)}
     }
 ;
     // Check for unused dependencies;
     console.log(`🔍 Checking for unused dependencies...");
     try {
-  execSync("npx depcheck", { stdio: "inherit" });
-} catch (error) {
-  console.log("ℹ️  Dependency check not available");
-}
+  execSync("npx depcheck", { stdio: "inherit" })} catch (error) {
+  console.log("ℹ️  Dependency check not available")}
 ;
     // Generate performance report;
     console.log("📊 Generating performance report...");
     const report = {
-  timestamp: new Date().toISOString(),;
-      buildSize: getDirectorySize(distPath),;
-      largeFiles: findLargeFiles(distPath),;
+  timestamp: new Date().toISOString(),
+      buildSize: getDirectorySize(distPath),
+      largeFiles: findLargeFiles(distPath),
       summary: `Performance monitoring completed`}
     const reportPath = path.join(process.cwd(), `performance-report.json`);
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     console.log(✅ Performance report saved to ${reportPath});
-    console.log(`✅ Continuous performance monitoring completed successfully`);
-} catch (error) {
-  console.error(❌ Continuous performance monitoring failed: `,;
+    console.log(`✅ Continuous performance monitoring completed successfully`)} catch (error) {
+  console.error(❌ Continuous performance monitoring failed: `,
       error.message;
     );
-    // Don`t exit, just log the error and continue;
-}
+    // Don`t exit, just log the error and continue}
 }
 ;
 function findLargeFiles(dir, maxSize = 1024 * 1024) {
   
 } catch (error) {
-  console.log("⚠️  Lighthouse tests failed but continuing...");
-}
+  console.log("⚠️  Lighthouse tests failed but continuing...")}
 ;
     // Check for large files in build output;
     console.log("📁 Checking build output for large files...");
@@ -112,41 +97,34 @@ function findLargeFiles(dir, maxSize = 1024 * 1024) {
   console.log("⚠️  Large files found in build output:");
         largeFiles.forEach(file => {
   console.log(  - ${file.path}: ${(file.size / 1024 / 1024).toFixed(2)} MB";
-          );
-});
-} else {
-  console.log("✅ No excessively large files found");
-}
+          )})} else {
+  console.log("✅ No excessively large files found")}
     }
 ;
     // Check for unused dependencies;
     console.log("🔍 Checking for unused dependencies...");
     try {
-  execSync("npx depcheck", { stdio: "inherit" });
-} catch (error) {
-  console.log("ℹ️  Dependency check not available");
-}
+  execSync("npx depcheck", { stdio: "inherit" })} catch (error) {
+  console.log("ℹ️  Dependency check not available")}
 ;
     // Generate performance report;
     console.log("📊 Generating performance report...");
     const report = {
-  timestamp: new Date().toISOString(),;
-      buildSize: getDirectorySize(distPath),;
-      largeFiles: findLargeFiles(distPath),;
-      summary: "Performance monitoring completed",;
+  timestamp: new Date().toISOString(),
+      buildSize: getDirectorySize(distPath),
+      largeFiles: findLargeFiles(distPath),
+      summary: "Performance monitoring completed",
 }
 ;
     const reportPath = path.join(process.cwd(), "performance-report.json");
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     console.log(✅ Performance report saved to ${reportPath});
 
-    console.log("✅ Continuous performance monitoring completed successfully");
-} catch (error) {
-  console.error(❌ Continuous performance monitoring failed: ",;
+    console.log("✅ Continuous performance monitoring completed successfully")} catch (error) {
+  console.error(❌ Continuous performance monitoring failed: ",
       error.message;
     );
-    // Don"t exit, just log the error and continue;
-}
+    // Don"t exit, just log the error and continue}
 }
 ;
 function findLargeFiles(dir, maxSize = 1024 * 1024) {
@@ -161,31 +139,25 @@ function findLargeFiles(dir, maxSize = 1024 * 1024) {
         const stat = fs.statSync(fullPath);
 
         if (stat.isDirectory()) {
-  scanDirectory(fullPath);
-} else if (stat.isFile() && stat.size > maxSize) {
+  scanDirectory(fullPath)} else if (stat.isFile() && stat.size > maxSize) {
   largeFiles.push({
-  path: path.relative(process.cwd()`, fullPath),;
-            size: stat.size});
-}
+  path: path.relative(process.cwd()`, fullPath),
+            size: stat.size})}
       }
     } catch (error) {
-  // Skip directories that can`t be accessed;
-}
+  // Skip directories that can`t be accessed}
         } else if (stat.isFile() && stat.size > maxSize) {
   largeFiles.push({
-  path: path.relative(process.cwd()", fullPath),;
-            size: stat.size,;
-});
-}
+  path: path.relative(process.cwd()", fullPath),
+            size: stat.size,
+})}
       }
     } catch (error) {
-  // Skip directories that can"t be accessed;
-}
+  // Skip directories that can"t be accessed}
   }
 ;
   scanDirectory(dir);
-  return largeFiles.sort((a, b) => b.size - a.size);
-}
+  return largeFiles.sort((a, b) => b.size - a.size)}
 ;
 function getDirectorySize(dir) {
   let totalSize = 0;
@@ -199,19 +171,15 @@ function getDirectorySize(dir) {
         const stat = fs.statSync(fullPath);
 
         if (stat.isDirectory()) {
-  calculateSize(fullPath);
-} else if (stat.isFile()) {
-  totalSize += stat.size;
-}
+  calculateSize(fullPath)} else if (stat.isFile()) {
+  totalSize += stat.size}
       }
     } catch (error) {
-  // Skip directories that can`t be accessed;
-}
+  // Skip directories that can`t be accessed}
   }
 ;
   calculateSize(dir);
-  return totalSize;
-}
+  return totalSize}
 ;
 // Main continuous loop;
 async function runContinuous() {
@@ -221,11 +189,9 @@ async function runContinuous() {
   await runPerformanceMonitor();
   // Set up continuous execution;
   setInterval(async () => {
-  await runPerformanceMonitor();
-}, AUTOMATION_INTERVAL);
+  await runPerformanceMonitor()}, AUTOMATION_INTERVAL);
   console.log( ✅ Continuous performance monitoring running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes;
-  `);
-}
+  `)}
 ;
 // Handle graceful shutdown;
 process.on(`SIGINT`, () => {
@@ -241,24 +207,19 @@ async function runContinuous() {
 
   // Set up continuous execution;
   setInterval(async () => {
-  await runPerformanceMonitor();
-}, AUTOMATION_INTERVAL);
+  await runPerformanceMonitor()}, AUTOMATION_INTERVAL);
 
   console.log( ✅ Continuous performance monitoring running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes;
-  `);
-}
+  `)}
 ;
 // Handle graceful shutdown;
 process.on("SIGINT", () => {
   console.log("🛑 Received SIGINT, shutting down gracefully...");
-  process.exit(0);
-});
+  process.exit(0)});
 
 process.on("SIGTERM", () => {
   console.log("🛑 Received SIGTERM, shutting down gracefully...");
-  process.exit(0);
-});
+  process.exit(0)});
 // Start the continuous performance monitor;
 runContinuous().catch(error => {
-  console.error("❌ Failed to start continuous performance monitoring: ', error);  process.exit(1);
-})
+  console.error("❌ Failed to start continuous performance monitoring: ', error);  process.exit(1)})

@@ -71,11 +71,11 @@ export const addedAIServices2025: InnovativeAIService[] = [
     targetAudience: 'Enterprise compliance, security, and data leaders',
     trialDays: 7,
     setupTime: '3–5 weeks',
-    category: 'AI Governance',;
-    realService: true,;
-    technology: ['Vector DB', 'Policy engine', 'Eval harness'],;
-    integrations: ['BigQuery', 'Snowflake', 'Databricks', 'SIEMs'],;
-    useCases: ['Model launches', 'Vendor AI due diligence', 'Policy tracking'],;
+    category: 'AI Governance',
+    realService: true,
+    technology: ['Vector DB', 'Policy engine', 'Eval harness'],
+    integrations: ['BigQuery', 'Snowflake', 'Databricks', 'SIEMs'],
+    useCases: ['Model launches', 'Vendor AI due diligence', 'Policy tracking'],
     roi: 'Avoid compliance incidents; speed approvals by 2–4x',
     competitors['Lakera', 'Protect AI'],
     marketSize: '$5B AI security/gov',

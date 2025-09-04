@@ -520,4 +520,4 @@ phone:,
   ,
     competitiveAdvantage: Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration'
 
-];}
+]}

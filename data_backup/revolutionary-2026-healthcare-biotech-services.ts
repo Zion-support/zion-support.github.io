@@ -496,4 +496,4 @@ reviews: number;export const revolutionary2026HealthcareBiotechServices: Revolut
     customers: 234,
     rating: 4.8,
     reviews: 123
-];}}
+]}}

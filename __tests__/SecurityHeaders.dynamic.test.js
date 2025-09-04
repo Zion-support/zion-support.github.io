@@ -6,8 +6,7 @@ import SecurityHeadersdynamic from '../components/SecurityHeaders.dynamic';
 describe('SecurityHeadersdynamic', () => {
   test('renders without crashing', () => {
     render(<SecurityHeadersdynamic />);
-    expect(screen.getByTestId('securityheaders.dynamic')).toBeInTheDocument();
-  });
+    expect(screen.getByTestId('securityheaders.dynamic')).toBeInTheDocument()});
 
   test('displays correct content', () => {
     render(<SecurityHeadersdynamic />);
@@ -22,5 +21,4 @@ describe('SecurityHeadersdynamic', () => {
   test('applies correct styling', () => {
     render(<SecurityHeadersdynamic />);
     // Add styling tests if needed
-  });
-});
+  })});

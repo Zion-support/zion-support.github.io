@@ -327,4 +327,4 @@ roi: 'DeFi platforms report 580% ROI through improved lending efficiency and ris
     rating: 4.8,
     reviews: 620
 
-];}}
+]}}

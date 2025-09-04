@@ -6,13 +6,11 @@ interface ErrorReport {
   componentStack?: string;
   timestamp: string;
   userAgent: string;
-  url: string;
-}
+  url: string}
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ message: 'Method not allowed' });
-  }
+    return res.status(405).json({ message: 'Method not allowed' })}
 
   try {
     const errorReport: ErrorReport = req.body;
@@ -32,9 +30,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     // 2. Store in database for analysis
     // 3. Send alerts for critical errors
 
-    res.status(200).json({ message: 'Error reported successfully' });
-  } catch (error) {
+    res.status(200).json({ message: 'Error reported successfully' })} catch (error) {
     console.error('Error processing error report:', error);
-    res.status(500).json({ message: 'Internal server error' });
-  }
+    res.status(500).json({ message: 'Internal server error' })}
 }

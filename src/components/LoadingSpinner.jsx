@@ -62,5 +62,5 @@ export {LoadingSpinner};
 export {LoadingSpinner};
 
 </path>
-</circle>
-</div>
+</circle>';
+</div>;';;';

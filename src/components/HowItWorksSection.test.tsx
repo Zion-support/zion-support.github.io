@@ -11,4 +11,4 @@ export default function HowItWorksSection.test() {return (
       </div>
   );"}"
 
-</div>
+</div>;;

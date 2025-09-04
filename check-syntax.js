@@ -14,35 +14,29 @@ function checkFile(filePath) {
     const openBrackets = (content.match(/\{/g) || []).length;
     const closeBrackets = (content.match(/\}/g) || []).length;
     if (openBrackets !== closeBrackets) {
-      issues.push(`Mismatched brackets: ${openBrackets} open, ${closeBrackets} close`);
-    }
+      issues.push(`Mismatched brackets: ${openBrackets} open, ${closeBrackets} close`)}
     
     // Check for unclosed parentheses
     const openParens = (content.match(/\(/g) || []).length;
     const closeParens = (content.match(/\)/g) || []).length;
     if (openParens !== closeParens) {
-      issues.push(`Mismatched parentheses: ${openParens} open, ${closeParens} close`);
-    }
+      issues.push(`Mismatched parentheses: ${openParens} open, ${closeParens} close`)}
     
     // Check for unclosed JSX tags
     const openTags = (content.match(/<[^/][^>]*>/g) || []).length;
     const closeTags = (content.match(/<\/[^>]*>/g) || []).length;
     if (openTags !== closeTags) {
-      issues.push(`Mismatched JSX tags: ${openTags} open, ${closeTags} close`);
-    }
+      issues.push(`Mismatched JSX tags: ${openTags} open, ${closeTags} close`)}
     
     if (issues.length > 0) {
       console.log(`❌ ${filePath}:`);
       issues.forEach(issue => console.log(`   ${issue}`));
-      return false;
-    } else {
+      return false} else {
       console.log(`✅ ${filePath}`);
-      return true;
-    }
+      return true}
   } catch (error) {
     console.log(`❌ ${filePath}: Error reading file - ${error.message}`);
-    return false;
-  }
+    return false}
 }
 
 function checkDirectory(dirPath) {
@@ -54,14 +48,11 @@ function checkDirectory(dirPath) {
     const stat = fs.statSync(fullPath);
     
     if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-      allGood = checkDirectory(fullPath) && allGood;
-    } else if (file.match(/\.(js|jsx|ts|tsx)$/)) {
-      allGood = checkFile(fullPath) && allGood;
-    }
+      allGood = checkDirectory(fullPath) && allGood} else if (file.match(/\.(js|jsx|ts|tsx)$/)) {
+      allGood = checkFile(fullPath) && allGood}
   }
   
-  return allGood;
-}
+  return allGood}
 
 console.log('Checking for syntax errors...\n');
 
@@ -74,8 +65,6 @@ const srcGood = checkDirectory('src');
 
 if (pagesGood && srcGood) {
   console.log('\n✅ No syntax errors found!');
-  process.exit(0);
-} else {
+  process.exit(0)} else {
   console.log('\n❌ Syntax errors found!');
-  process.exit(1);
-}
+  process.exit(1)}

@@ -6,16 +6,14 @@ interface ContactFormData {
   company: string;
   phone: string;
   service: string;
-  message: string;
-}
+  message: string}
 
 export default async function handler(
   req: NextApiReques t,
   res: NextApiRespons e
 ) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ message: 'Method not allowed' });
-  }
+    return res.status(405).json({ message: 'Method not allowed' })}
 
   try {
     const formData: ContactFormDat a = req.body;
@@ -25,16 +23,14 @@ export default async function handler(
       return res.status(400).json({
         message:
           'Missing required fields: nam e, email, and message are required',
-      });
-    }
+      })}
 
     // Validate email format
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
       return res.status(400).json({
         message: 'Invalid email format',
-      });
-    }
+      })}
 
     // TODO: Integrate with email service (SendGrid, AWS SES, etc.)
     // For now, we&apos;ll just log the data and return success'
@@ -50,12 +46,10 @@ export default async function handler(
     res.status(200).json({
       message: 'Thank you for your message! We will get back to you soon.',
       success: tru e,
-    });
-  } catch (error) {
+    })} catch (error) {
     console.error('Contact form error: ', error);
     res.status(500).json({
       message: 'Internal server error. Please try again later.',
       success: fals e,
-    });
-  }
+    })}
 }

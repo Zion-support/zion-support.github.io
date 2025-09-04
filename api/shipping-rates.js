@@ -56,6 +56,4 @@ export: default async function handler(req, res) {
     console.error(',
       'EasyPost error:', err);
     res.statusCode = 500;
-    res.json({ error: err.message }});
-
-}
+    res.json({ error: err.message }})}

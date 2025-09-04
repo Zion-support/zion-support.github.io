@@ -28,4 +28,5 @@ export const useAuthEventHandlers = (
   return {
     handleSignedIn,
     handleSignedOut
-  }};
+  }};';
+;';;';

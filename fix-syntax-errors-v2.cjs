@@ -10,13 +10,11 @@ function fixSyntaxErrors(content) {
   
   // Fix missing commas in object literals - more specific patterns
   content = content.replace(/(\w+):\s*['"`][^'"`]*['"`]\s*\n\s*(\w+):/g, (match, key1, key2) => {
-    return `${key1}: 'value',\n    ${key2}:`;
-  });
+    return `${key1}: 'value',\n    ${key2}:`});
   
   // Fix missing commas in style objects
   content = content.replace(/(\w+):\s*['"`][^'"`]*['"`]\s*\n\s*(\w+):/g, (match, key1, key2) => {
-    return `${key1}: 'value',\n    ${key2}:`;
-  });
+    return `${key1}: 'value',\n    ${key2}:`});
   
   // Fix missing semicolons after function declarations
   content = content.replace(/(\w+)\s*\(\s*\)\s*=>\s*\{[^}]*\}\s*\n\s*return/g, '$1() => {\n    // ...\n  };\n  return');
@@ -24,8 +22,7 @@ function fixSyntaxErrors(content) {
   // Fix missing closing braces
   content = content.replace(/(\w+)\s*\(\s*\)\s*=>\s*\{[^}]*\}\s*$/gm, '$1() => {\n    // ...\n  };');
   
-  return content;
-}
+  return content}
 
 // Function to process a file
 function processFile(filePath) {
@@ -35,11 +32,9 @@ function processFile(filePath) {
     
     if (content !== fixedContent) {
       fs.writeFileSync(filePath, fixedContent);
-      console.log(`Fixed: ${filePath}`);
-    }
+      console.log(`Fixed: ${filePath}`)}
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-  }
+    console.error(`Error processing ${filePath}:`, error.message)}
 }
 
 // Function to recursively find and process files
@@ -51,10 +46,8 @@ function processDirectory(dirPath) {
     const stat = fs.statSync(filePath);
     
     if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-      processDirectory(filePath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
-      processFile(filePath);
-    }
+      processDirectory(filePath)} else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
+      processFile(filePath)}
   }
 }
 

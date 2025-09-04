@@ -500,4 +500,4 @@ integration: [
   'Training technology',
   'Customer management']
 
-];}
+]}

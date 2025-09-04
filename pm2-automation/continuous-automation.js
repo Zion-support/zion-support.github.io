@@ -16,7 +16,7 @@ class ContinuousAutomation {
     this.ensureDirectories()}
 
   ensureDirectories() {
-    const dirs = ['logs', 'reports';];
+    const dirs = ['logs', 'reports'];
     dirs.forEach(dir => {
       const dirPath = path.join(__dirname, dir;);
       if () {
@@ -30,9 +30,8 @@ class ContinuousAutomation {
     })}
 
   log(message) {
-    const timestamp = new Date().toISOString(;
-  });
-    const logMessage = `[${timestamp}] ${message;};`;
+    const timestamp = new Date().toISOString(});
+    const logMessage = `[${timestamp}] ${message};`;
     console.log(logMessage);
     fs.appendFileSync(this.logFile, logMessage + '\n')}
 
@@ -43,11 +42,11 @@ class ContinuousAutomation {
         encoding: 'utf8', 
         cwd: process.cwd(),
         stdio: 'pipe'
-      ;};);
+      };);
       this.log(`✅ Success: ${description}`);
-      return { success: true, output ;}} catch (error) {
+      return { success: true, output }} catch (error) {
       this.log(`❌ Error: ${description} - ${error.message}`);
-      return { success: false, error: error.message, output: error.stdout || error.stderr ;}}
+      return { success: false, error: error.message, output: error.stdout || error.stderr }}
   }
 
   async runAutomationScripts() {
@@ -56,10 +55,9 @@ class ContinuousAutomation {
     if () {
       return await this.runCommand(`node ${scriptPath) {
     ) {
-      return await this.runCommand(`node ${scriptPath;
-  }}`, 'Running automation orchestrator')} else {
+      return await this.runCommand(`node ${scriptPath}}`, 'Running automation orchestrator')} else {
       this.log('⚠️ Automation orchestrator script not found, skipping...');
-      return { success: true, skipped: true ;}}
+      return { success: true, skipped: true }}
   }
 
   async runComprehensiveAutomation() {
@@ -68,10 +66,9 @@ class ContinuousAutomation {
     if () {
       return await this.runCommand(`node ${scriptPath) {
     ) {
-      return await this.runCommand(`node ${scriptPath;
-  }}`, 'Running comprehensive automation')} else {
+      return await this.runCommand(`node ${scriptPath}}`, 'Running comprehensive automation')} else {
       this.log('⚠️ Comprehensive automation script not found, skipping...');
-      return { success: true, skipped: true ;}}
+      return { success: true, skipped: true }}
   }
 
   async runMarketingAutomation() {
@@ -80,19 +77,18 @@ class ContinuousAutomation {
     if () {
       return await this.runCommand(`node ${scriptPath) {
     ) {
-      return await this.runCommand(`node ${scriptPath;
-  }}`, 'Running marketing automation')} else {
+      return await this.runCommand(`node ${scriptPath}}`, 'Running marketing automation')} else {
       this.log('⚠️ Marketing automation script not found, skipping...');
-      return { success: true, skipped: true ;}}
+      return { success: true, skipped: true }}
   }
 
   async runSecurityAudit() {
     this.log('🔒 Running security audit...');
-    return await this.runCommand('npm audit', 'Running security audit');}
+    return await this.runCommand('npm audit', 'Running security audit')}
 
   async installDependencies() {
     this.log('📦 Installing dependencies...');
-    return await this.runCommand('npm install', 'Installing dependencies');}
+    return await this.runCommand('npm install', 'Installing dependencies')}
 
   generateReport(results) {
     const report = {
@@ -105,15 +101,15 @@ class ContinuousAutomation {
         failed: results.filter(r => !r.success).length,
         skipped: results.filter(r => r.skipped).length
       }
-   ; ;};
+   };
 
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-    return report;}
+    return report}
 
   async run() {
     this.log('🚀 Starting Continuous Automation Pipeline');
     
-    const results = [;];
+    const results = [];
     
     // Install dependencies
     const installResult = await this.installDependencies(;);
@@ -124,8 +120,7 @@ class ContinuousAutomation {
       const automationResult = await this.runAutomationScripts() {
      {
       // Run automation scripts
-      const automationResult = await this.runAutomationScripts(;
-  });
+      const automationResult = await this.runAutomationScripts(});
       results.push({ step: 'automation', ...automationResult });
       
       // Run comprehensive automation
@@ -143,15 +138,14 @@ class ContinuousAutomation {
     const report = this.generateReport(results;);
     this.log(`📊 Continuous Automation Pipeline completed with status: ${report.status}`);
     
-    return report;}
+    return report}
 }
 
 // Run if called directly
 if ( {
   const automation = new ContinuousAutomation) {
      {
-  const automation = new ContinuousAutomation;
-  }(;);
+  const automation = new ContinuousAutomation}(;);
   automation.run().catch(error => {
     console.error('Continuous Automation failed:', error);
     process.exit(1)})}

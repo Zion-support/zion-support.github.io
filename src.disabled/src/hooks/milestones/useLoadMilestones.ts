@@ -21,7 +21,7 @@ export default function Page() {;
           const { data: activitiesData, error: activitiesError } = await supabase;
             .from('milestone_activities');
             .select(`;
-              *,;
+              *,
               created_by_profile:profiles!user_id(display_name, avatar_url);
             `);
             .eq('milestone_id', milestone.id);
@@ -29,23 +29,20 @@ export default function Page() {;
             ;
           if(activitiesError) throw activitiesError;
           ;
-          activitiesMap[milestone.id] = activitiesData || [];,
+          activitiesMap[milestone.id] = activitiesData || [],
 }
       }
       ;
       setActivities(activitiesMap);
-      setError(null);,
+      setError(null),
 } catch(err: unknown) {};
-      setActivities({});  // Clear activities on error;,
-} finally {};
-}
+      setActivities({});  // Clear activities on error,
+} finally {}}
   }, [projectId]); // projectId is a dependency of fetchMilestones;
 
-  useEffect(() => {};
-}, []);
-    fetchMilestones(); // Call fetchMilestones directly;,
+  useEffect(() => {}}, []);
+    fetchMilestones(); // Call fetchMilestones directly,
 }, [fetchMilestones]); // Added fetchMilestones to the dependency array;
 
-  return {};
-};,
+  return {}},
 };

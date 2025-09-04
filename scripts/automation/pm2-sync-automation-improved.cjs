@@ -57,14 +57,12 @@ class ImprovedPM2SyncAutomation {
     this.lastTest = 0;
     this.lastSecurity = 0;
     this.errorCount = 0;
-    this.successCount = 0;
-  }
+    this.successCount = 0}
 
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}`;
-    console.log(logEntry);
-  }
+    console.log(logEntry)}
 
   async initialize() {
     try {
@@ -73,8 +71,7 @@ class ImprovedPM2SyncAutomation {
       // Check if git repository exists
       if (!this.isGitRepository()) {
         this.log('Not a git repository. Initializing...', 'WARN');
-        this.initializeGitRepository();
-      }
+        this.initializeGitRepository()}
       
       // Setup file watcher
       this.setupFileWatcher();
@@ -89,21 +86,16 @@ class ImprovedPM2SyncAutomation {
       await this.runSecurityScan();
       
       this.log('Improved PM2 Sync Automation System initialized successfully');
-      this.isRunning = true;
-      
-    } catch (error) {
+      this.isRunning = true} catch (error) {
       this.log(`Initialization failed: ${error.message}`, 'ERROR');
       this.errorCount++;
-      this.restartAfterDelay();
-    }
+      this.restartAfterDelay()}
   }
 
   isGitRepository() {
     try {
-      return fs.existsSync(path.join(this.config.projectRoot, '.git'));
-    } catch {
-      return false;
-    }
+      return fs.existsSync(path.join(this.config.projectRoot, '.git'))} catch {
+      return false}
   }
 
   initializeGitRepository() {
@@ -113,10 +105,8 @@ class ImprovedPM2SyncAutomation {
         cwd: this.config.projectRoot, 
         stdio: 'pipe' 
       });
-      this.log('Git repository initialized');
-    } catch (error) {
-      this.log(`Failed to initialize git repository: ${error.message}`, 'ERROR');
-    }
+      this.log('Git repository initialized')} catch (error) {
+      this.log(`Failed to initialize git repository: ${error.message}`, 'ERROR')}
   }
 
   setupFileWatcher() {
@@ -137,15 +127,13 @@ class ImprovedPM2SyncAutomation {
       .on('change', (filePath) => this.handleFileChange(filePath, 'change'))
       .on('unlink', (filePath) => this.handleFileChange(filePath, 'delete'))
       .on('error', (error) => this.log(`Watcher error: ${error.message}`, 'ERROR'))
-      .on('ready', () => this.log('File watcher ready'));
-  }
+      .on('ready', () => this.log('File watcher ready'))}
 
   handleFileChange(filePath, event) {
     const relativePath = path.relative(this.config.projectRoot, filePath);
     
     if (this.shouldIgnoreFile(relativePath)) {
-      return;
-    }
+      return}
 
     this.log(`File ${event}: ${relativePath}`);
     this.pendingChanges.add(relativePath);
@@ -153,9 +141,7 @@ class ImprovedPM2SyncAutomation {
     // Debounce changes
     clearTimeout(this.changeTimeout);
     this.changeTimeout = setTimeout(() => {
-      this.processPendingChanges();
-    }, 2000);
-  }
+      this.processPendingChanges()}, 2000)}
 
   shouldIgnoreFile(filePath) {
     const ignorePatterns = [
@@ -170,8 +156,7 @@ class ImprovedPM2SyncAutomation {
       /coverage/
     ];
     
-    return ignorePatterns.some(pattern => pattern.test(filePath));
-  }
+    return ignorePatterns.some(pattern => pattern.test(filePath))}
 
   async processPendingChanges() {
     if (this.pendingChanges.size === 0) return;
@@ -205,12 +190,9 @@ class ImprovedPM2SyncAutomation {
       this.successCount++;
       
       // Clear pending changes
-      this.pendingChanges.clear();
-      
-    } catch (error) {
+      this.pendingChanges.clear()} catch (error) {
       this.log(`Failed to process changes: ${error.message}`, 'ERROR');
-      this.errorCount++;
-    }
+      this.errorCount++}
   }
 
   async performFullSync() {
@@ -232,10 +214,8 @@ class ImprovedPM2SyncAutomation {
         // Add all changes
         try {
           execSync('git add -A', { cwd: this.config.projectRoot, stdio: 'pipe' });
-          this.log('Added all changes to staging');
-        } catch (error) {
-          this.log(`Failed to add changes: ${error.message}`, 'WARN');
-        }
+          this.log('Added all changes to staging')} catch (error) {
+          this.log(`Failed to add changes: ${error.message}`, 'WARN')}
         
         // Commit changes if there are any staged
         try {
@@ -249,21 +229,17 @@ class ImprovedPM2SyncAutomation {
               cwd: this.config.projectRoot, 
               stdio: 'pipe' 
             });
-            this.log('Committed staged changes');
-          }
+            this.log('Committed staged changes')}
         } catch (error) {
-          this.log(`Failed to commit changes: ${error.message}`, 'WARN');
-        }
+          this.log(`Failed to commit changes: ${error.message}`, 'WARN')}
       }
       
       // Pull latest changes
       try {
         execSync('git pull origin main', { cwd: this.config.projectRoot, stdio: 'pipe' });
-        this.log('Pulled latest changes from remote');
-      } catch (error) {
+        this.log('Pulled latest changes from remote')} catch (error) {
         this.log(`Pull failed, attempting to resolve conflicts: ${error.message}`, 'WARN');
-        await this.resolveConflicts();
-      }
+        await this.resolveConflicts()}
       
       // Push changes if we have commits
       try {
@@ -275,16 +251,13 @@ class ImprovedPM2SyncAutomation {
         if (aheadStatus.includes('ahead')) {
           execSync('git push origin main', { cwd: this.config.projectRoot, stdio: 'pipe' });
           this.log('Pushed local changes to remote');
-          this.lastSync = Date.now();
-        }
+          this.lastSync = Date.now()}
       } catch (error) {
-        this.log(`Push failed: ${error.message}`, 'WARN');
-      }
+        this.log(`Push failed: ${error.message}`, 'WARN')}
       
     } catch (error) {
       this.log(`Full sync failed: ${error.message}`, 'ERROR');
-      throw error;
-    }
+      throw error}
   }
 
   async resolveConflicts() {
@@ -293,8 +266,7 @@ class ImprovedPM2SyncAutomation {
       
       // Abort any ongoing merge
       try {
-        execSync('git merge --abort', { cwd: this.config.projectRoot, stdio: 'pipe' });
-      } catch {}
+        execSync('git merge --abort', { cwd: this.config.projectRoot, stdio: 'pipe' })} catch {}
       
       // Reset to clean state
       execSync('git reset --hard HEAD', { cwd: this.config.projectRoot, stdio: 'pipe' });
@@ -305,12 +277,9 @@ class ImprovedPM2SyncAutomation {
       // Pull again
       execSync('git pull origin main', { cwd: this.config.projectRoot, stdio: 'pipe' });
       
-      this.log('Conflicts resolved successfully');
-      
-    } catch (error) {
+      this.log('Conflicts resolved successfully')} catch (error) {
       this.log(`Failed to resolve conflicts: ${error.message}`, 'ERROR');
-      throw error;
-    }
+      throw error}
   }
 
   async performBuild() {
@@ -320,20 +289,16 @@ class ImprovedPM2SyncAutomation {
       // Install dependencies if needed
       if (!fs.existsSync('node_modules')) {
         this.log('Installing dependencies...');
-        execSync('npm install', { cwd: this.config.projectRoot, stdio: 'pipe' });
-      }
+        execSync('npm install', { cwd: this.config.projectRoot, stdio: 'pipe' })}
       
       // Run build
       this.log('Building application...');
       execSync('npm run build', { cwd: this.config.projectRoot, stdio: 'pipe' });
       
       this.log('Build completed successfully');
-      this.lastBuild = Date.now();
-      
-    } catch (error) {
+      this.lastBuild = Date.now()} catch (error) {
       this.log(`Build failed: ${error.message}`, 'ERROR');
-      await this.fixBuildIssues();
-    }
+      await this.fixBuildIssues()}
   }
 
   async fixBuildIssues() {
@@ -346,10 +311,8 @@ class ImprovedPM2SyncAutomation {
         if (fs.existsSync(dir)) {
           try {
             fs.rmSync(dir, { recursive: true, force: true });
-            this.log(`Cleared cache directory: ${dir}`);
-          } catch (error) {
-            this.log(`Skipped clearing ${dir} due to permissions: ${error.message}`, 'WARN');
-          }
+            this.log(`Cleared cache directory: ${dir}`)} catch (error) {
+            this.log(`Skipped clearing ${dir} due to permissions: ${error.message}`, 'WARN')}
         }
       });
       
@@ -357,19 +320,15 @@ class ImprovedPM2SyncAutomation {
       try {
         this.log('Reinstalling dependencies...');
         execSync('rm -rf node_modules package-lock.json', { cwd: this.config.projectRoot, stdio: 'pipe' });
-        execSync('npm install', { cwd: this.config.projectRoot, stdio: 'pipe' });
-      } catch (error) {
+        execSync('npm install', { cwd: this.config.projectRoot, stdio: 'pipe' })} catch (error) {
         this.log(`Skipped dependency reinstall due to permissions: ${error.message}`, 'WARN');
         // Try to continue with existing dependencies
       }
       
       // Try build again
-      await this.performBuild();
-      
-    } catch (error) {
+      await this.performBuild()} catch (error) {
       this.log(`Failed to fix build issues: ${error.message}`, 'ERROR');
-      this.errorCount++;
-    }
+      this.errorCount++}
   }
 
   async runTests() {
@@ -380,18 +339,14 @@ class ImprovedPM2SyncAutomation {
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
       if (!packageJson.scripts.test) {
         this.log('No test script found, skipping tests');
-        return;
-      }
+        return}
       
       execSync('npm test', { cwd: this.config.projectRoot, stdio: 'pipe' });
       
       this.log('Tests completed successfully');
-      this.lastTest = Date.now();
-      
-    } catch (error) {
+      this.lastTest = Date.now()} catch (error) {
       this.log(`Tests failed: ${error.message}`, 'ERROR');
-      await this.fixTestIssues();
-    }
+      await this.fixTestIssues()}
   }
 
   async fixTestIssues() {
@@ -403,20 +358,15 @@ class ImprovedPM2SyncAutomation {
       testCacheDirs.forEach(dir => {
         if (fs.existsSync(dir)) {
           try {
-            fs.rmSync(dir, { recursive: true, force: true });
-          } catch (error) {
-            this.log(`Skipped clearing test cache ${dir}: ${error.message}`, 'WARN');
-          }
+            fs.rmSync(dir, { recursive: true, force: true })} catch (error) {
+            this.log(`Skipped clearing test cache ${dir}: ${error.message}`, 'WARN')}
         }
       });
       
       // Try tests again
-      await this.runTests();
-      
-    } catch (error) {
+      await this.runTests()} catch (error) {
       this.log(`Failed to fix test issues: ${error.message}`, 'ERROR');
-      this.errorCount++;
-    }
+      this.errorCount++}
   }
 
   async runSecurityScan() {
@@ -429,72 +379,57 @@ class ImprovedPM2SyncAutomation {
       // Try to fix vulnerabilities
       try {
         execSync('npm audit fix', { cwd: this.config.projectRoot, stdio: 'pipe' });
-        this.log('Security vulnerabilities fixed');
-      } catch (error) {
-        this.log('Some vulnerabilities could not be fixed automatically', 'WARN');
-      }
+        this.log('Security vulnerabilities fixed')} catch (error) {
+        this.log('Some vulnerabilities could not be fixed automatically', 'WARN')}
       
       this.log('Security scan completed');
-      this.lastSecurity = Date.now();
-      
-    } catch (error) {
+      this.lastSecurity = Date.now()} catch (error) {
       this.log(`Security scan failed: ${error.message}`, 'ERROR');
-      this.errorCount++;
-    }
+      this.errorCount++}
   }
 
   startAutomationLoops() {
     // Sync loop
     setInterval(async () => {
       if (this.isRunning && this.pendingChanges.size > 0) {
-        await this.processPendingChanges();
-      }
+        await this.processPendingChanges()}
     }, this.config.syncInterval);
 
     // Build loop
     setInterval(async () => {
       if (this.isRunning && Date.now() - this.lastBuild > this.config.buildInterval) {
-        await this.performBuild();
-      }
+        await this.performBuild()}
     }, this.config.buildInterval);
 
     // Test loop
     setInterval(async () => {
       if (this.isRunning && Date.now() - this.lastTest > this.config.testInterval) {
-        await this.runTests();
-      }
+        await this.runTests()}
     }, this.config.testInterval);
 
     // Security loop
     setInterval(async () => {
       if (this.isRunning && Date.now() - this.lastSecurity > this.config.securityInterval) {
-        await this.runSecurityScan();
-      }
-    }, this.config.securityInterval);
-  }
+        await this.runSecurityScan()}
+    }, this.config.securityInterval)}
 
   async stop() {
     this.log('Stopping Improved PM2 Sync Automation System...');
     this.isRunning = false;
     
     if (this.watcher) {
-      await this.watcher.close();
-    }
+      await this.watcher.close()}
     
     // Process any remaining changes
     if (this.pendingChanges.size > 0) {
-      await this.processPendingChanges();
-    }
+      await this.processPendingChanges()}
     
-    this.log('Improved PM2 Sync Automation System stopped');
-  }
+    this.log('Improved PM2 Sync Automation System stopped')}
 
   restartAfterDelay(delay = 5000) {
     this.log(`Restarting in ${delay}ms...`);
     setTimeout(() => {
-      this.initialize();
-    }, delay);
-  }
+      this.initialize()}, delay)}
 
   getStatus() {
     return {
@@ -507,26 +442,21 @@ class ImprovedPM2SyncAutomation {
       errorCount: this.errorCount,
       successCount: this.successCount,
       uptime: this.isRunning ? Date.now() - this.startTime : 0
-    };
-  }
+    }}
 }
 
 // Handle process signals
 process.on('SIGINT', async () => {
   console.log('\nReceived SIGINT, shutting down gracefully...');
   if (global.improvedPm2SyncAutomation) {
-    await global.improvedPm2SyncAutomation.stop();
-  }
-  process.exit(0);
-});
+    await global.improvedPm2SyncAutomation.stop()}
+  process.exit(0)});
 
 process.on('SIGTERM', async () => {
   console.log('\nReceived SIGTERM, shutting down gracefully...');
   if (global.improvedPm2SyncAutomation) {
-    await global.improvedPm2SyncAutomation.stop();
-  }
-  process.exit(0);
-});
+    await global.improvedPm2SyncAutomation.stop()}
+  process.exit(0)});
 
 // Start the automation system
 if (require.main === module) {
@@ -537,7 +467,6 @@ if (require.main === module) {
     if (global.improvedPm2SyncAutomation && global.improvedPm2SyncAutomation.isRunning) {
       // Process is healthy
     }
-  }, 60000);
-}
+  }, 60000)}
 
 module.exports = ImprovedPM2SyncAutomation;

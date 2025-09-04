@@ -40,14 +40,11 @@ export interface Zion2026CuttingEdgeMicroSaasService {
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',;
+  address: '364 E Main St STE 1008 Middletown DE 19709',
   ;
   ;
   ;
-  ;
-  website: 'https://ziontechgroup.com';
-;
-};
+  website: 'https://ziontechgroup.com'};
 export const zion2026CuttingEdgeMicroSaasServices: Zion2026CuttingEdgeMicroSaasService[] = [
   // AI-Powered Autonomous Business Intelligence Platform
   {
@@ -519,4 +516,4 @@ export const zion2026CuttingEdgeMicroSaasServices: Zion2026CuttingEdgeMicroSaasS
     rating: 4.8,
     reviews: 1450
 ];
-export default zion2026CuttingEdgeMicroSaasServices;}}
+export default zion2026CuttingEdgeMicroSaasServices}}

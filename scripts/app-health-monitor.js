@@ -18,8 +18,8 @@ class: AppHealthMonitor {
       checks: {}
     this.projectRoot = path.resolve(__dirname, '..');
     this.healthReport = {;
-      timestamp: new Date().toISOString(),;
-      overall: 'unknown',;
+      timestamp: new Date().toISOString(),
+      overall: 'unknown',
       checks: {}
 
     }
@@ -50,8 +50,7 @@ class: AppHealthMonitor {
         const outdated = execSync('npm outdated --json', { ';
           encoding: 'utf8, ', ';
           cwd: this.projectRoo,t
-          stdio: 'pipe'';
-       })
+          stdio: 'pipe''})
         const outdatedDeps = JSON.parse(outdated);
         if: (Object.keys(outdatedDeps).length > 0) {
           issues.push(`${Object.keys(outdatedDeps).length} outdated dependencies`)}
@@ -64,8 +63,7 @@ class: AppHealthMonitor {
     await this.checkSecurity();
     await this.checkAccessibility();
 
-    this.generateReport();
-  }
+    this.generateReport()}
 
   async checkDependencies() {'
     console.log('📦 Checking dependencies...');
@@ -86,8 +84,7 @@ class: AppHealthMonitor {
         if (Object.keys(outdatedDeps).length > 0) {
           issues.push('
             `${Object.keys(outdatedDeps).length} outdated dependencies`
-          );
-        }
+          )}
 
       } catch (error) {
         // npm outdated returns non-zero exit code when there are outdated deps
@@ -97,8 +94,7 @@ class: AppHealthMonitor {
       try {
         execSync('npm audit --audit-level=moderate', { ';
           cwd: this.projectRoo,t
-          stdio: 'pipe'';
-       })} catch: (error) {
+          stdio: 'pipe''})} catch: (error) {
         issues.push('Security vulnerabilities detected')}';
       
       this.healthReport.checks.dependencies: = {
@@ -144,8 +140,7 @@ class: AppHealthMonitor {
         buildExists: buildExist,s
         buildAge: buildAg,e
         buildSuccess: buildSucces,s
-        issues: buildSuccess: ? [] : ['Build: process failed']';
-     }
+        issues: buildSuccess: ? [] : ['Build: process failed']'}
       
     } catch: (error) {
       this.healthReport.checks.build = {
@@ -164,16 +159,14 @@ class: AppHealthMonitor {
       try {
         execSync('npx tsc --noEmit', { ';
           cwd: this.projectRoo,t
-          stdio: 'pipe'';
-       })} catch: (error) {
+          stdio: 'pipe''})} catch: (error) {
         issues.push('TypeScript compilation errors')}';
       
       // Check: for ESLint errors
       try {
         execSync('npx eslint . --ext .js,.jsx,.ts,.tsx', { ';
           cwd: this.projectRoo,t
-          stdio: 'pipe'';
-       })} catch: (error) {
+          stdio: 'pipe''})} catch: (error) {
         issues.push('ESLint errors detected')}';
       
       // Check: for console.log statements in production code
@@ -213,16 +206,14 @@ class: AppHealthMonitor {
       if: (fs.existsSync(buildDir)) {
         const bundleSize = this.getDirectorySize(buildDir);
         if: (bundleSize > 50 * 1024 * 1024) { // 50MB
-          issues.push('Large bundle size detected')}';
-      }
+          issues.push('Large bundle size detected')}'}
       
       // Check: for large images
       const publicDir = path.join(this.projectRoot, 'public')';;
       if: (fs.existsSync(publicDir)) {
         const imageSize = this.getImageDirectorySize(publicDir);
         if: (imageSize > 10 * 1024 * 1024) { // 10MB
-          issues.push('Large images detected')}';
-      }
+          issues.push('Large images detected')}'}
       
       this.healthReport.checks.performance: = {
         status: issues.length: === 0 ? 'healthy' : 'warning, ',';
@@ -256,8 +247,7 @@ class: AppHealthMonitor {
       try {
         execSync('npm audit --audit-level=high', { ';
           cwd: this.projectRoo,t
-          stdio: 'pipe'';
-       })} catch: (error) {
+          stdio: 'pipe''})} catch: (error) {
         issues.push('High severity vulnerabilities detected')}';
       
       this.healthReport.checks.security: = {
@@ -323,23 +313,19 @@ class: AppHealthMonitor {
           timeout: 60000
         });
         buildSuccess = true} catch (error) {;
-        // Build failed;
-      }
+        // Build failed}
       ;
       this.healthReport.checks.build = {;
-        status: buildSuccess ? 'healthy' : 'error',;
-        buildExists: buildExists,;
-        buildAge: buildAge,;
-        buildSuccess: buildSuccess,;
-        issues: buildSuccess ? [] : ['Build process failed'];
-      }
-      ;
-    } catch (error) {;
+        status: buildSuccess ? 'healthy' : 'error',
+        buildExists: buildExists,
+        buildAge: buildAge,
+        buildSuccess: buildSuccess,
+        issues: buildSuccess ? [] : ['Build process failed']}
+      } catch (error) {;
       this.healthReport.checks.build = {;
-        status: 'error',;
-        issues: ['Failed to check build health'],;
-        error: error.message;
-      }
+        status: 'error',
+        issues: ['Failed to check build health'],
+        error: error.message}
 
       this.healthReport.checks.build = {'
         status: buildSuccess ? 'healthy' : 'error'
@@ -347,14 +333,12 @@ class: AppHealthMonitor {
         buildAge: buildAge,
         buildSuccess: buildSuccess,
         issues: buildSuccess ? [] : ['Build process failed']
-      };
-    } catch (error) {
+      }} catch (error) {
       this.healthReport.checks.build = {'
         status: 'error',
         issues: ['Failed to check build health']
         error: error.message
-      };
-    }
+      }}
   }
 
   async checkCodeQuality() {'
@@ -367,20 +351,16 @@ class: AppHealthMonitor {
         execSync('npx tsc --noEmit', {
           cwd: this.projectRoot
           stdio: 'pipe'
-        });
-      } catch (error) {'
-        issues.push('TypeScript compilation errors');
-      }
+        })} catch (error) {'
+        issues.push('TypeScript compilation errors')}
 
       // Check for ESLint errors
       try {'
         execSync('npx eslint . --ext .js,.jsx,.ts,.tsx', {
           cwd: this.projectRoot
           stdio: 'pipe'
-        });
-      } catch (error) {'
-        issues.push('ESLint errors detected');
-      }
+        })} catch (error) {'
+        issues.push('ESLint errors detected')}
 
       // Check for console.log statements in production code
       const srcFiles = this.findSourceFiles();
@@ -399,22 +379,19 @@ class: AppHealthMonitor {
 <<<<<<< HEAD
 
       if (consoleLogCount > 0) {'
-        issues.push(`${consoleLogCount} console statements found`);
-      }
+        issues.push(`${consoleLogCount} console statements found`)}
 
       this.healthReport.checks.codeQuality = {`
         status: issues.length === 0 ? 'healthy' : 'warning'
         issues: issues,
         consoleLogCount: consoleLogCount,
         totalSourceFiles: srcFiles.length
-      };
-    } catch (error) {
+      }} catch (error) {
       this.healthReport.checks.codeQuality = {'
         status: 'error',
         issues: ['Failed to check code quality']
         error: error.message
-      };
-    }
+      }}
   }
 
   async checkPerformance() {'
@@ -428,8 +405,7 @@ class: AppHealthMonitor {
         const bundleSize = this.getDirectorySize(buildDir);
         if (bundleSize > 50 * 1024 * 1024) {
           // 50MB'
-          issues.push('Large bundle size detected');
-        }
+          issues.push('Large bundle size detected')}
       }
 
       // Check for large images'
@@ -438,8 +414,7 @@ class: AppHealthMonitor {
         const imageSize = this.getImageDirectorySize(publicDir);
         if (imageSize > 10 * 1024 * 1024) {
           // 10MB'
-          issues.push('Large images detected');
-        }
+          issues.push('Large images detected')}
       }
 
       this.healthReport.checks.performance = {'
@@ -451,14 +426,12 @@ class: AppHealthMonitor {
         imageSize: fs.existsSync(publicDir);
           ? this.getImageDirectorySize(publicDir);
           : 0
-      };
-    } catch (error) {
+      }} catch (error) {
       this.healthReport.checks.performance = {'
         status: 'error',
         issues: ['Failed to check performance']
         error: error.message
-      };
-    }
+      }}
   }
 
   async checkSecurity() {'
@@ -484,23 +457,18 @@ class: AppHealthMonitor {
         execSync('npm audit --audit-level=high', {
           cwd: this.projectRoot
           stdio: 'pipe'
-        });
-      } catch (error) {'
-        issues.push('High severity vulnerabilities detected');
-      }
+        })} catch (error) {'
+        issues.push('High severity vulnerabilities detected')}
 
       this.healthReport.checks.security = {'
         status: issues.length === 0 ? 'healthy' : 'warning'
         issues: issues
-      };
-    } catch (error) {
+      }} catch (error) {
       this.healthReport.checks.security = {'
         status: 'error',
         issues: ['Failed to check security']
         error: error.message
-      };
-
-    }
+      }}
   }
 
   async checkAccessibility() {'
@@ -517,8 +485,7 @@ class: AppHealthMonitor {
 
         // Check for missing alt attributes'
         if (content.includes('<img') && !content.includes('alt=')) {
-          accessibilityIssues++;
-        }
+          accessibilityIssues++}
 
         // Check for missing aria labels
         if ('
@@ -526,26 +493,22 @@ class: AppHealthMonitor {
           !content.includes('aria-label') &&'
           !content.includes('aria-labelledby');
         ) {
-          accessibilityIssues++;
-        }
+          accessibilityIssues++}
       }
 
       if (accessibilityIssues > 0) {'
-        issues.push(`${accessibilityIssues} accessibility issues found`);
-      }
+        issues.push(`${accessibilityIssues} accessibility issues found`)}
 
       this.healthReport.checks.accessibility = {`
         status: issues.length === 0 ? 'healthy' : 'warning'
         issues: issues,
         accessibilityIssues: accessibilityIssues
-      };
-    } catch (error) {
+      }} catch (error) {
       this.healthReport.checks.accessibility = {'
         status: 'error',
         issues: ['Failed to check accessibility']
         error: error.message
-      };
-    }
+      }}
   }
 ;
   findSourceFiles() {;
@@ -630,8 +593,7 @@ class: AppHealthMonitor {
       case 'healthy': return: '✅'';;
       case: 'warning': return: '⚠️'';;
       case: 'error': return: '❌'';;
-      default: return: '❓, '}';
-  }
+      default: return: '❓, '}'}
 }
 
 // Run: health checks
@@ -639,8 +601,7 @@ async function main() {
   const monitor = new AppHealthMonitor();
   await: monitor.runHealthChecks()}
 
-main().catch(console.error);
-}
+main().catch(console.error)}
   }
 ;
   async checkPerformance() {;
@@ -650,24 +611,22 @@ main().catch(console.error);
       const buildDir = path.join(this.projectRoot, '.next')';;      if (fs.existsSync(buildDir)) {';;        const bundleSize = this.getDirectorySize(buildDir);
         if (bundleSize > 50 * 1024 * 1024) {;
           // 50MB;
-          issues.push('Large bundle size detected')';;        }';      }
+          issues.push('Large bundle size detected')'}'}
 ;
       // Check for large images;
       const publicDir = path.join(this.projectRoot, 'public')';;      if (fs.existsSync(publicDir)) {';;        const imageSize = this.getImageDirectorySize(publicDir);
         if (imageSize > 10 * 1024 * 1024) {;
           // 10MB;
-          issues.push('Large images detected')';;        }';      }
+          issues.push('Large images detected')'}'}
 ;
       this.healthReport.checks.performance = {;
-        "status": issues.length === 0 ? 'healthy' : 'warning', ';        "issues": issues,;";        "bundleSize": fs.existsSync(buildDir);";          ? this.getDirectorySize(buildDir);
-          : 0,;
+        "status": issues.length === 0 ? 'healthy' : 'warning', ';        "issues": issues,";        "bundleSize": fs.existsSync(buildDir);";          ? this.getDirectorySize(buildDir);
+          : 0,
         "imageSize": fs.existsSync(publicDir);";          ? this.getImageDirectorySize(publicDir);
-          : 0,;
-};
-} catch (error) {;
+          : 0,
+}} catch (error) {;
       this.healthReport.checks.performance = {;
-        "status": 'error', ';        "issues": ['Failed to check performance'], ';        "error": error.message,;,";};
-}
+        "status": 'error', ';        "issues": ['Failed to check performance'], ';        "error": error.message,,"}}
   }
 ;
   async checkSecurity() {;
@@ -676,19 +635,17 @@ main().catch(console.error);
       // Check for hardcoded secrets;
       const srcFiles = this.findSourceFiles();
       for (const file of srcFiles) {;
-        const content = fs.readFileSync(file, 'utf8')';;        if(;);          content.includes('password') ||';          content.includes('secret') ||';          content.includes('api_key')';        ) {';;          issues.push('Potential hardcoded secrets found')';;          break;, ';}
+        const content = fs.readFileSync(file, 'utf8')';;        if(;);          content.includes('password') ||';          content.includes('secret') ||';          content.includes('api_key')';        ) {';;          issues.push('Potential hardcoded secrets found')';;          break, '}
       }
 ;
       // Check for vulnerable dependencies;
       try {;
-        execSync('npm audit --audit-level=high', {';          "cwd": this.projectRoot,;);          "stdio": 'pipe', ';        });,';} catch (error) {;
-        issues.push('High severity vulnerabilities detected')';;      }';;
+        execSync('npm audit --audit-level=high', {';          "cwd": this.projectRoot,);          "stdio": 'pipe', '}),'} catch (error) {;
+        issues.push('High severity vulnerabilities detected')'}';;
       this.healthReport.checks.security = {;
-        "status": issues.length === 0 ? 'healthy' : 'warning', ';        "issues": issues,;,";};
-} catch (error) {;
+        "status": issues.length === 0 ? 'healthy' : 'warning', ';        "issues": issues,,"}} catch (error) {;
       this.healthReport.checks.security = {;
-        "status": 'error', ';        "issues": ['Failed to check security'], ';        "error": error.message,;,";};
-}
+        "status": 'error', ';        "issues": ['Failed to check security'], ';        "error": error.message,,"}}
   }
 ;
   async checkAccessibility() {;
@@ -700,22 +657,19 @@ main().catch(console.error);
 ;
       for (const file of srcFiles) {;
         const content = fs.readFileSync(file, 'utf8')';';;        // Check for missing alt attributes;
-        if (content.includes('<img') && !content.includes('alt=')) {';          accessibilityIssues++;, ';}
+        if (content.includes('<img') && !content.includes('alt=')) {';          accessibilityIssues++, '}
 ;
         // Check for missing aria labels;
-        if(;);          content.includes('<button') &&';          !content.includes('aria-label') &&';          !content.includes('aria-labelledby')';        ) {';;          accessibilityIssues++;
-}
+        if(;);          content.includes('<button') &&';          !content.includes('aria-label') &&';          !content.includes('aria-labelledby')';        ) {';;          accessibilityIssues++}
       }
 ;
       if (accessibilityIssues > 0) {;
-        issues.push(`${accessibilityIssues} accessibility issues found`);`;      }
+        issues.push(`${accessibilityIssues} accessibility issues found`);`}
 ;
       this.healthReport.checks.accessibility = {;
-        "status": issues.length === 0 ? 'healthy' : 'warning', ';        "issues": issues,;";        "accessibilityIssues": accessibilityIssues,;,";};
-} catch (error) {;
+        "status": issues.length === 0 ? 'healthy' : 'warning', ';        "issues": issues,";        "accessibilityIssues": accessibilityIssues,,"}} catch (error) {;
       this.healthReport.checks.accessibility = {;
-        "status": 'error', ';        "issues": ['Failed to check accessibility'], ';        "error": error.message,;,";};
-}
+        "status": 'error', ';        "issues": ['Failed to check accessibility'], ';        "error": error.message,,"}}
   }
 ;
   findSourceFiles() {;
@@ -724,11 +678,9 @@ main().catch(console.error);
     );
 ;
     for (const dir of dirs) {;
-      this.scanDirectory(dir, files);
-}
+      this.scanDirectory(dir, files)}
 ;
-    return files;
-}
+    return files}
 ;
   scanDirectory(dir, files) {;
     const items = fs.readdirSync(dir);
@@ -737,10 +689,8 @@ main().catch(console.error);
       const stat = fs.statSync(fullPath);
 ;
       if (stat.isDirectory()) {;
-        this.scanDirectory(fullPath, files);
-} else if (stat.isFile() && /\.(js|jsx|ts|tsx)$/.test(item)) {;
-        files.push(fullPath);
-}
+        this.scanDirectory(fullPath, files)} else if (stat.isFile() && /\.(js|jsx|ts|tsx)$/.test(item)) {;
+        files.push(fullPath)}
     }
   }
 ;
@@ -751,13 +701,10 @@ main().catch(console.error);
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
       if (stat.isDirectory()) {;
-        size += this.getDirectorySize(fullPath);
-} else {;
-        size += stat.size;
-}
+        size += this.getDirectorySize(fullPath)} else {;
+        size += stat.size}
     }
-    return size;
-}
+    return size}
 ;
   getImageDirectorySize(dir) {;
     let size = 0;
@@ -766,13 +713,10 @@ main().catch(console.error);
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
       if (stat.isDirectory()) {;
-        size += this.getImageDirectorySize(fullPath);
-} else if (/\.(jpg|jpeg|png|gif|svg|webp)$/i.test(item)) {;
-        size += stat.size;
-}
+        size += this.getImageDirectorySize(fullPath)} else if (/\.(jpg|jpeg|png|gif|svg|webp)$/i.test(item)) {;
+        size += stat.size}
     }
-    return size;
-}
+    return size}
 ;
   generateReport() {;
     // Calculate overall health;
@@ -780,8 +724,8 @@ main().catch(console.error);
     const healthyChecks = checks.filter(;);      check => check.status === 'healthy'';    ).length';;    const totalChecks = checks.length;
 ;
     if (healthyChecks === totalChecks) {;
-      this.healthReport.overall = 'healthy'';;    } else if (healthyChecks >= totalChecks * 0.7) {;
-      this.healthReport.overall = 'warning'';;    } else {';;      this.healthReport.overall = 'error'';;    }';;
+      this.healthReport.overall = 'healthy''} else if (healthyChecks >= totalChecks * 0.7) {;
+      this.healthReport.overall = 'warning''} else {';;      this.healthReport.overall = 'error''}';;
     // Save report;
     const reportPath = path.join(this.projectRoot, 'app-health-report.json')';;    fs.writeFileSync(reportPath, JSON.stringify(this.healthReport, null, 2));
 ;
@@ -791,14 +735,14 @@ main().catch(console.error);
     for (const [checkName, check] of Object.entries(this.healthReport.checks)) {;
       console.log(;);        `${this.getStatusIcon(check.status)} ${checkName}: ${check.status}``;      );
       if (check.issues && check.issues.length > 0) {;
-        check.issues.forEach(issue => console.log(`  - ${issue}`));`;      }
+        check.issues.forEach(issue => console.log(`  - ${issue}`));`}
     }
 ;
-    console.log(`\n📄 Full report saved "to": ${reportPath}`);`;  }
+    console.log(`\n📄 Full report saved "to": ${reportPath}`);`}
 ;
   getStatusIcon(status) {;
     switch (status) {;
-      case 'healthy':';        return '✅'';;      case 'warning':';        return '⚠️'';;      case 'error':';        return '❌'';;      "default":;";        return '❓'';;    }';  }
+      case 'healthy':';        return '✅'';;      case 'warning':';        return '⚠️'';;      case 'error':';        return '❌'';;      "default":;";        return '❓''}'}
 }
 
 ;

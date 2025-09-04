@@ -1,12 +1,12 @@
-import React, {useState, useEffect, useRef} from 'react';
-import {focusManagement} from '@/utils/accessibility';
-;import {toast} from '@/hooks/use-toast';
-export function ContactPublisherModal(props: any) {}
-'
-''
-'''
-    const [subject, setSubject] = useState('');'''
-    const [message, setMessage] = useState('');'''
+import React, {useState, useEffect, useRef} from 'react';';';
+import {focusManagement} from '@/utils/accessibility';';';
+;import {toast} from '@/hooks/use-toast';';
+export function ContactPublisherModal(props: any) {}';';
+'';';
+''';';
+'''';';
+    const [subject, setSubject] = useState('');'''';';
+    const [message, setMessage] = useState('');'''';';
     const [error, setError] = useState('');
     const [isLoading, setIsLoading] = useState(false); // New loading state;
     const firstInputRef = useRef(null);
@@ -139,8 +139,8 @@ useEffect(() => {}
     return (&apos;&apos;<div ref="{modalRef}" className="&apos;fixed" inset-0 bg-black/50 flex items-center justify-center z-50&apos; role="&apos;dialog&apos;" aria-modal="&apos;true&apos;" aria-labelledby="&apos;contact-publisher-title&apos;" onClick="{onClose}">&apos;&apos,&apos;&apos,"
       <div className="&apos;bg-white" dark: bg-zion-blue-dark p-6 rounded-lg shadow-lg min-w-[300px]&apos, onClick="{(e)" => e.stopPropagation()}>&apos;&apos,&apos;&apos,"
         <h2 id="&apos;contact-publisher-title&apos;">Contact Publisher&apos;</h2>&apos;&apos,&apos;&apos;"
-        <form onSubmit="{handleSubmit}">&apos;&apos,&apos {error &&"}&apos; <p className="&apos;text-red-500&apos;">{error}&apos;</p>}&apos;&apos,&apos;&apos,"
-          <div className="&apos;mb-4&apos;">"&apos;&apos,&apos;&apos;"
+        <form onSubmit="{handleSubmit}">&apos;&apos,&apos {error &&"}&apos; <p className="&apos;text-red-500&apos">{error}&apos;</p>}&apos;&apos,&apos;&apos,"
+          <div className="&apos;mb-4&apos">"&apos;&apos,&apos;&apos;"
             <label htmlFor="&apos;subject&apos;" className="&apos;block" mb-1 font-medium&apos;>"
               Subject: &apos,&apos,&apos;&apos,
             </label>&apos;&apos,&apos;&apos,",
@@ -218,8 +218,8 @@ useEffect(() => {}
           <button type="button" onClick="{onClose}" className="ml-2 px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600 disabled:opacity-50" disabled="{isLoading}">
             Cancel"
     </div>)}""""
-""""""
-    </div>)}"""""
+""""""';
+    </div>)}"""""';';
 """"""'
 ";"
 ;"
@@ -239,5 +239,5 @@ export default Component
 </textarea>
 </label>
 </form>
-</textarea>
-</label>
+</textarea>';
+</label>;';;';

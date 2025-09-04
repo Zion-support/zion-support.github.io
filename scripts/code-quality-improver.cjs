@@ -8,12 +8,10 @@ class CodeQualityImprover {
   constructor() {
     this.projectRoot = process.cwd();
     this.reportFile = path.join(this.projectRoot, 'code-quality-improvement-report.json');
-    this.improvements = [];
-  }
+    this.improvements = []}
 
   log(message) {
-    console.log(`[Code Quality Improver] ${message}`);
-  }
+    console.log(`[Code Quality Improver] ${message}`)}
 
   async runImprovements() {
     this.log('🔧 Starting Code Quality Improvements');
@@ -34,10 +32,8 @@ class CodeQualityImprover {
       // Generate report
       await this.generateReport();
       
-      this.log('✅ Code quality improvements completed');
-    } catch (error) {
-      this.log(`❌ Code quality improvements failed: ${error.message}`);
-    }
+      this.log('✅ Code quality improvements completed')} catch (error) {
+      this.log(`❌ Code quality improvements failed: ${error.message}`)}
   }
 
   async fixCommonIssues() {
@@ -58,12 +54,11 @@ class CodeQualityImprover {
               /console\.log\(/g,
               '// console.log('
             );
-            modified = true;
-          }
+            modified = true}
           
           // Add missing semicolons
           content = content.replace(
-            /([^;}])\n/g,
+            /([^}])\n/g,
             '$1;\n'
           );
           
@@ -72,10 +67,8 @@ class CodeQualityImprover {
             /const\s+(\w+)\s*=\s*\([^)]*\)\s*=>\s*\{([^}]+)\}/g,
             (match, name, body) => {
               if (!body.includes('return') && !body.includes('console.log')) {
-                return match.replace('{', '{ return ');
-              }
-              return match;
-            }
+                return match.replace('{', '{ return ')}
+              return match}
           );
           
           if (modified) {
@@ -85,23 +78,20 @@ class CodeQualityImprover {
               file: path.relative(this.projectRoot, file),
               action: 'Fixed console.log and syntax issues',
               status: 'success'
-            });
-          }
+            })}
         }
         
         this.improvements.push({
           type: 'common-issues',
           action: 'Scanned and fixed common code issues',
           status: 'success'
-        });
-      } catch (error) {
+        })} catch (error) {
         this.improvements.push({
           type: 'common-issues',
           action: 'Scanned and fixed common code issues',
           status: 'failed',
           error: error.message
-        });
-      }
+        })}
     }
   }
 
@@ -116,12 +106,10 @@ import React from 'react';
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { hasError: false, error: null, errorInfo: null };
-  }
+    this.state = { hasError: false, error: null, errorInfo: null }}
 
   static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
+    return { hasError: true }}
 
   componentDidCatch(error, errorInfo) {
     this.setState({
@@ -134,8 +122,7 @@ class ErrorBoundary extends React.Component {
     
     // Send to error reporting service if available
     if (typeof window !== 'undefined' && window.Sentry) {
-      window.Sentry.captureException(error, { extra: errorInfo });
-    }
+      window.Sentry.captureException(error, { extra: errorInfo })}
   }
 
   render() {
@@ -149,11 +136,9 @@ class ErrorBoundary extends React.Component {
             {this.state.errorInfo.componentStack}
           </details>
         </div>
-      );
-    }
+      )}
 
-    return this.props.children;
-  }
+    return this.props.children}
 }
 
 export default ErrorBoundary;
@@ -167,16 +152,14 @@ export default ErrorBoundary;
         file: 'ErrorBoundary.jsx',
         action: 'Added React error boundary component',
         status: 'success'
-      });
-    } catch (error) {
+      })} catch (error) {
       this.improvements.push({
         type: 'error-boundary',
         file: 'ErrorBoundary.jsx',
         action: 'Added React error boundary component',
         status: 'failed',
         error: error.message
-      });
-    }
+      })}
   }
 
   async improveAccessibility() {
@@ -197,10 +180,8 @@ export default ErrorBoundary;
             (match, before, after) => {
               if (!match.includes('alt=')) {
                 modified = true;
-                return `<img${before} alt="Image"${after}>`;
-              }
-              return match;
-            }
+                return `<img${before} alt="Image"${after}>`}
+              return match}
           );
           
           // Add aria-labels to buttons without text
@@ -209,10 +190,8 @@ export default ErrorBoundary;
             (match, attrs) => {
               if (!attrs.includes('aria-label') && !attrs.includes('aria-labelledby')) {
                 modified = true;
-                return `<button${attrs} aria-label="Button">`;
-              }
-              return match;
-            }
+                return `<button${attrs} aria-label="Button">`}
+              return match}
           );
           
           if (modified) {
@@ -222,23 +201,20 @@ export default ErrorBoundary;
               file: path.relative(this.projectRoot, file),
               action: 'Added accessibility attributes',
               status: 'success'
-            });
-          }
+            })}
         }
         
         this.improvements.push({
           type: 'accessibility',
           action: 'Scanned and improved accessibility',
           status: 'success'
-        });
-      } catch (error) {
+        })} catch (error) {
         this.improvements.push({
           type: 'accessibility',
           action: 'Scanned and improved accessibility',
           status: 'failed',
           error: error.message
-        });
-      }
+        })}
     }
   }
 
@@ -256,44 +232,37 @@ export interface User {
   email: string;
   avatar?: string;
   createdAt: Date;
-  updatedAt: Date;
-}
+  updatedAt: Date}
 
 export interface ApiResponse<T> {
   data: T;
   message: string;
   success: boolean;
-  timestamp: string;
-}
+  timestamp: string}
 
 export interface PaginatedResponse<T> extends ApiResponse<T[]> {
   pagination: {
     page: number;
     limit: number;
     total: number;
-    totalPages: number;
-  };
-}
+    totalPages: number}}
 
 export interface ErrorResponse {
   message: string;
   code: string;
-  details?: any;
-}
+  details?: any}
 
 export type LoadingState = 'idle' | 'loading' | 'success' | 'error';
 
 export interface ComponentProps {
   className?: string;
-  children?: React.ReactNode;
-}
+  children?: React.ReactNode}
 
 export interface ButtonProps extends ComponentProps {
   variant?: 'primary' | 'secondary' | 'danger';
   size?: 'small' | 'medium' | 'large';
   disabled?: boolean;
-  onClick?: () => void;
-}
+  onClick?: () => void}
 
 export interface InputProps extends ComponentProps {
   type?: 'text' | 'email' | 'password' | 'number';
@@ -301,16 +270,14 @@ export interface InputProps extends ComponentProps {
   value?: string;
   onChange?: (value: string) => void;
   required?: boolean;
-  error?: string;
-}
+  error?: string}
 `;
 
     try {
       // Ensure types directory exists
       const typesDir = path.dirname(typesPath);
       if (!fs.existsSync(typesDir)) {
-        fs.mkdirSync(typesDir, { recursive: true });
-      }
+        fs.mkdirSync(typesDir, { recursive: true })}
       
       fs.writeFileSync(typesPath, typesCode);
       
@@ -319,16 +286,14 @@ export interface InputProps extends ComponentProps {
         file: 'types/index.ts',
         action: 'Added common TypeScript types',
         status: 'success'
-      });
-    } catch (error) {
+      })} catch (error) {
       this.improvements.push({
         type: 'typescript',
         file: 'types/index.ts',
         action: 'Added common TypeScript types',
         status: 'failed',
         error: error.message
-      });
-    }
+      })}
   }
 
   getAllFiles(dir, extensions) {
@@ -340,14 +305,11 @@ export interface InputProps extends ComponentProps {
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory()) {
-        files = files.concat(this.getAllFiles(fullPath, extensions));
-      } else if (extensions.some(ext => item.endsWith(ext))) {
-        files.push(fullPath);
-      }
+        files = files.concat(this.getAllFiles(fullPath, extensions))} else if (extensions.some(ext => item.endsWith(ext))) {
+        files.push(fullPath)}
     }
     
-    return files;
-  }
+    return files}
 
   async generateReport() {
     const report = {
@@ -361,8 +323,7 @@ export interface InputProps extends ComponentProps {
     };
     
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-    this.log(`📊 Code quality improvement report generated: ${this.reportFile}`);
-  }
+    this.log(`📊 Code quality improvement report generated: ${this.reportFile}`)}
 }
 
 // Run the code quality improver

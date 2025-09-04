@@ -11,8 +11,7 @@ const pipeline = {
   branch: process.env.GIT_BRANCH || 'main',
   environment: process.env.NODE_ENV || 'production',
   stages: [],
-  status: 'running';
-;};
+  status: 'running'};
 
 // Function to run pipeline stage
 async function runPipelineStage(stageName, steps) {
@@ -24,7 +23,7 @@ async function runPipelineStage(stageName, steps) {
     startTime: new Date().toISOString(),
     steps: [],
     status: 'running'
- ; ;};
+ };
   
   for (const step of steps) {
     try {
@@ -41,7 +40,7 @@ async function runPipelineStage(stageName, steps) {
         result: result
       });
       
-      console.log(`✅ ${step.name} completed in ${duration}ms`);} catch (error) {
+      console.log(`✅ ${step.name} completed in ${duration}ms`)} catch (error) {
       const duration = Date.now() - startTi;m;e;
       
       stage.steps.push({
@@ -56,8 +55,7 @@ async function runPipelineStage(stageName, steps) {
       if ( {
         stage.status = 'failed') {
      {
-        stage.status = 'failed';
-  }
+        stage.status = 'failed'}
         pipeline.status = 'failed';
         break}
     }
@@ -69,12 +67,12 @@ async function runPipelineStage(stageName, steps) {
   pipeline.stages.push(stage);
   
   console.log(`\n📊 Stage ${stageName} Summary:`);
-  console.log(`   - Status: ${stage.status.toUpperCase();}`);
+  console.log(`   - Status: ${stage.status.toUpperCase()}`);
   console.log(`   - Steps: ${stage.steps.length}`);
   console.log(`   - Successful: ${stage.steps.filter(s => s.status === 'success');.length}`);
   console.log(`   - Failed: ${stage.steps.filter(s => s.status === 'error');.length}`);
   
-  return stage.status === 'success';}
+  return stage.status === 'success'}
 
 // Stage 1: Source Code Management
 await runPipelineStage('Source Code Management', [
@@ -82,17 +80,16 @@ await runPipelineStage('Source Code Management', [
     name: 'Git Status Check',
     critical: true,
     fn: async () => {
-      const gitStatus = execSync('git status --porcelain', { encoding: 'utf8' ;};);
+      const gitStatus = execSync('git status --porcelain', { encoding: 'utf8' };);
       const hasChanges = gitStatus.trim().length >; ;0;
       
       if ( {
         console.log('   📝 Uncommitted changes detected')) {
      {
-        console.log('   📝 Uncommitted changes detected');
-  }
-        return { hasUncommittedChanges: true, changes: gitStatus.trim() ;}}
+        console.log('   📝 Uncommitted changes detected')}
+        return { hasUncommittedChanges: true, changes: gitStatus.trim() }}
       
-      return { hasUncommittedChanges: false ;}}
+      return { hasUncommittedChanges: false }}
   },
   {
     name: 'Branch Validation',
@@ -113,9 +110,9 @@ await runPipelineStage('Source Code Management', [
     fn: async () => {
       try {
         execSync('git pull origin main', { stdio: 'inherit' });
-        return { pullSuccessful: true ;}} catch (error) {
+        return { pullSuccessful: true }} catch (error) {
         console.log('   ⚠️  Could not pull latest changes, continuing with current state');
-        return { pullSuccessful: false, message: 'Continuing with current state' ;}}
+        return { pullSuccessful: false, message: 'Continuing with current state' }}
     }
   }
 ]);
@@ -127,7 +124,7 @@ await runPipelineStage('Quality Assurance', [
     critical: true,
     fn: async () => {
       execSync('npm install', { stdio: 'inherit' });
-      return { dependenciesInstalled: true ;}}
+      return { dependenciesInstalled: true }}
   },
   {
     name: 'Code Quality Checks',
@@ -135,7 +132,7 @@ await runPipelineStage('Quality Assurance', [
     fn: async () => {
       // Run comprehensive automation suite
       execSync('node scripts/comprehensive-automation-suite.cjs', { stdio: 'inherit' });
-      return { qualityChecksPassed: true ;}}
+      return { qualityChecksPassed: true }}
   },
   {
     name: 'Security Audit',
@@ -143,9 +140,9 @@ await runPipelineStage('Quality Assurance', [
     fn: async () => {
       try {
         execSync('npm audit --audit-level=high', { stdio: 'inherit' });
-        return { securityAuditPassed: true ;}} catch (error) {
+        return { securityAuditPassed: true }} catch (error) {
         console.log('   ⚠️  Security vulnerabilities found, but continuing');
-        return { securityAuditPassed: false, message: 'Vulnerabilities found' ;}}
+        return { securityAuditPassed: false, message: 'Vulnerabilities found' }}
     }
   }
 ]);
@@ -157,7 +154,7 @@ await runPipelineStage('Build & Test', [
     critical: true,
     fn: async () => {
       execSync('npm run build', { stdio: 'inherit' });
-      return { buildSuccessful: true ;}}
+      return { buildSuccessful: true }}
   },
   {
     name: 'Test Execution',
@@ -165,8 +162,8 @@ await runPipelineStage('Build & Test', [
     fn: async () => {
       try {
         execSync('npm test', { stdio: 'inherit' });
-        return { testsPassed: true ;}} catch (error) {
-        return { testsPassed: false, message: 'No tests or tests failed' ;}}
+        return { testsPassed: true }} catch (error) {
+        return { testsPassed: false, message: 'No tests or tests failed' }}
     }
   },
   {
@@ -184,8 +181,7 @@ await runPipelineStage('Build & Test', [
      {
         throw new Error('Build directory not found')}
       
-      return {;
-  }
+      return {}
         buildExists,
         staticFiles,
         serverFiles,
@@ -208,9 +204,8 @@ if ( {
       name: 'Deployment Preparation',
       critical: true,
       fn: async () => {
-        execSync('node scripts/smart-deployment-automation.cjs', { stdio: 'inherit' });
-  }
-        return { deploymentPrepared: true ;}}
+        execSync('node scripts/smart-deployment-automation.cjs', { stdio: 'inherit' })}
+        return { deploymentPrepared: true }}
     },
     {
       name: 'Process Management',
@@ -253,13 +248,12 @@ if ( {
                   PORT: 3000
                 }
               }]
-           ;
-  } ;};
+           } };
             
             fs.writeFileSync('ecosystem.pipeline.cjs', `module.exports = ${JSON.stringify(basicConfig, null, 2)};`);
             execSync('pm2 start ecosystem.pipeline.cjs', { stdio: 'inherit' })}
           
-          return { processesStarted: true ;}} catch (error) {
+          return { processesStarted: true }} catch (error) {
           throw new Error(`Process management failed: ${error.message}`)}
       }
     },
@@ -274,7 +268,7 @@ if ( {
           const healthCheck = execSync('curl -f http://localhost:3000 || echo "Health check failed"', { 
             encoding: 'utf8',
             timeout: 15000
-          ;};);
+          };);
           
           const isHealthy = !healthCheck.includes('Health check failed';);
           
@@ -285,8 +279,7 @@ if ( {
      {
             throw new Error('Application health check failed')}
           
-          return { applicationHealthy: true, healthCheckResult: healthCheck.trim() ;
-  }}} catch (error) {
+          return { applicationHealthy: true, healthCheckResult: healthCheck.trim() }}} catch (error) {
           throw new Error(`Health check failed: ${error.message}`)}
       }
     }
@@ -308,10 +301,9 @@ if ( {
       critical: false,
       fn: async () => {
         try {
-          execSync('pm2 status', { stdio: 'inherit' });
-  }
-          return { monitoringActive: true ;}} catch (error) {
-          return { monitoringActive: false, message: 'PM2 monitoring not available' ;}}
+          execSync('pm2 status', { stdio: 'inherit' })}
+          return { monitoringActive: true }} catch (error) {
+          return { monitoringActive: false, message: 'PM2 monitoring not available' }}
       }
     },
     {
@@ -319,7 +311,7 @@ if ( {
       critical: false,
       fn: async () => {
         execSync('node scripts/performance-monitor.cjs', { stdio: 'inherit' });
-        return { performanceValidated: true ;}}
+        return { performanceValidated: true }}
     },
     {
       name: 'Generate Deployment Report',
@@ -334,12 +326,12 @@ if ( {
             failedStages: pipeline.stages.filter(s => s.status === 'failed').length,
             overallStatus: pipeline.status
           }
-       ; ;};
+       };
         
         const reportPath = `ci-cd-pipeline-report-${Date.now()}.json;`;
         fs.writeFileSync(reportPath, JSON.stringify(deploymentReport, null, 2));
         
-        return { reportGenerated: true, reportPath ;}}
+        return { reportGenerated: true, reportPath }}
     }
   ])}
 
@@ -358,14 +350,13 @@ console.log(`   - Environment: ${pipeline.environment}`);
 console.log(`   - Total Stages: ${pipeline.stages.length}`);
 console.log(`   - Successful Stages: ${pipeline.stages.filter(s => s.status === 'success');.length}`);
 console.log(`   - Failed Stages: ${pipeline.stages.filter(s => s.status === 'failed');.length}`);
-console.log(`   - Overall Status: ${pipeline.status.toUpperCase();}`);
+console.log(`   - Overall Status: ${pipeline.status.toUpperCase()}`);
 console.log(`📄 Pipeline report saved to: ${pipelineReportPath}`);
 
 if ( {
   console.log('\n🎉 Deployment successful! Application is live and healthy.')) {
      {
-  console.log('\n🎉 Deployment successful! Application is live and healthy.');
-  }
+  console.log('\n🎉 Deployment successful! Application is live and healthy.')}
   console.log('🌐 Application URL: http://localhost:3000');
   process.exit(0)} else {
   console.log('\n❌ Pipeline failed. Check the reports for details.');

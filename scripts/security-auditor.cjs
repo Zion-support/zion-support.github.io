@@ -8,19 +8,16 @@ class SecurityAuditor {
   constructor() {
     this.projectRoot = process.cwd();
     this.reportsDir = path.join(this.projectRoot, 'security-reports');
-    this.ensureDirectories();
-  }
+    this.ensureDirectories()}
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-    }
+      fs.mkdirSync(this.reportsDir, { recursive: true })}
   }
 
   log(message) {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`);
-  }
+    console.log(`[${timestamp}] ${message}`)}
 
   async runNpmAudit() {
     this.log('🔍 Running npm audit...');
@@ -41,11 +38,9 @@ class SecurityAuditor {
         vulnerabilities,
         count: vulnerabilityCount,
         status: vulnerabilityCount === 0 ? 'secure' : 'vulnerable'
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`❌ NPM audit failed: ${error.message}`);
-      return { error: error.message };
-    }
+      return { error: error.message }}
   }
 
   async checkEnvironmentVariables() {
@@ -80,11 +75,9 @@ class SecurityAuditor {
                   file: envFile,
                   line: index + 1,
                   variable: key.trim()
-                });
-              }
+                })}
             }
-          });
-        }
+          })}
       }
 
       this.log(`🔐 Found ${foundEnvFiles.length} environment files`);
@@ -94,11 +87,9 @@ class SecurityAuditor {
         envFiles: foundEnvFiles,
         sensitiveVars,
         status: sensitiveVars.length > 0 ? 'needs_review' : 'secure'
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`❌ Environment variables check failed: ${error.message}`);
-      return { error: error.message };
-    }
+      return { error: error.message }}
   }
 
   async checkDependencies() {
@@ -106,8 +97,7 @@ class SecurityAuditor {
     try {
       const packageJsonPath = path.join(this.projectRoot, 'package.json');
       if (!fs.existsSync(packageJsonPath)) {
-        throw new Error('package.json not found');
-      }
+        throw new Error('package.json not found')}
 
       const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
       const dependencies = { ...packageJson.dependencies, ...packageJson.devDependencies };
@@ -131,11 +121,9 @@ class SecurityAuditor {
         totalDependencies: Object.keys(dependencies).length,
         vulnerablePackages: foundVulnerable,
         status: foundVulnerable.length === 0 ? 'secure' : 'needs_review'
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`❌ Dependencies check failed: ${error.message}`);
-      return { error: error.message };
-    }
+      return { error: error.message }}
   }
 
   async checkCodeSecurity() {
@@ -181,10 +169,8 @@ class SecurityAuditor {
                 issue: pattern.name,
                 severity: pattern.severity,
                 count: matches.length
-              });
-            }
-          });
-        } catch (error) {
+              })}
+          })} catch (error) {
           // Skip files that can't be read
         }
       }
@@ -194,11 +180,9 @@ class SecurityAuditor {
       return {
         issues: securityIssues,
         status: securityIssues.length === 0 ? 'secure' : 'needs_review'
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`❌ Code security check failed: ${error.message}`);
-      return { error: error.message };
-    }
+      return { error: error.message }}
   }
 
   findSourceFiles() {
@@ -213,22 +197,18 @@ class SecurityAuditor {
           const stats = fs.statSync(filePath);
           
           if (stats.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-            scanDirectory(filePath);
-          } else if (stats.isFile()) {
+            scanDirectory(filePath)} else if (stats.isFile()) {
             const ext = path.extname(file);
             if (extensions.includes(ext)) {
-              sourceFiles.push(filePath);
-            }
+              sourceFiles.push(filePath)}
           }
-        });
-      } catch (error) {
+        })} catch (error) {
         // Skip directories that can't be read
       }
     };
 
     scanDirectory(this.projectRoot);
-    return sourceFiles;
-  }
+    return sourceFiles}
 
   async generateSecurityReport() {
     this.log('📊 Generating security report...');
@@ -251,8 +231,7 @@ class SecurityAuditor {
     
     this.log(`📄 Security report generated: ${reportFile}`);
     
-    return report;
-  }
+    return report}
 
   generateRecommendations(analysis) {
     const recommendations = [];
@@ -263,8 +242,7 @@ class SecurityAuditor {
         priority: 'high',
         message: `Found ${analysis.npmAudit.count} vulnerabilities. Run 'npm audit fix' to resolve.`,
         impact: 'Reduces security risks'
-      });
-    }
+      })}
 
     if (analysis.environmentVariables && analysis.environmentVariables.sensitiveVars.length > 0) {
       recommendations.push({
@@ -272,8 +250,7 @@ class SecurityAuditor {
         priority: 'high',
         message: 'Found potentially sensitive environment variables. Review and secure them.',
         impact: 'Prevents credential exposure'
-      });
-    }
+      })}
 
     if (analysis.dependencies && analysis.dependencies.vulnerablePackages.length > 0) {
       recommendations.push({
@@ -281,8 +258,7 @@ class SecurityAuditor {
         priority: 'medium',
         message: 'Found potentially vulnerable packages. Consider updating or replacing them.',
         impact: 'Reduces security risks'
-      });
-    }
+      })}
 
     if (analysis.codeSecurity && analysis.codeSecurity.issues.length > 0) {
       recommendations.push({
@@ -290,11 +266,9 @@ class SecurityAuditor {
         priority: 'medium',
         message: 'Found potential security issues in code. Review and fix them.',
         impact: 'Improves code security'
-      });
-    }
+      })}
 
-    return recommendations;
-  }
+    return recommendations}
 
   async run() {
     this.log('🔒 Starting Security Auditor...');
@@ -309,11 +283,9 @@ class SecurityAuditor {
       this.log(`🔍 Code security issues: ${report.analysis.codeSecurity.issues.length || 0}`);
       this.log(`💡 Recommendations: ${report.recommendations.length}`);
       
-      return report;
-    } catch (error) {
+      return report} catch (error) {
       this.log(`💥 Security audit failed: ${error.message}`);
-      throw error;
-    }
+      throw error}
   }
 }
 
@@ -325,12 +297,9 @@ if (require.main === module) {
       console.log('\n🎉 Security Auditor completed successfully!');
       console.log(`🔍 Vulnerabilities: ${report.analysis.npmAudit.count || 0}`);
       console.log(`💡 Recommendations: ${report.recommendations.length}`);
-      process.exit(0);
-    })
+      process.exit(0)})
     .catch((error) => {
       console.error('\n💥 Security Auditor failed:', error.message);
-      process.exit(1);
-    });
-}
+      process.exit(1)})}
 
 module.exports = SecurityAuditor;

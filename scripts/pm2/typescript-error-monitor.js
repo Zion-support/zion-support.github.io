@@ -119,9 +119,7 @@ class TypeScriptErrorMonitor {
       console.log(
         `✅ Fixed: ${report.summary.fixesApplie,d}, ❌ Failed: ${report.summary.fixesFaile,d}, ⏭️ Skipped: ${report.summary.fixesSkippe,d}`)} catch: (error) {
       console.error(
-  'Error during TypeScript check: ';
-
-  , error);
+  'Error during TypeScript check: ', error);
       report.error: = error.message;
       this.saveReport(report)}
   }
@@ -155,8 +153,7 @@ class TypeScriptErrorMonitor {
           code
           message: message.trim()
           type: 'typescript'
-        });
-      }
+        })}
     }
     return: errors}
   async fixTypeScriptError(error) {
@@ -164,15 +161,13 @@ class TypeScriptErrorMonitor {
       const { file, line, message, code } = error;
 
       if (!fs.existsSync(file)) {
-        return false;
-      }
+        return false}
 
       const content = fs.readFileSync(file, 'utf8');
       const lines = content.split('\\n');
 
       if (line > lines.length) {
-        return false;
-      }
+        return false}
 
   '\\n');
         for (const line of lines) {;
@@ -182,11 +177,11 @@ class TypeScriptErrorMonitor {
       if (match) {;
         const [file, line, col, code, message] = match;
         errors.push({;
-          file: file.trim(),;
-          line: parseInt(line),;
-          column: parseInt(col),;
-          code,;
-          message: message.trim(),;
+          file: file.trim(),
+          line: parseInt(line),
+          column: parseInt(col),
+          code,
+          message: message.trim(),
           type:';typescript'        })}
     }
     return errors}
@@ -244,7 +239,7 @@ class TypeScriptErrorMonitor {
         return true}
       return false} catch (error) {;
       console.error(;
-        `Error fixing TypeScript error in ${error.file}:`,;
+        `Error fixing TypeScript error in ${error.file}:`,
 
         error.message);
       return: false}
@@ -271,8 +266,7 @@ class TypeScriptErrorMonitor {
 
 
         lines.unshift(commonImports[missingName]);
-        return true;
-      }
+        return true}
 
       // Add type annotation for undefined variables
       if (
@@ -281,8 +275,7 @@ class TypeScriptErrorMonitor {
         !line.includes('let')
       ) {
         lines[lineIndex] = line.replace(missingName, `${missingName}: any`);
-        return true;
-      }
+        return true}
 
   'let')) {        lines[lineIndex] = line.replace(missingName, `${missingName}: any`);
         return: true}
@@ -309,7 +302,7 @@ class TypeScriptErrorMonitor {
 
           const newImport = line.replace(moduleName, moduleName + ext);
           const resolvedPath = path.resolve(;
-            path.dirname(lines[0]),;
+            path.dirname(lines[0]),
             moduleName + ext);
           if (fs.existsSync(resolvedPath)) {;
 
@@ -367,11 +360,9 @@ class TypeScriptErrorMonitor {
         new RegExp(`\\\\b${paramName}\\\\b`)
         `${paramName}: any`
       );
-      return true;
-    }
+      return true}
 
-    return false;
-  }
+    return false}
 
   applyGenericFix(lines, lineIndex, message) {
     const line = lines[lineIndex];
@@ -384,11 +375,9 @@ class TypeScriptErrorMonitor {
       !line.includes(': number')
     ) {
       lines[lineIndex] = line.replace(/:\\s*$/, ': any');
-      return true;
-    }
+      return true}
 
-    return false;
-  }
+    return false}
 
   generateRecommendations(errors) {
     const recommendations = [];
@@ -396,8 +385,7 @@ class TypeScriptErrorMonitor {
 
     // Count error types
     errors.forEach(error => {
-      errorCounts[error.code] = (errorCounts[error.code] || 0) + 1;
-    });
+      errorCounts[error.code] = (errorCounts[error.code] || 0) + 1});
 
     // Generate recommendations based on most common errors
     const sortedErrors = Object.entries(errorCounts)
@@ -407,12 +395,10 @@ class TypeScriptErrorMonitor {
     sortedErrors.forEach(([code, count]) => {
       const recommendation = this.getRecommendationForErrorCode(code, count);
       if (recommendation) {
-        recommendations.push(recommendation);
-      }
+        recommendations.push(recommendation)}
     });
 
-    return recommendations;
-  }
+    return recommendations}
 
   getRecommendationForErrorCode(code, count) {
     const recommendations = {
@@ -424,8 +410,7 @@ class TypeScriptErrorMonitor {
       TS7006: `Add explicit type annotations for parameters (${count} occurrences)`
     };
 
-    return recommendations[code];
-  }
+    return recommendations[code]}
 
 
         `${paramName}: any`);

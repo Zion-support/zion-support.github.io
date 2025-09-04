@@ -8,8 +8,7 @@ describe('PerformanceEnhancerdynamic', () => {
     render(<PerformanceEnhancerdynamic />);
     expect(
       screen.getByTestId('performanceenhancer.dynamic')
-    ).toBeInTheDocument();
-  });
+    ).toBeInTheDocument()});
 
   test('displays correct content', () => {
     render(<PerformanceEnhancerdynamic />);
@@ -24,5 +23,4 @@ describe('PerformanceEnhancerdynamic', () => {
   test('applies correct styling', () => {
     render(<PerformanceEnhancerdynamic />);
     // Add styling tests if needed
-  });
-});
+  })});

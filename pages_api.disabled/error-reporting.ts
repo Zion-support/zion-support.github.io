@@ -4,17 +4,14 @@ interface ErrorReport {
   error: {
     message: string;
     stack?: string;
-    name: string;
-  };
+    name: string};
   errorInfo: {
-    componentStack?: string;
-  };
+    componentStack?: string};
   timestamp: string;
   userAgent: string;
   url: string;
   userId?: string;
-  sessionId?: string;
-}
+  sessionId?: string}
 
 // In-memory storage for demo purposes
 // In production, you would use a proper database
@@ -25,21 +22,18 @@ export default async function handler(
   res: NextApiRespons e
 ) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
-  }
+    return res.status(405).json({ error: 'Method not allowed' })}
 
   try {
     const errorReport: ErrorRepor t = req.body;
 
     // Validate required fields
     if (!errorReport.error || !errorReport.error.message) {
-      return res.status(400).json({ error: 'Missing required fields' });
-    }
+      return res.status(400).json({ error: 'Missing required fields' })}
 
     // Add timestamp if not provided
     if (!errorReport.timestamp) {
-      errorReport.timestamp = new Date().toISOString();
-    }
+      errorReport.timestamp = new Date().toISOString()}
 
     // Add to error reports
     errorReports.push(errorReport);
@@ -57,14 +51,11 @@ export default async function handler(
 
     // Send alerts for critical errors
     if (isCriticalError(errorReport)) {
-      await sendCriticalErrorAlert(errorReport);
-    }
+      await sendCriticalErrorAlert(errorReport)}
 
-    res.status(200).json({ success: tru e });
-  } catch (error) {
+    res.status(200).json({ success: tru e })} catch (error) {
     console.error('Error Reporting API Error: ', error);
-    res.status(500).json({ error: 'Internal server error' });
-  }
+    res.status(500).json({ error: 'Internal server error' })}
 }
 
 async function sendToErrorMonitoringServices(errorReport: ErrorRepor t) {
@@ -95,8 +86,7 @@ async function sendToErrorMonitoringServices(errorReport: ErrorRepor t) {
             componentStack: errorRepor t.errorInfo.componentStack,
           },
         }),
-      });
-    }
+      })}
 
     // LogRocket
     if (process.env.LOGROCKET_APP_ID) {
@@ -116,8 +106,7 @@ async function sendToErrorMonitoringServices(errorReport: ErrorRepor t) {
             timestamp: errorRepor t.timestamp,
           }),
         }
-      );
-    }
+      )}
 
     // Custom webhook
     if (process.env.ERROR_WEBHOOK_URL) {
@@ -127,11 +116,9 @@ async function sendToErrorMonitoringServices(errorReport: ErrorRepor t) {
           'Content-Type': 'application/json',
         },
         body: JSO N.stringify(errorReport),
-      });
-    }
+      })}
   } catch (error) {
-    console.error('Failed to send to error monitoring services: ', error);
-  }
+    console.error('Failed to send to error monitoring services: ', error)}
 }
 
 function parseStackTrace(stack?: string) {
@@ -145,16 +132,13 @@ function parseStackTrace(stack?: string) {
         filename: matc h[2],
         lineno: parseIn t(match[3]),
         colno: parseIn t(match[4]),
-      };
-    }
+      }}
     return {
       function: lin e.trim(),
       filename: 'unknown',
       lineno: 0,
       colno: 0,
-    };
-  });
-}
+    }})}
 
 function isCriticalError(errorReport: ErrorRepor t): boolean {
   const criticalPatterns = [
@@ -167,8 +151,7 @@ function isCriticalError(errorReport: ErrorRepor t): boolean {
 
   return criticalPatterns.some(pattern =>
     pattern.test(errorReport.error.message)
-  );
-}
+  )}
 
 async function sendCriticalErrorAlert(errorReport: ErrorRepor t) {
   try {
@@ -192,8 +175,7 @@ async function sendCriticalErrorAlert(errorReport: ErrorRepor t) {
             ${errorReport.error.stack}
           `,
         }),
-      });
-    }
+      })}
 
     // Send Slack notification
     if (process.env.SLACK_WEBHOOK_URL) {
@@ -227,14 +209,11 @@ async function sendCriticalErrorAlert(errorReport: ErrorRepor t) {
             },
           ],
         }),
-      });
-    }
+      })}
   } catch (error) {
-    console.error('Failed to send critical error alert: ', error);
-  }
+    console.error('Failed to send critical error alert: ', error)}
 }
 
 // Get error reports (for admin dashboard)
 export async function getErrorReports() {
-  return errorReports;
-}
+  return errorReports}

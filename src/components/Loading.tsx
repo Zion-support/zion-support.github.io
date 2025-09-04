@@ -1,21 +1,21 @@
-import React from 'react',;';';
-    ';';';
-import { Loader2';';';';
-  } from 'lucide-react',';';
-    ';';';
-interface LoadingProps {
-  ';';';';: any;
-  size?: 'sm' | 'md' | 'lg';';
-  text?: string;';';
-  fullScreen?: boolean
-}';';';
-export default function Loading(props: any) {';';';
-  const sizeClasses = {',';';
-    ';';';
-    sm: 'w-4 h-4',',';';
-    ';';';
-    md: 'w-8 h-8',',';';
-    ';';';
+import React from 'react',;';';';';
+    ';';';';';
+import { Loader2';';';';';';
+  } from 'lucide-react',';';';';
+    ';';';';
+interface LoadingProps {';';
+  ';';';';: any;';';
+  size?: 'sm' | 'md' | 'lg';';';';
+  text?: string;';';';
+  fullScreen?: boolean';';
+}';';';';';
+export default function Loading(props: any) {';';';';';
+  const sizeClasses = {',';';';';
+    ';';';';';
+    sm: 'w-4 h-4',',';';';';
+    ';';';';';
+    md: 'w-8 h-8',',';';';';
+    ';';';';';
     lg: 'w-12 h-12'};
   const content = (
     <div className={`flex flex-col items-center justify-center space-y-4`>
@@ -55,21 +55,21 @@ export function SkeletonCard(props: any) {
   );
 }
 export function SkeletonText(props: any) {
-  return (
-    <div className="min-h-screen bg-white">
-      {Array.from({ length: line s';
-  }).map((_, i) => (';';
-        <div key={i}';';';
-          className={`h-3 bg-gray-200 rounded ${',';';
-    ';';';
+  return (';
+    <div className="min-h-screen bg-white">';';
+      {Array.from({ length: line s';';';
+  }).map((_, i) => (';';';';
+        <div key={i}';';';';';
+          className={`h-3 bg-gray-200 rounded ${',';';';';
+    ';';';';';
             i === lines - 1 ? 'w-2/3' : 'w-full';
 }`}
         ></di></div>
       ))
       )}
-    </div>
-  );
-}';
-    </div>';';
-  );';';';
-}"';';';';
+    </div>';
+  );';';
+}';';';
+    </div>';';';';
+  );';';';';';
+}"';';';';;';;';

@@ -24,11 +24,9 @@ export interface MicroSaasService {
     name: string;
     id: string;
     avatarUrl?: string;
-    verified: boolean;
-  };
+    verified: boolean};
   images: string[];
-  createdAt: string;
-}
+  createdAt: string}
 export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
   {
     id: "ai-quantum-computing",
@@ -1096,8 +1094,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
   }
 ];
 export const getMicroSaasServiceById = (id: string): MicroSaasService | undefined => {
-  return MICRO_SAAS_SERVICES.find(service => service.id === id);
-};
+  return MICRO_SAAS_SERVICES.find(service => service.id === id)};
 export const MICRO_SAAS_CATEGORIES = [
   'AI Business Solutions',
   'IT Infrastructure', 
@@ -1131,8 +1128,6 @@ export const CONTACT_INFO = {
   address: '123 Tech Street, Innovation City, IC 12345'
 };
 export const getMicroSaasServicesByCategory = (category: string): MicroSaasService[] => {
-  return MICRO_SAAS_SERVICES.filter(service => service.category === category);
-};
+  return MICRO_SAAS_SERVICES.filter(service => service.category === category)};
 export const getMicroSaasCategories = (): string[] => {
-  return [...new Set(MICRO_SAAS_SERVICES.map(service => service.category))];
-};
+  return [...new Set(MICRO_SAAS_SERVICES.map(service => service.category))]};

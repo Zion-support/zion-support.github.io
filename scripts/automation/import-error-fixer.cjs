@@ -10,13 +10,11 @@ class ImportErrorFixer {
     this.projectRoot = process.cwd();
     this.reportFile = path.join(this.projectRoot, 'import-error-fixer-report.json');
     this.fixesApplied = [];
-    this.errorsFound = [];
-  }
+    this.errorsFound = []}
 
   log(message, type = 'info') {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${type.toUpperCase()}] ${message}`);
-  }
+    console.log(`[${timestamp}] [${type.toUpperCase()}] ${message}`)}
 
   async fixImportErrors() {
     this.log('Fixing import errors...');
@@ -45,8 +43,7 @@ class ImportErrorFixer {
               if (fs.existsSync(resolvedPath + ext)) {
                 newContent = newContent.replace(match[0], match[0].replace(importPath, importPath + ext));
                 modified = true;
-                break;
-              }
+                break}
             }
           }
         }
@@ -55,8 +52,7 @@ class ImportErrorFixer {
       // Fix missing React imports for JSX files
       if ((file.endsWith('.jsx') || file.endsWith('.tsx')) && newContent.includes('React') && !newContent.includes("import React") && !newContent.includes("import * as React")) {
         newContent = "import React from 'react';\n" + newContent;
-        modified = true;
-      }
+        modified = true}
       
       // Fix duplicate imports
       const importLines = newContent.match(/import\s+.*\s+from\s+['"][^'"]+['"]/g) || [];
@@ -66,18 +62,14 @@ class ImportErrorFixer {
         const lines = newContent.split('\n');
         const filteredLines = lines.filter((line, index) => {
           if (line.trim().startsWith('import ')) {
-            return lines.indexOf(line) === index;
-          }
-          return true;
-        });
+            return lines.indexOf(line) === index}
+          return true});
         newContent = filteredLines.join('\n');
-        modified = true;
-      }
+        modified = true}
       
       if (modified) {
         fs.writeFileSync(filePath, newContent);
-        this.fixesApplied.push(`Fixed import issues in ${file}`);
-      }
+        this.fixesApplied.push(`Fixed import issues in ${file}`)}
     }
   }
 
@@ -95,20 +87,17 @@ class ImportErrorFixer {
       // Fix default exports
       if (newContent.includes('export default') && !newContent.includes('export default function') && !newContent.includes('export default class')) {
         // Ensure proper default export syntax
-        newContent = newContent.replace(/export\s+default\s+([^;]+);/g, 'export default $1;');
-        modified = true;
-      }
+        newContent = newContent.replace(/export\s+default\s+([^]+);/g, 'export default $1;');
+        modified = true}
       
       // Fix named exports
       newContent = newContent.replace(/export\s+{\s*([^}]+)\s*}/g, (match, exports) => {
         const cleanExports = exports.split(',').map(e => e.trim()).filter(e => e).join(', ');
-        return `export { ${cleanExports} }`;
-      });
+        return `export { ${cleanExports} }`});
       
       if (modified) {
         fs.writeFileSync(filePath, newContent);
-        this.fixesApplied.push(`Fixed export issues in ${file}`);
-      }
+        this.fixesApplied.push(`Fixed export issues in ${file}`)}
     }
   }
 
@@ -125,8 +114,7 @@ class ImportErrorFixer {
     };
     
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-    this.log(`Report generated: ${this.reportFile}`);
-  }
+    this.log(`Report generated: ${this.reportFile}`)}
 
   async run() {
     this.log('Starting import error fixing...');
@@ -141,20 +129,17 @@ class ImportErrorFixer {
       
       if (this.errorsFound.length > 0) {
         this.log(`Remaining errors: ${this.errorsFound.length}`, 'warn');
-        this.errorsFound.forEach(error => this.log(`- ${error}`, 'warn'));
-      }
+        this.errorsFound.forEach(error => this.log(`- ${error}`, 'warn'))}
       
     } catch (error) {
       this.log(`Error during import fixing process: ${error.message}`, 'error');
-      throw error;
-    }
+      throw error}
   }
 }
 
 // Run the fixer
 if (require.main === module) {
   const fixer = new ImportErrorFixer();
-  fixer.run().catch(console.error);
-}
+  fixer.run().catch(console.error)}
 
 module.exports = ImportErrorFixer;

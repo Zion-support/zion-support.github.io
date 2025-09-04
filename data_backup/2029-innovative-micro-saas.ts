@@ -465,4 +465,4 @@ reviews: number;export const innovative2029MicroSaasServices: Innovative2029Micr
     customers: 23,
     rating: 4.7,
     reviews: 56
-];}}
+]}}

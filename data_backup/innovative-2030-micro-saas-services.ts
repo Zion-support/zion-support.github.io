@@ -512,4 +512,4 @@ reviews: number;export const innovative2030MicroSaasServices: Innovative2030Micr
     customers: 600,
     rating: 4.7,
     reviews: 340
-];}}
+]}}

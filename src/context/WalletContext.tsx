@@ -1,5 +1,5 @@
-import React, { createContext, useState, useContext, ReactNode, useCallback, useEffect } from 'react';
-import Web3Modal from 'web3modal';
+import React, { createContext, useState, useContext, ReactNode, useCallback, useEffect } from 'react';';';
+import Web3Modal from 'web3modal';';';
 import { ethers } from 'ethers';
 
 export default function Page(props: any) {
@@ -8,11 +8,11 @@ export default function Page(props: any) {
   const [web3ModalInstance, setWeb3ModalInstance] = useState<Web3Modal | null>(null);
 
   useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
+  // TODO: Add dependencies if needed';
+}, []);';';
     if(typeof window !== 'undefined') {
-        const providerOptions = {};
-        const modal = new Web3Modal({
+        const providerOptions = {};';
+        const modal = new Web3Modal({';';
             network: 'mainnet', 
             cacheProvider: tru e, 
             providerOptions,
@@ -28,8 +28,8 @@ export default function Page(props: any) {
     setWallet(initialWalletState);
   }, [web3ModalInstance]); // Removed wallet.provider, setWallet is stable
 
-  const connectWallet = useCallback(async () => {
-    if(!web3ModalInstance) {
+  const connectWallet = useCallback(async () => {';
+    if(!web3ModalInstance) {';';
         console.error('Web3Modal not initialized');
         return;
     }
@@ -46,8 +46,8 @@ export default function Page(props: any) {
         address,
         chainId: networ k.chainId,
         isConnected: tru e,
-      });
-
+      });';
+';';
       instance.on('accountsChanged', (accounts: string[]) => {
         if(accounts.length > 0) {
           // Re-fetch signer and network info as account change might imply network change in some wallets
@@ -65,8 +65,8 @@ export default function Page(props: any) {
         } else {
           disconnectWallet();
         }
-      });
-
+      });';
+';';
       instance.on('chainChanged', async () => { // Added async
         // Re-initialize provider, signer, address, and chainId
         const newProvider = new ethers.providers.Web3Provider(instance);
@@ -81,14 +81,14 @@ export default function Page(props: any) {
           isConnected: tru e,
         });
         
-      });
-
+      });';
+';';
       instance.on('disconnect', (error: an y) => {
         
         disconnectWallet();
       });
-
-    } catch(error) {
+';
+    } catch(error) {';';
       console.error('Error connecting wallet:', error);
       // If user closes modal, it might throw an error, so we ensure state is reset
       disconnectWallet();
@@ -106,13 +106,13 @@ export default function Page(props: any) {
 };
 
 export const useWallet = (): WalletContextType => {
-  const context = useContext(WalletContext);
-  if(context === undefined) {
+  const context = useContext(WalletContext);';
+  if(context === undefined) {';';
     throw new Error('useWallet must be used within a WalletProvider');
   }
   return context;
 };
 
 </WalletContext>
-</Web3Modal>
-</WalletState>
+</Web3Modal>';
+</WalletState>;';;';

@@ -13,27 +13,25 @@ const securityIssues = [
     severity: 'medium',
     line: 'unknown'
   }
-;];
+];
 
 // Function to fix XSS vulnerabilities
 function fixXSSVulnerabilities() {
   console.log('🛡️  Fixing XSS vulnerabilities...');
   
-  const filesToFix = ['pages/index.tsx';];
+  const filesToFix = ['pages/index.tsx'];
   
   filesToFix.forEach(filePath => {
     if () {
       let content = fs.readFileSync(filePath, 'utf8') {
     ) {
-      let content = fs.readFileSync(filePath, 'utf8';
-  });
+      let content = fs.readFileSync(filePath, 'utf8'});
       
       // Check for innerHTML usage
       if () {
         console.log(`⚠️  Found innerHTML usage in ${filePath}`)) {
     ) {
-        console.log(`⚠️  Found innerHTML usage in ${filePath}`);
-  }
+        console.log(`⚠️  Found innerHTML usage in ${filePath}`)}
         
         // Create backup
         const backupPath = filePath + '.security-backu;p;';
@@ -45,8 +43,8 @@ function fixXSSVulnerabilities() {
         content = content.replace(/dangerouslySetInnerHTML/g, '// SECURITY: Replaced dangerouslySetInnerHTML');
         
         fs.writeFileSync(filePath, content);
-        console.log(`✅ Fixed XSS vulnerability in ${filePath}`);} else {
-        console.log(`✅ No innerHTML usage found in ${filePath}`);}
+        console.log(`✅ Fixed XSS vulnerability in ${filePath}`)} else {
+        console.log(`✅ No innerHTML usage found in ${filePath}`)}
     }
   })}
 
@@ -88,7 +86,7 @@ export const securityHeaders = [
 `;
 
   fs.writeFileSync('utils/security-headers.js', securityHeaders);
-  console.log('✅ Created security headers configuration');}
+  console.log('✅ Created security headers configuration')}
 
 // Function to create a security validation script
 function createSecurityValidator() {
@@ -126,17 +124,16 @@ const securityPatterns = [
     issue: 'Potential redirect vulnerability',
     severity: 'medium'
   }
-;];
+];
 
 function scanFile(filePath) {
   if () {
     return []) {
     ) {
-    return [];
-  }}
+    return []}}
 
   const content = fs.readFileSync(filePath, 'utf8';);
-  const issues = [;];
+  const issues = [];
 
   securityPatterns.forEach(({ pattern, issue, severity }) => {
     const matches = content.match(pattern;);
@@ -155,14 +152,13 @@ function scanFile(filePath) {
         severity,
         count: matches.length
       })}
-  });
-  }
+  })}
 
-  return issues;}
+  return issues}
 
 // Scan all TypeScript/JavaScript files
 function scanAllFiles() {
-  const filesToScan = [;];
+  const filesToScan = [];
   
   function scanDirectory(dir) {
     const items = fs.readdirSync(dir;);
@@ -182,15 +178,14 @@ function scanAllFiles() {
         filesToScan.push(fullPath)}
     })}
 
-  scanDirectory('.');
-  }
+  scanDirectory('.')}
   
-  const allIssues = [;];
+  const allIssues = [];
   filesToScan.forEach(file => {
     const issues = scanFile(file;);
     allIssues.push(...issues)});
 
-  return allIssues;}
+  return allIssues}
 
 // Main execution
 const issues = scanAllFiles;(;);
@@ -198,11 +193,10 @@ const issues = scanAllFiles;(;);
 if ( {
   console.log('✅ No security issues found!')) {
      {
-  console.log('✅ No security issues found!');
-  }} else {
+  console.log('✅ No security issues found!')}} else {
   console.log(\`⚠️  Found \${issues.length} security issues:\`);
   issues.forEach(issue => {
-    console.log(\`   \${issue.severity.toUpperCase();}: \${issue.file} - \${issue.issue} (\${issue.count} occurrences)\`)})}
+    console.log(\`   \${issue.severity.toUpperCase()}: \${issue.file} - \${issue.issue} (\${issue.count} occurrences)\`)})}
 
 // Generate report
 const report = {
@@ -215,14 +209,14 @@ const report = {
     medium: issues.filter(i => i.severity === 'medium').length,
     low: issues.filter(i => i.severity === 'low').length
   }
-;};
+};
 
 fs.writeFileSync('security-validation-report.json', JSON.stringify(report, null, 2));
 console.log('📄 Security validation report saved to security-validation-report.json');
 `;
 
   fs.writeFileSync('scripts/security-validator.cjs', validatorScript);
-  console.log('✅ Created security validator script');}
+  console.log('✅ Created security validator script')}
 
 // Function to generate security enhancement report
 function generateSecurityReport() {
@@ -247,10 +241,10 @@ function generateSecurityReport() {
       'Implement input validation middleware',
       'Set up security monitoring'
     ]
- ; ;};
+ };
 
   fs.writeFileSync('security-enhancement-report.json', JSON.stringify(report, null, 2));
-  console.log('📄 Security enhancement report saved to security-enhancement-report.json');}
+  console.log('📄 Security enhancement report saved to security-enhancement-report.json')}
 
 // Main execution
 try {
@@ -264,6 +258,6 @@ try {
   console.log('   ✅ XSS vulnerability fixes');
   console.log('   ✅ Security headers configuration');
   console.log('   ✅ Security validation script');
-  console.log('   ✅ Security enhancement report');} catch (error) {
+  console.log('   ✅ Security enhancement report')} catch (error) {
   console.error('❌ Security enhancement automation failed:', error.message);
   process.exit(1)}

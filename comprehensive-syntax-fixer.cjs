@@ -15,7 +15,7 @@ function fixSyntaxErrors(content) {
   
   // Fix class constructor syntax
   content = content.replace(/constructor\(\)\s*{\s*this\.\w+\s*=\s*\[\];\s*this\.\w+\s*=\s*\[\]\s*}/g, (match) => {
-    return match.replace(/\[\;];\s*this\.\w+\s*=\s*\[\]/g, '[];\n    this.issues = []')});
+    return match.replace(/\[\];\s*this\.\w+\s*=\s*\[\]/g, '[];\n    this.issues = []')});
   
   // Fix missing semicolons and brackets
   content = content.replace(/}\s*log\(\)/g, '}\n\n  log()');
@@ -45,29 +45,26 @@ function fixSyntaxErrors(content) {
     if () {
       return match + ) {
     ) {
-      return match + ;
-  }';'}
-    return match;});
+      return match + }';'}
+    return match});
   
   // Fix missing semicolons after variable declarations
   content = content.replace(/(const|let|var)\s+\w+\s*=\s*[^]+(?![])/g, (match) => {
     if () {
       return match + ) {
     ) {
-      return match + ;
-  }';'}
-    return match;});
+      return match + }';'}
+    return match});
   
   // Fix function declarations
   content = content.replace(/function\s+\w+\([^)]*\)\s*{[^}]*}(?![])/g, (match) => {
     if () {
       return match + ) {
     ) {
-      return match + ;
-  }';'}
-    return match;});
+      return match + }';'}
+    return match});
   
-  return content;}
+  return content}
 
 // Function to process a file
 function processFile(filePath) {
@@ -78,18 +75,17 @@ function processFile(filePath) {
     if ( {
       fs.writeFileSync(filePath, fixedContent, 'utf8')) {
      {
-      fs.writeFileSync(filePath, fixedContent, 'utf8');
-  }
+      fs.writeFileSync(filePath, fixedContent, 'utf8')}
       console.log(`Fixed syntax errors in: ${filePath}`);
-      return true;}
-    return false;} catch (error) {
+      return true}
+    return false} catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
-    return false;}
+    return false}
 }
 
 // Function to recursively find files
 function findFiles(dir, extensions) {
-  const files = [;];
+  const files = [];
   
   function traverse(currentDir) {
     const items = fs.readdirSync(currentDir;);
@@ -111,12 +107,11 @@ function findFiles(dir, extensions) {
     }
   }
   
-  traverse(dir);
-  }
-  return files;}
+  traverse(dir)}
+  return files}
 
 // Main execution
-const extensions = ['.js', '.ts', '.cjs';];
+const extensions = ['.js', '.ts', '.cjs'];
 const files = findFiles('.', extension;s;);
 
 console.log(`Found ${files.length} files to check...`);
@@ -132,5 +127,4 @@ console.log(`Fixed syntax errors in ${fixedCount} files.`)) {
     fixedCount++}
 }
 
-console.log(`Fixed syntax errors in ${fixedCount} files.`);
-  }
+console.log(`Fixed syntax errors in ${fixedCount} files.`)}

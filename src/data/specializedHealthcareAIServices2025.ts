@@ -35,14 +35,10 @@ const zionContact = {
 
   phone: "+1 302 464 0950","
   email: "kleber@ziontechgroup.com","
-  website: "https://ziontechgroup.com",;  ;
-  ;
+  website: "https://ziontechgroup.com",
   ;
   ;"
-  address: "364 E Main St STE 1008 Middletown DE 19709"};
-;
-
-};
+  address: "364 E Main St STE 1008 Middletown DE 19709"}};
 
 export const specializedHealthcareAIServices2025: HealthcareAIServic e[] = [{
 
@@ -62,7 +58,7 @@ export const specializedHealthcareAIServices2025: HealthcareAIServic e[] = [{
       "Integration with PACS systems","
       "Real-time analysis","
       "Clinical workflow optimization"
-    ],;
+    ],
     benefits[;"
       "30% faster diagnosis","
       "Improved diagnostic accuracy","
@@ -70,22 +66,22 @@ export const specializedHealthcareAIServices2025: HealthcareAIServic e[] = [{
       "Enhanced patient outcomes","
       "Cost optimization","
       "24/7 diagnostic support"
-    ],;"
-    targetAudience["Hospitals", "Imaging centers", "Radiology practices", "Healthcare systems"],;"
-    tags["Medical Imaging", "AI", "Diagnostics", "Radiology", "Healthcare"],;"
+    ],"
+    targetAudience["Hospitals", "Imaging centers", "Radiology practices", "Healthcare systems"],"
+    tags["Medical Imaging", "AI", "Diagnostics", "Radiology", "Healthcare"],"
     marketPrice: "$7,000 - $11,000/month","
-    competitors["Aidoc", "Zebra Medical Vision", "Butterfly Network"],;"
+    competitors["Aidoc", "Zebra Medical Vision", "Butterfly Network"],"
     roi: "400% within 18 months","
     setupTime: "8-12 weeks","
-    compliance["HIPAA", "FDA 510(k)", "CE Mark", "ISO 13485"],;"
-    fdaApproval["FDA-cleared algorithms", "Class II medical devices", "Clinical validation"],;"
-    clinicalValidation["Peer-reviewed studies", "Clinical trials", "Real-world evidence"],;
+    compliance["HIPAA", "FDA 510(k)", "CE Mark", "ISO 13485"],"
+    fdaApproval["FDA-cleared algorithms", "Class II medical devices", "Clinical validation"],"
+    clinicalValidation["Peer-reviewed studies", "Clinical trials", "Real-world evidence"],
     useCases[;"
       "Chest X-ray analysis","
       "Brain MRI interpretation","
       "Lung CT screening","
       "Emergency radiology"
-    ],;"
+    ],"
     technologies["Deep Learning", "Computer Vision", "Medical Imaging", "Clinical AI"]}, {
 
     id: 2,"
@@ -104,7 +100,7 @@ export const specializedHealthcareAIServices2025: HealthcareAIServic e[] = [{
       "Research collaboration tools","
       "Data security compliance","
       "Scalable processing"
-    ],;
+    ],
     benefits[;"
       "50% faster genomic analysis","
       "Improved variant detection","
@@ -112,22 +108,22 @@ export const specializedHealthcareAIServices2025: HealthcareAIServic e[] = [{
       "Enhanced research capabilities","
       "Cost optimization","
       "Clinical decision support"
-    ],;"
-    targetAudience["Genomic labs", "Research institutions", "Pharmaceutical companies", "Healthcare systems"],;"
-    tags["Genomics", "AI", "Personalized Medicine", "Genetic Testing", "Research"],;"
+    ],"
+    targetAudience["Genomic labs", "Research institutions", "Pharmaceutical companies", "Healthcare systems"],"
+    tags["Genomics", "AI", "Personalized Medicine", "Genetic Testing", "Research"],"
     marketPrice: "$5,500 - $8,500/month","
-    competitors["Illumina", "23andMe", "AncestryDNA"],;"
+    competitors["Illumina", "23andMe", "AncestryDNA"],"
     roi: "350% within 24 months","
     setupTime: "6-10 weeks","
-    compliance["HIPAA", "CLIA", "CAP", "GDPR"],;"
-    fdaApproval["LDT regulations", "Clinical validation", "Quality assurance"],;"
-    clinicalValidation["Clinical studies", "Validation studies", "Peer-reviewed research"],;
+    compliance["HIPAA", "CLIA", "CAP", "GDPR"],"
+    fdaApproval["LDT regulations", "Clinical validation", "Quality assurance"],"
+    clinicalValidation["Clinical studies", "Validation studies", "Peer-reviewed research"],
     useCases[;"
       "Genetic disease diagnosis","
       "Cancer genomics","
       "Pharmacogenomics","
       "Population genomics"
-    ],;"
+    ],"
     technologies["Machine Learning", "Bioinformatics", "Cloud Computing", "Data Analytics"]}, {
 
     id: 3,"
@@ -146,7 +142,7 @@ export const specializedHealthcareAIServices2025: HealthcareAIServic e[] = [{
       "Custom reporting","
       "Data integration","
       "Performance benchmarking"
-    ],;
+    ],
     benefits[;"
       "Improved patient outcomes","
       "Operational cost reduction","
@@ -154,22 +150,22 @@ export const specializedHealthcareAIServices2025: HealthcareAIServic e[] = [{
       "Population health optimization","
       "Quality improvement","
       "Risk management"
-    ],;"
-    targetAudience["Healthcare systems", "Hospitals", "Clinics", "Health plans"],;"
-    tags["Healthcare Analytics", "Data Science", "Population Health", "Performance Metrics", "BI"],;"
+    ],"
+    targetAudience["Healthcare systems", "Hospitals", "Clinics", "Health plans"],"
+    tags["Healthcare Analytics", "Data Science", "Population Health", "Performance Metrics", "BI"],"
     marketPrice: "$3,500 - $5,500/month","
-    competitors["Tableau", "Power BI", "Qlik", "Domo"],;"
+    competitors["Tableau", "Power BI", "Qlik", "Domo"],"
     roi: "250% within 12 months","
     setupTime: "4-6 weeks","
-    compliance["HIPAA", "HITECH", "SOC 2", "GDPR"],;"
-    fdaApproval["Not required", "Data analytics platform", "Clinical decision support"],;"
-    clinicalValidation["Performance metrics", "User validation", "Clinical outcomes"],;
+    compliance["HIPAA", "HITECH", "SOC 2", "GDPR"],"
+    fdaApproval["Not required", "Data analytics platform", "Clinical decision support"],"
+    clinicalValidation["Performance metrics", "User validation", "Clinical outcomes"],
     useCases[;"
       "Performance analytics","
       "Quality improvement","
       "Population health","
       "Operational efficiency"
-    ],;"
+    ],"
     technologies["Data Analytics", "Machine Learning", "Business Intelligence", "Cloud Computing"]}, {
 
     id: 4,"
@@ -188,7 +184,7 @@ export const specializedHealthcareAIServices2025: HealthcareAIServic e[] = [{
       "Mobile applications","
       "Secure messaging","
       "Analytics dashboard"
-    ],;
+    ],
     benefits[;"
       "Improved access to care","
       "Reduced healthcare costs","
@@ -196,22 +192,22 @@ export const specializedHealthcareAIServices2025: HealthcareAIServic e[] = [{
       "Automated care coordination","
       "24/7 availability","
       "Scalable operations"
-    ],;"
-    targetAudience["Healthcare systems", "Telemedicine providers", "Clinics", "Health plans"],;"
-    tags["Telemedicine", "AI", "Virtual Care", "Healthcare", "Mobile Health"],;"
+    ],"
+    targetAudience["Healthcare systems", "Telemedicine providers", "Clinics", "Health plans"],"
+    tags["Telemedicine", "AI", "Virtual Care", "Healthcare", "Mobile Health"],"
     marketPrice: "$4,500 - $7,000/month","
-    competitors["Teladoc", "Amwell", "MDLive"],;"
+    competitors["Teladoc", "Amwell", "MDLive"],"
     roi: "300% within 18 months","
     setupTime: "6-8 weeks","
-    compliance["HIPAA", "HITECH", "State regulations", "Telemedicine laws"],;"
-    fdaApproval["Not required", "Telemedicine platform", "Clinical decision support"],;"
-    clinicalValidation["Clinical outcomes", "User satisfaction", "Quality metrics"],;
+    compliance["HIPAA", "HITECH", "State regulations", "Telemedicine laws"],"
+    fdaApproval["Not required", "Telemedicine platform", "Clinical decision support"],"
+    clinicalValidation["Clinical outcomes", "User satisfaction", "Quality metrics"],
     useCases[;"
       "Primary care consultations","
       "Specialist referrals","
       "Follow-up care","
       "Chronic disease management"
-    ],;"
+    ],"
     technologies["AI/ML", "Video Conferencing", "Mobile Apps", "Cloud Computing"]}, {
 
     id: 5,"
@@ -230,7 +226,7 @@ export const specializedHealthcareAIServices2025: HealthcareAIServic e[] = [{
       "Outcome prediction","
       "Safety assessment","
       "Regulatory compliance"
-    ],;
+    ],
     benefits[;"
       "50% faster drug discovery","
       "Improved success rates","
@@ -238,22 +234,22 @@ export const specializedHealthcareAIServices2025: HealthcareAIServic e[] = [{
       "Enhanced safety profiles","
       "Optimized trials","
       "Regulatory efficiency"
-    ],;"
-    targetAudience["Pharmaceutical companies", "Biotech firms", "Research institutions", "CROs"],;"
-    tags["Drug Discovery", "AI", "Pharmaceuticals", "Clinical Trials", "Research"],;"
+    ],"
+    targetAudience["Pharmaceutical companies", "Biotech firms", "Research institutions", "CROs"],"
+    tags["Drug Discovery", "AI", "Pharmaceuticals", "Clinical Trials", "Research"],"
     marketPrice: "$8,500 - $12,500/month","
-    competitors["Atomwise", "Insitro", "Recursion Pharmaceuticals"],;"
+    competitors["Atomwise", "Insitro", "Recursion Pharmaceuticals"],"
     roi: "500% within 36 months","
     setupTime: "12-16 weeks","
-    compliance["FDA regulations", "GCP", "GLP", "International standards"],;"
-    fdaApproval["Research platform", "Clinical decision support", "Regulatory tools"],;"
-    clinicalValidation["Preclinical studies", "Clinical trials", "Real-world evidence"],;
+    compliance["FDA regulations", "GCP", "GLP", "International standards"],"
+    fdaApproval["Research platform", "Clinical decision support", "Regulatory tools"],"
+    clinicalValidation["Preclinical studies", "Clinical trials", "Real-world evidence"],
     useCases[;"
       "Drug discovery","
       "Target validation","
       "Clinical trial optimization","
       "Safety assessment"
-    ],;"
+    ],"
     technologies["Machine Learning", "Molecular Modeling", "Predictive Analytics", "High-Performance Computing"]}, {
 
     id: 6,"
@@ -272,7 +268,7 @@ export const specializedHealthcareAIServices2025: HealthcareAIServic e[] = [{
       "Integration with providers","
       "Safety protocols","
       "Clinical reporting"
-    ],;
+    ],
     benefits[;"
       "Improved access to mental health care","
       "24/7 support availability","
@@ -280,22 +276,22 @@ export const specializedHealthcareAIServices2025: HealthcareAIServic e[] = [{
       "Enhanced patient engagement","
       "Crisis prevention","
       "Cost optimization"
-    ],;"
-    targetAudience["Mental health providers", "Healthcare systems", "Employers", "Health plans"],;"
-    tags["Mental Health", "AI", "Therapy", "Wellness", "Digital Health"],;"
+    ],"
+    targetAudience["Mental health providers", "Healthcare systems", "Employers", "Health plans"],"
+    tags["Mental Health", "AI", "Therapy", "Wellness", "Digital Health"],"
     marketPrice: "$2,500 - $4,500/month","
-    competitors["Woebot", "Ginger", "Talkspace"],;"
+    competitors["Woebot", "Ginger", "Talkspace"],"
     roi: "200% within 12 months","
     setupTime: "3-4 weeks","
-    compliance["HIPAA", "Mental health regulations", "State laws", "Privacy standards"],;"
-    fdaApproval["Digital therapeutic", "Clinical validation", "Safety protocols"],;"
-    clinicalValidation["Clinical studies", "Safety validation", "Outcome measures"],;
+    compliance["HIPAA", "Mental health regulations", "State laws", "Privacy standards"],"
+    fdaApproval["Digital therapeutic", "Clinical validation", "Safety protocols"],"
+    clinicalValidation["Clinical studies", "Safety validation", "Outcome measures"],
     useCases[;"
       "Depression management","
       "Anxiety treatment","
       "Stress reduction","
       "Crisis intervention"
-    ],;"
+    ],"
     technologies["Natural Language Processing", "Sentiment Analysis", "Machine Learning", "Mobile Health"]}
 ];
 

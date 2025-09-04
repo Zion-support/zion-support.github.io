@@ -3,8 +3,7 @@ export interface AdditionalLiveService2025 {
   name: string;
   tagline: string;
   price: string;
-  features: string[];
-}
+  features: string[]}
 export const additionalLiveServices2025: AdditionalLiveService2025[] = [
   {
     id: 'live-service-1',

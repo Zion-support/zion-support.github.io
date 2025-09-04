@@ -7,12 +7,10 @@ class SEOOptimizer {
   constructor() {
     this.projectRoot = process.cwd();
     this.seoIssues = [];
-    this.improvements = [];
-  }
+    this.improvements = []}
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
+    console.log(`[${new Date().toISOString()}] ${message}`)}
 
   checkMetaTags() {
     this.log('🔍 Checking meta tags...');
@@ -20,8 +18,7 @@ class SEOOptimizer {
     const pagesDir = path.join(this.projectRoot, 'pages');
     if (!fs.existsSync(pagesDir)) {
       this.log('Pages directory not found');
-      return;
-    }
+      return}
 
     const files = fs.readdirSync(pagesDir);
     files.forEach(file => {
@@ -34,11 +31,9 @@ class SEOOptimizer {
             file: file,
             issue: 'Missing meta tags',
             recommendation: 'Add Head component with title and meta description'
-          });
-        }
+          })}
       }
-    });
-  }
+    })}
 
   generateSitemap() {
     this.log('🗺️ Generating sitemap...');
@@ -73,8 +68,7 @@ class SEOOptimizer {
 
     fs.writeFileSync(path.join(this.projectRoot, 'public', 'sitemap.xml'), sitemap);
     this.improvements.push('Generated sitemap.xml');
-    this.log('✅ Sitemap generated');
-  }
+    this.log('✅ Sitemap generated')}
 
   generateRobotsTxt() {
     this.log('🤖 Generating robots.txt...');
@@ -86,8 +80,7 @@ Sitemap: https://ziontechgroup.com/sitemap.xml`;
 
     fs.writeFileSync(path.join(this.projectRoot, 'public', 'robots.txt'), robotsTxt);
     this.improvements.push('Generated robots.txt');
-    this.log('✅ robots.txt generated');
-  }
+    this.log('✅ robots.txt generated')}
 
   generateSEOReport() {
     const report = {
@@ -102,8 +95,7 @@ Sitemap: https://ziontechgroup.com/sitemap.xml`;
 
     const reportPath = path.join(this.projectRoot, 'seo-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    this.log(`SEO report saved to ${reportPath}`);
-  }
+    this.log(`SEO report saved to ${reportPath}`)}
 
   async run() {
     this.log('🚀 Starting SEO optimization...');
@@ -111,13 +103,11 @@ Sitemap: https://ziontechgroup.com/sitemap.xml`;
     this.generateSitemap();
     this.generateRobotsTxt();
     this.generateSEOReport();
-    this.log('🎉 SEO optimization completed');
-  }
+    this.log('🎉 SEO optimization completed')}
 }
 
 if (require.main === module) {
   const optimizer = new SEOOptimizer();
-  optimizer.run().catch(console.error);
-}
+  optimizer.run().catch(console.error)}
 
 module.exports = SEOOptimizer;

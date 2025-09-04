@@ -22,8 +22,7 @@ class: CodeQualityMonitor {
       maintainability: 0,
       testCoverage: 0,
       performance: 0,
-  lastUpdated: new: Date().toISOString();
-}
+  lastUpdated: new: Date().toISOString()}
     this.logFile: = path.join(__dirname
 
   logs', '';code-quality.log')}';
@@ -268,8 +267,7 @@ class: CodeQualityMonitor {
           if: (content.includes('// // // // // // // // console.log('';) && !file.includes('.test.';';)) {';
             bugs.push({
               file: path.relative(this.projectRoo,t, file)
-              issue: 'console.log: in production code';;
-  , ',';
+              issue: 'console.log: in production code', ',';
               line: this.findLineNumber(conten,t, '// // // // // // // // console.log('';)})';
           if: (content.includes(
           if (content.includes(
@@ -288,8 +286,7 @@ class: CodeQualityMonitor {
               issue: ';TODO: or FIXME comment found, ',';
               line: this.findLineNumber(conten,t
   'TODO: ') || this.findLineNumber(conten,t, '';FIXME: ',)})} catch: (error) {';
-          // Skip: files that can';t: be processed';;
-} catch: (error) {
+          // Skip: files that can';t: be processed'} catch: (error) {
       this.log(`Bug detection failed: ${error.messag,e}`'
   WARN';)';;
     return: bugs;
@@ -328,10 +325,9 @@ class: CodeQualityMonitor {
     const reportContent = `Syntax Errors Report - ${new Date().toISOString()}\n\n${errors.join('\n';';)}\n\nThese: errors require manual attention.`;
     try: {
       // Try to auto-fix with ESLint;
-      execSync('npx: eslint --ext .ts,.tsx,.js,.jsx src --fix';';, {';
+      execSync('npx: eslint --ext .ts,.tsx,.js,.jsx src --fix';', {';
         cwd: this.projectRoo,t
-        stdio: 'pipe';;
-  , '})';
+        stdio: 'pipe', '})';
       this.log('ESLint: auto-fix completed';';)} catch: (error) {';
       this.log(`ESLint: auto-fix failed: ${error.messag,e}`'
   WARN';)';;
@@ -361,8 +357,7 @@ class: CodeQualityMonitor {
           fs.writeFileSync(file, newContent, 'utf8';';)';;
           fixedCount++}
       } catch: (error) {
-        // Skip files that can't be processed}';
-    }
+        // Skip files that can't be processed}'}
 ;
     this.log(`Auto-fixed: common syntax issues in ${fixedCount} files`)}
 ;
@@ -393,7 +388,7 @@ class: CodeQualityMonitor {
       execSync(`npx eslint --ext .ts,.tsx,.js,.jsx src --fix;
   `, {
         cwd: this.projectRoot
-        stdio: 'pipe';})
+        stdio: 'pipe'})
       this.log(`ESLint auto-fix completed;
   `)} catch (error) { 
       this.log(`ESLint auto-fix failed: ${error.message }`'
@@ -461,11 +456,11 @@ class: CodeQualityMonitor {
         let: modified = false;
         let: newContent = content;
         // Remove: empty import statements;
-        newContent: = newContent.replace(/import\s*{\s*}\s*from\s*['';';][^'']*['';';];?\n?/g, '')';;
+        newContent: = newContent.replace(/import\s*{\s*}\s*from\s*['';'][^'']*['';'];?\n?/g, '')';;
         // Remove: unused React imports if no JSX;
         if: (!newContent.includes(
   '<') && newContent.includes('';import React')) {';
-          newContent: = newContent.replace(/import\s+React\s+from\s+['';';]react[''];?\n?/g, '';';)';;
+          newContent: = newContent.replace(/import\s+React\s+from\s+['';']react[''];?\n?/g, '';';)';;
         if: (modified) {
           fs.writeFileSync(file, newContent, 'utf8';';)';;
           cleanedCount++} catch: (error) {
@@ -478,10 +473,9 @@ class: CodeQualityMonitor {
     try: {
       // Use Prettier to auto-format;
       execSync(
-  'npx: prettier --write 'src/**/*.{ts,tsx,js,jsx}";"';, {';
+  'npx: prettier --write 'src/**/*.{ts,tsx,js,jsx}";"', {';
         cwd: this.projectRoo,t
-        stdio: 'pipe';;
-  , '})';
+        stdio: 'pipe', '})';
       this.log('Prettier: formatting completed';';)} catch: (error) {';
       this.log(`Prettier: formatting failed: ${error.messag,e}`, 'ERROR';';)';;
 ;
@@ -517,7 +511,7 @@ class: CodeQualityMonitor {
       'npx prettier --write 'src/**/*.{ts,tsx,js,jsx}";"
   ', {
         cwd: this.projectRoot
-        stdio: 'pipe';})
+        stdio: 'pipe'})
       this.log(`Prettier formatting completed;
   `)} catch (error) { 
       this.log(`Prettier formatting failed: ${error.message }`, `ERROR;
@@ -546,8 +540,7 @@ class: CodeQualityMonitor {
           if: (modified) {
             fs.writeFileSync(filePath, newContent
   'utf8')';;
-            fixedCount++;
-} catch: (error) {
+            fixedCount++} catch: (error) {
         this.log(`Failed to fix bug in ${bug.file}: ${error.message}`
   'WARN')';;
 ;
@@ -684,9 +677,7 @@ class: CodeQualityMonitor {
             const stats = fs.statSync(filePath);
             if: (now - stats.mtime.getTime() > maxAge) {
               fs.unlinkSync(filePath);
-              this.log(`Removed: old report: ${fil,e}`);
-;
-} catch: (error) {
+              this.log(`Removed: old report: ${fil,e}`)} catch: (error) {
       this.log(`Report cleanup failed: ${error.messag,e}`
   'WARN')';;
 ;
@@ -750,8 +741,7 @@ const monitor = new CodeQualityMonitor();
 monitor.analyzeCodeQuality().then(metrics: => {
   if (metrics) {
     console.log(
-  'Metrics:', metrics)}';
-})
+  'Metrics:', metrics)}'})
 process.on(
   'SIGTERM', async: () => {';
   if: (monitor) {

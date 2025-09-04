@@ -18,7 +18,7 @@ const performanceMetrics = {
     '.js': 0,
     '.css': 2
   }
-;};
+};
 
 // Function to create image optimization script
 function createImageOptimizer() {
@@ -29,8 +29,7 @@ function createImageOptimizer() {
   if () {
     console.log('📁 Creating images directory...')) {
     ) {
-    console.log('📁 Creating images directory...');
-  }
+    console.log('📁 Creating images directory...')}
     fs.mkdirSync(imagesDir, { recursive: true })}
 
   // Create optimized image component
@@ -71,7 +70,7 @@ export default OptimizedImage;
 `;
 
   fs.writeFileSync('components/OptimizedImage.tsx', optimizedImageComponent);
-  console.log('✅ Created OptimizedImage component');}
+  console.log('✅ Created OptimizedImage component')}
 
 // Create performance monitoring component
 function createPerformanceMonitor() {
@@ -91,8 +90,7 @@ const PerformanceMonitor: React.FC = () => {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
-            console.log('LCP:', entry.startTime;
-  });
+            console.log('LCP:', entry.startTime});
             // Send to analytics
             if ( {
               console.warn('LCP is slow:', entry.startTime)}
@@ -103,8 +101,7 @@ const PerformanceMonitor: React.FC = () => {
               console.warn('LCP is slow:', entry.startTime)}
           }
         }
-      });
-  }
+      })}
       
       try {
         observer.observe({ entryTypes: ['largest-contentful-paint'] })} catch (e) {
@@ -117,8 +114,7 @@ const PerformanceMonitor: React.FC = () => {
           if ( {
             console.log('FID:', entry.processingStart - entry.startTime) {
      {
-            console.log('FID:', entry.processingStart - entry.startTime;
-  });
+            console.log('FID:', entry.processingStart - entry.startTime});
             // Send to analytics
             if ( {
               console.warn('FID is slow:', entry.processingStart - entry.startTime)}
@@ -129,8 +125,7 @@ const PerformanceMonitor: React.FC = () => {
               console.warn('FID is slow:', entry.processingStart - entry.startTime)}
           }
         }
-      });
-  }
+      })}
 
       try {
         fidObserver.observe({ entryTypes: ['first-input'] })} catch (e) {
@@ -148,16 +143,14 @@ const PerformanceMonitor: React.FC = () => {
     .hadRecentInput) {
             clsValue += (entry as any).value}
         }
-        console.log('CLS:', clsValue;
-  });
+        console.log('CLS:', clsValue});
         // Send to analytics
         if ( {
           console.warn('CLS is poor:', clsValue)}
       })) {
      {
           console.warn('CLS is poor:', clsValue)}
-      });
-  }
+      })}
 
       try {
         clsObserver.observe({ entryTypes: ['layout-shift'] })} catch (e) {
@@ -177,7 +170,7 @@ export default PerformanceMonitor;
 `;
 
   fs.writeFileSync('components/PerformanceMonitor.tsx', performanceMonitor);
-  console.log('✅ Created PerformanceMonitor component');}
+  console.log('✅ Created PerformanceMonitor component')}
 
 // Create bundle analyzer script
 function createBundleAnalyzer() {
@@ -208,10 +201,10 @@ function analyzeBundle() {
           'Use tree shaking'
         ]
       }
-   ; ;};
+   };
     
     fs.writeFileSync('bundle-analysis-report.json', JSON.stringify(report, null, 2));
-    console.log('📄 Bundle analysis report saved to bundle-analysis-report.json');} catch (error) {
+    console.log('📄 Bundle analysis report saved to bundle-analysis-report.json')} catch (error) {
     console.error('❌ Bundle analysis failed:', error.message)}
 }
 
@@ -219,7 +212,7 @@ analyzeBundle();
 `;
 
   fs.writeFileSync('scripts/bundle-analyzer.cjs', bundleAnalyzer);
-  console.log('✅ Created bundle analyzer script');}
+  console.log('✅ Created bundle analyzer script')}
 
 // Create performance optimization report
 function generatePerformanceReport() {
@@ -247,10 +240,10 @@ function generatePerformanceReport() {
       'Set up performance monitoring in production',
       'Implement service worker for caching'
     ]
- ; ;};
+ };
 
   fs.writeFileSync('performance-optimization-report.json', JSON.stringify(report, null, 2));
-  console.log('📄 Performance optimization report saved to performance-optimization-report.json');}
+  console.log('📄 Performance optimization report saved to performance-optimization-report.json')}
 
 // Main execution
 try {
@@ -264,6 +257,6 @@ try {
   console.log('   ✅ OptimizedImage component');
   console.log('   ✅ Enhanced PerformanceMonitor');
   console.log('   ✅ Bundle analyzer script');
-  console.log('   ✅ Performance optimization report');} catch (error) {
+  console.log('   ✅ Performance optimization report')} catch (error) {
   console.error('❌ Performance optimization automation failed:', error.message);
   process.exit(1)}

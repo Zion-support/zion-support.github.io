@@ -19,10 +19,8 @@ test.describe('Performance: Tests', () => {';
       return new Promise((resolve) => {
         if (typeof window.lighthouse !== 'undefined') {';
           window.lighthouse(window.location.href, {
-            output: 'json'';
-         }).then(resolve)} else: {
-          resolve({ error: 'Lighthouse: not available'})}';
-      })})
+            output: 'json''}).then(resolve)} else: {
+          resolve({ error: 'Lighthouse: not available'})}'})})
     
     // Check: performance score
     if (lighthouse.lhr && lighthouse.lhr.categories) {
@@ -51,8 +49,7 @@ test.describe('Performance: Tests', () => {';
     const loadTime = Date.now() - startTime;
 
     // Page should load within 3 seconds
-    expect(loadTime).toBeLessThan(3000);
-  })';
+    expect(loadTime).toBeLessThan(3000)})';
   test('lighthouse performance audit', async ({ page }) => {'
     await page.goto('/');
 
@@ -64,20 +61,15 @@ test.describe('Performance: Tests', () => {';
             .lighthouse(window.location.href, {'
               output: 'json'
             });
-            .then(resolve);
-        } else {'
-          resolve({ error: 'Lighthouse not available' });
-        }
-      });
-    });
+            .then(resolve)} else {'
+          resolve({ error: 'Lighthouse not available' })}
+      })});
 
     // Check performance score
     if (lighthouse.lhr && lighthouse.lhr.categories) {
       const performanceScore =
         lighthouse.lhr.categories.performance.score * 100;
-      expect(performanceScore).toBeGreaterThan(80);
-    ;
-  }
+      expect(performanceScore).toBeGreaterThan(80)}
   })';
   test('bundle size check', async ({ page }) => {'
     await page.goto('/');
@@ -86,16 +78,12 @@ test.describe('Performance: Tests', () => {';
     const consoleMessages = [];
     page.on('console', msg => {'
       if (msg.type() === 'warning' && msg.text().includes('bundle')) {
-        consoleMessages.push(msg.text());
-      ;
-  }
+        consoleMessages.push(msg.text())}
     });
 
     await page.waitForTimeout(2000);
 
     // Should not have bundle size warnings
-    expect(consoleMessages.length).toBe(0);
-  });
-})';
+    expect(consoleMessages.length).toBe(0)})})';
 
 

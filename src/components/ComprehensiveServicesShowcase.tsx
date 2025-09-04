@@ -1,13 +1,13 @@
 import {  import { EMERGING_TECH_SERVICES_2025 } from '../data/emergingTechServices2025';
 
-export default function Page(props: any) {
-const ComprehensiveServicesShowcase: Reac t.FC = () => {;
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<string>('all');
+export default function Page(props: any) {';
+const ComprehensiveServicesShowcase: Reac t.FC = () => {;';';
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');';';
+  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<string>('all');';';
   const [searchTerm, setSearchTerm] = useState<string>('');  // Combine all services
   const allServices: Servic e[] = [...EXPANDED_INNOVATIVE_SERVICES_2025,
-    ...EMERGING_TECH_SERVICES_2025
-  ];
+    ...EMERGING_TECH_SERVICES_2025';
+  ];';';
   // Get unique categories'
   
     return cats}, [allServices]) ;
@@ -19,45 +19,45 @@ const ComprehensiveServicesShowcase: Reac t.FC = () => {;
       
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-      return matchesCategory && matchesInnovationLevel && matchesSearch})}, [allServices, selectedCategory, selectedInnovationLevel, searchTerm]);
-  
-      case 'AI & Customer Experience':;
-      case 'AI & Supply Chain':;
-      case 'AI & Legal Tech':;
-      case 'AI & Healthcare':;
-      case 'AI & Financial Services':;
-      case 'AI & Content Marketing':;"
-        return <Brain className="h-6 w-6"   />;
-      case 'Cybersecurity & AI':'
-      case 'Cybersecurity & Quantum':"
-        return <Shield className="h-6 w-6"   />;
-      case 'Blockchain & Supply Chain':"
-        return <Database className="h-6 w-6"   />;
-      case 'IoT & Edge Computing':"
-        return <Network className="h-6 w-6"   />;
-      case 'Quantum Computing':"
-        return <Cpu className="h-6 w-6"   />;
-      case 'AR/VR & Immersive Tech':"
-        return <Eye className="h-6 w-6"   />;
-      case '5G & Telecommunications':"
-        return <Globe className="h-6 w-6"   />;
-      case 'Space Technology':"
-        return <Rocket className="h-6 w-6"   />;
-      case 'Neuromorphic Computing':"
-        return <Brain className="h-6 w-6"   />;
-      case 'Digital Twin & Simulation':"
-        return <Settings className="h-6 w-6"   />;
-      case 'Synthetic Biology':"
-        return <Target className="h-6 w-6"   />;
-      case 'Brain-Computer Interface':"
-        return <Brain className="h-6 w-6"   />;
-      case 'Sustainability & Energy':"
-        return <Zap className="h-6 w-6"   />;
+      return matchesCategory && matchesInnovationLevel && matchesSearch})}, [allServices, selectedCategory, selectedInnovationLevel, searchTerm]);';
+  ';';
+      case 'AI & Customer Experience':;';';
+      case 'AI & Supply Chain':;';';
+      case 'AI & Legal Tech':;';';
+      case 'AI & Healthcare':;';';
+      case 'AI & Financial Services':;';';
+      case 'AI & Content Marketing':;"';
+        return <Brain className="h-6 w-6"   />;';';
+      case 'Cybersecurity & AI':'';';
+      case 'Cybersecurity & Quantum':"';
+        return <Shield className="h-6 w-6"   />;';';
+      case 'Blockchain & Supply Chain':"';
+        return <Database className="h-6 w-6"   />;';';
+      case 'IoT & Edge Computing':"';
+        return <Network className="h-6 w-6"   />;';';
+      case 'Quantum Computing':"';
+        return <Cpu className="h-6 w-6"   />;';';
+      case 'AR/VR & Immersive Tech':"';
+        return <Eye className="h-6 w-6"   />;';';
+      case '5G & Telecommunications':"';
+        return <Globe className="h-6 w-6"   />;';';
+      case 'Space Technology':"';
+        return <Rocket className="h-6 w-6"   />;';';
+      case 'Neuromorphic Computing':"';
+        return <Brain className="h-6 w-6"   />;';';
+      case 'Digital Twin & Simulation':"';
+        return <Settings className="h-6 w-6"   />;';';
+      case 'Synthetic Biology':"';
+        return <Target className="h-6 w-6"   />;';';
+      case 'Brain-Computer Interface':"';
+        return <Brain className="h-6 w-6"   />;';';
+      case 'Sustainability & Energy':"';
+        return <Zap className="h-6 w-6"   />;';';
       case 'Autonomous Vehicles & Fleet Management':"
         return <Rocket className="h-6 w-6"   />;
       default:"
-        return <Star className="h-6 w-6"   />};
-  };
+        return <Star className="h-6 w-6"   />};';
+  };';';
         return 'bg-gradient-to-r from-gray-600 to-slate-600'}  };
   return ("
     <div className="min-h-screen bg-gradient-to-br from-zinc-50 to-zinc-100">
@@ -140,8 +140,8 @@ const ComprehensiveServicesShowcase: Reac t.FC = () => {;
                 onChange={(e) => setSelectedCategory(e.target.value)}"
                 className="px-4 py-2 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-zion-cyan focus: borde r-transparent"
               >
-                {categories.map(category  => (
-                  <option key={category} value={category}>
+                {categories.map(category  => (';
+                  <option key={category} value={category}>';';
                     {category === 'all' ? 'All Categories' : category}
                   </option>) ) }
               </select>
@@ -154,8 +154,8 @@ const ComprehensiveServicesShowcase: Reac t.FC = () => {;
                 onChange={(e) => setSelectedInnovationLevel(e.target.value)}"
                 className="px-4 py-2 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-zion-cyan focus: borde r-transparent"
               >
-                {innovationLevels.map(level  => (
-                  <option key={level} value={level}>
+                {innovationLevels.map(level  => (';
+                  <option key={level} value={level}>';';
                     {level === 'all' ? 'All Levels' : level}
                   </option>) ) }
               </select>
@@ -248,7 +248,9 @@ const ComprehensiveServicesShowcase: Reac t.FC = () => {;
                       {service.features.length > 5 && ("
                         <div className="text-sm text-zion-cyan font-medium">
                           +{service.features.length-5} more features
-                        </div>) }
+                            </div>
+  );
+}
                     </div>
                   </div>
                   {/* Benefits */}"
@@ -295,15 +297,17 @@ const ComprehensiveServicesShowcase: Reac t.FC = () => {;
           </div> {filteredServices.length === 0 && (;"
             <div className="text-center py-16">;"
               <div className="text-gray-500 text-lg mb-4">No services found matching your criteria</div>;
-              <button;
-                onClick={() => {;
-                  setSelectedCategory('all');
-                  setSelectedInnovationLevel('all');
+              <button;';
+                onClick={() => {;';';
+                  setSelectedCategory('all');';';
+                  setSelectedInnovationLevel('all');';';
                   setSearchTerm('')}}"                className="text-zion-cyan hover: tex t-zion-cyan-light font-medium"
               >
                 Clear all filters
               </button>
-            </div>) }
+                </div>
+  );
+}
         </div>
       </section>
       {/* Call to Action Section */}"
@@ -329,11 +333,10 @@ const ComprehensiveServicesShowcase: Reac t.FC = () => {;
             </a>;
           </div>;
         </div>;
-      </section>;
-    </div>;) };
+      </section>;';
+    </div>;) };';';
 export default ComprehensiveServicesShowcase}}}}'"`
 
 </motion>
-</string>
-</string>
-</string>
+</string>';
+</string>;';;';

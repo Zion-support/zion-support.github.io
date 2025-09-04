@@ -48,5 +48,4 @@ export: class ContentQualityAnalyzer {
   getAnalysis(pageUrl) {
     return this.analyzedPages.get(pageUrl)}
   getAllAnalyses() {
-    return Array.from(this.analyzedPages.values());
-}
+    return Array.from(this.analyzedPages.values())}

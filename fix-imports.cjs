@@ -7,20 +7,20 @@ function fixImportsInFile(filePath) {
 
     // Fix concatenated imports
     content = content.replace(
-      /import\s+([^;]+);'import/g,
+      /import\s+([^]+);'import/g,
       'import $1;\nimport'
     );
-    content = content.replace(/import\s+([^;]+);''/g, 'import $1;\n');
+    content = content.replace(/import\s+([^]+);''/g, 'import $1;\n');
     content = content.replace(
-      /import\s+([^;]+);'interface/g,
+      /import\s+([^]+);'interface/g,
       'import $1;\n\ninterface'
     );
     content = content.replace(
-      /import\s+([^;]+);'const/g,
+      /import\s+([^]+);'const/g,
       'import $1;\n\nconst'
     );
     content = content.replace(
-      /import\s+([^;]+);'export/g,
+      /import\s+([^]+);'export/g,
       'import $1;\n\nexport'
     );
 
@@ -48,10 +48,8 @@ function fixImportsInFile(filePath) {
     );
 
     fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${filePath}`);
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-  }
+    console.log(`Fixed: ${filePath}`)} catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message)}
 }
 
 function walkDirectory(dir) {
@@ -62,10 +60,8 @@ function walkDirectory(dir) {
     const stat = fs.statSync(filePath);
 
     if (stat.isDirectory()) {
-      walkDirectory(filePath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
-      fixImportsInFile(filePath);
-    }
+      walkDirectory(filePath)} else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
+      fixImportsInFile(filePath)}
   }
 }
 

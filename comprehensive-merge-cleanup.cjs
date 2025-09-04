@@ -16,10 +16,8 @@ function cleanMergeConflicts(filePath) {
     content = content.replace(/category: '[^']*'},\s*category: '[^']*'\s*}/g, (match) => {
       const categoryMatch = match.match(/category: '([^']*)'/);
       if (categoryMatch) {
-        return `category: '${categoryMatch[1]}'\n    }`;
-      }
-      return match;
-    });
+        return `category: '${categoryMatch[1]}'\n    }`}
+      return match});
     
     // Clean up any remaining syntax issues
     content = content.replace(/},\s*}/g, '}\n  }');
@@ -27,20 +25,16 @@ function cleanMergeConflicts(filePath) {
     content = content.replace(/category: '[^']*'}\s*category: '[^']*'\s*}/g, (match) => {
       const categoryMatch = match.match(/category: '([^']*)'/);
       if (categoryMatch) {
-        return `category: '${categoryMatch[1]}'\n    }`;
-      }
-      return match;
-    });
+        return `category: '${categoryMatch[1]}'\n    }`}
+      return match});
     
     // Remove any remaining merge conflict markers
     content = content.replace(/>>>>>>> origin\/cursor[^\n]*\n?/g, '');
     content = content.replace(/<<<<<<< HEAD[\s\S]*?=======/g, '');
     
     fs.writeFileSync(filePath, content);
-    console.log(`Cleaned merge conflicts in: ${filePath}`);
-  } catch (error) {
-    console.error(`Error cleaning ${filePath}:`, error.message);
-  }
+    console.log(`Cleaned merge conflicts in: ${filePath}`)} catch (error) {
+    console.error(`Error cleaning ${filePath}:`, error.message)}
 }
 
 // List of files with merge conflicts
@@ -61,8 +55,7 @@ const filesToClean = [
 // Clean all files
 filesToClean.forEach(file => {
   if (fs.existsSync(file)) {
-    cleanMergeConflicts(file);
-  }
+    cleanMergeConflicts(file)}
 });
 
 console.log('Comprehensive merge conflict cleanup completed!');

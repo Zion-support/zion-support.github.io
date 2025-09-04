@@ -3,15 +3,9 @@ const valueMetrics = [{icon: <TrendingUp className="w-8 h-8"  />," title: "Avera
 </a>
 </motion>
 </motion>
-</motion>
-</motion>
-</motion>
 </div>
 </motion>
 </div>
-</motion>
-</motion>
-</motion>
 </motion>
 </p>
 </motion>

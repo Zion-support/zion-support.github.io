@@ -9,21 +9,17 @@ class PerformanceMonitor {
       pageLoadTimes: [],
       memoryUsage: [],
       timestamp: new Date().toISOString()
-    };
-  }
+    }}
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
+    console.log(`[${new Date().toISOString()}] ${message}`)}
 
   measurePageLoad() {
     if (typeof window !== 'undefined') {
       window.addEventListener('load', () => {
         const loadTime = performance.now();
         this.metrics.pageLoadTimes.push(loadTime);
-        this.log(`Page loaded in ${loadTime.toFixed(2)}ms`);
-      });
-    }
+        this.log(`Page loaded in ${loadTime.toFixed(2)}ms`)})}
   }
 
   measureMemoryUsage() {
@@ -35,8 +31,7 @@ class PerformanceMonitor {
         heapTotal: memory.heapTotal,
         external: memory.external,
         timestamp: new Date().toISOString()
-      });
-    }
+      })}
   }
 
   generateReport() {
@@ -55,8 +50,7 @@ class PerformanceMonitor {
 
     const reportPath = path.join(process.cwd(), 'performance-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    this.log(`Performance report saved to ${reportPath}`);
-  }
+    this.log(`Performance report saved to ${reportPath}`)}
 
   start() {
     this.log('🚀 Starting performance monitoring...');
@@ -65,14 +59,11 @@ class PerformanceMonitor {
     
     // Generate report every 5 minutes
     setInterval(() => {
-      this.generateReport();
-    }, 5 * 60 * 1000);
-  }
+      this.generateReport()}, 5 * 60 * 1000)}
 }
 
 if (require.main === module) {
   const monitor = new PerformanceMonitor();
-  monitor.start();
-}
+  monitor.start()}
 
 module.exports = PerformanceMonitor;

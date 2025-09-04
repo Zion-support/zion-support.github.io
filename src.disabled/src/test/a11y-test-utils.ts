@@ -9,8 +9,7 @@ export const a11yTestUtils = {
     await checkA11y(page, null, {
       detailedReport: true,
       detailedReportOptions: { html: true }
-    });
-  },
+    })},
   
   // Check color contrast
   checkColorContrast: async (page) => {
@@ -29,9 +28,7 @@ export const a11yTestUtils = {
         }
       });
       
-      return issues;
-    });
+      return issues});
     
-    return contrastIssues;
-  }
+    return contrastIssues}
 };

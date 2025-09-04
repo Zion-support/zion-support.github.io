@@ -4,8 +4,7 @@ export interface RealServiceQ22025 {
   tagline: string;
   price: string;
   features: string[];
-  category?: string;
-}
+  category?: string}
 export const realServicesQ22025: RealServiceQ22025[] = [
   {
     id:,

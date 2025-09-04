@@ -446,4 +446,4 @@ integrations: [
   'ISO 27001',
   'Energy safety standards']
 
-];}}}}}}];
+]}}}}}}];

@@ -453,5 +453,4 @@ researchPartnerships: [
   'MIT Robotics Lab,
   'Stanford Robotics',
   'Carnegie Mellon Robotics']];
-export default emergingTechInnovations2025;
-}
+export default emergingTechInnovations2025}

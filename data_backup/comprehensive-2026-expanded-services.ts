@@ -12,8 +12,7 @@ export interface ComprehensiveService {
   contactInfo: {
     mobile: string;
     email: string;
-    address: string;
-  };
+    address: string};
   link: string;
   icon: string;
   color: string;
@@ -33,8 +32,7 @@ export interface ComprehensiveService {
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 
 const contact = {
   mobile: "+1 302 464 0950",

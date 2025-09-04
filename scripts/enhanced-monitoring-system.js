@@ -32,21 +32,18 @@ class EnhancedMonitoringSystem {
         outdatedPackages: 0,
         securityScore: 0
       }
-    };
-  }
+    }}
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-    }
+      fs.mkdirSync(this.reportsDir, { recursive: true })}
   }
 
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}`;
     console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage + '\n');
-  }
+    fs.appendFileSync(this.logFile, logMessage + '\n')}
 
   async runCommand(command, description, timeout = 30000) {
     this.log(`🔍 Monitoring: ${description}`);
@@ -60,11 +57,9 @@ class EnhancedMonitoringSystem {
       });
       
       this.log(`✅ Success: ${description}`);
-      return { success: true, output: result };
-    } catch (error) {
+      return { success: true, output: result }} catch (error) {
       this.log(`❌ Failed: ${description} - ${error.message}`, 'ERROR');
-      return { success: false, error: error.message };
-    }
+      return { success: false, error: error.message }}
   }
 
   async checkSystemHealth() {
@@ -88,8 +83,7 @@ class EnhancedMonitoringSystem {
     for (const check of systemChecks) {
       const result = await this.runCommand(check.command, check.description, 10000);
       if (result.success) {
-        this.results.system.health = 'healthy';
-      }
+        this.results.system.health = 'healthy'}
     }
   }
 
@@ -100,21 +94,17 @@ class EnhancedMonitoringSystem {
     const buildDir = path.join(this.projectRoot, '.next');
     if (fs.existsSync(buildDir)) {
       this.results.application.buildStatus = 'built';
-      this.log('✅ Build directory exists');
-    } else {
+      this.log('✅ Build directory exists')} else {
       this.results.application.buildStatus = 'not_built';
-      this.log('⚠️ Build directory not found');
-    }
+      this.log('⚠️ Build directory not found')}
 
     // Check package.json
     const packageJsonPath = path.join(this.projectRoot, 'package.json');
     if (fs.existsSync(packageJsonPath)) {
       this.results.application.status = 'configured';
-      this.log('✅ Package.json exists');
-    } else {
+      this.log('✅ Package.json exists')} else {
       this.results.application.status = 'not_configured';
-      this.log('❌ Package.json not found');
-    }
+      this.log('❌ Package.json not found')}
   }
 
   async checkPerformanceMetrics() {
@@ -130,8 +120,7 @@ class EnhancedMonitoringSystem {
     for (const check of performanceChecks) {
       const result = await this.runCommand(check.command, check.description, 30000);
       if (result.success) {
-        this.results.performance.metrics[check.description] = 'monitored';
-      }
+        this.results.performance.metrics[check.description] = 'monitored'}
     }
 
     // Calculate build size
@@ -143,8 +132,7 @@ class EnhancedMonitoringSystem {
         type: 'warning',
         message: 'Build size is large (>100MB)',
         value: `${Math.round(buildSize / (1024 * 1024))}MB`
-      });
-    }
+      })}
   }
 
   async checkSecurityStatus() {
@@ -169,11 +157,9 @@ class EnhancedMonitoringSystem {
               type: 'error',
               message: `${this.results.security.vulnerabilities} security vulnerabilities found`,
               value: this.results.security.vulnerabilities
-            });
-          }
+            })}
         } catch (error) {
-          this.log('⚠️ Could not parse security audit results', 'WARN');
-        }
+          this.log('⚠️ Could not parse security audit results', 'WARN')}
       }
     }
 
@@ -184,10 +170,8 @@ class EnhancedMonitoringSystem {
         const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
         const dependencies = Object.keys(packageJson.dependencies || {});
         const devDependencies = Object.keys(packageJson.devDependencies || {});
-        this.results.security.outdatedPackages = dependencies.length + devDependencies.length;
-      } catch (error) {
-        this.log('⚠️ Could not analyze package.json', 'WARN');
-      }
+        this.results.security.outdatedPackages = dependencies.length + devDependencies.length} catch (error) {
+        this.log('⚠️ Could not analyze package.json', 'WARN')}
     }
   }
 
@@ -204,15 +188,13 @@ class EnhancedMonitoringSystem {
     for (const check of testChecks) {
       const result = await this.runCommand(check.command, check.description, 60000);
       if (result.success) {
-        this.results.application.testStatus = 'passed';
-      } else {
+        this.results.application.testStatus = 'passed'} else {
         this.results.application.testStatus = 'failed';
         this.results.performance.alerts.push({
           type: 'error',
           message: 'Test suite failed',
           value: 'failed'
-        });
-      }
+        })}
     }
   }
 
@@ -237,18 +219,15 @@ class EnhancedMonitoringSystem {
           type: 'warning',
           message: `${check.description} failed`,
           value: 'failed'
-        });
-      }
+        })}
     }
   }
 
   getBuildSize() {
     const buildDir = path.join(this.projectRoot, '.next');
     if (fs.existsSync(buildDir)) {
-      return this.getDirectorySize(buildDir);
-    }
-    return 0;
-  }
+      return this.getDirectorySize(buildDir)}
+    return 0}
 
   getDirectorySize(dir) {
     let size = 0;
@@ -258,16 +237,13 @@ class EnhancedMonitoringSystem {
         const fullPath = path.join(dir, item);
         const stat = fs.statSync(fullPath);
         if (stat.isDirectory()) {
-          size += this.getDirectorySize(fullPath);
-        } else {
-          size += stat.size;
-        }
+          size += this.getDirectorySize(fullPath)} else {
+          size += stat.size}
       }
     } catch (error) {
       // Skip directories that can't be read
     }
-    return size;
-  }
+    return size}
 
   calculateOverallHealth() {
     let healthScore = 100;
@@ -282,8 +258,7 @@ class EnhancedMonitoringSystem {
       score: Math.max(0, healthScore),
       status: healthScore >= 80 ? 'healthy' : healthScore >= 60 ? 'warning' : 'critical',
       timestamp: new Date().toISOString()
-    };
-  }
+    }}
 
   generateReport() {
     this.calculateOverallHealth();
@@ -302,8 +277,7 @@ class EnhancedMonitoringSystem {
     this.log(`   Security Vulnerabilities: ${this.results.security.vulnerabilities}`);
     this.log(`   Alerts: ${this.results.performance.alerts.length}`);
     
-    return reportPath;
-  }
+    return reportPath}
 
   async run() {
     this.log('🎯 Starting Enhanced Monitoring System');
@@ -324,14 +298,12 @@ class EnhancedMonitoringSystem {
         success: true,
         reportPath,
         results: this.results
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`💥 Monitoring failed: ${error.message}`, 'ERROR');
       return {
         success: false,
         error: error.message
-      };
-    }
+      }}
   }
 }
 
@@ -339,8 +311,6 @@ class EnhancedMonitoringSystem {
 if (require.main === module) {
   const monitoring = new EnhancedMonitoringSystem();
   monitoring.run().then(result => {
-    process.exit(result.success ? 0 : 1);
-  });
-}
+    process.exit(result.success ? 0 : 1)})}
 
 module.exports = EnhancedMonitoringSystem;

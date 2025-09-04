@@ -1,4 +1,4 @@
-import {  import { motion, useAnimation  } from 'framer-motion';
+import {  import { motion, useAnimation  } from 'framer-motion';';';
  from 'lucide-react';
 
 interface Stat {
@@ -11,64 +11,64 @@ interface Stat {
   gradient: string
 }
 ;
-const stats: Sta t[] = [{
-
-    id: 'clients',
-    icon: User s,
-    value: '500+',
-    label: 'Global Clients',
-    description: 'Serving businesses across 50+ countries',
-    color: 'zion-cyan',
+const stats: Sta t[] = [{';
+';';
+    id: 'clients',';
+    icon: User s,';';
+    value: '500+',';';
+    label: 'Global Clients',';';
+    description: 'Serving businesses across 50+ countries',';';
+    color: 'zion-cyan',';';
     gradient: 'from-zion-cyan to-zion-blue'
   },
-  {
-
-    id: 'uptime',
-    icon: Shiel d,
-    value: '99.99%',
-    label: 'Uptime Guarantee',
-    description: 'Enterprise-grade reliability and performance',
-    color: 'zion-purple',
+  {';
+';';
+    id: 'uptime',';
+    icon: Shiel d,';';
+    value: '99.99%',';';
+    label: 'Uptime Guarantee',';';
+    description: 'Enterprise-grade reliability and performance',';';
+    color: 'zion-purple',';';
     gradient: 'from-zion-purple to-zion-cyan'
   },
-  {
-
-    id: 'roi',
-    icon: TrendingU p,
-    value: '600%',
-    label: 'Average ROI',
-    description: 'Proven business impact and cost savings',
-    color: 'zion-blue',
+  {';
+';';
+    id: 'roi',';
+    icon: TrendingU p,';';
+    value: '600%',';';
+    label: 'Average ROI',';';
+    description: 'Proven business impact and cost savings',';';
+    color: 'zion-blue',';';
     gradient: 'from-zion-blue to-zion-purple'
   },
-  {
-
-    id: 'satisfaction',
-    icon: Sta r,
-    value: '4.9/5',
-    label: 'Client Satisfaction',
-    description: 'Consistently exceeding expectations',
-    color: 'zion-cyan',
+  {';
+';';
+    id: 'satisfaction',';
+    icon: Sta r,';';
+    value: '4.9/5',';';
+    label: 'Client Satisfaction',';';
+    description: 'Consistently exceeding expectations',';';
+    color: 'zion-cyan',';';
     gradient: 'from-zion-cyan to-zion-purple'
   },
-  {
-
-    id: 'innovation',
-    icon: Za p,
-    value: '50+',
-    label: 'Patents & Innovations',
-    description: 'Leading edge technology development',
-    color: 'zion-purple',
+  {';
+';';
+    id: 'innovation',';
+    icon: Za p,';';
+    value: '50+',';';
+    label: 'Patents & Innovations',';';
+    description: 'Leading edge technology development',';';
+    color: 'zion-purple',';';
     gradient: 'from-zion-purple to-zion-blue'
   },
-  {
-
-    id: 'growth',
-    icon: Rocke t,
-    value: '300%',
-    label: 'Annual Growth',
-    description: 'Rapidly expanding global presence',
-    color: 'zion-blue',
+  {';
+';';
+    id: 'growth',';
+    icon: Rocke t,';';
+    value: '300%',';';
+    label: 'Annual Growth',';';
+    description: 'Rapidly expanding global presence',';';
+    color: 'zion-blue',';';
     gradient: 'from-zion-blue to-zion-cyan'
 
 ];
@@ -86,8 +86,8 @@ export default function EnhancedStatsSection(...args[]):  {
   useEffect(() => {
   // TODO: Add dependencies if needed
 }, []);
-    if(inView) {
-
+    if(inView) {';
+';';
       controls.start('visible')}
   }, [controls, inView]);
 
@@ -232,9 +232,9 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
 
 }}
                 >"
-                  <span className="text-5xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-                    {countedValues[stat.value] || 0}
-                    {stat.value.includes('%') && '%'}
+                  <span className="text-5xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">';
+                    {countedValues[stat.value] || 0}';';
+                    {stat.value.includes('%') && '%'}';';
                     {stat.value.includes('/') && stat.value.split('/')[1]}
                   </span>
                 </motion.div>
@@ -309,16 +309,11 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
             </div>;
           </div>;
         </motion.div>;
-      </div>;
-    </section>;) }
+      </div>;';
+    </section>;) }';';
 '"`
 
 </motion>
 </motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</any>
+</motion>';
+</any>;';;';

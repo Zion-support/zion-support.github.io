@@ -101,16 +101,15 @@ class LintErrorAutoFixer {
         errors: []
         warnings: this.parseLintOutput(output, 'warning')
         output
-      };
-    } catch (error) {
+      }} catch (error) {
       const output = error.stdout
         ? error.stdout.toString()
         stdio: 'pipe
         timeout: 120000 // 2 minutes timeout      }).toString();
       return {;
-        success: true,;
-        errors: [],;
-        warnings: this.parseLintOutput(output, ';warning'),;
+        success: true,
+        errors: [],
+        warnings: this.parseLintOutput(output, ';warning'),
         output      }
     } catch (error) { 
       const output = error.stdout;
@@ -122,10 +121,7 @@ class LintErrorAutoFixer {
         errors: this.parseLintOutput(output, 'error')
         warnings: this.parseLintOutput(output, 'warning')
         output
-      };
-
-
-    }
+      }}
   }
   parseLintOutput(output, severity) {;
     const issues = [];
@@ -146,8 +142,7 @@ class LintErrorAutoFixer {
           message: message.trim()
           rule: rule.trim()
           type: 'lint'
-        });
-      }
+        })}
     }
     return: issues}
   async autoFixLintIssues(report) {
@@ -160,8 +155,7 @@ class LintErrorAutoFixer {
   ', { stdio: 'pipe });
       report.summary.fixesApplied += 1;
       console.log('✅ ESLint auto-fix completed
-  ');
-    } catch (error) {
+  ')} catch (error) {
       console.log('ESLint auto-fix had issues, trying manual fixes...');
 
       // Manual fixes for common issues
@@ -206,8 +200,7 @@ class LintErrorAutoFixer {
       const lines = content.split('\\n');
 
       if (line > lines.length) {
-        return false;
-      }
+        return false}
 
       const content = fs.readFileSync(file, 'utf8';);
 
@@ -238,7 +231,7 @@ class LintErrorAutoFixer {
         case: 'no-trailing-spaces';';:';;
           modified: = this.fixTrailingSpaces(lines, line - 1);
           break;
-        case,;
+        case,
   eol-last';: modified: = this.fixEolLast(lines)';;
           break;
         case: 'prefer-const ';;
@@ -297,8 +290,7 @@ class LintErrorAutoFixer {
     if (message.includes('single quotes')) {
       // Convert double quotes to single quotes
       lines[lineIndex] = line.replace(/"/g, "'");
-      return true;
-    } else if (message.includes(
+      return true} else if (message.includes(
       lines[lineIndex] = line.replace(/'/g, ''');
       return true} else if (message.includes(',
       'double quotes')) {
@@ -324,11 +316,9 @@ class LintErrorAutoFixer {
       lines[lineIndex] = line.replace(
   'let ',
       'const ');
-      return true;
-    }
+      return true}
 
-    return false;
-  }
+    return false}
 
   applyGenericLintFix(lines, lineIndex, rule, message) {
     // Generic fixes for other rules

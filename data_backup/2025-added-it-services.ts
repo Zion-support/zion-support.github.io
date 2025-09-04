@@ -60,13 +60,12 @@ export const addedITServices2025: AdvancedITService[] = [
       'Per-route policies'
       'Just-in-time access',
       'Session recording',
-      'SIEM integration';
-    ],;
-    popular: true,;
-    icon: '🔐',;
-    color: 'from-amber-600 to-rose-700',;
-    textColor: 'text-amber-200',;
-    link: 'https://ziontechgroup.com/services/zero-trust-access-service',;
+      'SIEM integration'],
+    popular: true,
+    icon: '🔐',
+    color: 'from-amber-600 to-rose-700',
+    textColor: 'text-amber-200',
+    link: 'https://ziontechgroup.com/services/zero-trust-access-service',
     marketPosition: 'Simpler than full SASE; faster rollout than DIY BeyondCorp',
     targetAudience: 'SaaS companies, regulated industries, remote teams',
     trialDays: 14,

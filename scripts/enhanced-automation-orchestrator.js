@@ -14,21 +14,18 @@ class EnhancedAutomationOrchestrator {
       timestamp: new Date().toISOString(),
       summary: { total: 0, successful: 0, failed: 0 },
       details: []
-    };
-  }
+    }}
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-    }
+      fs.mkdirSync(this.reportsDir, { recursive: true })}
   }
 
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}`;
     console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage + '\n');
-  }
+    fs.appendFileSync(this.logFile, logMessage + '\n')}
 
   async runCommand(command, description, timeout = 30000) {
     this.log(`🚀 Starting: ${description}`);
@@ -51,8 +48,7 @@ class EnhancedAutomationOrchestrator {
         output: result.substring(0, 1000) // Limit output size
       });
       
-      return { success: true, output: result };
-    } catch (error) {
+      return { success: true, output: result }} catch (error) {
       this.log(`❌ Failed: ${description} - ${error.message}`, 'ERROR');
       this.results.summary.failed++;
       this.results.details.push({
@@ -62,8 +58,7 @@ class EnhancedAutomationOrchestrator {
         error: error.message
       });
       
-      return { success: false, error: error.message };
-    }
+      return { success: false, error: error.message }}
   }
 
   async runQuickChecks() {
@@ -85,8 +80,7 @@ class EnhancedAutomationOrchestrator {
     ];
 
     for (const check of quickChecks) {
-      await this.runCommand(check.command, check.description, 5000);
-    }
+      await this.runCommand(check.command, check.description, 5000)}
   }
 
   async runLinting() {
@@ -104,8 +98,7 @@ class EnhancedAutomationOrchestrator {
     ];
 
     for (const task of lintingTasks) {
-      await this.runCommand(task.command, task.description, 60000);
-    }
+      await this.runCommand(task.command, task.description, 60000)}
   }
 
   async runBuildChecks() {
@@ -123,8 +116,7 @@ class EnhancedAutomationOrchestrator {
     ];
 
     for (const task of buildTasks) {
-      await this.runCommand(task.command, task.description, 120000);
-    }
+      await this.runCommand(task.command, task.description, 120000)}
   }
 
   async runTestSuite() {
@@ -138,8 +130,7 @@ class EnhancedAutomationOrchestrator {
     ];
 
     for (const task of testTasks) {
-      await this.runCommand(task.command, task.description, 60000);
-    }
+      await this.runCommand(task.command, task.description, 60000)}
   }
 
   async runSecurityChecks() {
@@ -153,8 +144,7 @@ class EnhancedAutomationOrchestrator {
     ];
 
     for (const task of securityTasks) {
-      await this.runCommand(task.command, task.description, 30000);
-    }
+      await this.runCommand(task.command, task.description, 30000)}
   }
 
   async runPerformanceChecks() {
@@ -168,8 +158,7 @@ class EnhancedAutomationOrchestrator {
     ];
 
     for (const task of performanceTasks) {
-      await this.runCommand(task.command, task.description, 30000);
-    }
+      await this.runCommand(task.command, task.description, 30000)}
   }
 
   async runCustomAutomations() {
@@ -203,15 +192,13 @@ class EnhancedAutomationOrchestrator {
           status: 'success',
           result: result
         });
-        this.log(`✅ Completed: ${customScript.name}`);
-      } catch (error) {
+        this.log(`✅ Completed: ${customScript.name}`)} catch (error) {
         this.results.details.push({
           name: customScript.name,
           status: 'failed',
           error: error.message
         });
-        this.log(`❌ Failed: ${customScript.name} - ${error.message}`, 'ERROR');
-      }
+        this.log(`❌ Failed: ${customScript.name} - ${error.message}`, 'ERROR')}
     }
   }
 
@@ -236,8 +223,7 @@ class EnhancedAutomationOrchestrator {
           const content = fs.readFileSync(file, 'utf8');
           for (const pattern of errorPatterns) {
             if (content.includes(pattern)) {
-              errors.push({ file, pattern });
-            }
+              errors.push({ file, pattern })}
           }
         } catch (error) {
           // Skip files that can't be read
@@ -245,8 +231,7 @@ class EnhancedAutomationOrchestrator {
       }
     }
 
-    return { errors, count: errors.length };
-  }
+    return { errors, count: errors.length }}
 
   async analyzePerformance() {
     const performanceMetrics = {
@@ -255,8 +240,7 @@ class EnhancedAutomationOrchestrator {
       fileCount: this.getFileCount()
     };
 
-    return performanceMetrics;
-  }
+    return performanceMetrics}
 
   async auditSecurity() {
     const securityIssues = {
@@ -270,13 +254,10 @@ class EnhancedAutomationOrchestrator {
       const dependencies = Object.keys(packageJson.dependencies || {});
       const devDependencies = Object.keys(packageJson.devDependencies || {});
       
-      securityIssues.outdatedPackages = dependencies.length + devDependencies.length;
-    } catch (error) {
-      securityIssues.securityWarnings.push('Could not analyze package.json');
-    }
+      securityIssues.outdatedPackages = dependencies.length + devDependencies.length} catch (error) {
+      securityIssues.securityWarnings.push('Could not analyze package.json')}
 
-    return securityIssues;
-  }
+    return securityIssues}
 
   async checkCodeQuality() {
     const qualityMetrics = {
@@ -290,11 +271,9 @@ class EnhancedAutomationOrchestrator {
     if (fs.existsSync(srcDir)) {
       const allFiles = this.getAllFiles(srcDir, ['.js', '.jsx', '.ts', '.tsx']);
       qualityMetrics.totalFiles = allFiles.length;
-      qualityMetrics.testFiles = allFiles.filter(f => f.includes('.test.') || f.includes('.spec.')).length;
-    }
+      qualityMetrics.testFiles = allFiles.filter(f => f.includes('.test.') || f.includes('.spec.')).length}
 
-    return qualityMetrics;
-  }
+    return qualityMetrics}
 
   getAllFiles(dir, extensions) {
     let files = [];
@@ -304,47 +283,37 @@ class EnhancedAutomationOrchestrator {
         const fullPath = path.join(dir, item);
         const stat = fs.statSync(fullPath);
         if (stat.isDirectory()) {
-          files = files.concat(this.getAllFiles(fullPath, extensions));
-        } else if (extensions.some(ext => item.endsWith(ext))) {
-          files.push(fullPath);
-        }
+          files = files.concat(this.getAllFiles(fullPath, extensions))} else if (extensions.some(ext => item.endsWith(ext))) {
+          files.push(fullPath)}
       }
     } catch (error) {
       // Skip directories that can't be read
     }
-    return files;
-  }
+    return files}
 
   getBundleSize() {
     try {
       const nextDir = path.join(this.projectRoot, '.next');
       if (fs.existsSync(nextDir)) {
-        return this.getDirectorySize(nextDir);
-      }
+        return this.getDirectorySize(nextDir)}
     } catch (error) {
-      return 0;
-    }
-    return 0;
-  }
+      return 0}
+    return 0}
 
   getDependencyCount() {
     try {
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
       const deps = Object.keys(packageJson.dependencies || {});
       const devDeps = Object.keys(packageJson.devDependencies || {});
-      return deps.length + devDeps.length;
-    } catch (error) {
-      return 0;
-    }
+      return deps.length + devDeps.length} catch (error) {
+      return 0}
   }
 
   getFileCount() {
     const srcDir = path.join(this.projectRoot, 'src');
     if (fs.existsSync(srcDir)) {
-      return this.getAllFiles(srcDir, ['.js', '.jsx', '.ts', '.tsx']).length;
-    }
-    return 0;
-  }
+      return this.getAllFiles(srcDir, ['.js', '.jsx', '.ts', '.tsx']).length}
+    return 0}
 
   getDirectorySize(dir) {
     let size = 0;
@@ -354,23 +323,19 @@ class EnhancedAutomationOrchestrator {
         const fullPath = path.join(dir, item);
         const stat = fs.statSync(fullPath);
         if (stat.isDirectory()) {
-          size += this.getDirectorySize(fullPath);
-        } else {
-          size += stat.size;
-        }
+          size += this.getDirectorySize(fullPath)} else {
+          size += stat.size}
       }
     } catch (error) {
       // Skip directories that can't be read
     }
-    return size;
-  }
+    return size}
 
   generateReport() {
     const reportPath = path.join(this.reportsDir, 'enhanced-automation-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));
     this.log(`📊 Report generated: ${reportPath}`);
-    return reportPath;
-  }
+    return reportPath}
 
   async run() {
     this.log('🎯 Starting Enhanced Automation Orchestrator');
@@ -393,14 +358,12 @@ class EnhancedAutomationOrchestrator {
         success: true,
         reportPath,
         summary: this.results.summary
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`💥 Fatal error: ${error.message}`, 'ERROR');
       return {
         success: false,
         error: error.message
-      };
-    }
+      }}
   }
 }
 
@@ -408,8 +371,6 @@ class EnhancedAutomationOrchestrator {
 if (require.main === module) {
   const orchestrator = new EnhancedAutomationOrchestrator();
   orchestrator.run().then(result => {
-    process.exit(result.success ? 0 : 1);
-  });
-}
+    process.exit(result.success ? 0 : 1)})}
 
 module.exports = EnhancedAutomationOrchestrator;

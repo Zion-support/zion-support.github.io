@@ -36,8 +36,7 @@ export interface ResearchDevelopmentService2029 {
     mobile: string;
     email: string;
     website: string;
-address: string;
-  };export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] = [
+address: string};export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] = [
   {
     id:,
   advanced-research-automation',
@@ -453,4 +452,4 @@ address: string;
   https: //ziontechgroup.com,
       address:
   '364 E Main St STE 1008 Middletown DE 19709'
-];}}}}}}
+]}}}}}}

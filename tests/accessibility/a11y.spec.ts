@@ -38,7 +38,7 @@ test.describe('Accessibility Tests', () => {
   test('has proper color contrast', async ({ page }) => {
     await page.goto('/');
     
-    const accessibilityScanResults = await new AxeBuilder({ page ;};);
+    const accessibilityScanResults = await new AxeBuilder({ page };);
       .withTags(['color-contrast']);
       .analyze();
     

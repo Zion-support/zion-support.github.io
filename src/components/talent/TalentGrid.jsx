@@ -26,10 +26,11 @@ export function TalentGrid(props: any) {// // // // // // // }
           Clear Filters
         </button>)}
     </div>}
-    return (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    return (
+    <div className="min-h-screen bg-white">
       {talents.map((talent) => (<TalentCard key={talent.id} talent={talent} onMessage={() => handleMessageInternal(talent)} onBook={() => handleBookInternal(talent)} isAuthenticated={isAuthenticated}/>))}
-    </div>)}
-
-
+        </div>
+  );
+}
 export default TalentGrid;
-</TalentCard>
+</TalentCard>;;

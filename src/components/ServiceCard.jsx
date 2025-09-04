@@ -1,5 +1,5 @@
-import React from 'react';
-export default ServiceCard;
+import React from 'react';';
+export default ServiceCard;';';
 import {motion} from 'framer-motion';
 
 export default function Page(props: any) {
@@ -138,8 +138,9 @@ export default function Page(props: any) {
                     {feature}
                   </motion.li>) ) }
               </ul>
-            </div>) }
-
+                </div>
+  );
+}
           {/* Enhanced Price */}"
           <div className="text-center mb-6">"
             <motion.div className="text-2xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent mb-2" whileHover={{ scale: 1.1 }}>
@@ -201,9 +202,5 @@ export {ServiceCard};
 
 </motion>
 </motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
+</motion>';
+</motion>;';;';

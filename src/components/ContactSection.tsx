@@ -105,13 +105,7 @@ const contactInfo = [{
     </section>;) }
 export default ContactSection;
 export default ContactSection;
-export default ContactSection;
-export default ContactSection;
-export default ContactSection;
-export default ContactSection;
-export default ContactSection;
 '"
 
-</motion>
-</motion>
-</motion>
+</motion>';
+</motion>';';

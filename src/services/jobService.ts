@@ -18,7 +18,5 @@ export class jobServiceService {
 
   }
 
-
-
 export default new jobServiceService()
 }

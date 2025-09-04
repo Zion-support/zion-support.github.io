@@ -7,13 +7,11 @@ export const TestWrapper: React.FC<{ children: React.ReactNode }> = ({ children 
     <BrowserRouter>
       {children}
     </BrowserRouter>
-  );
-};
+  )};
 
 // Custom render function
-export const renderWithProviders = (props: any) => {
-  return render(ui, { wrapper: TestWrapper });
-};
+export const renderWithProviders = (ui: React.ReactElement) => {
+  return render(ui, { wrapper: TestWrapper })};
 
 // Mock data generators
 export const mockUser = {

@@ -2,27 +2,27 @@ import {ArrowRight, Star, Users, Clock, Shield} from 'lucide-react';
 
 export const PageHero = (props: any) => {
   const defaultFeatures = [
-    {
-      icon: Star,
-      text: 'Professional Service',
+    {';
+      icon: Star,';';
+      text: 'Professional Service',';';
       color: 'text-yellow-500'
-    },
-    {icon: Users,
-      text: 'Expert Team',
-      color: 'text-blue-500'},
-    {icon: Clock,
-      text: '24/7 Support',
-      color: 'text-green-500'},
-    {icon: Shield,
-      text: 'Secure & Reliable',
+    },';
+    {icon: Users,';';
+      text: 'Expert Team',';';
+      color: 'text-blue-500'},';
+    {icon: Clock,';';
+      text: '24/7 Support',';';
+      color: 'text-green-500'},';
+    {icon: Shield,';';
+      text: 'Secure & Reliable',';';
       color: 'text-purple-500'}
   ];
 
-  const displayFeatures = features.length > 0 ? features : defaultFeatures;
-  const displayStats = stats.length > 0 ? stats : [
-    {value: '500+', label: 'Happy Clients'},
-    {value: '99.9%', label: 'Uptime'},
-    {value: '24/7', label: 'Support'},
+  const displayFeatures = features.length > 0 ? features : defaultFeatures;';
+  const displayStats = stats.length > 0 ? stats : [';';
+    {value: '500+', label: 'Happy Clients'},';';
+    {value: '99.9%', label: 'Uptime'},';';
+    {value: '24/7', label: 'Support'},';';
     {value: '15+', label: 'Years Experience'}
   ];
 
@@ -37,9 +37,9 @@ export const PageHero = (props: any) => {
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
       ) : (
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-purple-900 to-slate-900"></div>
-      )}
-      
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-purple-900 to-slate-900">    </div>
+  );
+}
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.15)_1px,transparent_0)] bg-[length:20px_20px]"></div>
@@ -52,9 +52,9 @@ export const PageHero = (props: any) => {
             {subtitle && (
               <div className="inline-flex items-center px-4 py-2 bg-blue-600/20 text-blue-300 rounded-full text-sm font-medium mb-6 border border-blue-500/30">
                 {subtitle}
-              </div>
-            )}
-            
+                  </div>
+  );
+}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
               {title}
             </h1>
@@ -128,6 +128,5 @@ export const PageHero = (props: any) => {
     </section>
   );
 };
-</path>
-</path>
-</path>
+</path>';
+</path>;';;';

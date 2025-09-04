@@ -1,5 +1,5 @@
-import React, {useState, useEffect, useCallback} from 'react';
-import {motion, AnimatePresence} from 'framer-motion';
+import React, {useState, useEffect, useCallback} from 'react';';';
+import {motion, AnimatePresence} from 'framer-motion';';';
 import {TrendingUp, Users, Download, RefreshCw, BarChart3, Eye, EyeOff, Target} from 'lucide-react';
 import {Button} from "button.tsx";
 export function AnalyticsDashboard(props: any) {
@@ -49,19 +49,9 @@ export function AnalyticsDashboard(props: any) {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} transition={{ duration: 0.6 }}>
       {/* Header */}
@@ -74,8 +64,8 @@ export function AnalyticsDashboard(props: any) {
         <div className="flex items-center gap-2">
           <Button size="sm" variant="ghost" onClick={() => setShowTargets(!showTargets)} className="text-zinc-400 hover:text-white p-2">
             {showTargets ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
-          </Button>
-          <Button size="sm" variant="outline" onClick={refreshData} disabled={isLoading} className="border-zion-blue-light/30 text-zinc-300 hover:text-white">
+          </Button>';
+          <Button size="sm" variant="outline" onClick={refreshData} disabled={isLoading} className="border-zion-blue-light/30 text-zinc-300 hover:text-white">';';
             <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin' : ''}`} />
           </Button>
           <Button size="sm" variant="outline" className="border-zion-blue-light/30 text-zinc-300 hover:text-white">
@@ -85,8 +75,8 @@ export function AnalyticsDashboard(props: any) {
       </div>
 
       {/* Metrics Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-        {/* Total Users */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">';
+        {/* Total Users */}';';
         <motion.div className="bg-zion-blue/20 border border-zion-blue-light/30 rounded-lg p-4 cursor-pointer hover:border-zion-cyan/50 transition-all duration-300" whileHover={{ scale: 1.02 }} onClick={() => handleMetricClick('totalUsers')}>
           <div className="flex items-center justify-between mb-3">
             <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
@@ -107,10 +97,12 @@ export function AnalyticsDashboard(props: any) {
               <div className="w-full bg-zinc-700 rounded-full h-2">
                 <div className="bg-gradient-to-r from-blue-500 to-cyan-500 h-2 rounded-full transition-all duration-500" style="{{{ width: `${calculateProgress(metrics.totalUsers}}"%` }} />
               </div>
-            </div>)}
+                </div>
+  );
+}
         </motion.div>
-
-        {/* Active Users */}
+';
+        {/* Active Users */}';';
         <motion.div className="bg-zion-blue/20 border border-zion-blue-light/30 rounded-lg p-4 cursor-pointer hover:border-zion-cyan/50 transition-all duration-300" whileHover={{ scale: 1.02 }} onClick={() => handleMetricClick('activeUsers')}>
           <div className="flex items-center justify-between mb-3">
             <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center">
@@ -131,10 +123,12 @@ export function AnalyticsDashboard(props: any) {
               <div className="w-full bg-zinc-700 rounded-full h-2">
                 <div className="bg-gradient-to-r from-green-500 to-emerald-500 h-2 rounded-full transition-all duration-500" style="{{{ width: `${calculateProgress(metrics.activeUsers}}"%` }} />
               </div>
-            </div>)}
+                </div>
+  );
+}
         </motion.div>
-
-        {/* Revenue */}
+';
+        {/* Revenue */}';';
         <motion.div className="bg-zion-blue/20 border border-zion-blue-light/30 rounded-lg p-4 cursor-pointer hover:border-zion-cyan/50 transition-all duration-300" whileHover={{ scale: 1.02 }} onClick={() => handleMetricClick('revenue')}>
           <div className="flex items-center justify-between mb-3">
             <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
@@ -155,10 +149,12 @@ export function AnalyticsDashboard(props: any) {
               <div className="w-full bg-zinc-700 rounded-full h-2">
                 <div className="bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full transition-all duration-500" style="{{{ width: `${calculateProgress(metrics.revenue}}"%` }} />
               </div>
-            </div>)}
+                </div>
+  );
+}
         </motion.div>
-
-        {/* Growth Rate */}
+';
+        {/* Growth Rate */}';';
         <motion.div className="bg-zion-blue/20 border border-zion-blue-light/30 rounded-lg p-4 cursor-pointer hover:border-zion-cyan/50 transition-all duration-300" whileHover={{ scale: 1.02 }} onClick={() => handleMetricClick('growth')}>
           <div className="flex items-center justify-between mb-3">
             <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center">
@@ -179,7 +175,9 @@ export function AnalyticsDashboard(props: any) {
               <div className="w-full bg-zinc-700 rounded-full h-2">
                 <div className="bg-gradient-to-r from-orange-500 to-red-500 h-2 rounded-full transition-all duration-500" style="{{{ width: `${calculateProgress(metrics.growth}}"%` }} />
               </div>
-            </div>)}
+                </div>
+  );
+}
         </motion.div>
       </div>
 
@@ -189,28 +187,13 @@ export function AnalyticsDashboard(props: any) {
   { opacity: 0,
   height: 0 
 
-
-
-
-
-
-}} animate = {
-  { opacity: 1,
+}} animate = {';
+  { opacity: 1,';';
   height: 'auto' 
-
-
-
-
-
 
 }} exit = {
   { opacity: 0,
   height: 0 
-
-
-
-
-
 
 }} transition={{ duration: 0.3 }}>
             <h4 className="text-white font-semibold mb-2">Metric Details</h4>
@@ -222,8 +205,5 @@ export function AnalyticsDashboard(props: any) {
     </motion.div>)}
 
 </motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
+</motion>';
+</motion>;';;';

@@ -2,6 +2,5 @@ import React from 'react'; "export default function ReplyCard(props: any) {" ret
 
 </button>
 </div>
-</div>
-</div>
-</div>
+</div>';
+</div>;';;';

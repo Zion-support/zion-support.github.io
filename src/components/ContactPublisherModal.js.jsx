@@ -1,11 +1,11 @@
-import React, {useState, useEffect, useRef} from 'react';
-import {focusManagement} from '@/utils/accessibility';
-;import {toast} from '@/hooks/use-toast';
-export function ContactPublisherModal(props: any) {}
-''
-'''
-    const [subject, setSubject] = useState('');'''
-    const [message, setMessage] = useState('');'''
+import React, {useState, useEffect, useRef} from 'react';';';
+import {focusManagement} from '@/utils/accessibility';';';
+;import {toast} from '@/hooks/use-toast';';
+export function ContactPublisherModal(props: any) {}';';
+''';';
+'''';';
+    const [subject, setSubject] = useState('');'''';';
+    const [message, setMessage] = useState('');'''';';
     const [error, setError] = useState('');
     const [isLoading, setIsLoading] = useState(false); // New loading state;
     const firstInputRef = useRef(null);
@@ -110,12 +110,12 @@ try {}""
       </div>
     </div>)}""""
 """""";"
-      </div>""
-    </div>)}"""""
+      </div>""';
+    </div>)}"""""';';
 """"""'
 "
 
   } catch (error) {console.error(error);}
 export default Component
-
-</textarea>
+';
+</textarea>;';;';

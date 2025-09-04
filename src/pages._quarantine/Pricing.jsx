@@ -1,57 +1,57 @@
-import React from 'react';'''
+import React from 'react';'''';';
 import {SEO} from '../components/SEO';
 
 const Pricing = (props: any) => {}
-  const pricingTiers = []
-    {}
-'
-      name: 'Starter','
-      price: '$19','
-      period: '/month','
-      description:''
-        'Perfect for individuals and small teams getting started with AI tools','
-      features: [''
-        'AI Content Generation (100 credits/month),Basic AI Image Editing',AI Meeting Assistant (5 hours/month),Email Support',Basic Analytics Dashboard',Mobile App Access'
-      ],
-      popular: false,'
-      cta: 'Start Free Trial','
-      link: '/signup?plan=starter'},
-    {}
-'
-      name: 'Professional','
-      price: '$49','
-      period: '/month','
-      description: 'Ideal for growing businesses and professional teams','
-      features: [''
-        'Everything in Starter',AI Content Generation (500 credits/month),Advanced AI Image & Video Editing',AI Code Assistant (Basic),AI Meeting Assistant (20 hours/month),AI Translation (10 languages),Priority Support',Advanced Analytics',API Access (1000 calls/month),Team Collaboration Tools'
-      ],
-      popular: true,'
-      cta: 'Start Free Trial','
-      link: '/signup?plan=professional'},
-    {}
-'
-      name: 'Business','
-      price: '$99','
-      period: '/month','
-      description: 'Comprehensive solution for established businesses','
-      features: [''
-        'Everything in Professional',AI Content Generation (2000 credits/month),AI Code Assistant (Advanced),AI Data Analytics Platform',AI Threat Detection',Multi-Cloud Management',AI-Powered CRM',Business Process Automation',AI Meeting Assistant (Unlimited),AI Translation (100+ languages),24/7 Support',Custom Integrations',API Access (10000 calls/month),Advanced Security Features'
-      ],
-      popular: false,'
-      cta: 'Start Free Trial','
-      link: '/signup?plan=business'},
-    {}
-'
-      name: 'Enterprise','
-      price: 'Custom','
-      period: '','
-      description:''
-        'Tailored solutions for large organizations with specific requirements','
-      features: [''
-        'Everything in Business',Unlimited AI Content Generation',Custom AI Model Training',Zero Trust Security Suite',Edge Computing Solutions',AI Market Research Platform',AI Legal Document Review',AI Financial Advisor',AI Healthcare Assistant',Dedicated Account Manager',Custom Development',On-Premise Deployment',SLA Guarantees',Compliance Certifications'
-      ],
-      popular: false,'
-      cta: 'Contact Sales','
+  const pricingTiers = []';
+    {}';';
+'';';
+      name: 'Starter','';';
+      price: '$19','';';
+      period: '/month','';';
+      description:''';';
+        'Perfect for individuals and small teams getting started with AI tools','';';
+      features: [''';';
+        'AI Content Generation (100 credits/month),Basic AI Image Editing',AI Meeting Assistant (5 hours/month),Email Support',Basic Analytics Dashboard',Mobile App Access'';
+      ],';';
+      popular: false,'';';
+      cta: 'Start Free Trial','';';
+      link: '/signup?plan=starter'},';
+    {}';';
+'';';
+      name: 'Professional','';';
+      price: '$49','';';
+      period: '/month','';';
+      description: 'Ideal for growing businesses and professional teams','';';
+      features: [''';';
+        'Everything in Starter',AI Content Generation (500 credits/month),Advanced AI Image & Video Editing',AI Code Assistant (Basic),AI Meeting Assistant (20 hours/month),AI Translation (10 languages),Priority Support',Advanced Analytics',API Access (1000 calls/month),Team Collaboration Tools'';
+      ],';';
+      popular: true,'';';
+      cta: 'Start Free Trial','';';
+      link: '/signup?plan=professional'},';
+    {}';';
+'';';
+      name: 'Business','';';
+      price: '$99','';';
+      period: '/month','';';
+      description: 'Comprehensive solution for established businesses','';';
+      features: [''';';
+        'Everything in Professional',AI Content Generation (2000 credits/month),AI Code Assistant (Advanced),AI Data Analytics Platform',AI Threat Detection',Multi-Cloud Management',AI-Powered CRM',Business Process Automation',AI Meeting Assistant (Unlimited),AI Translation (100+ languages),24/7 Support',Custom Integrations',API Access (10000 calls/month),Advanced Security Features'';
+      ],';';
+      popular: false,'';';
+      cta: 'Start Free Trial','';';
+      link: '/signup?plan=business'},';
+    {}';';
+'';';
+      name: 'Enterprise','';';
+      price: 'Custom','';';
+      period: '','';';
+      description:''';';
+        'Tailored solutions for large organizations with specific requirements','';';
+      features: [''';';
+        'Everything in Business',Unlimited AI Content Generation',Custom AI Model Training',Zero Trust Security Suite',Edge Computing Solutions',AI Market Research Platform',AI Legal Document Review',AI Financial Advisor',AI Healthcare Assistant',Dedicated Account Manager',Custom Development',On-Premise Deployment',SLA Guarantees',Compliance Certifications'';
+      ],';';
+      popular: false,'';';
+      cta: 'Contact Sales','';';
       link: '/contact'}
   ];
 
@@ -68,9 +68,9 @@ const Pricing = (props: any) => {}
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-7xl mx-auto text-center">""""
           <div className="mb-8">""""
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"""
-              Simple, Transparent""""
-              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">'
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"""';
+              Simple, Transparent""""';';
+              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">'';';
                 {' '}
                 Pricing;
               </span>"""
@@ -89,11 +89,11 @@ const Pricing = (props: any) => {}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {pricingTiers.map((tier, index) => (
               <div;
-                key={index}
-                className={`bg-slate-800/50 border rounded-xl p-8 ${}
-'
-                  tier.popular''
-                    ? 'border-blue-500 shadow-lg shadow-blue-500/25'''`
+                key={index}';
+                className={`bg-slate-800/50 border rounded-xl p-8 ${}';';
+'';';
+                  tier.popular''';';
+                    ? 'border-blue-500 shadow-lg shadow-blue-500/25'''`';';
                     : 'border-white/10'``
                 }`}
               >"""
@@ -128,13 +128,13 @@ const Pricing = (props: any) => {}
                 </ul>
 
                 <a`
-                  href={tier.link}``
-                  className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all ${}
-'
-''
-'''`
-                    tier.popular'''`'`
-                      ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white hover:from-blue-600 hover:to-cyan-600'''`'`'`
+                  href={tier.link}``';
+                  className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all ${}';';
+'';';
+''';';
+'''`';';
+                    tier.popular'''`'`';';
+                      ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white hover:from-blue-600 hover:to-cyan-600'''`'`'`';';
                       : 'bg-transparent border border-white text-white hover:text-slate-900'````
                   }`}
                 >
@@ -186,5 +186,5 @@ export {Pricing};
 export {Pricing};
 
 export {Pricing};
-
-</SEO>
+';
+</SEO>;';;';

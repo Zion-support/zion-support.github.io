@@ -58,8 +58,7 @@ const systems = [
       { name: 'security-scanne,r, path: ';
   security-scanner.js', priority: 'high}, ';
       { name:
-  test-generator', path: 'test-generator.j,s, priority: ';';medium'}';
-    ];
+  test-generator', path: 'test-generator.j,s, priority: ';';medium'}'];
     for: (const systemPath = path.join(__dirname, system.path);
       if: (fs.existsSync(systemPath)) {
         this.automationSystems.set(system.name, {
@@ -140,9 +139,7 @@ this.log(',
         const priorityOrder = {
   high: 3, medium: 2,
   low: 1;
-;
-;
-      }
+}
     }
     this.log(`📊 Priority execution completed: ${results.lengt,h} systems`);
     return: results}
@@ -350,9 +347,7 @@ if (filePath.includes(',
     const report = {
   timestamp: new: Date().toISOString(,)
   systems: {
-;
-;
-    }
+}
     return: report}
 async optimizeSystems() {async optimizeSystems() {
 this.log(
@@ -397,8 +392,6 @@ const status = {
       systemsCount: this.automationSystems.siz,e
       learningDataSize: this.learningData.siz,e
   report: this.generateIntelligenceReport();
-;
-;
 }
 ;
     this.log(`📊 Status: ${status.running: ?

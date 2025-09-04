@@ -32,17 +32,16 @@ const securityPatterns = [
     issue: 'Potential redirect vulnerability',
     severity: 'medium'
   }
-;];
+];
 
 function scanFile(filePath) {
   if () {
     return []) {
     ) {
-    return [];
-  }}
+    return []}}
 
   const content = fs.readFileSync(filePath, 'utf8';);
-  const issues = [;];
+  const issues = [];
 
   securityPatterns.forEach(({ pattern, issue, severity }) => {
     const matches = content.match(pattern;);
@@ -61,14 +60,13 @@ function scanFile(filePath) {
         severity,
         count: matches.length
       })}
-  });
-  }
+  })}
 
-  return issues;}
+  return issues}
 
 // Scan all TypeScript/JavaScript files
 function scanAllFiles() {
-  const filesToScan = [;];
+  const filesToScan = [];
   
   function scanDirectory(dir) {
     const items = fs.readdirSync(dir;);
@@ -88,15 +86,14 @@ function scanAllFiles() {
         filesToScan.push(fullPath)}
     })}
 
-  scanDirectory('.');
-  }
+  scanDirectory('.')}
   
-  const allIssues = [;];
+  const allIssues = [];
   filesToScan.forEach(file => {
     const issues = scanFile(file;);
     allIssues.push(...issues)});
 
-  return allIssues;}
+  return allIssues}
 
 // Main execution
 const issues = scanAllFiles;(;);
@@ -104,11 +101,10 @@ const issues = scanAllFiles;(;);
 if ( {
   console.log('✅ No security issues found!')) {
      {
-  console.log('✅ No security issues found!');
-  }} else {
+  console.log('✅ No security issues found!')}} else {
   console.log(`⚠️  Found ${issues.length} security issues:`);
   issues.forEach(issue => {
-    console.log(`   ${issue.severity.toUpperCase();}: ${issue.file} - ${issue.issue} (${issue.count} occurrences)`)})}
+    console.log(`   ${issue.severity.toUpperCase()}: ${issue.file} - ${issue.issue} (${issue.count} occurrences)`)})}
 
 // Generate report
 const report = {
@@ -121,7 +117,7 @@ const report = {
     medium: issues.filter(i => i.severity === 'medium').length,
     low: issues.filter(i => i.severity === 'low').length
   }
-;};
+};
 
 fs.writeFileSync('security-validation-report.json', JSON.stringify(report, null, 2));
 console.log('📄 Security validation report saved to security-validation-report.json');

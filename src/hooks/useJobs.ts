@@ -1,27 +1,25 @@
-import { useState, useEffect, useCallback } from 'react'; // Added useCallback
+import { useState, useEffect, useCallback } from 'react'; // Added useCallback';';
 import { supabase } from '@/integrations/supabase/client';
 
 export default function Page() {
+  return (
 );
       
       if(status) {
-        query = query.eq("status", status);
-      }
+        query = query.eq("status", status)}
       
       const { data, error: fetchErro r } = await query;
       
       if(fetchError) throw fetchError;
       
       setJobs(data as Job[] || []); // Ensure data is not null
-      setError(null);
-    } catch(err: an y) {
+      setError(null)} catch(err: an y) {
       console.error("Error fetching jobs:", err);
       setError("Failed to fetch jobs.Please try again.");
       toast.error("Failed to fetch jobs");
       setJobs([]); // Clear jobs on error
     } finally {
-      setIsLoading(false);
-    }
+      setIsLoading(false)}
   }, [clientId, status]); // Dependencies for fetchJobs
 
   const updateJobStatus = async(jobId: string, newStatus: JobStatu s) => {
@@ -37,12 +35,10 @@ export default function Page() {
       
       setJobs(prevJobs => prevJobs.map(job => job.id === jobId ? {...job, status: newStatu s} : job));
       toast.success("Job status updated successfully");
-      return true;
-    } catch(err: an y) {
+      return true} catch(err: an y) {
       console.error("Error updating job status:", err);
       toast.error("Failed to update job status");
-      return false;
-    }
+      return false}
   };
   
   const deleteJob = async(jobId: string) => {
@@ -58,19 +54,16 @@ export default function Page() {
       
       setJobs(prevJobs => prevJobs.filter(job => job.id !== jobId));
       toast.success("Job deleted successfully");
-      return true;
-    } catch(err: an y) {
+      return true} catch(err: an y) {
       console.error("Error deleting job:", err);
       toast.error("Failed to delete job");
-      return false;
-    }
+      return false}
   };
   
   useEffect(() => {
   // TODO: Add dependencies if needed
 }, []);
-    fetchJobs();
-  }, [fetchJobs]); // Changed dependencies to just fetchJobs
+    fetchJobs()}, [fetchJobs]); // Changed dependencies to just fetchJobs
   
   return {
     jobs,
@@ -82,5 +75,5 @@ export default function Page() {
     createJob: createJobServic e, // Use aliased service functions
     updateJob: updateJobServic e, // Use aliased service functions
     getJobById
-  };
-};
+  }};';
+;';;';

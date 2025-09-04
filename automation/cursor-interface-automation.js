@@ -38,8 +38,7 @@ class CursorInterfaceAutomation {
     this.platform = process.platform;
     this.setupPlatformSpecific();
     
-    this.log('Cursor Interface Automation initialized');
-  }
+    this.log('Cursor Interface Automation initialized')}
 
   /**
    * Load configuration from file
@@ -47,8 +46,7 @@ class CursorInterfaceAutomation {
   loadConfig(configPath) {
     try {
       const configData = fs.readFileSync(configPath, 'utf8');
-      return JSON.parse(configData);
-    } catch (error) {
+      return JSON.parse(configData)} catch (error) {
       this.log(`Failed to load config from ${configPath}: ${error.message}`, 'ERROR');
       // Return default config
       return {
@@ -60,8 +58,7 @@ class CursorInterfaceAutomation {
           autoRestart: true
         },
         sessions: []
-      };
-    }
+      }}
   }
 
   /**
@@ -102,8 +99,7 @@ class CursorInterfaceAutomation {
         
       default:
         this.log(`Unsupported platform: ${this.platform}`, 'ERROR');
-        throw new Error(`Unsupported platform: ${this.platform}`);
-    }
+        throw new Error(`Unsupported platform: ${this.platform}`)}
   }
 
   /**
@@ -118,10 +114,8 @@ class CursorInterfaceAutomation {
     console.log(logEntry);
     
     try {
-      fs.appendFileSync('cursor-interface-automation.log', logEntry + '\n');
-    } catch (error) {
-      console.error('Failed to write to log file:', error.message);
-    }
+      fs.appendFileSync('cursor-interface-automation.log', logEntry + '\n')} catch (error) {
+      console.error('Failed to write to log file:', error.message)}
   }
 
   /**
@@ -132,13 +126,11 @@ class CursorInterfaceAutomation {
       let script = this.automationScripts[scriptType];
       
       if (!script) {
-        throw new Error(`Unknown script type: ${scriptType}`);
-      }
+        throw new Error(`Unknown script type: ${scriptType}`)}
       
       // Replace placeholders with actual values
       Object.entries(params).forEach(([key, value]) => {
-        script = script.replace(`{${key}}`, value);
-      });
+        script = script.replace(`{${key}}`, value)});
       
       let command;
       let args;
@@ -157,21 +149,16 @@ class CursorInterfaceAutomation {
         case 'linux':
           command = this.automationTool;
           args = script.split(' ');
-          break;
-      }
+          break}
       
       const { stdout, stderr } = await execAsync(command, { args });
       
       if (stderr) {
-        this.log(`Automation warning: ${stderr}`, 'WARN');
-      }
+        this.log(`Automation warning: ${stderr}`, 'WARN')}
       
-      return stdout.trim();
-      
-    } catch (error) {
+      return stdout.trim()} catch (error) {
       this.log(`Automation execution failed: ${error.message}`, 'ERROR');
-      throw error;
-    }
+      throw error}
   }
 
   /**
@@ -183,12 +170,9 @@ class CursorInterfaceAutomation {
       this.log('Cursor application focused');
       
       // Wait a bit for focus to take effect
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-    } catch (error) {
+      await new Promise(resolve => setTimeout(resolve, 1000))} catch (error) {
       this.log(`Failed to focus Cursor: ${error.message}`, 'ERROR');
-      throw error;
-    }
+      throw error}
   }
 
   /**
@@ -200,12 +184,9 @@ class CursorInterfaceAutomation {
       this.log(`Text sent: "${text}"`);
       
       // Wait for text to be processed
-      await new Promise(resolve => setTimeout(resolve, 500));
-      
-    } catch (error) {
+      await new Promise(resolve => setTimeout(resolve, 500))} catch (error) {
       this.log(`Failed to send text: ${error.message}`, 'ERROR');
-      throw error;
-    }
+      throw error}
   }
 
   /**
@@ -217,12 +198,9 @@ class CursorInterfaceAutomation {
       this.log('Enter key sent');
       
       // Wait for command to be processed
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-    } catch (error) {
+      await new Promise(resolve => setTimeout(resolve, 1000))} catch (error) {
       this.log(`Failed to send Enter: ${error.message}`, 'ERROR');
-      throw error;
-    }
+      throw error}
   }
 
   /**
@@ -256,14 +234,11 @@ class CursorInterfaceAutomation {
       this.log(`Session ${sessionId} created: ${sessionConfig.name}`);
       
       if (sessionConfig.autoProceed) {
-        this.startSessionAutomation(sessionId);
-      }
+        this.startSessionAutomation(sessionId)}
       
-      return session;
-    } catch (error) {
+      return session} catch (error) {
       this.log(`Failed to create session ${sessionId}: ${error.message}`, 'ERROR');
-      throw error;
-    }
+      throw error}
   }
 
   /**
@@ -273,32 +248,27 @@ class CursorInterfaceAutomation {
     const session = this.sessions.get(sessionId);
     if (!session || session.status !== 'active') {
       this.log(`Cannot start automation for session ${sessionId}: session not found or inactive`, 'WARN');
-      return;
-    }
+      return}
 
     const runSession = async () => {
       if (!this.isRunning || session.status !== 'active') {
-        return;
-      }
+        return}
 
       try {
         await this.executeSessionCommand(sessionId);
         
         // Schedule next command
-        setTimeout(() => runSession(), session.config.interval);
-      } catch (error) {
+        setTimeout(() => runSession(), session.config.interval)} catch (error) {
         this.log(`Session ${sessionId} automation error: ${error.message}`, 'ERROR');
         session.errors++;
         
         // Continue despite errors
-        setTimeout(() => runSession(), session.config.interval);
-      }
+        setTimeout(() => runSession(), session.config.interval)}
     };
 
     // Start the automation loop
     runSession();
-    this.log(`Automation started for session ${sessionId}`);
-  }
+    this.log(`Automation started for session ${sessionId}`)}
 
   /**
    * Execute a command for a specific session
@@ -306,8 +276,7 @@ class CursorInterfaceAutomation {
   async executeSessionCommand(sessionId) {
     const session = this.sessions.get(sessionId);
     if (!session) {
-      throw new Error(`Session ${sessionId} not found`);
-    }
+      throw new Error(`Session ${sessionId} not found`)}
 
     try {
       // Get the next command to send
@@ -331,15 +300,12 @@ class CursorInterfaceAutomation {
       this.stats.totalCommands++;
       this.stats.successfulCommands++;
       
-      this.log(`Command executed successfully for session ${sessionId}`);
-      
-    } catch (error) {
+      this.log(`Command executed successfully for session ${sessionId}`)} catch (error) {
       this.stats.failedCommands++;
       session.errors++;
       this.stats.lastError = error.message;
       this.log(`Failed to execute command for session ${sessionId}: ${error.message}`, 'ERROR');
-      throw error;
-    }
+      throw error}
   }
 
   /**
@@ -348,8 +314,7 @@ class CursorInterfaceAutomation {
   async start() {
     if (this.isRunning) {
       this.log('Automation system already running', 'WARN');
-      return;
-    }
+      return}
 
     this.isRunning = true;
     this.stats.startTime = new Date();
@@ -357,20 +322,17 @@ class CursorInterfaceAutomation {
 
     // Create sessions from config
     for (const sessionConfig of this.config.sessions) {
-      await this.createSession(sessionConfig.id, sessionConfig);
-    }
+      await this.createSession(sessionConfig.id, sessionConfig)}
 
     // Start health monitoring
-    this.startHealthMonitoring();
-  }
+    this.startHealthMonitoring()}
 
   /**
    * Stop the automation system
    */
   stop() {
     this.isRunning = false;
-    this.log('Cursor Interface Automation system stopped');
-  }
+    this.log('Cursor Interface Automation system stopped')}
 
   /**
    * Start health monitoring
@@ -389,17 +351,14 @@ class CursorInterfaceAutomation {
           
           if (timeSinceLastCommand > maxDelay) {
             this.log(`Session ${sessionId} appears stuck, restarting automation`, 'WARN');
-            this.startSessionAutomation(sessionId);
-          }
+            this.startSessionAutomation(sessionId)}
         }
       }
 
       // Schedule next health check
-      setTimeout(healthCheck, this.config.automation.healthCheckInterval || 60000);
-    };
+      setTimeout(healthCheck, this.config.automation.healthCheckInterval || 60000)};
 
-    healthCheck();
-  }
+    healthCheck()}
 
   /**
    * Get system statistics
@@ -414,8 +373,7 @@ class CursorInterfaceAutomation {
       activeSessions: Array.from(this.sessions.values()).filter(s => s.status === 'active').length,
       totalSessions: this.sessions.size,
       platform: this.platform
-    };
-  }
+    }}
 
   /**
    * Format uptime in human readable format
@@ -429,8 +387,7 @@ class CursorInterfaceAutomation {
     if (days > 0) return `${days}d ${hours % 24}h ${minutes % 60}m`;
     if (hours > 0) return `${hours}h ${minutes % 60}m`;
     if (minutes > 0) return `${minutes}m ${seconds % 60}s`;
-    return `${seconds}s`;
-  }
+    return `${seconds}s`}
 
   /**
    * List all sessions
@@ -445,8 +402,7 @@ class CursorInterfaceAutomation {
       createdAt: session.createdAt,
       lastCommand: session.lastCommand,
       priority: session.config.priority
-    }));
-  }
+    }))}
 
   /**
    * Test automation without starting full system
@@ -465,12 +421,9 @@ class CursorInterfaceAutomation {
       this.log('Enter key test: PASSED');
       
       this.log('All automation tests passed!');
-      return true;
-      
-    } catch (error) {
+      return true} catch (error) {
       this.log(`Automation test failed: ${error.message}`, 'ERROR');
-      return false;
-    }
+      return false}
   }
 }
 
@@ -493,20 +446,16 @@ if (require.main === module) {
         console.log('\nFinal Statistics:');
         console.log(JSON.stringify(stats, null, 2));
         
-        process.exit(0);
-      });
+        process.exit(0)});
 
       // Keep the process alive and show status
       setInterval(() => {
         const stats = automation.getStats();
-        console.log(`\n[${new Date().toISOString()}] Status: ${stats.activeSessions} active sessions, ${stats.totalCommands} commands sent`);
-      }, 60000); // Status update every minute
+        console.log(`\n[${new Date().toISOString()}] Status: ${stats.activeSessions} active sessions, ${stats.totalCommands} commands sent`)}, 60000); // Status update every minute
       
     } else {
       console.log('Automation test failed. Please check your system configuration.');
-      process.exit(1);
-    }
-  });
-}
+      process.exit(1)}
+  })}
 
 module.exports = CursorInterfaceAutomation;

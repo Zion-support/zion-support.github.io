@@ -1,69 +1,69 @@
-import React, {useState, useEffect} from 'react';'''
+import React, {useState, useEffect} from 'react';'''';';
 import {motion} from 'framer-motion';
-import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const LinkHealthMonitor = (props: any) => {}
-    const [isOpen, setIsOpen] = useState(false);
-    const [isMonitoring, setIsMonitoring] = useState(false);'
-    const [linkStatuses, setLinkStatuses] = useState([]);''
-    const [report, setReport] = useState(null);'''
+import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const LinkHealthMonitor = (props: any) => {}';
+    const [isOpen, setIsOpen] = useState(false);';';
+    const [isMonitoring, setIsMonitoring] = useState(false);'';';
+    const [linkStatuses, setLinkStatuses] = useState([]);''';';
+    const [report, setReport] = useState(null);'''';';
     const [selectedFilter, setSelectedFilter] = useState('all');
     // Sample data based on the analysis report;
-    const sampleLinks = []
-        {}
-'
-''
-'''
-            url: 'https://linkedin.com/company/ziontechgroup','''
-            status: 'broken',
-            statusCode: 404,'
-            responseTime: 1200,''
-            lastChecked: new Date(),'''
-            parentPage: 'Homepage','''
+    const sampleLinks = []';
+        {}';';
+'';';
+''';';
+'''';';
+            url: 'https://linkedin.com/company/ziontechgroup','''';';
+            status: 'broken',';';
+            statusCode: 404,'';';
+            responseTime: 1200,''';';
+            lastChecked: new Date(),'''';';
+            parentPage: 'Homepage','''';';
             linkText: 'LinkedIn'
-        },
-        {}
-'
-''
-'''
-            url: 'https://twitter.com/ziontechgroup','''
-            status: 'external',
-            statusCode: 200,'
-            responseTime: 800,''
-            lastChecked: new Date(),'''
-            parentPage: 'Homepage','''
+        },';
+        {}';';
+'';';
+''';';
+'''';';
+            url: 'https://twitter.com/ziontechgroup','''';';
+            status: 'external',';';
+            statusCode: 200,'';';
+            responseTime: 800,''';';
+            lastChecked: new Date(),'''';';
+            parentPage: 'Homepage','''';';
             linkText: 'Twitter'
-        },
-        {}
-'
-''
-'''
-            url: 'tel:+1 302 464 0950','''
-            status: 'healthy',
-            statusCode: 200,'
-            responseTime: 50,''
-            lastChecked: new Date(),'''
-            parentPage: 'Contact','''
+        },';
+        {}';';
+'';';
+''';';
+'''';';
+            url: 'tel:+1 302 464 0950','''';';
+            status: 'healthy',';';
+            statusCode: 200,'';';
+            responseTime: 50,''';';
+            lastChecked: new Date(),'''';';
+            parentPage: 'Contact','''';';
             linkText: 'Phone Number'
-        },
-        {}
-'
-''
-'''
-            url: 'mailto:kleber@ziontechgroup.com','''
-            status: 'healthy',
-            statusCode: 200,'
-            responseTime: 50,''
-            lastChecked: new Date(),'''
-            parentPage: 'Contact','''
+        },';
+        {}';';
+'';';
+''';';
+'''';';
+            url: 'mailto:kleber@ziontechgroup.com','''';';
+            status: 'healthy',';';
+            statusCode: 200,'';';
+            responseTime: 50,''';';
+            lastChecked: new Date(),'''';';
+            parentPage: 'Contact','''';';
             linkText: 'Email'
 
     ];
     useEffect ( () => {}
         setLinkStatuses (sampleLinks) ;
-        generateReport (sampleLinks) }, []) ;
-    const generateReport = (props: any) => {}
-        const totalLinks = links.length;'
-        const healthyLinks = links.filter(l => l.status === 'healthy').length;'
-        const brokenLinks = links.filter(l => l.status === 'broken').length;'
+        generateReport (sampleLinks) }, []) ;';
+    const generateReport = (props: any) => {}';';
+        const totalLinks = links.length;'';';
+        const healthyLinks = links.filter(l => l.status === 'healthy').length;'';';
+        const brokenLinks = links.filter(l => l.status === 'broken').length;'';';
         const externalLinks = links.filter(l => l.status === 'external').length;
         const avgResponseTime = links.reduce((sum, l) => sum + (l.responseTime || 0), 0) / totalLinks;
         setReport({}
@@ -78,36 +78,36 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
         // Simulate link checking;
         await new Promise(resolve => setTimeout (resolve, 2000) ) ;
         setIsMonitoring(false) };
-    const getStatusIcon = (props: any) => {}
-        switch (status) {}
-'
-            case 'healthy': any;
-                return <CheckCircle className="w-4 h-4 text-green-400" />;'"""
-            case 'broken':""""
-                return <AlertTriangle className="w-4 h-4 text-red-400" />;'"""
+    const getStatusIcon = (props: any) => {}';
+        switch (status) {}';';
+'';';
+            case 'healthy': any;';';
+                return <CheckCircle className="w-4 h-4 text-green-400" />;'"""';';
+            case 'broken':""""';';
+                return <AlertTriangle className="w-4 h-4 text-red-400" />;'"""';';
             case 'external':""""
                 return <ExternalLink className="w-4 h-4 text-blue-400" />;"""
             default:""""
                 return <RefreshCw className="w-4 h-4 text-yellow-400" />}
     };
-    const getStatusColor = (props: any) => {}
-        switch (status) {}
-'
-''
-'''
-            case 'healthy':''''
-                return 'text-green-400';'''
-            case 'broken':''''
-                return 'text-red-400';'''
-            case 'external':''''
-                return 'text-blue-400';'''
-            default:''''
+    const getStatusColor = (props: any) => {}';
+        switch (status) {}';';
+'';';
+''';';
+'''';';
+            case 'healthy':''''';';
+                return 'text-green-400';'''';';
+            case 'broken':''''';';
+                return 'text-red-400';'''';';
+            case 'external':''''';';
+                return 'text-blue-400';'''';';
+            default:''''';';
                 return 'text-yellow-400'}
-    };
-    const filteredLinks = linkStatuses.filter(link => {}
-'
-''
-'''
+    };';
+    const filteredLinks = linkStatuses.filter(link => {}';';
+'';';
+''';';
+'''';';
         if (selectedFilter === 'all')
             return true;
         return link.status === selectedFilter});
@@ -164,35 +164,37 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
                     <div className="text-2xl font-bold text-blue-400">{report.externalLinks}</div>""""
                     <div className="text-blue-400 text-sm">External</div>
                   </div>
-                </div>) }
+                    </div>
+  );
+}
 """
-              {/* Actions */}""""
-              <div className="flex items-center justify-between">""""
-                <div className="flex space-x-2">'
-                  <button onClick={() => setSelectedFilter('all')} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'all'''`
-                ? 'bg-cyan-500 text-white''`'`
-                : 'bg-gray-700 text-gray-300 hover:bg-gray-600'}`}>
-                    All Links'`
-                  </button>'`'`
-                  <button onClick={() => setSelectedFilter('broken')} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'broken'''`
-                ? 'bg-red-500 text-white''`'`
-                : 'bg-gray-700 text-gray-300 hover:bg-gray-600'}`}>
-                    Broken'`
-                  </button>'`'`
-                  <button onClick={() => setSelectedFilter('external')} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'external'''`
-                ? 'bg-blue-500 text-white''`'`
-                : 'bg-gray-700 text-gray-300 hover:bg-gray-600'}`}>
-                    External'`
-                  </button>'`'`
-                  <button onClick={() => setSelectedFilter('healthy')} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'healthy'''`
-                ? 'bg-green-500 text-white''`'`
+              {/* Actions */}""""';
+              <div className="flex items-center justify-between">""""';';
+                <div className="flex space-x-2">'';';
+                  <button onClick={() => setSelectedFilter('all')} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'all'''`';';
+                ? 'bg-cyan-500 text-white''`'`';';
+                : 'bg-gray-700 text-gray-300 hover:bg-gray-600'}`}>';';
+                    All Links'`';';
+                  </button>'`'`';';
+                  <button onClick={() => setSelectedFilter('broken')} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'broken'''`';';
+                ? 'bg-red-500 text-white''`'`';';
+                : 'bg-gray-700 text-gray-300 hover:bg-gray-600'}`}>';';
+                    Broken'`';';
+                  </button>'`'`';';
+                  <button onClick={() => setSelectedFilter('external')} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'external'''`';';
+                ? 'bg-blue-500 text-white''`'`';';
+                : 'bg-gray-700 text-gray-300 hover:bg-gray-600'}`}>';';
+                    External'`';';
+                  </button>'`'`';';
+                  <button onClick={() => setSelectedFilter('healthy')} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'healthy'''`';';
+                ? 'bg-green-500 text-white''`'`';';
                 : 'bg-gray-700 text-gray-300 hover:bg-gray-600'}`}>
                     Healthy;
                   </button>
                 </div>"""
-""""
-                <button onClick={startMonitoring} disabled={isMonitoring} className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2">""""
-                  {isMonitoring ? (<RefreshCw className="w-4 h-4 animate-spin" />) : (<Zap className="w-4 h-4" />)}'
+""""';
+                <button onClick={startMonitoring} disabled={isMonitoring} className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2">""""';';
+                  {isMonitoring ? (<RefreshCw className="w-4 h-4 animate-spin" />) : (<Zap className="w-4 h-4" />)}'';';
                   <span>{isMonitoring ? 'Checking...' : 'Check All Links'}</span>
                 </button>
               </div>
@@ -238,13 +240,15 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
                               </a>""""
                               {link.linkText && (<div className="text-xs text-gray-400 mt-1">
                                   Text: {link.linkText}
-                                </div>) }
-                            </div>"""
-                          </td>""""
-                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">'
-                            {link.parentPage || 'Unknown'}"""
-                          </td>"'"`
-                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">'`'`
+                                    </div>
+  );
+}
+                            </div>"""';
+                          </td>""""';';
+                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">'';';
+                            {link.parentPage || 'Unknown'}"""';';
+                          </td>"'"`';';
+                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">'`'`';';
                             {link.responseTime ? `${link.responseTime}ms` : 'N/A'}"""
                           </td>""""
                           <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">
@@ -286,6 +290,5 @@ export {LinkHealthMonitor};
 
 export {LinkHealthMonitor};
 
-</motion>
-</motion>
-</motion>
+</motion>';
+</motion>;';;';

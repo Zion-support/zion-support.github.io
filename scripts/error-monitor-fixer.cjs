@@ -9,21 +9,17 @@ class ErrorMonitorFixer {
     this.projectRoot = process.cwd();
     this.reportsDir = path.join(this.projectRoot, 'automation-reports');
     this.logsDir = path.join(this.projectRoot, 'logs');
-    this.ensureDirectories();
-  }
+    this.ensureDirectories()}
 
   ensureDirectories() {
     [this.reportsDir, this.logsDir].forEach(dir => {
       if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { recursive: true });
-      }
-    });
-  }
+        fs.mkdirSync(dir, { recursive: true })}
+    })}
 
   log(message) {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`);
-  }
+    console.log(`[${timestamp}] ${message}`)}
 
   detectCommonErrors() {
     this.log('🔍 Detecting common errors in codebase');
@@ -43,12 +39,10 @@ class ErrorMonitorFixer {
 
     [srcDir, pagesDir, componentsDir].forEach(dir => {
       if (fs.existsSync(dir)) {
-        this.scanDirectoryForErrors(dir, errors);
-      }
+        this.scanDirectoryForErrors(dir, errors)}
     });
 
-    return errors;
-  }
+    return errors}
 
   scanDirectoryForErrors(dir, errors) {
     const files = fs.readdirSync(dir, { withFileTypes: true });
@@ -57,12 +51,9 @@ class ErrorMonitorFixer {
       const filePath = path.join(dir, file.name);
       
       if (file.isDirectory()) {
-        this.scanDirectoryForErrors(filePath, errors);
-      } else if (file.name.match(/\.(ts|tsx|js|jsx)$/)) {
-        this.analyzeFileForErrors(filePath, errors);
-      }
-    });
-  }
+        this.scanDirectoryForErrors(filePath, errors)} else if (file.name.match(/\.(ts|tsx|js|jsx)$/)) {
+        this.analyzeFileForErrors(filePath, errors)}
+    })}
 
   analyzeFileForErrors(filePath, errors) {
     try {
@@ -85,8 +76,7 @@ class ErrorMonitorFixer {
             file: relativePath,
             message,
             line: this.findLineNumber(content, pattern)
-          });
-        }
+          })}
       });
 
       // Check for import issues
@@ -101,28 +91,22 @@ class ErrorMonitorFixer {
             file: relativePath,
             message,
             line: this.findLineNumber(content, pattern)
-          });
-        }
-      });
-
-    } catch (error) {
+          })}
+      })} catch (error) {
       errors.syntaxErrors.push({
         file: path.relative(this.projectRoot, filePath),
         message: `File read error: ${error.message}`,
         line: 0
-      });
-    }
+      })}
   }
 
   findLineNumber(content, pattern) {
     const lines = content.split('\n');
     for (let i = 0; i < lines.length; i++) {
       if (pattern.test(lines[i])) {
-        return i + 1;
-      }
+        return i + 1}
     }
-    return 0;
-  }
+    return 0}
 
   fixCommonErrors(errors) {
     this.log('🔧 Fixing common errors');
@@ -132,19 +116,16 @@ class ErrorMonitorFixer {
     // Fix syntax errors
     errors.syntaxErrors.forEach(error => {
       if (this.fixSyntaxError(error)) {
-        fixedCount++;
-      }
+        fixedCount++}
     });
 
     // Fix import errors
     errors.importErrors.forEach(error => {
       if (this.fixImportError(error)) {
-        fixedCount++;
-      }
+        fixedCount++}
     });
 
-    return fixedCount;
-  }
+    return fixedCount}
 
   fixSyntaxError(error) {
     try {
@@ -156,34 +137,27 @@ class ErrorMonitorFixer {
       // Fix merge conflict markers
       if (error.message.includes('Merge conflict')) {
         content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>>.*$/gm, '');
-        fixed = true;
-      }
+        fixed = true}
 
       // Fix unterminated strings
       if (error.message.includes('Unterminated')) {
         content = content.replace(/import\s+.*?from\s+['"]([^'"]*?)['"]\s*['"]/g, (match) => {
-          return match.replace(/['"]\s*['"]$/, '"');
-        });
-        fixed = true;
-      }
+          return match.replace(/['"]\s*['"]$/, '"')});
+        fixed = true}
 
       // Fix template literals
       if (error.message.includes('template literal')) {
         content = content.replace(/className=\{`([^`]*)\$\{([^}]*)\}([^`]*)$/g, 'className={`$1${$2}$3`}');
-        fixed = true;
-      }
+        fixed = true}
 
       if (fixed) {
         fs.writeFileSync(filePath, content, 'utf8');
         this.log(`✅ Fixed syntax error in ${error.file}`);
-        return true;
-      }
+        return true}
 
-      return false;
-    } catch (error) {
+      return false} catch (error) {
       this.log(`❌ Failed to fix syntax error in ${error.file}: ${error.message}`);
-      return false;
-    }
+      return false}
   }
 
   fixImportError(error) {
@@ -197,32 +171,24 @@ class ErrorMonitorFixer {
       if (error.message.includes('Missing semicolon')) {
         content = content.replace(/import\s+.*?from\s+['"]([^'"]*?)['"]\s*$/gm, (match) => {
           if (!match.endsWith(';')) {
-            return match + ';';
-          }
-          return match;
-        });
-        fixed = true;
-      }
+            return match + ';'}
+          return match});
+        fixed = true}
 
       // Fix double quotes
       if (error.message.includes('Double quotes')) {
         content = content.replace(/import\s+.*?from\s+['"]([^'"]*?)['"]\s*['"]/g, (match) => {
-          return match.replace(/['"]\s*['"]$/, '"');
-        });
-        fixed = true;
-      }
+          return match.replace(/['"]\s*['"]$/, '"')});
+        fixed = true}
 
       if (fixed) {
         fs.writeFileSync(filePath, content, 'utf8');
         this.log(`✅ Fixed import error in ${error.file}`);
-        return true;
-      }
+        return true}
 
-      return false;
-    } catch (error) {
+      return false} catch (error) {
       this.log(`❌ Failed to fix import error in ${error.file}: ${error.message}`);
-      return false;
-    }
+      return false}
   }
 
   runBuildChecks() {
@@ -238,31 +204,24 @@ class ErrorMonitorFixer {
       // Run linting
       execSync('npm run lint', { cwd: this.projectRoot, stdio: 'pipe' });
       checks.lintCheck = true;
-      this.log('✅ Lint check passed');
-    } catch (error) {
-      this.log('❌ Lint check failed');
-    }
+      this.log('✅ Lint check passed')} catch (error) {
+      this.log('❌ Lint check failed')}
 
     try {
       // Run type check
       execSync('npm run type-check:fast', { cwd: this.projectRoot, stdio: 'pipe' });
       checks.typeCheck = true;
-      this.log('✅ Type check passed');
-    } catch (error) {
-      this.log('❌ Type check failed');
-    }
+      this.log('✅ Type check passed')} catch (error) {
+      this.log('❌ Type check failed')}
 
     try {
       // Run build check
       execSync('npm run build:fast', { cwd: this.projectRoot, stdio: 'pipe' });
       checks.buildCheck = true;
-      this.log('✅ Build check passed');
-    } catch (error) {
-      this.log('❌ Build check failed');
-    }
+      this.log('✅ Build check passed')} catch (error) {
+      this.log('❌ Build check failed')}
 
-    return checks;
-  }
+    return checks}
 
   generateErrorReport(errors, fixedCount, checks) {
     const report = {
@@ -286,38 +245,30 @@ class ErrorMonitorFixer {
     const reportPath = path.join(this.reportsDir, 'error-monitor-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 
-    return report;
-  }
+    return report}
 
   generateRecommendations(errors, checks) {
     const recommendations = [];
 
     if (errors.syntaxErrors.length > 0) {
-      recommendations.push('Review and fix remaining syntax errors manually');
-    }
+      recommendations.push('Review and fix remaining syntax errors manually')}
 
     if (errors.importErrors.length > 0) {
-      recommendations.push('Check import statements for missing dependencies');
-    }
+      recommendations.push('Check import statements for missing dependencies')}
 
     if (!checks.lintCheck) {
-      recommendations.push('Fix linting issues to improve code quality');
-    }
+      recommendations.push('Fix linting issues to improve code quality')}
 
     if (!checks.typeCheck) {
-      recommendations.push('Resolve TypeScript type errors');
-    }
+      recommendations.push('Resolve TypeScript type errors')}
 
     if (!checks.buildCheck) {
-      recommendations.push('Fix build errors before deployment');
-    }
+      recommendations.push('Fix build errors before deployment')}
 
     if (recommendations.length === 0) {
-      recommendations.push('Codebase is in good condition!');
-    }
+      recommendations.push('Codebase is in good condition!')}
 
-    return recommendations;
-  }
+    return recommendations}
 
   async run() {
     this.log('🚀 Starting Error Monitor and Fixer');
@@ -340,18 +291,15 @@ class ErrorMonitorFixer {
       this.log(`   Fixed: ${fixedCount} errors`);
       this.log(`   Remaining: ${report.summary.remainingErrors} errors`);
 
-      return report;
-    } catch (error) {
+      return report} catch (error) {
       this.log(`❌ Error Monitor and Fixer failed: ${error.message}`);
-      throw error;
-    }
+      throw error}
   }
 }
 
 // Run the error monitor
 if (require.main === module) {
   const monitor = new ErrorMonitorFixer();
-  monitor.run().catch(console.error);
-}
+  monitor.run().catch(console.error)}
 
 module.exports = ErrorMonitorFixer;

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState} from 'react';';';
 import {motion} from 'framer-motion';
 import {Mail,
   Phone,
@@ -11,110 +11,110 @@ import {Mail,
   Globe,
   Linkedin,
   Twitter,
-  Facebook,
-  Instagram,
+  Facebook,';
+  Instagram,';';
   Github} from 'lucide-react';
 
-const contactMethods = [
-  {icon: Phone,
-    title: 'Phone',
-    value: '+1 302 464 0950',
-    description: 'Call us during business hours',
-    action: 'tel:+13024640950',
-    color: 'from-blue-500 to-cyan-500'},
-  {icon: Mail,
-    title: 'Email',
-    value: 'kleber@ziontechgroup.com',
-    description: 'Send us a message time',
-    action: 'mailto:kleber@ziontechgroup.com',
-    color: 'from-purple-500 to-pink-500'},
-  {icon: MapPin,
-    title: 'Address',
-    value: '364 E Main St STE 1008',
-    description: 'Middletown, DE 19709',
-    action: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709',
-    color: 'from-green-500 to-emerald-500'},
-  {icon: Clock,
-    title: 'Business Hours',
-    value: 'Mon - Fri: 9:00 AM - 6:00 PM',
-    description: 'Eastern Time Zone',
-    action: null,
+const contactMethods = [';
+  {icon: Phone,';';
+    title: 'Phone',';';
+    value: '+1 302 464 0950',';';
+    description: 'Call us during business hours',';';
+    action: 'tel:+13024640950',';';
+    color: 'from-blue-500 to-cyan-500'},';
+  {icon: Mail,';';
+    title: 'Email',';';
+    value: 'kleber@ziontechgroup.com',';';
+    description: 'Send us a message time',';';
+    action: 'mailto:kleber@ziontechgroup.com',';';
+    color: 'from-purple-500 to-pink-500'},';
+  {icon: MapPin,';';
+    title: 'Address',';';
+    value: '364 E Main St STE 1008',';';
+    description: 'Middletown, DE 19709',';';
+    action: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709',';';
+    color: 'from-green-500 to-emerald-500'},';
+  {icon: Clock,';';
+    title: 'Business Hours',';';
+    value: 'Mon - Fri: 9:00 AM - 6:00 PM',';';
+    description: 'Eastern Time Zone',';
+    action: null,';';
     color: 'from-orange-500 to-red-500'}
 ];
-
-const socialLinks = [
-  {name: 'LinkedIn',
-    icon: Linkedin,
-    url: 'https://linkedin.com/company/ziontechgroup',
-    color: 'hover:text-blue-500'},
-  {name: 'Twitter',
-    icon: Twitter,
-    url: 'https://twitter.com/ziontechgroup',
-    color: 'hover:text-sky-500'},
-  {name: 'Facebook',
-    icon: Facebook,
-    url: 'https://facebook.com/ziontechgroup',
-    color: 'hover:text-blue-600'},
-  {name: 'Instagram',
-    icon: Instagram,
-    url: 'https://instagram.com/ziontechgroup',
-    color: 'hover:text-pink-500'},
-  {name: 'GitHub',
-    icon: Github,
-    url: 'https://github.com/ziontechgroup',
+';
+const socialLinks = [';';
+  {name: 'LinkedIn',';
+    icon: Linkedin,';';
+    url: 'https://linkedin.com/company/ziontechgroup',';';
+    color: 'hover:text-blue-500'},';';
+  {name: 'Twitter',';
+    icon: Twitter,';';
+    url: 'https://twitter.com/ziontechgroup',';';
+    color: 'hover:text-sky-500'},';';
+  {name: 'Facebook',';
+    icon: Facebook,';';
+    url: 'https://facebook.com/ziontechgroup',';';
+    color: 'hover:text-blue-600'},';';
+  {name: 'Instagram',';
+    icon: Instagram,';';
+    url: 'https://instagram.com/ziontechgroup',';';
+    color: 'hover:text-pink-500'},';';
+  {name: 'GitHub',';
+    icon: Github,';';
+    url: 'https://github.com/ziontechgroup',';';
     color: 'hover:text-gray-400'}
 ];
-
-const contactFormFields = [
-  {name: 'firstName',
-    label: 'First Name',
-    type: 'text',
-    required: true,
-    placeholder: 'Enter your first name'},
-  {name: 'lastName',
-    label: 'Last Name',
-    type: 'text',
-    required: true,
-    placeholder: 'Enter your last name'},
-  {name: 'email',
-    label: 'Email',
-    type: 'email',
-    required: true,
-    placeholder: 'Enter your email address'},
-  {name: 'phone',
-    label: 'Phone',
-    type: 'tel',
-    required: false,
-    placeholder: 'Enter your phone number (optional)'},
-  {name: 'comp',
-    label: 'Comp',
-    type: 'text',
-    required: false,
-    placeholder: 'Enter your comp name (optional)'},
-  {name: 'service',
-    label: 'Service Interest',
+';
+const contactFormFields = [';';
+  {name: 'firstName',';';
+    label: 'First Name',';';
+    type: 'text',';
+    required: true,';';
+    placeholder: 'Enter your first name'},';';
+  {name: 'lastName',';';
+    label: 'Last Name',';';
+    type: 'text',';
+    required: true,';';
+    placeholder: 'Enter your last name'},';';
+  {name: 'email',';';
+    label: 'Email',';';
+    type: 'email',';
+    required: true,';';
+    placeholder: 'Enter your email address'},';';
+  {name: 'phone',';';
+    label: 'Phone',';';
+    type: 'tel',';
+    required: false,';';
+    placeholder: 'Enter your phone number (optional)'},';';
+  {name: 'comp',';';
+    label: 'Comp',';';
+    type: 'text',';
+    required: false,';';
+    placeholder: 'Enter your comp name (optional)'},';';
+  {name: 'service',';';
+    label: 'Service Interest',';';
     type: 'select',
-    required: true,
-    options: [
-      'AI & Analytics',
-      'Cybersecurity',
-      'Cloud & DevOps',
-      'IoT & Edge Computing',
-      'Digital Transformation',
-      'Mobile Development',
-      'Micro SaaS Solutions',
+    required: true,';
+    options: [';';
+      'AI & Analytics',';';
+      'Cybersecurity',';';
+      'Cloud & DevOps',';';
+      'IoT & Edge Computing',';';
+      'Digital Transformation',';';
+      'Mobile Development',';';
+      'Micro SaaS Solutions',';';
       'Other'
     ]}
 ];
 
-export default function Contact(props: any) {
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    comp: '',
-    service: '',
+export default function Contact(props: any) {';
+  const [formData, setFormData] = useState({';';
+    firstName: '',';';
+    lastName: '',';';
+    email: '',';';
+    phone: '',';';
+    comp: '',';';
+    service: '',';';
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -138,21 +138,21 @@ export default function Contact(props: any) {
 
     // Reset form after 3 seconds
     setTimeout(() => {
-      setSubmitSuccess(false);
-      setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        phone: '',
-        comp: '',
-        service: '',
+      setSubmitSuccess(false);';
+      setFormData({';';
+        firstName: '',';';
+        lastName: '',';';
+        email: '',';';
+        phone: '',';';
+        comp: '',';';
+        service: '',';';
         message: ''
       });
     }, 3000);
   };
 
   return (
-    <div className="min-h-screen bg-futuristic">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 via-zion-purple/20 to-zion-blue/20"></div>
@@ -182,8 +182,8 @@ export default function Contact(props: any) {
               <span className="text-gradient block">Touch</span>
             </h1>
 
-            <p className="text-xl text-zion-slate-light leading-relaxed mb-8">
-              Ready to transform your business with cutting-edge technology?
+            <p className="text-xl text-zion-slate-light leading-relaxed mb-8">';
+              Ready to transform your business with cutting-edge technology?';';
               Let's discuss your project and explore how we can help you achieve your goals.
             </p>
           </motion.div>
@@ -223,9 +223,9 @@ export default function Contact(props: any) {
                 <p className="text-zion-slate-light text-sm mb-4">{method.description}</p>
 
                 {method.action && (
-                  <a
-                    href={method.action}
-                    target={method.action.startsWith('http') ? '_blank' : null}
+                  <a';
+                    href={method.action}';';
+                    target={method.action.startsWith('http') ? '_blank' : null}';';
                     rel={method.action.startsWith('http') ? 'noopener noreferrer' : null}
                     className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors duration-300"
                   >
@@ -249,9 +249,9 @@ export default function Contact(props: any) {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl font-bold text-white mb-6">Send Us a Message</h2>
-              <p className="text-zion-slate-light mb-8 leading-relaxed">
-                Fill out the form below and we'll get back to you within 24 hours.
+              <h2 className="text-3xl font-bold text-white mb-6">Send Us a Message</h2>';
+              <p className="text-zion-slate-light mb-8 leading-relaxed">';';
+                Fill out the form below and we'll get back to you within 24 hours.';';
                 We're excited to learn about your project and discuss how we can help.
               </p>
 
@@ -262,8 +262,8 @@ export default function Contact(props: any) {
                   className="bg-green-500/20 border border-green-500/40 rounded-2xl p-8 text-center"
                 >
                   <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4"  />
-                  <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
-                  <p className="text-green-200">
+                  <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>';
+                  <p className="text-green-200">';';
                     Thank you for reaching out. We'll get back to you within 24 hours.
                   </p>
                 </motion.div>
@@ -311,8 +311,8 @@ export default function Contact(props: any) {
                     {contactFormFields.slice(4, 6).map(field => (
                       <div key={field.name}>
                         <label htmlFor={field.name} className="block text-white font-medium mb-2">
-                          {field.label} {field.required && <span className="text-red-400">*</span>}
-                        </label>
+                          {field.label} {field.required && <span className="text-red-400">*</span>}';
+                        </label>';';
                         {field.type === 'select' ? (
                           <select
                             id={field.name}
@@ -360,8 +360,8 @@ export default function Contact(props: any) {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
-                  >
+                    className="w-full px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"';
+                  >';';
                     {isSubmitting ? 'Sending Message...' : 'Send Message'}
                   </button>
                 </form>
@@ -469,11 +469,7 @@ export default function Contact(props: any) {
 }
 
 </motion>
-</motion>
 </textarea>
 </motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
+</motion>';
+</motion>;';;';

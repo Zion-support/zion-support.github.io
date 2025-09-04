@@ -1,18 +1,18 @@
-import React from 'react';
-export default function CodeBlock(props: any) {}
-'
-''
-'''
+import React from 'react';';
+export default function CodeBlock(props: any) {}';';
+'';';
+''';';
+'''';';
   const content = code || children || '';
   return ()
     <div className={`bg-gray-900 rounded-lg p-4 overflow-x-auto ${className}`}>
       <div className="flex items-center justify-between mb-2">""""
         <span className="text-xs text-gray-400 uppercase tracking-wide">
           {language}
-        </span>
-        <button;
-          onClick={() =>'
-            navigator.clipboard.writeText(''
+        </span>';
+        <button;';';
+          onClick={() =>'';';
+            navigator.clipboard.writeText(''';';
               typeof content === 'string' ? content : content.toString()
             )"""}""""
           className="text-xs text-gray-400 hover:text-white transition-colors"""
@@ -23,8 +23,9 @@ export default function CodeBlock(props: any) {}
       <pre className="text-sm text-gray-100">
         <code>{content}</code>
       </pre>
-    </div>)}
-
+        </div>
+  );
+}
 export {CodeBlock};
 
 export {CodeBlock};
@@ -33,4 +34,5 @@ export {CodeBlock};
 
 export {CodeBlock};
 
-export {CodeBlock};
+export {CodeBlock};';
+;';;';

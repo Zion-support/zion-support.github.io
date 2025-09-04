@@ -19,7 +19,7 @@ const fixes = [
   
   // Fix missing semicolons after import statements
   {
-    pattern: /import\s+([^;]+)\s*$/gm,
+    pattern: /import\s+([^]+)\s*$/gm,
     replacement: 'import $1;'
   },
   
@@ -87,20 +87,16 @@ function fixFile(filePath) {
       const newContent = content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
         content = newContent;
-        modified = true;
-      }
+        modified = true}
     });
     
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
-      return true;
-    }
+      return true}
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-  }
-  return false;
-}
+    console.error(`Error fixing ${filePath}:`, error.message)}
+  return false}
 
 function walkDirectory(dir) {
   let fixedCount = 0;
@@ -113,19 +109,15 @@ function walkDirectory(dir) {
       const stat = fs.statSync(filePath);
       
       if (stat.isDirectory()) {
-        fixedCount += walkDirectory(filePath);
-      } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
+        fixedCount += walkDirectory(filePath)} else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
         if (fixFile(filePath)) {
-          fixedCount++;
-        }
+          fixedCount++}
       }
     }
   } catch (error) {
-    console.error(`Error reading directory ${dir}:`, error.message);
-  }
+    console.error(`Error reading directory ${dir}:`, error.message)}
   
-  return fixedCount;
-}
+  return fixedCount}
 
 // Start fixing from src directory
 const srcDir = path.join(process.cwd(), 'src');

@@ -12,8 +12,7 @@ export interface MetaverseDigitalRealityService2026 {
   contactInfo: {
     mobile: string;
     email: string;
-address: string;
-  };export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService2026[] = [
+address: string};export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService2026[] = [
   {
     id: "2026-metaverse-digital-reality",
     name: "2026 Metaverse Digital Reality Platform",
@@ -34,5 +33,4 @@ address: string;
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-];
-}}}
+]}}}

@@ -9,13 +9,12 @@ function fixFile(filePath) {
     // Fix missing semicolons after imports;
     fixed = fixed.replace(/import\s+[^]+$/gm, (match) => {
   if (!match.endsWith(";")) {
-  return match + ";";,
+  return match + ";",
 }
       return match});
     // Fix broken JSX syntax;
     fixed = fixed.replace(/<([^>]+)\s*>/g, (match) => {
-  return match.replace(/\s+/g, " ").trim();
-});
+  return match.replace(/\s+/g, " ").trim()});
     // Fix malformed arrays and objects;
     fixed = fixed.replace(/\[\s*([^\]]+)\s*\]/g, "[$1]");
     fixed = fixed.replace(/\{\s*([^}]+)\s*\}/g, "{$1}");
@@ -38,10 +37,9 @@ function processDirectory(dirPath) {
   const fullPath = path.join(dirPath, file);
     const stat = fs.statSync(fullPath);
     if (stat.isDirectory()) {
-  fixedCount += processDirectory(fullPath);
-} else if (file.endsWith(".tsx") || file.endsWith(".ts") || file.endsWith(".jsx") || file.endsWith(".js")) {
+  fixedCount += processDirectory(fullPath)} else if (file.endsWith(".tsx") || file.endsWith(".ts") || file.endsWith(".jsx") || file.endsWith(".js")) {
   if (fixFile(fullPath)) {
-  fixedCount++;,
+  fixedCount++,
 }
     }
   }

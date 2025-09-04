@@ -9,5 +9,5 @@ export default function Index() {;
           This is a placeholder component for index.;
         </p>;
       </div>;
-  );,
+  ),
 }

@@ -42,14 +42,11 @@ export interface EnterpriseITInfrastructureService {
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',;
+  address: '364 E Main St STE 1008 Middletown DE 19709',
   ;
   ;
   ;
-  ;
-  website: 'https://ziontechgroup.com';
-;
-};
+  website: 'https://ziontechgroup.com'};
 export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureService[] = [
   // HYBRID CLOUD ORCHESTRATION
   {
@@ -501,4 +498,4 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     aiCapabilities['Autonomous Optimization', 'Performance Prediction', 'Automatic Routing', 'Traffic Optimization'],
     marketDisruption: 'Revolutionizes network management with autonomous AI'
 ];
-export default enterpriseITInfrastructureServices2025;}}
+export default enterpriseITInfrastructureServices2025}}

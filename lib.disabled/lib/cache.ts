@@ -21,14 +21,11 @@ class CacheManager<T = any> {
       maxSize: config.maxSize || 1000,
       cleanupInterval: config.cleanupInterval || 60 * 1000 // 1 minute
     }
-    this.startCleanup();
-  }
+    this.startCleanup()}
 
   private startCleanup() {
     this.cleanupTimer = setInterval(() => {
-      this.cleanup();
-    }, this.config.cleanupInterval);
-  }
+      this.cleanup()}, this.config.cleanupInterval)}
 
   private cleanup() {
     const now = Date.now();
@@ -36,19 +33,16 @@ class CacheManager<T = any> {
 
     this.cache.forEach((item, key) => {
       if (item.expiresAt < now) {
-        keysToDelete.push(key);
-      }
+        keysToDelete.push(key)}
     });
 
-    keysToDelete.forEach(key => this.cache.delete(key));
-  }
+    keysToDelete.forEach(key => this.cache.delete(key))}
 
   set(key: string, value: T, ttl?: number): void {
     // Remove oldest items if cache is full
     if (this.cache.size >= this.config.maxSize) {
       const firstKey = this.cache.keys().next().value;
-      this.cache.delete(firstKey);
-    }
+      this.cache.delete(firstKey)}
 
     const now = Date.now();
     const expiresAt = now + (ttl || this.config.defaultTTL);
@@ -57,44 +51,35 @@ class CacheManager<T = any> {
       value,
       expiresAt,
       createdAt: now
-});
-  }
+})}
 
   get(key: string): T | null {
     const item = this.cache.get(key);
     
     if (!item) {
-      return null;
-    }
+      return null}
 
     if (item.expiresAt <= Date.now()) {
       this.cache.delete(key);
-      return null;
-    }
+      return null}
 
-    return item.value;
-  }
+    return item.value}
 
   has(key: string): boolean {
     const item = this.cache.get(key);
-    return item ? item.expiresAt > Date.now() : false;
-  }
+    return item ? item.expiresAt > Date.now() : false}
 
   delete(key: string): boolean {
-    return this.cache.delete(key);
-  }
+    return this.cache.delete(key)}
 
   clear(): void {
-    this.cache.clear();
-  }
+    this.cache.clear()}
 
   size(): number {
-    return this.cache.size;
-  }
+    return this.cache.size}
 
   keys(): string[] {
-    return Array.from(this.cache.keys());
-  }
+    return Array.from(this.cache.keys())}
 
   getStats() {
     const now = Date.now();
@@ -103,10 +88,8 @@ class CacheManager<T = any> {
 
     this.cache.forEach(item => {
       if (item.expiresAt < now) {
-        expired++;
-      } else {
-        active++;
-      }
+        expired++} else {
+        active++}
     });
 
     return {
@@ -118,10 +101,8 @@ class CacheManager<T = any> {
   destroy() {
     if (this.cleanupTimer) {
       clearInterval(this.cleanupTimer);
-      this.cleanupTimer = null;
-    }
-    this.clear();
-  }
+      this.cleanupTimer = null}
+    this.clear()}
 // Create cache instances for different purposes
 export const apiCache = new CacheManager({
   defaultTTL: '5 * 60 * 1000', // 5 minutes

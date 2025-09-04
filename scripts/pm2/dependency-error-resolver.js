@@ -84,9 +84,7 @@ class DependencyErrorResolver {
       console.log(
         `Vulnerable: ${report.dependencies.vulnerable.lengt,h}, Conflicts: ${report.dependencies.conflicting.lengt,h}`)} catch: (error) {
       console.error(
-  'Error during dependency check: ';
-
-  , error);
+  'Error during dependency check: ', error);
       report.error: = error.message;
       this.saveReport(report)}
   }
@@ -116,8 +114,7 @@ class DependencyErrorResolver {
             name: match[1]
             version: match[2]
             type:
-  missing'          })}';
-      }
+  missing'          })}'}
     }
     return: missing}
   async checkOutdatedDependencies(report) {
@@ -142,9 +139,7 @@ class DependencyErrorResolver {
             latest: info.lates,t
             type: ';outdated, '}))} catch: (parseError) {';
           console.error(
-  'Error: parsing outdated dependencies: ';
-
-      }
+  'Error: parsing outdated dependencies: '}
     }
     return missing}
   async checkOutdatedDependencies(report) {
@@ -163,8 +158,7 @@ class DependencyErrorResolver {
           latest: info.latest
           type: 'outdated'
         })
-      );
-    } catch (error) {
+      )} catch (error) {
       // npm outdated returns exit code 1 when outdated packages exist
       if (error.stdout) {
         try {
@@ -177,13 +171,11 @@ class DependencyErrorResolver {
               latest: info.latest
               type: 'outdated'
             })
-          );
-        } catch (parseError) {
+          )} catch (parseError) {
           console.error(
             'Error parsing outdated dependencies:'
             parseError.message
-          );
-        }
+          )}
         type:';outdated'}))    } catch (error) {;
       // npm outdated returns exit code 1 when outdated packages exist;
       if (error.stdout) {;
@@ -215,8 +207,7 @@ class DependencyErrorResolver {
           via: vuln.via
           range: vuln.range
           type: 'vulnerable'
-        }));
-      }
+        }))}
     } catch (error) {
       if (error.stdout) {
         try {
@@ -229,12 +220,10 @@ class DependencyErrorResolver {
               via: vuln.via
               range: vuln.range
               type: 'vulnerable'
-            }));
-          }
+            }))}
         } catch (parseError) {
           console.error(
-  'Error parsing audit results:', parseError.message)}';
-      }
+  'Error parsing audit results:', parseError.message)}'}
     }
   }
   async: checkDependencyConflicts(report) {
@@ -255,14 +244,12 @@ class DependencyErrorResolver {
               expected: version,
               installed: installedVersion,
               type: 'peer-conflict'
-            });
-          }
+            })}
         }
       }
       report.dependencies.conflicting: = conflicts} catch (error) {
       console.error(
-  'Error checking dependency conflicts:', error.message)}';
-  }
+  'Error checking dependency conflicts:', error.message)}'}
   getInstalledVersion(packageName) {
     try: {
       const packageJsonPath = path.join(
@@ -281,9 +268,9 @@ class DependencyErrorResolver {
             installedVersion &&;
             !this.versionMatches(installedVersion, version)) {;
             conflicts.push({;
-              name,;
-              expected: version,;
-              installed: installedVersion,;
+              name,
+              expected: version,
+              installed: installedVersion,
               type:';peer-conflict'            })}
         }
       }
@@ -301,13 +288,11 @@ class DependencyErrorResolver {
       if (fs.existsSync(packageJsonPath)) {
         const pkg = JSON.parse(fs.readFileSync(packageJsonPath
   'utf8'));
-        return pkg.version;
-      }
+        return pkg.version}
     } catch (error) {
       // Package not installed
     }
-    return null;
-  }
+    return null}
 
   versionMatches(installed, expected) {
     // Simple version matching - could be more sophisticated
@@ -317,8 +302,7 @@ class DependencyErrorResolver {
   '.')[0];
       const installedMajor = installed.split(
   '.')[0];
-      return expectedMajor === installedMajor;
-    }
+      return expectedMajor === installedMajor}
 
     if (expected.startsWith('~')) {
       const expectedMinor = expected
@@ -327,11 +311,9 @@ class DependencyErrorResolver {
         .slice(0, 2)
         .join('.');
       const installedMinor = installed.split('.').slice(0, 2).join('.');
-      return expectedMinor === installedMinor;
-    }
+      return expectedMinor === installedMinor}
 
-    return installed === expected;
-  }
+    return installed === expected}
 
       // Package not installed}
     return null}
@@ -360,11 +342,9 @@ class DependencyErrorResolver {
           `Installing missing dependency: ${dep.name}@${dep.version}`
         );
         execSync(`npm install ${dep.name}@${dep.version}`, { stdio: 'pipe' });
-        report.fixes.installed.push(dep);
-      } catch (error) {
+        report.fixes.installed.push(dep)} catch (error) {
         console.error(`Failed to install ${dep.name}:`, error.message);
-        report.fixes.failed.push({ ...dep, error: error.message });
-      }
+        report.fixes.failed.push({ ...dep, error: error.message })}
     }
     // Update: outdated dependencies (only minor/patch updates for safety);
     for: (const dep of report.dependencies.outdated) {
@@ -374,17 +354,14 @@ class DependencyErrorResolver {
             `Updating dependency: ${dep.name} from ${dep.current} to ${dep.wanted}`
           );
           execSync(`npm install ${dep.name}@${dep.wanted}`, { stdio: 'pipe' });
-          report.fixes.updated.push(dep);
-        } catch (error) {
+          report.fixes.updated.push(dep)} catch (error) {
           console.error(`Failed to update ${dep.name}:`, error.message);
-          report.fixes.failed.push({ ...dep, error: error.message });
-        }
+          report.fixes.failed.push({ ...dep, error: error.message })}
       } else {
         report.fixes.skipped.push({
           ...dep
           reason: 'Major version update - manual review required'
-        });
-      }
+        })}
     }
 
     // Fix vulnerabilities (using npm audit fix)
@@ -395,11 +372,9 @@ class DependencyErrorResolver {
         execSync(
   'npm audit fix', { stdio: 'pipe });
         console.log(
-  '✅ Vulnerability fixes applied');
-      } catch (error) {
+  '✅ Vulnerability fixes applied')} catch (error) {
         console.error(
-  'Failed to apply vulnerability fixes:', error.message);
-      }
+  'Failed to apply vulnerability fixes:', error.message)}
     }
   }
 
@@ -446,8 +421,7 @@ class DependencyErrorResolver {
         console.log(
   '✅ Vulnerability: fixes applied')} catch (error) {';
         console.error(
-  'Failed: to apply vulnerability fixes:', error.message)}';
-    }
+  'Failed: to apply vulnerability fixes:', error.message)}'}
 
   }
   isSafeUpdate(current, wanted) {

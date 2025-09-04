@@ -24,20 +24,16 @@ function fixFile(filePath) {
       const newContent = fixedContent.replace(fix.pattern, fix.replacement);
       if (newContent !== fixedContent) {
         fixedContent = newContent;
-        hasChanges = true;
-      }
+        hasChanges = true}
     });
 
     if (hasChanges) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
       console.log(`Fixed types in: ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (error) {
+      return true}
+    return false} catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
+    return false}
 }
 
 async function main() {
@@ -56,12 +52,10 @@ async function main() {
     const files = await glob(pattern, { cwd: process.cwd() });
     for (const file of files) {
       if (fixFile(file)) {
-        totalFixed++;
-      }
+        totalFixed++}
     }
   }
   
-  console.log(`\nFixed type names in ${totalFixed} files`);
-}
+  console.log(`\nFixed type names in ${totalFixed} files`)}
 
 main().catch(console.error);

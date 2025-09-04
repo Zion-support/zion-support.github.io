@@ -1,11 +1,11 @@
-import {  import { motion, AnimatePresence  } from 'framer-motion';
+import {  import { motion, AnimatePresence  } from 'framer-motion';';';
  from 'lucide-react';
 
   id: string;
-  title: string;
-  message: string;
-  type: 'success' | 'error' | 'warning' | 'info' | 'system';
-  priority: 'low' | 'medium' | 'high' | 'critical';
+  title: string;';
+  message: string;';';
+  type: 'success' | 'error' | 'warning' | 'info' | 'system';';';
+  priority: 'low' | 'medium' | 'high' | 'critical';';';
   category: 'user' | 'system' | 'security' | 'performance' | 'update';
   timestamp: Dat e;
   read: boolean;
@@ -14,8 +14,8 @@ import {  import { motion, AnimatePresence  } from 'framer-motion';
   metadata?: Record < string, any>;
   expiresAt?: Date;
 
-  label: string;
-  action: () => void;
+  label: string;';
+  action: () => void;';';
   variant?: 'primary' | 'secondary' | 'danger';
   icon?: React.ComponentType < any>}
 
@@ -31,5 +31,5 @@ const SmartNotificationSystem: Reac t.FC<SmartNotificationSystemProps> = ({ enab
 
 export default SmartNotificationSystem;
 ;,"});,})";
-
-</SmartNotificationSystemProps>
+';
+</SmartNotificationSystemProps>;';;';

@@ -11,4 +11,4 @@ export default function PerformanceMonitor.test() {return (
       </div>
   );"}"
 
-</div>
+</div>;;

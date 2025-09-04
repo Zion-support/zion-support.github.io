@@ -1,7 +1,7 @@
 export function Separator(props: any) {
   const baseClasses = orientation === 'horizontal' ? 'h-px w-full' : 'h-full w-px';
-
-  return (
+';
+  return (';';
     <div role={decorative ? 'none' : 'separator'}
       aria-orientation={orientation}
       className={`${baseClasses} bg-gray-300 ${className}`}
@@ -9,6 +9,5 @@ export function Separator(props: any) {
      />
   )}
 
-
-export default separator;
-</div>
+export default separator;';
+</div>';';

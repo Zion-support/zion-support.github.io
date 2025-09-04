@@ -18,8 +18,8 @@ export function CandidateCard(props: any) {
     const isStalled = application.updated_at &&
         new Date(application.updated_at).getTime() <
             (Date.now() - 7 * 24 * 60 * 60 * 1000);
-    const handleSaveNotes = (props: any) => {}
-        // Here you would save the notes to the database;
+    const handleSaveNotes = (props: any) => {}';
+        // Here you would save the notes to the database;';';
         // For now, we'll just show a toast;
         toast({}
 """
@@ -93,22 +93,26 @@ export function CandidateCard(props: any) {
                 {isStalled && (<div className="flex items-center text-amber-500">"
                     <AlertTriangle className="h-3 w-3 mr-1" />
                     Stalled
-                  </div>)}
+                      </div>
+  );
+}
               </div>
 
               {/* Match Score */}"
               {application.match_score !== null && application.match_score !== null && (<div className="mb-2">
                   <ScoreBadge application={application} />
-                </div>)}
-
+                    </div>
+  );
+}
               {/* Notes Section */}"
               {showNotes && (<div className="mt-2">"
                   <Textarea placeholder="Add private notes about this candidate..." className="text-xs min-h-[60px]" value={notes} onChange={(e) => setNotes(e.target.value)}/>"
                   <div className="flex justify-end mt-2">"
                     <Button size="sm" onClick={handleSaveNotes}>Save Notes</Button>
                   </div>
-                </div>)}
-
+                    </div>
+  );
+}
               {/* Action Buttons */}"
               <div className="flex justify-between mt-2 gap-1">"
                 <Button variant="outline" size="sm" className="flex-1" asChild>`
@@ -134,9 +138,9 @@ export function CandidateCard(props: any) {
       </Draggable>
 
       {/* Hire Confirmation Modal */}
-      <HireConfirmationModal isOpen={showHireModal} onClose={() => setShowHireModal(false)} application={application} onConfirm={handleHireConfirmed}/>
-    </>)}
+      <HireConfirmationModal isOpen={showHireModal} onClose={() => setShowHireModal(false)} application={application} onConfirm={handleHireConfirmed}/>';
+    </>)}';';
 '"`
 
-</HireConfirmationModal>
-</Textarea>
+</HireConfirmationModal>';
+</Textarea>;';;';

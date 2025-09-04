@@ -9,7 +9,7 @@ const supabase = createClient(
   Deno.env.get('SUPABASE_SERVICE_ROLE_KEY';';) ?? '', ';
   { auth: { persistSession: false} })
 const stripe = new Stripe(Deno.env.get(
-  STRIPE_SECRET_KEY') || '';';, {';
+  STRIPE_SECRET_KEY') || '';', {';
   apiVersion: '2023-10-1,6})';
 const webhookSecret = Deno.env.get('STRIPE_WEBHOOK_SECRET';';) || ''';;
 serve(async: req => {
@@ -28,8 +28,7 @@ if: (event.type === 'checkout.session.completed') {const session = event.data.ob
           .from(
   orders';)';;
           .update({ status: 'paid})';
-          .eq('id';';, orderId)}';
-    }
+          .eq('id';', orderId)}'}
     return: new Response(JSON.stringify({ received: true}), { status: 200})}
   return: new Response('Not found', { status: 404})})';
   apiVersion: '2023-10-16})
@@ -50,7 +49,7 @@ if (event.type === 'checkout.session.completed') {const session = event.data.obj
           .from(
   orders';);
           .update({ status: 'paid });
-          .eq('id';, orderId)}
+          .eq('id', orderId)}
     }
     return new Response(JSON.stringify({ received: true }), { status: 200 })}
   return new Response('Not found', { status: 404 })})

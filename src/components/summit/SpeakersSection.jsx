@@ -1,8 +1,8 @@
 const speakers = [
-    {name: 'Alex Zion',
-        title: 'Founder & CEO',
-        avatar: 'https://placehold.co/100x100',
-        twitter: '#',
+    {name: 'Alex Zion',';';
+        title: 'Founder & CEO',';';
+        avatar: 'https://placehold.co/100x100',';';
+        twitter: '#',';';
         linkedin: '#',},
 ];
 export function SpeakersSection(props: any) {
@@ -22,6 +22,5 @@ export function SpeakersSection(props: any) {
         </div>
       </div>
     </section>)}
-
-
-export default SpeakersSection;
+';
+export default SpeakersSection;';';

@@ -7,4 +7,3 @@ interface TabsContextType {
   setActiveTab: ta b: string void
 }
 ;
-

@@ -15,18 +15,15 @@ class CodeQualityAutoEnhancer {
     // Ensure directories exist
     [this.reportsDir, this.logsDir].forEach(dir => {
       if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { recursive: true });
-      }
+        fs.mkdirSync(dir, { recursive: true })}
     });
     
     this.enhancementsApplied = 0;
-    this.qualityHistory = [];
-  }
+    this.qualityHistory = []}
 
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${level}] ${message}`);
-  }
+    console.log(`[${timestamp}] [${level}] ${message}`)}
 
   async runCodeQualityChecks() {
     this.log('Running code quality checks...', 'INFO');
@@ -44,17 +41,14 @@ class CodeQualityAutoEnhancer {
     for (const check of checks) {
       try {
         execSync(check.command, { stdio: 'pipe' });
-        results[check.name] = { success: true, issues: [], count: 0 };
-      } catch (error) {
+        results[check.name] = { success: true, issues: [], count: 0 }} catch (error) {
         const output = error.stdout?.toString() || error.stderr?.toString() || '';
         const issues = this.parseQualityIssues(output, check.name);
         results[check.name] = { success: false, issues, count: issues.length };
-        totalIssues += issues.length;
-      }
+        totalIssues += issues.length}
     }
 
-    return { results, totalIssues };
-  }
+    return { results, totalIssues }}
 
   parseQualityIssues(output, checkType) {
     const issues = [];
@@ -70,42 +64,35 @@ class CodeQualityAutoEnhancer {
             column: parseInt(match[3]),
             message: line.split(' - ')[1] || line,
             type: checkType
-          });
-        } else {
+          })} else {
           issues.push({
             file: 'unknown',
             line: 0,
             column: 0,
             message: line.trim(),
             type: checkType
-          });
-        }
+          })}
       }
     }
     
-    return issues;
-  }
+    return issues}
 
   async applyCodeEnhancements(issues) {
     if (!this.autoEnhanceEnabled) {
       this.log('Auto-enhancement is disabled', 'INFO');
-      return 0;
-    }
+      return 0}
 
     let enhancementsApplied = 0;
     
     for (const issue of issues) {
       try {
         if (await this.applyEnhancement(issue)) {
-          enhancementsApplied++;
-        }
+          enhancementsApplied++}
       } catch (error) {
-        this.log(`Failed to apply enhancement: ${error.message}`, 'ERROR');
-      }
+        this.log(`Failed to apply enhancement: ${error.message}`, 'ERROR')}
     }
     
-    return enhancementsApplied;
-  }
+    return enhancementsApplied}
 
   async applyEnhancement(issue) {
     switch (issue.type) {
@@ -118,8 +105,7 @@ class CodeQualityAutoEnhancer {
       case 'Test Coverage':
         return await this.applyTestCoverageEnhancement(issue);
       default:
-        return false;
-    }
+        return false}
   }
 
   async applyESLintEnhancement(issue) {
@@ -147,24 +133,19 @@ class CodeQualityAutoEnhancer {
             const result = enhancement(lines, issue);
             if (result.modified) {
               modifiedContent = result.content;
-              this.log(`Applied ESLint enhancement to ${issue.file}: ${result.description}`, 'INFO');
-            }
+              this.log(`Applied ESLint enhancement to ${issue.file}: ${result.description}`, 'INFO')}
           } catch (enhancementError) {
-            this.log(`ESLint enhancement failed for ${issue.file}: ${enhancementError.message}`, 'WARN');
-          }
+            this.log(`ESLint enhancement failed for ${issue.file}: ${enhancementError.message}`, 'WARN')}
         }
 
         if (modifiedContent !== originalContent) {
           fs.writeFileSync(issue.file, modifiedContent);
-          return true;
-        }
+          return true}
       }
       
-      return false;
-    } catch (error) {
+      return false} catch (error) {
       this.log(`Failed to apply ESLint enhancement: ${error.message}`, 'ERROR');
-      return false;
-    }
+      return false}
   }
 
   async applyPrettierEnhancement(issue) {
@@ -172,14 +153,11 @@ class CodeQualityAutoEnhancer {
       // Run Prettier auto-fix
       if (issue.file && issue.file !== 'unknown') {
         execSync(`npx prettier --write "${issue.file}"`, { stdio: 'pipe' });
-        return true;
-      }
+        return true}
       
-      return false;
-    } catch (error) {
+      return false} catch (error) {
       this.log(`Failed to apply Prettier enhancement: ${error.message}`, 'ERROR');
-      return false;
-    }
+      return false}
   }
 
   async applyTypeScriptEnhancement(issue) {
@@ -206,24 +184,19 @@ class CodeQualityAutoEnhancer {
             const result = enhancement(lines, issue);
             if (result.modified) {
               modifiedContent = result.content;
-              this.log(`Applied TypeScript enhancement to ${issue.file}: ${result.description}`, 'INFO');
-            }
+              this.log(`Applied TypeScript enhancement to ${issue.file}: ${result.description}`, 'INFO')}
           } catch (enhancementError) {
-            this.log(`TypeScript enhancement failed for ${issue.file}: ${enhancementError.message}`, 'WARN');
-          }
+            this.log(`TypeScript enhancement failed for ${issue.file}: ${enhancementError.message}`, 'WARN')}
         }
 
         if (modifiedContent !== originalContent) {
           fs.writeFileSync(issue.file, modifiedContent);
-          return true;
-        }
+          return true}
       }
       
-      return false;
-    } catch (error) {
+      return false} catch (error) {
       this.log(`Failed to apply TypeScript enhancement: ${error.message}`, 'ERROR');
-      return false;
-    }
+      return false}
   }
 
   async applyTestCoverageEnhancement(issue) {
@@ -232,14 +205,11 @@ class CodeQualityAutoEnhancer {
       const uncoveredFiles = this.findUncoveredFiles();
       
       for (const file of uncoveredFiles) {
-        await this.generateTestFile(file);
-      }
+        await this.generateTestFile(file)}
       
-      return uncoveredFiles.length > 0;
-    } catch (error) {
+      return uncoveredFiles.length > 0} catch (error) {
       this.log(`Failed to apply test coverage enhancement: ${error.message}`, 'ERROR');
-      return false;
-    }
+      return false}
   }
 
   fixUnusedVariables(lines, issue) {
@@ -258,13 +228,11 @@ class CodeQualityAutoEnhancer {
             modified: true,
             content: lines.join('\n'),
             description: `Commented out unused variable ${varName}`
-          };
-        }
+          }}
       }
     }
     
-    return { modified: false, content: lines.join('\n') };
-  }
+    return { modified: false, content: lines.join('\n') }}
 
   fixMissingSemicolons(lines, issue) {
     if (issue.message.includes('Missing semicolon')) {
@@ -278,12 +246,10 @@ class CodeQualityAutoEnhancer {
           modified: true,
           content: lines.join('\n'),
           description: 'Added missing semicolon'
-        };
-      }
+        }}
     }
     
-    return { modified: false, content: lines.join('\n') };
-  }
+    return { modified: false, content: lines.join('\n') }}
 
   fixUnusedImports(lines, issue) {
     if (issue.message.includes('is defined but never used')) {
@@ -300,14 +266,12 @@ class CodeQualityAutoEnhancer {
               modified: true,
               content: lines.join('\n'),
               description: `Commented out unused import ${importName}`
-            };
-          }
+            }}
         }
       }
     }
     
-    return { modified: false, content: lines.join('\n') };
-  }
+    return { modified: false, content: lines.join('\n') }}
 
   fixConsoleStatements(lines, issue) {
     if (issue.message.includes('Unexpected console statement')) {
@@ -321,12 +285,10 @@ class CodeQualityAutoEnhancer {
           modified: true,
           content: lines.join('\n'),
           description: 'Commented out console statement'
-        };
-      }
+        }}
     }
     
-    return { modified: false, content: lines.join('\n') };
-  }
+    return { modified: false, content: lines.join('\n') }}
 
   fixPreferConst(lines, issue) {
     if (issue.message.includes('Use const instead of let')) {
@@ -340,12 +302,10 @@ class CodeQualityAutoEnhancer {
           modified: true,
           content: lines.join('\n'),
           description: 'Changed let to const'
-        };
-      }
+        }}
     }
     
-    return { modified: false, content: lines.join('\n') };
-  }
+    return { modified: false, content: lines.join('\n') }}
 
   fixNoVar(lines, issue) {
     if (issue.message.includes('Unexpected var, use let or const instead')) {
@@ -359,12 +319,10 @@ class CodeQualityAutoEnhancer {
           modified: true,
           content: lines.join('\n'),
           description: 'Changed var to const'
-        };
-      }
+        }}
     }
     
-    return { modified: false, content: lines.join('\n') };
-  }
+    return { modified: false, content: lines.join('\n') }}
 
   fixTrailingSpaces(lines, issue) {
     if (issue.message.includes('Trailing spaces not allowed')) {
@@ -378,12 +336,10 @@ class CodeQualityAutoEnhancer {
           modified: true,
           content: lines.join('\n'),
           description: 'Removed trailing spaces'
-        };
-      }
+        }}
     }
     
-    return { modified: false, content: lines.join('\n') };
-  }
+    return { modified: false, content: lines.join('\n') }}
 
   fixAnyType(lines, issue) {
     const lineIndex = issue.line - 1;
@@ -402,12 +358,10 @@ class CodeQualityAutoEnhancer {
           modified: true,
           content: lines.join('\n'),
           description: 'Replaced any with unknown type'
-        };
-      }
+        }}
     }
     
-    return { modified: false, content: lines.join('\n') };
-  }
+    return { modified: false, content: lines.join('\n') }}
 
   fixMissingImports(lines, issue) {
     if (issue.message.includes('Cannot find module') || issue.message.includes('Module not found')) {
@@ -422,26 +376,21 @@ class CodeQualityAutoEnhancer {
         let lastImportIndex = -1;
         for (let i = 0; i < lines.length; i++) {
           if (lines[i].trim().startsWith('import ')) {
-            lastImportIndex = i;
-          }
+            lastImportIndex = i}
         }
         
         if (lastImportIndex >= 0) {
-          lines.splice(lastImportIndex + 1, 0, importStatement);
-        } else {
-          lines.unshift(importStatement);
-        }
+          lines.splice(lastImportIndex + 1, 0, importStatement)} else {
+          lines.unshift(importStatement)}
         
         return {
           modified: true,
           content: lines.join('\n'),
           description: `Added missing import for ${moduleName}`
-        };
-      }
+        }}
     }
     
-    return { modified: false, content: lines.join('\n') };
-  }
+    return { modified: false, content: lines.join('\n') }}
 
   fixTypeAnnotations(lines, issue) {
     const lineIndex = issue.line - 1;
@@ -463,13 +412,11 @@ class CodeQualityAutoEnhancer {
             modified: true,
             content: lines.join('\n'),
             description: `Added type annotation for ${varName}`
-          };
-        }
+          }}
       }
     }
     
-    return { modified: false, content: lines.join('\n') };
-  }
+    return { modified: false, content: lines.join('\n') }}
 
   fixInterfaceIssues(lines, issue) {
     if (issue.message.includes('Property') && issue.message.includes('does not exist on type')) {
@@ -489,14 +436,12 @@ class CodeQualityAutoEnhancer {
               modified: true,
               content: lines.join('\n'),
               description: `Added missing property ${propName} to ${typeName}`
-            };
-          }
+            }}
         }
       }
     }
     
-    return { modified: false, content: lines.join('\n') };
-  }
+    return { modified: false, content: lines.join('\n') }}
 
   fixGenericTypes(lines, issue) {
     const lineIndex = issue.line - 1;
@@ -514,13 +459,11 @@ class CodeQualityAutoEnhancer {
             modified: true,
             content: lines.join('\n'),
             description: 'Added generic type parameter'
-          };
-        }
+          }}
       }
     }
     
-    return { modified: false, content: lines.join('\n') };
-  }
+    return { modified: false, content: lines.join('\n') }}
 
   fixOptionalProperties(lines, issue) {
     const lineIndex = issue.line - 1;
@@ -536,12 +479,10 @@ class CodeQualityAutoEnhancer {
           modified: true,
           content: lines.join('\n'),
           description: 'Added optional chaining'
-        };
-      }
+        }}
     }
     
-    return { modified: false, content: lines.join('\n') };
-  }
+    return { modified: false, content: lines.join('\n') }}
 
   findUncoveredFiles() {
     // This is a simplified version - in a real implementation, you'd parse coverage reports
@@ -551,18 +492,15 @@ class CodeQualityAutoEnhancer {
     for (const file of sourceFiles) {
       const testFile = this.getTestFilePath(file);
       if (!fs.existsSync(testFile)) {
-        uncoveredFiles.push(file);
-      }
+        uncoveredFiles.push(file)}
     }
     
-    return uncoveredFiles;
-  }
+    return uncoveredFiles}
 
   getTestFilePath(sourceFile) {
     const relativePath = path.relative(path.join(this.projectRoot, 'src'), sourceFile);
     const testPath = path.join(this.projectRoot, 'tests', relativePath.replace(/\.(js|jsx|ts|tsx)$/, '.test.$1'));
-    return testPath;
-  }
+    return testPath}
 
   async generateTestFile(sourceFile) {
     try {
@@ -570,8 +508,7 @@ class CodeQualityAutoEnhancer {
       const testDir = path.dirname(testFile);
       
       if (!fs.existsSync(testDir)) {
-        fs.mkdirSync(testDir, { recursive: true });
-      }
+        fs.mkdirSync(testDir, { recursive: true })}
       
       const fileName = path.basename(sourceFile, path.extname(sourceFile));
       const testContent = `import { render, screen } from '@testing-library/react';
@@ -581,18 +518,15 @@ describe('${fileName}', () => {
   test('renders without crashing', () => {
     render(<${fileName} />);
     // Add more specific tests here
-  });
-});
+  })});
 `;
       
       fs.writeFileSync(testFile, testContent);
       this.log(`Generated test file: ${testFile}`, 'INFO');
       
-      return true;
-    } catch (error) {
+      return true} catch (error) {
       this.log(`Failed to generate test file: ${error.message}`, 'ERROR');
-      return false;
-    }
+      return false}
   }
 
   getAllSourceFiles() {
@@ -600,8 +534,7 @@ describe('${fileName}', () => {
     const srcDir = path.join(this.projectRoot, 'src');
     
     if (!fs.existsSync(srcDir)) {
-      return sourceFiles;
-    }
+      return sourceFiles}
     
     const walkDir = (dir) => {
       const files = fs.readdirSync(dir);
@@ -611,16 +544,13 @@ describe('${fileName}', () => {
         const stat = fs.statSync(filePath);
         
         if (stat.isDirectory()) {
-          walkDir(filePath);
-        } else if (file.match(/\.(js|jsx|ts|tsx)$/)) {
-          sourceFiles.push(filePath);
-        }
+          walkDir(filePath)} else if (file.match(/\.(js|jsx|ts|tsx)$/)) {
+          sourceFiles.push(filePath)}
       }
     };
     
     walkDir(srcDir);
-    return sourceFiles;
-  }
+    return sourceFiles}
 
   async runQualityEnhancement() {
     this.log('Starting code quality enhancement...');
@@ -631,8 +561,7 @@ describe('${fileName}', () => {
       
       if (checkResult.totalIssues === 0) {
         this.log('No quality issues found - no enhancements needed', 'INFO');
-        return;
-      }
+        return}
       
       this.log(`Found ${checkResult.totalIssues} quality issues, applying enhancements...`, 'INFO');
       
@@ -667,14 +596,10 @@ describe('${fileName}', () => {
       // Update quality history
       this.qualityHistory.push(report);
       if (this.qualityHistory.length > 50) {
-        this.qualityHistory = this.qualityHistory.slice(-50);
-      }
+        this.qualityHistory = this.qualityHistory.slice(-50)}
       
-      this.log(`Code quality enhancement completed. Report saved to ${reportPath}`, 'INFO');
-      
-    } catch (error) {
-      this.log(`Code quality enhancement failed: ${error.message}`, 'ERROR');
-    }
+      this.log(`Code quality enhancement completed. Report saved to ${reportPath}`, 'INFO')} catch (error) {
+      this.log(`Code quality enhancement failed: ${error.message}`, 'ERROR')}
   }
 
   async startEnhancer() {
@@ -686,14 +611,11 @@ describe('${fileName}', () => {
     // Set up periodic enhancement
     setInterval(async () => {
       try {
-        await this.runQualityEnhancement();
-      } catch (error) {
-        this.log(`Error in periodic enhancement: ${error.message}`, 'ERROR');
-      }
+        await this.runQualityEnhancement()} catch (error) {
+        this.log(`Error in periodic enhancement: ${error.message}`, 'ERROR')}
     }, this.checkInterval);
 
-    this.log(`Code quality auto-enhancer started. Running every ${this.checkInterval / 1000} seconds.`);
-  }
+    this.log(`Code quality auto-enhancer started. Running every ${this.checkInterval / 1000} seconds.`)}
 
   getStatus() {
     return {
@@ -701,8 +623,7 @@ describe('${fileName}', () => {
       qualityHistory: this.qualityHistory.length,
       checkInterval: this.checkInterval,
       autoEnhanceEnabled: this.autoEnhanceEnabled
-    };
-  }
+    }}
 }
 
 // Main execution
@@ -712,19 +633,15 @@ if (require.main === module) {
   // Handle graceful shutdown
   process.on('SIGINT', () => {
     enhancer.log('Shutting down code quality auto-enhancer...');
-    process.exit(0);
-  });
+    process.exit(0)});
 
   process.on('SIGTERM', () => {
     enhancer.log('Shutting down code quality auto-enhancer...');
-    process.exit(0);
-  });
+    process.exit(0)});
 
   // Start enhancer
   enhancer.startEnhancer().catch(error => {
     enhancer.log(`Failed to start enhancer: ${error.message}`, 'ERROR');
-    process.exit(1);
-  });
-}
+    process.exit(1)})}
 
 module.exports = CodeQualityAutoEnhancer;

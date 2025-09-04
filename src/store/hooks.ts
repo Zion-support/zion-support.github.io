@@ -22,7 +22,7 @@ const Hooks: Reac t.FC = () => {
               Get Started
             </a>
           </div>
-  )};
-
-export default Hooks;';
-"';';
+  )};';
+';';
+export default Hooks;';';';
+"';';;';;';

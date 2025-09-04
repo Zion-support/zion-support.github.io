@@ -376,12 +376,11 @@ export const PAYMENT_OPTIONS_2030 = {
     "On-premise deployment","
     "Custom integrations",;
   ;
-  ;
   ;"
   "SLA guarantees";
   ];
 ;
 };
 '"
-
-</string>
+';
+</string>';';
