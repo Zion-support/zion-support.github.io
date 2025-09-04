@@ -1,27 +1,28 @@
 export default {
   extends: [
     'next/core-web-vitals',
-      'next/typescript'
-    'eslint:recommended',
-      'plugin:react/recommended'
-    'plugin:react-hooks/recommended',
-      'plugin:@typescript-eslint/recommended'
-  ]
+    'next/typescript'
+  ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
       jsx: true
-    }
+    },
     ecmaVersion: 12,
     sourceType: 'module'
-  }
-  plugins: ['react', '@typescript-eslint']
+  },
+  plugins: ['react', '@typescript-eslint'],
   rules: {
     "react-hooks/rules-of-hooks": "error",
-      "react-hooks/exhaustive-deps": "warn",
-      "no-unused-vars": [
-      "warn"
-      { argsIgnorePattern: "^_" }
-    ]
+    "react-hooks/exhaustive-deps": "warn",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "no-console": "off",
+    "no-undef": "off"
+  },
+  env: {
+    node: true,
+    browser: true,
+    es2021: true
   }
 };
