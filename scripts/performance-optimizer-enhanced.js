@@ -2,7 +2,7 @@
 /**
  * Performance Optimization Script
  */
-const fs = require("$1");
+const fs = require("child_process");
 const path = require("path")
 class PerformanceOptimizer {
   constructor() {

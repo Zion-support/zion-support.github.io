@@ -209,7 +209,7 @@ class ImprovedPRMergeAutomation {
     fs.writeFileSync('improved-pr-merge-report.json', JSON.stringify(report, null, 2))
     // Display summary
     console.log('\n🎉 Improved PR Merge Automation Complete!')
-    console.log('=========================================')
+    console.log('======')
     console.log(`Total branches processed: ${this.processedBranches.length}`)
     console.log(`Successfully merged: ${this.mergedBranches.length}`)
     console.log(`Failed branches: ${this.failedBranches.length}`)

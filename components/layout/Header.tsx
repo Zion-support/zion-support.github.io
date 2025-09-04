@@ -313,6 +313,7 @@
                 </div>
 
               </div>
+</div>
 
               {/* Solutions Dropdown */}
               <div className="relative group">

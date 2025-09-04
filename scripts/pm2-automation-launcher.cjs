@@ -25,7 +25,7 @@ const fs = require("fs")";const path = require("path")";const { execSync, spawn 
     if (!fs.existsSync(logDir)) {;
       fs.mkdirSync(logDir, { recursive: true }),;,
 }
-      fs.mkdirSync(logDir, { "recursive: true }),}
+      fs.mkdirSync(logDir, { "recursive: true })}
   }
 ;
   log(message) {;
