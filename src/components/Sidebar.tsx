@@ -8,10 +8,10 @@ export function Sidebar() {
         <h4 style={{ marginTop: 0 }}>Explore</h4>
         <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: 8 }}>
           <li><Link href="/solutions">Solutions</Link></li>
-          <li><Link href="/services/ai-analytics">AI & Analytics</Link></li>
-          <li><Link href="/services/cybersecurity">Cybersecurity</Link></li>
-          <li><Link href="/services/cloud-devops">Cloud & DevOps</Link></li>
-          <li><Link href="/micro-saas">Micro SAAS</Link></li>
+          <li><Link href="/ai-services">AI & Analytics</Link></li>
+          <li><Link href="/cybersecurity">Cybersecurity</Link></li>
+          <li><Link href="/cloud-devops">Cloud & DevOps</Link></li>
+          <li><Link href="/micro-saas">Micro SaaS</Link></li>
           <li><Link href="/marketplace">Marketplace</Link></li>
           <li><Link href="/green-it">Green IT</Link></li>
         </ul>
