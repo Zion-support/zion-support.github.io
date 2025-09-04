@@ -1210,12 +1210,11 @@ export default function MicroSaaS() {
         'Automated attendee management',
 
         'Increased event attendance and engagement',
-        'Streamlined event operations'
-
+        'Streamlined event operations',
         'Improved event ROI tracking',
         'Enhanced attendee experience'
-
-      ],
+,
+ ],
       category: 'Event Management'
     },
     {
@@ -1252,7 +1251,10 @@ export default function MicroSaaS() {
         'Return analytics and fraud detection',
         'Integration with major e-commerce platforms',
         'Customer self-service return portal'
-
+      ],
+      category: 'E-commerce'
+    },
+    {
       icon: FileText,
       name: 'AI-Powered Content Creation Suite',
       description: 'Comprehensive content generation platform with AI writing, editing, and optimization tools.',
@@ -1307,8 +1309,8 @@ export default function MicroSaaS() {
         'Real-time return status tracking',
         'Return analytics and insights',
         'Integration with e-commerce platforms'
-
-      ],
+,
+ ],
       pricing: '$199 – $1,299/month',
       timeline: '2–3 weeks',
       benefits: [
@@ -1316,14 +1318,13 @@ export default function MicroSaaS() {
         '70% reduction in return processing time',
         'Automated fraud detection and prevention',
         'Improved customer satisfaction with returns',
-        'Better inventory management and restocking'
-
+        'Better inventory management and restocking',
         '60% faster return processing',
         'Automated return workflows',
         'Improved customer experience',
         'Reduced return processing costs'
-
-      ],
+,
+ ],
       category: 'E-Commerce'
     },
     {
@@ -1338,7 +1339,10 @@ export default function MicroSaaS() {
         'Predictive analytics for conversion probability',
         'Integration with CRM and marketing automation',
         'Custom scoring models and rule configuration'
-
+      ],
+      category: 'Marketing'
+    },
+    {
       icon: Mail,
       name: 'Automated Email Follow-up Service',
       description: 'Intelligent email sequence automation with personalization, A/B testing, and conversion optimization.',
@@ -1371,8 +1375,8 @@ export default function MicroSaaS() {
         'Brand consistency and watermarking',
         'Multi-platform publishing',
         'Performance analytics and insights'
-
-      ],
+,
+ ],
       pricing: '$299 – $1,999/month',
       timeline: '3–4 weeks',
       benefits: [
@@ -1394,8 +1398,7 @@ export default function MicroSaaS() {
         'Regulatory framework mapping and tracking',
         'Automated report generation and submission',
         'Policy management and employee training',
-        'Incident response and breach notification'
-
+        'Incident response and breach notification',
         '90% faster video content creation',
         'Automated social media optimization',
         'Increased content engagement',
@@ -1436,8 +1439,8 @@ export default function MicroSaaS() {
         'Candidate ranking and recommendation',
         'Recruiter workflow automation',
         'Analytics and performance tracking'
-
-      ],
+,
+ ],
       pricing: '$499 – $3,999/month',
       timeline: '4–6 weeks',
       benefits: [
@@ -1492,7 +1495,19 @@ export default function MicroSaaS() {
         'Better customer satisfaction and retention'
       ],
       category: 'Customer Engagement'
-
+    },
+    {
+      icon: Users,
+      name: 'AI-Powered Talent Matching Platform',
+      description: 'Intelligent talent acquisition platform that matches candidates with job requirements using AI algorithms.',
+      features: [
+        'AI-powered candidate-job matching',
+        'Automated resume screening and ranking',
+        'Behavioral assessment and cultural fit analysis',
+        'Interview scheduling and coordination'
+      ],
+      timeline: '4–6 weeks',
+      benefits: [
         '60% reduction in time-to-hire',
         'Improved candidate quality',
         'Automated recruitment workflows',
@@ -1543,7 +1558,6 @@ export default function MicroSaaS() {
         'Cutting-edge research capabilities'
       ],
       category: 'Quantum Computing'
-
     }
   ];
 
@@ -1611,7 +1625,7 @@ export default function MicroSaaS() {
                 <div>
                   <h3 className="text-lg font-semibold mb-3 text-blue-400">Key Features</h3>
                   <ul className="space-y-2 text-slate-300">
-                    {service.features.map((feature, idx) => (
+                    {(service.features || []).map((feature, idx) => (
                       <li key={idx} className="flex items-start gap-2">
                         <span className="text-blue-400 mt-1">•</span>
                         <span>{feature}</span>
@@ -1623,7 +1637,7 @@ export default function MicroSaaS() {
                 <div>
                   <h3 className="text-lg font-semibold mb-3 text-green-400">Business Benefits</h3>
                   <ul className="space-y-2 text-slate-300">
-                    {service.benefits.map((benefit, idx) => (
+                    {(service.benefits || []).map((benefit, idx) => (
                       <li key={idx} className="flex items-start gap-2">
                         <span className="text-green-400 mt-1">✓</span>
                         <span>{benefit}</span>
