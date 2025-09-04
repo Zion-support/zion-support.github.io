@@ -151,19 +151,19 @@ export default function ServicesIndexPage() {
 
   // Group services by category
   const servicesByCategory = categories.reduce((acc, category) => {
-    acc[category] = validServices.filter((service: any) => 
+    acc[category] = validServices.filter((service: unknown) => 
       service.category && service.category.toLowerCase().includes(category.toLowerCase().replace(/\s+/g, ''))
     );
     return acc;
   }, {} as Record<string, any[]>);
 
   // Get featured services (marked as popular)
-  const featuredServices = validServices.filter((service: any) => service.popular).slice(0, 6);
+  const featuredServices = validServices.filter((service: unknown) => service.popular).slice(0, 6);
 
   // Get latest services (assuming they have a launchDate)
   const latestServices = validServices
-    .filter((service: any) => service.launchDate)
-    .sort((a: any, b: any) => new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime())
+    .filter((service: unknown) => service.launchDate)
+    .sort((a: unknown, b: unknown) => new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime())
     .slice(0, 6);
 
   return (
@@ -205,7 +205,7 @@ export default function ServicesIndexPage() {
                   Featured Services
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {featuredServices.map((service: any, index: number) => (
+                  {featuredServices.map((service: unknown, index: number) => (
                     <UltraFuturisticServiceCard2026
                       key={`${service.id || service.name}-${index}`}
                       service={service}
@@ -224,7 +224,7 @@ export default function ServicesIndexPage() {
                   Latest Services (2026)
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {latestServices.map((service: any, index: number) => (
+                  {latestServices.map((service: unknown, index: number) => (
                     <UltraFuturisticServiceCard2026
                       key={`${service.id || service.name}-${index}`}
                       service={service}
@@ -275,7 +275,7 @@ export default function ServicesIndexPage() {
                         </span>
                       </h3>
                       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {categoryServices.slice(0, 6).map((service: any, index: number) => (
+                        {categoryServices.slice(0, 6).map((service: unknown, index: number) => (
                           <UltraFuturisticServiceCard2026
                             key={`${service.id || service.name}-${index}`}
                             service={service}
@@ -363,7 +363,7 @@ export default function ServicesIndexPage() {
                 Featured Services
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {featuredServices.map((service: any, index: number) => (
+                {featuredServices.map((service: unknown, index: number) => (
                   <UltraFuturisticServiceCard2026
                     key={`${service.id || service.name}-${index}`}
                     service={service}
@@ -382,7 +382,7 @@ export default function ServicesIndexPage() {
                 Latest Services (2026)
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {latestServices.map((service: any, index: number) => (
+                {latestServices.map((service: unknown, index: number) => (
                   <UltraFuturisticServiceCard2026
                     key={`${service.id || service.name}-${index}`}
                     service={service}
@@ -433,7 +433,7 @@ export default function ServicesIndexPage() {
                       </span>
                     </h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                      {categoryServices.slice(0, 6).map((service: any, index: number) => (
+                      {categoryServices.slice(0, 6).map((service: unknown, index: number) => (
                         <UltraFuturisticServiceCard2026
                           key={`${service.id || service.name}-${index}`}
                           service={service}

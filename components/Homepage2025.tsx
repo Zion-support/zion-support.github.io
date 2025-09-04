@@ -95,6 +95,11 @@ const Homepage2025: React.FC = () => {
 
           {/* Hero Content */}
           <div className="text-center max-w-5xl mx-auto relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
             <motion.h1
               id="hero-heading"
               className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8"
@@ -440,7 +445,6 @@ const Homepage2025: React.FC = () => {
         <section className="py-20 px-4 bg-black/20 relative">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5"></div>
           <div className="max-w-6xl mx-auto relative z-10">
->>>>>>> cursor/analyze-improve-and-deploy-application-752b
             <motion.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 40 }}

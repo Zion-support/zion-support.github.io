@@ -46,7 +46,7 @@ export default function Revolutionary2025Pricing() {
       });
 
   // Calculate pricing with billing cycle
-  const getPrice = (service: any) => {
+  const getPrice = (service: unknown) => {
     const basePrice = parseInt(service.price.replace('$', '').replace(',', ''));
     if (billingCycle === 'yearly') {
       return Math.floor(basePrice * 0.8); // 20% discount for yearly

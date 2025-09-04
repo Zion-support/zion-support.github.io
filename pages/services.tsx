@@ -45,14 +45,14 @@ import { marketValidatedServices } from '../data/market-validated-services';
 import { industryRealServices } from '../data/industry-real-services';
 
 // Helper function to get service category
-const getServiceCategory = (service: any) => {
+const getServiceCategory = (service: unknown) => {
   if (service.category) return service.category;
   if (service.type) return service.type;
   return 'Other';
 };
 
 // Helper function to get service pricing
-const getServicePricing = (service: any) => {
+const getServicePricing = (service: unknown) => {
   if (service.pricing?.starter) return service.pricing.starter;
   if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`;
   if (service.price?.monthly) return `$${service.price.monthly}/month`;
@@ -60,14 +60,14 @@ const getServicePricing = (service: any) => {
 };
 
 // Helper function to get service features
-const getServiceFeatures = (service: any) => {
+const getServiceFeatures = (service: unknown) => {
   if (service.features) return service.features;
   if (service.keyFeatures) return service.keyFeatures;
   return [];
 };
 
 // Helper function to get service description
-const getServiceDescription = (service: any) => {
+const getServiceDescription = (service: unknown) => {
   if (service.description) return service.description;
   if (service.tagline) return service.tagline;
   return 'No description available';

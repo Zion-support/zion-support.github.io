@@ -40,7 +40,7 @@ const Services2024Page: React.FC = () => {
 
     // Sort services
     filtered.sort((a, b) => {
-      let aValue: any, bValue: any;
+      let aValue: unknown, bValue: unknown;
       
       switch (sortBy) {
         case 'price':
