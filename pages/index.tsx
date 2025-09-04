@@ -1,7 +1,20 @@
 import Link from 'next/link';
 import Head from 'next/head';
+import Image from 'next/image';
+import { useState, useEffect, useCallback } from 'react';
 
 export default function Home() {
+  const [isLoaded, setIsLoaded] = useState(false);
+  
+  useEffect(() => {
+    // Use requestAnimationFrame for better performance
+    const timer = requestAnimationFrame(() => {
+      setIsLoaded(true);
+    });
+    
+    return () => cancelAnimationFrame(timer);
+  }, []);
+
   const contact = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
