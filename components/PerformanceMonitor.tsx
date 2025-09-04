@@ -46,9 +46,7 @@ const PerformanceMonitor: React.FC = () => {
             clsValue += (entry as any).value;
           }
         }
-        if (process.env.NODE_ENV === 'development') {
-          console.log('CLS:', clsValue);
-        }
+        console.log('CLS:', clsValue);
       });
 
       try {
