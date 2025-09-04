@@ -52,4 +52,7 @@ const nextConfig = {
 };
 
 export default nextConfig;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/website-audit-content-update-and-deployment-f90f

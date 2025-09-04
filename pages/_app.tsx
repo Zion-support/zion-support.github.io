@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 import PerformanceMonitor from '../components/PerformanceMonitor';
+import Layout from '../components/Layout';
 import '../styles/globals.css';
 
 function Header(): any {
@@ -209,9 +210,11 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <ErrorBoundary>
       <PerformanceMonitor />
-      <Header />
-      <Component {...pageProps} />
-      <Footer />
+      <Layout>
+        <Header />
+        <Component {...pageProps} />
+        <Footer />
+      </Layout>
     </ErrorBoundary>
   );
 }
