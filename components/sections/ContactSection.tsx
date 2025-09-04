@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { Button } from '../ui/Button';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 
@@ -59,9 +60,9 @@ const ContactSection: React.FC = () => {
             </div>
 
             <div className="mt-8">
-              <a href="/contact">
+              <Link href="/contact">
                 <Button size="lg">Send us a Message</Button>
-              </a>
+              </Link>
             </div>
           </div>
 
