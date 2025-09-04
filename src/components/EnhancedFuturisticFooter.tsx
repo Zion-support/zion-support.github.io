@@ -1,9 +1,10 @@
-<<<<<<< HEAD
-import { Link  } from 'react-router-dom';
- from 'framer-motion';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Phone, Mail, MapPin, Zap, Star, Sparkles, ArrowRight, Play, ShoppingCart, ArrowUpRight } from 'lucide-react';
 
- from 'lucide-react';
-
+export function EnhancedFuturisticFooter() {
+  const currentYear = new Date().getFullYear();
   const footerSections = [
     {
       title: 'Comprehensive Services 2026',
@@ -76,7 +77,6 @@ import { Link  } from 'react-router-dom';
         { name: 'AI Customer Support', href: '/services#ai-customer-support', featured: true },
         { name: 'AI HR & Recruitment', href: '/services#ai-hr', featured: true },
         { name: 'AI Content Creation', href: '/services#ai-content-creation', featured: true }
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -295,7 +295,8 @@ export function EnhancedFuturisticFooter() {
     }
   ];
 
-  return ()    <footer className="relative bg-slate-950 border-t border-cyan-400/20 overflow-hidden">
+  return (
+    <footer className="relative bg-slate-950 border-t border-cyan-400/20 overflow-hidden">
       {/* Enhanced Animated Background */}"
       <div className="absolute inset-0 bg-futuristic-enhanced">"
         <div className="absolute inset-0 bg-cyber-grid animate-cyber-grid opacity-5"></div>"
@@ -315,7 +316,7 @@ export function EnhancedFuturisticFooter() {
   // Create missing pages for broken links
   
       </Link>;) };
-  return ("
+  
           <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
         {/* Background Pattern */}"
         <div className="absolute inset-0 opacity-30">"
@@ -725,7 +726,6 @@ export function EnhancedFuturisticFooter() {
       </div>;
     </footer>;) };
 '"`
-=======
         { name: 'Documentation', href: '/docs' },
         { name: 'API Reference', href: '/api' },
         { name: 'Developer Portal', href: '/developer' },
