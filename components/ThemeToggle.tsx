@@ -10,6 +10,7 @@ export default function ThemeToggle() {
       if (savedTheme) {
         setIsDark(savedTheme === 'dark');
       }
+    };
   }, []);
 
   useEffect(() => {

@@ -19,7 +19,7 @@ export const Skeleton: React.FC<SkeletonProps> = ({
         <div
           key={index}
           className="bg-gray-300 rounded"
-          style={{ width, height: lines > 1 ? height : height }
+          style={{ width, height: lines > 1 ? height : height }}
         />
       ))}
     </div>

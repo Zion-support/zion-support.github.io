@@ -84,41 +84,38 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
         <meta property="og:type" content="website" />
       </Head>
 
-      <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #0b1220 0%, #1a1f3a 100%)' color: 'white' }}>
-        <div style={{ maxWidth: 1200, margin: '0 auto' padding: '40px 20px' }}>
+      <div style={{ minHeight: '100vh', background: color, 'white' }}>
+        <div style={{ maxWidth: 1200, margin: padding, '40px 20px' }}>
           <div style={{ textAlign: 'center', marginBottom: 60 }}>
             <h1 style={{ 
-              fontSize: '3rem' 
-              fontWeight: 800, 
+              fontSize: fontWeight, 800, 
               marginBottom: 20,
-              background: 'linear-gradient(135deg, #ef4444, #dc2626)'
-              WebkitBackgroundClip: 'text',
+              background: WebkitBackgroundClip, 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text'
             },,}>
               Security & Compliance
             </h1>
-            <p style={{ fontSize: '1.2rem', color: '#94a3b8' maxWidth: 600, margin: '0 auto' }}>
+            <p style={{ fontSize: '1.2rem', color: maxWidth, 600, margin: '0 auto' }}>
               Your data security is our top priority. We implement industry-leading security measures and maintain strict compliance with global standards.
             </p>
           </div>
 
           <div style={{ marginBottom: 80 }}>
-            <h2 style={{ fontSize: '2.5rem' fontWeight: 700, marginBottom: 40, textAlign: 'center' }}>
+            <h2 style={{ fontSize: fontWeight, 700, marginBottom: 40, textAlign: 'center' }}>
               Security Measures
             </h2>
-            <div style={{ display: 'grid' gap: 30 }}>
+            <div style={{ display: gap, 30 }}>
               {securityMeasures.map((measure, index) => (
                 <div key={index} style={{
-                  background: 'rgba(255, 255, 255, 0.05)'
-                  borderRadius: 12,
+                  background: borderRadius, 12,
                   padding: 30,
                   border: '1px solid rgba(255, 255, 255, 0.1)'
                 }}>
-                  <div style={{ display: 'flex' alignItems: 'center' gap: 20, marginBottom: 20 }}>
+                  <div style={{ display: alignItems, 'center' gap: 20, marginBottom: 20 }}>
                     <div style={{ fontSize: '3rem' }}>{measure.icon}</div>
                     <div>
-                      <h3 style={{ fontSize: '1.8rem' fontWeight: 700, marginBottom: 10 }}>
+                      <h3 style={{ fontSize: fontWeight, 700, marginBottom: 10 }}>
                         {measure.title}
                       </h3>
                       <p style={{ color: '#94a3b8', fontSize: '1.1rem' }}>
@@ -127,22 +124,19 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
                     </div>
                   </div>
                   
-                  <div style={{ display: 'grid' gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))' gap: 15 }}>
+                  <div style={{ display: gridTemplateColumns, 'repeat(auto-fit, minmax(250px, 1fr))' gap: 15 }}>
                     {measure.details.map((detail, detailIndex) => (
                       <div key={detailIndex} style={{
-                        display: 'flex'
-                        alignItems: 'center'
+                        display: alignItems, 'center'
                         gap: 12,
                         padding: 15,
-                        background: 'rgba(239, 68, 68, 0.1)'
-                        borderRadius: 8,
+                        background: borderRadius, 8,
                         border: '1px solid rgba(239, 68, 68, 0.2)'
                       }}>
                         <div style={{
                           width: 8,
                           height: 8,
-                          background: 'linear-gradient(135deg, #ef4444, #dc2626)'
-                          borderRadius: '50%'
+                          background: borderRadius, '50%'
                         }} />
                         <span style={{ fontSize: '1rem' }}>{detail}</span>
                       </div>
@@ -154,10 +148,10 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
           </div>
 
           <div style={{ marginBottom: 80 }}>
-            <h2 style={{ fontSize: '2.5rem' fontWeight: 700, marginBottom: 40, textAlign: 'center' }}>
+            <h2 style={{ fontSize: fontWeight, 700, marginBottom: 40, textAlign: 'center' }}>
               Compliance Certifications
             </h2>
-            <div style={{ display: 'grid' gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' gap: 25 }}>
+            <div style={{ display: gridTemplateColumns, 'repeat(auto-fit, minmax(300px, 1fr))' gap: 25 }}>
               {certifications.map((cert, index) => (
 <div key={index} style={{ background: 'rgba(255, 255, 255, 0.05)',
                   borderRadius: 12, padding: 25, border: '1px solid rgba(255, 255, 255, 0.1)',
@@ -172,18 +166,15 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
                   e.currentTarget.style.boxShadow = 'none';
                 }}>
                   <div style={{
-                    background: 'linear-gradient(135deg, #ef4444, #dc2626)'
-                    color: 'white'
-                    padding: '10px 20px'
-                    borderRadius: 20,
-                    fontSize: '0.9rem'
-                    fontWeight: 600,
+                    background: color, 'white'
+                    padding: borderRadius, 20,
+                    fontSize: fontWeight, 600,
                     marginBottom: 15,
                     display: 'inline-block'
                   }}>
                     {cert.name}
                   </div>
-                  <p style={{ color: '#94a3b8' fontSize: '1rem' }}>
+                  <p style={{ color: fontSize, '1rem' }}>
                     {cert.description}
                   </p>
                 </div>
@@ -192,25 +183,22 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
           </div>
 
           <div style={{ marginBottom: 80 }}>
-            <h2 style={{ fontSize: '2.5rem' fontWeight: 700, marginBottom: 40, textAlign: 'center' }}>
+            <h2 style={{ fontSize: fontWeight, 700, marginBottom: 40, textAlign: 'center' }}>
               Security Features
             </h2>
-            <div style={{ display: 'grid' gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))' gap: 20 }}>
+            <div style={{ display: gridTemplateColumns, 'repeat(auto-fit, minmax(250px, 1fr))' gap: 20 }}>
               {securityFeatures.map((feature, index) => (
                 <div key={index} style={{ 
-                  display: 'flex' 
-                  alignItems: 'center' 
+                  display: alignItems, 'center' 
                   gap: 15,
                   padding: 20,
-                  background: 'rgba(255, 255, 255, 0.05)'
-                  borderRadius: 8,
+                  background: borderRadius, 8,
                   border: '1px solid rgba(255, 255, 255, 0.1)'
                 }}>
                   <div style={{
                     width: 8,
                     height: 8,
-                    background: 'linear-gradient(135deg, #ef4444, #dc2626)'
-                    borderRadius: '50%'
+                    background: borderRadius, '50%'
                   }} />
                   <span style={{ fontSize: '1rem' }}>{feature}</span>
                 </div>
@@ -219,36 +207,29 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
           </div>
 
           <div style={{ 
-            background: 'rgba(239, 68, 68, 0.1)'
-            borderRadius: 12,
+            background: borderRadius, 12,
             padding: 40,
-            border: '1px solid rgba(239, 68, 68, 0.2)'
-            textAlign: 'center'
+            border: textAlign, 'center'
           },,}>
-            <h2 style={{ fontSize: '2rem' fontWeight: 700, marginBottom: 20 }}>
+            <h2 style={{ fontSize: fontWeight, 700, marginBottom: 20 }}>
               Report Security Issues
             </h2>
-            <p style={{ fontSize: '1.1rem' color: '#94a3b8' marginBottom: 30, maxWidth: 600, margin: '0 auto 30px' }}>
+            <p style={{ fontSize: color, '#94a3b8' marginBottom: 30, maxWidth: 600, margin: '0 auto 30px' }}>
               If you discover a security vulnerability or have concerns about our security practices, please report them to our security team immediately.
             </p>
-            <div style={{ display: 'flex' gap: 20, justifyContent: 'center' flexWrap: 'wrap' }}>
+            <div style={{ display: gap, 20, justifyContent: flexWrap, 'wrap' }}>
               <a href={`mailto:security@ziontechgroup.com`} style={{
-                background: 'linear-gradient(135deg, #ef4444, #dc2626)'
-                color: 'white'
-                padding: '15px 30px'
-                textDecoration: 'none'
+                background: color, 'white'
+                padding: textDecoration, 'none'
                 borderRadius: 8,
-                fontSize: '1.1rem'
-                fontWeight: 600,
+                fontSize: fontWeight, 600,
                 display: 'inline-block'
               }}>
                 Report Security Issue
               </a>
               <Link href="/contact" style={{
-                background: 'transparent'
-                color: '#ef4444'
-                padding: '15px 30px'
-                textDecoration: 'none'
+                background: color, '#ef4444'
+                padding: textDecoration, 'none'
                 borderRadius: 8,
 fontSize: '1.1rem',
 fontWeight: 600, display: 'inline-block', border: '2px solid #ef4444', transition: 'background-color 0.3s ease'

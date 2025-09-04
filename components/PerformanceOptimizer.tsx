@@ -52,3 +52,4 @@ export const reportWebVitals = (metric: any) => {
     // Send to analytics service
     console.log('Web Vital:', metric);
   }
+};
