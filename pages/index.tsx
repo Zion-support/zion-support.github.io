@@ -108,7 +108,7 @@ const Home = memo(() => {
         <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20" role="banner" aria-labelledby="hero-heading">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <h1 id="hero-heading" className="text-5xl font-bold text-gray-900 mb-6">
+              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
                 Transform Your Business with
                 <span className="text-blue-600"> Technology</span>
               </h1>
@@ -129,9 +129,8 @@ const Home = memo(() => {
                   aria-label="Open navigation menu"
                   aria-expanded={sidebarOpen}
                 >
-                  <Menu className="w-4 h-4 mr-2" />
-                  Explore Menu
-                </button>
+                  Explore Services
+                </Link>
               </div>
             </div>
           </div>
