@@ -1,23 +1,58 @@
-import Link from 'next/link';
 <<<<<<< HEAD
-=======
-import SEOHead from '../components/SEOHead';
->>>>>>> c3407f17831351e4f4cfd0efb90f6fd048cb9536
+<<<<<<< HEAD
+<<<<<<< HEAD
 
-export default function Home() {
+import React, { memo } from 'react';
+=======
+import type { NextPage } from 'next';
+import EnhancedLayout from '../components/layout/EnhancedLayout';
+>>>>>>> origin/merge-pr-11208
+=======
+import Head from 'next/head';
+import Link from 'next/link';
+import React from 'react';
+
+export default function Home(): JSX.Element {
+  return (
+    <>
+      <Head>
+        <title>Zion Tech Group — AI, Cybersecurity, Cloud</title>
+        <meta name="description" content="Zion Tech Group provides AI, cybersecurity, cloud and digital transformation services." />
+        <link rel="canonical" href="https://ziontechgroup.com/" />
+      </Head>
+      <section>
+        <h1 style={{ fontSize: 28, fontWeight: 800, marginBottom: 8 }}>Zion Tech Group</h1>
+        <p style={{ color: '#444', marginBottom: 16 }}>
+          Technology solutions in AI, cybersecurity, cloud, and digital transformation.
+        </p>
+        <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+          <Link href="/services" style={{ padding: '10px 14px', background: '#111', color: '#fff' }}>Explore Services</Link>
+          <Link href="/contact" style={{ padding: '10px 14px', border: '1px solid #111', color: '#111' }}>Contact Us</Link>
+        </div>
+      </section>
+    </>
+  );
+}
+
+import React, { useState, useCallback, memo } from 'react';
+=======
+import React, { memo } from 'react';
+>>>>>>> origin/main
+>>>>>>> origin/pr-11573
+import Link from 'next/link';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOHead from '../components/seo/SEOHead';
+import { ArrowRight, CheckCircle, Star, Phone, Mail, MapPin, Brain, Server, Smartphone, Globe, Zap, Shield, Users } from 'lucide-react';
+
+const Home = memo(() => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
-    "description": "Leading technology solutions provider specializing in AI development, cloud architecture, and digital transformation for modern businesses.",
     "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/favicon.svg",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
-      "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com"
-    },
+    "logo": "https://ziontechgroup.com/logo.png",
+    "description": "Leading provider of revolutionary AI services, IT solutions, and micro SaaS development",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "364 E Main St STE 1008",
@@ -26,425 +61,470 @@ export default function Home() {
       "postalCode": "19709",
       "addressCountry": "US"
     },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-302-464-0950",
+      "contactType": "customer service",
+      "email": "kleber@ziontechgroup.com"
+    },
     "sameAs": [
       "https://ziontechgroup.com"
     ],
-    "service": [
-      {
-        "@type": "Service",
-        "name": "AI Development",
-        "description": "Custom AI solutions, machine learning models, and intelligent automation systems."
-      },
-      {
-        "@type": "Service", 
-        "name": "Cloud Services",
-        "description": "AWS, Azure, and GCP architecture, migration, and optimization services."
-      },
-      {
-        "@type": "Service",
-        "name": "Micro SaaS",
-        "description": "Scalable software-as-a-service solutions and digital product development."
-      }
+    "foundingDate": "2020",
+    "numberOfEmployees": "10-50",
+    "industry": "Technology Services",
+    "services": [
+      "AI Services",
+      "IT Solutions",
+      "Micro SaaS Development",
+      "Cloud Infrastructure",
+      "Cybersecurity",
+      "Digital Transformation"
     ]
-  };
+  } as const;
+
+  const stats = [
+    { number: '500+', label: 'Projects Completed' },
+    { number: '50+', label: 'Happy Clients' },
+    { number: '99.9%', label: 'Uptime Guarantee' },
+    { number: '24/7', label: 'Support Available' }
+  ];
+
+  const services = [
+    {
+      title: 'AI Services',
+      description: 'Cutting-edge artificial intelligence solutions',
+      icon: Brain,
+      href: '/ai-services'
+    },
+    {
+      title: 'IT Services',
+      description: 'Comprehensive IT infrastructure and cloud solutions',
+      icon: Server,
+      href: '/it-services'
+    },
+    {
+      title: 'Micro SaaS',
+      description: 'Custom software-as-a-service applications',
+      icon: Smartphone,
+      href: '/micro-saas'
+    },
+    {
+      title: 'All Services',
+      description: 'Complete technology solutions overview',
+      icon: Globe,
+      href: '/comprehensive-services'
+    }
+  ] as const;
+
+  const features = [
+    { icon: Zap, title: 'Fast Delivery', description: 'Quick turnaround times without compromising quality' },
+    { icon: Shield, title: 'Enterprise Security', description: 'Bank-level security and compliance standards' },
+    { icon: Users, title: 'Expert Team', description: 'Dedicated professionals with years of experience' },
+    { icon: Globe, title: 'Global Reach', description: 'Serving clients worldwide with local expertise' }
+  ] as const;
 
   return (
 <<<<<<< HEAD
-    <main style={{ background: '#f8fafc', minHeight: 'calc(100vh - 120px)' }}>
-      {/* Hero Section */}
-      <section style={{ 
-=======
     <>
       <SEOHead
         title="Zion Tech Group - Leading Technology Solutions Provider"
-        description="Leading technology solutions provider specializing in AI development, cloud architecture, and digital transformation for modern businesses."
-        structuredData={structuredData}
+        description="Transform your business with cutting-edge AI services, IT solutions, and micro SaaS development. Expert technology consulting and implementation."
+        keywords="AI services, IT solutions, micro SaaS, technology consulting, digital transformation, cloud services, cybersecurity"
+        structuredData={structuredData as unknown as Record<string, unknown>}
       />
-    <main>
+
+      <Navigation />
+
+      <main className="min-h-screen bg-white">
+        <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20" role="banner" aria-labelledby="hero-heading">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6" id="hero-heading">
+                Transform Your Business with
+                <span className="text-blue-600"> Technology</span>
+              </h1>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+                Leading provider of revolutionary AI services, IT solutions, and micro SaaS development. We help businesses innovate, scale, and succeed in the digital age.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                  Get Started
+                </Link>
+                <Link href="/services" className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors">
+                  View Services
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>
+                  <div className="text-gray-600">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Services</h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">Comprehensive technology solutions designed to drive your business forward</p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {services.map((service, index) => (
+                <div key={index} className="bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow">
+                  <div className="p-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 w-fit mx-auto mb-6">
+                    <service.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">{service.title}</h3>
+                  <p className="text-gray-600 mb-6 text-center">{service.description}</p>
+                  <Link href={service.href} className="block">
+                    <div className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center flex items-center justify-center">
+                      Learn More
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </div>
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h2>
+              <p className="text-lg text-gray-600">We deliver exceptional results through innovation, expertise, and dedication</p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="text-center">
+                  <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                    <feature.icon className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
+                  <p className="text-gray-600">{feature.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Get In Touch</h2>
+              <p className="text-lg text-gray-600">Ready to start your next project? Contact us today.</p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Phone className="w-6 h-6 text-blue-600" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Phone</h3>
+                <a href="tel:+13024640950" className="text-blue-600 hover:text-blue-700">+1 302 464 0950</a>
+              </div>
+
+              <div className="text-center">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Mail className="w-6 h-6 text-blue-600" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Email</h3>
+                <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:text-blue-700">kleber@ziontechgroup.com</a>
+              </div>
+
+              <div className="text-center">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <MapPin className="w-6 h-6 text-blue-600" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Address</h3>
+                <p className="text-gray-600">364 E Main St STE 1008<br />Middletown, DE 19709</p>
+                <Link href="/contact" className="inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-500">
+=======
+import type { NextPage } from 'next';
+import MainLayout from '../components/layout/MainLayout';
+import Link from 'next/link';
+import { ArrowRight, CheckCircle, Users, Award, Clock, Shield } from 'lucide-react';
+
+const Home: NextPage = () => {
+  const services = [
+    {
+      title: 'AI Development',
+      description: 'Custom AI solutions and machine learning models for your business needs.',
+      icon: '🤖',
+      href: '/services/ai-development'
+    },
+    {
+      title: 'Cloud Solutions',
+      description: 'Scalable cloud infrastructure and migration services for modern applications.',
+      icon: '☁️',
+      href: '/services/cloud-solutions'
+    },
+    {
+      title: 'Web Development',
+      description: 'Modern, responsive web applications built with cutting-edge technologies.',
+      icon: '🌐',
+      href: '/services/web-development'
+    },
+    {
+      title: 'Mobile Apps',
+      description: 'Native and cross-platform mobile applications for iOS and Android.',
+      icon: '📱',
+      href: '/services/mobile-development'
+    },
+    {
+      title: 'Blockchain Solutions',
+      description: 'Decentralized applications and smart contract development.',
+      icon: '⛓️',
+      href: '/services/blockchain'
+    },
+    {
+      title: 'Cybersecurity',
+      description: 'Comprehensive security solutions to protect your digital assets.',
+      icon: '🔒',
+      href: '/services/cybersecurity'
+    }
+  ];
+
+  const features = [
+    {
+      title: 'Expert Team',
+      description: 'Experienced developers and consultants with deep industry knowledge.',
+      icon: Users
+    },
+    {
+      title: 'Quality Assurance',
+      description: 'Rigorous testing and quality control processes for reliable solutions.',
+      icon: CheckCircle
+    },
+    {
+      title: 'Fast Delivery',
+      description: 'Agile development methodology ensuring timely project completion.',
+      icon: Clock
+    },
+    {
+      title: 'Security First',
+      description: 'Built-in security measures to protect your data and applications.',
+      icon: Shield
+    }
+  ];
+
+  return (
+    <MainLayout>
       {/* Hero Section */}
-      <section style={{
->>>>>>> c3407f17831351e4f4cfd0efb90f6fd048cb9536
-        background: 'linear-gradient(135deg, #0b1220 0%, #1e293b 100%)',
-        color: 'white',
-        padding: '80px 20px',
-        textAlign: 'center'
-      }}>
-<<<<<<< HEAD
-        <div style={{ maxWidth: 800, margin: '0 auto' }}>
-          <h1 style={{ fontSize: 48, fontWeight: 800, marginBottom: 24, lineHeight: 1.2 }}>
-            Transform Your Business with 
-            <span style={{ color: '#22d3ee' }}> Advanced Technology</span>
-          </h1>
-          <p style={{ fontSize: 20, opacity: 0.9, marginBottom: 32, lineHeight: 1.6 }}>
-            We deliver cutting-edge AI solutions, micro SaaS products, and comprehensive IT services 
-            to help your business scale and thrive in the digital age.
-          </p>
-          <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Link href="/contact" style={{
-              background: '#22d3ee',
-              color: '#0b1220',
-              padding: '14px 28px',
-              borderRadius: 8,
-              fontWeight: 600,
-              textDecoration: 'none',
-              fontSize: 16
-            }}>
-              Get Started Today
-            </Link>
-            <Link href="/services" style={{
-              background: 'transparent',
-              color: 'white',
-              padding: '14px 28px',
-              borderRadius: 8,
-              fontWeight: 600,
-              textDecoration: 'none',
-              fontSize: 16,
-              border: '2px solid white'
-            }}>
-              View Our Services
-=======
-        <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-          <h1 style={{ 
-            fontSize: '3.5rem', 
-            fontWeight: 800, 
-            marginBottom: '1.5rem',
-            background: 'linear-gradient(45deg, #22d3ee, #3b82f6)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text'
-          }}>
-            Zion Tech Group
-          </h1>
-          <p style={{ 
-            fontSize: '1.25rem', 
-            marginBottom: '2rem', 
-            opacity: 0.9,
-            maxWidth: '600px',
-            margin: '0 auto 2rem auto'
-          }}>
-            Leading technology solutions provider specializing in AI development, cloud architecture, 
-            and digital transformation for modern businesses.
-          </p>
-          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Link href="/services" style={{
-              background: '#22d3ee',
-              color: '#0b1220',
-              padding: '12px 24px',
-              borderRadius: '8px',
-              fontWeight: 600,
-              textDecoration: 'none',
-              display: 'inline-block'
-            }}>
-              Explore Services
-            </Link>
-            <Link href="/contact" style={{
-              background: 'transparent',
-              color: 'white',
-              padding: '12px 24px',
-              borderRadius: '8px',
-              fontWeight: 600,
-              textDecoration: 'none',
-              display: 'inline-block',
-              border: '2px solid #22d3ee'
-            }}>
-              Get Started
->>>>>>> c3407f17831351e4f4cfd0efb90f6fd048cb9536
-            </Link>
+      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              Transform Your Business with
+              <span className="text-blue-400"> Zion Tech Group</span>
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
+              Leading technology solutions provider helping businesses innovate and grow 
+              with cutting-edge AI, cloud architecture, and digital transformation services.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors flex items-center justify-center"
+              >
+                Get Started Today
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                href="/services"
+                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+              >
+                Explore Services
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Services Overview */}
-      <section style={{ padding: '80px 20px', maxWidth: 1200, margin: '0 auto' }}>
-        <div style={{ textAlign: 'center', marginBottom: 60 }}>
-          <h2 style={{ fontSize: 36, fontWeight: 700, marginBottom: 16, color: '#0b1220' }}>
-            Our Core Services
-          </h2>
-          <p style={{ fontSize: 18, color: '#64748b', maxWidth: 600, margin: '0 auto' }}>
-            Comprehensive technology solutions designed to accelerate your business growth
-          </p>
-        </div>
-
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: 32 }}>
-          <div style={{
-            background: 'white',
-            borderRadius: 16,
-            padding: 32,
-            border: '1px solid rgba(0,0,0,0.08)',
-            boxShadow: '0 4px 6px rgba(0,0,0,0.05)',
-            textAlign: 'center'
-          }}>
-            <div style={{ 
-              width: 64, 
-              height: 64, 
-              background: 'linear-gradient(135deg, #22d3ee 0%, #06b6d4 100%)',
-              borderRadius: 16,
-              margin: '0 auto 24px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: 24
-            }}>🤖</div>
-            <h3 style={{ fontSize: 24, fontWeight: 700, marginBottom: 16, color: '#0b1220' }}>
-              AI Services
-            </h3>
-            <p style={{ color: '#64748b', marginBottom: 24, lineHeight: 1.6 }}>
-              Leverage artificial intelligence to automate processes, gain insights, and enhance customer experiences.
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Our Services
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Comprehensive technology solutions tailored to your business needs
             </p>
-            <Link href="/ai-services" style={{
-              color: '#22d3ee',
-              fontWeight: 600,
-              textDecoration: 'none'
-            }}>
-              Learn More →
-            </Link>
           </div>
-
-          <div style={{
-            background: 'white',
-            borderRadius: 16,
-            padding: 32,
-            border: '1px solid rgba(0,0,0,0.08)',
-            boxShadow: '0 4px 6px rgba(0,0,0,0.05)',
-            textAlign: 'center'
-          }}>
-            <div style={{ 
-              width: 64, 
-              height: 64, 
-              background: 'linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)',
-              borderRadius: 16,
-              margin: '0 auto 24px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: 24
-            }}>⚡</div>
-            <h3 style={{ fontSize: 24, fontWeight: 700, marginBottom: 16, color: '#0b1220' }}>
-              Micro SaaS
-            </h3>
-            <p style={{ color: '#64748b', marginBottom: 24, lineHeight: 1.6 }}>
-              Specialized software solutions that solve specific business problems with minimal overhead.
-            </p>
-            <Link href="/micro-saas" style={{
-              color: '#8b5cf6',
-              fontWeight: 600,
-              textDecoration: 'none'
-            }}>
-              Learn More →
-            </Link>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service) => (
+              <div
+                key={service.title}
+                className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
+              >
+                <div className="text-4xl mb-4">{service.icon}</div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  {service.title}
+                </h3>
+                <p className="text-gray-600 mb-6">
+                  {service.description}
+                </p>
+                <Link
+                  href={service.href}
+                  className="text-blue-600 hover:text-blue-700 font-medium flex items-center"
+                >
+>>>>>>> origin/merge-pr-10614
+                  Learn More
+                  <ArrowRight className="ml-1 h-4 w-4" />
+                </Link>
+              </div>
+<<<<<<< HEAD
+            </div>
           </div>
+        </section>
 
-          <div style={{
-            background: 'white',
-            borderRadius: 16,
-            padding: 32,
-            border: '1px solid rgba(0,0,0,0.08)',
-            boxShadow: '0 4px 6px rgba(0,0,0,0.05)',
-            textAlign: 'center'
-          }}>
-            <div style={{ 
-              width: 64, 
-              height: 64, 
-              background: 'linear-gradient(135deg, #059669 0%, #047857 100%)',
-              borderRadius: 16,
-              margin: '0 auto 24px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: 24
-            }}>🛠️</div>
-            <h3 style={{ fontSize: 24, fontWeight: 700, marginBottom: 16, color: '#0b1220' }}>
-              IT Services
-            </h3>
-            <p style={{ color: '#64748b', marginBottom: 24, lineHeight: 1.6 }}>
-              Complete IT infrastructure management, cloud solutions, and cybersecurity services.
-            </p>
-            <Link href="/it-services" style={{
-              color: '#059669',
-              fontWeight: 600,
-              textDecoration: 'none'
-            }}>
-              Learn More →
-            </Link>
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">Let's discuss how our technology solutions can drive your success. Get started with a free consultation.</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Get Free Consultation</Link>
+              <Link href="/request-quote" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">Request Quote</Link>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+    </>
+=======
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section style={{ 
-        background: 'linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%)',
-        padding: '80px 20px'
-      }}>
-        <div style={{ maxWidth: 1200, margin: '0 auto', textAlign: 'center' }}>
-          <h2 style={{ fontSize: 36, fontWeight: 700, marginBottom: 16, color: '#0b1220' }}>
-            Why Choose Zion Tech Group?
-          </h2>
-          <p style={{ fontSize: 18, color: '#64748b', marginBottom: 48, maxWidth: 600, margin: '0 auto 48px' }}>
-            We combine technical expertise with business acumen to deliver solutions that drive real results.
-          </p>
-
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: 32 }}>
+      {/* About Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h3 style={{ fontSize: 20, fontWeight: 600, marginBottom: 12, color: '#0b1220' }}>Expert Team</h3>
-              <p style={{ color: '#64748b', lineHeight: 1.6 }}>
-                Certified professionals with deep expertise in AI, cloud technologies, and software development.
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                About Zion Tech Group
+              </h2>
+              <p className="text-lg text-gray-600 mb-6">
+                We are a team of passionate technologists dedicated to helping businesses 
+                leverage the power of modern technology to achieve their goals. With years 
+                of experience across various industries, we understand the unique challenges 
+                that organizations face in today's digital landscape.
               </p>
-            </div>
-            <div>
-              <h3 style={{ fontSize: 20, fontWeight: 600, marginBottom: 12, color: '#0b1220' }}>Proven Results</h3>
-              <p style={{ color: '#64748b', lineHeight: 1.6 }}>
-                Successfully delivered projects for businesses across various industries and scales.
+              <p className="text-lg text-gray-600 mb-8">
+                Our mission is to deliver innovative, scalable, and secure technology 
+                solutions that drive business growth and operational efficiency.
               </p>
-            </div>
-            <div>
-              <h3 style={{ fontSize: 20, fontWeight: 600, marginBottom: 12, color: '#0b1220' }}>24/7 Support</h3>
-              <p style={{ color: '#64748b', lineHeight: 1.6 }}>
-                Round-the-clock support and monitoring to ensure your systems run smoothly.
-              </p>
-            </div>
-            <div>
-              <h3 style={{ fontSize: 20, fontWeight: 600, marginBottom: 12, color: '#0b1220' }}>Scalable Solutions</h3>
-              <p style={{ color: '#64748b', lineHeight: 1.6 }}>
-                Solutions designed to grow with your business and adapt to changing needs.
-              </p>
-=======
-      {/* Services Preview */}
-      <section style={{ padding: '80px 20px', background: '#f8fafc' }}>
-        <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-          <h2 style={{ 
-            fontSize: '2.5rem', 
-            fontWeight: 700, 
-            textAlign: 'center', 
-            marginBottom: '3rem',
-            color: '#0b1220'
-          }}>
-            Our Core Services
-          </h2>
-          <div style={{ 
-            display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
-            gap: '2rem' 
-          }}>
-            <div style={{
-              background: 'white',
-              padding: '2rem',
-              borderRadius: '12px',
-              boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-              border: '1px solid #e2e8f0'
-            }}>
-              <h3 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: '1rem', color: '#0b1220' }}>
-                AI Development
-              </h3>
-              <p style={{ color: '#64748b', marginBottom: '1.5rem' }}>
-                Custom AI solutions, machine learning models, and intelligent automation systems.
-              </p>
-              <Link href="/services" style={{ 
-                color: '#22d3ee', 
-                fontWeight: 600, 
-                textDecoration: 'none' 
-              }}>
-                Learn More →
+              <Link
+                href="/about"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors inline-flex items-center"
+              >
+                Learn More About Us
+                <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </div>
-            <div style={{
-              background: 'white',
-              padding: '2rem',
-              borderRadius: '12px',
-              boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-              border: '1px solid #e2e8f0'
-            }}>
-              <h3 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: '1rem', color: '#0b1220' }}>
-                Cloud Services
-              </h3>
-              <p style={{ color: '#64748b', marginBottom: '1.5rem' }}>
-                AWS, Azure, and GCP architecture, migration, and optimization services.
-              </p>
-              <Link href="/services" style={{ 
-                color: '#22d3ee', 
-                fontWeight: 600, 
-                textDecoration: 'none' 
-              }}>
-                Learn More →
-              </Link>
-            </div>
-            <div style={{
-              background: 'white',
-              padding: '2rem',
-              borderRadius: '12px',
-              boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-              border: '1px solid #e2e8f0'
-            }}>
-              <h3 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: '1rem', color: '#0b1220' }}>
-                Micro SaaS
-              </h3>
-              <p style={{ color: '#64748b', marginBottom: '1.5rem' }}>
-                Scalable software-as-a-service solutions and digital product development.
-              </p>
-              <Link href="/services" style={{ 
-                color: '#22d3ee', 
-                fontWeight: 600, 
-                textDecoration: 'none' 
-              }}>
-                Learn More →
-              </Link>
->>>>>>> c3407f17831351e4f4cfd0efb90f6fd048cb9536
+            <div className="bg-gradient-to-br from-blue-100 to-purple-100 rounded-lg p-8">
+              <div className="grid grid-cols-2 gap-6">
+                {features.map((feature) => (
+                  <div key={feature.title} className="text-center">
+                    <div className="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
+                      <feature.icon className="h-6 w-6" />
+                    </div>
+                    <h3 className="font-semibold text-gray-900 mb-2">
+                      {feature.title}
+                    </h3>
+                    <p className="text-sm text-gray-600">
+                      {feature.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
-      <section style={{ padding: '80px 20px', textAlign: 'center' }}>
-        <div style={{ maxWidth: 600, margin: '0 auto' }}>
-          <h2 style={{ fontSize: 32, fontWeight: 700, marginBottom: 16, color: '#0b1220' }}>
+      <section className="py-20 bg-blue-600 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold mb-6">
             Ready to Transform Your Business?
           </h2>
-          <p style={{ fontSize: 18, color: '#64748b', marginBottom: 32, lineHeight: 1.6 }}>
-            Let&apos;s discuss how our technology solutions can help you achieve your business goals.
+          <p className="text-xl mb-8 max-w-3xl mx-auto">
+            Let's discuss how our technology solutions can help you achieve your goals 
+            and stay ahead of the competition.
           </p>
-          <Link href="/contact" style={{
-            background: 'linear-gradient(135deg, #22d3ee 0%, #06b6d4 100%)',
-            color: '#0b1220',
-            padding: '16px 32px',
-            borderRadius: 8,
-            fontWeight: 600,
-            textDecoration: 'none',
-            fontSize: 18,
-            display: 'inline-block'
-          }}>
-            Get Your Free Consultation
-=======
-      <section style={{
-        background: 'linear-gradient(135deg, #1e293b 0%, #0b1220 100%)',
-        color: 'white',
-        padding: '80px 20px',
-        textAlign: 'center'
-      }}>
-        <div style={{ maxWidth: 800, margin: '0 auto' }}>
-          <h2 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1.5rem' }}>
-            Ready to Transform Your Business?
-          </h2>
-          <p style={{ fontSize: '1.125rem', marginBottom: '2rem', opacity: 0.9 }}>
-            Let&apos;s discuss how our technology solutions can drive your digital transformation.
-          </p>
-          <Link href="/contact" style={{
-            background: '#22d3ee',
-            color: '#0b1220',
-            padding: '16px 32px',
-            borderRadius: '8px',
-            fontWeight: 600,
-            textDecoration: 'none',
-            display: 'inline-block',
-            fontSize: '1.125rem'
-          }}>
-            Start Your Project
->>>>>>> c3407f17831351e4f4cfd0efb90f6fd048cb9536
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+            >
+              Get Free Consultation
+            </Link>
+            <Link
+              href="/services"
+              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+            >
+              View All Services
+            </Link>
+          </div>
         </div>
       </section>
-    </main>
-    </>
+    </MainLayout>
+>>>>>>> origin/merge-pr-10614
+=======
+    <EnhancedLayout>
+      <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">
+            Welcome to Zion Tech Solutions
+          </h1>
+          <p className="text-xl mb-8 max-w-3xl mx-auto text-gray-700">
+            Leading technology solutions provider helping businesses transform their digital presence 
+            with cutting-edge AI, cloud architecture, and innovative development services.
+          </p>
+          
+          <div className="flex justify-center gap-6 mb-12">
+            <Link href="/services" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+              Our Services
+            </Link>
+            <Link href="/contact" className="bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+              Get in Touch
+            </Link>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 mt-16">
+            <div className="bg-white rounded-lg p-6 shadow">
+              <h3 className="text-xl font-semibold mb-4">AI Development</h3>
+              <p>Custom AI solutions and machine learning models for your business needs.</p>
+            </div>
+            <div className="bg-white rounded-lg p-6 shadow">
+              <h3 className="text-xl font-semibold mb-4">Cloud Architecture</h3>
+              <p>Scalable cloud solutions and infrastructure design for modern applications.</p>
+            </div>
+            <div className="bg-white rounded-lg p-6 shadow">
+              <h3 className="text-xl font-semibold mb-4">Digital Transformation</h3>
+              <p>End-to-end digital transformation services to modernize your business.</p>
+            </div>
+          </div>
+      </div>
+    </EnhancedLayout>
+>>>>>>> origin/merge-pr-11208
   );
-}
+});
+
+export default Home;
