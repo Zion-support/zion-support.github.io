@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-
 interface EnhancedMarketplaceCardProps {
   title: string;
   description: string;
