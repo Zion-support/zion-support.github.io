@@ -18,8 +18,14 @@ const PerformanceMonitor: React.FC = () => {
       const observer = new window.PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
-            metrics.lcp = entry.startTime;
-            console.log('LCP:', entry.startTime);
+            // Send to analytics instead of console.log
+            if (typeof window !== 'undefined' && window.gtag) {
+              window.gtag('event', 'web_vitals', {
+                name: 'LCP',
+                value: Math.round(entry.startTime),
+                event_category: 'Web Vitals'
+              });
+            }
           }
       });
       
@@ -33,14 +39,14 @@ const PerformanceMonitor: React.FC = () => {
       const fidObserver = new window.PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'first-input') {
-            // Cast to any to access processingStart property for FID calculation
-            const fidEntry = entry as any;
-            // Log FID in development only
-            if (process.env.NODE_ENV === 'development') {
-              // eslint-disable-next-line no-console
-              console.log('FID:', entry.processingStart - entry.startTime);
+            // Send to analytics instead of console.log
+            if (typeof window !== 'undefined' && window.gtag) {
+              window.gtag('event', 'web_vitals', {
+                name: 'FID',
+                value: Math.round(entry.processingStart - entry.startTime),
+                event_category: 'Web Vitals'
+              });
             }
-            sendToAnalytics('FID', fidEntry.processingStart - fidEntry.startTime);
           }
       });
 
@@ -58,12 +64,14 @@ const PerformanceMonitor: React.FC = () => {
             clsValue += (entry as any).value;
           }
         }
-        // Log CLS in development only
-        if (process.env.NODE_ENV === 'development') {
-          // eslint-disable-next-line no-console
-          console.log('CLS:', clsValue);
+        // Send to analytics instead of console.log
+        if (typeof window !== 'undefined' && window.gtag) {
+          window.gtag('event', 'web_vitals', {
+            name: 'CLS',
+            value: Math.round(clsValue * 1000) / 1000,
+            event_category: 'Web Vitals'
+          });
         }
-        sendToAnalytics('CLS', clsValue);
       });
 
       try {
