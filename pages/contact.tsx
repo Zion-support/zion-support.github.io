@@ -165,12 +165,18 @@ export default function Contact() {
                   className="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
                 >
                   Send Message
+>>>>>>> ff1c4aa73e82ebe1054c042ee0885413d93984f2
                 </button>
               </form>
             </div>
           </div>
         </div>
+<<<<<<< HEAD
+      </main>
+    </>
+=======
       </section>
     </main>
+>>>>>>> ff1c4aa73e82ebe1054c042ee0885413d93984f2
   );
 }
