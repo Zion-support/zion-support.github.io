@@ -4,149 +4,138 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { 
-  Brain, 
+  Cloud, 
   Server, 
-  Zap, 
   Shield, 
+  Zap, 
   ArrowRight, 
   CheckCircle, 
   Star,
   Globe,
   Lock,
-  Settings,
-  Palette,
-  Code,
-  Database,
-  Cloud,
-  Users
+  Settings
 } from 'lucide-react'
 
 const SEO = dynamic(() => import('../src/components/SEO'), { ssr: false })
 const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false })
 
-const ComprehensiveServicesPage: React.FC = () => {
-  const serviceCategories = [
+const CloudDevOpsPage: React.FC = () => {
+  const services = [
     {
       id: 1,
-      title: "AI & Machine Learning",
-      description: "Cutting-edge artificial intelligence solutions to transform your business",
-      icon: <Brain className="w-8 h-8"  />,
-      services: [
-        "Machine Learning Models",
-        "Natural Language Processing",
-        "Computer Vision",
-        "Predictive Analytics",
-        "AI Consulting"
+      title: "Cloud Migration",
+      description: "Seamlessly migrate your applications and data to the cloud with zero downtime.",
+      features: [
+        "Assessment and planning",
+        "Data migration strategies",
+        "Application modernization",
+        "Performance optimization",
+        "Cost optimization"
       ],
       pricing: "Starting at $5,000",
-      delivery: "2-8 weeks"
+      delivery: "2-8 weeks",
+      category: "Migration",
+      icon: <Cloud className="w-8 h-8"  />
     },
     {
       id: 2,
-      title: "IT Infrastructure",
-      description: "Robust and scalable IT infrastructure solutions for modern businesses",
-      icon: <Server className="w-8 h-8"  />,
-      services: [
-        "Cloud Migration",
-        "Network Setup",
-        "System Integration",
-        "Data Management",
-        "24/7 Support"
+      title: "DevOps Automation",
+      description: "Implement CI/CD pipelines and automation to accelerate your development process.",
+      features: [
+        "CI/CD pipeline setup",
+        "Automated testing",
+        "Deployment automation",
+        "Monitoring and alerting",
+        "Infrastructure as code"
       ],
       pricing: "Starting at $3,000",
-      delivery: "1-6 weeks"
+      delivery: "1-4 weeks",
+      category: "Automation",
+      icon: <Zap className="w-8 h-8"  />
     },
     {
       id: 3,
-      title: "Micro SaaS Development",
-      description: "Innovative micro SaaS solutions to streamline your business processes",
-      icon: <Zap className="w-8 h-8"  />,
-      services: [
-        "Custom SaaS Development",
-        "API Integration",
-        "Scalable Architecture",
-        "Performance Optimization",
-        "Maintenance & Support"
+      title: "Infrastructure Management",
+      description: "Manage and optimize your cloud infrastructure for maximum performance and cost efficiency.",
+      features: [
+        "Infrastructure monitoring",
+        "Performance optimization",
+        "Cost management",
+        "Security hardening",
+        "24/7 support"
       ],
-      pricing: "Starting at $4,000",
-      delivery: "2-6 weeks"
+      pricing: "Starting at $2,000/month",
+      delivery: "Ongoing",
+      category: "Management",
+      icon: <Server className="w-8 h-8"  />
     },
     {
       id: 4,
-      title: "Cybersecurity",
-      description: "Comprehensive security solutions to protect your digital assets",
-      icon: <Shield className="w-8 h-8"  />,
-      services: [
-        "Security Assessment",
-        "Threat Detection",
-        "Access Control",
-        "Data Encryption",
-        "Compliance Auditing"
+      title: "Container Orchestration",
+      description: "Deploy and manage containerized applications with Kubernetes and Docker.",
+      features: [
+        "Kubernetes setup",
+        "Container optimization",
+        "Service mesh implementation",
+        "Auto-scaling configuration",
+        "Health monitoring"
       ],
-      pricing: "Starting at $2,500",
-      delivery: "1-4 weeks"
+      pricing: "Starting at $4,000",
+      delivery: "2-6 weeks",
+      category: "Containers",
+      icon: <Settings className="w-8 h-8"  />
     },
     {
       id: 5,
-      title: "Cloud & DevOps",
-      description: "Modern cloud solutions and DevOps practices for scalable applications",
-      icon: <Cloud className="w-8 h-8"  />,
-      services: [
-        "Cloud Migration",
-        "DevOps Automation",
-        "Container Orchestration",
-        "CI/CD Pipelines",
-        "Infrastructure Management"
+      title: "Security & Compliance",
+      description: "Implement comprehensive security measures and ensure compliance with industry standards.",
+      features: [
+        "Security assessment",
+        "Compliance auditing",
+        "Access control setup",
+        "Encryption implementation",
+        "Security monitoring"
       ],
       pricing: "Starting at $3,500",
-      delivery: "2-8 weeks"
+      delivery: "2-4 weeks",
+      category: "Security",
+      icon: <Shield className="w-8 h-8"  />
     },
     {
       id: 6,
-      title: "Blockchain Solutions",
-      description: "Innovative blockchain technology for secure and transparent operations",
-      icon: <Lock className="w-8 h-8"  />,
-      services: [
-        "Smart Contract Development",
-        "DeFi Solutions",
-        "NFT Platforms",
-        "Cryptocurrency Integration",
-        "Blockchain Consulting"
+      title: "Multi-Cloud Strategy",
+      description: "Design and implement a multi-cloud strategy for maximum flexibility and redundancy.",
+      features: [
+        "Multi-cloud architecture",
+        "Data synchronization",
+        "Disaster recovery",
+        "Load balancing",
+        "Cost optimization"
       ],
-      pricing: "Starting at $5,500",
-      delivery: "3-10 weeks"
+      pricing: "Starting at $6,000",
+      delivery: "4-8 weeks",
+      category: "Strategy",
+      icon: <Globe className="w-8 h-8"  />
     }
   ]
 
-  const benefits = [
-    {
-      icon: <Star className="w-6 h-6"  />,
-      title: "Expert Team",
-      description: "Experienced professionals with deep expertise in cutting-edge technologies"
-    },
-    {
-      icon: <Globe className="w-6 h-6"  />,
-      title: "Global Reach",
-      description: "Serving clients worldwide with remote and on-site support options"
-    },
-    {
-      icon: <Settings className="w-6 h-6"  />,
-      title: "Custom Solutions",
-      description: "Tailored solutions designed to meet your specific business requirements"
-    },
-    {
-      icon: <Users className="w-6 h-6"  />,
-      title: "24/7 Support",
-      description: "Round-the-clock support to ensure your systems run smoothly"
-    }
+  const technologies = [
+    { name: "AWS", description: "Amazon Web Services" },
+    { name: "Azure", description: "Microsoft Azure" },
+    { name: "GCP", description: "Google Cloud Platform" },
+    { name: "Kubernetes", description: "Container Orchestration" },
+    { name: "Docker", description: "Containerization" },
+    { name: "Terraform", description: "Infrastructure as Code" },
+    { name: "Jenkins", description: "CI/CD Pipeline" },
+    { name: "Prometheus", description: "Monitoring" }
   ]
 
   return (
     <>
-      <SEO title="Comprehensive Services - Zion Tech Group"
-        description="Complete technology solutions including AI services, IT infrastructure, micro SaaS development, and innovative digital transformation services."
-        keywords="comprehensive services, AI, IT, micro SaaS, cybersecurity, cloud, DevOps, blockchain, Zion Tech Group"
-        canonical="https://ziontechgroup.com/comprehensive-services"
+      <SEO title="Cloud & DevOps Services - Zion Tech Group"
+        description="Expert cloud migration, DevOps automation, and infrastructure management services. Scale your applications with our cloud and DevOps solutions."
+        keywords="cloud migration, devops, infrastructure as code, CI/CD, AWS, Azure, GCP, Kubernetes"
+        canonical="https://ziontechgroup.com/cloud-devops"
        />
       
       <PageTransition>
@@ -161,10 +150,10 @@ const ComprehensiveServicesPage: React.FC = () => {
                 className="text-center"
               >
                 <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-                  Comprehensive <span className="text-blue-600">Services</span>
+                  Cloud & <span className="text-blue-600">DevOps</span>
                 </h1>
                 <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                  Complete technology solutions to transform your business with AI, IT infrastructure, micro SaaS development, and innovative digital transformation services.
+                  Scale your applications with expert cloud migration, DevOps automation, and infrastructure management services.
                 </p>
                 <div className="flex flex-col sm: fle x-row gap-4 justify-center">
                   <motion.a
@@ -200,50 +189,56 @@ const ComprehensiveServicesPage: React.FC = () => {
                 className="text-center mb-16"
               >
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  Our Service Categories
+                  Our Cloud & DevOps Services
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                  Comprehensive technology solutions across multiple domains to meet all your business needs.
+                  Comprehensive solutions to modernize your infrastructure and accelerate your development process.
                 </p>
               </motion.div>
 
-              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
-                {serviceCategories.map((category, index) => (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {services.map((service, index) => (
                   <motion.div
-                    key={category.id}
+                    key={service.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-white rounded-xl shadow-lg hover: shado w-xl transition-shadow duration-300 overflow-hidden"
+
+                    className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
                   >
                     <div className="p-8">
-                      <div className="text-blue-600 mb-4">
-                        {category.icon}
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="text-blue-600">
+                          {service.icon}
+                        </div>
+                        <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                          {service.category}
+                        </span>
                       </div>
                       
                       <h3 className="text-xl font-bold text-gray-900 mb-3">
-                        {category.title}
+                        {service.title}
                       </h3>
                       
                       <p className="text-gray-600 mb-6">
-                        {category.description}
+                        {service.description}
                       </p>
                       
                       <div className="mb-6">
-                        <h4 className="font-semibold text-gray-900 mb-3">Services Include:</h4>
+                        <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
                         <ul className="space-y-2">
-                          {category.services.map((service, idx) => (
+                          {service.features.map((feature, idx) => (
                             <li key={idx} className="flex items-center gap-2 text-sm text-gray-600">
                               <CheckCircle className="w-4 h-4 text-green-500"  />
-                              {service}
+                              {feature}
                             </li>
                           ))}
                         </ul>
                       </div>
                       
                       <div className="flex items-center justify-between text-sm text-gray-500 mb-6">
-                        <span className="font-semibold text-green-600">{category.pricing}</span>
-                        <span>{category.delivery}</span>
+                        <span className="font-semibold text-green-600">{service.pricing}</span>
+                        <span>{service.delivery}</span>
                       </div>
                       
                       <motion.button
@@ -261,7 +256,7 @@ const ComprehensiveServicesPage: React.FC = () => {
             </div>
           </section>
 
-          {/* Benefits Section */}
+          {/* Technologies Section */}
           <section className="bg-gray-50 py-20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <motion.div
@@ -271,30 +266,28 @@ const ComprehensiveServicesPage: React.FC = () => {
                 className="text-center mb-16"
               >
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  Why Choose Our Services?
+                  Technologies We Use
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                  We deliver exceptional value through our comprehensive approach and commitment to excellence.
+                  We work with the latest cloud and DevOps technologies to deliver cutting-edge solutions.
                 </p>
               </motion.div>
 
-              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
-                {benefits.map((benefit, index) => (
+              <div className="grid grid-cols-2 md: gri d-cols-4 gap-8">
+                {technologies.map((tech, index) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-white rounded-xl p-8 shadow-lg hover: shado w-xl transition-shadow duration-300 text-center"
+
+                    className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center"
                   >
-                    <div className="text-blue-600 mb-4 flex justify-center">
-                      {benefit.icon}
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">
-                      {benefit.title}
+                    <h3 className="text-lg font-bold text-gray-900 mb-2">
+                      {tech.name}
                     </h3>
-                    <p className="text-gray-600">
-                      {benefit.description}
+                    <p className="text-sm text-gray-600">
+                      {tech.description}
                     </p>
                   </motion.div>
                 ))}
@@ -312,10 +305,10 @@ const ComprehensiveServicesPage: React.FC = () => {
                 className="text-center"
               >
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                  Ready to Transform Your Business?
+                  Ready to Modernize Your Infrastructure?
                 </h2>
                 <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                  Let us help you achieve your goals with our comprehensive technology solutions.
+                  Let us help you scale your applications with our expert cloud and DevOps services.
                 </p>
                 <div className="flex flex-col sm: fle x-row gap-4 justify-center">
                   <motion.a
@@ -346,4 +339,4 @@ const ComprehensiveServicesPage: React.FC = () => {
   )
 }
 
-export default ComprehensiveServicesPage
+export default CloudDevOpsPage

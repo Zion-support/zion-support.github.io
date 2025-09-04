@@ -1,0 +1,307 @@
+[
+  {
+    "url": "https://ziontechgroup.com/",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/about",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/contact",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/blog",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/faq",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/careers",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/partners",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/news",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/solutions",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/research-development",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/request-quote",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/green-it",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/services",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/services/ai-analytics",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/services/cybersecurity",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/services/cloud-devops",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/services/iot-edge",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/services/quantum-computing",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/services/blockchain",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/services/digital-twin",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/services/sustainability",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/services/data-analytics",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/services/infrastructure",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/services/digital-transformation",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/services/consulting",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/services/onsite-support",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/services/5g-solutions",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/micro-saas",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/micro-saas/ai-business-intelligence",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/micro-saas/customer-experience",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/micro-saas/quantum-computing",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/micro-saas/supply-chain",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/micro-saas/cybersecurity",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/micro-saas/iot-edge",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/micro-saas/content-creation",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/micro-saas/hr-platform",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/it-services",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/it-services/infrastructure",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/it-services/digital-transformation",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/it-services/consulting",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/it-services/onsite-support",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/it-services/green-it",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/it-services/5g-solutions",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/marketplace",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/marketplace/products",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/marketplace/talent",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/marketplace/equipment",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/marketplace/services",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/talent",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/equipment",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/it-onsite-services",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/team",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/help",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/security",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/status",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/privacy",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/terms",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/cookies",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/sitemap",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/login",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  },
+  {
+    "url": "https://ziontechgroup.com/signup",
+    "status": 0,
+    "error": "TypeError [ERR_INVALID_ARG_TYPE]: The \"command\" argument must be of type string. Received type number (0)"
+  }
+]

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Facebook, Twitter, LinkedIn, Instagram, Youtube, Github } from 'lucide-react';
+import Link from 'next/link';
+import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram, Youtube, Github } from 'lucide-react';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -53,12 +53,12 @@ export function Footer() {
   ];
 
   const socialLinks = [
-    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Faceboo k },
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitte r },
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: LinkedI n },
-    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagra m },
-    { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtub e },
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Githu b }
+    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
+    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
+    { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube },
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
   ];
 
   return (
@@ -68,7 +68,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-6 gap-8">
           {/* Company Info */}
           <div className="lg: co l-span-2">
-            <Link to="/" className="flex items-center space-x-2 mb-6">
+            <Link href="/" className="flex items-center space-x-2 mb-6">
               <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-xl">Z</span>
               </div>
@@ -83,15 +83,13 @@ export function Footer() {
             <div className="space-y-3">
               <div className="flex items-center text-slate-300">
                 <Phone className="w-4 h-4 mr-3 text-cyan-400"  />
-                <a href="tel:+13024640950" className="hover: tex t-cyan-400 transition-colors">
+                <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">
                   +1 (302) 464-0950
                 </a>
               </div>
               <div className="flex items-center text-slate-300">
                 <Mail className="w-4 h-4 mr-3 text-cyan-400"  />
-                <a href="mailto: klebe r@ziontechgroup.com" className="hover: tex t-cyan-400 transition-colors">
-                  kleber@ziontechgroup.com
-                </a>
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">kleber@ziontechgroup.com</a>
               </div>
               <div className="flex items-start text-slate-300">
                 <MapPin className="w-4 h-4 mr-3 mt-0.5 text-cyan-400 flex-shrink-0"  />
@@ -110,12 +108,7 @@ export function Footer() {
               <ul className="space-y-3">
                 {section.links.map((link) => (
                   <li key={link.name}>
-                    <Link
-                      to={link.href}
-                      className="text-slate-300 hover: tex t-cyan-400 transition-colors duration-200"
-                    >
-                      {link.name}
-                    </Link>
+                    <Link href={link.href} className="text-slate-300 hover:text-cyan-400 transition-colors duration-200">{link.name}</Link>
                   </li>
                 ))}
               </ul>
@@ -155,13 +148,13 @@ export function Footer() {
             
             {/* Legal Links */}
             <div className="flex items-center space-x-6 mb-4 md: m b-0">
-              <Link to="/privacy" className="text-slate-400 hover: tex t-cyan-400 transition-colors text-sm">
+              <Link href="/privacy" className="text-slate-400 hover:text-cyan-400 transition-colors text-sm">
                 Privacy Policy
               </Link>
-              <Link to="/terms" className="text-slate-400 hover: tex t-cyan-400 transition-colors text-sm">
+              <Link href="/terms" className="text-slate-400 hover:text-cyan-400 transition-colors text-sm">
                 Terms of Service
               </Link>
-              <Link to="/cookies" className="text-slate-400 hover: tex t-cyan-400 transition-colors text-sm">
+              <Link href="/cookies" className="text-slate-400 hover:text-cyan-400 transition-colors text-sm">
                 Cookie Policy
               </Link>
             </div>
