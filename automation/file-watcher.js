@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-const fs = // // require('fs');
-const path = // // require('path');
-const chokidar = // // require('chokidar');
+const fs = require('fs');
+const path = require('path');
+const chokidar = require('chokidar');
 const { execSync } = // // require('child_process');
 
 /**
