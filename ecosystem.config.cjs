@@ -6,7 +6,7 @@ module.exports = {
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '1G',
+      max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
         LOG_LEVEL: 'info'
@@ -20,7 +20,7 @@ module.exports = {
       name: 'lint-automation',
       script: 'automation/lint-automation.js',
       instances: 1,
-      autorestart: true,
+      autorestart: false,
       watch: false,
       max_memory_restart: '512M',
       cron_restart: '0 */6 * * *', // Restart every 6 hours

@@ -1,156 +1,340 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { Cloud, Server, Database, Shield, Zap, Users } from 'lucide-react';
+import React from 'react'
+import dynamic from 'next/dynamic'
+import Head from 'next/head'
+import Link from 'next/link'
+import { motion } from 'framer-motion'
+import { 
+  Cloud, 
+  Server, 
+  Shield, 
+  Zap, 
+  ArrowRight, 
+  CheckCircle, 
+  Star,
+  Globe,
+  Lock,
+  Settings
+} from 'lucide-react'
 
-export default function CloudDevOps(): any {
-  const contact = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    site: 'https://ziontechgroup.com',
-  };
+const SEO = dynamic(() => import('../src/components/SEO'), { ssr: fals e })
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: fals e })
+
+const CloudDevOpsPage: Reac t.FC = () => {
   const services = [
     {
-      icon: Cloud,
-      title: 'Cloud Migration & Strategy',
-      description: 'Seamless migration to AWS, Azure, or GCP with zero downtime and optimized cost structures.',
-      features: ['Multi-cloud strategy', 'Cost optimization', 'Security compliance', 'Performance monitoring']
+      id: 1,
+      title: "Cloud Migration",
+      description: "Seamlessly migrate your applications and data to the cloud with zero downtime.",
+      features: [
+        "Assessment and planning",
+        "Data migration strategies",
+        "Application modernization",
+        "Performance optimization",
+        "Cost optimization"
+      ],
+      pricing: "Starting at $5,000",
+      delivery: "2-8 weeks",
+      category: "Migration",
+      icon: <Cloud className="w-8 h-8"  />
     },
     {
-      icon: Server,
-      title: 'Infrastructure as Code',
-      description: 'Automated infrastructure provisioning and management using Terraform, Ansible, and CloudFormation.',
-      features: ['Terraform automation', 'Ansible playbooks', 'CloudFormation templates', 'GitOps workflows']
+      id: 2,
+      title: "DevOps Automation",
+      description: "Implement CI/CD pipelines and automation to accelerate your development process.",
+      features: [
+        "CI/CD pipeline setup",
+        "Automated testing",
+        "Deployment automation",
+        "Monitoring and alerting",
+        "Infrastructure as code"
+      ],
+      pricing: "Starting at $3,000",
+      delivery: "1-4 weeks",
+      category: "Automation",
+      icon: <Zap className="w-8 h-8"  />
     },
     {
-      icon: Database,
-      title: 'Database Management',
-      description: 'High-performance database solutions with automated backups, scaling, and optimization.',
-      features: ['Database migration', 'Performance tuning', 'Automated backups', 'High availability']
+      id: 3,
+      title: "Infrastructure Management",
+      description: "Manage and optimize your cloud infrastructure for maximum performance and cost efficiency.",
+      features: [
+        "Infrastructure monitoring",
+        "Performance optimization",
+        "Cost management",
+        "Security hardening",
+        "24/7 support"
+      ],
+      pricing: "Starting at $2,000/month",
+      delivery: "Ongoing",
+      category: "Management",
+      icon: <Server className="w-8 h-8"  />
     },
     {
-      icon: Shield,
-      title: 'DevSecOps & Security',
-      description: 'Integrated security practices throughout the development lifecycle with automated compliance.',
-      features: ['Security scanning', 'Compliance automation', 'Vulnerability management', 'Access controls']
+      id: 4,
+      title: "Container Orchestration",
+      description: "Deploy and manage containerized applications with Kubernetes and Docker.",
+      features: [
+        "Kubernetes setup",
+        "Container optimization",
+        "Service mesh implementation",
+        "Auto-scaling configuration",
+        "Health monitoring"
+      ],
+      pricing: "Starting at $4,000",
+      delivery: "2-6 weeks",
+      category: "Containers",
+      icon: <Settings className="w-8 h-8"  />
     },
     {
-      icon: Zap,
-      title: 'CI/CD Pipeline Automation',
-      description: 'Streamlined deployment pipelines with automated testing, quality gates, and rollback capabilities.',
-      features: ['Automated testing', 'Quality gates', 'Blue-green deployments', 'Rollback automation']
+      id: 5,
+      title: "Security & Compliance",
+      description: "Implement comprehensive security measures and ensure compliance with industry standards.",
+      features: [
+        "Security assessment",
+        "Compliance auditing",
+        "Access control setup",
+        "Encryption implementation",
+        "Security monitoring"
+      ],
+      pricing: "Starting at $3,500",
+      delivery: "2-4 weeks",
+      category: "Security",
+      icon: <Shield className="w-8 h-8"  />
     },
     {
-      icon: Users,
-      title: 'Team Training & Support',
-      description: 'Comprehensive training programs to upskill your team in modern DevOps practices and tools.',
-      features: ['Hands-on training', 'Best practices', 'Tool certification', 'Ongoing support']
+      id: 6,
+      title: "Multi-Cloud Strategy",
+      description: "Design and implement a multi-cloud strategy for maximum flexibility and redundancy.",
+      features: [
+        "Multi-cloud architecture",
+        "Data synchronization",
+        "Disaster recovery",
+        "Load balancing",
+        "Cost optimization"
+      ],
+      pricing: "Starting at $6,000",
+      delivery: "4-8 weeks",
+      category: "Strategy",
+      icon: <Globe className="w-8 h-8"  />
     }
-  ];
+  ]
+
+  const technologies = [
+    { name: "AWS", description: "Amazon Web Services" },
+    { name: "Azure", description: "Microsoft Azure" },
+    { name: "GCP", description: "Google Cloud Platform" },
+    { name: "Kubernetes", description: "Container Orchestration" },
+    { name: "Docker", description: "Containerization" },
+    { name: "Terraform", description: "Infrastructure as Code" },
+    { name: "Jenkins", description: "CI/CD Pipeline" },
+    { name: "Prometheus", description: "Monitoring" }
+  ]
 
   return (
     <>
-      <Head>
-        <title>Cloud DevOps Services - Zion Tech Group</title>
-        <meta name="description" content="Expert cloud DevOps services including migration, infrastructure automation, CI/CD pipelines, and security. Transform your development workflow with Zion Tech Group." />
-        <meta name="keywords" content="cloud migration, DevOps, infrastructure as code, CI/CD, cloud security, AWS, Azure, GCP" />
-        <link rel="canonical" href={`${contact.address}/cloud-devops`} />
-        <meta property="og: title" content="Cloud DevOps Services - Zion Tech Group" />
-        <meta property="og:description" content="Expert cloud DevOps services including migration, infrastructure automation, CI/CD pipelines, and security." />
-        <meta property="og: url" content={`${contact.address}/cloud-devops`} />
-        <meta property="og: type" content="website" />
-      </Head>
+      <SEO title="Cloud & DevOps Services - Zion Tech Group"
+        description="Expert cloud migration, DevOps automation, and infrastructure management services. Scale your applications with our cloud and DevOps solutions."
+        keywords="cloud migration, devops, infrastructure as code, CI/CD, AWS, Azure, GCP, Kubernetes"
+        canonical="https://ziontechgroup.com/cloud-devops"
+       />
+      
+      <PageTransition>
+        <main className="min-h-screen bg-white">
+          {/* Hero Section */}
+          <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+              <motion.div
+                initial={{ opacity: 0, y: 2 0 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-center"
+              >
+                <h1 className="text-4xl md: tex t-6xl font-bold text-gray-900 mb-6">
+                  Cloud & <span className="text-blue-600">DevOps</span>
+                </h1>
+                <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                  Scale your applications with expert cloud migration, DevOps automation, and infrastructure management services.
+                </p>
+                <div className="flex flex-col sm: fle x-row gap-4 justify-center">
+                  <motion.a
+                    href="#services"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
+                  >
+                    <ArrowRight className="w-5 h-5"  />
+                    Explore Services
+                  </motion.a>
+                  <motion.a
+                    href="/contact"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
+                  >
+                    <ArrowRight className="w-5 h-5"  />
+                    Get Started
+                  </motion.a>
+                </div>
+              </motion.div>
+            </div>
+          </section>
 
-      <div className="min-h-screen bg-white">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Cloud DevOps Services
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-                Accelerate your digital transformation with expert cloud migration, infrastructure automation, and DevOps practices.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  href="/contact"
-                  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-                >
-                  Get Started
-                </Link>
-                <Link 
-                  href="/services"
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-                >
-                  View All Services
-                </Link>
+          {/* Services Grid */}
+          <section id="services" className="py-20">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+              <motion.div
+                initial={{ opacity: 0, y: 2 0 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="text-center mb-16"
+              >
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4">
+                  Our Cloud & DevOps Services
+                </h2>
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                  Comprehensive solutions to modernize your infrastructure and accelerate your development process.
+                </p>
+              </motion.div>
+
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
+                {services.map((service, index) => (
+                  <motion.div
+                    key={service.id}
+                    initial={{ opacity: 0, y: 2 0 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: inde x * 0.1 }}
+                    className="bg-white rounded-xl shadow-lg hover: shado w-xl transition-shadow duration-300 overflow-hidden"
+                  >
+                    <div className="p-8">
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="text-blue-600">
+                          {service.icon}
+                        </div>
+                        <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                          {service.category}
+                        </span>
+                      </div>
+                      
+                      <h3 className="text-xl font-bold text-gray-900 mb-3">
+                        {service.title}
+                      </h3>
+                      
+                      <p className="text-gray-600 mb-6">
+                        {service.description}
+                      </p>
+                      
+                      <div className="mb-6">
+                        <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
+                        <ul className="space-y-2">
+                          {service.features.map((feature, idx) => (
+                            <li key={idx} className="flex items-center gap-2 text-sm text-gray-600">
+                              <CheckCircle className="w-4 h-4 text-green-500"  />
+                              {feature}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      
+                      <div className="flex items-center justify-between text-sm text-gray-500 mb-6">
+                        <span className="font-semibold text-green-600">{service.pricing}</span>
+                        <span>{service.delivery}</span>
+                      </div>
+                      
+                      <motion.button
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                        className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover: b g-blue-700 transition-colors"
+                      >
+                        <ArrowRight className="w-5 h-5"  />
+                        Learn More
+                      </motion.button>
+                    </div>
+                  </motion.div>
+                ))}
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* Services Grid */}
-        <section className="py-20">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,";
-            <div className="text-center mb-16">";
-              <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">,";
-                Comprehensive DevOps Solutions
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
-                From cloud migration to continuous deployment, we provide end-to-end DevOps services to modernize your infrastructure.
-              </p>
+          {/* Technologies Section */}
+          <section className="bg-gray-50 py-20">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+              <motion.div
+                initial={{ opacity: 0, y: 2 0 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-center mb-16"
+              >
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4">
+                  Technologies We Use
+                </h2>
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                  We work with the latest cloud and DevOps technologies to deliver cutting-edge solutions.
+                </p>
+              </motion.div>
+
+              <div className="grid grid-cols-2 md: gri d-cols-4 gap-8">
+                {technologies.map((tech, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 2 0 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: inde x * 0.1 }}
+                    className="bg-white rounded-xl p-6 shadow-lg hover: shado w-xl transition-shadow duration-300 text-center"
+                  >
+                    <h3 className="text-lg font-bold text-gray-900 mb-2">
+                      {tech.name}
+                    </h3>
+                    <p className="text-sm text-gray-600">
+                      {tech.description}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
             </div>
+          </section>
 
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">,";
-              {services.map((service, index) => (
-                <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-shadow border border-gray-100">,";
-                  <div className="flex items-center mb-4">";
-                    <service.icon className="w-8 h-8 text-blue-600 mr-3" />";
-                    <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>";
-                  </div>
-                  <p className="text-gray-600 mb-4">{service.description}</p>";
-                  <ul className="space-y-2">";
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-700">";
-                        <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>";
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
+          {/* CTA Section */}
+          <section className="py-20">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+              <motion.div
+                initial={{ opacity: 0, y: 2 0 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-center"
+              >
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-6">
+                  Ready to Modernize Your Infrastructure?
+                </h2>
+                <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                  Let us help you scale your applications with our expert cloud and DevOps services.
+                </p>
+                <div className="flex flex-col sm: fle x-row gap-4 justify-center">
+                  <motion.a
+                    href="/contact"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
+                  >
+                    <ArrowRight className="w-5 h-5"  />
+                    Get Started Today
+                  </motion.a>
+                  <motion.a
+                    href="tel:+13024640950"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
+                  >
+                    <ArrowRight className="w-5 h-5"  />
+                    Call Us: +1 302 464 0950
+                  </motion.a>
                 </div>
-              ))}
+              </motion.div>
             </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="bg-gray-50 py-20">
-          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Ready to Transform Your DevOps?
-            </h2>
-            <p className="text-xl text-gray-600 mb-8">
-              Let our experts help you build a robust, scalable, and secure cloud infrastructure.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact"
-                className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-              >
-                Schedule Consultation
-              </Link>
-                                <a 
-                    href={`tel:${contact.phone}`}
-                    className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-              >
-                Email {contact.email}
-              </a>
-            </div>
-          </div>
-        </section>
-      </div>
+          </section>
+        </main>
+      </PageTransition>
     </>
-  );
-};
+  )
+}
+
+export default CloudDevOpsPage

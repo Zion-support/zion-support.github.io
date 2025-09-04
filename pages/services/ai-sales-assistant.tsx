@@ -1,83 +1,33 @@
-import React from 'react';
-import Head from 'next/head';
+import Head from 'next/head.ts';
 import Link from 'next/link';
-import { Mail, Users, Target, BarChart3, DollarSign, Clock, ArrowRight } from 'lucide-react';
 
 export default function AISalesAssistant() {
-  const contact = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    site: 'https://ziontechgroup.com'
-  };
-
-  const features = [
-    'ICP discovery and list building',
-    'Personalized multi-touch sequences',
-    'A/B testing and automatic optimization',
-    'CRM integration (HubSpot, Salesforce)',
-    'Warm-up and deliverability guardrails',
-    'Compliance with CAN-SPAM and GDPR',
-  ];
-
-  const links = [
-    { label: 'HubSpot CRM', href: 'https://www.hubspot.com/products/crm' },
-    { label: 'Salesforce', href: 'https://www.salesforce.com/crm/' },
-    { label: 'CAN-SPAM Rules', href: 'https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business' },
-  ];
-
   return (
-    <>
-      <Head>
-        <title>AI Sales Email & Outreach Assistant | Zion Tech Group</title>
-        <meta name="description" content="Personalized outreach sequences, ICP targeting and CRM integration with human review." />
-        <link rel="canonical" href="https://ziontechgroup.com/services/ai-sales-assistant" />
-      </Head>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-        <div className="container mx-auto px-4 py-20">
-          <div className="text-center mb-10">
-            <h1 className="text-5xl font-bold text-white mb-4">AI Sales Email & Outreach Assistant</h1>
-            <p className="text-gray-300 max-w-3xl mx-auto">Book more meetings with personalized, compliant outreach that syncs to your CRM.</p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <div className="bg-white/10 border border-white/20 rounded-2xl p-6">
-              <h2 className="text-xl font-semibold text-white mb-4">Capabilities</h2>
-              <ul className="list-disc pl-5 text-gray-300 space-y-2">
-                {features.map((x, i) => <li key={i}>{x}</li>)}
-              </ul>
-            </div>
-            <div className="bg-white/10 border border-white/20 rounded-2xl p-6">
-              <h2 className="text-xl font-semibold text-white mb-4">Helpful links</h2>
-              <ul className="list-disc pl-5 text-gray-300 space-y-2">
-                {links.map(l => <li key={l.href}><a className="text-blue-300 hover:text-blue-200 underline" href={l.href} target="_blank" rel="noopener noreferrer">{l.label}</a></li>)}
-              </ul>
-            </div>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <div className="bg-white/10 border border-white/20 rounded-2xl p-6">
-              <div className="text-gray-300 mb-2">Typical pricing</div>
-              <div className="text-white text-lg font-semibold">$299 – $1,999/month</div>
-              <div className="text-gray-300 text-sm">Implementation: 1–3 weeks</div>
-            </div>
-            <div className="bg-white/10 border border-white/20 rounded-2xl p-6">
-              <div className="text-gray-300 mb-2">Integrations</div>
-              <div className="text-white">HubSpot, Salesforce, Gmail/Outlook</div>
-            </div>
-            <div className="bg-white/10 border border-white/20 rounded-2xl p-6">
-              <div className="text-gray-300 mb-2">Outcomes</div>
-              <ul className="list-disc pl-5 text-gray-300 space-y-2">
-                <li>Higher reply and meeting rates</li>
-                <li>Always-on pipeline generation</li>
-                <li>Accurate CRM hygiene</li>
-              </ul>
-            </div>
-          </div>
-          <div className="text-center">
-            <Link href="/contact" className="inline-flex items-center bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600">Start a pilot <ArrowRight className="w-4 h-4 ml-2" /></Link>
-          </div>
-        </div>
+    <div className = "relative min-h-screen overflow-hidden bg-slate-950 text-white">
+      <Helmet>
+        <title>AI Sales Assistant — Services — Zion</title>
+        <meta name="description" content="Qualify leads, personalize outreach, and schedule meetings autonomously."  />
+      </Helmet>
+      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
+        <div className="absolute -top-24 -left-24 h-[38rem] w-[38rem] rounded-full bg-fuchsia-500/20 blur-3xl animate-float"  />
+        <div className="absolute top-1/4 -right-32 h-[30rem] w-[30rem] rounded-full bg-cyan-400/20 blur-3xl animate-float-slow"  />
+        <div className="absolute bottom-0 left-1/4 h-[26rem] w-[26rem] rounded-full bg-violet-400/10 blur-2xl animate-float-fast"  />
+        <div className="absolute inset-0 beams opacity-[0.06]"  />
       </div>
-    </>
+      <main className="relative z-10 mx-auto max-w-3xl px-6 py-16">
+        <h1 className="text-4xl md: tex t-5xl font-extrabold gradient-text">AI Sales Assistant</h1>
+        <p className="mt-4 text-white/80">Automate lead qualification and personalized outreach across email and LinkedIn with CRM syncing.</p>
+        <ul className="mt-6 space-y-2 text-white/80 list-disc pl-5">
+          <li>ICP matching and scoring synced to CRM</li>
+          <li>Persona-aware sequences with A/B testing</li>
+          <li>Meeting scheduling and objection handling</li>
+        </ul>
+        <div className="mt-8 flex gap-3">
+          <Link href="/services"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover: b g-white/10">Back to Services</a></Link>;
+          <Link href="/contact"><a className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover: b g-white">Get Started</a></Link>;
+        </div>;
+      </main>;
+    </div>;
   );
 }
 

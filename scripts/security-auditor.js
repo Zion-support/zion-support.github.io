@@ -42,12 +42,9 @@ class SecurityAuditor {
         if (!content.includes('X-Content-Type-Options')) {
           this.issues.push('Security headers not configured');
         }
-      }
     } catch (error) {
       this.issues.push(`Error reading next.config.js: ${error.message}`);
     }
-  }
-
   generateReport() {
     const report = {
       timestamp: new Date().toISOString(),
@@ -57,8 +54,6 @@ class SecurityAuditor {
         totalIssues: this.issues.length,
         fixesApplied: this.fixes.length
       }
-    };
-
     fs.writeFileSync('security-report.json', JSON.stringify(report, null, 2));
     console.log('Security report generated');
   }

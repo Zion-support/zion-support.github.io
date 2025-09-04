@@ -43,7 +43,7 @@ class AppImprover {
         this.log('✅ Next.js config analyzed')} else {
         this.issues.push('next.config.js not found')}
     } catch (error) {
-      this.issues.push(`Error reading next.config.js: ${error.message}`)}
+      this.issues.push(`Error reading next.config.js: ${error.message }`)}
   }
 
   checkPackageJson() { try {
@@ -81,13 +81,13 @@ class AppImprover {
       if() { this.improvements.push('Add security audit script') }
       
       this.log('✅ Package.json analyzed')} catch (error) {
-      this.issues.push(`Error reading package.json: ${error.message}`)}
+      this.issues.push(`Error reading package.json: ${error.message }`)}
   }
 
   checkAppStructure() { const requiredDirs = ['src', 'src/components', 'src/pages', 'public']requiredDirs.forEach(dir => {
       if () {
         this.log(`✅ ${dir } directory exists`)} else {
-        this.issues.push(`Missing directory: ${dir}`)}
+        this.issues.push(`Missing directory: ${dir }`)}
     })}
 
   checkForOptimizations() { // Check for image optimizati) {

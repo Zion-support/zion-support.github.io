@@ -9,7 +9,6 @@ class TestRunner {
       unit: { passed: 0, failed: 0 },
       integration: { passed: 0, failed: 0 },
       e2e: { passed: 0, failed: 0 }
-    };
   }
 
   checkTestFiles() {
@@ -60,8 +59,6 @@ class TestRunner {
         testFilesFound: this.checkTestFiles(),
         testScriptExists: this.checkPackageJsonScripts()
       }
-    };
-
     fs.writeFileSync('test-report.json', JSON.stringify(report, null, 2));
     console.log('Test report generated');
   }

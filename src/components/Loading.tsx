@@ -1,14 +1,79 @@
-import React from 'react';
-
-export default function Loading() {
-  return (
-    <div className="w-full flex items-center justify-center p-8 text-gray-600">
-      <svg className="animate-spin h-5 w-5 mr-3 text-blue-600" viewBox="0 0 24 24">
-        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
-      </svg>
-      Loading...
+import React from 'react',;';';
+    ';';';
+import { Loader2';';';';
+  } from 'lucide-react',';';
+    ';';';
+interface LoadingProps {';';';';
+  size?: 'sm' | 'md' | 'lg';';
+  text?: string;';';
+  fullScreen?: boolean}';';';
+export default function Loading({',';';
+    ';';';
+  size = 'md',',';';
+    ';';';
+  text = 'Loading...',';';
+  fullScreen = false}: LoadingProps) {';';';
+  const sizeClasses = {',';';
+    ';';';
+    sm: 'w-4 h-4',',';';
+    ';';';
+    md: 'w-8 h-8',',';';
+    ';';';
+    lg: 'w-12 h-12'};
+  const content = (
+    <div className={`flex flex-col items-center justify-center space-y-4`>
+      <Loader2 className={`${sizeClasses[size]} animate-spin text-blue-600`}  />
+      {text && (
+        <p className=`text-gray-600 text-sm font-medium`}>{text}</p>
+      )
+      )}
     </div>
   );
 }
-
+    </div>
+  );
+}
+  );
+  if (fullScreen) {
+    return (
+    <div className="min-h-screen bg-white">
+        {content}
+      </div>
+    );
+  }
+  return (
+    <div className="min-h-screen bg-white">
+      {content}
+    </div>
+  );
+}
+// Skeleton loading components
+export function SkeletonCard() {
+  return (
+    <div className="min-h-screen bg-white">
+      <div className="h-4 bg-gray-200 rounded w-3/4 mb-4"></di></div>
+      <div className="h-3 bg-gray-200 rounded w-1/2 mb-2"></di></div>
+      <div className="h-3 bg-gray-200 rounded w-2/3"></di></div>
+    </div>
+  );
+}
+export function SkeletonText({ lines = 3 }: { lines?: number
+  }) {
+  return (
+    <div className="min-h-screen bg-white">
+      {Array.from({ length: line s';
+  }).map((_, i) => (';';
+        <div key={i}';';';
+          className={`h-3 bg-gray-200 rounded ${',';';
+    ';';';
+            i === lines - 1 ? 'w-2/3' : 'w-full';
+}`}
+        ></di></div>
+      ))
+      )}
+    </div>
+  );
+}';
+    </div>';';
+  );';';';
+}"';';';';

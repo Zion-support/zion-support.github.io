@@ -1,182 +1,320 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React from 'react'
+import dynamic from 'next/dynamic'
+import Head from 'next/head'
+import Link from 'next/link'
+import { motion } from 'framer-motion'
+import { 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Clock, 
+  ArrowRight, 
+  Send,
+  MessageCircle,
+  Globe
+} from 'lucide-react'
 
-export default function Contact(): JSX.Element {
-  const contact = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    site: 'https://ziontechgroup.com'
-  }
+const SEO = dynamic(() => import('../src/components/SEO'), { ssr: fals e })
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: fals e })
+
+const ContactPage: Reac t.FC = () => {
+  const contactInfo = [
+    {
+      icon: <Phone className="w-6 h-6"  />,
+      title: "Phone",
+      details: "+1 302 464 0950",
+      link: "tel:+13024640950"
+    },
+    {
+      icon: <Mail className="w-6 h-6"  />,
+      title: "Email",
+      details: "kleber@ziontechgroup.com",
+      link: "mailto: klebe r@ziontechgroup.com"
+    },
+    {
+      icon: <MapPin className="w-6 h-6"  />,
+      title: "Address",
+      details: "364 E Main St STE 1008\nMiddletown, DE 19709",
+      link: "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"
+    },
+    {
+      icon: <Clock className="w-6 h-6"  />,
+      title: "Business Hours",
+      details: "Monday - Friday: 9: 00 AM - 6: 00 PM\nSaturday: 1 0:00 AM - 4: 00 PM",
+      link: nul l
+    }
+  ]
+
+  const services = [
+    "AI & Machine Learning Solutions",
+    "IT Infrastructure & Support",
+    "Micro SaaS Development",
+    "Cybersecurity Services",
+    "Cloud & DevOps Solutions",
+    "Blockchain Technology",
+    "Digital Transformation",
+    "Consulting & Strategy"
+  ]
+
   return (
     <>
-      <Head>
-        <title>Contact Zion Tech Group - Get Your Quote Today</title>
-        <meta name="description" content="Contact Zion Tech Group for micro SaaS, AI services, and IT solutions. Call +1 302 464 0950 or email kleber@ziontechgroup.com for expert consultation." />";
-        <link rel="canonical" href={`${contact.site}/contact`} />`;
-      </Head>
+      <SEO title="Contact Us - Zion Tech Group"
+        description="Get in touch with Zion Tech Group for AI services, IT solutions, and micro SaaS development. Call +1 302 464 0950 or email kleber@ziontechgroup.com"
+        keywords="contact, Zion Tech Group, AI services, IT solutions, micro SaaS, phone, email, address"
+        canonical="https://ziontechgroup.com/contact"
+       />
       
-      <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">";
-        {/* Hero Section */}
-        <section className="py-20 px-4 text-center">";
-          <div className="max-w-4xl mx-auto">";
-            <h1 className="text-4xl md: text-5xl font-extrabold tracking-tight mb-6">,";
-              Contact Zion Tech Group
-            </h1>
-            <p className="text-xl text-slate-300 mb-8">";
-              Ready to transform your business with innovative technology solutions?
-            </p>
-            <p className="text-lg text-slate-400 mb-12 max-w-3xl mx-auto">";
-              Get in touch with our experts to discuss your project requirements, 
-              receive a custom quote, or learn more about our 40+ micro SaaS products, 
-              AI services, and IT solutions.
-            </p>
-          </div>
-        </section>
-
-        {/* Contact Information */}
-        <section className="py-16 px-4">";
-          <div className="max-w-6xl mx-auto">";
-            <div className="grid md: grid-cols-2 gap-12">,";
-              {/* Contact Details */}
-              <div className="space-y-8">";
-                <div>
-                  <h2 className="text-3xl font-bold mb-8">Get In Touch</h2>";
-                  <div className="space-y-6">";
-                    <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">";
-                      <h3 className="text-xl font-semibold mb-2 text-blue-400">Phone</h3>";
-                      <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="text-lg text-slate-300 hover: text-white transition-colors">,";`;
-                        {contact.phone}
-                      </a>
-                      <p className="text-slate-400 text-sm mt-1">Available Monday-Friday, 9 AM - 6 PM EST</p>";
-                    </div>
-
-                    <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">";
-                      <h3 className="text-xl font-semibold mb-2 text-purple-400">Email</h3>";
-                      <a href={`mailto:${contact.email}`} className="text-lg text-slate-300 hover: text-white transition-colors">,";`;
-                        {contact.email}
-                      </a>
-                      <p className="text-slate-400 text-sm mt-1">We respond within 24 hours</p>";
-                    </div>
-
-                    <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">";
-                      <h3 className="text-xl font-semibold mb-2 text-green-400">Address</h3>";
-                      <p className="text-lg text-slate-300">{contact.address}</p>";
-                      <p className="text-slate-400 text-sm mt-1">Middletown, Delaware</p>";
-                    </div>
-
-                    <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">";
-                      <h3 className="text-xl font-semibold mb-2 text-yellow-400">Website</h3>";
-                      <a href={contact.site} className="text-lg text-slate-300 hover: text-white transition-colors">,";
-                        {contact.site}
-                      </a>
-                      <p className="text-slate-400 text-sm mt-1">Visit our full service catalog</p>";
-                    </div>
-                  </div>
+      <PageTransition>
+        <main className="min-h-screen bg-white">
+          {/* Hero Section */}
+          <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+              <motion.div
+                initial={{ opacity: 0, y: 2 0 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-center"
+              >
+                <h1 className="text-4xl md: tex t-6xl font-bold text-gray-900 mb-6">
+                  Get In <span className="text-blue-600">Touch</span>
+                </h1>
+                <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                  Ready to transform your business with our innovative AI, IT, and micro SaaS solutions? Let's discuss your project.
+                </p>
+                <div className="flex flex-col sm: fle x-row gap-4 justify-center">
+                  <motion.a
+                    href="tel:+13024640950"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
+                  >
+                    <Phone className="w-5 h-5"  />
+                    Call Now: +1 302 464 0950
+                  </motion.a>
+                  <motion.a
+                    href="mailto: klebe r@ziontechgroup.com"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
+                  >
+                    <Mail className="w-5 h-5"  />
+                    Send Email
+                  </motion.a>
                 </div>
-              </div>
+              </motion.div>
+            </div>
+          </section>
 
-              {/* Services Summary */}
-              <div>
-                <h2 className="text-3xl font-bold mb-8">Our Services</h2>";
-                <div className="space-y-6">";
-                  <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">";
-                    <h3 className="text-xl font-semibold mb-3 text-blue-400">Micro SaaS Products</h3>";
-                    <p className="text-slate-300 mb-4">15+ innovative software solutions including: </p>,";
-                    <ul className="text-slate-400 space-y-1 text-sm">";
-                      <li>• Cloud Cost Guard (FinOps Assistant)</li>
-                      <li>• API Rate Limiter & Analytics</li>
-                      <li>• Smart Document Processing</li>
-                      <li>• Customer Churn Predictor</li>
-                      <li>• And 11+ more specialized tools</li>
-                    </ul>
-                    <Link href="/services" className="text-blue-400 hover: text-blue-300 font-semibold text-sm">,";
-                      View All Micro SaaS →
-                    </Link>
-                  </div>
+          {/* Contact Information */}
+          <section className="py-20">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+              <motion.div
+                initial={{ opacity: 0, y: 2 0 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="text-center mb-16"
+              >
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4">
+                  Contact Information
+                </h2>
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                  Multiple ways to reach us for your convenience
+                </p>
+              </motion.div>
 
-                  <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">";
-                    <h3 className="text-xl font-semibold mb-3 text-purple-400">AI Services</h3>";
-                    <p className="text-slate-300 mb-4">16+ advanced AI solutions including: </p>,";
-                    <ul className="text-slate-400 space-y-1 text-sm">";
-                      <li>• Computer Vision & Image Analysis</li>
-                      <li>• AI-Powered Fraud Detection</li>
-                      <li>• Conversational AI Platform</li>
-                      <li>• Predictive Analytics & Forecasting</li>
-                      <li>• And 12+ more AI services</li>
-                    </ul>
-                    <Link href="/services" className="text-purple-400 hover: text-purple-300 font-semibold text-sm">,";
-                      View All AI Services →
-                    </Link>
-                  </div>
-
-                  <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">";
-                    <h3 className="text-xl font-semibold mb-3 text-green-400">IT & Cloud Services</h3>";
-                    <p className="text-slate-300 mb-4">16+ comprehensive IT solutions including: </p>,";
-                    <ul className="text-slate-400 space-y-1 text-sm">";
-                      <li>• Cloud Migration & Modernization</li>
-                      <li>• Kubernetes & Container Orchestration</li>
-                      <li>• Cybersecurity Hardening & SOC</li>
-                      <li>• Data Engineering & Analytics</li>
-                      <li>• And 12+ more IT services</li>
-                    </ul>
-                    <Link href="/services" className="text-green-400 hover: text-green-300 font-semibold text-sm">,";
-                      View All IT Services →
-                    </Link>
-                  </div>
-                </div>
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
+                {contactInfo.map((info, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 2 0 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: inde x * 0.1 }}
+                    className="bg-white rounded-xl p-8 shadow-lg hover: shado w-xl transition-shadow duration-300 text-center"
+                  >
+                    <div className="text-blue-600 mb-4 flex justify-center">
+                      {info.icon}
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                      {info.title}
+                    </h3>
+                    {info.link ? (
+                      <a
+                        href={info.link}
+                        className="text-gray-600 hover: tex t-blue-600 transition-colors whitespace-pre-line"
+                      >
+                        {info.details}
+                      </a>
+                    ) : (
+                      <p className="text-gray-600 whitespace-pre-line">
+                        {info.details}
+                      </p>
+                    )}
+                  </motion.div>
+                ))}
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* Contact Form */}
-        <section className="py-16 px-4">";
-          <div className="max-w-4xl mx-auto">";
-            <div className="text-center mb-12">";
-              <h2 className="text-3xl md: text-4xl font-bold mb-6">,";
-                Send Us a Message
-              </h2>
-              <p className="text-lg text-slate-300">
-                Fill out the form below and we&apos;ll get back to you within 24 hours
-              </p>
-            </div>
-            <ContactForm />
-          </div>
-        </section>
+          {/* Contact Form */}
+          <section className="bg-gray-50 py-20">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+              <motion.div
+                initial={{ opacity: 0, y: 2 0 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-center mb-16"
+              >
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4">
+                  Send Us a Message
+                </h2>
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                  Fill out the form below and we'll get back to you within 24 hours
+                </p>
+              </motion.div>
 
-        {/* Call to Action */}
-        <section className="py-16 px-4 bg-slate-900/40">";
-          <div className="max-w-4xl mx-auto text-center">";
-            <h2 className="text-3xl md: text-4xl font-bold mb-8">,";
-              Ready to Get Started?
-            </h2>
-            <p className="text-lg text-slate-300 mb-8">
-              Choose your preferred way to contact us and let&apos;s discuss how we can help 
-              transform your business with cutting-edge technology solutions.
-            </p>
-            
-            <div className="flex flex-col sm: flex-row items-center justify-center gap-4 mb-8">,";
-              <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-8 py-3 bg-blue-600 hover: bg-blue-700 rounded-lg font-semibold transition-colors">,";`;
-                Call Now: {contact.phone}
-              </a>
-              <a href={`mailto:${contact.email}`} className="px-8 py-3 bg-purple-600 hover: bg-purple-700 rounded-lg font-semibold transition-colors">,";`;
-                Send Email
-              </a>
-              <Link href="/services-catalog" className="px-8 py-3 bg-slate-800 hover: bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">,";
-                View Services Catalog
-              </Link>
+              <div className="max-w-4xl mx-auto">
+                <motion.form
+                  initial={{ opacity: 0, y: 2 0 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  className="bg-white rounded-xl shadow-lg p-8"
+                >
+                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                        Full Name *
+                      </label>
+                      <input type="text"
+                        id="name"
+                        name="name"
+                        required
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent"
+                        placeholder="Your full name"
+                       />
+                    </div>
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                        Email Address *
+                      </label>
+                      <input type="email"
+                        id="email"
+                        name="email"
+                        required
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent"
+                        placeholder="your.email@example.com"
+                       />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
+                    <div>
+                      <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                        Phone Number
+                      </label>
+                      <input type="tel"
+                        id="phone"
+                        name="phone"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent"
+                        placeholder="+1 (555) 123-4567"
+                       />
+                    </div>
+                    <div>
+                      <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                        Company
+                      </label>
+                      <input type="text"
+                        id="company"
+                        name="company"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent"
+                        placeholder="Your company name"
+                       />
+                    </div>
+                  </div>
+
+                  <div className="mb-6">
+                    <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+                      Service Interest
+                    </label>
+                    <select
+                      id="service"
+                      name="service"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent"
+                    >
+                      <option value="">Select a service</option>
+                      {services.map((service, index) => (
+                        <option key={index} value={service}>
+                          {service}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+
+                  <div className="mb-6">
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                      Message *
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows={6}
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent"
+                      placeholder="Tell us about your project requirements..."
+                    ></textarea>
+                  </div>
+
+                  <motion.button
+                    type="submit"
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    className="w-full bg-blue-600 text-white py-4 rounded-lg font-semibold flex items-center justify-center gap-2 hover: b g-blue-700 transition-colors"
+                  >
+                    <Send className="w-5 h-5"  />
+                    Send Message
+                  </motion.button>
+                </motion.form>
+              </div>
             </div>
-            
-            <div className="text-slate-400">";
-              <p>We offer free consultations and custom quotes for all our services.</p>
-              <p className="mt-2">Typical response time: Within 24 hours</p>,";
+          </section>
+
+          {/* Services Overview */}
+          <section className="py-20">
+            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+              <motion.div
+                initial={{ opacity: 0, y: 2 0 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-center mb-16"
+              >
+                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4">
+                  Our Services
+                </h2>
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                  Comprehensive technology solutions to meet all your business needs
+                </p>
+              </motion.div>
+
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-6">
+                {services.map((service, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 2 0 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: inde x * 0.1 }}
+                    className="bg-white rounded-xl p-6 shadow-lg hover: shado w-xl transition-shadow duration-300 text-center"
+                  >
+                    <h3 className="text-lg font-semibold text-gray-900">
+                      {service}
+                    </h3>
+                  </motion.div>
+                ))}
+              </div>
             </div>
-          </div>
-        </section>
-      </main>
+          </section>
+        </main>
+      </PageTransition>
     </>
-  );
+  )
 }
-;
+
+export default ContactPage

@@ -1,54 +1,35 @@
-import Link from 'next/link';
-import { useState } from 'react';
+import NextLink from 'next/link'
 
-const Header: React.FC = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+const navLinks: { href: string; label: string }[] = [
+  { href: '/', label: 'Home' },
+  { href: '/services', label: 'Services' },
+  { href: '/services/micro-saas', label: 'Micro SaaS' },
+  { href: '/services/it-services', label: 'IT Services' },
+  { href: '/services/ai-services', label: 'AI Services' },
+  { href: '/solutions', label: 'Solutions' },
+  { href: '/pricing', label: 'Pricing' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/contact', label: 'Contact' }
+]
 
+export default function Header() {
   return (
-    <header className="header">
-      <nav className="header-nav">
-        <Link href="/" className="header-logo">
-          Zion Tech Group
-        </Link>
-        
-        {/* Desktop Navigation */}
-        <div className="header-nav-links">
-          <Link href="/" className="header-nav-link">Home</Link>
-          <Link href="/services" className="header-nav-link">All Services</Link>
-          <Link href="/services-catalog" className="header-nav-link">Catalog</Link>
-          <Link href="/cloud-devops" className="header-nav-link">Cloud DevOps</Link>
-          <Link href="/cybersecurity" className="header-nav-link">Cybersecurity</Link>
-          <Link href="/quantum-computing" className="header-nav-link">Quantum</Link>
-          <Link href="/docs" className="header-nav-link">Docs</Link>
-          <Link href="/pricing" className="header-nav-link">Pricing</Link>
-          <Link href="/contact" className="header-nav-cta">Contact</Link>
+    <header className="ztg-header">
+      <div className="ztg-container">
+        <div className="ztg-brand">
+          <NextLink href="/">
+            <span>Zion Tech Group</span>
+          </NextLink>
         </div>
-
-        {/* Mobile Menu Button */}
-        <button 
-          className="mobile-menu-button"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label="Toggle mobile menu"
-          aria-expanded={mobileMenuOpen}
-        >
-          ☰
-        </button>
-      </nav>
-
-      {/* Mobile Menu */}
-      <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
-        <Link href="/" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Home</Link>
-        <Link href="/services" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>All Services</Link>
-        <Link href="/services-catalog" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Catalog</Link>
-        <Link href="/cloud-devops" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Cloud DevOps</Link>
-        <Link href="/cybersecurity" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Cybersecurity</Link>
-        <Link href="/quantum-computing" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Quantum</Link>
-        <Link href="/docs" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Docs</Link>
-        <Link href="/pricing" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
-        <Link href="/contact" className="header-nav-cta" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
+        <nav className="ztg-nav" aria-label="Main navigation">
+          {navLinks.map((link) => (
+            <NextLink key={link.href} href={link.href} className="ztg-nav-link">
+              {link.label}
+            </NextLink>
+          ))}
+        </nav>
       </div>
     </header>
-  );
-};
+  )
+}
 
-export default Header;

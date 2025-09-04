@@ -1,206 +1,164 @@
-import Link from 'next/link';
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Menu, X, ChevronDown, Phone, Shield } from 'lucide-react';
 
-interface NavigationProps {
-  className?: string;
-}
+const Navigation: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false)
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
-export default function Navigation({ className = '' }: NavigationProps) {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [servicesMenuOpen, setServicesMenuOpen] = useState(false);
-
-  const mainNavItems = [
-    { href: '/', label: 'Home' },
-    { href: '/about', label: 'About' },
-    { href: '/blog', label: 'Blog' },
-    { href: '/careers', label: 'Careers' },
-    { href: '/contact', label: 'Contact' },
-    { href: '/pricing', label: 'Pricing' },
-    { href: '/faq', label: 'FAQ' },
+  const navigationItems = [
+    { name: 'Home', href: '/' },
+    {
+      name: 'Services',
+      href: '/services',
+      dropdown: [
+        { name: 'AI Services', href: '/ai-services' },
+        { name: 'IT Services', href: '/it-services' },
+        { name: 'Micro SaaS', href: '/micro-saas' },
+        { name: 'All Services', href: '/services' }
+      ]
+    },
+    {
+      name: 'Solutions',
+      href: '/solutions',
+      dropdown: [
+        { name: 'AI Content Creation', href: '/solutions/ai-content-creation' },
+        { name: 'Email Automation', href: '/solutions/email-automation' },
+        { name: 'Customer Support Platform', href: '/solutions/customer-support' },
+        { name: 'Event Management', href: '/solutions/event-management' },
+        { name: 'Project Management', href: '/solutions/project-management' },
+        { name: 'Workflow Automation', href: '/solutions/workflow-automation' }
+      ]
+    },
+    { name: 'Pricing', href: '/pricing-guide' },
+    { name: 'About', href: '/about' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Contact', href: '/contact' }
   ];
 
-  const servicesNavItems = [
-    { href: '/services', label: 'All Services', description: 'Complete overview' },
-    { href: '/micro-saas', label: 'Micro SaaS', description: '150+ Products' },
-    { href: '/ai-services', label: 'AI Services', description: '100+ Solutions' },
-    { href: '/it-services', label: 'IT Services', description: '100+ Solutions' },
-    { href: '/services-catalog', label: 'Catalog', description: 'Browse all' },
-  ];
-
-  const solutionsNavItems = [
-    { href: '/cloud-devops', label: 'Cloud & DevOps' },
-    { href: '/cybersecurity', label: 'Cybersecurity' },
-    { href: '/quantum-computing', label: 'Quantum Computing' },
-    { href: '/docs', label: 'Documentation' },
-  ];
+  const toggleDropdown = (itemName: string) => {
+    setActiveDropdown(activeDropdown === itemName ? null : itemName);
+  }
 
   return (
-    <nav className={`bg-slate-900/95 backdrop-blur-md border-b border-white/10 sticky top-0 z-50 ${className}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+    <nav className='bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 shadow-lg sticky top-0 z-50'>
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='flex justify-between items-center h-16'>
           {/* Logo */}
-          <Link href="/" className="flex-shrink-0">
-            <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          <div className='flex-shrink-0'>
+            <Link to='/' className='text-white text-2xl font-bold hover:text-blue-300 transition-colors'>
               Zion Tech Group
-            </span>
-          </Link>
-
-          {/* Desktop Navigation */}
-          <div className="hidden lg:block">
-            <div className="ml-10 flex items-baseline space-x-4">
-              {mainNavItems.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors"
-                >
-                  {item.label}
-                </Link>
-              ))}
-              
-              {/* Services Dropdown */}
-              <div className="relative group">
-                <button
-                  className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
-                  onMouseEnter={() => setServicesMenuOpen(true)}
-                  onMouseLeave={() => setServicesMenuOpen(false)}
-                >
-                  Services
-                  <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-                
-                {servicesMenuOpen && (
-                  <div
-                    className="absolute left-0 mt-2 w-80 bg-slate-800 rounded-lg shadow-xl border border-white/10 py-2 z-50"
-                    onMouseEnter={() => setServicesMenuOpen(true)}
-                    onMouseLeave={() => setServicesMenuOpen(false)}
-                  >
-                    {servicesNavItems.map((item) => (
-                      <Link
-                        key={item.href}
-                        href={item.href}
-                        className="block px-4 py-3 text-white hover:bg-slate-700 transition-colors"
-                      >
-                        <div className="font-medium">{item.label}</div>
-                        <div className="text-sm text-slate-400">{item.description}</div>
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-
-              {/* Solutions Dropdown */}
-              <div className="relative group">
-                <button
-                  className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
-                >
-                  Solutions
-                  <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-                
-                <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-lg shadow-xl border border-white/10 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                  {solutionsNavItems.map((item) => (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      className="block px-4 py-2 text-white hover:bg-slate-700 transition-colors"
-                    >
-                      {item.label}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* CTA Button */}
-          <div className="hidden lg:block">
-            <Link
-              href="/contact"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-200 shadow-lg hover:shadow-xl"
-            >
-              Get Started
             </Link>
           </div>
+          {/* Desktop Navigation */}
+          <div className='hidden md:block'>
+            <div className='ml-10 flex items-baseline space-x-4'>
+              {navigationItems.map((item) => (
+                <div key={item.name} className='relative'>
+                  {item.dropdown ? (
+                    <div className='relative'>
+                      <button
+                        onClick={() => toggleDropdown(item.name)}
+                        className='text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center'
+                      >
+                        {item.name}
+                        <ChevronDown className='ml-1 h-4 w-4' />
+                      </button>
+                      {activeDropdown === item.name && (
+                        <div className='absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg py-1 z-50'>
+                          {item.dropdown.map((dropdownItem) => (
+                            <Link
+                              key={dropdownItem.name}
+                              to={dropdownItem.href}
+                              className='block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors'
+                              onClick={() => setActiveDropdown(null)}
+                            >
+                              {dropdownItem.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <Link
+                      to={item.href}
+                      className='text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors'
+                    >
+                      {item.name}
+                    </Link>
+                  )}
+                </div>
+              ))}
 
+              <Link
+                to="/contact"
+                className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors duration-200 flex items-center"
+              >
+                <Phone className="h-4 w-4 mr-2" />
+                Contact Us
+              </Link>
+            </div>
+          </div>
           {/* Mobile menu button */}
-          <div className="lg:hidden">
+          <div className='md:hidden'>
             <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-white hover:text-blue-300 p-2 rounded-md"
-              aria-label="Toggle mobile menu"
+              onClick={() => setIsOpen(!isOpen)}
+              className='text-white hover:text-blue-300 p-2 rounded-md transition-colors'
             >
-              <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                {mobileMenuOpen ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                )}
-              </svg>
+              {isOpen ? <X className='h-6 w-6' /> : <Menu className='h-6 w-6' />}
             </button>
           </div>
         </div>
-
-        {/* Mobile Navigation */}
-        {mobileMenuOpen && (
-          <div className="lg:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-800 rounded-lg mt-2">
-              {mainNavItems.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="text-white hover:text-blue-300 block px-3 py-2 rounded-md text-base font-medium"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {item.label}
-                </Link>
-              ))}
-              
-              <div className="border-t border-white/10 pt-2">
-                <div className="text-slate-400 text-sm font-medium px-3 py-2">Services</div>
-                {servicesNavItems.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="text-white hover:text-blue-300 block px-6 py-2 rounded-md text-sm"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
-                ))}
-              </div>
-              
-              <div className="border-t border-white/10 pt-2">
-                <div className="text-slate-400 text-sm font-medium px-3 py-2">Solutions</div>
-                {solutionsNavItems.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="text-white hover:text-blue-300 block px-6 py-2 rounded-md text-sm"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
-                ))}
-              </div>
-              
-              <div className="border-t border-white/10 pt-2">
-                <Link
-                  href="/contact"
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white block px-3 py-2 rounded-md text-base font-medium text-center"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Get Started
-                </Link>
-              </div>
-            </div>
-          </div>
-        )}
       </div>
+      {/* Mobile Navigation */}
+      {isOpen && (
+        <div className='md:hidden'>
+          <div className='px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-blue-800 bg-opacity-95'>
+            {navigationItems.map((item) => (
+              <div key={item.name}>
+                {item.dropdown ? (
+                  <div>
+                    <button
+                      onClick={() => toggleDropdown(item.name)}
+                      className='text-white hover:text-blue-300 block px-3 py-2 rounded-md text-base font-medium w-full text-left flex items-center justify-between'
+                    >
+                      {item.name}
+                      <ChevronDown className='h-4 w-4' />
+                    </button>
+                    {activeDropdown === item.name && (
+                      <div className='pl-4 space-y-1'>
+                        {item.dropdown.map((dropdownItem) => (
+                          <Link
+                            key={dropdownItem.name}
+                            to={dropdownItem.href}
+                            className='text-gray-300 hover:text-white block px-3 py-2 rounded-md text-sm'
+                            onClick={() => {
+                              setIsOpen(false);
+                              setActiveDropdown(null)
+                            }}
+                          >
+                            {dropdownItem.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <Link
+                    to={item.href}
+                    className='text-white hover:text-blue-300 block px-3 py-2 rounded-md text-base font-medium'
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </nav>
   );
-}
+};
+
+export default Navigation

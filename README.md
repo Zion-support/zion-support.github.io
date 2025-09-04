@@ -39,17 +39,20 @@ A modern, high-performance website built with Next.js 15, TypeScript, and Tailwi
 ### Installation
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/Zion-Holdings/zion.app.git
    cd zion.app
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    ```
 
 3. **Start development server**
+
    ```bash
    npm run dev
    ```
