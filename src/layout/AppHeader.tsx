@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight, PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText } from 'lucide-react';
+import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, FileText, Globe, HeartHandshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, PenTool, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap, User, Bell, Award, GraduationCap, LifeBuoy, BarChart3, Server, Satellite, Gauge, Workflow, Truck, Eye, Smartphone, Database, Network, Clock, PanelLeft, Sparkles } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ThemeToggle } from '../components/ThemeToggle';
 import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
@@ -55,6 +55,7 @@ export function AppHeader() {
 
   // Enhanced services by category with better organization and working links
   const services = [
+<<<<<<< HEAD
     // Featured & New Services
     { name: '2029 Cutting-Edge Services', href: '/zion-cutting-edge-services-2029', icon: Star, description: 'Future-ready Technology Solutions', category: 'Featured', featured: true, color: 'from-indigo-500 to-purple-500' },
     { name: '2027 Services Overview', href: '/comprehensive-services-showcase-2027', icon: Star, description: 'Cutting-edge Innovation & Emerging Tech', category: 'Featured', featured: true, color: 'from-purple-500 to-pink-500' },
@@ -103,9 +104,203 @@ export function AppHeader() {
     { name: 'Micro CRM', href: '/services/micro-crm', icon: Users, description: 'Customer relationship management', category: 'Micro SaaS', color: 'from-green-500 to-emerald-500' },
     { name: 'Helpdesk Platform', href: '/services/helpdesk-platform', icon: MessageCircle, description: 'Customer support system', category: 'Micro SaaS', color: 'from-green-500 to-emerald-500' },
     { name: 'Website Analytics', href: '/services/website-analytics', icon: BarChart3, description: 'Performance tracking & insights', category: 'Micro SaaS', color: 'from-blue-500 to-indigo-500' },
+=======
+    { 
+      name: 'AI Business Intelligence', 
+      href: '/services/ai-business-intelligence', 
+      icon: Brain, 
+      description: 'Machine Learning & Data Science',
+      featured: true,
+      color: 'from-purple-500 to-cyan-500'
+    },
+    { 
+      name: 'AI Healthcare Analytics', 
+      href: '/services/ai-healthcare-analytics-platform', 
+      icon: Heart, 
+      description: 'Medical AI & Diagnostics',
+      featured: true,
+      color: 'from-red-500 to-pink-500'
+    },
+    { 
+      name: 'AI Cybersecurity', 
+      href: '/services/ai-cybersecurity-threat-detection', 
+      icon: Shield, 
+      description: 'AI-Powered Security',
+      featured: true,
+      color: 'from-green-500 to-blue-500'
+    },
+    { 
+      name: 'Quantum Computing', 
+      href: '/services/quantum-computing', 
+      icon: Atom, 
+      description: 'Quantum AI & Optimization',
+      featured: true,
+      color: 'from-purple-500 to-pink-500'
+    },
+    { 
+      name: 'IoT Edge Computing', 
+      href: '/services/iot-edge', 
+      icon: Cpu, 
+      description: 'IoT & Real-time Processing',
+      featured: true,
+      color: 'from-blue-500 to-cyan-500'
+    },
+    { 
+      name: 'Digital Twin Platform', 
+      href: '/services/digital-twin', 
+      icon: Globe, 
+      description: 'Virtual Replicas & Simulation',
+      featured: true,
+      color: 'from-green-500 to-emerald-500'
+    },
+    { 
+      name: 'Cloud DevOps', 
+      href: '/services/cloud-devops', 
+      icon: Cloud, 
+      description: 'DevOps & Infrastructure',
+      featured: true,
+      color: 'from-blue-500 to-cyan-500'
+    },
+    { 
+      name: 'Micro SaaS Products', 
+      href: '/services/micro-saas', 
+      icon: ShoppingCart, 
+      description: 'AI automations with transparent pricing',
+      featured: true,
+      color: 'from-orange-500 to-red-500'
+    },
+    { 
+      name: 'Data Analytics', 
+      href: '/services/data-analytics', 
+      icon: BarChart3, 
+      description: 'Business Intelligence & Analytics',
+      featured: false,
+      color: 'from-blue-500 to-indigo-500'
+    },
+    { 
+      name: 'IT Infrastructure', 
+      href: '/services/it-infrastructure', 
+      icon: Server, 
+      description: 'Enterprise IT Solutions',
+      featured: false,
+      color: 'from-gray-500 to-slate-500'
+    },
+    { 
+      name: 'Green IT Solutions', 
+      href: '/services/green-it', 
+      icon: Leaf, 
+      description: 'Sustainable Technology',
+      featured: false,
+      color: 'from-green-500 to-emerald-500'
+    },
+    { 
+      name: 'Space Technology', 
+      href: '/services/space-tech', 
+      icon: Satellite, 
+      description: 'Aerospace & Space Tech',
+      featured: false,
+      color: 'from-indigo-500 to-purple-500'
+    }
+  ];
+  const solutions = [
+    {
+      name: 'Enterprise Solutions',
+      href: '/solutions',
+      icon: Building2,
+      description: 'Large-scale business transformations',
+      featured: true
+    },
+    {
+      name: 'AI Solutions',
+      href: '/solutions',
+      icon: Brain,
+      description: 'Artificial Intelligence & Machine Learning',
+      featured: true
+    },
+    {
+      name: 'Cybersecurity Solutions',
+      href: '/solutions',
+      icon: Shield,
+      description: 'Advanced security & threat protection',
+      featured: true
+    },
+    {
+      name: 'Cloud Solutions',
+      href: '/solutions',
+      icon: Cloud,
+      description: 'Cloud infrastructure & migration',
+      featured: false
+    },
+    {
+      name: 'Healthcare Solutions',
+      href: '/solutions',
+      icon: Heart,
+      description: 'Digital health transformation',
+      featured: true
+    },
+    {
+      name: 'Financial Solutions',
+      href: '/solutions',
+      icon: TrendingUp,
+      description: 'Fintech innovation & compliance',
+      featured: true
+    }
+  ];
+  const resources = [
+    {
+      name: 'Blog & Insights',
+      href: '/blog',
+      icon: BookOpen,
+      description: 'Latest industry trends and insights',
+      featured: true
+    },
+    {
+      name: 'Case Studies',
+      href: '/case-studies',
+      icon: Target,
+      description: 'Real-world success stories',
+      featured: true
+    },
+    {
+      name: 'White Papers',
+      href: '/white-papers',
+      icon: FileText,
+      description: 'In-depth research and analysis',
+      featured: true
+    },
+    {
+      name: 'Webinars',
+      href: '/webinars',
+      icon: Users,
+      description: 'Expert-led learning sessions',
+      featured: true
+    },
+    {
+      name: 'Documentation',
+      href: '/docs',
+      icon: Code,
+      description: 'Technical guides and APIs',
+      featured: true
+    },
+    {
+      name: 'FAQ & Support',
+      href: '/faq',
+      icon: HelpCircle,
+      description: 'Get help and answers',
+      featured: true
+    },
+    {
+      name: 'Pricing Guide',
+      href: '/pricing',
+      icon: DollarSign,
+      description: 'Complete pricing information',
+      featured: true
+    }
+>>>>>>> origin/cursor/website-audit-content-update-and-deployment-fc73
   ];
 
   const quickLinks = [
+<<<<<<< HEAD
     { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart },
     { name: 'Blog', href: '/blog', icon: BookOpen },
     { name: 'Request Quote', href: '/contact', icon: MessageCircle },
@@ -116,6 +311,22 @@ export function AppHeader() {
     { name: 'Pricing', href: '/pricing', icon: DollarSign },
     { name: 'News', href: '/news', icon: BookOpen },
     { name: 'Case Studies', href: '/case-studies', icon: FileText },
+=======
+    { name: 'Services Overview', href: '/services', icon: Star, description: 'All our services' },
+    { name: 'AI Solutions', href: '/services/ai-business-intelligence', icon: Brain, description: 'AI-powered solutions' },
+    { name: 'Micro SaaS', href: '/services/micro-saas', icon: ShoppingCart, description: 'SaaS solutions' },
+    { name: 'Pricing', href: '/pricing', icon: DollarSign, description: 'Transparent pricing' },
+    { name: 'Request Quote', href: '/request-quote', icon: MessageCircle, description: 'Get custom pricing' },
+  ];
+  const supportLinks = [
+    { name: 'FAQ', href: '/faq', icon: HelpCircle },
+    { name: 'Blog', href: '/blog', icon: BookOpen },
+    { name: 'Help Center', href: '/help', icon: MessageCircle },
+    { name: 'Partners', href: '/partners', icon: Users },
+    { name: 'Documentation', href: '/docs', icon: BookOpen },
+    { name: 'Training', href: '/training', icon: GraduationCap },
+    { name: 'Support', href: '/help', icon: LifeBuoy },
+>>>>>>> origin/cursor/website-audit-content-update-and-deployment-fc73
   ];
 
   // Enhanced futuristic background component
