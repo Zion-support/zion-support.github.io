@@ -13,8 +13,8 @@ export default function HomePage() {
           <span className="text-purple-600">Enterprise IT</span>
         </h1>
         <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-          We design, build and operate production-grade platforms: AI copilots, data/ML pipelines, 
-          automation, cloud infra, and secure micro SaaS products.
+          We design, build and operate production-grade platforms: 33+ micro SaaS solutions, 
+          12+ AI services, and 9+ IT services. From MVP to enterprise scale.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link 

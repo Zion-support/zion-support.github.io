@@ -18,23 +18,23 @@ export default function ServicesOverviewPage() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
         <ServiceCard 
           href="/services/micro-saas" 
-          title="Micro SaaS" 
-          description="End-to-end product development with billing, auth, and analytics"
-          bullets={["Foundational architecture", "Billing + subscriptions", "Growth analytics"]}
+          title="Micro SaaS Development" 
+          description="12+ ready-to-deploy micro SaaS solutions with billing, analytics, and growth features"
+          bullets={["AI Analytics Dashboard", "Customer Feedback Management", "Social Media Scheduler", "Invoice Processing", "Project Management", "Email Marketing", "Inventory Management", "Lead Generation", "Document Management", "Appointment Scheduling", "Support Ticketing", "Expense Tracking"]}
           icon="🚀"
         />
         <ServiceCard 
           href="/services/ai-services" 
-          title="AI Services" 
-          description="LLM applications, RAG systems, and MLOps pipelines"
-          bullets={["RAG and agents", "Evals + guardrails", "MLOps pipelines"]}
+          title="AI Services & Solutions" 
+          description="12+ comprehensive AI services including LLM applications, RAG systems, and MLOps"
+          bullets={["Custom LLM Applications", "RAG Systems", "AI Chatbots", "Computer Vision", "NLP Solutions", "Predictive Analytics", "AI Automation", "Voice & Speech AI", "Recommendation Systems", "AI Data Pipelines", "AI Security", "AI Consulting"]}
           icon="🤖"
         />
         <ServiceCard 
           href="/services/it-services" 
-          title="IT Services" 
-          description="Cloud migration, DevOps, and security solutions"
-          bullets={["Cloud migration", "DevOps + SRE", "Security"]}
+          title="IT Services & Infrastructure" 
+          description="9+ comprehensive IT services including cloud migration, DevOps, and security"
+          bullets={["Cloud Migration & Strategy", "DevOps & CI/CD", "Site Reliability Engineering", "Cybersecurity & Compliance", "Infrastructure Management", "Database Administration", "Network Security", "Disaster Recovery", "IT Consulting"]}
           icon="⚙️"
         />
       </div>
