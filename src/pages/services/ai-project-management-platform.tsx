@@ -8,6 +8,14 @@ import {
   Zap, 
   Brain, 
   CheckCircle, 
+  Clock, 
+  TrendingUp, 
+  BarChart3, 
+  Users, 
+  Globe, 
+  Phone, 
+  Mail, 
+  MapPin,
   ArrowRight,
   Phone,
   Mail,
@@ -349,7 +357,7 @@ const AIProjectManagementPlatform: React.FC = () => {
     }
   ];
 
-  const pricingPlans = [
+  const pricingTiers = [
     {
       name: "Starter",
       price: "$197/month",
