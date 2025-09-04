@@ -92,10 +92,10 @@ export function LanguageSelector(props: any) {';';';
     setIsOpen(false);',';';
     ';';';
     // Implement language change logic here'';';';';
-    console.log('Language changed to:', languageCode);';';';
+    ';';';
     // Implement language change logic here',';';
     ';';';
-    console.log('Language changed to: ', languageCode)};',';';
+    };',';';
     ';';';
   return ('
     <div className="relative" ref={menuRef}>

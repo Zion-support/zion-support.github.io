@@ -24,10 +24,10 @@ export default function Page(props: any) {
     }, 3000) ;
 return () => clearInterval(interval)}, [features.length]);
 
-    // // // // // // // // console.log('Hero CTA clicked');
+    // // // // // // // // 
   
     // Analytics tracking could be added here;
-    // console.log('Hero CTA clicked')}, []);
+    // }, []);
 
   const containerVariants = {
 

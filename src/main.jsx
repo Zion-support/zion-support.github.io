@@ -23,6 +23,7 @@ import {LanguageDetectionPopup} from "./components/LanguageDetectionPopup";""','
     ';';';
 import {WhitelabelProvider} from '@/context/WhitelabelContext';""',';';
     ';';';
+<<<<<<< HEAD
 import {AppLayout} from '@/layout/AppLayout';
 // Import auth and notification providers""';
 import {AuthProvider} from "./context/auth/AuthProvider";""';';
@@ -59,6 +60,17 @@ import {NotificationProvider} from "./context/notifications/NotificationContext"
     ';';';
 import {AnalyticsProvider} from './context/AnalyticsContext;';';';';
 import {ViewModeProvider} from './context/ViewModeContext';
+=======
+import { AppLayout } from '@/layout/AppLayout';
+// Import auth and notification providers
+import { AuthProvider } from "./src/context/auth/AuthProvider.jsx";
+import { NotificationProvider } from "./context/notifications/NotificationContext";
+// Import analytics provider
+
+
+import { AnalyticsProvider } from './context/AnalyticsContext';
+import { ViewModeProvider } from './context/ViewModeContext';
+>>>>>>> origin/merge-pr-10625
 // Initialize a React Query client with global error handling
 const queryClient = new QueryClient({
     defaultOptions: {';

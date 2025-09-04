@@ -17,11 +17,11 @@ class ResourceMonitor {
     this.setupResourceObservers();
     this.monitorCriticalResources();
 
-    // console.log('🔍 Resource Monitor started')}
+    // }
 
   stop() {
     this.isMonitoring = false;
-    // console.log('🔍 Resource Monitor stopped')}
+    // }
 
   private setupErrorListeners() {
     // Listen for script loading errors
@@ -159,7 +159,7 @@ class ResourceMonitor {
 
     if(attempts >= this.maxRetries) {
 `
-      // console.warn(`Max retry attempts reached for ${url}`);
+      // 
       return}
 
     this.retryAttempts.set(url, attempts + 1);
@@ -172,7 +172,7 @@ class ResourceMonitor {
   }
   private retryResource(url: string, type: ResourceErro r['type']) {
 `
-    // console.log(`🔄 Retrying resource: ${url} (attempt ${this.retryAttempts.get(url)})`);
+    // })`);
 
     if(type === 'script') {
 
@@ -187,7 +187,7 @@ class ResourceMonitor {
     script.async = true;
     script.onload = () => {
 `
-      // console.log(`✅ Script loaded successfully: ${src}`);
+      // 
       this.retryAttempts.delete(src)};
     script.onerror = () => {
 `
@@ -200,7 +200,7 @@ class ResourceMonitor {
     link.href = href;
     link.onload = () => {
 `
-      // console.log(`✅ Stylesheet loaded successfully: ${href}`);
+      // 
       this.retryAttempts.delete(href)};
     link.onerror = () => {
 `
@@ -212,7 +212,7 @@ class ResourceMonitor {
     if(process.env.NODE_ENV === 'production') {
 
       // Example: Sentr y, LogRocket, etc.'
-      // console.log('📊 Reporting error to monitoring service:', error);
+      // 
     }
   }
   private getResourceType(element: HTMLElemen t): ResourceError['type'] {

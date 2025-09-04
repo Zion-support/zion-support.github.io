@@ -31,6 +31,7 @@ const API: NextPage = () => {
     <>
       <Head>
         <title>API Documentation - Zion Tech Group</title>
+<<<<<<< HEAD
         <meta name="description" content="Comprehensive API documentation for Zion Tech Group services and integrations."  />
       </Head>
       
@@ -40,6 +41,21 @@ const API: NextPage = () => {
             <h1 className="text-4xl md: tex t-6xl font-bold text-white mb-4">API Documentation</h1>
             <p className="text-blue-100 text-xl">
               Integrate with our services using our comprehensive REST API
+=======
+        <meta name="description" content="Comprehensive API documentation for Zion Tech Group services and integrations." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        {/* Header */}
+        <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+              API <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Documentation</span>
+            </h1>
+            <p className="text-xl text-gray-200 max-w-2xl mx-auto">
+              Comprehensive API documentation for integrating with Zion Tech Group services
+>>>>>>> origin/merge-pr-11190
             </p>
           </div>
         </section>

@@ -127,7 +127,7 @@ export const SEOEnhancer: Reac t.FC<SEOEnhancerProps> = ({
         const;const;const entries = list.getEntries();';
         entries.forEach((entry) => {';';
           if (entry.entryType === &apos;navigation&apos) {';';';
-            console.log(&apos;Page load time: &apos, entry.duration);',';';
+            ',';';
     ';';';
           if (entry.entryType === 'navigation') {
             // Page load time logged (removed console.log for production);';

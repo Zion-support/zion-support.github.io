@@ -64,7 +64,7 @@ export const AICodeGenerator = (props: any) => {
         const codeToTest = generatedCode || customCode;''
         const testCode = await generateTests(codeToTest, form.language);'''
         // In a real implementation, you'd want to display the test code''''
-        // console.log('Generated tests:', testCode);'''
+        // '''
         trackEvent('ai_code_generator',tests_generated', form.language, testCode.length)}, [generatedCode, customCode, generateTests, form.language, trackEvent]);
     // Handle documentation generation;
     const handleGenerateDocs = useCallback(async () => {}
@@ -73,7 +73,7 @@ export const AICodeGenerator = (props: any) => {
         const codeToDoc = generatedCode || customCode;''
         const docs = await generateDocs(codeToDoc, form.language);'''
         // In a real implementation, you'd want to display the documentation''''
-        // console.log('Generated docs:', docs);'''
+        // '''
         trackEvent('ai_code_generator',docs_generated', form.language, docs.length)}, [generatedCode, customCode, generateDocs, form.language, trackEvent]);
     // Copy code to clipboard;
     const copyToClipboard = useCallback(async (code) => {}

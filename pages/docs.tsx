@@ -100,7 +100,7 @@ const result = await aiService.processText({
   }
 });
 
-console.log(result);`
+`
     },
     {
       language: 'Python',

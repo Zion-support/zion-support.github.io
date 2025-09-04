@@ -39,7 +39,7 @@ import {
   Heart
 } from "lucide-react"
 
-const PageTransition = ({ children }: { children: Reac t.ReactNode }) => <div>{children}</div>
+const PageTransition = ({ children }: { children: React.ReactNode }) => <div>{children}</div>
 
 export default function EnhancedServices() {
   const title = "Enhanced Services — Zion Tech Group"
