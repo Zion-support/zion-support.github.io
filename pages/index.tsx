@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Head from 'next/head';
 import Image from 'next/image';
+import { Suspense } from 'react';
 
 export default function Home() {
   const contact = {
@@ -13,8 +14,8 @@ export default function Home() {
     <>
       <Head>
         <title>Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions</title>
-        <meta name="description" content="Leading provider of micro SaaS products, AI services, and IT solutions. 340+ innovative services including quantum computing, AI automation, blockchain, edge computing, and enterprise technology solutions." />
-        <meta name="keywords" content="micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity, quantum computing, blockchain, edge computing, 5G, IoT, MLOps, DevSecOps" />
+        <meta name="description" content="Leading provider of micro SaaS products, AI services, and IT solutions. 350+ innovative services including quantum computing, AI automation, blockchain, edge computing, and enterprise technology solutions. Transform your business with cutting-edge technology." />
+        <meta name="keywords" content="micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity, quantum computing, blockchain, edge computing, 5G, IoT, MLOps, DevSecOps, business automation, digital transformation" />
         <link rel="canonical" href={contact.site} />
         <meta property="og:title" content="Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions" />
         <meta property="og:description" content="Leading provider of micro SaaS products, AI services, and IT solutions. 340+ innovative services including quantum computing, AI automation, blockchain, edge computing, and enterprise technology solutions." />
@@ -64,16 +65,10 @@ export default function Home() {
               Innovative Micro SaaS, AI Services & IT Solutions
             </p>
             <p className="text-lg text-slate-400 mb-12 max-w-3xl mx-auto">
-<<<<<<< HEAD
-              We deliver cutting-edge technology solutions with 150+ micro SaaS products, 
-              100+ advanced AI services, and 100+ comprehensive IT solutions. From cloud optimization 
-              to AI automation, quantum computing to blockchain solutions, we help businesses scale 
-              efficiently and securely in the digital age.
-=======
               We deliver cutting-edge technology solutions with 150+ innovative micro SaaS products, 
-              90+ advanced AI services, and 100+ comprehensive IT solutions. From quantum computing 
-              to AI automation, we help businesses scale efficiently and securely with next-generation technology.
->>>>>>> 72143897074 (feat: Add 30+ new innovative services across micro SaaS, AI, and IT categories)
+              100+ advanced AI services, and 100+ comprehensive IT solutions. From quantum computing 
+              to AI automation, cloud optimization to blockchain solutions, we help businesses scale 
+              efficiently and securely with next-generation technology.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
@@ -94,11 +89,7 @@ export default function Home() {
                 <p className="text-slate-300">Micro SaaS Products</p>
               </div>
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
-<<<<<<< HEAD
                 <h3 className="text-2xl font-bold text-purple-400 mb-2">100+</h3>
-=======
-                <h3 className="text-2xl font-bold text-purple-400 mb-2">90+</h3>
->>>>>>> 72143897074 (feat: Add 30+ new innovative services across micro SaaS, AI, and IT categories)
                 <p className="text-slate-300">AI Services</p>
               </div>
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">

@@ -3,30 +3,44 @@
   "@type": "Organization",
   "name": "Zion Tech Group",
   "url": "https://ziontechgroup.com",
-  "logo": "https://ziontechgroup.com/logo.png",
-  "description": "Leading provider of AI-powered IT services, cybersecurity, cloud solutions, and digital transformation.",
+  "logo": "https://ziontechgroup.com/favicon.svg",
+  "description": "Leading provider of micro SaaS products, AI services, and IT solutions",
   "address": {
     "@type": "PostalAddress",
-    "addressCountry": "US";
-},
+    "streetAddress": "364 E Main St STE 1008",
+    "addressLocality": "Middletown",
+    "addressRegion": "DE",
+    "postalCode": "19709",
+    "addressCountry": "US"
+  },
   "contactPoint": {
     "@type": "ContactPoint",
-    "telephone": "+1-XXX-XXX-XXXX",
+    "telephone": "+1-302-464-0950",
     "contactType": "customer service",
-    "availableLanguage": "English";
-},
+    "email": "kleber@ziontechgroup.com"
+  },
   "sameAs": [
-    "https://linkedin.com/company/zion-tech-group",
-    "https://twitter.com/ziontechgroup"
+    "https://ziontechgroup.com"
   ],
-  "foundingDate": "2020",
-  "numberOfEmployees": "50-100",
-  "industry": "Information Technology",
-  "services": [
-    "AI Development",
-    "Cybersecurity",
-    "Cloud Solutions",
-    "Digital Transformation",
-    "IT Consulting"
-  ]
+  "offers": {
+    "@type": "AggregateOffer",
+    "offerCount": "350+",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Micro SaaS Products",
+        "description": "150+ innovative micro SaaS solutions"
+      },
+      {
+        "@type": "Offer",
+        "name": "AI Services",
+        "description": "100+ advanced AI and machine learning services"
+      },
+      {
+        "@type": "Offer",
+        "name": "IT Solutions",
+        "description": "100+ comprehensive IT and technology solutions"
+      }
+    ]
+  }
 }
