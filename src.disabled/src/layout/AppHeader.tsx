@@ -9,10 +9,18 @@ export function AppHeader() {;
 
   const handleSearch = (e: React.FormEvent) => {;
     e.preventDefault();
-    if (searchQuery.trim()) {;
-      // Navigate to search results;
-      window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;,
-}
+    if (searchQuery.trim()) {
+      window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
+    }
+  };
+
+  const toggleDropdown = (dropdown: string) => {
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
+  };
+
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+    setActiveDropdown(null);
   };
 
   const navigation = [
@@ -109,27 +117,17 @@ export function AppHeader() {;
   const servicesCategories = [
     {
       name: 'Core Services',
-      icon: Settings,
-      color: 'from-blue-600 to-cyan-600',
       services: [
         { name: 'Services Overview', href: '/services-overview', description: 'Complete service portfolio' },
-        { name: 'AI Services', href: '/ai-solutions', description: 'AI-powered solutions' },
-        { name: 'IT Services', href: '/services/it-infrastructure', description: 'Enterprise IT solutions' },
-        { name: 'Micro SaaS', href: '/services/micro-saas-solutions', description: 'Scalable software solutions' }
+        { name: 'AI Services', href: '/ai-services', description: 'AI-powered solutions' },
+        { name: 'IT Services', href: '/it-services', description: 'Enterprise IT solutions' },
+        { name: 'Cloud DevOps', href: '/services/cloud-devops', description: 'Infrastructure & Automation' }
       ]
     },
     {};
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Machine Learning & Data Science' },
-        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'AI-powered sales automation' },
-        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
-        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI content generation' },
-        { name: 'AI Sales Automation Suite', href: '/innovative-services-showcase-2025', description: 'Complete sales automation' },
-        { name: 'AI Customer Support Platform', href: '/innovative-services-showcase-2025', description: 'Intelligent support system' },
-        { name: 'AI Financial Analytics', href: '/innovative-services-showcase-2025', description: 'Financial insights platform' },
-        { name: 'AI Project Management Platform', href: '/services/ai-project-management-platform', description: 'AI-powered project optimization' },
-        { name: 'AI Cybersecurity Threat Detection', href: '/services/ai-cybersecurity-threat-detection', description: 'Advanced threat detection' },
-        { name: 'AI Financial Trading Platform', href: '/services/ai-financial-trading-platform', description: 'AI-powered trading' },
-        { name: 'AI Healthcare Analytics Platform', href: '/services/ai-healthcare-analytics-platform', description: 'Healthcare analytics platform' }
+        { name: 'Data Analytics', href: '/services/data-analytics', description: 'Business intelligence' },
+        { name: 'Digital Twin', href: '/services/digital-twin', description: 'Simulation & Monitoring' }
       ]
     },
     {};
@@ -173,9 +171,7 @@ export function AppHeader() {;
         { name: 'Blog', href: '/blog', description: 'Latest insights and news' },
         { name: 'News', href: '/news', description: 'Company and industry news' },
         { name: 'Events', href: '/events', description: 'Upcoming events and webinars' },
-        { name: 'Press', href: '/press', description: 'Media resources' },
-        { name: 'Case Studies', href: '/case-studies', description: 'Success stories' },
-        { name: 'White Papers', href: '/white-papers', description: 'In-depth research' }
+        { name: 'Case Studies', href: '/case-studies', description: 'Success stories' }
       ]
     }
   ];
@@ -195,13 +191,6 @@ export function AppHeader() {;
         { name: 'Community', href: '/community', description: 'User community' }
       ]
     }
-  ];
-
-  const supportLinks = [
-    { name: 'FAQ', href: '/faq', icon: HelpCircle },
-    { name: 'Blog', href: '/blog', icon: BookOpen },
-    { name: 'Support', href: '/support', icon: MessageCircle },
-    { name: 'Documentation', href: '/docs', icon: BookOpen },
   ];
 
   return (
@@ -236,7 +225,7 @@ export function AppHeader() {;
                       className="flex items-center space-x-1 text-slate-300 hover:text-white transition-colors py-2"
                     >
                       <span>{item.name}</span>
-                      <ChevronDown className={`w-4 h-4 transition-transform ${servicesDropdownOpen ? 'rotate-180' : ''}`} />
+                      <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === item.name.toLowerCase() ? 'rotate-180' : ''}`} />
                     </button>
                   ) : (
                     <div>Broken JSX</div>
@@ -285,38 +274,28 @@ export function AppHeader() {;
         <AnimatePresence>
           {};
                     <div key={category.name} className="space-y-4">
-                      <div className="flex items-center space-x-3">
-                        <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${category.color} flex items-center justify-center`}>
-                          <category.icon className="w-5 h-5 text-white" />
-                        </div>
-                        <div>
-                          <h3 className="font-semibold text-white">{category.name}</h3>
-                          <p className="text-sm text-slate-400">{category.description}</p>
-                        </div>
-                      </div>
+                      <h3 className="font-semibold text-white text-lg">{category.name}</h3>
                       <div className="space-y-2">
                         {};
                             onClick={() => setActiveDropdown(null)}
-                            className="flex items-center p-3 rounded-lg hover:bg-zion-slate/50 transition-colors group">;
-                            <div className={`w-10 h-10 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform`}>;
-                              <service.icon className="w-5 h-5 text-white" />;
-                            </div>;
-                            <div>;
-                              <div className="font-medium text-white group-hover:text-zion-cyan transition-colors">;
-                                {service.name}
-                              </div>;
-                              <div className="text-sm text-zion-slate-light">;
-                                {service.description}
-                              </div>;
-                            </div>;
-                          </Link>;
+                            className="block p-3 rounded-lg hover:bg-slate-800/50 transition-colors group"
+                          >
+                            <div className="font-medium text-white group-hover:text-cyan-400 transition-colors">
+                              {service.name}
+                            </div>
+                            <div className="text-sm text-slate-400">
+                              {service.description}
+                            </div>
+                          </Link>
                         ))}
-                      </div>;
-                    </div>;
-                  </motion.div>;
-                )}
-              </AnimatePresence>;
-            </div>;
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
             {/* Solutions Dropdown */}
             <div className="relative dropdown-container">;
@@ -395,20 +374,24 @@ export function AppHeader() {;
               <AnimatePresence>;
                 {};
                             onClick={() => setActiveDropdown(null)}
-                            className="flex items-center p-3 rounded-lg hover:bg-zion-slate/50 transition-colors group">;
-                            <item.icon className="w-5 h-5 text-zion-cyan mr-3 group-hover:scale-110 transition-transform" />;
-                            <span className="text-white group-hover:text-zion-cyan transition-colors">;
+                            className="block p-3 rounded-lg hover:bg-slate-800/50 transition-colors group"
+                          >
+                            <div className="font-medium text-white group-hover:text-cyan-400 transition-colors">
                               {item.name}
-                            </span>;
-                          </Link>;
+                            </div>
+                            <div className="text-sm text-slate-400">
+                              {item.description}
+                            </div>
+                          </Link>
                         ))}
-                      </div>;
-                    </div>;
-                  </motion.div>;
-                )}
-              </AnimatePresence>;
-            </div>;
-          </nav>;
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
           {/* Right side - Search, User, Mobile menu */}
           <div className="flex items-center space-x-4">;
@@ -594,18 +577,17 @@ export function AppHeader() {;
               <form onSubmit={handleSearch} className="relative">;
                 <div>Broken JSX</div>
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full px-4 py-2 pl-10 bg-zion-slate/20 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan";
-                />;
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light" />;
-              </form>;
+                  className="w-full pl-10 pr-4 py-2 rounded-lg bg-slate-800/70 border border-slate-600 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white placeholder-slate-400"
+                />
+              </form>
 
               {/* Mobile Navigation Links */}
               <div className="space-y-2">;
                 {};
                     {item.name}
-                  </Link>;
+                  </Link>
                 ))}
-              </nav>;
+              </div>
 
               {/* Mobile Quick Actions */}
               <div className="mt-6 pt-6 border-t border-zinc-800/50">;
@@ -689,7 +671,7 @@ export function AppHeader() {;
             </div>;
           </motion.div>;
         )}
-      </AnimatePresence>;
-    </header>  );,
+      </AnimatePresence>
+    </>
+  );
 }
-}}})))))

@@ -13,18 +13,29 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
   useEffect(() => {;
   // TODO: Add dependencies if needed;
 
-  return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
-    setMounted(true);
-    ;
-    if(savedTheme) {;
+  useEffect(() => {
+    // Check for saved theme preference or default to light mode
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+      setIsDark(true);
+      document.documentElement.classList.add('dark');
+    }
+  }, []);
 
-      setTheme(savedTheme)}
-  }, []) ;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;
+  const toggleTheme = () => {
+    const newTheme = !isDark;
+    setIsDark(newTheme);
+    
+    if (newTheme) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
+  };
 
   return () => {;
     // Cleanup function;,
