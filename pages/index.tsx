@@ -57,18 +57,22 @@ const Home = memo(() => {
       href: '/ai-services'
     },
     {
-
       title: 'IT Services',
       description: 'Comprehensive IT infrastructure and cloud solutions',
       icon: Server,
       href: '/it-services'
     },
     {
-
       title: 'Micro SaaS',
       description: 'Custom software-as-a-service applications',
       icon: Smartphone,
       href: '/micro-saas'
+    },
+    {
+      title: 'Revolutionary Services 2025',
+      description: 'Latest innovative technology solutions',
+      icon: Globe,
+      href: '/revolutionary-services-2025'
     },
     {
       title: 'All Services',
@@ -138,7 +142,7 @@ const Home = memo(() => {
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">Comprehensive technology solutions designed to drive your business forward</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
                 <div key={index} className="bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow">
                   <div className="p-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 w-fit mx-auto mb-6">
@@ -232,7 +236,8 @@ const Home = memo(() => {
                 <li><Link href="/ai-services">AI Services</Link></li>
                 <li><Link href="/it-services">IT Services</Link></li>
                 <li><Link href="/micro-saas">Micro SaaS</Link></li>
-                <li><Link href="/new-services-2025">New Services 2025</Link></li>
+                <li><Link href="/revolutionary-services-2025">Revolutionary Services 2025</Link></li>
+                <li><Link href="/comprehensive-services">All Services</Link></li>
               </ul>
             </div>
             <div>
