@@ -19,6 +19,7 @@ export default [
         },
       },
       globals: {
+<<<<<<< HEAD
         // Browser globals
         window: 'readonly',
         document: 'readonly',
@@ -34,12 +35,20 @@ export default [
         location: 'readonly',
         history: 'readonly',
         // DOM types
+=======
+        window: 'readonly',
+        document: 'readonly',
+        localStorage: 'readonly',
+        console: 'readonly',
+        process: 'readonly',
+>>>>>>> cursor/analyze-improve-and-deploy-application-ab82
         HTMLInputElement: 'readonly',
         HTMLTextAreaElement: 'readonly',
         HTMLSelectElement: 'readonly',
         HTMLDivElement: 'readonly',
         MouseEvent: 'readonly',
         Node: 'readonly',
+<<<<<<< HEAD
         PerformanceObserver: 'readonly',
         // Node.js globals
         process: 'readonly',
@@ -49,6 +58,10 @@ export default [
         global: 'readonly',
         // React globals
         React: 'readonly',
+=======
+        setTimeout: 'readonly',
+        clearTimeout: 'readonly',
+>>>>>>> cursor/analyze-improve-and-deploy-application-ab82
       },
     },
     plugins: {

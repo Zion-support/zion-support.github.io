@@ -1,17 +1,31 @@
 {
+<<<<<<< HEAD
   "timestamp": "2025-09-04T01:39:40.369Z",
+=======
+<<<<<<< HEAD
+  "timestamp": "2025-09-03T20:36:49.970Z",
+>>>>>>> cursor/analyze-improve-and-deploy-application-ab82
   "bundleSize": {
     ".next": {
       "size": 26960383,
       "sizeMB": "25.71"
     },
     "node_modules": {
+<<<<<<< HEAD
       "size": 822948864,
       "sizeMB": "784.83"
     }
   },
   "fileCounts": {
     ".tsx": 26,
+=======
+      "size": 0,
+      "sizeMB": "0.00"
+    }
+  },
+  "fileCounts": {
+    ".tsx": 25,
+>>>>>>> cursor/analyze-improve-and-deploy-application-ab82
     ".ts": 0,
     ".jsx": 0,
     ".js": 0,
