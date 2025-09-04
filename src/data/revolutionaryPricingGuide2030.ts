@@ -11,8 +11,7 @@ export interface PricingTier {
   limitations: string[];
   recommendedFor: string[];
   savings?: number;
-  popular?: boolean;
-}
+  popular?: boolean}
 
 export interface EnterprisePricing {
   id: string;
@@ -25,8 +24,7 @@ export interface EnterprisePricing {
   contactInfo: {
     phone: string;
     email: string;
-    website: string;
-  };
+    website: string};
 
 export interface ServicePricing {
   serviceId: string;
@@ -37,9 +35,7 @@ export interface ServicePricing {
   marketComparison: {
     competitors: string[];
     ourAdvantage: string;
-    priceDifference: string;
-  };
-}
+    priceDifference: string}}
 
 // Zion Tech Group Contact Information
 const zionContact = {
@@ -486,4 +482,5 @@ export const allRevolutionaryPricing2030 = {
   itServices: revolutionaryITServicesPricing,
   aiServices: revolutionaryAIServicesPricing,
   recommendations: pricingRecommendations
-};
+};';
+';';

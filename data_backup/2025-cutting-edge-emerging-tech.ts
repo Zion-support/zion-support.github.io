@@ -424,4 +424,4 @@ integrations: [
   'Transportation Laws',
   'AI Safety Guidelines']
 
-];}}}}}}];
+]}}}}}}];

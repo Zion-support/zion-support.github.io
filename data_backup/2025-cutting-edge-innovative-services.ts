@@ -767,5 +767,4 @@ export const getPopularServices2025 = () =>
 export const getServicesByTechnology = (technology: string) => {
 return cuttingEdgeInnovativeServices2025.filter((s) =>
     s.technology.some(t => t.toLowerCase().includes(technology.toLowerCase()))
-  );
-};}}
+  )}}}

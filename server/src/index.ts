@@ -52,8 +52,7 @@ app.use('/api/health', (_req, res) => {
     timestamp: new Date().toISOString(),
     environment: NODE_ENV,
     uptime: process.uptime()
-  });
-});
+  })});
 
 // Mount API routes
 app.use('/api', apiRoutes);
@@ -65,9 +64,7 @@ if (NODE_ENV === 'production') {
 
   // Handle client-side routing
   app.get('*', (_req, res) => {
-    res.sendFile(path.join(frontendPath, 'index.html'));
-  });
-}
+    res.sendFile(path.join(frontendPath, 'index.html'))})}
 
 // Error handling middleware
 app.use((err: Error, _req: express.Request, res: express.Response, _next: express.NextFunction) => {
@@ -75,17 +72,14 @@ app.use((err: Error, _req: express.Request, res: express.Response, _next: expres
   res.status(500).json({
     error: 'Something went wrong!',
     message: NODE_ENV === 'development' ? err.message : 'Internal server error'
-  });
-});
+  })});
 
 // 404 handler
 app.use('*', (_req, res) => {
-  res.status(404).json({ error: 'Route not found' });
-});
+  res.status(404).json({ error: 'Route not found' })});
 
 app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
   console.log(`🌍 Environment: ${NODE_ENV}`);
   console.log(`📱 Frontend: http://localhost:3000`);
-  console.log(`🔧 Backend API: http://localhost:${PORT}/api`);
-});
+  console.log(`🔧 Backend API: http://localhost:${PORT}/api`)});

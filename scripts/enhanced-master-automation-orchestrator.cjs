@@ -64,27 +64,21 @@ function log(level, message, data = null) {
   const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`;
   
   if (level === 'error') {
-    console.error(logMessage);
-  } else if (level === 'warn') {
-    console.warn(logMessage);
-  } else {
-    console.log(logMessage);
-  }
+    console.error(logMessage)} else if (level === 'warn') {
+    console.warn(logMessage)} else {
+    console.log(logMessage)}
   
   if (data && config.logLevel === 'debug') {
-    console.log(JSON.stringify(data, null, 2));
-  }
+    console.log(JSON.stringify(data, null, 2))}
 }
 
 function createCacheDir() {
   if (config.enableCaching && !fs.existsSync(config.cacheDir)) {
-    fs.mkdirSync(config.cacheDir, { recursive: true });
-  }
+    fs.mkdirSync(config.cacheDir, { recursive: true })}
 }
 
 function getCacheKey(taskName, command) {
-  return `${taskName}-${Buffer.from(command).toString('base64').substring(0, 16)}`;
-}
+  return `${taskName}-${Buffer.from(command).toString('base64').substring(0, 16)}`}
 
 function loadCache() {
   if (!config.enableCaching) return {};
@@ -92,23 +86,18 @@ function loadCache() {
   try {
     const cacheFile = path.join(config.cacheDir, 'task-cache.json');
     if (fs.existsSync(cacheFile)) {
-      return JSON.parse(fs.readFileSync(cacheFile, 'utf8'));
-    }
+      return JSON.parse(fs.readFileSync(cacheFile, 'utf8'))}
   } catch (error) {
-    log('warn', 'Failed to load cache', error.message);
-  }
-  return {};
-}
+    log('warn', 'Failed to load cache', error.message)}
+  return {}}
 
 function saveCache() {
   if (!config.enableCaching) return;
   
   try {
     const cacheFile = path.join(config.cacheDir, 'task-cache.json');
-    fs.writeFileSync(cacheFile, JSON.stringify(masterReport.cache, null, 2));
-  } catch (error) {
-    log('warn', 'Failed to save cache', error.message);
-  }
+    fs.writeFileSync(cacheFile, JSON.stringify(masterReport.cache, null, 2))} catch (error) {
+    log('warn', 'Failed to save cache', error.message)}
 }
 
 // Enhanced task execution with retry logic and parallel processing
@@ -122,8 +111,7 @@ async function runCommand(name, command, phase, critical = false, priority = 0, 
     if (Date.now() - cached.timestamp < 300000) { // 5 minutes cache
       log('info', `Using cached result for ${name}`);
       masterReport.summary.skipped++;
-      return { success: true, output: cached.output, duration: 0, cached: true };
-    }
+      return { success: true, output: cached.output, duration: 0, cached: true }}
   }
   
   const task = {
@@ -153,12 +141,10 @@ async function runCommand(name, command, phase, critical = false, priority = 0, 
     let errorOutput = '';
     
     child.stdout.on('data', (data) => {
-      output += data.toString();
-    });
+      output += data.toString()});
     
     child.stderr.on('data', (data) => {
-      errorOutput += data.toString();
-    });
+      errorOutput += data.toString()});
     
     const result = await new Promise((resolve, reject) => {
       child.on('close', (code) => {
@@ -176,24 +162,20 @@ async function runCommand(name, command, phase, critical = false, priority = 0, 
               timestamp: Date.now(),
               output: task.output,
               duration
-            };
-          }
+            }}
           
           masterReport.summary.successful++;
           log('info', `${name} completed successfully (${duration}ms)`);
-          resolve({ success: true, output: task.output, duration, taskId });
-        } else {
+          resolve({ success: true, output: task.output, duration, taskId })} else {
           task.status = 'failed';
           task.duration = duration;
           task.error = errorOutput || `Process exited with code ${code}`;
           
           if (critical) {
             masterReport.summary.failed++;
-            log('error', `${name} failed (CRITICAL) (${duration}ms)`);
-          } else {
+            log('error', `${name} failed (CRITICAL) (${duration}ms)`)} else {
             masterReport.summary.warnings++;
-            log('warn', `${name} failed (non-critical) (${duration}ms)`);
-          }
+            log('warn', `${name} failed (non-critical) (${duration}ms)`)}
           
           masterReport.errors.push({
             task: name,
@@ -201,8 +183,7 @@ async function runCommand(name, command, phase, critical = false, priority = 0, 
             timestamp: new Date().toISOString()
           });
           
-          resolve({ success: false, error: task.error, duration, taskId });
-        }
+          resolve({ success: false, error: task.error, duration, taskId })}
       });
       
       child.on('error', (error) => {
@@ -222,16 +203,12 @@ async function runCommand(name, command, phase, critical = false, priority = 0, 
           timestamp: new Date().toISOString()
         });
         
-        resolve({ success: false, error: error.message, duration, taskId });
-      });
-    });
+        resolve({ success: false, error: error.message, duration, taskId })})});
     
     masterReport.summary.totalTasks++;
     masterReport.phases.push(task);
     
-    return result;
-    
-  } catch (error) {
+    return result} catch (error) {
     const endTime = Date.now();
     const duration = endTime - startTime;
     
@@ -251,8 +228,7 @@ async function runCommand(name, command, phase, critical = false, priority = 0, 
     masterReport.summary.totalTasks++;
     masterReport.phases.push(task);
     
-    return { success: false, error: error.message, duration, taskId };
-  }
+    return { success: false, error: error.message, duration, taskId }}
 }
 
 // Enhanced phase execution with parallel processing
@@ -276,21 +252,18 @@ async function executePhase(phaseName, tasks, parallel = false) {
     phase.tasks = results.map((result, index) => ({
       ...tasks[index],
       result: result.status === 'fulfilled' ? result.value : { success: false, error: result.reason }
-    }));
-  } else {
+    }))} else {
     // Execute tasks sequentially
     for (const task of tasks) {
       const result = await runCommand(task.name, task.command, phaseName, task.critical, task.priority);
-      phase.tasks.push({ ...task, result });
-    }
+      phase.tasks.push({ ...task, result })}
   }
   
   phase.endTime = new Date().toISOString();
   masterReport.phases.push(phase);
   
   log('info', `Completed phase: ${phaseName}`);
-  return phase;
-}
+  return phase}
 
 // Enhanced performance monitoring
 function calculatePerformanceScore() {
@@ -305,8 +278,7 @@ function calculatePerformanceScore() {
   const failurePenalty = (failed / totalTasks) * 30;
   const warningPenalty = (warnings / totalTasks) * 10;
   
-  return Math.max(0, Math.min(100, successRate - failurePenalty - warningPenalty));
-}
+  return Math.max(0, Math.min(100, successRate - failurePenalty - warningPenalty))}
 
 // Enhanced recommendations engine
 function generateRecommendations() {
@@ -321,8 +293,7 @@ function generateRecommendations() {
       priority: 'high',
       message: 'Success rate is below 90% - review and optimize automation scripts',
       action: 'Analyze failed tasks and improve error handling'
-    });
-  }
+    })}
   
   if (failed > 0) {
     recommendations.push({
@@ -330,8 +301,7 @@ function generateRecommendations() {
       priority: 'high',
       message: `${failed} critical tasks failed - address immediately`,
       action: 'Check error logs and fix underlying issues'
-    });
-  }
+    })}
   
   if (warnings > 0) {
     recommendations.push({
@@ -339,8 +309,7 @@ function generateRecommendations() {
       priority: 'medium',
       message: `${warnings} tasks completed with warnings`,
       action: 'Review warning messages and improve task reliability'
-    });
-  }
+    })}
   
   // System recommendations
   if (masterReport.systemInfo.memory < 4 * 1024 * 1024 * 1024) { // Less than 4GB
@@ -349,8 +318,7 @@ function generateRecommendations() {
       priority: 'medium',
       message: 'System memory is limited - consider upgrading',
       action: 'Monitor memory usage and optimize resource-intensive tasks'
-    });
-  }
+    })}
   
   // Automation recommendations
   recommendations.push({
@@ -374,8 +342,7 @@ function generateRecommendations() {
     action: 'Schedule automated security scans and dependency updates'
   });
   
-  return recommendations;
-}
+  return recommendations}
 
 // Main execution
 async function main() {
@@ -462,9 +429,7 @@ async function main() {
       log('info', 'Recommendations:');
       masterReport.recommendations.forEach(rec => {
         log('info', `- [${rec.priority.toUpperCase()}] ${rec.message}`);
-        log('info', `  Action: ${rec.action}`);
-      });
-    }
+        log('info', `  Action: ${rec.action}`)})}
     
     // Save comprehensive report
     const reportPath = path.join(process.cwd(), `enhanced-master-automation-report-${masterReport.sessionId}.json`);
@@ -475,19 +440,15 @@ async function main() {
     // Determine exit status
     if (masterReport.summary.failed > 0) {
       log('error', 'Enhanced automation completed with critical failures');
-      process.exit(1);
-    } else if (masterReport.summary.warnings > 0) {
+      process.exit(1)} else if (masterReport.summary.warnings > 0) {
       log('warn', 'Enhanced automation completed with warnings');
-      process.exit(0);
-    } else {
+      process.exit(0)} else {
       log('info', 'Enhanced automation completed successfully!');
-      process.exit(0);
-    }
+      process.exit(0)}
     
   } catch (error) {
     log('error', 'Fatal error in enhanced automation orchestrator', error.message);
-    process.exit(1);
-  }
+    process.exit(1)}
 }
 
 // Run the enhanced orchestrator

@@ -8,8 +8,7 @@ describe('PerformanceOptimizerdynamic', () => {
     render(<PerformanceOptimizerdynamic />);
     expect(
       screen.getByTestId('performanceoptimizer.dynamic')
-    ).toBeInTheDocument();
-  });
+    ).toBeInTheDocument()});
 
   test('displays correct content', () => {
     render(<PerformanceOptimizerdynamic />);
@@ -24,5 +23,4 @@ describe('PerformanceOptimizerdynamic', () => {
   test('applies correct styling', () => {
     render(<PerformanceOptimizerdynamic />);
     // Add styling tests if needed
-  });
-});
+  })});

@@ -20,4 +20,4 @@ import React from';react' export: interface AdvancedITService {';
    contactInfo: { phone: string;
    email: string;
    website: string;
-   address: strin,g} technicalSpecs: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors: string[] marketSize: string: growthRate: string: rating: number: reviews: number: customers: numbe,r}  export: const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [''';,;
+   address: strin,g} technicalSpecs: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors: string[] marketSize: string: growthRate: string: rating: number: reviews: number: customers: numbe,r}  export: const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [''',

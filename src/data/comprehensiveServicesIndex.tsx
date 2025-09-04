@@ -26,70 +26,69 @@ export
 :src/data/comprehensiveServicesIndex.tsx
 // Service Categories;
 export 
-  'AI & Analytics','
-  'AI & Customer Experience','
-  'AI & Supply Chain','
-  'AI & Legal Tech','
-  'AI & Healthcare','
-  'AI & Financial Services','
-  'AI & Content Marketing','
-  'Cybersecurity & AI','
-  'Cybersecurity & Quantum','
-  'Blockchain & Supply Chain','
-  'IoT & Edge Computing','
-  'Quantum Computing','
-  'AR/VR & Immersive Tech','
-  '5G & Telecommunications','
-  'Space Technology',;'
-  'Neuromorphic Computing',;'
-  'Digital Twin & Simulation',;'
-  'Synthetic Biology',;'
-  'Brain-Computer Interface',;'
+  'AI & Analytics','';';
+  'AI & Customer Experience','';';
+  'AI & Supply Chain','';';
+  'AI & Legal Tech','';';
+  'AI & Healthcare','';';
+  'AI & Financial Services','';';
+  'AI & Content Marketing','';';
+  'Cybersecurity & AI','';';
+  'Cybersecurity & Quantum','';';
+  'Blockchain & Supply Chain','';';
+  'IoT & Edge Computing','';';
+  'Quantum Computing','';';
+  'AR/VR & Immersive Tech','';';
+  '5G & Telecommunications','';';
+  'Space Technology',;'';';
+  'Neuromorphic Computing',;'';';
+  'Digital Twin & Simulation',;'';';
+  'Synthetic Biology',;'';';
+  'Brain-Computer Interface',;'';';
   'Sustainability & Energy',;'
-// Service Categories
-export 
-  'Neuromorphic Computing',;
-  'Digital Twin & Simulation',;
-  'Synthetic Biology',;
-  'Brain-Computer Interface',;
-  'Sustainability & Energy',;
+// Service Categories';
+export ';';
+  'Neuromorphic Computing',;';';
+  'Digital Twin & Simulation',;';';
+  'Synthetic Biology',;';';
+  'Brain-Computer Interface',;';';
+  'Sustainability & Energy',;';';
   'Autonomous Vehicles & Fleet Management';
 ];
-
-// Innovation Levels
-export   'Cutting-edge',;
-  'Advanced',;
+';
+// Innovation Levels';';
+export   'Cutting-edge',;';';
+  'Advanced',;';';
   'Professional';
 ];
-
-// Support Levels
-export   'enterprise',;
-  'professional',;
+';
+// Support Levels';';
+export   'enterprise',;';';
+  'professional',;';';
   'basic';
 ];
 
-// Pricing Models
-export 
-  'monthly',;
-  'annual',;
+// Pricing Models';
+export ';';
+  'monthly',;';';
+  'annual',;';';
   'one-time',;  'usage-based';
 ];
 
 // Contact Information;
-export 
-export 
-  'monthly',;
-  'annual',;
-  'one-time',;
+export ';
+export ';';
+  'monthly',;';';
+  'annual',;';';
+  'one-time',;';';
   'usage-based';
 ];
 
 // Contact Information
 export 
   ;
-  ;
-  ;
-  ;
+  ;';
+  ;';';
   Middletown DE 19709';
 ;
 
@@ -99,9 +98,6 @@ export
 export 
 // Service Statistics
 export 
-  ;
-  ;
-  ;
   ;
   pricingModels: PRICING_MODEL S.length};
 
@@ -143,6 +139,7 @@ export
     service.description.toLowerCase().includes(searchTerm) ||;
     service.tags.some(tag => tag.toLowerCase().includes(searchTerm)) ||;
     service.category.toLowerCase().includes(searchTerm);
-  )};
-
-export default ALL_COMPREHENSIVE_SERVICES;'"
+  )};';
+';';
+export default ALL_COMPREHENSIVE_SERVICES;'"';
+';';

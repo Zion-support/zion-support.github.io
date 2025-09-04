@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-export const WebsiteAnalyzer: Reac t.FC = () : JSX.Element => {
-export default WebsiteAnalyzer;
+export const WebsiteAnalyzer: Reac t.FC = () : JSX.Element => {';
+export default WebsiteAnalyzer;';';
 import { CheckCircle, import { LinkChecker, LinkInfo, PageInfo } from '../utils / linkChecker';
 
 export default function Page(props: any) {
@@ -17,38 +17,38 @@ export default function Page(props: any) {
         pages: result s,
         brokenLinks,
         missingPages
-      }) } catch(error) {
-
+      }) } catch(error) {';
+';';
       // console.error('Analysis failed:', error)} finally {
 
-      setIsAnalyzing(false);
-      setProgress(100);
+      setIsAnalyzing(false);';
+      setProgress(100);';';
       setCurrentPage('')}
   };
-
-    a.href = url;
+';
+    a.href = url;';';
     a.download = 'zion-website-analysis.json';    document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
-    URL.revokeObjectURL(url)};
-
-      case 'broken':"
-        return <XCircle className="w-4 h-4 text-red-500"   />;
-      case 'missing':"
-        return <AlertTriangle className="w-4 h-4 text-yellow-500"   />;
+    URL.revokeObjectURL(url)};';
+';';
+      case 'broken':"';
+        return <XCircle className="w-4 h-4 text-red-500"   />;';';
+      case 'missing':"';
+        return <AlertTriangle className="w-4 h-4 text-yellow-500"   />;';';
       case 'external':"
         return <ExternalLink className="w-4 h-4 text-blue-500"   />;
       default:"
         return <AlertTriangle className="w-4 h-4 text-gray-500"   />}
-  };
-
-      case 'broken':'
-        return 'text-red-600 bg-red-100';
-      case 'missing':'
-        return 'text-yellow-600 bg-yellow-100';
-      case 'external':'
-        return 'text-blue-600 bg-blue-100';
-      default:'
+  };';
+';';
+      case 'broken':'';';
+        return 'text-red-600 bg-red-100';';';
+      case 'missing':'';';
+        return 'text-yellow-600 bg-yellow-100';';';
+      case 'external':'';';
+        return 'text-blue-600 bg-blue-100';';';
+      default:'';';
         return 'text-gray-600 bg-gray-100'}  };
 
   return ("
@@ -70,8 +70,8 @@ export default function Page(props: any) {
               {isAnalyzing ? ("
                 <RefreshCw className="w-4 h-4 mr-2 animate-spin"   />
               ) : ("
-                <Search className="w-4 h-4 mr-2"   />
-              )}
+                <Search className="w-4 h-4 mr-2"   />';
+              )}';';
               {isAnalyzing ? 'Analyzing...' : 'Start Analysis'}            </button>
             {analysisResult && (
               <button
@@ -100,9 +100,9 @@ export default function Page(props: any) {
                 Analyzing: <span className="font-mono">{currentPage}</span>
               </p>
             )}
-          </div>
-        )}
-
+              </div>
+  );
+}
         {analysisResult && ("
           <div className="space-y-6">
             {/* Summary Cards */}"
@@ -165,8 +165,9 @@ export default function Page(props: any) {
                       </span>
                     </div>) ) }
                 </div>
-              </div>) }
-
+                  </div>
+  );
+}
             {/* Missing Pages */}
             {analysisResult.missingPages.length > 0 && ("
               <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">"
@@ -184,8 +185,9 @@ export default function Page(props: any) {
                       </span>
                     </div>) ) }
                 </div>
-              </div>) }
-
+                  </div>
+  );
+}
             {/* Page Analysis */}"
             <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">"
               <h3 className="text-lg font-semibold text-gray-900 mb-3 flex items-center">"
@@ -210,15 +212,18 @@ export default function Page(props: any) {
                         {page.links.length > 6 && ("
                           <p className="text-xs text-gray-500">... and {page.links.length-6} more</p>
                         )}
-                      </div>
-                    )}
+                          </div>
+  );
+}
                   </div>
                 ))}
               </div>
             </div>
-          </div>) }
-      </div>
-    </div>) };
+              </div>
+  );
+}
+      </div>';
+    </div>) };';';
 export default WebsiteAnalyzer;'"`
-
-</div>
+';
+</div>;';;';

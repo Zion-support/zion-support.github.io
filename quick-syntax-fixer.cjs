@@ -6,18 +6,15 @@ const path = require('path');
 class QuickSyntaxFixer {
   constructor() {
     this.projectRoot = process.cwd();
-    this.fixedFiles = [];
-  }
+    this.fixedFiles = []}
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
+    console.log(`[${new Date().toISOString()}] ${message}`)}
 
   fixFile(filePath) {
     try {
       if (!fs.existsSync(filePath)) {
-        return false;
-      }
+        return false}
 
       let content = fs.readFileSync(filePath, 'utf8');
       let originalContent = content;
@@ -25,12 +22,12 @@ class QuickSyntaxFixer {
       // Fix common syntax patterns
       content = content
         // Fix semicolons after object properties
-        .replace(/(\w+):\s*([^,;]+);,/g, '$1: $2,')
-        .replace(/(\w+):\s*([^,;]+);\s*}/g, '$1: $2\n  }')
-        .replace(/(\w+):\s*([^,;]+);\s*]/g, '$1: $2\n  ]')
+        .replace(/(\w+):\s*([^,]+),/g, '$1: $2,')
+        .replace(/(\w+):\s*([^,]+);\s*}/g, '$1: $2\n  }')
+        .replace(/(\w+):\s*([^,]+);\s*]/g, '$1: $2\n  ]')
         
         // Fix function calls with semicolons
-        .replace(/(\w+\([^)]*\));,/g, '$1,')
+        .replace(/(\w+\([^)]*\)),/g, '$1,')
         .replace(/(\w+\([^)]*\));\s*}/g, '$1\n  }')
         
         // Fix interface and class definitions
@@ -73,14 +70,11 @@ class QuickSyntaxFixer {
         fs.writeFileSync(filePath, content);
         this.fixedFiles.push(filePath);
         this.log(`Fixed: ${filePath}`);
-        return true;
-      }
+        return true}
 
-      return false;
-    } catch (error) {
+      return false} catch (error) {
       this.log(`Error fixing ${filePath}: ${error.message}`);
-      return false;
-    }
+      return false}
   }
 
   async run() {
@@ -101,19 +95,16 @@ class QuickSyntaxFixer {
     let fixedCount = 0;
     for (const file of criticalFiles) {
       if (this.fixFile(file)) {
-        fixedCount++;
-      }
+        fixedCount++}
     }
 
     this.log(`✅ Fixed ${fixedCount} critical files`);
-    return { fixedFiles: this.fixedFiles };
-  }
+    return { fixedFiles: this.fixedFiles }}
 }
 
 // Run the fixer
 if (require.main === module) {
   const fixer = new QuickSyntaxFixer();
-  fixer.run().catch(console.error);
-}
+  fixer.run().catch(console.error)}
 
 module.exports = QuickSyntaxFixer;

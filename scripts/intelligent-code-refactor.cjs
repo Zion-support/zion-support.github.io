@@ -22,8 +22,7 @@ class IntelligentCodeRefactor {
         linesRefactored: 0,
         complexityReduced: 0
       }
-    };
-  }
+    }}
 
   log(message, type = 'INFO') {
     const icons = {
@@ -33,8 +32,7 @@ class IntelligentCodeRefactor {
       'WARNING': '⚠️',
       'PROGRESS': '🔄'
     };
-    console.log(`${icons[type]} ${message}`);
-  }
+    console.log(`${icons[type]} ${message}`)}
 
   async refactorComponents() {
     this.log('🔧 Refactoring components...', 'PROGRESS');
@@ -50,8 +48,7 @@ interface ButtonProps extends Omit<MuiButtonProps, 'variant'> {
   size?: 'small' | 'medium' | 'large';
   loading?: boolean;
   icon?: React.ReactNode;
-  iconPosition?: 'left' | 'right';
-}
+  iconPosition?: 'left' | 'right'}
 
 export const Button: React.FC<ButtonProps> = ({
   variant = 'primary',
@@ -74,8 +71,7 @@ export const Button: React.FC<ButtonProps> = ({
       case 'ghost':
         return { variant: 'text' as const };
       default:
-        return { variant: 'contained' as const };
-    }
+        return { variant: 'contained' as const }}
   };
 
   const getSizeProps = () => {
@@ -85,8 +81,7 @@ export const Button: React.FC<ButtonProps> = ({
       case 'large':
         return { size: 'large' as const };
       default:
-        return { size: 'medium' as const };
-    }
+        return { size: 'medium' as const }}
   };
 
   return (
@@ -100,8 +95,7 @@ export const Button: React.FC<ButtonProps> = ({
     >
       {loading ? 'Loading...' : children}
     </MuiButton>
-  );
-};
+  )};
 
 export default Button;
 `;
@@ -119,8 +113,7 @@ interface FormFieldProps extends Omit<TextFieldProps, 'name'> {
   name: string;
   label: string;
   required?: boolean;
-  validation?: any;
-}
+  validation?: any}
 
 export const FormField: React.FC<FormFieldProps> = ({
   name,
@@ -148,8 +141,7 @@ export const FormField: React.FC<FormFieldProps> = ({
         />
       )}
     />
-  );
-};
+  )};
 
 export default FormField;
 `;
@@ -166,8 +158,7 @@ interface SectionProps {
   children: React.ReactNode;
   backgroundColor?: string;
   padding?: number;
-  maxWidth?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
-}
+  maxWidth?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'}
 
 export const Section: React.FC<SectionProps> = ({
   children,
@@ -187,15 +178,13 @@ export const Section: React.FC<SectionProps> = ({
         {children}
       </Container>
     </Box>
-  );
-};
+  )};
 
 interface CardProps {
   children: React.ReactNode;
   elevation?: number;
   padding?: number;
-  className?: string;
-}
+  className?: string}
 
 export const Card: React.FC<CardProps> = ({
   children,
@@ -211,8 +200,7 @@ export const Card: React.FC<CardProps> = ({
     >
       {children}
     </Paper>
-  );
-};
+  )};
 
 export default { Section, Card };
 `;
@@ -221,11 +209,9 @@ export default { Section, Card };
       this.refactors.push('Layout components created');
       
       this.log('✅ Component refactoring completed', 'SUCCESS');
-      return true;
-    } catch (error) {
+      return true} catch (error) {
       this.log(`❌ Component refactoring failed: ${error.message}`, 'ERROR');
-      return false;
-    }
+      return false}
   }
 
   async refactorHooks() {
@@ -239,8 +225,7 @@ import { useState, useEffect, useCallback } from 'react';
 interface UseApiOptions {
   immediate?: boolean;
   onSuccess?: (data: any) => void;
-  onError?: (error: any) => void;
-}
+  onError?: (error: any) => void}
 
 export const useApi = <T = any>(
   apiFunction: (...args: any[]) => Promise<T>,
@@ -257,24 +242,19 @@ export const useApi = <T = any>(
       const result = await apiFunction(...args);
       setData(result);
       options.onSuccess?.(result);
-      return result;
-    } catch (err) {
+      return result} catch (err) {
       setError(err);
       options.onError?.(err);
-      throw err;
-    } finally {
-      setLoading(false);
-    }
+      throw err} finally {
+      setLoading(false)}
   }, [apiFunction, options]);
 
   useEffect(() => {
     if (options.immediate) {
-      execute();
-    }
+      execute()}
   }, [execute, options.immediate]);
 
-  return { data, loading, error, execute };
-};
+  return { data, loading, error, execute }};
 
 export default useApi;
 `;
@@ -290,25 +270,20 @@ export const useLocalStorage = <T>(key: string, initialValue: T) => {
   const [storedValue, setStoredValue] = useState<T>(() => {
     try {
       const item = window.localStorage.getItem(key);
-      return item ? JSON.parse(item) : initialValue;
-    } catch (error) {
+      return item ? JSON.parse(item) : initialValue} catch (error) {
       console.error(\`Error reading localStorage key "\${key}":\`, error);
-      return initialValue;
-    }
+      return initialValue}
   });
 
   const setValue = (value: T | ((val: T) => T)) => {
     try {
       const valueToStore = value instanceof Function ? value(storedValue) : value;
       setStoredValue(valueToStore);
-      window.localStorage.setItem(key, JSON.stringify(valueToStore));
-    } catch (error) {
-      console.error(\`Error setting localStorage key "\${key}":\`, error);
-    }
+      window.localStorage.setItem(key, JSON.stringify(valueToStore))} catch (error) {
+      console.error(\`Error setting localStorage key "\${key}":\`, error)}
   };
 
-  return [storedValue, setValue] as const;
-};
+  return [storedValue, setValue] as const};
 
 export default useLocalStorage;
 `;
@@ -325,16 +300,12 @@ export const useDebounce = <T>(value: T, delay: number): T => {
 
   useEffect(() => {
     const handler = setTimeout(() => {
-      setDebouncedValue(value);
-    }, delay);
+      setDebouncedValue(value)}, delay);
 
     return () => {
-      clearTimeout(handler);
-    };
-  }, [value, delay]);
+      clearTimeout(handler)}}, [value, delay]);
 
-  return debouncedValue;
-};
+  return debouncedValue};
 
 export default useDebounce;
 `;
@@ -343,11 +314,9 @@ export default useDebounce;
       this.refactors.push('Debounce hook created');
       
       this.log('✅ Hooks refactoring completed', 'SUCCESS');
-      return true;
-    } catch (error) {
+      return true} catch (error) {
       this.log(`❌ Hooks refactoring failed: ${error.message}`, 'ERROR');
-      return false;
-    }
+      return false}
   }
 
   async refactorUtils() {
@@ -359,38 +328,30 @@ export default useDebounce;
 export const validators = {
   email: (email: string): boolean => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-  },
+    return emailRegex.test(email)},
 
   phone: (phone: string): boolean => {
     const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
-    return phoneRegex.test(phone.replace(/\s/g, ''));
-  },
+    return phoneRegex.test(phone.replace(/\s/g, ''))},
 
   url: (url: string): boolean => {
     try {
       new URL(url);
-      return true;
-    } catch {
-      return false;
-    }
+      return true} catch {
+      return false}
   },
 
   required: (value: any): boolean => {
-    return value !== null && value !== undefined && value !== '';
-  },
+    return value !== null && value !== undefined && value !== ''},
 
   minLength: (value: string, min: number): boolean => {
-    return value.length >= min;
-  },
+    return value.length >= min},
 
   maxLength: (value: string, max: number): boolean => {
-    return value.length <= max;
-  },
+    return value.length <= max},
 
   pattern: (value: string, regex: RegExp): boolean => {
-    return regex.test(value);
-  }
+    return regex.test(value)}
 };
 
 export const formatValidationError = (field: string, rule: string, value?: any): string => {
@@ -404,8 +365,7 @@ export const formatValidationError = (field: string, rule: string, value?: any):
     pattern: 'This field format is invalid'
   };
 
-  return messages[rule] || \`\${field} is invalid\`;
-};
+  return messages[rule] || \`\${field} is invalid\`};
 
 export default { validators, formatValidationError };
 `;
@@ -425,8 +385,7 @@ export class ApiClient {
     this.baseURL = baseURL;
     this.defaultHeaders = {
       'Content-Type': 'application/json',
-    };
-  }
+    }}
 
   private async request<T>(
     endpoint: string,
@@ -445,39 +404,32 @@ export class ApiClient {
       const response = await fetch(url, config);
       
       if (!response.ok) {
-        throw new Error(\`HTTP error! status: \${response.status}\`);
-      }
+        throw new Error(\`HTTP error! status: \${response.status}\`)}
 
-      return await response.json();
-    } catch (error) {
+      return await response.json()} catch (error) {
       console.error('API request failed:', error);
-      throw error;
-    }
+      throw error}
   }
 
   async get<T>(endpoint: string, options?: RequestInit): Promise<T> {
-    return this.request<T>(endpoint, { ...options, method: 'GET' });
-  }
+    return this.request<T>(endpoint, { ...options, method: 'GET' })}
 
   async post<T>(endpoint: string, data?: any, options?: RequestInit): Promise<T> {
     return this.request<T>(endpoint, {
       ...options,
       method: 'POST',
       body: data ? JSON.stringify(data) : undefined,
-    });
-  }
+    })}
 
   async put<T>(endpoint: string, data?: any, options?: RequestInit): Promise<T> {
     return this.request<T>(endpoint, {
       ...options,
       method: 'PUT',
       body: data ? JSON.stringify(data) : undefined,
-    });
-  }
+    })}
 
   async delete<T>(endpoint: string, options?: RequestInit): Promise<T> {
-    return this.request<T>(endpoint, { ...options, method: 'DELETE' });
-  }
+    return this.request<T>(endpoint, { ...options, method: 'DELETE' })}
 }
 
 export const apiClient = new ApiClient();
@@ -488,11 +440,9 @@ export default apiClient;
       this.refactors.push('API utilities created');
       
       this.log('✅ Utilities refactoring completed', 'SUCCESS');
-      return true;
-    } catch (error) {
+      return true} catch (error) {
       this.log(`❌ Utilities refactoring failed: ${error.message}`, 'ERROR');
-      return false;
-    }
+      return false}
   }
 
   async generateReport() {
@@ -514,8 +464,7 @@ export default apiClient;
     };
 
     fs.writeFileSync('intelligent-code-refactor-report.json', JSON.stringify(this.report, null, 2));
-    this.log('📊 Intelligent Code Refactor Report Generated', 'SUCCESS');
-  }
+    this.log('📊 Intelligent Code Refactor Report Generated', 'SUCCESS')}
 
   async run() {
     this.log('🚀 Starting Intelligent Code Refactor...', 'PROGRESS');
@@ -530,11 +479,9 @@ export default apiClient;
       this.log('🎉 Intelligent Code Refactor completed successfully!', 'SUCCESS');
       this.log(`📊 Total refactors: ${this.refactors.length}`, 'INFO');
       
-      return true;
-    } catch (error) {
+      return true} catch (error) {
       this.log(`❌ Intelligent Code Refactor failed: ${error.message}`, 'ERROR');
-      return false;
-    }
+      return false}
   }
 }
 
@@ -542,11 +489,8 @@ export default apiClient;
 if (require.main === module) {
   const refactor = new IntelligentCodeRefactor();
   refactor.run().then(success => {
-    process.exit(success ? 0 : 1);
-  }).catch(error => {
+    process.exit(success ? 0 : 1)}).catch(error => {
     console.error('Intelligent Code Refactor failed:', error);
-    process.exit(1);
-  });
-}
+    process.exit(1)})}
 
 module.exports = IntelligentCodeRefactor;

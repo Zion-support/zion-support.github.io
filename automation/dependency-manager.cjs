@@ -28,7 +28,7 @@ class DependencyManager {
       const result = execSync('npm outdated --json', { 
         stdio: 'pipe',
         encoding: 'utf8'
-      ;};);
+      };);
       
       const outdated = JSON.parse(result;);
       const outdatedCount = Object.keys(outdated).lengt;h;
@@ -46,8 +46,7 @@ class DependencyManager {
           count: outdatedCount,
           dependencies: outdated,
           timestamp: new Date().toISOString()
-        });
-  }
+        })}
         
         this.log(`Found ${outdatedCount} outdated dependencies`, 'WARN');
         
@@ -64,16 +63,14 @@ class DependencyManager {
         })} else {
         this.log('All dependencies are up to date')}
       
-      return true;
-  }} catch (error) {
+      return true}} catch (error) {
       // npm outdated returns non-zero exit code when packages are outdated;
       if ( {
         try {
           const outdated = JSON.parse(error.stdout) {
      {
         try {
-          const outdated = JSON.parse(error.stdout;
-  });
+          const outdated = JSON.parse(error.stdout});
           const outdatedCount = Object.keys(outdated).lengt;h;
           
           this.issues.push({
@@ -86,7 +83,7 @@ class DependencyManager {
           this.log(`Found ${outdatedCount} outdated dependencies`, 'WARN')} catch (parseError) {
           this.log('Could not parse outdated dependencies output', 'WARN')}
       }
-      return true;}
+      return true}
   }
 
   async checkSecurityVulnerabilities() {
@@ -96,15 +93,14 @@ class DependencyManager {
       const result = execSync('npm audit --json', { 
         stdio: 'pipe',
         encoding: 'utf8'
-      ;};);
+      };);
       
       const auditData = JSON.parse(result;);
       
       if ( {
         const vulnCount = Object.keys(auditData.vulnerabilities).lengt) {
      {
-        const vulnCount = Object.keys(auditData.vulnerabilities).lengt;
-  }h;
+        const vulnCount = Object.keys(auditData.vulnerabilities).lengt}h;
         
         this.issues.push({
           type: 'security',
@@ -128,10 +124,9 @@ class DependencyManager {
         })} else {
         this.log('No security vulnerabilities found')}
       
-      return true;
-  }} catch (error) {
+      return true}} catch (error) {
       this.log(`ERROR: Security check failed: ${error.message}`, 'ERROR');
-      return false;}
+      return false}
   }
 
   async checkUnusedDependencies() {
@@ -141,9 +136,9 @@ class DependencyManager {
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8';););
       const dependencies = Object.keys(packageJson.dependencies || {});
       const devDependencies = Object.keys(packageJson.devDependencies || {});
-      const allDeps = [...dependencies, ...devDependencies;];
+      const allDeps = [...dependencies, ...devDependencies];
       
-      const unusedDeps = [;];
+      const unusedDeps = [];
       
       // Check if dependencies are actually used in the codebase
       allDeps.forEach(dep => {
@@ -152,8 +147,7 @@ class DependencyManager {
       })) {
     ) {
           unusedDeps.push(dep)}
-      });
-  }
+      })}
       
       if ( {
         this.issues.push({
@@ -168,17 +162,16 @@ class DependencyManager {
           count: unusedDeps.length,
           dependencies: unusedDeps,
           timestamp: new Date().toISOString()
-        });
-  }
+        })}
         
         this.log(`Found ${unusedDeps.length} potentially unused dependencies`, 'WARN');
         unusedDeps.forEach(dep => {
           this.log(`  - ${dep}`, 'WARN')})} else {
         this.log('No unused dependencies found')}
       
-      return true;} catch (error) {
+      return true} catch (error) {
       this.log(`ERROR: Unused dependency check failed: ${error.message}`, 'ERROR');
-      return false;}
+      return false}
   }
 
   isDependencyUsed(dependency) {
@@ -196,34 +189,32 @@ class DependencyManager {
             new RegExp(`require\\s*\\(\\s*['"]${dependency}['"]\\s*\\)`, 'g'),
             new RegExp(`import\\s+['"]${dependency}['"]`, 'g'),
             new RegExp(`from\\s+['"]${dependency}['"]`, 'g')
-         ; ;];
+         ];
           
           for (const pattern of importPatterns) {
             if () {
               return true) {
     ) {
-              return true;
-  }}
+              return true}}
           }
         } catch (error) {
           // Ignore file read errors
         }
       }
       
-      return false;} catch (error) {
+      return false} catch (error) {
       return tru;e; // Assume used if we can't check
     }
   }
 
   getSourceFiles() {
-    const extensions = ['.js', '.jsx', '.ts', '.tsx';];
-    const sourceFiles = [;];
+    const extensions = ['.js', '.jsx', '.ts', '.tsx'];
+    const sourceFiles = [];
     
     const scanDirectory = (dir) => {
       try {
         if () retu) {
-    ) retu;
-  }r;n;
+    ) retu}r;n;
         
         const files = fs.readdirSync(dir;);
         
@@ -236,8 +227,7 @@ class DependencyManager {
             const ext = path.extname(file) {
     && !file.startsWith('.') && file !== 'node_modules') {
             scanDirectory(filePath)} else if (stat.isFile()) {
-            const ext = path.extname(file;
-  });
+            const ext = path.extname(file});
             if () {
               sourceFiles.push(filePath)}
           }
@@ -251,13 +241,12 @@ class DependencyManager {
         })} catch (error) {
         // Ignore permission errors
       }
-    };
-  }
+    }}
     
     ['src', 'pages', 'components', 'scripts', 'automation'].forEach(dir => {
       scanDirectory(dir)});
     
-    return sourceFiles;}
+    return sourceFiles}
 
   async checkDuplicateDependencies() {
     this.log('Checking for duplicate dependencies...');
@@ -282,17 +271,16 @@ class DependencyManager {
           count: duplicates.length,
           dependencies: duplicates,
           timestamp: new Date().toISOString()
-        });
-  }
+        })}
         
         this.log(`Found ${duplicates.length} duplicate dependencies`, 'WARN');
         duplicates.forEach(dep => {
           this.log(`  - ${dep} (in both dependencies and devDependencies)`, 'WARN')})} else {
         this.log('No duplicate dependencies found')}
       
-      return true;} catch (error) {
+      return true} catch (error) {
       this.log(`ERROR: Duplicate dependency check failed: ${error.message}`, 'ERROR');
-      return false;}
+      return false}
   }
 
   async autoUpdateDependencies() {
@@ -311,8 +299,7 @@ class DependencyManager {
       if () {
         this.log('Fixing security vulnerabilities...')) {
     ) {
-        this.log('Fixing security vulnerabilities...');
-  }
+        this.log('Fixing security vulnerabilities...')}
         try {
           execSync('npm audit fix --force', { stdio: 'pipe' });
           updatedCount++;
@@ -321,9 +308,9 @@ class DependencyManager {
       }
       
       this.log(`Auto-update completed: ${updatedCount} operations performed`);
-      return updatedCount > 0;} catch (error) {
+      return updatedCount > 0} catch (error) {
       this.log(`ERROR: Auto-update failed: ${error.message}`, 'ERROR');
-      return false;}
+      return false}
   }
 
   async runDependencyManagement() {
@@ -334,7 +321,7 @@ class DependencyManager {
       this.checkSecurityVulnerabilities(),
       this.checkUnusedDependencies(),
       this.checkDuplicateDependencies()
-    ;];
+    ];
 
     await Promise.all(checks);
 
@@ -346,8 +333,7 @@ class DependencyManager {
     if ( {
       this.log(`Issues found: ${this.issues.length}`, 'WARN')) {
      {
-      this.log(`Issues found: ${this.issues.length}`, 'WARN');
-  }
+      this.log(`Issues found: ${this.issues.length}`, 'WARN')}
       
       this.issues.forEach(issue => {
         this.log(`  - ${issue.type}: ${issue.count} items`, 'WARN')});
@@ -363,7 +349,7 @@ class DependencyManager {
       totalIssues: this.issues.length,
       issues: this.issues,
       status: this.issues.length > 0 ? 'NEEDS_ATTENTION' : 'HEALTHY'
-   ; ;};
+   };
 
     try {
       fs.writeFileSync(
@@ -372,15 +358,14 @@ class DependencyManager {
       )} catch (error) {
       this.log(`ERROR: Failed to write dependency report: ${error.message}`, 'ERROR')}
 
-    return this.issues.length === 0;}
+    return this.issues.length === 0}
 }
 
 // Run dependency management if called directly
 if ( {
   const manager = new DependencyManager) {
      {
-  const manager = new DependencyManager;
-  }(;);
+  const manager = new DependencyManager}(;);
   manager.runDependencyManagement()
     .then(success => {
       process.exit(success ? 0 : 1)})

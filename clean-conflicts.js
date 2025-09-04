@@ -29,11 +29,8 @@ function cleanMergeConflicts(filePath) {
       .replace(/\n\s*\n\s*\n/g, '\n\n');
     
     fs.writeFileSync(filePath, content, 'utf8');
-    console.log(`Cleaned: ${filePath}`);
-    
-  } catch (error) {
-    console.error(`Error cleaning ${filePath}:`, error.message);
-  }
+    console.log(`Cleaned: ${filePath}`)} catch (error) {
+    console.error(`Error cleaning ${filePath}:`, error.message)}
 }
 
 // Clean specific files
@@ -52,8 +49,7 @@ const filesToClean = [
 
 filesToClean.forEach(file => {
   if (fs.existsSync(file)) {
-    cleanMergeConflicts(file);
-  }
+    cleanMergeConflicts(file)}
 });
 
 console.log('Merge conflict cleanup complete!');

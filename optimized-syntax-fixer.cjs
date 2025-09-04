@@ -6,12 +6,10 @@ const path = require('path');
 class OptimizedSyntaxFixer {
   constructor() {
     this.projectRoot = process.cwd();
-    this.fixedCount = 0;
-  }
+    this.fixedCount = 0}
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
+    console.log(`[${new Date().toISOString()}] ${message}`)}
 
   fixContent(content) {
     // Fix the most critical syntax issues
@@ -26,8 +24,7 @@ class OptimizedSyntaxFixer {
     content = content.replace(/className\s*=\s*['"]\s*;\s*([^'"]*)\s*['"]/g, 'className=\'$1\'');
     content = content.replace(/\s*;\s*;\s*/g, ';');
     
-    return content;
-  }
+    return content}
 
   async fixCriticalFiles() {
     const criticalFiles = [
@@ -49,16 +46,13 @@ class OptimizedSyntaxFixer {
           if (content !== originalContent) {
             fs.writeFileSync(filePath, content, 'utf8');
             this.fixedCount++;
-            this.log(`✅ Fixed: ${file}`);
-          }
+            this.log(`✅ Fixed: ${file}`)}
         } catch (error) {
-          this.log(`❌ Error fixing ${file}: ${error.message}`);
-        }
+          this.log(`❌ Error fixing ${file}: ${error.message}`)}
       }
     }
     
-    this.log(`🎉 Fixed ${this.fixedCount} critical files`);
-  }
+    this.log(`🎉 Fixed ${this.fixedCount} critical files`)}
 }
 
 const fixer = new OptimizedSyntaxFixer();

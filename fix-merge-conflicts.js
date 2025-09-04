@@ -32,12 +32,10 @@ function fixMergeConflicts(filePath) {
       
       // Skip empty lines and duplicate imports
       if (line === '' || line.startsWith('import') && seenImports.has(line)) {
-        continue;
-      }
+        continue}
       
       if (line.startsWith('import')) {
-        seenImports.add(line);
-      }
+        seenImports.add(line)}
       
       // Fix common syntax issues
       const cleanedLine = line
@@ -51,17 +49,13 @@ function fixMergeConflicts(filePath) {
         .trim();
       
       if (cleanedLine) {
-        cleanedLines.push(cleanedLine);
-      }
+        cleanedLines.push(cleanedLine)}
     }
     
     const finalContent = cleanedLines.join('\n');
     fs.writeFileSync(filePath, finalContent, 'utf8');
-    console.log(`Fixed merge conflicts in: ${filePath}`);
-    
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-  }
+    console.log(`Fixed merge conflicts in: ${filePath}`)} catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message)}
 }
 
 function findFilesWithConflicts(dir) {
@@ -75,26 +69,22 @@ function findFilesWithConflicts(dir) {
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath);
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js'))) {
+        traverse(fullPath)} else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js'))) {
         const content = fs.readFileSync(fullPath, 'utf8');
         if (content.includes('<<<<<<< HEAD') || content.includes('>>>>>>> main')) {
-          files.push(fullPath);
-        }
+          files.push(fullPath)}
       }
     }
   }
   
   traverse(dir);
-  return files;
-}
+  return files}
 
 // Find and fix files with merge conflicts
 const conflictedFiles = findFilesWithConflicts('.');
 console.log(`Found ${conflictedFiles.length} files with merge conflicts`);
 
 for (const file of conflictedFiles) {
-  fixMergeConflicts(file);
-}
+  fixMergeConflicts(file)}
 
 console.log('Merge conflict resolution complete!');

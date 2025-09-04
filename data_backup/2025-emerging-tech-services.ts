@@ -4,14 +4,11 @@ const contact = {
   +1 302 464 0950',
   email: 'kleber@ziontechgroup.com,
   address:,
-  364 E Main St STE 1008 Middletown DE 19709',;
+  364 E Main St STE 1008 Middletown DE 19709',
   ;
   ;
   ;
-  ;
-  website: 'https://ziontechgroup.com;
-;
-};
+  website: 'https://ziontechgroup.com};
 export const emergingTechServices2025: MicroSaasService[] = [
   // Quantum Computing Services
   {
@@ -620,14 +617,10 @@ export const getPopularEmergingTechServices = () => {;
 export const getEmergingTechServicesByCategory = (category: string) => {;
   return emergingTechServices2025.filter(service => service.category === category)};
 export const getPopularEmergingTechServices = () => {;
-  return emergingTechServices2025.filter(service => service.popular);
-};
+  return emergingTechServices2025.filter(service => service.popular)};
 export const getEmergingTechServicesByCategory = (category: string) => {;
-  return emergingTechServices2025.filter(service => service.category === category);
-};
+  return emergingTechServices2025.filter(service => service.category === category)};
 export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: number) => {;
   return emergingTechServices2025.filter(service => {;
 const price = parseInt(service.price.replace(/[^0-9]/g, '')) || 0;
-return price >= minPrice && price <= maxPrice;
-  });
-};}
+return price >= minPrice && price <= maxPrice})}}

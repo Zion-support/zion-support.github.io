@@ -29,11 +29,10 @@ class ProjectHealthMonitor {
     }
 
     log(message) {
-        const timestamp = new Date().toISOString(;
-  });
+        const timestamp = new Date().toISOString(});
         const logMessage = `[${timestamp}] ${message}\;n;`;
         fs.appendFileSync(this.logFile, logMessage);
-        console.log(message);}
+        console.log(message)}
 
     checkProjectStructure() {
         this.log('Checking project structure...');
@@ -43,7 +42,7 @@ class ProjectHealthMonitor {
             'next.config.js',
             'tsconfig.json',
             'tailwind.config.js'
-        ;];
+        ];
         
         const optionalFiles = [
             'README.md',
@@ -51,13 +50,13 @@ class ProjectHealthMonitor {
             '.env.example',
             'Dockerfile',
             'docker-compose.yml'
-        ;];
+        ];
         
         const structure = {
             required: {},
             optional: {},
             score: 0
-       ; ;};
+       };
         
         // Check required files
         for (const file of requiredFiles) {
@@ -72,17 +71,15 @@ class ProjectHealthMonitor {
         
         // Check optional files
         for (const file of optionalFiles) {
-            const exists = fs.existsSync(path.join(this.projectRoot, file;
-  }););
+            const exists = fs.existsSync(path.join(this.projectRoot, file}););
             structure.optional[file] = exists;
             if (structure.score += 5}
         
         this.log(`Project structure score: ${structure.score}/100`)) {
     structure.score += 5}
         
-        this.log(`Project structure score: ${structure.score}/100`);
-  }
-        return structure;}
+        this.log(`Project structure score: ${structure.score}/100`)}
+        return structure}
 
     checkCodeQuality() {
         this.log('Checking code quality...');
@@ -173,8 +170,7 @@ class ProjectHealthMonitor {
                         const outdated = JSON.parse(error.stdout) {
      {
                     try {
-                        const outdated = JSON.parse(error.stdout;
-  });
+                        const outdated = JSON.parse(error.stdout});
                         outdatedCount = Object.keys(outdated).length} catch (parseError) {
                         // No outdated packages
                     }
@@ -204,7 +200,7 @@ class ProjectHealthMonitor {
                 cwd: this.projectRoot, 
                 encoding: 'utf8',
                 stdio: 'pipe'
-            ;};);
+            };);
             
             const auditData = JSON.parse(auditResult;);
             const vulnerabilities = auditData.vulnerabilities?.total ||; ;0;
@@ -257,16 +253,16 @@ class ProjectHealthMonitor {
                 security: security
             },
             recommendations: this.generateHealthRecommendations(totalScore, healthStatus)
-       ; ;};
+       };
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log(`Project health report saved to ${this.reportFile}`);
         this.log(`Overall health score: ${totalScore}/100 (${healthStatus})`);
         
-        return report;}
+        return report}
 
     generateHealthRecommendations(score, status) {
-        const recommendations = [;];
+        const recommendations = [];
         
         if ( {
             recommendations.push('Project health needs immediate attention')}
@@ -277,8 +273,7 @@ class ProjectHealthMonitor {
             recommendations.push('Project health needs immediate attention')}
         
         if (status === 'poor' || status === 'fair') {
-            recommendations.push('Focus on improving code quality and fixing build issues');
-  }
+            recommendations.push('Focus on improving code quality and fixing build issues')}
             recommendations.push('Update outdated dependencies');
             recommendations.push('Address security vulnerabilities')}
         
@@ -286,7 +281,7 @@ class ProjectHealthMonitor {
         recommendations.push('Set up continuous integration');
         recommendations.push('Regularly monitor project health');
         
-        return recommendations;}
+        return recommendations}
 
     async run() {
         this.log('Project Health Monitor started');
@@ -294,7 +289,7 @@ class ProjectHealthMonitor {
         try {
             const report = this.generateHealthReport(;);
             this.log('Project Health Monitor completed successfully');
-            return report;} catch (error) {
+            return report} catch (error) {
             this.log(`Project Health Monitor failed: ${error.message}`);
             throw error}
     }
@@ -304,8 +299,7 @@ class ProjectHealthMonitor {
 if ( {
     const monitor = new ProjectHealthMonitor) {
      {
-    const monitor = new ProjectHealthMonitor;
-  }(;);
+    const monitor = new ProjectHealthMonitor}(;);
     monitor.run().catch(console.error)}
 
 module.exports = ProjectHealthMonitor;

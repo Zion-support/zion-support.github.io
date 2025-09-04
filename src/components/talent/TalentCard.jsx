@@ -1,8 +1,8 @@
-import React from 'react';'''
-import {Button} from '@/components/ui/button';'''
-import {Card} from '@/components/ui/card';'''
-import {MapPin, Clock, CheckCircle2} from 'lucide-react';'''
-import {FavoriteButton} from '@/components/FavoriteButton';'''
+import React from 'react';'''';';
+import {Button} from '@/components/ui/button';'''';';
+import {Card} from '@/components/ui/card';'''';';
+import {MapPin, Clock, CheckCircle2} from 'lucide-react';'''';';
+import {FavoriteButton} from '@/components/FavoriteButton';'''';';
 import {useNavigate} from 'react-router-dom';
 export default function Page(props: any) {}
   };
@@ -37,18 +37,20 @@ export default function Page(props: any) {}
                   src={talent.profile_picture_url}"""
                   alt={talent.full_name}""""
                   className="w-full h-full object-cover"""
-                  />"""
-              ) : (""""
-                <div className="w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold">'
+                  />"""';
+              ) : (""""';';
+                <div className="w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold">'';';
                   {talent.full_name?.charAt(0) || 'T'}
-                </div>
-              )}
+                    </div>
+  );
+}
             </div>"""
             {talent.is_verified && (""""
               <div className="absolute -bottom-1 -right-1 bg-zion-blue p-0.5 rounded-full">""""
                 <CheckCircle2 className="w-5 h-5 text-zion-cyan"  />
-              </div>
-            )}
+                  </div>
+  );
+}
           </div>
 """
           {/* Main Info */}""""
@@ -79,8 +81,9 @@ export default function Page(props: any) {}
                 <div className="flex items-center text-zion-slate-light">""""
                   <Clock className="h-4 w-4 mr-1"  />
                   <span>{talent.availability_type}</span>
-                </div>
-              )}
+                    </div>
+  );
+}
             </div>
           </div>
         </div>
@@ -102,8 +105,9 @@ export default function Page(props: any) {}
                 </span>
               )}
             </div>
-          </div>
-        )}
+              </div>
+  );
+}
 """
         {/* Hourly Rate & Actions */}""""
         <div className="mt-5 flex items-center justify-between">
@@ -114,8 +118,9 @@ export default function Page(props: any) {}
                 <span className="text-zion-slate-light font-normal">/hr</span>
               </div>"""
             ) : (""""
-              <div className="text-zion-slate-light">Rate not specified</div>
-            )}
+              <div className="text-zion-slate-light">Rate not specified    </div>
+  );
+}
           </div>"""
 """"
           <div className="flex items-center gap-2">
@@ -135,10 +140,10 @@ export default function Page(props: any) {}
                   className="bg-zion-cyan hover:bg-zion-cyan-dark text-white"""
                 >
                   Book;
-                </Button>
-              </>
-            ) : ('
-              <Button''"""
+                </Button>';
+              </>';';
+            ) : ('';';
+              <Button''"""';';
                 onClick={() => navigate('/login')}""""
                 size="sm""""
                 className="bg-zion-cyan hover:bg-zion-cyan-dark text-white"""
@@ -164,5 +169,5 @@ export {TalentCardComponent};
 export {TalentCardComponent};
 
 export {Page};
-
-</FavoriteButton>
+';
+</FavoriteButton>;';;';

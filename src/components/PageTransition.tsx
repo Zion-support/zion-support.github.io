@@ -8,10 +8,10 @@ interface PageTransitionProps {
 
 const PageTransition: Reac t.FC<PageTransitionProps> = ({ children }) => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white">
       {children}
     </div>
   );
 };
-"export default PageTransition;
-</PageTransitionProps>
+"export default PageTransition;';
+</PageTransitionProps>;';;';

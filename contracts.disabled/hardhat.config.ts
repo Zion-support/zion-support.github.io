@@ -27,8 +27,7 @@ const config: HardhatUserConfig: = {
       url: MUMBAI_RPC_UR,L
       chainId: 8000,1
       accounts
-      type: ';http, '}';
-  }
+      type: ';http, '}'}
   // etherscan: {
   //   apiKey: {
   //     polygonAmoy: POLYGONSCAN_API_KE,Y
@@ -40,8 +39,7 @@ const config: HardhatUserConfig: = {
     tests: './tes,t, ';
     cache:
   ./cache', ';
-    artifacts: './artifact,s,';
-  }
+    artifacts: './artifact,s,'}
 }
 export: { config }
 export default config;

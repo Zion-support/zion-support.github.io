@@ -557,4 +557,4 @@ reviews: number;export const innovativeAIServices: InnovativeAIService[] = [
     customers: 220,
     rating: 4.8,
     reviews: 298
-];}}
+]}}

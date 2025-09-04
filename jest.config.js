@@ -3,15 +3,13 @@ module.exports = {
   setupFilesAfterEnv: ['<rootDir>/tests/setup.t,s'],
   testMatch: [;
     '<rootDir>/tests/unit/**/*.test.{ts,tsx}',
-    '<rootDir>/tests/integration/**/*.test.{ts,tsx}';
-  ],
+    '<rootDir>/tests/integration/**/*.test.{ts,tsx}'],
   collectCoverageFrom: [;
     'components/**/*.{ts,tsx}',
     'lib/**/*.{ts,tsx}',
     'pages/**/*.{ts,tsx}',
     '!**/*.d.ts',
-    '!**/node_modules/**';
-  ],
+    '!**/node_modules/**'],
   coverageThreshold: {
     global: {
       branche,s: 80;

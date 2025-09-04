@@ -429,4 +429,4 @@ integrations: [
   'Security Standards',
   'Quality Assurance Protocols']
 
-];}}}}}}];
+]}}}}}}];

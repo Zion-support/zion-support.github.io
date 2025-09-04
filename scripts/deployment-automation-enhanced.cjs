@@ -5,8 +5,7 @@ const { execSync } = require('child_process');
 
 class DeploymentAutomation {
   constructor() {
-    this.steps = [];
-  }
+    this.steps = []}
 
   async deploy() {
     console.log('🚀 Starting deployment automation...');
@@ -26,25 +25,21 @@ class DeploymentAutomation {
           name: step.name,
           status: 'completed'
         });
-        console.log(`✅ ${step.name} completed`);
-      } catch (error) {
+        console.log(`✅ ${step.name} completed`)} catch (error) {
         this.steps.push({
           name: step.name,
           status: 'failed',
           error: error.message
         });
         console.log(`❌ ${step.name} failed: ${error.message}`);
-        throw error;
-      }
+        throw error}
     }
 
-    console.log('🎉 Deployment automation completed successfully!');
-  }
+    console.log('🎉 Deployment automation completed successfully!')}
 }
 
 if (require.main === module) {
   const deployment = new DeploymentAutomation();
-  deployment.deploy().catch(console.error);
-}
+  deployment.deploy().catch(console.error)}
 
 module.exports = DeploymentAutomation;

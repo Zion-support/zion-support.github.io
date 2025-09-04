@@ -13,8 +13,8 @@ interface ConnectWalletButtonProps {
 const ConnectWalletButton: Reac t.FC<ConnectWalletButtonProps> = ({
   onConnect,
   onDisconnect,
-  isConnected = false,
-  walletAddress,
+  isConnected = false,';
+  walletAddress,';';
   className = ''
 }) => {
   const [isConnecting, setIsConnecting] = useState<any>(false);
@@ -24,11 +24,11 @@ const ConnectWalletButton: Reac t.FC<ConnectWalletButtonProps> = ({
     try {
       // Simulate wallet connection
       await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      if (onConnect) {
+      ';
+      if (onConnect) {';';
         onConnect('metamask'); // Default to MetaMask for demo
-      }
-    } catch (error) {
+      }';
+    } catch (error) {';';
       console.error('Failed to connect wallet:', error);
     } finally {
       setIsConnecting(false);
@@ -48,7 +48,7 @@ const ConnectWalletButton: Reac t.FC<ConnectWalletButtonProps> = ({
 
   if (isConnected && walletAddress) {
     return (
-      <div className={`flex items-center space-x-3 ${className}`}>
+    <div className="min-h-screen bg-white">
         <div className="flex items-center space-x-2 px-3 py-2 bg-green-100 text-green-800 rounded-lg">
           <div className="w-2 h-2 bg-green-500 rounded-full"></div>
           <span className="text-sm font-medium">Connected</span>
@@ -90,5 +90,5 @@ const ConnectWalletButton: Reac t.FC<ConnectWalletButtonProps> = ({
 };
 
 export default ConnectWalletButton;
-</any>
-</ConnectWalletButtonProps>
+</any>';
+</ConnectWalletButtonProps>;';;';

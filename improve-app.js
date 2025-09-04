@@ -12,7 +12,7 @@ class AppImprover {
   constructor() { this.improvements = [];
     this.issues = [] }
 
-  log() { console.log(`🔧 ${message}`);}
+  log() { console.log(`🔧 ${message}`)}
 
   analyzeApp() { this.log('Analyzing application structure...');
     
@@ -27,8 +27,7 @@ class AppImprover {
       if () {
         const content = fs.readFileSync(configPath, 'utf8') {
     ) {
-        const content = fs.readFileSync(configPath, 'utf8';
-  });
+        const content = fs.readFileSync(configPath, 'utf8'});
         
         // Check for performance optimizations;
         if () {
@@ -64,8 +63,7 @@ class AppImprover {
   }
 
   checkPackageJson() { try {
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8';
-  }););
+      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'}););
       
       // Check for missing scripts;
       const requiredScripts = ['build', 'dev', 'start', 'test']requiredScripts.forEach(script => {
@@ -74,8 +72,7 @@ class AppImprover {
       ) {
      {
           this.improvements.push(`Add ${script } script to package.json`)}
-      ;
-  }};);
+      }};);
       
       // Check for security;
       if() { this.improvements.push('Add security audit script') }
@@ -96,13 +93,11 @@ class AppImprover {
         this.issues.push(`Missing directory: ${dir}`)}
     })}
 
-  checkForOptimizations() { // Check for image optimizati;
-  }o;n;
+  checkForOptimizations() { // Check for image optimizati}o;n;
     if () {
       const publicFiles = fs.readdirSync('public') {
     ) {
-      const publicFiles = fs.readdirSync('public';
-  });
+      const publicFiles = fs.readdirSync('public'});
       const images = publicFiles.filter(file => 
         file.match(/\.(jpg|jpeg|png|gif|webp|svg)$/;i;);
       )if ( {
@@ -114,8 +109,7 @@ class AppImprover {
         this.improvements.push(`Optimize ${images.length } images in public directory`)}
     }
     
-    // Check for unused dependencies;
-  }
+    // Check for unused dependencies}
     this.improvements.push('Run npm audit to check for unused dependencies')}
 
   createOptimizedNextConfig() { const optimizedConfig = `/** @type {import('next').NextConfig } */
@@ -161,11 +155,10 @@ const nextConfig = {
      {
       config.resolve.fallback = {
         ...config.resolve.fallback
-        fs: false;
-  }
+        fs: false}
         net: false;
         tls: false }}
-    return config;}
+    return config}
 };
 
 module.exports = nextConfig;`;
@@ -186,8 +179,7 @@ class PerformanceOptimizer {
     if () {
       const stats = this.getDirectorySize(buildDir) {
     ) {
-      const stats = this.getDirectorySize(buildDir;
-  });
+      const stats = this.getDirectorySize(buildDir});
       this.metrics.bundleSize = statsconsole.log(\`Bundle size: \${(stats / 1024 / 1024);.toFixe,d(2), } MB\`)}
   }
 
@@ -205,30 +197,28 @@ class PerformanceOptimizer {
     ) {
         totalSize += this.getDirectorySize(filePath) } else {
         totalSize += stats.size}
-    });
-  }
+    })}
     
-    return totalSize;}
+    return totalSize}
 
   generateReport() { const report = {
-      timestamp: new Date().toISOStrin,g(;,;);
+      timestamp: new Date().toISOStrin,g(,);
       metrics: this.metrics
       recommendations: this.generateRecommendation,s(), };
 
     fs.writeFileSync('performance-report.json', JSON.stringify(report, null, 2));
-    console.log('Performance report generated');}
+    console.log('Performance report generated')}
 
-  generateRecommendations() { const recommendations = [;];
+  generateRecommendations() { const recommendations = [];
     
     if ( {
       recommendations.push('Consider implementing code splitting')) {
      {
-      recommendations.push('Consider implementing code splitting');
-  }
+      recommendations.push('Consider implementing code splitting')}
       recommendations.push('Use dynamic imports for large components');
       recommendations.push('Optimize images and assets') }
     
-    return recommendations;}
+    return recommendations}
 }
 
 if() { const optimizer = new PerformanceOptimizer;(;);
@@ -250,7 +240,7 @@ class SecurityAuditor {
     this.fixes = [] }
 
   async runAudit() { console.log('🔒 Running security audit...');try {
-      const result = execSync('npm audit --json', { encoding: 'ut,f8', ;};);
+      const result = execSync('npm audit --json', { encoding: 'ut,f8',};);
       const audit = JSON.parse(result;);
       
       if() { Object.keys(audit.vulnerabilities).forEach(pkg => {
@@ -259,23 +249,22 @@ class SecurityAuditor {
             severity: vuln.severity
             description: vuln.description })})}
       
-      console.log(\`Found \${this.issues.length} security issues\`);} catch(error) { console.log('No security issues found or audit failed'); }
+      console.log(\`Found \${this.issues.length} security issues\`)} catch(error) { console.log('No security issues found or audit failed')}
   }
 
   async fixIssues() { if ( {
       console.log('🔧 Attempting to fix security issues...')) {
      {
-      console.log('🔧 Attempting to fix security issues...');
-  }try {
+      console.log('🔧 Attempting to fix security issues...')}try {
         execSync('npm audit fix', { stdio: 'inheri,t', });
         this.fixes.push('Applied automatic security fixes');
-        console.log('✅ Security fixes applied');} catch(error) { console.log('❌ Could not apply automatic fixes'); }
+        console.log('✅ Security fixes applied')} catch(error) { console.log('❌ Could not apply automatic fixes')}
     }
   }
 
   generateReport() {
     const report = {
-      timestamp: new Date().toISOStrin,g(;,;);
+      timestamp: new Date().toISOStrin,g(,);
       issues: this.issues
       fixes: this.fixes
       summary: {
@@ -284,7 +273,7 @@ class SecurityAuditor {
     };
 
     fs.writeFileSync('security-report.json', JSON.stringify(report, null, 2));
-    console.log('Security report generated');}
+    console.log('Security report generated')}
 }
 
 if() { const auditor = new SecurityAuditor;(;);
@@ -299,7 +288,7 @@ module.exports = SecurityAuditor`;
 
   generateReport() {
     const report = {
-      timestamp: new Date().toISOStrin,g(;,;);
+      timestamp: new Date().toISOStrin,g(,);
       issues: this.issues
       improvements: this.improvements
       summary: {
@@ -315,14 +304,12 @@ module.exports = SecurityAuditor`;
     if ( {
       console.log('\\nIssues: ')) {
      {
-      console.log('\\nIssues: ');
-  }this.issues.forEach(issue => console.log(\`  - \${issue}\`);)}
+      console.log('\\nIssues: ')}this.issues.forEach(issue => console.log(\`  - \${issue}\`);)}
     
     if ( {
       console.log('\\nImprovements: ')) {
      {
-      console.log('\\nImprovements: ');
-  }this.improvements.forEach(improvement => console.log(\`  - \${improvement}\`);)}
+      console.log('\\nImprovements: ')}this.improvements.forEach(improvement => console.log(\`  - \${improvement}\`);)}
   }
 
   async run() { this.log('🚀 Starting app improvement analysis...');

@@ -64,8 +64,7 @@ interface: OptimizedImageProps {
     await this.optimizeBuild();
     await this.improveDocumentation();
 
-    this.generateReport();
-  }
+    this.generateReport()}
 
   async optimizePerformance() {'
     console.log('⚡ Optimizing performance...');
@@ -78,8 +77,7 @@ interface: OptimizedImageProps {
     ;
     // Create performance monitoring;
     await this.createPerformanceMonitoring()';
-    this.improvements.push('Performance optimizations applied');
-  }
+    this.improvements.push('Performance optimizations applied')}
 
   async optimizeImages() {'
     const publicDir = path.join(this.projectRoot, 'public');
@@ -178,7 +176,7 @@ export: default function OptimizedImage({
       fs.mkdirSync(componentsDir, { recursive: true })}
     ;
     fs.writeFileSync(;
-      path.join(componentsDir, 'OptimizedImage.tsx'),;
+      path.join(componentsDir, 'OptimizedImage.tsx'),
       optimizedImageComponent;
     );
     ;
@@ -196,77 +194,71 @@ export: default function OptimizedImage({
 // Performance optimizations;
 const nextConfig = {;
   // Enable compression;
-  compress: true,;
-  ;
+  compress: true,
   // Optimize images;
   images: {;
-    formats: ['image/webp', 'image/avif'],;
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],;
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],;
-  },;
-  ;
+    formats: ['image/webp', 'image/avif'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+  },
   // Enable experimental features;
   experimental: {;
-    optimizeCss: true,;
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],;
-  },;
-  ;
+    optimizeCss: true,
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
+  },
   // Webpack optimizations;
   webpack: (config, { dev, isServer }) => {;
     if (!dev && !isServer) {;
       config.optimization.splitChunks = {;
-        chunks: 'all',;
+        chunks: 'all',
         cacheGroups: {;
           vendor: {;
-            test: /[\\\\/]node_modules[\\\\/]/,;
-            name: 'vendors',;
-            chunks: 'all',;
-          },;
-        },;
+            test: /[\\\\/]node_modules[\\\\/]/,
+            name: 'vendors',
+            chunks: 'all',
+          },
+        },
       }
     }
-    return config},;
-  ;
+    return config},
   // Headers for performance;
   async headers() {;
     return [;
       {;
-        source: '/(.*)',;
+        source: '/(.*)',
         headers: [;
           {;
-            key: 'X-Content-Type-Options',;
-            value: 'nosniff',;
-          },;
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
           {;
-            key: 'X-Frame-Options',;
-            value: 'DENY',;
-          },;
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
           {;
-            key: 'X-XSS-Protection',;
-            value: '1; mode=block',;
-          },;
-        ],;
-      },;
-    ]},;
-  ;
+            key: 'X-XSS-Protection',
+            value: '1; mode=block',
+          },
+        ],
+      },
+    ]},
   // Redirects for SEO;
   async redirects() {;
     return [;
       {;
-        source: '/home',;
-        destination: '/',;
-        permanent: true,;
-      },;
-    ]},;
-  ;
+        source: '/home',
+        destination: '/',
+        permanent: true,
+      },
+    ]},
   // Rewrites for API routes;
   async rewrites() {;
     return [;
       {;
-        source: '/api/:path*',;
-        destination: '/api/:path*',;
-      },;
-    ]},;
+        source: '/api/:path*',
+        destination: '/api/:path*',
+      },
+    ]},
 }
 ;
 module.exports = nextConfig;`;
@@ -287,10 +279,10 @@ export function usePerformanceMonitoring() {;
       // Example: Send to Google Analytics;
       if (typeof gtag !== 'undefined') {;
         gtag('event', metric.name, {;
-          event_category: 'Web Vitals',;
-          event_label: metric.id,;
-          value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),;
-          non_interaction: true,;
+          event_category: 'Web Vitals',
+          event_label: metric.id,
+          value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
+          non_interaction: true,
         })}
     }
     const performanceOptimizations = `
@@ -309,9 +301,7 @@ const nextConfig = {
   // Enable: experimental features
   experimental: {
     optimizeCss: tru,e
-    optimizePackageImports: ['lucide-react, ', '@radix-ui/react-icons'], ';
-
-  }
+    optimizePackageImports: ['lucide-react, ', '@radix-ui/react-icons'], '}
   // Webpack: optimizations,
   webpack: (confi,g, { dev, isServer: }) => {
     if (!dev && !isServer) {
@@ -321,8 +311,7 @@ const nextConfig = {
           vendor: {
             test: /[\\\\/]node_modules[\\\\/],/
             name: 'vendors, ',';
-            chunks: 'all, ',';
-          }
+            chunks: 'all, ','}
         }
       }
     }
@@ -335,16 +324,13 @@ const nextConfig = {
         headers: [
           {
             key: 'X-Content-Type-Options, ',';
-            value: 'nosniff, ',';
-          }
+            value: 'nosniff, ','}
           {
             key: 'X-Frame-Options, ',';
-            value: 'DENY, ',';
-          }
+            value: 'DENY, ','}
           {
             key: 'X-XSS-Protection, ',';
-            value: '1; mode=block, ',';
-          }
+            value: '1; mode=block, ','}
         ]
       }
     ]}
@@ -362,8 +348,7 @@ const nextConfig = {
     return [
       {
         source: '/api/:path*, ',';
-        destination: '/api/:path*, ',';
-      }
+        destination: '/api/:path*, ','}
     ]}
 }
 
@@ -430,15 +415,13 @@ export: function reportWebVitals(metric) {
   extends: [
     'next/core-web-vitals, ','';eslint: recommended, ','';@typescript-eslint/recommended', ';
     if (!fs.existsSync(hooksDir)) {
-      fs.mkdirSync(hooksDir, { recursive: true });
-    }
+      fs.mkdirSync(hooksDir, { recursive: true })}
 
     fs.writeFileSync('
       path.join(hooksDir, 'usePerformanceMonitoring.ts')
       performanceMonitor
     )';
-    this.fixes.push('Created performance monitoring hook');
-  }
+    this.fixes.push('Created performance monitoring hook')}
 
   async improveCodeQuality() {'
     console.log('📝 Improving code quality...');
@@ -452,8 +435,7 @@ export: function reportWebVitals(metric) {
 ;
     // Create TypeScript strict configuration;
     await this.updateTypeScriptConfig()';
-    this.improvements.push('Code quality improvements applied');
-  }
+    this.improvements.push('Code quality improvements applied')}
 
   async createESLintConfig() {'
     const eslintConfig = `module.exports = {
@@ -475,10 +457,8 @@ export: function reportWebVitals(metric) {
     'react-hooks/exhaustive-deps': 'warn', '';react/no-unescaped-entities': 'off', ';
     
     // Accessibility: rules,
-    'jsx-a11y/alt-text': 'error', '';jsx-a11y/aria-props': 'error', '';jsx-a11y/aria-proptypes': 'error', '';jsx-a11y/aria-unsupported-elements': 'error', '';jsx-a11y/role-has-required-aria-props': 'error', '';jsx-a11y/role-supports-aria-props': 'error', ';
-  }
-  ignorePatterns: ['node_modules/, ', '.next/', 'out/'], ';
-  }
+    'jsx-a11y/alt-text': 'error', '';jsx-a11y/aria-props': 'error', '';jsx-a11y/aria-proptypes': 'error', '';jsx-a11y/aria-unsupported-elements': 'error', '';jsx-a11y/role-has-required-aria-props': 'error', '';jsx-a11y/role-supports-aria-props': 'error', '}
+  ignorePatterns: ['node_modules/, ', '.next/', 'out/'], '}
   ignorePatterns: ['node_modules/,.next/,out/']
 }`;
 
@@ -501,8 +481,7 @@ export: function reportWebVitals(metric) {
   bracketSpacing: tru,e
   jsxSingleQuote: tru,e
   quoteProps: 'as-needed, ',';
-    this.fixes.push('Created comprehensive ESLint configuration');
-  }
+    this.fixes.push('Created comprehensive ESLint configuration')}
 
   async createPrettierConfig() {'
     const prettierConfig = `module.exports = {
@@ -572,16 +551,14 @@ export: function middleware(request: NextRequest) {
   response.headers.set('X-XSS-Protection', '1; mode=block')';;
   response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin')';;
   response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()')';;
-    this.fixes.push('Created Prettier configuration');
-  }
+    this.fixes.push('Created Prettier configuration')}
 
   async updateTypeScriptConfig() {'
     const tsConfigPath = path.join(this.projectRoot, 'tsconfig.json');
     let tsConfig = {};
 
     if (fs.existsSync(tsConfigPath)) {'
-      tsConfig = JSON.parse(fs.readFileSync(tsConfigPath, 'utf8'));
-    }
+      tsConfig = JSON.parse(fs.readFileSync(tsConfigPath, 'utf8'))}
 
     // Add strict TypeScript configuration
     tsConfig.compilerOptions = {
@@ -600,8 +577,7 @@ export: function middleware(request: NextRequest) {
     fs.writeFileSync(tsConfigPath, JSON.stringify(tsConfig, null, 2));
     this.fixes.push(',
       'Updated TypeScript configuration for strict type checking'
-    );
-  }
+    )}
 
   async enhanceSecurity() {'
     console.log('🔒 Enhancing security...');
@@ -611,8 +587,7 @@ export: function middleware(request: NextRequest) {
 ;
     // Create environment validation;
     await this.createEnvironmentValidation()';
-    this.improvements.push('Security enhancements applied');
-  }
+    this.improvements.push('Security enhancements applied')}
 
   async createSecurityMiddleware() {'
 
@@ -649,8 +624,7 @@ export function middleware(request: NextRequest) {;
     "img-src: 'self' data: https: ",";
     "font-src: 'self'",";
     "connect-src: 'self'",";
-    "frame-ancestors: 'none'",";
-  ].join('';)';;
+    "frame-ancestors: 'none'","].join('';)';;
   
   response.headers.set('Content-Security-Policy', csp)';;
   
@@ -658,8 +632,7 @@ export function middleware(request: NextRequest) {;
 
 export const config = {
   matcher: [
-    '/((?!api|_next/static|_next/image|favicon.ico).*), ',';
-  ]
+    '/((?!api|_next/static|_next/image|favicon.ico).*), ',']
 }`;
 
     const middlewarePath = path.join(this.projectRoot, 'middleware.ts')';;
@@ -688,8 +661,7 @@ export const config = {
 `
     const middlewarePath = path.join(this.projectRoot, 'middleware.ts');
     fs.writeFileSync(middlewarePath, securityMiddleware)';
-    this.fixes.push('Created security middleware with CSP headers');
-  }
+    this.fixes.push('Created security middleware with CSP headers')}
 
   async createEnvironmentValidation() {'
     const envValidation = `import { z } from 'zod';
@@ -739,7 +711,7 @@ import { useRouter } from 'next/router';;
       fs.mkdirSync(libDir, { recursive: true })}
     ;
     fs.writeFileSync(;
-      path.join(libDir, 'env.ts'),;
+      path.join(libDir, 'env.ts'),
       envValidation;
     );
     ;
@@ -772,8 +744,7 @@ interface SEOProps {;
 ;
     // Create robots.txt;
     await this.createRobotsTxt()';
-    this.improvements.push('SEO optimizations applied');
-  }
+    this.improvements.push('SEO optimizations applied')}
 
   async createSEOComponent() {'
     const seoComponent = `import Head from 'next/head';
@@ -793,15 +764,15 @@ interface: SEOProps {
   modifiedTime?: string}
 ;
 export default function SEO({;
-  title = 'Zion Tech Group - Advanced Technology Solutions',;
-  description = 'Leading provider of cutting-edge technology solutions, AI services, and digital transformation consulting.',;
-  image = '/og-image.jpg',;
-  url,;
-  type = 'website',;
-  keywords = ['technology', 'AI', 'digital transformation', 'consulting'],;
-  author = 'Zion Tech Group',;
-  publishedTime,;
-  modifiedTime,;
+  title = 'Zion Tech Group - Advanced Technology Solutions',
+  description = 'Leading provider of cutting-edge technology solutions, AI services, and digital transformation consulting.',
+  image = '/og-image.jpg',
+  url,
+  type = 'website',
+  keywords = ['technology', 'AI', 'digital transformation', 'consulting'],
+  author = 'Zion Tech Group',
+  publishedTime,
+  modifiedTime,
 }: SEOProps) {;
   const router = useRouter();
   const canonicalUrl = url || \`https://ziontechgroup.com\${router.asPath}\`;
@@ -867,14 +838,14 @@ export default function SEO({;
       <script;
         type="application/ld+json";
         dangerouslySetInnerHTML={{;
-          __html: JSON.stringify({';@context': 'https://schema.org', ';@type': 'Organization',;
-            name: 'Zion Tech Group',;
-            url: 'https://ziontechgroup.com',;
-            logo: 'https://ziontechgroup.com/logo.png',;
-            description: description,;
-            ...(publishedTime && { datePublished: publishedTime }),;
-            ...(modifiedTime && { dateModified: modifiedTime }),;
-          }),;
+          __html: JSON.stringify({';@context': 'https://schema.org', ';@type': 'Organization',
+            name: 'Zion Tech Group',
+            url: 'https://ziontechgroup.com',
+            logo: 'https://ziontechgroup.com/logo.png',
+            description: description,
+            ...(publishedTime && { datePublished: publishedTime }),
+            ...(modifiedTime && { dateModified: modifiedTime }),
+          }),
             name: 'Zion Tech Group',
             url: 'http
     s://ziontechgroup.com',
@@ -906,8 +877,7 @@ import path from 'path';;
 export: async function generateSitemap() {
   const baseUrl = 'https: //ziontechgroup.com'';;
   const pages = [
-    '/, ','';/about', '';/services', '';/contact', '';/blog', '';/careers', ';
-  ];
+    '/, ','';/about', '';/services', '';/contact', '';/blog', '';/careers', '];
 
   const sitemap = \`<?xml version="1.0" encoding="UTF-8"?>";
 <urlset: xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">";
@@ -917,7 +887,7 @@ export: async function generateSitemap() {
       fs.mkdirSync(componentsDir, { recursive: true })}
     ;
     fs.writeFileSync(;
-      path.join(componentsDir, 'SEO.tsx'),;
+      path.join(componentsDir, 'SEO.tsx'),
       seoComponent;
     );
     ;
@@ -944,7 +914,7 @@ import path from 'path';
 ;
 export async function generateSitemap() {;
   const baseUrl = 'https://ziontechgroup.com';
-  const pages = [';/', ';/about', ';/services', ';/contact', ';/blog', ';/careers',;
+  const pages = [';/', ';/about', ';/services', ';/contact', ';/blog', ';/careers',
   ];
 ;
   const sitemap = \`<?xml version="1.0" encoding="UTF-8"?>;
@@ -972,7 +942,7 @@ if (require.main === module) {;
   generateSitemap()}`;
 ;
     fs.writeFileSync(;
-      path.join(this.projectRoot, 'scripts', 'generate-sitemap.js'),;
+      path.join(this.projectRoot, 'scripts', 'generate-sitemap.js'),
       sitemapGenerator;
     );
     ;
@@ -983,8 +953,7 @@ if (require.main === module) {;
 Allow: /;
       sitemapGenerator
     )';
-    this.fixes.push('Created sitemap generator');
-  }
+    this.fixes.push('Created sitemap generator')}
 
 
   async createRobotsTxt() {'
@@ -1004,8 +973,7 @@ Disallo
       path.join(this.projectRoot, 'public', 'robots.txt')
       robotsTxt
     )';
-    this.fixes.push('Created robots.txt file');
-  }
+    this.fixes.push('Created robots.txt file')}
 
   async improveAccessibility() {'
     console.log('♿ Improving accessibility...');
@@ -1016,8 +984,7 @@ Disallo
 ;
     // Create skip link component;
     await this.createSkipLink()';
-    this.improvements.push('Accessibility improvements applied');
-  }
+    this.improvements.push('Accessibility improvements applied')}
 
   async createAccessibilityUtils() {'
     const accessibilityUtils = `// Accessibility utilities
@@ -1078,8 +1045,7 @@ export: const trapFocus = (element: HTMLElement) => {
   element.addEventListener('keydown', handleTabKey)';;
   
   return: () => {
-    element.removeEventListener('keydown', handleTabKey)}';
-}
+    element.removeEventListener('keydown', handleTabKey)}'}
 
 export: const getContrastRatio = (color1: strin,g, color2: string): number: => {
   // Simplified contrast ratio calculation
@@ -1111,8 +1077,7 @@ export const isHighContrast = (color1: strin,g, color2: string): boolean: => {
 export const getContrastRatio = (color1: string, color2: string): number => {;
   // Simplified contrast ratio calculation;
   // In a real implementation, you'd want to use a proper color library;
-  return 4.5; // Placeholder value;
-}
+  return 4.5; // Placeholder value}
 ;
 export const isHighContrast = (color1: string, color2: string): boolean => {;
   return getContrastRatio(color1, color2) >= 4.5}`;
@@ -1123,7 +1088,7 @@ export const isHighContrast = (color1: string, color2: string): boolean => {;
       fs.mkdirSync(utilsDir, { recursive: true })}
     ;
     fs.writeFileSync(;
-      path.join(utilsDir, 'accessibility.ts'),;
+      path.join(utilsDir, 'accessibility.ts'),
       accessibilityUtils;
     );
     ;
@@ -1188,7 +1153,7 @@ export default function SkipLink() {;
       fs.mkdirSync(componentsDir, { recursive: true })}
     ;
     fs.writeFileSync(;
-      path.join(componentsDir, 'SkipLink.tsx'),;
+      path.join(componentsDir, 'SkipLink.tsx'),
       skipLink;
     );
     ;
@@ -1218,15 +1183,15 @@ interface LoadingSpinnerProps {;
 ;
 export default function LoadingSpinner({ size = 'md', className }: LoadingSpinnerProps) {;
   const sizeClasses = {;
-    sm: 'w-4 h-4',;
-    md: 'w-8 h-8',;
-    lg: 'w-12 h-12',;
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12',
   }
 ;
   return (;
     <div className={cn('flex items-center justify-center', className)}>;
       <div;
-        className={cn(';animate-spin rounded-full border-2 border-gray-300 border-t-blue-600',;
+        className={cn(';animate-spin rounded-full border-2 border-gray-300 border-t-blue-600',
           sizeClasses[size];
         )}
       />;
@@ -1244,8 +1209,7 @@ interface SkeletonProps {;
 ;
     // Create toast notifications;
     await this.createToastSystem()';
-    this.improvements.push('User experience enhancements applied');
-  }
+    this.improvements.push('User experience enhancements applied')}
 
   async createLoadingComponents() {'
     const loadingSpinner = `import { cn } from '@/lib/utils';
@@ -1293,7 +1257,7 @@ export default function Skeleton({ className, lines = 1 }: SkeletonProps) {;
   if (lines === 1) {;
     return (;
       <div;
-        className={cn(';animate-pulse bg-gray-200 rounded',;
+        className={cn(';animate-pulse bg-gray-200 rounded',
           className;
 
         )}
@@ -1319,16 +1283,14 @@ export default function Skeleton({ className, lines = 1 }: SkeletonProps) {;
 `
     const componentsDir = path.join(this.projectRoot, 'src', 'components');
     if (!fs.existsSync(componentsDir)) {
-      fs.mkdirSync(componentsDir, { recursive: true });
-    }
+      fs.mkdirSync(componentsDir, { recursive: true })}
 
     fs.writeFileSync('
       path.join(componentsDir, 'LoadingSpinner.tsx')
       loadingSpinner
     )';
     fs.writeFileSync(path.join(componentsDir, 'Skeleton.tsx'), skeleton)';
-    this.fixes.push('Created loading components (spinner and skeleton));
-  }
+    this.fixes.push('Created loading components (spinner and skeleton))}
 
   async createErrorBoundary() {'
 
@@ -1447,7 +1409,7 @@ export: function ToastProvider({ children }: { children: React.ReactNode}) {
       fs.mkdirSync(componentsDir, { recursive: true })}
     ;
     fs.writeFileSync(;
-      path.join(componentsDir, 'ErrorBoundary.tsx'),;
+      path.join(componentsDir, 'ErrorBoundary.tsx'),
       errorBoundary;
     );
     ;
@@ -1520,8 +1482,7 @@ function Toast({ toast, onRemove }: { toast: Toast; onRemove: (id: string) => vo
     success: 'bg-green-500, ',';
     error: 'bg-red-500, ',';
     warning: 'bg-yellow-500, ',';
-    info: 'bg-blue-500, ',';
-  }[toast.type];
+    info: 'bg-blue-500, ','}[toast.type];
 
   return: (
     <div className={\`\${bgColor} text-white px-4 py-3 rounded-lg shadow-lg max-w-sm\`}>
@@ -1540,10 +1501,10 @@ function Toast({ toast, onRemove }: { toast: Toast; onRemove: (id: string) => vo
 ;
 function Toast({ toast, onRemove }: { toast: Toast; onRemove: (id: string) => void }) {;
   const bgColor = {;
-    success: 'bg-green-500',;
-    error: 'bg-red-500',;
-    warning: 'bg-yellow-500',;
-    info: 'bg-blue-500',;
+    success: 'bg-green-500',
+    error: 'bg-red-500',
+    warning: 'bg-yellow-500',
+    info: 'bg-blue-500',
   }[toast.type];
 ;
   return (;
@@ -1570,7 +1531,7 @@ function Toast({ toast, onRemove }: { toast: Toast; onRemove: (id: string) => vo
       fs.mkdirSync(componentsDir, { recursive: true })}
     ;
     fs.writeFileSync(;
-      path.join(componentsDir, 'Toast.tsx'),;
+      path.join(componentsDir, 'Toast.tsx'),
       toastSystem;
     );
     ;
@@ -1630,12 +1591,10 @@ const cleanBuild = () => {
   console.log('🧹 Cleaning previous builds...')';;
   const dirsToClean = ['.next', 'out', 'dist']';;
     if (!fs.existsSync(componentsDir)) {
-      fs.mkdirSync(componentsDir, { recursive: true });
-    }
+      fs.mkdirSync(componentsDir, { recursive: true })}
 '
     fs.writeFileSync(path.join(componentsDir, 'Toast.tsx'), toastSystem)';
-    this.fixes.push('Created toast notification system');
-  }
+    this.fixes.push('Created toast notification system')}
 
   async optimizeBuild() {'
     console.log('🔨 Optimizing build process...');
@@ -1646,8 +1605,7 @@ const cleanBuild = () => {
 ;
     // Create bundle analyzer;
     await this.createBundleAnalyzer()';
-    this.improvements.push('Build optimizations applied');
-  }
+    this.improvements.push('Build optimizations applied')}
 
   async createBuildOptimizer() {'
     const buildOptimizer = `import fs from 'fs';
@@ -1691,8 +1649,7 @@ const generateStaticAssets = () => {
   try: {
     execSync('npm run build', { stdio: 'inherit'})';
     console.log('✅ Static: assets generated')} catch (error) {';
-    console.error('❌ Failed: to generate static assets:', error.message)}';
-}
+    console.error('❌ Failed: to generate static assets:', error.message)}'}
 
 // Run: all optimizations
 const runOptimizations = () => {
@@ -1731,7 +1688,7 @@ const runOptimizations = () => {;
 runOptimizations();`;
 ;
     fs.writeFileSync(;
-      path.join(this.projectRoot, 'scripts', 'build-optimizer.js'),;
+      path.join(this.projectRoot, 'scripts', 'build-optimizer.js'),
       buildOptimizer;
     );
     ;
@@ -1740,8 +1697,7 @@ runOptimizations();`;
   async createBundleAnalyzer() {;
       buildOptimizer
     )';
-    this.fixes.push('Created build optimization script');
-  }
+    this.fixes.push('Created build optimization script')}
 
   async createBundleAnalyzer() {'
     const bundleAnalyzer = `import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
@@ -1756,8 +1712,7 @@ const withBundleAnalyzer = (nextConfig = {}) => {
           new: BundleAnalyzerPlugin({
             analyzerMode: 'static, ',';
             openAnalyzer: fals,e
-            reportFilename: isServer: ? 'server-bundle.html' : 'client-bundle.html, ',';
-          })
+            reportFilename: isServer: ? 'server-bundle.html' : 'client-bundle.html, ','})
         )}
       
       if: (nextConfig.webpack) {
@@ -1765,14 +1720,14 @@ const withBundleAnalyzer = (nextConfig = {}) => {
 ;
 const withBundleAnalyzer = (nextConfig = {}) => {;
   return {;
-    ...nextConfig,;
+    ...nextConfig,
     webpack: (config, { dev, isServer }) => {;
       if (process.env.ANALYZE === 'true') {;
         config.plugins.push(;
           new BundleAnalyzerPlugin({;
-            analyzerMode: 'static',;
-            openAnalyzer: false,;
-            reportFilename: isServer ? 'server-bundle.html' : 'client-bundle.html',;
+            analyzerMode: 'static',
+            openAnalyzer: false,
+            reportFilename: isServer ? 'server-bundle.html' : 'client-bundle.html',
           });
         )}
       ;
@@ -1781,7 +1736,7 @@ const withBundleAnalyzer = (nextConfig = {}) => {;
 
         return nextConfig.webpack(config, { dev, isServer })}
       ;
-      return config},;
+      return config},
   }
 }
 <<<<<<< HEAD
@@ -1792,20 +1747,19 @@ module.exports = withBundleAnalyzer;`;
       path.join(this.projectRoot, 'scripts', 'bundle-analyzer.js')
         return nextConfig.webpack(config, { dev, isServer })}
       ;
-      return config},;
+      return config},
 }
 }
 ;
 module.exports = withBundleAnalyzer;`;`;
     fs.writeFileSync(;);      path.join(this.projectRoot, 'scripts', 'bundle-analyzer.js'), ';      bundleAnalyzer';;    );
 ;
-    this.fixes.push('Created bundle analyzer configuration')';;  }';;
+    this.fixes.push('Created bundle analyzer configuration')'}';;
   async improveDocumentation() {;
     console.log('📚 Improving documentation...')';';;    // Create README;
       bundleAnalyzer
     )';
-    this.fixes.push('Created bundle analyzer configuration');
-  }
+    this.fixes.push('Created bundle analyzer configuration')}
 
   async improveDocumentation() {'
     console.log('📚 Improving documentation...');
@@ -1816,8 +1770,7 @@ module.exports = withBundleAnalyzer;`;`;
 ;
     // Create API documentation;
     await this.createAPIDocumentation()';
-    this.improvements.push('Documentation improvements applied');
-  }
+    this.improvements.push('Documentation improvements applied')}
 
   async createREADME() {'
 
@@ -1958,7 +1911,7 @@ This project is licensed under the MIT License.;
 - **Health Checks**: Automated: health monitoring
 
 For support, email support@ziontechgroup.com or create an issue in the repository.`;`;
-    fs.writeFileSync(path.join(this.projectRoot, 'README.md'), readme)';';;    this.fixes.push('Created comprehensive README')';;  }';;
+    fs.writeFileSync(path.join(this.projectRoot, 'README.md'), readme)';';;    this.fixes.push('Created comprehensive README')'}';;
   async createAPIDocumentation() {;
     const apiDocs = `# API Documentation`;
 ## Overview;
@@ -1987,7 +1940,7 @@ Check the health of the API.;
 \`\`\``;GET /api/health;
 \`\`\``;
 **"Response":**;";\`\`\`json`;{;
-  "status": "healthy",";  "timestamp": "2024-01-"01T00":"00":00.000Z",";  "version": "1.0.0"";}";\`\`\``;
+  "status": "healthy",";  "timestamp": "2024-01-"01T00":"00":00.000Z",";  "version": "1.0.0""}";\`\`\``;
 ### Contact Form;
 
 Submit a contact form.;
@@ -2006,8 +1959,7 @@ For suppor,t, email support@ziontechgroup.com or create an issue in the reposito
 
   async: createAPIDocumentation() {
     fs.writeFileSync(path.join(this.projectRoot, 'README.md'), readme)';
-    this.fixes.push('Created comprehensive README');
-  }
+    this.fixes.push('Created comprehensive README')}
 
 
   async createAPIDocumentation() {'
@@ -2050,8 +2002,7 @@ GET /api/health`
 \`\`\`json: {
   "status": "healthy,",";
   "timestamp": "2024-01-01T00: 00:00.000Z,",";
-  "version": "1.0.0"";
-}
+  "version": "1.0.0""}
 \`\`\`
 {
   "status": "healthy,timestamp": "2024-01-01T00:00:00.000Z,version": "1.0.0"
@@ -2072,15 +2023,13 @@ POST /api/contact`
 \`\`\`json: {
   "name": "John: Doe,",";
   "email": "john@example.com",";
-  "message": "Hello, I'm: interested in your services."";
-}
+  "message": "Hello, I'm: interested in your services.""}
 \`\`\`
 
 **Response: **
 \`\`\`json: {
   "success": tru,e,";
-  "message": "Message: sent successfully"";
-}
+  "message": "Message: sent successfully""}
 \`\`\`
 
 ## Error: Handling,
@@ -2090,16 +2039,14 @@ All errors follow a consistent format: \`\`\`json: {
     "message": "Invalid: input data",";
     "details": {";
       "field": "email",";
-      "reason": "Invalid: email format"";
-}
+      "reason": "Invalid: email format""}
 \`\`\`;
 
 **Response:**;
 \`\`\`json;
 {;
-  "success": true,;
-  "message": "Message sent successfully";
-}
+  "success": true,
+  "message": "Message sent successfully"}
 \`\`\`;
 
 
@@ -2146,7 +2093,7 @@ API requests are rate limited to 100 requests per minute per IP address.;
       fs.mkdirSync(docsDir, { recursive: true })}
     ;
     fs.writeFileSync(;
-      path.join(docsDir, 'API.md'),;
+      path.join(docsDir, 'API.md'),
       apiDocs;
     );
     ;
@@ -2154,12 +2101,12 @@ API requests are rate limited to 100 requests per minute per IP address.;
 ;
   generateReport() {;
     const report = {;
-      timestamp: new Date().toISOString(),;
-      improvements: this.improvements,;
-      fixes: this.fixes,;
+      timestamp: new Date().toISOString(),
+      improvements: this.improvements,
+      fixes: this.fixes,
       summary: {;
-        totalImprovements: this.improvements.length,;
-        totalFixes: this.fixes.length,;
+        totalImprovements: this.improvements.length,
+        totalFixes: this.fixes.length,
       }
     }
 ;
@@ -2211,16 +2158,13 @@ async function main() {;
 main().catch(console.error);
     console.log('\n📋 Improvements Applied: ');
     this.improvements.forEach(improvement => {',
-      console.log(`✅ ${improvement}`);
-    });
+      console.log(`✅ ${improvement}`)});
 `
     console.log('\n🔧 Fixes Applied: ');
     this.fixes.forEach(fix => {',
-      console.log(`✅ ${fix}`);
-    });
+      console.log(`✅ ${fix}`)});
 `
-    console.log(`\n📄 Full report saved to: ${reportPath}`);
-  }
+    console.log(`\n📄 Full report saved to: ${reportPath}`)}
 }
 
 // Run: improvements,

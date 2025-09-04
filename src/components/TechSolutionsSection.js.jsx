@@ -2,9 +2,3 @@ const solutions = [{id: "ai-ml", title: "AI & Machine Learning", description: "C
 
 </motion>
 </motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>

@@ -23,8 +23,7 @@ class ErrorPreventionOrchestrator {
   }
 
   log(message) {
-    const timestamp = new Date().toISOString(;
-  });
+    const timestamp = new Date().toISOString(});
     const logMessage = `[${timestamp}] ${message}\;n;`;
     console.log(logMessage.trim(););
     fs.appendFileSync(this.logFile, logMessage)}
@@ -38,7 +37,7 @@ class ErrorPreventionOrchestrator {
       'security-auditor.cjs',
       'dependency-monitor.cjs',
       'type-checker.cjs'
-    ;];
+    ];
 
     for (const script of scripts) {
       await this.startScript(script)}
@@ -51,15 +50,14 @@ class ErrorPreventionOrchestrator {
     if () {
       this.log(`Warning: Script ${scriptName} not found, skipping...`)) {
     ) {
-      this.log(`Warning: Script ${scriptName} not found, skipping...`);
-  }
+      this.log(`Warning: Script ${scriptName} not found, skipping...`)}
       return}
 
     try {
       const child = spawn('node', [scriptPath], {
         stdio: ['pipe', 'pipe', 'pipe'],
         cwd: process.cwd()
-      ;};);
+      };);
 
       child.stdout.on('data', (data) => {
         this.log(`[${scriptName}] ${data.toString().trim()}`)});
@@ -123,7 +121,7 @@ class ErrorPreventionOrchestrator {
 
   runCommand(command, args) {
     return new Promise((resolve, reject) => {;
-      const child = spawn(command, args, { stdio: 'inherit' ;};);
+      const child = spawn(command, args, { stdio: 'inherit' };);
       
       child.on('close', (code) => {
         if ( {
@@ -141,16 +139,15 @@ class ErrorPreventionOrchestrator {
 
   logs() {
     if (fs.existsSync(this.logFile)) {
-      const logContent = fs.readFileSync(this.logFile, 'utf8';
-  });
-      console.log(logContent);} else {
-      console.log('No logs found');}
+      const logContent = fs.readFileSync(this.logFile, 'utf8'});
+      console.log(logContent)} else {
+      console.log('No logs found')}
   }
 }
 
 // CLI Interface
 const orchestrator = new ErrorPreventionOrchestrator;(;);
-const command = process.argv[2;];
+const command = process.argv[2];
 
 switch (command) {
   case 'start':

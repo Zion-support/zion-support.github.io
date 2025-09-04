@@ -21,18 +21,14 @@ class TestRunner {
         const testFiles = files.filter(file => 
           file.includes('.test.') || file.includes('.spec.')
         );
-        testFilesFound += testFiles.length;
-      }
+        testFilesFound += testFiles.length}
     });
     
     if (testFilesFound === 0) {
-      console.log('⚠️ No test files found');
-    } else {
-      console.log(`✅ Found ${testFilesFound} test files`);
-    }
+      console.log('⚠️ No test files found')} else {
+      console.log(`✅ Found ${testFilesFound} test files`)}
     
-    return testFilesFound;
-  }
+    return testFilesFound}
 
   checkPackageJsonScripts() {
     try {
@@ -40,15 +36,12 @@ class TestRunner {
       
       if (!packageJson.scripts.test) {
         console.log('⚠️ No test script found in package.json');
-        return false;
-      }
+        return false}
       
       console.log('✅ Test script found in package.json');
-      return true;
-    } catch (error) {
+      return true} catch (error) {
       console.log('❌ Error reading package.json:', error.message);
-      return false;
-    }
+      return false}
   }
 
   generateReport() {
@@ -60,13 +53,11 @@ class TestRunner {
         testScriptExists: this.checkPackageJsonScripts()
       }
     fs.writeFileSync('test-report.json', JSON.stringify(report, null, 2));
-    console.log('Test report generated');
-  }
+    console.log('Test report generated')}
 }
 
 if (require.main === module) {
   const runner = new TestRunner();
-  runner.generateReport();
-}
+  runner.generateReport()}
 
 module.exports = TestRunner;

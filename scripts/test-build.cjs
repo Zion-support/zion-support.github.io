@@ -21,30 +21,24 @@ try {
       const backupPath = `${file}.backup`;
       fs.renameSync(file, backupPath);
       movedFiles.push({ original: file, backup: backupPath });
-      console.log(`📦 Moved ${file} to ${backupPath}`);
-    }
+      console.log(`📦 Moved ${file} to ${backupPath}`)}
   });
 
   // Try to build
   console.log('🔨 Attempting build without problematic files...');
   try {
     execSync('npm run build', { stdio: 'inherit' });
-    console.log('✅ Build successful!');
-  } catch (error) {
-    console.log('❌ Build failed:', error.message);
-  }
+    console.log('✅ Build successful!')} catch (error) {
+    console.log('❌ Build failed:', error.message)}
 } finally {
   // Restore files
   movedFiles.forEach(({ original, backup }) => {
     try {
       if (fs.existsSync(backup)) {
         fs.renameSync(backup, original);
-        console.log(`🔄 Restored ${original}`);
-      }
+        console.log(`🔄 Restored ${original}`)}
     } catch (restoreError) {
-      console.log(`⚠️ Failed to restore ${original}:`, restoreError.message);
-    }
-  });
-}
+      console.log(`⚠️ Failed to restore ${original}:`, restoreError.message)}
+  })}
 
 console.log('🎯 Test build completed!');

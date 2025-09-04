@@ -27,15 +27,13 @@ class TargetedErrorResolution {
         import: /error.*import/,
         syntax: /error.*syntax/
       }
-    };
-  }
+    }}
 
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `${timestamp}: ${message}\n`;
     console.log(logMessage.trim());
-    fs.appendFileSync(this.logFile, logMessage);
-  }
+    fs.appendFileSync(this.logFile, logMessage)}
 
   async run() {
     this.log('🎯 Starting targeted error resolution automation...');
@@ -44,8 +42,7 @@ class TargetedErrorResolution {
       // Create reports directory if it doesn't exist
       const reportsDir = path.join(this.projectRoot, 'enhanced-reports');
       if (!fs.existsSync(reportsDir)) {
-        fs.mkdirSync(reportsDir, { recursive: true });
-      }
+        fs.mkdirSync(reportsDir, { recursive: true })}
 
       const fixes = {
         typescript: await this.fixTypeScriptErrors(),
@@ -68,11 +65,8 @@ class TargetedErrorResolution {
       };
       
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-      this.log(`📊 Targeted error resolution report saved to ${this.reportFile}`);
-      
-    } catch (error) {
-      this.log(`❌ Error in targeted error resolution: ${error.message}`);
-    }
+      this.log(`📊 Targeted error resolution report saved to ${this.reportFile}`)} catch (error) {
+      this.log(`❌ Error in targeted error resolution: ${error.message}`)}
   }
 
   async fixTypeScriptErrors() {
@@ -86,24 +80,17 @@ class TargetedErrorResolution {
 
       for (const error of errors.slice(0, 50)) { // Limit to first 50 errors
         if (this.errorPatterns.typescript.syntax.test(error)) {
-          fixes += await this.fixTypeScriptSyntaxError(error);
-        } else if (this.errorPatterns.typescript.import.test(error)) {
-          fixes += await this.fixTypeScriptImportError(error);
-        } else if (this.errorPatterns.typescript.type.test(error)) {
-          fixes += await this.fixTypeScriptTypeError(error);
-        } else if (this.errorPatterns.typescript.jsx.test(error)) {
-          fixes += await this.fixTypeScriptJSXError(error);
-        }
+          fixes += await this.fixTypeScriptSyntaxError(error)} else if (this.errorPatterns.typescript.import.test(error)) {
+          fixes += await this.fixTypeScriptImportError(error)} else if (this.errorPatterns.typescript.type.test(error)) {
+          fixes += await this.fixTypeScriptTypeError(error)} else if (this.errorPatterns.typescript.jsx.test(error)) {
+          fixes += await this.fixTypeScriptJSXError(error)}
       }
 
-      this.log(`  ✅ Fixed ${fixes} TypeScript errors`);
-    } catch (error) {
+      this.log(`  ✅ Fixed ${fixes} TypeScript errors`)} catch (error) {
       // TypeScript check failed, which is expected
-      this.log(`  ⚠️ TypeScript check completed with errors (expected)`);
-    }
+      this.log(`  ⚠️ TypeScript check completed with errors (expected)`)}
 
-    return fixes;
-  }
+    return fixes}
 
   async fixESLintErrors() {
     this.log('🧹 Fixing ESLint errors with targeted approach...');
@@ -113,13 +100,10 @@ class TargetedErrorResolution {
       // Try to run ESLint with auto-fix
       execSync('npm run lint -- --fix', { encoding: 'utf8' });
       fixes = 1; // Assume at least one fix was applied
-      this.log(`  ✅ Applied ESLint auto-fixes`);
-    } catch (error) {
-      this.log(`  ⚠️ ESLint auto-fix completed with issues`);
-    }
+      this.log(`  ✅ Applied ESLint auto-fixes`)} catch (error) {
+      this.log(`  ⚠️ ESLint auto-fix completed with issues`)}
 
-    return fixes;
-  }
+    return fixes}
 
   async fixJSXErrors() {
     this.log('🔧 Fixing JSX syntax errors...');
@@ -131,17 +115,13 @@ class TargetedErrorResolution {
       
       for (const file of jsxFiles.slice(0, 10)) { // Limit to first 10 files
         if (await this.fixJSXFile(file)) {
-          fixes++;
-        }
+          fixes++}
       }
 
-      this.log(`  ✅ Fixed ${fixes} JSX syntax errors`);
-    } catch (error) {
-      this.log(`  ⚠️ JSX error fixing completed with issues`);
-    }
+      this.log(`  ✅ Fixed ${fixes} JSX syntax errors`)} catch (error) {
+      this.log(`  ⚠️ JSX error fixing completed with issues`)}
 
-    return fixes;
-  }
+    return fixes}
 
   async fixImportErrors() {
     this.log('📦 Fixing import errors...');
@@ -153,17 +133,13 @@ class TargetedErrorResolution {
       
       for (const file of filesWithImports.slice(0, 10)) {
         if (await this.fixImportIssues(file)) {
-          fixes++;
-        }
+          fixes++}
       }
 
-      this.log(`  ✅ Fixed ${fixes} import errors`);
-    } catch (error) {
-      this.log(`  ⚠️ Import error fixing completed with issues`);
-    }
+      this.log(`  ✅ Fixed ${fixes} import errors`)} catch (error) {
+      this.log(`  ⚠️ Import error fixing completed with issues`)}
 
-    return fixes;
-  }
+    return fixes}
 
   async fixSyntaxErrors() {
     this.log('🔧 Fixing general syntax errors...');
@@ -175,17 +151,13 @@ class TargetedErrorResolution {
       
       for (const file of filesWithSyntaxIssues.slice(0, 10)) {
         if (await this.fixSyntaxIssues(file)) {
-          fixes++;
-        }
+          fixes++}
       }
 
-      this.log(`  ✅ Fixed ${fixes} syntax errors`);
-    } catch (error) {
-      this.log(`  ⚠️ Syntax error fixing completed with issues`);
-    }
+      this.log(`  ✅ Fixed ${fixes} syntax errors`)} catch (error) {
+      this.log(`  ⚠️ Syntax error fixing completed with issues`)}
 
-    return fixes;
-  }
+    return fixes}
 
   findJSXFiles() {
     const jsxFiles = [];
@@ -194,13 +166,10 @@ class TargetedErrorResolution {
     if (fs.existsSync(srcDir)) {
       this.walkDir(srcDir, (file) => {
         if (file.endsWith('.jsx') || file.endsWith('.tsx')) {
-          jsxFiles.push(file);
-        }
-      });
-    }
+          jsxFiles.push(file)}
+      })}
     
-    return jsxFiles;
-  }
+    return jsxFiles}
 
   findFilesWithImportIssues() {
     const files = [];
@@ -211,14 +180,11 @@ class TargetedErrorResolution {
         if (file.endsWith('.js') || file.endsWith('.jsx') || file.endsWith('.ts') || file.endsWith('.tsx')) {
           const content = fs.readFileSync(file, 'utf8');
           if (content.includes('import') && (content.includes('Cannot find module') || content.includes('Module not found'))) {
-            files.push(file);
-          }
+            files.push(file)}
         }
-      });
-    }
+      })}
     
-    return files;
-  }
+    return files}
 
   findFilesWithSyntaxIssues() {
     const files = [];
@@ -229,14 +195,11 @@ class TargetedErrorResolution {
         if (file.endsWith('.js') || file.endsWith('.jsx') || file.endsWith('.ts') || file.endsWith('.tsx')) {
           const content = fs.readFileSync(file, 'utf8');
           if (content.includes('SyntaxError') || content.includes('Unexpected token')) {
-            files.push(file);
-          }
+            files.push(file)}
         }
-      });
-    }
+      })}
     
-    return files;
-  }
+    return files}
 
   walkDir(dir, callback) {
     if (fs.existsSync(dir)) {
@@ -245,10 +208,8 @@ class TargetedErrorResolution {
         const filePath = path.join(dir, file);
         const stat = fs.statSync(filePath);
         if (stat.isDirectory()) {
-          this.walkDir(filePath, callback);
-        } else {
-          callback(filePath);
-        }
+          this.walkDir(filePath, callback)} else {
+          callback(filePath)}
       }
     }
   }
@@ -272,16 +233,14 @@ class TargetedErrorResolution {
             if (fixedLine !== lines[lineNum]) {
               lines[lineNum] = fixedLine;
               fs.writeFileSync(fullPath, lines.join('\n'));
-              return 1;
-            }
+              return 1}
           }
         } catch (err) {
           // Ignore file read/write errors
         }
       }
     }
-    return 0;
-  }
+    return 0}
 
   async fixTypeScriptImportError(error) {
     // Extract file path from error
@@ -302,16 +261,14 @@ class TargetedErrorResolution {
             if (fixedLine !== lines[lineNum]) {
               lines[lineNum] = fixedLine;
               fs.writeFileSync(fullPath, lines.join('\n'));
-              return 1;
-            }
+              return 1}
           }
         } catch (err) {
           // Ignore file read/write errors
         }
       }
     }
-    return 0;
-  }
+    return 0}
 
   async fixTypeScriptTypeError(error) {
     // Extract file path from error
@@ -332,16 +289,14 @@ class TargetedErrorResolution {
             if (fixedLine !== lines[lineNum]) {
               lines[lineNum] = fixedLine;
               fs.writeFileSync(fullPath, lines.join('\n'));
-              return 1;
-            }
+              return 1}
           }
         } catch (err) {
           // Ignore file read/write errors
         }
       }
     }
-    return 0;
-  }
+    return 0}
 
   async fixTypeScriptJSXError(error) {
     // Extract file path from error
@@ -362,16 +317,14 @@ class TargetedErrorResolution {
             if (fixedLine !== lines[lineNum]) {
               lines[lineNum] = fixedLine;
               fs.writeFileSync(fullPath, lines.join('\n'));
-              return 1;
-            }
+              return 1}
           }
         } catch (err) {
           // Ignore file read/write errors
         }
       }
     }
-    return 0;
-  }
+    return 0}
 
   fixCommonSyntaxErrors(line) {
     // Fix common syntax errors
@@ -379,8 +332,7 @@ class TargetedErrorResolution {
     
     // Fix missing semicolons
     if (!fixed.endsWith(';') && !fixed.endsWith('{') && !fixed.endsWith('}') && !fixed.endsWith('(') && !fixed.endsWith(')')) {
-      fixed += ';';
-    }
+      fixed += ';'}
     
     // Fix missing quotes
     fixed = fixed.replace(/([^"'])([a-zA-Z_$][a-zA-Z0-9_$]*):\s*([^"'])/g, '$1"$2": $3');
@@ -388,8 +340,7 @@ class TargetedErrorResolution {
     // Fix missing commas
     fixed = fixed.replace(/([^,}])\s*}/g, '$1,}');
     
-    return fixed;
-  }
+    return fixed}
 
   fixImportError(line) {
     // Fix common import errors
@@ -401,11 +352,9 @@ class TargetedErrorResolution {
     
     // Fix missing extensions
     if (fixed.includes('import') && !fixed.includes('.js') && !fixed.includes('.jsx') && !fixed.includes('.ts') && !fixed.includes('.tsx')) {
-      fixed = fixed.replace(/from ['"]([^'"]+)['"]/g, "from '$1.js'");
-    }
+      fixed = fixed.replace(/from ['"]([^'"]+)['"]/g, "from '$1.js'")}
     
-    return fixed;
-  }
+    return fixed}
 
   fixTypeError(line) {
     // Fix common type errors
@@ -413,14 +362,12 @@ class TargetedErrorResolution {
     
     // Add type annotations
     if (fixed.includes('const') && !fixed.includes(':') && !fixed.includes('=')) {
-      fixed = fixed.replace(/const\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=/g, 'const $1: any =');
-    }
+      fixed = fixed.replace(/const\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=/g, 'const $1: any =')}
     
     // Fix function parameters
     fixed = fixed.replace(/function\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\(([^)]*)\)/g, 'function $1($2: any)');
     
-    return fixed;
-  }
+    return fixed}
 
   fixJSXError(line) {
     // Fix common JSX errors
@@ -428,16 +375,13 @@ class TargetedErrorResolution {
     
     // Fix unclosed tags
     if (fixed.includes('<') && !fixed.includes('>')) {
-      fixed += '>';
-    }
+      fixed += '>'}
     
     // Fix missing closing tags
     if (fixed.includes('<') && fixed.includes('>') && !fixed.includes('/>') && !fixed.includes('</')) {
-      fixed = fixed.replace(/<([a-zA-Z][a-zA-Z0-9]*)/g, '<$1 />');
-    }
+      fixed = fixed.replace(/<([a-zA-Z][a-zA-Z0-9]*)/g, '<$1 />')}
     
-    return fixed;
-  }
+    return fixed}
 
   async fixJSXFile(filePath) {
     try {
@@ -455,13 +399,10 @@ class TargetedErrorResolution {
       
       if (newContent !== content) {
         fs.writeFileSync(filePath, newContent);
-        fixed = true;
-      }
+        fixed = true}
       
-      return fixed;
-    } catch (error) {
-      return false;
-    }
+      return fixed} catch (error) {
+      return false}
   }
 
   async fixImportIssues(filePath) {
@@ -478,13 +419,10 @@ class TargetedErrorResolution {
       
       if (newContent !== content) {
         fs.writeFileSync(filePath, newContent);
-        fixed = true;
-      }
+        fixed = true}
       
-      return fixed;
-    } catch (error) {
-      return false;
-    }
+      return fixed} catch (error) {
+      return false}
   }
 
   async fixSyntaxIssues(filePath) {
@@ -503,13 +441,10 @@ class TargetedErrorResolution {
       
       if (newContent !== content) {
         fs.writeFileSync(filePath, newContent);
-        fixed = true;
-      }
+        fixed = true}
       
-      return fixed;
-    } catch (error) {
-      return false;
-    }
+      return fixed} catch (error) {
+      return false}
   }
 }
 
@@ -518,16 +453,12 @@ const automation = new TargetedErrorResolution();
 
 // Run immediately
 automation.run().then(() => {
-  console.log('✅ Targeted error resolution completed');
-}).catch((error) => {
-  console.error('❌ Targeted error resolution failed:', error);
-});
+  console.log('✅ Targeted error resolution completed')}).catch((error) => {
+  console.error('❌ Targeted error resolution failed:', error)});
 
 // Set up interval for continuous operation
 setInterval(() => {
   automation.run().catch((error) => {
-    console.error('❌ Targeted error resolution interval failed:', error);
-  });
-}, 12 * 60 * 1000); // Run every 12 minutes
+    console.error('❌ Targeted error resolution interval failed:', error)})}, 12 * 60 * 1000); // Run every 12 minutes
 
 console.log('🎯 Targeted error resolution automation running. Next check in 12 minutes');

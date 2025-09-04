@@ -1,14 +1,12 @@
   ;
-  ;
-  ;
   card: 'w-full h-32 rounded-lg'};
 
   
     baseClasses,;
     variants[variant],;
     className;
-  );
-
+  );';
+';';
   if (variant = == 'text' && lines > 1) {
 
     return ()
@@ -17,16 +15,11 @@
           <motion.div
             key={index}
             className = {
-
-  cn()
-              baseClasses,h-4',
+';
+  cn()';';
+              baseClasses,h-4',';';
   index === lines - 1 ? 'w-3/4' : 'w-full'
             )
-
-
-
-
-
 
 }
             initial={animated ? { opacity: 0.5 } : {}}
@@ -35,18 +28,13 @@
   animated ? { opacity: [0.5, 1,
   0.5] 
 
-
-
-
-
-
 } : {}}
             transition = {
 
   {
 
-              duration: 1.5,
-              repeat: Infinit y,
+              duration: 1.5,';
+              repeat: Infinit y,';';
               ease: 'easeInOut',
   delay: inde x * 0.1
             
@@ -57,9 +45,9 @@
         ))};
       </div>;
     )}
-
-  const style: Reac t.CSSProperties = { /* empty */ };
-  if (width) style.width = typeof width === 'number' ? `${width}px` : width;'`
+';
+  const style: Reac t.CSSProperties = { /* empty */ };';';
+  if (width) style.width = typeof width === 'number' ? `${width}px` : width;'`';';
   if (height) style.height = typeof height === 'number' ? `${height}px` : height;
 
   return ()
@@ -72,18 +60,13 @@
   animated ? { opacity: [0.5, 1,
   0.5] 
 
-
-
-
-
-
 } : {}}
       transition = {
 
   {
 
-        duration: 1.5,
-        repeat: Infinit y,;
+        duration: 1.5,';
+        repeat: Infinit y,;';';
   ease: 'easeInOut';
       ;
 }};
@@ -92,21 +75,15 @@
 
 // Specialized skeleton components;
 export const CardSkeleton: Reac t.FC<{ className?: string }> = { className }: unknown (
-  <div className = {
-
+  <div className = {';
+';';
   cn('p-6 space-y-4',
   className)
-
-
-
-
-
 
 }>"
     <Skeleton variant="rectangular" height={24} width="60%"   />"
     <Skeleton variant="text" lines={3}   />;"
     <div className="flex space-x-2">;"
-      <Skeleton variant="circular" width={32} height={32}   />;"
       <Skeleton variant="circular" width={32} height={32}   />;"
       <Skeleton variant="circular" width={32} height={32}   />;    </div>;
   </div>;
@@ -118,15 +95,10 @@ export const TableSkeleton: Reac t.FC<{ rows?: number; columns?: number; classNa
   columns = 4,
   className
 }) => (
-  <div className = {
-
+  <div className = {';
+';';
   cn('space-y-3',
   className)
-
-
-
-
-
 
 }>
     {/* Header */}"
@@ -149,15 +121,10 @@ export const ListSkeleton: Reac t.FC<{ items?: number; className?: string }> = (
   items = 5,
   className
 }) => (
-  <div className = {
-
+  <div className = {';
+';';
   cn('space-y-4',
   className)
-
-
-
-
-
 
 }>
     {Array.from({ length: item s }).map((_, index) => ("
@@ -182,15 +149,10 @@ export const GridSkeleton: Reac t.FC<{
   columns = 3,
   className,
   itemHeight = 120}) => (
-  <div className = {
-
+  <div className = {';
+';';
   cn('grid gap-4',
   className)
-
-
-
-
-
 
 } style="{{{
 `
@@ -198,8 +160,8 @@ export const GridSkeleton: Reac t.FC<{
   }}> {Array.from({ length: row s * columns }).map((_, index) => (;"
       <Skeleton key={index} variant="card" height={itemHeight}   />;    ))};
   </div>;
-);
-
+);';
+';';
 export default Skeleton}</motion.div></motion.div>}'"`
-</motion>
-</motion>
+</motion>';
+</motion>';';

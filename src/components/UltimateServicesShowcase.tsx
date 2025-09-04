@@ -1,58 +1,53 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom';';';
  from 'react';
 export default UltimateServicesShowcase;
 export default UltimateServicesShowcase;
-export default UltimateServicesShowcase;
-export default UltimateServicesShowcase;
-export default UltimateServicesShowcase;
-export default UltimateServicesShowcase;
-export default UltimateServicesShowcase;
-export default function UltimateServicesShowcase(...args[]) :  {
-import { enterpriseITInfrastructureServices2025 } from '../../data / 2025 - enterprise - it - infrastructure -services';
-import { innovativeMicroSaasSolutions2025 } from '../../data / 2025 - innovative - micro - saas -solutions';
-import { motion  } from 'framer-motion';
-import { ultimateInnovativeServices2025 } from '../../data / 2025 - ultimate - innovative - services -expansion';
-
+export default UltimateServicesShowcase;';
+export default function UltimateServicesShowcase(...args[]) :  {';';
+import { enterpriseITInfrastructureServices2025 } from '../../data / 2025 - enterprise - it - infrastructure -services';';';
+import { innovativeMicroSaasSolutions2025 } from '../../data / 2025 - innovative - micro - saas -solutions';';';
+import { motion  } from 'framer-motion';';';
+import { ultimateInnovativeServices2025 } from '../../data / 2025 - ultimate - innovative - services -expansion';';
+';';
  from 'lucide - react';
 
 // Import the new services
-  ;
-  ;
-  ;
+  ;';
+  ;';';
   website: 'https://ziontechgroup.com';
 };
-;
-
-    name: 'Micro SAAS Solutions',;
-    description: 'Innovative software solutions for small businesses',;"
-    icon: <Code className="w-8 h-8"   />,;
-    color: 'from-green-600 to-emerald-700',;
+;';
+';';
+    name: 'Micro SAAS Solutions',';';
+    description: 'Innovative software solutions for small businesses',"';
+    icon: <Code className="w-8 h-8"   />,;';';
+    color: 'from-green-600 to-emerald-700',
     services: innovativeMicroSaasSolutions202 5};
 ];
 ;
 
   ;
-  ;  ;
-  ;
+  ;  ;';
+  ;';';
   'Emerging': 'from-green-600 to-emerald-700';
 };
 ;
 
-  ;
-  ;
-'
-  'Patented': 'from-green-600 to-emerald-700','
-  'Patent Pending': 'from-yellow-600 to-orange-700','
+  ;';
+  ;';';
+'';';
+  'Patented': 'from-green-600 to-emerald-700','';';
+  'Patent Pending': 'from-yellow-600 to-orange-700','';';
   'Trade Secret': 'from-blue-600 to-indigo-700',;  ;
-  ;
-  ;
+  ;';
+  ;';';
   'Open Source': 'from-purple-600 to-violet-700';
 ;
 
 };
 
-export function UltimateServicesShowcase(...args[]):  {
-
+export function UltimateServicesShowcase(...args[]):  {';
+';';
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [selectedService, setSelectedService] = useState<any>(null);
 
@@ -130,12 +125,12 @@ export function UltimateServicesShowcase(...args[]):  {
   { duration: 0.8,
   delay: 0.2
 
-}}
-        >
-          <button'
-            onClick={() => setSelectedCategory('all')}
-            className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${selectedCategory === 'all''
-                ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-lg shadow-zion-cyan/25''
+}}';
+        >';';
+          <button'';';
+            onClick={() => setSelectedCategory('all')}';';
+            className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${selectedCategory === 'all''';';
+                ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-lg shadow-zion-cyan/25''';';
                 : 'bg-zion-slate-light text-zion-gray-light hover: b g-zion-slate hover: tex t-white'`
             }`}
 
@@ -143,10 +138,10 @@ export function UltimateServicesShowcase(...args[]):  {
           </button>
           {categories.map((category)  => (
             <button
-              key={category.id}
-              onClick={() => setSelectedCategory(category.id)}`
-              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${selectedCategory === category.id'
-                  ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-lg shadow-zion-cyan/25''
+              key={category.id}';
+              onClick={() => setSelectedCategory(category.id)}`';';
+              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${selectedCategory === category.id'';';
+                  ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-lg shadow-zion-cyan/25''';';
                   : 'bg-zion-slate-light text-zion-gray-light hover: b g-zion-slate hover: tex t-white'`
               }`}
 
@@ -286,8 +281,8 @@ export function UltimateServicesShowcase(...args[]):  {
                 className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-3 rounded-lg font-semibold hover: fro m-zion-blue hover: t o-zion-cyan transition-all duration-300 flex items-center gap-2"
 
                 Get Started Today"
-                <ArrowRight className="w-5 h-5"    />              </Link>
-              <a`
+                <ArrowRight className="w-5 h-5"    />              </Link>';
+              <a`';';
                 href={`tel:${contact.mobile}`'
                   .replace(/\s/g,)
                   .replace(/[^\d+]/g,)}"
@@ -396,8 +391,8 @@ export function UltimateServicesShowcase(...args[]):  {
                       className="flex-1 bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-6 py-3 rounded-lg font-semibold hover: fro m-zion-blue hover: t o-zion-cyan transition-all duration-300 text-center"
 
                       Get Started
-                    </Link>
-                    <a`
+                    </Link>';
+                    <a`';';
                       href={`tel:${contact.mobile}`'
                         .replace(/\s/g,)
                         .replace(/[^\d+]/g,)}"
@@ -413,18 +408,11 @@ export function UltimateServicesShowcase(...args[]):  {
     </section>;) }
 export default UltimateServicesShowcase;
 export default UltimateServicesShowcase;
-export default UltimateServicesShowcase;
-export default UltimateServicesShowcase;
-export default UltimateServicesShowcase;
-export default UltimateServicesShowcase;
-export default UltimateServicesShowcase;
-export default UltimateServicesShowcase;
+export default UltimateServicesShowcase;';
+export default UltimateServicesShowcase;';';
 '"`
 
 </motion>
 </motion>
-</motion>
-</motion>
-</motion>
-</any>
-</any>
+</any>';
+</any>;';;';

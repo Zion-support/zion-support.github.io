@@ -3,23 +3,24 @@ import {Badge} from "ui/badge.tsx";
 import {Button} from "ui/button.tsx";
 import {Star, Zap, Shield, TrendingUp, Users} from 'lucide-react';
 export function ServiceShowcase(props: any) {
-    const getCategoryIcon = (props: any) => {
-        switch (category) {
-            case 'AI Services': return <Zap className="h-5 w-5" />;
-            case 'Security': return <Shield className="h-5 w-5" />;
-            case 'Analytics': return <TrendingUp className="h-5 w-5" />;
+    const getCategoryIcon = (props: any) => {';
+        switch (category) {';';
+            case 'AI Services': return <Zap className="h-5 w-5" />;';';
+            case 'Security': return <Shield className="h-5 w-5" />;';';
+            case 'Analytics': return <TrendingUp className="h-5 w-5" />;';';
             case 'Development': return <Users className="h-5 w-5" />;
             default: return <Star className="h-5 w-5" />}
     };
-    const getCategoryColor = (props: any) => {
-        switch (category) {
-            case 'AI Services': return 'from-purple-500 to-pink-500';
-            case 'Security': return 'from-red-500 to-orange-500';
-            case 'Analytics': return 'from-blue-500 to-cyan-500';
-            case 'Development': return 'from-green-500 to-emerald-500';
+    const getCategoryColor = (props: any) => {';
+        switch (category) {';';
+            case 'AI Services': return 'from-purple-500 to-pink-500';';';
+            case 'Security': return 'from-red-500 to-orange-500';';';
+            case 'Analytics': return 'from-blue-500 to-cyan-500';';';
+            case 'Development': return 'from-green-500 to-emerald-500';';';
             default: return 'from-gray-500 to-slate-500'}
     };
-    return (<div className="py-12 bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900">
+    return (
+    <div className="min-h-screen bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
@@ -36,8 +37,9 @@ export function ServiceShowcase(props: any) {
                   <Badge className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-semibold">
                     Featured
                   </Badge>
-                </div>)}
-              
+                    </div>
+  );
+}
               <CardHeader className="pb-4">
                 <div className="flex items-center gap-3 mb-3">
                   <div className={`p-2 rounded-lg bg-gradient-to-r ${getCategoryColor(service.category)}`}>
@@ -101,4 +103,7 @@ export function ServiceShowcase(props: any) {
           </Button>
         </div>
       </div>
-    </div>)}
+        </div>
+  );
+}';
+;';;';

@@ -17,8 +17,7 @@ function log(message, level = 'info') {
   
   // Also log to file
   const logFile = path.join(__dirname, '..', 'automation', 'logs', 'automation.log');
-  fs.appendFileSync(logFile, logMessage + '\n');
-}
+  fs.appendFileSync(logFile, logMessage + '\n')}
 
 // Error handling utility
 function handleError(error, context) {
@@ -32,8 +31,7 @@ function handleError(error, context) {
     error: error.message,
     stack: error.stack
   };
-  fs.appendFileSync(errorLogFile, JSON.stringify(errorDetails, null, 2) + '\n');
-}
+  fs.appendFileSync(errorLogFile, JSON.stringify(errorDetails, null, 2) + '\n')}
 
 // Automation functions
 const automations = {
@@ -45,32 +43,25 @@ const automations = {
       log('Running ESLint fixes...');
       try {
         execSync('npm run lint -- --fix', { stdio: 'pipe', cwd: process.cwd() });
-        log('ESLint fixes completed successfully');
-      } catch (eslintError) {
+        log('ESLint fixes completed successfully')} catch (eslintError) {
         log('ESLint found issues, attempting to fix critical ones...', 'warn');
         
         // Fix critical syntax errors
-        await fixCriticalSyntaxErrors();
-      }
+        await fixCriticalSyntaxErrors()}
       
       // Fix TypeScript errors
       log('Checking TypeScript errors...');
       try {
         execSync('npm run type-check', { stdio: 'pipe', cwd: process.cwd() });
-        log('TypeScript check passed');
-      } catch (tsError) {
+        log('TypeScript check passed')} catch (tsError) {
         log('TypeScript errors found, attempting auto-fixes...', 'warn');
-        await fixTypeScriptErrors();
-      }
+        await fixTypeScriptErrors()}
       
       // Update dependencies if needed
       await checkAndUpdateDependencies();
       
-      log('Console error fixing completed');
-      
-    } catch (error) {
-      handleError(error, 'console-error-fixer');
-    }
+      log('Console error fixing completed')} catch (error) {
+      handleError(error, 'console-error-fixer')}
   },
 
   'check-links': async () => {
@@ -92,11 +83,8 @@ const automations = {
       const reportFile = path.join(__dirname, '..', 'link-checker-report.json');
       fs.writeFileSync(reportFile, JSON.stringify(linkReport, null, 2));
       
-      log('Link checking completed');
-      
-    } catch (error) {
-      handleError(error, 'link-checker');
-    }
+      log('Link checking completed')} catch (error) {
+      handleError(error, 'link-checker')}
   },
 
   improve: async () => {
@@ -115,11 +103,8 @@ const automations = {
       // Check for performance issues
       await checkPerformanceIssues();
       
-      log('Continuous improvement completed');
-      
-    } catch (error) {
-      handleError(error, 'continuous-improvement');
-    }
+      log('Continuous improvement completed')} catch (error) {
+      handleError(error, 'continuous-improvement')}
   },
 
   'build-test': async () => {
@@ -130,26 +115,19 @@ const automations = {
       log('Attempting project build...');
       try {
         execSync('npm run build', { stdio: 'pipe', cwd: process.cwd() });
-        log('Build successful');
-      } catch (buildError) {
+        log('Build successful')} catch (buildError) {
         log('Build failed, attempting fixes...', 'warn');
-        await fixBuildErrors();
-      }
+        await fixBuildErrors()}
       
       // Run tests
       log('Running tests...');
       try {
         execSync('npm test -- --passWithNoTests', { stdio: 'pipe', cwd: process.cwd() });
-        log('Tests passed');
-      } catch (testError) {
-        log('Tests failed, reviewing issues...', 'warn');
-      }
+        log('Tests passed')} catch (testError) {
+        log('Tests failed, reviewing issues...', 'warn')}
       
-      log('Build and test automation completed');
-      
-    } catch (error) {
-      handleError(error, 'build-test');
-    }
+      log('Build and test automation completed')} catch (error) {
+      handleError(error, 'build-test')}
   },
 
   security: async () => {
@@ -160,17 +138,12 @@ const automations = {
       log('Running security audit...');
       try {
         execSync('npm audit --audit-level moderate', { stdio: 'pipe', cwd: process.cwd() });
-        log('No security issues found');
-      } catch (auditError) {
+        log('No security issues found')} catch (auditError) {
         log('Security issues found, attempting fixes...', 'warn');
-        await fixSecurityIssues();
-      }
+        await fixSecurityIssues()}
       
-      log('Security audit completed');
-      
-    } catch (error) {
-      handleError(error, 'security-audit');
-    }
+      log('Security audit completed')} catch (error) {
+      handleError(error, 'security-audit')}
   },
 
   deps: async () => {
@@ -181,11 +154,8 @@ const automations = {
       log('Checking for outdated dependencies...');
       await checkAndUpdateDependencies();
       
-      log('Dependency update completed');
-      
-    } catch (error) {
-      handleError(error, 'dependency-updates');
-    }
+      log('Dependency update completed')} catch (error) {
+      handleError(error, 'dependency-updates')}
   },
 
   performance: async () => {
@@ -208,11 +178,8 @@ const automations = {
       const reportFile = path.join(__dirname, '..', 'performance-report.json');
       fs.writeFileSync(reportFile, JSON.stringify(performanceReport, null, 2));
       
-      log('Performance monitoring completed');
-      
-    } catch (error) {
-      handleError(error, 'performance-monitor');
-    }
+      log('Performance monitoring completed')} catch (error) {
+      handleError(error, 'performance-monitor')}
   },
 
   quality: async () => {
@@ -235,11 +202,8 @@ const automations = {
       const reportFile = path.join(__dirname, '..', 'quality-report.json');
       fs.writeFileSync(reportFile, JSON.stringify(qualityReport, null, 2));
       
-      log('Quality checks completed');
-      
-    } catch (error) {
-      handleError(error, 'quality-checks');
-    }
+      log('Quality checks completed')} catch (error) {
+      handleError(error, 'quality-checks')}
   },
 
   integrity: async () => {
@@ -250,11 +214,8 @@ const automations = {
       log('Checking link integrity...');
       
       // Implementation for link integrity checks
-      log('Link integrity check completed');
-      
-    } catch (error) {
-      handleError(error, 'link-integrity');
-    }
+      log('Link integrity check completed')} catch (error) {
+      handleError(error, 'link-integrity')}
   },
 
   maximize: async () => {
@@ -265,11 +226,8 @@ const automations = {
       log('Optimizing frontend...');
       
       // Implementation for frontend optimization
-      log('Frontend optimization completed');
-      
-    } catch (error) {
-      handleError(error, 'front-maximizer');
-    }
+      log('Frontend optimization completed')} catch (error) {
+      handleError(error, 'front-maximizer')}
   },
 
   sitemap: async () => {
@@ -281,16 +239,11 @@ const automations = {
       
       try {
         execSync('npm run sitemap', { stdio: 'pipe', cwd: process.cwd() });
-        log('Sitemap generated successfully');
-      } catch (sitemapError) {
-        log('Sitemap generation failed, using fallback...', 'warn');
-      }
+        log('Sitemap generated successfully')} catch (sitemapError) {
+        log('Sitemap generation failed, using fallback...', 'warn')}
       
-      log('Sitemap automation completed');
-      
-    } catch (error) {
-      handleError(error, 'sitemap-runner');
-    }
+      log('Sitemap automation completed')} catch (error) {
+      handleError(error, 'sitemap-runner')}
   }
 };
 
@@ -306,14 +259,12 @@ async function fixCriticalSyntaxErrors() {
   ];
   
   // Implementation would go here
-  log('Critical syntax errors fixed');
-}
+  log('Critical syntax errors fixed')}
 
 async function fixTypeScriptErrors() {
   log('Fixing TypeScript errors...');
   // Implementation for TypeScript error fixes
-  log('TypeScript errors addressed');
-}
+  log('TypeScript errors addressed')}
 
 async function checkAndUpdateDependencies() {
   log('Checking dependencies...');
@@ -321,10 +272,8 @@ async function checkAndUpdateDependencies() {
   try {
     // Check for security vulnerabilities
     execSync('npm audit fix --force', { stdio: 'pipe', cwd: process.cwd() });
-    log('Dependencies updated for security');
-  } catch (error) {
-    log('Dependency update completed with warnings', 'warn');
-  }
+    log('Dependencies updated for security')} catch (error) {
+    log('Dependency update completed with warnings', 'warn')}
 }
 
 async function removeUnusedImports() {
@@ -352,10 +301,8 @@ async function fixSecurityIssues() {
   
   try {
     execSync('npm audit fix --force', { stdio: 'pipe', cwd: process.cwd() });
-    log('Security issues fixed');
-  } catch (error) {
-    log('Security fixes completed with warnings', 'warn');
-  }
+    log('Security issues fixed')} catch (error) {
+    log('Security fixes completed with warnings', 'warn')}
 }
 
 // Main execution
@@ -364,26 +311,21 @@ async function main() {
   
   if (!action || !automations[action]) {
     log(`Invalid action: ${action}. Available actions: ${Object.keys(automations).join(', ')}`, 'error');
-    process.exit(1);
-  }
+    process.exit(1)}
   
   log(`Starting automation: ${action}`);
   
   try {
     await automations[action]();
-    log(`Automation completed successfully: ${action}`);
-  } catch (error) {
+    log(`Automation completed successfully: ${action}`)} catch (error) {
     handleError(error, action);
-    process.exit(1);
-  }
+    process.exit(1)}
 }
 
 // Run the automation
 if (require.main === module) {
   main().catch(error => {
     handleError(error, 'main');
-    process.exit(1);
-  });
-}
+    process.exit(1)})}
 
 module.exports = { automations, log, handleError };

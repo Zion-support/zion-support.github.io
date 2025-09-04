@@ -12,8 +12,7 @@ export interface AiAutonomousService2026 {
   contactInfo: {
     mobile: string;
     email: string;
-address: string;
-  };export const aiAutonomousServices2026: AiAutonomousService2026[] = [
+address: string};export const aiAutonomousServices2026: AiAutonomousService2026[] = [
   {
     id: "2026-ai-autonomous",
     name: "2026 AI Autonomous Platform",
@@ -34,5 +33,4 @@ address: string;
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-];
-}}}
+]}}}

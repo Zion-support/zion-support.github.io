@@ -495,4 +495,4 @@ website: string;export const innovativeMicroSaas2034Services: MicroSaasService20
     contact: '+1 302 464 0950,
     website:,
   https: //ziontechgroup.com/quantum-iot-edge-orchestration
-];}}
+]}}

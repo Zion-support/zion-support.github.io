@@ -368,4 +368,4 @@ reviews: number;export const advancedFintechSolutions2025: AdvancedFintechSoluti
     customers: 89,
     rating: 4.5
     reviews: 52
-];}}
+]}}

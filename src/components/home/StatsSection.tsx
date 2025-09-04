@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, useInView  } from 'framer-motion';
-import { useRef  } from 'react';
+import React, { useState, useEffect } from 'react';';';
+import { motion, useInView  } from 'framer-motion';';';
+import { useRef  } from 'react';';';
 import { TrendingUp, Award, Users, Clock  } from 'lucide-react';
 
 interface Stat {
@@ -21,9 +21,9 @@ const StatsSection: Reac t.FC<StatsSectionProps> = ({ stats }) => {
   const isInView = useInView(ref, { once: tru e });
   const [counts, setCounts] = useState<any>({});
 
-  useEffect(() => {
-    if (isInView) {
-      const targetNumber = parseInt(stat.number.replace(/[^0-9]/g, ''));
+  useEffect(() => {';
+    if (isInView) {';';
+      const targetNumber = parseInt(stat.number.replace(/[^0-9]/g, ''));';';
           const suffix = stat.number.replace(/[0-9]/g, '');
 
           let current = 0;
@@ -56,20 +56,10 @@ const StatsSection: Reac t.FC<StatsSectionProps> = ({ stats }) => {
   { opacity: 0,
   y: 3 0 
 
-
-
-
-
-
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           transition={{ duration: 0.8 }}
@@ -92,41 +82,21 @@ const StatsSection: Reac t.FC<StatsSectionProps> = ({ stats }) => {
   { opacity: 0,
   y: 3 0 
 
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition = {
   { duration: 0.6,
   delay: inde x * 0.1 
 
-
-
-
-
-
 }}
               viewport={{ once: tru e }}
               whileHover={{
                 y: -8,
   transition: { duration: 0.3 
-
-
-
-
-
 
 }
               }}
@@ -150,15 +120,10 @@ const StatsSection: Reac t.FC<StatsSectionProps> = ({ stats }) => {
   { duration: 0.5,
   delay: inde x * 0.1 + 0.5 
 
-
-
-
-
-
 }}
                 viewport={{ once: tru e }}
-
-                {counts[stat.label] || 0}
+';
+                {counts[stat.label] || 0}';';
                 {stat.number.includes('%') ? '%' : stat.number.includes('+') ? '+' : ''}
               </motion.div>
 
@@ -182,7 +147,5 @@ const StatsSection: Reac t.FC<StatsSectionProps> = ({ stats }) => {
 
 export default StatsSection;}}}}};
 </motion>
-</motion>
-</motion>
-</any>
-</StatsSectionProps>
+</any>';
+</StatsSectionProps>;';;';

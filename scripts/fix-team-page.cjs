@@ -11,8 +11,7 @@ function fixTeamPage() {
   
   if (!fs.existsSync(filePath)) {
     console.log('❌ Team page not found');
-    return false;
-  }
+    return false}
 
   let content = fs.readFileSync(filePath, 'utf8');
   
@@ -156,12 +155,10 @@ export default function Team() {
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.transform = 'translateY(-5px)';
-                    e.currentTarget.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.3)';
-                  }}
+                    e.currentTarget.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.3)'}}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.transform = 'translateY(0)';
-                    e.currentTarget.style.boxShadow = 'none';
-                  }}
+                    e.currentTarget.style.boxShadow = 'none'}}
                 >
                   <div style={{ textAlign: 'center', marginBottom: '20px' }}>
                     <div style={{ fontSize: '4rem', marginBottom: '15px' }}>
@@ -221,12 +218,10 @@ export default function Team() {
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-5px)';
-                  e.currentTarget.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.3)';
-                }}
+                  e.currentTarget.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.3)'}}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = 'none';
-                }}
+                  e.currentTarget.style.boxShadow = 'none'}}
               >
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '15px' }}>
                   <h3 style={{ fontSize: '1.3rem', fontWeight: '700' }}>
@@ -287,27 +282,22 @@ export default function Team() {
               transition: 'border-color 0.3s ease'
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.6)';
-            }}
+              e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.6)'}}
             onMouseLeave={(e) => {
-              e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.3)';
-            }}>
+              e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.3)'}}>
               Contact Us
             </Link>
           </div>
         </div>
       </div>
     </>
-  );
-}`;
+  )}`;
 
   fs.writeFileSync(filePath, fixedContent, 'utf8');
   console.log('✅ Team page fixed successfully');
-  return true;
-}
+  return true}
 
 if (require.main === module) {
-  fixTeamPage();
-}
+  fixTeamPage()}
 
 module.exports = fixTeamPage;

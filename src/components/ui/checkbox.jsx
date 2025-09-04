@@ -5,6 +5,5 @@ export function Checkbox(props: any) {
     </label>
   );
 }
-
-
-export default checkbox;
+';
+export default checkbox;';';

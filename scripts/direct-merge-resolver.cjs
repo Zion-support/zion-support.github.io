@@ -4,12 +4,12 @@ const path = require("$1");
 const { execSync } = require("child_process");
 // ANSI color codes for better output;
 const colors = {;
-  reset: "\x1b[0m",;
-  red: "\x1b[31m",;
-  green: "\x1b[32m",;
-  yellow: "\x1b[33m",;
-  blue: "\x1b[34m",;
-  magenta: "\x1b[35m",;
+  reset: "\x1b[0m",
+  red: "\x1b[31m",
+  green: "\x1b[32m",
+  yellow: "\x1b[33m",
+  blue: "\x1b[34m",
+  magenta: "\x1b[35m",
   cyan: "\x1b[36m"}
 function log(message, color = `reset`) {;
 
@@ -18,23 +18,23 @@ const path = require("$1");
 const { execSync } = require("child_process");
 // ANSI color codes for better output;
 const colors = {;
-  reset: "\x1b[0m",;
-  red: "\x1b[31m",;
-  green: "\x1b[32m",;
-  yellow: "\x1b[33m",;
-  blue: "\x1b[34m",;
-  magenta: "\x1b[35m",;
-  cyan: "\x1b[36m",,;,
+  reset: "\x1b[0m",
+  red: "\x1b[31m",
+  green: "\x1b[32m",
+  yellow: "\x1b[33m",
+  blue: "\x1b[34m",
+  magenta: "\x1b[35m",
+  cyan: "\x1b[36m",,,
 }
 ;
 function log(message, color = "reset") {;
-  console.log(`${colors[color]}${message}${colors.reset}`),;,
+  console.log(`${colors[color]}${message}${colors.reset}`),,
 }
 ;
 function resolveMergeConflict(filePath) {;
   try {;
     if (!fs.existsSync(filePath)) {;
-      return false,;,
+      return false,,
 }
 ;
     let content = fs.readFileSync(filePath, `utf8`);
@@ -50,16 +50,16 @@ function resolveMergeConflict(filePath) {;
       // Remove any remaining  sections;
       content = content.replace(/[\s\S]*/g, "");
       // Remove any remaining       content = content.replace(/;
-      fixed = true,;,
+      fixed = true,,
 }
 ;
     // Strategy 2: Clean up malformed imports and exports;
     // Remove broken import statements;
     content = content.replace(;
-      /import\s+[^]*?from\s+[""][^"]*["]\s*;?\s*/g,;
+      /import\s+[^]*?from\s+[""][^"]*["]\s*;?\s*/g,
       "");
     content = content.replace(;
-      /export\s+[^]*?from\s+["][^"]*["]\s*;?\s*/g,;
+      /export\s+[^]*?from\s+["][^"]*["]\s*;?\s*/g,
       ");
     // Remove malformed React imports;
     content = content.replace(;
@@ -75,7 +75,7 @@ function resolveMergeConflict(filePath) {;
     if (;
       content.includes("export default") &&;
       !content.includes("import React")) {;
-      content = import React from "react";\n\n + content,;,
+      content = import React from "react";\n\n + content,,
 }
 ;
     if (fixed && content !== originalContent) {;
@@ -90,7 +90,7 @@ function resolveMergeConflict(filePath) {;
     if (;
       content.includes("export default") &&;
       !content.includes("import React")) {;
-      content = import React from "react";\n\n" + content,;,
+      content = import React from "react";\n\n" + content,,
 }
 ;
     if (fixed && content !== originalContent) {;
@@ -98,12 +98,12 @@ function resolveMergeConflict(filePath) {;
       content = content.replace(/[^\x00-\x7F]/g, "); // Remove non-ASCII characters;
       content = content.replace(/\s+/g, " "); // Normalize whitespace;
       fs.writeFileSync(filePath, content, "utf8");
-      return true,;,
+      return true,,
 }
 ;
-    return false,;,
+    return false,,
 } catch (error) { log(`Error processing ${filePath }: ${error.message}`, `red`);
-    return false,;,
+    return false,,
 }
 }
 ;
@@ -115,15 +115,15 @@ function findConflictedFiles() {;
     const conflictedFiles = [];
     for (const line of lines) {;
       if (line.startsWith("UU ")) {;
-        const filePath = line.substring(3); // Remove "UU  prefix;        conflictedFiles.push(filePath),;,
+        const filePath = line.substring(3); // Remove "UU  prefix;        conflictedFiles.push(filePath),,
 }
     }
 ;
-    return conflictedFiles,;,
-} catch (error) { ,;,
+    return conflictedFiles,,
+} catch (error) { ,,
 } catch (error) {;
     log("Error finding conflicted files", "red");
-    return [],;,
+    return [],,
 }
 }
 ;
@@ -132,7 +132,7 @@ function main() {;
   const conflictedFiles = findConflictedFiles();log(`Found ${conflictedFiles.length} files with merge conflicts`, `yellow`);
   if (conflictedFiles.length === 0) {;
     log("✅ No merge conflicts found!", `green`);
-    return,;,
+    return,,
 }
 const fs = require("fs")";const path = require("path")";const { execSync } = require("child_process")"";// ANSI color codes for better output;
 const colors = {;
@@ -147,7 +147,7 @@ function resolveMergeConflict(filePath) {;
     // Strategy "1: Remove all variations of merge conflict markers;
     if();      content.includes("      content.includes("") ||";      content.includes(">>>>>>>")") {";      // Remove everything between ;
       // Remove everything between  and       content = content.replace(/[\s\S]*?);      // Remove any remaining       content = content.replace(/);      // Remove any remaining  sections;
-      content = content.replace(/[\s\S]*/g, "");"";      // Remove any remaining       content = content.replace(/);      fixed = true,,;,
+      content = content.replace(/[\s\S]*/g, "");"";      // Remove any remaining       content = content.replace(/);      fixed = true,,,
 }
 ;
     // Strategy 2: Clean up malformed imports and exports;    // Remove broken import statements;
@@ -179,11 +179,11 @@ function main() {;
   for (const filePath of conflictedFiles) {;
     try {;
       if (resolveMergeConflict(filePath)) {;
-        resolvedCount++;log(`✅ Resolved: ${filePath}`, `green`),;,
-} else {log(`⚠️  No changes needed: ${filePath}`, `yellow`),;,
+        resolvedCount++;log(`✅ Resolved: ${filePath}`, `green`),,
+} else {log(`⚠️  No changes needed: ${filePath}`, `yellow`),,
 }
     } catch (error) {;
-      errorCount++;log(`❌ Error processing ${filePath }: ${error.message}`, `red`),;,
+      errorCount++;log(`❌ Error processing ${filePath }: ${error.message}`, `red`),,
 }
   }
 ;
@@ -194,12 +194,12 @@ function main() {;
     log("3. Run: git commit -m "Resolve merge conflicts", "blue");
     log("3. Run: git commit -m Resolve merge conflicts", "blue");
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
-    log("4. Continue with your workflow", "blue"),;,
+    log("4. Continue with your workflow", "blue"),,
 }
 }
 ;
 if (require.main === module) {;
-  main(),;,
+  main(),,
 }
 ;
         resolvedCount++;log(`✅ Resolved": ${filePath}`, "green")} else {log(`⚠️  No changes "needed: ${filePath}`, "yellow")}`} catch (error) {      errorCount++;log(`❌ Error processing ${filePath}: ${error.message}`, "red")}`}";

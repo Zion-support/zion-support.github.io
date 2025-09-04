@@ -450,4 +450,4 @@ integrations: [
   'ISO 27001',
   'Healthcare compliance standards']
 
-];}}}}}}];
+]}}}}}}];

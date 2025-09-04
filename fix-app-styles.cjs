@@ -24,8 +24,7 @@ const fixes = [
 
 // Apply fixes
 fixes.forEach(fix => {
-  content = content.replace(fix.pattern, fix.replacement);
-});
+  content = content.replace(fix.pattern, fix.replacement)});
 
 // Write the fixed content back
 fs.writeFileSync('/workspace/pages/_app.tsx', content, 'utf8');

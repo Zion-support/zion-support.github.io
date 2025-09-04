@@ -609,4 +609,4 @@ reviews: number;export const blockchainInnovations2026: BlockchainInnovation2026
     customers: 420,
     rating: 4.8,
     reviews: 210
-];}}
+]}}

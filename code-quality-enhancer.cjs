@@ -29,18 +29,18 @@ class CodeQualityEnhancer {
       // Check for documentation
       const documentedFiles = files.filter(file => {
         const content = fs.readFileSync(file, 'utf8';);
-        return content.includes('/**') || content.includes('//');});
+        return content.includes('/**') || content.includes('//')});
       
       this.qualityMetrics.documentation = (documentedFiles.length / files.length) * 100;
       
-      return this.qualityMetrics;} catch (error) {
+      return this.qualityMetrics} catch (error) {
       console.error('Error analyzing code quality:', error);
-      return null;}
+      return null}
   }
 
   getSourceFiles() {
-    const files = [;];
-    const extensions = ['.ts', '.tsx', '.js', '.jsx';];
+    const files = [];
+    const extensions = ['.ts', '.tsx', '.js', '.jsx'];
     
     function traverse(dir) {
       const items = fs.readdirSync(dir;);
@@ -61,13 +61,12 @@ class CodeQualityEnhancer {
       }
     }
     
-    traverse('.');
-  }
-    return files;}
+    traverse('.')}
+    return files}
 
   calculateComplexity(content) {
     // Simple complexity calculation based on control structures
-    const complexityKeywords = ['if', 'else', 'for', 'while', 'switch', 'case', 'catch', '&&', '||';];
+    const complexityKeywords = ['if', 'else', 'for', 'while', 'switch', 'case', 'catch', '&&', '||'];
     let complexity = ;1; // Base complexity
     
     for (const keyword of complexityKeywords) {
@@ -81,8 +80,7 @@ class CodeQualityEnhancer {
         complexity += matches.length}
     }
     
-    return complexity;
-  }}
+    return complexity}}
 
   async generateQualityReport() {
     const metrics = await this.analyzeCodeQuality(;);
@@ -90,13 +88,13 @@ class CodeQualityEnhancer {
       timestamp: new Date().toISOString(),
       metrics,
       recommendations: this.generateQualityRecommendations(metrics)
-   ; ;};
+   };
     
     fs.writeFileSync('code-quality-report.json', JSON.stringify(report, null, 2));
-    return report;}
+    return report}
 
   generateQualityRecommendations(metrics) {
-    const recommendations = [;];
+    const recommendations = [];
     
     if ( {
       recommendations.push({
@@ -127,12 +125,11 @@ class CodeQualityEnhancer {
         message: 'Low documentation coverage. Consider adding more comments and JSDoc.'
       })}
     
-    return recommendations;
-  }}
+    return recommendations}}
 }
 
 // Run quality analysis
 const enhancer = new CodeQualityEnhancer;(;);
 enhancer.generateQualityReport().then(report => {
-  console.log('📊 Code quality report generated:', report);}).catch(error => {
+  console.log('📊 Code quality report generated:', report)}).catch(error => {
   console.error('❌ Quality analysis failed:', error)});

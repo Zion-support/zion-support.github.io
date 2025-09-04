@@ -20,15 +20,13 @@ export interface InnovativeMicroSaasService2026 {
   contactInfo: {
     phone: string;
     email: string;
-    website: string;
-  };
+    website: string};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];
     apiEndpoints: number;
     uptime: string;
-    security: string[];
-  };
+    security: string[]};
   competitors?: string[];
   marketSize?: string;
 
@@ -1378,11 +1376,8 @@ export const SPECIALIZED_SERVICES_2026 = [;
     price: 1999,
     currency: "$",
     pricingModel: "monthly",
-    marketPrice: "$1,999 - $6,999/month",;
+    marketPrice: "$1,999 - $6,999/month",
     contactInfo: {;
-      phone: "+1 302 464 0950",;
-      email: "kleber@ziontechgroup.com",;
-      website: "https://ziontechgroup.com";
-    };
-  };
-];
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"}}];

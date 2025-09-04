@@ -36,8 +36,7 @@ export interface InnovativeMicroSaasService2029V2 {
     mobile: string;
     email: string;
     website: string;
-address: string;
-  };export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2[] = [
+address: string};export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2[] = [
   {
     id:,
   ai-emotion-based-marketing-platform',
@@ -564,4 +563,4 @@ address: string;
   https: //ziontechgroup.com,
       address:
   '364 E Main St STE 1008 Middletown DE 19709'
-];}}}}}}}
+]}}}}}}}

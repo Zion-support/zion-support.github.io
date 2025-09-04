@@ -21,11 +21,9 @@ try {
     : 0;
   report.checks.push({ name: 'npm audit', status: vulnCount ? 'warning' : 'pass', summary: vulnCount });
   if (vulnCount) {
-    report.overallStatus = 'warning';
-  }
+    report.overallStatus = 'warning'}
 } catch (e) {
-  report.checks.push({ name: 'npm audit', status: 'error', error: e.message });
-}
+  report.checks.push({ name: 'npm audit', status: 'error', error: e.message })}
 
 // sensitive files
 const sensitiveFiles = ['.env', '.env.local', '.env.production', 'private-key.pem'];

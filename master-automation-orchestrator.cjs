@@ -32,16 +32,14 @@ class MasterAutomationOrchestrator {
     
     // Create reports directory
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir);
-    }
+      fs.mkdirSync(this.reportsDir)}
   }
 
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
     console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage + '\n');
-  }
+    fs.appendFileSync(this.logFile, logMessage + '\n')}
 
   async runScript(scriptPath, description) {
     try {
@@ -51,22 +49,16 @@ class MasterAutomationOrchestrator {
       const script = require(path.resolve(scriptPath));
       
       if (typeof script === 'function') {
-        await script();
-      } else if (script && typeof script.runAll === 'function') {
-        await script.runAll();
-      } else if (script && typeof script.runAllTests === 'function') {
-        await script.runAllTests();
-      } else if (script && typeof script.runAllOperations === 'function') {
-        await script.runAllOperations();
-      }
+        await script()} else if (script && typeof script.runAll === 'function') {
+        await script.runAll()} else if (script && typeof script.runAllTests === 'function') {
+        await script.runAllTests()} else if (script && typeof script.runAllOperations === 'function') {
+        await script.runAllOperations()}
       
       this.log(`✅ Completed: ${description}`);
       this.results.summary.scriptsRun++;
-      return true;
-    } catch (error) {
+      return true} catch (error) {
       this.log(`❌ Failed: ${description} - ${error.message}`);
-      return false;
-    }
+      return false}
   }
 
   async runHealthCheck() {
@@ -76,12 +68,10 @@ class MasterAutomationOrchestrator {
     try {
       const success = await this.runScript('./scripts/health-check.cjs', 'Health Check');
       this.results.phases.healthCheck.status = success ? 'completed' : 'failed';
-      this.results.phases.healthCheck.success = success;
-    } catch (error) {
+      this.results.phases.healthCheck.success = success} catch (error) {
       this.log(`❌ Health check failed: ${error.message}`);
       this.results.phases.healthCheck.status = 'failed';
-      this.results.phases.healthCheck.error = error.message;
-    }
+      this.results.phases.healthCheck.error = error.message}
   }
 
   async runPerformanceMonitor() {
@@ -91,12 +81,10 @@ class MasterAutomationOrchestrator {
     try {
       const success = await this.runScript('./scripts/simple-performance-monitor.cjs', 'Performance Monitor');
       this.results.phases.performanceMonitor.status = success ? 'completed' : 'failed';
-      this.results.phases.performanceMonitor.success = success;
-    } catch (error) {
+      this.results.phases.performanceMonitor.success = success} catch (error) {
       this.log(`❌ Performance monitor failed: ${error.message}`);
       this.results.phases.performanceMonitor.status = 'failed';
-      this.results.phases.performanceMonitor.error = error.message;
-    }
+      this.results.phases.performanceMonitor.error = error.message}
   }
 
   async runCodeQuality() {
@@ -106,12 +94,10 @@ class MasterAutomationOrchestrator {
     try {
       const success = await this.runScript('./scripts/simple-code-quality.cjs', 'Code Quality Check');
       this.results.phases.codeQuality.status = success ? 'completed' : 'failed';
-      this.results.phases.codeQuality.success = success;
-    } catch (error) {
+      this.results.phases.codeQuality.success = success} catch (error) {
       this.log(`❌ Code quality check failed: ${error.message}`);
       this.results.phases.codeQuality.status = 'failed';
-      this.results.phases.codeQuality.error = error.message;
-    }
+      this.results.phases.codeQuality.error = error.message}
   }
 
   async runTestRunner() {
@@ -121,12 +107,10 @@ class MasterAutomationOrchestrator {
     try {
       const success = await this.runScript('./scripts/automation-test-runner.cjs', 'Test Runner');
       this.results.phases.testRunner.status = success ? 'completed' : 'failed';
-      this.results.phases.testRunner.success = success;
-    } catch (error) {
+      this.results.phases.testRunner.success = success} catch (error) {
       this.log(`❌ Test runner failed: ${error.message}`);
       this.results.phases.testRunner.status = 'failed';
-      this.results.phases.testRunner.error = error.message;
-    }
+      this.results.phases.testRunner.error = error.message}
   }
 
   async runGitOperations() {
@@ -138,13 +122,11 @@ class MasterAutomationOrchestrator {
       this.results.phases.gitOperations.status = success ? 'completed' : 'failed';
       this.results.phases.gitOperations.success = success;
       if (success) {
-        this.results.summary.gitOperationsCompleted++;
-      }
+        this.results.summary.gitOperationsCompleted++}
     } catch (error) {
       this.log(`❌ Git operations failed: ${error.message}`);
       this.results.phases.gitOperations.status = 'failed';
-      this.results.phases.gitOperations.error = error.message;
-    }
+      this.results.phases.gitOperations.error = error.message}
   }
 
   async createAdditionalScripts() {
@@ -167,11 +149,9 @@ for (const step of buildSteps) {
   try {
     console.log(\`🔄 \${step.name}...\`);
     execSync(step.cmd, { stdio: 'inherit' });
-    console.log(\`✅ \${step.name} completed\`);
-  } catch (error) {
+    console.log(\`✅ \${step.name} completed\`)} catch (error) {
     console.log(\`❌ \${step.name} failed: \${error.message}\`);
-    process.exit(1);
-  }
+    process.exit(1)}
 }
 
 console.log('🎉 Build completed successfully!');
@@ -199,8 +179,7 @@ class MonitoringDashboard {
         hasNodeModules: fs.existsSync('node_modules'),
         hasTsConfig: fs.existsSync('tsconfig.json')
       }
-    };
-  }
+    }}
 
   generateReport() {
     const report = \`
@@ -220,14 +199,12 @@ class MonitoringDashboard {
 \`;
 
     fs.writeFileSync('monitoring-dashboard.md', report);
-    console.log('📊 Monitoring dashboard generated');
-  }
+    console.log('📊 Monitoring dashboard generated')}
 }
 
 if (require.main === module) {
   const dashboard = new MonitoringDashboard();
-  dashboard.generateReport();
-}
+  dashboard.generateReport()}
 
 module.exports = MonitoringDashboard;
 `;
@@ -235,8 +212,7 @@ module.exports = MonitoringDashboard;
     fs.writeFileSync('scripts/monitoring-dashboard.cjs', monitoringScript);
     this.log('✅ Created monitoring dashboard script');
 
-    this.results.summary.improvementsCreated = 2;
-  }
+    this.results.summary.improvementsCreated = 2}
 
   async runAll() {
     this.log('🚀 Starting Master Automation Orchestrator...\n');
@@ -278,9 +254,7 @@ module.exports = MonitoringDashboard;
       console.log(`- Improvements Created: ${this.results.summary.improvementsCreated}`);
       console.log(`- Git Operations Completed: ${this.results.summary.gitOperationsCompleted}`);
       
-      return this.results;
-      
-    } catch (error) {
+      return this.results} catch (error) {
       this.log(`❌ Master automation failed: ${error.message}`);
       this.results.status = 'failed';
       this.results.error = error.message;
@@ -289,15 +263,13 @@ module.exports = MonitoringDashboard;
       const reportPath = path.join(this.reportsDir, 'master-automation-report.json');
       fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));
       
-      throw error;
-    }
+      throw error}
   }
 }
 
 // Run if called directly
 if (require.main === module) {
   const orchestrator = new MasterAutomationOrchestrator();
-  orchestrator.runAll().catch(console.error);
-}
+  orchestrator.runAll().catch(console.error)}
 
 module.exports = MasterAutomationOrchestrator;

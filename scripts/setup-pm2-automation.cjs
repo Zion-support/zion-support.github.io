@@ -7,8 +7,7 @@ const path = require('path');
 class PM2AutomationSetup {
   constructor() {
     this.projectRoot = process.cwd();
-    this.ecosystemPath = path.resolve(this.projectRoot, 'ecosystem.config.cjs');
-  }
+    this.ecosystemPath = path.resolve(this.projectRoot, 'ecosystem.config.cjs')}
 
   async run() {
     console.log('🚀 Setting up PM2 Error Fixing Automation System...');
@@ -39,12 +38,9 @@ class PM2AutomationSetup {
       await this.displayStatus();
       
       console.log('✅ PM2 Error Fixing Automation System setup completed!');
-      console.log('📊 All error fixers are now running and will automatically fix issues');
-      
-    } catch (error) {
+      console.log('📊 All error fixers are now running and will automatically fix issues')} catch (error) {
       console.error('❌ Error setting up PM2 automation:', error);
-      process.exit(1);
-    }
+      process.exit(1)}
   }
 
   async checkPM2Installation() {
@@ -52,12 +48,10 @@ class PM2AutomationSetup {
     
     try {
       execSync('pm2 --version', { stdio: 'pipe' });
-      console.log('✅ PM2 is installed');
-    } catch (error) {
+      console.log('✅ PM2 is installed')} catch (error) {
       console.log('❌ PM2 is not installed. Installing PM2...');
       execSync('npm install -g pm2', { stdio: 'inherit' });
-      console.log('✅ PM2 installed successfully');
-    }
+      console.log('✅ PM2 installed successfully')}
   }
 
   async createLogsDirectory() {
@@ -66,10 +60,8 @@ class PM2AutomationSetup {
     const logsDir = path.resolve(this.projectRoot, 'logs');
     if (!fs.existsSync(logsDir)) {
       fs.mkdirSync(logsDir, { recursive: true });
-      console.log('✅ Logs directory created');
-    } else {
-      console.log('✅ Logs directory already exists');
-    }
+      console.log('✅ Logs directory created')} else {
+      console.log('✅ Logs directory already exists')}
   }
 
   async stopExistingProcesses() {
@@ -77,10 +69,8 @@ class PM2AutomationSetup {
     
     try {
       execSync('pm2 kill', { stdio: 'pipe' });
-      console.log('✅ Stopped existing PM2 processes');
-    } catch (error) {
-      console.log('ℹ️  No existing PM2 processes to stop');
-    }
+      console.log('✅ Stopped existing PM2 processes')} catch (error) {
+      console.log('ℹ️  No existing PM2 processes to stop')}
   }
 
   async startErrorFixingAutomations() {
@@ -103,10 +93,8 @@ class PM2AutomationSetup {
           stdio: 'pipe',
           cwd: this.projectRoot 
         });
-        console.log(`✅ ${fixer} started successfully`);
-      } catch (error) {
-        console.log(`⚠️  Could not start ${fixer}: ${error.message}`);
-      }
+        console.log(`✅ ${fixer} started successfully`)} catch (error) {
+        console.log(`⚠️  Could not start ${fixer}: ${error.message}`)}
     }
   }
 
@@ -118,10 +106,8 @@ class PM2AutomationSetup {
         stdio: 'pipe',
         cwd: this.projectRoot 
       });
-      console.log('✅ Master error fixer started successfully');
-    } catch (error) {
-      console.log(`⚠️  Could not start master error fixer: ${error.message}`);
-    }
+      console.log('✅ Master error fixer started successfully')} catch (error) {
+      console.log(`⚠️  Could not start master error fixer: ${error.message}`)}
   }
 
   async startOtherAutomations() {
@@ -147,10 +133,8 @@ class PM2AutomationSetup {
           stdio: 'pipe',
           cwd: this.projectRoot 
         });
-        console.log(`✅ ${automation} started successfully`);
-      } catch (error) {
-        console.log(`⚠️  Could not start ${automation}: ${error.message}`);
-      }
+        console.log(`✅ ${automation} started successfully`)} catch (error) {
+        console.log(`⚠️  Could not start ${automation}: ${error.message}`)}
     }
   }
 
@@ -159,20 +143,16 @@ class PM2AutomationSetup {
     
     try {
       execSync('pm2 save', { stdio: 'pipe' });
-      console.log('✅ PM2 configuration saved');
-    } catch (error) {
-      console.log(`⚠️  Could not save PM2 configuration: ${error.message}`);
-    }
+      console.log('✅ PM2 configuration saved')} catch (error) {
+      console.log(`⚠️  Could not save PM2 configuration: ${error.message}`)}
   }
 
   async displayStatus() {
     console.log('📊 Displaying PM2 status...');
     
     try {
-      execSync('pm2 status', { stdio: 'inherit' });
-    } catch (error) {
-      console.log(`⚠️  Could not display PM2 status: ${error.message}`);
-    }
+      execSync('pm2 status', { stdio: 'inherit' })} catch (error) {
+      console.log(`⚠️  Could not display PM2 status: ${error.message}`)}
   }
 
   async showAutomationSchedule() {
@@ -199,8 +179,7 @@ class PM2AutomationSetup {
     console.log('  • Link Integrity:          Every 2 hours');
     console.log('  • Front Maximizer:         Every 4 hours');
     console.log('  • Sitemap Runner:          Every 6 hours');
-    console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
-  }
+    console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')}
 
   async showCommands() {
     console.log('\n🛠️  Useful PM2 Commands:');
@@ -217,8 +196,7 @@ class PM2AutomationSetup {
     console.log('  pm2 save                      - Save current configuration');
     console.log('  pm2 startup                   - Setup PM2 to start on boot');
     console.log('  pm2 monit                     - Monitor processes in real-time');
-    console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
-  }
+    console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')}
 }
 
 // Run the setup
@@ -226,6 +204,5 @@ const setup = new PM2AutomationSetup();
 setup.run()
   .then(() => {
     setup.showAutomationSchedule();
-    setup.showCommands();
-  })
+    setup.showCommands()})
   .catch(console.error);

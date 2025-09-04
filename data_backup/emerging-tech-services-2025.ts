@@ -11,8 +11,7 @@ export interface EmergingTechService2025 {
   contactInfo: {
     mobile: string;
     email: string;
-address: string;
-  };export const emergingTechServices2025: EmergingTechService2025[] = [
+address: string};export const emergingTechServices2025: EmergingTechService2025[] = [
   {
     id: "metaverse-platform",
     name: "Metaverse Development Platform",
@@ -33,4 +32,4 @@ address: string;
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-];}}}
+]}}}

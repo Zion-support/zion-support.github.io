@@ -198,8 +198,8 @@ function GlobalPresenceSection(props: any) {export function GlobalPresenceSectio
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">"
             <h3 className="text-2xl font-bold mb-4">
               Ready to Go Global?
-            </h3>"
-            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+            </h3>"';
+            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">';';
               Whether you're expanding internationally or need local expertise,
               our global presence ensures you get the support you need, when you need it.</p>"
             <div className="flex flex-col sm: fle x-row gap-4 justify-center">"
@@ -222,13 +222,10 @@ export default GlobalPresenceSection;"
         </motion.div>;
       </div>;
     </section>;) }
-export default GlobalPresenceSection;
-export default GlobalPresenceSection;
+export default GlobalPresenceSection;';
+export default GlobalPresenceSection;';';
 '"
 
 </motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
+</motion>';
+</motion>;';;';

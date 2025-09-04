@@ -12,8 +12,8 @@ class AutomatedTestingEnhancer {
 
   log(message, type = 'info') {
     const timestamp = new Date().toISOString(;);
-    const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message;};`;
-    console.log(logEntry);}
+    const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message};`;
+    console.log(logEntry)}
 
   async generateComponentTests() {
     this.log('🧪 Generating component tests...');
@@ -22,8 +22,7 @@ class AutomatedTestingEnhancer {
     if () {
       this.log('Components directory not found', 'warn')) {
     ) {
-      this.log('Components directory not found', 'warn');
-  }
+      this.log('Components directory not found', 'warn')}
       return}
 
     const components = fs.readdirSync(componentsDir, { withFileTypes: true })
@@ -38,8 +37,7 @@ class AutomatedTestingEnhancer {
       if () {
         this.generateTestFile(componentName, testFilePath)) {
     ) {
-        this.generateTestFile(componentName, testFilePath);
-  }
+        this.generateTestFile(componentName, testFilePath)}
         this.improvements.push({
           type: 'test_generation',
           component: componentName,
@@ -80,8 +78,7 @@ describe('${componentName}', () => {
     if () {
       this.log('Pages directory not found', 'warn')) {
     ) {
-      this.log('Pages directory not found', 'warn');
-  }
+      this.log('Pages directory not found', 'warn')}
       return}
 
     const pages = fs.readdirSync(pagesDir, { withFileTypes: true })
@@ -96,8 +93,7 @@ describe('${componentName}', () => {
       if () {
         this.generatePageTestFile(pageName, testFilePath)) {
     ) {
-        this.generatePageTestFile(pageName, testFilePath);
-  }
+        this.generatePageTestFile(pageName, testFilePath)}
         this.improvements.push({
           type: 'page_test_generation',
           page: pageName,
@@ -149,7 +145,7 @@ describe('${pageName} Page', () => {
       const testOutput = execSync('npm test', { 
         encoding: 'utf8',
         cwd: this.projectRoot 
-      ;};);
+      };);
       
       this.testResults.push({
         type: 'test_execution',
@@ -177,13 +173,13 @@ describe('${pageName} Page', () => {
         totalTestRuns: this.testResults.length,
         successRate: this.testResults.filter(r => r.status === 'passed').length / this.testResults.length * 100
       }
-   ; ;};
+   };
     
     const reportPath = path.join(this.projectRoot, 'test-enhancement-report.json';);
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     
     this.log(`📊 Test enhancement report saved to: ${reportPath}`);
-    return report;}
+    return report}
 
   async start() {
     this.log('🚀 Automated Testing Enhancer starting...');

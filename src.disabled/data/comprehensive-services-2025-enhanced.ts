@@ -23,4 +23,4 @@ export: interface EnhancedServiceItem {
    mobile: string;
    email: string;
    address: string;
-   website: strin,g} badges: string[] technologyStack: string[] integrations: string[] compliance: string[] scalability: string: security: string[]} export: const comprehensiveServices2025Enhanced: EnhancedServiceItem[] = ['';,;
+   website: strin,g} badges: string[] technologyStack: string[] integrations: string[] compliance: string[] scalability: string: security: string[]} export: const comprehensiveServices2025Enhanced: EnhancedServiceItem[] = ['',

@@ -11,8 +11,7 @@ export interface Revolutionary2027ItService {
   contactInfo: {
     mobile: string;
     email: string;
-address: string;
-  };export const revolutionary2027ITServices: Revolutionary2027ItService[] = [
+address: string};export const revolutionary2027ITServices: Revolutionary2027ItService[] = [
   {
     id: "2027-revolutionary-it",
     name: "2027 Revolutionary IT Platform",
@@ -33,4 +32,4 @@ address: string;
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-];}}}
+]}}}

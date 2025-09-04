@@ -39,20 +39,9 @@ export interface ITService {
 const zionContact: ServiceContact = {
   phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
-  website: "https://ziontechgroup.com",;
+  website: "https://ziontechgroup.com",
   ;
-  ;
-  ;
-  ;
-  address: "364 E Main St STE 1008 Middletown DE 19709";
-;
-
-
-
-
-
-
-};
+  address: "364 E Main St STE 1008 Middletown DE 19709"};
 
 // Comprehensive IT Services 2030
 export const comprehensiveITServices2030: ITService[] = [;
@@ -72,7 +61,7 @@ export const comprehensiveITServices2030: ITService[] = [;
       "Auto-scaling solutions",
       "Disaster recovery planning",
       "Performance optimization"
-    ],;
+    ],
     benefits[;
       "50% reduction in deployment time",
       "99.9% uptime guarantee",
@@ -80,19 +69,19 @@ export const comprehensiveITServices2030: ITService[] = [;
       "Cost optimization through resource management",
       "Enhanced security and compliance",
       "Faster time to market"
-    ],;
-    targetAudience["Startups", "Mid-size companies", "Enterprises", "E-commerce platforms"],;
-    tags["Cloud Computing", "DevOps", "AWS", "Azure", "Kubernetes", "Automation"],;
+    ],
+    targetAudience["Startups", "Mid-size companies", "Enterprises", "E-commerce platforms"],
+    tags["Cloud Computing", "DevOps", "AWS", "Azure", "Kubernetes", "Automation"],
     contactInfo: zionContact,
     marketPrice: "$120 - $200/hour, $20,000 - $50,000 per project",
     responseTime: "2-4 hours",
     sla: "99.9% uptime, 4-hour response time",
-    certifications["AWS Solutions Architect", "Azure Solutions Architect", "Kubernetes Administrator", "Terraform Certified"],;
+    certifications["AWS Solutions Architect", "Azure Solutions Architect", "Kubernetes Administrator", "Terraform Certified"],
     deliveryTime: "2-8 weeks depending on complexity",
     support: "24/7 monitoring and support",
     innovationLevel: "Advanced",
     marketSize: "$89.4 billion",
-    compliance["SOC 2", "ISO 27001", "GDPR", "HIPAA", "PCI DSS"],;
+    compliance["SOC 2", "ISO 27001", "GDPR", "HIPAA", "PCI DSS"],
     technologies[;
       "AWS/Azure/GCP",
       "Kubernetes",
@@ -102,14 +91,14 @@ export const comprehensiveITServices2030: ITService[] = [;
       "Jenkins",
       "GitLab CI/CD",
       "Prometheus"
-    ],;
+    ],
     useCases[;
       "Application modernization",
       "Cloud migration",
       "DevOps transformation",
       "Microservices deployment",
       "High-availability systems"
-    ],;
+    ],
     roi: "300% within 12 months",
     setupTime: "2-8 weeks"
   },
@@ -129,7 +118,7 @@ export const comprehensiveITServices2030: ITService[] = [;
       "Penetration testing",
       "Vulnerability assessment",
       "Security monitoring"
-    ],;
+    ],
     benefits[;
       "99.9% threat detection rate",
       "Reduced security incidents by 80%",
@@ -137,19 +126,19 @@ export const comprehensiveITServices2030: ITService[] = [;
       "Enhanced employee security awareness",
       "Proactive threat prevention",
       "Cost-effective security operations"
-    ],;
-    targetAudience["Financial institutions", "Healthcare organizations", "Government agencies", "Technology companies"],;
-    tags["Cybersecurity", "Zero Trust", "Threat Detection", "Compliance", "Incident Response"],;
+    ],
+    targetAudience["Financial institutions", "Healthcare organizations", "Government agencies", "Technology companies"],
+    tags["Cybersecurity", "Zero Trust", "Threat Detection", "Compliance", "Incident Response"],
     contactInfo: zionContact,
     marketPrice: "$140 - $250/hour, $30,000 - $75,000 per project",
     responseTime: "1-2 hours for critical issues",
     sla: "99.9% security monitoring, 1-hour critical response",
-    certifications["CISSP", "CISM", "CEH", "CompTIA Security+", "SANS GIAC"],;
+    certifications["CISSP", "CISM", "CEH", "CompTIA Security+", "SANS GIAC"],
     deliveryTime: "4-12 weeks depending on scope",
     support: "24/7 security operations center",
     innovationLevel: "Cutting-edge",
     marketSize: "$156.5 billion",
-    compliance["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA", "PCI DSS"],;
+    compliance["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA", "PCI DSS"],
     technologies[;
       "SIEM systems",
       "EDR platforms",
@@ -159,14 +148,14 @@ export const comprehensiveITServices2030: ITService[] = [;
       "Threat intelligence",
       "Security automation",
       "Compliance tools"
-    ],;
+    ],
     useCases[;
       "Security architecture design",
       "Compliance implementation",
       "Incident response setup",
       "Security training programs",
       "Threat hunting operations"
-    ],;
+    ],
     roi: "400% within 18 months",
     setupTime: "4-12 weeks"
   },
@@ -186,7 +175,7 @@ export const comprehensiveITServices2030: ITService[] = [;
       "Data governance",
       "Performance optimization",
       "Self-service analytics"
-    ],;
+    ],
     benefits[;
       "40% faster decision making",
       "Real-time business insights",
@@ -194,19 +183,19 @@ export const comprehensiveITServices2030: ITService[] = [;
       "Enhanced customer understanding",
       "Predictive capabilities",
       "Data-driven culture"
-    ],;
-    targetAudience["Retail companies", "Manufacturing firms", "Healthcare organizations", "Financial services"],;
-    tags["Data Analytics", "Business Intelligence", "Machine Learning", "Data Warehousing", "Predictive Analytics"],;
+    ],
+    targetAudience["Retail companies", "Manufacturing firms", "Healthcare organizations", "Financial services"],
+    tags["Data Analytics", "Business Intelligence", "Machine Learning", "Data Warehousing", "Predictive Analytics"],
     contactInfo: zionContact,
     marketPrice: "$110 - $180/hour, $25,000 - $60,000 per project",
     responseTime: "4-8 hours",
     sla: "99.5% system availability, 8-hour response time",
-    certifications["AWS Data Analytics", "Azure Data Engineer", "Google Cloud Data Engineer", "Tableau Certified"],;
+    certifications["AWS Data Analytics", "Azure Data Engineer", "Google Cloud Data Engineer", "Tableau Certified"],
     deliveryTime: "3-10 weeks depending on complexity",
     support: "Business hours + emergency support",
     innovationLevel: "Advanced",
     marketSize: "$67.8 billion",
-    compliance["GDPR", "CCPA", "SOC 2", "ISO 27001"],;
+    compliance["GDPR", "CCPA", "SOC 2", "ISO 27001"],
     technologies[;
       "Snowflake",
       "AWS Redshift",
@@ -216,14 +205,14 @@ export const comprehensiveITServices2030: ITService[] = [;
       "Python",
       "Apache Spark",
       "Kubernetes"
-    ],;
+    ],
     useCases[;
       "Customer analytics",
       "Operational intelligence",
       "Financial reporting",
       "Supply chain optimization",
       "Performance monitoring"
-    ],;
+    ],
     roi: "350% within 15 months",
     setupTime: "3-10 weeks"
   },
@@ -243,7 +232,7 @@ export const comprehensiveITServices2030: ITService[] = [;
       "Training and adoption",
       "Performance monitoring",
       "Continuous improvement"
-    ],;
+    ],
     benefits[;
       "60% improvement in operational efficiency",
       "Enhanced customer experience",
@@ -251,19 +240,19 @@ export const comprehensiveITServices2030: ITService[] = [;
       "Improved employee productivity",
       "Competitive advantage",
       "Future-ready infrastructure"
-    ],;
-    targetAudience["Manufacturing companies", "Financial institutions", "Healthcare organizations", "Government agencies"],;
-    tags["Digital Transformation", "Legacy Modernization", "Process Reengineering", "Change Management", "Technology Implementation"],;
+    ],
+    targetAudience["Manufacturing companies", "Financial institutions", "Healthcare organizations", "Government agencies"],
+    tags["Digital Transformation", "Legacy Modernization", "Process Reengineering", "Change Management", "Technology Implementation"],
     contactInfo: zionContact,
     marketPrice: "$130 - $220/hour, $35,000 - $100,000 per project",
     responseTime: "4-6 hours",
     sla: "99.5% project delivery, 6-hour response time",
-    certifications["PMP", "Agile Certified Practitioner", "Change Management", "ITIL", "TOGAF"],;
+    certifications["PMP", "Agile Certified Practitioner", "Change Management", "ITIL", "TOGAF"],
     deliveryTime: "6-24 weeks depending on scope",
     support: "Project-based + ongoing support",
     innovationLevel: "Advanced",
     marketSize: "$469.8 billion",
-    compliance["ISO 27001", "SOC 2", "GDPR", "Industry-specific regulations"],;
+    compliance["ISO 27001", "SOC 2", "GDPR", "Industry-specific regulations"],
     technologies[;
       "Cloud platforms",
       "Microservices",
@@ -273,14 +262,14 @@ export const comprehensiveITServices2030: ITService[] = [;
       "AI/ML tools",
       "Robotic process automation",
       "Low-code platforms"
-    ],;
+    ],
     useCases[;
       "Legacy system replacement",
       "Process automation",
       "Customer experience transformation",
       "Employee productivity enhancement",
       "Data-driven operations"
-    ],;
+    ],
     roi: "500% within 24 months",
     setupTime: "6-24 weeks"
   },
@@ -300,7 +289,7 @@ export const comprehensiveITServices2030: ITService[] = [;
       "Performance monitoring",
       "Model retraining",
       "AI governance"
-    ],;
+    ],
     benefits[;
       "Automated decision making",
       "Improved accuracy and efficiency",
@@ -308,19 +297,19 @@ export const comprehensiveITServices2030: ITService[] = [;
       "Enhanced customer insights",
       "Predictive capabilities",
       "Competitive differentiation"
-    ],;
-    targetAudience["Technology companies", "Financial services", "Healthcare organizations", "Manufacturing firms"],;
-    tags["Artificial Intelligence", "Machine Learning", "Deep Learning", "Predictive Analytics", "AI Strategy"],;
+    ],
+    targetAudience["Technology companies", "Financial services", "Healthcare organizations", "Manufacturing firms"],
+    tags["Artificial Intelligence", "Machine Learning", "Deep Learning", "Predictive Analytics", "AI Strategy"],
     contactInfo: zionContact,
     marketPrice: "$150 - $300/hour, $40,000 - $120,000 per project",
     responseTime: "4-8 hours",
     sla: "99.5% model accuracy, 8-hour response time",
-    certifications["AWS Machine Learning", "Azure AI Engineer", "Google Cloud AI", "TensorFlow Developer"],;
+    certifications["AWS Machine Learning", "Azure AI Engineer", "Google Cloud AI", "TensorFlow Developer"],
     deliveryTime: "8-20 weeks depending on complexity",
     support: "Model monitoring + ongoing optimization",
     innovationLevel: "Cutting-edge",
     marketSize: "$190.6 billion",
-    compliance["GDPR", "AI ethics guidelines", "Industry-specific regulations", "Data privacy"],;
+    compliance["GDPR", "AI ethics guidelines", "Industry-specific regulations", "Data privacy"],
     technologies[;
       "TensorFlow",
       "PyTorch",
@@ -330,14 +319,14 @@ export const comprehensiveITServices2030: ITService[] = [;
       "Google Cloud AI",
       "Kubernetes",
       "MLOps tools"
-    ],;
+    ],
     useCases[;
       "Predictive analytics",
       "Natural language processing",
       "Computer vision",
       "Recommendation systems",
       "Process automation"
-    ],;
+    ],
     roi: "600% within 18 months",
     setupTime: "8-20 weeks"
   },
@@ -357,7 +346,7 @@ export const comprehensiveITServices2030: ITService[] = [;
       "Disaster recovery",
       "Bandwidth management",
       "Quality of service"
-    ],;
+    ],
     benefits[;
       "50% reduction in network costs",
       "Improved application performance",
@@ -365,19 +354,19 @@ export const comprehensiveITServices2030: ITService[] = [;
       "Simplified network management",
       "Better user experience",
       "Scalable infrastructure"
-    ],;
-    targetAudience["Enterprises", "Educational institutions", "Healthcare organizations", "Financial services"],;
-    tags["Networking", "SD-WAN", "Network Security", "Performance Optimization", "Infrastructure"],;
+    ],
+    targetAudience["Enterprises", "Educational institutions", "Healthcare organizations", "Financial services"],
+    tags["Networking", "SD-WAN", "Network Security", "Performance Optimization", "Infrastructure"],
     contactInfo: zionContact,
     marketPrice: "$100 - $180/hour, $25,000 - $70,000 per project",
     responseTime: "2-4 hours",
     sla: "99.9% network uptime, 4-hour response time",
-    certifications["Cisco CCNP", "Juniper JNCIP", "VMware NSX", "Fortinet NSE", "CompTIA Network+"],;
+    certifications["Cisco CCNP", "Juniper JNCIP", "VMware NSX", "Fortinet NSE", "CompTIA Network+"],
     deliveryTime: "3-8 weeks depending on scope",
     support: "24/7 network monitoring",
     innovationLevel: "Advanced",
     marketSize: "$45.2 billion",
-    compliance["SOC 2", "ISO 27001", "PCI DSS", "Industry-specific regulations"],;
+    compliance["SOC 2", "ISO 27001", "PCI DSS", "Industry-specific regulations"],
     technologies[;
       "Cisco SD-WAN",
       "VMware SD-WAN",
@@ -387,14 +376,14 @@ export const comprehensiveITServices2030: ITService[] = [;
       "Security appliances",
       "Load balancers",
       "VPN solutions"
-    ],;
+    ],
     useCases[;
       "Branch office connectivity",
       "Cloud connectivity",
       "Network security",
       "Performance optimization",
       "Disaster recovery"
-    ],;
+    ],
     roi: "300% within 12 months",
     setupTime: "3-8 weeks"
   },
@@ -414,7 +403,7 @@ export const comprehensiveITServices2030: ITService[] = [;
       "Performance optimization",
       "Compliance management",
       "Strategic IT planning"
-    ],;
+    ],
     benefits[;
       "Reduced IT operational costs",
       "Improved system reliability",
@@ -422,19 +411,19 @@ export const comprehensiveITServices2030: ITService[] = [;
       "Faster issue resolution",
       "Predictable IT costs",
       "Focus on core business"
-    ],;
-    targetAudience["Small businesses", "Mid-size companies", "Healthcare organizations", "Professional services"],;
-    tags["Managed Services", "IT Support", "Infrastructure Management", "24/7 Monitoring", "Proactive Maintenance"],;
+    ],
+    targetAudience["Small businesses", "Mid-size companies", "Healthcare organizations", "Professional services"],
+    tags["Managed Services", "IT Support", "Infrastructure Management", "24/7 Monitoring", "Proactive Maintenance"],
     contactInfo: zionContact,
     marketPrice: "$90 - $160/hour, $15,000 - $50,000 per month",
     responseTime: "1-4 hours depending on priority",
     sla: "99.9% uptime, 1-4 hour response time",
-    certifications["ITIL", "CompTIA A+", "Microsoft 365", "AWS Solutions Architect", "Cisco CCNA"],;
+    certifications["ITIL", "CompTIA A+", "Microsoft 365", "AWS Solutions Architect", "Cisco CCNA"],
     deliveryTime: "1-2 weeks for setup",
     support: "24/7 monitoring and support",
     innovationLevel: "Professional",
     marketSize: "$274.2 billion",
-    compliance["SOC 2", "ISO 27001", "GDPR", "Industry-specific regulations"],;
+    compliance["SOC 2", "ISO 27001", "GDPR", "Industry-specific regulations"],
     technologies[;
       "Monitoring tools",
       "Help desk systems",
@@ -444,14 +433,14 @@ export const comprehensiveITServices2030: ITService[] = [;
       "Virtualization",
       "Network equipment",
       "Mobile device management"
-    ],;
+    ],
     useCases[;
       "IT infrastructure management",
       "Help desk support",
       "Security monitoring",
       "Backup and recovery",
       "Performance optimization"
-    ],;
+    ],
     roi: "250% within 12 months",
     setupTime: "1-2 weeks"
   },
@@ -471,7 +460,7 @@ export const comprehensiveITServices2030: ITService[] = [;
       "Quality assurance",
       "Deployment and DevOps",
       "Ongoing maintenance"
-    ],;
+    ],
     benefits[;
       "Custom solutions for unique needs",
       "Improved operational efficiency",
@@ -479,19 +468,19 @@ export const comprehensiveITServices2030: ITService[] = [;
       "Competitive advantage",
       "Scalable architecture",
       "Long-term cost savings"
-    ],;
-    targetAudience["Enterprises", "Startups", "Healthcare organizations", "Financial services"],;
-    tags["Software Development", "Custom Applications", "Web Development", "Mobile Apps", "API Development"],;
+    ],
+    targetAudience["Enterprises", "Startups", "Healthcare organizations", "Financial services"],
+    tags["Software Development", "Custom Applications", "Web Development", "Mobile Apps", "API Development"],
     contactInfo: zionContact,
     marketPrice: "$110 - $200/hour, $30,000 - $100,000 per project",
     responseTime: "4-8 hours",
     sla: "99.5% application uptime, 8-hour response time",
-    certifications["AWS Developer", "Azure Developer", "Google Cloud Developer", "Scrum Master", "Agile Certified"],;
+    certifications["AWS Developer", "Azure Developer", "Google Cloud Developer", "Scrum Master", "Agile Certified"],
     deliveryTime: "8-24 weeks depending on complexity",
     support: "Development + ongoing maintenance",
     innovationLevel: "Advanced",
     marketSize: "$507.2 billion",
-    compliance["SOC 2", "ISO 27001", "GDPR", "Industry-specific regulations"],;
+    compliance["SOC 2", "ISO 27001", "GDPR", "Industry-specific regulations"],
     technologies[;
       "React",
       "Angular",
@@ -501,14 +490,14 @@ export const comprehensiveITServices2030: ITService[] = [;
       "Java",
       "C#",
       "Cloud platforms"
-    ],;
+    ],
     useCases[;
       "Customer portals",
       "Internal tools",
       "E-commerce platforms",
       "Mobile applications",
       "Integration solutions"
-    ],;
+    ],
     roi: "400% within 18 months",
     setupTime: "8-24 weeks"
   },
@@ -528,7 +517,7 @@ export const comprehensiveITServices2030: ITService[] = [;
       "Security and compliance",
       "Performance monitoring",
       "Capacity planning"
-    ],;
+    ],
     benefits[;
       "Enhanced security and compliance",
       "Improved performance and reliability",
@@ -536,19 +525,19 @@ export const comprehensiveITServices2030: ITService[] = [;
       "Scalable solutions",
       "Expert management",
       "24/7 support"
-    ],;
-    targetAudience["Enterprises", "Financial institutions", "Healthcare organizations", "Government agencies"],;
-    tags["Data Center", "Colocation", "Infrastructure", "Disaster Recovery", "Cloud Connectivity"],;
+    ],
+    targetAudience["Enterprises", "Financial institutions", "Healthcare organizations", "Government agencies"],
+    tags["Data Center", "Colocation", "Infrastructure", "Disaster Recovery", "Cloud Connectivity"],
     contactInfo: zionContact,
     marketPrice: "$100 - $180/hour, $20,000 - $80,000 per project",
     responseTime: "2-4 hours",
     sla: "99.99% uptime, 4-hour response time",
-    certifications["Uptime Institute", "ISO 27001", "SOC 2", "TIA-942", "LEED"],;
+    certifications["Uptime Institute", "ISO 27001", "SOC 2", "TIA-942", "LEED"],
     deliveryTime: "4-12 weeks depending on scope",
     support: "24/7 infrastructure support",
     innovationLevel: "Professional",
     marketSize: "$59.7 billion",
-    compliance["SOC 2", "ISO 27001", "PCI DSS", "HIPAA", "Industry-specific regulations"],;
+    compliance["SOC 2", "ISO 27001", "PCI DSS", "HIPAA", "Industry-specific regulations"],
     technologies[;
       "Server hardware",
       "Storage systems",
@@ -558,14 +547,14 @@ export const comprehensiveITServices2030: ITService[] = [;
       "Backup systems",
       "Power systems",
       "Cooling systems"
-    ],;
+    ],
     useCases[;
       "Primary data center",
       "Disaster recovery site",
       "Cloud connectivity hub",
       "Compliance requirements",
       "Performance optimization"
-    ],;
+    ],
     roi: "350% within 15 months",
     setupTime: "4-12 weeks"
   },
@@ -585,7 +574,7 @@ export const comprehensiveITServices2030: ITService[] = [;
       "Cost optimization",
       "Risk assessment",
       "Change management"
-    ],;
+    ],
     benefits[;
       "Aligned technology strategy",
       "Optimized technology investments",
@@ -593,19 +582,19 @@ export const comprehensiveITServices2030: ITService[] = [;
       "Improved operational efficiency",
       "Competitive advantage",
       "Future-ready technology"
-    ],;
-    targetAudience["C-level executives", "IT leaders", "Business leaders", "Board members"],;
-    tags["IT Strategy", "Digital Consulting", "Technology Assessment", "Digital Transformation", "Strategic Planning"],;
+    ],
+    targetAudience["C-level executives", "IT leaders", "Business leaders", "Board members"],
+    tags["IT Strategy", "Digital Consulting", "Technology Assessment", "Digital Transformation", "Strategic Planning"],
     contactInfo: zionContact,
     marketPrice: "$150 - $300/hour, $40,000 - $150,000 per project",
     responseTime: "24-48 hours",
     sla: "Project-based delivery, 48-hour response time",
-    certifications["TOGAF", "ITIL", "PMP", "Agile Certified", "Digital Transformation"],;
+    certifications["TOGAF", "ITIL", "PMP", "Agile Certified", "Digital Transformation"],
     deliveryTime: "4-16 weeks depending on scope",
     support: "Project-based + ongoing advisory",
     innovationLevel: "Strategic",
     marketSize: "$48.9 billion",
-    compliance["Industry best practices", "Regulatory guidance", "Standards compliance"],;
+    compliance["Industry best practices", "Regulatory guidance", "Standards compliance"],
     technologies[;
       "Strategy frameworks",
       "Assessment tools",
@@ -615,17 +604,17 @@ export const comprehensiveITServices2030: ITService[] = [;
       "Project management",
       "Change management",
       "Performance measurement"
-    ],;
+    ],
     useCases[;
       "Technology strategy",
       "Digital transformation",
       "Technology assessment",
       "Vendor selection",
       "Cost optimization"
-    ],;
+    ],
     roi: "500% within 24 months",
     setupTime: "4-16 weeks"
 
 ];
 
-export default comprehensiveITServices2030;}}};
+export default comprehensiveITServices2030}}};

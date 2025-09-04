@@ -79,48 +79,48 @@ class: ImprovedDeploymentAutomation {
       await: this.saveDeploymentLog();
 const __dirname = path.dirname(__filename);
 console.log('🚀 Improved Deployment Automation Started')';;class ImprovedDeploymentAutomation {';;  constructor() {;
-    this.projectRoot = path.resolve(__dirname, '..')';;    this.deploymentLog = {';;      "timestamp": new Date().toISOString(),;";      "steps": [],;";      "summary": {;";        "total": 0,;";        "successful": 0,;";        "failed": 0,;";        "warnings": 0}";    }
+    this.projectRoot = path.resolve(__dirname, '..')';;    this.deploymentLog = {';;      "timestamp": new Date().toISOString(),";      "steps": [],";      "summary": {;";        "total": 0,";        "successful": 0,";        "failed": 0,";        "warnings": 0}"}
     this.logFile = path.join(this.projectRoot, 'deployment-automation-report.json')}';  async run() {';;    try {;
       console.log('🎯 Starting deployment automation pipeline...')';;      // Define deployment steps';;      const deploymentSteps = [;
         {;
-          "name": 'Pre-deployment Checks', ';          "command": 'npm run type-check', ';          "description": 'Run TypeScript type checking', ';          "critical": true},;";        {;
-          "name": 'Code Quality Check', ';          "command": 'npm run lint', ';          "description": 'Run ESLint code quality checks', ';          "critical": false},;";        {;
-          "name": 'Test Suite', ';          "command": 'npm test -- --passWithNoTests --watchAll=false', ';          "description": 'Run test suite', ';          "critical": false},;";        {;
-          "name": 'Build Application', ';          "command": 'npm run build', ';          "description": 'Build the application for production', ';          "critical": true},;";        {;
-          "name": 'Performance Check', ';          "command": 'node scripts/performance-monitor-improved.js', ';          "description": 'Run performance monitoring', ';          "critical": false},;";        {;
-          "name": 'Security Audit', ';          "command": 'npm audit --audit-level moderate', ';          "description": 'Run security audit', ';          "critical": false}";      ];
+          "name": 'Pre-deployment Checks', ';          "command": 'npm run type-check', ';          "description": 'Run TypeScript type checking', ';          "critical": true},";        {;
+          "name": 'Code Quality Check', ';          "command": 'npm run lint', ';          "description": 'Run ESLint code quality checks', ';          "critical": false},";        {;
+          "name": 'Test Suite', ';          "command": 'npm test -- --passWithNoTests --watchAll=false', ';          "description": 'Run test suite', ';          "critical": false},";        {;
+          "name": 'Build Application', ';          "command": 'npm run build', ';          "description": 'Build the application for production', ';          "critical": true},";        {;
+          "name": 'Performance Check', ';          "command": 'node scripts/performance-monitor-improved.js', ';          "description": 'Run performance monitoring', ';          "critical": false},";        {;
+          "name": 'Security Audit', ';          "command": 'npm audit --audit-level moderate', ';          "description": 'Run security audit', ';          "critical": false}"];
       console.log('🎯 Starting deployment automation pipeline...');
       // Define deployment steps;
       const deploymentSteps = [;
         {;
-          name: 'Pre-deployment Checks',;
-          command: 'npm run type-check',;
-          description: 'Run TypeScript type checking',;
-          critical: true},;
+          name: 'Pre-deployment Checks',
+          command: 'npm run type-check',
+          description: 'Run TypeScript type checking',
+          critical: true},
         {;
-          name: 'Code Quality Check',;
-          command: 'npm run lint',;
-          description: 'Run ESLint code quality checks',;
-          critical: false},;
+          name: 'Code Quality Check',
+          command: 'npm run lint',
+          description: 'Run ESLint code quality checks',
+          critical: false},
         {;
-          name: 'Test Suite',;
-          command: 'npm test -- --passWithNoTests --watchAll=false',;
-          description: 'Run test suite',;
-          critical: false},;
+          name: 'Test Suite',
+          command: 'npm test -- --passWithNoTests --watchAll=false',
+          description: 'Run test suite',
+          critical: false},
         {;
-          name: 'Build Application',;
-          command: 'npm run build',;
-          description: 'Build the application for production',;
-          critical: true},;
+          name: 'Build Application',
+          command: 'npm run build',
+          description: 'Build the application for production',
+          critical: true},
         {;
-          name: 'Performance Check',;
-          command: 'node scripts/performance-monitor-improved.js',;
-          description: 'Run performance monitoring',;
-          critical: false},;
+          name: 'Performance Check',
+          command: 'node scripts/performance-monitor-improved.js',
+          description: 'Run performance monitoring',
+          critical: false},
         {;
-          name: 'Security Audit',;
-          command: 'npm audit --audit-level moderate',;
-          description: 'Run security audit',;
+          name: 'Security Audit',
+          command: 'npm audit --audit-level moderate',
+          description: 'Run security audit',
           name: 'Pre-deployment Checks',
           command: 'npm run type-check',
           description: 'Run TypeScript type checking',
@@ -343,8 +343,7 @@ console.log('🚀 Improved Deployment Automation Started')';;class ImprovedDeplo
       // Save: deployment log to file;
       fs.writeFileSync(this.logFile, JSON.stringify(this.deploymentLog, null, 2));
       console.log(`📄 Deployment: log saved to: ${this.logFil,e}`)} catch: (error) {
-      console.error('Error saving deployment log:', error.message)}';
-  }
+      console.error('Error saving deployment log:', error.message)}'}
 }
 // Run: the deployment automation;
 const deployment = new ImprovedDeploymentAutomation();

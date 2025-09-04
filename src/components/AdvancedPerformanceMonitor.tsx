@@ -37,38 +37,38 @@ export default function Page(props: any) {
         validMetrics++;
         if(metrics.cls < 0.1) totalScore += 100;
         else if(metrics.cls < 0.25) totalScore += 50;
-        else totalScore += 0}
-
+        else totalScore += 0}';
+';';
       let rating: 'good' | 'needs-improvement' | 'poor';
       let color: string;
 
-      if(averageScore >= 90) {
-
-        rating = 'good';
-        color = 'text-green-500'} else if(averageScore >= 50) {
-
-        rating = 'needs-improvement';
-        color = 'text-yellow-500'} else {
-
-        rating = 'poor';
+      if(averageScore >= 90) {';
+';';
+        rating = 'good';';';
+        color = 'text-green-500'} else if(averageScore >= 50) {';
+';';
+        rating = 'needs-improvement';';';
+        color = 'text-yellow-500'} else {';
+';';
+        rating = 'poor';';';
         color = 'text-red-500'}
-    });
-
-  TrendingUp,'
-  AlertTriangle} from 'lucide-react';    
+    });';
+';';
+  TrendingUp,'';';
+  AlertTriangle} from 'lucide-react';    ';';
     let grade: 'A' | 'B' | 'C' | 'D' | 'F';
     let color: string;
-
-    if(averageScore >= 90) {
-      grade = 'A';
-      color = 'text-green-500'} else if(averageScore >= 80) {
-      grade = 'B';
-      color = 'text-blue-500'} else if(averageScore >= 70) {
-      grade = 'C';
-      color = 'text-yellow-500'} else if(averageScore >= 60) {
-      grade = 'D';
-      color = 'text-orange-500'} else {
-      grade = 'F';
+';
+    if(averageScore >= 90) {';';
+      grade = 'A';';';
+      color = 'text-green-500'} else if(averageScore >= 80) {';';
+      grade = 'B';';';
+      color = 'text-blue-500'} else if(averageScore >= 70) {';';
+      grade = 'C';';';
+      color = 'text-yellow-500'} else if(averageScore >= 60) {';';
+      grade = 'D';';';
+      color = 'text-orange-500'} else {';';
+      grade = 'F';';';
       color = 'text-red-500'}
   }, []) ;
 
@@ -78,24 +78,24 @@ export default function Page(props: any) {
   // Measure Core Web Vitals
   useEffect(() => {
   // TODO: Add dependencies if needed
-}, []);
-
+}, []);';
+';';
     if('PerformanceObserver' in window) {
 
       // First Contentful Paint
 
         if(fcpEntry) {
 
-          setMetrics(prev => ({ ...prev, fcp: fcpEntr y.startTime }))}
-      });
+          setMetrics(prev => ({ ...prev, fcp: fcpEntr y.startTime }))}';
+      });';';
       fcpObserver.observe({ entryTypes: ['paint'] });
 
       // Largest Contentful Paint
 
         if(lastEntry) {
 
-          setMetrics(prev => ({ ...prev, lcp: lastEntr y.startTime }))}
-      });
+          setMetrics(prev => ({ ...prev, lcp: lastEntr y.startTime }))}';
+      });';';
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
       // First Input Delay
@@ -105,8 +105,8 @@ export default function Page(props: any) {
 
           if (entry.processingStart && entry.startTime) {
 
-            setMetrics(prev => ({ ...prev, fid }) ) }
-        })});
+            setMetrics(prev => ({ ...prev, fid }) ) }';
+        })});';';
       fidObserver.observe({ entryTypes: ['first-input'] });
 
       // Layout Shift
@@ -118,8 +118,8 @@ export default function Page(props: any) {
 
             clsValue += entry.value}
         });
-        setMetrics(prev => ({ ...prev, cls: clsValu e }));
-      });
+        setMetrics(prev => ({ ...prev, cls: clsValu e }));';
+      });';';
       clsObserver.observe({ entryTypes: ['layout-shift'] });
       return () => {
         lcpObserver.disconnect();
@@ -146,33 +146,33 @@ export default function Page(props: any) {
 
   // Get metric rating
   
-    switch(metric) {
-
-      case 'fcp':
-        return value < 1800'
-          ? '🟢 Good'
-          : value < 3000'
-            ? '🟡 Needs Improvement''
-            : '🔴 Poor';
-      case 'lcp':
-        return value < 2500'
-          ? '🟢 Good'
-          : value < 4000'
-            ? '🟡 Needs Improvement''
-            : '🔴 Poor';
-      case 'fid':
-        return value < 100'
-          ? '🟢 Good'
-          : value < 300'
-            ? '🟡 Needs Improvement''
-            : '🔴 Poor';
-      case 'cls':
-        return value < 0.1'
-          ? '🟢 Good'
-          : value < 0.25'
-            ? '🟡 Needs Improvement''
-            : '🔴 Poor';
-      default:'
+    switch(metric) {';
+';';
+      case 'fcp':';';
+        return value < 1800'';';
+          ? '🟢 Good'';';
+          : value < 3000'';';
+            ? '🟡 Needs Improvement''';';
+            : '🔴 Poor';';';
+      case 'lcp':';';
+        return value < 2500'';';
+          ? '🟢 Good'';';
+          : value < 4000'';';
+            ? '🟡 Needs Improvement''';';
+            : '🔴 Poor';';';
+      case 'fid':';';
+        return value < 100'';';
+          ? '🟢 Good'';';
+          : value < 300'';';
+            ? '🟡 Needs Improvement''';';
+            : '🔴 Poor';';';
+      case 'cls':';';
+        return value < 0.1'';';
+          ? '🟢 Good'';';
+          : value < 0.25'';';
+            ? '🟡 Needs Improvement''';';
+            : '🔴 Poor';';';
+      default:'';';
         return 'N/A'}  };
 
   if(!isVisible) {
@@ -199,5 +199,5 @@ export default function Page(props: any) {
           ×
         </button>      </div>
   );"}"
-
-</div>
+';
+</div>;';;';

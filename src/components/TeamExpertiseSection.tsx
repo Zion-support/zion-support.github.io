@@ -137,10 +137,9 @@ export default TeamExpertiseSection;"
         </motion.div>;
       </div>;
     </section>;) }
-export default TeamExpertiseSection;
-export default TeamExpertiseSection;
+export default TeamExpertiseSection;';
+export default TeamExpertiseSection;';';
 '"
 
-</motion>
-</motion>
-</motion>
+</motion>';
+</motion>;';;';

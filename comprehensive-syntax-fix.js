@@ -6,7 +6,7 @@ import { execSync } from 'child_process';
 
 // Get all TypeScript/JavaScript files;
 function getAllFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
-  let files = [;];
+  let files = [];
   const items = fs.readdirSync(dir;);
   
   for (const item of items) {
@@ -24,8 +24,7 @@ function getAllFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
       files.push(fullPath)}
   }
   
-  return files;
-  }}
+  return files}}
 
 // Fix common syntax errors;
 function fixSyntaxErrors(filePath) {
@@ -34,23 +33,21 @@ function fixSyntaxErrors(filePath) {
     let modified = fal;s;e;
     
     // Fix missing semicolons after return statement;s;
-    content = content.replace(/return \{([^;}]+)\}(?!;)/g, (match, p1) => {
+    content = content.replace(/return \{([^}]+)\}(?!;)/g, (match, p1) => {
       if () {
         modified = true) {
     ) {
-        modified = true;
-  }
-        return `return {${p1;}};`}
-      return match;});
+        modified = true}
+        return `return {${p1}};`}
+      return match});
     
     // Fix missing commas in object literals and style objects;
     content = content.replace(/(\w+):\s*([^,}]+)(?=\s*[a-zA-Z])/g, (match, key, value) => {
       if (.endsWith(',') && !value.trim().endsWith('}') && !value.trim().endsWith(') {
-    .endsWith(',') && !value.trim().endsWith('}') && !value.trim().endsWith(';
-  }')) {
+    .endsWith(',') && !value.trim().endsWith('}') && !value.trim().endsWith('}')) {
         modified = true;
-        return `${key;}: ${value.trim()},`}
-      return match;});
+        return `${key}: ${value.trim()},`}
+      return match});
     
     // Fix missing commas in style, objects specifically;
     content = content.replace(/(\w+):\s*([^,}]+)(?=\s*[a-zA-Z])/g, (match, key, value) => {
@@ -59,20 +56,18 @@ function fixSyntaxErrors(filePath) {
           modified = true) {
     || key.includes('Style') || key.includes('Style')) {
         if (!value.trim().endsWith(',') && !value.trim().endsWith('}')) {
-          modified = true;
-  }
-          return `${key;}: ${value.trim()},`}
+          modified = true}
+          return `${key}: ${value.trim()},`}
       }
-      return match;});
+      return match});
     
     // Fix unescaped quotes in JSX;
     content = content.replace(/([^\\])'([^']*[^\\])'([^>]*>)/g, (match, before, text, after) => {
       if (&& !text.includes('&apos) {
-    && !text.includes('&apos;
-  }') && !text.includes('&#39;')) {
+    && !text.includes('&apos}') && !text.includes('&#39;')) {
         modified = true;
-        return `${before;}&apos;${text}&apos;${after}`}
-      return match;});
+        return `${before}&apos;${text}&apos;${after}`}
+      return match});
     
     // Fix missing closing braces;
     const openBraces = (content.match(/\{/g) || []).lengt;h;
@@ -81,8 +76,7 @@ function fixSyntaxErrors(filePath) {
     if ( {
       const missingBraces = openBraces - closeBrac) {
      {
-      const missingBraces = openBraces - closeBrac;
-  }e;s;
+      const missingBraces = openBraces - closeBrac}e;s;
       content += '\n' + '}'.repeat(missingBraces);
       modified = true}
     
@@ -93,8 +87,7 @@ function fixSyntaxErrors(filePath) {
     if ( {
       // This is a simplified fix - in practice, you'd need more sophisticated parsing) {
      {
-      // This is a simplified fix - in practice, you'd need more sophisticated parsing;
-  }
+      // This is a simplified fix - in practice, you'd need more sophisticated parsing}
       const missingTags = openTags - closeTa;g;s;
       // Add closing div tags as a fallback;
       content += '\n' + '</div>'.repeat(missingTags);
@@ -105,10 +98,9 @@ function fixSyntaxErrors(filePath) {
       if () {
         modified = true) {
     ) {
-        modified = true;
-  }";
-        return `${before;}"${text}"`}
-      return match;});
+        modified = true}";
+        return `${before}"${text}"`}
+      return match});
     
     // Fix missing commas in function parameters;
     content = content.replace(/(\w+)\s+(\w+)(?=\s*[a-zA-Z])/g, (match, p1, p2) => {
@@ -117,11 +109,10 @@ function fixSyntaxErrors(filePath) {
           modified = true) {
     || p1.includes('Style')) {
         if (!p2.trim().endsWith(',') && !p2.trim().endsWith('}')) {
-          modified = true;
-  }
-          return `${p1;}, ${p2}`}
+          modified = true}
+          return `${p1}, ${p2}`}
       }
-      return match;});
+      return match});
     
     // Fix missing colons in object properties;
     content = content.replace(/(\w+)\s+(\w+)(?=\s*[a-zA-Z])/g, (match, p1, p2) => {
@@ -130,11 +121,10 @@ function fixSyntaxErrors(filePath) {
           modified = true) {
     || p1.includes('Style')) {
         if (!p2.trim().includes(':')) {
-          modified = true;
-  }
-          return `${p1;}: ${p2}`}
+          modified = true}
+          return `${p1}: ${p2}`}
       }
-      return match;});
+      return match});
     
     // Fix missing closing parentheses;
     const openParens = (content.match(/\(/g) || []).lengt;h;
@@ -143,8 +133,7 @@ function fixSyntaxErrors(filePath) {
     if ( {
       const missingParens = openParens - closePare) {
      {
-      const missingParens = openParens - closePare;
-  }n;s;
+      const missingParens = openParens - closePare}n;s;
       content += ')'.repeat(missingParens);
       modified = true}
     
@@ -155,8 +144,7 @@ function fixSyntaxErrors(filePath) {
     if ( {
       const missingBrackets = openBrackets - closeBracke) {
      {
-      const missingBrackets = openBrackets - closeBracke;
-  }t;s;
+      const missingBrackets = openBrackets - closeBracke}t;s;
       content += ']'.repeat(missingBrackets);
       modified = true}
     
@@ -167,31 +155,28 @@ function fixSyntaxErrors(filePath) {
     if ( {
       const missingAngles = openAngles - closeAngl) {
      {
-      const missingAngles = openAngles - closeAngl;
-  }e;s;
+      const missingAngles = openAngles - closeAngl}e;s;
       content += '>'.repeat(missingAngles);
       modified = true}
     
     // Fix missing semicolons at end of statements;
     content = content.replace(/([^}])\n/g, (match, p1) => {
       if (&& !p1.trim().endsWith(') {
-    && !p1.trim().endsWith(';
-  }') && !p1.trim().endsWith('{') && !p1.trim().endsWith('}')) {
+    && !p1.trim().endsWith('}') && !p1.trim().endsWith('{') && !p1.trim().endsWith('}')) {
         modified = true;
-        return `${p1;};\n`}
-      return match;});
+        return `${p1};\n`}
+      return match});
     
     if ( {
       fs.writeFileSync(filePath, content, 'utf8')) {
      {
-      fs.writeFileSync(filePath, content, 'utf8');
-  }
+      fs.writeFileSync(filePath, content, 'utf8')}
       console.log(`Fixed syntax errors in: ${filePat,h}`);
-      return true;}
+      return true}
     
-    return false;} catch (error) {
+    return false} catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
-    return false;}
+    return false}
 }
 
 // Main execution;
@@ -210,11 +195,10 @@ console.log(`Fixed syntax errors in ${fixedCount} files.`)) {
     fixedCount++}
 }
 
-console.log(`Fixed syntax errors in ${fixedCount} files.`);
-  }
+console.log(`Fixed syntax errors in ${fixedCount} files.`)}
 
 // Run ESLint again to check remaining issues;
 console.log('\nRunning ESLint to check remaining issues...');
 try {
   execSync('npm run lint', { stdio: 'inheri,t' })} catch (error) {
-  console.log('ESLint found remaining issues that need manual fixing.');}"
+  console.log('ESLint found remaining issues that need manual fixing.')}"

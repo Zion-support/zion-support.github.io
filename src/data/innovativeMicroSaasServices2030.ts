@@ -41,20 +41,9 @@ export interface MicroSaasService {
 const zionContact: ServiceContact = {
   phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
-  website: "https://ziontechgroup.com",;
+  website: "https://ziontechgroup.com",
   ;
-  ;
-  ;
-  ;
-  address: "364 E Main St STE 1008 Middletown DE 19709";
-;
-
-
-
-
-
-
-};
+  address: "364 E Main St STE 1008 Middletown DE 19709"};
 
 // Innovative Micro SAAS Services 2030
 export const innovativeMicroSaasServices2030: MicroSaasService[] = [;
@@ -378,4 +367,4 @@ export const innovativeMicroSaasServices2030: MicroSaasService[] = [;
   }
 ];
 
-export default innovativeMicroSaasServices2030;}}};
+export default innovativeMicroSaasServices2030}}};

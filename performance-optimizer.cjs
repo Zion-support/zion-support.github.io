@@ -22,14 +22,14 @@ class PerformanceOptimizer {
           timestamp: new Date().toISOString()
         })}
       
-      return this.optimizations;} catch (error) {
+      return this.optimizations} catch (error) {
       console.error('Error optimizing images:', error);
-      return [];}
+      return []}
   }
 
   findImageFiles() {
-    const files = [;];
-    const extensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg';];
+    const files = [];
+    const extensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg'];
     
     function traverse(dir) {
       const items = fs.readdirSync(dir;);
@@ -50,9 +50,8 @@ class PerformanceOptimizer {
       }
     }
     
-    traverse('.');
-  }
-    return files;}
+    traverse('.')}
+    return files}
 
   async optimizeBundle() {
     try {
@@ -66,9 +65,9 @@ class PerformanceOptimizer {
         timestamp: new Date().toISOString()
       });
       
-      return this.optimizations;} catch (error) {
+      return this.optimizations} catch (error) {
       console.error('Error optimizing bundle:', error);
-      return [];}
+      return []}
   }
 
   analyzeBundleSize() {
@@ -89,13 +88,13 @@ class PerformanceOptimizer {
       timestamp: new Date().toISOString(),
       optimizations: this.optimizations,
       recommendations: this.generateOptimizationRecommendations()
-   ; ;};
+   };
     
     fs.writeFileSync('performance-optimization-report.json', JSON.stringify(report, null, 2));
-    return report;}
+    return report}
 
   generateOptimizationRecommendations() {
-    const recommendations = [;];
+    const recommendations = [];
     
     if ( {
       recommendations.push({
@@ -112,12 +111,11 @@ class PerformanceOptimizer {
         message: 'Consider implementing lazy loading for better performance.'
       })}
     
-    return recommendations;
-  }}
+    return recommendations}}
 }
 
 // Run optimization
 const optimizer = new PerformanceOptimizer;(;);
 optimizer.generateOptimizationReport().then(report => {
-  console.log('📊 Performance optimization report generated:', report);}).catch(error => {
+  console.log('📊 Performance optimization report generated:', report)}).catch(error => {
   console.error('❌ Optimization failed:', error)});

@@ -27,15 +27,13 @@ class FileWatcher {
     this.pendingChanges = new Set();
     
     // Ensure directories exist
-    fs.mkdirSync(path.dirname(this.logFile), { recursive: true });
-  }
+    fs.mkdirSync(path.dirname(this.logFile), { recursive: true })}
 
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;
     console.log(logMessage.trim());
-    fs.appendFileSync(this.logFile, logMessage);
-  }
+    fs.appendFileSync(this.logFile, logMessage)}
 
   async validateFile(filePath) {
     try {
@@ -44,53 +42,43 @@ class FileWatcher {
 
       // Basic syntax checks
       if (content.includes('return()') && !content.includes('return ()')) {
-        issues.push('Invalid return statement syntax');
-      }
+        issues.push('Invalid return statement syntax')}
 
       if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
-        issues.push('Merge conflict markers found');
-      }
+        issues.push('Merge conflict markers found')}
 
       // Check for unmatched braces (simple check)
       const openBraces = (content.match(/{/g) || []).length;
       const closeBraces = (content.match(/}/g) || []).length;
       if (openBraces !== closeBraces) {
-        issues.push('Unmatched braces detected');
-      }
+        issues.push('Unmatched braces detected')}
 
       // Check for unmatched parentheses
       const openParens = (content.match(/\(/g) || []).length;
       const closeParens = (content.match(/\)/g) || []).length;
       if (openParens !== closeParens) {
-        issues.push('Unmatched parentheses detected');
-      }
+        issues.push('Unmatched parentheses detected')}
 
       // Check for React usage without import
       if (content.includes('React.') && !content.includes('import React')) {
-        issues.push('React used without import');
-      }
+        issues.push('React used without import')}
 
-      return issues;
-    } catch (error) {
-      return [`File read error: ${error.message}`];
-    }
+      return issues} catch (error) {
+      return [`File read error: ${error.message}`]}
   }
 
   async quickTypeCheck(filePath) {
     if (!filePath.endsWith('.ts') && !filePath.endsWith('.tsx')) {
-      return [];
-    }
+      return []}
 
     try {
       execSync(`npx tsc --noEmit --skipLibCheck ${filePath}`, { 
         stdio: 'pipe',
         cwd: process.cwd()
       });
-      return [];
-    } catch (error) {
+      return []} catch (error) {
       const output = error.stdout || error.message;
-      return output.split('\n').filter(line => line.includes('error TS'));
-    }
+      return output.split('\n').filter(line => line.includes('error TS'))}
   }
 
   async autoFixFile(filePath) {
@@ -131,16 +119,14 @@ class FileWatcher {
         if (fix.pattern.test(content)) {
           content = content.replace(fix.pattern, fix.replacement);
           modified = true;
-          this.log(`Applied fix: ${fix.description} in ${filePath}`);
-        }
+          this.log(`Applied fix: ${fix.description} in ${filePath}`)}
       }
 
       // Add React import if needed
       if (content.includes('React.') && !content.includes('import React')) {
         content = `import React from 'react';\n${content}`;
         modified = true;
-        this.log(`Added React import to ${filePath}`);
-      }
+        this.log(`Added React import to ${filePath}`)}
 
       if (modified) {
         // Create backup
@@ -150,14 +136,11 @@ class FileWatcher {
         // Write fixed content
         fs.writeFileSync(filePath, content);
         this.log(`Auto-fixed file: ${filePath}`);
-        return true;
-      }
+        return true}
 
-      return false;
-    } catch (error) {
+      return false} catch (error) {
       this.log(`Error auto-fixing file ${filePath}: ${error.message}`, 'ERROR');
-      return false;
-    }
+      return false}
   }
 
   async processChanges() {
@@ -187,8 +170,7 @@ class FileWatcher {
         // Attempt auto-fix
         const fixed = await this.autoFixFile(filePath);
         if (fixed) {
-          results.autoFixed++;
-        }
+          results.autoFixed++}
       }
 
       results.files.push({
@@ -196,8 +178,7 @@ class FileWatcher {
         issues: issues,
         typeErrors: typeErrors,
         timestamp: new Date().toISOString()
-      });
-    }
+      })}
 
     // Save results
     const reportPath = path.join(__dirname, 'reports', 'real-time-validation.json');
@@ -205,8 +186,7 @@ class FileWatcher {
     fs.writeFileSync(reportPath, JSON.stringify(results, null, 2));
 
     this.log(`Validation complete: ${results.validated} files, ${results.issues} with issues, ${results.autoFixed} auto-fixed`);
-    this.pendingChanges.clear();
-  }
+    this.pendingChanges.clear()}
 
   setupWatcher() {
     this.log('Setting up file watcher...');
@@ -231,31 +211,23 @@ class FileWatcher {
       
       // Debounce processing
       if (this.debounceTimer) {
-        clearTimeout(this.debounceTimer);
-      }
+        clearTimeout(this.debounceTimer)}
       
       this.debounceTimer = setTimeout(() => {
         this.processChanges().catch(error => {
-          this.log(`Error processing changes: ${error.message}`, 'ERROR');
-        });
-      }, this.debounceDelay);
-    });
+          this.log(`Error processing changes: ${error.message}`, 'ERROR')})}, this.debounceDelay)});
 
     watcher.on('add', (filePath) => {
       this.log(`File added: ${filePath}`);
-      this.pendingChanges.add(filePath);
-    });
+      this.pendingChanges.add(filePath)});
 
     watcher.on('error', (error) => {
-      this.log(`Watcher error: ${error.message}`, 'ERROR');
-    });
+      this.log(`Watcher error: ${error.message}`, 'ERROR')});
 
     watcher.on('ready', () => {
-      this.log('File watcher ready. Monitoring for changes...');
-    });
+      this.log('File watcher ready. Monitoring for changes...')});
 
-    return watcher;
-  }
+    return watcher}
 
   async run() {
     this.log('Starting File Watcher...');
@@ -267,33 +239,25 @@ class FileWatcher {
       process.on('SIGTERM', () => {
         this.log('Received SIGTERM, closing watcher...');
         watcher.close();
-        process.exit(0);
-      });
+        process.exit(0)});
 
       process.on('SIGINT', () => {
         this.log('Received SIGINT, closing watcher...');
         watcher.close();
-        process.exit(0);
-      });
-
-    } catch (error) {
-      this.log(`Error in file watcher: ${error.message}`, 'ERROR');
-    }
+        process.exit(0)})} catch (error) {
+      this.log(`Error in file watcher: ${error.message}`, 'ERROR')}
   }
 }
 
 // Install chokidar if not present
 try {
-  require('chokidar');
-} catch (error) {
+  require('chokidar')} catch (error) {
   console.log('Installing chokidar...');
-  execSync('yarn add chokidar', { stdio: 'inherit' });
-}
+  execSync('yarn add chokidar', { stdio: 'inherit' })}
 
 // Main execution
 if (require.main === module) {
   const watcher = new FileWatcher();
-  watcher.run().catch(console.error);
-}
+  watcher.run().catch(console.error)}
 
 module.exports = FileWatcher;

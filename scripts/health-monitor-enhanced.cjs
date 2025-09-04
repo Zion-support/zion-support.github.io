@@ -7,8 +7,7 @@ class EnhancedHealthMonitor {
             uptime: process.uptime(),
             memory: process.memoryUsage(),
             timestamp: new Date().toISOString()
-        };
-    }
+        }}
 
     checkSystemHealth() {
         console.log('🔍 Checking system health...');
@@ -24,8 +23,7 @@ class EnhancedHealthMonitor {
             metrics: this.metrics
         };
 
-        return health;
-    }
+        return health}
 
     checkMemory() {
         const usage = process.memoryUsage();
@@ -34,40 +32,35 @@ class EnhancedHealthMonitor {
             status: isHealthy ? 'healthy' : 'warning',
             usage: usage,
             message: isHealthy ? 'Memory usage normal' : 'High memory usage detected'
-        };
-    }
+        }}
 
     checkDisk() {
         // Simplified disk check
         return {
             status: 'healthy',
             message: 'Disk space available'
-        };
-    }
+        }}
 
     checkNetwork() {
         // Simplified network check
         return {
             status: 'healthy',
             message: 'Network connectivity normal'
-        };
-    }
+        }}
 
     checkDatabase() {
         // Simplified database check
         return {
             status: 'healthy',
             message: 'Database connection stable'
-        };
-    }
+        }}
 
     generateReport() {
         const health = this.checkSystemHealth();
         const reportPath = `health-report-${Date.now()}.json`;
         fs.writeFileSync(reportPath, JSON.stringify(health, null, 2));
         console.log(`📊 Health report generated: ${reportPath}`);
-        return health;
-    }
+        return health}
 }
 
 const monitor = new EnhancedHealthMonitor();

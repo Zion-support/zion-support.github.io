@@ -2,9 +2,3 @@ const researchAreas = [{id: 1, title: "Artificial Intelligence & Machine Learnin
 
 </motion>
 </motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>

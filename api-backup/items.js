@@ -6,14 +6,12 @@ const items = [
 export default function handler(req, res) {
   if (req.method !== 'GET') {
     res.status(405).end();
-    return;
-  }
+    return}
   const { category } = req.query;
   const result =
     typeof category === 'string'
       ? items.filter(i => i.category === category)
       : items;
-  res.status(200).json(result);
-}
+  res.status(200).json(result)}
 
 

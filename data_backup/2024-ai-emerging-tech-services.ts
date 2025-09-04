@@ -36,8 +36,7 @@ export interface AIEmergingTechService {
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 export const aiEmergingTechServices: AIEmergingTechService[] = [
   // AI-Powered Video Generation Platform
   {

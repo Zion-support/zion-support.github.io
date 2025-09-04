@@ -37,8 +37,7 @@ export interface RevolutionaryMicroSaasService {
   trialPeriod: string;
   setupTime: string;
   roi: string;
-  competitors: string[];
-}
+  competitors: string[]}
 
 // Zion Tech Group Contact Information
 const zionContact = {

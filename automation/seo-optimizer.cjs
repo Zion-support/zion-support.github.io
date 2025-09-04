@@ -19,12 +19,10 @@ const seoChecks = [
         pages.forEach(page => {
           const content = fs.readFileSync(path.join(pagesDir, page), 'utf8');
           if (content.includes('<Head>') || content.includes('<title>') || content.includes('meta')) {
-            metaTagCount++;
-          }
+            metaTagCount++}
         });
         
-        console.log(`Found meta tags in ${metaTagCount}/${pages.length} pages`);
-      }
+        console.log(`Found meta tags in ${metaTagCount}/${pages.length} pages`)}
     }
   },
   {
@@ -33,10 +31,8 @@ const seoChecks = [
       console.log('🗺️ Checking sitemap...');
       const sitemapPath = path.join(process.cwd(), 'public', 'sitemap.xml');
       if (fs.existsSync(sitemapPath)) {
-        console.log('✅ Sitemap found');
-      } else {
-        console.log('⚠️ Sitemap not found - consider creating one');
-      }
+        console.log('✅ Sitemap found')} else {
+        console.log('⚠️ Sitemap not found - consider creating one')}
     }
   },
   {
@@ -45,10 +41,8 @@ const seoChecks = [
       console.log('🤖 Checking robots.txt...');
       const robotsPath = path.join(process.cwd(), 'public', 'robots.txt');
       if (fs.existsSync(robotsPath)) {
-        console.log('✅ Robots.txt found');
-      } else {
-        console.log('⚠️ Robots.txt not found - consider creating one');
-      }
+        console.log('✅ Robots.txt found')} else {
+        console.log('⚠️ Robots.txt not found - consider creating one')}
     }
   },
   {
@@ -63,12 +57,10 @@ const seoChecks = [
         pages.forEach(page => {
           const content = fs.readFileSync(path.join(pagesDir, page), 'utf8');
           if (content.includes('application/ld+json') || content.includes('schema.org')) {
-            structuredDataCount++;
-          }
+            structuredDataCount++}
         });
         
-        console.log(`Found structured data in ${structuredDataCount}/${pages.length} pages`);
-      }
+        console.log(`Found structured data in ${structuredDataCount}/${pages.length} pages`)}
     }
   },
   {
@@ -88,13 +80,10 @@ const seoChecks = [
           
           imgTags.forEach(img => {
             if (img.includes('alt=')) {
-              imagesWithAlt++;
-            }
-          });
-        });
+              imagesWithAlt++}
+          })});
         
-        console.log(`Images with alt text: ${imagesWithAlt}/${totalImages}`);
-      }
+        console.log(`Images with alt text: ${imagesWithAlt}/${totalImages}`)}
     }
   },
   {
@@ -110,11 +99,9 @@ const seoChecks = [
         pages.forEach(page => {
           const content = fs.readFileSync(path.join(pagesDir, page), 'utf8');
           h1Count += (content.match(/<h1[^>]*>/g) || []).length;
-          h2Count += (content.match(/<h2[^>]*>/g) || []).length;
-        });
+          h2Count += (content.match(/<h2[^>]*>/g) || []).length});
         
-        console.log(`H1 tags: ${h1Count}, H2 tags: ${h2Count}`);
-      }
+        console.log(`H1 tags: ${h1Count}, H2 tags: ${h2Count}`)}
     }
   }
 ];
@@ -128,10 +115,8 @@ for (const check of seoChecks) {
     console.log(`\n🔄 ${check.name}...`);
     check.action();
     console.log(`✅ ${check.name} completed`);
-    successCount++;
-  } catch (error) {
-    console.log(`❌ ${check.name} failed: ${error.message}`);
-  }
+    successCount++} catch (error) {
+    console.log(`❌ ${check.name} failed: ${error.message}`)}
 }
 
 console.log(`\n🎉 SEO Optimization Complete!`);
@@ -153,8 +138,7 @@ const report = {
 
 const reportsDir = path.join(process.cwd(), 'automation-reports');
 if (!fs.existsSync(reportsDir)) {
-  fs.mkdirSync(reportsDir, { recursive: true });
-}
+  fs.mkdirSync(reportsDir, { recursive: true })}
 
 const reportFile = path.join(reportsDir, `seo-report-${Date.now()}.json`);
 fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));

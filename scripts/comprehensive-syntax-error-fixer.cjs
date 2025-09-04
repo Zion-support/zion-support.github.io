@@ -5,12 +5,10 @@ const path = require('path');
 class ComprehensiveSyntaxErrorFixer {
   constructor() {
     this.projectRoot = path.join(__dirname, '..');
-    this.fixedFiles = [];
-  }
+    this.fixedFiles = []}
 
   async log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
+    console.log(`[${new Date().toISOString()}] ${message}`)}
 
   async fixFile(filePath) {
     try {
@@ -38,22 +36,18 @@ class ComprehensiveSyntaxErrorFixer {
       for (const fix of fixes) {
         if (fixedContent.includes(fix.from)) {
           fixedContent = fixedContent.replace(new RegExp(fix.from.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), fix.to);
-          hasChanges = true;
-        }
+          hasChanges = true}
       }
 
       if (hasChanges) {
         await fs.writeFile(filePath, fixedContent, 'utf8');
         await this.log(`Fixed syntax errors in: ${path.relative(this.projectRoot, filePath)}`);
         this.fixedFiles.push(path.relative(this.projectRoot, filePath));
-        return true;
-      }
+        return true}
 
-      return false;
-    } catch (error) {
+      return false} catch (error) {
       await this.log(`Error fixing ${filePath}: ${error.message}`);
-      return false;
-    }
+      return false}
   }
 
   async run() {
@@ -69,17 +63,14 @@ class ComprehensiveSyntaxErrorFixer {
     for (const file of filesToFix) {
       const fullPath = path.join(this.projectRoot, file);
       const wasFixed = await this.fixFile(fullPath);
-      if (wasFixed) fixedCount++;
-    }
+      if (wasFixed) fixedCount++}
 
     await this.log(`Fixed ${fixedCount} files with syntax errors`);
-    return { fixed: fixedCount, files: this.fixedFiles };
-  }
+    return { fixed: fixedCount, files: this.fixedFiles }}
 }
 
 if (require.main === module) {
   const fixer = new ComprehensiveSyntaxErrorFixer();
-  fixer.run().catch(console.error);
-}
+  fixer.run().catch(console.error)}
 
 module.exports = ComprehensiveSyntaxErrorFixer;

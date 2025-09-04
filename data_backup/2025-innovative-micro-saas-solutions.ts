@@ -50,15 +50,12 @@ marketDisruption: string;const contact = {
   '+1 302 464 0950,
   email:,
   kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709,;
-  ;
+  address: '364 E Main St STE 1008 Middletown DE 19709,
   ;
   ;
   ;
   website:,
-  https: //ziontechgroup.com;
-;
-};
+  https: //ziontechgroup.com};
 export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [
   // AI-POWERED SOCIAL MEDIA MANAGEMENT
   {
@@ -808,4 +805,4 @@ export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [
   'Conversion Optimization'],
     marketDisruption: 'Revolutionizes marketing with AI automation
 ];
-export default innovativeMicroSaasSolutions2025;}}
+export default innovativeMicroSaasSolutions2025}}

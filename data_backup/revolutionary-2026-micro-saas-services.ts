@@ -11,8 +11,7 @@ export interface Revolutionary2026MicroSaasService {
   contactInfo: {
     mobile: string;
     email: string;
-address: string;
-  };export const revolutionary2026MicroSaasServices: Revolutionary2026MicroSaasService[] = [
+address: string};export const revolutionary2026MicroSaasServices: Revolutionary2026MicroSaasService[] = [
   {
     id: "2026-revolutionary-micro-saas",
     name: "2026 Revolutionary Micro SAAS Platform",
@@ -33,5 +32,4 @@ address: string;
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-];
-}}}
+]}}}

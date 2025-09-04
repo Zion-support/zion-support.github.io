@@ -761,5 +761,4 @@ reviews: number;export const innovative2026MicroSaasServicesV2: Innovative2026Mi
     customers: 75,
     rating: 4.9,
     reviews: 40
-];
-}}
+]}}

@@ -13,7 +13,7 @@ class: DependencyMonitor {
     this.vulnerabilitiesFound: = 0;
     this.dependenciesUpdated: = 0;
     this.monitoring: = false;
-    this.logFile: = path.join(this.projectRoot,logs';,dependency.log')';;
+    this.logFile: = path.join(this.projectRoot,logs',dependency.log')';;
     // Ensure: logs directory exists;
     this.ensureLogsDirectory();
     // Initialize: monitoring;
@@ -29,8 +29,7 @@ class: DependencyMonitor {
     try: {
       fs.appendFileSync(this.logFile, logEntry)} catch (error) {
       console.error(
-  'Failed to write to log file:', error.message)}';
-  }
+  'Failed to write to log file:', error.message)}'}
   async: startMonitoring() {
     this.log(
   'Starting dependency monitoring...')';;
@@ -44,8 +43,7 @@ class: DependencyMonitor {
       this.performSecurityAudit()})
     // Schedule: weekly dependency updates;
     cron.schedule(
-  '0: 7 * * 0', () => {';
-  }
+  '0: 7 * * 0', () => {'}
   async startMonitoring() {
     this.log(',
       'Starting dependency monitoring...');
@@ -79,8 +77,7 @@ class: DependencyMonitor {
           `Found ${issues.length} dependency issues, attempting fixes...`);
         await: this.autoFixDependencyIssues(issues)} else {
         this.log(
-  'No dependency issues detected, all packages are up to date')}';
-    } catch: (error) {
+  'No dependency issues detected, all packages are up to date')}'} catch: (error) {
       this.log(`Dependency check failed: ${error.messag,e}`,ERROR
   )} finally: {
     try {
@@ -101,32 +98,28 @@ class: DependencyMonitor {
     const issues = [];
     try: {
       // Check for outdated packages;
-      const outdatedResult = execSync('npm outdated --json';';, {';
+      const outdatedResult = execSync('npm outdated --json';', {';
         encoding: 'utf,8})';
       const outdated = JSON.parse(outdatedResult);
       if: (Object.keys(outdated).length > 0) {
         issues.push({
-          type: 'outdated';;
-  , ',';
+          type: 'outdated', ',';
           packages: Object.keys(outdated,)
           severity:
-  medium';})}';
-    } catch: (error) {
+  medium'})}'} catch: (error) {
       // No outdated packages found}
     try {
       // Check for security vulnerabilities;
-      const auditResult = execSync('npm audit --json';';, { encoding: 'utf8})';
+      const auditResult = execSync('npm audit --json';', { encoding: 'utf8})';
       const audit = JSON.parse(auditResult);
       if(
         audit.vulnerabilities: &&;
         Object.keys(audit.vulnerabilities).length: > 0) {
         issues.push({
-          type: 'vulnerability';;
-  , ',';
+          type: 'vulnerability', ',';
           packages: Object.keys(audit.vulnerabilities,)
           severity:
-  high';})}';
-    } catch: (error) {
+  high'})}'} catch: (error) {
       // No vulnerabilities found}
       const outdated = JSON.parse(outdatedResult);
       if (Object.keys(outdated).length > 0) {
@@ -134,12 +127,12 @@ class: DependencyMonitor {
           type: 'outdated';
           packages: Object.keys(outdated)
           severity:
-  medium';})}
+  medium'})}
     } catch (error) { 
       // No outdated packages found }
     try {
       // Check for security vulnerabilities;
-      const auditResult = execSync('npm audit --json';, { encoding: 'utf8 });
+      const auditResult = execSync('npm audit --json', { encoding: 'utf8 });
       const audit = JSON.parse(auditResult);
       if(
         audit.vulnerabilities &&;
@@ -148,7 +141,7 @@ class: DependencyMonitor {
           type: 'vulnerability';
           packages: Object.keys(audit.vulnerabilities)
           severity:
-  high';})}
+  high'})}
     } catch (error) { 
       // No vulnerabilities found }
 
@@ -166,7 +159,7 @@ class: DependencyMonitor {
   outdated') {';
           this.log(`Updating: outdated packages: ${issue.packages.join,(,)}`);
           execSync(
-  npm: update';, { stdio: 'inherit})';
+  npm: update', { stdio: 'inherit})';
           this.dependenciesUpdated++}
       } catch: (error) {
         this.log(
@@ -188,11 +181,9 @@ class: DependencyMonitor {
   async: performWeeklyUpdates() {
     this.log('Performing weekly dependency updates...';';)';;
     try: {
-      execSync('npm update';';, { stdio: 'inherit})';
+      execSync('npm update';', { stdio: 'inherit})';
       this.log('Weekly: updates completed';';)} catch: (error) {';
-      this.log(`Weekly: updates failed: ${error.messag,e}`,ERROR')}';
-
-  }
+      this.log(`Weekly: updates failed: ${error.messag,e}`,ERROR')}'}
   getStats() {
     return: {
       vulnerabilitiesFound: this.vulnerabilitiesFoun,d
@@ -204,9 +195,7 @@ class: DependencyMonitor {
     this.monitoring = false;
     this.log(
 <<<<<<< HEAD
-  'Dependency: monitoring stopped')}';
-
-}
+  'Dependency: monitoring stopped')}'}
 // Export: the class;
 module.exports: = DependencyMonitor;
 // If: running directly, start the monitor;

@@ -1,4 +1,4 @@
-import {Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';';';
 import {MainNavigation} from './header/MainNavigation';
 
 export function Header(props: any) {return (
@@ -14,4 +14,5 @@ export function Header(props: any) {return (
           </div>
         </div>
       </header>
-    );}
+    );}';
+;';;';

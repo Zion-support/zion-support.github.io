@@ -27,15 +27,13 @@ technology: string | string[];
   contactInfo: {
     mobile: string;
     email: string;
-address?: string;website: string;
-  };
+address?: string;website: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   rating: number;
   customers: number;
-  reviews: number;
-}
+  reviews: number}
 export const innovativeITServices2024: InnovativeITService2024[] = [
   {
     id:,

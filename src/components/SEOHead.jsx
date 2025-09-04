@@ -1,9 +1,9 @@
-import React from 'react';'
-import {Helmet} from 'react-helmet-async';'
-const SEOHead = (props: any) => {}
-'
-''
-'''
+import React from 'react';'';';
+import {Helmet} from 'react-helmet-async';'';
+const SEOHead = (props: any) => {}';';
+'';';
+''';';
+'''';';
     const siteName = 'Zion Tech Group';
     const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
     return (<Helmet>
@@ -78,10 +78,10 @@ const SEOHead = (props: any) => {}
                 "https://twitter.com/ziontechgroup",""""
                 "https://github.com/ziontechgroup"""
             ]
-        }) }
-      </script>
-'"""
-      {/* Article specific structured data */}'"'"""
+        }) }';
+      </script>';';
+'"""';';
+      {/* Article specific structured data */}'"'"""';';
       {type === 'article' && publishedTime && (<script type="application/ld+json">
           {JSON.stringify({}
 """
@@ -130,4 +130,5 @@ export {SEOHead};
 
 export {SEOHead};
 
-export {SEOHead};
+export {SEOHead};';
+;';;';

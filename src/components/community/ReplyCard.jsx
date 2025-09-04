@@ -2,6 +2,5 @@ import React from 'react'; export default function ReplyCard(props: any) {" retu
 
 </button>
 </div>
-</div>
-</div>
-</div>
+</div>';
+</div>;';;';

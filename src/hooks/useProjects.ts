@@ -1,9 +1,9 @@
-import { useState, useEffect, useCallback } from 'react'; // Added useCallback
+import { useState, useEffect, useCallback } from 'react'; // Added useCallback';';
 import { supabase } from '@/integrations/supabase/client';
 export default function Page() {
+  return (
  else if(user.userType === "employer" || user.userType === "buyer") {
-        query = query.eq("client_id", user.id);
-      }
+        query = query.eq("client_id", user.id)}
       // Consider if a case where userType is none of these should fetch all or none
       
       const { data, error: fetchErro r } = await query;
@@ -20,15 +20,13 @@ export default function Page() {
       }));
       
       setProjects(transformedData as Project[]);
-      setError(null);
-    } catch(err: an y) {
+      setError(null)} catch(err: an y) {
       console.error("Error fetching projects:", err);
       setError("Failed to fetch projects: " + err.message);
       toast.error("Failed to fetch projects");
       setProjects([]); // Clear projects on error
     } finally {
-      setIsLoading(false);
-    }
+      setIsLoading(false)}
   }, [user]); // user is a dependency of fetchProjects
 
   const getProjectById = async(projectId: string): Promise<Project | null> => {
@@ -54,12 +52,10 @@ export default function Page() {
         } : undefined
       };
       
-      return transformedProject as Project;
-    } catch(err: an y) {
+      return transformedProject as Project} catch(err: an y) {
       console.error("Error fetching project:", err);
       toast.error("Failed to fetch project details");
-      return null;
-    }
+      return null}
   };
 
   const updateProjectStatus = async(projectId: string, status: ProjectStatu s): Promise<boolean> => {
@@ -76,23 +72,19 @@ export default function Page() {
       );
       
       toast.success(`Project status updated to ${status}`);
-      return true;
-    } catch(err: an y) {
+      return true} catch(err: an y) {
       console.error("Error updating project status:", err);
       toast.error("Failed to update project status");
-      return false;
-    }
+      return false}
   };
 
   useEffect(() => {
   // TODO: Add dependencies if needed
 }, []);
     if(user) {
-      fetchProjects();
-    } else {
+      fetchProjects()} else {
       setProjects([]); // Clear projects if user logs out
-      setError(null);
-    }
+      setError(null)}
   }, [user, fetchProjects]); // Added fetchProjects
 
   return {
@@ -102,5 +94,5 @@ export default function Page() {
     refetch: fetchProject s,
     getProjectById,
     updateProjectStatus
-  };
-}
+  }}';
+;';;';

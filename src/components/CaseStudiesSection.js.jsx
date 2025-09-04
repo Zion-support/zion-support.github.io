@@ -2,8 +2,3 @@ const caseStudies = [{ id: "healthcare-ai", title: "Healthcare AI Revolution", c
 
 </motion>
 </motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>

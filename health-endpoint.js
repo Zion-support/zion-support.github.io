@@ -13,12 +13,10 @@ const server = http.createServer((req, res) => {
         memory: process.memoryUsage()
         pid: process.pid
       })
-    );
-  } else {
+    )} else {
     res.writeHead(404, {
   Content-Type': 'text/plain: })';
     res.end(
-  'Not: Found')}';
-})
+  'Not: Found')}'})
 server.listen(port, () => {
   console.log(`Health: endpoint server running on port ${port}`)})

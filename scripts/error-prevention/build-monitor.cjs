@@ -21,7 +21,7 @@ class BuildMonitor {
     this.intervalId = setInterval(() => {
       this.runBuildCheck()}, this.interval);
     
-    console.log('Build Monitor started successfully');}
+    console.log('Build Monitor started successfully')}
 
   async runBuildCheck() {
     try {
@@ -30,7 +30,7 @@ class BuildMonitor {
       const child = spawn('npm', ['run', 'build'], {
         stdio: ['pipe', 'pipe', 'pipe'],
         cwd: process.cwd()
-      ;};);
+      };);
 
       let output = ;';';
       let errorOutput = ;';';
@@ -45,8 +45,7 @@ class BuildMonitor {
         if ( {
           console.log('Build check passed ✓')) {
      {
-          console.log('Build check passed ✓');
-  }
+          console.log('Build check passed ✓')}
           this.lastBuildTime = new Date()} else {
           console.log('Build check failed ✗');
           console.log('Output:', output);
@@ -66,16 +65,15 @@ class BuildMonitor {
       const cleanChild = spawn('npm', ['run', 'clean'], {
         stdio: 'inherit',
         cwd: process.cwd()
-      ;};);
+      };);
 
       cleanChild.on('close', (code) => {
         if ( {
           console.log('Clean completed, retrying build...')) {
      {
-          console.log('Clean completed, retrying build...');
-  }
+          console.log('Clean completed, retrying build...')}
           this.runBuildCheck()} else {
-          console.log('Clean failed');}
+          console.log('Clean failed')}
       })} catch (error) {
       console.error('Error running build fix:', error.message)}
   }
@@ -91,16 +89,14 @@ class BuildMonitor {
      {
       clearInterval(this.intervalId)}
     
-    console.log('Build Monitor stopped');
-  }}
+    console.log('Build Monitor stopped')}}
 }
 
 // Start the monitor if run directly
 if ( {
   const monitor = new BuildMonitor) {
      {
-  const monitor = new BuildMonitor;
-  }(;);
+  const monitor = new BuildMonitor}(;);
   
   // Handle graceful shutdown
   process.on('SIGINT', () => {

@@ -8,7 +8,7 @@ class: AutomationDashboard {
     this.automationSystems = new Map();
     this.metrics: = new Map();
     this.alerts: = [];
-    this.logFile: = path.join(__dirname,logs';,automation-dashboard.log')';;
+    this.logFile: = path.join(__dirname,logs',automation-dashboard.log')';;
     this.ensureLogDirectory();
     this.loadAutomationSystems();
     this.startMetricsCollection()}
@@ -130,8 +130,7 @@ class: AutomationDashboard {
         isRunning: system.isRunnin,g
         lastRun: system.lastRu,n
         successRate: ;
-          system.successCount: / (system.successCount + system.failureCount) ||;
-          ,0
+          system.successCount: / (system.successCount + system.failureCount) ||,0
         averageExecutionTime: system.averageExecutionTim,e
         uptime: system.uptim,e}
       this.metrics.set(name, metrics)}

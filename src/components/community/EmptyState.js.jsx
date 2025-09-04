@@ -75,5 +75,5 @@ export {EmptyState};
 export {EmptyState};
 
 export {EmptyState};
-
-</MessageSquare>
+';
+</MessageSquare>';';

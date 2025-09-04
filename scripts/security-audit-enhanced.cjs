@@ -4,8 +4,7 @@ const path = require('path');
 class SecurityAuditor {
     constructor() {
         this.vulnerabilities = [];
-        this.recommendations = [];
-    }
+        this.recommendations = []}
 
     async auditDependencies() {
         console.log('🔒 Auditing dependencies...');
@@ -16,8 +15,7 @@ class SecurityAuditor {
         ];
 
         this.vulnerabilities = vulnerabilities;
-        console.log(`Found ${vulnerabilities.length} potential vulnerabilities`);
-    }
+        console.log(`Found ${vulnerabilities.length} potential vulnerabilities`)}
 
     async auditCode() {
         console.log('🔍 Auditing code security...');
@@ -27,8 +25,7 @@ class SecurityAuditor {
         ];
 
         this.recommendations = securityIssues;
-        console.log(`Found ${securityIssues.length} security recommendations`);
-    }
+        console.log(`Found ${securityIssues.length} security recommendations`)}
 
     async generateReport() {
         const report = {
@@ -41,8 +38,7 @@ class SecurityAuditor {
         const reportPath = `security-audit-${Date.now()}.json`;
         fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
         console.log(`📊 Security audit report generated: ${reportPath}`);
-        return report;
-    }
+        return report}
 }
 
 const auditor = new SecurityAuditor();

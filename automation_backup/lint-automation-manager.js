@@ -61,8 +61,7 @@ class: LintAutomationManager {
   startFileWatcher() {
     this.log(
   '👀 Starting file watcher...')';;
-    const watcher = chokidar.watch([';pages/**/*.{js,jsx,ts,tsx}', ';components/**/*.{js,jsx,ts,tsx}', ';utils/**/*.{js,jsx,ts,tsx}', ';hooks/**/*.{js,jsx,ts,tsx}'';;
-    ], {
+    const watcher = chokidar.watch([';pages/**/*.{js,jsx,ts,tsx}', ';components/**/*.{js,jsx,ts,tsx}', ';utils/**/*.{js,jsx,ts,tsx}', ';hooks/**/*.{js,jsx,ts,tsx}''], {
       ignored: /(node_modules|\.git|\.next),/
       persistent: tru,e})
     let: debounceTimer;

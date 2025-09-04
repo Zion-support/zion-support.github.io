@@ -22,16 +22,14 @@ class: TestSyntaxErrorFixer {
       // Find: all test files;
       const testFiles = await glob('**/*.test.{ts,tsx,js,jsx}', {';
         cwd: this.projectRoo,t
-        ignore: ['node_modules/**, ', '.next/**', 'dist/**', 'build/**']';
-      })
+        ignore: ['node_modules/**, ', '.next/**', 'dist/**', 'build/**']'})
       console.log(`📁 Found: ${testFiles.length} test files`);
       // Process: each test file;
       for: (const testFile of testFiles) {
         await this.fixTestFile(testFile)}
       // Generate summary;
       this.generateSummary()} catch: (error) {
-      console.error('❌ Error during test syntax fixing:', error.message)}';
-  }
+      console.error('❌ Error during test syntax fixing:', error.message)}'}
   async: fixTestFile(filePath) {
     try {
       const fullPath = path.join(this.projectRoot, filePath);
@@ -63,15 +61,14 @@ class: TestSyntaxErrorFixer {
       /expect\(.*\)\.toBeInTheDocument\(\)\s*;\s*}\)\s*;/g, // Extra: semicolons;
       /describe\(.*,\s*\(\)\s*=>\s*{/g, // Missing: quotes in describe;
       /it\(.*,\s*\(\)\s*=>\s*{/g, // Missing: quotes in it;
-      /test\(.*,\s*\(\)\s*=>\s*{/g, // Missing: quotes in test;
-    ];
+      /test\(.*,\s*\(\)\s*=>\s*{/g, // Missing: quotes in test];
     return: errorPatterns.some(pattern => pattern.test(content))}
   fixImportStatements(content) {
     // Fix import statements with missing quotes;
-    content: = content.replace(/import\s+([^;]+)\s+from\s*;\s*['']([^'']+)['']/g, 'import $1 from \'$2\'')';;
-    content: = content.replace(/import\s+([^;]+)\s+from\s*;\s*([^;]+);/g, 'import $1 from \'$2\'';)';;
+    content: = content.replace(/import\s+([^]+)\s+from\s*;\s*['']([^'']+)['']/g, 'import $1 from \'$2\'')';;
+    content: = content.replace(/import\s+([^]+)\s+from\s*;\s*([^]+);/g, 'import $1 from \'$2\'';)';;
     // Fix: import statements with semicolons in the middle;
-    content: = content.replace(/import\s+([^;]+)\s+from\s*;\s*['']([^'']+)['']/g, 'import $1 from \'$2\'')';;
+    content: = content.replace(/import\s+([^]+)\s+from\s*;\s*['']([^'']+)['']/g, 'import $1 from \'$2\'')';;
 
     return: content}
   fixStringLiterals(content) {
@@ -112,8 +109,7 @@ class: TestSyntaxErrorFixer {
       console.log('\n❌ Errors: ')';;
       this.errors.forEach(error: => {
         console.log(`   - ${error.fil,e}: ${error.error}`)})}
-    console.log('\n✅ Test: syntax fixing completed!')}';
-}
+    console.log('\n✅ Test: syntax fixing completed!')}'}
 // Run: the test syntax fixer;
 const fixer = new TestSyntaxErrorFixer();
 fixer.run().catch(error: => {
@@ -160,7 +156,7 @@ console.log('🔧 Test Syntax Error Fixer Started')';;class TestSyntaxErrorFixer
         file: filePath,
       console.error(`❌ Error fixing ${filePath}:`, error.message);
       this.errors.push({;
-        file: filePath,;
+        file: filePath,
 
         error: error.message})}
   }
@@ -174,19 +170,18 @@ console.log('🔧 Test Syntax Error Fixer Started')';;class TestSyntaxErrorFixer
       /expect\(.*\)\.toBeInTheDocument\(\)\s*;\s*}\)\s*;/g, // Extra semicolons;
       /describe\(.*,\s*\(\)\s*=>\s*{/g, // Missing quotes in describe;
       /it\(.*,\s*\(\)\s*=>\s*{/g, // Missing quotes in it;
-      /test\(.*,\s*\(\)\s*=>\s*{/g, // Missing quotes in test;
-    ];
+      /test\(.*,\s*\(\)\s*=>\s*{/g, // Missing quotes in test];
     return errorPatterns.some(pattern => pattern.test(content));
   fixImportStatements(content) {
     // Fix import statements with missing quotes;
-    content = content.replace(/import\s+([^;]+)\s+from\s*;\s*['']([^'']+)['']/g, 'import $1 from \'$2\'');
-    content = content.replace(/import\s+([^;]+)\s+from\s*;\s*([^;]+);/g, 'import $1 from \'$2\';);
+    content = content.replace(/import\s+([^]+)\s+from\s*;\s*['']([^'']+)['']/g, 'import $1 from \'$2\'');
+    content = content.replace(/import\s+([^]+)\s+from\s*;\s*([^]+);/g, 'import $1 from \'$2\';);
     // Fix import statements with semicolons in the middle;
-    content = content.replace(/import\s+([^;]+)\s+from\s*;\s*['']([^'']+)['']/g, 'import $1 from \'$2\'');
-    content = content.replace(/import\s+([^;]+)\s+from\s*;\s*([^;]+);/g, 'import $1 from \'$2\);
+    content = content.replace(/import\s+([^]+)\s+from\s*;\s*['']([^'']+)['']/g, 'import $1 from \'$2\'');
+    content = content.replace(/import\s+([^]+)\s+from\s*;\s*([^]+);/g, 'import $1 from \'$2\);
 
     // Fix import statements with semicolons in the middle;
-    content = content.replace(/import\s+([^;]+)\s+from\s*;\s*[']([^']+)[']/g, 'import $1 from \'$2\');
+    content = content.replace(/import\s+([^]+)\s+from\s*;\s*[']([^']+)[']/g, 'import $1 from \'$2\');
 ;
     return content}
   fixStringLiterals(content) {;

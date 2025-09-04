@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState} from 'react';';';
 import {useState} from 'react';
 export default function Page(props: any) {
 );
@@ -11,19 +11,19 @@ export default function Page(props: any) {
       setIsSubmitting(true);
       const result = await login(data.email, data.password);
 
-      if(result.success) {
-
+      if(result.success) {';
+';';
         navigate('/');
-      } else {
-
-        form.setError('root', {
-
+      } else {';
+';';
+        form.setError('root', {';
+';';
           message: 'Login failed.Please check your credentials.'});
       }
-    } catch(error) {
-
-      form.setError('root', {
-
+    } catch(error) {';
+';';
+      form.setError('root', {';
+';';
         message: 'An error occurred.Please try again.'});
     } finally {setIsSubmitting(false);}
   };
@@ -71,9 +71,9 @@ export default function Page(props: any) {
           render={({ field }) => (
             <FormItem>"
               <FormLabel className="text-zion-slate-light">Password</FormLabel>
-              <FormControl>"
-                <div className="relative">
-                  <Input '
+              <FormControl>"';
+                <div className="relative">';';
+                  <Input '';';
                     type={showPassword ? 'text' : 'password'}"
                     placeholder="••••••••"
                     className="bg-zion-blue pl-10 border-zion-blue-light focus:border-zion-purple"
@@ -92,8 +92,8 @@ export default function Page(props: any) {
                       <EyeOff className="h-4 w-4"  />
                     ) : ("
                       <Eye className="h-4 w-4"  />
-                    )}"
-                    <span className="sr-only">
+                    )}"';
+                    <span className="sr-only">';';
                       {showPassword ? 'Hide password' : 'Show password'}
                     </span>
                   </Button>
@@ -131,9 +131,9 @@ export default function Page(props: any) {
               Sign in
             </>
           )}
-        </Button>
-"
-        <div className="text-center text-sm">'"
+        </Button>';
+"';';
+        <div className="text-center text-sm">'"';';
           <span className="text-zion-slate-light">Don't have an account? </span>
           <Link"
             to="/signup"
@@ -158,5 +158,5 @@ export {LoginForm};
 
 export {Page, LoginForm};
 
-</FormField>
-</FormField>
+</FormField>';
+</FormField>;';;';

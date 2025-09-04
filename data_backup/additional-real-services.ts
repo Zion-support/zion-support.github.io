@@ -11,8 +11,7 @@ export interface AdditionalRealService {
   contactInfo: {
     mobile: string;
     email: string;
-address: string;
-  };export const additionalEnhancedServices: AdditionalRealService[] = [
+address: string};export const additionalEnhancedServices: AdditionalRealService[] = [
   {
     id: "ai-automation-suite",
     name: "AI Automation Suite",
@@ -1056,15 +1055,14 @@ address: string;
   'MRR/ARR trends and cohorts',
   'Anomaly flags and forecasts',
   'CSV/Stripe imports',
-  'Board-ready reports';
-    ],;
-    popular: true,;
+  'Board-ready reports'],
+    popular: true,
     icon:,
-  📈',;
-    color: 'from-fuchsia-600 to-pink-700,;
+  📈',
+    color: 'from-fuchsia-600 to-pink-700,
     textColor:,
-  text-fuchsia-300',;
-    link: 'https://ziontechgroup.com/services/subscription-revenue-analytics,;
+  text-fuchsia-300',
+    link: 'https://ziontechgroup.com/services/subscription-revenue-analytics,
     marketPosition:,
   Faster deploy vs. BI stacks; purpose-built for SaaS.',
     targetAudience: Founders, finance, ops',
@@ -7212,4 +7210,4 @@ address: string;
     customers: 7,
     rating: 4.9,
     reviews: 6
-];}}}}}
+]}}}}}

@@ -10,20 +10,20 @@ function fixUtilsFile(filePath) {
       "export interface $1 {",
     );
     content = content.replace(
-      /export,\s*const\s+([^=]+)\s*=\s*([^;]+);/g,
-      "export const $1 = $2;",;
+      /export,\s*const\s+([^=]+)\s*=\s*([^]+);/g,
+      "export const $1 = $2;",
     );
     content = content.replace(
       /import\s+React\s+from\s*'rea\s*c\s*t';;'/g,
       "import React from 'react';",
     );
     content = content.replace(
-      /const\s+([^=]+)\s*=\s*([^;]+);/g,
+      /const\s+([^=]+)\s*=\s*([^]+);/g,
       "const $1 = $2;",
     );
-    content = content.replace(/retu,\s*r,\s*n\s+([^;]+);/g, "return $1;");
+    content = content.replace(/retu,\s*r,\s*n\s+([^]+);/g, "return $1;");
     content = content.replace(
-      /if\s*\(!\s*([^)]+)\s*\)\s*retu,\s*r,\s*n\s*([^;]+);/g,
+      /if\s*\(!\s*([^)]+)\s*\)\s*retu,\s*r,\s*n\s*([^]+);/g,
       "if (!$1) return $2;",
     );
     // Fix string literals
@@ -119,8 +119,7 @@ function fixUtilsFile(filePath) {
       // // // // // // // console.log(`Fixed: ${filePath}`);
       return true;
 
-    return false;
-  } catch (error) {
+    return false} catch (error) {
     // // // // // // // console.error(`Error processing ${filePath}:`, error.message);
     return false;
 
@@ -132,11 +131,9 @@ async function fixAllUtilsFiles() {
   const fixedCount = 0;
   for (const file of files) {
     if (fixUtilsFile(file)) {
-      fixedCount++;
-    }
+      fixedCount++}
   }
-  // // // // // // // console.log(`Fixed ${fixedCount} utils files.`);
-}
+  // // // // // // // console.log(`Fixed ${fixedCount} utils files.`)}
       console.log(`Fixed: ${filePath}`);
       return true}
     return false} catch (error) {
@@ -149,5 +146,4 @@ async function fixedCount = 0;
       fixedCount++}
   }
   console.log(`Fixed ${fixedCount} utils files.`)}
-fixAllUtilsFiles();
-}}}}}}}}}
+fixAllUtilsFiles()}}}}}}}}}

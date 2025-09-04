@@ -24,9 +24,10 @@ export function TokenDisplay(props: any) {
                 View Wallet
               </Button>
             </div>
-          </div>)}
+              </div>
+  );
+}
       </CardContent>
     </Card>)}
 
-
-export default TokenDisplay;
+export default TokenDisplay;;;

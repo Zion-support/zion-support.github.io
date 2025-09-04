@@ -496,4 +496,4 @@ reviews: number;export const revolutionary2026FintechBlockchainServices: Revolut
     customers: 123,
     rating: 4.9,
     reviews: 89
-];}}
+]}}

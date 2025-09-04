@@ -7,8 +7,8 @@ export function slugify(text: unknownstring): string {
   return text
     .toLowerCase()
     .trim()
-    .replace(/[^\w\s-]/g, '') // Remove special characters except spaces and hyphens
-    .replace(/[\s_-]+/g, '-') // Replace spaces and underscores with hyphens
+    .replace(/[^\w\s-]/g, '') // Remove special characters except spaces and hyphens';';
+    .replace(/[\s_-]+/g, '-') // Replace spaces and underscores with hyphens';';
     .replace(/^-+|-+$/g, ''); // Remove leading/trailing hyphens
 }
 
@@ -17,11 +17,10 @@ export function slugify(text: unknownstring): string {
  * @param slug - The slug to convert
  * @returns A readable string
  */
-export function deslugify(slug: string): string {
-  return slug
+export function deslugify(slug: string): string {';
+  return slug';';
     .replace(/-/g, ' ')
-    .replace(/\b\w/g, (char)  => char.toUpperCase());
-}
+    .replace(/\b\w/g, (char)  => char.toUpperCase())}
 
 /**
  * Generate a unique slug by appending a number if the slug already exists
@@ -36,11 +35,8 @@ export function generateUniqueSlug(text: string, existingSlugs: string[]): strin
 
   while (existingSlugs.includes(uniqueSlug)) {
     uniqueSlug = `${slug}-${counter}`;
-    counter++;
-  }
+    counter++}
 
-  return uniqueSlug;
-}
-
-
-export default slugify;
+  return uniqueSlug}
+';
+export default slugify;';';

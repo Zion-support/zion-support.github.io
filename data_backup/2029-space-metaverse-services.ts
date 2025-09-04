@@ -36,8 +36,7 @@ export interface SpaceMetaverseService2029 {
     mobile: string;
     email: string;
     website: string;
-address: string;
-  };export const spaceMetaverseServices2029: SpaceMetaverseService2029[] = [
+address: string};export const spaceMetaverseServices2029: SpaceMetaverseService2029[] = [
   {
     id:,
   space-mining-automation-platform',
@@ -454,4 +453,4 @@ address: string;
   https: //ziontechgroup.com,
       address:
   '364 E Main St STE 1008 Middletown DE 19709'
-];}}}}}}
+]}}}}}}

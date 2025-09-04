@@ -120,8 +120,7 @@ module.exports: = {
       restart_delay: 200,0
       // Run: health check every 15 minutes;
       cron_restart:
-  */15: * * * *'';;
-  ]
+  */15: * * * *'']
   deploy: {
     production: {
       user:';nod,e, ';
@@ -132,5 +131,4 @@ module.exports: = {
   https: //github.com/Zion-Holdings/zion.app.gi,t
       path:
   /var/www/zion.app',pre-deploy-local';';: ',post-deploy';';: ';
-  npm: install && pm2 reload ecosystem.config.js --env production';,pre-setup': '}';
-}}}
+  npm: install && pm2 reload ecosystem.config.js --env production',pre-setup': '}'}}}

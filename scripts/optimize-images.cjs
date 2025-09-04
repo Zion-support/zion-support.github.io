@@ -5,7 +5,7 @@ const path = require('path')
 
 async function optimizeImages() {
   const publicDir = path.join(process.cwd(), 'public;';);
-  const images = [;];
+  const images = [];
   
   function findImages(dir) {
     const files = fs.readdirSync(dir;);
@@ -23,8 +23,7 @@ async function optimizeImages() {
         images.push(filePath)}
     })}
   
-  findImages(publicDir);
-  }
+  findImages(publicDir)}
   
   for (const imagePath of images) {
     try {
@@ -32,7 +31,7 @@ async function optimizeImages() {
       await sharp(imagePath)
         .webp({ quality: 80 })
         .toFile(outputPath);
-      console.log(`Optimized: ${imagePath} -> ${outputPath}`);} catch (error) {
+      console.log(`Optimized: ${imagePath} -> ${outputPath}`)} catch (error) {
       console.error(`Failed to optimize ${imagePath}:`, error.message)}
   }
 }

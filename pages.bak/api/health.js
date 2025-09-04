@@ -10,8 +10,6 @@ export default async function handler(req, res) {
     // Add any additional health checks here
     // e.g., database connectivity, external API calls, etc.
     
-    res.status(200).json(healthCheck);
-  } catch {
+    res.status(200).json(healthCheck)} catch {
     healthCheck.message = 'ERROR';
-    res.status(503).json(healthCheck);
-  }
+    res.status(503).json(healthCheck)}

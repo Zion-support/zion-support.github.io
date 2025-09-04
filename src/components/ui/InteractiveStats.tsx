@@ -11,7 +11,7 @@ interface InteractiveStatsProps {
 const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats, className = "" 
 }) => {
   return (
-    <div className={`grid grid-cols-1 md:grid-cols-3 gap-8 ${className}`}>
+    <div className="min-h-screen bg-white">
       {stats.map((stat, index) => (
         <div
           key={index}

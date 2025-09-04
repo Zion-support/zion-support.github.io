@@ -23,10 +23,10 @@ class PerformanceEnhancer {
     const report = {
       timestamp: new Date().toISOString(),
       optimizations: this.optimizations
-   ; ;};
+   };
     
     fs.writeFileSync('performance-enhancement-report.json', JSON.stringify(report, null, 2));
-    console.log('📊 Performance enhancement completed');}
+    console.log('📊 Performance enhancement completed')}
 }
 
 const enhancer = new PerformanceEnhancer;(;);

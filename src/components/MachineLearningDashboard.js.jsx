@@ -1,45 +1,44 @@
-import React, {useState, useCallback} from 'react';'
-import {motion, AnimatePresence} from 'framer-motion';'
+import React, {useState, useCallback} from 'react';'';';
+import {motion, AnimatePresence} from 'framer-motion';'';';
 import {Brain, Play, Square, Download, Upload, BarChart3, TrendingUp, Activity, Zap, Target, CheckCircle, XCircle, Loader2, Plus, Eye, Trash2} from 'lucide-react';
 ;
-;
-export const MachineLearningDashboard = (props: any) => {
-    const { trackEvent } = useAnalytics({enableTracking: true,
-        enableUserBehaviorTracking: true;});'
+export const MachineLearningDashboard = (props: any) => {';
+    const { trackEvent } = useAnalytics({enableTracking: true,';';
+        enableUserBehaviorTracking: true;});'';';
     const [activeTab, setActiveTab] = useState('overview');
     const [showCreateModel, setShowCreateModel] = useState(false);
     const [showImportModel, setShowImportModel] = useState(false);
-    const {models, trainingJobs, predictions, metrics, isPredicting, createModel, startTraining, stopTraining, deployModel, archiveModel, makePrediction, exportModel, importModel} = useMachineLearning();
-    const [newModelForm, setNewModelForm] = useState({}
-'
-''
-'''
-        name: '','''
-        type: 'classification','''
+    const {models, trainingJobs, predictions, metrics, isPredicting, createModel, startTraining, stopTraining, deployModel, archiveModel, makePrediction, exportModel, importModel} = useMachineLearning();';
+    const [newModelForm, setNewModelForm] = useState({}';';
+'';';
+''';';
+'''';';
+        name: '','''';';
+        type: 'classification','''';';
         framework: 'tensorflow'
-    });
-    const [predictionForm, setPredictionForm] = useState({}
-'
-''
-'''
-        modelId: '','''
+    });';
+    const [predictionForm, setPredictionForm] = useState({}';';
+'';';
+''';';
+'''';';
+        modelId: '','''';';
         input: ''
     });
     const handleCreateModel = useCallback(() => {}
         if(newModelForm.name.trim()) {}
             createModel({}
                 name: newModelForm.name,
-                type: newModelForm.type,
-                framework: newModelForm.framework;
-            });'
-            setNewModelForm({name: '', type: 'classification', framework: 'tensorflow'});
-            setShowCreateModel(false);'
+                type: newModelForm.type,';
+                framework: newModelForm.framework;';';
+            });'';';
+            setNewModelForm({name: '', type: 'classification', framework: 'tensorflow'});';';
+            setShowCreateModel(false);'';';
             trackEvent('ml',dashboard',model_created')}
     }, [newModelForm, createModel, trackEvent]);
     const hyperparameters = {}
-  learningRate: 0.001,
-            batchSize: 32,
-            epochs: 100,'
+  learningRate: 0.001,';
+            batchSize: 32,';';
+            epochs: 100,'';';
   optimizer: 'adam'
 if(predictionForm.modelId && predictionForm.input.trim()) {}
 
@@ -599,8 +598,9 @@ Started: {job.startTime.toLocaleString()}"
                   {predictions.length === 0 && (<div className="text-center py-4 text-gray-500 dark: text-gray-400">""""
                       <Target className="w-8 h-8 mx-auto mb-2 text-gray-400"/" >"
                       <p>No predictions yet</p>,
-                    </div>)}
-
+                        </div>
+  );
+}
                 </div>"
               </div>""
             </motion.div>)}"""""
@@ -656,16 +656,14 @@ Started: {job.startTime.toLocaleString()}"
             </motion.div>) }
 
         </AnimatePresence>"
-      </div>""""
-    </div>)}"""""""
+      </div>""""';
+    </div>)}"""""""';';
 """"'""`""
 "
 
   } catch (error) {console.error(error);}
 export default Component
 
-</div>
-</div>
 </div>
 </motion>
 </Target>
@@ -680,12 +678,10 @@ export default Component
 </Square>
 </Brain>
 </div>
-</div>
 </motion>
 </Play>
 </Trash2>
 </Download>
-</motion>
 </motion>
 </Plus>
 </motion>
@@ -713,5 +709,5 @@ export default Component
 </Eye>
 </Brain>
 </Activity>
-</TrendingUp>
-</Target>
+</TrendingUp>';
+</Target>;';;';

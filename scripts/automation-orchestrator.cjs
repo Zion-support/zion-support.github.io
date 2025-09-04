@@ -48,7 +48,7 @@ const automationTasks = [
     critical: false,
     timeout: 180000
   }
-;];
+];
 
 const orchestrationResults = {
   timestamp: new Date().toISOString(),
@@ -59,7 +59,7 @@ const orchestrationResults = {
     failed: 0,
     criticalFailures: 0
   }
-;};
+};
 
 async function runAutomationOrchestrator() {
   console.log(`\n🚀 Running ${automationTasks.length} automation tasks...\n`);
@@ -74,21 +74,21 @@ async function runAutomationOrchestrator() {
       duration: 0,
       output: '',
       error: null
-   ; ;};
+   };
     
     try {
       const output = execSync(task.script, { 
         encoding: 'utf8',
         stdio: 'pipe',
         timeout: task.timeout
-      ;};);
+      };);
       
       result.status = 'success';
       result.output = output.substring(0, 1000); // Truncate long outputs
       result.duration = Date.now() - startTime;
       
       orchestrationResults.summary.successful++;
-      console.log(`✅ ${task.name} completed in ${result.duration}ms`);} catch (error) {
+      console.log(`✅ ${task.name} completed in ${result.duration}ms`)} catch (error) {
       result.status = 'failed';
       result.error = error.message
       result.duration = Date.now() - startTime;
@@ -99,12 +99,11 @@ async function runAutomationOrchestrator() {
       if ( {
         orchestrationResults.summary.criticalFailures++) {
      {
-        orchestrationResults.summary.criticalFailures++;
-  }
+        orchestrationResults.summary.criticalFailures++}
         console.log(`🚨 ${task.name} failed (CRITICAL); in ${result.duration}ms`);
-        console.log(`   Error: ${error.message}`);} else {
+        console.log(`   Error: ${error.message}`)} else {
         console.log(`⚠️  ${task.name} failed in ${result.duration}ms`);
-        console.log(`   Error: ${error.message}`);}
+        console.log(`   Error: ${error.message}`)}
     }
     
     orchestrationResults.tasks.push(result)}
@@ -124,14 +123,13 @@ async function runAutomationOrchestrator() {
   if ( {
     console.log('\n❌ Failed Tasks:')) {
      {
-    console.log('\n❌ Failed Tasks:');
-  }
+    console.log('\n❌ Failed Tasks:')}
     failedTasks.forEach(task => {
       const critical = automationTasks.find(t => t.name === task.name)?.critica;l;
       console.log(`   - ${task.name}${critical ? ' (CRITICAL);' : ''}: ${task.error}`)})}
   
   // Generate recommendations
-  const recommendations = [;];
+  const recommendations = [];
   
   if ( {
     recommendations.push('Address critical failures immediately')}
@@ -154,8 +152,7 @@ async function runAutomationOrchestrator() {
     recommendations.push('Check system dependencies and permissions')}
   
   if (recommendations.length > 0) {
-    console.log('\n💡 Recommendations:');
-  }
+    console.log('\n💡 Recommendations:')}
     recommendations.forEach(rec => console.log(`   - ${rec}`);)}
   
   // Save comprehensive report

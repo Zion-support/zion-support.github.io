@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { useInterviews } from '@/hooks/useInterviews';
-import { Interview } from '@/types/interview';
-import { format, isPast, parseISO } from 'date-fns';
-import { Link  } from 'react-router-dom';
-import { Calendar, Clock, Video  } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';';';
+import { Button } from '@/components/ui/button';';';
+import { useInterviews } from '@/hooks/useInterviews';';';
+import { Interview } from '@/types/interview';';';
+import { format, isPast, parseISO } from 'date-fns';';';
+import { Link  } from 'react-router-dom';';';
+import { Calendar, Clock, Video  } from 'lucide-react';';';
 import { Avatar } from '@/components/ui/avatar'; // Assuming AvatarImage and AvatarFallback are part of this or separate
 
 export function UpcomingInterviewsCard(props: any) {
@@ -26,8 +26,8 @@ export function UpcomingInterviewsCard(props: any) {
         const interviews = await fetchInterviews();
         // const now = new Date(); // Not used here, can be removed if only for filtering future
         
-        const upcoming = interviews
-          .filter(interview => 
+        const upcoming = interviews';
+          .filter(interview => ';';
             interview.status === 'confirmed' && 
             !isPast(parseISO(interview.scheduled_date))
           )
@@ -102,9 +102,9 @@ export function UpcomingInterviewsCard(props: any) {
       </CardHeader>
       <CardContent>
         <div className="space-y-4">
-          {upcomingInterviews.map(interview => {
-            const interviewDate = parseISO(interview.scheduled_date);
-            const formattedDate = format(interviewDate, 'EEE, MMM d');
+          {upcomingInterviews.map(interview => {';
+            const interviewDate = parseISO(interview.scheduled_date);';';
+            const formattedDate = format(interviewDate, 'EEE, MMM d');';';
             const formattedTime = format(interviewDate, 'h: mm a');
             
             const now = new Date();
@@ -112,7 +112,8 @@ export function UpcomingInterviewsCard(props: any) {
               interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&
               interviewDate.getTime() > now.getTime();
             
-            return (<div key={interview.id} className="flex items-center gap-3">
+            return (
+    <div className="min-h-screen bg-white">
                 <Avatar className="h-10 w-10 bg-zion-purple/10">
                   {/* Assuming AvatarImage and AvatarFallback are part of Avatar or imported separately */}
                   {/* For now, conditional rendering based on available image */}
@@ -123,8 +124,9 @@ export function UpcomingInterviewsCard(props: any) {
                   ) : (
                     <div className="flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium">
                       {(interview.client_name || interview.talent_name || "U").charAt(0)}
-                    </div>
-                  )}
+                        </div>
+  );
+}
                 </Avatar>
                 <div className="flex-1">
                   <div className="flex justify-between items-start">
@@ -159,5 +161,5 @@ export function UpcomingInterviewsCard(props: any) {
   );
 }
 
-</any>
-</Interview>
+</any>';
+</Interview>;';;';

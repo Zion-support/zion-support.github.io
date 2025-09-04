@@ -2,9 +2,3 @@ const successStories = [{ id: 1, client: "TechFlow Solutions"," industry: "FinTe
 
 </motion>
 </motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>

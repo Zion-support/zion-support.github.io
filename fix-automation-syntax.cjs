@@ -16,10 +16,10 @@ function fixSyntaxErrors(content) {
   // Fix common syntax errors
   let fixed = content
     // Remove extra commas after closing braces
-    .replace(/\[\];,/g, '[];')
-    .replace(/\{\};,/g, '{};')
-    .replace(/\);,/g, ');')
-    .replace(/\];,/g, '];')
+    .replace(/\[\],/g, '[];')
+    .replace(/\{\},/g, '{};')
+    .replace(/\),/g, ');')
+    .replace(/\],/g, '];')
     // Remove extra semicolons after closing braces
     .replace(/\[\];;/g, '[];')
     .replace(/\{\};;/g, '{};')
@@ -32,24 +32,21 @@ function fixSyntaxErrors(content) {
     .replace(/class \$4/g, 'class SecurityScanner')
     .replace(/class \$5/g, 'class PerformanceOptimizer')
     // Fix constructor issues
-    .replace(/constructor\(\) \{[\s\S]*?this\.projectRoot = process\.cwd\(\);[\s\S]*?this\.fixes = \[\];[\s\S]*?this\.errors = \[\];,?\s*\}/g, (match) => {
-      return match.replace(/\[\];,/g, '[];').replace(/\[\];;/g, '[];');
-    })
+    .replace(/constructor\(\) \{[\s\S]*?this\.projectRoot = process\.cwd\(\);[\s\S]*?this\.fixes = \[\];[\s\S]*?this\.errors = \[\],?\s*\}/g, (match) => {
+      return match.replace(/\[\],/g, '[];').replace(/\[\];;/g, '[];')})
     // Fix method definitions
-    .replace(/log\(message, type = "INFO"\) \{[\s\S]*?console\.log\(`\[.*?\] \[.*?\] \$\{message\}`\);,?\s*\}/g, (match) => {
-      return match.replace(/\);,/g, ');').replace(/\);;/g, ');');
-    })
+    .replace(/log\(message, type = "INFO"\) \{[\s\S]*?console\.log\(`\[.*?\] \[.*?\] \$\{message\}`\),?\s*\}/g, (match) => {
+      return match.replace(/\),/g, ');').replace(/\);;/g, ');')})
     // Remove standalone semicolons
     .replace(/^\s*;\s*$/gm, '')
     // Fix object property syntax
-    .replace(/:\s*\[\];,/g, ': [];')
-    .replace(/:\s*\{\};,/g, ': {};')
+    .replace(/:\s*\[\],/g, ': [];')
+    .replace(/:\s*\{\},/g, ': {};')
     // Fix function call syntax
-    .replace(/\(\s*\[\];,/g, '([];')
-    .replace(/\(\s*\{\};,/g, '({};');
+    .replace(/\(\s*\[\],/g, '([];')
+    .replace(/\(\s*\{\},/g, '({};');
 
-  return fixed;
-}
+  return fixed}
 
 function fixFile(filePath) {
   try {
@@ -59,13 +56,10 @@ function fixFile(filePath) {
     
     if (content !== fixed) {
       fs.writeFileSync(filePath, fixed);
-      console.log(`✅ Fixed ${filePath}`);
-    } else {
-      console.log(`ℹ️  No changes needed for ${filePath}`);
-    }
+      console.log(`✅ Fixed ${filePath}`)} else {
+      console.log(`ℹ️  No changes needed for ${filePath}`)}
   } catch (error) {
-    console.error(`❌ Error fixing ${filePath}:`, error.message);
-  }
+    console.error(`❌ Error fixing ${filePath}:`, error.message)}
 }
 
 // Fix all automation files

@@ -8,8 +8,7 @@ describe('TestimonialsSectiondynamic', () => {
     render(<TestimonialsSectiondynamic />);
     expect(
       screen.getByTestId('testimonialssection.dynamic')
-    ).toBeInTheDocument();
-  });
+    ).toBeInTheDocument()});
 
   test('displays correct content', () => {
     render(<TestimonialsSectiondynamic />);
@@ -24,5 +23,4 @@ describe('TestimonialsSectiondynamic', () => {
   test('applies correct styling', () => {
     render(<TestimonialsSectiondynamic />);
     // Add styling tests if needed
-  });
-});
+  })});

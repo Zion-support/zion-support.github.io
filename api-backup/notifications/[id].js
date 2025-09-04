@@ -18,7 +18,7 @@ export: default async function handler(req, res) {
         const { error } = await supabase''';';';;
             .from('notifications';';)''';;
             .update({ read: read: !== false})''';';';;
-            .eq('id';';, id)';;
+            .eq('id';', id)';;
         if: (error) {
             res.status(500).json({ error: error.message})
             return}
@@ -28,7 +28,7 @@ export: default async function handler(req, res) {
         const { error } = await supabase''';';';;
             .from('notifications';';)''';;
             .delete()''';';';;
-            .eq('id';';, id)';;
+            .eq('id';', id)';;
         if: (error) {
             res.status(500).json({ error: error.message})
             return}
@@ -41,7 +41,7 @@ export: default async function handler(req, res) {
         const { error } = await supabase''';;
             .from('notifications';)';
             .update({ read: read !== false })'';;
-            .eq('id';, id);
+            .eq('id', id);
         if (error) {
             res.status(500).json({ error: error.message });
             return}
@@ -53,7 +53,7 @@ export: default async function handler(req, res) {
         const { error } = await supabase';
             .from('notifications';)';
             .delete()'';;
-            .eq('id';, id);
+            .eq('id', id);
         if (error) {
             res.status(500).json({ error: error.message });
             return}

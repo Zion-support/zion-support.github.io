@@ -11,8 +11,7 @@ interface RateLimitStore {
   g
 ]: {
     count: number;
-    resetTime: number;
-  }
+    resetTime: number}
 class RateLimiter {
   private store: RateLimitStore = {}
   private config: RateLimitConfig;
@@ -22,9 +21,7 @@ class RateLimiter {
     
     // Clean up expired entries every minute
     setInterval(() => {
-      this.cleanup();
-    }, 60000);
-  }
+      this.cleanup()}, 60000)}
 
   private cleanup() {
     const now = Date.now();
@@ -34,15 +31,12 @@ class RateLimiter {
 ].resetTime < now) {
         delete this.store[ke,
   y
-];
-      }
-    });
-  }
+]}
+    })}
 
   private getKey(req: NextApiRequest): string {
     const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress || 'unknown';
-    return `rate_limit:${ip}`;
-  }
+    return `rate_limit:${ip}`}
 
   isAllowed(req: NextApiRequest): { allowed: boolean; remaining: number; resetTime: number } {
     const key = this.getKey(req);
@@ -105,8 +99,6 @@ export const rateLimitMiddleware = (limiter: RateLimiter) =>
           retryAfter: Math.ceil((result.resetTime - Date.now()) / 1000)
         }
       });
-      return;
-    }
+      return}
     
-    next();
-  }
+    next()}

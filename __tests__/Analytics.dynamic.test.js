@@ -6,8 +6,7 @@ import Analyticsdynamic from '../components/Analytics.dynamic';
 describe('Analyticsdynamic', () => {
   test('renders without crashing', () => {
     render(<Analyticsdynamic />);
-    expect(screen.getByTestId('analytics.dynamic')).toBeInTheDocument();
-  });
+    expect(screen.getByTestId('analytics.dynamic')).toBeInTheDocument()});
 
   test('displays correct content', () => {
     render(<Analyticsdynamic />);
@@ -22,5 +21,4 @@ describe('Analyticsdynamic', () => {
   test('applies correct styling', () => {
     render(<Analyticsdynamic />);
     // Add styling tests if needed
-  });
-});
+  })});

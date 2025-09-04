@@ -5,29 +5,24 @@ const fs = require('fs');
 class GitWorkflow {
   constructor() {
     this.branch = 'main';
-    this.changes = [];
-  }
+    this.changes = []}
 
   checkGitStatus() {
     try {
       // Check if we're in a git repository
       if (!fs.existsSync('.git')) {
         console.log('❌ Not in a git repository');
-        return false;
-      }
+        return false}
       
       console.log('✅ Git repository found');
-      return true;
-    } catch (error) {
+      return true} catch (error) {
       console.log('❌ Error checking git status:', error.message);
-      return false;
-    }
+      return false}
   }
 
   generateCommitMessage() {
     const timestamp = new Date().toISOString();
-    return `Automated improvements and optimizations - ${timestamp}`;
-  }
+    return `Automated improvements and optimizations - ${timestamp}`}
 
   createGitHooks() {
     const preCommitHook = `#!/bin/sh
@@ -47,8 +42,7 @@ echo "Pre-commit checks completed"
 `;
 
     this.writeFile('.git/hooks/pre-commit', preCommitHook);
-    console.log('✅ Created pre-commit hook');
-  }
+    console.log('✅ Created pre-commit hook')}
 
   generateReport() {
     const report = {
@@ -62,14 +56,12 @@ echo "Pre-commit checks completed"
       ]
     }
     fs.writeFileSync('git-workflow-report.json', JSON.stringify(report, null, 2));
-    console.log('Git workflow report generated');
-  }
+    console.log('Git workflow report generated')}
 }
 
 if (require.main === module) {
   const workflow = new GitWorkflow();
   workflow.createGitHooks();
-  workflow.generateReport();
-}
+  workflow.generateReport()}
 
 module.exports = GitWorkflow;

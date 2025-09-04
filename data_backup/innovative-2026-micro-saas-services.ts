@@ -945,4 +945,4 @@ reviews: number;export const innovative2026MicroSaasServices: Innovative2026Micr
     customers: 800,
     rating: 4.8,
     reviews: 500
-];}}
+]}}

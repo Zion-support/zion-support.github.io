@@ -1,9 +1,9 @@
-import React from 'react';'
-import {Helmet} from 'react-helmet-async';'
-const SEOMeta = (props: any) => {}
-'
-''
-'''
+import React from 'react';'';';
+import {Helmet} from 'react-helmet-async';'';
+const SEOMeta = (props: any) => {}';';
+'';';
+''';';
+'''';';
     const siteName = 'Zion Tech Group';
     const fullTitle = `${title} | ${siteName}`;
     // Default structured data for organization;
@@ -155,4 +155,5 @@ export {SEOMeta};
 
 export {SEOMeta};
 
-export {SEOMeta};
+export {SEOMeta};';
+;';;';

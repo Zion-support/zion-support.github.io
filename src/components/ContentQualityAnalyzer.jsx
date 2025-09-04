@@ -1,75 +1,75 @@
-import React, {useState, useEffect} from 'react';'''
+import React, {useState, useEffect} from 'react';'''';';
 import {motion} from 'framer-motion';
-import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChart3, TrendingUp, Zap const ContentQualityAnalyzer = (props: any) => {}
-    const [isOpen, setIsOpen] = useState(false);
-    const [isAnalyzing, setIsAnalyzing] = useState(false);'
-    const [contentIssues, setContentIssues] = useState([]);''
-    const [report, setReport] = useState(null);'''
-    const [selectedFilter, setSelectedFilter] = useState('all');'''
+import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChart3, TrendingUp, Zap const ContentQualityAnalyzer = (props: any) => {}';
+    const [isOpen, setIsOpen] = useState(false);';';
+    const [isAnalyzing, setIsAnalyzing] = useState(false);'';';
+    const [contentIssues, setContentIssues] = useState([]);''';';
+    const [report, setReport] = useState(null);'''';';
+    const [selectedFilter, setSelectedFilter] = useState('all');'''';';
     const [searchTerm, setSearchTerm] = useState('');
     // Sample data based on the analysis report;
-    const sampleIssues = []
-        {}
-'
-''
-'''
-            id: '1','''
-            pageUrl: 'https://ziontechgroup.com/_next/static/chunks/polyfills-42372ed130431b0a.js','''
-            pageTitle: 'Missing','''
-            issueType: 'missing_title','''
-            severity: 'high','''
-            description: 'Short or missing title, No headings found, Missing meta description, Meta description too short','''
-            recommendation: 'Add proper page title, headings, and meta description for better SEO','''
+    const sampleIssues = []';
+        {}';';
+'';';
+''';';
+'''';';
+            id: '1','''';';
+            pageUrl: 'https://ziontechgroup.com/_next/static/chunks/polyfills-42372ed130431b0a.js','''';';
+            pageTitle: 'Missing','''';';
+            issueType: 'missing_title','''';';
+            severity: 'high','''';';
+            description: 'Short or missing title, No headings found, Missing meta description, Meta description too short','''';';
+            recommendation: 'Add proper page title, headings, and meta description for better SEO','''';';
             status: 'open'
-        },
-        {}
-'
-''
-'''
-            id: '2','''
-            pageUrl: 'https://ziontechgroup.com/_next/static/chunks/webpack-e219339f62a4a96e.js','''
-            pageTitle: 'Missing','''
-            issueType: 'missing_meta','''
-            severity: 'high','''
-            description: 'Short or missing title, No headings found, Missing meta description, Meta description too short','''
-            recommendation: 'Add proper page title, headings, and meta description for better SEO','''
+        },';
+        {}';';
+'';';
+''';';
+'''';';
+            id: '2','''';';
+            pageUrl: 'https://ziontechgroup.com/_next/static/chunks/webpack-e219339f62a4a96e.js','''';';
+            pageTitle: 'Missing','''';';
+            issueType: 'missing_meta','''';';
+            severity: 'high','''';';
+            description: 'Short or missing title, No headings found, Missing meta description, Meta description too short','''';';
+            recommendation: 'Add proper page title, headings, and meta description for better SEO','''';';
             status: 'open'
-        },
-        {}
-'
-''
-'''
-            id: '3','''
-            pageUrl: 'https://ziontechgroup.com/about/','''
-            pageTitle: 'About','''
-            issueType: 'minimal_content','''
-            severity: 'medium','''
-            description: 'Suspiciously small HTML content','''
-            recommendation: 'Add more meaningful content, headings, and images to improve user experience','''
+        },';
+        {}';';
+'';';
+''';';
+'''';';
+            id: '3','''';';
+            pageUrl: 'https://ziontechgroup.com/about/','''';';
+            pageTitle: 'About','''';';
+            issueType: 'minimal_content','''';';
+            severity: 'medium','''';';
+            description: 'Suspiciously small HTML content','''';';
+            recommendation: 'Add more meaningful content, headings, and images to improve user experience','''';';
             status: 'open'
-        },
-        {}
-'
-''
-'''
-            id: '4','''
-            pageUrl: 'https://ziontechgroup.com/services/','''
-            pageTitle: 'Services','''
-            issueType: 'no_headings','''
-            severity: 'medium','''
-            description: 'No headings found','''
-            recommendation: 'Add proper heading structure (H1, H2, H3) for better content organization and SEO','''
+        },';
+        {}';';
+'';';
+''';';
+'''';';
+            id: '4','''';';
+            pageUrl: 'https://ziontechgroup.com/services/','''';';
+            pageTitle: 'Services','''';';
+            issueType: 'no_headings','''';';
+            severity: 'medium','''';';
+            description: 'No headings found','''';';
+            recommendation: 'Add proper heading structure (H1, H2, H3) for better content organization and SEO','''';';
             status: 'open'
 
     ];
     useEffect ( () => {}
         setContentIssues (sampleIssues) ;
         generateReport (sampleIssues) }, []) ;
-    const generateReport = (props: any) => {}
-        const totalPages = 79; // From analysis report;
-        const pagesWithIssues = issues.length;'
-        const criticalIssues = issues.filter(i => i.severity === 'high').length;'
-        const mediumIssues = issues.filter(i => i.severity === 'medium').length;'
+    const generateReport = (props: any) => {}';
+        const totalPages = 79; // From analysis report;';';
+        const pagesWithIssues = issues.length;'';';
+        const criticalIssues = issues.filter(i => i.severity === 'high').length;'';';
+        const mediumIssues = issues.filter(i => i.severity === 'medium').length;'';';
         const lowIssues = issues.filter(i => i.severity === 'low').length;
         setReport({}
             totalPages,
@@ -86,64 +86,64 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
         // Simulate content analysis;
         await new Promise(resolve => setTimeout (resolve, 3000) ) ;
         setIsAnalyzing(false) };
-    const getSeverityIcon = (props: any) => {}
-        switch (severity) {}
-'
-            case 'high': any;
-                return <AlertTriangle className="w-4 h-4 text-red-400" />;'"""
-            case 'medium':""""
-                return <AlertTriangle className="w-4 h-4 text-yellow-400" />;'"""
+    const getSeverityIcon = (props: any) => {}';
+        switch (severity) {}';';
+'';';
+            case 'high': any;';';
+                return <AlertTriangle className="w-4 h-4 text-red-400" />;'"""';';
+            case 'medium':""""';';
+                return <AlertTriangle className="w-4 h-4 text-yellow-400" />;'"""';';
             case 'low':""""
                 return <Info className="w-4 h-4 text-blue-400" />;"""
             default:""""
                 return <Info className="w-4 h-4 text-gray-400" />}
     };
-    const getSeverityColor = (props: any) => {}
-        switch (severity) {}
-'
-''
-'''
-            case 'high':''''
-                return 'text-red-400';'''
-            case 'medium':''''
-                return 'text-yellow-400';'''
-            case 'low':''''
-                return 'text-blue-400';'''
-            default:''''
+    const getSeverityColor = (props: any) => {}';
+        switch (severity) {}';';
+'';';
+''';';
+'''';';
+            case 'high':''''';';
+                return 'text-red-400';'''';';
+            case 'medium':''''';';
+                return 'text-yellow-400';'''';';
+            case 'low':''''';';
+                return 'text-blue-400';'''';';
+            default:''''';';
                 return 'text-gray-400'}
     };
-    const getStatusColor = (props: any) => {}
-        switch (status) {}
-'
-''
-'''
-            case 'resolved':''''
-                return 'text-green-400';'''
-            case 'in_progress':''''
-                return 'text-yellow-400';'''
-            case 'open':''''
-                return 'text-red-400';'''
-            default:''''
+    const getStatusColor = (props: any) => {}';
+        switch (status) {}';';
+'';';
+''';';
+'''';';
+            case 'resolved':''''';';
+                return 'text-green-400';'''';';
+            case 'in_progress':''''';';
+                return 'text-yellow-400';'''';';
+            case 'open':''''';';
+                return 'text-red-400';'''';';
+            default:''''';';
                 return 'text-gray-400'}
     };
     const filteredIssues = contentIssues.filter(issue => {}
         const matchesSearch = issue.pageTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||
             issue.description.toLowerCase().includes(searchTerm.toLowerCase());
         return matchesFilter && matchesSearch});
-    const getIssueTypeLabel = (props: any) => {}
-        switch (type) {}
-'
-''
-'''
-            case 'missing_title':''''
-                return 'Missing Title';'''
-            case 'missing_meta':''''
-                return 'Missing Meta Description';'''
-            case 'no_headings':''''
-                return 'No Headings';'''
-            case 'minimal_content':''''
-                return 'Minimal Content';'''
-            case 'no_images':''''
+    const getIssueTypeLabel = (props: any) => {}';
+        switch (type) {}';';
+'';';
+''';';
+'''';';
+            case 'missing_title':''''';';
+                return 'Missing Title';'''';';
+            case 'missing_meta':''''';';
+                return 'Missing Meta Description';'''';';
+            case 'no_headings':''''';';
+                return 'No Headings';'''';';
+            case 'minimal_content':''''';';
+                return 'Minimal Content';'''';';
+            case 'no_images':''''';';
                 return 'No Images';
             default: any;
                 return type}
@@ -201,35 +201,37 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
                     <div className="text-2xl font-bold text-blue-400">{report.pagesWithMetaDescriptions}</div>""""
                     <div className="text-blue-400 text-sm">With Meta Descriptions</div>
                   </div>
-                </div>) }
+                    </div>
+  );
+}
 """
-              {/* Actions */}""""
-              <div className="flex items-center justify-between">""""
-                <div className="flex space-x-2">'
-                  <button onClick={() => setSelectedFilter('all')} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'all'''`
-                ? 'bg-purple-500 text-white''`'`
-                : 'bg-gray-700 text-gray-300 hover:bg-gray-600'}`}>
-                    All Issues'`
-                  </button>'`'`
-                  <button onClick={() => setSelectedFilter('critical')} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'critical'''`
-                ? 'bg-red-500 text-white''`'`
-                : 'bg-gray-700 text-gray-300 hover:bg-gray-600'}`}>
-                    Critical'`
-                  </button>'`'`
-                  <button onClick={() => setSelectedFilter('medium')} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'medium'''`
-                ? 'bg-yellow-500 text-white''`'`
-                : 'bg-gray-700 text-gray-300 hover:bg-gray-600'}`}>
-                    Medium'`
-                  </button>'`'`
-                  <button onClick={() => setSelectedFilter('low')} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'low'''`
-                ? 'bg-blue-500 text-white''`'`
+              {/* Actions */}""""';
+              <div className="flex items-center justify-between">""""';';
+                <div className="flex space-x-2">'';';
+                  <button onClick={() => setSelectedFilter('all')} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'all'''`';';
+                ? 'bg-purple-500 text-white''`'`';';
+                : 'bg-gray-700 text-gray-300 hover:bg-gray-600'}`}>';';
+                    All Issues'`';';
+                  </button>'`'`';';
+                  <button onClick={() => setSelectedFilter('critical')} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'critical'''`';';
+                ? 'bg-red-500 text-white''`'`';';
+                : 'bg-gray-700 text-gray-300 hover:bg-gray-600'}`}>';';
+                    Critical'`';';
+                  </button>'`'`';';
+                  <button onClick={() => setSelectedFilter('medium')} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'medium'''`';';
+                ? 'bg-yellow-500 text-white''`'`';';
+                : 'bg-gray-700 text-gray-300 hover:bg-gray-600'}`}>';';
+                    Medium'`';';
+                  </button>'`'`';';
+                  <button onClick={() => setSelectedFilter('low')} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'low'''`';';
+                ? 'bg-blue-500 text-white''`'`';';
                 : 'bg-gray-700 text-gray-300 hover:bg-gray-600'}`}>
                     Low;
                   </button>
                 </div>"""
-""""
-                <button onClick={startAnalysis} disabled={isAnalyzing} className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-lg font-medium hover:from-purple-600 hover:to-pink-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2">""""
-                  {isAnalyzing ? (<Zap className="w-4 h-4 animate-spin" />) : (<Search className="w-4 h-4" />)}'
+""""';
+                <button onClick={startAnalysis} disabled={isAnalyzing} className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-lg font-medium hover:from-purple-600 hover:to-pink-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2">""""';';
+                  {isAnalyzing ? (<Zap className="w-4 h-4 animate-spin" />) : (<Search className="w-4 h-4" />)}'';';
                   <span>{isAnalyzing ? 'Analyzing...' : 'Analyze Content'}</span>
                 </button>
               </div>
@@ -276,9 +278,9 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
                               </span>
                             </div>"""
                           </td>""""
-                          <td className="px-6 py-4 whitespace-nowrap">""""
-                            <div className="max-w-xs">""""
-                              <div className="text-sm font-medium text-white">'
+                          <td className="px-6 py-4 whitespace-nowrap">""""';
+                            <div className="max-w-xs">""""';';
+                              <div className="text-sm font-medium text-white">'';';
                                 {issue.pageTitle || 'Untitled'}"""
                               </div>""""
                               <a href={issue.pageUrl} target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300 transition-colors text-xs truncate block">
@@ -300,9 +302,9 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
                                 <strong>Recommendation:</strong> {issue.recommendation}
                               </div>
                             </div>"""
-                          </td>""`
-                          <td className="px-6 py-4 whitespace-nowrap">``
-                            <span className={`text-sm font-medium ${getStatusColor(issue.status)}`}>'
+                          </td>""`';
+                          <td className="px-6 py-4 whitespace-nowrap">``';';
+                            <span className={`text-sm font-medium ${getStatusColor(issue.status)}`}>'';';
                               {issue.status.replace('_',).charAt(0).toUpperCase() + issue.status.replace('_',).slice(1)}
                             </span>"""
                           </td>""""
@@ -380,6 +382,5 @@ export {ContentQualityAnalyzer};
 
 export {ContentQualityAnalyzer};
 
-</motion>
-</motion>
-</motion>
+</motion>';
+</motion>;';;';

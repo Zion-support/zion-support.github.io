@@ -6,6 +6,4 @@ export interface ProjectBrief {
 	techStack?: string[];
 	talentFilters?: {
 		verifiedOnly?: boolean;
-		regions?: string[];
-	};
-}
+		regions?: string[]}}

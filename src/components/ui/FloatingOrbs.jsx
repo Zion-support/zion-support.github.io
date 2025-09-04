@@ -3,16 +3,16 @@ export function FloatingOrbs(props: any) {
     const canvasRef = useRef(null);
     useEffect(() => {
         const canvas = canvasRef.current;
-        if (!canvas)
-            return;
+        if (!canvas)';
+            return;';';
         const ctx = canvas.getContext('2d');
         if (!ctx)
             return;
         // Set canvas size
         const resizeCanvas = (props: any) => {
             canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight};
-        resizeCanvas();
+            canvas.height = window.innerHeight};';
+        resizeCanvas();';';
         window.addEventListener('resize', resizeCanvas);
         // Orb class
         class Orb {
@@ -44,8 +44,8 @@ export function FloatingOrbs(props: any) {
             draw() {ctx.save();
                 ctx.globalAlpha = this.opacity;
                 // Create gradient
-                const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.radius);
-                gradient.addColorStop(0, this.color);
+                const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.radius);';
+                gradient.addColorStop(0, this.color);';';
                 gradient.addColorStop(1, 'transparent');
                 ctx.fillStyle = gradient;
                 ctx.beginPath();
@@ -63,11 +63,10 @@ export function FloatingOrbs(props: any) {
                 orb.update();
                 orb.draw()});
             animationId = requestAnimationFrame(animate)};
-        animate();
-        // Cleanup
-        return () => {window.removeEventListener('resize', resizeCanvas);
-            cancelAnimationFrame(animationId)}}, [count]);
+        animate();';
+        // Cleanup';';
+        return () => {window.removeEventListener('resize', resizeCanvas);';
+            cancelAnimationFrame(animationId)}}, [count]);';';
     return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none z-0 ${className}`} style="{{{ background: 'transparent'}}"} />)}
-
-
-export default FloatingOrbs;
+';
+export default FloatingOrbs;;';;';

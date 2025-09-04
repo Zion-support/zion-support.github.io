@@ -26,7 +26,7 @@ class MergeConflictResolver {
 
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString(;);
-    console.log(`[${timestamp}] [${level}] ${message}`);}
+    console.log(`[${timestamp}] [${level}] ${message}`)}
 
   async resolveMergeConflicts() {
     this.log('🔍 Scanning for merge conflicts...');
@@ -53,7 +53,7 @@ class MergeConflictResolver {
 
   getRemoteBranches() {
     try {
-      const output = execSync('git branch -r', { encoding: 'utf8' ;};);
+      const output = execSync('git branch -r', { encoding: 'utf8' };);
       const branches = output
         .split('\n')
         .map(line => line.trim())
@@ -61,9 +61,9 @@ class MergeConflictResolver {
         .map(line => line.replace('origin/', ''))
         .slice(0, 10;); // Limit to first 10 branches for safety
       
-      return branches;} catch (error) {
+      return branches} catch (error) {
       this.log(`Error getting remote branches: ${error.message}`, 'ERROR');
-      return [];}
+      return []}
   }
 
   async mergeBranch(branchName) {
@@ -87,8 +87,7 @@ class MergeConflictResolver {
         if () {
           this.log(`⚠️ Merge conflict detected in branch: ${branchName}`)) {
     ) {
-          this.log(`⚠️ Merge conflict detected in branch: ${branchName}`);
-  }
+          this.log(`⚠️ Merge conflict detected in branch: ${branchName}`)}
           await this.resolveConflicts(branchName)} else {
           throw mergeError}
       }
@@ -130,9 +129,9 @@ class MergeConflictResolver {
 
   getConflictedFiles() {
     try {
-      const output = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' ;};);
-      return output.split('\n').filter(line => line.trim());} catch (error) {
-      return [];}
+      const output = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' };);
+      return output.split('\n').filter(line => line.trim())} catch (error) {
+      return []}
   }
 
   async resolveFileConflicts(filePath) {
@@ -164,7 +163,7 @@ class MergeConflictResolver {
     // Remove empty lines
     resolved = resolved.replace(/\n\s*\n\s*\n/g, '\n\n');
     
-    return resolved;}
+    return resolved}
 
   generateMergeReport() {
     this.mergeReport.timestamp = new Date().toISOString();
@@ -182,23 +181,21 @@ class MergeConflictResolver {
     if ( {
       console.log('\n✅ Successfully merged branches:')) {
      {
-      console.log('\n✅ Successfully merged branches:');
-  }
+      console.log('\n✅ Successfully merged branches:')}
       this.mergeReport.mergedBranches.forEach(branch => {
-        console.log(`   - ${branch}`);})}
+        console.log(`   - ${branch}`)})}
     
     if ( {
       console.log('\n❌ Failed to merge branches:')) {
      {
-      console.log('\n❌ Failed to merge branches:');
-  }
+      console.log('\n❌ Failed to merge branches:')}
       this.mergeReport.failedMerges.forEach(failure => {
-        console.log(`   - ${failure.branch}: ${failure.error}`);})}
+        console.log(`   - ${failure.branch}: ${failure.error}`)})}
   }
 }
 
 // Run the merge conflict resolver
 const resolver = new MergeConflictResolver;(;);
 resolver.resolveMergeConflicts().then(() => {
-  console.log('\n✅ Comprehensive merge conflict resolution completed!');}).catch(error => {
+  console.log('\n✅ Comprehensive merge conflict resolution completed!')}).catch(error => {
   console.error('❌ Merge conflict resolution failed:', error)});

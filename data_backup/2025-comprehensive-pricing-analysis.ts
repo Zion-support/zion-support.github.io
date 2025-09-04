@@ -32,8 +32,7 @@ export interface PricingAnalysis {
     mobile: string;
     email: string;
     address: string;
-website: string;
-  };export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
+website: string};export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
   // AI AUTONOMOUS BUSINESS MANAGER
   {
     serviceId:,
@@ -444,8 +443,7 @@ website: string;
 export const getPricingAnalysisByService = (serviceId: string) => {;
   return comprehensivePricingAnalysis2025.find(s => s.serviceId === serviceId)};
 export const getPricingAnalysisByService = (serviceId: string) => {;
-  return comprehensivePricingAnalysis2025.find(s => s.serviceId === serviceId);
-};
+  return comprehensivePricingAnalysis2025.find(s => s.serviceId === serviceId)};
 export const getPricingAnalysisByCategory = (category: string) => {;
 if (!category || category ===,
   All') return comprehensivePricingAnalysis2025;
@@ -462,10 +460,7 @@ export const getMarketInsights = () => {
   IoT & Edge Computing',
 highestROI: '1000% (Quantum Neural Network Platform),
   fastestPayback:
-  '2-4 months (DeFi Trading Platform)';
-  ;
-
-};
+  '2-4 months (DeFi Trading Platform)'};
   return insights};
 export const getCompetitiveLandscape = () => {
   return {
@@ -488,10 +483,9 @@ export const getCompetitiveLandscape = () => {
   'Siemens',
   'Rockwell Automation',
   'ABB',
-  'GE Digital'],;
+  'GE Digital'],
     blockchain[
   'Chainalysis',
   'ConsenSys',
   'Alchemy',
-  'Infura'];
-  }};
+  'Infura']}};

@@ -10,8 +10,7 @@ class MergeConflictFixer {
     this.logFile = path.join(this.projectRoot, 'logs', 'merge-conflict-fixer.log');
     this.reportFile = path.join(this.projectRoot, 'error-reports', `merge-conflict-fixer-report-${Date.now()}.json`);
     this.fixesApplied = [];
-    this.startTime = Date.now();
-  }
+    this.startTime = Date.now()}
 
   log(message) {
     const timestamp = new Date().toISOString();
@@ -21,11 +20,9 @@ class MergeConflictFixer {
     // Ensure logs directory exists
     const logsDir = path.dirname(this.logFile);
     if (!fs.existsSync(logsDir)) {
-      fs.mkdirSync(logsDir, { recursive: true });
-    }
+      fs.mkdirSync(logsDir, { recursive: true })}
     
-    fs.appendFileSync(this.logFile, logMessage + '\n');
-  }
+    fs.appendFileSync(this.logFile, logMessage + '\n')}
 
   findFilesWithMergeConflicts() {
     const files = [];
@@ -41,26 +38,22 @@ class MergeConflictFixer {
         if (fs.existsSync(file)) {
           const content = fs.readFileSync(file, 'utf8');
           if (this.hasMergeConflictMarkers(content)) {
-            files.push(file);
-          }
+            files.push(file)}
         }
       }
     } catch (error) {
-      this.log(`Error checking git status: ${error.message}`);
-    }
+      this.log(`Error checking git status: ${error.message}`)}
 
     // Also scan all files in the project for merge conflict markers
     this.scanDirectoryForMergeConflicts(this.projectRoot, files);
     
-    return files;
-  }
+    return files}
 
   hasMergeConflictMarkers(content) {
     const markers = [
     ];
     
-    return markers.some(marker => content.includes(marker));
-  }
+    return markers.some(marker => content.includes(marker))}
 
   scanDirectoryForMergeConflicts(dir, files, depth = 0) {
     if (depth > 10) return; // Prevent infinite recursion
@@ -75,8 +68,7 @@ class MergeConflictFixer {
         if (stat.isDirectory()) {
           // Skip node_modules, .git, and other large directories
           if (!['node_modules', '.git', 'dist', 'build', 'out', 'logs', 'error-reports'].includes(item)) {
-            this.scanDirectoryForMergeConflicts(fullPath, files, depth + 1);
-          }
+            this.scanDirectoryForMergeConflicts(fullPath, files, depth + 1)}
         } else if (stat.isFile()) {
           // Check only text files
           const ext = path.extname(item).toLowerCase();
@@ -86,8 +78,7 @@ class MergeConflictFixer {
               if (this.hasMergeConflictMarkers(content)) {
                 const relativePath = path.relative(this.projectRoot, fullPath);
                 if (!files.includes(relativePath)) {
-                  files.push(relativePath);
-                }
+                  files.push(relativePath)}
               }
             } catch (error) {
               // Skip files that can't be read as text
@@ -96,8 +87,7 @@ class MergeConflictFixer {
         }
       }
     } catch (error) {
-      this.log(`Error scanning directory ${dir}: ${error.message}`);
-    }
+      this.log(`Error scanning directory ${dir}: ${error.message}`)}
   }
 
   resolveMergeConflict(filePath) {
@@ -105,8 +95,7 @@ class MergeConflictFixer {
       const fullPath = path.resolve(filePath);
       if (!fs.existsSync(fullPath)) {
         this.log(`File not found: ${filePath}`);
-        return false;
-      }
+        return false}
 
       let content = fs.readFileSync(fullPath, 'utf8');
       const originalContent = content;
@@ -123,14 +112,11 @@ class MergeConflictFixer {
           timestamp: new Date().toISOString()
         });
         this.log(`Fixed merge conflict in: ${filePath}`);
-        return true;
-      }
+        return true}
 
-      return false;
-    } catch (error) {
+      return false} catch (error) {
       this.log(`Error resolving merge conflict in ${filePath}: ${error.message}`);
-      return false;
-    }
+      return false}
   }
 
   removeMergeConflictMarkers(content) {
@@ -143,21 +129,17 @@ class MergeConflictFixer {
     for (const line of lines) {
         inConflict = true;
         keepLines = true; // Keep HEAD version by default
-        continue;
-      }
+        continue}
       
         inConflict = false;
         keepLines = true;
-        continue;
-      }
+        continue}
       
       if (!inConflict || keepLines) {
-        result.push(line);
-      }
+        result.push(line)}
     }
 
-    return result.join('\n');
-  }
+    return result.join('\n')}
 
   async run() {
     this.log('🚀 Starting Merge Conflict Fixer...');
@@ -168,8 +150,7 @@ class MergeConflictFixer {
       
       if (conflictedFiles.length === 0) {
         this.log('✅ No merge conflicts found');
-        return;
-      }
+        return}
 
       this.log(`🔍 Found ${conflictedFiles.length} files with merge conflicts`);
       
@@ -177,18 +158,14 @@ class MergeConflictFixer {
       let fixedCount = 0;
       for (const file of conflictedFiles) {
         if (this.resolveMergeConflict(file)) {
-          fixedCount++;
-        }
+          fixedCount++}
       }
 
       this.log(`✅ Fixed ${fixedCount} merge conflicts`);
 
       // Generate report
-      this.generateReport(fixedCount, conflictedFiles.length);
-
-    } catch (error) {
-      this.log(`❌ Error in merge conflict fixer: ${error.message}`);
-    }
+      this.generateReport(fixedCount, conflictedFiles.length)} catch (error) {
+      this.log(`❌ Error in merge conflict fixer: ${error.message}`)}
   }
 
   generateReport(fixedCount, totalCount) {
@@ -214,28 +191,23 @@ class MergeConflictFixer {
     // Ensure error-reports directory exists
     const reportsDir = path.dirname(this.reportFile);
     if (!fs.existsSync(reportsDir)) {
-      fs.mkdirSync(reportsDir, { recursive: true });
-    }
+      fs.mkdirSync(reportsDir, { recursive: true })}
 
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-    this.log(`📊 Report generated: ${this.reportFile}`);
-  }
+    this.log(`📊 Report generated: ${this.reportFile}`)}
 }
 
 // Run the fixer
 const fixer = new MergeConflictFixer();
 fixer.run().catch(error => {
   console.error('Fatal error:', error);
-  process.exit(1);
-});
+  process.exit(1)});
 
 // Handle graceful shutdown
 process.on('SIGINT', () => {
   console.log('\n🛑 Merge Conflict Fixer stopped by user');
-  process.exit(0);
-});
+  process.exit(0)});
 
 process.on('SIGTERM', () => {
   console.log('\n🛑 Merge Conflict Fixer stopped by system');
-  process.exit(0);
-});
+  process.exit(0)});

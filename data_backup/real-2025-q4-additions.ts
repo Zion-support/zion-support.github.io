@@ -40,14 +40,11 @@ reviews?: number;const contact = {
   +1 302 464 0950',
   email: 'kleber@ziontechgroup.com,
   address:,
-  364 E Main St STE 1008 Middletown DE 19709',;
+  364 E Main St STE 1008 Middletown DE 19709',
   ;
   ;
   ;
-  ;
-  website: 'https://ziontechgroup.com;
-;
-};
+  website: 'https://ziontechgroup.com};
 export const realQ4Services2025: RealQ4Service[] = [
 	{
 		id:,
@@ -386,16 +383,15 @@ export const real2025Q4Additions = [
   'Evals and drift tracking',
   'Human-in-the-loop approvals',
   'Observability and cost caps',
-  'SDKs for Node/Python';
-    ],;
-    popular: true,;
+  'SDKs for Node/Python'],
+    popular: true,
     icon:,
-  🧠',;
-    color: 'from-cyan-600 to-blue-700,;
+  🧠',
+    color: 'from-cyan-600 to-blue-700,
     textColor:,
-  text-cyan-300',;
+  text-cyan-300',
     link: `https://ziontechgroup.com/services/${toSlug(
-  'ai-governed-rag-platform)}`,;
+  'ai-governed-rag-platform)}`,
     marketPosition:,
   Safer alternative to DIY RAG; comparable to Guardrails/Evals + vector DB stacks.',
     targetAudience: Platform, data, and compliance teams',
@@ -963,4 +959,4 @@ export const real2025Q4Additions = [
     customers: 17,
     rating: 4.6,
     reviews: 9
-];}}}
+]}}}

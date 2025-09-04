@@ -86,8 +86,7 @@ test.describe('Accessibility Tests', () => {
     // Check heading hierarchy'
     const headings = page.locator('h1, h2, h3, h4, h5, h6');
     const count = await headings.count();
-    expect(count).toBeGreaterThan(0);
-  })';
+    expect(count).toBeGreaterThan(0)})';
   test('images have alt attributes', async ({ page }) => {'
     await page.goto('/')';
     const images = page.locator('img');
@@ -96,8 +95,7 @@ test.describe('Accessibility Tests', () => {
     for (let i = 0; i < count; i++) {
       const img = images.nth(i);
       const alt = await img.getAttribute('alt);
-      expect(alt).toBeTruthy();
-    }
+      expect(alt).toBeTruthy()}
   })';
   test('buttons have accessible names', async ({ page }) => {'
     await page.goto('/')';
@@ -110,9 +108,7 @@ test.describe('Accessibility Tests', () => {
       const ariaLabel = await button.getAttribute('aria-label');
 
       // Button should have either text content or aria-label
-      expect(text || ariaLabel).toBeTruthy();
-    ;
-  }
+      expect(text || ariaLabel).toBeTruthy()}
   })';
   test('form inputs have labels', async ({ page }) => {'
     await page.goto('/contact')';
@@ -128,10 +124,8 @@ test.describe('Accessibility Tests', () => {
       if (id) {'
         const label = page.locator(`label[for="${id}"]`);
         const labelCount = await label.count();
-        expect(labelCount).toBeGreaterThan(0);
-      } else {
-        expect(ariaLabel || ariaLabelledBy).toBeTruthy();
-      }
+        expect(labelCount).toBeGreaterThan(0)} else {
+        expect(ariaLabel || ariaLabelledBy).toBeTruthy()}
 
     }
   });
@@ -147,8 +141,6 @@ test.describe('Accessibility Tests', () => {
 
     // Check if focus is visible'
     const focusedElement = page.locator(':focus');
-    await expect(focusedElement).toBeVisible();
-  });
-})';
+    await expect(focusedElement).toBeVisible()})})';
 
 

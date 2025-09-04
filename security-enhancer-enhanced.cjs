@@ -8,12 +8,10 @@ class SecurityEnhancer {
   constructor() {
     this.projectRoot = process.cwd();
     this.securityIssues = [];
-    this.fixes = [];
-  }
+    this.fixes = []}
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
+    console.log(`[${new Date().toISOString()}] ${message}`)}
 
   async runSecurityAudit() {
     this.log('🔍 Running security audit...');
@@ -32,14 +30,10 @@ class SecurityEnhancer {
             severity: vuln.severity,
             description: vuln.description,
             recommendation: vuln.recommendation
-          });
-        });
-      }
+          })})}
       
-      this.log(`Found ${this.securityIssues.length} security issues`);
-    } catch (error) {
-      this.log(`Security audit failed: ${error.message}`);
-    }
+      this.log(`Found ${this.securityIssues.length} security issues`)} catch (error) {
+      this.log(`Security audit failed: ${error.message}`)}
   }
 
   async fixSecurityIssues() {
@@ -50,10 +44,8 @@ class SecurityEnhancer {
         try {
           execSync('npm audit fix', { cwd: this.projectRoot });
           this.fixes.push(`Fixed ${issue.package}`);
-          this.log(`✅ Fixed ${issue.package}`);
-        } catch (error) {
-          this.log(`❌ Failed to fix ${issue.package}: ${error.message}`);
-        }
+          this.log(`✅ Fixed ${issue.package}`)} catch (error) {
+          this.log(`❌ Failed to fix ${issue.package}: ${error.message}`)}
       }
     }
   }
@@ -73,21 +65,18 @@ class SecurityEnhancer {
 
     const reportPath = path.join(this.projectRoot, 'security-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    this.log(`Security report saved to ${reportPath}`);
-  }
+    this.log(`Security report saved to ${reportPath}`)}
 
   async run() {
     this.log('🚀 Starting security enhancement...');
     await this.runSecurityAudit();
     await this.fixSecurityIssues();
     this.generateSecurityReport();
-    this.log('🎉 Security enhancement completed');
-  }
+    this.log('🎉 Security enhancement completed')}
 }
 
 if (require.main === module) {
   const enhancer = new SecurityEnhancer();
-  enhancer.run().catch(console.error);
-}
+  enhancer.run().catch(console.error)}
 
 module.exports = SecurityEnhancer;

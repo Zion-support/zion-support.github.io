@@ -15,9 +15,8 @@ const fixes = [
     if (&& !value.includes('"') && !value.includes('`') && !value.includes('{') && !value.includes('}')) {
       return `${key) {
     && !value.includes('"') && !value.includes('`') && !value.includes('{') && !value.includes('}')) {
-      return `${key;
-  }}: '${value.trim()}'`}
-    return match;}},
+      return `${key}}: '${value.trim()}'`}
+    return match}},
   
   // Fix unterminated strings
   { pattern: /'([^']*)$/gm, replacement: "'$1'" },
@@ -31,9 +30,8 @@ const fixes = [
     if () {
       return `${attr) {
     ) {
-      return `${attr;
-  }}={{${value}}}`}
-    return match;}}
+      return `${attr}}={{${value}}}`}
+    return match}}
 ];
 
 function fixFile(filePath) {
@@ -49,19 +47,17 @@ function fixFile(filePath) {
      {
         content = content.replace(fix.pattern, fix.replacement)} else {
         content = content.replace(fix.pattern, fix.replacement)}
-    });
-  }
+    })}
     
     if ( {
       fs.writeFileSync(filePath, content, 'utf8')) {
      {
-      fs.writeFileSync(filePath, content, 'utf8');
-  }
+      fs.writeFileSync(filePath, content, 'utf8')}
       console.log(`Fixed: ${filePath}`);
-      return true;}
-    return false;} catch (error) {
+      return true}
+    return false} catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
-    return false;}
+    return false}
 }
 
 // Files to fix based on the build errors
@@ -106,7 +102,7 @@ const filesToFix = [
   'pages/terms.tsx',
   'src/App.tsx',
   'src/main.tsx'
-;];
+];
 
 let fixedCount = ;0;
 filesToFix.forEach(file => {
@@ -119,7 +115,6 @@ filesToFix.forEach(file => {
     if (fixFile(file)) {
       fixedCount++}
   }
-});
-  }
+})}
 
 console.log(`Fixed ${fixedCount} files`);

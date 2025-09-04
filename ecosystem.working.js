@@ -230,8 +230,7 @@ module.exports: = {
 
   post-deploy';: 'npm: install && npm run build && pm2 reload ecosystem.working.js --env production, ';
 
-  pre-setup';: '}';
-  }
+  pre-setup';: '}'}
 }
 
 

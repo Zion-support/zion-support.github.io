@@ -28,8 +28,8 @@ class AutomationSuiteRunner {
     this.log(`🚀 Starting: ${description}`);
     try {
       const result = execSync(command, {
-        cwd: this.projectRoot,;
-        encoding: "utf8",;
+        cwd: this.projectRoot,
+        encoding: "utf8",
         timeout: 300000 // 5 minutes timeout,
 });
       this.log(`✅ Completed: ${description}`);
@@ -44,40 +44,40 @@ class AutomationSuiteRunner {
     this.log("🎯 Starting Automation Suite Execution");
     const scripts = [
       {
-        command: "npm run lint",;
+        command: "npm run lint",
         description: "ESLint Check",
-},;
+},
       {
-        command: "npm run lint:fix",;
+        command: "npm run lint:fix",
         description: "ESLint Fix",
-},;
+},
       {
-        command: "npm run type-check",;
+        command: "npm run type-check",
         description: "TypeScript Type Check",
-},;
+},
       {
-        command: "npm run test",;
+        command: "npm run test",
         description: "Test Suite",
-},;
+},
       {
-        command: "npm run build",;
+        command: "npm run build",
         description: "Build Application",
 }
   ];
 
-        command: "npm run lint:fix",;
+        command: "npm run lint:fix",
         description: "ESLint Fix",
-},;
+},
       {
-        command: "npm run type-check",;
+        command: "npm run type-check",
         description: "TypeScript Type Check",
-},;
+},
       {
-        command: "npm run test",;
+        command: "npm run test",
         description: "Test Suite",
-},;
+},
       {
-        command: "npm run build",;
+        command: "npm run build",
         description: "Build Application",
 }
   ];
@@ -94,16 +94,16 @@ class AutomationSuiteRunner {
     this.log("🔧 Running Custom Automation Scripts");
     const customScripts = [
       {
-        name: "Error Detection",;
-        script: () => this.detectErrors()},;
+        name: "Error Detection",
+        script: () => this.detectErrors()},
       {
-        name: "Performance Analysis",;
-        script: () => this.analyzePerformance()},;
+        name: "Performance Analysis",
+        script: () => this.analyzePerformance()},
       {
-        name: "Security Audit",;
-        script: () => this.auditSecurity()},;
+        name: "Security Audit",
+        script: () => this.auditSecurity()},
       {
-        name: "Code Quality Check",;
+        name: "Code Quality Check",
         script: () => this.checkCodeQuality(),, },
   ];
     const results = [];
@@ -112,14 +112,14 @@ class AutomationSuiteRunner {
       try {
         const result = await customScript.script();
         results.push({
-          name: customScript.name, ;
-          success: true, ;
+          name: customScript.name,
+          success: true,
           result , });
         this.log(`✅ Completed: ${customScript.name}`),
 } catch($2) {
         results.push({
-          name: customScript.name, ;
-          success: false, ;
+          name: customScript.name,
+          success: false,
           error: error.message ,
 });        this.log(`❌ Failed: ${customScript.name} - ${error.message}`),
 }, }
@@ -128,16 +128,16 @@ class AutomationSuiteRunner {
 
   async detectErrors($2) {
     const errorPatterns = [
-      `SyntaxError`,;
-      "TypeError",;
-      "ReferenceError",;
-      "Module not found",;
-      "Cannot resolve",;
+      `SyntaxError`,
+      "TypeError",
+      "ReferenceError",
+      "Module not found",
+      "Cannot resolve",
       "Unexpected token"];
         results.push({ "name: customScript.name, success": true, result });
         this.log(`✅ "Completed: ${customScript.name}`);`} catch($2) {
-        results.push({);          name": customScript.name,;
-          "success: false,;
+        results.push({);          name": customScript.name,
+          "success: false,
           error": error.message});
         this.log(`❌ "Failed: ${customScript.name} - ${error.message}`);`}
     }
@@ -179,7 +179,7 @@ class AutomationSuiteRunner {
             !content.includes("useMemo");
           ) {
             performanceIssues.push({
-              file,;
+              file,
               issue: "Potential N+1 query problem"}),
 }
 
@@ -189,7 +189,7 @@ class AutomationSuiteRunner {
             content.includes("fetch");
           ) {
             performanceIssues.push({
-              file,;
+              file,
               issue: "Potential infinite re-render"}),
 }, } catch (error) {
           // Skip files that can"t be read, }
@@ -202,11 +202,11 @@ class AutomationSuiteRunner {
           const content = fs.readFileSync(file, "utf8");
           // Check for performance anti-patterns;
           if()            content.includes("document.querySelectorAll") &&";            !content.includes("useMemo")") {
-            performanceIssues.push({);              file,;
+            performanceIssues.push({);              file,
               "issue: "Potential N+1 query problem","})}
 
           if()            content.includes("useEffect") &&";            content.includes("[]") &&";            content.includes("fetch")") {
-            performanceIssues.push({);              file,;
+            performanceIssues.push({);              file,
               issue": "Potential infinite re-render","})}
         } catch($2) {
           // Skip files that can"t be read"}
@@ -265,7 +265,7 @@ class AutomationSuiteRunner {
           // Check for code quality issues;
           if (content.includes("console.log") && !file.includes(".test.")) {
             qualityIssues.push({
-              file,;
+              file,
               issue: "Console.log in production code"}),
 }
 
@@ -281,7 +281,7 @@ class AutomationSuiteRunner {
         try {
           const content = fs.readFileSync(file, "utf8");
           // Check for code quality issues;
-          if (content.includes("console.log") && !file.includes(".test.")) {";            qualityIssues.push({);              file,;
+          if (content.includes("console.log") && !file.includes(".test.")) {";            qualityIssues.push({);              file,
               "issue: "Console.log in production code","})}
 
           if (content.includes("TODO") || content.includes("FIXME")) {";            qualityIssues.push({ file, issue": "TODO/FIXME comment found" })}
@@ -345,8 +345,8 @@ class AutomationSuiteRunner {
     this.log("📊 Checking code quality...");
     // Run various quality checks;
     const qualityChecks = [
-      "npm run lint",;
-      "npm run type-check",;
+      "npm run lint",
+      "npm run type-check",
       "npm run test"
   ];
     const results = [];
@@ -364,12 +364,12 @@ class AutomationSuiteRunner {
   async generateReport($2) {
     this.log("📋 Generating automation report...");
     const report = {
-      timestamp: new Date().toISOString(),;
+      timestamp: new Date().toISOString(),
       summary: {
-        totalScripts: results.length,;
-        successful: results.filter(r => r.success).length,;
+        totalScripts: results.length,
+        successful: results.filter(r => r.success).length,
         failed: results.filter(r => !r.success).length,
-},;
+},
       results: results,
 };
     const reportFile = path.join(this.reportsDir, `automation-report-${Date.now()}.json`);

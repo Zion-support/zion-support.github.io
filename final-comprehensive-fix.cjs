@@ -6,7 +6,7 @@ const fs = require('fs')
 function fixSyntaxErrors(content) {
   // Fix extra commas in JSX attributes
   content = content.replace(/className="[^"]*"\s*,\s*>/g, (match) => {
-    return match.replace(/,\s*$/, '');});
+    return match.replace(/,\s*$/, '')});
   
   // Fix malformed function declarations: {, -> {
   content = content.replace(/\{\s*,/g, '{');
@@ -25,20 +25,20 @@ function fixSyntaxErrors(content) {
   
   // Fix missing closing braces in for loops
   content = content.replace(/for \(const entry of list\.getEntries\(\)\) \{\s*if \([^}]+\) \{\s*[^}]+\s*\}\s*\}\);/g, (match) => {
-    return match.replace(/\;}\);/g, '}\n      });')});
+    return match.replace(/\}\);/g, '}\n      });')});
   
   // Fix missing closing braces in for loops (alternative pattern)
   content = content.replace(/for \(const entry of list\.getEntries\(\)\) \{\s*if \([^}]+\) \{\s*[^}]+\s*\}\s*\}\);/g, (match) => {
-    return match.replace(/\;}\);/g, '}\n      });')});
+    return match.replace(/\}\);/g, '}\n      });')});
   
   // Fix malformed JSON objects: {, -> {
   content = content.replace(/JSON\.stringify\(\{\s*,/g, 'JSON.stringify({');
   
   // Fix missing closing braces in for loops (CLS pattern)
   content = content.replace(/for \(const entry of list\.getEntries\(\)\) \{\s*if \([^}]+\) \{\s*[^}]+\s*\}\s*\}\s*console\.log\('CLS:', clsValue\);\s*\}\);/g, (match) => {
-    return match.replace(/\;}\);/g, '}\n      });')});
+    return match.replace(/\}\);/g, '}\n      });')});
   
-  return content;}
+  return content}
 
 // Function to process a file
 function processFile(filePath) {
@@ -49,13 +49,12 @@ function processFile(filePath) {
     if ( {
       fs.writeFileSync(filePath, fixedContent, 'utf8')) {
      {
-      fs.writeFileSync(filePath, fixedContent, 'utf8');
-  }
+      fs.writeFileSync(filePath, fixedContent, 'utf8')}
       console.log(`✅ Fixed: ${filePath}`);
-      return true;}
-    return false;} catch (error) {
+      return true}
+    return false} catch (error) {
     console.error(`❌ Error processing ${filePath}:`, error.message);
-    return false;}
+    return false}
 }
 
 // Main execution
@@ -67,7 +66,7 @@ const filesToFix = [
   'components/PerformanceMonitor.tsx',
   'pages/docs.tsx',
   'pages/index.tsx'
-;];
+];
 
 let totalFixed = ;0;
 
@@ -85,14 +84,12 @@ console.log(`\n📊 Syntax fixing complete:`)) {
   }
 }
 
-console.log(`\n📊 Syntax fixing complete:`);
-  }
+console.log(`\n📊 Syntax fixing complete:`)}
 console.log(`   - Files fixed: ${totalFixed}`);
 console.log(`   - Issues encountered: 0`);
 
 if ( {
   console.log('\n✅ All syntax errors have been fixed!')) {
      {
-  console.log('\n✅ All syntax errors have been fixed!');
-  }} else {
-  console.log('\n✅ No syntax errors found!');}
+  console.log('\n✅ All syntax errors have been fixed!')}} else {
+  console.log('\n✅ No syntax errors found!')}

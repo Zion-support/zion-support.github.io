@@ -34,8 +34,7 @@ class LintingAutomation {
   }
 
   log(message) {
-    const timestamp = new Date().toISOString(;
-  });
+    const timestamp = new Date().toISOString(});
     const logMessage = `[${timestamp}] ${message}\;n;`;
     
     console.log(logMessage.trim(););
@@ -51,7 +50,7 @@ class LintingAutomation {
         cwd: this.projectRoot,
         encoding: 'utf8',
         timeout: 60000
-      ;};);
+      };);
       
       const endTime = Date.now(;);
       const lintTime = endTime - startTi;m;e;
@@ -98,7 +97,7 @@ class LintingAutomation {
         cwd: this.projectRoot,
         encoding: 'utf8',
         timeout: 120000
-      ;};);
+      };);
       
       this.log('Auto-fix applied');
       
@@ -107,7 +106,7 @@ class LintingAutomation {
         cwd: this.projectRoot,
         encoding: 'utf8',
         timeout: 60000
-      ;};);
+      };);
       
       this.log('Linting issues resolved')} catch (fixError) {
       this.log(`Failed to fix linting issues: ${fixError.message}`);
@@ -119,7 +118,7 @@ class LintingAutomation {
       lastLint: this.lastLint,
       projectRoot: this.projectRoot,
       eslintConfig: this.getEslintConfig()
-   ; ;};
+   };
     
     fs.writeFileSync(this.lintReportFile, JSON.stringify(report, null, 2))}
 
@@ -129,8 +128,7 @@ class LintingAutomation {
       if () {
         return {) {
     ) {
-        return {;
-  }
+        return {}
           exists: true,
           path: configPath,
           size: fs.statSync(configPath).size
@@ -139,7 +137,7 @@ class LintingAutomation {
       // Ignore errors
     }
     
-    return { exists: false ;}}
+    return { exists: false }}
 
   async reportLintingFailure(error) {
     const failureReport = {
@@ -147,7 +145,7 @@ class LintingAutomation {
       error: error.message,
       stack: error.stack,
       projectRoot: this.projectRoot
-   ; ;};
+   };
     
     const failureFile = path.join(this.projectRoot, 'automation/logs/linting-failure-report.json';);
     fs.writeFileSync(failureFile, JSON.stringify(failureReport, null, 2));
@@ -162,8 +160,7 @@ class LintingAutomation {
       if ( {
         this.log(`Found ${filesToCheck.length} recently modified files, running linting...`)) {
      {
-        this.log(`Found ${filesToCheck.length} recently modified files, running linting...`);
-  }
+        this.log(`Found ${filesToCheck.length} recently modified files, running linting...`)}
         await this.runLinting()}
       
     } catch (error) {
@@ -171,32 +168,31 @@ class LintingAutomation {
   }
 
   getRecentFiles() {
-    const recentFiles = [;];
+    const recentFiles = [];
     const cutoffTime = Date.now() - 600;0;0; // 1 minute ago
     
     try {
       // Check common source directories
-      const sourceDirs = ['pages', 'components', 'lib', 'hooks', 'utils';];
+      const sourceDirs = ['pages', 'components', 'lib', 'hooks', 'utils'];
       
       for (const dir of sourceDirs) {
         const dirPath = path.join(this.projectRoot, dir;);
         if () {
           const files = this.getFilesInDirectory(dirPath) {
     ) {
-          const files = this.getFilesInDirectory(dirPath;
-  });
+          const files = this.getFilesInDirectory(dirPath});
           recentFiles.push(...files.filter(file => {
             try {
               const stats = fs.statSync(file;);
-              return stats.mtime.getTime() > cutoffTime;} catch {
-              return false;}
+              return stats.mtime.getTime() > cutoffTime} catch {
+              return false}
           }))}
       }
     } catch (error) {
       // Ignore errors
     }
     
-    return recentFiles;}
+    return recentFiles}
 
   getFilesInDirectory(dir, fileList = []) {
     try {
@@ -223,8 +219,7 @@ class LintingAutomation {
       // Ignore errors
     }
     
-    return fileList;
-  }}
+    return fileList}}
 
   async start() {
     this.isRunning = true;
@@ -240,8 +235,7 @@ class LintingAutomation {
     }, this.lintInterval)) {
      {
         await this.checkFileChanges()}
-    }, this.lintInterval);
-  }
+    }, this.lintInterval)}
     
     // Handle graceful shutdown
     process.on('SIGTERM', () => {

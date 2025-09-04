@@ -6,8 +6,7 @@ import SEOOptimizerdynamic from '../components/SEOOptimizer.dynamic';
 describe('SEOOptimizerdynamic', () => {
   test('renders without crashing', () => {
     render(<SEOOptimizerdynamic />);
-    expect(screen.getByTestId('seooptimizer.dynamic')).toBeInTheDocument();
-  });
+    expect(screen.getByTestId('seooptimizer.dynamic')).toBeInTheDocument()});
 
   test('displays correct content', () => {
     render(<SEOOptimizerdynamic />);
@@ -22,5 +21,4 @@ describe('SEOOptimizerdynamic', () => {
   test('applies correct styling', () => {
     render(<SEOOptimizerdynamic />);
     // Add styling tests if needed
-  });
-});
+  })});

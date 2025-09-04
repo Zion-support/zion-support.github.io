@@ -146,9 +146,9 @@ roi: 'Save 60–80% proposal hours,
     name: 'Local SEO Insights Engine,
     tagline:,
   Automated audits, content briefs, and citation fixes for local businesses',
-    price: '$129,;
+    price: '$129,
     period:,
-  /month',;
+  /month',
     description: Continuously audits GMB, citations, and competitors; generates content briefs and tasks; tracks rankings and call leads.',
     features[
   'GMB health scoring',

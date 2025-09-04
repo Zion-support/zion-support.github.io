@@ -396,14 +396,16 @@ a.download = "seo-optimization-report.csv
           <div className="bg-gray-50 dark: bg-gray-800 p-3 flex gap-2">"""""""",
             <button onClick="{analyzeSEO}" disabled="{isAnalyzing}" className="flex-1 bg-purple-600 hover: bg-purple-700 disabled:bg-purple-400 text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center justify-center gap-2">"""""""",
               <RefreshCw className="{"w-4" h-4 ${isAnalyzing ? "animate-spin" : ""}"}/" >""
-              {isAnalyzing ? "Analyzing..." : "Analyze SEO"}"""""
-            </button>"""""
+              {isAnalyzing ? "Analyzing..." : "Analyze SEO"}"""""';
+            </button>"""""';';
             <button onClick="{exportSEOReport}" className="px-3 py-2 bg-pink-600 hover: bg-pink-700 text-white rounded-md transition-colors flex items-center gap-2">"""'
               <Download className="w-4 h-4"/" >"
               Export,
             </button>
 </div>
-        </div>)}
+            </div>
+  );
+}
     </div>)};
 export default SEOOptimizer;
 
@@ -421,8 +423,7 @@ export {SEOOptimizer};
 </RefreshCw>
 </Zap>
 </AlertTriangle>
-</AlertTriangle>
 </RefreshCw>
 </TrendingUp>
-</Search>
-</div>
+</Search>';
+</div>;';;';

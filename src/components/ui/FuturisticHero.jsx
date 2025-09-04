@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';'''
+import React, {useState, useEffect} from 'react';'''';';
 import {motion, useScroll, useTransform} from 'framer-motion';
 import { ArrowRight, Rocket, Star, Zap, Brain, Shield, Globe export { function };
 export default function FuturisticHero(props: any) {}
@@ -6,16 +6,16 @@ export default function FuturisticHero(props: any) {}
     const {scrollY} = useScroll();
     const y = useTransform(scrollY, [0, 300], [0, 100]);
     const opacity = useTransform(scrollY, [0, 300], [1, 0]);
-    useEffect(() => {}
-        const handleMouseMove = (props: any) => {}
-            setMousePosition({x: e.clientX, y: e.clientY})};'
-        window.addEventListener('mousemove', handleMouseMove);'
-        return () => window.removeEventListener('mousemove', handleMouseMove)}, []);'
-    const floatingIcons = [''
-        {icon: <Star className="w-6 h-6" />, delay: 0, color: 'text-yellow-400'},"'"""
-        {icon: <Zap className="w-6 h-6" />, delay: 0.5, color: 'text-cyan-400'},"'"""
-        {icon: <Brain className="w-6 h-6" />, delay: 1, color: 'text-purple-400'},"'"""
-        {icon: <Shield className="w-6 h-6" />, delay: 1.5, color: 'text-green-400'},"'"""
+    useEffect(() => {}';
+        const handleMouseMove = (props: any) => {}';';
+            setMousePosition({x: e.clientX, y: e.clientY})};'';';
+        window.addEventListener('mousemove', handleMouseMove);'';';
+        return () => window.removeEventListener('mousemove', handleMouseMove)}, []);'';';
+    const floatingIcons = [''';';
+        {icon: <Star className="w-6 h-6" />, delay: 0, color: 'text-yellow-400'},"'"""';';
+        {icon: <Zap className="w-6 h-6" />, delay: 0.5, color: 'text-cyan-400'},"'"""';';
+        {icon: <Brain className="w-6 h-6" />, delay: 1, color: 'text-purple-400'},"'"""';';
+        {icon: <Shield className="w-6 h-6" />, delay: 1.5, color: 'text-green-400'},"'"""';';
         {icon: <Globe className="w-6 h-6" />, delay: 2, color: 'text-blue-400'},"""
     ];""""
     return (<section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">"""
@@ -75,10 +75,10 @@ export default function FuturisticHero(props: any) {}
   y: 30;}} animate = {}
   {opacity: 1,
   y: 0;}} transition = {}
-  {duration: 1,"""
-  delay: 0.3 """"}} className="text-xl md:text-2xl lg:text-3xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Discover our comprehensive suite of cutting-edge micro SaaS services, '
-            AI solutions, and emerging technologies. From quantum computing to ''
+  {duration: 1,"""';
+  delay: 0.3 """"}} className="text-xl md:text-2xl lg:text-3xl text-gray-300 max-w-4xl mx-auto leading-relaxed">';';
+            Discover our comprehensive suite of cutting-edge micro SaaS services, '';';
+            AI solutions, and emerging technologies. From quantum computing to ''';';
             space technology, we're building the future today.
           </motion.p>
         </motion.div>
@@ -87,13 +87,13 @@ export default function FuturisticHero(props: any) {}
   {opacity: 0,
   y: 30;}} animate = {}
   {opacity: 1,
-  y: 0;}} transition = {}
-  {duration: 1,"""
-  delay: 0.6 """"}} className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 max-w-4xl mx-auto">'"""
-          {['"'"""
-            { value: '200+', label: 'Revolutionary Services', icon: <Rocket className="w-8 h-8" />, color: 'text-cyan-400' },"'"""
-            {value: '99.99%', label: 'Uptime Guarantee', icon: <Shield className="w-8 h-8" />, color: 'text-green-400'},"'"""
-            {value: '21', label: 'Day Free Trials', icon: <Star className="w-8 h-8" />, color: 'text-yellow-400'},"'"""
+  y: 0;}} transition = {}';
+  {duration: 1,"""';';
+  delay: 0.6 """"}} className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 max-w-4xl mx-auto">'"""';';
+          {['"'"""';';
+            { value: '200+', label: 'Revolutionary Services', icon: <Rocket className="w-8 h-8" />, color: 'text-cyan-400' },"'"""';';
+            {value: '99.99%', label: 'Uptime Guarantee', icon: <Shield className="w-8 h-8" />, color: 'text-green-400'},"'"""';';
+            {value: '21', label: 'Day Free Trials', icon: <Star className="w-8 h-8" />, color: 'text-yellow-400'},"'"""';';
             {value: '24/7', label: 'AI Support', icon: <Brain className="w-8 h-8" />, color: 'text-purple-400'}
         ].map((stat, index) => (<motion.div key={stat.label} initial = {}
   {opacity: 0,
@@ -175,12 +175,6 @@ export {FuturisticHero};
 </motion>
 </motion>
 </motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
 </div>
-</motion>
-</section>
+</motion>';
+</section>;';;';

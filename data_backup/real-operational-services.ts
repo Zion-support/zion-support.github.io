@@ -11,8 +11,7 @@ export interface RealOperationalService {
   contactInfo: {
     mobile: string;
     email: string;
-address: string;
-  };export const realOperationalServices: RealOperationalService[] = [
+address: string};export const realOperationalServices: RealOperationalService[] = [
   {
     id: "operational-intelligence",
     name: "Operational Intelligence Platform",
@@ -33,4 +32,4 @@ address: string;
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-];}}}
+]}}}

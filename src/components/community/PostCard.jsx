@@ -25,8 +25,9 @@ import React from "react"; "export default function PostCard(props: any) { retur
           </div>
 </div>
       </div>
-    </div>)}
-
+        </div>
+  );
+}
 export {PostCard};
 
 export {PostCard};
@@ -38,6 +39,4 @@ export {PostCard};
 export {PostCard};
 
 </div>
-</div>
-</div>
-</div>
+</div>;;

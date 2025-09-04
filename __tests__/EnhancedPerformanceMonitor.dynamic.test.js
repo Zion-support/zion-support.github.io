@@ -8,8 +8,7 @@ describe('EnhancedPerformanceMonitordynamic', () => {
     render(<EnhancedPerformanceMonitordynamic />);
     expect(
       screen.getByTestId('enhancedperformancemonitor.dynamic')
-    ).toBeInTheDocument();
-  });
+    ).toBeInTheDocument()});
 
   test('displays correct content', () => {
     render(<EnhancedPerformanceMonitordynamic />);
@@ -24,5 +23,4 @@ describe('EnhancedPerformanceMonitordynamic', () => {
   test('applies correct styling', () => {
     render(<EnhancedPerformanceMonitordynamic />);
     // Add styling tests if needed
-  });
-});
+  })});
