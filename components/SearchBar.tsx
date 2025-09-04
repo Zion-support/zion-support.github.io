@@ -76,19 +76,16 @@ const SearchBar: React.FC = () => {
     setResults(filteredResults);
     setIsOpen(true);
     setIsLoading(false);
-  };
-
+  }
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setQuery(value);
     handleSearch(value);
-  };
-
+  }
   const handleResultClick = () => {
     setIsOpen(false);
     setQuery('');
-  };
-
+  }
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Escape') {
       setIsOpen(false);
@@ -102,7 +99,7 @@ const SearchBar: React.FC = () => {
         setIsOpen(false);
       }
     };
-
+    
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
@@ -176,7 +173,7 @@ const SearchBar: React.FC = () => {
             </div>
           ) : query && !isLoading ? (
             <div className="px-4 py-8 text-center text-slate-400">
-              <p>No results found for "{query}"</p>
+              <p>No results found for &quot;{query}&quot;</p>
               <p className="text-sm mt-1">Try different keywords or browse our services</p>
             </div>
           ) : null}
