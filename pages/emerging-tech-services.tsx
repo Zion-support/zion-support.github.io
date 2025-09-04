@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { useState } from 'react';
 import { EMERGING_TECH_SERVICES_2027 } from "../src/data/emergingTechServices2027";
 
-const EmergingTechServices: NextPag e = () => {
+const EmergingTechServices: NextPage = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState<string>('name');

@@ -18,10 +18,10 @@ import {
   Zap
 } from 'lucide-react'
 
-const SEO = dynamic(() => import('../src/components/SEO'), { ssr: fals e })
-const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: fals e })
+const SEO = dynamic(() => import('../src/components/SEO'), { ssr: false })
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false })
 
-const DocsPage: Reac t.FC = () => {
+const DocsPage: React.FC = () => {
   const quickStart = [
     {
       step: 1,
@@ -53,14 +53,14 @@ const DocsPage: Reac t.FC = () => {
     {
       title: 'AI Services API',
       description: 'Access our AI and machine learning capabilities',
-      endpoints: 1 5,
+      endpoints: 15,
       icon: <Zap className="w-6 h-6"  />,
       color: 'blue'
     },
     {
       title: 'Micro SaaS API',
       description: 'Manage and deploy micro SaaS applications',
-      endpoints: 2 5,
+      endpoints: 25,
       icon: <Globe className="w-6 h-6"  />,
       color: 'green'
     },

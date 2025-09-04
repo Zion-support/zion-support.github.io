@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import dynamic from 'next/dynamic'
 import { motion } from 'framer-motion'
 import { Phone, Mail, MapPin, Clock, ArrowRight, Send } from 'lucide-react'
@@ -6,7 +6,7 @@ import { Phone, Mail, MapPin, Clock, ArrowRight, Send } from 'lucide-react'
 const SEO = dynamic(() => import('../src/components/SEO'), { ssr: false })
 const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false })
 
-export default function ContactPage() {
+function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -36,8 +36,6 @@ export default function ContactPage() {
       setIsSubmitted(true);
     }, 2000);
   };
-
-const ContactPage: React.FC = () => {
   const contactInfo = [
     {
       icon: <Phone className="w-6 h-6"  />,
