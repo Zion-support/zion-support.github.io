@@ -1,168 +1,255 @@
-# Zion Tech Group - AI-Powered Technology Solutions
+# Zion Tech Group Website
 
-A modern, responsive website built with Next.js, TypeScript, and Tailwind CSS, showcasing cutting-edge technology solutions and services.
+A modern, high-performance website built with Next.js 15, TypeScript, and Tailwind CSS for Zion Tech Group - a leading provider of micro SaaS products, AI services, and IT solutions.
 
 ## 🚀 Features
 
-- **Modern Design**: Futuristic UI with glassmorphism effects and neon accents
-- **Responsive**: Mobile-first design that works on all devices
-- **Performance Optimized**: Fast loading with Next.js 14 and optimized images
-- **SEO Ready**: Comprehensive meta tags, structured data, and sitemap
-- **Accessibility**: WCAG compliant with proper focus states and contrast
-- **Security**: Content Security Policy and security headers
-- **Error Handling**: Comprehensive error boundaries and loading states
+- **Modern Tech Stack**: Next.js 15, TypeScript, Tailwind CSS
+- **Performance Optimized**: Core Web Vitals monitoring, image optimization, lazy loading
+- **Mobile-First Design**: Responsive design with mobile optimization
+- **SEO Optimized**: Enhanced meta tags, structured data, sitemap generation
+- **Security Enhanced**: Comprehensive security headers, CSP, HSTS
+- **Error Handling**: Robust error boundaries and monitoring
+- **Automation Ready**: Extensive automation scripts for deployment and maintenance
+
+## 📊 Performance Metrics
+
+- **Build Time**: ~4 seconds
+- **Bundle Size**: Optimized with tree shaking and code splitting
+- **Core Web Vitals**: Monitored and optimized
+- **Mobile Performance**: Enhanced for 35% mobile traffic
 
 ## 🛠️ Tech Stack
 
-- **Framework**: Next.js 14.2.0
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
+- **Framework**: Next.js 15.5.2
+- **Language**: TypeScript 5.9.2
+- **Styling**: Tailwind CSS 3.4.17
+- **UI Components**: Radix UI
 - **Icons**: Lucide React
-- **Animations**: Framer Motion
-- **Deployment**: Netlify (configured)
+- **Performance**: Web Vitals, Performance Observer API
+- **Deployment**: Netlify ready
 
-## 📦 Installation
+## 🚀 Quick Start
 
-1. Clone the repository:
+### Prerequisites
+
+- Node.js 18.0.0 or higher
+- npm 10.0.0 or higher
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Zion-Holdings/zion.app.git
+   cd zion.app
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Build for production**
+   ```bash
+   npm run build
+   ```
+
+5. **Start production server**
+   ```bash
+   npm start
+   ```
+
+### Security
 ```bash
-git clone https://github.com/Zion-Technologies/Website.git
-cd Website
+npm run security:audit # Security audit
+npm run security:fix   # Fix security issues
 ```
 
-2. Install dependencies:
+## 🔁 Automations
+
+You can run consolidated automations and improvements locally:
+
 ```bash
-npm install
+# Run health, security, performance, build, PM2 bootstrap, and reports
+bash scripts/run-all-improvements.sh
+
+# Or quick CI locally (type-check, lint, tests)
+npm run ci:quick
 ```
 
-3. Run the development server:
-```bash
-npm run dev
-```
+Generated reports are written under `automation/reports/` and project root (final report JSON).
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-## 🏗️ Build & Deployment
-
-### Development
-```bash
-npm run dev
-```
-
-### Production Build
-```bash
-npm run build
-npm start
-```
-
-### Static Export
-```bash
-npm run export
-```
-
-## 📁 Project Structure
+## 🏗️ Project Structure
 
 ```
 ├── components/          # Reusable React components
-│   ├── ui/             # UI components
-│   ├── Navigation.tsx  # Main navigation
-│   ├── HeroSection.tsx # Hero section
-│   ├── ServicesSection.tsx # Services showcase
-│   ├── Footer.tsx      # Footer component
-│   ├── ErrorBoundary.tsx # Error handling
-│   └── Loading.tsx     # Loading component
+│   ├── ErrorBoundary.tsx
+│   ├── PerformanceMonitor.tsx
+│   ├── PerformanceOptimizer.tsx
+│   └── ModernLoading.tsx
 ├── pages/              # Next.js pages
-│   ├── api/           # API routes
-│   ├── services/      # Service pages
-│   ├── solutions/     # Solution pages
-│   └── index.tsx      # Home page
-├── styles/            # Global styles
-├── public/            # Static assets
-├── scripts/           # Build and utility scripts
-└── automation/        # Automation systems
+│   ├── index.tsx       # Homepage
+│   ├── services.tsx    # Services page
+│   ├── about.tsx       # About page
+│   └── contact.tsx     # Contact page
+├── scripts/            # Utility scripts
+│   └── generate-sitemap-enhanced.js
+├── styles/             # Global styles
+│   └── globals.css
+├── public/             # Static assets
+│   ├── sitemap.xml
+│   └── robots.txt
+└── automation/         # Automation scripts
 ```
 
-## 🎨 Design System
+## 🎯 Available Scripts
 
-The project uses a comprehensive design system with:
+### Development
+- `npm run dev` - Start development server
+- `npm run dev:fast` - Start with Turbo mode
 
-- **Color Palette**: Neon blue, purple, and pink gradients
-- **Typography**: Modern, readable fonts with proper hierarchy
-- **Spacing**: Consistent spacing scale
-- **Components**: Reusable UI components with variants
-- **Animations**: Smooth transitions and micro-interactions
+### Building
+- `npm run build` - Build for production
+- `npm run build:production` - Build with production optimizations
+- `npm run start` - Start production server
+
+### Code Quality
+- `npm run lint` - Run ESLint
+- `npm run lint:fix` - Fix ESLint issues
+- `npm run type-check` - Run TypeScript checks
+- `npm run format` - Format code with Prettier
+
+### SEO & Performance
+- `npm run sitemap:generate` - Generate sitemap and robots.txt
+- `npm run perf:lighthouse` - Run Lighthouse audit
+
+### Testing
+- `npm run test` - Run tests
+- `npm run test:watch` - Run tests in watch mode
+- `npm run test:coverage` - Run tests with coverage
 
 ## 🔧 Configuration
 
 ### Environment Variables
+
 Create a `.env.local` file:
+
 ```env
+NODE_ENV=production
 NEXT_PUBLIC_SITE_URL=https://ziontechgroup.com
-NEXT_PUBLIC_GA_ID=your-google-analytics-id
 ```
 
+### Next.js Configuration
+
+The `next.config.js` includes:
+- Performance optimizations
+- Security headers
+- Image optimization
+- Bundle analysis
+
 ### Tailwind Configuration
-The project includes custom Tailwind configuration with:
-- Extended color palette
+
+Custom theme extensions in `tailwind.config.js`:
 - Custom animations
+- Extended color palette
 - Responsive breakpoints
-- Component utilities
 
-## 📊 Performance
+## 📈 Performance Optimizations
 
-- **Lighthouse Score**: 95+ across all metrics
-- **Core Web Vitals**: Optimized for LCP, FID, and CLS
-- **Bundle Size**: Optimized with tree shaking and code splitting
-- **Images**: WebP/AVIF format support with responsive sizing
+### Implemented Optimizations
 
-## 🔒 Security
+1. **Image Optimization**
+   - Next.js Image component
+   - WebP/AVIF format support
+   - Lazy loading
+   - Responsive images
 
-- Content Security Policy (CSP) headers
-- X-Frame-Options protection
-- X-Content-Type-Options security
-- Referrer Policy configuration
-- Secure cookie settings
+2. **Code Splitting**
+   - Automatic route-based splitting
+   - Dynamic imports
+   - Bundle analysis
 
-## 📱 Browser Support
+3. **Caching**
+   - Static generation
+   - ISR (Incremental Static Regeneration)
+   - Browser caching headers
 
-- Chrome 90+
-- Firefox 88+
-- Safari 14+
-- Edge 90+
+4. **Core Web Vitals**
+   - LCP monitoring
+   - FID tracking
+   - CLS measurement
+
+## 🔒 Security Features
+
+- Content Security Policy (CSP)
+- XSS Protection
+- CSRF Protection
+- HSTS Headers
+- Frame Options
+- Content Type Options
+
+## 📱 Mobile Optimization
+
+- Responsive design
+- Touch-friendly interfaces
+- Optimized for mobile performance
+- Progressive Web App ready
+
+## 🚀 Deployment
+
+### Netlify (Recommended)
+
+1. Connect your GitHub repository to Netlify
+2. Set build command: `npm run build`
+3. Set publish directory: `.next`
+4. Deploy automatically on push to main branch
+
+### Manual Deployment
+
+1. Build the project: `npm run build`
+2. Upload the `.next` folder to your server
+3. Configure your server to serve Next.js
+
+## 🤖 Automation
+
+The project includes extensive automation scripts for:
+- Error monitoring and fixing
+- Performance optimization
+- SEO improvements
+- Security scanning
+- Dependency management
+
+## 📊 Analytics & Monitoring
+
+- Performance monitoring
+- Error tracking
+- User analytics ready
+- Core Web Vitals tracking
 
 ## 🤝 Contributing
 
 1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/amazing-feature`
-3. Commit your changes: `git commit -m 'Add amazing feature'`
-4. Push to the branch: `git push origin feature/amazing-feature`
-5. Open a Pull Request
+2. Create a feature branch
+3. Make your changes
+4. Run tests and linting
+5. Submit a pull request
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+MIT License - see LICENSE file for details
 
-## 📞 Support
+## 📞 Contact
 
 For support and questions:
-- Email: info@ziontechgroup.com
+- Email: kleber@ziontechgroup.com
+- Phone: +1 302 464 0950
 - Website: https://ziontechgroup.com
-- LinkedIn: [Zion Tech Group](https://linkedin.com/company/ziontechgroup)
-
-## 🚀 Deployment
-
-The project is configured for deployment on Netlify with:
-- Automatic builds on push to main
-- Environment variable configuration
-- Custom domain setup
-- SSL certificate management
-
-### Manual Deployment
-```bash
-npm run build
-npm run export
-# Upload the 'out' directory to your hosting provider
-```
 
 ---
 
-Built with ❤️ by the Zion Tech Group team
+**Zion Tech Group** - Innovative Micro SaaS, AI Services & IT Solutions

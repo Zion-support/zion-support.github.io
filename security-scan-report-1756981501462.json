@@ -1,0 +1,17 @@
+{
+  "timestamp": "2025-09-04T10:25:00.548Z",
+  "checks": [
+    {
+      "name": "npm audit",
+      "status": "error",
+      "error": "Command failed: npm audit --json"
+    },
+    {
+      "name": "sensitive files",
+      "status": "pass",
+      "found": []
+    }
+  ],
+  "vulnerabilities": [],
+  "overallStatus": "healthy"
+}

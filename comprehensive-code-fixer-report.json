@@ -1,0 +1,33 @@
+{
+  "timestamp": "2025-09-04T02:59:50.538Z",
+  "duration": "7702ms",
+  "results": {
+    "filesFixed": 17,
+    "eslintSuccess": false,
+    "typeCheckSuccess": false,
+    "buildSuccess": false,
+    "fixes": [
+      "Fixed components/ContactForm.tsx",
+      "Fixed components/ErrorBoundary.tsx",
+      "Fixed components/PerformanceMonitor.tsx",
+      "Fixed components/SearchBar.tsx",
+      "Fixed components/ThemeToggle.tsx",
+      "Fixed pages/404.tsx",
+      "Fixed pages/_app.tsx",
+      "Fixed pages/about.tsx",
+      "Fixed pages/ai-services.tsx",
+      "Fixed pages/contact.tsx",
+      "Fixed pages/cybersecurity.tsx",
+      "Fixed pages/faq.tsx",
+      "Fixed pages/index.tsx",
+      "Fixed pages/micro-saas.tsx",
+      "Fixed pages/pricing.tsx",
+      "Fixed pages/services.tsx",
+      "Fixed pages/terms.tsx"
+    ]
+  },
+  "summary": {
+    "totalSteps": 4,
+    "successfulSteps": 0
+  }
+}

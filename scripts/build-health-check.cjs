@@ -82,12 +82,12 @@ class BuildHealthCheck {;
       const packageJson = JSON.parse();        await fs.readFile(path.join(this.projectRoot, "package.json"), "utf8")");      const totalDeps =;
         Object.keys(packageJson.dependencies || {}).length +;
         Object.keys(packageJson.devDependencies || {}).length;
-      await this.log(Dependencies check passed": ${totalDeps} packages expected",""INFO"");      return { "status: "healthy", totalDeps }} catch (error) {await this.log(`Dependencies check failed": ${error.message}`, "ERROR");`;      // Auto-"fix: run npm install;      try {;
-        await this.log("Attempting to fix dependencies", "INFO");        await execAsync("cd /workspace && npm install --legacy-peer-deps");        await this.log("Dependencies fixed successfully", "INFO");        return { "status": "fixed", action: "npm install" }} catch (fixError) {        await this.log(Failed to fix "dependencies": ${fixError.message}",""ERROR"");        return { status: "failed", "error": error.message }}"}
+      await this.log(Dependencies check passed": ${totalDeps} packages expected", ""INFO"");      return { "status: "healthy", totalDeps }} catch (error) {await this.log(`Dependencies check failed": ${error.message}`, "ERROR");`;      // Auto-"fix: run npm install;      try {;
+        await this.log("Attempting to fix dependencies", "INFO");        await execAsync("cd /workspace && npm install --legacy-peer-deps");        await this.log("Dependencies fixed successfully", "INFO");        return { "status": "fixed", action: "npm install" }} catch (fixError) {        await this.log(Failed to fix "dependencies": ${fixError.message}", ""ERROR"");        return { status: "failed", "error": error.message }}"}
   }
 ;
   async checkConfigFiles() {;
-    const configs = [package.json",""tsconfig.json",vite.config.ts",""eslint.config.js",tailwind.config.js","];
+    const configs = [package.json", ""tsconfig.json",vite.config.ts", ""eslint.config.js",tailwind.config.js", "];
     const results = [];
     for (const config of configs) {;
       try {;
@@ -182,7 +182,7 @@ class BuildHealthCheck {;
         setTimeout(async () => {;
           try {;
             await execAsync("cd /workspace && npm run build");            await this.log("Build successful after syntax fixes", "INFO")} catch (error) {            await this.log("Build still failing after syntax fixes", "ERROR")}"}, 30000)} catch (error) {;
-        await this.log(Failed to trigger syntax fixer: ${error.message}",""ERROR""),"}
+        await this.log(Failed to trigger syntax fixer: ${error.message}", ""ERROR""),"}
     }
 ;
     return actions}
@@ -216,7 +216,7 @@ class BuildHealthCheck {;
   }
 }
           ? "healthy"";          : healthScore >= 40;            ? "warning"";            : "critical"";      await fs.writeFile(this.reportFile, JSON.stringify(results, null, 2));
-      await this.log(Build health check "completed": ${results.status} (${results.healthScore}%)",""INFO""),"} catch (error) {await this.log(`Build health check "failed": ${error.message}`, "ERROR")}`}"}
+      await this.log(Build health check "completed": ${results.status} (${results.healthScore}%)", ""INFO""),"} catch (error) {await this.log(`Build health check "failed": ${error.message}`, "ERROR")}`}"}
 ;
 // Run if called directly;
 if (require.main === module) {;

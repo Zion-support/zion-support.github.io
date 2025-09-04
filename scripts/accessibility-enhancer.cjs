@@ -107,7 +107,7 @@ export const accessibilityUtils = {;
   border: 0,;,
 }
 ;
-.sr-only-focusable:focus {;
+.sr-only-focusable: focus {;
   position: static;
   width: auto;
   height: auto;
@@ -159,7 +159,7 @@ export const accessibilityUtils = {;
   z-index: 1000,;,
 }
 ;
-.skip-to-content:focus {;
+.skip-to-content: focus {;
   top: 6px,;,
 }
 ;

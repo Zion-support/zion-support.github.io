@@ -1,0 +1,24 @@
+import React from 'react';''';
+import { EnhancedInnovativeServicesShowcase } from '@/components/services/EnhancedInnovativeServicesShowcase';''';
+import EnhancedSEO from '@/components/EnhancedSEO';
+export {};
+  return null;
+}
+  return();
+    <>;
+      <div>Broken JSX</div>
+      />;
+
+      <EnhancedInnovativeServicesShowcase />;
+    </>)}
+;
+
+export { EnhancedInnovativeServicesPage };
+;
+export { EnhancedInnovativeServicesPage };
+;
+export { EnhancedInnovativeServicesPage };
+;
+export { EnhancedInnovativeServicesPage };
+;
+export { EnhancedInnovativeServicesPage };

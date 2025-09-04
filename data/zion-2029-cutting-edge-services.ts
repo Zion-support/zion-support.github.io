@@ -79,7 +79,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,;,
+      website: "https://ziontechgroup.com",;,
 },;
     realImplementation: true,;
     technology: [;
@@ -107,7 +107,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     launchDate: "2024-01-15",;
     customers: 45,;
     rating: 4.9,;
-    reviews: 89,;,;,
+    reviews: 89,;,
 },;
   // AI-Powered Cybersecurity Threat Intelligence;
   {;
@@ -144,7 +144,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,;,
+      website: "https://ziontechgroup.com",;,
 },;
     realImplementation: true,;
     technology: [;
@@ -174,7 +174,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     launchDate: "2023-11-20",;
     customers: 234,;
     rating: 4.8,;
-    reviews: 156,;,;,
+    reviews: 156,;,
 },;
   // Autonomous Business Process Automation;
   {;
@@ -211,7 +211,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,;,
+      website: "https://ziontechgroup.com",;,
 },;
     realImplementation: true,;
     technology: [;
@@ -247,7 +247,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     launchDate: "2024-03-10",;
     customers: 167,;
     rating: 4.7,;
-    reviews: 203,;,;,
+    reviews: 203,;,
 },;
   // AI-Powered Financial Trading Platform;
   {;
@@ -284,7 +284,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,;,
+      website: "https://ziontechgroup.com",;,
 },;
     realImplementation: true,;
     technology: [;
@@ -315,7 +315,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     launchDate: "2023-09-15",;
     customers: 89,;
     rating: 4.6,;
-    reviews: 134,;,;,
+    reviews: 134,;,
 },;
   // IoT Edge Computing Platform;
   {;
@@ -352,7 +352,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,;,
+      website: "https://ziontechgroup.com",;,
 },;
     realImplementation: true,;
     technology: [;
@@ -377,7 +377,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     launchDate: "2024-02-28",;
     customers: 156,;
     rating: 4.8,;
-    reviews: 98,;,;,
+    reviews: 98,;,
 },;
   // AI-Powered Healthcare Diagnostics;
   {;
@@ -414,7 +414,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,;,
+      website: "https://ziontechgroup.com",;,
 },;
     realImplementation: true,;
     technology: [;
@@ -445,7 +445,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     launchDate: "2023-12-10",;
     customers: 78,;
     rating: 4.9,;
-    reviews: 67,;,;,
+    reviews: 67,;,
 },;
   // Blockchain Supply Chain Platform;
   {;
@@ -482,7 +482,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,;,
+      website: "https://ziontechgroup.com",;,
 },;
     realImplementation: true,;
     technology: [;
@@ -517,7 +517,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     launchDate: "2024-01-20",;
     customers: 123,;
     rating: 4.7,;
-    reviews: 89,;,;,
+    reviews: 89,;,
 },;
   // AI-Powered Marketing Automation;
   {;
@@ -554,7 +554,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,;,
+      website: "https://ziontechgroup.com",;,
 },;
     realImplementation: true,;
     technology: [;
@@ -585,7 +585,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     launchDate: "2023-10-15",;
     customers: 456,;
     rating: 4.8,;
-    reviews: 234,;,;,
+    reviews: 234,;,
 },;
   // Cloud-Native Development Platform;
   {;
@@ -622,7 +622,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,;,
+      website: "https://ziontechgroup.com",;,
 },;
     realImplementation: true,;
     technology: [;
@@ -652,7 +652,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     launchDate: "2024-02-15",;
     customers: 234,;
     rating: 4.7,;
-    reviews: 167,;,;,
+    reviews: 167,;,
 },;
   // AI-Powered Customer Service Platform;
   {;
@@ -689,7 +689,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,;,
+      website: "https://ziontechgroup.com",;,
 },;
     realImplementation: true,;
     technology: [;
@@ -714,7 +714,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     launchDate: "2023-11-10",;
     customers: 567,;
     rating: 4.8,;
-    reviews: 345,;,;,
+    reviews: 345,;,
 },;
   // Data Analytics and Business Intelligence;
   {;
@@ -751,7 +751,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,;,
+      website: "https://ziontechgroup.com",;,
 },;
     realImplementation: true,;
     technology: [;
@@ -776,7 +776,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     launchDate: "2023-12-20",;
     customers: 345,;
     rating: 4.8,;
-    reviews: 234,;,;,
+    reviews: 234,;,
 },;
 ];
 export const getServicesByCategory = (;
@@ -786,8 +786,8 @@ export const getServicesByCategory = (;
     service => service.category === category;
   )}
 export const getPopularServices = () => {;
-  return zionCuttingEdgeServices2029.filter(service => service.isPopular);,;,
+  return zionCuttingEdgeServices2029.filter(service => service.isPopular);
 }
 export const getNewServices = () => {;
-  return zionCuttingEdgeServices2029.filter(service => service.isNew);,;,
+  return zionCuttingEdgeServices2029.filter(service => service.isNew);
 }

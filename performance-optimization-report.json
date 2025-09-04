@@ -1,17 +1,18 @@
 {
-  "timestamp": "2025-09-02T22:55:19.242Z",
-  "optimizations": {
-    "totalFilesProcessed": 2019,
-    "totalOptimizations": 361,
-    "bundleSize": {
-      "maxFileSize": 512000,
-      "maxTotalSize": 5242880},
-    "recommendations": [
-      "Consider implementing code splitting for large components",
-      "Use React.memo for expensive components",
-      "Optimize images to WebP/AVIF format",
-      "Implement lazy loading for non-critical components",
-      "Use CSS-in-JS libraries for better tree shaking"
-    ]
-}
+  "timestamp": "2025-09-04T02:05:38.241Z",
+  "largeFiles": 30,
+  "recommendations": [
+    "Implement code splitting for better loading performance",
+    "Optimize images using Next.js Image component",
+    "Enable compression in Next.js configuration",
+    "Use dynamic imports for heavy components",
+    "Implement proper caching strategies",
+    "Minimize bundle size by removing unused code",
+    "Use WebP/AVIF image formats",
+    "Implement lazy loading for below-the-fold content"
+  ],
+  "metrics": {
+    "buildSize": "Check .next directory size",
+    "bundleAnalysis": "Run npm run analyze for detailed bundle analysis"
+  }
 }

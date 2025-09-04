@@ -1,0 +1,50 @@
+{
+  "timestamp": "2025-09-04T02:37:02.732Z",
+  "duration": "1s",
+  "summary": {
+    "totalTests": 8,
+    "totalPassed": 0,
+    "totalFailed": 4,
+    "successRate": 0
+  },
+  "results": {
+    "unitTests": {
+      "passed": 0,
+      "failed": 3,
+      "total": 3
+    },
+    "integrationTests": {
+      "passed": 0,
+      "failed": 1,
+      "total": 1
+    },
+    "e2eTests": {
+      "passed": 0,
+      "failed": 0,
+      "total": 1
+    },
+    "performanceTests": {
+      "passed": 0,
+      "failed": 0,
+      "total": 1
+    },
+    "securityTests": {
+      "passed": 0,
+      "failed": 0,
+      "total": 1
+    },
+    "accessibilityTests": {
+      "passed": 0,
+      "failed": 0,
+      "total": 1
+    },
+    "errors": [
+      "Unit tests failed",
+      "Integration tests failed"
+    ]
+  },
+  "errors": [
+    "Unit tests failed",
+    "Integration tests failed"
+  ]
+}

@@ -81,7 +81,7 @@ const fs = require("fs")";const path = require("path")"";class SEOOptimizer {;
 ;
   generateReport(results) {;
     const report = {;
-      "timestamp": new Date().toISOString(),""metaTags": results.metaTags,""sitemap": results.sitemap,""robotsTxt": results.robotsTxt,""summary": {""overall": "good",""totalIssues":;";          results.metaTags.issues.length +;
+      "timestamp": new Date().toISOString(),""metaTags": results.metaTags,""sitemap": results.sitemap,""robotsTxt": results.robotsTxt,""summary": {""overall": "good", ""totalIssues":;";          results.metaTags.issues.length +;
           results.sitemap.issues.length +;
           results.robotsTxt.issues.length,;
         "recommendations": [],,"},,,;,

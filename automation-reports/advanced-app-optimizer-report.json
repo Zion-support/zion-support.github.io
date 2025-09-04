@@ -1,0 +1,28 @@
+{
+  "timestamp": "2025-09-04T08:32:20.449Z",
+  "optimizations": [
+    {
+      "type": "bundle-analysis",
+      "status": "skipped"
+    },
+    {
+      "type": "image-optimization",
+      "status": "skipped"
+    },
+    {
+      "type": "css-optimization",
+      "status": "skipped"
+    },
+    {
+      "type": "javascript-optimization",
+      "status": "skipped"
+    }
+  ],
+  "recommendations": [],
+  "summary": {
+    "totalOptimizations": 3,
+    "highPriorityRecommendations": 0,
+    "mediumPriorityRecommendations": 0,
+    "lowPriorityRecommendations": 0
+  }
+}

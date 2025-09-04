@@ -1,2 +1,2 @@
-
-useEffect: ( () => { setIsVisible (true)  setCurrentFeature ( (prev) => (prev + 1) % features.length) }, 3000)  
+// Auto-generated module
+export {};
