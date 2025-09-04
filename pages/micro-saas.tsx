@@ -1857,291 +1857,446 @@ export default function MicroSaaS(): any {
       ],
       category: 'Identity Management'
     },
+    // New Innovative Micro SaaS Services
     {
       icon: Brain,
-      name: 'AI-Powered Email Responder',
-      description: 'Intelligent email automation that reads, analyzes, and responds to emails with human-like accuracy and context awareness.',
+      name: 'AI-Powered Code Review Assistant',
+      description: 'Automated code quality analysis, security scanning, and performance optimization suggestions.',
       features: [
-        'Natural language processing for email understanding',
-        'Context-aware response generation',
-        'Priority classification and urgent flagging',
-        'Multi-language support and translation',
-        'Integration with CRM and business systems',
-        'Learning from user feedback and corrections'
-      ],
-      pricing: '$299 – $1,999/month',
-      timeline: '3–4 weeks',
-      benefits: [
-        '80% reduction in email response time',
-        '24/7 automated email handling',
-        'Improved customer satisfaction',
-        'Reduced manual email workload'
-      ],
-      category: 'AI Automation'
-    },
-    {
-      icon: Users,
-      name: 'Mobile-First Survey Tool',
-      description: 'Engaging mobile-optimized surveys with conversational UI, real-time analytics, and high completion rates.',
-      features: [
-        'Mobile-first responsive design',
-        'Conversational survey interface',
-        'Real-time data collection and analytics',
-        'Adaptive questioning based on responses',
-        'Multi-channel distribution (SMS, email, web)',
-        'Advanced data visualization and reporting'
-      ],
-      pricing: '$149 – $899/month',
-      timeline: '2–3 weeks',
-      benefits: [
-        '60% higher completion rates',
-        'Real-time customer insights',
-        'Mobile-optimized user experience',
-        'Automated data analysis and reporting'
-      ],
-      category: 'Data Collection'
-    },
-    {
-      icon: BarChart3,
-      name: 'Niche Productivity Planner',
-      description: 'Industry-specific productivity tools with customized dashboards, workflows, and smart recommendations.',
-      features: [
-        'Industry-specific templates and workflows',
-        'Customizable dashboards and data views',
-        'Smart goal setting and progress tracking',
-        'Data-driven productivity recommendations',
-        'Integration with industry-specific tools',
-        'Team collaboration and sharing features'
-      ],
-      pricing: '$199 – $1,299/month',
-      timeline: '3–4 weeks',
-      benefits: [
-        '35% improvement in team productivity',
-        'Industry-tailored solutions',
-        'Data-driven workflow optimization',
-        'Enhanced goal achievement rates'
-      ],
-      category: 'Productivity'
-    },
-    {
-      icon: Calendar,
-      name: 'Event Management Dashboard',
-      description: 'Comprehensive event planning platform with automated workflows, ticketing, and attendee management.',
-      features: [
-        'End-to-end event planning and management',
-        'Automated ticketing and registration',
-        'Attendee communication and updates',
-        'Real-time event analytics and insights',
-        'Integration with payment and marketing tools',
-        'Mobile app for attendees and organizers'
-      ],
-      pricing: '$249 – $1,599/month',
-      timeline: '3–4 weeks',
-      benefits: [
-        '50% reduction in event planning time',
-        'Automated attendee management',
-        'Improved event ROI tracking',
-        'Enhanced attendee experience'
-      ],
-      category: 'Event Management'
-    },
-    {
-      icon: FileText,
-      name: 'AI-Powered Content Creation Suite',
-      description: 'Comprehensive content generation platform with AI writing, editing, and optimization tools.',
-      features: [
-        'AI-powered content generation for multiple formats',
-        'Brand voice consistency and customization',
-        'SEO optimization and keyword integration',
-        'Content planning and editorial calendar',
-        'Multi-language content creation',
-        'Performance tracking and optimization'
-      ],
-      pricing: '$399 – $2,499/month',
-      timeline: '4–5 weeks',
-      benefits: [
-        '10x faster content production',
-        'Consistent brand messaging',
-        'Improved SEO performance',
-        'Reduced content creation costs'
-      ],
-      category: 'Content Management'
-    },
-    {
-      icon: Headphones,
-      name: 'Customer Support & Helpdesk Platform',
-      description: 'All-in-one customer support solution with AI chatbots, ticket management, and knowledge base.',
-      features: [
-        'AI-powered chatbots and virtual assistants',
-        'Intelligent ticket routing and prioritization',
-        'Comprehensive knowledge base management',
-        'Multi-channel support (chat, email, phone)',
-        'Customer satisfaction tracking and analytics',
-        'Integration with CRM and business tools'
-      ],
-      pricing: '$299 – $1,999/month',
-      timeline: '3–4 weeks',
-      benefits: [
-        '70% reduction in support response time',
-        '24/7 automated customer assistance',
-        'Improved customer satisfaction scores',
-        'Reduced support team workload'
-      ],
-      category: 'Customer Support'
-    },
-    {
-      icon: RefreshCw,
-      name: 'E-Commerce Return Management SaaS',
-      description: 'Automated return processing platform with intelligent routing, label generation, and analytics.',
-      features: [
-        'Automated return request processing',
-        'Intelligent return routing and approval',
-        'Automated return label generation',
-        'Real-time return status tracking',
-        'Return analytics and insights',
-        'Integration with e-commerce platforms'
+        'Automated code quality scoring',
+        'Security vulnerability detection',
+        'Performance bottleneck identification',
+        'Code style and best practices enforcement',
+        'Integration with CI/CD pipelines',
+        'Team collaboration and knowledge sharing'
       ],
       pricing: '$199 – $1,299/month',
       timeline: '2–3 weeks',
       benefits: [
-        '60% faster return processing',
-        'Automated return workflows',
-        'Improved customer experience',
-        'Reduced return processing costs'
+        '60% reduction in code review time',
+        'Automated security scanning',
+        'Improved code quality standards',
+        'Faster development cycles'
       ],
-      category: 'E-Commerce'
+      category: 'Development Tools'
     },
     {
-      icon: Mail,
-      name: 'Automated Email Follow-up Service',
-      description: 'Intelligent email sequence automation with personalization, A/B testing, and conversion optimization.',
+      icon: TrendingUp,
+      name: 'Real-Time Business Intelligence Dashboard',
+      description: 'Live business metrics, KPI tracking, and predictive analytics for data-driven decisions.',
       features: [
-        'Automated email sequence management',
-        'Personalized content and timing',
-        'A/B testing and optimization',
-        'Behavioral trigger-based emails',
-        'Conversion tracking and analytics',
-        'Integration with CRM and marketing tools'
-      ],
-      pricing: '$149 – $999/month',
-      timeline: '2–3 weeks',
-      benefits: [
-        '45% increase in email conversion rates',
-        'Automated lead nurturing',
-        'Personalized customer communication',
-        'Improved sales pipeline management'
-      ],
-      category: 'Email Marketing'
-    },
-    {
-      icon: Video,
-      name: 'AI-Powered Video Clip Maker',
-      description: 'Automated video editing platform that transforms long-form content into engaging social media clips.',
-      features: [
-        'AI-powered video clip extraction',
-        'Automatic highlight detection',
-        'Social media format optimization',
-        'Brand consistency and watermarking',
-        'Multi-platform publishing',
-        'Performance analytics and insights'
+        'Real-time data visualization',
+        'Custom KPI tracking and alerts',
+        'Predictive analytics and forecasting',
+        'Multi-source data integration',
+        'Automated report generation',
+        'Mobile-responsive dashboards'
       ],
       pricing: '$299 – $1,999/month',
       timeline: '3–4 weeks',
       benefits: [
-        '90% faster video content creation',
-        'Automated social media optimization',
-        'Increased content engagement',
-        'Reduced video production costs'
+        'Real-time business insights',
+        'Data-driven decision making',
+        'Automated reporting',
+        'Improved operational efficiency'
       ],
-      category: 'Video Marketing'
-    },
-    {
-      icon: Stethoscope,
-      name: 'Hospital Appointment Scheduler',
-      description: 'Specialized healthcare scheduling platform with patient management, medical history, and compliance features.',
-      features: [
-        'Secure patient appointment scheduling',
-        'Medical history and record integration',
-        'HIPAA-compliant data management',
-        'Automated reminders and notifications',
-        'Provider availability management',
-        'Insurance verification and billing integration'
-      ],
-      pricing: '$399 – $2,499/month',
-      timeline: '4–6 weeks',
-      benefits: [
-        '50% reduction in no-show rates',
-        'Improved patient experience',
-        'Automated compliance management',
-        'Enhanced operational efficiency'
-      ],
-      category: 'Healthcare'
-    },
-    {
-      icon: Users,
-      name: 'AI-Powered Talent Matching Platform',
-      description: 'Advanced talent acquisition platform with AI matching, skill assessment, and recruitment automation.',
-      features: [
-        'AI-powered candidate-job matching',
-        'Automated skill assessment and testing',
-        'Video interview scheduling and analysis',
-        'Candidate ranking and recommendation',
-        'Recruiter workflow automation',
-        'Analytics and performance tracking'
-      ],
-      pricing: '$499 – $3,999/month',
-      timeline: '4–6 weeks',
-      benefits: [
-        '60% reduction in time-to-hire',
-        'Improved candidate quality',
-        'Automated recruitment workflows',
-        'Enhanced hiring success rates'
-      ],
-      category: 'Recruitment'
+      category: 'Business Intelligence'
     },
     {
       icon: Shield,
-      name: 'Cybersecurity Compliance Manager',
-      description: 'Automated compliance monitoring and reporting platform for cybersecurity standards and regulations.',
+      name: 'Zero-Trust Security Framework',
+      description: 'Comprehensive zero-trust security implementation with continuous verification and monitoring.',
       features: [
-        'Automated compliance monitoring',
-        'Real-time security posture assessment',
-        'Regulatory reporting and documentation',
-        'Risk assessment and mitigation',
-        'Audit trail and evidence collection',
-        'Integration with security tools'
+        'Identity and access management',
+        'Device trust verification',
+        'Network segmentation and monitoring',
+        'Continuous security assessment',
+        'Threat detection and response',
+        'Compliance automation'
       ],
-      pricing: '$599 – $3,999/month',
+      pricing: '$499 – $2,999/month',
       timeline: '4–6 weeks',
       benefits: [
-        '90% reduction in compliance effort',
-        'Automated risk assessment',
-        'Improved security posture',
-        'Reduced compliance costs'
+        'Enhanced security posture',
+        'Reduced security incidents',
+        'Automated compliance',
+        'Improved threat detection'
       ],
       category: 'Cybersecurity'
     },
     {
-      icon: Cpu,
-      name: 'Quantum Computing Solutions Platform',
-      description: 'Access to quantum computing resources for complex optimization, cryptography, and scientific research.',
+      icon: Cloud,
+      name: 'Multi-Cloud Cost Optimizer',
+      description: 'Intelligent multi-cloud cost management with automated optimization and cost allocation.',
       features: [
-        'Quantum algorithm development and testing',
-        'Optimization problem solving',
-        'Cryptographic security enhancement',
-        'Scientific research and simulation',
-        'Quantum machine learning applications',
-        'Expert consultation and support'
+        'Multi-cloud cost visibility',
+        'Automated cost optimization',
+        'Resource rightsizing recommendations',
+        'Cost allocation and chargeback',
+        'Budget alerts and forecasting',
+        'Cloud governance and policies'
       ],
-      pricing: '$999 – $9,999/month',
+      pricing: '$399 – $2,499/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '35% average cost reduction',
+        'Automated cost optimization',
+        'Improved cloud governance',
+        'Better resource utilization'
+      ],
+      category: 'Cloud Management'
+    },
+    {
+      icon: Users,
+      name: 'AI-Powered Customer Success Platform',
+      description: 'Predictive customer success management with automated health scoring and intervention.',
+      features: [
+        'Customer health scoring',
+        'Churn prediction and prevention',
+        'Automated intervention workflows',
+        'Success milestone tracking',
+        'Customer journey analytics',
+        'Integration with CRM systems'
+      ],
+      pricing: '$299 – $1,999/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '25% reduction in churn rate',
+        'Automated customer success',
+        'Improved customer satisfaction',
+        'Data-driven success strategies'
+      ],
+      category: 'Customer Success'
+    },
+    {
+      icon: FileText,
+      name: 'Intelligent Document Workflow Automation',
+      description: 'AI-powered document processing with intelligent routing and approval workflows.',
+      features: [
+        'Intelligent document classification',
+        'Automated routing and approval',
+        'OCR and data extraction',
+        'Workflow customization',
+        'Compliance tracking',
+        'Integration with business systems'
+      ],
+      pricing: '$199 – $1,299/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '70% reduction in processing time',
+        'Automated document workflows',
+        'Improved accuracy',
+        'Better compliance tracking'
+      ],
+      category: 'Document Management'
+    },
+    {
+      icon: Zap,
+      name: 'Smart Energy Management System',
+      description: 'IoT-based energy monitoring, optimization, and cost reduction for facilities.',
+      features: [
+        'Real-time energy monitoring',
+        'Predictive maintenance alerts',
+        'Energy consumption optimization',
+        'Cost analysis and reporting',
+        'Integration with smart devices',
+        'Sustainability tracking'
+      ],
+      pricing: '$199 – $1,299/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '30% reduction in energy costs',
+        'Automated energy optimization',
+        'Predictive maintenance',
+        'Improved sustainability metrics'
+      ],
+      category: 'IoT & Energy'
+    },
+    {
+      icon: Globe,
+      name: 'Global Supply Chain Visibility Platform',
+      description: 'End-to-end supply chain tracking with real-time visibility and risk management.',
+      features: [
+        'Real-time shipment tracking',
+        'Supply chain risk assessment',
+        'Vendor performance monitoring',
+        'Demand forecasting',
+        'Compliance tracking',
+        'Crisis management tools'
+      ],
+      pricing: '$399 – $2,499/month',
+      timeline: '4–6 weeks',
+      benefits: [
+        'Complete supply chain visibility',
+        'Reduced supply chain risks',
+        'Improved vendor management',
+        'Better demand planning'
+      ],
+      category: 'Supply Chain'
+    },
+    {
+      icon: Mail,
+      name: 'AI-Powered Email Security Gateway',
+      description: 'Advanced email security with AI-driven threat detection and automated response.',
+      features: [
+        'AI-powered threat detection',
+        'Automated email filtering',
+        'Phishing and malware protection',
+        'Email encryption and DLP',
+        'Compliance monitoring',
+        'Incident response automation'
+      ],
+      pricing: '$149 – $999/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '99.9% threat detection accuracy',
+        'Automated security response',
+        'Reduced security incidents',
+        'Improved compliance'
+      ],
+      category: 'Email Security'
+    },
+    {
+      icon: BarChart3,
+      name: 'Predictive Maintenance Analytics',
+      description: 'AI-driven predictive maintenance with equipment health monitoring and optimization.',
+      features: [
+        'Equipment health monitoring',
+        'Predictive failure analysis',
+        'Maintenance scheduling optimization',
+        'Cost-benefit analysis',
+        'Integration with IoT sensors',
+        'Maintenance history tracking'
+      ],
+      pricing: '$299 – $1,999/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '40% reduction in maintenance costs',
+        'Predictive failure prevention',
+        'Optimized maintenance schedules',
+        'Improved equipment uptime'
+      ],
+      category: 'Maintenance'
+    },
+    {
+      icon: Users,
+      name: 'AI-Powered Talent Acquisition Platform',
+      description: 'Intelligent recruitment with automated candidate screening and matching.',
+      features: [
+        'AI-powered candidate screening',
+        'Automated job matching',
+        'Interview scheduling and coordination',
+        'Candidate assessment tools',
+        'Diversity and inclusion tracking',
+        'Integration with HR systems'
+      ],
+      pricing: '$199 – $1,299/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '50% faster hiring process',
+        'Improved candidate quality',
+        'Reduced recruitment costs',
+        'Better diversity metrics'
+      ],
+      category: 'HR Technology'
+    },
+    {
+      icon: Shield,
+      name: 'Compliance Automation Platform',
+      description: 'Automated compliance monitoring and reporting for various regulatory frameworks.',
+      features: [
+        'Multi-framework compliance tracking',
+        'Automated compliance reporting',
+        'Risk assessment and monitoring',
+        'Audit trail management',
+        'Policy management',
+        'Training and certification tracking'
+      ],
+      pricing: '$299 – $1,999/month',
+      timeline: '4–6 weeks',
+      benefits: [
+        'Automated compliance management',
+        'Reduced compliance risks',
+        'Streamlined audit processes',
+        'Improved regulatory adherence'
+      ],
+      category: 'Compliance'
+    },
+    {
+      icon: Cloud,
+      name: 'Edge Computing Management Platform',
+      description: 'Comprehensive edge computing orchestration with distributed application management.',
+      features: [
+        'Edge infrastructure management',
+        'Distributed application deployment',
+        'Edge-to-cloud synchronization',
+        'Performance monitoring',
+        'Security and compliance',
+        'Cost optimization'
+      ],
+      pricing: '$399 – $2,499/month',
+      timeline: '4–6 weeks',
+      benefits: [
+        'Improved application performance',
+        'Reduced latency',
+        'Better resource utilization',
+        'Enhanced security'
+      ],
+      category: 'Edge Computing'
+    },
+    {
+      icon: Brain,
+      name: 'AI-Powered Fraud Detection System',
+      description: 'Real-time fraud detection with machine learning and behavioral analysis.',
+      features: [
+        'Real-time transaction monitoring',
+        'Behavioral pattern analysis',
+        'Machine learning fraud models',
+        'Risk scoring and alerts',
+        'False positive reduction',
+        'Integration with payment systems'
+      ],
+      pricing: '$199 – $1,299/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '95% fraud detection accuracy',
+        'Real-time threat prevention',
+        'Reduced false positives',
+        'Improved customer experience'
+      ],
+      category: 'Fraud Prevention'
+    },
+    {
+      icon: TrendingUp,
+      name: 'Dynamic Pricing Optimization Engine',
+      description: 'AI-driven dynamic pricing with real-time market analysis and competitor monitoring.',
+      features: [
+        'Real-time price optimization',
+        'Competitor price monitoring',
+        'Demand forecasting',
+        'Revenue maximization',
+        'Price elasticity analysis',
+        'A/B testing for pricing strategies'
+      ],
+      pricing: '$299 – $1,999/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '15% increase in revenue',
+        'Automated pricing optimization',
+        'Competitive advantage',
+        'Data-driven pricing decisions'
+      ],
+      category: 'Pricing Optimization'
+    },
+    {
+      icon: FileText,
+      name: 'AI-Powered Legal Research Assistant',
+      description: 'Intelligent legal research with case law analysis and document generation.',
+      features: [
+        'Automated case law research',
+        'Legal document generation',
+        'Precedent analysis',
+        'Citation verification',
+        'Legal brief automation',
+        'Integration with legal databases'
+      ],
+      pricing: '$199 – $1,299/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '60% faster legal research',
+        'Automated document generation',
+        'Improved accuracy',
+        'Reduced research costs'
+      ],
+      category: 'Legal Technology'
+    },
+    {
+      icon: Zap,
+      name: 'Smart Building Management System',
+      description: 'IoT-based building automation with energy optimization and occupant comfort.',
+      features: [
+        'Building automation control',
+        'Energy consumption optimization',
+        'Occupant comfort monitoring',
+        'Predictive maintenance',
+        'Space utilization analytics',
+        'Integration with building systems'
+      ],
+      pricing: '$299 – $1,999/month',
+      timeline: '4–6 weeks',
+      benefits: [
+        '25% reduction in energy costs',
+        'Improved occupant comfort',
+        'Automated building management',
+        'Better space utilization'
+      ],
+      category: 'Smart Buildings'
+    },
+    {
+      icon: Users,
+      name: 'AI-Powered Learning Management System',
+      description: 'Intelligent learning platform with personalized content and progress tracking.',
+      features: [
+        'Personalized learning paths',
+        'AI-powered content recommendations',
+        'Progress tracking and analytics',
+        'Automated assessment',
+        'Skill gap analysis',
+        'Integration with HR systems'
+      ],
+      pricing: '$149 – $999/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '40% improvement in learning outcomes',
+        'Personalized learning experience',
+        'Automated progress tracking',
+        'Better skill development'
+      ],
+      category: 'Education Technology'
+    },
+    {
+      icon: Shield,
+      name: 'Quantum-Safe Security Platform',
+      description: 'Post-quantum cryptography implementation for future-proof security.',
+      features: [
+        'Quantum-safe encryption algorithms',
+        'Hybrid classical-quantum security',
+        'Migration planning and tools',
+        'Compliance with quantum standards',
+        'Performance optimization',
+        'Integration with existing systems'
+      ],
+      pricing: '$499 – $2,999/month',
       timeline: '6–8 weeks',
       benefits: [
-        'Exponential computational power',
-        'Advanced optimization capabilities',
-        'Enhanced security solutions',
-        'Cutting-edge research capabilities'
+        'Future-proof security',
+        'Quantum threat protection',
+        'Compliance readiness',
+        'Enhanced data protection'
       ],
-      category: 'Quantum Computing'
+      category: 'Quantum Security'
+    },
+    {
+      icon: Cloud,
+      name: 'Serverless Application Platform',
+      description: 'Complete serverless development platform with auto-scaling and cost optimization.',
+      features: [
+        'Serverless function management',
+        'Auto-scaling and load balancing',
+        'Cost optimization',
+        'Monitoring and debugging',
+        'CI/CD integration',
+        'Multi-cloud deployment'
+      ],
+      pricing: '$199 – $1,299/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '90% reduction in infrastructure costs',
+        'Automatic scaling',
+        'Simplified deployment',
+        'Improved developer productivity'
+      ],
+      category: 'Serverless Computing'
     }
   ];
 
@@ -2185,31 +2340,31 @@ export default function MicroSaaS(): any {
         </div>
 
         {/* Services Grid */}
-        <div className="grid gap-8">";
-          {microSaaSServices.map((service, index) => (
-            <div key={index} className="rounded-xl border border-white/10 bg-slate-900/60 p-8 hover: border-blue-500/40 transition-colors">,";
-              <div className="flex items-start gap-4 mb-6">";
-                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">";
-                  <service.icon className="w-6 h-6" />";
+        <div className="grid gap-6 md:gap-8">
+          {microSaaSServices.slice(0, 12).map((service, index) => (
+            <div key={index} className="rounded-xl border border-white/10 bg-slate-900/60 p-4 md:p-6 lg:p-8 hover:border-blue-500/40 transition-colors">
+              <div className="flex flex-col sm:flex-row items-start gap-4 mb-6">
+                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <service.icon className="w-6 h-6" />
                 </div>
-                <div className="flex-1">";
-                  <div className="flex items-center gap-3 mb-2">";
-                    <h2 className="text-2xl font-bold">{service.name}</h2>";
-                    <span className="px-2 py-1 rounded bg-slate-800/70 border border-white/10 text-xs font-medium">";
+                <div className="flex-1">
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 mb-2">
+                    <h2 className="text-xl md:text-2xl font-bold">{service.name}</h2>
+                    <span className="px-2 py-1 rounded bg-slate-800/70 border border-white/10 text-xs font-medium self-start">
                       {service.category}
                     </span>
                   </div>
-                  <p className="text-slate-300 text-lg">{service.description}</p>";
+                  <p className="text-slate-300 text-base md:text-lg">{service.description}</p>
                 </div>
               </div>
 
-              <div className="grid md: grid-cols-2 gap-8">,";
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
                 <div>
-                  <h3 className="text-lg font-semibold mb-3 text-blue-400">Key Features</h3>";
-                  <ul className="space-y-2 text-slate-300">";
+                  <h3 className="text-base md:text-lg font-semibold mb-3 text-blue-400">Key Features</h3>
+                  <ul className="space-y-2 text-slate-300 text-sm md:text-base">
                     {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-2">";
-                        <span className="text-blue-400 mt-1">•</span>";
+                      <li key={idx} className="flex items-start gap-2">
+                        <span className="text-blue-400 mt-1 flex-shrink-0">•</span>
                         <span>{feature}</span>
                       </li>
                     ))}
@@ -2217,11 +2372,11 @@ export default function MicroSaaS(): any {
                 </div>
 
                 <div>
-                  <h3 className="text-lg font-semibold mb-3 text-green-400">Business Benefits</h3>";
-                  <ul className="space-y-2 text-slate-300">";
+                  <h3 className="text-base md:text-lg font-semibold mb-3 text-green-400">Business Benefits</h3>
+                  <ul className="space-y-2 text-slate-300 text-sm md:text-base">
                     {service.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-start gap-2">";
-                        <span className="text-green-400 mt-1">✓</span>";
+                      <li key={idx} className="flex items-start gap-2">
+                        <span className="text-green-400 mt-1 flex-shrink-0">✓</span>
                         <span>{benefit}</span>
                       </li>
                     ))}
@@ -2229,21 +2384,23 @@ export default function MicroSaaS(): any {
                 </div>
               </div>
 
-              <div className="mt-6 pt-6 border-t border-white/10">";
-                <div className="flex flex-wrap items-center gap-6">";
-                  <div className="flex items-center gap-2">";
-                    <span className="text-slate-400">Pricing: </span>,";
-                    <span className="font-semibold text-blue-400">{service.pricing}</span>";
+              <div className="mt-6 pt-6 border-t border-white/10">
+                <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
+                  <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+                    <div className="flex items-center gap-2">
+                      <span className="text-slate-400 text-sm">Pricing:</span>
+                      <span className="font-semibold text-blue-400 text-sm">{service.pricing}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-slate-400 text-sm">Setup Time:</span>
+                      <span className="font-semibold text-green-400 text-sm">{service.timeline}</span>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-2">";
-                    <span className="text-slate-400">Setup Time: </span>,";
-                    <span className="font-semibold text-green-400">{service.timeline}</span>";
-                  </div>
-                  <div className="ml-auto flex gap-3">";
-                    <Link href="/contact" className="px-4 py-2 rounded bg-blue-600 hover: bg-blue-700 text-sm font-semibold">,";
+                  <div className="flex flex-col sm:flex-row gap-3 sm:ml-auto">
+                    <Link href="/contact" className="px-4 py-2 rounded bg-blue-600 hover:bg-blue-700 text-sm font-semibold text-center">
                       Get Started
                     </Link>
-                    <Link href="/contact" className="px-4 py-2 rounded bg-slate-800 hover: bg-slate-700 border border-white/10 text-sm font-semibold">,";
+                    <Link href="/contact" className="px-4 py-2 rounded bg-slate-800 hover:bg-slate-700 border border-white/10 text-sm font-semibold text-center">
                       Learn More
                     </Link>
                   </div>
@@ -2251,6 +2408,31 @@ export default function MicroSaaS(): any {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Pagination */}
+        <div className="mt-12 flex justify-center">
+          <div className="flex items-center gap-2">
+            <button className="px-3 py-2 rounded bg-slate-800 hover:bg-slate-700 border border-white/10 text-sm font-medium">
+              Previous
+            </button>
+            <button className="px-3 py-2 rounded bg-blue-600 text-white text-sm font-medium">
+              1
+            </button>
+            <button className="px-3 py-2 rounded bg-slate-800 hover:bg-slate-700 border border-white/10 text-sm font-medium">
+              2
+            </button>
+            <button className="px-3 py-2 rounded bg-slate-800 hover:bg-slate-700 border border-white/10 text-sm font-medium">
+              3
+            </button>
+            <span className="px-3 py-2 text-slate-400 text-sm">...</span>
+            <button className="px-3 py-2 rounded bg-slate-800 hover:bg-slate-700 border border-white/10 text-sm font-medium">
+              12
+            </button>
+            <button className="px-3 py-2 rounded bg-slate-800 hover:bg-slate-700 border border-white/10 text-sm font-medium">
+              Next
+            </button>
+          </div>
         </div>
 
         {/* CTA Section */}

@@ -20,12 +20,9 @@ export default function Home(): any {
   return (
     <>
       <Head>
-        <title>Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions</title>
-        <meta name="description" content="Leading provider of micro SaaS products, AI services, and IT solutions. 280+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions." />
-        <meta name="keywords" content="micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity, enterprise software, digital transformation" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="Zion Tech Group" />
+        <title>Zion Tech Group - Leading Micro SaaS, AI & IT Solutions Provider</title>
+        <meta name="description" content="Zion Tech Group delivers 330+ cutting-edge technology solutions: 140+ micro SaaS products, 95+ AI services, and 95+ IT solutions. From quantum computing to AI automation, we help businesses scale efficiently and securely." />
+        <meta name="keywords" content="micro SaaS, AI services, IT solutions, cloud computing, quantum computing, blockchain, cybersecurity, machine learning, DevOps, automation, edge computing, 5G, IoT, data analytics" />
         <link rel="canonical" href={contact.site} />
         <meta property="og:title" content="Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions" />
         <meta property="og:description" content="Leading provider of micro SaaS products, AI services, and IT solutions. 280+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions." />
@@ -81,10 +78,10 @@ export default function Home(): any {
             <p className="text-lg sm:text-xl md:text-2xl text-slate-300 mb-6 sm:mb-8">
               Innovative Micro SaaS, AI Services & IT Solutions
             </p>
-            <p className="text-base sm:text-lg text-slate-400 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed">
-              We deliver cutting-edge technology solutions with 120+ micro SaaS products, 
-              80+ advanced AI services, and 80+ comprehensive IT solutions. From cloud optimization 
-              to AI automation, we help businesses scale efficiently and securely.
+            <p className="text-lg text-slate-400 mb-12 max-w-3xl mx-auto">
+              We deliver cutting-edge technology solutions with 140+ micro SaaS products, 
+              95+ advanced AI services, and 95+ comprehensive IT solutions. From quantum computing 
+              to AI automation, we help businesses scale efficiently and securely into the future.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-8 sm:mb-12" role="group" aria-label="Main navigation actions">
@@ -99,18 +96,18 @@ export default function Home(): any {
               </Link>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 text-center" role="group" aria-label="Service statistics">
-              <div className="p-4 sm:p-6 bg-slate-900/60 rounded-lg border border-white/10 hover:border-blue-500/40 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20" role="article" aria-labelledby="micro-saas-count">
-                <h3 id="micro-saas-count" className="text-xl sm:text-2xl font-bold text-blue-400 mb-2 animate-pulse">120+</h3>
-                <p className="text-sm sm:text-base text-slate-300">Micro SaaS Products</p>
+            <div className="grid md:grid-cols-3 gap-6 text-center">
+              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
+                <h3 className="text-2xl font-bold text-blue-400 mb-2">140+</h3>
+                <p className="text-slate-300">Micro SaaS Products</p>
               </div>
-              <div className="p-4 sm:p-6 bg-slate-900/60 rounded-lg border border-white/10 hover:border-purple-500/40 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20" role="article" aria-labelledby="ai-services-count">
-                <h3 id="ai-services-count" className="text-xl sm:text-2xl font-bold text-purple-400 mb-2 animate-pulse">80+</h3>
-                <p className="text-sm sm:text-base text-slate-300">AI Services</p>
+              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
+                <h3 className="text-2xl font-bold text-purple-400 mb-2">95+</h3>
+                <p className="text-slate-300">AI Services</p>
               </div>
-              <div className="p-4 sm:p-6 bg-slate-900/60 rounded-lg border border-white/10 hover:border-green-500/40 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-500/20" role="article" aria-labelledby="it-solutions-count">
-                <h3 id="it-solutions-count" className="text-xl sm:text-2xl font-bold text-green-400 mb-2 animate-pulse">80+</h3>
-                <p className="text-sm sm:text-base text-slate-300">IT Solutions</p>
+              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
+                <h3 className="text-2xl font-bold text-green-400 mb-2">95+</h3>
+                <p className="text-slate-300">IT Solutions</p>
               </div>
             </div>
           </div>
