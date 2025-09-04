@@ -13,17 +13,11 @@ interface State {
 class ErrorBoundary extends Component<Props, State> {
   public state: State = {
     hasError: false
-  }
+  };
   public static getDerivedStateFromError(error: Error): State {
-<<<<<<< HEAD
     return { hasError: true, error };
   }
-
-=======
-    return { hasError: true, error }
-  }
   
->>>>>>> 6e2972c748c24164ca3bd0b0a8c10c476a626932
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error:', error, errorInfo);
   }
