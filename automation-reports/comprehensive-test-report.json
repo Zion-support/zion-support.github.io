@@ -1,0 +1,175 @@
+{
+  "timestamp": "2025-09-04T02:10:32.217Z",
+  "tests": [
+    {
+      "name": "Production Build Test",
+      "status": "failed",
+      "duration": 3492,
+      "details": {
+        "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nFailed to compile.\n\n./components/ContactForm.tsx\nError:   \u001b[31mx\u001b[0m 'import', and 'export' cannot be used outside of module code\n     ,-[\u001b[36;1;4m/workspace/components/ContactForm.tsx\u001b[0m:197:1]\n \u001b[2m194\u001b[0m |     </form>\n \u001b[2m195\u001b[0m |   );\n \u001b[2m196\u001b[0m | }\n \u001b[2m197\u001b[0m | export default ContactForm;\n     : \u001b[35;1m^^^^^^\u001b[0m\n     `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./components/ContactForm.tsx\n./pages/contact.tsx\n\n./pages/_app.tsx\nError:   \u001b[31mx\u001b[0m Expected '</', got 'onClick'\n    ,-[\u001b[36;1;4m/workspace/pages/_app.tsx\u001b[0m:55:1]\n \u001b[2m52\u001b[0m |             display: 'none',\n \u001b[2m53\u001b[0m |             '@media (max-width: 768px)': { display: 'block' } as any\n \u001b[2m54\u001b[0m |           }\n \u001b[2m55\u001b[0m |           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}\n    : \u001b[35;1m          ^^^^^^^\u001b[0m\n \u001b[2m56\u001b[0m |           aria-label=\"Toggle mobile menu\"\n \u001b[2m57\u001b[0m |           aria-expanded={mobileMenuOpen}\n \u001b[2m58\u001b[0m |         >\n    `----\n\nCaused by:\n    Syntax Error\n\n./pages/index.tsx\nError:   \u001b[31mx\u001b[0m Expression expected\n    ,-[\u001b[36;1;4m/workspace/pages/index.tsx\u001b[0m:60:1]\n \u001b[2m57\u001b[0m |               \"sameAs\": [contact.site]\n \u001b[2m58\u001b[0m |             })\n \u001b[2m59\u001b[0m |           }\n \u001b[2m60\u001b[0m |         />\n    : \u001b[35;1m         ^\u001b[0m\n \u001b[2m61\u001b[0m |       </Head>\n \u001b[2m62\u001b[0m |       \n \u001b[2m63\u001b[0m |       <main className=\"min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white\">\n    `----\n  \u001b[31mx\u001b[0m Expression expected\n    ,-[\u001b[36;1;4m/workspace/pages/index.tsx\u001b[0m:61:1]\n \u001b[2m58\u001b[0m |             })\n \u001b[2m59\u001b[0m |           }\n \u001b[2m60\u001b[0m |         />\n \u001b[2m61\u001b[0m |       </Head>\n    : \u001b[35;1m      ^\u001b[0m\n \u001b[2m62\u001b[0m |       \n \u001b[2m63\u001b[0m |       <main className=\"min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white\">\n \u001b[2m64\u001b[0m |         {/* Hero Section */}\n    `----\n  \u001b[31mx\u001b[0m Unterminated regexp literal\n    ,-[\u001b[36;1;4m/workspace/pages/index.tsx\u001b[0m:61:1]\n \u001b[2m58\u001b[0m |             })\n \u001b[2m59\u001b[0m |           }\n \u001b[2m60\u001b[0m |         />\n \u001b[2m61\u001b[0m |       </Head>\n    : \u001b[35;1m       ^^^^^^\u001b[0m\n \u001b[2m62\u001b[0m |       \n \u001b[2m63\u001b[0m |       <main className=\"min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white\">\n \u001b[2m64\u001b[0m |         {/* Hero Section */}\n    `----\n  \u001b[31mx\u001b[0m Expression expected\n    ,-[\u001b[36;1;4m/workspace/pages/index.tsx\u001b[0m:61:1]\n \u001b[2m58\u001b[0m |             })\n \u001b[2m59\u001b[0m |           }\n \u001b[2m60\u001b[0m |         />\n \u001b[2m61\u001b[0m |       </Head>\n    : \u001b[35;1m        ^^^^^\u001b[0m\n \u001b[2m62\u001b[0m |       \n \u001b[2m63\u001b[0m |       <main className=\"min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white\">\n \u001b[2m64\u001b[0m |         {/* Hero Section */}\n    `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/index.tsx\n\n\n> Build failed because of webpack errors\n",
+        "output": "\n> ziontechgroup.com@0.1.0 prebuild\n> echo \"Starting build...\"\n\nStarting build...\n\n> ziontechgroup.com@0.1.0 build\n> next build\n\n   ▲ Next.js 15.5.2\n   - Experiments (use with caution):\n     ✓ optimizeCss\n     ✓ scrollRestoration\n     · optimizePackageImports\n\n   Skipping validation of types\n   Skipping linting\n   Creating an optimized production build ...\n"
+      },
+      "timestamp": "2025-09-04T02:10:35.710Z"
+    },
+    {
+      "name": "TypeScript Type Check",
+      "status": "failed",
+      "duration": 984,
+      "details": {
+        "error": "Command failed: npx tsc --noEmit\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n",
+        "output": "components/ContactForm.tsx(197,28): error TS1005: '}' expected.\ncomponents/ErrorBoundary.tsx(19,3): error TS1128: Declaration or statement expected.\ncomponents/ErrorBoundary.tsx(68,1): error TS1434: Unexpected keyword or identifier.\ncomponents/ErrorBoundary.tsx(68,8): error TS1434: Unexpected keyword or identifier.\ncomponents/ErrorBoundary.tsx(68,30): error TS1005: '}' expected.\ncomponents/PerformanceMonitor.tsx(13,8): error TS1128: Declaration or statement expected.\ncomponents/PerformanceMonito"
+      },
+      "timestamp": "2025-09-04T02:10:36.694Z"
+    },
+    {
+      "name": "ESLint Linting",
+      "status": "failed",
+      "duration": 1274,
+      "details": {
+        "error": "Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n",
+        "output": "\n> ziontechgroup.com@0.1.0 lint\n> eslint components pages --no-ignore\n\n\n/workspace/components/ContactForm.tsx\n  197:27  error  Parsing error: '}' expected\n\n/workspace/components/ErrorBoundary.tsx\n  19:2  error  Parsing error: Declaration or statement expected\n\n/workspace/components/LoadingOptimized.tsx\n  4:13  error  'React' is not defined  no-undef\n  5:14  error  'React' is not defined  no-undef\n\n/workspace/components/PerformanceMonitor.tsx\n  13:7  error  Parsing error: Declaration or statement"
+      },
+      "timestamp": "2025-09-04T02:10:37.968Z"
+    },
+    {
+      "name": "Security Audit",
+      "status": "passed",
+      "duration": 29,
+      "details": {
+        "output": "🔒 Starting security audit...\n\n🔒 Security Audit Results:\n\n⚠️  Warnings (1):\n   - pages/index.tsx: Use of innerHTML - potential XSS risk\n\n📄 Security audit report saved to security-audit-report.json\n"
+      },
+      "timestamp": "2025-09-04T02:10:37.997Z"
+    },
+    {
+      "name": "Performance Optimization Check",
+      "status": "passed",
+      "duration": 29,
+      "details": {
+        "output": "⚡ Starting Performance Optimizer...\n✅ Performance Optimizer completed\n📊 Optimizations found: 4\n💡 Recommendations: 8\n📄 Report saved to: automation-reports/performance-optimizer-report.json\n\n📈 Recommendations by Priority:\n   🔴 High: 2\n   🟡 Medium: 5\n   🟢 Low: 1\n\n✅ Performance optimization analysis completed\n"
+      },
+      "timestamp": "2025-09-04T02:10:38.026Z"
+    },
+    {
+      "name": "System Health Check",
+      "status": "passed",
+      "duration": 81,
+      "details": {
+        "output": "🏥 Starting Health Check...\n✅ Health Check completed\n📊 Overall Status: HEALTHY\n📋 Checks performed: 14\n📄 Report saved to: automation-reports/health-check-report.json\n\n📈 Summary:\n   ✅ Passed: 14\n   ⚠️  Warnings: 0\n   ❌ Errors: 0\n\n✅ Health check passed\n"
+      },
+      "timestamp": "2025-09-04T02:10:38.108Z"
+    },
+    {
+      "name": "Dependency Security Audit",
+      "status": "failed",
+      "duration": 638,
+      "details": {
+        "error": "Command failed: npm audit --audit-level moderate\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n",
+        "output": "# npm audit report\n\nesbuild  <=0.24.2\nSeverity: moderate\nesbuild enables any website to send any requests to the development server and read the response - https://github.com/advisories/GHSA-67mh-4wv8-2f99\nfix available via `npm audit fix --force`\nWill install vite@7.1.4, which is a breaking change\nnode_modules/esbuild\n  vite  0.11.0 - 6.1.6\n  Depends on vulnerable versions of esbuild\n  node_modules/vite\n\n2 moderate severity vulnerabilities\n\nTo address all issues (including breaking changes), ru"
+      },
+      "timestamp": "2025-09-04T02:10:38.746Z"
+    },
+    {
+      "name": "Bundle Size Analysis",
+      "status": "passed",
+      "duration": 4212,
+      "details": {
+        "output": "\n> ziontechgroup.com@0.1.0 prebuild\n> echo \"Starting build...\"\n\nStarting build...\n\n> ziontechgroup.com@0.1.0 build\n> next build\n\n   ▲ Next.js 15.5.2\n   - Experiments (use with caution):\n     ✓ optimizeCss\n     ✓ scrollRestoration\n     · optimizePackageImports\n\n   Skipping validation of types\n   Skipping linting\n   Creating an optimized production build ...\n"
+      },
+      "timestamp": "2025-09-04T02:10:42.958Z"
+    },
+    {
+      "name": "Accessibility Audit",
+      "status": "skipped",
+      "duration": 0,
+      "details": {
+        "reason": "axe-core not available"
+      },
+      "timestamp": "2025-09-04T02:10:43.418Z"
+    },
+    {
+      "name": "Link Validation",
+      "status": "failed",
+      "duration": 726,
+      "details": {
+        "error": "Command failed: npx linkinator http://localhost:3000 --recurse\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n🏊‍♂️ crawling http://localhost:3000\n[0] http://localhost:3000/\n\n  [0] http://localhost:3000/\nERROR: Detected 1 broken links. Scanned 1 links in 0.012 seconds.\n",
+        "output": null
+      },
+      "timestamp": "2025-09-04T02:10:44.864Z"
+    },
+    {
+      "name": "Lighthouse Performance Audit",
+      "status": "failed",
+      "duration": 1229,
+      "details": {
+        "error": "Command failed: npx lighthouse http://localhost:3000 --output=json --output-path=./lighthouse-report.json\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nRuntime error encountered: The CHROME_PATH environment variable must be set to a Chrome/Chromium executable no older than Chrome stable.\nError\n    at new LauncherError (file:///home/ubuntu/.npm/_npx/0f94ee7615faf582/node_modules/chrome-launcher/dist/utils.js:22:22)\n    at new ChromePathNotSetError (file:///home/ubuntu/.npm/_npx/0f94ee7615faf582/node_modules/chrome-launcher/dist/utils.js:28:9)\n    at Module.linux (file:///home/ubuntu/.npm/_npx/0f94ee7615faf582/node_modules/chrome-launcher/dist/chrome-finder.js:124:15)\n    at Launcher.getFirstInstallation (file:///home/ubuntu/.npm/_npx/0f94ee7615faf582/node_modules/chrome-launcher/dist/chrome-launcher.js:135:43)\n    at Launcher.launch (file:///home/ubuntu/.npm/_npx/0f94ee7615faf582/node_modules/chrome-launcher/dist/chrome-launcher.js:203:43)\n    at Module.launch (file:///home/ubuntu/.npm/_npx/0f94ee7615faf582/node_modules/chrome-launcher/dist/chrome-launcher.js:33:20)\n    at getDebuggableChrome (file:///home/ubuntu/.npm/_npx/0f94ee7615faf582/node_modules/lighthouse/cli/run.js:85:25)\n    at runLighthouse (file:///home/ubuntu/.npm/_npx/0f94ee7615faf582/node_modules/lighthouse/cli/run.js:204:30)\n    at begin (file:///home/ubuntu/.npm/_npx/0f94ee7615faf582/node_modules/lighthouse/cli/bin.js:129:10)\n    at async file:///home/ubuntu/.npm/_npx/0f94ee7615faf582/node_modules/lighthouse/cli/index.js:10:1\n",
+        "output": null
+      },
+      "timestamp": "2025-09-04T02:10:47.280Z"
+    },
+    {
+      "name": "Code Coverage Analysis",
+      "status": "failed",
+      "duration": 3267,
+      "details": {
+        "error": "spawnSync /bin/sh ENOBUFS",
+        "output": "\n> ziontechgroup.com@0.1.0 test:coverage\n> jest --coverage\n\n"
+      },
+      "timestamp": "2025-09-04T02:10:50.547Z"
+    },
+    {
+      "name": "Unit Tests",
+      "status": "failed",
+      "duration": 947,
+      "details": {
+        "error": "Command failed: npx jest --config jest.config.temp.json\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n",
+        "output": "jest-haste-map: Haste module naming collision: ziontechgroup.com\n  The following files share their name; please adjust your hasteImpl:\n    * <rootDir>/package.json\n    * <rootDir>/deployment/package.json\n\nNo tests found, exiting with code 1\nRun with `--passWithNoTests` to exit with code 0\nIn /workspace\n  3571 files checked.\n  testMatch: **/__tests__/**/*.(js|jsx|ts|tsx), **/*.(test|spec).(js|jsx|ts|tsx) - 368 matches\n  testPathIgnorePatterns: /node_modules/, /src.corrupted/, /components.corrupte"
+      },
+      "timestamp": "2025-09-04T02:10:51.497Z"
+    },
+    {
+      "name": "Integration Tests",
+      "status": "failed",
+      "duration": 82,
+      "details": {
+        "error": "Command failed: npm run test:integration\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error Missing script: \"test:integration\"\nnpm error\nnpm error To see a list of scripts, run:\nnpm error   npm run\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-04T02_10_51_535Z-debug-0.log\n",
+        "output": null
+      },
+      "timestamp": "2025-09-04T02:10:51.579Z"
+    },
+    {
+      "name": "End-to-End Tests",
+      "status": "failed",
+      "duration": 80,
+      "details": {
+        "error": "Command failed: npm run test:e2e\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error Missing script: \"test:e2e\"\nnpm error\nnpm error To see a list of scripts, run:\nnpm error   npm run\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-04T02_10_51_616Z-debug-0.log\n",
+        "output": null
+      },
+      "timestamp": "2025-09-04T02:10:51.659Z"
+    }
+  ],
+  "results": {
+    "passed": 4,
+    "failed": 10,
+    "skipped": 1,
+    "total": 15
+  },
+  "coverage": {
+    "testCoverage": 26.666666666666668,
+    "criticalTestsPassed": 1,
+    "totalCriticalTests": 3
+  },
+  "performance": {
+    "averageTestDuration": 1138,
+    "longestTest": {
+      "name": "Bundle Size Analysis",
+      "status": "passed",
+      "duration": 4212,
+      "details": {
+        "output": "\n> ziontechgroup.com@0.1.0 prebuild\n> echo \"Starting build...\"\n\nStarting build...\n\n> ziontechgroup.com@0.1.0 build\n> next build\n\n   ▲ Next.js 15.5.2\n   - Experiments (use with caution):\n     ✓ optimizeCss\n     ✓ scrollRestoration\n     · optimizePackageImports\n\n   Skipping validation of types\n   Skipping linting\n   Creating an optimized production build ...\n"
+      },
+      "timestamp": "2025-09-04T02:10:42.958Z"
+    },
+    "totalDuration": 17070
+  },
+  "overall": "failed"
+}

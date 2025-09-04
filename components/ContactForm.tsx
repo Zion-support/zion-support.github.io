@@ -52,8 +52,6 @@ const ContactForm: React.FC = () => {
     } finally {
       setIsSubmitting(false);
     }
-  };
-
   return (
     <form onSubmit={handleSubmit} className="space-y-6" aria-label="Contact form">
       <div className="grid md:grid-cols-2 gap-6">
@@ -190,6 +188,5 @@ const ContactForm: React.FC = () => {
       </button>
     </form>
   );
-};
-
+}
 export default ContactForm;
