@@ -124,7 +124,8 @@ const FloatingActionButton = React.memo(() => {
                   >
                     <HelpCircle className="h-5 w-5" />
                   </motion.button>
-                </motion.div>) }
+                </motion.div>
+              )}
             </AnimatePresence>
 
             {/* Main button */}
