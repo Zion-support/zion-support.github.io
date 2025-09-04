@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Brain, Zap, Shield, Eye, Mic, TrendingUp, Database, FileText, Mail, Code, Cog, Search, Users } from 'lucide-react';
+import { Brain, Zap, Shield, Eye, Mic, TrendingUp, Database, FileText, Code, Cog, Search, Users } from 'lucide-react';
 
 export default function AIServices() {
   const contact = {
@@ -864,102 +864,6 @@ export default function AIServices() {
     },
     {
       icon: Brain,
-      name: 'AI-Powered Drug Discovery Platform',
-      description: 'Advanced AI platform for pharmaceutical research, drug discovery, and molecular analysis using deep learning.',
-      features: [
-        'Molecular structure analysis and prediction',
-        'Drug-target interaction modeling',
-        'Clinical trial optimization',
-        'Side effect prediction and mitigation',
-        'Personalized medicine recommendations'
-      ],
-      pricing: '$2,999 – $9,999/month',
-      timeline: '4–6 weeks',
-      benefits: [
-        'Accelerated drug discovery process',
-        'Reduced research and development costs',
-        'Improved success rates in clinical trials',
-        'Enhanced drug safety profiles'
-      ],
-      category: 'Healthcare'
-    },
-    {
-      icon: Eye,
-      name: 'AI Computer Vision Platform',
-      description: 'Advanced computer vision solutions for object detection, image recognition, and visual analytics.',
-      features: [
-        'Real-time object detection and tracking',
-        'Facial recognition and analysis',
-        'Quality control and defect detection',
-        'Automated image classification',
-        'Video analytics and monitoring'
-      ],
-      pricing: '$1,999 – $7,999/month',
-      timeline: '3–5 weeks',
-      benefits: [
-        'Improved accuracy in visual tasks',
-        'Reduced manual inspection costs',
-        'Enhanced security and monitoring',
-        'Automated quality assurance'
-      ],
-      category: 'Computer Vision'
-    },
-    {
-      icon: TrendingUp,
-      name: 'AI Predictive Analytics Platform',
-      description: 'Advanced predictive analytics platform that uses machine learning to forecast trends, behaviors, and outcomes.',
-      features: [
-        'Time series forecasting and analysis',
-        'Customer behavior prediction',
-        'Market trend analysis',
-        'Risk assessment and modeling',
-        'Real-time predictive insights'
-      ],
-      pricing: '$2,499 – $8,999/month',
-      timeline: '4–6 weeks',
-      benefits: [
-        'Improved decision-making accuracy',
-        'Reduced business risks',
-        'Enhanced strategic planning',
-        'Competitive market advantage'
-      ],
-      category: 'Analytics'
-    },
-    {
-      icon: Mic,
-      name: 'Service Name',
-      description: 'Service description placeholder.',
-      features: [
-        'Feature 1',
-        'Feature 2',
-        'Feature 3'
-      ],
-      pricing: '$999 – $4,999/month',
-      timeline: '2–4 weeks',
-      benefits: [
-        'Benefit 1',
-        'Benefit 2',
-        'Benefit 3'
-      ],
-      category: 'General'
-    },
-    {
-      icon: Database,
-      name: 'Service Name',
-      description: 'Service description placeholder.',
-      features: [
-        'Feature 1',
-        'Feature 2',
-        'Feature 3'
-      ],
-      pricing: '$999 – $4,999/month',
-      timeline: '2–4 weeks',
-      benefits: [
-        'Benefit 1',
-        'Benefit 2',
-        'Benefit 3'
-      ],
-      category: 'General'
     }
   ];
 
@@ -988,7 +892,7 @@ export default function AIServices() {
 
       <main className="max-w-7xl mx-auto px-4 pb-24">
         <div className="grid gap-8">
-          {aiServices.map((service, index) => (
+          {aiServices.filter(service => service && service.name).map((service, index) => (
             <div key={index} className="rounded-xl border border-white/10 bg-slate-900/60 p-8 hover:border-blue-500/40 transition-colors">
               <div className="flex items-start gap-4 mb-6">
                 <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -1004,7 +908,7 @@ export default function AIServices() {
                 <div>
                   <h3 className="text-lg font-semibold mb-3 text-blue-400">Key Features</h3>
                   <ul className="space-y-2 text-slate-300">
-                    {service.features.map((feature, idx) => (
+                    {service.features && service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start gap-2">
                         <span className="text-blue-400 mt-1">•</span>
                         <span>{feature}</span>
@@ -1016,7 +920,7 @@ export default function AIServices() {
                 <div>
                   <h3 className="text-lg font-semibold mb-3 text-green-400">Business Benefits</h3>
                   <ul className="space-y-2 text-slate-300">
-                    {service.benefits.map((benefit, idx) => (
+                    {service.benefits && service.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-start gap-2">
                         <span className="text-green-400 mt-1">✓</span>
                         <span>{benefit}</span>

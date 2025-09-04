@@ -1067,43 +1067,19 @@ export default function ITServices() {
     },
     {
       icon: Database,
-      name: 'Advanced Database Management',
-      description: 'Comprehensive database solutions including optimization, migration, and performance tuning.',
+      name: 'Service Name',
+      description: 'Service description placeholder.',
       features: [
-        'Database performance optimization',
-        'Data migration and consolidation',
-        'Backup and disaster recovery solutions',
-        'Database security and compliance',
-        'Real-time monitoring and alerting'
+        'Feature 1',
+        'Feature 2',
+        'Feature 3'
       ],
-      pricing: '$2,999 – $9,999/month',
-      timeline: '3–5 weeks',
+      pricing: '$999 – $4,999/month',
+      timeline: '2–4 weeks',
       benefits: [
-        'Improved database performance',
-        'Enhanced data security',
-        'Reduced downtime and data loss',
-        'Scalable and reliable data infrastructure'
-      ],
-      category: 'Database Management'
-    },
-    {
-      icon: Brain,
-      name: 'AI Infrastructure Management',
-      description: 'Comprehensive AI infrastructure solutions including GPU clusters, model deployment, and performance optimization.',
-      features: [
-        'GPU cluster setup and management',
-        'AI model deployment and scaling',
-        'Performance monitoring and optimization',
-        'Resource allocation and load balancing',
-        'AI workflow automation'
-      ],
-      pricing: '$4,999 – $15,999/month',
-      timeline: '5–7 weeks',
-      benefits: [
-        'Optimized AI model performance',
-        'Reduced infrastructure costs',
-        'Scalable AI solutions',
-        'Improved development efficiency'
+        'Benefit 1',
+        'Benefit 2',
+        'Benefit 3'
       ],
       category: 'AI Infrastructure'
     },
@@ -1129,7 +1105,7 @@ export default function ITServices() {
     }
   ];
 
-  const categories = [...new Set(itServices.map(service => service.category))];
+  const categories = [...new Set(itServices.filter(service => service && service.category).map(service => service.category))];
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -1172,7 +1148,7 @@ export default function ITServices() {
 
         {/* Services Grid */}
         <div className="grid gap-8">
-          {itServices.map((service, index) => (
+          {itServices.filter(service => service && service.name).map((service, index) => (
             <div key={index} className="rounded-xl border border-white/10 bg-slate-900/60 p-8 hover:border-blue-500/40 transition-colors">
               <div className="flex items-start gap-4 mb-6">
                 <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -1193,7 +1169,7 @@ export default function ITServices() {
                 <div>
                   <h3 className="text-lg font-semibold mb-3 text-blue-400">Key Features</h3>
                   <ul className="space-y-2 text-slate-300">
-                    {service.features.map((feature, idx) => (
+                    {service.features && service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start gap-2">
                         <span className="text-blue-400 mt-1">•</span>
                         <span>{feature}</span>
@@ -1205,7 +1181,7 @@ export default function ITServices() {
                 <div>
                   <h3 className="text-lg font-semibold mb-3 text-green-400">Business Benefits</h3>
                   <ul className="space-y-2 text-slate-300">
-                    {service.benefits.map((benefit, idx) => (
+                    {service.benefits && service.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-start gap-2">
                         <span className="text-green-400 mt-1">✓</span>
                         <span>{benefit}</span>
