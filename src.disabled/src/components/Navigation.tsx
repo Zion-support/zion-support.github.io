@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Brain, Menu } from 'lucide-react';
+import { Brain, Menu, ChevronDown, X, Phone, Mail, MapPin } from 'lucide-react';
 
 export default function Navigation() {;
   const [open, setOpen] = useState(false);
