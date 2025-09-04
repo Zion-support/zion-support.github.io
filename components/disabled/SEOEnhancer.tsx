@@ -4,7 +4,7 @@ import React from "react";
 interface SEOEnhancerProps {
   title?: string;
   description?: string;
-  keywords?: string;
+  keywords?: string[];
   ogImage?: string;
   url?: string;
   type?: string;

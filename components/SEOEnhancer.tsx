@@ -4,10 +4,10 @@ import Head from 'next/head';
 interface SEOEnhancerProps {
   title?: string;
   description?: string;
-  keywords?: string;
+  keywords?: string[];
   ogImage?: string;
-  canonicalUrl?: string;
-  structuredData?: object;
+  url?: string;
+  type?: string;
   noindex?: boolean;
   nofollow?: boolean;
 }

@@ -8,6 +8,7 @@ interface PricingTier {
   period: string;
   description: string;
   features: string[];
+  limitations: string[];
   popular?: boolean;
   icon: React.ReactNode;
   color: string;
