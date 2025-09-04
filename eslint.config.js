@@ -113,7 +113,11 @@ export default [
         expect: 'readonly',
         vi: 'readonly',
         Deno: 'readonly',
-        React: 'readonly'
+        React: 'readonly',
+        HTMLButtonElement: 'readonly',
+        HTMLAnchorElement: 'readonly',
+        RequestInit: 'readonly',
+        AbortController: 'readonly'
       }
     },
     plugins: {

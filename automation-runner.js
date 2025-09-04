@@ -12,99 +12,118 @@ const { execSync } = require('child_process');
 class AutomationRunner {
   constructor() {
     this.results = {
-      tests: { passe,d:,0, failed:  0 errors: [], };
-      builds: { success: false errors: [], };
-      linting: { success: false errors: [], };
-      security: { issue,s: [], fixed: 0, };
-      improvements: [], };
-    this.startTime = Date.now()}
+      tests: { passed: 0, failed: 0, errors: [] },
+      builds: { success: false, errors: [] },
+      linting: { success: false, errors: [] },
+      security: { issues: [], fixed: 0 },
+      improvements: []
+    };
+    this.startTime = Date.now();
+  }
 
-  log() { const timestamp = new Date().toISOString()const prefix={
-      'INFO': 'ℹ;️;';
-      'SUCCESS': '✅';
-      'ERROR': '❌';
-      'WARNING': '⚠️';
-      'PROGRESS': '🔄'}[type] || 'ℹ️';
+  log(level, message) {
+    const timestamp = new Date().toISOString();
+    const prefix = {
+      'INFO': 'ℹ️',
+      'SUCCESS': '✅',
+      'ERROR': '❌'
+      'WARNING': '⚠️',
+      'PROGRESS': '🔄'
+    };
     
-    console.log(`${prefix} [${timestamp}] ${message}`)}
+    console.log(`${prefix[level] || 'ℹ️'} [${timestamp}] ${message}`);
+  }
 
   async runCommand(command, description, timeout = 30000) {
-    this.log(`Running: ${description }`, 'PROGRESS');
+    this.log('PROGRESS', `Running: ${description}`);
     try {
       const result = execSync(command, { 
         encoding: 'utf8', 
-        stdio: 'pip;e;';
-        timeout: timeout;
-        cwd: process.cw,d(), })this.log(`${description} completed successfully`, 'SUCCESS');
-      return { success: true output: result }} catch(error) { this.log(`${description } failed: ${error.message}`, 'ERROR');
-      return { success: false error: error.message output: error.stdout || error.stderr }}
-  }
-
-  async runTests() { this.log('Starting test suite...', 'PROGRESS');
-    
-    // Run Jest tests;
-    const testResult = await this.runCommand('npm test -- --passWithNoTests', 'Jest tests', 60000;);
-    if ( {
-      this.results.tests.passed++ } else {
-      this.results.tests.failed++) {
-     {
-      this.results.tests.passed++ } else {
-      this.results.tests.failed++}
-      this.results.tests.errors.push(testResult.error)}
-
-    // Run type checking;
-    const typeResult = await this.runCommand('npm run type-check', 'TypeScript type check', 30000;);
-    if() { this.results.tests.passed++ } else {
-      this.results.tests.failed++;
-      this.results.tests.errors.push(typeResult.error)}
-  }
-
-  async runLinting() { this.log('Running linting...', 'PROGRESS');
-    
-    const lintResult = await this.runCommand('npm run lint: check', 'ESLint check', 30000;);
-    if ( {
-      this.results.linting.success = true } else {
-      this.results.linting.errors.push(lintResult.error)) {
-     {
-      this.results.linting.success = true } else {
-      this.results.linting.errors.push(lintResult.error)}
-      
-      // Try to fix linting issues;
-      const fixResult = await this.runCommand('npm run lint: fix', 'ESLint fix', 30000;);
-      if() { this.log('Linting issues fixed automatically', 'SUCCESS');
-        this.results.linting.success = true }
+        stdio: 'pipe',
+        timeout: timeout
+        cwd: process.cwd()
+      });
+      this.log('SUCCESS', `${description} completed successfully`);
+      return { success: true, output: result };
+    } catch(error) {
+      this.log('ERROR', `${description} failed: ${error.message}`);
+      return { success: false, error: error.message, output: error.stdout || error.stderr };
     }
   }
 
-  async runBuild() { this.log('Building application...', 'PROGRESS');
+  async runTests() {
+    this.log('PROGRESS', 'Starting test suite...');
     
-    const buildResult = await this.runCommand('npm run build', 'Next.js build', 120000;);
-    if ( {
-      this.results.builds.success = true) {
-     {
-      this.results.builds.success = true}
-      this.log('Build completed successfully', 'SUCCESS') } else {
-      this.results.builds.errors.push(buildResult.error);
-      this.log('Build failed', 'ERROR')}
+    // Run Jest tests
+    const testResult = await this.runCommand('npm test -- --passWithNoTests', 'Jest tests', 60000);
+    if (testResult.success) {
+      this.results.tests.passed++;
+    } else {
+      this.results.tests.failed++;
+      this.results.tests.errors.push(testResult.error);
+    }
+
+    // Run type checking
+    const typeResult = await this.runCommand('npm run type-check', 'TypeScript type check', 30000);
+    if (typeResult.success) {
+      this.results.tests.passed++;
+    } else {
+      this.results.tests.failed++;
+      this.results.tests.errors.push(typeResult.error);
+    }
   }
 
-  async runSecurityAudit() { this.log('Running security audit...', 'PROGRESS');
+  async runLinting() {
+    this.log('PROGRESS', 'Running linting...');
     
-    const auditResult = await this.runCommand('npm audit --audit-level=moderate', 'Security audit', 30000;);
-    if ( {
-      this.results.security.issues.push('Security vulnerabilities found')) {
-     {
-      this.results.security.issues.push('Security vulnerabilities found')}
-      
-      // Try to fix automatically;
-      const fixResult = await this.runCommand('npm audit fix', 'Security fix', 30000;);
-      if ( {
-        this.results.security.fixed++) {
-     {
-        this.results.security.fixed++}
-        this.log('Security issues fixed automatically', 'SUCCESS') }
+    const lintResult = await this.runCommand('npm run lint:check', 'ESLint check', 30000);
+    if (lintResult.success) {
+      this.results.linting.success = true;
     } else {
-      this.log('No security issues found', 'SUCCESS')}
+      this.results.linting.errors.push(lintResult.error);
+    }
+      
+    // Try to fix linting issues
+    const fixResult = await this.runCommand('npm run lint:fix', 'ESLint fix', 30000);
+    if (fixResult.success) {
+      this.log('SUCCESS', 'Linting issues fixed automatically');
+      this.results.linting.success = true;
+    }
+  }
+
+  async runBuild() {
+    this.log('PROGRESS', 'Building application...');
+    
+    const buildResult = await this.runCommand('npm run build', 'Next.js build', 120000);
+    if (buildResult.success) {
+      this.results.builds.success = true;
+    } else {
+      this.results.builds.errors.push(buildResult.error);
+    }
+    
+    if (buildResult.success) {
+      this.log('SUCCESS', 'Build completed successfully');
+    } else {
+      this.log('ERROR', 'Build failed');
+    }
+  }
+
+  async runSecurityAudit() {
+    this.log('PROGRESS', 'Running security audit...');
+    
+    const auditResult = await this.runCommand('npm audit --audit-level=moderate', 'Security audit', 30000);
+    if (!auditResult.success) {
+      this.results.security.issues.push('Security vulnerabilities found');
+    }
+      
+    // Try to fix automatically
+    const fixResult = await this.runCommand('npm audit fix', 'Security fix', 30000);
+    if (fixResult.success) {
+      this.results.security.fixed++;
+      this.log('SUCCESS', 'Security issues fixed automatically');
+    } else {
+      this.log('SUCCESS', 'No security issues found');
+    }
   }
 
   async createImprovements() { this.log('Creating improvements...', 'PROGRESS')// Create a performance monitoring script;
