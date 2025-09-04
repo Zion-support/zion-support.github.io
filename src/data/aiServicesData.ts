@@ -83,7 +83,8 @@ export const AI_SERVICES: AIService[] = [
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     technicalSpecs: {
       technology: ["OpenAI GPT", "BERT", "Transformers", "React", "Node.js", "WebSocket"],
@@ -148,7 +149,8 @@ export const AI_SERVICES: AIService[] = [
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     technicalSpecs: {
       technology: ["Python", "TensorFlow", "PyTorch", "Scikit-learn", "MLflow", "Kubernetes"],
@@ -213,7 +215,8 @@ export const AI_SERVICES: AIService[] = [
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     technicalSpecs: {
       technology: ["OpenCV", "TensorFlow", "PyTorch", "YOLO", "React", "Node.js"],
@@ -278,7 +281,8 @@ export const AI_SERVICES: AIService[] = [
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     technicalSpecs: {
       technology: ["spaCy", "NLTK", "Transformers", "BERT", "Python", "React"],
@@ -343,7 +347,8 @@ export const AI_SERVICES: AIService[] = [
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     technicalSpecs: {
       technology: ["Python", "R", "Prophet", "ARIMA", "LSTM", "React", "Node.js"],
@@ -408,7 +413,8 @@ export const AI_SERVICES: AIService[] = [
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     technicalSpecs: {
       technology: ["GPT-4", "DALL-E", "Stable Diffusion", "React", "Node.js", "Python"],
@@ -473,7 +479,8 @@ export const AI_SERVICES: AIService[] = [
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     technicalSpecs: {
       technology: ["Python", "RPA tools", "ML models", "Workflow engines", "React", "Node.js"],
@@ -538,7 +545,8 @@ export const AI_SERVICES: AIService[] = [
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     technicalSpecs: {
       technology: ["Python", "TensorFlow", "Apache Spark", "Redis", "React", "Node.js"],
@@ -603,7 +611,8 @@ export const AI_SERVICES: AIService[] = [
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     technicalSpecs: {
       technology: ["Python", "TensorFlow", "XGBoost", "Apache Kafka", "React", "Node.js"],
@@ -668,7 +677,8 @@ export const AI_SERVICES: AIService[] = [
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     technicalSpecs: {
       technology: ["DeepSpeech", "Wav2Vec", "Whisper", "React", "Node.js", "WebRTC"],
@@ -679,5 +689,335 @@ export const AI_SERVICES: AIService[] = [
     },
     competitors: ["Google Speech-to-Text", "Amazon Transcribe", "Microsoft Speech Services", "IBM Watson Speech"],
     marketSize: "$7.5 billion by 2025"
-  };
+  },
+
+  // AI-Powered Predictive Maintenance System
+  {
+    id: "ai-predictive-maintenance-system",
+    title: "AI-Powered Predictive Maintenance System",
+    description: "Intelligent maintenance platform that uses machine learning and IoT sensors to predict equipment failures, optimize maintenance schedules, and reduce downtime costs.",
+    category: "Industrial AI",
+    subcategory: "Predictive Analytics",
+    price: 4500,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Real-time equipment monitoring",
+      "Failure prediction algorithms",
+      "Maintenance scheduling optimization",
+      "IoT sensor integration",
+      "Anomaly detection",
+      "Cost optimization analysis",
+      "Mobile maintenance alerts",
+      "Equipment health dashboards",
+      "Predictive analytics reports",
+      "Integration with CMMS systems"
+    ],
+    benefits: [
+      "Reduce unplanned downtime by 70%",
+      "Lower maintenance costs by 40%",
+      "Extend equipment lifespan by 25%",
+      "Improve operational efficiency",
+      "Prevent catastrophic failures"
+    ],
+    useCases: [
+      "Manufacturing equipment monitoring",
+      "Fleet vehicle maintenance",
+      "Building HVAC systems",
+      "Industrial machinery",
+      "Data center infrastructure"
+    ],
+    targetAudience: [
+      "Manufacturing companies",
+      "Fleet management companies",
+      "Facility managers",
+      "Industrial operations",
+      "Equipment rental companies"
+    ],
+    tags: ["Predictive Analytics", "IoT", "Machine Learning", "Maintenance", "Industrial AI"],
+    estimatedDelivery: "8-12 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$4,500 - $15,000/month",
+    roi: "300-500%",
+    innovationLevel: "Cutting-edge",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    technicalSpecs: {
+      technology: ["TensorFlow", "PyTorch", "IoT protocols", "Time series analysis", "React", "Node.js"],
+      integrations: ["SAP", "Oracle", "Maximo", "Siemens", "Schneider Electric"],
+      apiEndpoints: 300,
+      uptime: "99.95%",
+      security: ["End-to-end encryption", "Secure IoT protocols", "Data privacy", "Access control"]
+    },
+    competitors: ["IBM Maximo", "SAP Predictive Maintenance", "GE Predix", "PTC ThingWorx"],
+    marketSize: "$12.3 billion by 2025"
+  },
+
+  // AI-Powered Financial Risk Assessment Platform
+  {
+    id: "ai-financial-risk-assessment",
+    title: "AI-Powered Financial Risk Assessment Platform",
+    description: "Advanced financial risk analysis platform that uses machine learning to assess credit risk, market risk, and operational risk for financial institutions and businesses.",
+    category: "FinTech AI",
+    subcategory: "Risk Management",
+    price: 3500,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Real-time risk scoring",
+      "Credit risk assessment",
+      "Market risk analysis",
+      "Operational risk monitoring",
+      "Regulatory compliance reporting",
+      "Stress testing scenarios",
+      "Portfolio optimization",
+      "Fraud detection",
+      "Risk visualization dashboards",
+      "Automated alerts and notifications"
+    ],
+    benefits: [
+      "Improve risk assessment accuracy by 85%",
+      "Reduce false positives by 60%",
+      "Faster decision making",
+      "Enhanced regulatory compliance",
+      "Lower financial losses"
+    ],
+    useCases: [
+      "Banking credit decisions",
+      "Insurance underwriting",
+      "Investment portfolio management",
+      "Supply chain risk assessment",
+      "Vendor risk evaluation"
+    ],
+    targetAudience: [
+      "Banks and credit unions",
+      "Insurance companies",
+      "Investment firms",
+      "Fintech companies",
+      "Corporate treasuries"
+    ],
+    tags: ["FinTech", "Risk Management", "Machine Learning", "Financial AI", "Compliance"],
+    estimatedDelivery: "10-14 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$3,500 - $12,000/month",
+    roi: "250-400%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    technicalSpecs: {
+      technology: ["Python", "Scikit-learn", "XGBoost", "TensorFlow", "React", "PostgreSQL"],
+      integrations: ["FICO", "Experian", "Equifax", "TransUnion", "Banking APIs"],
+      apiEndpoints: 250,
+      uptime: "99.9%",
+      security: ["SOC 2 Type II", "PCI DSS", "GDPR", "End-to-end encryption"]
+    },
+    competitors: ["FICO", "SAS Risk Management", "IBM SPSS", "SAP Risk Management"],
+    marketSize: "$8.7 billion by 2025"
+  },
+
+  // AI-Powered Supply Chain Optimization Platform
+  {
+    id: "ai-supply-chain-optimization",
+    title: "AI-Powered Supply Chain Optimization Platform",
+    description: "Intelligent supply chain management platform that uses AI to optimize inventory, predict demand, manage suppliers, and reduce supply chain costs.",
+    category: "Supply Chain AI",
+    subcategory: "Optimization",
+    price: 4000,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Demand forecasting",
+      "Inventory optimization",
+      "Supplier performance analytics",
+      "Route optimization",
+      "Cost reduction analysis",
+      "Risk assessment",
+      "Sustainability tracking",
+      "Real-time monitoring",
+      "Automated procurement",
+      "Supply chain visualization"
+    ],
+    benefits: [
+      "Reduce inventory costs by 30%",
+      "Improve demand accuracy by 65%",
+      "Optimize supplier relationships",
+      "Reduce supply chain risks",
+      "Increase operational efficiency"
+    ],
+    useCases: [
+      "Retail inventory management",
+      "Manufacturing supply chains",
+      "E-commerce fulfillment",
+      "Food and beverage distribution",
+      "Pharmaceutical supply chains"
+    ],
+    targetAudience: [
+      "Retail companies",
+      "Manufacturing firms",
+      "E-commerce businesses",
+      "Logistics companies",
+      "Distribution centers"
+    ],
+    tags: ["Supply Chain", "Optimization", "Demand Forecasting", "Inventory Management", "AI"],
+    estimatedDelivery: "12-16 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$4,000 - $18,000/month",
+    roi: "200-350%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    technicalSpecs: {
+      technology: ["Python", "Apache Spark", "TensorFlow", "React", "MongoDB", "Kubernetes"],
+      integrations: ["SAP", "Oracle", "Salesforce", "WMS systems", "TMS systems"],
+      apiEndpoints: 400,
+      uptime: "99.9%",
+      security: ["Data encryption", "Access control", "Audit trails", "Secure APIs"]
+    },
+    competitors: ["SAP Ariba", "Oracle Supply Chain", "Kinaxis", "Blue Yonder"],
+    marketSize: "$15.2 billion by 2025"
+  },
+
+  // AI-Powered Healthcare Diagnostics Assistant
+  {
+    id: "ai-healthcare-diagnostics-assistant",
+    title: "AI-Powered Healthcare Diagnostics Assistant",
+    description: "Advanced medical AI platform that assists healthcare professionals with diagnostic imaging analysis, symptom assessment, and treatment recommendations.",
+    category: "Healthcare AI",
+    subcategory: "Diagnostics",
+    price: 5500,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Medical image analysis",
+      "Symptom assessment tools",
+      "Treatment recommendations",
+      "Drug interaction checking",
+      "Patient risk stratification",
+      "Clinical decision support",
+      "Electronic health record integration",
+      "Telemedicine capabilities",
+      "Medical literature analysis",
+      "Compliance monitoring"
+    ],
+    benefits: [
+      "Improve diagnostic accuracy by 40%",
+      "Reduce misdiagnosis rates",
+      "Faster treatment decisions",
+      "Enhanced patient outcomes",
+      "Reduced healthcare costs"
+    ],
+    useCases: [
+      "Radiology image analysis",
+      "Primary care diagnostics",
+      "Emergency medicine",
+      "Specialist consultations",
+      "Remote patient monitoring"
+    ],
+    targetAudience: [
+      "Hospitals and clinics",
+      "Radiology practices",
+      "Primary care physicians",
+      "Specialists",
+      "Telemedicine platforms"
+    ],
+    tags: ["Healthcare AI", "Medical Diagnostics", "Image Analysis", "Clinical Decision Support", "Telemedicine"],
+    estimatedDelivery: "16-20 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$5,500 - $25,000/month",
+    roi: "300-500%",
+    innovationLevel: "Cutting-edge",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    technicalSpecs: {
+      technology: ["PyTorch", "TensorFlow", "DICOM", "HL7 FHIR", "React", "Node.js"],
+      integrations: ["Epic", "Cerner", "Allscripts", "PACS systems", "EMR systems"],
+      apiEndpoints: 500,
+      uptime: "99.99%",
+      security: ["HIPAA compliance", "Data encryption", "Access control", "Audit logging"]
+    },
+    competitors: ["IBM Watson Health", "Google DeepMind", "Microsoft Healthcare", "NVIDIA Clara"],
+    marketSize: "$45.2 billion by 2025"
+  },
+
+  // AI-Powered Cybersecurity Threat Intelligence
+  {
+    id: "ai-cybersecurity-threat-intelligence",
+    title: "AI-Powered Cybersecurity Threat Intelligence Platform",
+    description: "Advanced cybersecurity platform that uses AI to detect, analyze, and respond to cyber threats in real-time, providing comprehensive protection for organizations.",
+    category: "Cybersecurity AI",
+    subcategory: "Threat Intelligence",
+    price: 3200,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Real-time threat detection",
+      "Behavioral analysis",
+      "Automated incident response",
+      "Threat hunting capabilities",
+      "Vulnerability assessment",
+      "Security orchestration",
+      "Compliance monitoring",
+      "Threat intelligence feeds",
+      "Security analytics",
+      "Incident forensics"
+    ],
+    benefits: [
+      "Detect threats 90% faster",
+      "Reduce false positives by 70%",
+      "Automated response to incidents",
+      "Enhanced security posture",
+      "Reduced security team workload"
+    ],
+    useCases: [
+      "Enterprise security monitoring",
+      "Cloud security protection",
+      "Network intrusion detection",
+      "Endpoint protection",
+      "Security operations centers"
+    ],
+    targetAudience: [
+      "Large enterprises",
+      "Government agencies",
+      "Financial institutions",
+      "Healthcare organizations",
+      "Critical infrastructure"
+    ],
+    tags: ["Cybersecurity", "Threat Intelligence", "AI Security", "Incident Response", "Compliance"],
+    estimatedDelivery: "10-14 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$3,200 - $15,000/month",
+    roi: "200-400%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    technicalSpecs: {
+      technology: ["Python", "TensorFlow", "Elasticsearch", "Kafka", "React", "Node.js"],
+      integrations: ["SIEM systems", "Firewalls", "EDR solutions", "Cloud platforms", "Threat feeds"],
+      apiEndpoints: 350,
+      uptime: "99.9%",
+      security: ["SOC 2", "ISO 27001", "Data encryption", "Secure communications"]
+    },
+    competitors: ["CrowdStrike", "Palo Alto Networks", "IBM Security", "Microsoft Sentinel"],
+    marketSize: "$22.1 billion by 2025"
+  }
 ];

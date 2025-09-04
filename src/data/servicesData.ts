@@ -83,7 +83,8 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     technicalSpecs: {
       technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],
@@ -148,7 +149,8 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     technicalSpecs: {
       technology: ["Python", "Kubernetes", "Docker", "Terraform", "Prometheus"],
@@ -213,7 +215,8 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     technicalSpecs: {
       technology: ["Post-quantum algorithms", "Hybrid encryption", "Key management", "React", "Node.js"],
@@ -278,7 +281,8 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     technicalSpecs: {
       technology: ["Python", "TensorFlow", "PyTorch", "React", "Node.js", "PostgreSQL"],
@@ -343,7 +347,8 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     technicalSpecs: {
       technology: ["TensorFlow Lite", "ONNX", "Edge TPU", "React", "Node.js", "MongoDB"],
@@ -408,7 +413,8 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     technicalSpecs: {
       technology: ["Ethereum", "Hyperledger", "React", "Node.js", "IPFS"],
@@ -473,7 +479,8 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     technicalSpecs: {
       technology: ["Python", "TensorFlow", "React", "Node.js", "Redis"],
@@ -538,7 +545,8 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     technicalSpecs: {
       technology: ["Qiskit", "Cirq", "PennyLane", "Python", "C++"],
@@ -603,7 +611,8 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     technicalSpecs: {
       technology: ["Python", "TensorFlow", "R", "React", "Node.js", "PostgreSQL"],
@@ -668,7 +677,8 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     technicalSpecs: {
       technology: ["Python", "TensorFlow", "ROS", "React", "Node.js", "MongoDB"],
