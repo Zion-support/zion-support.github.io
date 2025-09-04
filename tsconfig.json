@@ -20,11 +20,8 @@
     "noEmit": true
   },
   "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "scripts/**/*.ts",
-    "automation/**/*.ts",
-    "types/**/*.ts"
+    "src/main.tsx",
+    "src/SafeApp.tsx"
   ],
   "exclude": [
     "node_modules",
