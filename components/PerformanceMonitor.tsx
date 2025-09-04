@@ -35,7 +35,6 @@ const PerformanceMonitor: React.FC = () => {
             }
             sendToAnalytics('LCP', entry.startTime);
           }
-        }
       });
       
       try {
@@ -55,7 +54,6 @@ const PerformanceMonitor: React.FC = () => {
             }
             sendToAnalytics('FID', (entry as any).processingStart - entry.startTime);
           }
-        }
       });
 
       try {
@@ -72,13 +70,7 @@ const PerformanceMonitor: React.FC = () => {
           if (!layoutShiftEntry.hadRecentInput) {
             clsValue += layoutShiftEntry.value || 0;
           }
-        }
-        // Log CLS in development only
-        if (process.env.NODE_ENV === 'development') {
-          // eslint-disable-next-line no-console
-          console.log('CLS:', clsValue);
-        }
-        sendToAnalytics('CLS', clsValue);
+        console.log('CLS:', clsValue);
       });
 
       try {
@@ -91,8 +83,7 @@ const PerformanceMonitor: React.FC = () => {
         observer.disconnect();
         fidObserver.disconnect();
         clsObserver.disconnect();
-      };
-    }
+      }
   }, []);
 
   return null; // This component doesn't render anything

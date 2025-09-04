@@ -1,18 +1,9 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "timestamp": "2025-09-03T20:36:49.970Z",
-  "bundleSize": {
-    ".next": {
-      "size": 0,
-      "sizeMB": "0.00"
-=======
   "timestamp": "2025-09-03T20:00:06.726Z",
   "bundleSize": {
     ".next": {
       "size": 28534499,
       "sizeMB": "27.21"
->>>>>>> 2a05819f8ad7f9ba18431a36ff65088a0d741ce0
     },
     "node_modules": {
       "size": 0,
@@ -21,34 +12,21 @@
 =======
   "timestamp": "2025-09-03T16:54:18.031Z",
   "score": 60,
+=======
+  "timestamp": "2025-09-03T22:18:49.800Z",
+>>>>>>> 6d79891152b (Checkpoint before follow-up message)
   "bundleSize": {
     ".next": {
-      "size": 41612654,
-      "sizeMB": "39.68"
+      "size": 49474164,
+      "sizeMB": "47.18"
     },
     "node_modules": {
-      "size": 819927451,
-      "sizeMB": "781.94"
+      "size": 820676108,
+      "sizeMB": "782.66"
     }
   },
   "fileCounts": {
-    ".tsx": 16,
-    ".ts": 0,
-    ".jsx": 0,
-    ".js": 0,
-    ".css": 2,
-    ".json": 0
-  },
-  "checks": {
-    "buildSize": true,
-    "bundleAnalysis": false,
-    "lighthouseScore": false,
-    "loadTime": true,
-    "memoryUsage": true
->>>>>>> cursor/analyze-improve-and-deploy-application-d144
-  },
-  "fileCounts": {
-    ".tsx": 25,
+    ".tsx": 26,
     ".ts": 0,
     ".jsx": 0,
     ".js": 0,

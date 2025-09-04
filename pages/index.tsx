@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import Head from 'next/head';
+// import Image from 'next/image';
+import { useState, useEffect } from 'react';
 
 export default function Home() {
   const contact = {
@@ -7,7 +9,7 @@ export default function Home() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  };
+  }
   return (
     <>
       <Head>
@@ -48,7 +50,7 @@ export default function Home() {
               },
               "sameAs": [contact.site]
             })
-          }}
+          }
         />
       </Head>
       
