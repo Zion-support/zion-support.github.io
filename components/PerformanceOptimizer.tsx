@@ -20,8 +20,7 @@ export default function PerformanceOptimizer({ children }: PerformanceOptimizerP
         link.href = src;
         document.head.appendChild(link);
       });
-    };
-
+    }
     // Optimize images
     const optimizeImages = () => {
       const images = document.querySelectorAll('img');
@@ -33,8 +32,7 @@ export default function PerformanceOptimizer({ children }: PerformanceOptimizerP
           img.decoding = 'async';
         }
       });
-    };
-
+    }
     // Service Worker registration
     const registerServiceWorker = async () => {
       if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
@@ -44,9 +42,7 @@ export default function PerformanceOptimizer({ children }: PerformanceOptimizerP
         } catch (registrationError) {
           console.log('SW registration failed: ', registrationError);
         }
-      }
-    };
-
+    }
     preloadCriticalResources();
     optimizeImages();
     registerServiceWorker();
@@ -57,8 +53,6 @@ export default function PerformanceOptimizer({ children }: PerformanceOptimizerP
         // Send to analytics
         console.log(metric);
       }
-    };
-
     // Monitor Core Web Vitals
     if (typeof window !== 'undefined') {
       import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {
