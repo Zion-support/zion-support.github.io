@@ -180,7 +180,9 @@
     "optimize:ux": "node scripts/ux-optimizer.cjs",
     "improve:all": "npm run optimize:performance && npm run monitor:health && npm run audit:security && npm run optimize:ux",
     "automation:safe": "bash scripts/run-safe-automations.sh",
-    "ci:smoke": "npm run build && npm run test:smoke"
+    "ci:smoke": "npm run build && npm run test:smoke",
+    "ci:consolidated": "bash scripts/ci-consolidated.sh",
+    "report:aggregate": "node scripts/aggregate-health-security.mjs"
   },
   "pm2": {
     "ecosystem": "ecosystem.maintenance.cjs"
