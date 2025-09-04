@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-03T16:46:24.457Z",
+  "timestamp": "2025-09-03T16:31:19.432Z",
   "files": {
     "components/Breadcrumb.tsx": {
       "path": "components/Breadcrumb.tsx",
@@ -30,30 +30,6 @@
       "lines": 60,
       "issues": [],
       "complexity": 10
-    },
-    "pages/_app.tsx": {
-      "path": "pages/_app.tsx",
-      "lines": 334,
-      "issues": [],
-      "complexity": 1
-    },
-    "components/ThemeToggle.tsx": {
-      "path": "components/ThemeToggle.tsx",
-      "lines": 45,
-      "issues": [],
-      "complexity": 3
-    },
-    "pages/404.tsx": {
-      "path": "pages/404.tsx",
-      "lines": 60,
-      "issues": [
-        {
-          "rule": "Function Length",
-          "value": 1,
-          "message": "Functions should be under 50 lines"
-        }
-      ],
-      "complexity": 1
     },
     "pages/_app.tsx": {
       "path": "pages/_app.tsx",
@@ -88,6 +64,12 @@
     "pages/contact.tsx": {
       "path": "pages/contact.tsx",
       "lines": 166,
+      "issues": [],
+      "complexity": 0
+    },
+    "pages/faq.tsx": {
+      "path": "pages/faq.tsx",
+      "lines": 121,
       "issues": [],
       "complexity": 0
     },
@@ -284,13 +266,9 @@
     }
   },
   "summary": {
-    "totalFiles": 16,
-<<<<<<< HEAD
-    "totalLines": 5773,
-=======
-    "totalLines": 5768,
->>>>>>> origin/main
-    "averageComplexity": "1.06",
+    "totalFiles": 13,
+    "totalLines": 3074,
+    "averageComplexity": "0.00",
     "issues": [
       {
         "file": "pages/_app.tsx",
