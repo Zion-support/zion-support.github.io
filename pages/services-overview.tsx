@@ -159,6 +159,13 @@ export default function ServicesOverview() {
                 >
                   Browse Catalog
                 </Link>
+                <Link
+                  href="/services-extended"
+                  className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-900"
+                  aria-label="View extended services"
+                >
+                  View Extended Services
+                </Link>
               </div>
             </div>
           </div>
