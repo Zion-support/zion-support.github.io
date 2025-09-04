@@ -1,4 +1,3 @@
-import React from "react";
 import { AdminDashboard } from "@/components/enterprise/admin/AdminDashboard";
 import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom";

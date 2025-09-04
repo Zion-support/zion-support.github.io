@@ -284,7 +284,7 @@ class $1 {
 // Run the dashboard;
 if (require.main === module) {
   const dashboard = new AutomationDashboard();
-  dashboard.run().catch(console.error);
+  dashboard.start().catch(console.error);
 }
 ;
 module.exports = AutomationDashboard
