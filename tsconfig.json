@@ -21,7 +21,12 @@
     "baseUrl": ".",
     "allowJs": true,
     "esModuleInterop": true,
-    "noEmit": true
+    "noEmit": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "include": [
     "next-env.d.ts",
@@ -30,16 +35,18 @@
     "src/**/*.tsx",
     "scripts/**/*.ts",
     "automation/**/*.ts",
-    "types/**/*.ts"
+    "types/**/*.ts",
+    "pages/**/*",
+    "components/**/*",
+    "utils/**/*",
+    "**/*.ts",
+    "**/*.tsx"
   ],
   "exclude": [
     "node_modules",
     "dist",
     "data_backup/**",
     "src.corrupted/**",
-    "pages/**",
-    "components/**",
-    "src/**",
     "utils/next-link-shim.tsx",
     "playwright.config.ts",
     "api-backup",
@@ -64,31 +71,12 @@
     "supabase/functions",
     "**/*.backup",
     "**/*.disabled",
-    "src/store/authSlice.tsx",
-    "src/store/cartSlice.ts",
-    "src/store/hooks.ts",
-    "src/store/index.ts",
-    "src/store/wishlistSlice.ts",
-    "src/store/wishlistSlice.tsx",
-    "src/utils/safeStorage.tsx",
-    "src/utils/linkChecker.ts",
-    "src/utils/performance.ts",
-    "src/utils/performanceOptimizer.ts",
-    "src/utils/resourceMonitor.ts",
-    "src/utils/serviceMapper.ts",
-    "src/utils/sitemapGenerator.ts",
-    "src/utils/tokenRewards.ts",
-    "src/types/**/*.ts",
-    "src/pages/**",
-    "src/routes/**",
-    "src/services/**",
-    "src/test/**",
-    "src/types/**",
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
     "**/*.spec.tsx",
     ".next",
-    "out"
+    "out",
+    "dist"
   ]
 }
