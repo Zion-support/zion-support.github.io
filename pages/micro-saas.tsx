@@ -44,7 +44,10 @@ import {
   BookOpen,
   ShoppingCart,
   Home,
-  Database
+  Database,
+  Phone,
+  MapPin,
+  Brain
 } from 'lucide-react';
 
 const microSaaSProducts = [
@@ -397,6 +400,96 @@ const microSaaSProducts = [
     popular: true
   },
   {
+    title: 'Quantum-Safe Encryption Manager',
+    description: 'Next-generation encryption management with quantum-resistant algorithms and automated key rotation.',
+    icon: Lock,
+    features: ['Quantum-Resistant Algorithms', 'Auto Key Rotation', 'Compliance Standards', 'Multi-Cloud Support'],
+    pricing: '$799 - $4,999/month',
+    category: 'Cybersecurity',
+    popular: true
+  },
+  {
+    title: 'Edge AI Inference Platform',
+    description: 'Deploy and manage AI models at the edge with ultra-low latency and offline capabilities.',
+    icon: Cpu,
+    features: ['Edge Deployment', 'Offline Inference', 'Model Optimization', 'Real-time Monitoring'],
+    pricing: '$1,299 - $7,999/month',
+    category: 'Edge Computing',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Code Security Scanner',
+    description: 'Advanced static and dynamic code analysis with AI-powered vulnerability detection and remediation.',
+    icon: Shield,
+    features: ['SAST/DAST Analysis', 'AI Vulnerability Detection', 'Auto Remediation', 'Compliance Checking'],
+    pricing: '$499 - $2,999/month',
+    category: 'DevSecOps',
+    popular: true
+  },
+  {
+    title: 'Real-Time Data Streaming Platform',
+    description: 'High-performance data streaming with real-time analytics and event processing capabilities.',
+    icon: Network,
+    features: ['Real-time Streaming', 'Event Processing', 'Scalable Architecture', 'Monitoring Dashboard'],
+    pricing: '$299 - $1,999/month',
+    category: 'Data Streaming',
+    popular: true
+  },
+  {
+    title: 'AI-Powered API Gateway',
+    description: 'Intelligent API management with AI-driven traffic optimization and security enforcement.',
+    icon: Server,
+    features: ['Traffic Optimization', 'AI Security', 'Rate Limiting', 'Analytics Dashboard'],
+    pricing: '$199 - $1,499/month',
+    category: 'API Management',
+    popular: true
+  },
+  {
+    title: 'Blockchain Identity Verification',
+    description: 'Decentralized identity verification with zero-knowledge proofs and privacy-preserving authentication.',
+    icon: Users,
+    features: ['Zero-Knowledge Proofs', 'Privacy-Preserving', 'Cross-Platform', 'Compliance Ready'],
+    pricing: '$0.50 - $2.00 per verification',
+    category: 'Identity Management',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Voice Cloning Platform',
+    description: 'High-quality voice synthesis and cloning with emotional expression and multi-language support.',
+    icon: Mic,
+    features: ['Voice Cloning', 'Emotional Expression', 'Multi-language', 'Real-time Synthesis'],
+    pricing: '$0.10 - $0.50 per minute',
+    category: 'Voice AI',
+    popular: true
+  },
+  {
+    title: 'Smart Contract Development Suite',
+    description: 'Complete development environment for smart contracts with testing, deployment, and monitoring tools.',
+    icon: Code,
+    features: ['IDE Integration', 'Testing Framework', 'Deployment Tools', 'Monitoring Dashboard'],
+    pricing: '$99 - $599/month',
+    category: 'Blockchain Development',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Threat Intelligence',
+    description: 'Real-time threat intelligence with AI-driven analysis and automated response capabilities.',
+    icon: Eye,
+    features: ['Threat Detection', 'AI Analysis', 'Auto Response', 'Global Intelligence'],
+    pricing: '$999 - $5,999/month',
+    category: 'Cybersecurity',
+    popular: true
+  },
+  {
+    title: 'Quantum Computing Simulator',
+    description: 'Cloud-based quantum computing simulation with algorithm development and optimization tools.',
+    icon: Cpu,
+    features: ['Quantum Simulation', 'Algorithm Development', 'Optimization Tools', 'Educational Resources'],
+    pricing: '$199 - $1,999/month',
+    category: 'Quantum Computing',
+    popular: true
+  },
+  {
     title: 'AI-Powered Personalization Engine',
     description: 'Real-time personalization engine for e-commerce and content platforms.',
     icon: Target,
@@ -421,6 +514,132 @@ const microSaaSProducts = [
     features: ['Emotion Detection', 'Quality Scoring', 'Sentiment Analysis', 'Performance Metrics'],
     pricing: '$199 - $1,299/month',
     category: 'Voice Analytics',
+    popular: true
+  },
+  {
+    title: 'Neural Network Model Marketplace',
+    description: 'Marketplace for buying, selling, and deploying pre-trained AI models with one-click deployment.',
+    icon: Brain,
+    features: ['Model Marketplace', 'One-click Deployment', 'Performance Metrics', 'Revenue Sharing'],
+    pricing: '10-30% commission',
+    category: 'AI Marketplace',
+    popular: true
+  },
+  {
+    title: 'AR/VR Content Creation Platform',
+    description: 'No-code platform for creating immersive AR/VR experiences with AI-powered content generation.',
+    icon: Monitor,
+    features: ['No-code Builder', 'AI Content Generation', 'Multi-platform Export', 'Analytics Dashboard'],
+    pricing: '$199 - $1,999/month',
+    category: 'AR/VR',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Data Labeling Service',
+    description: 'Automated data labeling and annotation with human-in-the-loop quality assurance.',
+    icon: Target,
+    features: ['Auto Labeling', 'Quality Assurance', 'Human Review', 'Multi-format Support'],
+    pricing: '$0.05 - $0.50 per label',
+    category: 'Data Services',
+    popular: true
+  },
+  {
+    title: 'Digital Twin Management Platform',
+    description: 'Create and manage digital twins of physical assets with real-time synchronization and analytics.',
+    icon: Building,
+    features: ['3D Modeling', 'Real-time Sync', 'Predictive Analytics', 'IoT Integration'],
+    pricing: '$499 - $3,999/month',
+    category: 'Digital Twins',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Compliance Monitor',
+    description: 'Automated compliance monitoring across multiple regulations with real-time alerts and reporting.',
+    icon: Shield,
+    features: ['Multi-regulation Support', 'Real-time Monitoring', 'Auto Reporting', 'Risk Assessment'],
+    pricing: '$299 - $2,499/month',
+    category: 'Compliance',
+    popular: true
+  },
+  {
+    title: 'Edge Computing Orchestrator',
+    description: 'Manage and orchestrate edge computing workloads across distributed infrastructure.',
+    icon: Server,
+    features: ['Workload Orchestration', 'Resource Optimization', 'Fault Tolerance', 'Monitoring'],
+    pricing: '$199 - $1,499/month',
+    category: 'Edge Computing',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Test Automation',
+    description: 'Intelligent test automation with self-healing tests and AI-generated test cases.',
+    icon: Code,
+    features: ['Self-healing Tests', 'AI Test Generation', 'Cross-platform Testing', 'Performance Testing'],
+    pricing: '$299 - $1,999/month',
+    category: 'Test Automation',
+    popular: true
+  },
+  {
+    title: 'Blockchain Oracle Network',
+    description: 'Decentralized oracle network providing real-world data to smart contracts.',
+    icon: Network,
+    features: ['Data Feeds', 'Price Oracles', 'Weather Data', 'Custom APIs'],
+    pricing: '$0.01 - $0.10 per request',
+    category: 'Blockchain Infrastructure',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Code Generation',
+    description: 'Generate production-ready code from natural language descriptions and specifications.',
+    icon: Code,
+    features: ['Natural Language Input', 'Multi-language Support', 'Code Review', 'Testing Integration'],
+    pricing: '$99 - $999/month',
+    category: 'Code Generation',
+    popular: true
+  },
+  {
+    title: 'Quantum Machine Learning Platform',
+    description: 'Quantum-enhanced machine learning algorithms for complex optimization problems.',
+    icon: Cpu,
+    features: ['Quantum Algorithms', 'Hybrid Classical-Quantum', 'Optimization Problems', 'Research Tools'],
+    pricing: '$1,999 - $9,999/month',
+    category: 'Quantum ML',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Fraud Prevention',
+    description: 'Real-time fraud detection using advanced machine learning and behavioral analysis.',
+    icon: Shield,
+    features: ['Real-time Detection', 'Behavioral Analysis', 'Risk Scoring', 'Auto Response'],
+    pricing: '$0.10 - $1.00 per transaction',
+    category: 'Fraud Prevention',
+    popular: true
+  },
+  {
+    title: 'Smart City IoT Platform',
+    description: 'Comprehensive IoT platform for smart city infrastructure management and optimization.',
+    icon: Building,
+    features: ['Infrastructure Monitoring', 'Traffic Optimization', 'Energy Management', 'Citizen Services'],
+    pricing: '$2,999 - $19,999/month',
+    category: 'Smart Cities',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Content Moderation',
+    description: 'Advanced content moderation using computer vision and NLP for text, images, and videos.',
+    icon: Eye,
+    features: ['Multi-modal Detection', 'Real-time Processing', 'Custom Rules', 'Human Review'],
+    pricing: '$0.01 - $0.05 per piece',
+    category: 'Content Moderation',
+    popular: true
+  },
+  {
+    title: 'Decentralized Storage Network',
+    description: 'Distributed storage solution with encryption and redundancy across multiple nodes.',
+    icon: Database,
+    features: ['Distributed Storage', 'End-to-end Encryption', 'Redundancy', 'CDN Integration'],
+    pricing: '$0.01 - $0.10 per GB/month',
+    category: 'Storage',
     popular: true
   }
 ];
@@ -831,6 +1050,106 @@ export default function MicroSaaSPage() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Contact Information Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Get Your Free Consultation Today
+            </h2>
+            <p className="text-lg text-gray-600 max-w-4xl mx-auto mb-8">
+              Ready to transform your business with cutting-edge micro SaaS solutions? Our expert team is standing by to help you succeed. 
+              Contact us for a free consultation and custom quote tailored to your specific needs.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <motion.div
+              className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-lg p-6 text-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Phone className="w-8 h-8 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Call Us</h3>
+              <p className="text-gray-600 mb-2">+1 302 464 0950</p>
+              <p className="text-sm text-gray-500">Available 24/7 for urgent support</p>
+            </motion.div>
+
+            <motion.div
+              className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg p-6 text-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Mail className="w-8 h-8 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Email Us</h3>
+              <p className="text-gray-600 mb-2">kleber@ziontechgroup.com</p>
+              <p className="text-sm text-gray-500">Response within 2 hours</p>
+            </motion.div>
+
+            <motion.div
+              className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg p-6 text-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <MapPin className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Visit Us</h3>
+              <p className="text-gray-600 mb-2">364 E Main St STE 1008</p>
+              <p className="text-sm text-gray-500">Middletown, DE 19709</p>
+            </motion.div>
+          </div>
+
+          <motion.div
+            className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white p-8 rounded-lg text-center"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h3 className="text-2xl font-bold mb-4">Why Choose Zion Tech Group?</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+              <div>
+                <h4 className="font-semibold mb-2">🚀 Rapid Development</h4>
+                <p className="text-sm text-purple-100">Launch your SaaS in weeks, not months</p>
+              </div>
+              <div>
+                <h4 className="font-semibold mb-2">🔒 Enterprise Security</h4>
+                <p className="text-sm text-purple-100">Bank-level security and compliance</p>
+              </div>
+              <div>
+                <h4 className="font-semibold mb-2">📈 Scalable Architecture</h4>
+                <p className="text-sm text-purple-100">Grows with your business needs</p>
+              </div>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" className="px-6 py-3 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
+                Get Free Quote
+              </Link>
+              <Link href="/about" className="px-6 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold">
+                Learn More
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </section>
 
