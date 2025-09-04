@@ -63,7 +63,7 @@ export default function Home() {
             <p className="text-xl md:text-2xl text-slate-300 mb-8">
               Innovative Micro SaaS, AI Services & IT Solutions
             </p>
-            <p className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <p className="text-lg text-slate-400 mb-12 max-w-3xl mx-auto">
               We deliver cutting-edge technology solutions with 150+ innovative micro SaaS products, 
               100+ advanced AI services, and 100+ comprehensive IT solutions. From cloud optimization 
               to AI automation, quantum computing to blockchain solutions, we help businesses scale 
