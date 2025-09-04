@@ -170,7 +170,8 @@
     "automation:performance": "node automation/performance-optimizer.cjs",
     "automation:seo": "node automation/seo-optimizer.cjs",
     "automation:health": "node automation/health-check.cjs",
-    "automation:security": "node automation/security-scanner.cjs"
+    "automation:security": "node automation/security-scanner.cjs",
+    "pr:merge-open": "node scripts/merge-open-prs.cjs"
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
