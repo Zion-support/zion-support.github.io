@@ -222,7 +222,7 @@ const cookieTypes = [
               background: '#f8fafc',
               borderRadius: 12,
               padding: 30,
-              border: '1px solid rgba(255, 255, 255, 0.1)'
+              border: '1px solid #e2e8f0'
             }}>
               <p style={{ fontSize: '1rem', lineHeight: 1.6, color: '#94a3b8', marginBottom: 20 }}>
                 Some cookies on our website are set by third-party services that appear on our pages. These third parties 
