@@ -45,6 +45,8 @@
     "utils/next-link-shim.tsx",
     "playwright.config.ts",
     "api-backup",
+    "api-disabled",
+    "api.disabled.temp",
     "pages.disabled",
     "backup-pages",
     "automation/**",

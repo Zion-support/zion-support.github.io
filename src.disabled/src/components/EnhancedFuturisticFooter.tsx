@@ -27,23 +27,74 @@ export function EnhancedFuturisticFooter() {;
         </div>;
       </div>;
 
-  const quickLinks = [
-    { name: 'Services Overview', href: '/services-overview' },
-    { name: 'AI Solutions', href: '/ai-solutions' },
-    { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
-    { name: 'Healthcare Solutions', href: '/solutions/healthcare' },
-    { name: 'Research & Development', href: '/research-development' },
-    { name: 'Pricing Guide', href: '/pricing' },
-    { name: 'Help Center', href: '/help' },
-    { name: 'FAQ', href: '/faq' },
-    { name: 'About Us', href: '/about' },
-    { name: 'Contact', href: '/contact' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'News', href: '/news' },
-    { name: 'Events', href: '/events' },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Sitemap', href: '/sitemap' }
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const footerSections = [
+    {
+      title: 'Services',
+      links: [
+        { name: 'AI Services', href: '/ai-services' },
+        { name: 'Cloud DevOps', href: '/services/cloud-devops' },
+        { name: 'Cybersecurity', href: '/services/cybersecurity' },
+        { name: 'Data Analytics', href: '/services/data-analytics' },
+        { name: 'Digital Twin', href: '/services/digital-twin' },
+        { name: 'IT Infrastructure', href: '/services/it-infrastructure' },
+        { name: 'Micro SaaS', href: '/micro-saas' },
+        { name: 'Research & Development', href: '/research-development' }
+      ]
+    },
+    {
+      title: 'Solutions',
+      links: [
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
+        { name: 'Enterprise Solutions', href: '/solutions' },
+        { name: 'Healthcare Solutions', href: '/solutions/healthcare' },
+        { name: 'Financial Solutions', href: '/financial-solutions' },
+        { name: 'Manufacturing Solutions', href: '/manufacturing-solutions' },
+        { name: 'Industry Solutions', href: '/industry-solutions' }
+      ]
+    },
+    {
+      title: 'Company',
+      links: [
+        { name: 'About Us', href: '/about' },
+        { name: 'Our Team', href: '/team' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Partners', href: '/partners' },
+        { name: 'News', href: '/news' },
+        { name: 'Events', href: '/events' },
+        { name: 'Case Studies', href: '/case-studies' },
+        { name: 'Marketplace', href: '/marketplace' }
+      ]
+    },
+    {
+      title: 'Resources',
+      links: [
+        { name: 'Help Center', href: '/help' },
+        { name: 'Documentation', href: '/documentation' },
+        { name: 'Training', href: '/training' },
+        { name: 'Blog', href: '/blog' },
+        { name: 'Webinars', href: '/webinars' },
+        { name: 'White Papers', href: '/white-papers' },
+        { name: 'FAQ', href: '/faq' },
+        { name: 'Support', href: '/support' },
+        { name: 'Community', href: '/community' }
+      ]
+    },
+    {
+      title: 'Legal',
+      links: [
+        { name: 'Privacy Policy', href: '/privacy' },
+        { name: 'Terms of Service', href: '/terms' },
+        { name: 'Cookie Policy', href: '/cookies' },
+        { name: 'Security', href: '/security' },
+        { name: 'Compliance', href: '/compliance' },
+        { name: 'Accessibility', href: '/accessibility' },
+        { name: 'Sitemap', href: '/sitemap' }
+      ]
+    }
   ];
 
       <div  className="relative">;
@@ -57,10 +108,10 @@ export function EnhancedFuturisticFooter() {;
                 <div className="text-slate-400 text-sm">{stat.label}</div>;
               </motion.div>;
             ))}
-          </motion.div>;
+          </div>
 
           {/* Main Footer Grid */}
-          <div  className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 6 gap-8 mb-12">;
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8 mb-12">
             {/* Company Info */}
             <div  className="lg:col - span -2">;
               <div>Broken JSX</div>
@@ -102,11 +153,8 @@ export function EnhancedFuturisticFooter() {;
               <div className="flex space-x-4">;
                 {};
                 ))}
-              </div>;
-            </div>;
-
-            <p className="text-gray - 300 mb-6 max - w-md">;
-              Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure,              and digital transformation services.Transforming businesses with cutting - edge technology.</p>;
+              </div>
+            </div>
 
             {/* Footer Sections */}
             {};
