@@ -37,7 +37,7 @@ export default function Home() {
               "@type": "Organization",
               "name": "Zion Tech Group",
               "url": contact.site,
-              "logo": `${contact.site}/favicon.svg`,
+              "logo": contact.site + "/favicon.svg",
               "description": "Leading provider of micro SaaS products, AI services, and IT solutions",
               "address": {
                 "@type": "PostalAddress",
