@@ -21,44 +21,27 @@
     "baseUrl": ".",
     "allowJs": true,
     "esModuleInterop": true,
-    "noEmit": true
+    "noEmit": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "include": [
-<<<<<<< HEAD
     "next-env.d.ts",
     ".next/types/**/*.ts",
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "scripts/**/*.ts",
-    "automation/**/*.ts",
-    "types/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "data_backup/**",
-    "src.corrupted/**",
-    "pages/**",
-    "components/**",
-    "src/**",
-    "utils/next-link-shim.tsx",
-    "playwright.config.ts",
-=======
-    "src/**/*",
+    "app/**/*",
     "pages/**/*",
-    "components/**/*.ts",
-    "components/**/*.tsx",
-    "data/services.ts",
-    "styles/**/*",
+    "src/**/*",
+    "components/**/*",
     "types/**/*",
     "utils/**/*",
     "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
+    "**/*.tsx"
   ],
   "exclude": [
     "node_modules",
->>>>>>> origin/merge-pr-11195
     "api-backup",
     "api-disabled",
     "api.disabled.temp",
@@ -77,32 +60,6 @@
     "data",
     "data/**",
     "cypress",
-<<<<<<< HEAD
-    "temp_working",
-    "supabase/functions",
-    "**/*.backup",
-    "**/*.disabled",
-    "src/store/authSlice.tsx",
-    "src/store/cartSlice.ts",
-    "src/store/hooks.ts",
-    "src/store/index.ts",
-    "src/store/wishlistSlice.ts",
-    "src/store/wishlistSlice.tsx",
-    "src/utils/safeStorage.tsx",
-    "src/utils/linkChecker.ts",
-    "src/utils/performance.ts",
-    "src/utils/performanceOptimizer.ts",
-    "src/utils/resourceMonitor.ts",
-    "src/utils/serviceMapper.ts",
-    "src/utils/sitemapGenerator.ts",
-    "src/utils/tokenRewards.ts",
-    "src/types/**/*.ts",
-    "src/pages/**",
-    "src/routes/**",
-    "src/services/**",
-    "src/test/**",
-    "src/types/**"
-=======
     "**/*.backup",
     "**/*.disabled",
     "temp_working",
@@ -114,6 +71,5 @@
     ".next",
     "out",
     "dist"
->>>>>>> origin/merge-pr-11195
   ]
 }
