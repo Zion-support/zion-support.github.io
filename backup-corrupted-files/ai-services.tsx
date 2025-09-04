@@ -1429,7 +1429,7 @@ export default function AIServices() {
         <title>{title}</title>
         <meta name="description content={description} />
         <meta name=viewport" content="width=device-width, initial-scale=1 />
-        <link rel=canonical" href="https://ziontechgroup.com/ai-services />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-services" />
       </Head>
 
       <Navigation />

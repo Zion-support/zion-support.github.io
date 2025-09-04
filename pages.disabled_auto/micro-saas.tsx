@@ -377,7 +377,7 @@ export default function MicroSaaS() {
       delivery: '2-3 weeks',
       category: 'Finance SaaS'
     },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+// merge marker removed
     {
       title: 'Smart Healthcare Appointment Scheduler',
       description: 'AI-powered healthcare scheduling with patient preference learning and resource optimization',
@@ -1408,7 +1408,7 @@ export default function MicroSaaS() {
         <title>{title}</title>
         <meta name="description content={description} />
         <meta name=viewport" content="width=device-width, initial-scale=1 />
-        <link rel=canonical" href="https://ziontechgroup.com/micro-saas />
+        <link rel="canonical" href="https://ziontechgroup.com/micro-saas" />
       </Head>
 
       {/* Hero Section */}
