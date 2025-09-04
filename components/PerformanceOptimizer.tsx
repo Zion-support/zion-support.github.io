@@ -47,7 +47,7 @@ export default function PerformanceOptimizer({ children }: PerformanceOptimizerP
     }
   }, []);
 
-  return <>{children}</>;
+  return <>{children}</>; // Render children
 }
 
 // Web Vitals monitoring
