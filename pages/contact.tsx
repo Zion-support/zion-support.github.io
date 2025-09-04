@@ -1,9 +1,9 @@
-import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import ContactForm from '../components/ContactForm';
+import type { JSX } from 'react';
 
-export default function Contact(): React.JSX.Element {
+export default function Contact(): JSX.Element {
   const contact = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
