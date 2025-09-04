@@ -12,10 +12,10 @@
  * - Multiple chat session support
  */
 
-const fs = // // require('fs');
-const path = // // require('path');
-const { exec } = // // require('child_process');
-const { promisify } = // // require('util');
+const fs = require('fs');
+const path = require('path');
+const { exec } = require('child_process');
+const { promisify } = require('util');
 
 const execAsync = promisify(exec);
 

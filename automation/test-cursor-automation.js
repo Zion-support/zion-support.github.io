@@ -5,7 +5,7 @@
  * This script tests the automation system without starting full automation
  */
 
-const CursorInterfaceAutomation = // // require('./cursor-interface-automation');
+const CursorInterfaceAutomation = require('./cursor-interface-automation');
 
 async function runTests() {
     console.log('🧪 Testing Cursor Chat Automation System...\n');
