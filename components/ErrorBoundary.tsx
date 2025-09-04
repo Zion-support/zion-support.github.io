@@ -1,4 +1,4 @@
-import React, { Component, ReactNode } from 'react';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
   children: ReactNode;
@@ -13,15 +13,19 @@ interface State {
 class ErrorBoundary extends Component<Props, State> {
   public state: State = {
     hasError: false
-  }
-  public static getDerivedStateFromError(): State {
-    return { hasError: true };
-  }
-
-  public componentDidCatch() {
-    // Error logging can be implemented here if needed
+  };
+  public static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
   }
   
+  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    // Log error in development only
+    if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
+      console.error('ErrorBoundary caught an error:', error, errorInfo);
+    }
+  }
+
   public render() {
     if (this.state.hasError) {
       if (this.props.fallback) {

@@ -5,10 +5,11 @@ import { Shield, Lock, Eye, AlertTriangle, Users, Database } from 'lucide-react'
 
 export default function Cybersecurity() {
   const contact = {
+    phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
-    phone: '+1 (302) 464-0950',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  };
+  }
   const services = [
     {
       icon: Shield,
@@ -55,16 +56,16 @@ export default function Cybersecurity() {
         <meta name="description" content="Comprehensive cybersecurity services including security assessments, threat detection, identity management, and compliance. Protect your business with Zion Tech Group." />
         <meta name="keywords" content="cybersecurity, security assessment, threat detection, identity management, compliance, penetration testing" />
         <link rel="canonical" href={`${contact.site}/cybersecurity`} />
-        <meta property="og: title" content="Cybersecurity Services - Zion Tech Group" />
+        <meta property="og:title" content="Cybersecurity Services - Zion Tech Group" />
         <meta property="og:description" content="Comprehensive cybersecurity services including security assessments, threat detection, and compliance." />
-        <meta property="og: url" content={`${contact.site}/cybersecurity`} />
-        <meta property="og: type" content="website" />
+        <meta property="og:url" content={`${contact.site}/cybersecurity`} />
+        <meta property="og:type" content="website" />
       </Head>
 
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-red-600 to-orange-600 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Cybersecurity Services
@@ -72,7 +73,7 @@ export default function Cybersecurity() {
               <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
                 Protect your business with comprehensive cybersecurity solutions, threat detection, and compliance services.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   href="/contact"
                   className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
@@ -92,7 +93,7 @@ export default function Cybersecurity() {
 
         {/* Services Grid */}
         <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Comprehensive Security Solutions
@@ -102,9 +103,9 @@ export default function Cybersecurity() {
               </p>
             </div>
 
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
-                <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-shadow border border-gray-100">
+                <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
                   <div className="flex items-center mb-4">
                     <service.icon className="w-8 h-8 text-red-600 mr-3" />
                     <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>
@@ -126,12 +127,12 @@ export default function Cybersecurity() {
 
         {/* CTA Section */}
         <section className="bg-gray-50 py-20">
-          <div className="max-w-4xl mx-auto text-center px-4 sm: px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Secure Your Business Today
             </h2>
             <p className="text-xl text-gray-600 mb-8">
-Don&apos;t wait for a security breach. Let our experts help you build a robust security posture.
+              Don&apos;t wait for a security breach. Let our experts help you build a robust security posture.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
@@ -142,7 +143,7 @@ Don&apos;t wait for a security breach. Let our experts help you build a robust s
               </Link>
               <a 
                 href={`tel:${contact.phone}`}
-                className="border-2 border-red-600 text-red-600 px-8 py-3 rounded-lg font-semibold hover: bg-red-600 hover:text-white transition-colors"
+                className="border-2 border-red-600 text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-red-600 hover:text-white transition-colors"
               >
                 Call {contact.phone}
               </a>

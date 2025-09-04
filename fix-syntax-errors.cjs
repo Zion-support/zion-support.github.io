@@ -1,93 +1,65 @@
 const fs = require('fs');
-const path = require('path');
 
-// Common patterns to fix
-const fixes = [
-  // Fix missing commas in style objects
-  {
-    pattern: /(\w+):\s*['"`][^'"`]*['"`]\s*(\w+):/g,
-    replacement: '$1: $2,'
-  },
-  // Fix missing commas in object literals
-  {
-    pattern: /(\w+):\s*['"`][^'"`]*['"`]\s*(\w+):/g,
-    replacement: '$1: $2,'
-  },
-  // Fix missing commas in style properties
-  {
-    pattern: /(\w+):\s*['"`][^'"`]*['"`]\s*(\w+):/g,
-    replacement: '$1: $2,'
-  }
-];
+// Read the file
+let content = fs.readFileSync('pages/micro-saas.tsx', 'utf8');
 
-function fixFile(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+// Fix patterns where icon: appears without proper object structure
+// Look for patterns like:
+// 'some text'
+// 
+// icon: SomeIcon,
+// and replace with:
+// 'some text'
+// ],
+// category: 'SomeCategory'
+// },
+// {
+// icon: SomeIcon,
+
+// This regex finds the pattern and fixes it
+content = content.replace(
+  /(\s+'[^']+'\s*)\n\s*\n\s*icon:\s*([A-Za-z]+),/g,
+  (match, text, icon) => {
+    // Extract the last word from the text to determine category
+    const lastLine = text.trim();
+    let category = 'General';
     
-    // Fix missing commas in style objects
-    const styleObjectPattern = /style=\{\{([^}]+)\}\}/g;
-    content = content.replace(styleObjectPattern, (match, styleContent) => {
-      // Add missing commas between style properties
-      const fixed = styleContent.replace(/(\w+):\s*['"`][^'"`]*['"`]\s*(\w+):/g, '$1: $2,');
-      if (fixed !== styleContent) {
-        modified = true;
-        return `style={{${fixed}}}`;
-      }
-      return match;
-    });
-    
-    // Fix missing commas in object literals
-    const objectPattern = /=\s*\{([^}]+)\}/g;
-    content = content.replace(objectPattern, (match, objectContent) => {
-      // Add missing commas between object properties
-      const fixed = objectContent.replace(/(\w+):\s*['"`][^'"`]*['"`]\s*(\w+):/g, '$1: $2,');
-      if (fixed !== objectContent) {
-        modified = true;
-        return `={${fixed}}`;
-      }
-      return match;
-    });
-    
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-      return true;
+    if (lastLine.includes('AI') || lastLine.includes('Machine Learning')) {
+      category = 'AI & Machine Learning';
+    } else if (lastLine.includes('Email') || lastLine.includes('Marketing')) {
+      category = 'Marketing';
+    } else if (lastLine.includes('Security') || lastLine.includes('Cybersecurity')) {
+      category = 'Security';
+    } else if (lastLine.includes('E-commerce') || lastLine.includes('Return')) {
+      category = 'E-commerce';
+    } else if (lastLine.includes('Event') || lastLine.includes('Calendar')) {
+      category = 'Event Management';
+    } else if (lastLine.includes('Video') || lastLine.includes('Content')) {
+      category = 'Content Creation';
+    } else if (lastLine.includes('Support') || lastLine.includes('Helpdesk')) {
+      category = 'Customer Support';
+    } else if (lastLine.includes('Lead') || lastLine.includes('Scoring')) {
+      category = 'Sales';
+    } else if (lastLine.includes('Healthcare') || lastLine.includes('Hospital')) {
+      category = 'Healthcare';
+    } else if (lastLine.includes('Talent') || lastLine.includes('HR')) {
+      category = 'Human Resources';
+    } else if (lastLine.includes('Workflow') || lastLine.includes('Automation')) {
+      category = 'Automation';
+    } else if (lastLine.includes('Quantum') || lastLine.includes('Computing')) {
+      category = 'Advanced Computing';
     }
-    return false;
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
-}
-
-// Get all TypeScript/JavaScript files
-function getAllFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
-  let files = [];
-  const items = fs.readdirSync(dir);
-  
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
     
-    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-      files = files.concat(getAllFiles(fullPath, extensions));
-    } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
-      files.push(fullPath);
-    }
+    return `${text}
+      ],
+      category: '${category}'
+    },
+    {
+      icon: ${icon},`;
   }
-  
-  return files;
-}
+);
 
-// Fix all files
-const files = getAllFiles('.');
-let fixedCount = 0;
+// Write the fixed content back
+fs.writeFileSync('pages/micro-saas.tsx', content);
 
-for (const file of files) {
-  if (fixFile(file)) {
-    fixedCount++;
-  }
-}
-
-console.log(`Fixed ${fixedCount} files`);
+console.log('Fixed syntax errors in micro-saas.tsx');
