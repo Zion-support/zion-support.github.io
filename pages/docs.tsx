@@ -5,11 +5,10 @@ import { Book, FileText, Video, Download, Search, ExternalLink } from 'lucide-re
 
 export default function Documentation() {
   const contact = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
+    phone: 'kleber@ziontechgroup.com',
     site: 'https://ziontechgroup.com'
   };
+  
   const documentationSections = [
     {
       icon: Book,

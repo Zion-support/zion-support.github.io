@@ -74,7 +74,6 @@ class ApiErrorHandler {
       code: error.code,
       details: error.details
     };
-
     // Log error for monitoring
     console.error('API Error:', formattedError);
 

@@ -33,7 +33,6 @@ class AdvancedCache<T = any> {
       timestamp: Date.now(),
       ttl: ttl || this.config.defaultTTL
     };
-    
     // Remove oldest items if cache is full
     if (this.cache.size >= this.config.maxSize) {
       const firstKey = this.cache.keys().next().value;
@@ -97,7 +96,6 @@ class AdvancedCache<T = any> {
         active++;
       }
     }
-
     return {
       total: this.cache.size,
       active,
