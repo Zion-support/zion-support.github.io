@@ -1,60 +1,82 @@
+interface ApiResponse<T = unknown> {
+  data?: T;
+  error?: string;
+  success: boolean;
+}
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.ziontechgroup.com';
+interface RequestOptions extends RequestInit {
+  timeout?: number;
+}
 
-export class ApiClient {
-  private baseURL: string;
-  private defaultHeaders: Record<string, string>;
+class ApiClient {
+  private baseUrl: string;
+  private defaultTimeout: number;
 
-  constructor(baseURL: string = API_BASE_URL) {
-    this.baseURL = baseURL;
-    this.defaultHeaders = {
-      'Content-Type': 'application/json',
-    }}
+  constructor(baseUrl: string = '', defaultTimeout: number = 10000) {
+    this.baseUrl = baseUrl;
+    this.defaultTimeout = defaultTimeout;
+  }
 
   private async request<T>(
     endpoint: string,
-    options: RequestInit = {}
-  ): Promise<T> {
-    const url = `${this.baseURL}${endpoint}`;
-    const config: RequestInit = {
-      ...options,
-      headers: {
-        ...this.defaultHeaders,
-        ...options.headers,
-      },
-    };
-
+    options: RequestOptions = {}
+  ): Promise<ApiResponse<T>> {
+    const { timeout = this.defaultTimeout, ...fetchOptions } = options;
+    
     try {
-      const response = await fetch(url, config);
-      
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`)}
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), timeout);
 
-      return await response.json()} catch (error) {
+      const response = await fetch(`${this.baseUrl}${endpoint}`, {
+        ...fetchOptions,
+        signal: controller.signal,
+        headers: {
+          'Content-Type': 'application/json',
+          ...fetchOptions.headers,
+        },
+      });
+
+      clearTimeout(timeoutId);
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
+      return { data, success: true };
+    } catch (error) {
       console.error('API request failed:', error);
-      throw error}
+      return {
+        error: error instanceof Error ? error.message : 'Unknown error occurred',
+        success: false,
+      };
+    }
   }
 
-  async get<T>(endpoint: string, options?: RequestInit): Promise<T> {
-    return this.request<T>(endpoint, { ...options, method: 'GET' })}
+  async get<T>(endpoint: string, options?: RequestOptions): Promise<ApiResponse<T>> {
+    return this.request<T>(endpoint, { ...options, method: 'GET' });
+  }
 
-  async post<T>(endpoint: string, data?: any, options?: RequestInit): Promise<T> {
+  async post<T>(endpoint: string, data?: unknown, options?: RequestOptions): Promise<ApiResponse<T>> {
     return this.request<T>(endpoint, {
       ...options,
       method: 'POST',
       body: data ? JSON.stringify(data) : undefined,
-    })}
+    });
+  }
 
-  async put<T>(endpoint: string, data?: any, options?: RequestInit): Promise<T> {
+  async put<T>(endpoint: string, data?: unknown, options?: RequestOptions): Promise<ApiResponse<T>> {
     return this.request<T>(endpoint, {
       ...options,
       method: 'PUT',
       body: data ? JSON.stringify(data) : undefined,
-    })}
+    });
+  }
 
-  async delete<T>(endpoint: string, options?: RequestInit): Promise<T> {
-    return this.request<T>(endpoint, { ...options, method: 'DELETE' })}
+  async delete<T>(endpoint: string, options?: RequestOptions): Promise<ApiResponse<T>> {
+    return this.request<T>(endpoint, { ...options, method: 'DELETE' });
+  }
 }
 
 export const apiClient = new ApiClient();
-export default apiClient;
+export type { ApiResponse, RequestOptions };

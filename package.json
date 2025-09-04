@@ -112,6 +112,12 @@
     "pm2:restart": "node -e \"const fs=require('fs');fs.mkdirSync('automation/logs',{recursive:true})\" && (pm2 restart ecosystem.config.cjs || pm2 start ecosystem.config.cjs --update-env)",
     "pm2:status": "pm2 status",
     "pm2:logs": "pm2 logs --lines 200",
+    "automation:start": "node automation/master-automation.cjs start",
+    "automation:stop": "node automation/master-automation.cjs stop",
+    "automation:restart": "node automation/master-automation.cjs restart",
+    "automation:status": "node automation/master-automation.cjs status",
+    "automation:report": "node automation/master-automation.cjs report",
+    "automation:setup": "bash scripts/start-automation.sh",
     "pm2:intelligent:start": "bash scripts/start-intelligent-automations.sh",
     "pm2:intelligent:stop": "pm2 stop ecosystem.intelligent.config.cjs || true",
     "pm2:intelligent:restart": "pm2 restart ecosystem.intelligent.config.cjs || pm2 start ecosystem.intelligent.config.cjs --update-env",
@@ -149,13 +155,8 @@
     "search:index": "node scripts/generate-search-index.js",
     "content:fix": "node automation/content-quality-fixer.cjs && node automation/content-quality-analyzer.cjs",
     "perf:monitor": "node scripts/performance-monitor.js",
-<<<<<<< HEAD
-    "perf:audit": "npm run perf:monitor",
-    "perf:lighthouse": "npx --yes lighthouse https://ziontechgroup.com --output=html --output-path=./lighthouse-report.html",
-=======
     "perf:audit": "npm run build:analyze",
     "perf:lighthouse": "lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html",
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
     "format": "prettier --write .",
     "automation:accessibility": "node automation/accessibility-checker.cjs",
     "automation:security-audit": "node automation/security-audit.cjs",
@@ -191,12 +192,8 @@
     "dev:setup": "bash scripts/dev-setup.sh",
     "quick:test": "bash scripts/quick-test.sh",
     "deploy:app": "bash scripts/deploy.sh",
-<<<<<<< HEAD
-    "health:check": "bash scripts/health-check.sh"
-=======
     "health:check": "bash scripts/health-check.sh",
     "build:production": "NODE_ENV=production npm run build"
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
   },
   "pm2": {
     "ecosystem": "ecosystem.maintenance.cjs"
@@ -235,10 +232,6 @@
     "@supabase/supabase-js": "^2.57.0",
     "@tailwindcss/postcss": "^4.1.12",
     "@tanstack/react-query": "^5.85.5",
-<<<<<<< HEAD
-    "@types/mongodb": "^4.0.6",
-=======
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
     "@types/react-datepicker": "^6.2.0",
     "autoprefixer": "^10.4.21",
     "axios": "^1.11.0",
@@ -260,10 +253,6 @@
     "fs-extra": "^11.3.1",
     "glob": "^11.0.3",
     "https": "^1.0.0",
-<<<<<<< HEAD
-    "i18next": "^25.4.2",
-=======
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
     "i18next-browser-languagedetector": "^8.2.0",
     "import-fresh": "^3.3.1",
     "lucide-react": "^0.536.0",
@@ -327,13 +316,10 @@
     "autoprefixer": "^10.4.21",
     "concurrently": "^8.2.2",
     "cssnano": "^7.1.1",
-<<<<<<< HEAD
-=======
     "d3-color": "^3.1.0",
     "d3-format": "^3.1.0",
     "d3-path": "^3.1.0",
     "d3-time-format": "^4.1.0",
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
     "esbuild": "^0.25.9",
     "eslint": "^9.34.0",
     "eslint-config-next": "^14.2.32",

@@ -2,84 +2,66 @@ module.exports = {
   apps: [
     {
       name: 'error-monitor',
-      script: 'automation/error-monitor.js',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        LOG_LEVEL: 'info'
-      },
-      error_file: 'automation/logs/error-monitor-error.log',
-      out_file: 'automation/logs/error-monitor-out.log',
-      log_file: 'automation/logs/error-monitor-combined.log',
-      time: true
-    },
-    {
-      name: 'lint-automation',
-      script: 'automation/lint-automation.js',
-      instances: 1,
-      autorestart: false,
-      watch: false,
-      max_memory_restart: '512M',
-      cron_restart: '0 */6 * * *', // Restart every 6 hours
-      env: {
-        NODE_ENV: 'production',
-        LOG_LEVEL: 'info'
-      },
-      error_file: 'automation/logs/lint-automation-error.log',
-      out_file: 'automation/logs/lint-automation-out.log',
-      log_file: 'automation/logs/lint-automation-combined.log',
-      time: true
-    },
-    {
-      name: 'build-monitor',
-      script: 'automation/build-monitor.cjs',
+      script: './automation/error-monitor.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
-      cron_restart: '0 2 * * *', // Restart daily at 2 AM
-      env: {
-        NODE_ENV: 'production',
-        LOG_LEVEL: 'info'
-      },
-      log_file: './logs/performance-monitor.log',
-      out_file: './logs/performance-monitor-out.log',
-      error_file: './logs/performance-monitor-error.log'
-    },
-    {
-      name: 'automation-ci-cd',
-      script: 'node',
-      args: 'automation/ci-cd-automation.cjs',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      cron_restart: '0 */4 * * *', // Restart every 4 hours
       env: {
         NODE_ENV: 'production'
       },
-      log_file: './logs/ci-cd.log',
-      out_file: './logs/ci-cd-out.log',
-      error_file: './logs/ci-cd-error.log'
+      error_file: './automation/logs/error-monitor-error.log',
+      out_file: './automation/logs/error-monitor-out.log',
+      log_file: './automation/logs/error-monitor-combined.log',
+      time: true
     },
     {
-      name: 'automation-continuous-improvement',
-      script: 'node',
-      args: 'automation/continuous-improvement.cjs',
-      cwd: '/workspace',
+      name: 'lint-fixer',
+      script: './automation/lint-fixer.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      cron_restart: '0 */3 * * *', // Restart every 3 hours
+      max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production'
       },
-      log_file: './logs/continuous-improvement.log',
-      out_file: './logs/continuous-improvement-out.log',
-      error_file: './logs/continuous-improvement-error.log'
+      error_file: './automation/logs/lint-fixer-error.log',
+      out_file: './automation/logs/lint-fixer-out.log',
+      log_file: './automation/logs/lint-fixer-combined.log',
+      time: true,
+      cron_restart: '0 */6 * * *' // Restart every 6 hours
+    },
+    {
+      name: 'build-monitor',
+      script: './automation/build-monitor.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      error_file: './automation/logs/build-monitor-error.log',
+      out_file: './automation/logs/build-monitor-out.log',
+      log_file: './automation/logs/build-monitor-combined.log',
+      time: true,
+      cron_restart: '0 */4 * * *' // Restart every 4 hours
+    },
+    {
+      name: 'git-automation',
+      script: './automation/git-automation.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      error_file: './automation/logs/git-automation-error.log',
+      out_file: './automation/logs/git-automation-out.log',
+      log_file: './automation/logs/git-automation-combined.log',
+      time: true,
+      cron_restart: '0 0 * * *' // Restart daily
     }
   ]
 };

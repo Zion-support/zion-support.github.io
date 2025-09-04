@@ -1,1 +1,13 @@
-children: 'Reac t.ReactNode'} export: default function Layout() { return: <div>{children}</div> React from"react""import Footer from "react "./Footer"import Footer from "react./Footer,export default function Layout({ children }: LayoutProps) { </div>" )"; type: LayoutProp s = { children: Reac t.ReactNode,}; export default function Layout({ children }: LayoutProps) { return <div>{children}</div>; type LayoutProps = { children: 'Reac t.ReactNode',}; export default function Layout({ children }: LayoutProps) { return <div>{children}</div> } " "
+import React from 'react';
+
+interface LayoutProps {
+  children: React.ReactNode;
+}
+
+export default function Layout({ children }: LayoutProps) {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      {children}
+    </div>
+  );
+}
