@@ -3,8 +3,6 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-
-<<<<<<< HEAD
 class HealthChecker {
   constructor() {
     this.logFile = path.join(__dirname, '../logs/health-check.log');
@@ -255,30 +253,32 @@ if (require.main === module) {
 }
 
 module.exports = HealthChecker;
-=======
-console.log('🩺 Starting Health Check...');
 
-const healthCheck = {
-  timestamp: new Date().toISOString(),
-  checks: {},
-  status: 'healthy'
-};
+// If running directly, execute health check
+if (require.main === module) {
+  console.log('🩺 Starting Health Check...');
+  
+  const healthCheck = {
+    timestamp: new Date().toISOString(),
+    checks: {},
+    status: 'healthy'
+  };
 
-// Check if package.json exists
-try {
-  const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-  healthCheck.checks.packageJson = {
-    status: 'ok',
-    message: 'Package.json found',
-    version: packageJson.version
-  };
-} catch (error) {
-  healthCheck.checks.packageJson = {
-    status: 'error',
-    message: 'Package.json not found or invalid'
-  };
-  healthCheck.status = 'unhealthy';
-}
+  // Check if package.json exists
+  try {
+    const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+    healthCheck.checks.packageJson = {
+      status: 'ok',
+      message: 'Package.json found',
+      version: packageJson.version
+    };
+  } catch (error) {
+    healthCheck.checks.packageJson = {
+      status: 'error',
+      message: 'Package.json not found or invalid'
+    };
+    healthCheck.status = 'unhealthy';
+  }
 
 // Check if node_modules exists
 try {
@@ -375,4 +375,4 @@ if (healthCheck.status === 'healthy') {
   console.log('⚠️  System has issues that need attention');
   process.exit(1);
 }
->>>>>>> cursor/add-new-services-and-advertise-them-1b6b
+}

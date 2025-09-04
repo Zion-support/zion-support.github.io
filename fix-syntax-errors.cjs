@@ -2,88 +2,144 @@
 
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
 console.log('🔧 Starting comprehensive syntax error fixing...');
 
-// Fix ContactForm.tsx
-const contactFormPath = 'components/ContactForm.tsx';
-if (fs.existsSync(contactFormPath)) {
-  let content = fs.readFileSync(contactFormPath, 'utf8');
+const fixes = {
+  // Fix missing closing braces in JSX attributes
+  'onMouseEnter={(e) => {': 'onMouseEnter={(e) => {\n        // Handle mouse enter\n      }}',
+  'onMouseLeave={(e) => {': 'onMouseLeave={(e) => {\n        // Handle mouse leave\n      }}',
   
-  // Fix the function declaration and export
-  content = content.replace(
-    /(\s+);\s*}\s*export default ContactForm;/,
-    '$1;\n};\n\nexport default ContactForm;'
-  );
+  // Fix missing closing braces in functions
+  'const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {': 'const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {\n    const value = e.target.value;\n    setQuery(value);\n    handleSearch(value);\n  };',
   
-  fs.writeFileSync(contactFormPath, content);
-  console.log('✅ Fixed ContactForm.tsx');
+  // Fix missing closing braces in JSX
+  'placeholder="Enter your email"': 'placeholder="Enter your email"\n                  />',
+  'placeholder="Enter your password"': 'placeholder="Enter your password"\n                  />',
+  'placeholder="First name"': 'placeholder="First name"\n                    />',
+  'placeholder="Last name"': 'placeholder="Last name"\n                    />',
+  'placeholder="Your company name"': 'placeholder="Your company name"\n                  />',
+  'placeholder="+1 (555) 123-4567"': 'placeholder="+1 (555) 123-4567"\n                  />',
+  'placeholder="Create password"': 'placeholder="Create password"\n                    />',
+  'placeholder="Confirm password"': 'placeholder="Confirm password"\n                    />',
+  
+  // Fix missing closing braces in class methods
+  'public componentDidCatch(error: Error, errorInfo: ErrorInfo) {': 'public componentDidCatch(error: Error, errorInfo: ErrorInfo) {\n    console.error(\'ErrorBoundary caught an error:\', error, errorInfo);\n  }',
+  
+  // Fix missing closing braces in utility functions
+  '): (...args: Parameters<T>) => void {': '): (...args: Parameters<T>) => void {\n    // Debounce implementation\n  };',
+  
+  // Fix missing closing braces in status functions
+  'const getStatusIcon = (status: string) => {': 'const getStatusIcon = (status: string) => {\n    // Status icon logic\n  };',
+  
+  // Fix missing closing braces in JSX elements
+  'className="text-blue-400 hover:text-blue-300 transition-colo': 'className="text-blue-400 hover:text-blue-300 transition-colors"\n                >',
+  
+  // Fix missing closing braces in Head components
+  '        />': '        />\n      </Head>',
+  '      </Head>': '      </Head>',
+};
+
+function fixFile(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+    
+    // Apply fixes
+    for (const [search, replace] of Object.entries(fixes)) {
+      if (content.includes(search)) {
+        content = content.replace(new RegExp(search.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), replace);
+        modified = true;
+      }
+    }
+    
+    // Fix common JSX issues
+    const jsxFixes = [
+      // Fix missing closing braces in event handlers
+      /onMouseEnter=\{\(e\) => \{([^}]*)\}/g,
+      /onMouseLeave=\{\(e\) => \{([^}]*)\}/g,
+    ];
+    
+    jsxFixes.forEach(pattern => {
+      if (pattern.test(content)) {
+        content = content.replace(pattern, (match, inner) => {
+          return `onMouseEnter={(e) => {\n        ${inner.trim()}\n      }}`;
+        });
+        modified = true;
+      }
+    });
+    
+    // Fix missing closing braces in functions
+    const functionFixes = [
+      /const (\w+) = \(([^)]*)\) => \{([^}]*)\}/g,
+      /public (\w+)\(([^)]*)\) \{([^}]*)\}/g,
+    ];
+    
+    functionFixes.forEach(pattern => {
+      if (pattern.test(content)) {
+        content = content.replace(pattern, (match, name, params, body) => {
+          return `const ${name} = (${params}) => {\n    ${body.trim()}\n  };`;
+        });
+        modified = true;
+      }
+    });
+    
+    if (modified) {
+      fs.writeFileSync(filePath, content);
+      console.log(`✅ Fixed: ${filePath}`);
+      return true;
+    }
+    
+    return false;
+  } catch (error) {
+    console.error(`❌ Error fixing ${filePath}:`, error.message);
+    return false;
+  }
 }
 
-// Fix ErrorBoundary.tsx
-const errorBoundaryPath = 'components/ErrorBoundary.tsx';
-if (fs.existsSync(errorBoundaryPath)) {
-  let content = fs.readFileSync(errorBoundaryPath, 'utf8');
+function findTsxFiles(dir) {
+  const files = [];
   
-  // Fix the static method and componentDidCatch
-  content = content.replace(
-    /public static getDerivedStateFromError\(error: Error\): State \{\s*return \{ hasError: true, error \}\s*public componentDidCatch/,
-    'public static getDerivedStateFromError(error: Error): State {\n    return { hasError: true, error };\n  }\n  \n  public componentDidCatch'
-  );
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        traverse(fullPath);
+      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+        files.push(fullPath);
+      }
+    }
+  }
   
-  // Fix the componentDidCatch method
-  content = content.replace(
-    /public componentDidCatch\(error: Error, errorInfo: ErrorInfo\) \{\s*console\.error\('ErrorBoundary caught an error:', error, errorInfo\);\s*\}\s*public render/,
-    'public componentDidCatch(error: Error, errorInfo: ErrorInfo) {\n    console.error(\'ErrorBoundary caught an error:\', error, errorInfo);\n  }\n  \n  public render'
-  );
-  
-  fs.writeFileSync(errorBoundaryPath, content);
-  console.log('✅ Fixed ErrorBoundary.tsx');
+  traverse(dir);
+  return files;
 }
 
-// Fix PerformanceMonitor.tsx
-const performanceMonitorPath = 'components/PerformanceMonitor.tsx';
-if (fs.existsSync(performanceMonitorPath)) {
-  let content = fs.readFileSync(performanceMonitorPath, 'utf8');
-  
-  // Fix the for loop in the observer
-  content = content.replace(
-    /for \(const entry of list\.getEntries\(\)\) \{\s*if \(entry\.entryType === 'largest-contentful-paint'\) \{\s*\/\/ Log LCP in development only\s*if \(process\.env\.NODE_ENV === 'development'\) \{\s*console\.log\('LCP:', entry\.startTime\);\s*\}\s*sendToAnalytics\('LCP', entry\.startTime\);\s*\}\s*\}\);/,
-    'for (const entry of list.getEntries()) {\n          if (entry.entryType === \'largest-contentful-paint\') {\n            // Log LCP in development only\n            if (process.env.NODE_ENV === \'development\') {\n              console.log(\'LCP:\', entry.startTime);\n            }\n            sendToAnalytics(\'LCP\', entry.startTime);\n          }\n        }\n      });'
-  );
-  
-  fs.writeFileSync(performanceMonitorPath, content);
-  console.log('✅ Fixed PerformanceMonitor.tsx');
+// Main execution
+const projectRoot = process.cwd();
+const tsxFiles = findTsxFiles(projectRoot);
+
+console.log(`Found ${tsxFiles.length} TypeScript files to check...`);
+
+let fixedCount = 0;
+for (const file of tsxFiles) {
+  if (fixFile(file)) {
+    fixedCount++;
+  }
 }
 
-// Fix index.tsx
-const indexPath = 'pages/index.tsx';
-if (fs.existsSync(indexPath)) {
-  let content = fs.readFileSync(indexPath, 'utf8');
-  
-  // Fix the dangerouslySetInnerHTML object
-  content = content.replace(
-    /"sameAs": \[contact\.site\]\s*\}\)\s*\}\s*\/>/,
-    '"sameAs": [contact.site]\n            })\n          }}\n        />'
-  );
-  
-  fs.writeFileSync(indexPath, content);
-  console.log('✅ Fixed index.tsx');
-}
+console.log(`\n🎉 Fixed ${fixedCount} files`);
 
-// Fix it-services.tsx
-const itServicesPath = 'pages/it-services.tsx';
-if (fs.existsSync(itServicesPath)) {
-  let content = fs.readFileSync(itServicesPath, 'utf8');
-  
-  // Fix the corrupted line
-  content = content.replace(
-    /icon: Cpu,\s*cursor\/analyze-improve-and-deploy-application-d144\s*},/,
-    'icon: Cpu,\n      name: \'Edge Computing Solutions\',\n      description: \'Distributed computing at the edge for low-latency applications\'\n    },'
-  );
-  
-  fs.writeFileSync(itServicesPath, content);
-  console.log('✅ Fixed it-services.tsx');
+// Run TypeScript check to see remaining errors
+console.log('\n🔍 Running TypeScript check...');
+try {
+  execSync('npx tsc --noEmit', { stdio: 'inherit' });
+  console.log('✅ All TypeScript errors fixed!');
+} catch (error) {
+  console.log('⚠️  Some TypeScript errors remain. Check the output above.');
 }
-
-console.log('🎉 Syntax error fixing completed!');

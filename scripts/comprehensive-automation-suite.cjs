@@ -33,9 +33,9 @@ async function runComprehensiveAutomation() {
   };
   
   for (const task of tasks) {
+    const startTime = Date.now();
     try {
       console.log(`📋 Running: ${task.name}`);
-      const startTime = Date.now();
       
       const result = await task.fn();
       const duration = Date.now() - startTime;

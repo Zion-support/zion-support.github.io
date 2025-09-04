@@ -1,52 +1,29 @@
 {
-  "timestamp": "2025-09-04T02:10:00.397Z",
-  "duration": "2ms",
-=======
-  "timestamp": "2025-09-04T02:31:34.193Z",
-  "duration": "1ms",
-  "overallStatus": "healthy",
-  "summary": {
-    "total": 7,
-    "healthy": 7,
-    "warnings": 0,
-    "unhealthy": 0
-  },
-  "checks": [
-    {
-      "name": "File System",
-      "status": "healthy",
-      "details": "File system accessible"
+  "timestamp": "2025-09-04T02:48:32.351Z",
+  "checks": {
+    "packageJson": {
+      "status": "ok",
+      "message": "Package.json found",
+      "version": "0.1.0"
     },
-    {
-      "name": "Node.js Version",
-      "status": "healthy",
-      "details": "Node.js v22.16.0 (compatible)"
+    "dependencies": {
+      "status": "ok",
+      "message": "Dependencies installed"
     },
-    {
-      "name": "Package.json",
-      "status": "healthy",
-      "details": "Package: ziontechgroup.com v0.1.0"
+    "diskSpace": {
+      "status": "ok",
+      "message": "Disk space available",
+      "details": "overlay         126G   14G  106G  12% /"
     },
-    {
-      "name": "Dependencies",
-      "status": "healthy",
-      "details": "node_modules directory exists"
+    "memory": {
+      "status": "ok",
+      "message": "Memory check completed",
+      "details": "Mem:            15Gi       1.4Gi       1.1Gi        10Mi        13Gi        14Gi"
     },
-    {
-      "name": "Build System",
-      "status": "healthy",
-      "details": "Next.js configuration found"
-    },
-    {
-      "name": "Source Files",
-      "status": "healthy",
-      "details": "Required directories present"
-    },
-    {
-      "name": "Environment",
-      "status": "healthy",
-      "details": "Required environment variables set"
+    "build": {
+      "status": "ok",
+      "message": "Build directory found"
     }
-  ]
->>>>>>> c5ae1602a7f (Fix environment variable configuration and update health check status)
+  },
+  "status": "healthy"
 }
