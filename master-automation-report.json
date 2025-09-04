@@ -1,28 +1,51 @@
 {
-<<<<<<< HEAD
-  "timestamp": "2025-09-04T02:53:23.009Z",
-=======
-  "timestamp": "2025-09-04T02:29:18.976Z",
->>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
-  "duration": "0s",
+  "timestamp": "2025-09-04T03:49:55.054Z",
+  "duration": 5726,
+  "summary": {
+    "totalAutomations": 7,
+    "successfulAutomations": 5,
+    "failedAutomations": 2
+  },
   "results": {
-    "automation": {
-      "success": false,
-      "error": "require is not defined"
+    "healthCheck": {
+      "success": true,
+      "output": "🩺 Starting Health Check...\n✅ Health check completed\n📄 Report saved to: health-check-report.json\n📊 Health Check Summary:\n   - Total checks: 5\n   - OK: 4\n   - Errors: 0\n   - Status: HEALTHY\n🎉 System is healthy!\n",
+      "timestamp": "2025-09-04T03:49:49.357Z"
     },
-    "testing": {
-      "success": false,
-      "error": "Cannot find module './test-suite.js'\nRequire stack:\n- /workspace/master-automation.cjs"
+    "securityScan": {
+      "success": true,
+      "output": "🔒 Starting Security Scan...\n📋 Checking for known vulnerabilities...\n📋 Checking for sensitive files...\n📋 Checking for hardcoded secrets...\n📋 Checking file permissions...\n✅ Security scan completed\n📄 Report saved to: security-scan-report.json\n📊 Security Status: WARNING\n💡 Recommendations: 1\n",
+      "timestamp": "2025-09-04T03:49:50.554Z"
     },
-    "git": {
+    "performanceOptimization": {
+      "success": true,
+      "output": "ℹ️ [2025-09-04T03:49:50.572Z] 🚀 Starting Performance Optimization...\nℹ️ [2025-09-04T03:49:50.573Z] Analyzing bundle size...\n❌ [2025-09-04T03:49:51.116Z] Bundle analysis failed: Command failed: npm run build:analyze\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error\n\n> Build error occurred\n[SyntaxError: Unexpected token ';']\n\nℹ️ [2025-09-04T03:49:51.116Z] Optimizing images...\n✅ [2025-09-04T03:49:51.116Z] Image optimization completed: 0 files processed\nℹ️ [2025-09-04T03:49:51.116Z] Optimizing code...\n✅ [2025-09-04T03:49:51.131Z] Code optimization completed: 0 unused imports found\nℹ️ [2025-09-04T03:49:51.132Z] Checking performance metrics...\n✅ [2025-09-04T03:49:51.132Z] Performance metrics collected\nℹ️ [2025-09-04T03:49:51.132Z] Generating optimization recommendations...\n✅ [2025-09-04T03:49:51.132Z] Generated 1 recommendations\nℹ️ [2025-09-04T03:49:51.132Z] 📊 Report saved to: /workspace/performance-optimization-report.json\nℹ️ [2025-09-04T03:49:51.132Z] ✅ Performance optimization completed: 3/4 successful\n",
+      "timestamp": "2025-09-04T03:49:51.139Z"
+    },
+    "seoOptimization": {
+      "success": true,
+      "output": "ℹ️ [2025-09-04T03:49:51.156Z] 🚀 Starting SEO Optimization...\nℹ️ [2025-09-04T03:49:51.157Z] Analyzing meta tags...\n✅ [2025-09-04T03:49:51.160Z] Meta tags analysis completed: 85 issues found\nℹ️ [2025-09-04T03:49:51.161Z] Analyzing heading structure...\n✅ [2025-09-04T03:49:51.164Z] Heading analysis completed: 55 issues found\nℹ️ [2025-09-04T03:49:51.164Z] Analyzing image SEO...\n✅ [2025-09-04T03:49:51.166Z] Image SEO analysis completed: 0 issues found\nℹ️ [2025-09-04T03:49:51.166Z] Generating sitemap...\n✅ [2025-09-04T03:49:51.167Z] Sitemap generated: /workspace/public/sitemap.xml\nℹ️ [2025-09-04T03:49:51.168Z] Generating SEO recommendations...\n✅ [2025-09-04T03:49:51.168Z] Generated 6 SEO recommendations\nℹ️ [2025-09-04T03:49:51.168Z] 📊 Report saved to: /workspace/seo-optimization-report.json\nℹ️ [2025-09-04T03:49:51.168Z] ✅ SEO optimization completed: 4/4 successful\n",
+      "timestamp": "2025-09-04T03:49:51.170Z"
+    },
+    "linting": {
+      "success": true,
+      "output": "\n> ziontechgroup.com@0.1.0 lint:fix\n> npx eslint . --fix\n\n",
+      "timestamp": "2025-09-04T03:49:52.261Z"
+    },
+    "tests": {
       "success": false,
-      "error": "require is not defined"
+      "error": "Command failed: npm run test:comprehensive\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n",
+      "timestamp": "2025-09-04T03:49:54.614Z"
+    },
+    "build": {
+      "success": false,
+      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error\n\n> Build error occurred\n[SyntaxError: Unexpected token ';']\n",
+      "timestamp": "2025-09-04T03:49:55.054Z"
     }
   },
-  "summary": {
-    "automationSuccess": false,
-    "testingSuccess": false,
-    "gitSuccess": false,
-    "overallSuccess": false
+  "environment": {
+    "nodeVersion": "v22.16.0",
+    "platform": "linux",
+    "projectRoot": "/workspace"
   }
 }

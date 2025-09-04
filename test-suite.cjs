@@ -7,6 +7,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
 class TestSuite {
   constructor() {
@@ -17,7 +18,8 @@ class TestSuite {
     };
   }
 
-  log() { const icons={
+  log(message, type = 'INFO') {
+    const icons = {
       'INFO': 'ℹ️',
       'SUCCESS': '✅',
       'ERROR': '❌',
@@ -27,122 +29,165 @@ class TestSuite {
     console.log(`${icons[type]} ${message}`);
   }
 
-  test() { try {
+  test(name, testFn) {
+    try {
       const result = testFn();
       if (result) {
-        this.results.passed++this.results.tests.push({ name, status: 'PASS'  })this.log(`${name} - PASSED`, 'SUCCESS');
+        this.results.passed++;
+        this.results.tests.push({ name, status: 'PASS' });
+        this.log(`${name} - PASSED`, 'SUCCESS');
       } else {
         this.results.failed++;
-        this.results.tests.push({ name, status: 'FAIL' })this.log(`${name} - FAILED`, 'ERROR');
+        this.results.tests.push({ name, status: 'FAIL' });
+        this.log(`${name} - FAILED`, 'ERROR');
       }
-    } catch() { this.results.failed++this.results.tests.push({ name, status: 'ERROR', error: error.message  })this.log(`${name} - ERROR: ${error.message}`, 'ERROR')}
+    } catch (error) {
+      this.results.failed++;
+      this.results.tests.push({ name, status: 'ERROR', error: error.message });
+      this.log(`${name} - ERROR: ${error.message}`, 'ERROR');
+    }
   }
 
-  testFileExists() { this.test(`${description } - File exists`, () => {
+  testFileExists(description, filePath) {
+    this.test(`${description} - File exists`, () => {
       return fs.existsSync(filePath);
-    })}
+    });
+  }
 
-  testFileContent() { this.test(`${description } - File content valid`, () => {
+  testFileContent(description, filePath, validator) {
+    this.test(`${description} - File content valid`, () => {
       if (!fs.existsSync(filePath)) return false;
       const content = fs.readFileSync(filePath, 'utf8');
       return validator(content);
     });
   }
 
-  testPackageJson() { this.testFileExists('package.json', 'Package.json');
-    
-    this.testFileContent('package.json', 'Package.json valid JSON', (content) => {
+  testCommand(description, command) {
+    this.test(`${description} - Command execution`, () => {
       try {
-        const pkg = JSON.parse(content);
-        return pkg.name && pkg.version && pkg.scripts } catch {
+        execSync(command, { stdio: 'pipe' });
+        return true;
+      } catch (error) {
+        return false;
+      }
+    });
+  }
+
+  async runAllTests() {
+    console.log('🧪 Starting Comprehensive Test Suite...\n');
+
+    // Test package.json
+    this.testFileExists('Package.json exists', 'package.json');
+    this.testFileContent('Package.json is valid JSON', 'package.json', (content) => {
+      try {
+        JSON.parse(content);
+        return true;
+      } catch {
         return false;
       }
     });
 
-    this.testFileContent('package.json', 'Package.json has required scripts', (content) => {
-      const pkg = JSON.parse(content);
-      const requiredScripts = ['build', 'dev', 'start'];
-      return requiredScripts.every(script => pkg.scripts[script]);
+    // Test Next.js configuration
+    this.testFileExists('Next.js config exists', 'next.config.js');
+    this.testFileExists('TypeScript config exists', 'tsconfig.json');
+
+    // Test automation scripts
+    this.testFileExists('Master orchestrator exists', 'automation/master-orchestrator.cjs');
+    this.testFileExists('Automation status checker exists', 'automation/check_automation_status.js');
+
+    // Test build process
+    this.testCommand('TypeScript compilation', 'npx tsc --noEmit');
+    this.testCommand('ESLint check', 'npx eslint . --max-warnings 0');
+
+    // Test automation scripts execution
+    this.testCommand('Automation status check', 'node automation/check_automation_status.js');
+
+    // Test PM2 availability
+    this.testCommand('PM2 is available', 'pm2 --version');
+
+    // Test file permissions
+    this.test('Automation scripts are executable', () => {
+      const scripts = [
+        'automation/master-orchestrator.cjs',
+        'automation/check_automation_status.js'
+      ];
+      
+      return scripts.every(script => {
+        if (!fs.existsSync(script)) return false;
+        const stats = fs.statSync(script);
+        return (stats.mode & parseInt('111', 8)) !== 0;
+      });
     });
+
+    // Test directory structure
+    this.test('Required directories exist', () => {
+      const dirs = ['pages', 'automation', 'tests', 'lib'];
+      return dirs.every(dir => fs.existsSync(dir) && fs.statSync(dir).isDirectory());
+    });
+
+    // Test environment
+    this.test('Node.js version is compatible', () => {
+      const version = process.version;
+      const majorVersion = parseInt(version.slice(1).split('.')[0]);
+      return majorVersion >= 18;
+    });
+
+    // Test memory usage
+    this.test('Memory usage is reasonable', () => {
+      const memUsage = process.memoryUsage();
+      const heapUsedMB = memUsage.heapUsed / 1024 / 1024;
+      return heapUsedMB < 1000; // Less than 1GB
+    });
+
+    this.generateReport();
   }
 
-  testNextConfig() { this.testFileExists('next.config.js', 'Next.js config');
-    
-    this.testFileContent('next.config.js', 'Next.js config valid', (content) => {
-      return content.includes('nextConfig') && content.includes('module.exports') });
-  }
+  generateReport() {
+    const totalTests = this.results.passed + this.results.failed;
+    const successRate = totalTests > 0 ? (this.results.passed / totalTests * 100).toFixed(2) : 0;
 
-  testAppStructure() {
-    const requiredDirs = ['src', 'public']requiredDirs.forEach(dir => {
-      this.testFileExists(dir, `Directory: ${dir}`);
-    });
+    console.log('\n📊 Test Results Summary:');
+    console.log(`   Total Tests: ${totalTests}`);
+    console.log(`   Passed: ${this.results.passed}`);
+    console.log(`   Failed: ${this.results.failed}`);
+    console.log(`   Success Rate: ${successRate}%`);
 
-    const requiredFiles = ['src/App.tsx', 'src/main.tsx']requiredFiles.forEach(file => {
-      this.testFileExists(file, `File: ${file}`);
-    });
-  }
-
-  testScripts() {
-    const scripts = [
-      'scripts/performance-monitor.js',
-      'scripts/security-auditor.js',
-      'scripts/test-runner.js',
-      'scripts/git-workflow.js'
-    ]scripts.forEach(script => {
-      this.testFileExists(script, `Script: ${script}`);
-    });
-  }
-
-  testAutomationFiles() {
-    const automationFiles = [
-      'comprehensive-automation.js',
-      'run-automation.js',
-      'test-suite.js'
-    ]automationFiles.forEach(file => {
-      this.testFileExists(file, `Automation file: ${file}`);
-    });
-  }
-
-  generateReport() { const report = {
+    // Save detailed report
+    const report = {
       timestamp: new Date().toISOString(),
       summary: {
-        total: this.results.passed + this.results.failed,
+        total: totalTests,
         passed: this.results.passed,
         failed: this.results.failed,
-        successRate: Math.round((this.results.passed / (this.results.passed + this.results.failed)) * 100)
+        successRate: parseFloat(successRate)
       },
-      tests: this.results.tests
+      tests: this.results.tests,
+      environment: {
+        nodeVersion: process.version,
+        platform: process.platform,
+        memoryUsage: process.memoryUsage()
+      }
     };
 
-    fs.writeFileSync('test-suite-report.json', JSON.stringify(report, null, 2));
-    
-    this.log('📊 Test Suite Report Generated', 'SUCCESS')this.log(`✅ Passed: ${report.summary.passed}`, 'SUCCESS')this.log(`❌ Failed: ${report.summary.failed}`, 'ERROR')this.log(`📈 Success Rate: ${report.summary.successRate}%`, 'INFO');
-    
-    return report;
-  }
+    const reportPath = 'test-results.json';
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    console.log(`\n📄 Detailed report saved to: ${reportPath}`);
 
-  async run() { this.log('🧪 Starting Comprehensive Test Suite...', 'INFO');
-    
-    this.testPackageJson();
-    this.testNextConfig();
-    this.testAppStructure();
-    this.testScripts();
-    this.testAutomationFiles();
-    
-    const report = this.generateReport();
-    
-    if (report.summary.failed === 0) {
-      this.log('🎉 All tests passed!', 'SUCCESS')return true } else {
-      this.log(`⚠️ ${report.summary.failed} tests failed`, 'WARNING');
-      return false;
+    if (this.results.failed > 0) {
+      console.log('\n❌ Some tests failed. Please check the details above.');
+      process.exit(1);
+    } else {
+      console.log('\n✅ All tests passed!');
+      process.exit(0);
     }
   }
 }
 
-// Run the test suite
-if() { const testSuite = new TestSuite()testSuite.run().then(success => {
-    process.exit(success ? 0: 1) }).catch(error => {
-    console.error('Test suite failed: ', error);
+// Run tests if called directly
+if (require.main === module) {
+  const testSuite = new TestSuite();
+  testSuite.runAllTests().catch(error => {
+    console.error('Fatal error in test suite:', error);
     process.exit(1);
   });
 }

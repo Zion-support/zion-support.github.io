@@ -1,90 +1,40 @@
 {
-  "timestamp": "2025-09-04T03:05:10.197Z",
+  "timestamp": "2025-09-04T03:49:50.572Z",
   "optimizations": [
     {
-      "type": "image",
-      "file": "deployment/public/favicon.svg",
-      "action": "optimized",
-      "timestamp": "2025-09-04T03:05:10.197Z"
+      "type": "bundle_analysis",
+      "status": "failed",
+      "error": "Command failed: npm run build:analyze\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error\n\n> Build error occurred\n[SyntaxError: Unexpected token ';']\n"
     },
     {
-      "type": "image",
-      "file": "deployment/public/og-image.svg",
-      "action": "optimized",
-      "timestamp": "2025-09-04T03:05:10.197Z"
+      "type": "image_optimization",
+      "status": "completed",
+      "optimizedCount": 0
     },
     {
-      "type": "image",
-      "file": "deployment/public/vite.svg",
-      "action": "optimized",
-      "timestamp": "2025-09-04T03:05:10.197Z"
-    },
-    {
-      "type": "image",
-      "file": "deployments/deployment-20250903-181759/production/public/favicon.svg",
-      "action": "optimized",
-      "timestamp": "2025-09-04T03:05:10.197Z"
-    },
-    {
-      "type": "image",
-      "file": "deployments/deployment-20250903-181759/production/public/og-image.svg",
-      "action": "optimized",
-      "timestamp": "2025-09-04T03:05:10.197Z"
-    },
-    {
-      "type": "image",
-      "file": "deployments/deployment-20250903-181759/production/public/vite.svg",
-      "action": "optimized",
-      "timestamp": "2025-09-04T03:05:10.197Z"
-    },
-    {
-      "type": "image",
-      "file": "deployments/deployment-20250903-181759/staging/public/favicon.svg",
-      "action": "optimized",
-      "timestamp": "2025-09-04T03:05:10.197Z"
-    },
-    {
-      "type": "image",
-      "file": "deployments/deployment-20250903-181759/staging/public/og-image.svg",
-      "action": "optimized",
-      "timestamp": "2025-09-04T03:05:10.197Z"
-    },
-    {
-      "type": "image",
-      "file": "deployments/deployment-20250903-181759/staging/public/vite.svg",
-      "action": "optimized",
-      "timestamp": "2025-09-04T03:05:10.197Z"
-    },
-    {
-      "type": "image",
-      "file": "public/favicon.svg",
-      "action": "optimized",
-      "timestamp": "2025-09-04T03:05:10.197Z"
-    },
-    {
-      "type": "image",
-      "file": "public/og-image.svg",
-      "action": "optimized",
-      "timestamp": "2025-09-04T03:05:10.197Z"
-    },
-    {
-      "type": "image",
-      "file": "public/vite.svg",
-      "action": "optimized",
-      "timestamp": "2025-09-04T03:05:10.197Z"
-    },
-    {
-      "type": "bundle",
-      "action": "analyzed",
-      "size": 79000,
-      "timestamp": "2025-09-04T03:05:10.197Z"
+      "type": "code_optimization",
+      "status": "completed",
+      "unusedImports": 0
     }
   ],
   "recommendations": [
     {
-      "type": "general",
+      "type": "bundle_optimization",
       "priority": "medium",
-      "message": "Consider implementing lazy loading for better performance."
+      "suggestion": "Consider code splitting and lazy loading"
     }
-  ]
+  ],
+  "metrics": {
+    "memoryUsage": {
+      "rss": 54,
+      "heapTotal": 7,
+      "heapUsed": 5,
+      "external": 1
+    },
+    "cpuUsage": {
+      "user": 25872,
+      "system": 14784
+    },
+    "uptime": 0.574030416
+  }
 }
