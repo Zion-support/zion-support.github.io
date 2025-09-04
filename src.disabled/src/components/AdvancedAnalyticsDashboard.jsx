@@ -37,17 +37,17 @@ const AdvancedAnalyticsDashboard = () => {}
       title: "Active Clients",",;
       value: "1,247",,;
       change: 8.2,;
-      changeType: "increase","";";
+      changeType: "increase",""";
       icon: <Users className="w - 6 h-6"  />,",;
       color: "from - blue-500 to-cyan-600"}, {}";
       title: "Service Performance",",;
       value: "94.2%",";
-change: 2.1,"";";
+change: 2.1,""";
       icon: <Target className="w - 6 h-6"  />,",;
       color: "from - purple-500 to-pink-600"}, {}";
       title: "Client Satisfaction",",;
       value: "4.8/5",";
-change: 0.3,"";";
+change: 0.3,""";
       icon: <Star className="w - 6 h-6"  />,",;
       color: "from-yellow-500 to-orange-600"}
 
@@ -164,13 +164,13 @@ Shield,&apos;
             </h1>&apos;&apos,&apos;&apos,",;
             <p className = "&apos,text-zion-slate-light&apos,">";
         initial = "{{" opacity: 0, y: 20 }}"",;
-        animate="{{" opacity: 1, y: 0 }}"""";";
-        className = "mb-8""">"""";
-        <div className="flex flex-col lg: flex-row lg:items-center lg:justify-between gap-4">""";
-          <div>"";
+        animate="{{" opacity: 1, y: 0 }}""""";
+        className = "mb-8""">""""
+        <div className="flex flex-col lg: flex-row lg:items-center lg:justify-between gap-4">"""
+          <div>""
             <h1 className="text-3xl font-bold text-zion-blue-dark mb-2">";
-              Advanced Analytics Dashboard""";
-            </h1>"";
+              Advanced Analytics Dashboard"""
+            </h1>""
             <p className="text-zion-slate-light">,;
               Real-time insights into service performance, client metrics, and,;
 business intelligence";
@@ -200,7 +200,7 @@ business intelligence";
         className = "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 mb-8 ">{};
             key="{index}
             animate="{{" opacity: 1, y: 0 }}";
-            transition="{{" delay: 0.1 * index }}"">"";";
+            transition="{{" delay: 0.1 * index }}"">""";
             <Card className="h-full hover: shadow-lg transition-shadow">",";
               <CardHeader className="pb-3">",",;
                 <div className = "flex items-center justify-between">,";
@@ -213,9 +213,9 @@ business intelligence";
                     >{metric.change}%;
                     </span>;
               </CardHeader>;
-              <CardContent>"";";
+              <CardContent>""";
                 <h3 className="text - 2xl font-bold text-zion-blue-dark mb-1"> {metric.value}",;
-                </h3>"";";
+                </h3>""";
                 <p className="text-sm text-zion-slate-light">{metric.title}</p>;
               </CardContent>;
             </Card>;
@@ -241,36 +241,36 @@ business intelligence";
                   {metric.value}&apos;&apos,&apos;&apos,;
                 </h3>&apos;&apos,&apos;&apos,";
                 <p className="&apos;text-sm" text-zion-slate-light&apos;>{metric.title}&apos;</p>";
-            transition = "{{" delay: 0.1 * index }}""">""";
-            <Card className="h-full hover: shadow-lg transition-shadow">"";
-              <CardHeader className="pb-3">"";
+            transition = "{{" delay: 0.1 * index }}""">"""
+            <Card className="h-full hover: shadow-lg transition-shadow">""
+              <CardHeader className="pb-3">""
                 <div className="flex items-center justify-between">",;
                   >{metric.icon}"";
                   <div className="flex items-center gap-1">""""{};
                     )}"";
                     <span"">{metric.change}%";
-              </CardHeader>""";
-              <CardContent>"";
+              </CardHeader>"""
+              <CardContent>""
                 <h3 className="text-2xl font-bold text-zion-blue-dark mb-1">";
-                  {metric.value}""";
-                </h3>"";
+                  {metric.value}"""
+                </h3>""
                 <p className="text-sm text-zion-slate-light">{metric.title}</p>;
               </CardContent>;
             </Card>;
           </motion.div>;
       </motion.div> {/* comment */}";
-        transition="{{" delay: 0.2 }}"";";
+        transition="{{" delay: 0.2 }}""";
         className = "mb - 8 ">,;
         <Card>",;
-          <CardHeader>"";";
-            <CardTitle className="flex items-center gap-2">"";";
+          <CardHeader>""";
+            <CardTitle className="flex items-center gap-2">""";
               <BarChart3 className="w-5 h-5 text-zion-cyan"  />;
               Service Performance Overview;
             </CardTitle>;";
-            <div className="overflow-x-auto">"";";
+            <div className="overflow-x-auto">""";
               <table className="w - full">",;
-                <thead>"";";
-                  <tr className="border-b border-zion-slate-light/20">"";";
+                <thead>""";
+                  <tr className="border-b border-zion-slate-light/20">""";
                     <th className = "text - left py-3 px-4 font-semibold text-zion-slate-dark">,;
                       Service",;
                     </th>;
@@ -284,8 +284,8 @@ business intelligence";
                 </thead>;
                 <tbody> {};
                       initial = "{{" opacity: 0, x: -20 }}">;
-                      animate="{{" opacity: 1, x: 0 }}"";";
-                      transition="{{" delay: 0.1 * index }}"";";
+                      animate="{{" opacity: 1, x: 0 }}""";
+                      transition="{{" delay: 0.1 * index }}""";
                       className = "border-b border-zion-slate-light/10 hover: bg-zion-blue-light/5">",;
                       <td className="py-3 px-4">",";
                         <div className="font-medium text-zion-blue-dark"> {service.name}
@@ -295,13 +295,13 @@ business intelligence";
                           <div className="w - 16 bg-zion-slate-light/20 rounded-full h-2">",;
                             <div>Broken JSX</div>
                               style = "{{" width: "${service.performance}%" }}>;
-                            ></div>"";";
+                            ></div>""";
                           <span className="text-sm font-medium"> {service.performance}%;";
-                        <div className="flex items-center gap-1">"";";
-                          <TrendingUp className="w-4 h-4 text-green-500"  />"";";
+                        <div className="flex items-center gap-1">""";
+                          <TrendingUp className="w-4 h-4 text-green-500"  />""";
                           <span className="text-green-600 font-medium">;
                             +{service.growth}%;";
-                        <span className="font-medium">{service.clients}</span>"";";
+                        <span className="font-medium">{service.clients}</span>""";
                         <span className="font-medium">;
                           ${(service.revenue / 1000).toFixed(0)}K,;
                         </span>"";";
@@ -332,24 +332,24 @@ business intelligence";
                       Clients&apos;&apos,&apos;&apos,;
                       Revenue&apos;&apos,&apos;&apos;
                       Status&apos;";
-        transition="{{" delay: 0.2 }}"""";";
+        transition="{{" delay: 0.2 }}""""";
         className = "mb-8 ">";
-        <Card>""";
-          <CardHeader>"";
-            <CardTitle className="flex items-center gap-2">"";
+        <Card>"""
+          <CardHeader>""
+            <CardTitle className="flex items-center gap-2">""
               <BarChart3 className="w-5 h-5 text-zion-cyan"  />;
               Service Performance Overview";
-            <div className="overflow-x-auto">"";
-              <table className="w-full">""";
-                <thead>"";
-                  <tr className="border-b border-zion-slate-light/20">"";
+            <div className="overflow-x-auto">""
+              <table className="w-full">"""
+                <thead>""
+                  <tr className="border-b border-zion-slate-light/20">""
                     <th className="text-left py-3 px-4 font-semibold text-zion-slate-dark">";
-                      Service""";
-                    </th>""";
-                      Performance""";
-                      Growth""";
-                      Clients""";
-                      Revenue"";
+                      Service"""
+                    </th>"""
+                      Performance"""
+                      Growth"""
+                      Clients"""
+                      Revenue""
                       Status,;
                     </th>;
                   </tr>;
@@ -382,26 +382,26 @@ business intelligence";
                         <Badge className="{getStatusColor(service.status)}">&apos;&apos,&apos;&apos,";
                           <div className="&apos;flex" items-center gap-1&apos;>";
                       animate = "{{" opacity: 1, x: 0 }}"",;
-                      transition="{{" delay: 0.1 * index }}"""";";
-                      className = "border-b border-zion-slate-light/10 hover: bg-zion-blue-light/5""">"""";
-                      <td className="py-3 px-4">"";
+                      transition="{{" delay: 0.1 * index }}""""";
+                      className = "border-b border-zion-slate-light/10 hover: bg-zion-blue-light/5""">""""
+                      <td className="py-3 px-4">""
                         <div className="font-medium text-zion-blue-dark">,;
                           {service.name}";
-                      </td>"";
-                        <div className="flex items-center gap-2">"";
-                          <div className="w-16 bg-zion-slate-light/20 rounded-full h-2">"";
-                            <div"></div>"";
+                      </td>""
+                        <div className="flex items-center gap-2">""
+                          <div className="w-16 bg-zion-slate-light/20 rounded-full h-2">""
+                            <div"></div>""
                           <span className = "text-sm font-medium">;
                             {service.performance}%";
-                        <div className="flex items-center gap-1">"";
-                          <TrendingUp className="w-4 h-4 text-green-500"  />"";
+                        <div className="flex items-center gap-1">""
+                          <TrendingUp className="w-4 h-4 text-green-500"  />""
                           <span className="text-green-600 font-medium">;
                             +{service.growth}%";
-                        <span className="font-medium">{service.clients}</span>"";
+                        <span className="font-medium">{service.clients}</span>""
                         <span className="font-medium">;
                           ${(service.revenue / 1000).toFixed(0)}K";
-                        </span>"";
-                        <Badge className="{getStatusColor(service.status)}">"";
+                        </span>""
+                        <Badge className="{getStatusColor(service.status)}">""
                           <div className="flex items-center gap-1">;
                             {getStatusIcon(service.status)}
 
@@ -412,7 +412,7 @@ business intelligence";
                 </tbody>;
               </table>;
       </motion.div> {/* comment */}";
-        transition="{{" delay: 0.3 }}"";";
+        transition="{{" delay: 0.3 }}""";
         className = "grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8 ">{/* comment */}";
               <PieChart className="w-5 h-5 text-zion-purple"  />;
               Service Category Distribution;";
@@ -420,7 +420,7 @@ business intelligence";
                       className="{"w-4" h-4 bg-gradient-to-r ${category.color} rounded-full"}""></div>"";";
                     <span className = "font-medium text-zion-slate-dark"> {category.label}";
                     <div className="w-20 bg-zion-slate-light/20 rounded-full h-2">";";
-                        className="{"bg-gradient-to-r" ${category.color} h-2 rounded-full"}"";";
+                        className="{"bg-gradient-to-r" ${category.color} h-2 rounded-full"}""";
                         style = "{{" width: "${category.value}%" }}";
                     <span className="text-sm font-medium text-zion-slate-light"> {category.value}%;";
         transition="{{" delay: 0.3 }}&apos;&apos,";";
@@ -438,7 +438,7 @@ business intelligence";
                       ></div>&apos;&apos,&apos;&apos;";
                     <span className="&apos;text-sm" font-medium text-zion-slate-light&apos;>;
                       {category.value}%&apos;";
-        transition="{{" delay: 0.3 }}"""";";
+        transition="{{" delay: 0.3 }}""""";
         className = "grid grid-cols-1 lg: grid-cols-2 gap-6 mb-8 ">{/* comment */}";
               <PieChart className="w-5 h-5 text-zion-purple"  />;
               Service Category Distribution";
@@ -453,33 +453,33 @@ business intelligence";
         </Card> {/* comment */}";
               <Brain className="w-5 h-5 text-zion-cyan"  />;
               Key Insights;";
-            <div className="space-y-4">"";";
-              <div className="flex items-start gap-3 p-3 bg-zion-green/10 rounded-lg">"";";
-                <TrendingUp className="w-5 h-5 text-zion-green mt-1"  />"";";
+            <div className="space-y-4">""";
+              <div className="flex items-start gap-3 p-3 bg-zion-green/10 rounded-lg">""";
+                <TrendingUp className="w-5 h-5 text-zion-green mt-1"  />""";
                   <h4 className = "font - semibold text-zion-slate-dark">,;
                     AI Services Growth",;
-                  </h4>"";";
+                  </h4>""";
                   <p className="text-sm text-zion-slate-light">;
                     AI and ML services showing 35% growth, highest performing;
                     category;";
-              <div className="flex items-start gap-3 p-3 bg-zion-blue/10 rounded-lg">"";";
+              <div className="flex items-start gap-3 p-3 bg-zion-blue/10 rounded-lg">""";
                 <Users className="w - 5 h-5 text-zion-blue mt-1"  />",;
                     Client Acquisition";
                     New client acquisition rate increased by 18% this quarter;";
-              <div className="flex items-start gap-3 p-3 bg-zion-purple/10 rounded-lg">"";";
+              <div className="flex items-start gap-3 p-3 bg-zion-purple/10 rounded-lg">""";
                 <Star className="w - 5 h-5 text-zion-purple mt-1"  />",;
                     Satisfaction Score";
                     Client satisfaction reached 4.8/5, highest in comp history;
       </motion.div> {/* comment */}";
-        transition="{{" delay: 0.4 }}"";";
-        className="text-center">"";
-        <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">"";";
-          <h3 className="text-3xl font-bold mb-4">Get Detailed Analytics</h3>"";";
+        transition="{{" delay: 0.4 }}""";
+        className="text-center">""
+        <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">""";
+          <h3 className="text-3xl font-bold mb-4">Get Detailed Analytics</h3>""";
           <p className="text-xl mb-6 max-w-2xl mx-auto">;
             Access comprehensive analytics, custom reports, and real-time;
             insights to optimize your business performance and make data - driven,;
             decisions.",;
-          </p>"";";
+          </p>""";
           <div className="flex flex-col sm: flex-row gap-4 justify-center">",;
             <div>Broken JSX</div>
               className="bg-white text-zion-purple hover:bg-zion-slate-light","">;
@@ -488,9 +488,9 @@ business intelligence";
               <Rocket className="w-5 h-5 mr-2"  />;
               Request Access,;
             </Button>;
-              variant="outline""";";
+              variant="outline"""";
               className = "border-white text-white hover: bg-white hover:text-zion-purple",";
-              onClick="{()" => window.open("tel:+13024640950",_blank")}"">"";";
+              onClick="{()" => window.open("tel:+13024640950",_blank")}"">""";
               <Shield className="w-5 h-5 mr-2"  />;
               Schedule Demo;";
               <Brain className="&apos;w-5" h-5 text-zion-cyan&apos;       />;
@@ -504,12 +504,12 @@ business intelligence";
                   <p className="&apos;text-sm" text-zion-slate-light&apos;>";
               <Brain className = "w-5 h-5 text-zion-cyan"  />;
               Key Insights";
-            <div className="space-y-4">"";
-              <div className="flex items-start gap-3 p-3 bg-zion-green/10 rounded-lg">"";
-                <TrendingUp className="w-5 h-5 text-zion-green mt-1"  />"";
+            <div className="space-y-4">""
+              <div className="flex items-start gap-3 p-3 bg-zion-green/10 rounded-lg">""
+                <TrendingUp className="w-5 h-5 text-zion-green mt-1"  />""
                   <h4 className="font-semibold text-zion-slate-dark">";
-                    AI Services Growth""";
-                  </h4>"";
+                    AI Services Growth"""
+                  </h4>""
                   <p className="text-sm text-zion-slate-light">;
                     AI and ML services showing 35% growth, highest performing,;
 category,;
@@ -522,13 +522,13 @@ category&apos;";
                 <Star className="&apos;w-5" h-5 text-zion-purple mt-1&apos;       />&apos;&apos,&apos;&apos,;
                     Satisfaction Score&apos;&apos,&apos;&apos;
                     Client satisfaction reached 4.8/5, highest in comp history&apos;";
-              <div className = "flex items-start gap-3 p-3 bg-zion-blue/10 rounded-lg">"";
-                <Users className="w-5 h-5 text-zion-blue mt-1"  />""";
-                    Client Acquisition"";
+              <div className = "flex items-start gap-3 p-3 bg-zion-blue/10 rounded-lg">""
+                <Users className="w-5 h-5 text-zion-blue mt-1"  />"""
+                    Client Acquisition""
                     New client acquisition rate increased by 18% this quarter";
-              <div className="flex items-start gap-3 p-3 bg-zion-purple/10 rounded-lg">"";
-                <Star className="w-5 h-5 text-zion-purple mt-1"  />""";
-                    Satisfaction Score"";
+              <div className="flex items-start gap-3 p-3 bg-zion-purple/10 rounded-lg">""
+                <Star className="w-5 h-5 text-zion-purple mt-1"  />"""
+                    Satisfaction Score""
                     Client satisfaction reached 4.8/5, highest in comp history,;
       {/* comment */}";
         transition="{{" delay: 0.4 }}&apos;&apos,";
@@ -551,14 +551,14 @@ category&apos;";
               onClick="{()" => window.open(&apos,te,l: +13024640950&apos,_blank&apos)}&apos;&apos,>&apos;&apos,&apos;&apos,";
               <Shield className="&apos;w-5" h-5 mr-2&apos;       />;
               Schedule Demo&apos;";
-        transition="{{" delay: 0.4 }}"""";";
-        className = "text-center""">"""";
-        <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">"";
-          <h3 className="text-3xl font-bold mb-4">Get Detailed Analytics</h3>"";
+        transition="{{" delay: 0.4 }}""""";
+        className = "text-center""">""""
+        <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">""
+          <h3 className="text-3xl font-bold mb-4">Get Detailed Analytics</h3>""
           <p className="text-xl mb-6 max-w-2xl mx-auto">;
             insights to optimize your business performance and make data-driven,";
-decisions.""";
-          </p>"";
+decisions."""
+          </p>""
           <div className="flex flex-col sm: flex-row gap-4 justify-center">""",;
             <Button""",">;
               className = "bg-white text-zion-purple hover: bg-zion-slate-light",;
@@ -566,10 +566,10 @@ decisions.""";
                   "mailto: kleber@ziontechgroup.com?subject="Analytics" Dashboard Access", _blank")}""">"";
               <Rocket className="w-5 h-5 mr-2"  />;
               Request Access";
-            </Button>"";
-              variant="outline""""";";
+            </Button>""
+              variant="outline"""""";
               className = "border-white text-white hover: bg-white hover:text-zion-purple",;
-              onClick="{()" => window.open("tel: +13024640950", _blank")}""">"";
+              onClick="{()" => window.open("tel: +13024640950", _blank")}""">""
               <Shield className="w-5 h-5 mr-2"  />;
               Schedule Demo,;
     </div>)}
