@@ -1,0 +1,31 @@
+{
+  "links": [
+    {
+      "url": "https://ziontechgroup.com/enterprise",
+      "status": 200,
+      "state": "OK",
+      "failureDetails": []
+    },
+    {
+      "url": "https://app.ziontechgroup.com/enterprise",
+      "status": 0,
+      "state": "BROKEN",
+      "parent": "https://ziontechgroup.com/enterprise"
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://ziontechgroup.com/enterprise",
+      "failureDetails": []
+    },
+    {
+      "url": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://ziontechgroup.com/enterprise",
+      "failureDetails": []
+    }
+  ],
+  "passed": false
+}
