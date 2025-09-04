@@ -6,150 +6,108 @@ export default function GettingStarted() {
     <>
       <Head>
         <title>Getting Started - Zion Tech Group Documentation</title>
-        <meta name="description" content="Get started with Zion Tech Group services and solutions. Learn how to integrate our micro SaaS products, AI services, and IT solutions into your business." />
-        <meta name="keywords" content="getting started, documentation, integration, micro SaaS, AI services, IT solutions" />
+        <meta name="description" content="Get started with Zion Tech Group services. Learn how to set up and use our micro SaaS products, AI services, and IT solutions." />
         <link rel="canonical" href="https://ziontechgroup.com/docs/getting-started" />
       </Head>
-
-      <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #0b1220 0%, #1a1a2e 50%, #16213e 100%)', color: 'white' }}>
-        <div style={{ maxWidth: 1200, margin: '0 auto', padding: '40px 20px' }}>
-          {/* Breadcrumb */}
-          <nav style={{ marginBottom: 32, fontSize: '0.9rem' }}>
-            <Link href="/" style={{ color: '#93c5fd', textDecoration: 'none' }}>Home</Link>
-            <span style={{ margin: '0 8px', color: '#64748b' }}>/</span>
-            <Link href="/docs" style={{ color: '#93c5fd', textDecoration: 'none' }}>Documentation</Link>
-            <span style={{ margin: '0 8px', color: '#64748b' }}>/</span>
-            <span style={{ color: '#64748b' }}>Getting Started</span>
-          </nav>
-
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 3fr', gap: 40, alignItems: 'start' }}>
-            {/* Sidebar */}
-            <aside style={{ 
-              background: 'rgba(15, 23, 42, 0.8)', 
-              borderRadius: 12, 
-              padding: 24, 
-              border: '1px solid rgba(255,255,255,0.1)',
-              position: 'sticky',
-              top: 20
-            }}>
-              <h3 style={{ marginBottom: 16, fontSize: '1.1rem', fontWeight: 600 }}>Documentation</h3>
-              <nav style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-                <Link href="/docs" style={{ color: '#93c5fd', textDecoration: 'none', padding: '8px 0', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>Overview</Link>
-                <Link href="/docs/getting-started" style={{ color: 'white', textDecoration: 'none', padding: '8px 0', borderBottom: '1px solid rgba(255,255,255,0.1)', fontWeight: 600 }}>Getting Started</Link>
-                <Link href="/docs/api-quick-start" style={{ color: '#93c5fd', textDecoration: 'none', padding: '8px 0', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>API Quick Start</Link>
-                <Link href="/docs/integration-examples" style={{ color: '#93c5fd', textDecoration: 'none', padding: '8px 0', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>Integration Examples</Link>
-              </nav>
-            </aside>
-
-            {/* Main Content */}
-            <main>
-              <h1 style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: 16, background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-                Getting Started
-              </h1>
-              
-              <p style={{ fontSize: '1.2rem', color: '#cbd5e1', marginBottom: 32, lineHeight: 1.6 }}>
-                Welcome to Zion Tech Group! This guide will help you get started with our comprehensive suite of micro SaaS products, AI services, and IT solutions.
-              </p>
-
-              <div style={{ display: 'grid', gap: 24 }}>
-                {/* Quick Start Section */}
-                <section style={{ 
-                  background: 'rgba(15, 23, 42, 0.6)', 
-                  borderRadius: 12, 
-                  padding: 24, 
-                  border: '1px solid rgba(255,255,255,0.1)' 
-                }}>
-                  <h2 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: 16, color: '#3b82f6' }}>Quick Start</h2>
-                  <p style={{ color: '#cbd5e1', marginBottom: 16 }}>
-                    Get up and running with our services in just a few steps:
-                  </p>
-                  <ol style={{ color: '#cbd5e1', paddingLeft: 20, lineHeight: 1.6 }}>
-                    <li style={{ marginBottom: 8 }}>Choose your service category from our <Link href="/services-catalog" style={{ color: '#3b82f6', textDecoration: 'none' }}>services catalog</Link></li>
-                    <li style={{ marginBottom: 8 }}>Review pricing and features on our <Link href="/pricing" style={{ color: '#3b82f6', textDecoration: 'none' }}>pricing page</Link></li>
-                    <li style={{ marginBottom: 8 }}>Contact us through our <Link href="/contact" style={{ color: '#3b82f6', textDecoration: 'none' }}>contact form</Link> to get started</li>
-                    <li style={{ marginBottom: 8 }}>Receive your API keys and integration documentation</li>
-                    <li>Start building with our comprehensive APIs and SDKs</li>
-                  </ol>
-                </section>
-
-                {/* Service Categories */}
-                <section style={{ 
-                  background: 'rgba(15, 23, 42, 0.6)', 
-                  borderRadius: 12, 
-                  padding: 24, 
-                  border: '1px solid rgba(255,255,255,0.1)' 
-                }}>
-                  <h2 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: 16, color: '#8b5cf6' }}>Service Categories</h2>
-                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 16 }}>
-                    <div style={{ padding: 16, background: 'rgba(59, 130, 246, 0.1)', borderRadius: 8, border: '1px solid rgba(59, 130, 246, 0.2)' }}>
-                      <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: 8, color: '#3b82f6' }}>Micro SaaS Products</h3>
-                      <p style={{ color: '#cbd5e1', fontSize: '0.9rem', marginBottom: 12 }}>Ready-to-use software solutions for specific business needs</p>
-                      <Link href="/micro-saas" style={{ color: '#3b82f6', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 500 }}>Learn More →</Link>
-                    </div>
-                    <div style={{ padding: 16, background: 'rgba(139, 92, 246, 0.1)', borderRadius: 8, border: '1px solid rgba(139, 92, 246, 0.2)' }}>
-                      <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: 8, color: '#8b5cf6' }}>AI Services</h3>
-                      <p style={{ color: '#cbd5e1', fontSize: '0.9rem', marginBottom: 12 }}>Advanced artificial intelligence and machine learning solutions</p>
-                      <Link href="/ai-services" style={{ color: '#8b5cf6', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 500 }}>Learn More →</Link>
-                    </div>
-                    <div style={{ padding: 16, background: 'rgba(34, 197, 94, 0.1)', borderRadius: 8, border: '1px solid rgba(34, 197, 94, 0.2)' }}>
-                      <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: 8, color: '#22c55e' }}>IT Services</h3>
-                      <p style={{ color: '#cbd5e1', fontSize: '0.9rem', marginBottom: 12 }}>Comprehensive IT infrastructure and support services</p>
-                      <Link href="/it-services" style={{ color: '#22c55e', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 500 }}>Learn More →</Link>
-                    </div>
-                  </div>
-                </section>
-
-                {/* Next Steps */}
-                <section style={{ 
-                  background: 'rgba(15, 23, 42, 0.6)', 
-                  borderRadius: 12, 
-                  padding: 24, 
-                  border: '1px solid rgba(255,255,255,0.1)' 
-                }}>
-                  <h2 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: 16, color: '#22c55e' }}>Next Steps</h2>
-                  <p style={{ color: '#cbd5e1', marginBottom: 16 }}>
-                    Ready to dive deeper? Check out these resources:
-                  </p>
-                  <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
-                    <Link href="/docs/api-quick-start" style={{ 
-                      display: 'inline-block', 
-                      padding: '12px 24px', 
-                      background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', 
-                      color: 'white', 
-                      textDecoration: 'none', 
-                      borderRadius: 8, 
-                      fontWeight: 600,
-                      transition: 'transform 0.2s'
-                    }}>API Quick Start</Link>
-                    <Link href="/docs/integration-examples" style={{ 
-                      display: 'inline-block', 
-                      padding: '12px 24px', 
-                      background: 'rgba(15, 23, 42, 0.8)', 
-                      color: 'white', 
-                      textDecoration: 'none', 
-                      borderRadius: 8, 
-                      border: '1px solid rgba(255,255,255,0.2)',
-                      fontWeight: 600,
-                      transition: 'transform 0.2s'
-                    }}>Integration Examples</Link>
-                    <Link href="/contact" style={{ 
-                      display: 'inline-block', 
-                      padding: '12px 24px', 
-                      background: 'rgba(34, 197, 94, 0.1)', 
-                      color: '#22c55e', 
-                      textDecoration: 'none', 
-                      borderRadius: 8, 
-                      border: '1px solid rgba(34, 197, 94, 0.2)',
-                      fontWeight: 600,
-                      transition: 'transform 0.2s'
-                    }}>Contact Support</Link>
-                  </div>
-                </section>
-              </div>
-            </main>
+      
+      <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+        {/* Header */}
+        <section className="py-20 px-4 text-center">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
+              Getting Started
+            </h1>
+            <p className="text-xl md:text-2xl text-slate-300 mb-8">
+              Welcome to Zion Tech Group! This guide will help you get up and running with our services.
+            </p>
           </div>
-        </div>
-      </div>
+        </section>
+
+        {/* Content */}
+        <section className="py-16 px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="prose prose-invert max-w-none">
+              <h2 className="text-3xl font-bold mb-6">Quick Start Guide</h2>
+              
+              <div className="space-y-8">
+                <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
+                  <h3 className="text-2xl font-bold mb-4 text-blue-400">1. Choose Your Service</h3>
+                  <p className="text-slate-300 mb-4">
+                    Browse our comprehensive catalog of services:
+                  </p>
+                  <ul className="text-slate-300 space-y-2">
+                    <li>• <Link href="/micro-saas" className="text-blue-400 hover:text-blue-300">Micro SaaS Products</Link> - 120+ specialized tools</li>
+                    <li>• <Link href="/ai-services" className="text-purple-400 hover:text-purple-300">AI Services</Link> - 80+ AI-powered solutions</li>
+                    <li>• <Link href="/it-services" className="text-green-400 hover:text-green-300">IT Services</Link> - 80+ enterprise solutions</li>
+                  </ul>
+                </div>
+
+                <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
+                  <h3 className="text-2xl font-bold mb-4 text-purple-400">2. Get a Quote</h3>
+                  <p className="text-slate-300 mb-4">
+                    Contact our team to discuss your specific needs and get a customized quote.
+                  </p>
+                  <Link href="/contact" className="inline-block px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors">
+                    Request Quote
+                  </Link>
+                </div>
+
+                <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
+                  <h3 className="text-2xl font-bold mb-4 text-green-400">3. Implementation</h3>
+                  <p className="text-slate-300 mb-4">
+                    Our team will work with you to implement the solution and provide training.
+                  </p>
+                  <ul className="text-slate-300 space-y-2">
+                    <li>• Dedicated project manager</li>
+                    <li>• Custom configuration</li>
+                    <li>• Training and documentation</li>
+                    <li>• Ongoing support</li>
+                  </ul>
+                </div>
+              </div>
+
+              <h2 className="text-3xl font-bold mb-6 mt-12">Popular Services</h2>
+              
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
+                  <h3 className="text-xl font-bold mb-3 text-blue-400">Cloud Cost Guard</h3>
+                  <p className="text-slate-300 mb-4">
+                    FinOps assistant for AWS, Azure, and GCP with anomaly detection and cost optimization.
+                  </p>
+                  <Link href="/micro-saas" className="text-blue-400 hover:text-blue-300 font-semibold">
+                    Learn More →
+                  </Link>
+                </div>
+
+                <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
+                  <h3 className="text-xl font-bold mb-3 text-purple-400">AI Code Review</h3>
+                  <p className="text-slate-300 mb-4">
+                    Automated code review with AI-powered suggestions and security scanning.
+                  </p>
+                  <Link href="/ai-services" className="text-purple-400 hover:text-purple-300 font-semibold">
+                    Learn More →
+                  </Link>
+                </div>
+              </div>
+
+              <div className="mt-12 p-6 bg-blue-900/20 rounded-lg border border-blue-500/30">
+                <h3 className="text-xl font-bold mb-3 text-blue-400">Need Help?</h3>
+                <p className="text-slate-300 mb-4">
+                  Our support team is here to help you get started. Contact us for personalized assistance.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Link href="/contact" className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
+                    Contact Support
+                  </Link>
+                  <Link href="/faq" className="px-6 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
+                    View FAQ
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
     </>
   );
 }

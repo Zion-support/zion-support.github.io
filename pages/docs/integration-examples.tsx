@@ -6,439 +6,308 @@ export default function IntegrationExamples() {
     <>
       <Head>
         <title>Integration Examples - Zion Tech Group Documentation</title>
-        <meta name="description" content="Real-world integration examples for Zion Tech Group services. Learn how to integrate our micro SaaS products, AI services, and IT solutions into your applications." />
-        <meta name="keywords" content="integration examples, code samples, micro SaaS, AI services, IT solutions, tutorials" />
+        <meta name="description" content="Real-world integration examples for Zion Tech Group services. Learn how to integrate our APIs into your applications." />
         <link rel="canonical" href="https://ziontechgroup.com/docs/integration-examples" />
       </Head>
+      
+      <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+        {/* Header */}
+        <section className="py-20 px-4 text-center">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
+              Integration Examples
+            </h1>
+            <p className="text-xl md:text-2xl text-slate-300 mb-8">
+              Real-world examples of integrating Zion Tech Group services
+            </p>
+          </div>
+        </section>
 
-      <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #0b1220 0%, #1a1a2e 50%, #16213e 100%)', color: 'white' }}>
-        <div style={{ maxWidth: 1200, margin: '0 auto', padding: '40px 20px' }}>
-          {/* Breadcrumb */}
-          <nav style={{ marginBottom: 32, fontSize: '0.9rem' }}>
-            <Link href="/" style={{ color: '#93c5fd', textDecoration: 'none' }}>Home</Link>
-            <span style={{ margin: '0 8px', color: '#64748b' }}>/</span>
-            <Link href="/docs" style={{ color: '#93c5fd', textDecoration: 'none' }}>Documentation</Link>
-            <span style={{ margin: '0 8px', color: '#64748b' }}>/</span>
-            <span style={{ color: '#64748b' }}>Integration Examples</span>
-          </nav>
-
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 3fr', gap: 40, alignItems: 'start' }}>
-            {/* Sidebar */}
-            <aside style={{ 
-              background: 'rgba(15, 23, 42, 0.8)', 
-              borderRadius: 12, 
-              padding: 24, 
-              border: '1px solid rgba(255,255,255,0.1)',
-              position: 'sticky',
-              top: 20
-            }}>
-              <h3 style={{ marginBottom: 16, fontSize: '1.1rem', fontWeight: 600 }}>Documentation</h3>
-              <nav style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-                <Link href="/docs" style={{ color: '#93c5fd', textDecoration: 'none', padding: '8px 0', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>Overview</Link>
-                <Link href="/docs/getting-started" style={{ color: '#93c5fd', textDecoration: 'none', padding: '8px 0', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>Getting Started</Link>
-                <Link href="/docs/api-quick-start" style={{ color: '#93c5fd', textDecoration: 'none', padding: '8px 0', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>API Quick Start</Link>
-                <Link href="/docs/integration-examples" style={{ color: 'white', textDecoration: 'none', padding: '8px 0', borderBottom: '1px solid rgba(255,255,255,0.1)', fontWeight: 600 }}>Integration Examples</Link>
-              </nav>
-            </aside>
-
-            {/* Main Content */}
-            <main>
-              <h1 style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: 16, background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-                Integration Examples
-              </h1>
+        {/* Content */}
+        <section className="py-16 px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="prose prose-invert max-w-none">
+              <h2 className="text-3xl font-bold mb-6">Cloud Cost Guard Integration</h2>
               
-              <p style={{ fontSize: '1.2rem', color: '#cbd5e1', marginBottom: 32, lineHeight: 1.6 }}>
-                Real-world examples showing how to integrate Zion Tech Group services into your applications. Choose your technology stack and get started quickly.
-              </p>
+              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 mb-8">
+                <h3 className="text-xl font-bold mb-4 text-blue-400">AWS Cost Monitoring</h3>
+                <p className="text-slate-300 mb-4">
+                  Monitor AWS costs and get alerts for unusual spending:
+                </p>
+                <pre className="bg-slate-800 p-4 rounded-lg overflow-x-auto">
+                  <code className="text-green-400">
+{`// Node.js example
+const axios = require('axios');
 
-              <div style={{ display: 'grid', gap: 24 }}>
-                {/* AI Services Integration */}
-                <section style={{ 
-                  background: 'rgba(15, 23, 42, 0.6)', 
-                  borderRadius: 12, 
-                  padding: 24, 
-                  border: '1px solid rgba(255,255,255,0.1)' 
-                }}>
-                  <h2 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: 16, color: '#8b5cf6' }}>AI Services Integration</h2>
-                  <p style={{ color: '#cbd5e1', marginBottom: 16 }}>
-                    Integrate our AI services for text analysis, image processing, and automation:
-                  </p>
-                  
-                  <div style={{ background: 'rgba(0, 0, 0, 0.3)', borderRadius: 8, padding: 16, marginBottom: 16 }}>
-                    <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: 8, color: '#22c55e' }}>React Component Example</h3>
-                    <pre style={{ color: '#cbd5e1', fontSize: '0.9rem', overflow: 'auto' }}>{`import React, { useState } from 'react';
-
-const AITextAnalyzer = () => {
-  const [text, setText] = useState('');
-  const [result, setResult] = useState(null);
-  const [loading, setLoading] = useState(false);
-
-  const analyzeText = async () => {
-    setLoading(true);
-    try {
-      const response = await fetch('/api/ai/analyze', {
-        method: 'POST',
+async function monitorAWSCosts() {
+  try {
+    const response = await axios.get(
+      'https://api.ziontechgroup.com/v1/cloud-cost-guard/aws/costs',
+      {
         headers: {
-          'Content-Type': 'application/json',
-          'Authorization': \`Bearer \${process.env.ZION_API_KEY}\`
+          'Authorization': 'Bearer YOUR_API_KEY',
+          'Content-Type': 'application/json'
         },
-        body: JSON.stringify({
-          text: text,
-          type: 'sentiment'
-        })
+        params: {
+          period: 'daily',
+          threshold: 1000 // Alert if daily cost exceeds $1000
+        }
+      }
+    );
+    
+    const { costs, anomalies, recommendations } = response.data;
+    
+    if (anomalies.length > 0) {
+      console.log('Cost anomalies detected:', anomalies);
+      // Send alert to your team
+      await sendSlackAlert(anomalies);
+    }
+    
+    console.log('Cost optimization recommendations:', recommendations);
+  } catch (error) {
+    console.error('Error monitoring costs:', error);
+  }
+}
+
+async function sendSlackAlert(anomalies) {
+  // Implementation for sending Slack alerts
+  console.log('Sending Slack alert for cost anomalies');
+}`}
+                  </code>
+                </pre>
+              </div>
+
+              <h2 className="text-3xl font-bold mb-6">AI Code Review Integration</h2>
+              
+              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 mb-8">
+                <h3 className="text-xl font-bold mb-4 text-purple-400">GitHub Webhook Integration</h3>
+                <p className="text-slate-300 mb-4">
+                  Automatically review code when pull requests are created:
+                </p>
+                <pre className="bg-slate-800 p-4 rounded-lg overflow-x-auto">
+                  <code className="text-green-400">
+{`// Express.js webhook handler
+const express = require('express');
+const axios = require('axios');
+const app = express();
+
+app.use(express.json());
+
+app.post('/webhook/github', async (req, res) => {
+  const { action, pull_request } = req.body;
+  
+  if (action === 'opened' || action === 'synchronize') {
+    try {
+      // Get the diff from GitHub
+      const diff = await getPullRequestDiff(pull_request.diff_url);
+      
+      // Send to AI Code Review service
+      const reviewResponse = await axios.post(
+        'https://api.ziontechgroup.com/v1/ai-code-review/analyze',
+        {
+          code: diff,
+          language: detectLanguage(diff),
+          rules: ['security', 'performance', 'best-practices']
+        },
+        {
+          headers: {
+            'Authorization': 'Bearer YOUR_API_KEY',
+            'Content-Type': 'application/json'
+          }
+        }
+      );
+      
+      const { issues, suggestions, score } = reviewResponse.data;
+      
+      // Post review as GitHub comment
+      await postGitHubComment(pull_request.number, {
+        body: generateReviewComment(issues, suggestions, score)
       });
       
-      const data = await response.json();
-      setResult(data);
+      res.status(200).send('Review completed');
     } catch (error) {
-      console.error('Analysis failed:', error);
-    } finally {
-      setLoading(false);
+      console.error('Error reviewing code:', error);
+      res.status(500).send('Review failed');
+    }
+  }
+});
+
+function generateReviewComment(issues, suggestions, score) {
+  let comment = \`## AI Code Review Results\\n\\n\`;
+  comment += \`**Overall Score: \${score}/100**\\n\\n\`;
+  
+  if (issues.length > 0) {
+    comment += \`### Issues Found (\${issues.length})\\n\`;
+    issues.forEach(issue => {
+      comment += \`- **\${issue.severity}**: \${issue.message}\\n\`;
+    });
+  }
+  
+  if (suggestions.length > 0) {
+    comment += \`\\n### Suggestions\\n\`;
+    suggestions.forEach(suggestion => {
+      comment += \`- \${suggestion}\\n\`;
+    });
+  }
+  
+  return comment;
+}`}
+                  </code>
+                </pre>
+              </div>
+
+              <h2 className="text-3xl font-bold mb-6">Smart Invoice Processing</h2>
+              
+              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 mb-8">
+                <h3 className="text-xl font-bold mb-4 text-green-400">Document Upload and Processing</h3>
+                <p className="text-slate-300 mb-4">
+                  Upload invoices and automatically extract data:
+                </p>
+                <pre className="bg-slate-800 p-4 rounded-lg overflow-x-auto">
+                  <code className="text-green-400">
+{`// React component for invoice upload
+import React, { useState } from 'react';
+import axios from 'axios';
+
+function InvoiceUpload() {
+  const [file, setFile] = useState(null);
+  const [processing, setProcessing] = useState(false);
+  const [result, setResult] = useState(null);
+
+  const handleFileUpload = async (event) => {
+    const selectedFile = event.target.files[0];
+    setFile(selectedFile);
+    
+    if (selectedFile) {
+      setProcessing(true);
+      
+      const formData = new FormData();
+      formData.append('invoice', selectedFile);
+      
+      try {
+        const response = await axios.post(
+          'https://api.ziontechgroup.com/v1/smart-invoice/process',
+          formData,
+          {
+            headers: {
+              'Authorization': 'Bearer YOUR_API_KEY',
+              'Content-Type': 'multipart/form-data'
+            }
+          }
+        );
+        
+        setResult(response.data);
+      } catch (error) {
+        console.error('Error processing invoice:', error);
+      } finally {
+        setProcessing(false);
+      }
     }
   };
 
   return (
-    <div>
-      <textarea 
-        value={text}
-        onChange={(e) => setText(e.target.value)}
-        placeholder="Enter text to analyze..."
+    <div className="p-6">
+      <h2>Invoice Processing</h2>
+      <input
+        type="file"
+        accept=".pdf,.jpg,.png"
+        onChange={handleFileUpload}
+        className="mb-4"
       />
-      <button onClick={analyzeText} disabled={loading}>
-        {loading ? 'Analyzing...' : 'Analyze Text'}
-      </button>
-      {result && <div>Result: {JSON.stringify(result)}</div>}
+      
+      {processing && <p>Processing invoice...</p>}
+      
+      {result && (
+        <div className="mt-4 p-4 bg-gray-100 rounded">
+          <h3>Extracted Data:</h3>
+          <ul>
+            <li>Vendor: \${result.vendor}</li>
+            <li>Amount: $\${result.amount}</li>
+            <li>Date: \${result.date}</li>
+            <li>Invoice Number: \${result.invoiceNumber}</li>
+          </ul>
+        </div>
+      )}
     </div>
   );
-};`}</pre>
-                  </div>
+}`}
+                  </code>
+                </pre>
+              </div>
 
-                  <div style={{ background: 'rgba(0, 0, 0, 0.3)', borderRadius: 8, padding: 16 }}>
-                    <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: 8, color: '#22c55e' }}>Node.js Express Example</h3>
-                    <pre style={{ color: '#cbd5e1', fontSize: '0.9rem', overflow: 'auto' }}>{`const express = require('express');
-const axios = require('axios');
+              <h2 className="text-3xl font-bold mb-6">Webhook Configuration</h2>
+              
+              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
+                <h3 className="text-xl font-bold mb-4 text-yellow-400">Setting Up Webhooks</h3>
+                <p className="text-slate-300 mb-4">
+                  Configure webhooks to receive real-time updates from our services:
+                </p>
+                <pre className="bg-slate-800 p-4 rounded-lg overflow-x-auto">
+                  <code className="text-green-400">
+{`// Configure webhook endpoint
+const webhookConfig = {
+  url: 'https://your-app.com/webhooks/ziontechgroup',
+  events: ['cost_anomaly', 'code_review_complete', 'invoice_processed'],
+  secret: 'your-webhook-secret'
+};
 
-const app = express();
-app.use(express.json());
-
-app.post('/api/ai/analyze', async (req, res) => {
-  try {
-    const { text, type } = req.body;
-    
-    const response = await axios.post('https://api.ziontechgroup.com/v1/ai/analyze', {
-      text,
-      type
-    }, {
-      headers: {
-        'Authorization': \`Bearer \${process.env.ZION_API_KEY}\`,
-        'Content-Type': 'application/json'
-      }
-    });
-    
-    res.json(response.data);
-  } catch (error) {
-    res.status(500).json({ error: 'Analysis failed' });
-  }
-});
-
-app.listen(3000, () => {
-  console.log('Server running on port 3000');
-});`}</pre>
-                  </div>
-                </section>
-
-                {/* Micro SaaS Integration */}
-                <section style={{ 
-                  background: 'rgba(15, 23, 42, 0.6)', 
-                  borderRadius: 12, 
-                  padding: 24, 
-                  border: '1px solid rgba(255,255,255,0.1)' 
-                }}>
-                  <h2 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: 16, color: '#3b82f6' }}>Micro SaaS Integration</h2>
-                  <p style={{ color: '#cbd5e1', marginBottom: 16 }}>
-                    Integrate our micro SaaS products into your existing applications:
-                  </p>
-                  
-                  <div style={{ background: 'rgba(0, 0, 0, 0.3)', borderRadius: 8, padding: 16, marginBottom: 16 }}>
-                    <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: 8, color: '#22c55e' }}>Python Flask Example</h3>
-                    <pre style={{ color: '#cbd5e1', fontSize: '0.9rem', overflow: 'auto' }}>{`from flask import Flask, request, jsonify
-import requests
-
-app = Flask(__name__)
-
-@app.route('/api/email-validator', methods=['POST'])
-def validate_email():
-    data = request.get_json()
-    email = data.get('email')
-    
-    # Call Zion Tech Group Email Validator API
-    response = requests.post('https://api.ziontechgroup.com/v1/email/validate', 
-        json={'email': email},
-        headers={'Authorization': f'Bearer {os.getenv("ZION_API_KEY")}'}
-    )
-    
-    if response.status_code == 200:
-        return jsonify(response.json())
-    else:
-        return jsonify({'error': 'Validation failed'}), 400
-
-@app.route('/api/url-shortener', methods=['POST'])
-def shorten_url():
-    data = request.get_json()
-    url = data.get('url')
-    
-    response = requests.post('https://api.ziontechgroup.com/v1/url/shorten',
-        json={'url': url},
-        headers={'Authorization': f'Bearer {os.getenv("ZION_API_KEY")}'}
-    )
-    
-    return jsonify(response.json())
-
-if __name__ == '__main__':
-    app.run(debug=True)`}</pre>
-                  </div>
-
-                  <div style={{ background: 'rgba(0, 0, 0, 0.3)', borderRadius: 8, padding: 16 }}>
-                    <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: 8, color: '#22c55e' }}>Vue.js Component Example</h3>
-                    <pre style={{ color: '#cbd5e1', fontSize: '0.9rem', overflow: 'auto' }}>{`<template>
-  <div class="url-shortener">
-    <input v-model="longUrl" placeholder="Enter URL to shorten" />
-    <button @click="shortenUrl" :disabled="loading">
-      {{ loading ? 'Shortening...' : 'Shorten URL' }}
-    </button>
-    <div v-if="shortUrl" class="result">
-      <p>Short URL: <a :href="shortUrl" target="_blank">{{ shortUrl }}</a></p>
-    </div>
-  </div>
-</template>
-
-<script>
-export default {
-  data() {
-    return {
-      longUrl: '',
-      shortUrl: '',
-      loading: false
-    }
-  },
-  methods: {
-    async shortenUrl() {
-      this.loading = true;
-      try {
-        const response = await fetch('/api/url-shortener', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({ url: this.longUrl })
-        });
-        
-        const data = await response.json();
-        this.shortUrl = data.shortUrl;
-      } catch (error) {
-        console.error('URL shortening failed:', error);
-      } finally {
-        this.loading = false;
-      }
+// Register webhook
+await axios.post(
+  'https://api.ziontechgroup.com/v1/webhooks',
+  webhookConfig,
+  {
+    headers: {
+      'Authorization': 'Bearer YOUR_API_KEY',
+      'Content-Type': 'application/json'
     }
   }
-}
-</script>`}</pre>
-                  </div>
-                </section>
+);
 
-                {/* IT Services Integration */}
-                <section style={{ 
-                  background: 'rgba(15, 23, 42, 0.6)', 
-                  borderRadius: 12, 
-                  padding: 24, 
-                  border: '1px solid rgba(255,255,255,0.1)' 
-                }}>
-                  <h2 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: 16, color: '#22c55e' }}>IT Services Integration</h2>
-                  <p style={{ color: '#cbd5e1', marginBottom: 16 }}>
-                    Integrate our IT services for monitoring, automation, and infrastructure management:
-                  </p>
-                  
-                  <div style={{ background: 'rgba(0, 0, 0, 0.3)', borderRadius: 8, padding: 16, marginBottom: 16 }}>
-                    <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: 8, color: '#22c55e' }}>Docker Integration Example</h3>
-                    <pre style={{ color: '#cbd5e1', fontSize: '0.9rem', overflow: 'auto' }}>{`# Dockerfile
-FROM node:18-alpine
-
-WORKDIR /app
-COPY package*.json ./
-RUN npm install
-
-COPY . .
-
-# Install Zion Tech Group monitoring agent
-RUN curl -sSL https://agents.ziontechgroup.com/install.sh | sh
-
-EXPOSE 3000
-CMD ["npm", "start"]
-
-# docker-compose.yml
-version: '3.8'
-services:
-  app:
-    build: .
-    ports:
-      - "3000:3000"
-    environment:
-      - ZION_API_KEY=your_api_key_here
-      - ZION_MONITORING_ENABLED=true
-    volumes:
-      - ./logs:/app/logs`}</pre>
-                  </div>
-
-                  <div style={{ background: 'rgba(0, 0, 0, 0.3)', borderRadius: 8, padding: 16 }}>
-                    <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: 8, color: '#22c55e' }}>Kubernetes Deployment Example</h3>
-                    <pre style={{ color: '#cbd5e1', fontSize: '0.9rem', overflow: 'auto' }}>{`apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: zion-integrated-app
-spec:
-  replicas: 3
-  selector:
-    matchLabels:
-      app: zion-integrated-app
-  template:
-    metadata:
-      labels:
-        app: zion-integrated-app
-    spec:
-      containers:
-      - name: app
-        image: your-app:latest
-        ports:
-        - containerPort: 3000
-        env:
-        - name: ZION_API_KEY
-          valueFrom:
-            secretKeyRef:
-              name: zion-secrets
-              key: api-key
-        - name: ZION_MONITORING_ENABLED
-          value: "true"
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: zion-integrated-service
-spec:
-  selector:
-    app: zion-integrated-app
-  ports:
-  - port: 80
-    targetPort: 3000
-  type: LoadBalancer`}</pre>
-                  </div>
-                </section>
-
-                {/* Webhook Integration */}
-                <section style={{ 
-                  background: 'rgba(15, 23, 42, 0.6)', 
-                  borderRadius: 12, 
-                  padding: 24, 
-                  border: '1px solid rgba(255,255,255,0.1)' 
-                }}>
-                  <h2 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: 16, color: '#ef4444' }}>Webhook Integration</h2>
-                  <p style={{ color: '#cbd5e1', marginBottom: 16 }}>
-                    Set up webhooks to receive real-time notifications from our services:
-                  </p>
-                  
-                  <div style={{ background: 'rgba(0, 0, 0, 0.3)', borderRadius: 8, padding: 16 }}>
-                    <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: 8, color: '#22c55e' }}>Webhook Handler Example</h3>
-                    <pre style={{ color: '#cbd5e1', fontSize: '0.9rem', overflow: 'auto' }}>{`const express = require('express');
-const crypto = require('crypto');
-
-const app = express();
-app.use(express.raw({ type: 'application/json' }));
-
-app.post('/webhook/zion', (req, res) => {
-  const signature = req.headers['x-zion-signature'];
-  const payload = req.body;
+// Webhook handler
+app.post('/webhooks/ziontechgroup', (req, res) => {
+  const { event, data, signature } = req.body;
   
   // Verify webhook signature
-  const expectedSignature = crypto
-    .createHmac('sha256', process.env.ZION_WEBHOOK_SECRET)
-    .update(payload)
-    .digest('hex');
-  
-  if (signature !== expectedSignature) {
-    return res.status(400).send('Invalid signature');
+  if (!verifyWebhookSignature(signature, req.body)) {
+    return res.status(401).send('Invalid signature');
   }
   
-  const event = JSON.parse(payload);
-  
-  // Handle different event types
-  switch (event.type) {
-    case 'ai.analysis.completed':
-      handleAnalysisCompleted(event.data);
+  switch (event) {
+    case 'cost_anomaly':
+      handleCostAnomaly(data);
       break;
-    case 'service.status.changed':
-      handleServiceStatusChanged(event.data);
+    case 'code_review_complete':
+      handleCodeReviewComplete(data);
       break;
-    default:
-      console.log('Unknown event type:', event.type);
+    case 'invoice_processed':
+      handleInvoiceProcessed(data);
+      break;
   }
   
   res.status(200).send('OK');
-});
-
-function handleAnalysisCompleted(data) {
-  console.log('Analysis completed:', data);
-  // Update your database, send notifications, etc.
-}
-
-function handleServiceStatusChanged(data) {
-  console.log('Service status changed:', data);
-  // Update service status in your system
-}
-
-app.listen(3000, () => {
-  console.log('Webhook server running on port 3000');
-});`}</pre>
-                  </div>
-                </section>
-
-                {/* Next Steps */}
-                <section style={{ 
-                  background: 'rgba(15, 23, 42, 0.6)', 
-                  borderRadius: 12, 
-                  padding: 24, 
-                  border: '1px solid rgba(255,255,255,0.1)' 
-                }}>
-                  <h2 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: 16, color: '#22c55e' }}>Need More Help?</h2>
-                  <p style={{ color: '#cbd5e1', marginBottom: 16 }}>
-                    These examples should get you started, but we're here to help with more complex integrations:
-                  </p>
-                  <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
-                    <Link href="/contact" style={{ 
-                      display: 'inline-block', 
-                      padding: '12px 24px', 
-                      background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', 
-                      color: 'white', 
-                      textDecoration: 'none', 
-                      borderRadius: 8, 
-                      fontWeight: 600
-                    }}>Contact Support</Link>
-                    <Link href="/docs/api-quick-start" style={{ 
-                      display: 'inline-block', 
-                      padding: '12px 24px', 
-                      background: 'rgba(15, 23, 42, 0.8)', 
-                      color: 'white', 
-                      textDecoration: 'none', 
-                      borderRadius: 8, 
-                      border: '1px solid rgba(255,255,255,0.2)',
-                      fontWeight: 600
-                    }}>API Reference</Link>
-                  </div>
-                </section>
+});`}
+                  </code>
+                </pre>
               </div>
-            </main>
+
+              <div className="mt-12 p-6 bg-blue-900/20 rounded-lg border border-blue-500/30">
+                <h3 className="text-xl font-bold mb-3 text-blue-400">Need More Examples?</h3>
+                <p className="text-slate-300 mb-4">
+                  Check out our complete API documentation or contact our support team for custom integration help.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Link href="/docs/api-quick-start" className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
+                    API Documentation
+                  </Link>
+                  <Link href="/contact" className="px-6 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
+                    Contact Support
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        </section>
+      </main>
     </>
   );
 }
