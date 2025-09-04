@@ -17,23 +17,6 @@ module.exports = {
       time: true
     },
     {
-      name: 'lint-automation',
-      script: 'automation/lint-automation.js',
-      instances: 1,
-      autorestart: false,
-      watch: false,
-      max_memory_restart: '512M',
-      cron_restart: '0 */6 * * *', // Restart every 6 hours
-      env: {
-        NODE_ENV: 'production',
-        LOG_LEVEL: 'info'
-      },
-      error_file: './logs/lint-automation-error.log',
-      out_file: './logs/lint-automation-out.log',
-      log_file: './logs/lint-automation-combined.log',
-      time: true
-    },
-    {
       name: 'build-monitor',
       script: 'automation/build-monitor.cjs',
       instances: 1,
@@ -45,15 +28,13 @@ module.exports = {
         NODE_ENV: 'production',
         LOG_LEVEL: 'info'
       },
-      log_file: './logs/performance-monitor.log',
-      out_file: './logs/performance-monitor-out.log',
-      error_file: './logs/performance-monitor-error.log'
+      log_file: './logs/build-monitor.log',
+      out_file: './logs/build-monitor-out.log',
+      error_file: './logs/build-monitor-error.log'
     },
     {
-      name: 'automation-ci-cd',
-      script: 'node',
-      args: 'automation/ci-cd-automation.cjs',
-      cwd: '/workspace',
+      name: 'ci-cd-automation',
+      script: 'automation/ci-cd-automation.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -66,10 +47,8 @@ module.exports = {
       error_file: './logs/ci-cd-error.log'
     },
     {
-      name: 'automation-continuous-improvement',
-      script: 'node',
-      args: 'automation/continuous-improvement.cjs',
-      cwd: '/workspace',
+      name: 'continuous-improvement',
+      script: 'automation/continuous-improvement.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -80,6 +59,20 @@ module.exports = {
       log_file: './logs/continuous-improvement.log',
       out_file: './logs/continuous-improvement-out.log',
       error_file: './logs/continuous-improvement-error.log'
+    },
+    {
+      name: 'performance-monitor',
+      script: 'automation/performance-monitor.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '0 */2 * * *', // Restart every 2 hours
+      env: {
+        NODE_ENV: 'production'
+      },
+      log_file: './logs/performance-monitor.log',
+      out_file: './logs/performance-monitor-out.log',
+      error_file: './logs/performance-monitor-error.log'
     }
   ]
 };
