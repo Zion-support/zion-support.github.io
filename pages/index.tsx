@@ -79,9 +79,9 @@ export default function Home(): any {
               Innovative Micro SaaS, AI Services & IT Solutions
             </p>
             <p className="text-lg text-slate-400 mb-12 max-w-3xl mx-auto">
-              We deliver cutting-edge technology solutions with 140+ micro SaaS products, 
-              95+ advanced AI services, and 95+ comprehensive IT solutions. From quantum computing 
-              to AI automation, we help businesses scale efficiently and securely into the future.
+              We deliver cutting-edge technology solutions with 60+ micro SaaS products, 
+              40+ advanced AI services, and 50+ comprehensive IT solutions. From cloud optimization 
+              to AI automation, we help businesses scale efficiently and securely with proven results.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-8 sm:mb-12" role="group" aria-label="Main navigation actions">
@@ -98,15 +98,15 @@ export default function Home(): any {
 
             <div className="grid md:grid-cols-3 gap-6 text-center">
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
-                <h3 className="text-2xl font-bold text-blue-400 mb-2">140+</h3>
+                <h3 className="text-2xl font-bold text-blue-400 mb-2">60+</h3>
                 <p className="text-slate-300">Micro SaaS Products</p>
               </div>
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
-                <h3 className="text-2xl font-bold text-purple-400 mb-2">95+</h3>
+                <h3 className="text-2xl font-bold text-purple-400 mb-2">40+</h3>
                 <p className="text-slate-300">AI Services</p>
               </div>
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
-                <h3 className="text-2xl font-bold text-green-400 mb-2">95+</h3>
+                <h3 className="text-2xl font-bold text-green-400 mb-2">50+</h3>
                 <p className="text-slate-300">IT Solutions</p>
               </div>
             </div>
