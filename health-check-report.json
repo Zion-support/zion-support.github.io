@@ -1,98 +1,31 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "timestamp": "2025-09-04T02:05:30.595Z",
-  "status": "failed",
+  "timestamp": "2025-09-04T02:30:15.898Z",
   "checks": [
     {
-      "name": "Node.js Version",
-      "status": "success",
-      "duration": 0,
-      "message": "Node.js v22.16.0 (compatible)",
-      "details": null
+      "name": "Package.json exists",
+      "status": "pass",
+      "result": "package.json found"
     },
     {
-      "name": "Dependencies",
-      "status": "success",
-      "duration": 0,
-      "message": "Dependencies OK (78 deps, 37 dev deps)",
-      "details": {
-        "dependencies": 78,
-        "devDependencies": 37
-      }
+      "name": "Dependencies installed",
+      "status": "pass",
+      "result": "Dependencies installed"
     },
     {
-      "name": "Build System",
-      "status": "success",
-      "duration": 0,
-      "message": "Next.js configuration found",
-      "details": null
+      "name": "Build process",
+      "status": "fail",
+      "error": "Build failed"
     },
     {
-      "name": "TypeScript",
-      "status": "error",
-      "duration": 891,
-      "message": "TypeScript compilation failed",
-      "details": null
+      "name": "Linting",
+      "status": "pass",
+      "result": "Linting passed"
     },
     {
-      "name": "ESLint",
-      "status": "warning",
-      "duration": 2678,
-      "message": "ESLint found issues",
-      "details": null
-    },
-    {
-      "name": "File Structure",
-      "status": "success",
-      "duration": 0,
-      "message": "Required directories present",
-      "details": null
+      "name": "TypeScript compilation",
+      "status": "fail",
+      "error": "TypeScript compilation failed"
     }
   ],
-  "summary": {
-    "total": 6,
-    "passed": 4,
-    "failed": 1,
-=======
-  "timestamp": "2025-09-03T17:32:53.642Z",
-=======
-  "timestamp": "2025-09-04T02:23:04.448Z",
->>>>>>> 9d52a0b519566fb829f098b2703072e5c0978931
-  "checks": {
-    "packageJson": {
-      "status": "ok",
-      "message": "Package.json found",
-      "version": "0.1.0"
-    },
-    "dependencies": {
-      "status": "ok",
-      "message": "Dependencies installed"
-    },
-    "diskSpace": {
-      "status": "ok",
-      "message": "Disk space available",
-      "details": "overlay         126G   14G  107G  12% /"
-    },
-    "memory": {
-      "status": "ok",
-      "message": "Memory check completed",
-      "details": "Mem:            15Gi       1.4Gi       909Mi        10Mi        13Gi        14Gi"
-    },
-    "build": {
-      "status": "info",
-      "message": "No build directory found (normal for development)"
-    }
-  },
-<<<<<<< HEAD
-  "summary": {
-    "total": 7,
-    "passed": 6,
-    "failed": 0,
->>>>>>> 128840a43b844df0edc9aa22038e6fb53d898bf5
-    "warnings": 1
-  }
-=======
-  "status": "healthy"
->>>>>>> 9d52a0b519566fb829f098b2703072e5c0978931
+  "status": "unhealthy"
 }

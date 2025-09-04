@@ -1,28 +1,51 @@
 {
-    ],
-    "errors: [
-      auto-fixer.js failed: Command failed: node scripts/auto-fixer.js\nfile:///workspace/scripts/auto-fixer.js:95\n      .replace(/.replace(/// Clean up any remaining artifacts\n               ^^^^^^^^^^^\n\nSyntaxError: Invalid regular expression: /.replace(/: Unterminated group\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n\nNode.js v22.16.0\n"
-    ],
-    "warnings: [
-      ESLint had issues: Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n(node: 6135) ESLintIgnoreWarning: The \".eslintignore\" file is no longer supported. Switch to using the \ignores\ property in \"eslint.config.js\": https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files\n(Use `node --trace-warnings ...` to show where the warning was created)\n,
-      TypeScript had issues: Command failed: npm run type-check\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n",
-      "Build had issues: Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nwarn  - You have enabled experimental features (esmExternals, newNextLinkBehavior) in next.config.js.\nwarn  - Experimental features are not covered by semver, and may cause unexpected or broken application behavior. Use at your own risk.\n\ntsconfig.json(119,1): error TS1185: Merge conflict marker encountered.\n\n
-    ],
-    metrics": {}
+  "timestamp": "2025-09-04T02:29:46.014Z",
+  "summary": {
+    "total": 6,
+    "successful": 3,
+    "failed": 3,
+    "criticalFailures": 1
   },
-  "recommendations: [
-    Address all errors before deployment",
-    "Implement continuous integration for automated testing,
-    Set up automated deployment pipeline",
-    "Monitor performance metrics in production,
-    Regular security audits and dependency updates"
+  "results": [
+    {
+      "name": "Health Check",
+      "status": "success",
+      "duration": 34,
+      "critical": true
+    },
+    {
+      "name": "Security Audit",
+      "status": "success",
+      "duration": 734,
+      "critical": true
+    },
+    {
+      "name": "Performance Optimization",
+      "status": "success",
+      "duration": 37,
+      "critical": false
+    },
+    {
+      "name": "Build Test",
+      "status": "failed",
+      "duration": 0,
+      "critical": true,
+      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: next: not found\n"
+    },
+    {
+      "name": "Linting",
+      "status": "failed",
+      "duration": 0,
+      "critical": false,
+      "error": "Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: eslint: not found\n"
+    },
+    {
+      "name": "Type Check",
+      "status": "failed",
+      "duration": 0,
+      "critical": false,
+      "error": "Command failed: npm run type-check\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: tsc: not found\n"
+    }
   ],
-  "nextSteps: [
-    Review the comprehensive automation report",
-    "Address any critical errors identified,
-    Implement recommended optimizations",
-    "Set up monitoring for production environment,
-    Schedule regular automation runs",
-    "Document any custom automation workflows"
-  ]
+  "status": "failed"
 }

@@ -9,8 +9,7 @@ export default function Login() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  };
-
+  }
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -23,15 +22,13 @@ export default function Login() {
       ...prev,
       [name]: type === 'checkbox' ? checked : value
     }));
-  };
-
+  }
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle login logic here
     console.log('Login attempt:', formData);
     alert('Login functionality will be implemented with authentication system.');
-  };
-
+  }
   return (
     <>
       <Head>
@@ -89,7 +86,7 @@ export default function Login() {
                     background: 'rgba(255, 255, 255, 0.1)',
                     color: 'white',
                     fontSize: '1rem'
-                  }}
+                  }
                   placeholder="Enter your email"
                 />
               </div>
@@ -112,7 +109,7 @@ export default function Login() {
                     background: 'rgba(255, 255, 255, 0.1)',
                     color: 'white',
                     fontSize: '1rem'
-                  }}
+                  }
                   placeholder="Enter your password"
                 />
               </div>
@@ -124,7 +121,7 @@ export default function Login() {
                     name="rememberMe"
                     checked={formData.rememberMe}
                     onChange={handleInputChange}
-                    style={{ width: 16, height: 16 }}
+                    style={{ width: 16, height: 16 }
                   />
                   <span style={{ fontSize: '0.9rem' }}>Remember me</span>
                 </label>
@@ -151,13 +148,13 @@ export default function Login() {
                   cursor: 'pointer',
                   transition: 'transform 0.3s ease',
                   marginBottom: 20
-                }}
+                }
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-2px)';
-                }}
+                }
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = 'translateY(0)';
-                }}
+                }
               >
                 Sign In
               </button>

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-04T02:34:38.708Z",
+  "timestamp": "2025-09-04T02:29:59.554Z",
   "files": {
     "components/Breadcrumb.tsx": {
       "path": "components/Breadcrumb.tsx",
@@ -9,13 +9,13 @@
     },
     "components/ContactForm.tsx": {
       "path": "components/ContactForm.tsx",
-      "lines": 197,
+      "lines": 192,
       "issues": [],
       "complexity": 0
     },
     "components/ErrorBoundary.tsx": {
       "path": "components/ErrorBoundary.tsx",
-      "lines": 81,
+      "lines": 68,
       "issues": [],
       "complexity": 4
     },
@@ -45,19 +45,19 @@
     },
     "components/OptimizedImage.tsx": {
       "path": "components/OptimizedImage.tsx",
-      "lines": 37,
+      "lines": 36,
       "issues": [],
       "complexity": 4
     },
     "components/PerformanceMonitor.tsx": {
       "path": "components/PerformanceMonitor.tsx",
-      "lines": 105,
+      "lines": 94,
       "issues": [],
       "complexity": 14
     },
     "components/PerformanceOptimizer.tsx": {
       "path": "components/PerformanceOptimizer.tsx",
-      "lines": 57,
+      "lines": 54,
       "issues": [],
       "complexity": 2
     },
@@ -75,55 +75,55 @@
     },
     "components/extracted/ServiceCard.tsx": {
       "path": "components/extracted/ServiceCard.tsx",
-      "lines": 38,
+      "lines": 37,
       "issues": [],
       "complexity": 1
     },
     "components/layout/Footer.tsx": {
       "path": "components/layout/Footer.tsx",
-      "lines": 123,
+      "lines": 121,
       "issues": [],
       "complexity": 0
     },
     "components/layout/Header.tsx": {
       "path": "components/layout/Header.tsx",
-      "lines": 92,
+      "lines": 91,
       "issues": [],
       "complexity": 1
     },
     "components/layout/Layout.tsx": {
       "path": "components/layout/Layout.tsx",
-      "lines": 98,
+      "lines": 97,
       "issues": [],
       "complexity": 5
     },
     "components/sections/ContactSection.tsx": {
       "path": "components/sections/ContactSection.tsx",
-      "lines": 167,
+      "lines": 166,
       "issues": [],
       "complexity": 0
     },
     "components/sections/HeroSection.tsx": {
       "path": "components/sections/HeroSection.tsx",
-      "lines": 82,
+      "lines": 81,
       "issues": [],
       "complexity": 0
     },
     "components/sections/ServicesSection.tsx": {
       "path": "components/sections/ServicesSection.tsx",
-      "lines": 128,
+      "lines": 127,
       "issues": [],
       "complexity": 0
     },
     "components/ui/Button.tsx": {
       "path": "components/ui/Button.tsx",
-      "lines": 41,
+      "lines": 39,
       "issues": [],
       "complexity": 2
     },
     "components/ui/ErrorBoundary.tsx": {
       "path": "components/ui/ErrorBoundary.tsx",
-      "lines": 88,
+      "lines": 82,
       "issues": [],
       "complexity": 4
     },
@@ -212,7 +212,7 @@
     },
     "pages/cookies.tsx": {
       "path": "pages/cookies.tsx",
-      "lines": 279,
+      "lines": 278,
       "issues": [
         {
           "rule": "Duplicate Code",
@@ -260,7 +260,7 @@
     },
     "pages/help.tsx": {
       "path": "pages/help.tsx",
-      "lines": 316,
+      "lines": 315,
       "issues": [
         {
           "rule": "Duplicate Code",
@@ -295,7 +295,7 @@
     },
     "pages/login.tsx": {
       "path": "pages/login.tsx",
-      "lines": 205,
+      "lines": 201,
       "issues": [
         {
           "rule": "Duplicate Code",
@@ -307,7 +307,7 @@
     },
     "pages/marketplace.tsx": {
       "path": "pages/marketplace.tsx",
-      "lines": 339,
+      "lines": 338,
       "issues": [
         {
           "rule": "Duplicate Code",
@@ -360,7 +360,7 @@
     },
     "pages/pricing.tsx": {
       "path": "pages/pricing.tsx",
-      "lines": 219,
+      "lines": 218,
       "issues": [],
       "complexity": 0
     },
@@ -378,7 +378,7 @@
     },
     "pages/request-quote.tsx": {
       "path": "pages/request-quote.tsx",
-      "lines": 471,
+      "lines": 470,
       "issues": [
         {
           "rule": "Duplicate Code",
@@ -402,13 +402,13 @@
     },
     "pages/schedule-demo.tsx": {
       "path": "pages/schedule-demo.tsx",
-      "lines": 261,
+      "lines": 259,
       "issues": [],
       "complexity": 0
     },
     "pages/security.tsx": {
       "path": "pages/security.tsx",
-      "lines": 283,
+      "lines": 282,
       "issues": [
         {
           "rule": "Duplicate Code",
@@ -426,7 +426,7 @@
     },
     "pages/services-comparison.tsx": {
       "path": "pages/services-comparison.tsx",
-      "lines": 233,
+      "lines": 232,
       "issues": [
         {
           "rule": "Duplicate Code",
@@ -438,13 +438,13 @@
     },
     "pages/services-overview.tsx": {
       "path": "pages/services-overview.tsx",
-      "lines": 169,
+      "lines": 168,
       "issues": [],
       "complexity": 0
     },
     "pages/services.tsx": {
       "path": "pages/services.tsx",
-      "lines": 1783,
+      "lines": 1782,
       "issues": [
         {
           "rule": "File Length",
@@ -461,7 +461,7 @@
     },
     "pages/signup.tsx": {
       "path": "pages/signup.tsx",
-      "lines": 356,
+      "lines": 352,
       "issues": [
         {
           "rule": "Duplicate Code",
@@ -473,7 +473,7 @@
     },
     "pages/sitemap.tsx": {
       "path": "pages/sitemap.tsx",
-      "lines": 155,
+      "lines": 154,
       "issues": [],
       "complexity": 0
     },
@@ -485,7 +485,7 @@
     },
     "pages/status.tsx": {
       "path": "pages/status.tsx",
-      "lines": 282,
+      "lines": 275,
       "issues": [
         {
           "rule": "Duplicate Code",
@@ -497,7 +497,7 @@
     },
     "pages/team.tsx": {
       "path": "pages/team.tsx",
-      "lines": 270,
+      "lines": 269,
       "issues": [
         {
           "rule": "Duplicate Code",
@@ -521,13 +521,13 @@
     },
     "pages/docs/api-overview.tsx": {
       "path": "pages/docs/api-overview.tsx",
-      "lines": 159,
+      "lines": 158,
       "issues": [],
       "complexity": 0
     },
     "pages/docs/authentication.tsx": {
       "path": "pages/docs/authentication.tsx",
-      "lines": 224,
+      "lines": 223,
       "issues": [
         {
           "rule": "Duplicate Code",
@@ -539,7 +539,7 @@
     },
     "pages/docs/first-steps.tsx": {
       "path": "pages/docs/first-steps.tsx",
-      "lines": 285,
+      "lines": 284,
       "issues": [
         {
           "rule": "Duplicate Code",
@@ -551,7 +551,7 @@
     },
     "pages/docs/getting-started.tsx": {
       "path": "pages/docs/getting-started.tsx",
-      "lines": 144,
+      "lines": 143,
       "issues": [],
       "complexity": 0
     },
@@ -563,7 +563,7 @@
     },
     "lib/utils.ts": {
       "path": "lib/utils.ts",
-      "lines": 44,
+      "lines": 41,
       "issues": [],
       "complexity": 2
     },
@@ -582,7 +582,7 @@
   },
   "summary": {
     "totalFiles": 69,
-    "totalLines": 16855,
+    "totalLines": 16771,
     "averageComplexity": "1.43",
     "issues": [
       {
