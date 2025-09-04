@@ -4,13 +4,12 @@
     "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
-    "moduleResolution": "Bundler",
+    "moduleResolution": "bundler",
     "jsx": "react-jsx",
     "strict": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
-    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "incremental": false,
@@ -18,66 +17,18 @@
     "noEmit": true
   },
   "include": [
-<<<<<<< HEAD
     "next-env.d.ts",
-    ".next/types/**/*.ts",
-    "components/**/*.ts",
-    "components/**/*.tsx",
-    "lib/**/*.ts",
-    "lib/**/*.tsx",
-    "pages/**/*.ts",
-    "pages/**/*.tsx",
     "src/**/*.ts",
     "src/**/*.tsx",
-=======
-<<<<<<< HEAD
-    "next-env.d.ts",
-    ".next/types/**/*.ts",
-    "lib/**/*",
-    "hooks/**/*",
-    "styles/**/*",
-    "automation/**/*.ts",
     "scripts/**/*.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "**/*.d.ts",
->>>>>>> merge-all-prs-20250904-105408
+    "automation/**/*.ts",
     "types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
-<<<<<<< HEAD
-    "dist",
-    "data_backup/**",
-    "src.corrupted/**",
-    "src/data/**",
-    "src/**",
-    "utils/next-link-shim.tsx",
-    "playwright.config.ts",
-=======
     ".next",
     "out",
     "dist",
-=======
-    "src/**/*",
-    "pages/**/*",
-    "components/**/*.ts",
-    "components/**/*.tsx",
-    "data/services.ts",
-    "styles/**/*",
-    "types/**/*",
-    "utils/**/*",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules",
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-f8ab
->>>>>>> merge-all-prs-20250904-105408
-    "api-backup",
-    "api-disabled",
-    "api.disabled.temp",
     "pages.disabled",
     "backup-pages",
     "automation/**",
@@ -93,53 +44,9 @@
     "data",
     "data/**",
     "cypress",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> merge-all-prs-20250904-105408
     "temp_working",
     "supabase/functions",
     "**/*.backup",
-    "**/*.disabled",
-    "cypress_backup",
-    "contracts_backup",
-    "data_backup",
-    "fix_utils_files.ts",
-    "hooks/useResponsive.ts",
-    "lib_backup",
-    "pages-backup",
-    "pages.__backup",
-    "server",
-    "services",
-    "src.broken",
-    "temp_working",
-    "supabase/functions",
-    "temp_backup",
-    "temp_backup/**",
-    "temp_broken_components",
-    "temp_broken_components/**",
-<<<<<<< HEAD
-    "src.corrupted/**"
-=======
-    "src.corrupted/**",
-    "scripts/**",
-    "automation/**",
-    "tests/**",
-    "**/*.js",
-    "**/*.cjs"
-=======
-    "**/*.backup",
-    "**/*.disabled",
-    "temp_working",
-    "supabase/functions",
-    "**/*.test.ts",
-    "**/*.test.tsx",
-    "**/*.spec.ts",
-    "**/*.spec.tsx",
-    ".next",
-    "out",
-    "dist"
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-f8ab
->>>>>>> merge-all-prs-20250904-105408
+    "**/*.disabled"
   ]
 }

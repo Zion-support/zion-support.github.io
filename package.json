@@ -249,7 +249,7 @@
     "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1"
   },
   "devDependencies": {
-    "@esbuild/linux-x64": "^0.25.9",
+    "@esbuild/linux-x64": "^0.21.5",
     "@next/bundle-analyzer": "^15.5.2",
     "@rollup/rollup-linux-x64-gnu": "^4.49.0",
     "@types/node": "^20.8.10",
