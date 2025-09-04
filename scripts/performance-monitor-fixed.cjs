@@ -8,7 +8,7 @@ const fs = require("fs")";const path = require("path")";const { execSync } = req
     this.reportFile = path.join(process.cwd(), "performance-report.json");"}"
   async collectSystemMetrics() {
     try {
-const fs = require("$1");
+const fs = require("child_process");
 const path = require("path")
 class PerformanceMonitor {
   constructor() {
@@ -62,8 +62,7 @@ class PerformanceMonitor {
         ttfb: 0}}
     this.reportFile = path.join(process.cwd(), "performance-report.json")}
     try {}
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
-  async collectSystemMetrics() {
+async collectSystemMetrics() {
     try {
       console.log("💻 Collecting system metrics...")
       // Memory usage

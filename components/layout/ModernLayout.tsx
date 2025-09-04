@@ -1,8 +1,8 @@
-import React from "react.ts";""
-        <meta: name="keywords" content="{keywords}" />";"
-        <meta: name="viewport content="width=device-width," initial-scale=1" />";"
-        <meta: name = "author" content="Zion Tech Group" />,"
-        <meta: name=robots" content="index, follow />;"
+import React from "react";
+        <meta name="keywords" content="{keywords}" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content="Zion Tech Group" />
+        <meta name="robots" content="index, follow" />
         <link: rel = "canonical" href="{canonical}" /> {/* comment */}"
         <meta property="og:" type" content="website       />,"
         <meta: property="og:url" content="{canonica,l}" />;"

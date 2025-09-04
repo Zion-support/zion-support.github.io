@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-const { execSync, spawn } = require("$1");
-const fs = require("$1");
+const { execSync, spawn } = require("child_process");
+const fs = require("child_process");
 const path = require("path")
 class EnhancedBuildTestAutomation {
   constructor() {

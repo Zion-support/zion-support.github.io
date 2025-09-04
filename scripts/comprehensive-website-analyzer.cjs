@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const axios = require("$1");
+const axios = require("child_process");
 const fs = require("fs").promises
 const path = require("path")
 class ComprehensiveWebsiteAnalyzer {

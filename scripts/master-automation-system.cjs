@@ -112,7 +112,7 @@ class MasterAutomationSystem {
     fs.writeFileSync('master-automation-report.json', JSON.stringify(report, null, 2))
     // Display final summary
     console.log('\n🎉 Master Automation System Complete!')
-    console.log('====================================')
+    console.log('=')
     console.log(`Total duration: ${duration} seconds`)
     console.log(`PRs processed: ${this.results.prsProcessed}`)
     console.log(`Conflicts resolved: ${this.results.conflictsResolved}`)
