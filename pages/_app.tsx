@@ -6,9 +6,8 @@ import PerformanceMonitor from '../components/PerformanceMonitor';
 import Sidebar from '../components/Sidebar';
 import '../styles/globals.css';
 
-function Header(): any {
+function Header({ onSidebarOpen }: { onSidebarOpen: () => void }): any {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
     <header style={{
@@ -22,7 +21,7 @@ function Header(): any {
         <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
           {/* Sidebar Toggle Button */}
           <button 
-            onClick={() => setSidebarOpen(true)}
+            onClick={onSidebarOpen}
             style={{ 
               background: 'none', 
               border: 'none', 
@@ -116,7 +115,7 @@ function Header(): any {
             }} onClick={() => setMobileMenuOpen(false)}>Contact</Link>
           </div>
         </div>
-      )}
+      </div>
     </header>
   );
 }
@@ -239,10 +238,13 @@ function Footer(): any {
 }
 
 export default function App({ Component, pageProps }: AppProps) {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
   return (
     <ErrorBoundary>
       <PerformanceMonitor />
-      <Header />
+      <Header onSidebarOpen={() => setSidebarOpen(true)} />
+      <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
       <Component {...pageProps} />
       <Footer />
     </ErrorBoundary>

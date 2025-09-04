@@ -1,6 +1,6 @@
 {
-  "timestamp": "2025-09-03T21:22:52.907Z",
-  "status": "healthy",
+<<<<<<< HEAD
+  "timestamp": "2025-09-03T17:32:53.642Z",
   "checks": {
     "Node.js Version": {
       "status": "passed",
@@ -37,5 +37,14 @@
     "passed": 6,
     "failed": 0,
     "warnings": 1
+=======
+  "timestamp": "2025-09-03T21:22:52.907Z",
+  "status": "healthy",
+  "checks": {
+    "packageJson": true,
+    "buildDir": false,
+    "dependencies": true,
+    "criticalFiles": true
+>>>>>>> origin/main
   }
 }
