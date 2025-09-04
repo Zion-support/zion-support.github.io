@@ -1,21 +1,23 @@
-import React from "react";
 import Head from "next/head";
+import { ReactNode } from "react";
 
 type ModernLayoutProps = {
-  children: React.ReactNode;
+  children: ReactNode;
   title?: string;
   description?: string;
   keywords?: string;
   canonical?: string;
 };
 
-const ModernLayout: React.FC<ModernLayoutProps> = ({
+const ModernLayout = ({
   children,
-  title = "Zion Tech Group — Micro SaaS, IT and AI Services",
-  description = "Micro SaaS services, IT solutions, and AI platforms to accelerate your roadmap.",
-  keywords = "Micro SaaS, AI services, IT solutions, cloud, cybersecurity, RAG, copilots",
+  title = "Zion Tech Group - Revolutionary AI Services & IT Solutions",
+  description =
+    "Leading provider of AI services, IT solutions, and micro SaaS development. Transform your business with cutting-edge technology.",
+  keywords =
+    "AI services, IT solutions, micro SaaS, digital transformation, cloud computing, cybersecurity",
   canonical,
-}) => {
+}: ModernLayoutProps) => {
   return (
     <>
       <Head>
@@ -25,16 +27,23 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="Zion Tech Group" />
         <meta name="robots" content="index, follow" />
-        {canonical && <link rel="canonical" href={canonical} />}
+        {canonical ? <link rel="canonical" href={canonical} /> : null}
+
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonical || "https://ziontechgroup.com"} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:site_name" content="Zion Tech Group" />
+
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
+
         <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
       </Head>
       <div className="min-h-screen bg-white text-gray-900">
         {children}
@@ -44,4 +53,3 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
 };
 
 export default ModernLayout;
-

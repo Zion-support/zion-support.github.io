@@ -2,56 +2,50 @@
   "compilerOptions": {
     "target": "ES2020",
     "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable"
+    ],
     "module": "ESNext",
     "moduleResolution": "bundler",
-    "jsx": "react-jsx",
+    "jsx": "preserve",
     "strict": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
-<<<<<<< HEAD
-    "paths": {
-      "@/*": ["src/*"]
-    },
-=======
->>>>>>> pr-11559
     "resolveJsonModule": true,
     "isolatedModules": true,
     "incremental": false,
     "baseUrl": ".",
-    "noEmit": true
+    "noEmit": true,
+    "allowJs": true
   },
   "include": [
     "next-env.d.ts",
-<<<<<<< HEAD
     ".next/types/**/*.ts",
-=======
+    "components/**/*.ts",
+    "components/**/*.tsx",
+    "lib/**/*.ts",
+    "lib/**/*.tsx",
+    "pages/**/*.ts",
+    "pages/**/*.tsx",
     "src/**/*.ts",
     "src/**/*.tsx",
-    "scripts/**/*.ts",
-    "automation/**/*.ts",
->>>>>>> pr-11559
     "types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
-    ".next",
-    "out",
     "dist",
-<<<<<<< HEAD
     "data_backup/**",
     "src.corrupted/**",
-    "pages/**",
-    "components/**",
+    "src/data/**",
     "src/**",
     "utils/next-link-shim.tsx",
     "playwright.config.ts",
     "api-backup",
     "api-disabled",
     "api.disabled.temp",
-=======
->>>>>>> pr-11559
     "pages.disabled",
     "backup-pages",
     "automation/**",
@@ -70,6 +64,24 @@
     "temp_working",
     "supabase/functions",
     "**/*.backup",
-    "**/*.disabled"
+    "**/*.disabled",
+    "cypress_backup",
+    "contracts_backup",
+    "data_backup",
+    "fix_utils_files.ts",
+    "hooks/useResponsive.ts",
+    "lib_backup",
+    "pages-backup",
+    "pages.__backup",
+    "server",
+    "services",
+    "src.broken",
+    "temp_working",
+    "supabase/functions",
+    "temp_backup",
+    "temp_backup/**",
+    "temp_broken_components",
+    "temp_broken_components/**",
+    "src.corrupted/**"
   ]
 }
