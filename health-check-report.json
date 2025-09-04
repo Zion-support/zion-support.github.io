@@ -1,29 +1,47 @@
 {
-  "timestamp": "2025-09-04T02:10:00.461Z",
-  "checks": {
-    "packageJson": {
-      "status": "ok",
-      "message": "Package.json found",
-      "version": "0.1.0"
+  "timestamp": "2025-09-03T23:23:47.106Z",
+  "status": "warning",
+  "checks": [
+    {
+      "name": "Node.js Version",
+      "status": "pass",
+      "value": "v22.16.0",
+      "message": "Node.js version is compatible"
     },
-    "dependencies": {
-      "status": "ok",
-      "message": "Dependencies installed"
+    {
+      "name": "Package.json",
+      "status": "pass",
+      "value": "ziontechgroup.com",
+      "message": "Package.json found and valid"
     },
-    "diskSpace": {
-      "status": "ok",
-      "message": "Disk space available",
-      "details": "overlay         126G   14G  106G  12% /"
+    {
+      "name": "Dependencies",
+      "status": "pass",
+      "message": "Node modules directory exists"
     },
-    "memory": {
-      "status": "ok",
-      "message": "Memory check completed",
-      "details": "Mem:            15Gi       2.3Gi       752Mi        10Mi        12Gi        13Gi"
+    {
+      "name": "Next.js Config",
+      "status": "pass",
+      "message": "Next.js configuration found"
     },
-    "build": {
-      "status": "ok",
-      "message": "Build directory found"
+    {
+      "name": "TypeScript Config",
+      "status": "pass",
+      "message": "TypeScript configuration found"
+    },
+    {
+      "name": "Source Files",
+      "status": "pass",
+      "message": "Source directory found"
+    },
+    {
+      "name": "Environment Variables",
+      "status": "warn",
+      "message": "Environment file not found, but example exists"
     }
-  },
-  "status": "healthy"
+  ],
+  "issues": [],
+  "recommendations": [
+    "Copy .env.example to .env.local and configure"
+  ]
 }

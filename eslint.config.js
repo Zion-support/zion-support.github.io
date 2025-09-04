@@ -163,11 +163,6 @@ export default [
 
       // Root-level noisy files
       'api/**',
-      '*.js',
-      '.*.js',
-      '*.ts',
-      '*.tsx',
-      '*.jsx',
       'jest.config.*',
       'fix-*.js',
       'fix-*.jsx',
