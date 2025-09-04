@@ -17,14 +17,6 @@ const EnhancedNavigation: React.FC = () => {
     <nav className="bg-white shadow-lg">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
-<<<<<<< HEAD
-          <div className="text-xl font-bold text-gray-800">Logo</div>
-          <div className="hidden md:flex space-x-8">
-            <Link href="/"><span className="text-gray-600 hover:text-gray-900">Home</span></Link>
-            <Link href="/services"><span className="text-gray-600 hover:text-gray-900">Services</span></Link>
-            <Link href="/about"><span className="text-gray-600 hover:text-gray-900">About</span></Link>
-            <Link href="/contact"><span className="text-gray-600 hover:text-gray-900">Contact</span></Link>
-=======
           <Link href="/" className="text-2xl font-bold text-gray-800">
             Zion Tech Group
           </Link>
@@ -66,7 +58,6 @@ const EnhancedNavigation: React.FC = () => {
             <Link href="/contact">
               <span className="text-gray-600 hover:text-blue-600 transition-colors">Contact</span>
             </Link>
->>>>>>> 86e2a4cca918c6ff376b51aa8638f7a375ebfe57
           </div>
 
           <div className="hidden lg:block">
