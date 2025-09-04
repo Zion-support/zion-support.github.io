@@ -1,9 +1,3 @@
-<<<<<<< HEAD:pages/careers.tsx
-import type { NextPage } from 'next';
-import Layout from '../components/Layout';
-import Link from 'next/link';
-import { Users, Briefcase, Heart, Zap, CheckCircle } from 'lucide-react';
-=======
 import type { NextPage } from,
   next';
 import Layout from
@@ -12,7 +6,6 @@ import Link from
   'next/link';
 import { Users, Briefcase, Heart, Zap, CheckCircle } from
   'lucide-react';
->>>>>>> origin/main:pages.disabled_auto/careers.tsx
 
 const Careers: NextPage = () => {
   return (

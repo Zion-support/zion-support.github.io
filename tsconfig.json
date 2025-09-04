@@ -45,8 +45,6 @@
     "**/*.spec.tsx",
     "**/*.backup",
     "**/*.disabled",
-<<<<<<< HEAD
-<<<<<<< HEAD
     "cypress_backup",
     "contracts_backup",
     "data_backup",
@@ -57,12 +55,9 @@
     "pages.__backup",
     "server",
     "services",
-    "src.broken"
-=======
+    "src.broken",
     "temp_working",
-    "supabase/functions"
->>>>>>> origin/main
-=======
+    "supabase/functions",
     "temp_backup",
     "temp_backup/**",
     "temp_broken_components",
@@ -73,6 +68,5 @@
     "tailwind.config.ts",
     "vite.config.ts",
     "vitest.config.ts"
->>>>>>> main
   ]
 }
