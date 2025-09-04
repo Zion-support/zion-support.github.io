@@ -9,7 +9,7 @@ export default function AIServices() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  };
+  }
   const aiServices = [
     {
       icon: Brain,
@@ -828,199 +828,265 @@ export default function AIServices() {
     {
       icon: Brain,
       name: 'AI-Powered Drug Discovery Platform',
-      description: 'Advanced AI platform for pharmaceutical research, drug discovery, and molecular analysis using deep learning.',
+      description: 'Advanced AI platform for pharmaceutical research, drug discovery, and molecular design using deep learning.',
       features: [
-        'Molecular structure prediction and analysis',
+        'Molecular structure prediction and optimization',
         'Drug-target interaction modeling',
-        'Side effect prediction and assessment',
+        'ADMET property prediction',
+        'Synthetic pathway design',
         'Clinical trial optimization',
-        'Biomarker discovery and validation',
-        'Regulatory compliance and documentation'
+        'Patent landscape analysis'
       ],
-      pricing: '$50,000 – $500,000 project',
+      pricing: '$15,000 – $100,000/project',
       perUnit: 'Custom pricing based on research scope',
-      timeline: '12–24 weeks',
+      timeline: '8–16 weeks',
       benefits: [
-        '60% faster drug discovery process',
-        'Reduced research and development costs',
+        '50% reduction in drug discovery time',
         'Improved success rates in clinical trials',
-        'Enhanced drug safety profiles'
+        'Cost-effective molecular design',
+        'Accelerated pharmaceutical innovation'
       ]
     },
     {
       icon: Eye,
       name: 'AI-Powered Medical Imaging Analysis',
-      description: 'Advanced computer vision for medical imaging diagnosis, radiology, and pathology analysis.',
+      description: 'Advanced medical image analysis using computer vision for radiology, pathology, and diagnostic imaging.',
       features: [
         'Radiology image analysis and diagnosis',
         'Pathology slide examination',
         'Tumor detection and classification',
-        'Medical image enhancement and processing',
-        'Diagnostic report generation',
-        'Integration with medical systems'
+        'Medical image enhancement',
+        'Automated report generation',
+        'Integration with PACS systems'
       ],
-      pricing: '$25,000 – $150,000 setup',
+      pricing: '$8,000 – $50,000/setup',
       perUnit: '$0.50 – $5.00 per image',
-      timeline: '8–16 weeks',
+      timeline: '6–12 weeks',
       benefits: [
         '95% accuracy in medical diagnosis',
         'Faster diagnostic turnaround times',
-        'Reduced human error in analysis',
+        'Reduced radiologist workload',
         'Improved patient outcomes'
       ]
     },
     {
       icon: TrendingUp,
-      name: 'AI-Powered Financial Trading Algorithm',
-      description: 'Sophisticated AI trading algorithms for automated investment strategies and risk management.',
+      name: 'AI-Powered Climate Change Modeling',
+      description: 'Advanced climate modeling and environmental impact analysis using machine learning and big data.',
       features: [
-        'Algorithmic trading strategy development',
-        'Real-time market analysis and prediction',
-        'Risk assessment and portfolio optimization',
-        'High-frequency trading capabilities',
-        'Backtesting and performance analysis',
-        'Regulatory compliance and reporting'
+        'Climate change prediction and modeling',
+        'Carbon footprint analysis and optimization',
+        'Environmental impact assessment',
+        'Renewable energy optimization',
+        'Disaster risk prediction',
+        'Sustainability reporting automation'
       ],
-      pricing: '$100,000 – $1,000,000 setup',
-      perUnit: 'Performance-based fees (10-20% of profits)',
-      timeline: '16–32 weeks',
-      benefits: [
-        'Superior risk-adjusted returns',
-        '24/7 automated trading',
-        'Reduced emotional trading decisions',
-        'Advanced market analysis capabilities'
-      ]
-    },
-    {
-      icon: Shield,
-      name: 'AI-Powered Cybersecurity Threat Intelligence',
-      description: 'Advanced AI system for real-time threat detection, analysis, and automated response.',
-      features: [
-        'Real-time threat detection and analysis',
-        'Behavioral anomaly identification',
-        'Automated incident response',
-        'Threat intelligence gathering',
-        'Vulnerability assessment and prioritization',
-        'Security orchestration and automation'
-      ],
-      pricing: '$15,000 – $100,000 setup',
-      perUnit: '$0.10 – $1.00 per event',
+      pricing: '$10,000 – $75,000/project',
+      perUnit: 'Custom pricing based on data complexity',
       timeline: '8–16 weeks',
       benefits: [
-        '99.9% threat detection accuracy',
-        'Real-time automated response',
-        'Reduced security incident impact',
-        'Enhanced security posture'
-      ]
-    },
-    {
-      icon: FileText,
-      name: 'AI-Powered Legal Document Analysis',
-      description: 'Advanced AI for legal document review, contract analysis, and compliance monitoring.',
-      features: [
-        'Contract analysis and risk assessment',
-        'Legal document review and summarization',
-        'Compliance monitoring and reporting',
-        'Due diligence automation',
-        'Legal research and case law analysis',
-        'Document generation and templating'
-      ],
-      pricing: '$10,000 – $75,000 setup',
-      perUnit: '$0.25 – $2.50 per document',
-      timeline: '6–12 weeks',
-      benefits: [
-        '90% reduction in document review time',
-        'Improved accuracy in legal analysis',
-        'Automated compliance monitoring',
-        'Reduced legal costs and risks'
-      ]
-    },
-    {
-      icon: Mic,
-      name: 'AI-Powered Real-Time Translation',
-      description: 'Advanced real-time translation system with voice recognition and natural language processing.',
-      features: [
-        'Real-time voice translation',
-        'Multi-language support (100+ languages)',
-        'Context-aware translation',
-        'Offline translation capabilities',
-        'Custom domain adaptation',
-        'Integration with communication platforms'
-      ],
-      pricing: '$5,000 – $30,000 setup',
-      perUnit: '$0.01 – $0.10 per minute',
-      timeline: '4–8 weeks',
-      benefits: [
-        '95% translation accuracy',
-        'Real-time communication support',
-        'Multi-language business expansion',
-        'Enhanced global collaboration'
+        'Accurate climate predictions',
+        'Optimized environmental strategies',
+        'Reduced carbon emissions',
+        'Data-driven sustainability decisions'
       ]
     },
     {
       icon: Database,
-      name: 'AI-Powered Supply Chain Optimization',
-      description: 'Intelligent supply chain management with demand forecasting, inventory optimization, and logistics planning.',
+      name: 'AI-Powered Data Fabric Platform',
+      description: 'Intelligent data integration and management platform that automatically connects and harmonizes data sources.',
       features: [
-        'Demand forecasting and planning',
-        'Inventory optimization and management',
-        'Logistics route optimization',
-        'Supplier risk assessment',
-        'Supply chain visibility and tracking',
-        'Automated decision making'
+        'Automated data discovery and cataloging',
+        'Intelligent data lineage tracking',
+        'Real-time data quality monitoring',
+        'Automated data transformation',
+        'Privacy-preserving data sharing',
+        'Self-service data analytics'
       ],
-      pricing: '$20,000 – $150,000 setup',
-      perUnit: '$0.05 – $0.50 per transaction',
-      timeline: '8–16 weeks',
+      pricing: '$5,000 – $30,000/setup',
+      perUnit: '$0.10 – $1.00 per GB processed',
+      timeline: '6–12 weeks',
       benefits: [
-        '30% reduction in supply chain costs',
-        'Improved inventory turnover',
-        'Enhanced supply chain resilience',
-        'Optimized logistics operations'
+        '90% reduction in data integration time',
+        'Improved data quality and consistency',
+        'Automated data governance',
+        'Enhanced data accessibility'
+      ]
+    },
+    {
+      icon: Code,
+      name: 'AI-Powered Code Generation Platform',
+      description: 'Advanced AI platform that generates, optimizes, and maintains code across multiple programming languages.',
+      features: [
+        'Natural language to code generation',
+        'Code optimization and refactoring',
+        'Automated bug detection and fixing',
+        'Test case generation',
+        'Documentation generation',
+        'Multi-language support'
+      ],
+      pricing: '$3,000 – $20,000/setup',
+      perUnit: '$0.05 – $0.50 per line of code',
+      timeline: '4–8 weeks',
+      benefits: [
+        '80% faster development cycles',
+        'Improved code quality and consistency',
+        'Reduced development costs',
+        'Automated testing and documentation'
+      ]
+    },
+    {
+      icon: Mic,
+      name: 'AI-Powered Voice Analytics Platform',
+      description: 'Advanced voice analysis platform for emotion detection, sentiment analysis, and voice biometrics.',
+      features: [
+        'Real-time emotion and sentiment analysis',
+        'Voice biometric authentication',
+        'Speaker identification and verification',
+        'Voice quality assessment',
+        'Conversation analytics',
+        'Multi-language voice processing'
+      ],
+      pricing: '$4,000 – $25,000/setup',
+      perUnit: '$0.02 – $0.20 per minute',
+      timeline: '4–8 weeks',
+      benefits: [
+        '95% accuracy in emotion detection',
+        'Enhanced security with voice biometrics',
+        'Improved customer experience insights',
+        'Automated voice quality monitoring'
+      ]
+    },
+    {
+      icon: Shield,
+      name: 'AI-Powered Cybersecurity Threat Hunter',
+      description: 'Advanced AI system for proactive threat hunting, incident response, and security orchestration.',
+      features: [
+        'Proactive threat hunting and detection',
+        'Automated incident response',
+        'Behavioral anomaly detection',
+        'Threat intelligence correlation',
+        'Security orchestration and automation',
+        'Zero-day vulnerability detection'
+      ],
+      pricing: '$8,000 – $50,000/setup',
+      perUnit: '$0.10 – $1.00 per event analyzed',
+      timeline: '6–12 weeks',
+      benefits: [
+        '99.9% threat detection accuracy',
+        'Automated incident response',
+        'Reduced security analyst workload',
+        'Proactive threat prevention'
+      ]
+    },
+    {
+      icon: FileText,
+      name: 'AI-Powered Scientific Research Assistant',
+      description: 'Intelligent research platform that accelerates scientific discovery through automated literature review and hypothesis generation.',
+      features: [
+        'Automated literature review and synthesis',
+        'Hypothesis generation and testing',
+        'Research paper analysis and summarization',
+        'Citation network analysis',
+        'Research gap identification',
+        'Collaborative research tools'
+      ],
+      pricing: '$5,000 – $30,000/setup',
+      perUnit: '$0.50 – $5.00 per paper analyzed',
+      timeline: '6–10 weeks',
+      benefits: [
+        '70% faster literature reviews',
+        'Improved research quality',
+        'Automated hypothesis generation',
+        'Enhanced scientific collaboration'
       ]
     },
     {
       icon: Brain,
-      name: 'AI-Powered Climate Change Modeling',
-      description: 'Advanced AI models for climate prediction, environmental impact assessment, and sustainability planning.',
+      name: 'AI-Powered Autonomous Vehicle Platform',
+      description: 'Advanced AI platform for autonomous vehicle development, testing, and deployment.',
       features: [
-        'Climate change prediction and modeling',
-        'Environmental impact assessment',
-        'Carbon footprint analysis',
-        'Renewable energy optimization',
-        'Sustainability planning and reporting',
-        'Environmental risk assessment'
+        'Computer vision for object detection',
+        'Path planning and navigation',
+        'Sensor fusion and processing',
+        'Simulation and testing environments',
+        'Safety validation and certification',
+        'Fleet management and optimization'
       ],
-      pricing: '$30,000 – $200,000 project',
-      perUnit: 'Custom pricing based on scope',
+      pricing: '$25,000 – $200,000/project',
+      perUnit: 'Custom pricing based on vehicle type',
       timeline: '12–24 weeks',
       benefits: [
-        'Accurate climate predictions',
-        'Improved sustainability planning',
-        'Reduced environmental impact',
-        'Enhanced corporate responsibility'
+        'Enhanced vehicle safety',
+        'Optimized route planning',
+        'Reduced transportation costs',
+        'Improved traffic efficiency'
+      ]
+    },
+    {
+      icon: TrendingUp,
+      name: 'AI-Powered Quantum Computing Simulator',
+      description: 'Advanced quantum computing simulation and optimization platform for complex problem solving.',
+      features: [
+        'Quantum algorithm development and testing',
+        'Quantum circuit optimization',
+        'Quantum error correction',
+        'Quantum machine learning',
+        'Quantum cryptography',
+        'Hybrid classical-quantum computing'
+      ],
+      pricing: '$15,000 – $100,000/project',
+      perUnit: '$1.00 – $10.00 per quantum operation',
+      timeline: '8–16 weeks',
+      benefits: [
+        'Exponential computational speedup',
+        'Advanced optimization capabilities',
+        'Enhanced security with quantum cryptography',
+        'Breakthrough problem-solving potential'
       ]
     },
     {
       icon: Eye,
-      name: 'AI-Powered Autonomous Vehicle Systems',
-      description: 'Advanced AI systems for autonomous vehicle navigation, safety, and fleet management.',
+      name: 'AI-Powered Augmented Reality Platform',
+      description: 'Advanced AR platform with AI-powered object recognition, spatial mapping, and interactive experiences.',
       features: [
-        'Autonomous navigation and path planning',
-        'Object detection and collision avoidance',
-        'Traffic pattern analysis and optimization',
-        'Fleet management and coordination',
-        'Predictive maintenance and diagnostics',
-        'Safety monitoring and compliance'
+        'Real-time object recognition and tracking',
+        'Spatial mapping and localization',
+        'Gesture and voice interaction',
+        '3D content generation',
+        'Multi-user AR experiences',
+        'Cross-platform AR deployment'
       ],
-      pricing: '$100,000 – $1,000,000 project',
-      perUnit: 'Custom pricing based on fleet size',
-      timeline: '24–48 weeks',
+      pricing: '$8,000 – $50,000/setup',
+      perUnit: '$0.10 – $1.00 per AR session',
+      timeline: '6–12 weeks',
       benefits: [
-        'Enhanced vehicle safety',
-        'Reduced transportation costs',
-        'Improved fleet efficiency',
-        'Advanced autonomous capabilities'
+        'Immersive user experiences',
+        'Enhanced training and education',
+        'Improved remote collaboration',
+        'Innovative marketing solutions'
+      ]
+    },
+    {
+      icon: Database,
+      name: 'AI-Powered Edge Computing Platform',
+      description: 'Intelligent edge computing platform that brings AI processing closer to data sources for real-time insights.',
+      features: [
+        'Distributed AI model deployment',
+        'Real-time data processing',
+        'Edge device management',
+        'Federated learning capabilities',
+        'Low-latency inference',
+        'Bandwidth optimization'
+      ],
+      pricing: '$5,000 – $30,000/setup',
+      perUnit: '$0.05 – $0.50 per inference',
+      timeline: '4–8 weeks',
+      benefits: [
+        'Reduced latency and bandwidth usage',
+        'Real-time AI processing',
+        'Improved data privacy',
+        'Enhanced system reliability'
       ]
     }
   ];
