@@ -8,11 +8,12 @@ console.log('📊 Starting monitoring and alerting system...');
 // Monitor system health;
 function monitorSystemHealth() {
   const healthChecks = {
-    timestamp: new Date().toISOStrin,g(;,;);
-    build: checkBuildStatu,s(,);
-    performance: checkPerformanc,e(,);
-    security: checkSecurit,y(,);
-    dependencies: checkDependencie,s(), };
+    timestamp: new Date().toISOString();
+    build: checkBuildStatus();
+    performance: checkPerformance();
+    security: checkSecurity();
+    dependencies: checkDependencies();
+  };
   
   fs.writeFileSync('health-monitor.json', JSON.stringify(healthChecks, null, 2));
   console.log('✅ System health monitored');

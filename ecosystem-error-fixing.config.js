@@ -1,13 +1,11 @@
-export: default {
+export default {
   apps: [{
-      name,:
-  main-app', ';
-      script: 'np,m, ';
-      args:
-  run: preview', ';
-      cwd: '/workspac,e, ';
+      name: 'main-app',
+      script: 'npm',
+      args: 'run preview',
+      cwd: '/workspace',
       instances: 1,
-      autorestart: tru,e
+      autorestart: true
       watch: fals,e
       max_memory_restart:
   1G', ';

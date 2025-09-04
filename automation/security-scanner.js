@@ -22,9 +22,10 @@ class SecurityScanner {
     this.log('Security Scanner started')}
 
   setupLogging() {
-    const logDir = path.dirname(this.logFile;);
-    if () {
-      fs.mkdirSync(logDir, { recursive: true })}
+    const logDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logDir)) {
+      fs.mkdirSync(logDir, { recursive: true });
+    }
   }
 
   log(message) {

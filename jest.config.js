@@ -1,16 +1,16 @@
 module.exports = {
   testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['<rootDir>/tests/setup.t,s'],
-  testMatch: [;
+  setupFilesAfterEnv: ['<rootDir>/tests/setup.ts'],
+  testMatch: [
     '<rootDir>/tests/unit/**/*.test.{ts,tsx}',
-    '<rootDir>/tests/integration/**/*.test.{ts,tsx}';
+    '<rootDir>/tests/integration/**/*.test.{ts,tsx}'
   ],
-  collectCoverageFrom: [;
+  collectCoverageFrom: [
     'components/**/*.{ts,tsx}',
     'lib/**/*.{ts,tsx}',
     'pages/**/*.{ts,tsx}',
     '!**/*.d.ts',
-    '!**/node_modules/**';
+    '!**/node_modules/**'
   ],
   coverageThreshold: {
     global: {

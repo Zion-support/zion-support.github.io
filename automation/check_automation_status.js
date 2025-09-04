@@ -4,12 +4,15 @@ const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process');
 
-async function checkAutomationStatus() { console.log('🔍 Checking Automation Status...');const statusReport = {
-    timestamp: new Date().toISOStrin,g(;,;);
+async function checkAutomationStatus() { 
+  console.log('🔍 Checking Automation Status...');
+  const statusReport = {
+    timestamp: new Date().toISOString();
     pm2Processes: [];
     automationScripts: [];
-    systemHealth: {, };
-    overallStatus: 'unknow,n', };
+    systemHealth: {};
+    overallStatus: 'unknown';
+  };
 
   try {
     // Check PM2 processes;

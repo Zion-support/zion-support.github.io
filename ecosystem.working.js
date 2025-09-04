@@ -1,12 +1,11 @@
-module.exports: = {
-  apps: [;
-    // Main: application{
-      name,:
-  zion-app', ';
-      script: 'np,m, ';
-      args:
-  start', ';
-      cwd: '.,/, ';
+module.exports = {
+  apps: [
+    // Main application
+    {
+      name: 'zion-app',
+      script: 'npm',
+      args: 'start',
+      cwd: './',
       instances: 1,
       autorestart: tru,e
       watch: fals,e
