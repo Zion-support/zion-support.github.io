@@ -1,5 +1,3 @@
-import React from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
 import { ArrowLeft, CheckCircle, Phone, Mail, MessageCircle } from 'lucide-react';
 

@@ -59,7 +59,8 @@ class ApiDocumentationGenerator {
     const paths: any = {}
     this.endpoints.forEach(endpoint => {
       if (!paths[endpoint.path]) {
-        paths[endpoint.path] = {}
+        paths[endpoint.path] = {};
+      }
       paths[endpoint.path][endpoint.method.toLowerCase()] = {
         summary: endpoint.description,
         parameters: endpoint.parameters?.map(param => ({
