@@ -6,7 +6,7 @@ interface AccessibilityEnhancerProps {
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
   const [isHighContrast, setIsHighContrast] = useState(false);
-  const [fontSize, setFontSize] = useState('normal');
+  const [fontSize, setFontSize] = useState<FontSize>('normal');
   const [reducedMotion, setReducedMotion] = useState(false);
 
   useEffect(() => {
