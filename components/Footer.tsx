@@ -55,8 +55,9 @@ const Footer: React.FC = (): JSX.Element => {
             <h3 className="text-white font-semibold mb-4">Services</h3>
             <ul className="space-y-3 text-sm">
               <li><NextLink href="/ai-services" className="text-gray-400 hover:text-white transition-colors">AI Services</NextLink></li>
-              <li><NextLink href="/it-services" className="text-gray-400 hover:text-white transition-colors">IT Solutions</NextLink></li>
+              <li><NextLink href="/it-services" className="text-gray-400 hover:text-white transition-colors">IT Services</NextLink></li>
               <li><NextLink href="/micro-saas" className="text-gray-400 hover:text-white transition-colors">Micro SaaS</NextLink></li>
+              <li><NextLink href="/blockchain-solutions" className="text-gray-400 hover:text-white transition-colors">Blockchain Solutions</NextLink></li>
               <li><NextLink href="/cybersecurity" className="text-gray-400 hover:text-white transition-colors">Cybersecurity</NextLink></li>
               <li><NextLink href="/cloud-services" className="text-gray-400 hover:text-white transition-colors">Cloud Services</NextLink></li>
             </ul>

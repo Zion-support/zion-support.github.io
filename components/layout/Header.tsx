@@ -30,10 +30,23 @@ import {
 import { Button } from '../ui/Button';
 import { Badge } from '../ui/Badge';
 
-  const navigation = [
+
+const Header: React.FC = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const navigationItems = [
     { name: 'Home', href: '/' },
-    { name: 'Solutions', href: '/solutions' },
     { name: 'Services', href: '/services' },
+    { name: 'Solutions', href: '/solutions' },
     { name: 'About', href: '/about' },
     { name: 'Careers', href: '/careers' },
     { name: 'Contact', href: '/contact' },
@@ -44,15 +57,16 @@ import { Badge } from '../ui/Badge';
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
         <Link href="/" className="text-white font-bold">Zion Tech Group</Link>
         <nav className="hidden md:flex items-center gap-6 text-sm">
-          <Link href="/solutions" className="text-gray-300 hover:text-white">Solutions</Link>
-          <Link href="/services" className="text-gray-300 hover:text-white">Services</Link>
-          <Link href="/about" className="text-gray-300 hover:text-white">About</Link>
-          <Link href="/pricing" className="text-gray-300 hover:text-white">Pricing</Link>
-          <Link href="/contact" className="text-white bg-blue-600 hover:bg-blue-700 px-3 py-1.5 rounded">Contact</Link>
+          {navigationItems.map((item) => (
+            <Link key={item.name} href={item.href} className="text-gray-300 hover:text-white">
+              {item.name}
+            </Link>
+          ))}
         </nav>
       </div>
     </header>
   );
-};
+
+}
 
 export default Header;

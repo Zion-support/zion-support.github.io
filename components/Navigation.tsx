@@ -15,6 +15,7 @@ const Navigation: React.FC = () => {
         { name: 'AI Services', href: '/ai-services' },
         { name: 'IT Services', href: '/it-services' },
         { name: 'Micro SaaS', href: '/micro-saas' },
+        { name: 'Blockchain Solutions', href: '/blockchain-solutions' },
         { name: 'All Services', href: '/services' }
       ]
     },
@@ -33,6 +34,7 @@ const Navigation: React.FC = () => {
     { name: 'Pricing', href: '/pricing' },
     { name: 'About', href: '/about' },
     { name: 'Blog', href: '/blog' },
+    { name: 'Careers', href: '/careers' },
     { name: 'Contact', href: '/contact' }
   ];
 
