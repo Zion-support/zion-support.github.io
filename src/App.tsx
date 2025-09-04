@@ -8,6 +8,8 @@ import ErrorBoundary from './components/ErrorBoundary';
 const Home = React.lazy(() => import('./pages/index'));
 const Services = React.lazy(() => import('./pages/services'));
 const Contact = React.lazy(() => import('./pages/contact'));
+const Solutions = React.lazy(() => import('./pages/solutions'));
+const Resources = React.lazy(() => import('./pages/resources'));
 
 export default function App() {
   return (
@@ -26,6 +28,8 @@ export default function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/services/*" element={<Services />} />
+              <Route path="/solutions/*" element={<Solutions />} />
+              <Route path="/resources/*" element={<Resources />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>
           </Suspense>

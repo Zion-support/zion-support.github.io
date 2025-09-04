@@ -25,8 +25,7 @@ export default function ServicesIndex() {
   );
 }
 
-import React from 'react';
-import { Link } from 'react-router-dom';
+// -- merged below section: ensure single import and no conflict markers --
 import { Database, Brain, Check, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3, Cpu, Headphones, Calendar, Send, Layers } from 'lucide-react';
 
 function FullServicesShowcase() {
@@ -154,13 +153,8 @@ function FullServicesShowcase() {
                   ))}
                 </ul>
                 <Link 
-<<<<<<< HEAD
                   to={service.href}
-                  className="w-full bg-indigo-600 text-white px-4 py-2 rounded-lg hover: b g-indigo-700 transition-colors inline-flex items-center justify-center"
-=======
-                  href={service.href}
                   className="w-full bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors inline-flex items-center justify-center"
->>>>>>> pr-11559
                 >
                   Learn More <ArrowRight className="w-4 h-4 ml-2"  />
                 </Link>
