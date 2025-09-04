@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import Head from 'next/head';
-import { useState, useEffect } from 'react';
 
 export default function Home(): any {
   const contact = {

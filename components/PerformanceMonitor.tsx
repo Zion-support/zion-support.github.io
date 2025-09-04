@@ -1,5 +1,4 @@
-import React from 'react';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 const PerformanceMonitor: React.FC = () => {,
   useEffect(() => {
@@ -22,7 +21,8 @@ const PerformanceMonitor: React.FC = () => {,
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
             // Log LCP in development only
-            if (process.env.NODE_ENV === 'development') {;
+            if (process.env.NODE_ENV === 'development') {
+              // eslint-disable-next-line no-console
               console.log('LCP:', entry.startTime);
             }
             sendToAnalytics('LCP', entry.startTime);
@@ -42,7 +42,8 @@ const PerformanceMonitor: React.FC = () => {,
             // Cast to any to access processingStart property for FID calculation
             const fidEntry = entry as any;
             // Log FID in development only
-            if (process.env.NODE_ENV === 'development') {;
+            if (process.env.NODE_ENV === 'development') {
+              // eslint-disable-next-line no-console
               console.log('FID:', entry.processingStart - entry.startTime);
             }
             sendToAnalytics('FID', fidEntry.processingStart - fidEntry.startTime);
@@ -62,7 +63,13 @@ const PerformanceMonitor: React.FC = () => {,
           if (!(entry as any).hadRecentInput) {;
             clsValue += (entry as any).value;
           }
-        console.log('CLS:', clsValue);
+        }
+        // Log CLS in development only
+        if (process.env.NODE_ENV === 'development') {
+          // eslint-disable-next-line no-console
+          console.log('CLS:', clsValue);
+        }
+        sendToAnalytics('CLS', clsValue);
       });
 
       try {

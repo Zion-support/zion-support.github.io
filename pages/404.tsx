@@ -12,13 +12,13 @@ export default function Custom404(): any {
         <meta name="robots" content="noindex, nofollow" />";
       </Head>
       
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center px-4">";
-        <div className="max-w-md w-full text-center">";
-          <div className="mb-8">";
-            <h1 className="text-9xl font-bold text-blue-600 mb-4">404</h1>";
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">Page Not Found</h2>";
-            <p className="text-gray-600 mb-8">";
-              Sorry, we couldn't find the page you're looking for. It might have been moved, deleted, or you entered the wrong URL.
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center px-4">
+        <div className="max-w-md w-full text-center">
+          <div className="mb-8">
+            <h1 className="text-9xl font-bold text-blue-600 mb-4">404</h1>
+            <h2 className="text-2xl font-semibold text-gray-800 mb-4">Page Not Found</h2>
+            <p className="text-gray-600 mb-8">
+              Sorry, we couldn&apos;t find the page you&apos;re looking for. It might have been moved, deleted, or you entered the wrong URL.
             </p>
           </div>
           
