@@ -10,84 +10,84 @@ export default function News() {
   }
   const newsArticles = [
     {
-      id: 1,
+      id: '1',
       title: "Zion Tech Group Launches Revolutionary AI-Powered Micro SaaS Platform",
       excerpt: "New platform combines artificial intelligence with micro SaaS solutions to deliver unprecedented business automation capabilities.",
       date: "2025-01-26",
       category: "Product Launch",
       readTime: "3 min read",
       image: "/api/placeholder/400/250",
-      featured: true
+      featured: 'true'
     },
     {
-      id: 2,
+      id: '2',
       title: "Company Expands Quantum Computing Research Division",
       excerpt: "Zion Tech Group announces significant investment in quantum computing research to develop next-generation algorithms.",
       date: "2025-01-25",
       category: "Company News",
       readTime: "4 min read",
       image: "/api/placeholder/400/250",
-      featured: false
+      featured: 'false'
     },
     {
-      id: 3,
+      id: '3',
       title: "Partnership with Leading Cloud Providers Accelerates Growth",
       excerpt: "Strategic partnerships with AWS, Microsoft Azure, and Google Cloud enable faster deployment of enterprise solutions.",
       date: "2025-01-24",
       category: "Partnerships",
       readTime: "3 min read",
       image: "/api/placeholder/400/250",
-      featured: false
+      featured: 'false'
     },
     {
-      id: 4,
+      id: '4',
       title: "Cybersecurity Solutions Achieve SOC 2 Type II Certification",
       excerpt: "Our comprehensive cybersecurity platform meets the highest industry standards for security and compliance.",
       date: "2025-01-23",
       category: "Certifications",
       readTime: "2 min read",
       image: "/api/placeholder/400/250",
-      featured: false
+      featured: 'false'
     },
     {
-      id: 5,
+      id: '5',
       title: "New Office Opens in Silicon Valley to Support West Coast Operations",
       excerpt: "Expansion into Silicon Valley strengthens our presence in the technology hub and enables better client support.",
       date: "2025-01-22",
       category: "Expansion",
       readTime: "3 min read",
       image: "/api/placeholder/400/250",
-      featured: false
+      featured: 'false'
     },
     {
-      id: 6,
+      id: '6',
       title: "AI Services Division Reports 300% Growth in Q4 2024",
       excerpt: "Strong demand for AI-powered solutions drives record growth in our artificial intelligence services division.",
       date: "2025-01-21",
       category: "Financial",
       readTime: "4 min read",
       image: "/api/placeholder/400/250",
-      featured: false
+      featured: 'false'
     },
     {
-      id: 7,
+      id: '7',
       title: "Green IT Initiative Reduces Carbon Footprint by 40%",
       excerpt: "Sustainable technology practices and renewable energy adoption significantly reduce environmental impact.",
       date: "2025-01-20",
       category: "Sustainability",
       readTime: "3 min read",
       image: "/api/placeholder/400/250",
-      featured: false
+      featured: 'false'
     },
     {
-      id: 8,
+      id: '8',
       title: "Blockchain Solutions Now Support Multiple Cryptocurrencies",
       excerpt: "Enhanced blockchain platform adds support for major cryptocurrencies and DeFi protocols.",
       date: "2025-01-19",
       category: "Technology",
       readTime: "5 min read",
       image: "/api/placeholder/400/250",
-      featured: false
+      featured: 'false'
     }
   ];
 

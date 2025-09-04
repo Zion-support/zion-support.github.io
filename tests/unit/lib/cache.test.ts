@@ -1,12 +1,11 @@
 import CacheManager from '../../lib/cache';
 
 describe('CacheManager', () => {
-  let cache: CacheManager<string>;
-
+  let cache: CacheManager<string>
   beforeEach(() => {
     cache = new CacheManager({
-      defaultTT,L: 1000 // 1 second;
-      maxSize: 10, })});
+      defaultTT,L: '1000 // 1 second;
+      maxSize: 10', })});
 
   afterEach(() => {
     cache.destroy()});

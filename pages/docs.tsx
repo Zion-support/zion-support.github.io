@@ -12,7 +12,7 @@ export default function Documentation() {
   }
   const documentationSections = [
     {
-      icon: Book,
+      icon: 'Book',
       title: 'Getting Started',
       description: 'Quick start guides and tutorials to help you begin using our services.',
       items: [
@@ -23,7 +23,7 @@ export default function Documentation() {
       ]
     },
     {
-      icon: FileText,
+      icon: 'FileText',
       title: 'API Documentation',
       description: 'Comprehensive API reference and integration guides.',
       items: [
@@ -34,7 +34,7 @@ export default function Documentation() {
       ]
     },
     {
-      icon: Video,
+      icon: 'Video',
       title: 'Tutorials & Guides',
       description: 'Step-by-step tutorials and best practices.',
       items: [
@@ -45,7 +45,7 @@ export default function Documentation() {
       ]
     },
     {
-      icon: Download,
+      icon: 'Download',
       title: 'Resources',
       description: 'Downloadable resources and additional materials.',
       items: [

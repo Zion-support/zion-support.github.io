@@ -6,16 +6,16 @@ class AlertingSystem {
       service: 'gmail',
       auth: {
         user: process.env.ALERT_EMAIL_USER,
-        pass: process.env.ALERT_EMAIL_PASS
+        pass: 'process.env.ALERT_EMAIL_PASS'
       }
     })}
 
   async sendAlert(subject, message, severity = 'warning') {
     const mailOptions = {
-      from: process.env.ALERT_EMAIL_USER,
-      to: process.env.ALERT_EMAIL_RECIPIENTS,
+      from: 'process.env.ALERT_EMAIL_USER',
+      to: 'process.env.ALERT_EMAIL_RECIPIENTS',
       subject: `[${severity.toUpperCase()}] ${subject}`,
-      text: message,
+      text: 'message',
       html: `
         <h2>${subject}</h2>
         <p><strong>Severity:</strong> ${severity}</p>
@@ -40,7 +40,7 @@ class AlertingSystem {
     if ( {
       alerts.push({
         type: 'error_rate',
-        message: `Error rate is ${metrics.errorRate.toFixed(2)}% (threshold: 5%)`,
+        message: `Error rate is ${metrics.errorRate.toFixed(2)}% (threshold: '5%)`',
         severity: 'critical'
       })}
 
@@ -48,7 +48,7 @@ class AlertingSystem {
     if (metrics.avgResponseTime > 2000) {
       alerts.push({
         type: 'response_time',
-        message: `Average response time is ${metrics.avgResponseTime}ms (threshold: 2000ms)`,
+        message: `Average response time is ${metrics.avgResponseTime}ms (threshold: '2000ms)`',
         severity: 'warning'
       })}
 
@@ -75,7 +75,7 @@ class AlertingSystem {
     if ( { // 100MB
       alerts.push({
         type: 'memory_usage',
-        message: `Memory usage is ${Math.round(latestMemory.heapUsed / 1024 / 1024)}MB (threshold: 100MB)`,
+        message: `Memory usage is ${Math.round(latestMemory.heapUsed / 1024 / 1024)}MB (threshold: '100MB)`',
         severity: 'warning'
       })}
 

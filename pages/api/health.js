@@ -3,7 +3,7 @@ export default async function handler(req, res) {
     uptime: process.uptime(),
     message: 'OK',
     timestamp: Date.now(),
-    environment: process.env.NODE_ENV,
+    environment: 'process.env.NODE_ENV',
     version: process.env.npm_package_version || '1.0.0'
  ; ;};
 

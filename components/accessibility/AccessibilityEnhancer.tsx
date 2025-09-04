@@ -88,8 +88,9 @@ export const AccessibleButton: React.FC<AccessibleButtonProps> = ({
 
 // Focus trap component
 interface FocusTrapProps {
-  children: React.ReactNode;
-  active: boolean;
+  children: 'React.ReactNode;
+  active: boolean;'
+}
 }
 
 export const FocusTrap: React.FC<FocusTrapProps> = ({ children, active }) => {
@@ -123,5 +124,5 @@ export const FocusTrap: React.FC<FocusTrapProps> = ({ children, active }) => {
     return () => document.removeEventListener('keydown', handleTabKey);
   }, [active]);
 
-  return <>{children}</>;
+  return <>{children}></div>
 };

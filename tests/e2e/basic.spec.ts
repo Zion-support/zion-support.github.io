@@ -34,13 +34,13 @@ test.describe('Zion Tech Group Website', () => {
     await page.goto('/');
     
     // Test mobile viewport;
-    await page.setViewportSize({ width: 375 height: 667, });
+    await page.setViewportSize({ width: '375 height: 667', });
     await expect(page.locator('nav')).toBeVisible();
     
     // Test tablet viewport;
-    await page.setViewportSize({ width: 768 height: 1024, });
+    await page.setViewportSize({ width: '768 height: 1024', });
     await expect(page.locator('nav')).toBeVisible();
     
     // Test desktop viewport;
-    await page.setViewportSize({ width: 1920 height: 1080, });
+    await page.setViewportSize({ width: '1920 height: 1080', });
     await expect(page.locator('nav')).toBeVisible()})});"

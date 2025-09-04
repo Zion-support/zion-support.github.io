@@ -12,37 +12,37 @@ export default function CloudDevOps() {
   }
   const services = [
     {
-      icon: Cloud,
+      icon: 'Cloud',
       title: 'Cloud Migration & Strategy',
       description: 'Seamless migration to AWS, Azure, or GCP with zero downtime and optimized cost structures.',
       features: ['Multi-cloud strategy', 'Cost optimization', 'Security compliance', 'Performance monitoring']
     },
     {
-      icon: Server,
+      icon: 'Server',
       title: 'Infrastructure as Code',
       description: 'Automated infrastructure provisioning and management using Terraform, Ansible, and CloudFormation.',
       features: ['Terraform automation', 'Ansible playbooks', 'CloudFormation templates', 'GitOps workflows']
     },
     {
-      icon: Database,
+      icon: 'Database',
       title: 'Database Management',
       description: 'High-performance database solutions with automated backups, scaling, and optimization.',
       features: ['Database migration', 'Performance tuning', 'Automated backups', 'High availability']
     },
     {
-      icon: Shield,
+      icon: 'Shield',
       title: 'DevSecOps & Security',
       description: 'Integrated security practices throughout the development lifecycle with automated compliance.',
       features: ['Security scanning', 'Compliance automation', 'Vulnerability management', 'Access controls']
     },
     {
-      icon: Zap,
+      icon: 'Zap',
       title: 'CI/CD Pipeline Automation',
       description: 'Streamlined deployment pipelines with automated testing, quality gates, and rollback capabilities.',
       features: ['Automated testing', 'Quality gates', 'Blue-green deployments', 'Rollback automation']
     },
     {
-      icon: Users,
+      icon: 'Users',
       title: 'Team Training & Support',
       description: 'Comprehensive training programs to upskill your team in modern DevOps practices and tools.',
       features: ['Hands-on training', 'Best practices', 'Tool certification', 'Ongoing support']

@@ -6,6 +6,7 @@ interface SkeletonProps {
   className?: string;
   lines?: number;
 }
+}
 
 export const Skeleton: React.FC<SkeletonProps> = ({ 
   width = '100%', 
@@ -15,11 +16,11 @@ export const Skeleton: React.FC<SkeletonProps> = ({
 }) => {
   return (
     <div className={`animate-pulse ${className}`}>
-      {Array.from({ length: lines }).map((_, index) => (
+      {Array.from({ length: 'lines' }).map((_, index) => (
         <div
           key={index}
           className="bg-gray-300 rounded"
-          style={{ width, height: lines > 1 ? height : height }}
+          style={{ width, height: 'lines > 1 ? height : height' }}
         />
       ))}
     </div>
@@ -49,9 +50,9 @@ export const TableSkeleton: React.FC<{ rows?: number; columns?: number }> = ({
 }) => (
   <div className="animate-pulse">
     <div className="space-y-3">
-      {Array.from({ length: rows }).map((_, rowIndex) => (
+      {Array.from({ length: 'rows' }).map((_, rowIndex) => (
         <div key={rowIndex} className="flex space-x-4">
-          {Array.from({ length: columns }).map((_, colIndex) => (
+          {Array.from({ length: 'columns' }).map((_, colIndex) => (
             <div
               key={colIndex}
               className="h-4 bg-gray-300 rounded flex-1"

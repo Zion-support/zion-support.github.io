@@ -1,30 +1,26 @@
-import React from 'react';
-import Link from 'next/link';
+import React, { useState } from 'react';
 import Head from 'next/head';
-import { useState } from 'react';
+import Link from 'next/link';
+import { Eye, EyeOff, User, Mail, Lock } from 'lucide-react';
 
 export default function Signup() {
-const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', site: 'https://ziontechgroup.com'
-  };
   const [formData, setFormData] = useState({
-    firstName: ''
-    lastName: ''
-    email: ''
-    company: ''
-    phone: ''
-    password: ''
+    firstName: '',
+    lastName: '',
+    email: '',
+    password: '',
     confirmPassword: ''
-    agreeToTerms: false,
-    subscribeNewsletter: false
   });
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value, type, checked } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: type === 'checkbox' ? checked : value
-    }));
-  }
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
@@ -33,284 +29,163 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
       return;
     }
     
-    if (!formData.agreeToTerms) {
-      alert('Please agree to the Terms of Service and Privacy Policy');
-      return;
-    }
-    
     // Handle signup logic here
-    console.log('Signup attempt:' formData);
+    console.log('Signup attempt:', formData);
     alert('Account creation functionality will be implemented with authentication system.');
-  }
+  };
+
   return (
     <>
       <Head>
-        <title>Sign Up - Zion Tech Group | Create Your Account</title>
-        <meta name="description" content="Create your Zion Tech Group account to access our technology services, manage projects, and get started with our solutions." />
-        <meta name="keywords" content="sign up, create account, register, new user, account creation" />
-        <link rel="canonical" href={`${contact.site}/signup`} />
-        <meta property="og:title" content="Sign Up - Zion Tech Group | Create Your Account" />
-        <meta property="og:description" content="Create your Zion Tech Group account to access our technology services, manage projects, and get started with our solutions." />`
-        <meta property="og:url" content={`${contact.site}/signup`} />
-        <meta property="og:type" content="website" />
+        <title>Sign Up - Zion Tech Group</title>
+        <meta name="description" content="Create your account to access Zion Tech Group's services and resources." />
       </Head>
 
-      <div style={{ minHeight: '100vh', background: 'color', 'white' padding: '40px 20px' }}>
-        <div style={{ maxWidth: 500, margin: '0 auto' }}>
-          <div style={{ textAlign: 'center', marginBottom: 40 }}>
-            <h1 style={{ 
-              fontSize: 'fontWeight', 800, 
-              marginBottom: 10,
-              background: 'WebkitBackgroundClip', 'text',>
-              WebkitTextFillColor: 'transparent',>
-              backgroundClip: 'text'>
-            },,}>
-              Create Account
-            </h1>
-            <p style={{ color: '#94a3b8', fontSize: '1.1rem' }}>
-              Join Zion Tech Group and unlock the power of technology
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-md w-full space-y-8">
+          <div>
+            <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
+              Create your account
+            </h2>
+            <p className="mt-2 text-center text-sm text-gray-600">
+              Or{' '}
+              <Link href="/login" className="font-medium text-blue-600 hover:text-blue-500">
+                sign in to your existing account
+              </Link>
             </p>
           </div>
-
-          <div style={{
-            background: 'borderRadius', 12,>
-            padding: 40,>
-            border: '1px solid rgba(255, 255, 255, 0.1)'>
-          }}>
-            <form onSubmit={handleSubmit}>
-              <div style={{ display: 'gridTemplateColumns', '1fr 1fr' gap: 15, marginBottom: 20 }}>
+          <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
+            <div className="space-y-4">
+              <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label style={{ display: 'marginBottom', 8, fontWeight: 600 }}>
-                    First Name *
+                  <label htmlFor="firstName" className="block text-sm font-medium text-gray-700">
+                    First Name
                   </label>
-                  <input
-                    type="text"
-                    name="firstName"
-                    value={formData.firstName}
-                    onChange={handleInputChange}
-                    required
-                    style={{
-                      width: 'padding', '12px'
-                      borderRadius: 8,
-                      border: 'background', 'rgba(255, 255, 255, 0.1)'
-                      color: 'fontSize', '1rem'>
-                    }>
-                    placeholder="First name">
-                  />
+                  <div className="mt-1 relative">
+                    <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                    <input
+                      id="firstName"
+                      name="firstName"
+                      type="text"
+                      required
+                      value={formData.firstName}
+                      onChange={handleChange}
+                      className="pl-10 appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
+                      placeholder="First name"
+                    />
+                  </div>
                 </div>
                 <div>
-                  <label style={{ display: 'marginBottom', 8, fontWeight: 600 }}>
-                    Last Name *
+                  <label htmlFor="lastName" className="block text-sm font-medium text-gray-700">
+                    Last Name
                   </label>
+                  <div className="mt-1 relative">
+                    <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                    <input
+                      id="lastName"
+                      name="lastName"
+                      type="text"
+                      required
+                      value={formData.lastName}
+                      onChange={handleChange}
+                      className="pl-10 appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
+                      placeholder="Last name"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                  Email Address
+                </label>
+                <div className="mt-1 relative">
+                  <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                   <input
-                    type="text"
-                    name="lastName"
-                    value={formData.lastName}
-                    onChange={handleInputChange}
+                    id="email"
+                    name="email"
+                    type="email"
+                    autoComplete="email"
                     required
-                    style={{
-                      width: 'padding', '12px'
-                      borderRadius: 8,
-                      border: 'background', 'rgba(255, 255, 255, 0.1)'
-                      color: 'fontSize', '1rem'>
-                    }>
-                    placeholder="Last name">
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="pl-10 appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
+                    placeholder="Email address"
                   />
                 </div>
               </div>
-
-              <div style={{ marginBottom: 20 }}>
-                <label style={{ display: 'marginBottom', 8, fontWeight: 600 }}>
-                  Email Address *
+              <div>
+                <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+                  Password
                 </label>
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  required
-                  style={{
-                    width: 'padding', '12px'
-                    borderRadius: 8,
-                    border: 'background', 'rgba(255, 255, 255, 0.1)'
-                    color: 'fontSize', '1rem'>
-                  }>
-                  placeholder="Enter your email">
-                />
-              </div>
-
-              <div style={{ marginBottom: 20 }}>
-                <label style={{ display: 'marginBottom', 8, fontWeight: 600 }}>
-                  Company Name
-                </label>
-                <input
-                  type="text"
-                  name="company"
-                  value={formData.company}
-                  onChange={handleInputChange}
-                  style={{
-                    width: 'padding', '12px'
-                    borderRadius: 8,
-                    border: 'background', 'rgba(255, 255, 255, 0.1)'
-                    color: 'fontSize', '1rem'>
-                  }>
-                  placeholder="Your company name">
-                />
-              </div>
-
-              <div style={{ marginBottom: 20 }}>
-                <label style={{ display: 'marginBottom', 8, fontWeight: 600 }}>
-                  Phone Number
-                </label>
-                <input
-                  type="tel"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleInputChange}
-                  style={{
-                    width: 'padding', '12px'
-                    borderRadius: 8,
-                    border: 'background', 'rgba(255, 255, 255, 0.1)'
-                    color: 'fontSize', '1rem'>
-                  }>
-                  placeholder="+1 (555) 123-4567">
-                />
-              </div>
-
-              <div style={{ display: 'gridTemplateColumns', '1fr 1fr' gap: 15, marginBottom: 20 }}>
-                <div>
-                  <label style={{ display: 'marginBottom', 8, fontWeight: 600 }}>
-                    Password *
-                  </label>
+                <div className="mt-1 relative">
+                  <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                   <input
-                    type="password"
+                    id="password"
                     name="password"
+                    type={showPassword ? 'text' : 'password'}
+                    autoComplete="new-password"
+                    required
                     value={formData.password}
-                    onChange={handleInputChange}
-                    required
-                    style={{
-                      width: 'padding', '12px'
-                      borderRadius: 8,
-                      border: 'background', 'rgba(255, 255, 255, 0.1)'
-                      color: 'fontSize', '1rem'>
-                    }>
-                    placeholder="Create password">
+                    onChange={handleChange}
+                    className="pl-10 pr-10 appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
+                    placeholder="Password"
                   />
+                  <button
+                    type="button"
+                    className="absolute inset-y-0 right-0 pr-3 flex items-center"
+                    onClick={() => setShowPassword(!showPassword)}
+                  >
+                    {showPassword ? (
+                      <EyeOff className="h-5 w-5 text-gray-400" />
+                    ) : (
+                      <Eye className="h-5 w-5 text-gray-400" />
+                    )}
+                  </button>
                 </div>
-                <div>
-                  <label style={{ display: 'marginBottom', 8, fontWeight: 600 }}>
-                    Confirm Password *
-                  </label>
+              </div>
+              <div>
+                <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700">
+                  Confirm Password
+                </label>
+                <div className="mt-1 relative">
+                  <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                   <input
-                    type="password"
+                    id="confirmPassword"
                     name="confirmPassword"
-                    value={formData.confirmPassword}
-                    onChange={handleInputChange}
+                    type={showConfirmPassword ? 'text' : 'password'}
+                    autoComplete="new-password"
                     required
-                    style={{
-                      width: 'padding', '12px'
-                      borderRadius: 8,
-                      border: 'background', 'rgba(255, 255, 255, 0.1)'
-                      color: 'fontSize', '1rem'>
-                    }>
-                    placeholder="Confirm password">
+                    value={formData.confirmPassword}
+                    onChange={handleChange}
+                    className="pl-10 pr-10 appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
+                    placeholder="Confirm password"
                   />
+                  <button
+                    type="button"
+                    className="absolute inset-y-0 right-0 pr-3 flex items-center"
+                    onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                  >
+                    {showConfirmPassword ? (
+                      <EyeOff className="h-5 w-5 text-gray-400" />
+                    ) : (
+                      <Eye className="h-5 w-5 text-gray-400" />
+                    )}
+                  </button>
                 </div>
               </div>
+            </div>
 
-              <div style={{ marginBottom: 20 }}>
-                <label style={{ display: 'alignItems', 'flex-start' gap: 10, cursor: 'pointer' }}>
-                  <input
-                    type="checkbox"
-                    name="agreeToTerms"
-                    checked={formData.agreeToTerms}
-                    onChange={handleInputChange}>
-                    required>
-                    style={{ width: 16, height: 16, marginTop: 2 }>
-                  />
-                  <span style={{ fontSize: 'lineHeight', 1.4 }}>
-                    I agree to the{' '}
-                    <Link href="/terms" style={{ color: 'textDecoration', 'none' }}>
-                      Terms of Service
-                    </Link>
-                    {' '}and{' '}
-                    <Link href="/privacy" style={{ color: 'textDecoration', 'none' }}>
-                      Privacy Policy
-                    </Link>
-                    {' '}*
-                  </span>
-                </label>
-              </div>
-
-              <div style={{ marginBottom: 30 }}>
-                <label style={{ display: 'alignItems', 'center' gap: 10, cursor: 'pointer' }}>
-                  <input
-                    type="checkbox"
-                    name="subscribeNewsletter"
-                    checked={formData.subscribeNewsletter}>
-                    onChange={handleInputChange}>
-                    style={{ width: 16, height: 16 }>
-                  />
-                  <span style={{ fontSize: '0.9rem' }}>
-                    Subscribe to our newsletter for updates and insights
-                  </span>
-                </label>
-              </div>
-
+            <div>
               <button
                 type="submit"
-                style={{
-                  width: 'background', 'linear-gradient(135deg, #3b82f6, #8b5cf6)'
-                  color: 'padding', '15px'
-                  border: 'borderRadius', 8,
-                  fontSize: 'fontWeight', 600,
-                  cursor: 'transition', 'transform 0.3s ease'>
-                  marginBottom: 20>
-                }>
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-2px)';
-                }
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0)';
-                }
+                className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
               >
                 Create Account
               </button>
-            </form>
-
-            <div style={{ textAlign: 'marginTop', 20 }}>
-              <p style={{ color: '#94a3b8', fontSize: '0.9rem' }}>
-                Already have an account?{' '}
-                <Link href="/login" style={{ >
-                  color: 'textDecoration', 'none' >
-                  fontWeight: '600 >'}}>
-                  Sign in here
-                </Link>
-              </p>
             </div>
-          </div>
-
-          <div style={{ textAlign: 'marginTop', 30 }}>
-            <p style={{ color: 'fontSize', '0.9rem' marginBottom: 10 }}>
-              Questions about creating an account?
-            </p>
-            <div style={{ display: 'gap', 20, justifyContent: 'flexWrap', 'wrap' }}>`
-              <a href={`tel:${contact.phone}`} style={{>
-                color: 'textDecoration', 'none'>
-                fontSize: '0.9rem'>
-              }}>
-                📞 {contact.phone}
-              </a>`
-              <a href={`mailto:${contact.email}`} style={{>
-                color: 'textDecoration', 'none'>
-                fontSize: '0.9rem'>
-              }}>
-                ✉️ {contact.email}
-              </a>
-            </div>
-          </div>
+          </form>
         </div>
       </div>
     </>
   );
-}`
+}

@@ -59,11 +59,11 @@ class SecurityAuditor {
   generateReport() {
     const report = {
       timestamp: new Date().toISOString(),
-      issues: this.issues,
-      fixes: this.fixes,
+      issues: 'this.issues',
+      fixes: 'this.fixes',
       summary: {
         totalIssues: this.issues.length,
-        fixesApplied: this.fixes.length
+        fixesApplied: 'this.fixes.length'
       }
    ) {
     ) {

@@ -4,12 +4,13 @@ import Header from './Header';
 import Footer from './Footer';
 
 interface LayoutProps {
-  children: React.ReactNode;
+  children: 'React.ReactNode;
   title?: string;
   description?: string;
   keywords?: string;
   canonical?: string;
-  ogImage?: string;
+  ogImage?: string;'
+}
 }
 
 const Layout: React.FC<LayoutProps> = ({

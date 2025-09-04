@@ -4,6 +4,7 @@ interface ViewModeContextType {
   viewMode: 'light' | 'dark' | 'auto';
   setViewMode: (mode: 'light' | 'dark' | 'auto') => void;
 }
+}
 
 const defaultContext: ViewModeContextType = {
   viewMode: 'auto',
@@ -20,7 +21,7 @@ export const useViewMode = (): ViewModeContextType => {
   return context;
 };
 
-export const ViewModeProvider = ({ children }: { children: ReactNode }): JSX.Element => {
+export const ViewModeProvider = ({ children }: { children: 'ReactNode' }): JSX.Element => {
   const [viewMode, setViewMode] = useState<'light' | 'dark' | 'auto'>('auto');
 
   return (

@@ -7,11 +7,11 @@ import { execSync } from 'child_process';
 console.log('📊 Starting Performance Monitor...');
 
 const performanceChecks = {
-  buildSize: false,
-  bundleAnalysis: false,
-  lighthouseScore: false,
-  loadTime: false,
-  memoryUsage: false
+  buildSize: 'false',
+  bundleAnalysis: 'false',
+  lighthouseScore: 'false',
+  loadTime: 'false',
+  memoryUsage: 'false'
 }
 try {
   // Check build size
@@ -92,9 +92,9 @@ console.log(`\n📊 Performance Score: ${performanceScore}% (${passedChecks}/${t
 // Save performance report
 const report = {
   timestamp: new Date().toISOString(),
-  score: performanceScore,
-  checks: performanceChecks,
-  recommendations: []
+  score: 'performanceScore',
+  checks: 'performanceChecks',
+  recommendations: '[]'
 }
 if ( {
   report.recommendations.push('Consider optimizing build size') {
