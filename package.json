@@ -186,11 +186,8 @@
     "dev:setup": "bash scripts/dev-setup.sh",
     "quick:test": "bash scripts/quick-test.sh",
     "deploy:app": "bash scripts/deploy.sh",
-<<<<<<< HEAD
     "health:check": "bash scripts/health-check.sh",
-<<<<<<< HEAD
-    "build:production": "NODE_ENV=production npm run build"
-=======
+    "build:production": "NODE_ENV=production npm run build",
     "dev:enhanced": "bash scripts/enhanced-dev-setup.sh",
     "deploy:production": "bash scripts/production-deploy.sh",
     "monitor:app": "bash scripts/monitor-app.sh",
@@ -200,10 +197,6 @@
     "monitor:security": "node scripts/security-monitor-enhanced.js",
     "monitor:seo": "node scripts/seo-monitor-enhanced.js",
     "monitor:accessibility": "node scripts/accessibility-monitor-enhanced.js"
->>>>>>> cursor/test-and-fix-pm2-automations-and-merge-2088
-=======
-    "health:check": "bash scripts/health-check.sh"
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
   },
   "pm2": {
     "ecosystem": "ecosystem.maintenance.cjs"
@@ -244,12 +237,8 @@
     "@radix-ui/react-tooltip": "^1.0.7",
     "@reduxjs/toolkit": "^2.9.0",
     "@stripe/stripe-js": "^7.9.0",
-<<<<<<< HEAD
     "@supabase/ssr": "^0.6.1",
-    "@supabase/supabase-js": "^2.39.0",
-=======
     "@supabase/supabase-js": "^2.57.0",
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
     "@tailwindcss/postcss": "^4.1.12",
     "@tanstack/react-query": "^5.85.5",
     "@types/mongodb": "^4.0.6",
@@ -389,10 +378,6 @@
     "zion-tech-group"
   ],
   "author": "Zion Tech Group",
-<<<<<<< HEAD
   "license": "MIT",
   "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
-=======
-  "license": "MIT"
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 }
