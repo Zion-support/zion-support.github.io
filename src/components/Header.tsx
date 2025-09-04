@@ -1,10 +1,21 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';';';
 import { Link, useLocation } from 'react-router-dom';';';
 import { MainNavigation } from './header/MainNavigation';';';
+=======
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+<<<<<<< HEAD
+import { MainNavigation } from './header/MainNavigation';
+import { Zap, Search, Sun, Moon, User, Menu, X, Phone, Mail } from 'lucide-react';
+=======
+>>>>>>> cursor/test-and-fix-pm2-automations-and-merge-2088
 import { Zap, Search, Sun, Moon, User, Menu, X } from 'lucide-react';
+>>>>>>> origin/main
 
 interface HeaderProps {
 
+<<<<<<< HEAD
   className?: string;
 
 }
@@ -19,6 +30,25 @@ export function Header(props: any) {
   const [isSearchOpen, setIsSearchOpen] = useState<any>(false);';';
   const [theme, setTheme] = useState<'light' | 'dark'>('dark');';';
   const [searchQuery, setSearchQuery] = useState<any>('');
+=======
+<<<<<<< HEAD
+export function Header(props: HeaderProps) {
+  const [isScrolled, setIsScrolled] = useState<boolean>(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
+  const [isUserMenuOpen, setIsUserMenuOpen] = useState<boolean>(false);
+  const [isSearchOpen, setIsSearchOpen] = useState<boolean>(false);
+  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
+  const [searchQuery, setSearchQuery] = useState<string>('');
+=======
+export function Header({ className = '' }: HeaderProps) {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
+  const [searchQuery, setSearchQuery] = useState('');
+>>>>>>> origin/main
+>>>>>>> cursor/test-and-fix-pm2-automations-and-merge-2088
   const location = useLocation();
 
   useEffect(() => {
@@ -55,7 +85,7 @@ const handleScroll = (props: any) => {
         isScrolled 
           ? "bg-black/95 backdrop-blur-md border-b border-gray-800/50 shadow-lg"
           : "bg-transparent"
-      } ${className}`}
+      } ${props.className || ''}`}
     >
       <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
@@ -73,7 +103,27 @@ const handleScroll = (props: any) => {
           </Link>
 
           {/* Desktop Navigation */}
+<<<<<<< HEAD
           <MainNavigation className="hidden md: fle x"  />
+=======
+<<<<<<< HEAD
+          <MainNavigation className="hidden md:flex" />
+=======
+          <nav className="hidden md:flex items-center space-x-8">
+            {navigationItems.map((item) => (
+              <Link
+                key={item.name}
+                to={item.href}
+                className={`text-gray-300 hover:text-cyan-400 transition-colors duration-200 ${
+                  location.pathname === item.href ? 'text-cyan-400' : ''
+                }`}
+              >
+                {item.name}
+              </Link>
+            ))}
+          </nav>
+>>>>>>> origin/main
+>>>>>>> cursor/test-and-fix-pm2-automations-and-merge-2088
 
           {/* Right side actions */}
           <div className="flex items-center space-x-4">
@@ -106,9 +156,32 @@ const handleScroll = (props: any) => {
               {isUserMenuOpen && (
                 <div className="absolute right-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg py-1 z-50">
                   <Link
+<<<<<<< HEAD
                     to="/login"
                     className="block px-4 py-2 text-sm text-gray-300 hover: b g-gray-700 hover: tex t-white"
                     onClick={() => setIsUserMenuOpen(false)}
+=======
+<<<<<<< HEAD
+                    to="/login"
+                    className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
+                    onClick={() => setIsUserMenuOpen(false)}
+=======
+                    to="/dashboard"
+                    className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
+>>>>>>> origin/main
+                  >
+                    Dashboard
+                  </Link>
+                  <Link
+<<<<<<< HEAD
+                    to="/register"
+                    className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
+                    onClick={() => setIsUserMenuOpen(false)}
+=======
+                    to="/login"
+                    className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
+>>>>>>> origin/main
+>>>>>>> cursor/test-and-fix-pm2-automations-and-merge-2088
                   >
                     Sign In
                   </Link>
@@ -134,6 +207,7 @@ const handleScroll = (props: any) => {
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Search Bar */}
         {isSearchOpen && (
           <div className="pb-4">
@@ -151,6 +225,68 @@ const handleScroll = (props: any) => {
               >
                 <Search className="w-5 h-5"  />
               </button>
+=======
+<<<<<<< HEAD
+        {/* Search Bar */}
+        {isSearchOpen && (
+          <div className="pb-4">
+            <form onSubmit={handleSearch} className="relative">
+              <input
+                type="text"
+                placeholder="Search services, solutions, or resources..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
+              <button
+                type="submit"
+                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-blue-400"
+              >
+                <Search className="w-5 h-5" />
+              </button>
+=======
+        {/* Mobile Navigation */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-900/95 backdrop-blur-md rounded-lg mt-2">
+              {navigationItems.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className={`block px-3 py-2 text-base font-medium text-gray-300 hover:text-cyan-400 hover:bg-gray-800 rounded-md transition-colors duration-200 ${
+                    location.pathname === item.href ? 'text-cyan-400 bg-gray-800' : ''
+                  }`}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Search overlay */}
+        {isSearchOpen && (
+          <div className="absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-md border-t border-gray-800/50 p-4">
+            <form onSubmit={handleSearch} className="max-w-2xl mx-auto">
+              <div className="relative">
+                <input
+                  type="text"
+                  placeholder="Search services, solutions, or help..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full px-4 py-3 pl-10 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                />
+                <Search className="absolute left-3 top-3.5 w-4 h-4 text-gray-400" />
+                <button
+                  type="submit"
+                  className="absolute right-2 top-2 bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-1.5 rounded-md font-semibold transition-colors"
+                >
+                  Search
+                </button>
+              </div>
+>>>>>>> origin/main
+>>>>>>> cursor/test-and-fix-pm2-automations-and-merge-2088
             </form>
           </div>
         )
@@ -159,6 +295,7 @@ const handleScroll = (props: any) => {
   );
 }
       </div>
+<<<<<<< HEAD
 
       {/* Mobile Navigation Overlay */}
       {isMobileMenuOpen && (
@@ -169,6 +306,20 @@ const handleScroll = (props: any) => {
             </div>
   );
 }
+=======
+<<<<<<< HEAD
+
+      {/* Mobile Navigation Overlay */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-md border-t border-gray-800/50">
+          <div className="px-4 py-6">
+            <MainNavigation />
+          </div>
+        </div>
+      )}
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/test-and-fix-pm2-automations-and-merge-2088
     </header>
   );
 }

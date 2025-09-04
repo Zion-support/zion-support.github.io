@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+import Head from 'next/head';
 
 export default function Login() {
   const [formData, setFormData] = useState({
@@ -75,7 +76,7 @@ export default function Login() {
                 </label>
               </div>
               <div className="text-sm">
-                <Link to="/contact" className="text-cyan-400 hover:text-cyan-300">
+                <Link href="/contact" className="text-cyan-400 hover:text-cyan-300">
                   Forgot password?
                 </Link>
               </div>
@@ -92,7 +93,7 @@ export default function Login() {
           <div className="mt-6 text-center">
             <p className="text-gray-300">
               Don't have an account?{' '}
-              <Link to="/contact" className="text-cyan-400 hover:text-cyan-300 font-semibold">
+              <Link href="/contact" className="text-cyan-400 hover:text-cyan-300 font-semibold">
                 Contact us to get started
               </Link>
             </p>
