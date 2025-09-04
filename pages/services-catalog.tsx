@@ -9,11 +9,18 @@ export default function ServicesCatalog() {
 
   const services = [
     { id: 1, name: 'Cloud Cost Guard (FinOps Assistant)', category: 'micro-saas', description: 'Anomaly detection, rightsizing, forecasting and budget guardrails across AWS/Azure/GCP.', pricing: '$299–$1,499/month', rating: 4.9, delivery: '2-4 weeks', features: ['Anomaly Detection', 'Cost Optimization', 'Budget Alerts', 'Multi-Cloud Support'] },
-    { id: 2, name: 'LLM Evaluation & Safety Suite', category: 'ai-services', description: 'Prompt evaluation, bias/toxicity checks, jailbreak tests and guardrail policies.', pricing: '$799–$3,500/month', rating: 4.8, delivery: '3-6 weeks', features: ['Bias Detection', 'Safety Testing', 'Prompt Optimization', 'Compliance Monitoring'] },
+    { id: 2, name: 'LLM Evaluation & Safety Suite', category: 'ai-services', description: 'Prompt evaluation, bias/toxicity checks, jailbreak tests and guardrail policies.', pricing: '$799–$3,500/month', rating: 4.8, delivery: '3-6 weeks', features: ['Bias Detection', 'Safety Testing', 'Prompt Optimization', 'Compliance Monitoring'], href: '/services/ai-compliance-auditor' },
     { id: 3, name: 'Customer Feedback & NPS Micro-App', category: 'micro-saas', description: 'Embed surveys, analyze sentiment and route issues to the right team automatically.', pricing: '$149–$799/month', rating: 4.7, delivery: '1-3 weeks', features: ['Survey Builder', 'Sentiment Analysis', 'Auto-Routing', 'Analytics Dashboard'] },
     { id: 4, name: 'API Rate Limiter & Analytics', category: 'micro-saas', description: 'Intelligent rate limiting, usage analytics, and API monetization for SaaS platforms.', pricing: '$199–$999/month', rating: 4.6, delivery: '2-4 weeks', features: ['Rate Limiting', 'Usage Analytics', 'Monetization', 'Security Monitoring'] },
     { id: 5, name: 'Smart Document Processing', category: 'ai-services', description: 'AI-powered OCR, data extraction, and document workflow automation for businesses.', pricing: '$399–$1,999/month', rating: 4.8, delivery: '4-8 weeks', features: ['OCR Technology', 'Data Extraction', 'Workflow Automation', 'Integration APIs'] },
     { id: 6, name: 'Social Media Scheduler Pro', category: 'micro-saas', description: 'Multi-platform scheduling, content optimization, and engagement analytics.', pricing: '$99–$499/month', rating: 4.5, delivery: '1-2 weeks', features: ['Multi-Platform', 'Content Optimization', 'Analytics', 'Auto-Posting'] }
+    ,
+    // Added new diversified services with links to detailed pages
+    { id: 7, name: 'Enterprise RAG Search for Internal Docs', category: 'ai-services', description: 'Retrieval-Augmented Generation search over your internal knowledge base with access control and audit logs.', pricing: '$1,500–$6,000/month', rating: 4.9, delivery: '3-6 weeks', features: ['SSO/SCIM', 'Access Controls', 'Vector DB', 'Observability'], href: '/services/rag-enterprise-search' },
+    { id: 8, name: 'MLOps Platform Setup (CI/CD for ML)', category: 'it-services', description: 'End-to-end MLOps pipeline with data versioning, model registry, automated tests and deployments.', pricing: '$12,000–$60,000/project', rating: 4.8, delivery: '6-12 weeks', features: ['Feature Store', 'Model Registry', 'CI/CD', 'Monitoring'], href: '/services/mlops-platform' },
+    { id: 9, name: 'Real-time Fraud Detection Microservice', category: 'micro-saas', description: 'Deployable microservice for transaction scoring, velocity checks and anomaly detection.', pricing: '$499–$3,999/month', rating: 4.7, delivery: '2-4 weeks', features: ['Streaming Inference', 'Rules + ML', 'Explainability', 'API SDKs'], href: '/services/fraud-detection' },
+    { id: 10, name: 'AI Sales Email & Outreach Assistant', category: 'ai-services', description: 'Personalized multi-touch sequences, ICP targeting and CRM integration with human-in-the-loop review.', pricing: '$299–$1,999/month', rating: 4.6, delivery: '1-3 weeks', features: ['Sequence Generation', 'A/B Testing', 'CRM Sync', 'Compliance'], href: '/services/ai-sales-assistant' },
+    { id: 11, name: 'Data Governance & GRC Automation', category: 'it-services', description: 'Policies, lineage, PII discovery and compliance automation for SOC 2, HIPAA, GDPR.', pricing: '$6,000–$45,000/project', rating: 4.8, delivery: '4-10 weeks', features: ['PII Scanner', 'Data Catalog', 'Controls Library', 'Evidence Collection'], href: '/services/data-governance-grc' }
   ];
 
   const categories = [
@@ -130,7 +137,13 @@ export default function ServicesCatalog() {
                     ))}
                   </div>
                 </div>
-
+                {service.href && (
+                  <div className="mb-4">
+                    <Link href={service.href} className="text-blue-300 hover:text-blue-200 text-sm underline">
+                      Learn more
+                    </Link>
+                  </div>
+                )}
                 <Link 
                   href="/contact" 
                   className="inline-flex items-center justify-center w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-blue-500/25"

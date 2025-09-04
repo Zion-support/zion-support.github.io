@@ -259,7 +259,6 @@ export default function Login() {
                 Forgot your password?
               </Link>
             </div>
-          </form>
 
           <div style={{ 
             textAlign: 'center', 
