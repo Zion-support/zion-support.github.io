@@ -1293,7 +1293,146 @@ export default function ITServices() {
         'Complex simulation capabilities',
         'Advanced data processing and analysis'
       ],
-      category: 'High-Performance Computing'    }
+      category: 'High-Performance Computing'
+    },
+    {
+      icon: Shield,
+      name: 'Zero Trust Security Architecture Implementation',
+      description: 'Comprehensive zero trust security implementation with continuous verification, micro-segmentation, and identity management.',
+      features: [
+        'Identity and access management (IAM)',
+        'Continuous security monitoring and verification',
+        'Micro-segmentation and network isolation',
+        'Threat detection and automated response',
+        'Compliance automation and reporting',
+        'Security analytics and behavioral analysis'
+      ],
+      pricing: '$15,000 – $75,000/project',
+      projectPricing: '$5,000 – $15,000/month managed',
+      timeline: '8–16 weeks',
+      benefits: [
+        'Enhanced security posture with zero trust model',
+        'Reduced attack surface through micro-segmentation',
+        'Automated threat response and mitigation',
+        'Improved compliance management'
+      ],
+      category: 'Cybersecurity'
+    },
+    {
+      icon: Cloud,
+      name: 'Multi-Cloud Strategy & Migration',
+      description: 'Strategic multi-cloud implementation with workload optimization, cost management, and disaster recovery across AWS, Azure, and GCP.',
+      features: [
+        'Multi-cloud architecture design and implementation',
+        'Workload optimization and portability',
+        'Cost optimization and FinOps implementation',
+        'Disaster recovery and business continuity',
+        'Cloud governance and compliance',
+        'Performance monitoring and optimization'
+      ],
+      pricing: '$25,000 – $150,000/project',
+      projectPricing: '$8,000 – $25,000/month managed',
+      timeline: '12–24 weeks',
+      benefits: [
+        'Reduced vendor lock-in and increased flexibility',
+        'Optimized costs through multi-cloud strategies',
+        'Enhanced disaster recovery capabilities',
+        'Improved performance and reliability'
+      ],
+      category: 'Cloud & Infrastructure'
+    },
+    {
+      icon: Database,
+      name: 'Enterprise Data Platform Modernization',
+      description: 'Complete data platform transformation with real-time analytics, AI/ML integration, and advanced data governance.',
+      features: [
+        'Data lake and warehouse implementation',
+        'Real-time streaming and analytics',
+        'AI/ML model integration and deployment',
+        'Data governance and compliance frameworks',
+        'Advanced analytics and business intelligence',
+        'Data quality and lineage management'
+      ],
+      pricing: '$50,000 – $300,000/project',
+      projectPricing: '$15,000 – $50,000/month managed',
+      timeline: '16–32 weeks',
+      benefits: [
+        'Unified data platform for all business needs',
+        'Real-time insights and decision making',
+        'Enhanced data quality and governance',
+        'Scalable AI/ML capabilities'
+      ],
+      category: 'Data & Analytics'
+    },
+    {
+      icon: Code,
+      name: 'DevSecOps & CI/CD Pipeline Automation',
+      description: 'Comprehensive DevSecOps implementation with automated security scanning, compliance checking, and deployment pipelines.',
+      features: [
+        'CI/CD pipeline design and implementation',
+        'Automated security scanning and vulnerability management',
+        'Infrastructure as Code (IaC) implementation',
+        'Compliance automation and reporting',
+        'Performance monitoring and optimization',
+        'Disaster recovery and rollback capabilities'
+      ],
+      pricing: '$20,000 – $100,000/project',
+      projectPricing: '$5,000 – $20,000/month managed',
+      timeline: '8–16 weeks',
+      benefits: [
+        'Faster and more secure software delivery',
+        'Automated compliance and security checks',
+        'Reduced deployment risks and downtime',
+        'Improved development team productivity'
+      ],
+      category: 'DevOps & Automation'
+    },
+    {
+      icon: Globe,
+      name: '5G Network Infrastructure & Edge Computing',
+      description: 'Advanced 5G network implementation with edge computing capabilities for ultra-low latency applications.',
+      features: [
+        '5G network design and implementation',
+        'Edge computing infrastructure setup',
+        'Network slicing and optimization',
+        'IoT device integration and management',
+        'Real-time analytics and monitoring',
+        'Security and compliance implementation'
+      ],
+      pricing: '$100,000 – $500,000/project',
+      projectPricing: '$25,000 – $75,000/month managed',
+      timeline: '20–40 weeks',
+      benefits: [
+        'Ultra-low latency for critical applications',
+        'Enhanced IoT and edge computing capabilities',
+        'Improved network performance and reliability',
+        'Future-ready infrastructure'
+      ],
+      category: '5G & Edge Computing'
+    },
+    {
+      icon: Brain,
+      name: 'AI Infrastructure & MLOps Platform',
+      description: 'Complete AI infrastructure setup with MLOps capabilities for scalable machine learning model deployment and management.',
+      features: [
+        'AI/ML infrastructure design and implementation',
+        'MLOps pipeline automation',
+        'Model versioning and deployment management',
+        'Data pipeline and feature store setup',
+        'Model monitoring and performance tracking',
+        'GPU cluster management and optimization'
+      ],
+      pricing: '$75,000 – $400,000/project',
+      projectPricing: '$20,000 – $60,000/month managed',
+      timeline: '16–28 weeks',
+      benefits: [
+        'Scalable AI/ML model deployment',
+        'Automated model lifecycle management',
+        'Enhanced model performance and reliability',
+        'Reduced time-to-market for AI solutions'
+      ],
+      category: 'AI Infrastructure'
+    }
   ];
 
   const categories = [...new Set(itServices.map(service => service.category))];
