@@ -1,126 +1,89 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "timestamp": "2025-09-04T02:05:34.188Z",
-  "status": "failed",
-  "scans": [
+  "timestamp": "2025-09-04T02:29:29.913Z",
+  "checks": [
     {
-      "name": "Dependency Vulnerabilities",
-      "status": "warning",
-      "duration": 619,
-      "findings": [],
-      "message": "Found 0 vulnerabilities in dependencies"
+      "name": "NPM Audit",
+      "status": "error",
+      "error": "Command failed: npm audit --json\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
     },
     {
-      "name": "Hardcoded Secrets",
-      "status": "warning",
-      "duration": 239,
-      "findings": [
-        {
-          "type": "hardcoded_password",
-          "severity": "high",
-          "file": "automation-orchestrator-report.json",
-          "description": "Potential hardcoded hardcoded password found",
-          "recommendation": "Use environment variables instead"
-        },
-        {
-          "type": "hardcoded_token",
-          "severity": "medium",
-          "file": "automation-orchestrator-report.json",
-          "description": "Potential hardcoded hardcoded token found",
-          "recommendation": "Use environment variables instead"
-        }
-      ],
-      "message": "Found 2 potential secrets"
+      "name": "Sensitive Files Check",
+      "status": "pass",
+      "details": {
+        "foundFiles": []
+      }
     },
     {
-      "name": "File Permissions",
-      "status": "success",
-      "duration": 0,
-      "findings": [],
-      "message": "File permissions are secure"
+      "name": "Hardcoded Secrets Check",
+      "status": "warning",
+      "details": {
+        "foundSecrets": [
+          {
+            "file": "automation-orchestrator-report.json",
+            "matches": [
+              "Password = 'password123\\n    \\u001b[7m  \\u001b[0m \\u001b[91m                                     \\u001b[0m\\n    \\u001b[96m__tests__/auth/login.test.ts\\u001b[0m:\\u001b[93m99\\u001b[0m:\\u001b[93m5\\u001b[0m - \\u001b[91merror\\u001b[0m\\u001b[90m TS1002: \\u001b[0mUnterminated string literal.\\n\\n    \\u001b[7m99\\u001b[0m   '",
+              "Password = 'password123\\n    \\u001b[7m   \\u001b[0m \\u001b[91m                                     \\u001b[0m\\n    \\u001b[96m__tests__/auth/login.test.ts\\u001b[0m:\\u001b[93m141\\u001b[0m:\\u001b[93m5\\u001b[0m - \\u001b[91merror\\u001b[0m\\u001b[90m TS1002: \\u001b[0mUnterminated string literal.\\n\\n    \\u001b[7m141\\u001b[0m   '",
+              "Password = 'wrongpassword\\n    \\u001b[7m   \\u001b[0m \\u001b[91m                                       \\u001b[0m\\n    \\u001b[96m__tests__/auth/login.test.ts\\u001b[0m:\\u001b[93m176\\u001b[0m:\\u001b[93m5\\u001b[0m - \\u001b[91merror\\u001b[0m\\u001b[90m TS1002: \\u001b[0mUnterminated string literal.\\n\\n    \\u001b[7m176\\u001b[0m   '",
+              "Password = 'password123\\n    \\u001b[7m   \\u001b[0m \\u001b[91m                                     \\u001b[0m\\n    \\u001b[96m__tests__/auth/login.test.ts\\u001b[0m:\\u001b[93m211\\u001b[0m:\\u001b[93m5\\u001b[0m - \\u001b[91merror\\u001b[0m\\u001b[90m TS1002: \\u001b[0mUnterminated string literal.\\n\\n    \\u001b[7m211\\u001b[0m   '",
+              "Password = 'password123\\n    \\u001b[7m   \\u001b[0m \\u001b[91m                                     \\u001b[0m\\n    \\u001b[96m__tests__/auth/login.test.ts\\u001b[0m:\\u001b[93m251\\u001b[0m:\\u001b[93m5\\u001b[0m - \\u001b[91merror\\u001b[0m\\u001b[90m TS1002: \\u001b[0mUnterminated string literal.\\n\\n    \\u001b[7m251\\u001b[0m   '",
+              "Password = 'password123\\n    \\u001b[7m   \\u001b[0m \\u001b[91m                                     \\u001b[0m\\n    \\u001b[96m__tests__/auth/login.test.ts\\u001b[0m:\\u001b[93m286\\u001b[0m:\\u001b[93m5\\u001b[0m - \\u001b[91merror\\u001b[0m\\u001b[90m TS1002: \\u001b[0mUnterminated string literal.\\n\\n    \\u001b[7m286\\u001b[0m   '",
+              "Password = 'password123\\n    \\u001b[7m   \\u001b[0m \\u001b[91m                                     \\u001b[0m\\n    \\u001b[96m__tests__/auth/login.test.ts\\u001b[0m:\\u001b[93m321\\u001b[0m:\\u001b[93m5\\u001b[0m - \\u001b[91merror\\u001b[0m\\u001b[90m TS1002: \\u001b[0mUnterminated string literal.\\n\\n    \\u001b[7m321\\u001b[0m   '",
+              "Password = 'password123\\n    \\u001b[7m  \\u001b[0m \\u001b[91m                                     \\u001b[0m\\n    \\u001b[96m__tests__/auth/login.test.ts\\u001b[0m:\\u001b[93m99\\u001b[0m:\\u001b[93m5\\u001b[0m - \\u001b[91merror\\u001b[0m\\u001b[90m TS1002: \\u001b[0mUnterminated string literal.\\n\\n    \\u001b[7m99\\u001b[0m   '",
+              "Password = 'password123\\n    \\u001b[7m   \\u001b[0m \\u001b[91m                                     \\u001b[0m\\n    \\u001b[96m__tests__/auth/login.test.ts\\u001b[0m:\\u001b[93m141\\u001b[0m:\\u001b[93m5\\u001b[0m - \\u001b[91merror\\u001b[0m\\u001b[90m TS1002: \\u001b[0mUnterminated string literal.\\n\\n    \\u001b[7m141\\u001b[0m   '",
+              "Password = 'wrongpassword\\n    \\u001b[7m   \\u001b[0m \\u001b[91m                                       \\u001b[0m\\n    \\u001b[96m__tests__/auth/login.test.ts\\u001b[0m:\\u001b[93m176\\u001b[0m:\\u001b[93m5\\u001b[0m - \\u001b[91merror\\u001b[0m\\u001b[90m TS1002: \\u001b[0mUnterminated string literal.\\n\\n    \\u001b[7m176\\u001b[0m   '",
+              "Password = 'password123\\n    \\u001b[7m   \\u001b[0m \\u001b[91m                                     \\u001b[0m\\n    \\u001b[96m__tests__/auth/login.test.ts\\u001b[0m:\\u001b[93m211\\u001b[0m:\\u001b[93m5\\u001b[0m - \\u001b[91merror\\u001b[0m\\u001b[90m TS1002: \\u001b[0mUnterminated string literal.\\n\\n    \\u001b[7m211\\u001b[0m   '",
+              "Password = 'password123\\n    \\u001b[7m   \\u001b[0m \\u001b[91m                                     \\u001b[0m\\n    \\u001b[96m__tests__/auth/login.test.ts\\u001b[0m:\\u001b[93m251\\u001b[0m:\\u001b[93m5\\u001b[0m - \\u001b[91merror\\u001b[0m\\u001b[90m TS1002: \\u001b[0mUnterminated string literal.\\n\\n    \\u001b[7m251\\u001b[0m   '",
+              "Password = 'password123\\n    \\u001b[7m   \\u001b[0m \\u001b[91m                                     \\u001b[0m\\n    \\u001b[96m__tests__/auth/login.test.ts\\u001b[0m:\\u001b[93m286\\u001b[0m:\\u001b[93m5\\u001b[0m - \\u001b[91merror\\u001b[0m\\u001b[90m TS1002: \\u001b[0mUnterminated string literal.\\n\\n    \\u001b[7m286\\u001b[0m   '",
+              "Password = 'password123\\n    \\u001b[7m   \\u001b[0m \\u001b[91m                                     \\u001b[0m\\n    \\u001b[96m__tests__/auth/login.test.ts\\u001b[0m:\\u001b[93m321\\u001b[0m:\\u001b[93m5\\u001b[0m - \\u001b[91merror\\u001b[0m\\u001b[90m TS1002: \\u001b[0mUnterminated string literal.\\n\\n    \\u001b[7m321\\u001b[0m   '"
+            ]
+          },
+          {
+            "file": "automation-orchestrator-report.json",
+            "matches": [
+              "Token = 'mock-access-token\\n    \\u001b[7m   \\u001b[0m \\u001b[91m                                            \\u001b[0m\\n    \\u001b[96m__tests__/auth/login.test.ts\\u001b[0m:\\u001b[93m101\\u001b[0m:\\u001b[93m5\\u001b[0m - \\u001b[91merror\\u001b[0m\\u001b[90m TS1002: \\u001b[0mUnterminated string literal.\\n\\n    \\u001b[7m101\\u001b[0m   '",
+              "Token = 'mock-access-token\\n    \\u001b[7m   \\u001b[0m \\u001b[91m                                            \\u001b[0m\\n    \\u001b[96m__tests__/auth/login.test.ts\\u001b[0m:\\u001b[93m101\\u001b[0m:\\u001b[93m5\\u001b[0m - \\u001b[91merror\\u001b[0m\\u001b[90m TS1002: \\u001b[0mUnterminated string literal.\\n\\n    \\u001b[7m101\\u001b[0m   '"
+            ]
+          },
+          {
+            "file": "security-scan-report.json",
+            "matches": [
+              "Password = 'password123\\\\n    \\\\u001b[7m  \\\\u001b[0m \\\\u001b[91m                                     \\\\u001b[0m\\\\n    \\\\u001b[96m__tests__/auth/login.test.ts\\\\u001b[0m:\\\\u001b[93m99\\\\u001b[0m:\\\\u001b[93m5\\\\u001b[0m - \\\\u001b[91merror\\\\u001b[0m\\\\u001b[90m TS1002: \\\\u001b[0mUnterminated string literal.\\\\n\\\\n    \\\\u001b[7m99\\\\u001b[0m   '",
+              "Password = 'password123\\\\n    \\\\u001b[7m   \\\\u001b[0m \\\\u001b[91m                                     \\\\u001b[0m\\\\n    \\\\u001b[96m__tests__/auth/login.test.ts\\\\u001b[0m:\\\\u001b[93m141\\\\u001b[0m:\\\\u001b[93m5\\\\u001b[0m - \\\\u001b[91merror\\\\u001b[0m\\\\u001b[90m TS1002: \\\\u001b[0mUnterminated string literal.\\\\n\\\\n    \\\\u001b[7m141\\\\u001b[0m   '",
+              "Password = 'wrongpassword\\\\n    \\\\u001b[7m   \\\\u001b[0m \\\\u001b[91m                                       \\\\u001b[0m\\\\n    \\\\u001b[96m__tests__/auth/login.test.ts\\\\u001b[0m:\\\\u001b[93m176\\\\u001b[0m:\\\\u001b[93m5\\\\u001b[0m - \\\\u001b[91merror\\\\u001b[0m\\\\u001b[90m TS1002: \\\\u001b[0mUnterminated string literal.\\\\n\\\\n    \\\\u001b[7m176\\\\u001b[0m   '",
+              "Password = 'password123\\\\n    \\\\u001b[7m   \\\\u001b[0m \\\\u001b[91m                                     \\\\u001b[0m\\\\n    \\\\u001b[96m__tests__/auth/login.test.ts\\\\u001b[0m:\\\\u001b[93m211\\\\u001b[0m:\\\\u001b[93m5\\\\u001b[0m - \\\\u001b[91merror\\\\u001b[0m\\\\u001b[90m TS1002: \\\\u001b[0mUnterminated string literal.\\\\n\\\\n    \\\\u001b[7m211\\\\u001b[0m   '",
+              "Password = 'password123\\\\n    \\\\u001b[7m   \\\\u001b[0m \\\\u001b[91m                                     \\\\u001b[0m\\\\n    \\\\u001b[96m__tests__/auth/login.test.ts\\\\u001b[0m:\\\\u001b[93m251\\\\u001b[0m:\\\\u001b[93m5\\\\u001b[0m - \\\\u001b[91merror\\\\u001b[0m\\\\u001b[90m TS1002: \\\\u001b[0mUnterminated string literal.\\\\n\\\\n    \\\\u001b[7m251\\\\u001b[0m   '",
+              "Password = 'password123\\\\n    \\\\u001b[7m   \\\\u001b[0m \\\\u001b[91m                                     \\\\u001b[0m\\\\n    \\\\u001b[96m__tests__/auth/login.test.ts\\\\u001b[0m:\\\\u001b[93m286\\\\u001b[0m:\\\\u001b[93m5\\\\u001b[0m - \\\\u001b[91merror\\\\u001b[0m\\\\u001b[90m TS1002: \\\\u001b[0mUnterminated string literal.\\\\n\\\\n    \\\\u001b[7m286\\\\u001b[0m   '",
+              "Password = 'password123\\\\n    \\\\u001b[7m   \\\\u001b[0m \\\\u001b[91m                                     \\\\u001b[0m\\\\n    \\\\u001b[96m__tests__/auth/login.test.ts\\\\u001b[0m:\\\\u001b[93m321\\\\u001b[0m:\\\\u001b[93m5\\\\u001b[0m - \\\\u001b[91merror\\\\u001b[0m\\\\u001b[90m TS1002: \\\\u001b[0mUnterminated string literal.\\\\n\\\\n    \\\\u001b[7m321\\\\u001b[0m   '",
+              "Password = 'password123\\\\n    \\\\u001b[7m  \\\\u001b[0m \\\\u001b[91m                                     \\\\u001b[0m\\\\n    \\\\u001b[96m__tests__/auth/login.test.ts\\\\u001b[0m:\\\\u001b[93m99\\\\u001b[0m:\\\\u001b[93m5\\\\u001b[0m - \\\\u001b[91merror\\\\u001b[0m\\\\u001b[90m TS1002: \\\\u001b[0mUnterminated string literal.\\\\n\\\\n    \\\\u001b[7m99\\\\u001b[0m   '",
+              "Password = 'password123\\\\n    \\\\u001b[7m   \\\\u001b[0m \\\\u001b[91m                                     \\\\u001b[0m\\\\n    \\\\u001b[96m__tests__/auth/login.test.ts\\\\u001b[0m:\\\\u001b[93m141\\\\u001b[0m:\\\\u001b[93m5\\\\u001b[0m - \\\\u001b[91merror\\\\u001b[0m\\\\u001b[90m TS1002: \\\\u001b[0mUnterminated string literal.\\\\n\\\\n    \\\\u001b[7m141\\\\u001b[0m   '",
+              "Password = 'wrongpassword\\\\n    \\\\u001b[7m   \\\\u001b[0m \\\\u001b[91m                                       \\\\u001b[0m\\\\n    \\\\u001b[96m__tests__/auth/login.test.ts\\\\u001b[0m:\\\\u001b[93m176\\\\u001b[0m:\\\\u001b[93m5\\\\u001b[0m - \\\\u001b[91merror\\\\u001b[0m\\\\u001b[90m TS1002: \\\\u001b[0mUnterminated string literal.\\\\n\\\\n    \\\\u001b[7m176\\\\u001b[0m   '",
+              "Password = 'password123\\\\n    \\\\u001b[7m   \\\\u001b[0m \\\\u001b[91m                                     \\\\u001b[0m\\\\n    \\\\u001b[96m__tests__/auth/login.test.ts\\\\u001b[0m:\\\\u001b[93m211\\\\u001b[0m:\\\\u001b[93m5\\\\u001b[0m - \\\\u001b[91merror\\\\u001b[0m\\\\u001b[90m TS1002: \\\\u001b[0mUnterminated string literal.\\\\n\\\\n    \\\\u001b[7m211\\\\u001b[0m   '",
+              "Password = 'password123\\\\n    \\\\u001b[7m   \\\\u001b[0m \\\\u001b[91m                                     \\\\u001b[0m\\\\n    \\\\u001b[96m__tests__/auth/login.test.ts\\\\u001b[0m:\\\\u001b[93m251\\\\u001b[0m:\\\\u001b[93m5\\\\u001b[0m - \\\\u001b[91merror\\\\u001b[0m\\\\u001b[90m TS1002: \\\\u001b[0mUnterminated string literal.\\\\n\\\\n    \\\\u001b[7m251\\\\u001b[0m   '",
+              "Password = 'password123\\\\n    \\\\u001b[7m   \\\\u001b[0m \\\\u001b[91m                                     \\\\u001b[0m\\\\n    \\\\u001b[96m__tests__/auth/login.test.ts\\\\u001b[0m:\\\\u001b[93m286\\\\u001b[0m:\\\\u001b[93m5\\\\u001b[0m - \\\\u001b[91merror\\\\u001b[0m\\\\u001b[90m TS1002: \\\\u001b[0mUnterminated string literal.\\\\n\\\\n    \\\\u001b[7m286\\\\u001b[0m   '",
+              "Password = 'password123\\\\n    \\\\u001b[7m   \\\\u001b[0m \\\\u001b[91m                                     \\\\u001b[0m\\\\n    \\\\u001b[96m__tests__/auth/login.test.ts\\\\u001b[0m:\\\\u001b[93m321\\\\u001b[0m:\\\\u001b[93m5\\\\u001b[0m - \\\\u001b[91merror\\\\u001b[0m\\\\u001b[90m TS1002: \\\\u001b[0mUnterminated string literal.\\\\n\\\\n    \\\\u001b[7m321\\\\u001b[0m   '"
+            ]
+          },
+          {
+            "file": "security-scan-report.json",
+            "matches": [
+              "Token = 'mock-access-token\\\\n    \\\\u001b[7m   \\\\u001b[0m \\\\u001b[91m                                            \\\\u001b[0m\\\\n    \\\\u001b[96m__tests__/auth/login.test.ts\\\\u001b[0m:\\\\u001b[93m101\\\\u001b[0m:\\\\u001b[93m5\\\\u001b[0m - \\\\u001b[91merror\\\\u001b[0m\\\\u001b[90m TS1002: \\\\u001b[0mUnterminated string literal.\\\\n\\\\n    \\\\u001b[7m101\\\\u001b[0m   '",
+              "Token = 'mock-access-token\\\\n    \\\\u001b[7m   \\\\u001b[0m \\\\u001b[91m                                            \\\\u001b[0m\\\\n    \\\\u001b[96m__tests__/auth/login.test.ts\\\\u001b[0m:\\\\u001b[93m101\\\\u001b[0m:\\\\u001b[93m5\\\\u001b[0m - \\\\u001b[91merror\\\\u001b[0m\\\\u001b[90m TS1002: \\\\u001b[0mUnterminated string literal.\\\\n\\\\n    \\\\u001b[7m101\\\\u001b[0m   '"
+            ]
+          }
+        ]
+      }
     },
     {
-      "name": "Content Security Policy",
-      "status": "warning",
-      "duration": 2,
-      "findings": [
-        {
-          "type": "csp_violation",
-          "severity": "medium",
-          "file": "pages/index.tsx",
-          "description": "Use of dangerouslySetInnerHTML detected",
-          "recommendation": "Sanitize content or use safer alternatives"
-        }
-      ],
-      "message": "Found 1 CSP issues"
+      "name": "File Permissions Check",
+      "status": "pass",
+      "details": {
+        "permissionIssues": []
+      }
     }
   ],
-  "vulnerabilities": [
-    {
-      "type": "hardcoded_password",
-      "severity": "high",
-      "file": "automation-orchestrator-report.json",
-      "description": "Potential hardcoded hardcoded password found",
-      "recommendation": "Use environment variables instead"
-    },
-    {
-      "type": "hardcoded_token",
-      "severity": "medium",
-      "file": "automation-orchestrator-report.json",
-      "description": "Potential hardcoded hardcoded token found",
-      "recommendation": "Use environment variables instead"
-    },
-    {
-      "type": "csp_violation",
-      "severity": "medium",
-      "file": "pages/index.tsx",
-      "description": "Use of dangerouslySetInnerHTML detected",
-      "recommendation": "Sanitize content or use safer alternatives"
-    }
-  ],
-  "summary": {
-    "total": 3,
-    "critical": 0,
-    "high": 1,
-    "medium": 2,
-    "low": 0,
-    "info": 0
-  }
-=======
-  "timestamp": "2025-09-04T00:00:10.786Z",
-  "scans": {
-    "packageJson": {
-      "status": "completed",
-      "dependencies": 111,
-      "vulnerablePackages": 0
-    },
-    "sensitiveFiles": {
-      "status": "completed",
-      "found": 0,
-      "files": []
-    },
-    "codeScan": {
-      "status": "completed",
-      "filesScanned": 10,
-      "potentialSecrets": 0
-    },
-    "npmAudit": {
-      "status": "skipped",
-      "message": "npm audit not available or failed"
-    }
-  },
   "vulnerabilities": [],
-  "status": "secure"
->>>>>>> 128840a43b844df0edc9aa22038e6fb53d898bf5
-=======
-  "timestamp": "2025-09-04T02:16:02.212Z",
-  "summary": {
-    "passed": 3,
-    "warnings": 1,
-    "errors": 0,
-    "infos": 1
-  },
-  "status": "WARNING"
->>>>>>> 9d52a0b519566fb829f098b2703072e5c0978931
+  "recommendations": [
+    "Remove hardcoded secrets and use environment variables"
+  ],
+  "overallStatus": "warning"
 }

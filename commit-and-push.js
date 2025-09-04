@@ -9,13 +9,10 @@ const fs = require('fs');
 const path = require('path');
 
 class CommitAndPush {
-  constructor() {
-    this.changes = [];
-    this.commitMessage = this.generateCommitMessage();
-  }
+  constructor() { this.changes = [];
+    this.commitMessage = this.generateCommitMessage() }
 
-  log(message, type = 'INFO') {
-    const icons = {
+  log() { const icons={
       'INFO': 'ℹ️',
       'SUCCESS': '✅',
       'ERROR': '❌',
@@ -26,9 +23,7 @@ class CommitAndPush {
     console.log(`${icons[type]} ${message}`);
   }
 
-  generateCommitMessage() {
-    const timestamp = new Date().toISOString();
-    return `Automated improvements and optimizations - ${timestamp}
+  generateCommitMessage() { const timestamp = new Date().toISOString()return `Automated improvements and optimizations - ${timestamp }
 
 - Enhanced automation scripts and testing suite
 - Improved security configurations and performance optimizations
@@ -40,17 +35,13 @@ class CommitAndPush {
 - Created documentation and usage guides`;
   }
 
-  checkGitRepository() {
-    if (!fs.existsSync('.git')) {
+  checkGitRepository() { if (!fs.existsSync('.git')) {
       this.log('Not in a git repository', 'WARNING');
-      return false;
-    }
+      return false }
     this.log('Git repository found', 'SUCCESS');
-    return true;
-  }
+    return true}
 
-  createGitCommands() {
-    const commands = [
+  createGitCommands() { const commands = [
       '# Git Workflow Commands',
       '# Run these commands to commit and push changes',
       '',
@@ -64,12 +55,9 @@ class CommitAndPush {
     ];
 
     const commandsFile = 'git-commands.txt';
-    fs.writeFileSync(commandsFile, commands.join('\n'));
-    this.log(`Created ${commandsFile} with git commands`, 'SUCCESS');
-  }
+    fs.writeFileSync(commandsFile, commands.join('\n'))this.log(`Created ${commandsFile} with git commands`, 'SUCCESS')}
 
-  createCommitScript() {
-    const script = `#!/bin/bash
+  createCommitScript() { const script = `#!/bin/bash
 # Automated commit and push script
 
 echo "🚀 Starting git operations..."
@@ -92,7 +80,7 @@ fi
 
 # Commit changes
 echo "💾 Committing changes..."
-git commit -m "${this.commitMessage}"
+git commit -m "${this.commitMessage }"
 
 # Push to main branch
 echo "🚀 Pushing to main branch..."
@@ -106,8 +94,7 @@ echo "✅ Git operations completed successfully"
     this.log('Created commit-and-push.sh script', 'SUCCESS');
   }
 
-  generateSummary() {
-    const summary = {
+  generateSummary() { const summary={
       timestamp: new Date().toISOString(),
       gitRepository: this.checkGitRepository(),
       commitMessage: this.commitMessage,
@@ -148,29 +135,25 @@ echo "✅ Git operations completed successfully"
     this.log('🚀 Git operations prepared', 'SUCCESS');
   }
 
-  async run() {
-    this.log('🔄 Preparing git operations...', 'PROGRESS');
+  async run() { this.log('🔄 Preparing git operations...', 'PROGRESS');
     
     this.createGitCommands();
     this.createCommitScript();
     this.generateSummary();
     
     this.log('✅ Git operations prepared successfully', 'SUCCESS');
-    this.log('📋 Next steps:', 'INFO');
+    this.log('📋 Next steps: ', 'INFO');
     this.log('1. Review the generated files', 'INFO');
     this.log('2. Run: chmod +x commit-and-push.sh', 'INFO');
     this.log('3. Execute: ./commit-and-push.sh', 'INFO');
-    this.log('4. Or manually run commands from git-commands.txt', 'INFO');
-  }
+    this.log('4. Or manually run commands from git-commands.txt', 'INFO') }
 }
 
 // Run the commit and push preparation
-if (require.main === module) {
-  const commitAndPush = new CommitAndPush();
+if() { const commitAndPush = new CommitAndPush();
   commitAndPush.run().catch(error => {
-    console.error('Commit and push preparation failed:', error);
-    process.exit(1);
-  });
+    console.error('Commit and push preparation failed: ', error);
+    process.exit(1) });
 }
 
 module.exports = CommitAndPush;

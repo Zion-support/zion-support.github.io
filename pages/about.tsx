@@ -21,7 +21,7 @@ export default function About() {
         {/* Hero Section */}
         <section className="py-20 px-4 text-center">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
+            <h1 className="text-4xl md: text-5xl font-extrabold tracking-tight mb-6">
               About Zion Tech Group
             </h1>
             <p className="text-xl text-slate-300 mb-8">
@@ -37,7 +37,7 @@ export default function About() {
         {/* Mission & Vision */}
         <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12">
+            <div className="grid md: grid-cols-2 gap-12">
               <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10">
                 <h2 className="text-3xl font-bold mb-6 text-blue-400">Our Mission</h2>
                 <p className="text-lg text-slate-300 mb-4">
@@ -69,7 +69,7 @@ export default function About() {
         {/* Company Stats */}
         <section className="py-16 px-4 bg-slate-900/40">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            <h2 className="text-3xl md: text-4xl font-bold text-center mb-12">
               Our Impact
             </h2>
             
@@ -97,7 +97,7 @@ export default function About() {
         {/* Values */}
         <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            <h2 className="text-3xl md: text-4xl font-bold text-center mb-12">
               Our Core Values
             </h2>
             
@@ -132,7 +132,7 @@ export default function About() {
         {/* Contact CTA */}
         <section className="py-16 px-4 bg-slate-900/40">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8">
+            <h2 className="text-3xl md: text-4xl font-bold mb-8">
               Ready to Work With Us?
             </h2>
             <p className="text-lg text-slate-300 mb-8">
@@ -152,5 +152,4 @@ export default function About() {
         </section>
       </main>
     </>
-  );
-}
+  )}

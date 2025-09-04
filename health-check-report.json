@@ -1,31 +1,29 @@
 {
-  "timestamp": "2025-09-04T02:30:15.898Z",
-  "checks": [
-    {
-      "name": "Package.json exists",
-      "status": "pass",
-      "result": "package.json found"
+  "timestamp": "2025-09-04T02:31:51.290Z",
+  "checks": {
+    "packageJson": {
+      "status": "ok",
+      "message": "Package.json found",
+      "version": "0.1.0"
     },
-    {
-      "name": "Dependencies installed",
-      "status": "pass",
-      "result": "Dependencies installed"
+    "dependencies": {
+      "status": "ok",
+      "message": "Dependencies installed"
     },
-    {
-      "name": "Build process",
-      "status": "fail",
-      "error": "Build failed"
+    "diskSpace": {
+      "status": "ok",
+      "message": "Disk space available",
+      "details": "overlay         126G   14G  106G  12% /"
     },
-    {
-      "name": "Linting",
-      "status": "pass",
-      "result": "Linting passed"
+    "memory": {
+      "status": "ok",
+      "message": "Memory check completed",
+      "details": "Mem:            15Gi       1.4Gi       792Mi       7.0Mi        13Gi        14Gi"
     },
-    {
-      "name": "TypeScript compilation",
-      "status": "fail",
-      "error": "TypeScript compilation failed"
+    "build": {
+      "status": "ok",
+      "message": "Build directory found"
     }
-  ],
-  "status": "unhealthy"
+  },
+  "status": "healthy"
 }

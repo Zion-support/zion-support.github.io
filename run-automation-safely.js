@@ -10,15 +10,13 @@ const fs = require('fs');
 const path = require('path');
 
 class SafeAutomationRunner {
-  constructor() {
-    this.logDir = path.join(__dirname, 'automation', 'logs');
+  constructor() { this.logDir = path.join(__dirname, 'automation', 'logs');
     this.ensureLogDir();
-    this.startTime = Date.now();
-    this.results = {
+    this.startTime = Date.now()this.results = {
       completed: [],
       failed: [],
       skipped: []
-    };
+     };
   }
 
   ensureLogDir() {
@@ -27,42 +25,34 @@ class SafeAutomationRunner {
     }
   }
 
-  log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}`;
+  log() { const timestamp = new Date().toISOString()const logMessage = `[${timestamp }] [${level}] ${message}`;
     console.log(logMessage);
     
     const logFile = path.join(this.logDir, 'safe-automation.log');
-    fs.appendFileSync(logFile, logMessage + '\n');
-  }
+    fs.appendFileSync(logFile, logMessage + '\n')}
 
-  async runCommand(command, description, timeout = 60000) {
-    this.log(`🔧 ${description}`);
+  async runCommand() { this.log(`🔧 ${description }`);
     try {
       const result = execSync(command, { 
         encoding: 'utf8', 
         stdio: 'pipe',
         timeout: timeout
-      });
-      this.log(`✅ ${description} completed successfully`);
+      })this.log(`✅ ${description} completed successfully`);
       this.results.completed.push(description);
-      return { success: true, output: result };
-    } catch (error) {
-      this.log(`❌ ${description} failed: ${error.message}`, 'ERROR');
+      return { success: true, output: result }} catch() { this.log(`❌ ${description } failed: ${error.message}`, 'ERROR');
       this.results.failed.push({ description, error: error.message });
       return { success: false, error: error.message };
     }
   }
 
-  async runAutomationScripts() {
-    this.log('🚀 Starting Safe Automation Runner');
+  async runAutomationScripts() { this.log('🚀 Starting Safe Automation Runner');
     
     // Basic health checks
     await this.runCommand('npm --version', 'Check npm version', 10000);
     await this.runCommand('node --version', 'Check node version', 10000);
     
     // Run linting
-    await this.runCommand('npm run lint:check', 'Run linting check', 120000);
+    await this.runCommand('npm run lint: check', 'Run linting check', 120000);
     
     // Run type checking
     await this.runCommand('npm run type-check', 'Run TypeScript type check', 120000);
@@ -76,12 +66,9 @@ class SafeAutomationRunner {
     // Security audit
     await this.runCommand('npm audit --audit-level=moderate', 'Security audit', 60000);
     
-    this.generateReport();
-  }
+    this.generateReport() }
 
-  generateReport() {
-    const duration = Date.now() - this.startTime;
-    const report = {
+  generateReport() { const duration = Date.now() - this.startTimeconst report = {
       timestamp: new Date().toISOString(),
       duration: `${Math.round(duration / 1000)}s`,
       results: this.results,
@@ -96,20 +83,15 @@ class SafeAutomationRunner {
     const reportFile = path.join(this.logDir, 'automation-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     
-    this.log('📊 Automation Report Generated');
-    this.log(`✅ Completed: ${report.summary.completed}`);
-    this.log(`❌ Failed: ${report.summary.failed}`);
-    this.log(`📈 Success Rate: ${report.summary.successRate}`);
+    this.log('📊 Automation Report Generated')this.log(`✅ Completed: ${report.summary.completed}`)this.log(`❌ Failed: ${report.summary.failed}`)this.log(`📈 Success Rate: ${report.summary.successRate}`);
   }
 }
 
 // Run the automation
-if (require.main === module) {
-  const runner = new SafeAutomationRunner();
+if() { const runner = new SafeAutomationRunner();
   runner.runAutomationScripts().catch(error => {
-    console.error('Automation runner failed:', error);
-    process.exit(1);
-  });
+    console.error('Automation runner failed: ', error);
+    process.exit(1) });
 }
 
 module.exports = SafeAutomationRunner;

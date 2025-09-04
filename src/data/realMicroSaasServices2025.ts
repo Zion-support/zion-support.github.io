@@ -21,8 +21,7 @@ export interface MicroSaasService {
   technicalSpecs: string[];
   integrations: string[];
   support: string[];
-  compliance: string[];
-}
+  compliance: string[]}
 
 export const SERVICE_CATEGORIES = [
   'AI & Machine Learning',

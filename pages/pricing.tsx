@@ -11,7 +11,7 @@ const PricingPage: React.FC = () => {
       </Head>
       <section className="bg-white">
         <div className="container mx-auto px-4 py-12">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Pricing</h1>
+          <h1 className="text-3xl md: text-4xl font-bold text-gray-900 mb-6">Pricing</h1>
           <p className="text-gray-600 mb-10 max-w-3xl">
             We tailor solutions to your needs. Below are typical starting ranges observed in the market. Get a custom quote at any time.
           </p>

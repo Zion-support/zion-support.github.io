@@ -1768,7 +1768,7 @@ export default function Services(): JSX.Element {
             fontWeight: 700, textDecoration: 'none', fontSize: 16,
             transition: 'all 0.3s ease'
           }}>Request a Quote</Link>
-          <a href="tel:+13024640950" style={{
+          <a href="tel: +13024640950" style={{
             display: 'inline-block', 
             background: 'rgba(34, 197, 94, 0.1)', 
             color: '#22c55e', padding: '16px 32px', borderRadius: 12, 
