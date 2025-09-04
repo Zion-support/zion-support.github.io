@@ -1,14 +1,11 @@
 {
-  "timestamp": "2025-09-04T02:10:00.397Z",
-  "duration": "2ms",
-=======
-  "timestamp": "2025-09-04T02:31:34.193Z",
+  "timestamp": "2025-09-04T02:55:50.127Z",
   "duration": "1ms",
-  "overallStatus": "healthy",
+  "overallStatus": "warning",
   "summary": {
     "total": 7,
-    "healthy": 7,
-    "warnings": 0,
+    "healthy": 6,
+    "warnings": 1,
     "unhealthy": 0
   },
   "checks": [
@@ -44,9 +41,8 @@
     },
     {
       "name": "Environment",
-      "status": "healthy",
-      "details": "Required environment variables set"
+      "status": "warning",
+      "details": "Missing environment variables: NODE_ENV"
     }
   ]
->>>>>>> c5ae1602a7f (Fix environment variable configuration and update health check status)
 }

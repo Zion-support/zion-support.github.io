@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-04T02:23:12.916Z",
+  "timestamp": "2025-09-04T02:55:27.818Z",
   "duration": "0s",
   "results": {
     "automation": {
@@ -8,7 +8,7 @@
     },
     "testing": {
       "success": false,
-      "error": "require is not defined"
+      "error": "Class constructor TestSuite cannot be invoked without 'new'"
     },
     "git": {
       "success": false,

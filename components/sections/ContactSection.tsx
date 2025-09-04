@@ -76,7 +76,7 @@ const ContactSection: React.FC = () => {
 
             <div className="mt-8">
               <a href="/contact">
-                <Button size="lg">Send us a Message</Button>
+                <Button size="large">Send us a Message</Button>
               </a>
             </div>
           </div>
@@ -153,7 +153,7 @@ const ContactSection: React.FC = () => {
                 ></textarea>
               </div>
               
-              <Button type="submit" size="lg" className="w-full">
+              <Button type="submit" size="large" className="w-full">
                 Send Message
               </Button>
             </form>
