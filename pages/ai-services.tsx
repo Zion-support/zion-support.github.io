@@ -1154,355 +1154,157 @@ export default function AIServices(): any {
       ]
     },
     {
-      icon: Database,
-      name: 'AI Data Intelligence Platform',
-      description: 'Comprehensive AI platform that automatically discovers, cleans, and enriches data while providing intelligent insights and recommendations.',
+      icon: Brain,
+      name: 'AI-Powered Email Intelligence',
+      description: 'Advanced email analysis and automation system that understands context, sentiment, and intent for intelligent responses.',
       features: [
-        'Quantum machine learning algorithms',
-        'Quantum optimization for complex problems',
-        'Quantum neural network architectures',
-        'Hybrid classical-quantum AI models',
-        'Quantum data processing and analysis',
-        'Quantum-enhanced pattern recognition'
+        'Context-aware email understanding and classification',
+        'Automated response generation with personalization',
+        'Email thread analysis and conversation tracking',
+        'Priority scoring and urgent message detection',
+        'Multi-language support and translation',
+        'Integration with CRM and productivity tools'
       ],
-      pricing: '$15,000 – $100,000/project',
-      perUnit: 'Custom pricing based on quantum resources',
-      timeline: '12–24 weeks',
+      pricing: '$2,500 – $12,000 setup',
+      perUnit: '$0.05 – $0.25 per email',
+      timeline: '3–6 weeks',
       benefits: [
-        'Exponential speedup for specific problems',
-        'Breakthrough optimization capabilities',
-        'Advanced quantum AI research',
-        'Next-generation computing power'
-      ]
-    },
-    {
-      icon: Cpu,
-      name: 'Edge AI Inference Engine',
-      description: 'Ultra-low latency AI inference platform optimized for edge devices with real-time processing and minimal resource requirements.',
-      features: [
-        'Ultra-low latency inference (<10ms)',
-        'Edge-optimized model compression',
-        'Real-time data processing',
-        'Offline AI capabilities',
-        'Multi-device synchronization',
-        'Adaptive model optimization'
-      ],
-      pricing: '$2,000 – $15,000/setup',
-      perUnit: '$0.001 – $0.01 per inference',
-      timeline: '6–12 weeks',
-      benefits: [
-        'Real-time AI decision making',
-        'Reduced cloud dependency',
-        'Enhanced privacy and security',
-        'Optimized resource utilization'
-      ]
-    },
-    {
-      icon: Zap,
-      name: 'Autonomous AI Agent Orchestrator',
-      description: 'Advanced autonomous AI system that can independently plan, execute, and adapt complex workflows without human intervention.',
-      features: [
-        'Autonomous task planning and execution',
-        'Self-learning and adaptation capabilities',
-        'Multi-agent coordination and communication',
-        'Dynamic workflow optimization',
-        'Autonomous decision making',
-        'Continuous performance improvement'
-      ],
-      pricing: '$5,000 – $50,000/setup',
-      perUnit: '$0.10 – $1.00 per autonomous action',
-      timeline: '8–16 weeks',
-      benefits: [
-        'Fully autonomous operations',
-        'Self-improving AI systems',
-        'Reduced human oversight requirements',
-        'Enhanced operational efficiency'
-      ]
-    },
-    {
-      icon: Eye,
-      name: 'Advanced Computer Vision Analytics',
-      description: 'Next-generation computer vision platform with 3D object recognition, spatial understanding, and real-time scene analysis.',
-      features: [
-        '3D object detection and tracking',
-        'Spatial scene understanding',
-        'Real-time video analytics',
-        'Advanced facial recognition',
-        'Gesture and pose estimation',
-        'Multi-camera fusion and analysis'
-      ],
-      pricing: '$3,000 – $25,000/setup',
-      perUnit: '$0.02 – $0.20 per image/video frame',
-      timeline: '8–16 weeks',
-      benefits: [
-        '99.8% accuracy in object detection',
-        'Real-time spatial analysis',
-        'Advanced visual intelligence',
-        'Enhanced security and monitoring'
-      ]
-    },
-    {
-      icon: Mic,
-      name: 'Multimodal AI Communication Platform',
-      description: 'Advanced AI system that processes and responds to multiple input modalities (text, voice, images, gestures) for natural human-AI interaction.',
-      features: [
-        'Multimodal input processing',
-        'Natural language understanding',
-        'Emotional intelligence and sentiment analysis',
-        'Context-aware responses',
-        'Real-time conversation management',
-        'Cross-modal learning and adaptation'
-      ],
-      pricing: '$4,000 – $30,000/setup',
-      perUnit: '$0.05 – $0.50 per interaction',
-      timeline: '10–20 weeks',
-      benefits: [
-        'Natural human-AI interaction',
-        'Enhanced user experience',
-        'Contextual understanding',
-        'Multimodal intelligence'
+        '85% reduction in email response time',
+        'Improved email organization and prioritization',
+        'Enhanced customer communication quality',
+        'Reduced email management overhead'
       ]
     },
     {
       icon: Database,
-      name: 'Federated Learning Platform',
-      description: 'Privacy-preserving AI platform that enables machine learning across distributed datasets without centralizing sensitive data.',
+      name: 'AI Data Quality & Cleansing',
+      description: 'Intelligent data validation, cleansing, and enrichment platform for enterprise data management.',
       features: [
-        'Distributed model training',
-        'Privacy-preserving algorithms',
-        'Federated optimization techniques',
-        'Secure aggregation protocols',
-        'Differential privacy implementation',
-        'Cross-silo data collaboration'
+        'Automated data quality assessment and scoring',
+        'Intelligent data cleansing and standardization',
+        'Duplicate detection and record matching',
+        'Data enrichment and augmentation',
+        'Real-time data validation and monitoring',
+        'Compliance and privacy protection'
       ],
-      pricing: '$8,000 – $60,000/setup',
-      perUnit: 'Custom pricing based on data volume',
-      timeline: '12–24 weeks',
+      pricing: '$3,000 – $15,000 setup',
+      perUnit: '$0.01 – $0.05 per record',
+      timeline: '4–8 weeks',
       benefits: [
-        'Enhanced data privacy',
-        'Distributed AI capabilities',
-        'Regulatory compliance',
-        'Collaborative intelligence'
-      ]
-    },
-    {
-      icon: TrendingUp,
-      name: 'Causal AI & Counterfactual Analysis',
-      description: 'Advanced causal inference AI platform that understands cause-and-effect relationships and performs counterfactual analysis for decision making.',
-      features: [
-        'Causal graph construction and analysis',
-        'Counterfactual reasoning and prediction',
-        'Intervention effect estimation',
-        'Causal discovery algorithms',
-        'Bias detection and mitigation',
-        'Causal explanation generation'
-      ],
-      pricing: '$6,000 – $45,000/setup',
-      perUnit: '$0.20 – $2.00 per analysis',
-      timeline: '10–18 weeks',
-      benefits: [
-        'True causal understanding',
-        'Improved decision making',
-        'Bias-free AI predictions',
-        'Explainable AI insights'
+        '95% improvement in data accuracy',
+        'Automated data quality monitoring',
+        'Reduced data management costs',
+        'Enhanced business intelligence quality'
       ]
     },
     {
       icon: Shield,
-      name: 'AI Security & Adversarial Defense',
-      description: 'Comprehensive AI security platform that protects against adversarial attacks and ensures robust, secure AI model deployment.',
+      name: 'AI Fraud Detection & Prevention',
+      description: 'Advanced fraud detection system using machine learning to identify and prevent fraudulent activities in real-time.',
       features: [
-        'Adversarial attack detection and prevention',
-        'Model robustness testing',
-        'AI security monitoring',
-        'Defensive distillation techniques',
-        'Secure model training protocols',
-        'AI threat intelligence'
+        'Real-time transaction monitoring and analysis',
+        'Behavioral pattern recognition and anomaly detection',
+        'Risk scoring and threat assessment',
+        'Automated fraud prevention workflows',
+        'Multi-channel fraud detection (online, mobile, in-store)',
+        'Continuous learning and model improvement'
       ],
-      pricing: '$5,000 – $40,000/setup',
-      perUnit: '$0.10 – $1.00 per security check',
-      timeline: '8–16 weeks',
+      pricing: '$5,000 – $25,000 setup',
+      perUnit: '$0.02 – $0.10 per transaction',
+      timeline: '6–10 weeks',
       benefits: [
-        'Enhanced AI security',
-        'Protection against attacks',
-        'Robust model deployment',
-        'Continuous security monitoring'
+        '99.8% fraud detection accuracy',
+        '60% reduction in false positives',
+        'Real-time fraud prevention',
+        'Significant cost savings on fraud losses'
+      ]
+    },
+    {
+      icon: Mic,
+      name: 'AI Voice Analytics & Processing',
+      description: 'Advanced voice recognition, analysis, and processing system for customer interactions and business intelligence.',
+      features: [
+        'Real-time speech-to-text conversion',
+        'Voice sentiment and emotion analysis',
+        'Speaker identification and verification',
+        'Call quality monitoring and optimization',
+        'Automated call transcription and summarization',
+        'Voice biometric authentication'
+      ],
+      pricing: '$2,000 – $10,000 setup',
+      perUnit: '$0.10 – $0.50 per minute',
+      timeline: '4–8 weeks',
+      benefits: [
+        '98% accuracy in speech recognition',
+        'Enhanced customer interaction insights',
+        'Automated call documentation',
+        'Improved customer service quality'
       ]
     },
     {
       icon: Code,
-      name: 'AI Code Generation & Optimization',
-      description: 'Advanced AI platform that generates, optimizes, and maintains code with natural language understanding and automated testing.',
+      name: 'AI Code Review & Optimization',
+      description: 'Intelligent code analysis, review, and optimization platform for software development teams.',
       features: [
-        'Natural language to code generation',
-        'Code optimization and refactoring',
-        'Automated testing and debugging',
-        'Code quality assessment',
-        'Documentation generation',
-        'Legacy code modernization'
+        'Automated code quality assessment',
+        'Security vulnerability detection',
+        'Performance optimization suggestions',
+        'Code style and best practices enforcement',
+        'Automated testing and bug detection',
+        'Technical debt analysis and recommendations'
       ],
-      pricing: '$3,000 – $25,000/setup',
-      perUnit: '$0.05 – $0.50 per code generation',
+      pricing: '$1,500 – $8,000 setup',
+      perUnit: '$0.05 – $0.20 per line of code',
+      timeline: '2–4 weeks',
+      benefits: [
+        '50% reduction in code review time',
+        'Early detection of security vulnerabilities',
+        'Improved code quality and maintainability',
+        'Faster development cycles'
+      ]
+    },
+    {
+      icon: Search,
+      name: 'AI-Powered Search & Discovery',
+      description: 'Intelligent search engine with natural language understanding and personalized results.',
+      features: [
+        'Natural language query processing',
+        'Semantic search and understanding',
+        'Personalized search results and recommendations',
+        'Multi-modal search (text, image, voice)',
+        'Real-time search analytics and optimization',
+        'Integration with existing systems and databases'
+      ],
+      pricing: '$3,000 – $15,000 setup',
+      perUnit: '$0.01 – $0.05 per search',
+      timeline: '4–8 weeks',
+      benefits: [
+        '90% improvement in search relevance',
+        'Enhanced user experience and engagement',
+        'Reduced search abandonment rates',
+        'Better content discovery and utilization'
+      ]
+    },
+    {
+      icon: Cog,
+      name: 'AI Process Automation & RPA',
+      description: 'Intelligent robotic process automation with AI decision-making capabilities for complex business processes.',
+      features: [
+        'Intelligent document processing and extraction',
+        'Automated decision-making workflows',
+        'Exception handling and human-in-the-loop processes',
+        'Process optimization and continuous improvement',
+        'Integration with legacy systems and APIs',
+        'Compliance monitoring and audit trails'
+      ],
+      pricing: '$4,000 – $20,000 setup',
+      perUnit: '$0.10 – $1.00 per process',
       timeline: '6–12 weeks',
       benefits: [
-        '10x faster development',
-        'Automated code optimization',
-        'Reduced development costs',
-        'Enhanced code quality'
-      ]
-    },
-    {
-      icon: FileText,
-      name: 'Advanced NLP & Language Models',
-      description: 'State-of-the-art natural language processing platform with custom language models, multilingual capabilities, and domain-specific training.',
-      features: [
-        'Custom language model training',
-        'Multilingual NLP capabilities',
-        'Domain-specific model fine-tuning',
-        'Advanced text generation',
-        'Semantic search and retrieval',
-        'Language understanding and reasoning'
-      ],
-      pricing: '$4,000 – $35,000/setup',
-      perUnit: '$0.01 – $0.10 per token',
-      timeline: '8–16 weeks',
-      benefits: [
-        'Custom language understanding',
-        'Multilingual capabilities',
-        'Domain-specific intelligence',
-        'Advanced text processing'
-      ]
-    },
-    {
-      icon: Brain,
-      name: 'Neural Architecture Search (NAS)',
-      description: 'Automated neural network design platform that uses AI to discover optimal architectures for specific tasks and datasets.',
-      features: [
-        'Automated architecture discovery',
-        'Multi-objective optimization',
-        'Hardware-aware design',
-        'Transfer learning optimization',
-        'Architecture performance prediction',
-        'Custom model generation'
-      ],
-      pricing: '$10,000 – $80,000/setup',
-      perUnit: 'Custom pricing based on search complexity',
-      timeline: '12–24 weeks',
-      benefits: [
-        'Optimal model architectures',
-        'Automated design process',
-        'Enhanced model performance',
-        'Reduced design time'
-      ]
-    },
-    {
-      icon: Zap,
-      name: 'Reinforcement Learning Platform',
-      description: 'Advanced reinforcement learning platform for training AI agents in complex environments with continuous learning and adaptation.',
-      features: [
-        'Multi-agent reinforcement learning',
-        'Continuous learning and adaptation',
-        'Simulation environment creation',
-        'Reward function optimization',
-        'Policy gradient methods',
-        'Real-world deployment capabilities'
-      ],
-      pricing: '$6,000 – $50,000/setup',
-      perUnit: '$0.10 – $1.00 per training episode',
-      timeline: '10–20 weeks',
-      benefits: [
-        'Autonomous decision making',
-        'Continuous learning capabilities',
-        'Complex environment navigation',
-        'Adaptive AI behavior'
-      ]
-    },
-    {
-      icon: Eye,
-      name: 'Medical AI Diagnostics Platform',
-      description: 'Advanced medical AI platform for diagnostic imaging, pathology analysis, and clinical decision support with FDA compliance.',
-      features: [
-        'Medical image analysis and diagnosis',
-        'Pathology and histology analysis',
-        'Clinical decision support systems',
-        'Drug interaction and side effect prediction',
-        'Patient outcome prediction',
-        'FDA-compliant AI models'
-      ],
-      pricing: '$15,000 – $150,000/setup',
-      perUnit: '$1.00 – $10.00 per analysis',
-      timeline: '16–32 weeks',
-      benefits: [
-        'Enhanced diagnostic accuracy',
-        'Faster medical decisions',
-        'Improved patient outcomes',
-        'Regulatory compliance'
-      ]
-    },
-    {
-      icon: TrendingUp,
-      name: 'Financial AI Trading Platform',
-      description: 'Sophisticated AI trading platform with algorithmic trading, risk management, and market prediction capabilities.',
-      features: [
-        'Algorithmic trading strategies',
-        'Real-time market analysis',
-        'Risk management and portfolio optimization',
-        'Sentiment analysis and news processing',
-        'High-frequency trading algorithms',
-        'Regulatory compliance monitoring'
-      ],
-      pricing: '$20,000 – $200,000/setup',
-      perUnit: 'Custom pricing based on trading volume',
-      timeline: '12–24 weeks',
-      benefits: [
-        'Automated trading strategies',
-        'Enhanced market analysis',
-        'Risk-optimized portfolios',
-        'Real-time decision making'
-      ]
-    },
-    {
-      icon: Globe,
-      name: 'AI-Powered Climate Modeling',
-      description: 'Advanced AI platform for climate prediction, environmental monitoring, and sustainability optimization.',
-      features: [
-        'Climate change prediction models',
-        'Environmental data analysis',
-        'Carbon footprint optimization',
-        'Renewable energy forecasting',
-        'Ecosystem monitoring and analysis',
-        'Sustainability impact assessment'
-      ],
-      pricing: '$8,000 – $60,000/setup',
-      perUnit: '$0.50 – $5.00 per analysis',
-      timeline: '12–24 weeks',
-      benefits: [
-        'Accurate climate predictions',
-        'Environmental impact optimization',
-        'Sustainability insights',
-        'Data-driven environmental decisions'
-      ]
-    },
-    {
-      icon: Users,
-      name: 'AI-Powered Personalization Engine',
-      description: 'Advanced personalization platform that creates unique user experiences through deep learning and behavioral analysis.',
-      features: [
-        'Deep learning personalization',
-        'Behavioral pattern analysis',
-        'Real-time recommendation systems',
-        'Cross-platform user profiling',
-        'Predictive user modeling',
-        'Dynamic content adaptation'
-      ],
-      pricing: '$3,000 – $25,000/setup',
-      perUnit: '$0.01 – $0.10 per personalization',
-      timeline: '6–12 weeks',
-      benefits: [
-        '40% improvement in search relevance',
-        'Increased user engagement and conversion',
-        'Personalized user experiences',
-        'Better content discovery and recommendations'
+        '80% reduction in manual processing time',
+        '99% accuracy in automated processes',
+        'Significant cost savings and efficiency gains',
+        'Improved compliance and audit capabilities'
       ]
     }
   ];
