@@ -8,6 +8,22 @@ interface RequestOptions extends RequestInit {
   timeout?: number;
 }
 
+// Add global type definitions for Node.js environment
+declare global {
+  interface RequestInit {
+    timeout?: number;
+  }
+  class AbortController {
+    signal: AbortSignal;
+    abort(): void;
+  }
+  interface AbortSignal {
+    aborted: boolean;
+    addEventListener(type: string, listener: () => void): void;
+    removeEventListener(type: string, listener: () => void): void;
+  }
+}
+
 class ApiClient {
   private baseUrl: string;
   private defaultTimeout: number;
@@ -45,6 +61,7 @@ class ApiClient {
       const data = await response.json();
       return { data, success: true };
     } catch (error) {
+      // eslint-disable-next-line no-console
       console.error('API request failed:', error);
       return {
         error: error instanceof Error ? error.message : 'Unknown error occurred',

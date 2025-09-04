@@ -15,8 +15,9 @@ export const validators = {
       return false}
   },
 
-  required: (value: any): boolean => {
-    return value !== null && value !== undefined && value !== ''},
+  required: (value: unknown): boolean => {
+    return value !== null && value !== undefined && value !== '';
+  },
 
   minLength: (value: string, min: number): boolean => {
     return value.length >= min},
@@ -28,7 +29,7 @@ export const validators = {
     return regex.test(value)}
 };
 
-export const formatValidationError = (field: string, rule: string, value?: any): string => {
+export const formatValidationError = (field: string, rule: string, value?: unknown): string => {
   const messages: Record<string, string> = {
     email: 'Please enter a valid email address',
     phone: 'Please enter a valid phone number',

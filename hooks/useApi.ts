@@ -3,18 +3,19 @@ import { useState, useEffect, useCallback } from 'react';
 
 interface UseApiOptions {
   immediate?: boolean;
-  onSuccess?: (data: any) => void;
-  onError?: (error: any) => void}
+  onSuccess?: (data: unknown) => void;
+  onError?: (error: unknown) => void;
+}
 
-export const useApi = <T = any>(
-  apiFunction: (...args: any[]) => Promise<T>,
+export const useApi = <T = unknown>(
+  apiFunction: (...args: unknown[]) => Promise<T>,
   options: UseApiOptions = {}
 ) => {
   const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<any>(null);
+  const [error, setError] = useState<unknown>(null);
 
-  const execute = useCallback(async (...args: any[]) => {
+  const execute = useCallback(async (...args: unknown[]) => {
     try {
       setLoading(true);
       setError(null);

@@ -9,7 +9,7 @@ export function useMessageChannelHandler({
   onMessage,
   onError
 }: MessageChannelHandlerProps = {}) {
-  const handleMessage = useCallback((event: MessageEvent) => {
+  const handleMessage = useCallback((event: MessageEvent<unknown>) => {
     try {
       if (onMessage) {
         onMessage(event.data);
