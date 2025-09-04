@@ -608,6 +608,213 @@ export default function ITServices(): any {
       category: 'Development',
     },
     {
+      icon: Cpu,
+      name: 'Quantum Computing Infrastructure',
+      description: 'Quantum computing setup, optimization, and integration for complex computational problems.',
+      features: [
+        'Quantum computing environment setup',
+        'Quantum algorithm development and optimization',
+        'Quantum-classical hybrid systems',
+        'Quantum error correction and fault tolerance',
+        'Quantum cryptography implementation',
+        'Quantum machine learning integration'
+      ],
+      pricing: '$200 – $500/hour',
+      projectPricing: '$100,000 – $1,000,000/project',
+      timeline: '12–32 weeks',
+      benefits: [
+        'Exponential computational speedup',
+        'Breakthrough optimization capabilities',
+        'Advanced cryptographic security',
+        'Revolutionary problem-solving potential'
+      ],
+      category: 'Emerging Technologies'
+    },
+    {
+      icon: Shield,
+      name: 'Advanced Threat Intelligence Platform',
+      description: 'Comprehensive threat intelligence and security orchestration platform with AI-powered analysis.',
+      features: [
+        'Threat intelligence aggregation and analysis',
+        'Security orchestration and automated response',
+        'Behavioral analytics and anomaly detection',
+        'Threat hunting and investigation tools',
+        'Incident response automation',
+        'Security metrics and reporting'
+      ],
+      pricing: '$10,000 – $75,000/project',
+      projectPricing: '$5,000 – $25,000/month managed',
+      timeline: '8–20 weeks',
+      benefits: [
+        'Proactive threat detection',
+        'Automated incident response',
+        'Reduced security incidents',
+        'Enhanced security posture'
+      ],
+      category: 'Security'
+    },
+    {
+      icon: Database,
+      name: 'Real-time Data Streaming Platform',
+      description: 'High-performance real-time data streaming and processing infrastructure for mission-critical applications.',
+      features: [
+        'Real-time data ingestion and processing',
+        'Stream processing and analytics',
+        'Event-driven architecture implementation',
+        'Data pipeline monitoring and optimization',
+        'Scalable message queuing systems',
+        'Real-time dashboard and alerting'
+      ],
+      pricing: '$150 – $400/hour',
+      projectPricing: '$40,000 – $200,000/project',
+      timeline: '6–16 weeks',
+      benefits: [
+        'Real-time data processing',
+        'Improved decision-making speed',
+        'Enhanced user experience',
+        'Scalable data infrastructure'
+      ],
+      category: 'Data Management'
+    },
+    {
+      icon: Cloud,
+      name: 'Multi-Cloud Management Platform',
+      description: 'Unified multi-cloud management with cost optimization, security, and compliance across AWS, Azure, and GCP.',
+      features: [
+        'Multi-cloud resource management',
+        'Cost optimization and governance',
+        'Security and compliance monitoring',
+        'Disaster recovery and backup',
+        'Performance monitoring and optimization',
+        'Automated scaling and load balancing'
+      ],
+      pricing: '$8,000 – $60,000/project',
+      projectPricing: '$3,000 – $15,000/month managed',
+      timeline: '8–20 weeks',
+      benefits: [
+        'Reduced cloud costs',
+        'Improved security posture',
+        'Enhanced disaster recovery',
+        'Simplified cloud management'
+      ],
+      category: 'Cloud & Infrastructure'
+    },
+    {
+      icon: Code,
+      name: 'Low-Code/No-Code Platform Development',
+      description: 'Custom low-code and no-code platform development for rapid application development and citizen development.',
+      features: [
+        'Visual application builder development',
+        'Drag-and-drop interface design',
+        'Workflow automation and orchestration',
+        'Integration with enterprise systems',
+        'User role and permission management',
+        'Performance monitoring and analytics'
+      ],
+      pricing: '$120 – $300/hour',
+      projectPricing: '$50,000 – $300,000/project',
+      timeline: '12–32 weeks',
+      benefits: [
+        'Faster application development',
+        'Reduced development costs',
+        'Empowered citizen developers',
+        'Improved business agility'
+      ],
+      category: 'Development'
+    },
+    {
+      icon: Smartphone,
+      name: '5G Network Integration & Optimization',
+      description: '5G network implementation, optimization, and application development for next-generation connectivity.',
+      features: [
+        '5G network planning and deployment',
+        'Network slicing and optimization',
+        'Edge computing integration',
+        'IoT device connectivity management',
+        'Performance monitoring and analytics',
+        'Security and compliance implementation'
+      ],
+      pricing: '$200 – $500/hour',
+      projectPricing: '$100,000 – $500,000/project',
+      timeline: '16–40 weeks',
+      benefits: [
+        'Ultra-low latency connectivity',
+        'Enhanced mobile experiences',
+        'IoT and edge computing enablement',
+        'Future-ready network infrastructure'
+      ],
+      category: 'Emerging Technologies'
+    },
+    {
+      icon: BarChart3,
+      name: 'Digital Twin Development Platform',
+      description: 'Digital twin creation and management for physical assets, processes, and systems with real-time monitoring.',
+      features: [
+        '3D modeling and simulation',
+        'Real-time data integration',
+        'Predictive analytics and maintenance',
+        'Virtual testing and optimization',
+        'IoT sensor integration',
+        'Performance monitoring and reporting'
+      ],
+      pricing: '$150 – $400/hour',
+      projectPricing: '$75,000 – $400,000/project',
+      timeline: '12–32 weeks',
+      benefits: [
+        'Predictive maintenance capabilities',
+        'Optimized asset performance',
+        'Reduced operational costs',
+        'Enhanced decision-making'
+      ],
+      category: 'Emerging Technologies'
+    },
+    {
+      icon: Shield,
+      name: 'Privacy-Preserving Analytics Platform',
+      description: 'Advanced privacy-preserving analytics using differential privacy, homomorphic encryption, and federated learning.',
+      features: [
+        'Differential privacy implementation',
+        'Homomorphic encryption for secure computation',
+        'Federated learning systems',
+        'Privacy-preserving machine learning',
+        'Data anonymization and pseudonymization',
+        'Compliance with privacy regulations'
+      ],
+      pricing: '$200 – $500/hour',
+      projectPricing: '$100,000 – $600,000/project',
+      timeline: '16–40 weeks',
+      benefits: [
+        'Privacy-compliant analytics',
+        'Secure data sharing',
+        'Regulatory compliance',
+        'Enhanced data protection'
+      ],
+      category: 'Security'
+    },
+    {
+      icon: Globe,
+      name: 'Metaverse Development Platform',
+      description: 'Metaverse infrastructure development including virtual worlds, avatars, and immersive experiences.',
+      features: [
+        'Virtual world creation and management',
+        'Avatar system development',
+        'Immersive 3D experiences',
+        'Virtual economy and NFT integration',
+        'Cross-platform compatibility',
+        'Social interaction and collaboration tools'
+      ],
+      pricing: '$150 – $400/hour',
+      projectPricing: '$100,000 – $800,000/project',
+      timeline: '20–52 weeks',
+      benefits: [
+        'Immersive user experiences',
+        'Virtual collaboration capabilities',
+        'New revenue opportunities',
+        'Future-ready digital presence'
+      ],
+      category: 'Emerging Technologies'
+    },
+    {
       icon: Server,
       name: 'Hybrid Cloud Management',
       description: 'Seamless hybrid cloud operations with multi-cloud orchestration and management.',
