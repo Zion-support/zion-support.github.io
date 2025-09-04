@@ -1,1 +1,0 @@
-import { Sparkles, CheckCircle, ArrowRight } from "lucide-react";
