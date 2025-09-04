@@ -74,6 +74,7 @@ class ApiErrorHandler {
       code: error.code,
       details: error.details
     };
+
     // Log error for monitoring
     console.error('API Error:', formattedError);
 
@@ -99,6 +100,7 @@ class ApiErrorHandler {
           return `Request failed with status ${error.status}`;
       }
     }
+
     return error.message || 'An unexpected error occurred';
   }
 }

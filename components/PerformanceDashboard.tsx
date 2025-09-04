@@ -18,7 +18,7 @@ const PerformanceDashboard: React.FC = () => {
     const handleMetric = (metric: PerformanceMetrics) => {
       setMetrics(prev => [...prev.slice(-9), metric]);
     };
-    
+
     // Simulate receiving metrics
     const interval = setInterval(() => {
       const mockMetric: PerformanceMetrics = {
@@ -27,7 +27,7 @@ const PerformanceDashboard: React.FC = () => {
         fid: Math.random() * 100,
         cls: Math.random() * 0.1,
         ttfb: Math.random() * 500 + 100,
-        timestamp: Date.now(),
+        timestamp: Date.now()
       };
       handleMetric(mockMetric);
     }, 5000);
@@ -64,6 +64,7 @@ const PerformanceDashboard: React.FC = () => {
           ✕
         </button>
       </div>
+      
       {metrics.length > 0 && (
         <div className="space-y-3">
           <div className="grid grid-cols-2 gap-2 text-sm">
@@ -92,6 +93,7 @@ const PerformanceDashboard: React.FC = () => {
               </span>
             </div>
           </div>
+          
           <div className="text-xs text-gray-400">
             Last updated: {new Date(metrics[metrics.length - 1]?.timestamp || 0).toLocaleTimeString()}
           </div>

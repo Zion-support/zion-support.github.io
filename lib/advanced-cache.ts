@@ -1,5 +1,3 @@
-import React from 'react';
-
 interface CacheItem<T> {
   data: T;
   timestamp: number;
@@ -23,6 +21,7 @@ class AdvancedCache<T = any> {
       cleanupInterval: 60 * 1000, // 1 minute
       ...config
     };
+
     // Start cleanup interval
     setInterval(() => this.cleanup(), this.config.cleanupInterval);
   }
@@ -33,11 +32,13 @@ class AdvancedCache<T = any> {
       timestamp: Date.now(),
       ttl: ttl || this.config.defaultTTL
     };
+
     // Remove oldest items if cache is full
     if (this.cache.size >= this.config.maxSize) {
       const firstKey = this.cache.keys().next().value;
       this.cache.delete(firstKey);
     }
+
     this.cache.set(key, item);
   }
 
@@ -93,6 +94,7 @@ class AdvancedCache<T = any> {
         active++;
       }
     }
+
     return {
       total: this.cache.size,
       active,
