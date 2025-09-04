@@ -52,7 +52,7 @@ function Header(): JSX.Element {
             background: 'none', border: 'none', color: 'white', fontSize: '1.5rem', cursor: 'pointer',
             display: 'none',
             '@media (max-width: 768px)': { display: 'block' }
-          }}
+          }
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle mobile menu"
           aria-expanded={mobileMenuOpen}

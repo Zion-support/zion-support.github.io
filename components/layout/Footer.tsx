@@ -23,8 +23,7 @@ const Footer: React.FC = () => {
       { name: 'Terms of Service', href: '/terms' },
       { name: 'Documentation', href: '/docs' },
     ],
-  };
-
+  }
   return (
     <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -118,6 +117,5 @@ const Footer: React.FC = () => {
       </div>
     </footer>
   );
-};
-
+}
 export default Footer;

@@ -24,6 +24,7 @@ const PerformanceMonitor: React.FC = () => {
           });
         }
       };
+
       // Monitor Largest Contentful Paint (LCP)
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
@@ -35,8 +36,7 @@ const PerformanceMonitor: React.FC = () => {
             }
             sendToAnalytics('LCP', entry.startTime);
           }
-        }
-      });
+        });
       
       try {
         observer.observe({ entryTypes: ['largest-contentful-paint'] });
@@ -56,7 +56,6 @@ const PerformanceMonitor: React.FC = () => {
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             sendToAnalytics('FID', (entry as any).processingStart - entry.startTime);
           }
-        }
       });
 
       try {
@@ -69,11 +68,10 @@ const PerformanceMonitor: React.FC = () => {
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          const layoutShiftEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+          const layoutShiftEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number }
           if (!layoutShiftEntry.hadRecentInput) {
             clsValue += layoutShiftEntry.value || 0;
           }
-        }
         // Log CLS in development only
         if (process.env.NODE_ENV === 'development') {
           // eslint-disable-next-line no-console

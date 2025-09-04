@@ -1,11 +1,11 @@
 {
-  "timestamp": "2025-09-03T23:23:49.024Z",
+  "timestamp": "2025-09-04T02:30:05.914Z",
   "optimizations": [
-    "Large file: src/data/realMicroSaasServices2025.ts (980 lines)",
-    "Large file: pages/ai-services.tsx (1137 lines)",
+    "Large file: src/data/realMicroSaasServices2025.ts (1794 lines)",
+    "Large file: pages/ai-services.tsx (979 lines)",
     "Large file: pages/it-services.tsx (1439 lines)",
-    "Large file: pages/micro-saas.tsx (1489 lines)",
-    "Large file: pages/services.tsx (1636 lines)"
+    "Large file: pages/micro-saas.tsx (1275 lines)",
+    "Large file: pages/services.tsx (1782 lines)"
   ],
   "improvements": [
     "Bundle size is within acceptable limits",
@@ -20,15 +20,15 @@
     "Enable SWC minification for better performance"
   ],
   "metrics": {
-    "bundleSize": 48331706,
-    "bundleSizeMB": "46.09",
+    "bundleSize": 10855,
+    "bundleSizeMB": "0.01",
     "totalImageSize": 3447,
     "totalImageSizeMB": "0.00",
     "imageCount": 3,
-    "totalLines": 9252,
-    "totalFiles": 26,
-    "averageLinesPerFile": 356,
-    "dependencies": 78,
+    "totalLines": 18390,
+    "totalFiles": 67,
+    "averageLinesPerFile": 274,
+    "dependencies": 79,
     "devDependencies": 37
   }
 }

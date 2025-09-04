@@ -80,7 +80,7 @@ const Layout: React.FC<LayoutProps> = ({
                 "https://ziontechgroup.com"
               ]
             })
-          }}
+          }
         />
       </Head>
       
@@ -93,6 +93,5 @@ const Layout: React.FC<LayoutProps> = ({
       </div>
     </>
   );
-};
-
+}
 export default Layout;

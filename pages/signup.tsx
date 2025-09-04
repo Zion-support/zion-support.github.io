@@ -8,8 +8,7 @@ export default function Signup() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  };
-
+  }
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -28,8 +27,7 @@ export default function Signup() {
       ...prev,
       [name]: type === 'checkbox' ? checked : value
     }));
-  };
-
+  }
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
@@ -46,8 +44,7 @@ export default function Signup() {
     // Handle signup logic here
     console.log('Signup attempt:', formData);
     alert('Account creation functionality will be implemented with authentication system.');
-  };
-
+  }
   return (
     <>
       <Head>
@@ -106,7 +103,7 @@ export default function Signup() {
                       background: 'rgba(255, 255, 255, 0.1)',
                       color: 'white',
                       fontSize: '1rem'
-                    }}
+                    }
                     placeholder="First name"
                   />
                 </div>
@@ -128,7 +125,7 @@ export default function Signup() {
                       background: 'rgba(255, 255, 255, 0.1)',
                       color: 'white',
                       fontSize: '1rem'
-                    }}
+                    }
                     placeholder="Last name"
                   />
                 </div>
@@ -152,7 +149,7 @@ export default function Signup() {
                     background: 'rgba(255, 255, 255, 0.1)',
                     color: 'white',
                     fontSize: '1rem'
-                  }}
+                  }
                   placeholder="Enter your email"
                 />
               </div>
@@ -174,7 +171,7 @@ export default function Signup() {
                     background: 'rgba(255, 255, 255, 0.1)',
                     color: 'white',
                     fontSize: '1rem'
-                  }}
+                  }
                   placeholder="Your company name"
                 />
               </div>
@@ -196,7 +193,7 @@ export default function Signup() {
                     background: 'rgba(255, 255, 255, 0.1)',
                     color: 'white',
                     fontSize: '1rem'
-                  }}
+                  }
                   placeholder="+1 (555) 123-4567"
                 />
               </div>
@@ -220,7 +217,7 @@ export default function Signup() {
                       background: 'rgba(255, 255, 255, 0.1)',
                       color: 'white',
                       fontSize: '1rem'
-                    }}
+                    }
                     placeholder="Create password"
                   />
                 </div>
@@ -242,7 +239,7 @@ export default function Signup() {
                       background: 'rgba(255, 255, 255, 0.1)',
                       color: 'white',
                       fontSize: '1rem'
-                    }}
+                    }
                     placeholder="Confirm password"
                   />
                 </div>
@@ -256,7 +253,7 @@ export default function Signup() {
                     checked={formData.agreeToTerms}
                     onChange={handleInputChange}
                     required
-                    style={{ width: 16, height: 16, marginTop: 2 }}
+                    style={{ width: 16, height: 16, marginTop: 2 }
                   />
                   <span style={{ fontSize: '0.9rem', lineHeight: 1.4 }}>
                     I agree to the{' '}
@@ -279,7 +276,7 @@ export default function Signup() {
                     name="subscribeNewsletter"
                     checked={formData.subscribeNewsletter}
                     onChange={handleInputChange}
-                    style={{ width: 16, height: 16 }}
+                    style={{ width: 16, height: 16 }
                   />
                   <span style={{ fontSize: '0.9rem' }}>
                     Subscribe to our newsletter for updates and insights
@@ -301,13 +298,13 @@ export default function Signup() {
                   cursor: 'pointer',
                   transition: 'transform 0.3s ease',
                   marginBottom: 20
-                }}
+                }
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-2px)';
-                }}
+                }
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = 'translateY(0)';
-                }}
+                }
               >
                 Create Account
               </button>
