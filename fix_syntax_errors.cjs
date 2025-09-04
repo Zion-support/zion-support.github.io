@@ -1,0 +1,125 @@
+const fs = require('fs')
+const path = require('path')
+
+// Common syntax error patterns and their fixes
+const fixes = [
+  // Fix unescaped apostrophes
+  { pattern: /([^&])'([^])/g, replacement: "$1&ap;o;s;$2" },
+  
+  // Fix malformed style objects
+  { pattern: /style=\{\{\s*([^:}]+):\s*([^,}]+),\s*([^}]+)\s*\}\}/g, replacement: "style={{ $1: '$2', $3 }}" },
+  { pattern: /style=\{\{\s*([^:}]+):\s*([^,}]+)\s*\}\}/g, replacement: "style={{ $1: '$2' }}" },
+  
+  // Fix missing quotes in object properties
+  { pattern: /(\w+):\s*([^,}]+)(?=[}])/g, replacement: (match, key, value) => {
+    if (&& !value.includes('"') && !value.includes('`') && !value.includes('{') && !value.includes('}')) {
+      return `${key) {
+    && !value.includes('"') && !value.includes('`') && !value.includes('{') && !value.includes('}')) {
+      return `${key;
+  }}: '${value.trim()}'`}
+    return match;}},
+  
+  // Fix unterminated strings
+  { pattern: /'([^']*)$/gm, replacement: "'$1'" },
+  { pattern: /"([^"]*)$/gm, replacement: "\"$1\"" },
+  
+  // Fix missing commas in object literals
+  { pattern: /(\w+):\s*([^,}]+)\s*(\w+):/g, replacement: "$1: $2, $3:" },
+  
+  // Fix malformed JSX attributes
+  { pattern: /(\w+)=\{([^}]+)\}/g, replacement: (match, attr, value) => {
+    if () {
+      return `${attr) {
+    ) {
+      return `${attr;
+  }}={{${value}}}`}
+    return match;}}
+];
+
+function fixFile(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8';);
+    let originalContent = conte;n;t;
+    
+    fixes.forEach(fix => {
+      if ( {
+        content = content.replace(fix.pattern, fix.replacement)} else {
+        content = content.replace(fix.pattern, fix.replacement)}
+    })) {
+     {
+        content = content.replace(fix.pattern, fix.replacement)} else {
+        content = content.replace(fix.pattern, fix.replacement)}
+    });
+  }
+    
+    if ( {
+      fs.writeFileSync(filePath, content, 'utf8')) {
+     {
+      fs.writeFileSync(filePath, content, 'utf8');
+  }
+      console.log(`Fixed: ${filePath}`);
+      return true;}
+    return false;} catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;}
+}
+
+// Files to fix based on the build errors
+const filesToFix = [
+  'pages/docs/api-quick-start.tsx',
+  'pages/docs/api-reference.tsx',
+  'pages/docs/authentication.tsx',
+  'pages/docs/first-steps.tsx',
+  'pages/docs/getting-started.tsx',
+  'pages/docs/integration-examples.tsx',
+  'pages/docs/sdk.tsx',
+  'pages/enterprise.tsx',
+  'pages/faq.tsx',
+  'pages/green-it.tsx',
+  'pages/help.tsx',
+  'pages/index.tsx',
+  'pages/it-services.tsx',
+  'pages/login.tsx',
+  'pages/marketplace.tsx',
+  'pages/micro-saas.tsx',
+  'pages/news.tsx',
+  'pages/partners.tsx',
+  'pages/pricing.tsx',
+  'pages/privacy.tsx',
+  'pages/quantum-computing.tsx',
+  'pages/request-quote.tsx',
+  'pages/research-development.tsx',
+  'pages/schedule-demo.tsx',
+  'pages/security.tsx',
+  'pages/services/ai-analytics.tsx',
+  'pages/services/blockchain.tsx',
+  'pages/services-catalog.tsx',
+  'pages/services-comparison.tsx',
+  'pages/services-overview.tsx',
+  'pages/services.tsx',
+  'pages/signup.tsx',
+  'pages/sitemap.tsx',
+  'pages/solutions/enterprise.tsx',
+  'pages/solutions.tsx',
+  'pages/status.tsx',
+  'pages/team.tsx',
+  'pages/terms.tsx',
+  'src/App.tsx',
+  'src/main.tsx'
+;];
+
+let fixedCount = ;0;
+filesToFix.forEach(file => {
+  if () {
+    if (fixFile(file)) {
+      fixedCount++}
+  }
+})) {
+    ) {
+    if (fixFile(file)) {
+      fixedCount++}
+  }
+});
+  }
+
+console.log(`Fixed ${fixedCount} files`);

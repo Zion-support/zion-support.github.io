@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
@@ -8,13 +8,17 @@ const PerformanceMonitor: React.FC = () => {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
+            // Send to analytics
+            if ((entry as any).startTime > 2500) {
+              // LCP is slow
             }
+          }
         }
       });
       
       try {
         observer.observe({ entryTypes: ['largest-contentful-paint'] });
-      } catch (e) {
+      } catch (_e) {
         // Fallback for browsers that don't support LCP
       }
 
@@ -22,14 +26,19 @@ const PerformanceMonitor: React.FC = () => {
       const fidObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'first-input') {
-            console.log('FID:', (entry as any).processingStart - entry.startTime);
+            const fidEntry = entry as any;
+            const fid = fidEntry.processingStart - fidEntry.startTime;
+            // Send to analytics
+            if (fid > 100) {
+              // FID is slow
+            }
           }
         }
       });
 
       try {
         fidObserver.observe({ entryTypes: ['first-input'] });
-      } catch (e) {
+      } catch (_e) {
         // Fallback for browsers that don't support FID
       }
 
@@ -41,11 +50,15 @@ const PerformanceMonitor: React.FC = () => {
             clsValue += (entry as any).value;
           }
         }
-        });
+        // Send to analytics
+        if (clsValue > 0.1) {
+          // CLS is poor
+        }
+      });
 
       try {
         clsObserver.observe({ entryTypes: ['layout-shift'] });
-      } catch (e) {
+      } catch (_e) {
         // Fallback for browsers that don't support CLS
       }
 
@@ -58,5 +71,5 @@ const PerformanceMonitor: React.FC = () => {
   }, []);
 
   return null; // This component doesn't render anything
-}
+};
 export default PerformanceMonitor;

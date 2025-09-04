@@ -12,9 +12,9 @@ export default function EnterpriseSolutions() {
   const contact = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
+    address: '364 E Main St STE 1008 Middletown, DE 19709',
     site: 'https://ziontechgroup.com'
-  }
+  };
 
   const enterpriseServices = [
     {
@@ -61,7 +61,7 @@ export default function EnterpriseSolutions() {
         <meta property="og:url" content={`${contact.site}/solutions/enterprise`} />
         <meta property="og:type" content="website" />
       </Head>
-
+      
       <div className={`min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
         {/* Hero Section */}
         <section className="relative py-20 px-4">
@@ -154,7 +154,7 @@ export default function EnterpriseSolutions() {
               Let our enterprise experts help you design and implement the perfect solution for your organization
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
+              <a href={`tel:${contact.phone}`} className="px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
                 Call {contact.phone}
               </a>
               <a href={`mailto:${contact.email}`} className="px-8 py-4 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors">

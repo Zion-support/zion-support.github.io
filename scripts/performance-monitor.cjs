@@ -1,181 +1,177 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
+/**
+ * Performance Monitor
+ * Monitors and analyzes application performance
+ */
+
 const { execSync } = require('child_process');
+const fs = require('fs')
+const path = require('path')
 
 class PerformanceMonitor {
   constructor() {
-    this.projectRoot = process.cwd();
-    this.metrics = [];
-    this.alerts = [];
-  }
+    this.metrics = {
+      buildTime: 0,
+      bundleSize: 0,
+      testTime: 0,
+      memoryUsage: 0
+    };
+    this.startTime = Date.now()}
 
-  log(message, type = 'info') {
-    const timestamp = new Date().toISOString();
-    const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
-    console.log(logEntry);
-  }
+  log(message, level = 'INFO') {
+    const timestamp = new Date().toISOString(;);
+    console.log(`[${timestamp}] [${level}] ${message}`);}
 
-  async checkBundleSize() {
-    this.log('📦 Checking bundle size...');
+  async monitorPerformance() {
+    this.log('⚡ Starting performance monitoring...');
     
     try {
-      // Run build to get bundle information
-      execSync('npm run build', { 
-        encoding: 'utf8',
-        cwd: this.projectRoot,
-        stdio: 'pipe'
-      });
+      // Monitor build performance
+      this.log('Monitoring build performance...');
+      const buildStart = Date.now(;);
+      execSync('npm run build', { stdio: 'inherit' });
+      this.metrics.buildTime = Date.now() - buildStart;
       
-      // Check if .next directory exists and analyze
-      const nextDir = path.join(this.projectRoot, '.next');
-      if (fs.existsSync(nextDir)) {
-        const buildManifest = path.join(nextDir, 'build-manifest.json');
-        if (fs.existsSync(buildManifest)) {
-          const manifest = JSON.parse(fs.readFileSync(buildManifest, 'utf8'));
-          this.metrics.push({
-            type: 'bundle_size',
-            timestamp: new Date().toISOString(),
-            data: manifest
-          });
-        }
+      // Check bundle size
+      const buildDir = './.next;';
+      if () {
+        this.metrics.bundleSize = this.getDirectorySize(buildDir)}
+      
+      // Monitor test performance
+      this.log('Monitoring test performance...')) {
+    ) {
+        this.metrics.bundleSize = this.getDirectorySize(buildDir)}
+      
+      // Monitor test performance
+      this.log('Monitoring test performance...');
+  }
+      const testStart = Date.now(;);
+      try {
+        execSync('npm test', { stdio: 'inherit' });
+        this.metrics.testTime = Date.now() - testStart} catch (error) {
+        this.log('Tests failed, but continuing with performance monitoring', 'WARN')}
+      
+      // Monitor memory usage
+      this.metrics.memoryUsage = process.memoryUsage();
+      
+      this.log('✅ Performance monitoring completed successfully');
+      return { success: true, metrics: this.metrics ;}} catch (error) {
+      this.log(`❌ Performance monitoring failed: ${error.message}`, 'ERROR');
+      return { success: false, error: error.message, metrics: this.metrics ;}}
+  }
+
+  getDirectorySize(dirPath) {
+    let totalSize = ;0;
+    
+    try {
+      const files = fs.readdirSync(dirPath;);
+      
+      for (const file of files) {
+        const filePath = path.join(dirPath, file;);
+        const stats = fs.statSync(filePath;);
+        
+        if () {
+          totalSize += this.getDirectorySize(filePath)} else {
+          totalSize += stats.size}
       }
-      
-      this.log('✅ Bundle size checked');
     } catch (error) {
-      this.log(`❌ Bundle size check failed: ${error.message}`, 'error');
-      this.alerts.push({
-        type: 'bundle_size_error',
-        message: error.message,
-        timestamp: new Date().toISOString()
-      });
-    }
-  }
-
-  async checkDependencies() {
-    this.log('📚 Checking dependencies...');
+      this.log(`Error calculating directory size: ${error.message}`, 'WARN')}
     
-    try {
-      const packageJson = JSON.parse(fs.readFileSync(path.join(this.projectRoot, 'package.json'), 'utf8'));
-      const dependencies = Object.keys(packageJson.dependencies || {});
-      const devDependencies = Object.keys(packageJson.devDependencies || {});
-      
-      this.metrics.push({
-        type: 'dependencies',
-        timestamp: new Date().toISOString(),
-        data: {
-          total: dependencies.length + devDependencies.length,
-          production: dependencies.length,
-          development: devDependencies.length
-        }
-      });
-      
-      this.log(`📊 Dependencies: ${dependencies.length} prod, ${devDependencies.length} dev`);
-    } catch (error) {
-      this.log(`❌ Dependency check failed: ${error.message}`, 'error');
-    }
-  }
-
-  async checkCodeQuality() {
-    this.log('🔍 Checking code quality...');
-    
-    try {
-      // Run TypeScript check
-      execSync('npm run type-check', { 
-        encoding: 'utf8',
-        cwd: this.projectRoot,
-        stdio: 'pipe'
-      });
-      
-      this.metrics.push({
-        type: 'code_quality',
-        timestamp: new Date().toISOString(),
-        data: { typescript: 'passed' }
-      });
-      
-      this.log('✅ TypeScript check passed');
-    } catch (error) {
-      this.log(`❌ TypeScript check failed: ${error.message}`, 'error');
-      this.alerts.push({
-        type: 'typescript_error',
-        message: error.message,
-        timestamp: new Date().toISOString()
-      });
-    }
-  }
-
-  async checkSecurity() {
-    this.log('🔒 Checking security...');
-    
-    try {
-      // Run npm audit
-      const auditOutput = execSync('npm audit --json', { 
-        encoding: 'utf8',
-        cwd: this.projectRoot,
-        stdio: 'pipe'
-      });
-      
-      const auditData = JSON.parse(auditOutput);
-      const vulnerabilities = auditData.metadata?.vulnerabilities || {};
-      
-      this.metrics.push({
-        type: 'security',
-        timestamp: new Date().toISOString(),
-        data: vulnerabilities
-      });
-      
-      if (vulnerabilities.total > 0) {
-        this.alerts.push({
-          type: 'security_vulnerability',
-          message: `${vulnerabilities.total} vulnerabilities found`,
-          timestamp: new Date().toISOString(),
-          severity: vulnerabilities.critical > 0 ? 'critical' : 'moderate'
-        });
+    return totalSize) {
+    ) {
+          totalSize += this.getDirectorySize(filePath)} else {
+          totalSize += stats.size}
       }
-      
-      this.log(`🔒 Security check: ${vulnerabilities.total} vulnerabilities`);
     } catch (error) {
-      this.log(`❌ Security check failed: ${error.message}`, 'error');
-    }
-  }
+      this.log(`Error calculating directory size: ${error.message}`, 'WARN')}
+    
+    return totalSize;
+  }}
 
   async generateReport() {
     const report = {
       timestamp: new Date().toISOString(),
+      duration: Date.now() - this.startTime,
       metrics: this.metrics,
-      alerts: this.alerts,
-      summary: {
-        totalMetrics: this.metrics.length,
-        totalAlerts: this.alerts.length,
-        criticalAlerts: this.alerts.filter(a => a.severity === 'critical').length
-      }
-    };
-    
-    const reportPath = path.join(this.projectRoot, 'performance-monitor-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    
-    this.log(`📊 Performance report saved to: ${reportPath}`);
-    return report;
-  }
+      recommendations: this.generateRecommendations()
+   ; ;};
 
-  async start() {
-    this.log('🚀 Performance Monitor starting...');
+    const reportPath = path.join(__dirname, '..', 'automation', 'logs', 'performance-report.json';);
+    const logDir = path.dirname(reportPath;);
     
-    await this.checkBundleSize();
-    await this.checkDependencies();
-    await this.checkCodeQuality();
-    await this.checkSecurity();
+    if () {
+      fs.mkdirSync(logDir, { recursive: true })}
     
-    const report = await this.generateReport();
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))) {
+    ) {
+      fs.mkdirSync(logDir, { recursive: true })}
     
-    this.log('✅ Performance Monitor completed!');
-    this.log(`📈 Metrics collected: ${report.summary.totalMetrics}`);
-    this.log(`⚠️ Alerts: ${report.summary.totalAlerts}`);
-    this.log(`🚨 Critical alerts: ${report.summary.criticalAlerts}`);
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+  }
+    this.log(`📄 Report saved to: ${reportPath}`);
+    
+    return report;}
+
+  generateRecommendations() {
+    const recommendations = [;];
+    
+    if ( { // 1 minute
+      recommendations.push('Consider optimizing build process - build time is high')}
+    
+    if (this.metrics.bundleSize > 50 * 1024 * 1024) { // 50MB
+      recommendations.push('Bundle size is large - consider code splitting and tree shaking')}
+    
+    if (this.metrics.testTime > 30000) { // 30 seconds
+      recommendations.push('Test execution time is high - consider parallel test execution')}
+    
+    if (this.metrics.memoryUsage.heapUsed > 100 * 1024 * 1024) { // 100MB
+      recommendations.push('High memory usage detected - consider memory optimization')}
+    
+    return recommendations) {
+     { // 1 minute
+      recommendations.push('Consider optimizing build process - build time is high')}
+    
+    if (this.metrics.bundleSize > 50 * 1024 * 1024) { // 50MB
+      recommendations.push('Bundle size is large - consider code splitting and tree shaking')}
+    
+    if (this.metrics.testTime > 30000) { // 30 seconds
+      recommendations.push('Test execution time is high - consider parallel test execution')}
+    
+    if (this.metrics.memoryUsage.heapUsed > 100 * 1024 * 1024) { // 100MB
+      recommendations.push('High memory usage detected - consider memory optimization')}
+    
+    return recommendations;
+  }}
+
+  async run() {
+    try {
+      const result = await this.monitorPerformance(;);
+      const report = await this.generateReport(;);
+      
+      this.log('🎉 Performance monitoring completed!');
+      this.log(`📊 Build time: ${this.metrics.buildTime}ms`);
+      this.log(`📦 Bundle size: ${(this.metrics.bundleSize / 1024 / 1024).toFixed(2)}MB`);
+      
+      if ( {
+        this.log('💡 Recommendations:')) {
+     {
+        this.log('💡 Recommendations:');
+  }
+        report.recommendations.forEach(rec => this.log(`  - ${rec}`))}
+      
+      return report;} catch (error) {
+      this.log(`💥 Performance monitoring failed: ${error.message}`, 'ERROR');
+      throw error}
   }
 }
 
-// Run the monitor
-const monitor = new PerformanceMonitor();
-monitor.start().catch(console.error);
+// Run if called directly
+if ( {
+  const monitor = new PerformanceMonitor) {
+     {
+  const monitor = new PerformanceMonitor;
+  }(;);
+  monitor.run().catch(console.error)}
+
+module.exports = PerformanceMonitor;

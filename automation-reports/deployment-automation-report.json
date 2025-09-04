@@ -1,64 +1,14 @@
 {
-  "timestamp": "2025-09-03T04:41:43.548Z",
-  "deployment": [
-    {
-      "success": true,
-      "checks": [
-        {
-          "name": "Package.json exists",
-          "status": "passed"
-        },
-        {
-          "name": "Dependencies installed",
-          "status": "passed"
-        },
-        {
-          "name": "Environment file exists",
-          "status": "passed"
-        },
-        {
-          "name": "Public directory exists",
-          "status": "passed"
-        }
-      ]
-    },
-    {
-      "success": true,
-      "scripts": [
-        {
-          "name": "Netlify deployment script",
-          "file": "deploy-netlify.sh"
-        },
-        {
-          "name": "Vercel deployment script",
-          "file": "deploy-vercel.sh"
-        },
-        {
-          "name": "Docker deployment script",
-          "file": "deploy-docker.sh"
-        }
-      ]
-    },
-    {
-      "success": true,
-      "file": "Dockerfile"
-    },
-    {
-      "success": true,
-      "file": "netlify.toml"
-    },
-    {
-      "success": true,
-      "file": "vercel.json"
-    },
-    {
-      "success": true,
-      "file": "pages/api/health.js"
-    }
-  ],
+  "timestamp": "2025-09-04T03:03:40.981Z",
+  "duration": "0s",
+  "deployments": [],
+  "rollbacks": [],
+  "healthChecks": [],
+  "errors": [],
   "summary": {
-    "totalTasks": 6,
-    "successful": 6,
-    "failed": 0
+    "totalDeployments": 0,
+    "totalRollbacks": 0,
+    "totalHealthChecks": 0,
+    "totalErrors": 0
   }
 }
