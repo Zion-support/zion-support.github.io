@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Zap, Search, Sun, Moon, User, Menu, X } from 'lucide-react';
+import { Zap, Search, Sun, Moon, User, Menu, X, Phone, Mail } from 'lucide-react';
 
 interface HeaderProps {
   className?: string;
@@ -39,6 +39,7 @@ export function Header({ className = '' }: HeaderProps) {
   const navigationItems = [
     { name: 'Home', href: '/' },
     { name: 'Services', href: '/services' },
+    { name: 'New Services 2025', href: '/new-services-2025' },
     { name: 'AI Services', href: '/ai-services' },
     { name: 'IT Services', href: '/it-services' },
     { name: 'Micro SaaS', href: '/micro-saas' },
@@ -71,12 +72,12 @@ export function Header({ className = '' }: HeaderProps) {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-8">
             {navigationItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
-                className={`text-gray-300 hover:text-cyan-400 transition-colors duration-200 ${
+                className={`text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium ${
                   location.pathname === item.href ? 'text-cyan-400' : ''
                 }`}
               >
@@ -85,12 +86,25 @@ export function Header({ className = '' }: HeaderProps) {
             ))}
           </nav>
 
+          {/* Contact Info - Hidden on small screens */}
+          <div className="hidden xl:flex items-center space-x-4 text-sm text-gray-400">
+            <div className="flex items-center space-x-2">
+              <Phone className="w-4 h-4" />
+              <span>+1 302 464 0950</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <Mail className="w-4 h-4" />
+              <span>kleber@ziontechgroup.com</span>
+            </div>
+          </div>
+
           {/* Right side actions */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-2 lg:space-x-4">
             {/* Search */}
             <button
               onClick={() => setIsSearchOpen(!isSearchOpen)}
               className="p-2 text-gray-300 hover:text-blue-400 transition-colors"
+              aria-label="Search"
             >
               <Search className="w-5 h-5" />
             </button>
@@ -99,6 +113,7 @@ export function Header({ className = '' }: HeaderProps) {
             <button
               onClick={toggleTheme}
               className="p-2 text-gray-300 hover:text-blue-400 transition-colors"
+              aria-label="Toggle theme"
             >
               {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
             </button>
@@ -108,6 +123,7 @@ export function Header({ className = '' }: HeaderProps) {
               <button
                 onClick={() => setIsUserMenuOpen(!isUserMenuOpen)}
                 className="flex items-center space-x-2 p-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-md transition-colors duration-200"
+                aria-label="User menu"
               >
                 <User className="w-5 h-5" />
                 <span className="hidden sm:block">Account</span>
@@ -119,18 +135,21 @@ export function Header({ className = '' }: HeaderProps) {
                   <Link
                     to="/dashboard"
                     className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
+                    onClick={() => setIsUserMenuOpen(false)}
                   >
                     Dashboard
                   </Link>
                   <Link
                     to="/login"
                     className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
+                    onClick={() => setIsUserMenuOpen(false)}
                   >
                     Login
                   </Link>
                   <Link
                     to="/contact"
                     className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
+                    onClick={() => setIsUserMenuOpen(false)}
                   >
                     Contact Support
                   </Link>
@@ -141,7 +160,8 @@ export function Header({ className = '' }: HeaderProps) {
             {/* Mobile menu button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2 text-gray-300 hover:text-blue-400 transition-colors"
+              className="lg:hidden p-2 text-gray-300 hover:text-blue-400 transition-colors"
+              aria-label="Toggle mobile menu"
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -150,7 +170,7 @@ export function Header({ className = '' }: HeaderProps) {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-900/95 backdrop-blur-md rounded-lg mt-2">
               {navigationItems.map((item) => (
                 <Link
@@ -164,6 +184,20 @@ export function Header({ className = '' }: HeaderProps) {
                   {item.name}
                 </Link>
               ))}
+              
+              {/* Mobile Contact Info */}
+              <div className="border-t border-gray-800 pt-3 mt-3 px-3">
+                <div className="text-sm text-gray-400 space-y-2">
+                  <div className="flex items-center space-x-2">
+                    <Phone className="w-4 h-4" />
+                    <a href="tel:+13024640950" className="hover:text-cyan-400">+1 302 464 0950</a>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Mail className="w-4 h-4" />
+                    <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400">kleber@ziontechgroup.com</a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         )}

@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+import Head from 'next/head';
 
 export default function AIServices() {
   const aiServices = [
@@ -140,6 +141,213 @@ export default function AIServices() {
       ],
       marketPrice: "$1200-2000/month",
       savings: "Save up to $1300/month"
+    },
+    {
+      name: "AI Document Intelligence Platform",
+      description: "Advanced document processing and analysis system that extracts insights, automates workflows, and ensures compliance across all document types.",
+      price: "$449/month",
+      features: [
+        "Intelligent document parsing",
+        "Automated data extraction",
+        "Contract analysis and review",
+        "Compliance monitoring",
+        "Document classification",
+        "Version control and tracking",
+        "OCR and text recognition",
+        "Workflow automation"
+      ],
+      benefits: [
+        "Reduce document processing time by 90%",
+        "Eliminate manual data entry errors",
+        "Ensure regulatory compliance",
+        "Improve document searchability"
+      ],
+      marketPrice: "$800-1200/month",
+      savings: "Save up to $750/month"
+    },
+    {
+      name: "AI Voice Assistant Platform",
+      description: "Enterprise-grade voice AI platform with natural language processing, voice analytics, and multi-channel voice automation.",
+      price: "$399/month",
+      features: [
+        "Natural language understanding",
+        "Voice command processing",
+        "Multi-language support",
+        "Voice analytics and insights",
+        "Integration with business systems",
+        "Custom voice training",
+        "Real-time transcription",
+        "Voice biometric authentication"
+      ],
+      benefits: [
+        "Improve customer experience with voice",
+        "Reduce call center costs by 50%",
+        "Enable hands-free operations",
+        "Enhance accessibility"
+      ],
+      marketPrice: "$700-1000/month",
+      savings: "Save up to $600/month"
+    },
+    {
+      name: "AI Predictive Maintenance System",
+      description: "IoT-powered predictive maintenance platform that uses AI to predict equipment failures and optimize maintenance schedules.",
+      price: "$599/month",
+      features: [
+        "IoT sensor integration",
+        "Machine learning algorithms",
+        "Failure prediction models",
+        "Maintenance scheduling optimization",
+        "Real-time monitoring dashboards",
+        "Cost-benefit analysis",
+        "Integration with existing systems",
+        "Mobile alerts and notifications"
+      ],
+      benefits: [
+        "Reduce unplanned downtime by 70%",
+        "Lower maintenance costs by 40%",
+        "Extend equipment lifespan",
+        "Improve operational efficiency"
+      ],
+      marketPrice: "$1000-1500/month",
+      savings: "Save up to $900/month"
+    },
+    {
+      name: "AI Code Generation Platform",
+      description: "Advanced AI-powered code generation and development assistance platform that accelerates software development and improves code quality.",
+      price: "$299/month",
+      features: [
+        "Intelligent code generation",
+        "Bug detection and fixing",
+        "Code optimization suggestions",
+        "Multi-language support",
+        "Integration with IDEs",
+        "Code review automation",
+        "Documentation generation",
+        "Testing assistance"
+      ],
+      benefits: [
+        "Accelerate development by 60%",
+        "Reduce bugs and technical debt",
+        "Improve code quality and consistency",
+        "Enable faster time-to-market"
+      ],
+      marketPrice: "$500-800/month",
+      savings: "Save up to $500/month"
+    },
+    {
+      name: "AI Social Media Management",
+      description: "Comprehensive AI-powered social media management platform with automated posting, engagement, and analytics across all major platforms.",
+      price: "$199/month",
+      features: [
+        "Automated content scheduling",
+        "AI-powered engagement responses",
+        "Sentiment analysis and monitoring",
+        "Hashtag optimization",
+        "Influencer identification",
+        "Crisis management alerts",
+        "Performance analytics",
+        "Multi-platform management"
+      ],
+      benefits: [
+        "Increase social media engagement by 80%",
+        "Reduce social media management time",
+        "Improve brand reputation monitoring",
+        "Optimize social media ROI"
+      ],
+      marketPrice: "$300-500/month",
+      savings: "Save up to $300/month"
+    },
+    {
+      name: "AI HR Analytics Platform",
+      description: "Advanced human resources analytics platform with AI-powered insights for recruitment, employee engagement, and workforce optimization.",
+      price: "$399/month",
+      features: [
+        "Resume screening and matching",
+        "Employee performance analytics",
+        "Retention prediction models",
+        "Skills gap analysis",
+        "Diversity and inclusion metrics",
+        "Recruitment optimization",
+        "Employee sentiment analysis",
+        "Workforce planning tools"
+      ],
+      benefits: [
+        "Improve hiring success rates by 50%",
+        "Reduce employee turnover by 30%",
+        "Optimize workforce planning",
+        "Enhance employee satisfaction"
+      ],
+      marketPrice: "$600-900/month",
+      savings: "Save up to $500/month"
+    },
+    {
+      name: "AI Supply Chain Optimization",
+      description: "Intelligent supply chain management platform with AI-powered demand forecasting, inventory optimization, and logistics automation.",
+      price: "$799/month",
+      features: [
+        "Demand forecasting algorithms",
+        "Inventory optimization",
+        "Supplier performance analytics",
+        "Risk assessment and mitigation",
+        "Route optimization",
+        "Cost analysis and reduction",
+        "Sustainability tracking",
+        "Real-time supply chain visibility"
+      ],
+      benefits: [
+        "Reduce inventory costs by 25%",
+        "Improve demand forecasting accuracy",
+        "Minimize supply chain disruptions",
+        "Optimize logistics operations"
+      ],
+      marketPrice: "$1200-2000/month",
+      savings: "Save up to $1200/month"
+    },
+    {
+      name: "AI Legal Document Analysis",
+      description: "Specialized AI platform for legal document analysis, contract review, and compliance monitoring with advanced natural language processing.",
+      price: "$599/month",
+      features: [
+        "Contract analysis and review",
+        "Legal document search",
+        "Compliance monitoring",
+        "Risk assessment",
+        "Clause extraction and comparison",
+        "Legal research assistance",
+        "Document summarization",
+        "Deadline tracking and alerts"
+      ],
+      benefits: [
+        "Reduce legal review time by 80%",
+        "Improve contract accuracy",
+        "Ensure regulatory compliance",
+        "Lower legal costs significantly"
+      ],
+      marketPrice: "$1000-1500/month",
+      savings: "Save up to $900/month"
+    },
+    {
+      name: "AI Video Analytics Platform",
+      description: "Advanced video analysis platform with AI-powered content recognition, sentiment analysis, and automated video processing capabilities.",
+      price: "$349/month",
+      features: [
+        "Video content analysis",
+        "Object and face recognition",
+        "Sentiment analysis from video",
+        "Automated video editing",
+        "Content moderation",
+        "Video search and indexing",
+        "Real-time video processing",
+        "Custom model training"
+      ],
+      benefits: [
+        "Automate video content processing",
+        "Improve content moderation efficiency",
+        "Enhance video search capabilities",
+        "Reduce manual video review time"
+      ],
+      marketPrice: "$600-900/month",
+      savings: "Save up to $550/month"
     }
   ];
 
@@ -221,13 +429,13 @@ export default function AIServices() {
 
                 <div className="flex gap-4">
                   <Link
-                    to="/contact"
+                    href="/contact"
                     className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors flex-1 text-center"
                   >
                     Get Started
                   </Link>
                   <Link
-                    to="/request-quote"
+                    href="/request-quote"
                     className="bg-transparent border-2 border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-6 py-2 rounded-lg font-semibold transition-colors flex-1 text-center"
                   >
                     Request Quote
@@ -264,13 +472,13 @@ export default function AIServices() {
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              to="/contact"
+              href="/contact"
               className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Contact Us Now
             </Link>
             <Link
-              to="/request-quote"
+              href="/request-quote"
               className="bg-transparent border-2 border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Get Free Consultation

@@ -1,19 +1,25 @@
-# Automation Scripts
+# Automation Scripts V2
 
-This directory contains various automation scripts for the Zion Tech Group application.
+This directory contains enhanced automation scripts for the Zion Tech Group application.
 
 ## Available Scripts
 
 ### Development
-- `dev-setup.sh` - Set up development environment
-- `quick-test.sh` - Run quick tests
-- `deploy.sh` - Deploy application
-- `health-check.sh` - Run health checks
+- `enhanced-dev-setup.sh` - Enhanced development environment setup
+- `quick-fix.sh` - Quick fixes for common issues
+- `comprehensive-test.sh` - Comprehensive testing suite
+- `production-deploy.sh` - Production deployment
+- `monitor-app.sh` - Application monitoring
+
+### Monitoring
+- `performance-monitor-enhanced.js` - Enhanced performance monitoring
+- `security-monitor-enhanced.js` - Enhanced security monitoring
+- `seo-monitor-enhanced.js` - Enhanced SEO monitoring
+- `accessibility-monitor-enhanced.js` - Enhanced accessibility monitoring
 
 ### Automation
-- `run-safe-automations.sh` - Run safe automation suite
-- `merge-recent-prs.sh` - Merge recent PRs
-- `merge-all-prs.sh` - Merge all open PRs
+- `comprehensive-improvements-v2.sh` - Run all improvements V2
+- `merge-and-improve.sh` - Merge PRs and improve
 - `comprehensive-app-improvements.sh` - Run comprehensive improvements
 
 ## Usage
@@ -22,17 +28,24 @@ This directory contains various automation scripts for the Zion Tech Group appli
 # Run all improvements
 npm run improve:all
 
-# Set up development environment
-npm run dev:setup
+# Enhanced development setup
+npm run dev:enhanced
 
-# Run quick tests
-npm run quick:test
+# Quick fixes
+npm run quick:fix
 
-# Deploy application
-npm run deploy:app
+# Comprehensive testing
+npm run test:comprehensive
 
-# Check health
-npm run health:check
+# Production deployment
+npm run deploy:production
+
+# Monitoring
+npm run monitor:app
+npm run monitor:performance
+npm run monitor:security
+npm run monitor:seo
+npm run monitor:accessibility
 ```
 
 ## Safety

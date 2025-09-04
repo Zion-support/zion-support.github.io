@@ -6,8 +6,7 @@ import {Textarea} from '@/components/ui/textarea';
 import {Label} from '@/components/ui/label';
 import {Phone, Mail, MapPin, Globe, Users, Shield, CheckCircle, ExternalLink, Send, Building, Award, TrendingUp, Star, MessageSquare, Calendar, FileText} from 'lucide-react';
 import {SERVICE_CATEGORIES} from '@/data/enhancedServices';
-export default function ComprehensiveContact
-export {ComprehensiveContact}() {
+export default function ComprehensiveContact() {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -16,14 +15,16 @@ export {ComprehensiveContact}() {
         service: '',
         message: ''
     });
-    const handleSubmit = (props: any) => {e.preventDefault();
+    const handleSubmit = (e) => {
+        e.preventDefault();
         // Handle form submission
-        };
-    const handleChange = (props: any) => {
+    };
+    const handleChange = (e) => {
         setFormData({
             ...formData,
             [e.target.name]: e.target.value
-        })};
+        });
+    };
     return (<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
       {/* Hero Section */}
       <div className="relative overflow-hidden">

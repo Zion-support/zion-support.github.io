@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+import Head from 'next/head';
 
 export default function Solutions() {
   const solutions = [
@@ -24,6 +25,12 @@ export default function Solutions() {
           description: "Advanced analytics and business intelligence platform",
           price: "$499/month",
           features: ["Real-time dashboards", "Predictive analytics", "Custom reports", "Data visualization"]
+        },
+        {
+          name: "Cybersecurity Solutions",
+          description: "Comprehensive cybersecurity platform with advanced threat detection",
+          price: "$799/month",
+          features: ["24/7 threat monitoring", "Vulnerability scanning", "Incident response", "Compliance management"]
         }
       ]
     },
@@ -48,6 +55,42 @@ export default function Solutions() {
           description: "Intelligent project management and team collaboration",
           price: "$199/month",
           features: ["Smart task assignment", "Progress tracking", "Resource optimization", "Team collaboration"]
+        },
+        {
+          name: "IT Infrastructure Management",
+          description: "Complete IT infrastructure management and optimization",
+          price: "$1,299/month",
+          features: ["Network setup", "Server maintenance", "Backup solutions", "Performance monitoring"]
+        }
+      ]
+    },
+    {
+      category: "Micro SAAS Solutions",
+      description: "Affordable, AI-powered micro SAAS tools for immediate productivity gains",
+      solutions: [
+        {
+          name: "AI Invoice Generator",
+          description: "Intelligent invoice creation and payment tracking platform",
+          price: "$29/month",
+          features: ["AI-powered generation", "Payment tracking", "Client management", "Multi-currency support"]
+        },
+        {
+          name: "Smart Meeting Scheduler",
+          description: "AI-powered meeting scheduling that eliminates back-and-forth emails",
+          price: "$19/month",
+          features: ["Time optimization", "Calendar integration", "Automatic reminders", "Time zone handling"]
+        },
+        {
+          name: "Social Media Scheduler",
+          description: "AI-powered social media management with content suggestions",
+          price: "$39/month",
+          features: ["AI content suggestions", "Multi-platform posting", "Hashtag optimization", "Engagement analytics"]
+        },
+        {
+          name: "Smart Password Manager",
+          description: "Enterprise-grade password management with AI security recommendations",
+          price: "$15/month",
+          features: ["AI security tips", "Team sharing", "Breach monitoring", "Multi-factor auth"]
         }
       ]
     },
@@ -58,8 +101,8 @@ export default function Solutions() {
         {
           name: "E-commerce Solutions",
           description: "Complete e-commerce technology stack and management",
-          price: "$399/month",
-          features: ["Return management", "Inventory tracking", "Customer analytics", "Payment processing"]
+          price: "$1,899/month",
+          features: ["Custom platform", "Payment integration", "Inventory management", "Analytics"]
         },
         {
           name: "Healthcare IT",
@@ -72,6 +115,12 @@ export default function Solutions() {
           description: "Secure financial technology and analytics solutions",
           price: "$699/month",
           features: ["Financial analytics", "Risk assessment", "Compliance reporting", "Fraud detection"]
+        },
+        {
+          name: "Legal Document Analysis",
+          description: "AI-powered legal document analysis and contract review",
+          price: "$599/month",
+          features: ["Contract analysis", "Compliance monitoring", "Risk assessment", "Legal research"]
         }
       ]
     }
@@ -125,7 +174,7 @@ export default function Solutions() {
                       ))}
                     </ul>
                     <Link
-                      to="/contact"
+                      href="/contact"
                       className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors inline-block"
                     >
                       Learn More
@@ -163,13 +212,13 @@ export default function Solutions() {
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              to="/contact"
+              href="/contact"
               className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Contact Us
             </Link>
             <Link
-              to="/request-quote"
+              href="/request-quote"
               className="bg-transparent border-2 border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Request Quote

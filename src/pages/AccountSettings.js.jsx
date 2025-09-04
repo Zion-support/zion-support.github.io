@@ -10,8 +10,7 @@ import {Separator} from '@/components/ui/separator';
 import {Switch} from '@/components/ui/switch';
 import {Label} from '@/components/ui/label';
 import {toast} from 'sonner';
-export default function AccountSettings
-export {AccountSettings}() {
+export default function AccountSettings() {
     const { user } = useAuth();
     const [displayWeb3, setDisplayWeb3] = useState(false);
     const [didHandle, setDidHandle] = useState('');
@@ -28,7 +27,7 @@ export {AccountSettings}() {
         }
         catch (e) {console.error('Error loading account settings', e)}
     }, []);
-    const handleSave = (props: any) => {
+    const handleSave = () => {
         setIsSubmitting(true);
         // Simulate API call
         setTimeout(() => {
@@ -52,7 +51,7 @@ export {AccountSettings}() {
             // Sign message to verify ownership
             const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`;
             await ethereum.request({method: 'personal_sign',
-                params[address, message];});
+                params: [address, message]});
             // Auto-set DID handle if ENS is available
             try {
                 const provider = new window.ethers.providers.Web3Provider(ethereum);
@@ -87,8 +86,10 @@ export {AccountSettings}() {
                 <div className="flex gap-2">
                   <Input id="didHandle" value={didHandle} onChange={(e) => setDidHandle(e.target.value)} placeholder="ENS / Lens / Ceramic / Farcaster"/>
                   <Button variant="outline" onClick={handleConnectWallet} type="button" className="flex items-center gap-1">
-                    <Wallet connected</span>
-                  </div>)}
+                    <Wallet className="w-4 h-4" />
+                    Connect Wallet
+                  </Button>
+                </div>
               </div>
               
               <div>
