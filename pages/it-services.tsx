@@ -1070,96 +1070,6 @@ export default function ITServices() {
       category: 'Network Infrastructure'
     },
     {
-<<<<<<< HEAD
-      icon: Brain,
-      name: 'AI/ML Infrastructure & MLOps',
-      description: 'Complete AI/ML infrastructure setup with MLOps pipelines, model deployment, and monitoring.',
-      features: [
-        'AI/ML infrastructure design and deployment',
-        'MLOps pipeline development and automation',
-        'Model training and deployment platforms',
-        'AI model monitoring and governance',
-        'Data pipeline and feature store setup',
-        'AI ethics and bias monitoring'
-      ],
-      pricing: '$100,000 – $1,000,000 project',
-      projectPricing: '$10,000 – $100,000/month managed',
-      timeline: '12–24 weeks',
-      benefits: [
-        'Accelerated AI model development',
-        'Automated ML operations',
-        'Scalable AI infrastructure',
-        'Enhanced model performance and reliability'
-      ],
-      category: 'AI Infrastructure'
-    },
-    {
-      icon: Server,
-      name: 'Serverless & Microservices Architecture',
-      description: 'Serverless architecture implementation with microservices design and API management.',
-      features: [
-        'Serverless architecture design and implementation',
-        'Microservices development and deployment',
-        'API gateway and management platform',
-        'Container orchestration and management',
-        'Event-driven architecture implementation',
-        'Performance monitoring and optimization'
-      ],
-      pricing: '$75,000 – $750,000 project',
-      projectPricing: '$5,000 – $50,000/month managed',
-      timeline: '12–24 weeks',
-      benefits: [
-        'Reduced infrastructure costs',
-        'Improved scalability and performance',
-        'Faster development and deployment',
-        'Enhanced system reliability'
-      ],
-      category: 'Architecture'
-    },
-    {
-      icon: Database,
-      name: 'Data Mesh & Data Fabric Architecture',
-      description: 'Modern data architecture with data mesh and data fabric implementation for enterprise data management.',
-      features: [
-        'Data mesh architecture design and implementation',
-        'Data fabric platform development',
-        'Data governance and cataloging',
-        'Real-time data streaming and processing',
-        'Data quality and lineage management',
-        'Self-service analytics platform'
-      ],
-      pricing: '$200,000 – $2,000,000 project',
-      projectPricing: '$20,000 – $200,000/month managed',
-      timeline: '20–40 weeks',
-      benefits: [
-        'Improved data accessibility and democratization',
-        'Enhanced data quality and governance',
-        'Faster time-to-insight',
-        'Scalable data architecture'
-      ],
-      category: 'Data Architecture'
-    },
-    {
-      icon: Shield,
-      name: 'DevSecOps & Security Automation',
-      description: 'Integrated security into DevOps pipelines with automated security testing and compliance.',
-      features: [
-        'DevSecOps pipeline integration',
-        'Automated security testing and scanning',
-        'Infrastructure as Code security',
-        'Compliance automation and reporting',
-        'Security monitoring and alerting',
-        'Vulnerability management and remediation'
-      ],
-      pricing: '$50,000 – $500,000 project',
-      projectPricing: '$5,000 – $50,000/month managed',
-      timeline: '8–16 weeks',
-      benefits: [
-        'Enhanced security throughout SDLC',
-        'Automated compliance and reporting',
-        'Reduced security vulnerabilities',
-        'Faster and more secure deployments'
-=======
       icon: Database,
       name: 'Advanced Data Lake & Analytics Platform',
       description: 'Enterprise data lake implementation with real-time analytics and machine learning capabilities.',
@@ -1202,57 +1112,10 @@ export default function ITServices() {
         'Reduced attack surface',
         'Automated threat response',
         'Compliance with security standards'
->>>>>>> origin/cursor/add-new-services-and-advertise-them-1114
       ],
       category: 'Security'
     },
     {
-<<<<<<< HEAD
-      icon: Globe,
-      name: 'Green IT & Sustainable Technology',
-      description: 'Sustainable IT infrastructure with energy optimization, carbon footprint reduction, and green computing.',
-      features: [
-        'Energy-efficient infrastructure design',
-        'Carbon footprint monitoring and reduction',
-        'Green data center optimization',
-        'Sustainable software development practices',
-        'Renewable energy integration',
-        'Environmental impact assessment and reporting'
-      ],
-      pricing: '$100,000 – $1,000,000 project',
-      projectPricing: '$10,000 – $100,000/month managed',
-      timeline: '12–24 weeks',
-      benefits: [
-        'Reduced environmental impact',
-        'Lower energy costs',
-        'Enhanced corporate sustainability',
-        'Compliance with environmental regulations'
-      ],
-      category: 'Sustainability'
-    },
-    {
-      icon: Cpu,
-      name: 'High-Performance Computing (HPC)',
-      description: 'High-performance computing infrastructure for scientific research, simulations, and data-intensive applications.',
-      features: [
-        'HPC cluster design and deployment',
-        'Parallel computing optimization',
-        'GPU computing and acceleration',
-        'Scientific computing software stack',
-        'High-speed networking and storage',
-        'Performance monitoring and optimization'
-      ],
-      pricing: '$500,000 – $5,000,000 project',
-      projectPricing: '$50,000 – $500,000/month managed',
-      timeline: '24–48 weeks',
-      benefits: [
-        'Massive computational power',
-        'Accelerated research and development',
-        'Complex simulation capabilities',
-        'Advanced data processing and analysis'
-      ],
-      category: 'High-Performance Computing'
-=======
       icon: Cloud,
       name: 'Multi-Cloud Management & Optimization',
       description: 'Comprehensive multi-cloud strategy with cost optimization and unified management platform.',
