@@ -1,0 +1,1761 @@
+npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
+npm warn config `--include=optional` to include them.
+npm warn config
+npm warn config       Default value does install optional deps unless otherwise omitted.
+
+> ziontechgroup-site@1.0.0 lint
+> eslint . --max-warnings 0
+
+
+/workspace/.eslintrc-broken.js
+  1:1  error  'module' is not defined  no-undef
+
+/workspace/.eslintrc.disabled.js
+  1:15  error  Parsing error: Unexpected token :
+
+/workspace/.eslintrc.js
+  5:5  error  Parsing error: Unexpected token 'eslint:recommended'
+
+/workspace/.prettierrc.js
+  1:1  error  'module' is not defined  no-undef
+
+/workspace/__tests__/AIChatAssistant.test.test.js
+  1:8   warning  'React' is defined but never used                no-unused-vars
+  2:26  warning  'fireEvent' is defined but never used            no-unused-vars
+  4:8   warning  'AIChatAssistanttest' is defined but never used  no-unused-vars
+
+/workspace/__tests__/AIChatbot.test.test.js
+  1:8   warning  'React' is defined but never used          no-unused-vars
+  2:26  warning  'fireEvent' is defined but never used      no-unused-vars
+  4:8   warning  'AIChatbottest' is defined but never used  no-unused-vars
+
+/workspace/__tests__/AIChatbotSystem.test.test.js
+  1:8   warning  'React' is defined but never used                no-unused-vars
+  2:26  warning  'fireEvent' is defined but never used            no-unused-vars
+  4:8   warning  'AIChatbotSystemtest' is defined but never used  no-unused-vars
+
+/workspace/__tests__/AICodeGenerator.test.test.js
+  1:8   warning  'React' is defined but never used                no-unused-vars
+  2:26  warning  'fireEvent' is defined but never used            no-unused-vars
+  4:8   warning  'AICodeGeneratortest' is defined but never used  no-unused-vars
+
+/workspace/__tests__/AccessibilityEnhancer.dynamic.test.js
+  1:8   warning  'React' is defined but never used                         no-unused-vars
+  2:26  warning  'fireEvent' is defined but never used                     no-unused-vars
+  4:8   warning  'AccessibilityEnhancerdynamic' is defined but never used  no-unused-vars
+
+/workspace/__tests__/AccessibilityEnhancer.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/AccessibilityManager.dynamic.test.js
+  1:8   warning  'React' is defined but never used                        no-unused-vars
+  2:26  warning  'fireEvent' is defined but never used                    no-unused-vars
+  4:8   warning  'AccessibilityManagerdynamic' is defined but never used  no-unused-vars
+
+/workspace/__tests__/AccessibilityManager.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/Analytics.dynamic.test.js
+  1:8   warning  'React' is defined but never used             no-unused-vars
+  2:26  warning  'fireEvent' is defined but never used         no-unused-vars
+  4:8   warning  'Analyticsdynamic' is defined but never used  no-unused-vars
+
+/workspace/__tests__/Analytics.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/AnalyticsManager.dynamic.test.js
+  1:8   warning  'React' is defined but never used                    no-unused-vars
+  2:26  warning  'fireEvent' is defined but never used                no-unused-vars
+  4:8   warning  'AnalyticsManagerdynamic' is defined but never used  no-unused-vars
+
+/workspace/__tests__/AnalyticsManager.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/AnalyticsTracker.dynamic.test.js
+  1:8   warning  'React' is defined but never used                    no-unused-vars
+  2:26  warning  'fireEvent' is defined but never used                no-unused-vars
+  4:8   warning  'AnalyticsTrackerdynamic' is defined but never used  no-unused-vars
+
+/workspace/__tests__/AnalyticsTracker.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/Badge.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/Button.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/Card.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/ContactForm.dynamic.test.js
+  1:8   warning  'React' is defined but never used               no-unused-vars
+  2:26  warning  'fireEvent' is defined but never used           no-unused-vars
+  4:8   warning  'ContactFormdynamic' is defined but never used  no-unused-vars
+
+/workspace/__tests__/ContactForm.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/ContactFormEnhanced.dynamic.test.js
+  1:8   warning  'React' is defined but never used                       no-unused-vars
+  2:26  warning  'fireEvent' is defined but never used                   no-unused-vars
+  4:8   warning  'ContactFormEnhanceddynamic' is defined but never used  no-unused-vars
+
+/workspace/__tests__/ContactFormEnhanced.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/EnhancedAnalytics.dynamic.test.js
+  1:8   warning  'React' is defined but never used                     no-unused-vars
+  2:26  warning  'fireEvent' is defined but never used                 no-unused-vars
+  4:8   warning  'EnhancedAnalyticsdynamic' is defined but never used  no-unused-vars
+
+/workspace/__tests__/EnhancedAnalytics.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/EnhancedErrorBoundary.dynamic.test.js
+  1:8   warning  'React' is defined but never used                         no-unused-vars
+  2:26  warning  'fireEvent' is defined but never used                     no-unused-vars
+  4:8   warning  'EnhancedErrorBoundarydynamic' is defined but never used  no-unused-vars
+
+/workspace/__tests__/EnhancedErrorBoundary.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/EnhancedFooter.dynamic.test.js
+  1:8   warning  'React' is defined but never used                  no-unused-vars
+  2:26  warning  'fireEvent' is defined but never used              no-unused-vars
+  4:8   warning  'EnhancedFooterdynamic' is defined but never used  no-unused-vars
+
+/workspace/__tests__/EnhancedFooter.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/EnhancedNavigation.dynamic.test.js
+  1:8   warning  'React' is defined but never used                      no-unused-vars
+  2:26  warning  'fireEvent' is defined but never used                  no-unused-vars
+  4:8   warning  'EnhancedNavigationdynamic' is defined but never used  no-unused-vars
+
+/workspace/__tests__/EnhancedNavigation.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/EnhancedPerformanceMonitor.dynamic.test.js
+  1:8   warning  'React' is defined but never used                              no-unused-vars
+  2:26  warning  'fireEvent' is defined but never used                          no-unused-vars
+  4:8   warning  'EnhancedPerformanceMonitordynamic' is defined but never used  no-unused-vars
+
+/workspace/__tests__/EnhancedPerformanceMonitor.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/EnhancedSEO.dynamic.test.js
+  1:8   warning  'React' is defined but never used               no-unused-vars
+  2:26  warning  'fireEvent' is defined but never used           no-unused-vars
+  4:8   warning  'EnhancedSEOdynamic' is defined but never used  no-unused-vars
+
+/workspace/__tests__/EnhancedSEO.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/EnhancedSidebar2025.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/ErrorBoundary.dynamic.test.js
+  1:8   warning  'React' is defined but never used                 no-unused-vars
+  2:26  warning  'fireEvent' is defined but never used             no-unused-vars
+  4:8   warning  'ErrorBoundarydynamic' is defined but never used  no-unused-vars
+
+/workspace/__tests__/ErrorBoundary.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/Footer.dynamic.test.js
+  1:8   warning  'React' is defined but never used          no-unused-vars
+  2:26  warning  'fireEvent' is defined but never used      no-unused-vars
+  4:8   warning  'Footerdynamic' is defined but never used  no-unused-vars
+
+/workspace/__tests__/Footer.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/FuturisticAnimatedBackground2029.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/Header.dynamic.test.js
+  1:8   warning  'React' is defined but never used          no-unused-vars
+  2:26  warning  'fireEvent' is defined but never used      no-unused-vars
+  4:8   warning  'Headerdynamic' is defined but never used  no-unused-vars
+
+/workspace/__tests__/Header.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/ImageOptimizer.dynamic.test.js
+  1:8   warning  'React' is defined but never used                  no-unused-vars
+  2:26  warning  'fireEvent' is defined but never used              no-unused-vars
+  4:8   warning  'ImageOptimizerdynamic' is defined but never used  no-unused-vars
+
+/workspace/__tests__/ImageOptimizer.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/InteractiveElements.dynamic.test.js
+  1:8   warning  'React' is defined but never used                       no-unused-vars
+  2:26  warning  'fireEvent' is defined but never used                   no-unused-vars
+  4:8   warning  'InteractiveElementsdynamic' is defined but never used  no-unused-vars
+
+/workspace/__tests__/InteractiveElements.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/InteractiveNavigation.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/InteractiveStats.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/Layout.dynamic.test.js
+  1:8   warning  'React' is defined but never used          no-unused-vars
+  2:26  warning  'fireEvent' is defined but never used      no-unused-vars
+  4:8   warning  'Layoutdynamic' is defined but never used  no-unused-vars
+
+/workspace/__tests__/Layout.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/LoadingSpinner.dynamic.test.js
+  1:8   warning  'React' is defined but never used                  no-unused-vars
+  2:26  warning  'fireEvent' is defined but never used              no-unused-vars
+  4:8   warning  'LoadingSpinnerdynamic' is defined but never used  no-unused-vars
+
+/workspace/__tests__/LoadingSpinner.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/MainLayout.dynamic.test.js
+  1:8   warning  'React' is defined but never used              no-unused-vars
+  2:26  warning  'fireEvent' is defined but never used          no-unused-vars
+  4:8   warning  'MainLayoutdynamic' is defined but never used  no-unused-vars
+
+/workspace/__tests__/MainLayout.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/MainSidebar.dynamic.test.js
+  1:8   warning  'React' is defined but never used               no-unused-vars
+  2:26  warning  'fireEvent' is defined but never used           no-unused-vars
+  4:8   warning  'MainSidebardynamic' is defined but never used  no-unused-vars
+
+/workspace/__tests__/MainSidebar.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/ModernFooter.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/ModernHeader.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/ModernLayout.dynamic.test.js
+  1:8   warning  'React' is defined but never used                no-unused-vars
+  2:26  warning  'fireEvent' is defined but never used            no-unused-vars
+  4:8   warning  'ModernLayoutdynamic' is defined but never used  no-unused-vars
+
+/workspace/__tests__/ModernLayout.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/Navigation.dynamic.test.js
+  1:8   warning  'React' is defined but never used              no-unused-vars
+  2:26  warning  'fireEvent' is defined but never used          no-unused-vars
+  4:8   warning  'Navigationdynamic' is defined but never used  no-unused-vars
+
+/workspace/__tests__/Navigation.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/NotFound.integration.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/OptimizedImage.dynamic.test.js
+  1:8   warning  'React' is defined but never used                  no-unused-vars
+  2:26  warning  'fireEvent' is defined but never used              no-unused-vars
+  4:8   warning  'OptimizedImagedynamic' is defined but never used  no-unused-vars
+
+/workspace/__tests__/OptimizedImage.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/PWARegistration.dynamic.test.js
+  1:8   warning  'React' is defined but never used                   no-unused-vars
+  2:26  warning  'fireEvent' is defined but never used               no-unused-vars
+  4:8   warning  'PWARegistrationdynamic' is defined but never used  no-unused-vars
+
+/workspace/__tests__/PWARegistration.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/PerformanceEnhancer.dynamic.test.js
+  1:8   warning  'React' is defined but never used                       no-unused-vars
+  2:26  warning  'fireEvent' is defined but never used                   no-unused-vars
+  4:8   warning  'PerformanceEnhancerdynamic' is defined but never used  no-unused-vars
+
+/workspace/__tests__/PerformanceEnhancer.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/PerformanceMonitor.dynamic.test.js
+  1:8   warning  'React' is defined but never used                      no-unused-vars
+  2:26  warning  'fireEvent' is defined but never used                  no-unused-vars
+  4:8   warning  'PerformanceMonitordynamic' is defined but never used  no-unused-vars
+
+/workspace/__tests__/PerformanceMonitor.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/PerformanceOptimizer.dynamic.test.js
+  1:8   warning  'React' is defined but never used                        no-unused-vars
+  2:26  warning  'fireEvent' is defined but never used                    no-unused-vars
+  4:8   warning  'PerformanceOptimizerdynamic' is defined but never used  no-unused-vars
+
+/workspace/__tests__/PerformanceOptimizer.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/SEO.dynamic.test.js
+  1:8   warning  'React' is defined but never used       no-unused-vars
+  2:26  warning  'fireEvent' is defined but never used   no-unused-vars
+  4:8   warning  'SEOdynamic' is defined but never used  no-unused-vars
+
+/workspace/__tests__/SEO.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/SEOEnhancer.dynamic.test.js
+  1:8   warning  'React' is defined but never used               no-unused-vars
+  2:26  warning  'fireEvent' is defined but never used           no-unused-vars
+  4:8   warning  'SEOEnhancerdynamic' is defined but never used  no-unused-vars
+
+/workspace/__tests__/SEOEnhancer.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/SEOHead.dynamic.test.js
+  1:8   warning  'React' is defined but never used           no-unused-vars
+  2:26  warning  'fireEvent' is defined but never used       no-unused-vars
+  4:8   warning  'SEOHeaddynamic' is defined but never used  no-unused-vars
+
+/workspace/__tests__/SEOHead.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/SEOOptimizer.dynamic.test.js
+  1:8   warning  'React' is defined but never used                no-unused-vars
+  2:26  warning  'fireEvent' is defined but never used            no-unused-vars
+  4:8   warning  'SEOOptimizerdynamic' is defined but never used  no-unused-vars
+
+/workspace/__tests__/SEOOptimizer.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/SecurityDashboard.dynamic.test.js
+  1:8   warning  'React' is defined but never used                     no-unused-vars
+  2:26  warning  'fireEvent' is defined but never used                 no-unused-vars
+  4:8   warning  'SecurityDashboarddynamic' is defined but never used  no-unused-vars
+
+/workspace/__tests__/SecurityDashboard.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/SecurityEnhancer.dynamic.test.js
+  1:8   warning  'React' is defined but never used                    no-unused-vars
+  2:26  warning  'fireEvent' is defined but never used                no-unused-vars
+  4:8   warning  'SecurityEnhancerdynamic' is defined but never used  no-unused-vars
+
+/workspace/__tests__/SecurityEnhancer.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/SecurityHeaders.dynamic.test.js
+  1:8   warning  'React' is defined but never used                   no-unused-vars
+  2:26  warning  'fireEvent' is defined but never used               no-unused-vars
+  4:8   warning  'SecurityHeadersdynamic' is defined but never used  no-unused-vars
+
+/workspace/__tests__/SecurityHeaders.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/ServicesSection.dynamic.test.js
+  1:8   warning  'React' is defined but never used                   no-unused-vars
+  2:26  warning  'fireEvent' is defined but never used               no-unused-vars
+  4:8   warning  'ServicesSectiondynamic' is defined but never used  no-unused-vars
+
+/workspace/__tests__/ServicesSection.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/TestimonialsSection.dynamic.test.js
+  1:8   warning  'React' is defined but never used                       no-unused-vars
+  2:26  warning  'fireEvent' is defined but never used                   no-unused-vars
+  4:8   warning  'TestimonialsSectiondynamic' is defined but never used  no-unused-vars
+
+/workspace/__tests__/TestimonialsSection.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/UltraAdvancedNavigation.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/WebVitals.dynamic.test.js
+  1:8   warning  'React' is defined but never used             no-unused-vars
+  2:26  warning  'fireEvent' is defined but never used         no-unused-vars
+  4:8   warning  'WebVitalsdynamic' is defined but never used  no-unused-vars
+
+/workspace/__tests__/WebVitals.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/_app.integration.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/_document.integration.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/accessibility.test.js
+  2:53  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/e2e.test.js
+  2:53  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/enhanced-home.integration.test.js
+  2:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/index.integration.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/index.p.integration.test.js
+  1:8  warning  'React' is defined but never used   no-unused-vars
+  4:8  warning  'indexp' is defined but never used  no-unused-vars
+
+/workspace/__tests__/pages/ForgotPassword.test.jsx
+  3:7  error  Parsing error: Unexpected token ;
+
+/workspace/__tests__/pages/ResetPassword.test.jsx
+  1:18  error  Parsing error: Unexpected token ,
+
+/workspace/__tests__/performance.test.js
+  2:53  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/pricing-guide.integration.test.js
+  2:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/security.test.js
+  2:53  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/server/authController.test.js
+  2:12  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/services.integration.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/__tests__/sitemap.integration.test.js
+  1:21  error  Parsing error: Unterminated string constant
+
+/workspace/advanced-source-fixer.js
+    3:12  error    'require' is not defined              no-undef
+    4:14  error    'require' is not defined              no-undef
+   10:33  error    '__dirname' is not defined            no-undef
+   15:5   warning  Unexpected console statement          no-console
+   22:39  error    '__dirname' is not defined            no-undef
+   25:39  error    '__dirname' is not defined            no-undef
+  130:29  warning  'filePath' is defined but never used  no-unused-vars
+  178:28  warning  'filePath' is defined but never used  no-unused-vars
+  239:33  warning  Unexpected console statement          no-console
+
+/workspace/aggressive-fix.js
+  20:19  error  Parsing error: Unexpected token $
+
+/workspace/ai-optimization-backups/Logo.jsx
+  1:26  error  Parsing error: Unterminated string constant
+
+/workspace/analyze-missing-pages.js
+  20:1   warning  Unexpected console statement  no-console
+  21:1   warning  Unexpected console statement  no-console
+  22:1   warning  Unexpected console statement  no-console
+  24:1   warning  Unexpected console statement  no-console
+  26:30  warning  Unexpected console statement  no-console
+  28:1   warning  Unexpected console statement  no-console
+  30:28  warning  Unexpected console statement  no-console
+  32:1   warning  Unexpected console statement  no-console
+  34:37  warning  Unexpected console statement  no-console
+  37:1   warning  Unexpected console statement  no-console
+  62:5   warning  Unexpected console statement  no-console
+  67:3   warning  Unexpected console statement  no-console
+  69:5   warning  Unexpected console statement  no-console
+  72:3   warning  Unexpected console statement  no-console
+
+/workspace/api-backup/admin/generate-pitch-deck.js
+  1:8  warning  'React' is defined but never used  no-unused-vars
+
+/workspace/api-backup/auth/confirm-email-verification.js
+  1:26  error  Parsing error: Unexpected token ' const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL'
+
+/workspace/api-backup/auth/forgot.js
+  1:8  warning  'React' is defined but never used  no-unused-vars
+
+/workspace/api-backup/auth/guest.js
+  21:5  error  Parsing error: Unexpected token password
+
+/workspace/api-backup/auth/login.js
+  1:27  error  Parsing error: Unexpected token const
+
+/workspace/api-backup/auth/register.js
+  1:26  error  Parsing error: Unexpected token ' const supabaseUrl = process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_URL || '
+
+/workspace/api-backup/auth/resend-verification-email.js
+  1:8  warning  'React' is defined but never used                 no-unused-vars
+  2:7  warning  'supabaseUrl' is assigned a value but never used  no-unused-vars
+
+/workspace/api-backup/auth/reset.js
+  1:8  warning  'React' is defined but never used  no-unused-vars
+
+/workspace/api-backup/checkout_sessions.js
+  1:27  error  Parsing error: Unexpected token const
+
+/workspace/api-backup/community/index.js
+  4:4  error  Parsing error: Unexpected token ', '
+
+/workspace/api-backup/favorites.js
+  1:8   warning  'React' is defined but never used  no-unused-vars
+  7:18  error    'createClient' is not defined      no-undef
+  7:44  error    'serviceKey' is not defined        no-undef
+
+/workspace/api-backup/help/articles.js
+  1:26  error  Parsing error: Unexpected token ' export: default function handler(req, res) { if (req.method !== '
+
+/workspace/api-backup/items.js
+  4:3  error  Parsing error: Unexpected token {
+
+/workspace/api-backup/jobs.js
+  1:8   warning  'React' is defined but never used  no-unused-vars
+  7:24  error    'JOB_POSTS' is not defined         no-undef
+
+/workspace/api-backup/kb-chat.js
+  1:27  error  Parsing error: Unexpected token export
+
+/workspace/api-backup/messages.js
+  1:26  error  Parsing error: Unexpected token ' const prisma = new PrismaClient() export default async function handler(req, res) { if (req.method !== '
+
+/workspace/api-backup/notifications/[id].js
+  2:3  error  Parsing error: Unexpected character '@'
+
+/workspace/api-backup/notifications/index.js
+  1:8   warning  'React' is defined but never used  no-unused-vars
+  7:18  error    'createClient' is not defined      no-undef
+  7:44  error    'serviceKey' is not defined        no-undef
+
+/workspace/api-backup/og/[listingId].js
+  1:27  error  Parsing error: Unexpected token export
+
+/workspace/api-backup/openai/match.js
+  1:27  error  Parsing error: Unexpected token export
+
+/workspace/api-backup/orders.js
+  1:26  error  Parsing error: Unexpected token ' const supabaseUrl = process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_URL || '
+
+/workspace/api-backup/orders/[id].js
+  1:26  error  Parsing error: Unexpected token ' const supabaseUrl = process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_URL || '
+
+/workspace/api-backup/orders/guest.js
+   1:8   warning  'React' is defined but never used  no-unused-vars
+   7:18  error    'createClient' is not defined      no-undef
+   7:44  error    'serviceKey' is not defined        no-undef
+  18:17  error    'randomUUID' is not defined        no-undef
+  33:16  error    'withErrorLogging' is not defined  no-undef
+
+/workspace/api-backup/points/add.js
+  2:3  error  Parsing error: Unexpected character '@'
+
+/workspace/api-backup/products/[productId]/details.js
+  1:27  error  Parsing error: Unexpected token const
+
+/workspace/api-backup/products/index.js
+  1:27  error  Parsing error: Unexpected token const
+
+/workspace/api-backup/push/subscribe.js
+  1:8  warning  'React' is defined but never used  no-unused-vars
+  7:3  warning  Unexpected console statement       no-console
+
+/workspace/api-backup/recommendations.js
+  1:7  error  Parsing error: Unexpected token :
+
+/workspace/api-backup/reviews/[productId].js
+  1:27  error  Parsing error: Unexpected token const
+
+/workspace/api-backup/reviews/index.js
+  1:26  error  Parsing error: Unexpected token ' // Assuming: supabase client is here const prisma = new PrismaClient() export default async function handler(req, res) { if (req.method !== '
+
+/workspace/api-backup/search/suggest.js
+  1:26  error  Parsing error: Unexpected token ' const cloudId = process.env.ELASTIC_CLOUD_ID || '
+
+/workspace/api-backup/shippo/webhook.js
+  1:26  error  Parsing error: Unexpected token ' const supabaseUrl = process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_URL || '
+
+/workspace/api-backup/sitemap.js
+  1:26  error  Parsing error: Unexpected token ' export: default function handler(req, res) { const sitemapPath = path.join(process.cwd(), '
+
+/workspace/api-backup/socket.js
+  1:8   warning  'React' is defined but never used  no-unused-vars
+  6:20  error    'IOServer' is not defined          no-undef
+
+/workspace/api-backup/talent/[id].js
+  1:8  warning  'React' is defined but never used  no-unused-vars
+
+/workspace/api-backup/users/me.js
+  1:27  error  Parsing error: Unexpected token let
+
+/workspace/api-backup/webhook.js
+  1:27  error  Parsing error: Unexpected token const
+
+/workspace/automation-runner.js
+  15:24  error  Parsing error: Unexpected token ,
+
+/workspace/automation/automation-dashboard.js
+  3:5  error  Parsing error: Unexpected token ')'
+
+/workspace/automation/automation-factory.js
+  2:59  error  Parsing error: Unexpected token Optimize
+
+/workspace/automation/build-monitor.js
+    3:12  error    'require' is not defined           no-undef
+    4:14  error    'require' is not defined           no-undef
+    5:22  error    'require' is not defined           no-undef
+   13:30  error    '__dirname' is not defined         no-undef
+   14:33  error    '__dirname' is not defined         no-undef
+   26:5   warning  Unexpected console statement       no-console
+   93:16  warning  'error' is defined but never used  no-unused-vars
+  158:19  error    '__dirname' is not defined         no-undef
+  170:16  warning  'error' is defined but never used  no-unused-vars
+  260:5   error    'require' is not defined           no-undef
+  260:22  error    'module' is not defined            no-undef
+  262:23  warning  Unexpected console statement       no-console
+  265:1   error    'module' is not defined            no-undef
+
+/workspace/automation/build-watcher.js
+    3:12  error    'require' is not defined                      no-undef
+    4:14  error    'require' is not defined                      no-undef
+    5:22  error    'require' is not defined                      no-undef
+   46:5   warning  Unexpected console statement                  no-console
+   70:5   warning  Unexpected console statement                  no-console
+   74:7   warning  Unexpected console statement                  no-console
+   75:14  warning  'error' is defined but never used             no-unused-vars
+   76:7   warning  Unexpected console statement                  no-console
+   82:5   warning  Unexpected console statement                  no-console
+  115:13  warning  'watcher' is assigned a value but never used  no-unused-vars
+  121:7   warning  Unexpected console statement                  no-console
+  124:7   warning  Unexpected console statement                  no-console
+  130:13  warning  'watcher' is assigned a value but never used  no-unused-vars
+  130:54  warning  'filename' is defined but never used          no-unused-vars
+  134:7   warning  Unexpected console statement                  no-console
+  137:7   warning  Unexpected console statement                  no-console
+  176:5   warning  Unexpected console statement                  no-console
+  189:11  warning  'now' is assigned a value but never used      no-unused-vars
+  206:7   warning  Unexpected console statement                  no-console
+  213:5   warning  Unexpected console statement                  no-console
+  239:7   warning  Unexpected console statement                  no-console
+  256:7   warning  Unexpected console statement                  no-console
+  266:5   warning  Unexpected console statement                  no-console
+  276:7   warning  Unexpected console statement                  no-console
+  279:7   warning  Unexpected console statement                  no-console
+  285:5   warning  Unexpected console statement                  no-console
+  295:7   warning  Unexpected console statement                  no-console
+  298:7   warning  Unexpected console statement                  no-console
+  304:5   warning  Unexpected console statement                  no-console
+  314:7   warning  Unexpected console statement                  no-console
+  317:7   warning  Unexpected console statement                  no-console
+  323:5   warning  Unexpected console statement                  no-console
+  326:36  error    'require' is not defined                      no-undef
+  330:7   warning  Unexpected console statement                  no-console
+  335:11  warning  Unexpected console statement                  no-console
+  341:7   warning  Unexpected console statement                  no-console
+  346:5   warning  Unexpected console statement                  no-console
+  357:5   warning  Unexpected console statement                  no-console
+  362:7   warning  Unexpected console statement                  no-console
+  364:14  warning  'error' is defined but never used             no-unused-vars
+  365:7   warning  Unexpected console statement                  no-console
+  405:7   warning  Unexpected console statement                  no-console
+  410:5   warning  Unexpected console statement                  no-console
+  421:5   warning  Unexpected console statement                  no-console
+  427:5   error    'require' is not defined                      no-undef
+  427:22  error    'module' is not defined                       no-undef
+  429:25  warning  Unexpected console statement                  no-console
+  432:1   error    'module' is not defined                       no-undef
+
+/workspace/automation/check_automation_status.js
+  8:40  error  Parsing error: Unexpected token ;
+
+/workspace/automation/code-quality-monitor.js
+    3:12  error    'require' is not defined           no-undef
+    4:14  error    'require' is not defined           no-undef
+    5:22  error    'require' is not defined           no-undef
+   13:30  error    '__dirname' is not defined         no-undef
+   14:33  error    '__dirname' is not defined         no-undef
+   24:5   warning  Unexpected console statement       no-console
+   81:14  warning  'error' is defined but never used  no-unused-vars
+  137:5   error    'require' is not defined           no-undef
+  137:22  error    'module' is not defined            no-undef
+  139:23  warning  Unexpected console statement       no-console
+  142:1   error    'module' is not defined            no-undef
+
+/workspace/automation/cursor-chat-automation.js
+   15:12  error    'require' is not defined                        no-undef
+   16:7   warning  'path' is assigned a value but never used       no-unused-vars
+   16:14  error    'require' is not defined                        no-undef
+   17:18  error    'require' is not defined                        no-undef
+   18:23  error    'require' is not defined                        no-undef
+   20:7   warning  'execAsync' is assigned a value but never used  no-unused-vars
+   56:5   warning  Unexpected console statement                    no-console
+   61:7   warning  Unexpected console statement                    no-console
+  332:5   error    'require' is not defined                        no-undef
+  332:22  error    'module' is not defined                         no-undef
+  350:5   warning  Unexpected console statement                    no-console
+  354:5   warning  Unexpected console statement                    no-console
+  355:5   warning  Unexpected console statement                    no-console
+  363:5   warning  Unexpected console statement                    no-console
+  367:1   error    'module' is not defined                         no-undef
+
+/workspace/automation/cursor-interface-automation.js
+   15:12  error    'require' is not defined                       no-undef
+   16:7   warning  'path' is assigned a value but never used      no-unused-vars
+   16:14  error    'require' is not defined                       no-undef
+   17:18  error    'require' is not defined                       no-undef
+   18:23  error    'require' is not defined                       no-undef
+   19:7   warning  'readline' is assigned a value but never used  no-unused-vars
+   19:18  error    'require' is not defined                       no-undef
+  118:5   warning  Unexpected console statement                   no-console
+  123:7   warning  Unexpected console statement                   no-console
+  478:5   error    'require' is not defined                       no-undef
+  478:22  error    'module' is not defined                        no-undef
+  489:9   warning  Unexpected console statement                   no-console
+  493:9   warning  Unexpected console statement                   no-console
+  494:9   warning  Unexpected console statement                   no-console
+  502:9   warning  Unexpected console statement                   no-console
+  506:7   warning  Unexpected console statement                   no-console
+  512:1   error    'module' is not defined                        no-undef
+
+/workspace/automation/dependency-health-checker.js
+    3:12  error    'require' is not defined           no-undef
+    4:14  error    'require' is not defined           no-undef
+    5:22  error    'require' is not defined           no-undef
+   13:30  error    '__dirname' is not defined         no-undef
+   14:33  error    '__dirname' is not defined         no-undef
+   24:5   warning  Unexpected console statement       no-console
+   51:14  warning  'error' is defined but never used  no-unused-vars
+   73:14  warning  'error' is defined but never used  no-unused-vars
+  121:5   error    'require' is not defined           no-undef
+  121:22  error    'module' is not defined            no-undef
+  123:23  warning  Unexpected console statement       no-console
+  126:1   error    'module' is not defined            no-undef
+
+/workspace/automation/error-fixer-automation.js
+    3:12  error    'require' is not defined                         no-undef
+    4:14  error    'require' is not defined                         no-undef
+    5:22  error    'require' is not defined                         no-undef
+   21:5   warning  Unexpected console statement                     no-console
+   34:7   warning  Unexpected console statement                     no-console
+   35:7   warning  Unexpected console statement                     no-console
+   36:7   warning  Unexpected console statement                     no-console
+   39:7   warning  Unexpected console statement                     no-console
+   49:5   warning  Unexpected console statement                     no-console
+  127:17  warning  'modulePath' is assigned a value but never used  no-unused-vars
+  223:5   warning  Unexpected console statement                     no-console
+  368:5   warning  Unexpected console statement                     no-console
+  441:5   warning  Unexpected console statement                     no-console
+  499:5   warning  Unexpected console statement                     no-console
+  543:5   warning  Unexpected console statement                     no-console
+  548:5   error    'require' is not defined                         no-undef
+  548:22  error    'module' is not defined                          no-undef
+  550:26  warning  Unexpected console statement                     no-console
+  553:1   error    'module' is not defined                          no-undef
+
+/workspace/automation/error-monitor.js
+  3:2  error  Parsing error: Unexpected token <<
+
+/workspace/automation/error-prevention-automation.js
+  25:45  error  Parsing error: Unexpected token ;
+
+/workspace/automation/error-report-aggregator.js
+    3:12  error    'require' is not defined      no-undef
+    4:14  error    'require' is not defined      no-undef
+   12:30  error    '__dirname' is not defined    no-undef
+   13:33  error    '__dirname' is not defined    no-undef
+   24:5   warning  Unexpected console statement  no-console
+  192:5   error    'require' is not defined      no-undef
+  192:22  error    'module' is not defined       no-undef
+  194:26  warning  Unexpected console statement  no-console
+  197:1   error    'module' is not defined       no-undef
+
+/workspace/automation/file-integrity-monitor.js
+  3:8  error  Parsing error: Unterminated string constant
+
+/workspace/automation/file-watcher.js
+    3:12  error    'require' is not defined           no-undef
+    4:14  error    'require' is not defined           no-undef
+    5:18  error    'require' is not defined           no-undef
+    6:22  error    'require' is not defined           no-undef
+   14:30  error    '__dirname' is not defined         no-undef
+   36:5   warning  Unexpected console statement       no-console
+  203:34  error    '__dirname' is not defined         no-undef
+  287:3   error    'require' is not defined           no-undef
+  288:10  warning  'error' is defined but never used  no-unused-vars
+  289:3   warning  Unexpected console statement       no-console
+  294:5   error    'require' is not defined           no-undef
+  294:22  error    'module' is not defined            no-undef
+  296:23  warning  Unexpected console statement       no-console
+  299:1   error    'module' is not defined            no-undef
+
+/workspace/automation/intelligent-error-fixer.js
+    3:12  error    'require' is not defined      no-undef
+    4:14  error    'require' is not defined      no-undef
+    5:22  error    'require' is not defined      no-undef
+   14:30  error    '__dirname' is not defined    no-undef
+   15:33  error    '__dirname' is not defined    no-undef
+   26:5   warning  Unexpected console statement  no-console
+  358:5   error    'require' is not defined      no-undef
+  358:22  error    'module' is not defined       no-undef
+  360:21  warning  Unexpected console statement  no-console
+  363:1   error    'module' is not defined       no-undef
+
+/workspace/automation/intelligent-orchestrator.js
+  3:8  error  Parsing error: Unterminated string constant
+
+/workspace/automation/lint-automation-manager.js
+  2:37  error  Parsing error: Unexpected token components
+
+/workspace/automation/lint-error-fixer.js
+  2:20  error  Parsing error: Unterminated string constant
+
+/workspace/automation/lint-monitor.js
+  2:37  error  Parsing error: Unexpected token components
+
+/workspace/automation/linting-automation.js
+  25:45  error  Parsing error: Unexpected token ;
+
+/workspace/automation/performance-optimizer.js
+  2:20  error  Parsing error: Unexpected token ;
+
+/workspace/automation/security-scanner.js
+  25:45  error  Parsing error: Unexpected token ;
+
+/workspace/automation/test-cursor-automation.js
+   8:35  error    'require' is not defined      no-undef
+  11:5   warning  Unexpected console statement  no-console
+  17:9   warning  Unexpected console statement  no-console
+  18:9   warning  Unexpected console statement  no-console
+  19:9   warning  Unexpected console statement  no-console
+  22:9   warning  Unexpected console statement  no-console
+  31:9   warning  Unexpected console statement  no-console
+  34:9   warning  Unexpected console statement  no-console
+  39:13  warning  Unexpected console statement  no-console
+  41:13  warning  Unexpected console statement  no-console
+  47:13  warning  Unexpected console statement  no-console
+  49:13  warning  Unexpected console statement  no-console
+  53:9   warning  Unexpected console statement  no-console
+  56:9   warning  Unexpected console statement  no-console
+  59:9   warning  Unexpected console statement  no-console
+  67:9   warning  Unexpected console statement  no-console
+  71:9   warning  Unexpected console statement  no-console
+  72:9   warning  Unexpected console statement  no-console
+  74:9   warning  Unexpected console statement  no-console
+  75:9   warning  Unexpected console statement  no-console
+  76:9   warning  Unexpected console statement  no-console
+  77:9   warning  Unexpected console statement  no-console
+  78:9   warning  Unexpected console statement  no-console
+  81:9   warning  Unexpected console statement  no-console
+  82:9   warning  Unexpected console statement  no-console
+  88:5   error    'require' is not defined      no-undef
+  88:22  error    'module' is not defined       no-undef
+  92:1   error    'module' is not defined       no-undef
+
+/workspace/automation_backup/automation-dashboard.js
+  3:8  error  Parsing error: Unterminated string constant
+
+/workspace/automation_backup/automation-factory.js
+  3:8  error  Parsing error: Unterminated string constant
+
+/workspace/automation_backup/browser-error-fixer.js
+  13:20  error  Parsing error: Unexpected token (
+
+/workspace/automation_backup/browser-error-fixer.jsx
+  13:20  error  Parsing error: Unexpected token ,
+
+/workspace/automation_backup/browser-error-monitor.js
+  13:27  error  Parsing error: Unexpected token (
+
+/workspace/automation_backup/build-automation.js
+  3:8  error  Parsing error: Unterminated string constant
+
+/workspace/automation_backup/build-health-monitor.js
+  3:8  error  Parsing error: Unterminated string constant
+
+/workspace/automation_backup/code-quality-monitor.js
+  3:8  error  Parsing error: Unterminated string constant
+
+/workspace/automation_backup/dependency-monitor.js
+  3:8  error  Parsing error: Unterminated string constant
+
+/workspace/automation_backup/ecosystem.config.js
+  1:15  error  Parsing error: Unexpected token :
+
+/workspace/automation_backup/file-integrity-monitor.js
+  3:8  error  Parsing error: Unterminated string constant
+
+/workspace/automation_backup/integrated-monitor.js
+  14:29  error  Parsing error: Unterminated string constant
+
+/workspace/automation_backup/intelligent-orchestrator.js
+  3:8  error  Parsing error: Unterminated string constant
+
+/workspace/automation_backup/lint-automation-manager.js
+  2:20  error  Parsing error: Unterminated string constant
+
+/workspace/automation_backup/lint-error-fixer.js
+  2:20  error  Parsing error: Unterminated string constant
+
+/workspace/automation_backup/lint-monitor.js
+  2:20  error  Parsing error: Unterminated string constant
+
+/workspace/automation_backup/netlify-build-automation.js
+  14:8  error  Parsing error: Unterminated string constant
+
+/workspace/automation_backup/netlify-build-automation.jsx
+  28:21  error  Parsing error: Unexpected token ,
+
+/workspace/automation_backup/netlify-build-monitor.js
+  15:8  error  Parsing error: Unterminated string constant
+
+/workspace/automation_backup/performance-optimizer.js
+  3:8  error  Parsing error: Unterminated string constant
+
+/workspace/basic-test.js
+  8:72  error  Parsing error: Unexpected token ;
+
+/workspace/build-verification.js
+   3:31  warning  Unexpected console statement  no-console
+   8:3   warning  Unexpected console statement  no-console
+  11:3   warning  Unexpected console statement  no-console
+  15:3   warning  Unexpected console statement  no-console
+  26:3   warning  Unexpected console statement  no-console
+  35:3   warning  Unexpected console statement  no-console
+  36:3   warning  Unexpected console statement  no-console
+  38:3   warning  Unexpected console statement  no-console
+  42:1   warning  Unexpected console statement  no-console
+
+/workspace/check-syntax.js
+   3:12  error    'require' is not defined      no-undef
+   4:14  error    'require' is not defined      no-undef
+  35:7   warning  Unexpected console statement  no-console
+  36:31  warning  Unexpected console statement  no-console
+  39:7   warning  Unexpected console statement  no-console
+  43:5   warning  Unexpected console statement  no-console
+  66:1   warning  Unexpected console statement  no-console
+  69:1   warning  Unexpected console statement  no-console
+  72:1   warning  Unexpected console statement  no-console
+  76:3   warning  Unexpected console statement  no-console
+  79:3   warning  Unexpected console statement  no-console
+
+/workspace/clean-conflicts.js
+   3:12  error    'require' is not defined                   no-undef
+   4:7   warning  'path' is assigned a value but never used  no-unused-vars
+   4:14  error    'require' is not defined                   no-undef
+  32:5   warning  Unexpected console statement               no-console
+  35:5   warning  Unexpected console statement               no-console
+  59:1   warning  Unexpected console statement               no-console
+
+/workspace/code-quality-checker.js
+  31:19  error  Parsing error: Unexpected token Found
+
+/workspace/code-quality-improvements.js
+  4:56  error  Parsing error: Unexpected token ;
+
+/workspace/commit-and-push.js
+  16:21  error  Parsing error: Unexpected token ;
+
+/workspace/comprehensive-automation-runner.js
+  15:32  error  Parsing error: Unexpected token this
+
+/workspace/comprehensive-automation.js
+  14:24  error  Parsing error: Unexpected token ,
+
+/workspace/comprehensive-fix.js
+  10:59  error  Parsing error: Unexpected token ;
+
+/workspace/comprehensive-merge-resolver.js
+  105:70  error  Parsing error: Unterminated string constant
+
+/workspace/comprehensive-source-fixer.js
+    3:12  error    'require' is not defined      no-undef
+    4:14  error    'require' is not defined      no-undef
+   10:33  error    '__dirname' is not defined    no-undef
+   15:5   warning  Unexpected console statement  no-console
+   22:39  error    '__dirname' is not defined    no-undef
+   25:39  error    '__dirname' is not defined    no-undef
+   64:31  error    '__dirname' is not defined    no-undef
+  233:3   warning  Unexpected console statement  no-console
+  235:3   warning  Unexpected console statement  no-console
+
+/workspace/comprehensive-syntax-fix.js
+  9:16  error  Parsing error: Unexpected token ;
+
+/workspace/critical-fix.js
+  8:5  error  Parsing error: Unexpected token .
+
+/workspace/data_backup/2025-advanced-innovative-services-expansion-v3.js
+  4:12  error  Parsing error: Unexpected token ,
+
+/workspace/data_backup/2025-emerging-tech-innovations.js
+  4:12  error  Parsing error: Unexpected token ,
+
+/workspace/data_backup/2025-ultimate-innovative-services-expansion.js
+  2:10  error  Parsing error: Unexpected token ,
+
+/workspace/data_backup/emerging-tech-2025-specialized-services.js
+  5:12  error  Parsing error: Unexpected token ,
+
+/workspace/data_backup/revolutionary-2025-advanced-services.js
+  5:12  error  Parsing error: Unexpected token ,
+
+/workspace/ecosystem.working.js
+  1:15  error  Parsing error: Unexpected token :
+
+/workspace/eslint.config.disabled.js
+  7:7  error  Parsing error: Unexpected token :
+
+/workspace/execute-automation.js
+  7:61  error  Parsing error: Unexpected token ;
+
+/workspace/final-comprehensive-fix.js
+  11:50  error  Parsing error: Unexpected token ;
+
+/workspace/final-fix.js
+  12:22  error  Parsing error: Unexpected token ,
+
+/workspace/fix_all_function_names.js
+  4:19  error  Parsing error: Unexpected token =
+
+/workspace/fix_corrupted_files.js
+  30:1  error  Parsing error: 'import' and 'export' may only appear at the top level
+
+/workspace/fix_empty_pages.js
+  10:24  error  Parsing error: Unexpected token =
+
+/workspace/fix_typescript_syntax_errors.jsx
+  14:24  error  Parsing error: Unexpected token i
+
+/workspace/fix_utils_files.js
+  14:31  error  Parsing error: Unexpected token ;
+
+/workspace/fix_variable_names.js
+  3:18  error  Parsing error: Unexpected token =
+
+/workspace/health-endpoint.js
+  2:7  error  Parsing error: Unterminated string constant
+
+/workspace/improve-app.js
+  27:11  error  Parsing error: Unexpected token )
+
+/workspace/jest.setup.js
+  1:1  error  'require' is not defined  no-undef
+
+/workspace/maintenance-scheduler.js
+  7:72  error  Parsing error: Unexpected token ;
+
+/workspace/merge-fix.js
+  13:32  error  Parsing error: Unterminated regular expression
+
+/workspace/merge-prs.js
+   3:22  error    'require' is not defined                 no-undef
+   4:7   warning  'fs' is assigned a value but never used  no-unused-vars
+   4:12  error    'require' is not defined                 no-undef
+   6:1   warning  Unexpected console statement             no-console
+  11:5   warning  Unexpected console statement             no-console
+  12:10  warning  'error' is defined but never used        no-unused-vars
+  13:5   warning  Unexpected console statement             no-console
+  21:9   warning  Unexpected console statement             no-console
+  26:5   warning  Unexpected console statement             no-console
+  30:5   warning  Unexpected console statement             no-console
+  34:5   warning  Unexpected console statement             no-console
+  37:14  warning  'error' is defined but never used        no-unused-vars
+  38:9   warning  Unexpected console statement             no-console
+  44:13  warning  Unexpected console statement             no-console
+  50:21  warning  Unexpected console statement             no-console
+  53:30  warning  'e' is defined but never used            no-unused-vars
+  66:5   warning  Unexpected console statement             no-console
+  69:5   warning  Unexpected console statement             no-console
+  70:5   warning  Unexpected console statement             no-console
+  73:5   warning  Unexpected console statement             no-console
+
+/workspace/merge-resolver.js
+  13:1  error  Parsing error: Unexpected character '#'
+
+/workspace/monitoring-system.js
+  11:40  error  Parsing error: Unexpected token ;
+
+/workspace/netlify/functions/edge-cache-warmer.js
+  2:48  error  Parsing error: Unterminated string constant
+
+/workspace/netlify/functions/link-health-scheduler.js
+  17:22  error  Parsing error: Unexpected token ;
+
+/workspace/netlify/functions/og-meta-auditor.js
+  2:48  error  Parsing error: Unterminated string constant
+
+/workspace/netlify/functions/repo-fitness-score.js
+  2:48  error  Parsing error: Unterminated string constant
+
+/workspace/optimized-build.js
+  7:35  error  Parsing error: Unexpected token ;
+
+/workspace/pages._archive_corrupted/_document.js
+  1:10  warning  'Html' is defined but never used        no-unused-vars
+  1:16  warning  'Head' is defined but never used        no-unused-vars
+  1:22  warning  'Main' is defined but never used        no-unused-vars
+  1:28  warning  'NextScript' is defined but never used  no-unused-vars
+
+/workspace/performance-optimization.js
+  10:14  error  Parsing error: Unexpected token ;
+
+/workspace/performance-optimizations.js
+  4:33  error  Parsing error: Unexpected token ;
+
+/workspace/pm2-automation/ci-cd-automation.js
+  19:36  error  Parsing error: Unexpected token ;
+
+/workspace/pm2-automation/continuous-automation.js
+  19:36  error  Parsing error: Unexpected token ;
+
+/workspace/resolve-conflicts.js
+   3:12  error    'require' is not defined                   no-undef
+   4:7   warning  'path' is assigned a value but never used  no-unused-vars
+   4:14  error    'require' is not defined                   no-undef
+   5:22  error    'require' is not defined                   no-undef
+  15:5   warning  Unexpected console statement               no-console
+  31:5   warning  Unexpected console statement               no-console
+  40:12  warning  'error' is defined but never used          no-unused-vars
+  41:5   warning  Unexpected console statement               no-console
+  47:3   warning  Unexpected console statement               no-console
+  51:5   warning  Unexpected console statement               no-console
+  55:3   warning  Unexpected console statement               no-console
+  64:3   warning  Unexpected console statement               no-console
+
+/workspace/run-automation-safely.js
+  15:32  error  Parsing error: Unexpected token this
+
+/workspace/run-automation.js
+  7:74  error  Parsing error: Unexpected token ;
+
+/workspace/run-complete-automation.js
+    3:22  error    'require' is not defined                     no-undef
+    4:12  error    'require' is not defined                     no-undef
+    5:14  error    'require' is not defined                     no-undef
+   22:5   warning  Unexpected console statement                 no-console
+   29:15  warning  'result' is assigned a value but never used  no-unused-vars
+  121:5   error    'require' is not defined                     no-undef
+  121:22  error    'module' is not defined                      no-undef
+  125:7   warning  Unexpected console statement                 no-console
+  126:7   warning  Unexpected console statement                 no-console
+  127:7   warning  Unexpected console statement                 no-console
+  128:7   warning  Unexpected console statement                 no-console
+  129:7   warning  Unexpected console statement                 no-console
+  130:7   warning  Unexpected console statement                 no-console
+  131:7   warning  Unexpected console statement                 no-console
+  132:7   warning  Unexpected console statement                 no-console
+  136:7   warning  Unexpected console statement                 no-console
+  141:1   error    'module' is not defined                      no-undef
+
+/workspace/scripts/advanced-build-optimizer.js
+  6:56  error  Parsing error: Unterminated string constant
+
+/workspace/scripts/advanced-monitor.js
+  18:23  error  Parsing error: Unexpected token {
+
+/workspace/scripts/analyze-bundle.js
+  4:25  error  Parsing error: Unexpected token ;
+
+/workspace/scripts/app-health-monitor.js
+  10:50  error  Parsing error: Unterminated string constant
+
+/workspace/scripts/auto-fixer.js
+  21:16  error  Parsing error: Unexpected token ;
+
+/workspace/scripts/automated-testing-suite.js
+  10:55  error  Parsing error: Unterminated string constant
+
+/workspace/scripts/automation-dashboard.js
+  2:25  error  Parsing error: Unexpected token ,
+
+/workspace/scripts/automation-manager.js
+  2:25  error  Parsing error: Unexpected token ;
+
+/workspace/scripts/automation-orchestrator-improved.js
+  13:60  error  Parsing error: Unterminated string constant
+
+/workspace/scripts/automation-wrapper.js
+    8:19  warning  'spawn' is assigned a value but never used         no-unused-vars
+    8:29  error    'require' is not defined                           no-undef
+    9:12  error    'require' is not defined                           no-undef
+   10:14  error    'require' is not defined                           no-undef
+   16:3   warning  Unexpected console statement                       no-console
+   19:29  error    '__dirname' is not defined                         no-undef
+   28:34  error    '__dirname' is not defined                         no-undef
+   49:16  warning  'eslintError' is defined but never used            no-unused-vars
+   61:16  warning  'tsError' is defined but never used                no-unused-vars
+   92:36  error    '__dirname' is not defined                         no-undef
+  134:16  warning  'buildError' is defined but never used             no-unused-vars
+  144:16  warning  'testError' is defined but never used              no-unused-vars
+  164:16  warning  'auditError' is defined but never used             no-unused-vars
+  208:36  error    '__dirname' is not defined                         no-undef
+  235:36  error    '__dirname' is not defined                         no-undef
+  285:16  warning  'sitemapError' is defined but never used           no-unused-vars
+  302:9   warning  'filesToCheck' is assigned a value but never used  no-unused-vars
+  325:12  warning  'error' is defined but never used                  no-unused-vars
+  356:12  warning  'error' is defined but never used                  no-unused-vars
+  382:5   error    'require' is not defined                           no-undef
+  382:22  error    'module' is not defined                            no-undef
+  389:1   error    'module' is not defined                            no-undef
+
+/workspace/scripts/automation/console-error-fixer.js
+  2:25  error  Parsing error: Unexpected token ;
+
+/workspace/scripts/automation/continuous-improvement.js
+  2:25  error  Parsing error: Unexpected token ;
+
+/workspace/scripts/automation/dependency-updates.js
+  2:25  error  Parsing error: Unexpected token ;
+
+/workspace/scripts/automation/link-checker.js
+  2:15  error  Parsing error: Unexpected token ;
+
+/workspace/scripts/automation/performance-monitor.js
+  2:25  error  Parsing error: Unexpected token ;
+
+/workspace/scripts/automation/quality-checks.js
+  2:25  error  Parsing error: Unexpected token ;
+
+/workspace/scripts/automation/security-audit.js
+  2:25  error  Parsing error: Unexpected token ;
+
+/workspace/scripts/automation/temp-error-fixer.js
+   2:29  warning  Unexpected console statement                   no-console
+   3:13  warning  'fixCount' is assigned a value but never used  no-unused-vars
+   5:9   warning  Unexpected console statement                   no-console
+  17:11  error    'require' is not defined                       no-undef
+  22:11  warning  Unexpected console statement                   no-console
+
+/workspace/scripts/backup-manager.js
+  15:71  error  Parsing error: Unexpected token ;
+
+/workspace/scripts/build-monitor.js
+  18:24  error  Parsing error: Unexpected token ;
+
+/workspace/scripts/build-optimizer.js
+   2:8  warning  'path' is defined but never used  no-unused-vars
+   5:1  warning  Unexpected console statement      no-console
+   9:3  warning  Unexpected console statement      no-console
+  15:7  warning  Unexpected console statement      no-console
+  20:3  warning  Unexpected console statement      no-console
+  22:3  warning  Unexpected console statement      no-console
+  26:3  warning  Unexpected console statement      no-console
+  29:5  warning  Unexpected console statement      no-console
+  30:5  warning  Unexpected console statement      no-console
+  38:3  warning  Unexpected console statement      no-console
+
+/workspace/scripts/bundle-analyzer.js
+  23:1  error  'module' is not defined  no-undef
+
+/workspace/scripts/ci-cd-pipeline.js
+  13:42  error  Parsing error: Unterminated string constant
+
+/workspace/scripts/clean-console-statements.js
+  5:5  error  Parsing error: Unexpected token ,
+
+/workspace/scripts/cleanup-repository.js
+    4:8  warning  'path' is defined but never used  no-unused-vars
+  142:7  warning  Unexpected console statement      no-console
+  145:7  warning  Unexpected console statement      no-console
+  150:5  warning  Unexpected console statement      no-console
+  179:3  warning  Unexpected console statement      no-console
+  229:3  warning  Unexpected console statement      no-console
+  248:3  warning  Unexpected console statement      no-console
+  252:3  warning  Unexpected console statement      no-console
+  272:3  warning  Unexpected console statement      no-console
+  273:3  warning  Unexpected console statement      no-console
+  274:3  warning  Unexpected console statement      no-console
+  275:3  warning  Unexpected console statement      no-console
+  276:3  warning  Unexpected console statement      no-console
+  277:3  warning  Unexpected console statement      no-console
+  278:3  warning  Unexpected console statement      no-console
+  279:3  warning  Unexpected console statement      no-console
+
+/workspace/scripts/comprehensive-app-improver.js
+  10:58  error  Parsing error: Unterminated string constant
+
+/workspace/scripts/comprehensive-link-checker.js
+  1:23  error  Parsing error: Unexpected token ,
+
+/workspace/scripts/comprehensive-test-automation.js
+  6:61  error  Parsing error: Unterminated string constant
+
+/workspace/scripts/comprehensive-website-analysis.js
+  2:18  error  Parsing error: Unexpected token ,
+
+/workspace/scripts/comprehensive-website-analyzer.js
+  1:23  error  Parsing error: Unexpected token ,
+
+/workspace/scripts/continuous-improvement.js
+  6:5  error  Parsing error: Unexpected token ,
+
+/workspace/scripts/dependency-manager.js
+  48:93  error  Parsing error: Unexpected token ;
+
+/workspace/scripts/dependency-updater.js
+  6:5  error  Parsing error: Unexpected token ,
+
+/workspace/scripts/deployment-automation-improved.js
+  13:58  error  Parsing error: Unterminated string constant
+
+/workspace/scripts/deployment-automation.js
+  6:53  error  Parsing error: Unterminated string constant
+
+/workspace/scripts/enhanced-automation-orchestrator.js
+    3:19  warning  'spawn' is assigned a value but never used  no-unused-vars
+    3:29  error    'require' is not defined                    no-undef
+    4:12  error    'require' is not defined                    no-undef
+    5:14  error    'require' is not defined                    no-undef
+   29:5   warning  Unexpected console statement                no-console
+  242:18  warning  'error' is defined but never used           no-unused-vars
+  274:14  warning  'error' is defined but never used           no-unused-vars
+  312:14  warning  'error' is defined but never used           no-unused-vars
+  324:14  warning  'error' is defined but never used           no-unused-vars
+  336:14  warning  'error' is defined but never used           no-unused-vars
+  362:14  warning  'error' is defined but never used           no-unused-vars
+  408:5   error    'require' is not defined                    no-undef
+  408:22  error    'module' is not defined                     no-undef
+  415:1   error    'module' is not defined                     no-undef
+
+/workspace/scripts/enhanced-deployment-automation.js
+    3:22  error    'require' is not defined      no-undef
+    4:12  error    'require' is not defined      no-undef
+    5:14  error    'require' is not defined      no-undef
+   33:5   warning  Unexpected console statement  no-console
+  340:5   error    'require' is not defined      no-undef
+  340:22  error    'module' is not defined       no-undef
+  347:1   error    'module' is not defined       no-undef
+
+/workspace/scripts/enhanced-monitoring-system.js
+    3:22  error    'require' is not defined           no-undef
+    4:12  error    'require' is not defined           no-undef
+    5:14  error    'require' is not defined           no-undef
+   47:5   warning  Unexpected console statement       no-console
+  174:18  warning  'error' is defined but never used  no-unused-vars
+  188:16  warning  'error' is defined but never used  no-unused-vars
+  266:14  warning  'error' is defined but never used  no-unused-vars
+  339:5   error    'require' is not defined           no-undef
+  339:22  error    'module' is not defined            no-undef
+  346:1   error    'module' is not defined            no-undef
+
+/workspace/scripts/enhanced-test-automation.js
+    3:22  error    'require' is not defined           no-undef
+    4:12  error    'require' is not defined           no-undef
+    5:14  error    'require' is not defined           no-undef
+   29:5   warning  Unexpected console statement       no-console
+  247:18  warning  'error' is defined but never used  no-unused-vars
+  273:14  warning  'error' is defined but never used  no-unused-vars
+  292:14  warning  'error' is defined but never used  no-unused-vars
+  340:5   error    'require' is not defined           no-undef
+  340:22  error    'module' is not defined            no-undef
+  347:1   error    'module' is not defined            no-undef
+
+/workspace/scripts/error-monitor-broken.js
+  2:17  error  Parsing error: Unexpected token {
+
+/workspace/scripts/error-monitor.js
+  2:20  error  Parsing error: Unterminated string constant
+
+/workspace/scripts/final-automation-suite.js
+    3:9   warning  'execSync' is assigned a value but never used  no-unused-vars
+    3:22  error    'require' is not defined                       no-undef
+    4:12  error    'require' is not defined                       no-undef
+    5:14  error    'require' is not defined                       no-undef
+   22:5   warning  Unexpected console statement                   no-console
+  167:5   error    'require' is not defined                       no-undef
+  167:22  error    'module' is not defined                        no-undef
+  173:7   warning  Unexpected console statement                   no-console
+  177:7   warning  Unexpected console statement                   no-console
+  182:1   error    'module' is not defined                        no-undef
+
+/workspace/scripts/fix-all-remaining-imports.js
+    4:8   warning  'path' is defined but never used      no-unused-vars
+  634:41  warning  'filePath' is defined but never used  no-unused-vars
+  718:7   warning  Unexpected console statement          no-console
+  723:5   warning  Unexpected console statement          no-console
+  729:3   warning  Unexpected console statement          no-console
+  760:3   warning  Unexpected console statement          no-console
+  761:3   warning  Unexpected console statement          no-console
+  762:3   warning  Unexpected console statement          no-console
+  763:3   warning  Unexpected console statement          no-console
+  767:14  warning  Unexpected console statement          no-console
+
+/workspace/scripts/fix-all-syntax-errors.js
+  12:50  error  Parsing error: Unexpected token )
+
+/workspace/scripts/fix-layout-conflicts.js
+  65:5  error  Parsing error: Unexpected token 'dist'
+
+/workspace/scripts/fix-linting-issues.js
+  13:48  error  Parsing error: Unterminated string constant
+
+/workspace/scripts/fix-missing-imports.js
+    4:8   warning  'path' is defined but never used      no-unused-vars
+   63:38  warning  'filePath' is defined but never used  no-unused-vars
+  147:7   warning  Unexpected console statement          no-console
+  152:5   warning  Unexpected console statement          no-console
+  158:3   warning  Unexpected console statement          no-console
+  189:3   warning  Unexpected console statement          no-console
+  190:3   warning  Unexpected console statement          no-console
+  191:3   warning  Unexpected console statement          no-console
+  192:3   warning  Unexpected console statement          no-console
+  196:14  warning  Unexpected console statement          no-console
+
+/workspace/scripts/fix-syntax-comprehensive.js
+    4:8   warning  'path' is defined but never used  no-unused-vars
+   77:7   warning  Unexpected console statement      no-console
+   82:5   warning  Unexpected console statement      no-console
+  108:3   warning  Unexpected console statement      no-console
+  111:14  warning  Unexpected console statement      no-console
+
+/workspace/scripts/fix-syntax-errors.js
+    4:8  warning  'path' is defined but never used  no-unused-vars
+   89:7  warning  Unexpected console statement      no-console
+   94:5  warning  Unexpected console statement      no-console
+  118:3  warning  Unexpected console statement      no-console
+
+/workspace/scripts/fix-test-syntax-errors.js
+  13:51  error  Parsing error: Unterminated string constant
+
+/workspace/scripts/fix-type-names.js
+   4:8   warning  'path' is defined but never used  no-unused-vars
+  33:7   warning  Unexpected console statement      no-console
+  38:5   warning  Unexpected console statement      no-console
+  64:3   warning  Unexpected console statement      no-console
+  67:14  warning  Unexpected console statement      no-console
+
+/workspace/scripts/front-maximizer.js
+  5:5  error  Parsing error: Unexpected token ,
+
+/workspace/scripts/generate-readme.js
+  13:12  warning  'err' is defined but never used  no-unused-vars
+  27:3   warning  Unexpected console statement     no-console
+
+/workspace/scripts/generate-search-index.js
+  2:15  error  Parsing error: Unexpected token ;
+
+/workspace/scripts/generate-sitemap-enhanced.js
+  54:3  warning  Unexpected console statement  no-console
+  55:3  warning  Unexpected console statement  no-console
+  56:3  warning  Unexpected console statement  no-console
+  80:3  warning  Unexpected console statement  no-console
+  81:3  warning  Unexpected console statement  no-console
+
+/workspace/scripts/generate-sitemap.mjs
+  6:16  error  Parsing error: Unexpected token ;
+
+/workspace/scripts/git-automation.js
+    3:22  error    'require' is not defined                   no-undef
+    4:7   warning  'fs' is assigned a value but never used    no-unused-vars
+    4:12  error    'require' is not defined                   no-undef
+    5:7   warning  'path' is assigned a value but never used  no-unused-vars
+    5:14  error    'require' is not defined                   no-undef
+   14:5   warning  Unexpected console statement               no-console
+  147:5   error    'require' is not defined                   no-undef
+  147:22  error    'module' is not defined                    no-undef
+  151:7   warning  Unexpected console statement               no-console
+  155:7   warning  Unexpected console statement               no-console
+  160:1   error    'module' is not defined                    no-undef
+
+/workspace/scripts/git-workflow.js
+   3:12  error    'require' is not defined      no-undef
+  15:9   warning  Unexpected console statement  no-console
+  19:7   warning  Unexpected console statement  no-console
+  22:7   warning  Unexpected console statement  no-console
+  50:5   warning  Unexpected console statement  no-console
+  65:5   warning  Unexpected console statement  no-console
+  69:5   error    'require' is not defined      no-undef
+  69:22  error    'module' is not defined       no-undef
+  75:1   error    'module' is not defined       no-undef
+
+/workspace/scripts/health-check.js
+  5:103  error  Parsing error: Unexpected token ;
+
+/workspace/scripts/health-checker.js
+  2:20  error  Parsing error: Unterminated string constant
+
+/workspace/scripts/link-checker.js
+  6:5  error  Parsing error: Unexpected token ,
+
+/workspace/scripts/link-integrity-checker.js
+  5:5  error  Parsing error: Unexpected token ,
+
+/workspace/scripts/lint-checker.js
+  2:20  error  Parsing error: Unexpected token ;
+
+/workspace/scripts/log-cleaner.js
+  2:15  error  Parsing error: Unexpected token ;
+
+/workspace/scripts/log-manager.js
+  15:64  error  Parsing error: Unexpected token ;
+
+/workspace/scripts/master-automation-orchestrator.js
+    3:19  error    'require' is not defined      no-undef
+    4:12  error    'require' is not defined      no-undef
+    5:14  error    'require' is not defined      no-undef
+   30:5   warning  Unexpected console statement  no-console
+  279:5   error    'require' is not defined      no-undef
+  279:22  error    'module' is not defined       no-undef
+  286:1   error    'module' is not defined       no-undef
+
+/workspace/scripts/optimize-build.js
+  6:4  error  Parsing error: Unexpected token ,
+
+/workspace/scripts/optimize-images.js
+  7:54  error  Parsing error: Unexpected token ;
+
+/workspace/scripts/optimize-imports.js
+  5:5  error  Parsing error: Unexpected token ,
+
+/workspace/scripts/optimize-performance.js
+    5:10  warning  'glob' is defined but never used                    no-unused-vars
+   11:7   warning  'OPTIMIZATIONS' is assigned a value but never used  no-unused-vars
+   45:5   warning  Unexpected console statement                        no-console
+  135:3   warning  Unexpected console statement                        no-console
+  142:5   warning  Unexpected console statement                        no-console
+  169:3   warning  Unexpected console statement                        no-console
+  248:3   warning  Unexpected console statement                        no-console
+  255:5   warning  Unexpected console statement                        no-console
+  276:3   warning  Unexpected console statement                        no-console
+  281:3   warning  Unexpected console statement                        no-console
+  295:7   warning  Unexpected console statement                        no-console
+  299:3   warning  Unexpected console statement                        no-console
+  300:3   warning  Unexpected console statement                        no-console
+  301:3   warning  Unexpected console statement                        no-console
+  302:3   warning  Unexpected console statement                        no-console
+  304:5   warning  Unexpected console statement                        no-console
+  306:5   warning  Unexpected console statement                        no-console
+
+/workspace/scripts/performance-monitor-improved.js
+  2:17  error  Parsing error: Unexpected token {
+
+/workspace/scripts/performance-monitor.js
+  15:7  error  Parsing error: Unexpected token performanceChecks
+
+/workspace/scripts/performance-optimizer-enhanced.js
+  19:21  error  Parsing error: Unexpected token (
+
+/workspace/scripts/performance-optimizer.js
+    3:12  error    'require' is not defined      no-undef
+    4:14  error    'require' is not defined      no-undef
+    5:14  error    'require' is not defined      no-undef
+   23:5   warning  Unexpected console statement  no-console
+  225:5   error    'require' is not defined      no-undef
+  225:22  error    'module' is not defined       no-undef
+  230:7   warning  Unexpected console statement  no-console
+  234:7   warning  Unexpected console statement  no-console
+  239:1   error    'module' is not defined       no-undef
+
+/workspace/scripts/pm2-start.js
+  2:30  error  Parsing error: Unexpected token ,
+
+/workspace/scripts/pm2/auto-commit-fixes.js
+  2:2  error  Parsing error: Unexpected token ,
+
+/workspace/scripts/pm2/auto-fix.js
+   2:22  error    'require' is not defined      no-undef
+   5:2   warning  Unexpected console statement  no-console
+  16:2   warning  Unexpected console statement  no-console
+  18:2   warning  Unexpected console statement  no-console
+
+/workspace/scripts/pm2/build-error-monitor.js
+  24:17  error  Parsing error: Unexpected token {
+
+/workspace/scripts/pm2/code-quality-monitor.js
+  2:2  error  Parsing error: Unexpected token ,
+
+/workspace/scripts/pm2/dependency-error-resolver.js
+  19:17  error  Parsing error: Unexpected token {
+
+/workspace/scripts/pm2/dependency-monitor.js
+  2:2  error  Parsing error: Unexpected token ,
+
+/workspace/scripts/pm2/error-detection-service.js
+    8:12  error    'require' is not defined                            no-undef
+    9:14  error    'require' is not defined                            no-undef
+   10:19  warning  'spawn' is assigned a value but never used          no-unused-vars
+   10:29  error    'require' is not defined                            no-undef
+   11:18  error    'require' is not defined                            no-undef
+   46:7   warning  Unexpected console statement                        no-console
+   48:7   warning  Unexpected console statement                        no-console
+   50:7   warning  Unexpected console statement                        no-console
+   52:7   warning  Unexpected console statement                        no-console
+  385:28  warning  'filename' is defined but never used                no-unused-vars
+  387:11  warning  'issues' is assigned a value but never used         no-unused-vars
+  405:11  warning  'blockComments' is assigned a value but never used  no-unused-vars
+  483:13  warning  'result' is assigned a value but never used         no-unused-vars
+  510:14  warning  'error' is defined but never used                   no-unused-vars
+  617:14  warning  'error' is defined but never used                   no-unused-vars
+
+/workspace/scripts/pm2/eslint-error-fixer.js
+    8:12  error    'require' is not defined                      no-undef
+    9:14  error    'require' is not defined                      no-undef
+   10:22  error    'require' is not defined                      no-undef
+   38:7   warning  Unexpected console statement                  no-console
+   40:7   warning  Unexpected console statement                  no-console
+   42:7   warning  Unexpected console statement                  no-console
+   44:7   warning  Unexpected console statement                  no-console
+  144:18  warning  'error' is defined but never used             no-unused-vars
+  318:29  warning  'error' is defined but never used             no-unused-vars
+  327:24  warning  'error' is defined but never used             no-unused-vars
+  336:18  warning  'error' is defined but never used             no-unused-vars
+  342:15  warning  'varName' is assigned a value but never used  no-unused-vars
+  351:30  warning  'error' is defined but never used             no-unused-vars
+  376:27  warning  'error' is defined but never used             no-unused-vars
+  412:14  warning  'error' is defined but never used             no-unused-vars
+
+/workspace/scripts/pm2/git-workflow-automator.js
+  2:20  error  Parsing error: Unexpected token ;
+
+/workspace/scripts/pm2/healthcheck.js
+   2:12  error    'require' is not defined      no-undef
+   3:14  error    'require' is not defined      no-undef
+  20:3   warning  Unexpected console statement  no-console
+  23:2   warning  Unexpected console statement  no-console
+
+/workspace/scripts/pm2/lint-error-auto-fixer.js
+  20:17  error  Parsing error: Unexpected token {
+
+/workspace/scripts/pm2/lint-fixer.js
+  2:2  error  Parsing error: Unexpected token ,
+
+/workspace/scripts/pm2/performance-monitor.js
+  2:2  error  Parsing error: Unexpected token ,
+
+/workspace/scripts/pm2/syntax-error-fixer.js
+    8:12  error    'require' is not defined           no-undef
+    9:14  error    'require' is not defined           no-undef
+   10:22  error    'require' is not defined           no-undef
+   61:7   warning  Unexpected console statement       no-console
+   63:7   warning  Unexpected console statement       no-console
+   65:7   warning  Unexpected console statement       no-console
+   67:7   warning  Unexpected console statement       no-console
+  612:18  warning  'error' is defined but never used  no-unused-vars
+  619:14  warning  'error' is defined but never used  no-unused-vars
+
+/workspace/scripts/pm2/typescript-error-fixer.js
+    8:12  error    'require' is not defined               no-undef
+    9:14  error    'require' is not defined               no-undef
+   10:22  error    'require' is not defined               no-undef
+   38:7   warning  Unexpected console statement           no-console
+   40:7   warning  Unexpected console statement           no-console
+   42:7   warning  Unexpected console statement           no-console
+   44:7   warning  Unexpected console statement           no-console
+  251:43  warning  'lineIndex' is defined but never used  no-unused-vars
+  276:29  warning  'allLines' is defined but never used   no-unused-vars
+  276:39  warning  'lineIndex' is defined but never used  no-unused-vars
+  296:31  warning  'allLines' is defined but never used   no-unused-vars
+  296:41  warning  'lineIndex' is defined but never used  no-unused-vars
+  315:33  warning  'allLines' is defined but never used   no-unused-vars
+  315:43  warning  'lineIndex' is defined but never used  no-unused-vars
+  329:34  warning  'allLines' is defined but never used   no-unused-vars
+  329:44  warning  'lineIndex' is defined but never used  no-unused-vars
+  341:26  warning  'allLines' is defined but never used   no-unused-vars
+
+/workspace/scripts/pm2/typescript-error-monitor.js
+  20:17  error  Parsing error: Unexpected token {
+
+/workspace/scripts/prerender.js
+  1:44  error  Parsing error: Unexpected token ;
+
+/workspace/scripts/quick-test.js
+   3:12  error    'require' is not defined      no-undef
+   4:14  error    'require' is not defined      no-undef
+   6:1   warning  Unexpected console statement  no-console
+   7:1   warning  Unexpected console statement  no-console
+   8:1   warning  Unexpected console statement  no-console
+  19:1   warning  Unexpected console statement  no-console
+  21:32  error    '__dirname' is not defined    no-undef
+  23:5   warning  Unexpected console statement  no-console
+  25:5   warning  Unexpected console statement  no-console
+  29:1   warning  Unexpected console statement  no-console
+
+/workspace/scripts/remove-console-logs-production.js
+    3:12  error    'require' is not defined                         no-undef
+    4:14  error    'require' is not defined                         no-undef
+    5:14  error    'require' is not defined                         no-undef
+   23:5   warning  Unexpected console statement                     no-console
+   52:19  warning  'afterMatch' is assigned a value but never used  no-unused-vars
+  113:5   error    'require' is not defined                         no-undef
+  113:22  error    'module' is not defined                          no-undef
+  117:7   warning  Unexpected console statement                     no-console
+  121:7   warning  Unexpected console statement                     no-console
+  126:1   error    'module' is not defined                          no-undef
+
+/workspace/scripts/remove-console-logs.js
+   64:7   warning  Unexpected console statement  no-console
+   70:5   warning  Unexpected console statement  no-console
+   99:3   warning  Unexpected console statement  no-console
+  100:3   warning  Unexpected console statement  no-console
+  101:3   warning  Unexpected console statement  no-console
+  104:5   warning  Unexpected console statement  no-console
+  106:5   warning  Unexpected console statement  no-console
+  110:5   error    'require' is not defined      no-undef
+  110:22  error    'module' is not defined       no-undef
+  114:1   error    'module' is not defined       no-undef
+
+/workspace/scripts/resolve-merge-conflicts.js
+  2:17  error  Parsing error: Unexpected token {
+
+/workspace/scripts/security-audit.js
+    7:1   warning  Unexpected console statement       no-console
+   11:3   warning  Unexpected console statement       no-console
+   16:5   warning  Unexpected console statement       no-console
+   18:7   warning  Unexpected console statement       no-console
+   21:5   warning  Unexpected console statement       no-console
+   24:3   warning  Unexpected console statement       no-console
+   28:1   warning  Unexpected console statement       no-console
+   58:16  warning  'error' is defined but never used  no-unused-vars
+   69:3   warning  Unexpected console statement       no-console
+   71:5   warning  Unexpected console statement       no-console
+   73:7   warning  Unexpected console statement       no-console
+   77:3   warning  Unexpected console statement       no-console
+   81:1   warning  Unexpected console statement       no-console
+   87:5   warning  Unexpected console statement       no-console
+   89:7   warning  Unexpected console statement       no-console
+   92:5   warning  Unexpected console statement       no-console
+   94:10  warning  'error' is defined but never used  no-unused-vars
+   95:3   warning  Unexpected console statement       no-console
+  112:1   warning  Unexpected console statement       no-console
+  113:1   warning  Unexpected console statement       no-console
+
+/workspace/scripts/security-auditor.js
+  45:7  error  Parsing error: Unexpected token catch
+
+/workspace/scripts/security-monitor.js
+  14:77  error  Parsing error: Unexpected token ;
+
+/workspace/scripts/seo-optimizer.js
+  5:5  error  Parsing error: Unexpected token ,
+
+/workspace/scripts/syntax-fixer.js
+  4:1  warning  Unexpected console statement  no-console
+  5:1  error    'module' is not defined       no-undef
+
+/workspace/scripts/test-runner.js
+  14:20  error  Parsing error: Unexpected token {
+
+/workspace/scripts/typescript-improver.js
+  253:5  error  Parsing error: Unexpected token 'dist'
+
+/workspace/scripts/website-analyzer.js
+  2:15  error  Parsing error: Unexpected token ;
+
+/workspace/security-config.js
+  23:1  error  'module' is not defined  no-undef
+
+/workspace/seo-improvements.js
+  12:1  error  Parsing error: Unexpected token ;
+
+/workspace/simple-test.js
+  15:72  error  Parsing error: Unexpected token ;
+
+/workspace/test-automation.js
+   2:22  error    'require' is not defined      no-undef
+   6:3   warning  Unexpected console statement  no-console
+   8:7   warning  Unexpected console statement  no-console
+  10:3   warning  Unexpected console statement  no-console
+  16:3   warning  Unexpected console statement  no-console
+  18:7   warning  Unexpected console statement  no-console
+  20:3   warning  Unexpected console statement  no-console
+
+/workspace/tests/performance.test.js
+  3:65  error  Parsing error: Unterminated string constant
+
+✖ 1032 problems (462 errors, 570 warnings)
+

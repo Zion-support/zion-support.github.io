@@ -1,1 +1,8 @@
-export const performanceOptimizer = { init: () => { console.log('performanceOptimizer initialized'),} } export default performanceOptimizer;
+// performanceOptimizer utility,
+export const performanceOptimizer = {
+  // Placeholder utility functions,
+init: () => {
+    ,
+  }
+}
+export default performanceOptimizer;

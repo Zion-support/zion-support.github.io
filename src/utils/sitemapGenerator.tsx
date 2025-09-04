@@ -1,1 +1,8 @@
-export const sitemapGenerator = { init: () => { console.log('sitemapGenerator initialized')} }; export default sitemapGenerator;
+// sitemapGenerator utility
+export const sitemapGenerator = {
+  // Placeholder utility functions
+  init: () => {
+    
+  }
+};
+export default sitemapGenerator;

@@ -1,1 +1,18 @@
-import React,{ useState } from 'react'; import { Link } from 'react-router-dom'; import { motion } from 'framer-motion'; import { Mail,Phone,MapPin,ArrowUp,Heart,CheckCircle,Send,Globe } from 'lucide-react'; export function FooterNewsletter() { const [email,setEmail] = useState(''); const [isSubscribed,setIsSubscribed] = useState(false); const [isLoading,setIsLoading] = useState(false); const handleSubscribe = async(e) => { e.preventDefault(); if(!email) return; setIsLoading(true);
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+export default function Footer() {
+  return (
+    <footer style={{ padding: 24, borderTop: '1px solid #e5e7eb', textAlign: 'center', fontSize: 14 }}>
+      <nav style={{ marginBottom: 8 }}>
+        <Link to="/" style={{ marginRight: 12 }}>Home</Link>
+        <Link to="/services" style={{ marginRight: 12 }}>Services</Link>
+        <Link to="/contact">Contact</Link>
+      </nav>
+      <div>
+        © {new Date().getFullYear()} Zion Tech Group
+      </div>
+    </footer>
+  );
+}
