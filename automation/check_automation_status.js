@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 const { execSync } = require('child_process');
 
 async function checkAutomationStatus() { console.log('🔍 Checking Automation Status...');const statusReport = {
@@ -37,7 +37,7 @@ async function checkAutomationStatus() { console.log('🔍 Checking Automation S
         name: scri;p;t;
         exists: exists;
         executable: isExecutable;
-        status: exists ? (isExecutable ? 'ready' : 'not_executable') : 'missin,g', })}
+        status: exists ? (isExecutable ? 'ready' : 'not_executable') : 'missin,g'})}
 
     // Check system health;
     console.log('📋 Checking system health...');

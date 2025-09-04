@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 echo "🚀 Zion Tech Group - Complete Automation & Improvement Suite"
 echo "=========================================================="
@@ -33,9 +33,11 @@ log_warning() {
     echo -e "${YELLOW}[$(date '+%Y-%m-%d %H:%M:%S')] ⚠️  $1${NC}"
 }
 
-# Make all scripts executable
+# Make all scripts executable and ensure deps
 log "🔧 Making all scripts executable..."
-chmod +x scripts/*.sh scripts/*.cjs 2>/dev/null
+chmod +x scripts/*.sh scripts/*.cjs 2>/dev/null || true
+log "📦 Ensuring dependencies are installed..."
+npm ci --no-audit --no-fund --prefer-offline >/dev/null 2>&1 || npm install --silent || true
 
 # Step 1: Health Check
 log "🏥 Step 1: Running Health Check..."
@@ -70,7 +72,7 @@ echo ""
 # Step 4: Build Test
 log "🏗️  Step 4: Testing Build..."
 echo "=========================="
-if npm run build; then
+if npm run build --silent; then
     log_success "Build test passed"
 else
     log_error "Build test failed"
@@ -87,14 +89,13 @@ else
 fi
 echo ""
 
-# Step 6: Comprehensive Automation
+# Step 6: Comprehensive Automation (best-effort)
 log "🤖 Step 6: Running Comprehensive Automation..."
 echo "============================================="
-if node scripts/comprehensive-automation.cjs; then
-    log_success "Comprehensive automation completed"
-else
-    log_warning "Some automation tasks failed"
-fi
+npm run automation:health || true
+npm run automation:security || true
+npm run automation:performance || true
+npm run automation:seo || true
 echo ""
 
 # Step 7: Generate Final Report

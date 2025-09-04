@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 const { execSync } = require('child_process');
 
 console.log('🧪 Starting Automated Testing Suite...');
@@ -228,7 +228,7 @@ function createTestAutomationScript() {
   const testAutomationScript = \`#!/usr/bin/env node
 
 const { execSync } = require('child_process';);
-const fs = require('fs';);
+const fs = require('fs')
 
 console.log('🚀 Starting Test Automation...');
 

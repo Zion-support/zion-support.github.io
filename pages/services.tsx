@@ -1,1780 +1,1527 @@
+
+import React from 'react';
 import Link from 'next/link';
-
-type Service = {
-  name: string;
-  summary: string;
-  pricing: string;
-  link: string;
-}
-const microSaaS: Service[] = [
-  {
-    name: 'Cloud Cost Guard (FinOps Assistant)',
-    summary: 'Anomaly detection, rightsizing, forecasting and budget guardrails across AWS/Azure/GCP.',
-    pricing: 'Typical: $299–$1,499/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'LLM Evaluation & Safety Suite',
-    summary: 'Prompt evaluation, bias/toxicity checks, jailbreak tests and guardrail policies.',
-    pricing: 'Typical: $799–$3,500/month',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'Customer Feedback & NPS Micro-App',
-    summary: 'Embed surveys, analyze sentiment and route issues to the right team automatically.',
-    pricing: 'Typical: $149–$799/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'API Rate Limiter & Analytics',
-    summary: 'Intelligent rate limiting, usage analytics, and API monetization for SaaS platforms.',
-    pricing: 'Typical: $199–$999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Document Processing',
-    summary: 'AI-powered OCR, data extraction, and document workflow automation for businesses.',
-    pricing: 'Typical: $399–$1,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Social Media Scheduler Pro',
-    summary: 'Multi-platform scheduling, content optimization, and engagement analytics.',
-    pricing: 'Typical: $99–$499/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Email Deliverability Monitor',
-    summary: 'Real-time email reputation tracking, bounce analysis, and deliverability optimization.',
-    pricing: 'Typical: $149–$699/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Website Performance Optimizer',
-    summary: 'Automated Core Web Vitals monitoring, optimization suggestions, and performance alerts.',
-    pricing: 'Typical: $199–$899/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Lead Scoring & Qualification',
-    summary: 'AI-powered lead scoring, qualification workflows, and CRM integration.',
-    pricing: 'Typical: $299–$1,299/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Inventory Management AI',
-    summary: 'Predictive inventory optimization, demand forecasting, and automated reordering.',
-    pricing: 'Typical: $399–$1,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Employee Productivity Tracker',
-    summary: 'Non-invasive productivity analytics, time tracking, and performance insights.',
-    pricing: 'Typical: $99–$399/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Competitor Price Monitor',
-    summary: 'Real-time competitor pricing tracking, alerts, and dynamic pricing recommendations.',
-    pricing: 'Typical: $199–$799/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'SEO Content Optimizer',
-    summary: 'AI-powered content optimization, keyword research, and SERP tracking.',
-    pricing: 'Typical: $149–$699/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Customer Churn Predictor',
-    summary: 'Machine learning models to predict and prevent customer churn with actionable insights.',
-    pricing: 'Typical: $399–$1,599/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Automated A/B Testing Platform',
-    summary: 'Statistical significance testing, multivariate experiments, and conversion optimization.',
-    pricing: 'Typical: $299–$1,199/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Invoice Processing & AP Automation',
-    summary: 'AI-powered invoice extraction, approval workflows, and automated payment processing.',
-    pricing: 'Typical: $199–$899/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Real-time Collaboration Workspace',
-    summary: 'Virtual whiteboards, document collaboration, and team productivity analytics.',
-    pricing: 'Typical: $99–$499/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Code Review Assistant',
-    summary: 'Automated code quality analysis, security scanning, and performance optimization suggestions.',
-    pricing: 'Typical: $149–$699/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Dynamic Pricing Optimization Engine',
-    summary: 'Real-time pricing adjustments based on demand, competition, and market conditions.',
-    pricing: 'Typical: $399–$1,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Contract Management System',
-    summary: 'Contract lifecycle management, renewal tracking, and compliance monitoring.',
-    pricing: 'Typical: $299–$1,299/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered HR Analytics Platform',
-    summary: 'Employee performance insights, retention prediction, and workforce optimization.',
-    pricing: 'Typical: $199–$999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Intelligent Supply Chain Monitor',
-    summary: 'Real-time supply chain visibility, risk assessment, and disruption alerts.',
-    pricing: 'Typical: $499–$2,499/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Energy Management System',
-    summary: 'IoT-based energy monitoring, optimization, and cost reduction for facilities.',
-    pricing: 'Typical: $199–$899/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Legal Document Analyzer',
-    summary: 'Contract analysis, risk assessment, and compliance checking for legal teams.',
-    pricing: 'Typical: $399–$1,599/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Dynamic Content Personalization Engine',
-    summary: 'Real-time content customization based on user behavior and preferences.',
-    pricing: 'Typical: $299–$1,199/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Facility Management Platform',
-    summary: 'IoT sensors, predictive maintenance, and automated facility operations.',
-    pricing: 'Typical: $199–$999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Market Research Assistant',
-    summary: 'Competitive intelligence, trend analysis, and market opportunity identification.',
-    pricing: 'Typical: $149–$699/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Intelligent Customer Onboarding Platform',
-    summary: 'Automated onboarding workflows, progress tracking, and success optimization.',
-    pricing: 'Typical: $199–$899/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Compliance Monitoring System',
-    summary: 'Automated compliance checking, audit preparation, and regulatory reporting.',
-    pricing: 'Typical: $399–$1,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Financial Planning Tool',
-    summary: 'Budget forecasting, expense optimization, and financial health monitoring.',
-    pricing: 'Typical: $99–$499/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Dynamic Workforce Scheduling System',
-    summary: 'AI-optimized scheduling, shift management, and labor cost optimization.',
-    pricing: 'Typical: $199–$999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Quality Assurance Platform',
-    summary: 'Automated testing, quality metrics, and continuous improvement recommendations.',
-    pricing: 'Typical: $299–$1,299/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Vendor Management System',
-    summary: 'Vendor performance tracking, risk assessment, and relationship optimization.',
-    pricing: 'Typical: $199–$899/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Intelligent Knowledge Management Platform',
-    summary: 'AI-powered search, content organization, and knowledge sharing optimization.',
-    pricing: 'Typical: $149–$699/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Email Marketing Automation',
-    summary: 'Intelligent email campaigns, personalization, and automated follow-up sequences.',
-    pricing: 'Typical: $199–$999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Appointment Scheduling System',
-    summary: 'AI-optimized scheduling, calendar integration, and automated reminders.',
-    pricing: 'Typical: $99–$499/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Real-Time Customer Feedback Analytics',
-    summary: 'Sentiment analysis, feedback categorization, and actionable insights dashboard.',
-    pricing: 'Typical: $149–$699/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Social Media Manager',
-    summary: 'Content scheduling, engagement optimization, and performance analytics.',
-    pricing: 'Typical: $199–$899/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Expense Management & Receipt OCR',
-    summary: 'Automated expense tracking, receipt processing, and compliance reporting.',
-    pricing: 'Typical: $99–$399/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Talent Acquisition Platform',
-    summary: 'Resume screening, candidate matching, and interview scheduling automation.',
-    pricing: 'Typical: $299–$1,299/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Intelligent Project Management Assistant',
-    summary: 'Task automation, resource allocation, and deadline prediction.',
-    pricing: 'Typical: $199–$799/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Customer Onboarding Automation',
-    summary: 'Personalized onboarding flows, progress tracking, and success optimization.',
-    pricing: 'Typical: $149–$699/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Content Moderation System',
-    summary: 'Automated content filtering, toxicity detection, and community management.',
-    pricing: 'Typical: $199–$999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Dynamic Pricing Intelligence Platform',
-    summary: 'Real-time market analysis, competitor tracking, and pricing optimization.',
-    pricing: 'Typical: $399–$1,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Inventory Forecasting Engine',
-    summary: 'Demand prediction, stock optimization, and automated reorder management.',
-    pricing: 'Typical: $299–$1,299/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Customer Success Platform',
-    summary: 'Health scoring, churn prediction, and automated intervention workflows.',
-    pricing: 'Typical: $199–$899/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Intelligent Document Workflow Automation',
-    summary: 'Document routing, approval processes, and compliance tracking.',
-    pricing: 'Typical: $149–$699/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Analytics Dashboard Builder',
-    summary: 'No-code dashboard creation, data visualization, and KPI tracking.',
-    pricing: 'Typical: $199–$999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Lead Generation Engine',
-    summary: 'Prospect identification, contact enrichment, and outreach automation.',
-    pricing: 'Typical: $299–$1,499/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Intelligent A/B Testing Platform',
-    summary: 'Statistical significance testing, multivariate experiments, and optimization.',
-    pricing: 'Typical: $199–$899/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Compliance Monitoring System',
-    summary: 'Regulatory tracking, audit preparation, and compliance reporting automation.',
-    pricing: 'Typical: $399–$1,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Video Content Analyzer',
-    summary: 'Video transcription, sentiment analysis, and engagement metrics.',
-    pricing: 'Typical: $149–$699/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Intelligent Workflow Orchestration Platform',
-    summary: 'Process automation, task routing, and business logic management.',
-    pricing: 'Typical: $299–$1,299/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Customer Segmentation Engine',
-    summary: 'Behavioral analysis, persona creation, and targeted marketing automation.',
-    pricing: 'Typical: $199–$799/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Voice Analytics Platform',
-    summary: 'Call transcription, sentiment analysis, and conversation insights.',
-    pricing: 'Typical: $199–$999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Intelligent Resource Planning System',
-    summary: 'Capacity planning, resource optimization, and utilization tracking.',
-    pricing: 'Typical: $299–$1,299/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Contract Lifecycle Manager',
-    summary: 'Contract analysis, renewal tracking, and compliance monitoring.',
-    pricing: 'Typical: $199–$899/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Market Intelligence Platform',
-    summary: 'Competitive analysis, trend monitoring, and opportunity identification.',
-    pricing: 'Typical: $149–$699/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Intelligent Customer Journey Mapping',
-    summary: 'Touchpoint analysis, conversion optimization, and experience enhancement.',
-    pricing: 'Typical: $199–$999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Data Quality Management',
-    summary: 'Data validation, cleansing, and quality monitoring automation.',
-    pricing: 'Typical: $299–$1,299/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Personalization Engine',
-    summary: 'Real-time content customization, product recommendations, and user experience optimization.',
-    pricing: 'Typical: $399–$1,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Intelligent Incident Response System',
-    summary: 'Automated incident detection, escalation, and resolution workflows.',
-    pricing: 'Typical: $199–$899/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Vendor Performance Tracker',
-    summary: 'Vendor analytics, performance scoring, and relationship management.',
-    pricing: 'Typical: $149–$699/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Content Creation Suite',
-    summary: 'Automated content generation, optimization, and multi-channel distribution.',
-    pricing: 'Typical: $299–$1,499/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Intelligent Business Intelligence Platform',
-    summary: 'Advanced analytics, predictive insights, and executive reporting automation.',
-    pricing: 'Typical: $399–$1,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Customer Support Ticket Router',
-    summary: 'Intelligent ticket classification, priority assignment, and agent matching.',
-    pricing: 'Typical: $199–$799/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Financial Planning Assistant',
-    summary: 'Budget forecasting, expense optimization, and financial health monitoring.',
-    pricing: 'Typical: $149–$699/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Intelligent Supply Chain Risk Monitor',
-    summary: 'Risk assessment, disruption prediction, and mitigation strategy recommendations.',
-    pricing: 'Typical: $399–$1,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Employee Engagement Platform',
-    summary: 'Sentiment analysis, engagement tracking, and retention optimization.',
-    pricing: 'Typical: $199–$899/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Quality Assurance System',
-    summary: 'Automated testing, defect detection, and quality metrics tracking.',
-    pricing: 'Typical: $299–$1,299/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Intelligent Document Security Platform',
-    summary: 'Document encryption, access control, and security monitoring.',
-    pricing: 'Typical: $199–$999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Energy Consumption Optimizer',
-    summary: 'Energy usage analysis, cost optimization, and sustainability reporting.',
-    pricing: 'Typical: $149–$699/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Customer Lifetime Value Predictor',
-    summary: 'CLV modeling, segmentation, and retention strategy optimization.',
-    pricing: 'Typical: $299–$1,299/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Intelligent Workflow Analytics Platform',
-    summary: 'Process mining, bottleneck identification, and efficiency optimization.',
-    pricing: 'Typical: $399–$1,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Customer Feedback Loop Manager',
-    summary: 'Feedback collection, analysis, and action item tracking automation.',
-    pricing: 'Typical: $199–$799/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Sales Forecasting Engine',
-    summary: 'Revenue prediction, pipeline analysis, and quota optimization.',
-    pricing: 'Typical: $299–$1,499/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Intelligent Asset Management System',
-    summary: 'Asset tracking, maintenance scheduling, and lifecycle optimization.',
-    pricing: 'Typical: $199–$999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Customer Communication Platform',
-    summary: 'Multi-channel communication, response optimization, and engagement tracking.',
-    pricing: 'Typical: $149–$699/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Business Process Optimizer',
-    summary: 'Process analysis, automation recommendations, and efficiency improvements.',
-    pricing: 'Typical: $399–$1,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Intelligent Customer Health Scoring',
-    summary: 'Health metrics, risk assessment, and proactive intervention triggers.',
-    pricing: 'Typical: $199–$899/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Data Integration Platform',
-    summary: 'Data pipeline automation, transformation, and synchronization.',
-    pricing: 'Typical: $299–$1,299/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Competitive Intelligence System',
-    summary: 'Market monitoring, competitor analysis, and strategic insights.',
-    pricing: 'Typical: $199–$999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Intelligent Customer Onboarding Optimizer',
-    summary: 'Onboarding flow analysis, conversion optimization, and success tracking.',
-    pricing: 'Typical: $149–$699/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Revenue Recognition Platform',
-    summary: 'Automated revenue tracking, compliance reporting, and financial analytics.',
-    pricing: 'Typical: $299–$1,299/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Customer Segmentation Engine',
-    summary: 'Advanced segmentation, persona development, and targeting optimization.',
-    pricing: 'Typical: $199–$799/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Intelligent Document Collaboration Platform',
-    summary: 'Real-time collaboration, version control, and workflow management.',
-    pricing: 'Typical: $199–$999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Customer Success Metrics Tracker',
-    summary: 'KPI monitoring, success scoring, and intervention automation.',
-    pricing: 'Typical: $149–$699/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Lead Nurturing Automation',
-    summary: 'Personalized nurturing sequences, engagement scoring, and conversion optimization.',
-    pricing: 'Typical: $299–$1,499/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Intelligent Business Continuity Manager',
-    summary: 'Disaster recovery planning, risk assessment, and continuity monitoring.',
-    pricing: 'Typical: $399–$1,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Customer Feedback Analytics',
-    summary: 'Sentiment analysis, trend identification, and actionable insight generation.',
-    pricing: 'Typical: $199–$899/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Content Performance Optimizer',
-    summary: 'Content analysis, performance tracking, and optimization recommendations.',
-    pricing: 'Typical: $199–$999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Intelligent Customer Journey Optimizer',
-    summary: 'Journey mapping, touchpoint analysis, and experience enhancement.',
-    pricing: 'Typical: $299–$1,299/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Vendor Relationship Manager',
-    summary: 'Vendor performance tracking, contract management, and relationship optimization.',
-    pricing: 'Typical: $199–$799/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Customer Retention Engine',
-    summary: 'Churn prediction, retention strategies, and loyalty program optimization.',
-    pricing: 'Typical: $299–$1,499/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Intelligent Business Intelligence Dashboard',
-    summary: 'Real-time analytics, predictive insights, and executive reporting.',
-    pricing: 'Typical: $399–$1,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Customer Support Analytics',
-    summary: 'Support metrics, agent performance, and customer satisfaction optimization.',
-    pricing: 'Typical: $149–$699/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Customer Acquisition Platform',
-    summary: 'Lead generation, conversion optimization, and acquisition cost reduction.',
-    pricing: 'Typical: $299–$1,299/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Intelligent Customer Data Platform',
-    summary: 'Data unification, customer profiles, and 360-degree view creation.',
-    pricing: 'Typical: $399–$1,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Customer Experience Manager',
-    summary: 'Experience monitoring, optimization, and satisfaction improvement.',
-    pricing: 'Typical: $199–$899/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Customer Insights Engine',
-    summary: 'Behavioral analysis, preference learning, and predictive customer modeling.',
-    pricing: 'Typical: $299–$1,499/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Intelligent Customer Engagement Platform',
-    summary: 'Engagement scoring, personalization, and interaction optimization.',
-    pricing: 'Typical: $199–$999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Customer Success Automation',
-    summary: 'Success tracking, intervention triggers, and outcome optimization.',
-    pricing: 'Typical: $299–$1,299/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Customer Analytics Suite',
-    summary: 'Advanced analytics, segmentation, and customer intelligence.',
-    pricing: 'Typical: $399–$1,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Intelligent Customer Relationship Optimizer',
-    summary: 'Relationship scoring, interaction optimization, and loyalty enhancement.',
-    pricing: 'Typical: $199–$799/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Smart Customer Value Maximizer',
-    summary: 'Value optimization, upselling automation, and revenue enhancement.',
-    pricing: 'Typical: $299–$1,499/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Customer Intelligence Platform',
-    summary: 'Customer profiling, behavior prediction, and strategic insights.',
-    pricing: 'Typical: $399–$1,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Intelligent Customer Optimization Engine',
-    summary: 'End-to-end customer optimization, lifecycle management, and value maximization.',
-    pricing: 'Typical: $499–$2,499/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Voice Cloning & Synthesis',
-    summary: 'Advanced voice synthesis technology for creating realistic voice clones and automated voice content.',
-    pricing: 'Typical: $499–$3,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Blockchain Smart Contract Auditor',
-    summary: 'Automated smart contract security analysis and vulnerability detection for DeFi and Web3 projects.',
-    pricing: 'Typical: $399–$2,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Carbon Footprint Tracker',
-    summary: 'Real-time carbon emission tracking and sustainability reporting for businesses and individuals.',
-    pricing: 'Typical: $199–$1,499/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Quantum Computing Simulation Platform',
-    summary: 'Cloud-based quantum computing simulation for research, optimization, and cryptography applications.',
-    pricing: 'Typical: $299–$2,499/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Medical Image Analysis',
-    summary: 'Advanced medical imaging analysis for diagnostic assistance and treatment planning.',
-    pricing: 'Typical: $999–$7,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'Metaverse Virtual Event Platform',
-    summary: 'Immersive virtual event hosting with 3D environments, avatars, and interactive experiences.',
-    pricing: 'Typical: $499–$3,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Drug Discovery Platform',
-    summary: 'Machine learning platform for pharmaceutical research, drug discovery, and molecular analysis.',
-    pricing: 'Typical: $1,999–$12,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Trading Algorithm Platform',
-    summary: 'Advanced algorithmic trading platform with machine learning models and risk management.',
-    pricing: 'Typical: $799–$5,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'},
-  {
-    name: 'AI-Powered Smart City Management',
-    summary: 'Comprehensive smart city platform for traffic, utilities, and public services optimization.',
-    pricing: 'Typical: $2,999–$19,999/month',
-    link: 'https://ziontechgroup.com/micro-saas'}
-];
-
-const aiServices: Service[] = [
-  {
-    name: 'AI Customer Support Automation',
-    summary: 'Chatbots, triage, knowledge mining and human-in-the-loop escalation.',
-    pricing: 'Typical: $2k–$8k setup, $0.02–$0.2/session',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'Predictive Analytics & Forecasting',
-    summary: 'Time-series forecasts for demand, revenue, churn and supply risk.',
-    pricing: 'Typical: $4k–$20k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'GenAI Content & SEO Automation',
-    summary: 'Editorial-quality drafts, briefs, clustering and internal linking suggestions.',
-    pricing: 'Typical: $1k–$6k/month',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'Computer Vision & Image Analysis',
-    summary: 'Object detection, facial recognition, quality control, and medical imaging analysis.',
-    pricing: 'Typical: $5k–$25k setup, $0.10–$2.00/image',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'Natural Language Processing Suite',
-    summary: 'Sentiment analysis, entity extraction, text classification, and language translation.',
-    pricing: 'Typical: $3k–$15k setup, $0.01–$0.05/request',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Fraud Detection',
-    summary: 'Real-time fraud scoring, anomaly detection, and risk assessment for financial transactions.',
-    pricing: 'Typical: $8k–$40k setup, $0.05–$0.50/transaction',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'Recommendation Engine Platform',
-    summary: 'Personalized product recommendations, content suggestions, and user behavior analysis.',
-    pricing: 'Typical: $6k–$30k setup, $0.02–$0.10/recommendation',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'Voice AI & Speech Processing',
-    summary: 'Speech-to-text, text-to-speech, voice commands, and conversational AI interfaces.',
-    pricing: 'Typical: $4k–$20k setup, $0.01–$0.10/minute',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI Data Pipeline Automation',
-    summary: 'Automated data cleaning, feature engineering, model training, and deployment pipelines.',
-    pricing: 'Typical: $10k–$50k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'Intelligent Document Analysis',
-    summary: 'Contract analysis, legal document review, compliance checking, and knowledge extraction.',
-    pricing: 'Typical: $5k–$25k setup, $0.50–$5.00/document',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Supply Chain Optimization',
-    summary: 'Demand forecasting, route optimization, inventory management, and supplier risk assessment.',
-    pricing: 'Typical: $15k–$75k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'Conversational AI Platform',
-    summary: 'Multi-channel chatbots, voice assistants, and intelligent virtual agents.',
-    pricing: 'Typical: $8k–$35k setup, $0.05–$0.25/conversation',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI Model Monitoring & MLOps',
-    summary: 'Model performance tracking, drift detection, automated retraining, and deployment management.',
-    pricing: 'Typical: $6k–$25k setup, $500–$2k/month monitoring',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'Intelligent Process Automation',
-    summary: 'RPA with AI, workflow automation, document processing, and business process optimization.',
-    pricing: 'Typical: $10k–$50k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Market Research',
-    summary: 'Competitive intelligence, trend analysis, consumer sentiment, and market forecasting.',
-    pricing: 'Typical: $5k–$20k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'Edge AI & IoT Intelligence',
-    summary: 'Real-time inference on edge devices, IoT data processing, and distributed AI systems.',
-    pricing: 'Typical: $8k–$40k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Cybersecurity Threat Detection',
-    summary: 'Advanced threat hunting, behavioral analysis, and automated incident response.',
-    pricing: 'Typical: $10k–$50k setup, $2k–$8k/month monitoring',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'Intelligent Process Mining & Optimization',
-    summary: 'Business process discovery, bottleneck identification, and workflow optimization.',
-    pricing: 'Typical: $15k–$75k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Content Moderation Platform',
-    summary: 'Automated content filtering, toxicity detection, and community management.',
-    pricing: 'Typical: $5k–$25k setup, $0.01–$0.05/content review',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'Smart Manufacturing Quality Control',
-    summary: 'Computer vision for defect detection, predictive maintenance, and quality optimization.',
-    pricing: 'Typical: $20k–$100k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Healthcare Diagnostics',
-    summary: 'Medical image analysis, symptom prediction, and treatment recommendation systems.',
-    pricing: 'Typical: $25k–$150k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'Intelligent Document Intelligence Platform',
-    summary: 'Advanced document understanding, information extraction, and knowledge graph creation.',
-    pricing: 'Typical: $8k–$40k setup, $0.10–$1.00/document',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Risk Assessment Engine',
-    summary: 'Credit scoring, insurance underwriting, and financial risk modeling.',
-    pricing: 'Typical: $12k–$60k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'Smart Energy Grid Optimization',
-    summary: 'Demand forecasting, load balancing, and renewable energy integration.',
-    pricing: 'Typical: $30k–$150k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Personalization Engine',
-    summary: 'Real-time user profiling, content recommendation, and experience optimization.',
-    pricing: 'Typical: $6k–$30k setup, $0.02–$0.10/interaction',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'Intelligent Automation Orchestration',
-    summary: 'RPA with AI decision-making, workflow automation, and process intelligence.',
-    pricing: 'Typical: $15k–$75k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Environmental Monitoring',
-    summary: 'Climate data analysis, pollution detection, and environmental impact assessment.',
-    pricing: 'Typical: $10k–$50k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'Smart Transportation Optimization',
-    summary: 'Route optimization, traffic prediction, and fleet management intelligence.',
-    pricing: 'Typical: $20k–$100k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Agricultural Intelligence',
-    summary: 'Crop monitoring, yield prediction, and precision farming optimization.',
-    pricing: 'Typical: $15k–$75k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'Intelligent Customer Journey Analytics',
-    summary: 'Behavioral analysis, journey mapping, and conversion optimization.',
-    pricing: 'Typical: $8k–$35k setup, $1k–$5k/month analytics',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Real Estate Valuation',
-    summary: 'Property assessment, market analysis, and investment opportunity identification.',
-    pricing: 'Typical: $10k–$50k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'Smart Retail Analytics Platform',
-    summary: 'Customer behavior analysis, inventory optimization, and sales forecasting.',
-    pricing: 'Typical: $12k–$60k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Educational Assessment',
-    summary: 'Learning analytics, personalized education, and performance prediction.',
-    pricing: 'Typical: $8k–$40k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'Intelligent Financial Trading Algorithms',
-    summary: 'Algorithmic trading, market prediction, and portfolio optimization.',
-    pricing: 'Typical: $25k–$150k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Smart City Solutions',
-    summary: 'Urban planning optimization, traffic management, and resource allocation.',
-    pricing: 'Typical: $50k–$300k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Quantum Computing Solutions',
-    summary: 'Quantum algorithms for optimization, cryptography, and complex problem solving.',
-    pricing: 'Typical: $50k–$500k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'Advanced Neural Network Architectures',
-    summary: 'Custom deep learning models, transformer networks, and specialized AI architectures.',
-    pricing: 'Typical: $25k–$150k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Drug Discovery Platform',
-    summary: 'Molecular analysis, drug interaction prediction, and pharmaceutical research automation.',
-    pricing: 'Typical: $100k–$1M project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'Intelligent Autonomous Systems',
-    summary: 'Self-driving algorithms, robotic process automation, and autonomous decision making.',
-    pricing: 'Typical: $75k–$500k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Financial Trading Algorithms',
-    summary: 'Algorithmic trading, market prediction, and automated portfolio management.',
-    pricing: 'Typical: $50k–$300k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'Advanced Natural Language Generation',
-    summary: 'GPT-style content creation, automated reporting, and intelligent document generation.',
-    pricing: 'Typical: $15k–$75k setup, $0.05–$0.50/page',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Scientific Research Assistant',
-    summary: 'Literature analysis, hypothesis generation, and research automation.',
-    pricing: 'Typical: $30k–$150k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'Intelligent Multi-Modal AI Systems',
-    summary: 'Vision-language models, audio-visual processing, and cross-modal understanding.',
-    pricing: 'Typical: $40k–$200k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Space Technology Solutions',
-    summary: 'Satellite data analysis, space mission optimization, and astronomical research.',
-    pricing: 'Typical: $100k–$1M project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'Advanced Reinforcement Learning Systems',
-    summary: 'Game AI, optimization algorithms, and adaptive learning systems.',
-    pricing: 'Typical: $35k–$175k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Metaverse Development',
-    summary: 'Virtual world creation, avatar intelligence, and immersive experience optimization.',
-    pricing: 'Typical: $75k–$500k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'Intelligent Blockchain Analytics',
-    summary: 'Cryptocurrency analysis, smart contract optimization, and DeFi intelligence.',
-    pricing: 'Typical: $25k–$125k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Climate Change Solutions',
-    summary: 'Climate modeling, carbon footprint optimization, and environmental impact prediction.',
-    pricing: 'Typical: $50k–$250k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'Advanced Computer Vision for Robotics',
-    summary: 'Robot vision systems, object manipulation, and autonomous navigation.',
-    pricing: 'Typical: $60k–$300k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Mental Health Analytics',
-    summary: 'Emotional analysis, mental health prediction, and therapeutic intervention systems.',
-    pricing: 'Typical: $40k–$200k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'Intelligent Energy Storage Optimization',
-    summary: 'Battery management, grid storage optimization, and renewable energy integration.',
-    pricing: 'Typical: $35k–$175k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Smart City Infrastructure',
-    summary: 'Urban planning optimization, traffic management, and city service automation.',
-    pricing: 'Typical: $100k–$1M project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'Advanced AI Ethics & Bias Detection',
-    summary: 'Algorithmic fairness, bias detection, and ethical AI implementation.',
-    pricing: 'Typical: $20k–$100k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Cybersecurity Intelligence',
-    summary: 'Advanced threat detection, zero-day vulnerability analysis, and security automation.',
-    pricing: 'Typical: $50k–$250k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'Intelligent Digital Twin Technology',
-    summary: 'Virtual replicas, predictive maintenance, and real-time system optimization.',
-    pricing: 'Typical: $75k–$500k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Augmented Reality Solutions',
-    summary: 'AR object recognition, spatial computing, and immersive experience creation.',
-    pricing: 'Typical: $40k–$200k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'Advanced AI Model Compression',
-    summary: 'Model optimization, edge deployment, and efficient AI inference.',
-    pricing: 'Typical: $25k–$125k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Supply Chain Intelligence',
-    summary: 'End-to-end visibility, disruption prediction, and optimization across global networks.',
-    pricing: 'Typical: $60k–$300k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'Intelligent AI Model Governance',
-    summary: 'Model lifecycle management, compliance monitoring, and AI governance frameworks.',
-    pricing: 'Typical: $30k–$150k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Personalized Medicine',
-    summary: 'Genomic analysis, treatment optimization, and precision healthcare delivery.',
-    pricing: 'Typical: $100k–$1M project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'Advanced AI-Powered Education Systems',
-    summary: 'Personalized learning, adaptive assessment, and intelligent tutoring systems.',
-    pricing: 'Typical: $40k–$200k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Smart Manufacturing 4.0',
-    summary: 'Industrial IoT intelligence, predictive maintenance, and autonomous production.',
-    pricing: 'Typical: $75k–$500k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'Intelligent AI-Powered Legal Tech',
-    summary: 'Contract analysis, legal research automation, and case outcome prediction.',
-    pricing: 'Typical: $35k–$175k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Advanced Materials Discovery',
-    summary: 'Material property prediction, composition optimization, and novel material design.',
-    pricing: 'Typical: $50k–$250k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'Intelligent AI-Powered Sports Analytics',
-    summary: 'Performance optimization, injury prediction, and strategic decision support.',
-    pricing: 'Typical: $25k–$125k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Advanced Robotics',
-    summary: 'Humanoid robots, collaborative automation, and intelligent robotic systems.',
-    pricing: 'Typical: $100k–$1M project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'Intelligent AI-Powered Gaming Systems',
-    summary: 'Procedural content generation, intelligent NPCs, and adaptive gameplay.',
-    pricing: 'Typical: $40k–$200k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Advanced Biometrics',
-    summary: 'Multi-modal authentication, behavioral analysis, and identity verification.',
-    pricing: 'Typical: $30k–$150k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'Intelligent AI-Powered Logistics',
-    summary: 'Route optimization, warehouse automation, and last-mile delivery intelligence.',
-    pricing: 'Typical: $50k–$250k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Advanced Simulation Systems',
-    summary: 'Physics simulation, virtual testing, and scenario modeling.',
-    pricing: 'Typical: $60k–$300k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'Intelligent AI-Powered Content Creation',
-    summary: 'Multi-modal content generation, creative AI, and automated media production.',
-    pricing: 'Typical: $35k–$175k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Advanced Data Science',
-    summary: 'Automated feature engineering, model selection, and advanced analytics.',
-    pricing: 'Typical: $40k–$200k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'Intelligent AI-Powered Customer Intelligence',
-    summary: 'Advanced customer profiling, behavior prediction, and relationship optimization.',
-    pricing: 'Typical: $45k–$225k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Advanced Process Mining',
-    summary: 'Business process discovery, optimization, and intelligent automation.',
-    pricing: 'Typical: $50k–$250k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'Intelligent AI-Powered Decision Support',
-    summary: 'Strategic decision making, scenario analysis, and intelligent recommendations.',
-    pricing: 'Typical: $35k–$175k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Advanced Predictive Analytics',
-    summary: 'Multi-variate forecasting, anomaly detection, and predictive insights.',
-    pricing: 'Typical: $40k–$200k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'Intelligent AI-Powered Knowledge Management',
-    summary: 'Automated knowledge extraction, semantic search, and intelligent information retrieval.',
-    pricing: 'Typical: $30k–$150k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Advanced Optimization',
-    summary: 'Multi-objective optimization, constraint solving, and intelligent resource allocation.',
-    pricing: 'Typical: $45k–$225k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'Intelligent AI-Powered Innovation Systems',
-    summary: 'Idea generation, innovation management, and creative problem solving.',
-    pricing: 'Typical: $35k–$175k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Advanced Human-Computer Interaction',
-    summary: 'Natural language interfaces, gesture recognition, and intelligent user experience.',
-    pricing: 'Typical: $40k–$200k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'Intelligent AI-Powered Quality Assurance',
-    summary: 'Automated testing, defect prediction, and quality optimization.',
-    pricing: 'Typical: $30k–$150k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Advanced Security Systems',
-    summary: 'Threat intelligence, security automation, and intelligent incident response.',
-    pricing: 'Typical: $50k–$250k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'Intelligent AI-Powered Performance Optimization',
-    summary: 'System optimization, resource management, and intelligent scaling.',
-    pricing: 'Typical: $35k–$175k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Advanced Integration Systems',
-    summary: 'API intelligence, data integration, and intelligent system connectivity.',
-    pricing: 'Typical: $40k–$200k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'Intelligent AI-Powered Monitoring Systems',
-    summary: 'Real-time monitoring, anomaly detection, and intelligent alerting.',
-    pricing: 'Typical: $30k–$150k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Advanced Analytics Platform',
-    summary: 'Multi-dimensional analysis, pattern recognition, and intelligent insights.',
-    pricing: 'Typical: $45k–$225k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'Intelligent AI-Powered Automation Suite',
-    summary: 'End-to-end automation, intelligent workflows, and process optimization.',
-    pricing: 'Typical: $50k–$250k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Advanced Intelligence Platform',
-    summary: 'Comprehensive AI solutions, intelligent decision making, and strategic insights.',
-    pricing: 'Typical: $75k–$500k project',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'Generative AI Content Studio',
-    summary: 'Advanced AI-powered content creation platform for marketing, social media, and brand communications.',
-    pricing: 'Typical: $2,000–$12,000/month',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Zero Trust Security',
-    summary: 'Advanced AI-driven security platform implementing zero trust architecture with behavioral analysis.',
-    pricing: 'Typical: $5,000–$25,000 setup',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Satellite Image Analysis',
-    summary: 'Advanced satellite imagery analysis for agriculture, urban planning, and environmental monitoring.',
-    pricing: 'Typical: $3,000–$15,000 setup',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Supply Chain Optimization',
-    summary: 'Intelligent supply chain management with predictive analytics and automated optimization.',
-    pricing: 'Typical: $4,000–$20,000 setup',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Legal Document Analysis',
-    summary: 'Advanced legal document processing with contract analysis, compliance checking, and risk assessment.',
-    pricing: 'Typical: $2,000–$10,000/month',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Agricultural Intelligence',
-    summary: 'Comprehensive agricultural AI platform for crop monitoring, yield optimization, and farm management.',
-    pricing: 'Typical: $1,000–$8,000/month',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Market Intelligence Platform',
-    summary: 'Advanced market research and competitive intelligence with real-time analysis and insights.',
-    pricing: 'Typical: $2,000–$15,000/month',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Learning Management System',
-    summary: 'Intelligent educational platform with personalized learning paths and automated assessment.',
-    pricing: 'Typical: $1,500–$10,000/month',
-    link: 'https://ziontechgroup.com/ai-services'},
-  {
-    name: 'AI-Powered Quality Assurance Platform',
-    summary: 'Comprehensive quality control system with automated testing and defect detection.',
-    pricing: 'Typical: $2,000–$12,000/month',
-    link: 'https://ziontechgroup.com/ai-services'}
-];
-
-const itServices: Service[] = [
-  {
-    name: 'Cloud DevOps & SRE',
-    summary: 'CI/CD, IaC, observability, autoscaling and cost optimization.',
-    pricing: 'Typical: $120–$220/hour or $6k–$30k/project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Cybersecurity Hardening & SOC',
-    summary: 'Zero Trust, EDR, CSP headers, security reviews and SOC readiness.',
-    pricing: 'Typical: $5k–$40k project, $2k–$8k/month managed',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Cloud Migration & Modernization',
-    summary: 'Lift/shift, containerization, serverless and data platform upgrades.',
-    pricing: 'Typical: $10k–$150k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Multi-Cloud Architecture Design',
-    summary: 'Hybrid cloud strategies, disaster recovery, and multi-region deployment architectures.',
-    pricing: 'Typical: $15k–$75k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Kubernetes & Container Orchestration',
-    summary: 'EKS/GKE/AKS setup, microservices architecture, and container security hardening.',
-    pricing: 'Typical: $8k–$40k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Database Optimization & Migration',
-    summary: 'Performance tuning, scaling strategies, and cloud database migration services.',
-    pricing: 'Typical: $5k–$25k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'API Gateway & Microservices',
-    summary: 'API design, rate limiting, authentication, and microservices architecture implementation.',
-    pricing: 'Typical: $10k–$50k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Infrastructure as Code (IaC)',
-    summary: 'Terraform, CloudFormation, and Pulumi implementations for automated infrastructure management.',
-    pricing: 'Typical: $6k–$30k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Monitoring & Observability Platform',
-    summary: 'ELK stack, Prometheus/Grafana, APM tools, and comprehensive logging solutions.',
-    pricing: 'Typical: $8k–$35k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Backup & Disaster Recovery',
-    summary: 'Automated backup strategies, cross-region replication, and disaster recovery testing.',
-    pricing: 'Typical: $5k–$20k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Network Security & VPN Solutions',
-    summary: 'VPN setup, network segmentation, firewall configuration, and secure remote access.',
-    pricing: 'Typical: $3k–$15k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Compliance & Audit Services',
-    summary: 'SOC 2, HIPAA, GDPR compliance assessments, and security audit preparation.',
-    pricing: 'Typical: $10k–$50k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Performance Testing & Optimization',
-    summary: 'Load testing, stress testing, performance profiling, and optimization recommendations.',
-    pricing: 'Typical: $5k–$25k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Mobile App Development & DevOps',
-    summary: 'iOS/Android app development, CI/CD for mobile, and app store deployment automation.',
-    pricing: 'Typical: $15k–$100k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Blockchain & Web3 Integration',
-    summary: 'Smart contract development, DeFi integration, and blockchain infrastructure setup.',
-    pricing: 'Typical: $20k–$100k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Data Engineering & Analytics',
-    summary: 'Data pipeline development, ETL processes, data warehousing, and analytics platform setup.',
-    pricing: 'Typical: $12k–$60k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Enterprise Application Integration',
-    summary: 'API integration, middleware development, and legacy system modernization.',
-    pricing: 'Typical: $15k–$75k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Advanced Threat Intelligence Platform',
-    summary: 'SIEM implementation, threat hunting, and security orchestration automation.',
-    pricing: 'Typical: $20k–$100k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'High-Performance Computing Solutions',
-    summary: 'GPU clusters, parallel processing, and scientific computing infrastructure.',
-    pricing: 'Typical: $25k–$150k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'IoT Platform & Device Management',
-    summary: 'IoT device connectivity, data collection, and edge computing solutions.',
-    pricing: 'Typical: $18k–$90k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Advanced Analytics & Business Intelligence',
-    summary: 'Data visualization, predictive analytics, and executive dashboards.',
-    pricing: 'Typical: $10k–$50k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Enterprise Content Management System',
-    summary: 'Document management, workflow automation, and digital asset management.',
-    pricing: 'Typical: $12k–$60k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Advanced Network Architecture Design',
-    summary: 'SD-WAN, network segmentation, and zero-trust network implementation.',
-    pricing: 'Typical: $15k–$75k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Enterprise Resource Planning (ERP) Implementation',
-    summary: 'ERP system selection, customization, and integration with existing systems.',
-    pricing: 'Typical: $30k–$200k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Advanced Identity & Access Management',
-    summary: 'SSO implementation, multi-factor authentication, and privileged access management.',
-    pricing: 'Typical: $8k–$40k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Enterprise Service Bus (ESB) Architecture',
-    summary: 'Message queuing, service orchestration, and enterprise integration patterns.',
-    pricing: 'Typical: $20k–$100k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Advanced Database Administration',
-    summary: 'Database optimization, clustering, replication, and disaster recovery.',
-    pricing: 'Typical: $10k–$50k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Enterprise Workflow Automation',
-    summary: 'Business process automation, approval workflows, and task management systems.',
-    pricing: 'Typical: $12k–$60k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Advanced Cloud Security Architecture',
-    summary: 'Cloud security posture management, compliance automation, and threat protection.',
-    pricing: 'Typical: $15k–$75k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Enterprise API Management Platform',
-    summary: 'API gateway, developer portal, and API lifecycle management.',
-    pricing: 'Typical: $10k–$50k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Advanced Monitoring & Alerting Systems',
-    summary: 'Application performance monitoring, infrastructure monitoring, and alerting automation.',
-    pricing: 'Typical: $8k–$40k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Enterprise Backup & Archival Solutions',
-    summary: 'Automated backup strategies, data archival, and long-term retention policies.',
-    pricing: 'Typical: $6k–$30k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Advanced Load Balancing & Traffic Management',
-    summary: 'Global load balancing, traffic routing, and application delivery optimization.',
-    pricing: 'Typical: $8k–$40k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Enterprise Messaging & Communication Platform',
-    summary: 'Unified communications, video conferencing, and collaboration tools integration.',
-    pricing: 'Typical: $12k–$60k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Advanced Virtualization & Containerization',
-    summary: 'VMware/vSphere, Docker, Kubernetes, and hybrid cloud container orchestration.',
-    pricing: 'Typical: $15k–$75k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Enterprise Digital Transformation Consulting',
-    summary: 'Technology strategy, digital roadmap, and organizational change management.',
-    pricing: 'Typical: $25k–$150k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Quantum Computing Infrastructure Setup',
-    summary: 'Quantum hardware integration, quantum software development, and quantum algorithm implementation.',
-    pricing: 'Typical: $100k–$1M project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Edge Computing & IoT Platform Development',
-    summary: 'Edge infrastructure, IoT device management, and real-time data processing systems.',
-    pricing: 'Typical: $50k–$300k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Advanced Blockchain & Web3 Solutions',
-    summary: 'Blockchain infrastructure, smart contract development, and DeFi platform creation.',
-    pricing: 'Typical: $75k–$500k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: '5G Network Infrastructure & Optimization',
-    summary: '5G deployment, network slicing, and mobile edge computing solutions.',
-    pricing: 'Typical: $100k–$1M project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Advanced Cybersecurity & Zero Trust Architecture',
-    summary: 'Zero trust implementation, advanced threat protection, and security orchestration.',
-    pricing: 'Typical: $75k–$500k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'AI/ML Infrastructure & MLOps Platform',
-    summary: 'ML pipeline development, model deployment, and AI infrastructure management.',
-    pricing: 'Typical: $60k–$400k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Advanced Data Engineering & Analytics Platform',
-    summary: 'Data lake architecture, real-time analytics, and advanced data processing systems.',
-    pricing: 'Typical: $50k–$300k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'High-Performance Computing (HPC) Solutions',
-    summary: 'HPC cluster setup, parallel processing optimization, and scientific computing infrastructure.',
-    pricing: 'Typical: $100k–$1M project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Advanced Microservices & API Architecture',
-    summary: 'Microservices design, API gateway implementation, and service mesh architecture.',
-    pricing: 'Typical: $40k–$250k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Enterprise Integration & Middleware Solutions',
-    summary: 'ESB implementation, API management, and enterprise service integration.',
-    pricing: 'Typical: $60k–$400k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Advanced Database & Data Management',
-    summary: 'Database optimization, data warehousing, and advanced data management solutions.',
-    pricing: 'Typical: $50k–$300k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Disaster Recovery & Business Continuity',
-    summary: 'DR planning, backup systems, and business continuity infrastructure.',
-    pricing: 'Typical: $75k–$500k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Advanced Network Security & Monitoring',
-    summary: 'Network security architecture, intrusion detection, and security monitoring systems.',
-    pricing: 'Typical: $60k–$400k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Enterprise Application Development',
-    summary: 'Custom enterprise applications, legacy system modernization, and business process automation.',
-    pricing: 'Typical: $100k–$1M project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Advanced Cloud Architecture & Migration',
-    summary: 'Multi-cloud strategy, cloud-native architecture, and advanced migration services.',
-    pricing: 'Typical: $75k–$500k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'IT Infrastructure Automation & Orchestration',
-    summary: 'Infrastructure as Code, automated provisioning, and IT process automation.',
-    pricing: 'Typical: $50k–$300k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Advanced Monitoring & Observability Platform',
-    summary: 'APM implementation, log management, and comprehensive system observability.',
-    pricing: 'Typical: $40k–$250k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Enterprise Identity & Access Management',
-    summary: 'IAM implementation, SSO solutions, and advanced identity management systems.',
-    pricing: 'Typical: $60k–$400k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Advanced Backup & Data Protection',
-    summary: 'Backup strategy, data protection, and advanced recovery solutions.',
-    pricing: 'Typical: $50k–$300k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'IT Service Management & ITSM Platform',
-    summary: 'ITSM implementation, service desk automation, and IT process optimization.',
-    pricing: 'Typical: $40k–$250k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Advanced Network Architecture & Design',
-    summary: 'Network design, optimization, and advanced networking solutions.',
-    pricing: 'Typical: $60k–$400k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Enterprise Content Management Systems',
-    summary: 'ECM implementation, document management, and content workflow automation.',
-    pricing: 'Typical: $50k–$300k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Advanced Virtualization & Hyperconverged Infrastructure',
-    summary: 'HCI implementation, advanced virtualization, and infrastructure optimization.',
-    pricing: 'Typical: $75k–$500k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'IT Compliance & Governance Solutions',
-    summary: 'Compliance management, IT governance, and regulatory adherence systems.',
-    pricing: 'Typical: $40k–$250k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Advanced Storage & Data Management',
-    summary: 'Storage architecture, data lifecycle management, and advanced storage solutions.',
-    pricing: 'Typical: $60k–$400k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Enterprise Mobile & Wireless Solutions',
-    summary: 'Mobile device management, wireless infrastructure, and mobile application development.',
-    pricing: 'Typical: $50k–$300k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Advanced IT Consulting & Strategy',
-    summary: 'IT strategy development, technology assessment, and digital transformation planning.',
-    pricing: 'Typical: $75k–$500k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Enterprise Security Operations Center (SOC)',
-    summary: 'SOC setup, security monitoring, and incident response automation.',
-    pricing: 'Typical: $100k–$1M project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Advanced IT Infrastructure Management',
-    summary: 'Infrastructure optimization, capacity planning, and performance management.',
-    pricing: 'Typical: $60k–$400k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Enterprise Application Integration',
-    summary: 'EAI implementation, system integration, and business process automation.',
-    pricing: 'Typical: $75k–$500k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Advanced IT Support & Managed Services',
-    summary: '24/7 IT support, managed services, and comprehensive IT operations management.',
-    pricing: 'Typical: $50k–$300k/year',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Enterprise Data Center Design & Implementation',
-    summary: 'Data center planning, design, and implementation services.',
-    pricing: 'Typical: $100k–$1M project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Advanced IT Training & Knowledge Transfer',
-    summary: 'IT training programs, knowledge transfer, and skill development services.',
-    pricing: 'Typical: $25k–$150k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Enterprise IT Audit & Assessment',
-    summary: 'IT audit services, security assessment, and compliance evaluation.',
-    pricing: 'Typical: $40k–$250k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Advanced IT Project Management',
-    summary: 'IT project management, program management, and delivery optimization.',
-    pricing: 'Typical: $50k–$300k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Enterprise IT Vendor Management',
-    summary: 'Vendor selection, contract management, and supplier relationship optimization.',
-    pricing: 'Typical: $30k–$200k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Advanced IT Cost Optimization',
-    summary: 'IT cost analysis, optimization strategies, and budget management.',
-    pricing: 'Typical: $40k–$250k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Enterprise IT Risk Management',
-    summary: 'IT risk assessment, mitigation strategies, and risk management frameworks.',
-    pricing: 'Typical: $50k–$300k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Advanced IT Performance Optimization',
-    summary: 'Performance tuning, optimization, and system efficiency improvement.',
-    pricing: 'Typical: $40k–$250k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Enterprise IT Innovation & Emerging Technologies',
-    summary: 'Technology innovation, emerging tech evaluation, and innovation strategy.',
-    pricing: 'Typical: $60k–$400k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Advanced IT Security & Compliance',
-    summary: 'Security implementation, compliance management, and regulatory adherence.',
-    pricing: 'Typical: $75k–$500k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Enterprise IT Operations & Maintenance',
-    summary: 'IT operations management, maintenance services, and operational optimization.',
-    pricing: 'Typical: $50k–$300k/year',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Advanced IT Architecture & Design',
-    summary: 'IT architecture design, system design, and technical architecture planning.',
-    pricing: 'Typical: $60k–$400k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Enterprise IT Transformation & Modernization',
-    summary: 'IT transformation, modernization, and digital evolution services.',
-    pricing: 'Typical: $100k–$1M project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Advanced IT Analytics & Business Intelligence',
-    summary: 'IT analytics, business intelligence, and data-driven IT decision making.',
-    pricing: 'Typical: $50k–$300k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Enterprise IT Quality Assurance & Testing',
-    summary: 'QA services, testing automation, and quality management systems.',
-    pricing: 'Typical: $40k–$250k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Advanced IT Documentation & Knowledge Management',
-    summary: 'Technical documentation, knowledge management, and information architecture.',
-    pricing: 'Typical: $30k–$200k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Enterprise IT Change Management',
-    summary: 'Change management, organizational change, and IT transformation support.',
-    pricing: 'Typical: $40k–$250k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Advanced IT Capacity Planning & Management',
-    summary: 'Capacity planning, resource management, and scalability planning.',
-    pricing: 'Typical: $35k–$225k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Enterprise IT Service Level Management',
-    summary: 'SLA management, service level optimization, and performance management.',
-    pricing: 'Typical: $30k–$200k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Advanced IT Incident & Problem Management',
-    summary: 'Incident management, problem resolution, and IT service restoration.',
-    pricing: 'Typical: $40k–$250k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Enterprise IT Configuration Management',
-    summary: 'Configuration management, asset management, and IT inventory optimization.',
-    pricing: 'Typical: $35k–$225k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Advanced IT Release & Deployment Management',
-    summary: 'Release management, deployment automation, and change deployment.',
-    pricing: 'Typical: $40k–$250k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Enterprise IT Financial Management',
-    summary: 'IT financial management, cost allocation, and budget optimization.',
-    pricing: 'Typical: $35k–$225k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Advanced IT Supplier & Vendor Management',
-    summary: 'Supplier management, vendor optimization, and procurement services.',
-    pricing: 'Typical: $30k–$200k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Enterprise IT Relationship Management',
-    summary: 'Stakeholder management, relationship optimization, and communication management.',
-    pricing: 'Typical: $25k–$150k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Advanced IT Strategic Planning',
-    summary: 'IT strategy development, strategic planning, and technology roadmap creation.',
-    pricing: 'Typical: $50k–$300k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Enterprise IT Governance & Compliance',
-    summary: 'IT governance, compliance management, and regulatory adherence.',
-    pricing: 'Typical: $40k–$250k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Advanced IT Performance & Metrics Management',
-    summary: 'Performance management, metrics optimization, and KPI management.',
-    pricing: 'Typical: $35k–$225k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Enterprise IT Innovation & Technology Adoption',
-    summary: 'Technology adoption, innovation management, and emerging technology integration.',
-    pricing: 'Typical: $45k–$275k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Advanced IT Business Continuity & Disaster Recovery',
-    summary: 'BC/DR planning, business continuity, and disaster recovery optimization.',
-    pricing: 'Typical: $60k–$400k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Enterprise IT End-to-End Service Management',
-    summary: 'Comprehensive IT service management, end-to-end optimization, and service excellence.',
-    pricing: 'Typical: $75k–$500k project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Edge Computing Infrastructure',
-    summary: 'Distributed edge computing solutions for low-latency applications and IoT device management.',
-    pricing: 'Typical: $200–$400/hour',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Zero Trust Network Architecture',
-    summary: 'Comprehensive zero trust security implementation with micro-segmentation and continuous verification.',
-    pricing: 'Typical: $8,000–$50,000/project',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Multi-Cloud Orchestration Platform',
-    summary: 'Unified management platform for multi-cloud environments with cost optimization and governance.',
-    pricing: 'Typical: $150–$300/hour',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Data Mesh Architecture Implementation',
-    summary: 'Modern data architecture with decentralized data ownership and self-serve data infrastructure.',
-    pricing: 'Typical: $180–$350/hour',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Platform Engineering & Internal Developer Platform',
-    summary: 'Self-service platform for developers with automated CI/CD, infrastructure, and tooling.',
-    pricing: 'Typical: $200–$400/hour',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: '5G Network Infrastructure & Private Networks',
-    summary: 'Private 5G network deployment and management for enterprise applications and IoT.',
-    pricing: 'Typical: $250–$500/hour',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Quantum-Safe Cryptography Implementation',
-    summary: 'Post-quantum cryptography solutions to protect against future quantum computing threats.',
-    pricing: 'Typical: $300–$600/hour',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'AI Infrastructure & MLOps Platform',
-    summary: 'Complete AI/ML infrastructure with model training, deployment, and monitoring capabilities.',
-    pricing: 'Typical: $180–$350/hour',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Web3 & Blockchain Infrastructure',
-    summary: 'Blockchain infrastructure setup and management for DeFi, NFTs, and Web3 applications.',
-    pricing: 'Typical: $200–$450/hour',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'High-Performance Computing (HPC) Infrastructure',
-    summary: 'Specialized HPC infrastructure for scientific computing, simulations, and data-intensive workloads.',
-    pricing: 'Typical: $250–$500/hour',
-    link: 'https://ziontechgroup.com/it-services'},
-  {
-    name: 'Digital Transformation Consulting',
-    summary: 'Comprehensive digital transformation strategy and implementation for enterprise modernization.',
-    pricing: 'Typical: $200–$400/hour',
-    link: 'https://ziontechgroup.com/it-services'}
-];
+import Layout from '../components/Layout';
+import {
+  ArrowRight,
+  Brain,
+  Cloud,
+  Shield,
+  Zap,
+  Database,
+  Server,
+  Lock,
+  BarChart3,
+  Users,
+  Globe,
+  Code,
+  CheckCircle,
+  Star,
+  TrendingUp,
+  Clock,
+  Award,
+  Mail,
+  Calendar,
+  Settings,
+  Eye,
+  MessageSquare,
+  Palette,
+  Bot,
+  Cpu,
+  Link2,
+  Wifi,
+  HardDrive,
+  Monitor,
+  Activity,
+  Terminal,
+  CreditCard,
+  Smartphone
+} from 'lucide-react';
+import PageTransition from '../src/components/PageTransition';
 
 export default function Services() {
-  const Section = ({ title, items, color }: { title: string; items: Service[]; color: string }) => (
-    <section style={{ maxWidth: 1400, margin: '0 auto', padding: '32px 20px', }}>
-      <div style={{ 
-        display: 'flex', alignItems: 'center', gap: 12, marginBottom: 24,
-        paddingBottom: 12, borderBottom: `2px solid ${color}20`
-      }}>
-        <div style={{ 
-          width: 4, height: 32, background: color, borderRadius: 2 
-        }}></div>
-        <h2 style={{ 
-          fontSize: 28, fontWeight: 800, margin: 0,
-          background: `linear-gradient(135deg, ${color}, ${color}80)`,
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          backgroundClip: 'text'
-        }}>{title}</h2>
-        <div style={{ 
-          background: `${color}20`, color: color, padding: '4px 12px', 
-          borderRadius: 20, fontSize: 14, fontWeight: 600 
-        }}>
-          {items.length} Services
-        </div>
-      </div>
-      <div style={{ 
-        display: 'grid', 
-        gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', 
-        gap: 20 
-      }}>
-        {items.map((s) => (
-          <a key={s.name} href={s.link} style={{
-            border: '1px solid rgba(0,0,0,0.08)', borderRadius: 16, padding: 24,
-            background: 'white', textDecoration: 'none', color: '#0b1220',
-            transition: 'all 0.3s ease', boxShadow: '0 2px 8px rgba(0,0,0,0.04)',
-            ':hover': {
-              transform: 'translateY(-4px)',
-              boxShadow: '0 8px 24px rgba(0,0,0,0.12)',
-              borderColor: `${color}40`
-            }
-          } as React.CSSProperties}>
-            <div style={{ 
-              fontWeight: 700, marginBottom: 8, fontSize: 16,
-              lineHeight: 1.4, color: '#1e293b'
-            }}>{s.name}</div>
-            <div style={{ 
-              opacity: 0.8, fontSize: 14, marginBottom: 12, 
-              lineHeight: 1.5, color: '#64748b'
-            }}>{s.summary}</div>
-            <div style={{ 
-              fontSize: 13, color: color, fontWeight: 600,
-              background: `${color}10`, padding: '6px 12px',
-              borderRadius: 8, display: 'inline-block'
-            }}>{s.pricing}</div>
-          </a>
-        ))}
-      </div>
-    </section>
-  );
+	const title = 'Services — Zion Tech Group';
+	const description = 'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.';
 
-  return (
-    <main style={{ 
-      background: 'linear-gradient(135deg, #f8fafc, #f1f5f9)', 
-      minHeight: 'calc(100vh - 120px)' 
-    }}>
-      {/* Header */}
-      <section style={{ 
-        background: 'linear-gradient(135deg, #0b1220, #1e293b)', 
-        color: 'white', padding: '60px 20px', textAlign: 'center' 
-      }}>
-        <div style={{ maxWidth: 800, margin: '0 auto' }}>
-          <h1 style={{ 
-            fontSize: 48, fontWeight: 800, marginBottom: 16,
-            background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text'
-          }}>Our Services</h1>
-          <p style={{ 
-            fontSize: 20, opacity: 0.9, marginBottom: 24,
-            lineHeight: 1.6 
-          }}>
-            Comprehensive technology solutions to transform your business
-          </p>
-          <div style={{ 
-            display: 'flex', gap: 16, justifyContent: 'center',
-            flexWrap: 'wrap', marginBottom: 32 
-          }}>
-            <div style={{ 
-              background: 'rgba(59, 130, 246, 0.1)', padding: '12px 20px', 
-              borderRadius: 12, border: '1px solid rgba(59, 130, 246, 0.2)'
-            }}>
-              <div style={{ fontSize: 24, fontWeight: 700, color: '#3b82f6' }}>60+</div>
-              <div style={{ fontSize: 14, opacity: 0.8 }}>Micro SaaS</div>
-            </div>
-            <div style={{ 
-              background: 'rgba(139, 92, 246, 0.1)', padding: '12px 20px', 
-              borderRadius: 12, border: '1px solid rgba(139, 92, 246, 0.2)'
-            }}>
-              <div style={{ fontSize: 24, fontWeight: 700, color: '#8b5cf6' }}>40+</div>
-              <div style={{ fontSize: 14, opacity: 0.8 }}>AI Services</div>
-            </div>
-            <div style={{ 
-              background: 'rgba(34, 197, 94, 0.1)', padding: '12px 20px', 
-              borderRadius: 12, border: '1px solid rgba(34, 197, 94, 0.2)'
-            }}>
-              <div style={{ fontSize: 24, fontWeight: 700, color: '#22c55e' }}>40+</div>
-              <div style={{ fontSize: 14, opacity: 0.8 }}>IT Solutions</div>
-            </div>
-          </div>
-        </div>
-      </section>
+	return (
+		<Layout>
+			<PageTransition>
+			{/* Hero Section */}
+			<section className='bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32'>
+				<div className='mx-auto max-w-7xl px-6 lg:px-8'>
+					<div className='mx-auto max-w-2xl text-center'>
+						<div className='flex items-center justify-center mb-4'>
+							<Award className='h-6 w-6 text-blue-600 mr-2' />
+							<span className='text-base font-semibold leading-7 text-blue-600'>Our Services</span>
+						</div>
+						<h1 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>
+							Our Services
+						</h1>
+						<p className='mt-6 text-lg leading-8 text-gray-600'>
+							From strategy to production, we deliver outcomes fast. Our comprehensive suite of services covers everything you need to transform your business.
+						</p>
+					</div>
+				</div>
+			</section>
+			{/* Services Grid */}
+			<section className='py-16 sm:py-24'>
+				<div className='mx-auto max-w-7xl px-6 lg:px-8'>
+					<div className='grid gap-6 lg:grid-cols-2'>
+						{/* AI Autonomous Systems */}
+						<div id='ai' className='group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:border-blue-300'>
+							<div className='flex items-center gap-x-3 mb-6'>
+								<div className='flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 group-hover:bg-blue-700 transition-colors'>
+									<Brain className='h-7 w-7 text-white' />
+								</div>
+								<div>
+									<h2 className='text-xl font-semibold text-gray-900'>AI Autonomous Systems</h2>
+									<p className='text-sm text-blue-600 font-medium'>Intelligent Automation</p>
+								</div>
+							</div>
+							<p className='text-gray-600 mb-6'>
+								Transform your operations with intelligent automation and AI-powered decision making.
+							</p>
+							<ul className='space-y-3 mb-6'>
+								<li className='flex items-center gap-x-3'>
+									<CheckCircle className='h-4 w-4 text-blue-600' />
+									<span className='text-sm text-gray-700'>Sales/CS multi-agent copilots</span>
+								</li>
+								<li className='flex items-center gap-x-3'>
+									<CheckCircle className='h-4 w-4 text-blue-600' />
+									<span className='text-sm text-gray-700'>RAG and workflow orchestration</span>
+								</li>
+								<li className='flex items-center gap-x-3'>
+									<CheckCircle className='h-4 w-4 text-blue-600' />
+									<span className='text-sm text-gray-700'>Observability and guardrails</span>
+								</li>
+								<li className='flex items-center gap-x-3'>
+									<CheckCircle className='h-4 w-4 text-blue-600' />
+									<span className='text-sm text-gray-700'>Intelligent process automation</span>
+								</li>
+							</ul>
+							<div className='flex items-center justify-between'>
+								<div className='flex items-center space-x-2 text-sm text-gray-500'>
+									<Clock className='h-4 w-4' />
+									<span>2-4 weeks delivery</span>
+								</div>
+								<Link
+									href='/contact'
+									className='inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-500 transition-colors group'
+									aria-label='Get started with AI services'
+								>
+									Get started with AI
+									<ArrowRight className='ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform' />
+								</Link>
+							</div>
+						</div>
+						{/* Cloud Platforms */}
+						<div id='cloud' className='group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:border-green-300'>
+							<div className='flex items-center gap-x-3 mb-6'>
+								<div className='flex h-12 w-12 items-center justify-center rounded-lg bg-green-600 group-hover:bg-green-700 transition-colors'>
+									<Cloud className='h-7 w-7 text-white' />
+								</div>
+								<div>
+									<h2 className='text-xl font-semibold text-gray-900'>Cloud Platforms</h2>
+									<p className='text-sm text-green-600 font-medium'>Scalable Infrastructure</p>
+								</div>
+							</div>
+							<p className='text-gray-600 mb-6'>
+								Build scalable, resilient cloud infrastructure that grows with your business.
+							</p>
+							<ul className='space-y-3 mb-6'>
+								<li className='flex items-center gap-x-3'>
+									<CheckCircle className='h-4 w-4 text-green-600' />
+									<span className='text-sm text-gray-700'>Serverless and Kubernetes</span>
+								</li>
+								<li className='flex items-center gap-x-3'>
+									<CheckCircle className='h-4 w-4 text-green-600' />
+									<span className='text-sm text-gray-700'>Data pipelines and ML ops</span>
+								</li>
+								<li className='flex items-center gap-x-3'>
+									<CheckCircle className='h-4 w-4 text-green-600' />
+									<span className='text-sm text-gray-700'>FinOps and SRE practices</span>
+								</li>
+								<li className='flex items-center gap-x-3'>
+									<CheckCircle className='h-4 w-4 text-green-600' />
+									<span className='text-sm text-gray-700'>Multi-cloud architecture</span>
+								</li>
+							</ul>
+							<div className='flex items-center justify-between'>
+								<div className='flex items-center space-x-2 text-sm text-gray-500'>
+									<Clock className='h-4 w-4' />
+									<span>4-8 weeks delivery</span>
+								</div>
+								<Link
+									href='/contact'
+									className='inline-flex items-center text-sm font-semibold text-green-600 hover:text-green-500 transition-colors group'
+									aria-label='Get started with cloud services'
+								>
+									Get started with Cloud
+									<ArrowRight className='ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform' />
+								</Link>
+							</div>
+						</div>
+						{/* Cybersecurity */}
+						<div id='cybersecurity' className='group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:border-purple-300'>
+							<div className='flex items-center gap-x-3 mb-6'>
+								<div className='flex h-12 w-12 items-center justify-center rounded-lg bg-purple-600 group-hover:bg-purple-700 transition-colors'>
+									<Shield className='h-7 w-7 text-white' />
+								</div>
+								<div>
+									<h2 className='text-xl font-semibold text-gray-900'>Cybersecurity</h2>
+									<p className='text-sm text-purple-600 font-medium'>Zero-Trust Security</p>
+								</div>
+							</div>
+							<p className='text-gray-600 mb-6'>
+								Protect your business with enterprise-grade security frameworks and compliance automation.
+							</p>
+							<ul className='space-y-3 mb-6'>
+								<li className='flex items-center gap-x-3'>
+									<CheckCircle className='h-4 w-4 text-purple-600' />
+									<span className='text-sm text-gray-700'>Zero-trust architecture</span>
+								</li>
+								<li className='flex items-center gap-x-3'>
+									<CheckCircle className='h-4 w-4 text-purple-600' />
+									<span className='text-sm text-gray-700'>Compliance automation</span>
+								</li>
+								<li className='flex items-center gap-x-3'>
+									<CheckCircle className='h-4 w-4 text-purple-600' />
+									<span className='text-sm text-gray-700'>Incident response</span>
+								</li>
+								<li className='flex items-center gap-x-3'>
+									<CheckCircle className='h-4 w-4 text-purple-600' />
+									<span className='text-sm text-gray-700'>Security audits</span>
+								</li>
+							</ul>
+							<div className='flex items-center justify-between'>
+								<div className='flex items-center space-x-2 text-sm text-gray-500'>
+									<Clock className='h-4 w-4' />
+									<span>3-6 weeks delivery</span>
+								</div>
+								<Link
+									href='/contact'
+									className='inline-flex items-center text-sm font-semibold text-purple-600 hover:text-purple-500 transition-colors group'
+									aria-label='Get started with cybersecurity services'
+								>
+									Get started with Security
+									<ArrowRight className='ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform' />
+								</Link>
+							</div>
+						</div>
+						{/* Micro SaaS */}
+						<div id='saas' className='group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:border-orange-300'>
+							<div className='flex items-center gap-x-3 mb-6'>
+								<div className='flex h-12 w-12 items-center justify-center rounded-lg bg-orange-600 group-hover:bg-orange-700 transition-colors'>
+									<Code className='h-7 w-7 text-white' />
+								</div>
+								<div>
+									<h2 className='text-xl font-semibold text-gray-900'>Micro SaaS</h2>
+									<p className='text-sm text-orange-600 font-medium'>Custom Solutions</p>
+								</div>
+							</div>
+							<p className='text-gray-600 mb-6'>
+								Custom software solutions tailored to your specific business needs and workflows.
+							</p>
+							<ul className='space-y-3 mb-6'>
+								<li className='flex items-center gap-x-3'>
+									<CheckCircle className='h-4 w-4 text-orange-600' />
+									<span className='text-sm text-gray-700'>Custom web applications</span>
+								</li>
+								<li className='flex items-center gap-x-3'>
+									<CheckCircle className='h-4 w-4 text-orange-600' />
+									<span className='text-sm text-gray-700'>API development</span>
+								</li>
+								<li className='flex items-center gap-x-3'>
+									<CheckCircle className='h-4 w-4 text-orange-600' />
+									<span className='text-sm text-gray-700'>Integration services</span>
+								</li>
+								<li className='flex items-center gap-x-3'>
+									<CheckCircle className='h-4 w-4 text-orange-600' />
+									<span className='text-sm text-gray-700'>Maintenance & support</span>
+								</li>
+							</ul>
+							<div className='flex items-center justify-between'>
+								<div className='flex items-center space-x-2 text-sm text-gray-500'>
+									<Clock className='h-4 w-4' />
+									<span>6-12 weeks delivery</span>
+								</div>
+								<Link
+									href='/contact'
+									className='inline-flex items-center text-sm font-semibold text-orange-600 hover:text-orange-500 transition-colors group'
+									aria-label='Get started with custom software services'
+								>
+									Get started with SaaS
+									<ArrowRight className='ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform' />
+								</Link>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			{/* Expanded Service Catalog */}
+			<section className='py-16 sm:py-24 bg-white'>
+				<div className='mx-auto max-w-7xl px-6 lg:px-8'>
+					<div className='mx-auto max-w-4xl text-center mb-14'>
+						<h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>Comprehensive Technology Solutions</h2>
+						<p className='mt-6 text-lg leading-8 text-gray-600'>
+							Zion Tech Group delivers cutting-edge, production-ready services across AI, IT infrastructure, and Micro SaaS platforms. 
+							Our solutions are designed for enterprise scalability with transparent pricing and measurable outcomes. 
+							Explore our full capabilities at{' '}
+							<a href='https://ziontechgroup.com' className='text-blue-600 hover:text-blue-500 underline font-semibold' target='_blank' rel='noreferrer'>ziontechgroup.com</a>.{' '}
+							Check our latest additions in the{' '}
+							<Link href='/additional-services' className='text-blue-600 hover:text-blue-500 underline font-semibold'>Expanded Services Catalog</Link>.
+						</p>
+						<div className='mt-8 bg-blue-50 border border-blue-200 rounded-lg p-6'>
+							<h3 className='text-lg font-semibold text-blue-900 mb-3'>Ready to Get Started?</h3>
+							<div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+								<div>
+									<p className='text-blue-800 text-sm mb-2'>Contact us for a free consultation:</p>
+									<div className='space-y-1 text-sm'>
+										<p className='text-blue-700'><strong>Phone:</strong> <a href='tel:+13024640950' className='hover:underline'>+1 302 464 0950</a></p>
+										<p className='text-blue-700'><strong>Email:</strong> <a href='mailto:kleber@ziontechgroup.com' className='hover:underline'>kleber@ziontechgroup.com</a></p>
+									</div>
+								</div>
+								<div>
+									<p className='text-blue-800 text-sm mb-2'>Our office location:</p>
+									<p className='text-blue-700 text-sm'>364 E Main St STE 1008<br />Middletown DE 19709</p>
+								</div>
+							</div>
+						</div>
+						<div className='mt-6 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm'>
+							<div className='bg-blue-50 p-4 rounded-lg'>
+								<h3 className='font-semibold text-blue-900 mb-2'>AI & Machine Learning</h3>
+								<p className='text-blue-700'>Advanced AI solutions from computer vision to generative content creation</p>
+							</div>
+							<div className='bg-green-50 p-4 rounded-lg'>
+								<h3 className='font-semibold text-green-900 mb-2'>IT Infrastructure</h3>
+								<p className='text-green-700'>Next-gen technologies including edge computing, blockchain, and quantum readiness</p>
+							</div>
+							<div className='bg-purple-50 p-4 rounded-lg'>
+								<h3 className='font-semibold text-purple-900 mb-2'>Micro SaaS Platforms</h3>
+								<p className='text-purple-700'>Scalable software solutions from real-time analytics to mobile development</p>
+							</div>
+						</div>
+						<p className='mt-6 text-sm text-gray-500'>
+							Pricing based on market research from leading technology consultancies and enterprise software vendors. 
+							For custom enterprise solutions and volume discounts, see our{' '}
+							<Link href='/pricing' className='text-blue-600 hover:text-blue-500 underline'>Enterprise Pricing Guide</Link>.
+						</p>
+					</div>
+					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+						{/* AI Services */}
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Brain className='h-5 w-5 text-blue-600' />
+								<h3 className='font-semibold text-gray-900'>Revenue AI Agents (Sales/CS)</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Multi-agent copilots for SDR, AM, and Support with guardrails.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Integrates CRM, Helpdesk, and Knowledge Base</li>
+								<li>• Measurable pipeline lift and deflection</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-blue-600'>Starting $8k–$25k</span>
+								<Link href='/contact' className='text-blue-600 hover:text-blue-500'>Talk to us →</Link>
+							</div>
+						</div>
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Database className='h-5 w-5 text-indigo-600' />
+								<h3 className='font-semibold text-gray-900'>Data Engineering as a Service</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Modern ELT, dbt, and warehouse modeling, with governance.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Snowflake/BigQuery/Redshift, Lakehouse setups</li>
+								<li>• Data quality SLAs and observability</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-indigo-600'>Starting $10k–$40k</span>
+								<Link href='/contact' className='text-indigo-600 hover:text-indigo-500'>Get estimate →</Link>
+							</div>
+						</div>
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Server className='h-5 w-5 text-emerald-600' />
+								<h3 className='font-semibold text-gray-900'>MLOps Platform Setup</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>CI/CD for models, feature stores, evals, and monitoring.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Vertex/SageMaker/Databricks integrations</li>
+								<li>• Reproducible pipelines and governance</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-emerald-600'>Starting $15k–$60k</span>
+								<Link href='/contact' className='text-emerald-600 hover:text-emerald-500'>Learn more →</Link>
+							</div>
+						</div>
+						{/* IT & Cloud */}
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Cloud className='h-5 w-5 text-green-600' />
+								<h3 className='font-semibold text-gray-900'>FinOps & Cloud Cost Optimization</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Rightsizing, savings plans, architectural refactors for cost.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Typical 20–45% monthly savings</li>
+								<li>• Automated policy enforcement</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-green-600'>Assessments $4k–$12k</span>
+								<Link href='/contact' className='text-green-600 hover:text-green-500'>Start now →</Link>
+							</div>
+						</div>
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Shield className='h-5 w-5 text-purple-600' />
+								<h3 className='font-semibold text-gray-900'>SOC-as-a-Service</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Managed detection & response with 24/7 coverage.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• SIEM, EDR, and threat intel</li>
+								<li>• Incident playbooks and compliance</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-purple-600'>From $3k/mo</span>
+								<Link href='/contact' className='text-purple-600 hover:text-purple-500'>Request details →</Link>
+							</div>
+						</div>
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Globe className='h-5 w-5 text-orange-600' />
+								<h3 className='font-semibold text-gray-900'>Fractional CTO/Architecture Advisory</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Strategy, roadmap, and architecture leadership on-demand.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Platform modernization & product strategy</li>
+								<li>• Vendor selection and governance</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-orange-600'>From $4k/mo</span>
+								<Link href='/contact' className='text-orange-600 hover:text-orange-500'>Book intro →</Link>
+							</div>
+						</div>
+						{/* AI Services - Additional */}
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Brain className='h-5 w-5 text-violet-600' />
+								<h3 className='font-semibold text-gray-900'>AI-Powered Business Intelligence</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Automated insights, predictive analytics, and intelligent reporting.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Natural language query interface</li>
+								<li>• Automated anomaly detection and alerts</li>
+								<li>• Custom dashboard generation</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-violet-600'>From $399/mo</span>
+								<Link href='/contact' className='text-violet-600 hover:text-violet-500'>Schedule demo →</Link>
+							</div>
+						</div>
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Database className='h-5 w-5 text-cyan-600' />
+								<h3 className='font-semibold text-gray-900'>Intelligent Document Processing</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Extract, classify, and process documents with AI accuracy.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• OCR with 99%+ accuracy</li>
+								<li>• Automated data extraction and validation</li>
+								<li>• Workflow automation and routing</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-cyan-600'>From $299/mo</span>
+								<Link href='/contact' className='text-cyan-600 hover:text-cyan-500'>Try free trial →</Link>
+							</div>
+						</div>
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Zap className='h-5 w-5 text-yellow-600' />
+								<h3 className='font-semibold text-gray-900'>AI Test Automation Platform</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Self-healing test scripts and intelligent test case generation.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Visual regression testing with AI</li>
+								<li>• Automated test maintenance</li>
+								<li>• Cross-browser and device testing</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-yellow-600'>From $199/mo</span>
+								<Link href='/contact' className='text-yellow-600 hover:text-yellow-500'>Start testing →</Link>
+							</div>
+						</div>
+						{/* Micro SaaS */}
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Code className='h-5 w-5 text-rose-600' />
+								<h3 className='font-semibold text-gray-900'>AI Content Localization SaaS</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Translate and culturally adapt content at scale.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Multi-market SEO and brand alignment</li>
+								<li>• Human-in-the-loop quality controls</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-rose-600'>From $199/mo</span>
+								<Link href='/contact' className='text-rose-600 hover:text-rose-500'>Request demo →</Link>
+							</div>
+						</div>
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<BarChart3 className='h-5 w-5 text-sky-600' />
+								<h3 className='font-semibold text-gray-900'>Predictive Maintenance Toolkit</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Out-of-the-box anomaly detection for equipment and IoT.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Sensor ingestion, dashboards, and alerts</li>
+								<li>• Edge or cloud deployment options</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-sky-600'>From $299/mo</span>
+								<Link href='/contact' className='text-sky-600 hover:text-sky-500'>See live demo →</Link>
+							</div>
+						</div>
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Lock className='h-5 w-5 text-teal-600' />
+								<h3 className='font-semibold text-gray-900'>Compliance Copilot (SOC2/HIPAA/GDPR)</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Automated evidence collection and continuous controls.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Policy templates and auditor-ready reports</li>
+								<li>• Ticketing and alerting integrations</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-teal-600'>From $249/mo</span>
+								<Link href='/contact' className='text-teal-600 hover:text-teal-500'>Book a walkthrough →</Link>
+							</div>
+						</div>
+						{/* Additional IT Services */}
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Server className='h-5 w-5 text-lime-600' />
+								<h3 className='font-semibold text-gray-900'>DevOps Automation Platform</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Complete CI/CD pipelines with infrastructure as code.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• GitOps workflows and automated deployments</li>
+								<li>• Infrastructure monitoring and alerting</li>
+								<li>• Multi-cloud orchestration</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-lime-600'>From $599/mo</span>
+								<Link href='/contact' className='text-lime-600 hover:text-lime-500'>Get started →</Link>
+							</div>
+						</div>
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Globe className='h-5 w-5 text-pink-600' />
+								<h3 className='font-semibold text-gray-900'>Digital Transformation Consulting</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>End-to-end modernization strategy and implementation.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Legacy system migration and modernization</li>
+								<li>• Cloud-native architecture design</li>
+								<li>• Change management and training</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-pink-600'>From $8k–$50k</span>
+								<Link href='/contact' className='text-pink-600 hover:text-pink-500'>Schedule consultation →</Link>
+							</div>
+						</div>
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<BarChart3 className='h-5 w-5 text-amber-600' />
+								<h3 className='font-semibold text-gray-900'>Infrastructure Monitoring & Observability</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Real-time monitoring with AI-powered anomaly detection.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Application performance monitoring (APM)</li>
+								<li>• Log aggregation and analysis</li>
+								<li>• Predictive scaling and optimization</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-amber-600'>From $199/mo</span>
+								<Link href='/contact' className='text-amber-600 hover:text-amber-500'>Monitor now →</Link>
+							</div>
+						</div>
+						{/* Advanced AI Services */}
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Eye className='h-5 w-5 text-blue-600' />
+								<h3 className='font-semibold text-gray-900'>Computer Vision & Image Recognition</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Advanced image analysis, object detection, and visual content understanding.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Real-time object detection and classification</li>
+								<li>• Facial recognition and biometric authentication</li>
+								<li>• Medical imaging analysis and diagnostics</li>
+								<li>• Quality control and defect detection</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-blue-600'>From $2,500/mo</span>
+								<Link href='/contact' className='text-blue-600 hover:text-blue-500'>Schedule demo →</Link>
+							</div>
+						</div>
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<MessageSquare className='h-5 w-5 text-green-600' />
+								<h3 className='font-semibold text-gray-900'>Natural Language Processing (NLP) Platform</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Advanced text analysis, sentiment detection, and language understanding.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Multi-language text classification and extraction</li>
+								<li>• Sentiment analysis and emotion detection</li>
+								<li>• Named entity recognition and knowledge graphs</li>
+								<li>• Automated content moderation and filtering</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-green-600'>From $1,800/mo</span>
+								<Link href='/contact' className='text-green-600 hover:text-green-500'>Try API →</Link>
+							</div>
+						</div>
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Palette className='h-5 w-5 text-purple-600' />
+								<h3 className='font-semibold text-gray-900'>Generative AI Content Studio</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>AI-powered content creation for text, images, videos, and audio.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Custom GPT models for brand-specific content</li>
+								<li>• AI image generation and video synthesis</li>
+								<li>• Voice cloning and audio generation</li>
+								<li>• Multi-modal content orchestration</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-purple-600'>From $3,200/mo</span>
+								<Link href='/contact' className='text-purple-600 hover:text-purple-500'>Create content →</Link>
+							</div>
+						</div>
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Bot className='h-5 w-5 text-orange-600' />
+								<h3 className='font-semibold text-gray-900'>Conversational AI & Chatbots</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Intelligent conversational agents with advanced reasoning capabilities.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Multi-turn conversation management</li>
+								<li>• Context-aware response generation</li>
+								<li>• Integration with business systems and APIs</li>
+								<li>• Voice and text conversation support</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-orange-600'>From $1,200/mo</span>
+								<Link href='/contact' className='text-orange-600 hover:text-orange-500'>Build chatbot →</Link>
+							</div>
+						</div>
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<TrendingUp className='h-5 w-5 text-red-600' />
+								<h3 className='font-semibold text-gray-900'>Predictive Analytics & Forecasting</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Advanced machine learning models for business forecasting and trend analysis.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Time series forecasting and anomaly detection</li>
+								<li>• Customer lifetime value prediction</li>
+								<li>• Demand forecasting and inventory optimization</li>
+								<li>• Risk assessment and fraud detection</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-red-600'>From $2,800/mo</span>
+								<Link href='/contact' className='text-red-600 hover:text-red-500'>Predict trends →</Link>
+							</div>
+						</div>
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Users className='h-5 w-5 text-emerald-600' />
+								<h3 className='font-semibold text-gray-900'>Smart Project Management Suite</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>AI-powered project tracking with intelligent resource allocation.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Automated task prioritization and scheduling</li>
+								<li>• Team performance analytics and insights</li>
+								<li>• Integration with popular tools (Slack, Jira, etc.)</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-emerald-600'>From $149/mo</span>
+								<Link href='/contact' className='text-emerald-600 hover:text-emerald-500'>Start free trial →</Link>
+							</div>
+						</div>
+						{/* Advanced IT Services */}
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Cpu className='h-5 w-5 text-blue-600' />
+								<h3 className='font-semibold text-gray-900'>Edge Computing & IoT Solutions</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Distributed computing infrastructure for real-time data processing and IoT management.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Edge server deployment and management</li>
+								<li>• IoT device connectivity and data collection</li>
+								<li>• Real-time analytics and decision making</li>
+								<li>• Low-latency application deployment</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-blue-600'>From $4,500/mo</span>
+								<Link href='/contact' className='text-blue-600 hover:text-blue-500'>Deploy edge →</Link>
+							</div>
+						</div>
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Link2 className='h-5 w-5 text-green-600' />
+								<h3 className='font-semibold text-gray-900'>Blockchain & Web3 Solutions</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Decentralized applications, smart contracts, and blockchain infrastructure.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Smart contract development and auditing</li>
+								<li>• DeFi protocol integration and development</li>
+								<li>• NFT marketplace and tokenization</li>
+								<li>• Cross-chain interoperability solutions</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-green-600'>From $8,000/mo</span>
+								<Link href='/contact' className='text-green-600 hover:text-green-500'>Build Web3 →</Link>
+							</div>
+						</div>
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Wifi className='h-5 w-5 text-purple-600' />
+								<h3 className='font-semibold text-gray-900'>5G & Network Infrastructure</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Next-generation network infrastructure and connectivity solutions.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• 5G network planning and optimization</li>
+								<li>• Software-defined networking (SDN)</li>
+								<li>• Network function virtualization (NFV)</li>
+								<li>• Private 5G network deployment</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-purple-600'>From $12,000/mo</span>
+								<Link href='/contact' className='text-purple-600 hover:text-purple-500'>Upgrade network →</Link>
+							</div>
+						</div>
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<HardDrive className='h-5 w-5 text-orange-600' />
+								<h3 className='font-semibold text-gray-900'>Quantum Computing Readiness</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Prepare your infrastructure for quantum computing and post-quantum cryptography.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Quantum algorithm development and testing</li>
+								<li>• Post-quantum cryptography implementation</li>
+								<li>• Quantum simulation and optimization</li>
+								<li>• Hybrid classical-quantum workflows</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-orange-600'>From $15,000/mo</span>
+								<Link href='/contact' className='text-orange-600 hover:text-orange-500'>Go quantum →</Link>
+							</div>
+						</div>
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Monitor className='h-5 w-5 text-red-600' />
+								<h3 className='font-semibold text-gray-900'>Extended Reality (XR) Solutions</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Virtual, augmented, and mixed reality applications for enterprise and consumer use.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• VR/AR application development</li>
+								<li>• 3D modeling and spatial computing</li>
+								<li>• Metaverse platform development</li>
+								<li>• XR training and simulation systems</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-red-600'>From $6,500/mo</span>
+								<Link href='/contact' className='text-red-600 hover:text-red-500'>Enter XR →</Link>
+							</div>
+						</div>
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Star className='h-5 w-5 text-indigo-600' />
+								<h3 className='font-semibold text-gray-900'>Customer Feedback Intelligence Platform</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>AI-driven sentiment analysis and actionable insights from customer feedback.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Multi-channel feedback aggregation</li>
+								<li>• Sentiment analysis and trend identification</li>
+								<li>• Automated response recommendations</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-indigo-600'>From $99/mo</span>
+								<Link href='/contact' className='text-indigo-600 hover:text-indigo-500'>Analyze feedback →</Link>
+							</div>
+						</div>
+						{/* Innovative Micro SaaS Services */}
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Activity className='h-5 w-5 text-blue-600' />
+								<h3 className='font-semibold text-gray-900'>Real-Time Analytics Dashboard</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Live business intelligence with instant insights and predictive alerts.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Real-time data streaming and visualization</li>
+								<li>• Custom KPI tracking and alerting</li>
+								<li>• Multi-source data integration</li>
+								<li>• Mobile-responsive dashboards</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-blue-600'>From $299/mo</span>
+								<Link href='/contact' className='text-blue-600 hover:text-blue-500'>View demo →</Link>
+							</div>
+						</div>
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Settings className='h-5 w-5 text-green-600' />
+								<h3 className='font-semibold text-gray-900'>API Management & Gateway</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Enterprise-grade API management with security, monitoring, and monetization.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• API gateway with rate limiting and authentication</li>
+								<li>• Developer portal and documentation</li>
+								<li>• Usage analytics and billing management</li>
+								<li>• API versioning and lifecycle management</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-green-600'>From $499/mo</span>
+								<Link href='/contact' className='text-green-600 hover:text-green-500'>Manage APIs →</Link>
+							</div>
+						</div>
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Terminal className='h-5 w-5 text-purple-600' />
+								<h3 className='font-semibold text-gray-900'>Developer Tools & IDE Extensions</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Productivity tools and extensions for modern development workflows.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• VS Code extensions and plugins</li>
+								<li>• Code quality and security scanning</li>
+								<li>• Automated testing and deployment tools</li>
+								<li>• Team collaboration and code review tools</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-purple-600'>From $199/mo</span>
+								<Link href='/contact' className='text-purple-600 hover:text-purple-500'>Boost productivity →</Link>
+							</div>
+						</div>
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<CreditCard className='h-5 w-5 text-orange-600' />
+								<h3 className='font-semibold text-gray-900'>Fintech & Payment Solutions</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Secure payment processing and financial technology integrations.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Multi-currency payment processing</li>
+								<li>• Cryptocurrency payment integration</li>
+								<li>• Fraud detection and risk management</li>
+								<li>• Financial reporting and compliance tools</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-orange-600'>From $799/mo</span>
+								<Link href='/contact' className='text-orange-600 hover:text-orange-500'>Process payments →</Link>
+							</div>
+						</div>
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Smartphone className='h-5 w-5 text-red-600' />
+								<h3 className='font-semibold text-gray-900'>Mobile App Development Platform</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Cross-platform mobile app development with native performance.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• React Native and Flutter development</li>
+								<li>• Progressive Web App (PWA) creation</li>
+								<li>• App store optimization and deployment</li>
+								<li>• Push notifications and analytics</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-red-600'>From $1,299/mo</span>
+								<Link href='/contact' className='text-red-600 hover:text-red-500'>Build apps →</Link>
+							</div>
+						</div>
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Zap className='h-5 w-5 text-red-600' />
+								<h3 className='font-semibold text-gray-900'>Workflow Automation Engine</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>No-code workflow builder with AI-powered optimization suggestions.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Visual workflow designer with drag-and-drop</li>
+								<li>• 500+ pre-built integrations</li>
+								<li>• AI-powered efficiency recommendations</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-red-600'>From $79/mo</span>
+								<Link href='/contact' className='text-red-600 hover:text-red-500'>Automate workflows →</Link>
+							</div>
+						</div>
+					</div>
+					<div className='mt-10 text-center text-sm text-gray-500'>
+						Need something custom? Visit our website at{' '}
+						<a href='https://ziontechgroup.com' className='text-blue-600 hover:text-blue-500 underline' target='_blank' rel='noreferrer'>ziontechgroup.com</a>{' '}
+						or contact us directly: Email{' '}
+						<a href='mailto:kleber@ziontechgroup.com' className='text-blue-600 hover:text-blue-500'>kleber@ziontechgroup.com</a>{' '}
+						| Phone{' '}
+						<a href='tel:+13024640950' className='text-blue-600 hover:text-blue-500'>+1 302 464 0950</a>{' '}
+						| Address: 364 E Main St STE 1008, Middletown DE 19709
+					</div>
+				</div>
+			</section>
+			{/* New Innovative Services Section */}
+			<section className='py-24 sm:py-32 bg-gradient-to-br from-blue-50 to-indigo-50'>
+				<div className='mx-auto max-w-7xl px-6 lg:px-8'>
+					<div className='mx-auto max-w-3xl text-center mb-16'>
+						<h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>Innovative AI & Automation Services</h2>
+						<p className='mt-6 text-lg leading-8 text-gray-600'>
+							Cutting-edge AI solutions and automation tools that transform how businesses operate. 
+							Visit <a href='https://ziontechgroup.com' className='text-blue-600 hover:text-blue-500 underline' target='_blank' rel='noreferrer'>ziontechgroup.com</a> for live demos.
+						</p>
+					</div>
+					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+						{/* AI Content Creation Tools */}
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Brain className='h-5 w-5 text-blue-600' />
+								<h3 className='font-semibold text-gray-900'>AI Content Creation Suite</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Generate high-quality content at scale with AI-powered writing tools.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Blog posts, articles, and marketing copy</li>
+								<li>• SEO-optimized content with keyword research</li>
+								<li>• Multi-language support and brand voice consistency</li>
+								<li>• Content calendar and publishing automation</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-blue-600'>From $199/mo</span>
+								<Link href='/contact' className='text-blue-600 hover:text-blue-500'>Start free trial →</Link>
+							</div>
+						</div>
+						{/* Email Automation Platform */}
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Mail className='h-5 w-5 text-green-600' />
+								<h3 className='font-semibold text-gray-900'>Smart Email Automation</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>AI-powered email campaigns with personalized content and optimal send times.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Behavioral trigger automation</li>
+								<li>• A/B testing and performance optimization</li>
+								<li>• Lead scoring and segmentation</li>
+								<li>• Integration with CRM and marketing tools</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-green-600'>From $149/mo</span>
+								<Link href='/contact' className='text-green-600 hover:text-green-500'>Automate now →</Link>
+							</div>
+						</div>
+						{/* AI Email Responder */}
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Zap className='h-5 w-5 text-purple-600' />
+								<h3 className='font-semibold text-gray-900'>AI Email Assistant</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Intelligent email management with smart responses and priority detection.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Auto-respond to common inquiries</li>
+								<li>• Priority flagging and urgent email alerts</li>
+								<li>• Sentiment analysis and response suggestions</li>
+								<li>• Calendar integration and meeting scheduling</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-purple-600'>From $99/mo</span>
+								<Link href='/contact' className='text-purple-600 hover:text-purple-500'>Try demo →</Link>
+							</div>
+						</div>
+						{/* Customer Support Platform */}
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Users className='h-5 w-5 text-orange-600' />
+								<h3 className='font-semibold text-gray-900'>AI Customer Support Hub</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Comprehensive support platform with AI chatbots and ticket management.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• 24/7 AI chatbot with human handoff</li>
+								<li>• Multi-channel support (chat, email, phone)</li>
+								<li>• Knowledge base and FAQ automation</li>
+								<li>• Customer satisfaction tracking</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-orange-600'>From $299/mo</span>
+								<Link href='/contact' className='text-orange-600 hover:text-orange-500'>Setup support →</Link>
+							</div>
+						</div>
+						{/* Event Management Dashboard */}
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Calendar className='h-5 w-5 text-red-600' />
+								<h3 className='font-semibold text-gray-900'>Smart Event Management</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Complete event planning and management with AI-powered insights.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Event registration and ticketing</li>
+								<li>• Automated email campaigns and reminders</li>
+								<li>• Real-time analytics and attendee insights</li>
+								<li>• Integration with payment and marketing tools</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-red-600'>From $179/mo</span>
+								<Link href='/contact' className='text-red-600 hover:text-red-500'>Plan events →</Link>
+							</div>
+						</div>
+						{/* Workflow Automation Engine */}
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Settings className='h-5 w-5 text-indigo-600' />
+								<h3 className='font-semibold text-gray-900'>Business Process Automation</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>No-code workflow automation with AI optimization recommendations.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Visual workflow designer</li>
+								<li>• 500+ pre-built integrations</li>
+								<li>• AI-powered efficiency suggestions</li>
+								<li>• Performance monitoring and optimization</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-indigo-600'>From $79/mo</span>
+								<Link href='/contact' className='text-indigo-600 hover:text-indigo-500'>Automate workflows →</Link>
+							</div>
+						</div>
+					</div>
+					<div className='mt-12 text-center'>
+						<p className='text-sm text-gray-600 mb-4'>
+							All services include 30-day free trial, setup assistance, and 24/7 support.
+						</p>
+						<div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
+							<Link
+								href='/contact'
+								className='inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors'
+							>
+								Get Started Today
+								<ArrowRight className='ml-2 h-4 w-4' />
+							</Link>
+							<Link
+								href='https://ziontechgroup.com'
+								target='_blank'
+								rel='noreferrer'
+								className='inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors'
+							>
+								Visit Live Demo
+								<Globe className='ml-2 h-4 w-4' />
+							</Link>
+						</div>
+					</div>
+				</div>
+			</section>
+			{/* Advanced IT Services Section */}
+			<section className='py-24 sm:py-32 bg-white'>
+				<div className='mx-auto max-w-7xl px-6 lg:px-8'>
+					<div className='mx-auto max-w-3xl text-center mb-16'>
+						<h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>Advanced IT & Infrastructure Services</h2>
+						<p className='mt-6 text-lg leading-8 text-gray-600'>
+							Enterprise-grade IT solutions and infrastructure management services. 
+							Professional implementation with 99.9% uptime guarantee.
+						</p>
+					</div>
+					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+						{/* DevOps Automation Platform */}
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Server className='h-5 w-5 text-blue-600' />
+								<h3 className='font-semibold text-gray-900'>DevOps Automation Suite</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Complete CI/CD pipelines with infrastructure as code and automated deployments.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• GitOps workflows and automated deployments</li>
+								<li>• Infrastructure monitoring and alerting</li>
+								<li>• Multi-cloud orchestration (AWS, Azure, GCP)</li>
+								<li>• Security scanning and compliance automation</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-blue-600'>From $599/mo</span>
+								<Link href='/contact' className='text-blue-600 hover:text-blue-500'>Get started →</Link>
+							</div>
+						</div>
+						{/* Infrastructure Monitoring */}
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white'>
+							<div className='flex items-center gap-3 mb-3'>
+								<BarChart3 className='h-5 w-5 text-green-600' />
+								<h3 className='font-semibold text-gray-900'>Infrastructure Monitoring & Observability</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Real-time monitoring with AI-powered anomaly detection and predictive scaling.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Application performance monitoring (APM)</li>
+								<li>• Log aggregation and analysis</li>
+								<li>• Predictive scaling and optimization</li>
+								<li>• Custom dashboards and alerting</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-green-600'>From $199/mo</span>
+								<Link href='/contact' className='text-green-600 hover:text-green-500'>Monitor now →</Link>
+							</div>
+						</div>
+						{/* API Management */}
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Globe className='h-5 w-5 text-purple-600' />
+								<h3 className='font-semibold text-gray-900'>API Management & Gateway</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Enterprise API gateway with rate limiting, authentication, and analytics.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• API versioning and lifecycle management</li>
+								<li>• Rate limiting and throttling</li>
+								<li>• OAuth 2.0 and JWT authentication</li>
+								<li>• API analytics and usage insights</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-purple-600'>From $299/mo</span>
+								<Link href='/contact' className='text-purple-600 hover:text-purple-500'>Manage APIs →</Link>
+							</div>
+						</div>
+						{/* Database Optimization */}
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Database className='h-5 w-5 text-orange-600' />
+								<h3 className='font-semibold text-gray-900'>Database Performance Optimization</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Database tuning, optimization, and migration services for peak performance.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Query optimization and indexing</li>
+								<li>• Database migration and scaling</li>
+								<li>• Backup and disaster recovery</li>
+								<li>• Performance monitoring and tuning</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-orange-600'>From $399/mo</span>
+								<Link href='/contact' className='text-orange-600 hover:text-orange-500'>Optimize DB →</Link>
+							</div>
+						</div>
+						{/* Security Assessment */}
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Shield className='h-5 w-5 text-red-600' />
+								<h3 className='font-semibold text-gray-900'>Security Assessment & Penetration Testing</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Comprehensive security audits and penetration testing for applications and infrastructure.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Web application security testing</li>
+								<li>• Network penetration testing</li>
+								<li>• Vulnerability assessment and remediation</li>
+								<li>• Compliance audits (SOC2, HIPAA, GDPR)</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-red-600'>From $2,500/project</span>
+								<Link href='/contact' className='text-red-600 hover:text-red-500'>Secure now →</Link>
+							</div>
+						</div>
+						{/* Cloud Migration */}
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Cloud className='h-5 w-5 text-indigo-600' />
+								<h3 className='font-semibold text-gray-900'>Cloud Migration & Modernization</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Seamless migration to cloud platforms with modernization and optimization.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Lift-and-shift and re-platforming</li>
+								<li>• Containerization and microservices</li>
+								<li>• Cost optimization and FinOps</li>
+								<li>• Training and knowledge transfer</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-indigo-600'>From $15k–$100k</span>
+								<Link href='/contact' className='text-indigo-600 hover:text-indigo-500'>Migrate to cloud →</Link>
+							</div>
+						</div>
+					</div>
+					<div className='mt-12 text-center'>
+						<p className='text-sm text-gray-600 mb-4'>
+							All IT services include 24/7 monitoring, regular maintenance, and expert support.
+						</p>
+						<div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
+							<Link
+								href='/contact'
+								className='inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 transition-colors'
+							>
+								Get IT Consultation
+								<ArrowRight className='ml-2 h-4 w-4' />
+							</Link>
+							<Link
+								href='https://ziontechgroup.com'
+								target='_blank'
+								rel='noreferrer'
+								className='inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors'
+							>
+								View Case Studies
+								<Globe className='ml-2 h-4 w-4' />
+							</Link>
+						</div>
+					</div>
+				</div>
+			</section>
+			{/* Micro SaaS Solutions Section */}
+			<section className='py-24 sm:py-32 bg-gradient-to-br from-purple-50 to-pink-50'>
+				<div className='mx-auto max-w-7xl px-6 lg:px-8'>
+					<div className='mx-auto max-w-3xl text-center mb-16'>
+						<h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>Micro SaaS Solutions</h2>
+						<p className='mt-6 text-lg leading-8 text-gray-600'>
+							Specialized software solutions designed to solve specific business challenges. 
+							Ready-to-deploy tools with customizable features and integrations.
+						</p>
+					</div>
+					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+						{/* Project Management Suite */}
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Users className='h-5 w-5 text-blue-600' />
+								<h3 className='font-semibold text-gray-900'>Smart Project Management Suite</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>AI-powered project tracking with intelligent resource allocation and team collaboration.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Automated task prioritization and scheduling</li>
+								<li>• Team performance analytics and insights</li>
+								<li>• Integration with popular tools (Slack, Jira, etc.)</li>
+								<li>• Real-time collaboration and communication</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-blue-600'>From $149/mo</span>
+								<Link href='/contact' className='text-blue-600 hover:text-blue-500'>Start free trial →</Link>
+							</div>
+						</div>
+						{/* Analytics Platform */}
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white'>
+							<div className='flex items-center gap-3 mb-3'>
+								<BarChart3 className='h-5 w-5 text-green-600' />
+								<h3 className='font-semibold text-gray-900'>Business Analytics Dashboard</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Comprehensive analytics platform with customizable dashboards and automated reporting.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Real-time data visualization and insights</li>
+								<li>• Automated report generation and scheduling</li>
+								<li>• Custom KPI tracking and alerts</li>
+								<li>• Data integration from multiple sources</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-green-600'>From $199/mo</span>
+								<Link href='/contact' className='text-green-600 hover:text-green-500'>Analyze data →</Link>
+							</div>
+						</div>
+						{/* Customer Feedback Platform */}
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Star className='h-5 w-5 text-purple-600' />
+								<h3 className='font-semibold text-gray-900'>Customer Feedback Intelligence</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>AI-driven sentiment analysis and actionable insights from customer feedback across channels.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Multi-channel feedback aggregation</li>
+								<li>• Sentiment analysis and trend identification</li>
+								<li>• Automated response recommendations</li>
+								<li>• Customer satisfaction tracking and NPS</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-purple-600'>From $99/mo</span>
+								<Link href='/contact' className='text-purple-600 hover:text-purple-500'>Analyze feedback →</Link>
+							</div>
+						</div>
+						{/* Inventory Management */}
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Database className='h-5 w-5 text-orange-600' />
+								<h3 className='font-semibold text-gray-900'>Smart Inventory Management</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>AI-powered inventory tracking with predictive analytics and automated reordering.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Real-time inventory tracking and alerts</li>
+								<li>• Predictive analytics for demand forecasting</li>
+								<li>• Automated reorder points and purchase orders</li>
+								<li>• Multi-location and warehouse management</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-orange-600'>From $179/mo</span>
+								<Link href='/contact' className='text-orange-600 hover:text-orange-500'>Manage inventory →</Link>
+							</div>
+						</div>
+						{/* HR Management System */}
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Users className='h-5 w-5 text-red-600' />
+								<h3 className='font-semibold text-gray-900'>HR Management Platform</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Complete HR solution with employee management, payroll, and performance tracking.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Employee onboarding and offboarding</li>
+								<li>• Time tracking and attendance management</li>
+								<li>• Performance reviews and goal setting</li>
+								<li>• Payroll integration and benefits management</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-red-600'>From $249/mo</span>
+								<Link href='/contact' className='text-red-600 hover:text-red-500'>Manage HR →</Link>
+							</div>
+						</div>
+						{/* Financial Management */}
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white'>
+							<div className='flex items-center gap-3 mb-3'>
+								<TrendingUp className='h-5 w-5 text-indigo-600' />
+								<h3 className='font-semibold text-gray-900'>Financial Management Suite</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Comprehensive financial tracking with invoicing, expense management, and reporting.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Automated invoicing and payment tracking</li>
+								<li>• Expense management and receipt scanning</li>
+								<li>• Financial reporting and tax preparation</li>
+								<li>• Integration with accounting software</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-indigo-600'>From $199/mo</span>
+								<Link href='/contact' className='text-indigo-600 hover:text-indigo-500'>Manage finances →</Link>
+							</div>
+						</div>
+					</div>
+					<div className='mt-12 text-center'>
+						<p className='text-sm text-gray-600 mb-4'>
+							All Micro SaaS solutions include free setup, training, and 30-day money-back guarantee.
+						</p>
+						<div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
+							<Link
+								href='/contact'
+								className='inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 transition-colors'
+							>
+								Get Custom Solution
+								<ArrowRight className='ml-2 h-4 w-4' />
+							</Link>
+							<Link
+								href='https://ziontechgroup.com'
+								target='_blank'
+								rel='noreferrer'
+								className='inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors'
+							>
+								View Live Demos
+								<Globe className='ml-2 h-4 w-4' />
+							</Link>
+						</div>
+					</div>
+				</div>
+			</section>
+			{/* Process Section */}
+			<section className='py-24 sm:py-32 bg-gray-50'>
+				<div className='mx-auto max-w-7xl px-6 lg:px-8'>
+					<div className='mx-auto max-w-2xl lg:text-center mb-16'>
+						<h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>
+							Our Delivery Process
+						</h2>
+						<p className='mt-6 text-lg leading-8 text-gray-600'>
+							We follow a proven methodology that ensures quality, speed, and successful outcomes.
+						</p>
+					</div>
+					<div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
+						<div className='text-center group'>
+							<div className='mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 group-hover:bg-blue-200 transition-colors mb-4'>
+								<span className='text-2xl font-bold text-blue-600'>1</span>
+							</div>
+							<h3 className='text-lg font-semibold text-gray-900 mb-2'>Discovery</h3>
+							<p className='text-gray-600'>Understand your needs and requirements</p>
+						</div>
+						<div className='text-center group'>
+							<div className='mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-green-100 group-hover:bg-green-200 transition-colors mb-4'>
+								<span className='text-2xl font-bold text-green-600'>2</span>
+							</div>
+							<h3 className='text-lg font-semibold text-gray-900 mb-2'>Strategy</h3>
+							<p className='text-gray-600'>Plan the solution architecture</p>
+						</div>
+						<div className='text-center group'>
+							<div className='mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-purple-100 group-hover:bg-purple-200 transition-colors mb-4'>
+								<span className='text-2xl font-bold text-purple-600'>3</span>
+							</div>
+							<h3 className='text-lg font-semibold text-gray-900 mb-2'>Development</h3>
+							<p className='text-gray-600'>Build and test the solution</p>
+						</div>
+						<div className='text-center group'>
+							<div className='mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-orange-100 group-hover:bg-orange-200 transition-colors mb-4'>
+								<span className='text-2xl font-bold text-orange-600'>4</span>
+							</div>
+							<h3 className='text-lg font-semibold text-gray-900 mb-2'>Deployment</h3>
+							<p className='text-gray-600'>Launch and monitor performance</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			{/* Pricing & Market Positioning Section */}
+			<section className='py-24 sm:py-32 bg-gray-50'>
+				<div className='mx-auto max-w-7xl px-6 lg:px-8'>
+					<div className='mx-auto max-w-2xl text-center mb-16'>
+						<h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>
+							Competitive Pricing & Market Leadership
+						</h2>
+						<p className='mt-6 text-lg leading-8 text-gray-600'>
+							Our pricing reflects the true value of cutting-edge technology solutions, with transparent costs and exceptional ROI.
+						</p>
+					</div>
+					
+					{/* Pricing Tiers */}
+					<div className='grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16'>
+						<div className='bg-white rounded-2xl border border-gray-200 p-8 shadow-sm hover:shadow-lg transition-all duration-300'>
+							<div className='text-center mb-6'>
+								<h3 className='text-xl font-semibold text-gray-900 mb-2'>Micro SaaS Solutions</h3>
+								<div className='text-3xl font-bold text-blue-600 mb-2'>$300 - $8,000</div>
+								<div className='text-sm text-gray-500'>per month</div>
+							</div>
+							<ul className='space-y-3 mb-6'>
+								<li className='flex items-center text-sm text-gray-600'>
+									<CheckCircle className='h-4 w-4 text-green-500 mr-2 flex-shrink-0' />
+									Rapid deployment (1-8 weeks)
+								</li>
+								<li className='flex items-center text-sm text-gray-600'>
+									<CheckCircle className='h-4 w-4 text-green-500 mr-2 flex-shrink-0' />
+									Industry-specific solutions
+								</li>
+								<li className='flex items-center text-sm text-gray-600'>
+									<CheckCircle className='h-4 w-4 text-green-500 mr-2 flex-shrink-0' />
+									AI-powered automation
+								</li>
+								<li className='flex items-center text-sm text-gray-600'>
+									<CheckCircle className='h-4 w-4 text-green-500 mr-2 flex-shrink-0' />
+									Scalable architecture
+								</li>
+							</ul>
+							<div className='text-center'>
+								<div className='text-xs text-gray-500 mb-2'>Market Average: $1,200 - $15,000/month</div>
+								<div className='text-sm font-medium text-green-600'>Save up to 60%</div>
+							</div>
+						</div>
 
-      <Section title="Micro SaaS Products" items={microSaaS} color="#3b82f6" />
-      <Section title="AI Services & Platforms" items={aiServices} color="#8b5cf6" />
-      <Section title="IT & Cloud Services" items={itServices} color="#22c55e" />
-      
-      {/* CTA Section */}
-      <section style={{ 
-        maxWidth: 1400, margin: '0 auto', padding: '60px 20px',
-        textAlign: 'center', background: 'white', marginTop: 40,
-        borderRadius: 24, boxShadow: '0 4px 24px rgba(0,0,0,0.06)'
-      }}>
-        <h2 style={{ 
-          fontSize: 32, fontWeight: 700, marginBottom: 16,
-          color: '#1e293b'
-        }}>Ready to Get Started?</h2>
-        <p style={{ 
-          fontSize: 18, color: '#64748b', marginBottom: 32,
-          maxWidth: 600, margin: '0 auto 32px auto'
-        }}>
-          Contact our experts to discuss your project requirements and discover 
-          how our innovative solutions can drive your business forward.
-        </p>
-        <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
-          <Link href="/contact" style={{
-            display: 'inline-block', 
-            background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', 
-            color: 'white', padding: '16px 32px', borderRadius: 12, 
-            fontWeight: 700, textDecoration: 'none', fontSize: 16,
-            transition: 'all 0.3s ease'
-          }}>Request a Quote</Link>
-          <a href="tel:+13024640950" style={{
-            display: 'inline-block', 
-            background: 'rgba(34, 197, 94, 0.1)', 
-            color: '#22c55e', padding: '16px 32px', borderRadius: 12, 
-            fontWeight: 700, textDecoration: 'none', fontSize: 16,
-            border: '2px solid #22c55e', transition: 'all 0.3s ease'
-          }}>Call +1 302 464 0950</a>
-        </div>
-      </section>
-    </main>
-  );
+						<div className='bg-white rounded-2xl border border-gray-200 p-8 shadow-sm hover:shadow-lg transition-all duration-300 ring-2 ring-blue-500'>
+							<div className='text-center mb-6'>
+								<div className='inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800 mb-2'>
+									Most Popular
+								</div>
+								<h3 className='text-xl font-semibold text-gray-900 mb-2'>AI Services</h3>
+								<div className='text-3xl font-bold text-blue-600 mb-2'>$1,500 - $75,000</div>
+								<div className='text-sm text-gray-500'>per month</div>
+							</div>
+							<ul className='space-y-3 mb-6'>
+								<li className='flex items-center text-sm text-gray-600'>
+									<CheckCircle className='h-4 w-4 text-green-500 mr-2 flex-shrink-0' />
+									Cutting-edge AI technology
+								</li>
+								<li className='flex items-center text-sm text-gray-600'>
+									<CheckCircle className='h-4 w-4 text-green-500 mr-2 flex-shrink-0' />
+									Custom model development
+								</li>
+								<li className='flex items-center text-sm text-gray-600'>
+									<CheckCircle className='h-4 w-4 text-green-500 mr-2 flex-shrink-0' />
+									Real-time processing
+								</li>
+								<li className='flex items-center text-sm text-gray-600'>
+									<CheckCircle className='h-4 w-4 text-green-500 mr-2 flex-shrink-0' />
+									Advanced analytics
+								</li>
+							</ul>
+							<div className='text-center'>
+								<div className='text-xs text-gray-500 mb-2'>Market Average: $5,000 - $100,000/month</div>
+								<div className='text-sm font-medium text-green-600'>Save up to 40%</div>
+							</div>
+						</div>
+
+						<div className='bg-white rounded-2xl border border-gray-200 p-8 shadow-sm hover:shadow-lg transition-all duration-300'>
+							<div className='text-center mb-6'>
+								<h3 className='text-xl font-semibold text-gray-900 mb-2'>IT Services</h3>
+								<div className='text-3xl font-bold text-blue-600 mb-2'>$4,000 - $150,000</div>
+								<div className='text-sm text-gray-500'>per month</div>
+							</div>
+							<ul className='space-y-3 mb-6'>
+								<li className='flex items-center text-sm text-gray-600'>
+									<CheckCircle className='h-4 w-4 text-green-500 mr-2 flex-shrink-0' />
+									Enterprise-grade solutions
+								</li>
+								<li className='flex items-center text-sm text-gray-600'>
+									<CheckCircle className='h-4 w-4 text-green-500 mr-2 flex-shrink-0' />
+									24/7 support & monitoring
+								</li>
+								<li className='flex items-center text-sm text-gray-600'>
+									<CheckCircle className='h-4 w-4 text-green-500 mr-2 flex-shrink-0' />
+									Advanced security
+								</li>
+								<li className='flex items-center text-sm text-gray-600'>
+									<CheckCircle className='h-4 w-4 text-green-500 mr-2 flex-shrink-0' />
+									Scalable infrastructure
+								</li>
+							</ul>
+							<div className='text-center'>
+								<div className='text-xs text-gray-500 mb-2'>Market Average: $8,000 - $200,000/month</div>
+								<div className='text-sm font-medium text-green-600'>Save up to 50%</div>
+							</div>
+						</div>
+					</div>
+
+					{/* Market Positioning */}
+					<div className='bg-white rounded-2xl border border-gray-200 p-8 shadow-sm'>
+						<div className='text-center mb-8'>
+							<h3 className='text-2xl font-bold text-gray-900 mb-4'>Why Choose Zion Tech Group?</h3>
+							<p className='text-lg text-gray-600 max-w-3xl mx-auto'>
+								We combine cutting-edge technology with proven expertise to deliver solutions that drive real business value.
+							</p>
+						</div>
+						
+						<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+							<div className='text-center'>
+								<div className='mx-auto flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100 mb-4'>
+									<Award className='h-6 w-6 text-blue-600' />
+								</div>
+								<h4 className='text-lg font-semibold text-gray-900 mb-2'>Industry Leaders</h4>
+								<p className='text-sm text-gray-600'>500+ successful projects across diverse industries</p>
+							</div>
+							<div className='text-center'>
+								<div className='mx-auto flex h-12 w-12 items-center justify-center rounded-lg bg-green-100 mb-4'>
+									<Zap className='h-6 w-6 text-green-600' />
+								</div>
+								<h4 className='text-lg font-semibold text-gray-900 mb-2'>Rapid Delivery</h4>
+								<p className='text-sm text-gray-600'>50% faster deployment than industry average</p>
+							</div>
+							<div className='text-center'>
+								<div className='mx-auto flex h-12 w-12 items-center justify-center rounded-lg bg-purple-100 mb-4'>
+									<Shield className='h-6 w-6 text-purple-600' />
+								</div>
+								<h4 className='text-lg font-semibold text-gray-900 mb-2'>Enterprise Security</h4>
+								<p className='text-sm text-gray-600'>99.9% uptime with enterprise-grade security</p>
+							</div>
+							<div className='text-center'>
+								<div className='mx-auto flex h-12 w-12 items-center justify-center rounded-lg bg-orange-100 mb-4'>
+									<TrendingUp className='h-6 w-6 text-orange-600' />
+								</div>
+								<h4 className='text-lg font-semibold text-gray-900 mb-2'>Proven ROI</h4>
+								<p className='text-sm text-gray-600'>Average 300% ROI within first year</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			{/* CTA Section */}
+			<section className='bg-gradient-to-r from-blue-600 to-purple-600 py-24 sm:py-32'>
+				<div className='mx-auto max-w-7xl px-6 lg:px-8'>
+					<div className='mx-auto max-w-2xl text-center'>
+						<h2 className='text-3xl font-bold tracking-tight text-white sm:text-4xl'>
+							Ready to get started?
+						</h2>
+						<p className='mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-100'>
+							Let&aposs discuss your project requirements and how we can help you achieve your goals.
+						</p>
+						<div className='mt-10 flex items-center justify-center gap-x-6'>
+							<Link
+								href='/contact'
+								className='group rounded-md bg-white px-8 py-4 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-all duration-200 hover:scale-105'
+								aria-label='Contact us to get started'
+							>
+								Contact Us
+								<ArrowRight className='ml-2 h-4 w-4 inline group-hover:translate-x-1 transition-transform' />
+							</Link>
+							<Link
+								href='/'
+								className='text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors group'
+								aria-label='Back to homepage'
+							>
+								Back to Home <span aria-hidden='true' className='group-hover:translate-x-1 transition-transform inline-block'>→</span>
+							</Link>
+						</div>
+					</div>
+				</div>
+			</section>
+		</PageTransition>
+		</Layout>
+	);
 }

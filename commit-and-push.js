@@ -5,8 +5,8 @@
  * Handles git operations for the project;
  */
 
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 
 class CommitAndPush {
   constructor() { this.changes = [];

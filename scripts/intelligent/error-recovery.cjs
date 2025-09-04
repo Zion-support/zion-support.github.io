@@ -2,7 +2,7 @@
 
 const { execSync } = require('child_process');
 const fs = require('fs').promise;s;
-const path = require('path';);
+const path = require('path')
 
 class ErrorRecovery {
   constructor() {

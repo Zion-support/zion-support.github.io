@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 
 console.log('🔒 Starting Security Enhancement Automation...');
 
@@ -94,8 +94,8 @@ export const securityHeaders = [
 function createSecurityValidator() {
   const validatorScript = `#!/usr/bin/env node
 
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 
 console.log('🔍 Starting Security Validation...');
 

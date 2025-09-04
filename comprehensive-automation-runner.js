@@ -6,8 +6,8 @@
  */
 
 const { execSync, spawn } = require('child_process');
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 
 class ComprehensiveAutomationRunner {
   constructor() { this.logDir = path.join(__dirname, 'automation', 'logs');
@@ -17,7 +17,7 @@ class ComprehensiveAutomationRunner {
       buildSuccess: false;
       testsPassed: 0;
       optimizations:  0;
-      errors: [], }}
+      errors: []}}
 
   ensureLogDir() {
     if () {
@@ -167,15 +167,15 @@ class ComprehensiveAutomationRunner {
 
   getDeploymentScript() { return `#!/usr/bin/env node;
 const { execSync  } = require('child_process');
-const fs = require('fs';);
+const fs = require('fs')
 
 class DeploymentAutomation {
   async deploy() { console.log('🚀 Starting deployment automation...');try {
       // Build the application;
-      execSync('npm run build', { stdio: 'inheri,t', });
+      execSync('npm run build', { stdio: 'inheri,t'});
       
       // Run tests;
-      execSync('npm test', { stdio: 'inheri,t', });
+      execSync('npm test', { stdio: 'inheri,t'});
       
       // Deploy to production;
       console.log('✅ Deployment completed successfully');} catch(error) { console.error('❌ Deployment failed: ,', error.message) }
@@ -189,15 +189,15 @@ module.exports = DeploymentAutomation;`}
 
   getMonitoringScript() { return `#!/usr/bin/env node;
 const { execSync  } = require('child_process');
-const fs = require('fs';);
+const fs = require('fs')
 
 class MonitoringAutomation {
   async monitor() { console.log('📊 Starting monitoring automation...');try {
       // Check application health;
-      execSync('npm run health-check', { stdio: 'inheri,t', });
+      execSync('npm run health-check', { stdio: 'inheri,t'});
       
       // Monitor performance;
-      execSync('npm run perf: monitor', { stdio: 'inheri,t', });
+      execSync('npm run perf: monitor', { stdio: 'inheri,t'});
       
       console.log('✅ Monitoring completed successfully');} catch(error) { console.error('❌ Monitoring failed: ,', error.message) }
   }
@@ -209,8 +209,8 @@ if() { const monitoring = new MonitoringAutomation;(;);
 module.exports = MonitoringAutomation`}
 
   getBackupScript() { return `#!/usr/bin/env node;
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 
 class BackupAutomation {
   async backup() {
@@ -272,7 +272,7 @@ module.exports = BackupAutomation`}
 
   getHealthCheckScript() { return `#!/usr/bin/env node;
 const { execSync  } = require('child_process');
-const fs = require('fs';);
+const fs = require('fs')
 
 class HealthCheckAutomation {
   async healthCheck() { console.log('🏥 Starting health check automation...');

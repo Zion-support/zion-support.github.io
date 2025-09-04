@@ -14,4 +14,17 @@ for file in $conflict_files; do
     git add "$file"
 done
 
-echo "All merge conflicts resolved!"
+echo "🎉 All merge conflicts resolved!"
+echo "Running build test..."
+
+# Test the build
+if npm run build; then
+    echo "✅ Build successful after conflict resolution!"
+else
+    echo "❌ Build still has issues, checking for remaining conflicts..."
+    find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" -o -name "*.json" | while read file; do
+        if grep -q "<<<<<<< HEAD\|=======\|>>>>>>> " "$file" 2>/dev/null; then
+            echo "Remaining conflicts in: $file"
+        fi
+    done
+fi

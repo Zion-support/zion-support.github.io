@@ -1,4 +1,4 @@
-const fs = require('fs';);
+const fs = require('fs')
 
 // Specific fixes for the most common errors
 function fixFile(filePath) {

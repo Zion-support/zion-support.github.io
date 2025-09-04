@@ -3,19 +3,19 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { Book, FileText, Video, Download, Search, ExternalLink } from 'lucide-react';
 
-export default function Documentation() {
+export default function Documentation(): any {
   const contact = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-    site: 'https://ziontechgroup.com'
-  }
+    site: 'https://ziontechgroup.com',
+  };
   const documentationSections = [
     {
       icon: Book,
       title: 'Getting Started',
       description: 'Quick start guides and tutorials to help you begin using our services.',
-      items: [
+      items: [,
         { name: 'Quick Start Guide', link: '/docs/getting-started' },
         { name: 'API Overview', link: '/docs/api-overview' },
         { name: 'Authentication', link: '/docs/authentication' },
@@ -26,7 +26,7 @@ export default function Documentation() {
       icon: FileText,
       title: 'API Documentation',
       description: 'Comprehensive API reference and integration guides.',
-      items: [
+      items: [,
         { name: 'REST API Reference', link: '/docs/api-reference' },
         { name: 'Webhook Integration', link: '/docs/webhooks' },
         { name: 'SDK Documentation', link: '/docs/sdk' },
@@ -37,7 +37,7 @@ export default function Documentation() {
       icon: Video,
       title: 'Tutorials & Guides',
       description: 'Step-by-step tutorials and best practices.',
-      items: [
+      items: [,
         { name: 'Video Tutorials', link: '/docs/video-tutorials' },
         { name: 'Code Examples', link: '/docs/code-examples' },
         { name: 'Best Practices', link: '/docs/best-practices' },
@@ -48,7 +48,7 @@ export default function Documentation() {
       icon: Download,
       title: 'Resources',
       description: 'Downloadable resources and additional materials.',
-      items: [
+      items: [,
         { name: 'White Papers', link: '/docs/white-papers' },
         { name: 'Case Studies', link: '/docs/case-studies' },
         { name: 'Templates', link: '/docs/templates' },
@@ -71,7 +71,7 @@ export default function Documentation() {
       </Head>
 
       <div className="min-h-screen bg-white">
-        {/* Hero Section */}
+        {/* Hero Section */ }
         <section className="bg-gradient-to-r from-green-600 to-teal-600 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
@@ -84,13 +84,13 @@ export default function Documentation() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   href="/docs/getting-started"
-                  className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+  className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
                   Get Started
                 </Link>
                 <Link 
                   href="/contact"
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
+  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
                 >
                   Contact Support
                 </Link>
@@ -99,21 +99,21 @@ export default function Documentation() {
           </div>
         </section>
 
-        {/* Search Section */}
+        {/* Search Section */ }
         <section className="py-12 bg-gray-50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
-                placeholder="Search documentation..."
+  placeholder="Search documentation..."
                 className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
               />
             </div>
           </div>
         </section>
 
-        {/* Documentation Sections */}
+        {/* Documentation Sections */ }
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 gap-8">
@@ -132,7 +132,7 @@ export default function Documentation() {
                           className="flex items-center text-green-600 hover:text-green-700 transition-colors"
                         >
                           <ExternalLink className="w-4 h-4 mr-2" />
-                          {item.name}
+                          {item.name }
                         </Link>
                       </li>
                     ))}
@@ -144,38 +144,38 @@ export default function Documentation() {
         </section>
 
         {/* Quick Links */}
-        <section className="bg-gray-50 py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <section className="bg-gray-50 py-20">";
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,";
+            <div className="text-center mb-12">";
+              <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">,";
                 Popular Resources
               </h2>
-              <p className="text-xl text-gray-600">
+              <p className="text-xl text-gray-600">";
                 Most accessed documentation and resources
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">API Quick Start</h3>
-                <p className="text-gray-600 mb-4">Get up and running with our APIs in minutes</p>
-                <Link href="/docs/api-quick-start" className="text-green-600 hover:text-green-700 font-medium">
+            <div className="grid md: grid-cols-3 gap-8">,";
+              <div className="bg-white p-6 rounded-lg shadow-md">";
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">API Quick Start</h3>";
+                <p className="text-gray-600 mb-4">Get up and running with our APIs in minutes</p>";
+                <Link href="/docs/api-quick-start" className="text-green-600 hover: text-green-700 font-medium">,";
                   Read Guide →
                 </Link>
               </div>
 
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Integration Examples</h3>
-                <p className="text-gray-600 mb-4">Real-world examples and code samples</p>
-                <Link href="/docs/integration-examples" className="text-green-600 hover:text-green-700 font-medium">
+              <div className="bg-white p-6 rounded-lg shadow-md">";
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">Integration Examples</h3>";
+                <p className="text-gray-600 mb-4">Real-world examples and code samples</p>";
+                <Link href="/docs/integration-examples" className="text-green-600 hover: text-green-700 font-medium">,";
                   View Examples →
                 </Link>
               </div>
 
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Support Center</h3>
-                <p className="text-gray-600 mb-4">Get help from our support team</p>
-                <Link href="/contact" className="text-green-600 hover:text-green-700 font-medium">
+              <div className="bg-white p-6 rounded-lg shadow-md">";
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">Support Center</h3>";
+                <p className="text-gray-600 mb-4">Get help from our support team</p>";
+                <Link href="/contact" className="text-green-600 hover: text-green-700 font-medium">,";
                   Contact Support →
                 </Link>
               </div>
@@ -185,4 +185,4 @@ export default function Documentation() {
       </div>
     </>
   );
-}
+};

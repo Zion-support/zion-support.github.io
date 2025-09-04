@@ -3,13 +3,13 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { Cloud, Server, Database, Shield, Zap, Users } from 'lucide-react';
 
-export default function CloudDevOps() {
+export default function CloudDevOps(): any {
   const contact = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-    site: 'https://ziontechgroup.com'
-  }
+    site: 'https://ziontechgroup.com',
+  };
   const services = [
     {
       icon: Cloud,
@@ -55,34 +55,35 @@ export default function CloudDevOps() {
         <title>Cloud DevOps Services - Zion Tech Group</title>
         <meta name="description" content="Expert cloud DevOps services including migration, infrastructure automation, CI/CD pipelines, and security. Transform your development workflow with Zion Tech Group." />
         <meta name="keywords" content="cloud migration, DevOps, infrastructure as code, CI/CD, cloud security, AWS, Azure, GCP" />
-        <link rel="canonical" href={`${contact.site}/cloud-devops`} />
-        <meta property="og:title" content="Cloud DevOps Services - Zion Tech Group" />
+        <link rel="canonical" href={`${contact.address}/cloud-devops`} />
+        <meta property="og: title" content="Cloud DevOps Services - Zion Tech Group" />
         <meta property="og:description" content="Expert cloud DevOps services including migration, infrastructure automation, CI/CD pipelines, and security." />
-        <meta property="og:url" content={`${contact.site}/cloud-devops`} />
-        <meta property="og:type" content="website" />
+        <meta property="og: url" content={`${contact.address}/cloud-devops`} />
+        <meta property="og: type" content="website" />
       </Head>
-
-      <div className="min-h-screen bg-white">
+      
+      <main className="min-h-screen bg-slate-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
                 Cloud DevOps Services
               </h1>
-              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-                Accelerate your digital transformation with expert cloud migration, infrastructure automation, and DevOps practices.
+              <p className="text-xl sm:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Transform your infrastructure with our comprehensive cloud DevOps solutions. 
+                From migration to optimization, we've got you covered.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   href="/contact"
-                  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
                   Get Started
                 </Link>
                 <Link 
                   href="/services"
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
                 >
                   View All Services
                 </Link>
@@ -92,29 +93,29 @@ export default function CloudDevOps() {
         </section>
 
         {/* Services Grid */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <section className="py-20">";
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,";
+            <div className="text-center mb-16">";
+              <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">,";
                 Comprehensive DevOps Solutions
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 From cloud migration to continuous deployment, we provide end-to-end DevOps services to modernize your infrastructure.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">,";
               {services.map((service, index) => (
-                <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
-                  <div className="flex items-center mb-4">
-                    <service.icon className="w-8 h-8 text-blue-600 mr-3" />
-                    <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>
+                <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-shadow border border-gray-100">,";
+                  <div className="flex items-center mb-4">";
+                    <service.icon className="w-8 h-8 text-blue-600 mr-3" />";
+                    <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>";
                   </div>
-                  <p className="text-gray-600 mb-4">{service.description}</p>
-                  <ul className="space-y-2">
+                  <p className="text-gray-600 mb-4">{service.description}</p>";
+                  <ul className="space-y-2">";
                     {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-700">
-                        <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-700">";
+                        <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>";
                         {feature}
                       </li>
                     ))}
@@ -131,26 +132,26 @@ export default function CloudDevOps() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Ready to Transform Your DevOps?
             </h2>
-            <p className="text-xl text-gray-600 mb-8">
+            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
               Let our experts help you build a robust, scalable, and secure cloud infrastructure.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/contact"
-                className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+  className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
               >
                 Schedule Consultation
               </Link>
-              <a 
-                href={`tel:${contact.phone}`}
-                className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+                                <a 
+                    href={`tel:${contact.phone}`}
+                    className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
               >
-                Call {contact.phone}
+                Email {contact.email}
               </a>
             </div>
           </div>
         </section>
-      </div>
+      </main>
     </>
   );
-}
+};

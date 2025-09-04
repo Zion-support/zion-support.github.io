@@ -1,12 +1,13 @@
 {
-  "timestamp": "2025-09-04T05:43:32.818Z",
+  "timestamp": "2025-09-04T02:55:27.818Z",
   "duration": "0s",
   "results": {
     "automation": {
       "success": true
     },
     "testing": {
-      "success": true
+      "success": false,
+      "error": "Class constructor TestSuite cannot be invoked without 'new'"
     },
     "git": {
       "success": true

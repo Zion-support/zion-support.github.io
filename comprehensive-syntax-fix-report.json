@@ -1,6 +1,6 @@
 {
-  "timestamp": "2025-09-03T21:13:03.742Z",
-  "totalFilesFixed": 28,
+  "timestamp": "2025-09-04T00:50:47.378Z",
+  "totalFilesFixed": 30,
   "totalErrors": 0,
   "fixedFiles": [
     "src/data/realMicroSaasServices2025.ts",
@@ -11,6 +11,8 @@
     "pages/cloud-devops.tsx",
     "pages/contact.tsx",
     "pages/cybersecurity.tsx",
+    "pages/docs/api-quick-start.tsx",
+    "pages/docs/integration-examples.tsx",
     "pages/docs.tsx",
     "pages/faq.tsx",
     "pages/index.tsx",
@@ -32,5 +34,9 @@
     "components/ThemeToggle.tsx",
     "scripts/performance-monitor.js"
   ],
-  "errors": []
+  "errors": [],
+  "summary": {
+    "success": true,
+    "successRate": 100
+  }
 }

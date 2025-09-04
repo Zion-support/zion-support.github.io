@@ -1,42 +1,28 @@
 {
-  "timestamp": "2025-09-04T03:00:22.167Z",
+  "timestamp": "2025-09-04T08:32:20.449Z",
   "optimizations": [
     {
       "type": "bundle-analysis",
-      "status": "completed",
-      "details": {
-        "totalSize": 104448,
-        "pageCount": 46
-      }
+      "status": "skipped"
     },
     {
       "type": "image-optimization",
-      "status": "completed",
-      "filesAnalyzed": 12
+      "status": "skipped"
     },
     {
       "type": "css-optimization",
-      "status": "completed",
-      "totalSize": 58389
+      "status": "skipped"
     },
     {
       "type": "javascript-optimization",
-      "status": "completed",
-      "totalSize": 893933,
-      "componentCount": 22
+      "status": "skipped"
     }
   ],
-  "recommendations": [
-    {
-      "type": "css-optimization",
-      "priority": "medium",
-      "message": "CSS bundle size is 57.02KB. Consider purging unused CSS."
-    }
-  ],
+  "recommendations": [],
   "summary": {
-    "totalOptimizations": 4,
+    "totalOptimizations": 3,
     "highPriorityRecommendations": 0,
-    "mediumPriorityRecommendations": 1,
+    "mediumPriorityRecommendations": 0,
     "lowPriorityRecommendations": 0
   }
 }

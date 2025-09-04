@@ -1,22 +1,25 @@
 import React, { Component, type ErrorInfo, type ReactNode } from 'react';
 
 interface Props {
-  children: ReactNode;
+  children: ReactNode;,
   fallback?: ReactNode;
-}
+ }
 
 interface State {
-  hasError: boolean;
+  hasError: boolean;,
   error?: Error;
-}
+ }
 
 class ErrorBoundary extends Component<Props, State> {
   public state: State = {
     hasError: false
-  };
-
-  public static getDerivedStateFromError(): State {
-    return { hasError: true };
+  }
+  public static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error }
+  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    if (typeof console !== 'undefined') {
+      console.error('ErrorBoundary caught an error:', error, errorInfo);
+    }
   }
 
   public componentDidCatch(_error: Error, _errorInfo: ErrorInfo) {
@@ -41,23 +44,31 @@ class ErrorBoundary extends Component<Props, State> {
             </p>
             <div className="space-y-3">
               <button
-                onClick={() => window.location.reload()}
+                onClick={() => {
+                  if (typeof window !== 'undefined') {
+                    window.location.reload();
+                  }
+                }}
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
               >
                 Refresh Page
               </button>
               <button
-                onClick={() => (window.location.href = '/')}
+                onClick={() => {
+                  if (typeof window !== 'undefined') {
+                    window.location.href = '/';
+                  }
+                }}
                 className="w-full bg-slate-800 hover:bg-slate-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
               >
                 Go Home
               </button>
             </div>
-            {process.env.NODE_ENV === 'development' && this.state.error && (
+            {typeof process !== 'undefined' && process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mt-6 text-left">
                 <summary className="text-slate-400 cursor-pointer">Error Details</summary>
                 <pre className="mt-2 text-xs text-red-400 bg-slate-800 p-3 rounded overflow-auto">
-                  {this.state.error.stack}
+                  {this.state.error.stack }
                 </pre>
               </details>
             )}
@@ -68,6 +79,4 @@ class ErrorBoundary extends Component<Props, State> {
 
     return this.props.children;
   }
-}
-
 export default ErrorBoundary;

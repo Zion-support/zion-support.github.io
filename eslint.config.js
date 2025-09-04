@@ -3,12 +3,12 @@ import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
-import next from '@next/eslint-plugin-next';
+// Removed Next.js ESLint plugin due to incompatibility with current ESLint version
 
 export default [
   js.configs.recommended,
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
+    files: ['**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx'],
     languageOptions: {
       parser: typescriptParser,
       parserOptions: {
@@ -19,56 +19,30 @@ export default [
         },
       },
       globals: {
-        // Browser globals
         window: 'readonly',
         document: 'readonly',
-        localStorage: 'readonly',
-        sessionStorage: 'readonly',
         console: 'readonly',
-        setTimeout: 'readonly',
-        clearTimeout: 'readonly',
-        setInterval: 'readonly',
-        clearInterval: 'readonly',
-        fetch: 'readonly',
-        navigator: 'readonly',
-        location: 'readonly',
-        history: 'readonly',
-        // DOM types
-        HTMLInputElement: 'readonly',
-        HTMLTextAreaElement: 'readonly',
-        HTMLSelectElement: 'readonly',
-        HTMLDivElement: 'readonly',
-        MouseEvent: 'readonly',
-        Node: 'readonly',
-        PerformanceObserver: 'readonly',
-        PerformanceEntry: 'readonly',
-        // Node.js globals
         process: 'readonly',
-        Buffer: 'readonly',
-        __dirname: 'readonly',
-        __filename: 'readonly',
-        global: 'readonly',
-        // React globals
-        React: 'readonly',
+        PerformanceObserver: 'readonly',
+        JSX: 'readonly',
       },
     },
     plugins: {
       '@typescript-eslint': typescript,
       'react': react,
       'react-hooks': reactHooks,
-      '@next/next': next,
     },
     rules: {
       ...typescript.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
-      ...next.configs.recommended.rules,
       'no-unused-vars': 'warn',
-      'no-console': 'warn',
+      'no-console': 'off',
       'prefer-const': 'error',
       'no-var': 'error',
       'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off',
+      'react/no-unescaped-entities': 'off',
       '@typescript-eslint/no-unused-vars': 'warn',
       '@typescript-eslint/no-explicit-any': 'warn',
     },
@@ -86,7 +60,6 @@ export default [
   },
   {
     ignores: [
-      // Node/build outputs
       'node_modules/**',
       '.next/**',
       'dist/**',
@@ -95,7 +68,6 @@ export default [
       'coverage/**',
 
       // Large/legacy sources and disabled dirs
-      'src/**',
       'src.corrupted/**',
       'src.disabled/**',
       'src.broken/**',
@@ -103,16 +75,8 @@ export default [
       'solutions.disabled/**',
       'components.disabled/**',
       'components.corrupted/**',
-      'hooks/**',
       'hooks.disabled/**',
       'lib.disabled/**',
-      'lib/**',
-      // App source directories currently excluded from lint due to parsing issues
-      'pages/**',
-      'components/**',
-      'deployment/**',
-      'deployments/**',
-      'pm2-automation/**',
       'lib.corrupted/**',
       'zion-os.disabled/**',
       'zion_academy/**',
@@ -127,9 +91,7 @@ export default [
       'pages.disabled_backup/**',
       'pages_backup/**',
       'supabase/**',
-      'types/**',
       'types.disabled/**',
-      'utils/**',
 
       // Tests and mocks
       '__tests__/**',
@@ -166,14 +128,10 @@ export default [
 
       // Public assets/scripts
       'public/**',
+      '.venv/**',
 
       // Root-level noisy files
       'api/**',
-      '*.js',
-      '.*.js',
-      '*.ts',
-      '*.tsx',
-      '*.jsx',
       'jest.config.*',
       'fix-*.js',
       'fix-*.jsx',

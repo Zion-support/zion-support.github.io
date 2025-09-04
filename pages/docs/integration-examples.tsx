@@ -6,344 +6,310 @@ export default function IntegrationExamples() {
     <>
       <Head>
         <title>Integration Examples - Zion Tech Group Documentation</title>
-        <meta name="description" content="Real-world integration examples for Zion Tech Group services. Learn how to integrate our APIs into your applications." />
-        <link rel="canonical" href="https://ziontechgroup.com/docs/integration-examples" />
+        <meta name="description"
+  content="Real-world integration examples for Zion Tech Group services. Learn how to integrate our APIs into your applications." />
+        <link rel="canonical"
+  href="https://ziontechgroup.com/docs/integration-examples" />
       </Head>
       
-      <div style={{ maxWidth: 1200, margin: '40px 20px', padding: '0 20px' }}>
-        <div style={{ marginBottom: 40 }}>
-          <Link href="/docs" style={{ color: '#3b82f6', textDecoration: 'none', marginBottom: 20, display: 'inline-block' }}>
-            ← Back to Documentation
-          </Link>
-          <h1 style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: 16, background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-            Integration Examples
-          </h1>
-          <p style={{ fontSize: '1.1rem', opacity: '0.8', lineHeight: '1.6'}}>
-            Real-world examples showing how to integrate Zion Tech Group services into your applications. Choose your preferred language and framework.
-          </p>
-        </div>
+      <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+        {/* Header */}
+        <section className="py-20 px-4 text-center">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
+              Integration Examples
+            </h1>
+            <p className="text-xl md:text-2xl text-slate-300 mb-8">
+              Real-world examples of integrating Zion Tech Group services
+            </p>
+          </div>
+        </section>
 
-        <div style={{ display: 'grid', gap: 32 }}>
-          {/* JavaScript/Node.js */}
-          <section style={{ background: '#1e293b', padding: 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)'  }}>
-            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 16  }}>🟨 JavaScript/Node.js</h2>
-            
-            <div style={{ background: '#1e293b', padding: 20, borderRadius: 8, marginBottom: 20  }}>
-              <h3 style={{ fontWeight: 600, marginBottom: 12, color: '#fbbf24' }}>Basic Service Integration</h3>
-              <pre style={{ background: '#0f172a', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem' }}>{`
+        {/* Content */}
+        <section className="py-16 px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="prose prose-invert max-w-none">
+              <h2 className="text-3xl font-bold mb-6">Cloud Cost Guard Integration</h2>
+              
+              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 mb-8">
+                <h3 className="text-xl font-bold mb-4 text-blue-400">AWS Cost Monitoring</h3>
+                <p className="text-slate-300 mb-4">
+                  Monitor AWS costs and get alerts for unusual spending:
+                </p>
+                <pre className="bg-slate-800 p-4 rounded-lg overflow-x-auto">
+                  <code className="text-green-400">
+{`// Node.js example
 const axios = require('axios');
 
-class ZionTechClient {
-  constructor(apiKey) {
-    this.apiKey = apiKey;
-    this.baseURL = 'https://api.ziontechgroup.com/v1';
-  }
-
-  async getServices() {
-    try {
-      const response = await axios.get(\`${'${this.baseURL}'}\/services\`, {
+async function monitorAWSCosts() {
+  try {
+    const response = await axios.get(
+      'https://api.ziontechgroup.com/v1/cloud-cost-guard/aws/costs',
+      {
         headers: {
-          'Authorization': \`Bearer ${'${this.apiKey}'}\`,
+          'Authorization': 'Bearer YOUR_API_KEY',
           'Content-Type': 'application/json'
+        },
+        params: {
+          period: 'daily',
+          threshold: 1000 // Alert if daily cost exceeds $1000
         }
-      });
-      return response.data;
-    } catch (error) {
-      console.error('Error fetching services:', error.response?.data || error.message);
-      throw error;
+      }
+    );
+    
+    const { costs, anomalies, recommendations } = response.data;
+    
+    if (anomalies.length > 0) {
+      console.log('Cost anomalies detected:', anomalies);
+      // Send alert to your team
+      await sendSlackAlert(anomalies);
     }
-  }
-
-  async requestQuote(serviceData) {
-    try {
-      const response = await axios.post(\`${'${this.baseURL}'}\/quotes\`, serviceData, {
-        headers: {
-          'Authorization': \`Bearer ${'${this.apiKey}'}\`,
-          'Content-Type': 'application/json'
-        }
-      });
-      return response.data;
-    } catch (error) {
-      console.error('Error requesting quote:', error.response?.data || error.message);
-      throw error;
-    }
+    
+    console.log('Cost optimization recommendations:', recommendations);
+  } catch (error) {
+    console.error('Error monitoring costs:', error);
   }
 }
 
-// Usage
-const client = new ZionTechClient('YOUR_API_KEY');
-client.getServices().then(services => {
-  console.log('Available services:', services);
-});
-`}
-              </pre>
-            </div>
-          </section>
+async function sendSlackAlert(anomalies) {
+  // Implementation for sending Slack alerts
+  console.log('Sending Slack alert for cost anomalies');
+}`}
+                  </code>
+                </pre>
+              </div>
 
-          {/* Python */}
-          <section style={{ background: '#1e293b', padding: 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)'  }}>
-            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 16  }}>🐍 Python</h2>
-            
-            <div style={{ background: '#1e293b', padding: 20, borderRadius: 8, marginBottom: 20  }}>
-              <h3 style={{ fontWeight: 600, marginBottom: 12, color: '#10b981' }}>AI Services Integration</h3>
-              <pre style={{ background: '#0f172a', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem' }}>{`
-import requests
-import json
+              <h2 className="text-3xl font-bold mb-6">AI Code Review Integration</h2>
+              
+              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 mb-8">
+                <h3 className="text-xl font-bold mb-4 text-purple-400">GitHub Webhook Integration</h3>
+                <p className="text-slate-300 mb-4">
+                  Automatically review code when pull requests are created:
+                </p>
+                <pre className="bg-slate-800 p-4 rounded-lg overflow-x-auto">
+                  <code className="text-green-400">
+{`// Express.js webhook handler
+const express = require('express');
+const axios = require('axios');
+const app = express();
 
-class ZionTechAI:
-    def __init__(self, api_key):
-        self.api_key = api_key
-        self.base_url = 'https://api.ziontechgroup.com/v1'
-        self.headers = {
-            'Authorization': f'Bearer {api_key}',
-            'Content-Type': 'application/json'
-        }
-    
-    def process_text(self, text, service_type='analysis'):
-        """Process text using AI services"""
-        payload = {
-            'text': text,
-            'service_type': service_type,
-            'options': {
-                'language': 'en',
-                'format': 'json'
-            }
-        }
-        try:
-            response = requests.post(
-                f'{self.base_url}/ai/process',
-                headers=self.headers,
-                json=payload
-            )
-            response.raise_for_status()
-            return response.json()
-        except requests.exceptions.RequestException as e:
-            print(f'Error processing text: {e}')
-            return None
-    
-    def generate_content(self, prompt, model='gpt-4'):
-        """Generate content using AI models"""
-        payload = {
-            'prompt': prompt,
-            'model': model,
-            'max_tokens': 1000,
-            'temperature': 0.7
-        }
-        
-        try:
-            response = requests.post(
-                f'{self.base_url}/ai/generate',
-                headers=self.headers,
-                json=payload
-            )
-            response.raise_for_status()
-            return response.json()
-        except requests.exceptions.RequestException as e:
-            print(f'Error generating content: {e}')
-            return None
+app.use(express.json());
 
-# Usage
-ai_client = ZionTechAI('YOUR_API_KEY')
-result = ai_client.process_text('Analyze this business data...')
-print(result)
-`}
-              </pre>
-            </div>
-          </section>
-
-          {/* React/Next.js */}
-          <section style={{ background: '#1e293b', padding: 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)'  }}>
-            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 16  }}>⚛️ React/Next.js</h2>
-            
-            <div style={{ background: '#1e293b', padding: 20, borderRadius: 8, marginBottom: 20  }}>
-              <h3 style={{ fontWeight: 600, marginBottom: 12, color: '#61dafb' }}>Service Catalog Component</h3>
-              <pre style={{ background: '#0f172a', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem' }}>{`
-import { useState, useEffect } from 'react';
-
-const ServiceCatalog = () => {
-  const [services, setServices] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const fetchServices = async () => {
-      try {
-        const response = await fetch('/api/ziontech/services', {
+app.post('/webhook/github', async (req, res) => {
+  const { action, pull_request } = req.body;
+  
+  if (action === 'opened' || action === 'synchronize') {
+    try {
+      // Get the diff from GitHub
+      const diff = await getPullRequestDiff(pull_request.diff_url);
+      
+      // Send to AI Code Review service
+      const reviewResponse = await axios.post(
+        'https://api.ziontechgroup.com/v1/ai-code-review/analyze',
+        {
+          code: diff,
+          language: detectLanguage(diff),
+          rules: ['security', 'performance', 'best-practices']
+        },
+        {
           headers: {
-            'Authorization': 'Bearer ' + process.env.NEXT_PUBLIC_ZIONTECH_API_KEY,
+            'Authorization': 'Bearer YOUR_API_KEY',
             'Content-Type': 'application/json'
           }
-        });
-        
-        if (!response.ok) {
-          throw new Error('Failed to fetch services');
         }
-        
-        const data = await response.json();
-        setServices(data.data);
-      } catch (err: any) {
-        setError(err.message);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchServices();
-  }, []);
+      );
+      
+      const { issues, suggestions, score } = reviewResponse.data;
+      
+      // Post review as GitHub comment
+      await postGitHubComment(pull_request.number, {
+        body: generateReviewComment(issues, suggestions, score)
+      });
+      
+      res.status(200).send('Review completed');
+    } catch (error) {
+      console.error('Error reviewing code:', error);
+      res.status(500).send('Review failed');
+    }
+  }
+});
 
-  if (loading) return <div>Loading services...</div>;
-  if (error) return <div>Error: {error}</div>;
+function generateReviewComment(issues, suggestions, score) {
+  let comment = \`## AI Code Review Results\\n\\n\`;
+  comment += \`**Overall Score: \${score}/100**\\n\\n\`;
+  
+  if (issues.length > 0) {
+    comment += \`### Issues Found (\${issues.length})\\n\`;
+    issues.forEach(issue => {
+      comment += \`- **\${issue.severity}**: \${issue.message}\\n\`;
+    });
+  }
+  
+  if (suggestions.length > 0) {
+    comment += \`\\n### Suggestions\\n\`;
+    suggestions.forEach(suggestion => {
+      comment += \`- \${suggestion}\\n\`;
+    });
+  }
+  
+  return comment;
+}`}
+                  </code>
+                </pre>
+              </div>
+
+              <h2 className="text-3xl font-bold mb-6">Smart Invoice Processing</h2>
+              
+              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 mb-8">
+                <h3 className="text-xl font-bold mb-4 text-green-400">Document Upload and Processing</h3>
+                <p className="text-slate-300 mb-4">
+                  Upload invoices and automatically extract data:
+                </p>
+                <pre className="bg-slate-800 p-4 rounded-lg overflow-x-auto">
+                  <code className="text-green-400">
+{`// React component for invoice upload
+import React, { useState } from 'react';
+import axios from 'axios';
+
+function InvoiceUpload() {
+  const [file, setFile] = useState(null);
+  const [processing, setProcessing] = useState(false);
+  const [result, setResult] = useState(null);
+
+  const handleFileUpload = async (event) => {
+    const selectedFile = event.target.files[0];
+    setFile(selectedFile);
+    
+    if (selectedFile) {
+      setProcessing(true);
+      
+      const formData = new FormData();
+      formData.append('invoice', selectedFile);
+      
+      try {
+        const response = await axios.post(
+          'https://api.ziontechgroup.com/v1/smart-invoice/process',
+          formData,
+          {
+            headers: {
+              'Authorization': 'Bearer YOUR_API_KEY',
+              'Content-Type': 'multipart/form-data'
+            }
+          }
+        );
+        
+        setResult(response.data);
+      } catch (error) {
+        console.error('Error processing invoice:', error);
+      } finally {
+        setProcessing(false);
+      }
+    }
+  };
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {services.map((service: any) => (
-        <div key={service.id} className="bg-slate-800 p-6 rounded-lg border border-white/10">
-          <h3 className="text-xl font-semibold mb-2">{service.name}</h3>
-          <p className="text-gray-300 mb-4">{service.description}</p>
-          <div className="flex gap-2">
-            <button className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded text-sm">
-              Learn More
-            </button>
-            <button className="px-4 py-2 bg-slate-700 hover:bg-slate-600 rounded text-sm">
-              Get Quote
-            </button>
-          </div>
+    <div className="p-6">
+      <h2>Invoice Processing</h2>
+      <input
+        type="file"
+        accept=".pdf,.jpg,.png"
+        onChange={handleFileUpload}
+        className="mb-4"
+      />
+      
+      {processing && <p>Processing invoice...</p>}
+      
+      {result && (
+        <div className="mt-4 p-4 bg-gray-100 rounded">
+          <h3>Extracted Data:</h3>
+          <ul>
+            <li>Vendor: \${result.vendor}</li>
+            <li>Amount: $\${result.amount}</li>
+            <li>Date: \${result.date}</li>
+            <li>Invoice Number: \${result.invoiceNumber}</li>
+          </ul>
         </div>
-      ))}
+      )}
     </div>
   );
+}`}
+                  </code>
+                </pre>
+              </div>
+
+              <h2 className="text-3xl font-bold mb-6">Webhook Configuration</h2>
+              
+              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
+                <h3 className="text-xl font-bold mb-4 text-yellow-400">Setting Up Webhooks</h3>
+                <p className="text-slate-300 mb-4">
+                  Configure webhooks to receive real-time updates from our services:
+                </p>
+                <pre className="bg-slate-800 p-4 rounded-lg overflow-x-auto">
+                  <code className="text-green-400">
+{`// Configure webhook endpoint
+const webhookConfig = {
+  url: 'https://your-app.com/webhooks/ziontechgroup',
+  events: ['cost_anomaly', 'code_review_complete', 'invoice_processed'],
+  secret: 'your-webhook-secret'
 };
 
-export default ServiceCatalog;
-`}
-              </pre>
-            </div>
-          </section>
+// Register webhook
+await axios.post(
+  'https://api.ziontechgroup.com/v1/webhooks',
+  webhookConfig,
+  {
+    headers: {
+      'Authorization': 'Bearer YOUR_API_KEY',
+      'Content-Type': 'application/json'
+    }
+  }
+);
 
-          {/* PHP */}
-          <section style={{ background: '#1e293b', padding: 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)'  }}>
-            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 16  }}>🐘 PHP</h2>
-            
-            <div style={{ background: '#1e293b', padding: 20, borderRadius: 8, marginBottom: 20  }}>
-              <h3 style={{ fontWeight: 600, marginBottom: 12, color: '#8b5cf6' }}>WordPress Plugin Integration</h3>
-              <pre style={{ background: '#0f172a', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem' }}>{`
-<?php
-class ZionTechWordPress {
-    private $api_key;
-    private $base_url = 'https://api.ziontechgroup.com/v1';
-    
-    public function __construct($api_key) {
-        $this->api_key = $api_key;
-    }
-    
-    public function get_services() {
-        $url = $this->base_url . '/services';
-        
-        $args = array(
-            'headers' => array(
-                'Authorization' => 'Bearer ' . $this->api_key,
-                'Content-Type' => 'application/json'
-            )
-        );
-        
-        $response = wp_remote_get($url, $args);
-        
-        if (is_wp_error($response)) {
-            return false;
-        }
-        
-        $body = wp_remote_retrieve_body($response);
-        return json_decode($body, true);
-    }
-    
-    public function submit_quote_request($data) {
-        $url = $this->base_url . '/quotes';
-        
-        $args = array(
-            'headers' => array(
-                'Authorization' => 'Bearer ' . $this->api_key,
-                'Content-Type' => 'application/json'
-            ),
-            'body' => json_encode($data)
-        );
-        
-        $response = wp_remote_post($url, $args);
-        
-        if (is_wp_error($response)) {
-            return false;
-        }
-        
-        $body = wp_remote_retrieve_body($response);
-        return json_decode($body, true);
-    }
-// Usage in WordPress
-$ziontech = new ZionTechWordPress(get_option('ziontech_api_key'));
-$services = $ziontech->get_services();
-
-if ($services && $services['success']) {
-    foreach ($services['data'] as $service) {
-        echo '<div class="service-item">';
-        echo '<h3>' . esc_html($service['name']) . '</h3>';
-        echo '<p>' . esc_html($service['description']) . '</p>';
-        echo '</div>';
-    }
-}
-?>
-`}
-              </pre>
-            </div>
-          </section>
-
-          {/* Best Practices */}
-          <section style={{ background: '#1e293b', padding: 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)'  }}>
-            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 24  }}>✨ Best Practices</h2>
-            <div style={{ display: 'grid', gap: 20 }}>
-              <div style={{ padding: 20, background: 'rgba(34, 197, 94, 0.1)', borderRadius: 8, border: '1px solid rgba(34, 197, 94, 0.2)' }}>
-                <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#86efac' }}>🔒 Security</h3>
-                <ul style={{ opacity: '0.8', paddingLeft: 20 }}>
-                  <li>Never expose API keys in client-side code</li>
-                  <li>Use environment variables for sensitive data</li>
-                  <li>Implement proper error handling</li>
-                  <li>Validate all input data</li>
-                </ul>
+// Webhook handler
+app.post('/webhooks/ziontechgroup', (req, res) => {
+  const { event, data, signature } = req.body;
+  
+  // Verify webhook signature
+  if (!verifyWebhookSignature(signature, req.body)) {
+    return res.status(401).send('Invalid signature');
+  }
+  
+  switch (event) {
+    case 'cost_anomaly':
+      handleCostAnomaly(data);
+      break;
+    case 'code_review_complete':
+      handleCodeReviewComplete(data);
+      break;
+    case 'invoice_processed':
+      handleInvoiceProcessed(data);
+      break;
+  }
+  
+  res.status(200).send('OK');
+});`}
+                  </code>
+                </pre>
               </div>
-              
-              <div style={{ padding: 20, background: 'rgba(59, 130, 246, 0.1)', borderRadius: 8, border: '1px solid rgba(59, 130, 246, 0.2)' }}>
-                <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#93c5fd' }}>⚡ Performance</h3>
-                <ul style={{ opacity: '0.8', paddingLeft: 20 }}>
-                  <li>Implement caching for frequently accessed data</li>
-                  <li>Use pagination for large datasets</li>
-                  <li>Handle rate limits gracefully</li>
-                  <li>Optimize API calls with batch requests</li>
-                </ul>
-              </div>
-              
-              <div style={{ padding: 20, background: 'rgba(139, 92, 246, 0.1)', borderRadius: 8, border: '1px solid rgba(139, 92, 246, 0.2)' }}>
-                <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#c4b5fd' }}>🛠️ Development</h3>
-                <ul style={{ opacity: '0.8', paddingLeft: 20 }}>
-                  <li>Use TypeScript for better type safety</li>
-                  <li>Implement proper logging and monitoring</li>
-                  <li>Write comprehensive tests</li>
-                  <li>Follow RESTful API conventions</li>
-                </ul>
+
+              <div className="mt-12 p-6 bg-blue-900/20 rounded-lg border border-blue-500/30">
+                <h3 className="text-xl font-bold mb-3 text-blue-400">Need More Examples?</h3>
+                <p className="text-slate-300 mb-4">
+                  Check out our complete API documentation or contact our support team for custom integration help.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Link href="/docs/api-quick-start" className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
+                    API Documentation
+                  </Link>
+                  <Link href="/contact" className="px-6 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
+                    Contact Support
+                  </Link>
+                </div>
               </div>
             </div>
-          </section>
-
-          {/* Support */}
-          <section style={{ background: '#1e293b', padding: 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)'  }}>
-            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 16  }}>🤝 Need Help?</h2>
-            <p style={{ opacity: '0.8', marginBottom: 20 }}>Our team is here to help you integrate our services successfully.</p>
-            <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
-              <Link href="/contact" style={{ padding: '12px 24px', background: 'white', borderRadius: 8, fontWeight: 600, textDecoration: 'none' }}>
-                Contact Support
-              </Link>
-              <Link href="/docs/api-reference" style={{ padding: '12px 24px', background: 'white', borderRadius: 8, fontWeight: 600, textDecoration: 'none' }}>
-                API Reference
-              </Link>
-            </div>
-          </section>
-        </div>
-      </div>
+          </div>
+        </section>
+      </main>
     </>
   );
 }

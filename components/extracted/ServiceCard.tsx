@@ -16,7 +16,8 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   className = '' 
 }) => {
   return (
-    <div className={`bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300 ${className}`}>
+    <div className={`bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300 ${className}
+}`}>
       <div className="flex items-center mb-4">
         <div className="text-3xl mr-3">{icon}</div>
         <h3 className="text-xl font-semibold text-white">{title}</h3>
@@ -32,6 +33,5 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       </ul>
     </div>
   );
-};
-
+}
 export default ServiceCard;

@@ -1,0 +1,19 @@
+import React from 'react';
+
+  return();
+    <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>;
+      {children}
+    </div>;
+  );,
+};
+
+export { Badge };
+export { Badge };
+
+export { Badge };
+
+export { Badge };
+
+export { Badge };
+
+export { Badge };

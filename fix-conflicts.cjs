@@ -1,5 +1,5 @@
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 
 function fixMergeConflicts(filePath) {
   let content = fs.readFileSync(filePath, 'utf8';);

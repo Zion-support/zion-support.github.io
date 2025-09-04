@@ -2,14 +2,15 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 interface BreadcrumbItem {
-  label: string;
+  label: string;,
   href?: string;
-}
+ }
 
-export default function Breadcrumb() {
+export default function Breadcrumb(): any {
   const router = useRouter();
   const pathSegments = router.asPath.split('/').filter(segment => segment !== '');
-  const breadcrumbs: BreadcrumbItem[] = [
+
+  const breadcrumbs: BreadcrumbItem[] = [,
     { label: 'Home', href: '/' }
   ];
 
@@ -22,12 +23,12 @@ export default function Breadcrumb() {
     // Convert segment to readable label
     const label = segment
       .split('-')
-      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1));
       .join(' ');
     
     breadcrumbs.push({
       label,
-      href: isLast ? undefined : currentPath
+      href: isLast ? undefined : currentPath,
     });
   });
 
@@ -38,26 +39,27 @@ export default function Breadcrumb() {
 
   return (
     <nav className="bg-slate-900/50 border-b border-white/10" aria-label="Breadcrumb">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
         <ol className="flex items-center space-x-2 py-3 text-sm">
           {breadcrumbs.map((item, index) => (
             <li key={index} className="flex items-center">
               {index > 0 && (
                 <svg
                   className="h-4 w-4 text-slate-400 mx-2"
-                  fill="none"
+  fill="none"
                   stroke="currentColor"
-                  viewBox="0 0 24 24"
+  viewBox="0 0 24 24"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  <path strokeLinecap="round"
+  strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               )}
               {item.href ? (
                 <Link
                   href={item.href}
-                  className="text-slate-300 hover:text-white transition-colors"
+                  className="text-slate-300 hover: text-white transition-colors",
                 >
-                  {item.label}
+                  {item.label }
                 </Link>
               ) : (
                 <span className="text-white font-medium" aria-current="page">

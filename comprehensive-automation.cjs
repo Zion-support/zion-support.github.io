@@ -5,8 +5,8 @@
  * Runs all automation, testing, and improvements
  */
 
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 
 class ComprehensiveAutomation {
   constructor() {
@@ -145,7 +145,7 @@ const fs = require('fs') {
 
 const fs = require('fs';
   });
-const path = require('path';);
+const path = require('path')
 
 class PerformanceMonitor {
   constructor() {
@@ -247,7 +247,7 @@ module.exports = PerformanceMonitor;`;
   createSecurityAuditor() { 
     const script = `#!/usr/bin/env node
 
-const fs = require('fs';);
+const fs = require('fs')
 
 class SecurityAuditor {
   constructor() {
@@ -356,8 +356,8 @@ module.exports = SecurityAuditor`;
   createTestRunner() { 
     const script = `#!/usr/bin/env node
 
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 
 class TestRunner {
   constructor() {
@@ -507,7 +507,7 @@ module.exports = nextConfig;`;
   createGitWorkflowScript() { 
     const script = `#!/usr/bin/env node
 
-const fs = require('fs';);
+const fs = require('fs')
 
 class GitWorkflow {
   constructor() {

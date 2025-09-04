@@ -1,44 +1,55 @@
-#!/usr/bin/env node
-const fs = require("fs");
-const path = require("path");
+const fs = require('fs');
+const path = require('path');
 
-function log(msg) {
-  const ts = new Date().toISOString();
-  console.log(`[${ts}] ${msg}`);
+console.log('🔍 Comprehensive Health Check Starting...');
+
+const checks = [
+    {
+        name: 'Package.json exists',
+        check: () => fs.existsSync('package.json')
+    },
+    {
+        name: 'Node modules installed',
+        check: () => fs.existsSync('node_modules')
+    },
+    {
+        name: 'Next.js config exists',
+        check: () => fs.existsSync('next.config.js')
+    },
+    {
+        name: 'TypeScript config exists',
+        check: () => fs.existsSync('tsconfig.json')
+    },
+    {
+        name: 'ESLint config exists',
+        check: () => fs.existsSync('eslint.config.js')
+    }
+];
+
+let passed = 0;
+let failed = 0;
+
+checks.forEach(check => {
+    try {
+        if (check.check()) {
+            console.log(`✅ ${check.name}`);
+            passed++;
+        } else {
+            console.log(`❌ ${check.name}`);
+            failed++;
+        }
+    } catch (error) {
+        console.log(`❌ ${check.name} - Error: ${error.message}`);
+        failed++;
+    }
+});
+
+console.log(`\n📊 Health Check Results: ${passed} passed, ${failed} failed`);
+
+if (failed === 0) {
+    console.log('🎉 All health checks passed!');
+    process.exit(0);
+} else {
+    console.log('⚠️  Some health checks failed. Please review the issues.');
+    process.exit(1);
 }
-
-function exists(p) {
-  try { return fs.existsSync(p); } catch { return false; }
-}
-
-function main() {
-  log("🏥 Starting Comprehensive Health Check...");
-  const results = {
-    timestamp: new Date().toISOString(),
-    checks: [],
-    summary: { total: 0, passed: 0, failed: 0, warnings: 0 }
-  };
-
-  const checks = [
-    { name: "package.json present", run: () => exists(path.join(process.cwd(), "package.json")) ? "passed" : "failed" },
-    { name: "eslint config present", run: () => (exists("eslint.config.js") || exists(".eslintrc.js")) ? "passed" : "warning" },
-    { name: "node_modules installed", run: () => exists("node_modules") ? "passed" : "warning" }
-  ];
-
-  for (const c of checks) {
-    const status = c.run();
-    results.checks.push({ name: c.name, status });
-    results.summary.total += 1;
-    if (status === "passed") results.summary.passed += 1;
-    else if (status === "warning") results.summary.warnings += 1;
-    else results.summary.failed += 1;
-  }
-
-  const reportPath = path.join(process.cwd(), `health-check-report-${Date.now()}.json`);
-  fs.writeFileSync(reportPath, JSON.stringify(results, null, 2));
-  log(`📄 Health check report saved: ${reportPath}`);
-
-  if (results.summary.failed > 0) process.exitCode = 1;
-}
-
-main();

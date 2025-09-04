@@ -1,90 +1,64 @@
-const fs = require('fs';);
-const path = require('path';);
+#!/usr/bin/env node
 
-function fixFile(filePath) {
+const fs = require('fs');
+const path = require('path');
+
+// Function to fix common syntax errors
+function fixSyntaxErrors(content) {
+  // Fix the $2 issues first
+  content = content.replace(/\$2/g, '');
+  
+  // Fix missing commas in object literals - more specific patterns
+  content = content.replace(/(\w+):\s*['"`][^'"`]*['"`]\s*\n\s*(\w+):/g, (match, key1, key2) => {
+    return `${key1}: 'value',\n    ${key2}:`;
+  });
+  
+  // Fix missing commas in style objects
+  content = content.replace(/(\w+):\s*['"`][^'"`]*['"`]\s*\n\s*(\w+):/g, (match, key1, key2) => {
+    return `${key1}: 'value',\n    ${key2}:`;
+  });
+  
+  // Fix missing semicolons after function declarations
+  content = content.replace(/(\w+)\s*\(\s*\)\s*=>\s*\{[^}]*\}\s*\n\s*return/g, '$1() => {\n    // ...\n  };\n  return');
+  
+  // Fix missing closing braces
+  content = content.replace(/(\w+)\s*\(\s*\)\s*=>\s*\{[^}]*\}\s*$/gm, '$1() => {\n    // ...\n  };');
+  
+  return content;
+}
+
+// Function to process a file
+function processFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8';);
-    let modified = fal;s;e;
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixedContent = fixSyntaxErrors(content);
     
-    // Fix missing commas in object literals - more specific pattern
-    const objectPattern = /(\w+):\s*['"`][^'"`]*['"`]\s*(\w+):;/;g;
-    content = content.replace(objectPattern, (match, prop1, prop2) => {
-      modified = true;
-      return `${prop1;}: ${prop2},`});
-    
-    // Fix missing commas in style objects - more specific pattern
-    const stylePattern = /style=\{\{\s*([^}]+)\}\}/;g;
-    content = content.replace(stylePattern, (match, styleContent) => {
-      // Fix missing commas between style properties
-      const fixed = styleContent.replace(/(\w+):\s*['"`][^'"`]*['"`]\s*(\w+):/g, '$1: $2,;';);
-      if ( {
-        modified = true) {
-     {
-        modified = true;
-  }
-        return `style={{${fixed;}}}`}
-      return match;});
-    
-    // Fix missing colons in object properties
-    const colonPattern = /(\w+)\s+(\w+),;/;g;
-    content = content.replace(colonPattern, (match, prop, value) => {
-      // Only fix if it looks like a property: value pair
-      if (|| value.match(/^\d/) || value.match(/^(true|false|null)$/)) {
-        modified = true) {
-    || value.match(/^\d/) || value.match(/^(true|false|null)$/)) {
-        modified = true;
-  }
-        return `${prop;}: ${value},`}
-      return match;});
-    
-    if ( {
-      fs.writeFileSync(filePath, content, 'utf8')) {
-     {
-      fs.writeFileSync(filePath, content, 'utf8');
-  }
+    if (content !== fixedContent) {
+      fs.writeFileSync(filePath, fixedContent);
       console.log(`Fixed: ${filePath}`);
-      return true;}
-    return false;} catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;}
+    }
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
+  }
 }
 
-// Get all TypeScript/JavaScript files
-function getAllFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
-  let files = [;];
-  const items = fs.readdirSync(dir;);
+// Function to recursively find and process files
+function processDirectory(dirPath) {
+  const files = fs.readdirSync(dirPath);
   
-  for (const item of items) {
-    const fullPath = path.join(dir, item;);
-    const stat = fs.statSync(fullPath;);
+  for (const file of files) {
+    const filePath = path.join(dirPath, file);
+    const stat = fs.statSync(filePath);
     
-    if (&& !item.startsWith('.') && item !== 'node_modules') {
-      files = files.concat(getAllFiles(fullPath, extensions))} else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
-      files.push(fullPath)}
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+      processDirectory(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
+      processFile(filePath);
+    }
   }
-  
-  return files) {
-    && !item.startsWith('.') && item !== 'node_modules') {
-      files = files.concat(getAllFiles(fullPath, extensions))} else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
-      files.push(fullPath)}
-  }
-  
-  return files;
-  }}
-
-// Fix all files
-const files = getAllFiles('.;';);
-let fixedCount = ;0;
-
-for (const file of files) {
-  if () {
-    fixedCount++}
 }
 
-console.log(`Fixed ${fixedCount} files`)) {
-    ) {
-    fixedCount++}
-}
-
-console.log(`Fixed ${fixedCount} files`);
-  }
+// Start processing from the current directory
+console.log('Fixing syntax errors...');
+processDirectory('.');
+console.log('Done!');

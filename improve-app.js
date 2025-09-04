@@ -5,8 +5,8 @@
  * Analyzes and improves the application;
  */
 
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 
 class AppImprover {
   constructor() { this.improvements = [];
@@ -43,7 +43,7 @@ class AppImprover {
         this.log('✅ Next.js config analyzed')} else {
         this.issues.push('next.config.js not found')}
     } catch (error) {
-      this.issues.push(`Error reading next.config.js: ${error.message}`)}
+      this.issues.push(`Error reading next.config.js: ${error.message }`)}
   }
 
   checkPackageJson() { try {
@@ -81,13 +81,13 @@ class AppImprover {
       if() { this.improvements.push('Add security audit script') }
       
       this.log('✅ Package.json analyzed')} catch (error) {
-      this.issues.push(`Error reading package.json: ${error.message}`)}
+      this.issues.push(`Error reading package.json: ${error.message }`)}
   }
 
   checkAppStructure() { const requiredDirs = ['src', 'src/components', 'src/pages', 'public']requiredDirs.forEach(dir => {
       if () {
         this.log(`✅ ${dir } directory exists`)} else {
-        this.issues.push(`Missing directory: ${dir}`)}
+        this.issues.push(`Missing directory: ${dir }`)}
     })}
 
   checkForOptimizations() { // Check for image optimizati) {
@@ -175,8 +175,8 @@ module.exports = nextConfig;`;
 
   createPerformanceScript() { const performanceScript = `#!/usr/bin/env node
 
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 
 class PerformanceOptimizer {
   constructor() {
@@ -243,7 +243,7 @@ module.exports = PerformanceOptimizer`;
   createSecurityScript() { const securityScript = `#!/usr/bin/env node
 
 const { execSync  } = require('child_process';);
-const fs = require('fs';);
+const fs = require('fs')
 
 class SecurityAuditor {
   constructor() { this.issues = [];

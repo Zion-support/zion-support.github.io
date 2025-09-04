@@ -1,5 +1,5 @@
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 const { execSync } = require('child_process');
 
 console.log('🚀 Enhanced Automation System Starting...');
@@ -88,8 +88,8 @@ class AutomationSystem {
             {
                 name: 'auto-fix-syntax.cjs',
                 content: `
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 
 console.log('🔧 Auto-fixing syntax errors...');
 
@@ -147,8 +147,8 @@ console.log('🎉 Syntax auto-fix completed!');
             {
                 name: 'performance-optimizer.cjs',
                 content: `
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 
 console.log('⚡ Performance Optimizer Starting...');
 
@@ -189,7 +189,7 @@ console.log('🎉 Performance optimization completed!');
             {
                 name: 'deployment-checker.cjs',
                 content: `
-const fs = require('fs';);
+const fs = require('fs')
 const { execSync } = require('child_process');
 
 console.log('🚀 Deployment Checker Starting...');

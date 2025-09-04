@@ -1,68 +1,59 @@
-const fs = require('fs';);
+#!/usr/bin/env node
 
-// Read the file
-let content = fs.readFileSync('pages/micro-saas.tsx', 'utf8';);
+const fs = require('fs');
+const path = require('path');
 
-// Fix patterns where icon: appears without proper object structure
-// Look for patterns like:
-// 'some text'
-// 
-// icon: SomeIcon,
-// and replace with:
-// 'some text'
-// ],
-// category: 'SomeCategory'
-// },
-// {
-// icon: SomeIcon,
+// Function to fix common syntax errors
+function fixSyntaxErrors(content) {
+  // Fix missing commas in object literals
+  content = content.replace(/(\w+):\s*['"`][^'"`]*['"`]\s*\n\s*(\w+):/g, '$1: $2,');
+  content = content.replace(/(\w+):\s*['"`][^'"`]*['"`]\s*\n\s*}/g, '$1: $2\n  }');
+  
+  // Fix missing commas in style objects
+  content = content.replace(/(\w+):\s*['"`][^'"`]*['"`]\s*\n\s*(\w+):/g, '$1: $2,');
+  content = content.replace(/(\w+):\s*['"`][^'"`]*['"`]\s*\n\s*}/g, '$1: $2\n  }');
+  
+  // Fix missing semicolons after function declarations
+  content = content.replace(/(\w+)\s*\(\s*\)\s*=>\s*\{[^}]*\}\s*\n\s*return/g, '$1() => {\n    // ...\n  };\n  return');
+  
+  // Fix missing closing braces
+  content = content.replace(/(\w+)\s*\(\s*\)\s*=>\s*\{[^}]*\}\s*$/gm, '$1() => {\n    // ...\n  };');
+  
+  return content;
+}
 
-// This regex finds the pattern and fixes it
-content = content.replace(
-  /(\s+'[^']+'\s*)\n\s*\n\s*icon:\s*([A-Za-z]+),/g,
-  (match, text, icon) => {
-    // Extract the last word from the text to determine category
-    const lastLine = text.trim(;);
-    let category = 'Genera;l;';
+// Function to process a file
+function processFile(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixedContent = fixSyntaxErrors(content);
     
-    if (|| lastLine.includes('Machine Learning')) {
-      category = 'AI & Machine Learning'} else if (lastLine.includes('Email') || lastLine.includes('Marketing')) {
-      category = 'Marketing'} else if (lastLine.includes('Security') || lastLine.includes('Cybersecurity')) {
-      category = 'Security'} else if (lastLine.includes('E-commerce') || lastLine.includes('Return')) {
-      category = 'E-commerce'} else if (lastLine.includes('Event') || lastLine.includes('Calendar')) {
-      category = 'Event Management'} else if (lastLine.includes('Video') || lastLine.includes('Content')) {
-      category = 'Content Creation'} else if (lastLine.includes('Support') || lastLine.includes('Helpdesk')) {
-      category = 'Customer Support'} else if (lastLine.includes('Lead') || lastLine.includes('Scoring')) {
-      category = 'Sales'} else if (lastLine.includes('Healthcare') || lastLine.includes('Hospital')) {
-      category = 'Healthcare'} else if (lastLine.includes('Talent') || lastLine.includes('HR')) {
-      category = 'Human Resources'} else if (lastLine.includes('Workflow') || lastLine.includes('Automation')) {
-      category = 'Automation'} else if (lastLine.includes('Quantum') || lastLine.includes('Computing')) {
-      category = 'Advanced Computing'}
-    
-    return `${text) {
-    || lastLine.includes('Machine Learning')) {
-      category = 'AI & Machine Learning'} else if (lastLine.includes('Email') || lastLine.includes('Marketing')) {
-      category = 'Marketing'} else if (lastLine.includes('Security') || lastLine.includes('Cybersecurity')) {
-      category = 'Security'} else if (lastLine.includes('E-commerce') || lastLine.includes('Return')) {
-      category = 'E-commerce'} else if (lastLine.includes('Event') || lastLine.includes('Calendar')) {
-      category = 'Event Management'} else if (lastLine.includes('Video') || lastLine.includes('Content')) {
-      category = 'Content Creation'} else if (lastLine.includes('Support') || lastLine.includes('Helpdesk')) {
-      category = 'Customer Support'} else if (lastLine.includes('Lead') || lastLine.includes('Scoring')) {
-      category = 'Sales'} else if (lastLine.includes('Healthcare') || lastLine.includes('Hospital')) {
-      category = 'Healthcare'} else if (lastLine.includes('Talent') || lastLine.includes('HR')) {
-      category = 'Human Resources'} else if (lastLine.includes('Workflow') || lastLine.includes('Automation')) {
-      category = 'Automation'} else if (lastLine.includes('Quantum') || lastLine.includes('Computing')) {
-      category = 'Advanced Computing'}
-    
-    return `${text;
-  }}
-      ],
-      category: '${category}'
-    },
-    {
-      icon: ${icon},`}
-);
+    if (content !== fixedContent) {
+      fs.writeFileSync(filePath, fixedContent);
+      console.log(`Fixed: ${filePath}`);
+    }
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
+  }
+}
 
-// Write the fixed content back
-fs.writeFileSync('pages/micro-saas.tsx', content);
+// Function to recursively find and process files
+function processDirectory(dirPath) {
+  const files = fs.readdirSync(dirPath);
+  
+  for (const file of files) {
+    const filePath = path.join(dirPath, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+      processDirectory(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
+      processFile(filePath);
+    }
+  }
+}
 
-console.log('Fixed syntax errors in micro-saas.tsx');
+// Start processing from the current directory
+console.log('Fixing syntax errors...');
+processDirectory('.');
+console.log('Done!');
