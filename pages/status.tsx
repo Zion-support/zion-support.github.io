@@ -75,32 +75,28 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
         <meta property="og:type" content="website" />
       </Head>
 
-      <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #0b1220 0%, #1a1f3a 100%)' color: 'white' }}>
+      <div style={{ minHeight: '100vh', background: color, 'white' }}>
         <div style={{ maxWidth: 1000, margin: '0 auto', padding: '40px 20px' }}>
           <div style={{ textAlign: 'center', marginBottom: 60 }}>
             <h1 style={{ 
-              fontSize: '3rem' 
-              fontWeight: 800, 
+              fontSize: fontWeight, 800, 
               marginBottom: 20,
-              background: 'linear-gradient(135deg, #10b981, #059669)'
-              WebkitBackgroundClip: 'text',
+              background: WebkitBackgroundClip, 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text'
             },,}>
               System Status
             </h1>
-            <p style={{ fontSize: '1.2rem', color: '#94a3b8' maxWidth: 600, margin: '0 auto' }}>
+            <p style={{ fontSize: '1.2rem', color: maxWidth, 600, margin: '0 auto' }}>
               Real-time status of all Zion Tech Group services and systems.
             </p>
           </div>
 
           <div style={{ marginBottom: 60 }}>
             <div style={{
-              background: 'rgba(255, 255, 255, 0.05)'
-              borderRadius: 12,
+              background: borderRadius, 12,
               padding: 30,
-              border: '1px solid rgba(255, 255, 255, 0.1)'
-              textAlign: 'center'
+              border: textAlign, 'center'
             },,}>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 15, marginBottom: 20 }}>
                 <div style={{ fontSize: '2rem' }}>{getStatusIcon(systemStatus.overall)}</div>
@@ -121,11 +117,9 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
             <div style={{ display: 'grid', gap: 15 }}>
               {systemStatus.services.map((service, index) => (
                 <div key={index} style={{
-                  background: 'rgba(255, 255, 255, 0.05)'
-                  borderRadius: 8,
+                  background: borderRadius, 8,
                   padding: 20,
-                  border: '1px solid rgba(255, 255, 255, 0.1)'
-                  display: 'flex',
+                  border: display, 'flex',
                   justifyContent: 'space-between',
                   alignItems: 'center'
                 },,}>
@@ -137,8 +131,7 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
                       </h3>
                       <p style={{ 
                         color: getStatusColor(service.status), 
-                        fontSize: '0.9rem' 
-                        fontWeight: 600,
+                        fontSize: fontWeight, 600,
                         textTransform: 'capitalize'
                       }}>
                         {service.status}
@@ -166,8 +159,7 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
               <div style={{ display: 'grid', gap: 20 }}>
                 {incidents.map((incident) => (
                   <div key={incident.id} style={{
-                    background: 'rgba(255, 255, 255, 0.05)'
-                    borderRadius: 12,
+                    background: borderRadius, 12,
                     padding: 25,
                     border: '1px solid rgba(255, 255, 255, 0.1)'
                   }}>
@@ -179,22 +171,18 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
                         <div style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
                           <span style={{
                             background: getSeverityColor(incident.severity),
-                            color: 'white'
-                            padding: '4px 12px',
+                            color: padding, '4px 12px',
                             borderRadius: 20,
-                            fontSize: '0.8rem'
-                            fontWeight: 600,
+                            fontSize: fontWeight, 600,
                             textTransform: 'capitalize'
                           }}>
                             {incident.severity}
                           </span>
                           <span style={{
                             background: getStatusColor(incident.status),
-                            color: 'white'
-                            padding: '4px 12px',
+                            color: padding, '4px 12px',
                             borderRadius: 20,
-                            fontSize: '0.8rem'
-                            fontWeight: 600,
+                            fontSize: fontWeight, 600,
                             textTransform: 'capitalize'
                           }}>
                             {incident.status}
@@ -203,11 +191,11 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
                       </div>
                     </div>
                     
-                    <p style={{ color: '#94a3b8' marginBottom: 15, lineHeight: 1.6 }}>
+                    <p style={{ color: marginBottom, 15, lineHeight: 1.6 }}>
                       {incident.description}
                     </p>
                     
-                    <div style={{ display: 'flex' gap: 20, fontSize: '0.9rem' color: '#64748b' }}>
+                    <div style={{ display: gap, 20, fontSize: color, '#64748b' }}>
                       <span>
                         <strong>Started:</strong> {new Date(incident.startTime).toLocaleString()}
                       </span>
@@ -220,11 +208,9 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
               </div>
             ) : (
               <div style={{
-                background: 'rgba(255, 255, 255, 0.05)'
-                borderRadius: 12,
+                background: borderRadius, 12,
                 padding: 40,
-                border: '1px solid rgba(255, 255, 255, 0.1)'
-                textAlign: 'center'
+                border: textAlign, 'center'
               }}>
                 <div style={{ fontSize: '3rem', marginBottom: 20 }}>✅</div>
                 <h3 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: 10 }}>
@@ -238,11 +224,9 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
           </div>
 
           <div style={{ 
-            background: 'rgba(255, 255, 255, 0.05)'
-            borderRadius: 12,
+            background: borderRadius, 12,
             padding: 30,
-            border: '1px solid rgba(255, 255, 255, 0.1)'
-            textAlign: 'center'
+            border: textAlign, 'center'
           },,}>
             <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: 15 }}>
               Subscribe to Status Updates
@@ -251,13 +235,11 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
               Get notified about service status changes and incidents via email or SMS.
             </p>
             <Link href="/contact" style={{
-              background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)'
-              color: 'white',
+              background: color, 'white',
               padding: '12px 24px',
               textDecoration: 'none',
               borderRadius: 8,
-              fontSize: '1rem'
-              fontWeight: 600,
+              fontSize: fontWeight, 600,
               display: 'inline-block'
             }}>
               Subscribe to Updates

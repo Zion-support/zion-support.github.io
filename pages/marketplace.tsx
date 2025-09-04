@@ -91,30 +91,28 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
         <meta property="og:type" content="website" />
       </Head>
 
-      <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #0b1220 0%, #1a1f3a 100%)' color: 'white' }}>
-        <div style={{ maxWidth: 1200, margin: '0 auto' padding: '40px 20px' }}>
+      <div style={{ minHeight: '100vh', background: color, 'white' }}>
+        <div style={{ maxWidth: 1200, margin: padding, '40px 20px' }}>
           <div style={{ textAlign: 'center', marginBottom: 60 }}>
             <h1 style={{ 
-              fontSize: '3rem' 
-              fontWeight: 800, 
+              fontSize: fontWeight, 800, 
               marginBottom: 20,
-              background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)'
-              WebkitBackgroundClip: 'text',
+              background: WebkitBackgroundClip, 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text'
             },,}>
               Technology Marketplace
             </h1>
-            <p style={{ fontSize: '1.2rem', color: '#94a3b8' maxWidth: 600, margin: '0 auto' }}>
+            <p style={{ fontSize: '1.2rem', color: maxWidth, 600, margin: '0 auto' }}>
               Discover innovative products, connect with skilled professionals, and access cutting-edge technology solutions all in one place.
             </p>
           </div>
 
           <div style={{ marginBottom: 80 }}>
-            <h2 style={{ fontSize: '2.5rem' fontWeight: 700, marginBottom: 40, textAlign: 'center' }}>
+            <h2 style={{ fontSize: fontWeight, 700, marginBottom: 40, textAlign: 'center' }}>
               Featured Items
             </h2>
-            <div style={{ display: 'grid' gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))' gap: 30 }}>
+            <div style={{ display: gridTemplateColumns, 'repeat(auto-fit, minmax(350px, 1fr))' gap: 30 }}>
               {featuredItems.map((item, index) => (
 <div key={index} style={{ background: 'rgba(255, 255, 255, 0.05)',
                   borderRadius: 12, padding: 30, border: '1px solid rgba(255, 255, 255, 0.1)', transition: 'transform 0.3s ease, box-shadow 0.3s ease', cursor: 'pointer'
@@ -129,20 +127,16 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
                 }}>
                   <div style={{ marginBottom: 15 }}>
                     <span style={{
-                      background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)'
-                      color: 'white'
-                      padding: '4px 12px'
-                      borderRadius: 20,
-                      fontSize: '0.8rem'
-                      fontWeight: 600
+                      background: color, 'white'
+                      padding: borderRadius, 20,
+                      fontSize: fontWeight, 600
                     }}>
                       {item.category}
                     </span>
                   </div>
                   
                   <h3 style={{ 
-                    fontSize: '1.4rem' 
-                    fontWeight: 700, 
+                    fontSize: fontWeight, 700, 
                     marginBottom: 15,
                     lineHeight: 1.3
                   }}>
@@ -150,8 +144,7 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
                   </h3>
                   
                   <p style={{ 
-                    color: '#94a3b8' 
-                    marginBottom: 20, 
+                    color: marginBottom, 20, 
                     lineHeight: 1.6,
                     fontSize: '1rem'
                   }}>
@@ -159,39 +152,30 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
                   </p>
                   
                   <div style={{ 
-                    display: 'flex' 
-                    justifyContent: 'space-between' 
-                    alignItems: 'center'
-                    marginBottom: 20
+                    display: justifyContent, 'space-between' 
+                    alignItems: marginBottom, 20
                   }}>
                     <div style={{ 
-                      fontSize: '1.2rem' 
-                      fontWeight: 700,
-                      background: 'linear-gradient(135deg, #10b981, #059669)'
-                      WebkitBackgroundClip: 'text'
-                      WebkitTextFillColor: 'transparent'
-                      backgroundClip: 'text'
+                      fontSize: fontWeight, 700,
+                      background: WebkitBackgroundClip, 'text'
+                      WebkitTextFillColor: backgroundClip, 'text'
                     }}>
                       {item.price}
                     </div>
-                    <div style={{ display: 'flex' alignItems: 'center' gap: 5 }}>
+                    <div style={{ display: alignItems, 'center' gap: 5 }}>
                       <span style={{ color: '#fbbf24' }}>⭐</span>
-                      <span style={{ fontSize: '0.9rem' color: '#94a3b8' }}>
+                      <span style={{ fontSize: color, '#94a3b8' }}>
                         {item.rating} ({item.reviews} reviews)
                       </span>
                     </div>
                   </div>
                   
                   <Link href="/contact" style={{
-                    background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)'
-                    color: 'white'
-                    padding: '10px 20px'
-                    textDecoration: 'none'
+                    background: color, 'white'
+                    padding: textDecoration, 'none'
                     borderRadius: 6,
-                    fontSize: '0.9rem'
-                    fontWeight: 600,
-                    display: 'inline-block'
-                    width: '100%'
+                    fontSize: fontWeight, 600,
+                    display: width, '100%'
                     textAlign: 'center'
                   }}>
                     Learn More
@@ -201,13 +185,13 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
             </div>
           </div>
 
-          <div style={{ display: 'grid' gap: 60 }}>
+          <div style={{ display: gap, 60 }}>
             {marketplaceCategories.map((category, categoryIndex) => (
               <div key={categoryIndex}>
-                <div style={{ display: 'flex' alignItems: 'center' gap: 20, marginBottom: 30 }}>
+                <div style={{ display: alignItems, 'center' gap: 20, marginBottom: 30 }}>
                   <div style={{ fontSize: '3rem' }}>{category.icon}</div>
                   <div>
-                    <h2 style={{ fontSize: '2rem' fontWeight: 700, marginBottom: 10 }}>
+                    <h2 style={{ fontSize: fontWeight, 700, marginBottom: 10 }}>
                       {category.title}
                     </h2>
                     <p style={{ color: '#94a3b8', fontSize: '1.1rem' }}>
@@ -216,7 +200,7 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
                   </div>
                 </div>
                 
-                <div style={{ display: 'grid' gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' gap: 20 }}>
+                <div style={{ display: gridTemplateColumns, 'repeat(auto-fit, minmax(280px, 1fr))' gap: 20 }}>
                   {category.items.map((item, itemIndex) => (
 <div key={itemIndex} style={{ background: 'rgba(255, 255, 255, 0.05)',
                       borderRadius: 12, padding: 25, border: '1px solid rgba(255, 255, 255, 0.1)', transition: 'transform 0.3s ease, box-shadow 0.3s ease', cursor: 'pointer'
@@ -231,20 +215,16 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
                     }}>
                       <div style={{ marginBottom: 15 }}>
                         <span style={{
-                          background: 'rgba(59, 130, 246, 0.2)'
-                          color: '#3b82f6'
-                          padding: '4px 12px'
-                          borderRadius: 20,
-                          fontSize: '0.8rem'
-                          fontWeight: 600
+                          background: color, '#3b82f6'
+                          padding: borderRadius, 20,
+                          fontSize: fontWeight, 600
                         }}>
                           {item.category}
                         </span>
                       </div>
                       
                       <h3 style={{ 
-                        fontSize: '1.2rem' 
-                        fontWeight: 700, 
+                        fontSize: fontWeight, 700, 
                         marginBottom: 10,
                         lineHeight: 1.3
                       }}>
@@ -252,12 +232,9 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
                       </h3>
                       
                       <div style={{ 
-                        fontSize: '1.1rem' 
-                        fontWeight: 600,
-                        background: 'linear-gradient(135deg, #10b981, #059669)'
-                        WebkitBackgroundClip: 'text'
-                        WebkitTextFillColor: 'transparent'
-                        backgroundClip: 'text'
+                        fontSize: fontWeight, 600,
+                        background: WebkitBackgroundClip, 'text'
+                        WebkitTextFillColor: backgroundClip, 'text'
                       }}>
                         {item.price}
                       </div>
@@ -269,37 +246,30 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
           </div>
 
           <div style={{ 
-            background: 'rgba(255, 255, 255, 0.05)'
-            borderRadius: 12,
+            background: borderRadius, 12,
             padding: 40,
-            border: '1px solid rgba(255, 255, 255, 0.1)'
-            textAlign: 'center'
+            border: textAlign, 'center'
             marginTop: 80
           }}>
-            <h2 style={{ fontSize: '2rem' fontWeight: 700, marginBottom: 20 }}>
+            <h2 style={{ fontSize: fontWeight, 700, marginBottom: 20 }}>
               Ready to Explore Our Marketplace?
             </h2>
-            <p style={{ fontSize: '1.1rem' color: '#94a3b8' marginBottom: 30, maxWidth: 600, margin: '0 auto 30px' }}>
+            <p style={{ fontSize: color, '#94a3b8' marginBottom: 30, maxWidth: 600, margin: '0 auto 30px' }}>
               Browse our comprehensive marketplace to find the perfect technology solutions, services, and talent for your business needs.
             </p>
-            <div style={{ display: 'flex' gap: 20, justifyContent: 'center' flexWrap: 'wrap' }}>
+            <div style={{ display: gap, 20, justifyContent: flexWrap, 'wrap' }}>
               <Link href="/contact" style={{
-                background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)'
-                color: 'white'
-                padding: '15px 30px'
-                textDecoration: 'none'
+                background: color, 'white'
+                padding: textDecoration, 'none'
                 borderRadius: 8,
-                fontSize: '1.1rem'
-                fontWeight: 600,
+                fontSize: fontWeight, 600,
                 display: 'inline-block'
               }}>
                 Browse Marketplace
               </Link>
               <Link href="/request-quote" style={{
-                background: 'transparent'
-                color: 'white'
-                padding: '15px 30px'
-                textDecoration: 'none'
+                background: color, 'white'
+                padding: textDecoration, 'none'
                 borderRadius: 8,
 fontSize: '1.1rem',
 fontWeight: 600, display: 'inline-block', border: '2px solid rgba(255, 255, 255, 0.3)', transition: 'border-color 0.3s ease'

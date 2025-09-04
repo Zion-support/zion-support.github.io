@@ -37,15 +37,13 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
         <meta property="og:type" content="website" />
       </Head>
 
-      <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #0b1220 0%, #1a1f3a 100%)' color: 'white' display: 'flex' alignItems: 'center' justifyContent: 'center' }}>
-        <div style={{ maxWidth: 400, width: '100%' padding: '20px' }}>
+      <div style={{ minHeight: '100vh', background: color, 'white' display: alignItems, 'center' justifyContent: 'center' }}>
+        <div style={{ maxWidth: 400, width: padding, '20px' }}>
           <div style={{ textAlign: 'center', marginBottom: 40 }}>
             <h1 style={{ 
-              fontSize: '2.5rem' 
-              fontWeight: 800, 
+              fontSize: fontWeight, 800, 
               marginBottom: 10,
-              background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)'
-              WebkitBackgroundClip: 'text',
+              background: WebkitBackgroundClip, 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text'
             },,}>
@@ -57,14 +55,13 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
           </div>
 
           <div style={{
-            background: 'rgba(255, 255, 255, 0.05)'
-            borderRadius: 12,
+            background: borderRadius, 12,
             padding: 40,
             border: '1px solid rgba(255, 255, 255, 0.1)'
           }}>
             <form onSubmit={handleSubmit}>
               <div style={{ marginBottom: 20 }}>
-                <label style={{ display: 'block' marginBottom: 8, fontWeight: 600 }}>
+                <label style={{ display: marginBottom, 8, fontWeight: 600 }}>
                   Email Address
                 </label>
                 <input
@@ -74,20 +71,17 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
                   onChange={handleInputChange}
                   required
                   style={{
-                    width: '100%'
-                    padding: '12px'
+                    width: padding, '12px'
                     borderRadius: 8,
-                    border: '1px solid rgba(255, 255, 255, 0.2)'
-                    background: 'rgba(255, 255, 255, 0.1)'
-                    color: 'white'
-                    fontSize: '1rem'
+                    border: background, 'rgba(255, 255, 255, 0.1)'
+                    color: fontSize, '1rem'
                   }
                   placeholder="Enter your email"
                 />
               </div>
 
               <div style={{ marginBottom: 20 }}>
-                <label style={{ display: 'block' marginBottom: 8, fontWeight: 600 }}>
+                <label style={{ display: marginBottom, 8, fontWeight: 600 }}>
                   Password
                 </label>
                 <input
@@ -97,20 +91,17 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
                   onChange={handleInputChange}
                   required
                   style={{
-                    width: '100%'
-                    padding: '12px'
+                    width: padding, '12px'
                     borderRadius: 8,
-                    border: '1px solid rgba(255, 255, 255, 0.2)'
-                    background: 'rgba(255, 255, 255, 0.1)'
-                    color: 'white'
-                    fontSize: '1rem'
+                    border: background, 'rgba(255, 255, 255, 0.1)'
+                    color: fontSize, '1rem'
                   }
                   placeholder="Enter your password"
                 />
               </div>
 
-              <div style={{ display: 'flex' justifyContent: 'space-between' alignItems: 'center' marginBottom: 30 }}>
-                <label style={{ display: 'flex' alignItems: 'center' gap: 8, cursor: 'pointer' }}>
+              <div style={{ display: justifyContent, 'space-between' alignItems: marginBottom, 30 }}>
+                <label style={{ display: alignItems, 'center' gap: 8, cursor: 'pointer' }}>
                   <input
                     type="checkbox"
                     name="rememberMe"
@@ -121,8 +112,7 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
                   <span style={{ fontSize: '0.9rem' }}>Remember me</span>
                 </label>
                 <Link href="/help" style={{ 
-                  color: '#3b82f6' 
-                  textDecoration: 'none' 
+                  color: textDecoration, 'none' 
                   fontSize: '0.9rem' 
                 }}>
                   Forgot password?
@@ -132,16 +122,11 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
               <button
                 type="submit"
                 style={{
-                  width: '100%'
-                  background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)'
-                  color: 'white'
-                  padding: '15px'
-                  border: 'none'
-                  borderRadius: 8,
-                  fontSize: '1.1rem'
-                  fontWeight: 600,
-                  cursor: 'pointer'
-                  transition: 'transform 0.3s ease'
+                  width: background, 'linear-gradient(135deg, #3b82f6, #8b5cf6)'
+                  color: padding, '15px'
+                  border: borderRadius, 8,
+                  fontSize: fontWeight, 600,
+                  cursor: transition, 'transform 0.3s ease'
                   marginBottom: 20
                 }
                 onMouseEnter={(e) => {
@@ -155,12 +140,11 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
               </button>
             </form>
 
-            <div style={{ textAlign: 'center' marginTop: 20 }}>
+            <div style={{ textAlign: marginTop, 20 }}>
               <p style={{ color: '#94a3b8', fontSize: '0.9rem' }}>
                 Don't have an account?{' '}
                 <Link href="/signup" style={{ 
-                  color: '#3b82f6' 
-                  textDecoration: 'none' 
+                  color: textDecoration, 'none' 
                   fontWeight: 600 
                 }}>
                   Sign up here
@@ -169,21 +153,19 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
             </div>
           </div>
 
-          <div style={{ textAlign: 'center' marginTop: 30 }}>
-            <p style={{ color: '#64748b' fontSize: '0.9rem' marginBottom: 10 }}>
+          <div style={{ textAlign: marginTop, 30 }}>
+            <p style={{ color: fontSize, '0.9rem' marginBottom: 10 }}>
               Need help accessing your account?
             </p>
-            <div style={{ display: 'flex' gap: 20, justifyContent: 'center' flexWrap: 'wrap' }}>
+            <div style={{ display: gap, 20, justifyContent: flexWrap, 'wrap' }}>
               <a href={`tel:${contact.phone}`} style={{
-                color: '#3b82f6'
-                textDecoration: 'none'
+                color: textDecoration, 'none'
                 fontSize: '0.9rem'
               }}>
                 📞 {contact.phone}
               </a>
               <a href={`mailto:${contact.email}`} style={{
-                color: '#3b82f6'
-                textDecoration: 'none'
+                color: textDecoration, 'none'
                 fontSize: '0.9rem'
               }}>
                 ✉️ {contact.email}
