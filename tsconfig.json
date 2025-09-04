@@ -20,44 +20,11 @@
     "noEmit": true
   },
   "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "scripts/**/*.ts",
-    "automation/**/*.ts",
-    "types/**/*.ts"
+
+    "next-env.d.ts",
+    "types/empty.ts"
   ],
   "exclude": [
-    "node_modules",
-    ".next",
-    "out",
-    "dist",
-    "data_backup/**",
-    "src.corrupted/**",
-    "pages/**",
-    "components/**",
-    "utils/next-link-shim.tsx",
-    "playwright.config.ts",
-    "api-backup",
-    "api-disabled",
-    "api.disabled.temp",
-    "pages.disabled",
-    "backup-pages",
-    "automation/**",
-    "scripts/**",
-    "src.corrupted/**",
-    "deployments/**",
-    "deployment/**",
-    "backup/**",
-    "automation/backups",
-    "automation_backup",
-    "broken_files_backup",
-    "contracts",
-    "data",
-    "data/**",
-    "cypress",
-    "temp_working",
-    "supabase/functions",
-    "**/*.backup",
-    "**/*.disabled"
+    "node_modules"
   ]
 }
