@@ -1,13 +1,18 @@
 import Link from 'next/link';
 import Head from 'next/head';
 import Image from 'next/image';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
   
   useEffect(() => {
-    setIsLoaded(true);
+    // Use requestAnimationFrame for better performance
+    const timer = requestAnimationFrame(() => {
+      setIsLoaded(true);
+    });
+    
+    return () => cancelAnimationFrame(timer);
   }, []);
 
   const contact = {

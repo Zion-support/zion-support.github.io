@@ -163,7 +163,14 @@
     "automation:security": "node automation/security-scanner.cjs",
     "build:analyze": "ANALYZE=true npm run build",
     "build:prod": "NODE_ENV=production npm run build",
-    "start:prod": "NODE_ENV=production npm start"
+    "start:prod": "NODE_ENV=production npm start",
+    "build:optimized": "NODE_ENV=production npm run clean && npm run build",
+    "dev:optimized": "NODE_ENV=development npm run dev -- --turbo",
+    "type-check:watch": "tsc --noEmit --watch",
+    "lint:fix:all": "npm run lint:fix && npm run format",
+    "security:audit:fix": "npm audit fix --force",
+    "performance:audit": "npm run perf:lighthouse",
+    "health:check": "npm run automation:health"
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",

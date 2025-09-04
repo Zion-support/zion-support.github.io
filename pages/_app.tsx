@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { useState } from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 import PerformanceMonitor from '../components/PerformanceMonitor';
+import WebVitals from '../components/WebVitals';
+import Analytics from '../components/Analytics';
 import '../styles/globals.css';
 
 function Header(): any {
@@ -207,6 +209,8 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <ErrorBoundary>
       <PerformanceMonitor />
+      <WebVitals />
+      <Analytics />
       <Header />
       <Component {...pageProps} />
       <Footer />
