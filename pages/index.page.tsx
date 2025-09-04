@@ -29,8 +29,26 @@ export default function HomePage() {
             <Link className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700" href="/services">
               Explore Services
             </Link>
-            <Link className="border border-gray-300 px-6 py-3 rounded-lg hover:bg-gray-100" href="/contact">
+            <Link className="border border-gray-300 px-6 py-3 rounded-lg hover:bg-gray-100" href="/category/contact">
               Contact Us
+            </Link>
+          </div>
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 text-left">
+            <Link href="/services/ai-revenue-operations-platform" className="block p-4 bg-white rounded border hover:shadow">
+              <div className="font-semibold">AI Revenue Optimization</div>
+              <div className="text-sm text-gray-600">Dynamic pricing and forecasting</div>
+            </Link>
+            <Link href="/services/ai-autonomous-devops-platform" className="block p-4 bg-white rounded border hover:shadow">
+              <div className="font-semibold">AI Autonomous DevOps</div>
+              <div className="text-sm text-gray-600">Self-healing infra</div>
+            </Link>
+            <Link href="/services/micro-crm" className="block p-4 bg-white rounded border hover:shadow">
+              <div className="font-semibold">Micro CRM</div>
+              <div className="text-sm text-gray-600">SMB CRM with automation</div>
+            </Link>
+            <Link href="/services/cloud-finops-optimizer" className="block p-4 bg-white rounded border hover:shadow">
+              <div className="font-semibold">Cloud FinOps</div>
+              <div className="text-sm text-gray-600">Reduce cloud spend</div>
             </Link>
           </div>
           <div className="mt-8 text-sm text-gray-600">
