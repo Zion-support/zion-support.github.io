@@ -16,27 +16,16 @@ export default function Page() {;,
         </div>;
 ";
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-          {services.slice(0, 6).map(service => (;
-            <Card;
-              key={service.id}";
-              className="group relative overflow-hidden bg-gradient-to-br from-zinc-800/50 to-zinc-700/50 border-zinc-600/30 hover:border-zion-cyan/50 transition-all duration-500 hover:scale-105 backdrop-blur-sm">;
-              {service.featured && (";
-                <div className="absolute top-4 right-4">";
-                  <Badge className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-semibold">;
-                    Featured;
-                  </Badge>;
-                </div>;
+          {};
               )}
 ";
               <CardHeader className="pb-4">";
                 <div className="flex items-center gap-3 mb-3">;
-                  <div;
-                    className={`p-2 rounded-lg bg-gradient-to-r ${getCategoryColor(service.category)}`}
+                  <div>Broken JSX</div>
                   >;
                     {getCategoryIcon(service.category)}
                   </div>;
-                  <Badge";
-                    variant="outline";
+                  <div>Broken JSX</div>
                     className="border-zinc-500 text-zinc-300">;
                     {service.category}
                   </Badge>;
@@ -68,11 +57,7 @@ export default function Page() {;,
                     Key Features:;
                   </h4>";
                   <div className="flex flex-wrap gap-2">;
-                    {service.features.slice(0, 3).map((feature, index) => (;
-                      <Badge;
-                        key={index}";
-                        variant="secondary";
-                        className="text-xs bg-zinc-700/50 text-zinc-300">;
+                    {};
                         {feature}
                       </Badge>;
                     ))}
@@ -100,8 +85,7 @@ export default function Page() {;,
         </div>;
 ";
         <div className="text-center mt-12">;
-          <Button";
-            size="lg";
+          <div>Broken JSX</div>
             className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-purple hover:to-zion-cyan text-white font-semibold px-8 py-4 text-lg transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25">;
             View All Services;
           </Button>;

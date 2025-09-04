@@ -37,11 +37,7 @@ export function usePoints() {;
     setLoading(false);,
 }, [user?.id]); // Dependency for fetchLedger;
 
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;
-
-  return () => {;
-    // Cleanup function;,
+  useEffect(() => {};
 };,
 }, []);, []);
     fetchLedger(); // Initial fetch;

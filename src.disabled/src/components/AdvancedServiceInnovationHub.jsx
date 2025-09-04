@@ -1,74 +1,23 @@
 import React, { useState, useMemo } from 'react';
 export default AdvancedServiceInnovationHub;
 import { Badge } from './ui / badge';
-export default function Page() {;
- from './ui/badge';";
+export default function Page() {};
+  return null;
+}
 import { Input } from './ui/input';
-export default function Page() {;
-,;
-        {;
-
-            id: 'synthetic-biology',;
-            title: 'Synthetic Biology Revolution',;
-            description: 'Engineering of custom organisms and biological systems for industrial applications.',;
-            category: 'biotech-ai',;
-            impact: 'High',;
-            timeline: '2025-2035',;
-            adoption: 70,;
-            investment: '$150B+',;
-            keyPlayers['Ginkgo Bioworks',Twist Bioscience',Research Institutions'],;
-            technologies['DNA Programming',Genetic Engineering',Bio-Manufacturing'],;
-            status: 'Growing';,
+export default function Page() {};
+  return null;
+}
 },;
-        {;
-
-            id: 'brain-computer-interfaces',;
-            title: 'Brain-Computer Interface Revolution',;
-            description: 'Direct neural control of computers and digital systems for enhanced human capabilities.',;
-            category: 'biotech-ai',;
-            impact: 'High',;
-            timeline: '2030-2040',;
-            adoption: 40,;
-            investment: '$80B+',;
-            keyPlayers['Neuralink',Kernel',Medical Device Companies'],;
-            technologies['Neural Interfaces',Signal Processing',AI/ML'],;
-            status: 'Emerging';
-
-    ];
-    const filteredTrends = useMemo(() => {;
-        return innovationTrends.filter(trend => {;
-
-            const matchesSearch = trend.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                trend.description.toLowerCase().includes(searchTerm.toLowerCase());
+        {};
             return matchesCategory && matchesImpact && matchesStatus && matchesSearch})}, [selectedCategory, selectedImpact, selectedStatus, searchTerm]);
-    const getImpactColor = (impact) => {;
-
-        switch(impact) {;
-
-            case 'High': return 'bg-red-100 text-red-800';
-            case 'Medium': return 'bg-yellow-100 text-yellow-800';
-            case 'Low': return 'bg-green-100 text-green-800';
+    const getImpactColor = (impact) => {};
             default: return 'bg-gray-100 text-gray-800'}
     };
-    const getStatusColor = (status) => {;
-
-        switch(status) {;
-
-            case 'Emerging': return 'bg-blue-100 text-blue-800';
-            case 'Growing': return 'bg-green-100 text-green-800';
-            case 'Mature': return 'bg-orange-100 text-orange-800';
-            case 'Disruptive': return 'bg-purple-100 text-purple-800';
+    const getStatusColor = (status) => {};
             default: return 'bg-gray-100 text-gray-800'}
     };
-    const getCategoryIcon = (category) => {;
-
-        switch(category) {;
-'";
-            case 'quantum': return <Atom className="w-5 h-5"/>;'";
-            case 'ai': return <Brain className="w-5 h-5"/>;'";
-            case 'space-tech': return <Satellite className="w-5 h-5"/>;'";
-            case 'green-tech': return <Leaf className="w-5 h-5"/>;'";
-            case 'biotech-ai': return <Dna className="w-5 h-5"/>;";
+    const getCategoryIcon = (category) => {};
             default: return <Cpu className="w-5 h-5"/>}
     };
     const categories = ['";
@@ -81,18 +30,7 @@ export default function Page() {;
     ];";
     return (<div className="max-w-7xl mx-auto p-6">;
       {/* Header */}
-      <motion.div initial = {;
-
-  { opacity: 0,;
-  y: 20;,
-}} animate = {;
-
-  { opacity: 1,;
-  y: 0;
-
-";
-
-export default function AdvancedServiceInnovationHub() {return (";
+      <div>Broken JSX</div>
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">";
       <SEO title="AdvancedServiceInnovationHub - Zion Tech Group" description="Professional AdvancedServiceInnovationHub services by Zion Tech Group"  />";
       <div className="container mx-auto px-4 py-20">";
@@ -831,7 +769,7 @@ y: 0 ",">;
                     <span className="&apos;text-zion-slate-light&apos;">Biotech AI&apos;</span>&apos;&apos,&apos;&apos,";
                     <span className="&apos;font-semibold" text-zion-green&apos;>$100B+&apos;</span>&apos;&apos,&apos;&apos;";
                     <div className="&apos;bg-zion-green" h-2 rounded-full&apos; style="{{" width: &apos,60%&apos}}>&apos;</div>";
-      {/* comment */}"{viewMode = == "insights" && (<motion.div initial = {}";
+      {/* comment */}"{};
 """"}} transition="{{" delay: 0.1 }} className="space-y-6">"";
           <div className="grid grid-cols-1 lg: grid-cols-2 gap-6">";
             <Card>"";
@@ -947,7 +885,7 @@ of emerging technologies and capitalize on future opportunities."";
               <Users className="w-5 h-5 mr-2"  />";
               Get Innovation Strategy""";
             </Button>"";
-            <Button variant="outline" className="border-white text-white hover: bg-white hover:text-zion-purple" onClick = {}";
+            <div>Broken JSX</div>
   () => window.open("tel: +13024640950", _blank")";
               <Zap className="w-5 h-5 mr-2"  />;
               Speak with an Expert,;

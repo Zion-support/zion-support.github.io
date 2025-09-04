@@ -1,15 +1,11 @@
-  it(displays expected content", () => {;
-    render(<SimpleFooter  />)";
+  it(displays expected content", () => {};
 import { render, screen } from &apos;@testing - library/react",;
 import SimpleFooter from &apos;./SimpleFooter;
-describe(&apos;SimpleFooter&apos, () => {;
-  it(&apos;renders without crashing&apos, () => {;
-    render();,
+describe(&apos;SimpleFooter&apos, () => {};
 }
     expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});,
 }
-  it(&apos;displays expected content&apos, () => {;
-    render();,
+  it(&apos;displays expected content&apos, () => {};
 }
     // comment;
     render(<SimpleFooter / >)";

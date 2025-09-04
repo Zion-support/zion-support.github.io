@@ -15,8 +15,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
     // Initialize form data and validation;
     useEffect(() => {}
         const initialValidation = {};
-        fields.forEach(field => {;
-import React from "react";
+        fields.forEach(field => {};
 import { useState, useEffect, useCallback } from "react";,"});,"})","});,"})","});,"})";
 
 export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle = "Get in touch with our team", submitText = "Send Message", className = ", enableAnalytics = true, showProgressBar = true }) => {;,"});,"})";
@@ -90,8 +89,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle 
                     return "Please enter a valid phone number"}"});,"});";,
 }"});,"})";
             // comment;
-            if(field.validation?.minLength && stringValue.length < field.validation.minLength) {}"});,"})";
-                return "Minimum length is ${field.validation.minLength} characters"}"});,"})";
+            if(field.validation?.minLength && stringValue.length <div>Broken JSX</div>
             if(field.validation?.maxLength && stringValue.length > field.validation.maxLength) {}"});,"})";
 ";,"});,"})";
 "";,"});,"})";
@@ -219,14 +217,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle 
     const renderField = useCallback((field) => {}"});,"})";
         const fieldValidation = validation[field.name];,"});,"})";
         const isPasswordField = field.name.toLowerCase().includes("password");,"});,"})";
-        return (<motion.div key="{field.name}" initial = {}"});,"})";
-  { opacity: 0,"});,"})";
-  y: 20,"});,"});";,
-}} animate = {}"});,"})";
-  { opacity: 1,"});,"})";
-  y: 0,"});,"})";
-""";,"});,"})";
-"""";,"});,"});";,
+        return (<div>Broken JSX</div>
 }} className="space-y-2">"""";,"});,"})";
         <label className="block text-sm font-medium text-gray-700 dark: text-gray-300">"","});,"})";
           {field.label}"""";,"});,"})";
@@ -239,7 +230,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle 
             {getFieldIcon(field)}"});,"})";
           </div>;,"});,"})";
           {/* comment */}";,"});,"})";
-          {field.type === "textarea" ? (<textarea name="{field.name}" value="{fieldValue}" onChange = {}"});,"})";
+          {};
   (e) => handleFieldChange(field.name,,"});,"})";
   e.target.value);,"});,"})";
 ";,"});,"})";
@@ -248,7 +239,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle 
                     ? fieldValidation.isValid"";,"});,"})";
                         ? "border-green-500 focus: ring-green-200""","});,"})";
                         : "border-red-500 focus: ring-red-200"""","});,"})";
-                    : "border-gray-300 focus:ring-blue-200 focus:border-blue-500"}"} rows="{4}/">) : field.type === "select" ? (<select name="{field.name}" value="{fieldValue}" onChange = {}"});,"})";
+                    : "border-gray-300 focus:ring-blue-200 focus:border-blue-500"}"} rows="{4}/">) : field.type === "select" ? (<div>Broken JSX</div>
   (e) => handleFieldChange(field.name,,"});,"})";
   e.target.value);,"});,"})";
 ";,"});,"})";
@@ -263,7 +254,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle 
                   {option.label}""";,"});,"})";
                 </option>))}""""";,"});,"})";
             </select>) : field.type === "checkbox" ? (<div className="flex items-center space-x-3">"""";,"});,"})";
-              <input type="checkbox" name="{field.name}" checked="{fieldValue}" onChange = {}"});,"})";
+              <div>Broken JSX</div>
   (e) => handleFieldChange(field.name,,"});,"})";
   e.target.checked);,"});,"})";
 """;,"});,"})";
@@ -272,7 +263,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle 
               <span className="text-sm text-gray-600 dark: text-gray-400">,"});,"})";
                 {field.placeholder}"});,"})";
               </span>";,"});,"})";
-            </div>) : (<input type="{isPasswordField" && showPassword[field.name] ? "text" : field.type} name="{field.name}" value="{fieldValue}" onChange = {}"});,"})";
+            </div>) : (<div>Broken JSX</div>
   (e) => handleFieldChange(field.name,,"});,"})";
   e.target.value);,"});,"})";
 ";,"});,"})";
@@ -294,27 +285,13 @@ export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle 
             </div>)}"});,"})";
         </div>;,"});,"})";
         {/* comment */}"});,"})";
-        {fieldValidation?.isTouched && fieldValidation.message && (<motion.p initial = {}"});,"})";
-  { opacity: 0,"});,"})";
-  height: 0,"});,"});";,
-}} animate = {}"});,"})";
-  { opacity: 1,";,"});,"})";
-  height: "auto","});,"})";
-""";,"});,"})";
-"""";,"});,"});";,
+        {};
 }} className="text-sm text-red-600 dark: text-red-400">,"});,"})";
             {fieldValidation.message}"});,"})";
           </motion.p>) }"});,"})";
       </motion.div>) }, [formData, validation, showPassword, getFieldIcon, handleFieldChange, handleFieldBlur, togglePasswordVisibility]) ;,"});,"})";
     if(isSubmitted) {}"});,"})";
-        return (<motion.div initial = {}"});,"})";
-  { opacity: 0,"});,"})";
-  scale: 0.9,"});,"});";,
-}} animate = {}"});,"})";
-  { opacity: 1,"});,"})";
-  scale: 1,"});,"})";
-""";,"});,"})";
-"""";,"});,"});";,
+        return (<div>Broken JSX</div>
 }} className="text-center p-8 bg-green-50 dark: bg-green-900/20 rounded-xl border border-green-200 dark:border-green-700">""","});,"})";
         <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4"  />"""";,"});,"})";
         <h3 className="text-2xl font-bold text-green-800 dark: text-green-200 mb-2">,"});,"})";
@@ -325,14 +302,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle 
         </p>;,"});,"})";
       </motion.div>) ;,"});,"});";,
 }"});,"})";
-    return (<motion.div initial = {}"});,"})";
-  { opacity: 0,"});,"})";
-  y: 20,"});,"});";,
-}} animate = {}"});,"})";
-  { opacity: 1,"});,"})";
-  y: 0,"});,"})";
-";,"});,"})";
-"";,"});,"});";,
+    return (<div>Broken JSX</div>
 }} className="{"bg-white" dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}"}>""";,"});,"})";
       {/* comment */}"""";,"});,"})";
       <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-6 text-white">"""";,"});,"})";
@@ -358,8 +328,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle 
         </div>;,"});,"})";
 "";,"});,"})";
         {/* comment */}"""";,"});,"})";
-        <motion.button type="{"submit"" disabled="{!isFormValid()" || isSubmitting} className="{"w-full" py-3 px-6 rounded-lg font-medium text-white transition-all duration-200 flex items-center justify-center gap-2 ${!isFormValid() || isSubmitting""";,"});,"})";
-            ? "bg-gray-400 cursor-not-allowed""""";,"}});,"})";
+        <div>Broken JSX</div>
             : "bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 transform hover:scale-105"}"} whileHover="{isFormValid()" && !isSubmitting ? { scale: 1.02 } : { /* comment */ }} whileTap="{isFormValid()" && !isSubmitting ? { scale: 0.98 } : { /* comment */ }}>""";,"});,"})";
           {isSubmitting ? (<>"""";,"});,"})";
               <Loader2 className="w-5 h-5 animate-spin"  />;,"});,"})";
@@ -371,17 +340,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle 
         </motion.button>;,"});,"})";
         {/* comment */}"});,"})";
         <AnimatePresence>;,"});,"})";
-          {Object.values(validation).some(v => !v.isValid && v.isTouched) && (<motion.div initial = {}"});,"})";
-  { opacity: 0,"});,"})";
-  height: 0,"});,"});";,
-}} animate = {}"});,"})";
-  { opacity: 1,";,"});,"})";
-  height: "auto","});,"});";,
-}} exit = {}"});,"})";
-  { opacity: 0,"});,"})";
-  height: 0,"});,"})";
-""";,"});,"})";
-"""";,"});,"});";,
+          {};
 }} className="p-3 bg-red-50 dark: bg-red-900/20 border border-red-200 dark:border-red-700 rounded-lg">""","});,"})";
               <p className="text-sm text-red-600 dark: text-red-400">,"});,"})";
                 Please fix the errors above before submitting the form.</p>;,"});,"})";
@@ -390,7 +349,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle 
       </form>;,"});,"})";
     </motion.div>)};"";,"});,"})";
 """"";,"});,"})"""";
-    const { trackEvent, trackConversion } = useAnalytics({        enableTracking: enableAnalytics,;
+    const { trackEvent, trackConversion } = useAnalytics({};
 enableUserBehaviorTracking: true});,
 }
     const [formData, setFormData] = useState({});,
@@ -404,12 +363,12 @@ enableUserBehaviorTracking: true});,
     const [showPassword, setShowPassword] = useState({});,
 }
     const [progress, setProgress] = useState(0);""""";
-export const AdvancedForm = ({fields, onSubmit, title = "Contact Us", subtitle = "Get in touch with our team", submitText = "Send Message", className=", enableAnalytics = true, showProgressBar = true }) => {";"";
-export const AdvancedForm = memo(({ fields, onSubmit, title = "Contact Us", subtitle = "Get in touch with our team", submitText = "Send Message", className = ", enableAnalytics = true, showProgressBar = true }) => {;framer-motion";;react"framer - motion",lucide-react";&apos;&apos;
+export const AdvancedForm = ({fields, onSubmit, title = "Contact Us", subtitle = "Get in touch with our team", submitText = "Send Message", className=", enableAnalytics = true, showProgressBar = true }) => {};
+export const AdvancedForm = memo(({ fields, onSubmit, title = "Contact Us", subtitle = "Get in touch with our team", submitText = "Send Message", className = ", enableAnalytics = true, showProgressBar = true }) => {};
 export const AdvancedForm = ({ fields, onSubmit, title = &apos;Contact Us&apos, subtitle = &apos;Get in touch with our team&apos, submitText = &apos;Send Message&apos, className = &apos;&apos, enableAnalytics = true, showProgressBar = true }) => {&apos}&apos;""""""";
-export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle = "Get in touch with our team", submitText = "Send Message", className = ", enableAnalytics = true, showProgressBar = true }) => {";,
+export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle = "Get in touch with our team", submitText = "Send Message", className = ", enableAnalytics = true, showProgressBar = true }) => {};
 }";
-    const { trackEvent, trackConversion } = useAnalytics({        enableTracking: enableAnalytics,;
+    const { trackEvent, trackConversion } = useAnalytics({};
         enableUserBehaviorTracking: true});,
 }
     const [formData, setFormData] = useState({});,
@@ -449,11 +408,7 @@ isTouched: false}});,
         setFormData(initialData) ;
         setValidation(initialValidation) }, [fields]) ;
     // Update progress based on filled fields;
-    useEffect(() => {;
-  // TODO: Add dependencies if needed;
-
-  return () => {;
-    // Cleanup function;,
+    useEffect(() => {};
 };,
 }, []);, []);
 
@@ -831,17 +786,11 @@ y: 0 ",">;
           {/* comment */}"{field.type = == "textarea" ? (<textarea name="{field.name}" value="{fieldValue}" onChange = {}>;
   (e) => handleFieldChange(field.name,;
   e.target.value)";";
-""} onBlur="{()" => handleFieldBlur(field.name)} placeholder="{field.placeholder}" className="{"w-full" pl-10 pr-3 py-3 border rounded-lg focus: outline-none focus:ring-2 transition-all duration-200 ${fieldValidation?.isTouched",;
-                    ? fieldValidation.isValid",",;
-                        ? "border-green-500 focus:ring-green-200"",";
-                        : "border-red-500 focus:ring-red-200""",";
+""} onBlur="{()" => handleFieldBlur(field.name)} placeholder="{field.placeholder}" className="{};
                     : "border-gray-300 focus:ring-blue-200 focus:border-blue-500"}"} rows = "{4}/">) : field.type === "select" ? (<select name="{field.name}" value="{fieldValue}" onChange = {}>;
   (e) => handleFieldChange(field.name,;
   e.target.value)";";
-""} onBlur="{()" => handleFieldBlur(field.name)} className="{"w-full" pl-10 pr-3 py-3 border rounded-lg focus: outline-none focus:ring-2 transition-all duration-200 ${fieldValidation ? .isTouched",;
-                    ? fieldValidation.isValid",",;
-                        ? "border-green-500 focus : ring-green-200"",";
-                        : "border-red-500 focus:ring-red-200""",";
+""} onBlur="{()" => handleFieldBlur(field.name)} className="{};
                     : "border-gray-300 focus:ring-blue-200 focus:border-blue-500"}"}>",;
               <option value=">Select an option</option>;";
               {field.options?.map(option = > (<option key="{option.value}" value="{option.value}">,;
@@ -859,10 +808,7 @@ y: 0 ",">;
             </div>) : (<input type = "{isPasswordField" && showPassword[field.name] ? "text" : field.type} name="{field.name}" value="{fieldValue}" onChange = {}>;
   (e) => handleFieldChange(field.name,;
   e.target.value)";";
-""} onBlur="{()" => handleFieldBlur(field.name)} placeholder="{field.placeholder}" className="{"w-full" pl-10 pr-3 py-3 border rounded-lg focus: outline-none focus:ring-2 transition-all duration-200 ${fieldValidation?.isTouched",;
-                    ? fieldValidation.isValid",",;
-                        ? "border-green-500 focus:ring-green-200"",";
-                        : "border-red-500 focus:ring-red-200""",";
+""} onBlur="{()" => handleFieldBlur(field.name)} placeholder="{field.placeholder}" className="{};
                     : "border-gray-300 focus:ring-blue-200 focus:border-blue-500"}"}/>)}";
 ""{/* comment */}""{isPasswordField && (<button type = "button" onClick="{()" => togglePasswordVisibility(field.name)} className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors">""{showPassword[field.name] ? <EyeOff className="w-4 h-4"  /> : <Eye className="w-4 h-4"  />}
 
@@ -899,10 +845,7 @@ y: 0 ",">;
 
   (e) => handleFieldChange(field.name,;
   e.target.value)";";
-""} onBlur="{()" => handleFieldBlur(field.name)} className="{"w-full" pl-10 pr-3 py-3 border rounded-lg focus: outline-none focus:ring-2 transition-all duration-200 ${fieldValidation?.isTouched,;
-                    ? fieldValidation.isValid&apos,;
-                        ? &apos;border-green-500 focus: ring-green-200&apos,&apos,",,;
-                        : &apos;border-red-500 focus: ring-red-200&apos;&apos,"&apos,&apos,",";
+""} onBlur="{()" => handleFieldBlur(field.name)} className="{};
                     : &apos,border-gray-300 focus:ring-blue-200 focu,s: border-blue-500&apos}"}>&apos;&apos,&apos;&apos,";
               <option value="&apos;&apos;">Select an option&apos;&apos;</option>";
               {field.options?.map(option = > (}<option key="{option.value}" value="{option.value}">;
@@ -921,10 +864,7 @@ y: 0 ",">;
 
   (e) => handleFieldChange(field.name,;
   e.target.value)";";
-""} onBlur="{()" => handleFieldBlur(field.name)} placeholder="{field.placeholder}" className="{"w-full" pl-10 pr-3 py-3 border rounded-lg focus: outline-none focus:ring-2 transition-all duration-200 ${fieldValidation?.isTouched,;
-                    ? fieldValidation.isValid&apos,;
-                        ? &apos;border-green-500 focus: ring-green-200&apos,&apos,",,;
-                        : &apos;border-red-500 focus: ring-red-200&apos,&apos,"&apos,";
+""} onBlur="{()" => handleFieldBlur(field.name)} placeholder="{field.placeholder}" className="{};
                     : &apos,border-gray-300 focus:ring-blue-200 focu,s: border-blue-500&apos}"}/>)}";
 &apos;&apos,{/* comment */}&apos;&apos,&apos;{isPasswordField && (&apos}&apos;<button type="&apos;button&apos;" onClick="{()" => togglePasswordVisibility(field.name)} className="&apos;absolute" right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover: text-gray-600 transition-colors&apos,>"&apos,&apos,"{showPassword[field.name] ?&apos}&apos; <EyeOff className="&apos;w-4" h-4&apos;       /> :&apos; <Eye className="&apos;w-4" h-4&apos;       />}&apos;
             </button>)}";
@@ -938,8 +878,7 @@ y: 0 ",">;
 
   { opacity: 0>;
   height: 0}} animate = {}>;
-  { opacity: 1,";
-  height: &apos,auto&apos, "&apos,",;
+  {};
 &apos,&apos,"&apos}} className="&apos;text-sm" text-red-600 dark: text-red-400&apos,>{fieldValidation.message}&apos;&apos,;
         const fieldValidation = validation[field.name]";
         const isPasswordField = field.name.toLowerCase().includes("password")"        return (<motion.div key="{field.name}" initial = {}
@@ -959,23 +898,17 @@ y: 0 ",">;
           </div>";
           {/* comment */}"{field.type === "textarea" ? (<textarea name="{field.name}" value="{fieldValue}" onChange = {}>;
   (e) => handleFieldChange(field.name, e.target.value)";";
-""} onBlur = "{()" => handleFieldBlur(field.name)} placeholder="{field.placeholder}" className="{"w-full" pl-10 pr-3 py-3 border rounded-lg focus: outline-none focus:ring-2 transition-all duration-200 ${fieldValidation?.isTouched",;
-                    ? fieldValidation.isValid",";
-                        ? "border-green-500 focus: ring-green-200""";
-                        : "border-red-500 focus:ring-red-200""""",;
+""} onBlur = "{()" => handleFieldBlur(field.name)} placeholder="{field.placeholder}" className="{};
                     : "border-gray-300 focus:ring-blue-200 focus:border-blue-500"}"} rows="{4}/">) : field.type === "select" ? (<select name="{field.name}" value="{fieldValue}" onChange = {}>;
   (e) => handleFieldChange(field.name, e.target.value)";";
-""} onBlur="{()" => handleFieldBlur(field.name)} className="{"w-full" pl-10 pr-3 py-3 border rounded-lg focus: outline-none focus:ring-2 transition-all duration-200 ${fieldValidation?.isTouched",",;
-                    ? fieldValidation.isValid",";
-                        ? "border-green-500 focus: ring-green-200""",";
-                        : "border-red-500 focus: ring-red-200""""""",;
+""} onBlur="{()" => handleFieldBlur(field.name)} className="{};
                     : "border-gray-300 focus:ring-blue-200 focus:border-blue-500"}"}>""";
               <option value = "">Select an option</option>";
               {field.options?.map(option => (<option key="{option.value}" value="{option.value}">";
                   {option.label}""";
                 </option>))}"""";
             </select>) : field.type === "checkbox" ? (<div className="flex items-center space-x-3">"";
-              <input type="checkbox" name="{field.name}" checked="{fieldValue}" onChange = {}";
+              <div>Broken JSX</div>
   (e) => handleFieldChange(field.name, e.target.checked)"";
 """"} className="w-4 h-4 text-blue-600 border-gray-300 rounded focus: ring-blue-500" />"";
               <span className="text-sm text-gray-600 dark:text-gray-400">,;
@@ -983,10 +916,7 @@ y: 0 ",">;
               </span>;
             </div>) : (<input type="{isPasswordField" && showPassword[field.name] ? "text" : field.type} name="{field.name}" value="{fieldValue}" onChange = {}>;
   (e) => handleFieldChange(field.name, e.target.value)";";
-""} onBlur = "{()" => handleFieldBlur(field.name)} placeholder="{field.placeholder}" className="{"w-full" pl-10 pr-3 py-3 border rounded-lg focus: outline-none focus:ring-2 transition-all duration-200 ${fieldValidation?.isTouched",;
-                    ? fieldValidation.isValid",";
-                        ? "border-green-500 focus: ring-green-200""";
-                        : "border-red-500 focus:ring-red-200""""",;
+""} onBlur = "{()" => handleFieldBlur(field.name)} placeholder="{field.placeholder}" className="{};
                     : "border-gray-300 focus:ring-blue-200 focus:border-blue-500"}"}/>)}";
 """{/* comment */}""""{isPasswordField && (<button type="button" onClick="{()" => togglePasswordVisibility(field.name)} className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover: text-gray-600 transition-colors">""""{showPassword[field.name] ? <EyeOff className="w-4 h-4"  /> : <Eye className="w-4 h-4"  />}";
             </button>)}";
@@ -1000,8 +930,7 @@ y: 0 ",">;
 
   { opacity: 0>;
 height: 0}} animate = {}>;
-  { opacity: 1,";
-  height: "auto" ",";
+  {};
 ""}} className = "text-sm text-red-600 dark:text-red-400">{fieldValidation.message}
 
   { opacity: 0, height: 0}} animate = {}
@@ -1043,9 +972,7 @@ y: 0 ",">;
         <h2 className="text-2xl font-bold mb-2">{title}</h2>"";";
         <p className="text-blue-100">{subtitle}</p>;
       </div>;";
-""{/* comment */}""{showProgressBar && (<div className="px-6 pt-4">"";";
-          <div className = "flex items-center justify-between text-sm text-gray-600 dark: text-gray-400 mb-2">,;
-            <span>Form Progress</span>,;
+""{/* comment */}""{};
             <span>{Math.round(progress)}%</span>;
           </div>"";";
           <div className = "w-full bg-gray-200 dark: bg-gray-700 rounded-full h-2">""",";
@@ -1059,12 +986,8 @@ y: 0 ",">;
 
         </div>;
 ""{/* comment */}"""";";
-        <motion.button type="submit" disabled="{!isFormValid()" || isSubmitting} className="{"w - full" py-3 px-6 rounded-lg font-medium text-white transition-all duration-200 flex items-center justify-center gap-2 ${!isFormValid() || isSubmitting"">;
-            ? "bg-gray-400 cursor-not-allowed"""";";
-            : "bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 transform hover:scale-105"}"} whileHover="{isFormValid()" && !isSubmitting ? { scale: 1.02 } : {}} whileTap="{isFormValid()" && !isSubmitting ? { scale: 0.98 } : {}}>""{isSubmitting ? (<>"";";
-              <Loader2 className = "w - 5 h-5 animate-spin"  />,;
-              Sending...",;
-            </>) : (<>"";";
+        <motion.button type="submit" disabled="{!isFormValid()" || isSubmitting} className="{};
+            : "bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 transform hover:scale-105"}"} whileHover="{isFormValid()" && !isSubmitting ? { scale: 1.02 } : {}} whileTap="{isFormValid()" && !isSubmitting ? { scale: 0.98 } : {}}>""{};
               <Send className="w-5 h-5"  />              {submitText}
 
             </>) }
@@ -1119,8 +1042,7 @@ y: 0 ",">;
           {fields.map(field => renderField(field))}&apos;
         </div>";
 &apos;"{/* comment */}&apos;""&apos;"&apos,";
-        <motion.button type="&apos;submit&apos;" disabled="{!isFormValid()" || isSubmitting} className="{"w-full" py-3 px-6 rounded-lg font-medium text-white transition-all duration-200 flex items-center justify-center gap-2 ${!isFormValid() || isSubmitting&apos;&apos;">;
-            ? &apos;bg-gray-400 cursor-not-allowed&apos;&apos;"&apos;";";
+        <motion.button type="&apos;submit&apos;" disabled="{!isFormValid()" || isSubmitting} className="{};
             : &apos;bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 transform hove,r: scale-105&apos}"} whileHover="{isFormValid()" && !isSubmitting ? { scale: 1.02 } : {}} whileTap="{isFormValid()" && !isSubmitting ? { scale: 0.98 } : {}}>&apos;&apos,{isSubmitting ? (&apos}&apos;<>&apos;&apos,&apos;&apos,";
               <Loader2 className="&apos;w-5" h-5 animate-spin&apos;       />";
               Sending...&apos;&apos,&apos;&apos,;
@@ -1157,9 +1079,7 @@ y: 0 ",">;
         <h2 className="text-2xl font-bold mb-2">{title}</h2>"";
         <p className="text-blue-100">{subtitle}</p>;
       </div>";
-"""{/* comment */}""""{showProgressBar && (<div className="px-6 pt-4">""";
-          <div className="flex items-center justify-between text-sm text-gray-600 dark: text-gray-400 mb-2">;
-            <span>Form Progress</span>",;
+"""{/* comment */}""""{};
             <span>{Math.round(progress)}%</span>""";
           </div>"";
           <div className="w-full bg-gray-200 dark: bg-gray-700 rounded-full h-2">"""",;
@@ -1173,12 +1093,8 @@ y: 0 ",">;
 
         </div>";
 ""{/* comment */}"""";
-        <motion.button type="submit" disabled="{!isFormValid()" || isSubmitting} className="{"w - full" py-3 px-6 rounded-lg font-medium text-white transition-all duration-200 flex items-center justify-center gap-2 ${!isFormValid() || isSubmitting""">;
-            ? "bg-gray-400 cursor-not-allowed""""";";
-            : "bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 transform hover:scale-105"}"} whileHover = "{isFormValid()" && !isSubmitting ? { scale: 1.02 } : {}} whileTap="{isFormValid()" && !isSubmitting ? { scale: 0.98 } : {}}>"""{isSubmitting ? (<>""";
-              <Loader2 className="w-5 h-5 animate-spin"  />";
-              Sending...""";
-</>) : (<>"";
+        <motion.button type="submit" disabled="{!isFormValid()" || isSubmitting} className="{};
+            : "bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 transform hover:scale-105"}"} whileHover = "{isFormValid()" && !isSubmitting ? { scale: 1.02 } : {}} whileTap="{isFormValid()" && !isSubmitting ? { scale: 0.98 } : {}}>"""{};
               <Send className="w-5 h-5"  />              {submitText}
 
 </>) }
@@ -1210,7 +1126,7 @@ height: 0 ",">;
 
   { opacity: 1,";
   height: "auto"}} exit = {}";
-  { opacity: 0, height: 0 "",";
+  {};
 """"}} className="p-3 bg-red-50 dark: bg-red-900/20 border border-red-200 dark:border-red-700 rounded-lg">"";
               <p className="text-sm text-red-600 dark:text-red-400">;
                 Please fix the errors above before submitting the form.</p>,;
@@ -1225,7 +1141,6 @@ height: 0 ",">;
 ";,
 }";
 ";,
-} catch (error) {;
-    console.error(error);,
+} catch (error) {};
 }
 export default Component;

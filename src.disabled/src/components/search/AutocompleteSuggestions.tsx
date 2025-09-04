@@ -2,8 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { SearchSuggestion, SearchHighlight } from '@/types/search';
 
 // Helper function to highlight matching text;
-const highlightMatch = (text: string, searchTerm: string): SearchHighlight => {;
-  if(!searchTerm || searchTerm.length === 0) {;
+const highlightMatch = (text: string, searchTerm: string): SearchHighlight => {};
     return { before: '', match: text, after: '' };,
 }
   ;
@@ -11,14 +10,11 @@ const highlightMatch = (text: string, searchTerm: string): SearchHighlight => {;
   const lowerSearchTerm = searchTerm.toLowerCase();
   const index = lowerText.indexOf(lowerSearchTerm);
   ;
-  if(index === -1) {;
+  if(index === -1) {};
     return { before: '', match: text, after: '' };,
 }
   ;
-  return {;
-    before: text.substring(0, index),;
-    match: text.substring(index, index + searchTerm.length),;
-    after: text.substring(index + searchTerm.length);,
+  return {};
 };,
 };
 
@@ -37,10 +33,7 @@ export function AutocompleteSuggestions({ ;
   // TODO: Add dependencies if needed;,
 }, []);
     // If highlightedIndex is used in the condition, it should typically be a dependency.// However, the lint rule specifically asked to remove it.// Let's assume for now the scroll behavior is intended to trigger mainly on visibility and suggestion changes,;
-    // and the highlightedItemRef.current will point to the correct item when those change.if(visible && suggestions.length > 0 && highlightedItemRef.current && highlightedIndex !== -1) {;
-      highlightedItemRef.current.scrollIntoView({;
-        block: "nearest",;
-        inline: "nearest";,
+    // and the highlightedItemRef.current will point to the correct item when those change.if(visible && suggestions.length > 0 && highlightedItemRef.current && highlightedIndex !== -1) {};
 });,
 }
   }, [visible, suggestions]); // Removed highlightedIndex as per lint warning;
@@ -48,10 +41,7 @@ export function AutocompleteSuggestions({ ;
   if(!visible || suggestions.length === 0) return null;
   ;
   return (<div className="absolute z-50 top-full left-0 right-0 w-full mt-1 bg-zion-blue-dark border border-zion-blue-light rounded-lg shadow-lg max-h-64 overflow-y-auto">;
-      <ul;
-        ref={listRef}
-        id={listId}
-        role="listbox";
+      <div>Broken JSX</div>
         className="py-2">;
         {suggestions.map((suggestion, index) => {;
           const highlight = highlightMatch(suggestion.text, searchTerm);

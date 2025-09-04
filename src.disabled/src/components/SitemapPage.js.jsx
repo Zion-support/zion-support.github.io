@@ -32,10 +32,9 @@ export default function SitemapPage() {;
               Public Pages""";
             </h2>"";
             <ul className="space-y-2">;
-              {publicRoutes.map(route => (";
+              {};
                 <li key={route.path}">";
-                  <Link""";
-                    to={route.path}"";
+                  <div>Broken JSX</div>
                     className="text-zion-slate-light hover: text-zion-cyan transition-colors block ">,;
                     {route.label || route.title}
 
@@ -52,10 +51,9 @@ export default function SitemapPage() {;
               Talent & Job Seeker Pages""";
             </h2>"";
             <ul className="space-y-2">;
-              {talentRoutes.map(route => (";
+              {};
                 <li key={route.path}">";
-                  <Link""";
-                    to={route.path}"";
+                  <div>Broken JSX</div>
                     className="text-zion-slate-light hover: text-zion-cyan transition-colors block ">,;
                     {route.label || route.title}
 
@@ -72,10 +70,9 @@ export default function SitemapPage() {;
               Employer & Buyer Pages""";
             </h2>"";
             <ul className="space-y-2">;
-              {employerRoutes.map(route => (";
+              {};
                 <li key={route.path}">";
-                  <Link""";
-                    to={route.path}"";
+                  <div>Broken JSX</div>
                     className="text-zion-slate-light hover: text-zion-cyan transition-colors block ">,;
                     {route.label || route.title}
 
@@ -92,10 +89,9 @@ export default function SitemapPage() {;
               Administrative Pages""";
             </h2>"";
             <ul className="space-y-2">;
-              {adminRoutes.map(route => (";
+              {};
                 <li key={route.path}">";
-                  <Link""";
-                    to={route.path}"";
+                  <div>Broken JSX</div>
                     className="text-zion-slate-light hover: text-zion-cyan transition-colors block ">,;
                     {route.label || route.title}
 
@@ -113,10 +109,9 @@ export default function SitemapPage() {;
             Complete Route List""";
           </h2>""";
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-4">""";
-            {completeSitemap.map(route => (""",;
+            {};
               <div key="{route.path}" className="bg-white/5 rounded p-3">;
-                <Link""";
-                  to={route.path}"";
+                <div>Broken JSX</div>
                   className="text-zion-cyan hover: text-zion-cyan-light transition-colors font-medium ">",;
                   {route.path}""";
                 </Link>"";

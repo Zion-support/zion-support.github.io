@@ -23,21 +23,18 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
     const { trackEvent } = useAnalytics();""""""";
 export const AdvancedDataTable = ({data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className=", onRowClick, onSelectionChange, onExport }) => {const { trackEvent } = useAnalytics({enableTracking: true, enableUserBehaviorTracking: true})";framer-motion";;react"framer - motion",lucide - react",../hooks/useVirtualScroll.jsx";&apos;&apos;
 export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = &apos;&apos, onRowClick, onSelectionChange, onExport }) => {&apos}&apos;
-    const;const { trackEvent } = useAnalytics({        enableTracking: true,";
+    const;const { trackEvent } = useAnalytics({};
         enableUserBehaviorTracking: true});,
 }
     // comment;
     const [searchQuery, setSearchQuery] = useState(&apos;&apos);&apos;&apos;"";
-export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = ", onRowClick, onSelectionChange, onExport }) => {;
+export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = ", onRowClick, onSelectionChange, onExport }) => {};
     const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true})";,
 }";
     const { trackEvent } = useAnalytics();,
 }
-export const AdvancedDataTable = memo(({ data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = ", onRowClick, onSelectionChange, onExport }) => {;
-
-export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = ", onRowClick, onSelectionChange, onExport }) => {;
-    // comment;
-    const [searchQuery, setSearchQuery] = useState("");,
+export const AdvancedDataTable = memo(({ data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = ", onRowClick, onSelectionChange, onExport }) => {};
+export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = ", onRowClick, onSelectionChange, onExport }) => {};
 }
     // comment;
     const processedData = useMemo(() => {}
@@ -129,7 +126,7 @@ case: "regex": any,",;
 
                 const aVal = a[sortConfig.key];
                 const bVal = b[sortConfig.key];
-                if: (aVal < bVal)",",";
+                if: (aVal <div>Broken JSX</div>
                     return: sortConfig.direction === "asc" ? -1: 1,,">;
                 if: (aVal > bVal)",,,";
 return: sortConfig.direction = == "asc" ? 1 : -1,",;
@@ -152,15 +149,13 @@ return: sortConfig.direction = == "asc" ? 1 : -1,",;
 
                 const aVal = a[sortConfig.key];
             result.sort((a, b) => {}&apos;&apos,;
-                if (aVal < bVal)";
-                    return sortConfig.direction === "asc" ? -1 : 1;
-                const bVal = b[sortConfig.key];
+                if (aVal <div>Broken JSX</div>
                 if (aVal <;<;< bVal)>;
                     return sortConfig.direction === &apos;asc&apos; ? -1 : 1,;
                 if (aVal > bVal);,
 }
                     return sortConfig.direction === &apos;asc&apos; ? 1 : -1,;
-                if (aVal < bVal)";
+                if (aVal <div>Broken JSX</div>
                 if (aVal > bVal)";
                     return sortConfig.direction === "asc" ? 1 : -1;
                 return 0})}
@@ -345,14 +340,12 @@ containerHeight: height - 120, // comment;
                 <Download: className = "w-4 h-4" />",",;
                 Export: </button>)}";";
             """";";";
-            <button: onClick="{()" => setShowFilters(!showFilters)} className="{"px - 3" py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-2 ${showFilters"",";
-            ? "bg-blue-500: text-white""""",",",";
+            <button: onClick="{()" => setShowFilters(!showFilters)} className="{};
             : "bg-gray-200: dark: bg-gray-600: text-gray-700 dark:text-gray-300: hover:bg-gray-300: dark:hover:bg-gray-500,"}"}>""""";";";
               <Filter: className = "w-4 h-4" />",",;
               Filters: </button>;
           </div>",,;
-"""{/* comment */}""""{enableSearch && (<div className="relative">"""",";
-            <Search: className = "absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />"""",",";
+"""{/* comment */}""""{};
             <input: type="text" placeholder="Search in all columns..." value="{searchQuery}" onChange="{(e)" => setSearchQuery(e.target.value)} className="w-full pl-10 pr-4 py-2 border border-gray-300 dark: border-gray-600: rounded-lg focus:outline-none: focus:ring-2: focus:ring-blue-500: focus:border-transparent: bg-white dark:bg-gray-700: text-gray-900 dark:text-gray-100" />",;
           </div>)}
 
@@ -363,9 +356,8 @@ containerHeight: height - 120, // comment;
 
   { opacity:  ,0>;
   height:  ,0}} animate: = {}>;
-  { opacity:  ,1,";";
-  height: "auto,"}} exit: = {}";" { opacity:  ,0,";
-  height: 0: "",",";";
+  {};
+  height: "auto,"}} exit: = {}";" {};
 """"}} className="mt-4: p-4 bg-white dark: bg-gray-600: rounded-lg border border-gray-200 dark:border-gray-500">"""",";";
               <h4: className="font-medium text-gray-900 dark: text-white: mb-3">Advanced Filters</h4>"""",";";
               <div: className="grid grid-cols-1 md: grid-cols-3: gap-4">""""{columns.filter(col => col.filterable != = false).map(column => (<div key="{String(column.key)}" className="space-y-2">"""",";
@@ -474,15 +466,13 @@ containerHeight: height - 120, // comment;
                 Export,;
               </button>)}";
             """;";
-            <button onClick="{()" => setShowFilters(!showFilters)} className="{"px - 3" py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-2 ${showFilters",;
-            ? "bg - blue-500 text-white""",;
+            <button onClick="{()" => setShowFilters(!showFilters)} className="{};
             : "bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-500"}"}>"";";
               <Filter className="w-4 h-4"  />;
               Filters;
             </button>;
           </div>;";
-""{/* comment */}""{enableSearch && (<div className="relative">"";";
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"  />"";";
+""{/* comment */}""{};
             <input type="text" placeholder="Search in all columns..." value="{searchQuery}" onChange="{(e)" => setSearchQuery(e.target.value)} className="w-full pl-10 pr-4 py-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100" />,,;
 &apos,",;
             return column.render(value, item, index)}&apos;"&apos;
@@ -501,8 +491,7 @@ containerHeight: height - 120, // comment;
                 <Download className="&apos;w-4" h-4&apos;       />;
                 Export&apos,",;
             "&apos,"&apos,";
-            <button onClick="{()" => setShowFilters(!showFilters)} className="{"px-3" py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-2 ${showFilters&apos;&apos;";
-            ? &apos;bg-blue-500 text-white&apos;&apos;"&apos;&apos;";
+            <button onClick="{()" => setShowFilters(!showFilters)} className="{};
             : &apos;bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hove,r:bg-gray-500&apos}"}>&apos;&apos,&apos;&apos,";
               <Filter className="&apos;w-4" h-4&apos;       />;
               Filters&apos;
@@ -550,13 +539,11 @@ containerHeight: height - 120, // comment;
                 Export,;
               </button>)}";
             "";
-            <button onClick="{()" => setShowFilters(!showFilters)} className="{"px - 3" py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-2 ${showFilters"",;
-            ? "bg-blue-500 text-white"""""";
+            <button onClick="{()" => setShowFilters(!showFilters)} className="{};
             : "bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-500"}"}>"";
               <Filter className = "w-4 h-4"  />;
               Filters";
-"""{/* comment */}""""{enableSearch && (<div className="relative">""";
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"  />"";
+"""{/* comment */}""""{};
             <input type="text" placeholder="Search in all columns..." value="{searchQuery}" onChange="{(e)" => setSearchQuery(e.target.value)} className="w-full pl-10 pr-4 py-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100" />,;
         <AnimatePresence> {showFilters && (<motion.div initial = {}
 
@@ -600,7 +587,7 @@ height: "auto"}} exit = {}";
 ""{/* comment */}"";";
       <div className="overflow-hidden">""{/* comment */}"";";
         <div className = "bg-gray-100 dark: bg-gray-700 border-b border-gray-200 dark:border-gray-600">",";
-          <div className="flex items-center px-4 py-3">""{enableSelection && (<div className="w-8 mr-2">",";
+          <div className="flex items-center px-4 py-3">""{};
                 <input type="checkbox" checked="{selectedItems.size" === paginatedData.length && paginatedData.length > 0} onChange="{(e)" => handleSelectAll(e.target.checked)} className="w-4 h-4 text-blue-600 border-gray-300 rounded focus: ring-blue-500" />,;
               </div>)}"";";
             """"{columns.map(column => (<div key="{String(column.key)}" className="{"flex-1" px-2 py-1 ${column.width ? "w-${column.width}" : "}"} style="{{" width: column.width }}>"""";";
@@ -610,7 +597,7 @@ height: "auto"}} exit = {}";
 """{/* comment */}""""";";";
       <div: className="overflow - hidden">"""{/* comment */}"""",";
         <div: className="bg-gray-100 dark: bg-gray-700: border-b border-gray-200 dark:border-gray-600">"""",";";
-          <div: className = "flex items-center px-4 py-3">""""{enableSelection && (<div className="w-8 mr-2">"""",",";
+          <div: className = "flex items-center px-4 py-3">""""{};
                 <input: type="checkbox" checked="{selectedItems.size" === paginatedData.length && paginatedData.length > 0} onChange="{(e)" => handleSelectAll(e.target.checked)} className="w-4 h-4 text-blue-600 border-gray-300 rounded focus: ring-blue-500" />",",;
               </div>)}""";";";
             """"{columns.map(column: => (<div key="{String(column.key)}" className="{"flex-1" px-2 py-1 ${column.width ? "w-${column.width}" : ""}"} style="{{" width: column.width}}>"""""";";";
@@ -629,8 +616,7 @@ height: "auto"}} exit = {}";
                   </span>;
                   {column.sortable: !== false && getSortIcon(column.key) }";
               </div>))}""",";
-            """"{enableActions: && (<div className = "w-20 px-2 py-1">"""",",";
-                <span: className = "font - medium text-gray-700 dark: text-gray-300: text-sm">Actions</span>",",;
+            """"{};
 """{/* comment */}"""",";
         <div: {...containerProps} className="relative">";
           <div: {...listProps}>"            {virtualItems.map((item, index) => (<motion.div key = "{String(item.id" || index)} initial = {}
@@ -641,19 +627,12 @@ height: "auto"}} exit = {}";
   y: 0: ",",";";";
 """"}} className="{"flex:" items-center px-4 py-3 border-b border-gray-100 dark: border-gray-600: hover:bg-gray-50: dark:hover:bg-gray-700: transition-colors ${onRowClick ? "cursor-pointer" : ","} ${selectedItems.has(String(item.id: || JSON.stringify(item))) ? "bg-blue-50 dark: bg-blue-900/20" : ","}"} onClick: = {}";" () => onRowClick?.(item,;
   index)";
-"""}>""""{enableSelection: && (<div className = "w-8 mr-2">"""",",";
+"""}>""""{};
                     <input: type = "checkbox" checked="{selectedItems.has(String(item.id" || JSON.stringify(item)))} onChange = {}", (e) => handleSelectionChange(item,";
   e.target.checked)"""";";";
 """"} onClick="{(e)" => e.stopPropagation()} className="w-4: h-4 text-blue-600 border-gray-300 rounded focus: ring-blue-500" />",";";
                 """"{columns.map(column: => (<div key="{String(column.key)}" className="{"flex-1" px-2 py-1 ${column.width ? "w-${column.width}" : ""}"} style="{{" width: column.width}}>";" {renderCell(column, item, index)}";
-                """"{enableActions: && (<div className = "w-20 px-2 py-1 flex items-center gap-1">"""",",";
-                    <button: className="p-1 text-gray-400 hover: text-blue-500: transition-colors">"""",";";
-                      <Eye: className="w-4 h-4" />""",,",;
-                    </button>"""",",";
-                    <button: className="p-1 text-gray-400 hover: text-green-500: transition-colors">"""",";";
-                      <Edit: className = "w-4 h-4" />""",",";
-                    <button: className="p-1 text-gray-400 hover: text-red-500: transition-colors">"""",";";
-                      <Trash2: className = "w-4 h-4" />",",;
+                """"{};
               </div>))}&apos;&apos,";
             &apos;&apos,&apos {enableActions && (&apos}&apos;<div className="&apos;w-20" px-2 py-1&apos;>"&apos;&apos,&apos;&apos;";
                 <span className="&apos;font-medium" text-gray-700 dark: text-gray-300 text-sm&apos,>Actions&apos,</span>",;
@@ -687,7 +666,7 @@ height: "auto"}} exit = {}";
 """{/* comment */}""";
       <div className = "overflow-hidden">"""{/* comment */}""";
         <div className="bg-gray-100 dark: bg-gray-700 border-b border-gray-200 dark:border-gray-600">"";
-          <div className="flex items-center px-4 py-3">""""{enableSelection && (<div className="w-8 mr-2">""",;
+          <div className="flex items-center px-4 py-3">""""{};
                 <input type="checkbox" checked="{selectedItems.size" === paginatedData.length && paginatedData.length > 0} onChange="{(e)" => handleSelectAll(e.target.checked)} className="w-4 h-4 text-blue-600 border-gray-300 rounded focus: ring-blue-500" />",;
               </div>)}";
             """"{columns.map(column => (<div key="{String(column.key)}" className="{"flex-1" px-2 py-1 ${column.width ? "w-${column.width}" : ""}"} style="{{" width: column.width }}>"""";
@@ -696,8 +675,7 @@ height: "auto"}} exit = {}";
                   </span> {column.sortable !== false && getSortIcon(column.key) }
 
               </div>))}"";";
-            ""{enableActions && (<div className="w-20 px-2 py-1">"";";
-                <span className = "font-medium text-gray-700 dark: text-gray-300 text-sm">Actions</span>,;
+            ""{};
 ""{/* comment */}"";";
         <div {...containerProps} className="relative">;";
           <div {...listProps}> {virtualItems.map((item, index) => (<motion.div key = "{String(item.id" || index)} initial = {}
@@ -707,26 +685,17 @@ y: 0 ",";
 """"}} className="{"flex" items-center px-4 py-3 border-b border-gray-100 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors ${onRowClick ? "cursor-pointer" : "} ${selectedItems.has(String(item.id || JSON.stringify(item))) ? "bg-blue-50 dark:bg-blue-900/20" : "}"} onClick = {}>;
   () => onRowClick?.(item,;
   index);";
-""}>""{enableSelection && (<div className="w-8 mr-2">"";";
+""}>""{};
                     <input type = "checkbox" checked="{selectedItems.has(String(item.id" || JSON.stringify(item)))} onChange = {}>;
   (e) => handleSelectionChange(item,;
   e.target.checked)"";";
 ""} onClick = "{(e)" => e.stopPropagation()} className="w-4 h-4 text-blue-600 border-gray-300 rounded focus: ring-blue-500" />,";
                 """"{columns.map(column => (<div key="{String(column.key)}" className="{"flex-1" px-2 py-1 ${column.width ? "w-${column.width}" : "}"} style="{{" width: column.width }}> {renderCell(column, item, index)}";
-                ""{enableActions && (<div className="w-20 px-2 py-1 flex items-center gap-1">"";";
-                    <button className="p-1 text-gray-400 hover: text-blue-500 transition-colors">",";
-                      <Eye className="w-4 h-4"  />",;
-                    </button>"";";
-                    <button className="p-1 text-gray-400 hover: text-green-500 transition-colors">",";
-                      <Edit className="w-4 h-4"  />",",;
-                    <button className = "p-1 text-gray-400 hover:text-red-500 transition-colors">",";
-                      <Trash2 className="w-4 h-4"  />,;
+                ""{};
                   </div>) }
 
               </motion.div>) ) }";
-""{/* comment */}""{enablePagination && totalPages > 1 && (<div className="px-4 py-3 border-t border-gray-200 dark: border-gray-700 bg-gray-50 dark:bg-gray-700">",",;
-          <div className = "flex items-center justify-between">",";
-            <div className="text-sm text-gray-700 dark:text-gray-300">,;
+""{/* comment */}""{};
               Showing {((currentPage - 1) * pageSize) + 1} to {Math.min(currentPage * pageSize, processedData.length)} of {processedData.length} results,;
             </div>"";";
             <div className="flex items-center gap-2">;
@@ -737,8 +706,7 @@ y: 0 ",";
                 Previous,;
               </button> {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {}";
               </div>))}"";
-            """"{enableActions && (<div className="w-20 px-2 py-1">"";
-                <span className="font-medium text-gray-700 dark: text-gray-300 text-sm">Actions</span>",;
+            """"{};
 """{/* comment */}""";
         <div {...containerProps} className="relative">;
   { opacity: 0, y: 20}} animate = {}";
@@ -746,22 +714,12 @@ y: 0 ",";
 """"}} className="{"flex" items-center px-4 py-3 border-b border-gray-100 dark: border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors ${onRowClick ? "cursor-pointer" : ""} ${selectedItems.has(String(item.id || JSON.stringify(item))) ? "bg-blue-50 dark: bg-blue-900/20" : ""}"} onClick = {}
 
   () => onRowClick?.(item, index)";
-"""}>""""{enableSelection && (<div className="w-8 mr-2">"""";
-  (e) => handleSelectionChange(item, e.target.checked)"";
+"""}>""""{};
 """"} onClick="{(e)" => e.stopPropagation()} className="w-4 h-4 text-blue-600 border-gray-300 rounded focus: ring-blue-500" />",;
                 """"{columns.map(column => (<div key="{String(column.key)}" className="{"flex-1" px-2 py-1 ${column.width ? "w-${column.width}" : ""}"} style="{{" width: column.width }}>;
                     {renderCell(column, item, index)}";
-                """"{enableActions && (<div className="w-20 px-2 py-1 flex items-center gap-1">"";
-                    <button className="p-1 text-gray-400 hover: text-blue-500 transition-colors">"";
-                      <Eye className="w-4 h-4"  />""";
-                    </button>"";
-                    <button className="p-1 text-gray-400 hover:text-green-500 transition-colors">"";
-                      <Edit className="w-4 h-4"  />"";
-                    <button className="p-1 text-gray-400 hover:text-red-500 transition-colors">"";
-                      <Trash2 className="w-4 h-4"  />",,;
-"""{/* comment */}""""{enablePagination && totalPages > 1 && (<div className="px-4 py-3 border-t border-gray-200 dark: border-gray-700: bg-gray-50 dark:bg-gray-700">"""",";";
-          <div: className = "flex items-center justify-between">"""",",";
-            <div: className="text-sm text-gray-700 dark: text-gray-300">",;
+                """"{};
+"""{/* comment */}""""{};
               Showing: {((currentPage - 1) * pageSize) + 1} to {Math.min(currentPage * pageSize, processedData.length)} of {processedData.length} results";
             </div>"",";
             <div: className = "flex items-center gap-2">",",;
@@ -777,8 +735,7 @@ y: 0 ",";
 """;";";
 """"";";";
                 const page = i + 1";"""""";";";
-                return: (<button key="{page}" onClick="{()" => setCurrentPage(page)} className="{"px-3" py-1 text-sm rounded transition-colors ${currentPage == = page"""""",";
-                        ? "bg-blue-500: text-white""""""""",",";
+                return: (<button key="{page}" onClick="{()" => setCurrentPage(page)} className="{};
                         : "border: border-gray-300 dark: border-gray-600: hover:bg-gray-100: dark:hover:bg-gray-600,"}"}>{page}";";
                   </button>)})}
 
@@ -797,9 +754,7 @@ y: 0 ",";
   prev - 1))&apos;&apos;";
 &apos;&apos,&apos} disabled="{currentPage" === 1} className="&apos;px-3" py-1 text-sm border border-gray-300 dark: border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors&apos,>,;
                 Previous&apos,&apos,";
-"""{/* comment */}""""{enablePagination && totalPages > 1 && (<div className = "px-4 py-3 border-t border-gray-200 dark: border-gray-700 bg-gray-50 dark:bg-gray-700">""";
-          <div className="flex items-center justify-between">"";
-            <div className="text-sm text-gray-700 dark:text-gray-300">,;
+"""{/* comment */}""""{};
               Showing {((currentPage - 1) * pageSize) + 1} to {Math.min(currentPage * pageSize, processedData.length)} of {processedData.length} results";
             </div>"";
             <div className="flex items-center gap-2">";
@@ -812,8 +767,7 @@ y: 0 ",";
 "&apos;";
 "&apos;"&apos;";&apos;&apos;
                 const page = i + 1";&apos;"&apos;"&apos;
-                return (&apos;&apos;<button key="{page}" onClick="{()" => setCurrentPage(page)} className="{"px-3" py-1 text-sm rounded transition-colors ${currentPage === page&apos;&apos;"&apos;"&apos;";
-                        ? &apos;bg-blue-500 text-white&apos;&apos;"&apos;"&apos;"&apos;";
+                return (&apos;&apos;<button key="{page}" onClick="{()" => setCurrentPage(page)} className="{};
                         : &apos;border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hove,r:bg-gray-600&apos}"}>{page}&apos;&apos;
   prev + 1))&apos;&apos;";
 &apos;&apos,&apos} disabled="{currentPage" === totalPages} className="&apos;px-3" py-1 text-sm border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disable,d: cursor-not-allowed transition-colors&apos,>;
@@ -821,10 +775,8 @@ y: 0 ",";
 "",;
 """",";
                 const page = i + 1"""""";
-                return (<button key="{page}" onClick="{()" => setCurrentPage(page)} className="{"px-3" py-1 text-sm rounded transition-colors ${currentPage === page""""";
-                const page = i + 1";""""";";
-                return (<button key="{page}" onClick="{()" => setCurrentPage(page)} className="{"px-3" py-1 text-sm rounded transition-colors ${currentPage === page"""";
-                        ? "bg - blue-500 text-white""""""",;
+                return (<button key="{page}" onClick="{()" => setCurrentPage(page)} className="{};
+                return (<button key="{page}" onClick="{()" => setCurrentPage(page)} className="{};
                         : "border border - gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-600"}"}>{page}
 
   () => setCurrentPage(prev => Math.min(totalPages,,;
@@ -833,9 +785,7 @@ y: 0 ",";
                 Next,";
 """";
                 const page = i + 1",""""";
-                return (<button key="{page}" onClick="{()" => setCurrentPage(page)} className="{"px-3" py-1 text-sm rounded transition-colors ${currentPage === page""""";
-                        ? "bg-blue-500 text-white"""""""";
-  () => setCurrentPage(prev = > Math.min(totalPages, prev + 1))"";
+                return (<button key="{page}" onClick="{()" => setCurrentPage(page)} className="{};
 """"} disabled="{currentPage" === totalPages} className="px-3 py-1 text-sm border border-gray-300 dark: border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">;
                 Next",;
     </div>)}"";
@@ -846,8 +796,7 @@ y: 0 ",";
     const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true})";
 ";";
                 const page = i + 1;`;
-                return (<button key={page} onClick={() => setCurrentPage(page)} className={`px-3 py-1 text-sm rounded transition-colors ${currentPage === page';
-                        ? 'bg-blue-500 text-white''`;
+                return (<button key={page} onClick={() => setCurrentPage(page)} className={};
                         : 'border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-600'}`}>;
                     {page}
                   </button>) }) }

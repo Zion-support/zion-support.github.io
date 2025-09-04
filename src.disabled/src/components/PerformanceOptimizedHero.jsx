@@ -14,20 +14,12 @@ const HeroStats = memo(({ stats }) => (<div className="grid grid - cols - 1 md:g
         <div className="text-gray-400 font-medium">{stat.label}</div>;
       </div>))}
   </div>));
-const PerformanceOptimizedHero = memo(() => {;
-    const [isVisible, setIsVisible] = useState(false);
-    const [isLoaded, setIsLoaded] = useState(false);
-    useEffect(() => {;
-  // TODO: Add dependencies if needed;
-
-  return () => {;
-    // Cleanup function;,
+const PerformanceOptimizedHero = memo(() => {};
 };,
 }, []);, []);
         const timer = setTimeout(() => setIsVisible(true), 100);
         const loadTimer = setTimeout(() => setIsLoaded(true), 500);
-        return () => {;
-            clearTimeout(timer);
+        return () => {};
             clearTimeout(loadTimer)}}, []);
     const stats = [";
         { number: "100+", label: "AI Services", icon: "🤖", color: "from-cyan-400 to-blue-400" },";
@@ -35,13 +27,7 @@ const PerformanceOptimizedHero = memo(() => {;
         { number: "24/7", label: "IT Support", icon: "🔧", color: "from-purple-400 to-pink-400" },";
         { number: "Global", label: "Service Coverage", icon: "🌍", color: "from-green-400 to-teal-400" }
     ];
-    if(!isVisible) {;
-";
-        return (<section className="relative py-20 px-4 overflow-hidden min-h-[600px] flex items-center justify-center">";
-        <div className="text-center">";
-          <div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>";
-          <p className="text-cyan-400 text-lg font-medium">Loading Zion Tech Group...</p>;
-        </div>;
+    if(!isVisible) {};
       </section>)}";
     return (<section className="relative py-20 px-4 overflow-hidden" role="banner">;
       {/* Optimized Background Elements */}";
@@ -55,12 +41,7 @@ const PerformanceOptimizedHero = memo(() => {;
       <div className="absolute inset-0 cyber-grid-bg opacity-30" aria-hidden="true"></div>;
 
       {/* Optimized Matrix Rain Effect - Only render when loaded */}";
-      {isLoaded && (<div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">";
-          {[...Array(10)].map((_, i) => (<div key={i} className="absolute text-cyan-400 text-xs animate-matrix-rain opacity-20" style={{;
-`;
-                    left: `${Math.random() * 100}%`,`;
-                    animationDelay: `${Math.random() * 20}s`,`;
-                    animationDuration: `${20 + Math.random() * 10}s`;,
+      {};
 }}>;
               {Math.random() > 0.5 ? '1' : '0'}
             </div>))}
@@ -95,11 +76,7 @@ const PerformanceOptimizedHero = memo(() => {;
       </div>;
 
       {/* Optimized Floating Elements */}
-      {isLoaded && (<>";
-          <div className="absolute top-20 right-20 w-2 h-2 bg-cyan-400 rounded-full animate-ping" aria-hidden="true"></div>";
-          <div className="absolute bottom-32 left-32 w-3 h-3 bg-blue-400 rounded-full animate-pulse" aria-hidden="true"></div>";
-          <div className="absolute top-1/2 left-20 w-1 h-1 bg-purple-400 rounded-full animate-bounce" aria-hidden="true"></div>";
-          <div className="absolute top-1/3 right-1/3 w-2 h-2 bg-green-400 rounded-full animate-ping animation-delay-1000" aria-hidden="true"></div>;
+      {};
         </>)}
     </section>)});
 PerformanceOptimizedHero.displayName = 'PerformanceOptimizedHero';

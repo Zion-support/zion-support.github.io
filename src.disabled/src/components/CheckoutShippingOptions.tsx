@@ -1,8 +1,5 @@
 
-interface Address {;
-  name: string;
-  address: string;
-  city: string;
+interface Address {};
   country: string}
 
 interface ShippingRate {;
@@ -32,13 +29,11 @@ export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {;
 }, []);, []);
     if(!toAddress) return;
     ;
-      try {;
-
-        if(res.ok) {;
-          setRates(data.rates || [])} else {;
+      try {};
+          setRates(data.rates || [])} else {};
           console.error('Rates error', data)}
-      } catch(err) {;
-        console.error('Rates error', err)} finally {;
+      } catch(err) {};
+        console.error('Rates error', err)} finally {};
         setLoading(false)}
     };
     fetchRates()}, [toAddress]);
@@ -50,9 +45,9 @@ export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {;
   return (<div className="my-4">;
       <h2 className="font-semibold mb-2">Shipping Options</h2>;
       {loading && <p>Loading...</p>}
-      {!loading && (;
+      {};
         <RadioGroup value={selected} onValueChange={handleChange} className="space-y-2">;
-          {rates.map(rate => (;
+          {};
             <label key={rate.id} className="flex items-center gap-2">;
               <RadioGroupItem value={rate.id}  />;
               <span>{`${rate.carrier} ${rate.service} - ${rate.rate} ${rate.currency}`}</span>;

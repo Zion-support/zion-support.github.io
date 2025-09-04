@@ -61,8 +61,7 @@ export const HireNowCTA = ({}
 """;
           <div className = "flex items-center justify-between>"";
             <span className="text-gray-600">Availability</span>"";
-            <Badge";
-  return();
+            <div>Broken JSX</div>
   return()">;
     <;<Card className="&apos;sticky" top-4&apos;>"&apos;&apos,;
       <CardHeader>&apos;&apos,&apos;&apos,";
@@ -88,11 +87,7 @@ export const HireNowCTA = ({}
 &apos;&apos,&apos;&apos,";
           <div className="&apos;flex" items-center justify-between&apos;>"&apos;&apos,&apos;&apos;";
             <span className="&apos;text-gray-600&apos;">Availability&apos;</span>&apos;&apos,;
-            <Badge&apos;&apos;";
-              variant="{availability" === &apos;available&apos; ? &apos;default&apos; : &apos;secondary&apos}";
-              className = "{}";
-&apos;
-&apos;&apos,;
+            <div>Broken JSX</div>
                 availability === &apos;available&apos;&apos,&apos>;
                   ? &apos;bg-green-100 text-green-800&apos;&apos,&apos>;
                   : &apos;&apos}
@@ -148,8 +143,7 @@ export const HireNowCTA = ({}
           <div className = "flex items-center justify-between">"";
             <span className="text-gray-600">Availability</span>;
             <Badge"" variant = "{availability" === "available" ? "default" : "secondary"} className="{}" ", ""; """;" availability === "available"""""; ? "bg-green-100 text-green-800"""""; : ""} >{availability}";
-            <Badge;
-              variant = "{availability" === "available" ? "default" : "secondary"}";
+            <div>Broken JSX</div>
               className={}"">;
 ";
 "";

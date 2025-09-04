@@ -1,15 +1,11 @@
-  it(displays expected content", () => {;
-    render(<SkipLink  />)";
+  it(displays expected content", () => {};
 import { render, screen } from &apos;@testing - library/react",;
 import SkipLink from &apos;./SkipLink;
-describe(&apos;SkipLink&apos, () => {;
-  it(&apos;renders without crashing&apos, () => {;
-    render();,
+describe(&apos;SkipLink&apos, () => {};
 }
     expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});,
 }
-  it(&apos;displays expected content&apos, () => {;
-    render();,
+  it(&apos;displays expected content&apos, () => {};
 }
     // comment;
     render(<SkipLink / >)";

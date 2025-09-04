@@ -21,17 +21,9 @@ interface Service {
     marketPrice: string;
     roi: string;
     innovationLevel: string;
-    contactInfo: {;
-      phone: string;
-      email: string;
-      website: string;,
+    contactInfo: {};
 };
-    technicalSpecs?: {;
-      technology: string[];
-      integrations: string[];
-      apiEndpoints: number;
-      uptime: string;
-      security: string[];,
+    technicalSpecs?: {};
 };
     competitors?: string[];
     marketSize?: string;
@@ -55,18 +47,9 @@ interface Service {
     marketPrice: service.price + service.period,;
     roi: service.roi,;
     innovationLevel: 'Advanced',;
-    contactInfo: {;
-
-      phone: service.contactInfo.mobile,;
-      email: service.contactInfo.email,;
+    contactInfo: {};
       website: service.contactInfo.website},;
-    technicalSpecs: {;
-
-      technology: service.technology,;
-      integrations: service.integrations,;
-      apiEndpoints: 200, // Default value';
-      uptime: '99.9%', // Default value';
-      security: ['SOC 2',ISO 27001',Data encryption'], // Default security;,
+    technicalSpecs: {};
 },;
     competitors: service.competitors,;
     marketSize: service.marketSize,;

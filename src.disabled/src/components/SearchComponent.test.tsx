@@ -1,15 +1,11 @@
-  it(displays expected content", () => {;
-    render(<SearchComponent  />)";
+  it(displays expected content", () => {};
 import { render, screen } from &apos;@testing - library/react",;
 import SearchComponent from &apos;./SearchComponent;
-describe(&apos;SearchComponent&apos, () => {;
-  it(&apos;renders without crashing&apos, () => {;
-    render();,
+describe(&apos;SearchComponent&apos, () => {};
 }
     expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});,
 }
-  it(&apos;displays expected content&apos, () => {;
-    render();,
+  it(&apos;displays expected content&apos, () => {};
 }
     // comment;
     render(<SearchComponent / >)";

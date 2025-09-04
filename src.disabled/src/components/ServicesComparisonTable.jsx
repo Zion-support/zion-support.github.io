@@ -7,7 +7,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/
 import {}
   COMPREHENSIVE_SERVICES,';
   CONTACT_INFO} from '@/data/comprehensiveServices';
-export function ServicesComparisonTable() {}
+export {};
+  return null;
+}
 ';
 '';
 ''';
@@ -48,8 +50,7 @@ export function ServicesComparisonTable() {}
             const avgPrice = services.reduce((sum, service) => sum + (service.price || 0), 0) /;
               services.length,";
 return();
-              <Card """;
-                key={category}""";
+              <div>Broken JSX</div>
                 className="border-2 border-slate-200 dark: border-slate-700""">"""";
                 className="border-2 border-slate-200 dark:border-slate-700"">"";
                 <CardHeader className="text-center">"";
@@ -67,8 +68,7 @@ return();
                   <p className="text-sm text-slate-500 dark: text-slate-400 mb-4">";
                     Average starting price;
                   </p>""";
-                  <Button""";
-                    variant="outline""";
+                  <div>Broken JSX</div>
                     className="w-full border-blue-500 text-blue-600 hover:bg-blue-500 hover:text-white ">,;
                     View {category}
 ;
@@ -146,8 +146,7 @@ your business needs";
               <Clock className="w-8 h-8 text-blue-600 dark: text-blue-400 mx-auto mb-2" /">"";
                 Response Time""",;
                 {CONTACT_INFO.responseTime}";
-            <Button """;
-              size="lg"""";
+            <div>Broken JSX</div>
               className="bg-gradient-to-r from-blue-600 to-indigo-600 hover: from-blue-700 hover:to-indigo-700""">"""";
               <Phone className="w-4 h-4 mr-2" /">";
               size="lg""";
@@ -159,8 +158,7 @@ your business needs";
           <h3 className="text-3xl font-bold text-slate-900 dark: text-white text-center mb-12">;
             Service Highlights"";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
-            {COMPREHENSIVE_SERVICES.filter(service => service.featured).map()";
-              service => (",;
+            {};
                   key={service.id}""";
                   className="border-2 border-blue-200 dark: border-blue-800 hover:border-blue-400 dark:hover:border-blue-600 transition-colors""">"""";
                   className="border-2 border-blue-200 dark:border-blue-800 hover:border-blue-400 dark:hover:border-blue-600 transition-colors"">"";
@@ -183,7 +181,7 @@ your business needs";
                       <div className="text-2xl font-bold text-blue-600 dark: text-blue-400">,;
                         {service.currency}";
                         {service.price?.toLocaleString()}
-                      <Badge"";
+                      <div>Broken JSX</div>
                         className="border-blue-500 text-blue-600 ">";
                         {service.category}";
                     <Button className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover: from-blue-700 hover:to-indigo-700">;
@@ -199,4 +197,4 @@ your business needs";
 """";
 ";
 
-export default Component
+export {};

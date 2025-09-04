@@ -45,6 +45,8 @@ const serviceCategories = [];,"});,"})";
 ];,"});,"})";
 ;,"});,"})";
 export function ComprehensiveServicesShowcase() {}"});,"})";
+  return null;
+}
 ";,"});,"})";
 "";,"});,"})";
 """;,"});,"})";
@@ -93,16 +95,7 @@ export function ComprehensiveServicesShowcase() {}"});,"})";
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">"""";,"});,"})";
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,"});,"})";
         {/* comment */}""";,"});,"})";
-        <motion.div """";,"});,"})";
-          className="text-center mb-16""";,"});,"})";
-          initial = {}"});,"})";
-  { opacity: 0,"});,"})";
-  y: 30,"});,"});";,
-}}"});,"})";
-          animate = {}"});,"})";
-  { opacity: 1,"});,"})";
-  y: 0,"});,"});";,
-}}"});,"})";
+        <div>Broken JSX</div>
           transition="{{" duration: 0.6 }}""";,"});,"})">"""";,"});,"})";
           <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,"});,"})";
             Revolutionary 2027 Services""";,"});,"})";
@@ -139,22 +132,9 @@ export function ComprehensiveServicesShowcase() {}"});,"})";
             </div>;,"});,"})";
         </motion.div>;,"});,"})";
         {/* comment */}""";,"});,"})";
-        <motion.div """";,"});,"})";
-          className="flex flex-wrap justify-center gap-4 mb-12""";,"});,"})";
-          initial = {}"});,"})";
-  { opacity: 0,"});,"})";
-  y: 20,"});,"});";,
-}}"});,"})";
-          animate = {}"});,"})";
-  { opacity: 1,"});,"})";
-  y: 0,"});,"});";,
-}}"});,"})";
-          transition = {}"});,"})";
-  { duration: 0.6,"});,"})";
-  delay: 0.2,"});,"});";,
+        <div>Broken JSX</div>
 }}"});,"})">;,"});,"})";
-          {serviceCategories.map ( (category) => (<button,"});,"})";
-              key={category.id}"});,"})";
+          {};
               onClick="{()" => setSelectedCategory(category.id)}"});,"})";
               className="{"flex" items-center space-x-2 px-6 py-3 rounded-full font-medium transition-all duration-300 ${}"});,"})";
 ";,"});,"})";
@@ -169,27 +149,12 @@ export function ComprehensiveServicesShowcase() {}"});,"})";
             </button>) ) }"});,"})";
         </motion.div>;,"});,"})";
         {/* comment */}""";,"});,"})";
-        <motion.div"""";,"});,"})";
-          className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8""","});,"})";
-          variants={containerVariants}"""";,"});,"})";
-          initial="hidden"""";,"});,"})";
+        <div>Broken JSX</div>
           animate="visible""";,"});,"})">;,"});,"})";
           {currentServices.map((service) => (;,"});,"})";
-            <motion.div""";,"});,"})";
-              key={service.id}"""";,"});,"})";
-              className="group cursor-pointer""";,"});,"})";
-              variants={itemVariants}"});,"})";
+            <div>Broken JSX</div>
               onClick="{" () => setSelectedService (service) }"});,"})">""";,"});,"})";
-              <motion.div"""";,"});,"})";
-                className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-2xl p-6 border border-zion-cyan/20 hover: border-zion-cyan/40 transition-all duration-300 h-full"","});,"})";
-                variants={cardVariants}"});,"})";
-                whileHover = {}"});,"})";
-  {}"});,"})";
-""";,"});,"})";
-                  y: -8,"""";,"});,"})";
-                  boxShadow: "0 20px 40px rgba(0, 0, 0,"""";,"});,"})";
-  0.3)";,"});,"})";
-;,"});,"});";,
+              <div>Broken JSX</div>
 }}"});,"})">""";,"});,"})";
                 {/* comment */}"""";,"});,"})";
                 <div className="flex items-start justify-between mb-4">"""";,"});,"})";
@@ -225,8 +190,7 @@ export function ComprehensiveServicesShowcase() {}"});,"})";
                 <div className="mb-4">"""";,"});,"})";
                   <div className="flex flex-wrap gap-2">;,"});,"})";
                     {service.features.slice(0, 3).map((feature, index) => (;,"});,"})";
-                      <span""";,"});,"})";
-                        key={index}"""";,"});,"})";
+                      <div>Broken JSX</div>
                         className="bg-zion-slate/50 text-zion-cyan-light text-xs px-2 py-1 rounded-full""";,"});,"})">;,"});,"})";
                         {feature}"});,"})";
                       </span>;,"});,"})";
@@ -250,8 +214,7 @@ export function ComprehensiveServicesShowcase() {}"});,"})";
 """;,"});,"})";
                 {/* comment */}"""";,"});,"})";
                 <div className="flex items-center justify-between">;,"});,"})";
-                  <Link""";,"});,"})";
-                    to={service.link}"""";,"});,"})";
+                  <div>Broken JSX</div>
                     className="flex items-center space-x-2 bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-4 py-2 rounded-lg font-medium hover: shadow-lg transition-all duration-300 group-hover:scale-105"","});,"})">""";,"});,"})";
                     <span>Learn More</span>"""";,"});,"})";
                     <ArrowRight className="w-4 h-4 group-hover: translate-x-1 transition-transform"  />"","});,"})";
@@ -263,19 +226,7 @@ export function ComprehensiveServicesShowcase() {}"});,"})";
             </motion.div>) ) }"});,"})";
         </motion.div>;,"});,"})";
         {/* comment */}""";,"});,"})";
-        <motion.div """";,"});,"})";
-          className="text-center mt-16""";,"});,"})";
-          initial = {}"});,"})";
-  { opacity: 0,"});,"})";
-  y: 30,"});,"});";,
-}}"});,"})";
-          animate = {}"});,"})";
-  { opacity: 1,"});,"})";
-  y: 0,"});,"});";,
-}}"});,"})";
-          transition = {}"});,"})";
-  { duration: 0.6,"});,"})";
-  delay: 0.4,"});,"});";,
+        <div>Broken JSX</div>
 }}""";,"});,"})">"""";,"});,"})";
           <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 p-8 rounded-2xl border border-zion-cyan/30">"""";,"});,"})";
             <h3 className="text-2xl font-bold text-white mb-4">;,"});,"})";
@@ -286,13 +237,11 @@ export function ComprehensiveServicesShowcase() {}"});,"})";
               Get expert consultation and custom implementation tailored to your needs.""";,"});,"})";
             </p>"""";,"});,"})";
             <div className="flex flex-col sm: flex-row gap-4 justify-center">"","});,"})";
-              <Link"""";,"});,"})";
-                to="/contact"""";,"});,"})";
+              <div>Broken JSX</div>
                 className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-3 rounded-lg font-medium hover: shadow-lg transition-all duration-300 hover:scale-105"","});,"})">;,"});,"})";
                 Schedule Consultation,"});,"})";
               </Link>""";,"});,"})";
-              <a"""";,"});,"})";
-                href="tel: +13024640950""","});,"})";
+              <div>Broken JSX</div>
                 className="bg-zion-slate-dark text-zion-cyan px-8 py-3 rounded-lg font-medium border border-zion-cyan/30 hover: bg-zion-slate hover:border-zion-cyan/50 transition-all duration-300"","});,"})">;,"});,"})";
                 Call Now: +1 302 464 0950,"});,"})";
               </a>;,"});,"})";
@@ -302,30 +251,13 @@ export function ComprehensiveServicesShowcase() {}"});,"})";
       {/* comment */}"});,"})";
       <AnimatePresence>;,"});,"})";
         {selectedService && (""";,"});,"})";
-          <motion.div"""";,"});,"})";
-            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4""";,"});,"})";
-            initial="{{" opacity: 0 }}"});,"})";
-            animate="{{" opacity: 1 }}"});,"})";
-            exit="{{" opacity: 0 }}"});,"})";
+          <div>Broken JSX</div>
             onClick="{" () => setSelectedService (null) }"});,"})">""";,"});,"})";
-            <motion.div"""";,"});,"})";
-              className="bg-zion-slate-dark rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto""";,"});,"})";
-              initial = {}"});,"})";
-  { scale: 0.9,"});,"})";
-  opacity: 0,"});,"});";,
-}}"});,"})";
-              animate = {}"});,"})";
-  { scale: 1,"});,"})";
-  opacity: 1,"});,"});";,
-}}"});,"})";
-              exit = {}"});,"})";
-  { scale: 0.9,"});,"})";
-  opacity: 0,"});,"});";,
-}}"});,"})";
+            <div>Broken JSX</div>
               onClick="{(e)" => e.stopPropagation()}""";,"});,"})">"""";,"});,"})";
               <div className="flex items-start justify-between mb-6">"""";,"});,"})";
                 <div className="text-6xl">{selectedService.icon}</div>;,"});,"})";
-                <button""";,"});,"})";
+                <div>Broken JSX</div>
                   onClick="{()" => setSelectedService(null)}"""";,"});,"})";
                   className="text-zion-cyan-light hover: text-white transition-colors"","});,"})">;,"});,"})";
                   ✕;,"});,"})";
@@ -381,13 +313,11 @@ export function ComprehensiveServicesShowcase() {}"});,"})";
 """";,"});,"})";
               <div className="mt-8 pt-6 border-t border-zion-cyan/20">"""";,"});,"})";
                 <div className="flex flex-col sm: flex-row gap-4 justify-center">,"});,"})";
-                  <Link""";,"});,"})";
-                    to={selectedService.link}"""";,"});,"})";
+                  <div>Broken JSX</div>
                     className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-3 rounded-lg font-medium hover: shadow-lg transition-all duration-300 text-center"","});,"})">;,"});,"})";
                     Get Started Now,"});,"})";
                   </Link>""";,"});,"})";
-                  <a"""";,"});,"})";
-                    href="tel: +13024640950""","});,"})";
+                  <div>Broken JSX</div>
                     className="bg-zion-slate text-zion-cyan px-8 py-3 rounded-lg font-medium border border-zion-cyan/30 hover: bg-zion-slate-dark transition-all duration-300 text-center"","});,"})">;,"});,"})";
                     Call for Consultation,"});,"})";
                   </a>;,"});,"})";
@@ -459,13 +389,7 @@ const serviceCategories = [];
     <section className = "py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">"";
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",;
         {/* comment */}""";
-        <motion .div "";
-          className="text-center mb-16"          initial = {}
-;
-  { opacity: 0, y: 30}}
-;
-          animate = {}";
-  { opacity: 1, y: 0}}";
+        <div>Broken JSX</div>
           transition="{{" duration: 0.6 }}""">"""";
           <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">;
             Revolutionary 2027 Services""";
@@ -502,18 +426,9 @@ designed to transform your business and drive exponential growth.";
           </div>";
         </motion.div>",;
         {/* comment */}""";
-        <motion .div "";
-          className="flex flex-wrap justify-center gap-4 mb-12"          initial = {}
-;
-  { opacity: 0, y: 20}}
-;
-          animate = {}
-;
-  { opacity: 1, y: 0}}
-;
-          transition = {}";
+        <div>Broken JSX</div>
   { duration: 0.6, delay: 0.2}}">;
-          {serviceCategories.map ( (category) => (<button key="{category.id}
+          {};
               onClick="{()" ="> setSelectedCategory(category.id)}
               className="{"flex" items-center space-x-2 px-6 py-3 rounded-full font-medium transition-all duration-300 ${}
 """;
@@ -531,20 +446,14 @@ designed to transform your business and drive exponential growth.";
             </button>) ) }";
         </motion.div>;
         {/* comment */}""";
-        <motion .div""";
-          className = "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8""";
+        <div>Broken JSX</div>
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"">;
           variants={containerVariants}""";
           initial="hidden"""";
           animate="visible""">;
-          {currentServices.map((service) => (;
-            <motion .div""";
-              key={service.id}"";
-              className="group cursor-pointer;
-              variants="{itemVariants}
+          {};
               onClick="{" () ="> setSelectedService (service) }">""";
-              <motion .div""";
-                className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-2xl p-6 border border-zion-cyan/20 hover: border-zion-cyan/40 transition-all duration-300 h-full;
+              <div>Broken JSX</div>
                 className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-2xl p-6 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 h-full"">;
                 variants="{cardVariants}";
                 whileHover = {}";
@@ -557,9 +466,7 @@ designed to transform your business and drive exponential growth.";
                 {/* comment */}"";
                 <div className = "flex items-start justify-between mb-4">"";
                   <div className="text-4xl">{service.icon}</div>""";
-                  {service.popular && ("";
-                    <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-medium">;
-                      Popular,;
+                  {};
                     </div>) }";
                 </div>;
 """;
@@ -588,15 +495,11 @@ designed to transform your business and drive exponential growth.";
                 {/* comment */}""";
                 <div className="mb-4">"";
                   <div className="flex flex-wrap gap-2">";
-                    {service.features.slice(0, 3).map((feature, index) => (;
-                      <span""";
-                        key={index}"";
-                        className="bg-zion-slate/50 text-zion-cyan-light text-xs px-2 py-1 rounded-full ">;
+                    {};
                         {feature}";
                       </span>;
                     ))}""";
-                    {service.features.length > 3 && ("";
-                      <span className="bg-zion-cyan/20 text-zion-cyan text-xs px-2 py-1 rounded-full">;
+                    {};
                         +{service.features.length-3} more,;
                       </span>) }
 ;
@@ -617,8 +520,7 @@ designed to transform your business and drive exponential growth.";
 """;
                 {/* comment */}"";
                 <div className="flex items-center justify-between">;
-                  <Link""";
-                    to={service.link}""";
+                  <div>Broken JSX</div>
                     className="flex items-center space-x-2 bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-4 py-2 rounded-lg font-medium hover: shadow-lg transition-all duration-300 group-hover:scale-105 ">""";
                     <span>Learn More</span>"";
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /">"";
@@ -630,17 +532,9 @@ designed to transform your business and drive exponential growth.";
             </motion.div>) ) }";
         </motion.div>;
         {/* comment */}""";
-        <motion .div "";
-          className="text-center mt-16"          initial = {}
-;
-  { opacity: 0, y: 30}}
-;
-          animate = {}
-;
-  { opacity: 1, y: 0}}
-;
+        <div>Broken JSX</div>
           transition = {}">;
-  { duration: 0.6, delay: 0.4",";";,
+  {};
 }}""">"""";
           <div className = "bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 p-8 rounded-2xl border border-zion-cyan/30">"";
             <h3 className="text-2xl font-bold text-white mb-4">;
@@ -651,13 +545,11 @@ designed to transform your business and drive exponential growth.";
               Get expert consultation and custom implementation tailored to your needs.""";
             </p>""";
             <div className="flex flex-col sm: flex-row gap-4 justify-center">""";
-              <Link""";
-                to="/contact""";
+              <div>Broken JSX</div>
                 className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-3 rounded-lg font-medium hover:shadow-lg transition-all duration-300 hover:scale-105 ">";
                 Schedule Consultation;
               </Link>""";
-              <a""";
-                href="tel:+13024640950""";
+              <div>Broken JSX</div>
                 className="bg-zion-slate-dark text-zion-cyan px-8 py-3 rounded-lg font-medium border border-zion-cyan/30 hover:bg-zion-slate hover:border-zion-cyan/50 transition-all duration-300 ">;
                 Call Now: +1 302 464 0950,;
               </a>;
@@ -666,28 +558,13 @@ designed to transform your business and drive exponential growth.";
       </div>,;
       {/* comment */}";
       <AnimatePresence>;
-        {selectedService && (""";
-          <motion .div"";
-            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4;
-            initial="{{" opacity: 0 }}";
-            animate="{{" opacity: 1 }}";
-            exit="{{" opacity: 0 }}";
+        {};
             onClick="{" () ="> setSelectedService (null) }">""";
-            <motion .div"";
-              className="bg-zion-slate-dark rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto"              initial = {}
-;
-  { scale: 0.9, opacity: 0}}
-;
-              animate = {}
-;
-  { scale: 1, opacity: 1}}
-;
-              exit = {}";
-  { scale: 0.9, opacity: 0}}";
+            <div>Broken JSX</div>
               onClick="{(e)" ="> e.stopPropagation()}"">""";
               <div className="flex items-start justify-between mb-6">"";
                 <div className="text-6xl">{selectedService.icon}</div>;
-                <button """;
+                <div>Broken JSX</div>
                   onClick="{()" ="> setSelectedService(null)}""";
                   className="text-zion-cyan-light hover: text-white transition-colors ">;
                   ✕";
@@ -701,7 +578,7 @@ designed to transform your business and drive exponential growth.";
                 <div>"";
                   <h3 className="text-xl font-semibold text-white mb-4">Features</h3>"";
                   <ul className="space-y-2">"""",;
-                    {selectedService.features.map((feature, index) => ("";
+                    {};
                       <li key="{index}" className="flex items-center space-x-2">"";
                         <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" /">""";
                         <span className="text-zion-cyan-light">{feature}</span>;
@@ -750,8 +627,7 @@ designed to transform your business and drive exponential growth.";
                     className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-3 rounded-lg font-medium hover: shadow-lg transition-all duration-300 text-center ">";
                     Get Started Now;
                   </Link>""";
-                  <a""";
-                    href="tel:+13024640950""";
+                  <div>Broken JSX</div>
                     className="bg-zion-slate text-zion-cyan px-8 py-3 rounded-lg font-medium border border-zion-cyan/30 hover:bg-zion-slate-dark transition-all duration-300 text-center ">;
                     Call for Consultation,;
                   </a>;
@@ -765,4 +641,4 @@ designed to transform your business and drive exponential growth.";
 """""""'";
 ";
 
-export default Component
+export {};

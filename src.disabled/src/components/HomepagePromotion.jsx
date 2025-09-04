@@ -10,18 +10,9 @@ export default function Page() {;
 
                 staggerChildren: 0.2;,
 };
-    const itemVariants = {;
-
-  hidden: { y: 30,;
-  opacity: 0;,
+    const itemVariants = {};
 },;
-        visible: {;
-
-            y: 0,;
-            opacity: 1,;
-            transition: {;
-
-                duration: 0.6;,
+        visible: {};
 };";
     return (<section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple relative overflow-hidden">;
       {/* Background Elements */}";
@@ -34,4 +25,4 @@ export default function Page() {;
 ";
 
   );
-export default Component}}}}
+export {};

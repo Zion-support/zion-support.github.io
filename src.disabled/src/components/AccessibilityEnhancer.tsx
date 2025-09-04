@@ -44,9 +44,7 @@ export function AccessibilityEnhancer({ enabled = true, showSettings = true }: A
   }, []);
 
   // Apply settings when they change;
-  useEffect(() => {;
-    applyAccessibilityStyles(;
-      settings.highContrast,;
+  useEffect(() => {};
       `${settings.fontSize}px`,;
       settings.reducedMotion;
     );,

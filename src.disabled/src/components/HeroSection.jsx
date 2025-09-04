@@ -17,33 +17,21 @@ import { motion, useScroll, useTransform  } from 'framer-motion';
 
  = useTranslation () ;
     const containerRef = useRef(null) ;
-    const { scrollYProgress } = useScroll({;
-        target: containerRef,;
-        offset: ["start start", "end start"];,
+    const { scrollYProgress } = useScroll({};
 }) ;
     const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]) ;
     const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]) ;
 export function HeroSection() {;
     const { t } = useTranslation();
     const containerRef = useRef(null);
-    const { scrollYProgress } = useScroll({;
-
-        target: containerRef,";
-        offset: ["start start", "end start"];,
+    const { scrollYProgress } = useScroll({};
 });";
     const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
     const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
     ;
-    const containerVariants = {;
-
+    const containerVariants = {};
         hidden: { opacity: 0 },;
-        visible: {;
-
-            opacity: 1,;
-            transition: {;
-
-                staggerChildren: 0.2,;
-                delayChildren: 0.1;,
+        visible: {};
 }
         }
     };
@@ -51,14 +39,7 @@ export function HeroSection() {;
     const itemVariants = {;
 
         hidden: { y: 30, opacity: 0 },;
-        visible: {;
-
-            opacity: 1,;
-            y: 0,;
-            transition: {;
-
-                duration: 0.8,";
-                ease: "easeOut";,
+        visible: {};
 }
         }
     };
@@ -111,13 +92,7 @@ export function HeroSection() {;
   const containerVariants = {;
 
     hidden: { opacity: 0 },;
-    visible: {;
-
-      opacity: 1,;
-      transition: {;
-
-        staggerChildren: 0.2,;
-        delayChildren: 0.1;,
+    visible: {};
 }
     }
   };
@@ -126,14 +101,7 @@ export function HeroSection() {;
     hidden: {      y: 30,;
       opacity: 0;,
 },;
-    visible: {;
-
-      y: 0,;
-      opacity: 1,;
-      transition: {;
-
-        duration: 0.8,";
-        ease: "easeOut";,
+    visible: {};
 }
     }
   };
@@ -187,9 +155,7 @@ export function HeroSection() {;
 
                 {/* New stats section */}
                 <motion.div variants={itemVariants} className="mt-16 grid grid - cols - 1 md:grid - cols - 3 gap-8 max - w-4xl mx -auto">;
-                    <motion.div;
-                        className="text-center group";
-                        whileHover={{ y: -5 }}                        transition={{ type: "spring", stiffness: 400 }}
+                    <div>Broken JSX</div>
                     >";
                         <div className="text-4xl font-bold text-zion-cyan mb-2 group-hover:text-zion-cyan-light transition-colors">;
                             10K+;
@@ -197,9 +163,7 @@ export function HeroSection() {;
                         <div className="text-zion-slate-light">Active Users</div>;
                     </motion.div>;
 
-                    <motion.div;
-                        className="text-center group";
-                        whileHover={{ y: -5 }}                        transition={{ type: "spring", stiffness: 400 }}
+                    <div>Broken JSX</div>
                     >";
                         <div className="text-4xl font-bold text-zion-purple mb-2 group-hover:text-zion-purple-light transition-colors">;
                             500+;
@@ -207,9 +171,7 @@ export function HeroSection() {;
                         <div className="text-zion-slate-light">AI Services</div>;
                     </motion.div>;
 
-                    <motion.div;
-                        className="text-center group";
-                        whileHover={{ y: -5 }}                        transition={{ type: "spring", stiffness: 400 }}
+                    <div>Broken JSX</div>
                     >";
                         <div className="text-4xl font-bold text-zion-cyan-light mb-2 group-hover:text-zion-cyan transition-colors">;
                             99.9%;

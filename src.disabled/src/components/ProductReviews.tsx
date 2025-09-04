@@ -6,15 +6,12 @@
 // import { useAuth } from '@/hooks/useAuth'; // Assuming an auth hook exists;
 // For now, let's mock a basic useAuth hook if not available to allow component structure;
 // In a real scenario, this would come from your actual auth context/hooks;
-const useAuth = () => {;
+const useAuth = () => {};
+};
   // Replace with actual auth logic;
   // For now, simulate a logged-in user for development of this component's structure;
   const [user, setUser] = useState<{ id: string; name: string, isLoggedIn: boolean } | null>({ isLoggedIn: true, id: 'mockUserId', name: 'Mock User' });
-  // useEffect(() => {;
-  // TODO: Add dependencies if needed;
-
-  return () => {;
-    // Cleanup function;,
+  // useEffect(() => {};
 };,
 }, []);, []);
   //  // logic to check actual auth status and set user;
@@ -26,12 +23,7 @@ const useAuth = () => {;
 // If not, a simple display of rating number will be shown.// For actual stars, you'd import your RatingStars component:;
 // import { RatingStars } from '@/components/RatingStars'; // Or its correct path;
 
-interface RatingStarsProps {;
-  value: number;
-  count?: number; // Optional review count;
-  size?: 'sm' | 'md' | 'lg';
-  interactive?: boolean;
-  onRate?: (rating: number) => void;,
+interface RatingStarsProps {};
 }
 
 // Placeholder for RatingStars if not available or for simplicity in this subtask;
@@ -47,15 +39,9 @@ const RatingStarsDisplay: React.FC<Pick<RatingStarsProps, 'value'>> = ({ value }
 // Placeholder for an interactive star rating input;
 const StarRatingInput: React.FC<Pick<RatingStarsProps, 'value' | 'onRate'>> = ({ value, onRate }) => (;
   <div className="flex">;
-    {[1, 2, 3, 4, 5].map((star) => (;
-      <button;
-        type="button";
-        key={star}
+    {};
         onClick={() => onRate?.(star)}
-        className={`text-2xl ${star <= value ? 'text-yellow-400' : 'text-gray-300'} focus:outline-none`}
-      >;
-        ★;
-      </button>;
+        className={};
     ))}
   </div>;
 );
@@ -81,36 +67,24 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({ productId }) => {;
     setError(null);
     try {;
       const response = await fetch(`/api/reviews/${productId}`);
-      if(!response.ok) {;
-        const errorData = await response.json();
+      if(!response.ok) {};
         throw new Error(errorData.error || `Failed to fetch reviews: ${response.statusText}`);,
 }
       const data: Review[] = await response.json();
       setReviews(data);,
-} catch(err: any) {;
-      setError(err.message);,
-} finally {;
-      setIsLoading(false);,
+} catch(err: unknown) {};
+} finally {};
 }
   }, [productId]); // productId is a dependency of fetchReviews;
 
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;
-
-  return () => {;
-    // Cleanup function;,
+  useEffect(() => {};
 };,
 }, []);, []);
-    if(productId) {;
-      fetchReviews();,
+    if(productId) {};
 }
   }, [productId, fetchReviews]); // Added fetchReviews to dependency array;
 
-  const handleSubmitReview = async(e: FormEvent) => {;
-    e.preventDefault();
-    if(newRating === 0) {;
-      setSubmitError('Please select a rating.');
-      return;,
+  const handleSubmitReview = async(e: FormEvent) => {};
 }
     setIsSubmitting(true);
     setSubmitError(null);
@@ -132,10 +106,8 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({ productId }) => {;
       setNewRating(0);
       setNewComment('');
       fetchReviews(); // Refresh reviews list;,
-} catch(err: any) {;
-      setSubmitError(err.message);,
-} finally {;
-      setIsSubmitting(false);,
+} catch(err: unknown) {};
+} finally {};
 }
   };
 
@@ -176,9 +148,7 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({ productId }) => {;
             </div>;
             <div className="mb-3">;
               <label htmlFor="comment" className="block text-sm font-medium text-gray-700 dark:text-gray-200">Your Comment(Optional):</label>;
-              <textarea;
-                id="comment";
-                value={newComment}
+              <div>Broken JSX</div>
                 onChange={(e) => setNewComment(e.target.value)}
                 rows={4}
                 className="w-full p-2 border rounded-md dark:bg-gray-800 dark:border-gray-700 dark:text-white";
@@ -186,18 +156,14 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({ productId }) => {;
             </div>;
             {submitError && <p className="text-red-500 text-sm mb-2">Error: {submitError}</p>}
             {submitSuccess && <p className="text-green-500 text-sm mb-2">{submitSuccess}</p>}
-            <button;
-              type="submit";
-              disabled={isSubmitting || newRating === 0}
+            <div>Broken JSX</div>
               className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:bg-gray-400">;
               {isSubmitting ? 'Submitting...' : 'Submit Review'}
             </button>;
           </form>;
         </div>;
       )}
-      {!isAuthenticated && (;
-        <p className="mt-6 text-sm text-gray-600 dark:text-gray-400">;
-          Please <a href="/login" className="text-blue-500 hover:underline">login</a> to write a review.</p>;
+      {};
       )}
     </div>;
   );,

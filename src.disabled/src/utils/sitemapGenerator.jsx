@@ -14,12 +14,7 @@ ${url.url}</loc>'`;
     /**;
      * Generate sitemap index for large sites;
      */;
-    generateIndex(sitemaps) {;
-'";
-        const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>;
-        const sitemapElements = sitemaps.map(sitemap => {;
-`;
-            return `<sitemap>;
+    generateIndex(sitemaps) {};
         <loc>${sitemap}</loc>;
         <lastmod>${new Date().toISOString()}</lastmod>`;
       </sitemap>`;,
@@ -29,7 +24,7 @@ ${url.url}</loc>'`;
     /**;
      * Generate robots.txt content;
      */;
-    generateRobotsTxt() {;
+    generateRobotsTxt() {};
         const { baseUrl } = this.config;`;
         return `User-agent: *;
 Allow: /;
@@ -75,29 +70,12 @@ Sitemap: ${baseUrl}/sitemap.xml;
 
   return (";
     <div className="space-y-4">;
-      <button;
-        onClick={generateSitemap}
-        disabled={isGenerating}";
+      <div>Broken JSX</div>
         className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 disabled:opacity-50">;
         {isGenerating ? 'Generating...' : 'Generate Sitemap'}
       </button>;
 
-      {sitemapData && (<motion.div;
-          initial = {;
-
-  { opacity: 0,;
-  y: 20;,
-}}
-          animate = {;
-
-  { opacity: 1,;
-  y: 0;,
-}}";
-          className="space-y-4">";
-          <div className="bg-indigo-50 p-4 rounded-lg">";
-            <h3 className="text-lg font-semibold mb-2">Sitemap Generated Successfully!</h3>";
-            <div className="grid grid-cols-2 gap-4 text-sm">;
-              <div>";
+      {};
                 <span className="font-medium">Total URLs:</span> {sitemapData.totalUrls}
               </div>;
               <div>";

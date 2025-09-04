@@ -2,14 +2,11 @@
 }
 import { render, screen } from &apos;@testing - library/react",;
 import Search from &apos;./Search;
-describe(&apos;Search&apos, () => {;
-  it(&apos;renders without crashing&apos, () => {;
-    render();,
+describe(&apos;Search&apos, () => {};
 }
     expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});,
 }
-  it(&apos;displays expected content&apos, () => {;
-    render();,
+  it(&apos;displays expected content&apos, () => {};
 }
     // comment;
     render(<Search / >)";

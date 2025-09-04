@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';''';
 import { motion } from 'framer-motion';
 import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChart3, TrendingUp, Zap const ContentQualityAnalyzer = () => {}
+  return <div>Component</div>;
+};
     const [isOpen, setIsOpen] = useState(false);
     const [isAnalyzing, setIsAnalyzing] = useState(false);';
     const [contentIssues, setContentIssues] = useState([]);'';
@@ -156,17 +158,7 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
 ";
       {/* Modal */}"";
       {isOpen && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4" onClick={() => setIsOpen(false)}>;
-          <motion.div initial = {}
-  { scale: 0.9,;
-  opacity: 0;,
-}} animate = {}
-  { scale: 1,;
-  opacity: 1;,
-}} exit = {}
-  { scale: 0.9,;
-  opacity: 0;
-";
-"";,
+          <div>Broken JSX</div>
 }} className="bg-gray-900 rounded-2xl shadow-2xl w-full max-w-7xl max-h-[90vh] overflow-hidden" onClick={(e) => e.stopPropagation()}>";
             {/* Header */}"";
             <div className="bg-gradient-to-r from-purple-500 to-pink-500 p-6 text-white">"";
@@ -187,8 +179,7 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
             {/* Content */}"";
             <div className="p-6 space-y-6">";
               {/* Summary Cards */}"";
-              {report && (<div className="grid grid-cols-1 md:grid-cols-4 gap-4">"";
-                  <div className="bg-gray-800 rounded-lg p-4 text-center">"";
+              {};
                     <div className="text-2xl font-bold text-white">{report.totalPages}</div>"";
                     <div className="text-gray-400 text-sm">Total Pages</div>";
                   </div>"";
@@ -209,23 +200,19 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
               {/* Actions */}"";
               <div className="flex items-center justify-between">"";
                 <div className="flex space-x-2">';
-                  <button onClick={() => setSelectedFilter('all')} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'all'''`;
-                ? 'bg-purple-500 text-white''`'`;
+                  <button onClick={() => setSelectedFilter('all')} className={};
                 : 'bg-gray-700 text-gray-300 hover:bg-gray-600'}`}>;
                     All Issues'`;
                   </button>'`'`;
-                  <button onClick={() => setSelectedFilter('critical')} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'critical'''`;
-                ? 'bg-red-500 text-white''`'`;
+                  <button onClick={() => setSelectedFilter('critical')} className={};
                 : 'bg-gray-700 text-gray-300 hover:bg-gray-600'}`}>;
                     Critical'`;
                   </button>'`'`;
-                  <button onClick={() => setSelectedFilter('medium')} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'medium'''`;
-                ? 'bg-yellow-500 text-white''`'`;
+                  <button onClick={() => setSelectedFilter('medium')} className={};
                 : 'bg-gray-700 text-gray-300 hover:bg-gray-600'}`}>;
                     Medium'`;
                   </button>'`'`;
-                  <button onClick={() => setSelectedFilter('low')} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'low'''`;
-                ? 'bg-blue-500 text-white''`'`;
+                  <button onClick={() => setSelectedFilter('low')} className={};
                 : 'bg-gray-700 text-gray-300 hover:bg-gray-600'}`}>;
                     Low;
                   </button>;

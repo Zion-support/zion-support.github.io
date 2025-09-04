@@ -1,5 +1,7 @@
 import { Link  } from 'react-router-dom';
-export default function Page() {;
+export default function Page() {};
+  return null;
+}
 </motion.div>}
 import { motion, AnimatePresence  } from 'framer-motion';
 
@@ -36,11 +38,7 @@ export default function Page() {;
   hidden: { opacity: 0,;
   y: 50;,
 },;
-    visible: {;
-
-      opacity: 1,;      y: 0,;
-      transition: {;
-        duration: 0.8,;
+    visible: {};
         staggerChildren: 0.2}}};
 
   ;
@@ -58,8 +56,7 @@ export default function Page() {;
 useEffect(() => { setIsVisible(true) ; setCurrentFeature((prev) => (prev + 1) % features.length) }, 3000) ; ;
   return (";
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
-      <SEO title="PerformanceOptimizedHero - Zion Tech Group;
-        description="Professional PerformanceOptimizedHero services by Zion Tech Group",;
+      <div>Broken JSX</div>
         keywords="performanceoptimizedhero, technology, services"  />";
       <div className="container mx-auto px-4 py-20">";
         <div className="text-center">";
@@ -68,7 +65,7 @@ useEffect(() => { setIsVisible(true) ; setCurrentFeature((prev) => (prev + 1) % 
             Professional PerformanceOptimizedHero services to help your business grow.;
           </p>";
           <div className="flex justify-center">";
-            <a href="/contact" ";
+            <div>Broken JSX</div>
               className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover: shadow-lg transition-all duration-300">;
               Get Started,;
             </a>;

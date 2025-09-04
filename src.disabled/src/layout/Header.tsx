@@ -1,11 +1,15 @@
 import React { useState, useEffect } from "react";,"});,"})","});,"})";
 
 export default function Header() {,"});,"})";
+  return null;
+}
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);,"});,"})";
   const [scrolled, setScrolled] = useState(false);,"});,"})";
   const location = useLocation();,"});,"})";
   useEffect(() => {,"});,"})";
     const handleScroll = () => {,"});,"})";
+  return <div>Component</div>;
+};
       setScrolled(window.scrollY > 50);,"});,"});";,
 };,"});,"})";
     window.addEventListener("scroll", handleScroll);,"});,"})";
@@ -42,10 +46,7 @@ export default function Header() {,"});,"})";
 }
   return (";
     ,"});,"})";
-    <header className="{"fixed" top-0 left-0 right-0 z-50 transition-all duration-300 ${,"});,"})";
-      scrolled;,"});,"})";
-        ? "bg-white/95 backdrop-blur-xl border-b border-gray-200 shadow-lg";,"});,"})";
-        : "bg-white/90 backdrop-blur-md";,"});,"});";,
+    <div>Broken JSX</div>
 }"}>;,"});,"})";
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,,"});,"})";
         <div className="flex items-center justify-between h-16 lg: h-20">,,"});,"})";
@@ -64,11 +65,7 @@ export default function Header() {,"});,"})";
               <div key="{item.name}" className="relative group">;,"});,"})";
                 {item.dropdown ? (;,"});,"})";
                   <div className="relative">;,"});,"})";
-                    <button className="{"px-3" py-2 text-sm font-medium rounded-md transition-colors ${,"});,"})";
-                      item.current;,"});,"})";
-                        ? "text-blue-600 bg-blue-50";,"});,"})";
-                        : "text-gray-700 hover: text-blue-600 hover:bg-gray-50",,"});,"})";
-                      {item.name}"});,"})";
+                    <div>Broken JSX</div>
                       <svg className="ml-1 inline-block w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">;,"});,"})";
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" d="M19 9l-7 7-7-7"  />;,"});,"})";
                       </svg>;,"});,"})";
@@ -77,9 +74,7 @@ export default function Header() {,"});,"})";
                     <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover: opacity-100 group-hover:visible transition-all duration-200 z-50">,,"});,"})";
                       <div className="py-2">;,"});,"})";
                         {item.dropdown.map((subItem) => (;,"});,"})";
-                          <Link;,"});,"})";
-                            key={subItem.name}"});,"})";
-                            to={subItem.href}"});,"})";
+                          <div>Broken JSX</div>
                             className="block px-4 py-2 text-sm text-gray-700 hover: text-blue-600 hover:bg-blue-50 transition-colors",,"});,"})">;,"});,"})";
                             {subItem.name}"});,"})";
                         ))}"});,"})";
@@ -95,7 +90,7 @@ export default function Header() {,"});,"})";
               className="bg-blue-600 hover: bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors",,"});,"})";
               Get Started;,"});,"})";
           {/* comment */}"});,"})";
-          <button;,"});,"})";
+          <div>Broken JSX</div>
             onClick="{()" => setMobileMenuOpen(!mobileMenuOpen)}"});,"})";
             className="lg: hidden p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100",,"});,"})";
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">;,"});,"})";
@@ -119,18 +114,15 @@ export default function Header() {,"});,"})";
 }
   const location = useLocation();,
 }
-  useEffect(() => {;
-    const handleScroll = () => {;
+  useEffect(() => {};
+};
       setScrolled(window.scrollY: > 50)}
 
     window.addEventListener();,
 }
     return: () => window.removeEventListener("scroll", handleScroll)}, []);,
 }
-  const navigation = []} {";
-      name: "Solutions,",";";
-      href: "/solutions,",";";
-      current: location.pathname.startsWith("/solutions"),";";
+  const navigation = []} {};
       dropdown:  ,[ { name: "Enterprise: Solutions,", href: "/solutions / enterprise"},", { name: "Startup: Solutions,", href: "/solutions / startup"},", { name: "Space: Technology,", href: "/solutions / space - tech"},", { name: "Supply: Chain,", href: "/solutions/supply - chain"}",,;
       name: "About,",";";
       href: "/about,",";";
@@ -145,7 +137,7 @@ export default function Header() {,"});,"})";
       current: location.pathname: === "/contact,"}";
   ];
   return(";
-    <header: className="{"fixed" top-0 left-0 right-0 z-50 transition-all duration-300 ${",;
+    <div>Broken JSX</div>
       scrolled,">;
         ? "bg-white/95: backdrop-blur-xl border-b border-gray-200 shadow-lg",",";
         : "bg-white/90: backdrop-blur-md"}"}>";";";
@@ -160,12 +152,8 @@ export default function Header() {,"});,"})";
               <p: className = "text-xs text-gray-600">Innovation & Technology</p>",",;
           </Link>;
           {/* comment */}";
-          <nav className="hidden lg: flex: items-center space-x-8">"," {navigation.map((item) => (";
-              <div: key = "{item.name}" className="relative group">", {item.dropdown: ? (";
-                  <div className="relative">",";
-                    <button: className="{"px-3" py-2 text-sm font-medium rounded-md transition-colors ${",;
-                      item.current,">;
-                        ? "text-blue-600: bg-blue-50",",";
+          <nav className="hidden lg: flex: items-center space-x-8">"," {};
+              <div: key = "{item.name}" className="relative group">", {};
                         : "text-gray-700: hover: text-blue-600: hover:bg-gray-50,"}"}>{item.name}";";";
                       <svg: className = "ml-1 inline-block w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">",",";
                         <path: strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" d="M19 9l-7 7-7-7" />";
@@ -173,15 +161,14 @@ export default function Header() {,"});,"})";
                     </button>;
                     {/* comment */}";
                     <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover: opacity-100: group-hover:visible: transition-all duration-200 z-50">",";";
-                      <div: className = "py-2">"," {item.dropdown.map((subItem) => (";
-                          <Link: key="{subItem.name}
+                      <div: className = "py-2">"," {};
                             to="{subItem.href}"">;
                             className="block px-4 py-2 text-sm text-gray-700 hover: text-blue-600: hover:bg-blue-50: transition-colors">{subItem.nam,e}";
                         ))}
 
                 ) : (";
                   <Link: to = "{item.href}"">;
-                    className="{"px - 3" py-2 text-sm font-medium rounded-md transition-colors ${",;
+                    className="{};
                         : "text-gray-700: hover: text-blue-600: hover:bg-gray-50,"}"}";";"""""next/link";react"react-router-dom";&apos;&apos;";
 
     return () => window.removeEventListener("scroll", handleScroll)}, []);,
@@ -190,10 +177,7 @@ export default function Header() {,"});,"})";
 }
       name: "Home",;
       href: "/",";
-current: location.pathname = == "/"}, {";
-      name: "Services;
-      href: "/services",;
-      current: location.pathname.startsWith("/services"),";
+current: location.pathname = == "/"}, {};
 dropdown: [{ name: "AI & Machine Learning", href: "/services/ai-machine-learning" }, { name: "Cloud & DevOps", href: "/services/cloud-devops" }, { name: "Cybersecurity", href: "/services/cybersecurity" }, { name: "Digital Transformation", href: "/services/digital-transformation" }, { name: "Financial Solutions", href: "/services/financial-solutions" }, { name: "Manufacturing Solutions", href: "/services/manufacturing-solutions" }, { name: "Industry Solutions", href: "/services/industry-solutions" }
 
       ]}, {";
@@ -216,8 +200,7 @@ current: location.pathname === "/contact"}
   ];
   return (;
     ";
-    <header className="{"fixed" top-0 left-0 right-0 z-50 transition-all duration-300 ${>;
-        ? "bg - white/95 backdrop-blur-xl border-b border-gray-200 shadow-lg",;
+    <header className="{};
         : "bg-white/90 backdrop-blur-md"}"}>;";
       <div className = "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,";
         <div className="flex items-center justify-between h-16 lg:h-20"> {/* comment */}";
@@ -229,19 +212,15 @@ current: location.pathname === "/contact"}
               <h1 className = "text-xl font-bold text-gray-900">Zion Tech Group</h1>,";
               <p className="text-xs text-gray-600">Innovation & Technology</p>,;
           </Link> {/* comment */}";
-          <nav className="hidden lg: flex items-center space-x-8"> {navigation.map((item) => (,";
-              <div key="{item.name}" className="relative group"> {item.dropdown ? (;";
-                  <div className="relative">;";
-                    <button className = "{"px-3" py-2 text-sm font-medium rounded-md transition-colors ${>;
-                        ? "text - blue-600 bg-blue-50",;
+          <nav className="hidden lg: flex items-center space-x-8"> {};
+              <div key="{item.name}" className="relative group"> {};
                         : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"}"}>{item.name}";
                       <svg className="ml-1 inline-block w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">;";
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" d="M19 9l-7 7-7-7"  />;
                       </svg>;
                     </button> {/* comment */}";
                     <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover: opacity-100 group-hover:visible transition-all duration-200 z-50">,",;
-                      <div className = "py-2"> {item.dropdown.map((subItem) => (,";
-                          <Link key="{subItem.name}
+                      <div className = "py-2"> {};
                             className="block px-4 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors">{subItem.name}
 
                           </Link>export default function Header()  {}
@@ -251,13 +230,8 @@ current: location.pathname === "/contact"}
     window.addEventListener(&apos;scroll&apos;, handleScroll);,
 }
     return () => window.removeEventListener(&apos;scroll&apos;, handleScroll)}, []);&apos;
-    {;
-      name: &apos,Home&apos,,;
-      href: &apos,/&apos,,;
-      current: location.pathname = == &apos,/&apos} {;
-      name: &apos,Services&apos,,;
-      href: &apos,/services&apos,,;
-      current: location.pathname.startsWith(&apos,/services&apos,),;
+    {};
+      current: location.pathname = == &apos,/&apos} {};
       dropdown: [{ nam,e: &apos,AI & Machine Learning&apos,, href: &apos,/services/ai-machine-learning&apos} { name: &apos,Cloud & DevOps&apos,, href: &apos,/services/cloud-devops&apos} { name: &apos,Cybersecurity&apos,, href: &apos,/services/cybersecurity&apos} { name: &apos,Digital Transformation&apos,, href: &apos,/services/digital-transformation&apos} { name: &apos,Financial Solutions&apos,, href: &apos,/services/financial-solutions&apos} { name: &apos,Manufacturing Solutions&apos,, href: &apos,/services/manufacturing-solutions&apos} { name: &apos,Industry Solutions&apos,, href: &apos,/services/industry-solutions&apos}
 
       name: &apos,Solutions&apos,,;
@@ -280,23 +254,19 @@ current: location.pathname === "/contact"}
       href: &apos,/contact&apos,,;
       current: location.pathname === &apos,/contact&apos}";
       name: "Home", href: "/",";
-      current: location.pathname === "/"} {";
-      name: "Services",";
+      current: location.pathname === "/"} {};
       href: "/services", current: location.pathname.startsWith("/services"), dropdown: [{ name: "AI & Machine Learning", href: "/services/ai-machine-learning" } { name: "Cloud & DevOps", href: "/services/cloud-devops" } { name: "Cybersecurity", href: "/services/cybersecurity" } { name: "Digital Transformation", href: "/services/digital-transformation" } { name: "Financial Solutions", href: "/services/financial-solutions" } { name: "Manufacturing Solutions", href: "/services/manufacturing-solutions" } { name: "Industry Solutions", href: "/services/industry-solutions" }";
-      ]} { name: "Solutions",";
-      href: "/solutions", current: location.pathname.startsWith("/solutions"), dropdown: [",;
+      ]} {};
         { name: "Enterprise Solutions", href: "/solutions/enterprise" } { name: "Startup Solutions", href: "/solutions/startup" } { name: "Space Technology", href: "/solutions/space-tech" } { name: "Supply Chain", href: "/solutions/supply-chain" }";
-      ]} { name: "About",";
-      href: "/about", current: location.pathname.startsWith("/about"), dropdown: [",;
+      ]} {};
         { name: "Our Story", href: "/about/story" } { name: "Team", href: "/about/team" } { name: "Careers", href: "/careers" } { name: "Partners", href: "/partners" }";
-      ]} { name: "Resources",";
-      href: "/resources", current: location.pathname.startsWith("/resources"), dropdown: [",;
+      ]} {};
         { name: "Blog", href: "/blog" } { name: "Case Studies", href: "/case-studies" } { name: "White Papers", href: "/white-papers" } { name: "Webinars", href: "/webinars" } { name: "Training", href: "/training" } { name: "Documentation", href: "/docs" }";
-      ]} { name: "Contact",";
+      ]} {};
       href: "/contact", current: location.pathname === "/contact"}
 
   return(&apos;&apos;";
-    <;<header className = "{"fixed" top-0 left-0 right-0 z-50 transition-all duration-300 ${;
+    <div>Broken JSX</div>
         ? &apos;bg-white/95 backdrop-blur-xl border-b border-gray-200 shadow-lg>;
         : &apos;bg-white/90 backdrop-blur-md&apos}"}>&apos;&apos;";
       <div className="&apos;max-w-7xl" mx-auto px-4 sm: px-6 lg:px-8&apos,>&apos,";
@@ -327,7 +297,7 @@ current: location.pathname === "/contact"}
 
                 ) : (;";
                     to = "{item.href}
-                    className="{"px-3" py-2 text-sm font-medium rounded-md transition-colors ${";
+                    className="{};
                         : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"}"}
                   >{item.name}
 
@@ -364,14 +334,7 @@ current: location.pathname === "/contact"}
               <div key="{item.name}"> {item.dropdown ? (;
                   <div>;";
                     <div className="text-sm font-medium text-gray-900 mb-2">{item.name}</div>;";
-                    <div className="ml-4 space-y-2"> {item.dropdown.map((subItem) => (;";
-          <div className="&apos;hidden" lg: block&apos,>&apos,",;
-              to=&apos;/contact",";
-              className="&apos,bg-blue-600" hove,r: bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors&apos,>,;
-              Get Started&apos,&apos,";
-          <div className = "hidden lg: block">";
-              className="bg-blue-600 hover: bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors">;
-              Get Started,;
+                    <div className="ml-4 space-y-2"> {};
           {/* comment */}";
             className="lg: hidden: p-2 rounded-md text-gray-700 hover:text-blue-600: hover:bg-gray-100",;
           >;
@@ -390,10 +353,9 @@ current: location.pathname === "/contact"}
         <div className="lg: hidden: bg-white border-t border-gray-200">",";";
           <div: className = "px-4 py-6 space-y-4">"," {navigation.map((item) => (";
               <div: key="{item.name}">;
-                {item.dropdown ? (;
-                  <div>";
+                {};
                     <div className="text - sm font-medium text-gray-900 mb-2">{item.name}</div>",";
-                    <div: className = "ml-4 space-y-2">"," {item.dropdown.map((subItem) => (";
+                    <div: className = "ml-4 space-y-2">"," {};
                           className="block: text-sm text-gray-600 hover: text-blue-600","," {/* comment */}
 
       {mobileMenuOpen && (}";

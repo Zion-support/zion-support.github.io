@@ -1,82 +1,38 @@
 import Head from "next/head";
 import React, { useEffect } from "react";"""""react"next/head";";
-interface SEOEnhancerProps {;
-
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  structuredData?: any}&apos;&apos";
+interface SEOEnhancerProps {};
+  structuredData?: unknown}&apos;&apos";
 ";
-export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({",;
-  title = "Zion Tech Group - Leading Technology Solutions Provider", description = "Transform your business with cutting-edge AI, IT, and Micro SaaS solutions. Expert team, proven results, 24/7 support.",";
-  keywords = "AI services, IT solutions, Micro SaaS, cloud computing, cybersecurity, business automation, technology consulting", canonical,";
-  ogImage = "https: // comment;
-  twitterCard = "summary_large_image", structuredData}) => {";
-  useEffect(() => {";
-    // comment;
-    if (typeof document !== "undefined") {;
+export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({};
+  twitterCard = "summary_large_image", structuredData}) => {};
       document.title = title}";
 
-export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({title = "Zion Tech Group - Leading Technology Solutions Provider", description = "Transform your business with cutting-edge AI, IT, and Micro SaaS solutions. Expert team, proven results, 24/7 support.",";
-  keywords = "AI services, IT solutions, Micro SaaS, cloud computing, cybersecurity, business automation, technology consulting", canonical,";
-  ogImage = "https: // comment;
-  twitterCard = "summary_large_image", structuredData}) => {useEffect(() => {";
-    // comment;
-    if (typeof document !== "undefined") {;
+export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({};
+  twitterCard = "summary_large_image", structuredData}) => {};
       document.title = title}
 
 ";
     // comment;
-    if (typeof window !== "undefined" && "performance" in window) {const observer = new PerformanceObserver((list) => {;
-        const entries = list.getEntries();";
-export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({"",;
-  title = "Zion Tech Group - Leading Technology Solutions Provider", description = "Transform your business with cutting-edge AI, IT, and Micro SaaS solutions. Expert team, proven results, 24/7 support.",";
-  keywords = "AI services, IT solutions, Micro SaaS, cloud computing, cybersecurity, business automation, technology consulting", canonical,";
-  ogImage = "https: // comment;
-  twitterCard = "summary_large_image", structuredData}) => {";
-  useEffect(() => {";
-    // comment;
-    if (typeof document !== "undefined") {;
+    if (typeof window !== "undefined" && "performance" in window) {};
+  twitterCard = "summary_large_image", structuredData}) => {};
       document.title = title}";
 ";
     // comment;
-    if (typeof window !== "undefined" && "performance" in window) {;
-      const observer = new PerformanceObserver((list) => {;
-        const entries = list.getEntries();,
+    if (typeof window !== "undefined" && "performance" in window) {};
 }
-        entries.forEach((entry) => {";
-        entries.forEach((entry) => {;
+        entries.forEach((entry) => {};
           if (entry.entryType = == "navigation") {}";,
 })});
       observer.observe({ entryTypes: ["navigation"] })}
 
 }, [title]);";
   const defaultStructuredData = {}, ";
-    "contactPoint": {";
-      "@type": "ContactPoint", "telephone": "+1-302-464-0950", ";
+    "contactPoint": {};
       "contactType": "customer service", "email": "kleber@ziontechgroup.com"},";
     "sameAs": [";
       "https: // comment;
-export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({,,;
-  title = &apos,Zion Tech Group - Leading Technology Solutions Provider&apos,;
-  description = &apos;Transform your business with cutting-edge AI, IT, and Micro SaaS solutions. Expert team, proven results, 24/7 support.&apos,;
-  keywords = &apos;AI services, IT solutions, Micro SaaS, cloud computing, cybersecurity, business automation, technology consulting&apos,;
-  canonical,;
-  ogImage = &apos;https: // comment;
-  ogType = &apos;website&apos,;
-  twitterCard = &apos;summary_large_image&apos,;
-  structuredData,";
-title = "Zion Tech Group - Leading Technology Solutions Provider", description = "Transform your business with cutting-edge AI, IT, and Micro SaaS solutions. Expert team, proven results, 24/7 support.",";
-  keywords = "AI services, IT solutions, Micro SaaS, cloud computing, cybersecurity, business automation, technology consulting", canonical,";
-  ogImage = "https: // comment;
-  twitterCard = "summary_large_image", structuredData}) => {;
-  useEffect(() => {;
-    // comment;
-if (typeof document !== &apos;undefined&apos) {;
+export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({};
+  twitterCard = "summary_large_image", structuredData}) => {};
       document.title = title}
 
     // commentif (typeof window !== &apos;undefined&apos; && &apos;performance&apos; in window) {&apos}
@@ -102,9 +58,7 @@ if (typeof document !== &apos;undefined&apos) {;
 }, [title]);,
 }
   const defaultStructuredData = {},;
-    "contactPoint": {;
-      "@type": "ContactPoint", "telephone": "+1-302-464-0950",;
-      "contactType": "customer service", "email": "kleber@ziontechgroup.com";";,
+    "contactPoint": {};
 },;
     "sameAs": [;
       "https: // comment;
@@ -112,21 +66,9 @@ if (typeof document !== &apos;undefined&apos) {;
 }
   }, [title]);&apos;
   const defaultStructuredData = {},;
-    &quot;contactPoint&quot;: {;
-      &quot;@type&quot;: &quot;ContactPoint&quot,;
-      &quot;telephone&quot;: &quot;+1-302-464-0950&quot,;
-      &quot;contactType&quot;: &quot;customer service&quot,;
-      &quot;email&quot;: &quot;kleber@ziontechgroup.com&quot;";
-    "@context": "https:// comment;
-    "name": "Zion Tech Group", "url": "https:// comment;
-    "logo": "https:// comment;
-    "address": {";
-      "@type": "PostalAddress", "streetAddress": "364 E Main St STE 1008",";
-      "addressLocality": "Middletown", "addressRegion": "DE",";
-      "postalCode": "19709", "addressCountry": "US";,
+    &quot;contactPoint&quot;: {};
 },";
-    "contactPoint": {"@type": "ContactPoint", "telephone": "+1-302-464-0950",";
-      "contactType": "customer service", "email": "kleber@ziontechgroup.com";,
+    "contactPoint": {};
 },";
     "sameAs": ["https: // comment;
     &quot;sameAs&quot,: [;
@@ -145,8 +87,7 @@ if (typeof document !== &apos;undefined&apos) {;
       <meta property="og: title" content="{title}"  />;
       <meta property="og:description" content="{description}"  />;
       <meta property="og:type" content="{ogType}"  />;
-      <meta property="og:url" content="{canonical" || "http,";
-    s:// comment;
+      <div>Broken JSX</div>
       <meta property="og:image" content="{ogImage}"  />;
       <meta property="og: site_name" content="Zion Tech Group"  />";
       ",;
@@ -161,20 +102,11 @@ if (typeof document !== &apos;undefined&apos) {;
 
       ";
       {/* comment */}
-      <script ";
-        type="application/ld+json;
-        dangerouslySetInnerHTML="{{;
-          __html: JSON.stringify(structuredData || defaultStructuredData)}}
+      <div>Broken JSX</div>
       /">;
       ";
       {/* comment */}
-      <link rel="preconnect" href="https: // comment;
-      <link rel="preconnect" href="http,";
-    s: // comment;
-      <link rel="dns-prefetch" href="http,";
-    s: // comment;
-      ",;
-      {/* comment */}";
+      <div>Broken JSX</div>
       <meta httpEquiv="X-Content-Type-Options" content="nosniff" /">";
       <meta httpEquiv="X-Frame-Options" content="DENY" /">";
       <meta httpEquiv="X-XSS-Protection" content="1; mode = block" /">;
@@ -193,7 +125,7 @@ export default SEOEnhancer;
       <meta property="og: title" content="{title}" /">;
       <meta property="og:description" content="{description}" /">;
       <meta property="og:type" content="{ogType}" /">;
-      <meta property="og:url" content="{canonical" || "https:// comment;
+      <div>Broken JSX</div>
       <meta property="og:image" content="{ogImage}" /">;
       <meta property="og: site_name" content="Zion Tech Group" /">;
       "",;
@@ -208,18 +140,11 @@ export default SEOEnhancer;
 
       ";
       {/* comment */}";
-      <script ";
-        type="application/ld+json;
-        dangerouslySetInnerHTML="{{;
-          __html: JSON.stringify(structuredData || defaultStructuredData)}}";
+      <div>Broken JSX</div>
       /"">;
       ";
       {/* comment */}";
-      <link rel="preconnect" href="https: // comment;
-      <link rel="preconnect" href="https:// comment;
-      <link rel="dns-prefetch" href="https:// comment;
-      "",;
-      {/* comment */}";
+      <div>Broken JSX</div>
       <meta httpEquiv="X-Content-Type-Options" content="nosniff" /"">";
       <meta httpEquiv="X-Frame-Options" content="DENY" /"">";
       <meta httpEquiv="X-XSS-Protection" content="1; mode = block" /"">;
@@ -236,14 +161,14 @@ export default SEOEnhancer;
       <meta property="&quot;og:" title&quot, content="{title}"  />&quot;";
       <meta property="&quot;og:" description&quot, content="{description}"  />&quot;";
       <meta property="&quot;og:" type&quot, content="{ogType}"  />&quot;";
-      <meta property="&quot;og:" url&quot, content="{canonical" || &apos,http,s: // comment;
+      <div>Broken JSX</div>
       <meta property="&quot;og:" image&quot, content="{ogImage}"  />&quot;";
       <meta property="&quot;og: " site_name&quot, content = "&quot,Zion" Tech Group&quot,       />;
       {/* comment */}";
       <meta property="og: title" content="{title}"  />";
       <meta property="og: description" content="{description}"  />";
       <meta property="og: type" content="{ogType}"  />";
-      <meta property="og: url" content="{canonical" || "https:// comment;
+      <div>Broken JSX</div>
       <meta property="og: image" content="{ogImage}"  />";
       <meta property="og: site_name" content="Zion Tech Group"  />;
       ",;
@@ -258,7 +183,7 @@ export default SEOEnhancer;
       <script " type="application/ld+json" dangerouslySetInnerHTML="{{" __html: JSON.stringify(structuredData || defaultStructuredData)}} /">";
       <meta property="og:description" content="{description}"  />";
       <meta property="og:type" content="{ogType}"  />";
-      <meta property="og:url" content="{canonical" || "https:// comment;
+      <div>Broken JSX</div>
       <meta property="og:image" content="{ogImage}"  />";
       <meta property="og: site_name" content="Zion Tech Group"  />;
       ,,;
@@ -272,24 +197,16 @@ export default SEOEnhancer;
       {canonical &&"}&quot; <link rel="&quot;canonical&quot;" href = "{canonical}"  />}
 
       {/* comment */}&quot;";
-      <script type = "application/ld+json;
+      <div>Broken JSX</div>
         dangerouslySetInnerHTML="{{" __html: JSON.stringify(structuredData || defaultStructuredData)}}">;
         type="&quot;application/ld+json&quot;
-        dangerouslySetInnerHTML = "{{";
+        dangerouslySetInnerHTML = "{};
           __html: JSON.stringify(structuredData || defaultStructuredData)}}
 
      />;
       ;
       {/* comment */}&quot;";
-      <link rel="&quot;preconnect&quot;" href="&quot;https: " // comment;
-      <link rel="&quot;preconnect&quot;" href="&quot;https:// comment;
-      <link rel="&quot;dns-prefetch&quot," href = "&quot,http,s:" // comment;
-      {/* comment */}";
-      <link rel="preconnect" href="https: // comment;
-      <link rel="preconnect" href="https:// comment;
-      <link rel="dns-prefetch" href="https:// comment;
-      ,,;
-      {/* comment */}&quot;";
+      <div>Broken JSX</div>
       <meta httpEquiv="&quot;X-Content-Type-Options&quot;" content="&quot;nosniff&quot;"  />&quot;";
       <meta httpEquiv="&quot;X-Frame-Options&quot;" content="&quot;DENY&quot;"  />&quot;";
       <meta httpEquiv="&quot;X-XSS-Protection&quot;" content="&quot;1;" mode="block&quot;"  />&quot;

@@ -175,7 +175,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {;
 """"}} className="space-y-4">"";
               <div className="flex items-center justify-between">"";
                 <h3 className="text-lg font-semibold text-gray-900 dark: text-white">Smart Contracts</h3>,;
-                <button onClick = {}";
+                <div>Broken JSX</div>
   () ="> addContract({}";
 ";
                 name: "New Contract", ";
@@ -278,8 +278,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {;
                           </span>;
                         </div>""";
                         """;
-                        {nft.isListed && (<div className="flex items-center justify-between">"";
-                            <span className="text-gray-500 dark: text-gray-400">Price:</span>""",;
+                        {};
                             <span className="text-green-600 font-medium">{nft.price} ETH</span>;
                           </div>)}
 
@@ -296,7 +295,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {;
 """"}} className="space-y-4">"";
               <div className="flex items-center justify-between">"";
                 <h3 className="text-lg font-semibold text-gray-900 dark: text-white">DeFi Positions</h3>,;
-                <button onClick = {}";
+                <div>Broken JSX</div>
   () ="> createDeFiPosition({}";
 ";
                 type: "staking", ";
@@ -320,8 +319,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {;
                 {defiPositions.map((position) => (<div key="{position.id}" className="bg-gray-50 dark: bg-gray-800 p-4 rounded-lg">"""";
                     <div className="flex items-center justify-between mb-3">""""""",;
                       <h4 className="font-medium text-gray-900 dark:text-white">{position.protocol}</h4>"""""";
-                      <span className="{"px-2" py-1 text-xs font-medium rounded-full ${position.type === "staking" ? "bg-green-100 text-green-800" :""""";
-                    position.type === "liquidity" ? "bg-blue-100 text-blue-800" :"""""";
+                      <div>Broken JSX</div>
                         "bg-purple-100 text-purple-800"}"}">";
                         {position.type}";
                       </span>;
@@ -459,8 +457,8 @@ Hash: {tx.hash.slice(0, 8)}...{tx.hash.slice(-6)}";
                   <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">;
                     Name""";
                   </label>"""",;
-                  <input type="text" value="{nftForm.name}" onChange = {}";
-  (e) ="> setNftForm(prev => ({ ...prev, name: e.target.value """",;
+                  <div>Broken JSX</div>
+  (e) ="> setNftForm(prev => ({};
 """"}))} className="w-full px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="NFT Name" />";
                 </div>;
                 """;
@@ -468,8 +466,8 @@ Hash: {tx.hash.slice(0, 8)}...{tx.hash.slice(-6)}";
                   <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">;
                     Description,;
                   </label>",;
-                  <textarea value="{nftForm.description}" onChange = {}";
-  (e) ="> setNftForm(prev => ({ ...prev, description: e.target.value """",;
+                  <div>Broken JSX</div>
+  (e) ="> setNftForm(prev => ({};
 """"}))} className="w-full px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="NFT Description" rows="{3}/">";
                 </div>;
                 """;
@@ -477,8 +475,8 @@ Hash: {tx.hash.slice(0, 8)}...{tx.hash.slice(-6)}";
                   <label className="block text-sm font-medium text-gray-700 dark: text-gray-300 mb-1">;
                     Image URL (optional)""";
                   </label>"""",;
-                  <input type="url" value="{nftForm.image}" onChange = {}";
-  (e) ="> setNftForm(prev => ({ ...prev, image: e.target.value """",;
+                  <div>Broken JSX</div>
+  (e) ="> setNftForm(prev => ({};
 """"}))} className="w-full px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="https:// comment;
                 </div>;
               </div>""";
@@ -511,8 +509,8 @@ Hash: {tx.hash.slice(0, 8)}...{tx.hash.slice(-6)}";
                   <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">;
                     To Address""";
                   </label>"""",;
-                  <input type="text" value="{transactionForm.to}" onChange = {}";
-  (e) ="> setTransactionForm(prev => ({ ...prev, to: e.target.value """",;
+                  <div>Broken JSX</div>
+  (e) ="> setTransactionForm(prev => ({};
 """"}))} className="w-full px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="0x..." />";
                 </div>;
                 """;
@@ -520,8 +518,8 @@ Hash: {tx.hash.slice(0, 8)}...{tx.hash.slice(-6)}";
                   <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">;
                     Amount (ETH)""";
                   </label>"""",;
-                  <input type="number" step="0.001" value="{transactionForm.value}" onChange = {}";
-  (e) ="> setTransactionForm(prev => ({ ...prev, value: e.target.value """",;
+                  <div>Broken JSX</div>
+  (e) ="> setTransactionForm(prev => ({};
 """"}))} className="w-full px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="0.1" />";
                 </div>;
                 "";
@@ -529,8 +527,8 @@ Hash: {tx.hash.slice(0, 8)}...{tx.hash.slice(-6)}";
                   <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">,;
                     Data(),;
                   </label>",;
-                  <textarea value="{transactionForm.data}" onChange = {}";
-  (e) ="> setTransactionForm(prev => ({ ...prev, data: e.target.value """",;
+                  <div>Broken JSX</div>
+  (e) ="> setTransactionForm(prev => ({};
 """"}))} className="w-full px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="0x..." rows="{3}/">";
                 </div>;
               </div>""";
@@ -550,7 +548,6 @@ Hash: {tx.hash.slice(0, 8)}...{tx.hash.slice(-6)}";
     </div>)}""""";
 """"'""`;
 ";,
-} catch (error) {;
-    console.error(error);,
+} catch (error) {};
 }
 export default Component;

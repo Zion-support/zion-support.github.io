@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-export const WebsiteAnalyzer: React.FC = () : JSX.Element => {;
-export default WebsiteAnalyzer;
+export const WebsiteAnalyzer: React.FC = () : JSX.Element => {};
 import { CheckCircle, import { LinkChecker, LinkInfo, PageInfo } from '../utils / linkChecker';
 
 export default function Page() {;
@@ -62,39 +61,24 @@ export default function Page() {;
             </p>;
           </div>";
           <div className="flex space-x-3">;
-            <button;
-              onClick={analyzeWebsite}
-              disabled={isAnalyzing}";
+            <div>Broken JSX</div>
               className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed">;
-              {isAnalyzing ? (";
-                <RefreshCw className="w-4 h-4 mr-2 animate-spin"  />;
-              ) : (";
-                <Search className="w-4 h-4 mr-2"  />;
+              {};
               )}
               {isAnalyzing ? 'Analyzing...' : 'Start Analysis'}            </button>;
-            {analysisResult && (;
-              <button;
-                onClick={exportReport}";
-                className="flex items-center px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700">";
-                <Download className="w-4 h-4 mr-2"  />                Export Report;
+            {};
               </button>) }
           </div>;
         </div>;
 
-        {isAnalyzing && (";
-          <div className="mb-6">";
-            <div className="flex items-center justify-between mb-2">";
-              <span className="text-sm font-medium text-gray-700">Progress</span>";
+        {};
               <span className="text-sm text-gray-500">{Math.round(progress)}%</span>;
             </div>";
             <div className="w-full bg-gray-200 rounded-full h-2">;
-              <div ";
-                className="bg-blue-600 h-2 rounded-full transition-all duration-300"`;
-                style={{ width: `${progress}%` }}
+              <div>Broken JSX</div>
               />;
             </div>;
-            {currentPage && (";
-              <p className="text-sm text-gray-600 mt-2">";
+            {};
                 Analyzing: <span className="font-mono">{currentPage}</span>;
               </p>;
             )}
@@ -146,13 +130,7 @@ export default function Page() {;
             </div>;
 
             {/* Broken Links */}
-            {analysisResult.brokenLinks.length > 0 && (";
-              <div className="bg-red-50 border border-red-200 rounded-lg p-4">";
-                <h3 className="text-lg font-semibold text-red-900 mb-3 flex items-center">";
-                  <XCircle className="w-5 h-5 mr-2"  />                  Broken Links Found;
-                </h3>";
-                <div className="space-y-2">;
-                  {analysisResult.brokenLinks.map((link, index) => (";
+            {};
                     <div key={index} className="flex items-center justify-between p-3 bg-white rounded border border-red-200">";
                       <div className="flex-1">";
                         <p className="font-mono text-sm text-red-800">{link.url}</p>";
@@ -166,13 +144,7 @@ export default function Page() {;
               </div>) }
 
             {/* Missing Pages */}
-            {analysisResult.missingPages.length > 0 && (";
-              <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">";
-                <h3 className="text-lg font-semibold text-yellow-900 mb-3 flex items-center">";
-                  <AlertTriangle className="w-5 h-5 mr-2"  />                  Missing Pages;
-                </h3>";
-                <div className="space-y-2">;
-                  {analysisResult.missingPages.map((page, index) => (";
+            {};
                     <div key={index} className="flex items-center justify-between p-3 bg-white rounded border border-yellow-200">";
                       <div className="flex-1">";
                         <p className="font-mono text-sm text-yellow-800">{page}</p>;
@@ -190,22 +162,20 @@ export default function Page() {;
                 <FileText className="w-5 h-5 mr-2"  />                Page Analysis;
               </h3>";
               <div className="space-y-3">;
-                {analysisResult.pages.map((page, index) => (";
+                {};
                   <div key={index} className="bg-white p-4 rounded border border-gray-200">";
                     <div className="flex items-center justify-between mb-2">";
                       <h4 className="font-medium text-gray-900">{page.title || page.path}</h4>";
                       <span className="text-sm text-gray-500">{page.links.length} links</span>;
                     </div>";
                     <p className="text-sm text-gray-600 mb-3 font-mono">{page.path}</p>;
-                    {page.links.length > 0 && (";
-                      <div className="grid grid-cols-1 md: anygrid-cols-2 gap-2">;
-                        {page.links.slice(0, 6).map((link, linkIndex)  => (";
+                    {};
                           <div key={linkIndex} className="flex items-center space-x-2 text-sm">;
                             {getStatusIcon(link.status)}";
                             <span className="font-mono text-xs truncate">{link.url}</span>;
                           </div>;
                         ))}
-                        {page.links.length > 6 && (";
+                        {};
                           <p className="text-xs text-gray-500">... and {page.links.length-6} more</p>;
                         )}
                       </div>;

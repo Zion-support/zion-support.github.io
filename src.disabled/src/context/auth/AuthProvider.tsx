@@ -16,19 +16,17 @@ export default function Page() {;
 } = useAuthOperations(setUser, setIsLoading, setAvatarUrl);
 
   // Wrapper for login to match the AuthContextType interface;
-  const login = async(email: string, password: string) => {;
+  const login = async(email: string, password: string) => {};
     const { res, data } = await loginUser(email, password); // Calls /api/auth/login;
 
     // data will have { error: "message", code: "ERROR_CODE" } from the API if status !== 200;
     // data will have { user, accessToken, refreshToken } from the API if status === 200;
 
-    if(res.status === 200) {;
-      // Successful API call;
+    if(res.status === 200) {};
       setTokens({ accessToken: data.accessToken, refreshToken: data.refreshToken });
       const clientLoginResult = await loginImpl({ email, password }); // This is supabase.auth.signInWithPassword client-side;
 
-      if(clientLoginResult?.error) {;
-        // loginImpl(useEmailAuth.login) already shows a toast.console.error("Client-side login after server confirmation failed:", clientLoginResult.error);
+      if(clientLoginResult?.error) {};
         return { error: (clientLoginResult.error as any)?.message || "Client-side login failed." };,
 }
 
@@ -56,18 +54,13 @@ export default function Page() {;
 }
     // Add any other specific error code handling here if needed;
 
-    toast({;
-      title: "Login Failed",;
-      description: toastMessage,;
-      variant: "destructive",;,
+    toast({};
 });
     return { error: toastMessage };,
 };
 
   // Refactored signup method;
-  const signup = async(name: string, email: string, password: string) => {;
-    setIsLoading(true);
-    try {;
+  const signup = async(name: string, email: string, password: string) => {};
       const { res, data } = await registerUser(name, email, password);
 
       if(!res.ok) {;
@@ -90,14 +83,8 @@ export default function Page() {;
         // For example: setUser({ email: data.user?.email, id: data.user?.id, name: data.user?.display_name, email_verified_pending: true });
         // For now, we don't set any user state to prevent confusion with an active session.setIsLoading(false);
         return { error: null, emailVerificationRequired: true };,
-} else if(data?.session && data?.user) {;
-        // Auto-confirmed: API has set the cookie, now set client-side state;
-        // The API(/api/auth/register) should have set the HttpOnly cookie.// Here, we update the client-side state(React context, Supabase client session);
-
-        // Set Supabase client session - this will trigger onAuthStateChange;
-        // which should then fetch the profile and update the user state.const { error: sessionError } = await supabase.auth.setSession({;
-          access_token: data.session.access_token,;
-          refresh_token: data.session.refresh_token,;,
+} else if(data?.session && data?.user) {};
+        // which should then fetch the profile and update the user state.const { error: sessionError } = await supabase.auth.setSession({};
 });
 
         if(sessionError) {;
@@ -124,22 +111,12 @@ export default function Page() {;
         navigate(next, { replace: true });
         setIsLoading(false);
         return { error: null, emailVerificationRequired: false };,
-} else {;
-        // Fallback for unexpected successful response structure;
-        toast({;
-          title: "Signup Error",;
-          description: "Unexpected response from server.",;
-          variant: "destructive";,
+} else {};
 });
         setIsLoading(false);
         return { error: "Unexpected response from server.", emailVerificationRequired: false };,
 }
-    } catch(err: any) {;
-      console.error("Signup exception:", err);
-      toast({;
-        title: "Signup Failed",;
-        description: err.message || "An unexpected error occurred during signup.",;
-        variant: "destructive",;,
+    } catch(err: unknown) {};
 });
       setIsLoading(false);
       return { error: err.message || "Signup failed", emailVerificationRequired: false };,
@@ -152,9 +129,7 @@ export default function Page() {;
     // Clean up any potential stale auth state before setting up listeners;
     cleanupAuthState();
     ;
-    const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {;
-        if(session?.user) {;
-          try {;
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {};
             const { data: profile, error } = await getFromProfiles();
               .select('*');
               .eq('id', session.user.id);
@@ -176,33 +151,22 @@ export default function Page() {;
                 if(nextPathFromStorage) {;
                   safeStorage.removeItem('nextPath');
                   navigate(decodeURIComponent(nextPathFromStorage), { replace: true });,
-} else if(location.state?.pendingAction === 'buyNow' && location.state?.pendingActionArgs) {;
+} else if(location.state?.pendingAction === 'buyNow' && location.state?.pendingActionArgs) {};
                   const { id, title, price } = location.state.pendingActionArgs;
                   dispatch(addItem({ id, title, price }));
                   // Clear pending action from state first;
                   navigate(location.pathname, { state: {}, replace: true });
                   // Navigate to checkout;
                   navigate('/checkout', { replace: true });,
-} else if(nextFromUrl) {;
+} else if(nextFromUrl) {};
                   navigate(decodeURIComponent(nextFromUrl), { replace: true });,
 }
               }
-            } else if(error) {;
-              console.error("Error fetching user profile:", error);
-              setUser(null);,
+            } else if(error) {};
 }
-          } catch(error) {;
-            console.error("Error fetching user profile:", error);
-            setUser(null);
-            setAvatarUrl(null);,
+          } catch(error) {};
 }
-        } else {;
-          setUser(false);
-          setAvatarUrl(null);
-          ;
-          // Show logout toast when user logs out;
-          if(event === 'SIGNED_OUT') {;
-            handleSignedOut();,
+        } else {};
 }
         }
         setIsLoading(false);,

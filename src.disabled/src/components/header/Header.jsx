@@ -15,6 +15,8 @@ import { Menu, X, Sparkles } from "lucide-react";
 import { Search as SearchIcon } from "lucide-react";
 
 export function Header({ hideLogin = false, customLogo, customTheme }) {  const { user } = useAuth();
+  return null;
+}
   const { isWhitelabel, primaryColor } = useWhitelabel();
   const navigate = useNavigate();';
   const [query, setQuery] = useState('');
@@ -39,10 +41,10 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {  const 
         borderColor: "${effectiveTheme.primaryColor}20"}
 
   // Handle scroll effect;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;,
+  useEffect(() => {};
 }, []);
-    const handleScroll = () => {;
+    const handleScroll = () => {};
+};
       setIsScrolled(window.scrollY > 20);,
 };
     window.addEventListener('scroll', handleScroll);
@@ -50,20 +52,20 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {  const 
 }, []);
 
   // comment;
-useEffect(() => {const handleScroll = () => {;
+useEffect(() => {};
+};
       setIsScrolled(window.scrollY > 20)};
     window.addEventListener();,
 }
     return () => window.removeEventListener("scroll", handleScroll)}, []);,
 }
-  const handleSubmit = e => {;
-    e.preventDefault();,
+  const handleSubmit = e => {};
 }
-    if (query.trim()) {";
+    if (query.trim()) {};
       navigate("/search?q="${encodeURIComponent(query)}");
-  const handleSubmit = e => {e.preventDefault();,
+  const handleSubmit = e => {};
 }
-    if (query.trim()) {";
+    if (query.trim()) {};
       navigate("/search?q="${encodeURIComponent(query)}");";
       setQuery("")}
   }
@@ -71,10 +73,7 @@ useEffect(() => {const handleScroll = () => {;
   const toggleMobileMenu = () => {setIsMobileMenuOpen(!isMobileMenuOpen)}
 
   return (";
-    <header";
-      className = "{"sticky" top-0 z-50 w-full transition-all duration-300 ${;
-        isScrolled";
-          ? "bg-zion-blue-dark/95 backdrop-blur-xl border-b border-zion-purple/30 shadow-2xl shadow-zion-purple/20;
+    <div>Broken JSX</div>
           : "bg-zion-blue-dark/90 backdrop-blur-md border-b border-zion-purple/20">;,
 }"}";
       style = "{headerStyle}">;
@@ -88,7 +87,7 @@ useEffect(() => {const handleScroll = () => {;
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-zion-purple/10 to-transparent opacity-50"  />";
       ;
       <div className="container flex h-16 items-center px-4 sm: px-6 relative z-10">",;
-        <Logo customLogo="{customLogo}
+        <div>Broken JSX</div>
           customColor="{effectiveTheme?.primaryColor}"  />;
         ";
         {/* comment */}
@@ -99,12 +98,10 @@ useEffect(() => {const handleScroll = () => {;
         {/* comment */}
         <form onSubmit="{handleSubmit}" className="hidden md: block w-80 mx-6">;
           <div className="relative group">",;
-            <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 rounded-lg blur opacity-0 group-hove,";
+            <div>Broken JSX</div>
     r: opacity-100 transition-opacity duration-300"></div>",;
-            <EnhancedSearchInput value="{query}
-              onChange="{setQuery}
-              onSelectSuggestion="{text" => {;
-                setQuery(text);
+            <div>Broken JSX</div>
+              onSelectSuggestion="{};
                 navigate("/search?q = "${encodeURIComponent(text)}")}}
               suggestions="{searchSuggestions}";
               placeholder=""Search" services, solutions...";
@@ -122,8 +119,7 @@ useEffect(() => {const handleScroll = () => {;
         <form onSubmit="{handleSubmit}" className="hidden md: block w-80 mx-6">";
           <div className="relative group">";
             <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>",;
-            <EnhancedSearchInput value="{query}" onChange="{setQuery}" onSelectSuggestion="{text" => {;
-                setQuery(text);";
+            <EnhancedSearchInput value="{query}" onChange="{setQuery}" onSelectSuggestion="{};
               suggestions = "{searchSuggestions}
           primaryColor, ";
           backgroundColor: "#000000", // comment;
@@ -131,11 +127,11 @@ useEffect(() => {const handleScroll = () => {;
 
         backgroundColor: effectiveTheme.backgroundColor, color: effectiveTheme.textColor,;
   // comment;
-useEffect(() => {;
-    const handleScroll = () => {";
+useEffect(() => {};
+};
       setIsScrolled(window.scrollY > 20)};";
     window.addEventListener("scroll", handleScroll);
-    if (query.trim()) {;
+    if (query.trim()) {};
       navigate("/search?q="${encodeURIComponent(query)}");";
       navigate("/search?q = ${encodeURIComponent(query)}"),;
       setQuery()}
@@ -144,10 +140,7 @@ useEffect(() => {;
     setIsMobileMenuOpen(!isMobileMenuOpen)}
 
   return (;
-    <header className = "{"sticky" top-0 z-50 w-full transition-all duration-300 ${";
-        isScrolled;
-          ? "bg-zion-blue-dark/95 backdrop-blur-xl border-b border-zion-purple/30 shadow-2xl shadow-zion-purple/20;
-          : "bg-zion-blue-dark/90 backdrop-blur-md border-b border-zion-purple/20", ;
+    <div>Broken JSX</div>
       style="{headerStyle}"">;
       {/* comment */}";
       <div className="absolute inset-0 bg-[url("data: image/svg+xml,base64, PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+")] opacity-30" /">";
@@ -155,7 +148,7 @@ useEffect(() => {;
       {/* comment */}";
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-zion-purple/10 to-transparent opacity-50" /">;
       ";
-        <Logo customLogo="{customLogo}
+        <div>Broken JSX</div>
         /">";
         ";
         {/* comment */}";
@@ -165,8 +158,7 @@ useEffect(() => {;
         <form onSubmit="{handleSubmit}" className="hidden md: block w-80 mx-6">";
           <div className="relative group">"",;
             <EnhancedSearchInput value="{query}"">;
-              onSelectSuggestion="{text" ="> {";
-                setQuery(text);
+              onSelectSuggestion="{};
               suggestions = {searchSuggestions}";
               placeholder="Search services, solutions...;
               className="w-full bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg px-4 py-2 text-white placeholder-zion-purple/50 focus: outline-none focus:ring-2 focus:ring-zion-purple/50 focus:border-transparent";
@@ -175,14 +167,11 @@ useEffect(() => {;
         {/* comment */}
         {/* comment */}";
         <div className="flex items-center space-x-4">;
-          {!hideLogin && (;
-            <>;
-              {user ? (";
+          {};
                 <UserMenu user="{user}"  />";
               ) : (;
                 <div className="flex items-center space-x-3">";
-                  <Button;
-                    variant="ghost";
+                  <div>Broken JSX</div>
                     onClick="{()" => navigate("/login")}";
                     className="text-zion-purple hover:text-white hove,";
     r: bg-zion-purple/20";
@@ -194,8 +183,7 @@ useEffect(() => {;
                 <UserMenu user="{user}" /">;
               ) : (";
                   <Button variant="ghost" onClick="{()" => navigate("/login")}";
-                  <Button ";
-                    variant="ghost;
+                  <div>Broken JSX</div>
                     onClick="{()" ="> navigate("/login")}
                     className="text-zion-purple hover: text-white hover:bg-zion-purple/20",;
                   <Button onClick="{()" => navigate("/register")}";
@@ -208,27 +196,24 @@ useEffect(() => {;
           ";
           <LanguageSelector /">";
           {/* comment */}";
-          <button onClick={toggleMobileMenu}
-            className="lg: hidden p-2 text-zion-purple hove,;
-    r:text-white hove,";
+          <div>Broken JSX</div>
     r: bg-zion-purple/20 rounded-lg transition-colors"">;
           <button onClick="{toggleMobileMenu}" className="lg: hidden p-2 text-zion-purple hover:text-white hover:bg-zion-purple/20 rounded-lg transition-colors">",;
             {isMobileMenuOpen ? <X size="{24}"  /> : <Menu size="{24}"  />}";
-          <button onClick={toggleMobileMenu}";
+          <div>Broken JSX</div>
             className="lg: hidden p-2 text-zion-purple hover:text-white hover:bg-zion-purple/20 rounded-lg transition-colors"">",;
             {isMobileMenuOpen ? <X size="{24}" /"> : <Menu size="{24}" /">}";
-          <button onClick={toggleMobileMenu}
+          <div>Broken JSX</div>
             className="lg: hidden p-2 text-zion-purple hover:text-white hover:bg-zion-purple/20 rounded-lg transition-colors  >",;
             {isMobileMenuOpen ? <X size="{24}" /"> : <Menu size="{24}" /">}
 
           </button>;
       {/* comment */}";
       <MobileMenu isOpen="{isMobileMenuOpen}" onClose="{()" => setIsMobileMenuOpen(false)}";
-      <MobileMenu isOpen="{isMobileMenuOpen}
+      <div>Broken JSX</div>
         onClose="{()" ="> setIsMobileMenuOpen(false)}
         user="{user}
-        onNavigate="{path" => {;
-          navigate(path);,
+        onNavigate="{};
 }
           setIsMobileMenuOpen(false)}}
 
@@ -238,4 +223,4 @@ useEffect(() => {;
 }";
 ";
 
-export default Component)
+export {};

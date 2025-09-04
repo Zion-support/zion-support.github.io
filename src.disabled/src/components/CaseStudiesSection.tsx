@@ -3,57 +3,9 @@ import {  import { motion  } from 'framer-motion';
  params - Function parameters;
  * @returns {*} Function return value;
  */;
-function CaseStudiesSection () {;
-export function CaseStudiesSection() {;
-  return (";
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
-      <div className="max-w-7xl mx-auto px-6">;
-        <motion.div ";
-          className="text-center mb-16";
-          initial = {;
-
-  { opacity: 0,;
-  y: 20;,
-}}
-          whileInView = {;
-
-  { opacity: 1,;
-  y: 0;,
-}}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >";
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">;
-            Success Stories;
-          </h2>";
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
-            Discover how we've helped businesses across industries achieve;
-            remarkable results through innovative technology solutions.</p>;
-        </motion.div>;
-";
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
-          {caseStudies.map((study, index) => (;
-            <motion.div;
-              key={study.id}";
-              className="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25";
-              initial = {;
-
-  { opacity: 0,;
-  y: 30;,
-}}
-              whileInView = {;
-
-  { opacity: 1,;
-  y: 0;,
-}}
-              viewport={{ once: true }}
-              transition = {;
-
-  { duration: 0.6,;
-  delay: index * 0.1;,
-}}
-            >";
-              <div className="flex items-center mb-6">;
+function CaseStudiesSection () {};
+  return null;
+}
                 <div className={`p-3 rounded-xl bg-gradient-to-r ${study.color} mr-4`}>";
                   <span className="text-2xl">{study.logo}</span>;
                 </div>;
@@ -76,7 +28,7 @@ export function CaseStudiesSection() {;
               <div className="mb-6">";
                 <h4 className="font-semibold text-gray-900 mb-3">Results:</h4>";
                 <ul className="space-y-2">;
-                  {study.results.map((result, resultIndex) => (";
+                  {};
                     <li key={resultIndex} className="flex items-center text-sm text-gray-700">";
                       <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0"  />                      {result}
                     </li>) ) }
@@ -93,23 +45,7 @@ export function CaseStudiesSection() {;
             </motion.div>) ) }
         </div>;
 
-        <motion.div;
-          className="mt-16 text-center"          initial = {;
-
-  { opacity: 0,;
-  y: 20;,
-}}
-          whileInView = {;
-
-  { opacity: 1,;
-  y: 0;,
-}}
-          viewport={{ once: true }}
-          transition = {;
-
-  { duration: 0.6,;
-  delay: 0.4;,
-}}
+        <div>Broken JSX</div>
         >";
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">";
             <h3 className="text-2xl font-bold mb-4">;
@@ -119,18 +55,10 @@ export function CaseStudiesSection() {;
               Join hundreds of satisfied clients who have transformed their;
               businesses with our innovative technology solutions.</p>";
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <Link";
-                to="/contact";
-                className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200";
-
-                Start Your Project";
+              <div>Broken JSX</div>
                 <TrendingUp className="ml-2 h-5 w-5"  />;
               </Link>;
-              <Link";
-                to="/case-studies";
-                className="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-white hover:text-blue-600 rounded-lg font-medium transition-colors duration-200";
-
-                View All Case Studies";
+              <div>Broken JSX</div>
                 <ArrowRight className="ml-2 h-5 w-5"  />              </Link>;
             </div>;
           </div>;

@@ -2,7 +2,9 @@ import React from 'react';
 ;
 ;
 ;import { Building, Users, BarChart3, MessageSquare, Calendar, FileText, CreditCard, Globe, TrendingUp, CheckCircle, Star, Phone, Mail, MapPin, ExternalLink, BarChart } from "lucide-react";
-export default function MicroSAASServicesPage() {}
+export {};
+  return null;
+}
     const microSAASServices = [];
         {}
 ";
@@ -463,8 +465,7 @@ export default function MicroSAASServicesPage() {}
       <div className="py-8 bg-zion-blue-dark/50">"";
         <div className="container mx-auto px-4">"";
           <div className="flex flex-wrap justify-center gap-3">";
-            {categories.map((category) => (<Button key={category} onClick={() => setSelectedCategory(category)} className={`${selectedCategory === category""`;
-                ? "bg-zion-purple text-white""`"`;
+            {categories.map((category) => (<Button key={category} onClick={() => setSelectedCategory(category)} className={};
                 : "border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"}`}>;
                 {category}
               </Button>) ) }
@@ -482,7 +483,7 @@ export default function MicroSAASServicesPage() {}
                     <div className="p-3 rounded-lg bg-zion-blue-dark/50 group-hover:bg-zion-purple/20 transition-colors">;
                       {service.icon}";
                     </div>"";
-                    {service.badge && (<Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan border-zion-purple/30">;
+                    {};
                         {service.badge}
                       </Badge>)}";
                   </div>"";

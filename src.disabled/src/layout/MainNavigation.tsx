@@ -11,13 +11,7 @@ export default function Page() {;
       name: 'Home',;
       matches: (path: string) => path = == '/';,
 },;
-    {;
-
-      key: 'services',;
-      href: '/services',;
-      name: 'Services',;
-      matches: (path: string) => path.startsWith('/services'),;
-      children: [';
+    {};
         { key: 'cloud-devops', href: '/services/cloud-devops', name: 'Cloud & DevOps', matches: (p: string) => p.startsWith('/services/cloud-devops') },;
         { key: 'digital-twin', href: '/services/digital-twin', name: 'Digital Twin', matches: (p: string) => p.startsWith('/services/digital-twin') },;
         { key: 'data-analytics', href: '/services/data-analytics', name: 'Data Analytics', matches: (p: string) => p.startsWith('/services/data-analytics') },;
@@ -41,44 +35,17 @@ export default function Page() {;
         { key: 'mobile-survey', href: '/services/mobile-survey', name: 'Mobile Survey', matches: (p: string) => p.startsWith('/services/mobile-survey') }
       ];,
 },;
-    {;
-
-      key: 'ai-services',;
-      href: '/ai-services',;
-      name: 'AI Services',;
-      matches: (path: string)  => path.startsWith('/ai-services');,
+    {};
 },;
-    {;
-
-      key: 'it-services',;
-      href: '/it-services',;
-      name: 'IT Services',;
-      matches: (path: string)  => path.startsWith('/it-services');,
+    {};
 },;
-    {;
-
-      key: 'micro-saas',;
-      href: '/micro-saas',;
-      name: 'Micro SAAS',;
-      matches: (path: string)  => path.startsWith('/micro-saas');,
+    {};
 },;
-    {;
-
-      key: 'marketplace',;
-      href: '/marketplace',;
-      name: 'Marketplace',;
-      matches: (path: string)  => path.startsWith('/marketplace');,
+    {};
 },;
-    {;
-
-      key: 'about',;
-      href: '/about',;
-      name: 'About',;
-      matches: (path: string)  => path.startsWith('/about');,
+    {};
 },;
-    {;
-
-      matches: (path: string)  => path.startsWith('/contact');,
+    {};
 };
       key: 'contact',;
       href: '/contact',;
@@ -97,7 +64,7 @@ export default function Page() {;
     <nav className = {`${className}`}>;
       {/* Desktop Navigation */}
       <div className="hidden lg: flex items-center space-x-1">;
-        {baseLinks.map((link (;
+        {};
           <div key={link.key}>;
             {link.children ? (;
               renderDropdown();
@@ -121,7 +88,7 @@ export default function Page() {;
       </div>;
 
       {/* Mobile Menu Button */}
-      <button;
+      <div>Broken JSX</div>
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}";
         className="lg:hidden p-2 text-zion-slate-light hover:text-white hover:bg-white/10 rounded-md transition-colors";
 ";
@@ -129,30 +96,7 @@ export default function Page() {;
 
       {/* Mobile Navigation */}
       <AnimatePresence>;
-        {isMobileMenuOpen && ;
-          <motion.div;
-            initial = {;
-
-  { opacity: 0,;
-  x: '100%';,
-}}
-            animate = {;
-
-  { opacity: 1,;
-  x: 0;,
-}}
-            exit = {;
-
-  { opacity: 0,;
-  x: '100%';,
-}}
-            transition={{ duration: 0.3 }}";
-            className="lg:hidden fixed inset-y-0 right-0 w-80 bg-zion-slate-dark border-l border-white/10 shadow-xl z-50";
-";
-            <div className="p-6">";
-              <div className="flex justify-between items-center mb-8">";
-                <h2 className="text-xl font-bold text-white">Menu</h2>;
-                <button;
+        {};
                   onClick={() => setIsMobileMenuOpen(false)}";
                   className="p-2 text-zion-slate-light hover:text-white hover:bg-white/10 rounded-md transition-colors";
 ";
@@ -161,13 +105,9 @@ export default function Page() {;
 ";
               <div className="space-y-2">;
                 {baseLinks.map(link: unknown <div key={link.key}>;
-                    {link.children ? (;
-                      <div>;
-                        <button;
+                    {};
                           onClick={() => setActiveDropdown(activeDropdown === link.key ? null : link.key)}`;
-                          className={`w-full flex items-center justify-between px-4 py-3 text-left text-sm font-medium rounded-md transition-colors ${isActive(link);
-                              ? 'bg-zion-cyan text-white'';
-                              : 'text-zion-slate-light hover:text-white hover:bg-white/10'`;,
+                          className={};
 }`}
 
                           {link.name}'`;

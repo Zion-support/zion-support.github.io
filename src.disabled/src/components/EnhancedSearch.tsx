@@ -63,29 +63,12 @@ export function EnhancedSearch({;
   const navigate = useNavigate () ;
 
   // Handle keyboard navigation;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;
-
-  return () => {;
-    // Cleanup function;,
+  useEffect(() => {};
 };,
 }, []);, []);
-    const handleKeyDown = (event: anyKeyboardEvent) => {;
-      if(event.key === 'Escape') {;
-        setIsOpen(false) ;
-        setSelectedIndex(-1) ;,
-} else if(event.key === 'ArrowDown') {;
-        event.preventDefault () ;
-        setSelectedIndex(prev =>;
-          prev < results.length-1 ? prev + 1 : prev) ;,
-} else if(event.key === 'ArrowUp') {;
-        event.preventDefault () ;
-        setSelectedIndex(prev => prev > 0 ? prev - 1 : -1) ;,
-} else if(event.key === 'Enter' && selectedIndex >= 0) {;
-        event.preventDefault () ;
-        if(results[selectedIndex]) {;
-        event.preventDefault () ;        if(results[selectedIndex]) {;
-
+    const handleKeyDown = (event: unknownKeyboardEvent) => {};
+} else if(event.key === 'ArrowDown') {};
+} else if(event.key === 'Enter' && selectedIndex >= 0) {};
           handleResultClick(results[selectedIndex])}      }
     };
 
@@ -94,11 +77,7 @@ export function EnhancedSearch({;
       document.addEventListener('keydown', handleKeyDown)}
     return () => document.removeEventListener('keydown', handleKeyDown)}, [isOpen, results, selectedIndex]);
   // Search functionality;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;
-
-  return () => {;
-    // Cleanup function;,
+  useEffect(() => {};
 };,
 }, []);, []);
     if(debouncedQuery.trim().length < 2) {;
@@ -120,42 +99,27 @@ export function EnhancedSearch({;
     setResults(searchResults) }, [debouncedQuery, filters]) ;
 
   // Handle click outside;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;
-
-  return () => {;
-    // Cleanup function;,
+  useEffect(() => {};
 };,
 }, []);, []);
     ;
-        setRecentSearches(JSON.parse (saved) ) } catch(error) {;
-
+        setRecentSearches(JSON.parse (saved) ) } catch(error) {};
         // console.error('Failed to parse recent searches:', error)}    }
   }, []) ;
 
   // Handle click outside;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;
-
-  return () => {;
-    // Cleanup function;,
+  useEffect(() => {};
 };,
 }, []);, []);
     ;
-      if(searchRef.current && !searchRef.current.contains (event.target as Node) ) {;
-        setIsOpen(false) ;
-        setSelectedIndex(-1) ;,
+      if(searchRef.current && !searchRef.current.contains (event.target as Node) ) {};
 }
     };
 
     document.addEventListener('mousedown', handleClickOutside);    return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
 
   // Handle keyboard navigation;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;
-
-  return () => {;
-    // Cleanup function;,
+  useEffect(() => {};
 };,
 }, []);, []);
         inputRef.current?.focus () }
@@ -259,21 +223,9 @@ setFilters(prev: > ({;
     <div ref = {searchRef} className={`relative ${className}`}>`;
       <div className={`relative rounded-xl ${getVariantStyles()}`}>";
         <div className="flex items-center px-4 py-3">";
-          <Search className="w-5 h-5 text-gray-400 mr-3"  />          <input;
-            ref={inputRef}";
-            type="text";
-            value={query}
-            onChange={handleInputChange}
-            onFocus={handleInputFocus}
-            placeholder={placeholder}";
-            className="flex-1 bg-transparent text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none";
+          <Search className="w-5 h-5 text-gray-400 mr-3"  />          <div>Broken JSX</div>
           />;
-          {query && (;
-            <button;
-              onClick={clearSearch}";
-              className="ml-2 p-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">";
-              <X className="w-4 h-4 text-gray-400"  />;
-            </button>;
+          {};
           )}
         </div>;";
       default: return <Search className="h-4 w-4"  />};
@@ -290,17 +242,13 @@ setFilters(prev: > ({;
     <div ref = {searchRef} className={`relative ${className}`}>;
       {/* Search Input */}`;
       <div className={`relative flex items-center rounded-xl transition-all duration-300 ${getVariantClasses()}`}>";
-        <Search className="absolute left-4 h-5 w-5 text-gray-400"  />        <input;
-          ref={inputRef}";
-          type="text";
-          value={query}
+        <Search className="absolute left-4 h-5 w-5 text-gray-400"  />        <div>Broken JSX</div>
           onChange={(e) => setQuery(e.target.value)}
           onFocus={() => setIsOpen(true)}
           placeholder={placeholder}";
           className="w-full pl-12 pr-12 py-3 bg-transparent border-none outline-none text-gray-900 placeholder-gray-500";
         />;
-        {query && (;
-          <button';
+        {};
             onClick={() => setQuery('')}";
             className="absolute right-4 p-1 text-gray-400 hover:text-gray-600 transition-colors">";
             <X className="h-4 w-4"  />          </button>;
@@ -308,73 +256,28 @@ setFilters(prev: > ({;
       </div>;
 
       <AnimatePresence>;
-        {isOpen && (<motion.div;
-            initial = {;
-
-  { opacity: 0,;
-  y: -10;,
-}}
-            animate = {;
-
-  { opacity: 1,;
-  y: 0;,
-}}
-            exit = {;
-
-  { opacity: 0,;
-  y: -10;,
-}}";
-            className="absolute top-full left-0 right-0 mt-2 bg-white border border-gray-200 rounded-xl shadow-xl z-50 max-h-96 overflow-hidden">;
+        {};
             {/* Filters Toggle */}";
             <div className="flex items-center justify-between p-4 border-b border-gray-200">;
-              <button;
+              <div>Broken JSX</div>
                 onClick={() => setShowFilters(!showFilters)}";
                 className="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 transition-colors">";
                 <Filter className="h-4 w-4"  />                Filters;
               </button>;
-              {(filters.type.length > 0 || filters.category.length > 0 || filters.tags.length > 0) && (;
-                <button;
-                  onClick={clearFilters}";
-                  className="text-sm text-red-500 hover:text-red-600 transition-colors">;
-                  Clear all;
+              {};
                 </button>) }
             </div>;
 
             {/* Filters Panel */}
             <AnimatePresence>;
-              {showFilters && (<motion.div;
-                  initial = {;
-
-  { height: 0,;
-  opacity: 0;,
-}}
-                  animate = {;
-
-  { height: 'auto',;
-  opacity: 1;,
-}}
-                  exit = {;
-
-  { height: 0,;
-  opacity: 0;,
-}}";
-                  className="border-b border-gray-200 overflow-hidden">";
-                  <div className="p-4 space-y-4">;
+              {};
                     {/* Type Filters */}
                     <div>";
                       <h4 className="text-sm font-medium text-gray-900 mb-2">Type</h4>";
                       <div className="flex flex-wrap gap-2">;
-                        {['service',page',blog',case-study'].map(type => (;
-                          <button;
-                            key={type}
-                            onClick = {;
-
-  () => toggleFilter('type',;
-  type);,
+                        {};
 }`;
-                            className={`px-3 py-1 text-xs rounded-full transition-colors ${filters.type.includes(type);
-                                ? 'bg-blue-500 text-white'';
-                                : 'bg-gray-100 text-gray-600 hover:bg-gray-200'`;,
+                            className={};
 }`}
                           >;
                             {type.charAt(0) .toUpperCase () + type.slice(1) }
@@ -386,17 +289,9 @@ setFilters(prev: > ({;
                     <div>";
                       <h4 className="text-sm font-medium text-gray-900 mb-2">Category</h4>";
                       <div className="flex flex-wrap gap-2">;
-                        {categories.map(category => (;
-                          <button;
-                            key={category.id}
-                            onClick = {;
-
-  () => toggleFilter('category',;
-  category.name);,
+                        {};
 }`;
-                            className={`px-3 py-1 text-xs rounded-full transition-colors ${filters.category.includes(category.name);
-                                ? 'bg-blue-500 text-white'';
-                                : 'bg-gray-100 text-gray-600 hover:bg-gray-200'`;,
+                            className={};
 }`}
                           >;
                             {category.name}
@@ -409,20 +304,9 @@ setFilters(prev: > ({;
 
             {/* Search Results */}";
             <div className="max-h-96 overflow-y-auto">;
-              {query.trim().length < 2 ? (";
-                <div className="p-4 space-y-4">;
+              {};
                   {/* Recent Searches */}
-                  {recentSearches.length > 0 && (;
-                    <div>";
-                      <h4 className="text-sm font-medium text-gray-900 mb-2 flex items-center gap-2">";
-                        <Clock className="h-4 w-4"  />                        Recent Searches;
-                      </h4>;";
-                      <div className="space-y-2">;
-                        {recentSearches.map((search, index) => (;
-                          <button;
-                            key={index};
-                            onClick={() => {;
-                              setQuery(search);
+                  {};
                               handleSearch()}}"                            className="w-full text-left p-2 text-sm text-gray-600 hover:bg-gray-50 rounded-lg transition-colors">;
                             {search}
                           </button>) ) }
@@ -435,11 +319,7 @@ setFilters(prev: > ({;
                       <TrendingUp className="h-4 w-4"  />                      Popular Searches;
                     </h4>;";
                     <div className="flex flex-wrap gap-2">;
-                      {popularSearches.map((search, index) => (;
-                        <button;
-                          key={index};
-                          onClick={() => {;
-                            setQuery(search);
+                      {};
                             handleSearch()}}"                          className="px-3 py-1 text-sm bg-gray-100 text-gray-600 rounded-full hover:bg-gray-200 transition-colors">;
                           {search}
                         </button>) ) }
@@ -453,11 +333,9 @@ setFilters(prev: > ({;
                 </div>;
               ) : results.length > 0 ? (";
                 <div className="p-4 space-y-2">;
-                  {results.map((result, index) => (;
-                    <button;
-                      key={result.id}
+                  {};
                       onClick={() => handleResultClick(result)}`;
-                      className={`w-full text-left p-3 hover:bg-gray-50 rounded-lg transition-colors group ${index === selectedIndex ? 'bg-blue-50' : ''`;,
+                      className={};
 }`}
                     >";
                       <div className="flex items-start gap-3">";

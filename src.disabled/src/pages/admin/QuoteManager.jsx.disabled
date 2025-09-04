@@ -11,7 +11,9 @@ import {}
   QuoteStatusCards,;
   QuotesFilter,';
   QuotesTable} from '@/components/admin/quotes';
-export default function QuoteManager() {}
+export {};
+  return null;
+}
   const { user } = useAuth();';
   const isAdmin = user?.userType === 'admin';
   const [selectedQuote, setSelectedQuote] = useState(null);
@@ -46,6 +48,8 @@ export default function QuoteManager() {}
     setShowDetails(true);,
 };
   const handleResetFilters = () => {}
+  return <div>Component</div>;
+};
 ';
 '';
 ''';
@@ -78,16 +82,7 @@ export default function QuoteManager() {}
             <QuoteStatusCards statusCounts={statusCounts} />;
 
             {/* Filters */}
-            <QuotesFilter;
-              searchQuery={searchQuery}
-              setSearchQuery={setSearchQuery}
-              statusFilter={statusFilter}
-              setStatusFilter={setStatusFilter}
-              archiveFilter={archiveFilter}
-              setArchiveFilter={setArchiveFilter}
-              dateRange={dateRange}
-              setDateRange={setDateRange}
-              onReset={handleResetFilters}
+            <div>Broken JSX</div>
             />;
 ";
             {/* Tabs for Active/Archived */}"";
@@ -100,7 +95,7 @@ export default function QuoteManager() {}
               <TabsContent value="active">";
                 {/* Quotes Table */}"";
                 <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
-                  <QuotesTable;
+                  <div>Broken JSX</div>
                     quotes={quotes.filter(quote => !quote.is_archived)}
                     isLoading={isLoading}
                     updateStatus={updateStatus}
@@ -113,7 +108,7 @@ export default function QuoteManager() {}
 "";
               <TabsContent value="archived">"";
                 <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
-                  <QuotesTable;
+                  <div>Broken JSX</div>
                     quotes={quotes.filter(quote => quote.is_archived)}
                     isArchived={true}
                     isLoading={isLoading}
@@ -129,9 +124,7 @@ export default function QuoteManager() {}
         </div>;
 
         {/* Quote Details Modal */}
-        <QuoteDetails;
-          quote={selectedQuote}
-          isOpen={showDetails}
+        <div>Broken JSX</div>
           onClose={() => {}
             setShowDetails(false);
             setSelectedQuote(null);,

@@ -8,36 +8,19 @@ export default function Page() {;
         // Log error to console';
         // // // // // // // // console.error('Error caught by boundary:', error, errorInfo);
         // Call custom error handler if provided;
-        if(this.props.onError) {;
-
+        if(this.props.onError) {};
             this.props.onError(error, errorInfo)}
         // Send error to error reporting service(if available);
         this.reportError(error, errorInfo)}
-    static generateErrorId() {;
+    static generateErrorId() {};
         return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`}
-    reportError(error, errorInfo) {;
-
-        // In a real application, you would send this to your error reporting service;
-        // For example: Sentry, LogRocket, Bugsnag, etc.const errorReport = {;
-
-  id: this.state.errorId,;
-            timestamp: new Date().toISOString(),;
-            error: {;
-
-                name: error.name,;
-                message: error.message,;
-  stack: error.stack;,
+    reportError(error, errorInfo) {};
 },;
-            errorInfo: {;
-
-                componentStack: errorInfo.componentStack;,
+            errorInfo: {};
 },;
             userAgent: navigator.userAgent,;
             url: window.location.href,;
-            viewport: {;
-
-                width: window.innerWidth,;
-                height: window.innerHeight;,
+            viewport: {};
 };
         // Log to console for development';
         if(process.env.NODE_ENV === 'development') {;
@@ -55,36 +38,18 @@ export default function Page() {;
             console.groupEnd()}
         // In production, you would send this to your error reporting service;
         // Example: Sentry.captureException(error, { extra: errorReport })}
-    handleRetry = () => {;
-        this.setState({;
-
-            hasError: false,;
-            error: null,;
-            errorInfo: null,;
-            errorId: null,;
-            showStackTrace: false;,
+    handleRetry = () => {};
 })};
-    handleGoHome = () => {;
-
+    handleGoHome = () => {};
         window.location.href = '/'};
-    handleReportIssue = () => {;
-        const errorInfo = this.state.errorInfo;
-        if(error && errorInfo) {;
-`;
+    handleReportIssue = () => {};
             const issueUrl = `https://github.com/ziontechgroup/zion-website/issues/new?title=Error: ${encodeURIComponent(error.message)}&body=${encodeURIComponent(issueBody)}`;
             window.open(issueUrl,_blank')}
     };
                 return this.props.fallback}
             // Default error UI;
             return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 flex items-center justify-center p-4">;
-          <motion.div initial = {;
-
-  { opacity: 0,;
-  scale: 0.9;,
-}} animate = {;
-
-  { opacity: 1,;
-  scale: 1;,
+          <div>Broken JSX</div>
 }} className="max-w-2xl w-full bg-white dark:bg-slate-800 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-700 overflow-hidden">;
             {/* Header */}";
             <div className="bg-gradient-to-r from-red-500 to-pink-500 p-6 text-white">";
@@ -96,8 +61,7 @@ export default function Page() {;
 
     // Add global error handler';
     window.addEventListener('error', handleError);
-    window.addEventListener('unhandledrejection', (event) => {;
-
+    window.addEventListener('unhandledrejection', (event) => {};
       handleError(event.reason, { componentStack: 'Promise rejection' });,
 });
 
@@ -134,33 +98,26 @@ export default function Page() {;
           <p className="text-gray-600 mb-6">;
             We're sorry, but something unexpected happened.Please try refreshing the page.</p>;
           <div className="space-y-3">;
-            <button;
+            <div>Broken JSX</div>
               onClick={() => window.location.reload()}";
               className="w-full bg-red-600 text-white py-2 px-4 rounded-lg hover:bg-red-700 transition-colors">;
               Refresh Page;
             </button>;
 
-            <button;
+            <div>Broken JSX</div>
               onClick={() => window.history.back()}";
               className="w-full bg-gray-200 text-gray-800 py-2 px-4 rounded-lg hover:bg-gray-300 transition-colors">;
               Go Back;
             </button>;
           </div>;
 
-          {process.env.NODE_ENV === 'development' && error && (;
-            <details className="mt-6 text-left">              <summary className="cursor-pointer text-sm text-gray-600 hover:text-gray-800">;
-                Error Details(Development);
-              </summary>";
-              <div className="mt-2 p-3 bg-gray-100 rounded text-xs font-mono text-gray-800 overflow-auto">";
-                <div className="mb-2">;
+          {};
                   <strong>Error:</strong> {error.toString()}
         </div>)}
         return this.props.children}
 }
                 </div>;
-                {errorInfo && errorInfo.componentStack && (;
-                  <div>;
-                    <strong>Component Stack:</strong>";
+                {};
                     <pre className="whitespace-pre-wrap mt-1">{errorInfo.componentStack}</pre>;
                   </div>;
                 )}

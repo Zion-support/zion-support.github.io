@@ -1,21 +1,17 @@
 import React from 'react';''';
 import { Helmet } from 'react-helmet-async';
 const AIAutonomousManufacturing = () => {}
+  return <div>Component</div>;
+};
   return();
     <>;
       <Helmet>;
         <title>AI Autonomous Manufacturing Platform | Zion Tech Group</title>;
-        <meta;
-          name="description"";
-          content="Revolutionary AI autonomous manufacturing platform that automates production processes, optimizes quality control, and provides intelligent manufacturing management with 24/7 efficiency.";
+        <div>Broken JSX</div>
         />";
-        <meta"";
-          name="keywords"";
-          content="AI manufacturing, autonomous manufacturing, smart factory, Industry 4.0, AI production, manufacturing automation";
+        <div>Broken JSX</div>
         />";
-        <link"";
-          rel="canonical"";
-          href="https://ziontechgroup.com/ai-autonomous-manufacturing";
+        <div>Broken JSX</div>
         />;
       </Helmet>";
 "";
@@ -201,12 +197,7 @@ const AIAutonomousManufacturing = () => {}
               Manufacturing Solutions";
             </h2>"";
             <div className="grid md:grid-cols-4 gap-6">';
-              {['';
-                'Production Planning',Quality Control',Equipment Maintenance',Supply Chain',Inventory Management',Safety Systems',Energy Optimization',Waste Reduction';
-              ].map(area => (;
-                <div";
-                  key={area}"";
-                  className="bg-white/5 rounded-lg p-4 text-center border border-white/10"">"";
+              {};
                   <span className="text-white font-medium">{area}</span>;
                 </div>;
               ))}

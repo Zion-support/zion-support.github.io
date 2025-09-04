@@ -1,17 +1,10 @@
 import { useState } from 'react';
-export default function Page() {;
- from '@/utils/apiClient';
-) ;
-            if(!response.ok) {;
-";
-            // // // // // // // // console.error("Error in AI chat:", error);
-            return Promise.resolve();
-";
+export default function Page() {};
+  return null;
+}
                 throw new Error("Failed to get response from AI assistant")}
             return Promise.resolve()}
-        catch(error) {;
-";
-            // console.error("Error in AI chat:", error);
+        catch(error) {};
             return Promise.resolve()}
     };
     return (<>";
@@ -19,8 +12,5 @@ export default function Page() {;
         <MessageSquare aria-hidden="true" className="h-5 w-5"/>;
       </Button>;
 
-      {isOpen && (<ChatAssistant isOpen={isOpen} onClose={ () => setIsOpen(false) } recipient = {  {;
-
-                id: 'ai-assistant',;
-                name: 'AI Assistant',;
+      {isOpen && (<ChatAssistant isOpen={isOpen} onClose={ () => setIsOpen(false) } recipient = {};
                 avatarUrl: 'https://placehold.co/64x64?text=AI',"}})

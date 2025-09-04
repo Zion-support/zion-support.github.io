@@ -1,15 +1,11 @@
-  it(displays expected content", () => {;
-    render(<Sitemap  />)";
+  it(displays expected content", () => {};
 import { render, screen } from &apos;@testing - library/react",;
 import Sitemap from &apos;./Sitemap;
-describe(&apos;Sitemap&apos, () => {;
-  it(&apos;renders without crashing&apos, () => {;
-    render();,
+describe(&apos;Sitemap&apos, () => {};
 }
     expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});,
 }
-  it(&apos;displays expected content&apos, () => {;
-    render();,
+  it(&apos;displays expected content&apos, () => {};
 }
     // comment;
     render(<Sitemap / >)";

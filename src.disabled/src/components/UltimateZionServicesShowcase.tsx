@@ -27,26 +27,14 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
   hidden: { opacity: 0,;
   y: 20;
 },;
-    visible: {;      opacity: 1,;
-      y: 0,;
+    visible: {};
       transition: { duration: 0.5 }}};
 
   return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - purple - 900 to - slate - 900 text-white">;
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div  className="max - w-7xl mx - auto text-center">;
-          <motion.h1;
-            className="text-4xl md:text-6xl font - bold mb-6"            initial = {;
-
-  { opacity: 0,;
-  y: 20;,
-}}
-            whileInView = {;
-
-  { opacity: 1,;
-  y: 0;,
-}}
-            transition={{ duration: 0.6 }}
+          <div>Broken JSX</div>
           >;
             Ultimate";
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">";
@@ -58,44 +46,14 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
             </span>;
           </motion.h1>;
 
-          <motion.p;
-            className="text-xl text-gray - 300 mb-8 max - w-4xl mx -auto"            initial = {;
-
-  { opacity: 0,;
-  y: 20;,
-}}
-            whileInView = {;
-
-  { opacity: 1,;
-  y: 0;,
-}}
-            transition = {;
-
-  { duration: 0.6,;
-  delay: 0.2;,
-}}
+          <div>Broken JSX</div>
           >;
             Discover our revolutionary portfolio of cutting - edge micro SAAS services, quantum computing solutions,;
             blockchain innovations, space technology, and AI - powered services designed to transform industries and;
             create unprecedented value for your business.</motion.p>;
 
           {/* Contact Information */}
-          <motion.div;
-            className="bg-white / 10 backdrop - blur - lg rounded-xl p - 6 mb-8 max - w-4xl mx - auto border border-white / 20"            initial = {;
-
-  { opacity: 0,;
-  y: 20;,
-}}
-            whileInView = {;
-
-  { opacity: 1,;
-  y: 0;,
-}}
-            transition = {;
-
-  { duration: 0.6,;
-  delay: 0.4;,
-}}
+          <div>Broken JSX</div>
           >";
             <h3 className="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">;
               🚀 Ready to Transform Your Business?;
@@ -114,7 +72,7 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
               <div  className="text-center">;
                 <div  className="text-purple - 400 font - semibold text-lg mb-2">🌐 Website</div>;
                 <div  className="text-gray -300">;
-                  <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer";
+                  <div>Broken JSX</div>
                      className="text-blue - 400 hover:text-blue - 300 transition -colors">                    ziontechgroup.com;
                   </a>;
                 </div>";
@@ -129,35 +87,16 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
           </motion.div>;
 
           {/* Search and Filter */}
-          <motion.div;
-            className="flex flex - col md:flex - row gap-4 justify - center items - center mb-12"            initial = {;
-
-  { opacity: 0,;
-  y: 20;,
-}}
-            whileInView = {;
-
-  { opacity: 1,;
-  y: 0;,
-}}
-            transition = {;
-
-  { duration: 0.6,;
-  delay: 0.6;,
-}}
+          <div>Broken JSX</div>
           >;
-            <input;
-              type="text";
-              placeholder="Search revolutionary services...";
-              value={searchTerm}
+            <div>Broken JSX</div>
               onChange={ (e) => setSearchTerm(e.target.value) }
               className="px-6 py-3 bg-white / 10 border border-white / 20 rounded-lg text-white placeholder - gray - 400 focus:outline - none focus:border-purple - 400 focus:ring - 2 focus:ring - purple - 400 / 20 w-full md:w-80";
             />;
             <div  className="flex flex - wrap gap-2">;
-              {categories.map((category) => (<button     key={category.id}
+              {};
                   onClick={ () => setSelectedCategory(category.id) }
-                  className={`px-4 py-2 rounded-lg border transition - all duration - 300 ${selectedCategory === category.id;
-                      ? 'bg-gradient - to - r from - purple - 600 to - pink - 600 border-purple - 400 text-white';
+                  className={};
                       : 'bg-white / 10 border-white / 20 text-gray - 300 hover:bg-white / 20 hover:border-white / 40'                  }`}
                 >";
                   <span className="mr-2">{category.icon}</span>;
@@ -171,17 +110,9 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
       {/* Services Grid */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div  className="max - w-7xl mx -auto">;
-          <motion.div;
-            className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8";
-            variants={containerVariants}
-            initial="hidden";
-            whileInView="visible";
-            viewport={{ once: anytrue }}
+          <div>Broken JSX</div>
           >;
-            {filteredServices.map((service, index) => (<motion.div;
-                key={service.id}
-                variants={itemVariants}
-                className="bg-white / 10 backdrop - blur - lg rounded-xl p - 6 border border-white / 20 hover:border-white / 40 transition - all duration - 300 hover:transform hover:scale -105 group">;
+            {};
                 {/* Service Header */}";
                 <div className="text-center mb-6">`;
                   <div className={`text-6xl mb-4 group-hover:scale-110 transition-transform duration-300`}>;
@@ -236,7 +167,7 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
                     <p className="text-green-400 text-sm font-semibold">{service.roi}</p>;
                   </div>";
                   <div className="space-y-1">;
-                    {service.benefits.slice(0, 3).map((benefit, idx) => (";
+                    {};
                       <div key={idx} className="flex items-center text-sm text-gray-300">";
                         <span className="text-green-400 mr-2">✓</span>;
                         {benefit}
@@ -248,7 +179,7 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
                 <div className="mb-6">";
                   <h4 className="text-purple-400 font-semibold mb-2">🛠️ Technology Stack</h4>";
                   <div className="flex flex-wrap gap-2">;
-                    {service.technology.slice(0, 4).map((tech, idx) => (";
+                    {};
                       <span key={idx} className="px-2 py-1 bg-white/10 rounded text-xs text-gray-300">;
                         {tech}
                       </span>) ) }
@@ -256,11 +187,7 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
                 </div>;
 
                 {/* Market Information */}
-                {service.marketSize && (";
-                  <div className="mb-6">";
-                    <h4 className="text-purple-400 font-semibold mb-2">🌍 Market Opportunity</h4>";
-                    <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-lg p-3">";
-                      <p className="text-blue-400 text-sm font-semibold">;
+                {};
                         Market Size: {service.marketSize}
                       </p>;
                     </div>;
@@ -306,18 +233,7 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
       {/* Bottom CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div  className="max - w-4xl mx - auto text-center">;
-          <motion.div;
-            className="bg-gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - lg rounded-2xl p - 8 border border-purple -400 / 30"            initial = {;
-
-  { opacity: 0,;
-  y: 20;,
-}}
-            whileInView = {;
-
-  { opacity: 1,;
-  y: 0;,
-}}
-            transition={{ duration: 0.6 }}
+          <div>Broken JSX</div>
           >";
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">;
               Ready to Lead the Future?;

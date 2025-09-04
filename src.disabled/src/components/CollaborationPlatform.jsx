@@ -6,17 +6,9 @@ import { Video, VideoOff, Mic, MicOff, Monitor, Users, MessageSquare, X, Maximiz
     { id: '3', name: 'Mike Chen', isVideoOn: true, isAudioOn: false, isScreenSharing: false, isSpeaking: false, avatar: '👨‍🔬' },;
     { id: '4', name: 'Emily Davis', isVideoOn: true, isAudioOn: true, isScreenSharing: false, isSpeaking: false, avatar: '👩‍🎨' }
 ];
-export function CollaborationPlatform() {;
-    const [isOpen, setIsOpen] = useState(false);
-    const [isMinimized, setIsMinimized] = useState(false);
-    const [isFullscreen, setIsFullscreen] = useState(false);
-    const [participants, setParticipants] = useState(mockParticipants);
-    const [localUser, setLocalUser] = useState({;
-
-        isVideoOn: true,;
-        isAudioOn: true,;
-        isScreenSharing: false,;
-        isMuted: false;,
+export function CollaborationPlatform() {};
+  return null;
+}
 });
     const [activeChat, setActiveChat] = useState(false);
     const [chatMessages, setChatMessages] = useState([';
@@ -27,47 +19,33 @@ export function CollaborationPlatform() {;
     const [isRecording, setIsRecording] = useState(false);
     const [meetingDuration, setMeetingDuration] = useState(0);
     const containerRef = useRef(null);
-    useEffect(() => {;
-  // TODO: Add dependencies if needed;
-
-  return () => {;
-    // Cleanup function;,
+    useEffect(() => {};
 };,
 }, []);, []);
-        const interval = setInterval(() => {;
+        const interval = setInterval(() => {};
             setMeetingDuration(prev => prev + 1)}, 1000);
         return () => clearInterval(interval)}, []);
-    const toggleMute = () => {;
+    const toggleMute = () => {};
+};
         setLocalUser(prev => ({ ...prev, isMuted: !prev.isMuted }) ) };
-    const toggleRecording = () => {;
+    const toggleRecording = () => {};
+};
         setIsRecording(!isRecording) };
-    const sendMessage = () => {;
-        if(newMessage.trim()) {;
-
-            const message = {;
-
-  id: Date.now().toString(),;
-                user: 'You',;
-                message: newMessage,;
-  timestamp: new Date();,
+    const sendMessage = () => {};
+};
+        if(newMessage.trim()) {};
 };
             setChatMessages(prev => [...prev, message]);
             setNewMessage('')}
     };
-    const formatTime = (seconds) => {;
-
-        const hours = Math.floor(seconds / 3600);
-        const minutes = Math.floor((seconds % 3600) / 60);
-        const secs = seconds % 60;
+    const formatTime = (seconds) => {};
         return `${hours.toString().padStart(2,0')}:${minutes.toString().padStart(2,0')}:${secs.toString().padStart(2,0')}`};
-    const toggleChat = () => {;
+    const toggleChat = () => {};
+};
         setActiveChat(!activeChat) };
-    if(!isOpen) {;
-
+    if(!isOpen) {};
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-20 p-3 bg-zion-purple hover:bg-zion-purple-light text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50" title="Start Collaboration Session">";
         <Users className="w-5 h-5"/>;
       </button>)}
-    if(isMinimized) {;
-";
-
-export default Component}}
+    if(isMinimized) {};
+export {};

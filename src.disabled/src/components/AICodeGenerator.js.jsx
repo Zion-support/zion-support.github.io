@@ -131,14 +131,13 @@ const handleClearHistory = useCallback(() => {}
       {/* comment */}""";
       <div className="border-b border-gray-200 dark: border-gray-700">"";
         <nav className="flex space-x-8 px-6">";
-          {["",;
+          {};
             { id: "generate", label: "Generate", icon: Sparkles }, ";
             { id: "analyze", label: "Analyze", icon: Eye },";
             { id: "optimize", label: "Optimize", icon: Zap }, ";
             { id: "tests", label: "Tests", icon: TestTube },";
             { id: "docs", label: "Docs", icon: FileText }", ";
-].map(({ id, label, icon: Icon }) => (<button key="{id}" onClick="{()" ="> setActiveTab(id)} className="{"flex" items-center gap-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${activeTab === id"""";
-                ? "border-purple-500 text-purple-600 dark: text-purple-400"""""""",;
+].map(({ id, label, icon: Icon }) => (<button key="{id}" onClick="{()" ="> setActiveTab(id)} className="{};
                 : "border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"}"}>"";
               <Icon className="w-4 h-4"/">"              {label}
 
@@ -162,8 +161,8 @@ const handleClearHistory = useCallback(() => {}
                   <label className="block text-sm font-medium text-gray-700 dark: text-gray-300 mb-2">;
                     Describe what you want to build,;
                   </label>",;
-                  <textarea value="{form.prompt}" onChange = {}";
-  (e) ="> setForm(prev => ({ ...prev, prompt: e.target.value """",;
+                  <div>Broken JSX</div>
+  (e) ="> setForm(prev => ({};
 """"}))} placeholder="e.g., Create a React component for a user profile card with avatar, name, email, and edit button..." className="w-full h-32 p-4 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 resize-none" required/>";
                 </div>;
 """",;
@@ -173,8 +172,8 @@ const handleClearHistory = useCallback(() => {}
                     <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">;
                       Language,;
                     </label>",;
-                    <select value="{form.language}" onChange = {}";
-  (e) ="> setForm(prev => ({ ...prev, language: e.target.value """",;
+                    <div>Broken JSX</div>
+  (e) ="> setForm(prev => ({};
 """"}))} className="w-full p-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100">""";
                       <option value="typescript">TypeScript</option>""";
                       <option value="javascript">JavaScript</option>""";
@@ -191,8 +190,8 @@ const handleClearHistory = useCallback(() => {}
                     <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">";
                       Framework;
                     </label>"",;
-                    <select value="{form.framework" || ""} onChange = {}";
-  (e) ="> setForm(prev => ({ ...prev, framework: e.target.value || null """",;
+                    <div>Broken JSX</div>
+  (e) ="> setForm(prev => ({};
 """"}))} className="w-full p-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100">""";
                       <option value="">None</option>""";
                       <option value="react">React</option>""";
@@ -210,8 +209,8 @@ const handleClearHistory = useCallback(() => {}
                     <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">;
                       Style,;
                     </label>",;
-                    <select value="{form.style}" onChange = {}";
-  (e) ="> setForm(prev => ({ ...prev, style: e.target.value """",;
+                    <div>Broken JSX</div>
+  (e) ="> setForm(prev => ({};
 """"}))} className="w-full p-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100">""";
                       <option value="functional">Functional</option>""";
                       <option value="oop">OOP</option>""";
@@ -224,8 +223,8 @@ const handleClearHistory = useCallback(() => {}
                     <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">;
                       Quality,;
                     </label>",;
-                    <select value="{form.quality}" onChange = {}";
-  (e) ="> setForm(prev => ({ ...prev, quality: e.target.value """",;
+                    <div>Broken JSX</div>
+  (e) ="> setForm(prev => ({};
 """"}))} className="w-full p-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100">""";
                       <option value="prototype">Prototype</option>""";
                       <option value="development">Development</option>""";
@@ -247,14 +246,14 @@ const handleClearHistory = useCallback(() => {}
   height: "auto"}} exit = {}
   { opacity: 0, height: 0 """"">;
 """"}} className="grid grid-cols-2 md: grid-cols-5 gap-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">";
-                    {["",;
+                    {};
                     { key: "includeTests", label: "Tests", icon: TestTube }, ";
                     { key: "includeDocs", label: "Docs", icon: FileText },";
                     { key: "includeErrorHandling", label: "Error Handling", icon: AlertCircle }, ";
                     { key: "includeLogging", label: "Logging", icon: Info },"";
                     { key: "includeMetrics", label: "Metrics", icon: Gauge }""""].map(({ key, label, icon: Icon }) => (<label key="{key}" className="flex items-center gap-2 cursor-pointer">"";
-                        <input type="checkbox" checked="{form[key]}" onChange = {}";
-  (e) ="> setForm(prev => ({ ...prev, [key]: e.target.checked """;
+                        <div>Broken JSX</div>
+  (e) ="> setForm(prev => ({};
 """"}))} className="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 rounded focus: ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />"";
                         <Icon className="w-4 h-4 text-gray-600 dark:text-gray-400"/">"""",;
                         <span className="text-sm text-gray-700 dark:text-gray-300">{label}</span>";
@@ -262,12 +261,7 @@ const handleClearHistory = useCallback(() => {}
                   </motion.div>)}""";
 """;
                 <button type="submit" disabled="{isGenerating" || !form.prompt.trim()} className="w-full py-3 px-6 bg-purple-600 hover: bg-purple-700 disabled:bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:cursor-not-allowed">""";
-                  {isGenerating ? (<>"";
-                      <Loader2 className="w-5 h-5 animate-spin"/">";
-                      Generating Code...""";
-</>) : (<>"";
-                      <Sparkles className="w-5 h-5"/">";
-                      Generate Code,;
+                  {};
 </>) }
 
                 </button>;
@@ -316,12 +310,7 @@ const handleClearHistory = useCallback(() => {}
               </div>""";
 """",;
               <button onClick="{handleAnalyzeCustomCode}" disabled="{isAnalyzing" || !customCode.trim()} className="w-full py-3 px-6 bg-blue-600 hover: bg-blue-700 disabled:bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:cursor-not-allowed">""";
-                {isAnalyzing ? (<>"";
-                    <Loader2 className="w-5 h-5 animate-spin"/">";
-                    Analyzing Code...""";
-</>) : (<>"";
-                    <Eye className="w-5 h-5"/">";
-                    Analyze Code,;
+                {};
 </>) }
 
               </button>;
@@ -333,7 +322,7 @@ const handleClearHistory = useCallback(() => {}
 """"}} className="space-y-6">""";
                   {/* comment */}"";
                   <div className="grid grid-cols-2 md: grid-cols-5 gap-4">";
-                    {["",;
+                    {};
                     { key: "complexity", label: "Complexity", icon: Code, color: "red" },";
                     { key: "maintainability", label: "Maintainability", icon: Wrench, color: "blue" },";
                     { key: "security", label: "Security", icon: Shield, color: "green" },";
@@ -370,11 +359,7 @@ const handleClearHistory = useCallback(() => {}
                   </div>;
 """;
                   {/* comment */}""";
-                  {codeAnalysis.issues.length > 0 && (<div className="bg-gray-50 dark: bg-gray-700 rounded-lg p-4">"""";
-                      <h4 className="font-medium text-gray-900 dark:text-white mb-3">Issues Found</h4>"""""";
-                      <div className="space-y-2">""""""",;
-                        {codeAnalysis.issues.map((issue, index) => (<div key="{index}" className="{"flex" items-start gap-3 p-3 rounded-lg ${issue.severity === "error" ? "bg-red-50 dark: bg-red-900/30" :""""";
-                            issue.severity === "warning" ? "bg-yellow-50 dark:bg-yellow-900/30" :""""""""">;
+                  {};
                                 "bg-blue-50 dark:bg-blue-900/30"}"}">""""";
                             {issue.severity === "error" ? (<AlertCircle className="w-5 h-5 text-red-500 mt-0.5"/">) : issue.severity === "warning" ? (<AlertCircle className="w-5 h-5 text-yellow-500 mt-0.5"/">) : (<Info className="w-5 h-5 text-blue-500 mt-0.5"/">)}""";
                             <div className="flex-1">"";
@@ -410,13 +395,12 @@ const handleClearHistory = useCallback(() => {}
               </div>""";
 """;
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">";
-                {["",;
+                {};
                 { key: "performance", label: "Performance", icon: Gauge, color: "blue" },";
                 { key: "security", label: "Security", icon: Shield, color: "green" },";
                 { key: "maintainability", label: "Maintainability", icon: Wrench, color: "purple" },"""";
                 { key: "accessibility", label: "Accessibility", icon: Eye, color: "indigo" }""",";
-].map(({ key, label, icon: Icon, color }) => (<button key="{key}" onClick="{()" ="> handleOptimizeCode(key)} disabled="{!generatedCode" && !customCode} className="{"p-6" text-center rounded-lg border-2 transition-all ${!generatedCode && !customCode"""";
-                    ? "border-gray-200 dark: border-gray-600 bg-gray-50 dark:bg-gray-700 cursor-not-allowed""""""",;
+].map(({ key, label, icon: Icon, color }) => (<button key="{key}" onClick="{()" ="> handleOptimizeCode(key)} disabled="{!generatedCode" && !customCode} className="{};
                     : "border-gray-200 dark:border-gray-600 hover:border-purple-500 hover:bg-purple-50 dark:hover:bg-purple-900/20 cursor-pointer"}"}>""""""";
                     <Icon className="{"w-12" h-12 mx-auto mb-3 text-${color}-500"}/">""";
                     <div className="font-medium text-gray-900 dark:text-white">{label}</div>;
@@ -479,19 +463,16 @@ const handleClearHistory = useCallback(() => {}
               AI Suggestions ({suggestions.length})""";
             </h3>"";
             <div className="grid gap-4">";
-              {suggestions.map((suggestion) => (<motion.div key="{suggestion.id}" initial = {}";
-  { opacity: 0, x: 20}} animate = {}
-  { opacity: 1, x: 0 """"">;
+              {};
 """"}} className="p-4 bg-gray-50 dark: bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600">"""";
                   <div className="flex items-start justify-between mb-3">"""""";
                     <div className="flex items-center gap-2">"""""";
-                      <span className="{"px-2" py-1 text-xs rounded-full ${suggestion.type === "security" ? "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300" :"";
-                    suggestion.type === "performance" ? "bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300" :""""";
+                      <div>Broken JSX</div>
                         suggestion.type === "optimization" ? "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300" :"""""""">;
                             "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300"}"}">";
                         {suggestion.type}"""";
                       </span>"""""";
-                      <span className="{"px-2" py-1 text-xs rounded-full ${suggestion.impact === "high" ? "bg-red-100 text-red-700 dark: bg-red-900/30 dark:text-red-300" :""""";
+                      <div>Broken JSX</div>
                     suggestion.impact === "medium" ? "bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300" :"""""""">;
                         "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300"}"}">;
                         {suggestion.impact} impact;
@@ -549,7 +530,7 @@ const handleClearHistory = useCallback(() => {}
                       <span className="text-sm font-medium text-gray-900 dark:text-white">""",;
                         {item.prompt.slice(0, 50)}..."""";
                       </span>"""""";
-                      <span className="{"px-2" py-1 text-xs rounded-full ${item.language === "typescript" ? "bg-blue-100 text-blue-700 dark: bg-blue-900/30 dark:text-blue-300" :""""";
+                      <div>Broken JSX</div>
                     item.language === "javascript" ? "bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300" :"""""""">;
                         "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300"}"}">;
                         {item.language}
@@ -576,7 +557,6 @@ const handleClearHistory = useCallback(() => {}
     </div>)}""""";
 """""""`;
 ";,
-} catch (error) {;
-    console.error(error);,
+} catch (error) {};
 }
-export default Component)
+export {};

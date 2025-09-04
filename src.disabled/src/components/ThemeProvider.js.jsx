@@ -1,35 +1,24 @@
 "use client";";
 import * as React from "react";
-export const ThemeProvider({ children }) {;
-export const useTheme = () => {;
+export const ThemeProvider({ children }) {};
+};
 
 "use client";
-const initialState = {;
-";
-  theme: "dark",;
+const initialState = {};
     setTheme: () => null};
-export const ThemeProvider({ children }) {;
-";
-    const [theme] = useState("dark");
-    useEffect(() => {;
-  // TODO: Add dependencies if needed;
-
-  return () => {;
-    // Cleanup function;,
+export const ThemeProvider({ children }) {};
 };,
 }, []);, []);
         const root = window.document.documentElement;";
         root.classList.remove("light", "dark");";
         root.classList.add("dark")}, []);
-    const value = {;
-
-  theme,;
-  setTheme: () => {;,
+    const value = {};
 }};
     return (<ThemeContext.Provider value={value}>;
       {children}
     </ThemeContext.Provider>)}
-export const useTheme = () => {;
+export const useTheme = () => {};
+};
     const context = useContext(ThemeProviderContext);
     if(context === null)";
         throw new Error("useTheme must be used within a ThemeProvider");

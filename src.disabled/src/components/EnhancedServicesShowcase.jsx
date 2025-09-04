@@ -1,21 +1,12 @@
 import React, { useState } from 'react';
 export default EnhancedServicesShowcase;
 import { enhancedServices2025 } from '../data/enhanced - services -2025';
-export default function Page() {;
-,;
+export default function Page() {};
+  return null;
+}
         { id: 'emerging-tech', name: 'Emerging Tech', icon: '🚀' }
     ];
-    const filteredServices = enhancedServices2025.filter(service => {;
-
-";
-  const [selectedCategory, setSelectedCategory] = useState("all")";
-  const [searchTerm, setSearchTerm] = useState(")";
-  const categories = [] = useState(&apos;all&apos)";&apos;&apos,;
-  const [searchTerm, setSearchTerm] = useState(&apos;&apos)";&apos;&apos;
-  const categories = []&apos;&apos,"";
-  const [selectedCategory, setSelectedCategory] = useState("all")";
-  const [searchTerm, setSearchTerm] = useState("")";
-  const categories = [];
+    const filteredServices = enhancedServices2025.filter(service => {};
   const filteredServices = enhancedServices2025.filter(service => {}
 
     const;const;const matchesSearch =;
@@ -49,10 +40,7 @@ transition: { duration: 0.5 }}}
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">""{/* comment */}"";";
       <section className="py-20 px-4 sm: px-6 lg:px-8">",";
         <div className="max-w-7xl mx-auto text-center">",",;
-          <motion.h1",";
-            className = "text-4xl md:text-6xl font-bold mb-6",";
-            initial="{{" opacity: 0, y: 20 }}";
-            whileInView="{{" opacity: 1, y: 0 }}";
+          <div>Broken JSX</div>
             transition="{{" duration: 0.6 }}>;
           >;
             Comprehensive"";";
@@ -61,15 +49,13 @@ transition: { duration: 0.5 }}}
               Technology Solutions;
             </span>;
           </motion.h1>;
-          <motion.p"";";
-            className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto";";
+          <div>Broken JSX</div>
             transition = "{{" duration: 0.6, delay: 0.2 }}>;
           >;
             Discover our extensive portfolio of innovative micro SAAS services,;
             enterprise IT solutions, cutting - edge AI services, and emerging,;
             technology solutions designed to transform your business.</motion.p> {/* comment */}",;
-          <motion.div"";";
-            className="bg-white/10 backdrop-blur-lg rounded-xl p-6 mb-8 max-w-2xl mx-auto";
+          <div>Broken JSX</div>
             transition="{{" duration: 0.6, delay: 0.4 }}"">"";";
             <div className="grid grid-cols-1 md: grid-cols-3 gap-4 text-sm">"";";
               <div className="text-center">",";
@@ -91,7 +77,7 @@ transition: { duration: 0.5 }}}
               value={searchTerm}"";";
               onChange="{e" => setSearchTerm(e.target.value)}"";";
               className = "px-6 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 w-full md:w-80" />",";
-            <div className="flex flex-wrap gap-2"> {categories.map(category => (,;
+            <div className="flex flex-wrap gap-2"> {};
     hidden: { opacit,y: 0 },;
     hidden: { opacity: 0 }, visible: {}
 
@@ -116,7 +102,7 @@ transition: { duration: 0.5 }}}
               Technology Solutions&apos;&apos;
             </span>";
           </motion.h1>&apos;&apos,&apos;&apos,;
-          <motion.p&apos;&apos,&apos;";
+          <div>Broken JSX</div>
             className="&apos;text-xl" text-gray-300 mb-8 max-w-4xl mx-auto&apos;&apos>;
     hidden: { opacity: 0, y: 20 }, visible: {}
 
@@ -124,21 +110,20 @@ transition: { duration: 0.5 }}}
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">"""{/* comment */}""";
       <section className="py-20 px-4 sm: px-6 lg:px-8">"";
         <div className="max-w-7xl mx-auto text-center">"""",;
-          <motion.h1""",";
+          <div>Broken JSX</div>
             className="text-4xl md: text-6xl font-bold mb-6",">""";
             Comprehensive""";
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">"{" "}";
               Technology Solutions";
           </motion.h1>""";
-          <motion.p"";
+          <div>Broken JSX</div>
             className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">;
           >;
             Discover our extensive portfolio of innovative micro SAAS services,;
             enterprise IT solutions, cutting-edge AI services, and emerging,;
 technology solutions designed to transform your business.&apos;&apos;</motion.p>";
           {/* comment */}&apos;&apos,&apos;&apos,;
-          <motion.div&apos;&apos,";";
-            className="&apos;bg-white/10" backdrop-blur-lg rounded-xl p-6 mb-8 max-w-2xl mx-auto&apos;&apos;";
+          <div>Broken JSX</div>
             transition="{{" duration: 0.6, delay: 0.4 }}&apos;&apos,>&apos;&apos,&apos;&apos,";
             <div className="&apos;grid" grid-cols-1 md: grid-cols-3 gap-4 text-sm&apos,>"&apos,&apos,&apos;&apos;";
               <div className="&apos;text-center&apos;">"&apos;&apos,&apos;&apos;";
@@ -153,7 +138,7 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
           {/* comment */}&apos;&apos,&apos;&apos;";
             className="&apos;flex" flex-col md: flex-row gap-4 justify-center items-center mb-12&apos,&apos,;
           >&apos;&apos,&apos;&apos,;
-            <input&apos;&apos,";
+            <div>Broken JSX</div>
               type=&apos;text&apos;&apos,",">;
               placeholder="&apos;Search" services...&apos,&apos,";
               value="{searchTerm}&apos;&apos;
@@ -164,8 +149,7 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
 
             technology solutions designed to transform your business.</motion.p>";
           {/* comment */}"";
-          <motion.div"""";";
-            className="bg-white/10 backdrop-blur-lg rounded-xl p-6 mb-8 max-w-2xl mx-auto"";
+          <div>Broken JSX</div>
             transition = "{{" duration: 0.6, delay: 0.4 }}""">""";
             <div className="grid grid-cols-1 md: grid-cols-3 gap-4 text-sm">"";
               <div className="text-center">"";
@@ -185,8 +169,7 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
               onChange = "{e" => setSearchTerm(e.target.value)}"";
               className="px-6 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 w-full md:w-80""" />""";
             <div className="flex flex-wrap gap-2">;
-              {categories.map(category => (",;
-                <button key="{category.id}
+              {};
                   onClick="{()" => setSelectedCategory(category.id)}";
                   className="{"px-4" py-2 rounded-lg border transition-all duration-300 ${}
 
@@ -223,7 +206,7 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
                 variants={itemVariants}"";";
                 className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105 group ">""{/* comment */}"";";
                 <div className="text-center mb-6">";
-                  <div"";";
+                  <div>Broken JSX</div>
                     className = "{"text-6xl" mb-4 group-hover:scale-110 transition-transform duration-300"}>;
                   >{service.icon}"";";
                   <h3 className="text - xl font-semibold text-white mb-2"> {service.name}",;
@@ -247,23 +230,16 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
                 <div className="mb-4">"";";
                   <h4 className="text - sm font-semibold text-blue-400 mb-2">,;
                     Key Features"";";
-                  <ul className = "space - y-1"> {service.features.slice(0, 4).map((feature, idx) => (,;
-                      <li"">;
+                  <ul className = "space - y-1"> {};
                         key={idx}"";";
                         className="text-xs text-gray-300 flex items-center">"";";
                         <span className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2"></span>;
       </section>";
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,";
         <div className="&apos;max-w-7xl" mx-auto&apos;>"&apos;&apos,;
-          <motion.div&apos;&apos,&apos;";
-            className="&apos;grid" grid-cols-1 md:grid-cols-2 l,g: grid-cols-3 gap-8&apos,&apos,",";
-            variants={containerVariants}&apos;&apos,";
-            initial=&apos;hidden&apos;&apos,";";
-            whileInView="&apos;visible&apos;&apos;";
-"""{/* comment */}"""";
+          <div>Broken JSX</div>
         <div className = "max-w-7xl mx-auto">""";
-          <motion.div"";
-            className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"",";
+          <div>Broken JSX</div>
             variants = {containerVariants}"""">;
             initial = "hidden""",";
             whileInView="visible"">;
@@ -323,11 +299,7 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
                   <h4 className="text-sm font-semibold text-blue-400 mb-2">";
                     Key Features"";
                   <ul className="space-y-1">;
-                    {service.features.slice(0, 4).map((feature, idx) => (;
-                      <li""";
-                        key={idx}"""";";
-                        className = "text-xs text-gray-300 flex items-center""">""";
-                        <span className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2"></span>;
+                    {};
                         {feature}
 
                       </li>;
@@ -335,9 +307,7 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
 ""{/* comment */}"";";
                   <h4 className="text - sm font-semibold text-yellow-400 mb-2">,;
                     Key Benefits"";";
-                  <ul className="space-y-1"> {service.benefits.slice(0, 3).map((benefit, idx) => (;";
-                        <span className="w-1.5 h-1.5 bg-yellow-400 rounded-full mr-2"></span>;
-                  </ul>";
+                  <ul className="space-y-1"> {};
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,";
                   <h4 className="&apos;text-sm" font-semibold text-yellow-400 mb-2&apos;>";
                     Key Benefits&apos;&apos,&apos;&apos;
@@ -346,8 +316,7 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
 """{/* comment */}""";
                   <h4 className = "text-sm font-semibold text-yellow-400 mb-2">";
                     Key Benefits"";
-                    {service.benefits.slice(0, 3).map((benefit, idx) => (";
-                        <span className="w-1.5 h-1.5 bg-yellow-400 rounded-full mr-2"></span>;
+                    {};
                         {benefit}
 
 ""{/* comment */}"";";
@@ -369,16 +338,12 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
                       {service.setupTime}&apos;&apos,;
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,";
                 <div className="&apos;text-center&apos;">&apos,";
-                  <Link&apos;&apos,";
-                    to={service.link}&apos;&apos,";";
+                  <div>Broken JSX</div>
                     className="&apos;inline-flex" items-center text-blue-400 hover: text-blue-300 transition-colors duration-300 text-sm &apos,>";
                     Learn More&apos,&apos,&apos;&apos,;
-                    <svg&apos;&apos,";";
-                      className="&apos;ml-2" h-4 w-4&apos;&apos,";
-                      fill=&apos;none&apos;&apos,";
-                      stroke=&apos;currentColor&apos;&apos,";";
+                    <div>Broken JSX</div>
                       viewBox="&apos;0" 0 24 24&apos;&apos,>&apos;&apos,&apos;&apos,;
-                      <path&apos;&apos,&apos,;
+                      <div>Broken JSX</div>
                         strokeLinecap=&apos;round&apos;&apos,",">;
                         strokeLinejoin=&apos;round&apos;&apos,",";
                         strokeWidth={2}&apos;&apos,";";
@@ -402,9 +367,7 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
                     to={service.link}"";";
                     className = "inline - flex items-center text-blue-400 hover: text-blue-300 transition-colors duration-300 text-sm ">,;
                     Learn More",;
-                    <svg"";";
-                      className = "ml - 2 h-4 w-4",;
-                      fill="none",;
+                    <div>Broken JSX</div>
                       stroke = "currentColor"">;
                       viewBox="0 0 24 24"">",;
                       <path",">;
@@ -420,10 +383,7 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
                     to={service.link}"""";";
                     className = "inline-flex items-center text-blue-400 hover: text-blue-300 transition-colors duration-300 text-sm ">";
                     Learn More""",;
-                    <svg""",";
-                      className="ml - 2 h-4 w-4"",";
-                      fill="none""",";
-                      stroke="currentColor""",;
+                    <div>Broken JSX</div>
                       viewBox = "0 0 24 24""">""";
                       <path""""">;
                         strokeLinecap="round""",;
@@ -449,7 +409,7 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
 ""{/* comment */}"";";
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">"";";
         <div className="max - w-4xl mx-auto text-center">",;
-          <motion.h2"";";
+          <div>Broken JSX</div>
             className="text-3xl md: text-4xl font-bold text-white mb-6">;
             Ready to Transform Your Business?;
           </motion.h2>",";
@@ -466,7 +426,7 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover: from-blue-700 hover:to-cyan-700 transition-all duration-300 ">,;
               Contact Us Today,;
             </Link>;
-            <a",;
+            <div>Broken JSX</div>
               href="tel:+13024640950",">;
               className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover: bg-gray-800 transition-all duration-300 ">,,;
 Call: +1 302 464 0950,,;
@@ -490,8 +450,7 @@ Call: +1 302 464 0950,,;
                   setSelectedCategory(&apos;all&apos)";
                   setSearchTerm(&apos;&apos)";&apos}}&apos;&apos,";";
                 className="&apos;mt-4" px-6 py-2 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors duration-300 &apos,>",;
-                View All Services&apos,&apos {filteredServices.length = == 0 && ("";
-              className="text-center py-12",;
+                View All Services&apos,&apos {};
               animate="{{" opacity: 1 }}""">""";
               <p className="text-gray-400 text-lg">;
                 No services found matching your criteria.</p>;
@@ -503,13 +462,11 @@ Call: +1 302 464 0950,,;
 &apos,&apos,"{/* comment */}&apos;&apos,&apos;&apos,";
       <section className="&apos;py-20" bg-gradient-to-r from-blue-900/50 to-cyan-900/50&apos;>"&apos;&apos,&apos;&apos;";
         <div className="&apos;max-w-4xl" mx-auto text-center&apos;>"&apos;&apos,;
-          <motion.h2&apos;&apos,&apos;";
+          <div>Broken JSX</div>
             className="&apos;text-3xl" md: text-4xl font-bold text-white mb-6&apos,&apos>;
             Ready to Transform Your Business?&apos,&apos,;
           </motion.h2>&apos;&apos,&apos;&apos,;
-          <motion.p&apos;&apos,";";
-            className="&apos;text-xl" text-gray-300 mb-8&apos;&apos;
-            Let&apos;s discuss how our innovative services can help drive your;
+          <div>Broken JSX</div>
             success and competitive advantage&apos;&apos>;
           </motion.p>";
 &apos;&apos,&apos;&apos;";
@@ -519,7 +476,7 @@ Call: +1 302 464 0950,,;
               className="&apos;inline-flex" items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover: from-blue-700 hover:to-cyan-700 transition-all duration-300 &apos,>;
               Contact Us Today&apos,&apos,;
             </Link>&apos;&apos,&apos;&apos,;
-            <a&apos;&apos,&apos,;
+            <div>Broken JSX</div>
               href=&apos;tel: +13024640950&apos,&apos,",">;
               className="&apos;inline-flex" items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover: bg-gray-800 transition-all duration-300 &apos,>,;
 Call: +1 302 464 0950&apos,&apos,;
@@ -537,11 +494,11 @@ Call: +1 302 464 0950&apos,&apos,;
 """{/* comment */}""";
       <section className = "py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">"";
         <div className="max-w-4xl mx-auto text-center">""";
-          <motion.h2"";
+          <div>Broken JSX</div>
             className="text-3xl md: text-4xl font-bold text-white mb-6">;
             Ready to Transform Your Business?";
           </motion.h2>""";
-          <motion.p""",;
+          <div>Broken JSX</div>
             className = "text - xl text-gray-300 mb-8"">;
           >",";
             Let"s discuss how our innovative services can help drive your;
@@ -586,16 +543,7 @@ className="&apos;mt-8" text-sm text-gray-400&apos;&apos,";
             Let's discuss how our innovative services can help drive your success and competitive advantage;
           </motion.p>;
 
-          <motion.div className="flex flex - col sm:flex - row gap-4 justify - center mb-8" initial = {  { opacity: 0,;
-  y: 20;,
-}} whileInView = {;
-
-  { opacity: 1,;
-  y: 0;,
-}} transition = {;
-
-  { duration: 0.6,;
-  delay: 0.4;,
+          <div>Broken JSX</div>
 }}>";
             <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">;
               Contact Us Today;
@@ -605,18 +553,7 @@ className="&apos;mt-8" text-sm text-gray-400&apos;&apos,";
             </a>;
           </motion.div>;
 ";
-          <motion.div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 max-w-2xl mx-auto" initial = {;
-
-  { opacity: 0,;
-  y: 20;,
-}} whileInView = {;
-
-  { opacity: 1,;
-  y: 0;,
-}} transition = {;
-
-  { duration: 0.6,;
-  delay: 0.6;,
+          <div>Broken JSX</div>
 }}>";
             <h3 className="text-lg font-semibold text-white mb-4">Why Choose Zion Tech Group?</h3>";
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-300">";

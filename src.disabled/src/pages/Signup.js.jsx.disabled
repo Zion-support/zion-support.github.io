@@ -1,7 +1,9 @@
 import { useState } from 'react';''';
 import { useNavigate } from 'react-router-dom';''';
 import axios from 'axios';
-export default function SignUp() {}
+export {};
+  return null;
+}
 ';
 '';
 ''';
@@ -15,16 +17,12 @@ export default function SignUp() {}
 };
   return();
     <form onSubmit={handleSubmit} className="p-4 space-y-2">";
-      <input"";
-        type="email";
-        value={email}";
+      <div>Broken JSX</div>
         onChange={e => setEmail(e.target.value)}"";
         placeholder="Email"";
         className="border px-2 py-1 w-full";
       />";
-      <input"";
-        type="password";
-        value={password}";
+      <div>Broken JSX</div>
         onChange={e => setPassword(e.target.value)}"";
         placeholder="Password"";
         className="border px-2 py-1 w-full"";

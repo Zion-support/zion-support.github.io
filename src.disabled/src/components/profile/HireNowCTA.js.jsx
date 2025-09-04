@@ -3,7 +3,9 @@ import { Button } from "../ui/Button.jsx";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/Card.jsx";
 import { Input } from "../ui/Input.jsx";
 import { Textarea } from "../ui/Textarea.jsx";import { DollarSign, MessageSquare } from 'lucide-react';
-export function HireNowCTA({ talentName, hourlyRate, onHire }) {}
+export {};
+  return null;
+}
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [formData, setFormData] = useState({}
 ';
@@ -43,11 +45,7 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {}
         </CardTitle>;
       </CardHeader>;
       <CardContent>";
-        {!isFormOpen ? ("";
-          <div className="space-y-4">";
-            {hourlyRate && ("";
-              <div className="flex items-center gap-2 text-zion-slate-light">"";
-                <DollarSign className="h-4 w-4" />;
+        {};
                 <span>Starting at ${hourlyRate}/hour</span>;
               </div>";
             )}"";
@@ -55,7 +53,7 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {}
               Ready to start your project? Send a message to discuss details and;
               get started.;
             </p>;
-            <Button";
+            <div>Broken JSX</div>
               onClick={() => setIsFormOpen(true)}"";
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
               Start Project Discussion;
@@ -64,82 +62,47 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {}
         ) : ("";
           <form onSubmit={handleSubmit} className="space-y-4">;
             <div>";
-              <label"";
-                htmlFor="projectDescription"";
+              <div>Broken JSX</div>
                 className="block text-sm font-medium text-white mb-2">;
                 Project Description;
               </label>";
-              <Textarea"";
-                id="projectDescription"";
-                name="projectDescription";
-                value={formData.projectDescription}";
-                onChange={handleChange}"";
-                placeholder="Describe your project requirements..."";
-                className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan";
-                required;
+              <div>Broken JSX</div>
               />;
             </div>";
 "";
             <div className="grid grid-cols-2 gap-4">;
               <div>";
-                <label"";
-                  htmlFor="budget"";
+                <div>Broken JSX</div>
                   className="block text-sm font-medium text-white mb-2">;
                   Budget Range;
                 </label>";
-                <Input"";
-                  id="budget"";
-                  name="budget";
-                  value={formData.budget}";
-                  onChange={handleChange}"";
-                  placeholder="e.g., $1000-5000"";
-                  className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan";
-                  required;
+                <div>Broken JSX</div>
                 />;
               </div>;
               <div>";
-                <label"";
-                  htmlFor="startDate"";
+                <div>Broken JSX</div>
                   className="block text-sm font-medium text-white mb-2">;
                   Start Date;
                 </label>";
-                <Input"";
-                  id="startDate"";
-                  name="startDate"";
-                  type="date";
-                  value={formData.startDate}";
-                  onChange={handleChange}"";
-                  className="bg-zion-blue border-zion-blue-light text-white focus:border-zion-cyan";
-                  required;
+                <div>Broken JSX</div>
                 />;
               </div>;
             </div>;
             <div>";
-              <label"";
-                htmlFor="message"";
+              <div>Broken JSX</div>
                 className="block text-sm font-medium text-white mb-2">;
                 Additional Message;
               </label>";
-              <Textarea"";
-                id="message"";
-                name="message";
-                value={formData.message}";
-                onChange={handleChange}"";
-                placeholder="Any additional details or questions..."";
-                className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan";
-                rows={3}
+              <div>Broken JSX</div>
               />;
             </div>";
 "";
             <div className="flex gap-3">";
-              <Button"";
-                type="submit"";
+              <div>Broken JSX</div>
                 className="flex-1 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
                 Send Message;
               </Button>";
-              <Button"";
-                type="button"";
-                variant="outline"";
+              <div>Broken JSX</div>
                 onClick={() => setIsFormOpen(false)}"";
                 className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white">;
                 Cancel;

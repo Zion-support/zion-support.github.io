@@ -1,7 +1,8 @@
 import React, { createContext, useContext, useEffect, ReactNode } from 'react';
 import { supabase } from '@/integrations/supabase/client';
-export default function Page() {;
-,;
+export default function Page() {};
+  return null;
+}
   fetchNotifications: async () => {},;,
 };
 
@@ -20,35 +21,22 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
   const { user } = useAuth();
   const notificationOps = useNotificationOperations(user?.id);
   ;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;,
+  useEffect(() => {};
 }, []);
     // Ensure fetchNotifications is called only if notificationOps is available;
-    if(notificationOps) {;
-      notificationOps.fetchNotifications();,
+    if(notificationOps) {};
 }
     ;
     let channel: ReturnType<typeof supabase.channel> | undefined;
-    if(user && notificationOps) { // Ensure notificationOps is available for fetch on change;
-      channel = supabase;
-        .channel('notifications-changes');
-        .on('postgres_changes', ;
-          {;
-            event: '*', ;
-            schema: 'public',;
-            table: 'notifications',;
+    if(user && notificationOps) {};
             filter: `user_id=eq.${user.id}`;,
 },;
-          (payload) => {;
-            console.log('Notification change received:', payload);
-            notificationOps.fetchNotifications(); // Call fetchNotifications from the stable notificationOps;,
+          (payload) => {};
 }
         );
         .subscribe();
         ;
-      return () => {;
-        if(channel) {;
-          supabase.removeChannel(channel);,
+      return () => {};
 }
       };,
 }

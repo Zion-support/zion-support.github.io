@@ -4,29 +4,13 @@ export default function Page() {;
  | Zion Tech Group`;
   const fullUrl = canonical || `${url}${window.location.pathname}`;
   // Structured data for better SEO;
-  const structuredData = {;
-";
-    "@context": "https://schema.org",";
-    "@type": type === 'website' ? "Organization" : "Article",";
-    "name": "Zion Tech Group",";
-    "url": url,"`;
+  const structuredData = {};
     "logo": `${url}/images/zion-tech-group-logo.png`,";
     "description": description,";
     "foundingDate": "2020",";
-    "address": {;
-";
-      "@type": "PostalAddress",";
-      "streetAddress": "123 Tech Street",";
-      "addressLocality": "Digital City",";
-      "addressRegion": "Tech State",";
-      "postalCode": "12345",";
-      "addressCountry": "US";,
+    "address": {};
 },";
-    "contactPoint": {;
-";
-      "@type": "ContactPoint",";
-      "telephone": "+1-555-123-4567",";
-      "contactType": "customer service","`;
+    "contactPoint": {};
       "url": `${url}/contact`;,
 },";
     "sameAs": [";
@@ -48,38 +32,13 @@ export default function Page() {;
     "foundingDate": "2020",";
     "numberOfEmployees": "100+",";
     "serviceArea": "Worldwide",";
-    "hasOfferCatalog": {;
-";
-      "@type": "OfferCatalog",";
-      "name": "Technology Services",";
-      "itemListElement": [{;
-";
-          "@type": "Offer",";
-          "itemOffered": {;
-";
-            "@type": "Service",";
-            "name": "AI Solutions",";
-            "description": "Artificial Intelligence and Machine Learning services";,
+    "hasOfferCatalog": {};
 }
         },;
-        {;
-";
-          "@type": "Offer",";
-          "itemOffered": {;
-";
-            "@type": "Service",";
-            "name": "Cloud Computing",";
-            "description": "Cloud infrastructure and DevOps services";,
+        {};
 }
         },;
-        {;
-";
-          "@type": "Offer",";
-          "itemOffered": {;
-";
-            "@type": "Service",";
-            "name": "Cybersecurity",";
-            "description": "Security and compliance solutions";,
+        {};
 }
         }
       ];,
@@ -87,47 +46,23 @@ export default function Page() {;
   };
 
     // Preload critical images;
-    if(ogImage) {;
-
-      imageLink.rel = 'preload';
-      imageLink.as = 'image';
-      imageLink.href = ogImage;
+    if(ogImage) {};
       document.head.appendChild(imageLink) }
 
     // DNS prefetch for external domains;
     ;
-    dnsPrefetchDomains.forEach(domain => {;
-
-      link.rel = 'dns-prefetch';
-      link.href = domain;
+    dnsPrefetchDomains.forEach(domain => {};
       document.head.appendChild(link)});,
 }, [ogImage]);
-  if(type === 'article') {;
-    Object.assign(structuredData, {;
-";
-      "@type": "Article",";
-      "headline": title,";
-      "author": {;
-";
-        "@type": "Person",";
-        "name": author;,
+  if(type === 'article') {};
 },";
-      "publisher": {;
-";
-        "@type": "Organization",";
-        "name": "Zion Tech Group",";
-        "logo": {;
-";
-          "@type": "ImageObject","`;
+      "publisher": {};
           "url": `${url}/images/zion-tech-group-logo.png`;,
 }
       },";
       "datePublished": publishedTime,";
       "dateModified": modifiedTime,";
-      "mainEntityOfPage": {;
-";
-        "@type": "WebPage",";
-        "@id": fullUrl;,
+      "mainEntityOfPage": {};
 }
     }) }
   return ();

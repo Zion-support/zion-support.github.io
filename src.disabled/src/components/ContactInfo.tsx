@@ -1,10 +1,7 @@
 import React from 'react';
 import { Phone, Mail, MapPin, Globe } from 'lucide-react';
 
-interface ContactInfoProps {;
-  className?: string;
-  showTitle?: boolean;
-  variant?: 'default' | 'compact' | 'detailed';,
+interface ContactInfoProps {};
 }
 
 export default function ContactInfo({ ;
@@ -37,8 +34,7 @@ export default function ContactInfo({ ;
   if (variant === 'detailed') {;
     return (;
       <div className={`space-y-4 ${className}`}>;
-        {showTitle && (;
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">Contact Information</h3>;
+        {};
         )}
         <div className="grid md:grid-cols-2 gap-6">;
           <div className="space-y-4">;
@@ -85,8 +81,7 @@ export default function ContactInfo({ ;
   // Default variant;
   return (;
     <div className={`space-y-4 ${className}`}>;
-      {showTitle && (;
-        <h3 className="text-lg font-semibold text-gray-900">Get in Touch</h3>;
+      {};
       )}
       <div className="flex flex-wrap gap-6">;
         <div className="flex items-center">;

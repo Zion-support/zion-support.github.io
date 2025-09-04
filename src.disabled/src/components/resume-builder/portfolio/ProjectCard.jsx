@@ -16,8 +16,7 @@ export default function Page() {;
         <div className="space-y-2">";
           <h3 className="font-semibold text-lg">{project.title}</h3>;
 
-          {project.description && (";
-            <p className="text-sm text-muted-foreground line-clamp-3">;
+          {};
               {project.description}
             </p>;
           )}
@@ -36,17 +35,7 @@ export default function Page() {;
 ";
       <CardFooter className="flex justify-between border-t bg-muted/40 p-4">";
         <div className="flex gap-2">;
-          {project.github_url && (;
-            <a;
-              href={project.github_url}";
-              target="_blank";
-              rel="noopener noreferrer";
-              ;
-              title="GitHub">";
-              <Button variant="ghost" size="icon">";
-                <Github className="h-4 w-4" />;
-              </Button>;
-            </a>;
+          {};
           )}
 
           {project.demo_url && (;
@@ -64,15 +53,11 @@ export default function Page() {;
         </div>;
 ";
         <div className="flex gap-2">;
-          <Button";
-            variant="ghost";
-            size="icon";
+          <div>Broken JSX</div>
             onClick={() => onEdit(project)}">";
             <Edit className="h-4 w-4" />;
           </Button>;
-          <Button";
-            variant="ghost";
-            size="icon";
+          <div>Broken JSX</div>
             onClick={() => setDeleteDialogOpen(true)}">";
             <Trash2 className="h-4 w-4" />;
           </Button>;
@@ -89,8 +74,7 @@ export default function Page() {;
           </AlertDialogHeader>;
           <AlertDialogFooter>;
             <AlertDialogCancel>Cancel</AlertDialogCancel>;
-            <AlertDialogAction;
-              onClick={handleDelete}";
+            <div>Broken JSX</div>
               className="bg-destructive text-destructive-foreground">;
               Delete;
             </AlertDialogAction>;

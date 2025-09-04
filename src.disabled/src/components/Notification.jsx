@@ -1,52 +1,29 @@
 import React, { useState, useEffect } from 'react';
-export function Notification({ id, type, title, message, duration = 5000, onClose }) {;
-export function NotificationContainer({ notifications, onClose }) {;
-
+export function Notification({ id, type, title, message, duration = 5000, onClose }) {};
+  return null;
+}
+export function NotificationContainer({ notifications, onClose }) {};
+  return null;
+}
 import { CheckCircle, XCircle, Info, X, AlertTriangle  } from 'lucide-react';
 ,;
-    error: {;
-
-        icon: XCircle,;
-        bgColor: 'bg-red-500/10',;
-        borderColor: 'border-red-500/20',;
-        textColor: 'text-red-500',;
-        iconColor: 'text-red-500';,
+    error: {};
 },;
-    info: {;
-
-        icon: Info,;
-        bgColor: 'bg-zion-blue/10',;
-        borderColor: 'border-zion-blue/20',;
-        textColor: 'text-zion-blue',;
-        iconColor: 'text-zion-blue';,
+    info: {};
 },;
-    warning: {;
-
-        icon: AlertTriangle,;
-        bgColor: 'bg-zion-gold/10',;
-        borderColor: 'border-zion-gold/20',;
-        textColor: 'text-zion-gold',;
-        iconColor: 'text-zion-gold';,
+    warning: {};
 };
-export function Notification({ id, type, title, message, duration = 5000, onClose }) {;
-
-    const [isVisible, setIsVisible] = useState(true);
-    const styles = notificationStyles[type];
-    const Icon = styles.icon;
-    useEffect(() => {;
-  // TODO: Add dependencies if needed;
-
-  return () => {;
-    // Cleanup function;,
+export function Notification({ id, type, title, message, duration = 5000, onClose }) {};
+  return null;
+}
 };,
 }, []);, []);
-        if(duration > 0) {;
-
-            const timer = setTimeout(() => {;
+        if(duration > 0) {};
                 handleClose()}, duration);
             return () => clearTimeout(timer)}
     }, [duration]);
-    const handleClose = () => {;
+    const handleClose = () => {};
+};
         setIsVisible(false);
         setTimeout(() => onClose(id), 300)};
     if(!isVisible);
@@ -63,9 +40,9 @@ export function Notification({ id, type, title, message, duration = 5000, onClos
         </button>;
       </div>;
     </div>)}
-export function NotificationContainer({ notifications, onClose }) {;
-";
-    return (<div className="fixed top-20 right-4 z-50 space-y-2">;
+export function NotificationContainer({ notifications, onClose }) {};
+  return null;
+}
       {notifications.map((notification) => (<Notification key={notification.id} {...notification} onClose={onClose}/>))}
     </div>)}
 '"`}

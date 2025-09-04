@@ -1,15 +1,11 @@
-  it(displays expected content", () => {;
-    render(<EnhancedFooter  />)";
+  it(displays expected content", () => {};
 import { render, screen } from &apos;@testing - library/react",;
 import EnhancedFooter from &apos;./EnhancedFooter;
-describe(&apos;EnhancedFooter&apos, () => {;
-  it(&apos;renders without crashing&apos, () => {;
-    render();,
+describe(&apos;EnhancedFooter&apos, () => {};
 }
     expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});,
 }
-  it(&apos;displays expected content&apos, () => {;
-    render();,
+  it(&apos;displays expected content&apos, () => {};
 }
     // comment;
     render(<EnhancedFooter / >)";
