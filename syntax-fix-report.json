@@ -1,24 +1,13 @@
 {
-  "timestamp": "2025-09-03T22:04:39.099Z",
+  "timestamp": "2025-09-03T23:23:48.375Z",
   "fixes": [
-    "components/ErrorBoundary.tsx: Remove semicolon after closing brace (2 fixes)",
     "components/ErrorBoundary.tsx: Remove duplicate closing braces (2 fixes)",
-    "components/LoadingSpinner.tsx: Remove semicolon after closing brace (1 fixes)",
-    "components/PerformanceMonitor.tsx: Remove semicolon after closing brace (1 fixes)",
+    "components/PerformanceMonitor.tsx: Remove semicolon after closing brace (2 fixes)",
     "components/PerformanceMonitor.tsx: Remove duplicate closing braces (4 fixes)",
-    "components/SearchBar.tsx: Remove semicolon after closing brace (1 fixes)",
-    "components/ThemeToggle.tsx: Remove semicolon after closing brace (1 fixes)",
     "pages/_app.tsx: Remove duplicate closing braces (1 fixes)",
-    "pages/cloud-devops.tsx: Remove semicolon after closing brace (1 fixes)",
-    "pages/cybersecurity.tsx: Remove semicolon after closing brace (1 fixes)",
-    "pages/docs.tsx: Remove semicolon after closing brace (1 fixes)",
-    "pages/index.tsx: Remove semicolon after closing brace (1 fixes)",
-    "pages/index.tsx: Remove duplicate closing braces (1 fixes)",
-    "pages/index.tsx: Remove merge conflict markers (2 fixes)",
-    "pages/quantum-computing.tsx: Remove semicolon after closing brace (1 fixes)",
-    "scripts/performance-monitor.js: Remove semicolon after closing brace (2 fixes)"
+    "pages/index.tsx: Remove duplicate closing braces (1 fixes)"
   ],
   "issues": [],
-  "totalFixes": 16,
+  "totalFixes": 5,
   "totalIssues": 0
 }

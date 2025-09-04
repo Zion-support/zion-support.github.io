@@ -31,9 +31,9 @@ const handleAppInstalled = () => {;setIsInstalled(true);
 window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
 '    window.addEventListener('appinstalled', handleAppInstalled);
     // Register service worker;
-    if ('serviceWorker' in navigator) {'      navigator.serviceWorker.register('/sw.js')'        .then((registration) => {'          console.log('Service Worker registered successfully: ', registration);
+    if ('serviceWorker' in navigator) {'      navigator.serviceWorker.register('/sw.js')'        .then((registration) => {'          
 '        })'        .catch((error) => {;
-          console.log('Service Worker registration failed: ', error);'        });'    }
+          '        });'    }
     return () => {;
       window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
 '      window.removeEventListener('appinstalled', handleAppInstalled);'    };'  }, []);
@@ -57,8 +57,8 @@ if (outcome === "accepted") {"      "    } else {"      "    }"setDeferredPrompt
 }
     deferredPrompt.prompt();
     const { outcome } = await deferredPrompt.userChoice;
-if (outcome === 'accepted') {'      console.log('User accepted the install prompt');
-'    } else {'      console.log('User dismissed the install prompt');'    }'setDeferredPrompt(null);
+if (outcome === 'accepted') {'      
+'    } else {'      '    }'setDeferredPrompt(null);
     setShowInstallPrompt(false);,
 }
 const handleDismiss = () => {;setShowInstallPrompt(false);

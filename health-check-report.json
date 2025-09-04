@@ -1,31 +1,47 @@
 {
-  "timestamp": "2025-09-04T00:12:10.488Z",
+  "timestamp": "2025-09-03T23:23:47.106Z",
+  "status": "warning",
   "checks": [
     {
-      "name": "Package.json exists",
+      "name": "Node.js Version",
       "status": "pass",
-      "result": "package.json found"
+      "value": "v22.16.0",
+      "message": "Node.js version is compatible"
     },
     {
-      "name": "Dependencies installed",
+      "name": "Package.json",
       "status": "pass",
-      "result": "Dependencies installed"
+      "value": "ziontechgroup.com",
+      "message": "Package.json found and valid"
     },
     {
-      "name": "Build process",
+      "name": "Dependencies",
       "status": "pass",
-      "result": "Build successful"
+      "message": "Node modules directory exists"
     },
     {
-      "name": "Linting",
+      "name": "Next.js Config",
       "status": "pass",
-      "result": "Linting passed"
+      "message": "Next.js configuration found"
     },
     {
-      "name": "TypeScript compilation",
+      "name": "TypeScript Config",
       "status": "pass",
-      "result": "TypeScript compilation successful"
+      "message": "TypeScript configuration found"
+    },
+    {
+      "name": "Source Files",
+      "status": "pass",
+      "message": "Source directory found"
+    },
+    {
+      "name": "Environment Variables",
+      "status": "warn",
+      "message": "Environment file not found, but example exists"
     }
   ],
-  "status": "healthy"
+  "issues": [],
+  "recommendations": [
+    "Copy .env.example to .env.local and configure"
+  ]
 }
