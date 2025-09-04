@@ -1,31 +1,62 @@
 {
-  "timestamp": "2025-09-04T06:30:45.510Z",
+  "timestamp": "2025-09-03T21:30:05.200Z",
+  "status": "completed",
   "checks": [
     {
-      "name": "Package.json exists",
-      "status": "pass",
-      "result": "package.json found"
+      "name": "Package.json Validation",
+      "status": "passed",
+      "result": {
+        "name": "ziontechgroup.com",
+        "version": "0.1.0"
+      },
+      "timestamp": "2025-09-03T21:30:05.201Z"
     },
     {
-      "name": "Dependencies installed",
-      "status": "pass",
-      "result": "Dependencies installed"
+      "name": "Dependencies Check",
+      "status": "passed",
+      "result": {
+        "status": "dependencies_installed"
+      },
+      "timestamp": "2025-09-03T21:30:05.201Z"
     },
     {
-      "name": "Build process",
-      "status": "fail",
-      "error": "Build failed"
+      "name": "Build Directory Check",
+      "status": "passed",
+      "result": {
+        "status": "build_directory_exists"
+      },
+      "timestamp": "2025-09-03T21:30:05.201Z"
     },
     {
-      "name": "Linting",
-      "status": "fail",
-      "error": "Linting failed"
+      "name": "PM2 Process Check",
+      "status": "failed",
+      "error": "PM2 not available or no processes running",
+      "timestamp": "2025-09-03T21:30:05.476Z"
     },
     {
-      "name": "TypeScript compilation",
-      "status": "fail",
-      "error": "TypeScript compilation failed"
+      "name": "Disk Space Check",
+      "status": "passed",
+      "result": {
+        "available": "105G",
+        "used": "15G",
+        "total": "126G"
+      },
+      "timestamp": "2025-09-03T21:30:05.484Z"
+    },
+    {
+      "name": "Memory Check",
+      "status": "passed",
+      "result": {
+        "total": "16017MB",
+        "used": "2433MB",
+        "available": "13584MB"
+      },
+      "timestamp": "2025-09-03T21:30:05.512Z"
     }
   ],
-  "status": "unhealthy"
+  "summary": {
+    "total": 6,
+    "passed": 5,
+    "failed": 1
+  }
 }
