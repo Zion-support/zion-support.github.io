@@ -64,7 +64,7 @@ setToasts(prev = > prev.filter(t => t.id !== id))}, duration)}, []);,
 interface ToastContextType {toasts: Toast[],;
   addToast: (toas,t: Omit&apos}&apos;<Toast, &apos;id&apos;>) => void,;
 removeToast: (i,d: string) => void}&apos;";
-  toasts: Toast[],"";
+  toasts: Toast[],""
 ";
 const ToastContext = createContext<ToastContextType | undefined">(undefined),";
 
@@ -243,9 +243,9 @@ function Toast({toast, onRemove }: {toast: Toast, onRemove: (id: string) => void
           ×&quot,;
         </button>";
     </div>;
-  )}"";
-    </div>"";
-  )}""";
+  )}""
+    </div>""
+  )}"""
 ";
 
 export {};

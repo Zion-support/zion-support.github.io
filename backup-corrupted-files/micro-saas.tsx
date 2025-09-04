@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import {;
@@ -1706,9 +1705,9 @@ export default function MicroSaaS() {;
     <PageTransition>;
       <Head>;
         <title>{title}</title>;
-        <meta name="description content={description} />;
-        <meta name=viewport" content="width=device-width, initial-scale=1 />;
-        <link rel=canonical" href="https://ziontechgroup.com/micro-saas />;
+        <meta name="description" content={description} />;
+        <meta name="viewport" content="width=device-width, initial-scale=1" />;
+        <link rel="canonical" href="https://ziontechgroup.com/micro-saas" />;
       </Head>;
 
       {/* Hero Section */}
@@ -1736,7 +1735,7 @@ export default function MicroSaaS() {;
                 <ArrowRight className=ml-2 h-4 w-4 inline" />;
               </Link>;
               <Link;
-                href="/pricing-guide;
+                href="/pricing-guide";
                 className=text-sm font-semibold leading-6 text-gray-900 hover:text-orange-600">;
                 View Pricing <span aria-hidden="true>→</span>;
               </Link>;
@@ -1767,176 +1766,15 @@ export default function MicroSaaS() {;
                 <p className="text-gray-600>{benefit.description}</p>;
               </div>;
             ))}
-          </div>;
-        </div>;
-      </section>;
+          </div>
+          <div className="text-center mt-10">
+            <Link href="/contact">
+              <a className="px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg font-semibold">Get a Demo</a>
+            </Link>
+          </div>
+        </div>
+      </main>
+    </>
+  );
+}
 
-      {/* Technologies Section */}
-      <section className=py-24 sm: py-32 bg-gray-50">;
-        <div className="mx-auto max-w-7xl px-6 lg:px-8>;
-          <div className=mx-auto max-w-2xl text-center mb-16">;
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl>;
-              Technologies We Use;
-            </h2>;
-            <p className=mt-6 text-lg leading-8 text-gray-600">;
-              Modern, proven technologies for building robust and scalable applications;
-            </p>;
-          </div>;
-          <div className="grid grid-cols-1 gap-8 sm: grid-cols-2 lg:grid-cols-3>;
-            {technologies.map((tech, index) => (;
-              <div key={index} className=bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">;
-                <div className="flex items-center mb-4>;
-                  <div className=flex h-12 w-12 items-center justify-center rounded-lg bg-orange-100">;
-                    <tech.icon className="h-6 w-6 text-orange-600 />;
-                  </div>;
-                  <h3 className=text-lg font-semibold text-gray-900 ml-4">{tech.name}</h3>;
-                </div>;
-                <p className="text-gray-600>{tech.description}</p>;
-              </div>;
-            ))}
-          </div>;
-        </div>;
-      </section>;
-
-      {/* Micro SaaS Services Grid */}
-      <section className=py-24 sm: py-32 bg-white">;
-        <div className="mx-auto max-w-7xl px-6 lg:px-8>;
-          <div className=mx-auto max-w-2xl text-center mb-16">;
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl>;
-              Our Micro SaaS Portfolio;
-            </h2>;
-            <p className=mt-6 text-lg leading-8 text-gray-600">;
-              Custom software solutions tailored to your business needs. All applications include design, ;
-              development, testing, and deployment. Our innovative micro SaaS solutions are designed to ;
-              solve specific business challenges with cutting-edge technology and proven methodologies. ;
-              Contact us at{' '}
-              <a href="mailto:kleber@ziontechgroup.com" className="text-orange-600 hover:text-orange-500 font-semibold">;
-                kleber@ziontechgroup.com;
-              </a>{' '}
-              or call{' '}
-              <a href="tel:+13024640950" className="text-orange-600 hover:text-orange-500 font-semibold">;
-                +1 302 464 0950;
-              </a>{' '}
-              for custom pricing and free consultation. Visit us at 364 E Main St STE 1008, Middletown DE 19709.;
-            </p>;
-          </div>;
-          <div className="grid grid-cols-1 gap-8 lg: grid-cols-2>;
-            {microSaaSServices.map((service, index) => (;
-              <div key={index} className=group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300">;
-                <div className="flex items-center gap-x-3 mb-6>;
-                  <div className=flex h-12 w-12 items-center justify-center rounded-lg bg-orange-600 group-hover:bg-orange-700 transition-colors">;
-                    <service.icon className="h-7 w-7 text-white />;
-                  </div>;
-                  <div>;
-                    <h3 className=text-xl font-semibold text-gray-900">{service.title}</h3>;
-                    <p className="text-sm text-orange-600 font-medium>{service.category}</p>;
-                  </div>;
-                </div>;
-                <p className=text-gray-600 mb-6">{service.description}</p>;
-                <ul className="space-y-3 mb-6>;
-                  {service.features.map((feature, featureIndex) => (;
-                    <li key={featureIndex} className=flex items-center gap-x-3">;
-                      <CheckCircle className="h-4 w-4 text-orange-600 flex-shrink-0 />;
-                      <span className=text-sm text-gray-700">{feature}</span>;
-                    </li>;
-                  ))}
-                </ul>;
-                <div className="flex items-center justify-between>;
-                  <div className=flex items-center space-x-4 text-sm text-gray-500">;
-                    <div className="flex items-center space-x-1>;
-                      <Clock className=h-4 w-4" />;
-                      <span>{service.delivery}</span>;
-                    </div>;
-                    <div className="font-semibold text-orange-600>{service.pricing}</div>;
-                  </div>;
-                  <Link;
-                    href=/contact";
-                    className="inline-flex items-center text-sm font-semibold text-orange-600 hover:text-orange-500 transition-colors group;
-                  >;
-                    Get Started;
-                    <ArrowRight className=ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />;
-                  </Link>;
-                </div>;
-              </div>;
-            ))}
-          </div>;
-        </div>;
-      </section>;
-
-      {/* Development Process Section */}
-      <section className="py-24 sm: py-32 bg-gray-50>;
-        <div className=mx-auto max-w-7xl px-6 lg:px-8">;
-          <div className="mx-auto max-w-2xl text-center mb-16>;
-            <h2 className=text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">;
-              Our Development Process;
-            </h2>;
-            <p className="mt-6 text-lg leading-8 text-gray-600>;
-              A proven methodology for delivering high-quality software solutions;
-            </p>;
-          </div>;
-          <div className=grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">;
-            <div className="text-center>;
-              <div className=flex items-center justify-center h-16 w-16 rounded-full bg-orange-100 mx-auto mb-4">;
-                <span className="text-2xl font-bold text-orange-600>1</span>;
-              </div>;
-              <h3 className=text-lg font-semibold text-gray-900 mb-2">Discovery</h3>;
-              <p className="text-gray-600>Requirements gathering and project planning</p>;
-            </div>;
-            <div className=text-center">;
-              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-orange-100 mx-auto mb-4>;
-                <span className=text-2xl font-bold text-orange-600">2</span>;
-              </div>;
-              <h3 className="text-lg font-semibold text-gray-900 mb-2>Design</h3>;
-              <p className=text-gray-600">UI/UX design and system architecture</p>;
-            </div>;
-            <div className="text-center>;
-              <div className=flex items-center justify-center h-16 w-16 rounded-full bg-orange-100 mx-auto mb-4">;
-                <span className="text-2xl font-bold text-orange-600>3</span>;
-              </div>;
-              <h3 className=text-lg font-semibold text-gray-900 mb-2">Development</h3>;
-              <p className="text-gray-600>Agile development with regular updates</p>;
-            </div>;
-            <div className=text-center">;
-              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-orange-100 mx-auto mb-4>;
-                <span className=text-2xl font-bold text-orange-600">4</span>;
-              </div>;
-              <h3 className="text-lg font-semibold text-gray-900 mb-2>Deployment</h3>;
-              <p className=text-gray-600">Testing, deployment, and ongoing support</p>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-
-      {/* CTA Section */}
-      <section className="bg-orange-600 py-16 sm: py-24>;
-        <div className=mx-auto max-w-7xl px-6 lg:px-8">;
-          <div className="mx-auto max-w-2xl text-center>;
-            <h2 className=text-3xl font-bold tracking-tight text-white sm:text-4xl">;
-              Ready to Build Your Custom SaaS Solution?;
-            </h2>;
-            <p className="mt-6 text-lg leading-8 text-orange-100>;
-              Transform your business with our innovative micro SaaS solutions. From quantum computing to ;
-              space technology, we deliver cutting-edge software that gives you a competitive advantage. ;
-              Get a free consultation and detailed project estimate with our expert team.;
-            </p>;
-            <div className="mt-4 text-sm text-orange-200">;
-              <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>;
-              <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>;
-            </div>;
-            <div className=mt-10 flex items-center justify-center gap-x-6">;
-              <Link;
-                href="/contact;
-                className=rounded-md bg-white px-6 py-3 text-sm font-semibold text-orange-600 shadow-sm hover: bg-gray-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">;
-                Start Your Project;
-              </Link>;
-              <a;
-                href="tel:+13024640950;
-                className=text-sm font-semibold leading-6 text-white hover:text-orange-100">;
-                Call +1 302 464 0950 <span aria-hidden="true">→</span>;
-              </a>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-    </PageTransition>;
-  )}

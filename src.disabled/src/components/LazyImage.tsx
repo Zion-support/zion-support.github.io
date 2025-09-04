@@ -89,16 +89,16 @@ const LazyImage: React.FC<LazyImageProps> = ({,;
       )}
       ;
       {isInView && (";
-        <Image src="{src}"";
-          alt="{alt}"";
-          width="{width}"";
-          height="{height}"";
+        <Image src="{src}""
+          alt="{alt}""
+          width="{width}""
+          height="{height}""
           className="{`transition-opacity" duration-300 ${>;
             isLoaded ? "opacity-100" : 'opacity-0>;,;,
 }`}";
           onLoad = "{()" => setIsLoaded(true)}";
-          priority="{priority}"";
-          placeholder="{placeholder}"";
+          priority="{priority}""
+          placeholder="{placeholder}""
           blurDataURL="{blurDataURL}";
         />;
       )}
