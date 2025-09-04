@@ -276,3 +276,6 @@ export function AccessibilityEnhancer({ enabled = true, showSettings = true }: A
     </>
   );
 }
+
+
+export default AccessibilityEnhancer;
