@@ -1,8 +1,15 @@
-import React, { Suspense } from 'react';
-import { Routes, Route } from 'react-router-dom';
-import { AppHeader } from './layout/AppHeader';
-import { EnhancedFuturisticFooter as Footer } from './components/EnhancedFuturisticFooter';
-import ErrorBoundary from './components/ErrorBoundary';
+
+import React from 'react';
+import { Routes, Route, Link } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
+import Layout from './components/layout/Layout';
+import HomePage from './pages/HomePage';
+import ErrorBoundary from './utils/errorBoundary';
+import './index.css';
+import ServicesPage from './pages/ServicesPage.tsx';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Pricing from './pages/Pricing';
 
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/index'));
@@ -11,27 +18,19 @@ const Contact = React.lazy(() => import('./pages/contact'));
 
 export default function App() {
   return (
-    <ErrorBoundary>
-      <div className="min-h-screen bg-white">
-        <AppHeader />
-        <main className="flex-1">
-          <Suspense fallback={
-            <div className="flex items-center justify-center py-20">
-              <div className="text-center">
-                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-cyan-500 mx-auto mb-4"></div>
-                <p className="text-gray-400">Loading...</p>
-              </div>
-            </div>
-          }>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/services/*" element={<Services />} />
-              <Route path="/contact" element={<Contact />} />
-            </Routes>
-          </Suspense>
-        </main>
-        <Footer />
-      </div>
-    </ErrorBoundary>
+
+    <HelmetProvider>
+      <ErrorBoundary>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/pricing" element={<Pricing />} />
+          </Routes>
+        </Layout>
+      </ErrorBoundary>
+    </HelmetProvider>
   );
 }
