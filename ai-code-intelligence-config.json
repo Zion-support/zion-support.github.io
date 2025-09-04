@@ -1,0 +1,12 @@
+{
+  "analysisDepth": "deep",
+  "autoFix": true,
+  "performanceOptimization": true,
+  "securityAnalysis": true,
+  "codeQualityAnalysis": true,
+  "excludePatterns": ["node_modules/**", ".git/**", "dist/**", "build/**"],
+  "includeExtensions": [".js", ".jsx", ".ts", ".tsx", ".json", ".css", ".scss"],
+  "maxFileSize": 1048576,
+  "analysisInterval": 3600000,
+  "reportGeneration": true
+}
