@@ -129,7 +129,6 @@ export default function Security() {
               Your data security is our top priority. We implement industry-leading security measures and maintain strict compliance with global standards.
             </p>
           </div>
-        </section>
 
           <div style={{ marginBottom: 80 }}>
             <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 40, textAlign: 'center' }}>
@@ -180,7 +179,6 @@ export default function Security() {
               ))}
             </div>
           </div>
-        </section>
 
           <div style={{ marginBottom: 80 }}>
             <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 40, textAlign: 'center' }}>
@@ -224,7 +222,6 @@ export default function Security() {
               ))}
             </div>
           </div>
-        </section>
 
           <div style={{ marginBottom: 80 }}>
             <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 40, textAlign: 'center' }}>
@@ -313,7 +310,7 @@ export default function Security() {
               </a>
             </div>
           </div>
-        </section>
+        </div>
       </div>
     </>
   );
