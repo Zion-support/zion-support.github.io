@@ -1,15 +1,67 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { motion, AnimatePresence } from 'framer-motion';
 import './App.css';
 
-// Import all the components (these would need to be created or imported)
-// For now, I'll create placeholder components to resolve the conflicts
+// Lazy loading utility
+const createLazyComponent = (importFunc: () => Promise<any>) => {
+  return lazy(importFunc);
+};
 
-// Placeholder components - these would need to be implemented
+// Core pages with optimized imports
+const Home = createLazyComponent(() => import('./pages/Home'));
+const About = createLazyComponent(() => import('./pages/About'));
+const Contact = createLazyComponent(() => import('./pages/Contact'));
+const Careers = createLazyComponent(() => import('./pages/Careers'));
+const Blog = createLazyComponent(() => import('./pages/Blog'));
+const Partners = createLazyComponent(() => import('./pages/Partners'));
+const Services = createLazyComponent(() => import('./pages/Services'));
+const Solutions = createLazyComponent(() => import('./pages/Solutions'));
+const Pricing = createLazyComponent(() => import('./pages/Pricing'));
+const Team = createLazyComponent(() => import('./pages/Team'));
+const Leadership = createLazyComponent(() => import('./pages/Leadership'));
+const CaseStudies = createLazyComponent(() => import('./pages/CaseStudies'));
+const News = createLazyComponent(() => import('./pages/News'));
+const Help = createLazyComponent(() => import('./pages/Help'));
+const Support = createLazyComponent(() => import('./pages/Support'));
+const Community = createLazyComponent(() => import('./pages/Community'));
+const Press = createLazyComponent(() => import('./pages/Press'));
+const FAQ = createLazyComponent(() => import('./pages/FAQ'));
+const Privacy = createLazyComponent(() => import('./pages/Privacy'));
+const Terms = createLazyComponent(() => import('./pages/Terms'));
+const Cookies = createLazyComponent(() => import('./pages/Cookies'));
+const DataProtection = createLazyComponent(() => import('./pages/DataProtection'));
+const Accessibility = createLazyComponent(() => import('./pages/Accessibility'));
+const Sitemap = createLazyComponent(() => import('./pages/Sitemap'));
+
+// Service pages
+const ServicesPricingPage = createLazyComponent(() => import('./pages/ServicesPricingPage'));
+const SystemStatus = createLazyComponent(() => import('./pages/SystemStatus'));
+const Search = createLazyComponent(() => import('./pages/Search'));
+const Documentation = createLazyComponent(() => import('./pages/Documentation'));
+const Marketplace = createLazyComponent(() => import('./pages/Marketplace'));
+const Training = createLazyComponent(() => import('./pages/Training'));
+const Webinars = createLazyComponent(() => import('./pages/Webinars'));
+const ApiPlayground = createLazyComponent(() => import('./pages/ApiPlayground'));
+const Research = createLazyComponent(() => import('./pages/Research'));
+const Categories = createLazyComponent(() => import('./pages/Categories'));
+const Login = createLazyComponent(() => import('./pages/Login'));
+
+// 2028 Innovative AI Services
+const AIAutonomousVehicleManagementPlatform = createLazyComponent(() => import('./pages/services/ai-autonomous-vehicle-management-platform'));
+const AISmartCityInfrastructureManagement = createLazyComponent(() => import('./pages/services/ai-smart-city-infrastructure-management'));
+const AIQuantumFinancialTradingPlatform = createLazyComponent(() => import('./pages/services/ai-quantum-financial-trading-platform'));
+
+// 2028 Services Showcase
+const InnovativeServicesShowcase2028 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2028'));
+
+// 2025 Innovative Services Showcase and Pricing Guide
+const InnovativeServicesShowcase2025 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2025'));
+const ComprehensivePricingGuide2025 = createLazyComponent(() => import('./pages/ComprehensivePricingGuide2025'));
+
+// Placeholder components for missing imports
 const ErrorBoundary = ({ children, fallback }: { children: React.ReactNode; fallback: React.ReactNode }) => children;
-const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => <div>Error: {error.message}</div>;
 const SEO = ({ title, description, keywords, ogImage, canonicalUrl }: any) => null;
 const PerformanceOptimizer = ({ enabled }: { enabled: boolean }) => null;
 const EnhancedAccessibilityEnhancer = ({ enabled, showControls }: { enabled: boolean; showControls: boolean }) => null;
@@ -17,97 +69,36 @@ const MobileExperienceEnhancer = ({ enabled }: { enabled: boolean }) => null;
 const AdvancedAnalytics = ({ enabled, showMetrics }: { enabled: boolean; showMetrics: boolean }) => null;
 const AppHeader = () => <header>Zion Tech Group</header>;
 const LoadingSpinner = () => <div>Loading...</div>;
-const Home = () => <div>Home Page</div>;
-const About = () => <div>About Page</div>;
-const Services = () => <div>Services Page</div>;
-const Contact = () => <div>Contact Page</div>;
-const Blog = () => <div>Blog Page</div>;
-const Careers = () => <div>Careers Page</div>;
-const AIServices = () => <div>AI Services</div>;
-const ITServices = () => <div>IT Services</div>;
-const MicroSaaS = () => <div>Micro SaaS</div>;
 const Footer = () => <footer>Footer</footer>;
 const FloatingActionButton = ({ enabled }: { enabled: boolean }) => null;
 const SmartNotificationSystem = ({ enabled }: { enabled: boolean }) => null;
 const ChatAssistant = ({ enabled, position, theme, language }: any) => null;
 
-// Service components
-const ComprehensivePricingGuide2025 = () => <div>Comprehensive Pricing Guide 2025</div>;
-const InnovativeServicesLanding2025 = () => <div>Innovative Services Landing 2025</div>;
-const NewInnovativeServices2025 = () => <div>New Innovative Services 2025</div>;
-const ZionCuttingEdgeServices2029 = () => <div>Zion Cutting Edge Services 2029</div>;
-
-// All other service components as placeholders
-const CloudDevOps = () => <div>Cloud DevOps</div>;
-const ITInfrastructure = () => <div>IT Infrastructure</div>;
-const AISalesCopilot = () => <div>AI Sales Copilot</div>;
-const CloudFinOpsOptimizer = () => <div>Cloud FinOps Optimizer</div>;
-const AIComplianceAssistant = () => <div>AI Compliance Assistant</div>;
-const AIAutoEmailResponder = () => <div>AI Auto Email Responder</div>;
-const CustomerFeedbackSurveys = () => <div>Customer Feedback Surveys</div>;
-const AIComplianceCopilot = () => <div>AI Compliance Copilot</div>;
-const LLMContentStudio = () => <div>LLM Content Studio</div>;
-const FinOpsAdvisor = () => <div>FinOps Advisor</div>;
-const ReturnsManagement = () => <div>Returns Management</div>;
-const EmailSequencer = () => <div>Email Sequencer</div>;
-const PodcastTranscription = () => <div>Podcast Transcription</div>;
-const MicroCRM = () => <div>Micro CRM</div>;
-const WebsiteAnalytics = () => <div>Website Analytics</div>;
-const ITHelpdesk = () => <div>IT Helpdesk</div>;
-const AffiliateTracking = () => <div>Affiliate Tracking</div>;
-const MobileSurvey = () => <div>Mobile Survey</div>;
-const AIAutonomousCodeReviewer = () => <div>AI Autonomous Code Reviewer</div>;
-const ZeroTrustNetworkAccess = () => <div>Zero Trust Network Access</div>;
-const AIPoweredSEO = () => <div>AI Powered SEO</div>;
-const InterviewAssessmentAI = () => <div>Interview Assessment AI</div>;
-const HelpdeskPlatform = () => <div>Helpdesk Platform</div>;
-const DSRPortal = () => <div>DSR Portal</div>;
-const SecurityHeadersCSP = () => <div>Security Headers CSP</div>;
-const AIProjectManagement = () => <div>AI Project Management</div>;
-const AICustomerSupportAutomation = () => <div>AI Customer Support Automation</div>;
-const AIFinancialAnalytics = () => <div>AI Financial Analytics</div>;
-const AIMarketingAutomation = () => <div>AI Marketing Automation</div>;
-const NewServicesShowcase2025 = () => <div>New Services Showcase 2025</div>;
-const AIWorkflowOrchestrator = () => <div>AI Workflow Orchestrator</div>;
-const AIDataGovernancePlatform = () => <div>AI Data Governance Platform</div>;
-const AICustomerExperienceAnalytics = () => <div>AI Customer Experience Analytics</div>;
-const AISupplyChainOptimization = () => <div>AI Supply Chain Optimization</div>;
-const AIFinancialRiskManagement = () => <div>AI Financial Risk Management</div>;
-const AIAutonomousResearchAssistant = () => <div>AI Autonomous Research Assistant</div>;
-const AIContentMarketingSuite = () => <div>AI Content Marketing Suite</div>;
-const AIQuantumHybridPlatform = () => <div>AI Quantum Hybrid Platform</div>;
-const AICybersecurityPlatform = () => <div>AI Cybersecurity Platform</div>;
-const AIHealthcarePlatform = () => <div>AI Healthcare Platform</div>;
-const AIBusinessIntelligence = () => <div>AI Business Intelligence</div>;
-const DigitalTransformation = () => <div>Digital Transformation</div>;
-const AILegalDocumentAutomation = () => <div>AI Legal Document Automation</div>;
-const AIHealthcareAnalytics = () => <div>AI Healthcare Analytics</div>;
-const AIFinancialTrading = () => <div>AI Financial Trading</div>;
-const AIContentCreationSuite = () => <div>AI Content Creation Suite</div>;
-const AICybersecurity = () => <div>AI Cybersecurity</div>;
-const AIHRPlatform = () => <div>AI HR Platform</div>;
-const SustainableTechnology = () => <div>Sustainable Technology</div>;
-const AIPredictiveMaintenance = () => <div>AI Predictive Maintenance</div>;
-const QuantumMachineLearning = () => <div>Quantum Machine Learning</div>;
-const AIContentCreation = () => <div>AI Content Creation</div>;
-const Dashboard = () => <div>Dashboard</div>;
-const Login = () => <div>Login</div>;
-const FAQ = () => <div>FAQ</div>;
-const SearchPage = () => <div>Search Page</div>;
-const Partners = () => <div>Partners</div>;
-const News = () => <div>News</div>;
-const CaseStudies = () => <div>Case Studies</div>;
-const HelpCenter = () => <div>Help Center</div>;
-const Pricing = () => <div>Pricing</div>;
-const Marketplace = () => <div>Marketplace</div>;
-const AiSolutions = () => <div>AI Solutions</div>;
-const ITConsulting = () => <div>IT Consulting</div>;
-const SpaceTech = () => <div>Space Tech</div>;
-const QuantumComputing = () => <div>Quantum Computing</div>;
-const IoTEdgeComputing = () => <div>IoT Edge Computing</div>;
-const DigitalTwin = () => <div>Digital Twin</div>;
-const DataAnalytics = () => <div>Data Analytics</div>;
-const Sitemap = () => <div>Sitemap</div>;
+// Error Fallback Component
+const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
+  <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="text-center text-white max-w-md mx-auto p-8">
+      <h1 className="text-4xl font-bold mb-4 text-red-400">Something went wrong</h1>
+      <p className="text-gray-300 mb-6">
+        {error.message || 'An unexpected error occurred'}
+      </p>
+      <div className="space-y-3">
+        <button
+          onClick={resetErrorBoundary}
+          className="w-full bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-lg transition-colors"
+        >
+          Try again
+        </button>
+        <button
+          onClick={() => window.location.href = '/'}
+          className="w-full bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors"
+        >
+          Go home
+        </button>
+      </div>
+    </div>
+  </div>
+);
 
 function App() {
   return (
@@ -158,8 +149,59 @@ function App() {
                         </motion.div>
                       } 
                     />
-                    <Route 
-                      path="/about" 
+                    <Route path="/about" element={<About />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/blog" element={<Blog />} />
+                    <Route path="/careers" element={<Careers />} />
+                    <Route path="/partners" element={<Partners />} />
+                    <Route path="/services" element={<Services />} />
+                    <Route path="/solutions" element={<Solutions />} />
+                    <Route path="/pricing" element={<Pricing />} />
+                    <Route path="/team" element={<Team />} />
+                    <Route path="/leadership" element={<Leadership />} />
+                    <Route path="/case-studies" element={<CaseStudies />} />
+                    <Route path="/news" element={<News />} />
+                    <Route path="/help" element={<Help />} />
+                    <Route path="/support" element={<Support />} />
+                    <Route path="/community" element={<Community />} />
+                    <Route path="/press" element={<Press />} />
+                    <Route path="/faq" element={<FAQ />} />
+                    <Route path="/privacy" element={<Privacy />} />
+                    <Route path="/terms" element={<Terms />} />
+                    <Route path="/cookies" element={<Cookies />} />
+                    <Route path="/data-protection" element={<DataProtection />} />
+                    <Route path="/accessibility" element={<Accessibility />} />
+                    <Route path="/sitemap" element={<Sitemap />} />
+
+                    {/* Service Routes */}
+                    <Route path="/services-pricing" element={<ServicesPricingPage />} />
+                    <Route path="/system-status" element={<SystemStatus />} />
+                    <Route path="/search" element={<Search />} />
+                    <Route path="/documentation" element={<Documentation />} />
+                    <Route path="/marketplace" element={<Marketplace />} />
+                    <Route path="/training" element={<Training />} />
+                    <Route path="/webinars" element={<Webinars />} />
+                    <Route path="/api-playground" element={<ApiPlayground />} />
+                    <Route path="/research" element={<Research />} />
+                    <Route path="/categories" element={<Categories />} />
+                    <Route path="/login" element={<Login />} />
+
+                    {/* 2028 Innovative AI Services */}
+                    <Route path="/services/ai-autonomous-vehicle-management-platform" element={<AIAutonomousVehicleManagementPlatform />} />
+                    <Route path="/services/ai-smart-city-infrastructure-management" element={<AISmartCityInfrastructureManagement />} />
+                    <Route path="/services/ai-quantum-financial-trading-platform" element={<AIQuantumFinancialTradingPlatform />} />
+
+                    {/* 2028 Services Showcase */}
+                    <Route path="/innovative-services-showcase-2028" element={<InnovativeServicesShowcase2028 />} />
+
+                    {/* 2025 Innovative Services Showcase and Pricing Guide */}
+                    <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
+                    <Route path="/comprehensive-pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
+
+                    {/* 404 Page */}
+                    <Route
+                      path="*"
+>>>>>>> origin/cursor/website-audit-content-update-and-deployment-f872
                       element={
                         <motion.div
                           initial={{ opacity: 0 }}
