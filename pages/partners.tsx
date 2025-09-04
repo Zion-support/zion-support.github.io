@@ -6,7 +6,8 @@ const Partners: NextPag e = () => {
 const partnerCategories = [
     {
       title: 'Technology Partners',
-      description: 'Leading technology companies that provide the foundation for our solutions',
+      description: 'Leading technology companies that provide cutting-edge solutions and platforms.',
+      icon: Building,
       partners: [
         {
           name: 'Microsoft',
@@ -127,13 +128,23 @@ const partnerCategories = [
         {/* Partner Categories */}
         <section className="py-20">
           <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              {partnerCategories.map((category, categoryIndex) => (
-                <div key={categoryIndex} className="mb-16">
-                  <div className="text-center mb-12">
-                    <h2 className="text-3xl font-bold text-gray-900 mb-4">{category.title}</h2>
-                    <p className="text-xl text-gray-600 max-w-3xl mx-auto">{category.description}</p>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                Our Partner Ecosystem
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                We work with industry leaders to deliver comprehensive solutions that drive digital transformation and business growth.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {partnerCategories.map((category, index) => (
+                <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+                  <div className="flex items-center mb-6">
+                    <category.icon className="w-8 h-8 text-blue-600 mr-3" />
+                    <h3 className="text-2xl font-bold text-gray-900">{category.title}</h3>
                   </div>
+                  <p className="text-gray-600 mb-6">{category.description}</p>
                   
                   <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
                     {category.partners.map((partner, partnerIndex) => (
