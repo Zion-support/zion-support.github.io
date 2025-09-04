@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import ContactForm from '../components/ContactForm';
 
 export default function Contact(): any {
   const contact = {
@@ -127,6 +128,21 @@ export default function Contact(): any {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Contact Form */}
+        <section className="py-16 px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Send Us a Message
+              </h2>
+              <p className="text-lg text-slate-300">
+                Fill out the form below and we&apos;ll get back to you within 24 hours
+              </p>
+            </div>
+            <ContactForm />
           </div>
         </section>
 

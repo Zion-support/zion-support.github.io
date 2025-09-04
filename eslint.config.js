@@ -19,12 +19,44 @@ export default [
         },
       },
       globals: {
+<<<<<<< HEAD
         window: 'readonly',
         document: 'readonly',
         localStorage: 'readonly',
         console: 'readonly',
         process: 'readonly',
         PerformanceObserver: 'readonly',
+=======
+        // Browser globals
+        window: 'readonly',
+        document: 'readonly',
+        localStorage: 'readonly',
+        sessionStorage: 'readonly',
+        console: 'readonly',
+        setTimeout: 'readonly',
+        clearTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearInterval: 'readonly',
+        fetch: 'readonly',
+        navigator: 'readonly',
+        location: 'readonly',
+        history: 'readonly',
+        // DOM types
+        HTMLInputElement: 'readonly',
+        HTMLTextAreaElement: 'readonly',
+        HTMLSelectElement: 'readonly',
+        HTMLDivElement: 'readonly',
+        MouseEvent: 'readonly',
+        Node: 'readonly',
+        PerformanceObserver: 'readonly',
+        // Node.js globals
+        process: 'readonly',
+        Buffer: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        global: 'readonly',
+        // React globals
+>>>>>>> cursor/add-new-services-and-advertise-them-1b6b
         React: 'readonly',
       },
     },
