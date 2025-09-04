@@ -1,53 +1,39 @@
 #!/usr/bin/env node
 
-/**
- * Git Workflow Automation
- * Handles git operations for the project
- */
-
 const fs = require('fs')
 const path = require('path')
 
 class GitWorkflow {
-  constructor() { 
-    this.branch = 'main';
-    this.changes = [];
-    this.reports = []}
+	constructor() {
+		this.branch = 'main'
+	}
 
-  log(message, type = 'INFO') { 
-    const icons = {
-      'INFO': 'ℹ️',
-      'SUCCESS': '✅',
-      'ERROR': '❌',
-      'WARNING': '⚠️',
-      'PROGRESS': '🔄'
-   ; ;};
-    
-    console.log(`${icons[type]} ${message}`);}
+	log(message, type = 'INFO') {
+		const icons = { INFO: 'ℹ️', SUCCESS: '✅', ERROR: '❌', WARNING: '⚠️', PROGRESS: '🔄' }
+		console.log(`${icons[type] || ''} ${message}`)
+	}
 
-  checkGitRepository() { 
-    if () {
-      this.log('Not in a git repository', 'WARNING')) {
-    ) {
-      this.log('Not in a git repository', 'WARNING');
-  }
-      return false;}
-    this.log('Git repository found', 'SUCCESS');
-    return true;}
+	checkGitRepository() {
+		const isRepo = fs.existsSync(path.join('.git', 'HEAD'))
+		if (!isRepo) this.log('Not in a git repository', 'WARNING')
+		else this.log('Git repository found', 'SUCCESS')
+		return isRepo
+	}
 
-  generateCommitMessage() { 
-    const timestamp = new Date().toISOString(;);
-    const changes = [
-      'Automated improvements and optimizations',
-      'Enhanced automation scripts',
-      'Added comprehensive testing suite',
-      'Improved security configurations',
-      'Performance optimizations'
-    ;];
-    return `${changes.join(', ');} - ${timestamp}`}
+	generateCommitMessage() {
+		const timestamp = new Date().toISOString()
+		const changes = [
+			'Automated improvements and optimizations',
+			'Enhanced automation scripts',
+			'Added comprehensive testing suite',
+			'Improved security configurations',
+			'Performance optimizations',
+		]
+		return `${changes.join(', ')} - ${timestamp}`
+	}
 
-  createGitIgnore() { 
-    const gitignoreContent = `# Dependencies
+	createGitIgnore() {
+		const gitignoreContent = `# Dependencies
 node_modules/
 npm-debug.log*
 yarn-debug.log*
@@ -69,9 +55,6 @@ build/
 # Logs
 logs/
 *.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
 
 # Runtime data
 pids/
@@ -79,292 +62,139 @@ pids/
 *.seed
 *.pid.lock
 
-# Coverage directory used by tools like istanbul
+# Coverage
 coverage/
 *.lcov
-
-# nyc test coverage
 .nyc_output
 
-# Dependency directories
-node_modules/
-jspm_packages/
-
-# Optional npm cache directory
-.npm
-
-# Optional eslint cache
-.eslintcache
-
-# Microbundle cache
+# Caches
+.cache
+.parcel-cache
 .rpt2_cache/
 .rts2_cache_cjs/
 .rts2_cache_es/
 .rts2_cache_umd/
 
-# Optional REPL history
-.node_repl_history
-
-# Output of 'npm pack'
-*.tgz
-
-# Yarn Integrity file
-.yarn-integrity
-
-# parcel-bundler cache (https://parceljs.org/)
-.cache
-.parcel-cache
-
-# Next.js build output
-.next
-
-# Nuxt.js build / generate output
-.nuxt
-dist
-
-# Gatsby files
-.cache/
-public
-
-# Storybook build outputs
-.out
-.storybook-out
-
-# Temporary folders
-tmp/
-temp/
-
-# Editor directories and files
+# Editors
 .vscode/
 .idea/
-*.swp
-*.swo
-*~
 
-# OS generated files
+# OS
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
 Thumbs.db
 
 # Automation reports
 *-report.json
 automation-reports/
 ai-analysis-reports/
-ai-optimization-backups/
+.ai-optimization-backups/
 
-# PM2 logs
+# PM2
 .pm2/
 
 # Security reports
-security-reports/;
-;`;
+security-reports/
+`
+		if (!fs.existsSync('.gitignore')) {
+			fs.writeFileSync('.gitignore', gitignoreContent)
+			this.log('Created .gitignore file', 'SUCCESS')
+		} else {
+			this.log('.gitignore already exists', 'INFO')
+		}
+	}
 
-    if () {
-      fs.writeFileSync('.gitignore', gitignoreContent)) {
-    ) {
-      fs.writeFileSync('.gitignore', gitignoreContent);
-  }
-      this.log('Created .gitignore file', 'SUCCESS')} else {
-      this.log('.gitignore already exists', 'INFO')}
-  }
+	createReadme() {
+		const readmeContent = `# Zion Tech Group - Automation & Testing Suite
 
-  createReadme() { 
-    const readmeContent = `# Zion Tech Group - Automation & Testing Suite
+See package.json scripts for usage.`
+		if (!fs.existsSync('README-AUTOMATION.md')) {
+			fs.writeFileSync('README-AUTOMATION.md', readmeContent)
+			this.log('Created README-AUTOMATION.md', 'SUCCESS')
+		} else {
+			this.log('README-AUTOMATION.md already exists', 'INFO')
+		}
+	}
 
-## Overview
-This project includes comprehensive automation scripts, testing suites, and optimization tools for the Zion Tech Group application.
+	createPackageJsonScripts() {
+		try {
+			const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'))
+			packageJson.scripts = packageJson.scripts || {}
+			const newScripts = {
+				'automation:git': 'node git-workflow.cjs',
+			}
+			let updated = false
+			for (const [k, v] of Object.entries(newScripts)) {
+				if (!packageJson.scripts[k]) {
+					packageJson.scripts[k] = v
+					updated = true
+				}
+			}
+			if (updated) {
+				fs.writeFileSync('package.json', JSON.stringify(packageJson, null, 2))
+				this.log('Updated package.json with automation scripts', 'SUCCESS')
+			} else {
+				this.log('Package.json already has automation scripts', 'INFO')
+			}
+		} catch (error) {
+			this.log(`Error updating package.json: ${error.message}`, 'ERROR')
+		}
+	}
 
-## Features
-- 🚀 Comprehensive automation system
-- 🧪 Automated testing suite
-- 🔒 Security auditing
-- ⚡ Performance monitoring
-- 🔧 Git workflow automation
-
-## Quick Start
-
-### Running Automation
-\`\`\`bash
-# Run comprehensive automation
-node comprehensive-automation.js
-
-# Run test suite
-node test-suite.cjs
-
-# Run git workflow
-node git-workflow.cjs
-\`\`\`
-
-### Available Scripts
-\`\`\`bash
-# Development
-npm run dev
-
-# Build
-npm run build
-
-# Test
-npm test
-
-# Lint
-npm run lint
-\`\`\`
-
-## Automation Scripts
-
-### Master Automation
-\`\`\`bash
-node master-automation.cjs
-\`\`\`
-
-### Individual Components
-- **Comprehensive Automation**: \`node comprehensive-automation.js\`
-- **Test Suite**: \`node test-suite.cjs\`
-- **Git Workflow**: \`node git-workflow.cjs\`
-
-## Generated Scripts
-- \`scripts/performance-monitor.js\` - Performance monitoring
-- \`scripts/security-auditor.js\` - Security auditing
-- \`scripts/test-runner.js\` - Test execution
-- \`scripts/git-workflow.js\` - Git operations
-
-## Reports
-All automation scripts generate detailed reports in JSON format for analysis and monitoring.
-
-## Contributing
-1. Run the automation suite before making changes
-2. Ensure all tests pass
-3. Follow the established git workflow
-4. Update documentation as needed
-
-## License
-MIT License - see LICENSE file for details;
-;`;
-
-    if () {
-      fs.writeFileSync('README-AUTOMATION.md', readmeContent)) {
-    ) {
-      fs.writeFileSync('README-AUTOMATION.md', readmeContent);
-  }
-      this.log('Created README-AUTOMATION.md', 'SUCCESS')} else {
-      this.log('README-AUTOMATION.md already exists', 'INFO')}
-  }
-
-  createPackageJsonScripts() { 
-    try {
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8';););
-      
-      // Add automation scripts if they don't exist
-      const newScripts = {
-        'automation:run': 'node comprehensive-automation.js',
-        'automation:test': 'node test-suite.cjs',
-        'automation:git': 'node git-workflow.cjs',
-        'automation:all': 'npm run automation:run && npm run automation:test && npm run automation:git',
-        'test:comprehensive': 'node test-suite.cjs',
-        'performance:monitor': 'node scripts/performance-monitor.js',
-        'security:audit': 'node scripts/security-auditor.js'
-     ; ;};
-
-      let updated = fal;s;e;
-      Object.keys(newScripts).forEach(script => {
-        if ( {
-          packageJson.scripts[script] = newScripts[script]) {
-     {
-          packageJson.scripts[script] = newScripts[script];
-  }
-          updated = true}
-      });
-
-      if ( { 
-        fs.writeFileSync('package.json', JSON.stringify(packageJson, null, 2))) {
-     { 
-        fs.writeFileSync('package.json', JSON.stringify(packageJson, null, 2));
-  }
-        this.log('Updated package.json with automation scripts', 'SUCCESS')} else {
-        this.log('Package.json already has automation scripts', 'INFO')}
-    } catch (error) {
-      this.log(`Error updating package.json: ${error.message}`, 'ERROR')}
-  }
-
-  generateGitCommands() { 
-    const commands = [
-      'git add .',
-      `git commit -m "${this.generateCommitMessage()}"`,
-      'git push origin main'
-    ;];
-    
-    const scriptContent = `#!/bin/bash
+	generateGitCommands() {
+		const scriptContent = `#!/bin/bash
 # Git workflow automation script
+set -euo pipefail
+
 echo "🚀 Starting git workflow..."
 
-# Add all changes
 echo "📝 Adding changes..."
 git add .
 
-# Commit changes
 echo "💾 Committing changes..."
-git commit -m "${this.generateCommitMessage()}"
+if ! git diff --cached --quiet; then
+	git commit -m "${this.generateCommitMessage()}"
+else
+	echo "No changes to commit"
+fi
 
-# Push to main branch
-echo "🚀 Pushing to main branch..."
-git push origin main
+echo "🚀 Pushing to ${this.branch}..."
+git push origin ${this.branch}
 
-echo "✅ Git workflow completed successfully";
-;`;
+echo "✅ Git workflow completed successfully"`
+		fs.writeFileSync('git-workflow.sh', scriptContent)
+		fs.chmodSync('git-workflow.sh', '755')
+		this.log('Created git-workflow.sh script', 'SUCCESS')
+	}
 
-    fs.writeFileSync('git-workflow.sh', scriptContent);
-    fs.chmodSync('git-workflow.sh', '755');
-    this.log('Created git-workflow.sh script', 'SUCCESS')}
+	generateReport() {
+		const report = {
+			timestamp: new Date().toISOString(),
+			gitRepository: this.checkGitRepository(),
+			filesCreated: ['.gitignore', 'README-AUTOMATION.md', 'git-workflow.sh'],
+			packageJsonUpdated: true,
+			commitMessage: this.generateCommitMessage(),
+		}
+		fs.writeFileSync('git-workflow-report.json', JSON.stringify(report, null, 2))
+		this.log('📊 Git Workflow Report Generated', 'SUCCESS')
+	}
 
-  generateReport() { 
-    const report = {
-      timestamp: new Date().toISOString(),
-      gitRepository: this.checkGitRepository(),
-      filesCreated: [
-        '.gitignore',
-        'README-AUTOMATION.md',
-        'git-workflow.sh'
-      ],
-      packageJsonUpdated: true,
-      commitMessage: this.generateCommitMessage(),
-      nextSteps: [
-        'Review the generated files',
-        'Run: chmod +x git-workflow.sh',
-        'Execute: ./git-workflow.sh',
-        'Or manually run git commands'
-      ]
-   ; ;};
-
-    fs.writeFileSync('git-workflow-report.json', JSON.stringify(report, null, 2));
-    
-    this.log('📊 Git Workflow Report Generated', 'SUCCESS');
-    this.log('📝 Files created and updated', 'SUCCESS');
-    this.log('🚀 Ready for git operations', 'SUCCESS')}
-
-  async run() { 
-    this.log('🔄 Starting Git Workflow Automation...', 'PROGRESS');
-    
-    this.createGitIgnore();
-    this.createReadme();
-    this.createPackageJsonScripts();
-    this.generateGitCommands();
-    this.generateReport();
-    
-    this.log('✅ Git Workflow Automation Completed', 'SUCCESS')}
+	async run() {
+		this.log('🔄 Starting Git Workflow Automation...', 'PROGRESS')
+		this.createGitIgnore()
+		this.createReadme()
+		this.createPackageJsonScripts()
+		this.generateGitCommands()
+		this.generateReport()
+		this.log('✅ Git Workflow Automation Completed', 'SUCCESS')
+	}
 }
 
-// Run the git workflow
-if ( { 
-  const workflow = new GitWorkflow) {
-     { 
-  const workflow = new GitWorkflow;
-  }(;);
-  workflow.run().catch(error => {
-    console.error('Git workflow failed:', error);
-    process.exit(1)})}
+if (require.main === module) {
+	const workflow = new GitWorkflow()
+	workflow.run().catch(error => {
+		console.error('Git workflow failed:', error)
+		process.exit(1)
+	})
+}
 
-module.exports = GitWorkflow;
+module.exports = GitWorkflow

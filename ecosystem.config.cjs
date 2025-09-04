@@ -35,7 +35,7 @@ module.exports = {
     },
     {
       name: 'build-monitor',
-      script: 'automation/build-monitor.js',
+      script: 'automation/build-monitor.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
