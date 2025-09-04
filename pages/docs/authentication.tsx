@@ -4,11 +4,11 @@ import Link from 'next/link';
 import { ArrowLeft, Key, Shield, Lock, User } from 'lucide-react';
 
 export default function Authentication() {
-  const contact = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    site: 'https://ziontechgroup.com'
+  const contact = { 
+    phone: '+1 302 464 0950', 
+    email: 'kleber@ziontechgroup.com', 
+    address: '364 E Main St STE 1008 Middletown DE 19709', 
+    site: 'https://ziontechgroup.com' 
   };
 
   return (
@@ -18,7 +18,7 @@ export default function Authentication() {
         <meta name="description" content="Learn how to authenticate with Zion Tech Group's APIs using API keys, OAuth 2.0, and JWT tokens." />
         <link rel="canonical" href={`${contact.site}/docs/authentication`} />
       </Head>
-
+      
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         <div className="max-w-4xl mx-auto px-4 py-8">
           {/* Header */}
@@ -40,11 +40,10 @@ export default function Authentication() {
                 <Key className="w-8 h-8 text-blue-600 mr-3" />
                 <h2 className="text-2xl font-semibold text-gray-900">API Key Authentication</h2>
               </div>
-              
               <p className="text-gray-600 mb-6">
                 The simplest way to authenticate with our APIs. Include your API key in the request headers.
               </p>
-
+              
               <div className="bg-gray-900 rounded-lg p-4 mb-6">
                 <pre className="text-green-400 text-sm overflow-x-auto">
 {`curl -X GET "https://api.ziontechgroup.com/v1/services" \\
@@ -52,7 +51,7 @@ export default function Authentication() {
   -H "Content-Type: application/json"`}
                 </pre>
               </div>
-
+              
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">Getting Your API Key</h3>
@@ -80,11 +79,10 @@ export default function Authentication() {
                 <Shield className="w-8 h-8 text-green-600 mr-3" />
                 <h2 className="text-2xl font-semibold text-gray-900">OAuth 2.0</h2>
               </div>
-              
               <p className="text-gray-600 mb-6">
                 For applications that need to access user data or perform actions on behalf of users.
               </p>
-
+              
               <div className="bg-gray-900 rounded-lg p-4 mb-6">
                 <pre className="text-green-400 text-sm overflow-x-auto">
 {`// Authorization URL
@@ -105,7 +103,7 @@ client_secret=YOUR_CLIENT_SECRET&
 redirect_uri=YOUR_REDIRECT_URI`}
                 </pre>
               </div>
-
+              
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">OAuth Flow</h3>
@@ -134,11 +132,10 @@ redirect_uri=YOUR_REDIRECT_URI`}
                 <Lock className="w-8 h-8 text-purple-600 mr-3" />
                 <h2 className="text-2xl font-semibold text-gray-900">JWT Tokens</h2>
               </div>
-              
               <p className="text-gray-600 mb-6">
                 JSON Web Tokens for stateless authentication with built-in expiration and claims.
               </p>
-
+              
               <div className="bg-gray-900 rounded-lg p-4 mb-6">
                 <pre className="text-green-400 text-sm overflow-x-auto">
 {`// JWT Token Structure
@@ -156,7 +153,7 @@ redirect_uri=YOUR_REDIRECT_URI`}
 }`}
                 </pre>
               </div>
-
+              
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">Token Features</h3>

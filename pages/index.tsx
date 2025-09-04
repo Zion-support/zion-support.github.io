@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import Head from 'next/head';
-import Image from 'next/image';
 
 export default function Home() {
   const contact = {
@@ -8,7 +7,7 @@ export default function Home() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  }
+  };
   return (
     <>
       <Head>
@@ -64,7 +63,9 @@ export default function Home() {
               Innovative Micro SaaS, AI Services & IT Solutions
             </p>
             <p className="text-lg text-slate-400 mb-12 max-w-3xl mx-auto">
- (feat: Add 30+ new innovative services across micro SaaS, AI, and IT categories)
+              We deliver cutting-edge technology solutions with 150+ innovative micro SaaS products, 
+              90+ advanced AI services, and 100+ comprehensive IT solutions. From quantum computing 
+              to AI automation, we help businesses scale efficiently and securely with next-generation technology.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
@@ -85,7 +86,7 @@ export default function Home() {
                 <p className="text-slate-300">Micro SaaS Products</p>
               </div>
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
- (feat: Add 30+ new innovative services across micro SaaS, AI, and IT categories)
+                <h3 className="text-2xl font-bold text-purple-400 mb-2">90+</h3>
                 <p className="text-slate-300">AI Services</p>
               </div>
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
@@ -173,7 +174,7 @@ export default function Home() {
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-              <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
+              <a href={`tel:${contact.phone.replace(/[^\d+]/g, '')}`} className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
                 Call {contact.phone}
               </a>
               <a href={`mailto:${contact.email}`} className="px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors">
@@ -186,7 +187,9 @@ export default function Home() {
             
             <div className="text-slate-400">
               <p>{contact.address}</p>
-              <p className="mt-2">Visit us at <a href={contact.site} className="text-blue-400 hover:text-blue-300">{contact.site}</a></p>
+              <p className="mt-2">
+                Visit us at <a href={contact.site} className="text-blue-400 hover:text-blue-300">{contact.site}</a>
+              </p>
             </div>
           </div>
         </section>

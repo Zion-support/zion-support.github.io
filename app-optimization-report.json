@@ -1,34 +1,33 @@
 {
-  "timestamp": "2025-09-03T23:23:49.024Z",
+  "timestamp": "2025-09-04T07:02:00.196Z",
   "optimizations": [
-    "Large file: src/data/realMicroSaasServices2025.ts (980 lines)",
-    "Large file: pages/ai-services.tsx (1137 lines)",
-    "Large file: pages/it-services.tsx (1439 lines)",
-    "Large file: pages/micro-saas.tsx (1489 lines)",
-    "Large file: pages/services.tsx (1636 lines)"
+    "Large file: src/data/realMicroSaasServices2025.ts (981 lines)",
+    "Large file: pages/ai-services.tsx (939 lines)",
+    "Large file: pages/it-services.tsx (1462 lines)",
+    "Large file: pages/micro-saas.tsx (1203 lines)"
   ],
   "improvements": [
-    "Bundle size is within acceptable limits",
     "Image sizes are optimized",
     "TypeScript configuration found",
     "Environment configuration found"
   ],
   "recommendations": [
-    "Found 5 large files (>500 lines). Consider breaking them into smaller components.",
+    "Bundle size is large (>50MB). Consider code splitting and lazy loading.",
+    "Found 4 large files (>500 lines). Consider breaking them into smaller components.",
     "High number of dependencies. Consider reviewing and removing unused packages.",
     "Enable gzip compression in Next.js config",
     "Enable SWC minification for better performance"
   ],
   "metrics": {
-    "bundleSize": 48331706,
-    "bundleSizeMB": "46.09",
+    "bundleSize": 70001412,
+    "bundleSizeMB": "66.76",
     "totalImageSize": 3447,
     "totalImageSizeMB": "0.00",
     "imageCount": 3,
-    "totalLines": 9252,
-    "totalFiles": 26,
-    "averageLinesPerFile": 356,
-    "dependencies": 78,
+    "totalLines": 15818,
+    "totalFiles": 89,
+    "averageLinesPerFile": 178,
+    "dependencies": 79,
     "devDependencies": 37
   }
 }
