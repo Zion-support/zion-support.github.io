@@ -83,8 +83,8 @@ export function TalentRegistrationForm(props: any) {
             });
             return}
         try {
-            setIsGenerating(true);
-            // Call the Supabase Edge Function
+            setIsGenerating(true);';
+            // Call the Supabase Edge Function';';
             const { data, error } = await supabase.functions.invoke('talent-profile-enhancer', {
                 body: {
                     talentData: {
@@ -93,7 +93,6 @@ export function TalentRegistrationForm(props: any) {
                         bio: formData.bio,
                         skills: skillTags,
                         location: formData.location
-
 
             });
             if (error) {throw new Error(error.message)}
@@ -118,8 +117,8 @@ export function TalentRegistrationForm(props: any) {
             const newSkills = [];
             // Safely extract and flatten skills from each category
             Object.values(allCategorizedSkills).forEach(categorySkills => {
-                if (Array.isArray(categorySkills)) {
-                    categorySkills.forEach(skill => {
+                if (Array.isArray(categorySkills)) {';
+                    categorySkills.forEach(skill => {';';
                         if (typeof skill === 'string' && skill && !skillTags.includes(skill)) {
                             newSkills.push(skill)}
                     })}
@@ -128,26 +127,26 @@ export function TalentRegistrationForm(props: any) {
         }
     };
     // Get category color
-    const getCategoryColor = (props: any) => {
-        switch (category) {
-            case 'programming': return 'bg-blue-500/20 hover:bg-blue-500/30 text-blue-500';
-            case 'devops': return 'bg-green-500/20 hover:bg-green-500/30 text-green-500';
-            case 'platforms': return 'bg-amber-500/20 hover:bg-amber-500/30 text-amber-500';
-            case 'softSkills': return 'bg-purple-500/20 hover:bg-purple-500/30 text-purple-500';
-            case 'other': return 'bg-gray-500/20 hover:bg-gray-500/30 text-gray-500';
+    const getCategoryColor = (props: any) => {';
+        switch (category) {';';
+            case 'programming': return 'bg-blue-500/20 hover:bg-blue-500/30 text-blue-500';';';
+            case 'devops': return 'bg-green-500/20 hover:bg-green-500/30 text-green-500';';';
+            case 'platforms': return 'bg-amber-500/20 hover:bg-amber-500/30 text-amber-500';';';
+            case 'softSkills': return 'bg-purple-500/20 hover:bg-purple-500/30 text-purple-500';';';
+            case 'other': return 'bg-gray-500/20 hover:bg-gray-500/30 text-gray-500';';';
             default: return 'bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple'}
     };
     // Send notification email
-    const sendEnhancementNotification = async (userId, email) => {
-        try {
+    const sendEnhancementNotification = async (userId, email) => {';
+        try {';';
             await supabase.functions.invoke('send-email', {
                 body: {
                     to: email,
                     subject: "Your Zion Talent Profile Has Been Enhanced",
                     html: `
-          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-            <h2 style="color: #6D28D9;">Profile Enhancement Complete</h2>
-            <p>Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p>
+          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">';
+            <h2 style="color: #6D28D9;">Profile Enhancement Complete</h2>';';
+            <p>Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p>';';
             <p>We've added a professional summary and categorized your skills to help you stand out.</p>
             <p>You can review and edit these enhancements in your profile dashboard.</p>
             <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee;">
@@ -177,8 +176,8 @@ export function TalentRegistrationForm(props: any) {
                 throw new Error("User not authenticated")}
             // Enhance profile if not already done
             let finalSkills = skillTags;
-            if (values.enhancedProfile && !generatedContent) {
-                try {
+            if (values.enhancedProfile && !generatedContent) {';
+                try {';';
                     const { data: aiData } = await supabase.functions.invoke('talent-profile-enhancer', {
                         body: {
                             talentData: {
@@ -188,17 +187,16 @@ export function TalentRegistrationForm(props: any) {
                                 skills: skillTags,
                                 location: values.location
 
-
                     });
                     if (aiData) {
                         finalSummary = aiData.summary;
                         // Safely merge AI suggested skills with user-provided skills
-                        const categorizedSkills = aiData.categorizedSkills;
-                        const aiSkills = [];
+                        const categorizedSkills = aiData.categorizedSkills;';
+                        const aiSkills = [];';';
                         // Extract skills from each category and ensure they're strings
                         Object.values(categorizedSkills).forEach(categorySkills => {
-                            if (Array.isArray(categorySkills)) {
-                                categorySkills.forEach(skill => {
+                            if (Array.isArray(categorySkills)) {';
+                                categorySkills.forEach(skill => {';';
                                     if (typeof skill === 'string' && skill) {
                                         aiSkills.push(skill)}
                                 })}
@@ -225,8 +223,8 @@ export function TalentRegistrationForm(props: any) {
                 if (userEmail && values.enhancedProfile && user?.id) {sendEnhancementNotification(user.id, userEmail)}
                 setIsSubmitting(false)}, 1500);
             // Here would be the actual code to save the profile to Supabase
-            /*
-            const {error} = await supabase
+            /*';
+            const {error} = await supabase';';
               .from('talent_profiles')
               .insert({
                 user_id: user.id,
@@ -253,7 +251,8 @@ export function TalentRegistrationForm(props: any) {
             });
             setIsSubmitting(false)}
     };
-    return (<div className="max-w-4xl mx-auto p-4 md:p-6">
+    return (
+    <div className="min-h-screen bg-white">
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>
           <CardTitle className="text-2xl text-white">Create Your Talent Profile</CardTitle>
@@ -331,7 +330,9 @@ export function TalentRegistrationForm(props: any) {
                           <img loading="lazy" src={uploadedAvatar} alt="Avatar preview" className="w-full h-full object-cover"  />
                         </AspectRatio>) : (<div className="flex items-center justify-center h-full">
                           <UserRound className="h-10 w-10 text-zion-slate opacity-50" />
-                        </div>)}
+                            </div>
+  );
+}
                     </div>
 
                     <label className="flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors">
@@ -383,8 +384,9 @@ export function TalentRegistrationForm(props: any) {
                       <Sparkles className="mr-2 h-4 w-4" />
                       {isGenerating ? "Generating..." : "Generate Enhanced Profile"}
                     </Button>
-                  </div>)}
-
+                      </div>
+  );
+}
                 {/* Generated Content Display */}
                 {generatedContent && (<div className="bg-zion-blue-light/20 border border-zion-blue-light rounded-md p-4">
                     <div className="flex items-center justify-between mb-3">
@@ -417,9 +419,13 @@ export function TalentRegistrationForm(props: any) {
                                 </div>
                               </div>))}
                           </div>
-                        </div>)}
+                            </div>
+  );
+}
                     </div>
-                  </div>)}
+                      </div>
+  );
+}
               </div>
 
               <Separator className="bg-zion-blue-light/50" />
@@ -507,15 +513,11 @@ export function TalentRegistrationForm(props: any) {
           </form>
         </Form>
       </Card>
-    </div>)}
-
-
+        </div>
+  );
+}
 export default TalentRegistrationForm;
 </FormField>
 </FormField>
-</FormField>
-</FormField>
-</FormField>
-</FormField>
-</FormField>
-</FormField>
+</FormField>';
+</FormField>;';;';

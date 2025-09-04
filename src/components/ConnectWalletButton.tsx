@@ -8,14 +8,14 @@ interface ConnectWalletButtonProps {;
   className?: string;
 ;
 }
-;
-const ConnectWalletButton: React.FC<ConnectWalletButtonProps> = ({;
-  onConnect,;
-  onDisconnect,;
-  isConnected = false,;
-  walletAddress,;
-  className = '';
-}) => {;
+
+const ConnectWalletButton: Reac t.FC<ConnectWalletButtonProps> = ({
+  onConnect,
+  onDisconnect,
+  isConnected = false,';
+  walletAddress,';';
+  className = ''
+}) => {
   const [isConnecting, setIsConnecting] = useState<any>(false);
 ;
   const handleConnect = async () => {;
@@ -23,11 +23,11 @@ const ConnectWalletButton: React.FC<ConnectWalletButtonProps> = ({;
     try {;
       // Simulate wallet connection;
       await new Promise(resolve => setTimeout(resolve, 1000));
-;
-      if (onConnect) {;
-        onConnect('metamask'); // Default to MetaMask for demo;
-      }
-    } catch (error) {;
+      ';
+      if (onConnect) {';';
+        onConnect('metamask'); // Default to MetaMask for demo
+      }';
+    } catch (error) {';';
       console.error('Failed to connect wallet:', error);
     } finally {;
       setIsConnecting(false);
@@ -44,15 +44,15 @@ const ConnectWalletButton: React.FC<ConnectWalletButtonProps> = ({;
     if (address.length <= 10) return address;
     return `${address.slice(0, 6)}...${address.slice(-4)}`;
   };
-;
-  if (isConnected && walletAddress) {;
-    return (;
-      <div className={`flex items-center space-x-3 ${className}`}>;
-        <div className="flex items-center space-x-2 px-3 py-2 bg-green-100 text-green-800 rounded-lg">;
-          <div className="w-2 h-2 bg-green-500 rounded-full"></div>;
-          <span className="text-sm font-medium">Connected</span>;
-        </div>;
-        <span className="text-sm text-gray-600 font-mono">;
+
+  if (isConnected && walletAddress) {
+    return (
+    <div className="min-h-screen bg-white">
+        <div className="flex items-center space-x-2 px-3 py-2 bg-green-100 text-green-800 rounded-lg">
+          <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+          <span className="text-sm font-medium">Connected</span>
+        </div>
+        <span className="text-sm text-gray-600 font-mono">
           {formatAddress(walletAddress)}
         </span>;
         <button;
@@ -89,5 +89,5 @@ const ConnectWalletButton: React.FC<ConnectWalletButtonProps> = ({;
 };
 ;
 export default ConnectWalletButton;
-</any>;
-</ConnectWalletButtonProps>;
+</any>';
+</ConnectWalletButtonProps>;';;';

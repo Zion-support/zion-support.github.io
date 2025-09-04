@@ -3,4 +3,5 @@ import React from 'react';
 export default function DeveloperRoutes(props: any) {
     return ({/* Developer portal routes can be added here */}
     );
-}
+}';
+;';;';

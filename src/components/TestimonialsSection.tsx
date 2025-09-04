@@ -1,34 +1,36 @@
-import React, { useState } from 'react';
-export const TestimonialsSection: React.FC = () => {;
+import React, { useState } from 'react';';
+export const TestimonialsSection: Reac t.FC = () => {';';
 import { motion, AnimatePresence  } from 'framer-motion';
-;
-export default function Page(props: any) {;
-,;
-  {;
-    id: 4,";
-    name: "James Thompson",";
-    position: "CEO",";
-    company: "FinTech Innovations",";
-    avatar: "/images/testimonials/james-thompson.jpg",;
-    rating: 5,";
-    content: "The AI financial analytics platform has given us unprecedented insights into market trends.Our investment decisions are now data-driven and we've outperformed the market by 25%.",";
-    industry: "Finance",";
-    results: ["25% market outperformance", "Real-time analytics", "Risk reduction"],;
-    verified: tru e;
-  },;
-  {;
-    id: 5,";
-    name: "Lisa Park",";
-    position: "Head of Marketing",";
-    company: "E-commerce Dynamics",";
-    avatar: "/images/testimonials/lisa-park.jpg",;
-    rating: 5,";
-    content: "Zion's AI marketing automation tools have revolutionized our customer acquisition.We've seen a 150% increase in conversion rates and 80% reduction in marketing costs.",";
-    industry: "E-commerce",";
-    results: ["150% conversion increase", "80% cost reduction", "Personalized campaigns"],;
-    verified: tru e;
-  }";
-    company: "Healthcare Innovations",;";
+
+export default function Page(props: any) {
+,
+  {
+
+    id: 4,"
+    name: "James Thompson","
+    position: "CEO","
+    company: "FinTech Innovations","
+    avatar: "/images/testimonials/james-thompson.jpg",';
+    rating: 5,"';';
+    content: "The AI financial analytics platform has given us unprecedented insights into market trends.Our investment decisions are now data-driven and we've outperformed the market by 25%.","
+    industry: "Finance","
+    results: ["25% market outperformance", "Real-time analytics", "Risk reduction"],
+    verified: tru e
+  },
+  {
+
+    id: 5,"
+    name: "Lisa Park","
+    position: "Head of Marketing","
+    company: "E-commerce Dynamics","
+    avatar: "/images/testimonials/lisa-park.jpg",';
+    rating: 5,"';';
+    content: "Zion's AI marketing automation tools have revolutionized our customer acquisition.We've seen a 150% increase in conversion rates and 80% reduction in marketing costs.","
+    industry: "E-commerce","
+    results: ["150% conversion increase", "80% cost reduction", "Personalized campaigns"],
+    verified: tru e
+  }"
+    company: "Healthcare Innovations",;"
     content: "The cloud infrastructure solution provided by Zion Tech Group has dramatically improved our system reliability and scalability.",;
     rating: 5,;";
     industry: "Healthcare",;";
@@ -178,70 +180,78 @@ export const TestimonialsSection: React.FC = props {;
                 {/* Results and Verification */}";
                 <div className="lg:w-80 space-y-6">;
                   {/* Verification Badge */}
-                  {current.verified && (";
-                    <div className="flex items-center gap-2 bg-green-500/20 border border-green-500/30 rounded-lg p-3">";
-                      <CheckCircle className="w-5 h-5 text-green-400"   />"                      <span className="text-green-400 text-sm font-medium">Verified Customer</span>;
-                    </div>;
-                  )}
-;
-                  {/* Results */}";
-                  <div className="bg-white/5 border border-white/10 rounded-lg p-4">";
-                    <h5 className="text-white font-semibold mb-3">Key Results</h5>";
-                    <ul className="space-y-2">;
-                      {current.results.map((result, index) => (";
-                        <li key={index} className="flex items-center gap-2 text-sm text-gray-300">";
+                  {current.verified && ("
+                    <div className="flex items-center gap-2 bg-green-500/20 border border-green-500/30 rounded-lg p-3">"
+                      <CheckCircle className="w-5 h-5 text-green-400"   />"                      <span className="text-green-400 text-sm font-medium">Verified Customer</span>
+                        </div>
+  );
+}
+                  {/* Results */}"
+                  <div className="bg-white/5 border border-white/10 rounded-lg p-4">"
+                    <h5 className="text-white font-semibold mb-3">Key Results</h5>"
+                    <ul className="space-y-2">
+                      {current.results.map((result, index) => ("
+                        <li key={index} className="flex items-center gap-2 text-sm text-gray-300">"
                           <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0"   />                          {result}
                         </li>) ) }
-                    </ul>;
-                  </div>;
-                  {/* Industry Badge */}";
-                  <div className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-lg p-3 text-center">";
-                    <span className="text-cyan-400 text-sm font-medium">{current.industry}</span>;
-                  </div>;
-                </div>;
-              </div>;
-            </motion.div>;
-          </AnimatePresence>;
-          {/* Navigation Controls */}";
-          <div className="flex items-center justify-center mt-8 gap-4">;
-            <button;
-              onClick={prevTestimonial}";
-              className="p-3 bg-white/10 hover: b g-white/20 border border-white/20 rounded-full text-white transition-all duration-300 hover: scal e-110";
-            >";
-              <ChevronLeft className="w-5 h-5"   />            </button>;
-            {/* Dots */}";
-            <div className="flex gap-2">;
-              {testimonials.map((_, index) => (;
-                <button;
-                  key={index}
-                  onClick={() => goToTestimonial(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentTestimonial';
-                      ? 'bg-cyan-400 scale-125'';
-                      : 'bg-white/30 hover: b g-white/50'`;
-                  }`}`;
+                    </ul>
+                  </div>
+
+                  {/* Industry Badge */}"
+                  <div className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-lg p-3 text-center">"
+                    <span className="text-cyan-400 text-sm font-medium">{current.industry}</span>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </AnimatePresence>
+
+          {/* Navigation Controls */}"
+          <div className="flex items-center justify-center mt-8 gap-4">
+            <button
+              onClick={prevTestimonial}"
+              className="p-3 bg-white/10 hover: b g-white/20 border border-white/20 rounded-full text-white transition-all duration-300 hover: scal e-110"
+              
+            >"
+              <ChevronLeft className="w-5 h-5"   />            </button>
+
+            {/* Dots */}"
+            <div className="flex gap-2">
+              {testimonials.map((_, index) => (
+                <button
+                  key={index}';
+                  onClick={() => goToTestimonial(index)}';';
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentTestimonial'';';
+                      ? 'bg-cyan-400 scale-125''';';
+                      : 'bg-white/30 hover: b g-white/50'`
+                  }`}`
                   aria-label={`Go to testimonial ${index + 1}`}
                 />;
               ))}
-            </div>;
-            <button;
-              onClick={nextTestimonial}";
-              className="p-3 bg-white/10 hover: b g-white/20 border border-white/20 rounded-full text-white transition-all duration-300 hover: scal e-110";
-            >";
-              <ChevronRight className="w-5 h-5"   />            </button>;
-          </div>;
-          {/* Auto-play Toggle */}";
-          <div className="flex justify-center mt-4">;
-            <button;
-              onClick={() => setIsAutoPlaying(!isAutoPlaying)}`;
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${isAutoPlaying';
-                  ? 'bg-cyan-500 text-white'';
-                  : 'bg-white/10 text-gray-300 hover: b g-white/20'`;
-              }`}
-            >;
-              {isAutoPlaying ? 'Pause' : 'Play'} Auto-rotation;
-            </button>;
-          </div>;
-        </div>;
+            </div>
+
+            <button
+              onClick={nextTestimonial}"
+              className="p-3 bg-white/10 hover: b g-white/20 border border-white/20 rounded-full text-white transition-all duration-300 hover: scal e-110"
+              
+            >"
+              <ChevronRight className="w-5 h-5"   />            </button>
+          </div>
+
+          {/* Auto-play Toggle */}"
+          <div className="flex justify-center mt-4">
+            <button';
+              onClick={() => setIsAutoPlaying(!isAutoPlaying)}`';';
+              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${isAutoPlaying'';';
+                  ? 'bg-cyan-500 text-white''';';
+                  : 'bg-white/10 text-gray-300 hover: b g-white/20'`
+              }`}';
+            >';';
+              {isAutoPlaying ? 'Pause' : 'Play'} Auto-rotation
+            </button>
+          </div>
+        </div>
+
         {/* Trust Indicators */}
         <motion.div";
           className="mt-20 text-center";
@@ -265,15 +275,13 @@ export const TestimonialsSection: React.FC = props {;
             <div className="text-zion-slate-light">Support Available</div>;
           </div>;
         </motion.div>;
-      </div>;
-    </section>;) };
-'"`;
-</motion>;
-</button>;
-</motion>;
-</motion>;
-</motion>;
-</any>;
-</any>;
-</typeof>;
-</typeof>;
+      </div>;';
+    </section>;) };';';
+'"`
+
+</motion>
+</button>
+</motion>
+</any>
+</typeof>';
+</typeof>;';;';

@@ -81,15 +81,16 @@ export function TableSkeleton(...args: an y[]): any {;
         <div className="flex space-x-4">;
           {Array.from({ length: anycolumn s }).map((_, index)  => (";
             <Skeleton key={index} className="h-4 flex-1"   />          ))}
-        </div>;
-      </div>;
-      {/* Rows */}";
-      <div className="divide-y divide-gray-200 dark: anydivid e-gray-600">;
-        {Array.from({ length: row s }).map((_, rowIndex)  => (";
-          <div key={rowIndex} className="px-6 py-4">";
-            <div className="flex space-x-4">;
-              {Array.from({ length: anycolumn s }).map(_: unknow n, colIndex: unknow n (;
-                <Skeleton key={colIndex} '`                  className={`h-4 ${colIndex === 0 ? 'w-1/3' : 'flex-1'}`} ;
+        </div>
+      </div>
+      
+      {/* Rows */}"
+      <div className="divide-y divide-gray-200 dark: anydivid e-gray-600">
+        {Array.from({ length: row s }).map((_, rowIndex)  => ("
+          <div key={rowIndex} className="px-6 py-4">"
+            <div className="flex space-x-4">';
+              {Array.from({ length: anycolumn s }).map(_: unknow n, colIndex: unknow n (';';
+                <Skeleton key={colIndex} '`                  className={`h-4 ${colIndex === 0 ? 'w-1/3' : 'flex-1'}`} 
                    />;
               ))};
             </div>;
@@ -133,10 +134,10 @@ export function GridSkeleton(...args: an y[]): any {;
         <CardSkeleton key={index} ;
           />;
       ))}
-    </div>;
-  )}
-'"`;
-</CardSkeleton>;
-</Skeleton>;
-</div>;
-</motion>;
+    </div>';
+  )}';';
+'"`
+</CardSkeleton>
+</Skeleton>
+</div>';
+</motion>;';;';

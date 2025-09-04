@@ -80,8 +80,7 @@ const PrivacyPage: React.FC = () => {
         </div>
       </section>
     </>
-  );
-};
+  )};
 
 export default PrivacyPage;`;
 
@@ -95,8 +94,7 @@ fixes.forEach(({ file, search, replace }) => {
     
     if (!fs.existsSync(filePath)) {
       console.log(`⚠️  File not found: ${file}`);
-      return;
-    }
+      return}
     
     let content = fs.readFileSync(filePath, 'utf8');
     
@@ -104,13 +102,11 @@ fixes.forEach(({ file, search, replace }) => {
       content = content.replace(search, replace);
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`✅ Fixed issue in ${file}`);
-      fixedCount++;
-    }
+      fixedCount++}
     
   } catch (error) {
     console.error(`❌ Error fixing ${file}:`, error.message);
-    errorCount++;
-  }
+    errorCount++}
 });
 
 // Fix privacy.tsx
@@ -118,11 +114,9 @@ try {
   const privacyPath = path.join(process.cwd(), 'pages/privacy.tsx');
   fs.writeFileSync(privacyPath, privacyContent, 'utf8');
   console.log(`✅ Completely rewrote pages/privacy.tsx`);
-  fixedCount++;
-} catch (error) {
+  fixedCount++} catch (error) {
   console.error(`❌ Error fixing privacy.tsx:`, error.message);
-  errorCount++;
-}
+  errorCount++}
 
 console.log(`\n🎉 Comprehensive syntax error fixing complete!`);
 console.log(`✅ Files fixed: ${fixedCount}`);

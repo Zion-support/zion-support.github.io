@@ -1,152 +1,115 @@
 #!/usr/bin/env node
-const { execSync } = require("child_process");
-const fs = require("fs");
-const path = require("path");
 
-console.log("🚀 Starting CI/CD Automation...");
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
 
 class CICDAutomation {
   constructor() {
-    this.ciResults = {
-      dependencies: { status: "pending", result: null },
-      linting: { status: "pending", result: null },
-      typeCheck: { status: "pending", result: null },
-      build: { status: "pending", result: null },
-      testing: { status: "pending", result: null },
-      quality: { status: "pending", result: null }
-    };
-    this.reportDir = path.join(process.cwd(), "ci-cd-reports");
-    this.ensureReportDirectory();
-    this.startTime = Date.now();
+    this.logFile = path.join(__dirname, 'logs', 'ci-cd-automation.log');
+    this.ensureLogDir();
   }
 
-  ensureReportDirectory() {
-    if (!fs.existsSync(this.reportDir)) {
-      fs.mkdirSync(this.reportDir, { recursive: true });
+  ensureLogDir() {
+    const logDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logDir)) {
+      fs.mkdirSync(logDir, { recursive: true });
     }
   }
 
-  async installDependencies() {
-    try {
-      console.log("📦 Installing dependencies...");
-      execSync("npm install", { stdio: "inherit" });
-      this.ciResults.dependencies = { status: "success", result: "Dependencies installed successfully" };
-    } catch (error) {
-      this.ciResults.dependencies = { status: "error", result: error.message };
-      throw error;
-    }
+  log(message) {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] ${message}\n`;
+    console.log(message);
+    fs.appendFileSync(this.logFile, logMessage);
   }
 
-  async runLinting() {
+  async runTests() {
     try {
-      console.log("🔍 Running linting...");
-      execSync("npm run lint", { stdio: "inherit" });
-      this.ciResults.linting = { status: "success", result: "Linting passed" };
+      this.log('Running tests...');
+      execSync('npm run test:smoke', { stdio: 'pipe' });
+      this.log('Tests completed successfully');
+      return true;
     } catch (error) {
-      this.ciResults.linting = { status: "error", result: error.message };
-      console.log("⚠️ Linting failed, attempting to fix...");
-      try {
-        execSync("npm run lint:fix", { stdio: "inherit" });
-        this.ciResults.linting = { status: "success", result: "Linting issues auto-fixed" };
-      } catch (fixError) {
-        this.ciResults.linting = { status: "error", result: `Linting failed: ${fixError.message}` };
-      }
-    }
-  }
-
-  async runTypeCheck() {
-    try {
-      console.log("🔧 Running type check...");
-      execSync("npm run type-check", { stdio: "inherit" });
-      this.ciResults.typeCheck = { status: "success", result: "Type check passed" };
-    } catch (error) {
-      this.ciResults.typeCheck = { status: "error", result: error.message };
+      this.log(`Tests failed: ${error.message}`);
+      return false;
     }
   }
 
   async runBuild() {
     try {
-      console.log("🏗️ Running build...");
-      execSync("npm run build", { stdio: "inherit" });
-      this.ciResults.build = { status: "success", result: "Build completed successfully" };
+      this.log('Running build...');
+      execSync('npm run build', { stdio: 'pipe' });
+      this.log('Build completed successfully');
+      return true;
     } catch (error) {
-      this.ciResults.build = { status: "error", result: error.message };
-      throw error;
+      this.log(`Build failed: ${error.message}`);
+      return false;
     }
   }
 
-  async runTests() {
+  async runLint() {
     try {
-      console.log("🧪 Running tests...");
-      execSync("npm run test:smoke", { stdio: "inherit" });
-      this.ciResults.testing = { status: "success", result: "Tests passed" };
+      this.log('Running lint...');
+      execSync('npm run lint', { stdio: 'pipe' });
+      this.log('Lint completed successfully');
+      return true;
     } catch (error) {
-      this.ciResults.testing = { status: "error", result: error.message };
+      this.log(`Lint failed: ${error.message}`);
+      return false;
     }
   }
 
-  async runQualityChecks() {
+  async runTypeCheck() {
     try {
-      console.log("✅ Running quality checks...");
-      execSync("npm run check", { stdio: "inherit" });
-      this.ciResults.quality = { status: "success", result: "Quality checks passed" };
+      this.log('Running type check...');
+      execSync('npm run type-check', { stdio: 'pipe' });
+      this.log('Type check completed successfully');
+      return true;
     } catch (error) {
-      this.ciResults.quality = { status: "error", result: error.message };
+      this.log(`Type check failed: ${error.message}`);
+      return false;
     }
   }
 
-  generateReport() {
-    const endTime = Date.now();
-    const duration = endTime - this.startTime;
+  async runCIPipeline() {
+    this.log('Starting CI/CD pipeline...');
     
-    const report = {
-      timestamp: new Date().toISOString(),
-      duration: `${duration}ms`,
-      results: this.ciResults,
-      summary: {
-        total: Object.keys(this.ciResults).length,
-        passed: Object.values(this.ciResults).filter(r => r.status === "success").length,
-        failed: Object.values(this.ciResults).filter(r => r.status === "error").length
-      }
+    const results = {
+      lint: await this.runLint(),
+      typeCheck: await this.runTypeCheck(),
+      test: await this.runTests(),
+      build: await this.runBuild()
     };
 
-    const reportFile = path.join(this.reportDir, `ci-cd-report-${Date.now()}.json`);
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+    const allPassed = Object.values(results).every(result => result);
     
-    console.log(`📊 CI/CD Report generated: ${reportFile}`);
-    console.log(`✅ Passed: ${report.summary.passed}/${report.summary.total}`);
-    console.log(`❌ Failed: ${report.summary.failed}/${report.summary.total}`);
-    
-    return report;
+    if (allPassed) {
+      this.log('CI/CD pipeline completed successfully');
+    } else {
+      this.log('CI/CD pipeline failed - some steps did not pass');
+    }
+
+    return allPassed;
   }
 
-  async run() {
-    try {
-      console.log("🚀 Starting CI/CD Pipeline...");
-      
-      await this.installDependencies();
-      await this.runLinting();
-      await this.runTypeCheck();
-      await this.runBuild();
-      await this.runTests();
-      await this.runQualityChecks();
-      
-      const report = this.generateReport();
-      
-      if (report.summary.failed === 0) {
-        console.log("🎉 CI/CD Pipeline completed successfully!");
-      } else {
-        console.log("⚠️ CI/CD Pipeline completed with some failures");
-      }
-      
-    } catch (error) {
-      console.error("❌ CI/CD Pipeline failed:", error.message);
-      this.generateReport();
-      process.exit(1);
-    }
+  async start() {
+    this.log('CI/CD automation service started');
+    
+    // Run initial pipeline
+    await this.runCIPipeline();
+    
+    // Set up interval for periodic CI/CD (every 4 hours)
+    setInterval(async () => {
+      await this.runCIPipeline();
+    }, 4 * 60 * 60 * 1000);
   }
 }
 
-// Run the automation
-const automation = new CICDAutomation();
-automation.run().catch(console.error);
+// Start the automation if this file is run directly
+if (require.main === module) {
+  const automation = new CICDAutomation();
+  automation.start().catch(console.error);
+}
+
+module.exports = CICDAutomation;

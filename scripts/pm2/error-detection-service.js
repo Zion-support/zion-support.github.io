@@ -29,8 +29,7 @@ class ErrorDetectionService {
     };
     
     this.fixAttempts = new Map();
-    this.isRunning = false;
-  }
+    this.isRunning = false}
 
   log(level, message, data = null) {
     const timestamp = new Date().toISOString();
@@ -43,28 +42,21 @@ class ErrorDetectionService {
     };
 
     if (level === 'error') {
-      console.error(`[${timestamp}] ERROR: ${message}`, data);
-    } else if (level === 'warn') {
-      console.warn(`[${timestamp}] WARN: ${message}`, data);
-    } else if (level === 'info') {
-      console.log(`[${timestamp}] INFO: ${message}`, data);
-    } else if (level === 'debug') {
-      console.log(`[${timestamp}] DEBUG: ${message}`, data);
-    }
+      console.error(`[${timestamp}] ERROR: ${message}`, data)} else if (level === 'warn') {
+      console.warn(`[${timestamp}] WARN: ${message}`, data)} else if (level === 'info') {
+      console.log(`[${timestamp}] INFO: ${message}`, data)} else if (level === 'debug') {
+      console.log(`[${timestamp}] DEBUG: ${message}`, data)}
 
     // Write to log file
-    this.writeToLog(logEntry);
-  }
+    this.writeToLog(logEntry)}
 
   writeToLog(logEntry) {
     const logDir = path.join(this.projectRoot, 'logs', 'pm2');
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
-    }
+      fs.mkdirSync(logDir, { recursive: true })}
 
     const logFile = path.join(logDir, 'error-detection-service.log');
-    fs.appendFileSync(logFile, JSON.stringify(logEntry) + '\n');
-  }
+    fs.appendFileSync(logFile, JSON.stringify(logEntry) + '\n')}
 
   async start() {
     this.log('info', 'Starting Error Detection Service...');
@@ -87,14 +79,10 @@ class ErrorDetectionService {
       // Keep the process alive
       setInterval(() => {
         if (!this.isRunning) {
-          this.performFullScan();
-        }
-      }, this.scanInterval);
-      
-    } catch (error) {
+          this.performFullScan()}
+      }, this.scanInterval)} catch (error) {
       this.log('error', 'Failed to start Error Detection Service', error);
-      process.exit(1);
-    }
+      process.exit(1)}
   }
 
   ensureDirectories() {
@@ -108,16 +96,13 @@ class ErrorDetectionService {
     dirs.forEach(dir => {
       const fullPath = path.join(this.projectRoot, dir);
       if (!fs.existsSync(fullPath)) {
-        fs.mkdirSync(fullPath, { recursive: true });
-      }
-    });
-  }
+        fs.mkdirSync(fullPath, { recursive: true })}
+    })}
 
   async performFullScan() {
     if (this.isRunning) {
       this.log('warn', 'Scan already in progress, skipping...');
-      return;
-    }
+      return}
 
     this.isRunning = true;
     this.log('info', 'Starting full project error scan...');
@@ -141,23 +126,16 @@ class ErrorDetectionService {
 
       // Trigger fixes if auto-fix is enabled
       if (this.autoFix) {
-        await this.triggerErrorFixes();
-      }
+        await this.triggerErrorFixes()}
 
-      this.log('info', 'Full project error scan completed');
-      
-    } catch (error) {
-      this.log('error', 'Error during full scan', error);
-    } finally {
-      this.isRunning = false;
-    }
+      this.log('info', 'Full project error scan completed')} catch (error) {
+      this.log('error', 'Error during full scan', error)} finally {
+      this.isRunning = false}
   }
 
   clearErrorData() {
     Object.keys(this.errorTypes).forEach(key => {
-      this.errorTypes[key] = [];
-    });
-  }
+      this.errorTypes[key] = []})}
 
   async scanForSyntaxErrors() {
     this.log('info', 'Scanning for syntax errors...');
@@ -181,8 +159,7 @@ class ErrorDetectionService {
               line: this.extractLineNumber(content),
               content: content.substring(0, 200) // First 200 chars for context
             });
-            syntaxErrors++;
-          }
+            syntaxErrors++}
         } catch (error) {
           this.errorTypes.syntax.push({
             file,
@@ -191,15 +168,11 @@ class ErrorDetectionService {
             description: 'File cannot be parsed',
             error: error.message
           });
-          syntaxErrors++;
-        }
+          syntaxErrors++}
       }
 
-      this.log('info', `Syntax scan completed. Found ${syntaxErrors} syntax errors`);
-      
-    } catch (error) {
-      this.log('error', 'Error during syntax scan', error);
-    }
+      this.log('info', `Syntax scan completed. Found ${syntaxErrors} syntax errors`)} catch (error) {
+      this.log('error', 'Error during syntax scan', error)}
   }
 
   async scanForTypeScriptErrors() {
@@ -218,14 +191,10 @@ class ErrorDetectionService {
           line: error.line,
           column: error.column,
           code: error.code
-        }));
-      }
+        }))}
 
-      this.log('info', `TypeScript scan completed. Found ${this.errorTypes.typescript.length} errors`);
-      
-    } catch (error) {
-      this.log('error', 'Error during TypeScript scan', error);
-    }
+      this.log('info', `TypeScript scan completed. Found ${this.errorTypes.typescript.length} errors`)} catch (error) {
+      this.log('error', 'Error during TypeScript scan', error)}
   }
 
   async scanForESLintErrors() {
@@ -245,14 +214,10 @@ class ErrorDetectionService {
           column: error.column,
           ruleId: error.ruleId,
           fixable: error.fix
-        }));
-      }
+        }))}
 
-      this.log('info', `ESLint scan completed. Found ${this.errorTypes.eslint.length} errors`);
-      
-    } catch (error) {
-      this.log('error', 'Error during ESLint scan', error);
-    }
+      this.log('info', `ESLint scan completed. Found ${this.errorTypes.eslint.length} errors`)} catch (error) {
+      this.log('error', 'Error during ESLint scan', error)}
   }
 
   async scanForBuildErrors() {
@@ -269,14 +234,10 @@ class ErrorDetectionService {
           severity: 'high',
           description: error.message,
           phase: error.phase || 'unknown'
-        }));
-      }
+        }))}
 
-      this.log('info', `Build scan completed. Found ${this.errorTypes.build.length} errors`);
-      
-    } catch (error) {
-      this.log('error', 'Error during build scan', error);
-    }
+      this.log('info', `Build scan completed. Found ${this.errorTypes.build.length} errors`)} catch (error) {
+      this.log('error', 'Error during build scan', error)}
   }
 
   async scanForDependencyErrors() {
@@ -294,14 +255,10 @@ class ErrorDetectionService {
           description: error.message,
           version: error.version,
           resolution: error.resolution
-        }));
-      }
+        }))}
 
-      this.log('info', `Dependency scan completed. Found ${this.errorTypes.dependency.length} errors`);
-      
-    } catch (error) {
-      this.log('error', 'Error during dependency scan', error);
-    }
+      this.log('info', `Dependency scan completed. Found ${this.errorTypes.dependency.length} errors`)} catch (error) {
+      this.log('error', 'Error during dependency scan', error)}
   }
 
   async scanForConfigurationErrors() {
@@ -328,8 +285,7 @@ class ErrorDetectionService {
                 severity: 'medium',
                 description: 'Configuration file has issues',
                 issues: this.extractConfigurationIssues(content, configFile)
-              });
-            }
+              })}
           } catch (error) {
             this.errorTypes.configuration.push({
               file: configFile,
@@ -337,16 +293,12 @@ class ErrorDetectionService {
               severity: 'high',
               description: 'Configuration file cannot be parsed',
               error: error.message
-            });
-          }
+            })}
         }
       }
 
-      this.log('info', `Configuration scan completed. Found ${this.errorTypes.configuration.length} errors`);
-      
-    } catch (error) {
-      this.log('error', 'Error during configuration scan', error);
-    }
+      this.log('info', `Configuration scan completed. Found ${this.errorTypes.configuration.length} errors`)} catch (error) {
+      this.log('error', 'Error during configuration scan', error)}
   }
 
   findSourceFiles() {
@@ -357,12 +309,10 @@ class ErrorDetectionService {
     sourceDirs.forEach(dir => {
       const fullPath = path.join(this.projectRoot, dir);
       if (fs.existsSync(fullPath)) {
-        this.walkDirectory(fullPath, extensions, files);
-      }
+        this.walkDirectory(fullPath, extensions, files)}
     });
 
-    return files;
-  }
+    return files}
 
   walkDirectory(dir, extensions, files) {
     const items = fs.readdirSync(dir);
@@ -372,15 +322,12 @@ class ErrorDetectionService {
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory()) {
-        this.walkDirectory(fullPath, extensions, files);
-      } else if (stat.isFile()) {
+        this.walkDirectory(fullPath, extensions, files)} else if (stat.isFile()) {
         const ext = path.extname(item);
         if (extensions.includes(ext)) {
-          files.push(fullPath);
-        }
+          files.push(fullPath)}
       }
-    });
-  }
+    })}
 
   hasSyntaxIssues(content, filename) {
     // Check for common syntax issues
@@ -396,8 +343,7 @@ class ErrorDetectionService {
       const backticks = (content.match(/`/g) || []).length;
       
       if (singleQuotes % 2 !== 0 || doubleQuotes % 2 !== 0 || backticks % 2 !== 0) {
-        return true;
-      }
+        return true}
     }
 
     // Check for unterminated comments
@@ -407,8 +353,7 @@ class ErrorDetectionService {
     const closeComments = (content.match(/\*\//g) || []).length;
     
     if (openComments !== closeComments) {
-      return true;
-    }
+      return true}
 
     // Check for missing semicolons in certain contexts
     const lines = content.split('\n');
@@ -422,23 +367,19 @@ class ErrorDetectionService {
           !line.includes('export') && !line.includes('return') && !line.includes('if') &&
           !line.includes('for') && !line.includes('while') && !line.includes('switch')) {
         // This might be a missing semicolon
-        return true;
-      }
+        return true}
     }
 
-    return false;
-  }
+    return false}
 
   extractLineNumber(content) {
     // Try to find the line with the issue
     const lines = content.split('\n');
     for (let i = 0; i < lines.length; i++) {
       if (this.hasSyntaxIssues(lines[i], '')) {
-        return i + 1;
-      }
+        return i + 1}
     }
-    return 1;
-  }
+    return 1}
 
   runTypeScriptCheck() {
     try {
@@ -449,14 +390,11 @@ class ErrorDetectionService {
       });
       
       if (result) {
-        return JSON.parse(result);
-      }
-      return { errors: [] };
-    } catch (error) {
+        return JSON.parse(result)}
+      return { errors: [] }} catch (error) {
       // TypeScript check failed, extract errors from stderr
       const stderr = error.stderr ? error.stderr.toString() : '';
-      return this.parseTypeScriptErrors(stderr);
-    }
+      return this.parseTypeScriptErrors(stderr)}
   }
 
   runESLintCheck() {
@@ -468,14 +406,11 @@ class ErrorDetectionService {
       });
       
       if (result) {
-        return JSON.parse(result);
-      }
-      return { errors: [] };
-    } catch (error) {
+        return JSON.parse(result)}
+      return { errors: [] }} catch (error) {
       // ESLint check failed, extract errors from stderr
       const stderr = error.stderr ? error.stderr.toString() : '';
-      return this.parseESLintErrors(stderr);
-    }
+      return this.parseESLintErrors(stderr)}
   }
 
   runBuildCheck() {
@@ -486,12 +421,10 @@ class ErrorDetectionService {
         stdio: 'pipe'
       });
       
-      return { errors: [] };
-    } catch (error) {
+      return { errors: [] }} catch (error) {
       // Build failed, extract errors from stderr
       const stderr = error.stderr ? error.stderr.toString() : '';
-      return this.parseBuildErrors(stderr);
-    }
+      return this.parseBuildErrors(stderr)}
   }
 
   runDependencyCheck() {
@@ -504,12 +437,9 @@ class ErrorDetectionService {
       
       if (result) {
         const audit = JSON.parse(result);
-        return this.parseDependencyErrors(audit);
-      }
-      return { errors: [] };
-    } catch (error) {
-      return { errors: [] };
-    }
+        return this.parseDependencyErrors(audit)}
+      return { errors: [] }} catch (error) {
+      return { errors: [] }}
   }
 
   parseTypeScriptErrors(stderr) {
@@ -525,12 +455,10 @@ class ErrorDetectionService {
           column: parseInt(match[3]),
           message: match[4].trim(),
           code: 'TS_ERROR'
-        });
-      }
+        })}
     });
     
-    return { errors };
-  }
+    return { errors }}
 
   parseESLintErrors(stderr) {
     const errors = [];
@@ -547,12 +475,10 @@ class ErrorDetectionService {
           ruleId: 'ESLINT_ERROR',
           severity: 2,
           fix: false
-        });
-      }
+        })}
     });
     
-    return { errors };
-  }
+    return { errors }}
 
   parseBuildErrors(stderr) {
     const errors = [];
@@ -565,12 +491,10 @@ class ErrorDetectionService {
           message: line.trim(),
           phase: 'build',
           severity: 'high'
-        });
-      }
+        })}
     });
     
-    return { errors };
-  }
+    return { errors }}
 
   parseDependencyErrors(audit) {
     const errors = [];
@@ -584,39 +508,30 @@ class ErrorDetectionService {
           message: vuln.title,
           version: vuln.installedVersion,
           resolution: vuln.recommendation
-        });
-      });
-    }
+        })})}
     
-    return { errors };
-  }
+    return { errors }}
 
   categorizeTypeScriptSeverity(error) {
     if (error.message.includes('Cannot find module') || 
         error.message.includes('Module not found')) {
-      return 'critical';
-    } else if (error.message.includes('Type') || 
+      return 'critical'} else if (error.message.includes('Type') || 
                error.message.includes('Interface')) {
-      return 'medium';
-    } else {
-      return 'low';
-    }
+      return 'medium'} else {
+      return 'low'}
   }
 
   hasConfigurationIssues(content, filename) {
     try {
       if (filename.endsWith('.json')) {
-        JSON.parse(content);
-      } else if (filename.endsWith('.js') || filename.endsWith('.ts')) {
+        JSON.parse(content)} else if (filename.endsWith('.js') || filename.endsWith('.ts')) {
         // Basic syntax check for JS/TS config files
         if (content.includes('export default') || content.includes('module.exports')) {
           return false; // Looks like valid config
         }
       }
-      return false;
-    } catch (error) {
-      return true;
-    }
+      return false} catch (error) {
+      return true}
   }
 
   extractConfigurationIssues(content, filename) {
@@ -624,18 +539,15 @@ class ErrorDetectionService {
     
     try {
       if (filename.endsWith('.json')) {
-        JSON.parse(content);
-      }
+        JSON.parse(content)}
     } catch (error) {
       issues.push({
         type: 'json_parse_error',
         message: error.message,
         position: error.message.match(/position (\d+)/)?.[1] || 'unknown'
-      });
-    }
+      })}
     
-    return issues;
-  }
+    return issues}
 
   async generateErrorReport() {
     const report = {
@@ -662,9 +574,7 @@ class ErrorDetectionService {
       
       this.errorTypes[type].forEach(error => {
         const severity = error.severity || 'medium';
-        report.summary.severityBreakdown[severity]++;
-      });
-    });
+        report.summary.severityBreakdown[severity]++})});
 
     // Write report to file
     const reportPath = path.join(this.projectRoot, 'error-reports', `error-scan-${Date.now()}.json`);
@@ -673,8 +583,7 @@ class ErrorDetectionService {
     this.log('info', `Error report generated: ${reportPath}`);
     this.log('info', `Total errors found: ${report.summary.totalErrors}`);
 
-    return report;
-  }
+    return report}
 
   generateRecommendations() {
     const recommendations = [];
@@ -684,35 +593,30 @@ class ErrorDetectionService {
         priority: 'high',
         action: 'Run syntax error fixer service',
         description: `${this.errorTypes.syntax.length} syntax errors detected that need immediate attention`
-      });
-    }
+      })}
 
     if (this.errorTypes.typescript.length > 0) {
       recommendations.push({
         priority: 'high',
         action: 'Run TypeScript error fixer service',
         description: `${this.errorTypes.typescript.length} TypeScript errors detected`
-      });
-    }
+      })}
 
     if (this.errorTypes.eslint.length > 0) {
       recommendations.push({
         priority: 'medium',
         action: 'Run ESLint error fixer service',
         description: `${this.errorTypes.eslint.length} ESLint violations detected`
-      });
-    }
+      })}
 
     if (this.errorTypes.dependency.length > 0) {
       recommendations.push({
         priority: 'medium',
         action: 'Update dependencies and run security audit',
         description: `${this.errorTypes.dependency.length} dependency issues detected`
-      });
-    }
+      })}
 
-    return recommendations;
-  }
+    return recommendations}
 
   async triggerErrorFixes() {
     this.log('info', 'Triggering automatic error fixes...');
@@ -720,24 +624,18 @@ class ErrorDetectionService {
     try {
       // Trigger syntax error fixes
       if (this.errorTypes.syntax.length > 0) {
-        await this.triggerService('syntax-error-fixer');
-      }
+        await this.triggerService('syntax-error-fixer')}
 
       // Trigger TypeScript error fixes
       if (this.errorTypes.typescript.length > 0) {
-        await this.triggerService('typescript-error-fixer');
-      }
+        await this.triggerService('typescript-error-fixer')}
 
       // Trigger ESLint error fixes
       if (this.errorTypes.eslint.length > 0) {
-        await this.triggerService('eslint-error-fixer');
-      }
+        await this.triggerService('eslint-error-fixer')}
 
-      this.log('info', 'Error fix triggers completed');
-      
-    } catch (error) {
-      this.log('error', 'Error triggering fixes', error);
-    }
+      this.log('info', 'Error fix triggers completed')} catch (error) {
+      this.log('error', 'Error triggering fixes', error)}
   }
 
   async triggerService(serviceName) {
@@ -747,10 +645,8 @@ class ErrorDetectionService {
         cwd: this.projectRoot,
         stdio: 'pipe'
       });
-      this.log('info', `Triggered service: ${serviceName}`);
-    } catch (error) {
-      this.log('warn', `Failed to trigger service: ${serviceName}`, error.message);
-    }
+      this.log('info', `Triggered service: ${serviceName}`)} catch (error) {
+      this.log('warn', `Failed to trigger service: ${serviceName}`, error.message)}
   }
 
   startContinuousMonitoring() {
@@ -759,8 +655,7 @@ class ErrorDetectionService {
     // Monitor for new errors every minute
     setInterval(async () => {
       if (!this.isRunning) {
-        await this.performFullScan();
-      }
+        await this.performFullScan()}
     }, 60000); // 1 minute
   }
 
@@ -782,17 +677,13 @@ class ErrorDetectionService {
     watcher
       .on('change', (filePath) => {
         this.log('debug', `File changed: ${filePath}`);
-        this.handleFileChange(filePath);
-      })
+        this.handleFileChange(filePath)})
       .on('add', (filePath) => {
         this.log('debug', `File added: ${filePath}`);
-        this.handleFileChange(filePath);
-      })
+        this.handleFileChange(filePath)})
       .on('unlink', (filePath) => {
         this.log('debug', `File removed: ${filePath}`);
-        this.handleFileRemoval(filePath);
-      });
-  }
+        this.handleFileRemoval(filePath)})}
 
   async handleFileChange(filePath) {
     try {
@@ -813,20 +704,16 @@ class ErrorDetectionService {
 
         // Trigger immediate fix if auto-fix is enabled
         if (this.autoFix) {
-          await this.triggerService('syntax-error-fixer');
-        }
+          await this.triggerService('syntax-error-fixer')}
       }
     } catch (error) {
-      this.log('error', `Error handling file change: ${filePath}`, error);
-    }
+      this.log('error', `Error handling file change: ${filePath}`, error)}
   }
 
   handleFileRemoval(filePath) {
     // Remove any errors associated with the deleted file
     Object.keys(this.errorTypes).forEach(type => {
-      this.errorTypes[type] = this.errorTypes[type].filter(error => error.file !== filePath);
-    });
-  }
+      this.errorTypes[type] = this.errorTypes[type].filter(error => error.file !== filePath)})}
 }
 
 // Start the service
@@ -835,27 +722,22 @@ const service = new ErrorDetectionService();
 // Handle graceful shutdown
 process.on('SIGINT', () => {
   service.log('info', 'Received SIGINT, shutting down gracefully...');
-  process.exit(0);
-});
+  process.exit(0)});
 
 process.on('SIGTERM', () => {
   service.log('info', 'Received SIGTERM, shutting down gracefully...');
-  process.exit(0);
-});
+  process.exit(0)});
 
 // Handle uncaught errors
 process.on('uncaughtException', (error) => {
   service.log('error', 'Uncaught exception', error);
-  process.exit(1);
-});
+  process.exit(1)});
 
 process.on('unhandledRejection', (reason, promise) => {
   service.log('error', 'Unhandled rejection', { reason, promise });
-  process.exit(1);
-});
+  process.exit(1)});
 
 // Start the service
 service.start().catch(error => {
   service.log('error', 'Failed to start service', error);
-  process.exit(1);
-});
+  process.exit(1)});

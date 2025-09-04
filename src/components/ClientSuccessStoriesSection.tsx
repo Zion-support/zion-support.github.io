@@ -27,8 +27,8 @@ export function ClientSuccessStoriesSection(props: any) {
         >"
           <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-4">
             Client Success Stories
-          </h2>"
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          </h2>"';
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">';';
             Real results from real clients.Discover how we've helped businesses
             across industries achieve remarkable transformations and measurable success.</p>
         </motion.div>
@@ -143,8 +143,8 @@ export function ClientSuccessStoriesSection(props: any) {
                   <blockquote className="text-gray - 300 text-sm italic mb-3">                    "{story.testimonial}"
                   </blockquote>"
                   <div className="flex items-center gap-3">"
-                    <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center">"
-                      <span className="text-white font-semibold text-sm">
+                    <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center">"';
+                      <span className="text-white font-semibold text-sm">';';
                         {story.author.split(' ').map(n => n[0]).join('')}
                       </span>
                     </div>
@@ -253,11 +253,10 @@ export default ClientSuccessStoriesSection;"
         </motion.div>;
       </div>;
     </section>;) }
-export default ClientSuccessStoriesSection;
-export default ClientSuccessStoriesSection;
+export default ClientSuccessStoriesSection;';
+export default ClientSuccessStoriesSection;';';
 '"
 
 </motion>
-</motion>
-</motion>
-</motion>
+</motion>';
+</motion>;';;';

@@ -8,19 +8,16 @@ class ResourceOptimizer {
   constructor() {
     this.projectRoot = process.cwd();
     this.reportsDir = path.join(this.projectRoot, 'resource-optimization-reports');
-    this.ensureDirectories();
-  }
+    this.ensureDirectories()}
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-    }
+      fs.mkdirSync(this.reportsDir, { recursive: true })}
   }
 
   log(message) {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`);
-  }
+    console.log(`[${timestamp}] ${message}`)}
 
   async optimizeImages() {
     this.log('🖼️ Optimizing images...');
@@ -28,8 +25,7 @@ class ResourceOptimizer {
       const publicDir = path.join(this.projectRoot, 'public');
       if (!fs.existsSync(publicDir)) {
         this.log('⚠️ Public directory not found');
-        return { optimized: 0, files: [] };
-      }
+        return { optimized: 0, files: [] }}
 
       const imageFiles = this.findImageFiles(publicDir);
       let optimizedCount = 0;
@@ -49,8 +45,7 @@ class ResourceOptimizer {
             savings: 0 // Placeholder
           });
           
-          optimizedCount++;
-        } catch (error) {
+          optimizedCount++} catch (error) {
           // Skip files that can't be processed
         }
       }
@@ -62,11 +57,9 @@ class ResourceOptimizer {
         total: imageFiles.length,
         optimized: optimizedCount,
         results: optimizationResults
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`❌ Image optimization failed: ${error.message}`);
-      return { error: error.message };
-    }
+      return { error: error.message }}
   }
 
   async optimizeCSS() {
@@ -94,16 +87,14 @@ class ResourceOptimizer {
 
           if (savings > 0) {
             fs.writeFileSync(cssFile, optimizedContent, 'utf8');
-            optimizedCount++;
-          }
+            optimizedCount++}
 
           optimizationResults.push({
             file: path.relative(this.projectRoot, cssFile),
             originalSize,
             optimizedSize,
             savings
-          });
-        } catch (error) {
+          })} catch (error) {
           // Skip files that can't be processed
         }
       }
@@ -115,11 +106,9 @@ class ResourceOptimizer {
         total: cssFiles.length,
         optimized: optimizedCount,
         results: optimizationResults
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`❌ CSS optimization failed: ${error.message}`);
-      return { error: error.message };
-    }
+      return { error: error.message }}
   }
 
   async optimizeJavaScript() {
@@ -148,16 +137,14 @@ class ResourceOptimizer {
 
           if (savings > 0) {
             fs.writeFileSync(jsFile, optimizedContent, 'utf8');
-            optimizedCount++;
-          }
+            optimizedCount++}
 
           optimizationResults.push({
             file: path.relative(this.projectRoot, jsFile),
             originalSize,
             optimizedSize,
             savings
-          });
-        } catch (error) {
+          })} catch (error) {
           // Skip files that can't be processed
         }
       }
@@ -169,11 +156,9 @@ class ResourceOptimizer {
         total: jsFiles.length,
         optimized: optimizedCount,
         results: optimizationResults
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`❌ JavaScript optimization failed: ${error.message}`);
-      return { error: error.message };
-    }
+      return { error: error.message }}
   }
 
   async optimizeHTML() {
@@ -200,16 +185,14 @@ class ResourceOptimizer {
 
           if (savings > 0) {
             fs.writeFileSync(htmlFile, optimizedContent, 'utf8');
-            optimizedCount++;
-          }
+            optimizedCount++}
 
           optimizationResults.push({
             file: path.relative(this.projectRoot, htmlFile),
             originalSize,
             optimizedSize,
             savings
-          });
-        } catch (error) {
+          })} catch (error) {
           // Skip files that can't be processed
         }
       }
@@ -221,11 +204,9 @@ class ResourceOptimizer {
         total: htmlFiles.length,
         optimized: optimizedCount,
         results: optimizationResults
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`❌ HTML optimization failed: ${error.message}`);
-      return { error: error.message };
-    }
+      return { error: error.message }}
   }
 
   async optimizeDependencies() {
@@ -233,8 +214,7 @@ class ResourceOptimizer {
     try {
       const packageJsonPath = path.join(this.projectRoot, 'package.json');
       if (!fs.existsSync(packageJsonPath)) {
-        throw new Error('package.json not found');
-      }
+        throw new Error('package.json not found')}
 
       const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
       const dependencies = { ...packageJson.dependencies, ...packageJson.devDependencies };
@@ -253,10 +233,8 @@ class ResourceOptimizer {
             importMatches.forEach(match => {
               const dep = match.match(/from\s+['"`]([^'"`]+)['"`]/)[1];
               if (dep && !dep.startsWith('.')) {
-                usedDependencies.add(dep);
-              }
-            });
-          }
+                usedDependencies.add(dep)}
+            })}
 
           // Match require statements
           const requireMatches = content.match(/require\s*\(\s*['"`]([^'"`]+)['"`]\s*\)/g);
@@ -264,10 +242,8 @@ class ResourceOptimizer {
             requireMatches.forEach(match => {
               const dep = match.match(/require\s*\(\s*['"`]([^'"`]+)['"`]\s*\)/)[1];
               if (dep && !dep.startsWith('.')) {
-                usedDependencies.add(dep);
-              }
-            });
-          }
+                usedDependencies.add(dep)}
+            })}
         } catch (error) {
           // Skip files that can't be read
         }
@@ -286,11 +262,9 @@ class ResourceOptimizer {
         used: usedDependencies.size,
         unused: unusedDependencies.length,
         unusedList: unusedDependencies
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`❌ Dependency optimization failed: ${error.message}`);
-      return { error: error.message };
-    }
+      return { error: error.message }}
   }
 
   async optimizeBundleSize() {
@@ -305,8 +279,7 @@ class ResourceOptimizer {
 
       const nextDir = path.join(this.projectRoot, '.next');
       if (!fs.existsSync(nextDir)) {
-        throw new Error('Build output directory not found');
-      }
+        throw new Error('Build output directory not found')}
 
       const buildStats = this.getDirectoryStats(nextDir);
       const sizeInMB = buildStats.size / (1024 * 1024);
@@ -323,11 +296,9 @@ class ResourceOptimizer {
         sizeInMB,
         files: buildStats.files,
         largeFiles
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`❌ Bundle size optimization failed: ${error.message}`);
-      return { error: error.message };
-    }
+      return { error: error.message }}
   }
 
   findImageFiles(dir) {
@@ -342,22 +313,18 @@ class ResourceOptimizer {
           const stats = fs.statSync(filePath);
           
           if (stats.isDirectory()) {
-            scanDirectory(filePath);
-          } else {
+            scanDirectory(filePath)} else {
             const ext = path.extname(file).toLowerCase();
             if (extensions.includes(ext)) {
-              imageFiles.push(filePath);
-            }
+              imageFiles.push(filePath)}
           }
-        });
-      } catch (error) {
+        })} catch (error) {
         // Skip directories that can't be read
       }
     };
 
     scanDirectory(dir);
-    return imageFiles;
-  }
+    return imageFiles}
 
   findCSSFiles() {
     const cssFiles = [];
@@ -371,22 +338,18 @@ class ResourceOptimizer {
           const stats = fs.statSync(filePath);
           
           if (stats.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-            scanDirectory(filePath);
-          } else if (stats.isFile()) {
+            scanDirectory(filePath)} else if (stats.isFile()) {
             const ext = path.extname(file).toLowerCase();
             if (extensions.includes(ext)) {
-              cssFiles.push(filePath);
-            }
+              cssFiles.push(filePath)}
           }
-        });
-      } catch (error) {
+        })} catch (error) {
         // Skip directories that can't be read
       }
     };
 
     scanDirectory(this.projectRoot);
-    return cssFiles;
-  }
+    return cssFiles}
 
   findJavaScriptFiles() {
     const jsFiles = [];
@@ -400,22 +363,18 @@ class ResourceOptimizer {
           const stats = fs.statSync(filePath);
           
           if (stats.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-            scanDirectory(filePath);
-          } else if (stats.isFile()) {
+            scanDirectory(filePath)} else if (stats.isFile()) {
             const ext = path.extname(file).toLowerCase();
             if (extensions.includes(ext)) {
-              jsFiles.push(filePath);
-            }
+              jsFiles.push(filePath)}
           }
-        });
-      } catch (error) {
+        })} catch (error) {
         // Skip directories that can't be read
       }
     };
 
     scanDirectory(this.projectRoot);
-    return jsFiles;
-  }
+    return jsFiles}
 
   findHTMLFiles() {
     const htmlFiles = [];
@@ -429,22 +388,18 @@ class ResourceOptimizer {
           const stats = fs.statSync(filePath);
           
           if (stats.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-            scanDirectory(filePath);
-          } else if (stats.isFile()) {
+            scanDirectory(filePath)} else if (stats.isFile()) {
             const ext = path.extname(file).toLowerCase();
             if (extensions.includes(ext)) {
-              htmlFiles.push(filePath);
-            }
+              htmlFiles.push(filePath)}
           }
-        });
-      } catch (error) {
+        })} catch (error) {
         // Skip directories that can't be read
       }
     };
 
     scanDirectory(this.projectRoot);
-    return htmlFiles;
-  }
+    return htmlFiles}
 
   findSourceFiles() {
     const sourceFiles = [];
@@ -458,22 +413,18 @@ class ResourceOptimizer {
           const stats = fs.statSync(filePath);
           
           if (stats.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-            scanDirectory(filePath);
-          } else if (stats.isFile()) {
+            scanDirectory(filePath)} else if (stats.isFile()) {
             const ext = path.extname(file);
             if (extensions.includes(ext)) {
-              sourceFiles.push(filePath);
-            }
+              sourceFiles.push(filePath)}
           }
-        });
-      } catch (error) {
+        })} catch (error) {
         // Skip directories that can't be read
       }
     };
 
     scanDirectory(this.projectRoot);
-    return sourceFiles;
-  }
+    return sourceFiles}
 
   findLargeFiles(dir, minSize = 1024 * 1024) { // 1MB
     const largeFiles = [];
@@ -486,23 +437,19 @@ class ResourceOptimizer {
           const stats = fs.statSync(filePath);
           
           if (stats.isDirectory()) {
-            scanDirectory(filePath);
-          } else if (stats.isFile() && stats.size > minSize) {
+            scanDirectory(filePath)} else if (stats.isFile() && stats.size > minSize) {
             largeFiles.push({
               file: path.relative(this.projectRoot, filePath),
               size: stats.size,
               sizeFormatted: this.formatBytes(stats.size)
-            });
-          }
-        });
-      } catch (error) {
+            })}
+        })} catch (error) {
         // Skip directories that can't be read
       }
     };
 
     scanDirectory(dir);
-    return largeFiles;
-  }
+    return largeFiles}
 
   getDirectoryStats(dirPath) {
     let totalSize = 0;
@@ -516,28 +463,23 @@ class ResourceOptimizer {
           const stats = fs.statSync(filePath);
           
           if (stats.isDirectory()) {
-            scanDirectory(filePath);
-          } else {
+            scanDirectory(filePath)} else {
             totalSize += stats.size;
-            fileCount++;
-          }
-        });
-      } catch (error) {
+            fileCount++}
+        })} catch (error) {
         // Skip directories that can't be read
       }
     };
 
     scanDirectory(dirPath);
-    return { size: totalSize, files: fileCount };
-  }
+    return { size: totalSize, files: fileCount }}
 
   formatBytes(bytes) {
     if (bytes === 0) return '0 Bytes';
     const k = 1024;
     const sizes = ['Bytes', 'KB', 'MB', 'GB'];
     const i = Math.floor(Math.log(bytes) / Math.log(k));
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
-  }
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]}
 
   isFrameworkDependency(dep) {
     const frameworkDeps = [
@@ -553,8 +495,7 @@ class ResourceOptimizer {
       'autoprefixer'
     ];
     
-    return frameworkDeps.some(framework => dep.includes(framework));
-  }
+    return frameworkDeps.some(framework => dep.includes(framework))}
 
   async generateResourceOptimizationReport() {
     this.log('📊 Generating resource optimization report...');
@@ -579,8 +520,7 @@ class ResourceOptimizer {
     
     this.log(`📄 Resource optimization report generated: ${reportFile}`);
     
-    return report;
-  }
+    return report}
 
   generateRecommendations(analysis) {
     const recommendations = [];
@@ -591,8 +531,7 @@ class ResourceOptimizer {
         priority: 'medium',
         message: `Found ${analysis.images.total} images. Consider optimizing them for web.`,
         impact: 'Reduces page load time'
-      });
-    }
+      })}
 
     if (analysis.css && analysis.css.optimized > 0) {
       recommendations.push({
@@ -600,8 +539,7 @@ class ResourceOptimizer {
         priority: 'low',
         message: `Optimized ${analysis.css.optimized} CSS files. Consider using a CSS minifier.`,
         impact: 'Reduces CSS file size'
-      });
-    }
+      })}
 
     if (analysis.javascript && analysis.javascript.optimized > 0) {
       recommendations.push({
@@ -609,8 +547,7 @@ class ResourceOptimizer {
         priority: 'low',
         message: `Optimized ${analysis.javascript.optimized} JavaScript files. Consider using a minifier.`,
         impact: 'Reduces JavaScript file size'
-      });
-    }
+      })}
 
     if (analysis.dependencies && analysis.dependencies.unused > 0) {
       recommendations.push({
@@ -618,8 +555,7 @@ class ResourceOptimizer {
         priority: 'medium',
         message: `Found ${analysis.dependencies.unused} unused dependencies. Consider removing them.`,
         impact: 'Reduces bundle size and maintenance overhead'
-      });
-    }
+      })}
 
     if (analysis.bundle && analysis.bundle.sizeInMB > 10) {
       recommendations.push({
@@ -627,8 +563,7 @@ class ResourceOptimizer {
         priority: 'high',
         message: `Bundle size is ${analysis.bundle.sizeInMB.toFixed(1)}MB. Consider code splitting and tree shaking.`,
         impact: 'Improves initial page load performance'
-      });
-    }
+      })}
 
     if (analysis.bundle && analysis.bundle.largeFiles.length > 0) {
       recommendations.push({
@@ -636,11 +571,9 @@ class ResourceOptimizer {
         priority: 'medium',
         message: `Found ${analysis.bundle.largeFiles.length} large files. Consider optimizing them.`,
         impact: 'Reduces bundle size'
-      });
-    }
+      })}
 
-    return recommendations;
-  }
+    return recommendations}
 
   async run() {
     this.log('⚡ Starting Resource Optimizer...');
@@ -657,11 +590,9 @@ class ResourceOptimizer {
       this.log(`📦 Bundle size: ${this.formatBytes(report.analysis.bundle.size || 0)}`);
       this.log(`💡 Recommendations: ${report.recommendations.length}`);
       
-      return report;
-    } catch (error) {
+      return report} catch (error) {
       this.log(`💥 Resource optimization failed: ${error.message}`);
-      throw error;
-    }
+      throw error}
   }
 }
 
@@ -673,12 +604,9 @@ if (require.main === module) {
       console.log('\n🎉 Resource Optimizer completed successfully!');
       console.log(`📦 Bundle size: ${optimizer.formatBytes(report.analysis.bundle.size || 0)}`);
       console.log(`💡 Recommendations: ${report.recommendations.length}`);
-      process.exit(0);
-    })
+      process.exit(0)})
     .catch((error) => {
       console.error('\n💥 Resource Optimizer failed:', error.message);
-      process.exit(1);
-    });
-}
+      process.exit(1)})}
 
 module.exports = ResourceOptimizer;

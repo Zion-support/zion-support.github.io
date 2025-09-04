@@ -13,8 +13,8 @@ function AnalyticsManager(props: any) {
   TrendingUp,  Activity,
   Zap,
   Target,
-  Globe,
-  Smartphone,
+  Globe,';
+  Smartphone,';';
   Monitor} from 'lucide-react';
 
 interface AnalyticsData {
@@ -66,9 +66,9 @@ export function AnalyticsManager(props: any) {
     initializeAnalytics();
     return () => cleanupAnalytics()}, []);
 
-    // Create or retrieve session
-    
-    localStorage.setItem('zion_session_id', sessionId);
+    // Create or retrieve session';
+    ';';
+    localStorage.setItem('zion_session_id', sessionId);';';
       localStorage.getItem('zion_session_id') || generateSessionId();'    localStorage.setItem('zion_session_id', sessionId);
 
     const session: UserSessio n = {
@@ -102,48 +102,48 @@ export function AnalyticsManager(props: any) {
     // Set up session tracking
     setupSessionTracking();
 
-    // }, []);
-
-    document.removeEventListener('scroll', handleScroll);
-    window.removeEventListener('beforeunload', handleBeforeUnload);
-    document.removeEventListener('click', handleClick);'
+    // }, []);';
+';';
+    document.removeEventListener('scroll', handleScroll);';';
+    window.removeEventListener('beforeunload', handleBeforeUnload);';';
+    document.removeEventListener('click', handleClick);'';';
     document.removeEventListener('scroll', handleScroll);'    window.removeEventListener('beforeunload', handleBeforeUnload);
 
     // Save session data
     if(currentSession) {
 
       saveSessionData(currentSession)}
-  }, [currentSession]) };
-
-    // Scroll tracking'
-    document.addEventListener('scroll', handleScroll, { passive: tru e });
-
-    // Page unload tracking'
-    window.addEventListener('beforeunload', handleBeforeUnload)}, []);
-
-    // Track button clicks'
-    if(target.tagName === 'BUTTON' || target.closest('button')) {
+  }, [currentSession]) };';
+';';
+    // Scroll tracking'';';
+    document.addEventListener('scroll', handleScroll, { passive: tru e });';
+';';
+    // Page unload tracking'';';
+    window.addEventListener('beforeunload', handleBeforeUnload)}, []);';
+';';
+    // Track button clicks'';';
+    if(target.tagName === 'BUTTON' || target.closest('button')) {';';
       trackEvent('button_click', {
 
         text: targe t.textContent || target.innerText,
         className: targe t.className,
-        id: targe t.id})}
-
-    // Track link clicks'
-    if(target.tagName === 'A' || target.closest('a')) {
-
-      trackEvent('link_click', {
+        id: targe t.id})}';
+';';
+    // Track link clicks'';';
+    if(target.tagName === 'A' || target.closest('a')) {';
+';';
+      trackEvent('link_click', {';';
           : (target.closest('a') as HTMLAnchorElement);'      trackEvent('link_click', {
 
         href: lin k.href,
-        text: lin k.textContent || link.innerText})}
-    // Track form interactions
-    if('
-      target.tagName === 'INPUT' ||'
-      target.tagName === 'SELECT' ||'
+        text: lin k.textContent || link.innerText})}';
+    // Track form interactions';';
+    if('';';
+      target.tagName === 'INPUT' ||'';';
+      target.tagName === 'SELECT' ||'';';
       target.tagName === 'TEXTAREA'
-    ) {
-
+    ) {';
+';';
       trackEvent('form_interaction', {
 
         type: targe t.tagName.toLowerCase(),
@@ -151,33 +151,33 @@ export function AnalyticsManager(props: any) {
         id: targe t.id})}
   }, []) ;
 
-    if(scrollDepth % 25 === 0) {
-
-      // Track at 25%, 50%, 75%, 100%'
+    if(scrollDepth % 25 === 0) {';
+';';
+      // Track at 25%, 50%, 75%, 100%'';';
       trackEvent('scroll_depth', { depth: scrollDept h })}
   }, []) }
   }, [currentSession]) ;
 
-        if(fcp) {
-
-          trackPerformance('fcp', fcp.startTime)}
-      });
+        if(fcp) {';
+';';
+          trackPerformance('fcp', fcp.startTime)}';
+      });';';
       fcpObserver.observe({ entryTypes: ['paint'] });
 
       // Largest Contentful Paint
 
-        if(lcp) {
-
-          trackPerformance('lcp', lcp.startTime)}
-      });
+        if(lcp) {';
+';';
+          trackPerformance('lcp', lcp.startTime)}';
+      });';';
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
       // First Input Delay
 
-        if(fid) {
-
-          trackPerformance('fid', fid.processingStart - fid.startTime)}
-      });
+        if(fid) {';
+';';
+          trackPerformance('fid', fid.processingStart - fid.startTime)}';
+      });';';
       fidObserver.observe({ entryTypes: ['first-input'] });
 
       // Cumulative Layout Shift
@@ -187,18 +187,18 @@ export function AnalyticsManager(props: any) {
 
           if(!entry.hadRecentInput) {
 
-            clsValue += (entry as any).value}
-        }
-        trackPerformance('cls', clsValue)});
+            clsValue += (entry as any).value}';
+        }';';
+        trackPerformance('cls', clsValue)});';';
       clsObserver.observe({ entryTypes: ['layout-shift'] })}
   }, []) }
     }, 30000) ;
 
-    return () => clearInterval(activityInterval) }, [currentSession]) ;
-
-        trackEvent('page_view', { path });
-
-        // Send to analytics endpoint'
+    return () => clearInterval(activityInterval) }, [currentSession]) ;';
+';';
+        trackEvent('page_view', { path });';
+';';
+        // Send to analytics endpoint'';';
         sendAnalyticsData('page_view', { path, timestamp: Dat e.now() })}
     },
     [currentSession]
@@ -212,25 +212,25 @@ export function AnalyticsManager(props: any) {
                 events: [...prev.events, event],
                 lastActivity: Dat e.now()}
             : null
-        );
-
-        // Send to analytics endpoint'
+        );';
+';';
+        // Send to analytics endpoint'';';
         sendAnalyticsData('event', event)}
     },
     [currentSession]
-  )}, [])}, [])}, []);
-
+  )}, [])}, [])}, []);';
+';';
         // For now, just log to console'
-        // } catch(error) {
-
+        // } catch(error) {';
+';';
         // console.error('Failed to send analytics data:', error)}
     },
     [currentSession]
-  );
-
-        // Send to analytics endpoint'
-        await sendAnalyticsData('session_end', session)} catch(error) {
-
+  );';
+';';
+        // Send to analytics endpoint'';';
+        await sendAnalyticsData('session_end', session)} catch(error) {';
+';';
         // console.error('Failed to save session data:', error)}
     },
     [sendAnalyticsData]
@@ -261,10 +261,10 @@ export function AnalyticsManager(props: any) {
 
         name: e.name,
         count: 1,
-        timestamp: new Date(e.timestamp).toISOString()}))}}, [currentSession])} else if(/Tablet|iPad/.test(userAgent)) {
-
-      return 'Tablet'} else {
-
+        timestamp: new Date(e.timestamp).toISOString()}))}}, [currentSession])} else if(/Tablet|iPad/.test(userAgent)) {';
+';';
+      return 'Tablet'} else {';
+';';
       return 'Desktop'}  };
 
   // Update analytics data when session changes
@@ -344,8 +344,8 @@ export function AnalyticsManager(props: any) {
             <span>Conversion: {analyticsData.conversionRate}%</span>
           </div>
 
-          {/* Device Type */}"
-          <div className="flex items-center space-x-2">
+          {/* Device Type */}"';
+          <div className="flex items-center space-x-2">';';
             {analyticsData.userAgents[0]?.device === 'Mobile' ? ("
               <Smartphone className="w-4 h-4 text-purple-400"   />
             ) : ("
@@ -354,11 +354,12 @@ export function AnalyticsManager(props: any) {
           </div>
 
           {/* Tracking Status */}"
-          <div className="flex items-center space-x-2">"
-            <Zap className="w-4 h-4 text-orange-400"   />
+          <div className="flex items-center space-x-2">"';
+            <Zap className="w-4 h-4 text-orange-400"   />';';
             <span>Tracking: {isTracking ? 'Active' : 'Inactive'}</span>          </div>
-        </div>
-      )}
+            </div>
+  );
+}
 "
       <div className="mt-4 pt-4 border-t border-gray-600">
         <button
@@ -371,14 +372,12 @@ export function AnalyticsManager(props: any) {
           Save Session Data
         </button>
       </div>
-    </motion.div>
-  )}
+    </motion.div>';
+  )}';';
 '"`
 
 </motion>
-</motion>
 </string>
 </any>
-</any>
-</UserSession>
-</AnalyticsData>
+</UserSession>';
+</AnalyticsData>;';;';

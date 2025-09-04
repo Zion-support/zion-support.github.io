@@ -36,9 +36,8 @@ class EnhancedAppImprovement {
   }
 
   log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString(;
-  });
-    const logMessage = `[${timestamp}] [${level}] ${message;};`;
+    const timestamp = new Date().toISOString(});
+    const logMessage = `[${timestamp}] [${level}] ${message};`;
     console.log(logMessage);
     
     const logFile = path.join(this.logDir, 'enhanced-app-improvement.log';);
@@ -52,11 +51,11 @@ class EnhancedAppImprovement {
         stdio: 'pipe',
         timeout: timeout,
         cwd: this.projectRoot
-      ;};);
+      };);
       this.log(`✅ ${description} completed successfully`);
-      return { success: true, output: result ;}} catch (error) {
+      return { success: true, output: result }} catch (error) {
       this.log(`❌ ${description} failed: ${error.message}`, 'ERROR');
-      return { success: false, error: error.message, output: error.stdout || '' ;}}
+      return { success: false, error: error.message, output: error.stdout || '' }}
   }
 
   async runComprehensiveTests() {
@@ -83,7 +82,7 @@ class EnhancedAppImprovement {
         command: 'npm audit --audit-level moderate',
         critical: false
       }
-    ;];
+    ];
 
     for (const test of tests) {
       const result = await this.runCommand(test.command, test.name;);
@@ -110,7 +109,7 @@ class EnhancedAppImprovement {
         command: 'find . -name "*.jpg" -o -name "*.png" -o -name "*.webp" | head -10',
         description: 'Checking for unoptimized images'
       }
-    ;];
+    ];
 
     for (const opt of optimizations) {
       const result = await this.runCommand(opt.command, opt.description;);
@@ -136,7 +135,7 @@ class EnhancedAppImprovement {
         command: 'grep -r "process.env" --include="*.js" --include="*.ts" --include="*.tsx" . | grep -v node_modules | head -5',
         description: 'Checking for exposed environment variables'
       }
-    ;];
+    ];
 
     for (const check of securityChecks) {
       const result = await this.runCommand(check.command, check.description;);
@@ -169,9 +168,9 @@ class HealthMonitor {
     console.log('🏥 Running health checks...');
     for (const check of this.checks) {
       try {
-        const result = execSync(check.command, { encoding: 'utf8' ;};);
-        console.log(\`✅ \${check.name}:\\n\${result}\`);} catch (error) {
-        console.log(\`❌ \${check.name}: \${error.message}\`);}
+        const result = execSync(check.command, { encoding: 'utf8' };);
+        console.log(\`✅ \${check.name}:\\n\${result}\`)} catch (error) {
+        console.log(\`❌ \${check.name}: \${error.message}\`)}
     }
   }
 }
@@ -201,15 +200,14 @@ class PerformanceTracker {
     if () {
       const stats = fs.statSync(buildDir) {
     ) {
-      const stats = fs.statSync(buildDir;
-  });
+      const stats = fs.statSync(buildDir});
       this.metrics.bundleSize = stats.size}
   }
 
   saveMetrics() {
     const reportPath = path.join(process.cwd(), 'performance-metrics.json;';);
     fs.writeFileSync(reportPath, JSON.stringify(this.metrics, null, 2));
-    console.log('📊 Performance metrics saved');}
+    console.log('📊 Performance metrics saved')}
 }
 
 module.exports = PerformanceTracker;`
@@ -234,12 +232,12 @@ class AutoDeploy {
       try {
         console.log(\`Executing: \${step}\`);
         execSync(step, { stdio: 'inherit' });
-        console.log(\`✅ \${step} completed\`);} catch (error) {
+        console.log(\`✅ \${step} completed\`)} catch (error) {
         console.log(\`❌ \${step} failed: \${error.message}\`);
         break}
     }
     
-    console.log('🎉 Deployment completed!');}
+    console.log('🎉 Deployment completed!')}
 }
 
 new AutoDeploy().deploy();`
@@ -265,13 +263,13 @@ new AutoDeploy().deploy();`
         improvements: this.results.improvements.length,
         securityChecks: Object.keys(this.results.security).length
       }
-   ; ;};
+   };
 
     const reportPath = path.join(this.logDir, 'enhanced-app-improvement-report.json';);
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     
     this.log(`📄 Report saved to: ${reportPath}`);
-    return report;}
+    return report}
 
   async run() {
     this.log('🚀 Starting Enhanced App Improvement Process...');
@@ -287,7 +285,7 @@ new AutoDeploy().deploy();`
       this.log('✅ Enhanced App Improvement Process completed successfully!');
       this.log(`📊 Summary: ${report.summary.passedTests}/${report.summary.totalTests} tests passed`);
       
-      return report;} catch (error) {
+      return report} catch (error) {
       this.log(`❌ Process failed: ${error.message}`, 'ERROR');
       this.results.errors.push({
         message: error.message,
@@ -309,5 +307,4 @@ module.exports = EnhancedAppImprovement) {
     .then(() => process.exit(0))
     .catch(() => process.exit(1))}
 
-module.exports = EnhancedAppImprovement;
-  }
+module.exports = EnhancedAppImprovement}

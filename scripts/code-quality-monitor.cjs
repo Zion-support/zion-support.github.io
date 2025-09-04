@@ -14,18 +14,18 @@ const qualityMetrics = {
     averageComplexity: 0,
     issues: []
   }
-;};
+};
 
 // Code quality rules
 const qualityRules = [
   {
     name: 'Function Length',
     check: (content) => {
-      const functions = content.match(/function\s+\w+\s*\([^)]*\)\s*\{[\s\S]*?\}/g) || [;];
+      const functions = content.match(/function\s+\w+\s*\([^)]*\)\s*\{[\s\S]*?\}/g) || [];
       const longFunctions = functions.filter(func => {
         const lines = func.split('\n').lengt;h;
-        return lines > 50;});
-      return longFunctions.length;},
+        return lines > 50});
+      return longFunctions.length},
     threshold: 0,
     message: 'Functions should be under 50 lines'
   },
@@ -33,7 +33,7 @@ const qualityRules = [
     name: 'File Length',
     check: (content) => {
       const lines = content.split('\n').lengt;h;
-      return lines > 500 ? 1 : 0;},
+      return lines > 500 ? 1 : 0},
     threshold: 0,
     message: 'Files should be under 500 lines'
   },
@@ -48,16 +48,15 @@ const qualityRules = [
         /switch\s*\(/g,
         /catch\s*\(/g,
         /\?\s*.*\s*:/g
-      ;];
+      ];
       
       let complexity = ;0;
       complexityIndicators.forEach(pattern => {
         const matches = content.match(pattern;);
         if (complexity += matches.length})) {
-    complexity += matches.length});
-  }
+    complexity += matches.length})}
       
-      return complexity;},
+      return complexity},
     threshold: 20,
     message: 'High complexity detected'
   },
@@ -65,7 +64,7 @@ const qualityRules = [
     name: 'Duplicate Code',
     check: (content) => {
       const lines = content.split('\n';);
-      const lineCounts = ;{;};
+      const lineCounts = ;{};
       let duplicates = ;0;
       
       lines.forEach(line => {
@@ -73,15 +72,13 @@ const qualityRules = [
         if ( { // Only check substantial lines
           lineCounts[trimmed] = (lineCounts[trimmed] || 0) + 1) {
      { // Only check substantial lines
-          lineCounts[trimmed] = (lineCounts[trimmed] || 0) + 1;
-  }
+          lineCounts[trimmed] = (lineCounts[trimmed] || 0) + 1}
           if (duplicates++}
       })) {
     duplicates++}
-      });
-  }
+      })}
       
-      return duplicates;},
+      return duplicates},
     threshold: 5,
     message: 'Potential duplicate code detected'
   }
@@ -89,8 +86,7 @@ const qualityRules = [
 
 function analyzeFile(filePath) {
   if () return nul) {
-    ) return nul;
-  }l;
+    ) return nul}l;
   
   try {
     const content = fs.readFileSync(filePath, 'utf8';);
@@ -101,7 +97,7 @@ function analyzeFile(filePath) {
       lines,
       issues: [],
       complexity: 0
-   ; ;};
+   };
     
     qualityRules.forEach(rule => {
       const result = rule.check(content;);
@@ -124,10 +120,9 @@ function analyzeFile(filePath) {
       
       if (rule.name === 'Complexity') {
         analysis.complexity = result}
-    });
-  }
+    })}
     
-    return analysis;} catch (error) {
+    return analysis} catch (error) {
     return {;
       path: filePath,
       error: error.message,
@@ -136,7 +131,7 @@ function analyzeFile(filePath) {
 }
 
 // Analyze files
-const directories = ['components', 'pages', 'lib', 'scripts';];
+const directories = ['components', 'pages', 'lib', 'scripts'];
 let totalFiles = ;0;
 let totalLines = ;0;
 let totalComplexity = ;0;
@@ -145,21 +140,18 @@ directories.forEach(dir => {
   if () {
     const files = fs.readdirSync(dir, { recursive: true })) {
     ) {
-    const files = fs.readdirSync(dir, { recursive: true });
-  }
+    const files = fs.readdirSync(dir, { recursive: true })}
     files.forEach(file => {
       if ($/.test(file)) {
         const filePath = path.join(dir, file) {
     $/.test(file)) {
-        const filePath = path.join(dir, file;
-  });
+        const filePath = path.join(dir, file});
         const analysis = analyzeFile(filePat;h;);
         
         if ( {
           qualityMetrics.files[filePath] = analysis) {
      {
-          qualityMetrics.files[filePath] = analysis;
-  }
+          qualityMetrics.files[filePath] = analysis}
           totalFiles++;
           totalLines += analysis.lines
           totalComplexity += analysis.complexity
@@ -181,8 +173,7 @@ directories.forEach(dir => {
         }
       }
     })}
-});
-  }
+})}
 
 // Calculate summary
 qualityMetrics.summary.totalFiles = totalFiles;
@@ -192,23 +183,22 @@ qualityMetrics.summary.averageComplexity = totalFiles > 0 ? (totalComplexity / t
 // Display results
 console.log('\n📊 Code Quality Report:');
 console.log(`   - Total files analyzed: ${totalFiles}`);
-console.log(`   - Total lines of code: ${totalLines.toLocaleString();}`);
+console.log(`   - Total lines of code: ${totalLines.toLocaleString()}`);
 console.log(`   - Average complexity: ${qualityMetrics.summary.averageComplexity}`);
 console.log(`   - Files with issues: ${qualityMetrics.summary.issues.length}`);
 
 if ( {
   console.log('\n⚠️  Quality Issues:')) {
      {
-  console.log('\n⚠️  Quality Issues:');
-  }
+  console.log('\n⚠️  Quality Issues:')}
   qualityMetrics.summary.issues.forEach(fileIssue => {
     console.log(`\n   📁 ${fileIssue.file}:`);
     fileIssue.issues.forEach(issue => {
       console.log(`      - ${issue.rule}: ${issue.message} (${issue.value});`)})})} else {
-  console.log('\n✅ No quality issues detected');}
+  console.log('\n✅ No quality issues detected')}
 
 // Generate recommendations
-const recommendations = [;];
+const recommendations = [];
 
 if ( {
   recommendations.push('Consider refactoring complex functions')}
@@ -231,8 +221,7 @@ if (totalLines > 10000) {
   recommendations.push('Large codebase - consider modularization')}
 
 if (recommendations.length > 0) {
-  console.log('\n💡 Recommendations:');
-  }
+  console.log('\n💡 Recommendations:')}
   recommendations.forEach(rec => console.log(`   - ${rec}`);)}
 
 // Save report

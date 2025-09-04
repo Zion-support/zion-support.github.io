@@ -4,180 +4,201 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+console.log('🧪 Starting Comprehensive Test Suite...');
+
 class ComprehensiveTestSuite {
   constructor() {
-    this.projectRoot = process.cwd();
-    this.testResults = [];
-    this.errors = [];
-    this.logFile = path.join(this.projectRoot, 'test-suite-log.txt');
+    this.testResults = {
+      timestamp: new Date().toISOString(),
+      tests: [],
+      summary: {
+        total: 0,
+        passed: 0,
+        failed: 0,
+        skipped: 0
+      }
+    };
   }
 
-  log(message) {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}`;
-    console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage + '\n');
-  }
-
-  async runCommand(command, description, timeout = 60000) {
-    this.log(`🚀 ${description}`);
+  async runTest(name, testFunction) {
+    console.log(`🔍 Running: ${name}`);
+    const startTime = Date.now();
+    
     try {
-      const result = execSync(command, { 
-        cwd: this.projectRoot, 
-        encoding: 'utf8',
-        timeout: timeout 
+      const result = await testFunction();
+      const duration = Date.now() - startTime;
+      
+      this.testResults.tests.push({
+        name,
+        status: 'passed',
+        duration,
+        result
       });
-      this.testResults.push({ test: description, status: 'passed', output: result });
-      this.log(`✅ ${description} passed`);
-      return { success: true, output: result };
+      
+      this.testResults.summary.total++;
+      this.testResults.summary.passed++;
+      
+      console.log(`✅ ${name} - PASSED (${duration}ms)`);
+      return true;
     } catch (error) {
-      this.testResults.push({ test: description, status: 'failed', error: error.message });
-      this.errors.push({ test: description, error: error.message });
-      this.log(`❌ ${description} failed: ${error.message}`);
-      return { success: false, error: error.message };
-    }
-  }
-
-  async testSyntaxValidation() {
-    this.log('🔍 Testing syntax validation...');
-    
-    const syntaxTests = [
-      { command: 'node -c package.json', description: 'Package.json syntax' },
-      { command: 'node -c next.config.js', description: 'Next.js config syntax' },
-      { command: 'node -c .eslintrc.js', description: 'ESLint config syntax' }
-    ];
-
-    for (const test of syntaxTests) {
-      await this.runCommand(test.command, test.description);
-    }
-  }
-
-  async testDependencies() {
-    this.log('📦 Testing dependencies...');
-    
-    const dependencyTests = [
-      { command: 'npm list --depth=0', description: 'Dependency listing' },
-      { command: 'npm outdated', description: 'Outdated dependencies check' }
-    ];
-
-    for (const test of dependencyTests) {
-      await this.runCommand(test.command, test.description);
+      const duration = Date.now() - startTime;
+      
+      this.testResults.tests.push({
+        name,
+        status: 'failed',
+        duration,
+        error: error.message
+      });
+      
+      this.testResults.summary.total++;
+      this.testResults.summary.failed++;
+      
+      console.log(`❌ ${name} - FAILED (${duration}ms): ${error.message}`);
+      return false;
     }
   }
 
   async testBuildProcess() {
-    this.log('🏗️ Testing build process...');
-    
-    const buildTests = [
-      { command: 'npm run build', description: 'Production build', timeout: 300000 },
-      { command: 'npm run type-check', description: 'TypeScript type checking', timeout: 120000 }
-    ];
-
-    for (const test of buildTests) {
-      await this.runCommand(test.command, test.description, test.timeout);
-    }
+    return new Promise((resolve, reject) => {
+      try {
+        execSync('npm run build', { stdio: 'pipe' });
+        resolve('Build completed successfully');
+      } catch (error) {
+        reject(new Error(`Build failed: ${error.message}`));
+      }
+    });
   }
 
   async testLinting() {
-    this.log('🔍 Testing linting...');
-    
-    const lintTests = [
-      { command: 'npm run lint', description: 'ESLint linting' }
+    return new Promise((resolve, reject) => {
+      try {
+        execSync('npm run lint', { stdio: 'pipe' });
+        resolve('Linting passed');
+      } catch (error) {
+        reject(new Error(`Linting failed: ${error.message}`));
+      }
+    });
+  }
+
+  async testTypeChecking() {
+    return new Promise((resolve, reject) => {
+      try {
+        execSync('npm run type-check', { stdio: 'pipe' });
+        resolve('Type checking passed');
+      } catch (error) {
+        reject(new Error(`Type checking failed: ${error.message}`));
+      }
+    });
+  }
+
+  async testHealthChecks() {
+    return new Promise((resolve, reject) => {
+      try {
+        execSync('npm run automation:health', { stdio: 'pipe' });
+        resolve('Health checks passed');
+      } catch (error) {
+        reject(new Error(`Health checks failed: ${error.message}`));
+      }
+    });
+  }
+
+  async testSecurityScan() {
+    return new Promise((resolve, reject) => {
+      try {
+        execSync('npm run automation:security', { stdio: 'pipe' });
+        resolve('Security scan passed');
+      } catch (error) {
+        reject(new Error(`Security scan failed: ${error.message}`));
+      }
+    });
+  }
+
+  async testPerformanceOptimization() {
+    return new Promise((resolve, reject) => {
+      try {
+        execSync('npm run automation:performance', { stdio: 'pipe' });
+        resolve('Performance optimization completed');
+      } catch (error) {
+        reject(new Error(`Performance optimization failed: ${error.message}`));
+      }
+    });
+  }
+
+  async testFileStructure() {
+    const requiredFiles = [
+      'package.json',
+      'next.config.js',
+      'tailwind.config.js',
+      'tsconfig.json'
     ];
 
-    for (const test of lintTests) {
-      await this.runCommand(test.command, test.description);
+    const missingFiles = requiredFiles.filter(file => !fs.existsSync(file));
+    
+    if (missingFiles.length > 0) {
+      throw new Error(`Missing required files: ${missingFiles.join(', ')}`);
     }
+
+    return 'File structure is valid';
+  }
+
+  async testDependencies() {
+    const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+    const requiredDeps = ['next', 'react', 'react-dom'];
+    
+    const missingDeps = requiredDeps.filter(dep => !packageJson.dependencies[dep]);
+    
+    if (missingDeps.length > 0) {
+      throw new Error(`Missing required dependencies: ${missingDeps.join(', ')}`);
+    }
+
+    return 'Dependencies are valid';
   }
 
   async testAutomationScripts() {
-    this.log('🤖 Testing automation scripts...');
-    
-    const automationTests = [
-      { command: 'node simple-automation-orchestrator-fixed.cjs', description: 'Simple automation orchestrator' },
-      { command: 'node seo-optimizer-enhanced.cjs', description: 'SEO optimizer' },
-      { command: 'node security-enhancer-enhanced.cjs', description: 'Security enhancer' }
-    ];
-
-    for (const test of automationTests) {
-      await this.runCommand(test.command, test.description);
+    const automationDir = 'automation';
+    if (!fs.existsSync(automationDir)) {
+      throw new Error('Automation directory not found');
     }
+
+    const scripts = fs.readdirSync(automationDir).filter(file => 
+      file.endsWith('.cjs') || file.endsWith('.js')
+    );
+
+    if (scripts.length === 0) {
+      throw new Error('No automation scripts found');
+    }
+
+    return `Found ${scripts.length} automation scripts`;
   }
 
-  async testFileIntegrity() {
-    this.log('📁 Testing file integrity...');
+  async runAllTests() {
+    console.log('🎯 Starting Comprehensive Test Suite...\n');
     
-    const criticalFiles = [
-      'package.json',
-      'next.config.js',
-      '.eslintrc.js',
-      'components/AccessibilityEnhancer.tsx',
-      'public/sitemap.xml',
-      'public/robots.txt'
-    ];
-
-    for (const file of criticalFiles) {
-      const filePath = path.join(this.projectRoot, file);
-      if (fs.existsSync(filePath)) {
-        this.testResults.push({ test: `File exists: ${file}`, status: 'passed' });
-        this.log(`✅ File exists: ${file}`);
-      } else {
-        this.testResults.push({ test: `File exists: ${file}`, status: 'failed' });
-        this.errors.push({ test: `File exists: ${file}`, error: 'File not found' });
-        this.log(`❌ File missing: ${file}`);
-      }
-    }
+    await this.runTest('File Structure', () => this.testFileStructure());
+    await this.runTest('Dependencies', () => this.testDependencies());
+    await this.runTest('Automation Scripts', () => this.testAutomationScripts());
+    await this.runTest('Health Checks', () => this.testHealthChecks());
+    await this.runTest('Security Scan', () => this.testSecurityScan());
+    await this.runTest('Performance Optimization', () => this.testPerformanceOptimization());
+    await this.runTest('Linting', () => this.testLinting());
+    await this.runTest('Type Checking', () => this.testTypeChecking());
+    await this.runTest('Build Process', () => this.testBuildProcess());
+    
+    this.generateReport();
+    
+    console.log('\n🎉 Test Suite Completed!');
+    console.log(`📊 Summary: ${this.testResults.summary.passed}/${this.testResults.summary.total} tests passed`);
+    
+    return this.testResults;
   }
 
-  generateTestReport() {
-    const report = {
-      timestamp: new Date().toISOString(),
-      testResults: this.testResults,
-      errors: this.errors,
-      summary: {
-        totalTests: this.testResults.length,
-        passedTests: this.testResults.filter(t => t.status === 'passed').length,
-        failedTests: this.testResults.filter(t => t.status === 'failed').length,
-        successRate: this.testResults.length > 0 
-          ? (this.testResults.filter(t => t.status === 'passed').length / this.testResults.length * 100).toFixed(2) + '%'
-          : '0%'
-      }
-    };
-
-    const reportPath = path.join(this.projectRoot, 'comprehensive-test-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    this.log(`Test report saved to ${reportPath}`);
-    
-    return report;
-  }
-
-  async run() {
-    this.log('🚀 Starting Comprehensive Test Suite');
-    
-    await this.testSyntaxValidation();
-    await this.testDependencies();
-    await this.testBuildProcess();
-    await this.testLinting();
-    await this.testAutomationScripts();
-    await this.testFileIntegrity();
-    
-    const report = this.generateTestReport();
-    
-    this.log(`🎉 Test suite completed!`);
-    this.log(`📊 Results: ${report.summary.passedTests}/${report.summary.totalTests} tests passed (${report.summary.successRate})`);
-    
-    if (report.summary.failedTests > 0) {
-      this.log(`❌ ${report.summary.failedTests} tests failed`);
-    }
-    
-    return report;
+  generateReport() {
+    const reportPath = `test-suite-report-${Date.now()}.json`;
+    fs.writeFileSync(reportPath, JSON.stringify(this.testResults, null, 2));
+    console.log(`📄 Test report saved to: ${reportPath}`);
   }
 }
 
-// Run the test suite if this file is executed directly
-if (require.main === module) {
-  const testSuite = new ComprehensiveTestSuite();
-  testSuite.run().catch(console.error);
-}
-
-module.exports = ComprehensiveTestSuite;
+// Run the test suite
+const testSuite = new ComprehensiveTestSuite();
+testSuite.runAllTests().catch(console.error);

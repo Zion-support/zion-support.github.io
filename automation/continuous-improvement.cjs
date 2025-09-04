@@ -1,177 +1,124 @@
 #!/usr/bin/env node
-const { execSync } = require("child_process");
-const fs = require("fs");
-const path = require("path");
 
-console.log("🔄 Starting Continuous Improvement Automation...");
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
 
 class ContinuousImprovement {
   constructor() {
-    this.improvements = {
-      codeQuality: { status: "pending", result: null },
-      performance: { status: "pending", result: null },
-      security: { status: "pending", result: null },
-      dependencies: { status: "pending", result: null },
-      documentation: { status: "pending", result: null }
-    };
-    this.reportDir = path.join(process.cwd(), "improvement-reports");
-    this.ensureReportDirectory();
-    this.startTime = Date.now();
+    this.logFile = path.join(__dirname, 'logs', 'continuous-improvement.log');
+    this.ensureLogDir();
   }
 
-  ensureReportDirectory() {
-    if (!fs.existsSync(this.reportDir)) {
-      fs.mkdirSync(this.reportDir, { recursive: true });
+  ensureLogDir() {
+    const logDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logDir)) {
+      fs.mkdirSync(logDir, { recursive: true });
     }
   }
 
-  async improveCodeQuality() {
+  log(message) {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] ${message}\n`;
+    console.log(message);
+    fs.appendFileSync(this.logFile, logMessage);
+  }
+
+  async runSecurityAudit() {
     try {
-      console.log("📝 Improving code quality...");
-      
-      // Run linting and auto-fix
-      try {
-        execSync("npm run lint:fix", { stdio: "inherit" });
-      } catch (error) {
-        console.log("⚠️ Some linting issues couldn't be auto-fixed");
-      }
-      
-      this.improvements.codeQuality = { status: "success", result: "Code quality improvements applied" };
+      this.log('Running security audit...');
+      execSync('npm audit --audit-level moderate', { stdio: 'pipe' });
+      this.log('Security audit completed successfully');
+      return true;
     } catch (error) {
-      this.improvements.codeQuality = { status: "error", result: error.message };
+      this.log(`Security audit found issues: ${error.message}`);
+      return false;
     }
   }
 
-  async improvePerformance() {
+  async runDependencyUpdate() {
     try {
-      console.log("⚡ Analyzing performance...");
-      
-      // Check for performance issues
-      const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8"));
-      const scripts = packageJson.scripts || {};
-      
-      if (scripts["build"]) {
-        console.log("🏗️ Running build to check performance...");
-        execSync("npm run build", { stdio: "inherit" });
-      }
-      
-      this.improvements.performance = { status: "success", result: "Performance analysis completed" };
+      this.log('Checking for dependency updates...');
+      execSync('npm outdated', { stdio: 'pipe' });
+      this.log('Dependency check completed');
+      return true;
     } catch (error) {
-      this.improvements.performance = { status: "error", result: error.message };
+      this.log(`Dependency check failed: ${error.message}`);
+      return false;
     }
   }
 
-  async improveSecurity() {
+  async runPerformanceCheck() {
     try {
-      console.log("🔒 Running security audit...");
-      
-      try {
-        execSync("npm audit", { stdio: "inherit" });
-        this.improvements.security = { status: "success", result: "Security audit completed" };
-      } catch (error) {
-        console.log("⚠️ Security vulnerabilities found, attempting to fix...");
-        try {
-          execSync("npm audit fix", { stdio: "inherit" });
-          this.improvements.security = { status: "success", result: "Security vulnerabilities fixed" };
-        } catch (fixError) {
-          this.improvements.security = { status: "warning", result: "Security issues found but couldn't be auto-fixed" };
-        }
-      }
-    } catch (error) {
-      this.improvements.security = { status: "error", result: error.message };
-    }
-  }
-
-  async updateDependencies() {
-    try {
-      console.log("📦 Checking for dependency updates...");
-      
-      // Check for outdated packages
-      try {
-        execSync("npm outdated", { stdio: "inherit" });
-        this.improvements.dependencies = { status: "success", result: "Dependency check completed" };
-      } catch (error) {
-        // npm outdated exits with code 1 if packages are outdated, which is expected
-        this.improvements.dependencies = { status: "info", result: "Some dependencies are outdated" };
-      }
-    } catch (error) {
-      this.improvements.dependencies = { status: "error", result: error.message };
-    }
-  }
-
-  async improveDocumentation() {
-    try {
-      console.log("📚 Checking documentation...");
-      
-      // Check if README exists and has content
-      const readmePath = path.join(process.cwd(), "README.md");
-      if (fs.existsSync(readmePath)) {
-        const readmeContent = fs.readFileSync(readmePath, "utf8");
-        if (readmeContent.length > 100) {
-          this.improvements.documentation = { status: "success", result: "Documentation looks good" };
-        } else {
-          this.improvements.documentation = { status: "warning", result: "README could be more comprehensive" };
-        }
+      this.log('Running performance check...');
+      // Check if build is optimized
+      if (fs.existsSync('dist') || fs.existsSync('.next')) {
+        this.log('Build artifacts found - performance check passed');
+        return true;
       } else {
-        this.improvements.documentation = { status: "warning", result: "No README.md found" };
+        this.log('No build artifacts found - running build for performance check');
+        execSync('npm run build', { stdio: 'pipe' });
+        return true;
       }
     } catch (error) {
-      this.improvements.documentation = { status: "error", result: error.message };
+      this.log(`Performance check failed: ${error.message}`);
+      return false;
     }
   }
 
-  generateReport() {
-    const endTime = Date.now();
-    const duration = endTime - this.startTime;
+  async runCodeQualityCheck() {
+    try {
+      this.log('Running code quality check...');
+      execSync('npm run lint', { stdio: 'pipe' });
+      execSync('npm run type-check', { stdio: 'pipe' });
+      this.log('Code quality check completed successfully');
+      return true;
+    } catch (error) {
+      this.log(`Code quality check failed: ${error.message}`);
+      return false;
+    }
+  }
+
+  async runImprovementCycle() {
+    this.log('Starting continuous improvement cycle...');
     
-    const report = {
-      timestamp: new Date().toISOString(),
-      duration: `${duration}ms`,
-      improvements: this.improvements,
-      summary: {
-        total: Object.keys(this.improvements).length,
-        successful: Object.values(this.improvements).filter(r => r.status === "success").length,
-        warnings: Object.values(this.improvements).filter(r => r.status === "warning").length,
-        errors: Object.values(this.improvements).filter(r => r.status === "error").length
-      }
+    const results = {
+      security: await this.runSecurityAudit(),
+      dependencies: await this.runDependencyUpdate(),
+      performance: await this.runPerformanceCheck(),
+      quality: await this.runCodeQualityCheck()
     };
 
-    const reportFile = path.join(this.reportDir, `improvement-report-${Date.now()}.json`);
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-    
-    console.log(`📊 Improvement Report generated: ${reportFile}`);
-    console.log(`✅ Successful: ${report.summary.successful}/${report.summary.total}`);
-    console.log(`⚠️ Warnings: ${report.summary.warnings}/${report.summary.total}`);
-    console.log(`❌ Errors: ${report.summary.errors}/${report.summary.total}`);
-    
-    return report;
+    const improvements = Object.entries(results)
+      .filter(([key, value]) => !value)
+      .map(([key]) => key);
+
+    if (improvements.length > 0) {
+      this.log(`Areas needing improvement: ${improvements.join(', ')}`);
+    } else {
+      this.log('All improvement checks passed');
+    }
+
+    return results;
   }
 
-  async run() {
-    try {
-      console.log("🔄 Starting Continuous Improvement Process...");
-      
-      await this.improveCodeQuality();
-      await this.improvePerformance();
-      await this.improveSecurity();
-      await this.updateDependencies();
-      await this.improveDocumentation();
-      
-      const report = this.generateReport();
-      
-      if (report.summary.errors === 0) {
-        console.log("🎉 Continuous Improvement completed successfully!");
-      } else {
-        console.log("⚠️ Continuous Improvement completed with some issues");
-      }
-      
-    } catch (error) {
-      console.error("❌ Continuous Improvement failed:", error.message);
-      this.generateReport();
-    }
+  async start() {
+    this.log('Continuous improvement service started');
+    
+    // Run initial improvement cycle
+    await this.runImprovementCycle();
+    
+    // Set up interval for periodic improvements (every 3 hours)
+    setInterval(async () => {
+      await this.runImprovementCycle();
+    }, 3 * 60 * 60 * 1000);
   }
 }
 
-// Run the automation
-const automation = new ContinuousImprovement();
-automation.run().catch(console.error);
+// Start the automation if this file is run directly
+if (require.main === module) {
+  const automation = new ContinuousImprovement();
+  automation.start().catch(console.error);
+}
+
+module.exports = ContinuousImprovement;

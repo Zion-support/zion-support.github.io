@@ -1,43 +1,48 @@
 import React, { useState, useEffect, useCallback } from 'react';
 export default PerformanceOptimizer;
-import {;
-export default function Page(props: any) {;
-,;
-    {;
-      id: 'code-splitting',;
-      title: 'Implement Code Splitting',;
-      description: 'Split JavaScript bundles to reduce initial load time',;
-      impact: 'high',;
-      category: 'javascript',;
-      implemented: fals e},;
-    {;
-      id: 'css-optimization',;
-      title: 'Optimize CSS Delivery',;
-      description: 'Inline critical CSS and defer non-critical styles',;
-      impact: 'medium',;
-      category: 'css',;
-      implemented: fals e},;
-    {;
-      id: 'font-optimization',;
-      title: 'Optimize Font Loading',;
-      description: 'Use font-display: swap and preload critical fonts',;
-      impact: 'medium',;
-      category: 'fonts',;
-      implemented: fals e},;
-    {;
-      id: 'caching',;
-      title: 'Implement Caching Strategy',;
-      description: 'Set up proper cache headers for static assets',;
-      impact: 'high',;
-      category: 'caching',;
-      implemented: fals e},;
-    {;
-      id: 'server-optimization',;
-      title: 'Server Response Optimization',;
-      description: 'Optimize server response time and enable compression',;
-      impact: 'medium',;
-      category: 'server',;
-      implemented: fals e},;
+import {   
+export default function Page(props: any) {
+,
+    {';
+';';
+      id: 'code-splitting',';';
+      title: 'Implement Code Splitting',';';
+      description: 'Split JavaScript bundles to reduce initial load time',';';
+      impact: 'high',';';
+      category: 'javascript',
+      implemented: fals e},
+    {';
+';';
+      id: 'css-optimization',';';
+      title: 'Optimize CSS Delivery',';';
+      description: 'Inline critical CSS and defer non-critical styles',';';
+      impact: 'medium',';';
+      category: 'css',
+      implemented: fals e},
+    {';
+';';
+      id: 'font-optimization',';';
+      title: 'Optimize Font Loading',';';
+      description: 'Use font-display: swap and preload critical fonts',';';
+      impact: 'medium',';';
+      category: 'fonts',
+      implemented: fals e},
+    {';
+';';
+      id: 'caching',';';
+      title: 'Implement Caching Strategy',';';
+      description: 'Set up proper cache headers for static assets',';';
+      impact: 'high',';';
+      category: 'caching',
+      implemented: fals e},
+    {';
+';';
+      id: 'server-optimization',';';
+      title: 'Server Response Optimization',';';
+      description: 'Optimize server response time and enable compression',';';
+      impact: 'medium',';';
+      category: 'server',
+      implemented: fals e},
   ]);
 ;
   const [isMonitoring, setIsMonitoring] = useState<any>(false);
@@ -50,14 +55,14 @@ export default function Page(props: any) {;
     // Continuous monitoring;
     intervalRef.current = setInterval(() => {;
       updateResourceMetrics()}, 5000)}, [])}, []);
-;
-    const newResourceMetrics: ResourceMetric s = {;
-      totalResources: resource s.length,;
-      totalSize: resource s.reduce((acc, resource) => acc + (resource as any).transferSize || 0, 0),;
-      images: resource s.filter(r => r.initiatorType === 'img').length,;
-      scripts: resource s.filter(r => r.initiatorType === 'script').length,;
-      stylesheets: resource s.filter(r => r.initiatorType === 'link').length,;
-      fonts: resource s.filter(r => r.initiatorType === 'font').length;
+
+    const newResourceMetrics: ResourceMetric s = {
+      totalResources: resource s.length,';
+      totalSize: resource s.reduce((acc, resource) => acc + (resource as any).transferSize || 0, 0),';';
+      images: resource s.filter(r => r.initiatorType === 'img').length,';';
+      scripts: resource s.filter(r => r.initiatorType === 'script').length,';';
+      stylesheets: resource s.filter(r => r.initiatorType === 'link').length,';';
+      fonts: resource s.filter(r => r.initiatorType === 'font').length
     };
     setResourceMetrics(newResourceMetrics)}, []);
 ;
@@ -77,15 +82,15 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
     // Cleanup function;
   };
 }, []);, []);
-    if(isMonitoring) {;
-// Optimize images;
-    const optimizeImages = (props: any) => {;
+    if(isMonitoring) {
+// Optimize images';
+    const optimizeImages = (props: any) => {';';
       const images = document.querySelectorAll('img');
-      images.forEach(img => {;
-        if (!img.loading) {;
+      images.forEach(img => {';
+        if (!img.loading) {';';
           img.loading = 'lazy';
-        }
-        if(!img.decoding) {;
+        }';
+        if(!img.decoding) {';';
           img.decoding = 'async';
         }
       });
@@ -94,24 +99,24 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
     // Initialize optimizations;
     preloadCriticalResources();
     optimizeImages();
-    // Set up intersection observer for lazy loading;
-    const observer = new IntersectionObserver((entries) => {;
-        entries.forEach(entry => {;
-          if (entry.isIntersecting) {';
-            const target = entry.target as HTMLElement;';';
-            if(target.dataset.src) {';';';
-              target.style.backgroundImage = `url(${target.dataset.src})`;',';';
-    ';';';
+    // Set up intersection observer for lazy loading
+    const observer = new IntersectionObserver((entries) => {';
+        entries.forEach(entry => {';';
+          if (entry.isIntersecting) {';';';
+            const target = entry.target as HTMLElement;';';';';
+            if(target.dataset.src) {';';';';';
+              target.style.backgroundImage = `url(${target.dataset.src})`;',';';';';
+    ';';';';';
               target.removeAttribute('data-src');
               observer.unobserve(target);
             }
           }
-        });
-      },;
+        });';
+      },';';
       { rootMargin: '50px'   }
     );
-;
-    // Observe lazy load elements;
+';
+    // Observe lazy load elements';';
     const lazyElements = document.querySelectorAll('[data-src]');
     lazyElements.forEach(el => observer.observe(el));
 ;
@@ -119,23 +124,23 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
       observer.disconnect();
     };
   }, []);
-;
-return (";
-    <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">";
-      <div className="flex items-center justify-between mb-6">";
-        <div className="flex items-center gap-3">";
-          <Activity className="w-6 h-6 text-zion-cyan"   />";
-          <h2 className="text-xl font-bold text-white">;
-            Performance Optimizer;
-          </h2>;
-        </div>;
-        <button;
-          onClick={() => setIsMonitoring(!isMonitoring)}
-          className={`px-4 py-2 rounded-lg font-medium transition-colors ${isMonitoring';
-              ? 'bg-red-500 hover: b g-red-600 text-white'';
-              : 'bg-zion-cyan hover: b g-zion-cyan-dark text-white'`;
-          }`}
-        >;
+
+return ("
+    <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">"
+      <div className="flex items-center justify-between mb-6">"
+        <div className="flex items-center gap-3">"
+          <Activity className="w-6 h-6 text-zion-cyan"   />"
+          <h2 className="text-xl font-bold text-white">
+            Performance Optimizer
+          </h2>
+        </div>
+        <button';
+          onClick={() => setIsMonitoring(!isMonitoring)}';';
+          className={`px-4 py-2 rounded-lg font-medium transition-colors ${isMonitoring'';';
+              ? 'bg-red-500 hover: b g-red-600 text-white''';';
+              : 'bg-zion-cyan hover: b g-zion-cyan-dark text-white'`
+          }`}';
+        >';';
           {isMonitoring ? 'Stop Monitoring' : 'Start Monitoring'}
         </button>;
       </div>;
@@ -186,25 +191,27 @@ return (";
               <span className="text-gray-300">CLS:</span>;
               <span className={getMetricStatus(metrics.cls, 0.1)}>;
                 {metrics.cls.toFixed(3)}
-              </span>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-      {/* Optimization Suggestions */}";
-      <div className="mb-6">";
-        <div className="flex items-center gap-2 mb-4">";
-          <Zap className="w-5 h-5 text-zion-cyan"   />";
-          <h3 className="text-lg font-semibold text-white">;
-            Optimization Suggestions;
-        </div>";
-        <div className="space-y-3">;
-          {suggestions.map(suggestion => (;
-            <div;
-              key={suggestion.id}`;
-              className={`p-4 rounded-lg border transition-colors ${suggestion.implemented';
-                  ? 'bg-green-500/10 border-green-500/30'';
-                  : 'bg-white/5 border-white/20'`;
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Optimization Suggestions */}"
+      <div className="mb-6">"
+        <div className="flex items-center gap-2 mb-4">"
+          <Zap className="w-5 h-5 text-zion-cyan"   />"
+          <h3 className="text-lg font-semibold text-white">
+            Optimization Suggestions
+          </h3>
+        </div>"
+        <div className="space-y-3">
+          {suggestions.map(suggestion => (
+            <div';
+              key={suggestion.id}`';';
+              className={`p-4 rounded-lg border transition-colors ${suggestion.implemented'';';
+                  ? 'bg-green-500/10 border-green-500/30''';';
+                  : 'bg-white/5 border-white/20'`
               }`}
             >";
               <div className="flex items-start justify-between">";
@@ -212,13 +219,13 @@ return (";
                   <div className="flex items-center gap-2 mb-2">";
                     <h4 className="font-medium text-white">;
                       {suggestion.title}
-                    </h4>;
-                    <span`;
-                      className={`px-2 py-1 rounded text-xs font-medium ${suggestion.impact === 'high'';
-                          ? 'bg-red-500/20 text-red-300'';
-                          : suggestion.impact === 'medium'';
-                            ? 'bg-yellow-500/20 text-yellow-300'';
-                            : 'bg-blue-500/20 text-blue-300'`;
+                    </h4>';
+                    <span`';';
+                      className={`px-2 py-1 rounded text-xs font-medium ${suggestion.impact === 'high''';';
+                          ? 'bg-red-500/20 text-red-300''';';
+                          : suggestion.impact === 'medium''';';
+                            ? 'bg-yellow-500/20 text-yellow-300''';';
+                            : 'bg-blue-500/20 text-blue-300'`
                       }`}
                     >;
                       {suggestion.impact} impact;
@@ -226,20 +233,20 @@ return (";
                   </div>";
                   <p className="text-sm text-gray-300 mb-3">;
                     {suggestion.description}
-                  </p>";
-                  <div className="flex items-center gap-4 text-xs text-gray-400">";
-                    <span className="capitalize">{suggestion.category}</span>;
-                    <span>•</span>;
-                    <span > Estimated improvement: 1 5 - 25%</span>;
-                  </div>;
-                </div>;
-                <button;
-                  onClick={() => toggleSuggestion(suggestion.id)}`;
-                  className={`px-3 py-1 rounded text-sm font-medium transition-colors ${suggestion.implemented';
-                      ? 'bg-green-500 hover: b g-green-600 text-white'';
-                      : 'bg-zion-cyan hover: b g-zion-cyan-dark text-white'`;
-                  }`}
-                >;
+                  </p>"
+                  <div className="flex items-center gap-4 text-xs text-gray-400">"
+                    <span className="capitalize">{suggestion.category}</span>
+                    <span>•</span>
+                    <span > Estimated improvement: 1 5 - 25%</span>
+                  </div>
+                </div>
+                <button';
+                  onClick={() => toggleSuggestion(suggestion.id)}`';';
+                  className={`px-3 py-1 rounded text-sm font-medium transition-colors ${suggestion.implemented'';';
+                      ? 'bg-green-500 hover: b g-green-600 text-white''';';
+                      : 'bg-zion-cyan hover: b g-zion-cyan-dark text-white'`
+                  }`}';
+                >';';
                   {suggestion.implemented ? 'Implemented' : 'Implement'}
                 </button>;
               </div>;
@@ -267,9 +274,11 @@ return (";
                   title={`Score: ${Math.round(metric.score)}`}
                  />;
               ))}
-            </div>;
-          </div>;
-        </div>) }
+            </div>
+          </div>
+            </div>
+  );
+}
     </div>) ;};
 interface PerformanceOptimizerProps {;
  children: React.ReactNode;
@@ -317,83 +326,84 @@ const observer = new IntersectionObserver((entries) => {;
 ;
           }";
         })} { rootMargin: "50px" }
-;
-;,"});,"})" PerformanceOptimizerProps {,"});,"})";
-  children: React.ReactNode,"});,"});";
-}export const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({ children }) => {,"});,"})";
-  useEffect(() => {,"});,"})";
-    // comment;
-const preloadCriticalResources = (props: any) => {,"});,"})";
-      const criticalFonts = []"criticalFonts.forEach (font => {,"});,"})";
-        const link = document.createElement ("link") ;        link.rel = "preload",        link.as = "style",        link.href = font,        document.head.appendChild (link) }) ;,"});,"});";
-};,"});,"})";
-    // comment;
-const optimizeImages = (props: any) => {,"});,"})";
-      const images = document.querySelectorAll ("img") ;      images.forEach (img => {"        if (!img.loading) {,"});,"})";
-          img.loading = "lazy",        }"        if (!img.decoding) {,"});,"})";
-          img.decoding = "async",        }"      }) };// comment;
-    preloadCriticalResources () ;,"});,"})";
-    optimizeImages () ;,"});,"})";
-    // comment;
-const observer = new IntersectionObserver ( (entries) => {,"});,"})";
-        entries.forEach (entry => {,"});,"})";
-          if (entry.isIntersecting) {,"});,"})";
-            const target = entry.target as HTMLElement,"});,"})";
-            if (target.dataset.src) {,"});,"})";
-target.style.backgroundImage = "url (${target.dataset.src}) ";"              target.removeAttribute ("data - src") ,              observer.unobserve (target) ;"            };,"});,"});";
-}) ;,"});,"});";
-} { rootMargin: "50px" }") ;"// comment;
-    const lazyElements = document.querySelectorAll ("[data - src]") ;    lazyElements.forEach (el = > observer.observe (el) ) ,return () => {,"});,"})";
-      observer.disconnect () ;,"});,"});";
-}, []) ;,"});,"})","});,"})";
-export default function Page(props: any) {,"});,"})";
-interface PerformanceOptimizerProps {;
- children: React.ReactNode,";
-});,"});";
-}"});,"})";
-export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {,"});,"})";
-  useEffect(() => {,"});,"})";
-    // comment;
-      const criticalFonts = [],"});,"})";
-      criticalFonts.forEach(font => {,"});,"})";
-        const link = document.createElement("link");,"});,"})";
-        link.rel = "preload";,"});,"})";
-        link.as = "style";,"});,"})";
-        link.href = font,"});,"})";
-        document.head.appendChild(link);,"});,"});";
-});,"});,"})";
-    // comment;
-      const images = document.querySelectorAll("img");,"});,"})";
-      images.forEach(img => {,"});,"})";
-        if (!img.loading) {,"});,"})";
-          img.loading = "lazy";,"});,"})";
-        if(!img.decoding) {,"});,"})";
-          img.decoding = "async";,"});,"})";
-    // comment;
-    preloadCriticalResources();,"});,"})";
-    optimizeImages();,"});,"})";
-    // comment;
-    const observer = new IntersectionObserver((entries) => {,"});,"})";
-        entries.forEach(entry => {,"});,"})";
-            if(target.dataset.src) {,"});,"})";
-              target.style.backgroundImage = "url(${target.dataset.src})";,"});,"})";
-              target.removeAttribute("data-src");,"});,"})";
-              observer.unobserve(target);,"});,"});";
-},,"});,"})";
-      { rootMargin: "50px"  }"});,"})";
-    );,"});,"})";
-    // comment;
-    const lazyElements = document.querySelectorAll("[data-src]");,"});,"})";
-    lazyElements.forEach(el => observer.observe(el));,"});,"})";
-    return () => {,"});,"})";
-      observer.disconnect();,"});,"});";
-}, []);,"});,"})";
-  return <>{children}</>"});,"})"interface PerformanceOptimizerProps {;
-   children: React.ReactNode;
-}export const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({ children }) => {;
-  useEffect(() => {;
-    // comment;
-      const criticalFonts = []",criticalFonts.forEach (font => {;interface PerformanceOptimizerProps {;
+
+;,"});,"})" PerformanceOptimizerProps {,"});,"})"
+  children: Reac t.ReactNode,"});,"});"
+}export const PerformanceOptimizer: Reac t.FC < PerformanceOptimizerProps> = ({ children }) => {,"});,"})"
+  useEffect(() => {,"});,"})"
+    // comment
+const preloadCriticalResources = (props: any) => {,"});,"})"
+      const criticalFonts = []"criticalFonts.forEach (font => {,"});,"})"
+        const link = document.createElement ("link") ;        link.rel = "preload",        link.as = "style",        link.href = font,        document.head.appendChild (link) }) ;,"});,"});"
+};,"});,"})"
+    // comment
+const optimizeImages = (props: any) => {,"});,"})"
+      const images = document.querySelectorAll ("img") ;      images.forEach (img => {"        if (!img.loading) {,"});,"})"
+          img.loading = "lazy",        }"        if (!img.decoding) {,"});,"})"
+          img.decoding = "async",        }"      }) };// comment
+    preloadCriticalResources () ;,"});,"})"
+    optimizeImages () ;,"});,"})"
+    // comment
+const observer = new IntersectionObserver ( (entries) => {,"});,"})"
+        entries.forEach (entry => {,"});,"})"
+          if (entry.isIntersecting) {,"});,"})"
+            const target = entry.target as HTMLElement,"});,"})"
+            if (target.dataset.src) {,"});,"})"
+target.style.backgroundImage = "url (${target.dataset.src}) ";"              target.removeAttribute ("data - src") ,              observer.unobserve (target) ;"            };,"});,"});"
+}) ;,"});,"});"
+} { rootMargin: "50px" }") ;"// comment
+    const lazyElements = document.querySelectorAll ("[data - src]") ;    lazyElements.forEach (el = > observer.observe (el) ) ,return () => {,"});,"})"
+      observer.disconnect () ;,"});,"});"
+}, []) ;,"});,"})","});,"})"
+export default function Page(props: any) {,"});,"})"
+interface PerformanceOptimizerProps {
+ children: Reac t.ReactNode,"
+});,"});"
+}"});,"})"
+export const PerformanceOptimizer: Reac t.FC<PerformanceOptimizerProps> = ({ children }) => {,"});,"})"
+  useEffect(() => {,"});,"})"
+    // comment
+      const criticalFonts = [],"});,"})"
+      criticalFonts.forEach(font => {,"});,"})"
+        const link = document.createElement("link");,"});,"})"
+        link.rel = "preload";,"});,"})"
+        link.as = "style";,"});,"})"
+        link.href = font,"});,"})"
+        document.head.appendChild(link);,"});,"});"
+});,"});,"})"
+    // comment
+      const images = document.querySelectorAll("img");,"});,"})"
+      images.forEach(img => {,"});,"})"
+        if (!img.loading) {,"});,"})"
+          img.loading = "lazy";,"});,"})"
+        if(!img.decoding) {,"});,"})"
+          img.decoding = "async";,"});,"})"
+    // comment
+    preloadCriticalResources();,"});,"})"
+    optimizeImages();,"});,"})"
+    // comment
+    const observer = new IntersectionObserver((entries) => {,"});,"})"
+        entries.forEach(entry => {,"});,"})"
+            if(target.dataset.src) {,"});,"})"
+              target.style.backgroundImage = "url(${target.dataset.src})";,"});,"})"
+              target.removeAttribute("data-src");,"});,"})"
+              observer.unobserve(target);,"});,"});"
+},,"});,"})"
+      { rootMargin: "50px"  }"});,"})"
+    );,"});,"})"
+    // comment
+    const lazyElements = document.querySelectorAll("[data-src]");,"});,"})"
+    lazyElements.forEach(el => observer.observe(el));,"});,"})"
+    return () => {,"});,"})"
+      observer.disconnect();,"});,"});"
+}, []);,"});,"})"
+  return <>{children}</>"});,"})"interface PerformanceOptimizerProps {
+
+   children: Reac t.ReactNode
+}export const PerformanceOptimizer: Reac t.FC < PerformanceOptimizerProps> = ({ children }) => {
+  useEffect(() => {
+    // comment
+      const criticalFonts = []",criticalFonts.forEach (font => {;interface PerformanceOptimizerProps {
   ": any;
    children: React.ReactNode;
 }export const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({children }) => {useEffect(() => {;
@@ -401,16 +411,18 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
 const preloadCriticalResources = (props: any) => {"";
       const criticalFonts = []criticalFonts.forEach (font => {"";
         const link = document.createElement ("link") "        link.rel = "preload"        link.as = "style"        link.href = font"        document.head.appendChild (link) })}
-;
-    // comment;
-const optimizeImages = (props: any) => {";
-      const images = document.querySelectorAll ("img") "      images.forEach (img => {"        if (!img.loading) {";
-          img.loading = "lazy"        }        if (!img.decoding) {"";
-          img.decoding = "async"        }      })}// comment;
-const optimizeImages = (props: any) => {const images = document.querySelectorAll ("img") "      images.forEach (img => {"        if (!img.loading) {;react&apos;interface PerformanceOptimizerProps {;
-   children: React.ReactNode;
-}&apos;&apos;export const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({ children }) => {;
-    // comment;
+
+    // comment
+const optimizeImages = (props: any) => {"
+      const images = document.querySelectorAll ("img") "      images.forEach (img => {"        if (!img.loading) {"
+          img.loading = "lazy"        }        if (!img.decoding) {""
+          img.decoding = "async"        }      })}// comment
+const optimizeImages = (props: any) => {const images = document.querySelectorAll ("img") "      images.forEach (img => {"        if (!img.loading) {;react&apos;interface PerformanceOptimizerProps {
+
+   children: Reac t.ReactNode
+}&apos;&apos;export const PerformanceOptimizer: Reac t.FC < PerformanceOptimizerProps> = ({ children }) => {
+    // comment
+
 const preloadCriticalResources = (props: any) => {}
 ;
       const;const;const criticalFonts = []",criticalFonts.forEach (font => {&apos}&apos;
@@ -488,13 +500,13 @@ target.style.backgroundImage = "url (${target.dataset.src}) "              targe
             if (target.dataset.src) {";";
 }"})} {rootMargin: "50px" }") ";// comment;
     const lazyElements = document.querySelectorAll ("[data - src]") "    lazyElements.forEach (el => observer.observe (el) ) ";return () => {observer.disconnect () }
-;
-target.style.backgroundImage = "url (${target.dataset.src}) "              target.removeAttribute ("data - src") "              observer.unobserve (target) "            }"}";
-  })} { rootMargin: "50px" }") ";// comment;
-  return <>{children}</>}"""";
-"`""";
-</PerformanceOptimizerProps>;
-</PerformanceOptimizerProps>;
-</div>;
-</PerformanceOptimizerProps>;
-</any>;
+
+target.style.backgroundImage = "url (${target.dataset.src}) "              target.removeAttribute ("data - src") "              observer.unobserve (target) "            }"}"
+  })} { rootMargin: "50px" }") ";// comment
+  return <>{children}</>}""""
+"`"""
+
+</PerformanceOptimizerProps>
+</div>
+</PerformanceOptimizerProps>';
+</any>;';;';

@@ -1,7 +1,7 @@
-import {Link} from 'react-router-dom';
-import {Button} from '@/components/ui/button';
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';
-import {Badge} from '@/components/ui/badge';
+import {Link} from 'react-router-dom';';';
+import {Button} from '@/components/ui/button';';';
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';';';
+import {Badge} from '@/components/ui/badge';';';
 import {SERVICE_CATEGORIES} from '@/data/microSaasServices';
 import { Sparkles, Zap, TrendingUp, ArrowRight, Star, CheckCircle, Globe, MessageCircle export function NewServicesShowcase(props: any) {
     // Get featured services from each category
@@ -61,8 +61,8 @@ import { Sparkles, Zap, TrendingUp, ArrowRight, Star, CheckCircle, Globe, Messag
                 <div className="flex items-center justify-between p-3 bg-zion-blue/20 rounded-lg border border-zion-blue-light/20">
                   <div>
                     <div className="text-2xl font-bold text-white">
-                      ${service.zionPrice}
-                      <span className="text-sm text-zion-slate-light ml-1">
+                      ${service.zionPrice}';
+                      <span className="text-sm text-zion-slate-light ml-1">';';
                         {service.pricingModel === 'monthly' ? '/month' : service.pricingModel === 'yearly' ? '/year' : ''}
                       </span>
                     </div>
@@ -174,6 +174,5 @@ import { Sparkles, Zap, TrendingUp, ArrowRight, Star, CheckCircle, Globe, Messag
         </div>
       </div>
     </section>)}
-
-
-export default NewServicesShowcase;
+';
+export default NewServicesShowcase;;';;';

@@ -10,8 +10,7 @@ const path = require('path');
 class CriticalErrorFixer {
   constructor() {
     this.fixes = [];
-    this.errors = [];
-  }
+    this.errors = []}
 
   log(message, type = 'INFO') {
     const icons = {
@@ -22,14 +21,12 @@ class CriticalErrorFixer {
       'PROGRESS': '🔄'
     };
     
-    console.log(`${icons[type]} ${message}`);
-  }
+    console.log(`${icons[type]} ${message}`)}
 
   fixFile(filePath) {
     try {
       if (!fs.existsSync(filePath)) {
-        return { success: false, error: 'File not found' };
-      }
+        return { success: false, error: 'File not found' }}
 
       let content = fs.readFileSync(filePath, 'utf8');
       let originalContent = content;
@@ -80,23 +77,19 @@ class CriticalErrorFixer {
             file: filePath,
             description: fix.description,
             pattern: fix.pattern.toString()
-          });
-        }
+          })}
       }
 
       // Write fixed content back to file
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content, 'utf8');
         this.log(`Fixed ${fixesApplied} issues in ${path.basename(filePath)}`, 'SUCCESS');
-        return { success: true, fixesApplied };
-      }
+        return { success: true, fixesApplied }}
 
-      return { success: true, fixesApplied: 0 };
-    } catch (error) {
+      return { success: true, fixesApplied: 0 }} catch (error) {
       this.log(`Error fixing ${filePath}: ${error.message}`, 'ERROR');
       this.errors.push({ file: filePath, error: error.message });
-      return { success: false, error: error.message };
-    }
+      return { success: false, error: error.message }}
   }
 
   fixDirectory(dirPath) {
@@ -107,10 +100,8 @@ class CriticalErrorFixer {
       const stat = fs.statSync(filePath);
       
       if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-        this.fixDirectory(filePath);
-      } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
-        this.fixFile(filePath);
-      }
+        this.fixDirectory(filePath)} else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
+        this.fixFile(filePath)}
     }
   }
 
@@ -133,8 +124,7 @@ class CriticalErrorFixer {
     this.log(`🔧 Total Fixes Applied: ${report.totalFixes}`, 'INFO');
     this.log(`❌ Total Errors: ${report.totalErrors}`, report.totalErrors > 0 ? 'ERROR' : 'SUCCESS');
     
-    return report;
-  }
+    return report}
 
   run() {
     this.log('🚀 Starting Critical Errors Fixer...', 'PROGRESS');
@@ -156,22 +146,18 @@ class CriticalErrorFixer {
       
       if (report.summary.success) {
         this.log('🎉 Critical Errors Fix completed successfully!', 'SUCCESS');
-        return true;
-      } else {
+        return true} else {
         this.log('⚠️ Critical Errors Fix completed with some errors', 'WARNING');
-        return false;
-      }
+        return false}
     } catch (error) {
       this.log(`Critical Errors Fix failed: ${error.message}`, 'ERROR');
-      return false;
-    }
+      return false}
   }
 }
 
 // Run the critical error fixer
 if (require.main === module) {
   const fixer = new CriticalErrorFixer();
-  fixer.run();
-}
+  fixer.run()}
 
 module.exports = CriticalErrorFixer;

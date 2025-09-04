@@ -6,24 +6,15 @@ import { Loader2 export function LoadingFallback(props: any) {
   lg: "w-12 h-12"
     
 
-
-
-
-
-
 };
     const textSizes = {sm: "text-sm",
         md: "text-base",
   lg: "text-lg"};
-    return (<div className={`flex flex-col items-center justify-center p-8 space-y-4 ${className}`}>
+    return (
+    <div className="min-h-screen bg-white">
       <motion.div animate={{ rotate: 360 }} transition = {
   { duration: 1, repeat: Infinity,
   ease: "linear" 
-
-
-
-
-
 
 }}>
         <Loader2 className={`${sizeClasses[size]} text-zion-cyan`} />
@@ -45,11 +36,6 @@ import { Loader2 export function LoadingFallback(props: any) {
   0.5]
             
 
-
-
-
-
-
 }} transition = {
   {
                 duration: 1.4,
@@ -57,28 +43,23 @@ import { Loader2 export function LoadingFallback(props: any) {
   delay: index * 0.2
             
 
-
-
-
-
-
 }} />))}
       </motion.div>
-    </div>)}
+        </div>
+  );
+}
 export function PageLoadingFallback(props: any) {
-    return (<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple flex items-center justify-center">
+    return (
+    <div className="min-h-screen bg-white">
       <div className="text-center">
         <LoadingFallback message="Loading Zion Tech Group..." size="lg" />
         <motion.div className="mt-8 text-zion-slate-light text-sm" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1 }}>
           Connecting to the future of tech...
         </motion.div>
       </div>
-    </div>)}
-
-
+        </div>
+  );
+}
 export default LoadingFallback;
 </motion>
-</motion>
-</motion>
-</motion>
-</motion>
+</motion>;;

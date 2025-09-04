@@ -148,12 +148,10 @@ export function CategoriesSection(props: any) {
             <span className="text-sm group-hover: translat e-x-1 transition-transform duration-300">→</span>
           </Link>
         </motion.div>
-      </div>
-    </section>;
+      </div>';
+    </section>;';';
   )}}}}}}}}}}'"`
 
 </motion>
-</motion>
-</motion>
-</motion>
-</motion>
+</motion>';
+</motion>';';

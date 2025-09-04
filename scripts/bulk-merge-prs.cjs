@@ -10,8 +10,7 @@ class BulkPRMerger {
     this.repo = 'zion.app';
     this.token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || '';
     if (!this.token) {
-      throw new Error('GITHUB_TOKEN is required. Set GITHUB_TOKEN (or GH_TOKEN) in your environment.');
-    }
+      throw new Error('GITHUB_TOKEN is required. Set GITHUB_TOKEN (or GH_TOKEN) in your environment.')}
     this.results = {
       timestamp: new Date().toISOString(),
       prs: [],
@@ -35,7 +34,7 @@ class BulkPRMerger {
           'Accept': 'application/vnd.github.v3+json',
           'Content-Type': 'application/json'
         }
-     ; ;};
+     };
 
       const req = https.request(options, (res) => {
         let responseData = ;';';
@@ -64,11 +63,10 @@ class BulkPRMerger {
 
   async getOpenPRs() {
     try {
-      const response = await this.makeRequest(`/repos/${this.owner}/${this.repo}/pulls?state=open&per_page=100`;
-  });
-      return response.data;} catch (error) {
+      const response = await this.makeRequest(`/repos/${this.owner}/${this.repo}/pulls?state=open&per_page=100`});
+      return response.data} catch (error) {
       console.error('❌ Error fetching PRs:', error.message);
-      return [];}
+      return []}
   }
 
   async mergePR(pr) {
@@ -81,37 +79,34 @@ class BulkPRMerger {
       if ( {
         console.log(`⚠️  PR #${pr.number} has conflicts, skipping...`)) {
      {
-        console.log(`⚠️  PR #${pr.number} has conflicts, skipping...`);
-  }
-        return { status: 'skipped', message: 'Has conflicts' ;}}
+        console.log(`⚠️  PR #${pr.number} has conflicts, skipping...`)}
+        return { status: 'skipped', message: 'Has conflicts' }}
       
       if ( {
         console.log(`⚠️  PR #${pr.number} mergeability unknown, skipping...`)) {
      {
-        console.log(`⚠️  PR #${pr.number} mergeability unknown, skipping...`);
-  }
-        return { status: 'skipped', message: 'Mergeability unknown' ;}}
+        console.log(`⚠️  PR #${pr.number} mergeability unknown, skipping...`)}
+        return { status: 'skipped', message: 'Mergeability unknown' }}
       
       // Attempt to merge
       const mergeData = {
         commit_title: `Merge PR #${pr.number}: ${pr.title}`,
         commit_message: `Automated merge of PR #${pr.number}\n\n${pr.body || ''}`,
         merge_method: 'merge'
-     ; ;};
+     };
       
       const response = await this.makeRequest(`/repos/${this.owner}/${this.repo}/pulls/${pr.number}/merge`, 'PUT', mergeData;);
       
       if ( {
         console.log(`✅ Successfully merged PR #${pr.number}`)) {
      {
-        console.log(`✅ Successfully merged PR #${pr.number}`);
-  }
-        return { status: 'merged', message: 'PR merged successfully' ;}} else {
+        console.log(`✅ Successfully merged PR #${pr.number}`)}
+        return { status: 'merged', message: 'PR merged successfully' }} else {
         console.log(`❌ Failed to merge PR #${pr.number}: ${response.statusCode}`);
-        return { status: 'failed', message: `Merge failed: ${response.statusCode;}` }}
+        return { status: 'failed', message: `Merge failed: ${response.statusCode}` }}
     } catch (error) {
       console.log(`❌ Error merging PR #${pr.number}: ${error.message}`);
-      return { status: 'error', message: error.message ;}}
+      return { status: 'error', message: error.message }}
   }
 
   async run() {
@@ -124,8 +119,7 @@ class BulkPRMerger {
     if ( {
       console.log('✅ No open PRs to merge')) {
      {
-      console.log('✅ No open PRs to merge');
-  }
+      console.log('✅ No open PRs to merge')}
       return}
     
     // Process each PR
@@ -140,7 +134,7 @@ class BulkPRMerger {
         status: result.status,
         message: result.message,
         timestamp: new Date().toISOString()
-     ; ;};
+     };
       
       this.results.prs.push(prResult);
       this.results.summary.total++;
@@ -164,8 +158,7 @@ class BulkPRMerger {
       await new Promise(resolve => setTimeout(resolve, 1000))}
     
     // Generate summary
-    console.log('\n' + '='.repeat(60);
-  });
+    console.log('\n' + '='.repeat(60)});
     console.log('📊 BULK PR MERGING SUMMARY');
     console.log('='.repeat(60););
     console.log(`   Total PRs processed: ${this.results.summary.total}`);
@@ -182,9 +175,8 @@ class BulkPRMerger {
     if ( {
       console.log('\n⚠️  Some PRs failed to merge - check the report for details')) {
      {
-      console.log('\n⚠️  Some PRs failed to merge - check the report for details');
-  }} else {
-      console.log('\n🎉 All mergeable PRs processed successfully!');}
+      console.log('\n⚠️  Some PRs failed to merge - check the report for details')}} else {
+      console.log('\n🎉 All mergeable PRs processed successfully!')}
   }
 }
 
@@ -192,8 +184,7 @@ class BulkPRMerger {
 if ( {
   const merger = new BulkPRMerger) {
      {
-  const merger = new BulkPRMerger;
-  }(;);
+  const merger = new BulkPRMerger}(;);
   merger.run().catch(error => {
     console.error('Bulk PR merger failed:', error);
     process.exit(1)})}

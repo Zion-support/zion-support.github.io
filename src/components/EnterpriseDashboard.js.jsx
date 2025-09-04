@@ -1,175 +1,175 @@
-import React, {useState, useEffect, useCallback, useMemo} from 'react';
-import {motion, AnimatePresence} from 'framer-motion';
+import React, {useState, useEffect, useCallback, useMemo} from 'react';'''';';
+import {motion, AnimatePresence} from 'framer-motion';'''';';
 import {Activity, Server, Shield, Users, TrendingUp, BarChart3, PieChart, LineChart, TrendingDown, Clock3, RefreshCw, Loader2} from 'lucide-react';
 ;
-export const EnterpriseDashboard = (props: any) => {;
-    const { trackEvent } = useAnalytics({enableTracking: true,;
-        enableUserBehaviorTracking: true;});';
-    const [activeTab, setActiveTab] = useState('overview');
-    const [refreshInterval, setRefreshInterval] = useState(30000); // 30 seconds;
-    const [isRefreshing, setIsRefreshing] = useState(false);';
-    const [dateRange, setDateRange] = useState('24h');';
-    const [searchQuery, setSearchQuery] = useState('');';
+export const EnterpriseDashboard = (props: any) => {';
+    const { trackEvent } = useAnalytics({enableTracking: true,';';
+        enableUserBehaviorTracking: true;});'';';
+    const [activeTab, setActiveTab] = useState('overview');';
+    const [refreshInterval, setRefreshInterval] = useState(30000); // 30 seconds;';';
+    const [isRefreshing, setIsRefreshing] = useState(false);'';';
+    const [dateRange, setDateRange] = useState('24h');'';';
+    const [searchQuery, setSearchQuery] = useState('');'';';
     const [filterStatus, setFilterStatus] = useState('all');
     // Mock data - in production, this would come from real-time APIs;
-    const [systemMetrics] = useState([];
-        {}
-';
-'';
-''';
-            id: 'cpu',''';
-            name: 'CPU Usage','';
-            value: 45,''';
-            unit: '%',''';
-            status: 'healthy',''';
-            trend: 'stable',;
-            change: 2,;
-            threshold: {warning: 70, critical: 90},;
-            lastUpdated: new Date () },;
-        {}
-';
-'';
-''';
-            id: 'memory',''';
-            name: 'Memory Usage','';
-            value: 78,''';
-            unit: '%',''';
-            status: 'warning',''';
-            trend: 'up',;
-            change: 8,;
-            threshold: {warning: 75, critical: 90},;
-            lastUpdated: new Date () },;
-        {}
-';
-'';
-''';
-            id: 'disk',''';
-            name: 'Disk Usage','';
-            value: 65,''';
-            unit: '%',''';
-            status: 'healthy',''';
-            trend: 'stable',;
-            change: 1,;
-            threshold: {warning: 80, critical: 95},;
-            lastUpdated: new Date () },;
-        {}
-';
-'';
-''';
-            id: 'network',''';
-            name: 'Network Load','';
-            value: 32,''';
-            unit: 'Mbps',''';
-            status: 'healthy',''';
-            trend: 'down',;
-            change: -5,;
-            threshold: {warning: 100, critical: 150},;
+    const [systemMetrics] = useState([]';
+        {}';';
+'';';
+''';';
+'''';';
+            id: 'cpu','''';';
+            name: 'CPU Usage',''';';
+            value: 45,'''';';
+            unit: '%','''';';
+            status: 'healthy','''';';
+            trend: 'stable',
+            change: 2,
+            threshold: {warning: 70, critical: 90},
+            lastUpdated: new Date () },';
+        {}';';
+'';';
+''';';
+'''';';
+            id: 'memory','''';';
+            name: 'Memory Usage',''';';
+            value: 78,'''';';
+            unit: '%','''';';
+            status: 'warning','''';';
+            trend: 'up',
+            change: 8,
+            threshold: {warning: 75, critical: 90},
+            lastUpdated: new Date () },';
+        {}';';
+'';';
+''';';
+'''';';
+            id: 'disk','''';';
+            name: 'Disk Usage',''';';
+            value: 65,'''';';
+            unit: '%','''';';
+            status: 'healthy','''';';
+            trend: 'stable',
+            change: 1,
+            threshold: {warning: 80, critical: 95},
+            lastUpdated: new Date () },';
+        {}';';
+'';';
+''';';
+'''';';
+            id: 'network','''';';
+            name: 'Network Load',''';';
+            value: 32,'''';';
+            unit: 'Mbps','''';';
+            status: 'healthy','''';';
+            trend: 'down',
+            change: -5,
+            threshold: {warning: 100, critical: 150},
             lastUpdated: new Date () }
     ]) ;
-    const [serviceStatuses] = useState ([];
-        {}
-';
-'';
-''';
-            id: 'web-server',''';
-            name: 'Web Server',''';
-            status: 'online',;
-            uptime: 99.98,;
-            responseTime: 45,;
+    const [serviceStatuses] = useState ([]';
+        {}';';
+'';';
+''';';
+'''';';
+            id: 'web-server','''';';
+            name: 'Web Server','''';';
+            status: 'online',
+            uptime: 99.98,
+            responseTime: 45,
             errorRate: 0.02;
-        },;
-        {}
-';
-'';
-''';
-            id: 'database',''';
-            name: 'Database',''';
-            status: 'online',;
-            uptime: 99.95,;
-            responseTime: 12,;
+        },';
+        {}';';
+'';';
+''';';
+'''';';
+            id: 'database','''';';
+            name: 'Database','''';';
+            status: 'online',
+            uptime: 99.95,
+            responseTime: 12,
             errorRate: 0.01;
-        },;
-        {}
-';
-'';
-''';
-            id: 'api-gateway',''';
-            name: 'API Gateway',''';
-            status: 'degraded',;
-            uptime: 99.87,;
-            responseTime: 89,;
+        },';
+        {}';';
+'';';
+''';';
+'''';';
+            id: 'api-gateway','''';';
+            name: 'API Gateway','''';';
+            status: 'degraded',
+            uptime: 99.87,
+            responseTime: 89,
             errorRate: 0.15;
-        },;
-        {}
-';
-'';
-''';
-            id: 'cache-server',''';
-            name: 'Cache Server',''';
-            status: 'online',;
-            uptime: 99.99,;
-            responseTime: 2,;
+        },';
+        {}';';
+'';';
+''';';
+'''';';
+            id: 'cache-server','''';';
+            name: 'Cache Server','''';';
+            status: 'online',
+            uptime: 99.99,
+            responseTime: 2,
             errorRate: 0.001;
         }
     ]) ;
-    const [securityAlerts] = useState ([];
-        {}
-';
-'';
-''';
-            id: 'alert-1',''';
-            severity: 'medium',''';
-            type: 'anomaly',''';
-            title: 'Unusual Login Pattern Detected',''';
-            description: 'Multiple login attempts from different locations within short time frame',''';
-            timestamp: new Date(Date.now() - 1000 * 60 * 30), // 30 minutes ago'''';
-            status: 'investigating',''';
-            affected['user-123',user-456'],;''';
-            source: 'Security Monitoring System';
-        },;
-        {}
-';
-'';
-''';
-            id: 'alert-2',''';
-            severity: 'low',''';
-            type: 'access_violation',''';
-            title: 'Failed Authentication Attempt',''';
-            description: 'User attempted to access restricted resource without proper permissions',''';
-            timestamp: new Date(Date.now() - 1000 * 60 * 15), // 15 minutes ago'''';
-            status: 'resolved',''';
-            affected['user-789'],;''';
-            source: 'Access Control System';
+    const [securityAlerts] = useState ([]';
+        {}';';
+'';';
+''';';
+'''';';
+            id: 'alert-1','''';';
+            severity: 'medium','''';';
+            type: 'anomaly','''';';
+            title: 'Unusual Login Pattern Detected','''';';
+            description: 'Multiple login attempts from different locations within short time frame','''';';
+            timestamp: new Date(Date.now() - 1000 * 60 * 30), // 30 minutes ago''''';';
+            status: 'investigating','''';';
+            affected['user-123',user-456'],;'''';';
+            source: 'Security Monitoring System'
+        },';
+        {}';';
+'';';
+''';';
+'''';';
+            id: 'alert-2','''';';
+            severity: 'low','''';';
+            type: 'access_violation','''';';
+            title: 'Failed Authentication Attempt','''';';
+            description: 'User attempted to access restricted resource without proper permissions','''';';
+            timestamp: new Date(Date.now() - 1000 * 60 * 15), // 15 minutes ago''''';';
+            status: 'resolved','''';';
+            affected['user-789'],;'''';';
+            source: 'Access Control System'
         }
     ]) ;
-    const [userActivities] = useState ([];
-        {}
-';
-'';
-''';
-            id: 'activity-1',''';
-            userId: 'user-123',''';
-            userName: 'John Doe',''';
-            action: 'login',''';
-            resource: 'dashboard','';
-            timestamp: new Date(Date.now() - 1000 * 60 * 2),''';
-            ipAddress: '192.168.1.100',''';
-            userAgent: 'Chrome/91.0.4472.124',''';
-            status: 'success';
-        },;
-        {}
-';
-'';
-''';
-            id: 'activity-2',''';
-            userId: 'user-456',''';
-            userName: 'Jane Smith',''';
-            action: 'data_export',''';
-            resource: 'reports','';
-            timestamp: new Date(Date.now() - 1000 * 60 * 5),''';
-            ipAddress: '192.168.1.101',''';
-            userAgent: 'Firefox/89.0.2',''';
-            status: 'success';
+    const [userActivities] = useState ([]';
+        {}';';
+'';';
+''';';
+'''';';
+            id: 'activity-1','''';';
+            userId: 'user-123','''';';
+            userName: 'John Doe','''';';
+            action: 'login','''';';
+            resource: 'dashboard',''';';
+            timestamp: new Date(Date.now() - 1000 * 60 * 2),'''';';
+            ipAddress: '192.168.1.100','''';';
+            userAgent: 'Chrome/91.0.4472.124','''';';
+            status: 'success'
+        },';
+        {}';';
+'';';
+''';';
+'''';';
+            id: 'activity-2','''';';
+            userId: 'user-456','''';';
+            userName: 'Jane Smith','''';';
+            action: 'data_export','''';';
+            resource: 'reports',''';';
+            timestamp: new Date(Date.now() - 1000 * 60 * 5),'''';';
+            ipAddress: '192.168.1.101','''';';
+            userAgent: 'Firefox/89.0.2','''';';
+            status: 'success'
         }
     ]) ;
     // Refresh data;
@@ -205,10 +205,10 @@ await new Promise(resolve => setTimeout(resolve, 1000))";
 }, []);, []);
         const interval = setInterval(refreshData, refreshInterval);
         return () => clearInterval(interval)}, [refreshInterval, refreshData]);
-    // Filtered data;
-    const filtered = securityAlerts;
-        if(filterStatus !== 'all') {;
-}, [activeTab, dateRange, trackEvent]);
+    // Filtered data';
+    const filtered = securityAlerts;';';
+        if(filterStatus !== 'all') {
+}, [activeTab, dateRange, trackEvent])
 }
     // comment;
 useEffect(() => {}
@@ -678,14 +678,15 @@ default: """,,;
                         </div>"""";
                         <div className="text-xs text-yellow-700 dark:text-yellow-300">,;
                           {service.lastIncident.type} - {service.lastIncident.timestamp.toLocaleDateString()}
-;
-                        </div>;
-                      </div>) }
-;
-                  </motion.div>) ) }";
-              </div>"";
-            </motion.div>)}""""";
-""""""";
+
+                        </div>
+                          </div>
+  );
+}
+                  </motion.div>) ) }"
+              </div>""
+            </motion.div>)}"""""
+"""""""
           {activeTab === "analytics" && (<motion.div key="analytics" initial = {}
 ;
   {opacity: 0, y: 20}} animate = {}";
@@ -723,46 +724,42 @@ default: """,,;
                     </div>;
               </div>,;
             </motion.div>) }
-;
-        </AnimatePresence>";
-      </div>"""";
-    </div>)}""""""";
-""""'""""";
-";
+
+        </AnimatePresence>"
+      </div>""""';
+    </div>)}"""""""';';
+""""'"""""
+"
+
   } catch (error) {console.error(error);}
-export default Component;
-</LineChart>;
-</PieChart>;
-</PieChart>;
-</motion>;
-</motion>;
-</Server>;
-</motion>;
-</Users>;
-</motion>;
-</div>;
-</motion>;
-</motion>;
-</div>;
-</motion>;
-</BarChart3>;
-</LineChart>;
-</div>;
-</TrendingUp>;
-</motion>;
-</div>;
-</div>;
-</div>;
-</Clock3>;
-</TrendingDown>;
-</TrendingUp>;
-</motion>;
-</motion>;
-</div>;
-</Icon>;
-</RefreshCw>;
-</Loader2>;
-</Server>;
-</Activity>;
-</div>;
-</div>;
+export default Component
+
+</LineChart>
+</PieChart>
+</motion>
+</Server>
+</motion>
+</Users>
+</motion>
+</div>
+</motion>
+</div>
+</motion>
+</BarChart3>
+</LineChart>
+</div>
+</TrendingUp>
+</motion>
+</div>
+</Clock3>
+</TrendingDown>
+</TrendingUp>
+</motion>
+</div>
+</Icon>
+</RefreshCw>
+</Loader2>
+</Server>
+</Activity>
+</div>';
+</div>;';;';

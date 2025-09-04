@@ -17,7 +17,7 @@ const filesToRewrite = [
   "src/pages/HomePage.tsx",
   "src/pages/ServicesPage.tsx",
   "src/pages/ComprehensiveSitemap.tsx"
-;];
+];
 
 function createBasicPage(filePath) {
   const fileName = path.basename(filePath, path.extname(filePath;););
@@ -27,8 +27,7 @@ function createBasicPage(filePath) {
   if () {
     content = `import React from "react") {
     ) {
-    content = `import React from "react";
-  }
+    content = `import React from "react"}
 import { Link } from "react-router-dom";
 
 export default function ${componentName}() {
@@ -83,7 +82,7 @@ export default function ${componentName}() {
     </div>
   )}`}
  
-  return content;}
+  return content}
 
 console.log("Starting aggressive syntax fixes...");
 let fixedCount = ;0;
@@ -94,8 +93,7 @@ filesToRewrite.forEach(filePath => {
       const content = createBasicPage(filePat) {
     ) {
     try {
-      const content = createBasicPage(filePat;
-  }h;);
+      const content = createBasicPage(filePat}h;);
       fs.writeFileSync(filePath, content, "utf8");
       console.log("Rewrote: " + filePath);
       fixedCount++} catch (error) {

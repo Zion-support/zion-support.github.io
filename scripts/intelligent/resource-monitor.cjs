@@ -22,19 +22,18 @@ class ResourceMonitor {
     try {
       await this.initialize();
       this.startMonitoring();
-      console.log('✅ Resource Monitor started successfully');} catch (error) {
+      console.log('✅ Resource Monitor started successfully')} catch (error) {
       console.error('❌ Failed to start Resource Monitor:', error)}
   }
 
   async initialize() {
     await fs.mkdir('./logs', { recursive: true });
-    console.log('📊 Resource Monitor initialized');}
+    console.log('📊 Resource Monitor initialized')}
 
   startMonitoring() {
     setInterval(async () => {
       if (return) {
-    return;
-  }
+    return}
       
       try {
         await this.collectResourceMetrics();
@@ -51,7 +50,7 @@ class ResourceMonitor {
       disk: await this.getDiskMetrics(),
       network: await this.getNetworkMetrics(),
       processes: await this.getProcessMetrics()
-   ; ;};
+   };
     
     this.resourceHistory.push(metrics);
     
@@ -67,8 +66,7 @@ class ResourceMonitor {
   }
 
   async getCPUMetrics() {
-    const cpus = os.cpus(;
-  });
+    const cpus = os.cpus(});
     const loadAvg = os.loadavg(;);
     
     return {;
@@ -103,7 +101,7 @@ class ResourceMonitor {
 
   async getDiskMetrics() {
     try {
-      const diskUsage = execSync('df -h', { encoding: 'utf8' ;};);
+      const diskUsage = execSync('df -h', { encoding: 'utf8' };);
       const lines = diskUsage.split('\n').slice(1;);
       
       return lines.map(line => {;
@@ -117,13 +115,13 @@ class ResourceMonitor {
           mounted: parts[5]
         }}).filter(disk => disk.filesystem)} catch (error) {
       console.error('Error getting disk metrics:', error);
-      return [];}
+      return []}
   }
 
   async getNetworkMetrics() {
     try {
       const networkInterfaces = os.networkInterfaces(;);
-      const metrics = ;{;};
+      const metrics = ;{};
       
       for (const [name, interfaces] of Object.entries(networkInterfaces)) {
         metrics[name] = interfaces.map(iface => ({
@@ -132,14 +130,14 @@ class ResourceMonitor {
           internal: iface.internal
         }))}
       
-      return metrics;} catch (error) {
+      return metrics} catch (error) {
       console.error('Error getting network metrics:', error);
-      return {;}}
+      return {}}
   }
 
   async getProcessMetrics() {
     try {
-      const pm2List = execSync('pm2 jlist', { encoding: 'utf8' ;};);
+      const pm2List = execSync('pm2 jlist', { encoding: 'utf8' };);
       const processes = JSON.parse(pm2List;);
       
       return processes.map(proc => ({;
@@ -152,16 +150,15 @@ class ResourceMonitor {
         restarts: proc.pm2_env.restart_time
       }))} catch (error) {
       console.error('Error getting process metrics:', error);
-      return [];}
+      return []}
   }
 
   async analyzeResources() {
     if (return) {
-    return;
-  }
+    return}
     
-    const current = this.resourceHistory[this.resourceHistory.length - 1;];
-    const previous = this.resourceHistory[this.resourceHistory.length - 2;];
+    const current = this.resourceHistory[this.resourceHistory.length - 1];
+    const previous = this.resourceHistory[this.resourceHistory.length - 2];
     
     const analysis = {
       timestamp: new Date().toISOString(),
@@ -170,7 +167,7 @@ class ResourceMonitor {
         memory: this.calculateTrend(previous.memory.usagePercent, current.memory.usagePercent)
       },
       alerts: []
-   ; ;};
+   };
     
     // Check for resource spikes
     if ( {
@@ -212,25 +209,21 @@ class ResourceMonitor {
     await this.saveAnalysis(analysis)}
 
   calculateTrend(previous, current) {
-    if (previous === 0) return 'stable;
-  }';
+    if (previous === 0) return 'stable}';
     
     const change = ((current - previous) / previous) * 1;0;0;
     
     if (return 'increasing) {
-    return 'increasing;
-  }';
+    return 'increasing}';
     if (return 'decreasing) {
-    return 'decreasing;
-  }';
-    return 'stable';}
+    return 'decreasing}';
+    return 'stable'}
 
   async checkAlerts() {
     if (return) {
-    return;
-  }
+    return}
     
-    const current = this.resourceHistory[this.resourceHistory.length - 1;];
+    const current = this.resourceHistory[this.resourceHistory.length - 1];
     
     // CPU alert
     if ( {
@@ -296,8 +289,7 @@ class ResourceMonitor {
       timestamp: new Date().toISOString(),
       data,
       resolved: false
-   ;
-  } ;};
+   } };
     
     this.alerts.push(alert);
     console.log(`🚨 Resource Alert: ${type}`, data);
@@ -314,7 +306,7 @@ class ResourceMonitor {
   async saveAlert(alert) {
     try {
       const filename = `./logs/resource-alerts-${new Date().toISOString().split('T')[0]}.json;`;
-      let alerts = [;];
+      let alerts = [];
       
       try {
         const existing = await fs.readFile(filename, 'utf8';);

@@ -16,13 +16,10 @@ function listFiles(dir) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) {
-      out.push(...listFiles(full));
-    } else if (EXTENSIONS.has(path.extname(entry.name))) {
-      out.push(full);
-    }
+      out.push(...listFiles(full))} else if (EXTENSIONS.has(path.extname(entry.name))) {
+      out.push(full)}
   }
-  return out;
-}
+  return out}
 
 function stripConflictMarkers(content) {
   // Prefer the right side of conflicts (after =======) since HEAD often contains broken text
@@ -33,16 +30,12 @@ function stripConflictMarkers(content) {
       const open = (s.match(/[{(\[]/g) || []).length;
       const close = (s.match(/[})\]]/g) || []).length;
       const quotes = (s.match(/['"]/g) || []).length;
-      return -(Math.abs(open - close) + (quotes % 2));
-    };
+      return -(Math.abs(open - close) + (quotes % 2))};
     const rightScore = score(right);
     const leftScore = score(left);
-    return rightScore >= leftScore ? right : left;
-  }).replace(/<<<<<<<[\s\S]*?\n([\s\S]*?)\n>>>>>>>[\s\S]*?\n?/g, (_m, only) => {
+    return rightScore >= leftScore ? right : left}).replace(/<<<<<<<[\s\S]*?\n([\s\S]*?)\n>>>>>>>[\s\S]*?\n?/g, (_m, only) => {
     // Two-way conflict without middle separator; keep inner content
-    return only;
-  });
-}
+    return only})}
 
 function fixCommonMangles(content) {
   let c = content;
@@ -72,8 +65,7 @@ function fixCommonMangles(content) {
   c = c.replace(/property=\"og:\s*type\"/g, 'property="og:type"');
   // Remove trailing unmatched syntax artifacts
   c = c.replace(/^\)\s*}\s*;?\s*$/gm, '');
-  return c;
-}
+  return c}
 
 function processFile(file) {
   const orig = fs.readFileSync(file, 'utf8');
@@ -82,23 +74,18 @@ function processFile(file) {
   next = fixCommonMangles(next);
   if (next !== orig) {
     fs.writeFileSync(file, next, 'utf8');
-    return true;
-  }
-  return false;
-}
+    return true}
+  return false}
 
 function main() {
   const targets = ROOT_DIRS.flatMap((d) => (fs.existsSync(d) ? listFiles(d) : []));
   let fixed = 0;
   for (const f of targets) {
     try {
-      if (processFile(f)) fixed++;
-    } catch (e) {
-      console.error('Error fixing', f, e.message);
-    }
+      if (processFile(f)) fixed++} catch (e) {
+      console.error('Error fixing', f, e.message)}
   }
-  console.log(`Repaired ${fixed} files out of ${targets.length}.`);
-}
+  console.log(`Repaired ${fixed} files out of ${targets.length}.`)}
 
 main();
 

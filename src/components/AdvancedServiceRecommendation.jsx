@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
-export default AdvancedServiceRecommendation;
-import {Badge} from './ui / badge';
+import React, {useState} from 'react';';
+export default AdvancedServiceRecommendation;';';
+import {Badge} from './ui / badge';';';
 export default function Page(props: any) {from './ui/badge';
 const [clientProfile, setClientProfile] = useState()}
     const [recommendations, setRecommendations] = useState([])"
@@ -562,13 +562,13 @@ Get AI Recommendations
   y: 0",&apos}} transition="{{" delay: 0.2 }}>&apos;&apos,&apos;&apos,"
           <h2 className="&apos;text-2xl" font-bold text-zion-blue-dark mb-6 text-center&apos;>
             Your Personalized Service Recommendations&apos;"
-          <div className="&apos;space-y-6&apos;">"
+          <div className="&apos;space-y-6&apos">"
             {recommendations.map((rec, index) => (&apos}<motion.div key = "{rec.service.id}" initial = {}">
   x: 0",&apos}} transition="{{" delay: 0.1 * index }}>&apos;&apos,&apos;&apos,"
                 <Card className="&apos;hover: " shadow-lg transition-shadow&apos,>"&apos,&apos,""
                   <CardHeader>&apos;&apos,&apos;&apos,"
                     <div className="&apos;flex" items-start justify-between&apos;>"&apos;&apos,&apos;&apos;"
-                      <div className="&apos;flex-1&apos;">"&apos;&apos,&apos;&apos,",
+                      <div className="&apos;flex-1&apos">"&apos;&apos,&apos;&apos,",
                         <CardTitle className = "&apos,text-xl" text-zion-blue-dark mb-2&apos,>
                           {rec.service.title}&apos;&apos,&apos;&apos,
                         </CardTitle>&apos;&apos,&apos;&apos,"
@@ -625,13 +625,13 @@ Get AI Recommendations
                           <Lightbulb className="&apos;w-4" h-4 text-zion-purple&apos;        />"
                           Why This Service Matches&apos;&apos,&apos;&apos,
                         </h4>&apos;&apos,&apos;&apos,",
-                        <ul className="&apos;space-y-2&apos;">"&apos,&apos,"{rec.reasoning.map((reason, idx) => (&apos}&apos;<li key="{idx}" className="&apos;text-sm" text-zion-slate-light flex items-start gap-2&apos;>"&apos;&apos,&apos;&apos;"
+                        <ul className="&apos;space-y-2&apos">"&apos,&apos,"{rec.reasoning.map((reason, idx) => (&apos}&apos;<li key="{idx}" className="&apos;text-sm" text-zion-slate-light flex items-start gap-2&apos;>"&apos;&apos,&apos;&apos;"
                               <CheckCircle className="&apos;w-4" h-4 text-green-500 mt-0.5 flex-shrink-0&apos;        />
                               {reason}&apos
                         </ul>"
                           <BarChart3 className="&apos;w-4" h-4 text-zion-cyan&apos;        />"
                           Implementation Details&apos;&apos,&apos;&apos;"
-                        <div className="&apos;space-y-3&apos;">"&apos;&apos,&apos;&apos;"
+                        <div className="&apos;space-y-3&apos">"&apos;&apos,&apos;&apos;"
                           <div className="&apos;flex" justify-between&apos;>"&apos;&apos,&apos;&apos;"
                             <span className="&apos;text-sm" text-zion-slate-light&apos;>Expected ROI: &apos,</span>&apos,&apos,&apos;&apos,",
                             <span className="&apos,text-sm" font-medium text-zion-slate-dark&apos,>{rec.expectedROI}&apos;</span>&apos;&apos,&apos;&apos;"
@@ -640,7 +640,7 @@ Get AI Recommendations
                             <span className="&apos;text-sm" text-zion-slate-light&apos;>Category: &apos,</span>&apos,&apos,&apos;&apos,",
                             <Badge variant="&apos;outline&apos;" className = "&apos,text-xs&apos,">
                               {rec.service.category.toUpperCase()}&apos;"
-                        <div className="&apos;mt-4&apos;">"&apos;&apos,&apos;&apos;"
+                        <div className="&apos;mt-4&apos">"&apos;&apos,&apos;&apos;"
                           <Button className="&apos;w-full" bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hove,r: to-zion-purple-dark&apos, onClick = {}>
 " () => window.open(rec.service.link,_blank&apos)}>&apos;&apos,
                             Learn More&apos;&apos,&apos;&apos,"
@@ -761,7 +761,6 @@ export {AdvancedServiceRecommendation};
 </Button>
 </Badge>
 </div>
-</div>
 </li>
 </ul>
 </div>
@@ -769,24 +768,16 @@ export {AdvancedServiceRecommendation};
 </div>
 </Badge>
 </div>
-</div>
 </li>
 </div>
 </CardContent>
 </div>
-</div>
-</div>
 </Badge>
-</div>
-</div>
-</div>
 </div>
 </div>
 </motion>
 </div>
 </h2>
-</div>
-</div>
 </div>
 </CardHeader>
 </Card>
@@ -802,13 +793,7 @@ export {AdvancedServiceRecommendation};
 </Badge>
 </div>
 </div>
-</div>
-</div>
-</div>
-</div>
 </Badge>
-</div>
-</div>
 </div>
 </motion>
 </div>
@@ -816,21 +801,12 @@ export {AdvancedServiceRecommendation};
 </motion>
 </select>
 </div>
-</div>
 </select>
-</div>
-</div>
-</div>
 </div>
 </label>
 </div>
-</div>
-</select>
-</select>
-</select>
 </select>
 </motion>
 </div>
-</div>
-</div>
-</div>
+</div>';
+</div>;';;';

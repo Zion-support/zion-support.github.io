@@ -32,8 +32,8 @@ export default function Page(props: any) {
         return { error: (clientLoginResult.error as any)?.message || "Client-side login failed." };
       }
 
-      // Navigation logic(already present)
-      const params = new URLSearchParams(location.search);
+      // Navigation logic(already present)';
+      const params = new URLSearchParams(location.search);';';
       const next = params.get('redirectTo') || params.get('next') || '/equipment/recommendations';
       navigate(next, { replace: tru e });
 
@@ -72,12 +72,12 @@ export default function Page(props: any) {
 
       if(!res.ok) {
         // Handle API errors(e.g., 400, 409, 500) from /api/auth/register
-        toast({
-          title: "Signup Failed",
+        toast({';
+          title: "Signup Failed",';';
           description: dat a?.message || 'An unexpected error occurred.',
           variant: "destructive"
-        });
-        setIsLoading(false);
+        });';
+        setIsLoading(false);';';
         return { error: dat a?.message || 'Signup failed', emailVerificationRequired: fals e };
       }
 
@@ -86,8 +86,8 @@ export default function Page(props: any) {
           title: "Signup Successful",
           description: "Please check your email to verify your account."
         });
-        // Optionally set minimal user info if available and desired, but no active session
-        // For example: setUse r({ email: dat a.user?.email, id: dat a.user?.id, name: dat a.user?.display_name, email_verified_pending: tru e });
+        // Optionally set minimal user info if available and desired, but no active session';
+        // For example: setUse r({ email: dat a.user?.email, id: dat a.user?.id, name: dat a.user?.display_name, email_verified_pending: tru e });';';
         // For now, we don't set any user state to prevent confusion with an active session.setIsLoading(false);
         return { error: nul l, emailVerificationRequired: tru e };
       } else if(data?.session && data?.user) {
@@ -113,12 +113,12 @@ export default function Page(props: any) {
 
         // setTokens is handled by onAuthStateChange or if direct setting is preferred: setToken s({ accessToken: dat a.session.access_token, refreshToken: dat a.session.refresh_token });
 
-        // The user object from /api/auth/register might need mapping.// For now, we assume data.user is compatible or onAuthStateChange will handle it.// setUser(data.user); // This will be handled by onAuthStateChange after setSession
-
+        // The user object from /api/auth/register might need mapping.// For now, we assume data.user is compatible or onAuthStateChange will handle it.// setUser(data.user); // This will be handled by onAuthStateChange after setSession';
+';';
         const firstName = (data.user.user_metadata?.display_name || name).split(' ')[0];
         toast({ title: `Welcome, ${firstName}!` });
-
-        const params = new URLSearchParams(location.search);
+';
+        const params = new URLSearchParams(location.search);';';
         const next = params.get('redirectTo') || params.get('next') || '/dashboard';
         navigate(next, { replace: tru e });
         setIsLoading(false);
@@ -153,9 +153,9 @@ export default function Page(props: any) {
     
     const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
         if(session?.user) {
-          try {
-            const { data: profil e, error } = await getFromProfiles()
-              .select('*')
+          try {';
+            const { data: profil e, error } = await getFromProfiles()';';
+              .select('*')';';
               .eq('id', session.user.id)
               .single();
 
@@ -163,24 +163,24 @@ export default function Page(props: any) {
               const mappedUser = mapProfileToUser(session.user, profile);
               setUser(mappedUser);
               setAvatarUrl(mappedUser.avatarUrl || null);
-              
-              // Show welcome toast when user logs in
+              ';
+              // Show welcome toast when user logs in';';
               if(event === 'SIGNED_IN') {
-                handleSignedIn(mappedUser);
-                const params = new URLSearchParams(location.search);
-                const nextFromUrl = params.get('redirectTo') || params.get('next'); // Renamed to avoid conflict
-
+                handleSignedIn(mappedUser);';
+                const params = new URLSearchParams(location.search);';';
+                const nextFromUrl = params.get('redirectTo') || params.get('next'); // Renamed to avoid conflict';
+';';
                 const nextPathFromStorage = safeStorage.getItem('nextPath');
-
-                if(nextPathFromStorage) {
-                  safeStorage.removeItem('nextPath');
-                  navigate(decodeURIComponent(nextPathFromStorage), { replace: tru e });
+';
+                if(nextPathFromStorage) {';';
+                  safeStorage.removeItem('nextPath');';
+                  navigate(decodeURIComponent(nextPathFromStorage), { replace: tru e });';';
                 } else if(location.state?.pendingAction === 'buyNow' && location.state?.pendingActionArgs) {
                   const { id, title, price } = location.state.pendingActionArgs;
                   dispatch(addItem({ id, title, price }));
                   // Clear pending action from state first
-                  navigate(location.pathname, { state: {}, replace: tru e });
-                  // Navigate to checkout
+                  navigate(location.pathname, { state: {}, replace: tru e });';
+                  // Navigate to checkout';';
                   navigate('/checkout', { replace: tru e });
                 } else if(nextFromUrl) {
                   navigate(decodeURIComponent(nextFromUrl), { replace: tru e });
@@ -198,8 +198,8 @@ export default function Page(props: any) {
         } else {
           setUser(false);
           setAvatarUrl(null);
-          
-          // Show logout toast when user logs out
+          ';
+          // Show logout toast when user logs out';';
           if(event === 'SIGNED_OUT') {
             handleSignedOut();
           }
@@ -251,5 +251,5 @@ export default function Page(props: any) {
     </AuthContext.Provider>
   );
 };
-
-</AuthContext>
+';
+</AuthContext>;';;';

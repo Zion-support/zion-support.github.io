@@ -24,10 +24,10 @@ class SecurityEnhancer {
     const report = {
       timestamp: new Date().toISOString(),
       improvements: this.improvements
-   ; ;};
+   };
     
     fs.writeFileSync('security-enhancement-report.json', JSON.stringify(report, null, 2));
-    console.log('🔒 Security enhancement completed');}
+    console.log('🔒 Security enhancement completed')}
 }
 
 const enhancer = new SecurityEnhancer;(;);

@@ -8,36 +8,36 @@ class ContinuousIntegrationAutomation {;
     this.projectRoot = process.cwd();
     this.reportsDir = path.join(this.projectRoot, 'automation-reports');
     this.ciSteps = [];
-    this.ensureDirectories();,
+    this.ensureDirectories(),
 }
 ;
   ensureDirectories() {;
     if (!fs.existsSync(this.reportsDir)) {;
-      fs.mkdirSync(this.reportsDir, { recursive: true });,
+      fs.mkdirSync(this.reportsDir, { recursive: true }),
 }
   }
 ;
   log(message, level = 'info') {;
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`;
-    console.log(logMessage);,
+    console.log(logMessage),
 }
 ;
   async runCIStep(stepName, command, description) {;
     this.log(`🚀 Starting: ${stepName} - ${description}`);
     const step = {;
-      name: stepName,;
-      command,;
-      description,;
-      startTime: Date.now(),;
-      status: 'running';,
+      name: stepName,
+      command,
+      description,
+      startTime: Date.now(),
+      status: 'running',
 }
     ;
     try {;
       const result = execSync(command, {;
-        cwd: this.projectRoot,;
-        encoding: 'utf8',;
-        timeout: 300000 // 5 minutes timeout;,
+        cwd: this.projectRoot,
+        encoding: 'utf8',
+        timeout: 300000 // 5 minutes timeout,
 });
       ;
       step.endTime = Date.now();
@@ -63,29 +63,29 @@ class ContinuousIntegrationAutomation {;
   async runLinting() {;
     this.log('🔍 Running linting checks...');
     return await this.runCIStep(;
-      'Linting',;
-      'npm run lint',;
+      'Linting',
+      'npm run lint',
       'Check code quality with ESLint';
-    );,
+    ),
 }
 ;
   async runTypeChecking() {;
     this.log('🔍 Running TypeScript type checking...');
     return await this.runCIStep(;
-      'Type Checking',;
-      'npm run type-check',;
+      'Type Checking',
+      'npm run type-check',
       'Check TypeScript types';
-    );,
+    ),
 }
 ;
   async runTests() {;
     this.log('🧪 Running tests...');
     try {;
       return await this.runCIStep(;
-        'Tests',;
-        'npm test',;
+        'Tests',
+        'npm test',
         'Run unit and integration tests';
-      );,
+      ),
 } catch (error) {;
       this.log('⚠️ Tests not configured, skipping...', 'warning');
       return { success: true, output: 'Tests skipped', duration: 0 }
@@ -95,29 +95,29 @@ class ContinuousIntegrationAutomation {;
   async runBuild() {;
     this.log('🏗️ Running build...');
     return await this.runCIStep(;
-      'Build',;
-      'npm run build',;
+      'Build',
+      'npm run build',
       'Build the application';
-    );,
+    ),
 }
 ;
   async runSecurityAudit() {;
     this.log('🔒 Running security audit...');
     return await this.runCIStep(;
-      'Security Audit',;
-      'npm audit --audit-level=moderate',;
+      'Security Audit',
+      'npm audit --audit-level=moderate',
       'Check for security vulnerabilities';
-    );,
+    ),
 }
 ;
   async runPerformanceCheck() {;
     this.log('⚡ Running performance check...');
     try {;
       return await this.runCIStep(;
-        'Performance Check',;
-        'npm run perf: monitor',;
+        'Performance Check',
+        'npm run perf: monitor',
         'Check application performance';
-      );,
+      ),
 } catch (error) {;
       this.log('⚠️ Performance check not configured, skipping...', 'warning');
       return { success: true, output: 'Performance check skipped', duration: 0 }
@@ -192,7 +192,7 @@ jobs:;
 
       const workflowsDir = path.join(this.projectRoot, '.github', 'workflows');
       if (!fs.existsSync(workflowsDir)) {;
-        fs.mkdirSync(workflowsDir, { recursive: true });,
+        fs.mkdirSync(workflowsDir, { recursive: true }),
 }
       ;
       const workflowFile = path.join(workflowsDir, 'ci.yml');
@@ -213,22 +213,22 @@ jobs:;
     const failedSteps = this.ciSteps.filter(s => s.status === 'failed');
     ;
     const report = {;
-      timestamp: new Date().toISOString(),;
+      timestamp: new Date().toISOString(),
       summary: {;
-        totalSteps: this.ciSteps.length,;
-        successfulSteps: successfulSteps.length,;
-        failedSteps: failedSteps.length,;
-        successRate: ((successfulSteps.length / this.ciSteps.length) * 100).toFixed(2),;
-        totalDuration: totalDuration;,
-},;
-      steps: this.ciSteps,;
-      recommendations: this.generateRecommendations();,
+        totalSteps: this.ciSteps.length,
+        successfulSteps: successfulSteps.length,
+        failedSteps: failedSteps.length,
+        successRate: ((successfulSteps.length / this.ciSteps.length) * 100).toFixed(2),
+        totalDuration: totalDuration,
+},
+      steps: this.ciSteps,
+      recommendations: this.generateRecommendations(),
 }
     ;
     const reportFile = path.join(this.reportsDir, `ci-automation-report-${Date.now()}.json`);
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log(`📄 CI report saved to: ${reportFile}`);
-    return reportFile;,
+    return reportFile,
 }
 ;
   generateRecommendations() {;
@@ -237,27 +237,27 @@ jobs:;
     ;
     if (failedSteps.length > 0) {;
       recommendations.push({;
-        type: 'error',;
-        message: `${failedSteps.length} CI steps failed. Review and fix issues.`;,
-});,
+        type: 'error',
+        message: `${failedSteps.length} CI steps failed. Review and fix issues.`,
+}),
 }
 ;
     recommendations.push({;
-      type: 'improvement',;
-      message: 'Set up automated deployment pipeline';,
+      type: 'improvement',
+      message: 'Set up automated deployment pipeline',
 });
     ;
     recommendations.push({;
-      type: 'improvement',;
-      message: 'Add performance monitoring to CI pipeline';,
+      type: 'improvement',
+      message: 'Add performance monitoring to CI pipeline',
 });
     ;
     recommendations.push({;
-      type: 'improvement',;
-      message: 'Implement automated rollback mechanisms';,
+      type: 'improvement',
+      message: 'Implement automated rollback mechanisms',
 });
 
-    return recommendations;,
+    return recommendations,
 }
 ;
   displaySummary() {;
@@ -278,8 +278,8 @@ jobs:;
     if (failedSteps.length > 0) {;
       console.log('\n❌ FAILED STEPS:');
       failedSteps.forEach((step, index) => {;
-        console.log(`${index + 1}. ${step.name}: ${step.error}`);,
-});,
+        console.log(`${index + 1}. ${step.name}: ${step.error}`),
+}),
 }
   }
 ;
@@ -313,8 +313,8 @@ jobs:;
 if (require.main === module) {;
   const ci = new ContinuousIntegrationAutomation();
   ci.run().then(result => {;
-    process.exit(result.success ? 0 : 1);,
-});,
+    process.exit(result.success ? 0 : 1),
+}),
 }
 ;
 module.exports = ContinuousIntegrationAutomation

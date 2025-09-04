@@ -2,8 +2,4 @@ import { TrendingUp, Users, ArrowRight, Star, Building, Globe, Zap, Shield const
 
 </motion>
 </motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
+</motion>;;

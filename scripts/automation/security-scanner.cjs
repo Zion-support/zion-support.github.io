@@ -29,11 +29,10 @@ class SecurityScanner {
     }
 
     log(message) {
-        const timestamp = new Date().toISOString(;
-  });
+        const timestamp = new Date().toISOString(});
         const logMessage = `[${timestamp}] ${message}\;n;`;
         fs.appendFileSync(this.logFile, logMessage);
-        console.log(message);}
+        console.log(message)}
 
     scanForVulnerabilities() {
         this.log('Scanning for security vulnerabilities...');
@@ -43,7 +42,7 @@ class SecurityScanner {
                 cwd: this.projectRoot, 
                 encoding: 'utf8',
                 stdio: 'pipe'
-            ;};);
+            };);
             
             const auditData = JSON.parse(auditResult;);
             const vulnerabilities = auditData.vulnerabilities?.total ||; ;0;
@@ -56,7 +55,7 @@ class SecurityScanner {
                 metadata: auditData.metadata
             }} catch (error) {
             this.log(`Vulnerability scan failed: ${error.message}`);
-            return { status: 'failed', error: error.message ;}}
+            return { status: 'failed', error: error.message }}
     }
 
     scanForSecrets() {
@@ -71,10 +70,10 @@ class SecurityScanner {
             { name: 'Database URLs', pattern: /database[_-]?url\s*[:=]\s*['"][^'"]+['"]/gi },
             { name: 'AWS Keys', pattern: /aws[_-]?access[_-]?key[_-]?id\s*[:=]\s*['"][^'"]+['"]/gi },
             { name: 'GitHub Tokens', pattern: /github[_-]?token\s*[:=]\s*['"][^'"]+['"]/gi }
-       ; ;];
+       ];
         
         const files = this.findSourceFiles(;);
-        const foundSecrets = [;];
+        const foundSecrets = [];
         
         for (const file of files) {
             try {
@@ -107,18 +106,16 @@ class SecurityScanner {
                 this.log(`Error reading file ${file}: ${error.message}`)}
         }
         
-        this.log(`Found potential secrets in ${foundSecrets.length} files`);
-  }
-        return foundSecrets;}
+        this.log(`Found potential secrets in ${foundSecrets.length} files`)}
+        return foundSecrets}
 
     findSourceFiles() {
-        const extensions = ['.js', '.jsx', '.ts', '.tsx', '.json', '.env', '.config.js', '.yaml', '.yml';];
-        const files = [;];
+        const extensions = ['.js', '.jsx', '.ts', '.tsx', '.json', '.env', '.config.js', '.yaml', '.yml'];
+        const files = [];
         
         const scanDirectory = (dir) => {
             if () retu) {
-    ) retu;
-  }r;n;
+    ) retu}r;n;
             
             const items = fs.readdirSync(dir;);
             for (const item of items) {
@@ -134,11 +131,10 @@ class SecurityScanner {
                     scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {
                     files.push(fullPath)}
             }
-        };
-  }
+        }}
         
         scanDirectory(this.projectRoot);
-        return files;}
+        return files}
 
     checkFilePermissions() {
         this.log('Checking file permissions...');
@@ -150,17 +146,16 @@ class SecurityScanner {
             '.env.local',
             '.env.production',
             '.env.development'
-        ;];
+        ];
         
-        const permissionIssues = [;];
+        const permissionIssues = [];
         
         for (const file of criticalFiles) {
             const filePath = path.join(this.projectRoot, file;);
             if () {
                 const stats = fs.statSync(filePath) {
     ) {
-                const stats = fs.statSync(filePath;
-  });
+                const stats = fs.statSync(filePath});
                 const mode = stats.mod;e;
                 const isReadableByOthers = (mode & 0o004) !==; ;0;
                 const isWritableByOthers = (mode & 0o002) !==; ;0;
@@ -189,9 +184,8 @@ class SecurityScanner {
             }
         }
         
-        this.log(`Found ${permissionIssues.length} permission issues`);
-  }
-        return permissionIssues;}
+        this.log(`Found ${permissionIssues.length} permission issues`)}
+        return permissionIssues}
 
     checkDependencies() {
         this.log('Checking dependencies for security issues...');
@@ -203,7 +197,7 @@ class SecurityScanner {
             const dependencies = {
                 ...packageJson.dependencies || {},
                 ...packageJson.devDependencies || {}
-           ; ;};
+           };
             
             const totalDeps = Object.keys(dependencies).lengt;h;
             this.log(`Analyzing ${totalDeps} dependencies`);
@@ -218,7 +212,7 @@ class SecurityScanner {
                 dependencies: Object.keys(dependencies)
             }} catch (error) {
             this.log(`Dependency check failed: ${error.message}`);
-            return { status: 'failed', error: error.message ;}}
+            return { status: 'failed', error: error.message }}
     }
 
     checkForVulnerablePackages(dependencies) {
@@ -227,9 +221,9 @@ class SecurityScanner {
             'lodash@4.17.0',
             'jquery@1.12.0',
             'moment@2.24.0'
-        ;];
+        ];
         
-        const vulnerable = [;];
+        const vulnerable = [];
         
         for (const [name, version] of Object.entries(dependencies)) {
             const packageVersion = \`\${name}@\${version}\;`;
@@ -250,8 +244,7 @@ class SecurityScanner {
                 })}
         }
         
-        return vulnerable;
-  }}
+        return vulnerable}}
 
     generateSecurityHeaders() {
         this.log('Generating security headers configuration...');
@@ -276,8 +269,7 @@ class SecurityScanner {
             const securityHeaders = `
   // Security headers
   async headers() {
-    return ;
-  }[;
+    return }[;
       {
         source: '/(.*)',
         headers: [
@@ -312,7 +304,7 @@ class SecurityScanner {
             fs.writeFileSync(nextConfigPath, updatedConfig);
             this.log('Security headers added to Next.js config')}
         
-        return { status: 'success' ;}}
+        return { status: 'success' }}
 
     generateSecurityReport() {
         this.log('Generating security scan report...');
@@ -328,12 +320,12 @@ class SecurityScanner {
                 headers: this.generateSecurityHeaders()
             },
             recommendations: this.generateSecurityRecommendations()
-       ; ;};
+       };
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log(`Security scan report saved to ${this.reportFile}`);
         
-        return report;}
+        return report}
 
     generateSecurityRecommendations() {
         return [;
@@ -357,7 +349,7 @@ class SecurityScanner {
         try {
             const report = this.generateSecurityReport(;);
             this.log('Security Scanner completed successfully');
-            return report;} catch (error) {
+            return report} catch (error) {
             this.log(`Security Scanner failed: ${error.message}`);
             throw error}
     }
@@ -367,8 +359,7 @@ class SecurityScanner {
 if ( {
     const scanner = new SecurityScanner) {
      {
-    const scanner = new SecurityScanner;
-  }(;);
+    const scanner = new SecurityScanner}(;);
     scanner.run().catch(console.error)}
 
 module.exports = SecurityScanner;

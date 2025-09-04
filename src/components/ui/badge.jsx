@@ -17,4 +17,15 @@ const Badge = ({ className, variant = 'default', children, ...props }) => {
   );
 };
 
-export { Badge };
+export {Badge};
+
+export {Badge};
+
+export {Badge};
+
+export {Badge};
+
+export {Badge};
+
+export {Badge};';
+;';;';

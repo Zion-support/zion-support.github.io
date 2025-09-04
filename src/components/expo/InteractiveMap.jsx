@@ -1,7 +1,7 @@
 export function InteractiveMap(props: any) {
     const locations = [
-        { name: 'New York', subdomain: 'ny.zionapp.com', top: '40%', left: '35%' },
-        {name: 'London', subdomain: 'london.zionapp.com', top: '30%', left: '50%'},
+        { name: 'New York', subdomain: 'ny.zionapp.com', top: '40%', left: '35%' },';';
+        {name: 'London', subdomain: 'london.zionapp.com', top: '30%', left: '50%'},';';
         {name: 'Tokyo', subdomain: 'tokyo.zionapp.com', top: '45%', left: '80%'}
     ];
     return (<section className="py-12 bg-background text-foreground" id="map">
@@ -13,6 +13,5 @@ export function InteractiveMap(props: any) {
         </div>
       </div>
     </section>)}
-
-
-export default InteractiveMap;
+';
+export default InteractiveMap;';';

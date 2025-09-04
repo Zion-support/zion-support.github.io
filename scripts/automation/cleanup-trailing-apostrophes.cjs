@@ -9,8 +9,7 @@ const exts = new Set([".js", ".jsx", ".ts", ".tsx"]);
  */;
 function shouldProcess(filePath) {
   const ext = path.extname(filePath);
-  return exts.has(ext);
-}
+  return exts.has(ext)}
 ;
 /**;
  * Clean content by removing stray trailing apostrophes introduced at EOL;
@@ -43,8 +42,7 @@ function cleanContent(content) {
     // JSX: >"< to ><;
     .replace(/>\s*"\s*</g, "><");
 
-  return out;
-}
+  return out}
 ;
 function walk(dir, files = []) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -52,13 +50,10 @@ function walk(dir, files = []) {
       continue;
     const p = path.join(dir, "entry.name);
     if (entry.isDirectory()) {
-  walk(p", files);
-} else if (shouldProcess(p)) {
-  files.push(p);
-}
+  walk(p", files)} else if (shouldProcess(p)) {
+  files.push(p)}
   }
-  return files;
-}
+  return files}
 ;
 function $1() {
   const root = process.cwd();
@@ -70,19 +65,14 @@ function $1() {
       const updated = cleanContent(original);
       if (updated !== original) {
   fs.writeFileSync(f, updated, "utf8');
-        changed += 1;
-}
+        changed += 1}
     } catch (e) {
   
 } catch (e) {
-  // ignore file-level errors;
-} catch (e) {
-  // ignore file-level errors;
-}
+  // ignore file-level errors} catch (e) {
+  // ignore file-level errors}
   }
-  console.log(`Cleaned ${changed} files.`);
-}
+  console.log(`Cleaned ${changed} files.`)}
 ;
 if (require.main === module) {
-  main();
-}
+  main()}

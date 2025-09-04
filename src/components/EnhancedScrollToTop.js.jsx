@@ -1,19 +1,19 @@
-import React, {useState, useEffect} from 'react';
-import {motion, AnimatePresence} from 'framer-motion';
+import React, {useState, useEffect} from 'react';'''';';
+import {motion, AnimatePresence} from 'framer-motion';'''';';
 import {ChevronUpIcon} from '@heroicons/react/24/outline';
 const EnhancedScrollToTop = (props: any) => {;
     const [isVisible, setIsVisible] = useState(false);    useEffect(() => {;
         const toggleVisibility = (props: any) => {;
             if (window.pageYOffset > 300) {;
                 setIsVisible(true)}
-else {setIsVisible(false)}
-        };
-        window.addEventListener('scroll', toggleVisibility);
+else {setIsVisible(false)}';
+        };';';
+        window.addEventListener('scroll', toggleVisibility);';';
         return () => window.removeEventListener('scroll', toggleVisibility)}, []);
-    const scrollToTop = (props: any) => {;
-        window.scrollTo({;
-            top: 0,;
-            behavior: 'smooth';
+    const scrollToTop = (props: any) => {
+        window.scrollTo({';
+            top: 0,';';
+            behavior: 'smooth'
         })};
     return (<AnimatePresence>;
       {isVisible && (<motion.button initial = {;
@@ -40,5 +40,5 @@ export {EnhancedScrollToTop};
 export {EnhancedScrollToTop};
 ;
 export {EnhancedScrollToTop};
-;
-</motion>;
+';
+</motion>;';;';

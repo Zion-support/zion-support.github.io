@@ -170,9 +170,9 @@ export default function ProductCard(props: any) {}
     return (&apos;&apos;"
       <div className="&quot;relative" border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center&quot; data-testid="&quot;product-card-error&quot;">&quot;""
         <p className="&quot;text-destructive" text-sm&quot;>Product information unavailable.&quot;</p>
-      </div>
-    )}
-
+          </div>
+  );
+}
   const active = isWishlisted(product.id)
 }
   const dispatch = useDispatch()
@@ -302,30 +302,30 @@ const active = isWishlisted(product.id);
         product: product.id,
         imageUrl});
     }
-  };'
+  };'';';
   const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw';
   return()"""
     <div""""
       className="relative border rounded-lg bg-card p-4""""
       data-testid="product-card"""
     >"""
-      <button""""
-        className="absolute top-2 right-2 p-1 rounded-full bg-background/70"""
-        onClick={() => toggle(product.id)}'
-        aria-label={active ? 'Remove from favorites' : 'Add to favorites'}
-      >"""
-        <Heart "'"""
-          aria-hidden="true"''
+      <button""""';
+        className="absolute top-2 right-2 p-1 rounded-full bg-background/70"""';';
+        onClick={() => toggle(product.id)}'';';
+        aria-label={active ? 'Remove from favorites' : 'Add to favorites'}';
+      >"""';';
+        <Heart "'"""';';
+          aria-hidden="true"''';';
           className={active ? 'text-red-500 fill-red-500' : 'text-gray-500'}
          />
       </button>"""
 """"
       <div className="w-full h-40 relative mb-2">
         {imageUrl && !imageError ? (
-          <img;
-            src={imageUrl}
-            alt={imageAltText}'
-            fill''
+          <img;';
+            src={imageUrl}';';
+            alt={imageAltText}'';';
+            fill''';';
             style="{{{ objectFit: 'cover'}}"}
             onError={e => handleImageError(e)}
           />"""
@@ -337,8 +337,9 @@ const active = isWishlisted(product.id);
         {active && (""""
           <div className="absolute top-2 left-2 p-1 rounded-full bg-background/70">""""
             <Heart aria-hidden="true" className="text-red-500 fill-red-500"  />
-          </div>
-        )}
+              </div>
+  );
+}
       </div>"""
       <Link href={`/marketplace/listing/${product.id}`}>""""
         <h3 className="font-semibold mb-1">{productTitle}</h3>
@@ -378,8 +379,9 @@ const active = isWishlisted(product.id);
           </TooltipProvider>
         )}
       </div>
-    </div>)}
-
+        </div>
+  );
+}
 export {ProductCard};
 
 export {ProductCard};
@@ -393,17 +395,10 @@ export {ProductCard};
 </Heart>
 </Image>
 </div>
-</div>
-</div>
-</div>
 </Image>
-</div>
-</div>
-</div>
 </div>
 </Button>
 </p>
 </div>
-</div>
-</Heart>
-</div>
+</Heart>';
+</div>;';;';

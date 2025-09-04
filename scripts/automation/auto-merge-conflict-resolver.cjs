@@ -15,8 +15,7 @@ class $1 {
     // Ensure logs directory exists;
     const logsDir = path.dirname(this.logFile);
     if (!fs.existsSync(logsDir)) {
-  fs.mkdirSync(logsDir, { recursive: true });
-}
+  fs.mkdirSync(logsDir, { recursive: true })}
   }
 ;
   log(message, level = `INFO`) {
@@ -24,17 +23,15 @@ class $1 {
     const logMessage = `[${timestamp}] [${level}] ${message}`;
     console.log(`logMessage);
     // Write to log file;
-    fs.appendFileSync(this.logFile, logMessage + `\n`);
-}
+    fs.appendFileSync(this.logFile, logMessage + `\n`)}
 ;
   async runCommand(command, options = {}) {
   try {
   const result = execSync(command, {
-  cwd: this.projectRoot,;
-        encoding: `utf8`,;
-        stdio: options.silent ? "pipe" : "inherit",;
-        ...options;
-});
+  cwd: this.projectRoot,
+        encoding: `utf8`,
+        stdio: options.silent ? "pipe" : "inherit",
+        ...options});
       return { success: true, output: result }
     } catch (error) {
   return { success: false, error: error.message, output: error.stdout || error.stderr   }
@@ -45,17 +42,15 @@ class $1 {
     console.log(`logMessage);
     ;
     // Write to log file;
-    fs.appendFileSync(this.logFile, logMessage + "\n");
-}
+    fs.appendFileSync(this.logFile, logMessage + "\n")}
 ;
   async runCommand(command, options = {}) {
   try {
   const result = execSync(command, {
-  cwd: this.projectRoot,;
-        encoding: "utf8",;
-        stdio: options.silent ? "pipe" : "inherit",;
-        ...options;
-});
+  cwd: this.projectRoot,
+        encoding: "utf8",
+        stdio: options.silent ? "pipe" : "inherit",
+        ...options});
       return { success: true, output: result }
     } catch (error) {
   return { success: false, error: error.message, output: error.stdout || error.stderr }
@@ -68,27 +63,22 @@ class $1 {
     const status = await this.runCommand("git status --porcelain", { silent: true });
     if (!status.success) {
   this.log("❌ Failed to get git status", "ERROR");
-      return [];
-}
+      return []}
 ;
     const conflictedFiles = [];
     const lines = status.output.split("\n");
     for (const line of lines) {
   if (line.includes("UU ") || line.includes(`AA `) || line.includes(`DD `)) {
   const filePath = line.substring(3);
-        conflictedFiles.push(filePath);
-}
+        conflictedFiles.push(filePath)}
     }
     ;
     for (const line of lines) {
   if (line.includes("UU ") || line.includes("AA ") || line.includes("DD ")) {
   const filePath = line.substring(3);`);
-        conflictedFiles.push(filePath);`);
-}`);
-}`);
+        conflictedFiles.push(filePath);`)}`)}`);
 this.log(📊 Found ${conflictedFiles.length} conflicted files`);
-    return conflictedFiles;
-}
+    return conflictedFiles}
 ;
   async resolveFileConflict(filePath) {this.log(`🔧 Resolving conflict in: ${filePath}`);
     try {
@@ -118,13 +108,11 @@ this.log(📊 Found ${conflictedFiles.length} conflicted files`);
       // Write resolved content;
       fs.writeFileSync(filePath, resolvedContent);
       this.conflictsResolved.push({
-  file: filePath,;
-        timestamp: new Date().toISOString(),;
-        action: `resolved`;
-});
+  file: filePath,
+        timestamp: new Date().toISOString(),
+        action: `resolved`});
 this.log(`✅ Resolved conflict in ${filePath}`);
       return { success: true, action: `resolved` }
-;
 } catch (error) {  this.log(`❌ Failed to resolve conflict in ${filePath  }: ${error.message}`, `ERROR`);
       return { success: false, error: error.message }
     }
@@ -146,28 +134,22 @@ this.log(`✅ Resolved conflict in ${filePath}`);
       if (reactImport) result += reactImport + "\n";
       result += otherImports.join("\n");
       ;
-      return result;
-});
-}
+      return result})}
 ;
   resolveComponentConflicts(content, filePath) {
   // Handle component conflicts by keeping the most recent version;
     const componentPattern = /\s*\n(.*?)\n;
     return content.replace(componentPattern, (match, headContent, incomingContent) => {
   // Prefer incoming content for components (usually more recent);
-      return incomingContent.trim();
-});
-}
+      return incomingContent.trim()})}
 ;
   resolveConfigConflicts(content, filePath) {
   // Handle configuration conflicts by merging intelligently;
     if (filePath.includes(`package.json`)) {
-  return this.resolvePackageJsonConflict(content);
-}
+  return this.resolvePackageJsonConflict(content)}
     ;
     if (filePath.includes(`tsconfig.json`)) {
-  return this.resolveTsConfigConflict(content);
-}
+  return this.resolveTsConfigConflict(content)}
     ;
 
   resolveComponentConflicts(content, filePath) {
@@ -175,19 +157,15 @@ this.log(`✅ Resolved conflict in ${filePath}`);
     const componentPattern = /\s*\n(.*?)\n    ;
     return content.replace(componentPattern, (match, headContent, incomingContent) => {
   // Prefer incoming content for components (usually more recent);
-      return incomingContent.trim();
-});
-}
+      return incomingContent.trim()})}
 ;
   resolveConfigConflicts(content, filePath) {
   // Handle configuration conflicts by merging intelligently;
     if (filePath.includes("package.json")) {
-  return this.resolvePackageJsonConflict(content);
-}
+  return this.resolvePackageJsonConflict(content)}
     ;
     if (filePath.includes("tsconfig.json")) {
-  return this.resolveTsConfigConflict(content);
-}
+  return this.resolveTsConfigConflict(content)}
     ;
     // Default: keep incoming content;
     return content.replace(/\s*\n(.*?)\n  }
@@ -209,10 +187,8 @@ this.log(`✅ Resolved conflict in ${filePath}`);
   merged.devDependencies = { ...merged.devDependencies, ...incomingJson.devDependencies }
         }
         ;
-        return JSON.stringify(merged, null, 2);
-}
-    } catch (error) {  this.log(`⚠️ Failed to merge package.json, using incoming version: ${error.message  }`, `WARN`);
-}
+        return JSON.stringify(merged, null, 2)}
+    } catch (error) {  this.log(`⚠️ Failed to merge package.json, using incoming version: ${error.message  }`, `WARN`)}
     ;
     // Fallback: remove conflict markers;
     return content.replace(/\s*\n(.*?)\n  }
@@ -230,8 +206,7 @@ this.log(`✅ Resolved conflict in ${filePath}`);
   const headConfig = headMatch[1];
       const incomingConfig = incomingMatch[1];
       // Prefer the config with more options;
-      return headConfig.length > incomingConfig.length ? headConfig : incomingConfig;
-}
+      return headConfig.length > incomingConfig.length ? headConfig : incomingConfig}
     ;
     return content.replace(/\s*\n(.*?)\n  }
 ;
@@ -251,32 +226,28 @@ this.log(`✅ Resolved conflict in ${filePath}`);
     try {
   // Checkout the branchconst checkoutResult = await this.runCommand(`git checkout ${branchName}`);
       if (!checkoutResult.success) {this.log(`❌ Failed to checkout ${branchName}`, `ERROR`);
-        return false;
-}
+        return false}
 ;
       // Try to merge with main;
       const mergeResult = await this.runCommand(`git merge main`);
       if (mergeResult.success) {this.log(`✅ Successfully merged ${branchName} with main`);
         this.branchesProcessed.push({
-  branch: branchName,;
-          status: `merged`,;
-          timestamp: new Date().toISOString();
-});
-        return true;
-} else {
+  branch: branchName,
+          status: `merged`,
+          timestamp: new Date().toISOString()});
+        return true} else {
   // Handle merge conflicts;
         const conflictedFiles = await this.detectMergeConflicts();
         ;
         for (const file of conflictedFiles) {
-  await this.resolveFileConflict(file);
-}
+  await this.resolveFileConflict(file)}
 ;
         // Add and commit resolved conflicts;
         await this.runCommand(`git add .`);const commitResult = await this.runCommand(`git commit -m Auto-resolve merge conflicts in ${branchName}`);
         if (commitResult.success) {this.log(`✅ Successfully resolved conflicts in ${branchName}`);
           this.branchesProcessed.push({
-  branch: branchName,;
-            status: `conflicts_resolved`,;
+  branch: branchName,
+            status: `conflicts_resolved`,
             timestamp: new Date().toISOString();
 
         // Add and commit resolved conflicts;
@@ -284,18 +255,14 @@ this.log(`✅ Resolved conflict in ${filePath}`);
         ;
         if (commitResult.success) {this.log(`✅ Successfully resolved conflicts in ${branchName}`);
           this.branchesProcessed.push({
-  branch: branchName,;
-            status: "conflicts_resolved",;
-            timestamp: new Date().toISOString();
-});
-          return true;
-} else {this.log(`❌ Failed to commit resolved conflicts in ${branchName}`, `ERROR`);
-          return false;
-}
+  branch: branchName,
+            status: "conflicts_resolved",
+            timestamp: new Date().toISOString()});
+          return true} else {this.log(`❌ Failed to commit resolved conflicts in ${branchName}`, `ERROR`);
+          return false}
       }
     } catch (error) {  this.log(`❌ Error processing branch ${branchName  }: ${error.message}`, `ERROR`);
-      return false;
-}
+      return false}
   }
 ;
   async getBranchesToProcess() {
@@ -303,8 +270,7 @@ this.log(`✅ Resolved conflict in ${filePath}`);
     const result = await this.runCommand("git branch -r", { silent: true });
     if (!result.success) {
   this.log("❌ Failed to get branch list", "ERROR");
-      return [];
-}
+      return []}
 ;
     const branches = result.output;
       .split("\n");
@@ -312,19 +278,18 @@ this.log(`✅ Resolved conflict in ${filePath}`);
       .filter(line => line.startsWith("""origin/cursor/"""));
       .map(line => line.replace(`origin/`, ``));
 this.log(`📊 Found ${branches.length} cursor branches to process`);
-    return branches;
-}
+    return branches}
 ;
   async generateReport() {
   const report = {
-  timestamp: new Date().toISOString(),;
-      duration: Date.now() - this.startTime,;
-      conflictsResolved: this.conflictsResolved,;
-      branchesProcessed: this.branchesProcessed,;
+  timestamp: new Date().toISOString(),
+      duration: Date.now() - this.startTime,
+      conflictsResolved: this.conflictsResolved,
+      branchesProcessed: this.branchesProcessed,
       summary: {
-  totalConflicts: this.conflictsResolved.length,;
-        totalBranches: this.branchesProcessed.length,;
-        successfulBranches: this.branchesProcessed.filter(b => b.status === `merged` || b.status === `conflicts_resolved`).length,;
+  totalConflicts: this.conflictsResolved.length,
+        totalBranches: this.branchesProcessed.length,
+        successfulBranches: this.branchesProcessed.filter(b => b.status === `merged` || b.status === `conflicts_resolved`).length,
         failedBranches: this.branchesProcessed.filter(b => b.status === `failed`).length;
 
     const branches = result.output;
@@ -333,27 +298,24 @@ this.log(`📊 Found ${branches.length} cursor branches to process`);
       .filter(line => line.startsWith(""origin/cursor/""));
       .map(line => line.replace("origin/", "));
 this.log(`📊 Found ${branches.length} cursor branches to process`);
-    return branches;
-}
+    return branches}
 ;
   async generateReport() {
   const report = {
-  timestamp: new Date().toISOString(),;
-      duration: Date.now() - this.startTime,;
-      conflictsResolved: this.conflictsResolved,;
-      branchesProcessed: this.branchesProcessed,;
+  timestamp: new Date().toISOString(),
+      duration: Date.now() - this.startTime,
+      conflictsResolved: this.conflictsResolved,
+      branchesProcessed: this.branchesProcessed,
       summary: {
-  totalConflicts: this.conflictsResolved.length,;
-        totalBranches: this.branchesProcessed.length,;
-        successfulBranches: this.branchesProcessed.filter(b => b.status === "merged" || b.status === "conflicts_resolved").length,;
-        failedBranches: this.branchesProcessed.filter(b => b.status === "failed").length;
-}
+  totalConflicts: this.conflictsResolved.length,
+        totalBranches: this.branchesProcessed.length,
+        successfulBranches: this.branchesProcessed.filter(b => b.status === "merged" || b.status === "conflicts_resolved").length,
+        failedBranches: this.branchesProcessed.filter(b => b.status === "failed").length}
     }
 ;
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));this.log(`📊 Report generated: ${this.reportFile}`);
     ;
-    return report;
-}
+    return report}
 ;
   async run() {
   this.log(`🚀 Starting Auto Merge Conflict Resolver`);
@@ -371,28 +333,22 @@ this.log(`📊 Found ${branches.length} cursor branches to process`);
       for (const branch of branches) {
   const success = await this.processBranch(branch);
         if (success) {
-  successCount++;
-} else {
+  successCount++} else {
   failureCount++;
           this.branchesProcessed.push({
-  branch: branch,;
-            status: `failed`,;
-            timestamp: new Date().toISOString();
-});
-}
+  branch: branch,
+            status: `failed`,
+            timestamp: new Date().toISOString()})}
       }
 ;
       // Generate final report;
       const report = await this.generateReport();
       this.log(`🎉 Auto Merge Conflict Resolver completed!`);this.log(`📊 Summary:`);this.log(`   - Branches processed: ${report.summary.totalBranches}`);this.log(`   - Successful merges: ${report.summary.successfulBranches}`);this.log(`   - Failed merges: ${report.summary.failedBranches}`);this.log(`   - Conflicts resolved: ${report.summary.totalConflicts}`);this.log(`   - Duration: ${Math.round(report.duration / 1000)}s`);
-      return report;
-} catch (error) {  this.log(`❌ Fatal error: ${error.message  }`, `ERROR`);
+      return report} catch (error) {  this.log(`❌ Fatal error: ${error.message  }`, `ERROR`);
           this.branchesProcessed.push({
-  branch: branch,;
-            status: "failed",;
-            timestamp: new Date().toISOString();
-});
-}
+  branch: branch,
+            status: "failed",
+            timestamp: new Date().toISOString()})}
       }
 ;
       // Generate final report;
@@ -400,10 +356,8 @@ this.log(`📊 Found ${branches.length} cursor branches to process`);
 
       this.log("🎉 Auto Merge Conflict Resolver completed!");this.log(`📊 Summary:`);this.log(`   - Branches processed: ${report.summary.totalBranches}`);this.log(`   - Successful merges: ${report.summary.successfulBranches}`);this.log(`   - Failed merges: ${report.summary.failedBranches}`);this.log(`   - Conflicts resolved: ${report.summary.totalConflicts}`);this.log(`   - Duration: ${Math.round(report.duration / 1000)}s`);
 
-      return report;
-} catch (error) {this.log(`❌ Fatal error: ${error.message}`, "ERROR");
-      throw error;
-}
+      return report} catch (error) {this.log(`❌ Fatal error: ${error.message}`, "ERROR");
+      throw error}
   }
 }
 ;
@@ -413,12 +367,9 @@ if (require.main === module) {
   resolver.run();
     .then(report => {
   console.log(`✅ Auto merge conflict resolution completed successfully`);
-      process.exit(0);
-});
+      process.exit(0)});
     .catch(error => {
   console.error("❌ Auto merge conflict resolution failed: ", error);
-      process.exit(1);
-});
-}
+      process.exit(1)})}
 ;
 module.exports = AutoMergeConflictResolver

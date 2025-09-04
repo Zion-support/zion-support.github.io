@@ -6,8 +6,7 @@ import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 describe('AccessibilityEnhancer', () => {
   test('renders without crashing', () => {
     render(<AccessibilityEnhancer />);
-    expect(screen.getByTestId("accessibilityenhancer")).toBeInTheDocument();
-  });
+    expect(screen.getByTestId("accessibilityenhancer")).toBeInTheDocument()});
 
   test('displays correct content', () => {
     render(<AccessibilityEnhancer />);
@@ -22,5 +21,4 @@ describe('AccessibilityEnhancer', () => {
   test('applies correct styling', () => {
     render(<AccessibilityEnhancer />);
     // Add styling tests if needed
-  });
-});
+  })});

@@ -10,8 +10,7 @@ function run(command, options = {}) {
 		stdio: 'inherit',
 		...options,
 	});
-	return result.status === 0;
-}
+	return result.status === 0}
 
 function main() {
 	let ok = true;
@@ -36,10 +35,8 @@ function main() {
 
 	if (!ok) {
 		console.error('\nAutomation runner encountered failures. See logs above.');
-		process.exitCode = 1;
-	} else {
-		console.log('\nAutomation runner completed successfully.');
-	}
+		process.exitCode = 1} else {
+		console.log('\nAutomation runner completed successfully.')}
 }
 
 main();

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react';';';
 import { Link } from 'react-router-dom';
 import {
 
@@ -57,8 +57,8 @@ import {
   Search,
   Layers,
   Database,
-  Home,
-  Leaf
+  Home,';
+  Leaf';';
 } from 'lucide-react';
 
 export function Footer(props: any) {
@@ -243,9 +243,9 @@ export function Footer(props: any) {
             <div className="space-y-3">
               {contactInfo.map((contact, index) => (
                 <a
-                  key={index}
-                  href={contact.href}
-                  target={contact.href.startsWith('http') ? '_blank' : '_self'}
+                  key={index}';
+                  href={contact.href}';';
+                  target={contact.href.startsWith('http') ? '_blank' : '_self'}';';
                   rel={contact.href.startsWith('http') ? 'noopener noreferrer' : ''}
                   className="text-gray-300 hover: tex t-zion-purple transition-colors text-sm flex items-start space-x-2 group"
                 >
@@ -335,8 +335,8 @@ export function Footer(props: any) {
         </div>
       </div>
 
-      {/* Back to Top Button */}
-      <button
+      {/* Back to Top Button */}';
+      <button';';
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         className="fixed bottom-6 right-6 bg-zion-purple hover: b g-zion-purple-dark text-white p-3 rounded-full shadow-lg transition-all duration-300 hover: scal e-110"
         aria-label="Back to top"
@@ -345,4 +345,5 @@ export function Footer(props: any) {
       </button>
     </footer>
   );
-}
+}';
+;';;';

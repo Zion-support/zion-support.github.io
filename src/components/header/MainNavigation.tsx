@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react';';';
 import { Link } from 'react-router-dom';
 import { 
   ChevronDown, 
@@ -27,8 +27,8 @@ import {
   GraduationCap,
   Lightbulb,
   Code,
-  Activity,
-  Target
+  Activity,';
+  Target';';
 } from 'lucide-react';
 
 interface MainNavigationProps {
@@ -189,8 +189,9 @@ export function MainNavigation(props: MainNavigationProps) {
                 </Link>
               </div>
             </div>
-          </div>
-        )}
+    </div>
+  );
+}
       </div>
 
       {/* Solutions Dropdown */}
@@ -282,9 +283,10 @@ export function MainNavigation(props: MainNavigationProps) {
                   <TrendingUp className="w-4 h-4 ml-2" />
                 </Link>
               </div>
-            </div>
-          </div>
-        )}
+</div>
+              </div>
+  );
+}
       </div>
 
       {/* Company Dropdown */}
@@ -338,9 +340,10 @@ export function MainNavigation(props: MainNavigationProps) {
                   </Link>
                 </li>
               </ul>
-            </div>
-          </div>
-        )}
+</div>
+              </div>
+  );
+}
       </div>
 
       {/* Resources */}
@@ -371,3 +374,8 @@ export function MainNavigation(props: MainNavigationProps) {
 }
 
 export default MainNavigation;
+</li>
+</ul>
+</div>
+</any>';
+</any>;';;';

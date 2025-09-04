@@ -1,94 +1,24 @@
-import React, { useState } from 'react';
-import { 
-  NEW_MICRO_SAAS_SERVICES_2025,
-  NEW_IT_SERVICES_2025,
-  NEW_INNOVATIVE_SERVICES_2025
-} from '../data/servicesData';
-import { 
-  Zap, 
-  Brain, 
-  Server, 
-  Mail, 
-  MessageCircle, 
-  Calendar, 
-  BarChart3, 
-  Shield, 
-  Cloud, 
-  Cpu,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  ExternalLink,
-  Phone,
-  Mail as MailIcon,
-  MapPin,
-  Globe
-} from 'lucide-react';
-
-interface ServiceShowcaseProps {
-  className?: string;
-}
-
-export function ComprehensiveNewServicesShowcase2025({ className = '' }: ServiceShowcaseProps) {
-  const [activeTab, setActiveTab] = useState<'micro-saas' | 'it-services' | 'ai-services'>('micro-saas');
-  const [selectedService, setSelectedService] = useState<any>(null);
-
-  const tabs = [
-    { id: 'micro-saas', name: 'Micro SAAS', icon: Zap, count: NEW_MICRO_SAAS_SERVICES_2025.length },
-    { id: 'it-services', name: 'IT Services', icon: Server, count: NEW_IT_SERVICES_2025.length },
-    { id: 'ai-services', name: 'AI Services', icon: Brain, count: NEW_INNOVATIVE_SERVICES_2025.length }
-  ];
-
-  const getCurrentServices = () => {
-    switch (activeTab) {
-      case 'micro-saas':
-        return NEW_MICRO_SAAS_SERVICES_2025;
-      case 'it-services':
-        return NEW_IT_SERVICES_2025;
-      case 'ai-services':
-        return NEW_INNOVATIVE_SERVICES_2025;
-      default:
-        return [];
-    }
-  };
-
-  const formatPrice = (price: number, model: string) => {
-    if (model === 'monthly') {
-      return `$${price.toLocaleString()}/month`;
-    } else if (model === 'hourly') {
-      return `$${price}/hour`;
-    } else if (model === 'project') {
-      return `$${price.toLocaleString()}`;
-    }
-    return `$${price.toLocaleString()}`;
-  };
-
-  const getInnovationBadge = (level: string) => {
-    const colors = {
-      'Revolutionary': 'bg-purple-100 text-purple-800 border-purple-200',
-      'Advanced': 'bg-blue-100 text-blue-800 border-blue-200',
-      'Professional': 'bg-green-100 text-green-800 border-green-200'
-    };
-    
-    return (
-      <span className={`px-2 py-1 text-xs font-medium rounded-full border ${colors[level as keyof typeof colors] || colors.Professional}`}>
-        {level}
-      </span>
-    );
-  };
-
-  return (
-    <div className={`bg-gray-50 py-16 ${className}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Revolutionary Services 2025
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover our comprehensive suite of innovative Micro SAAS, IT Infrastructure, and AI services 
-            designed to transform your business and drive unprecedented growth.
-          </p>
+import React, { useState } from 'react';';
+export default ComprehensiveNewServicesShowcase2025;';';
+import { comprehensiveNewServices2025 } from '../data/comprehensiveNewServices2025';
+export default function Page(props: any) {
+;
+  return ()
+    <div className="min-h-screen py-8 bg-gray-900">"
+      <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+        {/* Header Section */}"
+        <div className="text-center mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 2 0 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >"
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Revolutionary New Services 2025
+            </h1>"
+            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+              Discover our cutting-edge micro SAAS services, IT solutions, and AI-powered platforms.Each service is designed to transform your business with innovative technology and proven ROI.</p>
+          </motion.div>
         </div>
 
         {/* Contact Info Banner */}
@@ -98,19 +28,21 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
               <h3 className="text-2xl font-bold mb-2">Ready to Transform Your Business?</h3>
               <p className="text-blue-100">Contact our experts for personalized solutions and pricing</p>
             </div>
-            <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 mt-4 md:mt-0">
-              <div className="flex items-center space-x-2">
-                <Phone className="w-5 h-5" />
-                <span className="font-semibold">+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <MailIcon className="w-5 h-5" />
-                <span className="font-semibold">kleber@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <MapPin className="w-5 h-5" />
-                <span className="font-semibold">Middletown, DE</span>
-              </div>
+
+            {/* Category Filter */}"
+            <div className="flex gap-2 overflow-x-auto pb-2">
+              {categories.map((category) => (
+                <button
+                  key={category.id}';
+                  onClick={() => setSelectedCategory(category.id)}';';
+                  className={`flex items-center space-x-2 px-4 py-2 rounded-lg whitespace-nowrap transition-all duration-200 ${selectedCategory === category.id'';';
+                      ? 'bg-cyan-600 text-white''';';
+                      : 'bg-gray-800 text-gray-300 hover: b g-gray-700'`
+                  }`}
+                >"
+                  <category.icon className="w-4 h-4" />
+                  <span>{category.name}</span>
+                </button>) ) }
             </div>
           </div>
         </div>
@@ -209,6 +141,13 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
                     ))}
                   </div>
                 </div>
+                {service.featured && ("
+                  <div className="flex items-center space-x-1 text-yellow-400">"
+                    <Star className="w-4 h-4 fill-current"   />"                    <span className="text-xs">Featured</span>
+                      </div>
+  );
+}
+              </div>
 
                 {/* ROI and Setup Time */}
                 <div className="grid grid-cols-2 gap-4 mb-4">
@@ -232,6 +171,12 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
                       {tag}
                     </span>
                   ))}
+                  {service.features.length > 3 && ("
+                    <div className="text-xs text-gray-500">
+                      +{service.features.length-3} more features
+                        </div>
+  );
+}
                 </div>
 
                 {/* CTA Button */}
@@ -330,10 +275,83 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
               </div>
             </div>
           </div>
-        )}
-      </div>
-    </div>
-  );
-}
+"
+          <div className="text-center mt-8">
+            <a"
+              href="https://ziontechgroup.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-cyan-600 rounded-lg hover: b g-gray-100 transition-all duration-200 font-semibold text-lg shadow-lg hover: shado w-xl transform hover: scal e-105"
+            >"
+              <Globe className="w-5 h-5"   />              <span>Visit Our Website</span>
+            </a>
+          </div>
+        </motion.div>
 
-export default ComprehensiveNewServicesShowcase2025;
+        {/* Stats Section */}"
+        <div className="mt-20">"
+          <div className="grid grid-cols-2 md: gri d-cols-4 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 2 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}"
+              className="text-center"
+            >"
+              <div className="flex justify-center mb-4">"
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center">"
+                  <Rocket className="w-8 h-8 text-white"   />                </div>
+              </div>"
+              <div className="text-3xl font-bold text-white mb-2">15+</div>"
+              <div className="text-gray-400">New Services</div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 2 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}"
+              className="text-center"
+            >"
+              <div className="flex justify-center mb-4">"
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center">"
+                  <Brain className="w-8 h-8 text-white"   />                </div>
+              </div>"
+              <div className="text-3xl font-bold text-white mb-2">10+</div>"
+              <div className="text-gray-400">AI-Powered</div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 2 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}"
+              className="text-center"
+            >"
+              <div className="flex justify-center mb-4">"
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-600 rounded-full flex items-center justify-center">"
+                  <Shield className="w-8 h-8 text-white"   />                </div>
+              </div>"
+              <div className="text-3xl font-bold text-white mb-2">99.9%</div>"
+              <div className="text-gray-400">Uptime</div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 2 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}"
+              className="text-center"
+            >"
+              <div className="flex justify-center mb-4">"
+                <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-full flex items-center justify-center">"
+                  <Zap className="w-8 h-8 text-white"   />                </div>
+              </div>"
+              <div className="text-3xl font-bold text-white mb-2">24/7</div>"
+              <div className="text-gray-400">Support</div>
+            </motion.div>
+          </div>
+        </div>
+      </div>';
+    </div>) }';';
+export default ComprehensiveNewServicesShowcase2025;'"`
+
+</motion>
+</motion>';
+</motion>;';;';

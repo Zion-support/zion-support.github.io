@@ -2,8 +2,3 @@ const frontendTechnologies = [{name: "React"," category: "Frontend Framework"," 
 
 </motion>
 </motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>

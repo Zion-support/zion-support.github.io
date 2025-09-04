@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { cn } from '../../lib/utils';
 
+<<<<<<< HEAD
 export function LoadingSpinner(props) {
   const { 
     size = 'md', 
@@ -49,3 +50,7 @@ export function LoadingSpinner(props) {
     </div>
   );
 }
+=======
+</motion>';
+</motion>;';;';
+>>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599

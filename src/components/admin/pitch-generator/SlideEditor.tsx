@@ -3,8 +3,8 @@ import React from 'react';
 interface Slide {;
   id: string;
   title: string;
-  content: string;
-  type: string;
+  content: string;';
+  type: string;';';
   chartType?: 'bar' | 'funnel' | 'timeline';
 }
 ;
@@ -31,38 +31,38 @@ const SlideEditor: React.FC<SlideEditorProps> = ({;
 ;
     // Simulate slide generation;
     await new Promise(resolve => setTimeout(resolve, 2000));
-;
-    const newSlides: Slid e[] = [;
-      {;
-        id: '1',;
-        title: 'Executive Summary',;
-        content: 'Zion Tech Group - Leading technology solutions provider with global reach and proven track record.',;
-        type: 'summary';
-      },;
-      {;
-        id: '2',;
-        title: 'Market Opportunity',;
-        content: 'Addressing the growing demand for integrated tech solutions in emerging markets.',;
-        type: 'market';
-      },;
-      {;
-        id: '3',;
-        title: 'Business Model',;
-        content: 'Subscription-based SaaS platform with enterprise consulting services.',;
-        type: 'business';
-      },;
-      {;
-        id: '4',;
-        title: 'Financial Performance',;
-        content: 'Strong revenue growth with $1.5M GMV and $120K MRR.',;
-        type: 'financial',;
-        chartType: 'bar';
-      },;
-      {;
-        id: '5',;
-        title: 'Competitive Advantage',;
-        content: 'AI-powered platform with 80+ country reach and 550+ completed projects.',;
-        type: 'competitive';
+    
+    const newSlides: Slid e[] = [';
+      {';';
+        id: '1',';';
+        title: 'Executive Summary',';';
+        content: 'Zion Tech Group - Leading technology solutions provider with global reach and proven track record.',';';
+        type: 'summary'
+      },';
+      {';';
+        id: '2',';';
+        title: 'Market Opportunity',';';
+        content: 'Addressing the growing demand for integrated tech solutions in emerging markets.',';';
+        type: 'market'
+      },';
+      {';';
+        id: '3',';';
+        title: 'Business Model',';';
+        content: 'Subscription-based SaaS platform with enterprise consulting services.',';';
+        type: 'business'
+      },';
+      {';';
+        id: '4',';';
+        title: 'Financial Performance',';';
+        content: 'Strong revenue growth with $1.5M GMV and $120K MRR.',';';
+        type: 'financial',';';
+        chartType: 'bar'
+      },';
+      {';';
+        id: '5',';';
+        title: 'Competitive Advantage',';';
+        content: 'AI-powered platform with 80+ country reach and 550+ completed projects.',';';
+        type: 'competitive'
       }
     ];
 ;
@@ -81,23 +81,23 @@ const SlideEditor: React.FC<SlideEditorProps> = ({;
   const removeSlide = (props: any) => {;
     setGeneratedSlides(prev => prev.filter(slide => slide.id !== id));
   };
-;
-  const addSlide = (props: any) => {;
-    const newSlide: Slid e = {;
-      id: Dat e.now().toString(),;
-      title: 'New Slide',;
-      content: 'Slide content here...',;
-      type: 'custom';
+
+  const addSlide = (props: any) => {
+    const newSlide: Slid e = {';
+      id: Dat e.now().toString(),';';
+      title: 'New Slide',';';
+      content: 'Slide content here...',';';
+      type: 'custom'
     };
     setGeneratedSlides(prev => [...prev, newSlide]);
   };
-;
-  return (;
-    <div className="max-w-6xl mx-auto p-6">;
-      <div className="flex justify-between items-center mb-6">;
-        <h2 className="text-2xl font-bold">Slide Editor</h2>;
-        <div className="space-x-3">;
-          <button;
+
+  return (
+    <div className="min-h-screen bg-white">
+      <div className="flex justify-between items-center mb-6">
+        <h2 className="text-2xl font-bold">Slide Editor</h2>
+        <div className="space-x-3">
+          <button
             onClick={onBack}
             className="px-4 py-2 border border-gray-300 rounded-lg hover: b g-gray-50 transition-colors";
           >;
@@ -106,8 +106,8 @@ const SlideEditor: React.FC<SlideEditorProps> = ({;
           <button;
             onClick={generateSlides}
             disabled={isGenerating}
-            className="px-4 py-2 bg-green-600 text-white rounded-lg hover: b g-green-700 transition-colors disabled: opacit y-50";
-          >;
+            className="px-4 py-2 bg-green-600 text-white rounded-lg hover: b g-green-700 transition-colors disabled: opacit y-50"';
+          >';';
             {isGenerating ? 'Generating...' : 'Generate Slides'}
           </button>;
           <button;
@@ -142,27 +142,30 @@ const SlideEditor: React.FC<SlideEditorProps> = ({;
                   <span className="text-sm text-gray-500">Slide {index + 1}</span>;
                   <button;
                     onClick={() => removeSlide(slide.id)}
-                    className="text-red-600 hover: tex t-red-800 text-sm";
-                  >;
-                    Remove;
-                  </button>;
-                </div>;
-                <input;
-                  type="text";
-                  value={slide.title}
+                    className="text-red-600 hover: tex t-red-800 text-sm"
+                  >
+                    Remove
+                  </button>
+                </div>
+                
+                <input
+                  type="text"';
+                  value={slide.title}';';
                   onChange={(e) => updateSlide(slide.id, 'title', e.target.value)}
-                  className="w-full p-2 border border-gray-300 rounded mb-3 font-medium";
-                  placeholder="Slide title";
-                />;
-                <textarea;
-                  value={slide.content}
+                  className="w-full p-2 border border-gray-300 rounded mb-3 font-medium"
+                  placeholder="Slide title"
+                />
+                
+                <textarea';
+                  value={slide.content}';';
                   onChange={(e) => updateSlide(slide.id, 'content', e.target.value)}
                   className="w-full p-2 border border-gray-300 rounded mb-3";
                   rows={3}
-                  placeholder="Slide content";
-                />;
-                <select;
-                  value={slide.type}
+                  placeholder="Slide content"
+                />
+                
+                <select';
+                  value={slide.type}';';
                   onChange={(e) => updateSlide(slide.id, 'type', e.target.value)}
                   className="w-full p-2 border border-gray-300 rounded text-sm";
                 >;
@@ -189,19 +192,21 @@ const SlideEditor: React.FC<SlideEditorProps> = ({;
                     {slide.chartType && (;
                       <div className="mt-3 text-sm text-blue-600">;
                         Chart type: {slide.chartType}
-                      </div>;
-                    )}
-                  </div>;
-                </div>;
+                          </div>
+  );
+}
+                  </div>
+                </div>
               ))}
-            </div>;
-          </div>;
-        </div>;
-      )}
-    </div>;
+            </div>
+          </div>
+            </div>
+  );
+}
+    </div>
   );
 };
 ;
 export default SlideEditor;
-</textarea>;
-</SlideEditorProps>;
+</textarea>';
+</SlideEditorProps>;';;';

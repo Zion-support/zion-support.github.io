@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, useInView  } from 'framer-motion';
-import { useRef  } from 'react';
+import React, { useState, useEffect } from 'react';';';
+import { motion, useInView  } from 'framer-motion';';';
+import { useRef  } from 'react';';';
 import { TrendingUp, Award, Users, Clock  } from 'lucide-react';
 ;
 interface Stat {;
@@ -18,10 +18,10 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {;
   const ref = useRef(null);
   const isInView = useInView(ref, { once: tru e });
   const [counts, setCounts] = useState<any>({});
-;
-  useEffect(() => {;
-    if (isInView) {;
-      const targetNumber = parseInt(stat.number.replace(/[^0-9]/g, ''));
+
+  useEffect(() => {';
+    if (isInView) {';';
+      const targetNumber = parseInt(stat.number.replace(/[^0-9]/g, ''));';';
           const suffix = stat.number.replace(/[0-9]/g, '');
 ;
           let current = 0;
@@ -44,19 +44,21 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {;
 ;
       return () => clearTimeout(timer)}
   }, [isInView, stats]);
-;
-  return (;
-    <section className = "py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate-dark/80 to-zion-slate-dark" role="region" aria-labelledby="stats-heading">;
-      <div className="container mx-auto px-4 sm: p x-6 lg: p x-8">;
-        <motion.div;
-          className="text-center mb-16";
-          initial = {;
-  { opacity: 0,;
-  y: 3 0;
+
+  return (
+    <section className = "py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate-dark/80 to-zion-slate-dark" role="region" aria-labelledby="stats-heading">
+      <div className="container mx-auto px-4 sm: p x-6 lg: p x-8">
+        <motion.div
+          className="text-center mb-16"
+          initial = {
+  { opacity: 0,
+  y: 3 0 
+
 }}
-          whileInView = {;
-  { opacity: 1,;
-  y: 0;
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: tru e }}
@@ -72,23 +74,27 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {;
           {stats.map((stat, index)  => (;
             <motion.div;
               key={stat.label}
-              className="group relative text-center p-6 bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl hover: borde r-zion-cyan/40 transition-all duration-500 hover: shado w-2xl hover: shado w-zion-cyan/20 overflow-hidden";
-              initial = {;
-  { opacity: 0,;
-  y: 3 0;
+              className="group relative text-center p-6 bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl hover: borde r-zion-cyan/40 transition-all duration-500 hover: shado w-2xl hover: shado w-zion-cyan/20 overflow-hidden"
+              initial = {
+  { opacity: 0,
+  y: 3 0 
+
 }}
-              whileInView = {;
-  { opacity: 1,;
-  y: 0;
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
 }}
-              transition = {;
-  { duration: 0.6,;
-  delay: inde x * 0.1;
+              transition = {
+  { duration: 0.6,
+  delay: inde x * 0.1 
+
 }}
               viewport={{ once: tru e }}
-              whileHover={{;
-                y: -8,;
-  transition: { duration: 0.3;
+              whileHover={{
+                y: -8,
+  transition: { duration: 0.3 
+
 }
               }}
 ;
@@ -105,13 +111,14 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {;
                 className="relative text-4xl md: tex t-5xl font-bold text-white mb-2 group-hover: tex t-zion-cyan transition-colors duration-300";
                 initial={{ scale: 0.8 }}
                 whileInView={{ scale: 1 }}
-                transition = {;
-  { duration: 0.5,;
-  delay: inde x * 0.1 + 0.5;
+                transition = {
+  { duration: 0.5,
+  delay: inde x * 0.1 + 0.5 
+
 }}
                 viewport={{ once: tru e }}
-;
-                {counts[stat.label] || 0}
+';
+                {counts[stat.label] || 0}';';
                 {stat.number.includes('%') ? '%' : stat.number.includes('+') ? '+' : ''}
               </motion.div>;
               <h3 className="relative text-lg font-semibold text-zion-cyan mb-2 group-hover: tex t-zion-blue transition-colors duration-300">;
@@ -131,8 +138,6 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {;
 };
 ;
 export default StatsSection;}}}}};
-</motion>;
-</motion>;
-</motion>;
-</any>;
-</StatsSectionProps>;
+</motion>
+</any>';
+</StatsSectionProps>;';;';

@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+<<<<<<< HEAD
 async function checkAutomationStatus() {
   console.log('🔍 Checking Automation Status...');
   const statusReport = {
@@ -12,11 +13,24 @@ async function checkAutomationStatus() {
     systemHealth: {},
     overallStatus: 'unknown'
   };
+=======
+const fs = // // require('fs')
+const path = // // require('path')
+const { execSync } = // // require('child_process');
+
+async function checkAutomationStatus() { console.log('🔍 Checking Automation Status...');const statusReport = {
+    timestamp: new Date().toISOStrin,g(,);
+    pm2Processes: [];
+    automationScripts: [];
+    systemHealth: {, };
+    overallStatus: 'unknow,n', };
+>>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
 
   try {
     // Check PM2 processes
     console.log('📋 Checking PM2 processes...');
     try {
+<<<<<<< HEAD
       const pm2List = execSync('pm2 list --json', { encoding: 'utf8' });
       const pm2Data = JSON.parse(pm2List);
       statusReport.pm2Processes = pm2Data;
@@ -27,6 +41,15 @@ async function checkAutomationStatus() {
       console.log('⚠️  PM2 not available or no processes running');
       statusReport.pm2Processes = [];
     }
+=======
+      const pm2List = execSync('pm2 list --json', { encoding: 'ut,f8',};);
+      const pm2Data = JSON.parse(pm2List;);
+      statusReport.pm2Processes = pm2Data;
+      
+      const runningProcesses = pm2Data.filter(proc => proc.pm2_env && proc.pm2_env.status === 'online';);
+      console.log(`✅ Found ${runningProcesses.length} running PM2 processes`)} catch(error) { console.log('⚠️  PM2 not available or no processes running');
+      statusReport.pm2Processes = [] }
+>>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
 
     // Check automation scripts
     console.log('📋 Checking automation scripts...');
@@ -58,7 +81,29 @@ async function checkAutomationStatus() {
     };
     statusReport.systemHealth = systemHealth;
 
+<<<<<<< HEAD
     // Determine overall status
+=======
+    // Check for recent automation reports;
+    console.log('📋 Checking for recent automation reports...');
+    const reportFiles = [
+      'health-check-report.json;';
+      'security-scan-report.json';
+      'automation-orchestrator-report.json';
+      'comprehensive-test-report.json'];
+
+    const recentReports = reportFiles.filter(file => {
+      try {
+        const stats = fs.statSync(file;);
+        const ageInHours = (Date.now() - stats.mtime.getTime()) / (1000 * 60 * 6;0;);
+        return ageInHours < 2;4; // Reports from last 24 hours} catch {
+        return false}
+    });
+
+    statusReport.recentReports = recentReportsconsole.log(`📊 Found ${recentReports.length} recent reports`);
+
+    // Determine overall status;
+>>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
     const runningProcesses = statusReport.pm2Processes.filter(proc => 
       proc.pm2_env && proc.pm2_env.status === 'online'
     );
@@ -79,6 +124,7 @@ async function checkAutomationStatus() {
     console.log(`   Memory Usage: ${Math.round(systemHealth.memoryUsage.heapUsed / 1024 / 1024)}MB`);
     console.log(`   Uptime: ${Math.round(systemHealth.uptime / 60)} minutes`);
 
+<<<<<<< HEAD
     // Save report
     const reportFile = path.join(__dirname, 'logs', 'automation-status-report.json');
     const logDir = path.dirname(reportFile);
@@ -92,6 +138,13 @@ async function checkAutomationStatus() {
 
   } catch (error) {
     console.error('❌ Error checking automation status:', error.message);
+=======
+    // Save status report;
+    const reportPath = 'automation-status-report.json;';
+    fs.writeFileSync(reportPath, JSON.stringify(statusReport, null, 2))console.log(`\n📊 Automation Status Summary: `);console.log(`   - Overall Status: ${statusReport.overallStatus.toUpperCas,e(,)}`)console.log(`   - PM2 Processes: ${statusReport.pm2Processes.length}`);console.log(`   - Ready Scripts: ${readyScripts.length}/${automationScripts.length}`);console.log(`   - Recent Reports: ${recentReports.length}`);console.log(`📄 Full report saved to: ${reportPath}`);
+
+    return statusReport} catch(error) { console.error('❌ Status check failed: ,', error.message);
+>>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
     statusReport.overallStatus = 'error';
     return statusReport;
   }

@@ -1,8 +1,8 @@
-import React, {useState} from 'react';
-export default EnhancedServicesShowcase;
+import React, {useState} from 'react';';
+export default EnhancedServicesShowcase;';';
 import {enhancedServices2025} from '../data/enhanced - services -2025';
-export default function Page(props: any) {
-,
+export default function Page(props: any) {';
+,';';
         { id: 'emerging-tech', name: 'Emerging Tech', icon: '🚀' }
     ];
     const filteredServices = enhancedServices2025.filter(service => {
@@ -141,12 +141,12 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
             className="&apos;bg-white/10" backdrop-blur-lg rounded-xl p-6 mb-8 max-w-2xl mx-auto&apos;&apos;"
             transition="{{" duration: 0.6, delay: 0.4 }}&apos;&apos,>&apos;&apos,&apos;&apos,"
             <div className="&apos;grid" grid-cols-1 md: grid-cols-3 gap-4 text-sm&apos,>"&apos,&apos,&apos;&apos;"
-              <div className="&apos;text-center&apos;">"&apos;&apos,&apos;&apos;"
+              <div className="&apos;text-center&apos">"&apos;&apos,&apos;&apos;"
                 <div className="&apos;text-blue-400" font-semibold&apos;>📱 Contact&apos;</div>&apos;&apos,&apos;&apos,"
-                <div className="&apos;text-gray-300&apos;">+1 302 464 0950&apos;</div>&apos;&apos,&apos;&apos,
+                <div className="&apos;text-gray-300&apos">+1 302 464 0950&apos;</div>&apos;&apos,&apos;&apos,
               </div>&apos;&apos,&apos;&apos,"
                 <div className="&apos;text-blue-400" font-semibold&apos;>✉️ Email&apos;</div>&apos;&apos,&apos;&apos,"
-                <div className="&apos;text-gray-300&apos;">kleber@ziontechgroup.com&apos;</div>&apos;&apos,&apos;&apos;"
+                <div className="&apos;text-gray-300&apos">kleber@ziontechgroup.com&apos;</div>&apos;&apos,&apos;&apos;"
                 <div className="&apos;text-blue-400" font-semibold&apos;>🌐 Website&apos;</div>&apos;&apos,&apos;&apos,",
                 <div className="&apos;text-gray-300&apos,">ziontechgroup.com&apos,</div>
           </motion.div>"
@@ -197,7 +197,7 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
                     selectedCategory === category.id&apos,
                       ? &apos;bg-blue-600 border-blue-400 text-white&apos;&apos,"
                       : &apos;bg-white/10 border-white/20 text-gray-300 hover:bg-white/20 hove,r: border-white/40&apos,""}"}&apos;&apos,>&apos;&apos,&apos;&apos,"
-                  <span className="&apos;mr-2&apos;">{category.icon}&apos;</span>"
+                  <span className="&apos;mr-2&apos">{category.icon}&apos;</span>"
                     selectedCategory == = category.id"",
                       ? "bg-blue-600 border-blue-400 text-white"""""
                       : "bg-white/10 border-white/20 text-gray-300 hover:bg-white/20 hover:border-white/40"""}"}""">"""""
@@ -311,10 +311,10 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
                     <div>Yearly: {service.pricing.yearly}</div>
                     <div>Setup: {service.pricing.setup}</div>
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
-                <div className="&apos;mb-4&apos;">"&apos;&apos,&apos;&apos;"
+                <div className="&apos;mb-4&apos">"&apos;&apos,&apos;&apos;"
                   <h4 className="&apos;text-sm" font-semibold text-blue-400 mb-2&apos;>"
                     Key Features&apos;&apos,&apos;&apos;"
-                  <ul className="&apos;space-y-1&apos;">
+                  <ul className="&apos;space-y-1&apos">
                     {service.features.slice(0, 4).map((feature, idx) => (&apos}
 
                       <li&apos;&apos>
@@ -362,7 +362,7 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
                 <div className="&apos;bg-white/5" rounded-lg p-3 mb-4&apos;>"&apos;&apos,&apos;&apos;"
                   <div className="&apos;text-xs" text-gray-300&apos;>"&apos;&apos,&apos;&apos,"
-                    <div className="&apos;mb-1&apos;">"&apos;&apos,&apos;&apos,"
+                    <div className="&apos;mb-1&apos">"&apos;&apos,&apos;&apos,"
                       <span className="&apos;text-green-400" font-medium&apos;>ROI: &apos,</span>{&apos, &apos}
 
                       {service.roi}&apos;&apos,
@@ -371,7 +371,7 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
 
                       {service.setupTime}&apos;&apos,
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
-                <div className="&apos;text-center&apos;">&apos,"
+                <div className="&apos;text-center&apos">&apos,"
                   <Link&apos;&apos,"
                     to={service.link}&apos;&apos,";"
                     className="&apos;inline-flex" items-center text-blue-400 hover: text-blue-300 transition-colors duration-300 text-sm &apos,>"
@@ -586,8 +586,8 @@ className="&apos;mt-8" text-sm text-gray-400&apos;&apos,"
 
   { duration: 0.6,
   delay: 0.2
-
-}}>
+';
+}}>';';
             Let's discuss how our innovative services can help drive your success and competitive advantage
           </motion.p>
 
@@ -670,30 +670,26 @@ export {EnhancedServicesShowcase};
                 href="https: // comment
                 className="text-blue-400 hover: text-blue-300 ">,
 https: // comment
-    </div>)}
-
+        </div>
+  );
+}
 export default EnhancedServicesShowcaseexport {EnhancedServicesShowcase}
 ;
-export {EnhancedServicesShowcase}
-
+export {EnhancedServicesShowcase}';
+';';
 '"
 `""
 
 </p>
 </motion>
-</motion>
 </h3>
 </a>
 </motion>
-</motion>
-</div>
 </div>
 </h3>
 </motion>
-</motion>
 </div>
 </section>
-</div>
 </div>
 </h3>
 </motion>
@@ -702,40 +698,21 @@ export {EnhancedServicesShowcase}
 </path>
 </div>
 </path>
-</div>
-</div>
-</div>
 </div>
 </div>
 </path>
 </svg>
 </div>
 </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</h4>
-</h4>
-</h4>
 </h4>
 </div>
 </li>
 </ul>
 </h4>
 </div>
-</div>
-</div>
-</p>
 </p>
 </div>
-</div>
-</div>
 </p>
-</p>
-</div>
 </div>
 </motion>
 </div>
@@ -745,32 +722,19 @@ export {EnhancedServicesShowcase}
 </ul>
 </h4>
 </div>
-</div>
-</div>
 </p>
 </div>
+</motion>
 </div>
 </motion>
 </div>
-</div>
-</div>
-</motion>
-</div>
-</div>
-</motion>
 </motion>
 </span>
 </motion>
 </div>
-</div>
-</motion>
 </motion>
 </div>
-</div>
-</div>
-</motion>
-</motion>
 </motion>
 </div>
-</section>
-</div>
+</section>';
+</div>;';;';

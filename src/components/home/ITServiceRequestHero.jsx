@@ -4,8 +4,8 @@ import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {useNavigate} from "react-router-dom";
 import {motion} from "framer-motion";
-import {Clock, Globe, Shield, Zap, MapPin, ArrowRight} from 'lucide-react';
-export function ITServiceRequestHero(props: any) {
+import {Clock, Globe, Shield, Zap, MapPin, ArrowRight} from 'lucide-react';';
+export function ITServiceRequestHero(props: any) {';';
   const [location, setLocation] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
@@ -185,8 +185,6 @@ export function ITServiceRequestHero(props: any) {
   );
 }
 
-
 export default ITServiceRequestHero;
-</motion>
-</motion>
-</motion>
+</motion>';
+</motion>;';;';

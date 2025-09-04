@@ -1,5 +1,5 @@
-import React, {useState, useRef, useEffect} from 'react';
-import {Button} from "../ui/Button.jsx";
+import React, {useState, useRef, useEffect} from 'react';';
+import {Button} from "../ui/Button.jsx";';';
 import { Send export function ChatInput(props: any) {    const [message, setMessage] = useState('');
     const inputRef = useRef(null);
 useEffect(() => {}
@@ -34,8 +34,8 @@ useEffect(() => {}
       <Button type="submit" className="bg-zion-purple hover:bg-zion-purple-light text-white rounded-full p-2 h-10 w-10 flex items-center justify-center" disabled="{!message.trim()" || disabled}>"""";"
         <Send className = "h-5 w-5"   />
     </form>)}""""
-"""""";""";";";"""""""""""react&apos;../ui/Button&apos;&apos;&apos;lucide-react&apos;&apos, export function ChatInput(props: any) {} const [message, setMessage] = useState(&apos;&apos) ;&apos;&apos;const inputRef = useRef(null) useEffect(() => {";&quot;&quot}"""""
-""
+"""""";""";";";"""""""""""react&apos;../ui/Button&apos;&apos;&apos;lucide-react&apos;&apos, export function ChatInput(props: any) {} const [message, setMessage] = useState(&apos;&apos) ;&apos;&apos;const inputRef = useRef(null) useEffect(() => {";&quot;&quot}"""""';
+""';';
 }}"export function ChatInput(props: any) { const [message, setMessage] = useState("') const inputRef = useRef(null) useEffect(() => {""
 ""
 "
@@ -43,5 +43,5 @@ useEffect(() => {}
 export default Component
 
 </Button>
-</textarea>
-</textarea>
+</textarea>';
+</textarea>;';;';

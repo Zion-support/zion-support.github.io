@@ -13,29 +13,25 @@ function fixBuildIssues(content, filePath) {
   if (: JSX.Element =>')) {
     fixed = fixed.replace(/\): JSX\.Element =>/g, ') =>')) {
     : JSX.Element =>')) {
-    fixed = fixed.replace(/\): JSX\.Element =>/g, ') =>');
-  }
+    fixed = fixed.replace(/\): JSX\.Element =>/g, ') =>')}
     changes++}
 
   // Fix JSX.Element return types;
   if () {
     fixed = fixed.replace(/: JSX\.Element/g, '')) {
     ) {
-    fixed = fixed.replace(/: JSX\.Element/g, '');
-  }
+    fixed = fixed.replace(/: JSX\.Element/g, '')}
     changes++}
 
   // Fix trailing commas in style objects
   fixed = fixed.replace(/style=\{\{\s*,/g, 'style={{');
   if (changes++) {
-    changes++;
-  }
+    changes++}
 
   // Fix malformed style objects
   fixed = fixed.replace(/style=\{\{\s*,\s*/g, 'style={{');
   if (changes++) {
-    changes++;
-  }
+    changes++}
 
   // Fix missing closing braces in JSX
   const openBraces = (fixed.match(/\{/g) || []).lengt;h;
@@ -46,8 +42,7 @@ function fixBuildIssues(content, filePath) {
     const missingBraces = openBraces - closeBrac) {
      {
     // Add missing closing braces
-    const missingBraces = openBraces - closeBrac;
-  }e;s;
+    const missingBraces = openBraces - closeBrac}e;s;
     fixed += '}'.repeat(missingBraces);
     changes++}
 
@@ -55,23 +50,20 @@ function fixBuildIssues(content, filePath) {
   if (&& !fixed.includes('import React from')) {
     fixed = fixed.replace(/import React, \{([^}]+)\} from 'react') {
     && !fixed.includes('import React from')) {
-    fixed = fixed.replace(/import React, \{([^}]+)\} from 'react';
-  }/g, 'import React, { $1 } from "react";');
+    fixed = fixed.replace(/import React, \{([^}]+)\} from 'react'}/g, 'import React, { $1 } from "react";');
     changes++}
 
   // Fix className issues
   fixed = fixed.replace(/className="([^"]*)\s+"/g, 'className="$1"');
   if (changes++) {
-    changes++;
-  }
+    changes++}
 
   // Fix href tel issues
   fixed = fixed.replace(/href="tel:\s*\+/g, 'href="tel:+');
   if (changes++) {
-    changes++;
-  }
+    changes++}
 
-  return { content: fixed, changes ;}}
+  return { content: fixed, changes }}
 
 function processFile(filePath) {
   try {
@@ -81,17 +73,16 @@ function processFile(filePath) {
     if ( {
       fs.writeFileSync(filePath, result.content, 'utf8')) {
      {
-      fs.writeFileSync(filePath, result.content, 'utf8');
-  }
+      fs.writeFileSync(filePath, result.content, 'utf8')}
       console.log(`✅ Fixed ${result.changes} issues in: ${filePath}`);
-      return result.changes;}
-    return 0;} catch (error) {
+      return result.changes}
+    return 0} catch (error) {
     console.log(`❌ Error processing ${filePath}: ${error.message}`);
-    return 0;}
+    return 0}
 }
 
 function findTsxFiles(dir) {
-  const files = [;];
+  const files = [];
   
   function traverse(currentDir) {
     const items = fs.readdirSync(currentDir;);
@@ -113,9 +104,8 @@ function findTsxFiles(dir) {
     }
   }
   
-  traverse(dir);
-  }
-  return files;}
+  traverse(dir)}
+  return files}
 
 // Main execution
 const files = findTsxFiles('.;';);

@@ -12,8 +12,7 @@ const IMPORT_EXPORT_FIX_INTERVAL = parseInt(process.env.IMPORT_EXPORT_FIX_INTERV
 class AutoImportExportFixer {
   constructor() {
     this.fixesApplied = 0;
-    this.fixHistory = [];
-  }
+    this.fixHistory = []}
 
   async run() {
     try {
@@ -45,11 +44,8 @@ class AutoImportExportFixer {
       // 8. Generate report
       await this.generateReport();
       
-      console.log(`✅ Auto import/export fixer completed. Applied ${this.fixesApplied} fixes.`);
-      
-    } catch (error) {
-      console.error('❌ Auto import/export fixer failed:', error.message);
-    }
+      console.log(`✅ Auto import/export fixer completed. Applied ${this.fixesApplied} fixes.`)} catch (error) {
+      console.error('❌ Auto import/export fixer failed:', error.message)}
   }
 
   async fixMissingImports() {
@@ -78,10 +74,8 @@ class AutoImportExportFixer {
           const importStatements = missingImports.map(component => {
             const importPath = this.findImportPath(component, file);
             if (importPath) {
-              return `import { ${component} } from '${importPath}';`;
-            }
-            return null;
-          }).filter(Boolean);
+              return `import { ${component} } from '${importPath}';`}
+            return null}).filter(Boolean);
           
           if (importStatements.length > 0) {
             // Insert imports at the top of the file
@@ -91,24 +85,19 @@ class AutoImportExportFixer {
             );
             
             if (importIndex !== -1) {
-              lines.splice(importIndex, 0, ...importStatements);
-            } else {
-              lines.unshift(...importStatements);
-            }
+              lines.splice(importIndex, 0, ...importStatements)} else {
+              lines.unshift(...importStatements)}
             
-            content = lines.join('\n');
-          }
+            content = lines.join('\n')}
         }
         
         if (content !== originalContent) {
           fs.writeFileSync(file, content);
           this.fixesApplied++;
-          console.log(`  ✅ Fixed missing imports in ${file.replace(process.cwd(), '')}`);
-        }
+          console.log(`  ✅ Fixed missing imports in ${file.replace(process.cwd(), '')}`)}
         
       } catch (error) {
-        console.log(`  ⚠️  Failed to fix missing imports in ${file}: ${error.message}`);
-      }
+        console.log(`  ⚠️  Failed to fix missing imports in ${file}: ${error.message}`)}
     }
   }
 
@@ -133,40 +122,32 @@ class AutoImportExportFixer {
               const imports = importMatch[1].split(',').map(imp => imp.trim());
               const usedImports = imports.filter(imp => {
                 const cleanImp = imp.split(' as ')[0].trim();
-                return content.includes(cleanImp) && content.split(cleanImp).length > 2;
-              });
+                return content.includes(cleanImp) && content.split(cleanImp).length > 2});
               
               if (usedImports.length === 0) {
                 // Comment out unused import
-                fixedLines.push(`// ${line}`);
-              } else if (usedImports.length < imports.length) {
+                fixedLines.push(`// ${line}`)} else if (usedImports.length < imports.length) {
                 // Keep only used imports
                 const newImportLine = line.replace(
                   /import\s+{?\s*([^}]+)\s*}?\s+from/,
                   `import { ${usedImports.join(', ')} } from`
                 );
-                fixedLines.push(newImportLine);
-              } else {
-                fixedLines.push(line);
-              }
+                fixedLines.push(newImportLine)} else {
+                fixedLines.push(line)}
             } else {
-              fixedLines.push(line);
-            }
+              fixedLines.push(line)}
           } else {
-            fixedLines.push(line);
-          }
+            fixedLines.push(line)}
         }
         
         const newContent = fixedLines.join('\n');
         if (newContent !== originalContent) {
           fs.writeFileSync(file, newContent);
           this.fixesApplied++;
-          console.log(`  ✅ Fixed unused imports in ${file.replace(process.cwd(), '')}`);
-        }
+          console.log(`  ✅ Fixed unused imports in ${file.replace(process.cwd(), '')}`)}
         
       } catch (error) {
-        console.log(`  ⚠️  Failed to fix unused imports in ${file}: ${error.message}`);
-      }
+        console.log(`  ⚠️  Failed to fix unused imports in ${file}: ${error.message}`)}
     }
   }
 
@@ -193,20 +174,16 @@ class AutoImportExportFixer {
         // Fix missing file extensions
         content = content.replace(/from\s+['"]([^'"]+)['"]/g, (match, importPath) => {
           if (!importPath.includes('.') && !importPath.startsWith('@') && !importPath.startsWith('.')) {
-            return `from '${importPath}/index'`;
-          }
-          return match;
-        });
+            return `from '${importPath}/index'`}
+          return match});
         
         if (content !== originalContent) {
           fs.writeFileSync(file, content);
           this.fixesApplied++;
-          console.log(`  ✅ Fixed import paths in ${file.replace(process.cwd(), '')}`);
-        }
+          console.log(`  ✅ Fixed import paths in ${file.replace(process.cwd(), '')}`)}
         
       } catch (error) {
-        console.log(`  ⚠️  Failed to fix import paths in ${file}: ${error.message}`);
-      }
+        console.log(`  ⚠️  Failed to fix import paths in ${file}: ${error.message}`)}
     }
   }
 
@@ -222,8 +199,8 @@ class AutoImportExportFixer {
         let originalContent = content;
         
         // Fix missing semicolons after exports
-        content = content.replace(/export\s+([^;]+)(?!;)/g, 'export $1;');
-        content = content.replace(/export\s+default\s+([^;]+)(?!;)/g, 'export default $1;');
+        content = content.replace(/export\s+([^]+)(?!;)/g, 'export $1;');
+        content = content.replace(/export\s+default\s+([^]+)(?!;)/g, 'export default $1;');
         content = content.replace(/export\s+{\s*([^}]+)\s*}(?!;)/g, 'export { $1 };');
         
         // Fix named exports
@@ -237,12 +214,10 @@ class AutoImportExportFixer {
         if (content !== originalContent) {
           fs.writeFileSync(file, content);
           this.fixesApplied++;
-          console.log(`  ✅ Fixed export issues in ${file.replace(process.cwd(), '')}`);
-        }
+          console.log(`  ✅ Fixed export issues in ${file.replace(process.cwd(), '')}`)}
         
       } catch (error) {
-        console.log(`  ⚠️  Failed to fix export issues in ${file}: ${error.message}`);
-      }
+        console.log(`  ⚠️  Failed to fix export issues in ${file}: ${error.message}`)}
     }
   }
 
@@ -266,12 +241,10 @@ class AutoImportExportFixer {
         
         // If a file imports itself (indirectly), it might be a circular dependency
         if (imports.some(imp => imp.toLowerCase().includes(fileName.toLowerCase()))) {
-          console.log(`  ⚠️  Potential circular dependency detected in ${file}`);
-        }
+          console.log(`  ⚠️  Potential circular dependency detected in ${file}`)}
         
       } catch (error) {
-        console.log(`  ⚠️  Failed to check circular dependencies in ${file}: ${error.message}`);
-      }
+        console.log(`  ⚠️  Failed to check circular dependencies in ${file}: ${error.message}`)}
     }
   }
 
@@ -293,10 +266,8 @@ class AutoImportExportFixer {
         // Separate imports from other code
         lines.forEach(line => {
           if (line.trim().startsWith('import') || line.trim().startsWith('export')) {
-            imports.push(line);
-          } else {
-            nonImports.push(line);
-          }
+            imports.push(line)} else {
+            nonImports.push(line)}
         });
         
         // Sort imports
@@ -310,8 +281,7 @@ class AutoImportExportFixer {
           if ((a.includes('./') || a.includes('../')) && !b.includes('./') && !b.includes('../')) return 1;
           
           // Alphabetical order
-          return a.localeCompare(b);
-        });
+          return a.localeCompare(b)});
         
         // Reconstruct content
         content = [...imports, '', ...nonImports].join('\n');
@@ -319,12 +289,10 @@ class AutoImportExportFixer {
         if (content !== originalContent) {
           fs.writeFileSync(file, content);
           this.fixesApplied++;
-          console.log(`  ✅ Organized imports in ${file.replace(process.cwd(), '')}`);
-        }
+          console.log(`  ✅ Organized imports in ${file.replace(process.cwd(), '')}`)}
         
       } catch (error) {
-        console.log(`  ⚠️  Failed to organize imports in ${file}: ${error.message}`);
-      }
+        console.log(`  ⚠️  Failed to organize imports in ${file}: ${error.message}`)}
     }
   }
 
@@ -334,10 +302,8 @@ class AutoImportExportFixer {
     try {
       // Run TypeScript check to see if imports are resolved
       execSync('npm run type-check', { stdio: 'pipe' });
-      console.log('✅ Import/export validation successful');
-    } catch (error) {
-      console.log('⚠️  Import/export validation had issues, but fixes were applied');
-    }
+      console.log('✅ Import/export validation successful')} catch (error) {
+      console.log('⚠️  Import/export validation had issues, but fixes were applied')}
   }
 
   async generateReport() {
@@ -361,8 +327,7 @@ class AutoImportExportFixer {
     
     // Keep only last 50 entries
     if (this.fixHistory.length > 50) {
-      this.fixHistory = this.fixHistory.slice(-50);
-    }
+      this.fixHistory = this.fixHistory.slice(-50)}
   }
 
   findUsedComponents(content) {
@@ -377,12 +342,10 @@ class AutoImportExportFixer {
     functionMatches.forEach(match => {
       const funcName = match.replace(/\s*\(/, '');
       if (!components.includes(funcName)) {
-        components.push(funcName);
-      }
+        components.push(funcName)}
     });
     
-    return [...new Set(components)];
-  }
+    return [...new Set(components)]}
 
   getExistingImports(content) {
     const imports = [];
@@ -392,12 +355,10 @@ class AutoImportExportFixer {
       const importMatch = line.match(/import\s+{?\s*([^}]+)\s*}?\s+from/);
       if (importMatch) {
         const importNames = importMatch[1].split(',').map(imp => imp.trim().split(' as ')[0]);
-        imports.push(...importNames);
-      }
+        imports.push(...importNames)}
     });
     
-    return imports;
-  }
+    return imports}
 
   isBuiltInComponent(component) {
     const builtIns = [
@@ -409,8 +370,7 @@ class AutoImportExportFixer {
       'Children', 'Component', 'PureComponent', 'createPortal'
     ];
     
-    return builtIns.includes(component);
-  }
+    return builtIns.includes(component)}
 
   findImportPath(component, currentFile) {
     // This is a simplified implementation
@@ -437,15 +397,13 @@ class AutoImportExportFixer {
             .replace(/\\/g, '/')
             .replace(/\.(ts|tsx|js|jsx)$/, '');
           
-          return relativePath.startsWith('.') ? relativePath : `./${relativePath}`;
-        }
+          return relativePath.startsWith('.') ? relativePath : `./${relativePath}`}
       } catch (error) {
         // Continue searching
       }
     }
     
-    return null;
-  }
+    return null}
 
   getAllFiles(dir, extensions) {
     const files = [];
@@ -458,16 +416,13 @@ class AutoImportExportFixer {
         const stat = fs.statSync(fullPath);
         
         if (stat.isDirectory()) {
-          traverse(fullPath);
-        } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
-          files.push(fullPath);
-        }
+          traverse(fullPath)} else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
+          files.push(fullPath)}
       }
     }
     
     traverse(dir);
-    return files;
-  }
+    return files}
 }
 
 // Main execution
@@ -479,25 +434,20 @@ async function main() {
   
   // Set up continuous fixing
   setInterval(async () => {
-    await fixer.run();
-  }, IMPORT_EXPORT_FIX_INTERVAL);
+    await fixer.run()}, IMPORT_EXPORT_FIX_INTERVAL);
   
-  console.log(`🔧 Auto import/export fixer running with ${IMPORT_EXPORT_FIX_INTERVAL / 1000}s intervals`);
-}
+  console.log(`🔧 Auto import/export fixer running with ${IMPORT_EXPORT_FIX_INTERVAL / 1000}s intervals`)}
 
 // Handle graceful shutdown
 process.on('SIGINT', () => {
   console.log('🔧 Auto import/export fixer shutting down...');
-  process.exit(0);
-});
+  process.exit(0)});
 
 process.on('SIGTERM', () => {
   console.log('🔧 Auto import/export fixer shutting down...');
-  process.exit(0);
-});
+  process.exit(0)});
 
 // Start the fixer
 main().catch(error => {
   console.error('❌ Auto import/export fixer failed to start:', error.message);
-  process.exit(1);
-});
+  process.exit(1)});

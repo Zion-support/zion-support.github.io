@@ -24,8 +24,7 @@ const testReport = {
 
 function log(level, message) {
   const timestamp = new Date().toISOString();
-  console.log(`[${timestamp}] [${level.toUpperCase()}] ${message}`);
-}
+  console.log(`[${timestamp}] [${level.toUpperCase()}] ${message}`)}
 
 async function runJestTests() {
   log('info', 'Running Jest tests');
@@ -53,14 +52,10 @@ async function runJestTests() {
     testReport.summary.duration += endTime - startTime;
     
     if (result.coverageMap) {
-      testReport.summary.coverage = result.coverageMap.getCoverageSummary().lines.pct;
-    }
+      testReport.summary.coverage = result.coverageMap.getCoverageSummary().lines.pct}
     
-    log('info', `Jest tests completed: ${result.numPassedTests}/${result.numTotalTests} passed`);
-    
-  } catch (error) {
-    log('warn', 'Jest tests failed or not configured', error.message);
-  }
+    log('info', `Jest tests completed: ${result.numPassedTests}/${result.numTotalTests} passed`)} catch (error) {
+    log('warn', 'Jest tests failed or not configured', error.message)}
 }
 
 async function runPlaywrightTests() {
@@ -87,11 +82,8 @@ async function runPlaywrightTests() {
     testReport.summary.failed += result.failed;
     testReport.summary.duration += endTime - startTime;
     
-    log('info', `Playwright tests completed: ${result.passed}/${result.total} passed`);
-    
-  } catch (error) {
-    log('warn', 'Playwright tests failed or not configured', error.message);
-  }
+    log('info', `Playwright tests completed: ${result.passed}/${result.total} passed`)} catch (error) {
+    log('warn', 'Playwright tests failed or not configured', error.message)}
 }
 
 async function runCypressTests() {
@@ -118,11 +110,8 @@ async function runCypressTests() {
     testReport.summary.failed += result.failed;
     testReport.summary.duration += endTime - startTime;
     
-    log('info', `Cypress tests completed: ${result.passed}/${result.total} passed`);
-    
-  } catch (error) {
-    log('warn', 'Cypress tests failed or not configured', error.message);
-  }
+    log('info', `Cypress tests completed: ${result.passed}/${result.total} passed`)} catch (error) {
+    log('warn', 'Cypress tests failed or not configured', error.message)}
 }
 
 async function runLintTests() {
@@ -145,9 +134,7 @@ async function runLintTests() {
     testReport.summary.passed++;
     testReport.summary.duration += endTime - startTime;
     
-    log('info', 'Linting tests completed successfully');
-    
-  } catch (error) {
+    log('info', 'Linting tests completed successfully')} catch (error) {
     testReport.tests.push({
       framework: 'eslint',
       duration: 0,
@@ -155,8 +142,7 @@ async function runLintTests() {
     });
     
     testReport.summary.failed++;
-    log('warn', 'Linting tests failed', error.message);
-  }
+    log('warn', 'Linting tests failed', error.message)}
 }
 
 async function runTypeTests() {
@@ -179,9 +165,7 @@ async function runTypeTests() {
     testReport.summary.passed++;
     testReport.summary.duration += endTime - startTime;
     
-    log('info', 'TypeScript type tests completed successfully');
-    
-  } catch (error) {
+    log('info', 'TypeScript type tests completed successfully')} catch (error) {
     testReport.tests.push({
       framework: 'typescript',
       duration: 0,
@@ -189,8 +173,7 @@ async function runTypeTests() {
     });
     
     testReport.summary.failed++;
-    log('warn', 'TypeScript type tests failed', error.message);
-  }
+    log('warn', 'TypeScript type tests failed', error.message)}
 }
 
 function generateRecommendations() {
@@ -202,32 +185,28 @@ function generateRecommendations() {
       priority: 'high',
       message: 'No tests found',
       action: 'Implement comprehensive test suite'
-    });
-  }
+    })}
   
   if (failed > 0) {
     recommendations.push({
       priority: 'high',
       message: `${failed} tests failed`,
       action: 'Fix failing tests immediately'
-    });
-  }
+    })}
   
   if (coverage < 80) {
     recommendations.push({
       priority: 'medium',
       message: `Test coverage is ${coverage}% (below 80%)`,
       action: 'Increase test coverage to at least 80%'
-    });
-  }
+    })}
   
   if (total > 0 && passed / total < 0.9) {
     recommendations.push({
       priority: 'medium',
       message: `Test success rate is ${Math.round((passed / total) * 100)}% (below 90%)`,
       action: 'Improve test reliability and fix flaky tests'
-    });
-  }
+    })}
   
   recommendations.push({
     priority: 'low',
@@ -235,8 +214,7 @@ function generateRecommendations() {
     action: 'Set up CI/CD with automated test execution'
   });
   
-  return recommendations;
-}
+  return recommendations}
 
 async function main() {
   try {
@@ -265,9 +243,7 @@ async function main() {
       log('info', 'Test Recommendations:');
       testReport.recommendations.forEach(rec => {
         log('info', `- [${rec.priority.toUpperCase()}] ${rec.message}`);
-        log('info', `  Action: ${rec.action}`);
-      });
-    }
+        log('info', `  Action: ${rec.action}`)})}
     
     // Save report
     const reportPath = path.join(process.cwd(), `enhanced-test-report-${testReport.sessionId}.json`);
@@ -278,16 +254,13 @@ async function main() {
     // Exit with appropriate status
     if (testReport.summary.failed > 0) {
       log('error', 'Some tests failed');
-      process.exit(1);
-    } else {
+      process.exit(1)} else {
       log('info', 'All tests passed successfully');
-      process.exit(0);
-    }
+      process.exit(0)}
     
   } catch (error) {
     log('error', 'Fatal error in enhanced test runner', error.message);
-    process.exit(1);
-  }
+    process.exit(1)}
 }
 
 main();

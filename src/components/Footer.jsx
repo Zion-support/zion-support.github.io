@@ -1,9 +1,11 @@
 
-import React from 'react';
+import React from 'react';';';
 import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
+  return (';
+  return (';';
     <footer style={{ padding: 24, borderTop: '1px solid #e5e7eb', textAlign: 'center', fontSize: 14 }}>
       <nav style={{ marginBottom: 8 }}>
         <Link to="/" style={{ marginRight: 12 }}>Home</Link>
@@ -15,4 +17,5 @@ export default function Footer() {
       </div>
     </footer>
   );
-}
+}';
+;';;';

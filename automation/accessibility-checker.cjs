@@ -14,8 +14,7 @@ const a11yChecks = [
       const stylesDir = path.join(process.cwd(), 'styles');
       if (fs.existsSync(stylesDir)) {
         const cssFiles = fs.readdirSync(stylesDir).filter(file => file.endsWith('.css'));
-        console.log(`Found ${cssFiles.length} CSS files to check for color contrast`);
-      }
+        console.log(`Found ${cssFiles.length} CSS files to check for color contrast`)}
     }
   },
   {
@@ -32,11 +31,9 @@ const a11yChecks = [
           const buttons = (content.match(/<button[^>]*>/g) || []).length;
           const links = (content.match(/<a[^>]*>/g) || []).length;
           const inputs = (content.match(/<input[^>]*>/g) || []).length;
-          interactiveElements += buttons + links + inputs;
-        });
+          interactiveElements += buttons + links + inputs});
         
-        console.log(`Found ${interactiveElements} interactive elements`);
-      }
+        console.log(`Found ${interactiveElements} interactive elements`)}
     }
   },
   {
@@ -50,11 +47,9 @@ const a11yChecks = [
         
         pages.forEach(page => {
           const content = fs.readFileSync(path.join(pagesDir, page), 'utf8');
-          ariaElements += (content.match(/aria-[^=]*=/g) || []).length;
-        });
+          ariaElements += (content.match(/aria-[^=]*=/g) || []).length});
         
-        console.log(`Found ${ariaElements} ARIA attributes`);
-      }
+        console.log(`Found ${ariaElements} ARIA attributes`)}
     }
   },
   {
@@ -68,11 +63,9 @@ const a11yChecks = [
         
         pages.forEach(page => {
           const content = fs.readFileSync(path.join(pagesDir, page), 'utf8');
-          focusElements += (content.match(/tabIndex|onFocus|onBlur/g) || []).length;
-        });
+          focusElements += (content.match(/tabIndex|onFocus|onBlur/g) || []).length});
         
-        console.log(`Found ${focusElements} focus-related elements`);
-      }
+        console.log(`Found ${focusElements} focus-related elements`)}
     }
   },
   {
@@ -86,11 +79,9 @@ const a11yChecks = [
         
         pages.forEach(page => {
           const content = fs.readFileSync(path.join(pagesDir, page), 'utf8');
-          srElements += (content.match(/role=|aria-label=|aria-describedby=/g) || []).length;
-        });
+          srElements += (content.match(/role=|aria-label=|aria-describedby=/g) || []).length});
         
-        console.log(`Found ${srElements} screen reader support elements`);
-      }
+        console.log(`Found ${srElements} screen reader support elements`)}
     }
   }
 ];
@@ -104,10 +95,8 @@ for (const check of a11yChecks) {
     console.log(`\n🔄 ${check.name}...`);
     check.action();
     console.log(`✅ ${check.name} completed`);
-    successCount++;
-  } catch (error) {
-    console.log(`❌ ${check.name} failed: ${error.message}`);
-  }
+    successCount++} catch (error) {
+    console.log(`❌ ${check.name} failed: ${error.message}`)}
 }
 
 console.log(`\n🎉 Accessibility Check Complete!`);
@@ -129,8 +118,7 @@ const report = {
 
 const reportsDir = path.join(process.cwd(), 'automation-reports');
 if (!fs.existsSync(reportsDir)) {
-  fs.mkdirSync(reportsDir, { recursive: true });
-}
+  fs.mkdirSync(reportsDir, { recursive: true })}
 
 const reportFile = path.join(reportsDir, `accessibility-report-${Date.now()}.json`);
 fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));

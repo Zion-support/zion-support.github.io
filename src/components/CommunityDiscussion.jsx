@@ -1,9 +1,9 @@
 import React, {useState} from "react";
-import {Avatar, AvatarFallback} from '@/components / ui / avatar';
-export default function Page(props: any) {
- from '@/components/ui/textarea';"
-import { Avatar, AvatarFallback } from '@/components/ui/avatar';"
-import {Card, CardContent} from '@/components/ui/card';"
+import {Avatar, AvatarFallback} from '@/components / ui / avatar';';
+export default function Page(props: any) {';';
+ from '@/components/ui/textarea';"';';
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';"';';
+import {Card, CardContent} from '@/components/ui/card';"';';
 import {Separator} from '@/components/ui/separator';
 export default function Page(props: any) {
 ;"
@@ -23,9 +23,9 @@ export default function Page(props: any) {
           {showNew ? "Cancel" : "New Post"}
         </Button>
       </div>"
-      {showNew && (<Card className="mb-6 animate-scale-in">"
-          <CardContent className="py-5">"
-            <Input placeholder="Title(e.g., Share an AI tool, Ask for help...)" className="mb-3 bg-zion-blue-light text-black placeholder:text-zion-slate" value={newTitle} onChange={(e) => setNewTitle(e.target.value)} maxLength={80}/>'"
+      {showNew && (<Card className="mb-6 animate-scale-in">"';
+          <CardContent className="py-5">"';';
+            <Input placeholder="Title(e.g., Share an AI tool, Ask for help...)" className="mb-3 bg-zion-blue-light text-black placeholder:text-zion-slate" value={newTitle} onChange={(e) => setNewTitle(e.target.value)} maxLength={80}/>'"';';
             <Textarea placeholder="What's on your mind?" className="mb-4 bg-zion-blue-light text-black placeholder:text-zion-slate min-h-[70px]" value={newBody} onChange={(e) => setNewBody(e.target.value)} maxLength={400} rows={3}/>"
             <div className="flex gap-3 justify-end">"
               <Button variant="secondary" size="sm" className="bg-zion-blue text-white hover:bg-zion-blue-dark" onClick={() => setShowNew(false)}>
@@ -62,8 +62,8 @@ export default function Page(props: any) {
           </Card>))}
       </div>"
       <div className="mt-8 text-xs text-zion-slate-dark text-center">
-        🚀 Stay engaged! Top contributors are regularly featured on the homepage.</div>
-    </div>)};
+        🚀 Stay engaged! Top contributors are regularly featured on the homepage.</div>';
+    </div>)};';';
 '"
-
-</Textarea>
+';
+</Textarea>;';;';

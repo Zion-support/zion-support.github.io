@@ -4,7 +4,8 @@ import {useCompWorkspace} from "@/hooks/useCompWorkspace";
 export function AdminHeader(props: any) {
     // const { user } = useAuth(); // Unused but available
     const {comp} = useCompWorkspace();
-    return (<div className="space-y-4">
+    return (
+    <div className="min-h-screen bg-white">
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-3xl font-bold tracking-tight">Enterprise Admin Dashboard</h1>
@@ -53,7 +54,7 @@ export function AdminHeader(props: any) {
         </div>
         <Button>Customize Workspace</Button>
       </div>
-    </div>)}
-
-
-export default AdminHeader;
+        </div>
+  );
+}';
+export default AdminHeader;;';;';

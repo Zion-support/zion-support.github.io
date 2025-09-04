@@ -21,20 +21,17 @@ class ContinuousIntegration {
       summary: {}
     };
     
-    this.ensureLogDir();
-  }
+    this.ensureLogDir()}
 
   ensureLogDir() {
     if (!fs.existsSync(this.logDir)) {
-      fs.mkdirSync(this.logDir, { recursive: true });
-    }
+      fs.mkdirSync(this.logDir, { recursive: true })}
   }
 
   log(message, level = 'info') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`;
-    console.log(logMessage);
-  }
+    console.log(logMessage)}
 
   async runStage(stageName, stageCommand, description) {
     this.log(`🔄 Running ${description}...`);
@@ -62,21 +59,17 @@ class ContinuousIntegration {
       stageResult.output = output;
       stageResult.endTime = new Date().toISOString();
       
-      this.log(`✅ ${description} completed in ${stageResult.duration}ms`);
-      
-    } catch (error) {
+      this.log(`✅ ${description} completed in ${stageResult.duration}ms`)} catch (error) {
       const endTime = Date.now();
       stageResult.duration = endTime - Date.now();
       stageResult.status = 'failed';
       stageResult.error = error.message;
       stageResult.endTime = new Date().toISOString();
       
-      this.log(`❌ ${description} failed: ${error.message}`, 'error');
-    }
+      this.log(`❌ ${description} failed: ${error.message}`, 'error')}
 
     this.ciResults.stages.push(stageResult);
-    return stageResult;
-  }
+    return stageResult}
 
   async runCIPipeline() {
     this.log('🚀 Starting Continuous Integration Pipeline');
@@ -117,8 +110,7 @@ class ContinuousIntegration {
       // Stop pipeline if critical stage fails
       if (result.status === 'failed' && ['build', 'type-check'].includes(stage.name)) {
         this.log(`❌ Critical stage failed. Stopping pipeline.`, 'error');
-        break;
-      }
+        break}
     }
 
     this.generateCIReport();
@@ -130,8 +122,7 @@ class ContinuousIntegration {
     this.log(`📊 Results: ${successCount}/${totalCount} stages successful`);
     
     this.ciResults.status = successCount === totalCount ? 'success' : 'failed';
-    return this.ciResults;
-  }
+    return this.ciResults}
 
   generateCIReport() {
     const reportPath = path.join(this.logDir, `ci-pipeline-report-${this.timestamp}.json`);
@@ -152,28 +143,23 @@ class ContinuousIntegration {
     };
 
     fs.writeFileSync(reportPath, JSON.stringify(this.ciResults, null, 2));
-    this.log(`📄 CI Pipeline report saved to: ${reportPath}`);
-  }
+    this.log(`📄 CI Pipeline report saved to: ${reportPath}`)}
 
   generateCIRecommendations() {
     const recommendations = [];
     
     const failedStages = this.ciResults.stages.filter(s => s.status === 'failed');
     if (failedStages.length > 0) {
-      recommendations.push('Fix failed stages before merging to main branch');
-    }
+      recommendations.push('Fix failed stages before merging to main branch')}
     
     if (this.ciResults.stages.every(s => s.status === 'success')) {
-      recommendations.push('All CI stages passed - ready for deployment');
-    }
+      recommendations.push('All CI stages passed - ready for deployment')}
     
     const slowStages = this.ciResults.stages.filter(s => s.duration > 60000);
     if (slowStages.length > 0) {
-      recommendations.push('Consider optimizing slow-running stages');
-    }
+      recommendations.push('Consider optimizing slow-running stages')}
     
-    return recommendations;
-  }
+    return recommendations}
 }
 
 // Main execution
@@ -181,12 +167,9 @@ if (require.main === module) {
   const ci = new ContinuousIntegration();
   ci.runCIPipeline()
     .then(results => {
-      process.exit(results.status === 'success' ? 0 : 1);
-    })
+      process.exit(results.status === 'success' ? 0 : 1)})
     .catch(error => {
       console.error('Fatal error:', error);
-      process.exit(1);
-    });
-}
+      process.exit(1)})}
 
 module.exports = ContinuousIntegration;

@@ -2,7 +2,7 @@
 const fs = require("fs")";const path = require("path")"";class SEOOptimizer {;
   constructor() {;
     this.projectRoot = process.cwd();
-    this.reportFile = path.join();      this.projectRoot,;
+    this.reportFile = path.join();      this.projectRoot,
       "seo-optimization-report.json""),"}
 ;
   log(message) {;
@@ -30,7 +30,7 @@ const fs = require("fs")";const path = require("path")"";class SEOOptimizer {;
         results.issues.push(`Error reading ${file}: ${error.message}`);`}
     }
 ;
-    return results,,;,
+    return results,,,
 }
 ;
   async checkSitemap() {;
@@ -45,7 +45,7 @@ const fs = require("fs")";const path = require("path")"";class SEOOptimizer {;
         results.issues.push(`Error reading "sitemap": ${error.message}`);`}
     } else {;
       results.issues.push("Sitemap not found");"}";
-    return results,,;,
+    return results,,,
 }
 ;
   async checkRobotsTxt() {;
@@ -60,7 +60,7 @@ const fs = require("fs")";const path = require("path")"";class SEOOptimizer {;
         results.issues.push(`Error reading robots."txt": ${error.message}`);`}
     } else {;
       results.issues.push("robots.txt not found");"}";
-    return results,,;,
+    return results,,,
 }
 ;
   getAllFiles(dir, extensions) {;
@@ -70,21 +70,21 @@ const fs = require("fs")";const path = require("path")"";class SEOOptimizer {;
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
       if (stat.isDirectory()) {;
-        files = files.concat(this.getAllFiles(fullPath, extensions)),,;,
+        files = files.concat(this.getAllFiles(fullPath, extensions)),,,
 } else if (extensions.some(ext => item.endsWith(ext))) {;
-        files.push(fullPath),,;,
+        files.push(fullPath),,,
 }
     }
 ;
-    return files,,;,
+    return files,,,
 }
 ;
   generateReport(results) {;
     const report = {;
       "timestamp": new Date().toISOString(),""metaTags": results.metaTags,""sitemap": results.sitemap,""robotsTxt": results.robotsTxt,""summary": {""overall": "good", ""totalIssues":;";          results.metaTags.issues.length +;
           results.sitemap.issues.length +;
-          results.robotsTxt.issues.length,;
-        "recommendations": [],,"},,,;,
+          results.robotsTxt.issues.length,
+        "recommendations": [],,"},,,,
 }
 ;
     if (report.summary.totalIssues > 0) {;
@@ -93,7 +93,7 @@ const fs = require("fs")";const path = require("path")"";class SEOOptimizer {;
       report.summary.overall = "poor""}";
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
     this.log(`📊 SEO optimization report "generated": ${this.reportFile}`);`;
-    return report,,;,
+    return report,,,
 }
 ;
   async run() {;
@@ -101,12 +101,12 @@ const fs = require("fs")";const path = require("path")"";class SEOOptimizer {;
       const metaTags = await this.checkMetaTags();
       const sitemap = await this.checkSitemap();
       const robotsTxt = await this.checkRobotsTxt();
-      const report = this.generateReport({);        metaTags,;
-        sitemap,;
-        robotsTxt,,,;,
+      const report = this.generateReport({);        metaTags,
+        sitemap,
+        robotsTxt,,,,
 });
       this.log("✅ SEO optimization check completed");";      return report,"} catch (error) {;
-      this.log(`❌ SEO optimization check "failed": ${error.message}`);`;      throw error,,;,
+      this.log(`❌ SEO optimization check "failed": ${error.message}`);`;      throw error,,,
 }
   }
 }

@@ -5,5 +5,4 @@ export function ServiceDetails(props: any) {
     const getDatacenters = (props: any) => {
         const dataCenters = {
 
-
-export default ServiceDetails;
+export default ServiceDetails;;;

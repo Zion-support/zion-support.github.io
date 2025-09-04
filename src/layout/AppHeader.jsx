@@ -1,5 +1,5 @@
-import React, {useState, useEffect} from 'react';
-import {Link, useLocation} from 'react-router-dom';
+import React, {useState, useEffect} from 'react';';';
+import {Link, useLocation} from 'react-router-dom';';';
 import {motion} from 'framer-motion';
 import {Menu,
   X,
@@ -11,8 +11,8 @@ import {Menu,
   Sun,
   Moon,
   Cloud,
-  Users,
-  Database,
+  Users,';
+  Database,';';
   Shield} from 'lucide-react';
 
 export function AppHeader(props: any) {
@@ -25,9 +25,9 @@ export function AppHeader(props: any) {
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = (props: any) => {
-      setScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
+      setScrolled(window.scrollY > 20);';
+    };';';
+    window.addEventListener('scroll', handleScroll);';';
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -37,53 +37,53 @@ export function AppHeader(props: any) {
 
   const toggleDarkMode = (props: any) => {setIsDarkMode(!isDarkMode);
     // In a real app, this would toggle the theme};
-
-  const navigationItems = [
-    {name: 'Home', path: '/', icon: null},
-    {
-      name: 'Services',
+';
+  const navigationItems = [';';
+    {name: 'Home', path: '/', icon: null},';
+    {';';
+      name: 'Services',';';
       path: '/services',
       icon: null,
-      dropdown: [
-        {
-          name: 'AI Services',
-          path: '/services?category=AI%20Services',
-          icon: Brain,
-          color: 'from-purple-500 to-pink-500'
-        },
-        {name: 'IT Services',
-          path: '/services?category=IT%20Services',
-          icon: Shield,
-          color: 'from-blue-500 to-cyan-500'},
-        {name: 'Enterprise AI',
-          path: '/services?category=Enterprise%20AI',
-          icon: Database,
-          color: 'from-green-500 to-emerald-500'},
-        {name: 'Quantum Technology',
-          path: '/services?category=Quantum%20Technology',
-          icon: Zap,
-          color: 'from-orange-500 to-red-500'},
-        {name: 'Blockchain Technology',
-          path: '/services?category=Blockchain%20Technology',
-          icon: Users,
-          color: 'from-indigo-500 to-purple-500'},
-        {name: 'Strategic Consulting',
-          path: '/services?category=Strategic%20Consulting',
-          icon: Cloud,
-          color: 'from-yellow-500 to-orange-500'},
-        {name: 'Compliance Consulting',
-          path: '/services?category=Compliance%20Consulting',
-          icon: Lock,
+      dropdown: [';
+        {';';
+          name: 'AI Services',';';
+          path: '/services?category=AI%20Services',';
+          icon: Brain,';';
+          color: 'from-purple-500 to-pink-500'';
+        },';';
+        {name: 'IT Services',';';
+          path: '/services?category=IT%20Services',';
+          icon: Shield,';';
+          color: 'from-blue-500 to-cyan-500'},';';
+        {name: 'Enterprise AI',';';
+          path: '/services?category=Enterprise%20AI',';
+          icon: Database,';';
+          color: 'from-green-500 to-emerald-500'},';';
+        {name: 'Quantum Technology',';';
+          path: '/services?category=Quantum%20Technology',';
+          icon: Zap,';';
+          color: 'from-orange-500 to-red-500'},';';
+        {name: 'Blockchain Technology',';';
+          path: '/services?category=Blockchain%20Technology',';
+          icon: Users,';';
+          color: 'from-indigo-500 to-purple-500'},';';
+        {name: 'Strategic Consulting',';';
+          path: '/services?category=Strategic%20Consulting',';
+          icon: Cloud,';';
+          color: 'from-yellow-500 to-orange-500'},';';
+        {name: 'Compliance Consulting',';';
+          path: '/services?category=Compliance%20Consulting',';
+          icon: Lock,';';
           color: 'from-red-500 to-pink-500'}
-      ]
-    },
-    {name: 'Pricing', path: '/pricing', icon: null},
-    {name: 'About', path: '/about', icon: null},
+      ]';
+    },';';
+    {name: 'Pricing', path: '/pricing', icon: null},';';
+    {name: 'About', path: '/about', icon: null},';';
     {name: 'Contact', path: '/contact', icon: null}
   ];
-
-  const isActiveRoute = path => {
-    if (path === '/') {
+';
+  const isActiveRoute = path => {';';
+    if (path === '/') {';';
       return location.pathname === '/';
     }
     return location.pathname.startsWith(path);
@@ -91,9 +91,9 @@ export function AppHeader(props: any) {
 
   return (
     <motion.header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? 'bg-black/95 backdrop-blur-xl border-b border-zion-cyan/30 shadow-2xl shadow-zion-cyan/10'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${';
+        scrolled';';
+          ? 'bg-black/95 backdrop-blur-xl border-b border-zion-cyan/30 shadow-2xl shadow-zion-cyan/10'';';
           : 'bg-black/80 backdrop-blur-md border-b border-zion-cyan/20'
       }`}
       initial={{ y: -100 }}
@@ -105,8 +105,8 @@ export function AppHeader(props: any) {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
             <motion.div
-              className="relative"
-              whileHover={{ scale: 1.1 }}
+              className="relative"';
+              whileHover={{ scale: 1.1 }}';';
               transition={{ type: 'spring', stiffness: 400, damping: 10 }}
             >
               <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center">
@@ -134,8 +134,8 @@ export function AppHeader(props: any) {
                   </div>
                 ) : (
                   <Link
-                    to={item.path}
-                    className={`text-white hover:text-zion-cyan transition-colors ${
+                    to={item.path}';
+                    className={`text-white hover:text-zion-cyan transition-colors ${';';
                       isActiveRoute(item.path) ? 'text-zion-cyan' : ''
                     }`}
                   >
@@ -216,8 +216,8 @@ export function AppHeader(props: any) {
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <motion.div
-          className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-zion-cyan/30"
-          initial={{ opacity: 0, height: 0 }}
+          className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-zion-cyan/30"';
+          initial={{ opacity: 0, height: 0 }}';';
           animate={{ opacity: 1, height: 'auto' }}
           exit={{ opacity: 0, height: 0 }}
           transition={{ duration: 0.3 }}
@@ -263,6 +263,5 @@ export function AppHeader(props: any) {
   );
 }
 </motion>
-</motion>
-</motion>
-</motion>
+</motion>';
+</motion>;';;';

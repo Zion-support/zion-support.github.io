@@ -16,14 +16,11 @@ function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
     const stat = fs.statSync(filePath);
     
     if (stat && stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-      results = results.concat(findFiles(filePath, extensions));
-    } else if (extensions.some(ext => file.endsWith(ext))) {
-      results.push(filePath);
-    }
+      results = results.concat(findFiles(filePath, extensions))} else if (extensions.some(ext => file.endsWith(ext))) {
+      results.push(filePath)}
   });
   
-  return results;
-}
+  return results}
 
 // Function to fix common syntax errors
 function fixSyntaxErrors(content, filePath) {
@@ -46,8 +43,7 @@ function fixSyntaxErrors(content, filePath) {
       const jsxContent = jsxMatch[1];
       if (jsxContent.includes('><') && !jsxContent.includes('<>')) {
         fixed = fixed.replace(/return\s*\(\s*([^)]+)\s*\)/g, 'return (<>\n$1\n</>)');
-        changes++;
-      }
+        changes++}
     }
   }
   
@@ -65,8 +61,7 @@ function fixSyntaxErrors(content, filePath) {
   fixed = fixed.replace(/\\\(/g, '(');
   fixed = fixed.replace(/\\\)/g, ')');
   
-  return { content: fixed, changes };
-}
+  return { content: fixed, changes }}
 
 // Function to fix unused imports and variables
 function fixUnusedImports(content, filePath) {
@@ -83,8 +78,7 @@ function fixUnusedImports(content, filePath) {
     // Skip lines that are already commented out
     if (line.trim().startsWith('//')) {
       newLines.push(line);
-      continue;
-    }
+      continue}
     
     // Check for import statements
     const importMatch = line.match(/import\s*{([^}]+)}\s*from\s*['"][^'"]+['"]/);
@@ -100,29 +94,23 @@ function fixUnusedImports(content, filePath) {
                       !importName.startsWith('//');
         
         if (isUsed) {
-          usedImports.push(imp);
-        }
+          usedImports.push(imp)}
       }
       
       if (usedImports.length === 0) {
         // Comment out the entire import line
         newLines.push(`// ${line} // Unused import`);
-        changes++;
-      } else if (usedImports.length < imports.length) {
+        changes++} else if (usedImports.length < imports.length) {
         // Replace with only used imports
         const newImport = line.replace(importMatch[1], usedImports.join(', '));
         newLines.push(newImport);
-        changes++;
-      } else {
-        newLines.push(line);
-      }
+        changes++} else {
+        newLines.push(line)}
     } else {
-      newLines.push(line);
-    }
+      newLines.push(line)}
   }
   
-  return { content: newLines.join('\n'), changes };
-}
+  return { content: newLines.join('\n'), changes }}
 
 // Function to fix React unescaped entities
 function fixReactEntities(content) {
@@ -134,8 +122,7 @@ function fixReactEntities(content) {
   fixed = fixed.replace(/(\w)'(\s)/g, '$1&apos;$2');
   fixed = fixed.replace(/(\s)'(\w)/g, '$1&apos;$2');
   
-  return { content: fixed, changes };
-}
+  return { content: fixed, changes }}
 
 // Function to fix TypeScript specific errors
 function fixTypeScriptErrors(content, filePath) {
@@ -153,11 +140,9 @@ function fixTypeScriptErrors(content, filePath) {
     fixed = fixed.replace(/const\s+(\w+)\s*=\s*\(/g, 'const $1 = (');
     
     // Fix property assignment errors
-    fixed = fixed.replace(/:\s*{\s*$/gm, ': {');
-  }
+    fixed = fixed.replace(/:\s*{\s*$/gm, ': {')}
   
-  return { content: fixed, changes };
-}
+  return { content: fixed, changes }}
 
 // Main function to process all files
 async function fixAllErrors() {
@@ -196,12 +181,10 @@ async function fixAllErrors() {
           fs.writeFileSync(filePath, content);
           console.log(`  ✅ Fixed ${fileChanges} issues in ${filePath}`);
           totalFixes += fileChanges;
-          filesFixed++;
-        }
+          filesFixed++}
         
       } catch (error) {
-        console.log(`  ⚠️  Error processing ${filePath}: ${error.message}`);
-      }
+        console.log(`  ⚠️  Error processing ${filePath}: ${error.message}`)}
     }
     
     console.log(`\n✅ Error fixing completed!`);
@@ -212,14 +195,11 @@ async function fixAllErrors() {
     console.log('\n🔍 Running linting to check remaining issues...');
     try {
       execSync('npm run lint', { stdio: 'pipe' });
-      console.log('✅ Linting passed!');
-    } catch (error) {
-      console.log('⚠️  Some linting issues remain. Consider running: npm run lint -- --fix');
-    }
+      console.log('✅ Linting passed!')} catch (error) {
+      console.log('⚠️  Some linting issues remain. Consider running: npm run lint -- --fix')}
     
   } catch (error) {
-    console.error('❌ Error fixing failed:', error.message);
-  }
+    console.error('❌ Error fixing failed:', error.message)}
 }
 
 // Run the error fixer
