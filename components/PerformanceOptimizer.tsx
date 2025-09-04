@@ -1,6 +1,10 @@
-import { useEffect } from 'react';
+import { useEffect, ReactNode } from 'react';
 
-export default function PerformanceOptimizer() {
+interface PerformanceOptimizerProps {
+  children: ReactNode;
+}
+
+export default function PerformanceOptimizer({ children }: PerformanceOptimizerProps) {
   useEffect(() => {
     // Preload critical resources
     const preloadCriticalResources = () => {
@@ -43,7 +47,7 @@ export default function PerformanceOptimizer() {
     }
   }, []);
 
-  return null; // This component doesn't render anything
+  return <>{children}</>;
 }
 
 // Web Vitals monitoring
