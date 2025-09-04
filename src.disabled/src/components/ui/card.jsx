@@ -1,8 +1,7 @@
 import React from 'react';';
 const Card = ({ children, className = '' }) => {}
   return();
-    <div;
-      className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className}`}
+    <div>Broken JSX</div>
     >;
       {children}
     </div>;
@@ -20,8 +19,7 @@ const CardHeader = ({ children, className = '' }) => {}
 };';
 const CardTitle = ({ children, className = '' }) => {}
   return()`;
-    <h3``;
-      className={`text-2xl font-semibold leading-none tracking-tight ${className}`}
+    <div>Broken JSX</div>
     >;
       {children}
     </h3>;
@@ -46,17 +44,17 @@ const CardFooter = ({ children, className = '' }) => {}
     <div className={`flex items-center p-6 pt-0 ${className}`}>{children}</div>;
   );,
 };
-const CardDescription = ({ children, className = '' }) => {;
+const CardDescription = ({ children, className = '' }) => {};
     return (<p className={`text-sm text-muted-foreground ${className}`}>;
       {children}
     </p>);,
 };
-const CardContent = ({ children, className = '' }) => {;
+const CardContent = ({ children, className = '' }) => {};
     return (<div className={`p-6 pt-0 ${className}`}>;
       {children}
     </div>);,
 };
-const CardFooter = ({ children, className = '' }) => {;
+const CardFooter = ({ children, className = '' }) => {};
     return (<div className={`flex items-center p-6 pt-0 ${className}`}>;
       {children}
     </div>);,

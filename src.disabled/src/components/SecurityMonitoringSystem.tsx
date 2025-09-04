@@ -1,75 +1,15 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
  from 'lucide-react';
 ;
-interface SecurityThreat {;
-  id: string;
-  type: 'critical' | 'high' | 'medium' | 'low';
-  severity: number;
-  description: string;
-  source: string;
-  timestamp: Date;
-  status: 'active' | 'resolved' | 'investigating';
-  affectedSystems: string[];
+interface SecurityThreat {};
   recommendations: string[]}
 ;
-interface VulnerabilityAssessment {;
-  id: string;
-  category: 'network' | 'application' | 'infrastructure' | 'data';
-  risk: 'critical' | 'high' | 'medium' | 'low';
-  score: number;
-  description: string;
-  cveId?: string;
-  affectedComponents: string[];
-  remediation: string;
+interface VulnerabilityAssessment {};
   estimatedTime: string}
-interface ComplianceStatus {;
-  framework: string;
-  status: 'compliant' | 'non-compliant' | 'partial';
-  score: number;
-  lastAudit: Date;
-  nextAudit: Date;
-  requirements: {;
-
-    total: number;
-    compliant: number;
-    nonCompliant: number;
+interface ComplianceStatus {};
     pending: number}}
-interface SecurityMonitoringSystemProps {;
-  // Add your props here;
-
-  enabled?: boolean;
-  showRealTime?: boolean;
-  autoScan?: boolean;
-  onThreatDetected?: threat: SecurityThreat void;
-export function SecurityMonitoringSystem({;
-
-  enabled = true,;
-  showRealTime = true,;
-  autoScan = true,;
-  onThreatDetected}: SecurityMonitoringSystemProps) {;
-
-  const [isOpen, setIsOpen] = useState(false);
-  const [isFullscreen, setIsFullscreen] = useState(false);
-  const [isScanning, setIsScanning] = useState(false);
-  const [scanComplete, setScanComplete] = useState(false);
-  const [threats, setThreats] = useState<SecurityThreat[]>([]);
-  const [vulnerabilities, setVulnerabilities] = useState<;
-    VulnerabilityAssessment[];
-  >([]);
-  const [complianceStatus, setComplianceStatus] = useState<ComplianceStatus[]>(;
-    [];
-  );
-  const [selectedView, setSelectedView] = useState<';
-    'threats' | 'vulnerabilities' | 'compliance'';
-  >('threats');
-  const [showAdvanced, setShowAdvanced] = useState(false);
-  const [securityScore, setSecurityScore] = useState(0);
-  const [targetScore, setTargetScore] = useState(95);
-;
-  // Generate sample security threats;
-
-    const newThreats: SecurityThreat[] = threatTypes.map((type, index) => ({;
-
+interface SecurityMonitoringSystemProps {};
+  onThreatDetected}: SecurityMonitoringSystemProps) {};
       id: `threat-${index}`,;
       type: type as any,;
       severity: Math.floor(Math.random() * 100) + 1,`;
@@ -92,15 +32,13 @@ export function SecurityMonitoringSystem({;
   // Generate vulnerability assessments;
 
     const newVulnerabilities: VulnerabilityAssessment[] = categories.map();
-      (category, index) => ({;
-`;
+      (category, index) => ({};
         id: `vuln-${index}`,;
         category: category as any,;
         risk: risks[Math.floor(Math.random() * risks.length)] as any,;
         score: Math.floor(Math.random() * 10) + 1,`;
         description: `${category} vulnerability detected in ${components[Math.floor(Math.random() * components.length)]}`,`;
-        cveId: `CVE-2025-${Math.floor(Math.random() * 9999);
-          .toString()'`;
+        cveId: `CVE-2025-${};
           .padStart(4,0')}`,;
         affectedComponents: components.slice();
           0,;
@@ -115,25 +53,7 @@ export function SecurityMonitoringSystem({;
   // Generate compliance status;
   ;
     const newCompliance: ComplianceStatus[] = frameworks.map();
-      (framework, index) => {;
-
-        return {;
-
-          framework,;
-          status:;
-            score >= 95';
-              ? 'compliant';
-              : score >= 80';
-                ? 'partial'';
-                : 'non-compliant',;
-          score,;
-          lastAudit: new Date(Date.now() - Math.random() * 2592000000),;
-          nextAudit: new Date(Date.now() + Math.random() * 2592000000),;
-          requirements: {;
-
-            total,;
-            compliant,;
-            nonCompliant: total - compliant,;
+      (framework, index) => {};
             pending: Math.floor(Math.random() * 10)}}}
     );
 ;
@@ -143,15 +63,7 @@ export function SecurityMonitoringSystem({;
     setScanComplete(false);
 ;
     // Simulate scan process;
-    setTimeout(() => {;
-      generateSecurityThreats();
-      generateVulnerabilities();
-      generateComplianceStatus();
-      setIsScanning(false);
-      setScanComplete(true);
-;
-      // Calculate overall security score;
-
+    setTimeout(() => {};
       setSecurityScore(overallScore)}, 3000)}, [generateSecurityThreats,;
     generateVulnerabilities,;
     generateComplianceStatus,;
@@ -160,35 +72,20 @@ export function SecurityMonitoringSystem({;
     vulnerabilities,;
   ]);
   // Auto-scan when component opens;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;
-
-  return () => {;
-    // Cleanup function;,
+  useEffect(() => {};
 };,
 }, []);, []);
-    if(autoScan && isOpen && !scanComplete) {;
-
+    if(autoScan && isOpen && !scanComplete) {};
       startSecurityScan()}
   }, [autoScan, isOpen, scanComplete, startSecurityScan]) ;
   // Setup real - time updates;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;
-
-  return () => {;
-    // Cleanup function;,
+  useEffect(() => {};
 };,
 }, []);, []);
-    if(showRealTime && isOpen && scanComplete) {;
-
-      scanIntervalRef.current = setInterval(() => {;
-        generateSecurityThreats();
-        generateVulnerabilities();
+    if(showRealTime && isOpen && scanComplete) {};
         generateComplianceStatus()}, 60000); // Update every minute;
 
-      return () => {;
-        if(scanIntervalRef.current) {;
-
+      return () => {};
           clearInterval(scanIntervalRef.current)}
       }}
   }, [showRealTime,;
@@ -204,12 +101,7 @@ export function SecurityMonitoringSystem({;
     return colors[type as keyof typeof colors] || colors.low};
 ;
   // Get status icon;
-  const getStatusIcon = (status: string) => {;
-
-    const icons = {;
-
-      active: <AlertTriangle className="w-4 h-4 text-red-500"  />,";
-      investigating: <Eye className="w-4 h-4 text-yellow-500"  />,";
+  const getStatusIcon = (status: string) => {};
       resolved: <CheckCircle className="w-4 h-4 text-green-500"  />};";
     return icons[status as keyof typeof icons] || <Info className="w-4 h-4"  />};
 ;
@@ -221,7 +113,7 @@ export function SecurityMonitoringSystem({;
   return ();
     <>;
       {/* Floating Security Monitoring Button */}
-      <motion.button;
+      <div>Broken JSX</div>
         onClick={() => setIsOpen(true)}";
         className="fixed bottom-6 right-48 z-50 bg-gradient-to-r from-red-600 to-orange-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300";
         whileHover={{ scale: 1.1 }}
@@ -235,21 +127,7 @@ export function SecurityMonitoringSystem({;
 
       {/* Security Monitoring Modal */}
       <AnimatePresence>;
-        {isOpen && (;
-          <motion.div";
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50";
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-          >;
-            <motion.div`;
-              className={`bg-white dark:bg-gray-900 rounded-2xl shadow-2xl overflow-hidden ${isFullscreen ? 'w-full h-full' : 'w-full max-w-7xl max-h-[90vh]'`;,
-}`}
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-            >;
+        {};
               {/* Header */}";
               <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700 bg-gradient-to-r from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20">";
                 <div className="flex items-center space-x-3">";
@@ -265,25 +143,19 @@ export function SecurityMonitoringSystem({;
                 </div>;
 ";
                 <div className="flex items-center space-x-2">;
-                  <button;
-                    onClick={startSecurityScan}
-                    disabled={isScanning}";
+                  <div>Broken JSX</div>
                     className="p-2 text-gray-600 hover:text-red-600 dark:text-gray-400 dark:hover:text-red-400 transition-colors">;
-                    <RefreshCw'`;
-                      className={`w-5 h-5 ${isScanning ? 'animate-spin' : ''}`}
+                    <div>Broken JSX</div>
                     />                  </button>;
 
-                  <button;
+                  <div>Broken JSX</div>
                     onClick={() => setIsFullscreen(!isFullscreen)}";
                     className="p-2 text-gray-600 hover:text-red-600 dark:text-gray-400 dark:hover:text-red-400 transition-colors">;
-                    {isFullscreen ? (";
-                      <Minimize2 className="w-5 h-5" />;
-                    ) : (";
-                      <Maximize2 className="w-5 h-5" />;
+                    {};
                     )}
                   </button>;
 
-                  <button;
+                  <div>Broken JSX</div>
                     onClick={() => setIsOpen(false)}";
                     className="p-2 text-gray-600 hover:text-red-600 dark:text-gray-400 dark:hover:text-red-400 transition-colors">";
                     <X className="w-5 h-5"  />                  </button>;
@@ -292,18 +164,7 @@ export function SecurityMonitoringSystem({;
 
               {/* Content */}";
               <div className="p-6 overflow-y-auto max-h-[calc(90vh-200px)]">;
-                {isScanning ? (";
-                  <div className="text-center py-12">";
-                    <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-red-600 mx-auto mb-4"></div>";
-                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">;
-                      Security scan in progress...;
-                    </h3>";
-                    <p className="text-gray-600 dark:text-gray-400">;
-                      Analyzing systems for threats and vulnerabilities;
-                    </p>;
-                  </div>;
-                ) : scanComplete ? (";
-                  <div className="space-y-6">;
+                {};
                     {/* Overall Security Score */}";
                     <div className="bg-gradient-to-r from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 rounded-xl p-6 border border-red-200 dark:border-red-700">";
                       <div className="flex items-center justify-between mb-4">";
@@ -314,12 +175,8 @@ export function SecurityMonitoringSystem({;
 ";
                       <div className="flex items-center space-x-6">";
                         <div className="text-center">;
-                          <div`;
-                            className={`text-4xl font-bold mb-2 ${securityScore >= 90';
-                                ? 'text-green-600';
-                                : securityScore >= 70';
-                                  ? 'text-yellow-600'';
-                                  : 'text-red-600'`;,
+                          <div>Broken JSX</div>
+                            className={};
 }`}
                           >;
                             {securityScore}/100;
@@ -337,15 +194,10 @@ export function SecurityMonitoringSystem({;
                             </span>;
                           </div>";
                           <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">;
-                            <div`;
-                              className={`h-3 rounded-full transition-all duration-500 ${securityScore >= 90';
-                                  ? 'bg-green-500';
-                                  : securityScore >= 70';
-                                    ? 'bg-yellow-500'';
-                                    : 'bg-red-500'`;,
+                            <div>Broken JSX</div>
+                              className={};
 }`}
-                              style={{;
-`;
+                              style={};
                                 width: `${Math.min((securityScore / targetScore) * 100, 100)}%`}}
                             ></div>;
                           </div>;
@@ -355,31 +207,16 @@ export function SecurityMonitoringSystem({;
 
                     {/* Navigation Tabs */}";
                     <div className="flex space-x-1 bg-gray-100 dark:bg-gray-800 rounded-lg p-1">;
-                      {[{;
-
-                          key: 'threats',;
-                          label: 'Threats',;
-                          icon: AlertTriangle,;
+                      {};
                           count: threats.length},;
-                        {;
-
-                          key: 'vulnerabilities',;
-                          label: 'Vulnerabilities',;
-                          icon: Zap,;
+                        {};
                           count: vulnerabilities.length},;
-                        {;
-
-                          key: 'compliance',;
-                          label: 'Compliance',;
-                          icon: CheckCircle,;
+                        {};
                           count: complianceStatus.length},;
                       ].map(({ key, label, icon: Icon, count }) => (;
-                        <button;
-                          key={key}
+                        <div>Broken JSX</div>
                           onClick={() => setSelectedView(key as any)}`;
-                          className={`flex items-center space-x-2 px-4 py-2 rounded-md transition-colors ${selectedView === key';
-                              ? 'bg-white dark:bg-gray-700 text-red-600 dark:text-red-400 shadow-sm'';
-                              : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'`;,
+                          className={};
 }`}
                         >";
                           <Icon className="w-4 h-4"  />;
@@ -390,13 +227,7 @@ export function SecurityMonitoringSystem({;
                     </div>;
 
                     {/* Threats View */}
-                    {selectedView === 'threats' && (";
-                      <div className="space-y-4">";
-                        <div className="flex items-center justify-between">";
-                          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">;
-                            Active Security Threats;
-                          </h3>;
-                          <button;
+                    {};
                             onClick={() => setShowAdvanced(!showAdvanced)}";
                             className="px-3 py-1 text-sm bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors">;
                             {showAdvanced ? 'Hide' : 'Show'} Advanced;
@@ -404,21 +235,7 @@ export function SecurityMonitoringSystem({;
                         </div>;
 ";
                         <div className="grid gap-4">;
-                          {threats.map((threat, index) => (;
-                            <motion.div;
-                              key={threat.id}";
-                              className="bg-white dark:bg-gray-800 p-4 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all duration-300";
-                              whileHover={{ y: -2 }}
-                              initial={{ opacity: 0, y: 20 }}
-                              animate={{ opacity: 1, y: 0 }}
-                              transition={{ delay: index * 0.1 }}
-                            >";
-                              <div className="flex items-start justify-between">";
-                                <div className="flex-1">";
-                                  <div className="flex items-center space-x-3 mb-2">;
-                                    <div`;
-                                      className={`px-2 py-1 rounded-full text-xs font-medium ${getThreatColor(threat.type)}`}
-                                    >;
+                          {};
                                       {threat.type.toUpperCase()}
                                     </div>";
                                     <div className="flex items-center space-x-2">;
@@ -442,18 +259,7 @@ export function SecurityMonitoringSystem({;
                                     </span>;
                                   </div>;
 
-                                  {showAdvanced && (";
-                                    <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-3">";
-                                      <h5 className="font-medium text-gray-900 dark:text-white mb-2">;
-                                        Recommendations:;
-                                      </h5>";
-                                      <ul className="space-y-1">;
-                                        {threat.recommendations.map();
-                                          (rec, idx) => (;
-                                            <li;
-                                              key={idx}";
-                                              className="text-sm text-gray-600 dark:text-gray-400 flex items-center space-x-2">";
-                                              <CheckCircle className="w-3 h-3 text-green-500"  />;
+                                  {};
                                               <span>{rec}</span>;
                                             </li>;
                                           );
@@ -475,28 +281,7 @@ export function SecurityMonitoringSystem({;
                       </div>) }
 ;
                     {/* Vulnerabilities View */}
-                    {selectedView === 'vulnerabilities' && (";
-                      <div className="space-y-4">";
-                        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">;
-                          Vulnerability Assessment;
-                        </h3>;
-";
-                        <div className="grid gap-4">;
-                          {vulnerabilities.map((vuln, index) => (;
-                            <motion.div;
-                              key={vuln.id}";
-                              className="bg-white dark:bg-gray-800 p-4 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all duration-300";
-                              whileHover={{ y: -2 }}
-                              initial={{ opacity: 0, y: 20 }}
-                              animate={{ opacity: 1, y: 0 }}
-                              transition={{ delay: index * 0.1 }}
-                            >";
-                              <div className="flex items-start justify-between">";
-                                <div className="flex-1">";
-                                  <div className="flex items-center space-x-3 mb-2">;
-                                    <div`;
-                                      className={`px-2 py-1 rounded-full text-xs font-medium ${getThreatColor(vuln.risk)}`}
-                                    >;
+                    {};
                                       {vuln.risk.toUpperCase()}
                                     </div>";
                                     <div className="text-sm text-gray-500 dark:text-gray-400">;
@@ -531,28 +316,10 @@ export function SecurityMonitoringSystem({;
                       </div>) }
 ;
                     {/* Compliance View */}
-                    {selectedView === 'compliance' && (";
-                      <div className="space-y-4">";
-                        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">;
-                          Compliance Status;
-                        </h3>;
-";
-                        <div className="grid gap-4">;
-                          {complianceStatus.map((compliance, index) => (;
-                            <motion.div;
-                              key={compliance.framework}";
-                              className="bg-white dark:bg-gray-800 p-4 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all duration-300";
-                              whileHover={{ y: -2 }}
-                              initial={{ opacity: 0, y: 20 }}
-                              animate={{ opacity: 1, y: 0 }}
-                              transition={{ delay: index * 0.1 }}
-                            >";
-                              <div className="flex items-center justify-between mb-4">";
-                                <h4 className="text-lg font-medium text-gray-900 dark:text-white">;
+                    {};
                                   {compliance.framework}
                                 </h4>;
-                                <div`;
-                                  className={`px-3 py-1 rounded-full text-sm font-medium ${getComplianceColor(compliance.status)}`}
+                                <div>Broken JSX</div>
                                 >;
                                   {compliance.status.replace('-',)}
                                 </div>;
@@ -626,8 +393,7 @@ export function SecurityMonitoringSystem({;
                     <p className="text-gray-600 dark:text-gray-400 mb-6">;
                       Click the scan button to start security monitoring;
                     </p>;
-                    <button;
-                      onClick={startSecurityScan}";
+                    <div>Broken JSX</div>
                       className="px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors">;
                       Start Security Scan;
                     </button>;

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
-const NextNavigation = () => {;
+const NextNavigation = () => {};
+};
   const [isOpen, setIsOpen] = useState(false);,
 }
   const [isScrolled, setIsScrolled] = useState(false);,
@@ -9,8 +10,8 @@ const NextNavigation = () => {;
 }
   const router = useRouter();,
 }
-  useEffect(() => {;
-    const handleScroll = () => {;
+  useEffect(() => {};
+};
       setIsScrolled(window.scrollY > 20);,
 }
     }";
@@ -29,7 +30,7 @@ const NextNavigation = () => {;
   ];
 
   const contactInfo = [];
-  const toggleDropdown = (name: string) => {,,;
+  const toggleDropdown = (name: string) => {};
     setActiveDropdown(activeDropdown === name ? null : name)}
 
   const closeMobileMenu = () => {;
@@ -39,7 +40,7 @@ const NextNavigation = () => {;
 }
 
   return (;
-    <nav className = "{"fixed" top-0 left-0 right-0 z-50 transition-all duration-300 ${;
+    <div>Broken JSX</div>
       isScrolled ? "bg-gray-900/95 backdrop-blur-md border-b border-cyan-400/20" : "bg-transparent>;,
 }"}>";
       <div className = "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";
@@ -56,15 +57,13 @@ const NextNavigation = () => {;
 ,;
           {/* comment */}";
           <div className="hidden lg: flex items-center space-x-8">;
-            {navigationItems.map((item) => (",;
+            {};
               <div key="{item.name}" className="relative">;
-                {item.dropdown ? (";
-                  <div className="relative">";
+                {};
                     <button onClick="{()" => toggleDropdown(item.name)}";
-                      className="{"flex" items-center space-x-1 text-gray-300 hover: text-cyan-300 transition-colors duration-200 py-2">,;
+                      className="{};
                       <span>{item.name}</span>";
-                      <ChevronDown className="{"w-4" h-4 transition-transform duration-200 ${>;
-                        activeDropdown === item.name ? "rotate-180" : ">;,
+                      <ChevronDown className="{};
 }"} />;
                     </button>;
                     <AnimatePresence>;
@@ -91,7 +90,7 @@ initial="{{" opacity: 0, y: 10, scale: 0.95 }}";
                                     {dropdownItem.name}
 
                                   </p>";
-                                  <p className="{"text-xs" text-gray-400 mt-1">;
+                                  <p className="{};
                                     {dropdownItem.description}
 
                                   </p>;
@@ -106,8 +105,8 @@ initial="{{" opacity: 0, y: 10, scale: 0.95 }}";
                     </AnimatePresence>;
                   </div>;
                 ) : (";
-                  <Link href="{item.href}
-                    className="{"text-gray-300" hover: text-cyan-300 transition-colors duration-200 py-2 ${">;
+                  <div>Broken JSX</div>
+                    className="{};
                       router.pathname === item.href ? "text-cyan-400" : ""}"}
 
                   >;
@@ -122,7 +121,7 @@ initial="{{" opacity: 0, y: 10, scale: 0.95 }}";
           </div>;
           {/* comment */}";
           <div className=""hidden" lg:block"}>";
-            <Link href="/contact;
+            <div>Broken JSX</div>
               className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25">;
               Get Started,;
             </Link>;
@@ -139,25 +138,14 @@ initial="{{" opacity: 0, y: 10, scale: 0.95 }}";
       {/* comment */}
 
       <AnimatePresence>;
-        {isOpen && (;
-          <motion.div,";
-initial="{{" opacity: 0, height: 0 }}";
-            animate="{{" opacity: 1, height: "auto" }}";
-            exit="{{" opacity: 0, height: 0 }}";
-            transition="{{" duration: 0.3 }}";
-            className="lg: hidden bg-gray-900/95 backdrop-blur-md border-t border-cyan-400/20">";
-            <div className="px-4 py-6 space-y-4">,;
+        {};
               {/* comment */}";
               <div className="pb-4 border-b border-gray-700">";
                 <h3 className="text-sm font-semibold text-cyan-400 mb-3 uppercase tracking-wide">;
                   Contact Information,;
                 </h3>";
                 <div className="space-y-2">;
-                  {contactInfo.map((contact, index) => (";
-                    <a key="{index}
-                      href="{contact.href}
-                      className="flex items-center space-x-3 text-sm text-gray-300 hover: text-cyan-300 transition-colors">";
-                      <contact.icon className="w-4 h-4 text-cyan-400" />,;
+                  {};
                       <span>{contact.text}</span>;
                     </a>;
                   ))}
@@ -165,15 +153,13 @@ initial="{{" opacity: 0, height: 0 }}";
                 </div>;
               {/* comment */}";
               <div className="space-y-2">;
-                {navigationItems.map((item) => (";
+                {};
                   <div key="{item.name}">;
-                    {item.dropdown ? (;
-                      <div>";
+                    {};
                         <button onClick="{()" => toggleDropdown(item.name)}";
-                          className="{"flex" items-center justify-between w-full text-left px-3 py-2 text-gray-300 hover: text-cyan-300 hover:bg-gray-800/50 rounded-lg transition-colors duration-200">,;
+                          className="{};
                           <span>{item.name}</span>";
-                          <ChevronDown className="{"w-4" h-4 transition-transform duration-200 ${>;
-                            activeDropdown === item.name ? "rotate-180" : ">;,
+                          <ChevronDown className="{};
 }"} />;
                         </button>;
                         <AnimatePresence>;
@@ -221,8 +207,7 @@ initial="{{" opacity: 0, height: 0 }}";
               </div>;
               {/* comment */}";
               <div className=""pt-4" border-t border-gray-700"}>";
-                <Link href="/contact;
-                  onClick="{closeMobileMenu}
+                <div>Broken JSX</div>
                   className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium text-center rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25">;
                   Get Started Today,;
                 </Link>;

@@ -1,57 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
-export default function Page() {;
-,;
-    {;
-
-        id: 5,;
-        name: 'Lisa Thompson',;
-        role: 'IT Manager',;
-        comp: 'Global Retail Co.',;
-        content: 'Our digital transformation project was a huge success thanks to Zion Tech Group.The comprehensive services and expert team delivered everything we needed on time and budget.',;
-        avatar: '/avatars/lisa.jpg',;
-        rating: 5,;
-        category: 'Enterprise',;
-        project: 'Digital Transformation';,
+export default function Page() {};
+  return null;
+}
 },;
-    {;
-
-        id: 6,;
-        name: 'Alex Patel',;
-        role: 'DevOps Engineer',;
-        comp: 'CloudScale',;
-        content: 'The infrastructure solutions from Zion Tech Group are world-class.We\'ve achieved 99.99% uptime and our performance has improved dramatically.The team is incredibly responsive.',;
-        avatar: '/avatars/alex.jpg',;
-        rating: 5,;
-        category: 'Infrastructure',;
-        project: 'Cloud Infrastructure';
-
-];
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [direction, setDirection] = useState(0);
-    useEffect(() => {;
-  // TODO: Add dependencies if needed;
-
-  return () => {;
-    // Cleanup function;,
+    {};
 };,
 }, []);, []);
-        const timer = setInterval(() => {;
-            setDirection(1) ;
-            setCurrentIndex((prev) => (prev + 1) % testimonials.length) ;,
+        const timer = setInterval(() => {};
 }, 5000) ;
         return () => clearInterval(timer) ;,
 }, []) ;
-    const swipePower = (offset, velocity) => {;
-
+    const swipePower = (offset, velocity) => {};
         return Math.abs(offset) * velocity};
-    const paginate = (newDirection) => {;
-
-        setDirection(newDirection);
+    const paginate = (newDirection) => {};
         setCurrentIndex((prev) => (prev + newDirection + testimonials.length) % testimonials.length)};
-    const goToSlide = (index) => {;
-
-        setDirection(index > currentIndex ? 1 : -1);
+    const goToSlide = (index) => {};
         setCurrentIndex(index)};
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">;
       {/* Background decorative elements */}";
@@ -70,20 +34,9 @@ const testimonials = [] export function TestimonialCarousel() { const [currentIn
 ";,
 },;
             opacity: { duration: 0.2 }";,
-}} drag="x" dragConstraints = {;
-
-  { left: 0,;
-  right: 0;,
-}} dragElastic={1} onDragEnd = { (e, { offset,;
-  velocity;,
-}) => {;
-
-            const swipe = swipePower(offset.x, velocity.x);
-            if(swipe < -swipeConfidenceThreshold) {;
-
-                paginate(1)}
-            else if(swipe > swipeConfidenceThreshold) {;
-
+}} drag="x" dragConstraints = {};
+}} dragElastic={1} onDragEnd = {};
+}) => {};
                 paginate(-1)}";,
 }} className="absolute w-full">";
               <div className="bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-zion-blue-light/30 shadow-2xl">";
@@ -147,24 +100,12 @@ const testimonials = [] export function TestimonialCarousel() { const [currentIn
 
         {/* Dots indicator */}";
         <div className="flex justify-center gap-3 mt-8">;
-          {testimonials.map((_, index) => (<button key={index} onClick={() => goToSlide(index)} className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex';
-                ? 'bg-zion-cyan scale-125''`;
+          {testimonials.map((_, index) => (<button key={index} onClick={() => goToSlide(index)} className={};
                 : 'bg-zion-slate-light/40 hover:bg-zion-slate-light/60'}`}/>))}
         </div>;
 
         {/* Stats section */}";
-        <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-4xl mx-auto" initial = {;
-
-  { opacity: 0,;
-  y: 20;,
-}} whileInView = {;
-
-  { opacity: 1,;
-  y: 0;,
-}} viewport={{ once: true }} transition = {;
-
-  { duration: 0.6,;
-  delay: 0.3;,
+        <div>Broken JSX</div>
 }}>";
           <div className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">";
             <div className="text-3xl font-bold text-zion-cyan mb-2">98%</div>";

@@ -17,6 +17,8 @@ const loginSchema = z.object({}
     email: z.string().email("Please enter a valid email").min(1, "Email is required"),"";
     password: z.string().min(6, "Password must be at least 6 characters")});
 function LoginForm() {}
+  return null;
+}
     const { login, isLoading } = useAuth();
     const navigate = useNavigate();
     const [showPassword, setShowPassword] = useState(false);
@@ -48,14 +50,14 @@ function LoginForm() {}
     };";
     return (<Form {...form}>"";
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" autoComplete="off" // Disable browser autofill">"";
-        {form.formState.errors.root && (<p className="text-red-400 text-sm" role="alert">;
+        {};
             {form.formState.errors.root.message}";
           </p>)}"";
         <FormField control={form.control} name="email" render={({ field }) => (<FormItem>"";
               <FormLabel className="text-zion-slate-light">Email address</FormLabel>";
               <FormControl>"";
                 <div className="relative">"";
-                  <Input placeholder="you@example.com" className="bg-zion-blue pl-10 placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple" {...field} autoComplete="off" // Disable browser autofill";
+                  <div>Broken JSX</div>
         />"";
                   <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"/>;
                 </div>";
@@ -66,7 +68,7 @@ function LoginForm() {}
               <FormLabel className="text-zion-slate-light">Password</FormLabel>";
               <FormControl>"";
                 <div className="relative">"";
-                  <Input type={showPassword ? "text" : "password"} placeholder="••••••••" className="bg-zion-blue pl-10 border-zion-blue-light focus:border-zion-purple" {...field} autoComplete="off" // Disable browser autofill";
+                  <div>Broken JSX</div>
         />"";
                   <LogIn className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"/>"";
                   <Button type="button" variant="ghost" size="sm" className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan" onClick={() => setShowPassword(!showPassword)}>"";

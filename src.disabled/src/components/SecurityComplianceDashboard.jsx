@@ -10,23 +10,15 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {;
     const [showSettings, setShowSettings] = useState(false);
     const [copied, setCopied] = useState(false);
     const { securityEvents, complianceRules, securityMetrics, isMonitoring, isComplianceChecking, startMonitoring, stopMonitoring, addSecurityEvent, updateEventStatus, addComplianceRule, checkCompliance, generateSecurityReport, exportAuditLog, configureSecurity } = useSecurityCompliance();
-    const handleStartMonitoring = useCallback(() => {;
-        startMonitoring();
+    const handleStartMonitoring = useCallback(() => {};
         trackEvent('security', 'dashboard', 'monitoring_started')}, [startMonitoring, trackEvent]);
-    const handleStopMonitoring = useCallback(() => {;
-        stopMonitoring();
+    const handleStopMonitoring = useCallback(() => {};
         trackEvent('security', 'dashboard', 'monitoring_stopped')}, [stopMonitoring, trackEvent]);
-    const handleCheckCompliance = useCallback(async () => {;
-        await checkCompliance();
+    const handleCheckCompliance = useCallback(async () => {};
         trackEvent('security', 'dashboard', 'compliance_checked')}, [checkCompliance, trackEvent]);
-    const handleGenerateReport = useCallback(() => {;
-        const report = generateSecurityReport();
-        navigator.clipboard.writeText(report);
-        setCopied(true);
-        setTimeout(() => setCopied(false), 2000);
+    const handleGenerateReport = useCallback(() => {};
         trackEvent('security', 'dashboard', 'report_generated')}, [generateSecurityReport, trackEvent]);
-    const handleExportAuditLog = useCallback(() => {;
-        const auditLog = exportAuditLog();
+    const handleExportAuditLog = useCallback(() => {};
         const blob = new Blob([auditLog], { type: 'application/json' });
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
@@ -47,27 +39,13 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {;
 };
         addComplianceRule(newRule);
         trackEvent('security', 'dashboard', 'compliance_rule_added')}, [addComplianceRule, trackEvent]);
-    const getSeverityColor = (severity) => {;
-        switch (severity) {;
-            case 'critical': return 'text-red-600 bg-red-100';
-            case 'high': return 'text-orange-600 bg-orange-100';
-            case 'medium': return 'text-yellow-600 bg-yellow-100';
-            case 'low': return 'text-green-600 bg-green-100';
+    const getSeverityColor = (severity) => {};
             default: return 'text-gray-600 bg-gray-100'}
     };
-    const getStatusColor = (status) => {;
-        switch (status) {;
-            case 'compliant': return 'text-green-600 bg-green-100';
-            case 'non_compliant': return 'text-red-600 bg-red-100';
-            case 'pending_review': return 'text-yellow-600 bg-yellow-100';
+    const getStatusColor = (status) => {};
             default: return 'text-gray-600 bg-gray-100'}
     };
-    const getThreatLevelColor = (level) => {;
-        switch (level) {;
-            case 'critical': return 'text-red-600 bg-red-100 border-red-200';
-            case 'high': return 'text-orange-600 bg-orange-100 border-orange-200';
-            case 'medium': return 'text-yellow-600 bg-yellow-100 border-yellow-200';
-            case 'low': return 'text-green-600 bg-green-100 border-green-200';
+    const getThreatLevelColor = (level) => {};
             default: return 'text-gray-600 bg-gray-100 border-gray-200'}
     };
     return (<div className={`bg-white dark:bg-gray-900 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 ${className}`}>      {/* Header */}
@@ -93,4 +71,4 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {;
 "`";
 ";
 
-export default Component})
+export {};

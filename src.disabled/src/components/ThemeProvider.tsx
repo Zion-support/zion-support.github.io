@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
-export const ThemeProvider: React.FC < ThemeProviderProps> = ({ children }) => {;
-export const useTheme = () => {;
+export const ThemeProvider: React.FC < ThemeProviderProps> = ({ children }) => {};
+};
 type Theme = 'light' | 'dark' | 'system';
 'type Theme = 'light' | 'dark' | 'system';
 
@@ -11,8 +11,7 @@ interface ThemeContextType {;
 
 export ;
   ;
-  if(context = == null) {;
-    throw new Error('useTheme must be used within a ThemeProvider');
+  if(context = == null) {};
   return context};
 
 interface ThemeProviderProps extends React.PropsWithChildren<{}> {;

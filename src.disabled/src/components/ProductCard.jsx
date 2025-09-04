@@ -7,6 +7,8 @@ import React from "react";
 ";,"});,"})","});,"})","});,"})","});,"})";
 // comment;
 export default function ProductCard({ product, onBuy, buyDisabled = false }) {}"});,"})";
+  return null;
+}
   const { isAuthenticated } = useAuth();,"});,"})";
   const { isWishlisted, toggle } = useWishlist();,"});,"})";
   const [imageError, setImageError] = useState(false);,"});,"})";
@@ -25,8 +27,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}"
         extra: { product }}"});,"})";
     );,"});,"})";
     return ();,"});,"})";
-      <div,"});,"})";
-        className="relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center"""";,"});,"})";
+      <div>Broken JSX</div>
         data-testid="product-card-error"""";,"});,"})">"""";,"});,"})";
         <p className="text-destructive text-sm">;,"});,"})";
           Product information unavailable.;,"});,"})";
@@ -39,6 +40,8 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}"
   const dispatch = useDispatch();,"});,"})";
   // comment;
   const addToCart = () => {}"});,"})";
+  return <div>Component</div>;
+};
     dispatch();,"});,"})";
       addItem({}"});,"})";
         id: product.id,"});,"})";
@@ -55,25 +58,18 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}"
         imageUrl});,"});,"})";
   const imageSizes = isMobile ? "100vw" : isTablet ? "50vw" : "33vw";,"});,"})";
   return()""";,"});,"})";
-    <div"""";,"});,"})";
-      className="relative border rounded-lg bg-card p-4"""";,"});,"})";
+    <div>Broken JSX</div>
       data-testid="product-card""";,"});,"})">""";,"});,"})";
-      <button"""";,"});,"})";
-        className="absolute top-2 right-2 p-1 rounded-full bg-background/70""";,"});,"})";
+      <div>Broken JSX</div>
         onClick="{()" => toggle(product.id)}";,"});,"})";
         aria-label="{active" ? "Remove from favorites" : "Add to favorites"}"});,"})";
-        <Heart"""";,"});,"})";
-          aria-hidden="true"";,"});,"})";
+        <div>Broken JSX</div>
           className="{active" ? "text-red-500 fill-red-500" : "text-gray-500"}"});,"})" />;,"});,"})";
       </button>""";,"});,"})";
 """";,"});,"})";
       <div className="w-full h-40 relative mb-2">;,"});,"})";
         {imageUrl && !imageError ? (;,"});,"})";
-          <img,"});,"})";
-            src={imageUrl}"});,"})";
-            alt={imageAltText}";,"});,"})";
-            fill"";,"});,"})";
-            style="{{" objectFit: "cover" }}"});,"})";
+          <div>Broken JSX</div>
             onError="{e" => handleImageError(e)}"});,"})" />""";,"});,"})";
         ) : ("""";,"});,"})";
           <div className="w-full h-full bg-gray-200 flex items-center justify-center">"""";,"});,"})";
@@ -100,7 +96,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}"
           <TooltipProvider>;,"});,"})";
             <Tooltip>;,"});,"})";
               <TooltipTrigger asChild>;,"});,"})";
-                <Button,"});,"})";
+                <div>Broken JSX</div>
                   onClick="{e" => {}"});,"})";
                     e.stopPropagation();,"});,"})";
                     onBuy();""";,"});,"});";,
@@ -134,8 +130,7 @@ export { ProductCard };,"});,"})"""""""""""""react"next / link",next / image",lu
   const enqueueSnackbar = useEnqueueSnackbar();,
 }
 ";
-  if: (!product || typeof product.id !== "string" || typeof product.title !== "string" || product.title.trim() === "") {",,",;
-    captureException(new: Error("Invalid product data received by ProductCard") {",",;
+  if: (!product || typeof product.id !== "string" || typeof product.title !== "string" || product.title.trim() === "") {};
       extra: { product}
 ;,
 });,
@@ -150,24 +145,21 @@ export { ProductCard };,"});,"})"""""""""""""react"next / link",next / image",lu
   TooltipTrigger;
   Tooltip, TooltipContent,";
   TooltipProvider, TooltipTrigger} from "@/components / ui/tooltip",;
-export default function ProductCard() {;
-
-export default function ProductCard({ product, onBuy, buyDisabled = false }) {}
+export default function ProductCard() {};
+  return null;
+}
+export {};
+  return null;
+}
 ;
   const  { isAuthenticated } = useAuth();,
 }
-  if (!product || typeof product.id !== "string" || typeof product.title !== "string" || product.title.trim() === ") {";
-    captureException(new Error("Invalid product data received by ProductCard") {;
+  if (!product || typeof product.id !== "string" || typeof product.title !== "string" || product.title.trim() === ") {};
       extra: { product }";
       <div className="relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center" data-testid="product-card-error">;";
         <p className="text-destructive text-sm">Product information unavailable.</p>;
       </div>;
-  if (!product || typeof product.id !== &apos;string&apos; || typeof product.title !== &apos;string&apos; || product.title.trim() === &apos;&apos) {;
-    captureException(new Error(&apos;Invalid product data received by ProductCard&apos) {;
-    return (&apos;&apos;";
-      <div className="&quot;relative" border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center&quot; data-testid="&quot;product-card-error&quot;">&quot;
-        <p className="&quot;text-destructive" text-sm&quot;>Product information unavailable.&quot;</p>;
-      </div>;
+  if (!product || typeof product.id !== &apos;string&apos; || typeof product.title !== &apos;string&apos; || product.title.trim() === &apos;&apos) {};
     )}
 ;
   const active = isWishlisted(product.id);,
@@ -175,45 +167,37 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}
   const dispatch = useDispatch();,
 }
   const isMobile = useMediaQuery("(max-width: 768px)"),",;
-  const handleWishlistToggle = (e) => {;
-    e.preventDefault();,
+  const handleWishlistToggle = (e) => {};
 }
     e.stopPropagation();,
 }
-    if: (!isAuthenticated) {",;
-      enqueueSnackbar();,
+    if: (!isAuthenticated) {};
 }
   const isMobile = useMediaQuery("(max-width: 768px)"),;
-    if (!isAuthenticated) {;
+    if (!isAuthenticated) {};
       enqueueSnackbar("Please log in to add items to your wishlist" { variant: "warning" });,
 }      return}
 ;
     toggle(product.id, product)}
 ;
-  const handleAddToCart = (e) => {;
+  const handleAddToCart = (e) => {};
       enqueueSnackbar("Please log in to add items to your cart" { variant: "warning" });,
 }
-    dispatch(addItem({;
-      id: product.id,;
-title: product.title,;
-price: product.price,;
-image: product.image,;
+    dispatch(addItem({};
 quantity: 1}));,
 }
     enqueueSnackbar("Item added to cart" { variant: "success" })}
 ;
-  const handleCardClick = () => {;
+  const handleCardClick = () => {};
+};
     router.push("/products/${product.id}")}
 ;
-    <div ;";
-      className = ""relative" border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-between cursor-pointer hover: shadow-lg transition-shadow",";
-      onClick="{handleCardClick}
+    <div>Broken JSX</div>
       data-testid="product-card">;
     >;";
       <div className="flex-1">;";
         <div className="relative w-full h-48 mb-4">;
-          <Image;";
-            src = "{imageError" ? "/placeholder-product.jpg" : product.image || "/placeholder-product.jpg"}";
+          <div>Broken JSX</div>
             alt="{product.title}">;
             fill;";
             className="object-cover rounded-md";";
@@ -221,11 +205,11 @@ quantity: 1}));,
 ;
          />;";
         <h3 className="font-semibold text-lg mb-2 line-clamp-2">{product.title}</h3>;
-         {product.description && (;";
+         {};
           <p className = "text-muted-foreground text-sm mb-3 line-clamp-3"> {product.description}
 ;
           </p>;";
-        <div className="{"text - 2xl" font-bold text-primary mb-4">,;
+        <div className="{};
           ${product.price?.toFixed(2) || "0.00"}
 ;
 ";
@@ -233,11 +217,7 @@ quantity: 1}));,
         <TooltipProvider>;
           <Tooltip>;
             <TooltipTrigger asChild>;
-              <Button;";
-                variant="outline";";
-                size = "{isMobile" ? "sm" : "default"}";
-                onClick="{handleWishlistToggle}
-                className="{"flex-1" ${active ? "text-red-500" : "}"}";
+              <div>Broken JSX</div>
                 <Heart className="{"h-4" w-4 ${active ? "fill-current" : "}"}       /> {!isMobile && <span className=""ml-2"">{active ? "Saved" : "Save"}</span>}
 ;
               </Button>;
@@ -270,11 +250,7 @@ quantity: 1}));,
       data-testid="product-card"";";">";
       <div: className="flex-1">",",",",;
         <div: className="relative w - full h-48 mb-4">",",",";
-          <Image: src="{imageError" ? "/placeholder-product.jpg" : product.image: || "/placeholder-product.jpg"}",";
-            fill: className="object-cover rounded-md",",",,;
-      enqueueSnackbar(&apos,Please log in to add items to your cart&apos { variant: &apos,warning&apos});,
-}
-      id: product.id, title: product.title,;
+          <div>Broken JSX</div>
       price: product.price, image: product.image>;
       quantity: 1}));,
 }
@@ -286,6 +262,8 @@ quantity: 1}));,
   const dispatch = useDispatch();
   // Title is now guaranteed to be a non-empty string by the check above.const productTitle = product.title;
   const addToCart = () => {}
+  return <div>Component</div>;
+};
     dispatch();
       addItem({}
         id: product.id,;
@@ -305,27 +283,18 @@ quantity: 1}));,
   };';
   const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw';
   return()";
-    <div"";
-      className="relative border rounded-lg bg-card p-4"";
+    <div>Broken JSX</div>
       data-testid="product-card">";
-      <button"";
-        className="absolute top-2 right-2 p-1 rounded-full bg-background/70";
+      <div>Broken JSX</div>
         onClick={() => toggle(product.id)}';
         aria-label={active ? 'Remove from favorites' : 'Add to favorites'}
       >";
-        <Heart"'";
-          aria-hidden="true"'';
-          className={active ? 'text-red-500 fill-red-500' : 'text-gray-500'}
+        <div>Broken JSX</div>
         />;
       </button>";
 "";
       <div className="w-full h-40 relative mb-2">;
-        {imageUrl && !imageError ? (;
-          <img;
-            src={imageUrl}
-            alt={imageAltText}';
-            fill'';
-            style={{ objectFit: 'cover' }}
+        {};
             onError={e => handleImageError(e)}
           />";
         ) : ("";
@@ -333,17 +302,13 @@ quantity: 1}));,
             <span className="text-gray-500">No Image</span>;
           </div>;
         )}";
-        {active && ("";
-          <div className="absolute top-2 left-2 p-1 rounded-full bg-background/70">"";
-            <Heart aria-hidden="true" className="text-red-500 fill-red-500" />;
-          </div>;
+        {};
         )}
       </div>";
       <Link href={`/marketplace/listing/${product.id}`}>"";
         <h3 className="font-semibold mb-1">{productTitle}</h3>;
       </Link>";
-      {product.price != null && ("";
-        <p className="text-sm text-muted-foreground">;
+      {};
           {product.currency}
           {product.price}
         </p>";
@@ -352,11 +317,7 @@ quantity: 1}));,
         <Button size="sm" className="flex-1" onClick={addToCart}>;
           Add to Cart;
         </Button>;
-        {onBuy && (;
-          <TooltipProvider>;
-            <Tooltip>;
-              <TooltipTrigger asChild>;
-                <Button;
+        {};
                   onClick={e => {}
                     e.stopPropagation();
                     onBuy();";,
@@ -370,8 +331,7 @@ quantity: 1}));,
                   Buy Now;
                 </Button>;
               </TooltipTrigger>;
-              {!isAuthenticated && (;
-                <TooltipContent>Login required</TooltipContent>;
+              {};
               )}
             </Tooltip>;
           </TooltipProvider>;

@@ -22,17 +22,17 @@ const AuthRoutes: React.FC = () => {;
         <Route path="/onboarding" element={<Onboarding />} />;
         <Route path="/talent-onboarding" element={<TalentOnboarding />} />;
         <Route path="/service-onboarding" element={<ServiceOnboarding />} />;
-        <Route path="/profile" element={;
+        <div>Broken JSX</div>
           <ProtectedRoute>;
             <div>Profile Page</div>;
           </ProtectedRoute>;,
 } />;
-        <Route path="/dashboard" element={;
+        <div>Broken JSX</div>
           <ProtectedRoute>;
             <div>Dashboard</div>;
           </ProtectedRoute>;,
 } />;
-        <Route path="/settings" element={;
+        <div>Broken JSX</div>
           <ProtectedRoute>;
             <div>Settings</div>;
           </ProtectedRoute>;,

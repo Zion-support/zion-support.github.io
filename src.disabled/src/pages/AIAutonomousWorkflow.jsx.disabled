@@ -1,21 +1,17 @@
 import React from 'react';''';
 import { Helmet } from 'react-helmet-async';
 const AIAutonomousWorkflow = () => {}
+  return <div>Component</div>;
+};
   return();
     <>;
       <Helmet>;
         <title>AI Autonomous Workflow Platform | Zion Tech Group</title>;
-        <meta;
-          name="description"";
-          content="Revolutionary AI autonomous workflow platform that automates business processes, optimizes workflows, and provides intelligent workflow management with advanced AI capabilities.";
+        <div>Broken JSX</div>
         />";
-        <meta"";
-          name="keywords"";
-          content="AI workflow, autonomous workflow, workflow automation, business process automation, AI workflow management";
+        <div>Broken JSX</div>
         />";
-        <link"";
-          rel="canonical"";
-          href="https://ziontechgroup.com/ai-autonomous-workflow";
+        <div>Broken JSX</div>
         />;
       </Helmet>";
 "";
@@ -201,12 +197,7 @@ const AIAutonomousWorkflow = () => {}
               Workflow Solutions";
             </h2>"";
             <div className="grid md:grid-cols-4 gap-6">';
-              {['';
-                'Business Processes',Customer Service',HR Workflows',Finance Processes',Sales Operations',Marketing Campaigns',Project Management',Quality Assurance';
-              ].map(type => (;
-                <div";
-                  key={type}"";
-                  className="bg-white/5 rounded-lg p-4 text-center border border-white/10"">"";
+              {};
                   <span className="text-white font-medium">{type}</span>;
                 </div>;
               ))}

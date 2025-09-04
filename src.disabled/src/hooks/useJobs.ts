@@ -14,19 +14,12 @@ export default function Page() {;
       ;
       setJobs(data as Job[] || []); // Ensure data is not null;
       setError(null);,
-} catch(err: any) {;
-      console.error("Error fetching jobs:", err);
-      setError("Failed to fetch jobs.Please try again.");
-      toast.error("Failed to fetch jobs");
-      setJobs([]); // Clear jobs on error;,
-} finally {;
-      setIsLoading(false);,
+} catch(err: unknown) {};
+} finally {};
 }
   }, [clientId, status]); // Dependencies for fetchJobs;
 
-  const updateJobStatus = async(jobId: string, newStatus: JobStatus) => {;
-    if(!clientId) return false;
-    try {;
+  const updateJobStatus = async(jobId: string, newStatus: JobStatus) => {};
       const { error: updateError } = await supabase;
         .from("jobs");
         .update({ status: newStatus });
@@ -38,16 +31,11 @@ export default function Page() {;
       setJobs(prevJobs => prevJobs.map(job => job.id === jobId ? {...job, status: newStatus} : job));
       toast.success("Job status updated successfully");
       return true;,
-} catch(err: any) {;
-      console.error("Error updating job status:", err);
-      toast.error("Failed to update job status");
-      return false;,
+} catch(err: unknown) {};
 }
   };
   ;
-  const deleteJob = async(jobId: string) => {;
-    if(!clientId) return false;
-    try {;
+  const deleteJob = async(jobId: string) => {};
       const { error: deleteError } = await supabase;
         .from("jobs");
         .delete();
@@ -59,28 +47,15 @@ export default function Page() {;
       setJobs(prevJobs => prevJobs.filter(job => job.id !== jobId));
       toast.success("Job deleted successfully");
       return true;,
-} catch(err: any) {;
-      console.error("Error deleting job:", err);
-      toast.error("Failed to delete job");
-      return false;,
+} catch(err: unknown) {};
 }
   };
   ;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;,
+  useEffect(() => {};
 }, []);
     fetchJobs();,
 }, [fetchJobs]); // Changed dependencies to just fetchJobs;
   ;
-  return {;
-    jobs,;
-    isLoading,;
-    error,;
-    refetch: fetchJobs,;
-    updateJobStatus,;
-    deleteJob,;
-    createJob: createJobService, // Use aliased service functions;
-    updateJob: updateJobService, // Use aliased service functions;
-    getJobById;,
+  return {};
 };,
 };

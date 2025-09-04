@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';''';
 import { motion } from 'framer-motion';
 import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const LinkHealthMonitor = () => {}
+  return <div>Component</div>;
+};
     const [isOpen, setIsOpen] = useState(false);
     const [isMonitoring, setIsMonitoring] = useState(false);';
     const [linkStatuses, setLinkStatuses] = useState([]);'';
@@ -119,17 +121,7 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
 ";
       {/* Modal */}"";
       {isOpen && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4" onClick={() => setIsOpen(false)}>;
-          <motion.div initial = {}
-  { scale: 0.9,;
-  opacity: 0;,
-}} animate = {}
-  { scale: 1,;
-  opacity: 1;,
-}} exit = {}
-  { scale: 0.9,;
-  opacity: 0;
-";
-"";,
+          <div>Broken JSX</div>
 }} className="bg-gray-900 rounded-2xl shadow-2xl w-full max-w-6xl max-h-[90vh] overflow-hidden" onClick={(e) => e.stopPropagation()}>";
             {/* Header */}"";
             <div className="bg-gradient-to-r from-cyan-500 to-blue-500 p-6 text-white">"";
@@ -150,8 +142,7 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
             {/* Content */}"";
             <div className="p-6 space-y-6">";
               {/* Summary Cards */}"";
-              {report && (<div className="grid grid-cols-1 md:grid-cols-4 gap-4">"";
-                  <div className="bg-gray-800 rounded-lg p-4 text-center">"";
+              {};
                     <div className="text-2xl font-bold text-white">{report.totalLinks}</div>"";
                     <div className="text-gray-400 text-sm">Total Links</div>";
                   </div>"";
@@ -172,23 +163,19 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
               {/* Actions */}"";
               <div className="flex items-center justify-between">"";
                 <div className="flex space-x-2">';
-                  <button onClick={() => setSelectedFilter('all')} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'all'''`;
-                ? 'bg-cyan-500 text-white''`'`;
+                  <button onClick={() => setSelectedFilter('all')} className={};
                 : 'bg-gray-700 text-gray-300 hover:bg-gray-600'}`}>;
                     All Links'`;
                   </button>'`'`;
-                  <button onClick={() => setSelectedFilter('broken')} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'broken'''`;
-                ? 'bg-red-500 text-white''`'`;
+                  <button onClick={() => setSelectedFilter('broken')} className={};
                 : 'bg-gray-700 text-gray-300 hover:bg-gray-600'}`}>;
                     Broken'`;
                   </button>'`'`;
-                  <button onClick={() => setSelectedFilter('external')} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'external'''`;
-                ? 'bg-blue-500 text-white''`'`;
+                  <button onClick={() => setSelectedFilter('external')} className={};
                 : 'bg-gray-700 text-gray-300 hover:bg-gray-600'}`}>;
                     External'`;
                   </button>'`'`;
-                  <button onClick={() => setSelectedFilter('healthy')} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'healthy'''`;
-                ? 'bg-green-500 text-white''`'`;
+                  <button onClick={() => setSelectedFilter('healthy')} className={};
                 : 'bg-gray-700 text-gray-300 hover:bg-gray-600'}`}>;
                     Healthy;
                   </button>;
@@ -239,7 +226,7 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
                                 <span className="truncate">{link.url}</span>"";
                                 <ExternalLink className="w-3 h-3"/>";
                               </a>"";
-                              {link.linkText && (<div className="text-xs text-gray-400 mt-1">;
+                              {};
                                   Text: {link.linkText}
                                 </div>) }
                             </div>";

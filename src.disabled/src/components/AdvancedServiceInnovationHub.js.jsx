@@ -1,5 +1,7 @@
 import React, { useState, useMemo } from "react";""";,"});,"})","});,"})","});,"})""""";,"});,"})""""";,"});,"})""""";,"});,"})","});,"})";
 const AdvancedServiceInnovationHub = () => {}"});,"})";
+  return <div>Component</div>;
+};
 ";,"});,"})";
 "";,"});,"})";
 """;,"});,"})";
@@ -149,13 +151,7 @@ const AdvancedServiceInnovationHub = () => {}"});,"})";
     return (";
     <div className="max-w-7xl mx-auto p-6">;,"});,"})";
       {/* comment */}"});,"})";
-      <motion.div initial = {}"});,"})";
-  { opacity: 0,"});,"})";
-  y: 20,"});,"});";,
-}} animate = {}"});,"})";
-  { opacity: 1,"});,"})";
-  y: 0 "","});,"})";
-"""";,"});,"});";,
+      <div>Broken JSX</div>
 }} className="mb-8">"""";,"});,"})";
         <div className="flex flex-col lg: flex-row lg:items-center lg:justify-between gap-4">"","});,"})";
           <div>"""";,"});,"})";
@@ -180,13 +176,7 @@ const AdvancedServiceInnovationHub = () => {}"});,"})";
       {/* comment */}""";,"});,"})";
       {viewMode === "trends" && (<>;,"});,"})";
           {/* comment */}"});,"})";
-          <motion.div initial = {}"});,"})";
-  { opacity: 0,"});,"})";
-  y: 20,"});,"});";,
-}} animate = {}"});,"})";
-  { opacity: 1,"});,"})";
-  y: 0 "","});,"})";
-"""";,"});,"});";,
+          <div>Broken JSX</div>
 }} transition="{{" delay: 0.1 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">"""";,"});,"})";
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-4">"","});,"})";
               <div>"""";,"});,"})";
@@ -225,21 +215,9 @@ const AdvancedServiceInnovationHub = () => {}"});,"})";
               </div>;,"});,"})";
           </motion.div>;,"});,"})";
           {/* comment */}"});,"})";
-          <motion.div initial = {}"});,"})";
-  { opacity: 0,"});,"})";
-  y: 20,"});,"});";,
-}} animate = {}"});,"})";
-  { opacity: 1,"});,"})";
-  y: 0 "","});,"})";
-"""";,"});,"});";,
+          <div>Broken JSX</div>
 }} transition="{{" delay: 0.2 }} className="grid grid-cols-1 lg: grid-cols-2 gap-6 mb-8">,"});,"})";
-            {filteredTrends.map((trend, index) => (<motion.div key="{trend.id}" initial = {}"});,"})";
-  { opacity: 0,"});,"})";
-  x: index % 2 === 0 ? -20 : 20,"});,"});";,
-}} animate = {}"});,"})";
-  { opacity: 1,"});,"})";
-  x: 0,"});,"})";
-""";,"});,"});";,
+            {};
 }} transition="{{" delay: 0.1 * index }}>"""";,"});,"})";
                 <Card className="h-full hover: shadow-lg transition-shadow">"","});,"})";
                   <CardHeader>"""";,"});,"})";
@@ -310,21 +288,9 @@ const AdvancedServiceInnovationHub = () => {}"});,"})";
         </>) }"});,"})";
 ;,"});,"})";
       {/* comment */}";,"});,"})";
-      {viewMode === "roadmap" && (<motion.div initial = {}"});,"})";
-  { opacity: 0,"});,"})";
-  y: 20,"});,"});";,
-}} animate = {}"});,"})";
-  { opacity: 1,"});,"})";
-  y: 0 "","});,"})";
-"""";,"});,"});";,
+      {};
 }} transition="{{" delay: 0.1 }} className="space-y-6">;,"});,"})";
-          {futureRoadmap.map((roadmap, index) => (<motion.div key="{roadmap.id}" initial = {}"});,"})";
-  { opacity: 0,"});,"})";
-  x: -20,"});,"});";,
-}} animate = {}"});,"})";
-  { opacity: 1,"});,"})";
-  x: 0,"});,"})";
-""";,"});,"});";,
+          {};
 }} transition="{{" delay: 0.1 * index }}>"""";,"});,"})";
               <Card className="hover: shadow-lg transition-shadow">"","});,"})";
                 <CardHeader>"""";,"});,"})";
@@ -401,13 +367,7 @@ const AdvancedServiceInnovationHub = () => {}"});,"})";
         </motion.div>) }"});,"})";
 ;,"});,"})";
       {/* comment */}";,"});,"})";
-      {viewMode === "insights" && (<motion.div initial = {}"});,"})";
-  { opacity: 0,"});,"})";
-  y: 20,"});,"});";,
-}} animate = {}"});,"})";
-  { opacity: 1,"});,"})";
-  y: 0 "","});,"})";
-"""";,"});,"});";,
+      {};
 }} transition="{{" delay: 0.1 }} className="space-y-6">"""";,"});,"})";
           <div className="grid grid-cols-1 lg: grid-cols-2 gap-6">,"});,"})";
             <Card>""";,"});,"})";
@@ -544,13 +504,7 @@ const AdvancedServiceInnovationHub = () => {}"});,"})";
         </motion.div>) }"});,"})";
 ;,"});,"})";
       {/* comment */}"});,"})";
-      <motion.div initial = {}"});,"})";
-  { opacity: 0,"});,"})";
-  y: 20,"});,"});";,
-}} animate = {}"});,"})";
-  { opacity: 1,"});,"})";
-  y: 0 "","});,"})";
-"""";,"});,"});";,
+      <div>Broken JSX</div>
 }} transition="{{" delay: 0.4 }} className="mt-12 text-center">"""";,"});,"})";
         <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">"""";,"});,"})";
           <h3 className="text-3xl font-bold mb-4">Ready to Shape the Future?</h3>"""";,"});,"})";
@@ -559,16 +513,14 @@ const AdvancedServiceInnovationHub = () => {}"});,"})";
             of emerging technologies and capitalize on future opportunities.""";,"});,"})";
           </p>"""";,"});,"})";
           <div className="flex flex-col sm: flex-row gap-4 justify-center">""","});,"})";
-            <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick = {}"});,"})";
-";,"});,"})";
+            <div>Broken JSX</div>
   () => window.open("mailto:kleber@ziontechgroup.com?subject="Innovation" Strategy Consultation",_blank");,"});,"})";
 """;,"});,"});";,
 }>"""";,"});,"})";
               <Users className="w-5 h-5 mr-2"  />;,"});,"})";
               Get Innovation Strategy""";,"});,"})";
             </Button>"""";,"});,"})";
-            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick = {}"});,"})";
-";,"});,"})";
+            <div>Broken JSX</div>
   () => window.open("tel:+13024640950",_blank");,"});,"})";
 """;,"});,"});";,
 }>"""";,"});,"})";
@@ -590,6 +542,8 @@ export { AdvancedServiceInnovationHub };,"});,"})";
 ;,"});,"})";
 export { AdvancedServiceInnovationHub };,"});,"})""""";";
 const AdvancedServiceInnovationHub = () => {}
+  return <div>Component</div>;
+};
 ;
 """;";
     const [selectedCategory, setSelectedCategory] = useState("all")";
@@ -822,9 +776,8 @@ const innovationTrends = []";
     <div className="max-w-7xl mx-auto p-6">;
       {/* comment */}
 ;
-      <motion.div initial = {}";
-  { opacity: 0, y: 20}} animate = {}
-  { opacity: 1, y: 0 """"">;
+      <div>Broken JSX</div>
+  {};
 """"}} className="mb-8">"";
         <div className="flex flex-col lg: flex-row lg:items-center lg:justify-between gap-4">""";
           <div>"";
@@ -849,12 +802,11 @@ const innovationTrends = []";
       </motion.div>";
 ";
       {/* comment */}""";
-      {viewMode === "trends" && (<>;
+      {};
           {/* comment */}
 ;
-          <motion.div initial = {}";
-  { opacity: 0, y: 20}} animate = {}
-  { opacity: 1, y: 0 """"">;
+          <div>Broken JSX</div>
+  {};
 """"}} transition="{{" delay: 0.1 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">"";
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-4">""";
               <div>"";
@@ -895,12 +847,10 @@ const innovationTrends = []";
           </motion.div>;
           {/* comment */}
 ;
-          <motion.div initial = {}";
-  { opacity: 0, y: 20}} animate = {}
-  { opacity: 1, y: 0 """"">;
+          <div>Broken JSX</div>
+  {};
 """"}} transition="{{" delay: 0.2 }} className="grid grid-cols-1 lg: grid-cols-2 gap-6 mb-8">",;
-            {filteredTrends.map((trend, index) => (<motion .div key="{trend.id}" initial = {}";
-  { opacity: 0, x: index % 2 === 0 ? -20 : 20}} animate = {}";
+            {};
   { opacity: 1, x: 0","}} transition="{{" delay: 0.1 * index }}">""";
                 <Card className="h-full hover: shadow-lg transition-shadow">""""}} animate = {}
   { opacity: 1, x: 0}} transition="{{" delay: 0.1 * index }}">"";
@@ -979,12 +929,9 @@ const innovationTrends = []";
 </>) }";
 
       {/* comment */}";
-      {viewMode === "roadmap" && (<motion.div initial = {}";
-  { opacity: 0, y: 20}} animate = {}
-  { opacity: 1, y: 0 """"">;
+      {};
 """"}} transition="{{" delay: 0.1 }} className="space-y-6">";
-          {futureRoadmap.map((roadmap, index) => (<motion .div key="{roadmap.id}" initial = {}";
-  { opacity: 0, x: -20}} animate = {}";
+          {};
   { opacity: 1, x: 0","}} transition="{{" delay: 0.1 * index }}">""";
               <Card className="hover: shadow-lg transition-shadow">""""}} animate = {}
   { opacity: 1, x: 0}} transition="{{" delay: 0.1 * index }}">"";
@@ -1069,9 +1016,7 @@ const innovationTrends = []";
         </motion.div>) }";
 
       {/* comment */}";
-      {viewMode === "insights" && (<motion.div initial = {}";
-  { opacity: 0, y: 20}} animate = {}
-  { opacity: 1, y: 0 """"">;
+      {};
 """"}} transition="{{" delay: 0.1 }} className="space-y-6">"";
           <div className="grid grid-cols-1 lg: grid-cols-2 gap-6">;
             <Card>""";
@@ -1209,9 +1154,8 @@ const innovationTrends = []";
 ;
       {/* comment */}
 ;
-      <motion.div initial = {}";
-  { opacity: 0, y: 20}} animate = {}
-  { opacity: 1, y: 0 """"">;
+      <div>Broken JSX</div>
+  {};
 """"}} transition="{{" delay: 0.4 }} className="mt-12 text-center">"";
         <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">"";
           <h3 className="text-3xl font-bold mb-4">Ready to Shape the Future?</h3>"";
@@ -1228,8 +1172,7 @@ const innovationTrends = []";
               <Users className = "w-5 h-5 mr-2"/">";
               Get Innovation Strategy""";
             </Button>""";
-            <Button variant="outline" className="border-white text-white hover: bg-white hover:text-zion-purple" onClick = {}
-";
+            <div>Broken JSX</div>
   () ="> window.open("tel: +13024640950", _blank")";
 "", ";,
 }>"";

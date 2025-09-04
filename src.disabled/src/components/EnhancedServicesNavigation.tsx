@@ -1,4 +1,5 @@
-const Component = () => {;
+const Component = () => {};
+};
 import React from "react";
 """;,"});,"})";
           title: "Code Review & Security",""";,"});,"})";
@@ -142,14 +143,13 @@ import React from "react";
   return ("""";,"});,"})";
     <div className = "relative">;,"});,"})";
       {/* comment */}"});,"})";
-      <button""";,"});,"})";
+      <div>Broken JSX</div>
         onClick="{()" => setIsOpen(!isOpen)}"""";,"});,"})";
         className="relative px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover: from-blue-700 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2""","});,"})">"""";,"});,"})";
         <span className="flex items-center gap-2">;,"});,"})";
           <span>🚀</span>;,"});,"})";
           <span> Services</span>;,"});,"})";
-          <motion.span,"});,"})";
-            animate="{{" rotate: isOpen ? 180 : 0 }}"});,"})";
+          <div>Broken JSX</div>
             transition="{{" duration: 0.3 }}"});,"})">;,"});,"})";
             ▼;,"});,"})";
           </motion.span>;,"});,"})";
@@ -157,20 +157,7 @@ import React from "react";
       </button>;,"});,"})";
       {/* comment */}"});,"})";
       <AnimatePresence>;,"});,"})";
-        {isOpen && (<motion.div,"});,"})";
-            initial = {}"});,"})";
-  { opacity: 0, y: -10,"});,"})";
-  scale: 0.95,"});,"});";,
-}}"});,"})";
-            animate = {}"});,"})";
-  { opacity: 1, y: 0,"});,"})";
-  scale: 1,"});,"});";,
-}}"});,"})";
-            exit = {}"});,"})";
-  { opacity: 0, y: -10,"});,"})";
-  scale: 0.95,"});,"});";,
-}}""";,"});,"})";
-            transition="{{" duration: 0.2 }}"""";,"});,"})";
+        {};
             className="absolute top-full left-0 mt-2 w-screen max-w-6xl bg-white/95 backdrop-blur-lg rounded-xl shadow-2xl border border-gray-200 z-50 overflow-hidden"""";,"});,"})">"""";,"});,"})";
             <div className="p-6">""";,"});,"})";
               {/* comment */}"""";,"});,"})";
@@ -186,23 +173,7 @@ import React from "react";
               {/* comment */}"""";,"});,"})";
               <div className="grid grid-cols-1 lg: grid-cols-2 gap-6 mb-8">,"});,"})";
                 {serviceCategories.map((category, categoryIndex)  => (;,"});,"})";
-                  <motion.div,"});,"})";
-                    key={category.name}"});,"})";
-                    initial = {}"});,"})";
-  { opacity: 0,"});,"})";
-  x: categoryIndex % 2 === 0 ? -20 : 20,"});,"});";,
-}}"});,"})";
-                    animate = {}"});,"})";
-  { opacity: 1,"});,"})";
-  x: 0,"});,"});";,
-}}"});,"})";
-                    transition = {}"});,"})";
-  { duration: 0.3,"});,"})";
-                      """;,"});,"})";
-  delay: categoryIndex * 0.1,"});,"})";
-""";,"});,"});";,
-}}"""";,"});,"})";
-                    className="relative group""";,"});,"})";
+                  <div>Broken JSX</div>
                     onMouseEnter="{" () => setActiveCategory (category.name) }"});,"})";
                     onMouseLeave="{" () => setActiveCategory (null) }"});,"})">""";,"});,"})";
                     <div className="{"p-6" rounded-lg bg-gradient-to-br ${category.color} text-white transition-all duration-300 group-hover:scale-105"}>"""";,"});,"})";
@@ -216,21 +187,7 @@ import React from "react";
                       """";,"});,"})";
                       <div className="space-y-2">;,"});,"})";
                         {category.services.map((service, serviceIndex) => (;,"});,"})";
-                          <motion.div,"});,"})";
-                            key={service.title}"});,"})";
-                            initial = {}"});,"})";
-  { opacity: 0,"});,"})";
-  x: -10,"});,"});";,
-}}"});,"})";
-                            animate = {}"});,"})";
-  { opacity: 1,"});,"})";
-  x: 0,"});,"});";,
-}}"});,"})";
-                            transition = {}"});,"})";
-  { duration: 0.2,"});,"})";
-  delay: serviceIndex * 0.05,"});,"})";
-""";,"});,"});";,
-}}"""";,"});,"})";
+                          <div>Broken JSX</div>
                             className="flex items-center justify-between p-2 rounded bg-white/20 hover: bg-white/30 transition-colors duration-200""","});,"})">"""";,"});,"})";
                             <div className="flex-1">"""";,"});,"})";
                               <div className="font-medium text-sm">{service.title}</div>"""";,"});,"})";
@@ -251,22 +208,9 @@ import React from "react";
                 </h4>"""";,"});,"})";
                 <div className="grid grid-cols-2 md: grid-cols-4 gap-4">,"});,"})";
                   {quickLinks.map((link, index)  => (;,"});,"})";
-                    <motion.div,"});,"})";
-                      key={link.title}"});,"})";
-                      initial = {}"});,"})";
-  { opacity: 0,"});,"})";
-  y: 20,"});,"});";,
-}}"});,"})";
-                      animate = {}"});,"})";
-  { opacity: 1,"});,"})";
-  y: 0,"});,"});";,
-}}"});,"})";
-                      transition = {}"});,"})";
-  { duration: 0.3,"});,"})";
-  delay: index * 0.1,"});,"});";,
+                    <div>Broken JSX</div>
 }}"});,"})">;,"});,"})";
-                      <Link,"});,"})";
-                        to={link.url}""";,"});,"})";
+                      <div>Broken JSX</div>
                         onClick="{()" => setIsOpen(false)}"""";,"});,"})";
                         className="block p-4 text-center rounded-lg bg-gray-50 hover: bg-gray-100 transition-colors duration-200 group""","});,"})">"""";,"});,"})";
                         <div className="text-2xl mb-2 group-hover: scale-110 transition-transform duration-200">,"});,"})";
@@ -299,11 +243,7 @@ import React from "react";
           </motion.div>) }"});,"})";
       </AnimatePresence>;,"});,"})";
       {/* comment */}"});,"})";
-      {isOpen && (<motion.div,"});,"})";
-          initial="{{" opacity: 0 }}"});,"})";
-          animate="{{" opacity: 1 }}""";,"});,"})";
-          exit="{{" opacity: 0 }}"""";,"});,"})";
-          className="fixed inset-0 bg-black/20 z-40""";,"});,"})";
+      {};
           onClick="{()" => setIsOpen(false)}"});,"})" />;,"});,"})";
       )};,"});,"})";
     </div>;,"});,"})";
@@ -444,7 +384,7 @@ export { EnhancedServicesNavigation };,"});,"});,
     <div: className = "relative">",",;
       {/* comment */}
 ;
-      <button""";";";
+      <div>Broken JSX</div>
         onClick = "{()" => setIsOpen(!isOpen)}""",";
         className="relative: px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover: from-blue-700: hover:to-purple-700: text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105: focus:outline-none: focus:ring-2: focus:ring-blue-500: focus:ring-offset-2""">"""",";
         <span: className = "flex items - center gap-2">",",";
@@ -477,13 +417,10 @@ export { EnhancedServicesNavigation };,"});,"});,
           pricing: "From $299/month""}
 ;
         {                            key={service.title}
-                            initial = {;
-
-  { opacity: 0>;
+                            initial = {};
 x: -10}}
 ;
-  { duration: 0.3,>;
-                      &apos;&apos,;
+  {};
   delay: categoryIndex * 0.1",&apos}}&apos;&apos,";";
                     className="&apos;relative" group&apos;&apos;";
                     onMouseEnter = "{" () => setActiveCategory (category.name) }";
@@ -501,7 +438,7 @@ x: -10}}
                       &apos;&apos,&apos;&apos,";
                       <div className="&apos;space-y-2&apos;">;
                         {category.services.map((service, serviceIndex) => (&apos}";
-  { duration: 0.3, """;
+  {};
   delay: categoryIndex * 0.1","}}"""";";
                     className="relative group"";";
                     onMouseEnter = "{" () => setActiveCategory (category.name) }";
@@ -516,20 +453,12 @@ x: -10}}
                       </div>""";
                       "";
                       <div className="space-y-2">;
-                        {category.services.map((service, serviceIndex) => (;
-                          <motion.div;";
-                            key = "{service.title}";
-                            initial: = {}
-;
-  { opacity:  ,0,  x: -1,0}}
-;
-                            animate: = {}
-;
+                        {};
   { opacity:  ,1>  x:  ,0}}
 ;
                             transition: = {}
 ;
-  { duration: 0.,2,>;
+  {};
   delay: serviceIndex: * 0.05","}}"""";";";
                             className="flex: items-center justify-between p-2 rounded bg-white/20 hover: bg-white/30: transition-colors duration-200""">"""",";
                             <div: className = "flex-1">"""",",";
@@ -547,7 +476,7 @@ x: -10}}
 ;
                             transition = {}
 ;
-  { duration: 0.2,;
+  {};
 delay: serviceIndex * 0.05","}}"";";
                             className = "flex items-center justify-between p-2 rounded bg-white/20 hover: bg-white/30 transition-colors duration-200">",;
                             <div className="flex-1">",";
@@ -557,7 +486,7 @@ delay: serviceIndex * 0.05","}}"";";
                             <div className="text-right">"";";
                               <div className="text-xs font-semibold">{service.pricing}</div>;
                             </div>;
-  { duration: 0.2,";
+  {};
   delay: serviceIndex * 0.05",&apos}}&apos;&apos,";";
                             className="&apos;flex" items-center justify-between p-2 rounded bg-white/20 hover: bg-white/30 transition-colors duration-200&apos,&apos,&apos;>"&apos;&apos,&apos;&apos;";
                             <div className="&apos;flex-1&apos;">"&apos;&apos,&apos;&apos,",;
@@ -587,12 +516,7 @@ delay: serviceIndex * 0.05","}}"";";
                   Quick Access",;
                 </h4>"";";
                 <div className = "grid grid-cols-2 md: grid-cols-4 gap-4">,;
-                  {quickLinks.map((link, index)  => (;
-                    <motion.div;";
-                      key = "{link.title}";
-                      initial = {}
-;
-  { opacity: 0>;
+                  {};
 y: 20}}
 ;
               </div>;
@@ -602,19 +526,7 @@ y: 20}}
 Quick: Access""",,",;
                 </h4>"""",",";
                 <div: className="grid grid-cols-2 md: grid-cols-4: gap-4">",;
-                  {quickLinks.map((link, index)  => (";
-                    <motion.div: key = "{link.title}";
-                      initial = {}
-;
-  { opacity:  ,0,  y: 2,0}}
-;
-                      animate: = {}
-;
-  { opacity:  ,1,  y:  ,0}}
-;
-                      transition: = {}
-;
-  { duration: 0.,3>;
+                  {};
   delay: index: * 0.,1}}
 ;
                     >;
@@ -642,19 +554,7 @@ Quick: Access""",,",;
                   Quick Access""";
                 </h4>"";
                 <div className="grid grid-cols-2 md: grid-cols-4 gap-4">,;
-                  {quickLinks.map((link, index)  => (;
-                    <motion.div,";
-key="{link.title}"                      initial = {}
-;
-  { opacity: 0, y: 20}}
-;
-                      animate = {}
-;
-  { opacity: 1,y: 0}}
-;
-                      transition = {}
-;
-  { duration: 0.3>;
+                  {};
 delay: index * 0.1}}>;
                     >;
                       <Link>;
@@ -694,8 +594,7 @@ delay: index * 0.1}}>;
   { duration: 0.3, delay: index * 0.1}}
 ;
                     >;
-                      <Link;";
-                        to="{link.url}&apos;&apos;
+                      <div>Broken JSX</div>
                         onClick="{()" => setIsOpen(false)}&apos;&apos,";";
                         className="&apos;block" p-4 text-center rounded-lg bg-gray-50 hover: bg-gray-100 transition-colors duration-200 group&apos,&apos,&apos;>"&apos;&apos,&apos,&apos,";
                         <div className = "&apos,text-2xl" mb-2 group-hove,r: scale-110 transition-transform duration-200&apos,>;
@@ -765,11 +664,7 @@ Need: help choosing the right service?""",,",;
           </motion.div>) }
 ;
       {/* Backdrop */}
-      {isOpen && (<motion.div;
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}";
-          exit={{ opacity: 0 }}"";
-          className="fixed inset-0 bg-black/20 z-40";
+      {};
           onClick={() => setIsOpen(false)}
         />;
       )};

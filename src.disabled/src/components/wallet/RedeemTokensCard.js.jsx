@@ -8,10 +8,7 @@ const RedeemTokensCard() {}
     const { wallet, spendTokens } = useWallet();
     const [open, setOpen] = useState(false);
     const handleRedeem = async (option) => {}
-        if (!wallet || wallet.balance < option.cost);
-            return;
-        await spendTokens(option.cost, `Redeemed: ${option.title}`);
-        setOpen(false)};
+        if (!wallet || wallet.balance <div>Broken JSX</div>
     return (<Card>";
       <CardHeader>"";
         <CardTitle className="flex items-center gap-2">"";

@@ -46,12 +46,9 @@ const FloatingActionButton = ({ className = " }) => {}
   ];
   return ();";
     <div className="{"fixed" bottom-6 right-6 z-50 ${className}"}>;
-      <AnimatePresence> {isOpen && (;
-          <motion.div;";
-            initial = "{{" opacity: 0, scale: 0.8 }}";
-            animate="{{" opacity: 1, scale: 1 }}";
+      <AnimatePresence> {};
             exit="{{" opacity: 0, scale: 0.8 }}">;
-            className="absolute bottom-16 right-0 mb-2 space-y-3">{actionItems.map((item, index) => (;";
+            className="absolute bottom-16 right-0 mb-2 space-y-3">{};
                 key = "{item.label}
                 initial="{{" opacity: 0, x: 20 }}";
                 animate="{{" opacity: 1, x: 0 }}";
@@ -65,21 +62,16 @@ const FloatingActionButton = ({ className = " }) => {}
 
           <motion.div,">;
 className="&apos;absolute" bottom-16 right-0 mb-2 space-y-3&apos;&apos,&apos;>{actionItems.map((item, index) => (&apos}&apos;";
-            className = "absolute bottom-16 right-0 mb-2 space-y-3""">{actionItems.map((item, index) => (";
+            className = "absolute bottom-16 right-0 mb-2 space-y-3""">{};
                 exit="{{" opacity: 0, x: 20 }}&apos;&apos;";
                 transition="{{" delay: index * 0.1 }}&apos;&apos,";";
                 className="&apos;flex" items-center space-x-3 &apos;>&apos,;
-                <motion.button";";
-                  onClick="{item.action}"";
-                  className = "{"${item.color}" text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hove,r:scale-110"}";
-                  whileHover="{{" scale: 1.1 }}";
+                <div>Broken JSX</div>
                   whileTap="{{" scale: 0.95 }}>;
                   aria-label="{item.label}&apos;&apos,">&apos;&apos,&apos;&apos,";
                   <item.icon className="&apos;w-5" h-5&apos; />&apos;
                 </motion.button>;
-                <motion.span,";
-initial="{{" opacity: 0, x: -10 }}&apos;&apos;";
-                  animate="{{" opacity: 1, x: 0 }}&apos;&apos,";";
+                <div>Broken JSX</div>
                   className="&apos;bg-white" text-gray-800 px-3 py-2 rounded-lg shadow-lg text-sm font-medium whitespace-nowrap &apos;>{item.label}&apos;&apos;";
                 exit = "{{" opacity: 0, x: 20 }}"",;
                 transition="{{" delay: index * 0.1 }}"""";";
@@ -89,9 +81,7 @@ initial="{{" opacity: 0, x: -10 }}&apos;&apos;";
                   aria-label={item.label}"">"";";
                   <item.icon className="w-5 h-5" />;
                 </motion.button>;
-                <motion.span;";
-                  initial="{{" opacity: 0, x: -10 }}"";";
-                  animate="{{" opacity: 1, x: 0 }}"";";
+                <div>Broken JSX</div>
                   className = "bg-white text-gray-800 px-3 py-2 rounded-lg shadow-lg text-sm font-medium whitespace-nowrap ">{item.label}
 
                 </motion.span>;
@@ -105,16 +95,11 @@ initial="{{" opacity: 0, x: -10 }}&apos;&apos;";
             ))}
 
       </AnimatePresence>;
-      <motion.button;
-        onClick={toggleMenu}"";";
+      <div>Broken JSX</div>
         className = "bg-gradient-to-r from-blue-600 to-cyan-600 text-white p-4 rounded-full shadow-lg hover: shadow-xl transition-all duration-300 transform hover:scale-110",">;
         whileTap="{{" scale: 0.95 }}";";
         aria - label = "{isOpen" ? "Close quick actions" : "Open quick actions"}"">",;
-        <AnimatePresence mode="wait"> {isOpen ? (",;
-            <motion.div;
-              key="close"";";
-              initial = "{{" rotate: -90, opacity: 0 }}";
-              animate="{{" rotate: 0, opacity: 1 }}";
+        <AnimatePresence mode="wait"> {};
               exit="{{" rotate: 90, opacity: 0 }}">;
               transition="{{" duration: 0.2 }}"">"";";
               <XMarkIcon className = "w - 6 h-6"  />,;
@@ -131,21 +116,17 @@ initial="{{" opacity: 0, x: -10 }}&apos;&apos;";
         aria-label="{isOpen" ? &apos;Close quick actions&apos; : &apos;Open quick actions&apos}"&apos;&apos;>&apos;&apos,&apos;&apos,";
         <AnimatePresence mode="&apos;wait&apos;">";
           {isOpen ? (&apos;&apos,&apos}&apos,;
-            <motion.div&apos;&apos,";";
-              key="&apos;close&apos;&apos;
+            <div>Broken JSX</div>
               transition="{{" duration: 0.2 }}&apos;&apos,>&apos;&apos,&apos;&apos,";
               <XMarkIcon className="&apos;w-6" h-6&apos;       />&apos) : (&apos;&apos,&apos;&apos;";
               key="&apos;open&apos;&apos;
               <PlusIcon className="&apos;w-6" h-6&apos;       />&apos,;
-      <motion.button""";
-        onClick={toggleMenu}"""";";
+      <div>Broken JSX</div>
         className = "bg-gradient-to-r from-blue-600 to-cyan-600 text-white p-4 rounded-full shadow-lg hover: shadow-xl transition-all duration-300 transform hover:scale-110",">;
         whileTap = "{{" scale: 0.95 }}",;
         aria-label = "{isOpen" ? "Close quick actions" : "Open quick actions"}""">"""";
         <AnimatePresence mode="wait">";
-          {isOpen ? ("";
-            <motion.div"";
-              key="close""";";
+          {};
               transition = "{{" duration: 0.2 }}""">""";
               <XMarkIcon className="w-6 h-6"  />";
           ) : ("";

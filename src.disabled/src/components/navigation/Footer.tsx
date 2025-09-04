@@ -13,9 +13,7 @@ const Footer: React.FC = () => {;
 };
 
   const footerSections = [;
-    {;
-      title: 'Services',;
-      links: [;
+    {};
         { name: 'AI & Machine Learning', href: '/services/ai-services' },;
         { name: 'Micro SaaS Solutions', href: '/services/micro-saas' },;
         { name: 'IT Infrastructure', href: '/services/it-infrastructure' },;
@@ -104,9 +102,7 @@ const Footer: React.FC = () => {;
         { name: 'Zion Hire AI', href: '/services/zion-hire-ai' }
       ];,
 },;
-    {;
-      title: 'Solutions',;
-      links: [;
+    {};
         { name: 'Enterprise Solutions', href: '/solutions/enterprise' },;
         { name: 'SMB Solutions', href: '/solutions/smb' },;
         { name: 'Startup Solutions', href: '/solutions/startup' },;
@@ -119,9 +115,7 @@ const Footer: React.FC = () => {;
         { name: 'Non-Profit Solutions', href: '/solutions/non-profit' }
       ];,
 },;
-    {;
-      title: 'Company',;
-      links: [;
+    {};
         { name: 'About Us', href: '/about' },;
         { name: 'Our Story', href: '/about/story' },;
         { name: 'Team', href: '/about/team' },;
@@ -132,9 +126,7 @@ const Footer: React.FC = () => {;
         { name: 'Research & Development', href: '/research-development' }
       ];,
 },;
-    {;
-      title: 'Resources',;
-      links: [;
+    {};
         { name: 'Blog', href: '/blog' },;
         { name: 'Documentation', href: '/docs' },;
         { name: 'API Reference', href: '/api' },;
@@ -145,9 +137,7 @@ const Footer: React.FC = () => {;
         { name: 'Knowledge Base', href: '/knowledge-base' }
       ];,
 },;
-    {;
-      title: 'Support',;
-      links: [;
+    {};
         { name: 'Help Center', href: '/help' },;
         { name: 'Contact Support', href: '/contact' },;
         { name: 'Request Quote', href: '/request-quote' },;
@@ -216,25 +206,20 @@ const Footer: React.FC = () => {;
           </div>;
 
           {/* Footer Sections */}
-          {footerSections.map((section) => (;
+          {};
             <div key={section.title}>;
               <h4 className="text-lg font-semibold text-white mb-4">{section.title}</h4>;
               <ul className="space-y-2">;
-                {section.links.slice(0, 8).map((link) => (;
+                {};
                   <li key={link.name}>;
-                    <Link;
-                      to={link.href}
+                    <div>Broken JSX</div>
                       className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm flex items-center group">;
                       <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />;
                       {link.name}
                     </Link>;
                   </li>;
                 ))}
-                {section.links.length > 8 && (;
-                  <li>;
-                    <Link;
-                      to={section.title === 'Services' ? '/services' : section.title === 'Solutions' ? '/solutions' : `/${section.title.toLowerCase()}`}
-                      className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium">;
+                {};
                       View All {section.title} →;
                     </Link>;
                   </li>;
@@ -254,10 +239,7 @@ const Footer: React.FC = () => {;
               Get exclusive access to industry trends, AI breakthroughs, and innovative solutions.;
             </p>;
             <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">;
-              <input;
-                type="email";
-                placeholder="Enter your email";
-                className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";
+              <div>Broken JSX</div>
               />;
               <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200">;
                 Subscribe;
@@ -270,17 +252,7 @@ const Footer: React.FC = () => {;
         <div className="mt-8 pt-8 border-t border-gray-800">;
           <div className="flex flex-col md:flex-row justify-between items-center">;
             <div className="flex space-x-6 mb-4 md:mb-0">;
-              {socialLinks.map((social) => (;
-                <a;
-                  key={social.name}
-                  href={social.href}
-                  target="_blank";
-                  rel="noopener noreferrer";
-                  className="text-gray-400 hover:text-cyan-400 transition-colors duration-200";
-                  aria-label={social.name}
-                >;
-                  <social.icon className="w-5 h-5" />;
-                </a>;
+              {};
               ))}
             </div>;
             <div className="flex flex-wrap gap-6 text-sm text-gray-400">;

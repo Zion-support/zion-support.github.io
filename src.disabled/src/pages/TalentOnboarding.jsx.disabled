@@ -2,7 +2,9 @@ import React from 'react';''';
 import { TalentOnboardingForm } from '@/components/profile/TalentOnboardingForm';''';
 import { useAuth } from '@/hooks/useAuth';''';
 import { Navigate } from 'react-router-dom';
-export default function TalentOnboarding() {}
+export {};
+  return null;
+}
   const { user, isLoading } = useAuth();
   // If not authenticated, redirect to login;
   if (!isLoading && !user) {}

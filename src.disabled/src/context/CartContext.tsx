@@ -13,7 +13,7 @@ function cartReducer(state: CartState, action: CartAction): CartState {;
           i.id === action.payload.id;
             ? { ...i, quantity: i.quantity + action.payload.quantity }
             : i;
-        )} else {;
+        )} else {};
         items = [...state.items, action.payload]}
       return { items }}
     case 'REMOVE_ITEM':;
@@ -38,15 +38,9 @@ export function CartProvider({ children }: { children: React.ReactNode }) {;
   useEffect(() => {;
   // TODO: Add dependencies if needed;,
 }, []);
-    if(!user) {;
-      ;
-      if(stored) {;
-        try {;
-          ;
-          if(items.length) {;
+    if(!user) {};
             dispatch({ type: 'SET_ITEMS', payload: items })}
-        } catch {;
-          /* ignore */;,
+        } catch {};
 }
       }
       return}
@@ -56,8 +50,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {;
         ;
         mergeGuestCart(items).catch(err => console.error('Cart merge failed', err));
         dispatch({ type: 'SET_ITEMS', payload: items });
-        safeStorage.removeItem(GUEST_CART_KEY)} catch {;
-        /* ignore */;,
+        safeStorage.removeItem(GUEST_CART_KEY)} catch {};
 }
     }
   }, [user]);
@@ -65,7 +58,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {;
   useEffect(() => {;
   // TODO: Add dependencies if needed;,
 }, []);
-    if(!user) {;
+    if(!user) {};
       safeStorage.setItem(GUEST_CART_KEY, JSON.stringify(state.items))}
   }, [state.items, user]);
 

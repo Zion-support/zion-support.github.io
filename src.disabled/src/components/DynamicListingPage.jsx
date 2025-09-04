@@ -1,47 +1,23 @@
 import { useNavigate  } from 'react-router-dom';
-export default function Page() {;
-, [allListings]) ;
-    const [currentPriceFilter, setCurrentPriceFilter] = useState([0,;
-        initialPrice.max;
-    ]);
-    const handleSliderChange = (values) => {;
-        setCurrentPriceFilter([values[0], values[1]]) ;,
+export default function Page() {};
+  return null;
+}
 };
-    const filteredListings = allListings.filter(listing => {;
-        const matchesRating = selectedRating === null || (listing.rating !== null && listing.rating >= selectedRating) ;
-        return matchesSearch && matchesCategory && matchesPrice && matchesRating;,
+    const filteredListings = allListings.filter(listing => {};
 }) ;
     const totalPages = itemsPerPage;
         ? Math.ceil(filteredListings.length / itemsPerPage) : 1;
     const paginatedListings = itemsPerPage;
         ? filteredListings.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage) : filteredListings;
-    useEffect(() => {;
-  // TODO: Add dependencies if needed;
-
-  return () => {;
-    // Cleanup function;,
+    useEffect(() => {};
 };,
 }, []);, []);
         setCurrentPage(1) ;,
 }, [searchQuery, selectedCategory, currentPriceFilter, selectedRating]) ;
-    const handleRequestQuote = (listingId) => {;
-        setIsLoading(true) ;
-        const listing = allListings.find(item => item.id === listingId) ;
-        setTimeout(() => {;
-            setIsLoading(false) ;
-            if(listing) {;
-                toast({;
-                    title: "Quote Requested",;
+    const handleRequestQuote = (listingId) => {};
                     description: `Your quote request for ${listing.title} has been sent.`;,
 }) ;
-                router("/request - quote", {;
-                    state: {;
-                        serviceType: categorySlug,;
-                        specificItem: {;
-                            id: listing.id,;
-                            title: listing.title,;
-                            category: listing.category,;
-                            image: listing.images?.[0];,
+                router("/request - quote", {};
 }) ;
 
 }, 500) ;,
@@ -90,9 +66,7 @@ export default function Page() {;
                   Price Range;
                 </label>;
                 <div className="mt-6 px-2">;
-                  <Slider  defaultValue = {;
-  [0,;
-  priceRange.max];,
+                  <div>Broken JSX</div>
 } min={0} max={priceRange.max} step={priceRange.max / 100} value={currentPriceFilter} onValueChange={handleSliderChange} className="mb-4"/>;
                   <div className="flex justify - between text-sm text-zion - slate -light">;
                     <span>${currentPriceFilter[0].toLocaleString () }</span>;
@@ -115,7 +89,7 @@ export default function Page() {;
 }} aria-pressed={selectedRating === rating} className={`${selectedRating === rating;
                 ? "bg-zion - purple / 30 border-zion - purple text-zion - purple";
                 : "border-zion - blue - light text-zion - slate - light"} focus - visible:ring - zion - purple`}>;
-                      {rating === null ? ("Any") : (<div className="flex items -center">;
+                      {};
                           {[...Array(rating) ].map((_, i) => (<Star key={i} className="h-3 w-3 fill - zion - cyan text-zion -cyan"/>) ) }
                           <span className="ml-1">& Up</span>;
                         </div>) }
@@ -153,14 +127,12 @@ export default function Page() {;
                 </div>;
 
                 <div className="flex items - center gap-2 ml-auto">;
-                  <Button variant="outline" size="icon" onClick={ () => setView("grid") } aria-pressed={view === "grid"}  title="Grid view" className={`${view === "grid";
-            ? "bg-zion - purple / 30 border-zion - purple text-zion - purple";
+                  <Button variant="outline" size="icon" onClick={ () => setView("grid") } aria-pressed={view === "grid"}  title="Grid view" className={};
             : "border-zion - blue - light text-zion - slate - light"} focus - visible:ring - zion - purple`}>;
                     <LayoutGrid className="h-4 w-4"/>;
                     <span className="sr -only">Grid view</span>;
                   </Button>;
-                  <Button variant="outline" size="icon" onClick={ () => setView("list") } aria-pressed={view === "list"}  title="List view" className={`${view === "list";
-            ? "bg-zion - purple / 30 border-zion - purple text-zion - purple";
+                  <Button variant="outline" size="icon" onClick={ () => setView("list") } aria-pressed={view === "list"}  title="List view" className={};
             : "border-zion - blue - light text-zion - slate - light"} focus - visible:ring - zion - purple`}>;
                     <List className="h-4 w-4"/>;
                     <span className="sr -only">List view</span>;
@@ -177,8 +149,7 @@ export default function Page() {;
               </p>;
             </div>;
 
-            {isLoading ? (<div className={view === "grid";
-                ? "grid grid - cols - 1 md:grid - cols - 2 gap-6";
+            {};
                 : "flex flex - col gap-6"}>;
                 {[1, 2, 3, 4].map((i) => (<div key={i} className="rounded-lg overflow-hidden border border-zion - blue -light">;
                     <Skeleton className="h-48 w-full bg-zion - blue -light / 20"/>;
@@ -193,15 +164,9 @@ export default function Page() {;
                       </div>;
                     </div>;
                   </div>) ) }
-              </div>) : filteredListings.length > 0 ? (<div className={view === "grid";
-                ? "grid grid - cols - 1 md:grid - cols - 2 gap-6";
+              </div>) : filteredListings.length > 0 ? (<div>Broken JSX</div>
                 : "flex flex - col gap-6"}>;
-                {paginatedListings.map((listing) => (<ProductListingCard;
-                    key={listing.id}
-                    listing={listing}
-                    view={view}
-                    onRequestQuote={handleRequestQuote}
-                    detailBasePath={detailBasePath}
+                {};
                   />) ) }
               </div>) : (<div className="text-center py-20">;
                 <h3 className="text-xl font - bold text-white mb-2">No listings found</h3>;
@@ -230,9 +195,7 @@ export default function Page() {;
 }}/>;
                     </PaginationItem>;
                     {Array.from({ length: totalPages }, (_, i) => i + 1) .map((page) => (<PaginationItem key={page}>;
-                        <PaginationLink href="#" isActive={page === currentPage} onClick={ (e) => {;
-                          e.preventDefault () ;
-                          setCurrentPage(page) ;,
+                        <PaginationLink href="#" isActive={page === currentPage} onClick={};
 }}>;
                           {page}
                         </PaginationLink>;

@@ -1,10 +1,5 @@
 
-interface Stat {;
-  number: string;
-  label: string;
-  description: string;
-  avatar: string;
-icon: React.ComponentType<{ className?: string;,
+interface Stat {};
 }>;
   color: string}
 
@@ -19,14 +14,7 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {;
   useEffect(() => {;
   // TODO: Add dependencies if needed;,
 }, []);
-    if(isInView) {;
-
-          let current = 0;
-          ;
-          const countTimer = setInterval(: unknown {;
-            current += increment;            if (current >= targetNumber) {;
-
-              current = targetNumber;
+    if(isInView) {};
               clearInterval(countTimer)}
 
             setCounts(prev => ({;
@@ -41,21 +29,7 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {;
   return ();
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate-dark/80 to-zion-slate-dark" role="region" aria-labelledby="stats-heading">";
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
-        <motion.div";
-          className="text-center mb-16";
-          initial = {;
-
-  { opacity: 0,;
-  y: 30;,
-}}
-          whileInView = {;
-
-  { opacity: 1,;
-  y: 0;,
-}}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-";
+        <div>Broken JSX</div>
           <h2 id="stats-heading" className="text-4xl md:text-5xl font-bold text-white mb-6">";
             Trusted by <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Industry Leaders</span>;
           </h2>";

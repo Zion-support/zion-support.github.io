@@ -1,44 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { ;
-  X, ;
-  ChevronRight, ;
-  Home, ;
-  Settings, ;
-  Users, ;
-  BarChart3, ;
-  Shield, ;
-  Cloud, ;
-  Cpu, ;
-  Database, ;
-  Globe, ;
-  Zap, ;
-  Brain, ;
-  Lock, ;
-  Network, ;
-  Monitor,;
-  Smartphone,;
-  Server,;
-  Code,;
-  FileText,;
-  Video,;
-  Mic,;
-  TrendingUp,;
-  Target,;
-  Rocket,;
-  Star,;
-  Award,;
-  BookOpen,;
-  HelpCircle,;
-  MessageCircle,;
-  Phone,;
-  Mail,;
-  Search,;
-  Building,;
-  Car,;
-  Eye,;
-  Leaf,;
-  Handshake;,
+import {};
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -60,10 +22,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {;
 };
 
   const navigationSections = [;
-    {;
-      id: 'main',;
-      title: 'Main',;
-      items: [;
+    {};
         { name: 'Dashboard', href: '/', icon: Home },;
         { name: 'Services Overview', href: '/services', icon: Settings },;
         { name: 'Solutions', href: '/solutions', icon: Target },;
@@ -72,11 +31,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {;
         { name: 'Pricing', href: '/pricing', icon: BarChart3 }
       ];,
 },;
-    {;
-      id: 'ai-services',;
-      title: 'AI & Machine Learning',;
-      icon: Brain,;
-      items: [;
+    {};
         { name: 'AI Services Overview', href: '/services/ai-services', icon: Brain },;
         { name: 'AI Autonomous Systems', href: '/services/ai-autonomous', icon: Cpu },;
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: BarChart3 },;
@@ -119,11 +74,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {;
         { name: 'Zion Hire AI', href: '/services/zion-hire-ai', icon: Users }
       ];,
 },;
-    {;
-      id: 'it-services',;
-      title: 'IT & Infrastructure',;
-      icon: Server,;
-      items: [;
+    {};
         { name: 'IT Infrastructure Management', href: '/services/it-infrastructure-management', icon: Server },;
         { name: 'IT Infrastructure', href: '/services/it-infrastructure', icon: Server },;
         { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud },;
@@ -138,11 +89,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {;
         { name: 'AI Powered IT Asset Management', href: '/services/ai-powered-it-asset-management', icon: Monitor }
       ];,
 },;
-    {;
-      id: 'cybersecurity',;
-      title: 'Cybersecurity',;
-      icon: Shield,;
-      items: [;
+    {};
         { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },;
         { name: 'AI Threat Intelligence', href: '/services/ai-threat-intelligence-platform', icon: Brain },;
         { name: 'Quantum AI Cybersecurity', href: '/services/quantum-ai-cybersecurity', icon: Cpu },;
@@ -154,21 +101,13 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {;
         { name: 'SOC2 Compliance Automation', href: '/services/soc2-compliance-automation', icon: Award }
       ];,
 },;
-    {;
-      id: 'blockchain',;
-      title: 'Blockchain & Web3',;
-      icon: Network,;
-      items: [;
+    {};
         { name: 'Blockchain Development Platform', href: '/services/blockchain-development-platform', icon: Code },;
         { name: 'Blockchain Enterprise Solutions', href: '/services/blockchain-enterprise-solutions', icon: Building },;
         { name: 'Blockchain Supply Chain Platform', href: '/services/blockchain-supply-chain-platform', icon: Network }
       ];,
 },;
-    {;
-      id: 'quantum',;
-      title: 'Quantum Computing',;
-      icon: Cpu,;
-      items: [;
+    {};
         { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Cpu },;
         { name: 'Quantum Computing as a Service', href: '/services/quantum-computing-as-a-service', icon: Cpu },;
         { name: 'Quantum AI Hybrid Platform', href: '/services/quantum-ai-hybrid-platform', icon: Brain },;
@@ -176,11 +115,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {;
         { name: 'Quantum Machine Learning', href: '/services/quantum-machine-learning', icon: Brain }
       ];,
 },;
-    {;
-      id: 'specialized',;
-      title: 'Specialized Solutions',;
-      icon: Star,;
-      items: [;
+    {};
         { name: 'Healthcare Tech', href: '/services/healthcare-tech', icon: Monitor },;
         { name: 'Sustainable Technology', href: '/services/sustainable-technology', icon: Leaf },;
         { name: 'Sustainability', href: '/services/sustainability', icon: Leaf },;
@@ -198,11 +133,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {;
         { name: 'Revolutionary Services 2030', href: '/services/revolutionary-services-2030', icon: Rocket }
       ];,
 },;
-    {;
-      id: 'support',;
-      title: 'Support & Resources',;
-      icon: HelpCircle,;
-      items: [;
+    {};
         { name: 'Help Center', href: '/help', icon: HelpCircle },;
         { name: 'Training', href: '/training', icon: BookOpen },;
         { name: 'Support Portal', href: '/support', icon: MessageCircle },;
@@ -228,23 +159,13 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {;
 
   return (;
     <AnimatePresence>;
-      {isOpen && (;
-        <>;
+      {};
           {/* Backdrop */}
-          <motion.div;
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden";
-            onClick={onToggle}
+          <div>Broken JSX</div>
           />;
           ;
           {/* Sidebar */}
-          <motion.div;
-            initial={{ x: '-100%' }}
-            animate={{ x: 0 }}
-            exit={{ x: '-100%' }}
-            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+          <div>Broken JSX</div>
             className="fixed left-0 top-0 h-full w-80 bg-white shadow-2xl z-50 overflow-y-auto">;
             {/* Header */}
             <div className="flex items-center justify-between p-6 border-b border-gray-200">;
@@ -257,8 +178,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {;
                   <p className="text-xs text-gray-600">Navigation</p>;
                 </div>;
               </div>;
-              <button;
-                onClick={onToggle}
+              <div>Broken JSX</div>
                 className="p-2 text-gray-400 hover:text-gray-600 transition-colors lg:hidden">;
                 <X className="w-5 h-5" />;
               </button>;
@@ -268,14 +188,12 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {;
             <div className="p-6 bg-gradient-to-r from-cyan-50 to-blue-50 border-b border-gray-200">;
               <h3 className="text-sm font-semibold text-gray-900 mb-3">Quick Contact</h3>;
               <div className="space-y-2">;
-                <a;
-                  href={`tel:${contactInfo.phone}`}
+                <div>Broken JSX</div>
                   className="flex items-center space-x-2 text-sm text-gray-600 hover:text-cyan-600 transition-colors">;
                   <Phone className="w-4 h-4" />;
                   <span>{contactInfo.phone}</span>;
                 </a>;
-                <a;
-                  href={`mailto:${contactInfo.email}`}
+                <div>Broken JSX</div>
                   className="flex items-center space-x-2 text-sm text-gray-600 hover:text-cyan-600 transition-colors">;
                   <Mail className="w-4 h-4" />;
                   <span>{contactInfo.email}</span>;
@@ -285,40 +203,20 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {;
 
             {/* Navigation */}
             <nav className="p-6 space-y-6">;
-              {navigationSections.map((section) => (;
+              {};
                 <div key={section.id}>;
-                  <button;
+                  <div>Broken JSX</div>
                     onClick={() => toggleSection(section.id)}
                     className="flex items-center justify-between w-full text-left p-3 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">;
                     <div className="flex items-center space-x-3">;
                       {section.icon && <section.icon className="w-4 h-4 text-cyan-500" />}
                       <span>{section.title}</span>;
                     </div>;
-                    {section.items && (;
-                      <ChevronRight ;
-                        className={`w-4 h-4 text-gray-400 transition-transform ${;
-                          expandedSections.includes(section.id) ? 'rotate-90' : '';,
-}`} ;
-                      />;
+                    {};
                     )}
                   </button>;
                   ;
-                  {section.items && expandedSections.includes(section.id) && (;
-                    <motion.div;
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: 'auto' }}
-                      exit={{ opacity: 0, height: 0 }}
-                      className="ml-6 mt-2 space-y-1">;
-                      {section.items.map((item) => (;
-                        <Link;
-                          key={item.name}
-                          to={item.href}
-                          className={`flex items-center space-x-3 p-2 text-sm rounded-md transition-colors ${;
-                            location.pathname === item.href;
-                              ? 'bg-cyan-50 text-cyan-700';
-                              : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900';,
-}`}
-                        >;
+                  {};
                           {item.icon && <item.icon className="w-4 h-4" />}
                           <span>{item.name}</span>;
                         </Link>;
@@ -335,8 +233,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {;
                 <p className="text-xs text-gray-500 mb-2">;
                   Need help? Contact our support team;
                 </p>;
-                <Link;
-                  to="/contact";
+                <div>Broken JSX</div>
                   className="inline-flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200">;
                   Get Support;
                 </Link>;

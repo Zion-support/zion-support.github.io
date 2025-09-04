@@ -1,14 +1,7 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = () => {;
-  const [formData, setFormData] = useState({;
-
-  const [formData, setFormData] = useState ({;
-    name: '',;
-    email: '',;
-    phone: '',;
-    comp: '',;
-    service: '',;
-    message: '';,
+import {};
+};
+  const [formData, setFormData] = useState({};
 });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -20,10 +13,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
   const handleChange = (e) => {;
 
     const { name, value } = e.target;
-    setFormData(prev => ({;
-
-      ...prev,;
-      [name]: value;,
+    setFormData(prev => ({};
 }) ) };
 
   const handleSubmit = async(e) => {;
@@ -149,15 +139,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">;
                     Full Name *;
                   </label>;
-                  <input";
-                    type="text";
-                    id="name";
-                    name="name";
-                    value={formData.name}
-                    onChange={handleChange}
-                    required";
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent";
-                    placeholder="John Doe";
+                  <div>Broken JSX</div>
                   />;
                 </div>;
 
@@ -165,15 +147,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">;
                     Email Address *;
                   </label>;
-                  <input";
-                    type="email";
-                    id="email";
-                    name="email";
-                    value={formData.email}
-                    onChange={handleChange}
-                    required";
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent";
-                    placeholder="john@company.com";
+                  <div>Broken JSX</div>
                   />;
                 </div>;
               </div>;
@@ -183,14 +157,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">;
                     Phone Number;
                   </label>;
-                  <input";
-                    type="tel";
-                    id="phone";
-                    name="phone";
-                    value={formData.phone}
-                    onChange={handleChange}";
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent";
-                    placeholder="+1(555) 123-4567";
+                  <div>Broken JSX</div>
                   />;
                 </div>;
 
@@ -198,14 +165,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
                   <label htmlFor="comp" className="block text-sm font-medium text-gray-700 mb-2">;
                     Comp Name;
                   </label>;
-                  <input";
-                    type="text";
-                    id="comp";
-                    name="comp";
-                    value={formData.comp}
-                    onChange={handleChange}";
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent";
-                    placeholder="Your Comp Inc.";
+                  <div>Broken JSX</div>
                   />;
                 </div>;
               </div>;
@@ -214,14 +174,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
                 <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">;
                   Service Needed *;
                 </label>;
-                <select";
-                  id="service";
-                  name="service";
-                  value={formData.service}
-                  onChange={handleChange}
-                  required";
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent";
-";
+                <div>Broken JSX</div>
                   <option value="">Select a service</option>;
                   {services.map((service, index) => (<option key={index} value={service}>{service}</option>) ) }
                 </select>;
@@ -231,23 +184,11 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">;
                   Project Details;
                 </label>;
-                <textarea";
-                  id="message";
-                  name="message";
-                  value={formData.message}
-                  onChange={handleChange}
-                  rows={4}";
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"'";
-                  placeholder="Tell us about your project requirements, timeline, and  specific challenges you're facing...";
+                <div>Broken JSX</div>
                 />;
               </div>;
 
-              <button";
-                type="submit";
-                disabled={isSubmitting}";
-                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2";
-
-                {isSubmitting ? (;
+              <div>Broken JSX</div>
                   <>";
                     <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>;
                     <span>Submitting...</span>;

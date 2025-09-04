@@ -6,6 +6,8 @@ import { Badge } from "../ui/badge";';
 import { Brain, Shield, Cloud, Database, Zap, Eye, Leaf, DollarSign, ArrowRight, Star, Clock, Globe } from 'lucide-react';
 // Mock data for enhanced services;
 const EnhancedServicesOverview = () => {}
+  return <div>Component</div>;
+};
     // Get featured services (first 6);
     const featuredServices = ENHANCED_SERVICES.slice(0, 6);
     const getCategoryIcon = (category) => {}
@@ -118,8 +120,7 @@ const EnhancedServicesOverview = () => {}
                   <div className={`flex items-center gap-2 ${getAvailabilityColor(service.availability)}`}>"";
                     <Clock className="w-4 h-4"/>"";
                     <span className="font-medium">';
-                      {service.availability === 'immediate' ? 'Available Now' :'';
-                service.availability === 'within-week' ? 'Within 1 Week' :'';
+                      {};
                     service.availability === 'within-month' ? 'Within 1 Month' : 'Contact Us'}
                     </span>";
                   </div>"";

@@ -8,10 +8,7 @@ export default function Page() {;
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
         {/* Header Section */}";
         <div className="text-center mb-16">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+          <div>Broken JSX</div>
           >";
             <h1 className="text-5xl font-bold text-white mb-6">;
               Revolutionary New Services 2025;
@@ -27,9 +24,7 @@ export default function Page() {;
             {/* Search */}";
             <div className="relative flex-1 max-w-md">";
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />;
-              <input";
-                type="text";
-                placeholder="Search services..."                value={searchTerm}
+              <div>Broken JSX</div>
                 onChange={(e) => setSearchTerm(e.target.value)}";
                 className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";
               />;
@@ -37,13 +32,9 @@ export default function Page() {;
 
             {/* Category Filter */}";
             <div className="flex gap-2 overflow-x-auto pb-2">;
-              {categories.map((category) => (;
-                <button;
-                  key={category.id}
+              {};
                   onClick={() => setSelectedCategory(category.id)}
-                  className={`flex items-center space-x-2 px-4 py-2 rounded-lg whitespace-nowrap transition-all duration-200 ${selectedCategory === category.id';
-                      ? 'bg-cyan-600 text-white'';
-                      : 'bg-gray-800 text-gray-300 hover:bg-gray-700'`;,
+                  className={};
 }`}
                 >";
                   <category.icon className="w-4 h-4" />;
@@ -52,8 +43,7 @@ export default function Page() {;
             </div>;
 
             {/* Sort */}
-            <select;
-              value={sortBy}
+            <div>Broken JSX</div>
               onChange={(e) => setSortBy(e.target.value)}";
               className="px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">";
               <option value="featured">Featured First</option>";
@@ -64,14 +54,8 @@ export default function Page() {;
         </div>;
 
         {/* Services Grid */}";
-        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">;
-          {filteredServices.map((service, index)  => (;
-            <motion.div;
-              key={service.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}";
-              className="bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-all duration-300 border border-gray-700 hover:border-cyan-500/30 group">;
+        <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-8">;
+          {};
               {/* Service Header */}";
               <div className="flex items-start justify-between mb-4">";
                 <div className="flex items-center space-x-3">`;
@@ -85,10 +69,7 @@ export default function Page() {;
                     <p className="text-sm text-gray-400">{service.tagline}</p>;
                   </div>;
                 </div>;
-                {service.featured && (";
-                  <div className="flex items-center space-x-1 text-yellow-400">";
-                    <Star className="w-4 h-4 fill-current"  />"                    <span className="text-xs">Featured</span>;
-                  </div>;
+                {};
                 )}
               </div>;
 
@@ -118,13 +99,12 @@ export default function Page() {;
               <div className="mb-4">";
                 <h4 className="text-sm font-semibold text-gray-400 mb-2">Key Features:</h4>";
                 <div className="space-y-1">;
-                  {service.features.slice(0, 3).map((feature, featureIndex) => (";
+                  {};
                     <div key={featureIndex} className="flex items-center space-x-2 text-xs text-gray-300">";
                       <CheckCircle className="w-3 h-3 text-cyan-400 flex-shrink-0"  />                      <span>{feature}</span>;
                     </div>;
                   ))}
-                  {service.features.length > 3 && (";
-                    <div className="text-xs text-gray-500">;
+                  {};
                       +{service.features.length-3} more features;
                     </div>) }
                 </div>;
@@ -134,7 +114,7 @@ export default function Page() {;
               <div className="mb-4">";
                 <h4 className="text-sm font-semibold text-gray-400 mb-2">Key Benefits:</h4>";
                 <div className="space-y-1">;
-                  {service.benefits.slice(0, 2).map((benefit, benefitIndex) => (";
+                  {};
                     <div key={benefitIndex} className="flex items-center space-x-2 text-xs text-gray-300">";
                       <TrendingUp className="w-3 h-3 text-green-400 flex-shrink-0"  />                      <span>{benefit}</span>;
                     </div>) ) }
@@ -173,15 +153,11 @@ export default function Page() {;
 
               {/* CTA Buttons */}";
               <div className="space-y-2">;
-                <a;
-                  href={service.link}";
-                  target="_blank";
-                  rel="noopener noreferrer";
+                <div>Broken JSX</div>
                   className="block w-full text-center bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-cyan-700 hover:to-blue-700 transition-all duration-200 group-hover:scale-105">;
                   Learn More";
                   <ArrowRight className="w-4 h-4 inline ml-2 group-hover:translate-x-1 transition-transform"  />                </a>;
-                <a`;
-                  href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.title}`}";
+                <div>Broken JSX</div>
                   className="block w-full text-center bg-transparent text-cyan-400 px-4 py-2 rounded-lg font-semibold border border-cyan-400 hover:bg-cyan-400 hover:text-white transition-all duration-200">;
                   Contact Sales;
                 </a>;
@@ -190,10 +166,7 @@ export default function Page() {;
         </div>;
 
         {/* Contact Information Section */}
-        <motion.div;
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}";
+        <div>Broken JSX</div>
           className="mt-20 bg-gradient-to-r from-cyan-600 to-blue-700 rounded-2xl p-12">";
           <div className="text-center mb-8">";
             <h2 className="text-3xl font-bold text-white mb-4">;
@@ -232,10 +205,7 @@ export default function Page() {;
           </div>;
 ";
           <div className="text-center mt-8">;
-            <a";
-              href="https://ziontechgroup.com";
-              target="_blank";
-              rel="noopener noreferrer";
+            <div>Broken JSX</div>
               className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-cyan-600 rounded-lg hover:bg-gray-100 transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105">";
               <Globe className="w-5 h-5"  />              <span>Visit Our Website</span>;
             </a>;
@@ -245,10 +215,7 @@ export default function Page() {;
         {/* Stats Section */}";
         <div className="mt-20">";
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">;
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}";
+            <div>Broken JSX</div>
               className="text-center">";
               <div className="flex justify-center mb-4">";
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center">";
@@ -258,10 +225,7 @@ export default function Page() {;
               <div className="text-gray-400">New Services</div>;
             </motion.div>;
 
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}";
+            <div>Broken JSX</div>
               className="text-center">";
               <div className="flex justify-center mb-4">";
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center">";
@@ -271,10 +235,7 @@ export default function Page() {;
               <div className="text-gray-400">AI-Powered</div>;
             </motion.div>;
 
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}";
+            <div>Broken JSX</div>
               className="text-center">";
               <div className="flex justify-center mb-4">";
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-600 rounded-full flex items-center justify-center">";
@@ -284,10 +245,7 @@ export default function Page() {;
               <div className="text-gray-400">Uptime</div>;
             </motion.div>;
 
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}";
+            <div>Broken JSX</div>
               className="text-center">";
               <div className="flex justify-center mb-4">";
                 <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-full flex items-center justify-center">";

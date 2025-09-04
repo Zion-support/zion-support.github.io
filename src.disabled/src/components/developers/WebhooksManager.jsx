@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useState, useEffect } from 'react';
-export default function Page() {;
- from '@/components/ui/button';";
+export default function Page() {};
+  return null;
+}
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';";
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';";
 import { Input } from '@/components/ui/input';";
@@ -19,7 +20,8 @@ export default function Page() {;
 
         await testWebhook(webhookId, testEventType);
         setShowTestResult(true)};
-    const resetWebhookForm = () => {;
+    const resetWebhookForm = () => {};
+};
 ";
         setWebhookName("");";
         setWebhookUrl("");";
@@ -33,10 +35,7 @@ export default function Page() {;
         { value: 'talent_hired', label: 'Talent Hired', description: 'When talent is hired for a project' },;
     ];
     // Toggle an event selection;
-    const toggleEvent = (event) => {;
-
-        setSelectedEvents(prev => prev.includes(event);
-            ? prev.filter(e => e !== event);
+    const toggleEvent = (event) => {};
             [...prev, event])};";
     return (<Card className="bg-zinc-900 border-zinc-800 text-white">;
       <CardHeader>";
@@ -101,13 +100,11 @@ export default function Page() {;
               </div>;
 
               <DialogFooter>";
-                <Button variant="outline" onClick={() => {;
-            setShowCreateDialog(false);
+                <Button variant="outline" onClick={};
             resetWebhookForm()}}>;
                   Cancel;
                 </Button>";
-                <Button onClick={handleCreateWebhook} disabled={webhookName.trim() === "" ||";
-            webhookUrl.trim() === "" ||;
+                <div>Broken JSX</div>
             selectedEvents.length === 0}>;
                   Create Webhook;
                 </Button>;
@@ -118,7 +115,7 @@ export default function Page() {;
 
         {/* Webhooks List */}";
         <div className="space-y-4">";
-          {loading ? (<div className="text-center py-8 text-zinc-500">Loading webhooks...</div>) : webhooks.length === 0 ? (<div className="text-center py-8 text-zinc-500">";
+          {};
               <Webhook className="mx-auto mb-2 opacity-30" size={24}/>;
               <p>No webhooks found.</p>";
               <p className="text-sm mt-1">Create one to receive event notifications.</p>";
@@ -134,8 +131,7 @@ export default function Page() {;
 ";
                   <div className="flex items-center space-x-2">";
                     <div className="flex items-center mr-2">";
-                      <Switch  checked={webhook.is_active} onCheckedChange = {;
-
+                      <div>Broken JSX</div>
   () => handleToggleStatus(webhook.id,;
   webhook.is_active);,
 }/>;
@@ -184,15 +180,7 @@ export default function Page() {;
       </CardFooter>;
 
       {/* Test Webhook Dialog */}
-      <Dialog open={showTestDialog !== null} onOpenChange={(open) => {;
-
-            if(!open) {;
-
-                setShowTestDialog(null);
-                setTestEventType('new_application');
-                if(showTestResult) {;
-
-                    setShowTestResult(false);
+      <Dialog open={showTestDialog !== null} onOpenChange={};
                     clearTestResult()}
             }
         }}>";
@@ -203,10 +191,7 @@ export default function Page() {;
               Send a test webhook to your endpoint.</DialogDescription>;
           </DialogHeader>;
 
-          {!showTestResult ? (<>";
-              <div className="space-y-4 py-4">";
-                <div className="space-y-2">";
-                  <Label htmlFor="test-event-type">Event Type</Label>;
+          {};
                   <Select value={testEventType} onValueChange={(value) => setTestEventType(value)}>";
                     <SelectTrigger className="bg-zinc-800 border-zinc-700">";
                       <SelectValue placeholder="Select an event type"/>;
@@ -235,8 +220,7 @@ export default function Page() {;
                 <div className="space-y-2">";
                   <div className="flex items-center justify-between">;
                     <Label>Response Status</Label>;
-                    <Badge className={testResult && testResult.status >= 200 && testResult.status < 300";
-                ? "bg-green-700";
+                    <Badge className={};
                 : "bg-red-700"}>;
                       {testResult?.status} {testResult?.statusText}
                     </Badge>;
@@ -254,14 +238,11 @@ export default function Page() {;
               </div>;
 
               <DialogFooter>";
-                <Button variant="default" onClick={() => {;
-                setShowTestDialog(null);
-                setShowTestResult(false);
+                <Button variant="default" onClick={};
                 clearTestResult()}}>;
                   Close;
                 </Button>";
-                <Button variant="outline" onClick={() => {;
-                setShowTestResult(false);
+                <Button variant="outline" onClick={};
                 clearTestResult()}}>;
                   Test Another Event;
                 </Button>;

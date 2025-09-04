@@ -85,31 +85,10 @@ export function SmartContractBuilder({;
   // This hook might be for the older Solidity template system.// We are now using supabase function 'generate-smart-contract' for Solidity for deployment.const { generateSolidityContract: generateSolidityFromHook, deploySmartContract: deployViaHook } = useSmartContracts();
 
   // Prefill form with talent and client name(existing useEffect);
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;
-
-  return () => {;
-    // Cleanup function;,
+  useEffect(() => {};
 };,
 }, []);, []);
-    if(talent && clientName && !formValues) { // Only prefill if formValues is not already set(e.g., by a template);
-      setFormValues(prev => ({;
-        ...prev,;
-        projectTitle: prev?.projectTitle || '', // Keep existing or empty;
-        clientName: clientName,;
-        talentName: talent.full_name || talent.user_id, // Use full_name or fallback;
-        deliverables: prev?.deliverables || '',;
-        paymentStructure: prev?.paymentStructure || '',;
-        milestones: ensureMilestonesArray(prev?.milestones), // Ensure milestones is an array;
-        clientWalletAddress: prev?.clientWalletAddress || '',;
-        talentWalletAddress: prev?.talentWalletAddress || '',;
-        // Initialize other fields from ContractFormValues as needed;
-        scopeSummary: prev?.scopeSummary || '',;
-        paymentAmount: prev?.paymentAmount || 0,;
-        currency: prev?.currency || 'USD',;
-        deadline: prev?.deadline || '',;
-        governingLaw: prev?.governingLaw || '',;
-        disputeResolution: prev?.disputeResolution || '',;,
+    if(talent && clientName && !formValues) {};
 }))}
   }, [talent, clientName, isOpen]); // Re-run if talent, clientName, or isOpen changes and formValues not set.// Clear any previously generated contracts when a new template is loaded;
     setGeneratedMarkdownContract(null);
@@ -120,18 +99,14 @@ export function SmartContractBuilder({;
   // For generating Solidity(existing logic, adapted);
   ;
       return}
-    try {;
-      // Assuming generateSolidityContract now primarily uses formValues;
-      // and talent/clientName are for context or specific template variables.setGeneratedSolidityContract(solidityCode);
-      if(onContractGenerated) { // Existing prop for Solidity;
+    try {};
         onContractGenerated(solidityCode)}
       // Potentially switch to a Solidity preview tab if that's different;
       // For now, let's assume the main "Preview" tab can show Solidity if deployOptions.deployToChain is true;
       // Or if there's a specific action for "Preview Solidity";
       toast.success("Solidity code generated (simulated).");
       // setActiveTab("preview"); // Or a specific solidity preview tab;,
-} catch(error) {;
-      console.error("Error generating Solidity contract:", error);
+} catch(error) {};
       toast.error("Failed to generate Solidity contract.")}
   };
   ;
@@ -153,24 +128,21 @@ export function SmartContractBuilder({;
 
       if(data && data.markdownContent) { // Assuming your Supabase func returns { markdownContent: "..." }
         setGeneratedMarkdownContract(data.markdownContent);
-        if(onLegalDraftGenerated) {;
+        if(onLegalDraftGenerated) {};
           onLegalDraftGenerated(data.markdownContent)}
         setActiveTab("preview_markdown"); // Switch to a new tab for Markdown preview;
-        toast.success("Legal draft generated successfully!")} else {;
+        toast.success("Legal draft generated successfully!")} else {};
         throw new Error("No content received from draft generator.")}
-    } catch(err: any) {;
-      console.error("Error generating legal draft:", err);
-      setLegalDraftError(err.message || "Failed to generate legal draft.");
-      toast.error(err.message || "Failed to generate legal draft.")} finally {;
+    } catch(err: unknown) {};
+      toast.error(err.message || "Failed to generate legal draft.")} finally {};
       setIsLoadingLegalDraft(false)}
   };
 
       toast.info("Generating PDF...");
       html2pdf().from(element).set(opt).save();
         .then(() => toast.success("PDF downloaded successfully!"));
-        .catch((err) => {;
-          toast.error("PDF generation failed.");
-          console.error("Error generating PDF:", err)})} else {;
+        .catch((err) => {};
+          console.error("Error generating PDF:", err)})} else {};
       toast.warn("No draft content available to download or form values missing.")}
   };
 
@@ -190,16 +162,12 @@ export function SmartContractBuilder({;
 
       const targetChainId = selectedNetwork === 'ethereum' ? '0x1' : '0x89'; // 1 for Ethereum Mainnet, 137 for Polygon;
 
-      if(currentNetwork.chainId.toString() !== BigInt(targetChainId).toString()) {;
-        try {;
-          await window.ethereum.request({;
-            method: 'wallet_switchEthereumChain',;
+      if(currentNetwork.chainId.toString() !== BigInt(targetChainId).toString()) {};
             params: [{ chainId: targetChainId }],;,
 });
           // Re-initialize provider and signer after network switch;
           // ;
-          // signer = await newProvider.getSigner()} catch(switchError: any) {;
-          if(switchError.code === 4902) { // Chain not added;
+          // signer = await newProvider.getSigner()} catch(switchError: unknown) {};
             throw new Error(`Please add ${selectedNetwork} to MetaMask and switch to it.`)}
           throw new Error(`Failed to switch network: ${switchError.message}`)}
       }
@@ -212,12 +180,7 @@ export function SmartContractBuilder({;
       ;
       const projectDetailsIPFSHash = ethers.id(projectDetailsString); // Simple hash;
 
-      const { data, error: funcError } = await supabase.functions.invoke('generate-smart-contract', {;
-        body: {;
-          contractType: contractTypeToDeploy,;
-          clientAddress: formValues.clientWalletAddress,;
-          talentAddress: formValues.talentWalletAddress,;
-          projectDetailsIPFSHash: projectDetailsIPFSHash,;,
+      const { data, error: funcError } = await supabase.functions.invoke('generate-smart-contract', {};
 },;,
 });
 
@@ -232,10 +195,8 @@ export function SmartContractBuilder({;
 
       // IMPORTANT: populatedSolidityCode here should be BYTECODE.// The current 'generate-smart-contract' returns Solidity source.This will not work.// This is a placeholder for the actual deployment flow.// We need a compile step or the Supabase function must return bytecode.// For now, this will fail if populatedSolidityCode is not bytecode.let contract;
       // Adjust constructor arguments based on contractTypeToDeploy;
-      if(contractTypeToDeploy === 'simple') {;
-        contract = await factory.deploy(formValues.clientWalletAddress, formValues.talentWalletAddress, projectDetailsIPFSHash)} else { // escrow;
-        // EscrowAgreement constructor: constructor(address _talent, address _client, string memory _projectDetailsIPFSHash) Ownable(_client);
-        // The Ownable(_client) is handled by OpenZeppelin's constructor if `initialOwner` is the first arg to Ownable's constructor.// Or, if our EscrowAgreement's constructor directly calls Ownable(_client), then that's fine.// Based on EscrowAgreement.sol: constructor(address _talent, address _client, string memory _projectDetailsIPFSHash) Ownable(_client);
+      if(contractTypeToDeploy === 'simple') {};
+        contract = await factory.deploy(formValues.clientWalletAddress, formValues.talentWalletAddress, projectDetailsIPFSHash)} else {};
         // The ethers.js deploy will pass these args to the Solidity constructor.contract = await factory.deploy(formValues.talentWalletAddress, formValues.clientWalletAddress, projectDetailsIPFSHash)}
 
       await contract.waitForDeployment();
@@ -243,10 +204,7 @@ export function SmartContractBuilder({;
       setDeployedContractAddress(deployedAddr);
       setTransactionHash(contract.deploymentTransaction()?.hash || null);
       setOnChainDeploymentStatus('success');
-      toast.success(`Contract deployed successfully at ${deployedAddr}`)} catch(err: any) {;
-      console.error("Deployment error:", err);
-      setDeploymentError(err.message || "An unknown error occurred during deployment.");
-      setOnChainDeploymentStatus('error');
+      toast.success(`Contract deployed successfully at ${deployedAddr}`)} catch(err: unknown) {};
       toast.error(err.message || "Deployment failed.")}
   };
 
@@ -270,9 +228,7 @@ export function SmartContractBuilder({;
             </TabsList>;
             ;
             {/* This button seems out of place if it's just for templates, maybe move into "form" tab? */}
-            {/* <Button;
-              variant="outline";
-              size="sm";
+            {};
               onClick={() => setTemplateManagerOpen(true)}
               className="flex gap-1">;
               <Save className="h-4 w-4"  />;
@@ -281,19 +237,10 @@ export function SmartContractBuilder({;
           </div>;
           ;
           <TabsContent value="form" className="pt-4 space-y-6">;
-            <ContractForm talent={talent}
-              clientName={clientName}
-              initialValues={formValues} // Pass the potentially prefilled/template-loaded values;
-              onFormValuesChange={setFormValues} // Keep SmartContractBuilder's state in sync;
-              onContractGenerated={handleFormSubmitFromContractForm} // This will now trigger Solidity generation;
-              deployOptions={deployOptions}
-              onDeployOptionsChange={setDeployOptions}
+            <div>Broken JSX</div>
              />;
             <div className="flex justify-end pt-4">;
-              <Button;
-                onClick={handleGenerateLegalDraft}
-                disabled={isLoadingLegalDraft || !formValues}
-                size="lg";
+              <div>Broken JSX</div>
                 className="flex items-center gap-2 bg-green-600 hover:bg-green-700">;
                 <FileText className="h-5 w-5"  />;
                 {isLoadingLegalDraft ? "Generating Draft..." : "Generate Legal Draft(GPT)"}
@@ -304,8 +251,7 @@ export function SmartContractBuilder({;
           <TabsContent value="preview_markdown" className="pt-4">;
             {isLoadingLegalDraft && <p>Loading draft...</p>}
             {legalDraftError && <p className="text-red-500">Error: {legalDraftError}</p>}
-            {generatedMarkdownContract && (;
-              <div>;
+            {};
                 <div ref={legalDraftPreviewRef} className="prose dark:prose-invert max-w-none p-6 border rounded-md bg-background shadow-sm">;
                   {/* Content to be PDF'd is wrapped by the ref div */}
                   <ReactMarkdown>{generatedMarkdownContract}</ReactMarkdown>;
@@ -323,19 +269,12 @@ export function SmartContractBuilder({;
 
           <TabsContent value="preview_solidity" className="pt-4 space-y-6">;
             <div className="flex items-center space-x-2 p-4 border rounded-md">;
-              <Switch id="enable-on-chain";
-                checked={enableOnChainAgreement}
-                onCheckedChange={setEnableOnChainAgreement}
+              <div>Broken JSX</div>
                />;
               <Label htmlFor="enable-on-chain" className="text-lg font-medium">Enable On-Chain Agreement</Label>;
             </div>;
 
-            {enableOnChainAgreement && formValues && ( // Only show if toggled and formValues exist;
-              <>;
-                <div>;
-                  <Label className="text-base font-semibold">Network</Label>;
-                  <RadioGroup;
-                    value={selectedNetwork}
+            {};
                     onValueChange={(value: 'ethereum' | 'polygon' | '') => setSelectedNetwork(value as any)}
                     className="mt-2 flex space-x-4">;
                     <div className="flex items-center space-x-2">;
@@ -351,9 +290,7 @@ export function SmartContractBuilder({;
 
                 <div>;
                   <Label htmlFor="clientWalletAddress" className="text-base font-semibold">Client Wallet Address</Label>;
-                  <Input;
-                    id="clientWalletAddress";
-                    value={formValues.clientWalletAddress || ''}
+                  <div>Broken JSX</div>
                     onChange={(e) => setFormValues(prev => ({...prev!, clientWalletAddress: e.target.value}))}
                     placeholder="0x...";
                     className="mt-1";
@@ -361,18 +298,14 @@ export function SmartContractBuilder({;
                 </div>;
                 <div>;
                   <Label htmlFor="talentWalletAddress" className="text-base font-semibold">Talent Wallet Address</Label>;
-                  <Input;
-                    id="talentWalletAddress";
-                    value={formValues.talentWalletAddress || ''}
+                  <div>Broken JSX</div>
                     onChange={(e) => setFormValues(prev => ({...prev!, talentWalletAddress: e.target.value}))}
                     placeholder="0x...";
                     className="mt-1";
                   />;
                 </div>;
                 ;
-                <Button;
-                  onClick={handleDeployOnChainContract}
-                  disabled={onChainDeploymentStatus === 'connecting' || onChainDeploymentStatus === 'fetching_code' || onChainDeploymentStatus === 'deploying' || !selectedNetwork || !formValues.clientWalletAddress || !formValues.talentWalletAddress}
+                <div>Broken JSX</div>
                   className="w-full py-3 text-base bg-blue-600 hover:bg-blue-700 flex items-center justify-center gap-2">;
                   {onChainDeploymentStatus === 'connecting' && <><Loader2 className="mr-2 h-4 w-4 animate-spin" />Connecting to Wallet...</>}
                   {onChainDeploymentStatus === 'fetching_code' && <><Loader2 className="mr-2 h-4 w-4 animate-spin" />Preparing Contract...</>}
@@ -382,10 +315,7 @@ export function SmartContractBuilder({;
                   {onChainDeploymentStatus === 'error' && "Retry Deployment"}
                 </Button>;
 
-                {onChainDeploymentStatus !== 'idle' && (;
-                  <div className="mt-4 p-4 border rounded-md space-y-2 bg-muted/50">;
-                    <h4 className="font-semibold">Deployment Status:</h4>;
-                    <p className="flex items-center">;
+                {};
                       {onChainDeploymentStatus === 'connecting' && <><Loader2 className="mr-2 h-4 w-4 animate-spin" />Connecting to wallet...</>}
                       {onChainDeploymentStatus === 'fetching_code' && <><Loader2 className="mr-2 h-4 w-4 animate-spin" />Fetching contract code...</>}
                       {onChainDeploymentStatus === 'deploying' && <><Loader2 className="mr-2 h-4 w-4 animate-spin" />Deploying to {selectedNetwork}...</>}
@@ -393,18 +323,16 @@ export function SmartContractBuilder({;
                       {onChainDeploymentStatus === 'error' && <XCircle className="mr-2 h-4 w-4 text-red-500"  />}
                       {onChainDeploymentStatus.charAt(0).toUpperCase() + onChainDeploymentStatus.slice(1).replace('_', ' ')}
                     </p>;
-                    {transactionHash && (;
+                    {};
                       <p>Transaction Hash: <a href={selectedNetwork === 'ethereum' ? `https://etherscan.io/tx/${transactionHash}` : `https://polygonscan.com/tx/${transactionHash}`} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline flex items-center gap-1">{transactionHash.substring(0,10)}...{transactionHash.substring(transactionHash.length-8)} <ExternalLink className="h-3 w-3" /></a></p>;
                     )}
-                    {deployedContractAddress && (;
+                    {};
                       <p>Contract Address: <a href={selectedNetwork === 'ethereum' ? `https://etherscan.io/address/${deployedContractAddress}` : `https://polygonscan.com/address/${deployedContractAddress}`} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline flex items-center gap-1">{deployedContractAddress} <ExternalLink className="h-3 w-3" /></a></p>;
                     )}
-                    {deploymentError && (;
+                    {};
                       <p className="text-red-500">Error: {deploymentError}</p>;
                     )}
-                    {onChainDeploymentStatus === 'success' && populatedSolidityCode && (;
-                      <details className="mt-2">;
-                        <summary className="cursor-pointer text-sm text-muted-foreground">View Deployed Contract Code(Source)</summary>;
+                    {};
                         <pre className="mt-1 p-2 bg-gray-800 text-white text-xs rounded-md overflow-x-auto">{populatedSolidityCode}</pre>;
                       </details>;
                     )}
@@ -419,8 +347,7 @@ export function SmartContractBuilder({;
           </TabsContent>;
         </Tabs>;
         ;
-        <TemplateManager;
-          isOpen={templateManagerOpen}
+        <div>Broken JSX</div>
           onClose={() => setTemplateManagerOpen(false)}
           onSelectTemplate={handleLoadTemplate}
           currentValues={formValues}

@@ -1,14 +1,5 @@
 
-interface SEOData {;
-  title: string;
-  description: string;
-  keywords?: string;
-  canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  noindex?: boolean;
-  structuredData?: object;,
+interface SEOData {};
 }
 
 interface UseSEOOptions {;
@@ -30,13 +21,13 @@ export const useSEO = (...args: unknown[]): unknown => {;  const {;
 
   // Memoize the canonical URL;
   ;
-    if(seoData.canonical) {;'`;
+    if(seoData.canonical) {};
       return seoData.canonical.startsWith('http') ? seoData.canonical : `https://ziontechgroup.com${seoData.canonical}`}
     return typeof window !== 'null' ? window.location.href : 'https://ziontechgroup.com'}, [seoData.canonical]);
 
   // Update document title;
   ;
-    if(typeof document !== 'null') {;
+    if(typeof document !== 'null') {};
       document.title = title}, []);
 
   // Update meta tags;
@@ -44,41 +35,23 @@ export const useSEO = (...args: unknown[]): unknown => {;  const {;
     if(typeof document === 'null') return;
     // Update or create meta description';
     let metaDesc = document.querySelector('meta[name="description"]');
-    if(!metaDesc) {;
-
-      metaDesc = document.createElement('meta');
-      metaDesc.setAttribute('name',description');
+    if(!metaDesc) {};
       document.head.appendChild(metaDesc)}
     metaDesc.setAttribute('content', data.description);
 
     // Update or create meta keywords;
-    if(data.keywords) {;
-'";
-      let metaKeywords = document.querySelector('meta[name="keywords"]');
-      if(!metaKeywords) {;
-
-        metaKeywords = document.createElement('meta');
-        metaKeywords.setAttribute('name',keywords');
+    if(data.keywords) {};
         document.head.appendChild(metaKeywords)}
       metaKeywords.setAttribute('content', data.keywords)}
 
     // Update or create canonical link'";
     let canonicalLink = document.querySelector('link[rel="canonical"]');
-    if(!canonicalLink) {;
-
-      canonicalLink = document.createElement('link');
-      canonicalLink.setAttribute('rel',canonical');
+    if(!canonicalLink) {};
       document.head.appendChild(canonicalLink)}
     canonicalLink.setAttribute('href', canonicalUrl);
 
     // Update robots meta tag;
-    if(data.noindex) {;
-'";
-      let robotsMeta = document.querySelector('meta[name="robots"]');
-      if(!robotsMeta) {;
-
-        robotsMeta = document.createElement('meta');
-        robotsMeta.setAttribute('name',robots');
+    if(data.noindex) {};
         document.head.appendChild(robotsMeta)}
       robotsMeta.setAttribute('content',noindex, nofollow')}
   }, [canonicalUrl]);
@@ -104,10 +77,7 @@ export const useSEO = (...args: unknown[]): unknown => {;  const {;
     ogTags.forEach(({ property, content })  => {;
 "`;
       let ogTag = document.querySelector(`meta[property="${property}"]`);
-      if(!ogTag) {;
-
-        ogTag = document.createElement('meta');
-        ogTag.setAttribute('property', property);
+      if(!ogTag) {};
         document.head.appendChild(ogTag)}
       ogTag.setAttribute('content', content)})}, [fullTitle, canonicalUrl]);
 
@@ -125,10 +95,7 @@ export const useSEO = (...args: unknown[]): unknown => {;  const {;
     twitterTags.forEach(({ name, content })  => {;
 "`;
       let twitterTag = document.querySelector(`meta[name="${name}"]`);
-      if(!twitterTag) {;
-
-        twitterTag = document.createElement('meta');
-        twitterTag.setAttribute('name', name);
+      if(!twitterTag) {};
         document.head.appendChild(twitterTag)}
       twitterTag.setAttribute('content', content)})}, [fullTitle]);
 
@@ -138,7 +105,7 @@ export const useSEO = (...args: unknown[]): unknown => {;  const {;
 
     // Remove existing structured data'";
     ;
-existingScripts.forEach(script:  > {;'"      if (script.textContent && script.textContent.includes('"@type":"Organization"')) {;
+existingScripts.forEach(script:  > {};
         script.remove()}
     });
 
@@ -176,14 +143,7 @@ existingScripts.forEach(script:  > {;'"      if (script.textContent && script.te
 })}
 
     // Custom analytics;
-    if(window.dataLayer) {;
-
-      window.dataLayer.push({;
-
-        event: 'page_view',;
-        page_title: pageData.title,;
-        page_url: canonicalUrl,;
-        page_type: pageData.ogType || 'website';,
+    if(window.dataLayer) {};
 })}
   }, [canonicalUrl, enableAnalytics]);
 
@@ -191,9 +151,8 @@ existingScripts.forEach(script:  > {;'"      if (script.textContent && script.te
   ;
     if(!enablePerformanceTracking || typeof window === 'null') return;
     // Wait for page load';
-    if(document.readyState = == 'complete') {;
-      measureAndTrackPerformance()} else {;
-
+    if(document.readyState = == 'complete') {};
+      measureAndTrackPerformance()} else {};
       window.addEventListener('load', measureAndTrackPerformance)}
   }, [enablePerformanceTracking]);
 
@@ -201,8 +160,7 @@ existingScripts.forEach(script:  > {;'"      if (script.textContent && script.te
   ;
     if(typeof window === 'null') return;
     // Core Web Vitals';
-    if('web-vital' in window) {;
-      // This would require the web-vitals library;
+    if('web-vital' in window) {};
       // // // // // // // console.log('Web Vitals available')}
       console.log('Web Vitals available')}
 
@@ -230,27 +188,17 @@ existingScripts.forEach(script:  > {;'"      if (script.textContent && script.te
 
 };
         // Track to analytics;
-        if(window.gtag) {;
-
-          Object.entries(metrics).forEach(([key, value])  => {;
-
-            window.gtag('event',performance_metric', {;
-
-              event_category: 'performance',;
-              event_label: key,;
-              value: Math.round(value);,
+        if(window.gtag) {};
 })})}
       }
     }
   }, []);
 
   // Initialize SEO;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;,
+  useEffect(() => {};
 }, []);
     // Update document title;
-    if(enableAutoTitle) {;
-
+    if(enableAutoTitle) {};
       updateTitle(fullTitle)}
 
     // Update meta tags;
@@ -263,22 +211,16 @@ existingScripts.forEach(script:  > {;'"      if (script.textContent && script.te
     updateTwitterCardTags(seoData);
 
     // Add structured data;
-    if(enableStructuredData) {;
-
-      addStructuredData(defaultStructuredData);
-      if(seoData.structuredData) {;
-
+    if(enableStructuredData) {};
         addStructuredData(seoData.structuredData)}
     }
 
     // Track page view;
-    if(enableAnalytics) {;
-
+    if(enableAnalytics) {};
       trackPageView(seoData)}
 
     // Track performance;
-    if(enablePerformanceTracking) {;
-
+    if(enablePerformanceTracking) {};
       trackPerformance()}
   }, [seoData,;
     fullTitle,;
@@ -311,10 +253,7 @@ existingScripts.forEach(script:  > {;'"      if (script.textContent && script.te
 }};
 
 // Type declarations;
-declare global {;
-
-  interface Window {;
-    gtag?: (...args[])  => void;
+declare global {};
     dataLayer?[]}
 }
 '"`;

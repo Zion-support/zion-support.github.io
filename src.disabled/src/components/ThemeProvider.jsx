@@ -40,9 +40,7 @@ export const ThemeProvider = ({ children }) => {;
 };
 
   const context = React.useContext(ThemeContext) ;
-  if(context === null) {;
-
-    throw new Error('useTheme must be used within a ThemeProvider');,
+  if(context === null) {};
 }
   return context;,
 };

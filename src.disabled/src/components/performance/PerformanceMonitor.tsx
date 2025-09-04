@@ -14,12 +14,10 @@ export default function PerformanceMonitor() {;
         setMetrics({ firstContentfulPaintMs: Math.round((entry as PerformanceEntry).startTime) });,
 }
     };
-    try {;
-      const observer = new PerformanceObserver(entryHandler);
+    try {};
       observer.observe({ type: 'paint', buffered: true } as PerformanceObserverInit);
       return () => observer.disconnect();,
-} catch {;
-      // no-op;,
+} catch {};
 }
   }, []);
 

@@ -14,12 +14,7 @@
   hidden: { opacity: 0,;
   y: 20;,
 },;
-    visible: {;
-      opacity: 1,;
-      y: 0,;
-      transition: {;
-        duration: 0.6,;
-        staggerChildren: 0.2;,
+    visible: {};
 };,
 };,
 };
@@ -28,9 +23,7 @@
   hidden: { opacity: 0,;
   y: 20;,
 },;
-    visible: {;
-      opacity: 1,;
-      y: 0,;
+    visible: {};
       transition: { duration: 0.5 };,
 };,
 };
@@ -60,13 +53,7 @@ export function ITServiceRequestHero() {;
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>;
       </div>;
 
-      <motion.div";
-        className="container mx-auto px-4 relative z-10";
-        variants={containerVariants}";
-        initial="hidden";
-        whileInView="visible";
-        viewport={{ once: true }}
-";
+      <div>Broken JSX</div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">;
           {/* Left content */}";
           <motion.div variants={itemVariants} className="text-white">";
@@ -108,38 +95,18 @@ export function ITServiceRequestHero() {;
             </div>;
 ";
             <div className="flex flex-col sm:flex-row gap-4">;
-              <Button';
+              <div>Broken JSX</div>
                 onClick={() => document.getElementById('service-form')?.scrollIntoView({ behavior: 'smooth' })}";
                 className="bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-dark hover:to-zion-blue-dark text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300";
 
                 Request Service Now";
                 <MapPin className="w-5 h-5 ml-2"  />              </Button>;
-              <Button";
-                variant="outline";
-                className="border-zion-cyan/30 text-zion-cyan hover:bg-zion-cyan/10 px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300";
-
-                Learn More;
+              <div>Broken JSX</div>
               </Link>;
             </div>;
           </motion.div>;
 
-          <motion.div;
-            initial = {;
-
-  { opacity: 0,;
-  x: 30;,
-}}
-            whileInView = {;
-
-  { opacity: 1,;
-  x: 0;,
-}}
-            viewport={{ once: true }}
-            transition = {;
-
-  { duration: 0.8,;
-  delay: 0.2;,
-}}";
+          <div>Broken JSX</div>
             className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8">";
             <h3 className="text-2xl font-bold text-white mb-6 text-center">;
               Contact Information;
