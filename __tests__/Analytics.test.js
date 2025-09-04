@@ -1,25 +1,31 @@
-import React   from 'react"
-import { render, screen, fireEvent }   from '@testing-library/react"
-import '@testing-library/jest-dom
-import Analytics   from '../components/Analytics"
-  describe('Analytics', () => {'
-  test('renders without crashing', () => {'
-    render(<Analytics  / / />)
-    expect(screen.getByTestId("analytics")).toBeInTheDocument();'
-  })
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import Analytics from '../components/Analytics';
 
-  test('displays correct content', () => {'
-    render(<Analytics  / / />)
-    // Add specific content tests based on component
-  })
+describe('Analytics', () => {
+  it('renders without crashing', () => {
+    render(<Analytics />);
+    expect(screen.getByRole('main')).toBeInTheDocument();
+  });
 
-  test('handles user interactions', () => {'
-    render(<Analytics  / / />)
-    // Add interaction tests based on component functionality
-  })
+  it('tracks page views', () => {
+    render(<Analytics />);
+    const trackButton = screen.getByText('Track Page View');
+    fireEvent.click(trackButton);
+    expect(trackButton).toBeInTheDocument();
+  });
 
-  test('applies correct styling', () => {'
-    render(<Analytics  / / />)
-    // Add styling tests if needed
-  })
-})
+  it('handles event tracking', () => {
+    render(<Analytics />);
+    const eventButton = screen.getByText('Track Event');
+    fireEvent.click(eventButton);
+    expect(eventButton).toBeInTheDocument();
+  });
+
+  it('displays analytics data', () => {
+    render(<Analytics />);
+    const dataElement = screen.getByText('Analytics Data');
+    expect(dataElement).toBeInTheDocument();
+  });
+});

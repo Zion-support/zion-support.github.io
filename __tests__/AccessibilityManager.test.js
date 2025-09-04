@@ -1,25 +1,30 @@
-import React   from 'react"
-import { render, screen, fireEvent }   from '@testing-library/react"
-import '@testing-library/jest-dom
-import AccessibilityManager   from '../components/AccessibilityManager"
-  describe('AccessibilityManager', () => {'
-  test('renders without crashing', () => {'
-    render(<AccessibilityManager  / / />)
-    expect(screen.getByTestId("accessibilitymanager")).toBeInTheDocument();'
-  })
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import AccessibilityManager from '../components/AccessibilityManager';
 
-  test('displays correct content', () => {'
-    render(<AccessibilityManager  / / />)
-    // Add specific content tests based on component
-  })
+describe('AccessibilityManager', () => {
+  it('renders without crashing', () => {
+    render(<AccessibilityManager />);
+    expect(screen.getByRole('main')).toBeInTheDocument();
+  });
 
-  test('handles user interactions', () => {'
-    render(<AccessibilityManager  / / />)
-    // Add interaction tests based on component functionality
-  })
+  it('handles keyboard navigation', () => {
+    render(<AccessibilityManager />);
+    const element = screen.getByRole('button');
+    fireEvent.keyDown(element, { key: 'Tab' });
+    expect(element).toHaveFocus();
+  });
 
-  test('applies correct styling', () => {'
-    render(<AccessibilityManager  / / />)
-    // Add styling tests if needed
-  })
-})
+  it('provides ARIA labels', () => {
+    render(<AccessibilityManager />);
+    const element = screen.getByLabelText('Accessible element');
+    expect(element).toBeInTheDocument();
+  });
+
+  it('supports screen reader announcements', () => {
+    render(<AccessibilityManager />);
+    const announcement = screen.getByRole('status');
+    expect(announcement).toHaveAttribute('aria-live', 'polite');
+  });
+});

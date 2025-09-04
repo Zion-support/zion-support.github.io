@@ -5,8 +5,8 @@
  * Automatically runs linting and fixes common issues
  */
 
-const fs = require('fs')
-const path = require('path')
+const fs = require('fs');
+const path = require('path');
 const { execSync } = require('child_process');
 
 class LintingAutomation {
@@ -19,244 +19,180 @@ class LintingAutomation {
     this.isRunning = false;
     
     this.setupLogging();
-    this.log('Linting Automation started')}
+    this.log('Linting Automation started');
+  }
 
   setupLogging() {
-    const logDir = path.dirname(this.logFile;);
-    if () {
-      fs.mkdirSync(logDir, { recursive: true })}
+    const logDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logDir)) {
+      fs.mkdirSync(logDir, { recursive: true });
+    }
   }
 
   log(message) {
-    const timestamp = new Date().toISOString() {
-    ) {
-      fs.mkdirSync(logDir, { recursive: true })}
-  }
-
-  log(message) {
-    const timestamp = new Date().toISOString(;
-  });
-    const logMessage = `[${timestamp}] ${message}\;n;`;
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] ${message}\n`;
     
-    console.log(logMessage.trim(););
-    fs.appendFileSync(this.logFile, logMessage)}
+    console.log(logMessage.trim());
+    fs.appendFileSync(this.logFile, logMessage);
+  }
 
   async runLinting() {
     try {
       this.log('Running linting check...');
-      const startTime = Date.now(;);
+      const startTime = Date.now();
       
       // Run linting
-      const lintOutput = execSync('npm run lint', { 
-        cwd: this.projectRoot,
+      const lintOutput = execSync('npm run lint', {
         encoding: 'utf8',
-        timeout: 60000
-      ;};);
+        stdio: 'pipe',
+        cwd: this.projectRoot
+      });
       
-      const endTime = Date.now(;);
-      const lintTime = endTime - startTi;m;e;
+      const endTime = Date.now();
+      const duration = endTime - startTime;
       
-      this.lastLint = {
-        timestamp: new Date().toISOString(),
-        success: true,
-        lintTime: lintTime,
-        output: lintOutput,
-        errors: 0,
-        warnings: 0
+      this.log(`✅ Linting completed successfully in ${duration}ms`);
+      this.lastLint = new Date();
+      
+      // Save report
+      const report = {
+        timestamp: this.lastLint.toISOString(),
+        duration: duration,
+        status: 'success',
+        output: lintOutput
       };
       
-      this.log(`Linting completed successfully in ${lintTime}ms`);
-      await this.saveLintReport()} catch (error) {
-      this.log(`Linting failed: ${error.message}`);
+      fs.writeFileSync(this.lintReportFile, JSON.stringify(report, null, 2));
       
-      // Parse linting output to count errors and warnings
-      const output = error.stdout || error.stderr || ;';';
-      const errorCount = (output.match(/error/g) || []).lengt;h;
-      const warningCount = (output.match(/warning/g) || []).lengt;h;
-      
-      this.lastLint = {
-        timestamp: new Date().toISOString(),
-        success: false,
-        error: error.message,
-        output: output,
-        errors: errorCount,
-        warnings: warningCount
-      };
-      
-      await this.saveLintReport();
-      await this.handleLintingFailure(error)}
-  }
-
-  async handleLintingFailure(error) {
-    this.log('Handling linting failure...');
-    
-    try {
-      // Try to auto-fix linting issues
-      this.log('Attempting to auto-fix linting issues...');
-      
-      const fixOutput = execSync('npm run lint:fix', { 
-        cwd: this.projectRoot,
-        encoding: 'utf8',
-        timeout: 120000
-      ;};);
-      
-      this.log('Auto-fix applied');
-      
-      // Run linting again to check if issues were resolved
-      const recheckOutput = execSync('npm run lint', { 
-        cwd: this.projectRoot,
-        encoding: 'utf8',
-        timeout: 60000
-      ;};);
-      
-      this.log('Linting issues resolved')} catch (fixError) {
-      this.log(`Failed to fix linting issues: ${fixError.message}`);
-      await this.reportLintingFailure(fixError)}
-  }
-
-  async saveLintReport() {
-    const report = {
-      lastLint: this.lastLint,
-      projectRoot: this.projectRoot,
-      eslintConfig: this.getEslintConfig()
-   ; ;};
-    
-    fs.writeFileSync(this.lintReportFile, JSON.stringify(report, null, 2))}
-
-  getEslintConfig() {
-    try {
-      const configPath = path.join(this.projectRoot, 'eslint.config.js';);
-      if () {
-        return {) {
-    ) {
-        return {;
-  }
-          exists: true,
-          path: configPath,
-          size: fs.statSync(configPath).size
-        }}
+      return { success: true, output: lintOutput };
     } catch (error) {
-      // Ignore errors
-    }
-    
-    return { exists: false ;}}
-
-  async reportLintingFailure(error) {
-    const failureReport = {
-      timestamp: new Date().toISOString(),
-      error: error.message,
-      stack: error.stack,
-      projectRoot: this.projectRoot
-   ; ;};
-    
-    const failureFile = path.join(this.projectRoot, 'automation/logs/linting-failure-report.json';);
-    fs.writeFileSync(failureFile, JSON.stringify(failureReport, null, 2));
-    
-    this.log('Linting failure reported')}
-
-  async checkFileChanges() {
-    try {
-      // Check for recently modified files that might need linting
-      const filesToCheck = this.getRecentFiles(;);
+      this.log(`❌ Linting failed: ${error.message}`);
       
-      if ( {
-        this.log(`Found ${filesToCheck.length} recently modified files, running linting...`)) {
-     {
-        this.log(`Found ${filesToCheck.length} recently modified files, running linting...`);
-  }
-        await this.runLinting()}
-      
-    } catch (error) {
-      this.log(`File change check failed: ${error.message}`)}
-  }
-
-  getRecentFiles() {
-    const recentFiles = [;];
-    const cutoffTime = Date.now() - 600;0;0; // 1 minute ago
-    
-    try {
-      // Check common source directories
-      const sourceDirs = ['pages', 'components', 'lib', 'hooks', 'utils';];
-      
-      for (const dir of sourceDirs) {
-        const dirPath = path.join(this.projectRoot, dir;);
-        if () {
-          const files = this.getFilesInDirectory(dirPath) {
-    ) {
-          const files = this.getFilesInDirectory(dirPath;
-  });
-          recentFiles.push(...files.filter(file => {
-            try {
-              const stats = fs.statSync(file;);
-              return stats.mtime.getTime() > cutoffTime;} catch {
-              return false;}
-          }))}
-      }
-    } catch (error) {
-      // Ignore errors
-    }
-    
-    return recentFiles;}
-
-  getFilesInDirectory(dir, fileList = []) {
-    try {
-      const files = fs.readdirSync(dir;);
-      
-      for (const file of files) {
-        const filePath = path.join(dir, file;);
-        const stat = fs.statSync(filePath;);
+      // Try to fix automatically
+      try {
+        this.log('🔧 Attempting to fix linting errors...');
+        const fixOutput = execSync('npm run lint -- --fix', {
+          encoding: 'utf8',
+          stdio: 'pipe',
+          cwd: this.projectRoot
+        });
         
-        if () {
-          this.getFilesInDirectory(filePath, fileList)} else if (file.match(/\.(js|jsx|ts|tsx)$/)) {
-          fileList.push(filePath)}
+        this.log('✅ Linting errors fixed automatically');
+        
+        // Save report
+        const report = {
+          timestamp: new Date().toISOString(),
+          status: 'fixed',
+          output: fixOutput
+        };
+        
+        fs.writeFileSync(this.lintReportFile, JSON.stringify(report, null, 2));
+        
+        return { success: true, output: fixOutput, fixed: true };
+      } catch (fixError) {
+        this.log(`❌ Auto-fix failed: ${fixError.message}`);
+        
+        // Save error report
+        const report = {
+          timestamp: new Date().toISOString(),
+          status: 'error',
+          error: error.message,
+          fixError: fixError.message
+        };
+        
+        fs.writeFileSync(this.lintReportFile, JSON.stringify(report, null, 2));
+        
+        return { success: false, error: error.message };
       }
-    } catch (error) {
-      // Ignore errors
     }
-    
-    return fileList) {
-    ) {
-          this.getFilesInDirectory(filePath, fileList)} else if (file.match(/\.(js|jsx|ts|tsx)$/)) {
-          fileList.push(filePath)}
-      }
-    } catch (error) {
-      // Ignore errors
-    }
-    
-    return fileList;
-  }}
+  }
 
   async start() {
+    if (this.isRunning) {
+      this.log('⚠️ Linting automation is already running');
+      return;
+    }
+    
     this.isRunning = true;
-    this.log('Linting Automation started');
+    this.log('🚀 Starting linting automation...');
     
     // Initial linting
     await this.runLinting();
     
-    // Set up interval for regular linting
-    setInterval(async () => {
-      if ( {
-        await this.checkFileChanges()}
-    }, this.lintInterval)) {
-     {
-        await this.checkFileChanges()}
+    // Set up interval
+    this.lintTimer = setInterval(async () => {
+      if (this.isRunning) {
+        await this.runLinting();
+      }
     }, this.lintInterval);
+    
+    this.log('✅ Linting automation started successfully');
   }
+
+  stop() {
+    if (!this.isRunning) {
+      this.log('⚠️ Linting automation is not running');
+      return;
+    }
     
-    // Handle graceful shutdown
-    process.on('SIGTERM', () => {
-      this.log('Received SIGTERM, shutting down gracefully');
-      this.isRunning = false;
-      process.exit(0)});
+    this.isRunning = false;
     
-    process.on('SIGINT', () => {
-      this.log('Received SIGINT, shutting down gracefully');
-      this.isRunning = false;
-      process.exit(0)})}
+    if (this.lintTimer) {
+      clearInterval(this.lintTimer);
+      this.lintTimer = null;
+    }
+    
+    this.log('🛑 Linting automation stopped');
+  }
+
+  status() {
+    const status = {
+      running: this.isRunning,
+      lastLint: this.lastLint,
+      interval: this.lintInterval
+    };
+    
+    this.log(`📊 Status: ${status.running ? 'Running' : 'Stopped'}`);
+    this.log(`📊 Last Lint: ${status.lastLint ? status.lastLint.toISOString() : 'Never'}`);
+    this.log(`📊 Interval: ${status.interval}ms`);
+    
+    return status;
+  }
 }
 
-// Start the linting automation
-const automation = new LintingAutomation;(;);
-automation.start().catch(error => {
-  console.error('Failed to start linting automation:', error);
-  process.exit(1)});
+// CLI handling
+const automation = new LintingAutomation();
+const command = process.argv[2];
+
+switch (command) {
+  case 'start':
+    automation.start();
+    break;
+  case 'stop':
+    automation.stop();
+    process.exit(0);
+    break;
+  case 'status':
+    automation.status();
+    process.exit(0);
+    break;
+  case 'run':
+    automation.runLinting();
+    process.exit(0);
+    break;
+  default:
+    console.log('Usage: node linting-automation.js [start|stop|status|run]');
+    process.exit(1);
+}
+
+// Graceful shutdown
+process.on('SIGINT', () => {
+  automation.stop();
+  process.exit(0);
+});
+
+process.on('SIGTERM', () => {
+  automation.stop();
+  process.exit(0);
+});
