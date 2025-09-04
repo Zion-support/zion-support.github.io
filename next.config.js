@@ -7,7 +7,7 @@ const nextConfig = {
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
   trailingSlash: true,
-  // output: 'export', // Disabled to avoid auth context issues
+  output: 'export',
   generateBuildId: async () => 'build-' + Date.now(),
   
   // Include all page types

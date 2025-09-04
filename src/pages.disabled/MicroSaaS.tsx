@@ -1,5 +1,6 @@
 import React from 'react';
 import { Zap, Rocket, DollarSign, Users, CheckCircle, ArrowRight, Star, Shield, Globe, TrendingUp } from 'lucide-react';
+import dynamic from 'next/dynamic';
 
 const MicroSaaS: React.FC = () => {
   const services = [
@@ -228,4 +229,4 @@ const MicroSaaS: React.FC = () => {
   );
 };
 
-export default MicroSaaS;
+export default dynamic(() => Promise.resolve(MicroSaaS), { ssr: false });

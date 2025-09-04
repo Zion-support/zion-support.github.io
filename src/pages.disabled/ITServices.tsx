@@ -1,5 +1,6 @@
 import React from 'react';
 import { Server, Shield, Cloud, Database, Wrench, Users, CheckCircle, ArrowRight, Zap, Globe } from 'lucide-react';
+import dynamic from 'next/dynamic';
 
 const ITServices: React.FC = () => {
   const services = [
@@ -193,4 +194,4 @@ const ITServices: React.FC = () => {
   );
 };
 
-export default ITServices;
+export default dynamic(() => Promise.resolve(ITServices), { ssr: false });
