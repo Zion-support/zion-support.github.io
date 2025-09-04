@@ -73,15 +73,37 @@ function Header(): any {
         
         <div className="header-nav-links">
           <Link href="/" className="header-nav-link">Home</Link>
-          <div className="header-dropdown">
-            <span className="header-nav-link dropdown-trigger">Services</span>
-            <div className="header-dropdown-menu">
-              <Link href="/services" className="header-dropdown-link">All Services</Link>
-              <Link href="/micro-saas" className="header-dropdown-link">Micro SaaS</Link>
-              <Link href="/ai-services" className="header-dropdown-link">AI Services</Link>
-              <Link href="/it-services" className="header-dropdown-link">IT Services</Link>
-              <Link href="/services-catalog" className="header-dropdown-link">Services Catalog</Link>
+          <div className="header-nav-dropdown">
+            <span className="header-nav-link">Services</span>
+            <div className="header-nav-dropdown-content">
+              <Link href="/services" className="header-nav-dropdown-link">All Services</Link>
+              <Link href="/micro-saas" className="header-nav-dropdown-link">Micro SaaS</Link>
+              <Link href="/ai-services" className="header-nav-dropdown-link">AI Services</Link>
+              <Link href="/it-services" className="header-nav-dropdown-link">IT Services</Link>
+              <Link href="/services-catalog" className="header-nav-dropdown-link">Catalog</Link>
             </div>
+          </div>
+          <div className="header-nav-dropdown">
+            <span className="header-nav-link">Solutions</span>
+            <div className="header-nav-dropdown-content">
+              <Link href="/cloud-devops" className="header-nav-dropdown-link">Cloud DevOps</Link>
+              <Link href="/cybersecurity" className="header-nav-dropdown-link">Cybersecurity</Link>
+              <Link href="/quantum-computing" className="header-nav-dropdown-link">Quantum Computing</Link>
+            </div>
+          </div>
+          <div className="header-nav-dropdown">
+            <span className="header-nav-link">Resources</span>
+            <div className="header-nav-dropdown-content">
+              <Link href="/docs" className="header-nav-dropdown-link">Documentation</Link>
+              <Link href="/docs/getting-started" className="header-nav-dropdown-link">Getting Started</Link>
+              <Link href="/docs/api-quick-start" className="header-nav-dropdown-link">API Guide</Link>
+              <Link href="/faq" className="header-nav-dropdown-link">FAQ</Link>
+            </div>
+          </div>
+          <Link href="/about" className="header-nav-link">About</Link>
+          <Link href="/pricing" className="header-nav-link">Pricing</Link>
+          <div className="hidden md:block">
+            <SearchBar />
           </div>
           <Link href="/about" className="header-nav-link">About</Link>
           <Link href="/pricing" className="header-nav-link">Pricing</Link>
@@ -102,14 +124,31 @@ function Header(): any {
       
       <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
         <Link href="/" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Home</Link>
+        
         <div className="mobile-menu-section">
-          <span className="mobile-menu-section-title">Services</span>
-          <Link href="/services" className="header-nav-link mobile-submenu" onClick={() => setMobileMenuOpen(false)}>All Services</Link>
-          <Link href="/micro-saas" className="header-nav-link mobile-submenu" onClick={() => setMobileMenuOpen(false)}>Micro SaaS</Link>
-          <Link href="/ai-services" className="header-nav-link mobile-submenu" onClick={() => setMobileMenuOpen(false)}>AI Services</Link>
-          <Link href="/it-services" className="header-nav-link mobile-submenu" onClick={() => setMobileMenuOpen(false)}>IT Services</Link>
-          <Link href="/services-catalog" className="header-nav-link mobile-submenu" onClick={() => setMobileMenuOpen(false)}>Services Catalog</Link>
+          <h4 className="mobile-menu-section-title">Services</h4>
+          <Link href="/services" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>All Services</Link>
+          <Link href="/micro-saas" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Micro SaaS</Link>
+          <Link href="/ai-services" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>AI Services</Link>
+          <Link href="/it-services" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>IT Services</Link>
+          <Link href="/services-catalog" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Catalog</Link>
         </div>
+        
+        <div className="mobile-menu-section">
+          <h4 className="mobile-menu-section-title">Solutions</h4>
+          <Link href="/cloud-devops" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Cloud DevOps</Link>
+          <Link href="/cybersecurity" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Cybersecurity</Link>
+          <Link href="/quantum-computing" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Quantum Computing</Link>
+        </div>
+        
+        <div className="mobile-menu-section">
+          <h4 className="mobile-menu-section-title">Resources</h4>
+          <Link href="/docs" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Documentation</Link>
+          <Link href="/docs/getting-started" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Getting Started</Link>
+          <Link href="/docs/api-quick-start" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>API Guide</Link>
+          <Link href="/faq" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>FAQ</Link>
+        </div>
+        
         <Link href="/about" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>About</Link>
         <Link href="/pricing" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
         <Link href="/faq" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>FAQ</Link>
@@ -175,6 +214,17 @@ function Footer(): any {
             <div>• 80+ AI Services</div>
             <div>• 80+ IT Solutions</div>
           </div>
+        </div>
+
+        {/* Solutions */}
+        <div className="footer-section">
+          <h3>Solutions</h3>
+          <Link href="/cloud-devops">Cloud DevOps</Link>
+          <Link href="/cybersecurity">Cybersecurity</Link>
+          <Link href="/quantum-computing">Quantum Computing</Link>
+          <Link href="/docs">Documentation</Link>
+          <Link href="/docs/getting-started">Getting Started</Link>
+          <Link href="/docs/api-quick-start">API Guide</Link>
         </div>
 
         {/* Quick Links */}
