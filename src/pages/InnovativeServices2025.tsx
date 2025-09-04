@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
+import React, { useState, useEffect } from 'react';
+import { Link  } from 'react-router-dom';
+import { motion, AnimatePresence  } from 'framer-motion';
 import { Brain, 
   Shield, 
   Cloud, 
@@ -138,7 +138,7 @@ import { Brain,
   CalendarWeek2,
   CalendarMonth2,
   CalendarYear2
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export default function InnovativeServices2025(...args: unknown[]): unknown {
   const [selectedCategory, setSelectedCategory] = useState('all');

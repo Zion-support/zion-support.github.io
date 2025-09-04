@@ -13,7 +13,8 @@ Zap,
   Globe
 } from 'lucide-react';
 
-export default function ServicesPage() {
+export default function ServicesPage
+export { ServicesPage }() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 

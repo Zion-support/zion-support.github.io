@@ -146,7 +146,28 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   // Handle suggestion click
   const handleSuggestionClick = (suggestion: string) => {
     setInputValue(suggestion);
-  };
+    }, []);
+
+  // Handle file upload
+  const handleFileUpload = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      const fileMessage: ChatMessage = {
+        id: Date.now().toString(),
+        content: `Uploaded: ${file.name}`,
+        sender: 'user',
+        timestamp: new Date(),
+        type: 'file',
+        status: 'sent'
+      };
+      setMessages(prev => [...prev, fileMessage]);
+    }
+  }, []);
+
+  // Toggle voice input
+  const toggleVoiceInput = useCallback(() => {
+    setIsListening(!isListening);
+    }, [isListening]);
 
   // Clear chat
   const clearChat = () => {
@@ -164,9 +185,9 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
         aria-label="Toggle AI chatbot"
       >
         {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
-      </motion.button>
+      </button>
 
-      {/* Chat Window */}
+      {/* Chat Interface */}
       <AnimatePresence>
         {isOpen && (
           <motion.div

@@ -556,7 +556,15 @@ if (content !== originalContent) {
 // Run the automation;
 if (require.main === module) {
   const automation = new ErrorFixerAutomation();
-  automation.run().catch(console.error);
+  automation.run()
+    .then(report => {
+      console.log('Automation completed successfully!');
+      process.exit(0);
+    })
+    .catch(error => {
+      console.error('Automation failed:', error);
+      process.exit(1);
+    });
 }
 ;
 module.exports = ErrorFixerAutomation
