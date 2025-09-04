@@ -1,6 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
-import { ArrowRight, Users, Award, Shield } from 'lucide-react'
+import { ArrowRight, Users, Award, Shield, CheckCircle } from 'lucide-react'
 import Layout from '../components/Layout'
 
 export default function BlockchainSolutions() {
@@ -17,45 +17,44 @@ export default function BlockchainSolutions() {
       >
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-5xl md: tex t-6xl font-bold mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Blockchain</span> Solutions
             </h1>
-            <p className="text-xl md: tex t-2xl text-gray-300 max-w-3xl mx-auto mb-8">
+            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8">
               Transform your business with cutting-edge blockchain technology, smart contracts, and decentralized solutions
             </p>
-            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
-              <button className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover: shado w-lg hover: shado w-blue-500/25 transition-all duration-300">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300">
                 Get Started
                 <ArrowRight className="ml-2 w-5 h-5"  />
               </button>
-              <button className="inline-flex items-center px-8 py-3 border border-white/20 text-white font-semibold rounded-lg hover: b g-white/10 transition-all duration-300">
+              <button className="inline-flex items-center px-8 py-3 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
                 View Portfolio
               </button>
             </div>
           </div>
         </section>
-,
-        {/*   */}"
-        <section className="py-20" bg-white">"
-          <div className="container mx-auto px-4>"
-            <div className="text-center" mb-16">"
-              <h2 className="text-4xl font-bold text-gray-900 mb-4>Our Blockchain Services</h2>"
-              <p className="text-xl" text-gray-600 max-w-2xl mx-auto">
+
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Blockchain Services</h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                 Comprehensive blockchain solutions tailored to your business needs,
               </p>
-            </div>"
-            <div className="grid md: gri d-cols-2 lg: gri d-cols-4 gap-8>,
-              {services.map((service, index) => ("
-                <div key="{index}" className="bg-white" border border-gray-200 rounded-xl p-6 hover: shado w-lg transition-shadow duration-300">"
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4>"
-                    <service.icon className="w-8" h-8 text-white" />
-                  </div>",
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3>{service.title}</h3>"
-                  <p className="text-gray-600" mb-4">{service.description}</p>"
-                  <ul className="space-y-2>
-                    {service.features.map((feature, i) => ("
-                      <li key="{i}" className="flex" items-center text-sm text-gray-600">"
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0  />
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {services.map((service, index) => (
+                <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
+                    <service.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
+                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <ul className="space-y-2">
+                    {service.features.map((feature, i) => (
+                      <li key={i} className="flex items-center text-sm text-gray-600">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
@@ -74,7 +73,7 @@ export default function BlockchainSolutions() {
                 We bring deep expertise and proven experience in blockchain development
               </p>
             </div>
-            <div className="grid md: gri d-cols-3 gap-8">
+            <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Users className="w-8 h-8 text-blue-600"  />
@@ -106,7 +105,7 @@ export default function BlockchainSolutions() {
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               Let's discuss your blockchain project and create a solution that drives innovation
             </p>
-            <button className="inline-flex items-center px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover: b g-gray-100 transition-all duration-300">
+            <button className="inline-flex items-center px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300">
               Start Your Project
               <ArrowRight className="ml-2 w-5 h-5"  />
             </button>
@@ -116,5 +115,3 @@ export default function BlockchainSolutions() {
     </>
   )
 }
-"
-export default BlockchainSolutions

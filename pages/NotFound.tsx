@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
@@ -17,13 +17,18 @@ import {   Home,
   Award,
   Shield
 } from 'lucide-react';
-const NotFound: Reac t.FC = () => {
+const NotFound: React.FC = () => {
   const quickLinks = [
-    { name: 'Home', url: '/', icon: Hom e }, { name: 'Services', url: '/services', icon: Briefcas e },
-    { name: 'About', url: '/about', icon: User s }, { name: 'Contact', url: '/contact', icon: Phon e },
-    { name: 'Blog', url: '/blog', icon: BookOpe n }, { name: 'Pricing', url: '/pricing', icon: DollarSig n },
-    { name: 'Team', url: '/team', icon: Awar d }, { name: 'Webinars', url: '/webinars', icon: Calenda r },
-    { name: 'White Papers', url: '/white-papers', icon: FileTex t }, { name: 'Privacy Policy', url: '/privacy', icon: Shiel d }
+    { name: 'Home', url: '/', icon: Home },
+    { name: 'Services', url: '/services', icon: Briefcase },
+    { name: 'About', url: '/about', icon: Users },
+    { name: 'Contact', url: '/contact', icon: Phone },
+    { name: 'Blog', url: '/blog', icon: BookOpen },
+    { name: 'Pricing', url: '/pricing', icon: DollarSign },
+    { name: 'Team', url: '/team', icon: Award },
+    { name: 'Webinars', url: '/webinars', icon: Calendar },
+    { name: 'White Papers', url: '/whitepapers', icon: FileText },
+    { name: 'Privacy Policy', url: '/privacy', icon: Shield }
   ]
 
   return (
@@ -33,7 +38,7 @@ const NotFound: Reac t.FC = () => {
        />
       <div className='max-w-4xl mx-auto text-center'>
         <motion.div
-          initial={{ opacity: 0, y: 2 0 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
@@ -50,7 +55,7 @@ const NotFound: Reac t.FC = () => {
           </motion.div>
           {/* Error Message */}
           <motion.div
-            initial={{ opacity: 0, y: 2 0 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             className='mb-8'
@@ -65,10 +70,10 @@ const NotFound: Reac t.FC = () => {
           </motion.div>
           {/* Action Buttons */}
           <motion.div
-            initial={{ opacity: 0, y: 2 0 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className='flex flex-col sm: fle x-row gap-4 justify-center mb-12'
+            className='flex flex-col sm:flex-row gap-4 justify-center mb-12'
           >
             <Button
               size='lg'
@@ -89,24 +94,24 @@ const NotFound: Reac t.FC = () => {
           </motion.div>
           {/* Quick Links */}
           <motion.div
-            initial={{ opacity: 0, y: 2 0 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
           >
             <Card className='p-8'>
               <h3 className='text-2xl font-bold text-white mb-6'>Popular Pages</h3>
-              <div className='grid grid-cols-2 md: gri d-cols-5 gap-4'>
+              <div className='grid grid-cols-2 md:grid-cols-5 gap-4'>
                 {quickLinks.map((link, index) => (
                   <motion.a
                     key={link.url}
                     href={link.url}
-                    initial={{ opacity: 0, y: 2 0 }}
+                    initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.1 * index }}
-                    className='flex flex-col items-center p-4 rounded-lg bg-slate-700 hover: b g-slate-600 transition-colors group'
+                    className='flex flex-col items-center p-4 rounded-lg bg-slate-700 hover:bg-slate-600 transition-colors group'
                   >
-                    <link.icon className='w-6 h-6 text-blue-400 group-hover: tex t-blue-300 mb-2' />
-                    <span className='text-gray-300 group-hover: tex t-white text-sm text-center'>
+                    <link.icon className='w-6 h-6 text-blue-400 group-hover:text-blue-300 mb-2' />
+                    <span className='text-gray-300 group-hover:text-white text-sm text-center'>
                       {link.name}
                     </span>
                   </motion.a>
@@ -116,7 +121,7 @@ const NotFound: Reac t.FC = () => {
           </motion.div>
           {/* Help Section */}
           <motion.div
-            initial={{ opacity: 0, y: 2 0 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.0 }}
             className='mt-12'
@@ -126,17 +131,17 @@ const NotFound: Reac t.FC = () => {
               <p className='text-gray-300 mb-6'>
                 If you can&apos;t find what you&aposre looking for, our team is here to help.
               </p>
-              <div className='flex flex-col sm: fle x-row gap-4 justify-center'>
+              <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                 <Link
                   href='/contact'
-                  className='inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white hover: opacit y-90 transition-opacity'
+                  className='inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:opacity-90 transition-opacity'
                 >
                   <Phone className='w-5 h-5 mr-2'  />
                   Contact Support
                 </Link>
                 <a
                   href='mailto: klebe r@ziontechgroup.com'
-                  className='inline-flex items-center px-6 py-3 rounded-lg border border-slate-600 text-gray-300 hover: b g-slate-700 transition-colors'
+                  className='inline-flex items-center px-6 py-3 rounded-lg border border-slate-600 text-gray-300 hover:bg-slate-700 transition-colors'
                 >
                   <Mail className='w-5 h-5 mr-2'  />
                   Email Us

@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-import React, { useEffect, useState, useCallback } from 'react';
-export const PerformanceMonitor: Reac t.FC < PerformanceMonitorProps> = ({
-export default PerformanceMonitor;
-import { motion, AnimatePresence  } from 'framer-motion';
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
-=======
 import React, { useEffect, useState } from 'react';
->>>>>>> origin/main
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -22,20 +13,8 @@ const PerformanceMonitor: React.FC = (props: any) => {
     renderTime: 0
   });
 
-<<<<<<< HEAD
-      // Log metrics after 3 seconds
-      setTimeout(logMetrics, 3000);
-    }
-
-  return () => {
-    // Cleanup function
-  };
-}, []);, []);
-    // Show monitor after 3 seconds
-=======
   useEffect(() => {
     const startTime = performance.now();
->>>>>>> origin/main
     
     // Measure page load time
     if (window.performance.timing) {

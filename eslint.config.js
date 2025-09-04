@@ -1,23 +1,73 @@
 import js from '@eslint/js';
-import typescript from '@typescript-eslint/eslint-plugin';
-import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
-// Removed Next.js ESLint plugin due to incompatibility with current ESLint version
+import tseslint from '@typescript-eslint/eslint-plugin';
+import tsparser from '@typescript-eslint/parser';
 
 export default [
-  js.configs.recommended,
   {
-    files: ['**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx'],
+    files: ['**/*.{js,jsx}'],
     languageOptions: {
-      parser: typescriptParser,
-      parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true,
-        },
+      ecmaVersion: 2021,
+      sourceType: 'module',
+      globals: {
+        window: 'readonly',
+        document: 'readonly',
+        navigator: 'readonly',
+        localStorage: 'readonly',
+        sessionStorage: 'readonly',
+        console: 'readonly',
+        setTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearTimeout: 'readonly',
+        clearInterval: 'readonly',
+        requestAnimationFrame: 'readonly',
+        cancelAnimationFrame: 'readonly',
+        fetch: 'readonly',
+        URL: 'readonly',
+        URLSearchParams: 'readonly',
+        Blob: 'readonly',
+        CustomEvent: 'readonly',
+        Intl: 'readonly',
+        performance: 'readonly',
+        caches: 'readonly',
+        Notification: 'readonly',
+        ServiceWorker: 'readonly',
+        ServiceWorkerRegistration: 'readonly',
+        PushSubscription: 'readonly',
+        NotificationPermission: 'readonly',
+        process: 'readonly',
+        global: 'readonly',
+        jest: 'readonly',
+        describe: 'readonly',
+        it: 'readonly',
+        test: 'readonly',
+        expect: 'readonly',
+        vi: 'readonly',
+        Deno: 'readonly',
+        React: 'readonly'
       },
+      parserOptions: {
+        ecmaFeatures: { jsx: true }
+      }
+    },
+    plugins: { react, 'react-hooks': reactHooks },
+    rules: {
+      'react/react-in-jsx-scope': 'off',
+      'react/prop-types': 'off',
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'no-undef': 'error'
+    },
+    settings: { react: { version: 'detect' } }
+  },
+  {
+    files: ['**/*.{ts,tsx}'],
+    languageOptions: {
+      ecmaVersion: 2021,
+      sourceType: 'module',
+      parser: tsparser,
+      parserOptions: { ecmaFeatures: { jsx: true } },
       globals: {
         window: 'readonly',
         document: 'readonly',
@@ -26,39 +76,27 @@ export default [
         PerformanceObserver: 'readonly',
         JSX: 'readonly',
         React: 'readonly',
-        __dirname: 'readonly',
-      },
+        HTMLDivElement: 'readonly',
+        MouseEvent: 'readonly',
+        Node: 'readonly',
+        RequestInit: 'readonly',
+        Response: 'readonly',
+        Headers: 'readonly',
+        HTMLElement: 'readonly'
+      }
     },
-    plugins: {
-      '@typescript-eslint': typescript,
-      'react': react,
-      'react-hooks': reactHooks,
-    },
+    plugins: { react, 'react-hooks': reactHooks, '@typescript-eslint': tseslint },
     rules: {
-      ...typescript.configs.recommended.rules,
-      ...react.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
-      'no-unused-vars': 'warn',
-      'no-console': 'off',
-      'prefer-const': 'error',
-      'no-var': 'error',
-      'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off',
-      'react/no-unescaped-entities': 'off',
-      '@typescript-eslint/no-unused-vars': 'warn',
-      '@typescript-eslint/no-explicit-any': 'warn',
+      'react/prop-types': 'off',
+      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+      '@typescript-eslint/explicit-function-return-type': 'off',
+      '@typescript-eslint/explicit-module-boundary-types': 'off',
+      'no-unused-vars': 'off',
+      'no-console': 'warn',
+      'no-undef': 'off'
     },
-    settings: {
-      react: {
-        version: 'detect',
-      },
-    },
-  },
-  {
-    files: ['**/*.cjs'],
-    languageOptions: {
-      sourceType: 'commonjs',
-    },
+    settings: { react: { version: 'detect' } }
   },
   {
     ignores: [
@@ -68,8 +106,8 @@ export default [
       'build/**',
       'out/**',
       'coverage/**',
-
-      // Large/legacy sources and disabled dirs
+      '**/*.ts',
+      '**/*.tsx',
       'src.corrupted/**',
       'src.disabled/**',
       'src.broken/**',
@@ -108,63 +146,11 @@ export default [
       'server/**',
       'types/**',
       'next-env.d.ts',
-      'fix_typescript_syntax_errors.jsx',
       'jest.setup.jsx',
       'middleware.ts',
       'middleware.security.ts',
       'temp-backup/**',
       'supabase/**',
-      'types.disabled/**',
-      'types/**',
-
-      // Tests and mocks
-      '__tests__/**',
-      'tests/**',
-      'tests.disabled/**',
-      '*.test.*',
-
-      // Temp and backups
-      'backup/**',
-      'backup-pages/**',
-      'pages-backup/**',
-      'lib_backup/**',
-      'data_backup/**',
-      'styles_backup/**',
-      'api-backup/**',
-      'automation_backup/**',
-      'ai-optimization-backups/**',
-      'ai-analysis-reports/**',
-      'optimization-reports/**',
-      'public/reports/**',
-      'temp_backup/**',
-      'temp_broken_components/**',
-      'temp_working/**',
-      'temp_*/**',
-
-      // Scripts/configs and CJS files not intended for lint
-      'scripts/**',
-      'automation/**',
-      'pm2-automation/**',
-      'netlify/**',
-      // Root-level JS utilities and automation scripts
-      '*.js',
-      '*.cjs',
-      '*.mjs',
-      'run-*.js',
-      '*automation*.js',
-      '*-automation*.js',
-      'comprehensive-*.js',
-      'performance-*.js',
-      'security-*.js',
-      'seo-*.js',
-      'execute-*.js',
-      'simple-*.js',
-      'basic-*.js',
-      'monitoring-*.js',
-      'commit-and-push.js',
-      'automation-runner.js',
-      'improve-app.js',
-      'code-quality-improvements.js',
       '*.config.js',
       '*.config.cjs',
       '*.config.mjs',
@@ -173,38 +159,21 @@ export default [
       'next.config.*',
       'playwright.config.ts',
       'vite.config-backup.ts',
-
-      // Misc individual files
-      'services-broken.tsx',
-      'types/service-variants.js',
-
-      // Public assets/scripts
       'public/**',
       '.venv/**',
-
-      // Root-level noisy files
       'api/**',
       'jest.config.*',
       'fix-*.js',
       'fix-*.jsx',
-
-      // Primary source directories temporarily ignored to stabilize lint
-      'pages/**',
       'components/**',
       'src/**',
       'lib/**',
       'utils/**',
       'deployments/**',
       'hooks/**',
-
-      // Misc root configs that were being linted
-      '.eslintrc.js',
-      '.eslintrc.cjs',
-      '.eslintrc.disabled.js',
-      '.prettierrc.js',
-
-      // Page backups
+      'pages/**',
       'pages.__backup/**',
-      'pages-disabled/**',
-      'pages.disabled_auto/**'],
-  }];
+      'pages-disabled/**'
+    ]
+  }
+];

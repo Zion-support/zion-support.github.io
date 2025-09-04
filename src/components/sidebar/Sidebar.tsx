@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { 
   Home, 
   Services, 
@@ -52,8 +53,9 @@ interface SidebarProps {
 
 }
 
-export function Sidebar(props: any) {
-  const location = useLocation();
+
+export function Sidebar({ isOpen, onClose }: SidebarProps) {
+  const pathname = usePathname();
   const [expandedSections, setExpandedSections] = useState<string[]>(['services', 'solutions']);
 
   const toggleSection = (props: any) => {
@@ -64,7 +66,7 @@ export function Sidebar(props: any) {
     );
   };
 
-  const isActive = (path: string) => location.pathname === path;
+  const isActive = (path: string) => pathname === path;
 
   const navigationSections = [
     {
@@ -160,7 +162,7 @@ export function Sidebar(props: any) {
         <div className="flex flex-col h-full">
           {/* Header */}
           <div className="flex items-center justify-between p-6 border-b border-slate-700">
-            <Link to="/" className="flex items-center space-x-2" onClick={onClose}>
+            <Link href="/" className="flex items-center space-x-2" onClick={onClose}>
               <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">Z</span>
               </div>
@@ -204,18 +206,18 @@ export function Sidebar(props: any) {
                     {section.items.map((item) => (
                       <Link
                         key={item.name}
-                        to={item.href}
+                        href={item.href}
                         onClick={onClose}
                         className={`
                           flex items-center justify-between px-3 py-2 rounded-lg text-sm transition-all duration-200 group
                           ${isActive(item.href) 
                             ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30' 
-                            : 'text-slate-300 hover: tex t-white hover: b g-slate-800'
+                            : 'text-slate-300 hover:text-white hover:bg-slate-800'
                           }
                         `}
                       >
                         <div className="flex items-center space-x-3">
-                          <item.icon className={`w-4 h-4 ${isActive(item.href) ? 'text-cyan-400' : 'text-slate-400 group-hover: tex t-white'}`} />
+                          <item.icon className={`w-4 h-4 ${isActive(item.href) ? 'text-cyan-400' : 'text-slate-400 group-hover:text-white'}`} />
                           <span>{item.name}</span>
                         </div>
                         {item.badge && (
@@ -247,9 +249,9 @@ export function Sidebar(props: any) {
               {quickActions.map((action) => (
                 <Link
                   key={action.name}
-                  to={action.href}
+                  href={action.href}
                   onClick={onClose}
-                  className="flex items-center space-x-3 px-3 py-2 rounded-lg text-sm text-slate-300 hover: tex t-white hover: b g-slate-800 transition-all duration-200 group"
+                  className="flex items-center space-x-3 px-3 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800 transition-all duration-200 group"
                 >
                   <action.icon className={`w-4 h-4 ${action.color} group-hover: scal e-110 transition-transform`} />
                   <span>{action.name}</span>

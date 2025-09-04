@@ -15,7 +15,7 @@ export {AIPoweredContent}() {
         "@type": "WebPage",
         "name": "AI Content Generation",
         "description": "Generate SEO-optimized content using ZionGPT to boost your online visibility.",
-  "url": "https://app.ziontechgroup.com/features/ai-content-generation"
+  "url": "https://ziontechgroup.com/features/ai-content-generation"
     
 
 
@@ -27,7 +27,8 @@ export {AIPoweredContent}() {
     const {markAiExplored} = useAdvancedOnboardingStatus();
     useEffect(() => {markAiExplored()}, [markAiExplored]);
     return (<>
-      <SEO title="AI Content Generation" description="Generate SEO-optimized blog posts, service descriptions and FAQs with ZionGPT." keywords="AI content generation, ZionGPT, SEO tools" canonical="https://app.ziontechgroup.com/features/ai-content-generation" />
+
+      <SEO title="AI Content Generation" description="Generate SEO-optimized blog posts, service descriptions and FAQs with ZionGPT." keywords="AI content generation, ZionGPT, SEO tools" canonical="https://ziontechgroup.com/features/ai-content-generation"/>
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}></script>
       <Header  />

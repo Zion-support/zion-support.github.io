@@ -15,7 +15,7 @@ export default function PrivacyPolicy(props: any) {}
       <SEO ;
         title="Privacy Policy""""
         description="Learn how Zion Tech Group handles your data and protects your privacy.""""
-        canonical="https://app.ziontechgroup.com/privacy"""
+        canonical="https://ziontechgroup.com/privacy"""
         noindex={draft}
        />"""
       <Header  />""""
