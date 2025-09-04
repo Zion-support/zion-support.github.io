@@ -1,6 +1,10 @@
-import { useEffect } from 'react';
+import { useEffect, ReactNode } from 'react';
 
-export default function PerformanceOptimizer() {
+interface PerformanceOptimizerProps {
+  children: ReactNode;
+}
+
+export default function PerformanceOptimizer({ children }: PerformanceOptimizerProps) {
   useEffect(() => {
     // Preload critical resources
     const preloadCriticalResources = () => {
@@ -20,10 +24,10 @@ export default function PerformanceOptimizer() {
     // Optimize images with lazy loading
     const optimizeImages = () => {
       const images = document.querySelectorAll('img[data-src]');
-      const imageObserver = new (window as any).IntersectionObserver((entries) => {
+      const imageObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const img = entry.target as any;
+            const img = entry.target as HTMLImageElement;
             img.src = img.dataset.src || '';
             img.classList.remove('lazy');
             imageObserver.unobserve(img);
@@ -43,13 +47,14 @@ export default function PerformanceOptimizer() {
     }
   }, []);
 
-  return null; // This component doesn't render anything
+  return <>{children}</>; // Render children
 }
 
 // Web Vitals monitoring
-export const reportWebVitals = (_metric: any) => {
+export const reportWebVitals = (metric: { name: string; value: number; delta: number }) => {
   if (process.env.NODE_ENV === 'production') {
     // Send to analytics service
-    // Web Vital metric logged
+    // eslint-disable-next-line no-console
+    console.log('Web Vital:', metric);
   }
 };

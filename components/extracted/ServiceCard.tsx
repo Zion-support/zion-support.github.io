@@ -1,12 +1,11 @@
 import React from 'react';
 
 interface ServiceCardProps {
-  title: 'string;
+  title: string;
   description: string;
   features: string[];
   icon: string;
-  className?: string;'
-}
+  className?: string;
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ 

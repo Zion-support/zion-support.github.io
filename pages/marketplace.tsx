@@ -1,9 +1,14 @@
-import React from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
-import { ShoppingCart, Star, ArrowRight } from 'lucide-react';
+import Head from 'next/head';
 
 export default function Marketplace() {
+  const contact = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown, DE 19709',
+    site: 'https://ziontechgroup.com'
+  };
+
   const marketplaceCategories = [
     {
       title: "Products",
@@ -11,83 +16,266 @@ export default function Marketplace() {
       icon: "🛍️",
       items: [
         { name: "AI-Powered Analytics Platform", price: "Starting at $299/month", category: "AI & Analytics" },
-        { name: "Micro SaaS Starter Kit", price: "Starting at $99/month", category: "Micro SaaS" },
-        { name: "Cloud Infrastructure Suite", price: "Starting at $199/month", category: "Cloud Services" }
+        { name: "Cloud Infrastructure Suite", price: "Starting at $199/month", category: "Cloud Computing" },
+        { name: "Cybersecurity Monitoring Tool", price: "Starting at $149/month", category: "Security" },
+        { name: "Quantum Computing Simulator", price: "Starting at $499/month", category: "Quantum Computing" }
+      ]
+    },
+    {
+      title: "Talent",
+      description: "Connect with skilled technology professionals",
+      icon: "👥",
+      items: [
+        { name: "Senior AI/ML Engineers", price: "$120-180/hour", category: "AI & Machine Learning" },
+        { name: "Cloud DevOps Specialists", price: "$100-150/hour", category: "Cloud & DevOps" },
+        { name: "Cybersecurity Experts", price: "$110-170/hour", category: "Cybersecurity" },
+        { name: "Quantum Computing Researchers", price: "$150-250/hour", category: "Quantum Computing" }
+      ]
+    },
+    {
+      title: "Equipment",
+      description: "Access cutting-edge technology equipment and hardware",
+      icon: "🔧",
+      items: [
+        { name: "High-Performance Servers", price: "Starting at $2,999", category: "Hardware" },
+        { name: "Quantum Computing Hardware", price: "Starting at $50,000", category: "Quantum Hardware" },
+        { name: "Network Security Appliances", price: "Starting at $1,999", category: "Security Hardware" },
+        { name: "Edge Computing Devices", price: "Starting at $499", category: "IoT & Edge" }
       ]
     },
     {
       title: "Services",
-      description: "Professional services to help your business grow",
-      icon: "🔧",
+      description: "Professional technology services and consulting",
+      icon: "⚙️",
       items: [
-        { name: "Custom Development", price: "Starting at $150/hour", category: "Development" },
-        { name: "Consulting Services", price: "Starting at $200/hour", category: "Consulting" },
-        { name: "Technical Support", price: "Starting at $50/hour", category: "Support" }
+        { name: "Digital Transformation Consulting", price: "$200-300/hour", category: "Consulting" },
+        { name: "Cloud Migration Services", price: "$150-250/hour", category: "Cloud Services" },
+        { name: "Security Assessment & Auditing", price: "$180-280/hour", category: "Security Services" },
+        { name: "Custom Software Development", price: "$120-200/hour", category: "Development" }
       ]
+    }
+  ];
+
+  const featuredItems = [
+    {
+      name: "AI Business Intelligence Suite",
+      description: "Comprehensive AI-powered analytics platform for enterprise decision making",
+      price: "$299/month",
+      category: "AI & Analytics",
+      rating: 4.9,
+      reviews: 127
     },
     {
-      title: "Templates",
-      description: "Ready-to-use templates and components",
-      icon: "📄",
-      items: [
-        { name: "React Component Library", price: "Free", category: "Frontend" },
-        { name: "API Documentation Template", price: "Free", category: "Documentation" },
-        { name: "Project Management Template", price: "$29", category: "Productivity" }
-      ]
+      name: "Quantum Algorithm Development",
+      description: "Expert quantum computing research and algorithm development services",
+      price: "$200/hour",
+      category: "Quantum Computing",
+      rating: 4.8,
+      reviews: 89
+    },
+    {
+      name: "Enterprise Security Platform",
+      description: "Advanced cybersecurity monitoring and threat detection system",
+      price: "$199/month",
+      category: "Cybersecurity",
+      rating: 4.9,
+      reviews: 156
     }
   ];
 
   return (
     <>
       <Head>
-        <title>Marketplace - Zion Tech Group</title>
-        <meta name="description" content="Discover products, services, and templates from Zion Tech Group's marketplace." />
+        <title>Marketplace - Zion Tech Group | Technology Products, Services & Talent</title>
+        <meta name="description" content="Explore Zion Tech Group's marketplace for technology products, professional services, skilled talent, and cutting-edge equipment." />
+        <meta name="keywords" content="technology marketplace, AI products, cloud services, cybersecurity tools, quantum computing, tech talent, equipment" />
+        <link rel="canonical" href={`${contact.site}/marketplace`} />
+        <meta property="og:title" content="Marketplace - Zion Tech Group | Technology Products, Services & Talent" />
+        <meta property="og:description" content="Explore Zion Tech Group's marketplace for technology products, professional services, skilled talent, and cutting-edge equipment." />
+        <meta property="og:url" content={`${contact.site}/marketplace`} />
+        <meta property="og:type" content="website" />
       </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        <div className="max-w-7xl mx-auto px-4 py-16">
-          {/* Header */}
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">
-              Marketplace
+      <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #0b1220 0%, #1a1f3a 100%)', color: 'white' }}>
+        <div style={{ maxWidth: 1200, margin: '0 auto', padding: '40px 20px' }}>
+          <div style={{ textAlign: 'center', marginBottom: 60 }}>
+            <h1 style={{ 
+              fontSize: '3rem',
+              fontWeight: 800, 
+              marginBottom: 20,
+              background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text'
+            }}>
+              Technology Marketplace
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover innovative products, services, and templates to accelerate your business growth.
+            <p style={{ fontSize: '1.2rem', color: '#94a3b8', maxWidth: 600, margin: '0 auto' }}>
+              Discover innovative products, connect with skilled professionals, and access cutting-edge technology solutions all in one place.
             </p>
           </div>
 
-          {/* Categories */}
-          <div className="space-y-16">
-            {marketplaceCategories.map((category, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg p-8">
-                <div className="flex items-center mb-8">
-                  <div className="text-4xl mr-4">{category.icon}</div>
+          <div style={{ marginBottom: 80 }}>
+            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 40, textAlign: 'center' }}>
+              Featured Items
+            </h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: 30 }}>
+              {featuredItems.map((item, index) => (
+                <div key={index} style={{ 
+                  background: 'rgba(255, 255, 255, 0.05)',
+                  borderRadius: 12, 
+                  padding: 30, 
+                  border: '1px solid rgba(255, 255, 255, 0.1)', 
+                  transition: 'transform 0.3s ease, box-shadow 0.3s ease', 
+                  cursor: 'pointer'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-5px)';
+                  e.currentTarget.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.3)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = 'none';
+                }}>
+                  <div style={{ marginBottom: 15 }}>
+                    <span style={{
+                      background: 'rgba(255, 255, 255, 0.1)',
+                      color: 'white',
+                      padding: '6px 12px',
+                      borderRadius: 20,
+                      fontSize: '0.9rem',
+                      fontWeight: 600
+                    }}>
+                      {item.category}
+                    </span>
+                  </div>
+                  
+                  <h3 style={{ 
+                    fontSize: '1.5rem', 
+                    fontWeight: 700, 
+                    marginBottom: 15,
+                    lineHeight: '1.3'
+                  }}>
+                    {item.name}
+                  </h3>
+                  
+                  <p style={{ 
+                    color: '#94a3b8',
+                    marginBottom: 20, 
+                    lineHeight: '1.6',
+                    fontSize: '1rem'
+                  }}>
+                    {item.description}
+                  </p>
+                  
+                  <div style={{ 
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                    marginBottom: 20
+                  }}>
+                    <div style={{ 
+                      fontSize: '1.5rem', 
+                      fontWeight: 700, 
+                      background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      backgroundClip: 'text'
+                    }}>
+                      {item.price}
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
+                      <span style={{ color: '#fbbf24' }}>⭐</span>
+                      <span style={{ fontSize: '0.9rem', color: '#94a3b8' }}>
+                        {item.rating} ({item.reviews} reviews)
+                      </span>
+                    </div>
+                  </div>
+                  
+                  <Link href="/contact" style={{
+                    background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+                    color: 'white',
+                    padding: '12px 24px',
+                    textDecoration: 'none',
+                    borderRadius: 6,
+                    fontSize: '1rem',
+                    fontWeight: 600,
+                    display: 'block',
+                    width: '100%',
+                    textAlign: 'center'
+                  }}>
+                    Learn More
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div style={{ display: 'grid', gap: 60 }}>
+            {marketplaceCategories.map((category, categoryIndex) => (
+              <div key={categoryIndex}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 20, marginBottom: 30 }}>
+                  <div style={{ fontSize: '3rem' }}>{category.icon}</div>
                   <div>
-                    <h2 className="text-3xl font-bold text-gray-900 mb-2">
+                    <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 10 }}>
                       {category.title}
                     </h2>
-                    <p className="text-lg text-gray-600">
+                    <p style={{ color: '#94a3b8', fontSize: '1.1rem' }}>
                       {category.description}
                     </p>
                   </div>
                 </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 20 }}>
                   {category.items.map((item, itemIndex) => (
-                    <div key={itemIndex} className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                      <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    <div key={itemIndex} style={{ 
+                      background: 'rgba(255, 255, 255, 0.05)',
+                      borderRadius: 12, 
+                      padding: 25, 
+                      border: '1px solid rgba(255, 255, 255, 0.1)', 
+                      transition: 'transform 0.3s ease, box-shadow 0.3s ease', 
+                      cursor: 'pointer'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = 'translateY(-3px)';
+                      e.currentTarget.style.boxShadow = '0 15px 30px rgba(0, 0, 0, 0.2)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = 'translateY(0)';
+                      e.currentTarget.style.boxShadow = 'none';
+                    }}>
+                      <div style={{ marginBottom: 15 }}>
+                        <span style={{
+                          background: 'rgba(59, 130, 246, 0.2)',
+                          color: '#3b82f6',
+                          padding: '6px 12px',
+                          borderRadius: 20,
+                          fontSize: '0.9rem',
+                          fontWeight: 600
+                        }}>
+                          {item.category}
+                        </span>
+                      </div>
+                      
+                      <h3 style={{ 
+                        fontSize: '1.3rem', 
+                        fontWeight: 700, 
+                        marginBottom: 10,
+                        lineHeight: '1.3'
+                      }}>
                         {item.name}
                       </h3>
-                      <p className="text-blue-600 font-semibold mb-2">
+                      
+                      <div style={{ 
+                        fontSize: '1.2rem', 
+                        fontWeight: 600, 
+                        background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent',
+                        backgroundClip: 'text'
+                      }}>
                         {item.price}
-                      </p>
-                      <p className="text-sm text-gray-500 mb-4">
-                        {item.category}
-                      </p>
-                      <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center">
-                        <ShoppingCart className="w-4 h-4 mr-2" />
-                        Add to Cart
-                      </button>
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -95,21 +283,58 @@ export default function Marketplace() {
             ))}
           </div>
 
-          {/* CTA Section */}
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-12 text-white text-center mt-16">
-            <h2 className="text-3xl font-bold mb-6">
-              Can't Find What You're Looking For?
+          <div style={{ 
+            background: 'rgba(255, 255, 255, 0.05)',
+            borderRadius: 12,
+            padding: 40,
+            border: '1px solid rgba(255, 255, 255, 0.1)',
+            textAlign: 'center',
+            marginTop: 80
+          }}>
+            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 20 }}>
+              Ready to Explore Our Marketplace?
             </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              We can create custom solutions tailored to your specific needs.
+            <p style={{ 
+              fontSize: '1.1rem', 
+              color: '#94a3b8', 
+              marginBottom: 30, 
+              maxWidth: 600, 
+              margin: '0 auto 30px' 
+            }}>
+              Browse our comprehensive marketplace to find the perfect technology solutions, services, and talent for your business needs.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
-                Request Custom Solution
-                <ArrowRight className="w-5 h-5 ml-2" />
+            <div style={{ display: 'flex', gap: 20, justifyContent: 'center', flexWrap: 'wrap' }}>
+              <Link href="/contact" style={{
+                background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+                color: 'white',
+                padding: '15px 30px',
+                textDecoration: 'none',
+                borderRadius: 8,
+                fontSize: '1.1rem',
+                fontWeight: 600,
+                display: 'inline-block'
+              }}>
+                Browse Marketplace
               </Link>
-              <Link href="/services" className="inline-flex items-center px-8 py-4 bg-transparent text-white border-2 border-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold">
-                Browse All Services
+              <Link href="/request-quote" style={{
+                background: 'transparent',
+                color: 'white',
+                padding: '15px 30px',
+                textDecoration: 'none',
+                borderRadius: 8,
+                fontSize: '1.1rem',
+                fontWeight: 600, 
+                display: 'inline-block', 
+                border: '2px solid rgba(255, 255, 255, 0.3)', 
+                transition: 'border-color 0.3s ease'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = '#3b82f6';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.3)';
+              }}>
+                Get Custom Quote
               </Link>
             </div>
           </div>
