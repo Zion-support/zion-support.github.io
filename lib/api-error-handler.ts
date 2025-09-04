@@ -100,7 +100,6 @@ class ApiErrorHandler {
           return `Request failed with status ${error.status}`;
       }
     }
-
     return error.message || 'An unexpected error occurred';
   }
 }

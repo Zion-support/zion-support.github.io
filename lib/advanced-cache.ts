@@ -23,7 +23,6 @@ class AdvancedCache<T = any> {
       cleanupInterval: 60 * 1000, // 1 minute
       ...config
     };
-
     // Start cleanup interval
     setInterval(() => this.cleanup(), this.config.cleanupInterval);
   }
@@ -34,13 +33,11 @@ class AdvancedCache<T = any> {
       timestamp: Date.now(),
       ttl: ttl || this.config.defaultTTL
     };
-
+    
     // Remove oldest items if cache is full
     if (this.cache.size >= this.config.maxSize) {
       const firstKey = this.cache.keys().next().value;
-      if (firstKey) {
-        this.cache.delete(firstKey);
-      }
+      this.cache.delete(firstKey);
     }
 
     this.cache.set(key, item);

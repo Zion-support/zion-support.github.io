@@ -22,6 +22,6 @@ const Loading: React.FC<LoadingProps> = ({
       <div className="text-slate-500 text-sm mt-2">Zion Tech Group</div>
     </div>
   );
-}
+};
 
 export default Loading;
