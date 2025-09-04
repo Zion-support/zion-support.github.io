@@ -64,16 +64,10 @@ export default function Home() {
               Innovative Micro SaaS, AI Services & IT Solutions
             </p>
             <p className="text-lg text-slate-400 mb-12 max-w-3xl mx-auto">
-<<<<<<< HEAD
-              We deliver cutting-edge technology solutions with 150+ micro SaaS products, 
-              100+ advanced AI services, and 100+ comprehensive IT solutions. From cloud optimization 
-              to AI automation, quantum computing to blockchain solutions, we help businesses scale 
-              efficiently and securely in the digital age.
-=======
-              We deliver cutting-edge technology solutions with 150+ innovative micro SaaS products, 
-              90+ advanced AI services, and 100+ comprehensive IT solutions. From quantum computing 
-              to AI automation, we help businesses scale efficiently and securely with next-generation technology.
->>>>>>> 72143897074 (feat: Add 30+ new innovative services across micro SaaS, AI, and IT categories)
+              We deliver cutting-edge technology solutions with 200+ innovative micro SaaS products, 
+              150+ advanced AI services, and 150+ comprehensive IT solutions. From quantum computing 
+              to AI automation, 6G networks to edge computing, we help businesses scale efficiently 
+              and securely with next-generation technology.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
@@ -90,19 +84,15 @@ export default function Home() {
 
             <div className="grid md:grid-cols-3 gap-6 text-center">
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
-                <h3 className="text-2xl font-bold text-blue-400 mb-2">150+</h3>
+                <h3 className="text-2xl font-bold text-blue-400 mb-2">200+</h3>
                 <p className="text-slate-300">Micro SaaS Products</p>
               </div>
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
-<<<<<<< HEAD
-                <h3 className="text-2xl font-bold text-purple-400 mb-2">100+</h3>
-=======
-                <h3 className="text-2xl font-bold text-purple-400 mb-2">90+</h3>
->>>>>>> 72143897074 (feat: Add 30+ new innovative services across micro SaaS, AI, and IT categories)
+                <h3 className="text-2xl font-bold text-purple-400 mb-2">150+</h3>
                 <p className="text-slate-300">AI Services</p>
               </div>
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
-                <h3 className="text-2xl font-bold text-green-400 mb-2">100+</h3>
+                <h3 className="text-2xl font-bold text-green-400 mb-2">150+</h3>
                 <p className="text-slate-300">IT Solutions</p>
               </div>
             </div>

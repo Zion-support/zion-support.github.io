@@ -397,6 +397,128 @@
   }
 }
 
+/* Enhanced Spacing and Pagination */
+.page-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem;
+}
+
+@media (max-width: 640px) {
+  .page-container {
+    padding: 1rem 1rem;
+  }
+}
+
+.section-spacing {
+  margin: 4rem 0;
+}
+
+@media (max-width: 640px) {
+  .section-spacing {
+    margin: 2rem 0;
+  }
+}
+
+.card-spacing {
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 640px) {
+  .card-spacing {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 3rem 0;
+}
+
+.pagination-button {
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(15, 23, 42, 0.6);
+  color: white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pagination-button:hover {
+  background: rgba(59, 130, 246, 0.2);
+  border-color: rgba(59, 130, 246, 0.5);
+}
+
+.pagination-button.active {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  border-color: transparent;
+}
+
+.pagination-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Enhanced Grid Layouts */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-grid {
+    gap: 1rem;
+  }
+}
+
+/* Improved Text Spacing */
+.text-spacing {
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.heading-spacing {
+  margin-bottom: 1rem;
+}
+
+.subheading-spacing {
+  margin-bottom: 0.75rem;
+}
+
+/* Enhanced Button Spacing */
+.button-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+@media (max-width: 640px) {
+  .button-group {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .button-group button,
+  .button-group a {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 /* Loading states */
 .loading {
   opacity: 0.6;
