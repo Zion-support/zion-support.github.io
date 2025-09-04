@@ -1,5 +1,10 @@
 import { useEffect, useCallback } from 'react';
 
+// Type definition for MessageEvent
+interface MessageEvent {
+  data: unknown;
+}
+
 interface MessageChannelHandlerProps {
   onMessage?: (message: unknown) => void;
   onError?: (error: Error) => void;

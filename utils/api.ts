@@ -1,3 +1,10 @@
+// Type definitions for browser APIs
+declare global {
+  interface RequestInit {
+    timeout?: number;
+  }
+}
+
 interface ApiResponse<T = unknown> {
   data?: T;
   error?: string;

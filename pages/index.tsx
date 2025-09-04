@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Brain, Network, Cloud, Zap, Shield, ArrowRight, CheckCircle, Users, Globe, Award } from 'lucide-react';
+import { Brain, Network, Cloud, ArrowRight, CheckCircle } from 'lucide-react';
 
 const stats = [
   { number: '99.9%', label: 'Uptime Guarantee' },

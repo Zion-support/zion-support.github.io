@@ -4,7 +4,8 @@ import { useState, useEffect, useCallback } from 'react';
 interface UseApiOptions {
   immediate?: boolean;
   onSuccess?: (data: any) => void;
-  onError?: (error: any) => void}
+  onError?: (error: any) => void;
+}
 
 export const useApi = <T = any>(
   apiFunction: (...args: any[]) => Promise<T>,
@@ -21,18 +22,23 @@ export const useApi = <T = any>(
       const result = await apiFunction(...args);
       setData(result);
       options.onSuccess?.(result);
-      return result} catch (err) {
+      return result;
+    } catch (err) {
       setError(err);
       options.onError?.(err);
-      throw err} finally {
-      setLoading(false)}
+      throw err;
+    } finally {
+      setLoading(false);
+    }
   }, [apiFunction, options]);
 
   useEffect(() => {
     if (options.immediate) {
-      execute()}
+      execute();
+    }
   }, [execute, options.immediate]);
 
-  return { data, loading, error, execute }};
+  return { data, loading, error, execute };
+};
 
 export default useApi;
