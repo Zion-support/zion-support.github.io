@@ -34,7 +34,9 @@ import {
   Brain,
   Sprout,
   Eye,
-  Bot
+  Bot,
+  DollarSign,
+  Rocket
 } from 'lucide-react';
 
 const itServices = [
@@ -378,6 +380,177 @@ const itServices = [
     features: ['Threat Detection', 'Intelligence Feeds', 'Incident Response', 'Threat Hunting'],
     pricing: '$30,000 - $150,000/setup',
     category: 'Threat Intelligence',
+    popular: true
+  },
+  {
+    title: 'Quantum-Safe Security Implementation',
+    description: 'Post-quantum cryptography implementation for future-proof security.',
+    icon: Lock,
+    features: ['Quantum-Resistant Algorithms', 'Migration Planning', 'Compliance Support', 'Performance Optimization'],
+    pricing: '$50,000 - $300,000/project',
+    category: 'Quantum Security',
+    popular: true
+  },
+  {
+    title: 'Edge Computing Infrastructure',
+    description: 'Distributed edge computing infrastructure for low-latency applications.',
+    icon: Cpu,
+    features: ['Edge Node Deployment', 'Latency Optimization', 'Resource Management', 'Monitoring'],
+    pricing: '$25,000 - $150,000/setup',
+    category: 'Edge Computing',
+    popular: true
+  },
+  {
+    title: '5G Network Implementation',
+    description: '5G network design, implementation, and optimization services.',
+    icon: Network,
+    features: ['Network Design', 'Spectrum Planning', 'Performance Optimization', 'Security Integration'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: '5G Networks',
+    popular: true
+  },
+  {
+    title: 'IoT Security & Management',
+    description: 'Comprehensive IoT security and device management solutions.',
+    icon: Settings,
+    features: ['Device Security', 'Firmware Updates', 'Access Control', 'Threat Detection'],
+    pricing: '$15,000 - $100,000/setup',
+    category: 'IoT Security',
+    popular: true
+  },
+  {
+    title: 'Blockchain Infrastructure Services',
+    description: 'Blockchain network setup, maintenance, and security services.',
+    icon: Lock,
+    features: ['Network Setup', 'Node Management', 'Security Hardening', 'Performance Optimization'],
+    pricing: '$20,000 - $200,000/project',
+    category: 'Blockchain Infrastructure',
+    popular: true
+  },
+  {
+    title: 'AI Infrastructure & MLOps',
+    description: 'AI/ML infrastructure setup and machine learning operations services.',
+    icon: Brain,
+    features: ['ML Pipeline Setup', 'Model Deployment', 'Monitoring', 'Auto-scaling'],
+    pricing: '$30,000 - $200,000/setup',
+    category: 'AI Infrastructure',
+    popular: true
+  },
+  {
+    title: 'Zero Trust Security Architecture',
+    description: 'Complete zero trust security implementation and architecture design.',
+    icon: Shield,
+    features: ['Identity Verification', 'Micro-segmentation', 'Continuous Monitoring', 'Policy Enforcement'],
+    pricing: '$40,000 - $300,000/project',
+    category: 'Zero Trust',
+    popular: true
+  },
+  {
+    title: 'Hybrid Cloud Management',
+    description: 'Unified management of multi-cloud and hybrid cloud environments.',
+    icon: Cloud,
+    features: ['Multi-cloud Orchestration', 'Cost Optimization', 'Security Management', 'Compliance'],
+    pricing: '$25,000 - $150,000/setup',
+    category: 'Hybrid Cloud',
+    popular: true
+  },
+  {
+    title: 'Digital Transformation Consulting',
+    description: 'Comprehensive digital transformation strategy and implementation.',
+    icon: Building,
+    features: ['Strategy Development', 'Technology Assessment', 'Change Management', 'Implementation'],
+    pricing: '$200 - $500/hour',
+    category: 'Digital Transformation',
+    popular: true
+  },
+  {
+    title: 'IT Compliance & Governance',
+    description: 'IT compliance management and governance framework implementation.',
+    icon: Shield,
+    features: ['Compliance Auditing', 'Policy Development', 'Risk Assessment', 'Training'],
+    pricing: '$15,000 - $100,000/project',
+    category: 'Compliance',
+    popular: true
+  },
+  {
+    title: 'Advanced Analytics Platform',
+    description: 'Big data analytics platform with real-time processing capabilities.',
+    icon: BarChart3,
+    features: ['Data Pipeline Setup', 'Real-time Processing', 'Advanced Analytics', 'Visualization'],
+    pricing: '$30,000 - $200,000/setup',
+    category: 'Analytics',
+    popular: true
+  },
+  {
+    title: 'IT Service Management (ITSM)',
+    description: 'Complete IT service management implementation with ITSM tools.',
+    icon: Settings,
+    features: ['Service Catalog', 'Incident Management', 'Change Management', 'SLA Management'],
+    pricing: '$20,000 - $150,000/setup',
+    category: 'ITSM',
+    popular: true
+  },
+  {
+    title: 'Network Performance Optimization',
+    description: 'Advanced network performance analysis and optimization services.',
+    icon: Network,
+    features: ['Performance Analysis', 'Traffic Optimization', 'QoS Implementation', 'Monitoring'],
+    pricing: '$10,000 - $75,000/project',
+    category: 'Network Optimization',
+    popular: true
+  },
+  {
+    title: 'IT Disaster Recovery Planning',
+    description: 'Comprehensive disaster recovery planning and testing services.',
+    icon: Shield,
+    features: ['DR Planning', 'Testing', 'Documentation', 'Training'],
+    pricing: '$15,000 - $100,000/project',
+    category: 'Disaster Recovery',
+    popular: true
+  },
+  {
+    title: 'IT Cost Optimization',
+    description: 'IT infrastructure cost analysis and optimization services.',
+    icon: DollarSign,
+    features: ['Cost Analysis', 'Optimization Recommendations', 'Implementation', 'Monitoring'],
+    pricing: '$10,000 - $75,000/project',
+    category: 'Cost Optimization',
+    popular: true
+  },
+  {
+    title: 'IT Security Awareness Training',
+    description: 'Comprehensive cybersecurity awareness training for employees.',
+    icon: Users,
+    features: ['Phishing Simulation', 'Training Modules', 'Progress Tracking', 'Compliance Reporting'],
+    pricing: '$5,000 - $30,000/setup',
+    category: 'Security Training',
+    popular: true
+  },
+  {
+    title: 'IT Vendor Risk Management',
+    description: 'Third-party vendor risk assessment and management services.',
+    icon: Shield,
+    features: ['Risk Assessment', 'Due Diligence', 'Contract Review', 'Ongoing Monitoring'],
+    pricing: '$8,000 - $50,000/project',
+    category: 'Vendor Risk',
+    popular: true
+  },
+  {
+    title: 'IT Innovation Lab',
+    description: 'Dedicated innovation lab for emerging technology experimentation.',
+    icon: Rocket,
+    features: ['Technology Research', 'Proof of Concepts', 'Innovation Workshops', 'Pilot Programs'],
+    pricing: '$50,000 - $300,000/setup',
+    category: 'Innovation',
+    popular: true
+  },
+  {
+    title: 'IT Performance Monitoring',
+    description: 'Comprehensive IT infrastructure performance monitoring and alerting.',
+    icon: Monitor,
+    features: ['Real-time Monitoring', 'Performance Analytics', 'Alerting', 'Capacity Planning'],
+    pricing: '$10,000 - $75,000/setup',
+    category: 'Performance Monitoring',
     popular: true
   }
 ];
@@ -737,6 +910,17 @@ export default function ITServicesPage() {
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               Let our expert team help you build a robust, secure, and scalable IT environment.
             </p>
+            <div className="mb-8">
+              <p className="text-lg text-green-100 mb-2">
+                📞 <strong>Call us:</strong> +1 302 464 0950
+              </p>
+              <p className="text-lg text-green-100 mb-2">
+                📧 <strong>Email us:</strong> kleber@ziontechgroup.com
+              </p>
+              <p className="text-lg text-green-100">
+                📍 <strong>Visit us:</strong> 364 E Main St STE 1008, Middletown DE 19709
+              </p>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
                 Get IT Assessment

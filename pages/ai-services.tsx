@@ -379,6 +379,141 @@ const aiServices = [
     pricing: '$15,000 - $100,000/setup',
     category: 'Industrial AI',
     popular: true
+  },
+  {
+    title: 'AI-Powered Quantum Computing Simulator',
+    description: 'Advanced quantum computing simulation and algorithm development platform.',
+    icon: Cpu,
+    features: ['Quantum Circuit Design', 'Algorithm Simulation', 'Error Correction', 'Performance Analysis'],
+    pricing: '$5,000 - $25,000/month',
+    category: 'Quantum Computing',
+    popular: true
+  },
+  {
+    title: 'AI Autonomous Vehicle Testing',
+    description: 'Comprehensive AI testing and validation platform for autonomous vehicles.',
+    icon: Car,
+    features: ['Simulation Environment', 'Safety Testing', 'Performance Validation', 'Regulatory Compliance'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'Autonomous Vehicles',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Climate Modeling',
+    description: 'Advanced climate prediction and environmental impact analysis using AI.',
+    icon: Globe,
+    features: ['Climate Prediction', 'Impact Analysis', 'Carbon Footprint Tracking', 'Sustainability Planning'],
+    pricing: '$10,000 - $75,000/project',
+    category: 'Climate Tech',
+    popular: true
+  },
+  {
+    title: 'AI Space Mission Planning',
+    description: 'Intelligent mission planning and optimization for space exploration.',
+    icon: Rocket,
+    features: ['Trajectory Optimization', 'Resource Planning', 'Risk Assessment', 'Mission Simulation'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Space Technology',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Metaverse Platform',
+    description: 'Complete metaverse creation and management platform with AI-driven interactions.',
+    icon: Monitor,
+    features: ['3D World Creation', 'AI Avatars', 'Virtual Economy', 'Social Interactions'],
+    pricing: '$15,000 - $100,000/setup',
+    category: 'Metaverse',
+    popular: true
+  },
+  {
+    title: 'AI Neuromorphic Computing',
+    description: 'Brain-inspired computing systems for advanced AI processing.',
+    icon: Brain,
+    features: ['Neural Architecture', 'Pattern Recognition', 'Learning Algorithms', 'Energy Efficiency'],
+    pricing: '$20,000 - $200,000/project',
+    category: 'Neuromorphic Computing',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Cybersecurity AI',
+    description: 'Self-evolving AI system for advanced threat detection and response.',
+    icon: Shield,
+    features: ['Adaptive Learning', 'Threat Evolution', 'Automated Response', 'Zero-day Detection'],
+    pricing: '$8,000 - $50,000/month',
+    category: 'Cybersecurity AI',
+    popular: true
+  },
+  {
+    title: 'AI Synthetic Data Generator',
+    description: 'High-quality synthetic data generation for training and testing AI models.',
+    icon: Database,
+    features: ['Realistic Data Generation', 'Privacy Preservation', 'Bias Mitigation', 'Quality Validation'],
+    pricing: '$2,000 - $15,000/month',
+    category: 'Data Generation',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Edge AI Platform',
+    description: 'Distributed AI processing platform for edge computing environments.',
+    icon: Network,
+    features: ['Edge Deployment', 'Model Optimization', 'Real-time Processing', 'Resource Management'],
+    pricing: '$5,000 - $30,000/setup',
+    category: 'Edge AI',
+    popular: true
+  },
+  {
+    title: 'AI Consciousness Simulation',
+    description: 'Advanced AI consciousness modeling and ethical AI development platform.',
+    icon: Brain,
+    features: ['Consciousness Modeling', 'Ethical Frameworks', 'Decision Making', 'Moral Reasoning'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'AI Ethics',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Time Series Forecasting',
+    description: 'Advanced time series prediction for financial, weather, and business data.',
+    icon: TrendingUp,
+    features: ['Multi-variate Analysis', 'Seasonality Detection', 'Anomaly Detection', 'Confidence Intervals'],
+    pricing: '$3,000 - $20,000/setup',
+    category: 'Time Series',
+    popular: true
+  },
+  {
+    title: 'AI Molecular Design Platform',
+    description: 'AI-driven molecular design and drug discovery for pharmaceutical companies.',
+    icon: Heart,
+    features: ['Molecular Generation', 'Property Prediction', 'Drug-Target Interaction', 'Toxicity Assessment'],
+    pricing: '$25,000 - $200,000/project',
+    category: 'Pharmaceutical AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Augmented Reality',
+    description: 'Intelligent AR platform with object recognition and spatial understanding.',
+    icon: Eye,
+    features: ['Object Recognition', 'Spatial Mapping', 'Real-time Rendering', 'Gesture Control'],
+    pricing: '$10,000 - $75,000/setup',
+    category: 'Augmented Reality',
+    popular: true
+  },
+  {
+    title: 'AI Digital Human Creation',
+    description: 'Realistic digital human creation with natural language and emotion processing.',
+    icon: Users,
+    features: ['Facial Animation', 'Voice Synthesis', 'Emotion Recognition', 'Natural Interaction'],
+    pricing: '$15,000 - $100,000/project',
+    category: 'Digital Humans',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Blockchain Analytics',
+    description: 'Advanced blockchain transaction analysis and cryptocurrency intelligence.',
+    icon: TrendingUp,
+    features: ['Transaction Analysis', 'Pattern Recognition', 'Risk Assessment', 'Compliance Monitoring'],
+    pricing: '$5,000 - $40,000/month',
+    category: 'Blockchain AI',
+    popular: true
   }
 ];
 
@@ -652,6 +787,17 @@ export default function AIServicesPage() {
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               Let&apos;s discuss how our AI solutions can drive innovation and growth for your organization.
             </p>
+            <div className="mb-8">
+              <p className="text-lg text-blue-100 mb-2">
+                📞 <strong>Call us:</strong> +1 302 464 0950
+              </p>
+              <p className="text-lg text-blue-100 mb-2">
+                📧 <strong>Email us:</strong> kleber@ziontechgroup.com
+              </p>
+              <p className="text-lg text-blue-100">
+                📍 <strong>Visit us:</strong> 364 E Main St STE 1008, Middletown DE 19709
+              </p>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
                 Start Your AI Journey

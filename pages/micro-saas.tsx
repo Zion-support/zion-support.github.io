@@ -44,7 +44,8 @@ import {
   BookOpen,
   ShoppingCart,
   Home,
-  Database
+  Database,
+  Vote
 } from 'lucide-react';
 
 const microSaaSProducts = [
@@ -421,6 +422,186 @@ const microSaaSProducts = [
     features: ['Emotion Detection', 'Quality Scoring', 'Sentiment Analysis', 'Performance Metrics'],
     pricing: '$199 - $1,299/month',
     category: 'Voice Analytics',
+    popular: true
+  },
+  {
+    title: 'Quantum-Safe Encryption API',
+    description: 'Post-quantum cryptography solutions for future-proof data protection.',
+    icon: Lock,
+    features: ['Quantum-Resistant Algorithms', 'API Integration', 'Key Management', 'Compliance Ready'],
+    pricing: '$499 - $2,999/month',
+    category: 'Cybersecurity',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Code Generation',
+    description: 'Automated code generation from natural language descriptions with multiple language support.',
+    icon: Code,
+    features: ['Natural Language to Code', 'Multi-language Support', 'Code Review', 'Testing Generation'],
+    pricing: '$199 - $1,499/month',
+    category: 'Developer Tools',
+    popular: true
+  },
+  {
+    title: 'Edge Computing Orchestrator',
+    description: 'Intelligent edge computing management with real-time workload distribution.',
+    icon: Cpu,
+    features: ['Edge Workload Management', 'Latency Optimization', 'Resource Allocation', 'Monitoring'],
+    pricing: '$299 - $1,999/month',
+    category: 'Edge Computing',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Threat Intelligence',
+    description: 'Real-time threat detection and intelligence gathering for cybersecurity teams.',
+    icon: Shield,
+    features: ['Threat Detection', 'Intelligence Gathering', 'Risk Assessment', 'Automated Response'],
+    pricing: '$399 - $2,499/month',
+    category: 'Cybersecurity',
+    popular: true
+  },
+  {
+    title: 'Digital Twin Platform',
+    description: 'Create and manage digital twins for IoT devices and physical assets.',
+    icon: Monitor,
+    features: ['3D Modeling', 'Real-time Sync', 'Predictive Analytics', 'Simulation Engine'],
+    pricing: '$599 - $3,999/month',
+    category: 'IoT & Digital Twins',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Market Research',
+    description: 'Automated market research with sentiment analysis and trend prediction.',
+    icon: TrendingUp,
+    features: ['Market Analysis', 'Sentiment Tracking', 'Trend Prediction', 'Competitor Intelligence'],
+    pricing: '$299 - $1,999/month',
+    category: 'Market Research',
+    popular: true
+  },
+  {
+    title: 'Blockchain Supply Chain Tracker',
+    description: 'End-to-end supply chain transparency using blockchain technology.',
+    icon: Package,
+    features: ['Product Tracking', 'Authenticity Verification', 'Compliance Monitoring', 'Smart Contracts'],
+    pricing: '$199 - $1,299/month',
+    category: 'Blockchain & Supply Chain',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Email Security',
+    description: 'Advanced email protection against phishing, malware, and business email compromise.',
+    icon: Mail,
+    features: ['Phishing Detection', 'Malware Scanning', 'BEC Protection', 'User Training'],
+    pricing: '$99 - $599/month',
+    category: 'Email Security',
+    popular: true
+  },
+  {
+    title: 'Smart Contract Development Platform',
+    description: 'No-code smart contract creation and deployment across multiple blockchains.',
+    icon: Code,
+    features: ['Visual Builder', 'Multi-chain Support', 'Testing Suite', 'Deployment Tools'],
+    pricing: '$199 - $1,499/month',
+    category: 'Blockchain Development',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Data Quality Engine',
+    description: 'Automated data cleaning, validation, and quality improvement for enterprise data.',
+    icon: Database,
+    features: ['Data Cleaning', 'Quality Scoring', 'Duplicate Detection', 'Validation Rules'],
+    pricing: '$299 - $1,999/month',
+    category: 'Data Management',
+    popular: true
+  },
+  {
+    title: 'Real-Time Collaboration Platform',
+    description: 'Advanced real-time collaboration with AR/VR integration for remote teams.',
+    icon: Users,
+    features: ['Real-time Editing', 'AR/VR Support', 'Whiteboard Integration', 'Voice/Video Chat'],
+    pricing: '$49 - $299/month',
+    category: 'Collaboration',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Compliance Monitor',
+    description: 'Automated compliance monitoring across multiple regulations and standards.',
+    icon: Shield,
+    features: ['Multi-regulation Support', 'Automated Auditing', 'Risk Assessment', 'Reporting'],
+    pricing: '$399 - $2,499/month',
+    category: 'Compliance',
+    popular: true
+  },
+  {
+    title: 'Intelligent API Gateway',
+    description: 'AI-powered API gateway with intelligent routing, caching, and security.',
+    icon: Network,
+    features: ['Smart Routing', 'Intelligent Caching', 'Security Policies', 'Performance Optimization'],
+    pricing: '$199 - $1,299/month',
+    category: 'API Management',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Customer Journey Analytics',
+    description: 'Comprehensive customer journey mapping with predictive analytics and optimization.',
+    icon: Target,
+    features: ['Journey Mapping', 'Predictive Analytics', 'Optimization Suggestions', 'ROI Tracking'],
+    pricing: '$299 - $1,999/month',
+    category: 'Customer Analytics',
+    popular: true
+  },
+  {
+    title: 'Blockchain-Based Voting System',
+    description: 'Secure, transparent voting platform with blockchain verification and audit trails.',
+    icon: Vote,
+    features: ['Secure Voting', 'Blockchain Verification', 'Audit Trails', 'Real-time Results'],
+    pricing: '$199 - $1,299/month',
+    category: 'Blockchain & Governance',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Content Moderation Suite',
+    description: 'Advanced content moderation with multi-modal detection and custom policy enforcement.',
+    icon: Eye,
+    features: ['Multi-modal Detection', 'Custom Policies', 'Real-time Processing', 'Human Review Queue'],
+    pricing: '$199 - $1,499/month',
+    category: 'Content Safety',
+    popular: true
+  },
+  {
+    title: 'Smart Contract Audit Platform',
+    description: 'Automated smart contract security auditing with comprehensive vulnerability detection.',
+    icon: Lock,
+    features: ['Automated Auditing', 'Vulnerability Detection', 'Gas Optimization', 'Compliance Checks'],
+    pricing: '$299 - $1,999/month',
+    category: 'Blockchain Security',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Predictive Maintenance',
+    description: 'Intelligent predictive maintenance for industrial equipment and machinery.',
+    icon: Settings,
+    features: ['Predictive Analytics', 'Equipment Monitoring', 'Maintenance Scheduling', 'Cost Optimization'],
+    pricing: '$399 - $2,499/month',
+    category: 'Industrial IoT',
+    popular: true
+  },
+  {
+    title: 'Decentralized Identity Management',
+    description: 'Self-sovereign identity management with privacy-preserving authentication.',
+    icon: Lock,
+    features: ['Self-Sovereign Identity', 'Privacy Protection', 'Zero-Knowledge Proofs', 'Interoperability'],
+    pricing: '$199 - $1,299/month',
+    category: 'Identity Management',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Financial Planning',
+    description: 'Intelligent financial planning and investment optimization for individuals and businesses.',
+    icon: DollarSign,
+    features: ['Portfolio Optimization', 'Risk Assessment', 'Goal Planning', 'Tax Optimization'],
+    pricing: '$99 - $599/month',
+    category: 'FinTech',
     popular: true
   }
 ];
@@ -849,6 +1030,17 @@ export default function MicroSaaSPage() {
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               Let&apos;s build the perfect SaaS solution for your business needs. Fast, secure, and scalable.
             </p>
+            <div className="mb-8">
+              <p className="text-lg text-purple-100 mb-2">
+                📞 <strong>Call us:</strong> +1 302 464 0950
+              </p>
+              <p className="text-lg text-purple-100 mb-2">
+                📧 <strong>Email us:</strong> kleber@ziontechgroup.com
+              </p>
+              <p className="text-lg text-purple-100">
+                📍 <strong>Visit us:</strong> 364 E Main St STE 1008, Middletown DE 19709
+              </p>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
                 Start Building
