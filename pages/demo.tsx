@@ -24,7 +24,7 @@ const DemoPage: React.FC = () => {
   
   const demos = [
     {
-      id: 'ai-services',
+      id: 1,
       title: 'AI Services Demo',
       description: 'See how our AI solutions can transform your business processes',
       duration: '15 minutes',
@@ -52,7 +52,7 @@ const DemoPage: React.FC = () => {
       category: 'IT Services'
     },
     {
-      id: 'micro-saas',
+      id: 3,
       title: 'Micro SaaS Demo',
       description: 'Discover our innovative micro SaaS development capabilities',
       duration: '18 minutes',

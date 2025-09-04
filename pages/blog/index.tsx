@@ -18,7 +18,6 @@ export default function Blog() {
             </p>
           </div>
         </div>
-      </section>
 
       <section className="py-16 max-w-6xl mx-auto px-6">
         <div className="flex flex-wrap gap-2 mb-8">
