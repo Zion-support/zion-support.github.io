@@ -53,17 +53,6 @@
     "src.corrupted/**",
     "utils/next-link-shim.tsx",
     "playwright.config.ts",
-
-    "data/services.ts",
-    "styles/**/*",
-    "types/**/*",
-    "utils/**/*",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules",
     "api-backup",
     "api-disabled",
     "api.disabled.temp",
