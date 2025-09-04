@@ -1,0 +1,60 @@
+{
+  "timestamp": "2025-09-03T16:00:25.266Z",
+  "tasks": [
+    {
+      "name": "Health Check",
+      "status": "success",
+      "duration": 32,
+      "output": "\u001b[1m🏥 Starting Health Check...\u001b[0m\n\u001b[1m================================\u001b[0m\n\u001b[34m🔍 Checking Node.js modules...\u001b[0m\n\u001b[32m✅ package.json found: ziontechgroup.com v0.1.0\u001b[0m\n\u001b[32m✅ node_modules directory exists (28672 bytes)\u001b[0m\n\u001b[32m✅ Node Modules check passed (1ms)\u001b[0m\n\u001b[34m🏗️  Checking project structure...\u001b[0m\n\u001b[32m✅ package.json exists\u001b[0m\n\u001b[32m✅ next.config.js exists\u001b[0m\n\u001b[32m✅ tsconfig.json exists\u001b[0m\n\u001b[32m✅ src/ directory exists\u001b[0m\n\u001b[32m✅ pages/ directory exists\u001b[0m\n\u001b[32m✅ public/ directory exists\u001b[0m\n\u001b[32m✅ Project Structure check passed (0ms)\u001b[0m\n\u001b[34m💻 Checking system resources...\u001b[0m\n\u001b[36m📊 Total Memory: 16017MB\u001b[0m\n\u001b[36m📊 Available Memory: 14483MB\u001b[0m\n\u001b[36m💾 Available Disk Space: 106G\u001b[0m\n\u001b[32m✅ System Resources check passed (7ms)\u001b[0m\n\u001b[34m📦 Checking dependencies...\u001b[0m\n\u001b[36m📦 Production dependencies: 78\u001b[0m\n\u001b[36m📦 Development dependencies: 37\u001b[0m\n\u001b[32m✅ Critical dependency next found\u001b[0m\n\u001b[32m✅ Critical dependency react found\u001b[0m\n\u001b[32m✅ Critical dependency typescri",
+      "error": null
+    },
+    {
+      "name": "Security Scan",
+      "status": "success",
+      "duration": 235,
+      "output": "\u001b[1m🔒 Starting Security Scanner...\u001b[0m\n\u001b[1m================================\u001b[0m\n\u001b[34m🔍 Scanning for secrets and sensitive data...\u001b[0m\n\u001b[32m✅ No secrets found in configuration files\u001b[0m\n\u001b[32m✅ Secrets Scan check passed (1ms)\u001b[0m\n\u001b[34m📦 Checking dependencies for vulnerabilities...\u001b[0m\n\u001b[33m⚠️  Could not run npm audit\u001b[0m\n\u001b[32m✅ Dependencies check passed (210ms)\u001b[0m\n\u001b[34m🔐 Checking file permissions...\u001b[0m\n\u001b[33m⚠️  package.json is world-readable (644)\u001b[0m\n\u001b[33m⚠️  package-lock.json is world-readable (644)\u001b[0m\n\u001b[32m✅ File Permissions check passed (1ms)\u001b[0m\n\u001b[34m🌐 Checking HTTPS configuration...\u001b[0m\n\u001b[33m⚠️  No HTTPS configuration detected\u001b[0m\n\u001b[32m✅ HTTPS Configuration check passed (0ms)\u001b[0m\n\u001b[34m🛡️  Checking Content Security Policy...\u001b[0m\n\u001b[33m⚠️  No Content Security Policy detected\u001b[0m\n\u001b[32m✅ Content Security Policy check passed (0ms)\u001b[0m\n\u001b[34m🔧 Checking environment variables...\u001b[0m\n\u001b[32m✅ Environment Variables check passed (0ms)\u001b[0m\n\u001b[36m📄 Security report saved to: /workspace/sec",
+      "error": null
+    },
+    {
+      "name": "Syntax Fix",
+      "status": "success",
+      "duration": 24,
+      "output": "🔧 Starting syntax error fixing...\n\n📊 Syntax fixing complete:\n   - Files processed: 7\n   - Fixes applied: 0\n   - Issues encountered: 0\n\n📄 Report saved to syntax-fix-report.json\n",
+      "error": null
+    },
+    {
+      "name": "Performance Monitor",
+      "status": "success",
+      "duration": 1009,
+      "output": "⚡ Starting performance monitoring...\n\n📊 Performance Metrics:\n   - .next bundle size: 31.70 MB\n   - node_modules size: 474.05 MB\n   - TypeScript files: 7\n   - JavaScript files: 0\n   - CSS files: 2\n\n✅ No performance issues detected\n\n📄 Performance report saved to performance-metrics.json\n",
+      "error": null
+    },
+    {
+      "name": "Security Audit",
+      "status": "success",
+      "duration": 23,
+      "output": "🔒 Starting security audit...\n\n🔒 Security Audit Results:\n\n⚠️  Warnings (1):\n   - pages/services-catalog.tsx: Use of innerHTML - potential XSS risk\n\n📄 Security audit report saved to security-audit-report.json\n",
+      "error": null
+    },
+    {
+      "name": "Code Quality Monitor",
+      "status": "success",
+      "duration": 33,
+      "output": "📊 Starting code quality monitoring...\n\n📊 Code Quality Report:\n   - Total files analyzed: 7\n   - Total lines of code: 586\n   - Average complexity: 0.14\n   - Files with issues: 0\n\n✅ No quality issues detected\n\n📄 Code quality report saved to code-quality-report.json\n",
+      "error": null
+    },
+    {
+      "name": "Dependency Update Check",
+      "status": "success",
+      "duration": 1877,
+      "output": "📦 Starting dependency update check...\n🔍 Checking for outdated packages...\n✅ All packages are up to date\n🔒 Checking for security vulnerabilities...\n⚠️  Could not check security vulnerabilities: Command failed: npm audit --json\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error code ENOLOCK\nnpm error audit This command requires an existing lockfile.\nnpm error audit Try creating one first with: npm i --package-lock-only\nnpm error audit Original error: loadVirtual requires existing shrinkwrap file\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-03T16_00_28_333Z-debug-0.log\n\n\n📊 Dependency Update Report:\n   - Outdated packages: 0\n   - Security vulnerabilities: 0\n   - Recommendations: 0\n\n📄 Dependency update report saved to dependency-update-report.json",
+      "error": null
+    }
+  ],
+  "summary": {
+    "total": 7,
+    "successful": 7,
+    "failed": 0,
+    "criticalFailures": 0
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "timestamp": "2025-09-04T07:04:26.699Z",
+  "sessionId": "1756969466699",
+  "systemInfo": {
+    "platform": "linux",
+    "arch": "x64",
+    "nodeVersion": "v22.16.0",
+    "totalMemory": 16795742208,
+    "freeMemory": 15007830016,
+    "cpus": 4,
+    "uptime": 735483.85
+  },
+  "metrics": {
+    "cpu": 5,
+    "memory": 11,
+    "disk": 12,
+    "network": 13142432288,
+    "processes": 88,
+    "build": 100,
+    "runtime": 0
+  },
+  "alerts": [],
+  "recommendations": [
+    {
+      "priority": "medium",
+      "message": "Runtime performance is below optimal",
+      "action": "Consider optimizing server startup process or using faster development server"
+    },
+    {
+      "priority": "low",
+      "message": "Implement automated monitoring and alerting",
+      "action": "Set up continuous monitoring with real-time alerts"
+    },
+    {
+      "priority": "low",
+      "message": "Implement log aggregation and analysis",
+      "action": "Set up centralized logging for better debugging and monitoring"
+    }
+  ],
+  "summary": {
+    "totalChecks": 7,
+    "alerts": 0,
+    "critical": 0,
+    "warning": 0,
+    "info": 0,
+    "performanceScore": 90
+  }
+}

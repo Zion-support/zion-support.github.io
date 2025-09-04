@@ -1,0 +1,14 @@
+{
+  "timestamp": "2025-09-04T03:03:40.981Z",
+  "duration": "0s",
+  "deployments": [],
+  "rollbacks": [],
+  "healthChecks": [],
+  "errors": [],
+  "summary": {
+    "totalDeployments": 0,
+    "totalRollbacks": 0,
+    "totalHealthChecks": 0,
+    "totalErrors": 0
+  }
+}
