@@ -7,8 +7,7 @@ export default function Help() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  };
-
+  }
   const helpCategories = [
     {
       title: "Getting Started",
@@ -162,11 +161,11 @@ export default function Help() {
                         border: '1px solid rgba(255, 255, 255, 0.05)',
                         transition: 'transform 0.3s ease, box-shadow 0.3s ease',
                         cursor: 'pointer'
-                      }}
+                      }
                       onMouseEnter={(e) => {
                         e.currentTarget.style.transform = 'translateY(-3px)';
                         e.currentTarget.style.boxShadow = '0 10px 20px rgba(0, 0, 0, 0.2)';
-                      }}
+                      }
                       onMouseLeave={(e) => {
                         e.currentTarget.style.transform = 'translateY(0)';
                         e.currentTarget.style.boxShadow = 'none';
@@ -232,11 +231,11 @@ export default function Help() {
                   textAlign: 'center',
                   transition: 'transform 0.3s ease, box-shadow 0.3s ease',
                   cursor: 'pointer'
-                }}
+                }
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-5px)';
                   e.currentTarget.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.3)';
-                }}
+                }
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = 'translateY(0)';
                   e.currentTarget.style.boxShadow = 'none';
@@ -298,10 +297,10 @@ export default function Help() {
                 display: 'inline-block',
                 border: '2px solid rgba(255, 255, 255, 0.3)',
                 transition: 'border-color 0.3s ease'
-              }}
+              }
               onMouseEnter={(e) => {
                 e.currentTarget.style.borderColor = '#3b82f6';
-              }}
+              }
               onMouseLeave={(e) => {
                 e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.3)';
               }}>

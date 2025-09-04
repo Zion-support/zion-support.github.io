@@ -8,8 +8,7 @@ export default function Status() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  };
-
+  }
   const [systemStatus, setSystemStatus] = useState({
     overall: 'operational',
     services: [
@@ -52,8 +51,6 @@ export default function Status() {
       case 'maintenance': return '#3b82f6';
       default: return '#6b7280';
     }
-  };
-
   const getStatusIcon = (status: string) => {
     switch (status) {
       case 'operational': return '✅';
@@ -62,8 +59,6 @@ export default function Status() {
       case 'maintenance': return '🔧';
       default: return '❓';
     }
-  };
-
   const getSeverityColor = (severity: string) => {
     switch (severity) {
       case 'critical': return '#ef4444';
@@ -72,8 +67,6 @@ export default function Status() {
       case 'maintenance': return '#3b82f6';
       default: return '#6b7280';
     }
-  };
-
   return (
     <>
       <Head>

@@ -25,8 +25,7 @@ const ContactForm: React.FC = () => {
   const [errors, setErrors] = useState<Partial<FormData>>({});
 
   const validateForm = useCallback((data: FormData): Partial<FormData> => {
-    const newErrors: Partial<FormData> = {};
-    
+    const newErrors: Partial<FormData> = {}
     if (!data.name.trim()) newErrors.name = 'Name is required';
     if (!data.email.trim()) newErrors.email = 'Email is required';
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) newErrors.email = 'Invalid email format';
@@ -49,8 +48,6 @@ const ContactForm: React.FC = () => {
         [name]: undefined
       }));
     }
-  };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
@@ -81,8 +78,6 @@ const ContactForm: React.FC = () => {
     } finally {
       setIsSubmitting(false);
     }
-  };
-
   return (
     <form onSubmit={handleSubmit} className="space-y-6" aria-label="Contact form">
       <div className="grid md:grid-cols-2 gap-6">
@@ -219,6 +214,5 @@ const ContactForm: React.FC = () => {
       </button>
     </form>
   );
-};
-
+}
 export default ContactForm;

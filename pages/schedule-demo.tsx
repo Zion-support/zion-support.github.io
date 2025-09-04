@@ -32,8 +32,7 @@ export default function ScheduleDemo() {
     e.preventDefault();
     // Handle form submission
     console.log('Demo scheduled:', { selectedDate, selectedTime, formData });
-  };
-
+  }
   return (
     <>
       <Head>

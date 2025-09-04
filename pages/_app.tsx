@@ -33,7 +33,7 @@ function Header({ onSidebarOpen }: { onSidebarOpen: () => void }): any {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center'
-            }}
+            }
             aria-label="Open sidebar"
           >
             ☰
@@ -76,7 +76,7 @@ function Header({ onSidebarOpen }: { onSidebarOpen: () => void }): any {
         <button 
           style={{ 
             background: 'none', border: 'none', color: 'white', fontSize: '1.5rem', cursor: 'pointer'
-          }}
+          }
           className="md:hidden"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle mobile menu"
