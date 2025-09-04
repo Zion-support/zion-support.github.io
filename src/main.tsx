@@ -1,18 +1,9 @@
-<<<<<<< HEAD
-import ReactDOM from 'react-dom/client'
-import { BrowserRouter as Router } from 'react-router-dom'
-import { HelmetProvider } from 'react-helmet-async'
-import App from './App.tsx'
-import './index.css'
-import { reportWebVitals } from './reportWebVitals'
-=======
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import App from './App.tsx';
 import './index.css';
->>>>>>> pr-11559
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
@@ -21,22 +12,5 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
         <App />
       </Router>
     </HelmetProvider>
-<<<<<<< HEAD
-  </React.StrictMode>,
-)
-
-// Register basic Web Vitals reporting
-reportWebVitals()
-
-// Optional: basic service worker registration for offline/fast reload of static assets
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker
-      .register('/sw.js')
-      .catch(() => void 0)
-  })
-}
-=======
   </React.StrictMode>
 );
->>>>>>> pr-11559

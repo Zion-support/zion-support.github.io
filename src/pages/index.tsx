@@ -102,10 +102,7 @@ const HomePage = () => {
 
   return (
     <>
-      <Head>
-        <title>index - Zion Tech Group</title>
-        <meta name="description" content="Professional index services"   />
-      </Head>
+      <SEO title="Home - Zion Tech Group" description="Professional IT services and AI solutions" />
       <div className="min-h-screen bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8 py-12">
           <div className="text-center">
@@ -335,7 +332,9 @@ const HomePage = () => {
           </div>
         </div>
       </div>
+      </div>
     </>
   );
+};
 
-export default index
+export default index;
