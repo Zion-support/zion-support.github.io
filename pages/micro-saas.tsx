@@ -12,7 +12,7 @@ export default function MicroSaaS() {
   }
   const microSaaSServices = [
     {
-      icon: 'Cloud',
+      icon: Cloud,
       name: 'Cloud Cost Guard (FinOps Assistant)',
       description: 'Automated cloud cost optimization and financial operations management across AWS, Azure, and GCP.',
       features: [
@@ -34,7 +34,7 @@ export default function MicroSaaS() {
       category: 'Cloud Management'
     },
     {
-      icon: 'FileText',
+      icon: FileText,
       name: 'Smart Document Processor',
       description: 'AI-powered document extraction, classification, and workflow automation for businesses.',
       features: [
@@ -56,7 +56,7 @@ export default function MicroSaaS() {
       category: 'Document Management'
     },
     {
-      icon: 'Zap',
+      icon: Zap,
       name: 'API Rate Limiter & Analytics',
       description: 'Intelligent rate limiting, usage analytics, and API monetization for SaaS platforms.',
       features: [
@@ -78,7 +78,7 @@ export default function MicroSaaS() {
       category: 'API Management'
     },
     {
-      icon: 'Users',
+      icon: Users,
       name: 'Lead Scoring & Qualification Engine',
       description: 'AI-powered lead scoring, qualification workflows, and CRM integration.',
       features: [
@@ -100,7 +100,7 @@ export default function MicroSaaS() {
       category: 'Sales Automation'
     },
     {
-      icon: 'Mail',
+      icon: Mail,
       name: 'Email Deliverability Monitor',
       description: 'Real-time email reputation tracking, spam score analysis, and deliverability optimization.',
       features: [
@@ -122,7 +122,7 @@ export default function MicroSaaS() {
       category: 'Email Marketing'
     },
     {
-      icon: 'Globe',
+      icon: Globe,
       name: 'Website Uptime & Performance Tracker',
       description: 'Global monitoring, performance insights, and instant alerts for web applications.',
       features: [
@@ -144,7 +144,7 @@ export default function MicroSaaS() {
       category: 'Monitoring'
     },
     {
-      icon: 'BarChart3',
+      icon: BarChart3,
       name: 'Team Productivity Analytics',
       description: 'Workflow optimization, time tracking, and productivity insights for remote teams.',
       features: [
@@ -166,7 +166,7 @@ export default function MicroSaaS() {
       category: 'Productivity'
     },
     {
-      icon: 'TrendingUp',
+      icon: TrendingUp,
       name: 'SEO Content Optimizer',
       description: 'AI-driven content optimization, keyword research, and SERP tracking.',
       features: [
@@ -188,7 +188,7 @@ export default function MicroSaaS() {
       category: 'SEO & Marketing'
     },
     {
-      icon: 'Settings',
+      icon: Settings,
       name: 'Customer Support Ticket Router',
       description: 'Intelligent ticket classification, routing, and escalation management.',
       features: [
@@ -210,7 +210,7 @@ export default function MicroSaaS() {
       category: 'Customer Support'
     },
     {
-      icon: 'Shield',
+      icon: Shield,
       name: 'Invoice & Payment Automation',
       description: 'Automated invoicing, payment processing, and financial reporting for SMBs.',
       features: [
@@ -232,7 +232,7 @@ export default function MicroSaaS() {
       category: 'Financial Management'
     },
     {
-      icon: 'Clock',
+      icon: Clock,
       name: 'Smart Meeting Scheduler',
       description: 'AI-powered meeting scheduling with timezone optimization and conflict resolution.',
       features: [
@@ -254,7 +254,7 @@ export default function MicroSaaS() {
       category: 'Productivity'
     },
     {
-      icon: 'Users',
+      icon: Users,
       name: 'Employee Onboarding Automation',
       description: 'Streamlined employee onboarding with automated workflows and compliance tracking.',
       features: [
@@ -276,7 +276,7 @@ export default function MicroSaaS() {
       category: 'HR Management'
     },
     {
-      icon: 'BarChart3',
+      icon: BarChart3,
       name: 'Social Media Analytics Dashboard',
       description: 'Comprehensive social media performance tracking and competitor analysis.',
       features: [
@@ -298,7 +298,7 @@ export default function MicroSaaS() {
       category: 'Marketing Analytics'
     },
     {
-      icon: 'FileText',
+      icon: FileText,
       name: 'Contract Management System',
       description: 'Automated contract lifecycle management with AI-powered risk assessment.',
       features: [
@@ -320,7 +320,7 @@ export default function MicroSaaS() {
       category: 'Legal Tech'
     },
     {
-      icon: 'Globe',
+      icon: Globe,
       name: 'Multi-Language Website Translator',
       description: 'AI-powered website translation with SEO optimization and cultural adaptation.',
       features: [
@@ -342,7 +342,7 @@ export default function MicroSaaS() {
       category: 'Internationalization'
     },
     {
-      icon: 'Zap',
+      icon: Zap,
       name: 'Inventory Optimization Engine',
       description: 'AI-driven inventory management with demand forecasting and automated reordering.',
       features: [
@@ -364,7 +364,7 @@ export default function MicroSaaS() {
       category: 'Supply Chain'
     },
     {
-      icon: 'Mail',
+      icon: Mail,
       name: 'Email Marketing Automation Platform',
       description: 'Advanced email marketing with behavioral triggers and personalization.',
       features: [
@@ -386,7 +386,7 @@ export default function MicroSaaS() {
       category: 'Email Marketing'
     },
     {
-      icon: 'Shield',
+      icon: Shield,
       name: 'Password Security Manager',
       description: 'Enterprise-grade password management with team collaboration and security auditing.',
       features: [
@@ -408,7 +408,7 @@ export default function MicroSaaS() {
       category: 'Cybersecurity'
     },
     {
-      icon: 'TrendingUp',
+      icon: TrendingUp,
       name: 'Customer Lifetime Value Predictor',
       description: 'AI-powered customer value prediction and retention optimization.',
       features: [
@@ -430,7 +430,7 @@ export default function MicroSaaS() {
       category: 'Customer Analytics'
     },
     {
-      icon: 'Settings',
+      icon: Settings,
       name: 'Workflow Automation Builder',
       description: 'No-code workflow automation platform for business process optimization.',
       features: [
@@ -452,7 +452,7 @@ export default function MicroSaaS() {
       category: 'Process Automation'
     },
     {
-      icon: 'Globe',
+      icon: Globe,
       name: 'Website Performance Optimizer',
       description: 'Automated website speed optimization and Core Web Vitals improvement.',
       features: [
@@ -474,7 +474,7 @@ export default function MicroSaaS() {
       category: 'Web Performance'
     },
     {
-      icon: 'Users',
+      icon: Users,
       name: 'Remote Team Collaboration Hub',
       description: 'Comprehensive remote work platform with project management and team communication.',
       features: [
@@ -496,7 +496,7 @@ export default function MicroSaaS() {
       category: 'Remote Work'
     },
     {
-      icon: 'BarChart3',
+      icon: BarChart3,
       name: 'Business Intelligence Dashboard',
       description: 'Real-time business analytics with customizable dashboards and automated reporting.',
       features: [
@@ -518,7 +518,7 @@ export default function MicroSaaS() {
       category: 'Business Intelligence'
     },
     {
-      icon: 'FileText',
+      icon: FileText,
       name: 'Compliance Management System',
       description: 'Automated compliance tracking and reporting for regulatory requirements.',
       features: [
@@ -540,7 +540,7 @@ export default function MicroSaaS() {
       category: 'Compliance'
     },
     {
-      icon: 'Zap',
+      icon: Zap,
       name: 'Smart Invoice Processing & AP Automation',
       description: 'AI-powered accounts payable automation with intelligent invoice processing and approval workflows.',
       features: [
@@ -562,7 +562,7 @@ export default function MicroSaaS() {
       category: 'Financial Automation'
     },
     {
-      icon: 'Code',
+      icon: Code,
       name: 'AI-Powered Code Review Assistant',
       description: 'Intelligent code review automation with security scanning, performance analysis, and best practice recommendations.',
       features: [
@@ -584,7 +584,7 @@ export default function MicroSaaS() {
       category: 'Development Tools'
     },
     {
-      icon: 'TrendingUp',
+      icon: TrendingUp,
       name: 'Dynamic Pricing Optimization Engine',
       description: 'AI-driven dynamic pricing with real-time market analysis and competitor monitoring.',
       features: [
@@ -606,7 +606,7 @@ export default function MicroSaaS() {
       category: 'Revenue Optimization'
     },
     {
-      icon: 'Shield',
+      icon: Shield,
       name: 'Intelligent Supply Chain Monitor',
       description: 'AI-powered supply chain risk assessment and disruption prediction with automated mitigation strategies.',
       features: [
@@ -628,7 +628,7 @@ export default function MicroSaaS() {
       category: 'Supply Chain Intelligence'
     },
     {
-      icon: 'Brain',
+      icon: Brain,
       name: 'AI-Powered Customer Sentiment Analyzer',
       description: 'Real-time customer sentiment analysis across all touchpoints with actionable insights and automated responses.',
       features: [
@@ -650,7 +650,7 @@ export default function MicroSaaS() {
       category: 'Customer Intelligence'
     },
     {
-      icon: 'Globe',
+      icon: Globe,
       name: 'Smart Content Localization Platform',
       description: 'AI-powered content localization with cultural adaptation, SEO optimization, and compliance management.',
       features: [
@@ -672,7 +672,7 @@ export default function MicroSaaS() {
       category: 'Content Management'
     },
     {
-      icon: 'BarChart3',
+      icon: BarChart3,
       name: 'Predictive Maintenance Analytics',
       description: 'AI-driven equipment maintenance prediction with failure forecasting and optimization recommendations.',
       features: [
@@ -694,7 +694,7 @@ export default function MicroSaaS() {
       category: 'Industrial IoT'
     },
     {
-      icon: 'Users',
+      icon: Users,
       name: 'Intelligent Talent Acquisition Platform',
       description: 'AI-powered recruitment automation with candidate matching, interview scheduling, and bias reduction.',
       features: [
@@ -716,7 +716,7 @@ export default function MicroSaaS() {
       category: 'HR Technology'
     },
     {
-      icon: 'Mail',
+      icon: Mail,
       name: 'Smart Email Campaign Optimizer',
       description: 'AI-driven email marketing optimization with send time prediction, subject line testing, and engagement analysis.',
       features: [
@@ -738,7 +738,7 @@ export default function MicroSaaS() {
       category: 'Email Marketing'
     },
     {
-      icon: 'Shield',
+      icon: Shield,
       name: 'AI-Powered Compliance Monitor',
       description: 'Automated compliance monitoring with regulatory change tracking and risk assessment.',
       features: [
@@ -760,7 +760,7 @@ export default function MicroSaaS() {
       category: 'Compliance Management'
     },
     {
-      icon: 'Zap',
+      icon: Zap,
       name: 'Smart Energy Management System',
       description: 'AI-powered energy optimization for buildings and facilities with cost reduction and sustainability tracking.',
       features: [
@@ -782,7 +782,7 @@ export default function MicroSaaS() {
       category: 'Sustainability Tech'
     },
     {
-      icon: 'Globe',
+      icon: Globe,
       name: 'Intelligent Website Personalization Engine',
       description: 'AI-driven website personalization with real-time content adaptation and user experience optimization.',
       features: [
@@ -804,7 +804,7 @@ export default function MicroSaaS() {
       category: 'Web Personalization'
     },
     {
-      icon: 'BarChart3',
+      icon: BarChart3,
       name: 'Smart Financial Planning Assistant',
       description: 'AI-powered financial planning and budgeting with expense tracking and investment recommendations.',
       features: [
@@ -826,7 +826,7 @@ export default function MicroSaaS() {
       category: 'FinTech'
     },
     {
-      icon: 'Users',
+      icon: Users,
       name: 'AI-Powered Learning Management System',
       description: 'Intelligent learning platform with personalized content delivery and progress tracking.',
       features: [
@@ -848,7 +848,7 @@ export default function MicroSaaS() {
       category: 'EdTech'
     },
     {
-      icon: 'Shield',
+      icon: Shield,
       name: 'Smart Identity Verification Platform',
       description: 'AI-powered identity verification with document authentication and fraud prevention.',
       features: [
@@ -870,7 +870,7 @@ export default function MicroSaaS() {
       category: 'Identity Management'
     },
     {
-      icon: 'Brain',
+      icon: Brain,
       name: 'AI-Powered Email Responder',
       description: 'Intelligent email automation that analyzes incoming messages, generates contextual responses, and flags critical communications for human review.',
       features: [
@@ -892,7 +892,7 @@ export default function MicroSaaS() {
       category: 'Communication Automation'
     },
     {
-      icon: 'Smartphone',
+      icon: Smartphone,
       name: 'Mobile-First Survey Platform',
       description: 'Advanced survey creation and analytics platform optimized for mobile devices with real-time data collection and AI-powered insights.',
       features: [
@@ -914,7 +914,7 @@ export default function MicroSaaS() {
       category: 'Customer Research'
     },
     {
-      icon: 'Calendar',
+      icon: Calendar,
       name: 'Event Management Automation',
       description: 'Comprehensive event planning platform with automated workflows, ticketing, and attendee management for conferences, webinars, and corporate events.',
       features: [
@@ -936,7 +936,7 @@ export default function MicroSaaS() {
       category: 'Event Management'
     },
     {
-      icon: 'Video',
+      icon: Video,
       name: 'AI Video Content Generator',
       description: 'Automated video creation platform that transforms text, images, and data into engaging video content for marketing, training, and social media.',
       features: [
@@ -958,7 +958,7 @@ export default function MicroSaaS() {
       category: 'Content Creation'
     },
     {
-      icon: 'Package',
+      icon: Package,
       name: 'E-Commerce Return Automation',
       description: 'Intelligent return management system that automates return requests, generates labels, tracks status, and provides analytics for e-commerce businesses.',
       features: [
@@ -980,7 +980,7 @@ export default function MicroSaaS() {
       category: 'E-Commerce'
     },
     {
-      icon: 'Target',
+      icon: Target,
       name: 'AI-Powered Lead Scoring Engine',
       description: 'Advanced lead qualification system that uses machine learning to score, prioritize, and route leads for maximum conversion rates.',
       features: [
@@ -1002,7 +1002,7 @@ export default function MicroSaaS() {
       category: 'Sales Automation'
     },
     {
-      icon: 'Shield',
+      icon: Shield,
       name: 'Cybersecurity Compliance Manager',
       description: 'Automated compliance monitoring and reporting system for GDPR, HIPAA, SOC 2, and other regulatory frameworks with real-time risk assessment.',
       features: [
@@ -1024,7 +1024,7 @@ export default function MicroSaaS() {
       category: 'Compliance'
     },
     {
-      icon: 'Zap',
+      icon: Zap,
       name: 'Workflow Automation Engine',
       description: 'No-code workflow automation platform that connects apps, automates business processes, and eliminates manual tasks across your organization.',
       features: [
@@ -1046,7 +1046,7 @@ export default function MicroSaaS() {
       category: 'Process Automation'
     },
     {
-      icon: 'Globe',
+      icon: Globe,
       name: 'Multi-Channel Customer Engagement',
       description: 'Unified customer communication platform that manages interactions across email, SMS, chat, social media, and voice channels with AI-powered routing.',
       features: [

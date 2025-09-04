@@ -7,7 +7,6 @@ interface SearchResult {
   url: string;
   type: 'service' | 'page' | 'category';
 }
-}
 
 const SearchBar: React.FC = () => {
   const [query, setQuery] = useState('');

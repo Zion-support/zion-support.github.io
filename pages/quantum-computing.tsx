@@ -12,37 +12,37 @@ export default function QuantumComputing() {
   }
   const services = [
     {
-      icon: 'Atom',
+      icon: Atom,
       title: 'Quantum Algorithm Development',
       description: 'Custom quantum algorithms for optimization, simulation, and machine learning applications.',
       features: ['Quantum optimization', 'Quantum simulation', 'Quantum ML', 'Algorithm design']
     },
     {
-      icon: 'Cpu',
+      icon: Cpu,
       title: 'Quantum Computing Infrastructure',
       description: 'Access to quantum computing resources and cloud-based quantum development platforms.',
       features: ['Cloud quantum access', 'Quantum simulators', 'Hardware integration', 'Development tools']
     },
     {
-      icon: 'Zap',
+      icon: Zap,
       title: 'Quantum Optimization Solutions',
       description: 'Solve complex optimization problems using quantum annealing and variational algorithms.',
       features: ['Supply chain optimization', 'Portfolio optimization', 'Scheduling problems', 'Resource allocation']
     },
     {
-      icon: 'Lock',
+      icon: Lock,
       title: 'Quantum Cryptography',
       description: 'Next-generation security solutions using quantum key distribution and post-quantum cryptography.',
       features: ['Quantum key distribution', 'Post-quantum crypto', 'Quantum random numbers', 'Secure communications']
     },
     {
-      icon: 'Brain',
+      icon: Brain,
       title: 'Quantum Machine Learning',
       description: 'Advanced ML models leveraging quantum computing for enhanced pattern recognition and data analysis.',
       features: ['Quantum neural networks', 'Quantum feature maps', 'Quantum clustering', 'Quantum classification']
     },
     {
-      icon: 'Target',
+      icon: Target,
       title: 'Quantum Consulting & Training',
       description: 'Expert guidance and training to help your team understand and implement quantum solutions.',
       features: ['Quantum strategy', 'Team training', 'Implementation guidance', 'Technology assessment']

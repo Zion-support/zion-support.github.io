@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-import React, {  useState, useCallback  } from "react";
-import LoadingSpinner from './LoadingSpinner';
-
-interface FormData { name: string; email: string; company: string; phone: string; service: string; message: string;
-}
-=======
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import LoadingSpinner from './LoadingSpinner';
 
 interface FormData {
@@ -14,15 +7,33 @@ interface FormData {
   company: string;
   phone: string;
   service: string;
-  message: string}
->>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
+  message: string;
+}
 
 const ContactForm: React.FC = () => {
-  const [formData, setFormData] = useState<FormData>({ name: '', email: '', company: '', phone: '', service: '', message: ''
+  const [formData, setFormData] = useState<FormData>({
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    service: '',
+    message: ''
   });
   
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [errors, setErrors] = useState<Partial<FormData>>({});
+
+  const validateForm = useCallback((data: FormData): Partial<FormData> => {
+    const newErrors: Partial<FormData> = {};
+    
+    if (!data.name.trim()) newErrors.name = 'Name is required';
+    if (!data.email.trim()) newErrors.email = 'Email is required';
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) newErrors.email = 'Invalid email format';
+    if (!data.message.trim()) newErrors.message = 'Message is required';
+    
+    return newErrors;
+  }, []);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -30,21 +41,41 @@ const ContactForm: React.FC = () => {
       ...prev,
       [name]: value
     }));
-  }
+    
+    // Clear error when user starts typing
+    if (errors[name as keyof FormData]) {
+      setErrors(prev => ({
+        ...prev,
+        [name]: undefined
+      }));
+    }
+  };
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    const validationErrors = validateForm(formData);
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      return;
+    }
+    
     setIsSubmitting(true);
     setSubmitStatus('idle');
+    setErrors({});
 
     try {
       // Simulate form submission
       await new Promise(resolve => setTimeout(resolve, 2000));
       setSubmitStatus('success');
-      setFormData({ name: '', email: '', company: '', phone: '', service: '', message: ''
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        service: '',
+        message: ''
       });
-      
-      setSubmitStatus('success');
-    } catch (_error) {
+    } catch {
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -53,18 +84,6 @@ const ContactForm: React.FC = () => {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6" aria-label="Contact form">
-      {submitStatus === 'success' && (
-        <div className="p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
-          Thank you for your message! We&apos;ll get back to you soon.
-        </div>
-      )}
-      
-      {submitStatus === 'error' && (
-        <div className="p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">
-          There was an error sending your message. Please try again.
-        </div>
-      )}
-
       <div className="grid md:grid-cols-2 gap-6">
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-slate-300 mb-2">
@@ -77,7 +96,7 @@ const ContactForm: React.FC = () => {
             value={formData.name}
             onChange={handleInputChange}
             required
-            className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             placeholder="Your full name"
             aria-describedby="name-error"
           />
@@ -94,7 +113,7 @@ const ContactForm: React.FC = () => {
             value={formData.email}
             onChange={handleInputChange}
             required
-            className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             placeholder="your.email@company.com"
             aria-describedby="email-error"
           />
@@ -112,7 +131,7 @@ const ContactForm: React.FC = () => {
             name="company"
             value={formData.company}
             onChange={handleInputChange}
-            className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             placeholder="Your company name"
           />
         </div>
@@ -127,7 +146,7 @@ const ContactForm: React.FC = () => {
             name="phone"
             value={formData.phone}
             onChange={handleInputChange}
-            className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             placeholder="+1 (555) 123-4567"
           />
         </div>
@@ -142,7 +161,7 @@ const ContactForm: React.FC = () => {
           name="service"
           value={formData.service}
           onChange={handleInputChange}
-          className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
         >
           <option value="">Select a service</option>
           <option value="micro-saas">Micro SaaS Products</option>
@@ -172,7 +191,7 @@ const ContactForm: React.FC = () => {
 
       {submitStatus === 'success' && (
         <div className="p-4 bg-green-900/50 border border-green-500 rounded-lg text-green-300" role="alert">
-          Thank you for your message! We'll get back to you within 24 hours.
+          Thank you for your message! We&apos;ll get back to you within 24 hours.
         </div>
       )}
 
@@ -199,6 +218,7 @@ const ContactForm: React.FC = () => {
       </button>
     </form>
   );
-}
+};
+
 
 export default ContactForm;
