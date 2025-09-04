@@ -1,5 +1,14 @@
 {
+<<<<<<< HEAD
   "timestamp": "2025-09-03T22:18:49.800Z",
+=======
+<<<<<<< HEAD
+  "timestamp": "2025-09-03T20:36:49.970Z",
+  "bundleSize": {
+    ".next": {
+      "size": 0,
+      "sizeMB": "0.00"
+>>>>>>> cursor/add-new-services-and-advertise-them-334b
 =======
   "timestamp": "2025-09-04T00:00:07.357Z",
 =======
@@ -11,12 +20,21 @@
       "sizeMB": "47.18"
     },
     "node_modules": {
+<<<<<<< HEAD
       "size": 820676108,
       "sizeMB": "782.66"
     }
   },
   "fileCounts": {
     ".tsx": 26,
+=======
+      "size": 0,
+      "sizeMB": "0.00"
+    }
+  },
+  "fileCounts": {
+    ".tsx": 25,
+>>>>>>> cursor/add-new-services-and-advertise-them-334b
     ".ts": 0,
     ".jsx": 0,
     ".js": 0,

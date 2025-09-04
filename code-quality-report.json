@@ -1,8 +1,12 @@
 {
+<<<<<<< HEAD
   "timestamp": "2025-09-03T16:46:24.457Z",
 =======
   "timestamp": "2025-09-03T22:18:50.420Z",
 >>>>>>> 6d79891152b (Checkpoint before follow-up message)
+=======
+  "timestamp": "2025-09-03T16:52:59.017Z",
+>>>>>>> cursor/add-new-services-and-advertise-them-334b
   "files": {
     "components/Breadcrumb.tsx": {
       "path": "components/Breadcrumb.tsx",
@@ -66,6 +70,10 @@
     },
     "pages/_app.tsx": {
       "path": "pages/_app.tsx",
+<<<<<<< HEAD
+=======
+      "lines": 118,
+>>>>>>> cursor/add-new-services-and-advertise-them-334b
       "issues": [],
       "complexity": 1
 =======
@@ -240,6 +248,11 @@
     }
   },
   "summary": {
+<<<<<<< HEAD
+=======
+    "totalFiles": 16,
+    "totalLines": 5598,
+>>>>>>> cursor/add-new-services-and-advertise-them-334b
     "averageComplexity": "1.06",
 =======
     "totalFiles": 28,

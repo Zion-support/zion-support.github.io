@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "timestamp": "2025-09-04T02:05:42.730Z",
   "duration": "703ms",
   "overallStatus": "unhealthy",
@@ -35,4 +36,30 @@
       "details": "No insecure HTTP usage detected"
     }
   ]
+=======
+  "timestamp": "2025-09-04T00:00:10.786Z",
+  "scans": {
+    "packageJson": {
+      "status": "completed",
+      "dependencies": 111,
+      "vulnerablePackages": 0
+    },
+    "sensitiveFiles": {
+      "status": "completed",
+      "found": 0,
+      "files": []
+    },
+    "codeScan": {
+      "status": "completed",
+      "filesScanned": 10,
+      "potentialSecrets": 0
+    },
+    "npmAudit": {
+      "status": "skipped",
+      "message": "npm audit not available or failed"
+    }
+  },
+  "vulnerabilities": [],
+  "status": "secure"
+>>>>>>> cursor/add-new-services-and-advertise-them-334b
 }
