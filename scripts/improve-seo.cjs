@@ -3,7 +3,8 @@ const fs = require('fs');
 const path = require('path');
 
 function improveSEO() {
-  const pagesDir = path.join(process.cwd(), 'pages');
+  try {
+    const pagesDir = path.join(process.cwd(), 'pages');
   const componentsDir = path.join(process.cwd(), 'components');
   
   // Add meta tags to pages

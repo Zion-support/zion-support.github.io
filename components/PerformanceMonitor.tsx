@@ -33,7 +33,6 @@ const PerformanceMonitor: React.FC = () => {
             }
             sendToAnalytics('LCP', entry.startTime);
           }
-        }
       });
       
       try {
@@ -53,7 +52,6 @@ const PerformanceMonitor: React.FC = () => {
             }
             sendToAnalytics('FID', (entry as any).processingStart - entry.startTime);
           }
-        }
       });
 
       try {
@@ -89,8 +87,7 @@ const PerformanceMonitor: React.FC = () => {
         observer.disconnect();
         fidObserver.disconnect();
         clsObserver.disconnect();
-      };
-    }
+      }
   }, []);
 
   return null; // This component doesn't render anything

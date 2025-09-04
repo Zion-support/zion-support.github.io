@@ -3,23 +3,15 @@ const nextConfig = {
   reactStrictMode: true,
   compress: true,
   poweredByHeader: false,
-  eslint: { 
-    ignoreDuringBuilds: true,
-    dirs: ['pages', 'components', 'lib', 'hooks']
-  },
-  typescript: { ignoreBuildErrors: true },
-  trailingSlash: true,
-  generateBuildId: async () => {
-    return 'build-' + Date.now()
-  },
-  // Ensure standard Next.js page extensions are recognized alongside any custom route files
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js', 'route.tsx', 'route.ts'],
+  generateEtags: false,
+  
+  // Image optimization
   images: {
-    domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
+  
   experimental: {
     scrollRestoration: true,
     optimizeCss: true,
@@ -28,6 +20,25 @@ const nextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production'
   },
+  
+  // Bundle optimization
+  webpack: (config, { dev, isServer }) => {
+    if (!dev && !isServer) {
+      config.optimization.splitChunks = {
+        chunks: 'all',
+        cacheGroups: {
+          vendor: {
+            test: /[\/]node_modules[\/]/,
+            name: 'vendors',
+            chunks: 'all',
+          },
+        },
+      };
+    }
+    return config;
+  },
+  
+  // Headers for performance
   async headers() {
     return [
       {
@@ -42,8 +53,7 @@ const nextConfig = {
         ]
       }
     ];
-  }
+  },
 };
 
 export default nextConfig;
-
