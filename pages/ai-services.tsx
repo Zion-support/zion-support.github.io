@@ -827,6 +827,7 @@ export default function AIServices() {
     },
     {
       icon: Brain,
+<<<<<<< HEAD
       name: 'AI-Powered Drug Discovery Platform',
       description: 'Advanced AI platform for pharmaceutical research, drug discovery, and molecular analysis using deep learning.',
       features: [
@@ -845,10 +846,31 @@ export default function AIServices() {
         'Reduced research and development costs',
         'Improved success rates in clinical trials',
         'Enhanced drug safety profiles'
+=======
+      name: 'Generative AI Content Studio',
+      description: 'Advanced AI-powered content creation platform that generates high-quality text, images, videos, and audio content for marketing, education, and entertainment.',
+      features: [
+        'Multi-modal content generation (text, image, video, audio)',
+        'Brand voice and style consistency training',
+        'Content optimization for SEO and engagement',
+        'Automated content scheduling and distribution',
+        'A/B testing and performance analytics',
+        'Copyright and plagiarism detection'
+      ],
+      pricing: '$2,000 – $15,000 setup',
+      perUnit: '$0.05 – $0.50 per content piece',
+      timeline: '4–8 weeks',
+      benefits: [
+        '95% faster content production',
+        'Consistent brand messaging across all channels',
+        'Reduced content creation costs by 70%',
+        'Improved content engagement and conversion rates'
+>>>>>>> origin/main
       ]
     },
     {
       icon: Eye,
+<<<<<<< HEAD
       name: 'AI-Powered Medical Imaging Analysis',
       description: 'Advanced computer vision for medical imaging diagnosis, radiology, and pathology analysis.',
       features: [
@@ -867,10 +889,31 @@ export default function AIServices() {
         'Faster diagnostic turnaround times',
         'Reduced human error in analysis',
         'Improved patient outcomes'
+=======
+      name: 'AI-Powered Quality Assurance',
+      description: 'Intelligent quality control system that uses computer vision and machine learning to detect defects, ensure compliance, and optimize manufacturing processes.',
+      features: [
+        'Real-time defect detection and classification',
+        'Predictive quality analytics and forecasting',
+        'Automated compliance monitoring and reporting',
+        'Root cause analysis and recommendations',
+        'Integration with manufacturing systems',
+        'Custom quality metrics and thresholds'
+      ],
+      pricing: '$10,000 – $75,000 setup',
+      perUnit: '$0.01 – $0.10 per inspection',
+      timeline: '8–16 weeks',
+      benefits: [
+        '99.5% accuracy in defect detection',
+        '50% reduction in quality control costs',
+        'Real-time quality monitoring and alerts',
+        'Improved product consistency and customer satisfaction'
+>>>>>>> origin/main
       ]
     },
     {
       icon: TrendingUp,
+<<<<<<< HEAD
       name: 'AI-Powered Financial Trading Algorithm',
       description: 'Sophisticated AI trading algorithms for automated investment strategies and risk management.',
       features: [
@@ -933,10 +976,31 @@ export default function AIServices() {
         'Improved accuracy in legal analysis',
         'Automated compliance monitoring',
         'Reduced legal costs and risks'
+=======
+      name: 'AI Financial Risk Management',
+      description: 'Advanced AI system for financial risk assessment, fraud detection, and regulatory compliance with real-time monitoring and predictive analytics.',
+      features: [
+        'Real-time fraud detection and prevention',
+        'Credit risk assessment and scoring',
+        'Market risk analysis and portfolio optimization',
+        'Regulatory compliance monitoring',
+        'Anomaly detection and alert systems',
+        'Automated reporting and documentation'
+      ],
+      pricing: '$15,000 – $100,000 setup',
+      perUnit: '$0.02 – $0.20 per transaction',
+      timeline: '10–20 weeks',
+      benefits: [
+        '90% reduction in false positives',
+        'Real-time risk monitoring and mitigation',
+        'Automated compliance and regulatory reporting',
+        'Improved financial decision making'
+>>>>>>> origin/main
       ]
     },
     {
       icon: Mic,
+<<<<<<< HEAD
       name: 'AI-Powered Real-Time Translation',
       description: 'Advanced real-time translation system with voice recognition and natural language processing.',
       features: [
@@ -955,10 +1019,31 @@ export default function AIServices() {
         'Real-time communication support',
         'Multi-language business expansion',
         'Enhanced global collaboration'
+=======
+      name: 'AI Voice Analytics & Sentiment Analysis',
+      description: 'Advanced voice processing system that analyzes speech patterns, emotions, and sentiment for customer service, market research, and healthcare applications.',
+      features: [
+        'Real-time voice emotion and sentiment analysis',
+        'Speaker identification and verification',
+        'Conversation analytics and insights',
+        'Multi-language support and translation',
+        'Voice biometric authentication',
+        'Call center optimization and training'
+      ],
+      pricing: '$5,000 – $30,000 setup',
+      perUnit: '$0.01 – $0.05 per minute',
+      timeline: '6–12 weeks',
+      benefits: [
+        '85% accuracy in emotion detection',
+        'Improved customer service quality',
+        'Real-time conversation insights',
+        'Enhanced security with voice biometrics'
+>>>>>>> origin/main
       ]
     },
     {
       icon: Database,
+<<<<<<< HEAD
       name: 'AI-Powered Supply Chain Optimization',
       description: 'Intelligent supply chain management with demand forecasting, inventory optimization, and logistics planning.',
       features: [
@@ -1027,6 +1112,10 @@ export default function AIServices() {
       icon: Brain,
       name: 'AI-Powered Voice Analytics & Sentiment Analysis',
       description: 'Advanced voice analysis platform that provides real-time sentiment analysis, emotion detection, and conversation insights for customer service and sales teams.',
+=======
+      name: 'AI Data Intelligence Platform',
+      description: 'Comprehensive AI platform that automatically discovers, cleans, and enriches data while providing intelligent insights and recommendations.',
+>>>>>>> origin/main
       features: [
         'Real-time voice sentiment analysis',
         'Emotion detection and mood tracking',
@@ -1171,6 +1260,7 @@ export default function AIServices() {
       perUnit: '$0.10 – $0.50 per transaction',
       timeline: '8–12 weeks',
       benefits: [
+<<<<<<< HEAD
         '35% reduction in supply chain costs',
         'Improved inventory accuracy',
         'Enhanced supplier relationships',
@@ -1373,6 +1463,12 @@ export default function AIServices() {
         'Enhanced public safety',
         'Optimized resource utilization',
         'Better citizen services'
+=======
+        '40% improvement in search relevance',
+        'Increased user engagement and conversion',
+        'Personalized user experiences',
+        'Better content discovery and recommendations'
+>>>>>>> origin/main
       ]
     }
   ];

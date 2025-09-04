@@ -19,19 +19,49 @@ export default [
         },
       },
       globals: {
+<<<<<<< HEAD
         window: 'readonly',
         document: 'readonly',
         localStorage: 'readonly',
         console: 'readonly',
         process: 'readonly',
+=======
+        // Browser globals
+        window: 'readonly',
+        document: 'readonly',
+        localStorage: 'readonly',
+        sessionStorage: 'readonly',
+        console: 'readonly',
+        setTimeout: 'readonly',
+        clearTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearInterval: 'readonly',
+        fetch: 'readonly',
+        navigator: 'readonly',
+        location: 'readonly',
+        history: 'readonly',
+        // DOM types
+>>>>>>> origin/main
         HTMLInputElement: 'readonly',
         HTMLTextAreaElement: 'readonly',
         HTMLSelectElement: 'readonly',
         HTMLDivElement: 'readonly',
         MouseEvent: 'readonly',
         Node: 'readonly',
+<<<<<<< HEAD
         setTimeout: 'readonly',
         clearTimeout: 'readonly',
+=======
+        PerformanceObserver: 'readonly',
+        // Node.js globals
+        process: 'readonly',
+        Buffer: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        global: 'readonly',
+        // React globals
+        React: 'readonly',
+>>>>>>> origin/main
       },
     },
     plugins: {
@@ -84,7 +114,6 @@ export default [
       'src.pages.disabled/**',
       'solutions.disabled/**',
       'components.disabled/**',
-      'components/**',
       'components.corrupted/**',
       'hooks/**',
       'hooks.disabled/**',
@@ -100,7 +129,6 @@ export default [
       'cypress_backup/**',
       'data/**',
       'e2e/**',
-      'pages/**',
       'pages.disabled/**',
       'pages.disabled_backup/**',
       'pages_backup/**',

@@ -41,7 +41,10 @@ const PerformanceMonitor: React.FC = () => {
           if (!(entry as any).hadRecentInput) {
             clsValue += (entry as any).value;
           }
+<<<<<<< HEAD
         }
+=======
+>>>>>>> origin/main
         console.log('CLS:', clsValue);
       });
 
