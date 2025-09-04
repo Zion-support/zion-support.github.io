@@ -5,10 +5,14 @@ import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 
 const ContactSection: React.FC = () => {
   const contactInfo = [
-    { icon: Phone, title: 'Phone', value: '+1 302 464 0950', href: 'tel:+13024640950' },
-    { icon: Mail, title: 'Email', value: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
-    { icon: MapPin, title: 'Address', value: '364 E Main St STE 1008, Middletown, DE 19709', href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709' },
-    { icon: Clock, title: 'Business Hours', value: 'Mon-Fri: 9:00 AM - 6:00 PM EST', href: null }
+    { icon: Phone, title: Phone, value: '+1 302 464 0950', href: 'tel:+13024640950'
+},
+    { icon: Mail, title: Email, value: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com'
+},
+    { icon: MapPin, title: Address, value: '364 E Main St STE 1008, Middletown, DE 19709', href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709'
+},
+    { icon: Clock, title: 'Business Hours', value: 'Mon-Fri: 9:00 AM - 6:00 PM EST', href: null
+}
   ];
 
   return (
@@ -69,64 +73,69 @@ const ContactSection: React.FC = () => {
             <form className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="firstName"
+  className="block text-sm font-medium text-gray-700 mb-2">
                     First Name
                   </label>
                   <input
                     type="text"
-                    id="firstName"
+  id="firstName"
                     name="firstName"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="John"
                   />
                 </div>
                 <div>
-                  <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="lastName"
+  className="block text-sm font-medium text-gray-700 mb-2">
                     Last Name
                   </label>
                   <input
                     type="text"
-                    id="lastName"
+  id="lastName"
                     name="lastName"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Doe"
                   />
                 </div>
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="email"
+  className="block text-sm font-medium text-gray-700 mb-2">
                   Email
                 </label>
                 <input
                   type="email"
-                  id="email"
+  id="email"
                   name="email"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="john@example.com"
                 />
               </div>
               <div>
-                <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="company"
+  className="block text-sm font-medium text-gray-700 mb-2">
                   Company
                 </label>
                 <input
                   type="text"
-                  id="company"
+  id="company"
                   name="company"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="Your Company"
                 />
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="message"
+  className="block text-sm font-medium text-gray-700 mb-2">
                   Message
                 </label>
                 <textarea
                   id="message"
-                  name="message"
+  name="message"
                   rows={4}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="Tell us about your project..."
+  placeholder="Tell us about your project..."
                 ></textarea>
               </div>
               

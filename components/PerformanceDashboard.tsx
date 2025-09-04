@@ -34,7 +34,7 @@ const PerformanceDashboard: React.FC = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const getScoreColor = (value: number, thresholds: [number, number]) => {
+  const getScoreColor = (value: number, thresholds: [number, number, number]) => {
     if (value <= thresholds[0]) return 'text-green-400';
     if (value <= thresholds[1]) return 'text-yellow-400';
     return 'text-red-400';
@@ -44,7 +44,7 @@ const PerformanceDashboard: React.FC = () => {
       <button
         onClick={() => setIsVisible(true)}
         className="fixed bottom-4 right-4 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors"
-        title="Performance Dashboard"
+  title="Performance Dashboard"
       >
         📊
       </button>
@@ -67,25 +67,33 @@ const PerformanceDashboard: React.FC = () => {
           <div className="grid grid-cols-2 gap-2 text-sm">
             <div>
               <span className="text-gray-400">FCP:</span>
-              <span className={`ml-2 ${getScoreColor(metrics[metrics.length - 1]?.fcp || 0, [1800, 3000])}`}>
+              <span className={`ml-2 ${getScoreColor(metrics[metrics.length - 1]?.fcp || 0, [1800, 300,
+  0
+])}`}>
                 {Math.round(metrics[metrics.length - 1]?.fcp || 0)}ms
               </span>
             </div>
             <div>
               <span className="text-gray-400">LCP:</span>
-              <span className={`ml-2 ${getScoreColor(metrics[metrics.length - 1]?.lcp || 0, [2500, 4000])}`}>
+              <span className={`ml-2 ${getScoreColor(metrics[metrics.length - 1]?.lcp || 0, [2500, 400,
+  0
+])}`}>
                 {Math.round(metrics[metrics.length - 1]?.lcp || 0)}ms
               </span>
             </div>
             <div>
               <span className="text-gray-400">FID:</span>
-              <span className={`ml-2 ${getScoreColor(metrics[metrics.length - 1]?.fid || 0, [100, 300])}`}>
+              <span className={`ml-2 ${getScoreColor(metrics[metrics.length - 1]?.fid || 0, [100, 30,
+  0
+])}`}>
                 {Math.round(metrics[metrics.length - 1]?.fid || 0)}ms
               </span>
             </div>
             <div>
               <span className="text-gray-400">CLS:</span>
-              <span className={`ml-2 ${getScoreColor(metrics[metrics.length - 1]?.cls || 0, [0.1, 0.25])}`}>
+              <span className={`ml-2 ${getScoreColor(metrics[metrics.length - 1]?.cls || 0, [0.1, 0.2,
+  5
+])}`}>
                 {(metrics[metrics.length - 1]?.cls || 0).toFixed(3)}
               </span>
             </div>

@@ -6,8 +6,10 @@ export default function IntegrationExamples() {
     <>
       <Head>
         <title>Integration Examples - Zion Tech Group Documentation</title>
-        <meta name="description" content="Real-world integration examples for Zion Tech Group services. Learn how to integrate our APIs into your applications." />
-        <link rel="canonical" href="https://ziontechgroup.com/docs/integration-examples" />
+        <meta name="description"
+  content="Real-world integration examples for Zion Tech Group services. Learn how to integrate our APIs into your applications." />
+        <link rel="canonical"
+  href="https://ziontechgroup.com/docs/integration-examples" />
       </Head>
       
       <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">

@@ -5,7 +5,7 @@ interface DatabaseConfig {
   dbName: string;
   maxPoolSize?: number;
   minPoolSize?: number;
-  maxIdleTimeMS?: number;
+  maxIdleTimeMS?: number;'
 }
 
 class DatabaseManager {
@@ -35,12 +35,12 @@ class DatabaseManager {
 
     try {
       this.client = new MongoClient(this.config.uri, {
-        maxPoolSize: this.config.maxPoolSize || 10,
-        minPoolSize: this.config.minPoolSize || 2,
-        maxIdleTimeMS: this.config.maxIdleTimeMS || 30000,
+        maxPoolSize: 'this.config.maxPoolSize || 10',
+        minPoolSize: 'this.config.minPoolSize || 2',
+        maxIdleTimeMS: 'this.config.maxIdleTimeMS || 30000',
         serverSelectionTimeoutMS: 5000,
         socketTimeoutMS: 45000
-      });
+});
 
       // await this.client.connect();
       // this.db = this.client.db(this.config.dbName);

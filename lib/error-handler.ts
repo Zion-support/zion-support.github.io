@@ -21,8 +21,8 @@ export const errorHandler = (err: ApiError, req: NextApiRequest, res: NextApiRes
 
   // Log error for monitoring
   console.error(`API Error [${statusCode}]: ${message}`, {
-    url: req.url,
-    method: req.method,
+    url: 'req.url',
+    method: 'req.method',
     timestamp: new Date().toISOString(),
     userAgent: req.headers['user-agent'],
     ip: req.headers['x-forwarded-for'] || req.connection.remoteAddress

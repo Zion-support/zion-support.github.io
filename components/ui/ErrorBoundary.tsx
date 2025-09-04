@@ -3,12 +3,12 @@ import { AlertTriangle, RefreshCw } from 'lucide-react';
 import { Button } from './Button';
 
 interface Props { children: ReactNode;
-  fallback?: ReactNode;
+  fallback?: ReactNode;'
 }
 
 interface State {
   hasError: boolean;
-  error?: Error;
+  error?: Error;'
 }
 
 class ErrorBoundary extends Component<Props, State> {
@@ -23,7 +23,8 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   private handleRetry = () => {
-    this.setState({ hasError: false, error: undefined });
+    this.setState({ hasError: false, error: undefined
+});
   }
   public render() {
     if (this.state.hasError) {
@@ -65,8 +66,8 @@ class ErrorBoundary extends Component<Props, State> {
               </Button>
               
               <Button 
-                variant="outline" 
-                onClick={() => window.location.reload()} 
+                variant="outline"
+  onClick={() => window.location.reload()} 
                 className="w-full"
               >
                 Refresh Page
