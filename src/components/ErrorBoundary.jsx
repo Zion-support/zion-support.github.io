@@ -1,23 +1,43 @@
 import React from 'react';
 
-export default function ErrorBoundaryFallback({ error, resetError, retryCount = 0 }) {
-  const maxRetries = 3;
-  const handleRetry = () => {
-    if (retryCount < maxRetries) {
-      resetError();
-    }
-  };
-  return (
-    <div className="max-w-xl mx-auto p-6 text-gray-900">
-      <h2 className="text-2xl font-bold mb-2">Something went wrong</h2>
-      {error && (
-        <pre className="text-red-500 whitespace-pre-wrap text-sm mb-4">
-          {String(error)}
-        </pre>
-      )}
-      <button onClick={handleRetry} className="px-4 py-2 bg-blue-600 text-white rounded">
-        Retry
-      </button>
-    </div>
-  );
+
+export function ErrorBoundaryFallback({ error, onRetry }) {
+	return (
+		<div style={{padding: 24, textAlign: 'center'}}>
+			<h2>Something went wrong</h2>
+			{error ? (
+				<pre style={{whiteSpace: 'pre-wrap', color: '#b91c1c'}}>{String(error)}</pre>
+			) : null}
+			<button onClick={onRetry} style={{marginTop: 12}}>Try again</button>
+		</div>
+	);
+}
+
+export class ErrorBoundary extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = { hasError: false, error: null };
+	}
+
+	static getDerivedStateFromError(error) {
+		return { hasError: true, error };
+	}
+
+	componentDidCatch(error, info) {
+		if (this.props.onError) {
+			this.props.onError(error, info);
+		}
+	}
+
+	handleRetry = () => {
+		this.setState({ hasError: false, error: null });
+	};
+
+	render() {
+		if (this.state.hasError) {
+			const Fallback = this.props.fallback || ErrorBoundaryFallback;
+			return <Fallback error={this.state.error} onRetry={this.handleRetry} />;
+		}
+		return this.props.children;
+	}
 }
