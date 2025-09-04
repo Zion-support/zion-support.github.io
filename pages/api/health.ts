@@ -18,27 +18,39 @@ interface SystemHealth {
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    res.setHeader('Allow', ['GET']);
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const startTime = Date.now();
   
   try {
     // Mock database health check
     const dbHealth = true; // This would be a real database check
     
-    // Mock cache stats
+    // Check database health (mock for now)
+    const dbHealth = true;
+    
+    // Check cache health (mock for now)
     const cacheStats = {
-      api: { active: true, hitRate: 0.85 }
+      api: { active: true },
+      user: { active: true },
+      static: { active: true }
     };
-
-    // Get performance metrics (mock)
-    const avgResponseTime = 100; // ms
+    
+    // Get performance metrics
+    const avgResponseTime = 100; // Mock value
     const memoryUsage = process.memoryUsage();
-
+    
     // Calculate overall health
     const services = {
       database: dbHealth,
-      cache: cacheStats.api.active > 0,
+      cache: cacheStats.api.active,
       api: avgResponseTime < 1000 // Less than 1 second average response time
     };
+    
     const healthyServices = Object.values(services).filter(Boolean).length;
     const totalServices = Object.keys(services).length;
     
@@ -77,7 +89,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       status: 'unhealthy',
       timestamp: new Date().toISOString(),
       error: 'Health check failed',
-      message: error instanceof Error ? error.message : 'Unknown error'
+      services: {
+        database: false,
+        cache: false,
+        api: false
+      },
+      metrics: {
+        responseTime: 0,
+        memoryUsage: 0,
+        cacheHitRate: 0,
+        activeConnections: 0
+      },
+      uptime: process.uptime()
     });
   }
 }
