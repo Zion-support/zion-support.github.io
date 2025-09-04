@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -34,7 +34,10 @@ import {
   Brain,
   Sprout,
   Eye,
-  Bot
+  Bot,
+  Rocket,
+  Car,
+  Heart
 } from 'lucide-react';
 
 const itServices = [
@@ -300,6 +303,132 @@ const itServices = [
     popular: true
   },
   {
+    title: 'Autonomous IT Operations Center',
+    description: 'Fully automated IT operations with self-healing systems and predictive maintenance.',
+    icon: Settings,
+    features: ['Self-healing Systems', 'Predictive Maintenance', 'Automated Incident Response', 'Intelligent Monitoring'],
+    pricing: '$50,000 - $300,000/setup',
+    category: 'Autonomous IT',
+    popular: true
+  },
+  {
+    title: 'Quantum Computing Infrastructure',
+    description: 'Quantum computing infrastructure setup and integration for advanced computational needs.',
+    icon: Cpu,
+    features: ['Quantum Hardware Setup', 'Quantum Software Integration', 'Hybrid Classical-Quantum Systems', 'Expert Training'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Quantum Computing',
+    popular: true
+  },
+  {
+    title: 'Neural Network Infrastructure',
+    description: 'Specialized infrastructure for deep learning and neural network training and inference.',
+    icon: Brain,
+    features: ['GPU Clusters', 'Distributed Training', 'Model Optimization', 'Inference Acceleration'],
+    pricing: '$75,000 - $500,000/setup',
+    category: 'AI Infrastructure',
+    popular: true
+  },
+  {
+    title: 'Space-Grade IT Systems',
+    description: 'Radiation-hardened and space-qualified IT systems for aerospace and satellite applications.',
+    icon: Rocket,
+    features: ['Radiation Hardening', 'Space Qualification', 'Redundant Systems', 'Mission Critical Design'],
+    pricing: '$200,000 - $2,000,000/project',
+    category: 'Aerospace IT',
+    popular: true
+  },
+  {
+    title: 'Biometric Security Infrastructure',
+    description: 'Advanced biometric authentication systems with multi-modal recognition capabilities.',
+    icon: Eye,
+    features: ['Multi-modal Biometrics', 'Liveness Detection', 'Privacy Protection', 'Scalable Architecture'],
+    pricing: '$40,000 - $250,000/project',
+    category: 'Biometric Security',
+    popular: true
+  },
+  {
+    title: 'Digital Twin Infrastructure',
+    description: 'Complete digital twin platform for real-time monitoring and simulation of physical assets.',
+    icon: Monitor,
+    features: ['Real-time Synchronization', 'Predictive Modeling', 'Simulation Engine', 'IoT Integration'],
+    pricing: '$60,000 - $400,000/setup',
+    category: 'Digital Twins',
+    popular: true
+  },
+  {
+    title: 'Holographic Display Systems',
+    description: 'Advanced holographic display infrastructure for immersive visualization and collaboration.',
+    icon: Eye,
+    features: ['3D Holographic Displays', 'Spatial Computing', 'Gesture Recognition', 'Collaborative Workspaces'],
+    pricing: '$100,000 - $800,000/project',
+    category: 'Holographic Tech',
+    popular: true
+  },
+  {
+    title: 'Neuromorphic Computing Infrastructure',
+    description: 'Brain-inspired computing systems for ultra-low power and high-efficiency processing.',
+    icon: Brain,
+    features: ['Neuromorphic Chips', 'Spiking Neural Networks', 'Ultra-low Power', 'Real-time Processing'],
+    pricing: '$150,000 - $1,200,000/setup',
+    category: 'Neuromorphic Computing',
+    popular: true
+  },
+  {
+    title: 'Autonomous Vehicle IT Infrastructure',
+    description: 'Complete IT infrastructure for autonomous vehicle testing, simulation, and deployment.',
+    icon: Car,
+    features: ['Simulation Environment', 'Sensor Data Processing', 'Safety Systems', 'Regulatory Compliance'],
+    pricing: '$200,000 - $1,500,000/project',
+    category: 'Autonomous Vehicles',
+    popular: true
+  },
+  {
+    title: 'Smart Grid IT Infrastructure',
+    description: 'Advanced IT infrastructure for smart grid management and renewable energy integration.',
+    icon: Network,
+    features: ['Grid Monitoring', 'Energy Management', 'Demand Response', 'Renewable Integration'],
+    pricing: '$300,000 - $2,000,000/project',
+    category: 'Smart Grid',
+    popular: true
+  },
+  {
+    title: 'Telemedicine IT Platform',
+    description: 'Comprehensive telemedicine infrastructure with AI-powered diagnostics and remote monitoring.',
+    icon: Heart,
+    features: ['Video Conferencing', 'AI Diagnostics', 'Remote Monitoring', 'HIPAA Compliance'],
+    pricing: '$80,000 - $500,000/setup',
+    category: 'Telemedicine',
+    popular: true
+  },
+  {
+    title: 'Augmented Reality Workspace',
+    description: 'AR-powered collaborative workspace infrastructure for remote teams and training.',
+    icon: Monitor,
+    features: ['AR Collaboration', 'Spatial Computing', 'Remote Assistance', 'Training Simulations'],
+    pricing: '$120,000 - $800,000/project',
+    category: 'AR Workspace',
+    popular: true
+  },
+  {
+    title: 'Blockchain-as-a-Service Platform',
+    description: 'Enterprise blockchain platform with smart contract deployment and management tools.',
+    icon: Server,
+    features: ['Multi-chain Support', 'Smart Contract Tools', 'Consensus Management', 'Token Economics'],
+    pricing: '$100,000 - $600,000/setup',
+    category: 'Blockchain Platform',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Cybersecurity Operations Center',
+    description: 'Next-generation SOC with AI-driven threat hunting and automated response capabilities.',
+    icon: Shield,
+    features: ['AI Threat Hunting', 'Automated Response', 'Behavioral Analysis', 'Threat Intelligence'],
+    pricing: '$200,000 - $1,000,000/setup',
+    category: 'AI SOC',
+    popular: true
+  },
+  {
     title: 'Digital Twin Infrastructure',
     description: 'Digital twin technology implementation for physical assets and processes.',
     icon: Monitor,
@@ -440,6 +569,19 @@ const supportLevels = [
 ];
 
 export default function ITServicesPage() {
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 12;
+  const totalPages = Math.ceil(itServices.length / itemsPerPage);
+  
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const currentServices = itServices.slice(startIndex, endIndex);
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <Head>
@@ -505,7 +647,7 @@ export default function ITServicesPage() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {itServices.map((service, index) => {
+            {currentServices.map((service, index) => {
               const IconComponent = service.icon;
               return (
                 <motion.div
@@ -560,6 +702,43 @@ export default function ITServicesPage() {
               );
             })}
           </div>
+
+          {/* Pagination */}
+          {totalPages > 1 && (
+            <div className="flex justify-center mt-12">
+              <div className="flex items-center space-x-2">
+                <button
+                  onClick={() => handlePageChange(currentPage - 1)}
+                  disabled={currentPage === 1}
+                  className="px-3 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  Previous
+                </button>
+                
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                  <button
+                    key={page}
+                    onClick={() => handlePageChange(page)}
+                    className={`px-3 py-2 rounded-lg border ${
+                      currentPage === page
+                        ? 'bg-green-600 text-white border-green-600'
+                        : 'border-gray-300 text-gray-700 hover:bg-gray-50'
+                    }`}
+                  >
+                    {page}
+                  </button>
+                ))}
+                
+                <button
+                  onClick={() => handlePageChange(currentPage + 1)}
+                  disabled={currentPage === totalPages}
+                  className="px-3 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  Next
+                </button>
+              </div>
+            </div>
+          )}
         </div>
       </section>
 

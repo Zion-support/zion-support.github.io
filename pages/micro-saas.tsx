@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -44,7 +44,8 @@ import {
   BookOpen,
   ShoppingCart,
   Home,
-  Database
+  Database,
+  Brain
 } from 'lucide-react';
 
 const microSaaSProducts = [
@@ -298,6 +299,141 @@ const microSaaSProducts = [
     popular: true
   },
   {
+    title: 'AI-Powered Legal Document Analyzer',
+    description: 'Intelligent legal document review and contract analysis with risk assessment and compliance checking.',
+    icon: FileText,
+    features: ['Contract Analysis', 'Risk Assessment', 'Compliance Checking', 'Clause Extraction'],
+    pricing: '$399 - $2,499/month',
+    category: 'Legal Tech',
+    popular: true
+  },
+  {
+    title: 'Quantum-Safe Encryption Manager',
+    description: 'Post-quantum cryptography solution for future-proof data protection and secure communications.',
+    icon: Lock,
+    features: ['Quantum-Safe Algorithms', 'Key Management', 'Secure Communications', 'Compliance Tools'],
+    pricing: '$799 - $4,999/month',
+    category: 'Cybersecurity',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Medical Diagnosis Assistant',
+    description: 'Advanced medical imaging analysis and diagnostic support for healthcare professionals.',
+    icon: Heart,
+    features: ['Medical Imaging Analysis', 'Diagnostic Support', 'Patient Data Integration', 'Clinical Decision Support'],
+    pricing: '$1,999 - $9,999/month',
+    category: 'Healthcare AI',
+    popular: true
+  },
+  {
+    title: 'Autonomous Drone Fleet Manager',
+    description: 'Complete drone fleet management with autonomous flight planning, monitoring, and maintenance.',
+    icon: Rocket,
+    features: ['Autonomous Flight Planning', 'Fleet Monitoring', 'Maintenance Scheduling', 'Regulatory Compliance'],
+    pricing: '$999 - $5,999/month',
+    category: 'Drone Technology',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Financial Risk Analyzer',
+    description: 'Real-time financial risk assessment and portfolio optimization using advanced machine learning.',
+    icon: TrendingUp,
+    features: ['Risk Assessment', 'Portfolio Optimization', 'Market Analysis', 'Regulatory Compliance'],
+    pricing: '$1,499 - $7,999/month',
+    category: 'FinTech',
+    popular: true
+  },
+  {
+    title: 'Smart City IoT Management Platform',
+    description: 'Comprehensive IoT platform for smart city infrastructure management and optimization.',
+    icon: Globe,
+    features: ['IoT Device Management', 'Data Analytics', 'Predictive Maintenance', 'Resource Optimization'],
+    pricing: '$2,999 - $15,999/month',
+    category: 'Smart Cities',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Language Learning Platform',
+    description: 'Personalized language learning with AI tutors, speech recognition, and adaptive curriculum.',
+    icon: BookOpen,
+    features: ['AI Tutoring', 'Speech Recognition', 'Adaptive Learning', 'Progress Tracking'],
+    pricing: '$29 - $199/month',
+    category: 'EdTech',
+    popular: true
+  },
+  {
+    title: 'Blockchain Identity Verification System',
+    description: 'Decentralized identity verification and KYC/AML compliance using blockchain technology.',
+    icon: Shield,
+    features: ['Decentralized Identity', 'KYC/AML Compliance', 'Privacy Protection', 'Cross-Platform Verification'],
+    pricing: '$199 - $1,499/month',
+    category: 'Blockchain',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Environmental Monitoring',
+    description: 'Real-time environmental monitoring and sustainability tracking with predictive analytics.',
+    icon: Sprout,
+    features: ['Environmental Sensors', 'Data Analytics', 'Sustainability Tracking', 'Predictive Modeling'],
+    pricing: '$499 - $2,999/month',
+    category: 'Environmental Tech',
+    popular: true
+  },
+  {
+    title: 'Neural Interface Development Kit',
+    description: 'SDK for developing brain-computer interface applications and neural control systems.',
+    icon: Brain,
+    features: ['Neural Signal Processing', 'Real-time Analysis', 'Device Integration', 'API Development'],
+    pricing: '$1,999 - $9,999/month',
+    category: 'Neurotechnology',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Space Mission Planner',
+    description: 'Autonomous space mission planning and satellite constellation management platform.',
+    icon: Rocket,
+    features: ['Mission Planning', 'Satellite Management', 'Orbital Mechanics', 'Resource Optimization'],
+    pricing: '$4,999 - $24,999/month',
+    category: 'Space Technology',
+    popular: true
+  },
+  {
+    title: 'Quantum Computing Cloud Platform',
+    description: 'Access to quantum computing resources with quantum algorithm development tools.',
+    icon: Cpu,
+    features: ['Quantum Computing Access', 'Algorithm Development', 'Quantum Simulation', 'Expert Support'],
+    pricing: '$999 - $9,999/month',
+    category: 'Quantum Computing',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Drug Discovery Platform',
+    description: 'Machine learning platform for pharmaceutical drug discovery and molecular design.',
+    icon: Heart,
+    features: ['Molecular Design', 'Drug Discovery', 'Clinical Trial Optimization', 'Patent Analysis'],
+    pricing: '$2,999 - $19,999/month',
+    category: 'Pharmaceutical AI',
+    popular: true
+  },
+  {
+    title: 'Autonomous Vehicle Fleet Management',
+    description: 'Complete management system for autonomous vehicle fleets with safety monitoring and optimization.',
+    icon: Car,
+    features: ['Fleet Monitoring', 'Safety Systems', 'Route Optimization', 'Predictive Maintenance'],
+    pricing: '$1,999 - $12,999/month',
+    category: 'Autonomous Vehicles',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Cybersecurity Threat Hunter',
+    description: 'Advanced threat detection and response system using AI and machine learning for zero-day attacks.',
+    icon: Shield,
+    features: ['Threat Detection', 'Zero-day Protection', 'Incident Response', 'Threat Intelligence'],
+    pricing: '$1,499 - $8,999/month',
+    category: 'Cybersecurity',
+    popular: true
+  },
+  {
     title: 'Real-Time Language Translation API',
     description: 'Advanced translation service with context awareness and industry-specific terminology.',
     icon: Globe,
@@ -533,6 +669,19 @@ const pricingTiers = [
 ];
 
 export default function MicroSaaSPage() {
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 12;
+  const totalPages = Math.ceil(microSaaSProducts.length / itemsPerPage);
+  
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const currentProducts = microSaaSProducts.slice(startIndex, endIndex);
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <Head>
@@ -598,7 +747,7 @@ export default function MicroSaaSPage() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {microSaaSProducts.map((product, index) => {
+            {currentProducts.map((product, index) => {
               const IconComponent = product.icon;
               return (
                 <motion.div
@@ -663,6 +812,43 @@ export default function MicroSaaSPage() {
               );
             })}
           </div>
+
+          {/* Pagination */}
+          {totalPages > 1 && (
+            <div className="flex justify-center mt-12">
+              <div className="flex items-center space-x-2">
+                <button
+                  onClick={() => handlePageChange(currentPage - 1)}
+                  disabled={currentPage === 1}
+                  className="px-3 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  Previous
+                </button>
+                
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                  <button
+                    key={page}
+                    onClick={() => handlePageChange(page)}
+                    className={`px-3 py-2 rounded-lg border ${
+                      currentPage === page
+                        ? 'bg-purple-600 text-white border-purple-600'
+                        : 'border-gray-300 text-gray-700 hover:bg-gray-50'
+                    }`}
+                  >
+                    {page}
+                  </button>
+                ))}
+                
+                <button
+                  onClick={() => handlePageChange(currentPage + 1)}
+                  disabled={currentPage === totalPages}
+                  className="px-3 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  Next
+                </button>
+              </div>
+            </div>
+          )}
         </div>
       </section>
 

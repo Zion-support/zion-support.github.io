@@ -13,6 +13,7 @@ import {
   Users,
   Globe,
   Settings,
+  Building,
   Facebook,
   Twitter,
   Linkedin,
@@ -29,7 +30,9 @@ const services = {
     { name: 'AI Content Generation', href: '/ai-services#ai-content-generation' },
     { name: 'Voice AI Assistant', href: '/ai-services#voice-ai-assistant' },
     { name: 'AI Fraud Detection', href: '/ai-services#ai-fraud-detection' },
-    { name: 'AI Drug Discovery', href: '/ai-services#ai-drug-discovery' }
+    { name: 'AI Drug Discovery', href: '/ai-services#ai-drug-discovery' },
+    { name: 'AI Consciousness Simulation', href: '/ai-services#ai-consciousness' },
+    { name: 'AI Universal Problem Solver', href: '/ai-services#ai-universal-solver' }
   ],
   'IT Services': [
     { name: 'Cloud Infrastructure Management', href: '/it-services#cloud-infrastructure' },
@@ -39,7 +42,9 @@ const services = {
     { name: 'DevOps & CI/CD', href: '/it-services#devops-cicd' },
     { name: 'Data Center Migration', href: '/it-services#data-center-migration' },
     { name: 'IT Asset Management', href: '/it-services#it-asset-management' },
-    { name: 'Backup & Disaster Recovery', href: '/it-services#backup-disaster-recovery' }
+    { name: 'Backup & Disaster Recovery', href: '/it-services#backup-disaster-recovery' },
+    { name: 'Quantum Computing Infrastructure', href: '/it-services#quantum-computing' },
+    { name: 'Autonomous IT Operations', href: '/it-services#autonomous-it' }
   ],
   'Micro SaaS': [
     { name: 'Cloud Cost Guard', href: '/micro-saas#cloud-cost-guard' },
@@ -49,7 +54,9 @@ const services = {
     { name: 'Content Moderation AI', href: '/micro-saas#content-moderation' },
     { name: 'Workflow Automation', href: '/micro-saas#workflow-automation' },
     { name: 'AI Lead Scoring', href: '/micro-saas#ai-lead-scoring' },
-    { name: 'Social Media Scheduler', href: '/micro-saas#social-media-scheduler' }
+    { name: 'Social Media Scheduler', href: '/micro-saas#social-media-scheduler' },
+    { name: 'AI-Powered Legal Document Analyzer', href: '/micro-saas#legal-document-analyzer' },
+    { name: 'Quantum-Safe Encryption Manager', href: '/micro-saas#quantum-safe-encryption' }
   ]
 };
 
@@ -59,7 +66,9 @@ const company = [
   { name: 'Careers', href: '/careers' },
   { name: 'Case Studies', href: '/case-studies' },
   { name: 'Blog', href: '/blog' },
-  { name: 'News', href: '/news' }
+  { name: 'News', href: '/news' },
+  { name: 'Partners', href: '/partners' },
+  { name: 'Investors', href: '/investors' }
 ];
 
 const resources = [
@@ -68,7 +77,18 @@ const resources = [
   { name: 'Tutorials', href: '/tutorials' },
   { name: 'Guides', href: '/guides' },
   { name: 'FAQ', href: '/faq' },
-  { name: 'Support', href: '/support' }
+  { name: 'Support', href: '/support' },
+  { name: 'White Papers', href: '/white-papers' },
+  { name: 'Webinars', href: '/webinars' }
+];
+
+const industries = [
+  { name: 'Healthcare', href: '/industries/healthcare' },
+  { name: 'Finance', href: '/industries/finance' },
+  { name: 'Manufacturing', href: '/industries/manufacturing' },
+  { name: 'Retail', href: '/industries/retail' },
+  { name: 'Education', href: '/industries/education' },
+  { name: 'Government', href: '/industries/government' }
 ];
 
 const legal = [
@@ -100,7 +120,7 @@ export default function Footer() {
     <footer className="bg-gray-900 text-white">
       {/* Main Footer */}
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center space-x-2 mb-6">
@@ -174,6 +194,27 @@ export default function Footer() {
             </h3>
             <ul className="space-y-3">
               {company.map((link) => (
+                <li key={link.name}>
+                  <Link 
+                    href={link.href}
+                    className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group"
+                  >
+                    <ArrowRight className="w-3 h-3 mr-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Industries */}
+          <div>
+            <h3 className="text-lg font-semibold mb-6 flex items-center">
+              <Building className="w-5 h-5 mr-2 text-blue-400" />
+              Industries
+            </h3>
+            <ul className="space-y-3">
+              {industries.map((link) => (
                 <li key={link.name}>
                   <Link 
                     href={link.href}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -300,6 +300,132 @@ const aiServices = [
     popular: true
   },
   {
+    title: 'AI-Powered Metaverse Platform',
+    description: 'Complete metaverse infrastructure with AI-driven virtual worlds and avatars.',
+    icon: Globe,
+    features: ['Virtual World Generation', 'AI Avatars', 'Natural Language Interaction', 'Immersive Experiences'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Metaverse',
+    popular: true
+  },
+  {
+    title: 'AI Consciousness Simulation',
+    description: 'Advanced AI systems that simulate consciousness and self-awareness for research applications.',
+    icon: Brain,
+    features: ['Consciousness Modeling', 'Self-Awareness Simulation', 'Cognitive Architecture', 'Ethical AI Framework'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Consciousness AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Time Travel Simulation',
+    description: 'Advanced temporal modeling and simulation for historical analysis and future prediction.',
+    icon: Clock,
+    features: ['Historical Simulation', 'Future Prediction', 'Causal Analysis', 'Temporal Modeling'],
+    pricing: '$75,000 - $750,000/project',
+    category: 'Temporal AI',
+    popular: true
+  },
+  {
+    title: 'AI Quantum Consciousness Interface',
+    description: 'Quantum-enhanced AI systems for consciousness research and human-AI interaction.',
+    icon: Cpu,
+    features: ['Quantum Consciousness', 'Human-AI Interface', 'Consciousness Transfer', 'Quantum Entanglement'],
+    pricing: '$200,000 - $2,000,000/project',
+    category: 'Quantum Consciousness',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Reality Manipulation',
+    description: 'Advanced AI systems for augmented reality and reality manipulation technologies.',
+    icon: Eye,
+    features: ['Reality Augmentation', 'Perception Manipulation', 'Spatial Computing', 'Immersive Control'],
+    pricing: '$150,000 - $1,500,000/project',
+    category: 'Reality AI',
+    popular: true
+  },
+  {
+    title: 'AI Universal Translator',
+    description: 'Real-time translation across all languages including extinct and constructed languages.',
+    icon: Globe,
+    features: ['Universal Translation', 'Language Reconstruction', 'Cultural Context', 'Real-time Processing'],
+    pricing: '$25,000 - $250,000/setup',
+    category: 'Translation AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Dream Analysis',
+    description: 'Advanced AI for dream interpretation and sleep pattern analysis.',
+    icon: Brain,
+    features: ['Dream Interpretation', 'Sleep Analysis', 'Subconscious Mapping', 'Therapeutic Insights'],
+    pricing: '$15,000 - $150,000/project',
+    category: 'Dream AI',
+    popular: true
+  },
+  {
+    title: 'AI Emotion Synthesis',
+    description: 'AI systems that can generate and understand complex human emotions.',
+    icon: Heart,
+    features: ['Emotion Generation', 'Empathy Simulation', 'Emotional Intelligence', 'Therapeutic Applications'],
+    pricing: '$30,000 - $300,000/project',
+    category: 'Emotional AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Memory Enhancement',
+    description: 'AI systems for memory augmentation and cognitive enhancement.',
+    icon: Brain,
+    features: ['Memory Augmentation', 'Cognitive Enhancement', 'Learning Acceleration', 'Memory Retrieval'],
+    pricing: '$40,000 - $400,000/project',
+    category: 'Memory AI',
+    popular: true
+  },
+  {
+    title: 'AI Creativity Engine',
+    description: 'Advanced AI for creative problem-solving and artistic expression.',
+    icon: FileText,
+    features: ['Creative Problem Solving', 'Artistic Generation', 'Innovation Catalyst', 'Design Thinking'],
+    pricing: '$20,000 - $200,000/project',
+    category: 'Creative AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Telepathy Simulation',
+    description: 'AI systems that simulate telepathic communication and mind-reading capabilities.',
+    icon: Brain,
+    features: ['Thought Reading', 'Mental Communication', 'Neural Interface', 'Privacy Protection'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Telepathic AI',
+    popular: true
+  },
+  {
+    title: 'AI Time Dilation Engine',
+    description: 'AI systems for temporal perception manipulation and time flow optimization.',
+    icon: Clock,
+    features: ['Temporal Perception', 'Time Flow Control', 'Chronological Analysis', 'Temporal Optimization'],
+    pricing: '$80,000 - $800,000/project',
+    category: 'Temporal AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Immortality Research',
+    description: 'AI systems for longevity research and life extension technologies.',
+    icon: Heart,
+    features: ['Longevity Research', 'Life Extension', 'Health Optimization', 'Aging Reversal'],
+    pricing: '$500,000 - $5,000,000/project',
+    category: 'Longevity AI',
+    popular: true
+  },
+  {
+    title: 'AI Universal Problem Solver',
+    description: 'General-purpose AI that can solve any problem across all domains.',
+    icon: Settings,
+    features: ['Universal Problem Solving', 'Cross-domain Intelligence', 'Adaptive Learning', 'Infinite Scalability'],
+    pricing: '$1,000,000 - $10,000,000/project',
+    category: 'General AI',
+    popular: true
+  },
+  {
     title: 'AI-Powered Financial Trading',
     description: 'Advanced algorithmic trading systems with AI-driven market analysis.',
     icon: TrendingUp,
@@ -419,6 +545,19 @@ const benefits = [
 ];
 
 export default function AIServicesPage() {
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 12;
+  const totalPages = Math.ceil(aiServices.length / itemsPerPage);
+  
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const currentServices = aiServices.slice(startIndex, endIndex);
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <Head>
@@ -484,7 +623,7 @@ export default function AIServicesPage() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {aiServices.map((service, index) => {
+            {currentServices.map((service, index) => {
               const IconComponent = service.icon;
               return (
                 <motion.div
@@ -539,6 +678,43 @@ export default function AIServicesPage() {
               );
             })}
           </div>
+
+          {/* Pagination */}
+          {totalPages > 1 && (
+            <div className="flex justify-center mt-12">
+              <div className="flex items-center space-x-2">
+                <button
+                  onClick={() => handlePageChange(currentPage - 1)}
+                  disabled={currentPage === 1}
+                  className="px-3 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  Previous
+                </button>
+                
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                  <button
+                    key={page}
+                    onClick={() => handlePageChange(page)}
+                    className={`px-3 py-2 rounded-lg border ${
+                      currentPage === page
+                        ? 'bg-blue-600 text-white border-blue-600'
+                        : 'border-gray-300 text-gray-700 hover:bg-gray-50'
+                    }`}
+                  >
+                    {page}
+                  </button>
+                ))}
+                
+                <button
+                  onClick={() => handlePageChange(currentPage + 1)}
+                  disabled={currentPage === totalPages}
+                  className="px-3 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  Next
+                </button>
+              </div>
+            </div>
+          )}
         </div>
       </section>
 
