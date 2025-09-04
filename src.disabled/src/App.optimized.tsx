@@ -1,12 +1,12 @@
 import React, { Suspense, lazy } from 'react';
-import { Routes, Route  } from 'react-router-dom';
-import { HelmetProvider  } from 'react-helmet-async';
+import { Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 
 // Core Components;
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { SEO } from './components/SEO';
 import { ErrorBoundary } from './components/ErrorBoundary';
-import { LoadingSpinner  } from './components/ui/loading-spinner';
+import { LoadingSpinner } from './components/ui/loading-spinner';
 
 // Layout Components;
 import { EnhancedHeader } from './components/EnhancedHeader';
