@@ -1,0 +1,32 @@
+{
+  "timestamp": "2025-09-04T02:50:00.906Z",
+  "summary": {
+    "totalTests": 5,
+    "successful": 3,
+    "failed": 2,
+    "withWarnings": 0
+  },
+  "results": {
+    "health": {
+      "success": false,
+      "error": "Command failed: node automation/health-check.cjs"
+    },
+    "security": {
+      "success": false,
+      "error": "Command failed: node automation/security-scanner.cjs"
+    },
+    "build": {
+      "success": true
+    },
+    "lint": {
+      "success": true
+    },
+    "typeCheck": {
+      "success": true
+    }
+  },
+  "recommendations": [
+    "Address health check issues for better system reliability",
+    "Resolve security issues to protect the application"
+  ]
+}

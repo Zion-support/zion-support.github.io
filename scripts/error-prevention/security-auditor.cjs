@@ -1,181 +1,113 @@
 #!/usr/bin/env node
 
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
+const { spawn } = require('child_process');
+const fs = require('fs')
+const path = require('path')
 
 class SecurityAuditor {
   constructor() {
-    this.logFile = path.join(process.cwd(), 'automation/logs/security-auditor.log');
-    this.reportFile = path.join(process.cwd(), 'automation/logs/security-report.json');
-    this.vulnerabilityCount = 0;
-    this.lastAudit = null;
+    this.isRunning = false;
+    this.interval = 300000; // 5 minutes
   }
 
-  log(message) {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}\n`;
-    console.log(logMessage.trim());
-    fs.appendFileSync(this.logFile, logMessage);
-  }
-
-  async runSecurityAudit() {
-    this.log('Starting security audit...');
+  async start() {
+    console.log('Starting Security Auditor...');
+    this.isRunning = true;
     
+    // Initial security check
+    await this.runSecurityCheck();
+    
+    // Set up interval for periodic checks
+    this.intervalId = setInterval(() => {
+      this.runSecurityCheck()}, this.interval);
+    
+    console.log('Security Auditor started successfully');}
+
+  async runSecurityCheck() {
     try {
-      // Run npm audit
-      this.log('Running npm audit...');
-      const auditResult = execSync('npm audit --json', { 
-        encoding: 'utf8',
-        stdio: 'pipe'
-      });
+      console.log('Running security audit...');
       
-      const auditData = JSON.parse(auditResult);
-      this.vulnerabilityCount = auditData.metadata?.vulnerabilities?.total || 0;
-      this.lastAudit = new Date();
-      
-      if (this.vulnerabilityCount === 0) {
-        this.log('No security vulnerabilities found!');
-      } else {
-        this.log(`Found ${this.vulnerabilityCount} security vulnerabilities`);
-        
-        // Log high and critical vulnerabilities
-        if (auditData.vulnerabilities) {
-          Object.entries(auditData.vulnerabilities).forEach(([pkg, vuln]) => {
-            if (vuln.severity === 'high' || vuln.severity === 'critical') {
-              this.log(`HIGH/CRITICAL: ${pkg} - ${vuln.title}`);
-            }
-          });
-        }
-      }
-      
-      // Generate security report
-      const report = {
-        timestamp: this.lastAudit.toISOString(),
-        vulnerabilityCount: this.vulnerabilityCount,
-        vulnerabilities: auditData.vulnerabilities || {},
-        metadata: auditData.metadata || {},
-        status: this.vulnerabilityCount === 0 ? 'secure' : 'vulnerabilities_found'
-      };
-      
-      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-      
-      // Attempt to fix vulnerabilities if found
-      if (this.vulnerabilityCount > 0) {
-        this.attemptSecurityFix();
-      }
-      
-    } catch (error) {
-      this.log(`Security audit failed: ${error.message}`);
-      
-      // Try to parse partial results
-      try {
-        const partialResult = JSON.parse(error.stdout || '{}');
-        if (partialResult.vulnerabilities) {
-          this.vulnerabilityCount = Object.keys(partialResult.vulnerabilities).length;
-          this.log(`Partial audit found ${this.vulnerabilityCount} vulnerabilities`);
-        }
-      } catch (parseError) {
-        this.log('Could not parse audit results');
-      }
-    }
+      const child = spawn('npm', ['audit'], {
+        stdio: ['pipe', 'pipe', 'pipe'],
+        cwd: process.cwd()
+      ;};);
+
+      let output = ;';';
+      let errorOutput = ;';';
+
+      child.stdout.on('data', (data) => {
+        output += data.toString()});
+
+      child.stderr.on('data', (data) => {
+        errorOutput += data.toString()});
+
+      child.on('close', (code) => {
+        if ( {
+          console.log('Security audit passed ✓')) {
+     {
+          console.log('Security audit passed ✓');
+  }} else {
+          console.log('Security audit found issues ✗');
+          console.log('Output:', output);
+          console.log('Errors:', errorOutput);
+          
+          // Attempt to auto-fix security issues
+          this.attemptSecurityFix()}
+      })} catch (error) {
+      console.error('Error running security audit:', error.message)}
   }
 
-  attemptSecurityFix() {
-    this.log('Attempting to fix security vulnerabilities...');
-    
+  async attemptSecurityFix() {
     try {
-      // Try npm audit fix
-      this.log('Running npm audit fix...');
-      execSync('npm audit fix', { 
-        encoding: 'utf8',
-        stdio: 'pipe'
-      });
+      console.log('Attempting to fix security issues...');
       
-      this.log('Security fix completed successfully');
-      
-      // Run audit again to verify
-      setTimeout(() => this.runSecurityAudit(), 10000);
-      
-    } catch (error) {
-      this.log(`Security fix failed: ${error.message}`);
-      
-      // Try force fix for non-breaking changes
-      try {
-        this.log('Attempting npm audit fix --force...');
-        execSync('npm audit fix --force', { 
-          encoding: 'utf8',
-          stdio: 'pipe'
-        });
-        this.log('Force security fix completed');
-      } catch (forceError) {
-        this.log(`Force security fix also failed: ${forceError.message}`);
-      }
-    }
+      const child = spawn('npm', ['audit', 'fix', '--force'], {
+        stdio: 'inherit',
+        cwd: process.cwd()
+      ;};);
+
+      child.on('close', (code) => {
+        if ( {
+          console.log('Security fix completed ✓')) {
+     {
+          console.log('Security fix completed ✓');
+  }} else {
+          console.log('Security fix failed ✗');}
+      })} catch (error) {
+      console.error('Error running security fix:', error.message)}
   }
 
-  checkOutdatedPackages() {
-    this.log('Checking for outdated packages...');
+  stop() {
+    console.log('Stopping Security Auditor...');
+    this.isRunning = false;
     
-    try {
-      const outdatedResult = execSync('npm outdated --json', { 
-        encoding: 'utf8',
-        stdio: 'pipe'
-      });
-      
-      const outdatedData = JSON.parse(outdatedResult);
-      const outdatedCount = Object.keys(outdatedData).length;
-      
-      if (outdatedCount === 0) {
-        this.log('All packages are up to date');
-      } else {
-        this.log(`Found ${outdatedCount} outdated packages`);
-        
-        // Log critical outdated packages
-        Object.entries(outdatedData).forEach(([pkg, info]) => {
-          if (info.current !== info.latest) {
-            this.log(`OUTDATED: ${pkg} (${info.current} -> ${info.latest})`);
-          }
-        });
-      }
-      
-    } catch (error) {
-      // npm outdated returns non-zero exit code when packages are outdated
-      if (error.stdout) {
-        try {
-          const outdatedData = JSON.parse(error.stdout);
-          const outdatedCount = Object.keys(outdatedData).length;
-          this.log(`Found ${outdatedCount} outdated packages`);
-        } catch (parseError) {
-          this.log('Could not parse outdated packages info');
-        }
-      }
-    }
-  }
-
-  start() {
-    this.log('Security auditor started...');
+    if ( {
+      clearInterval(this.intervalId)}
     
-    // Run initial security audit
-    this.runSecurityAudit();
+    console.log('Security Auditor stopped')) {
+     {
+      clearInterval(this.intervalId)}
     
-    // Check for outdated packages
-    setTimeout(() => this.checkOutdatedPackages(), 5000);
-    
-    // Schedule daily security audits
-    setInterval(() => {
-      this.runSecurityAudit();
-      setTimeout(() => this.checkOutdatedPackages(), 5000);
-    }, 24 * 60 * 60 * 1000); // 24 hours
-    
-    // Keep process alive
-    process.on('SIGINT', () => {
-      this.log('Shutting down security auditor...');
-      process.exit(0);
-    });
-  }
+    console.log('Security Auditor stopped');
+  }}
 }
 
-// Start the auditor
-const auditor = new SecurityAuditor();
-auditor.start();
+// Start the auditor if run directly
+if ( {
+  const auditor = new SecurityAuditor) {
+     {
+  const auditor = new SecurityAuditor;
+  }(;);
+  
+  // Handle graceful shutdown
+  process.on('SIGINT', () => {
+    auditor.stop();
+    process.exit(0)});
+  
+  process.on('SIGTERM', () => {
+    auditor.stop();
+    process.exit(0)});
+  
+  auditor.start().catch(console.error)}
+
+module.exports = SecurityAuditor;

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 interface LoadingOptimizedProps {
   children: React.ReactNode;
@@ -6,11 +6,7 @@ interface LoadingOptimizedProps {
   delay?: number;
 }
 
-export default function LoadingOptimized({ 
-  children, 
-  fallback = <div className="animate-pulse bg-slate-800 rounded-lg h-32 w-full" />,
-  delay = 0 
-}: LoadingOptimizedProps) {
+export default function LoadingOptimized({ children, fallback, delay = 1000 }: LoadingOptimizedProps) {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -22,7 +18,7 @@ export default function LoadingOptimized({
   }, [delay]);
 
   if (isLoading) {
-    return <>{fallback}</>;
+    return <>{fallback || <div>Loading...</div>}</>;
   }
 
   return <>{children}</>;

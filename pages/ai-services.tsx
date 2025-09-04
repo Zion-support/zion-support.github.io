@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Brain, Zap, Shield, Eye, Mic, TrendingUp, Database, FileText, Mail, Code, Cog, Search, Users } from 'lucide-react';
+import { Brain, Zap, Shield, Eye, Mic, TrendingUp, Database, FileText, Code, Cog, Search, Users } from 'lucide-react';
 
 export default function AIServices() {
   const contact = {
@@ -203,208 +203,10 @@ export default function AIServices() {
       perUnit: '$0.50 – $5.00 per task',
       timeline: '8–16 weeks',
       benefits: [
-        '90% task automation success rate',
-        'Reduced operational costs',
+        '90% reduction in manual tasks',
         '24/7 autonomous operation',
-        'Scalable AI workforce'
-      ]
-    },
-    {
-      icon: Eye,
-      name: 'AI-Powered Healthcare Diagnostics',
-      description: 'Advanced medical imaging analysis and diagnostic assistance using deep learning algorithms.',
-      features: [
-        'Medical image analysis and interpretation',
-        'Disease detection and classification',
-        'Treatment recommendation systems',
-        'Patient risk assessment',
-        'Drug interaction analysis',
-        'Clinical decision support'
-      ],
-      pricing: '$15,000 – $75,000 setup',
-      perUnit: '$5.00 – $50.00 per analysis',
-      timeline: '12–24 weeks',
-      benefits: [
-        '95% accuracy in medical imaging',
-        'Faster diagnosis and treatment',
-        'Reduced medical errors',
-        'Improved patient outcomes'
-      ]
-    },
-    {
-      icon: Shield,
-      name: 'AI-Powered Cybersecurity Threat Detection',
-      description: 'Advanced threat detection and response using machine learning and behavioral analysis.',
-      features: [
-        'Real-time threat detection and analysis',
-        'Behavioral anomaly detection',
-        'Automated incident response',
-        'Threat intelligence integration',
-        'Predictive security analytics',
-        'Zero-day attack detection'
-      ],
-      pricing: '$12,000 – $60,000 setup',
-      perUnit: '$0.10 – $1.00 per event',
-      timeline: '8–16 weeks',
-      benefits: [
-        '99.5% threat detection accuracy',
-        'Real-time security monitoring',
-        'Automated threat response',
-        'Reduced security incidents'
-      ]
-    },
-    {
-      icon: Cog,
-      name: 'Smart Manufacturing Quality Control',
-      description: 'AI-powered quality control and predictive maintenance for manufacturing operations.',
-      features: [
-        'Real-time quality inspection',
-        'Predictive maintenance scheduling',
-        'Defect detection and classification',
-        'Production optimization',
-        'Supply chain monitoring',
-        'Equipment performance analysis'
-      ],
-      pricing: '$20,000 – $100,000 setup',
-      perUnit: '$0.05 – $0.50 per inspection',
-      timeline: '12–20 weeks',
-      benefits: [
-        '40% reduction in defects',
-        '30% improvement in efficiency',
-        'Predictive maintenance savings',
-        'Enhanced product quality'
-      ]
-    },
-    {
-      icon: TrendingUp,
-      name: 'AI-Powered Smart City Solutions',
-      description: 'Intelligent urban management systems for traffic, energy, and public services optimization.',
-      features: [
-        'Traffic flow optimization',
-        'Energy consumption management',
-        'Public safety monitoring',
-        'Environmental monitoring',
-        'Resource allocation optimization',
-        'Citizen service automation'
-      ],
-      pricing: '$50,000 – $250,000 setup',
-      perUnit: 'Custom pricing based on city size',
-      timeline: '16–32 weeks',
-      benefits: [
-        '25% reduction in traffic congestion',
-        '20% energy savings',
-        'Improved public safety',
-        'Enhanced citizen services'
-      ]
-    },
-    {
-      icon: Database,
-      name: 'Intelligent Process Mining & Optimization',
-      description: 'AI-driven process analysis and optimization for business operations and workflows.',
-      features: [
-        'Process discovery and mapping',
-        'Bottleneck identification',
-        'Process optimization recommendations',
-        'Compliance monitoring',
-        'Performance analytics',
-        'Automated process improvement'
-      ],
-      pricing: '$8,000 – $40,000 setup',
-      perUnit: '$0.20 – $2.00 per process',
-      timeline: '6–12 weeks',
-      benefits: [
-        '35% process efficiency improvement',
-        'Automated optimization',
-        'Reduced operational costs',
-        'Better compliance tracking'
-      ]
-    },
-    {
-      icon: FileText,
-      name: 'AI Legal Document Analysis',
-      description: 'Intelligent legal document review, contract analysis, and compliance monitoring.',
-      features: [
-        'Contract analysis and risk assessment',
-        'Legal document summarization',
-        'Compliance monitoring and alerts',
-        'Legal research automation',
-        'Document classification and organization',
-        'Litigation support and discovery'
-      ],
-      pricing: '$10,000 – $50,000 setup',
-      perUnit: '$0.50 – $5.00 per document',
-      timeline: '8–16 weeks',
-      benefits: [
-        '90% reduction in document review time',
-        'Improved accuracy in legal analysis',
-        'Automated compliance monitoring',
-        'Reduced legal costs'
-      ]
-    },
-    {
-      icon: Search,
-      name: 'AI-Powered Search & Discovery',
-      description: 'Intelligent search engines with semantic understanding and personalized results.',
-      features: [
-        'Semantic search and understanding',
-        'Personalized search results',
-        'Natural language queries',
-        'Multi-modal search capabilities',
-        'Real-time search optimization',
-        'Context-aware recommendations'
-      ],
-      pricing: '$5,000 – $25,000 setup',
-      perUnit: '$0.01 – $0.10 per search',
-      timeline: '4–8 weeks',
-      benefits: [
-        '60% improvement in search relevance',
-        'Enhanced user experience',
-        'Increased engagement',
-        'Better content discovery'
-      ]
-    },
-    {
-      icon: Brain,
-      name: 'AI-Powered Financial Trading',
-      description: 'Automated trading systems with machine learning algorithms for market analysis and execution.',
-      features: [
-        'Market analysis and prediction',
-        'Automated trading execution',
-        'Risk management and portfolio optimization',
-        'Real-time market monitoring',
-        'Algorithmic trading strategies',
-        'Performance analytics and reporting'
-      ],
-      pricing: '$25,000 – $125,000 setup',
-      perUnit: 'Performance-based fees',
-      timeline: '12–24 weeks',
-      benefits: [
-        'Improved trading performance',
-        'Automated risk management',
-        '24/7 market monitoring',
-        'Data-driven trading decisions'
-      ]
-    },
-    {
-      icon: Mic,
-      name: 'AI-Powered Voice Analytics',
-      description: 'Advanced voice analysis for customer service, sales, and communication optimization.',
-      features: [
-        'Voice emotion and sentiment analysis',
-        'Call quality assessment',
-        'Customer satisfaction prediction',
-        'Sales conversation optimization',
-        'Voice biometric authentication',
-        'Real-time coaching and feedback'
-      ],
-      pricing: '$6,000 – $30,000 setup',
-      perUnit: '$0.05 – $0.50 per minute',
-      timeline: '6–12 weeks',
-      benefits: [
-        'Improved customer satisfaction',
-        'Enhanced sales performance',
-        'Better call quality',
-        'Automated coaching insights'
+        'Improved task accuracy',
+        'Scalable automation capabilities'
       ]
     },
     {
@@ -827,196 +629,201 @@ export default function AIServices() {
     },
     {
       icon: Brain,
-      name: 'AI-Powered Drug Discovery Platform',
-      description: 'Advanced AI platform for pharmaceutical research, drug discovery, and molecular analysis using deep learning.',
+      name: 'Generative AI Content Studio',
+      description: 'Advanced AI-powered content creation platform that generates high-quality text, images, videos, and audio content for marketing, education, and entertainment.',
       features: [
-        'Molecular structure prediction and analysis',
-        'Drug-target interaction modeling',
-        'Side effect prediction and assessment',
-        'Clinical trial optimization',
-        'Biomarker discovery and validation',
-        'Regulatory compliance and documentation'
+        'Multi-modal content generation (text, image, video, audio)',
+        'Brand voice and style consistency training',
+        'Content optimization for SEO and engagement',
+        'Automated content scheduling and distribution',
+        'A/B testing and performance analytics',
+        'Copyright and plagiarism detection'
       ],
-      pricing: '$50,000 – $500,000 project',
-      perUnit: 'Custom pricing based on research scope',
-      timeline: '12–24 weeks',
+      pricing: '$2,000 – $15,000 setup',
+      perUnit: '$0.05 – $0.50 per content piece',
+      timeline: '4–8 weeks',
       benefits: [
-        '60% faster drug discovery process',
-        'Reduced research and development costs',
-        'Improved success rates in clinical trials',
-        'Enhanced drug safety profiles'      ]
+        '95% faster content production',
+        'Consistent brand messaging across all channels',
+        'Reduced content creation costs by 70%',
+        'Improved content engagement and conversion rates'
+      ]
     },
     {
       icon: Eye,
-      name: 'AI-Powered Medical Imaging Analysis',
-      description: 'Advanced computer vision for medical imaging diagnosis, radiology, and pathology analysis.',
+      name: 'AI-Powered Quality Assurance',
+      description: 'Intelligent quality control system that uses computer vision and machine learning to detect defects, ensure compliance, and optimize manufacturing processes.',
       features: [
-        'Radiology image analysis and diagnosis',
-        'Pathology slide examination',
-        'Tumor detection and classification',
-        'Medical image enhancement and processing',
-        'Diagnostic report generation',
-        'Integration with medical systems'
+        'Real-time defect detection and classification',
+        'Predictive quality analytics and forecasting',
+        'Automated compliance monitoring and reporting',
+        'Root cause analysis and recommendations',
+        'Integration with manufacturing systems',
+        'Custom quality metrics and thresholds'
       ],
-      pricing: '$25,000 – $150,000 setup',
-      perUnit: '$0.50 – $5.00 per image',
+      pricing: '$10,000 – $75,000 setup',
+      perUnit: '$0.01 – $0.10 per inspection',
       timeline: '8–16 weeks',
       benefits: [
-        '95% accuracy in medical diagnosis',
-        'Faster diagnostic turnaround times',
-        'Reduced human error in analysis',
-        'Improved patient outcomes'      ]
+        '99.5% accuracy in defect detection',
+        '50% reduction in quality control costs',
+        'Real-time quality monitoring and alerts',
+        'Improved product consistency and customer satisfaction'
+      ]
     },
     {
       icon: TrendingUp,
-      name: 'AI-Powered Financial Trading Algorithm',
-      description: 'Sophisticated AI trading algorithms for automated investment strategies and risk management.',
+      name: 'AI Financial Risk Management',
+      description: 'Advanced AI system for financial risk assessment, fraud detection, and regulatory compliance with real-time monitoring and predictive analytics.',
       features: [
-        'Algorithmic trading strategy development',
-        'Real-time market analysis and prediction',
-        'Risk assessment and portfolio optimization',
-        'High-frequency trading capabilities',
-        'Backtesting and performance analysis',
-        'Regulatory compliance and reporting'
+        'Real-time fraud detection and prevention',
+        'Credit risk assessment and scoring',
+        'Market risk analysis and portfolio optimization',
+        'Regulatory compliance monitoring',
+        'Anomaly detection and alert systems',
+        'Automated reporting and documentation'
       ],
-      pricing: '$100,000 – $1,000,000 setup',
-      perUnit: 'Performance-based fees (10-20% of profits)',
-      timeline: '16–32 weeks',
+      pricing: '$15,000 – $100,000 setup',
+      perUnit: '$0.02 – $0.20 per transaction',
+      timeline: '10–20 weeks',
       benefits: [
-        'Superior risk-adjusted returns',
-        '24/7 automated trading',
-        'Reduced emotional trading decisions',
-        'Advanced market analysis capabilities'
+        '90% reduction in false positives',
+        'Real-time risk monitoring and mitigation',
+        'Automated compliance and regulatory reporting',
+        'Improved financial decision making'
+      ]
+    },
+    {
+      icon: Mic,
+      name: 'AI Voice Analytics & Sentiment Analysis',
+      description: 'Advanced voice processing system that analyzes speech patterns, emotions, and sentiment for customer service, market research, and healthcare applications.',
+      features: [
+        'Real-time voice emotion and sentiment analysis',
+        'Speaker identification and verification',
+        'Conversation analytics and insights',
+        'Multi-language support and translation',
+        'Voice biometric authentication',
+        'Call center optimization and training'
+      ],
+      pricing: '$5,000 – $30,000 setup',
+      perUnit: '$0.01 – $0.05 per minute',
+      timeline: '6–12 weeks',
+      benefits: [
+        '85% accuracy in emotion detection',
+        'Improved customer service quality',
+        'Real-time conversation insights',
+        'Enhanced security with voice biometrics'
+      ]
+    },
+    {
+      icon: Database,
+      name: 'AI Data Intelligence Platform',
+      description: 'Comprehensive AI platform that automatically discovers, cleans, and enriches data while providing intelligent insights and recommendations.',
+      features: [
+        'Automated data discovery and cataloging',
+        'Data quality assessment and cleaning',
+        'Intelligent data enrichment and augmentation',
+        'Automated data lineage and governance',
+        'Predictive data analytics and insights',
+        'Natural language data querying'
+      ],
+      pricing: '$8,000 – $50,000 setup',
+      perUnit: '$0.10 – $1.00 per GB processed',
+      timeline: '8–16 weeks',
+      benefits: [
+        '80% reduction in data preparation time',
+        'Improved data quality and accuracy',
+        'Automated data governance and compliance',
+        'Faster insights and decision making'
       ]
     },
     {
       icon: Shield,
-      name: 'AI-Powered Cybersecurity Threat Intelligence',
-      description: 'Advanced AI system for real-time threat detection, analysis, and automated response.',
+      name: 'AI Cybersecurity Threat Intelligence',
+      description: 'Advanced AI-powered cybersecurity system that provides real-time threat detection, incident response, and security intelligence.',
       features: [
         'Real-time threat detection and analysis',
-        'Behavioral anomaly identification',
-        'Automated incident response',
-        'Threat intelligence gathering',
-        'Vulnerability assessment and prioritization',
-        'Security orchestration and automation'
+        'Automated incident response and remediation',
+        'Behavioral analytics and anomaly detection',
+        'Threat intelligence and attribution',
+        'Security orchestration and automation',
+        'Compliance monitoring and reporting'
       ],
-      pricing: '$15,000 – $100,000 setup',
-      perUnit: '$0.10 – $1.00 per event',
-      timeline: '8–16 weeks',
+      pricing: '$12,000 – $80,000 setup',
+      perUnit: '$0.05 – $0.25 per event',
+      timeline: '10–18 weeks',
       benefits: [
-        '99.9% threat detection accuracy',
-        'Real-time automated response',
-        'Reduced security incident impact',
-        'Enhanced security posture'
+        '95% reduction in false positive alerts',
+        'Real-time threat detection and response',
+        'Automated security incident handling',
+        'Improved security posture and compliance'
       ]
     },
     {
-      icon: FileText,
-      name: 'AI-Powered Legal Document Analysis',
-      description: 'Advanced AI for legal document review, contract analysis, and compliance monitoring.',
+      icon: Users,
+      name: 'AI Talent Acquisition & HR Analytics',
+      description: 'Intelligent HR platform that automates recruitment, employee analytics, and workforce optimization using advanced AI algorithms.',
       features: [
-        'Contract analysis and risk assessment',
-        'Legal document review and summarization',
-        'Compliance monitoring and reporting',
-        'Due diligence automation',
-        'Legal research and case law analysis',
-        'Document generation and templating'
+        'Automated resume screening and candidate matching',
+        'Predictive analytics for employee retention',
+        'Skills gap analysis and training recommendations',
+        'Performance prediction and optimization',
+        'Bias detection and fairness monitoring',
+        'Workforce planning and optimization'
       ],
-      pricing: '$10,000 – $75,000 setup',
-      perUnit: '$0.25 – $2.50 per document',
+      pricing: '$6,000 – $40,000 setup',
+      perUnit: '$0.50 – $5.00 per candidate',
+      timeline: '6–14 weeks',
+      benefits: [
+        '70% reduction in time-to-hire',
+        'Improved candidate quality and fit',
+        'Reduced bias in hiring decisions',
+        'Better employee retention and satisfaction'
+      ]
+    },
+    {
+      icon: Code,
+      name: 'AI Code Generation & Optimization',
+      description: 'Advanced AI system that generates, optimizes, and maintains code while ensuring quality, security, and performance standards.',
+      features: [
+        'Automated code generation from specifications',
+        'Code optimization and performance tuning',
+        'Security vulnerability detection and fixing',
+        'Automated testing and quality assurance',
+        'Code documentation and maintenance',
+        'Legacy code modernization and refactoring'
+      ],
+      pricing: '$10,000 – $60,000 setup',
+      perUnit: '$0.10 – $1.00 per line of code',
+      timeline: '8–16 weeks',
+      benefits: [
+        '60% faster development cycles',
+        'Improved code quality and security',
+        'Automated testing and bug detection',
+        'Reduced technical debt and maintenance costs'
+      ]
+    },
+    {
+      icon: Search,
+      name: 'AI Search & Recommendation Engine',
+      description: 'Intelligent search and recommendation system that provides personalized results, content discovery, and user experience optimization.',
+      features: [
+        'Semantic search and natural language processing',
+        'Personalized recommendation algorithms',
+        'Real-time content indexing and ranking',
+        'User behavior analysis and optimization',
+        'Multi-modal search (text, image, voice)',
+        'A/B testing and performance optimization'
+      ],
+      pricing: '$5,000 – $35,000 setup',
+      perUnit: '$0.01 – $0.10 per search',
       timeline: '6–12 weeks',
       benefits: [
-        '90% reduction in document review time',
-        'Improved accuracy in legal analysis',
-        'Automated compliance monitoring',
-        'Reduced legal costs and risks'      ]
-    },
-    {
-      icon: Mic,
-      name: 'AI-Powered Real-Time Translation',
-      description: 'Advanced real-time translation system with voice recognition and natural language processing.',
-      features: [
-        'Real-time voice translation',
-        'Multi-language support (100+ languages)',
-        'Context-aware translation',
-        'Offline translation capabilities',
-        'Custom domain adaptation',
-        'Integration with communication platforms'
-      ],
-      pricing: '$5,000 – $30,000 setup',
-      perUnit: '$0.01 – $0.10 per minute',
-      timeline: '4–8 weeks',
-      benefits: [
-        '95% translation accuracy',
-        'Real-time communication support',
-        'Multi-language business expansion',
-        'Enhanced global collaboration'      ]
-    },
-    {
-      icon: Database,
-      name: 'AI-Powered Supply Chain Optimization',
-      description: 'Intelligent supply chain management with demand forecasting, inventory optimization, and logistics planning.',
-      features: [
-        'Demand forecasting and planning',
-        'Inventory optimization and management',
-        'Logistics route optimization',
-        'Supplier risk assessment',
-        'Supply chain visibility and tracking',
-        'Automated decision making'
-      ],
-      pricing: '$20,000 – $150,000 setup',
-      perUnit: '$0.05 – $0.50 per transaction',
-      timeline: '8–16 weeks',
-      benefits: [
-        '30% reduction in supply chain costs',
-        'Improved inventory turnover',
-        'Enhanced supply chain resilience',
-        'Optimized logistics operations'
+        '40% improvement in search relevance',
+        'Increased user engagement and conversion',
+        'Personalized user experiences',
+        'Better content discovery and recommendations'
       ]
-    },
-    {
-      icon: Brain,
-      name: 'AI-Powered Climate Change Modeling',
-      description: 'Advanced AI models for climate prediction, environmental impact assessment, and sustainability planning.',
-      features: [
-        'Climate change prediction and modeling',
-        'Environmental impact assessment',
-        'Carbon footprint analysis',
-        'Renewable energy optimization',
-        'Sustainability planning and reporting',
-        'Environmental risk assessment'
-      ],
-      pricing: '$30,000 – $200,000 project',
-      perUnit: 'Custom pricing based on scope',
-      timeline: '12–24 weeks',
-      benefits: [
-        'Accurate climate predictions',
-        'Improved sustainability planning',
-        'Reduced environmental impact',
-        'Enhanced corporate responsibility'
-      ]
-    },
-    {
-      icon: Eye,
-      name: 'AI-Powered Autonomous Vehicle Systems',
-      description: 'Advanced AI systems for autonomous vehicle navigation, safety, and fleet management.',
-      features: [
-        'Autonomous navigation and path planning',
-        'Object detection and collision avoidance',
-        'Traffic pattern analysis and optimization',
-        'Fleet management and coordination',
-        'Predictive maintenance and diagnostics',
-        'Safety monitoring and compliance'
-      ],
-      pricing: '$100,000 – $1,000,000 project',
-      perUnit: 'Custom pricing based on fleet size',
-      timeline: '24–48 weeks',
-      benefits: [
-        'Enhanced vehicle safety',
-        'Reduced transportation costs',
-        'Improved fleet efficiency',
-        'Advanced autonomous capabilities'      ]
     }
   ];
 

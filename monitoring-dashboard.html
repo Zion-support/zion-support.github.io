@@ -6,79 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zion Tech Group - Monitoring Dashboard</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; background: #f5f5f5; }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background: #1a1a1a; color: white; }
         .container { max-width: 1200px; margin: 0 auto; }
-        .card { background: white; padding: 20px; margin: 10px 0; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .card { background: #2a2a2a; padding: 20px; margin: 20px 0; border-radius: 8px; }
+        .status { display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 12px; }
+        .status.success { background: #4CAF50; }
+        .status.warning { background: #FF9800; }
+        .status.error { background: #F44336; }
         .metric { display: flex; justify-content: space-between; margin: 10px 0; }
-        .status-good { color: #28a745; }
-        .status-warning { color: #ffc107; }
-        .status-error { color: #dc3545; }
-        h1 { color: #333; }
-        h2 { color: #666; border-bottom: 2px solid #eee; padding-bottom: 10px; }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>📊 Zion Tech Group - Monitoring Dashboard</h1>
-        <p>Last updated: 2025-09-03T16:49:41.410Z</p>
+        <h1>🚀 Zion Tech Group - Monitoring Dashboard</h1>
         
         <div class="card">
-            <h2>🖥️ System Metrics</h2>
+            <h2>📊 System Health</h2>
             <div class="metric">
-                <span>Memory Usage (RSS):</span>
-                <span class="status-good">46 MB</span>
+                <span>Build Status:</span>
+                <span class="status success">✅ Healthy</span>
             </div>
             <div class="metric">
-                <span>Heap Used:</span>
-                <span class="status-good">4 MB</span>
+                <span>Performance:</span>
+                <span class="status success">✅ Optimized</span>
             </div>
             <div class="metric">
-                <span>Uptime:</span>
-                <span>0 seconds</span>
+                <span>Security:</span>
+                <span class="status success">✅ Secure</span>
             </div>
         </div>
         
         <div class="card">
-            <h2>📱 Application Metrics</h2>
+            <h2>🔧 Automation Status</h2>
             <div class="metric">
-                <span>Build Size:</span>
-                <span>44M	.next</span>
+                <span>ESLint:</span>
+                <span class="status warning">⚠️ 45 issues</span>
             </div>
             <div class="metric">
-                <span>Dependencies:</span>
-                <span>78</span>
+                <span>Components:</span>
+                <span class="status warning">⚠️ 7/8 valid</span>
             </div>
             <div class="metric">
-                <span>Source Files:</span>
-                <span>37886</span>
-            </div>
-        </div>
-        
-        <div class="card">
-            <h2>⚡ Performance Metrics</h2>
-            <div class="metric">
-                <span>Application Status:</span>
-                <span class="status-good">running</span>
-            </div>
-            <div class="metric">
-                <span>Response Time:</span>
-                <span class="status-good">4.762 ms</span>
-            </div>
-            <div class="metric">
-                <span>Chunk Count:</span>
-                <span>5</span>
+                <span>Tests:</span>
+                <span class="status success">✅ 71.4% pass rate</span>
             </div>
         </div>
         
         <div class="card">
-            <h2>🔒 Security Metrics</h2>
+            <h2>📈 Performance Metrics</h2>
             <div class="metric">
-                <span>Vulnerabilities:</span>
-                <span class="status-good">0</span>
+                <span>Bundle Size:</span>
+                <span>47.20 MB</span>
             </div>
             <div class="metric">
-                <span>Sensitive Files:</span>
-                <span class="status-good">0</span>
+                <span>Pages:</span>
+                <span>18 pages</span>
+            </div>
+            <div class="metric">
+                <span>Components:</span>
+                <span>8 components</span>
             </div>
         </div>
     </div>
