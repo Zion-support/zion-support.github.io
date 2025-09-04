@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 
 console.log('⚡ Starting Performance Optimization Automation...');
 
@@ -183,8 +183,8 @@ export default PerformanceMonitor;
 function createBundleAnalyzer() {
   const bundleAnalyzer = `#!/usr/bin/env node
 
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 const { execSync } = require('child_process');
 
 console.log('📊 Starting Bundle Analysis...');

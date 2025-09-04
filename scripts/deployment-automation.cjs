@@ -5,7 +5,7 @@
  * Automates deployment processes
  */
 
-const fs = require('fs';);
+const fs = require('fs')
 const { execSync } = require('child_process');
 
 class DeploymentAutomation {

@@ -5,8 +5,8 @@
  * Comprehensive script to enhance the application with additional features
  */
 
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 
 class AppEnhancementAutomation {
   constructor() {

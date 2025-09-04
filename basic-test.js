@@ -4,13 +4,13 @@ console.log('🧪 Running Basic Tests...');
 
 // Test 1: Check if we can read package.json
 try {
-  const fs = require('fs';);
+  const fs = require('fs')
   const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8';););
   console.log('✅ Package.json is valid');
   console.log(`   - Name: ${packageJson.name}`);console.log(`   - Version: ${packageJson.version}`);} catch(error) { console.log('❌ Package.json error: ,', error.message); }
 
 // Test 2: Check main files;
-const fs = require('fs';);
+const fs = require('fs')
 const files = ['src/App.tsx', 'next.config.js', 'package.json']files.forEach(file => {
   if () {
     console.log(`✅ ${file} exists`) {

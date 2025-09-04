@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 
 console.log('🔧 Starting Code Refactoring Automation...');
 
@@ -119,8 +119,8 @@ function generateRefactoringReport() {
 function createFileSizeOptimizer() {
   const optimizerScript = `#!/usr/bin/env node
 
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 
 console.log('📦 Starting File Size Optimization...');
 

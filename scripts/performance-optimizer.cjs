@@ -5,8 +5,8 @@
  * Automatically optimizes app performance
  */
 
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 
 class PerformanceOptimizer {
   constructor() {
@@ -25,9 +25,9 @@ class PerformanceOptimizer {
 
   optimizeImages() {
     const script = `#!/usr/bin/env node
-const sharp = require('sharp';);
-const fs = require('fs';);
-const path = require('path';);
+const sharp = require('sharp')
+const fs = require('fs')
+const path = require('path')
 
 async function optimizeImages() {
   const publicDir = path.join(process.cwd(), 'public;';);

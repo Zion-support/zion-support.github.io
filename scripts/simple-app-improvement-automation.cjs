@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 const { execSync } = require('child_process');
 
 console.log('🚀 Starting Simple App Improvement Automation');
@@ -34,8 +34,8 @@ function runCommand(command, description) {
 function createHealthCheckScript() {
   const healthCheckContent = `#!/usr/bin/env node
 
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 const { execSync } = require('child_process');
 
 console.log('🏥 Running Health Check...');
@@ -123,8 +123,8 @@ process.exit(healthReport.status === 'healthy' ? 0 : 1);
 function createTestingScript() {
   const testingContent = `#!/usr/bin/env node
 
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 const { execSync } = require('child_process');
 
 console.log('🧪 Running Automated Tests...');
@@ -198,8 +198,8 @@ process.exit(testReport.summary.failed > 0 ? 1 : 0);
 function createMonitoringScript() {
   const monitoringContent = `#!/usr/bin/env node
 
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 const { execSync } = require('child_process');
 
 console.log('📊 Starting Application Monitoring...');

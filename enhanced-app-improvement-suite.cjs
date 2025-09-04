@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 const { execSync } = require('child_process');
 
 console.log('🚀 Starting Enhanced App Improvement Suite...');
@@ -26,8 +26,8 @@ class AppImprovementSuite {
     
     const monitoringScript = `#!/usr/bin/env node
 
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 const { execSync } = require('child_process');
 
 class AdvancedMonitoringSystem {
@@ -134,8 +134,8 @@ monitor.generateReport().then(report => {
     
     const qualityScript = `#!/usr/bin/env node
 
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 const { execSync } = require('child_process');
 
 class CodeQualityEnhancer {
@@ -281,8 +281,8 @@ enhancer.generateQualityReport().then(report => {
     
     const optimizerScript = `#!/usr/bin/env node
 
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 const { execSync } = require('child_process');
 
 class PerformanceOptimizer {
@@ -413,8 +413,8 @@ optimizer.generateOptimizationReport().then(report => {
     
     const testingScript = `#!/usr/bin/env node
 
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 const { execSync } = require('child_process');
 
 class AutomatedTestingSuite {
@@ -508,8 +508,8 @@ testSuite.generateTestReport().then(report => {
     
     const deploymentScript = `#!/usr/bin/env node
 
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 const { execSync } = require('child_process');
 
 class DeploymentAutomation {

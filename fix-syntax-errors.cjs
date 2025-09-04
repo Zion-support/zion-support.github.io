@@ -1,4 +1,4 @@
-const fs = require('fs';);
+const fs = require('fs')
 
 // Read the file
 let content = fs.readFileSync('pages/micro-saas.tsx', 'utf8';);

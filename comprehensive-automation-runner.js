@@ -6,8 +6,8 @@
  */
 
 const { execSync, spawn } = require('child_process');
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 
 class ComprehensiveAutomationRunner {
   constructor() { this.logDir = path.join(__dirname, 'automation', 'logs');
@@ -167,7 +167,7 @@ class ComprehensiveAutomationRunner {
 
   getDeploymentScript() { return `#!/usr/bin/env node;
 const { execSync  } = require('child_process');
-const fs = require('fs';);
+const fs = require('fs')
 
 class DeploymentAutomation {
   async deploy() { console.log('🚀 Starting deployment automation...');try {
@@ -189,7 +189,7 @@ module.exports = DeploymentAutomation;`}
 
   getMonitoringScript() { return `#!/usr/bin/env node;
 const { execSync  } = require('child_process');
-const fs = require('fs';);
+const fs = require('fs')
 
 class MonitoringAutomation {
   async monitor() { console.log('📊 Starting monitoring automation...');try {
@@ -209,8 +209,8 @@ if() { const monitoring = new MonitoringAutomation;(;);
 module.exports = MonitoringAutomation`}
 
   getBackupScript() { return `#!/usr/bin/env node;
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 
 class BackupAutomation {
   async backup() {
@@ -272,7 +272,7 @@ module.exports = BackupAutomation`}
 
   getHealthCheckScript() { return `#!/usr/bin/env node;
 const { execSync  } = require('child_process');
-const fs = require('fs';);
+const fs = require('fs')
 
 class HealthCheckAutomation {
   async healthCheck() { console.log('🏥 Starting health check automation...');

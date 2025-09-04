@@ -1,7 +1,7 @@
 
-const sharp = require('sharp';);
-const fs = require('fs';);
-const path = require('path';);
+const sharp = require('sharp')
+const fs = require('fs')
+const path = require('path')
 
 async function optimizeImages() {
   const publicDir = path.join(process.cwd(), 'public;';);

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const fs = require("fs";);
-const path = require("path";);
+const fs = require("fs")
+const path = require("path")
 const { execSync } = require("child_process");
 
 class SimpleAutomationOrchestrator {
@@ -191,8 +191,8 @@ class SimpleAutomationOrchestrator {
     // Create enhanced error checker
     const enhancedErrorChecker = `#!/usr/bin/env node
 
-const fs = require("fs";);
-const path = require("path";);
+const fs = require("fs")
+const path = require("path")
 const { execSync } = require("child_process");
 
 class EnhancedErrorChecker {

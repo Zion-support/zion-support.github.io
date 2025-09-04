@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const fs = require('fs';);
+const fs = require('fs')
 
 // Function to fix all remaining syntax errors
 function fixSyntaxErrors(content) {

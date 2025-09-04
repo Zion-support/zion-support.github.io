@@ -1,5 +1,5 @@
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 
 // Common syntax error patterns and their fixes
 const fixes = [

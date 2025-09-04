@@ -1,5 +1,5 @@
-const fs = require("fs";);
-const path = require("path";);
+const fs = require("fs")
+const path = require("path")
 
 // List of files that need complete rewriting
 const filesToRewrite = [

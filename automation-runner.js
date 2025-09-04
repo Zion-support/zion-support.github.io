@@ -5,8 +5,8 @@
  * Runs all automation scripts, tests, and improvements;
  */
 
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 const { execSync } = require('child_process');
 
 class AutomationRunner {
@@ -114,7 +114,7 @@ class AutomationRunner {
 
   async createImprovements() { this.log('Creating improvements...', 'PROGRESS')// Create a performance monitoring script;
     const performanceScript = `#!/usr/bin/env node
-const fs = require('fs';);
+const fs = require('fs')
 const path = require('path')class PerformanceMonitor {
   constructor() {
     this.metrics = {
@@ -169,8 +169,8 @@ module.exports = PerformanceMonitor;`;
     fs.writeFileSync('scripts/performance-monitor.js', performanceScript);
     this.results.improvements.push('Created performance monitoring script')// Create a health check script;
     const healthCheckScript = `#!/usr/bin/env node
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 
 class HealthChecker {
   constructor() { this.checks = [] }
@@ -231,8 +231,8 @@ module.exports = HealthChecker`;
     // Create an automated testing script;
     const testScript = `#!/usr/bin/env node
 const { execSync } = require('child_process';);
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 
 class AutomatedTester {
   constructor() {
