@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
 import { BarChart3, 
   TrendingUp, 
   Brain, 
@@ -24,7 +24,7 @@ import { BarChart3,
   Phone,
   Mail,
   MapPin
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { SEO  } from '../../components/SEO';
 
 const AIBusinessIntelligenceDashboard = () => {

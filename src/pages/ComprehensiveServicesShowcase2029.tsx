@@ -1,7 +1,7 @@
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React, { useState } from 'react';
+import { motion  } from 'framer-motion';
 import { SEO  } from '@/components/SEO';
-import { Link  } from 'react-router-dom.ts';
+import { Link  } from 'react-router-dom';
 import { Brain, 
   Zap, 
   Shield, 

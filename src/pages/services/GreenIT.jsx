@@ -20,7 +20,8 @@ import {
   Battery
 } from 'lucide-react';
 
-export default function GreenIT() {
+export default function GreenIT
+export { GreenIT }() {
   const services = [
     {
       icon: Leaf,
