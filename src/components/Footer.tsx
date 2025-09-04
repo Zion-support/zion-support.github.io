@@ -365,6 +365,19 @@ export function Footer() {
               </div>
             </div>
           </div>
+
+          {/* Resources */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">Resources</h3>
+            <ul className="space-y-2">
+              <li><Link href="/docs" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Documentation</Link></li>
+              <li><Link href="/api" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">API Reference</Link></li>
+              <li><Link href="/pricing-guide" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Pricing Guide</Link></li>
+              <li><Link href="/training" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Training</Link></li>
+              <li><Link href="/support" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Support</Link></li>
+              <li><Link href="/help" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Help Center</Link></li>
+            </ul>
+          </div>
         </div>
 
         {/* Newsletter Signup */}
