@@ -1070,7 +1070,6 @@ export default function MicroSaaS() {
     {
       icon: Brain,
       name: 'AI-Powered Email Responder',
-<<<<<<< HEAD
       description: 'Intelligent email automation that reads, analyzes, and responds to emails with human-like accuracy and context awareness.',
       features: [
         'Natural language processing for email understanding',
@@ -1147,62 +1146,6 @@ export default function MicroSaaS() {
         'Mobile app for attendees and organizers'
       ],
       pricing: '$249 – $1,599/month',
-=======
-      description: 'Intelligent email automation that analyzes incoming messages, generates contextual responses, and flags critical communications for human review.',
-      features: [
-        'Natural language processing for email understanding',
-        'Context-aware response generation',
-        'Priority classification and flagging',
-        'Multi-language support and translation',
-        'Integration with CRM and helpdesk systems',
-        'Learning from user feedback and corrections'
-      ],
-      pricing: '$199 – $1,299/month',
-      timeline: '2–3 weeks',
-      benefits: [
-        '80% reduction in email response time',
-        '24/7 automated customer communication',
-        'Improved customer satisfaction scores',
-        'Reduced manual email management overhead'
-      ],
-      category: 'Communication Automation'
-    },
-    {
-      icon: Smartphone,
-      name: 'Mobile-First Survey Platform',
-      description: 'Advanced survey creation and analytics platform optimized for mobile devices with real-time data collection and AI-powered insights.',
-      features: [
-        'Drag-and-drop survey builder with mobile optimization',
-        'Real-time data collection and analytics',
-        'AI-powered response analysis and sentiment detection',
-        'Multi-channel distribution (SMS, email, social media)',
-        'Advanced segmentation and targeting',
-        'Custom branding and white-label options'
-      ],
-      pricing: '$149 – $999/month',
-      timeline: '1–2 weeks',
-      benefits: [
-        '60% higher mobile response rates',
-        'Real-time customer feedback collection',
-        'AI-driven insights and recommendations',
-        'Improved customer engagement and satisfaction'
-      ],
-      category: 'Customer Research'
-    },
-    {
-      icon: Calendar,
-      name: 'Event Management Automation',
-      description: 'Comprehensive event planning platform with automated workflows, ticketing, and attendee management for conferences, webinars, and corporate events.',
-      features: [
-        'Automated event registration and ticketing',
-        'Dynamic pricing and promotional campaigns',
-        'Attendee communication and engagement tools',
-        'Real-time analytics and reporting',
-        'Integration with payment processors and CRM',
-        'Mobile app for attendees and organizers'
-      ],
-      pricing: '$299 – $1,999/month',
->>>>>>> 1735b00409ca432e079c8359c109c85b21bb1334
       timeline: '3–4 weeks',
       benefits: [
         '50% reduction in event planning time',
