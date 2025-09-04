@@ -29,17 +29,38 @@ export default function ContactPage() {
                 <div className="space-y-4">
                   <div>
                     <h3 className="font-semibold text-gray-900">Email</h3>
-                    <p className="text-gray-600">contact@ziontechgroup.com</p>
+                    <p className="text-gray-600">
+                      <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:text-blue-800">
+                        kleber@ziontechgroup.com
+                      </a>
+                    </p>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900">Phone</h3>
-                    <p className="text-gray-600">+1 (555) 123-4567</p>
+                    <h3 className="font-semibold text-gray-900">Mobile</h3>
+                    <p className="text-gray-600">
+                      <a href="tel:+13024640950" className="text-blue-600 hover:text-blue-800">
+                        +1 302 464 0950
+                      </a>
+                    </p>
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900">Address</h3>
                     <p className="text-gray-600">
-                      123 Technology Drive<br />
-                      Innovation City, IC 12345
+                      <a href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709" 
+                         target="_blank" 
+                         rel="noopener noreferrer"
+                         className="text-blue-600 hover:text-blue-800">
+                        364 E Main St STE 1008<br />
+                        Middletown, DE 19709
+                      </a>
+                    </p>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900">Business Hours</h3>
+                    <p className="text-gray-600">
+                      Monday - Friday: 9:00 AM - 6:00 PM EST<br />
+                      Saturday: 10:00 AM - 4:00 PM EST<br />
+                      Sunday: By Appointment
                     </p>
                   </div>
                 </div>

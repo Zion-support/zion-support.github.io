@@ -26,7 +26,12 @@ import {
   Smartphone,
   Laptop,
   Building,
-  BarChart3
+  BarChart3,
+  Headphones,
+  Package,
+  BookOpen,
+  Kanban,
+  DollarSign
 } from 'lucide-react';
 
 const itServices = [
@@ -36,7 +41,8 @@ const itServices = [
     icon: Cloud,
     features: ['Multi-cloud Strategy', 'Cost Optimization', 'Auto-scaling', 'Disaster Recovery'],
     pricing: '$6,000 - $30,000/project',
-    category: 'Cloud'
+    category: 'Cloud',
+    link: 'https://cloudinfra.ziontechgroup.com'
   },
   {
     title: 'Cybersecurity Solutions',
@@ -44,7 +50,9 @@ const itServices = [
     icon: Shield,
     features: ['Threat Detection', 'Vulnerability Assessment', 'Security Audits', 'Incident Response'],
     pricing: '$5,000 - $40,000/project',
-    category: 'Security'
+    category: 'Security',
+    popular: true,
+    link: 'https://cybersecurity.ziontechgroup.com'
   },
   {
     title: 'Network Infrastructure',
@@ -52,7 +60,8 @@ const itServices = [
     icon: Network,
     features: ['Network Design', 'Performance Optimization', 'Monitoring', 'Troubleshooting'],
     pricing: '$120 - $220/hour',
-    category: 'Networking'
+    category: 'Networking',
+    link: 'https://networkinfra.ziontechgroup.com'
   },
   {
     title: 'Database Management',
@@ -60,7 +69,8 @@ const itServices = [
     icon: Database,
     features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Migration Services'],
     pricing: '$2,000 - $15,000/project',
-    category: 'Database'
+    category: 'Database',
+    link: 'https://databasemgmt.ziontechgroup.com'
   },
   {
     title: 'System Administration',
@@ -68,7 +78,8 @@ const itServices = [
     icon: Settings,
     features: ['Server Management', 'User Administration', 'System Monitoring', 'Patch Management'],
     pricing: '$2,000 - $8,000/month',
-    category: 'Administration'
+    category: 'Administration',
+    link: 'https://sysadmin.ziontechgroup.com'
   },
   {
     title: 'IT Consulting',
@@ -76,7 +87,134 @@ const itServices = [
     icon: Users,
     features: ['Technology Assessment', 'Strategic Planning', 'Vendor Selection', 'Implementation Support'],
     pricing: '$150 - $300/hour',
-    category: 'Consulting'
+    category: 'Consulting',
+    link: 'https://itconsulting.ziontechgroup.com'
+  },
+  {
+    title: 'DevOps & CI/CD Pipeline',
+    description: 'Complete DevOps implementation with automated CI/CD pipelines and infrastructure as code.',
+    icon: Cpu,
+    features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Container Orchestration', 'Monitoring & Logging'],
+    pricing: '$8,000 - $35,000/project',
+    category: 'DevOps',
+    link: 'https://devops.ziontechgroup.com'
+  },
+  {
+    title: 'Data Center Services',
+    description: 'Complete data center design, implementation, and management services.',
+    icon: Server,
+    features: ['Data Center Design', 'Hardware Installation', 'Power & Cooling', 'Remote Management'],
+    pricing: '$15,000 - $100,000/project',
+    category: 'Data Center',
+    link: 'https://datacenter.ziontechgroup.com'
+  },
+  {
+    title: 'IT Support & Helpdesk',
+    description: '24/7 IT support services with multi-tier helpdesk solutions.',
+    icon: Headphones,
+    features: ['24/7 Support', 'Multi-tier Helpdesk', 'Remote Assistance', 'Knowledge Base'],
+    pricing: '$1,500 - $6,000/month',
+    category: 'Support',
+    link: 'https://itsupport.ziontechgroup.com'
+  },
+  {
+    title: 'Backup & Disaster Recovery',
+    description: 'Comprehensive backup solutions and disaster recovery planning and implementation.',
+    icon: HardDrive,
+    features: ['Automated Backups', 'Disaster Recovery Planning', 'Data Replication', 'Recovery Testing'],
+    pricing: '$3,000 - $20,000/project',
+    category: 'Backup & Recovery',
+    link: 'https://backuprecovery.ziontechgroup.com'
+  },
+  {
+    title: 'IT Asset Management',
+    description: 'Complete IT asset lifecycle management and tracking solutions.',
+    icon: Package,
+    features: ['Asset Tracking', 'License Management', 'Lifecycle Planning', 'Cost Optimization'],
+    pricing: '$2,000 - $12,000/project',
+    category: 'Asset Management',
+    link: 'https://itassets.ziontechgroup.com'
+  },
+  {
+    title: 'Network Security & Firewall',
+    description: 'Advanced network security implementation with next-generation firewall solutions.',
+    icon: Lock,
+    features: ['Next-gen Firewalls', 'Intrusion Detection', 'VPN Solutions', 'Security Monitoring'],
+    pricing: '$5,000 - $25,000/project',
+    category: 'Network Security',
+    link: 'https://networksecurity.ziontechgroup.com'
+  },
+  {
+    title: 'Cloud Migration Services',
+    description: 'Seamless migration of applications and data to cloud platforms.',
+    icon: Cloud,
+    features: ['Migration Planning', 'Data Migration', 'Application Modernization', 'Performance Optimization'],
+    pricing: '$10,000 - $50,000/project',
+    category: 'Cloud Migration',
+    link: 'https://cloudmigration.ziontechgroup.com'
+  },
+  {
+    title: 'IT Compliance & Governance',
+    description: 'IT compliance management and governance framework implementation.',
+    icon: Shield,
+    features: ['Compliance Auditing', 'Policy Development', 'Risk Assessment', 'Regulatory Reporting'],
+    pricing: '$8,000 - $40,000/project',
+    category: 'Compliance',
+    link: 'https://itcompliance.ziontechgroup.com'
+  },
+  {
+    title: 'Mobile Device Management',
+    description: 'Comprehensive mobile device management and security solutions.',
+    icon: Smartphone,
+    features: ['Device Enrollment', 'Security Policies', 'App Management', 'Remote Wipe'],
+    pricing: '$2,000 - $10,000/project',
+    category: 'Mobile Management',
+    link: 'https://mobiledevices.ziontechgroup.com'
+  },
+  {
+    title: 'IT Training & Certification',
+    description: 'Comprehensive IT training programs and certification preparation.',
+    icon: BookOpen,
+    features: ['Technical Training', 'Certification Prep', 'Hands-on Labs', 'Custom Curriculum'],
+    pricing: '$500 - $3,000/person',
+    category: 'Training',
+    link: 'https://ittraining.ziontechgroup.com'
+  },
+  {
+    title: 'IT Project Management',
+    description: 'Professional IT project management services for complex technology implementations.',
+    icon: Kanban,
+    features: ['Project Planning', 'Resource Management', 'Risk Management', 'Quality Assurance'],
+    pricing: '$150 - $250/hour',
+    category: 'Project Management',
+    link: 'https://itprojects.ziontechgroup.com'
+  },
+  {
+    title: 'IT Vendor Management',
+    description: 'Strategic vendor relationship management and procurement optimization.',
+    icon: Building,
+    features: ['Vendor Evaluation', 'Contract Negotiation', 'Performance Monitoring', 'Cost Optimization'],
+    pricing: '$2,000 - $15,000/project',
+    category: 'Vendor Management',
+    link: 'https://itvendors.ziontechgroup.com'
+  },
+  {
+    title: 'IT Performance Monitoring',
+    description: 'Advanced IT infrastructure monitoring and performance optimization services.',
+    icon: Monitor,
+    features: ['Real-time Monitoring', 'Performance Analytics', 'Alert Management', 'Capacity Planning'],
+    pricing: '$3,000 - $18,000/project',
+    category: 'Monitoring',
+    link: 'https://itmonitoring.ziontechgroup.com'
+  },
+  {
+    title: 'IT Cost Optimization',
+    description: 'Comprehensive IT cost analysis and optimization strategies.',
+    icon: DollarSign,
+    features: ['Cost Analysis', 'Budget Planning', 'Resource Optimization', 'ROI Analysis'],
+    pricing: '$5,000 - $25,000/project',
+    category: 'Cost Optimization',
+    link: 'https://itcosts.ziontechgroup.com'
   }
 ];
 
@@ -247,13 +385,23 @@ export default function ITServicesPage() {
                     <span className="text-sm font-semibold text-green-600">{service.pricing}</span>
                   </div>
 
-                  <Link
-                    href="/contact"
-                    className="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
-                  >
-                    <span>Get Quote</span>
-                    <ArrowRight className="w-3 h-3 ml-1" />
-                  </Link>
+                  <div className="space-y-2">
+                    <Link
+                      href={service.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
+                    >
+                      <span>Learn More</span>
+                      <ArrowRight className="w-3 h-3 ml-1" />
+                    </Link>
+                    <Link
+                      href="/contact"
+                      className="w-full border border-green-600 text-green-600 hover:bg-green-50 py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
+                    >
+                      <span>Get Quote</span>
+                    </Link>
+                  </div>
                 </motion.div>
               );
             })}
