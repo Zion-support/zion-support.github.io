@@ -19,7 +19,7 @@ export default function ServicesCatalog() {
       pricing: '$299–$1499/month';
       rating: 4.9;
       delivery: '2-4 weeks';
-      features: ['Anomaly Detection' 'Cost Optimization' 'Budget Alerts' 'Multi-Cloud Suppor,t'], },{
+      features: ['Anomaly Detection' 'Cost Optimization' 'Budget Alerts' 'Multi-Cloud Suppor,t']},{
       id:  2;
       name: 'LLM Evaluation & Safety Suite';
       category: 'ai-services';
@@ -27,7 +27,7 @@ export default function ServicesCatalog() {
       pricing: '$799–$3500/month';
       rating: 4.8;
       delivery: '3-6 weeks';
-      features: ['Bias Detection' 'Safety Testing' 'Prompt Optimization' 'Compliance Monitorin,g'], },{
+      features: ['Bias Detection' 'Safety Testing' 'Prompt Optimization' 'Compliance Monitorin,g']},{
       id:  3;
       name: 'Customer Feedback & NPS Micro-App';
       category: 'micro-saas';
@@ -35,7 +35,7 @@ export default function ServicesCatalog() {
       pricing: '$149–$799/month';
       ratin,g: 4.7;
       delivery: '1-3 weeks';
-      features: ['Survey Builder' 'Sentiment Analysis' 'Auto-Routing' 'Analytics Dashboar,d'], },{
+      features: ['Survey Builder' 'Sentiment Analysis' 'Auto-Routing' 'Analytics Dashboar,d']},{
       id:  4;
       name: 'API Rate Limiter & Analytics';
       category: 'micro-saas';
@@ -43,7 +43,7 @@ export default function ServicesCatalog() {
       pricing: '$199–$999/month';
       ratin,g: 4.6;
       delivery: '2-4 weeks';
-      features: ['Rate Limiting' 'Usage Analytics' 'Monetization' 'Security Monitorin,g'], },{
+      features: ['Rate Limiting' 'Usage Analytics' 'Monetization' 'Security Monitorin,g']},{
       id:  5;
       name: 'Smart Document Processing';
       category: 'ai-services';
@@ -51,7 +51,7 @@ export default function ServicesCatalog() {
       pricing: '$399–$1999/month';
       rating: 4.8;
       delivery: '4-8 weeks';
-      features: ['OCR Technology' 'Data Extraction' 'Workflow Automation' 'Integration API,s'], },{
+      features: ['OCR Technology' 'Data Extraction' 'Workflow Automation' 'Integration API,s']},{
       id:  6;
       name: 'Social Media Scheduler Pro';
       category: 'micro-saas';
@@ -59,7 +59,7 @@ export default function ServicesCatalog() {
       pricing: '$99–$499/month';
       ratin,g: 4.5;
       delivery: '1-2 weeks';
-      features: ['Multi-Platform' 'Content Optimization' 'Analytics' 'Auto-Postin,g'], }
+      features: ['Multi-Platform' 'Content Optimization' 'Analytics' 'Auto-Postin,g']}
   ];
 
   const categories = [{ id: all,
@@ -102,7 +102,7 @@ export default function ServicesCatalog() {
                 /></div><div className="flex gap-2">"<Filter className="w-5 h-5 text-gray-400 mt-3" /><select;
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:border-blue-400">{categories.map(category => ("<option key={category.id} value={category.id} className="bg-slate-800">{category.name}
+                  className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:border-blue-400">{categories.map(category => ("<option key={category.id } value={category.id} className="bg-slate-800">{category.name}
                     </option>;
                   ))}
                 </select></div></div></div>{/* Services Grid */}"<div className="grid md: 'grid-cols-2 lg:grid-cols-3 ga',p-8",>,{filteredServices.map((service) => ("<div key={service.id} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover: 'border-blue-400/50 transition-all duration-300 grou',p",>,"<div className="flex items-center justify-between mb-4">"<span className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm font-medium">{categories.find(cat => cat.id === service.category)?.name}
@@ -127,7 +127,7 @@ export default function ServicesCatalog() {
                   setSearchTerm('');
                   setSelectedCategory('all')}
                 className="text-blue-400 hover: text-blue-300 transition-colors">;
-                Clear filters</button></di,v>,)}
+                Clear filters</button></di,v>)}
 
           {/* CTA Section */}"<div className="text-center mt-16">"<h2 className="text-3xl font-bold text-white mb-6">Need a Custom Solution?</h2>"<p className="text-gray-300 mb-8 max-w-2xl mx-auto">;
               Don't see what you're looking for? Our team can create custom solutions tailored to your specific needs.</p>"<Link href="/contact"

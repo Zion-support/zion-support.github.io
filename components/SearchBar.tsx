@@ -101,6 +101,7 @@ const SearchBar: React.FC = () => {,
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
+
   return (
     <div ref={searchRef} className="relative w-full max-w-md">
       <div className="relative">

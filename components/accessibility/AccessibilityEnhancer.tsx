@@ -38,7 +38,7 @@ interface AccessibleButtonProps extends React.ButtonHTMLAttributes<HTMLButtonEle
   size?: 'sm' | 'md' | 'lg';
   loading?: boolean;
   children: React.ReactNode;
-}
+ }
 
 export const AccessibleButton: React.FC<AccessibleButtonProps> = ({
   variant = 'primary',
@@ -83,7 +83,7 @@ export const AccessibleButton: React.FC<AccessibleButtonProps> = ({
 interface FocusTrapProps {
   children: React.ReactNode;
   active: boolean;
-}
+ }
 
 export const FocusTrap: React.FC<FocusTrapProps> = ({ children, active }) => {
   useEffect(() => {
@@ -101,7 +101,7 @@ export const FocusTrap: React.FC<FocusTrapProps> = ({ children, active }) => {
         if (document.activeElement === firstFocusableElement) {
           lastFocusableElement.focus();
           e.preventDefault();
-        }
+         }
       } else {
         if (document.activeElement === lastFocusableElement) {
           firstFocusableElement.focus();
@@ -113,5 +113,5 @@ export const FocusTrap: React.FC<FocusTrapProps> = ({ children, active }) => {
     return () => document.removeEventListener('keydown', handleTabKey);
   }, [active]);
 
-  return <>{children}</>;
+  return <>{children}</>
 }

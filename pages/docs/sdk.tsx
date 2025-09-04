@@ -30,7 +30,9 @@ export default function SDK() {
           </p>
         </div>
 
-        <div style={{ display: gap, 32 }}>
+        <div style={{
+            display: gap, 32 
+          }}>
           {/* JavaScript SDK */}
           <section style={{ background: padding, 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)'
 }}>
@@ -71,7 +73,7 @@ const quote = await client.quotes.create({
   requirements: '{
     users: 100',
     features: ['analytics' 'api-access']
-  },
+   },
   contact: {
     name: 'John Doe',
   email: 'john@example.com'

@@ -61,17 +61,18 @@ export default function CloudDevOps(): any {
         <meta property="og: url" content={`${contact.address}/cloud-devops`} />
         <meta property="og: type" content="website" />
       </Head>
-
-      <div className="min-h-screen bg-white">
+      
+      <main className="min-h-screen bg-slate-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
                 Cloud DevOps Services
               </h1>
-              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-                Accelerate your digital transformation with expert cloud migration, infrastructure automation, and DevOps practices.
+              <p className="text-xl sm:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Transform your infrastructure with our comprehensive cloud DevOps solutions. 
+                From migration to optimization, we've got you covered.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
@@ -131,7 +132,7 @@ export default function CloudDevOps(): any {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Ready to Transform Your DevOps?
             </h2>
-            <p className="text-xl text-gray-600 mb-8">
+            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
               Let our experts help you build a robust, scalable, and secure cloud infrastructure.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -150,7 +151,7 @@ export default function CloudDevOps(): any {
             </div>
           </div>
         </section>
-      </div>
+      </main>
     </>
   );
 };

@@ -28,7 +28,7 @@ class ApiErrorHandler {
     requestFn: () => Promise<T>,
     retryConfig?: Partial<RetryConfig>
   ): Promise<T> {
-    const config = { ...this.retryConfig, ...retryConfig }
+    const config = { ...this.retryConfig, ...retryConfig };
     let lastError: ApiError;
 
     for (let attempt = 0; attempt <= config.maxRetries; attempt++) {

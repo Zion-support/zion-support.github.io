@@ -7,24 +7,24 @@ const contact = { phone: '+1 302 464 0950,', email: 'kleber@ziontechgroup.com', 
       name: 'Micro SaaS Products';
       count: '150+';
       description: 'Focused software solutions for specific business needs';
-      features: ['Quick deployment' 'Scalable architecture' 'API integrations' 'Custom brandin,g',],;
+      features: ['Quick deployment' 'Scalable architecture' 'API integrations' 'Custom brandin,g'],
       pricing: 'Starting at $29/month';
       href: '/micro-saas';
-      color: 'blu,e', },{
+      color: 'blu,e'},{
       name: 'AI Services';
       count: '90+';
       description: 'Advanced artificial intelligence and automation solutions';
-      features: ['Machine learning models' 'Natural language processing' 'Computer vision' 'Predictive analytic,s',],;
+      features: ['Machine learning models' 'Natural language processing' 'Computer vision' 'Predictive analytic,s'],
       pricing: 'Starting at $99/month';
       href: '/ai-services';
-      color: 'purpl,e', },{
+      color: 'purpl,e'},{
       name: 'IT Solutions';
       count: '100+';
       description: 'Comprehensive IT services and infrastructure solutions';
-      features: ['Cloud management' 'Security solutions' 'DevOps automation' 'Data analytic,s',],;
+      features: ['Cloud management' 'Security solutions' 'DevOps automation' 'Data analytic,s'],
       pricing: 'Starting at $199/month';
       href: '/it-services';
-      color: 'gree,n', }
+      color: 'gree,n'}
   ];
 
   return (<><Head><title>Services Comparison - Zion Tech Group</title><meta name="description"

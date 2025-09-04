@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import Head from 'next/head';
+import Link from 'next/link';
 
 export default function Cookies() {
   return (
@@ -19,6 +19,7 @@ export default function Cookies() {
               Information about how we use cookies and similar technologies
             </p>
           </div>
+        </section>
 
           <div className="prose prose-invert max-w-none">
             <h2 className="text-2xl font-bold mb-4 text-blue-400">What Are Cookies?</h2>

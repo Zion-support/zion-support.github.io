@@ -1396,7 +1396,7 @@ export default function AIServices(): any {
                 </div>
               </div>
             </div>
-          ))}
+          )) }
         </div>
 
         <section className="mt-16 text-center">";

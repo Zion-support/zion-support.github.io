@@ -51,7 +51,7 @@ try {
   }} else {
     issues.push('App.tsx missing React import')}
 } catch (error) {
-  issues.push(`Cannot read App.tsx: ${error.message}`)}
+  issues.push(`Cannot read App.tsx: ${error.message }`)}
 
 // Summary;
 console.log('\n📊 Test Summary: ');

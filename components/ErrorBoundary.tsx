@@ -3,12 +3,12 @@ import React, { Component, type ErrorInfo, type ReactNode } from 'react';
 interface Props {
   children: ReactNode;,
   fallback?: ReactNode;
-}
+ }
 
 interface State {
   hasError: boolean;,
   error?: Error;
-}
+ }
 
 class ErrorBoundary extends Component<Props, State> {
   public state: State = {
@@ -68,7 +68,7 @@ class ErrorBoundary extends Component<Props, State> {
               <details className="mt-6 text-left">
                 <summary className="text-slate-400 cursor-pointer">Error Details</summary>
                 <pre className="mt-2 text-xs text-red-400 bg-slate-800 p-3 rounded overflow-auto">
-                  {this.state.error.stack}
+                  {this.state.error.stack }
                 </pre>
               </details>
             )}

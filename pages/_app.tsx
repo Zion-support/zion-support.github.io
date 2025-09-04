@@ -1,4 +1,5 @@
 import type { AppProps } from 'next/app';
+import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
@@ -6,7 +7,28 @@ import PerformanceMonitor from '../components/PerformanceMonitor';
 import Sidebar from '../components/Sidebar';
 import '../styles/globals.css';
 
-function Header(): any {
+function MyApp({ Component, pageProps }: AppProps) {
+  return (
+    <>
+      <Head>
+        <title>Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions</title>
+        <meta name="description" content="Leading provider of micro SaaS products, AI services, and IT solutions. 340+ innovative services including quantum computing, AI automation, blockchain, and enterprise solutions." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      
+      <div className="min-h-screen bg-slate-50">
+        <Header />
+        <main>
+          <Component {...pageProps} />
+        </main>
+        <Footer />
+      </div>
+    </>
+  );
+}
+
+function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
 

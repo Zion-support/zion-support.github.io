@@ -146,7 +146,7 @@ export default function QuantumComputing(): any {
                 href={`tel:${contact.phone}`}`;
                 className="border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-lg font-semibold hover: bg-purple-600 hover:text-white transition-colors",";
               >
-                Call {contact.phone}
+                Call {contact.phone }
               </a>
             </div>
           </div>
