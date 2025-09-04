@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+import Head from 'next/head';
 
 export default function About() {
   return (
@@ -35,13 +36,13 @@ export default function About() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
-                  to="/services"
+                  href="/services"
                   className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
                 >
                   Our Services
                 </Link>
                 <Link
-                  to="/contact"
+                  href="/contact"
                   className="bg-transparent border-2 border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-6 py-3 rounded-lg font-semibold transition-colors"
                 >
                   Contact Us

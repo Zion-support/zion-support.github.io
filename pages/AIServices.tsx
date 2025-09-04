@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+import Head from 'next/head';
 
 export default function AIServices() {
   const aiServices = [
@@ -144,7 +145,13 @@ export default function AIServices() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+    <>
+      <Head>
+        <title>AI Services - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI services including content creation, customer support automation, and business intelligence solutions." />
+        <meta name="keywords" content="AI services, artificial intelligence, machine learning, automation, content creation" />
+      </Head>
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       {/* Header */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -221,13 +228,13 @@ export default function AIServices() {
 
                 <div className="flex gap-4">
                   <Link
-                    to="/contact"
+                    href="/contact"
                     className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors flex-1 text-center"
                   >
                     Get Started
                   </Link>
                   <Link
-                    to="/request-quote"
+                    href="/request-quote"
                     className="bg-transparent border-2 border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-6 py-2 rounded-lg font-semibold transition-colors flex-1 text-center"
                   >
                     Request Quote
@@ -264,13 +271,13 @@ export default function AIServices() {
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              to="/contact"
+              href="/contact"
               className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Contact Us Now
             </Link>
             <Link
-              to="/request-quote"
+              href="/request-quote"
               className="bg-transparent border-2 border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Get Free Consultation
@@ -278,6 +285,7 @@ export default function AIServices() {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }

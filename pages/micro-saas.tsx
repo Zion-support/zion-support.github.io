@@ -41,7 +41,8 @@ import {
   DollarSign,
   Award,
   Phone,
-  MapPin
+  MapPin,
+  Package
 } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
