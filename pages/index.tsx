@@ -61,7 +61,7 @@ export default function Home() {
               },
               "sameAs": [contact.site]
             })
-          }
+          }}
         />
       </Head>
       
