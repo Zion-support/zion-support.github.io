@@ -95,11 +95,3 @@ const contact = {
 }
 
 export { Services };
-
-export { Services };
-
-export { Services };
-
-export { Services };
-
-export { Services };
