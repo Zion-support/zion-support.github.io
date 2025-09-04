@@ -289,6 +289,7 @@
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.34.0",
     "@netlify/plugin-nextjs": "^5.12.1",
+<<<<<<< HEAD
     "@next/bundle-analyzer": "^15.5.2",
     "@next/eslint-plugin-next": "^14.2.32",
     "@rollup/rollup-linux-x64-gnu": "^4.50.0",
@@ -317,12 +318,15 @@
 =======
     "@eslint/js": "^9.34.0",
     "@netlify/plugin-nextjs": "^5.12.1",
+=======
+>>>>>>> origin/merge-pr-10629
     "@next/bundle-analyzer": "^13.5.6",
     "@testing-library/jest-dom": "^6.1.4",
     "@testing-library/react": "^13.4.0",
     "@types/node": "^20.8.0",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
+<<<<<<< HEAD
     "@typescript-eslint/eslint-plugin": "^8.41.0",
     "@typescript-eslint/parser": "^8.41.0",
     "autoprefixer": "^10.4.21",
@@ -342,6 +346,12 @@
     "pm2": "^6.0.8",
     "postcss": "^8.5.6",
 =======
+=======
+    "autoprefixer": "^10.4.21",
+    "chokidar": "^4.0.3",
+    "eslint": "^8.51.0",
+    "eslint-config-next": "^13.5.6",
+>>>>>>> origin/merge-pr-10629
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^30.0.5",
     "postcss": "^8.4.31",
