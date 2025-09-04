@@ -1,4 +1,5 @@
 describe('smoke', () => {
   it('true is truthy', () => {
-    expect(true).toBeTruthy()})});
-
+    expect(true).toBeTruthy();
+  });
+});

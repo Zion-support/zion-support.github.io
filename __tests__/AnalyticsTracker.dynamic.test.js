@@ -6,7 +6,8 @@ import AnalyticsTrackerdynamic from '../components/AnalyticsTracker.dynamic';
 describe('AnalyticsTrackerdynamic', () => {
   test('renders without crashing', () => {
     render(<AnalyticsTrackerdynamic />);
-    expect(screen.getByTestId('analyticstracker.dynamic')).toBeInTheDocument()});
+    expect(screen.getByTestId('analyticstracker.dynamic')).toBeInTheDocument();
+  });
 
   test('displays correct content', () => {
     render(<AnalyticsTrackerdynamic />);
@@ -21,4 +22,5 @@ describe('AnalyticsTrackerdynamic', () => {
   test('applies correct styling', () => {
     render(<AnalyticsTrackerdynamic />);
     // Add styling tests if needed
-  })});
+  });
+});

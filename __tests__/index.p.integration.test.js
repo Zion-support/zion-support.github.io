@@ -6,7 +6,8 @@ import indexp from '../pages/index.p';
 describe('index.p Integration Tests', () => {
   test('page renders correctly', () => {
     render(<indexp />);
-    expect(screen.getByRole('main')).toBeInTheDocument()});
+    expect(screen.getByRole('main')).toBeInTheDocument();
+  });
 
   test('navigation works', () => {
     render(<indexp />);
@@ -21,4 +22,5 @@ describe('index.p Integration Tests', () => {
   test('page loads with correct data', () => {
     render(<indexp />);
     // Test data loading and display
-  })});
+  });
+});

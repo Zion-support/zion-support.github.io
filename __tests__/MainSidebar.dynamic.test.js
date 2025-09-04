@@ -6,7 +6,8 @@ import MainSidebardynamic from '../components/MainSidebar.dynamic';
 describe('MainSidebardynamic', () => {
   test('renders without crashing', () => {
     render(<MainSidebardynamic />);
-    expect(screen.getByTestId('mainsidebar.dynamic')).toBeInTheDocument()});
+    expect(screen.getByTestId('mainsidebar.dynamic')).toBeInTheDocument();
+  });
 
   test('displays correct content', () => {
     render(<MainSidebardynamic />);
@@ -21,4 +22,5 @@ describe('MainSidebardynamic', () => {
   test('applies correct styling', () => {
     render(<MainSidebardynamic />);
     // Add styling tests if needed
-  })});
+  });
+});

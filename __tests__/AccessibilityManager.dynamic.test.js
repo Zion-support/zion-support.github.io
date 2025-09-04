@@ -8,7 +8,8 @@ describe('AccessibilityManagerdynamic', () => {
     render(<AccessibilityManagerdynamic />);
     expect(
       screen.getByTestId('accessibilitymanager.dynamic')
-    ).toBeInTheDocument()});
+    ).toBeInTheDocument();
+  });
 
   test('displays correct content', () => {
     render(<AccessibilityManagerdynamic />);
@@ -23,4 +24,5 @@ describe('AccessibilityManagerdynamic', () => {
   test('applies correct styling', () => {
     render(<AccessibilityManagerdynamic />);
     // Add styling tests if needed
-  })});
+  });
+});
