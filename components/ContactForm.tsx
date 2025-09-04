@@ -57,8 +57,6 @@ const ContactForm: React.FC = () => {
         service: '',
         message: ''
       });
-      
-      setSubmitStatus('success');
     } catch {
       setSubmitStatus('error');
     } finally {
@@ -202,10 +200,8 @@ const ContactForm: React.FC = () => {
 
       {/* Status Messages */}
       {submitStatus === 'success' && (
-        <div className="p-4 bg-green-900/20 border border-green-500/30 rounded-lg">
-          <p className="text-green-400 text-sm">
-            ✅ Thank you! Your message has been sent successfully. We'll get back to you soon.
-          </p>
+        <div className="p-4 bg-green-900/50 border border-green-500 rounded-lg text-green-300" role="alert">
+          Thank you for your message! We&apos;ll get back to you within 24 hours.
         </div>
       )}
 
