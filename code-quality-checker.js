@@ -1,7 +1,7 @@
 
 const fs = require("fs");
 const path = require("path");
-class $1 {
+class CodeQualityChecker {
   constructor() {
   this.issues = []}
 ;
@@ -23,9 +23,10 @@ class $1 {
   }
 ;
   run() {
-  this.scanDirectory(process.cwd());
-    console.log(``Found ${this.issues.length} code quality issues``);
-    this.issues.forEach(issue => console.log(issue))}
+    this.scanDirectory(process.cwd());
+    console.log(`Found ${this.issues.length} code quality issues`);
+    this.issues.forEach(issue => console.log(issue));
+  }
 }
-;
-new CodeQualityChecker().run()
+
+new CodeQualityChecker().run();

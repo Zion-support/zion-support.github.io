@@ -25,7 +25,7 @@ const values = [
   {
     icon: Lightbulb,
     title: 'Innovation',
-    description: 'We constantly push the boundaries of what\'s possible with technology, always seeking new and better ways to solve problems.'
+    description: 'We constantly push the boundaries of what&apos;s possible with technology, always seeking new and better ways to solve problems.'
   },
   {
     icon: Shield,
@@ -40,7 +40,7 @@ const values = [
   {
     icon: Handshake,
     title: 'Client Success',
-    description: 'Our success is measured by our clients\' success. We are committed to being true partners in their growth journey.'
+    description: 'Our success is measured by our clients&apos; success. We are committed to being true partners in their growth journey.'
   }
 ];
 
@@ -391,7 +391,7 @@ export default function AboutPage() {
               Our Journey
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Key milestones in our company's growth and evolution.
+              Key milestones in our company&apos;s growth and evolution.
             </p>
           </motion.div>
 
@@ -439,7 +439,7 @@ export default function AboutPage() {
               Ready to Work With Us?
             </h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Let's discuss how our team can help transform your business with cutting-edge technology solutions.
+              Let&apos;s discuss how our team can help transform your business with cutting-edge technology solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">

@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-// Build Verification Script;
-// This script checks if our components can be imported without syntax errors;
-=======
 // Build Verification Script
 // This script checks if our components can be imported without syntax errors
-/* eslint-disable no-undef */ 
->>>>>>> 146b7a4be41fed060524b530ce670bbbe649937d
+/* eslint-disable no-undef */
 console.log('🔍 Starting build verification...');
 try {
   // Test component imports;

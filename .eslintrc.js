@@ -27,13 +27,15 @@ module.exports = {
     es6: true,
     dom: true,
   },
-<<<<<<< HEAD
-=======
   globals: {
     KeyboardEvent: 'readonly',
     HTMLElement: 'readonly',
     HTMLButtonElement: 'readonly',
+    HTMLAnchorElement: 'readonly',
     MutationObserver: 'readonly',
+    RequestInit: 'readonly',
+    AbortController: 'readonly',
+    fs: 'readonly',
+    CodeQualityChecker: 'readonly',
   },
->>>>>>> 146b7a4be41fed060524b530ce670bbbe649937d
 };
