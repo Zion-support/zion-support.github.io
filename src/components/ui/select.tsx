@@ -1,77 +1,73 @@
 import React from 'react';
-;
-interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {;
+import { cn } from '@/lib/utils';
+
+interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
   children: React.ReactNode;
   className?: string;
 }
-;
-export function Select(props: any) {;
-  const baseClasses = 'flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus: outlin e-none focus: rin g-2 focus: rin g-ring focus: rin g-offset-2 disabled: curso r-not-allowed disabled: opacit y-50';
-;
-  return (;
-    <select;
-      className={`${baseClasses} ${className}`}
+
+export function Select({ children, className, ...props }: SelectProps) {
+  const baseClasses = 'flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50';
+  
+  return (
+    <select
+      className={cn(baseClasses, className)}
       {...props}
-    >;
+    >
       {children}
-    </select>;
+    </select>
   );
 }
-;
-interface SelectTriggerProps {;
+
+interface SelectTriggerProps {
   children: React.ReactNode;
   className?: string;
-;
 }
-;
-export function SelectTrigger(props: any) {;
-  return (;
-    <div className={`flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus: outlin e-none focus: rin g-2 focus: rin g-ring focus: rin g-offset-2 disabled: curso r-not-allowed disabled: opacit y-50 ${className}`}>;
+
+export function SelectTrigger({ children, className, ...props }: SelectTriggerProps) {
+  return (
+    <div className={cn('flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50', className)} {...props}>
       {children}
-    </div>;
+    </div>
   );
 }
-;
-interface SelectContentProps {;
+
+interface SelectContentProps {
   children: React.ReactNode;
   className?: string;
-;
 }
-;
-export function SelectContent(props: any) {;
-  return (;
-    <div className={`relative ${className}`}>;
+
+export function SelectContent({ children, className, ...props }: SelectContentProps) {
+  return (
+    <div className={cn('relative', className)} {...props}>
       {children}
-    </div>;
+    </div>
   );
 }
-;
-interface SelectValueProps {;
+
+interface SelectValueProps {
   children?: React.ReactNode;
   placeholder?: string;
-;
 }
-;
-export function SelectValue(props: any) {;
-  return (;
-    <span className="block truncate">;
+
+export function SelectValue({ children, placeholder, ...props }: SelectValueProps) {
+  return (
+    <span className="block truncate" {...props}>
       {children || placeholder}
-    </span>;
+    </span>
   );
 }
-;
-interface SelectItemProps {;
+
+interface SelectItemProps {
   children: React.ReactNode;
   value: string;
   className?: string;
-;
 }
-;
-export function SelectItem(props: any) {;
-  return (;
-    <option value={value} className={className}>;
+
+export function SelectItem({ children, value, className, ...props }: SelectItemProps) {
+  return (
+    <option value={value} className={cn(className)} {...props}>
       {children}
-    </option>;
+    </option>
   );
 }
-</HTMLSelectElement>;
