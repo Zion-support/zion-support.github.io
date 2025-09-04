@@ -85,7 +85,7 @@ class AppMonitor {
   }
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
+    console.log('[' + new Date().toISOString() + '] ' + message);
   }
 
   async monitorAppHealth() {
