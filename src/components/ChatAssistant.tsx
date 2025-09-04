@@ -60,7 +60,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
     };
 
     setMessages(prev => [...prev, userMessage]);
-    setInputValue('');
+    setInputText('');
     setIsTyping(true);
 
     // Simulate AI response
