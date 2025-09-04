@@ -57,6 +57,27 @@ Keyboard,              {/* Header */}
                   </button>
                 </div>
               </div>
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={decreaseFontSize}
+                  className="p-2 bg-gray-100 dark:bg-gray-700 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600"
+                >
+                  <Minus className="w-4 h-4" />
+                </button>
+                <div className="flex-1 h-2 bg-gray-200 dark:bg-gray-700 rounded-full">
+                  <div
+                    className="h-full bg-blue-500 rounded-full transition-all duration-300"
+                    style={{ width: `${((settings.fontSize - 12) / 12) * 100}%` }}
+                  />
+                </div>
+                <button
+                  onClick={increaseFontSize}
+                  className="p-2 bg-gray-100 dark:bg-gray-700 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600"
+                >
+                  <Plus className="w-4 h-4" />
+                </button>
+              </div>
+            </div>
 
               {/* High Contrast Toggle */}
               <div className="mb-6">
@@ -189,7 +210,8 @@ Keyboard,              {/* Header */}
                     <kbd className="px-2 py-1 bg-slate-700 rounded text-xs">Ctrl + 0</kbd>
                   </div>
                 </div>
-              </div>
+              </label>
+            </div>
 
               {/* Reset Button */}
               <button
